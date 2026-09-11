@@ -47,6 +47,130 @@ import TabItem from '@theme/TabItem';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/smartui-customscroll/"
+    },
+    "headline": "Custom Viewport Capture in SmartUI Screenshots",
+    "description": "Learn how to use SmartUI CustomScroll screenshots to preserve page and element scroll positions for pages with nested scroll containers, PDF viewers, data grids, modals, and virtualized lists.",
+    "url": "https://www.testmuai.com/support/docs/smartui-customscroll/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "SmartUI",
+    "keywords": [
+      "smartui",
+      "customscroll",
+      "custom scroll"
+    ],
+    "proficiencyLevel": "Beginner",
+    "dependencies": "SmartUI CLI version 4.1.71 or later.; A SmartUI project token configured in your test environment.; A page state where the target content is rendered before the snapshot is taken..",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Install or update the SmartUI CLI in the repository where your tests run",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "npm install @lambdatest/smartui-cli@latest"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "You can verify the installed version with",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "npx smartui --version"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Java And Playwright Examples (Java)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "Map<String, Object> options = new HashMap<>();\noptions.put(\"pageCustomScroll\", true);\noptions.put(\"elementsCustomScroll\", true);\n\nSmartUISnapshot.smartuiSnapshot(driver, \"PDF-Viewer-Page-25\", options);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Java And Playwright Examples (Playwright)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "await page.goto('https://vault.example.com/ui/#doc_info/2/0/1?anQS=page25');\n\nawait page.waitForSelector('.pageContent-scrollbar-content');\nawait page.waitForTimeout(1500);\n\nawait smartuiSnapshot(page, 'Vault-PDF-Page-25', {\n  elementsCustomScroll: true,\n  pageCustomScroll: false,\n});"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Enable CustomScroll Only Where Needed",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "await smartuiSnapshot(page, 'Header');\n\nawait smartuiSnapshot(page, 'Doc-Viewer-Page-25', {\n  pageCustomScroll: true,\n  elementsCustomScroll: true,\n});\n\nawait smartuiSnapshot(page, 'Footer');"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Recommended option",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "{\n  elementsCustomScroll: true\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Use both options if the page and viewer can both scroll",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "{\n  pageCustomScroll: true,\n  elementsCustomScroll: true\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Recommended option",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "{\n  elementsCustomScroll: true\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Recommended option",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "{\n  elementsCustomScroll: true\n}"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 # Custom Viewport Capture in SmartUI Screenshots
 
 In <BrandName /> **SmartUI**, **custom viewport capture screenshots** preserve the scroll position that exists when you take a snapshot. This helps SmartUI capture the exact visual state of pages that use nested scroll containers, PDF viewers, document viewers, virtualized lists, infinite-scroll pages, data grids, modals, drawers, and embedded scrollable components.

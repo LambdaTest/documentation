@@ -51,6 +51,63 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/assistive-touch-on-real-ios-browser/"
+    },
+    "headline": "Assistive Touch on Real iOS Devices (Browser)",
+    "description": "Trigger system actions like Home, Notification Center, and Screenshot while running manual browser testing sessions on real iOS devices.",
+    "url": "https://www.testmuai.com/support/docs/assistive-touch-on-real-ios-browser/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Real Device",
+    "keywords": [
+      "assistive touch",
+      "ios gestures",
+      "manual app testing"
+    ],
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "dateModified": "2026-07-29T17:52:46+05:30"
+  }) }}
+/>
+
 <BrandName />'s **Assistive Touch** feature enables you to perform key system-level actions directly from the testing toolbar during manual sessions on real iPhones and iPads.  
 This allows you to replicate gestures such as going to the Home Screen, opening the Notification Center, taking screenshots, and more without relying on physical device buttons or gestures.
 

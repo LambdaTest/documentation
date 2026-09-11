@@ -39,6 +39,80 @@ canonical: https://www.testmuai.com/support/docs/kane-cli-checkpoints/
       }) }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/kane-cli-checkpoints/"
+    },
+    "headline": "Checkpoints",
+    "description": "Checkpoints are verification points KaneAI evaluates during test execution: assert conditions, branch on results, or extract values for later use.",
+    "url": "https://www.testmuai.com/support/docs/kane-cli-checkpoints/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Kane CLI",
+    "keywords": [
+      "kane cli checkpoints",
+      "assertions",
+      "extractions"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "KaneAI automatically picks the right analyze method",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "Assert: the price is $29.99                    \u2192 Visual\nAssert: the submit button is disabled          \u2192 Textual (DOM)\nAssert: URL contains /checkout                 \u2192 URL\nAssert: page title contains \"Dashboard\"        \u2192 Title\nAssert: no API calls returned 5xx              \u2192 DevTools (Network)\nAssert: no console errors                      \u2192 DevTools (Console)\nAssert: page LCP is under 2500ms               \u2192 DevTools (Performance)\nAssert: session cookie exists                  \u2192 DevTools (Cookies)\nAssert: auth_token exists in localStorage      \u2192 DevTools (localStorage)\nAssert: the clipboard has the copied link      \u2192 DevTools (Clipboard)"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Extractions work the same way",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "Store the product price                        \u2192 Visual\nStore the current URL                          \u2192 URL\nStore all cookies                              \u2192 DevTools (Cookies)\nStore the API response body                    \u2192 DevTools (Network)"
+      }
+    ],
+    "dateModified": "2026-07-03T19:09:57+05:30"
+  }) }}
+/>
+
 Checkpoints are verification points that KaneAI evaluates during test execution. They let you assert conditions, branch on results, or extract values for later use.
 
 ## Checkpoint Types

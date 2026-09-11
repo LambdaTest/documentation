@@ -55,6 +55,123 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       })
     }}
 ></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/hyperexecute-gattling-testing/"
+    },
+    "headline": "Gatling Automation on HyperExecute",
+    "description": "Learn how to run Selenium automation tests on HyperExecute using the Gatling framework",
+    "url": "https://www.testmuai.com/support/docs/hyperexecute-gattling-testing/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "HyperExecute",
+    "keywords": [
+      "Gatling",
+      "Gatling selenium",
+      "Gatling Java Selenium"
+    ],
+    "proficiencyLevel": "Beginner",
+    "dependencies": "Your TestMu AI Username and Access key; HyperExecute YAML file which contains all the necessary instructions.; HyperExecute CLI in order to initiate a test execution Job .; Setup the Environmental Variable.",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "1. Define Test Environment and Execution Strategy",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "version: 0.1\nrunson: linux   # OS to run the tests (e.g., linux, win)\nautosplit: true\nconcurrency: 1   # Defines the number of test sessions to run concurrently\nscenarioCommandStatusOnly: true"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "2. Dependency Resolution with Maven",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "pre:\n  - mvn -Dmaven.repo.local=./.m2 dependency:resolve"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "3. Configure Test Discovery (Optional)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "testDiscovery:\n  type: raw\n  mode: static\n  command: echo \"Test\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Specify the command that runs your Gatling tests via Maven",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "testRunnerCommand: mvn gatling:test"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "If your test depends on a backend server or application under test, you can spin it up in the background",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "background:\n  - mvn spring-boot:run -Dspring-boot.run.main-class=dev.simonverhoeven.gatlingdemo.GatlingDemoApplication || true"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Once the test completes, use uploadArtefacts to store Gatling reports",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "uploadArtefacts:\n  - name: TestReport\n    path:\n    - target/gatling/**"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "7. Add Retry Logic (Optional)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "retryOnFailure: true\nmaxRetries: 1"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "7. Add Retry Logic (Optional)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n> \ud83d\udcd8 For a deeper understanding and project-specific configurations, check out the [YAML documentation](/support/docs/hyperexecute-yaml-parameters/).\n\n### Step 4: Execute your Test Suite\nFrom the project root directory, execute the below CLI command in your terminal:\n\n<div className=\"lambdatest__codeblock\">\n  <CodeBlock className=\"language-bash\">\n    {`./hyperexecute --user ${ YOUR_LAMBDATEST_USERNAME()} --key ${ YOUR_LAMBDATEST_ACCESS_KEY()} --config hyperexecute.yaml`}\n  <\/CodeBlock>\n<\/div>\n\n> **NOTE :** In case of macOS, if you get a permission denied warning while executing CLI, simply run **`chmod u+x ./hyperexecute`** to allow permission. In case you get a security popup, allow it from your **System Preferences** \u2192 **Security & Privacy** \u2192 **General tab**.\n\n<img loading=\"lazy\" src={require('../assets/images/hyperexecute/frameworks/performance_testing/gattling.png').default} alt=\"automation-dashboard\"  width=\"1920\" height=\"868\" className=\"doc_img\"/>\n\n---\n\n## Run Gatling Tests via HyperExecute UI\n\nIn addition to CLI-based execution, HyperExecute provides a UI-based approach to configure and run Gatling performance tests directly from the dashboard.\n\n### Step 1: Setup your Gatling Project\n\n1. Go to the [HyperExecute Project's Dashboard](https://www.testmuai.com/login/?redirectTo=https://hyperexecute.lambdatest.com/hyperexecute/projects) and click on the **New Project** button.\n2. Select **Gatling** as your performance testing framework.\n3. Browse and upload your Gatling simulation files (`.java`) to create a new performance test project.\n4. Click on the **Save** button.\n\n<video class=\"right-side\" width=\"100%\" controls id=\"vid\">\n<source src={require('../assets/images/hyperexecute/frameworks/performance_testing/gatling-setup.mp4').default} type=\"video/mp4\" />\n<\/video>\n\n### Step 2: Configure Test Load Criteria\n\nSelect your simulation file and click on the **Run** button. A configuration modal will appear with the following options:\n\n<Tabs>\n  <TabItem value=\"capacity\" label=\"Capacity Test\" default>\n    <img loading=\"lazy\" src={require('../assets/images/hyperexecute/frameworks/performance_testing/gatling-capacity-test.png').default} alt=\"Gatling Capacity Test Configuration\" width=\"1920\" height=\"868\" className=\"doc_img\"/>\n  <\/TabItem>\n  <TabItem value=\"stress\" label=\"Stress Test\">\n    <img loading=\"lazy\" src={require('../assets/images/hyperexecute/frameworks/performance_testing/gatling-stress-test.png').default} alt=\"Gatling Stress Test Configuration\" width=\"1920\" height=\"868\" className=\"doc_img\"/>\n  <\/TabItem>\n  <TabItem value=\"soak\" label=\"Soak Test\">\n    <img loading=\"lazy\" src={require('../assets/images/hyperexecute/frameworks/performance_testing/gatling-soak-test.png').default} alt=\"Gatling Soak Test Configuration\" width=\"1920\" height=\"868\" className=\"doc_img\"/>\n  <\/TabItem>\n<\/Tabs>\n\n#### Test Types\n\nHyperExecute supports three types of performance tests:\n\n| Test Type | Description | Use Case |\n|-----------|-------------|----------|\n| **Capacity Test** | Learn how your application scales and monitor when performance starts to decrease | Determine maximum load capacity |\n| **Stress Test** | Simulate a load peak to find out if your application crashes and recovers | Test system stability under extreme conditions |\n| **Soak Test** | Simulate regular production use and monitor how your application behaves over time | Identify memory leaks and performance degradation |\n\n#### Configuration Parameters\n\nDepending on the selected test type, configure the following parameters:\n\n**Capacity Test:**\n- **Duration (min):** Specify the desired duration for the test\n- **Initial Users:** Starting user arrival rate per second\n- **Final Users:** Target user arrival rate per second\n\n**Stress Test:**\n- **Duration (min):** Specify the desired duration for the test\n- **Total Injected Users:** Total number of virtual users to inject\n\n**Soak Test:**\n- **Duration (min):** Specify the desired duration for the test\n- **Constant User Arrival Rate:** Steady rate of users per second throughout the test\n\nClick **Continue** to proceed to load distribution configuration.\n\n### Step 3: Configure Test Load Distribution\n\nConfigure how the load should be distributed across regions and machines:\n\n<img loading=\"lazy\" src={require('../assets/images/hyperexecute/frameworks/performance_testing/gatling-load-distribution.png').default} alt=\"Gatling Load Distribution Configuration\" width=\"1920\" height=\"868\" className=\"doc_img\"/>\n\n- **Region:** Select the geographic region(s) for test execution\n  - East US (Richmond, Virginia) - *default*\n  - West US 2 (Moses Lake, Washington)\n  - Central India (Pune, Maharashtra)\n  - Southeast Asia (Singapore)\n  - Brazil South (S\u00e3o Paulo State, Brazil)\n  - Mexico Central (Quer\u00e9taro State, Mexico)\n\n- **% of Traffic:** Distribute load percentage across selected regions\n\n- **Job Labels:** Add meaningful labels or tags for better identification and traceability\n\n- **Max Users per Engine:** Specify the maximum number of virtual users per engine (default: 2000)\n\n- **Global Timeout:** Set the maximum duration for the HyperExecute job (default: 90 minutes)\n\nClick **Run Test** to start the execution.\n\n### Step 4: Analyze Your Test Results\n\nAfter the test execution completes, navigate to the **Jobs** section to analyze results:\n\n<img loading=\"lazy\" src={require('../assets/images/hyperexecute/frameworks/performance_testing/gatling-job-results.png').default} alt=\"Gatling Job Results\" width=\"1920\" height=\"868\" className=\"doc_img\"/>\n\n- **Job Summary:** View job duration, test duration, execution time, and status\n- **Scenarios Tab:** Monitor individual scenario execution and validate if tests ran for the required duration\n- **Logs:** View detailed execution logs including Maven build output and Gatling simulation logs\n- **Artifacts:** Access test artifacts including Gatling HTML reports\n- **Report:** Download the consolidated HTML report for detailed analysis\n\n:::tip Download Reports\nClick the **Report** button in the job details page to download the consolidated Gatling HTML report containing response time distributions, throughput graphs, and error analysis.\n:::\n\n---\n\n### Sample Simulation Code\n\nTo leverage the UI-based configuration, your Gatling simulation should read parameters passed via system properties. Add the following load profile methods to your simulation class:\n\n```java\n/**\n * Open workload model - users arrive at a specified rate\n */\npublic static OpenInjectionStep openLoadProfile() {\n  String injectType = System.getProperty(\"injectType\", \"constantUsersPerSec\");\n  int users = Integer.getInteger(\"users\", 10);\n  int duration = Integer.getInteger(\"duration\", 30);\n  int rampDuration = Integer.getInteger(\"rampDuration\", 60);\n  int usersStart = Integer.getInteger(\"usersStart\", users / 2);\n  int usersEnd = Integer.getInteger(\"usersEnd\", users);\n\n  switch (injectType.toLowerCase()) {\n    case \"soaktest\":\n      // Gradual ramp up followed by sustained load - ideal for soak tests\n      return rampUsers(users).during(Duration.ofSeconds(rampDuration));\n\n    case \"capacitytest\":\n      // Gradual increase to find capacity limits\n      return rampUsersPerSec(1).to(users).during(Duration.ofSeconds(duration));\n\n    case \"stresspeakusers\":\n      return stressPeakUsers(users).during(Duration.ofSeconds(duration));\n\n    case \"rampuserspersec\":\n      return rampUsersPerSec(usersStart).to(usersEnd).during(Duration.ofSeconds(duration));\n\n    case \"constantusers\":\n      return rampUsers(users).during(Duration.ofSeconds(rampDuration));\n\n    default:\n      return constantUsersPerSec(users).during(Duration.ofSeconds(duration));\n  }\n}\n\n/**\n * Closed workload model - maintains constant concurrent users\n */\npublic static ClosedInjectionStep closedLoadProfile() {\n  int users = Integer.getInteger(\"users\", 10);\n  int duration = Integer.getInteger(\"duration\", 30);\n  String injectType = System.getProperty(\"injectType\", \"constantUsersPerSec\");\n\n  switch (injectType.toLowerCase()) {\n    case \"soaktest\":\n    case \"capacitytest\":\n      // For soak/capacity tests, ramp up to target concurrent users then maintain\n      return rampConcurrentUsers(1).to(users).during(Duration.ofSeconds(duration));\n    default:\n      return constantConcurrentUsers(users).during(Duration.ofSeconds(duration));\n  }\n}\n\n/**\n * Determine which workload model to use based on test type\n */\nprivate PopulationBuilder getPopulationBuilder() {\n  String workloadModel = System.getProperty(\"workloadModel\", \"open\");\n  String injectType = System.getProperty(\"injectType\", \"constantUsersPerSec\");\n\n  // Use closed model for soak and capacity tests by default\n  if (\"closed\".equalsIgnoreCase(workloadModel) ||\n      \"soaktest\".equalsIgnoreCase(injectType) ||\n      \"capacitytest\".equalsIgnoreCase(injectType)) {\n    return scenario.injectClosed(closedLoadProfile());\n  } else {\n    return scenario.injectOpen(openLoadProfile());\n  }\n}"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
 Gatling is an open-source load and performance testing framework designed for testing web applications. It uses a powerful Scala-based DSL to define test scenarios and is capable of simulating thousands of concurrent users, making it ideal for stress and performance testing.
 
 ## 🚀 Why Choose HyperExecute for Gatling Performance Testing?

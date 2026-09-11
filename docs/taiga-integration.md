@@ -49,6 +49,63 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/taiga-integration/"
+    },
+    "headline": "Taiga Integration with TestMu AI",
+    "description": "TestMu AI helps you manage your bugs in Taiga by moving them to your project in a single click. All the details you provide in TestMu AI like task list, assignee, title, and description would automatically be presented in the project on Taiga.",
+    "url": "https://www.testmuai.com/support/docs/taiga-integration/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Integration",
+    "keywords": [
+      "testmu ai integrations",
+      "push issues to taiga",
+      "free cross browser testing tool"
+    ],
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "dateModified": "2026-06-02T12:20:54+05:30"
+  }) }}
+/>
+
 Taiga is an open-source project management platform that supports agile methodologies like Scrum and Kanban. Integrating Taiga with <BrandName /> enables you to log bugs directly from your testing sessions into Taiga, streamlining your workflow and enhancing team collaboration.
 
 > Taiga Integration with <BrandName /> is available for both freemium and premium plans.

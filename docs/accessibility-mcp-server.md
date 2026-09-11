@@ -43,6 +43,63 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/accessibility-mcp-server/"
+    },
+    "headline": "Accessibility MCP Tool",
+    "description": "Run accessibility checks on hosted URLs or local React apps and get detailed remediation guidance using the Accessibility MCP Tool.",
+    "url": "https://www.testmuai.com/support/docs/accessibility-mcp-server/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "TestMu AI MCP Server",
+    "keywords": [
+      "accessibility testing",
+      "accessibility mcp",
+      "a11y"
+    ],
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "dateModified": "2026-05-12T15:56:11+05:30"
+  }) }}
+/>
+
 # Getting Started with Accessibility MCP Tool
 
 Accessibility MCP Tool is part of the [TestMu AI MCP Server](/support/docs/testmu-mcp-server/). It runs accessibility checks on publicly hosted URLs and local React applications, and returns a detailed report with remediation guidance.

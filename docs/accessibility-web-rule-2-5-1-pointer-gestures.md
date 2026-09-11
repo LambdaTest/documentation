@@ -6,6 +6,59 @@ description: Rule-level Accessibility guidance for Pointer Gestures (WCAG 2.5.1 
 slug: accessibility-web-rule-2-5-1-pointer-gestures/
 ---
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/accessibility-web-rule-2-5-1-pointer-gestures/"
+    },
+    "headline": "Pointer Gestures (2.5.1)",
+    "description": "Rule-level Accessibility guidance for Pointer Gestures (WCAG 2.5.1 Level A).",
+    "url": "https://www.testmuai.com/support/docs/accessibility-web-rule-2-5-1-pointer-gestures/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Accessibility Testing",
+    "keywords": [],
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 # Pointer Gestures (2.5.1)
 
 Functionality that uses multi-point or path-based gestures must also be operable with a single-pointer action without a path-based gesture, unless the gesture is essential.

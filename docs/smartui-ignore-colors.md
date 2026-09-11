@@ -44,6 +44,87 @@ import TabItem from '@theme/TabItem';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/smartui-ignore-colors/"
+    },
+    "headline": "Ignore Color-Only Changes in a Region (ignoreColors)",
+    "description": "Mark regions where SmartUI ignores color-only changes during comparison while structural changes still flag, via the SDK and Lambda Hooks with the Smart Ignore strategy.",
+    "url": "https://www.testmuai.com/support/docs/smartui-ignore-colors/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "SmartUI",
+    "keywords": [
+      "smartui ignoreColors",
+      "ignore color changes visual testing",
+      "smartui smart ignore colors"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "SDK",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "await smartuiSnapshot(driver, \"Home Page\", {\n  ignoreColors: {\n    id:            [\"price-banner\"],\n    class:         [\"seasonal-theme\"],\n    cssSelector:   [\"#hero .cta\"],\n    xpath:         [\"//div[@data-testid='promo']\"],\n    coordinates:   [\"200,350,100,400\"],   // top,bottom,left,right\n    entireScreenshot: true                // ignore colors across the whole image\n  }\n});"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Selenium",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "const el = await driver.findElement(By.id(\"price-banner\"));\n\nawait driver.executeScript(\"smartui.takeScreenshot\", {\n  screenshotName: \"checkout-page\",\n  ignoreColors: {\n    id:            [\"price-banner\"],\n    class:         [\"seasonal-theme\"],\n    cssSelector:   [\"#nav .logo\"],\n    xpath:         [\"//div[@data-testid='promo']\"],\n    coordinates:   [\"100,200,400,350\"],   // left,top,right,bottom\n    webElement:    el,                    // a located element, or an array of them\n    entireScreenshot: true                // ignore colors across the whole image\n  }\n});"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Playwright / Puppeteer",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "await page.evaluate(`lambdatest_action: ${JSON.stringify({\n  action: \"smartui.takeScreenshot\",\n  arguments: {\n    screenshotName: \"checkout-page\",\n    ignoreColors: {\n      id:          [\"price-banner\"],\n      class:       [\"seasonal-theme\"],\n      cssSelector: [\"#nav .logo\"],\n      xpath:       [\"//div[@data-testid='promo']\"],\n      entireScreenshot: true              // ignore colors across the whole image\n    }\n  }\n})}`);"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 # Ignore Color-Only Changes in a Region (ignoreColors)
 
 `ignoreColors` marks regions where **color-only changes are ignored** during comparison, while **structural changes still flag**. It is the programmatic counterpart of the dashboard's **Ignore colors** box, available through both the SDK and the Lambda Hooks runtime.

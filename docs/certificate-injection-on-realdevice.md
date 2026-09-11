@@ -54,6 +54,73 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/certificate-injection-on-realdevice/"
+    },
+    "headline": "Certificate Injection on Real Devices",
+    "description": "Upload and install custom CA certificates and client identities on TestMu AI real devices during manual app testing sessions to test apps that use SSL pinning, self-signed certificates, or mutual TLS.",
+    "url": "https://www.testmuai.com/support/docs/certificate-injection-on-realdevice/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Real Device",
+    "keywords": [
+      "certificate injection",
+      "custom certificates",
+      "install certificates"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "In the build you are testing, add a network_security_config.xml file that trusts the user certificate store",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "XML",
+        "text": "<network-security-config>\n    <base-config>\n        <trust-anchors>\n            <certificates src=\"system\" />\n            <certificates src=\"user\" />\n        <\/trust-anchors>\n    <\/base-config>\n<\/network-security-config>"
+      }
+    ],
+    "dateModified": "2026-08-27T03:34:12+05:30"
+  }) }}
+/>
+
 <RealDeviceTag value="Real Device" />
 
 Many apps connect to servers that use certificates issued by a private or corporate certificate authority. Some apps also pin a **self-signed certificate**, or present a **client certificate** to authenticate themselves before a server will respond. On a standard device, these connections fail because the device does not trust your organization's certificates.

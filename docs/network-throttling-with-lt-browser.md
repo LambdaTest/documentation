@@ -43,6 +43,63 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/network-throttling-for-responsive-testing/"
+    },
+    "headline": "Network Throttling To Test Website Responsiveness",
+    "description": "LT Browser allows you to test your mobile website view over different networks such as fast 3G, slow 3G, online, or even offline with network throttling.",
+    "url": "https://www.testmuai.com/support/docs/network-throttling-for-responsive-testing/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Other Docs",
+    "keywords": [
+      "network throttling lt browser",
+      "network profile lt browser",
+      "test over different network profiles"
+    ],
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "dateModified": "2026-08-12T15:40:32+05:30"
+  }) }}
+/>
+
 # Network Throttling To Test Website Responsiveness
 * * *
 [LT Browser](https://www.testmuai.com/lt-browser/) allows you to test your [mobile website view](https://www.testmuai.com/mobile-view-website) over different networks such as fast 3G, slow 3G, online, or even offline. With network throttling, you can change your network profile to test its functionality when exposed to different network environments.

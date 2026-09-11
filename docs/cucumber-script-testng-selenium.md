@@ -47,6 +47,117 @@ import CookieTrackingLogin from '@site/src/component/CookieTracking';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/running-cucumber-scripts-with-testng-and-selenium/"
+    },
+    "headline": "Selenium With Cucumber",
+    "description": "Run Cucumber TestNG Selenium tests on TestMu AI cloud grid across 3000+ browsers and devices.",
+    "url": "https://www.testmuai.com/support/docs/running-cucumber-scripts-with-testng-and-selenium/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Documentation",
+    "keywords": [
+      "cucumber selenium cloud testing",
+      "cucumber testng selenium grid",
+      "run cucumber tests on cloud grid"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 1: Clone the Sample Project",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "codeRepository": "https://github.com/LambdaTest/cucumber-testng-sample",
+        "text": "git clone https://github.com/LambdaTest/cucumber-testng-sample\ncd cucumber-testng-sample"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 1: Clone the Sample Project",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "mvn versions:display-dependency-updates"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 3: Configure Your Test Capabilities",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "ChromeOptions browserOptions = new ChromeOptions();\n            browserOptions.setPlatformName(platform);\n            browserOptions.setBrowserVersion(\"latest\");\n\n            HashMap<String, Object> ltOptions = new HashMap<String, Object>();\n            ltOptions.put(\"build\", \"Your Build Name\");\n            ltOptions.put(\"w3c\", true);\n            browserOptions.setCapability(\"LT:Options\", ltOptions);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Below is the sample feature file for Cucumber",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "Feature: Add new item to ToDO list\n\nScenario: Lambdatest ToDO Scenario\n\nGiven user is on home Page\nWhen select First Item\nThen select second item\nThen add new item\nThen verify added item"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 5",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\nBelow are the step definitions:\n\n```java title=\"ToDoStepDefinition.java\"\npackage stepDefinitions;\n\nimport org.openqa.selenium.By;\nimport org.openqa.selenium.remote.RemoteWebDriver;\nimport org.testng.Assert;\n\nimport cucumber.api.Scenario;\nimport cucumber.api.java.After;\nimport cucumber.api.java.Before;\nimport cucumber.api.java.en.Given;\nimport cucumber.api.java.en.Then;\nimport cucumber.api.java.en.When;\nimport MyRunner.*;\n\npublic class ToDoStepDefinition extends TestRunner {\n\n    public RemoteWebDriver driver = this.connection;\n\n    @Before\n    public void updateName(Scenario scenario) {\n        driver.executeScript(\"lambda-name=\"+scenario.getName());\n    }\n\n    @Given(\"^user is on home Page$\")\n    public void user_already_on_home_page() {\n        System.out.println(driver.getCapabilities());\n        driver.get(\"https://lambdatest.github.io/sample-todo-app/\");\n\n    }\n\n    @When(\"^select First Item$\")\n    public void select_first_item() {\n        driver.findElement(By.name(\"li1\")).click();\n    }\n\n    @Then(\"^select second item$\")\n    public void select_second_item() {\n        driver.findElement(By.name(\"li2\")).click();\n    }\n\n    @Then(\"^add new item$\")\n    public void add_new_item() {\n        driver.findElement(By.id(\"sampletodotext\")).clear();\n        driver.findElement(By.id(\"sampletodotext\")).sendKeys(\"Yey, Let's add it to list\");\n        driver.findElement(By.id(\"addbutton\")).click();\n    }\n\n    @Then(\"^verify added item$\")\n    public void verify_added_item() {\n        String item = driver.findElement(By.xpath(\"/html/body/div/div/div/ul/li[6]/span\")).getText();\n        Assert.assertTrue(item.contains(\"Yey, Let's add it to list\"));\n    }\n\n    @After\n    public void close_the_browser(Scenario scenario) {\n        driver.executeScript(\"lambda-status=\" + (scenario.isFailed() ? \"failed\" : \"passed\"));\n        driver.quit();\n    }\n\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 4: Run the Test",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "mvn test"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Install the skill",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "codeRepository": "https://github.com/LambdaTest/agent-skills",
+        "text": "git clone https://github.com/LambdaTest/agent-skills.git\ncp -r agent-skills/cucumber-skill .claude/skills/\n\n# For Cursor / Copilot\ncp -r agent-skills/cucumber-skill .cursor/skills/"
+      }
+    ],
+    "dateModified": "2026-09-09T19:13:32+05:30"
+  }) }}
+/>
+
 Run Cucumber tests on the TestMu AI cloud grid. This guide covers setup, running a sample test, configuring capabilities, and testing locally hosted pages.
 
 :::tip Sample repo

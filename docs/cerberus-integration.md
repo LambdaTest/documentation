@@ -43,6 +43,73 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/cerberus-integration/"
+    },
+    "headline": "Running Cerberus Automation Tests Using TestMu AI",
+    "description": "Now perform cross-browser testing of your website or web app on 10,000+ browser/device combinations, using TestMu AI and Cerberus integration",
+    "url": "https://www.testmuai.com/support/docs/cerberus-integration/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Integration",
+    "keywords": [
+      "TestMu AI integrations",
+      "Cerberus",
+      "Test Automation for GUI Testing"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "In this Add Executor window, you need to pass following values to their corresponding options, as stated below",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "    Host: hub.lambdatest.com\n    Port: 80\n    Host User: <YOUR_LAMBDATEST_USERNAME>\n    Host Password: <your LambdaTest access key>"
+      }
+    ],
+    "dateModified": "2026-08-26T14:02:45+05:30"
+  }) }}
+/>
+
 # Run Cerberus Tests On <BrandName /> Selenium Grid
 * * *
 

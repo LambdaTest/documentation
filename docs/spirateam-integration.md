@@ -40,6 +40,63 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/spirateam-integration/"
+    },
+    "headline": "SpiraTeam Integration",
+    "description": "TestMu AI provides integrations with SpiraTeam to help you log bugs directly from the middle of your test session on TestMu AI to SpiraTeam platform.",
+    "url": "https://www.testmuai.com/support/docs/spirateam-integration/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Integration",
+    "keywords": [
+      "TestMu AI integrations",
+      "Push issues to SpiraTeam",
+      "TestMu AI SpiraTeam integration"
+    ],
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "dateModified": "2026-06-02T12:20:54+05:30"
+  }) }}
+/>
+
 SpiraTeam is a software tool used for Application Lifecycle Management (ALM). It's designed to help teams manage various aspects of software development, from programs and portfolios to requirements, releases, test cases, issues, baselines, workflows, and tasks.
 
 It is very useful for managing teams programs, portfolios, requirements, releases, test cases, issues, baselines, workflows, and tasks in one unified environment.

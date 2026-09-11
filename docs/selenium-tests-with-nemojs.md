@@ -44,6 +44,96 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/selenium-tests-with-nemojs/"
+    },
+    "headline": "Selenium With NemoJS",
+    "description": "Run NemoJS Selenium automated tests on TestMu AI cloud grid with 3000+ real browsers and operating systems.",
+    "url": "https://www.testmuai.com/support/docs/selenium-tests-with-nemojs/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Documentation",
+    "keywords": [
+      "nemojs selenium grid testing",
+      "run nemojs tests cloud",
+      "nemojs automation setup guide"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 1: Clone the Sample Project",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "codeRepository": "https://github.com/LambdaTest/Nemo-Lambdatest-sample",
+        "text": "git clone https://github.com/LambdaTest/Nemo-Lambdatest-sample\ncd Nemo-Lambdatest-sample"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Install the required dependencies",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "npm install"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 3: Configure Your Test Capabilities",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n:::tip\nGenerate capabilities for your test requirements with the [Capabilities Generator](https://www.testmuai.com/capabilities-generator/).\n:::\n\n## Step 4: Run the Test\n---\nExecute the test using the following command.\n\n**Single test:**\n``` js\nnpx nemo -P chrome"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 4: Run the Test",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "codeRepository": "https://github.com/LambdaTest/agent-skills",
+        "text": "\n## Step 5: View Your Results\n---\nAfter running the test, view your results on the [TestMu AI Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build).\n\nThe dashboard provides:\n- Video recordings of each test session\n- Screenshots captured at each step\n- Console logs from the browser\n- Network logs for debugging\n- Detailed command logs\n\n## Run NemoJS Tests Using Agent Skills\n---\n\nUse AI coding assistants to generate and run NemoJS tests with the TestMu AI Agent Skill.\n\nThe [nemojs-skill](https://github.com/LambdaTest/agent-skills/tree/main/nemojs-skill) is part of [TestMu AI Agent Skills](https://github.com/LambdaTest/agent-skills/) - structured packages that teach AI coding assistants how to write production-grade test automation.\n\nInstall the skill:\n\n```bash\ngit clone https://github.com/LambdaTest/agent-skills.git\ncp -r agent-skills/nemojs-skill .claude/skills/\n\n# For Cursor / Copilot\ncp -r agent-skills/nemojs-skill .cursor/skills/"
+      }
+    ],
+    "dateModified": "2026-09-09T19:13:32+05:30"
+  }) }}
+/>
+
 ---
 
 Run NemoJS tests on the TestMu AI cloud grid. This guide covers setup, running a sample test, configuring capabilities, and testing locally hosted pages.

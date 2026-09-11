@@ -14,6 +14,220 @@ slug: custom-headers/
 canonical: https://www.testmuai.com/support/docs/custom-headers/
 ---
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/custom-headers/"
+    },
+    "headline": "How to Bypass Firewalls Using CustomHeaders Capability",
+    "description": "Add custom headers to Selenium tests and bypass firewall restrictions using the customHeaders capability.",
+    "url": "https://www.testmuai.com/support/docs/custom-headers/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Documentation",
+    "keywords": [
+      "custom headers bypass firewall selenium",
+      "customUrlFilters selective header injection",
+      "add custom HTTP headers selenium tests"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "How to Use CustomHeaders Capability on TestMu AI",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "DesiredCapabilities capabilities = new DesiredCapabilities();\ncapabilities.setCapability(\"customHeaders\", new HashMap<String, String>() {{\n    put(\"headerName\", \"headerValue\");\n}});"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "CustomHeaders: Use Cases and Examples",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "X-Session-ID: 1234567890 "
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "CustomHeaders: Use Cases and Examples",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "Accept: application/json "
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "CustomHeaders: Use Cases and Examples",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "X-RateLimit-Limit: 60\nX-RateLimit-Remaining: 56\nX-RateLimit-Reset: 1372700873"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 5",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "X-Session-ID: 1234567890 //custom header X-Session-ID to track user sessions."
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 6",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "X-Session-ID: 1234567890 //custom header X-Session-ID to track user sessions."
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 7",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "X-Session-ID: 1234567890 //custom header X-Session-ID to track user sessions."
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 8",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "X-Session-ID: 1234567890 //custom header X-Session-ID to track user sessions."
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 9",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "X-Session-ID: 1234567890 //custom header X-Session-ID to track user sessions."
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 10",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "X-Session-ID: 1234567890 //custom header X-Session-ID to track user sessions."
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 11",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "X-Session-ID: 1234567890 //custom header X-Session-ID to track user sessions."
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Implementation Example",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "DesiredCapabilities capabilities = new DesiredCapabilities();\n\nMap<String, String> headers = new HashMap<>();\nheaders.put(\"WebView\", \"Enable\");\nheaders.put(\"X-Custom-Token\", \"secure-token-123\");\n\nList<String> urlFilters = Arrays.asList(\n    \"https://www.xhaus.com/headers\",\n    \"https://.*\\\\.example\\\\.com/.*\"\n);\n\ncapabilities.setCapability(\"customHeaders\", headers);\ncapabilities.setCapability(\"customUrlFilters\", urlFilters);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Send tokens or session IDs with headers like",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "X-Session-ID: 1234567890"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Specify expected response formats",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "Accept: application/json"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Get limits and usage from APIs",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "X-RateLimit-Remaining: 10"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Include trace info or timing metrics",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "X-Execution-Time: 150ms"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Enable cross-origin requests",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "Access-Control-Allow-Origin: *"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Pass app-level config",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "X-App-Version: v2.3.1"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Mask the request with common headers",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "User-Agent: Mozilla/5.0 (Windows NT 10.0...)"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Return backend state",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "X-Server-Status: All systems operational"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Guide search engines",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "Link: <https://example.com/page>; rel=\"canonical\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Track experimental groups",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "X-Experiment-ID: variant_b"
+      }
+    ],
+    "dateModified": "2026-09-09T19:13:32+05:30"
+  }) }}
+/>
+
 # Bypass Firewalls with customHeaders and customUrlFilters
 ---
 

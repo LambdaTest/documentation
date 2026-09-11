@@ -45,6 +45,96 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/webdriverio-5-6-2-with-selenium-running-automation-scripts-on-testmu-selenium-grid/"
+    },
+    "headline": "Selenium With WebDriverIO 5.6.2",
+    "description": "Run WebDriverIO 5.6.2 Selenium automation scripts on TestMu AI cloud grid with 3000+ real browsers and operating systems.",
+    "url": "https://www.testmuai.com/support/docs/webdriverio-5-6-2-with-selenium-running-automation-scripts-on-testmu-selenium-grid/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Documentation",
+    "keywords": [
+      "webdriverio 5.6.2 selenium grid testing",
+      "run webdriverio tests cloud",
+      "webdriverio selenium cloud execution"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 1: Clone the Sample Project",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "codeRepository": "https://github.com/LambdaTest/webdriverio-selenium",
+        "text": "git clone https://github.com/LambdaTest/webdriverio-selenium\ncd webdriverio-selenium"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Install the required dependencies",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "npm i selenium-webdriver\nnpm install"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 3",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n:::tip\nGenerate capabilities for your test requirements with the [Capabilities Generator](https://www.testmuai.com/capabilities-generator/).\n:::\n\n## Step 4: Run the Test\n---\nExecute the test using the following command.\n\n```bash\nnpm run single"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Install the skill",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "codeRepository": "https://github.com/LambdaTest/agent-skills",
+        "text": "git clone https://github.com/LambdaTest/agent-skills.git\ncp -r agent-skills/webdriverio-skill .claude/skills/\n\n# For Cursor / Copilot\ncp -r agent-skills/webdriverio-skill .cursor/skills/"
+      }
+    ],
+    "dateModified": "2026-09-09T19:13:32+05:30"
+  }) }}
+/>
+
 ---
 
 Run WebDriverIO 5.6.2 tests on the TestMu AI cloud grid. This guide covers setup, running a sample test, configuring capabilities, and testing locally hosted pages.

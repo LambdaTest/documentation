@@ -50,6 +50,87 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/espresso-env-variables-settings/"
+    },
+    "headline": "Setting Up Espresso Environment Variables",
+    "description": "Now you can run your Espresso framework on TestMu AI and this particular feature allows users to pass and retrieve environment variables (like STAGE, PROD, or DEV) during automated Android tests.",
+    "url": "https://www.testmuai.com/support/docs/espresso-env-variables-settings/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "App Automation",
+    "keywords": [
+      "espresso",
+      "environment",
+      "testmu ai java"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 1: Create Variables in Your Test Suite",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n``` bash title=\"Examples\"\nString stage = InstrumentationRegistry.getArguments().getString(\u201cSTAGE\u201d);\nString prod = InstrumentationRegistry.getArguments().getString(\u201cPROD\u201d);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 4: Executing The Test",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "curl --location --request POST 'https://mobile-api.lambdatest.com/framework/v1/espresso/build' \\\n--header 'Authorization: Basic BASIC_AUTH_TOKEN' \\\n--header 'Content-Type: application/json' \\\n--data-raw '{\n    \"app\" : \"APP_ID\",\n    \"testSuite\": \"TEST_SUITE_ID\",\n    \"device\" :  [\"Galaxy S21 5G-12\"],\n    \"queueTimeout\": 10800,\n    \"IdleTimeout\": 150,\n    \"deviceLog\": true,\n    \"network\": false,\n   \"build\" : \"Proverbial-Espresso\"\n   # highlight-start\n   \"envVariables\":{                     //setting up environment variables\n      \"STAGE\":\"stg1\",\n      \"PROD\":\"prod1\"\n    }\n    # highlight-end\n}'"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Run your test in HyperExecute",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "---\nversion: \"0.2\"\nconcurrency: 4\nrunson: android\nautosplit: true\nmaxRetries: 2\n# highlight-start\nenv:\n  STAGE: stg1\n  PROD: prod1\n# highlight-end\nframework:\n  name: \"android/espresso\"\n  args:\n    reservation: false \n    buildName: \"Test Espresso Sharding\"\n    appId: <TARGET_SUITE>\n    testSuiteAppId: <TEST_SUITE>\n    deviceSelectionStrategy: any\n    devices: [\".*\"]\n    shards:\n      mappings:\n      - name: shard1\n        strategy: \"only-testing/skip-testing\"\n        values: [\"<className>/<className/testName>\"]\n     - name: shard2\n       strategy: \"only-testing/skip-testing\"\n       values: [\"<className>/<className/testName>\", \"<className>/<className/testName>\"]"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 This feature allows you to dynamically set and test environment variables during Espresso test execution on <BrandName />.
 
 ## Step 1: Create Variables in Your Test Suite

@@ -47,6 +47,73 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/playwright-bundled-browser-support/"
+    },
+    "headline": "Playwright Bundled Browser Support",
+    "description": "List of all the Playwright Bundled Browser Support",
+    "url": "https://www.testmuai.com/support/docs/playwright-bundled-browser-support/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Documentation",
+    "keywords": [
+      "testmu ai",
+      "playwright",
+      "support"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 1",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "const capabilities = { \"LT:Options\": {\"useSpecificBundleVersion\": true,}}"
+      }
+    ],
+    "dateModified": "2026-09-09T19:13:32+05:30"
+  }) }}
+/>
+
 When you set the capability [`useSpecificBundleVersion: true`](/support/docs/capabilities-for-playwright/#:~:text=setHTTPCredentials%22%2C%20%22setStorageState%22%2C%20%22setGeolocation%22%5D%7D%7D-,useSpecificBundleVersion,-Boolean), then <BrandName /> will select the browser (Chromium, Firefox, Webkit) version as per your local machine's PLaywright version. 
 
 ```yaml

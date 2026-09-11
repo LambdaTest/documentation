@@ -43,6 +43,129 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/playwright-test-execution-setup/"
+    },
+    "headline": "Playwright Test Execution Setup",
+    "description": "Learn how to configure the desired capability for selecting browsers and OS, organzing tests, changing desktop resolution, and more for your Playwright tests.",
+    "url": "https://www.testmuai.com/support/docs/playwright-test-execution-setup/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Web Automation",
+    "keywords": [
+      "playwright testing",
+      "playwright e2e testing",
+      "playwright mobile testing"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Bundled Browser Versions",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "const capabilities = { \"LT:Options\": {\"useSpecificBundleVersion\": true,}}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Organizing Tests",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "const { chromium } = require('playwright');\n\nconst capabilities = {\n    'browserName': 'Chrome', // Browsers allowed: `Chrome`, `MicrosoftEdge`, `pw-chromium`, `pw-firefox` and `pw-webkit`\n    'browserVersion': 'latest',\n    'LT:Options': {\n      'platform': 'Windows 10',\n      'build': 'Playwright Sample Build',\n      'name': 'Playwright Sample Test',\n      'user': process.env.LT_USERNAME,\n      'accessKey': process.env.LT_ACCESS_KEY,\n      'network': true,\n      'video': true,\n      'console': true\n    }\n  }\n\n  const browser = await chromium.connect({\n    wsEndpoint: `wss://cdp.lambdatest.com/playwright?capabilities=${encodeURIComponent(JSON.stringify(capabilities))}`\n  })\n``` -->\n\n## Changing Desktop Resolutions\n***\n\nPlaywright tests run with a `1920x1080` resolution by default for desktop browsers. With our `resolution` capability, you can set a different screen resolution for your tests.\n\n| Capability | Description  | Expected Values | Example |\n| -------- | -----| ------------ | -----------------------------|\n| resolution   |  Specifying your desktop resolution before initiating the test |   String, **Default value**: 1920x1080 <br/> <br/> **Windows 11 & 10**: `1024x768, 1280x800, 1280x1024, 1366x768, 1440x900, 1680x1050, 1600x1200, 1920x1200, 1920x1080 and 2048x1536` <br/><br/> **macOS**: `1024x768, 1280x960, 1280x1024, 1600x1200 and 1920x1080`  | `const capabilities = { 'LT:Options': {'resolution': '2048x1536',}}` |\n\n## Changing Browser Window Size\n***\n\nThe default viewport size for Playwright tests is 1280x720. If you wish to maximize the browser window during your Playwright test, you can do it as shown in the code below.\n\n```js\n// Create context with given viewport\nconst context = await browser.newContext({\n  viewport: { width: 1280, height: 1024 }\n});"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Changing Browser Window Size",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "await page.setViewportSize({ width: 1600, height: 1200 });"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Setting Browser Options",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "const { chromium } = require('playwright');\n\nconst capabilities = {\n    'browserName': 'Chrome', // Browsers allowed: `Chrome`, `MicrosoftEdge`, `pw-chromium`, `pw-firefox` and `pw-webkit`\n    'browserVersion': 'latest',\n    'LT:Options': {\n      'platform': 'Windows 10',\n      'build': 'Playwright Sample Build',\n      'name': 'Playwright Sample Test',\n      'user': process.env.LT_USERNAME,\n      'accessKey': process.env.LT_ACCESS_KEY,\n      'goog:chromeOptions':[\n         '--user-agent=<Any custom user agent>',\n       ],\n\n    }\n  }\n\n  const browser = await chromium.connect({\n    wsEndpoint: `wss://cdp.lambdatest.com/playwright?capabilities=${encodeURIComponent(JSON.stringify(capabilities))}`\n  })"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 5",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "  const { chromium } = require('playwright');\n\nconst capabilities = {\n    'browserName': 'Chrome', // Browsers allowed: `Chrome`, `MicrosoftEdge`, `pw-chromium`, `pw-firefox` and `pw-webkit`\n    'browserVersion': 'latest',\n    'LT:Options': {\n      'platform': 'Windows 10',\n      'build': 'Playwright Sample Build',\n      'name': 'Playwright Sample Test',\n      'user': process.env.LT_USERNAME,\n      'accessKey': process.env.LT_ACCESS_KEY,\n      'ms:edgeOptions':[\n         '--user-agent=<Any custom user agent>',\n       ],\n\n    }\n  }\n\n  const browser = await chromium.connect({\n    wsEndpoint: `wss://cdp.lambdatest.com/playwright?capabilities=${encodeURIComponent(JSON.stringify(capabilities))}`\n  })"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Getting Session Details",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "let response = JSON.parse(await page.evaluate(_ => {}, `lambdatest_action: ${JSON.stringify({ action: 'getTestDetails' })}`))\nconsole.log(response); "
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Getting Session Details",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "{\n  data: {\n    test_id: 'RWA9R-AC4V8-GJRET-YHBO2',\n    build_id: 9415381,\n    name: 'Playwright Sample Test',\n    user_id: 1001150,\n    username: 'kaustubhd',\n    test_type: 'playwright',\n    platform: 'win10',\n    browser: 'Chrome',\n    browser_version: '107.0',\n    status_ind: 'running',\n    session_id: 'RWA9R-AC4V8-GJRET-YHBO2',\n    build_name: 'Playwright Sample Build',\n    create_timestamp: '2022-12-07 10:53:16',\n    start_timestamp: '2022-12-07 10:53:16',\n    remark: 'running',\n    console_logs_url: 'https://api.lambdatest.com/automation/api/v1/sessions/RWA9R-AC4V8-GJRET-YHBO2/log/console',\n    network_logs_url: 'https://api.lambdatest.com/automation/api/v1/sessions/RWA9R-AC4V8-GJRET-YHBO2/log/network',\n    command_logs_url: 'https://api.lambdatest.com/automation/api/v1/sessions/RWA9R-AC4V8-GJRET-YHBO2/log/command',\n    video_url: 'https://automation.lambdatest.com/public/video?testID=RWA9R-AC4V8-GJRET-YHBO2&auth=50471585dd55293d204fe87f63400f5f',\n    screenshot_url: 'https://video-bundler.lambdatest.com/RWA9R-AC4V8-GJRET-YHBO2/screenshots.zip?orgId=588659&createTimestamp=1670410396&testCreateTimestamp=2022-12-07%2010:53:16'\n  },\n  message: 'Retrieve session was successful',\n  status: 'success'\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Mark Tests As Passed Or Failed",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "await page.evaluate(_ => {}, `lambdatest_action: ${JSON.stringify({ action: 'setTestStatus', arguments: { status:'passed', remark: 'Title matched' } })}`)"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Mark Tests As Passed Or Failed",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "await page.evaluate(_ => {}, `lambdatest_action: ${JSON.stringify({ action: 'setTestStatus', arguments: { status:'failed', remark: 'Title not matched' } })}`)"
+      }
+    ],
+    "dateModified": "2026-09-09T19:13:32+05:30"
+  }) }}
+/>
+
 # Playwright - Test Execution Setup
 * * *
 

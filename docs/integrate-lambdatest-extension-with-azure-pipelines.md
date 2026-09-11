@@ -48,6 +48,81 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/integrate-testmu-extension-with-azure-pipelines/"
+    },
+    "headline": "Integrate TestMu AI Extension With Azure Pipelines",
+    "description": "Now integrate your Azure Pipelines with TestMu AI extension plugin to automate your test scripts. Perform live interactive and automated cross-browser testing on 3000+ real browsers and operating systems online using TestMu AI.",
+    "url": "https://www.testmuai.com/support/docs/integrate-testmu-extension-with-azure-pipelines/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Integration",
+    "keywords": [
+      "azure pipelines extensions",
+      "azure pipelines add extension",
+      "azure pipelines agent azure vm extension"
+    ],
+    "proficiencyLevel": "Beginner",
+    "dependencies": "Azure DevOps (Azure Pipelines) account; TestMu AI account credentials..",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Click on Command Line Script and enter the command pip install selenium to install Selenium",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Python",
+        "text": "build_name = os.getenv(\"LT_BUILD_NAME\")"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "To setup your azure pipeline using TestMu AI Azure Pipeline Extension, you can refer to the below example",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "resources:\n  repositories:\n  - repository: self\n    type: git\n    ref: refs/heads/main\njobs:\n- job: Job_1\n  displayName: Agent job 1\n  pool:\n    vmImage: windows-2019\n  steps:\n  - checkout: self\n    clean: true\n    fetchTags: false\n  - task: Lambdatest.lambda-azure-pipeline-extention.configuration-task.configuration@1\n    displayName: LambdaTest configuration setup\n    inputs:\n      connection: 'connect endpoint'  // provide your connection name\n      isTunnelActivate: true\n      isAppAutomate: false // set true if you want to run your app automate test scripts\n\n  - task: PythonScript@0\n    displayName: Run a Python script\n    inputs:\n      scriptSource: inline\n      script: >-\n        print('Hello world') // provide your python script or command to run your test scripts\n\n  - task: Lambdatest.lambda-azure-pipeline-extention.stopLambdaTunnel-task.stoptunnel@1\n    displayName: LambdaTest Stop Tunnel\n  - task: Lambdatest.lambda-azure-pipeline-extention.showResults-task.LambdatestResults@1\n    displayName: Lambdatest Results\n..."
+      }
+    ],
+    "dateModified": "2026-06-02T12:20:54+05:30"
+  }) }}
+/>
+
 # Integrate <BrandName /> Extension With Azure Pipelines
 
 * * *

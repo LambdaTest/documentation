@@ -50,6 +50,104 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
    }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/hyperexecute-smart-ui-sdk-maestro/"
+    },
+    "headline": "UI Testing with Maestro using HyperExecute and SmartUI SDK",
+    "description": "Use the Maestro framework to run visual tests on Android apps via HyperExecute and SmartUI. Capture screenshots for visual comparison in mobile test automation.",
+    "url": "https://www.testmuai.com/support/docs/hyperexecute-smart-ui-sdk-maestro/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "HyperExecute",
+    "keywords": [
+      "smartui mobile testing",
+      "hyperexecute android tests",
+      "maestro visual regression"
+    ],
+    "proficiencyLevel": "Beginner",
+    "dependencies": "Your TestMu AI Username and Access Key. You can find these on your dashboard -> left side bar -> credentials.; The HyperExecute CLI downloaded to your local machine.; An existing Android application file (.apk).; Node.js and npm installed on your system..",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 2: Clone The Sample Repository",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "codeRepository": "https://github.com/LambdaTest/smartui-maestro-sample",
+        "text": "git clone https://github.com/LambdaTest/smartui-maestro-sample\ncd smartui-maestro-sample"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Install it in your project directory",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "npm install @lambdatest/smartui-cli"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "4.2. Add SmartUI Screenshots to Your Maestro Flow",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "- launchApp\n- takeScreenshot:\n    path: ./screenshots/home-screen\n- tapOn: \"Login\"\n- takeScreenshot:\n    path: ./screenshots/login-page"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 5: Configure the HyperExecute YAML (Android-Real Device)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "codeRepository": "https://github.com/LambdaTest/smartui-maestro-sample",
+        "text": "<\/TabItem>\n\n<TabItem value=\"android-emu\" label=\"Android-Emulator\" default>\n\n> To enable this for your organizaton, connect with us through our <span className=\"doc__lt\"\u00a0onClick={()\u00a0=>\u00a0window.openLTChatWidget()}>**24/7 chat support**<\/span> or drop us an email to [support@testmuai.com](mailto:support@testmuai.com).\n\n```yaml reference title=\"maestro_Emulator_HyperEx.yaml\"\nhttps://github.com/LambdaTest/smartui-maestro-sample/blob/main/yaml/maestro_Emulator_HyperEx.yaml"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Run the below command in your terminal at the root folder of the project",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "./hyperexecute --config RELATIVE_PATH_OF_YOUR_YAML_FILE"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 This document guides you on how to perform visual regression testing for your Android applications by running your Maestro tests on the HyperExecute platform and capturing screenshots with the SmartUI SDK.
 
 ## Prerequisites

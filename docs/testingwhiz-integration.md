@@ -42,6 +42,73 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/testingwhiz-integration/"
+    },
+    "headline": "Running Automation Tests Using TestingWhiz TestMu AI",
+    "description": "Now perform cross-browser testing of your website or web app on 10,000+ browser/device combinations, using TestMu AI and TestingWhiz integration",
+    "url": "https://www.testmuai.com/support/docs/testingwhiz-integration/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Integration",
+    "keywords": [
+      "TestMu AI integrations",
+      "Test Automation for GUI Testing",
+      "test automation"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Consider a test scenario which includes",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "- Opening [LambdaTest ToDo App](https://lambdatest.github.io/sample-todo-app/)\n- Check first item in the list\n- Check second item in the list\n- Add a new item in the list"
+      }
+    ],
+    "dateModified": "2026-08-26T14:02:45+05:30"
+  }) }}
+/>
+
 # TestingWhiz Integration With <BrandName />
 * * *
 

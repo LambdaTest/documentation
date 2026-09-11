@@ -54,6 +54,63 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       })
     }}
 ></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/smart-ui-testing/"
+    },
+    "headline": "SmartUI Testing Using HyperExecute",
+    "description": "Improve bug discovery using TestMu AI's Advanced Visual UI Regression Testing. Effortlessly pinpoint visual discrepancies and regression issues in recent builds to ensure impeccable app deployment.",
+    "url": "https://www.testmuai.com/support/docs/smart-ui-testing/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "HyperExecute",
+    "keywords": [
+      "smart ui testing in testmu ai",
+      "smart ui testing in hyperexecute",
+      "visual  ui testing,image to image comparison"
+    ],
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
 SmartUI Testing is a technique used by designers and front-end testers to ensure the visual consistency of web applications by employing a sort of testing called **"Visual Regression"**.
 
 In Visual Regression testing, we compare screenshots and identify visual variations in the pixels. It is integrated with <BrandName />'s HyperExecute, allowing you to execute **SmartUI** Tests on the platform.

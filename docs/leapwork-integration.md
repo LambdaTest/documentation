@@ -43,6 +43,74 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/leapwork-integration-with-testmu/"
+    },
+    "headline": "How to Run LEAPWORK Automation Tests on TestMu AI",
+    "description": "Connect LEAPWORK with TestMu AI to run codeless automation flows on 5000+ real devices and 10,000+ browser/device combinations, plus native mobile apps.",
+    "url": "https://www.testmuai.com/support/docs/leapwork-integration-with-testmu/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Integration",
+    "keywords": [
+      "leapwork testmu ai integration",
+      "run leapwork tests on testmu ai",
+      "leapwork codeless automation"
+    ],
+    "proficiencyLevel": "Beginner",
+    "dependencies": "A TestMu AI account. If you do not have one, sign up for a free TestMu AI account.; Your TestMu AI Username and Access Key, available from the Account Settings page after you log in.; A working LEAPWORK Studio installation. Admin access is required to add a TestMu AI Server connection for mobile testing..",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "In the Hostname field, enter the TestMu AI web hub",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "hub.lambdatest.com"
+      }
+    ],
+    "dateModified": "2026-08-14T19:24:28+05:30"
+  }) }}
+/>
+
 # How to Integrate TestMu AI With LEAPWORK
 ***
 If you build codeless test automation in LEAPWORK, you can run those same visual flows on real browsers and devices by connecting LEAPWORK to TestMu AI. The integration gives your LEAPWORK agent access to 5000+ real devices and 10,000+ browser/device combinations. You configure TestMu AI once inside LEAPWORK Studio, then run automation flows against the TestMu AI cloud without managing any local machines.

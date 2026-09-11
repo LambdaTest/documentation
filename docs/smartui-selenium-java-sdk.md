@@ -54,6 +54,243 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/smartui-selenium-java-sdk/"
+    },
+    "headline": "Integrate SmartUI SDK with Selenium-Java",
+    "description": "In this documentation, learn how integrate your Selenium Java automated tests with TestMu AI's SmartUI.",
+    "url": "https://www.testmuai.com/support/docs/smartui-selenium-java-sdk/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "SmartUI",
+    "keywords": [
+      "Visual Regression",
+      "Visual Regression Testing Guide",
+      "Visual Regression Test Automation"
+    ],
+    "proficiencyLevel": "Beginner",
+    "dependencies": "Basic understanding of Command Line Interface and Selenium is required.; Login to TestMu AI SmartUI with your credentials..",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 1: Create/Update your test",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "codeRepository": "https://github.com/LambdaTest/smartui-java-testng-sample",
+        "text": "git clone https://github.com/LambdaTest/smartui-java-testng-sample"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 2: Update the Dependencies",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "XML",
+        "text": "<dependency>\n    <groupId>io.github.lambdatest<\/groupId>\n    <artifactId>lambdatest-java-sdk<\/artifactId>\n    <version>1.0.23<\/version>\n<\/dependency>"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 3: Install the Dependencies",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "npm install @lambdatest/smartui-cli"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 3: Install the Dependencies",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "mvn clean compile"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 4: Configure your Project Token",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "export PROJECT_TOKEN=\"123456#1234abcd-****-****-****-************\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 4: Configure your Project Token",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "set PROJECT_TOKEN=\"123456#1234abcd-****-****-****-************\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 4: Configure your Project Token",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "PowerShell",
+        "text": "$env:PROJECT_TOKEN=123456#1234abcd-****-****-****-************\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "To generate the configuration file, please execute the following command",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "npx smartui config:create .smartui.json"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 9",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": ":::info Advanced options in SmartUI configuration\n- For capturing fullpage or viewport screenshots, please refer to this [documentation](/docs/smartui-sdk-config-options/#12-viewports)\n- For the list of available mobile viewports, please refer to this [documentation](/docs/smartui-sdk-config-options/#list-of-supported-device-viewports)\n- For more information about SmartUI config global options, please refer to this [documentation](/docs/smartui-sdk-config-options/#3-global-options-optional).\n:::\n\n### **Step 6:** Adding SmartUI function to take screenshot\n\n- You can incorporate SmartUI into your custom `Selenium` automation test (any platform) script by adding the `smartuiSnapshot` function in the required segment of selenium script of which we would like to take the screenshot, as shown below:\n\n```java\n //Importing the lambdatest-java SDK\n\n//Rest of your code here\n\n@Test\n    public void basicTest() throws Exception {\n        String spanText;\n        System.out.println(\"Loading URL\");\n\n        driver.get(\"<Required URL>\");\n\n        SmartUISnapshot.smartuiSnapshot(driver, \"<Screenshot Name>\");\n\n        Thread.sleep(5000);\n        Thread.sleep(1000);\n        System.out.println(\"TestFinished\");\n\n    }\n"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 7: Execute the Tests on SmartUI Cloud",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "npx smartui --config .smartui.json exec -- mvn test -D suite=\"sdk-cloud.xml\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Handling Dynamic Data in SmartUI SDK ****",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n<\/TabItem>\n<TabItem value='IgoreClass' label='Ignore Class'>\n\n```java title=\"This is a sample for your configuration for Java to ignore by Class\"\nList<String> cssclass = Arrays.asList(\"<required class>\");\nMap<String, Object> options = new HashMap<>();\nMap<String, List<String>> ignore = new HashMap<>();\nignore.put(\"class\", cssclass);\noptions.put(\"ignoreDOM\", ignore);\n\ndriver.get(\"Required URL\");\nSmartUISnapshot.smartuiSnapshot(driver, \"Screenshot Name\", options);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 12",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n<\/TabItem>\n\n<TabItem value='IgnoreSelector' label='Ignore CSS Selector'>\n\n```java title=\"This is a sample for your configuration for Java to ignore by CSS Selector\"\nList<String> selector = Arrays.asList(\"<required selector>\");\nMap<String, Object> options = new HashMap<>();\nMap<String, List<String>> ignore = new HashMap<>();\nignore.put(\"cssSelector\", selector);\noptions.put(\"ignoreDOM\", ignore);\n\ndriver.get(\"Required URL\");\nSmartUISnapshot.smartuiSnapshot(driver, \"Screenshot Name\", options);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 13",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n<\/TabItem>\n<TabItem value='SelectClass' label='Select Class'>\n\n```java title=\"This is a sample for your configuration for Java to select by Class\"\nList<String> cssclass = Arrays.asList(\"<required class>\");\nMap<String, Object> options = new HashMap<>();\nMap<String, List<String>> select = new HashMap<>();\nselect.put(\"class\", cssclass);\noptions.put(\"selectDOM\", select);\n\ndriver.get(\"Required URL\");\nSmartUISnapshot.smartuiSnapshot(driver, \"Screenshot Name\", options);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 14",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n<\/TabItem>\n\n<TabItem value='SelectSelector' label='Select CSS Selector'>\n\n```java title=\"This is a sample for your webhook configuration for Java to select by CSS Selector\"\nList<String> selector = Arrays.asList(\"<required selector>\");\nMap<String, Object> options = new HashMap<>();\nMap<String, List<String>> select = new HashMap<>();\nselect.put(\"cssSelector\", selector);\noptions.put(\"selectDOM\", select);\n\ndriver.get(\"Required URL\");\nSmartUISnapshot.smartuiSnapshot(driver, \"Screenshot Name\", options);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "For capturing the screenshot of a specific element",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n<\/TabItem>\n<TabItem value='ElementClass' label='Capture Element by Class'>\n\n```java title=\"This is a sample for your configuration for Java to capture an element by Class\"\nHashMap<String, Object> options = new HashMap<>();\nHashMap<String, String> locator = new HashMap<>();\noptions.put(\"element\", locator);\nlocator.put(\"class\", \"Required Class\");\ndriver.get(\"Required URL\");\nSmartUISnapshot.smartuiSnapshot(driver, \"Screenshot Name\", options);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 16",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n<\/TabItem>\n\n<TabItem value='ElementSelector' label='Capture Element by Selector'>\n\n```java title=\"This is a sample for your configuration for Java to capture an element by CSS Selector\"\nHashMap<String, Object> options = new HashMap<>();\nHashMap<String, String> locator = new HashMap<>();\noptions.put(\"element\", locator);\nlocator.put(\"cssSelector\", \"Required Selector\");\ndriver.get(\"Required URL\");\nSmartUISnapshot.smartuiSnapshot(driver, \"Screenshot Name\", options);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 17",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "<\/TabItem>\n\n<\/Tabs>\n\n## For capturing interactive lazy loading elements\n\nIf you encounter difficulties loading interactive elements that appear on scroll in full-page screenshots, consider functionally incorporating a full-page scroll into your script before capturing the screenshot. This approach ensures the elements load first, facilitating the screenshot processing.\n\n```java Example for scrolling to bottom for lazy elements\n//Rest of your code here\n\n@Test\npublic void basicTest() throws Exception {\n    System.out.println(\"Loading Url\");\n    driver.get(\"Required URL\");\n    quickScrollToBottom();\n\n    SmartUISnapshot.smartuiSnapshot(driver, \"Screenshot Name\");\n    Thread.sleep(5000); // wait for 5 seconds\n    System.out.println(\"Test Finished\");\n}\n\npublic void quickScrollToBottom() throws InterruptedException {\n    long lastHeight = ((Number) ((JavascriptExecutor) driver).executeScript(\"return document.body.scrollHeight\")).longValue();\n    while (true) {\n        ((JavascriptExecutor) driver).executeScript(\"window.scrollTo(0, document.body.scrollHeight);\");\n        Thread.sleep(2000);\n\n        long newHeight = ((Number) ((JavascriptExecutor) driver).executeScript(\"return document.body.scrollHeight\")).longValue();\n        if (newHeight == lastHeight) {\n            break;\n        }\n        lastHeight = newHeight;\n    }\n    ((JavascriptExecutor) driver).executeScript(\"window.scrollTo(0, 0);\");\n    Thread.sleep(1000); // wait for 1 second\n}\n\n@AfterMethod\npublic void tearDown() {\n    if (driver != null) {\n        driver.quit();\n    }\n}\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Best Practices",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "SmartUISnapshot.smartuiSnapshot(driver, \"HomePage-Header\");\nSmartUISnapshot.smartuiSnapshot(driver, \"ProductPage-MainContent\");"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Best Practices",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "driver.get(\"https://example.com\");\nWebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));\nwait.until(ExpectedConditions.presenceOfElementLocated(By.id(\"main-content\")));\nSmartUISnapshot.smartuiSnapshot(driver, \"Page Loaded\");"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Verify PROJECT_TOKEN is set correctly",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "   echo $PROJECT_TOKEN"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Verify SmartUI CLI is installed",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "   npx smartui --version"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Add explicit waits before screenshots",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "   WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));\n   wait.until(ExpectedConditions.presenceOfElementLocated(By.id(\"content\")));"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Enable JavaScript in configuration",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JSON",
+        "text": "   {\n     \"enableJavaScript\": true\n   }"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Try different port if default is in use",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "   npx smartui exec -P 5000 -- <command\">"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Clear Maven cache",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "   mvn clean"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 Welcome to the world of simplified visual testing with the SmartUI SDK.
 
 Integrating seamlessly into your existing Selenium testing suite, SmartUI SDK revolutionizes the way you approach visual regression testing. Our robust solution empowers you to effortlessly capture, compare, and analyze screenshots across a multitude of browsers and resolutions, ensuring comprehensive coverage and accuracy in your visual testing endeavors.

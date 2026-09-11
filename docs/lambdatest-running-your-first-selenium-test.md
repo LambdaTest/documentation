@@ -49,6 +49,81 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/testmu-running-your-first-selenium-test/"
+    },
+    "headline": "Run Your First Selenium Test",
+    "description": "Run your first Selenium test on TestMu AI's cloud grid. Clone a sample project, set credentials, configure capabilities, and execute.",
+    "url": "https://www.testmuai.com/support/docs/testmu-running-your-first-selenium-test/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Web Automation",
+    "keywords": [
+      "selenium first test",
+      "run selenium test online",
+      "selenium cloud testing"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 1: Clone the Sample Project",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "codeRepository": "https://github.com/LambdaTest/java-testng-selenium",
+        "text": "git clone https://github.com/LambdaTest/java-testng-selenium\ncd java-testng-selenium"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Here is an example",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "ChromeOptions browserOptions = new ChromeOptions();\nbrowserOptions.setPlatformName(\"Windows 10\");\nbrowserOptions.setBrowserVersion(\"latest\");\n\nHashMap<String, Object> ltOptions = new HashMap<String, Object>();\nltOptions.put(\"build\", \"My First Test\");\nltOptions.put(\"name\", \"Sample Test - Single\");\nltOptions.put(\"w3c\", true);\n\nbrowserOptions.setCapability(\"LT:Options\", ltOptions);"
+      }
+    ],
+    "dateModified": "2026-09-09T19:13:32+05:30"
+  }) }}
+/>
+
 ---
 
 This guide walks you through running a sample Selenium test on the TestMu AI cloud grid using Java and TestNG. Clone a sample project, set your credentials, and execute a test.

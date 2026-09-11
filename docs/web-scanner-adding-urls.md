@@ -48,6 +48,73 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/web-scanner-adding-urls/"
+    },
+    "headline": "Adding URLs for Web Scanner",
+    "description": "A guide on the different methods for adding URLs to your scan, including manual input, CSV file upload, and importing from a sitemap XML.",
+    "url": "https://www.testmuai.com/support/docs/web-scanner-adding-urls/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Web Scanner",
+    "keywords": [
+      "testmu ai",
+      "web scanner",
+      "add urls"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "2. Import via CSV File",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Csv",
+        "text": "[https://example.com](https://example.com)\n[https://example.com/pricing](https://example.com/pricing)\n[https://example.com/contact](https://example.com/contact)"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 ## Step 3: Add URLs to Your Scan
 
 After configuring the scan type (Step 2), the **Add URLs** section (Step 3) allows you to populate the test targets. You can choose from one of the following input methods.

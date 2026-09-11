@@ -52,6 +52,123 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       })
     }}
 ></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/hyperexecute-smart-ui-testing-using-selenium/"
+    },
+    "headline": "SmartUI Tests in HyperExecute using Selenium",
+    "description": "Accelerate bug identification with HyperExecute's intelligent UI testing via Selenium. Conduct Visual UI Regression Testing for flawless application deployment.",
+    "url": "https://www.testmuai.com/support/docs/hyperexecute-smart-ui-testing-using-selenium/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "HyperExecute",
+    "keywords": [
+      "smart ui testing in testmu ai",
+      "smart ui testing in hyperexecute",
+      "visual  ui testing,image to image comparison"
+    ],
+    "proficiencyLevel": "Beginner",
+    "dependencies": "Your TestMu AI Username and Access key; HyperExecute CLI in order to initiate a test execution Job .; Setup the Environment Variable; HyperExecute YAML file which contains all the necessary instructions.; To run SmartUI tests, you need to have a Baseline Image and a Comparison image. A baseline image is the reference image with which you want to compare. You can either upload this image from your computer or take a screenshot from your browser..",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 1: Configure Your Test Suite",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "const GRID_HOST = \"@hub.lambdatest.com/wd/hub\";"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "For example",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "DesiredCapabilities capability = new DesiredCapabilities();\ncapability.setCapability(CapabilityType.BROWSER_NAME, browser);\ncapability.setCapability(CapabilityType.VERSION, version);\ncapability.setCapability(CapabilityType.PLATFORM, os);\ncapability.setCapability(\"screen_resolution\", res);\ncapability.setCapability(\"build\", \"Cucu-Sel-TestNG-\" + jobid);\ncapability.setCapability(\"name\", scenario);\ncapability.setCapability(\"network\", true);\ncapability.setCapability(\"video\", true);\ncapability.setCapability(\"console\", true);\ncapability.setCapability(\"visual\", true);\ncapability.setCapability(\"smartUI.project\", \"HyperExecute-smartUI-project\");"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "In this sample YAML file, we have mentioned",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "---\nversion: \"0.1\"\nglobalTimeout: 90\ntestSuiteTimeout: 90\ntestSuiteStep: 90\n\nrunson: win\n\nautosplit: true\n\nretryOnFailure: true\nmaxRetries: 2\n\nconcurrency: 1\n\ndebug: false\n\ndataJsonPath: ['src/datame.json', 'src/data1.json','me/data.json', 'data.json']\n\nmergeArtifacts: true\nstripParentDirectory: true\ntaskIdentifierInNonConflictingArtefacts: true\n\npre:\n  - pwd\n  - echo ${PAT}\n  - echo ${qa}\n  - echo %PAT%\n  - echo %qa%\n  - sed -i -e 's/MyKey/%PAT%/g' key.txt\n  - cat key.txt\n  - mvn compile\n  - cat longlogs.txt\n\npost:\n  - cat hyperexecute.yaml\n  - cat longlogs.txt\n\ntestRunnerCommand: mvn test `-Dcucumber.options=\"$test\" `-Dscenario=\"$test\" `-Dmaven.repo.local=m2_cache_dir\n\ntestDiscovery:\n  type: raw\n  mode: static\n  command: snooper --featureFilePaths=src/main/**/ --frameWork=java --query=\"@Addition AND @me\"| sed -n 1,'5p'\n\njobLabel: [ 'HYP', 'Selenium', 'smartUI'] "
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Run the below command in your terminal at the root folder of the project",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "./hyperexecute --config RELATIVE_PATH_OF_YOUR_YAML_FILE"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Handling Dynamic Data with DOM Configuration (Ignore ID)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n<\/TabItem>\n<TabItem value=\"IgoreClass\" label=\"Ignore Class\">\n\n```js title=\"This is a sample for your webhook configuration for JavaScript to ignore by Class\"\nlet config = {\n  screenshotName: \"Ignore-Class\",\n  fullPage: false, //You can make this property as true in case of Chrome browser\n  ignoreDOM: {\n    class: [\"Class-1\", \"Class-2\"], // Ignoring elements by class, you can ignore multiple at once\n  },\n};\nawait driver.executeScript(\"smartui.takeScreenshot\", config);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Ignore XPath",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n<\/TabItem>\n\n<TabItem value=\"IgnoreSelector\" label=\"Ignore CSS Selector\">\n\n```js title=\"This is a sample for your webhook configuration for JavaScript to ignore by CSS Selector\"\nlet config = {\n  screenshotName: \"Ignore-cssSelector\",\n  fullPage: false, //You can make this property as true in case of Chrome browser\n  ignoreDOM: {\n    cssSelector: [\"CSS-Selector-1\", \"CSS-Selector-2\"], // Ignoring elements by CSS selector, you can ignore multiple at once\n  },\n};\nawait driver.executeScript(\"smartui.takeScreenshot\", config);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Select ID",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n<\/TabItem>\n<TabItem value=\"SelectClass\" label=\"Select Class\">\n\n```js title=\"This is a sample for your webhook configuration for JavaScript to select by Class\"\nlet config = {\n  screenshotName: \"Select-Class\",\n  fullPage: false, //You can make this property as true in case of Chrome browser\n  selectDOM: {\n    class: [\"Class-1\", \"Class-2\"], // Selecting elements by class, you can select multiple at once\n  },\n};\nawait driver.executeScript(\"smartui.takeScreenshot\", config);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Select XPath",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n<\/TabItem>\n\n<TabItem value=\"SelectSelector\" label=\"Select CSS Selector\">\n\n```js title=\"This is a sample for your webhook configuration for JavaScript to select by CSS Selector\"\nlet config = {\n  screenshotName: \"Select-cssSelector\",\n  fullPage: false, //You can make this property as true in case of Chrome browser\n  selectDOM: {\n    cssSelector: [\"CSS-Selector-1\", \"CSS-Selector-2\"], // Selecting elements by CSS selector, you can select multiple at once\n  },\n};\nawait driver.executeScript(\"smartui.takeScreenshot\", config);"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
 This documentation will guide you step-by-step to execute the SmartUI tests on the HyperExecute platform using Selenium
 
 ## Prerequisites

@@ -19,6 +19,160 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/cypress-testing-using-webkit/"
+    },
+    "headline": "Running your Cypress tests in WebKit",
+    "description": "This documentation explains how to run your Cypress tests using WebKit.",
+    "url": "https://www.testmuai.com/support/docs/cypress-testing-using-webkit/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Documentation",
+    "keywords": [
+      "cypress test webkit",
+      "cypress testing webkit",
+      "cypress testing webkit testmu ai"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "You can run Cypress test in WebKit on the TestMu AI platform in a few simple steps",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "codeRepository": "https://github.com/LambdaTest/Cypress-Cloud",
+        "text": "git clone https://github.com/LambdaTest/Cypress-Cloud.git\ncd Cypress-Cloud"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Prerequisites",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "set LT_USERNAME=\"YOUR_LAMBDATEST_USERNAME\"\nset LT_ACCESS_KEY=\"YOUR_LAMBDATEST_ACCESS_KEY\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 3",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "export LT_USERNAME=\"YOUR_LAMBDATEST_USERNAME\"\nexport LT_ACCESS_KEY=\"YOUR_LAMBDATEST_ACCESS_KEY\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Running Your First Test in WebKit",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "npm install -g lambdatest-cypress-cli"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Running Your First Test in WebKit (Cypress v10)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "codeRepository": "https://github.com/cypress-io/cypress-example-kitchensink",
+        "text": "# Clone the kitchen sink repo\ngit clone https://github.com/cypress-io/cypress-example-kitchensink.git\n\n# Go to the cloned directory\ncd cypress-example-kitchensink"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Go to the cloned directory (Cypress v9)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "codeRepository": "https://github.com/cypress-io/cypress-example-kitchensink",
+        "text": "# Clone the kitchen sink repo\nhttps://github.com/cypress-io/cypress-example-kitchensink/tree/ab10094ef7b199ae7febafec413a0626414bcd3c\n\n# Go to the cloned directory\ncd cypress-example-kitchensink"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Go to the cloned directory (Cypress v10)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "app\n...\ncypress\n|-- fixtures\n|-- e2e\n|-- support\ncypress.config.js\n..."
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Cypress v10",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "npm install"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Cypress v10",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "lambdatest-cypress init"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Cypress v10",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "{\n  \"lambdatest_auth\": {\n     \"username\": \"<Your LambdaTest username>\",\n     \"access_key\": \"<Your LambdaTest access key>\"\n  },\n  \"browsers\": [\n     {\n        \"browser\": \"Webkit\",\n        \"platform\": \"Windows 11\",\n        \"versions\": [\n           \"latest\"\n        ]\n     },\n     {\n        \"browser\": \"Webkit\",\n        \"platform\": \"Windows 10\",\n        \"versions\": [\n           \"latest\"\n        ]\n     }\n      {\n       \"browser\": \"Webkit\",\n       \"platform\": \"MacOS Monterey\",\n       \"versions\": [\n          \"latest\"  \n       ]\n    },\n {\n       \"browser\": \"Webkit\",\n       \"platform\": \"MacOS Big sur\",\n       \"versions\": [\n          \"latest\"  \n       ]\n    },\n\n ],\n  \"run_settings\": {\n     \"cypress_config_file\": \"cypress.config.js\",\n     \"reporter_config_file\": \"base_reporter_config.json\",\n     \"build_name\": \"build-name\",\n     \"parallels\": 1,\n     \"specs\": \"./*.cy.js\",\n     \"ignore_files\": \"\",\n     \"network\": false,\n     \"headless\": false,\n     \"npm_dependencies\": {\n        \"cypress\": \"10.8.0\"\n        \"playwright-webkit\": \"^1.28.1\",\n        \"mochawesome\": \"7.0.1\"\n\n     }\n  },\n  \"tunnel_settings\": {\n     \"tunnel\": false,\n     \"tunnel_name\": null\n  }\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 11",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "lambdatest-cypress run"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Testing Locally Hosted or Privately Hosted Projects",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JSON",
+        "text": "  \"tunnel_settings\": {\n\t\t\"tunnel\": true,\n\t\t\"tunnel_name\": \"LT_Tunnel\"\n\t}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Limitations",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "\"npm_dependencies\": {\n   \"cypress\": \"10.8.0\",\n   \"playwright-webkit\": \"^1.28.1\"\n}"
+      }
+    ],
+    "dateModified": "2026-09-09T19:13:32+05:30"
+  }) }}
+/>
+
 # Cypress Testing Using WebKit
 ---
 

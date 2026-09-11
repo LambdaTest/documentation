@@ -45,6 +45,171 @@ import { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/run-parallel-tests-with-selenium/"
+    },
+    "headline": "Run Parallel Tests With Selenium",
+    "description": "Run Selenium tests in parallel on the TestMu AI cloud grid to cut build times across 10,000+ browser/device combinations.",
+    "url": "https://www.testmuai.com/support/docs/run-parallel-tests-with-selenium/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Documentation",
+    "keywords": [
+      "selenium parallel testing",
+      "run tests in parallel",
+      "parallel execution selenium"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "How Parallel Testing Works",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "Your Machine\n  \u251c\u2500\u2500 Thread 1 \u2192 Chrome / Windows 11\n  \u251c\u2500\u2500 Thread 2 \u2192 Firefox / Windows 10\n  \u251c\u2500\u2500 Thread 3 \u2192 Safari / macOS Sonoma\n  \u2514\u2500\u2500 Thread 4 \u2192 Edge / Windows 11"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 2",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\nRun with Maven:\n\n```bash\nmvn test -D suite=parallel.xml"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "JUnit 5 - add to junit-platform.properties",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Properties",
+        "text": "junit.jupiter.execution.parallel.enabled=true\njunit.jupiter.execution.parallel.mode.default=concurrent\njunit.jupiter.execution.parallel.config.strategy=fixed\njunit.jupiter.execution.parallel.config.fixed.parallelism=3"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "JUnit 4 - run with Maven parallel profile",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "mvn test -P parallel"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Install it",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "pip install pytest-xdist"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Run with a specified number of workers",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "pytest -n 3"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Use the --parallel flag (Mocha 8+) to run test files in parallel",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "mocha --parallel --jobs 3"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Or use a test runner like mocha-parallel-tests",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "npm install mocha-parallel-tests\nmocha-parallel-tests --max-parallel 3"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "NUnit runs tests in parallel using the [Parallelizable] attribute",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "C#",
+        "text": "[TestFixture]\n[Parallelizable(ParallelScope.All)]\npublic class ParallelTests\n{\n    // Each test method runs in its own thread\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Run from the command line",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "dotnet test"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Use the parallel_tests gem",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "gem install parallel_tests"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Run with a specified number of processes",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "parallel_rspec -n 3 spec/"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Use the paratest package for parallel PHPUnit execution",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "composer require brianium/paratest"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Run with a specified number of processes",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "vendor/bin/paratest -p 3"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Run with",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "dotnet test --filter \"profile=parallel\""
+      }
+    ],
+    "dateModified": "2026-08-14T19:24:28+05:30"
+  }) }}
+/>
+
 ---
 
 Running tests sequentially multiplies wait time across every test. Parallel execution on the TestMu AI cloud grid lets you run hundreds of tests simultaneously across different browser and OS combinations, cutting build times from hours to minutes.

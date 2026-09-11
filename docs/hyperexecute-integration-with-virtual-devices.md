@@ -52,6 +52,109 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/hyperexecute-integration-with-virtual-devices/"
+    },
+    "headline": "Virtual Devices",
+    "description": "Maximize virtual device testing with HyperExecute! Accelerate test orchestration and intelligence on real devices with TestMu AI's support.",
+    "url": "https://www.testmuai.com/support/docs/hyperexecute-integration-with-virtual-devices/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Documentation",
+    "keywords": [
+      "hyperexecute integrations",
+      "hyperexecute integrations with products",
+      "products"
+    ],
+    "proficiencyLevel": "Beginner",
+    "dependencies": "Install Appium Java Client.; Your TestMu AI Username and Access key; HyperExecute CLI in order to initiate a test execution Job .; Setup the Environmental Variable; HyperExecute YAML file which contains all the necessary instructions.; You have an access to an Android app (.apk or .aab file) or an iOS zip file (containing .app file).; Sampl\u0435 Android App; Sampl\u0435 iOS App.",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 4: Update Your Automation Script (Android)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "@Test\n@org.testng.annotations.Parameters(value = {\"device\", \"version\", \"platform\"})\npublic void AndroidApp1(String device, String version, String platform) {\n    version = System.getProperty(\"platformVersion\");\n    try {\n        DesiredCapabilities capabilities = new DesiredCapabilities();\n        capabilities.setCapability(\"build\",\"Java TestNG Android\");\n        capabilities.setCapability(\"name\",platform+\" \"+device+\" \"+version);\n        capabilities.setCapability(\"deviceName\", device);\n        capabilities.setCapability(\"platformVersion\",version);\n        capabilities.setCapability(\"platformName\", platform);\n        // highlight-next-line\n        capabilities.setCapability(\"isRealMobile\", false);\n\n        // highlight-next-line\n        capabilities.setCapability(\"app\", \"lt://APP1123456789\"); //Enter your app url\n        capabilities.setCapability(\"deviceOrientation\", \"PORTRAIT\");\n        capabilities.setCapability(\"console\", true);\n        capabilities.setCapability(\"network\", false);\n        // capabilities.setCapability(\"visual\", true);\n        capabilities.setCapability(\"devicelog\", true);\n        //capabilities.setCapability(\"geoLocation\", \"HK\");"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "iOS",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "@Test\n@org.testng.annotations.Parameters(value = {\"device\", \"version\", \"platform\"})\npublic void iOSApp1(String device, String version, String platform) {\n    try {\n        DesiredCapabilities capabilities = new DesiredCapabilities();\n        capabilities.setCapability(\"build\",\"Java TestNG iOS\");\n        capabilities.setCapability(\"name\",platform+\" \"+device+\" \"+version);\n        capabilities.setCapability(\"deviceName\", device);\n        capabilities.setCapability(\"platformVersion\",version);\n        capabilities.setCapability(\"platformName\", platform);\n        // highlight-next-line\n        capabilities.setCapability(\"isRealMobile\", false);\n\n        // highlight-next-line\n        capabilities.setCapability(\"app\", \"lt://APP123456789\"); //Enter your app url\n        capabilities.setCapability(\"deviceOrientation\", \"PORTRAIT\");\n        capabilities.setCapability(\"console\", true);\n        capabilities.setCapability(\"network\", false);\n        // capabilities.setCapability(\"visual\", true);\n        capabilities.setCapability(\"devicelog\", true);\n        //capabilities.setCapability(\"geoLocation\", \"HK\");"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Android",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "XML",
+        "text": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<!DOCTYPE suite SYSTEM \"http://testng.org/testng-1.0.dtd\">\n<suite thread-count=\"100\" name=\"Mobile\" parallel=\"tests\">\n\n\n    <test name=\"AppTest 1\">\n        <parameter name=\"version\" value=\"11\"/>\n        <parameter name=\"platform\" value=\"Android\"/>\n        <parameter name=\"device\" value=\"Galaxy S21 Ultra 5G\"/>\n        <classes>\n            <class name=\"AndroidApp\"/>\n        <\/classes>\n    <\/test>\n\n    <test name=\"AppTest 2\">\n        <parameter name=\"version\" value=\"11\"/>\n        <parameter name=\"platform\" value=\"Android\"/>\n        <parameter name=\"device\" value=\"Galaxy S21\"/>\n        <classes>\n            <class name=\"AndroidApp\"/>\n        <\/classes>\n    <\/test>\n<\/suite>"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "iOS",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "XML",
+        "text": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<!DOCTYPE suite SYSTEM \"http://testng.org/testng-1.0.dtd\">\n<suite thread-count=\"100\" name=\"Mobile\" parallel=\"tests\">\n\n\n    <test name=\"iOSApp 1\">\n        <parameter name=\"version\" value=\"14\"/>\n        <parameter name=\"platform\" value=\"iOS\"/>\n        <parameter name=\"device\" value=\"iPhone 11\"/>\n        <classes>\n            <class name=\"iOSApp\"/>\n        <\/classes>\n    <\/test>\n\n    <test name=\"iOSApp 2\">\n        <parameter name=\"version\" value=\"14\"/>\n        <parameter name=\"platform\" value=\"iOS\"/>\n        <parameter name=\"device\" value=\"iPhone 12 Pro\"/>\n        <classes>\n            <class name=\"iOSApp\"/>\n        <\/classes>\n    <\/test>\n<\/suite>"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 5: Configure YAML in your Test Suite",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "---\nversion: 0.2\nglobalTimeout: 150\ntestSuiteTimeout: 150\ntestSuiteStep: 150\n\nrunson: android\n\nconcurrency: 2\n\nautosplit: true\n\nretryOnFailure: false\nmaxRetries: 1\n\nappium: true\nframework:\n  name: maven/testng\n  defaultReports: false\n  discoveryType: xmltest\n  flags: [\"-Pios-single\"]\n\njobLabel: ['HYP', 'Virtual Device', 'iOS', 'Single Device']"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Run the below command in your terminal at the root folder of the project",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "./hyperexecute --config RELATIVE_PATH_OF_YOUR_YAML_FILE"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 # Virtual Device Integration with HyperExecute
 
 This page outlines how to execute your Virtual Device tests on HyperExecute with [YAML 0.2](/support/docs/hyperexecute-yaml-version0.2/)

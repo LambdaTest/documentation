@@ -44,6 +44,108 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/appium-testmu-hooks/"
+    },
+    "headline": "Lambda Hooks For Appium Automation",
+    "description": "Now you can add custom status & remark to your App Automation scripts that you run on TestMu AI.",
+    "url": "https://www.testmuai.com/support/docs/appium-testmu-hooks/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "App Automation",
+    "keywords": [
+      "appium",
+      "testmu ai hooks",
+      "custom status"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Adding custom status & remark",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "((JavascriptExecutor) driver).executeScript(\"lambda-hook: {\\\"action\\\": \\\"setTestStatus\\\",\\\"arguments\\\": {\\\"status\\\":\\\"failed\\\", \\\"remark\\\":\\\"This is a sample remark for failed test \\\"}} \");"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "//Enter your Username & Accesskey here",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\nOnce you have added the code snippet, the status and remark will be visible on the [<BrandName /> App Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://appautomation.lambdatest.com/build) as shown below:\n\n\n<img loading=\"lazy\" src={require('../assets/images/appium-lambdaHooks/01.webp').default} alt=\"Build Page Remark\" width=\"1200\" height=\"550\" className=\"doc_img\"/>\n\n## Update Test Name\n---\n\nTo update the name of the test, just add the code snippet using the ```JavascriptExecutor```.\n\nArguments | Example\n------------- | -----------------------------------------------------------------------------------------\n```lambda-name``` | For changing the Test Name.\n\n```bash\n((JavascriptExecutor) driver).executeScript(\"lambda-name=TestName\");"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "To start a test case, use the lambda-testCase-start hook",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "// To start a test case\n((JavascriptExecutor) driver).executeScript(\"lambda-testCase-start=find Name\");"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "To end a test case, use the lambda-testCase-end hook",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "// To end a test case\n((JavascriptExecutor) driver).executeScript(\"lambda-testCase-end=find Name\");"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Annotation Start",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "driver.execute_script(\"lambdatest_executor: {\\\"action\\\": \\\"stepcontext\\\", \\\"arguments\\\": {\\\"data\\\": \\\"youtube\\\", \\\"level\\\": \\\"debug\\\"}}\");"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "To close the executor at the end of your script, pass data as an empty string",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "driver.execute_script(\"lambdatest_executor: {\\\"action\\\": \\\"stepcontext\\\", \\\"arguments\\\": {\\\"data\\\": \\\"\\\"}}\");"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 

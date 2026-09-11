@@ -53,6 +53,81 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/smartui-upload-api-v2/"
+    },
+    "headline": "Getting Started With Uploading Screenshots through API for Visual Regression Testing",
+    "description": "Discover how to leverage TestMu AI's SmartUI upload API v2 for seamless Visual Regression Testing. Learn the prerequisites, create projects.",
+    "url": "https://www.testmuai.com/support/docs/smartui-upload-api-v2/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "SmartUI",
+    "keywords": [
+      "Visual Regression",
+      "Visual Regression Testing Guide",
+      "Visual Regression Test Automation"
+    ],
+    "proficiencyLevel": "Beginner",
+    "dependencies": "Basic understanding of HTTP APIs is required.; Go to LambdaTest SmartUI and login along with your credentials.; Copy LT_USERNAME and LT_ACCESS_KEY credentials from Access Key button on the top right of the dashboard..",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Once, the project is created then you copy the Project Token from the application, here is a sample project token",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "projectToken = \"123456#1234abcd-****-****-****-************\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Upload screenshots via API",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "API_URL=\"https://api.lambdatest.com/automation/smart-ui/v2/upload\""
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 :::info
 This is the guide to setup the **version 2** of the SmartUI upload API.
 :::

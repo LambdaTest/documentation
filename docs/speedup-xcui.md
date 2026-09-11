@@ -53,6 +53,73 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       })
     }}
 ></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/speedup-xcui/"
+    },
+    "headline": "Filters for XCUI Tests",
+    "description": "Filter XCUI test cases with TestMu AI's REST API. Run specific tests or skip others using customizable parameters. Streamline your testing process effortlessly.",
+    "url": "https://www.testmuai.com/support/docs/speedup-xcui/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "App Automation",
+    "keywords": [
+      "XCUI test filters",
+      "app test automation",
+      "XCUI"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Given below is the REST API endpoint",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "curl --location --request POST 'https://mobile-api.lambdatest.com/framework/v1/xcui/build' \\\n--header 'Authorization: Basic BASIC_AUTH_TOKEN' \\\n--header 'Content-Type: application/json' \\\n--data-raw '{\n  \"app\" : \"APP_ID\",\n  \"testSuite\": \"TEST_SUITE_ID\",\n  \"device\" :  [\"iPhone 11-14\"],\n  \"video\" : true,\n  \"queueTimeout\": 10800,\n  \"idleTimeout\": 150,\n  \"devicelog\": true,\n  \"network\": false,\n  \"build\" : \"Proverbial-XCUITest\"\n}'"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
 <RealDeviceTag value="Real Device" /> <VirtualDeviceTag value="Virtual Device" />
 Usually, all the test cases of your XCUI test suite are executed, but there is a way to filter these. You can specify some selected classes or tests, which provides you with options to filter the test cases which you want to execute.
 

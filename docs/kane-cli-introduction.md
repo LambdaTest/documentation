@@ -44,6 +44,73 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/kane-cli-introduction/"
+    },
+    "headline": "Kane CLI Documentation - Getting Started",
+    "description": "Kane CLI is an AI-powered command-line tool that runs browser and native mobile app tests in plain English: from your terminal, IDE, or CI pipeline.",
+    "url": "https://www.testmuai.com/support/docs/kane-cli-introduction/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Documentation",
+    "keywords": [
+      "kane cli",
+      "kaneai",
+      "browser automation"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 1",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "# Install\nnpm install -g @testmuai/kane-cli\n\n# Authenticate\nkane-cli login\n\n# Run your first test\nkane-cli run --url https://example.com \"Click the 'More information' link and verify the page loads\""
+      }
+    ],
+    "dateModified": "2026-08-12T13:15:00+05:30"
+  }) }}
+/>
+
 **Kane CLI** `kane-cli` is an AI-powered test automation tool that runs from your terminal. Describe what you want to test in plain English: Kane CLI navigates, clicks elements, fills forms, extracts data, and validates outcomes in a real Chrome browser, or in a native mobile app on a virtual device.
 
 - **Run tests from any terminal or IDE**: no test scripts, no selectors, no framework boilerplate

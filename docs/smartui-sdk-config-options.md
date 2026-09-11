@@ -53,6 +53,108 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/smartui-sdk-config-options/"
+    },
+    "headline": "SmartUI SDK Advanced Configuration Options",
+    "description": "In this documentation, learn about the options available in SmartUI SDK configuration",
+    "url": "https://www.testmuai.com/support/docs/smartui-sdk-config-options/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "SmartUI",
+    "keywords": [
+      "Visual Regression",
+      "Visual Regression Testing Guide",
+      "Visual Regression Test Automation"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "To generate the SmartUI SDK configuration file, please execute the following command",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "npx smartui config:create .smartui.json"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Install or update using",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "npm install -g @lambdatest/smartui-cli@latest"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Below is a sample configuration file with detailed explanations of each option",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JSON",
+        "text": "{\n  \"web\": {\n    \"browsers\": [\n      \"chrome\",\n      \"firefox\",\n      \"safari\",\n      \"edge\"\n    ],\n    \"viewports\": [\n      [1920],\n      [1366],\n      [1028]\n    ]\n  },\n  \"mobile\": {\n    \"devices\": [\n      \"iPhone 14\",\n      \"Galaxy S24\"\n    ],\n    \"fullPage\": true,\n    \"orientation\": \"portrait\"\n  },\n  \"waitForTimeout\": 1000,\n  \"waitForPageRender\": 50000,\n  \"enableJavaScript\": false,\n  \"allowedHostnames\": [\"cdn.xyz.com\"]\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Configuration Options",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n**For capturing viewport screenshots**\n\nTo capture a screenshot of the content currently visible in your viewport, rather than the entire page, it's important to define the viewport's width and height in your configuration settings. Specify the desired width and height parameters as demonstrated in the following example to ensure that the screenshot encompasses only the viewport area.\n\n```json title=\"Viewport Capture\"\n    \"viewports\": [\n      [\n        1920,\n        1080\n      ],\n      [\n        1366,\n        768\n      ],\n      [\n        360,\n        640\n      ]\n    ],"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 5",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n*Note: As demonstrated with `safari` above, the `height` property within a viewport object is optional. If omitted, SmartUI performs a full-page capture automatically.*\n\n<\/TabItem>\n\n<TabItem value='mobile' label='Mobile Configuration'>\n\n**devices**\n\nAn array of mobile devices to capture screenshots from. List of supported device names can be found [here](#list-of-supported-device-viewports).\n\n:::note\n Mobile viewports are emulated in desktop environments.Android devices will have the screenshots rendered in Chrome, while iOS devices in Safari.\n SmartUI SDK will soon be supported simulation in case of iOS devices.\n:::\n\n**fullPage**\n\nSpecifies whether to capture full-page screenshots for mobile devices. <b>By default<\/b>, `fullPage` is taken as <b>true<\/b>; set it to `false` in order to take a viewport screenshot on a mobile viewport.\n\n**orientation**\n\nSpecifies the orientation of the mobile device. You can choose from `portrait` or `landscape` according to your usecase. <b>By default<\/b>, the orientation is taken as <b>portrait<\/b>.\n\n<\/TabItem>\n\n<TabItem value='global' label='Global Options'>\n\n**waitForPageRender**\n\nIf one or more URLs in your script require a relatively higher amount of time to load, you may use the `waitForPageRender` key in the config file to make sure the screenshots are rendered correctly. Avoid using the same in case your websites render in less than 30 seconds as it might increase the execution time of your tests.\n\n**waitForTimeout**\n\nIf you are using any async components, you can add wait time for the page to load the DOM of your components. This can help avoid false-positive results for your tests. You can add the wait time in milliseconds, which might increase the execution time of your tests.\n\n**enableJavaScript**\n\nThe `enableJavaScript` option is a boolean parameter that determines whether JavaScript is enabled for all snapshots within the project. Enabling JavaScript may lead to side-effects such as animations or redirects, potentially affecting the reliability of your snapshots.  <b>By default<\/b>, this option is set to <b>false.<\/b>\n\n**allowedHostnames**\n\nThe `allowedHostnames` option controls the capture of assets from specific hostnames. By default, the SmartUI SDK only captures assets that match the hostname of the snapshot location. For instance, if snapshots are taken on `https://xyz.com`, assets hosted on `https://cdn.xyz.com` will not be captured. To include assets from other hostnames, each additional hostname needs to be added to the allowedHostnames configuration.\n\n<\/TabItem>\n\n<TabItem value='lazyload' label='Lazy Load Configuration'>\n\n**lazyLoadConfiguration**\n\nThe `lazyLoadConfiguration` option is used to handle lazy-loaded content on web pages. This configuration helps ensure that all content is loaded before capturing screenshots, preventing incomplete captures due to lazy loading.\n\nTo use this feature, ensure you have the latest version of SmartUI CLI installed:\n\n```bash\nnpm install -g @lambdatest/smartui-cli@latest"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Add the following configuration to your .smartui.json file",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JSON",
+        "text": "{\n  \"lazyLoadConfiguration\": {\n    \"enabled\": true,\n    \"jumpBackToTop\": true,\n    \"scrollDelay\": 250,\n    \"scrollStep\": 250\n  }\n}"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 Welcome to the world of simplified visual testing with the SmartUI SDK.
 
 This guide is designed to provide you with comprehensive information about the various configuration options available within the SmartUI SDK. Whether you're a new user seeking to customize your SmartUI integration or an experienced developer looking to optimize your testing workflows, this documentation will serve as your go-to resource for understanding and utilizing the configuration options effectively.

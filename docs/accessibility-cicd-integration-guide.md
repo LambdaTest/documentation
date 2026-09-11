@@ -15,6 +15,73 @@ site_name: TestMu AI
 canonical: https://www.testmuai.com/support/docs/accessibility-cicd-integration-guide/
 ---
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/accessibility-cicd-integration-guide/"
+    },
+    "headline": "CI/CD Integration Guide",
+    "description": "Connect Accessibility Automation to CI/CD: secrets, matrix jobs, gating, and where to review reports after each build.",
+    "url": "https://www.testmuai.com/support/docs/accessibility-cicd-integration-guide/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Accessibility Testing",
+    "keywords": [
+      "TestMu AI",
+      "Accessibility",
+      "CI/CD"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Example: GitHub Actions (pattern)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "name: accessibility-smoke\non: [pull_request]\njobs:\n  a11y:\n    runs-on: ubuntu-latest\n    steps:\n      - uses: actions/checkout@v4\n      - uses: actions/setup-java@v4\n        with:\n          distribution: temurin\n          java-version: \"17\"\n      - name: Run Selenium + Accessibility smoke\n        env:\n          LT_USERNAME: ${{ secrets.LT_USERNAME }}\n          LT_ACCESS_KEY: ${{ secrets.LT_ACCESS_KEY }}\n        run: mvn -q -Dgroups=a11y test"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 # CI/CD Integration Guide
 
 Use this guide when you want **Accessibility Automation** (Selenium capabilities + hooks or auto-scan) to run on **every PR, nightly, or release branch**, not only from a laptop.

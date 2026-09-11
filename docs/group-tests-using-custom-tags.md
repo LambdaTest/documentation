@@ -42,6 +42,80 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/group-tests-using-custom-tags/"
+    },
+    "headline": "How to Create Custom Automation Tags",
+    "description": "Create custom tags in desired capabilities to group, view, and filter automation tests on the dashboard.",
+    "url": "https://www.testmuai.com/support/docs/group-tests-using-custom-tags/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Documentation",
+    "keywords": [
+      "create custom tags selenium",
+      "group automation tests by tag",
+      "filter tests using custom tags"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "How to Create Custom Tags on the Selenium Grid",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "        // In case for just 1 tag, just add 1 element in the array\n        String[] customTags = {\"Custom Tag\"};\n\n        // In case for multiple tags, add them in the array separated by comma\n        String[] customTags = {\"Tag 1\", \"Tag 2\", \"Tag 3\", ...};"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "How to Create Custom Tags on the Selenium Grid",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "        DesiredCapabilities caps = new DesiredCapabilities();\n        .\n        .\n\n        // To create custom tags\n        caps.setCapability(\"tags\", customTags); "
+      }
+    ],
+    "dateModified": "2026-09-09T19:13:32+05:30"
+  }) }}
+/>
+
 # Group Tests Using Custom Tags
 
 * * *

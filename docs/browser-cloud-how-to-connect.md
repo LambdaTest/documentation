@@ -42,6 +42,80 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/browser-cloud-sdk-setup/"
+    },
+    "headline": "How to Connect to TestMu AI Browser Cloud",
+    "description": "Connect your agents to TestMu AI Browser Cloud using the TestMu AI Browser SDK.",
+    "url": "https://www.testmuai.com/support/docs/browser-cloud-sdk-setup/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Documentation",
+    "keywords": [
+      "browser cloud connection",
+      "browser cloud sdk",
+      "browser cloud api"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "What you need to get started",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "npm install @testmuai/testmu-cloud"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Initialize the Client",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "TypeScript",
+        "text": "import { Browser } from '@testmuai/testmu-cloud';\nconst client = new Browser();"
+      }
+    ],
+    "dateModified": "2026-03-26T15:05:31+05:30"
+  }) }}
+/>
+
 # Set Up the Browser SDK
 ***
 

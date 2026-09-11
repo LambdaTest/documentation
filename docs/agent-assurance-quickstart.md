@@ -1,5 +1,6 @@
 ---
 id: agent-assurance-quickstart
+toc_max_heading_level: 2
 title: How to Get Started With Agent Assurance
 hide_title: false
 sidebar_label: Quickstart
@@ -16,6 +17,63 @@ site_name: TestMu AI
 slug: agent-assurance-quickstart/
 canonical: https://www.testmuai.com/support/docs/agent-assurance-quickstart/
 ---
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/agent-assurance-quickstart/"
+    },
+    "headline": "How to Get Started With Agent Assurance",
+    "description": "Install and authenticate the Agent Assurance CLI (rook), then test your first autonomous agent from a PRD and a live staging API. No source code or model API key required.",
+    "url": "https://www.testmuai.com/support/docs/agent-assurance-quickstart/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Agent Testing",
+    "keywords": [
+      "agent assurance getting started",
+      "install rook cli",
+      "rook authentication"
+    ],
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "dateModified": "2026-09-07T12:29:55+05:30"
+  }) }}
+/>
 
 # How to Get Started With Agent Assurance
 

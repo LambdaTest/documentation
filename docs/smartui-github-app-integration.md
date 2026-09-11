@@ -53,6 +53,81 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/smartui-github-app-integration/"
+    },
+    "headline": "GitHub App Integration with SmartUI",
+    "description": "Integrate GitHub with TestMu AI SmartUI for seamless CI and visual regression testing. Follow our guide to set up, configure, and run your first test suite.",
+    "url": "https://www.testmuai.com/support/docs/smartui-github-app-integration/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "SmartUI",
+    "keywords": [
+      "Visual Regression",
+      "Visual Regression Testing Guide",
+      "Visual Regression Test Automation"
+    ],
+    "proficiencyLevel": "Beginner",
+    "dependencies": "An account with GitHub with valid permission to install new applications to your repositories.; Basic understanding of Continuous Integration tools (CI) is required.; Should have setup the SmartUI suite, else please read this.",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Add the GitHub capability to your current test configuration",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "const capabilities: {\n  platform: \"Windows 10\",\n  browserName: \"chrome\",\n  version: \"latest\",\n  \"smartUI.project\": \"SmartUI sample test\",\n  // highlight-start\n   github: {\n\n    \"url\": process.env.GITHUB_URL  // Mandatory\n    //GitHub URL format-https://api.github.com/repos/OWNER/REPO/statuses/commitId\n\n   }\n   // highlight-end\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Here is an example setup with GitHub Actions",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "    name: Execute SmartUI Test with GitHub App Integration\n    runs-on: ubuntu-latest\n    steps:\n    - uses: actions/checkout@v1\n      with:\n        fetch-depth: 10\n\n    - name: Step for push event\n      run: |\n        echo \"This is a push event!\"\n        echo \"The latest commitId $(git log -1 --format='%H')\"\n        echo \"COMMIT_ID=$(git log -1 --format='%H')\" >> $GITHUB_ENV\n      if: github.event_name == 'push'\n\n    - name: Step for pull_request event\n      run: |\n        echo \"This is a pull_request event!\"\n        git log -n 5 --format=\"%H %an %s\" | while read line; do echo \"$line\"; done\n        echo \"The latest commitId $(git log -n 2 --format='%H' | tail -n 1)\"\n        echo \"COMMIT_ID=$(git log -n 2 --format='%H' | tail -n 1)\" >> $GITHUB_ENV\n      if: github.event_name == 'pull_request'\n\n    - name: Create GitHub URL\n      run: |\n        API_HOST=https://api.github.com\n        echo \"The latest commitId is $COMMIT_ID\"\n        GITHUB_URL=$API_HOST/repos/$GITHUB_REPOSITORY/statuses/$COMMIT_ID\n        echo \"GITHUB_URL: $GITHUB_URL\"\n        echo \"GITHUB_URL=$GITHUB_URL\" >> $GITHUB_ENV"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 This is the guide to setup your GitHub Repos with SmartUI projects and run your CI along with visual regression testing.
 
 ## Prerequisites

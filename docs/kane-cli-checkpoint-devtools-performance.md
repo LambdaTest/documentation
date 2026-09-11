@@ -41,6 +41,87 @@ canonical: https://www.testmuai.com/support/docs/kane-cli-checkpoint-devtools-pe
       }) }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/kane-cli-checkpoint-devtools-performance/"
+    },
+    "headline": "Performance Assertions",
+    "description": "Verify Core Web Vitals and other performance metrics (LCP, CLS, INP, FCP, TTFB) captured during test execution.",
+    "url": "https://www.testmuai.com/support/docs/kane-cli-checkpoint-devtools-performance/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Kane CLI",
+    "keywords": [
+      "performance assertion",
+      "core web vitals",
+      "lcp"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Example Assertions",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "Assert: page LCP is under 2500ms\nAssert: CLS is below 0.1\nAssert: TTFB is under 800ms\nAssert: FCP is less than 1800ms\nAssert: page performance meets Core Web Vitals thresholds"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Example Extractions",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "Store the page LCP value\nExtract all web vitals metrics\nStore the TTFB for this page"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Example If/Else",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "If LCP is under 2500ms then continue, else report performance issue"
+      }
+    ],
+    "dateModified": "2026-07-03T19:09:57+05:30"
+  }) }}
+/>
+
 Performance assertions let you verify [Core Web Vitals](https://web.dev/articles/vitals) and other key performance metrics for the current page.
 
 ## How Capture Works

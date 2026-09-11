@@ -55,6 +55,123 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/web-scanner-advanced-features/"
+    },
+    "headline": "Advanced Features in Web Scanner",
+    "description": "Learn how to configure advanced features in Web Scanner including authentication (Basic Auth and Form Selectors), dedicated proxy, geolocation, and tunnel for testing locally hosted pages.",
+    "url": "https://www.testmuai.com/support/docs/web-scanner-advanced-features/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Web Scanner",
+    "keywords": [
+      "testmu ai",
+      "web scanner",
+      "advanced features"
+    ],
+    "proficiencyLevel": "Beginner",
+    "dependencies": "Your organization must have a dedicated proxy enabled (enterprise feature); Network resources must be publicly discoverable but access-restricted; The dedicated proxy IP must be whitelisted by your network administrators.",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Download the TestMu AI Tunnel binary for your platform (Windows)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "https://downloads.lambdatest.com/tunnel/v3/windows/amd64/LT.exe"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 1: Download Tunnel Binary (Windows)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "https://downloads.lambdatest.com/tunnel/v3/windows/386/LT.exe"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 1: Download Tunnel Binary (macOS)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "https://downloads.lambdatest.com/tunnel/v3/mac/amd64/LT"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 1: Download Tunnel Binary (macOS)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "https://downloads.lambdatest.com/tunnel/v3/mac/arm64/LT"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Linux",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "https://downloads.lambdatest.com/tunnel/v3/linux/amd64/LT"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Linux",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "https://downloads.lambdatest.com/tunnel/v3/linux/arm64/LT"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 2: Start the Tunnel (Windows)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "LT.exe --user YOUR_LAMBDATEST_USERNAME --key YOUR_LAMBDATEST_ACCESS_KEY --tunnelName YOUR_TUNNEL_NAME"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 2: Start the Tunnel (macOS/Linux)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "chmod +x LT\n./LT --user YOUR_LAMBDATEST_USERNAME --key YOUR_LAMBDATEST_ACCESS_KEY --tunnelName YOUR_TUNNEL_NAME"
+      }
+    ],
+    "dateModified": "2026-02-12T19:51:34+05:30"
+  }) }}
+/>
+
 ## Overview
 
 Web Scanner provides advanced configuration options to enhance your scanning capabilities. These features allow you to test authenticated pages, access network-restricted resources, simulate different geographic locations, and scan locally hosted applications.

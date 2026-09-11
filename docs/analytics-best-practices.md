@@ -17,6 +17,63 @@ canonical: https://www.testmuai.com/support/docs/insights-best-practices/
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/insights-best-practices/"
+    },
+    "headline": "Insights Best Practices",
+    "description": "Best practices for using TestMu AI Insights dashboards, widgets, and insights modules to maximize value and drive data-driven testing decisions.",
+    "url": "https://www.testmuai.com/support/docs/insights-best-practices/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Insights",
+    "keywords": [
+      "insights",
+      "dashboards",
+      "best practices"
+    ],
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "dateModified": "2026-01-28T13:29:18+05:30"
+  }) }}
+/>
+
 # Best Practices for <BrandName /> Insights
 
 Unlock the full potential of <BrandName /> Insights by following these best practices for dashboards, widgets, and insights modules. These guidelines are distilled from the current knowledge base and are designed to help you optimize your testing process, improve reporting, and drive actionable insights.

@@ -6,6 +6,59 @@ description: Rule-level Accessibility guidance for Dragging Movements (WCAG 2.5.
 slug: accessibility-web-rule-2-5-7-dragging-movements/
 ---
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/accessibility-web-rule-2-5-7-dragging-movements/"
+    },
+    "headline": "Dragging Movements (2.5.7)",
+    "description": "Rule-level Accessibility guidance for Dragging Movements (WCAG 2.5.7 Level AA).",
+    "url": "https://www.testmuai.com/support/docs/accessibility-web-rule-2-5-7-dragging-movements/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Accessibility Testing",
+    "keywords": [],
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 # Dragging Movements (2.5.7)
 
 Functionality that uses a dragging movement must also be achievable through a single-pointer action without dragging, unless dragging is essential or the functionality is determined by the user agent.

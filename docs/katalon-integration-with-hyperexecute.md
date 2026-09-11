@@ -43,6 +43,74 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/katalon-integration-with-hyperexecute/"
+    },
+    "headline": "Katalon",
+    "description": "Integrate Katalon Studio with HyperExecute for cross-platform testing! Follow our guide to perform web & mobile automation testing on multiple OS with codeless UI validation.",
+    "url": "https://www.testmuai.com/support/docs/katalon-integration-with-hyperexecute/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "HyperExecute",
+    "keywords": [
+      "hyperexecute integrations",
+      "hyperexecute integrations with products",
+      "products"
+    ],
+    "proficiencyLevel": "Beginner",
+    "dependencies": "Ensure that you have integrated Katalon Studio with TestMu AI. Follow the steps on this page to do so.; Ensure that you have the necessary licenses required to use Katalon Studio. You need the Katalon Runtime License to integrate Katalon with HyperExecute..",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Create the hyperexecute.yaml file in the root directory of your Katalon project with the given parameters",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "  version: 0.1\n  globalTimeout: 90\n  testSuiteTimeout: 90\n  testSuiteStep: 90\n  \n  autosplit: true\n  \n  runson: win\n  \n  tunnel: true\n  tunnelOpts:\n    global: true\n\n  concurrency: 2\n  \n  pre: \n    - pip install requests # To install pip request\n    - python installer.py # To install the certs in the Machine \n\n  runtime: katalon\n  \n  testDiscovery:\n    type: raw\n    mode: remote\n    command: grep -lr 'testSuiteGuid' */*.ts | sed 's/:.*//' | sed 's/.ts//g'\n  \n  testRunnerCommand:  katalonc `-noSplash `-runMode=console `-projectPath=\"G:\\foreman\\Hyperexecute_Sample\\Hyperexecute_Sample.prj\" `-retry=0 `-testSuitePath=\"$test\" `-browserType=\"firefox\" `-executionProfile=\"default\" `-apiKey=\"aaa9402b-6a2e-4621-a4c3-05fe356f5aad\" `-`-config `-webui.autoUpdateDrivers=true\n  \n  retryOnFailure: false\n  maxRetries: 1"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 # Katalon Integration with HyperExecute
 
 [Katalon Studio](https://www.katalon.com) is an automation tool for testing web, API, mobile, and desktop applications. It offers a flexible automation platform that fits teams and projects of all sizes and purposes. It also helps uses create tests, execute them and integrate them with the CI/CD ecosystem.

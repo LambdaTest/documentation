@@ -24,6 +24,130 @@ import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/smartui-gitlab-pr-checks-hooks/"
+    },
+    "headline": "GitLab PR Checks with SmartUI Hooks",
+    "description": "Integrate SmartUI visual regression testing with GitLab merge requests using SmartUI Hooks for web and mobile testing with Selenium, Playwright, WebdriverIO, Appium, and more.",
+    "url": "https://www.testmuai.com/support/docs/smartui-gitlab-pr-checks-hooks/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "SmartUI",
+    "keywords": [
+      "GitLab PR checks",
+      "SmartUI Hooks",
+      "GitLab merge request integration"
+    ],
+    "proficiencyLevel": "Beginner",
+    "dependencies": "TestMu AI account with active subscription; GitLab repository with CI/CD enabled; SmartUI project created in TestMu AI SmartUI Dashboard; Test suite configured (Selenium/Playwright/Cypress/Puppeteer/Appium/WebdriverIO); Test framework configured in your preferred language (TypeScript/JavaScript/Java/Python/Ruby/C#); TestMu AI credentials (LT_USERNAME and LT_ACCESS_KEY).",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 1",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n<\/TabItem>\n<TabItem value='java-web' label='Java'>\n\n```java title=\"Example: Java Selenium Configuration with SmartUI Hooks and GitLab\"\npackage webhook;\n\nimport org.openqa.selenium.chrome.ChromeOptions;\nimport org.openqa.selenium.remote.RemoteWebDriver;\nimport org.testng.annotations.BeforeClass;\n\nimport java.net.MalformedURLException;\nimport java.net.URL;\nimport java.util.HashMap;\nimport java.util.Map;\n\npublic class BaseClassWebhook {\n    \n    public RemoteWebDriver driver;\n    public String githubURL = System.getenv(\"GITHUB_URL\"); // GitLab URL from CI/CD\n    \n    @BeforeClass\n    public void setup() throws MalformedURLException {\n        String username = System.getenv(\"LT_USERNAME\") == null\n            ? \"Your LT Username\"\n            : System.getenv(\"LT_USERNAME\");\n        String authkey = System.getenv(\"LT_ACCESS_KEY\") == null\n            ? \"Your LT AccessKey\"\n            : System.getenv(\"LT_ACCESS_KEY\");\n        \n        ChromeOptions browserOptions = new ChromeOptions();\n        HashMap<String, Object> ltOptions = new HashMap<String, Object>();\n        \n        // LambdaTest Options\n        ltOptions.put(\"username\", username);\n        ltOptions.put(\"accessKey\", authkey);\n        ltOptions.put(\"project\", \"Your Project Name\");\n        ltOptions.put(\"w3c\", true);\n        ltOptions.put(\"browserName\", \"Chrome\");\n        ltOptions.put(\"browserVersion\", \"latest\");\n        ltOptions.put(\"platformName\", \"Windows 10\");\n        \n        // SmartUI Hooks Configuration\n        String projectName = System.getenv(\"SMARTUI_PROJECT_NAME\") != null\n            ? System.getenv(\"SMARTUI_PROJECT_NAME\") + \"-visual\"\n            : \"Your SmartUI Project Name\";\n        ltOptions.put(\"smartUI.project\", projectName);\n        \n        String buildName = System.getenv(\"CI\") != null\n            ? System.getenv(\"CI_PROJECT_NAME\") + \"-\" + System.getenv(\"CI_PIPELINE_ID\")\n            : \"smartui-local-build\";\n        ltOptions.put(\"smartUI.build\", buildName);\n        ltOptions.put(\"smartUI.baseline\", false);\n        \n        browserOptions.setCapability(\"LT:Options\", ltOptions);\n        \n        // GitLab Integration Capability\n        if (githubURL != null) {\n            Map<String, String> github = new HashMap<String, String>();\n            github.put(\"url\", githubURL);\n            browserOptions.setCapability(\"github\", github);\n            System.out.println(\"GitLab URL received successfully: \" + githubURL);\n        }\n        \n        String remoteUrl = \"https://\" + username + \":\" + authkey + \"@hub.lambdatest.com/wd/hub\";\n        driver = new RemoteWebDriver(new URL(remoteUrl), browserOptions);\n    }\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "GitLab Integration Capability",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n<\/TabItem>\n<\/Tabs>\n\n<\/TabItem>\n<TabItem value='mobile' label='Mobile Testing (Appium/WebdriverIO)'>\n\n<Tabs className='docs__val' groupId='mobile-language'>\n<TabItem value='typescript-mobile' label='TypeScript/JavaScript' default>\n\n```typescript title=\"Example: TypeScript/WebdriverIO Mobile Configuration with SmartUI Hooks and GitLab\"\nimport { remote, RemoteOptions } from 'webdriverio';\n\nconst capabilities: RemoteOptions['capabilities'] = {\n  deviceName: \"iPhone 12\",\n  platformName: \"ios\",\n  platformVersion: \"14\",\n  isRealMobile: true,\n  app: \"APP_URL\", // Your uploaded app URL\n  visual: true, // Mandatory for SmartUI\n  name: \"Mobile App Test Session\",\n  build: process.env.CI \n    ? `${process.env.CI_PROJECT_NAME}-${process.env.CI_PIPELINE_ID}`\n    : `smartui-local-build-${new Date().toISOString().split('T')[0]}`,\n  \n  // SmartUI Hooks Configuration\n  \"smartUI.project\": `${process.env.SMARTUI_PROJECT_NAME}-visual`,\n  \"smartUI.build\": process.env.CI \n    ? `${process.env.CI_PROJECT_NAME}-${process.env.CI_PIPELINE_ID}`\n    : `smartui-local-build-${new Date().toISOString().split('T')[0]}`,\n  \"smartUI.baseline\": false,\n  \"smartUI.cropStatusBar\": true,\n  \"smartUI.cropFooter\": true,\n  \n  // GitLab Integration Capability\n  github: {\n    url: process.env.GITHUB_URL // GitLab API URL for status updates\n    // GitLab URL format: https://gitlab.com/api/v4/projects/{projectId}/statuses/{commitId}\n  }\n};\n\nconst driver = await remote({\n  hostname: 'mobile-hub.lambdatest.com',\n  port: 443,\n  path: '/wd/hub',\n  protocol: 'https',\n  user: process.env.LT_USERNAME,\n  key: process.env.LT_ACCESS_KEY,\n  capabilities: capabilities as any,\n});"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 3",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n<\/TabItem>\n<TabItem value='python-mobile' label='Python'>\n\n```python title=\"Example: Python Appium Configuration with SmartUI Hooks and GitLab\"\nfrom appium import webdriver\nimport os\n\n# Get GitLab URL from environment\ngithub_url = os.getenv(\"GITHUB_URL\")\n\ncapabilities = {\n    \"deviceName\": \"iPhone 12\",\n    \"platformName\": \"ios\",\n    \"platformVersion\": \"14\",\n    \"isRealMobile\": True,\n    \"app\": \"APP_URL\",  # Your uploaded app URL\n    \"visual\": True,  # Mandatory for SmartUI\n    \"name\": \"Mobile App Test Session\",\n    \"build\": f\"{os.getenv('CI_PROJECT_NAME')}-{os.getenv('CI_PIPELINE_ID')}\" if os.getenv(\"CI\") else \"smartui-local-build\",\n    \n    # SmartUI Hooks Configuration\n    \"smartUI.project\": f\"{os.getenv('SMARTUI_PROJECT_NAME')}-visual\",\n    \"smartUI.build\": f\"{os.getenv('CI_PROJECT_NAME')}-{os.getenv('CI_PIPELINE_ID')}\" if os.getenv(\"CI\") else \"smartui-local-build\",\n    \"smartUI.baseline\": False,\n    \"smartUI.cropStatusBar\": True,\n    \n    # GitLab Integration Capability\n    \"github\": {\n        \"url\": github_url  # GitLab API URL for status updates\n    }\n}\n\ndriver = webdriver.Remote(\n    command_executor=f\"https://{os.getenv('LT_USERNAME')}:{os.getenv('LT_ACCESS_KEY')}@mobile-hub.lambdatest.com/wd/hub\",\n    desired_capabilities=capabilities\n)"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Taking Screenshots with SmartUI Hooks",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n<\/TabItem>\n<TabItem value='java' label='Java'>\n\n```java title=\"Taking Screenshots with SmartUI Hooks in Java\"\nimport org.openqa.selenium.JavascriptExecutor;\nimport java.util.HashMap;\nimport java.util.Map;\n\n// Viewport screenshot\n((JavascriptExecutor) driver).executeScript(\"smartui.takeScreenshot=Homepage\");\n\n// Full page screenshot (if supported)\nMap<String, Object> config = new HashMap<>();\nconfig.put(\"screenshotName\", \"Homepage\");\nconfig.put(\"fullPage\", true);\nconfig.put(\"pageCount\", 15); // Minimum 1, Maximum 20\n((JavascriptExecutor) driver).executeScript(\"smartui.takeScreenshot\", config);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Full page screenshot (if supported)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n<\/TabItem>\n<TabItem value='ruby' label='Ruby'>\n\n```ruby title=\"Taking Screenshots with SmartUI Hooks in Ruby\"\n# Viewport screenshot\ndriver.execute_script(\"smartui.takeScreenshot=Homepage\")\n\n# Full page screenshot (if supported)\nconfig = {\n  'screenshotName' => 'Homepage',\n  'fullPage' => true,\n  'pageCount' => 15  # Minimum 1, Maximum 20\n}\ndriver.execute_script(\"smartui.takeScreenshot\", config)"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Full page screenshot (if supported)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n<\/TabItem>\n<\/Tabs>\n\n:::caution Important\n\nThe `visual: true` capability is **mandatory** for SmartUI visual regression testing. Without this capability, screenshots will not be captured and the build status will show as `Error`.\n\n:::\n\n---\n\n## Step 3: Configure GitLab CI/CD Pipeline\n\nCreate or update your `.gitlab-ci.yml` file. Since you're using **Hooks**, you just need to run your tests normally - no SmartUI CLI exec command required.\n\n### Complete GitLab CI/CD Configuration\n\n<Tabs className='docs__val' groupId='ci-language'>\n<TabItem value='typescript' label='TypeScript/JavaScript' default>\n\n```yaml title=\".gitlab-ci.yml - TypeScript/JavaScript Example\"\nstages:\n  - test\n\nvariables:\n  NODE_VERSION: \"18\"\n  LT_USERNAME: $LT_USERNAME\n  LT_ACCESS_KEY: $LT_ACCESS_KEY\n  SMARTUI_PROJECT_NAME: $SMARTUI_PROJECT_NAME\n\nvisual_regression_tests:\n  stage: test\n  image: node:${NODE_VERSION}\n  \n  before_script:\n    - npm ci\n  \n  script:\n    # Get GitLab project ID and commit SHA\n    - |\n      PROJECT_ID=${CI_PROJECT_ID}\n      COMMIT_SHA=${CI_COMMIT_SHA}\n      \n      # For merge requests, use the merge request commit SHA\n      if [ -n \"$CI_MERGE_REQUEST_IID\" ]; then\n        COMMIT_SHA=${CI_MERGE_REQUEST_SHA:-${CI_COMMIT_SHA}}\n      fi\n      \n      # Construct GitLab API URL for status updates\n      GITHUB_URL=\"https://gitlab.com/api/v4/projects/${PROJECT_ID}/statuses/${COMMIT_SHA}\"\n      \n      echo \"GitLab Project ID: ${PROJECT_ID}\"\n      echo \"Commit SHA: ${COMMIT_SHA}\"\n      echo \"GitLab Status URL: ${GITHUB_URL}\"\n      \n      # Export GITHUB_URL as environment variable for use in test capabilities\n      export GITHUB_URL=\"${GITHUB_URL}\"\n      \n      # Run your tests normally - SmartUI Hooks work automatically through capabilities\n      npm test\n      # Or: npx wdio run wdio.conf.ts\n      # Or: npm run test:mobile\n      \n  only:\n    - merge_requests\n    - main\n    - develop\n  \n  environment:\n    name: visual-regression/$CI_COMMIT_REF_NAME"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "environment",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n<\/TabItem>\n<TabItem value='python' label='Python'>\n\n```yaml title=\".gitlab-ci.yml - Python Example\"\nstages:\n  - test\n\nvariables:\n  PYTHON_VERSION: \"3.9\"\n  LT_USERNAME: $LT_USERNAME\n  LT_ACCESS_KEY: $LT_ACCESS_KEY\n  SMARTUI_PROJECT_NAME: $SMARTUI_PROJECT_NAME\n\nvisual_regression_tests:\n  stage: test\n  image: python:${PYTHON_VERSION}\n  \n  before_script:\n    - pip install -r requirements.txt\n  \n  script:\n    # Get GitLab project ID and commit SHA\n    - |\n      PROJECT_ID=${CI_PROJECT_ID}\n      COMMIT_SHA=${CI_COMMIT_SHA}\n      \n      # For merge requests, use the merge request commit SHA\n      if [ -n \"$CI_MERGE_REQUEST_IID\" ]; then\n        COMMIT_SHA=${CI_MERGE_REQUEST_SHA:-${CI_COMMIT_SHA}}\n      fi\n      \n      # Construct GitLab API URL for status updates\n      GITHUB_URL=\"https://gitlab.com/api/v4/projects/${PROJECT_ID}/statuses/${COMMIT_SHA}\"\n      \n      echo \"GitLab Project ID: ${PROJECT_ID}\"\n      echo \"Commit SHA: ${COMMIT_SHA}\"\n      echo \"GitLab Status URL: ${GITHUB_URL}\"\n      \n      # Export GITHUB_URL as environment variable for use in test capabilities\n      export GITHUB_URL=\"${GITHUB_URL}\"\n      \n      # Run your tests normally - SmartUI Hooks work automatically through capabilities\n      pytest\n      # Or: python -m unittest discover\n      # Or: behave\n      \n  only:\n    - merge_requests\n    - main\n    - develop\n  \n  environment:\n    name: visual-regression/$CI_COMMIT_REF_NAME"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "environment",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n<\/TabItem>\n<\/Tabs>\n\n### Key Configuration Points\n\n1. **No SmartUI CLI exec needed**: With Hooks, you run your tests normally (e.g., `npm test`, `mvn test`, `pytest`)\n2. **GitLab Project ID**: Automatically available as `CI_PROJECT_ID` in GitLab CI/CD\n3. **Commit SHA**: Use `CI_COMMIT_SHA` for regular commits, or `CI_MERGE_REQUEST_SHA` for merge requests\n4. **GitLab API URL**: Export as `GIT_URL` environment variable, which your test capabilities will use\n5. **GitLab API URL Format**: `https://gitlab.com/api/v4/projects/{projectId}/statuses/{commitId}`\n\n:::info How Hooks Work\n\nWith SmartUI Hooks:\n- You pass SmartUI capabilities (including `github.url` with `GIT_URL` for GitLab) in your test configuration\n- Run your tests normally (no `npx smartui exec` command)\n- SmartUI integration happens automatically through the capabilities\n- GitLab PR checks are updated automatically when tests complete\n\n:::\n\n---\n\n## Step 4: Set Up GitLab CI/CD Variables\n\nConfigure the following variables in your GitLab project:\n\n1. Go to your GitLab project \u2192 **Settings** \u2192 **CI/CD** \u2192 **Variables**\n2. Add the following variables:\n\n<img loading=\"lazy\" className='doc_img' width=\"1300\" height=\"776\" src={require('../assets/images/smart-visual-testing/ci-cd-integration/gitlab/2.png').default} alt=\"GitLab CI/CD Variables configuration\" />\n\n| Variable Name | Description |\n|--------------|-------------|\n| `LT_USERNAME` | Your <BrandName /> username |\n| `LT_ACCESS_KEY` | Your <BrandName /> access key |\n| `SMARTUI_PROJECT_NAME` | Your SmartUI project name |\n\n---\n\n## Step 5: View Pipeline Results in GitLab\n\nAfter your pipeline runs, you can view the results in the GitLab Pipelines page:\n\n<img loading=\"lazy\" className='doc_img' width=\"1300\" height=\"776\" src={require('../assets/images/smart-visual-testing/ci-cd-integration/gitlab/pipeline_gitlabtab.png').default} alt=\"GitLab Pipelines page showing SmartUI test results\" />\n\nThe pipeline will show:\n- **Pipeline status** (Success/Failed)\n- **Job status** for SmartUI tests\n- **Screenshot statistics** (Total, Approved, Changes Found) in the job tooltip\n\n---\n\n## Step 6: View PR Check Results in GitLab Merge Request\n\nAfter your pipeline runs, you'll see SmartUI status checks in your GitLab merge request:\n\n<img loading=\"lazy\" className='doc_img' width=\"1300\" height=\"776\" src={require('../assets/images/smart-visual-testing/ci-cd-integration/gitlab/Gitlab_pr_check_dashboard.png').default} alt=\"GitLab merge request showing SmartUI PR check status\" />\n\n### Successful Status\n\nWhen all visual tests pass:\n- \u2705 **Status**: Success\n- **Details**: Click \"Details\" to view the SmartUI build in the dashboard\n- **Screenshot**: All screenshots match baseline or are approved\n\n### Failed Status\n\nWhen visual differences are detected:\n- \u274c **Status**: Failed\n- **Details**: Click \"Details\" to review differences in SmartUI dashboard\n- **Action Required**: Review and approve/reject changes in SmartUI dashboard\n\n---\n\n## Complete Working Examples\n\n<Tabs className='docs__val' groupId='complete-example'>\n<TabItem value='web-example' label='Web Testing Example' default>\n\n<Tabs className='docs__val' groupId='web-example-lang'>\n<TabItem value='typescript-web-ex' label='TypeScript/JavaScript' default>\n\n```typescript title=\"example.spec.ts - Complete Web Test with SmartUI Hooks and GitLab\"\nimport { Builder, Capabilities } from 'selenium-webdriver';\n\ndescribe('Web Visual Regression Tests', () => {\n  let driver;\n\n  before(async () => {\n    // Construct GitLab URL (in CI/CD, this would come from environment variable)\n    const gitUrl = process.env.GIT_URL || \n      `https://gitlab.com/api/v4/projects/${process.env.CI_PROJECT_ID}/statuses/${process.env.CI_COMMIT_SHA}`;\n\n    const capabilities = {\n      browserName: 'Chrome',\n      browserVersion: 'latest',\n      platformName: 'Windows 10',\n      'LT:Options': {\n        username: process.env.LT_USERNAME,\n        accessKey: process.env.LT_ACCESS_KEY,\n        project: 'Your Project Name',\n        w3c: true,\n        name: 'Web Visual Tests',\n      build: process.env.CI \n        ? `${process.env.CI_PROJECT_NAME}-${process.env.CI_PIPELINE_ID}`\n        : `local-build-${Date.now()}`,\n      \"smartUI.project\": `${process.env.SMARTUI_PROJECT_NAME}-visual`,\n      \"smartUI.build\": process.env.CI \n        ? `${process.env.CI_PROJECT_NAME}-${process.env.CI_PIPELINE_ID}`\n        : `local-build-${Date.now()}`,\n      \"smartUI.baseline\": false,\n      // GitLab integration capability\n      github: {\n          url: gitUrl\n        }\n      }\n    };\n\n    driver = await new Builder()\n      .usingServer(`https://${process.env.LT_USERNAME}:${process.env.LT_ACCESS_KEY}@hub.lambdatest.com/wd/hub`)\n      .withCapabilities(capabilities)\n      .build();\n  });\n\n  after(async () => {\n    if (driver) {\n      await driver.quit();\n    }\n  });\n\n  it('should capture homepage screenshot', async () => {\n    await driver.get('https://example.com');\n    await driver.executeScript(\"smartui.takeScreenshot=Homepage\");\n  });\n\n  it('should capture login page screenshot', async () => {\n    await driver.get('https://example.com/login');\n    await driver.executeScript(\"smartui.takeScreenshot=LoginPage\");\n  });\n});"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 9",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n<\/TabItem>\n<\/Tabs>\n\n<\/TabItem>\n<TabItem value='mobile-example' label='Mobile Testing Example'>\n\n<Tabs className='docs__val' groupId='mobile-example-lang'>\n<TabItem value='typescript-mobile-ex' label='TypeScript/JavaScript' default>\n\n```typescript title=\"example.spec.ts - Complete Mobile App Test with SmartUI Hooks and GitLab\"\nimport { remote, RemoteOptions } from 'webdriverio';\n\ndescribe('Mobile App Visual Regression Tests', () => {\n  let driver: WebdriverIO.Browser;\n\n  before(async () => {\n    // Construct GitLab URL (in CI/CD, this would come from environment variable)\n    const gitUrl = process.env.GIT_URL || \n      `https://gitlab.com/api/v4/projects/${process.env.CI_PROJECT_ID}/statuses/${process.env.CI_COMMIT_SHA}`;\n\n    const capabilities: RemoteOptions['capabilities'] = {\n      deviceName: \"iPhone 12\",\n      platformName: \"ios\",\n      platformVersion: \"14\",\n      isRealMobile: true,\n      app: process.env.APP_URL || \"YOUR_APP_URL\",\n      visual: true, // Mandatory for SmartUI\n      name: \"Mobile App Visual Tests\",\n      build: process.env.CI \n        ? `${process.env.CI_PROJECT_NAME}-${process.env.CI_PIPELINE_ID}`\n        : `local-build-${Date.now()}`,\n      \"smartUI.project\": `${process.env.SMARTUI_PROJECT_NAME}-visual`,\n      \"smartUI.build\": process.env.CI \n        ? `${process.env.CI_PROJECT_NAME}-${process.env.CI_PIPELINE_ID}`\n        : `local-build-${Date.now()}`,\n      \"smartUI.baseline\": false,\n      \"smartUI.cropStatusBar\": true,\n      // GitLab integration capability\n      github: {\n        url: gitlabUrl\n      }\n    };\n\n    driver = await remote({\n      hostname: 'mobile-hub.lambdatest.com',\n      port: 443,\n      path: '/wd/hub',\n      protocol: 'https',\n      user: process.env.LT_USERNAME,\n      key: process.env.LT_ACCESS_KEY,\n      capabilities: capabilities as any,\n    });\n  });\n\n  after(async () => {\n    if (driver) {\n      await driver.deleteSession();\n    }\n  });\n\n  it('should capture homepage screenshot', async () => {\n    // Navigate or perform actions\n    await driver.execute(\"smartui.takeScreenshot=Homepage\");\n  });\n\n  it('should capture login screen screenshot', async () => {\n    // Navigate to login screen\n    await driver.execute(\"smartui.takeScreenshot=LoginScreen\");\n  });\n});"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 This guide shows you how to integrate SmartUI visual regression testing with GitLab merge requests using the **SmartUI Hooks** approach. This works for both **web testing** (Selenium, Playwright, Cypress, Puppeteer) and **mobile app testing** (Appium, WebdriverIO) across all supported languages.
 
 :::info SmartUI Hooks vs SDK

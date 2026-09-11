@@ -57,6 +57,115 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/certificate-injection-appautomation/"
+    },
+    "headline": "Certificate Injection in App Automation on Real Devices",
+    "description": "Install custom CA certificates and client identities on TestMu AI real devices during Appium app automation sessions to test certificate-based authentication, SSL pinning, and mutual TLS.",
+    "url": "https://www.testmuai.com/support/docs/certificate-injection-appautomation/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "App Automation",
+    "keywords": [
+      "certificate injection",
+      "certificate based authentication",
+      "custom certificates"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "The response returns the media_url that you reference in your capabilities",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JSON",
+        "text": "{\n  \"media_url\": \"lt://MEDIA9f2c4b18a7d54e3ba0c6f19d2e8b7c05\",\n  \"name\": \"corp-root-ca.crt\",\n  \"status\": \"success\"\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 2: Set the customCertificates Capability (JSON)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JSON",
+        "text": "{\n  \"LT:Options\": {\n    \"platformName\": \"Android\",\n    \"deviceName\": \"Pixel 7\",\n    \"platformVersion\": \"14\",\n    \"isRealMobile\": true,\n    \"app\": \"lt://APP1234567890\",\n    //highlight-start\n    \"customCertificates\": [\n      { \"certificateId\": \"MEDIA9f2c4b18a7d54e3ba0c6f19d2e8b7c05\" },\n      {\n        \"certificateId\": \"MEDIA4a71e0c93f6d48b2915ac8de7b04f6a1\",\n        \"password\": \"s3cret\"\n      }\n    ]\n    //highlight-end\n  }\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Java",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "Map<String, Object> caCert = new HashMap<>();\ncaCert.put(\"certificateId\", \"MEDIA9f2c4b18a7d54e3ba0c6f19d2e8b7c05\");\n\nMap<String, Object> identity = new HashMap<>();\nidentity.put(\"certificateId\", \"MEDIA4a71e0c93f6d48b2915ac8de7b04f6a1\");\nidentity.put(\"password\", System.getenv(\"CERT_PASSWORD\"));\n\nltOptions.put(\"isRealMobile\", true);\n//highlight-next-line\nltOptions.put(\"customCertificates\", List.of(caCert, identity));\n\ncapabilities.setCapability(\"LT:Options\", ltOptions);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Python",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Python",
+        "text": "lt_options = {\n    \"platformName\": \"iOS\",\n    \"deviceName\": \"iPhone 14\",\n    \"platformVersion\": \"17\",\n    \"isRealMobile\": True,\n    \"app\": \"lt://APP1234567890\",\n    #highlight-start\n    \"customCertificates\": [\n        {\"certificateId\": \"MEDIA9f2c4b18a7d54e3ba0c6f19d2e8b7c05\"},\n        {\"certificateId\": \"MEDIA4a71e0c93f6d48b2915ac8de7b04f6a1\",\n         \"password\": os.environ[\"CERT_PASSWORD\"]},\n    ],\n    #highlight-end\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "JavaScript",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "const capabilities = {\n  'LT:Options': {\n    platformName: 'Android',\n    deviceName: 'Galaxy S23',\n    platformVersion: '14',\n    isRealMobile: true,\n    app: 'lt://APP1234567890',\n    //highlight-start\n    customCertificates: [\n      { certificateId: 'MEDIA9f2c4b18a7d54e3ba0c6f19d2e8b7c05' },\n      { certificateId: 'MEDIA4a71e0c93f6d48b2915ac8de7b04f6a1',\n        password: process.env.CERT_PASSWORD },\n    ],\n    //highlight-end\n  },\n};"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "YAML",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "customCertificates:\n  - certificateId: \"MEDIA9f2c4b18a7d54e3ba0c6f19d2e8b7c05\"\n  - certificateId: \"MEDIA4a71e0c93f6d48b2915ac8de7b04f6a1\"\n    password: \"s3cret\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "In the build you are testing, add a network_security_config.xml file that trusts the user certificate store",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "XML",
+        "text": "<network-security-config>\n    <base-config>\n        <trust-anchors>\n            <certificates src=\"system\" />\n            <certificates src=\"user\" />\n        <\/trust-anchors>\n    <\/base-config>\n<\/network-security-config>"
+      }
+    ],
+    "dateModified": "2026-08-27T03:34:12+05:30"
+  }) }}
+/>
+
 <RealDeviceTag value="Real Device" />
 
 Many apps connect to servers that use certificates issued by a private or corporate certificate authority. Some apps also pin a **self-signed certificate**, or present a **client certificate** to authenticate themselves before a server will respond. On a standard device, these connections fail because the device does not trust your organization's certificates.

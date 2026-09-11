@@ -48,6 +48,118 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/codeception-integration-with-testmu/"
+    },
+    "headline": "Selenium With Codeception",
+    "description": "Run Codeception PHP Selenium tests on the TestMu AI cloud grid across 10,000+ browser/device combinations.",
+    "url": "https://www.testmuai.com/support/docs/codeception-integration-with-testmu/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Documentation",
+    "keywords": [
+      "codeception selenium grid setup",
+      "run codeception tests on cloud",
+      "php codeception automation tutorial"
+    ],
+    "proficiencyLevel": "Beginner",
+    "dependencies": "MacOS: Previous versions of MacOS have PHP installed by default. For the latest MacOS versions starting with Monterey, download and install PHP manually:; Windows: Download PHP from PHP for Windows and add it to your system PATH. Refer to the PHP Windows installation guide to ensure PHP is accessible through Command Prompt (cmd)..",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Use the following commands in the terminal",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "   /bin/bash -c \"$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)\"\n   brew install php"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Prerequisites",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "   mv composer.phar /usr/local/bin/composer"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 1: Clone the Sample Project",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "codeRepository": "https://github.com/LambdaTest/codeception-selenium-sample",
+        "text": "git clone https://github.com/LambdaTest/codeception-selenium-sample\ncd codeception-selenium-sample"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Install the composer dependencies",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "composer install"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 3: Configure Your Test Capabilities",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "PHP",
+        "text": "# Codeception Test Suite Configuration\n#\n# Suite for acceptance tests.\n# Perform tests in browser using the WebDriver or PhpBrowser.\n# If you need both WebDriver and PHPBrowser tests - create a separate suite.\n  \nclass_name: AcceptanceTester\nmodules:\n    enabled:\n        - WebDriver:\n            url: 'https://lambdatest.github.io/sample-todo-app/'\n            host: '{username}:{token}@hub.lambdatest.com' #provide your TestMu AI credentials\n            port: 80\n            browser: chrome\n             \n            capabilities:\n            name: 'Codeception Example'\n            build: '1.0'   \n            browserName: 'Chrome' # request the latest version of chrome\n            platform: 'ANY'\n            version: '71.0'\n            tunnel: false # sets tunnel value to true for routing traffic through your local machine"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 4: Run the Test",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "./vendor/bin/codecept run --steps"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Install the skill",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "codeRepository": "https://github.com/LambdaTest/agent-skills",
+        "text": "git clone https://github.com/LambdaTest/agent-skills.git\ncp -r agent-skills/codeception-skill .claude/skills/\n\n# For Cursor / Copilot\ncp -r agent-skills/codeception-skill .cursor/skills/"
+      }
+    ],
+    "dateModified": "2026-09-09T19:13:32+05:30"
+  }) }}
+/>
+
 ---
 
 Run Codeception tests on the TestMu AI cloud grid. This guide covers setup, running a sample test, configuring capabilities, and testing locally hosted pages.

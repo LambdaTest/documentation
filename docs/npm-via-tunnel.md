@@ -48,6 +48,73 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/npm-via-tunnel/"
+    },
+    "headline": "Install NPM Packages via Tunnel",
+    "description": "Guide to install npm packages using a flag that enables users to route npm install traffic via a tunnel.",
+    "url": "https://www.testmuai.com/support/docs/npm-via-tunnel/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Documentation",
+    "keywords": [
+      "Cypress Automation",
+      "Cypress Testing Guide",
+      "cypress cli commands"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "To use npm_via_tunnel, simply add the following line to your run settings",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "\"npm_via_tunnel\": true"
+      }
+    ],
+    "dateModified": "2026-09-09T19:13:32+05:30"
+  }) }}
+/>
+
 ## What is `npm_via_tunnel`?
 
 `npm_via_tunnel` is a flag that you can use to enable downloading npm dependencies through a tunnel. This can be useful if you need to install npm packages from a private registry or if you are working in a restricted environment where you cannot access the public npm registry directly.

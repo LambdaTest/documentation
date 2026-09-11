@@ -44,6 +44,80 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/espresso-mockwebserver-localhost/"
+    },
+    "headline": "Testing with MockWebServer & Localhost",
+    "description": "Test applications using MockWebServer or localhost-based mock servers with Espresso on TestMu AI real devices.",
+    "url": "https://www.testmuai.com/support/docs/espresso-mockwebserver-localhost/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "App Automation",
+    "keywords": [
+      "espresso",
+      "mockwebserver",
+      "localhost testing"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Option 1: Localhost Bypass",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JSON",
+        "text": "{\n  \"app\": \"lt://APP_ID\",\n  \"testSuite\": \"lt://TESTSUITE_ID\",\n  \"device\": [\"Galaxy S21-12\", \"Pixel 6-13\"],\n  \"build\": \"MockWebServer Test\",\n  \"network\": true,\n  \"localhost\": true\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Option 2: Port Forwarding",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JSON",
+        "text": "{\n  \"app\": \"lt://APP_ID\",\n  \"testSuite\": \"lt://TESTSUITE_ID\",\n  \"device\": [\"Galaxy S21-12\", \"Pixel 6-13\"],\n  \"build\": \"MockWebServer Test\",\n  \"network\": true,\n  \"portForwarding\": {\n    \"ports\": [9091, 9092]\n  }\n}"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 <BrandName /> supports testing apps that use MockWebServer or similar localhost-based mock servers in Android Espresso tests.
 
 ## Why Special Configuration is Needed

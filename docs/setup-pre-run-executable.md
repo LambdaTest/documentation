@@ -40,6 +40,136 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/setup-pre-run-executable/"
+    },
+    "headline": "Install Custom Certificates on the VM Through Pre-run Executables",
+    "description": "Run custom scripts before Selenium tests start to install certificates required for test execution.",
+    "url": "https://www.testmuai.com/support/docs/setup-pre-run-executable/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Web Automation",
+    "keywords": [
+      "pre-run executable selenium custom certificate",
+      "install certificate VM automation test",
+      "prerun post-run script selenium"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Instructions",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "curl --location --request POST '<https://api.lambdatest.com/automation/api/v1/user-files>'"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Instructions",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "sudo security add-trusted-cert -d -r trustRoot -k /Library/Keychains/System.keychain /Users/ltuser/Downloads/{CERTIFICATE-FILE-NAME}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Instructions",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "Import-Certificate -FilePath \"C:\\Users\\ltuser\\Downloads\\{NAME-OF-THE-CERTIFICATE}\" -CertStoreLocation 'Cert:\\LocalMachine\\Root' -Verbose"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Instructions",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "curl --request POST \\\n  --url <https://api.lambdatest.com/automation/api/v1/files> \\\n  --header 'Authorization: Basic {TOKEN}' \\\n  --header 'Content-Type: multipart/form-data' \\\n  --header 'cache-control: no-cache,no-cache,no-cache' \\\n  --header 'content-type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW' \\\n  --form pre_run_file=@{PATH-TO-CERTIFIFICATE-INSTALLATION-SCRIPT} \\\n  --form post_run_file=@{PATH-TO-CERTIFICATE-DELETION-SCRIPT} \\\n  --form 'name={NAME-OF-YOUR-PRERUN}' "
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 5",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "\"lambda:userFiles\": [\"certificate.p12\"],\n\"prerun\": {\n        \"accessKey\": \"****\",\n        \"background\": False,\n        \"filePath\": \"<organization-id>/uploads/install_certificate.ps1\",\n        \"postAction\": {\n            \"filePath\": \"xyz/post/delete_certificate.ps1\",\n            \"url\": \"<https://api.lambdatest.com/automation/api/v1/files/download>\"\n        },\n        \"url\": \"<https://api.lambdatest.com/automation/api/v1/files/download>\",\n        \"user\": \"****\"\n    },"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Once your script is approved, pass the prerun key in the capability as follows",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "\"prerun\": {\n    \"url\": \"{NAME-OF-YOUR-PRERUN}/pre/{NAME-OF-YOUR-CERTIFICATE-INSTALLATION-SCRIPT}\",\n },"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Following are the contents of the sample file",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "sudo security add-trusted-cert -d -r trustRoot -k /Library/Keychains/System.keychain /Users/ltuser/Downloads/{CERTIFICATE-FILE-NAME}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Sample Certificate Installation and Uninstallation File (macOS)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "sudo security delete-certificate -c \"Local Certificate\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Following are the contents of the sample file",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "Import-Certificate -FilePath \"C:\\Users\\ltuser\\Downloads\\{NAME-OF-THE-CERTIFICATE}\" -CertStoreLocation 'Cert:\\LocalMachine\\Root' -Verbose"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Sample Certificate Installation and Uninstallation File (Windows)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "Get-ChildItem Cert:\\CurrentUser\\Root\\{THUMBPRINT-OF-THE-CERTIFICATE} | Remove-Item"
+      }
+    ],
+    "dateModified": "2026-09-09T19:13:32+05:30"
+  }) }}
+/>
+
 # Install Custom Certificates on the VM Through Pre-run Executables
 
 * * *

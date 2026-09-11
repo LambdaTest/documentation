@@ -1,5 +1,6 @@
 ---
 id: voice-agent
+toc_max_heading_level: 2
 title: Voice Agent Testing With TestMu AI
 hide_title: false
 sidebar_label: Voice Agents
@@ -43,11 +44,64 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
-# Voice Agent Testing With TestMu AI
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/voice-agent/"
+    },
+    "headline": "Voice Agent Testing With TestMu AI",
+    "description": "Test voice agents on the TestMu AI Agent Testing Platform. Audio conversations are transcribed and scored across the same 9 quality metrics as chat agents.",
+    "url": "https://www.testmuai.com/support/docs/voice-agent/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Agent Testing",
+    "keywords": [
+      "voice agent testing",
+      "voice bot testing",
+      "audio conversation testing"
+    ],
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "dateModified": "2026-09-04T12:50:18+05:30"
+  }) }}
+/>
 
----
-
-The Agent Testing Platform tests a voice agent the same way it tests a chat agent, except the conversation happens as audio instead of text. It holds a spoken conversation with your agent, transcribes the responses, and scores the interaction across the same 9 quality metrics. It covers voice assistants and voice-enabled support agents.
+The TestMu AI Agent Testing Platform tests a voice agent the same way it tests a chat agent, except the conversation happens as audio instead of text. It holds a spoken conversation with your agent, transcribes the responses, and scores the interaction across the same 9 quality metrics. It covers voice assistants and voice-enabled support agents.
 
 A voice agent uses the same setup as a chat agent: upload the documents that describe it, generate scenarios, and run an evaluation. The difference is the medium, audio rather than text.
 
@@ -69,7 +123,7 @@ Voice testing differs from chat in the medium, not the metrics.
 - The agent's voice responses are captured and transcribed for evaluation.
 - Evaluation runs on the full audio conversation transcript.
 
-## Features
+## What the Voice Agent Workflow Includes
 
 ---
 

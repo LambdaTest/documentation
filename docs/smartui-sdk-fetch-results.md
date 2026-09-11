@@ -54,6 +54,179 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/smartui-sdk-fetch-results/"
+    },
+    "headline": "Fetching Results through SmartUI SDK",
+    "description": "In this documentation, learn how to fetch live results for SmartUI tests",
+    "url": "https://www.testmuai.com/support/docs/smartui-sdk-fetch-results/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "SmartUI",
+    "keywords": [
+      "Visual Regression",
+      "Visual Regression Testing Guide",
+      "Visual Regression Test Automation"
+    ],
+    "proficiencyLevel": "Beginner",
+    "dependencies": "Basic understanding of Command Line Interface; Login to TestMu AI SmartUI with your credentials.; Ensure you are using @lambdatest/smartui-cli version 4.1.43 or higher; A properly configured SmartUI CLI project.",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "If you haven't already installed SmartUI CLI, install it using npm",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "npm install -g @lambdatest/smartui-cli"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 1: Install SmartUI CLI",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "npm install @lambdatest/smartui-cli"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 2: Configure your Project Token",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "export PROJECT_TOKEN=\"123456#1234abcd-****-****-****-************\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 2: Configure your Project Token",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "set PROJECT_TOKEN=\"123456#1234abcd-****-****-****-************\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 2: Configure your Project Token",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "PowerShell",
+        "text": "$env:PROJECT_TOKEN=\"123456#1234abcd-****-****-****-************\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "If no filename is specified, results are written to .json in the current directory",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "npx smartui --config .smartui.json exec --fetch-results -- <execution-command>"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Specify a custom filename for your results",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "npx smartui --config .smartui.json exec --fetch-results custom-results.json -- node test.js"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Here's what you'll find in the results file",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JSON",
+        "text": "{\n  \"screenshots\": {\n    \"Screenshot-1\": [\n      {\n        \"screenshot_name\": \"Screenshot-1\",\n        \"captured_image\": \"image_url\",\n        \"baseline_image\": \"image_url\",\n        \"compared_image\": \"image_url\",\n        \"browser_name\": \"edge\",\n        \"viewport\": \"1920\",\n        \"mismatch_percentage\": 3.3,\n        \"status\": \"Changes found\"\n      },\n      {\n        \"screenshot_name\": \"Screenshot-1\",\n        \"captured_image\": \"image_url\",\n        \"baseline_image\": \"image_url\",\n        \"compared_image\": \"image_url\",\n        \"browser_name\": \"firefox\",\n        \"viewport\": \"1366\",\n        \"mismatch_percentage\": 4.74,\n        \"status\": \"Changes found\"\n      },\n      {\n        \"screenshot_name\": \"Screenshot-1\",\n        \"captured_image\": \"image_url\",\n        \"baseline_image\": \"image_url\",\n        \"compared_image\": \"image_url\",\n        \"browser_name\": \"chrome\",\n        \"viewport\": \"1366\",\n        \"mismatch_percentage\": 4.64,\n        \"status\": \"Changes found\"\n      },\n      {\n        \"screenshot_name\": \"Screenshot-1\",\n        \"captured_image\": \"image_url\",\n        \"baseline_image\": \"image_url\",\n        \"compared_image\": \"image_url\",\n        \"browser_name\": \"chrome\",\n        \"viewport\": \"1920\",\n        \"mismatch_percentage\": 3.3,\n        \"status\": \"Changes found\"\n      },\n    ],\n    \"Screenshot-2\": [\n      {\n        \"screenshot_name\": \"Screenshot-2\",\n        \"captured_image\": \"image_url\",\n        \"baseline_image\": \"image_url\",\n        \"compared_image\": \"image_url\",\n        \"browser_name\": \"edge\",\n        \"viewport\": \"1920\",\n        \"mismatch_percentage\": 0.0,\n        \"status\": \"Approved\"\n      },\n      {\n        \"screenshot_name\": \"Screenshot-2\",\n        \"captured_image\": \"image_url\",\n        \"baseline_image\": \"image_url\",\n        \"compared_image\": \"image_url\",\n        \"browser_name\": \"firefox\",\n        \"viewport\": \"1366\",\n        \"mismatch_percentage\": 4.74,\n        \"status\": \"Changes found\"\n      },\n      {\n        \"screenshot_name\": \"Screenshot-2\",\n        \"captured_image\": \"image_url\",\n        \"baseline_image\": \"image_url\",\n        \"compared_image\": \"image_url\",\n        \"browser_name\": \"chrome\",\n        \"viewport\": \"1366\",\n        \"mismatch_percentage\": 4.64,\n        \"status\": \"Changes found\"\n      },\n      {\n        \"screenshot_name\": \"Screenshot-2\",\n        \"captured_image\": \"image_url\",\n        \"baseline_image\": \"image_url\",\n        \"compared_image\": \"image_url\",\n        \"browser_name\": \"chrome\",\n        \"viewport\": \"1920\",\n        \"mismatch_percentage\": 3.3,\n        \"status\": \"Changes found\"\n      },\n    ]\n  },\n  \"build\": {\n    \"build_id\": \"b420b7a9-77c6-****-****\",\n    \"baseline\": false,\n    \"build_type\": \"smartui-cli\",\n    \"build_status_ind\": \"completed\",\n    \"build_status\": \"pending-approval\",\n    \"commitId\": \"2b93***\",\n    \"branch\": \"main\",\n    \"commitAuthor\": \"John Doe\",\n    \"commitMessage\": \"Merge pull request from xyz/main\"\n  },\n  \"project\": {\n    \"project_id\": \"1dfb7712-7f20-446f-***-***\",\n    \"name\": \"Project-Name\",\n    \"username\": \"johndoe\",\n    \"project_type\": \"smartui-cli\",\n    \"projectCategory\": \"web\",\n    \"platform\": \"cli\"\n  }\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Use the --fetch-results flag when executing your SmartUI tests",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "npx smartui capture urls.json --config config.json --fetch-results results.json"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Method 1: Export from CLI (Recommended)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "npx smartui --config .smartui.json exec --fetch-results results.json -- <execution-command>"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Method 1: Export from CLI (Recommended)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "npx smartui capture urlTest.json --config config.json --fetch-results results.json"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Method 1: Export from CLI (Recommended)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "npx smartui --config .smartui.json exec --fetch-results results.json -- npm test"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "If no filename is specified, results will be saved as results.json by default",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "npx smartui capture urls.json --config config.json --fetch-results"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Method 2: Fetch from SmartUI API",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "GET /build/screenshots"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Method 2: Fetch from SmartUI API",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "curl -X GET \"https://api.lambdatest.com/smartui/build/screenshots?project_id=YOUR_PROJECT_ID&build_id=YOUR_BUILD_ID\" \\\n  -H \"Authorization: Bearer YOUR_ACCESS_TOKEN\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Example Workflow",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "# 1. Run SmartUI tests and fetch results\nnpx smartui capture urlTest.json --config config.json --fetch-results results.json\n\n# 2. Upload results.json to SmartUI Reporter\n# Visit https://smartui-reporter.netlify.app/ and upload the file\n\n# 3. View results in tabular format with statistics\n\n# 4. Export to PDF or CSV for sharing"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 SmartUI CLI allows you to fetch detailed build results after executing your visual tests. This feature enables you to access comprehensive information about your build and screenshots in a JSON file, making it easier to integrate with your CI/CD pipelines and automation workflows.
 
 ## Prerequisites

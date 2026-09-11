@@ -1,6 +1,7 @@
 ---
 id: phone-agent
-title: How to Test Phone Agents With TestMu AI Agent Testing Platform
+toc_max_heading_level: 2
+title: Phone Agent Testing With TestMu AI
 hide_title: false
 sidebar_label: Phone Agents
 description: Test phone voice agents on TestMu AI with real calls. Live call monitoring, recording analysis, voice and noise simulation, and 30+ call quality metrics.
@@ -43,11 +44,64 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
-# How to Test Phone Agents With TestMu AI Agent Testing Platform
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/phone-agent/"
+    },
+    "headline": "Phone Agent Testing With TestMu AI",
+    "description": "Test phone voice agents on TestMu AI with real calls. Live call monitoring, recording analysis, voice and noise simulation, and 30+ call quality metrics.",
+    "url": "https://www.testmuai.com/support/docs/phone-agent/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Agent Testing",
+    "keywords": [
+      "phone agent testing",
+      "voice agent testing",
+      "ivr testing"
+    ],
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "dateModified": "2026-09-04T12:50:18+05:30"
+  }) }}
+/>
 
----
-
-The Agent Testing Platform tests phone voice agents by placing real telephone calls, not simulations. An AI-powered simulated caller follows a scenario, the platform records the full conversation, and it scores the call across 30+ call quality metrics. It covers inbound support lines, IVR flows, and outbound dialers.
+The TestMu AI Agent Testing Platform tests phone voice agents by placing real telephone calls, not simulations. An AI-powered simulated caller follows a scenario, the platform records the full conversation, and it scores the call across 30+ call quality metrics. It covers inbound support lines, IVR flows, and outbound dialers.
 
 Phone agents come in two directions, inbound and outbound, and each has its own workflow. This page covers what is shared across both. See the dedicated guides for [inbound phone agent testing](/support/docs/inbound-phone-agent/) and [outbound phone agent testing](/support/docs/outbound-phone-agent/).
 

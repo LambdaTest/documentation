@@ -51,6 +51,73 @@ import VirtualDeviceTag from '../src/component/virtualDevice';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/appium-ip-geolocation/"
+    },
+    "headline": "IP Geolocation",
+    "description": "This document provides information about configuring IP Geolocation for tests on the TestMu AI platform and also provides a list of supported geolocations on Real Devices.",
+    "url": "https://www.testmuai.com/support/docs/appium-ip-geolocation/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "App Automation",
+    "keywords": [
+      "IP Geolocation",
+      "geolocation testing",
+      "testing tools"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Support for Automation on Real Devices",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "// Java code for configuring IP Geolcation in tests on TestMu AI\nDesiredCapabilities capabilities = new DesiredCapabilities();\ncapabilities.setCapability(\"geoLocation\", \"FR\");\n// Add other capabilities as needed"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 # IP Geolocation 
 <RealDeviceTag value="Real Device" /> <VirtualDeviceTag value="Virtual Device" />
 

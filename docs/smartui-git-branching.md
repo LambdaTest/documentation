@@ -54,6 +54,130 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/smartui-git-branching-strategy/"
+    },
+    "headline": "Git Branching Strategy in SmartUI Storybook Integration",
+    "description": "In this documentation, learn how the Git Branching Strategy is implemented in Visual Regression testing on the TestMu AI Automation Cloud across 40+ browser versions.",
+    "url": "https://www.testmuai.com/support/docs/smartui-git-branching-strategy/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Documentation",
+    "keywords": [
+      "Visual Regression",
+      "Visual Regression Testing Guide",
+      "Visual Regression Test Automation"
+    ],
+    "proficiencyLevel": "Beginner",
+    "dependencies": "You have an account with TestMu AI.; You must have an active subscription plan with valid screenshots limit.; You must have created an Project on the SmartUI web app..",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Go to your current StoryBook repository and run the following command",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "git init --y"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Now, make your changes in your .stories files and then commit the changes to your Git",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "git commit -m \"Your commit message\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Execute your SmartUI StoryBook CLI command to execute the Visual Regression tests for your .stories files",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "npm run storybook                                                 // Starts your local StoryBook server\nsmartui storybook http://localhost:6006 --config .smartui.json    // Captures all the stories running on local server"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 4",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "npm run build-storybook                                           // Creates a Static Build Folder of StoryBook Stories\nsmartui storybook ./storybook-static --config .smartui.json       // Captures all the stories added in the static build folder"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "And, if you have created a project and set your Baseline branch name to master then executed the following commands",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "// Your current branch name\n$ git branch\n* <Your Current Active branch>\n  <--Other branches-->\n\n// Adds a new commit to your current active branch\n$ git commit -m \"Your commit message\"\n\n// Executing the SmartUI StoryBook tests\n$ smartui storybook <Your localhost URL or Static Build folder path> --config .smartui.json"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Here is an example of the above workflow",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "$ git branch\n* master\n\n$ git commit -m \"Second Build Changes\"\n\n$ smartui storybook http://localhost:6006 --config .smartui.json"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Here is an example of the above workflow",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "// Step 1 - Commit changes to Git\n$ git commit -am \"Changes in login stories\"\n(git) Changes added to your branch\n\n// Step 2 - Execute SmartUI CLI to trigger Build in the SmartUI project\n$ smartui storybook http://localhost:6006 --config .smatui.json"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Here is an example of the above workflow",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "// Baseline Branch\n$ git branch\n* master\n\n// Non-Baseline branch\n$ git checkout -b develop\n* develop\n  master\n\n// Executing SmartUI Build with Non-Baseline Git branch\n$ smartui storybook http://localhost:6006 --config .smartui.json"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Running Force Builds",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "$ smartui storybook <Your localhost URL or Static Build folder path> --config .smartui.json --force-rebuild"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 <img loading="lazy" src={require('../assets/images/smart-visual-testing/git-doc-header.webp').default} alt="Smart Visual Testing" width="1600" height="803" className='doc_img'/>
 
 :::info

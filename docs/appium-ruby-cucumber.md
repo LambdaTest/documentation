@@ -53,6 +53,124 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       })
     }}
 ></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/appium-ruby-cucumber/"
+    },
+    "headline": "Appium with Cucumber for Ruby",
+    "description": "Complete guide to running your first Cucumber Appium automated test script on TestMu AI Real Device Cloud Platform. Test on 5000+ Real Devices.",
+    "url": "https://www.testmuai.com/support/docs/appium-ruby-cucumber/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "App Automation",
+    "keywords": [
+      "cucumber appium",
+      "cucumber appium tutorial",
+      "real devices"
+    ],
+    "proficiencyLevel": "Beginner",
+    "dependencies": "Your TestMu AI Username and Access key.; Install Ruby on your local system:; Ensure you have Dependency manager bundler installed. If not installed, you can install with the following command:.",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "For macOS, you can run a Homebrew command like this",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "brew install ruby"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "For Linux or Ubuntu, you can run a simple apt command like below",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "sudo apt-get install ruby-full"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Windows",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "gem install bundler"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 4",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n<\/TabItem>\n\n<TabItem value=\"android\" label=\"Android\" default>\n\n```ruby title=\"first_steps.rb\"\nWhen /^I click on buttons app$/ do \n\n  $driver.find_element(:id, \"com.lambdatest.proverbial:id/color\").click\n  #Click on Color Button\n  $driver.find_element(:id, \"com.lambdatest.proverbial:id/color\").click\n  #Click on Geolocation Button\n  $driver.find_element(:id, \"com.lambdatest.proverbial:id/geoLocation\").click\n  #wait of 5 seconds\n  sleep(5)\n  #Click on back Button\n  $driver.back\n  #Click on text Button to enter value\n  $driver.find_element(:id, \"com.lambdatest.proverbial:id/Text\").click\n  #Click on Notification Button\n  $driver.find_element(:id, \"com.lambdatest.proverbial:id/notification\").click\n  #Click on toast Button      \n  $driver.find_element(:id, \"com.lambdatest.proverbial:id/toast\").click\n  #Click on speedtest Button      \n  $driver.find_element(:id, \"com.lambdatest.proverbial:id/speedTest\").click\n  #Wait for 10 seconds       \n  sleep(10)\n  $driver.back\n  $driver.execute_script(\"lambda-status=passed\")\n\nend "
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "browser_caps",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n<\/TabItem>\n<TabItem value=\"android-config\" label=\"Android\" default>\n\n```ruby title=\"first.config.yml Android\"\nserver: \"mobile-hub.lambdatest.com\"\nuser: \"LT_USERNAME\"    # Add Lambdatest username here\nkey: \"LT_ACCESS_KEY\"   # Add Lambdtest accessKey here\n\n\ncommon_caps:\n\n  \"build\": \"br-1\"\n  \n\nbrowser_caps:\n  -\n    \"isRealMobile\": \"true\"\n    \"platform\": \"android\"\n    \"deviceName\": \"Galaxy S21 5G\"\n    \"platformVersion\": \"11\"\n    \"app\": \"APP_URL\"      # Add your app url here"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 6: Execute and Monitor your Tests",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Ruby",
+        "text": "bundle install\nbundle exec rake first"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "The cucumber-skill package includes",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "cucumber-skill/\n\u251c\u2500\u2500 SKILL.md\n\u2514\u2500\u2500 reference/\n    \u251c\u2500\u2500 playbook.md\n    \u2514\u2500\u2500 advanced-patterns.md"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Install a Cucumber Agent Skill using the command below",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "codeRepository": "https://github.com/LambdaTest/agent-skills",
+        "text": "# Clone the repo and copy the skill you need\ngit clone https://github.com/LambdaTest/agent-skills.git\ncp -r agent-skills/cucumber-skill .claude/skills/\n\n# Or for Cursor / Copilot\ncp -r agent-skills/cucumber-skill .cursor/skills/"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
 In this documentation, you will learn how to trigger a automation script of **Cucumber** for application testing with **Appium** on <BrandName />, set the [**desired capabilities**](/support/docs/desired-capabilities-in-appium/) for appium testing, and other advanced features of <BrandName />.
 
 ## Prerequisites

@@ -41,6 +41,74 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/run-python-tests-on-selenium-grid/"
+    },
+    "headline": "Guide - Running Python Tests On TestMu AI Selenium Grid",
+    "description": "Guide to running Python and Selenium test scripts on TestMu AI Selenium automation grid online. Automated cross browser testing online using Selenium and Python on 3000+ browsers on cloud",
+    "url": "https://www.testmuai.com/support/docs/run-python-tests-on-selenium-grid/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Documentation",
+    "keywords": [
+      "TestMu AI automation using python",
+      "python and Selenium automation",
+      "python documentation TestMu AI"
+    ],
+    "proficiencyLevel": "Beginner",
+    "dependencies": "Make sure that you have the latest Python build installed. You can download the latest Python build from this page.; You would need Python package manager, pip, as well. Usually latest python installers come prepacked with pip. However, if you don\u2019t have pip, you can install it using the below command:.",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Sample Python & Selenium Automation Script",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\"\"\"\nLambdaTest Selenium automation sample example\nConfiguration\n----------\nusername: Username can be found at automation dashboard\naccessToken:  AccessToken can be generated from automation dashboard or profile section\n \nResult\n-------\nExecute Python Automation Tests on LambdaTest Distributed Selenium Grid\n\"\"\"\nimport unittest\nimport time\nfrom selenium import webdriver\nfrom selenium.webdriver.common.keys import Keys\n \nclass LTAutomate(unittest.TestCase):\n \n    \"\"\"\n    Setup remote driver\n    Params\n    ----------\n    platform : Supported platform - (Windows 10, Windows 8.1, Windows 8, Windows 7,  macOS High Sierra, macOS Sierra, OS X El Capitan, OS X Yosemite, OS X Mavericks)\n    browserName : Supported platform - (chrome, firefox, Internet Explorer, MicrosoftEdge)\n    version :  Supported list of version can be found at https://www.testmuai.com/capabilities-generator/\n \n    Result\n    -------\n    \"\"\"\n    def setUp(self):\n        # username: Username can be found at automation dashboard\n        username=\"{YOUR_LAMBDATEST_USERNAME}\" \n        # accessToken:  AccessToken can be generated from automation dashboard or profile section\n        accessToken=\"{YOUR_LAMBDATEST_ACCESS_KEY}\"\n        # gridUrl: gridUrl can be found at automation dashboard\n        gridUrl = \"hub.lambdatest.com/wd/hub\"\n         \n        desired_cap = {\n            'platform' : \"win10\",\n            'browserName' : \"chrome\",\n            'version' :  \"67.0\",\n            # Resolution of machine\n            \"resolution\": \"1024x768\",\n            \"name\": \"LambdaTest python google search test \",\n            \"build\": \"LambdaTest python google search build\",\n            \"network\": True,\n            \"video\": True,\n            \"visual\": True,\n            \"console\": True,\n        }\n \n        # URL: https://{username}:{accessToken}@hub.lambdatest.com/wd/hub\n        url = \"https://\"+username+\":\"+accessToken+\"@\"+gridUrl\n         \n        print(\"Initiating remote driver on platform: \"+desired_cap[\"platform\"]+\" browser: \"+desired_cap[\"browserName\"]+\" version: \"+desired_cap[\"version\"])\n        self.driver = webdriver.Remote(\n            desired_capabilities=desired_cap,\n            command_executor= url\n        )\n \n    \"\"\"\n    Setup remote driver\n    Params\n    ----------\n    Execute test:  navigate google.com search LambdaTest\n    Result\n    -------\n    print title\n    \"\"\"\n    def test_search_in_google(self):\n        driver = self.driver\n        print(\"Driver initiated successfully.  Navigate url\")\n        driver.get(\"https://www.google.com/ncr\")\n \n        print(\"Searching lambdatest on google.com \")\n        time.sleep(8)\n        elem = driver.find_element_by_name(\"q\")\n        elem.send_keys(\"lambdatest.com\")\n        elem.submit()\n \n        print(\"Printing title of current page :\"+driver.title)\n        driver.execute_script(\"lambda-status=passed\")\n        print(\"Requesting to mark test : pass\")\n \n    \"\"\"\n    Quit selenium driver\n    \"\"\"\n    def tearDown(self):\n        self.driver.quit()\n \nif __name__ == \"__main__\":\n    unittest.main()\n"
+      }
+    ],
+    "dateModified": "2026-08-12T15:40:32+05:30"
+  }) }}
+/>
+
 # Quick Guide To Run Python Tests On <BrandName /> Selenium Grid
 * * *
 

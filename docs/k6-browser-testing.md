@@ -45,6 +45,102 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/k6-browser-testing/"
+    },
+    "headline": "How To Run k6 Browser Tests On TestMu AI Platform",
+    "description": "Learn how to run your k6 Browser tests across 40+ browsers and operating systems on the TestMu AI automation platform",
+    "url": "https://www.testmuai.com/support/docs/k6-browser-testing/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Web Automation",
+    "keywords": [
+      "k6 browser testing",
+      "grafana browser testing",
+      "automation testing with k6"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Prerequisites",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "set LT_USERNAME = \"YOUR_LAMBDATEST_USERNAME\"\nset LT_ACCESS_KEY = \"YOUR_LAMBDATEST_ACCESS_KEY\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Prerequisites",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "export LT_USERNAME = \"YOUR_LAMBDATEST_USERNAME\"\nexport LT_ACCESS_KEY = \"YOUR_LAMBDATEST_ACCESS_KEY\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Run Your First k6 Test",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "codeRepository": "https://github.com/LambdaTest/k6-browser-tests-sample",
+        "text": "git clone https://github.com/LambdaTest/k6-browser-tests-sample.git\ncd k6-browser-tests-sample"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Run Your First k6 Test",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "import {chromium} from 'k6/experimental/browser';\nimport {expect} from 'https://jslib.k6.io/k6chaijs/4.3.4.3/index.js';\n\nexport default async function() {\n  const capabilities = {\n    \"browserName\": \"Chrome\",\n    \"browserVersion\": \"latest\",\n    \"LT:Options\": {\n      \"platform\": \"MacOS Ventura\",\n      \"build\": \"K6 Build\",\n      \"name\": \"K6 Test\",\n      \"user\": `${__ENV.LT_USERNAME}`,\n      \"accessKey\": `${__ENV.LT_ACCESS_KEY}`,\n      \"network\": true,\n      \"video\": true,\n      \"console\": true,\n      'tunnel': false, // Add tunnel configuration if testing locally hosted webpage\n      'tunnelName': '', // Optional\n      'geoLocation': '', // country code can be fetched from https://www.testmuai.com/capabilities-generator/\n    },\n  };\n\n  const wsURL = `wss://cdp.lambdatest.com/k6?capabilities=${encodeURIComponent(JSON.stringify(capabilities))}`\n  const browser = chromium.connect(wsURL);\n\n  const page = browser.newPage();\n\n  try {\n    await page.goto(\"https://duckduckgo.com\");\n    await page.screenshot({path: 'screenshots/k6Screenshot.png'});\n\n    let element = await page.$(\"[name=\\\"q\\\"]\");\n    await element.click();\n    await element.type(\"K6\");\n    await element.press(\"Enter\");\n    let title = await page.title();\n\n    try {\n      expect(title).to.equal(\"K6 at DuckDuckGo\");\n      // Mark the test as passed or failed\n      await page.evaluate(_ => {}, `lambdatest_action: ${JSON.stringify(\n          {action: \"setTestStatus\", arguments: {status: \"passed\", remark: \"Assertions passed\"},})}`);\n    } catch (e) {\n      await page.evaluate(_ => {}, `lambdatest_action: ${JSON.stringify(\n          {action: \"setTestStatus\", arguments: {status: \"failed\", remark: e.stack}})}`);\n      console.log(\"Error:: \", e.stack);\n    }\n  } finally {\n    page.close();\n    browser.close();\n  }\n};"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 5",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "K6_BROWSER_ENABLED=true k6 run k6_sample.js"
+      }
+    ],
+    "dateModified": "2026-05-14T14:47:09+05:30"
+  }) }}
+/>
+
 # Getting Started With k6 Browser Testing
 
 * * *

@@ -47,6 +47,101 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/browser-cloud-profiles/"
+    },
+    "headline": "Profiles - TestMu AI Browser Cloud",
+    "description": "Persist browser state across sessions and script runs. Reuse auth, cookies, and browser settings across sessions.",
+    "url": "https://www.testmuai.com/support/docs/browser-cloud-profiles/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Browser Cloud",
+    "keywords": [
+      "browser cloud profiles",
+      "persistent browser state",
+      "session persistence"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Getting Started",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "TypeScript",
+        "text": "// Run 1: Your agent logs in. Profile is saved automatically on close.\nconst session = await client.sessions.create({\n    adapter: 'puppeteer',\n    profileId: 'my-app-login',    // This ID enables auto-save\n    lambdatestOptions: { ... }\n});\n\nconst browser = await client.puppeteer.connect(session);\nconst page = (await browser.pages())[0];\n\nawait page.goto('https://app.example.com/login');\n// ... agent logs in ...\n\nawait browser.close();  // \u2190 Profile auto-saved here\nawait client.sessions.release(session.id);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Getting Started",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "TypeScript",
+        "text": "// Run 2 (days later): Agent loads saved state. No login needed.\nconst session2 = await client.sessions.create({\n    adapter: 'puppeteer',\n    profileId: 'my-app-login',   // Same ID = loads saved cookies\n    lambdatestOptions: { ... }\n});\n\nconst browser2 = await client.puppeteer.connect(session2);\nconst page2 = (await browser2.pages())[0];\n\nawait page2.goto('https://app.example.com/dashboard');\n// Already logged in - cookies were restored from the profile"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Profiles are stored as JSON files at .profiles/{profileId}.json",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JSON",
+        "text": "{\n    \"id\": \"my-app-login\",\n    \"cookies\": [\n        {\n            \"name\": \"session_token\",\n            \"value\": \"abc123...\",\n            \"domain\": \".example.com\",\n            \"path\": \"/\",\n            \"expires\": 1735689600,\n            \"httpOnly\": true,\n            \"secure\": true\n        }\n    ],\n    \"updatedAt\": \"2024-01-15T10:30:00.000Z\"\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Beyond the automatic profileId flow, you can manage profiles directly",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "TypeScript",
+        "text": "// Save a profile manually\nawait client.profiles.saveProfile('my-profile', page, { note: 'after login' });\n\n// Load a profile into a page\nawait client.profiles.loadProfile('my-profile', page);\n\n// List all saved profiles\nconst profiles = await client.profiles.listProfiles();\n\n// Delete a profile\nawait client.profiles.deleteProfile('my-profile');"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": ".profiles/ to your .gitignore",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": ".profiles/"
+      }
+    ],
+    "dateModified": "2026-03-26T15:05:31+05:30"
+  }) }}
+/>
+
 # Stay Logged In Across Runs with Profiles
 
 Persist and reuse browser state - cookies, auth, and settings - across separate script runs. Profiles auto-save when the browser closes and auto-load when you use the same profile ID.

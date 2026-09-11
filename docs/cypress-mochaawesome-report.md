@@ -43,6 +43,73 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       })
     }}
 ></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/cypress-mochaawesome-report/"
+    },
+    "headline": "Consolidated Mochawesome Report for Cypress",
+    "description": "Discover how to create MochaAwesome test reports for Cypress framework testing on TestMu AI and how to download these reports from the dashboard",
+    "url": "https://www.testmuai.com/support/docs/cypress-mochaawesome-report/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Documentation",
+    "keywords": [
+      "cypress testing",
+      "cypress automation testing",
+      "hyperexecute cypress testing"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 1: Update Your Cypress Configuration",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n:::note\n- The `overwrite` parameter should be set to `true` to ensure the report is replaced with the latest run results.\n- The `html` option should be set to `false` because we will be merging JSON files later, and the mocha-merge utility does not support HTML files.\n- Ensure the `reportDir` path is set to `\"cypress/results\"`. This path is used to generate logs that will be visible on the dashboard. **Do not change this path.**\n:::\n\n### Step 2: Configure the HyperExecute YAML File\nIn your HyperExecute YAML configuration, define the [`report`](/support/docs/deep-dive-into-hyperexecute-yaml/#report) parameters like this:\n\n```yaml title=\"hyperexecute.yaml\"\nreport: true\npartialReports:\n  frameworkName: cypress\n  location: cypress/results\n  type: html"
+      }
+    ],
+    "dateModified": "2026-09-09T19:13:32+05:30"
+  }) }}
+/>
 The Mochawesome reporter is a custom Cypress reporter designed to generate standalone HTML reports. These reports are clean, modern, and interactive, making it easier to visualize test results. With features like filtering tests and displaying stack traces for failures, the Mochawesome report is an essential tool in Cypress for clear and concise test insights.
 
 ## Generating a Consolidated HTML Report

@@ -51,6 +51,150 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       })
     }}
 ></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/html-dom-smartui-options/"
+    },
+    "headline": "Handling Dynamic Data with DOM Configuration and Options for SmartUI",
+    "description": "In this documentation, learn how to handle dynamic content of your web pages for visual regression.",
+    "url": "https://www.testmuai.com/support/docs/html-dom-smartui-options/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "SmartUI",
+    "keywords": [
+      "Visual Regression",
+      "Visual Regression Testing Guide",
+      "Visual Regression Test Automation"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Configuration for Selenium (Ignore ID)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n<\/TabItem>\n<TabItem value=\"IgoreClass\" label=\"Ignore Class\">\n\n```js title=\"This is a sample for your webhook configuration for JavaScript to ignore by Class\"\nlet config = {\n  screenshotName: \"Ignore-Class\",\n  fullPage: false, //You can make this property as true in case of Chrome browser\n  ignoreDOM: {\n    class: [\"Class-1\", \"Class-2\"], // Ignoring elements by class, you can ignore multiple at once\n  },\n};\nawait driver.executeScript(\"smartui.takeScreenshot\", config);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Ignore XPath",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n<\/TabItem>\n\n<TabItem value=\"IgnoreSelector\" label=\"Ignore CSS Selector\">\n\n```js title=\"This is a sample for your webhook configuration for JavaScript to ignore by CSS Selector\"\nlet config = {\n  screenshotName: \"Ignore-cssSelector\",\n  fullPage: false, //You can make this property as true in case of Chrome browser\n  ignoreDOM: {\n    cssSelector: [\"CSS-Selector-1\", \"CSS-Selector-2\"], // Ignoring elements by CSS selector, you can ignore multiple at once\n  },\n};\nawait driver.executeScript(\"smartui.takeScreenshot\", config);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Select ID",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n<\/TabItem>\n<TabItem value=\"SelectClass\" label=\"Select Class\">\n\n```js title=\"This is a sample for your webhook configuration for JavaScript to select by Class\"\nlet config = {\n  screenshotName: \"Select-Class\",\n  fullPage: false, //You can make this property as true in case of Chrome browser\n  selectDOM: {\n    class: [\"Class-1\", \"Class-2\"], // Selecting elements by class, you can select multiple at once\n  },\n};\nawait driver.executeScript(\"smartui.takeScreenshot\", config);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Select XPath",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n<\/TabItem>\n\n<TabItem value=\"SelectSelector\" label=\"Select CSS Selector\">\n\n```js title=\"This is a sample for your webhook configuration for JavaScript to select by CSS Selector\"\nlet config = {\n  screenshotName: \"Select-cssSelector\",\n  fullPage: false, //You can make this property as true in case of Chrome browser\n  selectDOM: {\n    cssSelector: [\"CSS-Selector-1\", \"CSS-Selector-2\"], // Selecting elements by CSS selector, you can select multiple at once\n  },\n};\nawait driver.executeScript(\"smartui.takeScreenshot\", config);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Configuration for Puppeteer (Ignore ID)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n<\/TabItem>\n<TabItem value=\"IgoreClass\" label=\"Ignore Class\">\n\n```js title=\"This is a sample for your webhook configuration for Puppeteer\"\nawait page.evaluate((_) => {},\n    `lambdatest_action: ${JSON.stringify({ action: 'smartui.takeScreenshot', arguments: { fullPage: false, screenshotName: 'dom-screenshot', ignoreDOM : {class:[\"<CSS Class>\"]} }})}`)"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Ignore XPath",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "<\/TabItem>\n\n<TabItem value=\"IgnoreSelector\" label=\"Ignore CSS Selector\">\n\n```js title=\"This is a sample for your webhook configuration for Puppeteer\"\nawait page.evaluate((_) => {},\n    `lambdatest_action: ${JSON.stringify({ action: 'smartui.takeScreenshot', arguments: { fullPage: false, screenshotName: 'dom-screenshot', ignoreDOM : {cssSelector:[\"<CSS Selector>\"]} }})}`)"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Select ID",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n<\/TabItem>\n<TabItem value=\"SelectClass\" label=\"Select Class\">\n\n```js title=\"This is a sample for your webhook configuration for Puppeteer\"\nawait page.evaluate((_) => {},\n    `lambdatest_action: ${JSON.stringify({ action: 'smartui.takeScreenshot', arguments: { fullPage: false, screenshotName: 'dom-screenshot', selectDOM : {class:[\"<CSS Class>\"]} }})}`)"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Select XPath",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n<\/TabItem>\n\n<TabItem value=\"SelectSelector\" label=\"Select CSS Selector\">\n\n```js title=\"This is a sample for your webhook configuration for Puppeteer\"\nawait page.evaluate((_) => {},\n    `lambdatest_action: ${JSON.stringify({ action: 'smartui.takeScreenshot', arguments: { fullPage: false, screenshotName: 'dom-screenshot', selectDOM : {cssSelector:[\"<CSS Selector>\"]} }})}`)"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Configuration for Playwright (Ignore ID)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n<\/TabItem>\n<TabItem value=\"IgoreClass\" label=\"Ignore Class\">\n\n```js title=\"This is a sample for your webhook configuration for Playwright\"\nawait page.evaluate((_) => {},\n    `lambdatest_action: ${JSON.stringify({ action: 'smartui.takeScreenshot', arguments: { fullPage: false, screenshotName: 'dom-screenshot', ignoreDOM : {class:[\"<CSS Class>\"]} }})}`)"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Ignore XPath",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "<\/TabItem>\n\n<TabItem value=\"IgnoreSelector\" label=\"Ignore CSS Selector\">\n\n```js title=\"This is a sample for your webhook configuration for Playwright\"\nawait page.evaluate((_) => {},\n    `lambdatest_action: ${JSON.stringify({ action: 'smartui.takeScreenshot', arguments: { fullPage: false, screenshotName: 'dom-screenshot', ignoreDOM : {cssSelector:[\"<CSS Selector>\"]} }})}`)"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Select ID",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n<\/TabItem>\n<TabItem value=\"SelectClass\" label=\"Select Class\">\n\n```js title=\"This is a sample for your webhook configuration for Playwright\"\nawait page.evaluate((_) => {},\n    `lambdatest_action: ${JSON.stringify({ action: 'smartui.takeScreenshot', arguments: { fullPage: false, screenshotName: 'dom-screenshot', selectDOM : {class:[\"<CSS Class>\"]} }})}`)"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Select XPath",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n<\/TabItem>\n\n<TabItem value=\"SelectSelector\" label=\"Select CSS Selector\">\n\n```js title=\"This is a sample for your webhook configuration for Playwright\"\nawait page.evaluate((_) => {},\n    `lambdatest_action: ${JSON.stringify({ action: 'smartui.takeScreenshot', arguments: { fullPage: false, screenshotName: 'dom-screenshot', selectDOM : {cssSelector:[\"<CSS Selector>\"]} }})}`)"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
 <img loading="lazy" src={require('../assets/images/smart-visual-testing/Ignored-DOM-Sample.webp').default} alt="cmd" width="768" height="373" className="doc_img"/>
 Using the <BrandName /> platform, perform regression testing in just one click and explore various possible solutions for grouping your screenshots into different builds and map as per your testing suite needs.
 

@@ -25,6 +25,424 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import NewTag from '../src/component/newTag';
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/selenium-visual-regression/"
+    },
+    "headline": "Getting Started With Visual Regression Testing Using Selenium On SmartUI",
+    "description": "Master Selenium Visual Regression testing with TestMu AI. Detect visual deviations early in your web applications to ensure a seamless user experience.",
+    "url": "https://www.testmuai.com/support/docs/selenium-visual-regression/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "SmartUI",
+    "keywords": [
+      "Visual Regression",
+      "Visual Regression Testing Guide",
+      "Visual Regression Test Automation"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "MacOS/Linux",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "export LT_USERNAME=\"YOUR_USERNAME\" \nexport LT_ACCESS_KEY=\"YOUR ACCESS KEY\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Windows-CMD",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "set LT_USERNAME=\"YOUR_USERNAME\" \nset LT_ACCESS_KEY=\"YOUR ACCESS KEY\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "PowerShell",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "PowerShell",
+        "text": "$env:LT_USERNAME=\"YOUR_USERNAME\"\n$env:LT_ACCESS_KEY=\"YOUR ACCESS KEY\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 2: Configure your test with Selenium Desired Capabilities",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "codeRepository": "https://github.com/LambdaTest/smartui-node-sample",
+        "text": "git clone https://github.com/LambdaTest/smartui-node-sample"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "NodeJS",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n<\/TabItem>\n\n<TabItem value=\"python\" label=\"Python\" default>\n\n```python title=\"Please replace your capabilities in your Remote Webdriver DesiredCapabilities configuration\"\noptions = ChromeOptions()\noptions.browser_version = \"120.0\"\noptions.platform_name = \"Windows 10\"\nlt_options = {};\nlt_options[\"username\"] = \"USERNAME\";\nlt_options[\"accessKey\"] = \"ACCESS_KEY\";\nlt_options[\"project\"] = \"Untitled\";\n#highlight-start\nlt_options[\"smartUI.project\"] = \"<Project Name>\";\n#highlight-end\nlt_options[\"w3c\"] = True;\nlt_options[\"plugin\"] = \"python-python\";\noptions.set_capability('LT:Options', lt_options);\n\n\noptions.set_capability('LT:Options', lt_options);\n\n#Connecting to the Lambdatest Selenium Cloud Grid with SmartUI\nself.driver = webdriver.Remote(\ncommand_executor=\"https://\" + \"<Your Username>\" + \":\" + \"<Your Access Key>\" + \"@hub.lambdatest.com/wd/hub\", options=options)"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Ruby",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n<\/TabItem>\n<TabItem value=\"csharp\" label=\"C#\" default>\n\n```csharp title=\"Please replace your capabilities in your Remote Webdriver DesiredCapabilities configuration\"\nString LT_USERNAME = GetEnvironmentVariable(\"LT_USERNAME\");\nString LT_ACCESS_KEY =  GetEnvironmentVariable(\"LT_ACCESS_KEY\");\nIWebDriver driver;\nChromeOptions capabilities = new ChromeOptions();\ncapabilities.BrowserVersion = \"latest\";\nDictionary<string, object> ltOptions = new Dictionary<string, object>();\nltOptions.Add(\"username\", LT_USERNAME);\nltOptions.Add(\"accessKey\", LT_ACCESS_KEY);\nltOptions.Add(\"platformName\", \"Windows 10\");\nltOptions.Add(\"project\", \"Demo LT\");\nltOptions.Add(\"build\", \"C# Build\");\nltOptions.Add(\"sessionName\", \"C# Single Test\");\n//highlight-start\nltOptions.Add(\"smartUI.project\", \"<SMARTUI PROJECT NAME>\");\n//highlight-end\nltOptions.Add(\"w3c\", true);\nltOptions.Add(\"plugin\", \"c#-c#\");\ncapabilities.AddAdditionalOption(\"LT:Options\", ltOptions);\n\n// Connecting to the Lambdatest Selenium Cloud Grid with SmartUI\ndriver = new RemoteWebDriver(new Uri(\"https://hub.lambdatest.com/wd/hub/\"), capabilities);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Java",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n<\/TabItem>\n<\/Tabs>\n\n- Installing dependency and for executing the test.\n\n<Tabs className=\"docs__val\" groupId=\"language\">\n<TabItem value=\"nodejs\" label=\"NodeJS\" default>\n"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "NodeJS",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "<\/TabItem>\n\n<TabItem value=\"python\" label=\"Python\" default>\n"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Python",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "<\/TabItem>\n<TabItem value=\"ruby\" label=\"Ruby\" default>\n"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Ruby",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "<\/TabItem>\n\n<TabItem value=\"csharp\" label=\"C#\" default>\n"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "C#",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n<\/TabItem>\n<TabItem value=\"java\" label=\"Java\" default>\n"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Java",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n<\/TabItem>\n<\/Tabs>\n\n<!-- <img loading=\"lazy\" src={require('../assets/images/uploads/smart-ui-2.webp').default} alt=\"cmd\" width=\"768\" height=\"373\" className=\"doc_img\"/> -->\n\nHere you can explore multiple features and execute more such builds.\n\n## Step 3: Configure your Screenshot Capturing Options\n---\n\n### For taking viewport screenshot\n\nThis part of the code needs to be attached below the required segment of selenium script of which we would like to take the screenshot to test on.\n<Tabs className=\"docs__val\" groupId=\"language\">\n<TabItem value=\"nodejs\" label=\"NodeJS\" default>\n\n```javascript\nlet config = {\n  screenshotName: '<Name of your screenshot>'\n};\nawait driver.executeScript(\"smartui.takeScreenshot\", config);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "For taking viewport screenshot (Python)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Python",
+        "text": "config = {\n  'screenshotName': '<Your Screenshot Name>'\n}\ndriver.execute_script(\"smartui.takeScreenshot\", config)"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "For taking viewport screenshot (Ruby)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Ruby",
+        "text": "config = {\n  'screenshotName' => '<Your Screenshot Name>'\n}\ndriver.execute_script(\"smartui.takeScreenshot\", config)"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "C#",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "C#",
+        "text": "var config = new Dictionary<string, string> {\n  {\"screenshotName\", \"<Your Screenshot Name>\"}\n};\ndriver.ExecuteScript(\"smartui.takeScreenshot\", config);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Java",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "Map<String, Object> config = new HashMap<>();\nconfig.put(\"screenshotName\", \"<Your Screenshot Name>\");\n((JavascriptExecutor)driver).executeScript(\"smartui.takeScreenshot\", config);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "For capturing full page screenshot (NodeJS)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "await driver.executeScript(\"smartui.takeScreenshot\", { screenshotName: \"<Your Screenshot Name>\", fullPage: true });"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "For capturing full page screenshot (Python)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Python",
+        "text": "driver.execute_script(\"smartui.takeScreenshot\", {\"screenshotName\": \"<Your Screenshot Name>\", \"fullPage\": True})"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "For capturing full page screenshot (Ruby)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Ruby",
+        "text": "driver.execute_script(\"smartui.takeScreenshot\", {\"screenshotName\" => \"<Your Screenshot Name>\", \"fullPage\" => true})"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "C#",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "C#",
+        "text": "driver.ExecuteScript(\"smartui.takeScreenshot\", new Dictionary<string, object> { { \"screenshotName\", \"<Your Screenshot Name>\" }, { \"fullPage\", true } });"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Java",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "Map<String, Object> config = new HashMap<>();\nconfig.put(\"screenshotName\", \"<Your Screenshot Name>\");\nconfig.put(\"fullPage\", true);\n((JavascriptExecutor)driver).executeScript(\"smartui.takeScreenshot\", config);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "SmartScroll (For browsers other than Chrome) (NodeJS)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "await driver.executeScript(\"smartui.takeScreenshot\", { screenshotName: \"<screenshot-name>\", fullPage: true, smartScroll: true });"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "SmartScroll (For browsers other than Chrome) (Python)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Python",
+        "text": "driver.execute_script(\"smartui.takeScreenshot\", {\"screenshotName\": \"<screenshot-name>\", \"fullPage\": True, \"smartScroll\": True})"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "SmartScroll (For browsers other than Chrome) (Ruby)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Ruby",
+        "text": "driver.execute_script(\"smartui.takeScreenshot\", {\"screenshotName\" => \"<screenshot-name>\", \"fullPage\" => true, \"smartScroll\" => true})"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "SmartScroll (For browsers other than Chrome) (C#)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "C#",
+        "text": "driver.ExecuteScript(\"smartui.takeScreenshot\", new Dictionary<string, object> { { \"screenshotName\", \"<screenshot-name>\" }, { \"fullPage\", true }, { \"smartScroll\", true } });"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Java",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "Map<String, Object> config = new HashMap<>();\nconfig.put(\"screenshotName\", \"<screenshot-name>\");\nconfig.put(\"fullPage\", true);\nconfig.put(\"smartScroll\", true);\n((JavascriptExecutor)driver).executeScript(\"smartui.takeScreenshot\", config);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "For capturing the screenshot of a specific element (NodeJS)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "let config = {\n      screenshotName: '<Screenshot Name>',\n      elementType: 'xpath',   //Choose one of: xpath, css_selector, id, class\n      element: '<Required Element>'\n};\nawait driver.executeScript(\"smartui.takeScreenshot\", config);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "For capturing the screenshot of a specific element (Python)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Python",
+        "text": "config = {\n  'screenshotName': '<Your Screenshot Name>',\n   'elementType': 'xpath'/'css_selector'/'id'/'class', #Choose one from the following options - xpath, css_selector, id or class\n    'element': '<Required Element>'                    #Add your required element here\n}\ndriver.execute_script(\"smartui.takeScreenshot\", config)"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Ruby",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Ruby",
+        "text": "config = {\n  'screenshotName' => '<Your Screenshot Name>',\n    'elementType'=> 'xpath'/'css_selector'/'id'/'class', #Choose one from the following options - xpath, css_selector, id or class\n    'element'=> '<Required Element>'                     #Add your required element here\n}\ndriver.execute_script(\"smartui.takeScreenshot\", config)"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "C#",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "C#",
+        "text": "var config = new Dictionary<string, string> {\n  {\"screenshotName\", \"<Your Screenshot Name>\"},\n  {\"elementType\",\"xpath\"/\"css_selector\"/\"id\"/\"class\"},       //Choose one from the following options - xpath, css_selector, id or class\n    {\"element\", \"<Required Element>\"}                        //Add your required element here\n};\ndriver.ExecuteScript(\"smartui.takeScreenshot\", config);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Java",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "Map<String, Object> config = new HashMap<>();\nconfig.put(\"screenshotName\", \"<Your Screenshot Name>\");\nconfig.put(\"elementType\", \"xpath\"/\"css_selector\"/\"id\"/\"class\"); //Choose one from the following options - xpath, css_selector, id or class\nconfig.put(\"element\", \"<Required Element>\");                    //Add your required element here\n((JavascriptExecutor)driver).executeScript(\"smartui.takeScreenshot\", config);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Fetching Screenshot Status and Results using WebHook (NodeJS)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "driver.executeScript(\"smartui.fetchScreenshotStatus\")"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Fetching Screenshot Status and Results using WebHook (Python)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Python",
+        "text": "driver.execute_script(\"smartui.fetchScreenshotStatus\")"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Fetching Screenshot Status and Results using WebHook (Ruby)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Ruby",
+        "text": "driver.execute_script(\"smartui.fetchScreenshotStatus=<Your Screenshot Name>\")"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Fetching Screenshot Status and Results using WebHook (C#)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "C#",
+        "text": "driver.ExecuteScript(\"smartui.fetchScreenshotStatus\");"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Java",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "((JavascriptExecutor)driver).executeScript(\"smartui.fetchScreenshotStatus\");"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "NodeJS",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "driver.executeScript(\"smartui.fetchScreenshotStatus=<Your Screenshot Name>\")"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Python",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Python",
+        "text": "driver.execute_script(\"smartui.fetchScreenshotStatus=<Your Screenshot Name>\")"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Ruby",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Ruby",
+        "text": "driver.execute_script(\"smartui.fetchScreenshotStatus=<Your Screenshot Name>\")"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "C#",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "C#",
+        "text": "driver.ExecuteScript(\"smartui.fetchScreenshotStatus=<Your Screenshot Name>\");"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Java",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "((JavascriptExecutor)driver).executeScript(\"smartui.fetchScreenshotStatus=<Your Screenshot Name>\");"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "The status can be one of the following",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JSON",
+        "text": "{\n  screenshotsData: [\n    {\n      screenshotName: '<Your Screenshot Name>',\n      screenshotURL: '<Link to the screenshot captured>',\n      screenshotStatus: 'Changes found', // Status of the screenshot\n      misMatchPercentage: 10.04, // Percentage of mismatch in the screenshot\n      threshold: 100,            // Threshold set for the screenshot\n      browserName: 'chrome',     // Browser used for capturing the screenshot\n      resolution: '1920x1080'    // Resolution of the screenshot\n    }\n\n    ../Other Screenshots\n  ],\n  buildId: '<Your Build ID>',\n  buildName: '<Your Build Name>',\n  projectName: '<Name of the Project>'\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Capability Configuration",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "let capabilities = {\n  visual: true,\n  name: \"Homepage Visual Test\",\n  build: \"Release 1.0\",\n  \"smartUI.project\": \"MyProject\",\n  \"smartUI.build\": \"Build-1.0\"\n};"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Verify visual: true is set in capabilities",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "   let capabilities = {\n     visual: true, // Must be set\n     // ... other capabilities\n   };"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Check project name matches exactly (case-sensitive)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "   \"smartUI.project\": \"ExactProjectName\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Verify credentials are set",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "   echo $LT_USERNAME\n   echo $LT_ACCESS_KEY"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Add explicit waits before screenshot",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "   await driver.wait(until.elementLocated(By.id('content')), 10000);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Wait for specific elements to be visible",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "   await driver.wait(until.elementIsVisible(By.css('.main-content')), 10000);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Set build name in capabilities",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "   \"smartUI.build\": \"ConsistentBuildName\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Add sufficient delay before fetching results",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "   await new Promise(resolve => setTimeout(resolve, 10000)); // Wait 10 seconds"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Use ignoreDOM for dynamic content",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "   \"smartUI.options\": {\n     \"ignoreDOM\": {\n       \"id\": [\"timestamp\", \"user-id\"]\n     }\n   }"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 ---
 
 

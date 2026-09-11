@@ -53,6 +53,152 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/smartui-running-your-first-project/"
+    },
+    "headline": "Running Your First Project on SmartUI",
+    "description": "Learn how to run your first project on smartui step by step guide for the first time users to help them understand how the platform works",
+    "url": "https://www.testmuai.com/support/docs/smartui-running-your-first-project/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "SmartUI",
+    "keywords": [
+      "smart visual testing in testmu ai",
+      "visual  ui testing,image to image comparison",
+      "free cross browser testing tool"
+    ],
+    "proficiencyLevel": "Beginner",
+    "dependencies": "Basic understanding of Command Line Interface and Selenium is required.; Login to TestMu AI SmartUI with your credentials..",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 2: Configure your Test Suite dependencies",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n:::note\nYou can check the latest version of [lambdatest-java-sdk]( https://mvnrepository.com/artifact/io.github.lambdatest/lambdatest-java-sdk) and update the latest version accordingly.\n:::\n\n- Install your CLI and required modules for running SmartUI SDK and compile your defined dependencies in the `pom.xml` file:\n\n```zsh\nnpm install -g @lambdatest/smartui-cli\nmvn clean compile"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Setting Project Token",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "export PROJECT_TOKEN=\"123456#1234abcd-****-****-****-************\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Setting Project Token",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "set PROJECT_TOKEN=\"123456#1234abcd-****-****-****-************\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Setting Project Token",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "PowerShell",
+        "text": "$env:PROJECT_TOKEN=\"123456#1234abcd-****-****-****-************\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Setting TestMu AI Credentials (for Hooks)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "export LT_USERNAME=\"${YOUR_LAMBDATEST_USERNAME}\"\nexport LT_ACCESS_KEY=\"${YOUR_LAMBDATEST_ACCESS_KEY}\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Setting TestMu AI Credentials (for Hooks)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "set LT_USERNAME=\"${YOUR_LAMBDATEST_USERNAME}\"\nset LT_ACCESS_KEY=\"${YOUR_LAMBDATEST_ACCESS_KEY}\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Setting TestMu AI Credentials (for Hooks)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "PowerShell",
+        "text": "$env:LT_USERNAME=\"${YOUR_LAMBDATEST_USERNAME}\"\n$env:LT_ACCESS_KEY=\"${YOUR_LAMBDATEST_ACCESS_KEY}\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "To generate the configuration file, please execute the following command",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "npx smartui config:create .smartui.json"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 9",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": ":::info Advanced options in SmartUI configuration\n- For capturing fullpage or viewport screenshots, please refer to this [documentation](/docs/smartui-sdk-config-options/#12-viewports)\n- For the list of available mobile viewports, please refer to this [documentation](/docs/smartui-sdk-config-options/#list-of-supported-device-viewports)\n- For more information about SmartUI config global options, please refer to this [documentation](/docs/smartui-sdk-config-options/#3-global-options-optional).\n:::\n\n## Step 5: Adding SmartUI function to take screenshot\nYou can incorporate SmartUI into your custom `Selenium` automation test (any platform) script by adding the `smartuiSnapshot` function in the required segment of selenium script of which we would like to take the screenshot, as shown below:\n\n```java\n //Importing the lambdatest-java SDK\n//Rest of your code here\n\n@Test\n    public void basicTest() throws Exception {\n        String spanText;\n        System.out.println(\"Loading URL\");\n\n        driver.get(\"<Required URL>\");\n        // ... test code snippet\n        // highlight-next-line\n        SmartUISnapshot.smartuiSnapshot(driver, \"<Screenshot Name>\");\n    }"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 6: Execute the Tests on SmartUI Cloud",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "npx smartui --config .smartui.json exec -- mvn test -D suite=\"sdk-cloud.xml\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "The smartui-skill package includes",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "smartui-skill/\n\u251c\u2500\u2500 SKILL.md\n\u2514\u2500\u2500 reference/\n    \u251c\u2500\u2500 playbook.md\n    \u2514\u2500\u2500 advanced-patterns.md"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Install a SmartUI Agent Skill using the command below",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "codeRepository": "https://github.com/LambdaTest/agent-skills",
+        "text": "# Clone the repo and copy the skill you need\ngit clone https://github.com/LambdaTest/agent-skills.git\ncp -r agent-skills/smartui-skill .claude/skills/\n\n# Or for Cursor / Copilot\ncp -r agent-skills/smartui-skill .cursor/skills/"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 This guide will walk you through the process of running your first visual regression test using SmartUI, a powerful feature of <BrandName /> that ensures your web applications look flawless across all browsers and devices.
 ## Prerequisites
 

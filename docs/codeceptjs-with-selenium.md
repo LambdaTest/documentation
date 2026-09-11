@@ -47,6 +47,124 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/codeceptjs-with-selenium/"
+    },
+    "headline": "CodeceptJS With Selenium - Run Tests on TestMu AI",
+    "description": "Run CodeceptJS Selenium tests on TestMu AI's cloud grid across 3000+ browsers and OS. Use codeceptjs-lambdatest-service to auto-sync test names and statuses.",
+    "url": "https://www.testmuai.com/support/docs/codeceptjs-with-selenium/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Documentation",
+    "keywords": [
+      "codeceptjs selenium",
+      "codeceptjs lambdatest",
+      "codeceptjs selenium grid"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Prerequisites",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "codeRepository": "https://github.com/LambdaTest/lambdatest-codeceptjs-sample",
+        "text": "git clone https://github.com/LambdaTest/lambdatest-codeceptjs-sample.git\ncd lambdatest-codeceptjs-sample"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Prerequisites",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "npm install"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 3",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "set LT_USERNAME=\"YOUR_LAMBDATEST_USERNAME\"\nset LT_ACCESS_KEY=\"YOUR_LAMBDATEST_ACCESS_KEY\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 4",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "export LT_USERNAME=\"YOUR_LAMBDATEST_USERNAME\"\nexport LT_ACCESS_KEY=\"YOUR_LAMBDATEST_ACCESS_KEY\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 5",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "codeRepository": "https://github.com/LambdaTest/codeceptjs-lambdatest-service",
+        "text": "\n:::note\nUse the **[<BrandName /> Capabilities Generator](https://www.testmuai.com/capabilities-generator/)** to generate the `desiredCapabilities` object for any browser, OS, or device combination.\n:::\n\n## Use the codeceptjs-lambdatest-service\n\n---\n\nThe [codeceptjs-lambdatest-service](https://github.com/LambdaTest/codeceptjs-lambdatest-service) package is a CodeceptJS helper that automatically syncs test names and test results with <BrandName /> after each test run. It uses CodeceptJS's built-in `_passed` and `_failed` hooks to push the outcome to the <BrandName /> platform in real time.\n\n### Install the Package\n\nThe package is included as a dev dependency in the sample repo. To add it to your own project:\n\n```bash\nnpm install codeceptjs-lambdatest-service --save-dev"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Add the LTHelper block inside the helpers section of codecept.conf.js",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "helpers: {\n  // ... your WebDriver helper config\n\n  LTHelper: {\n    require: 'codeceptjs-lambdatest-service',\n    user: process.env.LT_USERNAME,\n    key: process.env.LT_ACCESS_KEY,\n    updateTestName: true\n  }\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Test Name Updates",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\nThe session will appear on the dashboard as **test something** under the **GoogleTest** feature.\n\n### Test Status Updates\n\nThe service uses the `_passed` and `_failed` hooks to mark each session as **Passed** or **Failed** on <BrandName /> immediately after the test finishes. This is required for accurate status reporting on the dashboard - without it, all sessions show as **Unknown** regardless of the actual result.\n\nNo additional configuration is needed beyond adding `LTHelper` to your helpers.\n\n## Run Your Tests\n\n---\n\n**Run desktop tests:**\n\n```bash\nnpm test\n# or\nnpm run test:desktop"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "or",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "npx codeceptjs run --steps googleTest_test.js"
+      }
+    ],
+    "dateModified": "2026-09-09T19:13:32+05:30"
+  }) }}
+/>
+
 # CodeceptJS With Selenium
 
 ---

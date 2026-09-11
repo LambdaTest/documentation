@@ -18,6 +18,206 @@ canonical: https://www.testmuai.com/support/docs/extended-debugging-options/
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/extended-debugging-options/"
+    },
+    "headline": "Extended Debugging Options for Selenium Testing",
+    "description": "Intercept network requests, throttle CPU and network, and download HAR files for Selenium test debugging.",
+    "url": "https://www.testmuai.com/support/docs/extended-debugging-options/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Documentation",
+    "keywords": [
+      "extended debugging selenium testmu ai",
+      "intercept network requests selenium",
+      "throttle cpu selenium testing"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Example Usage",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Python",
+        "text": "driver.execute_script(\"lt:intercept:redirect\", {\n    \"url\": \"https://www.google.com\",\n    \"redirectUrl\": \"https://www.bing.com\"\n})\ndriver.get(\"https://www.google.com\")"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Example Usage",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "await driver.executeScript(\"lt:intercept:redirect\", {\n    url: \"https://www.google.com\",\n    redirectUrl: \"https://www.bing.com\"\n});\nawait driver.get(\"https://www.google.com\");"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Example Usage",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JSON",
+        "text": "{\n    \"status\": \"success\",\n    \"message\": \"Requests to 'https://www.google.com' will be redirected to 'https://www.bing.com'\"\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Example Usage",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Python",
+        "text": "driver.execute_script(\"lt:intercept:response\", {\n    \"url\": \"https://www.amazon.com\",\n    \"response\": {\n        \"status\": 200,\n        \"headers\": {\n            \"Content-Type\": \"application/json\",\n            \"keyheader\": \"valueheader\"\n        },\n        \"body\": \"{\\\"keybody\\\":\\\"valuebody\\\"}\"\n    }\n})\ndriver.get(\"https://www.amazon.com\")"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Example Usage",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "await driver.executeScript(\"lt:intercept:response\", {\n    url: \"https://jsonplaceholder.typicode.com/todos/1\",\n    response: {\n        status: 200,\n        headers: {\n            \"Content-Type\": \"application/json\"\n        },\n        body: JSON.stringify({\n            id: 999,\n            title: \"Custom mocked response\",\n            completed: true\n        })\n    }\n});\nawait driver.get(\"https://jsonplaceholder.typicode.com/todos/1\");"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 6",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JSON",
+        "text": "{\n    \"status\": \"success\",\n    \"message\": \"Mock response configured for the specified URL\"\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Example Usage",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Python",
+        "text": "driver.execute_script(\"lt:intercept:error\", {\n    \"url\": \"https://www.testmuai.com\",\n    \"error\": \"TimedOut\"\n})\ndriver.get(\"https://www.lambdatest.com\")"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Example Usage",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "await driver.executeScript(\"lt:intercept:error\", {\n    url: \"https://example.com/images/*\",\n    error: \"Failed\"\n});\nawait driver.get(\"https://example.com/images/photo.jpg\");"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Example Usage",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JSON",
+        "text": "{\n    \"status\": \"success\",\n    \"message\": \"Error 'TimedOut' configured for the specified URL\"\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Example Usage",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Python",
+        "text": "driver.execute_script(\"lt:throttle:cpu\", {\"rate\": 4})\ndriver.get(\"https://lambdatest.com\")"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Example Usage",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "await driver.executeScript(\"lt:throttle:cpu\", { rate: 4 });\nawait driver.get(\"https://www.wikipedia.org\");"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Example Usage",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JSON",
+        "text": "{\n    \"status\": \"success\",\n    \"message\": \"CPU throttled to 4x slowdown.\"\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Custom Network Configuration",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Python",
+        "text": "driver.execute_script(\"lambda-throttle-network\", {\n    \"download\": 1000,\n    \"upload\": 750,\n    \"latency\": 20\n})\ndriver.get(\"https://lambdatest.com\")"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Custom Network Configuration",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "await driver.executeScript(\"lambda-throttle-network\", {\n    download: 1000,\n    upload: 500,\n    latency: 40\n});\nawait driver.get(\"https://www.cnn.com\");"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Custom Network Configuration",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JSON",
+        "text": "{\n    \"status\": \"success\",\n    \"message\": \"Network conditions set with 1000 kb/s download, 750 kb/s upload, and 20 ms latency.\"\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Using Predefined Network Profiles",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Python",
+        "text": "driver.execute_script(\"lambda-throttle-network\", \"Offline\")\ndriver.get(\"https://lambdatest.com\")"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Using Predefined Network Profiles",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "await driver.executeScript(\"lambda-throttle-network\", \"Regular 3G\");\nawait driver.get(\"https://www.nytimes.com\");"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Example Usage",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Python",
+        "text": "driver.execute_script(\"lt:downloadHAR\", {\n    \"job_id\": \"123456\",\n    \"output_file\": \"network.har\"\n})"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Example Usage",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "await driver.executeScript(\"lt:downloadHAR\", {\n    job_id: \"123456\",\n    output_file: \"network.har\"\n});"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Example Usage",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JSON",
+        "text": "{\n    \"status\": \"success\",\n    \"message\": \"HAR file downloaded as 'network.har'.\"\n}"
+      }
+    ],
+    "dateModified": "2026-09-09T19:13:32+05:30"
+  }) }}
+/>
+
 TestMu AI's Extended Debugging Options let you debug and optimize your Selenium tests by giving you granular control over network behavior and system performance. These debugging features allow you to intercept and modify network requests, simulate various CPU and network conditions, and download network analysis files within your test automation workflow.
 
 With Extended Debugging Options, you can replicate real-world scenarios such as slow networks, resource-constrained devices, API failures, and connectivity issues, ensuring your application delivers a solid user experience across diverse conditions and environments.

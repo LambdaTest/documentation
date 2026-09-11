@@ -39,6 +39,101 @@ canonical: https://www.testmuai.com/support/docs/kane-cli-checkpoint-devtools-lo
       }) }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/kane-cli-checkpoint-devtools-localstorage/"
+    },
+    "headline": "localStorage Assertions",
+    "description": "Verify key-value pairs stored in the browser localStorage during test execution: auth tokens, feature flags, cached data.",
+    "url": "https://www.testmuai.com/support/docs/kane-cli-checkpoint-devtools-localstorage/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Kane CLI",
+    "keywords": [
+      "localstorage assertion",
+      "browser storage",
+      "auth token"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Applications often store structured data in localStorage as JSON strings",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "// Application code\nlocalStorage.setItem(\"user_prefs\", JSON.stringify({theme: \"dark\", lang: \"en\"}));"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "You can parse it to check individual fields",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "Assert: the \"theme\" field in the user_prefs localStorage item is \"dark\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Example Assertions",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "Assert: auth_token exists in localStorage\nAssert: the theme preference in localStorage is \"dark\"\nAssert: localStorage has fewer than 10 items\nAssert: the user_id value in localStorage is not empty"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Example Extractions",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "Store all localStorage items\nExtract the auth_token from localStorage\nStore the user preferences from localStorage\nGet all localStorage keys"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Example If/Else",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "If localStorage has \"onboarding_complete\" then show dashboard, else start onboarding"
+      }
+    ],
+    "dateModified": "2026-07-03T19:09:57+05:30"
+  }) }}
+/>
+
 localStorage assertions let you verify data stored in the browser's `window.localStorage`: check key existence, values, and item counts.
 
 ## How Capture Works

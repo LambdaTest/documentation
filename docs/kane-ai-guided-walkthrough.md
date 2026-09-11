@@ -41,6 +41,63 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       })
     }}
 ></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/kane-ai-guided-walkthrough/"
+    },
+    "headline": "Guided Walkthrough of KaneAI",
+    "description": "Explore KaneAI\u2019s features and components to efficiently manage automated tests. Learn to navigate projects, edit test cases, and track test history.",
+    "url": "https://www.testmuai.com/support/docs/kane-ai-guided-walkthrough/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Documentation",
+    "keywords": [
+      "testmu ai automation",
+      "testmu ai kaneai",
+      "kaneai guided walkthrough"
+    ],
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "dateModified": "2026-09-09T19:16:50+05:30"
+  }) }}
+/>
 This guided walkthrough will help you understand the various components and features available, ensuring you can efficiently navigate and use the platform for managing your automated tests after you have successfully [run your first test](/support/docs/kane-ai-web-test/).
 
 > Navigate to the [Test Manager](https://www.testmuai.com/login/?redirectTo=https://test-manager.lambdatest.com/projects) and [select your project and folder](/support/docs/kane-ai-web-test/#step-3-save-your-test-case) into which you have saved your tests to manage your tests.

@@ -25,6 +25,87 @@ import VirtualDeviceTag from '../src/component/virtualDevice';
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/appium-flutter-integration/"
+    },
+    "headline": "Appium Flutter Integration Driver Testing",
+    "description": "Guide to testing Flutter apps using Appium Flutter Integration Driver on TestMu AI real device cloud.",
+    "url": "https://www.testmuai.com/support/docs/appium-flutter-integration/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "App Automation",
+    "keywords": [
+      "flutter app testing",
+      "appium flutter integration",
+      "real device testing"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "In your Flutter app\u2019s pubspec.yaml, add",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "dev_dependencies:\n  appium_flutter_server: 0.0.28"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Inside it, create appium_test.dart with",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Dart",
+        "text": "import 'package:appium_flutter_server/appium_flutter_server.dart';\nimport 'package:your_app_package/main.dart'; // Replace with your app's main.dart import\n\nvoid main() {\n  initializeTest(app: const MyApp());\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Or with setup callback",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Dart",
+        "text": "import 'package:your_app_package/main.dart' as app;\n\nvoid main() {\n  initializeTest(\n    callback: (WidgetTester tester) async {\n      // Add prerequisite setup here\n      await tester.pumpWidget(const app.MyApp());\n    },\n  );\n}"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 <RealDeviceTag value="Real Device" /> <VirtualDeviceTag value="Virtual Device" />
 <BrandName /> supports testing Flutter applications on real Android and iOS devices using the [**Appium Flutter Integration Driver**](https://github.com/AppiumTestDistribution/appium-flutter-integration-driver/). This driver enables you to automate Flutter app testing in multiple programming languages, providing a powerful and flexible way to validate your Flutter apps on real devices in the cloud.
 

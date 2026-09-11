@@ -42,6 +42,80 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/selenium-tests-behind-proxy/"
+    },
+    "headline": "Run Selenium Tests Behind the Proxy",
+    "description": "Define proxy settings in your Selenium C# scripts to run tests on the cloud grid behind a proxy server.",
+    "url": "https://www.testmuai.com/support/docs/selenium-tests-behind-proxy/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Documentation",
+    "keywords": [
+      "run selenium tests through proxy",
+      "selenium c# proxy configuration",
+      "selenium tests behind firewall"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "How to Define Proxy Settings in Selenium C#",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "C#",
+        "text": "HttpCommandExecutor commandExecutor = new HttpCommandExecutor(new Uri(\"https://username:accesskey@hub.lambdatest.com/\"), TimeSpan.FromSeconds(60));\nWebProxy myproxy = new WebProxy(\"proxy_host:proxy_port\", false);\nIWebDriver driver;"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "How to Define Proxy Settings in Selenium C#",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "C#",
+        "text": "using System;\nusing System.Drawing.Text;\nusing System.Threading;\nusing OpenQA.Selenium;\nusing OpenQA.Selenium.Chrome;\nusing OpenQA.Selenium.Remote;\nusing NUnit.Framework;\nusing System.Net;\nnamespace TestSelenium3\n{\n    public class Program\n    {\n        static void setProxy()\n        {\n            /* HttpWebRequest myWebRequest = (HttpWebRequest)WebRequest.Create(\"http://3.86.55.62:8888\");\n             // Obtain the 'Proxy' of the  Default browser.  \n             IWebProxy proxy = myWebRequest.Proxy;\n             // Print the Proxy Url to the console.\n             if (proxy != null)\n             {\n                 Console.WriteLine(\"Proxy: {0}\", proxy.GetProxy(myWebRequest.RequestUri));\n             }\n             else\n             {\n                 Console.WriteLine(\"Proxy is null; no proxy will be used\");\n             }\n             */\n        }\n        public static void Main(String[] args)\n        {\n            // Init\n            setProxy();\n            HttpCommandExecutor commandExecutor = new HttpCommandExecutor(new Uri(\"https://username:accesskey@hub.lambdatest.com/\"), TimeSpan.FromSeconds(60));\n            commandExecutor.Proxy = new WebProxy(\"proxy_host:proxy_port\", false);\n            IWebDriver driver;\n            DesiredCapabilities capabilities = new DesiredCapabilities();\n            capabilities.SetCapability(\"build\", \"your build name\");\n            capabilities.SetCapability(\"name\", \"your test name\");\n            capabilities.SetCapability(\"platform\", \"Windows 10\");\n            capabilities.SetCapability(\"browserName\", \"Chrome\");\n            capabilities.SetCapability(\"version\", \"89.0\");\n            driver = new RemoteWebDriver(commandExecutor, capabilities);\n            \n            Console.WriteLine(\"----------------------------\" + capabilities + \"#####################################\");\n            try\n            {\n                /*\n                                driver = new RemoteWebDriver(new Uri(\"https://username:accesskey@hub.lambdatest.com/\"), capability);\n                                    Console.WriteLine(\"----------------------------\" + driver + \"#####################################\");\n                */\n                driver.Navigate().GoToUrl(\"https://www.google.com\");\n            }\n            catch (Exception e)\n            {\n                Console.WriteLine(e);\n                Thread.Sleep(500000);\n            }\n        }\n    }\n}"
+      }
+    ],
+    "dateModified": "2026-09-09T19:13:32+05:30"
+  }) }}
+/>
+
 # Run Selenium Tests Behind the Proxy
 * * *
 

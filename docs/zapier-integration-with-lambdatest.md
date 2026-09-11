@@ -16,6 +16,63 @@ canonical: https://www.testmu.ai/support/docs/zapier-integration-with-testmu/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/zapier-integration-with-testmu/"
+    },
+    "headline": "Zapier Integration With TestMu AI",
+    "description": "TestMu AI integration with Zapier enable you to create a smarter and more customized workflow, helping you save time to focus on the important things to ship quality products at light speed.",
+    "url": "https://www.testmuai.com/support/docs/zapier-integration-with-testmu/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Integration",
+    "keywords": [
+      "Zapier",
+      "testmu ai intigration with zapier",
+      "cross browser testing"
+    ],
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "dateModified": "2026-06-02T12:20:54+05:30"
+  }) }}
+/>
+
 -----------------------------------------------------------------------------------------------------------------------------
 Zapier is a cloud-based platform that allows you to easily automate workflows between your apps and your services without having to build this integration yourself or hire someone to do it for you. Zapier works with Zaps, which you can create by combining multiple apps and services. These Zaps help you streamline your workflow and save time and effort.
 

@@ -57,6 +57,96 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/playwright-junit-on-hyperexecute/"
+    },
+    "headline": "Run playwright automation tests on HyperExecute using JUnit",
+    "description": "Learn how to run playwright automation tests on HyperExecute using JUnit framework",
+    "url": "https://www.testmuai.com/support/docs/playwright-junit-on-hyperexecute/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Documentation",
+    "keywords": [
+      "unittest",
+      "unittest selenium",
+      "python selenium"
+    ],
+    "proficiencyLevel": "Beginner",
+    "dependencies": "Your TestMu AI Username and Access key; HyperExecute YAML file which contains all the necessary instructions.; HyperExecute CLI in order to initiate a test execution Job .; Setup the Environmental Variable.",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "In this sample YAML file, we have mentioned",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "---\nversion: 0.1\nglobalTimeout: 150\ntestSuiteTimeout: 150\ntestSuiteStep: 150\n\nrunson: linux\n\nautosplit: true\nretryOnFailure: false\n\nmaxRetries: 1\nconcurrency: 1\n\nenv:\n  # PAT: ${{ .secrets.testKey }}\n  CACHE_DIR: m2_cache_dir\n  TARGET_OS: linux\n\ncacheKey: '{{ checksum \"pom.xml\" }}'\ncacheDirectories:\n  - ${CACHE_DIR}\n\nshell: bash\n\npre:\n  # install playwright version to be used.\n  - npm install playwright@1.23.0 --save-exact\n  # Download and install packages in the CACHE_DIR.\n  # Skip execution of the tests in the pre step\n  - mvn -Dmaven.repo.local=${CACHE_DIR} -Dmaven.test.skip=true clean install\n\npost:\n  - cat yaml/linux/junit_hyperexecute_autosplit_sample.yaml\n\nmergeArtifacts: true\n\nuploadArtefacts:\n - name: Surefire-Report\n   path:\n    - target/surefire-reports/**\n\ntestDiscovery:\n  type: raw\n  mode: remote\n  command: grep 'public class' src/test/java/SampleTest.java | awk '{print$3}'\n\ntestRunnerCommand: mvn -Dplatname=linux -Dmaven.repo.local=m2_cache_dir -Dtest=$test test surefire-report:report\n\njobLabel: [playwright-Junit, linux, autosplit] "
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Run the below command in your terminal at the root folder of the project",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "./hyperexecute --config RELATIVE_PATH_OF_YOUR_YAML_FILE"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "The junit-5-skill package includes",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "junit-5-skill/\n\u251c\u2500\u2500 SKILL.md\n\u2514\u2500\u2500 reference/\n    \u251c\u2500\u2500 playbook.md\n    \u2514\u2500\u2500 advanced-patterns.md"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Install a JUnit 5 Agent Skill using the command below",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "codeRepository": "https://github.com/LambdaTest/agent-skills",
+        "text": "# Clone the repo and copy the skill you need\ngit clone https://github.com/LambdaTest/agent-skills.git\ncp -r agent-skills/junit-5-skill .claude/skills/\n\n# Or for Cursor / Copilot\ncp -r agent-skills/junit-5-skill .cursor/skills/"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 # Running JUnit Framework Tests on HyperExecute
 JUnit is a widely-used testing framework for Java applications, designed to simplify and enhance the testing process for developers. It provides a flexible and powerful platform for running test suites, enabling effective unit testing, integration testing, and end-to-end testing of Java applications
 

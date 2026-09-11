@@ -40,6 +40,123 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       })
     }}
 ></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/hyperexecute-hybrid-strategy/"
+    },
+    "headline": "Hybrid Strategy in HyperExecute",
+    "description": "Unlock efficient testing with HyperExecute\u2019s Hybrid Strategy! Our guide walks you through combining AutoSplit and Matrix Strategy for parallel test execution, saving time without sacrificing test coverage.",
+    "url": "https://www.testmuai.com/support/docs/hyperexecute-hybrid-strategy/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "HyperExecute",
+    "keywords": [
+      "TestMu AI Hyperexecute",
+      "TestMu AI Hyperexecute help",
+      "TestMu AI Hyperexecute documentation"
+    ],
+    "proficiencyLevel": "Beginner",
+    "dependencies": "The version of the YAML file that you are using is 0.1.; The test discovery mode has to be remote.; autosplit: To use HyperExecute\u2019s AutoSplit Strategy, you need to set this flag to true. Similarly, this flag should be set to true in Hybrid Strategy too.; parallelism: This key indicates the number of tests that can run in parallel.; You can define the parallelism for each operating system. If you have not defined the parallelism for any particular OS, then the value for that OS will be set to the global parallelism value.; In the example given above, the parallelism for Linux tests is not defined and if any tests are run on Linux OS, then they will be run in 4 different virtual machines because the global value of parallelism is set to 4.; matrix: This flag is used to define the combination of tests you want to run in your job. You can use the matrix flag to define combinations of browsers, operating systems, and even custom parameters like files, folders, tags, scenarios, and more.; If you want to run a combination of different operating systems in Hybrid Strategy, then you can configure the runson key as ${matrix.os}. This will only work if you have added some input for the os flag under matrix in your YAML file.; testDiscovery: The testDiscovery command is used to list down all the values that have to be distributed. It can be used to split tests over files, modules, or any level supported by your language and framework.; It can also be defined selectively for every platform. If you have not defined the testDiscovery command for a specific OS, then it takes the global value of the command.; In the example given above, the testDiscovery command for Linux will be: snooper --featureFilePaths=src/main//Features/ --frameWork=java; testRunnerCommand: The testRunnerCommand tells the system how to run a single test entity in isolation. This entity could be a file, module, feature or scenario. It will run over each of the values extracted from the testDiscovery command.; If the testRunnerCommand is not defined for a particular OS, then it takes the global value of the parameter that is defined. In the example given above, if the testRunnerCommand was not defined for macOS, then it would have taken the value: mvn test -Dcucumber.options=\"$test\" -Dscenario=\"$test\" -DOs=\"win 10\".",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Prerequisites:",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "autosplit: true"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Prerequisites:",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "parallelism: 5"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Prerequisites:",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "Parallelism: 4 \nwinParallelism: 2 \nmacParallelism: 3"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 4",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "matrix:\n  os: [mac, win, linux] \n  var: [1,2,3] \nrunson: ${matrix.os}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 5",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "testDiscovery:\n  type: raw\n  mode: remote\n  command: snooper --featureFilePaths=src/main//Features/ --frameWork=java "
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 6",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "testDiscovery:\n  type: raw\n  mode: remote\n  command: snooper --featureFilePaths=src/main//Features/ --frameWork=java \n    winCommand: snooper --featureFilePaths=src/main//Features/ --frameWork=java \n    macCommand: snooper --featureFilePaths=src/main/**/Features/ --frameWork=java"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 7",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "testRunnerCommand: mvn test -Dcucumber.options=\"$test\" -Dscenario=\"$test\" -DOs=\"win 10\"\n  winTestRunnerCommand: mvn test -Dcucumber.options=\"$test\" -Dscenario=\"$test\" -DOs=\"win 10\"\n  macTestRunnerCommand: mvn test -Dcucumber.options=\"$test\" -Dscenario=\"$test\" -DOs=\"Mac\"\n  linuxTestRunnerCommand: mvn test -Dcucumber.options=\"$test\" -Dscenario=\"$test\" -DOs=\"linux\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "A sample YAML file used to run a job on Hybrid Strategy for your reference below",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "---\nversion: 0.1\nrunson: ${matrix.os}\n\nautosplit: true\nconcurrency: 3\n\nmatrix:\n  os: [mac, win, linux]\nparallelism: 2\n\nenv:\n  CACHE_DIR: m2_cache_dir\n\ncacheKey: '{{ checksum \"pom.xml\" }}'\ncacheDirectories:\n  - ${CACHE_DIR}\n\npre:\n  - mvn -Dmaven.repo.local=${CACHE_DIR} -Dmaven.test.skip=true clean install\n\ntestDiscovery:\n  type: raw\n  mode: remote\n  macCommand: |\n    grep 'test name' xml/testng_mac.xml | awk '{print$2}' | sed 's/name=//g' | sed 's/\\x3e//g'\n  winCommand: | \n    grep 'test name' xml/testng_win.xml | awk '{print$2}' | sed 's/name=//g' | sed 's/\\x3e//g'\n  linuxCommand: |\n    grep 'test name' xml/testng_linux.xml | awk '{print$2}' | sed 's/name=//g' | sed 's/\\x3e//g' ${param}\n\nlinuxTestRunnerCommand: mvn test -Dplatname=linux -Dmaven.repo.local=./.m2 dependency:resolve -DselectedTests=$tests\nwinTestRunnerCommand: mvn test `-Dplatname=win `-Dmaven.repo.local=.m2 dependency:resolve `-DselectedTests=$tests\nmacTestRunnerCommand: mvn test -Dplatname=mac -Dmaven.repo.local=./.m2 dependency:resolve -DselectedTests=$tests\n\nretryOnFailure: false\nmaxRetries: 1\n\npost:\n  - cat yaml/${matrix.os}/testng_hyperexecute_matrix_sample.yaml\n\nmergeArtifacts: true\n\nuploadArtefacts:\n  - name: XmlReports\n    path:\n      - target/surefire-reports/html/**\n\njobLabel: ['hybrid-mode']"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
 HyperExecute’s Hybrid Strategy is a combination of AutoSplit and Matrix Strategy. You can run all of the combinations of [Matrix Strategy](/support/docs/hyperexecute-matrix-multiplexing-strategy/), and use the [AutoSplit Strategy](/support/docs/hyperexecute-auto-split-strategy/) to run them in parallel on our virtual machines.
 
 ## Why do you need the Hybrid Strategy?

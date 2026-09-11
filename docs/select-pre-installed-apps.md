@@ -43,6 +43,62 @@ import TabItem from '@theme/TabItem';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/select-pre-installed-apps/"
+    },
+    "headline": "Select Pre-Installed App in Session",
+    "description": "Accelerate testing with pre-installed apps on TestMu AI. Start sessions faster, reduce setup time, and enhance efficiency in private cloud environments.",
+    "url": "https://www.testmuai.com/support/docs/select-pre-installed-apps/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Real Device",
+    "keywords": [
+      "select pre installed apps",
+      "select pre installed apps in session"
+    ],
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "dateModified": "2026-08-20T19:36:45+05:30"
+  }) }}
+/>
+
 <BrandName /> empowers developers with a comprehensive testing environment, enabling thorough examination of mobile applications and websites across real devices and browsers. One standout feature is the ability to start testing sessions with pre-installed applications, enhancing efficiency, and reducing test start time,  in **private cloud** setups where data retention and reusability are paramount.
 
 :::note

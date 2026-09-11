@@ -44,6 +44,81 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/teamcity-integration-with-testmu/"
+    },
+    "headline": "TeamCity Integration With TestMu AI",
+    "description": "TestMu AI now integrates with TeamCity to boost your go-to market delivery. Perform automated cross browser testing with TestMu AI to ensure your development code renders seamlessly through an online Selenium grid providing 3000+ real browsers running through machines.",
+    "url": "https://www.testmuai.com/support/docs/teamcity-integration-with-testmu/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Integration",
+    "keywords": [
+      "testmu ai integrations",
+      "testmu ai integrations with ci/cd tools",
+      "ci/cd tools"
+    ],
+    "proficiencyLevel": "Beginner",
+    "dependencies": "TeamCity server along with one TeamCity Agent installed.; Make sure team city Agent has Node and Protractor installed; A GIT repository.; TestMu AI Authentication Credentials; For Linux/Mac:; For Windows:.",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Running Test in Parallel",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "npm run parallel"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Running Test in Parallel",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "//parallel.conf.js file\nusername= process.env.LT_USERNAME || \"<your username>\",\naccessKey=  process.env.LT_ACCESS_KEY || \"<your accessKey>\",\n\nexports.config = {\n  'specs': [ '../specs/single.js' ],\n\n  seleniumAddress: 'https://'+username+':'+accessKey+'@hub.lambdatest.com/wd/hub',\n\n  'commonCapabilities': {\n    'build': 'protractor-selenium-sample',\n    'name': 'parallel-test',\n    'tunnel': true\n  },\n\n  'multiCapabilities': [{\n    'browserName': 'Chrome',\n    'version':'67.0',\n    'platform': 'WIN10'\n  },{\n    'browserName': 'Safari',\n    'version':'11.1',\n    'platform': 'macOS 10.12'\n  },{\n    'browserName': 'Edge',\n    'version':'15.0',\n    'platform': 'WIN10'\n  },{\n    'browserName': 'Firefox',\n    'version':'62.0',\n    'platform': 'WIN10'\n  },{\n    'browserName': 'Internet explorer',\n    'version':'10.0',\n    'platform': 'WIN10'\n  }],\n\n  onPrepare: () => {\n\n    myReporter = {\n        specStarted: function(result) {\n          specStr= result.id\n          spec_id = parseInt(specStr[specStr.length -1])\n          browser.getProcessedConfig().then(function (config) {\n            var fullName = config.specs[spec_id];\n            //var fileName = fullName.substring(fullName.lastIndexOf('/')+1);\n            browser.executeScript(\"lambda-name=\"+fullName.split(/(\\\\|\\/)/g).pop())\n          });\n        }\n      };\n      jasmine.getEnv().addReporter(myReporter);\n  },\n  onComplete: () => {\n    browser.quit();\n  }\n\n};\n\n// Code to support common capabilities\nexports.config.multiCapabilities.forEach(function(caps){\n  for(var i in exports.config.commonCapabilities) caps[i] = caps[i] || exports.config.commonCapabilities[i];\n});"
+      }
+    ],
+    "dateModified": "2026-06-09T15:09:24+05:30"
+  }) }}
+/>
+
 # TeamCity Integration With <BrandName />
 * * *
 

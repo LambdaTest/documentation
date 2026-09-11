@@ -48,6 +48,96 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/smartui-agent-skills/"
+    },
+    "headline": "Run Your SmartUI Visual Tests Using Agent Skills",
+    "description": "Use TestMu AI Agent Skills to let AI coding agents generate and run SmartUI visual regression tests (screenshot comparison across browsers and viewports) directly from natural language prompts.",
+    "url": "https://www.testmuai.com/support/docs/smartui-agent-skills/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "SmartUI",
+    "keywords": [
+      "TestMu AI",
+      "SmartUI",
+      "Visual Regression"
+    ],
+    "proficiencyLevel": "Beginner",
+    "dependencies": "A TestMu AI account; Your TestMu AI Username and Access Key from the Automation Dashboard; Your SmartUI Project Token, available from the SmartUI app after creating a project; A compatible AI coding agent (Claude Code, GitHub Copilot, Cursor, Gemini CLI, or similar).",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Clone the Agent Skills repository and copy the SmartUI skill into your agent's skills directory",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "codeRepository": "https://github.com/LambdaTest/agent-skills",
+        "text": "git clone https://github.com/LambdaTest/agent-skills.git\n\n# For Claude Code\ncp -r agent-skills/smartui-skill .claude/skills/\n\n# For Cursor\ncp -r agent-skills/smartui-skill .cursor/skills/\n\n# For GitHub Copilot\ncp -r agent-skills/smartui-skill .github/skills/\n\n# For Gemini CLI\ncp -r agent-skills/smartui-skill .gemini/skills/"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Export your TestMu AI credentials and SmartUI project token as environment variables so the agent can run tests on the cloud (Linux / MacOS)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "export LT_USERNAME=\"YOUR_LAMBDATEST_USERNAME\"\nexport LT_ACCESS_KEY=\"YOUR_LAMBDATEST_ACCESS_KEY\"\nexport PROJECT_TOKEN=\"YOUR_SMARTUI_PROJECT_TOKEN\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Set Up Your Authentication (Windows)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "PowerShell",
+        "text": "$env:LT_USERNAME=\"YOUR_LAMBDATEST_USERNAME\"\n$env:LT_ACCESS_KEY=\"YOUR_LAMBDATEST_ACCESS_KEY\"\n$env:PROJECT_TOKEN=\"YOUR_SMARTUI_PROJECT_TOKEN\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Ask the agent to run it, or run the command it generated yourself",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "npx smartui exec -- npx playwright test"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 SmartUI catches visual bugs by comparing screenshots of your UI against an approved baseline. Wiring it into a test suite means installing the CLI, adding snapshot calls, and tuning a config. You can hand that off to your AI coding agent instead.
 
 The [`smartui-skill`](https://github.com/LambdaTest/agent-skills/tree/main/smartui-skill) is part of [<BrandName /> Agent Skills](https://github.com/LambdaTest/agent-skills), a library of instruction packs that give AI coding agents the know-how to build working test automation on <BrandName />. Describe the pages you want covered, and it wires SmartUI into your existing framework and runs the comparison on the <BrandName /> cloud.

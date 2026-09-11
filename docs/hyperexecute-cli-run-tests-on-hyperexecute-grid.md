@@ -54,6 +54,262 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       })
     }}
 ></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/"
+    },
+    "headline": "HyperExecute CLI - Run test on HyperExecute",
+    "description": "Explains about HyperExecute CLI",
+    "url": "https://www.testmuai.com/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "HyperExecute",
+    "keywords": [
+      "testmu ai automation",
+      "testmu ai hyperexecute",
+      "hyperexecute automation grid"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Download the Signature and Public Key, keep it with your CLI, and paste the location in the below command",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "openssl dgst -sha256 -verify <PUBLIC_KEY_PATH> -signature <SIGNATURE_PATH> <CLI_BINARY_PATH>"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "In your terminal run the following command",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "codesign -dvvv <PATH_TO_CLI>"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "analyze",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "hyperexecute analyze"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "completion",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "hyperexecute completion"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "serve",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "hyperexecute --user USER_NAME --key ACCESS_KEY serve"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "update",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "hyperexecute update"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "--add-testids",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "hyperexecute --add-testids"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "--auto-proxy",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "hyperexecute --auto-proxy"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "--concurrency",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "--concurrency 2"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "--config",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "--config \"/home/users/work/yaml/\"  "
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "-h, --help",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "--help"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "--job-secret-file",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "--job-secret-file <RELATIVE_PATH_OF_YOUR_SECRET_FILE>"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Sample Secret File",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n:::info\nThe secrets file contains highly sensitive information and must be strictly excluded from public exposure. Here's how to ensure its security:\n\n**Store Outside the Repository (Recommended)**\n\n- Store the secrets file in a location outside your project repository altogether. This method is more secure as it automatically gets excluded from your code scripts zip file.\n\n**Exclude from Version Control**\n\n- Adding the relative path of the file (in which you have stored your secret data) to your [`.gitignore` or `.hyperexecuteignore`](/support/docs/hyperexecute-gitignore/) file. This prevents accidental inclusion of the file in your code repository.\n:::\n\n***\n\n### `-k, --key`\nThe access key of your <BrandName /> account. To find out how to retrieve your access key, visit [this page](/support/docs/hyperexecute-guided-walkthrough/#hyperexecute-dashboard).\n\n<div className=\"lambdatest__codeblock\">\n  <CodeBlock className=\"language-bash\">\n    {`--key ${ YOUR_LAMBDATEST_ACCESS_KEY()}`}\n  <\/CodeBlock>\n<\/div>\n\n***\n\n### `--labels`\nThis flag allows you to pass the labels of your Job. \n```bash\n--labels \"testing\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "--no-track",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "--no-track"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "--preserve-payload",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "--preserve-payload"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "In case of AutoSplit mode",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "--runson linux"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "In case of Matrix or Hybrid mode",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "--runson linux,win,win11,mac,mac13"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "-s, --scan",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "--scan"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "--server-port",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "--server-port=8080"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "-t, --target-directory",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "--target-directory \"/home/users/work/yaml/scripts/\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "--target-path",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "--target-path \"src/test-suite/**\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "--tests-per-tunnel",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "--tests-per-tunnel 5"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "-z, --use-zip",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "--use-zip \"/home/users/work/yaml/zip/\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "--vars",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "--vars \"org=Lambdatest\" --vars \"product=HyperExecute\" --vars \"email=xyz@abc.com\" --vars \"email1=abc@xyz.com\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "--verbose",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "--verbose "
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "--version",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "--version "
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Trigger your Test from HyperExecute CLI",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": ":::\n\n## Running HyperExecute CLI in Quiet Mode\n\nEach time a job is run in HyperExecute, a large number of logs are produced. These logs are sometimes beneficial for thorough debugging and analysis, it occasionally overwhelms Continuous Integration (CI) systems with an excessive amount of logs, especially when handling a large number of test executions.\n\nHyperExecute provides a **\"Quiet mode\"** as a solution to this issue and to give users more control over the logging output. By only displaying significant updates during the test execution, this enables you to run tests with less logs.\n\nTo enable the **Quiet Mode**, you need to paas these commands in your terminal and then trigger the command to execute your job.\n\n<Tabs className=\"docs__val\">\n<TabItem value=\"bash\" label=\"Linux / macOS\" default>\n  ```yaml\n  env | grep CI # Used to check if the CI variable is set to true or not\n  export CI=true # If it's not set to true, then use this command to set as true"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Running HyperExecute CLI in Quiet Mode (Windows)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "  env | grep CI # Used to check if the CI variable is set to true or not\n  set CI=true # If it's not set to true, then use this command to set as true"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
 `HyperExecute CLI` is a command line interface that is required to run tests on HyperExecute. This page outlines all you need to know about the CLI and also explains about the different flags & functionalities supported by the HyperExecute CLI.
 
 > HyperExecute CLI credentials (access keys, API tokens, etc.) are private and confidential. A system compromise may result in their unauthorized disclosure; therefore, you must secure the machine running the <BrandName />-HyperExecute CLI. Do not share or expose credentials in public code, repositories, or environments. In the event of a compromise, you are solely responsible for immediately revoking and regenerating the credentials. <BrandName /> assumes no liability for any losses arising from failure to comply.

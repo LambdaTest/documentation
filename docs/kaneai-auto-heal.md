@@ -50,6 +50,63 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/kaneai-auto-heal/"
+    },
+    "headline": "Auto-Heal for Automation Scripts in KaneAI with HyperExecute",
+    "description": "This documentation will help you to understand how auto-healing works on KaneAI",
+    "url": "https://www.testmuai.com/support/docs/kaneai-auto-heal/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "KaneAI",
+    "keywords": [
+      "auto-heal",
+      "locators",
+      "kane ai"
+    ],
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "dateModified": "2026-09-09T20:26:38+05:30"
+  }) }}
+/>
+
 ## What is Auto-Heal in KaneAI & HyperExecute?
 
 KaneAI, the GenAI Native testing assistant from <BrandName />, generates automation test scripts across multiple languages and frameworks using natural language instructions. When these scripts are executed via **HyperExecute**, <BrandName />’s high-performance test orchestration platform, they come with an added layer of reliability: the **Auto-Heal** feature.

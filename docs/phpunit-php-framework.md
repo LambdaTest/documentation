@@ -49,6 +49,132 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/phpunit-with-selenium-running-phpunit-automation-scripts-on-testmu-selenium-grid/"
+    },
+    "headline": "Selenium With PHPUnit",
+    "description": "Run PHPUnit Selenium automation tests on the TestMu AI cloud grid across 10,000+ browser/device combinations.",
+    "url": "https://www.testmuai.com/support/docs/phpunit-with-selenium-running-phpunit-automation-scripts-on-testmu-selenium-grid/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Documentation",
+    "keywords": [
+      "phpunit selenium grid setup",
+      "run phpunit tests on cloud",
+      "php phpunit automation tutorial"
+    ],
+    "proficiencyLevel": "Beginner",
+    "dependencies": "MacOS: Previous versions of MacOS have PHP installed by default. For the latest MacOS versions starting with Monterey, download and install PHP manually:; Windows: Download PHP from PHP for Windows and add it to your system PATH. Refer to the PHP Windows installation guide to ensure PHP is accessible through Command Prompt (cmd)..",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Use the following commands in the terminal",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "   /bin/bash -c \"$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)\"\n   brew install php"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Prerequisites",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "   mv composer.phar /usr/local/bin/composer"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 1: Clone the Sample Project",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "codeRepository": "https://github.com/LambdaTest/Php-PhpUnit-Selenium",
+        "text": "git clone https://github.com/LambdaTest/Php-PhpUnit-Selenium\ncd Php-PhpUnit-Selenium"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Install the composer dependencies",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "composer install"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 3: Configure Your Test Capabilities",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "PHP",
+        "text": "$capabilities = array(\n\t\"build\" => \"Sample PHPUnit Build\",\n\t\"name\" => \"Sample PHPUnit Test\",\n\t\"platform\" => \"Windows 10\",\n\t\"browserName\" => \"Chrome\",\n\t\"version\" => \"latest\"\n );\t"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 4: Run the Test",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "composer single"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "To run parallel tests",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "composer parallel"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "To run both single and parallel tests at once",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "composer test"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Install the skill",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "codeRepository": "https://github.com/LambdaTest/agent-skills",
+        "text": "git clone https://github.com/LambdaTest/agent-skills.git\ncp -r agent-skills/phpunit-skill .claude/skills/\n\n# For Cursor / Copilot\ncp -r agent-skills/phpunit-skill .cursor/skills/"
+      }
+    ],
+    "dateModified": "2026-09-09T19:13:32+05:30"
+  }) }}
+/>
+
 ---
 
 Run PHPUnit tests on the TestMu AI cloud grid. This guide covers setup, running a sample test, configuring capabilities, and testing locally hosted pages.

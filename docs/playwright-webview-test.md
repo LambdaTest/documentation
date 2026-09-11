@@ -47,6 +47,87 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       })
     }}
 ></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/playwright-webview-test/"
+    },
+    "headline": "Playwright Webview Testing",
+    "description": "Learn how to perform webview testing on android using playwright framework on TestMu AI platform with real browsers cross platform.",
+    "url": "https://www.testmuai.com/support/docs/playwright-webview-test/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Documentation",
+    "keywords": [
+      "playwright testing",
+      "playwright mobile testing",
+      "playwright testing tool"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 1: Setup your test suite",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "wsEndpoint: `wss://cdp.lambdatest.com/playwright?capabilities=${encodeURIComponent(JSON.stringify(capabilities))}`"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 1: Setup your test suite",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n### Step 2: Update the dependencies\nBefore proceeding forward, run the below command to update the outdated dependencies\n\n```bash\nnpm install"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 3: Update your test Capabilities",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n:::tip\nUse our [Capability Generator](https://www.testmuai.com/capabilities-generator/) to select from a wide range of options for customizing your tests.\n:::\n\n### Step 4: Setup your <BrandName /> credentials\n\nIn your terminal (as per your respective Operating System), run these command to setup your <BrandName /> credentials.\n> You can see your credentials below if you have logged into our platform.\n\n<Tabs className=\"docs__val\">\n\n<TabItem value=\"bash\" label=\"Linux / MacOS\" default>\n\n  <div className=\"lambdatest__codeblock\">\n    <CodeBlock className=\"language-bash\">\n  {`export LT_USERNAME=\"${ YOUR_LAMBDATEST_USERNAME()}\"\nexport LT_ACCESS_KEY=\"${ YOUR_LAMBDATEST_ACCESS_KEY()}\"`}\n  <\/CodeBlock>\n<\/div>\n\n<\/TabItem>\n\n<TabItem value=\"powershell\" label=\"Windows\" default>\n\n  <div className=\"lambdatest__codeblock\">\n    <CodeBlock className=\"language-powershell\">\n  {`set LT_USERNAME=\"${ YOUR_LAMBDATEST_USERNAME()}\"\nset LT_ACCESS_KEY=\"${ YOUR_LAMBDATEST_ACCESS_KEY()}\"`}\n  <\/CodeBlock>\n<\/div>\n\n<\/TabItem>\n<\/Tabs>\n\n### Step 5: Execute your test\nReplace the `TEST_FILE_NAME` in the below command with your desired test file to execute that particular test on <BrandName />:\n\n```bash\nnode playwrightwebview.js"
+      }
+    ],
+    "dateModified": "2026-09-10T15:46:57+05:30"
+  }) }}
+/>
 WebView testing is an essential process for ensuring the functionality and reliability of applications that rely on embedded web browsers. This guide provides detailed steps to perform WebView testing using Playwright. It is designed for developers, QA engineers, and anyone involved in software quality assurance.
 
 ## Steps to perform Webview testing

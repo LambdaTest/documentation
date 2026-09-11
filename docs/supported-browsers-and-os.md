@@ -21,6 +21,101 @@ slug: supported-browsers-and-os/
 canonical: https://www.testmu.ai/support/docs/supported-browsers-and-os/
 ---
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/supported-browsers-and-os/"
+    },
+    "headline": "Supported Browsers and Operating Systems for Cypress",
+    "description": "Check out the list of supported browsers and operating systems for Cypress testing on the TestMu AI platform.",
+    "url": "https://www.testmuai.com/support/docs/supported-browsers-and-os/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Web Automation",
+    "keywords": [
+      "Cypress Automation",
+      "Cypress Testing Guide",
+      "Cypress Test Automation"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 1",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JSON",
+        "text": "{\n   \"lambdatest_auth\": {\n      \"username\": \"<Your LambdaTest username>\",\n      \"access_key\": \"<Your LambdaTest access key>\"\n   },\n   \"browsers\": [\n      {\n         \"browser\": \"Chrome\",\n         \"platform\": \"Windows 10\",\n         \"versions\": [\n            \"latest\",\"latest-1\"\n         ]\n      }\n   ],"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Configuring The Browser And Platform Keys In lambdatest-config.json",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "   \"browsers\": [\n      {\n         \"browser\": \"Chrome\",\n         \"platform\": \"Windows 10\",\n         \"versions\": [\n            \"latest-1\"\n         ]\n      },\n   ],"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Using The Cypress CLI Command",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "lambdatest-cypress run --browsers \"platform:browser:version\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "To target it, set the browser to Webkit in the browsers array of lambdatest-config.json",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "\"browsers\": [\n   { \"browser\": \"Webkit\", \"platform\": \"Windows 11\",     \"versions\": [\"latest\"] },\n   { \"browser\": \"Webkit\", \"platform\": \"Windows 10\",     \"versions\": [\"latest\"] },\n   { \"browser\": \"Webkit\", \"platform\": \"MacOS Monterey\", \"versions\": [\"latest\"] },\n   { \"browser\": \"Webkit\", \"platform\": \"MacOS Big Sur\",  \"versions\": [\"latest\"] }\n]"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "WebKit runs on Cypress v10.8.0 only, so pin these under run_settings.npm_dependencies",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "\"npm_dependencies\": {\n   \"cypress\": \"10.8.0\",\n   \"playwright-webkit\": \"^1.28.1\"\n}"
+      }
+    ],
+    "dateModified": "2026-09-09T19:13:32+05:30"
+  }) }}
+/>
+
 <BrandName /> supports the below listed browsers, browser versions and Operating Systems for Cypress testing:
 
 ```json

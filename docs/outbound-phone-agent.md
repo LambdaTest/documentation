@@ -1,6 +1,7 @@
 ---
 id: outbound-phone-agent
-title: How to Test an Outbound Phone Agent With TestMu AI Agent Testing Platform
+toc_max_heading_level: 2
+title: Outbound Phone Agent Testing With TestMu AI
 hide_title: false
 sidebar_label: Outbound Phone Agents
 description: Test an outbound phone agent with TestMu AI. Outbound number pools, passive-mode monitoring, and the same 30+ call quality metrics as inbound testing.
@@ -43,11 +44,64 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
-# How to Test an Outbound Phone Agent With TestMu AI Agent Testing Platform
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/outbound-phone-agent/"
+    },
+    "headline": "Outbound Phone Agent Testing With TestMu AI",
+    "description": "Test an outbound phone agent with TestMu AI. Outbound number pools, passive-mode monitoring, and the same 30+ call quality metrics as inbound testing.",
+    "url": "https://www.testmuai.com/support/docs/outbound-phone-agent/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Agent Testing",
+    "keywords": [
+      "outbound phone agent testing",
+      "outbound voice agent evaluation",
+      "sales dialer testing"
+    ],
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "dateModified": "2026-09-04T12:50:18+05:30"
+  }) }}
+/>
 
----
-
-An outbound phone agent places calls. To test one, the Agent Testing Platform provisions a recipient number from an outbound pool, the agent under test calls it, and the platform answers and scores the conversation. Typical use cases are sales dialers, lead qualification, collections, and appointment reminders.
+An outbound phone agent places calls. To test one, the TestMu AI Agent Testing Platform provisions a recipient number from an outbound pool, the agent under test calls it, and the platform answers and scores the conversation. Typical use cases are sales dialers, lead qualification, collections, and appointment reminders.
 
 Outbound testing shares the same two modes as inbound, pre-evaluation and post-evaluation, and the same features, with a few outbound-specific differences in pre-evaluation.
 

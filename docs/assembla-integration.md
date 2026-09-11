@@ -48,6 +48,63 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/assembla-integration/"
+    },
+    "headline": "Assembla Integration with TestMu AI",
+    "description": "TestMu AI helps you manage your bugs in Assembla by moving them to project in a single click. All the details you provide in TestMu AI like task list, assignee, title and description would automatically be presented in the project on Assembla.",
+    "url": "https://www.testmuai.com/support/docs/assembla-integration/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Integration",
+    "keywords": [
+      "testmu ai integrations",
+      "push issues to clubhouse",
+      "free cross browser testing tool"
+    ],
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "dateModified": "2026-02-12T19:51:34+05:30"
+  }) }}
+/>
+
 Assembla is a cloud-based platform that provides version control and project management tools specifically designed for software development teams. It supports multiple version control systems, such as Git, Subversion (SVN), and Perforce, allowing teams to manage their source code, track changes, and collaborate more efficiently.
 
 <BrandName /> integrates with Assembla, allowing users to file issues directly from the platform, assign them to team members, and attach screenshots during a test session, with populated fields displayed on the Assembla platform for each testing instance.

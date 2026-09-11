@@ -47,6 +47,82 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       })
     }}
 ></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/hyperexecute-appium-virtual-device/"
+    },
+    "headline": "Appium Testing - Virtual Device On HyperExecute",
+    "description": "Execute Appium tests on virtual devices using HyperExecute with TestNG and YAML 0.2. Learn setup, configuration, and seamless test execution steps.",
+    "url": "https://www.testmuai.com/support/docs/hyperexecute-appium-virtual-device/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Documentation",
+    "keywords": [
+      "appium",
+      "java",
+      "testmu ai java"
+    ],
+    "proficiencyLevel": "Beginner",
+    "dependencies": "HyperExecute YAML file which contains all the necessary instructions.; HyperExecute CLI in order to initiate a test execution Job .; Your lambdatest Username and Access key; Setup the Environmental Variable; Ensure you have Appium\u2019s Java client library installed.; Access to an Android app (.apk or .aab file).",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 2: Configure your Test Script",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "codeRepository": "https://github.com/LambdaTest/hyperexecute-appium-testng",
+        "text": "\n### Step 3: Update your XML file\nCreate `.XML` file in order to run your test and define device capabilities. Please find sample code below for the same.\n\n```xml reference title=\"android-emulator.xml\"\nhttps://github.com/LambdaTest/hyperexecute-appium-testng/blob/android-emulator/src/test/java/android-emulator.xml"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 4: Configure YAML and Execute your Script",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n<!-- > The ```region``` parameter specifies the region or location where the Appium tests will be executed. Our platform supports the following three regions:\n- ap (Asia-Pacific)\n- us (United States)\n- eu (European Union) -->\n\n### Step 5: Execute your Test Suite\n> **NOTE :** In case of MacOS, if you get a permission denied warning while executing CLI, simply run **`chmod u+x ./hyperexecute`** to allow permission. In case you get a security popup, allow it from your **System Preferences** \u2192 **Security & Privacy** \u2192 **General tab**.\n\nRun the below command in your terminal at the root folder of the project:\n\n```bash\n./hyperexecute --config RELATIVE_PATH_OF_YOUR_YAML_FILE"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
 This page outlines how to execute your Appium tests on HyperExecute using TestNG with YAML 0.2
 > HyperExecute uses [YAML 0.2](/support/docs/hyperexecute-yaml-version0.2/) to perform the tests using Appium.
 

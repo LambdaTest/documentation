@@ -40,6 +40,80 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/kane-cli-changelog/"
+    },
+    "headline": "Changelog",
+    "description": "Kane CLI release history, version notes, and links to GitHub releases.",
+    "url": "https://www.testmuai.com/support/docs/kane-cli-changelog/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Kane CLI",
+    "keywords": [
+      "kane cli changelog",
+      "kane cli releases",
+      "kaneai"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Update to the latest version at any time",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "npm update -g @testmuai/kane-cli"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Check your current version",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "kane-cli --version"
+      }
+    ],
+    "dateModified": "2026-06-06T14:00:16+05:30"
+  }) }}
+/>
+
 Full release notes and version history are published on GitHub:
 
 **[github.com/LambdaTest/kane-cli/releases](https://github.com/LambdaTest/kane-cli/releases)**

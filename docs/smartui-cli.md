@@ -54,6 +54,186 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/smartui-cli/"
+    },
+    "headline": "Capture Static URLs via CLI",
+    "description": "In this documentation, learn how to perform Visual UI Testing using command line interface on the TestMu AI Automation Cloud across 40+ browser versions.",
+    "url": "https://www.testmuai.com/support/docs/smartui-cli/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "SmartUI",
+    "keywords": [
+      "Visual Regression",
+      "Visual Regression Testing Guide",
+      "Visual Regression Test Automation"
+    ],
+    "proficiencyLevel": "Beginner",
+    "dependencies": "Basic understanding of Command Line Interface is required.; Login to TestMu AI SmartUI with your credentials..",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Install required NPM modules for TestMu AI SmartUI CLI globally or in your project",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "npm install -g @lambdatest/smartui-cli"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 1: Install the Dependencies",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "npm install @lambdatest/smartui-cli"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 2: Create URL file",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "smartui config:create-web-static urls.json"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 2: Create URL file",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": ":::caution Please Note\nThe `waitForTimeout` is an optional configuration.\n\nIf you are using any async components, you can add wait time for the page to load the DOM of your components. This can help avoid false-positive results for your tests. You can add the wait time in milliseconds, which might increase the execution time of your tests.\n\n:::\n\n## Step 3: Configure your Project Token\n\nSetup your project token shown in the **SmartUI** app after creating your project.\n\n<Tabs className='docs__val' groupId='language'>\n<TabItem value='MacOS/Linux' label='MacOS/Linux' default>\n\n```bash\nexport PROJECT_TOKEN=\"123456#1234abcd-****-****-****-************\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 3: Configure your Project Token",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "set PROJECT_TOKEN=\"123456#1234abcd-****-****-****-************\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 3: Configure your Project Token",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "PowerShell",
+        "text": "$env:PROJECT_TOKEN=\"123456#1234abcd-****-****-****-************\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "To generate the configuration file, please execute the following command",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "npx smartui config:create .smartui.json"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 8",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n### For capturing viewport screenshots\n\nTo capture a screenshot of the content currently visible in your viewport, rather than the entire page, it's important to define the viewport's width and height in your configuration settings. Specify the desired width and height parameters as demonstrated in the following example to ensure that the screenshot encompasses only the viewport area.\n\n```json\n    \"viewports\": [\n      [\n        1920,\n        1080\n      ],\n      [\n        1366,\n        768\n      ],\n      [\n        360,\n        640\n      ]\n    ],"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 5: Execute the Tests on SmartUI Cloud using CLI",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "npx smartui capture urls.json --config .smartui.json"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "You can also use the following options with the capture command",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "npx smartui capture urls.json --config .smartui.json --buildName \"Release-v1.0\" --fetch-results results.json"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "For example, to simulate a button click, you might use",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "document.querySelector('.my-button-example').click();"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Example usage in a configuration",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JSON",
+        "text": "{\n  \"name\": \"Example Page\",\n  \"url\": \"https://example.com/\",\n  \"waitForTimeout\": 3000,\n  \"execute\": {\n    \"afterNavigation\": \"await page.waitForSelector('.loading', { hidden: true })\",\n    \"beforeSnapshot\": \"document.querySelector('.cookie-banner').click()\"\n  }\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "If no filename is specified, results will be stored in results.json",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "npx smartui capture urls.json --config .smartui.json --fetch-results"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Specify a custom filename for your results",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "npx smartui capture urls.json --config .smartui.json --fetch-results custom-results.json"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Specify a custom build name to group your screenshots in the following way",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "npx smartui capture urls.json --buildName \"Sample Build Name\" --config .smartui.json"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Setup with Continuous Integration (CI)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "steps:\n  - name: Running SmartUI CLI Tests\n    run: |\n      npm install -g @lambdatest/smartui-cli\n      npx playwright install-deps\n      smartui capture urls.json --config smartui-web.json"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Parallel execution of static URLs",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "npx smartui capture urls.json --config .smartui.json --parallel <number-of-parallels> --fetch-results"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 With SmartUI CLI, you can seamlessly perform visual regression testing on the <BrandName /> platform using your command line, identifying Visual UI Regression bugs effortlessly. This guide will walk you through the process of running successful Visual Regression tests using SmartUI CLI.
 
 <div className='storylane-iframe'>

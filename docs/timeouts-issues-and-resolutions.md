@@ -42,6 +42,80 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/timeouts-issues-and-resolutions/"
+    },
+    "headline": "Timeouts - Errors and Resolutions",
+    "description": "Resolve timeout errors in Selenium tests caused by idle sessions, network latency, queuing, and firewalls.",
+    "url": "https://www.testmuai.com/support/docs/timeouts-issues-and-resolutions/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Web Automation",
+    "keywords": [
+      "selenium idle timeout fix",
+      "test queue timeout resolution",
+      "network latency timeout"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "If the TestMu AI Selenium grid detects inactivity for 120 seconds, you may encounter the below error",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "\"idleTimeout\": \"125\" //extends idle timeout from 120 seconds to 125."
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "4. Queuing Timeout",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "Maximum number of test cases that can be queued = n + 150 \n\n// Here, n = number of concurrent sessions."
+      }
+    ],
+    "dateModified": "2026-08-26T14:02:45+05:30"
+  }) }}
+/>
+
 To prevent machines from being held due to incorrect tests, there is a restriction on the number of seconds a machine stays reserved. If our servers fail to retrieve a request from your local machine for more than 120 seconds, your tests are aborted from the queue with a Timeout error message. 
 
 ## Reasons for a Timeout Error

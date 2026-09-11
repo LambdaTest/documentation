@@ -47,6 +47,74 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/kaneai-create-pr/"
+    },
+    "headline": "Create Pull Requests from KaneAI Test Cases",
+    "description": "Export KaneAI-generated test code directly to GitHub or GitLab as pull requests. Set up repository integration, configure PR settings, and track PR status from Test Manager.",
+    "url": "https://www.testmuai.com/support/docs/kaneai-create-pr/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Documentation",
+    "keywords": [
+      "kaneai pull request",
+      "kaneai github integration",
+      "kaneai gitlab integration"
+    ],
+    "proficiencyLevel": "Beginner",
+    "dependencies": "A TestMu AI account with access to KaneAI and Test Manager.; A GitHub or GitLab account with at least one repository.; At least one test case with code generated.; Admin role to configure integration and PR settings. Users with appropriate permissions can create PRs for their own test cases..",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "The default pattern is",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "your-repo/\n\u251c\u2500\u2500 {project_name}/\n\u2502   \u251c\u2500\u2500 {test_id}_{test_name}/\n\u2502   \u2502   \u2514\u2500\u2500 {version_no}/\n\u2502   \u2502       \u2514\u2500\u2500 test.py\n\u2502   \u2514\u2500\u2500 {test_id}_{test_name}/\n\u2502       \u2514\u2500\u2500 {version_no}/\n\u2502           \u2514\u2500\u2500 test.py"
+      }
+    ],
+    "dateModified": "2026-09-09T19:16:50+05:30"
+  }) }}
+/>
+
 KaneAI lets you export generated test code directly to your GitHub or GitLab repository as a pull request (PR) or merge request (MR). Instead of downloading ZIP files and manually copying code, you can raise PRs from the Test Manager in a few clicks, or automatically whenever code is generated.
 
 This guide covers how to integrate your Git provider, configure PR settings, create pull requests from test cases, and track their status.

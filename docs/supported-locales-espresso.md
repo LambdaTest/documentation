@@ -41,6 +41,73 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/supported-locales-espresso/"
+    },
+    "headline": "Supported Locales And Languages - Espresso",
+    "description": "Checkout the list of all supported locales for espresso.",
+    "url": "https://www.testmuai.com/support/docs/supported-locales-espresso/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "App Automation",
+    "keywords": [
+      "Supported locales",
+      "Locales",
+      "Appium supported locales"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Locale",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "curl --location --request POST 'https://mobile-api.lambdatest.com/espresso/v1/build' \\\n--header 'Authorization: Basic <Enter_Basic_Auth>' \\\n--header 'Content-Type: application/json' \\\n--data-raw '{\n    \"app\" : \"app_id\",\n    \"testSuite\": \"testsuite_id\",\n    \"device\" :  [\"Galaxy S20-10\"],\n    \"queueTimeout\": 360,\n    \"IdleTimeout\": 150,\n    \"deviceLog\": true,\n    \"build\" : \"Proverbial-Espresso\",\n    \"language\": \"fr\",\n    \"locale\": \"CA\"\n}'"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 Use the given below list of supported locale and language codes for app testing.
 
 ## Android Locales and Language Codes

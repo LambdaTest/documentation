@@ -46,6 +46,63 @@ import NewTag from '../src/component/newTag';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/analytics-bar-line-widgets/"
+    },
+    "headline": "Bar and Line Chart Widgets",
+    "description": "Learn how to create and configure Bar and Line chart widgets to visualize test data trends, comparisons, and patterns over time or across categories.",
+    "url": "https://www.testmuai.com/support/docs/analytics-bar-line-widgets/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Insights",
+    "keywords": [
+      "analytics",
+      "dashboards",
+      "bar chart widgets"
+    ],
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "dateModified": "2026-05-14T14:47:09+05:30"
+  }) }}
+/>
+
 Bar and Line chart widgets in LambdaTest Insights enable you to visualize test data trends, comparisons, and patterns. Bar charts are ideal for comparing values across categories, while line charts excel at showing trends and changes over time.
 
 ## What are Bar and Line Chart Widgets?

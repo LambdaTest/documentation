@@ -26,6 +26,101 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/supported-cypress-versions/"
+    },
+    "headline": "Supported Cypress Versions",
+    "description": "This documentation will help you learn about the Cypress versions that are supported by TestMu AI.",
+    "url": "https://www.testmuai.com/support/docs/supported-cypress-versions/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Web Automation",
+    "keywords": [
+      "Cypress Automation",
+      "Cypress Testing Guide",
+      "Cypress Test Automation"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Cypress Versions Supported By TestMu AI (Cypress v10)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "// lambdatest-config.json\n\n\"run_settings\":{\n   \"cypress_config_file\":\"cypress.config.js\",\n   \"reporter_config_file\":\"base_reporter_config.json\",\n   \"build_name\":\"build-name\",\n   \"parallels\":1,\n   \"specs\":\"./*.cy.js\",\n   \"ignore_files\":\"\",\n   \"network\":false,\n   \"headless\":false,\n   \"npm_dependencies\":{\n      \"cypress\":\"10.0.0\"\n   }\n},\n"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Cypress v9",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "// lambdatest-config.json\n\n\"run_settings\":{\n   \"cypress_config_file\": \"cypress.json\",\n     \"reporter_config_file\": \"base_reporter_config.json\",\n     \"build_name\": \"build-name\",\n     \"parallels\": 1,\n     \"specs\": \"./*.spec.js\",\n     \"ignore_files\": \"\",\n     \"network\": false,\n     \"headless\": false,\n     \"npm_dependencies\": {\n        \"cypress\": \"9.0.0\"\n}\n"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Example",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JSON",
+        "text": "\"devDependencies\": {\n    \"@bahmutov/print-env\": \"1.2.0\",\n    \"@cypress/eslint-plugin-dev\": \"5.0.0\",\n    \"colon-names\": \"1.0.0\",\n    \"cypress\": \"9.2.1\",\n    \"eslint\": \"7.0.0\","
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Example",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JSON",
+        "text": "\"run_settings\": {\n    \"cypress_config_file\": \"cypress.json\",\n    \"build_name\": \"Cypress v9 Demo\",\n    \"parallels\": 2,\n    \"specs\": \"./cypress/integration/examples/actions.spec.js\",\n    \"downloads\": \"./cypress/results/\",\n    \"ignore_files\": \"\",\n    \"network\": false,\n    \"headless\": false,\n    \"reporter_config_file\": \"\",\n    \"npm_dependencies\": {\n      \"cypress\": \"10.0.0\"\n    },\n  },"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Example",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JSON",
+        "text": "\"run_settings\": {\n    \"cypress_config_file\": \"cypress.json\",\n    \"build_name\": \"Cypress v9 Demo\",\n    \"parallels\": 2,\n    \"specs\": \"./cypress/integration/examples/actions.spec.js\",\n    \"downloads\": \"./cypress/results/\",\n    \"ignore_files\": \"\",\n    \"network\": false,\n    \"headless\": false,\n    \"reporter_config_file\": \"\",\n    \"npm_dependencies\": {\n      \"typescript\": \"3.7.4\"\n    },\n    \"cypress_version\": \"10.0.0\"\n  },"
+      }
+    ],
+    "dateModified": "2026-09-09T19:13:32+05:30"
+  }) }}
+/>
+
 With the newer versions of Cypress releasing, to gain the most from recent improvements and bug fixes, it is recommended that your test scripts use the latest version. 
 
 <BrandName /> supports every major, minor and patch versions for:

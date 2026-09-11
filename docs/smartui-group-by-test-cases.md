@@ -23,6 +23,109 @@ canonical: https://www.testmuai.com/support/docs/smartui-group-by-test-cases/
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/smartui-group-by-test-cases/"
+    },
+    "headline": "Grouping SmartUI Screenshots by Test Cases",
+    "description": "SmartUI grouping by test case using the Java Hooks flow (smartUI.project, smartui.takeScreenshot), one build with multiple captures, Automation SmartUI tab, and bulk actions; plus Web-only Node SDK alternatives.",
+    "url": "https://www.testmuai.com/support/docs/smartui-group-by-test-cases/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "SmartUI",
+    "keywords": [
+      "smartui",
+      "smartui hooks",
+      "smartui.takeScreenshot"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Clone the official sample",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "codeRepository": "https://github.com/LambdaTest/java-selenium-sample",
+        "text": "git clone https://github.com/LambdaTest/java-selenium-sample\ncd java-selenium-sample"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Set credentials (macOS/Linux)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "export LT_USERNAME='<your-lambdatest-username>'\nexport LT_ACCESS_KEY='<your-lambdatest-access-key>'"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "#sample)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "export PROJECT_TOKEN='<your-token>#sample'"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "The important SmartUI line is",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "ltOptions.put(\"smartUI.project\", \"<Smart UI Project Name>\");"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Capabilities and webhook",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "Map<String, Object> config = new HashMap<>();\nconfig.put(\"screenshotName\", \"<Your Screenshot Name>\");\n((JavascriptExecutor) driver).executeScript(\"smartui.takeScreenshot\", config);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Run it",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "mvn clean install exec:java -Dexec.mainClass=\"com.lambdatest.SmartUI\" -Dexec.classpathScope=test -e"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 <BrandName />’s SmartUI allows you to organize your visual regression screenshots logically by linking them to the automation test cases they were captured in. Grouping screenshots by test cases reduces triage fatigue and allows you to review visual differences with full automation execution context.
 
 This guide’s **recommended flow** is **Selenium on the grid + SmartUI Hooks** (`smartUI.project` in Java `LT:Options` and **`smartui.takeScreenshot`** in the browser). That path works with **Hooks-oriented** SmartUI projects (including many **Omni** projects) and matches the **Capability Generator** output in the <BrandName /> dashboard.

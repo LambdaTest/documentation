@@ -53,6 +53,95 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/hyperexecute-smart-ui-test-using-playwright/"
+    },
+    "headline": "SmartUI Testing in HyperExecute using Playwright",
+    "description": "Boost bug detection speed using HyperExecute smart UI testing with Playwright. Perform Visual UI Regression Testing for perfect app delivery.",
+    "url": "https://www.testmuai.com/support/docs/hyperexecute-smart-ui-test-using-playwright/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "HyperExecute",
+    "keywords": [
+      "smart ui testing in testmu ai",
+      "smart ui testing in hyperexecute",
+      "visual  ui testing,image to image comparison"
+    ],
+    "proficiencyLevel": "Beginner",
+    "dependencies": "Your TestMu AI Username and Access key; HyperExecute CLI in order to initiate a test execution Job .; Setup the Environment Variable; HyperExecute YAML file which contains all the necessary instructions.; To run SmartUI tests, you need to have a Baseline Image and a Comparison Image. A baseline image is the reference image with which you want to compare. You can either upload this image from your computer or take a screenshot from your browser..",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 1: Configure Your Test Suite",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "wsEndpoint: `wss://cdp.lambdatest.com/playwright?capabilities=${encodeURIComponent(JSON.stringify(capabilities))}`"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "For example",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "const capabilities = {\n  'browserName': 'Chrome', // Browsers allowed: `Chrome`, `MicrosoftEdge`, `pw-chromium`, `pw-firefox` and `pw-webkit`\n  'browserVersion': 'latest',\n  'LT:Options': {\n    'platform': process.env.HYPEREXECUTE_PLATFORM,\n    'build': 'Playwright SmartUI Build',\n    'name': 'Playwright SmartUI Test',\n    'user': process.env.LT_USERNAME,\n    'accessKey': process.env.LT_ACCESS_KEY,\n    'network': true,\n    'video': true,\n    'console': true,\n    'smartUIProjectName': process.env.SMARTUI_PROJECT || 'SmartUI-PW',\n    'smartUIBaseline': true\n  }\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "In this sample YAML file, we have mentioned",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "---\nversion: 0.1\nglobalTimeout: 150\ntestSuiteTimeout: 150\ntestSuiteStep: 150\n\nrunson: win\n\nretryOnFailure: true\nmaxRetries: 1\n\nconcurrency: 1\n\nenv:\n  CACHE_DIR: m2_cache_dir\n\n# Dependency caching for Windows\ncacheKey: '{{ checksum \"pom.xml\" }}'\ncacheDirectories:\n  - ${CACHE_DIR}\n\nmatrix:\n  classname: [\"pw-smartui.js\"]\n\npre:\n  # install playwright version to be used.\n  - npm install playwright@1.42.0 --save-exact\n\ntestSuites:\n  - node hooks/pw-smartui.js\n\njobLabel: ['HYP', 'Playwright' 'SmartUI']\n"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Run the below command in your terminal at the root folder of the project",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "./hyperexecute --config RELATIVE_PATH_OF_YOUR_YAML_FILE"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 This documentation will guide you step-by-step to execute the SmartUI tests on the HyperExecute platform using Playwright.
 
 ## Prerequisites

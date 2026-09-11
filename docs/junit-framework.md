@@ -47,6 +47,117 @@ import CookieTrackingLogin from '@site/src/component/CookieTracking';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/junit-with-selenium-running-junit-automation-scripts-on-testmu-selenium-grid/"
+    },
+    "headline": "Selenium With JUnit",
+    "description": "Run JUnit Selenium tests on TestMu AI cloud grid with parallel execution across 3000+ browsers.",
+    "url": "https://www.testmuai.com/support/docs/junit-with-selenium-running-junit-automation-scripts-on-testmu-selenium-grid/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Documentation",
+    "keywords": [
+      "junit selenium cloud testing",
+      "run junit tests on selenium grid",
+      "junit parallel test execution"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 1: Clone the Sample Project",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "codeRepository": "https://github.com/LambdaTest/junit-selenium-sample",
+        "text": "git clone https://github.com/LambdaTest/junit-selenium-sample\ncd junit-selenium-sample"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 1: Clone the Sample Project",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "mvn versions:display-dependency-updates"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 3: Configure Your Test Capabilities",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "ChromeOptions browserOptions = new ChromeOptions();\n        browserOptions.setPlatformName(\"Windows 10\");\n        browserOptions.setBrowserVersion(\"latest\");\n\n        HashMap<String, Object> ltOptions = new HashMap<String, Object>();\n        ltOptions.put(\"build\", \"LambdaTestSampleApp\");\n        ltOptions.put(\"name\", \"LambdaTestJavaSample\");\n        ltOptions.put(\"network\", true); // To enable network logs\n        ltOptions.put(\"visual\", true); // To enable step by step screenshot\n        ltOptions.put(\"video\", true); // To enable video recording\n        ltOptions.put(\"console\", true); // To capture console logs\n        ltOptions.put(\"w3c\", true);\n        browserOptions.setCapability(\"LT:Options\", ltOptions);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 4: Run the Test (Single Test)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "mvn test -P single"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 4: Run the Test (Parallel Tests)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "mvn test -P parallel"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 6",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\nFor parallel execution, the sample project uses a `Parallelized` helper class and parameterized tests:\n\n```java title=\"Parallelized Class\"\nimport java.util.concurrent.ExecutorService;\nimport java.util.concurrent.Executors;\nimport java.util.concurrent.TimeUnit;\n\nimport org.junit.runners.Parameterized;\nimport org.junit.runners.model.RunnerScheduler;\n\npublic class Parallelized extends Parameterized {\n\n    private static class ThreadPoolScheduler implements RunnerScheduler {\n        private ExecutorService executor;\n\n        public ThreadPoolScheduler() {\n            String threads = System.getProperty(\"junit.parallel.threads\", \"15\");\n            int numThreads = Integer.parseInt(threads);\n            executor = Executors.newFixedThreadPool(numThreads);\n        }\n\n        @Override\n        public void finished() {\n            executor.shutdown();\n            try {\n                executor.awaitTermination(10, TimeUnit.MINUTES);\n            } catch (InterruptedException exc) {\n                throw new RuntimeException(exc);\n            }\n        }\n\n        @Override\n        public void schedule(Runnable childStatement) {\n            executor.submit(childStatement);\n        }\n    }\n\n    public Parallelized(Class<?> klass) throws Throwable {\n        super(klass);\n        setScheduler(new ThreadPoolScheduler());\n    }\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 7",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "codeRepository": "https://github.com/LambdaTest/agent-skills",
+        "text": "\n## Step 5: View Your Results\n---\n\nCheck the Automation Dashboard to see exactly what happened during your test.\n\nVisit the [TestMu AI Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build) to see your test results. Each session includes:\n\n- **Video recording** of the full test execution\n- **Screenshots** captured at each step\n- **Console logs** from the browser\n- **Network logs** for every request and response\n- **Selenium command logs** showing each driver action\n\n## Run JUnit Tests Using Agent Skills\n---\n\nUse AI coding assistants to generate and run JUnit tests with the TestMu AI Agent Skill.\n\nThe [junit-5-skill](https://github.com/LambdaTest/agent-skills/tree/main/junit-5-skill) is part of [TestMu AI Agent Skills](https://github.com/LambdaTest/agent-skills/) - structured packages that teach AI coding assistants how to write production-grade test automation.\n\nInstall the skill:\n\n```bash\ngit clone https://github.com/LambdaTest/agent-skills.git\ncp -r agent-skills/junit-5-skill .claude/skills/\n\n# For Cursor / Copilot\ncp -r agent-skills/junit-5-skill .cursor/skills/"
+      }
+    ],
+    "dateModified": "2026-09-09T19:13:32+05:30"
+  }) }}
+/>
+
 Run JUnit tests on the TestMu AI cloud grid. This guide covers setup, running a sample test, configuring capabilities, and testing locally hosted pages.
 
 :::tip Sample repo

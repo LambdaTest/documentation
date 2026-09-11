@@ -38,6 +38,72 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       })
     }}
 ></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/robot-report/"
+    },
+    "headline": "Robot Report",
+    "description": "Learn how to configure and generate Robot test execution reports on HyperExecute with step-by-step guidance for seamless test insights and reporting.",
+    "url": "https://www.testmuai.com/support/docs/robot-report/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Documentation",
+    "keywords": [
+      "cucumber testing reports",
+      "robot report testmu ai"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Add the following configurations in your YAML file",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "testRunnerCommand: YOUR_RUNNER_COMMAND --outputdir Reports \n\nreport: true\npartialReports:\n  type: json\n  location: Reports\n  frameworkName: robot"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
 Robot Framework is a generic, open-source automation framework designed for acceptance testing, acceptance test-driven development (ATDD), and robotic process automation (RPA). It is widely used in software testing due to its simplicity, extensibility, and ease of use. The framework is keyword-driven, meaning that tests are written using predefined keywords, making it accessible even to non-programmers.
 
 > Ensure your project is configured with the Robot framework and all test scripts are in place.

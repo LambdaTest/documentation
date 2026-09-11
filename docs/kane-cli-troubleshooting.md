@@ -43,6 +43,220 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/kane-cli-troubleshooting/"
+    },
+    "headline": "Troubleshooting",
+    "description": "Fix common Kane CLI issues: Chrome launch failures, authentication errors, run timeouts, variables not resolving, upload failures, and Agent Mode output problems.",
+    "url": "https://www.testmuai.com/support/docs/kane-cli-troubleshooting/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Documentation",
+    "keywords": [
+      "kane cli troubleshooting",
+      "kaneai errors",
+      "testmu ai"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Check for processes on CDP ports",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "   lsof -i :9222-9230"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "If you only need to connect to an already-running Chrome",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "   kane-cli run \"...\" --cdp-endpoint http://localhost:9222"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Or start Chrome with remote debugging before running",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "google-chrome --remote-debugging-port=9222 &\nkane-cli run \"...\" --cdp-endpoint http://localhost:9222"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Fix: Check for running kane-cli processes",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "ps aux | grep kane-cli"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Re-run the login flow",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "   kane-cli login"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Confirm which profile, environment, and token state are active",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "   kane-cli whoami"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Tell Node to trust the system keychain. Built-in env var, available on Node 22.19+ / 24.6+",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "   export NODE_USE_SYSTEM_CA=1\n   kane-cli login"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "\"Login failed \u2014 fetch failed\" / SSL certificate errors",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "   export NODE_EXTRA_CA_CERTS=/path/to/corp-ca.pem\n   kane-cli login"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "If kane-cli login succeeds but a run fails mid-execution with an error like",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Windows (persists across new terminals)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "   setx SSL_CERT_FILE \"C:\\certs\\corp-bundle.pem\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "macOS / Linux",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "   export SSL_CERT_FILE=/path/to/corp-bundle.pem"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Add an assertion after the action to confirm state changed",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\"click the Save button, assert the page shows 'Saved successfully'\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Inline test. Bypass file loading by passing the variable on the command line",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "   kane-cli run \"log in as {{user}}\" \\\n     --variables '{\"user\":{\"value\":\"alice\"}}'"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "To surface the underlying error instead of a silent exit, re-run the same command with KANE_DEV_MODE=1",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "KANE_DEV_MODE=1 kane-cli run \"<objective>\" --agent --headless"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Confirm one is configured",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "   kane-cli config show"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Fix: Add --agent to your command",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "kane-cli run \"...\" --agent --headless"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Fix: Redirect stderr and use tail -1 to get only the run_end event",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "kane-cli run \"...\" --agent 2>/dev/null | tail -1 | jq ."
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "For example, instead of \"navigate through the sign-up flow\", be explicit",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\"click Sign Up, fill email with '{{email}}', fill password with '{{password}}', click Create Account\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "kane-cli: command not found after install",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "npm config get prefix\n\n# Add to PATH (adjust path based on above output)\nexport PATH=\"$(npm config get prefix)/bin:$PATH\"\n\n# Make permanent: add to ~/.zshrc or ~/.bashrc\necho 'export PATH=\"$(npm config get prefix)/bin:$PATH\"' >> ~/.zshrc"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Fix: Check your version and upgrade",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "node --version   # Must be 18 or higher"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Install fails with \"sharp: Please add node-addon-api\"",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "# Diagnose: a printed version means libvips is the cause\npkg-config --modversion vips-cpp\n\n# Bypass libvips detection. Uninstall first, since npm considers\n# kane-cli already installed and will not re-resolve sharp otherwise.\nnpm uninstall -g @testmuai/kane-cli\nSHARP_IGNORE_GLOBAL_LIBVIPS=1 npm install -g @testmuai/kane-cli\n\n# Make it permanent\necho 'export SHARP_IGNORE_GLOBAL_LIBVIPS=1' >> ~/.zshrc && source ~/.zshrc"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Start every mobile problem with doctor, which prints one line per required check, each with a fix",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "kane-cli doctor              # required checks, each with a fix if it fails\nkane-cli doctor --install    # install the test tooling Kane CLI manages\nkane-cli doctor --targets    # list the emulators and simulators available"
+      }
+    ],
+    "dateModified": "2026-09-07T15:18:23+05:30"
+  }) }}
+/>
+
 ## Log Locations
 
 Before diagnosing, know where to look:

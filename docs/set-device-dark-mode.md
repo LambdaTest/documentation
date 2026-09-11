@@ -50,6 +50,94 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       })
     }}
 ></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/set-device-dark-mode/"
+    },
+    "headline": "Set Device Dark Mode",
+    "description": "This documentation will help you change thed device level dark and light mode.",
+    "url": "https://www.testmuai.com/support/docs/set-device-dark-mode/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "App Automation",
+    "keywords": [
+      "mobile app testing",
+      "realtime mobile testing on real devices",
+      "how to test mobile apps manually"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Enabling Dark Mode via Capabilities (iOS)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JSON",
+        "text": "{\n    \"deviceName\":\"iPhone 16\",\n    \"platformName\":\"ios\",\n    \"platformVersion\":\"18\",\n    \"isRealMobile\":True,\n    \"app\":\"YOUR_APP_URL\",\n    #highlight-next-line\n    \"darkMode\": true\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Enabling Dark Mode via Capabilities (Android)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JSON",
+        "text": "{\n    \"deviceName\":\"Galaxy S20\",\n    \"platformName\":\"Android\",\n    \"platformVersion\":\"10\",\n    \"isRealMobile\":True,\n    \"app\":\"YOUR_APP_URL\",\n    #highlight-next-line\n    \"darkMode\": true\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Enabling Dark Mode via Hooks (Real Devices)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Python",
+        "text": "driver.execute_script('lambda_executor: { \n      \"action\": \"updateDeviceSettings\", \n      \"arguments\": { \n        \"darkMode\" : \"on\" \n        } \n}')"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Enabling Dark Mode via Hooks (Virtual Devices)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Python",
+        "text": "driver.execute_script('lambdatest_executor: {\n      \"action\": \"updateDeviceSettings\",\n      \"arguments\": {\n        \"DarkMode\": \"true\"\n       }\n}')"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
 <RealDeviceTag value="Real Device" /> <VirtualDeviceTag value="Virtual Device" />
 <BrandName /> now allows you to **enable or disable dark mode** for automation testing as well. This helps developers and testers validate UI behavior across light and dark themes, theme switching without manual intervention, and visual consistency for mobile apps and web applications.
 

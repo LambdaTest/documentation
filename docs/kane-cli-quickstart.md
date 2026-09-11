@@ -45,6 +45,115 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/kane-cli-quickstart/"
+    },
+    "headline": "Quick Start",
+    "description": "Authenticate Kane CLI and run your first browser automation test in under 5 minutes.",
+    "url": "https://www.testmuai.com/support/docs/kane-cli-quickstart/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Kane CLI",
+    "keywords": [
+      "kane cli quickstart",
+      "kaneai",
+      "testmu ai"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 1: Install",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "npm install -g @testmuai/kane-cli"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 2: Authenticate (OAuth (Recommended))",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "kane-cli login"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Verify authentication at any time",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "kane-cli whoami"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Run kane-cli --tui",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "kane-cli --tui"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "At the chat prompt, type a natural-language objective and press Enter",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "Search for \"wireless headphones\" on Amazon and add the first result to cart"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "For scripting and CI, skip the TUI and use the run subcommand",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "kane-cli run \"Click the 'More information' link\" --url https://example.com"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Capture results in a shell script",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "kane-cli run \"Verify the homepage loads\" > result.json"
+      }
+    ],
+    "dateModified": "2026-08-12T13:15:00+05:30"
+  }) }}
+/>
+
 This guide takes you from a fresh install to a passing run in under five minutes.
 
 ## Step 1: Install

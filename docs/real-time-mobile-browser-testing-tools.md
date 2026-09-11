@@ -47,6 +47,63 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       })
     }}
 ></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/real-time-mobile-browser-testing-tools/"
+    },
+    "headline": "How to use Testing Tools for Mobile Browsers?",
+    "description": "Enhance your mobile app testing with TestMu AI's comprehensive tools. Simulate actions, capture screenshots, record sessions, and more. Test across devices, locations, and network conditions for optimal results.",
+    "url": "https://www.testmuai.com/support/docs/real-time-mobile-browser-testing-tools/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Real Time",
+    "keywords": [
+      "real time testing in testmu ai",
+      "testmu ai real time testing feature",
+      "online real time testing"
+    ],
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "dateModified": "2026-02-12T19:51:34+05:30"
+  }) }}
+/>
 <BrandName /> offers a comprehensive suite of real-time mobile web browser testing tools designed to improve your testing experience. This guide provides detailed instructions on how to use each of the tools.
 
 ## Device Controls

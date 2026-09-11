@@ -45,6 +45,74 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/jenkins-with-testmu/"
+    },
+    "headline": "TestMu AI Integration With Jenkins",
+    "description": "TestMu AI now integrates with Jenkins to boost your go-to market delivery. Perform automated cross browser testing with TestMu AI to ensure your development code renders seamlessly through an online Selenium grid providing 3000+ real browsers running through machines.",
+    "url": "https://www.testmuai.com/support/docs/jenkins-with-testmu/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Integration",
+    "keywords": [
+      "testmu ai integrations",
+      "testmu ai integrations with ci/cd tools",
+      "ci/cd tools"
+    ],
+    "proficiencyLevel": "Beginner",
+    "dependencies": "A TestMu AI account; An existing Jenkins CI server (version 2.138.2+); A Jenkins User with root access..",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Environment Variable For TestMu AI Jenkins Plugin",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "sample Output $LT_BROWSERS:\n[\n   {\n       \"operatingSystem\": \"win10\", //OS you wish to test your website with.\n       \"browserName\": \"Chrome\",    //Name of the browser on which you wish to test.\n       \"browserVersion\": \"71.0\",   //Particular browser version on which you wish to test.\n       \"resolution\": \"1024x768\"    //Specify the screen resolution.\n   },\n   {\n       \"operatingSystem\": \"win8\",   //OS you wish to test your website with.\n       \"browserName\": \"Firefox\",    //Name of the browser on which you wish to test.\n       \"browserVersion\": \"63.0\",    //Particular browser version on which you wish to test.\n       \"resolution\": \"1024x768\"     //Specify the screen resolution.\n   }"
+      }
+    ],
+    "dateModified": "2026-05-14T14:47:09+05:30"
+  }) }}
+/>
+
 # Jenkins Plugin for Integration With <BrandName />
 
 * * *

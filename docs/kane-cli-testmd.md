@@ -46,6 +46,185 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/kane-cli-testmd/"
+    },
+    "headline": "Test.md",
+    "description": "Write browser tests as Markdown files that replay from cache after the first run: no LLM cost, faster execution. Commit tests to git, share recordings, and run in CI.",
+    "url": "https://www.testmuai.com/support/docs/kane-cli-testmd/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Documentation",
+    "keywords": [
+      "kane cli testmd",
+      "kane cli replayable tests",
+      "kane cli test files"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "The filename must end in _test.md",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Markdown",
+        "text": "---\nmode: testing\n---\n\n# Amazon search\n\n## Open Amazon\nOpen https://www.amazon.com.\n\n## Search for headphones\nType \"wireless headphones\" into the search box and submit.\nVerify at least one product result is visible."
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 2: Run the test",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "kane-cli testmd run amazon_test.md --agent"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Configuration between --- markers at the top of the file",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "---\nmode: testing\nmax_steps: 30\nheadless: true\n---"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Mobile Target",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "---\ntarget: emulator             # emulator (Android) | simulator (iOS)\napp: ./builds/app-debug.apk\nno_reset: false              # optional\n---"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "You can override frontmatter settings for individual steps by adding a yaml fenced block immediately under the step heading",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Markdown",
+        "text": "## Submit the form\n```yaml\ntimeout: 90\noptional: true"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Submit the form",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\nSetting `optional: true` tells Kane CLI that a failure on this step should not fail the overall test. The run continues to the next step.\n\n### `optional`\n\n`optional: true` marks a step as soft-failing. If the step fails:\n\n- The overall run does **not** halt.\n- Subsequent steps still execute.\n- The step is reported as failed in `Result.md` with an `(optional)` suffix.\n\nDefault is `false`, in which case any failure stops the run and marks the remaining steps as skipped.\n\n`optional` is allowed on every prose step. On an `@import` step it is allowed only at the top level of a test file \u2014 see [Composing tests with @import](/support/docs/kane-cli-testmd-composition/#optional-imports).\n\n### Step body shapes\n\nThe body of a step (everything after the optional `yaml` block) must be exactly one of:\n\n- **A prose objective** \u2014 one or more lines of natural language describing what the agent should do. A step body follows the same rules as any objective, so end it in a check of the result and phrase actions as goals \u2014 see [Writing objectives](/support/docs/kane-cli-modes/).\n- **An `@import`** \u2014 a single line of the form `@import <path>` and nothing else.\n\nMixing prose and `@import` in the same body is a parse error.\n\n```markdown\n## OK \u2014 prose\nClick the cart icon and verify two items are listed.\n\n## OK \u2014 import\n@import ./helpers/login.md\n\n## NOT OK \u2014 both\nClick the cart icon.\n@import ./helpers/login.md"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Extract repeating flows (login, setup, cookie banner dismissal) into helper files",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Markdown",
+        "text": "## Sign in\n@import ./helpers/login.md"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Reference a variable inside any prose objective using its placeholder syntax (default {{name}})",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Markdown",
+        "text": "## Sign in\nOpen the login page and sign in as {{tester_email}} with password {{tester_password}}."
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Variables can be set in three places inside a _test.md file, in order of increasing specificity",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Markdown",
+        "text": "---\nvariables:\n  tester_email:\n    value: \"alice@example.com\"\n  tester_password:\n    value: \"s3cret-pa55\"\n    secret: true\n---\n\n## Switch to the staging tenant\n```yaml\nvariables:\n  tenant: \"staging-eu\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Switch to the staging tenant",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\nShorthand `name: \"value\"` works too \u2014 `tester_email: \"alice@example.com\"` is equivalent to `tester_email: { value: \"alice@example.com\" }`.\n\n| Field | Required | Type | Default | Description |\n|---|---|---|---|---|\n| `value` | yes | string | \u2014 | The variable's value. Entries without `value` are rejected. |\n| `secret` | no | boolean | `false` | When `true`, the value is masked in logs and routed to the secrets store. |\n| `syntax` | no | string | `{{<name>}}` | Custom placeholder syntax. |\n\n### Secrets\n\nSecrets are variables with `secret: true`. They are masked in displayed output, redacted in `Result.md`, and routed to TestmuAI's secrets store instead of being synced as plain Test Manager variables.\n\n```yaml\nvariables:\n  api_key:\n    value: \"sk-live-abc123\"\n    secret: true"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Context",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "---\nglobal_context: \"~/work/team-conventions.md\"\nlocal_context: \".testmuai/project-notes.md\"\n---"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Run an ad-hoc objective with the --name flag to save it as a replayable test file",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "kane-cli run \"Search for noise-cancelling headphones on amazon.com\" --name amazon-search"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "After a run, Kane CLI creates an output directory next to the test file",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "amazon_test.md\noutput-amazon/\n  Result.md                      # Human-readable run report\n  .internal/                     # Cached recordings, do not edit\n  playwright-python-code/        # Only if code_export is enabled"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "CI/CD Usage",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "kane-cli testmd run ./tests/checkout_test.md \\\n  --agent \\\n  --headless \\\n  --on-lock-conflict wait \\\n  --retry"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Example: Full Test with Imports",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Markdown",
+        "text": "---\nmode: testing\nheadless: true\nvariables:\n  username:\n    value: \"testuser@example.com\"\n  password:\n    value: \"s3cret!\"\n    secret: true\n---\n\n# Checkout flow\n\n## Login\n@import ./helpers/login.md\n\n## Add item to cart\nGo to the products page, search for \"wireless headphones\", and click \"Add to Cart\" on the first result.\n\n## Verify cart\nGo to the cart page. Assert the cart contains 1 item. Store the total price as 'cart_total'.\n\n## Complete checkout\nClick \"Proceed to Checkout\", fill in shipping details, and assert the order confirmation page loads."
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Complete checkout",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Markdown",
+        "text": "# Login helper\n\n## Open the login page\nGo to https://app.example.com/login.\n\n## Sign in\nEnter {{username}} in the email field and {{password}} in the password field, then click \"Sign In\". Assert the dashboard loads."
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Sign in",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "kane-cli testmd run tests/checkout_test.md --agent"
+      }
+    ],
+    "dateModified": "2026-09-03T14:41:00+05:30"
+  }) }}
+/>
+
 `testmd` lets you write browser tests as Markdown files (`_test.md`) and commit them to your repo. On the first run, the AI agent authors each step and saves a recording. On every subsequent run, each step **replays from cache** with no LLM cost and much faster execution. Commit the test file and its recordings to git so teammates and CI can re-run the same tests without re-authoring.
 
 ## Quick Start

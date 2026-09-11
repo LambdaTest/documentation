@@ -41,6 +41,143 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/kane-cli-cli-reference/"
+    },
+    "headline": "CLI Reference",
+    "description": "Complete command and flag reference for Kane CLI: all commands, options, exit codes, TUI slash commands, keyboard shortcuts, and directory structure.",
+    "url": "https://www.testmuai.com/support/docs/kane-cli-cli-reference/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Kane CLI",
+    "keywords": [
+      "kane cli reference",
+      "kane cli commands",
+      "kaneai"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "kane-cli --tui",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "kane-cli --tui"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "kane-cli run",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "kane-cli run \"<objective>\" [options]"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "kane-cli doctor",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "kane-cli doctor              # required checks, each with a fix if it fails\nkane-cli doctor --install    # install the test tooling Kane CLI manages\nkane-cli doctor --targets    # also list the emulators and simulators available"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "kane-cli login",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "# OAuth (interactive)\nkane-cli login [--profile <name>]\n\n# Basic auth (non-interactive)\nkane-cli login --username <user> --access-key <key> [--profile <name>]"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "kane-cli logout",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "kane-cli logout"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "kane-cli whoami",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "kane-cli whoami [--profile <name>]"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "kane-cli balance",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "kane-cli balance [--profile <name>]"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "kane-cli profiles",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "kane-cli profiles list           # List all profiles\nkane-cli profiles switch <name>  # Switch the active profile\nkane-cli profiles delete <name>  # Delete a profile"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "kane-cli config",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "kane-cli config show                       # Show all settings\nkane-cli config set-window <W>x<H>        # Set browser window size\nkane-cli config set-mode <action|testing>  # Set run mode\nkane-cli config chrome-profile [path]      # Set Chrome profile (interactive picker if no path)\nkane-cli config project [id]               # Set Test Manager project (interactive picker if no id)\nkane-cli config folder [id]                # Set Test Manager folder (interactive picker if no id)\nkane-cli config set-target <target>        # Set run target: desktop | emulator | simulator\nkane-cli config set-device <id>            # Set default mobile device\nkane-cli config set-app <path|APPid>       # Set default app under test for mobile runs"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "kane-cli feedback",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "kane-cli feedback \\\n  --test-id <id> \\\n  --feedback-type <positive|negative> \\\n  --details \"optional message\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Directory Structure",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "~/.testmuai/kaneai/\n\u251c\u2500\u2500 tui-config.json              # Persistent settings\n\u251c\u2500\u2500 global-memory.md             # Global agent context\n\u251c\u2500\u2500 chrome-profiles/             # Named Chrome user profiles\n\u2502   \u2514\u2500\u2500 <name>/\n\u251c\u2500\u2500 profiles/                    # Stored credentials\n\u2502   \u2514\u2500\u2500 <profile>/\n\u2502       \u2514\u2500\u2500 <environment>/\n\u2502           \u2514\u2500\u2500 credentials      # OAuth tokens or basic auth (mode 0600)\n\u251c\u2500\u2500 sessions/                    # All session history\n\u2502   \u2514\u2500\u2500 <session-id>/\n\u2502       \u251c\u2500\u2500 session.json         # Session metadata and run list\n\u2502       \u251c\u2500\u2500 tui.log              # Session event log\n\u2502       \u251c\u2500\u2500 runs/\n\u2502       \u2502   \u2514\u2500\u2500 <n>/             # Per-run directory\n\u2502       \u2502       \u2514\u2500\u2500 run-test/\n\u2502       \u2502           \u251c\u2500\u2500 actions.ndjson\n\u2502       \u2502           \u2514\u2500\u2500 screenshots/\n\u2502       \u2514\u2500\u2500 code-export/         # Generated code (when enabled)\n\u2514\u2500\u2500 variables/                   # Global variable files\n    \u2514\u2500\u2500 *.json\n\n.testmuai/                       # Project-local (in cwd)\n\u251c\u2500\u2500 context.md                   # Project-specific agent context\n\u2514\u2500\u2500 variables/\n    \u2514\u2500\u2500 *.json                   # Project-specific variables"
+      }
+    ],
+    "dateModified": "2026-08-12T13:15:00+05:30"
+  }) }}
+/>
+
 ## Commands
 
 ### `kane-cli --tui`

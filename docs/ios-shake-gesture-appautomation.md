@@ -53,6 +53,80 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/ios-shake-gesture-appautomation/"
+    },
+    "headline": "Trigger iOS Shake Gesture on Mobile Devices Using Appium",
+    "description": "Simulate a shake gesture on iOS real devices and simulators during Appium automation tests on TestMu AI using the lambda_executor hook.",
+    "url": "https://www.testmuai.com/support/docs/ios-shake-gesture-appautomation/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "App Automation",
+    "keywords": [
+      "Appium",
+      "TestMu AI",
+      "iOS Shake Gesture"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Appium Hook Example (Python)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Python",
+        "text": "response = driver.execute_script(\n  'lambda_executor: {\"action\": \"gestures\", \"arguments\": {\"shake\": true}}'\n)\n# response \u2192 \"shake gesture triggered successfully\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "response \u2192 \"shake gesture triggered successfully\" (Java)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "String response = (String) ((JavascriptExecutor) driver).executeScript(\n  \"lambda_executor: {\\\"action\\\": \\\"gestures\\\", \\\"arguments\\\": {\\\"shake\\\": true}}\"\n);\n// response \u2192 \"shake gesture triggered successfully\""
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 # Trigger Shake Gesture on iOS Devices 
 <RealDeviceTag value="Real Device" /> <VirtualDeviceTag value="Virtual Device" />
 

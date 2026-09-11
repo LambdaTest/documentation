@@ -40,6 +40,80 @@ canonical: https://www.testmuai.com/support/docs/kane-cli-evidence-validate/
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/kane-cli-evidence-validate/"
+    },
+    "headline": "Validating Evidence Packs",
+    "description": "Check a kane-cli evidence pack's integrity and completeness with kane-cli evidence validate, including the L0 and L1 profiles and CI-friendly exit codes.",
+    "url": "https://www.testmuai.com/support/docs/kane-cli-evidence-validate/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Kane CLI",
+    "keywords": [
+      "kane cli evidence validate",
+      "validate evidence pack",
+      "evidence profile L0 L1"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "kane-cli evidence validate checks a pack's integrity and completeness",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "kane-cli evidence validate <execution-id-or-path>"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Gating a pipeline",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "kane-cli evidence validate .testmuai/evidence/<execution_id>.evidence --json > report.json || exit 1"
+      }
+    ],
+    "dateModified": "2026-08-21T00:24:19+05:30"
+  }) }}
+/>
+
 `kane-cli evidence validate` checks a pack's integrity and completeness:
 
 ```bash

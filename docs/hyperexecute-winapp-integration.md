@@ -44,6 +44,87 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/hyperexecute-winapp-integration/"
+    },
+    "headline": "WinAppDriver",
+    "description": "Unlock enhanced automation testing by seamlessly integrating Excel with HyperExecute using TestMu AI's support documentation.",
+    "url": "https://www.testmuai.com/support/docs/hyperexecute-winapp-integration/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "HyperExecute",
+    "keywords": [
+      "TestMu AI HyperExecute",
+      "TestMu AI HyperExecute help",
+      "TestMu AI HyperExecute documentation"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "A sample LtWinDriver.java file",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "import java.io.File;\nimport java.io.IOException;\nimport java.awt.Desktop;\n\npublic class LtWinDriver {\n    public static void start() {\n        try {\n            Desktop d = Desktop.getDesktop();\n            d.open(new File(\"C:\\\\Program Files (x86)\\\\Windows Application Driver\\\\WinAppDriver.exe\"));\n            //d.open(new File(\"drivers/WinAppDriver.exe\"));\n        } catch (IOException e) {\n            e.printStackTrace();\n            throw new RuntimeException(e);\n        }\n    }\n\n    public static void stopExcel() {\n        try {\n            ProcessBuilder killexcel =new ProcessBuilder(\"taskkill \",\"/f\",\"/IM\",\"Excel.exe\");\n            killexcel.start();\n        } catch (IOException e) {\n            e.printStackTrace();\n            throw new RuntimeException(e);\n        }\n    }\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Writing the Test Cases",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "import java.util.concurrent.TimeUnit;\nimport io.appium.java_client.windows.WindowsDriver;\nimport org.openqa.selenium.*;\nimport org.openqa.selenium.remote.DesiredCapabilities;\nimport org.testng.annotations.*;\nimport java.net.*;\nimport java.util.*;\n\npublic class Test1 {\n\u00a0 \u00a0 public static WindowsDriver driver = null;\n\u00a0 \u00a0 \n\u00a0 \u00a0 @BeforeClass\n\u00a0 \u00a0 public void setUp() throws Exception {\n\u00a0 \u00a0 \u00a0 \u00a0 LtWinDriver.start();\n\u00a0 \u00a0 }\n\u00a0 \u00a0 \n\u00a0 \u00a0 @Test\n\u00a0 \u00a0 public static void test() throws Exception {\n\u00a0 \u00a0 \u00a0 \u00a0 String appPath = \"testing.xlsx\";\n\u00a0 \u00a0 \u00a0 \u00a0 DesiredCapabilities cap = new DesiredCapabilities();\n\u00a0 \u00a0 \u00a0 \u00a0 cap.setCapability(\"app\", appPath);\n\u00a0 \u00a0 \u00a0 \u00a0 cap.setCapability(\"ms:waitForAppLaunch\", 30);\n\u00a0 \u00a0 \u00a0 \u00a0 cap.setCapability(\"appArguments\", \"/e \");\n\u00a0 \u00a0 \u00a0 \u00a0 cap.setCapability(\"ms:experimental-webdriver\", true);\n\n\u00a0 \u00a0 \u00a0 \u00a0 try {\n\u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 // Block of code to try\n\u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 driver = new WindowsDriver(new URL(\"http://127.0.0.1:4723\"), cap);\n\u00a0 \u00a0 \u00a0 \u00a0 } catch (Exception e) {\n\u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 // Block of code to handle errors\n\u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 System.out.println(\"Something went wrong.\");\n\u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 driver = new WindowsDriver(new URL(\"http://127.0.0.1:4723\"), cap);\n\u00a0 \u00a0 \u00a0 \u00a0 }\n\u00a0 \u00a0 \u00a0 \u00a0 \n\u00a0 \u00a0 \u00a0 \u00a0 driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);\n\u00a0 \u00a0 \u00a0 \u00a0 \n\u00a0 \u00a0 \u00a0 \u00a0 try {\n\u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 driver.findElement(By.name(\"Not now\")).click();\n\u00a0 \u00a0 \u00a0 \u00a0 } catch (Exception e) {\n\u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 System.out.println(e);\n\u00a0 \u00a0 \u00a0 \u00a0 }\n\n\u00a0 \u00a0 \u00a0 \u00a0 driver.findElement(By.name(\"B2\")).click();\n\u00a0 \u00a0 \u00a0 \u00a0 driver.findElement(By.name(\"Formula Bar\")).sendKeys(\"10\");\n\u00a0 \u00a0 \u00a0 \u00a0 driver.findElement(By.name(\"B3\")).click();\n\u00a0 \u00a0 \u00a0 \u00a0 driver.findElement(By.name(\"Formula Bar\")).sendKeys(\"20\");\n\u00a0 \u00a0 \u00a0 \u00a0 driver.findElement(By.name(\"B4\")).click();\n\u00a0 \u00a0 \u00a0 \u00a0 driver.findElement(By.name(\"Formula Bar\")).sendKeys(\"=SUM(B2,B3)\");\n\u00a0 \u00a0 \u00a0 \u00a0 driver.findElement(By.name(\"Formula Bar\")).sendKeys(Keys.ENTER);\n\u00a0 \u00a0 }\n\n\u00a0 \u00a0 @AfterClass\n\u00a0 \u00a0 public void tearDown() throws Exception {\n\u00a0 \u00a0 \u00a0 \u00a0if (driver != null) {\n\u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 LtWinDriver.stopExcel();\n\u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 driver.quit();\n\u00a0 \u00a0 \u00a0 \u00a0 }\n\u00a0 \u00a0 }\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "HyperExecute YAML file",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "---\nversion: 0.1\nglobalTimeout: 150\ntestSuiteTimeout: 150\ntestSuiteStep: 150\n\nrunson: win\ncaptureScreenRecordingForScenarios: true\n\nautosplit: true\nretryOnFailure: true\n\nmaxRetries: 1\nconcurrency: 2\n\nbetaFeature:\n  setPartiallyCompletedAsCompleted: true\n\nenv:\n  CACHE_DIR: m2_cache_dir\n\ncacheKey: '{{ checksum \"pom.xml\" }}'\ncacheDirectories:\n  - .m2\n\npre:\n  - mvn -Dmaven.repo.local=$CACHE_DIR -Dmaven.test.skip=true clean install\n\nmergeArtifacts: true\n\ntestDiscovery:\n  type: raw\n  mode: remote\n  command: grep 'public class' src/test/java/*.java | awk '{print$3}'\n\ntestRunnerCommand:  mvn `-Dplatname=win `-Dmaven.repo.local=m2_cache_dir `-Dtest=$test test"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 # WinAppDriver Integration with HyperExecute
 
 You can use HyperExecute run your tests that are based on Microsoft Office Suite. To do this, we use the TestNG framework. If you need some help with creating a TestNG project, you can go through [this page](https://www.testmuai.com/blog/create-testng-project-in-eclipse-run-selenium-test-script/). 

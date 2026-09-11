@@ -42,6 +42,63 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       })
     }}
 ></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/analytics-test-failure-classification/"
+    },
+    "headline": "Failure Categorization AI - Test Intelligence",
+    "description": "TestMu AI Analytics uses Failure Categorization AI to classify test failures into different categories. This helps in identifying the root cause of failures and improving test automation efficiency.",
+    "url": "https://www.testmuai.com/support/docs/analytics-test-failure-classification/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Insights",
+    "keywords": [
+      "analytics",
+      "test failure classification",
+      "test intelligence"
+    ],
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "dateModified": "2026-04-07T12:50:21+05:30"
+  }) }}
+/>
 <BrandName /> Analytics uses Failure Categorization AI to classify test failures into different categories. This helps in identifying the root cause of failures and improving test automation efficiency. The AI model analyzes the test execution data and categorizes the failures based on various parameters such as environment, browser, OS, and failure type. This allows you to focus on the most critical issues and prioritize your testing efforts.
 
 <div className="ytframe">

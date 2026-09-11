@@ -14,6 +14,73 @@ canonical: https://www.testmu.ai/support/docs/xcode-plugin-testmu/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/xcode-plugin-testmu/"
+    },
+    "headline": "LambdaMax XCode Plugin",
+    "description": "TestMu AI XCode plugin to run automated tests directly on the TestMu AI grid.",
+    "url": "https://www.testmuai.com/support/docs/xcode-plugin-testmu/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Integration",
+    "keywords": [
+      "xcode",
+      "lambdamax",
+      "automation testing"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Here is the sample code for the Xcode plugin",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "Xcode plugin:\nCustom Xcode Script and Images attached below:\n\n#!/bin/sh\n\n#  ci_post_xcodebuild.sh\n#  Debug/Release build name if required\n#\n#  Created by Ankit Agarwal on 08/11/22.\n#\n\nAppUploadResponse=$(curl -w --location --request POST 'https://{username}:{accessKey}@manual-api.lambdatest.com/app/upload/realDevice' --form 'name=\"{name}\"' --form 'appFile=@\"{filePathWithNameAndExtension}\"' --form 'custom_id=\"{custom_id}\"')\n\nappId=$(awk '{sub(/.*\\\"app_url\\\":\\\"/,\"\");sub(/\\\",\\\"url.*/,\"\");print}' <<< \"$AppUploadResponse\")\n\necho \"$appId\"\n\nTestAppUploadResponse=$(curl -w --location --request POST 'https://{username}:{accessKey}@manual-api.lambdatest.com/app/upload/realDevice' --form 'name=\"{name}\"' --form 'appFile=@\"{filePathWithNameAndExtension}\"' --form 'custom_id=\"{custom_id}\"')\n\ntestAppID=$(awk '{sub(/.*\\\"app_url\\\":\\\"/,\"\");sub(/\\\",\\\"url.*/,\"\");print}' <<< \"$TestAppUploadResponse\")\n\necho \"$testAppID\"\n\nTestExeuctionPayload=\"{\\\"app\\\": \\\"$appId\\\", \\\"testSuite\\\": \\\"$testAppID\\\", \\\"device\\\": [ \\\"iPhone X-14\\\" ], \\\"tunnel\\\": false, \\\"network\\\": true, \\\"devicelog\\\": true, \\\"queueTimeout\\\": 3000, \\\"idleTimeout\\\": 200, \\\"build\\\": \\\"otrium1\\\", \\\"project\\\": \\\"testerror\\\" }\"\n\necho \"$TestExeuctionPayload\"\n\nXCUITTestExecution=$(curl -w --location --request POST 'https://{username}:{accessKey}@mobile-api.lambdatest.com/framework/v1/xcui/build' --header 'Content-Type: application/json' --data-raw \"$TestExeuctionPayload\")\n\necho \"$XCUITTestExecution\""
+      }
+    ],
+    "dateModified": "2026-06-02T12:20:54+05:30"
+  }) }}
+/>
+
 -----------------------------------------------------------------------------------------------------------------------------
 <BrandName /> have developed a new plugin to help developers execute tests on the <BrandName /> Grid directly from the XCode (via LambdaMax). The all-new <BrandName /> plugin will allow developers and testers to directly run automated tests based on XCUIT (XCode) framework on the <BrandName /> real device cloud.
 

@@ -41,6 +41,87 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/allure-reports/"
+    },
+    "headline": "Allure Reports on HyperExecute",
+    "description": "Learn how to generate Allure test report for HyperExecute on TestMu AI and download the reports from the dashboard",
+    "url": "https://www.testmuai.com/support/docs/allure-reports/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Documentation",
+    "keywords": [
+      "allure reports",
+      "hyperexecute allure reports",
+      "hyperexecute testing"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Allure Report Configuration",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "- The `outputDir` parameter specifies the directory where Allure reports will be stored. In this example, it is set to **'reports/allure-results'**. This parent folder is essential for HyperExecute integration, as detailed later.\n\n- The `disableWebdriverStepsReporting` and `disableWebdriverScreenshotsReporting` parameters allow customization of reporting options.\n\n:::tip\nAlternatively this can also be done by creating an `allure.properties` file in the `src/test/resources` directory. \n\n```yaml title=\"allure.properties\"\nallure.results.directory=reports/allure-results"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Allure Report Configuration",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "report: true\npartialReports:\n  location: reports\n  type: html\n  frameworkName: allure"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 3",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "report: true\npartialReports:\n  location: reports\n  # highlight-next-line\n  configPath: allure-config.yml\n  type: html\n  frameworkName: allure"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 Allure Framework is a versatile, lightweight, multi-language test reporting tool designed to provide a concise representation of tested functionalities in a visually appealing web report format. It facilitates easy extraction of valuable information for all stakeholders involved in the development process.
 
 ## Integration with HyperExecute

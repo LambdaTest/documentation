@@ -50,6 +50,87 @@ import VideoEmbed from '@site/src/component/videoEmbed';
       }) }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/kane-cli-with-ai-coding-agents/"
+    },
+    "headline": "AI Coding Agents Use Cases",
+    "description": "See how Kane CLI gives AI coding agents a real browser, with walkthroughs for Claude Code, Lovable, Cursor, Gemini CLI, Kiro, Antigravity, and GLM, plus the patterns that work in any agent.",
+    "url": "https://www.testmuai.com/support/docs/kane-cli-with-ai-coding-agents/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Kane CLI",
+    "keywords": [
+      "kane cli ai coding agents",
+      "claude code browser testing",
+      "lovable testing"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Install globally for Claude Code, Codex CLI, and Gemini CLI in one command",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "npx @testmuai/kane-cli-skill"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Use Basic Auth instead",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "kane-cli login --username \"<your-username>\" --access-key \"<your-access-key>\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Cursor",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "kane-cli run \"go to http://localhost:3000, log in with email 'you@example.com' using the OTP sent to my inbox, assert the page contains 'Welcome'\""
+      }
+    ],
+    "dateModified": "2026-08-12T00:03:23+05:30"
+  }) }}
+/>
+
 An AI coding agent can write the change, but without a browser it cannot tell you whether the change actually works. It can read the source, trace the wiring, and tell you the code looks correct, and it will still be guessing about the running app.
 
 Kane CLI closes that gap. Install one skill file and your agent gains a real Chrome session it can drive in plain English, plus a structured result it can read, reason about, and act on without a human interpreting the terminal. The walkthroughs below show the same idea across seven different builders, followed by the patterns that work in any of them.

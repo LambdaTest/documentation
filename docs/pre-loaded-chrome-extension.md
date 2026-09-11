@@ -39,6 +39,63 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       })
     }}
 ></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/pre-loaded-chrome-extension/"
+    },
+    "headline": "Pre-Loaded Extension for Chrome",
+    "description": "Learn how to install and manage Chrome extensions during real-time testing on TestMu AI. Enhance your manual testing sessions with ad blockers, debugging tools, and more.",
+    "url": "https://www.testmuai.com/support/docs/pre-loaded-chrome-extension/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Real Time",
+    "keywords": [
+      "testmu ai pre loaded chrome extension",
+      "testmu ai pre loaded extension for chrome",
+      "testmu ai pre loaded extension"
+    ],
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "dateModified": "2026-04-07T12:50:21+05:30"
+  }) }}
+/>
 The Pre-Loaded Chrome Extensions feature in <BrandName />'s real-time testing allows users to install and use Chrome extensions during your testing sessions. This capability provides the flexibility to test web applications with various extensions, such as ad blockers, password managers, and developer tools, replicating real user environments more accurately.
 
 > The Pre-Loaded Extension is only accessible on **Chrome** browsers.

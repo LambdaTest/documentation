@@ -48,6 +48,138 @@ import VirtualDeviceTag from '../src/component/virtualDevice';
       })
     }}
 ></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/getting-started-with-espresso-testing/"
+    },
+    "headline": "Espresso Testing On TestMu AI",
+    "description": "Now you can run your automation scripts using Espresso framework on TestMu AI online grid of 3000+ real desktop browsers and real operating systems.",
+    "url": "https://www.testmuai.com/support/docs/getting-started-with-espresso-testing/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "App Automation",
+    "keywords": [
+      "espresso",
+      "java",
+      "testmu ai java"
+    ],
+    "proficiencyLevel": "Beginner",
+    "dependencies": "Your TestMu AI Username and Access key.; Access to an Android app (.apk) and an Espresso Test app (.apk file)..",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 3: Executing The Test (Linux / MacOS)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "curl --location --request POST 'https://mobile-api.lambdatest.com/framework/v1/espresso/build' \\\n--header 'Authorization: Basic BASIC_AUTH_TOKEN' \\\n--header 'Content-Type: application/json' \\\n--data-raw '{\n    \"app\": \"APP_ID\",\n    \"testSuite\": \"TEST_SUITE_ID\",\n    \"device\": [\"Galaxy S21 5G-12\"],\n    \"queueTimeout\": 10800,\n    \"IdleTimeout\": 150,\n    \"deviceLog\": true,\n    \"network\": false,\n    \"build\": \"Proverbial-Espresso\",\n    \"geoLocation\": \"FR\"\n}'"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Windows",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "curl --location --request POST \"https://mobile-api.lambdatest.com/framework/v1/espresso/build\" ^\n--header \"Authorization: Basic BASIC_AUTH_TOKEN\" ^\n--header \"Content-Type: application/json\" ^\n--data \"{\\\"app\\\":\\\"APP_ID\\\",\\\"testSuite\\\":\\\"TEST_SUITE_ID\\\",\\\"device\\\":[\\\"Pixel 6-12\\\"],\\\"queueTimeout\\\":10800,\\\"IdleTimeout\\\":150,\\\"deviceLog\\\":true,\\\"network\\\":false,\\\"build\\\":\\\"Proverbial-Espresso\\\",\\\"geoLocation\\\":\\\"FR\\\"}\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Linux / MacOS",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "curl --location --request POST 'https://mobile-api.lambdatest.com/framework/v1/espresso/build' \\\n--header 'Authorization: Basic BASIC_AUTH_TOKEN' \\\n--header 'Content-Type: application/json' \\\n--data-raw '{\n    \"app\": \"APP_ID\",\n    \"testSuite\": \"TEST_SUITE_ID\",\n    \"device\": [\"Galaxy S21 5G-12.0\"],\n    \"isVirtualDevice\": true,\n    \"queueTimeout\": 10800,\n    \"IdleTimeout\": 150,\n    \"deviceLog\": true,\n    \"network\": false,\n    \"build\": \"Proverbial-Espresso\",\n    \"geoLocation\": \"FR\"\n}'"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Windows",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "curl --location --request POST \"https://mobile-api.lambdatest.com/framework/v1/espresso/build\" ^\n--header \"Authorization: Basic BASIC_AUTH_TOKEN\" ^\n--header \"Content-Type: application/json\" ^\n--data \"{\\\"app\\\":\\\"APP_ID\\\",\\\"testSuite\\\":\\\"TEST_SUITE_ID\\\",\\\"device\\\":[\\\"Pixel 6-12.0\\\"],\\\"isVirtualDevice\\\":true,\\\"queueTimeout\\\":10800,\\\"IdleTimeout\\\":150,\\\"deviceLog\\\":true,\\\"network\\\":false,\\\"build\\\":\\\"Proverbial-Espresso\\\",\\\"geoLocation\\\":\\\"FR\\\"}\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Running Tests in Parallel (Linux / MacOS)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "curl --location --request POST 'https://mobile-api.lambdatest.com/framework/v1/espresso/build' \\\n--header 'Authorization: Basic BASIC_AUTH_TOKEN' \\\n--header 'Content-Type: application/json' \\\n--data-raw '{\n    \"app\": \"APP_ID\",\n    \"testSuite\": \"TEST_SUITE_ID\",\n    \"device\": [\"Galaxy S20-10\",\"Galaxy S20-10\",\"Redmi Note 9-10\",\"Galaxy S10+-10\",\"Galaxy S7 edge-8\",\"Galaxy S9+-8\"],\n    \"queueTimeout\": 10800,\n    \"IdleTimeout\": 150,\n    \"deviceLog\": true,\n    \"network\": false,\n    \"build\": \"Proverbial-Espresso\",\n    \"geoLocation\": \"FR\"\n}'"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Windows",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "curl --location --request POST \"https://mobile-api.lambdatest.com/framework/v1/espresso/build\" ^\n--header \"Authorization: Basic BASIC_AUTH_TOKEN\" ^\n--header \"Content-Type: application/json\" ^\n--data \"{\\\"app\\\":\\\"APP_ID\\\",\\\"testSuite\\\":\\\"TEST_SUITE_ID\\\",\\\"device\\\":[\\\"Galaxy S20-10\\\",\\\"Galaxy S20-10\\\",\\\"Redmi Note 9-10\\\",\\\"Galaxy S10+-10\\\",\\\"Galaxy S7 edge-8\\\",\\\"Galaxy S9+-8\\\"],\\\"queueTimeout\\\":10800,\\\"IdleTimeout\\\":150,\\\"deviceLog\\\":true,\\\"network\\\":false,\\\"build\\\":\\\"Proverbial-Espresso\\\",\\\"geoLocation\\\":\\\"FR\\\"}\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Linux / MacOS",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "curl --location --request POST 'https://mobile-api.lambdatest.com/framework/v1/espresso/build' \\\n--header 'Authorization: Basic BASIC_AUTH_TOKEN' \\\n--header 'Content-Type: application/json' \\\n--data-raw '{\n    \"app\": \"APP_ID\",\n    \"testSuite\": \"TEST_SUITE_ID\",\n    \"device\": [\"Galaxy S20-10.0\",\"Galaxy S20-10.0\",\"Redmi Note 9-10.0\",\"Galaxy S10+-10.0\",\"Galaxy S7 edge-8.0\",\"Galaxy S9+-8.0\"],\n    \"isVirtualDevice\": true,\n    \"queueTimeout\": 10800,\n    \"IdleTimeout\": 150,\n    \"deviceLog\": true,\n    \"network\": false,\n    \"build\": \"Proverbial-Espresso\",\n    \"geoLocation\": \"FR\"\n}'"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Windows",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "curl --location --request POST \"https://mobile-api.lambdatest.com/framework/v1/espresso/build\" ^\n--header \"Authorization: Basic BASIC_AUTH_TOKEN\" ^\n--header \"Content-Type: application/json\" ^\n--data \"{\\\"app\\\":\\\"APP_ID\\\",\\\"testSuite\\\":\\\"TEST_SUITE_ID\\\",\\\"device\\\":[\\\"Galaxy S20-10.0\\\",\\\"Galaxy S20-10.0\\\",\\\"Redmi Note 9-10.0\\\",\\\"Galaxy S10+-10.0\\\",\\\"Galaxy S7 edge-8.0\\\",\\\"Galaxy S9+-8.0\\\"],\\\"isVirtualDevice\\\":true,\\\"queueTimeout\\\":10800,\\\"IdleTimeout\\\":150,\\\"deviceLog\\\":true,\\\"network\\\":false,\\\"build\\\":\\\"Proverbial-Espresso\\\",\\\"geoLocation\\\":\\\"FR\\\"}\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "The espresso-skill package includes",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "espresso-skill/\n\u251c\u2500\u2500 SKILL.md\n\u2514\u2500\u2500 reference/\n    \u251c\u2500\u2500 playbook.md\n    \u2514\u2500\u2500 advanced-patterns.md"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Install a Espresso Agent Skill using the command below",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "codeRepository": "https://github.com/LambdaTest/agent-skills",
+        "text": "# Clone the repo and copy the skill you need\ngit clone https://github.com/LambdaTest/agent-skills.git\ncp -r agent-skills/espresso-skill .claude/skills/\n\n# Or for Cursor / Copilot\ncp -r agent-skills/espresso-skill .cursor/skills/"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
 <RealDeviceTag value="Real Device" /> <VirtualDeviceTag value="Virtual Device" />
 Espresso is a widely-used testing framework for Android, designed to simplify the process of writing reliable and efficient UI tests. It allows developers to create automated tests that simulate user interactions within an app, ensuring that the app's UI behaves as expected. With its straightforward API and synchronization capabilities, Espresso provides a robust solution for validating the functionality and performance of Android applications.
 

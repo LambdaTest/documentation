@@ -42,6 +42,73 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/command-annotations/"
+    },
+    "headline": "Logging Contextual Information Using Command Annotations",
+    "description": "Send custom logs from your test scripts to the TestMu AI dashboard using command annotations.",
+    "url": "https://www.testmuai.com/support/docs/command-annotations/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Documentation",
+    "keywords": [
+      "command annotations selenium logging",
+      "send custom logs testmu ai",
+      "javascript executor command annotations"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Here is an example written in Java",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "JavascriptExecutor jse = (JavascriptExecutor)driver;\njse.executeScript(\"lambdatest_executor: {\\\"action\\\": \\\"stepcontext\\\", \\\"arguments\\\": {\\\"data\\\": \\\"<any string>\\\", \\\"level\\\": \\\"<info/warn/debug/error>\\\"}}\");"
+      }
+    ],
+    "dateModified": "2026-09-09T19:13:32+05:30"
+  }) }}
+/>
+
 # Command Annotations
 ---
 

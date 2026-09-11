@@ -45,6 +45,94 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/selenium-set-browser-options/"
+    },
+    "headline": "Setting Browser Options",
+    "description": "Set browser options for Chrome, Firefox, and Edge in Selenium tests on TestMu AI.",
+    "url": "https://www.testmuai.com/support/docs/selenium-set-browser-options/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Documentation",
+    "keywords": [
+      "selenium set browser options",
+      "chrome options selenium configuration",
+      "firefox options selenium setup"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Browser-Specific Options (Chrome)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "            import org.openqa.selenium.WebDriver;\n            import org.openqa.selenium.chrome.ChromeDriver;\n            import org.openqa.selenium.chrome.ChromeOptions;\n\n            public class ChromeTest {\n                public static void main(String[] args) {\n                    ChromeOptions options = new ChromeOptions();\n                    // Set Chrome capabilities\n                    options.addArguments(\"--headless\");\n\n                    WebDriver driver = new ChromeDriver(options);\n                    driver.get(\"http://example.com\");\n                    // Your test code here\n                    driver.quit();\n                }\n            }"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Firefox",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "            import org.openqa.selenium.WebDriver;\n            import org.openqa.selenium.firefox.FirefoxDriver;\n            import org.openqa.selenium.firefox.FirefoxOptions;\n\n            public class FirefoxTest {\n                public static void main(String[] args) {\n                    FirefoxOptions options = new FirefoxOptions();\n                    // Set Firefox capabilities\n                    options.addArguments(\"--headless\");\n\n                    WebDriver driver = new FirefoxDriver(options);\n                    driver.get(\"http://example.com\");\n                    // Your test code here\n                    driver.quit();\n                }\n            }"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Edge",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "            import org.openqa.selenium.WebDriver;\n            import org.openqa.selenium.edge.EdgeDriver;\n            import org.openqa.selenium.edge.EdgeOptions;\n\n            public class EdgeTest {\n                public static void main(String[] args) {\n                    EdgeOptions options = new EdgeOptions();\n                    // Set Edge capabilities\n                    options.addArguments(\"--headless\");\n\n                    WebDriver driver = new EdgeDriver(options);\n                    driver.get(\"http://example.com\");\n                    // Your test code here\n                    driver.quit();\n                }\n            }"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Automate IE Mode in Microsoft Edge",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "InternetExplorerOptions browserOptions = new InternetExplorerOptions();\nbrowserOptions.setPlatformName(\"Windows 11\");\nbrowserOptions.setBrowserVersion(\"11.0\");\nHashMap<String, Object> ltOptions = new HashMap<String, Object>();\nltOptions.put(\"username\", \"Your LambdaTest Username\");\nltOptions.put(\"accessKey\", \"Your LambdaTest Access Key\");\nltOptions.put(\"project\", \"Untitled\");\nltOptions.put(\"w3c\", true);\nbrowserOptions.setCapability(\"LT:Options\", ltOptions);"
+      }
+    ],
+    "dateModified": "2026-09-09T19:13:32+05:30"
+  }) }}
+/>
+
 ## Browser-Specific Options
 ---
 Configure Chrome, Firefox, and Edge browser arguments using their respective Options classes.

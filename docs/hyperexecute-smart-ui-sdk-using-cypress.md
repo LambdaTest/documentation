@@ -49,6 +49,95 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       })
     }}
 ></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/hyperexecute-smart-ui-sdk-using-cypress/"
+    },
+    "headline": "UI Testing with Cypress using HyperExecute and SmartUI SDK",
+    "description": "Automate Hyperexecute tests seamlessly! Integrate SmartUI SDK with Cypress for efficient & reliable UI testing.",
+    "url": "https://www.testmuai.com/support/docs/hyperexecute-smart-ui-sdk-using-cypress/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "SmartUI",
+    "keywords": [
+      "smart ui testing in hyperexecute",
+      "visual  ui testing,image to image comparison",
+      "perform visual ui testing online"
+    ],
+    "proficiencyLevel": "Beginner",
+    "dependencies": "Your TestMu AI Username and Access key; HyperExecute CLI in order to initiate a test execution Job .; Setup the Environmental Variable; HyperExecute YAML file which contains all the necessary instructions.; Login to TestMu AI SmartUI with your credentials..",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "You can incorporate SmartUI into your custom Cypress test script, as shown below",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "/// <reference types=\"cypress\" />\ndescribe('Test Case name', () => {\n  beforeEach(() => {\n\n    cy.visit('Required URL')\n  })\n\n  it('SmartUI Snapshot', () => {\n    cy.smartuiSnapshot('Screenshot Name');\n  })\n})"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 4: Configure YAML in your Test Suite",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "---\nversion: 0.1\nglobalTimeout: 90\ntestSuiteTimeout: 90\ntestSuiteStep: 90\n\nrunson: linux\n\nautosplit: true\n\n# highlight-next-line\ncypress: true\n\nretryOnFailure: true\nmaxRetries: 1\n\nconcurrency: 1\n\nenv:\n  CYPRESS_CACHE_FOLDER: cypressCache\n  PROJECT_TOKEN: \"YOUR_PROJECT_TOKEN\"\n\ncacheKey: '{{ checksum \"package.json\" }}'\ncacheDirectories:\n  - node_modules\n  - cypressCache\n\npre:\n  - npm install @lambdatest/smartui-cli @lambdatest/cypress-driver cypress@v13\n  - npx smartui config:create smartui-web.json\n\npost:\n  - cat hyp-smartui-sdk-cypress.yaml\n\ntestDiscovery:\n  type: raw\n  mode: static\n  command: ls cypress/e2e\n\ntestRunnerCommand: npx smartui --config smartui-web.json exec -- npx cypress run --spec cypress/e2e/smartuiSDKLocal.cy.js --browser chrome --headed\n\njobLabel: [\"smart-ui-sdk\", \"hyperexecute\", \"cypress\"]"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 3",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "pre:\n  - npm install @lambdatest/smartui-cli @lambdatest/cypress-driver cypress@v13\n  - npx smartui config:create smartui-web.json"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Run the below command in your terminal at the root folder of the project",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "./hyperexecute --config RELATIVE_PATH_OF_YOUR_YAML_FILE"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
 This documentation will guide you step-by-step to execute the SmartUI tests on the HyperExecute platform using Selenium
 
 > **Note :** SmartUI SDK only supports Cypress versions >= 10.0.0

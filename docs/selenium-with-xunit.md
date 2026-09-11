@@ -47,6 +47,103 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/selenium-with-xunit/"
+    },
+    "headline": "Selenium With xUnit",
+    "description": "Run xUnit Selenium tests on TestMu AI cloud grid with 3000+ browsers. Set up, configure, and execute C# tests.",
+    "url": "https://www.testmuai.com/support/docs/selenium-with-xunit/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Documentation",
+    "keywords": [
+      "run xUnit Selenium tests cloud",
+      "xUnit Selenium grid setup",
+      "xUnit C# automation testing"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 1: Clone the Sample Project",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "codeRepository": "https://github.com/LambdaTest/CSharp-xUnit-Selenium",
+        "text": "git clone https://github.com/LambdaTest/CSharp-xUnit-Selenium\ncd CSharp-xUnit-Selenium"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Update the config.json file with your desired capabilities",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "C#",
+        "text": "{\n  \"server\": \"hub.lambdatest.com\",\n  \"user\": \"LT_USERNAME\",\n  \"key\": \"LT_ACCESS_KEY\",\n\n  \"capabilities\": {\n    \"lt:options\": {\n      \"buildName\": \"xunit build\",\n      \"sessionName\": \"lambdatest xunit sample test\",\n      \"visual\": \"true\",\n      \"plugin\": \"xunit:sample\"\n    }\n  },\n\n  \"environments\": [\n    {\n      \"browserName\": \"chrome\"\n    },\n    {\n      \"browserName\": \"firefox\"\n    },\n    {\n      \"browserName\": \"safari\"\n    }\n  ],\n\n  \"TunnelOptions\": {\n    \"tunnel\": false\n  }\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 4: Run the Test",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "dotnet clean\ndotnet test --filter \"profile=single\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "To run tests in parallel",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "dotnet test --filter \"profile=parallel\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Install the skill",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "codeRepository": "https://github.com/LambdaTest/agent-skills",
+        "text": "git clone https://github.com/LambdaTest/agent-skills.git\ncp -r agent-skills/xunit-skill .claude/skills/\n\n# For Cursor / Copilot\ncp -r agent-skills/xunit-skill .cursor/skills/"
+      }
+    ],
+    "dateModified": "2026-09-09T19:13:32+05:30"
+  }) }}
+/>
+
 ---
 
 Run xUnit Selenium tests on the TestMu AI cloud grid. This guide covers setup, running a sample test, configuring capabilities, and running tests in parallel.

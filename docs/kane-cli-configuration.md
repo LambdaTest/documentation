@@ -48,6 +48,171 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/kane-cli-configuration/"
+    },
+    "headline": "Configuration",
+    "description": "Configure Kane CLI settings including window size, Chrome profiles, Test Manager project and folder, run mode, and code export.",
+    "url": "https://www.testmuai.com/support/docs/kane-cli-configuration/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Kane CLI",
+    "keywords": [
+      "kane cli configuration",
+      "kane cli config",
+      "kane cli settings"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Print the current configuration",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "kane-cli config show"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "The output groups settings under three headings",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "Configuration\n\nAuth\n  method   oauth | basic (user@example.com) | not configured\n  profile  default\n  env      prod\n\nDefaults\n  url      https://kaneai-playground.lambdatest.io\n  model    v16-alpha\n  mode     testing\n  window   1920x1080\n  project  (none)\n  folder   (none)\n\nPaths\n  chrome   /Users/you/.testmuai/kaneai/chrome-profiles/work"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "The Chrome window is launched at the configured resolution",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "kane-cli config set-window 1280x800"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "It resolves one in this order, first match wins",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "kane-cli config set-url https://app.example.com"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Test Manager Project",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "kane-cli config project"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "You can also set a project ID directly without the picker",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "kane-cli config project <project-id>"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Test Manager Folder",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "kane-cli config folder"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "To set a folder ID without the picker",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "kane-cli config folder <folder-id>"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Mode",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "kane-cli config set-mode action\nkane-cli config set-mode testing"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Mobile Target",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "kane-cli config set-target emulator          # desktop | emulator | simulator\nkane-cli config set-device pixel-7           # name, serial, ip:port, or udid\nkane-cli config set-app ./builds/app-debug.apk"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Bug detection",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "kane-cli config set-bug-detection continue"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Choosing a Different Profile",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "kane-cli config chrome-profile"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "To set a path directly without the picker",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "kane-cli config chrome-profile /absolute/path/to/profile"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "To run Chrome without a visible window, pass --headless on kane-cli run",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "kane-cli run \"Verify the home page loads\" --headless"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "To reset persistent settings to defaults, delete the config file",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "rm ~/.testmuai/kaneai/tui-config.json"
+      }
+    ],
+    "dateModified": "2026-09-03T14:41:00+05:30"
+  }) }}
+/>
+
 Kane CLI stores persistent settings at `~/.testmuai/kaneai/tui-config.json`. Most settings are managed through `kane-cli config` subcommands; a few are managed through interactive pickers in TUI mode, and one (code export) is toggled from the TUI menu.
 
 Authentication credentials are managed separately under `~/.testmuai/kaneai/profiles/`. See [Authentication](/support/docs/kane-cli-authentication/).

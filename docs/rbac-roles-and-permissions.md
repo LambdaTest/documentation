@@ -43,6 +43,63 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/rbac-roles-and-permissions/"
+    },
+    "headline": "Roles and Permissions (RBAC)",
+    "description": "Learn how to use Custom Roles and Permissions (RBAC) on LambdaTest to control product-level access and granular permissions across your organization.",
+    "url": "https://www.testmuai.com/support/docs/rbac-roles-and-permissions/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Setting and Security",
+    "keywords": [
+      "rbac",
+      "roles and permissions",
+      "custom roles"
+    ],
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "dateModified": "2026-07-05T19:41:24+05:30"
+  }) }}
+/>
+
 <BrandName /> **Roles and Permissions (RBAC)** allows organization admins to define fine-grained access control across products, projects, and features. With Custom Roles and Permissions, you can control which team members have access to specific products, what actions they can perform, and ensure that each user only sees what is relevant to their role.
 
 This is especially useful for large enterprises with multiple teams where different groups need access to different parts of the platform, for example, one team working exclusively with KaneAI and Test Manager, while another only needs access to SmartUI and Automation.

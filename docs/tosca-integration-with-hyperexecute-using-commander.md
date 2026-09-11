@@ -44,6 +44,88 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/tosca-integration-with-hyperexecute-using-commander/"
+    },
+    "headline": "Tosca Integration using Commander",
+    "description": "This documentation provides a detailed guide on seamlessly integrating Tosca with HyperExecute",
+    "url": "https://www.testmuai.com/support/docs/tosca-integration-with-hyperexecute-using-commander/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "HyperExecute",
+    "keywords": [
+      "hyperexecute integrations",
+      "hyperexecute integrations with products",
+      "products"
+    ],
+    "proficiencyLevel": "Beginner",
+    "dependencies": "Ensure that you have integrated Tosca with TestMu AI\ufffds cloud-based Selenium Grid.; Go to the execution tab in your Tosca commander to create an execution list.; You can drag and drop test cases from the Test Cases tab to the execution list. In the example given below, the execution list is called LT.; A TC-Shell script file usually has the extension _.tcs_, and it contains a sequence of TC-Shell commands in plain text to configure the steps to execute a Tosca test via command line. This script file is kept in the same folder where you have the actual Tosca project saved.; Sample TC-Shell Script:; Click the arrow on the right side of the Execution tab to retrieve the node path used in jumptonode command.; The node path is highlighted in the image below.; Use the following command to execute this test via command line.; TCShell.exe -workspace -login \"\"; Create a HyperExecute YAML.; Download the HyperExecute CLI Binary based on the OS you use:; PATH=%TRICENTIS_LICENSING_HOME%;%PATH% && ToscaLicenseConfiguration.exe connect-cloud -u -p; TCShell.exe -workspace D:\\foreman\\\\Demo_Sample.tws -login \"D:\\foreman\\\"; cat hyex_tosca.yml; name: Logs; Demo_Sample/**; After configuring the YAML, execute it via terminal using the following command:.",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 2: Create a TC-Shell Script",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "//script\n\njumptonode \"/Execution/ExecutionLists/LT\"\n\n// reset actual log\ntask \"clear log\"\n\n//start execution list\ntask run\n\n//save results\nsave"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 2",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "- TCShell.exe -workspace <Path to your tosca workspace file> -login <your email here> <your password here> \"<Path to TC-Shell Script>\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Sample HyperExecute YAML file for TOSCA",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "---\nversion: \"0.1\"\nmatrix:\n  os: [win]\nrunson: ${matrix.os}\n\nretryOnFailure: true\nmaxRetries: 2\n\npre:\n  - PATH=%TRICENTIS_LICENSING_HOME%;%PATH% && ToscaLicenseConfiguration.exe connect-cloud -u <your_email_here> -p <your_password_here>\n\ntestSuites:\n  - TCShell.exe -workspace D:\\foreman\\<Project_Folder_Name>\\Demo_Sample.tws -login <your email here> <your password here> \"D:\\foreman\\<Path to TC-Shell Script>\"\n\npost:\n  - cat hyex_tosca.yml\n\nuploadArtefacts:\n  - name: Logs\n    path:\n      - Demo_Sample/**\n"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 # Tosca Integration using Commander
 
 This documentation provides a detailed guide on seamlessly integrating Tosca with HyperExecute.

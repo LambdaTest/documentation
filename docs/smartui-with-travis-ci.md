@@ -48,6 +48,136 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       })
     }}
 ></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/smartui-with-travis-ci/"
+    },
+    "headline": "Travis CI Pipeline Integration with SmartUI",
+    "description": "SmartUI now integrates with Travis CI Pipeline to boost pipeline delivery. Perform automated cross browser testing with SmartUI to seamlessly providing 3000+ real browsers running through machines.",
+    "url": "https://www.testmuai.com/support/docs/smartui-with-travis-ci/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "SmartUI",
+    "keywords": [
+      "testmu ai integrations",
+      "smart ui integration",
+      "smart ui integrations with ci/cd tools"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "script",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n### Step 5: Check the output\n\n- After triggering the workflow, check your results in the [SmartUI Dashboard](https://www.testmuai.com/login/?redirectTo=https://smartui.lambdatest.com/projects)\n\n<img loading=\"lazy\" src={require('../assets/images/smart-visual-testing/ci-cd-integration/gitlab/3.png').default} alt=\"Create New Project\" width=\"\" height=\"\"/>\n\n## Best Practices\n\n<Tabs className='docs__val' groupId='best-practices'>\n<TabItem value='secret-management' label='Secret Management' default>\n\n**Secret Management**\n\n- Never commit credentials to repository\n- Use Travis CI Environment Variables for all sensitive data\n- Mark variables as secret to hide values in logs\n- Rotate secrets regularly\n- Use different secrets for different environments\n\n<\/TabItem>\n<TabItem value='pipeline-optimization' label='Pipeline Optimization'>\n\n**Pipeline Optimization**\n\n- Use matrix builds for parallel execution\n- Cache dependencies to speed up pipelines\n- Only run visual tests on relevant branches\n- Set up pipeline conditions to avoid unnecessary runs\n\n**Example:**\n```yaml\nbranches:\n  only:\n    - main\n    - develop"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 2",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "env:\n  global:\n    - BUILD_NAME=\"${TRAVIS_BRANCH}-${TRAVIS_COMMIT:0:7}\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Pass variable to build",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "   env:\n     global:\n       - PROJECT_TOKEN=$PROJECT_TOKEN"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Check build logs for errors",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "   after_failure:\n     - cat /tmp/*.log || true"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Run tests in parallel using matrix",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "   matrix:\n     include:\n       - env: TEST_GROUP=1\n       - env: TEST_GROUP=2"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Use specific Node version",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "   node_js:\n     - \"18\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Clear npm cache",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "   before_install:\n     - npm cache clean --force"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Ensure Node.js is specified",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "   node_js:\n     - \"18\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Verify npm is available",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "   before_script:\n     - npm --version"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Install SmartUI CLI explicitly",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "   before_script:\n     - npm install -g @lambdatest/smartui-cli"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
 Travis CI is one of the most popular CI/CD platforms, known for its simplicity and support for open-source projects. It provides continuous integration for projects hosted on GitHub and Bitbucket.
 
 This guide explains how to integrate your project with the Travis CI CI/CD pipeline to trigger visual regression testing with <BrandName /> SmartUI whenever changes are made to your repository.

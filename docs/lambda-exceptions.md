@@ -42,6 +42,94 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/lambda-exceptions/"
+    },
+    "headline": "View Assertion Errors On TestMu AI",
+    "description": "Manage and display GET request assertion errors in Selenium scripts using the Lambda Exceptions feature.",
+    "url": "https://www.testmuai.com/support/docs/lambda-exceptions/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Documentation",
+    "keywords": [
+      "catch assertion error selenium",
+      "lambda exception test debugging",
+      "view stacktrace on dashboard"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "How to Use Lambda Exception",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "try {\n    // some GET request\n    Assert.assertEquals(ActualValue, ExpectedValue);\n} catch (AssertionError e) {\n    Status = \"failed\";\n    exceptionCapture.add(e.getMessage());\n    ((JavascriptExecutor) driver).executeScript(\"lambda-exceptions\", exceptionCapture);\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "View Exception on the Dashboard Using Lambda Exception",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "package com.lambdatest;\n\n\nimport java.net.MalformedURLException;\nimport java.net.URL;\nimport java.util.ArrayList;\n\nimport org.openqa.selenium.By;\nimport org.openqa.selenium.JavascriptExecutor;\nimport org.openqa.selenium.NoSuchElementException;\nimport org.openqa.selenium.remote.DesiredCapabilities;\nimport org.openqa.selenium.remote.RemoteWebDriver;\nimport org.testng.Assert;\nimport org.testng.annotations.AfterSuite;\nimport org.testng.annotations.BeforeSuite;\nimport org.testng.annotations.Test;\n\npublic class LambdaException {\n\n\tprivate static RemoteWebDriver driver;\n\tprivate static String Status=\"failed\";\n\n\t@BeforeSuite\n\tpublic void setup() throws MalformedURLException {\n\t\t\n\t\ttry {\n\t\tString username = System.getenv(\"LT_USERNAME\");\n\t\tString authkey = System.getenv(\"LT_ACCESS_KEY\");\n\t\tString hub = \"@hub.lambdatest.com/wd/hub\";\n\t\t\n\t\tDesiredCapabilities caps = new DesiredCapabilities();\n\t\tcaps.setCapability(\"browser\", \"Chrome\");\n\t\tcaps.setCapability(\"version\", \"86\");\n\t\tcaps.setCapability(\"platform\", \"MacOS Catalina\");\n\t\tcaps.setCapability(\"build\", \"LambdaException Demo\");\n\t\tcaps.setCapability(\"name\", \"Test 2\");\n\t\tcaps.setCapability(\"network\", true);\n\t\tcaps.setCapability(\"visual\", true); \n\t\tcaps.setCapability(\"video\", true);\n\t\tcaps.setCapability(\"console\", true);\n\t\t\n\n\t\tSystem.out.println(\"Desired Caps: \" + caps);\n\t\tdriver = new RemoteWebDriver(new URL(\"https://\" + username + \":\" + authkey + hub), caps);\n\t\t}\n\t\tcatch(Exception e)\n\t\t{\n\t\t\tSystem.out.println(e);\n\t\t}\n\t}\n\n\n\t@Test\n\tpublic static void testAssertionError() {\n\t\t\n\t        ArrayList<String> exceptionCapture = new ArrayList<>();\n\t        try {\n\t            driver.get(\"https://www.lambdatest.com\");\n\n\t            String ExpectedTitle = \"Most Powerful Cross Browser Testing Tool Online | LambdaT\";\n\t            String TitleValue = driver.getTitle();\n\t            if (TitleValue.equals(ExpectedTitle)) {\n\t            \tStatus = \"passed\";\n\t            }\n\n\t            Assert.assertEquals(TitleValue, ExpectedTitle);\n\t        } catch (AssertionError e) {\n\t        \tStatus = \"failed\";\n\t            exceptionCapture.add(e.getMessage());\n\t            ((JavascriptExecutor) driver).executeScript(\"lambda-exceptions\", exceptionCapture);\n\t        }\n\t}\n\n\t@AfterSuite\n\tpublic void tearDown() {\n\t\tdriver.executeScript(\"lambda-status=\" + Status);\n\t\tdriver.quit();\n\t}\n\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Below is the full script to print the StackTrace using TestNG framework in Java",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "package com.lambdatest;\n\n\nimport java.io.PrintWriter;\nimport java.io.StringWriter;\nimport java.net.MalformedURLException;\nimport java.net.URL;\nimport java.util.ArrayList;\n\nimport org.openqa.selenium.By;\nimport org.openqa.selenium.JavascriptExecutor;\nimport org.openqa.selenium.NoSuchElementException;\nimport org.openqa.selenium.remote.DesiredCapabilities;\nimport org.openqa.selenium.remote.RemoteWebDriver;\nimport org.testng.Assert;\nimport org.testng.annotations.AfterSuite;\nimport org.testng.annotations.BeforeSuite;\nimport org.testng.annotations.Test;\n\npublic class LambdaException {\n\n\tprivate static RemoteWebDriver driver;\n\tprivate static String Status=\"failed\";\n\n\t@BeforeSuite\n\tpublic void setup() throws MalformedURLException {\n\t\t\n\t\ttry {\n\t\tString username = System.getenv(\"LT_USERNAME\");\n\t\tString authkey = System.getenv(\"LT_ACCESS_KEY\");\n\t\tString hub = \"@hub.lambdatest.com/wd/hub\";\n\t\t\n\t\tDesiredCapabilities caps = new DesiredCapabilities();\n\t\tcaps.setCapability(\"browser\", \"Chrome\");\n\t\tcaps.setCapability(\"version\", \"86\");\n\t\tcaps.setCapability(\"platform\", \"MacOS Catalina\");\n\t\tcaps.setCapability(\"build\", \"LambdaException Demo\");\n\t\tcaps.setCapability(\"name\", \"Print StackTrace\");\n\t\tcaps.setCapability(\"network\", true);\n\t\tcaps.setCapability(\"visual\", true); \n\t\tcaps.setCapability(\"video\", true);\n\t\tcaps.setCapability(\"console\", true);\n\t\t\n\n\t\tSystem.out.println(\"Desired Caps: \" + caps);\n\t\tdriver = new RemoteWebDriver(new URL(\"https://\" + username + \":\" + authkey + hub), caps);\n\t\t}\n\t\tcatch(Exception e)\n\t\t{\n\t\t\tSystem.out.println(e);\n\t\t}\n\t}\n\n\n\t@Test\n\tpublic static void testAssertionError() {\n\t\t\n\t        ArrayList<String> exceptionCapture = new ArrayList<>();\n\t        try {\n\t            driver.get(\"https://www.lambdatest.com\");\n\t            String TitleValue = driver.getTitle();\n\t            String ExpectedTitle = \"Most Powerful Cross Browser Testing Tool Online | LambdaT\";\n\t            if (TitleValue.equals(ExpectedTitle)) {\n\t            \tStatus = \"passed\";\n\t            }\n\t            Assert.assertEquals(TitleValue, ExpectedTitle);\n\t        } catch (AssertionError e) {\n\t        \tStatus = \"failed\";\n\t            StringWriter sw = new StringWriter();\n\t            PrintWriter printWriter = new PrintWriter(sw);\n\t            PrintWriter pw = printWriter;\n\t            e.printStackTrace(pw);\n\t            String sStackTrace = sw.toString();\n\t            exceptionCapture.add(sStackTrace);\n\t            ((JavascriptExecutor) driver).executeScript(\"lambda-exceptions\", exceptionCapture);\n\t        }\n\t}\n\n\t@AfterSuite\n\tpublic void tearDown() {\n\t\tdriver.executeScript(\"lambda-status=\" + Status);\n\t\tdriver.quit();\n\t}\n\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Open the test view and navigate to the Exception tab to find the full StackTrace",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "java.lang.AssertionError: expected [Most Powerful Cross Browser Testing Tool Online | LambdaT] but found [Most Powerful Cross Browser Testing Tool Online | Lambdatest] at\n org.testng.Assert.fail(Assert.java:99) at\n org.testng.Assert.failNotEquals(Assert.java:1037) at\n org.testng.Assert.assertEqualsImpl(Assert.java:140) at\n org.testng.Assert.assertEquals(Assert.java:122) at\n org.testng.Assert.assertEquals(Assert.java:629) at\n org.testng.Assert.assertEquals(Assert.java:639) at\n com.lambdatest.LambdaException.testAssertionError(LambdaException.java:66) at\n java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) at\n java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64) at\n java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) at\n java.base/java.lang.reflect.Method.invoke(Method.java:564) at\n org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:132) at\n org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:599) at\n org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174) at\n org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46) at\n org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:822) at\n org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147) at\n org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146) at\n org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128) at\n java.base/java.util.ArrayList.forEach(ArrayList.java:1511) at\n org.testng.TestRunner.privateRun(TestRunner.java:764) at\n org.testng.TestRunner.run(TestRunner.java:585) at\n org.testng.SuiteRunner.runTest(SuiteRunner.java:384) at\n org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378) at\n org.testng.SuiteRunner.privateRun(SuiteRunner.java:337) at\n org.testng.SuiteRunner.run(SuiteRunner.java:286) at\n org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53) at\n org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96) at\n org.testng.TestNG.runSuitesSequentially(TestNG.java:1218) at\n org.testng.TestNG.runSuitesLocally(TestNG.java:1140) at\n org.testng.TestNG.runSuites(TestNG.java:1069) at\n org.testng.TestNG.run(TestNG.java:1037) at\n org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115) at\n org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251) at\n org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)"
+      }
+    ],
+    "dateModified": "2026-09-09T19:13:32+05:30"
+  }) }}
+/>
+
 # View Assertion Errors On TestMu AI
 
 ***

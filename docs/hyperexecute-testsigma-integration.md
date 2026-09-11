@@ -45,6 +45,101 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/hyperexecute-testsigma-integration/"
+    },
+    "headline": "Testsigma Integration With HyperExecute",
+    "description": "Explore seamless integrations with popular tools at TestMu AI. Enhance your testing workflow for faster, efficient cross-browser testing.",
+    "url": "https://www.testmuai.com/support/docs/hyperexecute-testsigma-integration/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "HyperExecute",
+    "keywords": [
+      "TestMu AI Hyperexecute",
+      "TestMu AI Hyperexecute help",
+      "TestMu AI Hyperexecute documentation"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Here is the sample YAML file for your reference",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "---\nversion: 0.1\nglobalTimeout: 150\ntestSuiteTimeout: 150\ntestSuiteStep: 150\n\nrunson: win\nconcurrency: 2\n\nenv:\n  CACHE_DIR: m2_cache_dir\n\ncacheKey: '{{ checksum \"pom.xml\" }}'\ncacheDirectories:\n  - ${CACHE_DIR}\n\nmatrix:\n  tests: [\"48\",\"70\"]\n  activationKeys: [\"agent1_activationkey\",\"agent2_activationkey\"]\nexclusionMatrix:\n  - tests: [\"48\"]\n    activationKeys: [\"agent1_activationkey\"]\n  - tests: [\"70\"]\n    activationKeys: [\"agent2_activationkey\"]\n\npre:\n  - npm install -g npm@10.4.0\n  - npm i axios\n\nmergeArtifacts: true\n\nuploadArtefacts:\n - name: ExecutionSnapshots\n   path:\n    - target/surefire-reports/html/**\n\nreport: true\npartialReports:\n  location: target/surefire-reports/html\n  type: html\n  frameworkName: extent\n\ntestSuites:\n  - Sleep 100\n  - node script.js $tests; Sleep 45\n\npost: \n  - stop-agent.bat\n\ncaptureScreenRecordingForScenarios: true\n\nbackground:\n  - start-agent.bat $activationKeys\n\njobLabel: [testsigma]"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 3: Setup the Test Execution Files",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "@echo off\n\nREM Step 1: Download TestsigmaAgent-Windows.zip\ncurl -O https://s3.amazonaws.com/hybrid-production.testsigma.com/agent/windows/4.7.0/TestsigmaAgent-Windows.zip\n\nREM Step 2: Extract the contents of TestsigmaAgent-Windows.zip\njar xf TestsigmaAgent-Windows.zip\n\nREM Step 3: Change the directory to TestsigmaAgent\ncd TestsigmaAgent\n\nREM Step 4: Run start.bat with the provided activation key\nstart.bat \"TS_ACTIVATION_KEY=%1\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 3: Setup the Test Execution Files",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "@echo off\n\nREM Step 1: Change the directory to TestsigmaAgent\ncd TestsigmaAgent\n\nREM Step 2: Run start.bat with the provided activation key\nstop.bat"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 4",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "const axios = require('axios');\n\nconst testPlanId = process.argv[2];\n\nconst numid1 = parseInt(testPlanId);\nlet data = JSON.stringify({\n  \"executionId\": numid1\n});\n\nlet config = {\n  method: 'post',\n  maxBodyLength: Infinity,\n  url: 'https://app.testsigma.com/api/v1/execution_results',\n  headers: { \n    'Content-Type': 'application/json', \n    'Authorization': 'Bearer <YOUR_AUTH_KEY>'\n  },\n  data: data\n};\n\naxios.request(config)\n  .then((response) => {\n    console.log(JSON.stringify(response.data));\n  })\n  .catch((error) => {\n    console.log(error);\n  });\n"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Windows",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "./hyperexecute --config RELATIVE_PATH_OF_YOUR_YAML_FILE"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 Testsigma is an AI Native, cloud-based test automation platform that helps testers create, run, and maintain automated tests for web, mobile, and API applications.
 
 Testsigma can help you with:

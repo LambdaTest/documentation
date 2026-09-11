@@ -40,6 +40,101 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/network-data-masking/"
+    },
+    "headline": "Network Data Masking for Selenium Tests",
+    "description": "Mask sensitive data like passwords, tokens, and API keys in network logs during automation testing sessions.",
+    "url": "https://www.testmuai.com/support/docs/network-data-masking/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Web Automation",
+    "keywords": [
+      "mask sensitive data network logs selenium",
+      "network data masking capability",
+      "hide passwords tokens automation logs"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Java Implementation",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "// Java code for configuring Network Masking in tests on LambdaTest\nDesiredCapabilities capabilities = new DesiredCapabilities();\ncapabilities.setCapability(\"network.mask\", \"true\");\n// Add other capabilities as needed"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Alternative Language Examples",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Python",
+        "text": "capabilities = {\n    \"network.mask\": \"true\"\n    # Add other capabilities as needed\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Add other capabilities as needed",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "const capabilities = {\n    \"network.mask\": \"true\"\n    // Add other capabilities as needed\n};"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Before Masking (network.mask: false)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "Request Headers:\nAuthorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...\nX-API-Key: sk_live_abcd1234567890\nUser-Email: user@example.com\n\nResponse Cookies:\nauth_token=abc123xyz789; session_key=def456uvw012"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "After Masking (network.mask: true)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "Request Headers:\nAuthorization: Bearer ********\nX-API-Key: ********\nUser-Email: ********\n\nResponse Cookies:\nauth_token=********; session_key=********"
+      }
+    ],
+    "dateModified": "2026-09-09T19:13:32+05:30"
+  }) }}
+/>
+
 # Network Data Masking 
 
 TestMu AI provides network data masking capability to protect sensitive information during automation testing sessions. This feature automatically masks sensitive data in network logs on the TestMu AI platform, ensuring that confidential information like passwords, tokens, and authentication keys are not exposed in test logs and network traffic reports.

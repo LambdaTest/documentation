@@ -45,6 +45,63 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/web-scanner-overview/"
+    },
+    "headline": "Web Scanner Overview",
+    "description": "An introduction to TestMu AI Web Scanner, its purpose, core features, supported scan types (Visual UI and Accessibility), and ideal users.",
+    "url": "https://www.testmuai.com/support/docs/web-scanner-overview/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Web Scanner",
+    "keywords": [
+      "testmu ai",
+      "web scanner",
+      "overview"
+    ],
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "dateModified": "2026-02-12T19:51:34+05:30"
+  }) }}
+/>
+
 ## What is <BrandName /> Web Scanner?
 
 <BrandName /> Web Scanner is an AI-powered, browser-based scanning platform designed to help teams identify and resolve visual and accessibility issues across web applications. It enables both automated Visual UI Regression Testing and WCAG-compliant Accessibility Testing, allowing organizations to proactively catch visual bugs and accessibility violations across thousands of URLs at scale.

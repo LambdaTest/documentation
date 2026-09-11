@@ -39,6 +39,110 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       })
     }}
 ></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/fastlane-with-testmu/"
+    },
+    "headline": "Integration With fastlane Plugin",
+    "description": "Upload Android and iOS apps using the TestMu AI fastlane plugin and test your app on TestMu AI real devices.",
+    "url": "https://www.testmuai.com/support/docs/fastlane-with-testmu/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Integration",
+    "keywords": [
+      "fastlane plugin",
+      "testmu ai integrations with ci/cd tools",
+      "continuous integration"
+    ],
+    "proficiencyLevel": "Beginner",
+    "dependencies": "Make sure you have fastlane installed on the machine. Please refer fastlane docs for installation.; TestMu AI Credentials; Please ensure that you have your TestMu AI credentials handy, including your TestMu AI username and access key. You will need to set them up in the Fastfile. To retrieve these credentials, simply click on the key icon located near the help button on your TestMu AI automation dashboard..",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Prerequisites",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "codeRepository": "https://github.com/LambdaTest/fastlane-android-sample",
+        "text": "git clone https://github.com/LambdaTest/fastlane-android-sample"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Prerequisites",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n## Installing <BrandName /> fastlane Plugin\n***\n\n**Step 1:** Add <BrandName /> [fastlane](https://rubygems.org/gems/fastlane-plugin-lambdatest) plugin by running."
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Installing TestMu AI fastlane Plugin",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n**Step 2:** Add the below action in fastfile in desired lane to upload the app to <BrandName />.   "
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Installing TestMu AI fastlane Plugin",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "or if you want to used custom_id.\n"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Installing TestMu AI fastlane Plugin",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "**_NOTE:_**  custom_id is an optional field.\n\n**Step 3:** Once the app is uploaded to <BrandName />, this action will set an identifier to the uploaded app as APP_URL in the environment variable and can be accessed in the test.\n"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 6",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n**Step 4:**  Execute the below command to upload app and run tests.\n"
+      }
+    ],
+    "dateModified": "2026-06-09T15:09:24+05:30"
+  }) }}
+/>
 # Integration With fastlane Plugin
 ***
 fastlane is a CI/CD tool to automate beta deployments and releases for Android and iOS apps. It is an open-source platform for Android and iOS app deployment. It will take care of all the tasks like testing, generating screenshots, dealing with code signing, and releasing your application. Provides integration support with all the major CI systems. Adding the <BrandName /> fastlane plugin in Fastfile will help you upload the app to the server and run tests on <BrandName /> real devices.

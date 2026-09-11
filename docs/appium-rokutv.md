@@ -51,6 +51,96 @@ import { CookieTrackingSignup } from '@site/src/component/CookieTracking';
       })
     }}
 ></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/appium-rokutv/"
+    },
+    "headline": "Roku TV With Appium",
+    "description": "Complete guide to running your first RokuTV Appium automated test script on TestMu AI Real Device Cloud Platform. Test on 5000+ Real Devices.",
+    "url": "https://www.testmuai.com/support/docs/appium-rokutv/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Documentation",
+    "keywords": [
+      "python appium",
+      "rokutv",
+      "python appium tutorial"
+    ],
+    "proficiencyLevel": "Beginner",
+    "dependencies": "You have access to TestMu AI username and accessKey. If you have not registered yet, you can do the same by visiting our website. You will be able to access the credentials in the TestMu AI Profile; Install the latest Python build from the official website. We recommend using the latest version.; Make sure pip is installed in your system. You can install pip from pip documentation..",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Clone the TestMu AI\u2019s LT-appium-rokutv and navigate to the code directory as shown below",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "codeRepository": "https://github.com/LambdaTest/LT-appium-rokutv",
+        "text": "git clone https://github.com/LambdaTest/LT-appium-rokutv\ncd LT-appium-rokutv"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "if __name__ == \"__main__\"",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n### Configure the test capabilities\n\nYou can update your custom capabilities in test scripts. In this sample project, we are passing platform name, platform version, device name and app url (generated earlier) along with other capabilities like build name and test name via capabilities object. The capabilities object in the sample code are defined as:\n\n**Supported Capabilities:**\nPlease check at the end of the doc.\n\n**Platform:**\n`\"roku\"`\n\n```python title=\"main.py\"\n    caps = {\n       \"automationName\": \"Roku\",\n       \"deviceName\": \"Roku Express\",     #We also support \"Roku Ultra\"\n       \"platformVersion\": \"11\",\n       \"isRealMobile\": True,\n       \"platformName\": \"roku\",\n       \"build\": \"Roku Sample Test\",\n       \"app\": \"APP_URL\"          #Add app id here\n       \"visual\": True,\n       \"devicelog\": True\n   }\n"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Install the required packages from the cloned project directory",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "pip install -r requirements.txt"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "5. Execute your test case",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Python",
+        "text": "python main.py"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
 <RealDeviceTag value="Real Device" /> 
 ## Tutorial To Run Your First Test On <BrandName />
 

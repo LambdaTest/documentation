@@ -47,6 +47,63 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       })
     }}
 ></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/getting-started-with-mobile-browser-real-time-testing/"
+    },
+    "headline": "Getting started with Mobile Web Browser Real Time Testing",
+    "description": "Test your websites on real mobile browsers with TestMu AI's Real-Time Mobile Web Browser Testing. Easily launch virtual machines and test across various OS, browsers, and versions.",
+    "url": "https://www.testmuai.com/support/docs/getting-started-with-mobile-browser-real-time-testing/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Real Time",
+    "keywords": [
+      "real time testing in testmu ai",
+      "testmu ai real time testing feature",
+      "online real time testing"
+    ],
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "dateModified": "2026-08-17T11:15:18+05:30"
+  }) }}
+/>
 Real-Time Mobile Web Browser Testing allows you to test websites and web applications across different mobile browsers and operating systems, such as Android, iOS, and ChromeOS, in real-time. This process helps ensure that your web applications are fully functional, visually consistent, and optimized for various mobile devices, enhancing the user experience across different platforms. Using <BrandName />, developers, testers, and QA professionals can validate their web applications without the need for physical devices, all from a unified, user-friendly interface.
 
 ## Launch the Virtual Machine

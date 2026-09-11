@@ -22,6 +22,81 @@ import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/smartui-sdk-capabilities/"
+    },
+    "headline": "SmartUI SDK Capabilities",
+    "description": "Learn about the various capabilities available in SmartUI SDK for configuring your visual regression tests",
+    "url": "https://www.testmuai.com/support/docs/smartui-sdk-capabilities/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "SmartUI",
+    "keywords": [
+      "Visual Regression",
+      "SmartUI SDK",
+      "Capabilities"
+    ],
+    "proficiencyLevel": "Beginner",
+    "dependencies": "SmartUI CLI version >= 4.1.0; For Java SDK: SmartUI SDK version >= 1.0.7; For JavaScript: Selenium WebDriver version >= 1.0.7.",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "For JavaScript",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "let capabilities = {\n  platform: \"catalina\",\n  browserName: \"chrome\",\n  version: \"latest\",\n  \"LT:Options\": {\n    username: USERNAME,\n    accessKey: KEY,\n    project: \"ElementSS-MobileConfig\",\n    w3c: true,\n    name: \"Test Name\", // name of the test\n    build: \"Automation Build Name\", // name of the build\n    // highlight-next-line\n    \"smartUI.project\": \"YOUR_PROJECT_NAME\",\n    // highlight-next-line\n    \"smartUI.build\": \"YOUR_BUILD_NAME\",\n    // highlight-next-line\n    \"smartUI.baseline\": true,\n  },\n};"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "For Java",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "DesiredCapabilities capabilities = new DesiredCapabilities();\ncapabilities.setCapability(\"platform\", \"Windows 10\");\ncapabilities.setCapability(\"browserName\", \"chrome\");\ncapabilities.setCapability(\"version\", \"latest\");\n\nHashMap<String, Object> ltOptions = new HashMap<String, Object>();\nltOptions.put(\"username\", \"YOUR_USERNAME\");\nltOptions.put(\"accessKey\", \"YOUR_ACCESS_KEY\");\nltOptions.put(\"w3c\", true);\nltOptions.put(\"name\", \"Test Name\");\nltOptions.put(\"build\", \"Automation Build Name\");\n// highlight-next-line\nltOptions.put(\"smartUI.project\", \"YOUR_PROJECT_NAME\");\n// highlight-next-line\nltOptions.put(\"smartUI.build\", \"SmartUI_BUILD_NAME\");\n// highlight-next-line\nltOptions.put(\"smartUI.baseline\", true);\n\ncapabilities.setCapability(\"LT:Options\", ltOptions);"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 # SmartUI SDK Capabilities
 
 SmartUI SDK provides several capabilities that allow you to configure your visual regression tests. These capabilities can be added to your test configuration to control various aspects of the testing process.

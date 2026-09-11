@@ -43,6 +43,94 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/kane-cli-parallel-execution/"
+    },
+    "headline": "Parallel Test Execution",
+    "description": "Run multiple independent Kane CLI browser tests in parallel using shell background processes or AI agent sub-tasks.",
+    "url": "https://www.testmuai.com/support/docs/kane-cli-parallel-execution/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Kane CLI",
+    "keywords": [
+      "kane cli parallel",
+      "parallel testing",
+      "kaneai"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Run three tests one after another",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "kane-cli run \"Log in and verify dashboard\" --url https://myapp.com --headless --timeout 120\nkane-cli run \"Search for products and verify results\" --url https://myapp.com --headless --timeout 120\nkane-cli run \"Complete checkout and confirm order\" --url https://myapp.com --headless --timeout 120"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Parallel Pattern (Shell Background Processes)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "#!/bin/bash\nRESULTS_DIR=$(mktemp -d)\n\n# Start all tests in background\nkane-cli run \"Log in and verify dashboard\" \\\n  --url https://myapp.com --agent --headless --timeout 120 \\\n  > \"$RESULTS_DIR/test1.ndjson\" 2>&1 &\n\nkane-cli run \"Search for products and verify results\" \\\n  --url https://myapp.com --agent --headless --timeout 120 \\\n  > \"$RESULTS_DIR/test2.ndjson\" 2>&1 &\n\nkane-cli run \"Complete checkout and confirm order\" \\\n  --url https://myapp.com --agent --headless --timeout 120 \\\n  > \"$RESULTS_DIR/test3.ndjson\" 2>&1 &\n\nkane-cli run \"Verify admin user management page\" \\\n  --url https://myapp.com --agent --headless --timeout 120 \\\n  > \"$RESULTS_DIR/test4.ndjson\" 2>&1 &\n\n# Wait for all to finish\nwait\n\n# Parse and print results\necho \"\"\necho \"| # | Test | Status | Steps | Time | Summary |\"\necho \"|---|------|--------|-------|------|---------|\"\n\ni=1\nfor f in \"$RESULTS_DIR\"/test*.ndjson; do\n  result=$(tail -1 \"$f\")\n  status=$(echo \"$result\" | jq -r '.status')\n  duration=$(echo \"$result\" | jq -r '.duration')\n  summary=$(echo \"$result\" | jq -r '.one_liner')\n  echo \"| $i | $(basename $f .ndjson) | $status | - | ${duration}s | $summary |\"\n  ((i++))\ndone\n\nrm -rf \"$RESULTS_DIR\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "After all tests complete, present results like this",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\ud83e\uddea Test Suite: Core Flows\n\ud83d\udcc5 Run at: 2026-04-14 14:30 UTC\n\n| # | Test                   | Status | Steps | Time | Summary                        |\n|---|------------------------|--------|-------|------|--------------------------------|\n| 1 | Login + dashboard      | \u2705     | 5     | 12s  | Welcome banner visible         |\n| 2 | Product search         | \u2705     | 7     | 18s  | 3 results for 'shoes'          |\n| 3 | Checkout flow          | \u274c     | 9     | 25s  | Payment form did not load      |\n| 4 | Admin user management  | \u2705     | 6     | 15s  | Users table loaded (12 rows)   |\n\n\ud83d\udcca Pass rate: 3/4 (75%) \u00b7 Total steps: 27 \u00b7 Total time: 25s (longest test)"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Agent prompt template (give this to each sub-agent)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "Run this Kane CLI browser test and report the results:\n\n    kane-cli run \"<objective>\" --agent --headless --timeout 120\n\nAfter the command completes:\n1. Capture the exit code\n2. Parse the run_end event (last line of stdout)\n3. If status is \"failed\", read the failing step's screenshot from run_dir\n4. Return: { status, steps, duration, summary, session_dir, failure_step, screenshot_path }"
+      }
+    ],
+    "dateModified": "2026-06-06T14:00:16+05:30"
+  }) }}
+/>
+
 Run multiple independent browser tests concurrently to reduce total execution time. Instead of running tests sequentially (sum of all durations), parallel execution runs them simultaneously: total time equals the longest single test.
 
 ## When to Run in Parallel

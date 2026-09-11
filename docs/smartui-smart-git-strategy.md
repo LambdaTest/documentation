@@ -49,6 +49,115 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/smartui-smart-git-strategy/"
+    },
+    "headline": "Smart Git Strategy in SmartUI",
+    "description": "Learn about SmartUI's Smart Git feature that provides intelligent branch comparison and management capabilities for visual regression testing.",
+    "url": "https://www.testmuai.com/support/docs/smartui-smart-git-strategy/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "SmartUI",
+    "keywords": [
+      "Smart Git",
+      "Dynamic Branch Comparison",
+      "SmartUI Git Strategy"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Smart Git can be enabled using an environment variable",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "export SMART_GIT=true"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Enabling Smart Git",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "set SMART_GIT=true"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Enabling Smart Git",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "PowerShell",
+        "text": "$env:SMART_GIT=\"true\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Build Execution",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "   # Enable Smart Git\n   export SMART_GIT=true\n\n   # Run your tests\n   npx smartui --config .smartui.json exec -- <Your execution command>"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Use Case 1: Feature Branch Development",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "# Create and switch to feature branch\ngit checkout -b feature/new-login\n\n# Enable Smart Git\nexport SMART_GIT=true\n\n# Make changes and run tests with different CLI commands\nnpx smartui --config .smartui.json exec -- <Your execution command> --buildName \"feature-login-tests\"\nnpx smartui upload-figma-web designs.json --buildName \"feature-login-designs\"\nnpx smartui capture urls.json --buildName \"feature-login-capture\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Use Case 2: Parallel Development",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "# Team A: Feature branch\ngit checkout -b feature/team-a\nexport SMART_GIT=true\nnpx smartui --config .smartui.json exec -- <Team A tests>\n\n# Team B: Different feature branch\ngit checkout -b feature/team-b\nexport SMART_GIT=true\nnpx smartui --config .smartui.json exec -- <Team B tests>"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Use Case 3: Hotfix Development",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "# Create hotfix branch\ngit checkout -b hotfix/security-patch\n\n# Enable Smart Git\nexport SMART_GIT=true\n\n# Run tests\nnpx smartui --config .smartui.json exec -- <Your execution command>"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 :::info
 Smart Git is an advanced feature in SmartUI that provides intelligent branch comparison and management capabilities. This guide explains how to use Smart Git effectively in your visual regression testing workflow.
 :::

@@ -43,6 +43,150 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/change-individual-test-details/"
+    },
+    "headline": "Changing Individual Test Details",
+    "description": "Mark test status as pass or fail and rename tests during execution on the Selenium grid.",
+    "url": "https://www.testmuai.com/support/docs/change-individual-test-details/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Documentation",
+    "keywords": [
+      "mark test passed failed selenium",
+      "rename test during execution",
+      "lambda-status hook usage"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code Samples (Java)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "// Mark test as passed\n((JavascriptExecutor) driver).executeScript(\"lambda-status=passed\");\n\n// Mark test as failed\n((JavascriptExecutor) driver).executeScript(\"lambda-status=failed\");"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code Samples (JavaScript)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "// Mark test as passed\nawait driver.executeScript('lambda-status=passed');\n\n// Mark test as failed\nawait driver.executeScript('lambda-status=failed');"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code Samples (Python)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Python",
+        "text": "# Mark test as passed\ndriver.execute_script(\"lambda-status=passed\")\n\n# Mark test as failed\ndriver.execute_script(\"lambda-status=failed\")"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Mark test as failed (C#)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "C#",
+        "text": "// Mark test as passed\n((IJavaScriptExecutor)driver).ExecuteScript(\"lambda-status=passed\");\n\n// Mark test as failed\n((IJavaScriptExecutor)driver).ExecuteScript(\"lambda-status=failed\");"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Mark test as failed (PHP)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "PHP",
+        "text": "// Mark test as passed\n$driver->executeScript(\"lambda-status=passed\");\n\n// Mark test as failed\n$driver->executeScript(\"lambda-status=failed\");"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Ruby",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Ruby",
+        "text": "# Mark test as passed\ndriver.execute_script(\"lambda-status=passed\")\n\n# Mark test as failed\ndriver.execute_script(\"lambda-status=failed\")"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Pass the new name through JavascriptExecutor (Java)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "((JavascriptExecutor) driver).executeScript(\"lambda-name=Your_test_name\");"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Rename Your Test (JavaScript)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "await driver.executeScript('lambda-name=Your_test_name');"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Rename Your Test (Python)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Python",
+        "text": "driver.execute_script(\"lambda-name=Your_test_name\")"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "C#",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "C#",
+        "text": "((IJavaScriptExecutor)driver).ExecuteScript(\"lambda-name=Your_test_name\");"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "PHP",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "PHP",
+        "text": "$driver->executeScript(\"lambda-name=Your_test_name\");"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Ruby",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Ruby",
+        "text": "driver.execute_script(\"lambda-name=Your_test_name\")"
+      }
+    ],
+    "dateModified": "2026-09-09T19:13:32+05:30"
+  }) }}
+/>
+
 # Changing Individual Test Details
 
 * * *

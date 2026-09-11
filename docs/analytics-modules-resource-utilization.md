@@ -43,6 +43,63 @@ import CookieTrackingLogin from '@site/src/component/CookieTracking';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/analytics-modules-resource-utilization/"
+    },
+    "headline": "Concurrency Usage Insights",
+    "description": "Optimize resource use with TestMu AI's Concurrency Usage Insights. Monitor concurrency trends at Org, Group, SubOrg levels and track custom concurrency with custom KPIs.",
+    "url": "https://www.testmuai.com/support/docs/analytics-modules-resource-utilization/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Insights",
+    "keywords": [
+      "analytics",
+      "concurrency trends",
+      "custom concurrency trends"
+    ],
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "dateModified": "2026-05-29T18:18:43+05:30"
+  }) }}
+/>
+
 The Concurrency Usage Insights module enables QA Managers to get an overview of <BrandName /> resources being utilized by their teams. It provides widgets to monitor concurrency trends at different levels and track peak usage patterns.
 
 ## Available Widgets

@@ -37,6 +37,80 @@ canonical: https://www.testmuai.com/support/docs/kane-cli-checkpoint-title/
       }) }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/kane-cli-checkpoint-title/"
+    },
+    "headline": "Title Assertions",
+    "description": "Verify the browser tab document.title, useful for confirming navigation reached the expected page.",
+    "url": "https://www.testmuai.com/support/docs/kane-cli-checkpoint-title/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Kane CLI",
+    "keywords": [
+      "page title assertion",
+      "document.title",
+      "kane cli"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Assertions",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "Assert: page title contains \"Dashboard\"\nAssert: title is \"My Account - Settings\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Extractions",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "Store the page title"
+      }
+    ],
+    "dateModified": "2026-07-03T19:09:57+05:30"
+  }) }}
+/>
+
 Title assertions check the browser tab's document title (`document.title`).
 
 ## When It's Used

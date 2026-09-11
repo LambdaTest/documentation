@@ -53,6 +53,124 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/appium-java-jbehave/"
+    },
+    "headline": "Appium With JBehave",
+    "description": "Run your Appium automation scripts using Java JBehave on TestMu AI Real Device Cloud Platform of 3000+ real mobile devices.",
+    "url": "https://www.testmuai.com/support/docs/appium-java-jbehave/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "App Automation",
+    "keywords": [
+      "appium",
+      "jbehave",
+      "testmu ai java"
+    ],
+    "proficiencyLevel": "Beginner",
+    "dependencies": "Your TestMu AI Username and Access key.; You should have Java client library installed for Selenium and Appium.; Download and install Maven from the official website. For Linux/macOS you can use Homebrew package manager..",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 4: Update your Automation Script",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "\npackage com.lambdatest;\nimport java.io.FileReader;\nimport java.net.URL;\nimport java.util.Map;\nimport java.util.ArrayList;\nimport java.util.Arrays;\nimport java.util.List;\nimport java.util.Iterator;\nimport java.util.Collection;\nimport java.lang.reflect.Constructor;\nimport org.json.simple.JSONObject;\nimport org.json.simple.JSONArray;\nimport org.json.simple.parser.JSONParser;\n\nimport org.jbehave.core.embedder.Embedder;\nimport org.junit.Test;\nimport org.junit.After;\nimport org.junit.Before;\nimport org.junit.runner.RunWith;\nimport org.junit.runners.Parameterized;\nimport org.junit.runners.Parameterized.Parameters;\nimport org.junit.runners.Parameterized.Parameter;\n\nimport org.openqa.selenium.WebDriver;\nimport org.openqa.selenium.remote.RemoteWebDriver;\nimport org.openqa.selenium.remote.DesiredCapabilities;\n\n\n@RunWith(Parameterized.class)\npublic class LambdaTestJBehaveRunner {\n\n    public WebDriver driver;\n   // private Local l;\n\n    private static JSONObject config;\n\n    @Parameter(value = 0)\n    public int taskID;\n\n    @Parameters\n    public static Collection<Object[]> data() throws Exception {\n        List<Object[]> taskIDs = new ArrayList<Object[]>();\n        if(System.getProperty(\"config\") != null) {\n            JSONParser parser = new JSONParser();\n            config = (JSONObject) parser.parse(new FileReader(\"src/test/resources/conf/\" + System.getProperty(\"config\")));\n            int envs = ((JSONArray)config.get(\"environments\")).size();\n\n            for(int i=0; i<envs; i++) {\n              taskIDs.add(new Object[] {i});\n            }\n        }\n\n        return taskIDs;\n    }\n\n    @Before\n    public void setUp() throws Exception {\n        JSONArray envs = (JSONArray) config.get(\"environments\");\n\n        DesiredCapabilities capabilities = new DesiredCapabilities();\n\n        capabilities.setCapability(\"isRealMobile\", true);\n        capabilities.setCapability(\"app\",\"APP_URL\");    //Enter app_url here\n\n        Map<String, String> envCapabilities = (Map<String, String>) envs.get(taskID);\n        Iterator it = envCapabilities.entrySet().iterator();\n        while (it.hasNext()) {\n            Map.Entry pair = (Map.Entry)it.next();\n            capabilities.setCapability(pair.getKey().toString(), pair.getValue().toString());\n        }\n        \n        Map<String, String> commonCapabilities = (Map<String, String>) config.get(\"capabilities\");\n        it = commonCapabilities.entrySet().iterator();\n        while (it.hasNext()) {\n            Map.Entry pair = (Map.Entry)it.next();\n            if(capabilities.getCapability(pair.getKey().toString()) == null){\n                capabilities.setCapability(pair.getKey().toString(), pair.getValue().toString());\n            }\n        }\n\n        String username = System.getenv(\"LT_USERNAME\") == null ? \"YOUR_LT_USERNAME\" : System.getenv(\"LT_USERNAME\");  //Replace YOUR_LT_USERNAME with your LambdaTest username\n\n\n        String accessKey = System.getenv(\"LT_ACCESS_KEY\") == null ? \"YOUR_LT_ACCESS_KEY\" : System.getenv(\"LT_ACCESS_KEY\"); //Replace YOUR_LT_ACCESS_KEY with your LambdaTest accessKey\n\n\n        driver = new RemoteWebDriver(new URL(\"http://\"+username+\":\"+accessKey+\"@\"+config.get(\"server\")+\"/wd/hub\"), capabilities);\n    }\n\n    @After\n    public void tearDown() throws Exception {\n        driver.quit();\n    }\n\n    @Test\n    public void runStories() throws Exception {\n        Class<?> c = Class.forName(System.getProperty(\"embedder\"));\n        Constructor<?> cons = c.getConstructor(WebDriver.class);\n        Embedder storyEmbedder = (Embedder) cons.newInstance(driver);\n\n        List<String> storyPaths = Arrays.asList(System.getProperty(\"stories\"));\n        storyEmbedder.runStoriesAsPaths(storyPaths);\n    }\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "The capabilities object in the sample code are defined as (Single)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "//Single Tests\n{\n  \"server\": \"mobile-hub.lambdatest.com\",\n\n  \"capabilities\": {\n    \"build\": \"jbehave-LambdaTest-AppAutomate-Single\",\n    \"name\": \"Single Test 1\"\n  },\n\n  \"environments\": [\n    {\n    \"platformName\": \"android\",\n    \"deviceName\": \"Galaxy S21 5G\",\n    \"platformVersion\": \"11\"\n    }\n  ]\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Parallel",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "//Parallel Tests\n{\n  \"server\": \"mobile-hub.lambdatest.com\",\n\n  \"capabilities\": {\n    \"build\": \"jbehave-LambdaTest-AppAutomate-Parallel\",\n    \"name\": \"Parallel Test 1\"\n  },\n\n  \"environments\": [\n    {\n      \"platformName\": \"android\",\n      \"deviceName\": \"Galaxy S21 5G\",\n      \"platformVersion\": \"11\"\n    },\n    {\n      \"platformName\": \"android\",\n      \"deviceName\": \"OnePlus 10 Pro\",\n      \"platformVersion\": \"12\"\n    },\n    {\n      \"platformName\": \"android\",\n      \"deviceName\": \"Pixel 3a\",\n      \"platformVersion\": \"10\"\n    }\n  ]\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 6: Execute and Monitor your Tests",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "  mvn clean install"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 6: Execute and Monitor your Tests (Single)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "  mvn test -P single"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 6: Execute and Monitor your Tests (Parallel)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "  mvn test -P parallel"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "The appium-skill package includes",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "appium-skill/\n\u251c\u2500\u2500 SKILL.md\n\u2514\u2500\u2500 reference/\n    \u251c\u2500\u2500 playbook.md\n    \u2514\u2500\u2500 advanced-patterns.md"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Install a Appium Agent Skill using the command below",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "codeRepository": "https://github.com/LambdaTest/agent-skills",
+        "text": "# Clone the repo and copy the skill you need\ngit clone https://github.com/LambdaTest/agent-skills.git\ncp -r agent-skills/appium-skill .claude/skills/\n\n# Or for Cursor / Copilot\ncp -r agent-skills/appium-skill .cursor/skills/"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 In this documentation, you will learn how to trigger a automation script of **JBehave** for application testing with **Appium** on <BrandName />, set the [**desired capabilities**](/support/docs/desired-capabilities-in-appium/) for appium testing, and other advanced features of <BrandName />.
 
 ## Prerequisites

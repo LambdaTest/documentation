@@ -47,6 +47,117 @@ import CookieTrackingLogin from '@site/src/component/CookieTracking';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/serenity-test-on-selenium-grid/"
+    },
+    "headline": "Selenium With Serenity BDD",
+    "description": "Run Serenity BDD Selenium tests on TestMu AI cloud grid with parallel execution across 3000+ browsers.",
+    "url": "https://www.testmuai.com/support/docs/serenity-test-on-selenium-grid/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Documentation",
+    "keywords": [
+      "serenity bdd selenium cloud testing",
+      "run serenity tests on selenium grid",
+      "serenity bdd parallel execution"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 1: Clone the Sample Project",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "codeRepository": "https://github.com/LambdaTest/Serenity-Selenium-Sample",
+        "text": "git clone https://github.com/LambdaTest/Serenity-Selenium-Sample\ncd Serenity-Selenium-Sample"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 1: Clone the Sample Project",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "mvn versions:display-dependency-updates"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "The sample feature file checks for the word \"LambdaTest\" on Google and validates the title of the resultant page",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "Feature: Google's Search Functionality\n    Scenario: Can find search results\n        When I type query as \"LambdaTest\"\n        And I submit\n        Then I should see title \"LambdaTest - Google Search\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 4",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\nBelow is the `LambdaTestSerenityDriver.java` file that shows the integration of Serenity with TestMu AI:\n\n```java title=\"LambdaTestSerenityDriver.java\"\npackage com.lambdatest;\n\nimport java.net.URL;\nimport java.util.HashMap;\nimport java.util.Iterator;\n\nimport org.openqa.selenium.WebDriver;\nimport org.openqa.selenium.chrome.ChromeOptions;\nimport org.openqa.selenium.remote.RemoteWebDriver;\n\nimport net.thucydides.core.util.EnvironmentVariables;\nimport net.thucydides.core.util.SystemEnvironmentVariables;\nimport net.thucydides.core.webdriver.DriverSource;\n\npublic class LambdaTestSerenityDriver implements DriverSource {\n\n    public WebDriver newDriver() {\n        EnvironmentVariables environmentVariables = SystemEnvironmentVariables.createEnvironmentVariables();\n\n        String username = System.getenv(\"LT_USERNAME\");\n        if (username == null) {\n            username = (String) environmentVariables.getProperty(\"lt.user\");\n        }\n\n        String accessKey = System.getenv(\"LT_ACCESS_KEY\");\n        if (accessKey == null) {\n            accessKey = (String) environmentVariables.getProperty(\"lt.key\");\n        }\n\n        String environment = System.getProperty(\"environment\");\n                ChromeOptions browserOptions = new ChromeOptions();\n        HashMap<String, Object> ltOptions = new HashMap<String, Object>();\n        ltOptions.put(\"plugin\", \"Serenity LambdaTest Plugin\");\n        ltOptions.put(\"w3c\", true);\n\n        Iterator it = environmentVariables.getKeys().iterator();\n        while (it.hasNext()) {\n            String key = (String) it.next();\n\n            if (key.equals(\"lt.user\") || key.equals(\"lt.key\") || key.equals(\"lt.grid\")) {\n                continue;\n            } else if (key.startsWith(\"lt_\")) {\n                ltOptions.put(key.replace(\"lt_\", \"\"), environmentVariables.getProperty(key));\n\n            } else if (environment != null && key.startsWith(\"environment.\" + environment)) {\n\n                ltOptions.put(key.replace(\"environment.\" + environment + \".\", \"\"),\n                        environmentVariables.getProperty(key));\n            }\n        }\n        browserOptions.setCapability(\"LT:Options\", ltOptions);\n\n        try {\n            String url = \"https://\" + username + \":\" + accessKey + \"@\" + environmentVariables.getProperty(\"lt.grid\")\n                    + \"/wd/hub\";\n            return new RemoteWebDriver(new URL(url), browserOptions);\n        } catch (Exception e) {\n            System.out.println(e);\n            return null;\n        }\n    }\n\n    public boolean takesScreenshots() {\n        return false;\n    }\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 4: Run the Test (Single Test)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "mvn verify -P single"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 4: Run the Test (Parallel Tests)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "mvn verify -P parallel"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Parallel Tests",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "codeRepository": "https://github.com/LambdaTest/agent-skills",
+        "text": "\nDefine similar classes for the remaining browsers.\n\n## Step 5: View Your Results\n---\n\nCheck the Automation Dashboard to see exactly what happened during your test.\n\nVisit the [TestMu AI Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build) to see your test results. Each session includes:\n\n- **Video recording** of the full test execution\n- **Screenshots** captured at each step\n- **Console logs** from the browser\n- **Network logs** for every request and response\n- **Selenium command logs** showing each driver action\n\n## Run Serenity BDD Tests Using Agent Skills\n---\n\nUse AI coding assistants to generate and run Serenity BDD tests with the TestMu AI Agent Skill.\n\nThe [serenity-bdd-skill](https://github.com/LambdaTest/agent-skills/tree/main/serenity-bdd-skill) is part of [TestMu AI Agent Skills](https://github.com/LambdaTest/agent-skills/) - structured packages that teach AI coding assistants how to write production-grade test automation.\n\nInstall the skill:\n\n```bash\ngit clone https://github.com/LambdaTest/agent-skills.git\ncp -r agent-skills/serenity-bdd-skill .claude/skills/\n\n# For Cursor / Copilot\ncp -r agent-skills/serenity-bdd-skill .cursor/skills/"
+      }
+    ],
+    "dateModified": "2026-09-09T19:13:32+05:30"
+  }) }}
+/>
+
 Run Serenity BDD tests on the TestMu AI cloud grid. This guide covers setup, running a sample test, configuring capabilities, and testing locally hosted pages.
 
 :::tip Sample repo

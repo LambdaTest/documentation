@@ -46,6 +46,150 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/hyperexecute-release-notes-2024/"
+    },
+    "headline": "HyperExecute Release Notes 2024",
+    "description": "Consolidated HyperExecute release notes for 2024",
+    "url": "https://www.testmuai.com/support/docs/hyperexecute-release-notes-2024/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "HyperExecute",
+    "keywords": [
+      "TestMu AI HyperExecute",
+      "TestMu AI HyperExecute help",
+      "TestMu AI HyperExecute documentation"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "To execute tests using the Android Emulator, add the following configurations to your hyperexecute.yaml",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "framework:\n  args:\n    isRealMobile: false"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "This can be configured with the following parameters",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "report: true\npartialReports:\n  location: target/surefire-reports/html\n  type: xml\n  frameworkName: junit"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "highlight-end",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\nPass the value of your email address via CLI by running the command\n\n```bash\n./hyperexecute --vars \"email=xyz@abc.com\" --vars \"email1=abc@xyz.com\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Add the --runson flag to your HyperExecute CLI command, followed by the desired OS",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "--runson YOUR_OS_NAME"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "HyperExecute now integrates with k6",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "runtime:\n    addons:\n      - name: k6\n        version: \"v0.52.0\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "HyperExecute now integrates with k6",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "env: \n  K6_BROWSER_ENABLED: true  \n  K6_BROWSER_HEADLESS: false \n  HE_CONTEXT_K6_SETUP_DEFAULT_BROWSER_PATH: true"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Previously, you might have needed to use",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "capabilities.setCapability(\"timezone\", \"UTC+05:30\");"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Now, you can simply set",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "capabilities.setCapability(\"timezone\", \"Kolkata\");"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "This allows you to",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "partialReports:\n  - location: reports/json\n    type: json\n    frameworkName: extent-native\n    email:\n        to:\n          - johndoe@example.com\n  - location: target/surefire-reports\n    type: html\n    frameworkName: testng\n    email:\n        to:\n          - johndoe@example.com"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Version 2.2.9",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "runtime:\n  - language: katalon\n    version: 8.6.5"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Improved test execution flow with alwaysRunPostSteps flag",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "alwaysRunPostSteps: true"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Email Delivery of HyperExecute Job Artifacts",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "uploadArtifacts:\n    ...\n    email:\n      to: \n        - <your_email_id@example.com>\n        - <another_email_id@example.com>"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 ---
 
 ## Version 2.6.5

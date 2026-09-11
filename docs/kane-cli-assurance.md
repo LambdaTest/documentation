@@ -41,6 +41,73 @@ canonical: https://www.testmuai.com/support/docs/kane-cli-assurance/
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/kane-cli-assurance/"
+    },
+    "headline": "The Assurance Lifecycle",
+    "description": "Go from requirement documents to designed, runnable tests with the kane-cli assurance commands \u2014 every test permanently linked to the requirement it verifies, coverage measured from sealed evidence, and the suite reconciled as your product changes.",
+    "url": "https://www.testmuai.com/support/docs/kane-cli-assurance/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Kane CLI",
+    "keywords": [
+      "kane cli assurance",
+      "requirements to tests",
+      "test coverage lifecycle"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "The loop",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "  requirement docs                          product changes\n        \u2502                                          \u2502\n        \u25bc                                          \u25bc\n  context ingest \u2500\u2500\u25ba context extract \u2500\u2500\u25ba context review \u2500\u2500\u25ba design tests\n  (snapshot the      (agent proposes       (promote to       (ACs, scenarios,\n   sources)           use-cases, cites      trusted)          one test per\n                      every claim)                            scenario \u2014 written\n                                                              as *_test.md files)\n                                                                     \u2502\n                                                                     \u25bc\n  maintain \u25c4\u2500\u2500 cover \u25c4\u2500\u2500 evidence pack \u25c4\u2500\u2500 testrun run \u25c4\u2500\u2500 testmd run \u25c4\u2500\u2500 context review\n  (reconcile   (proven     (sealed proof)   (batch replay)   (author each    (approve the\n   a changed    vs owed)                                      test once)      design output)\n   source)"
+      }
+    ],
+    "dateModified": "2026-07-22T01:14:43+05:30"
+  }) }}
+/>
+
 kane-cli began as a way to author and replay browser tests. The **assurance** commands take on the step before and after: describe what your product must do, and kane-cli designs the tests that prove it — each one permanently linked to the requirement it verifies. Run them, and coverage stops being a guess: every run reports exactly what it proved and what it still owes. And as your product changes, the suite is reconciled instead of quietly rotting.
 
 :::note

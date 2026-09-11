@@ -1,5 +1,6 @@
 ---
 id: testing-your-first-ai-agent
+toc_max_heading_level: 2
 title: How to Test Your First AI Agent With TestMu AI Agent Testing Platform
 hide_title: false
 sidebar_label: Quickstart (UI)
@@ -44,11 +45,68 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/testing-your-first-ai-agent/"
+    },
+    "headline": "How to Test Your First AI Agent With TestMu AI Agent Testing Platform",
+    "description": "Step-by-step guide to setting up and running your first AI agent test on TestMu AI: configure inputs, run validations, and review results.",
+    "url": "https://www.testmuai.com/support/docs/testing-your-first-ai-agent/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Agent Testing",
+    "keywords": [
+      "test your first ai agent",
+      "ai agent testing",
+      "agentic testing"
+    ],
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "dateModified": "2026-09-04T12:50:18+05:30"
+  }) }}
+/>
+
 You can test an AI agent on TestMu AI entirely from the dashboard, without writing code. You create an agent, upload documents that describe it, generate test scenarios, run an evaluation against your agent's API, and read the scored results.
 
 The whole flow takes a few minutes and works for chat and voice agents.
 
-## Prerequisites
+## What You Need Before You Start
 
 ---
 
@@ -58,7 +116,7 @@ Before you start, make sure you have the following in place.
 - Your agent's API endpoint URL. For a chat agent, this is the URL that receives messages.
 - Documents that describe your agent's requirements, such as a PDF or DOCX. The platform uses them to generate relevant scenarios.
 
-## Run Your First Evaluation
+## How to Run Your First Evaluation
 
 ---
 

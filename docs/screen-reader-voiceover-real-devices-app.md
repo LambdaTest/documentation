@@ -47,6 +47,63 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/screen-reader-voiceover-real-devices-app/"
+    },
+    "headline": "Screen Reader (VoiceOver) on iOS Devices for App Testing",
+    "description": "Test your app's and website's accessibility with TestMu AI's Screen Reader (VoiceOver) on iOS devices across multiple browsers. Navigate through app elements with spoken descriptions, ensuring compliance with WCAG standards.",
+    "url": "https://www.testmuai.com/support/docs/screen-reader-voiceover-real-devices-app/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Real Device",
+    "keywords": [
+      "screen reader",
+      "voiceover",
+      "accessibility"
+    ],
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "dateModified": "2026-07-29T17:52:46+05:30"
+  }) }}
+/>
+
 Manual accessibility testing ensures that your app or website is fully accessible and compliant with Web Content Accessibility Guidelines (WCAG). With iOS VoiceOver feature on <BrandName />, you can test the accessibility of your website on supported real iOS devices. 
 
 Ensuring accessibility with VoiceOver is essential for creating inclusive digital experiences that accommodate users with visual impairments. VoiceOver provides spoken feedback, allowing users to navigate, interact, and understand UI elements without relying on visual cues.

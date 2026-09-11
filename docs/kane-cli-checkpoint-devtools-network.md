@@ -39,6 +39,87 @@ canonical: https://www.testmuai.com/support/docs/kane-cli-checkpoint-devtools-ne
       }) }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/kane-cli-checkpoint-devtools-network/"
+    },
+    "headline": "Network Assertions",
+    "description": "Verify HTTP traffic (API responses, status codes, headers, response bodies, and request timing) captured by KaneAI in the background.",
+    "url": "https://www.testmuai.com/support/docs/kane-cli-checkpoint-devtools-network/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Kane CLI",
+    "keywords": [
+      "network assertion",
+      "http response",
+      "api status code"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Example Assertions",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "Assert: no API calls returned 5xx status codes\nAssert: the POST /api/login returned HTTP status 200\nAssert: all API responses completed in under 2 seconds\nAssert: no network requests failed with connection errors\nAssert: the /posts endpoint returned at least 10 items in the response body"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Example Extractions",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "Store the response body of the POST /api/login request\nExtract the status code of the last API call to /api/users\nStore all API request URLs"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Example If/Else",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "If the /api/auth returned 200 then proceed to dashboard, else show error message"
+      }
+    ],
+    "dateModified": "2026-07-03T19:09:57+05:30"
+  }) }}
+/>
+
 Network assertions let you verify HTTP traffic: API responses, status codes, headers, response bodies, and request timing.
 
 ## How Capture Works

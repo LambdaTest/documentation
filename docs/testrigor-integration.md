@@ -41,6 +41,63 @@ import { CookieTrackingSignup } from '@site/src/component/CookieTracking';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/testrigor-integration/"
+    },
+    "headline": "testRigor Integration",
+    "description": "Integrate TestMu AI with testRigor to perform desktop web, mobile web and native app testing across 5000+ real devices and 10,000+ browser/device combinations.",
+    "url": "https://www.testmuai.com/support/docs/testrigor-integration/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Integration",
+    "keywords": [
+      "testmu ai integration with testrigor",
+      "testmu ai and testrigor integration",
+      "testmu ai testrigor"
+    ],
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "dateModified": "2026-08-14T19:24:28+05:30"
+  }) }}
+/>
+
 # testRigor Integration
 testRigor is a Generative AI-based codeless test automation tool that helps companies empower manual testers to create test automation through executable specifications in plain English. This innovative system enables your team to easily build and maintain tests, while its AI Native features significantly reduce the effort required for test maintenance.
 

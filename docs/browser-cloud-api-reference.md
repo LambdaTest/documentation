@@ -46,6 +46,73 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/browser-cloud-api-reference/"
+    },
+    "headline": "API Reference - TestMu AI Browser Cloud",
+    "description": "REST API reference for TestMu AI Browser Cloud. Planned endpoints for sessions, context, profiles, files, extensions, quick actions, and tunnels.",
+    "url": "https://www.testmuai.com/support/docs/browser-cloud-api-reference/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Browser Cloud",
+    "keywords": [
+      "browser cloud api",
+      "rest api browser cloud",
+      "browser cloud endpoints"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Planned Endpoints",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "Sessions\n  POST   /v1/sessions              Create a session\n  GET    /v1/sessions              List sessions\n  GET    /v1/sessions/:id          Get session details\n  GET    /v1/sessions/:id/live     Get live session details\n  DELETE /v1/sessions/:id          Release a session\n  DELETE /v1/sessions              Release all sessions\n\nContext\n  GET    /v1/sessions/:id/context          Get full context\n  PUT    /v1/sessions/:id/context          Set full context\n  GET    /v1/sessions/:id/context/cookies  Get cookies\n  PUT    /v1/sessions/:id/context/cookies  Set cookies\n  DELETE /v1/sessions/:id/context          Clear context\n\nProfiles\n  GET    /v1/profiles              List profiles\n  POST   /v1/profiles              Create/save profile\n  GET    /v1/profiles/:id          Get profile\n  PUT    /v1/profiles/:id          Update profile\n  DELETE /v1/profiles/:id          Delete profile\n\nFiles\n  POST   /v1/sessions/:id/files           Upload file\n  GET    /v1/sessions/:id/files           List files\n  GET    /v1/sessions/:id/files/:path     Download file\n  GET    /v1/sessions/:id/files/archive   Download all (zip)\n  DELETE /v1/sessions/:id/files/:path     Delete file\n  DELETE /v1/sessions/:id/files           Delete all files\n\nExtensions\n  POST   /v1/extensions            Register extension\n  GET    /v1/extensions            List extensions\n  GET    /v1/extensions/:id        Get extension\n  DELETE /v1/extensions/:id        Delete extension\n\nQuick Actions\n  POST   /v1/scrape               Scrape a URL\n  POST   /v1/screenshot           Screenshot a URL\n  POST   /v1/pdf                  Generate PDF from URL\n\nTunnel\n  POST   /v1/tunnel/start         Start tunnel\n  POST   /v1/tunnel/stop          Stop tunnel\n  GET    /v1/tunnel/status        Get tunnel status"
+      }
+    ],
+    "dateModified": "2026-03-26T15:05:31+05:30"
+  }) }}
+/>
+
 # API Reference (Coming Soon)
 
 The REST API will expose all TestMu AI Browser SDK capabilities over HTTP, making

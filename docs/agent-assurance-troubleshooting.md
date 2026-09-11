@@ -1,5 +1,6 @@
 ---
 id: agent-assurance-troubleshooting
+toc_max_heading_level: 2
 title: Troubleshoot Agent Assurance
 hide_title: false
 sidebar_label: Troubleshooting
@@ -25,6 +26,185 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       { "@type": "ListItem", "position": 2, "name": "Support", "item": `${BRAND_URL}/support/docs/` },
       { "@type": "ListItem", "position": 3, "name": "Troubleshoot Agent Assurance", "item": `${BRAND_URL}/support/docs/agent-assurance-troubleshooting/` }
     ]
+  }) }}
+/>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/agent-assurance-troubleshooting/"
+    },
+    "headline": "Troubleshoot Agent Assurance",
+    "description": "Diagnose Agent Assurance installation, authentication, controller, profile, scenario, MCP, evidence, tmux, and browser-viewer problems.",
+    "url": "https://www.testmuai.com/support/docs/agent-assurance-troubleshooting/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Agent Testing",
+    "keywords": [
+      "rook troubleshooting",
+      "rook cli errors",
+      "rook agent unreachable"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Start with diagnostics",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "rook --version\nrook doctor\nrook auth status"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Open a new terminal after installation and check",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "command -v rook\necho \"$PATH\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "For a shell installation, rerun the public installer with a writable directory that is already on PATH",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "curl -fsSL https://raw.githubusercontent.com/LambdaTest/rook/main/install.sh \\\n  | bash -s -- --dir \"$HOME/bin\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "The npm installation requires npm to run under Node.js 22 or newer",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "node --version"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Allow release-assets.githubusercontent.com, retry outside the VPN, or rerun the public installer from an approved network",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "curl -fsSL https://raw.githubusercontent.com/LambdaTest/rook/main/install.sh | bash"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Rook says you are signed out",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "rook login\nrook auth status"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Credits or budget are exhausted",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "/plan\n/budget"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Use",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "/explore --force"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Create and verify a profile",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "/profile add\n/profile test <name>"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "A required environment variable is missing",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "/env list\n/env set <VARIABLE_NAME>"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Run with",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "/run --concurrency 1"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Use",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "/ui --no-open"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Start a named session",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "tmux new-session -s rook-test\nrook"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "List sessions",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "tmux list-sessions"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "View and interact with the session again",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "tmux attach-session -t rook-test"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Capture recent terminal output without attaching",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "tmux capture-pane -p -S -200 -t rook-test"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "If the session contains only disposable test processes and must be terminated, run",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "tmux kill-session -t rook-test"
+      }
+    ],
+    "dateModified": "2026-09-07T12:29:55+05:30"
   }) }}
 />
 

@@ -47,6 +47,215 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/smartui-pdf-java-sdk/"
+    },
+    "headline": "Upload PDFs via Java SDK",
+    "description": "Learn how to upload PDF files to SmartUI using the Java SDK for programmatic visual regression testing.",
+    "url": "https://www.testmuai.com/support/docs/smartui-pdf-java-sdk/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "SmartUI",
+    "keywords": [
+      "PDF Java SDK",
+      "SmartUI Java SDK",
+      "Visual Regression Testing"
+    ],
+    "proficiencyLevel": "Beginner",
+    "dependencies": "Java 8 or higher installed on your system; Maven or Gradle build tool; Familiarity with Java development; Visit the TestMu AI SmartUI page and log in with your credentials.; Obtain your LT_USERNAME and LT_ACCESS_KEY by clicking on the Access Key button, located at the top right corner of your dashboard..",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Here's an example of a project token",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "projectToken = \"123456#1234abcd-****-****-****-************\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "First, clone the sample project to get started",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "codeRepository": "https://github.com/LambdaTest/junit-selenium-sample",
+        "text": "git clone https://github.com/LambdaTest/junit-selenium-sample.git\ncd junit-selenium-sample"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Add the SmartUI Java SDK to your pom.xml",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "XML",
+        "text": "<dependency>\n    <groupId>io.github.lambdatest<\/groupId>\n    <artifactId>lambdatest-java-sdk<\/artifactId>\n    <version>1.0.23<\/version>\n<\/dependency>"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Then compile your project",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "mvn clean compile"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 3: Set up your credentials",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "export LT_USERNAME=\"${YOUR_LAMBDATEST_USERNAME}\"\nexport LT_ACCESS_KEY=\"${YOUR_LAMBDATEST_ACCESS_KEY}\"\nexport PROJECT_TOKEN=\"123456#1234abcd-****-****-****-************\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 3: Set up your credentials",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "set LT_USERNAME=\"${YOUR_LAMBDATEST_USERNAME}\"\nset LT_ACCESS_KEY=\"${YOUR_LAMBDATEST_ACCESS_KEY}\"\nset PROJECT_TOKEN=\"123456#1234abcd-****-****-****-************\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 3: Set up your credentials",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "PowerShell",
+        "text": "$env:LT_USERNAME=\"${YOUR_LAMBDATEST_USERNAME}\"\n$env:LT_ACCESS_KEY=\"${YOUR_LAMBDATEST_ACCESS_KEY}\"\n$env:PROJECT_TOKEN=\"123456#1234abcd-****-****-****-************\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Upload pre-existing PDFs from your local machine",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "\npublic class SmartuiPdfLocalTest {\n    public void uploadLocalPdf() throws Exception {\n        String projectToken = System.getenv(\"PROJECT_TOKEN\");\n\n        SmartUIConfig config = new SmartUIConfig()\n            .withProjectToken(projectToken)\n            .withFetchResult(true);\n\n        SmartUIPdf pdfUploader = new SmartUIPdf(config);\n\n        // Upload PDF file\n        String pdfPath = \"path/to/your/document.pdf\";\n        FormattedResults result = pdfUploader.uploadPDF(pdfPath);\n\n        System.out.println(\"Upload result: \" + result);\n    }\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Upload PDFs downloaded during TestMu AI cloud test execution",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "\npublic class SmartuiPdfCloudTest {\n    public void uploadCloudPdf(WebDriver driver) throws Exception {\n        String projectToken = System.getenv(\"PROJECT_TOKEN\");\n\n        // Download PDF from cloud session\n        String base64Content = (String) ((JavascriptExecutor) driver)\n            .executeAsyncScript(\"lambda-file-content=LambdaTest.pdf\");\n\n        // Convert base64 to PDF file\n        byte[] pdfBytes = Base64.getDecoder().decode(base64Content);\n        File pdfFile = new File(\"downloaded.pdf\");\n        try (FileOutputStream fos = new FileOutputStream(pdfFile)) {\n            fos.write(pdfBytes);\n        }\n\n        // Upload to SmartUI\n        SmartUIConfig config = new SmartUIConfig()\n            .withProjectToken(projectToken)\n            .withFetchResult(true);\n\n        SmartUIPdf pdfUploader = new SmartUIPdf(config);\n        FormattedResults result = pdfUploader.uploadPDF(pdfFile.getAbsolutePath());\n\n        System.out.println(\"Upload result: \" + result);\n    }\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 6: Run your tests",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "mvn test"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Batch Upload Example",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "public class SmartuiPdfBatchTest {\n    public void uploadMultiplePdfs() throws Exception {\n        String projectToken = System.getenv(\"PROJECT_TOKEN\");\n\n        SmartUIConfig config = new SmartUIConfig()\n            .withProjectToken(projectToken)\n            .withFetchResult(true)\n            .withBuildName(\"Batch-Upload-v1.0\");\n\n        SmartUIPdf pdfUploader = new SmartUIPdf(config);\n\n        String[] pdfPaths = {\n            \"documents/report1.pdf\",\n            \"documents/report2.pdf\",\n            \"documents/specification.pdf\"\n        };\n\n        for (String pdfPath : pdfPaths) {\n            FormattedResults result = pdfUploader.uploadPDF(pdfPath);\n            System.out.println(\"Uploaded \" + pdfPath + \": \" + result);\n        }\n    }\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Error Handling",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "public class SmartuiPdfErrorHandling {\n    public void uploadWithErrorHandling() {\n        try {\n            String projectToken = System.getenv(\"PROJECT_TOKEN\");\n\n            SmartUIConfig config = new SmartUIConfig()\n                .withProjectToken(projectToken)\n                .withFetchResult(true);\n\n            SmartUIPdf pdfUploader = new SmartUIPdf(config);\n            FormattedResults result = pdfUploader.uploadPDF(\"document.pdf\");\n\n            System.out.println(\"Upload successful: \" + result);\n\n        } catch (Exception e) {\n            System.err.println(\"Upload failed: \" + e.getMessage());\n            e.printStackTrace();\n        }\n    }\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Best Practices",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "String[] pdfPaths = {\n    \"documents/reports/report-v1.0.pdf\",\n    \"documents/specs/spec-v2.1.pdf\"\n};"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 14",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "config.withBuildName(\"PDF-Comparison-v1.0-\" + LocalDate.now());"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Verify PDF file is valid and not corrupted",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "   file document.pdf"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Check file path is correct",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "   File pdfFile = new File(\"path/to/document.pdf\");\n   if (!pdfFile.exists()) {\n       throw new FileNotFoundException(\"PDF file not found\");\n   }"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Verify PROJECT_TOKEN is set correctly",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "   echo $PROJECT_TOKEN"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Enable result fetching",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "   config.withFetchResult(true);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Check upload response",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "   FormattedResults result = pdfUploader.uploadPDF(pdfPath);\n   if (result == null) {\n       // Handle null result\n   }"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Clear Maven cache",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "   mvn clean"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Implement individual error handling",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "   for (String pdfPath : pdfPaths) {\n       try {\n           FormattedResults result = pdfUploader.uploadPDF(pdfPath);\n           System.out.println(\"Uploaded: \" + pdfPath);\n       } catch (Exception e) {\n           System.err.println(\"Failed: \" + pdfPath + \" - \" + e.getMessage());\n       }\n   }"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 :::caution
 This functionality is exclusive to our enterprise plan subscribers on SmartUI. For additional details or inquiries, please [contact us](https://www.testmuai.com/demo).
 :::

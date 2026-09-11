@@ -43,6 +43,80 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/qmetry-integration/"
+    },
+    "headline": "How to Run QMetry Automation Tests using TestMu AI?",
+    "description": "With this integration, run your tests from QMetry app, directly on TestMu AI's cloud-based Selenium Grid, on 10,000+ browser/device combinations",
+    "url": "https://www.testmuai.com/support/docs/qmetry-integration/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Integration",
+    "keywords": [
+      "TestMu AI integrations",
+      "QMetry",
+      "Test Automation for GUI Testing"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "For demo purpose, we have recorded a test scenario, which includes",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "- Opening [LambdaTest ToDo App](https://lambdatest.github.io/sample-todo-app/)\n- Check the first item in the list\n- Check the second item in the list\n- Add a new item in the list, with text \"Yey, Let's add it to list\"."
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "For the desired capabilities, we have chosen the following details",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "platform: macOS High Sierra\nbrowserName: Chrome\nversion: 87\nresolution: 1280x800\nnetwork: true\nvisual: true"
+      }
+    ],
+    "dateModified": "2026-09-09T19:13:32+05:30"
+  }) }}
+/>
+
 # Running Your QMetry Tests On <BrandName /> Selenium Grid
 
 * * *

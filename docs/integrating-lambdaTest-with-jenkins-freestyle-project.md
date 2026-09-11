@@ -17,6 +17,73 @@ canonical: https://www.testmuai.com/support/docs/integrating-testmu-with-jenkins
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/integrating-testmu-with-jenkins-freestyle-project/"
+    },
+    "headline": "Integrate TestMu AI With Jenkins Freestyle Project",
+    "description": "This document will help you integrate your Jenkins freestyle project with TestMu AI to ensure your Selenium testing scripts are executed on a cloud-based Grid of 3000+ real browsers.",
+    "url": "https://www.testmuai.com/support/docs/integrating-testmu-with-jenkins-freestyle-project/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Integration",
+    "keywords": [
+      "jenkins",
+      "freestyle project",
+      "testmu ai"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Integrate TestMu AI Jenkins plugin with your Jenkins Freestyle project for",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "python google-search-lambdatest.py"
+      }
+    ],
+    "dateModified": "2026-04-07T12:50:21+05:30"
+  }) }}
+/>
+
 ***
 
 

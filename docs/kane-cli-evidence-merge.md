@@ -39,6 +39,80 @@ canonical: https://www.testmuai.com/support/docs/kane-cli-evidence-merge/
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/kane-cli-evidence-merge/"
+    },
+    "headline": "Merging Evidence Packs",
+    "description": "Combine several kane-cli evidence packs into a single sealed pack with kane-cli evidence merge, including the strict default policy and collision handling.",
+    "url": "https://www.testmuai.com/support/docs/kane-cli-evidence-merge/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Kane CLI",
+    "keywords": [
+      "kane cli evidence merge",
+      "merge evidence packs",
+      "nightly evidence rollup"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 1",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "kane-cli evidence merge <targets...> --run-id nightly-2026-07-11"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "A nightly roll-up",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "kane-cli evidence merge \\\n  .testmuai/evidence/*.evidence \\\n  --run-id nightly-2026-07-11 \\\n  --title \"Nightly regression\""
+      }
+    ],
+    "dateModified": "2026-08-21T00:24:19+05:30"
+  }) }}
+/>
+
 `kane-cli evidence merge` combines several packs into one, for example the packs from a set of related runs you want to hand over as a single file:
 
 ```bash

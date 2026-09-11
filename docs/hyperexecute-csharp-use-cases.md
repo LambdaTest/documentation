@@ -43,6 +43,143 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       })
     }}
 ></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/hyperexecute-csharp-use-cases/"
+    },
+    "headline": "HyperExecute CSharp Use Cases",
+    "description": "Explore real-world C# test automation use cases on HyperExecute with NUnit, MSTest, and SpecFlow to speed up your daily testing workflows.",
+    "url": "https://www.testmuai.com/support/docs/hyperexecute-csharp-use-cases/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Documentation",
+    "keywords": [
+      "TestMu AI Hyperexecute",
+      "TestMu AI Hyperexecute help",
+      "TestMu AI Hyperexecute documentation"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Solution",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n### What Happens If We Don\u2019t Use It\n\n- Inefficient node usage\n- Slower test execution\n- Flaky tests delay feedback\n- No control over test splitting\n    \n---\n\n## 2. Matrix Setup\n### Edge Case\nTests behave differently on various OS platforms. Running only on one OS may hide platform-specific bugs. \n\n### Solution\nThe matrix runs tests concurrently on Mac, Windows, and Linux, detecting OS-specific issues like file paths, encoding, or browser behavior.\n\n```yaml title=\"hyperexecute.yaml\"\nmatrix:\n  os: [mac, win, linux]\n\nrunson: ${matrix.os}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "env",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n### What Happens If We Don\u2019t Use It\n- Random failures in parallel jobs\n- Slower builds\n- High network usage\n- Disk space issues\n- Inconsistent behavior across OSes\n\n---\n\n## 4. Pre Steps\n### Edge Case\nDependencies may not be restored or projects may not build correctly if pre-steps are missing, causing test failures downstream.\n\n### Solution\n\n```yaml title=\"hyperexecute.yaml\"\npre:\n - dotnet restore\n - dotnet list OnlySpecTest.csproj package > packages.txt\n#  - chmod 777 /tmp/NuGetScratch\n#  - nuget locals all -clear\n - dotnet build -c Release"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "path",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n### What Happens If We Don\u2019t Use It\n- No visual proof or logs\n- Debugging intermittent failures is hard\n- Manual reporting is required\n\n---\n\n## 6. Report Generation\n### Edge Case\nPartial or misconfigured reports can be unreadable, incomplete, or fail to merge in parallel executions.\n\n### Solution\nGenerates human-readable HTML reports showing pass/fail, steps, screenshots, and aggregated results for stakeholders.\n\n```yaml title=\"hyperexecute.yaml\"\nreport: true\npartialReports:\n  location: Report/\n  type: html\n  frameworkName: specflow"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "testDiscovery",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n### What Happens If We Don\u2019t Use It\n- Manual selection of tests\n- New tests may never run\n- Reduced test coverage\n  \n---\n\n## 8. testRunnerCommand\n### Edge Case\nRunning all tests every time is inefficient, and category typos or missing attributes can prevent execution.\n\n### Solution\nExecutes only tests with the specified Category. Supports parallelization and selective reruns.\n\n```yaml title=\"hyperexecute.yaml\"\ntestRunnerCommand: dotnet test --filter \"(Category=$test)\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "testDiscovery",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n- Dynamically extracts test names based on tags\n- Ensures new tests are automatically included\n- Supports parallel execution and CI/CD pipelines\n  \n### What Happens If We Don\u2019t Use It\n- Missing tests due to inconsistent tagging\n- Manual updates required\n- Increased risk of regressions\n  \n---\n\n## 10. Framework Version Compatibility Handling\n### Edge Case\nDifferent .NET versions require different build steps; incorrect handling causes build failures or runner crashes.\n\n### Solution\nBuilds projects correctly based on target framework, ensuring compatibility with HyperExecute runners.\n\n**`.NET 6`+**: Use dotnet build in pre-steps\n**`.NET <6`**: Build locally and upload DLLs\n\n```yaml title=\"hyperexecute.yaml\"\nC:\\PROGRA~2\\Micros~1\\2019\\Community\\MSBuild\\Current\\Bin\\MSBuild.exe /p:Configuration=Release /p:TargetFramework=net472 /t:restore"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Solution",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "XML",
+        "text": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<configuration> \n  <packageSources>\n    <add key=\"nuget.org\" value=\"https://api.nuget.org/v3/index.json\" protocolVersion=\"3\" />\n    <add key=\"Testplayer\" value=\"http://testplayer.jfrog.io/tcgplayer/api/nuget/nuget\" />\n  <\/packageSources>\n  <packageSourceCredentials>\n    <Testplayer>\n        <add key=\"Username\" value=\"readonlyuser\" />\n        <add key=\"ClearTextPassword\" value=\"R3dD3ckW1ns\" />\n    <\/Testplayer>\n  <\/packageSourceCredentials>\n<\/configuration>"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Solution",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "vstest.console.exe \"GlobalPolaris\\bin\\Debug\\net472\\GlobalPolaris.dll\" /Settings:GlobalPolaris\\RunSettings.runsettings /TestCaseFilter:\"FullyQualifiedName~$test\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Solution",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "& \"C:\\PROGRA~2\\NUnit.org\\nunit-console\\nunit3-console.exe\" \"<dll_path>\" --where=\"cat==$tag\" --explore"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "differentialUpload",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n### What Happens If We Don\u2019t Use It\n- Slow uploads\n- Wasted resources\n- Longer pipeline durations\n\n---\n\n## 15. Certificate Management for Browser Authentication\n### Edge Case\nBrowser tests requiring client certificates fail without proper installation.\n\n### Solution\nInstalls certificates in browser environment for authenticated sessions.\n\n```yaml title=\"hyperexecute.yaml\"\n%HYPEREXECUTE_WORKING_DIR%//Hyperexecute//cert_manager.exe --chrome -i atest089.pfx"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Solution",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n### What Happens If We Don\u2019t Use It\n- Missing or inaccurate test reporting \n- Dashboard metrics incomplete\n\n---\n\n## 17. Custom SpecFlow Reporting Configuration\n### Edge Case\nStandard reports may not provide enough detail for complex SpecFlow tests.\n\n### Solution\nGenerates custom reports with metadata and email notifications.\n\n```yaml title=\"hyperexecute.yaml\"\nreport: true\npartialReports:\n  location: GlobalPolaris/Reports\n  type: html\n  frameworkName: specflow-custom\nemail:\n  to: [\"example@lambdatest.com\"]\nmetaInfo: [\"project-name:Global Polaris Regression\",\"project-env:QA\"]"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "commands",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n### What Happens If We Don\u2019t Use It\n- Tests fail\n- New features not executed\n- Manual DLL verification required\n\n---\n\n## 19. Feature File Level Discovery (Matrix)\n### Edge Case\nAll tests running together reduce parallelism and rerun flexibility.\n\n### Solution\nRun each feature individually to enable parallel execution and selective reruns.\n\n```yaml title=\"hyperexecute.yaml\"\nmatrix:\n  featurefile:\n    - \"Features/Login.feature\"\n    - \"Features/Search.feature\"\n    - \"Features/Checkout.feature\"\n\ntest:\n  commands:\n    - nunit3-console.exe \"bin/Release/net6.0/YourProject.dll\" --where \"cat == '$featurefile'\""
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
 This guide provides a complete reference for integrating C# NUnit SpecFlow tests with HyperExecute, covering edge cases, solutions, YAML setup, artifact management, remote test discovery, and reporting.
 
 ## 1. Autosplit

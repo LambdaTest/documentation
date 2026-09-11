@@ -43,6 +43,80 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       })
     }}
 ></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/kane-ai-javascript-execution/"
+    },
+    "headline": "KaneAI - JavaScript Execution",
+    "description": "Learn how to execute your tests on Kane AI using custom javascript snippets",
+    "url": "https://www.testmuai.com/support/docs/kane-ai-javascript-execution/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "KaneAI",
+    "keywords": [
+      "testmu ai automation",
+      "testmu ai kaneai",
+      "kaneai guided walkthrough"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "A sample JavaScript code",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "function simulateTyping(element, text) {\n    element.value = '';  // Clear any existing value\n\n    for (let i = 0; i < text.length; i++) {\n        let char = text[i];\n        let keyDownEvent = new KeyboardEvent('keydown', {key: char});\n        element.dispatchEvent(keyDownEvent);\n        element.value += char;\n\n        let inputEvent = new Event('input', {bubbles: true});\n        element.dispatchEvent(inputEvent);\n        let keyUpEvent = new KeyboardEvent('keyup', {key: char});\n        element.dispatchEvent(keyUpEvent);\n    }\n\n    let changeEvent = new Event('change', {bubbles: true});\n    element.dispatchEvent(changeEvent);\n}\n\n// Example usage\nlet inputElement1 = document.querySelector('[aria-label=\"First Name\"]');\nlet inputElement2 = document.querySelector('[aria-label=\"Last Name\"]');\nlet inputElement3= document.querySelector('[aria-label=\"Email\"]');\nsimulateTyping(inputElement1, 'Aman');\nsimulateTyping(inputElement2, 'Chopra');\nsimulateTyping(inputElement3, 'amanc@lambdatest.com');\n\nreturn {\"First name\": \"Aman\", \"Last name\": \"Chopra\", \"email\": \"amanc@lambdatest.com\"};"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "For example, in the code snippet provided",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "return {\"First name\": \"Aman\", \"Last name\": \"Chopra\", \"email\": \"amanc@lambdatest.com\"};"
+      }
+    ],
+    "dateModified": "2026-09-09T19:16:50+05:30"
+  }) }}
+/>
 With KaneAI’s new JavaScript Execution feature, you now have the flexibility to write or paste custom JavaScript code snippets to perform tests. This allows for more advanced and customized test scenarios alongside KaneAI’s plain English test-writing format.
 
 This can be very useful for:

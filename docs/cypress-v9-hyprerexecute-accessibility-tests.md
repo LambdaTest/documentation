@@ -48,6 +48,88 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       })
     }}
 ></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/cypress-v9-hyprerexecute-accessibility-tests/"
+    },
+    "headline": "Accessibility Testing on HyperExecute using Cypress v9",
+    "description": "Run Accessibility Automation with Cypress v9 on HyperExecute to detect and report accessibility issues during automated execution.",
+    "url": "https://www.testmuai.com/support/docs/cypress-v9-hyprerexecute-accessibility-tests/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Documentation",
+    "keywords": [
+      "TestMu AI",
+      "Accessibility",
+      "Testing"
+    ],
+    "proficiencyLevel": "Beginner",
+    "dependencies": "HyperExecute YAML file which contains all the necessary instructions.; HyperExecute CLI in order to initiate a test execution Job .; Your TestMu AI Username and Access key; Setup your local machine as per your testing framework..",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "highlight-next-line",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n#### 2. Add the capabilities in the YAML file\n\nTo enable the accessibility testing within your automated test suite, set the `accessibility: true` in the [cypressOps](/support/docs/deep-dive-into-hyperexecute-yaml/#cypressops) flag of your YAML file. You can also define other settings capabilities as described below.\n\n```yaml title=\"hyperexecute.yaml\"\ncypressOps:\n  accessibility: true                 #Enable accessibility testing\n  accessibilityWcagVersion: \"wcag21a\" #Specify WCAG version (e.g., WCAG 2.1 Level A)\n  accessibilityBestPractice: false    #Exclude best practice issues from results\n  accessibilityNeedsReview: true      #Include issues that need review"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "3. In the support/index.js file",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n#### 4. In the `plugins/index.js` file\n\nAdd this code snippet in your `cypress/plugins/index.jss` file.\n\n```javascript title=\"cypress/plugins/index.js\"\nconst lambdatestAccessibility = require('lambdatest-cypress-cli/accessibility/plugin');\n\nmodule.exports = (on, config) => {\n  // `on` is used to hook into various events Cypress emits\n  // `config` is the resolved Cypress config\n  lambdatestAccessibility(on, config);\n  return config;\n};"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Run the below command in your terminal at the root folder of the project",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "./hyperexecute --config RELATIVE_PATH_OF_YOUR_YAML_FILE"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
 This document provides a detailed, step-by-step walkthrough for executing automated accessibility tests using <BrandName />'s Accessibility Tool on HyperExecute using Cypress v9 and below.
 :::note
 This documentation is applicable for **Cypress v9** and **previous versions**.

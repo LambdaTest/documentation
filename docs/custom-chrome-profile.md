@@ -41,6 +41,101 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/upload-custom-chrome-profile/"
+    },
+    "headline": "How to Upload Custom Chrome Profile on TestMu AI",
+    "description": "Upload and manage custom Chrome profiles to run automated tests on TestMu AI with specific browser settings.",
+    "url": "https://www.testmuai.com/support/docs/upload-custom-chrome-profile/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Web Automation",
+    "keywords": [
+      "upload custom chrome profile selenium",
+      "custom chrome profile automation testing",
+      "chrome browser profile testmu ai"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Zip the custom Chrome profile folder and upload it to TestMu AI cloud servers using the API below",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "curl --location --request POST 'https://api.lambdatest.com/automation/api/v1/files/profile/chrome' \\\n\n--header 'Authorization: Basic xxxxxx' \\\n\n--form 'profile=@\"/Users/abc/Desktop/zip.zip\"'"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "After you upload the compressed file, a similar URL will be generated",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JSON",
+        "text": "https://automation-prod-user-files.s3.amazonaws.com/profile/chrome/orgId-2939/zip.zip"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Add the above generated URL in your test script using the \"browserProfile\" capability as shown below",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "SQL",
+        "text": "\"browserProfile\":\"https://automation-prod-user-files.s3.amazonaws.com/profile/chrome/orgId-242939/zip.zip\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Managing Your Custom Chrome Profiles",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "curl --location --request GET 'https://api.lambdatest.com/automation/api/v1/files/profile/chrome' \\\n--header 'Authorization: Basic your_auth_key'"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Managing Your Custom Chrome Profiles",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "curl --location --request DELETE 'https://api.lambdatest.com/automation/api/v1/files/profile/chrome' \\\n--header 'Authorization: Basic your_auth_key' \\\n--header 'Content-Type: application/json' \\\n--data-raw '{\"key\": \"zip.zip\"}'"
+      }
+    ],
+    "dateModified": "2026-09-09T19:13:32+05:30"
+  }) }}
+/>
+
 # How to Upload Custom Chrome Profile?
 ***
 

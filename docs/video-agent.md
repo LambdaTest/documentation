@@ -1,5 +1,6 @@
 ---
 id: video-agent
+toc_max_heading_level: 2
 title: Video Agent Testing With TestMu AI
 hide_title: false
 sidebar_label: Video Agents
@@ -46,17 +47,78 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
-# How to Test Video Agents With TestMu AI Agent Testing
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/video-agent/"
+    },
+    "headline": "Video Agent Testing With TestMu AI",
+    "description": "Test real-time video agents on TestMu AI. A simulated candidate with a face and voice joins the session, records it, and scores your agent across four pillars.",
+    "url": "https://www.testmuai.com/support/docs/video-agent/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Agent Testing",
+    "keywords": [
+      "video agent testing",
+      "video ai agent testing",
+      "avatar conversation testing"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "How to Cover More Ground With Fan-Out",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "avatar faces  x  personas  x  test profiles  x  iterations  =  sessions"
+      }
+    ],
+    "dateModified": "2026-08-17T20:21:06+05:30"
+  }) }}
+/>
 
----
+The TestMu AI Agent Testing Platform tests video agents that talk to people on camera, whether an AI interviewer, an onboarding assistant, or a triage front desk, with no code changes to the agent. A simulated candidate with a real face and a real voice joins your agent's session, holds an actual conversation, records it, and scores what your agent did against criteria you write.
 
-If you have built an AI agent that talks to people on camera, an AI interviewer, an onboarding assistant, or a triage front desk, testing it by hand does not scale. Someone has to join the session, play a role, sit through the whole conversation, and form an opinion. Do that ten times with ten personalities and you lose a day.
+The only requirement is a web URL that a person could join with a camera and a microphone. There is no phone number to dial and no SDK to install. TestMu AI generates scenarios from a description you provide, replays them as full conversations, and returns a recording you can watch, a transcript you can read, and a verdict you can trace to the exact moment that earned it.
 
-Video agent testing automates the whole loop. TestMu AI joins your agent's session as a simulated candidate with a real face and a real voice, holds an actual conversation with it, records the session, and grades what your agent did against criteria you write. You get back a recording you can watch, a transcript you can read, and a verdict you can trace to the exact moment that earned it.
-
-The only requirement is a web URL that a person could join with a camera and a microphone. There is no phone number to dial and no SDK to install. You do not change your agent to make it testable. It fits QA and test engineers who need repeatable regression coverage, product owners who want evidence that a prompt change improved things, and engineering leads who need to know a release is safe before it ships.
-
-## What You Can Test
+## What You Can Test With Video Agent Testing
 
 ---
 
@@ -67,23 +129,23 @@ You can test anything reachable at a web URL that a person could join with a cam
 | Your agent's embeddable session link | Yes | Richest results. Where the platform exposes its own recording and transcript, TestMu AI uses them. |
 | Your agent hosted on your own domain | Yes | TestMu AI records the session from the browser. |
 | Any other joinable web session | Yes | Same as above. |
-| Agents that only exist inside Zoom, Meet, or Teams | Not yet | See [Limits and Known Constraints](#limits-and-known-constraints). |
+| Agents that only exist inside Zoom, Meet, or Teams | Not yet | See [what limits apply to video agent runs](#what-limits-apply-to-video-agent-runs). |
 
-## Before You Start
+## What You Need Before You Start
 
 ---
 
 Before you create a video agent, make sure you have the following in place.
 
-1. **A joinable URL for the agent you want to test.** A staging URL is ideal. Every test is a real conversation with whatever is behind that link, so point it at an environment you are comfortable exercising.
-2. **Video agent testing enabled for your organization.** This is switched on per organization. If you do not see the option when creating an agent, ask your administrator.
-3. **A clear definition of what "working" means.** This is the part worth thinking about, because it is what makes results useful rather than decorative. The [success criteria](#success-criteria-decide-the-verdict) section covers it in depth.
+- **A joinable URL for the agent you want to test.** A staging URL is ideal. Every test is a real conversation with whatever is behind that link, so point it at an environment you are comfortable exercising.
+- **Video agent testing enabled for your organization.** This is switched on per organization. If you do not see the option when creating an agent, ask your administrator.
+- **A clear definition of what "working" means.** This is the part worth thinking about, because it is what makes results useful rather than decorative. The [success criteria](#success-criteria-decide-the-verdict) section covers it in depth.
 
 :::warning
 Every session is a real conversation with whatever is behind the URL you supply. If you point it at production, it exercises production. Use a staging URL wherever you can.
 :::
 
-## Core Concepts
+## What Makes Up a Video Agent Test
 
 ---
 
@@ -143,9 +205,9 @@ Open the run dialog and fill in the fields below. These control who joins, how t
 
 ---
 
-Sessions appear as they finish. Each session carries its own recording, transcript, and verdict. The [Reading Your Results](#reading-your-results) section covers how to read them.
+Sessions appear as they finish. Each session carries its own recording, transcript, and verdict. The [How to Read Your Results](#how-to-read-your-results) section covers how to read them.
 
-## Writing Scenarios That Find Real Problems
+## How to Write Scenarios That Find Real Problems
 
 ---
 
@@ -216,7 +278,7 @@ When you bulk import scenarios, the CSV uses the following columns. Download the
 | `interaction_mode` | `live` for a real conversation. Recommended. |
 | `max_turns` | Conversation length ceiling |
 
-## Covering More Ground With Fan-Out
+## How to Cover More Ground With Fan-Out
 
 ---
 
@@ -237,7 +299,7 @@ For a worked example, take two scenarios, three personas each, and two iteration
 
 Iterations deserve emphasis. Conversational agents are not deterministic. A behavior that appears once may not be real. Running a scenario three times and seeing the same failure twice is the difference between a bug report and a guess.
 
-## Single Test vs Suite Run
+## How to Choose Between a Single Test and a Suite Run
 
 ---
 
@@ -250,7 +312,7 @@ You can run one ad-hoc test or a full suite. Start with single tests while you l
 | **Fan-out** | No | Yes |
 | **Where results land** | The video tests list | Grouped under that suite's run |
 
-## Reading Your Results
+## How to Read Your Results
 
 ---
 
@@ -334,7 +396,7 @@ The verdict is trustworthy because of what it is built on. Grading watches the a
 3. **Unverifiable is not a pass.** If a criterion cannot be confirmed from the recording, it does not count as met.
 4. **The evaluation is about your agent.** It is not about the simulated candidate, and not about the TestMu AI infrastructure. Where a problem cannot be attributed confidently, the evaluator says so rather than penalize you.
 
-## Limits and Known Constraints
+## What Limits Apply to Video Agent Runs
 
 ---
 
@@ -354,7 +416,7 @@ Two things are not supported yet:
 - Agents reachable only inside Zoom, Meet, or Teams. The requirement remains a joinable web URL.
 - Scheduled recurring video runs.
 
-## Getting Good Results
+## How to Get Good Results
 
 ---
 
@@ -367,7 +429,7 @@ The difference between a decorative test pack and a useful one comes down to a f
 - **Keep a stable smoke suite.** Same scenarios, same personas, every release. The value is in comparability over time.
 - **Read the evidence on failures.** The timestamp usually tells you in ten seconds whether it is a real defect or a criterion that needs rewording.
 
-## Troubleshooting Video Agent Tests
+## How to Troubleshoot Video Agent Tests
 
 ---
 
