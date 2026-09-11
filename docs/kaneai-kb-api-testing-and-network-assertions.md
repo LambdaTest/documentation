@@ -18,6 +18,7 @@ slug: kaneai-kb-api-testing-and-network-assertions/
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -215,6 +216,8 @@ KaneAI supports all standard HTTP methods:
 
 ### Example: GET Request
 
+<VerifiedTag value="Verified" />
+
 ```bash
 curl -X GET "https://api.example.com/users/123" \
   -H "Authorization: Bearer {{secret.api_token}}" \
@@ -222,6 +225,8 @@ curl -X GET "https://api.example.com/users/123" \
 ```
 
 ### Example: POST Request
+
+<VerifiedTag value="Verified" />
 
 ```bash
 curl -X POST "https://api.example.com/users" \
@@ -240,6 +245,8 @@ After a successful API call, the response is automatically stored as a **JSON va
 
 ### Accessing Response Data
 
+<VerifiedTag value="Verified" />
+
 ```
 -- After making a GET /users/123 API call --
 -- Response stored as {{api_users}} --
@@ -253,6 +260,8 @@ assert {{api_users.response.status}} is "active"
 
 Use dot notation to reach nested properties:
 
+<VerifiedTag value="Verified" />
+
 ```
 assert {{api_users.response.address.city}} is "New York"
 assert {{api_users.response.orders[0].total}} is "150.00"
@@ -261,6 +270,8 @@ assert {{api_users.response.orders[0].total}} is "150.00"
 ### Using API Data in UI Steps
 
 Combine API data with UI interactions:
+
+<VerifiedTag value="Verified" />
 
 ```
 -- Fetch user data from API --
@@ -300,6 +311,8 @@ Network log assertions are currently only supported on desktop web authoring in 
 
 Use the API to set up test data, then verify it appears correctly in the UI.
 
+<VerifiedTag value="Verified" />
+
 ```
 -- Step 1: Create user via API --
 -- (Use / → API → Paste curl for POST /api/users) --
@@ -317,6 +330,8 @@ assert {{new_user.response.name}} is visible in the users table
 
 Test that clicking "Add to Cart" on the UI actually sends the right API call.
 
+<VerifiedTag value="Verified" />
+
 ```
 -- Browse to product page --
 go to https://shop.example.com/products/laptop
@@ -331,6 +346,8 @@ assert "Added to cart" success message is visible
 ```
 
 ### Scenario: E-Commerce Checkout with Backend Validation
+
+<VerifiedTag value="Verified" />
 
 ```
 -- Step 1: Add items to cart via UI --
@@ -352,6 +369,8 @@ assert the order total on the page matches {{order_api.response.total}}
 
 Verify that the UI handles API errors gracefully.
 
+<VerifiedTag value="Verified" />
+
 ```
 -- Navigate to a page that fetches data --
 go to https://app.example.com/reports/nonexistent
@@ -369,6 +388,8 @@ assert no unhandled error or stack trace is shown on the page
 ### Scenario: API-Driven Test Data Setup
 
 Before running a UI test, use APIs to set up the exact state you need.
+
+<VerifiedTag value="Verified" />
 
 ```
 -- Create test product via API --
@@ -396,6 +417,8 @@ assert cart count shows "1"
 
 ### Scenario: Validate API Response Headers
 
+<VerifiedTag value="Verified" />
+
 ```
 -- Make an API call --
 -- GET /api/users with Authorization header --
@@ -408,6 +431,8 @@ assert {{api_users.headers.x-ratelimit-remaining}} is not "0"
 ## Combining API Testing with Database Queries
 
 KaneAI also supports database queries. You can combine API calls, UI interactions, and database validation in a single test:
+
+<VerifiedTag value="Verified" />
 
 ```
 -- Step 1: Create order via UI --

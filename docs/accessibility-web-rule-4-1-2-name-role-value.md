@@ -5,6 +5,31 @@ sidebar_label: Name, Role, Value (4.1.2)
 description: Rule-level Accessibility guidance for Name, Role, Value (WCAG 4.1.2 Level A).
 slug: accessibility-web-rule-4-1-2-name-role-value/
 ---
+import { BRAND_URL } from '@site/src/component/BrandName';
+
+<script type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify({
+       "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": BRAND_URL
+        },{
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Support",
+          "item": `${BRAND_URL}/support/docs/`
+        },{
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Name, Role, Value (4.1.2)",
+          "item": `${BRAND_URL}/support/docs/accessibility-web-rule-4-1-2-name-role-value/`
+        }]
+      })
+    }}
+></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({

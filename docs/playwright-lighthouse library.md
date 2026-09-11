@@ -153,11 +153,17 @@ The code sample for generating the Lighthouse Performance Metrics in the Playwri
 
 ## Prerequisites
 - Ensure that you have the Playwright Lighthouse Library installed in your web project.
+
+  <VerifiedTag value="Verified" />
+
   ```bash
   npm install playwright-lighthouse
   ```
 
 - Export the *LIGHTHOUSE_LAMBDATEST* environment variable to your project environment.
+
+  <VerifiedTag value="Verified" />
+
   ```bash
   export LIGHTHOUSE_LAMBDATEST='true'
   ```
@@ -229,6 +235,9 @@ Make sure you have your <BrandName /> credentials with you to run test automatio
 <Tabs className="docs__val">
 
 <TabItem value="bash" label="Linux / MacOS" default>
+
+  <VerifiedTag value="Verified" />
+
   <div className="lambdatest__codeblock">
   <CodeBlock className="language-bash">
   {`export LT_USERNAME=${ YOUR_LAMBDATEST_USERNAME()}
@@ -239,6 +248,8 @@ export LT_ACCESS_KEY=${ YOUR_LAMBDATEST_ACCESS_KEY()}`}
 </TabItem>
 
 <TabItem value="powershell" label="Windows" default>
+
+  <VerifiedTag value="Verified" />
 
   <div className="lambdatest__codeblock">
   <CodeBlock className="language-powershell">
@@ -252,6 +263,9 @@ set LT_ACCESS_KEY=${ YOUR_LAMBDATEST_ACCESS_KEY()}`}
 
 ### Run your test
 Pass the below command in the terminal to run the test:
+
+<VerifiedTag value="Verified" />
+
 ```bash
 node RELATIVE_PATH_OF_YOUR_TEST_FILE
 ```

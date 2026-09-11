@@ -15,6 +15,8 @@ site_name: TestMu AI
 slug: kane-cli-evidence-viewing/
 canonical: https://www.testmuai.com/support/docs/kane-cli-evidence-viewing/
 ---
+import VerifiedTag from '@site/src/component/verifiedTag';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -134,6 +136,8 @@ A sealed pack opens in the hosted viewer. When you serve a pack with `kane-cli e
 
 After a run in an interactive terminal, kane-cli offers to open the pack:
 
+<VerifiedTag value="Verified" />
+
 ```text
 View evidence in browser? (y/N)
 ```
@@ -141,6 +145,8 @@ View evidence in browser? (y/N)
 Accepting starts a local server and opens the hosted viewer pointed at your pack.
 
 In agent or non-interactive runs there is no prompt. kane-cli prints a hint line to stderr instead:
+
+<VerifiedTag value="Verified" />
 
 ```text
 evidence: view locally with `kane-cli evidence serve <path-to-pack>`
@@ -150,9 +156,13 @@ evidence: view locally with `kane-cli evidence serve <path-to-pack>`
 
 Serves one or more sealed packs to the hosted viewer:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 kane-cli evidence serve .testmuai/evidence/<execution_id>.evidence
 ```
+
+<VerifiedTag value="Verified" />
 
 ```text
 serving 1 pack on http://127.0.0.1:54321

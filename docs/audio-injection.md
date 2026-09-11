@@ -271,11 +271,15 @@ The audio file must be uploaded to <BrandName /> before it can be injected.
 
 Use the **Upload Media API** to upload an audio file to your <BrandName /> account.
 
+<VerifiedTag value="Verified" />
+
 ```bash
 curl -u "LT_USERNAME:LT_ACCESS_KEY"   -X POST "https://api.lambdatest.com/mfs/v1.0/media/upload"   -F "media_file=@/path/to/test.wav"   -F "type=audio"   -F "custom_id=SampleAudio"
 ```
 
 **Response**
+
+<VerifiedTag value="Verified" />
 
 ```json
 {

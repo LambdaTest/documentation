@@ -5,6 +5,31 @@ sidebar_label: On Input (3.2.2)
 description: Rule-level Accessibility guidance for On Input (WCAG 3.2.2 Level A).
 slug: accessibility-web-rule-3-2-2-on-input/
 ---
+import { BRAND_URL } from '@site/src/component/BrandName';
+
+<script type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify({
+       "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": BRAND_URL
+        },{
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Support",
+          "item": `${BRAND_URL}/support/docs/`
+        },{
+          "@type": "ListItem",
+          "position": 3,
+          "name": "On Input (3.2.2)",
+          "item": `${BRAND_URL}/support/docs/accessibility-web-rule-3-2-2-on-input/`
+        }]
+      })
+    }}
+></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({

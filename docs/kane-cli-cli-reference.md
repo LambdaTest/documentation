@@ -16,6 +16,7 @@ canonical: https://www.testmuai.com/support/docs/kane-cli-cli-reference/
 ---
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -184,6 +185,8 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 Launch the interactive TUI.
 
+<VerifiedTag value="Verified" />
+
 ```bash
 kane-cli --tui
 ```
@@ -193,6 +196,8 @@ kane-cli --tui
 ### `kane-cli run`
 
 Run a browser automation test.
+
+<VerifiedTag value="Verified" />
 
 ```bash
 kane-cli run "<objective>" [options]
@@ -237,6 +242,8 @@ On the `desktop` target, `--device` and `--app` are ignored. See [Mobile Testing
 
 Check the mobile tooling on this machine, and install the tooling Kane CLI manages.
 
+<VerifiedTag value="Verified" />
+
 ```bash
 kane-cli doctor              # required checks, each with a fix if it fails
 kane-cli doctor --install    # install the test tooling Kane CLI manages
@@ -250,6 +257,8 @@ kane-cli doctor --targets    # also list the emulators and simulators available
 ### `kane-cli login`
 
 Authenticate with <BrandName />. Opens a browser for OAuth, or accepts credentials for basic auth.
+
+<VerifiedTag value="Verified" />
 
 ```bash
 # OAuth (interactive)
@@ -267,6 +276,8 @@ See [Authentication](/support/docs/kane-cli-authentication/) for details on prof
 
 Revoke tokens and remove stored credentials for the active profile.
 
+<VerifiedTag value="Verified" />
+
 ```bash
 kane-cli logout
 ```
@@ -276,6 +287,8 @@ kane-cli logout
 ### `kane-cli whoami`
 
 Show the active profile and authentication status.
+
+<VerifiedTag value="Verified" />
 
 ```bash
 kane-cli whoami [--profile <name>]
@@ -289,6 +302,8 @@ Prints profile, environment, auth method, username, and token state (for OAuth).
 
 Show credit balance for the active profile.
 
+<VerifiedTag value="Verified" />
+
 ```bash
 kane-cli balance [--profile <name>]
 ```
@@ -298,6 +313,8 @@ kane-cli balance [--profile <name>]
 ### `kane-cli profiles`
 
 Manage named authentication profiles.
+
+<VerifiedTag value="Verified" />
 
 ```bash
 kane-cli profiles list           # List all profiles
@@ -312,6 +329,8 @@ See [Authentication: Profiles](/support/docs/kane-cli-authentication/#profiles) 
 ### `kane-cli config`
 
 View and modify persistent settings.
+
+<VerifiedTag value="Verified" />
 
 ```bash
 kane-cli config show                       # Show all settings
@@ -336,6 +355,8 @@ See [Configuration](/support/docs/kane-cli-configuration/) for the full settings
 ### `kane-cli feedback`
 
 Submit feedback on a completed test run.
+
+<VerifiedTag value="Verified" />
 
 ```bash
 kane-cli feedback \
@@ -414,6 +435,8 @@ Settings are stored at `~/.testmuai/kaneai/tui-config.json`. See [Configuration]
 ---
 
 ## Directory Structure
+
+<VerifiedTag value="Verified" />
 
 ```
 ~/.testmuai/kaneai/

@@ -15,6 +15,7 @@ slug: hyperexecute-how-to-manage-project-level-secrets/
 canonical: https://www.testmuai.com/support/docs/hyperexecute-how-to-manage-project-level-secrets/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -159,6 +160,8 @@ Your secret will be encrypted and securely stored.
 
 ### Step 3: Use Secrets in Your HyperExecute YAML
 To reference the secrets in your HyperExecute configuration file (`hyperexecute.yaml`):
+
+<VerifiedTag value="Verified" />
 
 ```yaml title="hyperexecute.yaml"
 version: 0.1

@@ -15,6 +15,7 @@ slug: run-python-tests-on-selenium-grid/
 canonical: https://www.testmuai.com/support/docs/run-python-tests-on-selenium-grid/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -138,6 +139,9 @@ Now we are all set to execute the first Python test on <BrandName /> Selenium Gr
 
 ### Sample Python & Selenium Automation Script
 ***
+
+<VerifiedTag value="Verified" />
+
 ```
 """
 LambdaTest Selenium automation sample example

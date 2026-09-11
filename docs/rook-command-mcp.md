@@ -6,6 +6,33 @@ sidebar_label: /mcp
 description: Inspect, add, approve, enable, disable, or remove MCP server definitions used by Rook.
 slug: rook-command-mcp/
 ---
+import VerifiedTag from '@site/src/component/verifiedTag';
+import { BRAND_URL } from '@site/src/component/BrandName';
+
+
+<script type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify({
+       "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": BRAND_URL
+        },{
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Support",
+          "item": `${BRAND_URL}/support/docs/`
+        },{
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Rook /mcp Command",
+          "item": `${BRAND_URL}/support/docs/rook-command-mcp/`
+        }]
+      })
+    }}
+></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -68,6 +95,8 @@ Use <code>/mcp</code> to manage MCP servers that Rook can discover or use for re
 
 ## Interactive syntax
 
+<VerifiedTag value="Verified" />
+
 ~~~text
 /mcp
 /mcp list
@@ -77,6 +106,8 @@ Use <code>/mcp</code> to manage MCP servers that Rook can discover or use for re
 ~~~
 
 ## Headless syntax
+
+<VerifiedTag value="Verified" />
 
 ~~~bash
 rook mcp list [--json]
@@ -95,6 +126,8 @@ For stdio servers, pass the command as the positional value after the server nam
 ## Real-world verification example
 
 A refund agent says it issued a refund. Configure a separate MCP server that has a read-only <code>get_refund_status</code> tool:
+
+<VerifiedTag value="Verified" />
 
 ~~~bash
 rook mcp add refund-reader 'refund-mcp-server --read-only' --scope project

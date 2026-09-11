@@ -16,6 +16,7 @@ slug: codefresh-ci-integration-with-testmu/
 canonical: https://www.testmuai.com/support/docs/codefresh-ci-integration-with-testmu/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -156,6 +157,9 @@ Teams can quickly and easily build, test, and deploy their applications on any c
   - Then to execute the pipeline, click the ```RUN``` button.
 
 You may take reference from this YAML to run your own test project/scripts
+
+<VerifiedTag value="Verified" />
+
 ```
 version: "1.0"
 stages:
@@ -197,6 +201,8 @@ You can see the pipeline running.
 
 Similarly you can run test scripts based on any framework using this above described method.
 Here is the selenium test script for your reference.
+
+<VerifiedTag value="Verified" />
 
 ```
 import unittest

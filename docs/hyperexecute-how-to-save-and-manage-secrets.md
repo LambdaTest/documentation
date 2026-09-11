@@ -17,6 +17,7 @@ canonical: https://www.testmuai.com/support/docs/hyperexecute-how-to-save-and-ma
 
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -230,6 +231,8 @@ During HyperExecute test execution, you might need to access sensitive informati
 
 Consider these secret key names: `secretKey1` and `secretKey2`.
 
+<VerifiedTag value="Verified" />
+
 ```yaml
 version: 0.1
 env:
@@ -299,6 +302,8 @@ Your secret will be encrypted and securely stored.
 
 ### Step 3: Use Secrets in Your HyperExecute YAML
 To reference the secrets in your HyperExecute configuration file (`hyperexecute.yaml`):
+
+<VerifiedTag value="Verified" />
 
 ```yaml title="hyperexecute.yaml"
 version: 0.1

@@ -25,6 +25,7 @@ canonical: https://www.testmuai.com/support/docs/servicenow-integration/
 
 import CodeBlock from '@theme/CodeBlock';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -125,7 +126,13 @@ To enable integration, you need to create an OAuth application in your ServiceNo
    - **Name:** Enter a name (e.g., <BrandName /> Integration).
    - **Client ID:** (Optional) Leave blank to auto-generate or specify your own.
    - **Client Secret:** (Optional) Leave blank to auto-generate or specify your own.
+
+   <VerifiedTag value="Verified" />
+
    - **Redirect URL:** <div className="lambdatest__codeblock"><CodeBlock>https://integrations.lambdatest.com/servicenow/auth/callback</CodeBlock></div>
+
+   <VerifiedTag value="Verified" />
+
    - **Logo URL:** <CodeBlock>https://assets.testmuai.com/resources/images/logos/logo.svg</CodeBlock>
   <img loading="lazy" src={require('../assets/images/integrations/servicenow/2.png').default} alt="2" className="doc_img"/>
 

@@ -6,6 +6,33 @@ sidebar_label: /clear
 description: Clear command output from the current Rook TUI without changing project or session state.
 slug: rook-command-clear/
 ---
+import VerifiedTag from '@site/src/component/verifiedTag';
+import { BRAND_URL } from '@site/src/component/BrandName';
+
+
+<script type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify({
+       "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": BRAND_URL
+        },{
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Support",
+          "item": `${BRAND_URL}/support/docs/`
+        },{
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Rook /clear Control",
+          "item": `${BRAND_URL}/support/docs/rook-command-clear/`
+        }]
+      })
+    }}
+></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -63,6 +90,8 @@ slug: rook-command-clear/
 # <code>/clear</code> Control
 
 Enter <code>/clear</code> in the TUI to clear retained command-output state and return to the prompt.
+
+<VerifiedTag value="Verified" />
 
 ~~~text
 /clear

@@ -164,6 +164,8 @@ cd playwright-python
 
 2. Install the Python dependencies.
 
+<VerifiedTag value="Verified" />
+
 ```
 pip install -r requirements.txt
 ```

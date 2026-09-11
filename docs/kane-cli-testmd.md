@@ -20,6 +20,7 @@ canonical: https://www.testmuai.com/support/docs/kane-cli-testmd/
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -230,6 +231,8 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 **Step 1:** Create a test file. The filename must end in `_test.md`:
 
+<VerifiedTag value="Verified" />
+
 ```markdown
 ---
 mode: testing
@@ -246,6 +249,8 @@ Verify at least one product result is visible.
 ```
 
 **Step 2:** Run the test:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 kane-cli testmd run amazon_test.md --agent
@@ -276,6 +281,8 @@ A `_test.md` file has four parts in order:
 ### YAML Frontmatter
 
 Configuration between `---` markers at the top of the file:
+
+<VerifiedTag value="Verified" />
 
 ```yaml
 ---
@@ -312,6 +319,8 @@ headless: true
 
 On macOS Apple Silicon, `target:` also accepts the two mobile values, `emulator` for a virtual Android device and `simulator` for a virtual iOS device, with the app under test as its own root key:
 
+<VerifiedTag value="Verified" />
+
 ```yaml
 ---
 target: emulator             # emulator (Android) | simulator (iOS)
@@ -345,6 +354,8 @@ Each `## H2` heading marks a test step. The heading text is a label for your ref
 
 You can override frontmatter settings for individual steps by adding a `yaml` fenced block immediately under the step heading:
 
+<VerifiedTag value="Verified" />
+
 ````markdown
 ## Submit the form
 ```yaml
@@ -376,6 +387,8 @@ The body of a step (everything after the optional `yaml` block) must be exactly 
 - **An `@import`** — a single line of the form `@import <path>` and nothing else.
 
 Mixing prose and `@import` in the same body is a parse error.
+
+<VerifiedTag value="Verified" />
 
 ```markdown
 ## OK — prose
@@ -426,6 +439,8 @@ A one-line tweak at the top of a 20-step test re-authors all 20 steps on the nex
 
 Extract repeating flows (login, setup, cookie banner dismissal) into helper files:
 
+<VerifiedTag value="Verified" />
+
 ```markdown
 ## Sign in
 @import ./helpers/login.md
@@ -452,6 +467,8 @@ Full detail: [Composing tests with @import](/support/docs/kane-cli-testmd-compos
 
 Variables let you parameterise objectives with reusable values and secrets. Reference a variable inside any prose objective using its placeholder syntax (default `{{name}}`):
 
+<VerifiedTag value="Verified" />
+
 ```markdown
 ## Sign in
 Open the login page and sign in as {{tester_email}} with password {{tester_password}}.
@@ -460,6 +477,8 @@ Open the login page and sign in as {{tester_email}} with password {{tester_passw
 ### Defining variables in a test.md
 
 Variables can be set in three places inside a `_test.md` file, in order of increasing specificity:
+
+<VerifiedTag value="Verified" />
 
 ````markdown
 ---
@@ -491,6 +510,8 @@ Shorthand `name: "value"` works too — `tester_email: "alice@example.com"` is e
 
 Secrets are variables with `secret: true`. They are masked in displayed output, redacted in `Result.md`, and routed to TestmuAI's secrets store instead of being synced as plain Test Manager variables.
 
+<VerifiedTag value="Verified" />
+
 ```yaml
 variables:
   api_key:
@@ -503,6 +524,8 @@ variables:
 ## Context
 
 Context files are plain Markdown text that the agent reads alongside your objective. Use them for standing instructions — coding conventions, accounts to use, sites to avoid.
+
+<VerifiedTag value="Verified" />
 
 ```yaml
 ---
@@ -518,6 +541,8 @@ You can pass either a file path (resolved at runtime) or inline Markdown text. S
 ## Recording a Test from a Live Session
 
 Run an ad-hoc objective with the `--name` flag to save it as a replayable test file:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 kane-cli run "Search for noise-cancelling headphones on amazon.com" --name amazon-search
@@ -570,6 +595,8 @@ Flag values win over frontmatter for all settings **except** `variables`. The fi
 
 After a run, Kane CLI creates an output directory next to the test file:
 
+<VerifiedTag value="Verified" />
+
 ```
 amazon_test.md
 output-amazon/
@@ -599,6 +626,8 @@ To check whether a test passed or where it failed, read `Result.md` instead of r
 ---
 
 ## CI/CD Usage
+
+<VerifiedTag value="Verified" />
 
 ```bash
 kane-cli testmd run ./tests/checkout_test.md \
@@ -654,6 +683,8 @@ Parse errors abort **before** any browser launch with exit code `2`:
 
 **`tests/checkout_test.md`:**
 
+<VerifiedTag value="Verified" />
+
 ```markdown
 ---
 mode: testing
@@ -683,6 +714,8 @@ Click "Proceed to Checkout", fill in shipping details, and assert the order conf
 
 **`tests/helpers/login.md`:**
 
+<VerifiedTag value="Verified" />
+
 ```markdown
 # Login helper
 
@@ -694,6 +727,8 @@ Enter {{username}} in the email field and {{password}} in the password field, th
 ```
 
 **Run:**
+
+<VerifiedTag value="Verified" />
 
 ```bash
 kane-cli testmd run tests/checkout_test.md --agent

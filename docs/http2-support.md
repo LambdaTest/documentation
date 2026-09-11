@@ -17,6 +17,7 @@ canonical: https://www.testmuai.com/support/docs/http2-support/
 ---
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -102,6 +103,8 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 Using HTTP/2 with <BrandName /> Tunnel does not require any special configuration or flags. The tunnel automatically detects and proxies HTTP/2 traffic alongside HTTP/1, ensuring that your tests accurately reflect the behavior of web applications under real-world conditions.
 
 To start using <BrandName /> Tunnel with HTTP/2 support, simply initiate the tunnel as you normally would:
+
+<VerifiedTag value="Verified" />
 
 ```sh
 ./LambdaTestTunnel --user YourLambdaTestUsername --key YourLambdaTestAccessKey

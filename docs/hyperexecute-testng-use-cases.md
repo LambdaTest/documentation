@@ -423,6 +423,8 @@ By default, HyperExecute VMs are provisioned with **Java 8**. If your project re
 
 **YAML Example for Java 11**
 
+<VerifiedTag value="Verified" />
+
 ```yaml title="hyperexecute.yaml"
 runtime:
   language: java
@@ -447,6 +449,8 @@ runtime:
 
 Automatic Discovery (Tag-based)
 
+<VerifiedTag value="Verified" />
+
 ```yaml title="hyperexecute.yaml"
 testDiscovery:
   type: automatic
@@ -458,6 +462,8 @@ testDiscovery:
 ```
 
 Raw Command Discovery
+
+<VerifiedTag value="Verified" />
 
 ```yaml title="hyperexecute.yaml"
 testDiscovery:
@@ -475,6 +481,8 @@ You can pass logical tag expressions in testDiscovery or use the ignoredTags par
 
 Example: Logical Tag Filtering
 
+<VerifiedTag value="Verified" />
+
 ```yaml title="hyperexecute.yaml"
 testDiscovery:
   command: .hyperexecute/snooper --targetOs=win \
@@ -487,6 +495,8 @@ testDiscovery:
 ```
 
 Example: Ignored Tags
+
+<VerifiedTag value="Verified" />
 
 ```yaml
 ignoredTags: ["@tag3", "@tag2"]
@@ -503,6 +513,8 @@ ignoredTags: ["@tag3", "@tag2"]
 In projects with modules (web, api, mobile), discovered test paths may include the module prefix (e.g., web/), causing mismatches.
 
 **Solution :** Use awk to strip module prefixes from discovered test paths.
+
+<VerifiedTag value="Verified" />
 
 ```yaml title="hyperexecute.yaml"
 testDiscovery:
@@ -524,6 +536,8 @@ To avoid duplicate executions:
 - Let HyperExecute discovery handle filtering.
 
 **Example: testng.xml**
+
+<VerifiedTag value="Verified" />
 
 ```xml title="testng.xml"
 <suite name="Sanity Suite">
@@ -557,6 +571,8 @@ To avoid duplicate executions:
 
 Discovery YAML Example
 
+<VerifiedTag value="Verified" />
+
 ```yaml title="hyperexecute.yaml"
 testDiscovery:
   type: automatic
@@ -572,6 +588,8 @@ Large reports may fail to render in HyperExecute dashboard. It is recommended to
 
 YAML Example
 
+<VerifiedTag value="Verified" />
+
 ```yaml title="hyperexecute.yaml"
 report: true
 partialReports:
@@ -583,11 +601,15 @@ partialReports:
 To view Locally
 - Install Allure
 
+<VerifiedTag value="Verified" />
+
 ```bash
 brew install allure
 ```
 
 - Open report
+
+<VerifiedTag value="Verified" />
 
 ```bash
 allure open ./pathDirectory   # Replace pathDirectory with the actual report folder.
@@ -599,6 +621,8 @@ This guide covers the most common real-world scenarios and troubleshooting cases
 
 ### 1. Handling Python Version Compatibility Issues
 Sometimes, test scripts fail due to Python version incompatibility. For example:
+
+<VerifiedTag value="Verified" />
 
 ```bash title="Terminal"
 $ python test_script.py
@@ -612,6 +636,9 @@ In Python versions 3.3 to 3.9, MutableMapping was part of the collections module
 **Solution :** To ensure compatibility, match the Python runtime version with your local setup. Specify the version explicitly in your YAML configuration.
 
 **YAML Translation :**
+
+<VerifiedTag value="Verified" />
+
 ```yaml title="hyperexecute.yaml"
 runtime:
   - language: python
@@ -624,17 +651,24 @@ Certain packages require a minimum version of PIP to install successfully. An ou
 
 **Solution :** Upgrade PIP before installing dependencies.
 
+<VerifiedTag value="Verified" />
+
 ```bash
 python -m pip install --upgrade pip
 ```
 
 If you are using Python 3:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 python3 -m pip install --upgrade pip
 ```
 
 **YAML Translation :**
+
+<VerifiedTag value="Verified" />
+
 ```yaml title="hyperexecute.yaml"
 pre:
   - python3 -m pip install --upgrade pip
@@ -647,6 +681,8 @@ If your pipeline fails with:
 It means that the `requirements.txt` file might be missing or ignored in .gitignore.
 
 **Solution :** Ensure the file exists in the project root. Remove or comment out any requirements.txt entry from .gitignore. For this issue, ther are no YAML change required. This is a file management fix. However, verify that the command below correctly references the existing file name.
+
+<VerifiedTag value="Verified" />
 
 ```bash
 pip install -r requirements.txt --cache-dir CacheDir
@@ -669,6 +705,8 @@ If your pre step installs dependencies every time, your caching configuration mi
 
 YAML Translation:
 
+<VerifiedTag value="Verified" />
+
 ```yaml title="hyperexecute.yaml"
 cacheKey: '{{ checksum "requirements.txt" }}'
 cacheDirectories:
@@ -681,11 +719,15 @@ pre:
 #### Case 1: Public Registry Installation
 If all dependencies are public, install them directly:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 pip3 install -r requirements.txt --cache-dir CacheDir
 ```
 
 **YAML Translation :**
+
+<VerifiedTag value="Verified" />
 
 ```yaml title="hyperexecute.yaml"
 pre:
@@ -695,6 +737,8 @@ pre:
 #### Case 2: Private Registry Installation
 When using a private registry, authentication is required. Use proxy variables and authorization tokens to install packages securely.
 
+<VerifiedTag value="Verified" />
+
 ```bash
 pip3 install --proxy http://$LT_PROXY_HOST:$LT_PROXY_PORT \
   --header "Authorization: Bearer $PRIVATE_REGISTRY_TOKEN" \
@@ -702,6 +746,8 @@ pip3 install --proxy http://$LT_PROXY_HOST:$LT_PROXY_PORT \
 ```
 
 **YAML Translation :**
+
+<VerifiedTag value="Verified" />
 
 ```yaml title="hyperexecute.yaml"
 pre:
@@ -711,6 +757,8 @@ pre:
 ```
 
 **Sample `requirements.txt` file :**
+
+<VerifiedTag value="Verified" />
 
 ```text
 --extra-index-url https://your-private-registry.com/simple
@@ -731,6 +779,8 @@ When connecting to a database during test runs, you may encounter:
 **Solution :** Expose the database service using the `--expose` flag in your YAML configuration.
 
 **YAML Translation :**
+
+<VerifiedTag value="Verified" />
 
 ```yaml title="hyperexecute.yaml"
 args:
@@ -763,12 +813,16 @@ To execute tests based on substrings or tags:
 
 **Example Commands :**
 
+<VerifiedTag value="Verified" />
+
 ```bash
 pytest -k "TestAdvanceBoy"
 behave -t @smoke
 ```
 
 **YAML Translation :**
+
+<VerifiedTag value="Verified" />
 
 ```yaml title="hyperexecute.yaml"
 testRunnerCommand: pytest -k "TestAdvanceBoy"
@@ -778,11 +832,15 @@ testRunnerCommand: behave -t @smoke
 
 To execute an entire feature file:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 behave -f feature_path/sample.feature
 ```
 
 **YAML Translation :**
+
+<VerifiedTag value="Verified" />
 
 ```yaml title="hyperexecute.yaml"
 testRunnerCommand: behave -f feature_path/sample.feature
@@ -792,11 +850,15 @@ testRunnerCommand: behave -f feature_path/sample.feature
 
 - List all feature files containing a specific tag (e.g., @smoke):
 
+<VerifiedTag value="Verified" />
+
 ```bash
 grep -rl "@smoke" features/*.feature
 ```
 
 **YAML Translation :**
+
+<VerifiedTag value="Verified" />
 
 ```yaml title="hyperexecute.yaml"
 testDiscovery:
@@ -806,11 +868,15 @@ testDiscovery:
 
 - List all scenarios under that tag :
 
+<VerifiedTag value="Verified" />
+
 ```bash
 grep -rH -A 3 "@smoke" features/*.feature | grep -i "Scenario" | cut -d ":" -f 2-
 ```
 
 **YAML Translation :**
+
+<VerifiedTag value="Verified" />
 
 ```yaml title="hyperexecute.yaml"
 testDiscovery:
@@ -821,11 +887,15 @@ testDiscovery:
 ### 10. Generating JSON Reports with Behave
 To generate JSON reports for your test execution:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 behave -f json.pretty -o reports/test_report.json
 ```
 
 **YAML Translation :**
+
+<VerifiedTag value="Verified" />
 
 ```yaml title="hyperexecute.yaml"
 post:
@@ -837,6 +907,8 @@ To dynamically name artifacts using environment variables, define them in your Y
 
 **YAML Translation :**
 
+<VerifiedTag value="Verified" />
+
 ```yaml title="hyperexecute.yaml"
 uploadArtefacts:
   - name: "${abcd}"
@@ -846,6 +918,8 @@ uploadArtefacts:
 
 Pass variable values through CLI during job execution:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 ./hyperexecute -u <your_username> -k <your_access_key> -i <relative_path_of_config> --vars "abcd=Folder"
 ```
@@ -853,6 +927,8 @@ If abcd=Folder, the uploaded artifact will appear as Folder on the HyperExecute 
 
 ### 12. Using a Cache Directory for Package Installation
 To enable caching for faster dependency installation:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 pip3 install -r requirements.txt --cache-dir CacheDir
@@ -872,6 +948,8 @@ Use the `checkTunnelOnFailure` parameter in your YAML configuration. This ensure
 
 **YAML Translation:**
 
+<VerifiedTag value="Verified" />
+
 ```yaml title="hyperexecute.yaml"
 checkTunnelOnFailure: true
 ```
@@ -879,22 +957,33 @@ checkTunnelOnFailure: true
 ### 14. Different Ways to Execute Tests in Pytest via CLI
 #### Case 1: Run Tests in a Specific Directory or File
 
+<VerifiedTag value="Verified" />
+
 ```bash
 pytest path/to/test_directory/
 pytest path/to/test_file.py
 ```
 
 #### Case 2: Run a Specific Test Function Within a File
+
+<VerifiedTag value="Verified" />
+
 ```bash
 pytest path/to/test_file.py::test_function_name
 ```
 
 #### Case 3: Run Tests Matching a Substring or Keyword
+
+<VerifiedTag value="Verified" />
+
 ```bash
 pytest -k "test_keyword"
 ```
 
 **Example :**
+
+<VerifiedTag value="Verified" />
+
 ```bash
 pytest -k "login"
 ```
@@ -928,6 +1017,8 @@ def test_debug_logging():
 
 **Terminal Output Example :**
 
+<VerifiedTag value="Verified" />
+
 ```bash
 DEBUG:root:Value is 42, running debug checks
 DEBUG:root:This is a debug message
@@ -938,6 +1029,8 @@ ERROR:root:Test error message
 
 ### 16. Automating Screenshot Download and PDF Generation from <BrandName />
 During native app automation, screenshots captured per session ID can be retrieved using:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 curl -X GET "https://mobile-api.lambdatest.com/mobile-automation/api/v1/sessions/${session_id}/screenshots" \
@@ -950,16 +1043,25 @@ curl -X GET "https://mobile-api.lambdatest.com/mobile-automation/api/v1/sessions
 **Solution :** Use the <BrandName /> Screenshot Downloader & PDF Generator CLI.
 
 - **Installation :**
+
+<VerifiedTag value="Verified" />
+
 ```bash
 npm install -g lambdatest-screenshot-pdf
 ```
 
 - **Usage :**
+
+<VerifiedTag value="Verified" />
+
 ```bash
 AUTH_HEADER="Basic your_encoded_auth_string" lambdatest-screenshot-pdf <session_id> --output <output_directory>
 ```
 
 - **Example :**
+
+<VerifiedTag value="Verified" />
+
 ```bash
 AUTH_HEADER="Basic cmF0aG9yZXYXYXYXYXXgybFlXTm5LclZPeVRRQ01RRGdyNTZjVg==" \
 lambdatest-screenshot-pdf 1a80510a-289a-46b7-9f60-da01d108de10 --output ~/Desktop/screenshots
@@ -976,6 +1078,8 @@ lambdatest-screenshot-pdf 1a80510a-289a-46b7-9f60-da01d108de10 --output ~/Deskto
 ### 17. Base YAML Configuration for Pytest on Windows with Autosplit
 
 Example hyperexecute.yaml:
+
+<VerifiedTag value="Verified" />
 
 ```yaml title="hyperexecute.yaml"
 ---
@@ -1020,6 +1124,8 @@ Large test suites with hundreds or thousands of tests can leave some nodes idle 
 #### Solution
 AutoSplit divides tests intelligently across nodes at file, module, or scenario level. Previously failed tests are prioritized for faster feedback. This ensures maximum concurrency usage and reduces test flakiness, enabling faster feedback loops for large BDD suites.
 
+<VerifiedTag value="Verified" />
+
 ```yaml title="hyperexecute.yaml"
 autosplit: true
 ```
@@ -1039,6 +1145,8 @@ Tests behave differently on various OS platforms. Running only on one OS may hid
 
 #### Solution
 The matrix runs tests concurrently on Mac, Windows, and Linux, detecting OS-specific issues like file paths, encoding, or browser behavior.
+
+<VerifiedTag value="Verified" />
 
 ```yaml title="hyperexecute.yaml"
 matrix:
@@ -1061,6 +1169,8 @@ Parallel jobs sharing default NuGet caches may cause corrupted packages, race co
 #### Solution
 Predefining NuGet paths ensures controlled caching, reliable builds across OSes, and efficient reuse of restored packages.
 
+<VerifiedTag value="Verified" />
+
 ```yaml title="hyperexecute.yaml"
 env:
   NUGET_PACKAGES: '/home/ltuser/.nuget/packages/'
@@ -1082,6 +1192,8 @@ env:
 Dependencies may not be restored or projects may not build correctly if pre-steps are missing, causing test failures downstream.
 
 #### Solution
+
+<VerifiedTag value="Verified" />
 
 ```yaml title="hyperexecute.yaml"
 pre:
@@ -1111,6 +1223,8 @@ Without artifacts, failed tests provide no screenshots, logs, or reports for deb
 #### Solution
 Artifacts centralize outputs like HTML reports and screenshots, enabling debug, traceability, and audit.
 
+<VerifiedTag value="Verified" />
+
 ```yaml title="hyperexecute.yaml"
 uploadArtefacts:
  - name: Execution_Report
@@ -1135,6 +1249,8 @@ Partial or misconfigured reports can be unreadable, incomplete, or fail to merge
 #### Solution
 Generates human-readable HTML reports showing pass/fail, steps, screenshots, and aggregated results for stakeholders.
 
+<VerifiedTag value="Verified" />
+
 ```yaml title="hyperexecute.yaml"
 report: true
 partialReports:
@@ -1157,6 +1273,8 @@ Static or incorrect discovery may skip new tests, misdetect test tags, or fail i
 #### Solution
 Remote discovery automatically detects new @tags or features, enabling parallelization and reducing manual maintenance.
 
+<VerifiedTag value="Verified" />
+
 ```yaml title="hyperexecute.yaml"
 testDiscovery:
   type: raw
@@ -1178,6 +1296,8 @@ Running all tests every time is inefficient, and category typos or missing attri
 #### Solution
 Executes only tests with the specified Category. Supports parallelization and selective reruns.
 
+<VerifiedTag value="Verified" />
+
 ```yaml title="hyperexecute.yaml"
 testRunnerCommand: dotnet test --filter "(Category=$test)"
 ```
@@ -1194,6 +1314,8 @@ testRunnerCommand: dotnet test --filter "(Category=$test)"
 Projects may have diverse tagging strategies, making standard discovery unreliable or incomplete.
 
 #### Solution
+
+<VerifiedTag value="Verified" />
 
 ```yaml title="hyperexecute.yaml"
 testDiscovery:
@@ -1224,6 +1346,8 @@ Builds projects correctly based on target framework, ensuring compatibility with
 **`.NET 6`+**: Use dotnet build in pre-steps
 **`.NET <6`**: Build locally and upload DLLs
 
+<VerifiedTag value="Verified" />
+
 ```yaml title="hyperexecute.yaml"
 C:\PROGRA~2\Micros~1\2019\Community\MSBuild\Current\Bin\MSBuild.exe /p:Configuration=Release /p:TargetFramework=net472 /t:restore
 ```
@@ -1241,6 +1365,8 @@ Projects depending on private NuGet feeds fail restore if credentials or feeds a
 
 #### Solution
 Configures private feeds securely to ensure reliable dependency resolution across environments.
+
+<VerifiedTag value="Verified" />
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -1272,6 +1398,8 @@ Some projects cannot run with dotnet test due to configuration or .NET version c
 #### Solution
 Alternative runner allows execution of targeted tests, respecting project-specific configurations.
 
+<VerifiedTag value="Verified" />
+
 ```yaml
 vstest.console.exe "GlobalPolaris\bin\Debug\net472\GlobalPolaris.dll" /Settings:GlobalPolaris\RunSettings.runsettings /TestCaseFilter:"FullyQualifiedName~$test"
 ```
@@ -1288,6 +1416,9 @@ Standard discovery may fail with complex NUnit tag setups.
 
 #### Solution
 Uses NUnit console to explore feature tests by tags.
+
+<VerifiedTag value="Verified" />
+
 ```yaml 
 & "C:\PROGRA~2\NUnit.org\nunit-console\nunit3-console.exe" "<dll_path>" --where="cat==$tag" --explore
 ```
@@ -1305,6 +1436,8 @@ Large test suites take long to upload; repeated full uploads waste time and band
 
 #### Solution
 Uploads only changed files, reducing upload time and network usage.
+
+<VerifiedTag value="Verified" />
 
 ```yaml title="hyperexecute.yaml"
 differentialUpload:
@@ -1325,6 +1458,8 @@ Browser tests requiring client certificates fail without proper installation.
 
 #### Solution
 Installs certificates in browser environment for authenticated sessions.
+
+<VerifiedTag value="Verified" />
 
 ```yaml title="hyperexecute.yaml"
 %HYPEREXECUTE_WORKING_DIR%//Hyperexecute//cert_manager.exe --chrome -i atest089.pfx
@@ -1372,6 +1507,8 @@ Standard reports may not provide enough detail for complex SpecFlow tests.
 #### Solution
 Generates custom reports with metadata and email notifications.
 
+<VerifiedTag value="Verified" />
+
 ```yaml title="hyperexecute.yaml"
 report: true
 partialReports:
@@ -1396,6 +1533,8 @@ Running tests on the wrong or outdated DLL causes failures or misses new tests.
 
 #### Solution
 Ensures correct DLL is built and executed on the proper runner.
+
+<VerifiedTag value="Verified" />
 
 ```yaml title="hyperexecute.yaml"
 runson: win
@@ -1424,6 +1563,8 @@ All tests running together reduce parallelism and rerun flexibility.
 #### Solution
 Run each feature individually to enable parallel execution and selective reruns.
 
+<VerifiedTag value="Verified" />
+
 ```yaml title="hyperexecute.yaml"
 matrix:
   featurefile:
@@ -1449,6 +1590,8 @@ Incorrect YAML quoting or missing result file paths cause unintended test runs o
 
 #### Solution
 Properly passing arguments ensures selective execution and saves results for artifact uploads.
+
+<VerifiedTag value="Verified" />
 
 ```yaml title="hyperexecute.yaml"
 test:

@@ -260,6 +260,9 @@ When migrating your Selenium 4 tests from BrowserStack to <BrandName />, the fol
 ```
 LT_USERNAME="<your_username>"
 LT_ACCESS_KEY="<your_access_key>"
+
+<VerifiedTag value="Verified" />
+
 ```
 
 

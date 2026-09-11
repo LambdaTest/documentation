@@ -15,6 +15,8 @@ site_name: TestMu AI
 slug: api-testing-with-kane-cli/
 canonical: https://www.testmuai.com/support/docs/api-testing-with-kane-cli/
 ---
+import VerifiedTag from '@site/src/component/verifiedTag';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -231,6 +233,8 @@ If you already have a working curl command from Postman, documentation, or a tea
 
 1. Copy your existing curl command exactly as it is, including its headers and JSON payload.
 2. Run `kane-cli run "Open [your site], then run this exact request:"` followed by the full curl command in quotes, for example:
+
+   <VerifiedTag value="Verified" />
 
    ```bash
    curl -X POST https://your-app.com/api/telecom/recharge \

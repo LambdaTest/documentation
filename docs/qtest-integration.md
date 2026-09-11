@@ -13,6 +13,7 @@ slug: qtest-integration/
 canonical: https://www.testmuai.com/support/docs/qtest-integration/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -128,6 +129,9 @@ qTest is a comprehensive test management tool designed for Project Management, B
 3. Setup host and agent
 
   Start the host by running the following command:
+
+  <VerifiedTag value="Verified" />
+
   ```
   /path/to/agentctl-[version]$ ./agentctl start
   ```

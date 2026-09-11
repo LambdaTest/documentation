@@ -19,6 +19,7 @@ slug: puppeteer-tests-in-ci-cd/
 canonical: https://www.testmuai.com/support/docs/puppeteer-tests-in-ci-cd/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -152,6 +153,8 @@ The [puppeteer-skill](https://github.com/LambdaTest/agent-skills/tree/main/puppe
 
 The puppeteer-skill package includes:
 
+<VerifiedTag value="Verified" />
+
 ```
 puppeteer-skill/
 ├── SKILL.md
@@ -174,6 +177,8 @@ It provides structured guidance for:
 ***
 
 Install a Puppeteer Agent Skill using the command below:
+
+<VerifiedTag value="Verified" />
 
 ```
 # Clone the repo and copy the skill you need

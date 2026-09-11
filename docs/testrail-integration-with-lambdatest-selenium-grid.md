@@ -14,6 +14,7 @@ slug: testrail-integration-with-testmu-selenium-grid/
 canonical: https://www.testmuai.com/support/docs/testrail-integration-with-testmu-selenium-grid/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -161,6 +162,9 @@ TestRail also offers integration with <BrandName /> to help you perform automate
 1. Global Dependencies   
     * Make sure you have [Maven installed](https://maven.apache.org/install.html).
     * You could also install Maven with Homebrew with the below command:
+
+        <VerifiedTag value="Verified" />
+
         ```
         $ install maven
         ```
@@ -169,11 +173,17 @@ TestRail also offers integration with <BrandName /> to help you perform automate
 
     * Clone our [GitHub repository for Selenium & TestRail](https://github.com/LambdaTest/Java-TestNG-Selenium-TestRail).
     * Ensure that the required packages are made available using the below command:
+
+        <VerifiedTag value="Verified" />
+
         ```
          $ cd Java-TestNG-Selenium-TestRail
          ```
 
     * We recommend, you execute the below command for evaluating any outdated dependencies. As a best practice, it is always suggested to go for a verification check & perform any update, if needed, prior editing your pom.xml in order to avoid any code incompatibility.
+
+        <VerifiedTag value="Verified" />
+
         ```
         mvn versions:display-dependency-updates
         ```
@@ -198,11 +208,16 @@ TestRail also offers integration with <BrandName /> to help you perform automate
 
 **Step 2:**  In your test file you actually create an object of TestRailHandler like below:
 
+<VerifiedTag value="Verified" />
+
 ```
 TestRailHandler trh = new TestRailHandler(testrailusername,testrailpassword, testrailurl)
 ```
 
 **Step 3:**  Then call it’s method as below:
+
+<VerifiedTag value="Verified" />
+
 ```
 trh.updateResultToTestRail(executionstatus, run_id, testcase_id);
 ```
@@ -210,12 +225,17 @@ trh.updateResultToTestRail(executionstatus, run_id, testcase_id);
 **Step 4:**  In above arguments execution status is numeric number that denotes pass, fail statuses defined in TestRail. Example: Pass -> 1, Fail -> 5 etc.
 
 **Step 5:**Use the below command to execute a single test.
+
+<VerifiedTag value="Verified" />
+
 ```
 //To run single test
 $ mvn test -P single
 ```
 
 Once Test gets run, it logs result in TestRail as output mentioned here:
+
+<VerifiedTag value="Verified" />
 
 ```
 Jun 12, 2019 2:34:50 PM org.openqa.selenium.remote.ProtocolHandshake createSession

@@ -210,6 +210,8 @@ https://github.com/LambdaTest/playwright-sample/blob/main/playwrightwebview.js
 ### Step 2: Update the dependencies
 Before proceeding forward, run the below command to update the outdated dependencies
 
+<VerifiedTag value="Verified" />
+
 ```bash
 npm install
 ```
@@ -242,6 +244,8 @@ In your terminal (as per your respective Operating System), run these command to
 
 <TabItem value="bash" label="Linux / MacOS" default>
 
+  <VerifiedTag value="Verified" />
+
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-bash">
   {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
@@ -252,6 +256,8 @@ export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 </TabItem>
 
 <TabItem value="powershell" label="Windows" default>
+
+  <VerifiedTag value="Verified" />
 
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-powershell">
@@ -265,6 +271,8 @@ set LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 
 ### Step 5: Execute your test
 Replace the `TEST_FILE_NAME` in the below command with your desired test file to execute that particular test on <BrandName />:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 node playwrightwebview.js

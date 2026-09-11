@@ -171,6 +171,8 @@ Playwright Test Runner is used for end-to-end automated testing of websites and 
 
 2. Install the npm dependencies.
 
+<VerifiedTag value="Verified" />
+
 ```
 npm install
 ```
@@ -235,6 +237,8 @@ projects: [
 module.exports = config
 ```
 Pass the below command to run the test.
+
+<VerifiedTag value="Verified" />
 
 ```
 npm run test
