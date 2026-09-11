@@ -12,14 +12,17 @@
 
 Before running a suite, confirm:
 
-1. The intended agent is active: `/agent`.
-2. The intended verified profile is active: `/profile list`.
-3. The target URL or command points at test or staging. Direct MCP profiles cannot currently be invoked by `/profile test` or `/run`; use an HTTP or command adapter.
-4. Required fixtures and reset behavior are ready.
-5. Required MCP verification servers are enabled and approved: `/mcp`.
-6. Scenario runnability is understood: `/scenarios list`.
-7. The budget and credit balance are sufficient: `/budget` and `/plan`.
-8. Concurrency is safe for the target's state and rate limits.
+1. The intended project is active: `/project`.
+2. The intended agent is active: `/agent`.
+3. The intended verified profile is active: `/profile`.
+4. The target URL or command points at test or staging. Review the hook scripts that implement the actual transport.
+5. Required fixtures and reset behavior are ready.
+6. Required MCP verification servers are enabled and approved: `/mcp`.
+7. Scenario runnability is understood: `/scenarios list`.
+8. The credit balance is sufficient: `/plan`.
+9. Concurrency is safe for the target's state and rate limits.
+
+Sync the reviewed project with /sync before a normal timeline run. Use --test only when you intentionally want a local experiment that will not appear in the hosted history.
 
 ## Run the Runnable Suite
 
@@ -31,7 +34,7 @@ Rook skips scenarios that cannot be attempted and groups the reasons.
 
 A partially observable scenario still runs when it can establish useful evidence. Individual criteria that cannot be checked become **Unable to Verify**.
 
-The default concurrency is `3`.
+The default concurrency is `1` unless the profile or plan selects another value. An explicit `--concurrency` accepts 1–8 and overrides that choice.
 
 ## Select Scenarios Precisely
 
@@ -107,19 +110,16 @@ The answers mean:
 
 Deny rules override allow rules, and more specific rules win. Permission state is stored globally under a per-project section, so a repository cannot grant itself permission.
 
-## Run Without a Narrative
-
-The run-level narrative summarizes patterns after all scenario verdicts are available. Skip that model call when CI needs only the structured evidence and deterministic totals:
+## Run Selected Phases
 
 ```text
-/run --no-narrative
+/run --phases prepare,open,execute,close
+/run --run <run-id> --phases collect,judge
 ```
 
-The headless equivalent is:
+The second command continues the same run after delayed evidence is ready. --resume instead creates a new run and carries compatible completed work forward. Rook owns judging; the other phases run your profile hooks.
 
-```bash
-rook run --no-narrative
-```
+See [phases and hooks](/support/docs/rook-hooks-and-phases/) for prerequisites and state. The old --no-narrative option is not available in 0.1.3.
 
 ## Request Root-Cause Analysis
 
@@ -130,7 +130,7 @@ rook run --no-narrative
 Rook clusters related failures first, then investigates each cause using the verdicts, scenario definition, feature, and read-only access to source. It writes remedies under:
 
 ```text
-.testmuai/rook/agents/<agent-id>/runs/<run-id>/remedies/
+.testmuai/rook/projects/<project-id>/agents/<agent-id>/runs/<run-id>/remedies/
 ```
 
 RCA is off by default. It consumes additional credits, and its cost depends on the number of distinct failure clusters. A remedy is an evidence-grounded hypothesis, not a verified patch.
@@ -215,14 +215,14 @@ Otherwise, keep these cases documented but exclude them from release-gating runs
 - Disable a required server and confirm the scenario names the missing capability.
 - Attempt a write when only read behavior is expected.
 
-## Headless Run Limitations
+## Headless Runs and Hosted Results
 
-Current headless syntax is:
+The same selectors and lifecycle controls are available in a shell:
 
 ```bash
-rook run [--entity <id>] [--only <ids>] [--no-narrative] [--verbose] [--json]
+rook run --only SC-001 --profile staging --concurrency 1 --name smoke --json
 ```
 
-Interactive-only run controls currently include class, category, tag, concurrency, free-form selection, and `--rca`.
+Select the project and agent before running; there is no --entity flag. Supply reviewed permissions when running unattended. See [CI/CD](/support/docs/agent-assurance-ci-cd/) for authentication, JSON, and completion checks.
 
-For deterministic CI selection, resolve IDs before invoking `rook run --only`.
+Use rook ui for the [hosted Web UI](/support/docs/rook-web-ui/) or rook ui --local for on-disk evidence.

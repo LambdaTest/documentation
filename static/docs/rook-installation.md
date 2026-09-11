@@ -4,6 +4,8 @@
 
 Rook is publicly available from the [LambdaTest/rook repository](https://github.com/LambdaTest/rook). Install it with Homebrew, the shell installer, or npm. Use one method per machine so an older executable from another method does not take precedence on `PATH`.
 
+The latest public release checked on September 11, 2026 was [v0.1.3](https://github.com/LambdaTest/rook/releases/tag/v0.1.3). The npm package, Homebrew formula, and GitHub release archive agree on this version.
+
 ## Prerequisites
 
 | Requirement | Why |
@@ -56,9 +58,9 @@ If `~/.local/bin` is not on `PATH`, the installer prints the exact export comman
 Pass installer options after `bash -s --`:
 
 ```bash
-# Install the current production release explicitly.
+# Pin the release verified for this guide.
 curl -fsSL https://raw.githubusercontent.com/LambdaTest/rook/main/install.sh \
-| bash -s -- --version 0.1.1
+| bash -s -- --version 0.1.3
 
 # Link the executable into another writable directory.
 curl -fsSL https://raw.githubusercontent.com/LambdaTest/rook/main/install.sh \
@@ -89,6 +91,18 @@ npm update -g @testmuai/rook
 ```
 
 The npm package installs the `rook` executable and publishes platform runtime packages with it. If npm reports an engine error, update the Node.js version used to run npm to Node.js 22 or newer.
+
+### Repair an npm 0.1.1 or 0.1.2 installation
+
+The 0.1.3 release fixes the npm update path. If an older install cannot update normally, use the public registry explicitly:
+
+```bash
+npm install -g @testmuai/rook@0.1.3 \
+--registry=https://registry.npmjs.org \
+--@testmuai:registry=https://registry.npmjs.org
+```
+
+Then run command -v rook and rook --version to make sure another installation is not shadowing it.
 
 ## Verify the Installation
 
@@ -136,3 +150,7 @@ If a public install path still fails, [open a Rook issue](https://github.com/Lam
 ## Next Step
 
 Continue with [How to Get Started With Agent Assurance](/support/docs/agent-assurance-quickstart/).
+
+## Select the Web UI Environment
+
+The same public CLI works with production and stage. Its default is production; rook ui opens [rook.testmuai.com](https://rook.testmuai.com). To use the [stage Web UI](https://stage-rook.lambdatestinternal.com/), set export ROOK_ENV=stage before login and project operations. You do not need a private package or a source-repository installation.

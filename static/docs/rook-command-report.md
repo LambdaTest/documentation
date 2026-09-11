@@ -6,11 +6,11 @@ Use /report to read a stored run from disk. Without a run ID, Rook uses the most
 
 ## Syntax
 
-~~~text
+```text
 /report [run-id]
 /report [run-id] --rca
-/report [run-id] --rca --allow ''
-~~~
+/report [run-id] --rca --allow '<rule>'
+```
 
 The shell form is rook report with the same argument and options.
 
@@ -21,3 +21,9 @@ Use repeatable --allow rules only when an RCA verifier needs a reviewed tool ope
 ## Related Commands
 
 [Results and evidence](/support/docs/agent-assurance-results-and-evidence/) · [/run](/support/docs/rook-command-run/) · [/ui](/support/docs/rook-command-ui/)
+
+## Automation and Hosted Review
+
+Use rook report &lt;run-id&gt; --json to read the structured local report. Successful command completion means the report was read, not that the agent passed. Inspect its totals and the run’s completion using the [CI checks](/support/docs/agent-assurance-ci-cd/).
+
+Use rook ui to open synchronized results in the [Web UI](/support/docs/rook-web-ui/) or rook ui --local for the files on this machine.

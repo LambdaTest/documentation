@@ -25,11 +25,12 @@ rook profile use staging
 Rook passes the phase name as the only script argument. A script implements the phases it needs and exits successfully for the rest. Only `execute` is required.
 
 ```text
-once per run        once per scenario                     per run
-┌─────────┐   ┌─────────────────────────────────────┐   ┌───────┐
-│ prepare │ → │ open → execute × turns → close → collect │ → │ judge │
-└─────────┘   └─────────────────────────────────────┘   └───────┘
-60 s          30 s    300 s       30 s     120 s       Rook-owned
+prepare                         once per run
+open                          once per scenario
+execute × N                 once per turn
+close                         once per scenario
+collect                       once per scenario
+judge                         Rook evaluates the scenario
 ```
 
 | Phase | When | Typical responsibility | When omitted |
@@ -59,7 +60,8 @@ The following environment variables provide context:
 | `ROOK_WORKSPACE` | Every phase | Absolute workspace path |
 | `ROOK_PROJECT` | Every phase | Active project ID |
 | `ROOK_AGENT` | Every phase | Active agent local ID |
-| `ROOK_STATE_DIR` | Every phase | Per-scenario state directory that survives its phases |
+| `ROOK_STATE_DIR` | Scenario phases | Per-scenario state directory that survives its phases |
+| `ROOK_RUN_STATE_DIR` | Every phase | Shared state for the run, including prepare output |
 | `ROOK_RUN_ID` | From `prepare` | Current run ID |
 | `ROOK_SCENARIO_ID` | From `open` | Current scenario ID |
 | `ROOK_SESSION` | From `open` | Stable Rook session ID for the scenario |
@@ -74,7 +76,7 @@ Write one JSON object to standard output for `execute` and `collect`. Write diag
 
 ```json
 {
-"output": "Your order ships Tuesday.",
+"agent_reply": "Your order ships Tuesday.",
 "conversation": "thread_abc123",
 "usage": { "input": 1200, "output": 340 },
 "calls": [
@@ -86,7 +88,7 @@ Write one JSON object to standard output for `execute` and `collect`. Write diag
 
 | Field | Purpose |
 |---|---|
-| `output` | Required from `execute`; this is the agent answer that Rook judges. |
+| `agent_reply` | Required from `execute`; this is the agent answer that Rook judges. |
 | `conversation` | A target conversation handle returned from `open` or `execute` and passed back on later turns. |
 | `usage` | Observed input and output token counts; enables token-economy scenarios. |
 | `calls` | Observed tool calls; enables assertions about what the agent did or did not call. |
@@ -128,7 +130,7 @@ concurrency: 1
 |---|---|
 | `id` | Stable slug created with the profile. Runs pin the ID, so renaming does not orphan history. |
 | `name` | Human-readable and editable profile name. |
-| `hooks` | Phase-to-script mapping. Each entry can also define a timeout and delay. Relative paths resolve from the workspace. |
+| `hooks` | Phase-to-script mapping. Each entry can also define a timeout and delay. Relative paths resolve from the active agent directory. |
 | `env` | Required local environment references and their operational purpose. The structure has no secret-value field. |
 | `capabilities` | Observed evidence capabilities that determine scenario runnability. |
 | `hook_env` | Additional references supplied to every hook. Rook-owned `ROOK_*` values take precedence. |

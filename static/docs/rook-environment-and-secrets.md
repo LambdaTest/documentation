@@ -20,7 +20,7 @@ rook env rm API_KEY
 | `env show` | Prints one value in full; take care with terminals and logs. |
 | `env rm` | Removes the local value. |
 
-Values are stored in `~/.testmuai/rook/env.json`, outside the repository. A profile refers to a value as `${API_KEY}` and `rook profile show` displays the reference instead of expanding the secret.
+Values are stored below the global Rook home, outside the repository, and scoped to the workspace’s absolute path. Shell-exported values override stored values. A generated hook reads `process.env.API_KEY`; its profile lists the variable name and purpose.
 
 ## Profile Declaration
 
@@ -45,7 +45,7 @@ Before spending a run, Rook checks that every value declared by the profile is a
 
 ## Shared Authentication
 
-Authentication is global for processes using the same Rook home:
+Stored OAuth authentication is shared by processes using the same Rook home, profile, and environment:
 
 - several terminals share one sign-in;
 - logout in one terminal is observed by the others;
@@ -53,7 +53,9 @@ Authentication is global for processes using the same Rook home:
 - token renewal is serialized so concurrent terminals converge on the same refreshed token;
 - an interrupted run is saved where it stopped and is not automatically resumed after login.
 
-Rook never signs in silently.
+For unattended use, inject LT_USERNAME and LT_ACCESS_KEY through your secret manager. Rook uses this pair ahead of stored OAuth credentials. A different ROOK_HOME does not isolate credentials already exported in the shell.
+
+Set ROOK_ENV=stage before authentication and project operations for the [stage Web UI](/support/docs/rook-web-ui/). This does not change the endpoint your target-agent hook calls.
 
 ## Isolate Rook State
 

@@ -2,165 +2,142 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
-Rook reports what the agent did separately from what the test harness could observe. Read the scenario verdict, criterion evidence, and coverage together.
+A result answers two different questions: **what did the agent do, and how much could Rook verify?** Read the scenario verdict alongside its criteria and evidence. A good-looking percentage alone is not a release decision.
+
+## Open Hosted or Local Results
+
+```bash
+rook ui
+```
+
+This opens the hosted Web UI for the selected environment. Use it for synchronized project history and team review. For stage:
+
+```bash
+export ROOK_ENV=stage
+rook ui
+```
+
+Open project → agent → **Runs** → run → scenario result. The [Web UI walkthrough](/support/docs/rook-web-ui/) explains each screen and current stage display limitations.
+
+For on-disk evidence, including unsynchronized test runs:
+
+```bash
+rook ui --local
+rook ui --local --no-open
+```
+
+The local viewer binds to loopback, reads the current workspace, and needs no authentication or network access for its data. Keep the serving process running while reviewing it. It is a different interface from the hosted app.
 
 ## Scenario Verdicts
 
 | Verdict | Interpretation |
 |---|---|
-| **Pass** | The scenario was attempted, every verifiable criterion passed, and no verifiable criterion failed. |
-| **Fail** | One or more criteria were observed to fail. |
-| **Unable to Verify** | Rook could not establish the outcome. This is excluded from the pass-rate denominator and is not an agent defect. |
+| **Pass** | The attempted scenario has passing verifiable criteria and no observed failed criterion. Check for remaining gaps. |
+| **Fail** | Rook observed one or more criteria fail. |
+| **Unable to Verify** | Available evidence was insufficient to establish the outcome. This is not automatically an agent defect. |
 
-The browser may present a partial-looking scenario summary when some criteria pass or fail while others remain unverifiable. Open the scenario to see the authoritative per-criterion statuses.
+A skipped, unattempted, or unjudged scenario is not a pass. Partial-phase and interrupted runs need a completion check before their results can serve as a gate.
 
 ## Pass Rate Versus Coverage
 
-- **Pass rate** is the percentage of graded scenarios that passed.
-- **Coverage** is the percentage of individual criteria Rook could verify.
-
-Example:
+Pass rate measures passed scenarios among those with a decided verdict. Coverage describes how much of the intended behavior or criteria was actually tested or verified. Always check which denominator a report uses.
 
 ```text
-8 graded scenarios: 8 passed, 0 failed
-20 criteria: 8 verified, 12 unable to verify
-pass rate: 100%
-coverage: 40%
+8 decided scenarios: 8 passed, 0 failed
+20 acceptance criteria: 8 verified, 12 unable to verify
+
+Scenario pass rate: 100%
+Criterion verification coverage: 40%
 ```
 
-A 100% pass rate at 40% coverage is not full assurance. Improve observation until coverage matches the risk of the decision the report needs to support.
-
-## Open the Browser Viewer
-
-From the TUI:
-
-```text
-/ui
-```
-
-Print the URL without opening a browser:
-
-```text
-/ui --no-open
-```
-
-The viewer is:
-
-- **Bound to loopback** and server-rendered.
-- **Read-only** and makes no external requests.
-- **Local**: it reads the project files directly and stops with the Rook process.
-
-The agent page summarizes features, scenarios, profiles, trends, and prior runs.
-
-The run page shows totals, changes from the previous run, tool-oriented analysis, grouped verification gaps, and every scenario result.
+A missing metric or dash means **not available**, not zero and not full coverage. The tested triage sample passed one scenario but left four of its five discovered feature areas untested.
 
 ## Inspect Criterion Evidence
 
-Open a scenario result to compare:
+For a result, compare:
 
-- The acceptance criterion.
-- What Rook concluded happened.
-- Direct evidence from the response, tool observation, file, or verifier.
-- Confidence and any verification gap.
-- The request and full exchange.
-- Produced or downloaded artifacts.
+1. **Request:** the goal, input, and session context sent to the target.
+2. **Response:** the actual answer, exchange, observed calls, and available usage.
+3. **Acceptance criteria:** each statement, verdict, supporting evidence, and verification gap.
+4. **Artefacts:** collected output files and supporting evidence, where available.
+5. **Run context:** the pinned agent version, profile revision, and selected phases.
 
-Do not treat a fluent narrative as evidence by itself. Look for one of the following to support the criterion: a quote, a JSON value, an observed call, a filesystem fact, or a read-only external verification.
+An agent's claim that it sent a message or created a refund is not independent proof of that write. Look for observed calls, trace data, a read-only status check, or another authoritative observation.
 
-## Common Unable-to-Verify Reasons
+Hooks must return actual observations. Invented usage or calls turn missing evidence into misleading scores.
 
-| Gap | What to change |
+## Fix Verification Gaps
+
+| Gap | Next action |
 |---|---|
-| Tool call could not be observed | Configure `/profile edit` so tool calls are observable, or add a read-only verifier. |
-| Required MCP server unavailable | Inspect `/mcp`, approve or enable the intended definition, and verify it connects. |
-| File path was not watched | Add an allowed path to the profile's `observe.filesystem`. |
-| Concurrent file writes cannot be attributed | Re-run with `--concurrency 1`. |
-| Agent did not report token usage | Set `observe.usage` only if the response genuinely reports it. |
-| Image content cannot be read | Use an external image evaluator or accept evidence only for existence and dimensions. |
-| Multi-turn state cannot be carried | Configure the conversation session field or command resume flag. |
-| Stream cannot be read | Use a JSON/text endpoint or wait for streaming transport support. |
-| Verification would change state | Provide a read-only status tool or API. Do not call the write again. |
+| Tool calls are unavailable | Use profile fix or edit the hook to return actual calls; test it again. |
+| Criteria expect fields absent from the answer | Align the criterion and returned evidence; do not silently weaken the business requirement. |
+| Delayed traces or files have not arrived | Add a collect hook and continue the same run with --run. |
+| Target usage is missing | Return observed usage only if the target provides it. |
+| Multi-turn context is unavailable | Implement real session handling and return a conversation handle. |
+| Required MCP verifier is unavailable | Check its definition, connection, and approval with rook mcp. |
+| Verification would perform another write | Provide a read-only observation instead. |
+| Evidence cannot be attributed to a scenario | Isolate fixtures and sessions, or use concurrency 1. |
 
 ## Files Written for a Run
 
+The 0.1.3 smoke test wrote:
+
 ```text
-.testmuai/rook/agents/<agent-id>/
-history.jsonl
-history/<scenario-id>.jsonl
-runs/<run-id>/
+.testmuai/rook/projects/<project-id>/agents/<agent-id>/runs/<run-id>/
 run.yaml
-scenarios.yaml
-analysis.yaml
-report.evidence/
-remedies/
+agent.yaml
+features.yaml
+profile.yaml
+report.yaml
 scenarios/<scenario-id>/
+snapshot.yaml
 request.json
 response.json
+hooks.json
 verdict.yaml
-artifacts/
+evidence/
 ```
 
-- `run.yaml` records the selected profile, concurrency, state, totals, skipped scenarios, and stop reason.
-- `scenarios.yaml` is the immutable snapshot used by that run.
-- `analysis.yaml` contains computed cross-scenario facts.
-- `report.evidence/` is the sealed evidence pack.
-- `request.json` and `response.json` preserve what was sent and received, including failed invocations.
-- `verdict.yaml` stores each criterion and gap.
-- `artifacts/` contains collected files.
-- `remedies/` exists only when RCA produced failure-cluster reports.
+run.yaml preserves the plan, selected phases, pinned versions, included/skipped scenarios, and upstream IDs. report.yaml stores the summary and totals. Each scenario's snapshot.yaml preserves its definition; hooks.json preserves phase records. Additional artifacts and RCA files depend on the run.
 
-Completed runs read their scenario snapshot, not the current scenario directory. Editing or deleting a live scenario does not rewrite historical evidence.
+Editing today's scenario or profile does not rewrite the saved input snapshots of an earlier run. Local run IDs and hosted IDs can differ; use the links supplied by the UI rather than constructing URLs from local directory names.
 
-## Print a Report in Headless Mode
+## Print or Export a Report
 
-Print the most recent run:
+Select the correct project and agent first:
 
 ```bash
-rook report
+rook project use <project-id>
+rook agent use <agent-id>
+rook runs
+rook report <run-id>
+rook report <run-id> --json
 ```
 
-Print a specific run:
+Without a run ID, report reads the latest local run. In 0.1.3, the JSON record contains run_id, name, dir, and report, whose totals include planned, executed, passed, failed, unverifiable, unjudged, and not-run counts.
+
+A successful report command means the report was read; it does **not** mean the agent passed. See the [CI gate example](/support/docs/agent-assurance-ci-cd/) for explicit completion and result checks.
+
+## Recover Missing Hosted Results
 
 ```bash
-rook report <run-id> --entity <agent-id>
+rook status
+rook sync
+rook runs sync
+rook ui
 ```
 
-Machine-readable output:
+sync publishes project definitions; runs sync reconciles finished runs with outstanding uploads. Confirm the same account, environment, project, and agent in the CLI and browser. Runs created with --test deliberately stay off the shared timeline.
 
-```bash
-rook report <run-id> --entity <agent-id> --json
-```
+## Compare Runs and Use RCA
 
-## Compare Runs
+Before calling a change a regression, compare scenario definitions, profile revisions, selected phases, and coverage. Repeat unchanged cases when investigating nondeterminism.
 
-Run history can identify:
+Use rook report &lt;run-id&gt; --rca or rook run --rca for failure-cluster investigation. RCA spends credits and provides an evidence-grounded hypothesis—not a verified fix. Reproduce the issue before changing the agent.
 
-- Newly failing scenarios.
-- Fixed scenarios.
-- Repeated flips on an unchanged definition, which indicate flakiness.
-- Scenario definition changes, which break direct trend comparison.
-- Coverage changes, including a suite that appears stable because it lost visibility.
+## Share Evidence Safely
 
-The scenario definition hash distinguishes a behavioral change from a changed test. Re-run unchanged scenarios several times before labeling nondeterminism.
+Share a hosted run link with teammates who have access to the same environment and project. It is not an anonymous public report.
 
-## Use RCA Carefully
-
-`/run --rca` groups failures with shared evidence and writes one hypothesis per cause rather than repeating the same diagnosis for every scenario.
-
-Read a remedy as:
-
-1. The deterministic cluster and affected scenarios.
-2. The observed failure evidence.
-3. The source the investigation read.
-4. A proposed cause and remediation.
-
-The proposed cause is still an inference. Reproduce it independently and add a regression test before changing the agent.
-
-## Sharing Evidence
-
-Project evidence is reviewable as ordinary files. Before you commit or attach it:
-
-- Review requests, responses, artifacts, and scenario goals for secrets or customer data.
-- Keep terminal transcripts out of the project; Rook stores sessions globally for this reason.
-- Do not render an agent-produced HTML file as a trusted page. The viewer serves artifacts with restrictive content handling.
-- Share only the agent and run directories required for the review.
+Review local requests, responses, goals, traces, and artifacts for secrets and customer data before uploading or committing them. Do not publish the global Rook credential store or terminal session logs. Treat agent-produced HTML and files as untrusted content.

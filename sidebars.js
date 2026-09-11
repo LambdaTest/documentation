@@ -1068,6 +1068,7 @@ module.exports = {
               { type: "doc", label: "Overview", id: "agent-assurance-overview" },
               { type: "doc", label: "Install Rook", id: "rook-installation" },
               { type: "doc", label: "Quickstart", id: "agent-assurance-quickstart" },
+              { type: "doc", label: "Web UI", id: "rook-web-ui" },
               { type: "doc", label: "The Sequence", id: "rook-sequence" },
             ],
           },

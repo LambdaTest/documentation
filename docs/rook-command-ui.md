@@ -54,7 +54,7 @@ import { BRAND_URL } from '@site/src/component/BrandName';
       "height": 630
     },
     "inLanguage": "en",
-    "articleSection": "Agent Testing",
+    "articleSection": "Agent Assurance Platform",
     "keywords": [],
     "author": {
       "@type": "Organization",
@@ -82,7 +82,7 @@ import { BRAND_URL } from '@site/src/component/BrandName';
         "https://www.youtube.com/@TestMuAI"
       ]
     },
-    "dateModified": "2026-09-04T12:50:18+05:30"
+    "dateModified": "2026-09-11"
   }) }}
 />
 
@@ -96,11 +96,11 @@ Use <code>/ui</code> to review synchronized results in the hosted TestMu AI appl
 
 <VerifiedTag value="Verified" />
 
-~~~text
+```text
 /ui
 /ui --local
 /ui --local --no-open
-~~~
+```
 
 The shell form is <code>rook ui</code> with the same options.
 
@@ -113,6 +113,19 @@ The shell form is <code>rook ui</code> with the same options.
 The local viewer is read-only, makes no external request for workspace data, and does not require authentication or network access. It continues serving until the command or TUI session exits.
 
 Use the hosted view for shared project history. Use <code>--local</code> for unsynchronized work, offline investigation, or the exact evidence present on this machine.
+
+## Stage and Production
+
+Public packages default to <code>https://rook.testmuai.com</code>. For the live stage UI:
+
+```bash
+export ROOK_ENV=stage
+rook ui
+```
+
+This opens [stage-rook.lambdatestinternal.com](https://stage-rook.lambdatestinternal.com/). Use the same environment for login, project selection, sync, and runs. Sign into the browser separately if prompted.
+
+Follow the [Web UI walkthrough](/support/docs/rook-web-ui/) for projects, versions, profile hooks, run evidence, screenshots, and missing-result troubleshooting.
 
 ## Related Commands
 

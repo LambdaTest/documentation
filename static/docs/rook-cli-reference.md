@@ -17,22 +17,19 @@ Only use a flag where `rook help ` lists it.
 
 ## Exit Codes
 
-| Code | Meaning |
-|---:|---|
-| `0` | The operation ran and nothing was wrong. |
-| `1` | Rook could not test the agent, such as an invocation error or provider refusal. |
-| `2` | The tested agent failed or was compromised by an adversarial scenario. |
-| `3` | The process is not signed in. |
-| `4` | The account is out of budget. |
+In Rook 0.1.3, process success and agent quality are separate. Do not use the older 0/1/2/3/4 mapping as a release gate: the current run/report paths return success when an outcome or report was produced, even if its verdicts require attention.
 
-Codes `1` and `2` are deliberately distinct. Both may stop a build, but only `2` is a finding about the agent. **Unable to Verify** does not fail a build merely because the harness lacked evidence.
+Treat a non-zero exit as command failure. After a successful run --json, require ok: true, halted: false, a report, and the expected completed and passed counts. Reject missing, discarded, partial, or unverifiable results according to your release policy. A report --json success only confirms the stored report was read.
+
+See the [tested CI gate](/support/docs/agent-assurance-ci-cd/#gate-on-completion-and-verdicts) for an example.
 
 ## User-Configured Environment Variables
 
 | Variable | Effect |
 |---|---|
 | `ROOK_HOME` | Credentials, environment values, history, and local state. Default: `~/.testmuai/rook`. |
-| `ROOK_ENV` | Deployment selection. Public Homebrew, npm, and shell packages default to `prod`. |
+| `ROOK_ENV` | Deployment selection: `prod` by default; use `stage` for the stage Web UI. Set it before login and project operations. |
+| `LT_USERNAME`, `LT_ACCESS_KEY` | Account credentials for unattended authentication. Provide both; they override stored browser-login credentials. |
 | `ROOK_API_URL` | Overrides the versioned Rook API base URL. |
 | `ROOK_CONTROLLER_URL` | Overrides the controller base URL. |
 | `ROOK_AUTH_BASE_URL` / `AUTH_URL` | Overrides the authentication base URL. |
@@ -54,6 +51,7 @@ Rook sets these for profile hooks:
 | `ROOK_TURN` | Current turn number |
 | `ROOK_CONVERSATION` | Target conversation handle returned by the hook |
 | `ROOK_STATE_DIR` | State directory for the scenario lifecycle |
+| `ROOK_RUN_STATE_DIR` | Shared state across the whole run |
 | `ROOK_WORKSPACE` | Absolute workspace path |
 | `ROOK_PROJECT` | Active project ID |
 | `ROOK_AGENT` | Active local agent ID |

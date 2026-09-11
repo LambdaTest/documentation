@@ -59,7 +59,7 @@ import { BRAND_URL } from '@site/src/component/BrandName';
       "height": 630
     },
     "inLanguage": "en",
-    "articleSection": "Agent Testing",
+    "articleSection": "Agent Assurance Platform",
     "keywords": [
       "rook features",
       "ai agent assurance",
@@ -91,7 +91,7 @@ import { BRAND_URL } from '@site/src/component/BrandName';
         "https://www.youtube.com/@TestMuAI"
       ]
     },
-    "dateModified": "2026-09-04T12:50:18+05:30"
+    "dateModified": "2026-09-11"
   }) }}
 />
 
@@ -141,7 +141,7 @@ Rook owns a fixed lifecycle while each profile supplies the scripts that reach t
 |---|---|---|
 | <code>prepare</code> | Once per run | Authenticate, seed fixtures, or warm a cache. |
 | <code>open</code> | Before each scenario | Create a session or reset scenario state. |
-| <code>execute</code> | Once per turn | Send the goal and return <code>output</code>. Required. |
+| <code>execute</code> | Once per turn | Send the goal and return <code>agent_reply</code>. Required. |
 | <code>close</code> | After each scenario | End a session or release a resource. |
 | <code>collect</code> | After <code>close</code> | Fetch traces, calls, logs, usage, or delayed evidence. |
 | <code>judge</code> | After evidence is available | Rook evaluates the recorded response and evidence. |
@@ -196,4 +196,9 @@ Judges must not mutate the state they are verifying. If the only available check
 
 Start <code>rook</code> for the TUI. Slash commands, completion, <code>/help</code>, and <code>/guide</code> are derived from the same command registry used by shell invocations. This keeps flags and subcommands consistent across both surfaces.
 
-Long-running commands emit structured progress. In the TUI, Rook renders active subagents and parallel scenario lanes; in automation, <code>--json</code> emits machine-readable events and <code>--verbose</code> exposes tool activity and credit use.
+Long-running commands emit structured progress. In the TUI, Rook renders active subagents and parallel scenario lanes; in automation, <code>--json</code> returns a command-specific JSON document and <code>--verbose</code> exposes tool activity and credit use.
+
+
+## Hosted Web UI
+
+The [Web UI](/support/docs/rook-web-ui/) is live on stage. Review synchronized projects, versions, profiles and hook phases, features, scenarios, runs, and evidence. Create and execute tests in the CLI; use the hosted UI for team review or <code>rook ui --local</code> for on-disk results.

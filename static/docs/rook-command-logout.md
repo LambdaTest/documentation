@@ -8,15 +8,15 @@ Use /logout to revoke the current token and remove stored Rook credentials.
 
 Interactive:
 
-~~~text
+```text
 /logout
-~~~
+```
 
 Headless:
 
-~~~bash
+```bash
 rook logout
-~~~
+```
 
 ## When to use it
 
@@ -34,11 +34,11 @@ Credentials are global for Rook terminals using the same Rook home. Logging out 
 
 ## Real-world account switch
 
-~~~text
+```text
 /logout
 /login
 /auth status
-~~~
+```
 
 The TUI input is disabled during an active run. Press Esc, wait for the prompt to return, inspect the target if a write may have occurred, and then log out.
 
@@ -50,3 +50,5 @@ The TUI input is disabled during an active run. Press Esc, wait for the prompt t
 ## Related commands
 
 [/login](/support/docs/rook-command-login/) · [/auth](/support/docs/rook-command-auth/) · [rook whoami](/support/docs/rook-command-whoami/)
+
+Exported LT_USERNAME and LT_ACCESS_KEY are separate from stored login. Logging out does not remove those variables from your shell or CI secret manager; unset both when you intend to stop using them. See [login](/support/docs/rook-command-login/).

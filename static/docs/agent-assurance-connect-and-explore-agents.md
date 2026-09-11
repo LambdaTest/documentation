@@ -47,6 +47,8 @@ Rook can identify agents from evidence including:
 
 Discovery does not invent missing facts. If a tool's write behavior cannot be established, Rook records it as unknown rather than guessing from its name.
 
+Before discovery, select the environment and project with rook project. For the [stage Web UI](/support/docs/rook-web-ui/), set ROOK_ENV=stage before authentication and project operations.
+
 ## Give Exploration Extra Context
 
 Put free-form guidance after `--`:
@@ -59,7 +61,7 @@ In headless mode:
 
 ```bash
 rook explore . \
---instruction "focus on the refund approval threshold and identity checks"
+-- "focus on the refund approval threshold and identity checks"
 ```
 
 The instruction guides the discovery model, but it does not widen the filesystem scope.
@@ -159,25 +161,24 @@ Interactive commands:
 ```text
 /agent
 /agent use <id>
-/agent rm <id>
 ```
 
 Headless commands:
 
 ```bash
-rook agent list
-rook agent list --json
+rook agent
+rook agent
 rook agent use <id>
 ```
 
-`/agent rm` forgets the agent and everything stored below its project record. Review the target ID carefully before using it.
+The current command lists or selects agents; it does not provide an `rm` subcommand.
 
 ## Explore All Discovered Agents in Headless Mode
 
-The interactive flow asks which candidates to register. For automation, use `--all`:
+Select a project before discovery. For automation, supply focused guidance and explicit, reviewed permissions; the older `--all` flag is not available:
 
 ```bash
-rook explore . --all --json
+rook explore . --json -- "discover the agents in this reviewed workspace"
 ```
 
 Use `--allow` only for a narrowly reviewed tool call:
