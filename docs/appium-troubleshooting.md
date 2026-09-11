@@ -17,6 +17,7 @@ slug: appium-troubleshooting/
 canonical: https://www.testmuai.com/support/docs/appium-troubleshooting/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -183,6 +184,8 @@ Generate a known-good capabilities block for your device and OS combination from
 
 **Fix:** Send a complete `LT:Options` block with every required key present, and confirm the device and OS version exist (see [Device or OS version is unavailable](#device-or-os-version-is-unavailable)). A minimal working Android configuration:
 
+<VerifiedTag value="Verified" />
+
 ```json
 {
   "LT:Options": {
@@ -208,11 +211,15 @@ Keep `deviceName`, `platformVersion`, `platformName`, `isRealMobile`, and `app` 
 
 **Fix:** Set both credentials as environment variables (copy them from the **Access Key** button on the Automation Dashboard), then build the hub URL from them.
 
+<VerifiedTag value="Verified" />
+
 ```bash
 # macOS / Linux
 export LT_USERNAME="<YOUR_LT_USERNAME>"
 export LT_ACCESS_KEY="<YOUR_LT_ACCESS_KEY>"
 ```
+
+<VerifiedTag value="Verified" />
 
 ```bash
 # Windows
@@ -221,6 +228,8 @@ set LT_ACCESS_KEY="<YOUR_LT_ACCESS_KEY>"
 ```
 
 The real-device endpoint expects credentials inline:
+
+<VerifiedTag value="Verified" />
 
 ```text
 http://<LT_USERNAME>:<LT_ACCESS_KEY>@mobile-hub.lambdatest.com/wd/hub
@@ -234,6 +243,8 @@ If the values are correct but auth still fails, confirm your shell actually expo
 
 **Fix:** Use the real-device app-automation endpoint for Appium:
 
+<VerifiedTag value="Verified" />
+
 ```text
 https://mobile-hub.lambdatest.com/wd/hub
 ```
@@ -246,6 +257,8 @@ Do not reuse a Selenium browser hub URL for an Appium app session, even though t
 
 **Fix:** Upload the build first, then pass the returned `lt://` URL as the `app` capability. Upload a local binary:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 curl -u "<YOUR_LT_USERNAME>:<YOUR_LT_ACCESS_KEY>" \
   -X POST "https://manual-api.lambdatest.com/app/upload/realDevice" \
@@ -254,6 +267,8 @@ curl -u "<YOUR_LT_USERNAME>:<YOUR_LT_ACCESS_KEY>" \
 ```
 
 Or register a hosted build by URL:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 curl -u "<YOUR_LT_USERNAME>:<YOUR_LT_ACCESS_KEY>" \
@@ -289,6 +304,8 @@ Confirm the value is a boolean, not the string `"true"`, in clients that disting
 
 **Fix:** Keep the session active with regular commands, and raise the idle window with the `idleTimeout` capability when a legitimate step needs longer:
 
+<VerifiedTag value="Verified" />
+
 ```json
 {
   "LT:Options": {
@@ -304,6 +321,8 @@ Confirm the value is a boolean, not the string `"true"`, in clients that disting
 **Why it happens:** Real devices in the cloud cannot see `localhost`, private staging URLs, or a backend behind your firewall unless traffic is routed through <BrandName /> Tunnel.
 
 **Fix:** Start the tunnel, then enable it in your capabilities so the device routes local traffic through it:
+
+<VerifiedTag value="Verified" />
 
 ```json
 {

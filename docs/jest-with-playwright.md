@@ -178,6 +178,8 @@ cd playwright-jest-js
 
 2. Install the npm dependencies.
 
+<VerifiedTag value="Verified" />
+
 ```
 npm install
 ```
@@ -296,6 +298,8 @@ The [jest-skill](https://github.com/LambdaTest/agent-skills/tree/main/jest-skill
 
 The jest-skill package includes:
 
+<VerifiedTag value="Verified" />
+
 ```
 jest-skill/
 ├── SKILL.md
@@ -318,6 +322,8 @@ It provides structured guidance for:
 ***
 
 Install a Jest Agent Skill using the command below:
+
+<VerifiedTag value="Verified" />
 
 ```
 # Clone the repo and copy the skill you need

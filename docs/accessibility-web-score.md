@@ -15,6 +15,32 @@ url: https://www.testmuai.com/support/docs/accessibility-web-score/
 site_name: TestMu AI
 canonical: https://www.testmuai.com/support/docs/accessibility-web-score/
 ---
+import VerifiedTag from '@site/src/component/verifiedTag';
+import { BRAND_URL } from '@site/src/component/BrandName';
+
+<script type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify({
+       "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": BRAND_URL
+        },{
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Support",
+          "item": `${BRAND_URL}/support/docs/`
+        },{
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Accessibility Web Score",
+          "item": `${BRAND_URL}/support/docs/accessibility-web-score/`
+        }]
+      })
+    }}
+></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -217,6 +243,8 @@ Issues are weighted by severity: **Critical** issues have the largest impact, fo
 
 This is what makes the score **page-size aware**. The same 2 critical issues have very different impact on a 12-element login form versus a 2000-element dashboard. Using the [scored element count](#scored-element-count) as the denominator:
 
+<VerifiedTag value="Verified" />
+
 ```text
 Density = Total issue instances / Scored elements on the page
 ```
@@ -226,6 +254,8 @@ Higher density means issues are more concentrated, and deductions are multiplied
 ### Final score
 
 The deductions are combined into the final score:
+
+<VerifiedTag value="Verified" />
 
 ```text
 Score = max(1, floor(100 × e^(−AdjustedDeductions / 133)))

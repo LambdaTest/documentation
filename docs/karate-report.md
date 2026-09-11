@@ -14,6 +14,7 @@ canonical: https://www.testmuai.com/support/docs/karate-report/
 ---
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -113,6 +114,8 @@ Karate framework supports generating detailed test execution reports that help v
 **Step 1:** Configure all the necessary dependencies and configurations to your project.
 
 **Step 2:** Configure the report parameters in the HyperExecute YAML file.
+
+<VerifiedTag value="Verified" />
 
 ```yaml
 report: true

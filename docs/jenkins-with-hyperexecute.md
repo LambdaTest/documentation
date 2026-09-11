@@ -17,6 +17,7 @@ slug: jenkins-with-hyperexecute/
 canonical: https://www.testmuai.com/support/docs/jenkins-with-hyperexecute/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -169,12 +170,16 @@ Download or Clone the code sample from the <BrandName /> GitHub repository to ru
 
   - **For MacOS**:
 
+      <VerifiedTag value="Verified" />
+
       ```
       curl -O https://downloads.lambdatest.com/hyperexecute/darwin/hyperexecute
       chmod u+x hyperexecute
       ./hyperexecute --user <your_username> --key <your_access_key> --config hyperexecuteStatic.yaml
       ```
   - **For Windows**:
+
+      <VerifiedTag value="Verified" />
 
       ```
         curl -O https://downloads.lambdatest.com/hyperexecute/windows/hyperexecute.exe 
@@ -205,6 +210,8 @@ Download or Clone the code sample from the <BrandName /> GitHub repository to ru
 You have successfully integrated your Jenkins project with HyperExecute. 
 
 ## Sample Jenkins File
+
+<VerifiedTag value="Verified" />
 
 ```bash
 pipeline {

@@ -5,6 +5,31 @@ sidebar_label: Button Element Capitalisation Check
 description: Rule-level Accessibility guidance for Button Element Capitalisation Check on iOS.
 slug: accessibility-ios-rule-button-element-capitalisation-check/
 ---
+import { BRAND_URL } from '@site/src/component/BrandName';
+
+<script type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify({
+       "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": BRAND_URL
+        },{
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Support",
+          "item": `${BRAND_URL}/support/docs/`
+        },{
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Button Element Capitalisation Check",
+          "item": `${BRAND_URL}/support/docs/accessibility-ios-rule-button-element-capitalisation-check/`
+        }]
+      })
+    }}
+></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({

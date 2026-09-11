@@ -28,6 +28,7 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import RealDeviceTag from '../src/component/realDevice';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -233,6 +234,8 @@ Deleting a certificate only removes it from your account. It does not affect a s
 ## What Happens on the Device
 
 The behavior differs by platform, because Android and iOS handle certificate trust differently.
+
+<VerifiedTag value="Verified" />
 
 <Tabs className="docs__val">
   <TabItem value="android" label="Android" default>

@@ -21,6 +21,7 @@ import NewTag from '../src/component/newTag';
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -304,6 +305,8 @@ To initiate a SmartUI PDF Comparison Project, adhere to the following instructio
 
 Once your project is active, retrieve your `Project Token` from the application. Here's an example of a project token:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 projectToken = "123456#1234abcd-****-****-****-************"
 ```
@@ -312,11 +315,15 @@ projectToken = "123456#1234abcd-****-****-****-************"
 
 Install the CLI globally using npm:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 npm install -g @lambdatest/smartui-cli
 ```
 
 ## Step 2: Setup your credentials
+
+<VerifiedTag value="Verified" />
 
 <Tabs className='docs__val' groupId='language'>
 <TabItem value='MacOS/Linux' label='MacOS/Linux' default>
@@ -354,6 +361,8 @@ $env:PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
 
 Use the `upload-pdf` command to upload one or multiple PDF files from a directory:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 smartui upload-pdf <directory_or_filename> [options]
 ```
@@ -371,11 +380,15 @@ smartui upload-pdf <directory_or_filename> [options]
 
 Upload all PDFs from a folder and name the build:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 smartui upload-pdf ./pdfs/ --buildName "Release-v2.1"
 ```
 
 Upload a single PDF file:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 smartui upload-pdf ./document.pdf --buildName "Single-PDF-Test"
@@ -383,11 +396,15 @@ smartui upload-pdf ./document.pdf --buildName "Single-PDF-Test"
 
 Fetch results and save to a file:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 smartui upload-pdf ./spec.pdf --fetch-results results.json
 ```
 
 Upload with custom project token:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 smartui upload-pdf ./pdfs/ --projectToken "123456#1234abcd-****-****-****-************" --buildName "Custom-Build"
@@ -399,6 +416,8 @@ smartui upload-pdf ./pdfs/ --projectToken "123456#1234abcd-****-****-****-******
 
 Process multiple directories:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 smartui upload-pdf ./documents/ --buildName "Batch-1"
 smartui upload-pdf ./reports/ --buildName "Batch-2"
@@ -407,6 +426,8 @@ smartui upload-pdf ./reports/ --buildName "Batch-2"
 ### CI/CD Integration
 
 Example for GitHub Actions:
+
+<VerifiedTag value="Verified" />
 
 ```yaml
 - name: Upload PDFs to SmartUI
@@ -422,6 +443,8 @@ Example for GitHub Actions:
 - **Developer Workflows**: Quick PDF testing during development and debugging
 
 ## Best Practices
+
+<VerifiedTag value="Verified" />
 
 <Tabs className='docs__val' groupId='best-practices'>
 <TabItem value='file-management' label='PDF File Management' default>
@@ -485,6 +508,8 @@ smartui upload-pdf ./pdfs/ --buildName "Release-v1.0-$(date +%Y%m%d)"
 </Tabs>
 
 ## Troubleshooting
+
+<VerifiedTag value="Verified" />
 
 <Tabs className='docs__val' groupId='troubleshooting'>
 <TabItem value='pdf-upload-fails' label='PDF Upload Fails' default>

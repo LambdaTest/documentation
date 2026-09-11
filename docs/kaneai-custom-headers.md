@@ -18,6 +18,7 @@ canonical: https://www.testmuai.com/support/docs/kaneai-custom-headers/
 
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -230,14 +231,23 @@ You can also click **View details** in the test case sidebar to see the full lis
 ## Example Use Cases
 
 - **Session Management**: Send a custom `X-Session-ID` header to track user sessions across requests:
+
+  <VerifiedTag value="Verified" />
+
   ```
   X-Session-ID: 1234567890
   ```
 - **Authentication Tokens**: Use the **Secret** type to inject API keys or bearer tokens without exposing them in plain text:
+
+  <VerifiedTag value="Verified" />
+
   ```
   Authorization: {{secrets.org.BearerToken}}
   ```
 - **Content Negotiation**: Override the `Accept` header to test specific response formats:
+
+  <VerifiedTag value="Verified" />
+
   ```
   Accept: application/json
   ```

@@ -224,6 +224,8 @@ await page2.goto('https://app.example.com/dashboard');
 
 Profiles are stored as JSON files at `.profiles/{profileId}.json`:
 
+<VerifiedTag value="Verified" />
+
 ```json
 {
     "id": "my-app-login",
@@ -289,6 +291,8 @@ between invocations.
 
 Profile files contain session cookies and tokens in plain text. Add
 `.profiles/` to your `.gitignore`:
+
+<VerifiedTag value="Verified" />
 
 ```
 .profiles/

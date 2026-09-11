@@ -19,6 +19,7 @@ slug: playwright-tests-in-ci-cd/
 canonical: https://www.testmuai.com/support/docs/playwright-tests-in-ci-cd/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -134,6 +135,8 @@ The [playwright-skill](https://github.com/LambdaTest/agent-skills/tree/main/play
 
 The playwright-skill package includes:
 
+<VerifiedTag value="Verified" />
+
 ```
 playwright-skill/
 ├── SKILL.md
@@ -156,6 +159,8 @@ It provides structured guidance for:
 ***
 
 Install a Playwright Agent Skill using the command below:
+
+<VerifiedTag value="Verified" />
 
 ```
 # Clone the repo and copy the skill you need

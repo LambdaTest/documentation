@@ -24,6 +24,31 @@ import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import VerifiedTag from '@site/src/component/verifiedTag';
+
+<script type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify({
+       "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": BRAND_URL
+        },{
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Support",
+          "item": `${BRAND_URL}/support/docs/`
+        },{
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Downloading Artefacts For A Cypress Project",
+          "item": `${BRAND_URL}/support/docs/download-artefacts-cypress/`
+        }]
+      })
+    }}
+></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -131,6 +156,8 @@ Assuming that you have run a Cypress test on lambdatest platform ( if not, this 
 
 Before getting started, you would have to update the **lambdatest-cypress cli** using the command below:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 npm install -g lambdatest-cypress-cli
 ```
@@ -149,6 +176,8 @@ Add **"downloads"** capability in the `lambdatest-config.json` file and define t
 
 Append `-sync` flag in the run command as mentioned below and run your test on the <BrandName /> platform. 
 
+<VerifiedTag value="Verified" />
+
 ```bash
 lambdatest-cypress run --sync=true
 ```
@@ -162,6 +191,8 @@ Once the test gets executed, you will find a `build_id` on the console correspon
 
 Go to your `lambdatest_run.json` file and copy the `session_id`.
 
+<VerifiedTag value="Verified" />
+
 ```json title=lambdatest_run.json
 {
    "build_id": "7724863",
@@ -170,6 +201,8 @@ Go to your `lambdatest_run.json` file and copy the `session_id`.
 ```
 
 Now pass the session_id by running the following command.
+
+<VerifiedTag value="Verified" />
 
 ```json
 lambdatest-cypress generate-report --session_id 6c899177-047e-4432-a9a7-17776e23aae3

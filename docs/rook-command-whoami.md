@@ -6,6 +6,32 @@ sidebar_label: rook whoami
 description: Check the current Rook account from a shell or automation.
 slug: rook-command-whoami/
 ---
+import VerifiedTag from '@site/src/component/verifiedTag';
+import { BRAND_URL } from '@site/src/component/BrandName';
+
+<script type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify({
+       "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": BRAND_URL
+        },{
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Support",
+          "item": `${BRAND_URL}/support/docs/`
+        },{
+          "@type": "ListItem",
+          "position": 3,
+          "name": "rook whoami Command",
+          "item": `${BRAND_URL}/support/docs/rook-command-whoami/`
+        }]
+      })
+    }}
+></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -68,11 +94,15 @@ Use <code>rook whoami</code> outside the interactive terminal to verify which Te
 
 ## Syntax
 
+<VerifiedTag value="Verified" />
+
 ~~~bash
 rook whoami
 ~~~
 
 This is an alias for:
+
+<VerifiedTag value="Verified" />
 
 ~~~bash
 rook auth status
@@ -82,12 +112,16 @@ rook auth status
 
 Verify a workstation before testing:
 
+<VerifiedTag value="Verified" />
+
 ~~~bash
 rook whoami
 rook plan
 ~~~
 
 Fail an automation setup step when a Rook identity is unavailable:
+
+<VerifiedTag value="Verified" />
 
 ~~~bash
 rook whoami

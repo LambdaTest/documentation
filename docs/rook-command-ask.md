@@ -6,6 +6,32 @@ sidebar_label: rook ask
 description: Give Rook a natural-language request and let its orchestrator answer from state or dispatch a command.
 slug: rook-command-ask/
 ---
+import VerifiedTag from '@site/src/component/verifiedTag';
+import { BRAND_URL } from '@site/src/component/BrandName';
+
+<script type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify({
+       "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": BRAND_URL
+        },{
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Support",
+          "item": `${BRAND_URL}/support/docs/`
+        },{
+          "@type": "ListItem",
+          "position": 3,
+          "name": "rook ask Command",
+          "item": `${BRAND_URL}/support/docs/rook-command-ask/`
+        }]
+      })
+    }}
+></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -68,6 +94,8 @@ Use <code>rook ask</code> for one natural-language orchestrator turn without ope
 
 ## Syntax
 
+<VerifiedTag value="Verified" />
+
 ~~~bash
 rook ask <prompt...>
 rook ask <prompt...> --verbose
@@ -80,6 +108,8 @@ rook ask <prompt...> --json
 | <code>--json</code> | Emit machine-readable events. |
 
 The orchestrator can answer questions from Rook workspace state or dispatch an existing command. Requests that spend credits, invoke a target, or need permission still pass through the same gates as the explicit command.
+
+<VerifiedTag value="Verified" />
 
 ~~~bash
 rook ask "Which agent is active and is its tree synchronized?"

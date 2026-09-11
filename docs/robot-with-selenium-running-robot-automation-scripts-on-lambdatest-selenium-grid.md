@@ -234,6 +234,9 @@ Complete these steps before running your first Robot Framework Selenium test.
 2. Verify that **pip** is installed in your system. Install **pip** from [official pip documentation](https://pip.pypa.io/en/stable/installation/).
 3. Download the latest **Selenium Client** and its **WebDriver bindings** from the [official website](https://www.selenium.dev/downloads/).
 4. Install **virtualenv** to isolate the build from other setups and ensure tests run with the specified module versions.
+
+<VerifiedTag value="Verified" />
+
 ```bash
 pip install virtualenv
 ```
@@ -242,18 +245,26 @@ pip install virtualenv
 ---
 Clone the repository and set up the environment.
 
+<VerifiedTag value="Verified" />
+
 ```bash
 git clone https://github.com/LambdaTest/Robot-Selenium-Sample
 cd Robot-Selenium-Sample
 ```
 
 Create a virtual environment and activate it:
+
+<VerifiedTag value="Verified" />
+
 ```bash
 virtualenv venv
 source venv/bin/activate
 ```
 
 Install the required packages:
+
+<VerifiedTag value="Verified" />
+
 ```bash
 pip install -r requirements.txt
 ```
@@ -268,6 +279,8 @@ Set TestMu AI `Username` and `Access Key` in environment variables.
 
 <TabItem value="bash" label="macOS / Linux" default>
 
+  <VerifiedTag value="Verified" />
+
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-bash">
   {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
@@ -278,6 +291,8 @@ export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 </TabItem>
 
 <TabItem value="powershell" label="Windows" default>
+
+  <VerifiedTag value="Verified" />
 
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-powershell">
@@ -334,11 +349,16 @@ Use the TestMu AI [Capabilities Generator](https://www.testmuai.com/capabilities
 ---
 Execute the Robot Framework test from the command line.
 
+<VerifiedTag value="Verified" />
+
 ```bash
 make test_Windows_10_chrome_latest
 ```
 
 To run parallel tests:
+
+<VerifiedTag value="Verified" />
+
 ```bash
 make run_all_in_parallel
 ```
@@ -361,6 +381,8 @@ Use AI coding assistants to generate and run Robot Framework tests with the Test
 The [robot-framework-skill](https://github.com/LambdaTest/agent-skills/tree/main/robot-framework-skill) is part of [TestMu AI Agent Skills](https://github.com/LambdaTest/agent-skills/) - structured packages that teach AI coding assistants how to write production-grade test automation.
 
 Install the skill:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 git clone https://github.com/LambdaTest/agent-skills.git

@@ -26,6 +26,30 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify({
+       "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": BRAND_URL
+        },{
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Support",
+          "item": `${BRAND_URL}/support/docs/`
+        },{
+          "@type": "ListItem",
+          "position": 3,
+          "name": "GitLab PR Checks with SmartUI Hooks",
+          "item": `${BRAND_URL}/support/docs/smartui-gitlab-pr-checks-hooks/`
+        }]
+      })
+    }}
+></script>
+
+<script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
     "@context": "https://schema.org",
     "@type": [
@@ -270,6 +294,8 @@ Configure your test suite with SmartUI capabilities. Since you're using the **Ho
 <Tabs className='docs__val' groupId='web-language'>
 <TabItem value='typescript-web' label='TypeScript/JavaScript' default>
 
+<VerifiedTag value="Verified" />
+
 ```typescript title="Example: TypeScript Selenium Configuration with SmartUI Hooks and GitLab"
 import { Builder, Capabilities } from 'selenium-webdriver';
 
@@ -309,6 +335,8 @@ const driver = await new Builder()
 
 </TabItem>
 <TabItem value='java-web' label='Java'>
+
+<VerifiedTag value="Verified" />
 
 ```java title="Example: Java Selenium Configuration with SmartUI Hooks and GitLab"
 package webhook;
@@ -379,6 +407,8 @@ public class BaseClassWebhook {
 </TabItem>
 <TabItem value='python-web' label='Python'>
 
+<VerifiedTag value="Verified" />
+
 ```python title="Example: Python Selenium Configuration with SmartUI Hooks and GitLab"
 from selenium import webdriver
 from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
@@ -428,6 +458,8 @@ driver = webdriver.Remote(
 <Tabs className='docs__val' groupId='mobile-language'>
 <TabItem value='typescript-mobile' label='TypeScript/JavaScript' default>
 
+<VerifiedTag value="Verified" />
+
 ```typescript title="Example: TypeScript/WebdriverIO Mobile Configuration with SmartUI Hooks and GitLab"
 import { remote, RemoteOptions } from 'webdriverio';
 
@@ -472,6 +504,8 @@ const driver = await remote({
 
 </TabItem>
 <TabItem value='java-mobile' label='Java'>
+
+<VerifiedTag value="Verified" />
 
 ```java title="Example: Java Appium Configuration with SmartUI Hooks and GitLab"
 package webhook;
@@ -545,6 +579,8 @@ public class BaseClassWebhook {
 
 </TabItem>
 <TabItem value='python-mobile' label='Python'>
+
+<VerifiedTag value="Verified" />
 
 ```python title="Example: Python Appium Configuration with SmartUI Hooks and GitLab"
 from appium import webdriver
@@ -701,6 +737,8 @@ The `visual: true` capability is **mandatory** for SmartUI visual regression tes
 Create or update your `.gitlab-ci.yml` file. Since you're using **Hooks**, you just need to run your tests normally - no SmartUI CLI exec command required.
 
 ### Complete GitLab CI/CD Configuration
+
+<VerifiedTag value="Verified" />
 
 <Tabs className='docs__val' groupId='ci-language'>
 <TabItem value='typescript' label='TypeScript/JavaScript' default>
@@ -1009,6 +1047,8 @@ When visual differences are detected:
 <Tabs className='docs__val' groupId='web-example-lang'>
 <TabItem value='typescript-web-ex' label='TypeScript/JavaScript' default>
 
+<VerifiedTag value="Verified" />
+
 ```typescript title="example.spec.ts - Complete Web Test with SmartUI Hooks and GitLab"
 import { Builder, Capabilities } from 'selenium-webdriver';
 
@@ -1071,6 +1111,8 @@ describe('Web Visual Regression Tests', () => {
 
 </TabItem>
 <TabItem value='java-web-ex' label='Java'>
+
+<VerifiedTag value="Verified" />
 
 ```java title="BaseClassWebhook.java - Complete Java Web Test with SmartUI Hooks and GitLab"
 package webhook;
@@ -1171,6 +1213,8 @@ public class BaseClassWebhook {
 <Tabs className='docs__val' groupId='mobile-example-lang'>
 <TabItem value='typescript-mobile-ex' label='TypeScript/JavaScript' default>
 
+<VerifiedTag value="Verified" />
+
 ```typescript title="example.spec.ts - Complete Mobile App Test with SmartUI Hooks and GitLab"
 import { remote, RemoteOptions } from 'webdriverio';
 
@@ -1236,6 +1280,8 @@ describe('Mobile App Visual Regression Tests', () => {
 
 </TabItem>
 <TabItem value='java-mobile-ex' label='Java'>
+
+<VerifiedTag value="Verified" />
 
 ```java title="BaseClassWebhook.java - Complete Java Mobile Test with SmartUI Hooks and GitLab"
 package webhook;

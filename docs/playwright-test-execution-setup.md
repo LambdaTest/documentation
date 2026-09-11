@@ -280,6 +280,8 @@ Playwright tests run with a `1920x1080` resolution by default for desktop browse
 
 The default viewport size for Playwright tests is 1280x720. If you wish to maximize the browser window during your Playwright test, you can do it as shown in the code below.
 
+<VerifiedTag value="Verified" />
+
 ```js
 // Create context with given viewport
 const context = await browser.newContext({
@@ -438,11 +440,15 @@ Shown below is syntax how to mark Playwright tests as **Passed** or **Failed**.
 
 1. To mark test status as **passed**.
 
+<VerifiedTag value="Verified" />
+
 ```
 await page.evaluate(_ => {}, `lambdatest_action: ${JSON.stringify({ action: 'setTestStatus', arguments: { status:'passed', remark: 'Title matched' } })}`)
 ```
 
 2. To mark test status as **failed**.
+
+<VerifiedTag value="Verified" />
 
 ```
 await page.evaluate(_ => {}, `lambdatest_action: ${JSON.stringify({ action: 'setTestStatus', arguments: { status:'failed', remark: 'Title not matched' } })}`)

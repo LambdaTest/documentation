@@ -17,6 +17,7 @@ site_name: TestMu AI
 slug: kane-cli-assurance-sources/
 canonical: https://www.testmuai.com/support/docs/kane-cli-assurance-sources/
 ---
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -185,6 +186,8 @@ Remote sources are passed as a URL instead of a file path. Each requires the mat
 
 ### Jira issues
 
+<VerifiedTag value="Verified" />
+
 ```bash
 kane-cli context ingest https://<your-site>/browse/PROJ-123
 ```
@@ -201,6 +204,8 @@ The project must be one of the integration's selected projects. An issue outside
 
 ### Confluence pages
 
+<VerifiedTag value="Verified" />
+
 ```bash
 kane-cli context ingest https://<site>/wiki/spaces/<KEY>/pages/<id>/...
 ```
@@ -214,6 +219,8 @@ Re-ingesting reads the latest page version, and identity follows content. An edi
 Short links such as `/wiki/x/...` are not supported. Open the page and use its full URL.
 
 ### Linear issues
+
+<VerifiedTag value="Verified" />
 
 ```bash
 kane-cli context ingest https://linear.app/<workspace>/issue/KEY-123
@@ -229,6 +236,8 @@ Identity follows the issue itself. Renaming a team key continues the same source
 
 ### Linear documents
 
+<VerifiedTag value="Verified" />
+
 ```bash
 kane-cli context ingest https://linear.app/<workspace>/document/<slug>
 ```
@@ -240,6 +249,8 @@ Ingested: the document body with every line citable, plus its inline images. The
 Workspace pages, meaning project, team or view URLs, are not ingestable and refuse loudly. Ingest their issues or documents individually.
 
 ### Public web pages
+
+<VerifiedTag value="Verified" />
 
 ```bash
 kane-cli context ingest https://docs.example.com/guide

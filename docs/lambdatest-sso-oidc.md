@@ -20,6 +20,7 @@ slug: testmu-sso-oidc/
 canonical: https://www.testmuai.com/support/docs/testmu-sso-oidc/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -297,6 +298,9 @@ The exact steps vary by identity provider, but the general process involves crea
 ### Step 5: Collect OpenID Connect Metadata
 
 1. **Get Well-Known OIDC URL**: The OpenID Connect well-known configuration URL follows this pattern:
+
+   <VerifiedTag value="Verified" />
+
    ```
    https://login.microsoftonline.com/{tenant-id}/v2.0/.well-known/openid-configuration
    ```
@@ -328,6 +332,9 @@ Since OIDC integration requires server-side configuration, you cannot create the
    - **Email**: [support@testmuai.com](mailto:support@testmuai.com)
 
 3. **Provide Configuration Details**: Include the following information in your support request:
+
+   <VerifiedTag value="Verified" />
+
    ```
    Identity Provider: Azure AD
    Client ID: [Your Application (client) ID]
@@ -370,6 +377,8 @@ Since OIDC integration requires server-side configuration, you cannot create the
 ### Method 2: Direct OIDC Login (For Testing)
 
 Since OIDC doesn't support classic IDP-based SSO login, you can use this URL to simulate the login process:
+
+<VerifiedTag value="Verified" />
 
 ```
 https://accounts.lambdatest.com/auth0/login?connection={connection-name}

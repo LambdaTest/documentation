@@ -18,6 +18,7 @@ slug: ghost-inspector-integration-with-testmu/
 canonical: https://www.testmuai.com/support/docs/ghost-inspector-integration-with-testmu/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -206,6 +207,8 @@ As a result, you’ll be able to expand your test coverage, analyze and extract 
 * Selenium IDE Plugin, for either Google Chrome and Mozilla Firefox.
 * Selenium IDE (SIDE) Runner. You can download SIDE runner using below code:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 npm install -g selenium-side-runner
 ```
@@ -242,6 +245,8 @@ npm install -g selenium-side-runner
 * Set the Desired Capabilities in Selenium. For this article, we have set the Chrome browser (version 72.0) for Windows 10, to run our Selenium IDE tests.
 * The <BrandName /> Selenium Desired Capabilities Generator is used to generate the capabilities. Below are the desired capabilities used in this article for the required test combination, provided in Python Language.
 
+<VerifiedTag value="Verified" />
+
 ```bash
 capabilities = {
                 "platform" : "Windows 10",
@@ -251,11 +256,16 @@ capabilities = {
 ```
 
 In the string format, it will be represented as:
+
+<VerifiedTag value="Verified" />
+
 ```bash
  **"browserName='chrome' version='72.0' platform='Windows 10'"**
  ```
 
 * Get the Grid URL for executing tests on <BrandName />. Get your username and access key from your <BrandName />'s Profile section (as shown in the prerequisites), and replace it in the below URL.
+
+<VerifiedTag value="Verified" />
 
 ```bash
 https://user-name:access-key@hub.lambdatest.com/wd/hub
@@ -263,10 +273,14 @@ https://user-name:access-key@hub.lambdatest.com/wd/hub
 
 * Specify the desired capabilities along with the Grid URL. Replace the desired capabilities and the Grid URL from the above steps in the below code:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 selenium-side-runner --server <lambdatest grid="" url=""> --capabilities </lambdatest>
 ```
 * Mention the number of parallel processes to be executed at a time. You can use any of the below syntax to specify the count of parallel processes to be executed at the above mentioned Grid URL:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 selenium-side-runner --w <num of="" parallel="" processes="">--server 
@@ -274,6 +288,8 @@ https://user-name:access-key@hub.lambdatest.com/wd/hub</num>
 ```
 
 OR
+
+<VerifiedTag value="Verified" />
 
 ```bash
 selenium-side-runner --max-workers <num of="" parallel="" processes="">--server 
@@ -283,6 +299,8 @@ https://user-name:access-key@hub.lambdatest.com/wd/hub</num>
 For this article, we have set the number of parallel processes as '4'.
 
 * Now we have all the components of the SIDE Runner command to execute the tests. So we will run the Selenium IDE tests on <BrandName /> Selenium Cloud Grid. Navigate to the directory where the .SIDE file is located (here it is located at "<BrandName />-IDE.side") and execute the below command in the terminal, after replacing the GRID URL:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 selenium-side-runner -w 4 "LambdaTest-IDE.side" --server 

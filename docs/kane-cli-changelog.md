@@ -15,6 +15,7 @@ canonical: https://www.testmuai.com/support/docs/kane-cli-changelog/
 ---
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -129,11 +130,15 @@ Subscribe to releases on GitHub to get notified when a new version ships:
 
 Update to the latest version at any time:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 npm update -g @testmuai/kane-cli
 ```
 
 Check your current version:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 kane-cli --version

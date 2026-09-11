@@ -21,6 +21,32 @@ site_name: TestMu AI
 slug: run-your-cypress-tests-in-parallel/
 canonical: https://www.testmuai.com/support/docs/run-your-cypress-tests-in-parallel/
 ---
+import VerifiedTag from '@site/src/component/verifiedTag';
+
+<script type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify({
+       "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": BRAND_URL
+        },{
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Support",
+          "item": `${BRAND_URL}/support/docs/`
+        },{
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Run Your Cypress Tests In Parallel On TestMu AI Platform",
+          "item": `${BRAND_URL}/support/docs/run-your-cypress-tests-in-parallel/`
+        }]
+      })
+    }}
+></script>
+
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
     "@context": "https://schema.org",
@@ -140,11 +166,15 @@ To perform Cypress testing parallelly using the CLI, you need to use the "`--par
 
 **Syntax:**
 
+<VerifiedTag value="Verified" />
+
 ```bash
 --parallels <number of parallel sessions>
 ```
 
 For example, if you want to run your Cypress tests on 5 parallel sessions, you can use the below command:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 lambdatest-cypress run --parallels 5
@@ -158,6 +188,8 @@ To run your Cypress testing parallelly, you can also use the **lambdatest-config
 
 **Syntax:**
 
+<VerifiedTag value="Verified" />
+
 ```json
 {
   "run_settings": {
@@ -169,6 +201,8 @@ To run your Cypress testing parallelly, you can also use the **lambdatest-config
 ```
 
 For example, if you want to run your Cypress tests on 5 parallel sessions, use the below settings:
+
+<VerifiedTag value="Verified" />
 
 ```json
 {
@@ -195,6 +229,8 @@ The [cypress-skill](https://github.com/LambdaTest/agent-skills/tree/main/cypress
 
 The cypress-skill package includes:
 
+<VerifiedTag value="Verified" />
+
 ```
 cypress-skill/
 ├── SKILL.md
@@ -217,6 +253,8 @@ It provides structured guidance for:
 ***
 
 Install a Cypress Agent Skill using the command below:
+
+<VerifiedTag value="Verified" />
 
 ```
 # Clone the repo and copy the skill you need

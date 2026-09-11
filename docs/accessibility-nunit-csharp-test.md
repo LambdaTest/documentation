@@ -15,6 +15,31 @@ slug: accessibility-nunit-csharp-test/
 canonical: https://www.testmuai.com/support/docs/accessibility-nunit-csharp-test/
 ---
 import VerifiedTag from '@site/src/component/verifiedTag';
+import { BRAND_URL } from '@site/src/component/BrandName';
+
+<script type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify({
+       "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": BRAND_URL
+        },{
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Support",
+          "item": `${BRAND_URL}/support/docs/`
+        },{
+          "@type": "ListItem",
+          "position": 3,
+          "name": "NUnit (C#)",
+          "item": `${BRAND_URL}/support/docs/accessibility-nunit-csharp-test/`
+        }]
+      })
+    }}
+></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -142,6 +167,8 @@ After navigation and waits:
 Without **either** the hook **or** `accessibility.autoscan`, you will not get Accessibility reports.
 
 ### 3. Run NUnit
+
+<VerifiedTag value="Verified" />
 
 ```bash
 dotnet test

@@ -23,6 +23,7 @@ canonical: https://www.testmuai.com/support/docs/accessibility-agent-skills/
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -187,6 +188,8 @@ The [`accessibility-skill`](https://github.com/LambdaTest/agent-skills/tree/main
 
 Clone the Agent Skills repository and copy the accessibility skill into your agent's skills directory:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 git clone https://github.com/LambdaTest/agent-skills.git
 
@@ -210,6 +213,8 @@ If you prefer installing all available framework skills, clone the repository di
 ## Set Up Your Authentication
 
 Accessibility scanning runs on the <BrandName /> cloud alongside your automation, so it uses your account credentials. Export them as environment variables:
+
+<VerifiedTag value="Verified" />
 
 <Tabs className="docs__val">
 <TabItem value="bash" label="Linux / MacOS" default>
@@ -249,6 +254,8 @@ From this, the agent will:
 ### Step 2: Run the accessibility scan
 
 Ask the agent to run it, or run your usual test command yourself:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 mvn test

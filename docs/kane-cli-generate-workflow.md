@@ -16,6 +16,7 @@ site_name: TestMu AI
 slug: kane-cli-generate-workflow/
 canonical: https://www.testmuai.com/support/docs/kane-cli-generate-workflow/
 ---
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -177,11 +178,15 @@ canonical: https://www.testmuai.com/support/docs/kane-cli-generate-workflow/
 
 Start with a plain-language description of what you want covered:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 kane-cli generate "checkout flow on a shopping site"
 ```
 
 kane-cli generates scenarios and cases and prints the result, ending with a **request id** and the exact commands to refine or save it:
+
+<VerifiedTag value="Verified" />
 
 ```
 ✓ Generated 3 scenarios · 11 cases  (request 23271)
@@ -203,6 +208,8 @@ Keep the request id, every later command uses it.
 
 Bound the size with limits when you want a tighter or broader set:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 kane-cli generate "checkout flow on a shopping site" --scenario-limit 4 --per-scenario-limit 6
 ```
@@ -212,6 +219,8 @@ Add `--memory` to reuse relevant existing cases and avoid duplicating coverage y
 ## 2. Refine
 
 Refinement is a plain-language conversation. Each refine is a fresh command with `--refine --req <id>`:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 kane-cli generate "also cover an expired card and an out-of-stock item" --refine --req 23271
@@ -224,6 +233,8 @@ Each refine returns the updated result. Repeat until the set looks right.
 
 Sometimes a turn ends by asking you something instead of finishing, for example, *"Which environment should these target, staging or production?"* This is a normal outcome, not a failure (the command exits `0`). Answer it by refining with your answer:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 kane-cli generate "target staging" --refine --req 23271
 ```
@@ -234,11 +245,15 @@ kane-cli generate "target staging" --refine --req 23271
 
 When you are happy with the set, save it. `--save` writes the **functional** cases as `_test.md` files:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 kane-cli generate --save --req 23271
 ```
 
 By default this writes under `<cwd>/.testmuai/tests`:
+
+<VerifiedTag value="Verified" />
 
 ```
 .testmuai/tests/
@@ -253,6 +268,8 @@ By default this writes under `<cwd>/.testmuai/tests`:
 
 Choose a different location with `--out`, and name the suite with `--name`:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 kane-cli generate --save --req 23271 --out ./tests --name checkout-suite
 ```
@@ -263,6 +280,8 @@ Only functional cases are written: non-functional cases (Security, Performance, 
 
 The saved files are ordinary `_test.md` tests. Run any of them with `testmd`:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 kane-cli testmd run .testmuai/tests/checkout-23271/checkout/guest-checkout_test.md
 ```
@@ -272,6 +291,8 @@ From here, everything in the [testmd docs](/support/docs/kane-cli-testmd/) appli
 ## Automating it (agents / CI)
 
 Pass `--agent` (auto-on when stdin is not a TTY) to get structured NDJSON on stdout instead of the human display, so a script or coding agent can drive the loop:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 kane-cli generate "checkout flow on a shopping site" --agent

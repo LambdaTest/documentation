@@ -17,6 +17,7 @@ canonical: https://www.testmuai.com/support/docs/agent-assurance-connect-and-exp
 ---
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -218,17 +219,23 @@ The target can be a complete application, one agent directory, or a documentatio
 
 Start Rook from the repository root and run:
 
+<VerifiedTag value="Verified" />
+
 ```text
 /explore .
 ```
 
 The headless equivalent is:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 rook explore .
 ```
 
 Use a narrower path when a monorepo contains a specific agent package:
+
+<VerifiedTag value="Verified" />
 
 ```text
 /explore packages/travel-agent
@@ -259,11 +266,15 @@ Discovery does not invent missing facts. If a tool's write behavior cannot be es
 
 Put free-form guidance after `--`:
 
+<VerifiedTag value="Verified" />
+
 ```text
 /explore . -- focus on the refund approval threshold and identity checks
 ```
 
 In headless mode:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 rook explore . \
@@ -273,6 +284,8 @@ rook explore . \
 The instruction guides the discovery model, but it does not widen the filesystem scope.
 
 Use `--force` after a substantial change or when you want to ignore the incremental freshness check:
+
+<VerifiedTag value="Verified" />
 
 ```text
 /explore --force
@@ -284,6 +297,8 @@ Normally Rook hashes the relevant files and re-reads only what changed.
 
 Create a clean directory containing the material you are authorized to share:
 
+<VerifiedTag value="Verified" />
+
 ```text
 travel-agent-spec/
   PRD.md
@@ -294,12 +309,16 @@ travel-agent-spec/
 
 Start Rook inside that directory:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 cd travel-agent-spec
 rook
 ```
 
 Then run:
+
+<VerifiedTag value="Verified" />
 
 ```text
 /explore . -- the deployed agent is a multi-turn travel planner
@@ -313,6 +332,8 @@ You still need an invocation profile that reaches the deployed agent. See [Confi
 
 Rook does not read a GitHub URL directly. Clone the repository, enter the checkout, and run Rook locally:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 git clone https://github.com/<owner>/<repository>.git
 cd <repository>
@@ -321,6 +342,8 @@ rook
 
 Then:
 
+<VerifiedTag value="Verified" />
+
 ```text
 /explore .
 ```
@@ -328,6 +351,8 @@ Then:
 If you paste a GitHub URL into `/explore`, Rook refuses it before spending credits and prints the corresponding clone workflow.
 
 For a pull request, check out the exact head you want to test:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 gh repo clone <owner>/<repository>
@@ -345,6 +370,8 @@ Never clone or check out untrusted code and then run its setup scripts without r
 ## Explore an External Local Directory
 
 You can explicitly point interactive Rook at a directory outside the current workspace:
+
+<VerifiedTag value="Verified" />
 
 ```text
 /explore ../another-agent
@@ -369,6 +396,8 @@ The browser inventory shows all registered agents and their scenario and run his
 
 Interactive commands:
 
+<VerifiedTag value="Verified" />
+
 ```text
 /agent
 /agent use <id>
@@ -376,6 +405,8 @@ Interactive commands:
 ```
 
 Headless commands:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 rook agent list
@@ -389,11 +420,15 @@ rook agent use <id>
 
 The interactive flow asks which candidates to register. For automation, use `--all`:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 rook explore . --all --json
 ```
 
 Use `--allow` only for a narrowly reviewed tool call:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 rook explore . --allow 'bash(npm test)'

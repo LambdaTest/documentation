@@ -16,6 +16,7 @@ site_name: TestMu AI
 slug: kane-cli-assurance-coverage/
 canonical: https://www.testmuai.com/support/docs/kane-cli-assurance-coverage/
 ---
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -136,12 +137,16 @@ canonical: https://www.testmuai.com/support/docs/kane-cli-assurance-coverage/
 
 A run can look green and still owe you coverage — that's exactly the situation the two axes make visible.
 
+<VerifiedTag value="Verified" />
+
 ```bash
 kane-cli cover [--from <pack>] [--json]                     # the two-axis panel
 kane-cli cover gaps [--stage design|cover|all] [--top <n>] [--from <pack>]  # the ranked worklist
 ```
 
 ## The panel
+
+<VerifiedTag value="Verified" />
 
 ```
 coverage — 8f0e…f2.evidence
@@ -165,6 +170,8 @@ The panel always shows **both** axes: the pack's proven depth, then the live-gra
 ## `cover gaps` — the worklist
 
 One ranked list (risk first) of what to do next, each row with a ready-to-paste command:
+
+<VerifiedTag value="Verified" />
 
 ```
 gaps — stage design (5)
@@ -192,6 +199,8 @@ The ribbon is deliberately high-level. A three-line header — the title with th
 ### `cover gaps <uc-id>` — the dossier *(0.8.2)*
 
 The dossier owns the detail for one use-case: its axis bars scoped to that use-case, then **every live acceptance criterion** in a full-text census table — `id · STATE · RISK · criterion`, wrapped, never truncated — proven and not-yet-run rows included. A failing row cites the test file when its id resolves to exactly one file (id-only otherwise), and a `next` actions block **leads with evidence, never a blind re-run**:
+
+<VerifiedTag value="Verified" />
 
 ```
 → kane-cli evidence serve <pack>     (see why it failed)

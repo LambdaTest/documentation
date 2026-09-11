@@ -369,6 +369,8 @@ public class JavaTodo {
 
 Replace the placeholder values with your actual credentials from the [TestMu AI Dashboard](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/dashboard).
 
+<VerifiedTag value="Verified" />
+
 <div className="lambdatest__codeblock">
     <CodeBlock className="language-java">
   {`String username= "${ YOUR_LAMBDATEST_USERNAME()}"; 
@@ -407,6 +409,8 @@ Execute your Java test from your IDE or terminal.
 **From your IDE:** Build and run the Java file directly.
 
 **From the terminal:**
+
+<VerifiedTag value="Verified" />
 
 ```bash
 cd to/file/location

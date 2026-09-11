@@ -14,6 +14,7 @@ canonical: https://www.testmuai.com/support/docs/test-intelligence-flakiness-tes
 import NewTag from '../src/component/newTag';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import { CookieTrackingSignup } from '@site/src/component/CookieTracking';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -239,6 +240,9 @@ Go to the `Test Intelligence` section in `Org Product Preferences` under `Organi
 
   :::note Test Capabilities
     For instance, if you execute a test suite for the login functionality of your application, the test group name could be designated as `Login` in the capabilities of your test.
+
+    <VerifiedTag value="Verified" />
+
     ```
     const capability = {
       "browserName": "Chrome",

@@ -242,11 +242,15 @@ If you are using your own project, make sure you update the **HUB endpoint** in 
 
 By setting up the HUB endpoint, you establish the communication channel between your tests and the browser nodes, enabling effective test distribution and execution.
 
+<VerifiedTag value="Verified" />
+
 ```bash
 const GRID_HOST = "@hub.lambdatest.com/wd/hub";
 ```
 
 Configure the desired capabilities based on your test requirements. For example:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 DesiredCapabilities capability = new DesiredCapabilities();
@@ -291,6 +295,8 @@ Run the below mentioned commands in your terminal to setup the CLI and the envir
 
 <TabItem value="bash" label="Linux / MacOS" default>
 
+  <VerifiedTag value="Verified" />
+
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-bash">
   {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
@@ -301,6 +307,8 @@ export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 </TabItem>
 
 <TabItem value="powershell" label="Windows" default>
+
+  <VerifiedTag value="Verified" />
 
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-powershell">
@@ -324,6 +332,8 @@ In this sample YAML file, we have mentioned:
 - **Pre and Post** commands
 - **Reports and Artefacts** that will be generated after the completion of tests
 - and other necessary YAML Parameters
+
+<VerifiedTag value="Verified" />
 
 ```yaml
 ---
@@ -380,11 +390,15 @@ jobLabel: [ 'HYP', 'Selenium', 'smartUI']
 
 Run the below command in your terminal at the root folder of the project:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 ./hyperexecute --config RELATIVE_PATH_OF_YOUR_YAML_FILE
 ```
 
 OR use this command if you have not exported your username and access key in the step 2.
+
+<VerifiedTag value="Verified" />
 
 <div className="lambdatest__codeblock">
   <CodeBlock className="language-bash">

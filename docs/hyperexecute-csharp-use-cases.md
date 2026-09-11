@@ -190,6 +190,8 @@ Large test suites with hundreds or thousands of tests can leave some nodes idle 
 ### Solution
 AutoSplit divides tests intelligently across nodes at file, module, or scenario level. Previously failed tests are prioritized for faster feedback. This ensures maximum concurrency usage and reduces test flakiness, enabling faster feedback loops for large BDD suites.
 
+<VerifiedTag value="Verified" />
+
 ```yaml title="hyperexecute.yaml"
 autosplit: true
 ```
@@ -209,6 +211,8 @@ Tests behave differently on various OS platforms. Running only on one OS may hid
 
 ### Solution
 The matrix runs tests concurrently on Mac, Windows, and Linux, detecting OS-specific issues like file paths, encoding, or browser behavior.
+
+<VerifiedTag value="Verified" />
 
 ```yaml title="hyperexecute.yaml"
 matrix:
@@ -231,6 +235,8 @@ Parallel jobs sharing default NuGet caches may cause corrupted packages, race co
 ### Solution
 Predefining NuGet paths ensures controlled caching, reliable builds across OSes, and efficient reuse of restored packages.
 
+<VerifiedTag value="Verified" />
+
 ```yaml title="hyperexecute.yaml"
 env:
   NUGET_PACKAGES: '/home/ltuser/.nuget/packages/'
@@ -252,6 +258,8 @@ env:
 Dependencies may not be restored or projects may not build correctly if pre-steps are missing, causing test failures downstream.
 
 ### Solution
+
+<VerifiedTag value="Verified" />
 
 ```yaml title="hyperexecute.yaml"
 pre:
@@ -281,6 +289,8 @@ Without artifacts, failed tests provide no screenshots, logs, or reports for deb
 ### Solution
 Artifacts centralize outputs like HTML reports and screenshots, enabling debug, traceability, and audit.
 
+<VerifiedTag value="Verified" />
+
 ```yaml title="hyperexecute.yaml"
 uploadArtefacts:
  - name: Execution_Report
@@ -305,6 +315,8 @@ Partial or misconfigured reports can be unreadable, incomplete, or fail to merge
 ### Solution
 Generates human-readable HTML reports showing pass/fail, steps, screenshots, and aggregated results for stakeholders.
 
+<VerifiedTag value="Verified" />
+
 ```yaml title="hyperexecute.yaml"
 report: true
 partialReports:
@@ -327,6 +339,8 @@ Static or incorrect discovery may skip new tests, misdetect test tags, or fail i
 ### Solution
 Remote discovery automatically detects new @tags or features, enabling parallelization and reducing manual maintenance.
 
+<VerifiedTag value="Verified" />
+
 ```yaml title="hyperexecute.yaml"
 testDiscovery:
   type: raw
@@ -348,6 +362,8 @@ Running all tests every time is inefficient, and category typos or missing attri
 ### Solution
 Executes only tests with the specified Category. Supports parallelization and selective reruns.
 
+<VerifiedTag value="Verified" />
+
 ```yaml title="hyperexecute.yaml"
 testRunnerCommand: dotnet test --filter "(Category=$test)"
 ```
@@ -364,6 +380,8 @@ testRunnerCommand: dotnet test --filter "(Category=$test)"
 Projects may have diverse tagging strategies, making standard discovery unreliable or incomplete.
 
 ### Solution
+
+<VerifiedTag value="Verified" />
 
 ```yaml title="hyperexecute.yaml"
 testDiscovery:
@@ -394,6 +412,8 @@ Builds projects correctly based on target framework, ensuring compatibility with
 **`.NET 6`+**: Use dotnet build in pre-steps
 **`.NET <6`**: Build locally and upload DLLs
 
+<VerifiedTag value="Verified" />
+
 ```yaml title="hyperexecute.yaml"
 C:\PROGRA~2\Micros~1\2019\Community\MSBuild\Current\Bin\MSBuild.exe /p:Configuration=Release /p:TargetFramework=net472 /t:restore
 ```
@@ -411,6 +431,8 @@ Projects depending on private NuGet feeds fail restore if credentials or feeds a
 
 ### Solution
 Configures private feeds securely to ensure reliable dependency resolution across environments.
+
+<VerifiedTag value="Verified" />
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -442,6 +464,8 @@ Some projects cannot run with dotnet test due to configuration or .NET version c
 ### Solution
 Alternative runner allows execution of targeted tests, respecting project-specific configurations.
 
+<VerifiedTag value="Verified" />
+
 ```yaml
 vstest.console.exe "GlobalPolaris\bin\Debug\net472\GlobalPolaris.dll" /Settings:GlobalPolaris\RunSettings.runsettings /TestCaseFilter:"FullyQualifiedName~$test"
 ```
@@ -458,6 +482,9 @@ Standard discovery may fail with complex NUnit tag setups.
 
 ### Solution
 Uses NUnit console to explore feature tests by tags.
+
+<VerifiedTag value="Verified" />
+
 ```yaml 
 & "C:\PROGRA~2\NUnit.org\nunit-console\nunit3-console.exe" "<dll_path>" --where="cat==$tag" --explore
 ```
@@ -475,6 +502,8 @@ Large test suites take long to upload; repeated full uploads waste time and band
 
 ### Solution
 Uploads only changed files, reducing upload time and network usage.
+
+<VerifiedTag value="Verified" />
 
 ```yaml title="hyperexecute.yaml"
 differentialUpload:
@@ -495,6 +524,8 @@ Browser tests requiring client certificates fail without proper installation.
 
 ### Solution
 Installs certificates in browser environment for authenticated sessions.
+
+<VerifiedTag value="Verified" />
 
 ```yaml title="hyperexecute.yaml"
 %HYPEREXECUTE_WORKING_DIR%//Hyperexecute//cert_manager.exe --chrome -i atest089.pfx
@@ -542,6 +573,8 @@ Standard reports may not provide enough detail for complex SpecFlow tests.
 ### Solution
 Generates custom reports with metadata and email notifications.
 
+<VerifiedTag value="Verified" />
+
 ```yaml title="hyperexecute.yaml"
 report: true
 partialReports:
@@ -566,6 +599,8 @@ Running tests on the wrong or outdated DLL causes failures or misses new tests.
 
 ### Solution
 Ensures correct DLL is built and executed on the proper runner.
+
+<VerifiedTag value="Verified" />
 
 ```yaml title="hyperexecute.yaml"
 runson: win
@@ -594,6 +629,8 @@ All tests running together reduce parallelism and rerun flexibility.
 ### Solution
 Run each feature individually to enable parallel execution and selective reruns.
 
+<VerifiedTag value="Verified" />
+
 ```yaml title="hyperexecute.yaml"
 matrix:
   featurefile:
@@ -619,6 +656,8 @@ Incorrect YAML quoting or missing result file paths cause unintended test runs o
 
 ### Solution
 Properly passing arguments ensures selective execution and saves results for artifact uploads.
+
+<VerifiedTag value="Verified" />
 
 ```yaml title="hyperexecute.yaml"
 test:

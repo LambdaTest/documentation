@@ -171,6 +171,8 @@ Playwright Test Runner is used for end-to-end automated testing of websites and 
 
 2. Install the npm dependencies.
 
+<VerifiedTag value="Verified" />
+
 ```
 npm install
 ```
@@ -235,6 +237,8 @@ projects: [
 module.exports = config
 ```
 Pass the below command to run the test.
+
+<VerifiedTag value="Verified" />
 
 ```
 npm run test
@@ -341,6 +345,8 @@ The [playwright-skill](https://github.com/LambdaTest/agent-skills/tree/main/play
 
 The playwright-skill package includes:
 
+<VerifiedTag value="Verified" />
+
 ```
 playwright-skill/
 ├── SKILL.md
@@ -363,6 +369,8 @@ It provides structured guidance for:
 ***
 
 Install a Playwright Agent Skill using the command below:
+
+<VerifiedTag value="Verified" />
 
 ```
 # Clone the repo and copy the skill you need
