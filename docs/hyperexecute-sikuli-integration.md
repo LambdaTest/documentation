@@ -129,6 +129,47 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
   }) }}
 />
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Integrate Sikuli with HyperExecute",
+      "description": "Automate the visual testing of any software by integrating Sikuli with HyperExecute.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Build your Visual Test with SikuliX",
+          "text": "Write your project code and all the other necessary dependencies in your code-repository.",
+          "url": "https://www.testmuai.com/support/docs/hyperexecute-sikuli-integration/#step-1-build-your-visual-test-with-sikulix"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Configure your HyperExecute YAML",
+          "text": "Here is a sample YAML file, you can configure it with different YAML flags as per your requirements.",
+          "url": "https://www.testmuai.com/support/docs/hyperexecute-sikuli-integration/#step-2-configure-your-hyperexecute-yaml"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Setup your Authentication / Environment Variables",
+          "text": "After configuring your project and HyperExecute YAML file, you need to setup the CLI and the environment variables. The CLI is used for triggering the tests on HyperExecute. It is recommend to download the CLI binary on the host system and keep it in the root directory of the suite to perform the tests on HyperExecute. You can download the CLI for your desired platform from the below mentioned links: Now, you need to export your environment variables LTUSERNAME and LTACCESSKEY* that are available in the TestMu AI Profile page. Run the below mentioned commands in your terminal to setup the CLI and the environment variables. {`export LTUSERNAME=\"${ YOURLAMBDATEST_USERNAME()}\" export LTACCESSKEY=\"${ YOURLAMBDATESTACCESS_KEY()}\"`} {`set LTUSERNAME=\"${ YOURLAMBDATEST_USERNAME()}\" set LTACCESSKEY=\"${ YOURLAMBDATESTACCESS_KEY()}\"`}",
+          "url": "https://www.testmuai.com/support/docs/hyperexecute-sikuli-integration/#step-3-setup-your-authentication--environment-variables"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Step 4: Execute and Monitor your Project",
+          "text": "In case of MacOS, if you get a permission denied warning while executing CLI, simply run chmod u+x ./hyperexecute to allow permission. In case you get a security popup, allow it from your System Preferences \u2192 Security & Privacy \u2192 General tab. Run the below command in your terminal at the root folder of the project: OR use this command if you have not exported your username and access key in the step 2. {./hyperexecute --user ${ YOURLAMBDATESTUSERNAME()} --key ${ YOURLAMBDATESTACCESSKEY()} --config RELATIVEPATHOFYOURYAMLFILE } Visit the HyperExecute Dashboard and check your Job status.",
+          "url": "https://www.testmuai.com/support/docs/hyperexecute-sikuli-integration/#step-4-execute-and-monitor-your-project"
+        }
+      ]
+    }
+  ]) }}
+/>
+
 Sikuli is an open-source tool that empowers you to automate tasks on your computer screen. It utilizes a unique approach called "visual image match" to interact with graphical user interfaces (GUIs).
 
 This documentation guides you on how to integrate Sikuli seamlessly with HyperExecute to leverage the power of image recognition.

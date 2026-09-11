@@ -172,6 +172,40 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
   }) }}
 />
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Configuration Steps",
+      "description": "Learn how to configure advanced features in Web Scanner including authentication (Basic Auth and Form Selectors), dedicated proxy, geolocation, and tunnel for testing locally hosted pages.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Download Tunnel Binary",
+          "text": "Download the TestMu AI Tunnel binary for your platform: Windows (64-bit) Windows (32-bit) macOS (Intel) macOS (Apple Silicon) Linux (64-bit) Linux (ARM64)",
+          "url": "https://www.testmuai.com/support/docs/web-scanner-advanced-features/#step-1-download-tunnel-binary"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Start the Tunnel",
+          "text": "Replace: YOURLAMBDATESTUSERNAME: Your TestMu AI username YOURLAMBDATESTACCESS_KEY: Your TestMu AI access key YOURTUNNELNAME: A unique name for your tunnel (e.g., \"web-scanner-tunnel\")",
+          "url": "https://www.testmuai.com/support/docs/web-scanner-advanced-features/#step-2-start-the-tunnel"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Configure Tunnel in Web Scanner",
+          "text": "Navigate to Advanced Configurations in your scan setup Click on Add a local testing setup Select your tunnel from the dropdown (it should show as \"Active\" if running) The tunnel will be used to access your locally hosted pages",
+          "url": "https://www.testmuai.com/support/docs/web-scanner-advanced-features/#step-3-configure-tunnel-in-web-scanner"
+        }
+      ]
+    }
+  ]) }}
+/>
+
 ## Overview
 
 Web Scanner provides advanced configuration options to enhance your scanning capabilities. These features allow you to test authenticated pages, access network-restricted resources, simulate different geographic locations, and scan locally hosted applications.

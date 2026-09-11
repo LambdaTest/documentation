@@ -105,6 +105,47 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
   }) }}
 />
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Receive Instant Notification on your Jobs Directly in your Slack",
+      "description": "Streamline testing & communication! Integrate TestMu AI HyperExecute with Slack for real-time test notifications & updates.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Navigate to the Integration Page",
+          "text": "Login to your TestMu AI Account. Navigate to the Settings > Integration page. Select the Communication tab and search for Slack.",
+          "url": "https://www.testmuai.com/support/docs/hyperexecute-slack-integration/#step-1-navigate-to-the-integration-page"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Integrate the Slack with your TestMu AI Account",
+          "text": "Click on the Connect button and then Install for the Slack integration. NOTE : If you are already logged into Slack, you'll be redirected to a page where you have to post to a channel to confirm your identity or else you will be asked to provide Slack URL of your workspace. Select the channel you want to post on. Click on Allow button. A notification would be shared on to all the members belonging to that channel, informing about your integration.",
+          "url": "https://www.testmuai.com/support/docs/hyperexecute-slack-integration/#step-2-integrate-the-slack-with-your-testmu-ai-account"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Update the Notification Settings and Trigger the Job",
+          "text": "Once you integrate Slack, you need to configure notification settings to get test automation notifications on your integrated Slack channel. Click on the Settings button. Choose your Notification Preferences like Screenshot test completion messages, Build completion messages, etc. Update the Notification Time as well. Now run the test and visit the Slack channel to view the build notification containing Job Number, Job Status, Executed By, Started At, Job Duration, Test Duration etc.",
+          "url": "https://www.testmuai.com/support/docs/hyperexecute-slack-integration/#step-3-update-the-notification-settings-and-trigger-the-job"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Step 4: Report a bug for a Failed Test",
+          "text": "Click on the failed test. It will navigate you to the automation page. Click on the bug icon. A pop-up menu will appear, fill up the details and create a issue for the same. The issue will be notified in the slack channel.",
+          "url": "https://www.testmuai.com/support/docs/hyperexecute-slack-integration/#step-4-report-a-bug-for-a-failed-test"
+        }
+      ]
+    }
+  ]) }}
+/>
+
 This document details the seamless integration between HyperExecute and Slack, enabling you to streamline your workflow and stay informed about your automated tasks. Through this integration, you can receive real-time notifications and crucial job details directly within your Slack workspace.
 
 ## Prerequisite

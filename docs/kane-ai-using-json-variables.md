@@ -98,6 +98,54 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     "dateModified": "2026-09-09T19:16:50+05:30"
   }) }}
 />
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "KaneAI - Utilizing JSON Variables for Assertions",
+      "description": "Learn how to use JSON variables in the KaneAI test cases for assertions",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Understanding JSON Variable Assertions",
+          "text": "In KaneAI, you can use JSON variables to perform detailed assertions on API responses. This allows you to validate specific objects and elements within the response structure.",
+          "url": "https://www.testmuai.com/support/docs/kane-ai-using-json-variables/#step-1-understanding-json-variable-assertions"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Initiating an API Call",
+          "text": "Navigate to your desired API endpoint (e.g., a pet store website) Configure the necessary API call parameters Execute the API request Select the appropriate HTTP method (GET, POST, etc.) Add required headers Input any necessary request body Send the request",
+          "url": "https://www.testmuai.com/support/docs/kane-ai-using-json-variables/#step-2-initiating-an-api-call"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Accessing Response Variables",
+          "text": "After executing the API call, KaneAI automatically generates variables containing: Response status code Response body Response headers Other relevant metadata",
+          "url": "https://www.testmuai.com/support/docs/kane-ai-using-json-variables/#step-3-accessing-response-variables"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Step 4: Asserting Response Status",
+          "text": "To assert the response status: Use double curly braces {{ to access the variable list Navigate using arrow keys to select the status variable Define your expected status code Expected status: 200 If actual status is 500, the assertion will fail",
+          "url": "https://www.testmuai.com/support/docs/kane-ai-using-json-variables/#step-4-asserting-response-status"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 5,
+          "name": "Step 5: Asserting Response Body",
+          "text": "Navigate through the response body using the same double curly brace method: Open the variable selection menu with {{ Browse to the specific JSON element you want to validate Create an assertion for that element Check if 'dogs' element exists in the response Verify specific property values Validate nested JSON structures",
+          "url": "https://www.testmuai.com/support/docs/kane-ai-using-json-variables/#step-5-asserting-response-body"
+        }
+      ]
+    }
+  ]) }}
+/>
 This document outlines the process of using JSON variables in KaneAI to assert specific objects within an API response. The guide provides a step-by-step procedure for executing API calls, examining responses, and performing assertions on both status and body of the response.
 
 ## Prerequisites

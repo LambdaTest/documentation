@@ -102,6 +102,61 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     "dateModified": "2026-09-09T20:20:47+05:30"
   }) }}
 />
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Using parameters for test runs",
+      "description": "Learn how to use parameters in the KaneAI test cases",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Navigate to Test Project",
+          "text": "Open the Test Project dashboard and go to the Test Run section.",
+          "url": "https://www.testmuai.com/support/docs/kane-ai-using-parameters/#step-1-navigate-to-test-project"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Create a New Test Run",
+          "text": "Click Create New Test Run and name it (e.g., parameters test run). Select the KaneAI-generated test cases. Optionally, add a description or relevant tags. Click Create Test Run.",
+          "url": "https://www.testmuai.com/support/docs/kane-ai-using-parameters/#step-2-create-a-new-test-run"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Add Test Cases and Data Sets",
+          "text": "Select and add the desired test cases to the run. Specify configurations (e.g., Windows 10 Chrome). Attach the required data sets for the test run.",
+          "url": "https://www.testmuai.com/support/docs/kane-ai-using-parameters/#step-3-add-test-cases-and-data-sets"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Step 4: Apply Data Sets",
+          "text": "Ensure the data sets containing necessary parameters are pre-filtered and accessible. Click Apply to confirm the Dataset selection.",
+          "url": "https://www.testmuai.com/support/docs/kane-ai-using-parameters/#step-4-apply-data-sets"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 5,
+          "name": "Step 5: Save and Prepare for Execution",
+          "text": "Save the test run with the selected parameters and Datasets. The system will create test instances ready for execution in a hybrid environment.",
+          "url": "https://www.testmuai.com/support/docs/kane-ai-using-parameters/#step-5-save-and-prepare-for-execution"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 6,
+          "name": "Step 6: Execute Tests with Parameters",
+          "text": "Utilize the parameters to run your test cases with different data sets and inputs. You can manage and monitor execution using the TestMu AI Test Manager interface.",
+          "url": "https://www.testmuai.com/support/docs/kane-ai-using-parameters/#step-6-execute-tests-with-parameters"
+        }
+      ]
+    }
+  ]) }}
+/>
 This guide provides a detailed walkthrough for utilizing parameters in KaneAI to streamline test case management and execute tests with various data inputs. By leveraging data parameters, testers and developers can manage configurations effortlessly. Follow the step-by-step instructions below for successful implementation.
 
 ## Key Features of Parameters in KaneAI

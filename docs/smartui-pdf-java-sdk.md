@@ -257,6 +257,68 @@ import VerifiedTag from '@site/src/component/verifiedTag';
   }) }}
 />
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Upload PDFs via Java SDK",
+      "description": "Learn how to upload PDF files to SmartUI using the Java SDK for programmatic visual regression testing.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Establishing a SmartUI Project",
+          "text": "To initiate a SmartUI PDF Comparison Project, adhere to the following instructions: Navigate to the SmartUI Projects Page. Tap on the new project button. Specify your platform type as PDF. Provide your project name, designate approvers, and add tags (optional). Confirm your entry by clicking on Submit. Once your project is active, retrieve your Project Token from the application. Here's an example of a project token:",
+          "url": "https://www.testmuai.com/support/docs/smartui-pdf-java-sdk/#step-1-establishing-a-smartui-project"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 1: Clone the Sample Project",
+          "text": "First, clone the sample project to get started:",
+          "url": "https://www.testmuai.com/support/docs/smartui-pdf-java-sdk/#step-1-clone-the-sample-project"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 2: Install the SmartUI Java SDK",
+          "text": "Add the SmartUI Java SDK to your pom.xml: Then compile your project:",
+          "url": "https://www.testmuai.com/support/docs/smartui-pdf-java-sdk/#step-2-install-the-smartui-java-sdk"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Step 3: Set up your credentials",
+          "text": "Step 3: Set up your credentials",
+          "url": "https://www.testmuai.com/support/docs/smartui-pdf-java-sdk/#step-3-set-up-your-credentials"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 5,
+          "name": "Step 4: Upload PDFs using Java SDK",
+          "text": "You can upload PDFs in two modes: Upload pre-existing PDFs from your local machine: \"> \ud83d\udcc1 Sample File: SmartuiPdfLocalTest.java Upload PDFs downloaded during TestMu AI cloud test execution: \"> \ud83d\udcc1 Sample File: SmartuiPdfCloudTest.java",
+          "url": "https://www.testmuai.com/support/docs/smartui-pdf-java-sdk/#step-4-upload-pdfs-using-java-sdk"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 6,
+          "name": "Step 5: Configuration Options",
+          "text": "Step 5: Configuration Options",
+          "url": "https://www.testmuai.com/support/docs/smartui-pdf-java-sdk/#step-5-configuration-options"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 7,
+          "name": "Step 6: Run your tests",
+          "text": "Step 6: Run your tests",
+          "url": "https://www.testmuai.com/support/docs/smartui-pdf-java-sdk/#step-6-run-your-tests"
+        }
+      ]
+    }
+  ]) }}
+/>
+
 :::caution
 This functionality is exclusive to our enterprise plan subscribers on SmartUI. For additional details or inquiries, please [contact us](https://www.testmuai.com/demo/).
 :::

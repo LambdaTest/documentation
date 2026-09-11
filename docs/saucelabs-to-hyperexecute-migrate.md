@@ -154,6 +154,47 @@ import VerifiedTag from '@site/src/component/verifiedTag';
   }) }}
 />
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Steps to Migrate",
+      "description": "To migrate your Test from Sauce Labs to HyperExecute, you need to follow the below mentioned steps: For demonstration purposes, we'll be using Selenium with the TestNG framework in our examples.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Create your account in HyperExecute",
+          "text": "Before starting the migration process, make sure you have created your account in HyperExecute and that you have also configured your HyperExecute UserName and Access Key.",
+          "url": "https://www.testmuai.com/support/docs/saucelabs-to-hyperexecute-migrate/#step-1-create-your-account-in-hyperexecute"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Configure CLI and Environment Variables",
+          "text": "Since we will be performing the test from our local system, thus in order to initiate a test execution Job, you are required to download HyperExecute CLI and set the environment variable. The HyperExecute CLI is used for triggering tests on HyperExecute. It is recommended to download the CLI binary on the host system to perform the tests on HyperExecute. The CLI download site for various platforms is displayed below: Run the below mentioned commands in the terminal to setup the CLI and the environment variables. For macOS / Linux: For Windows:",
+          "url": "https://www.testmuai.com/support/docs/saucelabs-to-hyperexecute-migrate/#step-2-configure-cli-and-environment-variables"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Configure and Update your Test Scripts",
+          "text": "Add the HyperExecute YAML file in the root folder of your test code repository. Sample YAML File Replace the Sauce Labs Hooks with TestMu AI Hooks (if required). Update the Sauce Labs Dependencies and Capabilities. Sauce Labs HyperExecute For a Java-based implementation, here are the changes in the script as far as the authentication stage is concerned: Sauce Labs HyperExecute For a Java-based implementation, here are the changes in the script as far as the Hub URL is concerned: Sauce Labs TestMu AI",
+          "url": "https://www.testmuai.com/support/docs/saucelabs-to-hyperexecute-migrate/#step-3-configure-and-update-your-test-scripts"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Step 4: Execute your Job in HyperExecute",
+          "text": "Run the below command in your downloaded CLI to trigger your test scripts in the HyperExecute Platform. {./hyperexecute --user ${ YOURLAMBDATESTUSERNAME()} --key ${ YOURLAMBDATESTACCESSKEY()} --config RELATIVEPATHOFYOURYAMLFILE } In case of MAC, if you get a permission denied warning while executing CLI, simply run chmod u+x ./hyperexecute to allow permission. In case you get a security popup, allow it from your System Preferences \u2192 Security & Privacy \u2192 General tab. Here is the output in the HyperExecute Dashboard.",
+          "url": "https://www.testmuai.com/support/docs/saucelabs-to-hyperexecute-migrate/#step-4-execute-your-job-in-hyperexecute"
+        }
+      ]
+    }
+  ]) }}
+/>
+
 # Migrate from SauceLabs to HyperExecute
 
 ## Overview

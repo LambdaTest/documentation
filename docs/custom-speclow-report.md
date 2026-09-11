@@ -106,6 +106,40 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     "dateModified": "2026-02-12T19:51:34+05:30"
   }) }}
 />
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Configuration Changes",
+      "description": "To enable custom SpecFlow reporting, make the following changes to your YAML configuration file and test script.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Modify the YAML Configuration File",
+          "text": "Add the following settings in your YAML file to enable reporting and configure partial reports: Explanation: report: true \u2192 Enables the reporting feature. partialReports.location \u2192 Specifies the directory where the partial reports will be stored. partialReports.type: xml \u2192 Configures the report format as XML. partialReports.frameworkName: specflow-custom \u2192 Sets the framework name. email.to \u2192 Defines the recipient email address where the reports will be sent. email.metaInfo \u2192 Adds metadata, including project name and environment details, to the report.",
+          "url": "https://www.testmuai.com/support/docs/custom-speclow-report/#step-1-modify-the-yaml-configuration-file"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Modify the Test Script",
+          "text": "Add the following capability in your test script to ensure the correct execution status is recorded: ((IJavaScriptExecutor)driver).ExecuteScript($\"lambda-info=suitename:YOURSUITENAME:passed\"); Explanation: This script sends test execution information (suite name and status) to TestMu AI. Replace YOURSUITENAME with the appropriate suite name. The passed status can be dynamically changed based on the test result.",
+          "url": "https://www.testmuai.com/support/docs/custom-speclow-report/#step-2-modify-the-test-script"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Report Generation and Email Notification",
+          "text": "Once the tests are executed, the custom SpecFlow report will be generated and sent to the configured email address. The report will include: Tag-based test summaries and details. Suite-based test summaries and details. Number of tests passed, failed, skipped, or with other statuses. Meta information such as project name and environment.",
+          "url": "https://www.testmuai.com/support/docs/custom-speclow-report/#step-3-report-generation-and-email-notification"
+        }
+      ]
+    }
+  ]) }}
+/>
 This guide provides step-by-step instructions on how to generate a custom SpecFlow report in <BrandName /> HyperExecute. By following the specified changes in the YAML file and modifying the test script, users can receive detailed test reports via email.
 
 ## Prerequisites

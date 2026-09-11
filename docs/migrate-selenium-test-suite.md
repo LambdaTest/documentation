@@ -208,6 +208,47 @@ import VerifiedTag from '@site/src/component/verifiedTag';
   }) }}
 />
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Migrate Your Selenium Test Suite",
+      "description": "Migrate your local Selenium tests to TestMu AI's cloud grid. Change the hub URL, add capabilities, and run your existing suite on 3000+ browsers.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Set Your Credentials",
+          "text": "Add your TestMu AI credentials as environment variables so your tests can authenticate with the grid. {`export LTUSERNAME=\"${ YOURLAMBDATEST_USERNAME()}\" export LTACCESSKEY=\"${ YOURLAMBDATESTACCESS_KEY()}\"`} {`set LTUSERNAME=\"${ YOURLAMBDATEST_USERNAME()}\" set LTACCESSKEY=\"${ YOURLAMBDATESTACCESS_KEY()}\"`}",
+          "url": "https://www.testmuai.com/support/docs/migrate-selenium-test-suite/#step-1-set-your-credentials"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Replace Your Local Driver With RemoteWebDriver",
+          "text": "Point your tests to the TestMu AI hub instead of launching a local browser. Find where your test creates the WebDriver instance and replace it with a RemoteWebDriver pointing to the TestMu AI hub URL: Here is what the change looks like in each language: Before (local): After (cloud): Before (local): After (cloud): Before (local): After (cloud): Before (local): After (cloud): Before (local): After (cloud): Before (local): After (cloud): Use the Capabilities Generator to auto-generate the capabilities code for any browser, version, and OS combination.",
+          "url": "https://www.testmuai.com/support/docs/migrate-selenium-test-suite/#step-2-replace-your-local-driver-with-remotewebdriver"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Run Your Tests",
+          "text": "Execute your tests the same way you normally would. The only difference is they now run on the cloud.",
+          "url": "https://www.testmuai.com/support/docs/migrate-selenium-test-suite/#step-3-run-your-tests"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Step 4: View Your Results",
+          "text": "Check the Automation Dashboard to see exactly what happened during your test. Visit the TestMu AI Automation Dashboard to see your results. Each session captures video playback, screenshots, console logs, network logs, and Selenium command logs.",
+          "url": "https://www.testmuai.com/support/docs/migrate-selenium-test-suite/#step-4-view-your-results"
+        }
+      ]
+    }
+  ]) }}
+/>
+
 ---
 
 Already have Selenium tests running locally? You can run them on the TestMu AI cloud grid with three changes: swap the driver URL, add your credentials, and set the desired capabilities. Your test logic stays the same.

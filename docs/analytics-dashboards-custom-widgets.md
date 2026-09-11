@@ -102,6 +102,54 @@ import CookieTrackingLogin from '@site/src/component/CookieTracking';
     "dateModified": "2026-08-15T19:26:04+05:30"
   }) }}
 />
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Common Steps for Creating Custom Widgets",
+      "description": "The following steps are common to all custom widget types. After completing these steps, proceed to the widget-specific configuration based on your chosen visualization type.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Navigate to Insights",
+          "text": "Log in to your LambdaTest account. Navigate to the Insights section from the left sidebar or visit https://analytics.lambdatest.com/. Click on the Dashboards tab.",
+          "url": "https://www.testmuai.com/support/docs/dashboards-custom-widgets/#step-1-navigate-to-insights"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Create a New Dashboard or Select Existing",
+          "text": "Click on the + Create New button located at the top right of the dashboard list. From the dropdown menu, select Custom Widgets.",
+          "url": "https://www.testmuai.com/support/docs/dashboards-custom-widgets/#step-2-create-a-new-dashboard-or-select-existing"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Choose a Product",
+          "text": "Select the product for which you want to create the widget. Available options include: Web Automation: Visualize web testing data App Automation: Analyze mobile testing data HyperExecute: Monitor HyperExecute test runs Real Time Testing: Visualize real-time testing data Real Device Testing: Analyze real device testing data Smart UI Testing: Visualize Smart UI testing data",
+          "url": "https://www.testmuai.com/support/docs/dashboards-custom-widgets/#step-3-choose-a-product"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Step 4: Select Data Source",
+          "text": "Choose the data source that will power your widget: Tests: Visualize test execution data including pass/fail rates, test counts, and execution times Auto Heal: Visualize Auto Heal statistics and trends (available for Web Automation and HyperExecute only)",
+          "url": "https://www.testmuai.com/support/docs/dashboards-custom-widgets/#step-4-select-data-source"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 5,
+          "name": "Step 5: Configure Filters (Optional)",
+          "text": "Use filters to narrow down your data based on specific requirements: Click + Add a Filter to add filter criteria. Select a Key from the dropdown (e.g., browser, OS, resolution, custom data). Choose an Operator (equals, contains, greater than, etc.). Select or enter the Value to filter by. Add multiple filters as needed to refine your dataset. Use filters to focus on specific release versions, custom parameters, or other attributes. This helps create more targeted and actionable visualizations.",
+          "url": "https://www.testmuai.com/support/docs/dashboards-custom-widgets/#step-5-configure-filters-optional"
+        }
+      ]
+    }
+  ]) }}
+/>
 Custom widgets in <BrandName /> Analytics Dashboards allow you to create personalized visualizations of your test data. This feature enables you to gain insights into your testing process and make data-driven decisions.
 
 <div className="ytframe">

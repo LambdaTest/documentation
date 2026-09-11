@@ -120,6 +120,55 @@ import VerifiedTag from '@site/src/component/verifiedTag';
     "dateModified": "2026-09-09T19:10:37+05:30"
   }) }}
 />
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Steps to Generate Extent Reports (Version <= 2) on HyperExecute",
+      "description": "Follow these steps to enable Extent Reports for your HyperExecute job:",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Add Dependency",
+          "text": "If using Maven, add the following dependency to your pom.xml file:",
+          "url": "https://www.testmuai.com/support/docs/extent-report/#step-1-add-dependency"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Create an Extent Report Listener",
+          "text": "Create a class, e.g., ExtentReportListenerV2.java, to initialize and flush Extent Reports during test execution. This listener will log each test case\u2019s status to the report.",
+          "url": "https://www.testmuai.com/support/docs/extent-report/#step-2-create-an-extent-report-listener"
+        }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Steps to Generate Extent Reports (Version > 2) on HyperExecute",
+      "description": "Follow these steps to enable Extent Reports for your HyperExecute job:",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Add Dependency",
+          "text": "If using Maven, add the latest extentreports dependency to pom.xml file:",
+          "url": "https://www.testmuai.com/support/docs/extent-report/#step-1-add-dependency-1"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Create an Extent Report Listener",
+          "text": "For Extent Reports > 2, use ExtentHtmlReporter to generate and customize the HTML report. Create ExtentReportListener.java:",
+          "url": "https://www.testmuai.com/support/docs/extent-report/#step-2-create-an-extent-report-listener-1"
+        }
+      ]
+    }
+  ]) }}
+/>
 Extent Reports is a powerful reporting library used in test automation frameworks to generate visually appealing and detailed test reports. It provides insights into the status of each test case, including whether they passed, failed, or were skipped, along with additional information such as logs, screenshots, and system/environment details. This makes it especially popular in Selenium, Appium, and API testing frameworks.
 
 ## Steps to Generate Extent Reports `(Version <= 2)` on HyperExecute 

@@ -97,6 +97,40 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     "dateModified": "2026-09-09T19:10:37+05:30"
   }) }}
 />
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "How to Add Project Level Secrets?",
+      "description": "Learn how to manage project-level secrets in HyperExecute, scope credentials per project, restrict access, and keep sensitive data secure.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Create a Project",
+          "text": "To begin, create a new project on the TestMu AI platform. Follow the instructions to Create a Project",
+          "url": "https://www.testmuai.com/support/docs/hyperexecute-how-to-manage-project-level-secrets/#step-1-create-a-project"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Add Secrets to the Project",
+          "text": "Once your project is created: Navigate to the Secrets tab within the project. Click Add Secret. Enter a Key (e.g., LTSECRETKEY) and its corresponding Value (e.g., secureP@ss123). Click Add Secret button. Your secret will be encrypted and securely stored.",
+          "url": "https://www.testmuai.com/support/docs/hyperexecute-how-to-manage-project-level-secrets/#step-2-add-secrets-to-the-project"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Use Secrets in Your HyperExecute YAML",
+          "text": "To reference the secrets in your HyperExecute configuration file (hyperexecute.yaml):",
+          "url": "https://www.testmuai.com/support/docs/hyperexecute-how-to-manage-project-level-secrets/#step-3-use-secrets-in-your-hyperexecute-yaml"
+        }
+      ]
+    }
+  ]) }}
+/>
 Secrets in <BrandName /> HyperExecute are encrypted environment variables used to store sensitive data securely like **Access tokens**, **API Keys**, **Passwords**. Secrets are injected into your test environment at runtime, so you never expose them directly in your codebase or logs.
 
 Managing sensitive information like API tokens, credentials, and access keys is crucial when running tests in <BrandName /> HyperExecute. To address this, HyperExecute offers a Secrets Management system, and one of its powerful features is Project Level Secrets. This feature lets you define secrets scoped to a specific project, making secret handling more secure, easier, and collaborative for your teams.

@@ -104,6 +104,40 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     "dateModified": "2026-09-09T19:10:37+05:30"
   }) }}
 />
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Steps to Generate Consolidated JUnit XML Report",
+      "description": "Follow these steps to generate a consolidated JUnit XML report:",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Update Your Project Configuration",
+          "text": "Configure all the necessary dependencies and configurations to your project.",
+          "url": "https://www.testmuai.com/support/docs/junit-xml-report/#step-1-update-your-project-configuration"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Configure the HyperExecute YAML File",
+          "text": "In your HyperExecute YAML configuration, define the report parameters like this:",
+          "url": "https://www.testmuai.com/support/docs/junit-xml-report/#step-2-configure-the-hyperexecute-yaml-file"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Execute Your Tests",
+          "text": "Run your tests on HyperExecute using the CLI. After your job completes, you can visit the HyperExecute dashboard to download and view the consolidated junit xml report.",
+          "url": "https://www.testmuai.com/support/docs/junit-xml-report/#step-3-execute-your-tests"
+        }
+      ]
+    }
+  ]) }}
+/>
 A JUnit XML report is an XML-based test result file format used to represent the results of test executions, particularly unit tests. The XML report provides detailed information about the tests run, including which tests passed, failed, were skipped, and any associated error messages.
 
 ## Steps to Generate Consolidated JUnit XML Report

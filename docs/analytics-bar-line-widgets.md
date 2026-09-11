@@ -103,6 +103,61 @@ import NewTag from '../src/component/newTag';
   }) }}
 />
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Step-by-Step Guide to Creating Bar and Line Chart Widgets",
+      "description": "For prerequisites and common setup steps (Navigate to Insights, Create Dashboard, Choose Product, Select Data Source, Configure Filters), see the Common Steps for Creating Custom Widgets section in the main Custom Widgets documentation.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 6: Choose Visualization Type",
+          "text": "In the Choose Visualisation section, select either: Bar for bar chart visualization Line for line chart visualization",
+          "url": "https://www.testmuai.com/support/docs/analytics-bar-line-widgets/#step-6-choose-visualization-type"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 7: Configure What to Plot",
+          "text": "This is the most critical step for creating meaningful charts: X-Axis Field (Mandatory): Select the field to display on the horizontal axis. This determines what categories or time points will be shown. For time-based trends: Use fields like createtimestamp, starttime, or end_time For categorical comparisons: Use fields like browser, os, status, project_name Label for X-Axis (Optional): Provide a custom label for the X-axis to make your chart more readable (e.g., \"Test Execution Date\", \"Browser Type\"). Y-Axis Field (Mandatory): Select the field to aggregate and display on the vertical axis. Common fields: test_id, duration, or any numeric field Aggregation Function (Mandatory): Choose how to aggregate the Y-axis field: Count: Number of records (most common for test counts) Sum: Sum of values Average: Average value Minimum: Minimum value Maximum: Maximum value Unique Count: Count of unique values Percentiles (50th, 75th, 90th, 95th, 99th): For duration and other numeric fields Label for Y-Axis (Optional): Provide a custom label for the Y-axis (e.g., \"Number of Tests\", \"Average Duration (seconds)\"). For a complete list of available keys for each product, see the Available Keys for Custom Widgets section in the main Custom Widgets documentation.",
+          "url": "https://www.testmuai.com/support/docs/analytics-bar-line-widgets/#step-7-configure-what-to-plot"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 8: Configure Group By (Optional)",
+          "text": "The Group By field allows you to create multiple series on the same chart: Select a field to group by (e.g., status, browser, os). This will create separate bars or lines for each unique value in the selected field. Each group will be displayed with a different color and appear in the legend. Example: Grouping by status will show separate bars/lines for \"passed\", \"failed\", \"queued\", etc., allowing you to compare test statuses over time or across categories.",
+          "url": "https://www.testmuai.com/support/docs/analytics-bar-line-widgets/#step-8-configure-group-by-optional"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Step 9: Name Your Widget",
+          "text": "Enter a descriptive name in the Widget Name field (e.g., \"Test Execution Trends by Status\", \"Browser Comparison - Test Counts\"). Use clear, descriptive names that indicate what the chart shows.",
+          "url": "https://www.testmuai.com/support/docs/analytics-bar-line-widgets/#step-9-name-your-widget"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 5,
+          "name": "Step 10: Preview Your Chart",
+          "text": "Click the Preview button to see how your chart will look with the current configuration. Review the visualization to ensure it displays the data as expected. Use the refresh icon to update the preview if you make changes.",
+          "url": "https://www.testmuai.com/support/docs/analytics-bar-line-widgets/#step-10-preview-your-chart"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 6,
+          "name": "Step 11: Create the Dashboard",
+          "text": "Enter a Dashboard Name in the bottom section. Click Create Dashboard to save your chart widget. Your chart will be added to the dashboard and ready for analysis.",
+          "url": "https://www.testmuai.com/support/docs/analytics-bar-line-widgets/#step-11-create-the-dashboard"
+        }
+      ]
+    }
+  ]) }}
+/>
+
 Bar and Line chart widgets in LambdaTest Insights enable you to visualize test data trends, comparisons, and patterns. Bar charts are ideal for comparing values across categories, while line charts excel at showing trends and changes over time.
 
 ## What are Bar and Line Chart Widgets?

@@ -124,6 +124,54 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
   }) }}
 />
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Integrate qTest with HyperExecute",
+      "description": "Unleash the power of QTest & TestMu AI HyperExecute! Streamline test management & experience blazing-fast execution.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Setup your Shell Agent",
+          "text": "This repository is used to pull tests from GitHub, run an Apache Maven build of JUnit tests, parse the results, and automatically upload the test results to qTest Manager. Download or Clone the code for the Shell Script Automation Host Feature from the TestMu AI GitHub repository to run the tests on the HyperExecute. You can use your own project to configure and test it. For demo purposes, we are using the sample repository. Download or Clone the code sample for the JUnit framework from the TestMu AI GitHub repository to run the tests on the HyperExecute. The CLI is used for triggering the tests on HyperExecute. It is recommend to download the CLI binary on the host system and keep it in the root directory of the suite to perform the tests on HyperExecute. You can download the CLI for your desired platform from the below mentioned links: NOTE : In case of macOS, if you get a permission denied warning while executing CLI, simply run chmod u+x ./hyperexecute to allow permission. In case you get a security popup, allow it from your System Preferences \u2192 Security & Privacy \u2192 General tab.",
+          "url": "https://www.testmuai.com/support/docs/hyperexecute-qtest-integration/#step-1-setup-your-shell-agent"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Update the Configuration Files",
+          "text": "Go to the conf.json file and make the following changes: giturl :** The shell script uses the url to clone a repository and send pull requests every time it runs if -g input is used. localrepository :** The folder containing the test cases. The shell script will use this to know where to run the maven build. Make sure to place this folder in the same directory as the the python and shell scripts. qtestapitoken : The token used to authorize the connection to qTest Manager. qtesturl :** The personal url that is used to access QASymphony API. If you are macOS user, go to the run.sh file or if you are a windows user go to the run.bat file and instead of mvn command, you need to pass the below mentioned command: {./hyperexecute --user ${ YOURLAMBDATESTUSERNAME()} --key ${ YOURLAMBDATESTACCESSKEY()} --config RELATIVEPATHOFYOURYAMLFILE } Refer the documentation to understand how to get your Username and Access key.",
+          "url": "https://www.testmuai.com/support/docs/hyperexecute-qtest-integration/#step-2-update-the-configuration-files"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Setup the Automation",
+          "text": "Navigate to your Automation Host `http://localhost:6789/home` and click on the Add button to add a new agent. A popup will appear to create an agent, fillup the following details: Agent Name : You can give any name to your agent. qTest Manager Project : Choose your project inside which you want to create this build. Agent Type : Choose Shell Agent as your agent type. Directory : Path of the directory containing your scripts and shell agent. Allocated Execution Time : Amount of time you expect the script to take to execute in minutes Kick-off scripts : The file path to your shell script. This shell scripts takes in two inputs, one for using git and the second for updating your current test cycle.",
+          "url": "https://www.testmuai.com/support/docs/hyperexecute-qtest-integration/#step-3-setup-the-automation"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Step 4: Execute the Shell Script",
+          "text": "Click on the Actions button > Kick-off shell scripts now button to start the shell script. This will upload all of the tests cases to qTest.",
+          "url": "https://www.testmuai.com/support/docs/hyperexecute-qtest-integration/#step-4-execute-the-shell-script"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 5,
+          "name": "Step 5: Monitor Your Tests",
+          "text": "Login into qTest Manager, go to the Test Execution tab, and there should be a test cycle under your project called Junit Automated Tests Click on the test cycle and it should show all of the tests that were run through the maven build and their statuses. Visit the HyperExecute Dashboard and check your Job status.",
+          "url": "https://www.testmuai.com/support/docs/hyperexecute-qtest-integration/#step-5-monitor-your-tests"
+        }
+      ]
+    }
+  ]) }}
+/>
+
 qTest is a comprehensive test management tool designed for Project Management, Bug Tracking, and Test Management. It embraces a centralized test management approach, facilitating seamless communication and accelerating task development across QA teams and stakeholders.
 
 This document details the seamless integration between HyperExecute and qTest, enabling you to run your automated tests on a variety of devices and real devices provided by <BrandName />.

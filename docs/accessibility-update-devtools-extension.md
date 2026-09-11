@@ -101,6 +101,54 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
   }) }}
 />
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Step-by-Step Guide to Update the TestMu AI Accessibility DevTools Chrome Extension",
+      "description": "Update the TestMu AI Accessibility DevTools Chrome extension to get the latest features and fixes.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Open the Extensions Page",
+          "text": "Launch the Google Chrome browser on your computer. In the address bar, type chrome://extensions/ and press Enter. This will open the Extensions page where all your installed Chrome extensions are listed.",
+          "url": "https://www.testmuai.com/support/docs/accessibility-update-devtools-extension/#step-1-open-the-extensions-page"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Enable Developer Mode",
+          "text": "On the Extensions page, look for the Developer mode toggle located at the top right corner of the page. Click on the Developer mode toggle to turn it on. When enabled, you will see additional options such as Load unpacked, Pack extension, and Update.",
+          "url": "https://www.testmuai.com/support/docs/accessibility-update-devtools-extension/#step-2-enable-developer-mode"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Update Your Extensions",
+          "text": "Once the Developer mode is enabled, you will see an Update button appear at the top left corner of the Extensions page. Click on the Update button.",
+          "url": "https://www.testmuai.com/support/docs/accessibility-update-devtools-extension/#step-3-update-your-extensions"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Step 4: Wait for the Update Process",
+          "text": "After clicking the Update button, Chrome will start checking for updates for all your installed extensions, including the TestMu AI Accessibility DevTools extension. This process may take a few moments. Please wait until you see a confirmation message or the progress indicator stops.",
+          "url": "https://www.testmuai.com/support/docs/accessibility-update-devtools-extension/#step-4-wait-for-the-update-process"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 5,
+          "name": "Step 5: Confirmation",
+          "text": "Once the update process is complete, you will see a message confirming that your extensions have been updated.",
+          "url": "https://www.testmuai.com/support/docs/accessibility-update-devtools-extension/#step-5-confirmation"
+        }
+      ]
+    }
+  ]) }}
+/>
+
 Keeping your <BrandName /> Accessibility DevTools Chrome extension updated ensures you have the latest features, improvements, and security patches. Follow the detailed steps below to update your extension.
 
 <div className="ytframe"> 

@@ -155,6 +155,47 @@ import DocCard from '@site/src/component/DocCard';
   }) }}
 />
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Run Karate API tests on HyperExecute",
+      "description": "Run Karate API tests, with in-run mock servers, in parallel on HyperExecute. Set your credentials, configure HyperExecute.yaml, and trigger a cloud run.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Clone the sample repository",
+          "text": "Clone the Karate sample from the TestMu AI GitHub repository, or use your own project. Download or clone the Karate sample from the TestMu AI GitHub repository to run the tests on HyperExecute.",
+          "url": "https://www.testmuai.com/support/docs/hyperexecute-karate-testing/#step-1-clone-the-sample-repository"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Download the HyperExecute CLI",
+          "text": "The CLI triggers your tests on HyperExecute. Download the binary for your platform and copy it into the root folder of the sample repository.",
+          "url": "https://www.testmuai.com/support/docs/hyperexecute-karate-testing/#step-2-download-the-hyperexecute-cli"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Configure HyperExecute.yaml",
+          "text": "HyperExecute.yaml in the sample repo tells HyperExecute how to build, discover, and run the suite. The sections below explain each part. Set the OS, Java runtime, and how many sessions run in parallel: The pre step pulls all Maven dependencies into a local .m2 directory once, so each runner reuses them for a reproducible build: testRunnerCommand runs one feature file per runner. With autosplit: true, HyperExecute passes each discovered .feature path in through the $test placeholder: -Dtest=MyApiRunner: the JUnit 5 runner class (annotated with @Karate.Test) that executes the feature file from FeaturePath. -DFeaturePath=\"$test\": $test is one .feature path supplied by the discovery command. -Dhub=...: optional. Only needed when a Karate test drives a browser through the Selenium Grid for UI tests. -Dmaven.repo.local=./.m2: reuses the local Maven repo so dependencies are not re-downloaded on each runner. By default this runs one feature file per runner. To run a subset instead (for example, only scenarios tagged @smoke, a specific runner class, or a folder of features), pass Karate options: testDiscovery lists the .feature files to run and hands them to the runner. HyperExecute splits this list across the parallel nodes: snooper: a built-in TestMu AI utility that lists matching test files. --targetOs: the OS path format snooper uses when listing feature-file paths. --featureFilePaths=src/test/java/app: where the Karate .feature files live. --frameWork=java: the framework snooper...",
+          "url": "https://www.testmuai.com/support/docs/hyperexecute-karate-testing/#step-3-configure-hyperexecuteyaml"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Step 4: Trigger the run from the CLI",
+          "text": "From the project root directory, run the CLI command in your terminal: {./hyperexecute --user ${ YOURLAMBDATESTUSERNAME()} --key ${ YOURLAMBDATESTACCESS_KEY()} --config HyperExecute.yaml} If macOS reports permission denied when you run the CLI, make it executable with chmod u+x ./hyperexecute. If a security popup appears, allow the binary from System Preferences \u2192 Security & Privacy \u2192 General. A successful run shows the job as Completed in the HyperExecute dashboard, with each .feature file executed as a separate task and the Cucumber reports attached. Open any task to inspect its request and response logs.",
+          "url": "https://www.testmuai.com/support/docs/hyperexecute-karate-testing/#step-4-trigger-the-run-from-the-cli"
+        }
+      ]
+    }
+  ]) }}
+/>
+
 To run Karate API tests on HyperExecute, set your TestMu AI credentials, configure `HyperExecute.yaml`, and trigger the run with the HyperExecute CLI. Karate is an open-source framework for API test automation, mocks, performance testing, and UI automation that uses Gherkin syntax with Java. On HyperExecute, the TestMu AI test orchestration platform, it autosplits your `.feature` files across parallel nodes, retries only the scenarios that fail, can start Karate mock servers inside the same run, and collects logs and Cucumber reports in the dashboard.
 
 Run your own Karate (Java + Maven) project or the ready-made sample used in the steps below.

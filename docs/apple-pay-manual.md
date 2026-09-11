@@ -78,6 +78,40 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
   }) }}
 />
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Manual Apple Pay Workflow in App Live",
+      "description": "Learn how to manually test Apple Pay flows on iOS public devices in App Live, including enabling Apple Pay, configuring wallets, and completing transactions.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Enable Apple Pay in Advanced Settings",
+          "text": "Open App Testing Live or Browser Testing Live and select your desired iOS device. Navigate to Advanced Settings. Locate the Apple Pay toggle and enable it, and confirm the device selection accordingly.",
+          "url": "https://www.testmuai.com/support/docs/apple-pay-manual/#step-1-enable-apple-pay-in-advanced-settings"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Configure Wallet",
+          "text": "Within the app, select the option to configure Wallet inside iOS settings. User can choose any of the four options: American Express, Visa, MasterCard, Discover Global Network. Wait 1\u20133 minutes for Apple Pay to configure.",
+          "url": "https://www.testmuai.com/support/docs/apple-pay-manual/#step-2-configure-wallet"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 4: Use Apple Pay in App Live",
+          "text": "Within the App Live session, you can use Apple Pay via the Assistive Touch option. Simply click on Apple Pay, and you will be prompted to enter the device passcode (default is 123456). Once the passcode is entered, you can complete a payment through Apple Pay, simulating a real user transaction. Within a single session, only one card can be selected. To switch cards, you\u2019ll need to start a new session and continue adding your desired card.",
+          "url": "https://www.testmuai.com/support/docs/apple-pay-manual/#step-4-use-apple-pay-in-app-live"
+        }
+      ]
+    }
+  ]) }}
+/>
+
 # Apple Pay Testing on Real Devices
 
 **Apple Pay** is Apple’s secure digital wallet and payment system that enables in-app and web purchases with an extra layer of protection. Testing of Apple Pay is essential to validate the user experience, including wallet selection, passcode entry, and transaction confirmation.

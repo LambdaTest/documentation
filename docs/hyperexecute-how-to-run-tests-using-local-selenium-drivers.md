@@ -110,6 +110,40 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
   }) }}
 />
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "How to Trigger Your Tests?",
+      "description": "To utilize the native Selenium driver support in HyperExecute, you need to incorporate the following steps into your testing workflow:",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Configure Your Test Suite",
+          "text": "You can use your own project to configure and test it. For demo purposes, we are using the sample repository. Download or Clone the code sample for the TestNG from the TestMu AI GitHub repository to run the tests on the HyperExecute.",
+          "url": "https://www.testmuai.com/support/docs/hyperexecute-how-to-run-tests-using-local-selenium-drivers/#step-1-configure-your-test-suite"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Update YAML Configuration:",
+          "text": "Add the platformConfig flag to your YAML file, specifying the platforms and configurations for your tests. Use the platform flag to define individual platform configurations (OS, browser/device, capabilities). (Optional) Utilize the config flag to set global capabilities applicable to all platforms. For operating system win, mac, and linux, only the os flag is mandatory, rest are optional. For operating system android and ios, the os and deviceName flags are mandatory, rest are optional. In the above sample YAML file, we have passed parallelism = 1 and total number of platforms = 6 The number of tasks created = (total number of platforms) (parallelism)** = 6 tasks 1 windows 10 with Chrome Browser 1 windows 11 with Chrome browser 1 mac with Firefox browser 1 android with any device (we have not specified device name) 1 ios with any device (we have not specified device name) You can also use dev and beta browser versions. To generate capabilities for your test requirements, you can use our inbuilt \ud83d\udd17 Capabilities Generator.",
+          "url": "https://www.testmuai.com/support/docs/hyperexecute-how-to-run-tests-using-local-selenium-drivers/#step-2-update-yaml-configuration"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Run Your Tests:",
+          "text": "Execute your tests as usual through your test framework (e.g., JUnit, TestNG). HyperExecute automatically intercepts Selenium commands and routes them to its platform. {./hyperexecute --user ${ YOURLAMBDATESTUSERNAME()} --key ${ YOURLAMBDATESTACCESSKEY()} --config RELATIVEPATHOFYOURYAMLFILE }",
+          "url": "https://www.testmuai.com/support/docs/hyperexecute-how-to-run-tests-using-local-selenium-drivers/#step-3-run-your-tests"
+        }
+      ]
+    }
+  ]) }}
+/>
+
 As a tester, whenever you switch from local web driver to remote web driver can be a tedious and time-consuming process. You will have to manually modify your tests which includes adding Desired Capabilities, and adjusting code just to get them running on a cloud testing platform. 
 
 HyperExecute's support for **Local Selenium Driver** allows you to seamlessly run your tests on our platform with very minimal changes. It will help you in

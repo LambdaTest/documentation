@@ -118,6 +118,47 @@ import VerifiedTag from '@site/src/component/verifiedTag';
     "dateModified": "2026-09-09T19:16:50+05:30"
   }) }}
 />
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "How to Execute Custom JavaScript Tests",
+      "description": "Learn how to execute your tests on Kane AI using custom javascript snippets",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Click on the \"Write a Step\" Field",
+          "text": "In KaneAI\u2019s test editor, navigate to the \"Write a Step\" field where you typically write your test scenarios in plain English.",
+          "url": "https://www.testmuai.com/support/docs/kane-ai-javascript-execution/#step-1-click-on-the-write-a-step-field"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Trigger JavaScript Mode",
+          "text": "To switch to JavaScript execution mode, type the forward slash / or click on the + icon. You will see a JavaScript Pop-up Option appear. Click on the JavaScript option to switch the input mode to custom JavaScript.",
+          "url": "https://www.testmuai.com/support/docs/kane-ai-javascript-execution/#step-2-trigger-javascript-mode"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Write or Paste Your JavaScript Code",
+          "text": "Now, you can write or paste your custom JavaScript code snippet directly into the text field. A sample JavaScript code: The provided code snippet simulates typing into text fields programmatically by dispatching key-related events such as keydown, input, keyup, and change. It mimics real user interaction by typing each character into the field and updating its value accordingly. The example provided fills in the first name, last name, and email fields with specific values and returns them in an object format.",
+          "url": "https://www.testmuai.com/support/docs/kane-ai-javascript-execution/#step-3-write-or-paste-your-javascript-code"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Step 4: Execute the Test",
+          "text": "Once your code is ready, simply press Enter. KaneAI will run your custom JavaScript snippet in the current testing environment. If your JavaScript snippet contains return values, KaneAI will automatically save these values in a variable that can be used later in the test. The output from your JavaScript code will be captured and assigned to a variable. This variable will be available for use throughout your test execution. For example, in the code snippet provided: The returned object with the keys First name, Last name, and email will be stored in a variable. You can reference this variable later in your test to validate or reuse the values. Variables created from return values can be used in subsequent test steps. To use the variable, simply refer to the specific property (e.g., First name) in your test steps for verification or further actions. When your test is executed, the JavaScript code snippet you provided will be added directly into the generated test code. This ensures that any custom interactions performed with JavaScript are part of the overall test logic. The inclusion of JavaScript in the generated code allows for easy tracking, debugging, and modification if needed.",
+          "url": "https://www.testmuai.com/support/docs/kane-ai-javascript-execution/#step-4-execute-the-test"
+        }
+      ]
+    }
+  ]) }}
+/>
 With KaneAI’s new JavaScript Execution feature, you now have the flexibility to write or paste custom JavaScript code snippets to perform tests. This allows for more advanced and customized test scenarios alongside KaneAI’s plain English test-writing format.
 
 This can be very useful for:

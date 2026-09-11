@@ -109,6 +109,40 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
   }) }}
 />
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "How to Add Project Level Secrets?",
+      "description": "Securely save and manage user-level secrets in HyperExecute. Encrypt credentials, rotate keys, and use them safely across automation runs.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Create a Project",
+          "text": "To begin, create a new project on the TestMu AI platform. Follow the instructions to Create a Project",
+          "url": "https://www.testmuai.com/support/docs/hyperexecute-how-to-save-and-manage-secrets/#step-1-create-a-project"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Add Secrets to the Project",
+          "text": "Once your project is created: Navigate to the Secrets tab within the project. Click Add Secret. Enter a Key (e.g., LTSECRETKEY) and its corresponding Value (e.g., secureP@ss123). Click Add Secret button. Your secret will be encrypted and securely stored.",
+          "url": "https://www.testmuai.com/support/docs/hyperexecute-how-to-save-and-manage-secrets/#step-2-add-secrets-to-the-project"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Use Secrets in Your HyperExecute YAML",
+          "text": "To reference the secrets in your HyperExecute configuration file (hyperexecute.yaml):",
+          "url": "https://www.testmuai.com/support/docs/hyperexecute-how-to-save-and-manage-secrets/#step-3-use-secrets-in-your-hyperexecute-yaml"
+        }
+      ]
+    }
+  ]) }}
+/>
+
 Testing your webapp or applications often involves using sensitive data like passwords, API keys, and other credentials. Storing these secrets directly in your code can be risky and exposing them can lead to potential security breaches.
 
 HyperExecute provides a secure **Secret Management Vault** to keep your sensitive information safe. This doc covers **user-level secrets** that are tied to your individual account.

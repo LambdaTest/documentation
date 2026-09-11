@@ -138,6 +138,40 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
   }) }}
 />
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "How to Run Visual Tests Using the SmartUI Skill",
+      "description": "Once the skill is installed and your credentials are set, you drive everything through natural-language prompts. Your agent reads the skill, applies the right pattern for your framework, and runs the test on the TestMu AI cloud. You do not write the configuration or the snapshot calls yourself.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Ask the agent to set up SmartUI",
+          "text": "Describe the visual test you want. Be specific about the pages or components and, if it matters, the browsers and viewports: \"Add SmartUI visual regression tests to my Playwright suite. Capture the homepage and the login page across Chrome, Firefox, and Safari at desktop and mobile viewports.\" From this, the agent will: Install the SmartUI CLI and the driver for your framework Create a smartui.config.json with the browsers, viewports, and wait conditions you asked for Add the correct snapshot call at the right points in your test (for example, smartuiSnapshot(page, 'Homepage') for Playwright, or smartui.takeScreenshot for Selenium) Wire up the npx smartui exec command that runs the whole thing on the cloud",
+          "url": "https://www.testmuai.com/support/docs/smartui-agent-skills/#step-1-ask-the-agent-to-set-up-smartui"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Run the visual test",
+          "text": "Ask the agent to run it, or run the command it generated yourself: The agent executes your suite through the SmartUI CLI, which captures a screenshot at every snapshot call and uploads it to your project for comparison.",
+          "url": "https://www.testmuai.com/support/docs/smartui-agent-skills/#step-2-run-the-visual-test"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Review and iterate",
+          "text": "The agent reports the outcome and links you to the build in your SmartUI dashboard, where the visual comparisons live (see Understanding the Results). From there you can keep iterating in plain language: \"The header changed on purpose, approve the new baseline.\" \"Add a snapshot of the checkout page and re-run.\"",
+          "url": "https://www.testmuai.com/support/docs/smartui-agent-skills/#step-3-review-and-iterate"
+        }
+      ]
+    }
+  ]) }}
+/>
+
 SmartUI catches visual bugs by comparing screenshots of your UI against an approved baseline. Wiring it into a test suite means installing the CLI, adding snapshot calls, and tuning a config. You can hand that off to your AI coding agent instead.
 
 The [`smartui-skill`](https://github.com/LambdaTest/agent-skills/tree/main/smartui-skill) is part of [<BrandName /> Agent Skills](https://github.com/LambdaTest/agent-skills), a library of instruction packs that give AI coding agents the know-how to build working test automation on <BrandName />. Describe the pages you want covered, and it wires SmartUI into your existing framework and runs the comparison on the <BrandName /> cloud.

@@ -169,6 +169,40 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
   }) }}
 />
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Setup",
+      "description": "Run Kane CLI tests against local mobile virtual devices. Set up the iOS Simulator or the Android Emulator, then drive a native app on macOS Apple Silicon.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Prepare the Virtual Device",
+          "text": "Follow the tab for the platform you intend to test. Set up both if you test on both. The exact iOS runtime versions and simulator device models in the supported matrix are pinned by the product team. The versions shown below are current, working examples. Confirm the officially supported set before you rely on a specific one. Kane CLI requires Xcode 16 or newer, which bundles the iOS Simulator, the simctl tool, and at least one iOS runtime. Kane CLI talks to the simulator through simctl, so make sure the developer directory resolves to the full Xcode install, not the standalone Command Line Tools: Confirm Xcode and simctl are reachable: You should see one or more iOS devices grouped under an iOS runtime. Xcode ships with default simulators. If none are listed, add one from Xcode \u2192 Settings \u2192 Platforms, or Xcode \u2192 Window \u2192 Devices and Simulators. On Apple Silicon, always use an arm64-v8a system image. The x86 and x86_64 images do not run natively and are effectively unusable. This is the single most common setup mistake. The exact Android API levels and device profiles in the supported matrix are pinned by the product team. The values shown below, API 35 and Pixel, are current, working examples. Confirm the officially supported set before you rely on a specific one. Android Studio bundles the Android SDK, the emulator, the system image manager, and the Device Manager, which are the pieces the steps below use. If you prefer a headless setup, install the command line SDK tools...",
+          "url": "https://www.testmuai.com/support/docs/kane-cli-mobile/#step-1-prepare-the-virtual-device"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Install the Kane CLI Test Tooling",
+          "text": "Sign in and let Kane CLI install the tooling it manages. This is the same for both platforms: You do not need to boot a simulator, boot an emulator, or run adb yourself. Kane CLI discovers the device, boots it, installs your app, and runs the test.",
+          "url": "https://www.testmuai.com/support/docs/kane-cli-mobile/#step-2-install-the-kane-cli-test-tooling"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Ready Check",
+          "text": "Confirm Kane CLI sees a ready toolchain and, optionally, the devices on your machine: When the checks for your platform pass, setup is complete. On Android, confirm your AVD is listed by --targets.",
+          "url": "https://www.testmuai.com/support/docs/kane-cli-mobile/#step-3-ready-check"
+        }
+      ]
+    }
+  ]) }}
+/>
+
 Kane CLI can run tests against local mobile virtual devices: Apple's **iOS Simulator** and Google's **Android Emulator**. You author and run mobile tests the same way you already do for the browser. The differences are that a mobile test runs against an **app you provide**, and that the target device is a simulator or emulator on your machine.
 
 :::note

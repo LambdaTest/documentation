@@ -130,6 +130,54 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     "dateModified": "2026-09-09T19:16:50+05:30"
   }) }}
 />
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Step-by-Step Guide",
+      "description": "Automate test run execution on KaneAI with CI/CD tools like GitHub Actions and Jenkins. Follow our step-by-step guide for seamless integration.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Navigate to the Test Manager",
+          "text": "Log in to the KaneAI platform and go to the Test Manager page. Access the project where the test run is located.",
+          "url": "https://www.testmuai.com/support/docs/kaneai-ci-cd-automation/#step-1-navigate-to-the-test-manager"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Locate the 'Test Runs' Section & Copy Test run ID",
+          "text": "Inside your selected project, navigate to the Test Runs section. Select the desired test run for integration or direct triggering from your CI/CD pipeline. Open the test run to view its URL. Copy the Test Run ID from the URL. This ID will be used in the API call for integration. A list of test instances with various configurations will be displayed for each test run.",
+          "url": "https://www.testmuai.com/support/docs/kaneai-ci-cd-automation/#step-2-locate-the-test-runs-section--copy-test-run-id"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Configure the API Call",
+          "text": "Replace `` with the actual ID from the URL and set additional optional parameters: concurrency: Select the concurrency you want to set for this test run. Defaults to 1 if not specified. title: Assign a unique job title; a random one will be generated if omitted. region: Choose a region for web tests such as eastus or centralindia to select the region from where the VM is allocated. mobileregion: Choose a region for mobile app tests such as us,ap or eu_ to select the region from where the device is allocated. tunnel: Add the parameter and tunnel name if you want to run using TestMu AI Tunnel for private applications. See more details for tunnel here. dedicatedproxy: Add the region of the dedicated proxy such as us or eu_, #Optional, either tunnel or dedicated proxy or geolocation can be used in a single API call. geolocation: Add the resgion of the geolocation that you want to run your tests from. You can find the list of support geolocations here. environmentid**: Define the environment on which you want to run the test run if required. retryonfailure: Define whether to retry on failure. When enabled, retries are triggered both when the testRunnerCommand execution fails and when individual test cases fail. You can set the maximum number of retries using max_retries. You can find more details here. maxretries**: Define the number of maximum retries you want (Max value 5). Default retries 1. You can find more details here. timezone: Define the timezone you want to choose for...",
+          "url": "https://www.testmuai.com/support/docs/kaneai-ci-cd-automation/#step-3-configure-the-api-call"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Step 4: Authenticate and Trigger the Job",
+          "text": "Provide your TestMu AI username and access key for Basic Authentication. Submit the API call to trigger the job. The process will start within seconds. Important : Keep your credentials secure to maintain platform integrity.",
+          "url": "https://www.testmuai.com/support/docs/kaneai-ci-cd-automation/#step-4-authenticate-and-trigger-the-job"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 5,
+          "name": "Step 5: Monitor Test Executions",
+          "text": "Follow the link provided in the API response to view the HyperExecute Job. Monitor running executions in real time through the dashboard.",
+          "url": "https://www.testmuai.com/support/docs/kaneai-ci-cd-automation/#step-5-monitor-test-executions"
+        }
+      ]
+    }
+  ]) }}
+/>
 This guide provides a detailed walkthrough for automating the execution of test runs using CI/CD tools such as GitHub Actions or Jenkins on the KaneAI platform. By following these steps, you can effortlessly integrate test run executions with your pipelines.
 
 ## Prerequisites

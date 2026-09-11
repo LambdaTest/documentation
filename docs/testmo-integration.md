@@ -127,6 +127,40 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
   }) }}
 />
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Steps to Integrate your Project",
+      "description": "*** Create your account in LambdaTest and TestMo",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Build the Test Suite",
+          "text": "Firstly, you need to run the build command as per your desired framework. You can choose any test automation framework and programming language you are familiar with. Selenium is one of the most common one used with JavaScript/Node.js, Java, C#, Python, Ruby or PHP, and other languages The TestMu AI online Selenium Grid supports all major languages and frameworks, so you can build your test suite in whichever one you prefer.",
+          "url": "https://www.testmuai.com/support/docs/testmo-integration/#step-1-build-the-test-suite"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Generate your Testing Result XML Files",
+          "text": "To submit and report your test results to Testmo, execute your automated tests and generate a JUnit-style XML report file. This file format has become a standard format to exchange test results between tools and is supported by practically any testing tool. Testmo also directly supports this format so it's very easy to report your test automation results. For this case, we are using TestNG Framework. Run the below command to generate the file The testng1.xml file here specifies one of your TestNG suites. After executing your tests, TestNG will automatically generate JUnit-style XML report files in the test-output directory (if this is not the case, please make sure that the org.testng.reporters.JUnitXMLReporter listener is active).",
+          "url": "https://www.testmuai.com/support/docs/testmo-integration/#step-2-generate-your-testing-result-xml-files"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Configure TestMo in your Project",
+          "text": "Our test automation suite has now been successfully executed, and an XML report file containing the test results has been produced. Simply use our cross-platform testmo CLI tool to submit the test results to Testmo. The CLI tool is distributed as an NPM package and is simple to install on any system. Install the official @testmo/testmo-cli NPM package Generate the API Token in TestMo and run the below command: Output in the Dashboard",
+          "url": "https://www.testmuai.com/support/docs/testmo-integration/#step-3-configure-testmo-in-your-project"
+        }
+      ]
+    }
+  ]) }}
+/>
+
 # TestMo Integration With <BrandName /> Grid
 ***
 

@@ -100,6 +100,54 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
   }) }}
 />
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Steps to Integrate Tosca",
+      "description": "This documentation provides a detailed guide on seamlessly integrating Tosca with HyperExecute using DEX",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Initialize the Tosca Project",
+          "text": "Go to the HyperExecute Dashboard. Click on the Projects. Click on the Setup a New Project button. Select Tosca with DEX tool. Enter your Project Name. Click on Continue.",
+          "url": "https://www.testmuai.com/support/docs/tosca-integration-with-hyperexecute-using-dex/#step-1-initialize-the-tosca-project"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Manage your License and Credentials",
+          "text": "Select the Type as Cloud License. Enter the License Details, i.e. Username and Password with which you want to execute your tests. Cloud Server id field is optional. Now select your Database Type. For the demo purpose, we are using Oracle. Choose how you want to establish the connection, i.e, via Connection Data or via Connection String, to access the common repository associated with your workspace. For demo purposes, we are selecting the Connection String. Enter the connection string for your database. Enter the Workspace Details, i.e., Username (mandatory) and Password (optional), that you want to use for this project. Click on the Continue button.",
+          "url": "https://www.testmuai.com/support/docs/tosca-integration-with-hyperexecute-using-dex/#step-2-manage-your-license-and-credentials"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Configure DEX Server Details",
+          "text": "You need to provide the details of your DEX Server as per the prerequisites. Select the Type of the protocol. For the demo purpose, we are using HTTP protocol. Provide the IP Address of your DEX Server. Enter your required Port (optional). Click on Save button.",
+          "url": "https://www.testmuai.com/support/docs/tosca-integration-with-hyperexecute-using-dex/#step-3-configure-dex-server-details"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Step 4: Execute Your Project",
+          "text": "Please wait for the discovered test events to get populated. Now, select the desired test events that you want to execute, and then click on the Run button. Now set the total number of Concurrent Sessions that you want to run on HyperExecute, enable the Retry on Failure (optional) and click on the Run button.",
+          "url": "https://www.testmuai.com/support/docs/tosca-integration-with-hyperexecute-using-dex/#step-4-execute-your-project"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 5,
+          "name": "Step 5: Check the Logs Status in Dashboard",
+          "text": "Now go to the Jobs section and check the results. You can also download the video output.",
+          "url": "https://www.testmuai.com/support/docs/tosca-integration-with-hyperexecute-using-dex/#step-5-check-the-logs-status-in-dashboard"
+        }
+      ]
+    }
+  ]) }}
+/>
+
 # Tosca Integration using DEX
 
 This documentation provides a detailed guide on seamlessly integrating Tosca with HyperExecute using DEX.

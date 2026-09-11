@@ -138,6 +138,61 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
   }) }}
 />
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Selenium With Tesbo",
+      "description": "Run Tesbo keyword-driven automation scripts on the TestMu AI cloud Selenium grid across 3000+ browsers.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Clone the Sample Project",
+          "text": "Pull the sample repo to your local machine and navigate into the project directory.",
+          "url": "https://www.testmuai.com/support/docs/executing-tesbo-automation-script-over-online-selenium-grid/#step-1-clone-the-sample-project"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Set Your Credentials",
+          "text": "Add your TestMu AI credentials as environment variables so the test can authenticate with the grid. Visit the TestMu AI Dashboard, navigate to the left sidebar, and select Credentials. Copy your Username and Access Key, then set them as environment variables: {`export LTUSERNAME=\"${ YOURLAMBDATEST_USERNAME()}\" export LTACCESSKEY=\"${ YOURLAMBDATESTACCESS_KEY()}\"`} {`set LTUSERNAME=\"${ YOURLAMBDATEST_USERNAME()}\" set LTACCESSKEY=\"${ YOURLAMBDATESTACCESS_KEY()}\"`}",
+          "url": "https://www.testmuai.com/support/docs/executing-tesbo-automation-script-over-online-selenium-grid/#step-2-set-your-credentials"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Configure Your Test Capabilities",
+          "text": "Define the browser, version, and OS for your test run. Update config.json to point to the TestMu AI Selenium Grid. Set the Selenium address, enable the grid, and define your desired capabilities: Key settings: seleniumAddress - Points to the TestMu AI hub URL with your credentials IsGrid - Set to true to run on the cloud grid capabilities - Define browser, version, and platform Use the Capabilities Generator to auto-generate capabilities for any browser, version, and OS combination.",
+          "url": "https://www.testmuai.com/support/docs/executing-tesbo-automation-script-over-online-selenium-grid/#step-3-configure-your-test-capabilities"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Step 4: Run the Test",
+          "text": "Trigger the test from your IDE. Hit the run button in your IDE. Your Tesbo test scripts execute on the TestMu AI Selenium Grid.",
+          "url": "https://www.testmuai.com/support/docs/executing-tesbo-automation-script-over-online-selenium-grid/#step-4-run-the-test"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 5,
+          "name": "Step 5: Run Tests in Parallel",
+          "text": "Run multiple Tesbo tests simultaneously across different browsers to reduce execution time. Set the parallel status to true and specify the count in config.json: To run across multiple browsers, add more capabilities:",
+          "url": "https://www.testmuai.com/support/docs/executing-tesbo-automation-script-over-online-selenium-grid/#step-5-run-tests-in-parallel"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 6,
+          "name": "Step 6: View Your Results",
+          "text": "Check the Automation Dashboard to see exactly what happened during your test. Visit the TestMu AI Automation Dashboard to see your test results. Each session includes: Video recording of the full test execution Screenshots captured at each step Console logs from the browser Network logs for every request and response Selenium command logs showing each driver action Home Support Selenium With Tesbo",
+          "url": "https://www.testmuai.com/support/docs/executing-tesbo-automation-script-over-online-selenium-grid/#step-6-view-your-results"
+        }
+      ]
+    }
+  ]) }}
+/>
+
 ---
 
 Run [Tesbo](https://tesbo.io/) keyword-driven automation scripts on the TestMu AI cloud grid. Tesbo is a hybrid framework built on Selenium that lets you write automation scripts in plain English using a keyword-driven approach.

@@ -440,6 +440,111 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
   }) }}
 />
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "SmartUI Capture Onboarding with HyperExecute",
+      "description": "Complete step-by-step guide to get started with SmartUI Capture on HyperExecute for visual regression testing. Learn setup, configuration, best practices, and troubleshooting.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Create a SmartUI Project",
+          "text": "The first step is to create a SmartUI project in the dashboard. This project will contain all your builds and visual comparisons. Go to SmartUI Projects page Click on the New Project button Select the platform as CLI for executing your capture tests Add the following details: Project Name: A descriptive name (e.g., \"Example Company Visual Tests\") Approvers: Team members who can approve visual changes Tags: Optional tags for filtering and organization Click on Submit or Continue After creating the project, you will receive a PROJECTTOKEN. Save this token securely as you'll need it in the next steps. The token format looks like: 123456#1234abcd----*********",
+          "url": "https://www.testmuai.com/support/docs/hyperexecute-smart-ui-capture-onboarding/#step-1-create-a-smartui-project"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Set Up Your Project Structure",
+          "text": "Create a new directory for your SmartUI Capture project or use an existing one. Here's the recommended structure: If you're starting fresh, initialize a new Node.js project:",
+          "url": "https://www.testmuai.com/support/docs/hyperexecute-smart-ui-capture-onboarding/#step-2-set-up-your-project-structure"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Install Dependencies",
+          "text": "Install the required SmartUI CLI package. You can install it globally or locally in your project. You can also clone the sample repository to get started quickly:",
+          "url": "https://www.testmuai.com/support/docs/hyperexecute-smart-ui-capture-onboarding/#step-3-install-dependencies"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Step 4: Configure Environment Variables",
+          "text": "Set up your environment variables for authentication and configuration. The PROJECT_TOKEN is required for SmartUI CLI capture commands. For HyperExecute, you'll need your LambdaTest username and access key. Username and Access Key: Available in your LambdaTest Profile Project Token: Available in your SmartUI project settings after creation",
+          "url": "https://www.testmuai.com/support/docs/hyperexecute-smart-ui-capture-onboarding/#step-4-configure-environment-variables"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 5,
+          "name": "Step 5: Create URL Configuration Files",
+          "text": "Create JSON files containing the URLs you want to test. Each URL entry should have a name, URL, and optional wait timeout. You can generate a sample URL file using the SmartUI CLI: Alternatively, create your URL file manually. Here's the structure: Each URL object supports the following properties: Use waitForTimeout only when necessary (e.g., for lazy-loaded components or async content) Higher timeout values increase test execution time Start with lower values (1000-3000ms) and increase if needed Consider using execute options for more complex interactions For large test suites, you can split URLs into multiple files for better parallel execution:",
+          "url": "https://www.testmuai.com/support/docs/hyperexecute-smart-ui-capture-onboarding/#step-5-create-url-configuration-files"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 6,
+          "name": "Step 6: Create SmartUI Configuration",
+          "text": "Create a config.json file to configure browsers, viewports, and other SmartUI settings. Create config.json with your desired settings: browsers: Array of browser names (\"chrome\", \"firefox\", \"safari\", \"edge\") viewports: Array of viewport sizes [1367] - Full page screenshot at 1367px width [1920, 1080] - Viewport screenshot at 1920x1080 devices: Array of device names (e.g., \"iPhone 14\", \"Galaxy S24\", \"Pixel 8\") orientation: \"portrait\" or \"landscape\" fullPage: true by default for mobile enabled: Enable lazy loading detection jumpBackToTop: Scroll back to top after capturing scrollDelay: Delay between scroll steps (milliseconds) scrollStep: Pixels to scroll per step For more configuration options, refer to the SmartUI SDK Config Options documentation.",
+          "url": "https://www.testmuai.com/support/docs/hyperexecute-smart-ui-capture-onboarding/#step-6-create-smartui-configuration"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 7,
+          "name": "Step 7: Create HyperExecute YAML Configuration",
+          "text": "Create a hyperexecute.yaml file to configure HyperExecute execution settings. For running multiple URL files in parallel: For detailed YAML configuration options, refer to the HyperExecute YAML Documentation.",
+          "url": "https://www.testmuai.com/support/docs/hyperexecute-smart-ui-capture-onboarding/#step-7-create-hyperexecute-yaml-configuration"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 8,
+          "name": "Step 8: Execute Tests on HyperExecute",
+          "text": "Download the HyperExecute CLI for your operating system: Execute your tests using the HyperExecute CLI: Or with explicit credentials: You can enhance your capture commands with additional options:",
+          "url": "https://www.testmuai.com/support/docs/hyperexecute-smart-ui-capture-onboarding/#step-8-execute-tests-on-hyperexecute"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 9,
+          "name": "Step 9: Monitor Test Execution",
+          "text": "Visit the HyperExecute Dashboard Find your job in the job list Click on the job to view detailed execution logs Monitor test progress in real-time After test execution completes, navigate to SmartUI Dashboard Select your project View the build with your specified build name Review captured screenshots Compare with baseline images (if available) Baseline Build: First build in a project (reference images) Comparison Build: Subsequent builds compared against baseline Mismatches: Visual differences detected between builds Approved: Manually approved visual changes Rejected: Visual changes that need fixing The SmartUI Reporter is a web-based tool that provides a comprehensive tabular view of your test results with statistics and export capabilities. From CLI Capture Command: From CLI Exec Command: From SmartUI API: You can also fetch results using the Fetch Build Screenshots API endpoint: Visit SmartUI Reporter Upload your results.json file (drag & drop or click to upload) View results in a tabular format with: Screenshot statistics Browser and viewport information Mismatch percentages Status indicators Direct links to baseline, captured, and diff images Export to PDF: Generate a comprehensive PDF report for sharing Export to CSV: Export data for analysis in spreadsheet applications For detailed information, see the Fetch Results Documentation.",
+          "url": "https://www.testmuai.com/support/docs/hyperexecute-smart-ui-capture-onboarding/#step-9-monitor-test-execution"
+        }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Using SmartUI Reporter Tool",
+      "description": "The SmartUI Reporter is a web-based tool that provides a comprehensive tabular view of your test results with statistics and export capabilities.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Export Results JSON",
+          "text": "From CLI Capture Command: From CLI Exec Command: From SmartUI API: You can also fetch results using the Fetch Build Screenshots API endpoint:",
+          "url": "https://www.testmuai.com/support/docs/hyperexecute-smart-ui-capture-onboarding/#step-1-export-results-json"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Upload to Reporter",
+          "text": "Visit SmartUI Reporter Upload your results.json file (drag & drop or click to upload) View results in a tabular format with: Screenshot statistics Browser and viewport information Mismatch percentages Status indicators Direct links to baseline, captured, and diff images",
+          "url": "https://www.testmuai.com/support/docs/hyperexecute-smart-ui-capture-onboarding/#step-2-upload-to-reporter"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Export Options",
+          "text": "Export to PDF: Generate a comprehensive PDF report for sharing Export to CSV: Export data for analysis in spreadsheet applications For detailed information, see the Fetch Results Documentation.",
+          "url": "https://www.testmuai.com/support/docs/hyperexecute-smart-ui-capture-onboarding/#step-3-export-options"
+        }
+      ]
+    }
+  ]) }}
+/>
+
 This comprehensive guide will walk you through setting up and running SmartUI Capture tests on HyperExecute. SmartUI Capture allows you to perform visual regression testing by capturing screenshots of static URLs across multiple browsers and devices, all orchestrated through HyperExecute's powerful test execution platform.
 
 ## Prerequisites

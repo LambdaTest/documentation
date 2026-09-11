@@ -100,6 +100,61 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
   }) }}
 />
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Step\u2011by\u2011step Guide",
+      "description": "Learn how to use If, Else\u2011If, and Else conditions in KaneAI to build branching test flows with support for modules, JavaScript, API, and DB steps inside each branch.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Add a Conditional Block",
+          "text": "In your authoring session, press / to open the slash command menu. Select Add If-Else option. KaneAI inserts an If / Else block into your test flow.",
+          "url": "https://www.testmuai.com/support/docs/kaneai-conditional-logic/#step-1-add-a-conditional-block"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Define the Condition",
+          "text": "Click the If header to open the condition editor. You can define conditions in two ways. Toggle between them using the switcher icon (&&). Type your condition as a plain-English sentence (e.g., \"login button is visible\"). KaneAI interprets the intent and evaluates it at runtime. Build the condition explicitly using left operand, operator, and right operand: Enter a left operand: this can be a variable (e.g., {{loginbuttonvisible}}), extracted text, or a literal value. Choose a comparison operator from the dropdown: Enter the right operand (e.g., true, a number, or another variable). You can combine conditions using AND / OR logic: After defining the first condition, click the + button (labeled Add condition). Toggle the logical operator between AND and OR using the dropdown. Fill in the additional condition's operands and operator. Click the green checkmark to confirm.",
+          "url": "https://www.testmuai.com/support/docs/kaneai-conditional-logic/#step-2-define-the-condition"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Add Steps Inside a Branch",
+          "text": "Each branch (If, Else\u2011If, Else) supports multiple steps. You can add: Regular test steps: type your instruction in the step input field. Modules: reuse existing modules by adding them inside any branch. JavaScript steps: execute custom JS within a branch. API steps: make API calls as part of a conditional flow. DB steps: run database queries conditionally. Use the step input field or press / inside a branch to access the slash command menu. The cursor decides which branch a new step belongs to. Inside an If / Else\u2011If / Else block it can sit at any step boundary: For the full set of cursor rules, see Cursor in conditional blocks.",
+          "url": "https://www.testmuai.com/support/docs/kaneai-conditional-logic/#step-3-add-steps-inside-a-branch"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Step 4: Add Else\u2011If Branches",
+          "text": "To handle additional conditions beyond the initial If: Click Add Else\u2011If between the If and Else blocks. Define the condition for the new branch (same process as Step 2). Add steps inside the Else\u2011If block. Repeat to add as many Else\u2011If branches as needed. During authoring only one condition can be true at a time, so only the matching branch's steps are executed. Steps under the remaining branches take the Queued (branch) status. These do not count towards the unverified total when you save, because they verify whenever their branch matches. When the test runs in automation, all branches are evaluated automatically and the first matching branch is executed.",
+          "url": "https://www.testmuai.com/support/docs/kaneai-conditional-logic/#step-4-add-elseif-branches"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 5,
+          "name": "Step 5: Add Steps to the Else Branch",
+          "text": "The Else block executes when none of the preceding conditions are met. Click + Add step inside the Else block and add your fallback steps.",
+          "url": "https://www.testmuai.com/support/docs/kaneai-conditional-logic/#step-5-add-steps-to-the-else-branch"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 6,
+          "name": "Step 6: Close the Block",
+          "text": "Click End If at the bottom of the conditional block to finalize it. You can then continue adding steps after the conditional block as usual.",
+          "url": "https://www.testmuai.com/support/docs/kaneai-conditional-logic/#step-6-close-the-block"
+        }
+      ]
+    }
+  ]) }}
+/>
+
 ## Introduction
 
 KaneAI supports conditional branching in your test cases using **If / Else‑If / Else** blocks. This lets you handle dynamic application behavior, for example, clicking a login button only when it is visible, or choosing between different checkout flows based on a variable value.
