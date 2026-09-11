@@ -3922,6 +3922,11 @@ module.exports = {
           },
           {
             type: "doc",
+            label: "Weekly Report Email",
+            id: "smartui-weekly-report-email",
+          },
+          {
+            type: "doc",
             label: "Audit & Activity Logs",
             id: "smartui-audit-logs",
           },
