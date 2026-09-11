@@ -147,6 +147,47 @@ import VerifiedTag from '@site/src/component/verifiedTag';
   }) }}
 />
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Step-by-Step Guide to Trigger Your Test",
+      "description": "Run Accessibility Automation in Cypress v10 and later to detect and report accessibility issues during automated web test execution.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Setup Your Test Suite",
+          "text": "You can use your own project to configure and test it. For demo purposes, we are using the sample repository. Download or Clone the code sample from the TestMu AI GitHub repository to run your tests. Configure the desired capabilities based on your test requirements. For example:",
+          "url": "https://www.testmuai.com/support/docs/cypress-v10-accessibility-test/#step-1-setup-your-test-suite"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Establish User Authentication",
+          "text": "Now, you need to export your environment variables LTUSERNAME and LTACCESSKEY* that are available in the TestMu AI Profile page. Run the below mentioned commands in your terminal to setup the CLI and the environment variables. {`export LTUSERNAME=\"${ YOURLAMBDATEST_USERNAME()}\" export LTACCESSKEY=\"${ YOURLAMBDATESTACCESS_KEY()}\"`} {`set LTUSERNAME=\"${ YOURLAMBDATEST_USERNAME()}\" set LTACCESSKEY=\"${ YOURLAMBDATESTACCESS_KEY()}\"`}",
+          "url": "https://www.testmuai.com/support/docs/cypress-v10-accessibility-test/#step-2-establish-user-authentication"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Update the Necessary Capabilities and Configurations in your project",
+          "text": "If you are passing npm dependencies through package.json, then add the below mentioned line there: If you are using lambdatest-config.json to pass the dependency, then pass the given line there: if you are not passing npm dependency in lambdatest-config.json you can run Add this import statement in your e2e.js file to import the acceessibility scanner dependency Add this template in your config file. To enable the accessibility testing within your automated test suite, set the accessibility: true in your configuration file. You can also define other settings capabilities as described below.",
+          "url": "https://www.testmuai.com/support/docs/cypress-v10-accessibility-test/#step-3-update-the-necessary-capabilities-and-configurations-in-your-project"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Step 4: Execute and Monitor your Test",
+          "text": "Now execute your tests and visit the Automation Dashboard. Click on the Accessibility tab and check the report generated.",
+          "url": "https://www.testmuai.com/support/docs/cypress-v10-accessibility-test/#step-4-execute-and-monitor-your-test"
+        }
+      ]
+    }
+  ]) }}
+/>
+
 This guide takes you step-by-step through the process of using <BrandName />'s Accessibility Tool with Cypress v10 and above to run automated tests for your website.
 
 > **NOTE:** This documentation is applicable for **Cypress v10** and **later versions**.

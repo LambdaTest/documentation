@@ -166,6 +166,54 @@ import VerifiedTag from '@site/src/component/verifiedTag';
   }) }}
 />
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Selenium With Robot Framework",
+      "description": "Run Robot Framework Selenium tests on TestMu AI cloud grid with 10,000+ browser/device combinations. Setup, config, and parallel execution included.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Clone the Sample Project",
+          "text": "Clone the repository and set up the environment. Create a virtual environment and activate it: Install the required packages:",
+          "url": "https://www.testmuai.com/support/docs/robot-with-selenium-running-robot-automation-scripts-on-testmu-selenium-grid/#step-1-clone-the-sample-project"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Set Your Credentials",
+          "text": "Configure your credentials to connect to the TestMu AI Selenium Grid. Set TestMu AI Username and Access Key in environment variables. {`export LTUSERNAME=\"${ YOURLAMBDATEST_USERNAME()}\" export LTACCESSKEY=\"${ YOURLAMBDATESTACCESS_KEY()}\"`} {`set LTUSERNAME=\"${ YOURLAMBDATEST_USERNAME()}\" set LTACCESSKEY=\"${ YOURLAMBDATESTACCESS_KEY()}\"`}",
+          "url": "https://www.testmuai.com/support/docs/robot-with-selenium-running-robot-automation-scripts-on-testmu-selenium-grid/#step-2-set-your-credentials"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Configure Your Test Capabilities",
+          "text": "Define browser, version, and OS settings for your test run. Here is common.robot file to setup mandatory details to run at TestMu AI. Use the TestMu AI Capabilities Generator to auto-generate the capabilities class for your test requirements.",
+          "url": "https://www.testmuai.com/support/docs/robot-with-selenium-running-robot-automation-scripts-on-testmu-selenium-grid/#step-3-configure-your-test-capabilities"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Step 4: Run the Test",
+          "text": "Execute the Robot Framework test from the command line. To run parallel tests:",
+          "url": "https://www.testmuai.com/support/docs/robot-with-selenium-running-robot-automation-scripts-on-testmu-selenium-grid/#step-4-run-the-test"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 5,
+          "name": "Step 5: View Your Results",
+          "text": "Check the test output on the console and the TestMu AI dashboard. Visit the TestMu AI Automation Dashboard to view your test results. The dashboard provides: Text logs for each test step Screenshots captured during execution Video recordings of the full test session",
+          "url": "https://www.testmuai.com/support/docs/robot-with-selenium-running-robot-automation-scripts-on-testmu-selenium-grid/#step-5-view-your-results"
+        }
+      ]
+    }
+  ]) }}
+/>
+
 ---
 
 Run Robot Framework tests on the TestMu AI cloud grid. This guide covers setup, running a sample test, configuring capabilities, and testing locally hosted pages.

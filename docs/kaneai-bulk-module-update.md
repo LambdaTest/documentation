@@ -104,6 +104,54 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
   }) }}
 />
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "How to Use Bulk Module Update",
+      "description": "Learn how to update module versions across multiple KaneAI test cases in a single action using the Bulk Module Update feature.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Access Bulk Module Update",
+          "text": "You can start a bulk module update from two places: Navigate to the module whose version you want to bulk-update Click the Update Test Cases button If the module version is not yet authored/validated or there are no eligible test cases, this button will be disabled Open a test case that uses the module version you want to update If there is a newer version of the same module and other test cases still use the older version, you will see an Update Module for all Linked Test Cases button Click this button to open the bulk update flow, pre-filtered for that module and version",
+          "url": "https://www.testmuai.com/support/docs/kaneai-bulk-module-update/#step-1-access-bulk-module-update"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Module Validation Check",
+          "text": "Before the bulk update flow starts, the system checks whether the selected module version is authored/validated and whether there are eligible test cases to update. The Update Test Cases button will be disabled if: The module version is not authored/validated yet There are no eligible test cases (e.g., all linked test cases are faulty, unverified, or non-KaneAI) You will see a message such as: \"This module version is not authored yet. Author it in a test to enable bulk update.\" To resolve: Use the module in a test case and complete its authoring/validation, then ensure eligible KaneAI test cases are available. -->",
+          "url": "https://www.testmuai.com/support/docs/kaneai-bulk-module-update/#step-2-module-validation-check"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Select Test Cases",
+          "text": "After starting the flow, you will see a list of all test cases linked to the target module version. Ineligible test cases are greyed out, disabled for selection, and annotated with the reason. Select the eligible test cases you want to update and click Next to proceed.",
+          "url": "https://www.testmuai.com/support/docs/kaneai-bulk-module-update/#step-3-select-test-cases"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Step 4: Review and Confirm",
+          "text": "Before running the bulk update, you will see a final summary screen showing: The target module version (the version you are updating to) The count of selected eligible test cases Optionally, a version movement summary (e.g., from v1 \u2192 v2) Seamless Module Validation - Module validation will be performed automatically in future releases Bulk Code-Gen Validation - Bulk Code-Gen validation will be available in an upcoming update Click Confirm Update to trigger the bulk job and apply the new module version to all selected test cases. After triggering the update, you will see a success banner along with a toast message as shown in the screenshot below",
+          "url": "https://www.testmuai.com/support/docs/kaneai-bulk-module-update/#step-4-review-and-confirm"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 5,
+          "name": "Step 5: Post-Update Changes",
+          "text": "Once the bulk update is completed: A single bulk job is created All selected eligible test cases have their module version updated For each updated test case:",
+          "url": "https://www.testmuai.com/support/docs/kaneai-bulk-module-update/#step-5-post-update-changes"
+        }
+      ]
+    }
+  ]) }}
+/>
+
 Maintaining many test cases that share the same module can become slow and error-prone when a module evolves. Each time a module is updated, you would otherwise have to manually open and edit every affected test case and bump the module version one by one.
 
 For an overview of modules, see [Modules](/support/docs/kane-ai-modules/).

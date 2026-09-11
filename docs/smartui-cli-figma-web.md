@@ -369,6 +369,54 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
   }) }}
 />
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Steps to run your first test",
+      "description": "In this documentation, learn how to compare your figma designs to live production websites and web applications.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Install the Dependencies",
+          "text": "Install required NPM modules for TestMu AI SmartUI CLI globally or in your project: Global Installation (Recommended): Local Installation:",
+          "url": "https://www.testmuai.com/support/docs/smartui-cli-figma-web/#step-1-install-the-dependencies"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Create the design configuration file",
+          "text": "Once, the designs file will be created, you will be seeing the sample pre-filled configuration in the designs.json file: Note: Unlike vanilla Figma CLI, designs.json includes browser parameters and auto-fetches viewports of Figma frames for efficient comparison.",
+          "url": "https://www.testmuai.com/support/docs/smartui-cli-figma-web/#step-2-create-the-design-configuration-file"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Configure your Project Token and Figma Token",
+          "text": "Setup your project token shown in the SmartUI app after creating your project. Setup your personal access token for Figma to authenticate Figma with SmartUI.",
+          "url": "https://www.testmuai.com/support/docs/smartui-cli-figma-web/#step-3-configure-your-project-token-and-figma-token"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Step 4: Configure your TestMu AI Credentials",
+          "text": "Please read the following table for more information about the configuration file:",
+          "url": "https://www.testmuai.com/support/docs/smartui-cli-figma-web/#step-4-configure-your-testmu-ai-credentials"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 5,
+          "name": "Step 5: Uploading the Figma files on SmartUI Cloud using CLI",
+          "text": "You can now execute tests for Visual Testing for Figma objects using the following options:.",
+          "url": "https://www.testmuai.com/support/docs/smartui-cli-figma-web/#step-5-uploading-the-figma-files-on-smartui-cloud-using-cli"
+        }
+      ]
+    }
+  ]) }}
+/>
+
 Welcome to the <BrandName /> SmartUI Figma Web CLI documentation!
 
 With SmartUI Figma-Web CLI, you can seamlessly perform visual regression testing of your Figma designs on SmartUI using your command line, identifying discrepancies between your designs and live websites. This guide will walk you through the process of running successful Figma-Web Visual tests using SmartUI CLI.

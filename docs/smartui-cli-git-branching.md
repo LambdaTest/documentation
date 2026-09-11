@@ -220,6 +220,33 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
   }) }}
 />
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Branching Strategy in SmartUI SDK",
+      "description": "In this documentation, learn how the Git Branching Strategy is implemented for the SmartUI SDK",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Setup your Git Baseline branch in the Project Settings",
+          "text": "The following are the steps to add Baseline branch to your CLI projects with Git commits: Go to Project Settings page for the created project. Search for Git Settings and add your required Baseline branch in the input box. Click on Update Settings button to update the project settings and set your Baseline Git branch. Now, after the successful setup of your Baseline branch of your project.",
+          "url": "https://www.testmuai.com/support/docs/smartui-cli-git-branching-strategy/#step-1-setup-your-git-baseline-branch-in-the-project-settings"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Execute your SmartUI CLI with Git commits",
+          "text": "The following are the steps to execute your SmartUI CLI with Git commits on CLI projects: Go to your current project repository and run the following command: You can ignore the above step if you already have a repository with Git initialized Now, commit the changes (if any) to your Git: Execute your SmartUI CLI command to execute the Visual Regression tests for your files:",
+          "url": "https://www.testmuai.com/support/docs/smartui-cli-git-branching-strategy/#step-2-execute-your-smartui-cli-with-git-commits"
+        }
+      ]
+    }
+  ]) }}
+/>
+
 :::info
 This is the guide to understand our Git Branching with SmartUI projects which can detect the commit history and execute the appropriate actions for your visual regression testing.
 :::

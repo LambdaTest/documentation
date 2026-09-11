@@ -138,6 +138,40 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
   }) }}
 />
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "How to Run Accessibility Tests Using the Accessibility Skill",
+      "description": "Once the skill is installed and your credentials are set, you drive everything through natural-language prompts. Your agent reads the skill, applies the right pattern for your framework, and runs the scan on the TestMu AI cloud. You do not write the capabilities or the scan hooks yourself.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Ask the agent to add accessibility scanning",
+          "text": "Describe the pages you want scanned and, if it matters, the WCAG version: \"Add accessibility scanning to my Selenium suite. Scan the homepage and the checkout page against WCAG 2.1 AA.\" From this, the agent will: Enable the accessibility capability on your driver, along with settings like accessibility.wcagVersion Add the lambda-accessibility-scan hook at the pages you named, or enable accessibility.autoscan to scan every navigation on Selenium Wire the run to execute your suite on the TestMu AI cloud",
+          "url": "https://www.testmuai.com/support/docs/accessibility-agent-skills/#step-1-ask-the-agent-to-add-accessibility-scanning"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Run the accessibility scan",
+          "text": "Ask the agent to run it, or run your usual test command yourself: Your suite runs on the TestMu AI cloud, and a WCAG scan is captured at each point the hook is called (or on every navigation, with autoscan).",
+          "url": "https://www.testmuai.com/support/docs/accessibility-agent-skills/#step-2-run-the-accessibility-scan"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Review the report",
+          "text": "The agent points you to your Accessibility dashboard, where each scan's issues, WCAG mappings, and score live (see Understanding the Results). From there you can keep iterating in plain language: \"Also scan the pricing page and include best-practice checks.\" \"Scan the login page against WCAG 2.1 A instead.\"",
+          "url": "https://www.testmuai.com/support/docs/accessibility-agent-skills/#step-3-review-the-report"
+        }
+      ]
+    }
+  ]) }}
+/>
+
 Accessibility testing checks your pages against WCAG rules for issues like missing alt text, unlabeled form fields, and low colour contrast. Adding it to a test suite means enabling the right capabilities and triggering scans at the pages you care about. You can hand that off to your AI coding agent instead.
 
 The [`accessibility-skill`](https://github.com/LambdaTest/agent-skills/tree/main/accessibility-skill) is part of [<BrandName /> Agent Skills](https://github.com/LambdaTest/agent-skills), a library of instruction packs that give AI coding agents the know-how to build working test automation on <BrandName />. Tell it which pages to scan, and it wires accessibility into your existing framework and runs the scan on the <BrandName /> cloud.

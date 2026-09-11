@@ -106,6 +106,40 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
   }) }}
 />
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Manual Audio Injection Workflow in Browser Testing",
+      "description": "Manually test microphone-driven web flows on real Android and iOS device browsers in Real Time by injecting pre-recorded audio files or streaming live input from your system mic.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Enable Audio Injection in Advanced Settings",
+          "text": "Go to the TestMu AI Dashboard and open Real Device Browser Testing. Click Advanced Settings on top. Toggle Enable Audio Injection on. Once enabled, the device list is filtered to show only the devices that support Audio Injection for the respective OS.",
+          "url": "https://www.testmuai.com/support/docs/audio-injection-manual-browser/#step-1-enable-audio-injection-in-advanced-settings"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Select a Device and Start Your Session",
+          "text": "From the filtered device list, pick a supported Android or iOS real device along with the browser you want to test on. Click Start to launch the session.",
+          "url": "https://www.testmuai.com/support/docs/audio-injection-manual-browser/#step-2-select-a-device-and-start-your-session"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Open Media Injection",
+          "text": "Inside the live browser session, locate Media Injection in the in-session toolbar. Click to open the Media Injection panel. Switch to the Audio tab. You will see two options: Select Files: inject a pre-recorded audio file Inject Live Input: stream audio from your system microphone in real time",
+          "url": "https://www.testmuai.com/support/docs/audio-injection-manual-browser/#step-3-open-media-injection"
+        }
+      ]
+    }
+  ]) }}
+/>
+
 # Audio Injection Manual Testing on Real Device Browsers
 
 **Audio Injection** lets you simulate microphone input on real Android and iOS device browsers during a manual **Real Time** browser session. Use it to test speech-to-text web apps, voice search on the mobile web, browser-based voice assistants, web-based KYC voice verification, and any other microphone-dependent web feature, without speaking into a physical mic.

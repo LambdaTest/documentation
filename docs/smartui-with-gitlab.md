@@ -185,6 +185,40 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     "dateModified": "2026-09-09T19:10:37+05:30"
   }) }}
 />
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Steps to Integrate GitLab Pipeline with SmartUI",
+      "description": "To integrate GitLab Pipeline with SmartUI, follow the below steps. You can use your own project to configure and test it. For demo purposes, we are using the sample repository. Download or Clone the code sample from the TestMu AI GitHub repository to run the tests on the SmartUI.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Setup your Projects in GitLab",
+          "text": "Click on the New Project > Run CI/CD for external repository. Enter your repository URL and click on Create Project.",
+          "url": "https://www.testmuai.com/support/docs/smartui-with-gitlab/#step-1-setup-your-projects-in-gitlab"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Create a New Workflow",
+          "text": "Navigate to the Build section > Pipelines. Select your required template for CI/CD workflow file. For the demo we are using the Test template. Now, write your workflow YAML file. Here is the sample file for your reference. Commit this yaml file in your repository and make the required changes in your code to automatically trigger the pipeline. You can also store your LTUSERNAME, LTACCESSKEY and PROJECTTOKEN as secrets in your GitLab project repository.",
+          "url": "https://www.testmuai.com/support/docs/smartui-with-gitlab/#step-2-create-a-new-workflow"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Check the output",
+          "text": "After triggering the workflow, check your results in the SmartUI Dashboard",
+          "url": "https://www.testmuai.com/support/docs/smartui-with-gitlab/#step-3-check-the-output"
+        }
+      ]
+    }
+  ]) }}
+/>
 A GitLab Pipeline automates building, testing, and deploying code changes. It's essential for rapid development, improved code quality, and faster delivery by catching errors early and reducing manual work.
 
 This document will show you how to integrate GitLab Pipeline with SmartUI to shorten your test cycles.

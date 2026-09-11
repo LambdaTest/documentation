@@ -217,6 +217,33 @@ import VerifiedTag from '@site/src/component/verifiedTag';
   }) }}
 />
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Share Your Test Execution Video",
+      "description": "Build a shareable URL using the TestID/SessionID and an MD5-generated auth token. You can share a video recording of any test execution. Build the URL in the following format:",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1 - Get Your TestID or SessionID",
+          "text": "Go to the Automation Dashboard and click on the test whose ID you need. Click the \"i\" button on the status bar to access the test metadata. After clicking the \"i\" button, you will see the test metadata including the SessionID. For example, if your SessionID is HJKXM-RHZL1-SVPWY-AB8X6, the URL becomes:",
+          "url": "https://www.testmuai.com/support/docs/sharing-test-results/#step-1---get-your-testid-or-sessionid"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2 - Generate the AUTH_TOKEN",
+          "text": "Create the AUTHTOKEN by computing an MD5 hash of your username:accesskey string. For example, if the generated AUTH_TOKEN is 331k534uf3toef, the final URL becomes: You must be logged into TestMu AI to access the sharing URL. Home Support Sharing Test Result",
+          "url": "https://www.testmuai.com/support/docs/sharing-test-results/#step-2---generate-the-auth_token"
+        }
+      ]
+    }
+  ]) }}
+/>
+
 # Sharing Test Results on TestMu AI
 
 * * *

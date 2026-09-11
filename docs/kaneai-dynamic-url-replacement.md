@@ -122,6 +122,40 @@ import VerifiedTag from '@site/src/component/verifiedTag';
     "dateModified": "2026-09-09T19:16:50+05:30"
   }) }}
 />
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "How to Use Dynamic URL Replacement",
+      "description": "This documentation will help you to understand how to dynamically update your URL during the KaneAI testing",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Navigate to the Test Runs Page",
+          "text": "Log in to TestMu AI. Go to the Test Manager > Test Runs section. Click on your desired Test Run. Click on Run with HyperExecute button.",
+          "url": "https://www.testmuai.com/support/docs/kaneai-dynamic-url-replacement/#step-1-navigate-to-the-test-runs-page"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Configure the Test Execution URL",
+          "text": "In the Run on HyperExecute side drawer, locate the new field labeled Replace Test Execution URL. Enter the Pattern URL (your original URL used in the tests) and Replacement URL (URL of different environment you want to test) in the text field. You can add multiple URLs for all web tests in the run to execute in different environments",
+          "url": "https://www.testmuai.com/support/docs/kaneai-dynamic-url-replacement/#step-2-configure-the-test-execution-url"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Execute the Test Run",
+          "text": "If the Replace Test Execution URL field is filled, the entered URL will override the default (Pattern) URL during execution. If left empty, the test will run with the default URL. Click on the Execute button",
+          "url": "https://www.testmuai.com/support/docs/kaneai-dynamic-url-replacement/#step-3-execute-the-test-run"
+        }
+      ]
+    }
+  ]) }}
+/>
 As a QA Engineer, you may need to run test cases on different environments (e.g., staging, production) without altering your test scripts. With Dynamic URL Replacement you can execute the same test cases across multiple environments without modifying the test scripts, ensuring seamless execution across different environments.
 
 > This feature is applicable only for Web Tests

@@ -135,6 +135,83 @@ import { CookieTrackingSignup } from '@site/src/component/CookieTracking';
   }) }}
 />
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Installation",
+      "description": "Follow these steps to install and authorize the TestMu AI Cloud GitHub App for your organization.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Access GitHub Marketplace",
+          "text": "Navigate to the TestMu AI Cloud GitHub App on GitHub Marketplace and click Install to begin the installation process.",
+          "url": "https://www.testmuai.com/support/docs/github-app-integration/#step-1-access-github-marketplace"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Configure Repository Access",
+          "text": "During installation, you'll need to specify which repositories should have access to the app: Organization-wide Installation: Select All repositories to enable the app across your entire GitHub organization Selective Installation: Choose Only select repositories and specify individual repositories for more granular control After making your selection and clicking the Install and Authorize button, you will be redirected to TestMu AI where you will be asked to login. Once done, you will be redirected to the Integrations page. For pilot programs or initial rollouts, we recommend installing on a select subset of repositories first. Once your team is comfortable with the workflow, you can expand access organization-wide.",
+          "url": "https://www.testmuai.com/support/docs/github-app-integration/#step-2-configure-repository-access"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Verify Successful Installation",
+          "text": "Confirm the installation was successful by: Navigating to your GitHub organization's Settings page In left side menu under Integrations, click Applications. Selecting Installed GitHub Apps from the left sidebar Verifying that TestMu AI Cloud appears in the list of installed applications You can also click on the app to review and modify repository access permissions at any time.",
+          "url": "https://www.testmuai.com/support/docs/github-app-integration/#step-3-verify-successful-installation"
+        }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Live PR Updates, Step by Step",
+      "description": "From the moment you trigger the workflow, KaneAI posts real-time updates directly in your pull request. Every phase, from analysis through execution to reporting, is visible without leaving GitHub. Here is what happens at each stage.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Real-Time Progress Tracker",
+          "text": "As soon as the workflow begins, KaneAI posts a comprehensive progress tracker comment to your PR. This dynamic comment serves as your single source of truth for the entire testing operation. The Progress Tracker includes: Current Workflow Status: Real-time updates on which phase is currently executing Test Case Pipeline: Progress through analysis, generation, authoring, and code generation phases Intelligent Test Case Suggestion: AI identifies existing semantically similar test cases from your project and adds them to the test run alongside newly generated tests Test Run Management: Execution status, including configuration, triggering, monitoring, and completion Reporting Status: Final report generation and PR approval recommendation The tracker automatically updates as each stage completes, no manual refreshes required.",
+          "url": "https://www.testmuai.com/support/docs/github-app-integration/#step-1-real-time-progress-tracker"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Automated AI Test Authoring",
+          "text": "Once KaneAI completes test generation, a detailed comment lists every test case that was created. These are not generic tests. They reflect the specific code changes in your PR and your application's business context. Each entry includes: Test Case ID: A clickable link (e.g., TC-14822) that opens the test case directly in TestMu AI Test Manager. Any user in your organization with Test Manager access can open these links. Status: The current authoring state of each test case. When a test case is in Authoring status, the link redirects to the live KaneAI session where the test is being authored in real time. Test Case links (TC-XXXXX) can be accessed by any user in your organization who has TestMu AI Test Manager access. Authoring status links can only be accessed by the user who integrated the GitHub App, as they redirect to that user's live KaneAI session. When a PR produces more than one scenario, the test cases are grouped by scenario instead of being listed in a single flat table, so it is clear which scenario each test case belongs to. Test cases stay numbered sequentially across all scenarios, and only the first group is expanded by default to keep the comment compact. Test cases that KaneAI could not convert into executable automation are marked as Not automated, with a note explaining how many were affected. These test cases still exist in Test Manager, but they are not part of the test run, so the comment reflects what actually gets executed. This comment updates...",
+          "url": "https://www.testmuai.com/support/docs/github-app-integration/#step-2-automated-ai-test-authoring"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Smart Intelligence (Similar Test Detection)",
+          "text": "KaneAI does not rely solely on newly generated tests. It scans your existing test inventory in TestMu AI Test Manager to find semantically similar test cases that are relevant to the PR changes. These existing tests are added on top of the newly generated test cases into the test run for execution on HyperExecute. This is Smart Intelligence at work. Maximizes coverage: Combines AI-generated tests with proven existing test cases, ensuring both new and established scenarios are validated in a single run. Leverages your test library: Your team's existing test cases become active participants in every PR validation, not just historical records. Builds institutional knowledge: Every test run enriches the system's understanding of your project, making future test suggestions progressively more accurate.",
+          "url": "https://www.testmuai.com/support/docs/github-app-integration/#step-3-smart-intelligence-similar-test-detection"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Step 4: Seamless Execution on HyperExecute",
+          "text": "When test execution begins, a dedicated comment provides live status updates directly in your PR: Test Run Configuration: Execution environment, browser matrix, and parallel execution settings Real-Time Execution Status: Live updates as tests run, including pass/fail counts and completion percentage HyperExecute Dashboard Link: Direct access to detailed logs, screenshots, video recordings, and network traces Tests run in parallel across browsers, devices, and operating systems on TestMu AI's HyperExecute infrastructure, delivering results at scale without queuing delays. Test run link in this comment can be accessed by any user in your organization who has TestMu AI Test Manager access.",
+          "url": "https://www.testmuai.com/support/docs/github-app-integration/#step-4-seamless-execution-on-hyperexecute"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 5,
+          "name": "Step 5: In-Depth Insights and Root Cause Analysis",
+          "text": "Upon completion, KaneAI generates a final report that goes far beyond simple pass/fail metrics: Executive Summary: High-level test coverage and success rate for quick stakeholder review Detailed Test Results: Pass/fail status for each individual test case with failure details PR Approval Recommendation: Based on test results and failure severity, KaneAI suggests whether the PR should be approved, requires changes, or needs further investigation For any failing test, KaneAI performs automated Root Cause Analysis (RCA) by correlating: Screenshots and video replay at the point of failure DOM state and selector changes Network request logs and timing Stack traces and error messages The RCA summary is posted directly in your PR, along with a clear recommendation: approve, request changes, or investigate further. Your team gets a readable diagnosis, not a raw stack dump. Test run link in this comment can be accessed by any user in your organization who has TestMu AI Test Manager access.",
+          "url": "https://www.testmuai.com/support/docs/github-app-integration/#step-5-in-depth-insights-and-root-cause-analysis"
+        }
+      ]
+    }
+  ]) }}
+/>
+
 # <BrandName /> GitHub App Integration
 
 **Your pull requests should deliver proof, not just code.**

@@ -120,6 +120,61 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
   }) }}
 />
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "GitLab PR Checks with SmartUI Exec (SDK)",
+      "description": "Integrate SmartUI visual regression testing with GitLab merge requests using SmartUI SDK/Exec method for web and mobile testing with Selenium, Playwright, Appium, and more.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Integrate GitLab with TestMu AI",
+          "text": "Go to TestMu AI Integrations page Search for GitLab and select the integration Click on OAuth as your preferred authentication method Click Install and authorize the integration After successful authentication, refresh the Integrations page to verify GitLab is installed You can verify your GitLab integration is active by checking the Integrations page. The GitLab integration should show as \"Installed\" or \"Active\".",
+          "url": "https://www.testmuai.com/support/docs/smartui-gitlab-pr-checks-exec/#step-1-integrate-gitlab-with-testmu-ai"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Configure SmartUI Project",
+          "text": "Create or update your SmartUI configuration file (.smartui.json): The SmartUI configuration file is used to specify project settings. You can also use environment variables or command-line options to override these settings.",
+          "url": "https://www.testmuai.com/support/docs/smartui-gitlab-pr-checks-exec/#step-2-configure-smartui-project"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Configure GitLab CI/CD Pipeline",
+          "text": "Create or update your .gitlab-ci.yml file. The key difference with the Exec method is that you use npx smartui exec --gitURL to run your tests. SmartUI CLI Installation: Install SmartUI CLI globally or use npx @lambdatest/smartui-cli GitLab Project ID: Automatically available as CIPROJECTID in GitLab CI/CD Commit SHA: Use CICOMMITSHA for regular commits, or CIMERGEREQUEST_SHA for merge requests GitLab API URL: Construct as https://gitlab.com/api/v4/projects/{projectId}/statuses/{commitId} Exec Command: Use npx smartui exec --gitURL \"${GIT_URL}\" -- The npx smartui exec command wraps your test execution and provides SmartUI integration: --gitURL: GitLab API URL for status updates (legacy name, works with GitLab) --: Separator before your test command `: Your normal test command (e.g., npm test, mvn test, pytest`)",
+          "url": "https://www.testmuai.com/support/docs/smartui-gitlab-pr-checks-exec/#step-3-configure-gitlab-cicd-pipeline"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Step 4: Set Up GitLab CI/CD Variables",
+          "text": "Configure the following variables in your GitLab project: Go to your GitLab project \u2192 Settings \u2192 CI/CD \u2192 Variables Add the following variables: The PROJECTTOKEN is different from LTUSERNAME and LTACCESSKEY. You can find it in your SmartUI project settings in the SmartUI Dashboard.",
+          "url": "https://www.testmuai.com/support/docs/smartui-gitlab-pr-checks-exec/#step-4-set-up-gitlab-cicd-variables"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 5,
+          "name": "Step 5: View Pipeline Results in GitLab",
+          "text": "After your pipeline runs, you can view the results in the GitLab Pipelines page: The pipeline will show: Pipeline status (Success/Failed) Job status for SmartUI tests Screenshot statistics (Total, Approved, Changes Found) in the job tooltip",
+          "url": "https://www.testmuai.com/support/docs/smartui-gitlab-pr-checks-exec/#step-5-view-pipeline-results-in-gitlab"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 6,
+          "name": "Step 6: View PR Check Results in GitLab Merge Request",
+          "text": "After your pipeline runs, you'll see SmartUI status checks in your GitLab merge request: When all visual tests pass: \u2705 Status: Success Details: Click \"Details\" to view the SmartUI build in the dashboard Screenshot: All screenshots match baseline or are approved When visual differences are detected: \u274c Status: Failed Details: Click \"Details\" to review differences in SmartUI dashboard Action Required: Review and approve/reject changes in SmartUI dashboard",
+          "url": "https://www.testmuai.com/support/docs/smartui-gitlab-pr-checks-exec/#step-6-view-pr-check-results-in-gitlab-merge-request"
+        }
+      ]
+    }
+  ]) }}
+/>
+
 This guide shows you how to integrate SmartUI visual regression testing with GitLab merge requests using the **SmartUI SDK/Exec method**. This works for both **web testing** (Selenium, Playwright, Cypress, Puppeteer) and **mobile app testing** (Appium, WebdriverIO) across all supported languages.
 
 :::info SmartUI SDK/Exec vs Hooks

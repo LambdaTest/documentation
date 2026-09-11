@@ -98,6 +98,61 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
   }) }}
 />
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Schedule a Report",
+      "description": "Customize the delivery time for your analytics widget reports. Schedule reports at your preferred time for timely business insights.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Open Dashboard Settings",
+          "text": "Navigate to your Insights dashboard. Click the Settings icon in the dashboard toolbar to open the Dashboard Settings panel.",
+          "url": "https://www.testmuai.com/support/docs/analytics-report-scheduling/#step-1-open-dashboard-settings"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Enable Email Notifications",
+          "text": "In the Dashboard Settings panel, expand the Email Notifications section and toggle the switch to enable notifications for the dashboard.",
+          "url": "https://www.testmuai.com/support/docs/analytics-report-scheduling/#step-2-enable-email-notifications"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Set the Delivery Schedule",
+          "text": "Under Frequency, select your preferred schedule from the dropdown: Daily: Receive reports every day at your chosen time. Weekly: Receive reports once a week. Monthly: Receive reports once a month. Under Time, select the hour from the dropdown (e.g., 9:00). Under Period, select AM or PM from the dropdown.",
+          "url": "https://www.testmuai.com/support/docs/analytics-report-scheduling/#step-3-set-the-delivery-schedule"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Step 4: Configure the Date Range",
+          "text": "Select the date range for the data included in each report: Default: Uses the platform's default date range. Custom: Specify a custom number of days. For example, setting this to 7 includes data from the last 7 days in each report.",
+          "url": "https://www.testmuai.com/support/docs/analytics-report-scheduling/#step-4-configure-the-date-range"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 5,
+          "name": "Step 5: Add Recipients",
+          "text": "Under Emails, enter the email address in the Enter Email address field. Click + Add to include the recipient. Repeat to add multiple recipients.",
+          "url": "https://www.testmuai.com/support/docs/analytics-report-scheduling/#step-5-add-recipients"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 6,
+          "name": "Step 6: Save Your Settings",
+          "text": "Click Update to save your scheduling preferences. The changes take effect immediately. Each dashboard has its own independent scheduling settings. You can configure different delivery times and recipients for different dashboards to match each team's needs.",
+          "url": "https://www.testmuai.com/support/docs/analytics-report-scheduling/#step-6-save-your-settings"
+        }
+      ]
+    }
+  ]) }}
+/>
+
 Analytics report scheduling allows you to customize the delivery time for your dashboard widget reports. Instead of receiving reports at a fixed default time, you can choose a specific time that aligns with your team's workflow.
 
 ## Overview

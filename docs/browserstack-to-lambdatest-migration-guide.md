@@ -46,6 +46,11 @@ import VerifiedTag from '@site/src/component/verifiedTag';
           "@type": "ListItem",
           "position": 3,
           "name": "BrowserStack to <BrandName /> migration",
+          "item": `${BRAND_URL}/support/docs/browserstack-to-testmu-migration-guide/`
+        }]
+      })
+    }}
+></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -169,11 +174,6 @@ import VerifiedTag from '@site/src/component/verifiedTag';
     "dateModified": "2026-06-02T12:20:54+05:30"
   }) }}
 />
-          "item": `${BRAND_URL}/support/docs/browserstack-to-testmu-migration-guide/`
-        }]
-      })
-    }}
-></script>
 
 # Migration from BrowserStack to <BrandName />
 * * *

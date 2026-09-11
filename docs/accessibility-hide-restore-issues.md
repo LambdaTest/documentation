@@ -88,6 +88,83 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
   }) }}
 />
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "How hiding works",
+      "description": "Hide or restore accessibility issues at the URL, rule, element group, or element level, add reasons, and control whether the preference should also apply to future scheduled web scans.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Open the issue hierarchy and locate the target",
+          "text": "Open the report and navigate to the issue location you want to manage. You can start from a URL, then drill down into its rules, element groups, and individual elements.",
+          "url": "https://www.testmuai.com/support/docs/accessibility-hide-restore-issues/#step-1-open-the-issue-hierarchy-and-locate-the-target"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Click the hide action",
+          "text": "Use the hide icon from the relevant level in the hierarchy.",
+          "url": "https://www.testmuai.com/support/docs/accessibility-hide-restore-issues/#step-2-click-the-hide-action"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Choose the level you want to hide",
+          "text": "You can hide from any supported level depending on how broad or narrow the action should be. Hide at URL level Use this when all findings under a specific URL should be hidden together. Hide at rule level Use this when the hide action should apply to one rule and the issues grouped under that rule. Hide at element group level Use this when the issue set should be hidden only for a specific group of similar elements. Hide at element level Use this when only a single element-level issue should be hidden.",
+          "url": "https://www.testmuai.com/support/docs/accessibility-hide-restore-issues/#step-3-choose-the-level-you-want-to-hide"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Step 4: Select a reason in the hide modal",
+          "text": "When you hide an issue or issue set, the modal lets you choose a reason for hiding it. The selected reason is shown later inside the issue as a reason tag. If a reason is chosen at a higher hierarchy level, that reason is mapped to all associated issues under that hierarchy.",
+          "url": "https://www.testmuai.com/support/docs/accessibility-hide-restore-issues/#step-4-select-a-reason-in-the-hide-modal"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 5,
+          "name": "Step 5: Choose whether it should apply to future scans",
+          "text": "For Web Scanner Accessibility scans and Accessibility scheduled scans, the hide modal also lets you choose whether the issue should be hidden for future scans. Use this option when: the issue is already known and accepted across scheduled runs the same hide preference should continue in future executions the team wants scheduled reports to stay aligned with an approved hide decision The Hide for future scans option is available only for supported Web Scanner Accessibility scans and Accessibility scheduled scans. It is not available for app scans.",
+          "url": "https://www.testmuai.com/support/docs/accessibility-hide-restore-issues/#step-5-choose-whether-it-should-apply-to-future-scans"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 6,
+          "name": "Step 6: Confirm the hide action",
+          "text": "After you confirm the modal, the selected issue set is removed from the active report state and is moved into the Hidden Issues flow for that report.",
+          "url": "https://www.testmuai.com/support/docs/accessibility-hide-restore-issues/#step-6-confirm-the-hide-action"
+        }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "How restore works",
+      "description": "Hide or restore accessibility issues at the URL, rule, element group, or element level, add reasons, and control whether the preference should also apply to future scheduled web scans.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Open the restore action",
+          "text": "Inside the Hidden Issues tab, use the restore icon for the hierarchy you want to restore.",
+          "url": "https://www.testmuai.com/support/docs/accessibility-hide-restore-issues/#step-1-open-the-restore-action"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Review the restore modal",
+          "text": "The restore modal reflects the stored hide preference and keeps restore behavior consistent with the original hide action. Restore for current scan only If none of the issues in the selected set were hidden for future scans, the restore action applies to the current scan only. Restore for future scans too If the selected hierarchy, or any child inside that hierarchy, was hidden for future scans, the restore modal preserves that future-scoped behavior.",
+          "url": "https://www.testmuai.com/support/docs/accessibility-hide-restore-issues/#step-2-review-the-restore-modal"
+        }
+      ]
+    }
+  ]) }}
+/>
+
 # Hide and Restore Issues
 
 Use **Hide and Restore Issues** to manage known, accepted, or intentionally excluded findings without deleting them from the report hierarchy. The feature lets you hide and later restore issues at multiple hierarchy levels, capture a reason during the action, and, for supported scheduled web scan flows, apply the same preference to future scans as well.

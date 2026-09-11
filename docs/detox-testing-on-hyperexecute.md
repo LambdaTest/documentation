@@ -134,6 +134,69 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
   }) }}
 />
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Run a Sample Project",
+      "description": "Learn how to run Detox automation tests on HyperExecute for React Native apps",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Clone Sample Repository",
+          "text": "Download or Clone the Detox sample from TestMu AI\u2019s GitHub Repository",
+          "url": "https://www.testmuai.com/support/docs/hyperexecute-detox-testing/#step-1-clone-sample-repository"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Download the CLI in your Project",
+          "text": "Download the HyperExecute CLI and copy it into the root folder of the downloaded sample repository.",
+          "url": "https://www.testmuai.com/support/docs/hyperexecute-detox-testing/#step-2-download-the-cli-in-your-project"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Execute your Test Suite",
+          "text": "From the project root directory, execute the below CLI command in your terminal: {./hyperexecute --user ${ YOURLAMBDATESTUSERNAME()} --key ${ YOURLAMBDATESTACCESSKEY()} --config RELATIVEPATHOFYOURYAMLFILE } NOTE : In case of macOS, if you get a permission denied warning while executing CLI, simply run chmod u+x ./hyperexecute to allow permission. In case you get a security popup, allow it from your System Preferences \u2192 Security & Privacy \u2192 General tab. You've successfully triggered the Detox tests on HyperExecute. Visit the HyperExecute Dashboard and check your Job status.",
+          "url": "https://www.testmuai.com/support/docs/hyperexecute-detox-testing/#step-3-execute-your-test-suite"
+        }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Configure your own Project",
+      "description": "Learn how to run Detox automation tests on HyperExecute for React Native apps",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Download the CLI in your Project",
+          "text": "Download the HyperExecute CLI and copy it into the root folder.",
+          "url": "https://www.testmuai.com/support/docs/hyperexecute-detox-testing/#step-1-download-the-cli-in-your-project"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Configure YAML in your Test Suite",
+          "text": "Use the sample YAML below to configure your execution: \ud83d\udcd8 To explore more configuration options and tailor settings to your project needs, check out the YAML documentation.",
+          "url": "https://www.testmuai.com/support/docs/hyperexecute-detox-testing/#step-2-configure-yaml-in-your-test-suite"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Monitor the Test Execution",
+          "text": "Visit the HyperExecute Dashboard and check your Job status. You can click on View Test from the HyperExecute logs, which will take you to the App Automation dashboard. There, you can access detailed device logs, crash logs, and Metadata for your test. You\u2019ll also be able to watch a video recording of the Test sessions for better debugging and analysis.",
+          "url": "https://www.testmuai.com/support/docs/hyperexecute-detox-testing/#step-3-monitor-the-test-execution"
+        }
+      ]
+    }
+  ]) }}
+/>
+
 Detox is a popular end-to-end testing framework for React Native applications. This documentation will help you run your Detox tests on <BrandName /> HyperExecute using your local system setup.
 
 :::note

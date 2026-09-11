@@ -169,6 +169,54 @@ import VerifiedTag from '@site/src/component/verifiedTag';
     "dateModified": "2026-09-09T19:10:37+05:30"
   }) }}
 />
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Steps to Run Your Test",
+      "description": "Maximize Appium test execution with HyperExecute \u2013 Explore TestMu AI's support documentation for seamless automation testing.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Upload your Application",
+          "text": "Upload your iOS application (.ipa file) or android application (.apk file) to the TestMu AI servers using our REST API. You need to provide your Username and AccessKey in the format Username:AccessKey in the cURL command for authentication. Make sure to add the path of the appFile in the cURL request. Here is an example cURL request to upload your app using our REST API: {`curl -u \"${ YOURLAMBDATESTUSERNAME()}:${ YOURLAMBDATESTACCESSKEY()}\" --location --request POST 'https://manual-api.lambdatest.com/app/upload/realDevice' --form 'name=\"AndroidApp\"' --form 'appFile=@\"\"' `} {`curl -u \"${ YOURLAMBDATESTUSERNAME()}:${ YOURLAMBDATESTACCESS_KEY()}\" -X POST \"https://manual-api.lambdatest.com/app/upload/realDevice\" -F \"appFile=@\"\"\" `} {`curl -u \"${ YOURLAMBDATESTUSERNAME()}:${ YOURLAMBDATESTACCESS_KEY()}\" \\\\ --location --request POST 'https://manual-api.lambdatest.com/app/upload/realDevice' \\\\ --form 'name=\"Android_App\"' \\\\ --form 'url=\"https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_android.apk\"'`} {curl -u \"${ YOURLAMBDATESTUSERNAME()}:${ YOURLAMBDATESTACCESSKEY()}\" --location --request POST \"https://manual-api.lambdatest.com/app/upload/realDevice\" --header \"Content-Type: application/x-www-form-urlencoded\" --data-urlencode \"url=:https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbialandroid.apk\" --data-urlencode \"name=Proverbial_App\"} Response of above cURL will be a JSON object containing the App URL of the format - `lt://APP123456789123456789`...",
+          "url": "https://www.testmuai.com/support/docs/hyperexecute-appium-testing/#step-1-upload-your-application"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Configure your Test Script",
+          "text": "Write Your Automation Script in the client language of your choice from the ones supported by Appium. An automation script for the sample applications have been provided below. Here is a sample automation script in Java for the sample app downloaded above. Ensure to update the app_url, username and accesskey in the below code.",
+          "url": "https://www.testmuai.com/support/docs/hyperexecute-appium-testing/#step-2-configure-your-test-script"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Update your XML file",
+          "text": "Create .XML file in order to run your test and define device capabilities. Please find sample code below for the same.",
+          "url": "https://www.testmuai.com/support/docs/hyperexecute-appium-testing/#step-3-update-your-xml-file"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Step 4: Configure YAML and Execute your Script",
+          "text": "The ``region`` parameter specifies the region or location where the Appium tests will be executed. Our platform supports the following three regions: ap (Asia-Pacific) us (United States) eu (European Union)",
+          "url": "https://www.testmuai.com/support/docs/hyperexecute-appium-testing/#step-4-configure-yaml-and-execute-your-script"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 5,
+          "name": "Step 5: Execute your Test Suite",
+          "text": "NOTE : In case of MacOS, if you get a permission denied warning while executing CLI, simply run chmod u+x ./hyperexecute to allow permission. In case you get a security popup, allow it from your System Preferences \u2192 Security & Privacy \u2192 General tab. Run the below command in your terminal at the root folder of the project: OR use this command if you have not exported your username and access key in the step 2. {./hyperexecute --user ${ YOURLAMBDATESTUSERNAME()} --key ${ YOURLAMBDATESTACCESSKEY()} --config RELATIVEPATHOFYOURYAMLFILE }",
+          "url": "https://www.testmuai.com/support/docs/hyperexecute-appium-testing/#step-5-execute-your-test-suite"
+        }
+      ]
+    }
+  ]) }}
+/>
 This page outlines how to execute your Appium tests on HyperExecute using TestNG with YAML 0.2
 > HyperExecute uses [YAML 0.2](/support/docs/hyperexecute-yaml-version0.2/) to perform the tests using Appium.
 

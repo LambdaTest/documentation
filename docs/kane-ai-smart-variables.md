@@ -108,6 +108,47 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
   }) }}
 />
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "How to Use Smart Variables in Your Tests?",
+      "description": "Smart variables can be referenced in test steps, modules, and test cases using the {{smart.variable_name}} syntax. Follow these steps to integrate them into your tests:",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Access the Test Environment",
+          "text": "Enter the Authoring or Editing mode for a KaneAI test case",
+          "url": "https://www.testmuai.com/support/docs/kane-smart-variables/#step-1-access-the-test-environment"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Reference a Smart Variable",
+          "text": "In the \"Write a Step\" field type {{ to trigger the variable overlay. This will display a list of all available variables, including smart variables labeled with \"Smart\". For example, to use the current date in a test step: Use {{ syntax to get the list of smart variables listed and type to search and filter them out then select the desired one.",
+          "url": "https://www.testmuai.com/support/docs/kane-smart-variables/#step-2-reference-a-smart-variable"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Select a Smart Variable",
+          "text": "From the overlay, select the desired smart variable. The variable will be inserted into the test step in the correct syntax (e.g., {{smart.current_date}}).",
+          "url": "https://www.testmuai.com/support/docs/kane-smart-variables/#step-3-select-a-smart-variable"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Step 4: Run Your Test",
+          "text": "Once the test step is executed the smart variable will dynamically resolve to its corresponding value based on the current environment or condition (e.g., 2025-04-29 for {{smart.current_date}}).",
+          "url": "https://www.testmuai.com/support/docs/kane-smart-variables/#step-4-run-your-test"
+        }
+      ]
+    }
+  ]) }}
+/>
+
 KaneAI's Smart Variables feature enhances test automation by providing predefined, dynamic variables that can be used across test steps, modules, and test cases. These variables enable dynamic adaptation to various environments and conditions, improving test reliability, reusability, and efficiency. 
 
 They cover categories such as date & time, system information, location, connectivity, randomization, and device-specific details, allowing users to create flexible and robust test scenarios that adapt to real-time conditions without manual input.

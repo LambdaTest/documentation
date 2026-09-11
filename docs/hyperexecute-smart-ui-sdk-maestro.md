@@ -148,6 +148,68 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
   }) }}
 />
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "UI Testing with Maestro using HyperExecute and SmartUI SDK",
+      "description": "Use the Maestro framework to run visual tests on Android apps via HyperExecute and SmartUI. Capture screenshots for visual comparison in mobile test automation.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Create a SmartUI Project",
+          "text": "First, you need to create a project in SmartUI. All your visual regression test builds for this project will be grouped here. Navigate to the SmartUI Projects page. Click on New Project. Select CLI as the platform. Provide a Project Name, select approvers, and add any relevant tags. Click Submit. Once the project is created, you will get a unique PROJECT_TOKEN. Copy this token as it is required in the HyperExecute YAML configuration file later.",
+          "url": "https://www.testmuai.com/support/docs/hyperexecute-smart-ui-sdk-maestro/#step-1-create-a-smartui-project"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Clone The Sample Repository",
+          "text": "You can configure your own existing Maestro project or get started quickly by cloning our sample repository. You can find the complete code for this example in the following TestMu AI GitHub repository.",
+          "url": "https://www.testmuai.com/support/docs/hyperexecute-smart-ui-sdk-maestro/#step-2-clone-the-sample-repository"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Upload Your Application",
+          "text": "To run your tests on TestMu AI real devices or emulators, you need to upload your Android app (.apk) and get an appId. Run the following cURL command in your terminal. Ensure you have set your LTUSERNAME and LTACCESS_KEY as environment variables. {`curl -u \"${ YOURLAMBDATESTUSERNAME()}:${ YOURLAMBDATESTACCESS_KEY()}\" -X POST \"https://manual-api.lambdatest.com/app/upload/realDevice\" -F \"appFile=@\"\"\" -F \"name=\"sampleApp\"\" `} From the JSON response, copy the value of app_url. It will be in the format lt://.... This is your appId.",
+          "url": "https://www.testmuai.com/support/docs/hyperexecute-smart-ui-sdk-maestro/#step-3-upload-your-application"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Step 4: Configure Your Test Suite",
+          "text": "Now, let's set up the test suite to integrate with SmartUI. The SmartUI CLI is required to capture and upload screenshots. Install it in your project directory: If you face any problems executing tests with SmartUI-CLI versions >= v4.x.x, upgrade your Node.js version to v20.3 or above. In your Maestro test YAML files (e.g., maestro-test/test.yaml), add the takeScreenshot command wherever you want to capture a visual checkpoint. The path specified will be used to name the screenshot in the SmartUI dashboard. Now, you need to export your environment variables LTUSERNAME and LTACCESSKEY* that are available in the TestMu AI Username and Access Key Page. Run the below mentioned commands in your terminal to setup the CLI and the environment variables. {`export LTUSERNAME=\"${ YOURLAMBDATEST_USERNAME()}\" export LTACCESSKEY=\"${ YOURLAMBDATESTACCESS_KEY()}\"`} {`set LTUSERNAME=\"${ YOURLAMBDATEST_USERNAME()}\" set LTACCESSKEY=\"${ YOURLAMBDATESTACCESS_KEY()}\"`}",
+          "url": "https://www.testmuai.com/support/docs/hyperexecute-smart-ui-sdk-maestro/#step-4-configure-your-test-suite"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 5,
+          "name": "Step 5: Configure the HyperExecute YAML",
+          "text": "The HyperExecute YAML file is the blueprint for your test execution. It tells HyperExecute how to set up the environment and run your tests. You need to add your PROJECT_TOKEN (from Step 1) and your appId (from Step 3) to the YAML file. Below are example configurations for running Maestro tests on Emulators and Real Devices. To enable this for your organizaton, connect with us through our window.openLTChatWidget()}>24/7 chat support or drop us an email to support@testmuai.com. In the real device configuration, the testDiscovery and testRunnerCommand are handled internally by the maestro framework integration on HyperExecute. You just need to specify the framework block.",
+          "url": "https://www.testmuai.com/support/docs/hyperexecute-smart-ui-sdk-maestro/#step-5-configure-the-hyperexecute-yaml"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 6,
+          "name": "Step 6: Execute Your Test Suite",
+          "text": "Run the below command in your terminal at the root folder of the project: OR use this command if you have not exported your username and access key in the step 2. {./hyperexecute --user ${ YOURLAMBDATESTUSERNAME()} --key ${ YOURLAMBDATESTACCESSKEY()} --config RELATIVEPATHOFYOURYAMLFILE }",
+          "url": "https://www.testmuai.com/support/docs/hyperexecute-smart-ui-sdk-maestro/#step-6-execute-your-test-suite"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 7,
+          "name": "Step 7: View Your Visual Test Results on SmartUI",
+          "text": "After the HyperExecute job is finished, all screenshots captured using the takeScreenshot command will be available in your SmartUI project for review. Navigate to the SmartUI Dashboard. Select your project and the most recent build. Here, you can compare screenshots against the baseline, highlight differences, and approve or reject changes. You can use features like Smart Ignore to mask dynamic areas for more stable comparisons. Home Support",
+          "url": "https://www.testmuai.com/support/docs/hyperexecute-smart-ui-sdk-maestro/#step-7-view-your-visual-test-results-on-smartui"
+        }
+      ]
+    }
+  ]) }}
+/>
+
 This document guides you on how to perform visual regression testing for your Android applications by running your Maestro tests on the HyperExecute platform and capturing screenshots with the SmartUI SDK.
 
 ## Prerequisites

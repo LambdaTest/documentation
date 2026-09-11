@@ -241,6 +241,47 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
   }) }}
 />
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Upload PDFs via CLI",
+      "description": "Learn how to upload PDF files to SmartUI using the command-line interface for visual regression testing.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Establishing a SmartUI Project",
+          "text": "To initiate a SmartUI PDF Comparison Project, adhere to the following instructions: Navigate to the SmartUI Projects Page. Tap on the new project button. Specify your platform type as PDF. Provide your project name, designate approvers, and add tags (optional). Confirm your entry by clicking on Submit. Once your project is active, retrieve your Project Token from the application. Here's an example of a project token:",
+          "url": "https://www.testmuai.com/support/docs/smartui-pdf-cli-upload/#step-1-establishing-a-smartui-project"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 1: Install the SmartUI CLI",
+          "text": "Install the CLI globally using npm:",
+          "url": "https://www.testmuai.com/support/docs/smartui-pdf-cli-upload/#step-1-install-the-smartui-cli"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 2: Setup your credentials",
+          "text": "Step 2: Setup your credentials",
+          "url": "https://www.testmuai.com/support/docs/smartui-pdf-cli-upload/#step-2-setup-your-credentials"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Step 3: Upload PDFs Using CLI",
+          "text": "Use the upload-pdf command to upload one or multiple PDF files from a directory: directoryorfilename: Path to a single PDF file or a directory containing multiple PDFs. --fetch-results [filename]: Fetch test results after upload. Optionally specify an output file (e.g., results.json). --buildName : Assign a custom name to the build. --markBaseline: Mark this build as the baseline. --pdfNames : Comma-separated list of PDF file names to upload. Upload all PDFs from a folder and name the build: Upload a single PDF file: Fetch results and save to a file: Upload with custom project token:",
+          "url": "https://www.testmuai.com/support/docs/smartui-pdf-cli-upload/#step-3-upload-pdfs-using-cli"
+        }
+      ]
+    }
+  ]) }}
+/>
+
 :::caution
 This functionality is exclusive to our enterprise plan subscribers on SmartUI. For additional details or inquiries, please [contact us](https://www.testmuai.com/demo/).
 :::

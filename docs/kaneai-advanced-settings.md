@@ -103,6 +103,47 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
   }) }}
 />
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "How to Edit Advanced Settings",
+      "description": "Learn how to edit advanced settings for your KaneAI test cases from the test summary page across desktop web, mobile app, and mobile web platforms.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Open the Test Summary Page",
+          "text": "Navigate to your test case in KaneAI and open the Test Summary tab.",
+          "url": "https://www.testmuai.com/support/docs/kaneai-advanced-settings/#step-1-open-the-test-summary-page"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Open the Edit Test Steps Dialog",
+          "text": "Click on Edit Test Steps to open the advanced settings panel. You will see the current configuration for your test case.",
+          "url": "https://www.testmuai.com/support/docs/kaneai-advanced-settings/#step-2-open-the-edit-test-steps-dialog"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Modify the Settings",
+          "text": "Update the settings as needed. For example, you can: Change the Network Configuration from None to Geolocation and select a region. Update the Timezone to a different zone. Toggle Chrome Options on or off and add command-line switches. Enable Custom Headers and add HTTP headers for your test. Settings that have been modified will display an Edited badge next to them.",
+          "url": "https://www.testmuai.com/support/docs/kaneai-advanced-settings/#step-3-modify-the-settings"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Step 4: Save Your Changes",
+          "text": "Choose one of the two actions at the bottom of the dialog: Apply Settings: Saves the settings and generates a new version with updated code. The test case remains on the Test Summary page. Edit Test Steps: Saves the settings and opens the playground so you can adjust the test steps to reflect the new configuration. The session opens in the Paused state with the cursor at the bottom-most step, so step editing is available right away. See Authoring Session.",
+          "url": "https://www.testmuai.com/support/docs/kaneai-advanced-settings/#step-4-save-your-changes"
+        }
+      ]
+    }
+  ]) }}
+/>
+
 KaneAI allows you to edit the advanced settings of an existing test case directly from the **Test Summary** page. This gives you the flexibility to update configurations like network settings, timezone, Chrome options, and custom headers after a test has already been authored, without having to recreate it from scratch.
 
 This feature is supported across all platforms: **Desktop Web**, **Mobile App**, and **Mobile Web**.

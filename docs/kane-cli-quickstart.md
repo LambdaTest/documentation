@@ -154,6 +154,54 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
   }) }}
 />
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Quick Start",
+      "description": "Authenticate Kane CLI and run your first browser automation test in under 5 minutes.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Install",
+          "text": "Once kane-cli --version prints a version number, you are ready. See Installation for platform requirements and troubleshooting.",
+          "url": "https://www.testmuai.com/support/docs/kane-cli-quickstart/#step-1-install"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Authenticate",
+          "text": "Your default browser opens on a TestMu AI consent page. Sign in (or confirm, if you are already signed in), authorise the CLI, and the page will tell you it is safe to close the tab. Control returns to your terminal and your credentials are stored under ~/.testmuai/kaneai/profiles/. {`kane-cli login \\\\ --username \"${ YOURLAMBDATESTUSERNAME()}\" \\\\ --access-key \"${ YOURLAMBDATESTACCESS_KEY()}\"`} Find your username and access key on the TestMu AI dashboard > Credentials. Use this method for environments without a browser (servers, containers, CI/CD). For non-interactive CI pipelines, pass credentials inline: {`kane-cli run \"your objective\" \\\\ --username \"${ YOURLAMBDATESTUSERNAME()}\" \\\\ --access-key \"${ YOURLAMBDATESTACCESS_KEY()}\" \\\\ --headless --agent`} Store LTUSERNAME and LTACCESS_KEY as secrets in your CI/CD platform. See CI/CD Integration for platform-specific guides. Verify authentication at any time: If you prefer username and access key, or need to manage multiple accounts, see Authentication.",
+          "url": "https://www.testmuai.com/support/docs/kane-cli-quickstart/#step-2-authenticate"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Open the TUI",
+          "text": "Run kane-cli --tui: A short boot animation renders, then the main view drops you at a chat prompt with a status bar at the bottom showing your model, session ID, environment, and run count. From there, anything you type is treated as a test objective. Lines that begin with / are slash commands such as /help, /config, /cancel, and /exit.",
+          "url": "https://www.testmuai.com/support/docs/kane-cli-quickstart/#step-3-open-the-tui"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Step 4: Run Your First Test",
+          "text": "At the chat prompt, type a natural-language objective and press Enter: Kane CLI launches Chrome, hands the objective to the agent, and starts streaming progress. You see a step tree fill in as the agent thinks, observes the page, and acts: clicking, typing, scrolling, and verifying. When the agent is done, a result block reports whether the objective passed or failed and how many steps it took. If you ever need to stop a run, press Ctrl+C once. Pressing it twice exits Kane CLI.",
+          "url": "https://www.testmuai.com/support/docs/kane-cli-quickstart/#step-4-run-your-first-test"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 5,
+          "name": "Step 5: Or Run from the Command Line",
+          "text": "For scripting and CI, skip the TUI and use the run subcommand: In CLI mode, Kane CLI streams progress to stderr, prints the final result as a single JSON object on stdout, and exits with a status code that reflects the outcome: Capture results in a shell script: By default each run starts on the KaneAI playground site. The agent navigates from there based on your objective.",
+          "url": "https://www.testmuai.com/support/docs/kane-cli-quickstart/#step-5-or-run-from-the-command-line"
+        }
+      ]
+    }
+  ]) }}
+/>
+
 This guide takes you from a fresh install to a passing run in under five minutes.
 
 ## Step 1: Install

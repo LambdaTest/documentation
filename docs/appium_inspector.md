@@ -104,6 +104,90 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
   }) }}
 />
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Starting an Appium Session",
+      "description": "This documentation will help you integrate Appium Inspector with TestMu AI to interact with TestMu AI's Real Devices. With TestMu AI mobile testing cloud, you can test your mobile applications on wide range of real Android and iOS devices.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Upload your Application.",
+          "text": "Upload your iOS application (.ipa file) or android application (.apk file) to the TestMu AI servers using our REST API. You need to provide your Username and AccessKey in the format Username:AccessKey in the cURL command for authentication. Make sure to add the path of the appFile in the cURL request. Here is an example cURL request to upload your app using our REST API: import Tabs from '@theme/Tabs'; import TabItem from '@theme/TabItem'; Using App File: {`curl -u \"${ YOURLAMBDATESTUSERNAME()}:${ YOURLAMBDATESTACCESS_KEY()}\" \\\\ --location --request POST 'https://manual-api.lambdatest.com/app/upload/realDevice' \\\\ --form 'name=\"Android_App\"' \\\\ --form 'appFile=@\"/Users/macuser/Downloads/proverbial_android.apk\"' `} {curl -u \"${ YOURLAMBDATESTUSERNAME()}:${ YOURLAMBDATESTACCESSKEY()}\" -X POST \"https://manual-api.lambdatest.com/app/upload/realDevice\" -F \"appFile=@\"/Users/macuser/Downloads/proverbialandroid.apk\"\"} Using App URL: {curl -u \"${ YOURLAMBDATESTUSERNAME()}:${ YOURLAMBDATESTACCESSKEY()}\" --location --request POST \"https://manual-api.lambdatest.com/app/upload/realDevice\" --header \"Content-Type: application/x-www-form-urlencoded\" --data-urlencode \"url=:https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbialandroid.apk\" --data-urlencode \"name=Proverbial_App\"} {curl --location --request POST \"https://manual-api.lambdatest.com/app/upload/realDevice\" -u \"${YOURLAMBDATESTUSERNAME()}:${YOURLAMBDATESTACCESSKEY()}\" --header \"Content-Type:...",
+          "url": "https://www.testmuai.com/support/docs/appium-inspector-integration/#step-1-upload-your-application"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Start a Session on Appium Inspector",
+          "text": "Start the Appium Inspector & Select TestMu AI from the list of Cloud Test Providers.",
+          "url": "https://www.testmuai.com/support/docs/appium-inspector-integration/#step-2-start-a-session-on-appium-inspector"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Configure your Credentials",
+          "text": "Enter in your UserName & Access Key. You may find the credentials available on TestMu AI Dashboard",
+          "url": "https://www.testmuai.com/support/docs/appium-inspector-integration/#step-3-configure-your-credentials"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Step 4: Configure Desired Capabilities & Start the Session",
+          "text": "Configure TestMu AI capabilities in the desired capabilities tab on Appium inspector. Use the unique app URL obtained in Step 1 to set the app capability Value.For more details, please refer to our guide on Desired Capabilities in Appium. Alternatively, we can also go to our capabilities generator and generate the Capability Representation using GUI. Once this is complete, you can now run the test by clicking on start session. Once you start the session, a video recording along with detailed information and logs of the test run will be available on the TestMu AI Dashboard.",
+          "url": "https://www.testmuai.com/support/docs/appium-inspector-integration/#step-4-configure-desired-capabilities--start-the-session"
+        }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Attaching to a running session in Appium Inspector",
+      "description": "This documentation will help you integrate Appium Inspector with TestMu AI to interact with TestMu AI's Real Devices. With TestMu AI mobile testing cloud, you can test your mobile applications on wide range of real Android and iOS devices.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Configure your Credentials",
+          "text": "After you have added your credentials from Step 2 of Starting an Appium Session, click on Attach to Session.",
+          "url": "https://www.testmuai.com/support/docs/appium-inspector-integration/#step-1-configure-your-credentials"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Run a session",
+          "text": "Start an App Automation that you'd like to attach to.",
+          "url": "https://www.testmuai.com/support/docs/appium-inspector-integration/#step-2-run-a-session"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Choose the session to attach",
+          "text": "Click on the refresh button and choose a session to attach to.",
+          "url": "https://www.testmuai.com/support/docs/appium-inspector-integration/#step-3-choose-the-session-to-attach"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Step 4: Attach to Session",
+          "text": "Once you have selected a session, click on Attach to Session.",
+          "url": "https://www.testmuai.com/support/docs/appium-inspector-integration/#step-4-attach-to-session"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 5,
+          "name": "Step 5: Viewing the session",
+          "text": "We have now successfully attached to the session and can see & perform operations as well. Got any questions? Please reach out at our window.openLTChatWidget()}>24x7 Chat Support or you could also mail us at support@testmuai.com. Home Support Appium Inspector",
+          "url": "https://www.testmuai.com/support/docs/appium-inspector-integration/#step-5-viewing-the-session"
+        }
+      ]
+    }
+  ]) }}
+/>
+
 ---
 
 This post will help you in integrating **Appium Inspector** to interact with **<BrandName />'s Real Devices**.

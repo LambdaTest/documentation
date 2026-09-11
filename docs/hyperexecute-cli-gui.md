@@ -106,6 +106,54 @@ import { CookieTrackingSignup } from '@site/src/component/CookieTracking';
   }) }}
 />
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Getting Started",
+      "description": "This documentation outlines the steps on how to trigger a job on hyperexecute using the underpass app - gui app for hyperexecute cli.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Select and Analyze Your Project",
+          "text": "Launch the application, log in with your TestMu AI credentials, and select your test project folder. The GUI analyzes your project i.e. the framework and language, network connectivity etc. Once the analysis completes, click \"Proceed\" to continue to the next step. <!-- - Detect your testing framework and language Verifies network connectivity (enabling a tunnel if needed) and checks TestMu AI URL access (prompting for proxy settings if required) Set up a secure connection to your account --> If you do not have a project handy, please feel free to use this Sample Project for trying out the GUI. The GUI will check the system and your project to ensure everything is ready. If any issues are found, you'll see clear instructions to resolve them. Some common issues faced by the users are: Missing programming language or package manager: If your project uses a language or package manager that isn't installed on your computer, the GUI will guide you through installing it. Network connectivity issues: If the GUI can't connect to TestMu AI servers, it will ask you to set up the necessary network settings through proxy.",
+          "url": "https://www.testmuai.com/support/docs/hyperexecute-cli-gui/#step-1-select-and-analyze-your-project"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Manage Configurations",
+          "text": "A \"Configuration\" is a saved combination of selected tests and execution settings that helps you create different run-profiles for easy management and operation. For new users: A default configuration will be created to help you get started quickly. You can select the tests and run config settings as per your requirements. For existing users: If you have existing configurations (version 0.2 YAML files) in the project, they'll be automatically imported, preserving all your settings. This ensures a smooth transition for existing HyperExecute users while providing a more intuitive interface. At the configuration listing page you can find basic details and tags for each configuration. You can also make quick changes and run the configuration without going inside the configuration. There are a few other operations which you can access from this page like Duplicate, Rename, Delete or Download the configuration as YAML. <!-- :::info Note At its current state, the GUI will not self-discover the tests according to rules stated in the YAML file while loading it. This feature will be available soon in next release.",
+          "url": "https://www.testmuai.com/support/docs/hyperexecute-cli-gui/#step-2-manage-configurations"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Discover and Select Tests",
+          "text": "Once you navigate to any Configuration, the app will automatically initiate Test Discovery. Test Discovery is an automated process that scans your project to identify and organize all test cases of your project. You can use either of the following methods for Tests Selection Allows you to browse and select tests individually or in groups. Tests can be organized by Suite Tests, Files, Classes or Methods for better visibility and easier navigation. You can select or deselect tests manually using checkboxes. This method works well for smaller test suites or when you need precise control over specific test cases. For larger test suites, the query selection provides powerful filtering capabilities to automatically select tests based on specified criteria. For detailed instructions on creating and using advanced queries, refer to our Query Selection Guide. Orchestration Level: When using query selection, you can define the orchestration level to determine how tests are distributed and executed across multiple parallel instances. This feature helps optimize execution time by intelligently grouping and distributing tests. <!-- :::info Coming Soon Search within tests is not yet available on the GUI. We are working to make it available soon.",
+          "url": "https://www.testmuai.com/support/docs/hyperexecute-cli-gui/#step-3-discover-and-select-tests"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Step 4: Specify Run Config",
+          "text": "The Run Config tab in HyperExecute GUI offers an intuitive visual interface to configure your test environment and execution settings. You\u2019ll find the basic preset configurations displayed just below your project name. If you need to modify or customize these settings, simply navigate to the Run Config tab and adjust your execution environment effortlessly, no YAML editing required. To learn about any configuration in detail, please search for the keyword in the HyperExecute YAML Documentation. Please note that the GUI follows version 0.2 YAML parameters instead of discovery and runner commands as in version 0.1 YAML which you can find here.",
+          "url": "https://www.testmuai.com/support/docs/hyperexecute-cli-gui/#step-4-specify-run-config"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 5,
+          "name": "Step 5: Run Tests and View Job",
+          "text": "Once you've set up your configuration by selecting the appropriate tests and reviewing your execution settings, you're ready to run your tests. The \"Run Tests\" button is available both from the configuration details screen and directly from the configurations listing page for quick access. A sidebar panel with job status and creation logs will appear with option to navigate to HyperExecute Dashboard to view more details. The HyperExecute-GUI displays the job logs in real-time as your tests run. Once complete, you can view the detailed test results in the HyperExecute Dashboard.",
+          "url": "https://www.testmuai.com/support/docs/hyperexecute-cli-gui/#step-5-run-tests-and-view-job"
+        }
+      ]
+    }
+  ]) }}
+/>
+
 **HyperExecute Graphical User Interface (GUI)** streamlines your test automation workflow and brings HyperExecute's power of test orchestration with the most intuitive way to interact. HyperExecute GUI makes testing simple, fast, and powerful. It abstracts all technical complexity to make **high-performance test execution available to everyone**. 
 
 <!-- The goal is to save your valuable time and effort to enable a more efficient testing process. -->

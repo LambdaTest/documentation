@@ -111,6 +111,40 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
   }) }}
 />
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Steps to Integrate Travis CI Pipeline with HyperExecute",
+      "description": "*** To integrate Travis CI Pipeline with HyperExecute, follow the below steps:",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1. Log into your Travis CI account",
+          "text": "Signup in your Travis CI account using your desired version control system. Here, we are using GitHub. Click on your profile, then go to settings and then click on the green Activate button, and select the repositories you want to use with Travis CI or you can click on the Activate all repositories using GitHub Apps button to activate all your repos.",
+          "url": "https://www.testmuai.com/support/docs/travis-ci-with-hyperexecute/#step-1-log-into-your-travis-ci-account"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Configure the YAML File",
+          "text": "Once you have set up your project, you need to add a .travis.yml file to your desired repository to trigger the build from the Travis CI. Below is a sample of Travis CI YAML created for your reference: Add the .travis.yml file to root directory, commit it and then click to \"Trigger a Travis CI build\". Check the build status page to see if your build passes or fails according to the return status of the build command by visiting Travis CI and selecting your repository.",
+          "url": "https://www.testmuai.com/support/docs/travis-ci-with-hyperexecute/#step-2-configure-the-yaml-file"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Run Your Job",
+          "text": "Now commit your job and run the build. <!-- - Once your changes are made and your configuration is valid, you may commit and re-run the pipeline by clicking the Save and Run button. A modal will pop up, and you will see the option to commit on the branch you are working from, or you can choose to create a new branch for the commit. Below is an example of a HyperExecute job that was triggered through the above pipeline: Run your tests at speeds never seen before. Happy testing! :) Home Support GitHub Integration",
+          "url": "https://www.testmuai.com/support/docs/travis-ci-with-hyperexecute/#step-3-run-your-job"
+        }
+      ]
+    }
+  ]) }}
+/>
+
 # Travis CI Integration with HyperExecute
 * * *
 

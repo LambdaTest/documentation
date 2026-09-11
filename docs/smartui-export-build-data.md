@@ -100,6 +100,40 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
   }) }}
 />
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Export from the build view",
+      "description": "Export a SmartUI build from the dashboard in PDF, CSV, or JSON using the build menu, after the UI finishes loading export data.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Open Export from the build menu",
+          "text": "With the build page open, select the three-dot menu (\u22ee) in the upper-right corner, then choose Export.",
+          "url": "https://www.testmuai.com/support/docs/smartui-export-build-data/#step-1-open-export-from-the-build-menu"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Wait for export data to load",
+          "text": "The product gathers build data for export. Stay on the view until loading finishes (spinner or progress clears). Large builds can take longer; avoid closing the tab during this step.",
+          "url": "https://www.testmuai.com/support/docs/smartui-export-build-data/#step-2-wait-for-export-data-to-load"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Choose a format and download",
+          "text": "When loading completes, select PDF, CSV, or JSON. Your browser will download the file (exact name depends on the product version). Use your browser\u2019s download bar or downloads folder if the save dialog does not appear. If a download does not start, check pop-up or download permissions for your TestMu AI domain, then try the same format again after a short wait.",
+          "url": "https://www.testmuai.com/support/docs/smartui-export-build-data/#step-3-choose-a-format-and-download"
+        }
+      ]
+    }
+  ]) }}
+/>
+
 # Export SmartUI Build Data
 
 From the <BrandName /> dashboard you can export **build-level** data for a SmartUI run (comparison outcomes, statuses, and related metadata) without using the CLI or API. Use it for stakeholder summaries, ticket attachments, spreadsheets, or downstream automation.

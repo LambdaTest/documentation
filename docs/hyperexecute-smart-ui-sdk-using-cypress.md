@@ -139,6 +139,61 @@ import VerifiedTag from '@site/src/component/verifiedTag';
     "dateModified": "2026-09-09T19:10:37+05:30"
   }) }}
 />
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "UI Testing with Cypress using HyperExecute and SmartUI SDK",
+      "description": "Automate Hyperexecute tests seamlessly! Integrate SmartUI SDK with Cypress for efficient & reliable UI testing.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Create a SmartUI Project",
+          "text": "The first step is to create a project with the application in which we will combine all your builds run on the project. To create a SmartUI Project, follow these steps: Go to Projects page Click on the new project button Select the platform as CLI or Web for executing your SDK tests. Add name of the project, approvers for the changes found, tags for any filter or easy navigation. Click on the Submit. After creating the project, you will get your PROJECT_TOKEN. You need to keep this project token safe as it will be used in the further steps below.",
+          "url": "https://www.testmuai.com/support/docs/hyperexecute-smart-ui-sdk-using-cypress/#step-1-create-a-smartui-project"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Setup Your Test Suite",
+          "text": "You can use your own project to configure and test it. For demo purposes, we are using the sample repository. Download or Clone the code sample for the Maestro framework from the TestMu AI GitHub repository to run the tests on the HyperExecute. You can incorporate SmartUI into your custom Cypress test script, as shown below:",
+          "url": "https://www.testmuai.com/support/docs/hyperexecute-smart-ui-sdk-using-cypress/#step-2-setup-your-test-suite"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Setup the CLI in your Test Suite",
+          "text": "After cloning / downloading the sample repo, you need to setup the CLI and the environment variables. The CLI is used for triggering the tests on HyperExecute. It is recommend to download the CLI binary on the host system and keep it in the root directory of the suite to perform the tests on HyperExecute. You can download the CLI for your desired platform from the below mentioned links: Now, you need to export your environment variables LTUSERNAME and LTACCESSKEY* that are available in the TestMu AI Profile page. Run the below mentioned commands in your terminal to setup the CLI and the environment variables. {`export LTUSERNAME=\"${ YOURLAMBDATEST_USERNAME()}\" export LTACCESSKEY=\"${ YOURLAMBDATESTACCESS_KEY()}\"`} {`set LTUSERNAME=\"${ YOURLAMBDATEST_USERNAME()}\" set LTACCESSKEY=\"${ YOURLAMBDATESTACCESS_KEY()}\"`}",
+          "url": "https://www.testmuai.com/support/docs/hyperexecute-smart-ui-sdk-using-cypress/#step-3-setup-the-cli-in-your-test-suite"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Step 4: Configure YAML in your Test Suite",
+          "text": "You need to edit the PROJECTTOKEN: \"YOURPROJECT_TOKEN\" flag and enter your project token that show in the SmartUI app after, creating your project. It is mandatory to mention these commands in the pre flag to download all the necessary dependencies",
+          "url": "https://www.testmuai.com/support/docs/hyperexecute-smart-ui-sdk-using-cypress/#step-4-configure-yaml-in-your-test-suite"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 5,
+          "name": "Step 5: Execute your Test Suite",
+          "text": "NOTE : In case of MacOS, if you get a permission denied warning while executing CLI, simply run chmod u+x ./hyperexecute to allow permission. In case you get a security popup, allow it from your System Preferences \u2192 Security & Privacy \u2192 General tab. Run the below command in your terminal at the root folder of the project: OR use this command if you have not exported your username and access key in the step 3. {./hyperexecute --user ${ YOURLAMBDATESTUSERNAME()} --key ${ YOURLAMBDATESTACCESSKEY()} --config RELATIVEPATHOFYOURYAMLFILE }",
+          "url": "https://www.testmuai.com/support/docs/hyperexecute-smart-ui-sdk-using-cypress/#step-5-execute-your-test-suite"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 6,
+          "name": "Step 6: Monitor the Test Execution",
+          "text": "Visit the HyperExecute Dashboard and check your Job status.",
+          "url": "https://www.testmuai.com/support/docs/hyperexecute-smart-ui-sdk-using-cypress/#step-6-monitor-the-test-execution"
+        }
+      ]
+    }
+  ]) }}
+/>
 This documentation will guide you step-by-step to execute the SmartUI tests on the HyperExecute platform using Selenium
 
 > **Note :** SmartUI SDK only supports Cypress versions >= 10.0.0

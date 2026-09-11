@@ -163,6 +163,33 @@ import VerifiedTag from '@site/src/component/verifiedTag';
     "dateModified": "2026-09-09T19:10:37+05:30"
   }) }}
 />
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Uploading your App & Test suite",
+      "description": "This document will cover how to execute Espresso Tests on real devices with HyperExecute. Before starting, please make sure you have App Automation plans on your account.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Upload Your Application",
+          "text": "Upload your android application (.apk file) to the TestMu AI servers using our REST API. You need to provide your Username and AccessKey in the format ``Username:AccessKey`` in the cURL command for authentication. Make sure to add the path of the appFile in the cURL request. Here is an example cURL request to upload your app using our REST API: Using App File: {`curl -u \"${ YOURLAMBDATESTUSERNAME()}:${ YOURLAMBDATESTACCESS_KEY()}\" \\\\ --location --request POST 'https://manual-api.lambdatest.com/app/uploadFramework' \\\\ --form 'appFile=@\"/Users/macuser/Downloads/proverbial.apk\"' \\\\ --form 'type=\"espresso-android\"'`} {curl -u \"${ YOURLAMBDATESTUSERNAME()}:${ YOURLAMBDATESTACCESS_KEY()}\" -X POST \"https://manual-api.lambdatest.com/app/uploadFramework\" -F \"appFile=@\"/Users/macuser/Downloads/proverbial.apk\"\" -F \"type=\"espresso-android\"\"} Response of above cURL will be a JSON object containing the App URL of the format - lt://APP123456789123456789 and will be used in the last step as appId.",
+          "url": "https://www.testmuai.com/support/docs/sharding-espresso-rd-hyperexecute/#step-1-upload-your-application"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Uploading Test Suite",
+          "text": "Upload your test suite (.apk file) to the TestMu AI servers using our REST API. You need to provide your Username and AccessKey in the format Username:AccessKey in the cURL command for authentication. Make sure to add the path of the appFile in the cURL request. Here is an example cURL request to upload your app using our REST API: Using App File: {`curl -u \"${ YOURLAMBDATESTUSERNAME()}:${ YOURLAMBDATESTACCESS_KEY()}\" \\\\ --location --request POST 'https://manual-api.lambdatest.com/app/uploadFramework' \\ --form 'appFile=@\"/Users/macuser/Downloads/ProverbialEspressoTest.apk\"' \\ --form 'type=\"espresso-android\"'`} {curl -u \"${ YOURLAMBDATESTUSERNAME()}:${ YOURLAMBDATESTACCESS_KEY()}\" --location --request POST \"https://manual-api.lambdatest.com/app/uploadFramework\" --form \"appFile=@\"C:/Users/varunkumarb/Downloads/ProverbialEspressoTest.apk\"\" --form \"type=\\\"espresso-android\\\"\"} Response of above cURL will be a JSON object containing the App URL of the format - lt://APP123456789123456789 and will be used in the next step as `testSuiteAppId`",
+          "url": "https://www.testmuai.com/support/docs/sharding-espresso-rd-hyperexecute/#step-2-uploading-test-suite"
+        }
+      ]
+    }
+  ]) }}
+/>
 <RealDeviceTag value="Real Device" /> <VirtualDeviceTag value="Virtual Device" />
 
 Running **Espresso** tests sequentially can be laborious and time-intensive. This guide offers an efficient solution by introducing the concept of **sharding**. By breaking down tests into shards, they can be executed in parallel, significantly trimming down the total testing duration.

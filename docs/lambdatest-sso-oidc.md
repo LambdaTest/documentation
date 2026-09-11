@@ -128,6 +128,68 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
   }) }}
 />
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Step-by-Step Integration Guide",
+      "description": "Integrate your identity provider with your TestMu AI organization through OIDC (OpenID Connect) for seamless single sign-on authentication.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Create Application in Your Identity Provider",
+          "text": "The exact steps vary by identity provider, but the general process involves creating a new application or client registration. We'll use Azure AD as our example: Access Azure Portal: Sign in to the Azure Portal using an administrator account. Navigate to App Registrations: In the Azure Portal, search for \"App registrations\" in the search bar and select it from the results. Create New Registration: Click New registration to create a new application registration. Configure Application Details: Name: Enter a descriptive name such as \"TestMu AI SSO\" or \"TestMu AI OIDC Integration\" Supported account types: Select \"Accounts in this organizational directory only\" Redirect URI: Leave this blank for now (we'll configure it later) Click Register to create the application",
+          "url": "https://www.testmuai.com/support/docs/testmu-sso-oidc/#step-1-create-application-in-your-identity-provider"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Configure Application Settings",
+          "text": "Access Application Overview: After registration, you'll be redirected to the application overview page. Copy Client ID: Note down the Client ID (also called Application ID in Azure AD) - you'll need this for TestMu AI configuration This unique identifier represents your application in your identity provider Copy Tenant/Domain Information: Note down the Directory (tenant) ID - this identifies your Azure AD tenant You'll need this for the OpenID Connect metadata document URL",
+          "url": "https://www.testmuai.com/support/docs/testmu-sso-oidc/#step-2-configure-application-settings"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Create Client Secret",
+          "text": "Navigate to Certificates & Secrets: In your application's left sidebar, click Certificates & secrets. Create New Client Secret: Click New client secret Description: Enter a descriptive name like \"TestMu AI SSO Secret\" Expires: Select your preferred expiration period (recommended: 24 months) Click Add Copy Secret Value: Important: Copy the secret value immediately - it won't be shown again Store this securely as you'll need it for TestMu AI configuration Important: Store the client secret securely as you'll need it for TestMu AI configuration. Most providers only show the secret once.",
+          "url": "https://www.testmuai.com/support/docs/testmu-sso-oidc/#step-3-create-client-secret"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Step 4: Configure Redirect URI",
+          "text": "Navigate to Authentication: In your application's left sidebar, click Authentication. Add Redirect URI: Click Add a platform Select Web Redirect URI: Enter the redirect URI provided by TestMu AI (typically: https://lambdatest.auth0.com/login/callback) Click Save",
+          "url": "https://www.testmuai.com/support/docs/testmu-sso-oidc/#step-4-configure-redirect-uri"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 5,
+          "name": "Step 5: Collect OpenID Connect Metadata",
+          "text": "Get Well-Known OIDC URL: The OpenID Connect well-known configuration URL follows this pattern: Replace {tenant-id} with your Directory (tenant) ID from Step 2. Examples of Well-Known OIDC URLs: Azure AD: https://login.microsoftonline.com/12345678-1234-1234-1234-123456789012/v2.0/.well-known/openid-configuration Google Workspace: https://accounts.google.com/.well-known/openid-configuration Okta: https://yourcompany.okta.com/.well-known/openid-configuration Auth0: https://yourdomain.auth0.com/.well-known/openid-configuration Verify Well-Known URL: You can test the URL in your browser to ensure it returns valid JSON configuration. Verify Well-Known URL: Test the URL in your browser to ensure it returns valid JSON configuration.",
+          "url": "https://www.testmuai.com/support/docs/testmu-sso-oidc/#step-5-collect-openid-connect-metadata"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 6,
+          "name": "Step 6: Contact TestMu AI Support for OIDC Configuration",
+          "text": "Since OIDC integration requires server-side configuration, you cannot create the connection directly through the TestMu AI interface. Instead, you need to contact our support team to configure the OIDC integration for you. Gather Required Information: Collect the following details from your identity provider configuration: Client ID: The client ID from Step 2 Client Secret: The secret value from Step 3 OpenID Connect Metadata URL: The metadata document URL from Step 5 Connection Name: A descriptive name like \"Company OIDC\" or \"TestMu AI SSO\" Contact TestMu AI Support: Reach out to our support team with the configuration details: Email: support@testmuai.com Provide Configuration Details: Include the following information in your support request: Wait for Configuration: Our support team will configure the OIDC integration on your behalf.",
+          "url": "https://www.testmuai.com/support/docs/testmu-sso-oidc/#step-6-contact-testmu-ai-support-for-oidc-configuration"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 7,
+          "name": "Step 7: Configure User Access (Optional)",
+          "text": "Set User Assignment: In Azure AD, navigate to your application and click Users and groups. Assign Users: Click Add user/group Select the users or groups who should have access to TestMu AI Click Assign Configure App Roles (if needed): You can define custom app roles for different access levels within TestMu AI.",
+          "url": "https://www.testmuai.com/support/docs/testmu-sso-oidc/#step-7-configure-user-access-optional"
+        }
+      ]
+    }
+  ]) }}
+/>
+
 # <BrandName /> SSO Integration Using OIDC
 
 * * *

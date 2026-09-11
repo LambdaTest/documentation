@@ -99,6 +99,54 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
   }) }}
 />
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Step-by-Step Migration Guide",
+      "description": "Migrate your test cases, folder structures, custom fields, attachments, and linked Jira requirements from qTest to TestMu AI Test Manager in a single click.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Open the Migration Tool",
+          "text": "Log in to your TestMu AI account. Navigate to Test Manager Projects from the left sidebar. Click the Import data option on the Project Listing page. Select qTest as the migration source from the Import from dropdown.",
+          "url": "https://www.testmuai.com/support/docs/one-click-migration-from-qtest/#step-1-open-the-migration-tool"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Enter Your Credentials",
+          "text": "Enter your qTest Instance URL and qTest API Token, then click Continue. The system validates your credentials. If either is invalid, an error message specifies what needs to be corrected.",
+          "url": "https://www.testmuai.com/support/docs/one-click-migration-from-qtest/#step-2-enter-your-credentials"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Select Projects",
+          "text": "After successful validation, a list of your accessible qTest projects is displayed. Select the project(s) you want to migrate \u2014 multiple projects can be selected at once \u2014 and click Start Migration.",
+          "url": "https://www.testmuai.com/support/docs/one-click-migration-from-qtest/#step-3-select-projects"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Step 4: Monitor Progress",
+          "text": "A progress bar shows real-time migration status. You can navigate away at any time \u2014 the migration continues in the background and survives page reloads. An email notification is sent when the migration completes or fails.",
+          "url": "https://www.testmuai.com/support/docs/one-click-migration-from-qtest/#step-4-monitor-progress"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 5,
+          "name": "Step 5: Review the Results",
+          "text": "Migrated projects appear on the Projects listing page in Test Manager, tagged \"qTest Migrated\". Navigate to Test Cases in any migrated project. Verify that test cases, folder structure, steps, custom fields, attachments, and linked issues are imported correctly.",
+          "url": "https://www.testmuai.com/support/docs/one-click-migration-from-qtest/#step-5-review-the-results"
+        }
+      ]
+    }
+  ]) }}
+/>
+
 # One Click Migration from qTest
 
 <BrandName /> Test Manager supports one-click migration from qTest, allowing you to import your entire test library — including projects, test cases, folder structures, custom fields, attachments, and linked Jira requirements — directly into Test Manager without manual data entry.

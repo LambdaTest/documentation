@@ -102,6 +102,54 @@ import NewTag from '../src/component/newTag';
   }) }}
 />
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Step-by-Step Guide to Creating a Table Widget",
+      "description": "For prerequisites and common setup steps (Navigate to Insights, Create Dashboard, Choose Product, Select Data Source, Configure Filters), see the Common Steps for Creating Custom Widgets section in the main Custom Widgets documentation.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 6: Choose Table Visualization",
+          "text": "In the Choose Visualisation section, select Table from the available options (Line, Bar, Pie, Table, Billboard, Heatmap).",
+          "url": "https://www.testmuai.com/support/docs/analytics-table-widgets/#step-6-choose-table-visualization"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 7: Configure What to Plot",
+          "text": "This is the most critical step for creating meaningful tables. You can add multiple columns to your table: Field Selection (Mandatory): Select the field you want to display in this column. For row identifiers: Use fields like testname, projectname, build_name For metrics: Use fields like test_id, duration, or other numeric fields For categories: Use fields like browser, os, status Choose Aggregations (Optional): If you selected a numeric field, choose how to aggregate it: Count: Number of records Sum: Sum of values Average: Average value Minimum: Minimum value Maximum: Maximum value Unique Count: Count of unique values Percentiles (50th, 75th, 90th, 95th, 99th): For duration and other numeric fields Group By (Optional): Select a field to group the data in this column. When you use Group By: The column will be split into sub-columns for each unique value in the grouping field Each sub-column will show the aggregated value for that group This is useful for creating breakdowns (e.g., test counts grouped by status will create sub-columns for \"Passed\", \"Failed\", \"Error\", etc.) Label for Columns (Optional): Provide a custom label for the column header to make your table more readable. SubHeader (Optional): Check this box if you want this column to appear as a sub-header in the table structure. Add Another: Click this button to add additional columns to your table. For a complete list of available keys for each product, see the Available Keys for Custom Widgets section in the main...",
+          "url": "https://www.testmuai.com/support/docs/analytics-table-widgets/#step-7-configure-what-to-plot"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 8: Name Your Widget",
+          "text": "Enter a descriptive name in the Widget Name field (e.g., \"Test Summary by Status\", \"Project Test Counts\"). Use clear, descriptive names that indicate what the table shows.",
+          "url": "https://www.testmuai.com/support/docs/analytics-table-widgets/#step-8-name-your-widget"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Step 9: Preview Your Table",
+          "text": "Click the Preview button to see how your table will look with the current configuration. Review the table structure to ensure it displays the data as expected. Use the refresh icon to update the preview if you make changes.",
+          "url": "https://www.testmuai.com/support/docs/analytics-table-widgets/#step-9-preview-your-table"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 5,
+          "name": "Step 10: Create the Dashboard",
+          "text": "Enter a Dashboard Name in the bottom section. Click Create Dashboard to save your table widget. Your table will be added to the dashboard and ready for analysis.",
+          "url": "https://www.testmuai.com/support/docs/analytics-table-widgets/#step-10-create-the-dashboard"
+        }
+      ]
+    }
+  ]) }}
+/>
+
 Table widgets in LambdaTest Insights enable you to display structured test data in a tabular format, making it easy to view detailed information, compare values across multiple dimensions, and analyze data with multiple columns and aggregations.
 
 ## What is a Table Widget?

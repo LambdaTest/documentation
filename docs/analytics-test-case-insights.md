@@ -145,6 +145,40 @@ import VerifiedTag from '@site/src/component/verifiedTag';
   }) }}
 />
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Capture by Playwright reporter",
+      "description": "Gain insights into test case execution and performance with TestMu AI's analytics to optimize your testing strategy and enhance software quality.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1 - Configure your reporter in YAML",
+          "text": "You can capture the test case insights by using the reporter configuration in your YAML file for capturing and seeing the test cases in our test case widgets on dashboard. Here is a link to documentation for setting up the reporter for PlaywrightJS: Click here",
+          "url": "https://www.testmuai.com/support/docs/analytics-test-case-insights/#step-1---configure-your-reporter-in-yaml"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2 - Add the code to lambdatest-setup file",
+          "text": "Once, you have setup the reporter then the following code snippet should be added to your lambdatest-setup.js config.",
+          "url": "https://www.testmuai.com/support/docs/analytics-test-case-insights/#step-2---add-the-code-to-lambdatest-setup-file"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3 - Execute the tests using HyperExecute",
+          "text": "You can now, execute the tests on our HyperExecute platform and you can see the results captured in the Test Case Widgets on the dashboards.",
+          "url": "https://www.testmuai.com/support/docs/analytics-test-case-insights/#step-3---execute-the-tests-using-hyperexecute"
+        }
+      ]
+    }
+  ]) }}
+/>
+
 Analyzing the test case level insights of your test automation execution on <BrandName /> is now easier than ever with the `Test Case Insights` module. The user can easily find information about the count, and type of the test cases through the highly customizable widgets.
 
 ## Prerequisites For Insights:

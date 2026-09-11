@@ -112,6 +112,40 @@ import VerifiedTag from '@site/src/component/verifiedTag';
     "dateModified": "2026-09-09T19:10:37+05:30"
   }) }}
 />
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Steps to Generate Consolidated HTML Report",
+      "description": "Follow these steps to generate a consolidated Playwright HTML report:",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Update Your Playwright Configuration",
+          "text": "In your Playwright configuration file playwright.config.js, add the following code to enable the reporter: In the case of HyperExecute, we always have to set the value of open: never. By default, the report is written into the playwright-report folder in the current working directory. The same location can be used in the report parameters in the YAML file.",
+          "url": "https://www.testmuai.com/support/docs/playwright-html-report/#step-1-update-your-playwright-configuration"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Configure the HyperExecute YAML File",
+          "text": "In your HyperExecute YAML configuration, define the report parameters like this:",
+          "url": "https://www.testmuai.com/support/docs/playwright-html-report/#step-2-configure-the-hyperexecute-yaml-file"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Execute Your Tests",
+          "text": "Run your Playwright tests on HyperExecute using the CLI. After your job completes, you can visit the HyperExecute dashboard to download and view the consolidated Plywright HTML report.",
+          "url": "https://www.testmuai.com/support/docs/playwright-html-report/#step-3-execute-your-tests"
+        }
+      ]
+    }
+  ]) }}
+/>
 Playwright offers built-in HTML reports to help visualize the results of your test runs. These reports are detailed, user-friendly, and interactive, allowing you to analyze each test's status, logs, and errors in an organized manner.
 
 ## Steps to Generate Consolidated HTML Report

@@ -119,6 +119,47 @@ import VerifiedTag from '@site/src/component/verifiedTag';
     "dateModified": "2026-09-09T19:10:37+05:30"
   }) }}
 />
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Video Injection in App Automation",
+      "description": "This section explains how to use Video Injection with App automation. This section will also teach you how to use video injection for all the possible test cases for your app along with other useful information.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Upload video to TestMu AI",
+          "text": "You can use the following curl command to upload any video of your choice to the TestMu AI cloud. Please note that we support only MP4 format is only supported and the video can be 50 MB or less. {curl -u \"${ YOURLAMBDATESTUSERNAME()}:${ YOURLAMBDATESTACCESSKEY()}\" -X POST \"https://api.lambdatest.com/mfs/v1.0/media/upload\" -F \"mediafile=@\"/Users/macuser/Downloads/video.mp4\"\" -F \"type=\"video\"\" -F \"custom_id=\"SampleVideo\"\"} Response of above cURL will be a JSON object containing the media_url of the format - lt://MEDIA123456789123456789 as shown below.",
+          "url": "https://www.testmuai.com/support/docs/video-injection/#step-1-upload-video-to-testmu-ai"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Enable Video injection in the Appium Session",
+          "text": "You can use the appium capability to turn the video injection on in your application. Just add \"enableVideoInjection\": True in the desired capabilities while writing the automation script. By adding this capability the app undergoes Sensor Instrumentation, which was described earlier in the documentation. Also adding media url \"media\": \"lt://MEDIA123456789123456789\" in the capabilities to inject the video is now optional and can be passed in LambdaHook as mentioned in step 3. {`desired_capabilities = { \"enableVideoInjection\": True, \"media\": \"lt://MEDIAf446d4170cd946aa9ec307d10cb679b9\", #Add media_url here (optional) }`} {`DesiredCapabilities desiredCapabilities = new DesiredCapabilities(); desiredCapabilities.setCapability(\"enableVideoInjection\", \"true\");`}",
+          "url": "https://www.testmuai.com/support/docs/video-injection/#step-2-enable-video-injection-in-the-appium-session"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Inject the video",
+          "text": "Refer to the code snippets given below to upload the video with the action VideoInjection. Please make sure that the video needs to be injected before the camera is triggered in your application. This is due to the fact that the camera only captures the video injected at the last. {driver.executescript(\"lambda-video-injection=mediaurl\") #Add media_url here} {driver.executescript(\"lambda-video-injection=mediaurl\") //Add media_url here} Use Case: This feature can be used when you want to test injecting more than one video in single test at different instances. The video injected through above process will replace the video which you put in previous steps.",
+          "url": "https://www.testmuai.com/support/docs/video-injection/#step-3-inject-the-video"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Step 4: Capture the desired video through camera",
+          "text": "You need to first add a logic to inject the uploaded video in the script. Thereafter add the logic to click the camera button in the mobile app. This will show you the last injected video on your mobile app screen. ?? Check the documentation for Media Injection feature in Manual App Testing on Real devices Home Support Camera Image Injection",
+          "url": "https://www.testmuai.com/support/docs/video-injection/#step-4-capture-the-desired-video-through-camera"
+        }
+      ]
+    }
+  ]) }}
+/>
 <RealDeviceTag value="Real Device" /> 
 Video Injection feature enables you to test video-based functionalities such as **live streaming, real-time video capture,** and **video processing** in your app across 5000+ real devices on the <BrandName /> Real Device Cloud platform.
 
