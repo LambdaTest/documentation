@@ -2,20 +2,23 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
-The first complete Rook journey has eight steps. After the initial setup, repeat only the phases affected by your agent or test changes.
+The first complete Rook journey has nine steps. After the initial setup, repeat only the phases affected by your agent or test changes.
+
+Choose the environment first: public packages default to production. Use export ROOK_ENV=stage for the [stage Web UI](/support/docs/rook-web-ui/).
 
 ## First-Run Sequence
 
 | Step | Command | Result |
 |---|---|---|
 | 1 | `rook login` | Sign in to TestMu AI. Authentication is shared by terminals using the same Rook home. |
-| 2 | `rook project use` | Select the project that owns the agents, scenarios, profiles, and runs. |
+| 2 | `rook project` | Select the project that owns the agents, scenarios, profiles, and runs. |
 | 3 | `rook explore .` | Inspect the codebase and derive the agents and features it contains. |
-| 4 | `rook agent use` | Select an agent when discovery found more than one. |
+| 4 | `rook agent` | Select an agent when discovery found more than one. |
 | 5 | `rook generate` | Create functional and adversarial scenarios for the active agent. |
 | 6 | `rook profile add` | Describe how to reach the live target; Rook writes and verifies the invocation hooks. |
-| 7 | `rook run` | Invoke the agent and grade the evidence returned for each scenario. |
-| 8 | `rook sync` | Record the complete local project tree upstream as one deliberate write. |
+| 7 | `rook sync` | Publish the reviewed project tree before a timeline run. |
+| 8 | `rook run` | Invoke the agent and grade each scenario. |
+| 9 | `rook ui` | Open the hosted results; add `--local` for on-disk evidence. |
 
 You can request a later operation before completing every earlier one. Rook reports what is missing, or presents the prerequisite plan and estimated cost before it spends credits. Use `rook status` at any point to see where the workspace stands.
 
@@ -70,7 +73,7 @@ Exploration, generation, profile authoring, and curation write plain files under
 
 ## Related Documentation
 
-- [Five-minute walkthrough](/support/docs/agent-assurance-quickstart/)
+- [Tested quickstart](/support/docs/agent-assurance-quickstart/)
 - [Rook concepts](/support/docs/rook-concepts/)
 - [Profiles and hooks](/support/docs/rook-profiles-and-hooks/)
 - [Running scenarios](/support/docs/agent-assurance-run-tests/)

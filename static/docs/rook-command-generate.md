@@ -6,9 +6,9 @@ Use /generate after exploration to write test scenarios for the active agent's d
 
 ## Syntax
 
-~~~text
+```text
 /generate [options] [-- free-text instruction]
-~~~
+```
 
 The shell form is rook generate with the same options.
 
@@ -19,13 +19,13 @@ The shell form is rook generate with the same options.
 | --category &lt;names&gt; | Comma-separated scenario categories. |
 | --force | Re-derive scenarios even when feature hashes are unchanged. |
 | --allow &lt;rule&gt; | Pre-authorize one exact tool rule for this launch. Repeatable. |
-| --json | Emit machine-readable events. |
+| --json | Return machine-readable output for this command. |
 | --verbose | Show subagent activity and credits as work happens. |
 
-~~~text
+```text
 /generate --total 20 --class functional,adversarial
 /generate --category boundary,reliability -- emphasize retries and duplicate requests
-~~~
+```
 
 Generation reads the current feature model, plans coverage, writes scenarios, and checks runnability. It does not invoke the live target. Unchanged features reuse their scenarios without a model call; --force intentionally bypasses that optimization.
 

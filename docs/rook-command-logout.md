@@ -55,7 +55,7 @@ import { BRAND_URL } from '@site/src/component/BrandName';
       "height": 630
     },
     "inLanguage": "en",
-    "articleSection": "Agent Testing",
+    "articleSection": "Agent Assurance Platform",
     "keywords": [],
     "author": {
       "@type": "Organization",
@@ -83,7 +83,7 @@ import { BRAND_URL } from '@site/src/component/BrandName';
         "https://www.youtube.com/@TestMuAI"
       ]
     },
-    "dateModified": "2026-09-04T12:50:18+05:30"
+    "dateModified": "2026-09-11"
   }) }}
 />
 
@@ -99,17 +99,17 @@ Interactive:
 
 <VerifiedTag value="Verified" />
 
-~~~text
+```text
 /logout
-~~~
+```
 
 Headless:
 
 <VerifiedTag value="Verified" />
 
-~~~bash
+```bash
 rook logout
-~~~
+```
 
 ## When to use it
 
@@ -129,11 +129,11 @@ Credentials are global for Rook terminals using the same Rook home. Logging out 
 
 <VerifiedTag value="Verified" />
 
-~~~text
+```text
 /logout
 /login
 /auth status
-~~~
+```
 
 The TUI input is disabled during an active run. Press <code>Esc</code>, wait for the prompt to return, inspect the target if a write may have occurred, and then log out.
 
@@ -145,3 +145,6 @@ The TUI input is disabled during an active run. Press <code>Esc</code>, wait for
 ## Related commands
 
 [<code>/login</code>](/support/docs/rook-command-login/) · [<code>/auth</code>](/support/docs/rook-command-auth/) · [<code>rook whoami</code>](/support/docs/rook-command-whoami/)
+
+
+Exported <code>LT_USERNAME</code> and <code>LT_ACCESS_KEY</code> are separate from stored login. Logging out does not remove those variables from your shell or CI secret manager; unset both when you intend to stop using them. See [login](/support/docs/rook-command-login/).

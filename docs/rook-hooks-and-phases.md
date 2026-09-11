@@ -61,7 +61,7 @@ import { BRAND_URL } from '@site/src/component/BrandName';
       "height": 630
     },
     "inLanguage": "en",
-    "articleSection": "Agent Testing",
+    "articleSection": "Agent Assurance Platform",
     "keywords": [
       "rook hooks",
       "rook run phases",
@@ -93,7 +93,7 @@ import { BRAND_URL } from '@site/src/component/BrandName';
         "https://www.youtube.com/@TestMuAI"
       ]
     },
-    "dateModified": "2026-09-04T12:50:18+05:30"
+    "dateModified": "2026-09-11"
   }) }}
 />
 
@@ -105,14 +105,14 @@ A profile must define an <code>execute</code> hook. The other hooks are optional
 
 <VerifiedTag value="Verified" />
 
-~~~text
+```text
 prepare                         once per run
   open                          once per scenario
     execute × N                 once per turn
   close                         once per scenario
   collect                       once per scenario
   judge                         Rook evaluates the recorded result
-~~~
+```
 
 <img loading="lazy" src={require('../assets/images/rook/commands/rook-command-run.png').default} alt="Rook run command help showing lifecycle phase selection and continuation options" className="doc_img"/>
 
@@ -135,7 +135,7 @@ Hook paths are relative to the active agent's directory unless you provide an ab
 
 <VerifiedTag value="Verified" />
 
-~~~yaml
+```yaml
 id: refund-staging
 name: Refund staging
 hooks:
@@ -157,7 +157,7 @@ capabilities:
   calls: true
   usage: true
 concurrency: 1
-~~~
+```
 
 Use <code>/profile add</code> to have Rook generate and verify this profile and its scripts from a prompt, cURL command, command line, integration note, file, or URL. You can inspect and edit the generated files afterward.
 
@@ -167,9 +167,9 @@ Rook invokes a hook as:
 
 <VerifiedTag value="Verified" />
 
-~~~text
+```text
 node <script> <phase>
-~~~
+```
 
 The phase name is the only argument. Context arrives through <code>ROOK_*</code> environment variables:
 
@@ -192,18 +192,18 @@ Write progress and diagnostics to standard error. Standard output must contain o
 
 <VerifiedTag value="Verified" />
 
-~~~json
+```json
 {
-  "output": "Your refund was approved.",
+  "agent_reply": "Your refund was approved.",
   "conversation": "thread_abc123",
   "usage": { "input": 1200, "output": 340 },
   "calls": [
     { "name": "issue_refund", "arguments": { "order": "ORD-1042" } }
   ]
 }
-~~~
+```
 
-- <code>output</code> is required from <code>execute</code> and is the answer Rook judges.
+- <code>agent_reply</code> is required from <code>execute</code> and is the answer Rook judges.
 - <code>conversation</code> allows later turns and phases to continue the same target session.
 - <code>usage</code> enables token-economy scenarios when the target exposes counts.
 - <code>calls</code> enables tool-call assertions. Return <code>calls: []</code> when you observed that no calls occurred; omitting it means calls were not observable.
@@ -223,11 +223,11 @@ Use phase selection when evidence becomes available after the agent responds:
 
 <VerifiedTag value="Verified" />
 
-~~~bash
+```bash
 rook run --phases prepare,open,execute,close
 # Wait for the trace or log pipeline.
 rook run --run <run-id> --phases collect,judge
-~~~
+```
 
 <code>--run</code> continues the same run in place. <code>--resume</code> creates a new run and carries compatible completed work forward.
 
@@ -235,9 +235,9 @@ You can also omit a suffix:
 
 <VerifiedTag value="Verified" />
 
-~~~bash
+```bash
 rook run --skip collect,judge
-~~~
+```
 
 Selections follow the fixed lifecycle order. Rook refuses a hole such as <code>prepare,close</code> when it would skip a defined prerequisite between the selected phases.
 

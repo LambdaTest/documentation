@@ -6,11 +6,11 @@ Use /ui to review synchronized results in the hosted TestMu AI application. Add 
 
 ## Syntax
 
-~~~text
+```text
 /ui
 /ui --local
 /ui --local --no-open
-~~~
+```
 
 The shell form is rook ui with the same options.
 
@@ -23,6 +23,19 @@ The shell form is rook ui with the same options.
 The local viewer is read-only, makes no external request for workspace data, and does not require authentication or network access. It continues serving until the command or TUI session exits.
 
 Use the hosted view for shared project history. Use --local for unsynchronized work, offline investigation, or the exact evidence present on this machine.
+
+## Stage and Production
+
+Public packages default to https://rook.testmuai.com. For the live stage UI:
+
+```bash
+export ROOK_ENV=stage
+rook ui
+```
+
+This opens [stage-rook.lambdatestinternal.com](https://stage-rook.lambdatestinternal.com/). Use the same environment for login, project selection, sync, and runs. Sign into the browser separately if prompted.
+
+Follow the [Web UI walkthrough](/support/docs/rook-web-ui/) for projects, versions, profile hooks, run evidence, screenshots, and missing-result troubleshooting.
 
 ## Related Commands
 

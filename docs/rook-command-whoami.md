@@ -55,7 +55,7 @@ import { BRAND_URL } from '@site/src/component/BrandName';
       "height": 630
     },
     "inLanguage": "en",
-    "articleSection": "Agent Testing",
+    "articleSection": "Agent Assurance Platform",
     "keywords": [],
     "author": {
       "@type": "Organization",
@@ -83,7 +83,7 @@ import { BRAND_URL } from '@site/src/component/BrandName';
         "https://www.youtube.com/@TestMuAI"
       ]
     },
-    "dateModified": "2026-09-04T12:50:18+05:30"
+    "dateModified": "2026-09-11"
   }) }}
 />
 
@@ -97,17 +97,17 @@ Use <code>rook whoami</code> outside the interactive terminal to verify which Te
 
 <VerifiedTag value="Verified" />
 
-~~~bash
+```bash
 rook whoami
-~~~
+```
 
 This is an alias for:
 
 <VerifiedTag value="Verified" />
 
-~~~bash
+```bash
 rook auth status
-~~~
+```
 
 ## Real-world uses
 
@@ -115,24 +115,24 @@ Verify a workstation before testing:
 
 <VerifiedTag value="Verified" />
 
-~~~bash
+```bash
 rook whoami
 rook plan
-~~~
+```
 
 Fail an automation setup step when a Rook identity is unavailable:
 
 <VerifiedTag value="Verified" />
 
-~~~bash
+```bash
 rook whoami
-~~~
+```
 
 ## State and errors
 
-The command verifies the stored token, prints the account identity, and exits. It does not change project data or invoke an agent. Its output is human-readable in the current release.
+The command verifies the effective credentials, prints the account identity, and exits. It does not change project data or invoke an agent. Its output is human-readable in the current release.
 
-If it reports no or invalid authentication, run <code>rook login</code>. If it reports the wrong account, log out first; credentials are shared by Rook workspaces using the same Rook home.
+Check <code>ROOK_ENV</code> and the exported <code>LT_USERNAME</code>/<code>LT_ACCESS_KEY</code> pair first: that pair overrides stored browser authentication. Unset both if you intend to use OAuth, then run <code>rook login</code> when required. Stored credentials are shared within the same Rook home, profile, and environment.
 
 ## Related commands
 

@@ -55,7 +55,7 @@ import { BRAND_URL } from '@site/src/component/BrandName';
       "height": 630
     },
     "inLanguage": "en",
-    "articleSection": "Agent Testing",
+    "articleSection": "Agent Assurance Platform",
     "keywords": [],
     "author": {
       "@type": "Organization",
@@ -83,7 +83,7 @@ import { BRAND_URL } from '@site/src/component/BrandName';
         "https://www.youtube.com/@TestMuAI"
       ]
     },
-    "dateModified": "2026-09-04T12:50:18+05:30"
+    "dateModified": "2026-09-11"
   }) }}
 />
 
@@ -97,9 +97,9 @@ Use <code>/explore</code> to tell Rook what local material describes your agent.
 
 <VerifiedTag value="Verified" />
 
-~~~text
+```text
 /explore [path] [instruction...] [--force] [--allow <exact-rule>] [--json] [--verbose]
-~~~
+```
 
 From a shell, replace the leading slash with <code>rook</code>.
 
@@ -109,7 +109,7 @@ From a shell, replace the leading slash with <code>rook</code>.
 | <code>--force</code> | Re-read even when tracked files appear unchanged. |
 | <code>instruction...</code> | Free-text guidance about what to emphasize or ignore. |
 | <code>--allow &lt;rule&gt;</code> | Pre-authorize one exact tool rule for this launch. Repeatable. |
-| <code>--json</code> | Emit machine-readable events. |
+| <code>--json</code> | Return machine-readable output for this command. |
 | <code>--verbose</code> | Include tool activity and credit-use details. |
 
 ## Real-world examples
@@ -118,33 +118,33 @@ PRD only:
 
 <VerifiedTag value="Verified" />
 
-~~~text
+```text
 /explore docs/refund-agent-prd.md
-~~~
+```
 
 PRD and knowledge base:
 
 <VerifiedTag value="Verified" />
 
-~~~text
+```text
 /explore docs focus on PRD.md and knowledge, and treat them as intended behavior
-~~~
+```
 
 Source workspace:
 
 <VerifiedTag value="Verified" />
 
-~~~text
+```text
 /explore services/travel-agent
-~~~
+```
 
 Headless:
 
 <VerifiedTag value="Verified" />
 
-~~~bash
+```bash
 rook explore docs/refund-agent-prd.md focus on refund approval rules --json
-~~~
+```
 
 ## Step-by-step
 

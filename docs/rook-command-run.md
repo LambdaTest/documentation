@@ -55,7 +55,7 @@ import { BRAND_URL } from '@site/src/component/BrandName';
       "height": 630
     },
     "inLanguage": "en",
-    "articleSection": "Agent Testing",
+    "articleSection": "Agent Assurance Platform",
     "keywords": [],
     "author": {
       "@type": "Organization",
@@ -83,7 +83,7 @@ import { BRAND_URL } from '@site/src/component/BrandName';
         "https://www.youtube.com/@TestMuAI"
       ]
     },
-    "dateModified": "2026-09-04T12:50:18+05:30"
+    "dateModified": "2026-09-11"
   }) }}
 />
 
@@ -97,9 +97,9 @@ Use <code>/run</code> to plan a selection, execute the active profile's lifecycl
 
 <VerifiedTag value="Verified" />
 
-~~~text
+```text
 /run [selection options] [-- free-text instruction]
-~~~
+```
 
 The shell form is <code>rook run</code> with the same options.
 
@@ -119,21 +119,21 @@ The shell form is <code>rook run</code> with the same options.
 | <code>--resume &lt;id&gt;</code> | Carry compatible completed work forward from an earlier run. |
 | <code>--rca</code> | Explain failure clusters and what to change; this spends additional credits. |
 | <code>--allow &lt;rule&gt;</code> | Pre-authorize one exact tool rule for this launch. Repeatable. |
-| <code>--json</code> | Emit machine-readable events. |
+| <code>--json</code> | Return a JSON outcome on stdout; progress goes to stderr. |
 | <code>--verbose</code> | Show tool activity and credits as work happens. |
 
 ## Examples
 
 <VerifiedTag value="Verified" />
 
-~~~text
+```text
 /run --only SC-001,SC-004 --concurrency 1
 /run --class adversarial --profile staging --name security-gate
 /run --test -- investigate the current unsynchronized changes
 /run --phases prepare,open,execute,close
 /run --run 01JABC... --phases collect,judge
 /run --resume 01JABC... --rca
-~~~
+```
 
 Before target execution, Rook writes and shows a run plan. In the TUI you can proceed, discard it, or describe a change. Headless runs proceed with the written plan, so use explicit filters in version-controlled CI configuration.
 
@@ -145,9 +145,9 @@ The fixed order is:
 
 <VerifiedTag value="Verified" />
 
-~~~text
+```text
 prepare → open → execute → close → collect → judge
-~~~
+```
 
 The first five points are profile hooks; <code>judge</code> is Rook's evaluation phase. <code>prepare</code> runs once per run, <code>execute</code> runs once per turn, and <code>open</code>, <code>close</code>, and <code>collect</code> run per scenario when the profile defines them.
 

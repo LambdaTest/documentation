@@ -64,7 +64,7 @@ import { BRAND_URL } from '@site/src/component/BrandName';
       "height": 630
     },
     "inLanguage": "en",
-    "articleSection": "Agent Testing",
+    "articleSection": "Agent Assurance Platform",
     "keywords": [
       "rook architecture",
       "rook controller",
@@ -97,33 +97,17 @@ import { BRAND_URL } from '@site/src/component/BrandName';
         "https://www.youtube.com/@TestMuAI"
       ]
     },
-    "hasPart": [
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "Local Invocation Path",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "text",
-        "text": "scenario goal\n    \u2193 standard input\nprofile execute hook\n    \u2193 real invocation\nagent under test\n    \u2193 JSON on standard output\nreply \u00b7 conversation \u00b7 usage \u00b7 calls \u00b7 custom evidence\n    \u2193\nlocal run directory"
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "Local State Is the Record",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "text",
-        "text": "local project tree \u2500\u2500 rook sync \u2500\u2500\u25b6 Rook API \u2500\u2500\u25b6 cloud UI\nlocal run evidence \u2500\u2500 run sync \u2500\u2500\u2500\u25b6 Rook API \u2500\u2500\u25b6 reports and comparison"
-      }
-    ],
-    "dateModified": "2026-09-04T12:50:18+05:30"
+    "dateModified": "2026-09-11"
   }) }}
 />
 
 # Rook Architecture and Data Flow
 
-Rook has 3 deployables: the CLI, the controller, and the API. The agent under test and cloud results UI are connected systems shown for context. The most important architectural fact is the boundary between code and evidence on your machine, model orchestration in the controller, and synchronized records in the API.
+Rook has four application components: the CLI, controller, API, and hosted Web UI. The agent under test is your connected target. The most important architectural fact is the boundary between code and evidence on your machine, model orchestration in the controller, and synchronized records in the API.
 
 <figure className="rookArchitecture" aria-labelledby="rook-architecture-caption">
   <figcaption id="rook-architecture-caption" className="rookArchitecture__caption">
-    Execution and evidence stay local. Model orchestration and synchronization cross separate, explicit boundaries.
+    Execution happens from your machine; evidence is recorded locally first. Model context and synchronized evidence cross separate cloud boundaries.
   </figcaption>
 
   <section className="rookArchitecture__zone rookArchitecture__zone--local" aria-labelledby="rook-local-zone">
@@ -154,7 +138,7 @@ Rook has 3 deployables: the CLI, the controller, and the API. The agent under te
     <div className="rookArchitecture__connector">
       <span aria-hidden="true">↓</span>
       <strong>Hook result</strong>
-      <small>Output, conversation, usage, calls, and evidence</small>
+      <small>agent_reply, conversation, usage, calls, and evidence</small>
     </div>
 
     <div className="rookArchitecture__node">
@@ -295,7 +279,7 @@ Commands that only inspect existing state—such as `status`, `scenarios`, `env`
 
 ```text
 local project tree ── rook sync ──▶ Rook API ──▶ cloud UI
-local run evidence ── run sync ───▶ Rook API ──▶ reports and comparison
+local run evidence ── runs sync ───▶ Rook API ──▶ reports and comparison
 ```
 
 Cloud state does not silently overwrite the local workspace. Ahead, behind, and diverged states are reported for deliberate reconciliation.
@@ -332,3 +316,10 @@ If the required observation is unavailable, the result is **Unable to Verify**. 
 - [Permissions and safety](/support/docs/rook-permissions-and-safety/)
 - [Environment and secrets](/support/docs/rook-environment-and-secrets/)
 - [What lands on disk](/support/docs/rook-workspace-files/)
+
+
+## Open the Hosted Web UI
+
+For stage, use [stage-rook.lambdatestinternal.com](https://stage-rook.lambdatestinternal.com/). Set <code>ROOK_ENV=stage</code> before CLI authentication and synchronization so the records reach the same environment. Public packages default to production at [rook.testmuai.com](https://rook.testmuai.com).
+
+The browser reads records and artifacts through the API. It does not execute your local hook scripts or start the target agent. See the [Web UI guide](/support/docs/rook-web-ui/) for the project-to-result journey.

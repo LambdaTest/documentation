@@ -2,276 +2,143 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
-A profile is a fixed, reviewable recipe for invoking one agent. Discovery learns what an agent does, but it cannot know whether you intend to test a local process, staging endpoint, production endpoint, fast model, or careful model. The profile supplies that choice.
+A profile tells Rook **how to reach your live agent and capture its evidence**. Discovery describes what the agent should do; a profile chooses the endpoint, command, environment, and session behavior you actually test.
 
-An agent can have several profiles. Runs pin the profile ID, so renaming a profile does not detach its history.
+Rook 0.1.3 uses Node.js hook scripts, not a fixed HTTP or command YAML recipe. Rook can generate those scripts from your integration notes, try them against the target, and repair them using the actual response.
+
+## Before You Start
+
+Select a project and agent. Make one harmless request outside Rook first, and gather:
+
+- The working cURL request or local command, with secrets replaced by environment-variable names.
+- The request field that receives the goal and the response field containing the answer.
+- Session creation/resume details, if the target is genuinely multi-turn.
+- Any polling needed for asynchronous results.
+- Where real tool calls, usage, files, or traces can be read.
+- Test fixtures and restrictions on writes.
+
+Profile authoring and repair use credits and invoke the target. Those calls have real effects. Start with a staging endpoint and a harmless probe goal.
 
 ## Add a Profile Interactively
 
-Start with:
-
 ```text
-/profile add
+/profile add staging
 ```
 
-Rook asks for a name and an invocation. Paste a working cURL request when possible. It preserves the method, URL, headers, body, multipart file fields, and TLS choices you already tested manually.
+Describe the integration in plain language. For example:
 
-Rook then does the following:
+```text
+Call POST https://agent.staging.example.com/v1/chat.
+Read AGENT_TOKEN from the environment and use it as a Bearer token.
+Send the goal in the message field.
+The answer is response.reply.text; return that as agent_reply.
+This endpoint has no conversational state.
+Use "show the status of test order ORD-1042" to verify it.
+Do not issue refunds or change the test order during verification.
+```
 
-1. Classifies request fields as scenario input, session handles, run metadata, or fixed values.
-2. Shows the proposed mapping for confirmation.
-3. Asks for any `${VAR}` values without writing them into the profile.
-4. Invokes the agent once with a harmless goal.
-5. Extracts the answer and asks you to confirm it.
-6. Marks the profile verified and active only after the probe succeeds.
+This is a template; replace the endpoint, fields, and fixture with a request you have verified.
 
-You can save an unverified profile for later, but it cannot become active, and a run cannot reach it accidentally.
+## Generate From a File or Command
 
-## HTTP Profile Example
+Put the integration material in call.txt, then run from a shell:
 
-A synchronous JSON agent can be represented as:
+```bash
+rook profile add staging --from call.txt
+rook profile add local --command 'my-agent --test-mode'
+```
+
+The file can contain a cURL command, API notes, representative response, Postman export, or pointers to relevant files and URLs. The command example assumes my-agent is already installed.
+
+Rook writes scripts, invokes the target, and corrects mistakes found during verification. Review the changes and permissions; do not approve unrelated installation, credential access, or server startup. In unattended authoring, supply enough material and narrowly reviewed --allow rules. See the [command options](/support/docs/rook-command-profile/).
+
+## Inspect and Test the Result
+
+```bash
+rook profile
+rook profile show staging
+rook profile test staging --goal "show the status of test order ORD-1042"
+rook profile use staging
+```
+
+The bare command lists profiles in a shell or opens a picker in the TUI. profile test invokes the existing hooks without asking a model to rewrite them. Check that the returned value is an agent answer, not a job ID or success status.
+
+Generated files live below:
+
+```text
+.testmuai/rook/projects/<project-id>/agents/<agent-id>/
+profiles/staging.yaml
+scripts/staging.mjs
+```
+
+For a single-turn HTTP target, a minimal generated profile looks like:
 
 ```yaml
 id: staging
 name: staging
-kind: http
-mode: sync
-timeout_seconds: 120
-invoke:
-method: POST
-url: https://agent.staging.example.com/v1/chat
-headers:
-Authorization: "Bearer ${AGENT_TOKEN}"
-Content-Type: application/json
-body:
-message: "{{goal}}"
-session_id: "{{session}}"
-result:
-from: json_path
-path: $.reply.text
-response:
-kind: json
-conversation:
-kind: field
-id_path: $.session_id
-send_as: body.session_id
-verified: true
-```
-
-Rook fills templates from fixed bindings. It does not ask a model to compose each invocation.
-
-Supported bindings include the scenario goal and run-specific identifiers. Rook expands environment references before goal bindings, so a scenario containing text such as `${AWS_SECRET_ACCESS_KEY}` cannot cause Rook to substitute the real credential into the goal.
-
-## Command Profile Example
-
-Use a command profile for a local CLI agent:
-
-```yaml
-id: local-cli
-name: local CLI
-kind: command
-mode: sync
-timeout_seconds: 300
-invoke:
-argv: [claude, -p, "{{goal}}"]
-cwd: services/travel-agent
+hooks:
+execute: scripts/staging.mjs
 env:
-TRAVEL_AGENT_ENV: test
-result:
-from: stdout
-conversation:
-kind: flag
-resume_argv: [claude, -p, --resume, "{{conversation}}", "{{goal}}"]
-observe:
-filesystem: [./out]
-reset:
-argv: [npm, run, reset:fixtures]
-cwd: services/travel-agent
-verified: true
+- variable: AGENT_TOKEN
+purpose: Access to the staging agent
+capabilities:
+calls: false
+usage: false
+multi_turn: false
+concurrency: 1
 ```
 
-Command profiles can put `{{goal}}` in an argument, stdin, or both. A non-zero exit is an invocation error, even when the command printed partial output.
+Hook paths resolve from the **active agent directory**, not the workspace root.
 
-## Asynchronous Agent Example
+## Return the Answer and Evidence
 
-Use `mode: async` when the initial request returns a handle and a later request retrieves the result:
+During execute, Rook passes the scenario goal on stdin. Your script writes one JSON object on stdout and diagnostics on stderr:
 
-```yaml
-id: report-staging
-name: report staging
-kind: http
-mode: async
-timeout_seconds: 180
-invoke:
-method: POST
-url: https://agent.staging.example.com/v1/reports
-headers:
-Authorization: "Bearer ${AGENT_TOKEN}"
-body:
-prompt: "{{goal}}"
-poll:
-invoke:
-method: GET
-url: https://agent.staging.example.com/v1/reports/{{handle}}
-headers:
-Authorization: "Bearer ${AGENT_TOKEN}"
-handle_path: $.job_id
-interval_seconds: 2
-ready_when:
-json_path: $.status
-in: [complete, failed, cancelled]
-max_attempts: 60
-result:
-from: json_path
-path: $.result.summary
-response:
-kind: json
+```json
+{
+"agent_reply": "Order ORD-1042 is awaiting shipment.",
+"calls": [
+{ "name": "get_order", "arguments": { "id": "ORD-1042" } }
+]
+}
 ```
 
-The polling block is a complete request because authenticated polling endpoints often need their own headers and method.
+The answer key is agent_reply, even if the target API calls its field output, message, or reply. Map the real response in the script. Do not invent calls or token counts to satisfy a criterion.
 
-## Multi-Turn Agents
+See the [full hook contract](/support/docs/rook-profiles-and-hooks/) for context variables, output fields, timeouts, and error behavior.
 
-Rook never guesses how conversation state is carried. Configure one of these shapes:
+## Add Phases Only Where Needed
 
-| Shape | Use when | Required fields |
-|---|---|---|
-| `conversation.kind: field` | The response returns a session ID and later requests send it back | `id_path`, `send_as` |
-| `conversation.kind: flag` | A local command resumes by argument | `resume_argv` containing `{{conversation}}` |
-| `conversation.kind: none` | The agent is intentionally single turn | No additional fields |
+| Need | Profile hook |
+|---|---|
+| Authenticate or prepare shared state once | prepare |
+| Open a real session or reset one scenario's fixtures | open |
+| Send each turn and return the answer | execute (required) |
+| Close a session or release resources | close |
+| Poll for delayed traces, calls, logs, or artifacts | collect |
 
-Without a usable conversation declaration, multi-turn scenarios are skipped. Rook does not turn them into unrelated single turns and report a misleading pass.
+Rook owns judge; it is not a user script. Tell the profile author how each required phase should behave. For a polling API, explain the job handle, polling request, terminal states, and timeout. For streaming or file-based integrations, the hook must implement the actual transport or upload; a capability declaration alone does not do it.
 
-## Attachments and Multimodal Inputs
+For multi-turn targets, return the real conversation handle and use ROOK_CONVERSATION on later turns. An echoed request ID is not proof of conversation state.
 
-> **Native attachment input is not implemented.** The profile schema can record the intended attachment shape, but the current run executor does not transmit `scenario.input.attachments` or call a configured upload endpoint. Do not treat a `text+file` scenario as an executed file test, even if capability validation labels it runnable. Instead, use a test URL in the scenario goal, or use an agent-specific HTTP or command adapter that resolves the file before invoking Rook.
-
-The forward-compatible profile shapes are a field in the main request:
-
-```yaml
-attachments:
-via: field
-field: document
-```
-
-Or a separate upload endpoint whose response supplies a link:
-
-```yaml
-attachments:
-via: endpoint
-upload:
-method: POST
-url: https://agent.staging.example.com/v1/files
-headers:
-Authorization: "Bearer ${AGENT_TOKEN}"
-link_path: $.file_url
-```
-
-These declarations describe the intended contract. They do not enable delivery in the current pre-alpha release. Text and URL values are passed in the goal today. Native `text+file`, `pr_ref`, and image inputs are not executable.
-
-For outputs, Rook can collect text, JSON, local files, and downloadable links. It recognizes common PDF, image, CSV, spreadsheet, JSON, YAML, Markdown, HTML, and archive paths. Rook can confirm that an image exists and record its byte size and dimensions, but it cannot judge what the pixels depict. That content criterion becomes **Unable to Verify**.
-
-## Response Types and Result Extraction
-
-Readable response types today are:
-
-- `json`
-- `text`
-
-Recorded but not executable today:
-
-- `sse`
-- `ndjson`
-- `websocket`
-
-The result can come from:
-
-- `json_path`
-- `stdout`
-- `stderr`
-- `text`
-- `file`
-
-Paste a representative response during profile setup. Rook proposes the answer path from the sample and verifies it with a live call. Do not select a status or request ID just because it is the first non-empty string.
-
-## Secrets and Environment Values
-
-Profiles are safe to commit only when they contain references rather than values:
-
-```yaml
-headers:
-Authorization: "Bearer ${AGENT_TOKEN}"
-```
-
-Manage values interactively:
-
-```text
-/env list
-/env set AGENT_TOKEN
-/env show AGENT_TOKEN
-/env rm AGENT_TOKEN
-```
-
-`/env list` masks values. `/env show` prints the complete value into terminal scrollback, so use it only when that exposure is intentional.
-
-## TLS and Private Certificates
-
-The default is Node.js certificate verification. For an internal endpoint trusted by your machine, configure system trust. For a specific private CA, configure a PEM file:
-
-```yaml
-invoke:
-tls:
-trust: file
-ca_file: ./certs/staging-ca.pem
-```
-
-Rook also preserves cURL's `-k` choice as `insecure: true`, but never invents it. Prefer a trusted CA over disabled certificate verification.
-
-## Observation and Reset
-
-Add observation only for state Rook is allowed to read:
-
-```yaml
-observe:
-usage: true
-mcp: proxy
-filesystem:
-- ./out
-- ./tmp/agent
-```
-
-- `usage` enables token-economy checks when the agent reports usage.
-- `mcp: proxy` declares that the target agent's tool calls are observable.
-- `filesystem` lists paths Rook may hash before and after invocation.
-
-At concurrency greater than one, shared file changes cannot be attributed reliably to a scenario. Run with `--concurrency 1` when filesystem evidence matters.
-
-A reset command runs between scenarios to prevent state leakage. It is a real command, and it passes through the permission gate.
-
-## Manage Profiles
-
-Interactive commands:
-
-```text
-/profile list
-/profile use <name>
-/profile show <name>
-/profile edit <name>
-/profile test <name>
-/profile curl <name>
-/profile rm <name>
-```
-
-Headless profile management supports listing, showing, switching, and removing:
+## Repair a Profile
 
 ```bash
-rook profile list --entity <agent-id> --json
-rook profile show staging --entity <agent-id>
-rook profile use staging --entity <agent-id>
-rook profile rm staging --entity <agent-id>
+rook profile fix staging --what "the response answer moved from reply.text to result.answer"
+rook profile test staging --goal "show the status of test order ORD-1042"
+rook sync
 ```
 
-Profile creation and editing remain interactive because field classification and verification are conversations.
+Repair can change scripts and spend credits. Inspect the diff and test it before syncing. Rook has no profile edit, profile curl, or profile rm subcommands in 0.1.3; edit the plain files deliberately when needed.
 
-**MCP invocation status**
-MCP servers can be registered, inspected, approved, and used by Rook for discovery and verification. Direct MCP target-agent profile execution is represented in the profile model but is not executable in the current pre-alpha release.
+## Keep Credentials Out of the Profile
+
+Use your shell or CI secret manager to provide target credentials. Generated hooks should read process.env.AGENT_TOKEN; the profile records the variable's name and purpose, not its value.
+
+For local stored values, see [Environment and Secrets](/support/docs/rook-environment-and-secrets/). rook env list masks values; rook env show exposes them. Do not place real tokens in command examples, prompt files, logs, or screenshots.
+
+## Review Profiles in the Web UI
+
+After rook sync, the agent's **Summary** page shows its profiles and mapped phases. Use **View Full Spec** to inspect the recorded profile. A run's **Profile** link identifies the revision used for that run—not necessarily the current local file.
+
+[Web UI walkthrough](/support/docs/rook-web-ui/) · [Lifecycle phases](/support/docs/rook-hooks-and-phases/) · [Run tests](/support/docs/agent-assurance-run-tests/)

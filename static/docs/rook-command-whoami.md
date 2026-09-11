@@ -6,36 +6,36 @@ Use rook whoami outside the interactive terminal to verify which TestMu AI accou
 
 ## Syntax
 
-~~~bash
+```bash
 rook whoami
-~~~
+```
 
 This is an alias for:
 
-~~~bash
+```bash
 rook auth status
-~~~
+```
 
 ## Real-world uses
 
 Verify a workstation before testing:
 
-~~~bash
+```bash
 rook whoami
 rook plan
-~~~
+```
 
 Fail an automation setup step when a Rook identity is unavailable:
 
-~~~bash
+```bash
 rook whoami
-~~~
+```
 
 ## State and errors
 
-The command verifies the stored token, prints the account identity, and exits. It does not change project data or invoke an agent. Its output is human-readable in the current release.
+The command verifies the effective credentials, prints the account identity, and exits. It does not change project data or invoke an agent. Its output is human-readable in the current release.
 
-If it reports no or invalid authentication, run rook login. If it reports the wrong account, log out first; credentials are shared by Rook workspaces using the same Rook home.
+Check ROOK_ENV and the exported LT_USERNAME/LT_ACCESS_KEY pair first: that pair overrides stored browser authentication. Unset both if you intend to use OAuth, then run rook login when required. Stored credentials are shared within the same Rook home, profile, and environment.
 
 ## Related commands
 

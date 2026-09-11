@@ -44,7 +44,7 @@ Rook owns a fixed lifecycle while each profile supplies the scripts that reach t
 |---|---|---|
 | prepare | Once per run | Authenticate, seed fixtures, or warm a cache. |
 | open | Before each scenario | Create a session or reset scenario state. |
-| execute | Once per turn | Send the goal and return output. Required. |
+| execute | Once per turn | Send the goal and return agent_reply. Required. |
 | close | After each scenario | End a session or release a resource. |
 | collect | After close | Fetch traces, calls, logs, usage, or delayed evidence. |
 | judge | After evidence is available | Rook evaluates the recorded response and evidence. |
@@ -99,4 +99,8 @@ Judges must not mutate the state they are verifying. If the only available check
 
 Start rook for the TUI. Slash commands, completion, /help, and /guide are derived from the same command registry used by shell invocations. This keeps flags and subcommands consistent across both surfaces.
 
-Long-running commands emit structured progress. In the TUI, Rook renders active subagents and parallel scenario lanes; in automation, --json emits machine-readable events and --verbose exposes tool activity and credit use.
+Long-running commands emit structured progress. In the TUI, Rook renders active subagents and parallel scenario lanes; in automation, --json returns a command-specific JSON document and --verbose exposes tool activity and credit use.
+
+## Hosted Web UI
+
+The [Web UI](/support/docs/rook-web-ui/) is live on stage. Review synchronized projects, versions, profiles and hook phases, features, scenarios, runs, and evidence. Create and execute tests in the CLI; use the hosted UI for team review or rook ui --local for on-disk results.

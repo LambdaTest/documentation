@@ -51,7 +51,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
       "height": 630
     },
     "inLanguage": "en",
-    "articleSection": "Agent Testing",
+    "articleSection": "Agent Assurance Platform",
     "keywords": [
       "rook run tests",
       "functional ai agent testing",
@@ -84,100 +84,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
         "https://www.youtube.com/@TestMuAI"
       ]
     },
-    "hasPart": [
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "Run the Runnable Suite",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "text",
-        "text": "/run"
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "Run by ID",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "text",
-        "text": "/run --only SC-004,SC-011"
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "Run by class",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "text",
-        "text": "/run --class adversarial"
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "Run by category",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "text",
-        "text": "/run --category happy_path,prompt_injection"
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "Run by tag",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "text",
-        "text": "/run --tag billing,refund"
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "This command first keeps adversarial scenarios, then keeps those tagged refund",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "text",
-        "text": "/run --class adversarial --tag refund"
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "You can also describe the desired subset after --",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "text",
-        "text": "/run --class adversarial -- the scenarios about refund approval"
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "Choose Concurrency",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "text",
-        "text": "/run --concurrency 1\n/run --concurrency 5"
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "Skip that model call when CI needs only the structured evidence and deterministic totals",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "text",
-        "text": "/run --no-narrative"
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "The headless equivalent is",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "Shell",
-        "text": "rook run --no-narrative"
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "Request Root-Cause Analysis",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "text",
-        "text": "/run --rca"
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "It writes remedies under",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "text",
-        "text": ".testmuai/rook/agents/<agent-id>/runs/<run-id>/remedies/"
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "Current headless syntax is",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "Shell",
-        "text": "rook run [--entity <id>] [--only <ids>] [--no-narrative] [--verbose] [--json]"
-      }
-    ],
-    "dateModified": "2026-08-25T16:54:35+05:30"
+    "dateModified": "2026-09-11"
   }) }}
 />
 
@@ -193,14 +100,17 @@ import VerifiedTag from '@site/src/component/verifiedTag';
 
 Before running a suite, confirm:
 
-1. The intended agent is active: `/agent`.
-2. The intended verified profile is active: `/profile list`.
-3. The target URL or command points at test or staging. Direct MCP profiles cannot currently be invoked by `/profile test` or `/run`; use an HTTP or command adapter.
-4. Required fixtures and reset behavior are ready.
-5. Required MCP verification servers are enabled and approved: `/mcp`.
-6. Scenario runnability is understood: `/scenarios list`.
-7. The budget and credit balance are sufficient: `/budget` and `/plan`.
-8. Concurrency is safe for the target's state and rate limits.
+1. The intended project is active: `/project`.
+2. The intended agent is active: `/agent`.
+3. The intended verified profile is active: `/profile`.
+4. The target URL or command points at test or staging. Review the hook scripts that implement the actual transport.
+5. Required fixtures and reset behavior are ready.
+6. Required MCP verification servers are enabled and approved: `/mcp`.
+7. Scenario runnability is understood: `/scenarios list`.
+8. The credit balance is sufficient: `/plan`.
+9. Concurrency is safe for the target's state and rate limits.
+
+Sync the reviewed project with <code>/sync</code> before a normal timeline run. Use <code>--test</code> only when you intentionally want a local experiment that will not appear in the hosted history.
 
 ## Run the Runnable Suite
 
@@ -214,7 +124,7 @@ Rook skips scenarios that cannot be attempted and groups the reasons.
 
 A partially observable scenario still runs when it can establish useful evidence. Individual criteria that cannot be checked become **Unable to Verify**.
 
-The default concurrency is `3`.
+The default concurrency is `1` unless the profile or plan selects another value. An explicit `--concurrency` accepts 1–8 and overrides that choice.
 
 ## Select Scenarios Precisely
 
@@ -306,23 +216,16 @@ The answers mean:
 
 Deny rules override allow rules, and more specific rules win. Permission state is stored globally under a per-project section, so a repository cannot grant itself permission.
 
-## Run Without a Narrative
-
-The run-level narrative summarizes patterns after all scenario verdicts are available. Skip that model call when CI needs only the structured evidence and deterministic totals:
-
-<VerifiedTag value="Verified" />
+## Run Selected Phases
 
 ```text
-/run --no-narrative
+/run --phases prepare,open,execute,close
+/run --run <run-id> --phases collect,judge
 ```
 
-The headless equivalent is:
+The second command continues the same run after delayed evidence is ready. <code>--resume</code> instead creates a new run and carries compatible completed work forward. Rook owns judging; the other phases run your profile hooks.
 
-<VerifiedTag value="Verified" />
-
-```bash
-rook run --no-narrative
-```
+See [phases and hooks](/support/docs/rook-hooks-and-phases/) for prerequisites and state. The old <code>--no-narrative</code> option is not available in 0.1.3.
 
 ## Request Root-Cause Analysis
 
@@ -337,7 +240,7 @@ Rook clusters related failures first, then investigates each cause using the ver
 <VerifiedTag value="Verified" />
 
 ```text
-.testmuai/rook/agents/<agent-id>/runs/<run-id>/remedies/
+.testmuai/rook/projects/<project-id>/agents/<agent-id>/runs/<run-id>/remedies/
 ```
 
 RCA is off by default. It consumes additional credits, and its cost depends on the number of distinct failure clusters. A remedy is an evidence-grounded hypothesis, not a verified patch.
@@ -422,16 +325,14 @@ Otherwise, keep these cases documented but exclude them from release-gating runs
 - Disable a required server and confirm the scenario names the missing capability.
 - Attempt a write when only read behavior is expected.
 
-## Headless Run Limitations
+## Headless Runs and Hosted Results
 
-Current headless syntax is:
-
-<VerifiedTag value="Verified" />
+The same selectors and lifecycle controls are available in a shell:
 
 ```bash
-rook run [--entity <id>] [--only <ids>] [--no-narrative] [--verbose] [--json]
+rook run --only SC-001 --profile staging --concurrency 1 --name smoke --json
 ```
 
-Interactive-only run controls currently include class, category, tag, concurrency, free-form selection, and `--rca`.
+Select the project and agent before running; there is no <code>--entity</code> flag. Supply reviewed permissions when running unattended. See [CI/CD](/support/docs/agent-assurance-ci-cd/) for authentication, JSON, and completion checks.
 
-For deterministic CI selection, resolve IDs before invoking `rook run --only`.
+Use <code>rook ui</code> for the [hosted Web UI](/support/docs/rook-web-ui/) or <code>rook ui --local</code> for on-disk evidence.

@@ -55,7 +55,7 @@ import { BRAND_URL } from '@site/src/component/BrandName';
       "height": 630
     },
     "inLanguage": "en",
-    "articleSection": "Agent Testing",
+    "articleSection": "Agent Assurance Platform",
     "keywords": [],
     "author": {
       "@type": "Organization",
@@ -83,7 +83,7 @@ import { BRAND_URL } from '@site/src/component/BrandName';
         "https://www.youtube.com/@TestMuAI"
       ]
     },
-    "dateModified": "2026-09-04T12:50:18+05:30"
+    "dateModified": "2026-09-11"
   }) }}
 />
 
@@ -99,17 +99,27 @@ Interactive:
 
 <VerifiedTag value="Verified" />
 
-~~~text
+```text
 /login
-~~~
+```
 
 Headless launcher:
 
 <VerifiedTag value="Verified" />
 
-~~~bash
+```bash
 rook login
-~~~
+```
+
+## Choose the Environment
+
+Public packages default to production. For [stage results](/support/docs/rook-web-ui/), set <code>export ROOK_ENV=stage</code> before signing in. Browser sessions and CLI credentials are separate; use the same account and environment in both.
+
+## Unattended Authentication
+
+Rook 0.1.3 accepts <code>LT_USERNAME</code> and <code>LT_ACCESS_KEY</code> from the shell or CI secret manager. When both are present, operations use them ahead of any stored browser login. Supplying only one is an error.
+
+<code>rook login</code> also accepts <code>--username</code>, <code>--access-key</code>, and <code>--oauth</code>. Prefer secret-manager environment injection over literal command arguments. To use a stored OAuth account consistently, unset both LT variables in that terminal; forcing OAuth login does not stop exported credentials taking precedence in later commands.
 
 ## Step-by-step
 
@@ -127,7 +137,7 @@ If a browser cannot open, follow the URL or instruction printed by the command. 
 ## Common problems
 
 - Browser opens with the wrong account: sign out there or use a separate browser profile, then retry.
-- Status still invalid: run <code>/logout</code>, then start a fresh login.
+- Status still invalid: check <code>ROOK_ENV</code> and whether exported LT credentials override the stored login before signing in again.
 - Controller unreachable: diagnose network and environment with <code>rook doctor</code>.
 
 ## Related commands

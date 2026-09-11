@@ -55,7 +55,7 @@ import { BRAND_URL } from '@site/src/component/BrandName';
       "height": 630
     },
     "inLanguage": "en",
-    "articleSection": "Agent Testing",
+    "articleSection": "Agent Assurance Platform",
     "keywords": [],
     "author": {
       "@type": "Organization",
@@ -83,7 +83,7 @@ import { BRAND_URL } from '@site/src/component/BrandName';
         "https://www.youtube.com/@TestMuAI"
       ]
     },
-    "dateModified": "2026-09-04T12:50:18+05:30"
+    "dateModified": "2026-09-11"
   }) }}
 />
 
@@ -97,9 +97,9 @@ Use <code>/generate</code> after exploration to write test scenarios for the act
 
 <VerifiedTag value="Verified" />
 
-~~~text
+```text
 /generate [options] [-- free-text instruction]
-~~~
+```
 
 The shell form is <code>rook generate</code> with the same options.
 
@@ -110,15 +110,15 @@ The shell form is <code>rook generate</code> with the same options.
 | <code>--category &lt;names&gt;</code> | Comma-separated scenario categories. |
 | <code>--force</code> | Re-derive scenarios even when feature hashes are unchanged. |
 | <code>--allow &lt;rule&gt;</code> | Pre-authorize one exact tool rule for this launch. Repeatable. |
-| <code>--json</code> | Emit machine-readable events. |
+| <code>--json</code> | Return machine-readable output for this command. |
 | <code>--verbose</code> | Show subagent activity and credits as work happens. |
 
 <VerifiedTag value="Verified" />
 
-~~~text
+```text
 /generate --total 20 --class functional,adversarial
 /generate --category boundary,reliability -- emphasize retries and duplicate requests
-~~~
+```
 
 Generation reads the current feature model, plans coverage, writes scenarios, and checks runnability. It does not invoke the live target. Unchanged features reuse their scenarios without a model call; <code>--force</code> intentionally bypasses that optimization.
 

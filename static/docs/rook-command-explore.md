@@ -6,9 +6,9 @@ Use /explore to tell Rook what local material describes your agent. The target c
 
 ## Syntax
 
-~~~text
-/explore [path] [instruction...] [--force] [--allow ] [--json] [--verbose]
-~~~
+```text
+/explore [path] [instruction...] [--force] [--allow <exact-rule>] [--json] [--verbose]
+```
 
 From a shell, replace the leading slash with rook.
 
@@ -18,34 +18,34 @@ From a shell, replace the leading slash with rook.
 | --force | Re-read even when tracked files appear unchanged. |
 | instruction... | Free-text guidance about what to emphasize or ignore. |
 | --allow &lt;rule&gt; | Pre-authorize one exact tool rule for this launch. Repeatable. |
-| --json | Emit machine-readable events. |
+| --json | Return machine-readable output for this command. |
 | --verbose | Include tool activity and credit-use details. |
 
 ## Real-world examples
 
 PRD only:
 
-~~~text
+```text
 /explore docs/refund-agent-prd.md
-~~~
+```
 
 PRD and knowledge base:
 
-~~~text
+```text
 /explore docs focus on PRD.md and knowledge, and treat them as intended behavior
-~~~
+```
 
 Source workspace:
 
-~~~text
+```text
 /explore services/travel-agent
-~~~
+```
 
 Headless:
 
-~~~bash
+```bash
 rook explore docs/refund-agent-prd.md focus on refund approval rules --json
-~~~
+```
 
 ## Step-by-step
 

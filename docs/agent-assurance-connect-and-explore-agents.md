@@ -51,7 +51,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
       "height": 630
     },
     "inLanguage": "en",
-    "articleSection": "Agent Testing",
+    "articleSection": "Agent Assurance Platform",
     "keywords": [
       "rook explore agent",
       "connect ai agent",
@@ -84,128 +84,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
         "https://www.youtube.com/@TestMuAI"
       ]
     },
-    "hasPart": [
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "Start Rook from the repository root and run",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "text",
-        "text": "/explore ."
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "The headless equivalent is",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "Shell",
-        "text": "rook explore ."
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "Use a narrower path when a monorepo contains a specific agent package",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "text",
-        "text": "/explore packages/travel-agent"
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "Put free-form guidance after --",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "text",
-        "text": "/explore . -- focus on the refund approval threshold and identity checks"
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "In headless mode",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "Shell",
-        "text": "rook explore . \\\n  --instruction \"focus on the refund approval threshold and identity checks\""
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "Use --force after a substantial change or when you want to ignore the incremental freshness check",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "text",
-        "text": "/explore --force"
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "Create a clean directory containing the material you are authorized to share",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "text",
-        "text": "travel-agent-spec/\n  PRD.md\n  policies.md\n  api-examples.md\n  fixtures/"
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "Start Rook inside that directory",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "Shell",
-        "text": "cd travel-agent-spec\nrook"
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "Then run",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "text",
-        "text": "/explore . -- the deployed agent is a multi-turn travel planner"
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "Clone the repository, enter the checkout, and run Rook locally",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "Shell",
-        "text": "git clone https://github.com/<owner>/<repository>.git\ncd <repository>\nrook"
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "Then",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "text",
-        "text": "/explore ."
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "For a pull request, check out the exact head you want to test",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "Shell",
-        "text": "gh repo clone <owner>/<repository>\ncd <repository>\ngh pr checkout <number>\nrook"
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "You can explicitly point interactive Rook at a directory outside the current workspace",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "text",
-        "text": "/explore ../another-agent"
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "Interactive commands",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "text",
-        "text": "/agent\n/agent use <id>\n/agent rm <id>"
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "Headless commands",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "Shell",
-        "text": "rook agent list\nrook agent list --json\nrook agent use <id>"
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "For automation, use --all",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "Shell",
-        "text": "rook explore . --all --json"
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "Use --allow only for a narrowly reviewed tool call",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "Shell",
-        "text": "rook explore . --allow 'bash(npm test)'"
-      }
-    ],
-    "dateModified": "2026-08-25T16:54:35+05:30"
+    "dateModified": "2026-09-11"
   }) }}
 />
 
@@ -262,6 +141,8 @@ Rook can identify agents from evidence including:
 
 Discovery does not invent missing facts. If a tool's write behavior cannot be established, Rook records it as unknown rather than guessing from its name.
 
+Before discovery, select the environment and project with <code>rook project</code>. For the [stage Web UI](/support/docs/rook-web-ui/), set <code>ROOK_ENV=stage</code> before authentication and project operations.
+
 ## Give Exploration Extra Context
 
 Put free-form guidance after `--`:
@@ -278,7 +159,7 @@ In headless mode:
 
 ```bash
 rook explore . \
-  --instruction "focus on the refund approval threshold and identity checks"
+  -- "focus on the refund approval threshold and identity checks"
 ```
 
 The instruction guides the discovery model, but it does not widen the filesystem scope.
@@ -401,7 +282,6 @@ Interactive commands:
 ```text
 /agent
 /agent use <id>
-/agent rm <id>
 ```
 
 Headless commands:
@@ -409,21 +289,21 @@ Headless commands:
 <VerifiedTag value="Verified" />
 
 ```bash
-rook agent list
-rook agent list --json
+rook agent
+rook agent
 rook agent use <id>
 ```
 
-`/agent rm` forgets the agent and everything stored below its project record. Review the target ID carefully before using it.
+The current command lists or selects agents; it does not provide an `rm` subcommand.
 
 ## Explore All Discovered Agents in Headless Mode
 
-The interactive flow asks which candidates to register. For automation, use `--all`:
+Select a project before discovery. For automation, supply focused guidance and explicit, reviewed permissions; the older `--all` flag is not available:
 
 <VerifiedTag value="Verified" />
 
 ```bash
-rook explore . --all --json
+rook explore . --json -- "discover the agents in this reviewed workspace"
 ```
 
 Use `--allow` only for a narrowly reviewed tool call:

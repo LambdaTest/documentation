@@ -6,14 +6,14 @@ Rook reaches an agent through **hooks**: scripts assigned to named points in a f
 
 A profile must define an execute hook. The other hooks are optional. Rook owns their order; your scripts own how each phase talks to the target.
 
-~~~text
+```text
 prepare                         once per run
-  open                          once per scenario
-    execute × N                 once per turn
-  close                         once per scenario
-  collect                       once per scenario
-  judge                         Rook evaluates the recorded result
-~~~
+open                          once per scenario
+execute × N                 once per turn
+close                         once per scenario
+collect                       once per scenario
+judge                         Rook evaluates the recorded result
+```
 
 ## Run and Hook Phases
 
@@ -32,29 +32,29 @@ judge is a Rook-owned run phase, not a user hook. The other five phases can map 
 
 Hook paths are relative to the active agent's directory unless you provide an absolute path.
 
-~~~yaml
+```yaml
 id: refund-staging
 name: Refund staging
 hooks:
-  prepare: scripts/refund-agent.mjs
-  open: scripts/refund-agent.mjs
-  execute:
-    script: scripts/refund-agent.mjs
-    timeout_seconds: 300
-  close: scripts/refund-agent.mjs
-  collect:
-    script: scripts/refund-agent.mjs
-    delay_seconds: 60
-    timeout_seconds: 120
+prepare: scripts/refund-agent.mjs
+open: scripts/refund-agent.mjs
+execute:
+script: scripts/refund-agent.mjs
+timeout_seconds: 300
+close: scripts/refund-agent.mjs
+collect:
+script: scripts/refund-agent.mjs
+delay_seconds: 60
+timeout_seconds: 120
 env:
-  - variable: REFUND_API_TOKEN
-    purpose: Calls the staging refund agent
+- variable: REFUND_API_TOKEN
+purpose: Calls the staging refund agent
 capabilities:
-  multi_turn: true
-  calls: true
-  usage: true
+multi_turn: true
+calls: true
+usage: true
 concurrency: 1
-~~~
+```
 
 Use /profile add to have Rook generate and verify this profile and its scripts from a prompt, cURL command, command line, integration note, file, or URL. You can inspect and edit the generated files afterward.
 
@@ -62,9 +62,9 @@ Use /profile add to have Rook generate and verify this profile and its scripts f
 
 Rook invokes a hook as:
 
-~~~text
-node
-~~~
+```text
+node <script> <phase>
+```
 
 The phase name is the only argument. Context arrives through ROOK_* environment variables:
 
@@ -85,18 +85,18 @@ The scenario goal is sent on standard input during execute only. This avoids pla
 
 Write progress and diagnostics to standard error. Standard output must contain one JSON object when a phase returns data.
 
-~~~json
+```json
 {
-  "output": "Your refund was approved.",
-  "conversation": "thread_abc123",
-  "usage": { "input": 1200, "output": 340 },
-  "calls": [
-    { "name": "issue_refund", "arguments": { "order": "ORD-1042" } }
-  ]
+"agent_reply": "Your refund was approved.",
+"conversation": "thread_abc123",
+"usage": { "input": 1200, "output": 340 },
+"calls": [
+{ "name": "issue_refund", "arguments": { "order": "ORD-1042" } }
+]
 }
-~~~
+```
 
-- output is required from execute and is the answer Rook judges.
+- agent_reply is required from execute and is the answer Rook judges.
 - conversation allows later turns and phases to continue the same target session.
 - usage enables token-economy scenarios when the target exposes counts.
 - calls enables tool-call assertions. Return calls: [] when you observed that no calls occurred; omitting it means calls were not observable.
@@ -114,19 +114,19 @@ Rook also writes each completed hook result to the run directory as it happens. 
 
 Use phase selection when evidence becomes available after the agent responds:
 
-~~~bash
+```bash
 rook run --phases prepare,open,execute,close
 # Wait for the trace or log pipeline.
-rook run --run  --phases collect,judge
-~~~
+rook run --run <run-id> --phases collect,judge
+```
 
 --run continues the same run in place. --resume creates a new run and carries compatible completed work forward.
 
 You can also omit a suffix:
 
-~~~bash
+```bash
 rook run --skip collect,judge
-~~~
+```
 
 Selections follow the fixed lifecycle order. Rook refuses a hole such as prepare,close when it would skip a defined prerequisite between the selected phases.
 

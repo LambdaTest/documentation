@@ -55,7 +55,7 @@ import { BRAND_URL } from '@site/src/component/BrandName';
       "height": 630
     },
     "inLanguage": "en",
-    "articleSection": "Agent Testing",
+    "articleSection": "Agent Assurance Platform",
     "keywords": [],
     "author": {
       "@type": "Organization",
@@ -83,7 +83,7 @@ import { BRAND_URL } from '@site/src/component/BrandName';
         "https://www.youtube.com/@TestMuAI"
       ]
     },
-    "dateModified": "2026-09-04T12:50:18+05:30"
+    "dateModified": "2026-09-11"
   }) }}
 />
 
@@ -97,11 +97,11 @@ Use <code>/report</code> to read a stored run from disk. Without a run ID, Rook 
 
 <VerifiedTag value="Verified" />
 
-~~~text
+```text
 /report [run-id]
 /report [run-id] --rca
 /report [run-id] --rca --allow '<rule>'
-~~~
+```
 
 The shell form is <code>rook report</code> with the same argument and options.
 
@@ -112,3 +112,10 @@ Use repeatable <code>--allow</code> rules only when an RCA verifier needs a revi
 ## Related Commands
 
 [Results and evidence](/support/docs/agent-assurance-results-and-evidence/) · [<code>/run</code>](/support/docs/rook-command-run/) · [<code>/ui</code>](/support/docs/rook-command-ui/)
+
+
+## Automation and Hosted Review
+
+Use <code>rook report &lt;run-id&gt; --json</code> to read the structured local report. Successful command completion means the report was read, not that the agent passed. Inspect its totals and the run’s completion using the [CI checks](/support/docs/agent-assurance-ci-cd/).
+
+Use <code>rook ui</code> to open synchronized results in the [Web UI](/support/docs/rook-web-ui/) or <code>rook ui --local</code> for the files on this machine.

@@ -63,7 +63,7 @@ import { BRAND_URL } from '@site/src/component/BrandName';
       "height": 630
     },
     "inLanguage": "en",
-    "articleSection": "Agent Testing",
+    "articleSection": "Agent Assurance Platform",
     "keywords": [
       "rook environment variables",
       "rook secrets",
@@ -96,30 +96,7 @@ import { BRAND_URL } from '@site/src/component/BrandName';
         "https://www.youtube.com/@TestMuAI"
       ]
     },
-    "hasPart": [
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "Manage Local Values",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "Shell",
-        "text": "rook env list\nrook env set '{\"API_KEY\":\"sk-...\",\"BASE_URL\":\"https://staging.example.com\"}'\nrook env show API_KEY\nrook env rm API_KEY"
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "Profile Declaration",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "YAML",
-        "text": "env:\n  - variable: API_KEY\n    purpose: read-only token for the staging support API\n  - variable: BASE_URL\n    purpose: environment to test"
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "Set ROOK_HOME when a process should not share credentials or local values",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "Shell",
-        "text": "export ROOK_HOME=\"$RUNNER_TEMP/rook\"\nrook auth status"
-      }
-    ],
-    "dateModified": "2026-09-04T12:50:18+05:30"
+    "dateModified": "2026-09-11"
   }) }}
 />
 
@@ -145,7 +122,7 @@ rook env rm API_KEY
 | `env show` | Prints one value in full; take care with terminals and logs. |
 | `env rm` | Removes the local value. |
 
-Values are stored in `~/.testmuai/rook/env.json`, outside the repository. A profile refers to a value as `${API_KEY}` and `rook profile show` displays the reference instead of expanding the secret.
+Values are stored below the global Rook home, outside the repository, and scoped to the workspace’s absolute path. Shell-exported values override stored values. A generated hook reads `process.env.API_KEY`; its profile lists the variable name and purpose.
 
 ## Profile Declaration
 
@@ -172,7 +149,7 @@ Before spending a run, Rook checks that every value declared by the profile is a
 
 ## Shared Authentication
 
-Authentication is global for processes using the same Rook home:
+Stored OAuth authentication is shared by processes using the same Rook home, profile, and environment:
 
 - several terminals share one sign-in;
 - logout in one terminal is observed by the others;
@@ -180,7 +157,9 @@ Authentication is global for processes using the same Rook home:
 - token renewal is serialized so concurrent terminals converge on the same refreshed token;
 - an interrupted run is saved where it stopped and is not automatically resumed after login.
 
-Rook never signs in silently.
+For unattended use, inject <code>LT_USERNAME</code> and <code>LT_ACCESS_KEY</code> through your secret manager. Rook uses this pair ahead of stored OAuth credentials. A different <code>ROOK_HOME</code> does not isolate credentials already exported in the shell.
+
+Set <code>ROOK_ENV=stage</code> before authentication and project operations for the [stage Web UI](/support/docs/rook-web-ui/). This does not change the endpoint your target-agent hook calls.
 
 ## Isolate Rook State
 

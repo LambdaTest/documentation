@@ -55,7 +55,7 @@ import { BRAND_URL } from '@site/src/component/BrandName';
       "height": 630
     },
     "inLanguage": "en",
-    "articleSection": "Agent Testing",
+    "articleSection": "Agent Assurance Platform",
     "keywords": [],
     "author": {
       "@type": "Organization",
@@ -83,13 +83,13 @@ import { BRAND_URL } from '@site/src/component/BrandName';
         "https://www.youtube.com/@TestMuAI"
       ]
     },
-    "dateModified": "2026-09-04T12:50:18+05:30"
+    "dateModified": "2026-09-11"
   }) }}
 />
 
 # <code>/auth</code> Command
 
-Use <code>/auth</code> to verify stored credentials against the Rook controller.
+Use <code>/auth</code> to verify the effective credentials against the Rook controller.
 
 <img loading="lazy" src={require('../assets/images/rook/commands/rook-command-auth.png').default} alt="Rook auth command help showing the status subcommand" className="doc_img"/>
 
@@ -97,40 +97,40 @@ Use <code>/auth</code> to verify stored credentials against the Rook controller.
 
 <VerifiedTag value="Verified" />
 
-~~~text
+```text
 /auth
 /auth status
-~~~
+```
 
 Headless:
 
 <VerifiedTag value="Verified" />
 
-~~~bash
+```bash
 rook auth status
 rook whoami
-~~~
+```
 
 <code>/auth</code> and <code>/auth status</code> perform the same status check. <code>rook whoami</code> is the convenient headless alias.
 
 ## Step-by-step
 
 1. Run <code>/auth status</code>.
-2. Confirm that the stored credential is valid.
+2. Confirm that the effective credentials and environment are correct.
 3. If invalid, use <code>/login</code>.
 4. Run the status check again.
 
 ## State and privacy
 
-The status check reads the stored token and verifies it remotely. It does not print the token or change project data. Use <code>rook whoami</code> when you also want to see the authenticated identity.
+The status check verifies the effective authentication remotely. Exported <code>LT_USERNAME</code> and <code>LT_ACCESS_KEY</code> take precedence over a stored token. It does not print the token or change project data. Use <code>rook whoami</code> when you also want to see the authenticated identity.
 
-Authentication is global to the Rook home on this machine, not scoped to one agent workspace.
+Stored authentication is shared by sessions using the same Rook home, profile, and environment, not scoped to one agent workspace. See [login](/support/docs/rook-command-login/) for stage and unattended authentication.
 
 ## Common problems
 
 - Expired or revoked token: sign in again.
 - Controller unreachable: run <code>/doctor</code> and check network access.
-- Wrong account: run <code>/logout</code>, then <code>/login</code> with the intended account.
+- Wrong account: check exported LT credentials and the selected environment before changing stored login.
 
 ## Related commands
 
