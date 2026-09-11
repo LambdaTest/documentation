@@ -1,0 +1,122 @@
+# TestMu AI (Formerly LambdaTest) Documentation: Test Analytics and Test Manager
+
+> Test Insights dashboards, AI-native Test Intelligence for flaky test detection, and the Test Manager case and run lifecycle.
+
+Each link below points to the plain-Markdown copy at `/support/docs/<slug>.md`.
+
+Docs index: https://www.testmuai.com/support/docs/llms.txt
+All docs: https://www.testmuai.com/support/docs/llms-full.txt
+Site index: https://www.testmuai.com/llms.txt
+All site pages: https://www.testmuai.com/llms-full.txt
+Agent instructions: https://www.testmuai.com/agents.md
+Sitemap: https://www.testmuai.com/support/sitemap.xml
+
+## Test Analytics and Test Manager
+
+- [AI Native Test Intelligence For Advance Test Analysis](https://www.testmuai.com/support/docs/test-intelligence-overview.md): Test Intelligence is an AI Native analytics module that helps you to identify the flaky tests in your test suite. It provides you with the list of tests that are flaky and the reason behind the flakiness of the test.
+- [AI Root Cause Analysis (AI RCA) - Test Intelligence](https://www.testmuai.com/support/docs/analytics-ai-root-cause-analysis.md): Automatically analyze test failures with AI-powered Root Cause Analysis. Get instant insights into test failure patterns and accelerate debugging with actionable RCA results.
+- [Allure Test Insights with HyperExecute](https://www.testmuai.com/support/docs/analytics-allure-api-widgets.md): Test Insights by executing test cases using the Allure report with HyperExecute
+- [Analytics](https://www.testmuai.com/support/docs/analytics-faqs.md): Analytics - FAQs
+- [Analytics Dashboard AI CoPilot](https://www.testmuai.com/support/docs/analytics-dashboard-copilot.md): AI CoPilot - an AI agent that analyzes your test data, answers questions and builds Analytics dashboard widgets from plain language
+- [Analytics Dashboard Features to manage your data](https://www.testmuai.com/support/docs/analytics-dashboard-features.md): Analytics - Dashboard Features for managing your data and setting up the dashboard
+- [Analytics Dashboard Pre-built templates](https://www.testmuai.com/support/docs/analytics-dashboard-templates.md): Discover Dashboard Templates for streamlined test analysis. Save time with pre-built widgets tailored to specific testing needs. Learn more
+- [Analytics Dashboard Settings](https://www.testmuai.com/support/docs/analytics-dashboard-settings.md): Customize your Analytics Dashboard settings for optimal test analysis. Learn how to adjust settings to fit your testing needs.
+- [Analytics Drill-Down Widgets - Export Data Options](https://www.testmuai.com/support/docs/analytics-widget-drill-down-export.md): Export detailed testing analytics from TestMu AI's Drill-Down widgets to CSV, Excel, or PDF. Share insights, collaborate, and optimize testing processes effectively.
+- [Analytics Modules - Jobs & Tests Overview](https://www.testmuai.com/support/docs/analytics-modules-hyperexecute.md): Analytics Modules - HyperExecute
+- [Analytics Widgets - Filter by Regex](https://www.testmuai.com/support/docs/analytics-widget-filter-by-regex.md): Filter all the data with Regex patterns to get insights on your test runs. Learn how to use Regex in the analytics widget.
+- [App Profiling Comparison](https://www.testmuai.com/support/docs/insights-app-profiling-comparison.md): Overlay up to five App Profiling test sessions on a shared elapsed-time axis, set a baseline run and read per-metric deltas, Avg, Min, Max and P90.
+- [App Profiling Insights](https://www.testmuai.com/support/docs/insights-app-profiling.md): App Profiling Insights surfaces CPU, memory, FPS, battery, network and startup metrics per device and build, with p90 views, session Comparison and SLA alerts.
+- [Archive and Restore Test Cases in Test Manager](https://www.testmuai.com/support/docs/test-case-archive.md): Archive test cases in Test Manager to retire them from your active repository without deleting them, review them in the read-only Archived view, and restore them unchanged.
+- [Bar and Line Chart Widgets](https://www.testmuai.com/support/docs/analytics-bar-line-widgets.md): Learn how to create and configure Bar and Line chart widgets to visualize test data trends, comparisons, and patterns over time or across categories.
+- [Build Comparison - Compare Test Builds and Track Regressions](https://www.testmuai.com/support/docs/analytics-build-comparison.md): Compare two builds side by side to identify new failures, fixed tests, and stability changes across your test suite
+- [Build Insights - Analyze your test builds and get build level insights](https://www.testmuai.com/support/docs/analytics-build-insights.md): Analytics - Builds Insights for analyzing test results and build health over time
+- [Bulk Update Fields](https://www.testmuai.com/support/docs/bulk-update-fields.md): Learn how to Bulk update system & custom fields.
+- [Command Logs Analytics with Test Intelligence](https://www.testmuai.com/support/docs/analytics-modules-test-intelligence-command-logs-analytics.md): A Explore TestMu AI's powerful Analytics Modules for comprehensive test intelligence and command logs analytics. Elevate your testing efficiency today.
+- [Concurrency Usage Insights](https://www.testmuai.com/support/docs/analytics-modules-resource-utilization.md): Optimize resource use with TestMu AI's Concurrency Usage Insights. Monitor concurrency trends at Org, Group, SubOrg levels and track custom concurrency with custom KPIs.
+- [Copy and Move Support for Test Cases](https://www.testmuai.com/support/docs/copy-and-move-support-for-test-cases.md): Learn how to efficiently copy and move test cases within TestMu AI, streamlining your testing process and enhancing organization across multiple projects.
+- [Create & Manage Test Cases](https://www.testmuai.com/support/docs/manual-test-case-creation.md): Learn efficient manual test case creation with TestMu AI's Test Manager, streamlining testing processes and enhancing test execution.
+- [Create Modules](https://www.testmuai.com/support/docs/create-modules.md): Guide for creating & editing Modules in Test Manager through Modules page.
+- [Create Projects](https://www.testmuai.com/support/docs/create-projects.md): Create projects seamlessly with TestMu AI's Test Manager, streamlining your testing processes and ensuring efficient management of all your test activities.
+- [Creating your first Dashboard using TestMu AI Analytics](https://www.testmuai.com/support/docs/analytics-create-dashboard.md): Analytics - Overview
+- [Cucumber Report](https://www.testmuai.com/support/docs/cucumber-report.md): Learn how to generate Cucumber Report on TestMu AI and download the reports from the dashboard
+- [Custom Specflow Report](https://www.testmuai.com/support/docs/custom-speclow-report.md): Custom specflow report
+- [Custom Widgets in TestMu AI Analytics Dashboards](https://www.testmuai.com/support/docs/dashboards-custom-widgets.md): A powerful tool to visualize your test data and gain insights into your testing process.
+- [Defect Analysis and Prediction](https://www.testmuai.com/support/docs/defect-analysis-prediction.md): Leverage AI-powered defect analysis and prediction capabilities on TestMu AI to detect flaky tests, classify failures, identify root causes, and proactively improve test suite reliability.
+- [Error Insights](https://www.testmuai.com/support/docs/analytics-modules-error-insights.md): Analytics Modules - Error Insights
+- [Export Test Cases](https://www.testmuai.com/support/docs/export-test-cases.md): Export multiple test cases with the export to csv option for easy download, tracking, and sharing.
+- [Extent Report](https://www.testmuai.com/support/docs/extent-report.md): Learn how to generate Extent Report on TestMu AI and download the reports from the dashboard
+- [Failure Categorization AI - Test Intelligence](https://www.testmuai.com/support/docs/analytics-test-failure-classification.md): TestMu AI Analytics uses Failure Categorization AI to classify test failures into different categories. This helps in identifying the root cause of failures and improving test automation efficiency.
+- [Filter by Custom Data](https://www.testmuai.com/support/docs/analytics-filter-by-custom-data.md): Learn how to filter analytics data by custom attributes on TestMu AI to track and analyze your testing metrics more effectively.
+- [Find and Remove Duplicate Test Cases in Test Manager](https://www.testmuai.com/support/docs/test-case-deduplication.md): Scan a Test Manager project for duplicate test cases with AI, review each match side by side, and delete the duplicates you no longer need.
+- [Flaky Test Analytics with Test Intelligence](https://www.testmuai.com/support/docs/analytics-modules-test-intelligence-flaky-test-analytics.md): Analyze your flaky tests with Test Intelligence and get insights on the flaky tests that are causing your test runs to fail.
+- [Generate and Run Salesforce Test Cases with Test Manager](https://www.testmuai.com/support/docs/test-manager-salesforce-app.md): Generate and run test cases for your Salesforce flows with Test Manager on TestMu AI, an AI test case generator installed from Salesforce AgentExchange.
+- [Generate Test Cases with AI](https://www.testmuai.com/support/docs/generate-test-cases-with-ai.md): Learn efficient test case generation with in TestMu AI's Test Manager using AI, in manual steps or BDD (Gherkin) format.
+- [Heatmap Widgets](https://www.testmuai.com/support/docs/analytics-heatmap-widgets.md): Learn how to create and configure Heatmap widgets to visualize test data patterns and generate meaningful insights across browsers, resolutions, and other dimensions.
+- [Import Test Cases from CSV](https://www.testmuai.com/support/docs/csv-import.md): Simplify your csv import with TestMu AI's Test Manager. Create new test cases or update existing ones from a CSV file, with a new version recorded for every change.
+- [Insights Best Practices](https://www.testmuai.com/support/docs/insights-best-practices.md): Best practices for using TestMu AI Insights dashboards, widgets, and insights modules to maximize value and drive data-driven testing decisions.
+- [Insights Dashboard](https://www.testmuai.com/support/docs/insights-dashboard.md): Manage system and custom fields in TestMu AI's Test Manager, enhancing test case organization and streamlining processes with detailed fields and values.
+- [JUnit XML Report](https://www.testmuai.com/support/docs/junit-xml-report.md): Generate a consolidated JUnit XML report with HyperExecute. Track test results, including pass/fail statuses, with easy-to-follow configuration steps
+- [Karate Report](https://www.testmuai.com/support/docs/karate-report.md): Learn how to configure and generate Karate test execution reports on HyperExecute with step-by-step guidance for seamless test insights and reporting.
+- [Link Azure DevOps Issues with Test Manager](https://www.testmuai.com/support/docs/link-ado-issues-with-test-manager.md): Effortlessly link Azure DevOps issues with Test Manager using TestMu AI to streamline workflows and enhance project management efficiency.
+- [Link Jira Issues with Test Manager](https://www.testmuai.com/support/docs/link-jira-issues-with-test-manager.md): Effortlessly link Jira issues with Test Manager using TestMu AI to streamline workflows and enhance project management efficiency.
+- [Link Linear Issues with Test Manager](https://www.testmuai.com/support/docs/link-linear-issues-with-test-manager.md): Link Linear issues to test cases, test runs, test run instances, and steps in Test Manager, view live issue details, and unlink them when the defect no longer applies.
+- [Linking Automated Test Cases to Test Manager](https://www.testmuai.com/support/docs/automated-test-cases-linked-using-capability.md): Link automated tests to Test Manager with Test Case IDs for better traceability. Supported on HyperExecute and Web Automation. Streamline your workflows!
+- [Managing Automated Tests with Test Manager](https://www.testmuai.com/support/docs/automated-test-cases-with-ai.md): Streamline testing with Test Manager! Manage automated tests, auto-generate BDD scenarios, and link automation runs seamlessly for Selenium Web frameworks.
+- [Manual Linking of Automation Runs with Test Manager](https://www.testmuai.com/support/docs/automated-test-cases-linked-using-dashboard.md): Effortlessly link test cases manually with Test Manager. Create, link, or raise bugs directly, and sync issues with Jira for streamlined test management.
+- [Migrating from Zephyr Enterprise to Test Manager](https://www.testmuai.com/support/docs/migrate-from-zephyr-enterprise.md): Move your test case library from Zephyr Enterprise into TestMu AI Test Manager using CSV import, with a full field and structure mapping reference.
+- [Milestones - Creation and Management](https://www.testmuai.com/support/docs/milestone-creation-and-management.md): Check the milestones - datasets, test run and
+- [Modules in Manual Testcases](https://www.testmuai.com/support/docs/modules-in-manual-testcases.md): Guide for linking Modules with Manual Testcases in Test Manager.
+- [Native Extent Report](https://www.testmuai.com/support/docs/native-extent-report.md): Learn how to generate Native Extent Report on TestMu AI and download the reports from the dashboard
+- [One Click Migration from qTest](https://www.testmuai.com/support/docs/one-click-migration-from-qtest.md): Migrate your test cases, folder structures, custom fields, attachments, and linked Jira requirements from qTest to TestMu AI Test Manager in a single click.
+- [One Click Migration from TestRail](https://www.testmuai.com/support/docs/one-click-migration-from-testrail.md): Effortlessly migrate from TestRail to TestMu AI with our one-click migration guide. Simplify the process and enhance your testing capabilities in minutes.
+- [One Click Migration from X-Ray](https://www.testmuai.com/support/docs/one-click-migration-from-xray.md): Migrate your test cases, attachments, and custom fields from X-Ray (Jira Cloud) to TestMu AI Test Manager in a single click.
+- [One Click Migration from Zephyr Scale](https://www.testmuai.com/support/docs/one-click-migration-from-zephyr-scale.md): Migrate your test cases, folders, embedded screenshots, and custom fields from Zephyr Scale (Jira Cloud) to TestMu AI Test Manager in a single click.
+- [Private Desktop Insights](https://www.testmuai.com/support/docs/insights-private-desktop.md): Discover TestMu AI's Private Desktop Insights for comprehensive test cases insights. Optimize your testing efforts today.
+- [Private Real Devices Insights](https://www.testmuai.com/support/docs/insights-private-real-devices.md): Discover TestMu AI's Private Real Devices Insights for comprehensive test cases insights. Optimize your testing efforts today.
+- [Projects](https://www.testmuai.com/support/docs/analytics-project-report.md): In-depth guide to the Project Analytics Dashboard, including detailed feature descriptions, widgets, workflows, C-Suite reporting, and best practices for maximizing test insights.
+- [Realtime & Real-Device Modules](https://www.testmuai.com/support/docs/analytics-modules-manual-test-overview.md): A complete guide to understanding TestMu AI Analytics! Optimize your testing process with widgets for Browser & App Testing - OS, Browser, Device, and Trends.
+- [Reports](https://www.testmuai.com/support/docs/tms-reports.md): View & Download the Execution & Traceability reports for Test Instances execution.
+- [Robot Report](https://www.testmuai.com/support/docs/robot-report.md): Learn how to configure and generate Robot test execution reports on HyperExecute with step-by-step guidance for seamless test insights and reporting.
+- [Schedule Analytics Widget Reports](https://www.testmuai.com/support/docs/analytics-report-scheduling.md): Customize the delivery time for your analytics widget reports. Schedule reports at your preferred time for timely business insights.
+- [Smart Tags - Test Intelligence](https://www.testmuai.com/support/docs/analytics-smart-tags-test-intelligence.md): Analyze tests faster with Smart Tags in TestMu AI Analytics. Get insights on your test automation execution with Smart Tags.
+- [SmartUI Analytics - Visual Regression Testing Insights](https://www.testmuai.com/support/docs/analytics-modules-smartui-analytics.md): Discover TestMu AI's SmartUI Analytics widgets for comprehensive visual regression testing insights. Optimize your visual testing efforts today.
+- [SpecFlow Report](https://www.testmuai.com/support/docs/specflow-report.md): Learn how to generate SpecFlow Report on TestMu AI and download the reports from the dashboard
+- [Sub Organizations Insights](https://www.testmuai.com/support/docs/analytics-sub-organization-widgets.md): A comprehensive guide to understanding test health and trends module. Explore widgets for Test Status, Browser, OS Distribution and more.
+- [Sync Test Instances in Manual Test Runs](https://www.testmuai.com/support/docs/sync-test-instance.md): Learn how to sync test instances in manual test runs with the latest master test case version in TestMu AI Test Manager.
+- [System and Custom Fields](https://www.testmuai.com/support/docs/system-and-custom-fields.md): Learn about TestMu AI's system and custom Fields feature for test project organization. Explore System Fields and create Custom Fields to enhance your testing workflows.
+- [Table Widgets](https://www.testmuai.com/support/docs/analytics-table-widgets.md): Learn how to create and configure Table widgets to display structured test data in tabular format with multiple columns, aggregations, and grouping options.
+- [Test Case Insights](https://www.testmuai.com/support/docs/analytics-test-case-insights.md): Gain insights into test case execution and performance with TestMu AI's analytics to optimize your testing strategy and enhance software quality.
+- [Test Case Versioning](https://www.testmuai.com/support/docs/test-case-versioning.md): Learn efficient manual test case versioning with TestMu AI's Test Manager.
+- [Test Insights - Advanced insights for analyzing test runs](https://www.testmuai.com/support/docs/analytics-test-insights.md): Analytics - Tests Insights for analyzing the past results with the latest test runs
+- [Test Instance Audit Logs](https://www.testmuai.com/support/docs/test-instance-audit-logs.md): See every thing you update in a test instance through Audit Logs.
+- [Test Intelligence - Command Error Logs Analytics](https://www.testmuai.com/support/docs/test-intelligence-command-error-logs-analytics.md): Analyze your failed tests with Test Intelligence and get insights on the errors that are causing your test runs to fail.
+- [Test Intelligence - Flaky Test Detection](https://www.testmuai.com/support/docs/test-intelligence-flakiness-test-detection.md): Flaky Test Detection helps you to identify the flaky tests in your test suite. It provides you with the list of tests that are flaky and the insights over the flakiness of the test.
+- [Test Logs](https://www.testmuai.com/support/docs/test-logs.md): Test Logs is a library where you can find logs of all cross browser testing performed by you on TestMu AI.
+- [Test Manager | TestMu AI Documentation](https://www.testmuai.com/support/docs/test-manager.md): Test Manager is TestMu AI's AI-native test management platform. Create, organize, execute, and report on manual and automated tests from one workspace.
+- [Test Manager Dashboard Widgets](https://www.testmuai.com/support/docs/analytics-modules-test-manager-widgets.md): Discover TestMu AI's Test Manager Analytics widgets for comprehensive test cases insights. Optimize your testing efforts today.
+- [Test Overview Widgets](https://www.testmuai.com/support/docs/analytics-widgets-tests-overview-landing.md): Compare Test Overview widgets across TestMu AI products - Web Automation, App Automation, HyperExecute and Realtime - and jump to the metrics for each.
+- [Test Run - Creation and Management](https://www.testmuai.com/support/docs/test-run-creation-and-management.md): Gain insights into effective Test Run Creation with TestMu AI, designed to streamline your workflow.
+- [TestMu AI - Test Insights for visualizing your tests runs](https://www.testmuai.com/support/docs/analytics-overview.md): Optimize test management with Test Insights. Visualize test runs, track progress, and improve quality with actionable analytics. Enhance testing efficiency.
+- [TestMu AI Analytics - Customizing Your Dashboard with the New Widget Management Feature](https://www.testmuai.com/support/docs/analytics-dashboard-edit-layout.md): Enhance Your Analytics Dashboard Edit Layout with TestMu AI's Widget Management Feature Customizing Layout for Improved Insights
+- [TestMu AI Azure DevOps App](https://www.testmuai.com/support/docs/testmu-azure-devops-app.md): Efficiently manage your tests with TestMu AI Azure DevOps App, seamlessly integrating Test Manager capabilities into your Azure DevOps environment to enhance collaboration.
+- [TestMu AI Jira App](https://www.testmuai.com/support/docs/testmu-jira-app.md): Efficiently manage your tests with TestMu AI Jira App, seamlessly integrating Test Manager capabilities into your Jira environment to enhance collaboration.
+- [Time Insights](https://www.testmuai.com/support/docs/analytics-test-time-trends.md): Monitor and optimize test environment setup times with TestMu AI's Setup Time Insights module. Analyze trends, compare across platforms, and receive AI-driven optimization recommendations
+- [Track Bugs and Issues in Test Runs](https://www.testmuai.com/support/docs/track-issues-in-test-runs.md): Connect failing tests to tracked defects by linking Jira, Azure DevOps, and Linear issues to test instances in a Test Manager Test Run, and view every issue raised across the run.
+- [Understanding Unique Test Instances and Retry Detection](https://www.testmuai.com/support/docs/analytics-unique-instances-retry-detection.md): Discover how LambdaTest Analytics intelligently detects unique test instances and consolidates retry attempts for precision test reporting
+- [Usage insights for Groups](https://www.testmuai.com/support/docs/analytics-modules-groups.md): Explore TestMu AI's powerful Analytics Modules for comprehensive test intelligence and groups insights. Elevate your testing efficiency today.
+- [Usage Report](https://www.testmuai.com/support/docs/insights-usage-report.md): Discover TestMu AI's Usage Report for comprehensive test cases insights. Optimize your testing efforts today.
+- [Web & App Automation Modules](https://www.testmuai.com/support/docs/analytics-modules-automation-test-overview.md): A detailed guide to understanding the test health and trends module. Explore widgets for Test Status, Browser, OS Distribution, and more.
+- [Widgets](https://www.testmuai.com/support/docs/analytics-widgets.md): Browse every TestMu AI Analytics widget - Concurrency Usage, Error Insights, Flaky Tests AI and product widgets for Web, App, HyperExecute and Real Device.
+
+## Other Product Indexes
+
+- [KaneAI and Kane CLI](https://www.testmuai.com/support/docs/llms/kane.txt): 141 documents.
+- [Agent Testing, MCP Server, and Browser Cloud](https://www.testmuai.com/support/docs/llms/agents-and-mcp.txt): 105 documents.
+- [HyperExecute](https://www.testmuai.com/support/docs/llms/hyperexecute.txt): 178 documents.
+- [Web Automation Frameworks](https://www.testmuai.com/support/docs/llms/web-automation.txt): 188 documents.
+- [Mobile App Testing](https://www.testmuai.com/support/docs/llms/app-testing.txt): 165 documents.
+- [SmartUI and Visual Testing](https://www.testmuai.com/support/docs/llms/visual-testing.txt): 124 documents.
+- [Accessibility Testing](https://www.testmuai.com/support/docs/llms/accessibility.txt): 187 documents.
+- [Integrations](https://www.testmuai.com/support/docs/llms/integrations.txt): 149 documents.
+- [Platform, Access, and Security](https://www.testmuai.com/support/docs/llms/platform-and-security.txt): 67 documents.
+- [Other Documentation](https://www.testmuai.com/support/docs/llms/other.txt): 41 documents.

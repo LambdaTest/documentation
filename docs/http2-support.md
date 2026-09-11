@@ -1,6 +1,4 @@
-import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
-
-﻿---
+---
 id: http2-support
 title: HTTP/2 Support in TestMu AI Tunnel
 hide_title: false
@@ -17,6 +15,8 @@ site_name: TestMu AI
 slug: http2-support/
 canonical: https://www.testmuai.com/support/docs/http2-support/
 ---
+
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
