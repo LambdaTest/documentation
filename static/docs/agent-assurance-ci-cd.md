@@ -35,7 +35,7 @@ See [release notes](https://github.com/LambdaTest/rook/releases/tag/v0.1.3) befo
 Provide LT_USERNAME and LT_ACCESS_KEY from your CI secret manager. Rook 0.1.3 accepts this pair for unattended authentication; a copied personal OAuth credential directory is not required.
 
 ```bash
-export ROOK_ENV=stage
+export ROOK_ENV=prod
 export ROOK_HOME="$RUNNER_TEMP/rook-home"
 rook whoami
 rook doctor
@@ -139,11 +139,19 @@ rook runs sync
 rook ui --no-open
 ```
 
-Share the run URL with authorized teammates. The stage UI is at [stage-rook.lambdatestinternal.com](https://stage-rook.lambdatestinternal.com/). See [Web UI troubleshooting](/support/docs/rook-web-ui/#troubleshooting) if counts or results differ from the local report.
+Share the run URL with authorized teammates. Open shared projects at [rook.lambdatest.com/projects](https://rook.lambdatest.com/projects). See [Web UI troubleshooting](/support/docs/rook-web-ui/#troubleshooting) if counts or results differ from the local report.
 
 For local investigation, restore the approved workspace evidence with its project/agent directory structure intact, select that project, and run `rook ui --local` on your workstation. Open agent → runs → run → scenario to inspect criteria and files. A loopback URL printed on a CI runner is not a report your teammates can open; do not expose that server publicly. Keep the serving process running only during review.
 
 The [local and hosted UI guide](/support/docs/rook-web-ui/#choose-your-ui) explains both paths. Neither interface replaces the JSON completion and verdict checks used by the CI gate.
+
+### Local UI: Investigate Retained Evidence {#local-ui-example}
+
+Open a restored run's scenario and scroll to **files** to inspect its request, response, hook records, snapshot, and verdict. This screenshot uses the verified CLI smoke run to illustrate the evidence view; it is not a capture of a CI execution.
+
+### Hosted Web UI: Share the Recorded Outcome {#hosted-ui-example}
+
+Open an uploaded run to verify its completion state, profile, and scenario outcomes before sharing the link. The sample shows the same smoke run. For CI-produced runs, use their own recorded IDs and pinned definitions; do not infer success from a job's exit code alone.
 
 ## Separate Generation From the Gate
 

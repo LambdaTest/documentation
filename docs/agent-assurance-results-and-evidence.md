@@ -104,10 +104,10 @@ Choose where the evidence lives before interpreting a missing run:
 | Access | No browser login; local server must stay running | Browser login and access to the project |
 | Share | Review and sanitize the evidence files; loopback URLs are not team links | Copy the hosted run/result URL for authorized teammates |
 
-For the hosted stage environment:
+For hosted review, open [rook.lambdatest.com/projects](https://rook.lambdatest.com/projects) or use:
 
 ```bash
-export ROOK_ENV=stage
+export ROOK_ENV=prod
 rook ui
 ```
 
@@ -176,7 +176,7 @@ Open the scenario **from its run**, then use **Request**, **Response**, **Verdic
 
 <img loading="lazy" src={require('../assets/images/rook/rook-web-result-verdict.png').default} alt="Hosted Rook Verdict tab with verdict.yaml and acceptance-criterion evidence" className="doc_img"/>
 
-Only uploaded evidence is available here. Check the recorded run version and profile, not just today's agent summary. If aggregate percentages disagree with the run's counts, inspect the criterion records and local report; see the documented [stage display caveats](/support/docs/rook-web-ui/#stage-display-caveats).
+Only uploaded evidence is available here. Check the recorded run version and profile, not just today's agent summary. If aggregate percentages disagree with the run's counts, inspect the criterion records and local report; see the documented [screenshot display notes](/support/docs/rook-web-ui/#screenshot-display-notes).
 
 ## Fix Verification Gaps
 

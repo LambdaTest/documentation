@@ -236,3 +236,11 @@ Select the project and agent before running; there is no --entity flag. Supply r
 Neither command completes unfinished phases or retries the target. Keep the local serving process running. For the hosted UI, check the same account and `ROOK_ENV`; use `rook runs sync` for outstanding normal-run uploads. Do not expect a `--test` run to appear there.
 
 See [both UI walkthroughs](/support/docs/rook-web-ui/#choose-your-ui) and [criterion evidence in each interface](/support/docs/agent-assurance-results-and-evidence/#inspect-criterion-evidence).
+
+#### Local UI: Check the Completed Run {#local-ui-example}
+
+Open the agent's **runs** list and select the execution. The local sample shows one passed scenario, its narrative, and the start of the selection plan. Click the scenario row for criterion evidence; a 100% rate from one scenario is not full coverage.
+
+#### Hosted Web UI: Review the Shared Execution {#hosted-ui-example}
+
+Open **project → agent → Runs → run**. Check completion, agent version, invocation profile, and the scenario row. **View plan** explains selection and exclusions; opening the scenario shows the evidence for this execution.

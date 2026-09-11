@@ -189,3 +189,11 @@ Malformed scope files and duplicate discovered names are reported with their sou
 Use `rook ui --local` for the current workspace's run → scenario → **criteria**, response, and **files**. Use `rook ui` for the hosted Web UI's uploaded run → scenario → **Response**, **Verdict**, and **Artefacts**. Both can show MCP-related evidence only when it was actually recorded; declaring a tool or verifier does not prove it was called.
 
 Neither UI starts, approves, or edits an MCP server. Resolve missing verification access with the CLI commands above, then inspect the resulting evidence. The [local and hosted walkthrough](/support/docs/rook-web-ui/#choose-your-ui) shows both review layouts.
+
+### Local UI: Where to Inspect Verification Evidence {#local-ui-example}
+
+Open **agent → run → scenario** and read **criteria**, the response, and **files**. The screenshot locates the criterion evidence panel using the HTTP triage sample; it does not show an MCP invocation. For an MCP-backed test, inspect the actual recorded calls and verification gaps here.
+
+### Hosted Web UI: Where to Inspect Uploaded Calls {#hosted-ui-example}
+
+Open **run → scenario → Response** for the recorded exchange and observed calls, then check **Verdict** and **Artefacts**. This is the same HTTP sample, not MCP-specific evidence. An MCP tool declaration or connection status alone cannot establish what the tested agent actually did.

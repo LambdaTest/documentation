@@ -141,7 +141,7 @@ Rook can identify agents from evidence including:
 
 Discovery does not invent missing facts. If a tool's write behavior cannot be established, Rook records it as unknown rather than guessing from its name.
 
-Before discovery, select the environment and project with <code>rook project</code>. For the [stage Web UI](/support/docs/rook-web-ui/), set <code>ROOK_ENV=stage</code> before authentication and project operations.
+Before discovery, use the public service default <code>ROOK_ENV=prod</code> and select a project with <code>rook project</code>. Use the same account and project when opening the [hosted Web UI](https://rook.lambdatest.com/projects).
 
 ## Give Exploration Extra Context
 
@@ -327,3 +327,17 @@ After exploration, run `/generate` to refresh scenarios. Rook shows a plan and n
 Run `rook ui --local` to see the current workspace's **agents** list. Open an agent and scroll through its findings, features, profiles, scenarios, and runs. This does not require publishing the discovery result.
 
 For team review, sync the reviewed definitions and run `rook ui`. In the hosted Web UI, open project → agent → **Summary**, **Versions**, or **Features**. Those screens show uploaded records, not your latest unsynchronized exploration. Neither UI performs discovery or edits the definition. See [local agents](/support/docs/rook-web-ui/#local-agent) and [hosted agent configuration](/support/docs/rook-web-ui/#agent-configuration) in the same walkthrough.
+
+### Local UI: Discovery Findings {#local-ui-example}
+
+Open **agents → triage-service**. The local agent page shows the discovered description, findings, profile, and feature list. In this sample, findings identify the unknown-ticket error path and an unreachable search tool; review these before generating more tests.
+
+<img loading="lazy" src={require('../assets/images/rook/rook-local-agent.png').default} alt="Local triage-service discovery page showing its description, profile, findings, and the start of its feature list" width="1440" height="900" className="doc_img"/>
+
+### Hosted Web UI: Synchronized Discovery {#hosted-ui-example}
+
+Open **project → agent → Summary**. **Context** identifies the source files used for discovery; **View Full Spec** and **View findings** open uploaded artifacts when available. Changes from a new exploration are not visible here until synchronized.
+
+<img loading="lazy" src={require('../assets/images/rook/rook-web-agent-summary.png').default} alt="Hosted agent Summary showing discovery source context, specification and findings links, and the recorded profile" width="1440" height="900" className="doc_img"/>
+
+The capture's **1%** and empty tool detail list are [known display issues](/support/docs/rook-web-ui/#screenshot-display-notes), not evidence that discovery or the smoke run failed.

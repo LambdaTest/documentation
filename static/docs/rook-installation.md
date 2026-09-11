@@ -155,6 +155,14 @@ Continue with [How to Get Started With Agent Assurance](/support/docs/agent-assu
 
 The public CLI includes the local viewer: from an agent workspace, run `rook ui --local`. No separate frontend installation or browser login is needed. Open the printed loopback URL and keep the serving process running. It reads existing workspace files; follow the quickstart first if you have not created any test data.
 
-The same public CLI works with production and stage. Its default is production; rook ui opens [rook.testmuai.com](https://rook.testmuai.com). To use the [stage Web UI](https://stage-rook.lambdatestinternal.com/), set export ROOK_ENV=stage before login and project operations. You do not need a private package or a source-repository installation.
+For shared review, open [rook.lambdatest.com/projects](https://rook.lambdatest.com/projects), or use rook ui. Public packages default to ROOK_ENV=prod. You do not need a private package or a source-repository installation. If an older CLI opens a different address, use the Projects link above and update to the current public release.
 
 See [local versus hosted review](/support/docs/rook-web-ui/#choose-your-ui) for the data, sign-in, and sharing differences.
+
+### Local UI: What You Can Open After Setup {#local-ui-example}
+
+The local viewer starts at **agents**. This screenshot shows a workspace populated by the quickstart; installing Rook alone does not create an agent or test run. If your workspace is empty, complete discovery before expecting this inventory.
+
+### Hosted Web UI: Your Recorded Projects {#hosted-ui-example}
+
+The hosted UI opens at **Projects** after browser sign-in. The example project already contains synchronized test data. An empty organization shows onboarding instead; no separate Web UI package needs to be installed.

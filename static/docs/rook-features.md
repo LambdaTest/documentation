@@ -106,3 +106,11 @@ Long-running commands emit structured progress. In the TUI, Rook renders active 
 Use `rook ui --local` for the current workspace's agents, profiles, features, scenarios, runs, and evidence, including unsynchronized work and `--test` runs. Its agent page groups the lists together; it has no separate hosted Versions or Insights tabs.
 
 Use `rook ui` for synchronized projects, versions, profile specifications, scenario filters, shared runs, and Insights in the hosted Web UI. Browser sign-in and project access are required. Create and execute tests in the CLI in both cases; see the [local and hosted screenshot walkthrough](/support/docs/rook-web-ui/#choose-your-ui).
+
+### Local UI: Inspect a Discovered Behavior {#local-ui-example}
+
+Open **agent → features → feature ID**. The local F-002 page shows the user story, expected behavior, validation rules, and edge cases extracted for outage triage. Use these requirements to decide which scenarios are still needed.
+
+### Hosted Web UI: Review the Same Feature With Your Team {#hosted-ui-example}
+
+After synchronization, open **project → agent → Features** and click the feature ID. The dialog shows the recorded behavior and source materials. A feature definition describes intended behavior; it is not proof that a test has passed.

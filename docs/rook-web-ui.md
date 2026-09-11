@@ -17,9 +17,9 @@ canonical: https://www.testmuai.com/support/docs/rook-web-ui/
 
 Rook has two browser-based review interfaces: a **local UI** served by the CLI and a **hosted Web UI** for synchronized project history. Both are read-only. Use the CLI to create, change, and run tests; opening either UI does not invoke your target or publish local changes.
 
-The hosted Web UI is live at [stage-rook.lambdatestinternal.com](https://stage-rook.lambdatestinternal.com/). Production packages open [rook.testmuai.com](https://rook.testmuai.com) by default.
+Open the hosted Web UI at [rook.lambdatest.com/projects](https://rook.lambdatest.com/projects). Use the same account and organization as your Rook CLI workspace.
 
-This walkthrough covers the local viewer and every Rook page in the signed-in stage UI, checked with Rook 0.1.3 on September 11, 2026. Screenshots show only the visible webpage, without browser controls or desktop content. Click or tap a screenshot to enlarge it. Both walkthroughs use the public triage sample from the [quickstart](/support/docs/agent-assurance-quickstart/).
+This walkthrough covers the local viewer and the hosted Web UI using a Rook 0.1.3 sample run. Screenshots show only the visible webpage, without browser controls or desktop content. Click or tap a screenshot to enlarge it. Both walkthroughs use the public triage sample from the [quickstart](/support/docs/agent-assurance-quickstart/).
 
 ## Choose Your UI {#choose-your-ui}
 
@@ -96,16 +96,15 @@ A missing file or unknown value is not a successful observation. Keep the origin
 
 The sections from here onward describe the **hosted Web UI**. They are not the local viewer's navigation.
 
-| Environment | Web UI | CLI setting |
+| Review surface | Address | CLI command |
 |---|---|---|
-| Production | [rook.testmuai.com](https://rook.testmuai.com) | Public package default, or <code>ROOK_ENV=prod</code> |
-| Stage | [stage-rook.lambdatestinternal.com](https://stage-rook.lambdatestinternal.com/) | <code>ROOK_ENV=stage</code> |
+| Hosted Web UI | [rook.lambdatest.com/projects](https://rook.lambdatest.com/projects) | <code>rook ui</code> |
 | Local evidence | Loopback URL printed by the CLI | <code>rook ui --local</code> |
 
-For stage, set the environment **before** authentication, project selection, sync, and runs:
+Public packages use the production service by default. Check your identity and selected project before reviewing shared results:
 
 ```bash
-export ROOK_ENV=stage
+export ROOK_ENV=prod
 rook whoami
 rook project
 rook status
@@ -113,6 +112,8 @@ rook ui
 ```
 
 Sign in if required. Browser sign-in is separate from CLI authentication; use the same account, organization, and environment. Exported <code>LT_USERNAME</code> and <code>LT_ACCESS_KEY</code> override stored CLI browser credentials. See [login](/support/docs/agent-assurance-command-reference/#login) if the identities differ.
+
+If an older CLI opens a different address, use the public Projects link above and [update Rook](/support/docs/rook-installation/).
 
 Changing <code>ROOK_ENV</code> does not change the URL your target-agent hook calls. Review both the Rook environment and the target profile.
 
@@ -149,13 +150,13 @@ The hosted review workflow stays on this documentation page. Follow **Projects â
 
 The six agent tabs are **Summary**, **Versions**, **Features**, **Scenarios**, **Runs**, and **Insights**. Scenario definitions, run details, and individual results open as separate application pages; their explanations remain together here.
 
-The sample has five features, two generated scenarios, and one executed scenario. A passing smoke test does not establish complete coverage. Some aggregate values in the screenshots have known [stage display caveats](#stage-display-caveats); use the actual run counts and criterion evidence.
+The sample has five features, two generated scenarios, and one executed scenario. A passing smoke test does not establish complete coverage. Some aggregate values in the screenshots have known [screenshot display notes](#screenshot-display-notes); use the actual run counts and criterion evidence.
 
 ## Find Your Project and Agent {#projects-and-agents}
 
 ### Projects and First Sign-In {#projects}
 
-The **Projects** page is the starting point for reviewing shared Rook tests. Open [stage-rook.lambdatestinternal.com](https://stage-rook.lambdatestinternal.com/) and sign in with the account and organization used by your stage CLI workspace.
+The **Projects** page is the starting point for reviewing shared Rook tests. Open [rook.lambdatest.com/projects](https://rook.lambdatest.com/projects) and sign in with the account and organization used by your CLI workspace.
 
 For environment selection and authentication, start with [Web UI setup](#open-the-right-environment). Signing in to the browser does not sign the CLI in, and vice versa.
 
@@ -170,7 +171,7 @@ Each project entry shows its name, agent count, run count, user count, and last-
 There is no project creation form or project search field on this Rook page. Create or select the project in the CLI, then synchronize its agent definitions. Before looking for it in the browser, check:
 
 ```bash
-export ROOK_ENV=stage
+export ROOK_ENV=prod
 rook whoami
 rook project
 rook status
@@ -183,7 +184,7 @@ Run these from the intended workspace. If no project exists yet, follow the [qui
 
 When no projects are returned, Rook shows a **Get started** view with installation commands, a documentation link, **Schedule a Demo**, and a GitHub link. This is an onboarding state of Projects, not a separate dashboard or a browser-based test generator. Follow [Install Rook](/support/docs/rook-installation/), then the quickstart to publish your first definition.
 
-If you expected an existing project, first check the account, organization, and environment. Stage and production do not share a project list. Also return to the first page if you followed an old paginated URL. Do not create another project just because the expected one is missing.
+If you expected an existing project, first check the account, organization, and CLI environment. Separate deployments do not share a project list. Also return to the first page if you followed an old paginated URL. Do not create another project just because the expected one is missing.
 
 A loading indicator means the request is still pending. An error with **Retry** is not an empty organization: retry the request and resolve sign-in or access problems before changing your workspace.
 
@@ -338,7 +339,7 @@ The menus reflect values present in the catalog. Multiple filters narrow the res
 
 For a first coverage check, select **Result â†’ never run**. Open each matching scenario, review its goal and side effects, then run the selected cases from the CLI against an approved target. This page has no Run button.
 
-Filters are retained in the URL. You can share that URL with a teammate who has access to the same stage project. It does not create a public report.
+Filters are retained in the URL. You can share that URL with a teammate who has access to the same project. It does not create a public report.
 
 #### Empty Catalog or Empty Filter Result? {#scenarios-empty-catalog-or-empty-filter-result}
 
@@ -549,12 +550,14 @@ Review artifacts for secrets and customer information before downloading or shar
 | Run exists locally but not in the browser | Check for <code>--test</code>, then use <code>rook runs sync</code> for outstanding normal-run uploads. |
 | Local edits are absent | The Web UI shows synchronized records, not your current unsynchronized files. |
 | A file, trace, or metric is missing | Confirm the hook actually collected it, the run completed the relevant phase, and uploads finished. Missing evidence is not an observed failure or zero value. |
-| Sign-in loops or access is denied | Use the stage account for stage. Browser login and exported CLI credentials may belong to different accounts. |
+| Sign-in loops or access is denied | Match the browser account and organization to the CLI. Browser login and exported CLI credentials may belong to different accounts. |
 | You need offline or exact on-disk evidence | Run <code>rook ui --local</code> from the correct workspace. |
 
-### Stage Display Caveats {#stage-display-caveats}
+<span id="stage-display-caveats" />
 
-Observed on September 11, 2026; screenshots preserve the actual stage display. These are application display issues, not failures of the sample agent.
+### Screenshot Display Notes {#screenshot-display-notes}
+
+These captures preserve the interface observed on September 11, 2026. The values below are display inconsistencies in the captured build, not failures of the sample agent or an assertion that the current release still has them. Cross-check the underlying run evidence when a summary disagrees.
 
 | Display | What to verify instead |
 |---|---|

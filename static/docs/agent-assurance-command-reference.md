@@ -207,7 +207,7 @@ rook login
 
 #### Choose the Environment {#login-choose-the-environment}
 
-Public packages default to production. For [stage results](/support/docs/rook-web-ui/), set export ROOK_ENV=stage before signing in. Browser sessions and CLI credentials are separate; use the same account and environment in both.
+Public packages default to production. Use ROOK_ENV=prod with the [hosted Web UI](https://rook.lambdatest.com/projects). Browser sessions and CLI credentials are separate; use the same account and environment in both.
 
 #### Unattended Authentication {#login-unattended-authentication}
 
@@ -267,7 +267,7 @@ rook whoami
 
 The status check verifies the effective authentication remotely. Exported LT_USERNAME and LT_ACCESS_KEY take precedence over a stored token. It does not print the token or change project data. Use rook whoami when you also want to see the authenticated identity.
 
-Stored authentication is shared by sessions using the same Rook home, profile, and environment, not scoped to one agent workspace. See [login](#login) for stage and unattended authentication.
+Stored authentication is shared by sessions using the same Rook home, profile, and environment, not scoped to one agent workspace. See [login](#login) for environment selection and unattended authentication.
 
 #### Common problems {#auth-common-problems}
 
@@ -866,20 +866,28 @@ The local viewer is read-only, makes no external request for workspace data, and
 
 Use the hosted view for shared project history. Use --local for unsynchronized work, offline investigation, or the exact evidence present on this machine.
 
-#### Stage and Production {#ui-stage-and-production}
+#### Hosted Web UI Access {#ui-hosted-access}
 
-Public packages default to https://rook.testmuai.com. For the live stage UI:
+Open [rook.lambdatest.com/projects](https://rook.lambdatest.com/projects) or use the CLI shortcut:
 
 ```bash
-export ROOK_ENV=stage
+export ROOK_ENV=prod
 rook ui
 ```
 
-This opens [stage-rook.lambdatestinternal.com](https://stage-rook.lambdatestinternal.com/). Use the same environment for login, project selection, sync, and runs. Sign into the browser separately if prompted.
+Use the same environment for login, project selection, sync, and runs. Sign into the browser separately if prompted. If an older CLI opens a different address, use the public Projects link above and [update Rook](/support/docs/rook-installation/#verify-the-installation).
 
 For local review, open **agent → runs → run → scenario**, then scroll through **criteria**, **sent to the agent**, **what came back**, and **files**. For hosted review, open **project → agent → Runs → run → scenario** and use **Request**, **Response**, **Verdict**, and **Artefacts**.
 
 The [combined UI walkthrough](/support/docs/rook-web-ui/#choose-your-ui) shows both layouts, screenshots, and missing-result troubleshooting. A loopback URL is not shareable with teammates; use an authorized hosted run link or an approved evidence bundle.
+
+#### Local UI: What --local Opens {#local-ui-example}
+
+The local landing page lists the selected workspace project's agents. Click an agent to reach its definitions and runs. This populated sample is the result of the quickstart, not data supplied by the ui command.
+
+#### Hosted Web UI: What the Default Opens {#hosted-ui-example}
+
+The hosted application starts at **Projects**. Select the project and agent to review uploaded records. The screenshot shows the sample documentation project, not data created automatically by the ui command.
 
 ## Environment and Diagnostics {#environment-and-diagnostics}
 
@@ -1106,7 +1114,7 @@ See the [tested CI gate](/support/docs/agent-assurance-ci-cd/#gate-on-completion
 | Variable | Effect |
 |---|---|
 | `ROOK_HOME` | Credentials, environment values, history, and local state. Default: `~/.testmuai/rook`. |
-| `ROOK_ENV` | Deployment selection: `prod` by default; use `stage` for the stage Web UI. Set it before login and project operations. |
+| `ROOK_ENV` | Deployment selection; public packages default to `prod`. Keep the setting consistent for login, project operations, synchronization, and hosted review. |
 | `LT_USERNAME`, `LT_ACCESS_KEY` | Account credentials for unattended authentication. Provide both; they override stored browser-login credentials. |
 | `ROOK_API_URL` | Overrides the versioned Rook API base URL. |
 | `ROOK_CONTROLLER_URL` | Overrides the controller base URL. |
