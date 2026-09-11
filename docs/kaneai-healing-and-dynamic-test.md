@@ -208,11 +208,11 @@ Self-maintenance is set at three levels. Each one is a starting position for the
 
 Set the organization default under **Organization Settings → Org Product Preferences → Kane AI → Healing and Dynamic Test**.
 
-<img loading="lazy" src={require('../assets/images/kane-ai/healing-dynamic-test/organization-settings.webp').default} alt="Healing and Dynamic Test in Organization Settings, with the strategy toggle, Adaptive Heal, Dynamic Test and Auto-approve changes" width="1600" height="827" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/kane-ai/healing-dynamic-test/organization-settings.webp').default} alt="Healing and Dynamic Test in Organization Settings, with the strategy toggle, Adaptive Heal, Dynamic Test and Auto-approve changes" width="1600" height="910" className="doc_img"/>
 
 Set the project default under **Test Manager → Project Settings → Healing and Dynamic Test**.
 
-<img loading="lazy" src={require('../assets/images/kane-ai/healing-dynamic-test/project-settings.webp').default} alt="Healing and Dynamic Test in Project Settings, showing Self-maintenance with Adaptive Heal and Dynamic Test, and the Auto-approve changes toggle" width="1600" height="825" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/kane-ai/healing-dynamic-test/project-settings.webp').default} alt="Healing and Dynamic Test in Project Settings, showing Self-maintenance with Adaptive Heal and Dynamic Test, and the Auto-approve changes toggle" width="1600" height="911" className="doc_img"/>
 
 A project follows the organization until someone changes it there. Once changed, the project keeps its own value and later organization changes no longer overwrite it.
 
@@ -231,7 +231,7 @@ Retry on Failure exists only at the run level, so it is chosen per run.
 4. For Adaptive Heal or Dynamic Test, set **Auto-approve changes**. For Retry on Failure, set **Maximum Retries**.
 5. Click **Execute**.
 
-<img loading="lazy" src={require('../assets/images/kane-ai/healing-dynamic-test/advanced-configurations.webp').default} alt="Test Configurations under Advanced Configurations, showing Self-maintenance with Adaptive Heal, Dynamic Test and Retry on Failure, and the Auto-approve changes toggle" width="1600" height="826" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/kane-ai/healing-dynamic-test/advanced-configurations.webp').default} alt="Test Configurations under Advanced Configurations, showing Self-maintenance with Adaptive Heal, Dynamic Test and Retry on Failure, and the Auto-approve changes toggle" width="1600" height="912" className="doc_img"/>
 
 ### Check the strategy before you execute
 ***
