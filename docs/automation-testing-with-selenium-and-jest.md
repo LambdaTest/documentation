@@ -217,12 +217,17 @@ Complete these steps before running Jest Selenium tests on TestMu AI.
 ---
 Clone the TestMu AI Jest Selenium sample repository to your local machine.
 
+<VerifiedTag value="Verified" />
+
 ```bash
 git clone https://github.com/LambdaTest/jest-selenium-webdriver-sample
 cd jest-selenium-webdriver-sample
 ```
 
 Install the required dependencies:
+
+<VerifiedTag value="Verified" />
+
 ```bash
 npm install --save-dev jest --force
 ```
@@ -235,6 +240,8 @@ Set your TestMu AI username and access key as environment variables.
 
 <TabItem value="bash" label="macOS / Linux" default>
 
+  <VerifiedTag value="Verified" />
+
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-bash">
   {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
@@ -245,6 +252,8 @@ export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 </TabItem>
 
 <TabItem value="powershell" label="Windows" default>
+
+  <VerifiedTag value="Verified" />
 
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-powershell">
@@ -277,6 +286,8 @@ Generate capabilities for your test requirements with the [Capabilities Generato
 ---
 Execute the test using the following command.
 
+<VerifiedTag value="Verified" />
+
 ```bash
 npm test single.test.js
 ```
@@ -300,6 +311,8 @@ Use AI coding assistants to generate and run Jest tests with the TestMu AI Agent
 The [jest-skill](https://github.com/LambdaTest/agent-skills/tree/main/jest-skill) is part of [TestMu AI Agent Skills](https://github.com/LambdaTest/agent-skills/) - structured packages that teach AI coding assistants how to write production-grade test automation.
 
 Install the skill:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 git clone https://github.com/LambdaTest/agent-skills.git

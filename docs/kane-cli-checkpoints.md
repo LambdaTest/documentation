@@ -15,6 +15,8 @@ site_name: TestMu AI
 slug: kane-cli-checkpoints/
 canonical: https://www.testmuai.com/support/docs/kane-cli-checkpoints/
 ---
+import VerifiedTag from '@site/src/component/verifiedTag';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -141,6 +143,8 @@ Each checkpoint uses an analyze method to determine *where* to look for the data
 
 Write your assertions naturally in the objective. KaneAI automatically picks the right analyze method:
 
+<VerifiedTag value="Verified" />
+
 ```
 Assert: the price is $29.99                    → Visual
 Assert: the submit button is disabled          → Textual (DOM)
@@ -154,6 +158,8 @@ Assert: auth_token exists in localStorage      → DevTools (localStorage)
 ```
 
 Extractions work the same way:
+
+<VerifiedTag value="Verified" />
 
 ```
 Store the product price                        → Visual

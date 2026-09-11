@@ -133,6 +133,8 @@ The timeout could also occur due to network latency, or due to improper declarat
 
 **Resolution:** You can extend the 120-second idle timeout limit up to 1800 seconds by declaring the idleTimeout capability in your desired capabilities.
 
+<VerifiedTag value="Verified" />
+
 ```bash
 "idleTimeout": "125" //extends idle timeout from 120 seconds to 125.
 ```

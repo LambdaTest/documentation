@@ -26,6 +26,7 @@ import NewTag from '../src/component/newTag';
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 ---
@@ -290,6 +291,8 @@ The following are the steps to execute your SmartUI CLI with Git commits on CLI 
 
 1. Go to your current **project repository** and run the following command:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 git init --y
 ```
@@ -300,11 +303,15 @@ You can ignore the above step if you already have a repository with `Git` initia
 
 2. Now, commit the changes (if any) to your `Git`:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 git commit -m "Your commit message"
 ```
 
 3. Execute your **SmartUI CLI** command to execute the Visual Regression tests for your files:
+
+<VerifiedTag value="Verified" />
 
 <Tabs className='docs__val' groupId='execution_type'>
 
@@ -348,6 +355,8 @@ You can set any `branch` name as your **Baseline** branch in the SmartUI project
 5. Click on the `Update Settings` button to update the settings.
 
 You can also set the Baseline branch name through your terminal by setting the following environment variable which will automatically update your project settings as well once the test is run.
+
+<VerifiedTag value="Verified" />
 
 <Tabs className='docs__val' groupId='language'>
 <TabItem value='MacOS/Linux' label='MacOS/Linux' default>
@@ -402,6 +411,8 @@ In this workflow, if you are working on the same branch name and want to execute
 
 And, if you have created a project and set your **Baseline** branch name to `master` then executed the following commands:
 
+<VerifiedTag value="Verified" />
+
 ```powershell
 // Your current branch name
 $ git branch
@@ -421,6 +432,8 @@ If the current Baseline build branch is set to `Current Active Branch` in the Sm
 
 Here is an example of the above workflow:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 $ git branch
 * master
@@ -433,6 +446,8 @@ $ npx smartui --config .smartui.json exec -- <Execution command>
 <img loading="lazy" src={require('../assets/images/smart-visual-testing/git-working-on-same-branch.webp').default} alt="Smart Visual Testing" width="1600" height="803" className='doc_img'/>
 
 You can streamline your workflow by setting the current branch name directly through your terminal. By configuring the following environment variable, you can automatically designate the input branch name as the branch for that build. This approach effectively overwrites the current Git branch from which you are running the test, providing a convenient method to manage new branches according to specific use cases without altering the Git configuration.
+
+<VerifiedTag value="Verified" />
 
 <Tabs className='docs__val' groupId='language'>
 <TabItem value='MacOS/Linux-1' label='MacOS/Linux' default>
@@ -492,6 +507,8 @@ On approval of the all the screenshots then the new build will be updated as Bas
 
 Here is an example of the above workflow:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 // Step 1 - Commit changes to Git
 $ git commit -am "Changes in login Flow"
@@ -510,6 +527,8 @@ Step 1: Checkout to a non-baseline branch in your `Git` repository.
 Step 2: Then run the SmartUI CLI command to execute the tests should compare the screenshots captured of **Non-Baseline** branch build with the **Baseline branch** latest **APPROVED** build in the SmartUI project.
 
 Here is an example of the above workflow:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 // Baseline Branch

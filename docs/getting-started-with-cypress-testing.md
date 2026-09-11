@@ -29,6 +29,30 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
 <script type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify({
+       "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": BRAND_URL
+        },{
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Support",
+          "item": `${BRAND_URL}/support/docs/`
+        },{
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Getting Started With Cypress Testing On TestMu AI Platform",
+          "item": `${BRAND_URL}/support/docs/getting-started-with-cypress-testing/`
+        }]
+      })
+    }}
+></script>
+
+<script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
     "@context": "https://schema.org",
     "@type": [
@@ -237,6 +261,8 @@ You can run your first Cypress test on the <BrandName /> platform in a few simpl
 
 1. Clone the <BrandName />-Cypress-Cloud GitHub repo and navigate to the cloned directory.
 
+<VerifiedTag value="Verified" />
+
 ```bash
 git clone https://github.com/LambdaTest/Cypress-Cloud.git
 cd Cypress-Cloud
@@ -269,11 +295,15 @@ Following are the steps to run your first Cypress test on the <BrandName /> plat
 
 1. Install the <BrandName />-Cypress CLI using the below command.
 
+<VerifiedTag value="Verified" />
+
 ```bash
 npm install -g lambdatest-cypress-cli
 ```
 
 2. Clone the Cypress kitchen sink repo using the following command.
+
+<VerifiedTag value="Verified" />
 
 <Tabs className="docs__val">
 
@@ -307,6 +337,8 @@ git checkout ab10094ef7b199ae7febafec413a0626414bcd3c
 </Tabs>
 
 Once you clone the kitchen sink repo, below will be the structure of your Cypress project.
+
+<VerifiedTag value="Verified" />
 
 <Tabs className="docs__val">
 
@@ -343,6 +375,8 @@ cypress.json
 
 3. Install the npm dependencies by passing the below command.
 
+<VerifiedTag value="Verified" />
+
 ```bash
 npm install
 ```
@@ -350,6 +384,8 @@ npm install
 4. Create `lambdatest-config.json` file that contains configurations like auth, capabilities, test settings, etc. which need to be successfully executed at LambdaTest.
 
 Use `init` command to generate the sample configuration files.
+
+<VerifiedTag value="Verified" />
 
 <Tabs className="docs__val">
 
@@ -473,6 +509,8 @@ app
 
 5. Pass the below command to run the test.
 
+<VerifiedTag value="Verified" />
+
 ```bash
 lambdatest-cypress run
 ```
@@ -482,12 +520,44 @@ lambdatest-cypress run
 <img loading="lazy" src={require('../assets/images/cypressten/cypress_results.png').default} alt="Image" width="1444" height="703"  className="doc_img"/>
 
 
+## Run Your Tests in Parallel
+---
+
+Once your first test runs, you can execute multiple Cypress tests at once, in either of two ways.
+
+**Using the CLI:** pass the `--parallels` flag with the number of sessions:
+
+<VerifiedTag value="Verified" />
+
+```bash
+lambdatest-cypress run --parallels 5
+```
+
+**Using `lambdatest-config.json`:** set the `parallels` key under `run_settings`:
+
+<VerifiedTag value="Verified" />
+
+```json
+{
+  "run_settings": {
+    "parallels": 5
+  }
+}
+```
+
+:::info NOTE
+The number of parallel tests running at a time depends on the concurrency plan of your <BrandName /> account. If you request more parallel tests than your plan allows, the extra tests are queued and run as running tests finish. For example, on a 5-session plan, running 50 tests runs 5 at a time and queues the other 45.
+:::
+
+
 ## Testing Locally Hosted or Privately Hosted Projects 
 ---
 
 To tests locally hosted websites on the <BrandName /> platform, you need to setup [<BrandName /> tunnel](/docs/testing-locally-hosted-pages/), and execute commands using the CLI, or [Download UnderPass](/docs/underpass-tunnel-application/), our GUI based desktop app. Once you have the <BrandName /> tunnel or Underpass set up and started, you can use Cypress to test locally hosted websites.
 
 Now you need to activate the tunnel capability in the `lambdatest-config.json` file under the section "tunnel_settings" as shown below:
+
+<VerifiedTag value="Verified" />
 
 ```json 
   "tunnel_settings": {

@@ -181,6 +181,8 @@ To unlock this feature, purchase or upgrade to the required [plan](https://www.t
 
 You can enable the dark mode setting through `darkMode` capability before the session starts. This ensures the device starts in the dark   theme without additional steps during test execution.
 
+<VerifiedTag value="Verified" />
+
 <Tabs>
 <TabItem value="ios" label="iOS" default>
 

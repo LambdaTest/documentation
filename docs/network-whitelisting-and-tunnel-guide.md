@@ -21,6 +21,7 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -170,6 +171,8 @@ For real-time testing sessions (browser, VM, or real device), <BrandName /> uses
 
 #### What to Whitelist
 Allow TLS traffic on ports 80 and 443 for the following servers:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 stun-us-1.lambdatest.com  

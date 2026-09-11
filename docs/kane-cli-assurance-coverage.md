@@ -16,6 +16,8 @@ site_name: TestMu AI
 slug: kane-cli-assurance-coverage/
 canonical: https://www.testmuai.com/support/docs/kane-cli-assurance-coverage/
 ---
+import VerifiedTag from '@site/src/component/verifiedTag';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -136,12 +138,16 @@ canonical: https://www.testmuai.com/support/docs/kane-cli-assurance-coverage/
 
 A run can look green and still owe you coverage — that's exactly the situation the two axes make visible.
 
+<VerifiedTag value="Verified" />
+
 ```bash
 kane-cli cover [--from <pack>] [--json]                     # the two-axis panel
 kane-cli cover gaps [--stage design|cover|all] [--top <n>] [--from <pack>]  # the ranked worklist
 ```
 
 ## The panel
+
+<VerifiedTag value="Verified" />
 
 ```
 coverage — 8f0e…f2.evidence
@@ -164,6 +170,8 @@ completeness (live graph):
 
 One ranked list (risk first) of what to do next, each row with a ready-to-paste command:
 
+<VerifiedTag value="Verified" />
+
 ```
 gaps — stage design (5)
    1. [high] create uc-checkout-while-signed-in — use-case has no scenarios
@@ -175,6 +183,40 @@ gaps — stage design (5)
 - `--stage design` (default, no pack needed) — criteria no test verifies, use-cases with no or only-happy scenarios, recorded gap nodes from design runs, stale designed entities.
 - `--stage cover` (needs a pack) — a covered criterion whose **execution** disappointed: `failed` → re-design that slice; `blocked` or never-run → the test exists, run it.
 - `--stage all` — both, one ranking. `--top <n>` trims the list.
+
+## `cover gaps` — the coverage ribbon *(0.8.2)*
+
+The default output is one continuous band-table over two axes, entirely graph-fed — no pack is opened or needed:
+
+- **designed** — how much of the live requirement set has a live test verifying it (risk-weighted: high-risk criteria weigh more). Freshness never moves the number — stale criteria surface as `STALE` debt instead.
+- **proven** — the store's **own execution facts** (every `testmd run` / `testrun run` records its verdicts at finalize), scored by the same formula a sealed pack uses — so the live number and a pack's number agree at the formula level. `--rollup lenient|strict` selects the formula (default `lenient`). With no recorded runs anywhere, the proven line says so in words — never a fake 0%.
+
+The ribbon is deliberately high-level. A three-line header — the title with the rollup and how recently anything ran, then both axis bars, the proven line carrying the class census — then **one row per live use-case**, ordered by severity (failing → blocked → design debt → stale → pending-run → clean): id, title, designed and proven percent bars colored by value, and per-class debt counts (`FAILING · BLOCKED · STALE · TO DESIGN · TO RUN`). A count column renders only when some use-case carries that debt, and a narrow terminal drops the counts and keeps id, title, and bars. The last line is the drill-in hint. There are no AC rows, commands, or gap rosters at this level — detail lives in the dossier. With zero execution facts the all-clear reads `designed · nothing run yet`; the ribbon only ever says "proven" when every criterion's verifying test actually passed. Piped output keeps the same grammar; color and the width-responsive layout differ.
+
+*(0.7.2)* A change you deferred during a [reconcile review](/support/docs/kane-cli-assurance-maintain/#reconcile) still surfaces here — in the ribbon's debt counts, and as a pending row in the dossier and the `--json` document with the reconcile command as its remedy. Deferring parks a decision, it never hides one.
+
+### `cover gaps <uc-id>` — the dossier *(0.8.2)*
+
+The dossier owns the detail for one use-case: its axis bars scoped to that use-case, then **every live acceptance criterion** in a full-text census table — `id · STATE · RISK · criterion`, wrapped, never truncated — proven and not-yet-run rows included. A failing row cites the test file when its id resolves to exactly one file (id-only otherwise), and a `next` actions block **leads with evidence, never a blind re-run**:
+
+<VerifiedTag value="Verified" />
+
+```
+→ kane-cli evidence serve <pack>     (see why it failed)
+```
+
+with the run/design remediation second, carrying its own warning — a failed test re-run in authoring mode may heal itself around the failure, so fix the app first.
+
+### Flags
+
+- `--stage design|cover|all` (default `all`) filters the `--json` document's pending rows — it never moves a number, a row, or the table order.
+- `--top <n>` bounds pending rows per use-case in the `--json` document; the table always renders one row per use-case and is never truncated.
+- `--rollup lenient|strict` selects the proven-axis formula (default `lenient`).
+- `--json` emits the nested machine document: the designed axis, the proven axis (absent entirely when the store has no execution facts), and the per-use-case pending rows, each carrying its `ready_command`. With a `<uc-id>` the document **closes over that use-case** — one entry, project-wide leftovers emptied. Debt that belongs to no live use-case rides only the `--json` document, never the human views.
+
+## Agents and CI *(0.7.1)*
+
+Both `cover` and `cover gaps` take `--mode agent|ci`: the run speaks the same NDJSON envelope as the other assurance commands — the whole `--json` payload arrives as a single `coverage` (or `gaps`) event — with a `<uc-id>`, the closed-over document *(0.8.2)* — `done` is always last, and `done`'s `next[]` carries the worklist's own ready-to-paste commands. A refusal is an `error` event plus `done` with exit `2`. See [Automation](/support/docs/kane-cli-assurance-automation/).
 
 ## The join: how a pack knows your graph
 

@@ -22,6 +22,30 @@ canonical: https://www.testmu.ai/support/docs/supported-browsers-and-os/
 ---
 
 <script type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify({
+       "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": BRAND_URL
+        },{
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Support",
+          "item": `${BRAND_URL}/support/docs/`
+        },{
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Supported Browsers and Operating Systems for Cypress",
+          "item": `${BRAND_URL}/support/docs/supported-browsers-and-os/`
+        }]
+      })
+    }}
+></script>
+
+<script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
     "@context": "https://schema.org",
     "@type": [
@@ -117,6 +141,8 @@ canonical: https://www.testmu.ai/support/docs/supported-browsers-and-os/
 />
 
 <BrandName /> supports the below listed browsers, browser versions and Operating Systems for Cypress testing:
+
+<VerifiedTag value="Verified" />
 
 ```json
 {

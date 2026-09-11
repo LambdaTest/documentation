@@ -242,6 +242,8 @@ The following examples show how network logs appear before and after masking.
 
 ### Before Masking (network.mask: false)
 
+<VerifiedTag value="Verified" />
+
 ```
 Request Headers:
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
@@ -253,6 +255,8 @@ auth_token=abc123xyz789; session_key=def456uvw012
 ```
 
 ### After Masking (network.mask: true)
+
+<VerifiedTag value="Verified" />
 
 ```
 Request Headers:

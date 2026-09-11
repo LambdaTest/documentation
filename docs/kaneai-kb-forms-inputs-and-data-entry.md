@@ -300,6 +300,8 @@ Forms are at the heart of most web applications: login pages, registration flows
 
 Use `type`, `enter` or `input` followed by the value and the target field.
 
+<VerifiedTag value="Verified" />
+
 ```
 type "john.doe@example.com" in the email input field
 enter "SecurePass123!" in the password field
@@ -309,6 +311,8 @@ type "123 Main Street" in the address field
 ### Using Variables & Parameters for Dynamic Data
 
 Instead of hardcoding values, use parameters for reusable and parameterized tests.
+
+<VerifiedTag value="Verified" />
 
 ```
 create a parameter using /(slash) command called username
@@ -320,6 +324,8 @@ Parameters once used in authoring can be used to input different data values via
 :::
 
 For test data that needs to be unique each run, use **smart variables**:
+
+<VerifiedTag value="Verified" />
 
 ```
 type {{smart.random_email}} in the email field
@@ -334,6 +340,8 @@ Smart variables like `{{smart.random_email}}` generate unique values every run, 
 
 ### Standard HTML Select Dropdowns
 
+<VerifiedTag value="Verified" />
+
 ```
 select "United States" from the country dropdown
 select "California" from the state dropdown
@@ -343,12 +351,16 @@ select "California" from the state dropdown
 
 Many modern applications use custom-built dropdowns that aren't standard HTML `<select>` elements. For these, use a click-then-select pattern:
 
+<VerifiedTag value="Verified" />
+
 ```
 click on the "Country" dropdown
 click on "United States" in the dropdown list
 ```
 
 If the dropdown requires typing to filter:
+
+<VerifiedTag value="Verified" />
 
 ```
 click on the "Country" dropdown
@@ -357,6 +369,8 @@ click on "United States" in the filtered results
 ```
 
 ### Multi-Select Dropdowns
+
+<VerifiedTag value="Verified" />
 
 ```
 click on the "Tags" dropdown
@@ -367,6 +381,8 @@ click on "Bug" in the dropdown list
 ### Scenario: Cascading Dropdowns (Country → State → City)
 
 A common pattern where the second dropdown options depend on the first.
+
+<VerifiedTag value="Verified" />
 
 ```
 select "India" from the country dropdown
@@ -384,6 +400,8 @@ Always add a `wait` between cascading dropdowns. The child dropdown needs time t
 
 ### Simple Date Pickers
 
+<VerifiedTag value="Verified" />
+
 ```
 select 15th March 2026 date
 select tomorrow's date
@@ -393,6 +411,8 @@ select tomorrow's date
 
 For custom calendar components, navigate month by month:
 
+<VerifiedTag value="Verified" />
+
 ```
 click on the date input field
 click the "Next Month" arrow 3 times
@@ -400,6 +420,8 @@ click on day "22"
 ```
 
 ### Date Range Pickers
+
+<VerifiedTag value="Verified" />
 
 ```
 click on the "Start Date" field
@@ -409,6 +431,8 @@ select 28th February 2026 date
 ```
 
 ### Using Smart Variables for Dynamic Dates
+
+<VerifiedTag value="Verified" />
 
 ```
 type {{smart.current_date}} in the "Start Date" field
@@ -430,6 +454,8 @@ Use `/` → **Add JS Snippet** to execute this.
 
 ### Checkboxes
 
+<VerifiedTag value="Verified" />
+
 ```
 check the "I agree to Terms and Conditions" checkbox
 uncheck the "Subscribe to newsletter" checkbox
@@ -437,12 +463,16 @@ uncheck the "Subscribe to newsletter" checkbox
 
 ### Radio Buttons
 
+<VerifiedTag value="Verified" />
+
 ```
 click on the "Express Shipping" radio button
 select the "Monthly" billing option
 ```
 
 ### Scenario: Preferences Form with Multiple Checkboxes
+
+<VerifiedTag value="Verified" />
 
 ```
 check the "Email Notifications" checkbox
@@ -463,6 +493,8 @@ KaneAI supports uploading files during test authoring. Use the `/` command to ac
 3. Choose the file from your system
 4. The file gets uploaded and can be used in the test step as a variable.
 
+<VerifiedTag value="Verified" />
+
 ```
 upload file {{FILE_sample_report_pd}} to the file input
 ```
@@ -475,6 +507,8 @@ For detailed instructions, refer to [File Upload & Download Testing](/support/do
 
 Applications that use separate input boxes for each digit (e.g., 4-digit or 6-digit OTP fields) require the `OTP` keyword.
 
+<VerifiedTag value="Verified" />
+
 ```
 enter OTP "1234"
 enter OTP "567890"
@@ -485,6 +519,8 @@ Do **not** try to type into each OTP box individually (e.g., `type "1" in first 
 :::
 
 ### Scenario: Login with OTP Verification
+
+<VerifiedTag value="Verified" />
 
 ```
 type "john@example.com" in the email field
@@ -502,6 +538,8 @@ For real TOTP-based MFA, see the [TOTP Authentication](/support/docs/kaneai-totp
 ### Web Sliders
 
 For range sliders on web, describe the target value:
+
+<VerifiedTag value="Verified" />
 
 ```
 set the price slider to 500
@@ -522,6 +560,8 @@ On mobile, specific element classes are supported:
 - **Android**: `android.widget.SeekBar`, `android.widget.NumberPicker`
 - **iOS**: `XCUIElementTypeSlider`, `XCUIElementTypePicker`, `XCUIElementTypePickerWheel`
 
+<VerifiedTag value="Verified" />
+
 ```
 enter "5" in the first column
 drag the slider to 80 percent
@@ -532,6 +572,8 @@ drag the slider to 80 percent
 For applications with WYSIWYG editors (TinyMCE, CKEditor, Quill, etc.), the editor content is typically inside an iframe or contenteditable div.
 
 ### Using Natural Language
+
+<VerifiedTag value="Verified" />
 
 ```
 click inside the text editor
@@ -550,6 +592,8 @@ document.querySelector('iframe.editor').contentDocument.body.innerHTML = '<p>Tes
 
 Many search fields show suggestions as you type. Handle these by typing, waiting for suggestions, then selecting.
 
+<VerifiedTag value="Verified" />
+
 ```
 type "New Yo" in the search field
 wait for 2 seconds
@@ -557,6 +601,8 @@ click on "New York, NY" in the suggestions dropdown
 ```
 
 ### Scenario: Address Autocomplete (Google Places)
+
+<VerifiedTag value="Verified" />
 
 ```
 type "221B Baker" in the address field
@@ -576,6 +622,8 @@ assert the city field contains "London"
 
 - **Android**: `hide keyboard`
 - **iOS**: `press Enter` after typing (preferred), or `click on the "Done" button on the keyboard`
+
+<VerifiedTag value="Verified" />
 
 ```
 type "test@example.com" in the email field and press Enter

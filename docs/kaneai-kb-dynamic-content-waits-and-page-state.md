@@ -234,6 +234,8 @@ Every element interaction command (click, type, assert, etc.) automatically wait
 
 Use explicit waits when you know an action will take longer than the default 10 seconds, or when you need to pause between steps.
 
+<VerifiedTag value="Verified" />
+
 ```
 wait for 5 seconds
 wait for 10 seconds
@@ -273,6 +275,8 @@ Step Timeout is available for **Web**, **Mobile Web**, and **App (Android and iO
 
 Your app shows a spinner after clicking "Submit" and then displays a success message.
 
+<VerifiedTag value="Verified" />
+
 ```
 click on the "Submit" button
 wait for 5 seconds
@@ -299,6 +303,8 @@ Adjust the selector (`.toast-message`) to match your application's toast compone
 
 ### Scenario: Modal/Dialog After Button Click
 
+<VerifiedTag value="Verified" />
+
 ```
 click on "Delete Account" button
 wait for 2 seconds
@@ -312,6 +318,8 @@ assert the modal is not visible
 
 Search fields often wait 300-500ms after the user stops typing before making an API call.
 
+<VerifiedTag value="Verified" />
+
 ```
 type "react testing" in the search bar
 wait for 2 seconds
@@ -323,6 +331,8 @@ assert the search results page has loaded
 ### Scenario: Page Redirect After Action
 
 After login, the app redirects to the dashboard.
+
+<VerifiedTag value="Verified" />
 
 ```
 type "admin@example.com" in the email field
@@ -337,6 +347,8 @@ assert "Welcome, Admin" is visible
 
 Product pages often load images lazily as you scroll.
 
+<VerifiedTag value="Verified" />
+
 ```
 scroll down 3 times
 wait for 3 seconds
@@ -346,6 +358,8 @@ assert the product image for "Winter Jacket" is visible
 ### Scenario: Tab Content That Loads on Click
 
 Tabs that load their content via AJAX when selected:
+
+<VerifiedTag value="Verified" />
 
 ```
 click on the "Reviews" tab
@@ -357,6 +371,8 @@ assert "5 out of 5 stars" is visible
 ### Scenario: Conditional UI Based on API Response
 
 A dashboard that shows different content based on the user's subscription:
+
+<VerifiedTag value="Verified" />
 
 ```
 go to https://app.example.com/dashboard
@@ -372,6 +388,8 @@ KaneAI handles native browser alerts (`alert()`, `confirm()`, `prompt()`) automa
 
 ### Cookie Consent Banners
 
+<VerifiedTag value="Verified" />
+
 ```
 if "Accept Cookies" button is visible then click on it
 ```
@@ -383,6 +401,9 @@ For notification or location permission popups, handle them before they appear u
 ### Dismissing Popups Without Close Buttons (Mobile)
 
 On mobile apps, use:
+
+<VerifiedTag value="Verified" />
+
 ```
 dismiss dialog
 ```
@@ -394,6 +415,8 @@ This works for popups that don't have visible close buttons.
 ### Scenario: Slow API Response
 
 When your app fetches data from a slow API:
+
+<VerifiedTag value="Verified" />
 
 ```
 click on "Generate Report"
@@ -411,6 +434,8 @@ Use KaneAI's [Network Throttling](/support/docs/kaneai-network-throttling) to si
 2. Add longer waits to account for slower load times
 3. Validate that the app handles slow networks gracefully
 
+<VerifiedTag value="Verified" />
+
 ```
 -- With 3G throttling enabled --
 go to https://app.example.com
@@ -424,6 +449,8 @@ assert no "Network Error" message is visible
 ### Pattern: Action → Wait → Assert
 
 The most reliable pattern for any action that triggers asynchronous behavior:
+
+<VerifiedTag value="Verified" />
 
 ```
 -- Action --
@@ -440,6 +467,8 @@ assert "Success" message is visible
 
 For content below the fold:
 
+<VerifiedTag value="Verified" />
+
 ```
 scroll down until "Contact Us" section is visible
 wait for 2 seconds
@@ -449,6 +478,8 @@ type "feedback@example.com" in the email field
 ### Pattern: Conditional Wait for Dynamic Content
 
 When you're unsure if a popup or overlay will appear:
+
+<VerifiedTag value="Verified" />
 
 ```
 if "Close" button is visible then click on "Close" button

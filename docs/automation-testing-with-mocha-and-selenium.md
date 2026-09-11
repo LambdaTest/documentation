@@ -222,12 +222,17 @@ Complete these steps before running Mocha Selenium tests on TestMu AI.
 ---
 Clone the TestMu AI Mocha Selenium sample repository to your local machine.
 
+<VerifiedTag value="Verified" />
+
 ```bash
 git clone https://github.com/LambdaTest/mocha-selenium-sample
 cd mocha-selenium-sample
 ```
 
 Install the required dependencies:
+
+<VerifiedTag value="Verified" />
+
 ```bash
 npm i
 npm install selenium-webdriver
@@ -239,6 +244,8 @@ Set your TestMu AI username and access key as environment variables.
 
 * For **macOS/Linux**:
 
+<VerifiedTag value="Verified" />
+
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">
 {`export LT_USERNAME= "${ YOUR_LAMBDATEST_USERNAME()}" 
@@ -247,6 +254,8 @@ export LT_ACCESS_KEY= "${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 </div>
 
 * For **Windows**:
+
+<VerifiedTag value="Verified" />
 
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">
@@ -282,11 +291,17 @@ Generate capabilities for your test requirements with the [Capabilities Generato
 Execute the test using the following command.
 
 **Single test:**
+
+<VerifiedTag value="Verified" />
+
 ```bash
 npm run single
 ```
 
 **Parallel tests:**
+
+<VerifiedTag value="Verified" />
+
 ```bash
 npm run parallel
 ```
@@ -310,6 +325,8 @@ Use AI coding assistants to generate and run Mocha tests with the TestMu AI Agen
 The [mocha-skill](https://github.com/LambdaTest/agent-skills/tree/main/mocha-skill) is part of [TestMu AI Agent Skills](https://github.com/LambdaTest/agent-skills/) - structured packages that teach AI coding assistants how to write production-grade test automation.
 
 Install the skill:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 git clone https://github.com/LambdaTest/agent-skills.git

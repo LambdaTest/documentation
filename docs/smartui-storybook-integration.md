@@ -350,6 +350,8 @@ The first step is to create a project with the application in which we will comb
 
 Please try our **StoryBook SmartUI** GitHub sample repository for trying an example.
 
+<VerifiedTag value="Verified" />
+
 ```bash
 git clone https://github.com/LambdaTest/smartui-storybook-sample.git
 ```
@@ -359,6 +361,8 @@ git clone https://github.com/LambdaTest/smartui-storybook-sample.git
 ### **Step 1**: Install the Dependencies
 
 Install required NPM modules for `LambdaTest SmartUI StoryBook CLI` in your **Frontend** project.
+
+<VerifiedTag value="Verified" />
 
 ```bash
 npm install @lambdatest/smartui-storybook -g
@@ -416,6 +420,8 @@ export const InteractiveButton = {
 SmartUI supports Storybook's global decorators and parameters, including theme switching. You can configure themes in your `.smartui.json` file.
 
 **Configuration Example:**
+
+<VerifiedTag value="Verified" />
 
 ```json title=".smartui.json"
 {
@@ -488,6 +494,8 @@ If you set `"backgroundTheme": "both"` in your SmartUI config, each story will b
 
 Setup your project token shown in the **SmartUI** app after creating your project.
 
+<VerifiedTag value="Verified" />
+
 <Tabs className='docs__val' groupId='language'>
 <TabItem value='MacOS/Linux' label='MacOS/Linux' default>
 
@@ -518,6 +526,8 @@ $env:PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
 
 If you are behind a proxy, you can configure the `SMARTUI_API_PROXY` environment variable.
 
+<VerifiedTag value="Verified" />
+
 <Tabs className='docs__val' groupId='language'>
 <TabItem value='MacOS/Linux' label='MacOS/Linux' default>
 
@@ -541,11 +551,15 @@ set SMARTUI_API_PROXY=http://172.17.0.1:3128
 
 You can now configure your project settings on using various available options to run your tests with the SmartUI integration. To generate the configuration file, please execute the following command:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 smartui config create .smartui.json
 ```
 
 Once, the configuration file will be created, you will be seeing the default configuration pre-filled in the configuration file:
+
+<VerifiedTag value="Verified" />
 
 ```json title="/smartUi-storybook-project/smartui.json"
 {
@@ -598,6 +612,8 @@ This will help you to avoid any false-positive results for your tests. You can a
 
 For capturing the stories in **full page** without limiting the height to the viewport then in the `viewports` array, you can change the following configuration:
 
+<VerifiedTag value="Verified" />
+
 ```json
 "viewports": [
   [1920],  // Only mention the width of the viewport
@@ -611,6 +627,8 @@ For capturing the stories in **full page** without limiting the height to the vi
 To facilitate the visualization of your UI components on various device screens, you can now setup custom viewport configurations. This feature is an extension of Storybook's existing Viewport toolbar item, enabling you to capture and view stories in different dimensions, such as `mobile` or `tablet`, with specific orientations like portrait or landscape.
 
 To configure custom viewports for your stories, you can update the `.smartui.json` file within your project repository.
+
+<VerifiedTag value="Verified" />
 
 ```json
 {
@@ -668,6 +686,8 @@ For instance, if `Story-1` has a story-level `waitForTimeout` value (T1) set wit
 
 You can now execute your `StoryBook` components for `Visual Regression Testing` using the following options:.
 
+<VerifiedTag value="Verified" />
+
 <Tabs className='docs__val' groupId='execution_type'>
 <TabItem value='locally-hosted' label='For Locally Hosted Server' default>
 
@@ -697,6 +717,8 @@ smartui storybook https://<your_public_hosted_url> --config .smartui.json    // 
 :::note For Continuous Integration (CI)
 
 If you are using the Continuous Integration (CI) pipeline for your application and want to integrate `SmartUI StoryBook` execution then the following are the steps needs to be added to your `.yaml` file:
+
+<VerifiedTag value="Verified" />
 
 <Tabs className='docs__val' groupId='ci_execution_type'>
 <TabItem value='static-build-or-ci-1' label='For Static Builds' default>
@@ -744,6 +766,8 @@ You can now see the SmartUI dashboard to view the results. Can also identify the
 <img loading="lazy" src={require('../assets/images/smart-visual-testing/smartui-storybook-results.webp').default} alt="cmd" width="768" height="373" className='doc_img'/>
 
 ## Troubleshooting
+
+<VerifiedTag value="Verified" />
 
 <Tabs className='docs__val' groupId='troubleshooting'>
 <TabItem value='verify-storybook-server' label='Verify Storybook Server' default>

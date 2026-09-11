@@ -230,6 +230,8 @@ Upload your **_iOS_** application (.ipa file) or **_android_** application (.apk
 
  **Using App File from System:**
 
+ <VerifiedTag value="Verified" />
+
  <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">
 {`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" -X POST "https://manual-api.lambdatest.com/app/upload/realDevice" -F "appFile=@"/Users/macuser/Downloads/proverbial_android.apk"" `}
@@ -237,6 +239,8 @@ Upload your **_iOS_** application (.ipa file) or **_android_** application (.apk
 </div>
 
 **Using App URL:**
+
+<VerifiedTag value="Verified" />
 
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">

@@ -15,6 +15,7 @@ canonical: https://www.testmuai.com/support/docs/error-categorization-report/
 ---
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -104,6 +105,8 @@ You can generate and download other reports as well, along with the error-report
 ## Configure YAML file to Generate the Error Categorization Report
 
 This report is generated when your job includes multiple error categories. To enable the error categorization report, simply pass the [`errorCategorizedReport`](/support/docs/deep-dive-into-hyperexecute-yaml/#errorcategorizedreport) flag to your YAML file:
+
+<VerifiedTag value="Verified" />
 
 ```yaml title="hyperexecute.yaml"
 errorCategorizedReport:

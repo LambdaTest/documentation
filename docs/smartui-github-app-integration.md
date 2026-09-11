@@ -245,6 +245,8 @@ Setting up your **CI** workflow to execute on **GitHub**. Here is an example set
 
 Go to `.github/workflows/<your_ci_file>.yml`
 
+<VerifiedTag value="Verified" />
+
 ```yaml
     name: Execute SmartUI Test with GitHub App Integration
     runs-on: ubuntu-latest

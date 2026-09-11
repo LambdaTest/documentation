@@ -18,6 +18,7 @@ canonical: https://www.testmuai.com/support/docs/kane-cli-configuration/
 ---
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -223,11 +224,15 @@ Authentication credentials are managed separately under `~/.testmuai/kaneai/prof
 
 Print the current configuration:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 kane-cli config show
 ```
 
 The output groups settings under three headings:
+
+<VerifiedTag value="Verified" />
 
 ```text
 Configuration
@@ -282,6 +287,8 @@ Empty fields are shown as `(none)`. The `chrome` path is empty by default, in wh
 
 The Chrome window is launched at the configured resolution:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 kane-cli config set-window 1280x800
 ```
@@ -290,7 +297,29 @@ The format is `WIDTHxHEIGHT` (lowercase `x` separator). Width must be between 80
 
 In TUI mode, the same setting can be edited through an interactive window-size picker.
 
+### Default start URL
+
+kane-cli needs a start URL for the first navigation of a run. It resolves one in this order, first match wins:
+
+1. The `--url <url>` flag on `kane-cli run` / `kane-cli testmd run`.
+2. (test.md only) the `url:` key in the file's frontmatter.
+3. The configured `default_url` — set with `config set-url`.
+
+<VerifiedTag value="Verified" />
+
+```bash
+kane-cli config set-url https://app.example.com
+```
+
+Bare domains are accepted and normalized — `config set-url example.com` stores `https://example.com`. The value is rejected without changing the saved config if it is not a valid URL. The built-in playground value (`https://kaneai-playground.lambdatest.io`) counts as "unset", so a fresh install behaves as if no default were configured.
+
+In TUI mode, set the same value with `/config set-url <url>`, or pick **Default URL** from the interactive `/config` menu.
+
+If none of the three sources supplies a URL, kane-cli falls back to a site named in the objective itself (e.g. "Go to amazon.com and …"). When nothing provides a start URL at all, an interactive terminal asks you for one, while a non-interactive (CI) run fails — pass `--allow-missing-url` to a non-TTY run to proceed from the browser's current page instead. See [Run options](/support/docs/kane-cli-modes/#run-options).
+
 ### Test Manager Project
+
+<VerifiedTag value="Verified" />
 
 ```bash
 kane-cli config project
@@ -300,6 +329,8 @@ In a TTY, this opens an interactive project picker. The picker fetches the proje
 
 You can also set a project ID directly without the picker:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 kane-cli config project <project-id>
 ```
@@ -307,6 +338,8 @@ kane-cli config project <project-id>
 See [Test Manager Integration](/support/docs/kane-cli-tms-integration/) for how project selection feeds into uploads.
 
 ### Test Manager Folder
+
+<VerifiedTag value="Verified" />
 
 ```bash
 kane-cli config folder
@@ -316,6 +349,8 @@ Opens an interactive folder picker for the currently selected project. Folders a
 
 To set a folder ID without the picker:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 kane-cli config folder <folder-id>
 ```
@@ -323,6 +358,8 @@ kane-cli config folder <folder-id>
 See [Test Manager Integration](/support/docs/kane-cli-tms-integration/) for how folder selection feeds into uploads.
 
 ### Mode
+
+<VerifiedTag value="Verified" />
 
 ```bash
 kane-cli config set-mode action
@@ -340,6 +377,8 @@ You can override the saved mode for a single run with `--mode <action|testing>` 
 
 On macOS Apple Silicon, Kane CLI can run against a virtual mobile device instead of the desktop browser. Three settings persist the default target and how to reach it. They are a **separate axis** from `mode` above: `mode` tunes agent behaviour, while these choose *what device* a run drives.
 
+<VerifiedTag value="Verified" />
+
 ```bash
 kane-cli config set-target emulator          # desktop | emulator | simulator
 kane-cli config set-device pixel-7           # name, serial, ip:port, or udid
@@ -351,6 +390,24 @@ kane-cli config set-app ./builds/app-debug.apk
 - **`app`**: the app under test for a mobile run, a build path (emulator `.apk`, simulator `.zip`) or an uploaded app id, `APP` followed by six or more digits. Required for every mobile run. On the `desktop` target, `device` and `app` are ignored.
 
 A run reads these as its defaults. Override any of them for a single run with `--target`, `--device`, and `--app`. Setup and the full list of accepted app formats are in [Mobile Testing](/support/docs/kane-cli-mobile/).
+
+### Bug detection
+
+<VerifiedTag value="Verified" />
+
+```bash
+kane-cli config set-bug-detection continue
+```
+
+`bug_detection` controls whether the agent watches for **product bugs** — not test failures — while it authors steps. When enabled, the agent can flag a suspicious behaviour mid-run (a broken flow, a wrong value, an error where none should be); the suspicion is investigated, and either rejected (the run continues, nothing fails) or confirmed as a product bug:
+
+- **`off`** (default) — no bug detection; behaviour is identical to previous releases.
+- **`stop`** — a confirmed product bug fails the step and ends the run.
+- **`continue`** — the confirmed bug is recorded (in the run result and the [evidence pack](/support/docs/kane-cli-evidence/)) and the run keeps going.
+
+This applies to **authoring** steps only. Replayed steps don't need it: a failed replay is always investigated automatically, regardless of this setting.
+
+Override the saved value for a single run with `--bug-detection <off|stop|continue>` on `kane-cli run`, `kane-cli testmd run`, or `kane-cli testrun run`. The setting appears in the TUI Config screen as **Bug Detection** and in `kane-cli config show` output.
 
 ### Code Export
 
@@ -376,6 +433,8 @@ When you select a named Chrome profile, Kane CLI stores it under `~/.testmuai/ka
 
 ### Choosing a Different Profile
 
+<VerifiedTag value="Verified" />
+
 ```bash
 kane-cli config chrome-profile
 ```
@@ -384,6 +443,8 @@ In a TTY, this opens an interactive Chrome-profile picker. The picker lists ever
 
 To set a path directly without the picker:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 kane-cli config chrome-profile /absolute/path/to/profile
 ```
@@ -391,6 +452,8 @@ kane-cli config chrome-profile /absolute/path/to/profile
 ### Headless Mode
 
 To run Chrome without a visible window, pass `--headless` on `kane-cli run`:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 kane-cli run "Verify the home page loads" --headless
@@ -407,6 +470,8 @@ The Chrome window dimensions for both headed and headless modes come from the `w
 ## Resetting Settings
 
 There is no `kane-cli config reset` subcommand. To reset persistent settings to defaults, delete the config file:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 rm ~/.testmuai/kaneai/tui-config.json

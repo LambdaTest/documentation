@@ -17,6 +17,7 @@ canonical: https://www.testmu.ai/support/docs/web-scanner-visual-scan/
 
 import CodeBlock from '@theme/CodeBlock';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -143,6 +144,8 @@ You can create your own `.smartui.json` file for full control over:
 <img loading="lazy" src={require('../assets/images/web-scanner/visual-scan-advanced-options.png').default} alt="Visual Scan Advanced Options" className="doc_img"/>
 
 #### Default SmartUI Config
+
+<VerifiedTag value="Verified" />
 
 <CodeBlock language="json">
 {`

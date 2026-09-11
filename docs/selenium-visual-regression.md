@@ -26,6 +26,30 @@ import TabItem from '@theme/TabItem';
 import NewTag from '../src/component/newTag';
 
 <script type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify({
+       "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": BRAND_URL
+        },{
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Support",
+          "item": `${BRAND_URL}/support/docs/`
+        },{
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Getting Started With Visual Regression Testing Using Selenium On SmartUI",
+          "item": `${BRAND_URL}/support/docs/selenium-visual-regression/`
+        }]
+      })
+    }}
+></script>
+
+<script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
     "@context": "https://schema.org",
     "@type": [
@@ -504,6 +528,8 @@ Using the <BrandName /> platform, perform regression testing in just one click a
 - Access your Hub for your selenium **remote connection** instance at `hub.lambdatest.com/wd/hub`.
 - Copy `LT_USERNAME` and `LT_ACCESS_KEY` credentials from `Access Key` button on the top right of the dashboard.
 
+<VerifiedTag value="Verified" />
+
 <Tabs className="docs__val" groupId="language">
 <TabItem value="MacOS/Linux" label="MacOS/Linux" default>
 
@@ -549,6 +575,8 @@ To create a SmartUI Project, follow these steps:
 Once you have created a SmartUI Project, you can generate screenshots by running automation scripts. Follow the below steps to successfully generate screenshots -
 
 1. Please clone the following sample Github repo (`https://github.com/LambdaTest/smartui-node-sample`).
+
+<VerifiedTag value="Verified" />
 
 ```bash
 git clone https://github.com/LambdaTest/smartui-node-sample
@@ -695,6 +723,8 @@ driver = new RemoteWebDriver(new URL("https://" + username + ":" + accesskey + g
 </Tabs>
 
 - Installing dependency and for executing the test.
+
+<VerifiedTag value="Verified" />
 
 <Tabs className="docs__val" groupId="language">
 <TabItem value="nodejs" label="NodeJS" default>
@@ -1043,6 +1073,8 @@ driver.ExecuteScript("smartui.fetchScreenshotStatus=<Your Screenshot Name>");
 </TabItem>
 </Tabs>
 The following webhook will return the status of the screenshot captured. The status can be one of the following:
+
+<VerifiedTag value="Verified" />
 
 ```json
 {

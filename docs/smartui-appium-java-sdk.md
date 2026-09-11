@@ -315,6 +315,8 @@ The first step is to create a project that will contain all your builds. To crea
 
 Add the following dependency to your `pom.xml` file:
 
+<VerifiedTag value="Verified" />
+
 ```xml
 <dependency>
     <groupId>io.github.lambdatest</groupId>
@@ -328,6 +330,8 @@ Add the following dependency to your `pom.xml` file:
 You can configure your project token in one of two ways:
 
 1. **Using Environment Variables**:
+
+<VerifiedTag value="Verified" />
 
 <Tabs className='docs__val' groupId='language'>
 <TabItem value='MacOS/Linux' label='MacOS/Linux' default>
@@ -412,6 +416,8 @@ public class YourTestClass {
 
 Run your tests as you normally would with your cloud provider. SmartUI will automatically capture and process the screenshots for visual regression testing.
 
+<VerifiedTag value="Verified" />
+
 ```bash
 mvn test
 ```
@@ -469,6 +475,8 @@ You can either:
 - **Compare only specific regions** using `selectBoxes`
 
 This feature requires the `Gson` library for JSON serialization. Add it to your `pom.xml` if not already present:
+
+<VerifiedTag value="Verified" />
 
 ```xml
 <dependency>

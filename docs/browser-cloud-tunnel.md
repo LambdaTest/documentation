@@ -158,6 +158,8 @@ Your cloud browser can only reach public URLs by default. But your agent may nee
 
 The Tunnel Service solves this by creating an encrypted connection between your local machine and <BrandName />'s cloud infrastructure. Once the tunnel is running, your <BrandName /> Browser Cloud sessions can reach any URL that your machine can reach - including `localhost`, private IPs, and internal hostnames.
 
+<VerifiedTag value="Verified" />
+
 ```
 Cloud Browser --(encrypted tunnel)--> Your Machine --> localhost:3000
                                                    --> staging.internal.company.com

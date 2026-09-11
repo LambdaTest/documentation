@@ -226,10 +226,16 @@ Complete the following steps before you start Ruby automation testing with Selen
 1. Install Ruby and gem on your local system. Follow these instructions to install on different operating systems.
    * For **Windows**, download from the [Ruby Installer for Windows](https://rubyinstaller.org/downloads/).
    * For **Linux** or **Ubuntu**, run a simple apt command like below:
+
+   <VerifiedTag value="Verified" />
+
    ```bash
    sudo apt-get install ruby-full
    ```
    * For **macOS**, run a [Homebrew](https://brew.sh/) command like this:
+
+   <VerifiedTag value="Verified" />
+
    ```bash
    brew install ruby
    ```
@@ -240,12 +246,17 @@ Complete the following steps before you start Ruby automation testing with Selen
 ---
 Clone the repository and install dependencies.
 
+<VerifiedTag value="Verified" />
+
 ```bash
 git clone https://github.com/LambdaTest-sample-test-frameworks/Ruby-UnitTest-Selenium.git
 cd Ruby-UnitTest-Selenium
 ```
 
 Install project dependencies:
+
+<VerifiedTag value="Verified" />
+
 ```bash
 bundle install
 ```
@@ -260,6 +271,8 @@ Set TestMu AI Username and Access Key in environment variables.
 
 <TabItem value="bash" label="macOS / Linux" default>
 
+  <VerifiedTag value="Verified" />
+
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-bash">
   {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
@@ -270,6 +283,8 @@ export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 </TabItem>
 
 <TabItem value="powershell" label="Windows" default>
+
+  <VerifiedTag value="Verified" />
 
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-powershell">
@@ -305,6 +320,8 @@ Use the TestMu AI [Capabilities Generator](https://www.testmuai.com/capabilities
 ---
 Execute the Test::Unit test from the command line.
 
+<VerifiedTag value="Verified" />
+
 ```bash
 ruby LambdaTest.rb
 ```
@@ -327,6 +344,8 @@ Use AI coding assistants to generate and run Test::Unit tests with the TestMu AI
 The [testunit-skill](https://github.com/LambdaTest/agent-skills/tree/main/testunit-skill) is part of [TestMu AI Agent Skills](https://github.com/LambdaTest/agent-skills/) - structured packages that teach AI coding assistants how to write production-grade test automation.
 
 Install the skill:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 git clone https://github.com/LambdaTest/agent-skills.git

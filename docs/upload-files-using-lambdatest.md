@@ -298,6 +298,8 @@ Use the executeScript command to fetch files from lambda storage.
 
 ### Basic Syntax
 
+<VerifiedTag value="Verified" />
+
 ```
 driver.executeScript("lambda-files-download=file_name")
 ```

@@ -19,6 +19,7 @@ slug: gocd-integration-with-hyperexecute/
 canonical: https://www.testmuai.com/support/docs/gocd-integration-with-hyperexecute/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -185,11 +186,17 @@ Download or Clone the code sample from the <BrandName /> GitHub repository to ru
 - Go to the gocd/bin folder and run the following commands:
 
   - To start the Server
+
+  <VerifiedTag value="Verified" />
+
   ```bash
   ./bin/go-server start
   ```
 
   - To start the Agent
+
+  <VerifiedTag value="Verified" />
+
   ```bash
   ./bin/go-agent start
   ```
@@ -231,6 +238,8 @@ A Stage is a group of Jobs and a Job is a work which needs to be executed.
 
 - Enter the below mentioned script in the space provided.
 
+<VerifiedTag value="Verified" />
+
 ```bash
 curl -O https://downloads.lambdatest.com/hyperexecute/darwin/hyperexecute
 chmod +x hyperexecute
@@ -267,6 +276,8 @@ After the build is successful, go to your HyperExecute Dashboard and check the o
 <img loading="lazy" src={require('../assets/images/hyperexecute/integration/ci-cd/gocd/9.png').default} alt="Image"  className="doc_img"/>
 
 ## Sample Workflow File
+
+<VerifiedTag value="Verified" />
 
 ```xml
 <pipeline name="Download-and-Run-Hyperexecute">

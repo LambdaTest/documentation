@@ -218,6 +218,8 @@ Here is an example cURL request to upload your app using our REST API:
 
 <TabItem value="bash" label="Linux / MacOS" default>
 
+  <VerifiedTag value="Verified" />
+
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-bash">
   {`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" \\
@@ -230,6 +232,8 @@ Here is an example cURL request to upload your app using our REST API:
 </TabItem>
 
 <TabItem value="powershell" label="Windows" default>
+
+  <VerifiedTag value="Verified" />
 
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-powershell">
@@ -256,6 +260,8 @@ Upload your **test suite** (.ipa file) to the <BrandName /> servers using our **
 
 <TabItem value="bash" label="Linux / MacOS" default>
 
+  <VerifiedTag value="Verified" />
+
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-bash">
   {`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" \\
@@ -268,6 +274,8 @@ Upload your **test suite** (.ipa file) to the <BrandName /> servers using our **
 </TabItem>
 
 <TabItem value="powershell" label="Windows" default>
+
+  <VerifiedTag value="Verified" />
 
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-powershell">
@@ -296,6 +304,8 @@ Response of above cURL will be a **JSON** object containing the `App URL` of the
 - [LambdaUiKitIOS.ipa](https://prod-mobile-artefacts.lambdatest.com/assets/docs/LambdaUiKitIOS.ipa) 
 
 Refer to the sample `.yaml` file here
+
+<VerifiedTag value="Verified" />
 
 <Tabs className="docs__val">
 
@@ -456,12 +466,17 @@ If you are using the `deviceSelectionStrategy: any`, then in that case all the m
 
 4. Go to the location of the folder on the terminal and run the below commands. After the second command, you may need to give permission on **System Settings/Privacy & Security**. 
 
+<VerifiedTag value="Verified" />
+
 ```bash
 chmod u+x <cliFileNAme>
 ./<cliFileNAme> --u <userName> --k <accessKey> --verbose -i <yamlFileName>.yaml
 ```
 
 You can refer to this example and screenshot below:
+
+<VerifiedTag value="Verified" />
+
 ```
 ./hyperexecute --u my_user_name --k xyx123abc --verbose -i hyperexecute.yaml
 ```
@@ -494,6 +509,8 @@ This example will run only the 2 classes & one test as mentioned from the TestSu
 
 ## XCTestPlan in Sharding
 To implement the XCTestPlan in Sharding, add the `xctestplan` flag along with `app` and `testSuite` in the [framework](/support/docs/hyperexecute-yaml-version0.2/#framework) flag as shown below:
+
+<VerifiedTag value="Verified" />
 
 ```yaml
 framework:

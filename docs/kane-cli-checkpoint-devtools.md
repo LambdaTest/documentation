@@ -17,6 +17,8 @@ site_name: TestMu AI
 slug: kane-cli-checkpoint-devtools/
 canonical: https://www.testmuai.com/support/docs/kane-cli-checkpoint-devtools/
 ---
+import VerifiedTag from '@site/src/component/verifiedTag';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -132,6 +134,8 @@ Each DevTools domain follows the same pattern:
 You don't write code. You write natural language objectives, and KaneAI handles the rest.
 
 ## Examples
+
+<VerifiedTag value="Verified" />
 
 ```
 Assert: no API calls returned 5xx

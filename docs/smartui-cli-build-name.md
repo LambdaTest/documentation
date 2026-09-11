@@ -25,6 +25,7 @@ import NewTag from '../src/component/newTag';
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -222,11 +223,17 @@ If you face any problems executing tests with SmartUI-CLI `versions >= v4.x.x`, 
 If you haven't already installed SmartUI CLI, install it using npm:
 
 **Global Installation (Recommended):**
+
+<VerifiedTag value="Verified" />
+
 ```bash
 npm install -g @lambdatest/smartui-cli
 ```
 
 **Local Installation:**
+
+<VerifiedTag value="Verified" />
+
 ```bash
 npm install @lambdatest/smartui-cli
 ```
@@ -234,6 +241,8 @@ npm install @lambdatest/smartui-cli
 ## Step 2: Configure your Project Token
 
 Setup your project token shown in the **SmartUI** app after creating your project.
+
+<VerifiedTag value="Verified" />
 
 <Tabs className='docs__val' groupId='language'>
 <TabItem value='MacOS/Linux' label='MacOS/Linux' default>
@@ -266,6 +275,8 @@ You can add a custom build name by adding the `--buildName` flag to your test ex
 #### Custom Build Name (Expected Usage)
 Specify a custom build name to group your screenshots in the following way:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 npx smartui --config .smartui.json exec --buildName "Sample Build Name" -- <execution-command>
 ```
@@ -278,6 +289,8 @@ npx smartui --config .smartui.json exec --buildName "Sample Build Name" -- <exec
 ### Default Usage
 If no buildname is specified, a random build name is added to the builds:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 npx smartui --config .smartui.json exec -- <execution-command>
 ```
@@ -287,6 +300,8 @@ npx smartui --config .smartui.json exec -- <execution-command>
 If you are running multiple test cases in a single job (e.g., using HyperExecute) and want to club all screenshots under a single build while maintaining consistent Git baseline management, you can do the following:
 
 This can be done as follows:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 npx smartui --config .smartui.json exec --buildName $env:JOB_ID -- node test.js

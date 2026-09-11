@@ -175,6 +175,8 @@ Before automating Flutter apps using Appium, make sure you have the following th
 
 2. Add the below dependencies in Flutter app's `pubspec.yaml`
 
+<VerifiedTag value="Verified" />
+
 ```
  dev_dependencies:
    test: Demo
@@ -186,6 +188,8 @@ Before automating Flutter apps using Appium, make sure you have the following th
 
 3. In `main.dart` file, ensure the app has `enableFlutterDriverExtension()` enabled before `runApp`.
 
+<VerifiedTag value="Verified" />
+
 ```
 void main() {
     enableFlutterDriverExtension();
@@ -195,6 +199,8 @@ void main() {
  ```
 
  4. Set the `automationName` capability to `flutter` in Appium desired capabilities.
+
+<VerifiedTag value="Verified" />
 
 ```
  desiredCapabilities.setCapability("automationName", "flutter");
@@ -342,6 +348,8 @@ The [flutter-testing-skill](https://github.com/LambdaTest/agent-skills/tree/main
 
 The flutter-testing-skill package includes:
 
+<VerifiedTag value="Verified" />
+
 ```
 flutter-testing-skill/
 ├── SKILL.md
@@ -364,6 +372,8 @@ It provides structured guidance for:
 ***
 
 Install a Flutter Testing Agent Skill using the command below:
+
+<VerifiedTag value="Verified" />
 
 ```
 # Clone the repo and copy the skill you need

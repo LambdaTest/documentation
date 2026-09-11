@@ -29,6 +29,30 @@ import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <script type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify({
+       "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": BRAND_URL
+        },{
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Support",
+          "item": `${BRAND_URL}/support/docs/`
+        },{
+          "@type": "ListItem",
+          "position": 3,
+          "name": "How to use Auto Healing for your Playwright test suites",
+          "item": `${BRAND_URL}/support/docs/playwright-auto-healing/`
+        }]
+      })
+    }}
+></script>
+
+<script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
     "@context": "https://schema.org",
     "@type": [
@@ -340,6 +364,8 @@ test.describe('Browse LambdaTest in different search engines', () => {
 In the above test case, we are interacting with an element before and after a DOM change occurs on <BrandName />'s auto-healing playground. The Auto Healing feature will automatically detect if the element's locator has changed and adapt accordingly, ensuring the test continues to execute successfully.
 
 To run the test, execute the below command:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 npx playwright test auto-heal.spec.js

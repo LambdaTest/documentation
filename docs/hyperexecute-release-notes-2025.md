@@ -339,6 +339,8 @@ We've added Man-in-the-Middle (MITM) proxy support in HyperExecute Emulators.
 - You can now capture network logs directly from emulator sessions using MITM.
 - This feature is available for all emulators when configured with a flag that you can add in your `hyperexecute.yaml` file:
 
+<VerifiedTag value="Verified" />
+
 ```yaml title="hyperexecute.yaml"
 framework:
   name: raw
@@ -389,6 +391,8 @@ With Workflow Variables, you can now customize your workflow execution. This mak
 We have introduced language support for Maestro tests on Android devices in HyperExecute. Now, you can configure the language parameter directly in your HyperExecute YAML under the [framework](/support/docs/hyperexecute-yaml-version0.2/#framework) flag.
 
 This enhancement is particularly useful when your testing applications in non-English environments. For example, you can now run tests in Spanish by setting:
+
+<VerifiedTag value="Verified" />
 
 ```yaml title="hyperexecute.yaml"
 framework:
@@ -464,6 +468,8 @@ HyperExecute now supports regex-style directory matching (using **) to recursive
 
 ### Supported Syntax Example
 
+<VerifiedTag value="Verified" />
+
 ```yaml title="hyperexecute.yaml"
 partialReports:
   location: reports/**/cucumber/
@@ -472,6 +478,8 @@ partialReports:
 ```
 
 This will successfully match paths like:
+
+<VerifiedTag value="Verified" />
 
 ```yaml
 reports/2025-07-29/cucumber/
@@ -504,6 +512,8 @@ You can now run Playwright tests on real iOS devices using HyperExecute. This un
 - Set `runson: ios` in your YAML.
 - Use the following under `framework` flag:
 
+<VerifiedTag value="Verified" />
+
 ```yaml title="hyperexecute.yaml"
 runson: ios
 
@@ -526,6 +536,8 @@ You can now override Selenium capabilities directly from your `hyperexecute.yaml
 - Avoid code changes for environment-specific needs.
 - Reuse the same script across different setups.
 - Keep test code clean and capability-agnostic.
+
+<VerifiedTag value="Verified" />
 
 ```yaml hyperexecute.yaml
 ltOptions:
@@ -716,6 +728,8 @@ When you pass the `--validate` flag along with your YAML file, the CLI will:
 - Validate the structure and syntax of the YAML file.
 - Return a success or error message indicating whether the file is correct or if there are issues that need attention.
 
+<VerifiedTag value="Verified" />
+
 <div className="lambdatest__codeblock">
   <CodeBlock className="language-bash">
     {`./hyperexecute --user ${ YOUR_LAMBDATEST_USERNAME()} --key ${ YOUR_LAMBDATEST_ACCESS_KEY()} --config RELATIVE_PATH_OF_YOUR_YAML_FILE  --validate`}
@@ -737,6 +751,8 @@ Previously, `failFast` could only be applied at the test level. Now, with this u
 
 Example YAML Configuration:
 
+<VerifiedTag value="Verified" />
+
 ```yaml
 failFast:
   maxNumberOfTests: 2
@@ -753,12 +769,16 @@ This enhancement brings more flexibility to your testing setup, helping you bett
 ### Default Reporter Configuration in CypressOps
 You can now explicitly specify a custom reporter setup using the new `reporterConfigFile` option in [`cypressOps`](/support/docs/deep-dive-into-hyperexecute-yaml/#cypressops). If your Cypress project does not have a custom reporter configured, `cypressOps` will automatically enable command logs using the mochawesome reporter by default. This ensures that test results are always captured in a readable format, without requiring manual setup.
 
+<VerifiedTag value="Verified" />
+
 ```yaml
 cypressOps:
   reporterConfigFile: "reporter_config.json"
 ```
 
 Value of this JSON:
+
+<VerifiedTag value="Verified" />
 
 ```json
 {
@@ -779,6 +799,8 @@ Value of this JSON:
 ### Setup Runtime Updates
 HyperExecute expands its support for the dotnet by introducing the versions `4.7` and `4.8` in the [runtime](/support/docs/deep-dive-into-hyperexecute-yaml/#runtime).
 
+<VerifiedTag value="Verified" />
+
 ```yaml
 runtime:
   - language: dotnet
@@ -787,6 +809,8 @@ runtime:
 
 ### Support for Project Capability in CypressOps
 You can now define your [Project](/support/docs/hyperexecute-projects/) name and autocreate your project via `ProjectName` capability defined in [`cypressOps`](/support/docs/deep-dive-into-hyperexecute-yaml/#cypressops).
+
+<VerifiedTag value="Verified" />
 
 ```yaml
 cypressOps:
@@ -797,6 +821,8 @@ cypressOps:
 The consolidated Native Robot report includes detailed information on all executed tests, i.e., which tests passed, failed, or were skipped, along with any error messages and stack traces for failed tests. It is widely supported across CI/CD tools, which makes it easy to integrate with existing workflows and with other tools or systems.
 
 Add the following configurations in your YAML file:
+
+<VerifiedTag value="Verified" />
 
 ```yaml
 testRunnerCommand: YOUR_RUNNER_COMMAND --outputdir Reports 
@@ -816,6 +842,8 @@ partialReports:
 ### Parameterising `appium` flag
 To support advanced mobile test scenarios, particularly for iOS simulation using desktop browsers, we've added support for parameterising the `appium` flag. You can now configure your test matrix to include macOS + Appium combinations for mobile browser testing. This supports more flexible testing strategies for iOS use cases using desktop browsers on mac environments.
 
+
+<VerifiedTag value="Verified" />
 
 ```yaml
 version: 0.1
@@ -840,6 +868,8 @@ appium: ${matrix.appium}
 ## Version 2.7.3
 ### `globalPre` and `globalPost` flag in HyperExecute YAML
 The [`globalPre`](/support/docs/deep-dive-into-hyperexecute-yaml/#globalpre) and [`globalPost`](/support/docs/deep-dive-into-hyperexecute-yaml/#globalpost) flags in the HyperExecute YAML configuration allow for global setup and teardown operations for test execution. These flags enable users to define commands that run before any tests begin (globalPre) and after all tests have completed (globalPost), providing greater control over test executions.
+
+<VerifiedTag value="Verified" />
 
 ```yaml title="hyperexecute.yaml"
 # globalPre
@@ -876,6 +906,8 @@ globalPost:
 ### `afterEachScenario` Flag for Test Cleanup
 - Introduced the `afterEachScenario` flag to automate post-test scenario tasks. This flag is useful for cleanup activities such as clearing cookies, resetting databases, or capturing logs.
 - Commands or scripts listed under this flag will execute sequentially after each test scenario, ensuring test isolation and consistency.
+
+<VerifiedTag value="Verified" />
 
 ```yaml
 afterEachScenario:

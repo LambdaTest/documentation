@@ -24,6 +24,7 @@ import TabItem from '@theme/TabItem';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import RealDeviceTag from '../src/component/realDevice';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -206,6 +207,8 @@ Detailed upload steps are available here: [Getting Started with XCUI Testing –
 
 To generate `.xcresult` bundles for your XCUI test executions, you must pass `"enableResultBundle": true` in your build request and use the new build endpoint:
 
+<VerifiedTag value="Verified" />
+
 ```
 POST https://mobile-api.lambdatest.com/mobile-automation/api/v1/xcuitest/builds
 ```
@@ -217,6 +220,8 @@ This endpoint initiates your test run and enables generation of the result bundl
 | enableResultBundle  | Enable generating result bundles for your XCUI build. | true/false (default: false)    |
 
 Below is an example cURL command to execute your test with result bundles enabled:
+
+<VerifiedTag value="Verified" />
 
 <Tabs className="docs__val">
 
@@ -285,6 +290,8 @@ Result bundles are generated at the Build level. To download the `.xcresult` bun
 - To view the `.xcresult` for a specific shard, you must pass the `shard:shardId` as a query parameter in your request.
 :::
 
+<VerifiedTag value="Verified" />
+
 ```
 GET https://mobile-api.lambdatest.com/mobile-automation/api/v1/framework/builds/{build-id}/xcresult
 ```
@@ -292,6 +299,8 @@ GET https://mobile-api.lambdatest.com/mobile-automation/api/v1/framework/builds/
 Replace `{build-id}` with the actual build ID.
 
 Example cURL command to download the result bundle:
+
+<VerifiedTag value="Verified" />
 
 <div className="lambdatest__codeblock">
   <CodeBlock className="language-bash">

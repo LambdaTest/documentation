@@ -410,11 +410,17 @@ The first step is to create a project with the application in which we will comb
 Install required NPM modules for `TestMu AI SmartUI CLI` globally or in your project:
 
 **Global Installation (Recommended):**
+
+<VerifiedTag value="Verified" />
+
 ```bash
 npm install -g @lambdatest/smartui-cli
 ```
 
 **Local Installation:**
+
+<VerifiedTag value="Verified" />
+
 ```bash
 npm install @lambdatest/smartui-cli
 ```
@@ -425,10 +431,14 @@ If you face any problems executing tests with SmartUI-CLI `versions >= v4.x.x`, 
 
 ### **Step 2:** Create the design info file
 
+<VerifiedTag value="Verified" />
+
 ```
 smartui config:create-figma designs.json
 ```
 Once, the `designs` file will be created, you will be seeing the sample pre-filled configuration in the `designs.json` file:
+
+<VerifiedTag value="Verified" />
 
 ```json title="/smartui-cli-figma-project/designs.json"
 {
@@ -453,6 +463,8 @@ Once, the `designs` file will be created, you will be seeing the sample pre-fill
 ### **Step 3:** Configure your Project Token and Figma Token
 
 1. Setup your project token shown in the **SmartUI** app after creating your project.
+
+<VerifiedTag value="Verified" />
 
 <Tabs className='docs__val' groupId='language'>
 <TabItem value='MacOS/Linux' label='MacOS/Linux' default>
@@ -480,6 +492,8 @@ $env:PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
 
 2. Setup your [personal access token for Figma](https://help.figma.com/hc/en-us/articles/8085703771159-Manage-personal-access-tokens) to authenticate Figma with SmartUI.
 
+<VerifiedTag value="Verified" />
+
 <Tabs className='docs__val' groupId='language'>
 <TabItem value='MacOS/Linux-1' label='MacOS/Linux' default>
 
@@ -505,6 +519,8 @@ $env:FIGMA_TOKEN="123456#1234abcd-****-****-****-************"
 </Tabs>
 
 ### **Step 4:** Configure your <BrandName /> Credentials
+
+<VerifiedTag value="Verified" />
 
 <Tabs className='docs__val' groupId='language'>
 <TabItem value='MacOS/Linux-2' label='MacOS/Linux' default>
@@ -546,6 +562,8 @@ Please read the following table for more information about the configuration fil
 
 You can now execute tests for `Visual Testing for Figma objects` using the following options:.
 
+<VerifiedTag value="Verified" />
+
 ```bash
 npx smartui upload-figma designs.json
 ```
@@ -554,16 +572,22 @@ npx smartui upload-figma designs.json
 
 1. `markBaseline` - You can mark a specific build as a baseline through the runner command
 
+<VerifiedTag value="Verified" />
+
 ```bash
 npx smartui upload-figma designs.json --markBaseline
 ```
 2. `buildName` - You can add your custom build name to a build by running the following command
+
+<VerifiedTag value="Verified" />
 
 ```bash
 npx smartui upload-figma designs.json --buildName "<Build_Name>"
 ```
 
 <b> You can use these options in a nested way as well, as shown below </b>
+
+<VerifiedTag value="Verified" />
 
 ```bash
 npx smartui upload-figma designs.json --buildName "<Build_Name>" --markBaseline
@@ -577,6 +601,8 @@ You can add more screenshots in a build by specifying the particular build name 
 :::
 
 ## Best Practices
+
+<VerifiedTag value="Verified" />
 
 <Tabs className='docs__val' groupId='best-practices'>
 <TabItem value='build-names' label='Build Names' default>
@@ -610,6 +636,9 @@ You can add more screenshots in a build by specifying the particular build name 
 Figma-uploaded screenshots automatically have `.png` appended (e.g., `homepage.png`), so your SDK screenshots must match:
 
 **In your SDK code:**
+
+<VerifiedTag value="Verified" />
+
 ```javascript
 // ❌ Wrong - will not match Figma screenshot
 smartuiSnapshot(driver, "homepage");
@@ -656,6 +685,8 @@ This ensures that Figma screenshots (e.g., `homepage.png`) match SDK screenshots
 
 If you are using the Continuous Integration (CI) pipeline for your application and want to integrate `SmartUI Figma CLI` execution then the following are the steps needs to be added to your `.yaml` file:
 
+<VerifiedTag value="Verified" />
+
 ```yaml
 steps:
   - name: Running SmartUI Figma CLI Tests
@@ -683,6 +714,9 @@ You can see the SmartUI dashboard to view the results. This will help you identi
 Figma-uploaded screenshots automatically have `.png` appended (e.g., `homepage.png`), so your SDK screenshots must match:
 
 **In your SDK code:**
+
+<VerifiedTag value="Verified" />
+
 ```javascript
 // ❌ Wrong - will not match Figma screenshot
 smartuiSnapshot(driver, "homepage");
@@ -745,6 +779,8 @@ You can see the SmartUI dashboard to view the results. This will help you identi
 </Tabs>
 
 ## Troubleshooting
+
+<VerifiedTag value="Verified" />
 
 <Tabs className='docs__val' groupId='troubleshooting'>
 <TabItem value='verify-figma-token' label='Verify Figma Token' default>

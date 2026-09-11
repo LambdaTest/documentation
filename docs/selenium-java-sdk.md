@@ -221,6 +221,8 @@ Get running on the cloud grid in three steps.
 
 Add the TestMu AI Selenium Java SDK dependency to your `pom.xml`. Configure the agent to start automatically during your build process:
 
+<VerifiedTag value="Verified" />
+
 ```xml
 <dependencies>
   ....
@@ -305,6 +307,8 @@ Check the latest version of [testmuai-selenium-java-sdk](https://mvnrepository.c
 
 Create a `lambdatest.yml` file in your project root directory with your TestMu AI credentials and desired capabilities:
 
+<VerifiedTag value="Verified" />
+
 ```yaml
 # TestMu AI Configuration File for Tests
 # This file is loaded automatically by the TestMu AI SDK
@@ -336,6 +340,8 @@ tunnel: true
 :::tip Using Environment Variables
 You can also use environment variables in your YAML file:
 
+<VerifiedTag value="Verified" />
+
 ```yaml
 username: ${LT_USERNAME}
 accesskey: ${LT_ACCESS_KEY}
@@ -352,6 +358,8 @@ Set these environment variables before running your tests:
 Add the TestMu AI status listener to your TestNG configuration:
 
 **Using testng.xml**
+
+<VerifiedTag value="Verified" />
 
 ```xml
 <suite name="LambdaTest Suite">
@@ -380,6 +388,8 @@ The TestMu AI Selenium Java SDK is **thread-safe by default**, making it suitabl
 ### Parallel Execution Example
 
 The SDK fully supports parallel test execution with TestNG:
+
+<VerifiedTag value="Verified" />
 
 ```xml
 <suite name="Parallel Suite" parallel="tests" thread-count="5">

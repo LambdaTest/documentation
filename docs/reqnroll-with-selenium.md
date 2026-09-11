@@ -21,6 +21,7 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -217,6 +218,8 @@ Complete the following steps before running Reqnroll Selenium tests.
 ---
 Clone the repository and set up the virtual environment.
 
+<VerifiedTag value="Verified" />
+
 ```bash
 virtualenv venv
 ```
@@ -226,6 +229,8 @@ virtualenv venv
 </p>
 
 Navigate to the newly created virtual environment:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 source venv/bin/activate
@@ -241,6 +246,8 @@ Fetch the TestMu AI Credentials from the [TestMu AI Profile Section](https://www
 
 <TabItem value="bash" label="macOS / Linux" default>
 
+  <VerifiedTag value="Verified" />
+
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-bash">
   {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
@@ -251,6 +258,8 @@ export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 </TabItem>
 
 <TabItem value="powershell" label="Windows" default>
+
+  <VerifiedTag value="Verified" />
 
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-powershell">
@@ -275,6 +284,9 @@ Use the TestMu AI [Capabilities Generator](https://www.testmuai.com/capabilities
 Build and execute the Reqnroll tests on the TestMu AI platform.
 
 Clean temporary files:
+
+<VerifiedTag value="Verified" />
+
 ```bash
 make clean
 ```
@@ -284,6 +296,9 @@ make clean
 </p>
 
 Build the automation project:
+
+<VerifiedTag value="Verified" />
+
 ```bash
 make build
 ```
@@ -293,6 +308,9 @@ make build
 </p>
 
 Run the Reqnroll tests:
+
+<VerifiedTag value="Verified" />
+
 ```bash
 make reqnroll-automation-test
 ```

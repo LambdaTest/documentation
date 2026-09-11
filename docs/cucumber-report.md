@@ -170,6 +170,8 @@ Explanation of plugin Options:
 ### Step 2: Configure the HyperExecute YAML File
 In your HyperExecute YAML configuration, define the [`report`](/support/docs/deep-dive-into-hyperexecute-yaml/#report) parameters like this:
 
+<VerifiedTag value="Verified" />
+
 ```yaml title="hyperexecute.yaml"
 report: true
 partialReports:

@@ -26,6 +26,7 @@ import NewTag from '../src/component/newTag';
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 ---
@@ -249,11 +250,17 @@ The first step is to create a project with the application in which we will comb
 Install required NPM modules for `TestMu AI SmartUI CLI` globally or in your project:
 
 **Global Installation (Recommended):**
+
+<VerifiedTag value="Verified" />
+
 ```bash
 npm install -g @lambdatest/smartui-cli
 ```
 
 **Local Installation:**
+
+<VerifiedTag value="Verified" />
+
 ```bash
 npm install @lambdatest/smartui-cli
 ```
@@ -265,6 +272,8 @@ If you face any problems executing tests with SmartUI-CLI `versions >= v4.x.x`, 
 ## Step 2: Configure your Project Token
 
 Setup your project token shown in the **SmartUI** app after creating your project.
+
+<VerifiedTag value="Verified" />
 
 <Tabs className='docs__val' groupId='language'>
 <TabItem value='MacOS/Linux' label='MacOS/Linux' default>
@@ -294,6 +303,8 @@ $env:PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
 
 ## Step 3: Upload the required directory of images
 
+<VerifiedTag value="Verified" />
+
 ```
 npx smartui upload <directoryName>
 ```
@@ -302,6 +313,8 @@ The screenshots in the directory name will be uploaded to SmartUI.
 ### For ignoring the resolutions of the images
 
 By default, SmartUI captures and considers image resolutions. If you prefer to ignore resolutions and compare images solely based on their names, use the following flag:
+
+<VerifiedTag value="Verified" />
 
 ```
 npx smartui upload <directoryName> --ignoreResolutions
@@ -330,6 +343,8 @@ You may use the `smartui upload --help` command in case you are facing issues du
 ## Setup with Continuous Integration (CI)
 
 If you are using the Continuous Integration (CI) pipeline for your application and want to integrate `SmartUI CLI` execution then the following are the steps needs to be added to your `.yaml` file:
+
+<VerifiedTag value="Verified" />
 
 ```yaml
 steps:
@@ -360,12 +375,16 @@ You can fetch build results by adding the `--fetch-results` flag to your test ex
 ### Default Usage
 If no filename is specified, results will be stored in `results.json`:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 npx smartui upload <directoryName> --fetch-results
 ```
 
 ### Custom Filename
 Specify a custom filename for your results:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 npx smartui upload <directoryName> --fetch-results custom-results.json
@@ -374,6 +393,8 @@ npx smartui upload <directoryName> --fetch-results custom-results.json
 You can add a custom build name by adding the `--buildName` flag to your test execution command. Here is how you can utilise this feature:
 
 Specify a custom build name to group your screenshots in the following way:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 npx smartui upload <directoryName>  --buildName "Sample Build Name"

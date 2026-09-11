@@ -266,10 +266,16 @@ Run a traceroute if performance remains slow after applying the above tips.
 If you still experience latency after applying these optimizations, reach out to us on our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**in-app chat support**</span> or email [automationsupport@testmuai.com](mailto:automationsupport@testmuai.com). Include a screenshot of the traceroute output:
 
 For Windows:
+
+<VerifiedTag value="Verified" />
+
 ```
 tracert hub.lambdatest.com
 ```
 For Linux/Mac:
+
+<VerifiedTag value="Verified" />
+
 ```
 traceroute hub.lambdatest.com
 ```

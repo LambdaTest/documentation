@@ -23,6 +23,7 @@ import NewTag from '../src/component/newTag';
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -259,6 +260,8 @@ Download or Clone the code sample from the <BrandName /> GitHub repository to ru
 ### Step 3: Create the GitHub Actions workflow YAML file
 To create the GitHub Actions pipeline YAML file, follow the sample command below:
 
+<VerifiedTag value="Verified" />
+
 ```yaml reference title="github-actions.yml"
 https://github.com/amanchopra1905/smartui-ci-cd-integrations/blob/main/.github/workflows/main.yml
 ```
@@ -271,6 +274,8 @@ To run the new pipeline that you just created, click the **Run workflow** button
 > Check your output in the [SmartUI Dashboard](https://www.testmuai.com/login/?redirectTo=https://smartui.lambdatest.com/projects)
 
 ## Best Practices
+
+<VerifiedTag value="Verified" />
 
 <Tabs className='docs__val' groupId='best-practices'>
 <TabItem value='secret-management' label='Secret Management' default>
@@ -352,6 +357,8 @@ on:
 </Tabs>
 
 ## Troubleshooting
+
+<VerifiedTag value="Verified" />
 
 <Tabs className='docs__val' groupId='troubleshooting'>
 <TabItem value='workflow-fails-with-secret-not-found' label='Workflow Fails with Secret Not Found' default>

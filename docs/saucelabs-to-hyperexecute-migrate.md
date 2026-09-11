@@ -244,12 +244,16 @@ Run the below mentioned commands in the terminal to setup the CLI and the enviro
 
 For macOS / Linux:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 export LT_USERNAME=YOUR_LT_USERNAME
 export LT_ACCESS_KEY=YOUR_LT_ACCESS_KEY
 ```
 
 For Windows:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 set LT_USERNAME=YOUR_LT_USERNAME
@@ -261,6 +265,8 @@ set LT_ACCESS_KEY=YOUR_LT_ACCESS_KEY
 - Add the [HyperExecute YAML](/support/docs/deep-dive-into-hyperexecute-yaml/) file in the root folder of your test code repository.
 
 **Sample YAML File**
+
+<VerifiedTag value="Verified" />
 
 ```yaml
 ---
@@ -380,6 +386,8 @@ public static final String Hub_URL = "https://" + user_name + ":" + access_key +
 ### Step 4: Execute your Job in HyperExecute
 
 Run the below command in your downloaded CLI to trigger your test scripts in the HyperExecute Platform.
+
+<VerifiedTag value="Verified" />
 
 <div className="lambdatest__codeblock">
   <CodeBlock className="language-bash">

@@ -391,6 +391,8 @@ Using the <BrandName /> platform, perform regression testing in just one click a
 
 Below are code examples for taking viewport screenshots using SmartUI with Appium across different programming languages and frameworks:
 
+<VerifiedTag value="Verified" />
+
 <Tabs className='docs__val' groupId='language'>
 <TabItem value='MacOS/Linux' label='MacOS/Linux' default>
 
@@ -437,6 +439,8 @@ Upload your **_iOS_** application (.ipa file) or **_android_** application (.apk
 <Tabs className='docs__val' groupId='language'>
 <TabItem value='App File' label='App File' default>
 
+ <VerifiedTag value="Verified" />
+
  <div className='lambdatest__codeblock'>
 <CodeBlock className='language-bash'>
 {`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" -X POST "https://manual-api.lambdatest.com/app/upload/realDevice" -F "appFile=@"/Users/macuser/Downloads/proverbial_android.apk"" -F "name="proverbial_app""
@@ -446,6 +450,8 @@ Upload your **_iOS_** application (.ipa file) or **_android_** application (.apk
 
 </TabItem>
 <TabItem value='App URL' label='App URL' default>
+
+<VerifiedTag value="Verified" />
 
 <div className='lambdatest__codeblock'>
 <CodeBlock className='language-bash'>
@@ -468,6 +474,8 @@ Upload your **_iOS_** application (.ipa file) or **_android_** application (.apk
 
 Clone the <BrandName />’s :link: [LT-appium-nodejs](https://github.com/LambdaTest/LT-appium-nodejs) repository and navigate to the code directory as shown below:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 git clone https://github.com/LambdaTest/LT-appium-nodejs
 cd LT-appium-nodejs
@@ -480,6 +488,9 @@ Make sure you have your <BrandName /> credentials with you to run test automatio
 <Tabs className='docs__val'>
 
 <TabItem value='bash' label='Linux / MacOS' default>
+
+  <VerifiedTag value="Verified" />
+
   <div className='lambdatest__codeblock'>
   <CodeBlock className='language-bash'>
   {`export LT_USERNAME=${ YOUR_LAMBDATEST_USERNAME()} \\
@@ -490,6 +501,8 @@ export LT_ACCESS_KEY=${ YOUR_LAMBDATEST_ACCESS_KEY()}`}
 </TabItem>
 
 <TabItem value='powershell' label='Windows' default>
+
+  <VerifiedTag value="Verified" />
 
   <div className='lambdatest__codeblock'>
   <CodeBlock className='language-powershell'>
@@ -564,6 +577,8 @@ Appium with SmartUI is currently only supports the viewport based screenshot com
 :::
 
 - Execute your test suite as per the execution command depending on your framework or language.
+
+<VerifiedTag value="Verified" />
 
 ```bash title="For Example if your are using with NodeJS"
 npm i && node your_test_script.js

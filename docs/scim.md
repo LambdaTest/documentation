@@ -25,6 +25,7 @@ canonical: https://www.testmu.ai/support/docs/scim/
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -365,6 +366,8 @@ Any SCIM 2.0-compliant IDP works. Use these settings:
 
 ### Schema & Attributes
 
+<VerifiedTag value="Verified" />
+
 ```json
 {
   "schemas": [
@@ -405,6 +408,8 @@ For PATCH operations, use the fully qualified SCIM path:
 > **What can be updated:** `OrganizationRole`, `LambdatestGroup`, and `active` can be updated via SCIM. `userName` is immutable after creation. `name` can only be changed from <BrandName /> Account Settings.
 
 ### User API Operations
+
+<VerifiedTag value="Verified" />
 
 <Tabs className="docs__val" groupId="user-op" queryString="user-op">
 <TabItem value="create-user" label="Create" default>
@@ -665,6 +670,8 @@ Once activated, you can control it from **Settings** > **Organization Settings**
 
 ### Group Schema & Attributes
 
+<VerifiedTag value="Verified" />
+
 ```json
 {
   "schemas": [
@@ -893,6 +900,8 @@ When a target is deleted, the mapping **will not auto-create a replacement**, ev
 4. Click **Approve**: members will be synced to the new target
 
 ### Group API Operations
+
+<VerifiedTag value="Verified" />
 
 <Tabs className="docs__val" groupId="group-op" queryString="group-op">
 <TabItem value="create-group" label="Create" default>

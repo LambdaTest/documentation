@@ -24,6 +24,7 @@ import NewTag from '../src/component/newTag';
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -239,6 +240,8 @@ The file path method is recommended for larger stylesheets and team collaboratio
 
 2. Add your CSS rules to the file:
 
+<VerifiedTag value="Verified" />
+
 ```css
 /* General samples: pick what suits your use case */
 
@@ -253,6 +256,8 @@ body { font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif; }
 ```
 
 3. Reference the file path in your SmartUI configuration:
+
+<VerifiedTag value="Verified" />
 
 ```json
 {
@@ -274,6 +279,8 @@ The embedded string method is useful for quick edits and single-use CSS rules. P
 - Keep CSS single-line to avoid JSON parsing issues
 - Escape quotes properly (`'` or `\"`)
 - Use `\n` for newlines if needed (though single-line is preferred)
+
+<VerifiedTag value="Verified" />
 
 ```json
 {
@@ -313,6 +320,9 @@ The embedded string method is useful for quick edits and single-use CSS rules. P
 - **CLI Version**: Ensure SmartUI CLI v4.1.40+ is installed. You can verify this by running `npx smartui --version`. Older versions may not support the `customCSS` feature.
 
 - **Waiting for UI Readiness**: If you need to wait for UI elements to be ready before snapshots, add these options to your configuration:
+
+  <VerifiedTag value="Verified" />
+
   ```json
   {
     "waitForTimeout": 2000,
@@ -338,6 +348,8 @@ The Custom CSS feature has the following limitations:
 ## Use Cases for Custom CSS
 
 The custom CSS feature is particularly valuable in the following scenarios:
+
+<VerifiedTag value="Verified" />
 
 <Tabs>
   <TabItem value='stabilize' label='Stabilize Dynamic UI' default>
@@ -423,6 +435,8 @@ header, footer, nav { background: rgba(0,0,0,.45) !important; box-shadow: none !
 
 ### File Path Template
 
+<VerifiedTag value="Verified" />
+
 ```json
 {
   "web": {
@@ -434,6 +448,8 @@ header, footer, nav { background: rgba(0,0,0,.45) !important; box-shadow: none !
 ```
 
 ### Embedded String Template
+
+<VerifiedTag value="Verified" />
 
 ```json
 {

@@ -30,6 +30,8 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import DocCard from '@site/src/component/DocCard';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -328,6 +330,8 @@ The core of HyperExecute configuration lies in the `hyperexecute.yaml` file. Let
 #### 1. Environment & Runtime Setup
 This section specifies the OS, runtime language, concurrency, and autosplit features:
 
+<VerifiedTag value="Verified" />
+
 ```yaml
 version: 0.1
 runson: linux   # OS to run the tests (e.g., linux, win)
@@ -342,6 +346,8 @@ runtime:
 #### 2. Dependency Resolution with Maven
 Before running the actual performance test, ensure all project dependencies are resolved locally for a reproducible build. This step pulls all required Maven dependencies to a local directory (.m2), ensuring environment consistency.
 
+<VerifiedTag value="Verified" />
+
 ```yaml
 pre:
   - mvn -Dmaven.repo.local=./.m2 dependency:resolve
@@ -349,6 +355,8 @@ pre:
 
 #### 3. Configure the Test Execution Command
 The `testRunnerCommand` defines how each test is executed on the HyperExecute infrastructure. With `autosplit: true`, HyperExecute dynamically distributes each test to a separate runner, enabling parallel execution.
+
+<VerifiedTag value="Verified" />
 
 ```yaml
 testRunnerCommand: mvn test -Dtest=MyApiRunner -DFeaturePath="$test" -Dhub=https://LT_USERNAME:LT_ACCESS_KEY@hub.lambdatest.com/wd/hub -Dmaven.repo.local=./.m2
@@ -362,15 +370,21 @@ testRunnerCommand: mvn test -Dtest=MyApiRunner -DFeaturePath="$test" -Dhub=https
 :::info
 This command runs one feature file per runner, as decided by autosplit. However, you can change the granularity and run:
 
-- All scenarios tagged with @smoke
-- A specific step definition class
-- A subset of feature files based on folder/module
+By default this runs one feature file per runner. To run a subset instead (for example, only scenarios tagged `@smoke`, a specific runner class, or a folder of features), pass Karate options:
+
+<VerifiedTag value="Verified" />
+
+```bash
+mvn test -Dkarate.options="--tags @smoke"
+```
 
 > mvn test -Dkarate.options="--tags @smoke"
 :::
 
 #### 4. Test Discovery Configuration
 Test discovery determines which test files or test cases to run, and provides those to the test runner. In HyperExecute, the `testDiscovery` block parses and lists all .feature files, which are then split and executed.
+
+<VerifiedTag value="Verified" />
 
 ```yaml
 testDiscovery:
@@ -390,6 +404,8 @@ Discovery command runs first and lists paths to all .feature files. These paths 
 
 The runner command executes the test against that feature. Each of these will be executed in parallel across the nodes defined under concurrency.
 
+<VerifiedTag value="Verified" />
+
 ```
 src/test/java/app/login.feature
 src/test/java/app/signup.feature
@@ -398,7 +414,9 @@ src/test/java/app/payments.feature
 
 Here is a complete working YAML configuration that runs Gatling performance tests on linux runners via HyperExecute:
 
-```yaml reference title="hyperexecute.yaml"
+<VerifiedTag value="Verified" />
+
+```yaml reference title="HyperExecute.yaml"
 https://github.com/LambdaTest/hyperexecute-karate-sample/blob/main/HyperExecute.yaml
 ```
 
@@ -406,6 +424,8 @@ https://github.com/LambdaTest/hyperexecute-karate-sample/blob/main/HyperExecute.
 
 ### Step 5: Execute your Test Suite
 From the project root directory, execute the below CLI command in your terminal:
+
+<VerifiedTag value="Verified" />
 
 <div className="lambdatest__codeblock">
   <CodeBlock className="language-bash">

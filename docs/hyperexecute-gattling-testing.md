@@ -305,6 +305,8 @@ The core of HyperExecute configuration lies in the `hyperexecute.yaml` file. Let
 #### 1. Define Test Environment and Execution Strategy
 The first step is to define the environment your tests will run on using the runson parameter. You can also configure intelligent parallelization and test exit conditions.
 
+<VerifiedTag value="Verified" />
+
 ```yaml
 version: 0.1
 runson: linux   # OS to run the tests (e.g., linux, win)
@@ -316,6 +318,8 @@ scenarioCommandStatusOnly: true
 #### 2. Dependency Resolution with Maven
 Before running the actual performance test, ensure all project dependencies are resolved locally for a reproducible build. This step pulls all required Maven dependencies to a local directory (.m2), ensuring environment consistency.
 
+<VerifiedTag value="Verified" />
+
 ```yaml
 pre:
   - mvn -Dmaven.repo.local=./.m2 dependency:resolve
@@ -323,6 +327,8 @@ pre:
 
 #### 3. Configure Test Discovery (Optional)
 Test discovery determines what files or test suites should be run. You can customize this to dynamically scan simulation classes.
+
+<VerifiedTag value="Verified" />
 
 ```yaml
 testDiscovery:
@@ -335,12 +341,16 @@ The `command` is a placeholder here. In advanced setups, you can provide a scrip
 #### 4. Configure the Test Execution Command
 Specify the command that runs your Gatling tests via Maven:
 
+<VerifiedTag value="Verified" />
+
 ```yaml
 testRunnerCommand: mvn gatling:test
 ```
 
 #### 5. Add Background Services (Optional)
 If your test depends on a backend server or application under test, you can spin it up in the background:
+
+<VerifiedTag value="Verified" />
 
 ```yaml
 background:
@@ -351,6 +361,8 @@ When `autosplit` is enabled, this command can be intelligently distributed acros
 
 #### 6. Upload Test Reports
 Once the test completes, use uploadArtefacts to store Gatling reports:
+
+<VerifiedTag value="Verified" />
 
 ```yaml
 uploadArtefacts:
@@ -364,12 +376,16 @@ These will be visible in the HyperExecute logs UI after the run.
 #### 7. Add Retry Logic (Optional)
 You can automatically retry failed tests to avoid flakiness.
 
+<VerifiedTag value="Verified" />
+
 ```yaml
 retryOnFailure: true
 maxRetries: 1
 ```
 
 Here is a complete working YAML configuration that runs Gatling performance tests on linux runners via HyperExecute:
+
+<VerifiedTag value="Verified" />
 
 ```yaml reference title="hyperexecute.yaml"
 https://github.com/prateekLambda/Gatling-performance-hyperexecute/blob/main/HYE.yaml
@@ -379,6 +395,8 @@ https://github.com/prateekLambda/Gatling-performance-hyperexecute/blob/main/HYE.
 
 ### Step 4: Execute your Test Suite
 From the project root directory, execute the below CLI command in your terminal:
+
+<VerifiedTag value="Verified" />
 
 <div className="lambdatest__codeblock">
   <CodeBlock className="language-bash">

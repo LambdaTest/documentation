@@ -14,6 +14,32 @@ site_name: TestMu AI
 slug: accessibility-junit5-test/
 canonical: https://www.testmuai.com/support/docs/accessibility-junit5-test/
 ---
+import VerifiedTag from '@site/src/component/verifiedTag';
+import { BRAND_URL } from '@site/src/component/BrandName';
+
+<script type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify({
+       "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": BRAND_URL
+        },{
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Support",
+          "item": `${BRAND_URL}/support/docs/`
+        },{
+          "@type": "ListItem",
+          "position": 3,
+          "name": "JUnit 5",
+          "item": `${BRAND_URL}/support/docs/accessibility-junit5-test/`
+        }]
+      })
+    }}
+></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -146,6 +172,8 @@ capabilities.setCapability("accessibility.autoscan", true);
 ```
 
 ### 4. Run and verify
+
+<VerifiedTag value="Verified" />
 
 ```bash
 mvn test

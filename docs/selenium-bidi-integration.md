@@ -16,6 +16,7 @@ slug: selenium-bidi-integration/
 canonical: https://www.testmu.ai/support/docs/selenium-bidi-integration/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -205,6 +206,8 @@ Download or Clone the code sample for the Selenium WebdriverIO BiDi from the Tes
 
 Install all the necessary dependencies of the project by running the following command:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 npm install
 ```
@@ -213,6 +216,8 @@ npm install
 
 1. Create a `.env` file in the root folder of your project.
 2. Add your TestMu AI [Username and Access Key](/support/docs/using-environment-variables-for-authentication-credentials/) in place of `<YOUR_USERNAME>` and `<YOUR_ACCESS_KEY>`.
+
+<VerifiedTag value="Verified" />
 
 ```yaml
 LT_USERNAME = <YOUR_USERNAME>
@@ -223,11 +228,15 @@ LT_ACCESS_KEY = <YOUR_ACCESS_KEY>
 
 1. Pass the `webSocketUrl` as true in the `wdio.lambdatest.conf.js` file to enable BiDi support.
 
+  <VerifiedTag value="Verified" />
+
   ```yaml
   webSocketUrl: true
   ```
 
 2. Run the following command in your terminal to trigger the tests on TestMu AI platform using the specified configuration.
+
+  <VerifiedTag value="Verified" />
 
   ```bash
   npm run wdio

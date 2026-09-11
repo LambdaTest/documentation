@@ -23,6 +23,7 @@ import NewTag from '../src/component/newTag';
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -255,6 +256,8 @@ Go to Pipeline Settings > Variables. Add the following variables:
 
 ### Step 4: Setup your Workflow
 
+<VerifiedTag value="Verified" />
+
 ```yaml title="pipeline.yml"
 steps:
   - label: "SmartUI Tests"
@@ -282,6 +285,8 @@ steps:
 <img loading="lazy" src={require('../assets/images/smart-visual-testing/ci-cd-integration/gitlab/3.png').default} alt="Create New Project" width="" height=""/>
 
 ## Best Practices
+
+<VerifiedTag value="Verified" />
 
 <Tabs className='docs__val' groupId='best-practices'>
 <TabItem value='secret-management' label='Secret Management' default>
@@ -358,6 +363,8 @@ env:
 </Tabs>
 
 ## Troubleshooting
+
+<VerifiedTag value="Verified" />
 
 <Tabs className='docs__val' groupId='troubleshooting'>
 <TabItem value='pipeline-fails-with-variable-not-found' label='Pipeline Fails with Variable Not Found' default>

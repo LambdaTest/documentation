@@ -203,6 +203,8 @@ In your ALM Octane instance, generate API credentials:
 
 For Java-based projects using Maven, add the ALM Octane SDK dependency:
 
+<VerifiedTag value="Verified" />
+
 ```xml
 <dependency>
     <groupId>com.microfocus.adm.almoctane.sdk</groupId>

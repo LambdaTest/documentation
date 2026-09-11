@@ -228,6 +228,8 @@ capabilities: [{
 
 ### Step 4: Configure YAML in your Test Suite
 
+<VerifiedTag value="Verified" />
+
 ```yaml reference title="hyperexecute.yaml"
 https://github.com/LambdaTest/hyperexecute-bidi-sample/blob/main/yaml/hyperexecute-linux.yaml
 ```
@@ -236,6 +238,8 @@ https://github.com/LambdaTest/hyperexecute-bidi-sample/blob/main/yaml/hyperexecu
 From the project root directory, execute the below CLI command in your terminal:
 
 > **NOTE :** In case of MacOS, if you get a permission denied warning while executing CLI, simply run **`chmod u+x ./hyperexecute`** to allow permission. In case you get a security popup, allow it from your **System Preferences** → **Security & Privacy** → **General tab**.
+
+<VerifiedTag value="Verified" />
 
 <div className="lambdatest__codeblock">
   <CodeBlock className="language-bash">

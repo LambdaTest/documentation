@@ -233,6 +233,8 @@ Here is an example cURL request to upload your app using our REST API:
 
 <TabItem value="bash" label="Linux / MacOS" default>
 
+  <VerifiedTag value="Verified" />
+
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-bash">
   {`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" \\
@@ -245,6 +247,8 @@ Here is an example cURL request to upload your app using our REST API:
 </TabItem>
 
 <TabItem value="powershell" label="Windows" default>
+
+  <VerifiedTag value="Verified" />
 
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-powershell">
@@ -271,6 +275,8 @@ Upload your **test suite** (.apk file) to the <BrandName /> servers using our **
 
 <TabItem value="bash" label="Linux / MacOS" default>
 
+  <VerifiedTag value="Verified" />
+
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-bash">
   {`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" \\
@@ -283,6 +289,8 @@ Upload your **test suite** (.apk file) to the <BrandName /> servers using our **
 </TabItem>
 
 <TabItem value="powershell" label="Windows" default>
+
+  <VerifiedTag value="Verified" />
 
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-powershell">
@@ -318,6 +326,8 @@ Sharding can be categorized into two types:
 **Manual Sharding**: This feature enables users to manually specify shards along with their definitions, offering multiple strategies such as class, package, and more. By doing so, users can have greater flexibility and control over the sharding process.
 
 Refer to the sample `.yaml` file here
+
+<VerifiedTag value="Verified" />
 
 <Tabs className="docs__val">
 
@@ -474,6 +484,8 @@ If you are using the `deviceSelectionStrategy: any`, then in that case all the m
 
 Refer to the sample `.yaml` file here
 
+<VerifiedTag value="Verified" />
+
 <Tabs className="docs__val">
 
 <TabItem value="real-device" label="Real Device" default>
@@ -580,12 +592,17 @@ If you are using the `deviceSelectionStrategy: any`, then in that case all the s
 
 4. Go to the location of the folder on the terminal and run the below commands. After the second command, you may need to give permission on **System Settings/Privacy & Security**. 
 
+<VerifiedTag value="Verified" />
+
 ```bash
 chmod u+x <cliFileNAme>
 ./<cliFileNAme> -user <userName> -key <accessKey> --verbose -i <yamlFileName>.yaml
 ```
 
 You can refer to this example and screenshot below:
+
+<VerifiedTag value="Verified" />
+
 ```
 ./hyperexecute -user my_user_name -key xyx123abc --verbose -i hyperexecute.yaml
 ```
@@ -622,6 +639,8 @@ This example will fetch all the test cases from 2 classes and 1 package as defin
 
 You can also filter your Espresso tests based on annotations while using sharding. This helps you execute only the test cases marked with specific annotations.
 
+<VerifiedTag value="Verified" />
+
 ```yaml
 filters:
       attributes:
@@ -635,6 +654,8 @@ This configuration will run tests annotated with multiple annotations, i.e., onl
 
 ## Generate Reports and Artifacts
 To generate artifacts for your Espresso tests, add the `artifacts: true`, and `report: true` flag in your YAML file:
+
+<VerifiedTag value="Verified" />
 
 ```yaml
 report: true

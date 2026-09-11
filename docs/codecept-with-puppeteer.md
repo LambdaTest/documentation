@@ -180,11 +180,15 @@ cd puppeteer-codecept
 
 2. Install the npm dependencies.
 
+<VerifiedTag value="Verified" />
+
 ```
 npm install
 ```
 
 3. If you are running Codecept for the first time, run the below command:
+
+<VerifiedTag value="Verified" />
 
 ```
 npm install codeceptjs puppeteer --save
@@ -285,6 +289,8 @@ exports.config = {
 ```
 
 2. Now pass the below command to run your test.
+
+<VerifiedTag value="Verified" />
 
 ```
 npx codeceptjs run

@@ -326,11 +326,15 @@ Shown below is syntax how to mark Puppeteer tests as **Passed** or **Failed**.
 
 1. To mark test status as **passed**.
 
+<VerifiedTag value="Verified" />
+
 ```
 await page.evaluate(_ => {}, `lambdatest_action: ${JSON.stringify({ action: 'setTestStatus', arguments: { status:'passed', remark: 'Title matched' } })}`)
 ```
 
 2. To mark test status as **failed**.
+
+<VerifiedTag value="Verified" />
 
 ```
 await page.evaluate(_ => {}, `lambdatest_action: ${JSON.stringify({ action: 'setTestStatus', arguments: { status:'failed', remark: 'Title not matched' } })}`)

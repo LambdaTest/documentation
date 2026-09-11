@@ -178,6 +178,8 @@ Playwright is a Node.js library that uses a single API to automate Chromium, Fir
 
 2. Install the npm dependencies.
 
+<VerifiedTag value="Verified" />
+
 ```
 npm install
 ```
@@ -285,6 +287,8 @@ const { expect } = require('@playwright/test');
 
 2. Pass the below command to run the test.
 
+<VerifiedTag value="Verified" />
+
 ```
 node playwright-single.js
 ```
@@ -379,6 +383,8 @@ capabilities.forEach(async (capability) => {
 ```
 
 Run the parallel test:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 node playwright-parallel.js

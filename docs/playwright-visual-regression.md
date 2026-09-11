@@ -28,6 +28,30 @@ import NewTag from '../src/component/newTag';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <script type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify({
+       "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": BRAND_URL
+        },{
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Support",
+          "item": `${BRAND_URL}/support/docs/`
+        },{
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Getting started with SmartUI using Playwright",
+          "item": `${BRAND_URL}/support/docs/playwright-visual-regression/`
+        }]
+      })
+    }}
+></script>
+
+<script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
     "@context": "https://schema.org",
     "@type": [
@@ -268,6 +292,8 @@ This documentation will act as your step-by-step guide in to perform Playwright 
 - Go to [SmartUI](https://www.testmuai.com/login/?redirectTo=https://smartui.lambdatest.com/) and login along with your credentials.
 - Copy `LT_USERNAME` and `LT_ACCESS_KEY` credentials from `Access Key` button on the top right of the dashboard.
 
+<VerifiedTag value="Verified" />
+
 <Tabs className="docs__val" groupId="language">
 <TabItem value="MacOS/Linux" label="MacOS/Linux" default>
 
@@ -313,11 +339,15 @@ Once you have created a SmartUI Project, you can generate screenshots by running
 
 1. Please clone the following sample Github repo 
 
+<VerifiedTag value="Verified" />
+
 ```bash 
 git clone https://github.com/LambdaTest/playwright-sample
 ```
 
 2. Install the node modules using the command
+
+<VerifiedTag value="Verified" />
 
 ```bash
 npm i
@@ -326,16 +356,25 @@ npm i
 3. Set up the <BrandName /> credentials by using the commands below in the terminal.The account details are available on your [<BrandName /> Profile](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/details/profile) page.
    
 For macOS:
+
+<VerifiedTag value="Verified" />
+
 ```bash
 export LT_USERNAME=LT_USERNAME
 export LT_ACCESS_KEY=LT_ACCESS_KEY
 ```
 For Linux:
+
+<VerifiedTag value="Verified" />
+
 ```bash
 export LT_USERNAME=LT_USERNAME
 export LT_ACCESS_KEY=LT_ACCESS_KEY
 ```
 For Windows:
+
+<VerifiedTag value="Verified" />
+
 ```bash
 set LT_USERNAME=LT_USERNAME
 set LT_ACCESS_KEY=LT_ACCESS_KEY
@@ -395,6 +434,8 @@ const { expect } = require('@playwright/test');
 
 - Execute the test using the following command
 
+<VerifiedTag value="Verified" />
+
 ```bash
 node playwright-smartui.js
 ```
@@ -416,6 +457,8 @@ response = await page.evaluate(_ => {}, `lambdatest_action: ${JSON.stringify({ac
 console.log(response)
 ```
 A sample response for the same can be seen below
+
+<VerifiedTag value="Verified" />
 
 ```json
 screenshotStatus response:  {
@@ -465,6 +508,8 @@ Please note that the screenshot name should be provided within the screenshotNam
 Experience effortless collaboration and streamlined testing workflows with SmartUI's GitHub app integration for Playwright users. Now, you can seamlessly link your GitHub repositories to your SmartUI accounts. This integration empowers teams to effortlessly share test scripts, review and track changes, and provide feedback within the familiar GitHub environment. 
 
 To add this integration, you can add the following capability:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 const capabilities: {

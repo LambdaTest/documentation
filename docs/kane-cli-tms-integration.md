@@ -17,6 +17,7 @@ canonical: https://www.testmuai.com/support/docs/kane-cli-tms-integration/
 ---
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -197,6 +198,8 @@ Each test case is filed under a Test Manager project. Optionally, you can also c
 
 Configure your project once, and every subsequent session uploads under it:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 kane-cli config project
 ```
@@ -204,6 +207,8 @@ kane-cli config project
 With no value, this opens a search-as-you-type picker. Projects are loaded from your Test Manager account on demand. Type to filter, use the arrow keys to navigate pages of five, press **Enter** to select, or **Tab** to create a new project. If your account has no projects yet, the picker jumps straight to the create flow.
 
 You can also set a project non-interactively by ID:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 kane-cli config project <project-id>
@@ -215,17 +220,47 @@ In the TUI, the same picker is available via the `/config` command.
 
 Folders are optional. Once a project is set, you can pick a folder the same way:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 kane-cli config folder
 ```
 
 This opens a search-as-you-type folder picker. Type to filter, **Enter** to select, **Tab** to create a new folder. Each folder is shown with its current test case count.
 
+<VerifiedTag value="Verified" />
+
 ```bash
 kane-cli config folder <folder-id>
 ```
 
 If you try to set a folder before choosing a project, Kane CLI asks you to pick a project first.
+
+### Browse and create from the command line
+
+For scripts, CI, and any non-interactive shell where the picker is not appropriate, kane-cli exposes the same data as commands:
+
+<VerifiedTag value="Verified" />
+
+```bash
+kane-cli projects list [--search <q>] [--limit <n>] [--offset <n>]
+kane-cli projects create "<name>" [--description "<text>"]
+
+kane-cli folders list  [--search <q>] [--limit <n>] [--offset <n>]
+kane-cli folders create "<name>" [--description "<text>"]
+```
+
+In a TTY, list commands render a paginated table. When stdout is piped or redirected — or when `--agent` is passed — the output switches to NDJSON, one JSON object per line, terminated by a small pagination summary. Use `--search` to filter by name on the server, and `--limit` / `--offset` to page through results.
+
+`folders list` and `folders create` operate inside the currently configured project, so set a project before calling them.
+
+After creating, persist the new id with `kane-cli config project <id>` or `kane-cli config folder <id>` so subsequent runs upload there.
+
+### Auto-default on first run
+
+If you launch a run without ever configuring a project or folder, kane-cli auto-resolves a sensible default at run start — find-or-create against your account — and tells you which one it picked. The same fallback fires for `kane-cli testmd run` and `kane-cli generate`. You don't have to pre-configure anything for the first run to succeed.
+
+The same auto-default kicks in if a previously-configured project or folder has been deleted, renamed, or revoked, or if you set an invalid ID by hand (for example, a typo). kane-cli detects the bad ID, clears it, and resolves a working default rather than letting the run proceed and silently failing the upload at the end. To rebind explicitly, run `kane-cli config project` (or `kane-cli projects list` followed by `kane-cli config project <id>`).
 
 ### Finding Your Test Case in Test Manager
 
@@ -247,6 +282,8 @@ Code export is **off by default**. Turn it on either in your stored config or pe
 
 In `~/.testmuai/kaneai/tui-config.json`, set the `code_export` block:
 
+<VerifiedTag value="Verified" />
+
 ```json
 {
   "code_export": {
@@ -258,6 +295,8 @@ In `~/.testmuai/kaneai/tui-config.json`, set the `code_export` block:
 ```
 
 For one-off CLI runs, use flags:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 kane-cli run "Add an item to the cart" \
@@ -296,6 +335,8 @@ If you submit, Kane CLI posts your choice (positive or negative) for the test ca
 
 You can also submit feedback after the fact for a known test case:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 kane-cli feedback --test-id <test-id> --feedback-type positive
 kane-cli feedback --test-id <test-id> --feedback-type negative --details "..."
@@ -306,6 +347,8 @@ kane-cli feedback --test-id <test-id> --feedback-type negative --details "..."
 ## Session History on Disk
 
 Every session, regardless of upload outcome, leaves a directory on your machine:
+
+<VerifiedTag value="Verified" />
 
 ```text
 ~/.testmuai/kaneai/sessions/<session-id>/

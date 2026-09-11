@@ -27,6 +27,30 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
 <script type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify({
+       "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": BRAND_URL
+        },{
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Support",
+          "item": `${BRAND_URL}/support/docs/`
+        },{
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Supported Cypress Versions",
+          "item": `${BRAND_URL}/support/docs/supported-cypress-versions/`
+        }]
+      })
+    }}
+></script>
+
+<script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
     "@context": "https://schema.org",
     "@type": [
@@ -196,6 +220,8 @@ Following are the different ways to set the Cypress version.
 
 Example:
 
+<VerifiedTag value="Verified" />
+
 ```json
 "devDependencies": {
     "@bahmutov/print-env": "1.2.0",
@@ -208,6 +234,8 @@ Example:
 2. Using `npm_dependencies`: If you are passing `npm_dependencies`, <BrandName /> will pick the Cypress version from `npm_dependencies` in `lambdatest-config.json`. 
 
 Example:
+
+<VerifiedTag value="Verified" />
 
 ```json
 "run_settings": {
@@ -230,6 +258,8 @@ Example:
 3. Using `cypress_version`: You can pass `cypress_version` in `lambdatest-config.json` and it will override the `cypress_version` present in `npm_dependencies` or `package.json`.
 
 Example:
+
+<VerifiedTag value="Verified" />
 
 ```json
 "run_settings": {

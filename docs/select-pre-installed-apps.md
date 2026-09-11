@@ -17,6 +17,7 @@ import CodeBlock from '@theme/CodeBlock';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -142,6 +143,8 @@ To do this, pass the `app` capability as `Stock`, in addition to your private cl
 
 <TabItem value="android" label="Android" default>
 
+  <VerifiedTag value="Verified" />
+
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-java">
   {`DesiredCapabilities capabilities = new DesiredCapabilities();
@@ -161,6 +164,8 @@ capabilities.setCapability("lt:options", ltOptions);`}
 </TabItem>
 
 <TabItem value="ios" label="iOS">
+
+  <VerifiedTag value="Verified" />
 
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-java">

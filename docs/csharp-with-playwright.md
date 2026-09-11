@@ -168,6 +168,8 @@ cd playwright-csharp
 
 2. Install the npm dependencies.
 
+<VerifiedTag value="Verified" />
+
 ```
 npm install
 ```

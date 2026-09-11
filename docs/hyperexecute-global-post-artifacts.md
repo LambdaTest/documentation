@@ -18,6 +18,7 @@ canonical: https://www.testmuai.com/support/docs/hyperexecute-global-post-artifa
 ---
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -169,6 +170,8 @@ For the artifact-download step to run, all of the following must be true. If any
 
 Add a `globalPost` section to your HyperExecute YAML and set `downloadArtifacts: true`:
 
+<VerifiedTag value="Verified" />
+
 ```yaml
 globalPost:
   mode: remote
@@ -210,6 +213,8 @@ Once your tasks finish, HyperExecute downloads their artifacts to a VM and runs 
 
 Artifacts from all tasks land under `ARTIFACTS_DIR`, with one top-level folder per task ID. Inside each task folder, the artifacts keep their original upload structure (a folder per artifact name, then the original hierarchy).
 
+<VerifiedTag value="Verified" />
+
 ```text
 $ARTIFACTS_DIR/
 ├── task-id-1/
@@ -228,6 +233,8 @@ $ARTIFACTS_DIR/
 ### `UPLOAD_DIR` — where to place your output
 
 Write anything you want returned to the job into `UPLOAD_DIR`. Everything placed here becomes visible in the job's **Artifacts** section on the HyperExecute dashboard. The folder structure you create is preserved exactly, so even a deep, multi-level layout is uploaded as-is.
+
+<VerifiedTag value="Verified" />
 
 ```text
 $UPLOAD_DIR/
@@ -254,6 +261,8 @@ If you do not specify `email` under `globalPost` but your YAML's [`uploadArtifac
 ### Disabling email
 
 To suppress email entirely, set `disableEmail: true` under `globalPost`. This is useful when you want the processing and upload but not a notification, and it overrides any email configured under `uploadArtifacts`.
+
+<VerifiedTag value="Verified" />
 
 ```yaml
 globalPost:

@@ -246,6 +246,9 @@ You need to export your environment variables *LT_USERNAME* and *LT_ACCESS_KEY* 
 
 <Tabs className="docs__val">
 <TabItem value="bash" label="Linux / MacOS" default>
+
+  <VerifiedTag value="Verified" />
+
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-bash">
   {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
@@ -254,6 +257,9 @@ export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 </div>
 </TabItem>
 <TabItem value="powershell" label="Windows" default>
+
+  <VerifiedTag value="Verified" />
+
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-powershell">
   {`set LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
@@ -271,6 +277,9 @@ Make sure to add the path of the **appFile** in the cURL request. Below is an ex
 <Tabs className="docs__val">
 
 <TabItem value="bash" label="App File" default>
+
+  <VerifiedTag value="Verified" />
+
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-bash">
       {`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" -X POST "https://manual-api.lambdatest.com/app/upload/realDevice" -F "appFile=@"/Users/macuser/Downloads/proverbial_android.apk"" -F "name="proverbial_app""`}
@@ -279,6 +288,9 @@ Make sure to add the path of the **appFile** in the cURL request. Below is an ex
 </TabItem>
 
 <TabItem value="powershell" label="App URL" default>
+
+  <VerifiedTag value="Verified" />
+
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-bash">
       {`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" -X POST "https://manual-api.lambdatest.com/app/upload/realDevice" -F "url=:https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_android.apk" -F "name=Proverbial_App"`}
@@ -458,11 +470,15 @@ The capabilities object in the sample code are defined as:
 
 - Run the following commands to install the required dependencies:
 
+  <VerifiedTag value="Verified" />
+
   ```bash
   mvn clean install
   ```
 
 - The tests can be executed in the terminal using the following command:
+
+  <VerifiedTag value="Verified" />
 
   <Tabs className="docs__val">
   <TabItem value="single-exec" label="Single" default>
@@ -490,6 +506,8 @@ The [cucumber-skill](https://github.com/LambdaTest/agent-skills/tree/main/cucumb
 
 The cucumber-skill package includes:
 
+<VerifiedTag value="Verified" />
+
 ```
 cucumber-skill/
 ├── SKILL.md
@@ -512,6 +530,8 @@ It provides structured guidance for:
 ***
 
 Install a Cucumber Agent Skill using the command below:
+
+<VerifiedTag value="Verified" />
 
 ```
 # Clone the repo and copy the skill you need

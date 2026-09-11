@@ -198,6 +198,9 @@ Before you can start performing App automation testing with Appium, you would ne
 Upload your **Apple TV** application (.ipa file) to the <BrandName /> servers using our **REST API**. You need to provide your **Username** and **AccessKey** in the format `Username:AccessKey` in the **cURL** command for authentication. Make sure to add the path of the **appFile** in the cURL request. Here is an example cURL request to upload your app using our REST API:
 
  **Using App File from System:**
+
+ <VerifiedTag value="Verified" />
+
  <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">
 {`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" -X POST "https://manual-api.lambdatest.com/app/upload/realDevice" -F "appFile=@"/Users/macuser/Downloads/apple-tv-sample-app.ipa"" -F "name="appletv_app""
@@ -206,6 +209,8 @@ Upload your **Apple TV** application (.ipa file) to the <BrandName /> servers us
 </div>
 
 <!-- **Using App URL:**
+
+<VerifiedTag value="Verified" />
 
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">
@@ -225,6 +230,8 @@ Upload your **Apple TV** application (.ipa file) to the <BrandName /> servers us
 
 1. Clone the <BrandName />’s [LT-appium-appletv](https://github.com/LambdaTest/LT-appium-appletv) and navigate to the code directory as shown below:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 git clone https://github.com/LambdaTest/LT-appium-appletv
 cd LT-appium-appletv
@@ -237,6 +244,9 @@ Make sure you have your <BrandName /> credentials with you to run test automatio
 <Tabs className="docs__val">
 
 <TabItem value="bash" label="Linux / MacOS" default>
+
+  <VerifiedTag value="Verified" />
+
   <div className="lambdatest__codeblock">
   <CodeBlock className="language-bash">
   {`export LT_USERNAME=${ YOUR_LAMBDATEST_USERNAME()} \\
@@ -247,6 +257,8 @@ export LT_ACCESS_KEY=${ YOUR_LAMBDATEST_ACCESS_KEY()}`}
 </TabItem>
 
 <TabItem value="powershell" label="Windows" default>
+
+  <VerifiedTag value="Verified" />
 
   <div className="lambdatest__codeblock">
   <CodeBlock className="language-powershell">
@@ -397,6 +409,8 @@ def getCaps():
 ### 5. Execute your test case
 
 1. Install the required packages from the cloned project directory:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 pip install -r requirements.txt

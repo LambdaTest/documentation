@@ -26,6 +26,7 @@ import NewTag from '../src/component/newTag';
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 ---
 
@@ -310,6 +311,8 @@ This guide is designed to provide you with comprehensive information about the v
 
 Set the Project Name you want to add the current build run to by exporting these enviroment variables:
 
+<VerifiedTag value="Verified" />
+
 <Tabs className='docs__val' groupId='language'>
 <TabItem value='MacOS/Linux' label='MacOS/Linux' default>
 
@@ -346,6 +349,8 @@ $env:PROJECT_NAME="Required Project Name"
 
 Setup your project token shown in the **SmartUI** app after creating your project.
 
+<VerifiedTag value="Verified" />
+
 <Tabs className='docs__val' groupId='language'>
 <TabItem value='MacOS/Linux-1' label='MacOS/Linux' default>
 
@@ -378,6 +383,8 @@ $env:PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
 
 Set the baseline branch for `CLI` projects:
 
+<VerifiedTag value="Verified" />
+
 <Tabs className='docs__val' groupId='language'>
 <TabItem value='MacOS/Linux-2' label='MacOS/Linux' default>
 
@@ -405,6 +412,8 @@ $env:BASELINE_BRANCH="Required branch"
 ## 4. Setting the current branch
 
 Set the current branch for `CLI` projects:
+
+<VerifiedTag value="Verified" />
 
 <Tabs className='docs__val' groupId='language'>
 <TabItem value='MacOS/Linux-3' label='MacOS/Linux' default>
@@ -436,6 +445,8 @@ In case you are accessing your network using corporate proxies, set the proxies 
 
 #### HTTP_PROXY:
 
+<VerifiedTag value="Verified" />
+
 <Tabs className='docs__val' groupId='language'>
 <TabItem value='MacOS/Linux-4' label='MacOS/Linux' default>
 
@@ -458,6 +469,8 @@ $env:HTTP_PROXY="http://<username>:<password>@<domain.com>:<port>/"
 </Tabs>
 
 #### HTTPS_PROXY:
+
+<VerifiedTag value="Verified" />
 
 <Tabs className='docs__val' groupId='language'>
 <TabItem value='MacOS/Linux-5' label='MacOS/Linux' default>
@@ -489,6 +502,8 @@ $env:HTTPS_PROXY="https://<username>:<password>@<domain.com>:<port>/"
 
 To enable SmartUI CLI Debug mode, use the following environment variable.
 
+<VerifiedTag value="Verified" />
+
 <Tabs className='docs__val' groupId='language'>
 <TabItem value='MacOS/Linux-6' label='MacOS/Linux' default>
 
@@ -518,6 +533,8 @@ $env:LT_SDK_DEBUG="true"
 
 Set the following variable to true, to stop the use of cookies captured automatically. The default is set to `false`.
 
+<VerifiedTag value="Verified" />
+
 <Tabs className='docs__val' groupId='language'>
 <TabItem value='MacOS/Linux-7' label='MacOS/Linux' default>
 
@@ -545,6 +562,8 @@ $env:SMARTUI_DO_NOT_USE_CAPTURED_COOKIES="true"
 ## 8. Setting Server Address
 
 For SDK integrations (non-Selenium), set the SmartUI server address:
+
+<VerifiedTag value="Verified" />
 
 <Tabs className='docs__val' groupId='language'>
 <TabItem value='MacOS/Linux-8' label='MacOS/Linux' default>
