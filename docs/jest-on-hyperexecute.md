@@ -32,6 +32,7 @@ slug: jest-on-hyperexecute/
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -251,6 +252,8 @@ By setting up the Hub endpoint, you establish the communication channel between 
 
 Configure the desired capabilities based on your test requirements. For example:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 const capability = {
 	"browserName": "Chrome",
@@ -297,6 +300,8 @@ import TabItem from '@theme/TabItem';
 
 <TabItem value="bash" label="Linux / MacOS" default>
 
+  <VerifiedTag value="Verified" />
+
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-bash">
   {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
@@ -307,6 +312,8 @@ export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 </TabItem>
 
 <TabItem value="powershell" label="Windows" default>
+
+  <VerifiedTag value="Verified" />
 
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-powershell">
@@ -330,6 +337,8 @@ In this sample YAML file, we have mentioned:
 - **Pre and Post** commands
 - **Reports and Artefacts** that will be generated after the completion of tests
 - and other necessary YAML Parameters
+
+<VerifiedTag value="Verified" />
 
 ```bash
 version: 0.1
@@ -370,11 +379,15 @@ jobLabel: [puppeteer-JestJS, linux, autosplit]
 
 Run the below command in your terminal at the root folder of the project:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 ./hyperexecute --config RELATIVE_PATH_OF_YOUR_YAML_FILE
 ```
 
 OR use this command if you have not exported your username and access key in the step 2.
+
+<VerifiedTag value="Verified" />
 
 <div className="lambdatest__codeblock">
   <CodeBlock className="language-bash">
@@ -451,6 +464,8 @@ The [jest-skill](https://github.com/LambdaTest/agent-skills/tree/main/jest-skill
 
 The jest-skill package includes:
 
+<VerifiedTag value="Verified" />
+
 ```
 jest-skill/
 ├── SKILL.md
@@ -473,6 +488,8 @@ It provides structured guidance for:
 ***
 
 Install a Jest Agent Skill using the command below:
+
+<VerifiedTag value="Verified" />
 
 ```
 # Clone the repo and copy the skill you need

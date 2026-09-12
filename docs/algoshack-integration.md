@@ -15,6 +15,7 @@ canonical: https://www.testmuai.com/support/docs/algoqa-integration/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import { CookieTrackingSignup } from '@site/src/component/CookieTracking';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -162,6 +163,8 @@ Once you have defined the above parameters, your script will be ready for execut
 <img loading="lazy" src={require('../assets/images/algoshack-integration/cmd.png').default} alt="Image" width="1592" height="893"  className="doc_img"/>
 
 8. Pass the below command in the Command Prompt to trigger the script execution.
+
+<VerifiedTag value="Verified" />
 
 ```
 mvn test

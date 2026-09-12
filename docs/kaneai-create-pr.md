@@ -21,6 +21,7 @@ slug: kaneai-create-pr/
 canonical: https://www.testmuai.com/support/docs/kaneai-create-pr/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -314,6 +315,8 @@ Select one or more filters and click **Apply** to filter the listing.
 ### Folder Structure in the Repository
 
 Test files are organized in your repository following the configured folder structure pattern. The default pattern is:
+
+<VerifiedTag value="Verified" />
 
 ```
 your-repo/

@@ -20,6 +20,31 @@ canonical: https://www.testmuai.com/support/docs/applitools-integration-cypress/
 
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+import VerifiedTag from '@site/src/component/verifiedTag';
+
+<script type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify({
+       "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": BRAND_URL
+        },{
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Support",
+          "item": `${BRAND_URL}/support/docs/`
+        },{
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Applitools Integration With TestMu AI For Cypress",
+          "item": `${BRAND_URL}/support/docs/applitools-integration-cypress/`
+        }]
+      })
+    }}
+></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -140,11 +165,15 @@ You can download or clone the sample GitHub project from the following repo - [C
 
 - Install the **NPM dependencies** using the below command:
 
+  <VerifiedTag value="Verified" />
+
   ```bash
   npm install
   ```
 
 - Set up **Applitools Eyes** using the below command:
+
+  <VerifiedTag value="Verified" />
 
   ```bash
   npx eyes-setup
@@ -160,6 +189,8 @@ You can download or clone the sample GitHub project from the following repo - [C
 
 - Install Applitools Eyes dependencies using the below command:
 
+  <VerifiedTag value="Verified" />
+
   ```bash
   npm install @applitools/eyes-cypress --save-dev
   ```
@@ -172,11 +203,15 @@ You can download or clone the sample GitHub project from the following repo - [C
 
 - Install the <BrandName /> CLI using below command:
 
+  <VerifiedTag value="Verified" />
+
   ```bash
   npm install -g lambdatest-cypress-cli
   ```
 
 - Setup configurations on which you want to run your test using the below command:
+
+  <VerifiedTag value="Verified" />
 
   ```bash
   lambdatest-cypress init
@@ -195,6 +230,8 @@ You can download or clone the sample GitHub project from the following repo - [C
 ---
 
 Execute your first test case using the below command:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 lambdatest-cypress run

@@ -18,6 +18,7 @@ canonical: https://www.testmuai.com/support/docs/video-agent/
 ---
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <head>
   <meta name="robots" content="noindex, nofollow" />
@@ -283,6 +284,8 @@ When you bulk import scenarios, the CSV uses the following columns. Download the
 ---
 
 A single scenario tested once tells you it worked once. Real confidence comes from the same situation under varied conditions. Each scenario can expand across four independent axes, and an empty axis counts as one, so a scenario with nothing set runs exactly once.
+
+<VerifiedTag value="Verified" />
 
 ```text
 avatar faces  x  personas  x  test profiles  x  iterations  =  sessions

@@ -16,6 +16,7 @@ site_name: TestMu AI
 slug: kane-cli-assurance-context/
 canonical: https://www.testmuai.com/support/docs/kane-cli-assurance-context/
 ---
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -222,6 +223,8 @@ canonical: https://www.testmuai.com/support/docs/kane-cli-assurance-context/
 
 `kane-cli context` builds a local, content-addressed knowledge store (`.context/` in your project directory) from your requirement documents, and extracts **use-cases** from them with an AI agent. It is the first stage of the [assurance lifecycle](/support/docs/kane-cli-assurance/): Source → Use-case → Scenario → AC → Test.
 
+<VerifiedTag value="Verified" />
+
 ```bash
 kane-cli context ingest ./prd-online-store.md   # snapshot a source
 kane-cli context extract                        # extract use-cases (interactive chat)
@@ -230,6 +233,8 @@ kane-cli context list                           # see what you have
 ```
 
 ## `context ingest` — snapshot your sources {#ingest}
+
+<VerifiedTag value="Verified" />
 
 ```bash
 kane-cli context ingest <src...> [--as <id>]
@@ -245,6 +250,8 @@ Snapshots one or more files into `.context/` (the store is created on first use)
 - `--plan`, `--force`, and `--trust` pass through to the extraction; they refuse under the land-only modes.
 
 Receipts adapt to the surface: a terminal prints the human copy (`landed prd (prd.md) — new source`); `ci`/piped runs keep the byte-exact script contract below. *(0.7.2)* Under `--mode agent` nothing prints outside the stream — the landing receipt is the `ingested` event itself.
+
+<VerifiedTag value="Verified" />
 
 ```
 $ kane-cli context ingest ./prd-online-store.md --mode ci
@@ -262,6 +269,8 @@ Ingest is deterministic about identity:
 | a new id | `created` |
 | identical bytes already ingested under a different id | interactive relocate offer (default yes); non-TTY mints the new id and prints a hint |
 
+<VerifiedTag value="Verified" />
+
 ```
 $ kane-cli context ingest ./prd-online-store.md
 created  prd-online-store  source sha256:0661…  blob sha256:3db8…
@@ -277,6 +286,8 @@ Two lineage helpers:
 Files: text and structured text up to 2 MB, images up to 5 MB, PDF and Word documents up to 25 MB.
 
 Remote sources, passed as a URL and requiring the matching connection on your account:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 kane-cli context ingest https://<your-site>/browse/PROJ-123              # Jira issue
@@ -295,6 +306,8 @@ A Jira `ENG-42` and a Linear `ENG-42` both mint the id `eng-42`. A URL whose id 
 When the new bytes are a **changed version of a source you already extracted from**, prefer [`kane-cli maintain reconcile`](/support/docs/kane-cli-assurance-maintain/) over a bare re-ingest — it records the same head move *and* triages what the change means for your suite, in one step.
 
 ## `context extract` — propose use-cases {#extract}
+
+<VerifiedTag value="Verified" />
 
 ```bash
 kane-cli context extract [--plan] [--force] [--source <id>] [--mode <mode>] [--resume <sid> [--message "<text>"]]
@@ -358,6 +371,8 @@ After the agent proposes, the same session walks you through a review checklist:
 
 When the agent needs an answer you're not there to give (or you Ctrl+C), the session is saved and the run exits `3`. Resume it any time within 24 hours:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 kane-cli context sessions                       # list resumable sessions + their resume commands
 kane-cli context extract --resume <sid>         # re-presents the pending questions
@@ -367,6 +382,8 @@ kane-cli context extract --resume <sid> --message "Account required — the upda
 `--message` answers **in plain words** — no question ids, no option indexes. The agent maps your statement to its own pending questions. A statement that answers nothing pending is treated as steering ("also cover the coupon path"). If your answer leaves a high-risk ambiguity standing, the run pauses again with refreshed questions.
 
 ## `context review` — review outside the extract session {#review}
+
+<VerifiedTag value="Verified" />
 
 ```bash
 kane-cli context review [--queue derived|skipped|archived|drift] [--verdicts <file>] [--json]
@@ -385,6 +402,8 @@ In any queue: approve promotes, reject archives (a trusted node *can* be demoted
 
 **Headless verdicts** — `--verdicts <file.json>` is the one non-TTY write path: a JSON array of
 
+<VerifiedTag value="Verified" />
+
 ```json
 [{ "ref": "uc-manage-the-cart", "resolution": "approved" }]
 ```
@@ -399,6 +418,8 @@ with `resolution` one of `approved | edited | rejected | skipped | supersede` (p
 
 ### `context list`
 
+<VerifiedTag value="Verified" />
+
 ```bash
 kane-cli context list [--type source|usecase] [--inferred] [--stale] [--all] [--json]
 ```
@@ -406,6 +427,8 @@ kane-cli context list [--type source|usecase] [--inferred] [--stale] [--all] [--
 Lists nodes with their trust and freshness. `--inferred` shows only unreviewed (`derived`) nodes, `--stale` only stale or orphaned nodes (evidence pinned to an outdated snapshot, or no live source at all), `--all` includes superseded versions (hidden by default). `--json` emits one JSON object per line.
 
 ### `context view`
+
+<VerifiedTag value="Verified" />
 
 ```bash
 kane-cli context view [--out <path>] [--open|--no-open] [--json]
@@ -415,6 +438,8 @@ Renders the whole graph as a **single self-contained HTML page** — swimlanes p
 
 ### `context explain`
 
+<VerifiedTag value="Verified" />
+
 ```bash
 kane-cli context explain <ref> [--json]
 ```
@@ -422,6 +447,8 @@ kane-cli context explain <ref> [--json]
 Replays a node's recorded history straight from the store — **no model call, ever**: when it was minted and why, every review verdict, edits and supersessions, name assignments. `<ref>` is a logical id (`uc-manage-the-cart`) or a cid.
 
 ### `context sessions` {#sessions}
+
+<VerifiedTag value="Verified" />
 
 ```bash
 kane-cli context sessions [list|show|clean] [<sid>] [--all] [--json]
@@ -433,6 +460,8 @@ Paused extract *and* design sessions live under `.context/sessions/` for 24 hour
 
 ### `context retire`
 
+<VerifiedTag value="Verified" />
+
 ```bash
 kane-cli context retire <source_id> [--reason <text>] [--yes]
 ```
@@ -440,6 +469,8 @@ kane-cli context retire <source_id> [--reason <text>] [--yes]
 Retires a source. Its use-cases are **not** deleted — they read `orphaned` once no live source evidences them. Fully reversible via `revert`.
 
 ### `context name`
+
+<VerifiedTag value="Verified" />
 
 ```bash
 kane-cli context name <ref> <slug>          # name one node
@@ -449,6 +480,8 @@ kane-cli context name --backfill [--yes]    # assign ids to every unnamed node
 Assigns a stable kebab-case name. Names are never part of a node's identity — renaming never re-addresses — and names follow edits, so a name assigned to version 1 keeps resolving to the current version. The sequential-id namespace (`uc-3`, `ac-12`, …) is reserved for ids assigned at mint — `name` refuses it (exit `2`).
 
 ### `context revert`
+
+<VerifiedTag value="Verified" />
 
 ```bash
 kane-cli context revert <seq> [--reason <text>] [--yes]
@@ -473,6 +506,8 @@ Inverts a record's effects by appending a compensation record — mints are tomb
 Freshness is orthogonal: `fresh` / `stale` (the source snapshot moved) / `orphaned` (no live source evidences it) / `superseded` (this version was replaced). A stale use-case is still trusted — it just needs re-verification against the new snapshot, which is exactly what [`kane-cli maintain reconcile`](/support/docs/kane-cli-assurance-maintain/#reconcile) is for.
 
 ## The store on disk
+
+<VerifiedTag value="Verified" />
 
 ```
 .context/

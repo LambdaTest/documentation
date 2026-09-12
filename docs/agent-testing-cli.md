@@ -19,6 +19,32 @@ canonical: https://www.testmuai.com/support/docs/agent-testing-cli/
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import VerifiedTag from '@site/src/component/verifiedTag';
+import { BRAND_URL } from '@site/src/component/BrandName';
+
+<script type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify({
+       "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": BRAND_URL
+        },{
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Support",
+          "item": `${BRAND_URL}/support/docs/`
+        },{
+          "@type": "ListItem",
+          "position": 3,
+          "name": "How to Test AI Agents With the TestMu AI Agent Testing CLI",
+          "item": `${BRAND_URL}/support/docs/agent-testing-cli/`
+        }]
+      })
+    }}
+></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -278,6 +304,8 @@ It runs the same commands on macOS, Linux, and Windows against Chat, Voice, and 
 - **Choose an operating mode:** Use direct commands, machine-readable output, or the interactive terminal user interface (TUI).
 - **Integrate with CI/CD:** Authenticate with environment variables and run suites without an interactive prompt.
 
+<VerifiedTag value="Verified" />
+
 ```bash
 # Install
 pip install agent-testing-cli
@@ -297,6 +325,8 @@ agent-testing-cli projects
 1. You need a TestMu AI account. [Sign up free](https://www.testmuai.com/) if you do not have one.
 2. Follow [Get started with TestMu Agent Testing](https://agent-to-agent.lambdatest.com/agent-ui/agents) and open **Credentials** in the TestMu AI Dashboard. Copy your username and access key.
 3. Set the credentials as environment variables when you use the CLI in CI/CD or other non-interactive environments.
+
+<VerifiedTag value="Verified" />
 
 <Tabs groupId="os">
   <TabItem value="unix" label="macOS or Linux" default>
@@ -364,11 +394,15 @@ The CLI runs in a system terminal or an integrated terminal in an IDE on:
 
 Run the following command to see all commands:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 agent-testing-cli --help
 ```
 
 Run the following command to see the options for one command:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 agent-testing-cli COMMAND --help
@@ -380,11 +414,15 @@ agent-testing-cli COMMAND --help
 
 Install the latest published version from PyPI:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 pip install agent-testing-cli
 ```
 
 Verify the installation:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 agent-testing-cli --help
@@ -398,6 +436,8 @@ agent-testing-cli --help
 
 Run the login command:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 agent-testing-cli login
 ```
@@ -405,6 +445,8 @@ agent-testing-cli login
 The CLI prompts for your username and access key. The CLI saves credentials in the operating-system credential store.
 
 You can also supply the username and access key as options:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 agent-testing-cli login --user LT_USERNAME --key LT_ACCESS_KEY
@@ -415,6 +457,8 @@ Do not store the access key in source control or shell history.
 ### Authenticate in CI/CD
 
 Set both environment variables in the CI/CD environment:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 export LT_USERNAME="your-username"
@@ -427,11 +471,15 @@ Store these values in the secret store of your CI/CD platform.
 
 Check the authentication status:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 agent-testing-cli auth status
 ```
 
 Delete saved credentials for the selected profile:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 agent-testing-cli logout
@@ -443,11 +491,15 @@ agent-testing-cli logout
 
 List accessible projects:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 agent-testing-cli projects
 ```
 
 Use a project ID to list its configured resources:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 agent-testing-cli --project PROJECT_ID scenarios
@@ -456,6 +508,8 @@ agent-testing-cli --project PROJECT_ID endpoint-profiles
 ```
 
 Add `--json` when a script must process the output:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 agent-testing-cli --json projects
@@ -469,6 +523,8 @@ For a Phone Caller run, `--project PROJECT_ID` identifies the TestMu project and
 
 Start one saved suite:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 agent-testing-cli --project PROJECT_ID run \
   --suite SUITE_ID
@@ -478,6 +534,8 @@ The CLI asks for confirmation because a Phone Caller suite can create real calls
 
 Start a suite without an interactive confirmation:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 agent-testing-cli --project PROJECT_ID run \
   --suite SUITE_ID \
@@ -485,6 +543,8 @@ agent-testing-cli --project PROJECT_ID run \
 ```
 
 Start multiple suites:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 agent-testing-cli --project PROJECT_ID run \
@@ -494,6 +554,8 @@ agent-testing-cli --project PROJECT_ID run \
 ```
 
 Wait for the final suite result:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 agent-testing-cli --project PROJECT_ID run \
@@ -512,6 +574,8 @@ The `--poll` and `--timeout` values are in seconds.
 
 A Chat evaluation requires a project, workflow, and suite:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 agent-testing-cli --project PROJECT_ID run \
   --workflow WORKFLOW_ID \
@@ -520,6 +584,8 @@ agent-testing-cli --project PROJECT_ID run \
 ```
 
 Select a specific endpoint profile:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 agent-testing-cli --project PROJECT_ID run \
@@ -537,11 +603,15 @@ Chat evaluations are asynchronous. Do not use `--wait` with a Chat evaluation.
 
 Run a suite from a supported TestMu result URL:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 agent-testing-cli run --url "SUITE URL" --yes
 ```
 
 Run multiple suite URLs in one command:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 agent-testing-cli run --url "SUITE_URL_1" "SUITE_URL_2" "SUITE_URL_3" --yes
@@ -554,6 +624,8 @@ The `--yes` flag confirms every selected run without an interactive prompt. Use 
 ---
 
 Open the terminal user interface:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 agent-testing-cli tui
@@ -592,6 +664,8 @@ The shared `--json`, `--verbose`, and `--no-tui` options can appear before or af
 ---
 
 For a Chat evaluation, provide the workflow ID as an environment variable and use this command:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 agent-testing-cli --project "$TESTMU_PROJECT_ID" --json run \
@@ -633,6 +707,8 @@ Use the exit code to fail a CI/CD job when a command does not complete successfu
 
 **Fix:** List the available projects and suites again:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 agent-testing-cli projects
 agent-testing-cli --project PROJECT_ID suites
@@ -643,6 +719,8 @@ agent-testing-cli --project PROJECT_ID suites
 **What you see:** The CLI reports `Chat run requires --workflow`.
 
 **Fix:** Add the workflow ID:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 agent-testing-cli --project PROJECT_ID run \

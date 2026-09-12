@@ -257,6 +257,8 @@ When migrating your Selenium 4 tests from BrowserStack to <BrandName />, the fol
 
 2. <b>Create .env file</b>: Securely store your <BrandName /> credentials, create a .env file in the root of your project and add the following values:
 
+<VerifiedTag value="Verified" />
+
 ```
 LT_USERNAME="<your_username>"
 LT_ACCESS_KEY="<your_access_key>"
@@ -268,6 +270,8 @@ Once the .env file is set up, ensure your test framework correctly reads these v
 
 ### Add <BrandName /> Hub URL
 You need to now add the hub URL in the configuration settings of your test suite. Hub URL is of type String and it defines the Hub location to which the Selenium tests would be submitted for execution.
+
+<VerifiedTag value="Verified" />
 
 ```js
 @hub.lambdatest.com/wd/hub

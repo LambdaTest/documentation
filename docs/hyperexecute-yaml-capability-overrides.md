@@ -16,6 +16,7 @@ canonical: https://www.testmuai.com/support/docs/hyperexecute-yaml-capability-ov
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -126,6 +127,8 @@ Previously, these capabilities were typically defined within the test script. Wi
 > **📝 Note:** This feature is only supported for **Selenium**-based tests at the moment.
 
 ## Sample YAML with Capability Overrides
+
+<VerifiedTag value="Verified" />
 
 ```yaml reference title="hyperexecute.yaml"
 https://github.com/LambdaTest/testng-selenium-hyperexecute-sample/blob/main/yaml/linux/v1/testng_hyperexecute_linux_ltoptions.yaml

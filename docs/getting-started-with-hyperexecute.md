@@ -29,6 +29,7 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import HyperExecuteSupportedLanguageDocs from '../src/component/SupportedLanguages/HyperExecuteSupportedLanguageDocs';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -343,6 +344,8 @@ The [hyperexecute-skill](https://github.com/LambdaTest/agent-skills/tree/main/hy
 
 The hyperexecute-skill package includes:
 
+<VerifiedTag value="Verified" />
+
 ```
 hyperexecute-skill/
 ├── SKILL.md
@@ -365,6 +368,8 @@ It provides structured guidance for:
 ***
 
 Install a HyperExecute Agent Skill using the command below:
+
+<VerifiedTag value="Verified" />
 
 ```
 # Clone the repo and copy the skill you need

@@ -20,6 +20,31 @@ site_name: TestMu AI
 slug: private-dependencies-cypress/
 canonical: https://www.testmuai.com/support/docs/private-dependencies-cypress/
 ---
+import VerifiedTag from '@site/src/component/verifiedTag';
+
+<script type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify({
+       "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": BRAND_URL
+        },{
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Support",
+          "item": `${BRAND_URL}/support/docs/`
+        },{
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Execute Cypress Tests Including Private Dependencies",
+          "item": `${BRAND_URL}/support/docs/private-dependencies-cypress/`
+        }]
+      })
+    }}
+></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -115,11 +140,15 @@ Assuming that you have run a Cypress test on TestMu AI platform ( if not, this a
 
 - Before getting started, you would have to update the **lambdatest-cypress cli** using the command below:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 npm install -g lambdatest-cypress-cli
 ```
 
 - The CLI version should be the latest i.e. is 2.3.0. You can check the CLI version by running the below command.
+
+<VerifiedTag value="Verified" />
 
 ```bash
 lambdatest-cypress --version

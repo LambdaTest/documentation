@@ -22,6 +22,7 @@ import TabItem from '@theme/TabItem';
 import CodeBlock from '@theme/CodeBlock';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -177,6 +178,8 @@ Kane CLI authenticates against your <BrandName /> account before it can run test
 
 ## OAuth Login
 
+<VerifiedTag value="Verified" />
+
 ```bash
 kane-cli login --oauth
 ```
@@ -195,6 +198,8 @@ Basic auth uses your <BrandName /> username and account access key. It is the ri
 
 Pass credentials directly on the command you are running. They take precedence over any stored credentials:
 
+<VerifiedTag value="Verified" />
+
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">
 {`kane-cli run "Search for a product" \\
@@ -208,6 +213,8 @@ Both `kane-cli run` and `kane-cli feedback` accept `--username` and `--access-ke
 ### Persistent Basic Auth
 
 To save basic auth credentials for a profile so you do not have to pass them every time, log in with the basic auth flags:
+
+<VerifiedTag value="Verified" />
 
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">
@@ -231,6 +238,8 @@ A profile is a named login. Profiles are useful when you work with more than one
 
 Pass `--profile <name>` to `login` to authenticate under a named profile. If you omit `--profile`, Kane CLI uses the profile named `default`.
 
+<VerifiedTag value="Verified" />
+
 ```bash
 kane-cli login --oauth --profile work
 kane-cli login --oauth --profile personal
@@ -240,6 +249,8 @@ You can mix methods. One profile can use OAuth and another can use basic auth.
 
 ### List Profiles
 
+<VerifiedTag value="Verified" />
+
 ```bash
 kane-cli profiles list
 ```
@@ -248,6 +259,8 @@ Prints each saved profile with its environment, marking the active one.
 
 ### Switch the Active Profile
 
+<VerifiedTag value="Verified" />
+
 ```bash
 kane-cli profiles switch work
 ```
@@ -255,6 +268,8 @@ kane-cli profiles switch work
 Subsequent commands run under `work` until you switch again.
 
 ### Delete a Profile
+
+<VerifiedTag value="Verified" />
 
 ```bash
 kane-cli profiles delete personal
@@ -270,6 +285,8 @@ A few commands accept `--profile <name>` so you can target a profile for a singl
 
 ## Check Who You Are Logged In As
 
+<VerifiedTag value="Verified" />
+
 ```bash
 kane-cli whoami
 ```
@@ -282,6 +299,8 @@ Pass `--profile <name>` to inspect a profile other than the active one.
 
 ## Log Out
 
+<VerifiedTag value="Verified" />
+
 ```bash
 kane-cli logout
 ```
@@ -293,6 +312,8 @@ kane-cli logout
 ## Where Credentials Are Stored
 
 Credentials live under your home directory:
+
+<VerifiedTag value="Verified" />
 
 ```text
 ~/.testmuai/kaneai/profiles/<profile>/<env>/credentials

@@ -14,6 +14,32 @@ site_name: TestMu AI
 slug: rook-workspace-files/
 canonical: https://www.testmuai.com/support/docs/rook-workspace-files/
 ---
+import VerifiedTag from '@site/src/component/verifiedTag';
+import { BRAND_URL } from '@site/src/component/BrandName';
+
+<script type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify({
+       "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": BRAND_URL
+        },{
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Support",
+          "item": `${BRAND_URL}/support/docs/`
+        },{
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Rook Workspace Files",
+          "item": `${BRAND_URL}/support/docs/rook-workspace-files/`
+        }]
+      })
+    }}
+></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -95,6 +121,8 @@ Rook uses plain files rather than a hidden workspace database. That makes agents
 
 ## Repository Tree
 
+<VerifiedTag value="Verified" />
+
 ```text
 .testmuai/rook/
 ├── settings.json                         active project and permission rules
@@ -146,6 +174,8 @@ This makes a verdict readable later even after the working agent, profile, featu
 ## Files Excluded From Git
 
 On first use, Rook adds a `.gitignore` below `.testmuai/rook/` for data that should not travel:
+
+<VerifiedTag value="Verified" />
 
 ```gitignore
 *.log

@@ -181,6 +181,8 @@ This section explains how to use Video Injection with App automation. This secti
 
 You can use the following curl command to upload any video of your choice to the <BrandName /> cloud. Please note that we support only **MP4 format is only supported and the video can be 50 MB or less**.
 
+<VerifiedTag value="Verified" />
+
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">
 {`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" -X POST "https://api.lambdatest.com/mfs/v1.0/media/upload" -F "media_file=@"/Users/macuser/Downloads/video.mp4"" -F "type="video"" -F "custom_id="SampleVideo""`}
@@ -207,6 +209,9 @@ You can use the appium capability to turn the video injection on in your applica
 <Tabs className="docs__val">
 
 <TabItem value="python" label="Python" default>
+
+  <VerifiedTag value="Verified" />
+
   <div className="lambdatest__codeblock">
   <CodeBlock className="language-python">
   {`desired_capabilities = {
@@ -219,6 +224,9 @@ You can use the appium capability to turn the video injection on in your applica
 
 
 <TabItem value="JavaScript" label="JavaScript" default>
+
+  <VerifiedTag value="Verified" />
+
   <div className="lambdatest__codeblock">
   <CodeBlock className="language-javascript">
   {`DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
@@ -235,6 +243,9 @@ Refer to the code snippets given below to upload the video with the action `Vide
 <Tabs className="docs__val">
 
 <TabItem value="python" label="Python" default>
+
+  <VerifiedTag value="Verified" />
+
   <div className="lambdatest__codeblock">
   <CodeBlock className="language-python">
   {`driver.execute_script("lambda-video-injection=media_url") #Add media_url here`}
@@ -244,6 +255,9 @@ Refer to the code snippets given below to upload the video with the action `Vide
 
 
 <TabItem value="JavaScript" label="JavaScript" default>
+
+  <VerifiedTag value="Verified" />
+
   <div className="lambdatest__codeblock">
   <CodeBlock className="language-javascript">
   {`driver.execute_script("lambda-video-injection=media_url") //Add media_url here`}

@@ -5,6 +5,31 @@ sidebar_label: Misplaced Field Label
 description: Rule-level Accessibility guidance for Misplaced Field Label on iOS.
 slug: accessibility-ios-rule-misplaced-field-label/
 ---
+import { BRAND_URL } from '@site/src/component/BrandName';
+
+<script type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify({
+       "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": BRAND_URL
+        },{
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Support",
+          "item": `${BRAND_URL}/support/docs/`
+        },{
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Misplaced Field Label",
+          "item": `${BRAND_URL}/support/docs/accessibility-ios-rule-misplaced-field-label/`
+        }]
+      })
+    }}
+></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({

@@ -6,6 +6,32 @@ sidebar_label: /logout
 description: Revoke Rook authentication and clear stored credentials on the current machine.
 slug: rook-command-logout/
 ---
+import VerifiedTag from '@site/src/component/verifiedTag';
+import { BRAND_URL } from '@site/src/component/BrandName';
+
+<script type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify({
+       "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": BRAND_URL
+        },{
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Support",
+          "item": `${BRAND_URL}/support/docs/`
+        },{
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Rook /logout Command",
+          "item": `${BRAND_URL}/support/docs/rook-command-logout/`
+        }]
+      })
+    }}
+></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -70,11 +96,15 @@ Use <code>/logout</code> to revoke the current token and remove stored Rook cred
 
 Interactive:
 
+<VerifiedTag value="Verified" />
+
 ~~~text
 /logout
 ~~~
 
 Headless:
+
+<VerifiedTag value="Verified" />
 
 ~~~bash
 rook logout
@@ -95,6 +125,8 @@ If remote revocation fails—for example, while offline—the credential is stil
 Credentials are global for Rook terminals using the same Rook home. Logging out in one workspace affects other active or future Rook sessions on that machine.
 
 ## Real-world account switch
+
+<VerifiedTag value="Verified" />
 
 ~~~text
 /logout

@@ -18,6 +18,7 @@ canonical: https://www.testmuai.com/support/docs/kane-cli-parallel-execution/
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -150,6 +151,8 @@ Each sub-objective must be **self-contained**: it navigates to its own URL, auth
 
 Run three tests one after another:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 kane-cli run "Log in and verify dashboard" --url https://myapp.com --headless --timeout 120
 kane-cli run "Search for products and verify results" --url https://myapp.com --headless --timeout 120
@@ -161,6 +164,8 @@ kane-cli run "Complete checkout and confirm order" --url https://myapp.com --hea
 ---
 
 ## Parallel Pattern (Shell Background Processes)
+
+<VerifiedTag value="Verified" />
 
 ```bash
 #!/bin/bash
@@ -212,6 +217,8 @@ rm -rf "$RESULTS_DIR"
 
 After all tests complete, present results like this:
 
+<VerifiedTag value="Verified" />
+
 ```
 🧪 Test Suite: Core Flows
 📅 Run at: 2026-04-14 14:30 UTC
@@ -233,6 +240,8 @@ After all tests complete, present results like this:
 For AI coding agents (Claude Code, Codex CLI, Gemini CLI), use the agent's parallel task mechanism to spawn multiple sub-agents simultaneously. Each sub-agent runs one Kane CLI command and returns structured results.
 
 **Agent prompt template** (give this to each sub-agent):
+
+<VerifiedTag value="Verified" />
 
 ```
 Run this Kane CLI browser test and report the results:

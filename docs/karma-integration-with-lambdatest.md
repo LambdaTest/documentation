@@ -216,12 +216,17 @@ Complete these steps before integrating Karma with TestMu AI.
 ---
 Clone the TestMu AI Karma sample repository to your local machine.
 
+<VerifiedTag value="Verified" />
+
 ```bash
 git clone https://github.com/LambdaTest/angular-karma-sample
 cd angular-karma-sample
 ```
 
 Install the required dependencies and Karma CLI globally:
+
+<VerifiedTag value="Verified" />
+
 ```bash
 npm install -g karma-cli
 npm install
@@ -235,6 +240,8 @@ Set your TestMu AI username and access key as environment variables.
 
 <TabItem value="bash" label="macOS / Linux" default>
 
+  <VerifiedTag value="Verified" />
+
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-bash">
   {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
@@ -245,6 +252,8 @@ export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 </TabItem>
 
 <TabItem value="powershell" label="Windows" default>
+
+  <VerifiedTag value="Verified" />
 
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-powershell">
@@ -286,11 +295,16 @@ Generate capabilities for your test requirements with the [Capabilities Generato
 ---
 Execute the test using the following command.
 
+<VerifiedTag value="Verified" />
+
 ```bash
 karma start karma.conf.js
 ```
 
 **Parallel tests:**
+
+<VerifiedTag value="Verified" />
+
 ```bash
 ng test
 ```
@@ -314,6 +328,8 @@ Use AI coding assistants to generate and run Karma tests with the TestMu AI Agen
 The [karma-skill](https://github.com/LambdaTest/agent-skills/tree/main/karma-skill) is part of [TestMu AI Agent Skills](https://github.com/LambdaTest/agent-skills/) - structured packages that teach AI coding assistants how to write production-grade test automation.
 
 Install the skill:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 git clone https://github.com/LambdaTest/agent-skills.git

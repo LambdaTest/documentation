@@ -178,6 +178,8 @@ Cucumber.js is a JavaScript-based open-source framework for web automation testi
 
 2. Install the npm dependencies.
 
+<VerifiedTag value="Verified" />
+
 ```
 npm install
 ```
@@ -257,6 +259,8 @@ After(async () => {
 setWorldConstructor(CustomWorld);
 ```
 Pass the below command to run the test.
+
+<VerifiedTag value="Verified" />
 
 ```
 npm run test
@@ -349,6 +353,8 @@ The [cucumber-skill](https://github.com/LambdaTest/agent-skills/tree/main/cucumb
 
 The cucumber-skill package includes:
 
+<VerifiedTag value="Verified" />
+
 ```
 cucumber-skill/
 ├── SKILL.md
@@ -371,6 +377,8 @@ It provides structured guidance for:
 ***
 
 Install a Cucumber Agent Skill using the command below:
+
+<VerifiedTag value="Verified" />
 
 ```
 # Clone the repo and copy the skill you need

@@ -24,6 +24,7 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import NewTag from '../src/component/newTag';
 import { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -180,6 +181,8 @@ If you choose Git Strategy and your runs do not currently send branch informatio
 ## Capture Sources
 
 Every source below can be used in the same Omni project. Each one keeps the workflow it already has, because Omni changes where the results land, not how you capture them.
+
+<VerifiedTag value="Verified" />
 
 <Tabs className='docs__val' groupId='omni-sources'>
 <TabItem value='website' label='Website' default>

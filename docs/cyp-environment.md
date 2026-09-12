@@ -26,6 +26,31 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
+
+<script type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify({
+       "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": BRAND_URL
+        },{
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Support",
+          "item": `${BRAND_URL}/support/docs/`
+        },{
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Environment Variables Support for Cypress Tests",
+          "item": `${BRAND_URL}/support/docs/cyp-environment/`
+        }]
+      })
+    }}
+></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -132,6 +157,8 @@ a. **Cypress 9**
 
 A sample `cypress.json` file:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 {
 ......
@@ -148,6 +175,8 @@ b. **Cypress 10**
 
 A sample `cypress.config.js` file:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 module.exports = defineConfig({
   env: {
@@ -158,6 +187,8 @@ module.exports = defineConfig({
 ```
 
 You can use both of these in your test specifications file. An example of a test specifications file is: 
+
+<VerifiedTag value="Verified" />
 
 ```bash
 describe('Sample test', () => {
@@ -174,6 +205,8 @@ describe('Sample test', () => {
 ### 2. Via the `cypress.env.json` File
 
 
+<VerifiedTag value="Verified" />
+
 ```bash
 {
     "CYPRESS_BASE_URL":"https://example.cypress.io/",
@@ -185,6 +218,8 @@ describe('Sample test', () => {
 ### 3. Via the <BrandName /> Cypress CLI
 
 You can also add your environment variables via the parameter `--envs` in the <BrandName /> Cypress CLI. 
+
+<VerifiedTag value="Verified" />
 
 ```bash
 lambdatest-cypress run --envs "CYPRESS_BASE_URL=https://example.cypress.io/,ACTIONS_URL=commands/actions,WINDOW_URL=commands/window"

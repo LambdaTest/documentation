@@ -14,6 +14,32 @@ site_name: TestMu AI
 slug: rook-permissions-and-safety/
 canonical: https://www.testmuai.com/support/docs/rook-permissions-and-safety/
 ---
+import VerifiedTag from '@site/src/component/verifiedTag';
+import { BRAND_URL } from '@site/src/component/BrandName';
+
+<script type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify({
+       "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": BRAND_URL
+        },{
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Support",
+          "item": `${BRAND_URL}/support/docs/`
+        },{
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Rook Permissions and Safety",
+          "item": `${BRAND_URL}/support/docs/rook-permissions-and-safety/`
+        }]
+      })
+    }}
+></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -104,6 +130,8 @@ Rook's internal roles can call tools while discovering, generating, invoking, an
 
 Rules identify the tool and the allowed subject:
 
+<VerifiedTag value="Verified" />
+
 ```text
 bash(npm test)              exact command
 bash(git *)                 glob over the command
@@ -113,6 +141,8 @@ mcp_call(billing.lookup)    one server tool
 ```
 
 Add `@phase` to limit a grant to one phase:
+
+<VerifiedTag value="Verified" />
 
 ```text
 bash(git *)@explore
@@ -143,6 +173,8 @@ These flags solve different problems:
 |---|---|---|
 | `--yes` | Approves tool calls for the current command | Writes nothing to settings |
 | `--allow <rule>` | Supplies one explicit rule to the current process; repeatable | Visible in the launch command or pipeline definition |
+
+<VerifiedTag value="Verified" />
 
 ```bash
 rook explore . \

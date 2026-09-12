@@ -22,6 +22,31 @@ canonical: https://www.testmuai.com/support/docs/running-your-first-cypress-test
 ---
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
+
+<script type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify({
+       "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": BRAND_URL
+        },{
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Support",
+          "item": `${BRAND_URL}/support/docs/`
+        },{
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Running Your First Cypress Test On TestMu AI Platform",
+          "item": `${BRAND_URL}/support/docs/running-your-first-cypress-test/`
+        }]
+      })
+    }}
+></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -140,12 +165,16 @@ To demonstrate Cypress testing on the <BrandName /> platform, we will use the [C
 
 **Step-1:** Clone the [<BrandName />-Cypress Cloud](https://github.com/LambdaTest/Cypress-Cloud) GitHub repo and switch to the cloned directory.
 
+<VerifiedTag value="Verified" />
+
 ```bash
 git clone https://github.com/LambdaTest/Cypress-Cloud.git
 cd Cypress-Cloud
 ```
 
 **Step-2:** Setup the **<BrandName />-Cypress CLI** and configure the configuration file, as shown in the Prerequisites before. A file named `lambdatest-config.json` is generated in your project using the below command:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 lambdatest-cypress init
@@ -155,6 +184,8 @@ Here, we have used the below configuration as default and generated it in the `l
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+
+<VerifiedTag value="Verified" />
 
 <Tabs className="docs__val">
   <TabItem value="config" label="lambdatest-config.json" default>
@@ -202,6 +233,8 @@ import TabItem from '@theme/TabItem';
 Also in `run-settings` section you need to specify the path of your `spec.js` file on which you want to run the test on. Here we will pass the path of a **sample to do** spec.js file for our demo.
 :::
 
+<VerifiedTag value="Verified" />
+
 ```json
 "specs": "./cypress/integration/1-getting-started/todo.spec.js"
 ```
@@ -211,6 +244,8 @@ In this demo, all occurrences of ``http://localhost:8080`` have been replaced wi
 :::
 
 **Step-3:** Execute your tests using the following command in the terminal:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 lambdatest-cypress run
@@ -240,6 +275,8 @@ To run your tests locally on the <BrandName /> platform, you need to setup [<Bra
 
 Now you need to activate the tunnel capability in the `lambdatest_config.json` file under the section "connection_settings" as shown below:
 
+<VerifiedTag value="Verified" />
+
 ```json title="lambdatest_config.json"
   "connection_settings": {
     "tunnel": true,
@@ -256,6 +293,8 @@ You can provide the name of the **<BrandName /> tunnel** as per your requirement
 The [cypress-skill](https://github.com/LambdaTest/agent-skills/tree/main/cypress-skill) is a part of [TestMu AI Skills](https://github.com/LambdaTest/agent-skills/) that guide AI coding assistants in generating production-ready test automation.
 
 The cypress-skill package includes:
+
+<VerifiedTag value="Verified" />
 
 ```
 cypress-skill/
@@ -279,6 +318,8 @@ It provides structured guidance for:
 ***
 
 Install a Cypress Agent Skill using the command below:
+
+<VerifiedTag value="Verified" />
 
 ```
 # Clone the repo and copy the skill you need

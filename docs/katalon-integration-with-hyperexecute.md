@@ -17,6 +17,7 @@ slug: katalon-integration-with-hyperexecute/
 canonical: https://www.testmuai.com/support/docs/katalon-integration-with-hyperexecute/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -150,6 +151,8 @@ It also comes with a built-in interface for codeless automation testing and vali
 3. Download the HyperExecute CLI binary in the root directory of your Katalon project. 
 
 4. Create the hyperexecute.yaml file in the root directory of your Katalon project with the given parameters:
+
+  <VerifiedTag value="Verified" />
 
   ```yaml
   version: 0.1

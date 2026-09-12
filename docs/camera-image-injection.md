@@ -227,6 +227,8 @@ This section explains how to use Image Injection with App automation. This secti
 
 You can use the following curl command to upload any image of your choice to the <BrandName /> cloud. Please note that we support only **JPG, JPEG, and PNG formats which can be 10 MB or less**.
 
+<VerifiedTag value="Verified" />
+
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">
 {`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" -X POST "https://mobile-mgm.lambdatest.com/mfs/v1.0/media/upload" -F "media_file=@"/Users/macuser/Downloads/image.jpeg"" -F "type="image"" -F "custom_id="SampleImage""`}
@@ -253,6 +255,9 @@ You can use the appium capability to turn the image injection on in your applica
 <Tabs className="docs__val">
 
 <TabItem value="python" label="Python" default>
+
+  <VerifiedTag value="Verified" />
+
   <div className="lambdatest__codeblock">
   <CodeBlock className="language-python">
   {`desired_capabilities = {
@@ -265,6 +270,9 @@ You can use the appium capability to turn the image injection on in your applica
 
 
 <TabItem value="JavaScript" label="JavaScript" default>
+
+  <VerifiedTag value="Verified" />
+
   <div className="lambdatest__codeblock">
   <CodeBlock className="language-javascript">
   {`DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
@@ -281,6 +289,9 @@ Refer to the code snippets given below to upload the image with the action `Imag
 <Tabs className="docs__val">
 
 <TabItem value="python" label="Python" default>
+
+  <VerifiedTag value="Verified" />
+
   <div className="lambdatest__codeblock">
   <CodeBlock className="language-python">
   {`driver.execute_script("lambda-image-injection=media_url") #Add media_url here`}
@@ -290,6 +301,9 @@ Refer to the code snippets given below to upload the image with the action `Imag
 
 
 <TabItem value="JavaScript" label="JavaScript" default>
+
+  <VerifiedTag value="Verified" />
+
   <div className="lambdatest__codeblock">
   <CodeBlock className="language-javascript">
   {`driver.execute_script("lambda-image-injection=media_url") //Add media_url here`}

@@ -23,6 +23,7 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -234,6 +235,8 @@ Everything the tests need at runtime (`s3270`, `x3270`, X fonts, Python packages
 
 Clone the FNB mainframe suite. It ships the `hyperexecute.yaml`, the Robot suites under `tests/`, and the mock hosts under `mock_server/`.
 
+<VerifiedTag value="Verified" />
+
 ```bash
 git clone https://github.com/alif-laam-Meem/mainframe-robot
 cd mainframe-robot
@@ -250,6 +253,8 @@ Get them from your [Account Settings](https://accounts.lambdatest.com/security/u
 
 <TabItem value="powershell" label="Windows (PowerShell)" default>
 
+  <VerifiedTag value="Verified" />
+
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-powershell">
   {`$env:LT_USERNAME = "${ YOUR_LAMBDATEST_USERNAME()}"
@@ -260,6 +265,8 @@ $env:LT_ACCESS_KEY = "${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 </TabItem>
 
 <TabItem value="bash" label="Git Bash / Linux / macOS">
+
+  <VerifiedTag value="Verified" />
 
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-bash">
@@ -294,6 +301,8 @@ On macOS, if you get a permission-denied warning, run `chmod u+x ./hyperexecute`
 ***
 
 The `hyperexecute.yaml` in the repo root is where the mainframe setup lives. This is the full file. The `runson`, `background`, `pre`, `testDiscovery`, and `testRunnerCommand` keys are required for this suite; the timeouts, retries, and caching are optional tuning.
+
+<VerifiedTag value="Verified" />
 
 ```yaml title="hyperexecute.yaml"
 ---
@@ -393,6 +402,8 @@ Two lines are easy to get wrong:
 
 Run the CLI from the repo root, pointing at the YAML.
 
+<VerifiedTag value="Verified" />
+
 <Tabs className="docs__val" groupId="os">
 
 <TabItem value="powershell" label="Windows (PowerShell)" default>
@@ -461,6 +472,8 @@ Edit `hyperexecute.yaml` to change how the job runs.
 | Change mock ports or credentials | Edit the `env` block (`MAINFRAME_PORT`, `MAINFRAME_GUI_PORT`, `FNB_MOCK_PORT`, `MAINFRAME_USER`, `MAINFRAME_PASS`). |
 
 To run a single suite without editing the whole flow, narrow the discovery command:
+
+<VerifiedTag value="Verified" />
 
 ```yaml title="hyperexecute.yaml"
 testDiscovery:

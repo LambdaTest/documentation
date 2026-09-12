@@ -14,6 +14,7 @@ site_name: TestMu AI
 slug: kane-cli-checkpoint-devtools-clipboard/
 canonical: https://www.testmuai.com/support/docs/kane-cli-checkpoint-devtools-clipboard/
 ---
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -149,6 +150,8 @@ Because the clipboard holds one entry at a time:
 
 ## Example Assertions
 
+<VerifiedTag value="Verified" />
+
 ```
 Click the "Copy link" button, then verify the clipboard contains "/invoice/42"
 Verify the clipboard text is "INV-2026-042"
@@ -157,6 +160,8 @@ Verify the clipboard text is empty
 ```
 
 ## Example Extractions
+
+<VerifiedTag value="Verified" />
 
 ```
 Click the Copy button, store the copied coupon code as 'coupon'
@@ -168,6 +173,8 @@ Stored values work like any other variable. Fill `{{coupon}}` into a field later
 ## Writing and Pasting (actions)
 
 The clipboard isn't read-only. Objectives can also drive it. See [Browser State Actions](/support/docs/kane-cli-browser-state/):
+
+<VerifiedTag value="Verified" />
 
 ```
 Write "John Tester" to the clipboard, click the message field, then paste from the clipboard

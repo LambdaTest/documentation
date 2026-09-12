@@ -17,6 +17,32 @@ site_name: TestMu AI
 slug: agent-assurance-quickstart/
 canonical: https://www.testmuai.com/support/docs/agent-assurance-quickstart/
 ---
+import VerifiedTag from '@site/src/component/verifiedTag';
+import { BRAND_URL } from '@site/src/component/BrandName';
+
+<script type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify({
+       "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": BRAND_URL
+        },{
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Support",
+          "item": `${BRAND_URL}/support/docs/`
+        },{
+          "@type": "ListItem",
+          "position": 3,
+          "name": "How to Get Started With Agent Assurance",
+          "item": `${BRAND_URL}/support/docs/agent-assurance-quickstart/`
+        }]
+      })
+    }}
+></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -201,6 +227,8 @@ Choose one public installation method.
 
 **Homebrew**
 
+<VerifiedTag value="Verified" />
+
 ~~~bash
 brew tap LambdaTest/rook https://github.com/LambdaTest/rook.git
 brew install lambdatest/rook/rook
@@ -209,6 +237,8 @@ brew install lambdatest/rook/rook
 Use the fully qualified <code>lambdatest/rook/rook</code> formula name so Homebrew trusts the third-party tap.
 
 **Shell installer**
+
+<VerifiedTag value="Verified" />
 
 ~~~bash
 curl -fsSL https://raw.githubusercontent.com/LambdaTest/rook/main/install.sh | bash
@@ -225,6 +255,8 @@ If the final message prints a PATH command, run that exact command and open a ne
 
 **npm**
 
+<VerifiedTag value="Verified" />
+
 ~~~bash
 npm install -g @testmuai/rook
 ~~~
@@ -232,6 +264,8 @@ npm install -g @testmuai/rook
 See [Install Rook](/support/docs/rook-installation/) for installer options, upgrade commands, public releases, and checksums.
 
 ### Step 2: Verify the CLI
+
+<VerifiedTag value="Verified" />
 
 ~~~bash
 rook --version
@@ -244,17 +278,23 @@ rook doctor
 
 Start browser authentication:
 
+<VerifiedTag value="Verified" />
+
 ~~~bash
 rook login
 ~~~
 
 Or start the interactive terminal and enter <code>/login</code>:
 
+<VerifiedTag value="Verified" />
+
 ~~~bash
 rook
 ~~~
 
 After the browser flow, verify the account:
+
+<VerifiedTag value="Verified" />
 
 ~~~bash
 rook whoami
@@ -268,6 +308,8 @@ Authentication is global. Multiple <code>rook</code> sessions on the same machin
 
 Pin a published semantic version for CI or a controlled rollout:
 
+<VerifiedTag value="Verified" />
+
 ~~~bash
 curl -fsSL https://raw.githubusercontent.com/LambdaTest/rook/main/install.sh \
   | bash -s -- --version 0.1.1
@@ -278,6 +320,8 @@ Shell-installed versions remain side by side. Find published versions on the [pu
 ### Update the CLI
 
 Check for a newer release, follow the upgrade command Rook prints for the detected installation channel, and then verify the selected version:
+
+<VerifiedTag value="Verified" />
 
 ~~~bash
 rook update
@@ -314,6 +358,8 @@ Do not use a production refund endpoint for this walkthrough.
 
 Open a terminal in the folder that contains your product materials:
 
+<VerifiedTag value="Verified" />
+
 ~~~text
 refund-agent-test/
 ├── refund-agent-prd.md
@@ -324,6 +370,8 @@ refund-agent-test/
 The folder does not need to contain agent code.
 
 Start <code>rook</code>:
+
+<VerifiedTag value="Verified" />
 
 ~~~bash
 cd refund-agent-test
@@ -336,11 +384,15 @@ rook
 
 At the <code>rook</code> prompt, enter:
 
+<VerifiedTag value="Verified" />
+
 ~~~text
 /explore . -- focus on refund-agent-prd.md and knowledge/refund-policy.md
 ~~~
 
 For one standalone document, use:
+
+<VerifiedTag value="Verified" />
 
 ~~~text
 /explore refund-agent-prd.md
@@ -354,17 +406,23 @@ The discovered record describes expected behavior. It does not prove the live se
 
 Start with a small, reviewable set:
 
+<VerifiedTag value="Verified" />
+
 ~~~text
 /generate --total 12 -- verify eligibility, required identity checks, duplicate requests, and receipt creation
 ~~~
 
 List the scenarios:
 
+<VerifiedTag value="Verified" />
+
 ~~~text
 /scenarios list
 ~~~
 
 Review the exact order IDs, policy thresholds, and expected artifacts. Exclude a scenario that is unsafe for the current environment:
+
+<VerifiedTag value="Verified" />
 
 ~~~text
 /scenarios exclude SC-009
@@ -374,11 +432,15 @@ Review the exact order IDs, policy thresholds, and expected artifacts. Exclude a
 
 Enter:
 
+<VerifiedTag value="Verified" />
+
 ~~~text
 /profile add
 ~~~
 
 Name the profile <code>refund-staging</code> and paste a working request such as:
+
+<VerifiedTag value="Verified" />
 
 ~~~bash
 curl https://refund-agent.staging.example.com/v1/chat \
@@ -399,6 +461,8 @@ Agent Assurance then invokes the profile once with a harmless goal. Confirm the 
 
 Inspect the saved profile:
 
+<VerifiedTag value="Verified" />
+
 ~~~text
 /profile show refund-staging
 /profile curl refund-staging
@@ -407,6 +471,8 @@ Inspect the saved profile:
 ### Step 5: Run one safe scenario
 
 Choose one read-only scenario from <code>/scenarios list</code>:
+
+<VerifiedTag value="Verified" />
 
 ~~~text
 /run --only SC-001 --concurrency 1 --no-narrative
@@ -428,6 +494,8 @@ Agent Assurance cannot roll back a refund, message, ticket, or other action take
 
 After the first scenario behaves correctly:
 
+<VerifiedTag value="Verified" />
+
 ~~~text
 /run --concurrency 1
 ~~~
@@ -439,6 +507,8 @@ Press <code>Esc</code> to abort the active operation. Agent Assurance preserves 
 ### Step 7: Review evidence
 
 Open the local viewer:
+
+<VerifiedTag value="Verified" />
 
 ~~~text
 /ui
@@ -455,6 +525,8 @@ Open each failure or **Unable to Verify** result. Check the request, response, c
 Add read-only MCP verification or another safe observation when state changes must be proven.
 
 ### Step 8: End the session
+
+<VerifiedTag value="Verified" />
 
 ~~~text
 /exit

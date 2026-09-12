@@ -212,6 +212,8 @@ This guide outlines common use cases and solutions for configuring Playwright te
 ## Q: How can private dependencies be accessed via a custom registry?
 If your project uses private dependencies hosted on a custom registry, you must configure access before installing the packages. Add the following commands in the `pre` section of your YAML file:
 
+<VerifiedTag value="Verified" />
+
 ```yaml title="hyperexecute.yaml"
 pre:
   - npm config set registry <URL>
@@ -242,6 +244,8 @@ To ignore test cases marked with test.skip, create a custom Node.js script.
 - Create a file named `discovery.js` and add the script from the [Gist](https://gist.github.com/mohitsaini28r/453368e52143fa43efa271b1511aa2e7).
 - Update the `testDiscovery` block in your YAML:
 
+<VerifiedTag value="Verified" />
+
 ```yaml title="hyperexecute.yaml"
 testDiscovery:
   command: node discovery.js
@@ -252,6 +256,8 @@ When private dependencies require access through a private network, configure HT
 
 **For npm:**
 
+<VerifiedTag value="Verified" />
+
 ```yaml title="hyperexecute.yaml"
 pre:
   - npm config set proxy http://${LT_PROXY_HOST}:${LT_PROXY_PORT}
@@ -259,6 +265,8 @@ pre:
 ```
 
 **For yarn:**
+
+<VerifiedTag value="Verified" />
 
 ```yaml title="hyperexecute.yaml"
 pre:
@@ -272,6 +280,8 @@ Use the `post` parameter in the YAML file. Typical use cases include:
 - Running cleanup scripts
 - Closing API connections
 - Uploading test results to tools like Report Portal or Zephyr
+
+<VerifiedTag value="Verified" />
 
 ```yaml title="hyperexecute.yaml"
 post:
@@ -287,6 +297,8 @@ Common use cases:
 - Sending email notifications
 - Posting summaries to APIs or services
 
+<VerifiedTag value="Verified" />
+
 ```yaml title="hyperexecute.yaml"
 globalPost:
   - ./scripts/merge-reports.sh
@@ -301,6 +313,8 @@ Examples:
 - Import data
 - Run preparatory commands
 
+<VerifiedTag value="Verified" />
+
 ```yaml title="hyperexecute.yaml"
 globalPre:
   - ./scripts/setup-env.sh
@@ -312,6 +326,8 @@ Caching dependencies improves efficiency by avoiding repeated installations. Usi
 
 **For npm:**
 
+<VerifiedTag value="Verified" />
+
 ```yaml title="hyperexecute.yaml"
 cacheKey: '{{ checksum "package-lock.json" }}'
 cacheDirectories:
@@ -319,6 +335,8 @@ cacheDirectories:
 ```
 
 **For yarn:**
+
+<VerifiedTag value="Verified" />
 
 ```yaml title="hyperexecute.yaml"
 cacheKey: '{{ checksum "yarn.lock" }}'
@@ -331,6 +349,8 @@ cacheDirectories:
 
 **File-level discovery:**
 
+<VerifiedTag value="Verified" />
+
 ```yaml title="hyperexecute.yaml"
 testDiscovery:
   type: raw
@@ -339,6 +359,8 @@ testDiscovery:
 ```
 
 **Test-level discovery:**
+
+<VerifiedTag value="Verified" />
 
 ```yaml title="hyperexecute.yaml"
 testDiscovery:
@@ -360,6 +382,8 @@ reporter: [["html", { outputFolder: "playwright-report", open: "never" }]]
 
 - Update `hyperexecute.yaml` file:
 
+<VerifiedTag value="Verified" />
+
 ```yaml title="hyperexecute.yaml"
 report: true
 partialReports:
@@ -375,6 +399,8 @@ If tests include tags and only specific tags need to be executed, a custom Node.
 - Copy the script from the [Gist](https://gist.github.com/gauravchawhan/9568ed96d6bc115707d37f695a56a6e7) into that file.
 - Update the testDiscovery section in your hyperexecute.yaml to run this script using the node command, and pass your desired tag expression.
 
+<VerifiedTag value="Verified" />
+
 ```yaml title="hyperexecute.yaml"
 testDiscovery:
   type: raw
@@ -388,6 +414,8 @@ This occurs due to a version mismatch between the Playwright client and server. 
 - Verify the required Playwright version by checking the dependency listed in your `package.json` file.
 - Once identified, install the specific version of Playwright during the pre step of the YAML:
 
+<VerifiedTag value="Verified" />
+
 ```yaml title="hyperexecute.yaml"
 pre:
   - npx playwright@1.41.0 install
@@ -397,6 +425,8 @@ pre:
 ## Q: Why are tests retried multiple times within a single scenario?
 Multiple retries occur when retry logic is configured both at the Playwright framework level and in HyperExecute YAML. This can cause duplicate scenarios, incorrect reporting, and multiple executions of the same test. Disabling framework-level retries and using only HyperExecute-level retries avoids this problem.
 
+<VerifiedTag value="Verified" />
+
 ```yaml title="hyperexecute.yaml"
 retryOnFailure: true
 maxRetries: 1
@@ -405,11 +435,15 @@ maxRetries: 1
 ## Q: How can environment variables required for test execution be configured?
 Certain frameworks or projects require specific environment variables, such as credentials or base URLs. Configuring these variables via the `env` section in the YAML or using a `.env` file ensures that tests execute successfully in HyperExecute.
 
+<VerifiedTag value="Verified" />
+
 ```yaml title="hyperexecute.yaml"
 env:
   BASE_URL: https://example.com
   API_KEY: your_api_key_here
 ```
+
+<VerifiedTag value="Verified" />
 
 ```bash title=".env"
 BASE_URL=https://example.com
@@ -435,6 +469,8 @@ These errors can happen when there is a version mismatch between the Playwright 
 
 For example, to install version `1.50.0`:
 
+<VerifiedTag value="Verified" />
+
 ```yaml title="hyperexecute.yaml"
 pre:
   - npx playwright@1.50.0 install
@@ -442,6 +478,8 @@ pre:
 
 ## Q: Why might the browser fail to launch on HyperExecute?
 Tests may fail to start if required browser binaries are missing or not installed correctly. Installing all Playwright dependencies, including browsers, ensures successful test execution.
+
+<VerifiedTag value="Verified" />
 
 ```yaml title="hyperexecute.yaml"
 pre:
@@ -483,6 +521,9 @@ use: {
 ```
 
 - Update the `hyperexecute.yaml` file:
+
+<VerifiedTag value="Verified" />
+
 ```yaml title="hyperexecute.yaml"
 uploadArtefacts:
   - name: FinalReport
@@ -493,6 +534,8 @@ uploadArtefacts:
 
 ## Q: Why do "Cannot find module" errors occur during execution?
 These errors occur when required modules are missing or the installation step is skipped. Ensuring that all dependencies listed in `package.json` are installed in the `pre` step of the YAML prevents this issue.
+
+<VerifiedTag value="Verified" />
 
 ```yaml title="hyperexecute.yaml"
 pre:

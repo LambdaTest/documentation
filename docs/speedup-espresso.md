@@ -25,6 +25,7 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -147,6 +148,8 @@ To filter the test cases, you just need to pass the suitable parameters in <Bran
 
 Given below is the REST API endpoint:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 POST   /framework/v1/espresso/build
 ```
@@ -180,6 +183,8 @@ You can use the following filters simultaneously.
 Please refer to the example `cURL` requests given below for your reference.
 
 ### 1. To run specifically defined packages
+
+<VerifiedTag value="Verified" />
 
 <Tabs className="docs__val">
 
@@ -219,6 +224,8 @@ Please refer to the example `cURL` requests given below for your reference.
 
 ### 2. To run specifically defined classes
 
+<VerifiedTag value="Verified" />
+
 <Tabs className="docs__val">
 
 <TabItem value="bash" label="MacOS/Linux" default>
@@ -256,6 +263,8 @@ Please refer to the example `cURL` requests given below for your reference.
 </Tabs>
 
 ### 3. To run specifically defined annotations
+
+<VerifiedTag value="Verified" />
 
 <Tabs className="docs__val">
 

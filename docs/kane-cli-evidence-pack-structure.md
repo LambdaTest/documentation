@@ -16,6 +16,7 @@ site_name: TestMu AI
 slug: kane-cli-evidence-pack-structure/
 canonical: https://www.testmuai.com/support/docs/kane-cli-evidence-pack-structure/
 ---
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -111,6 +112,8 @@ canonical: https://www.testmuai.com/support/docs/kane-cli-evidence-pack-structur
 A `.evidence` file is a standard zip. `unzip -l <pack>` lists it, and `unzip -p <pack> <entry>` prints one file without extracting the whole pack.
 
 ## The layout
+
+<VerifiedTag value="Verified" />
 
 ```text
 <execution_id>.evidence

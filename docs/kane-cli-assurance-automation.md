@@ -15,6 +15,7 @@ site_name: TestMu AI
 slug: kane-cli-assurance-automation/
 canonical: https://www.testmuai.com/support/docs/kane-cli-assurance-automation/
 ---
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -155,6 +156,8 @@ The conversational assurance commands — `context extract`, `design tests`, and
 
 On a terminal, extract and design open a chat. Headless is an explicit opt-in — a bare non-TTY invocation **exits `2`** and mutates nothing:
 
+<VerifiedTag value="Verified" />
+
 ```
 extract: no TTY — pass an explicit --mode agent|ci|override to run headless
 ```
@@ -245,6 +248,8 @@ Validation failures (bad inputs, unknown source, the fork guard) ride the stream
 
 This is the heart of driving assurance from an agent. A real exchange (events abridged, payloads shortened):
 
+<VerifiedTag value="Verified" />
+
 ```bash
 $ kane-cli context extract --mode agent
 {"type":"run_start","v":1,"verb":"extract","mode":"agent","trace":".context/logs/extract-….log"}
@@ -264,6 +269,8 @@ $ kane-cli context extract --mode agent
 
 The pause event carries everything needed to decide: the question, why it matters, the options, and the recommendation. Answer **in plain words** — no question ids, no option indexes. After the resumed run's usual `run_start`, `corpus`, and `source_start` (with `"resumed": true`) events, the stream continues:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 $ kane-cli context extract --resume ext-20260716T140742-prd-online-store --mode agent \
     --message "Account required — treat the update section as superseding: no guest checkout"
@@ -280,6 +287,8 @@ Two structured alternatives to `--message` *(0.7.1)*:
 
 - **Answer by id** — `--answer <question-id>=<option number | free text>` (repeatable, `--resume --mode agent` only). Each landed answer echoes as a `panel_resolved` event before the run continues:
 
+  <VerifiedTag value="Verified" />
+
   ```bash
   kane-cli context extract --resume <sid> --mode agent --answer q1=1 --answer q2="use the staging URL"
   ```
@@ -287,6 +296,8 @@ Two structured alternatives to `--message` *(0.7.1)*:
 - **Land a source instead of answering** — `--resume <sid> --with-source <path|url>` lands the file or URL first and sets the pending batch aside (`ask_deferred` on the stream); the agent reads the new source and re-asks only what it didn't settle. Only refs **you** provide can land — anything else refuses with `INGEST_UNAUTHORIZED_REF`.
 
 Between the pause and the resume, everything is inspectable without contending the session:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 kane-cli context sessions --json                 # one row per resumable session, with its resume command
@@ -298,6 +309,8 @@ Abandoned sessions expire after 24 hours; `kane-cli context sessions clean` garb
 ## Headless review
 
 Trust promotion deliberately has **no auto-approve** — but it does have a non-interactive path. Prepare verdicts as JSON and land them atomically:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 cat > verdicts.json <<'EOF'
@@ -338,6 +351,8 @@ These read commands have structured forms: `context list --json` and `context se
 - Bare headless runs without an explicit `--mode` refuse with exit `2` — by design.
 
 ## A CI shape that works
+
+<VerifiedTag value="Verified" />
 
 ```bash
 # fail the pipeline on unresolved high-risk ambiguity, never guess:

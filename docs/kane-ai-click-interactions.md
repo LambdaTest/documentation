@@ -24,6 +24,7 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import CodeBlock from '@theme/CodeBlock';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -164,6 +165,8 @@ You can author any of the three click variants in two ways:
 
 ### Author with Natural Language
 
+<VerifiedTag value="Verified" />
+
 ```
 long press the menu icon
 press and hold the build number for 10 seconds
@@ -225,6 +228,8 @@ While the session is in the **Authoring Steps** state, the capture layer classif
 
 ### Author with Natural Language
 
+<VerifiedTag value="Verified" />
+
 ```
 double click on the submit button
 click the increment button 5 times
@@ -268,6 +273,8 @@ Right click is supported on **Desktop Web only**. On mobile, use long press inst
 :::
 
 ### Author with Natural Language
+
+<VerifiedTag value="Verified" />
 
 ```
 right click on the file item

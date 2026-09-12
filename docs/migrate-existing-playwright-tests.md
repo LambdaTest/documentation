@@ -206,6 +206,8 @@ The [playwright-skill](https://github.com/LambdaTest/agent-skills/tree/main/play
 
 The playwright-skill package includes:
 
+<VerifiedTag value="Verified" />
+
 ```
 playwright-skill/
 ├── SKILL.md
@@ -228,6 +230,8 @@ It provides structured guidance for:
 ***
 
 Install a Playwright Agent Skill using the command below:
+
+<VerifiedTag value="Verified" />
 
 ```
 # Clone the repo and copy the skill you need

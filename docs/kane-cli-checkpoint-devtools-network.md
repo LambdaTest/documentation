@@ -15,6 +15,7 @@ site_name: TestMu AI
 slug: kane-cli-checkpoint-devtools-network/
 canonical: https://www.testmuai.com/support/docs/kane-cli-checkpoint-devtools-network/
 ---
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -162,6 +163,8 @@ Because network data resets each step, plan accordingly:
 
 ## Example Assertions
 
+<VerifiedTag value="Verified" />
+
 ```
 Assert: no API calls returned 5xx status codes
 Assert: the POST /api/login returned HTTP status 200
@@ -172,6 +175,8 @@ Assert: the /posts endpoint returned at least 10 items in the response body
 
 ## Example Extractions
 
+<VerifiedTag value="Verified" />
+
 ```
 Store the response body of the POST /api/login request
 Extract the status code of the last API call to /api/users
@@ -179,6 +184,8 @@ Store all API request URLs
 ```
 
 ## Example If/Else
+
+<VerifiedTag value="Verified" />
 
 ```
 If the /api/auth returned 200 then proceed to dashboard, else show error message

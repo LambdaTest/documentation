@@ -16,6 +16,7 @@ site_name: TestMu AI
 slug: kane-cli-assurance-maintain/
 canonical: https://www.testmuai.com/support/docs/kane-cli-assurance-maintain/
 ---
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -131,6 +132,8 @@ canonical: https://www.testmuai.com/support/docs/kane-cli-assurance-maintain/
 
 Products change; tests shouldn't rot. `kane-cli maintain` closes the [assurance loop](/support/docs/kane-cli-assurance/): when a requirement document changes, `maintain reconcile` turns that one changed source into an honest, row-by-row update plan for your suite, and `maintain evolve` re-designs a use-case whose design went stale. Everything works over the same `.context/` store — maintain adds no new knowledge kinds, it moves the existing ones.
 
+<VerifiedTag value="Verified" />
+
 ```bash
 kane-cli maintain reconcile --from <file> --source-id <id>          # the interactive session (TTY default)
 kane-cli maintain reconcile --from <file> --source-id <id> --plan   # preview: stage + store the plan
@@ -173,6 +176,8 @@ Any failure exits `2` with a message naming the next command to run. In `--mode 
 ### The changeset — what the change did
 
 Rendered first, before any actions. The line list below is what `--plan` and the headless modes print; *(0.8.2)* a terminal review opens with the same facts as its **decision briefing** — a headline and a boxed table, one row per upcoming card (its kind, the item, why it's proposed, and its impact: `14 stale · 2 direct`, or `—` when nothing goes stale), with the plan facts dimmed beneath:
+
+<VerifiedTag value="Verified" />
 
 ```
 changeset: 3 item(s)
@@ -220,6 +225,8 @@ Walk the plan later with `--apply <path>` — or bare `--apply`, which picks the
 `--from` also accepts a remote source URL: a Jira issue, a Confluence page, a Linear issue or document, or a public web page. These are the same URLs [`context ingest`](/support/docs/kane-cli-assurance-sources/) takes.
 
 Remote sources ride the same flow as files. Reconcile fetches the latest content through the provider, the head moves if anything you would cite changed, and everything downstream — the cards, `--plan` and `--apply` — is identical.
+
+<VerifiedTag value="Verified" />
 
 ```bash
 kane-cli maintain reconcile --from https://<your-site>/browse/PROJ-123 --plan
@@ -271,6 +278,8 @@ A bare non-TTY run refuses (exit `2`) and asks for an explicit `--mode` — or `
 | `REMOVE` | a use-case now orphaned — no live source evidences it | plan-only — never executed in this release |
 
 ## `maintain evolve` — re-design a stale use-case {#evolve}
+
+<VerifiedTag value="Verified" />
 
 ```bash
 kane-cli maintain evolve <ref> [--because "<reason>"]   # any designed entity → its parent use-case
