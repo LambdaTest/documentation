@@ -1,1 +1,282 @@
-[]
+[
+  {
+    "url": "/support/docs/api-testing-with-kane-cli/",
+    "reason": "live 301 -> /docs/api-testing-with-kane-cli/",
+    "detected": "2026-09-11"
+  },
+  {
+    "url": "/support/docs/kane-cli-agent-mode/",
+    "reason": "live 301 -> /docs/kane-cli-agent-mode/",
+    "detected": "2026-09-11"
+  },
+  {
+    "url": "/support/docs/kane-cli-api-calls/",
+    "reason": "live 301 -> /docs/kane-cli-api-calls/",
+    "detected": "2026-09-11"
+  },
+  {
+    "url": "/support/docs/kane-cli-assurance-automation/",
+    "reason": "live 301 -> /docs/kane-cli-assurance-automation/",
+    "detected": "2026-09-11"
+  },
+  {
+    "url": "/support/docs/kane-cli-assurance-context/",
+    "reason": "live 301 -> /docs/kane-cli-assurance-context/",
+    "detected": "2026-09-11"
+  },
+  {
+    "url": "/support/docs/kane-cli-assurance-coverage/",
+    "reason": "live 301 -> /docs/kane-cli-assurance-coverage/",
+    "detected": "2026-09-11"
+  },
+  {
+    "url": "/support/docs/kane-cli-assurance-design/",
+    "reason": "live 301 -> /docs/kane-cli-assurance-design/",
+    "detected": "2026-09-11"
+  },
+  {
+    "url": "/support/docs/kane-cli-assurance-maintain/",
+    "reason": "live 301 -> /docs/kane-cli-assurance-maintain/",
+    "detected": "2026-09-11"
+  },
+  {
+    "url": "/support/docs/kane-cli-assurance-sources/",
+    "reason": "live 301 -> /docs/kane-cli-assurance-sources/",
+    "detected": "2026-09-11"
+  },
+  {
+    "url": "/support/docs/kane-cli-assurance/",
+    "reason": "live 301 -> /docs/kane-cli-assurance/",
+    "detected": "2026-09-11"
+  },
+  {
+    "url": "/support/docs/kane-cli-authentication/",
+    "reason": "live 301 -> /docs/kane-cli-authentication/",
+    "detected": "2026-09-11"
+  },
+  {
+    "url": "/support/docs/kane-cli-browser-state/",
+    "reason": "live 301 -> /docs/kane-cli-browser-state/",
+    "detected": "2026-09-11"
+  },
+  {
+    "url": "/support/docs/kane-cli-changelog/",
+    "reason": "live 301 -> /docs/kane-cli-changelog/",
+    "detected": "2026-09-11"
+  },
+  {
+    "url": "/support/docs/kane-cli-checkpoint-devtools-clipboard/",
+    "reason": "live 301 -> /docs/kane-cli-checkpoint-devtools-clipboard/",
+    "detected": "2026-09-11"
+  },
+  {
+    "url": "/support/docs/kane-cli-checkpoint-devtools-console/",
+    "reason": "live 301 -> /docs/kane-cli-checkpoint-devtools-console/",
+    "detected": "2026-09-11"
+  },
+  {
+    "url": "/support/docs/kane-cli-checkpoint-devtools-cookies/",
+    "reason": "live 301 -> /docs/kane-cli-checkpoint-devtools-cookies/",
+    "detected": "2026-09-11"
+  },
+  {
+    "url": "/support/docs/kane-cli-checkpoint-devtools-localstorage/",
+    "reason": "live 301 -> /docs/kane-cli-checkpoint-devtools-localstorage/",
+    "detected": "2026-09-11"
+  },
+  {
+    "url": "/support/docs/kane-cli-checkpoint-devtools-network/",
+    "reason": "live 301 -> /docs/kane-cli-checkpoint-devtools-network/",
+    "detected": "2026-09-11"
+  },
+  {
+    "url": "/support/docs/kane-cli-checkpoint-devtools-performance/",
+    "reason": "live 301 -> /docs/kane-cli-checkpoint-devtools-performance/",
+    "detected": "2026-09-11"
+  },
+  {
+    "url": "/support/docs/kane-cli-checkpoint-devtools/",
+    "reason": "live 301 -> /docs/kane-cli-checkpoint-devtools/",
+    "detected": "2026-09-11"
+  },
+  {
+    "url": "/support/docs/kane-cli-checkpoint-textual/",
+    "reason": "live 301 -> /docs/kane-cli-checkpoint-textual/",
+    "detected": "2026-09-11"
+  },
+  {
+    "url": "/support/docs/kane-cli-checkpoint-title/",
+    "reason": "live 301 -> /docs/kane-cli-checkpoint-title/",
+    "detected": "2026-09-11"
+  },
+  {
+    "url": "/support/docs/kane-cli-checkpoint-url/",
+    "reason": "live 301 -> /docs/kane-cli-checkpoint-url/",
+    "detected": "2026-09-11"
+  },
+  {
+    "url": "/support/docs/kane-cli-checkpoint-visual/",
+    "reason": "live 301 -> /docs/kane-cli-checkpoint-visual/",
+    "detected": "2026-09-11"
+  },
+  {
+    "url": "/support/docs/kane-cli-checkpoints/",
+    "reason": "live 301 -> /docs/kane-cli-checkpoints/",
+    "detected": "2026-09-11"
+  },
+  {
+    "url": "/support/docs/kane-cli-cicd/",
+    "reason": "live 301 -> /docs/kane-cli-cicd/",
+    "detected": "2026-09-11"
+  },
+  {
+    "url": "/support/docs/kane-cli-cli-reference/",
+    "reason": "live 301 -> /docs/kane-cli-cli-reference/",
+    "detected": "2026-09-11"
+  },
+  {
+    "url": "/support/docs/kane-cli-configuration/",
+    "reason": "live 301 -> /docs/kane-cli-configuration/",
+    "detected": "2026-09-11"
+  },
+  {
+    "url": "/support/docs/kane-cli-error-codes/",
+    "reason": "live 301 -> /docs/kane-cli-error-codes/",
+    "detected": "2026-09-11"
+  },
+  {
+    "url": "/support/docs/kane-cli-evidence-debugging/",
+    "reason": "live 301 -> /docs/kane-cli-evidence-debugging/",
+    "detected": "2026-09-11"
+  },
+  {
+    "url": "/support/docs/kane-cli-evidence-format/",
+    "reason": "live 301 -> /docs/kane-cli-evidence-format/",
+    "detected": "2026-09-11"
+  },
+  {
+    "url": "/support/docs/kane-cli-evidence-merge/",
+    "reason": "live 301 -> /docs/kane-cli-evidence-merge/",
+    "detected": "2026-09-11"
+  },
+  {
+    "url": "/support/docs/kane-cli-evidence-pack-structure/",
+    "reason": "live 301 -> /docs/kane-cli-evidence-pack-structure/",
+    "detected": "2026-09-11"
+  },
+  {
+    "url": "/support/docs/kane-cli-evidence-validate/",
+    "reason": "live 301 -> /docs/kane-cli-evidence-validate/",
+    "detected": "2026-09-11"
+  },
+  {
+    "url": "/support/docs/kane-cli-evidence-viewing/",
+    "reason": "live 301 -> /docs/kane-cli-evidence-viewing/",
+    "detected": "2026-09-11"
+  },
+  {
+    "url": "/support/docs/kane-cli-evidence/",
+    "reason": "live 301 -> /docs/kane-cli-evidence/",
+    "detected": "2026-09-11"
+  },
+  {
+    "url": "/support/docs/kane-cli-generate-workflow/",
+    "reason": "live 301 -> /docs/kane-cli-generate-workflow/",
+    "detected": "2026-09-11"
+  },
+  {
+    "url": "/support/docs/kane-cli-generate/",
+    "reason": "live 301 -> /docs/kane-cli-generate/",
+    "detected": "2026-09-11"
+  },
+  {
+    "url": "/support/docs/kane-cli-installation/",
+    "reason": "live 301 -> /docs/kane-cli-installation/",
+    "detected": "2026-09-11"
+  },
+  {
+    "url": "/support/docs/kane-cli-introduction/",
+    "reason": "live 301 -> /docs/kane-cli-introduction/",
+    "detected": "2026-09-11"
+  },
+  {
+    "url": "/support/docs/kane-cli-mobile/",
+    "reason": "live 301 -> /docs/kane-cli-mobile/",
+    "detected": "2026-09-11"
+  },
+  {
+    "url": "/support/docs/kane-cli-modes/",
+    "reason": "live 301 -> /docs/kane-cli-modes/",
+    "detected": "2026-09-11"
+  },
+  {
+    "url": "/support/docs/kane-cli-parallel-execution/",
+    "reason": "live 301 -> /docs/kane-cli-parallel-execution/",
+    "detected": "2026-09-11"
+  },
+  {
+    "url": "/support/docs/kane-cli-quickstart/",
+    "reason": "live 301 -> /docs/kane-cli-quickstart/",
+    "detected": "2026-09-11"
+  },
+  {
+    "url": "/support/docs/kane-cli-skills/",
+    "reason": "live 301 -> /docs/kane-cli-skills/",
+    "detected": "2026-09-11"
+  },
+  {
+    "url": "/support/docs/kane-cli-testmd-composition/",
+    "reason": "live 301 -> /docs/kane-cli-testmd-composition/",
+    "detected": "2026-09-11"
+  },
+  {
+    "url": "/support/docs/kane-cli-testmd-running/",
+    "reason": "live 301 -> /docs/kane-cli-testmd-running/",
+    "detected": "2026-09-11"
+  },
+  {
+    "url": "/support/docs/kane-cli-testmd/",
+    "reason": "live 301 -> /docs/kane-cli-testmd/",
+    "detected": "2026-09-11"
+  },
+  {
+    "url": "/support/docs/kane-cli-testrun/",
+    "reason": "live 301 -> /docs/kane-cli-testrun/",
+    "detected": "2026-09-11"
+  },
+  {
+    "url": "/support/docs/kane-cli-tms-integration/",
+    "reason": "live 301 -> /docs/kane-cli-tms-integration/",
+    "detected": "2026-09-11"
+  },
+  {
+    "url": "/support/docs/kane-cli-troubleshooting-sharp/",
+    "reason": "live 301 -> /docs/kane-cli-troubleshooting-sharp/",
+    "detected": "2026-09-11"
+  },
+  {
+    "url": "/support/docs/kane-cli-troubleshooting/",
+    "reason": "live 301 -> /docs/kane-cli-troubleshooting/",
+    "detected": "2026-09-11"
+  },
+  {
+    "url": "/support/docs/kane-cli-use-cases/",
+    "reason": "live 301 -> /docs/kane-cli-use-cases/",
+    "detected": "2026-09-11"
+  },
+  {
+    "url": "/support/docs/kane-cli-variables-and-context/",
+    "reason": "live 301 -> /docs/kane-cli-variables-and-context/",
+    "detected": "2026-09-11"
+  },
+  {
+    "url": "/support/docs/kane-cli-with-ai-coding-agents/",
+    "reason": "live 301 -> /docs/kane-cli-with-ai-coding-agents/",
+    "detected": "2026-09-11"
+  },
+  {
+    "url": "/support/docs/kane-cli-writing-objectives/",
+    "reason": "live 301 -> /docs/kane-cli-writing-objectives/",
+    "detected": "2026-09-11"
+  }
+]
