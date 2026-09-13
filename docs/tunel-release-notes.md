@@ -98,6 +98,12 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     "dateModified": "2026-09-06T15:11:15+05:30"
   }) }}
 />
+## Version 3.2.35 (13th September 2026)
+- **Security Updates and Stability Fixes**
+- Security Fixes for CVE.
+- Fix for HTTP traffic to be routed via SOCKS5 proxy.
+- Support of auto rotating multiple tcp data streams per tunnel.
+  
 ## Version 3.2.34 (6th September 2026)
 - **Security Updates and Stability Fixes**
   - Security Fixes for CVE
