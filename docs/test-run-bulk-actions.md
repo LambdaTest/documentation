@@ -130,9 +130,9 @@ All three actions work within a single project. Test runs cannot be moved or cop
 
 1. Open your project in Test Manager and go to the **Test Runs** tab.
 2. Select the test runs you want to act on using the checkboxes in the list. To select every run in the current view, use the select-all checkbox at the top of the list.
-3. Open the bulk actions menu and choose **Move**, **Copy**, or **Delete**.
+3. Once runs are selected, the bulk action options become available: **Move test runs**, **Copy test runs**, and **Delete test runs**. Hover over an option to see its name.
 
-<!-- screenshot: Test Runs list with multiple runs selected and the bulk actions menu open -->
+<!-- screenshot: Test Runs list with multiple runs selected and the bulk action options shown -->
 
 :::note
 A single bulk action covers up to **1000 test runs**. If a select-all covers more than 1000 runs, the action is rejected and you are told about the limit. Narrow the selection or work in batches.
@@ -144,7 +144,7 @@ A single bulk action covers up to **1000 test runs**. If a select-all covers mor
 
 Moving a test run changes only the folder it lives in. Nothing else about the run changes.
 
-1. Select the test runs and choose **Move** from the bulk actions menu.
+1. Select the test runs and click **Move test runs**.
 2. In the folder picker, choose the destination folder.
 3. Confirm the move.
 
@@ -165,7 +165,7 @@ What to expect:
 
 Copying creates a new test run that has the same scope as the original but no results. Use it to repeat a regression suite, a release pass, or an environment-specific run without rebuilding it by hand.
 
-1. Select the test runs and choose **Copy** from the bulk actions menu.
+1. Select the test runs and click **Copy test runs**.
 2. In the folder picker, choose the destination folder. This can be the same folder the runs are already in.
 3. Confirm the copy.
 
@@ -181,7 +181,7 @@ Copying creates a new test run that has the same scope as the original but no re
 | Order of test instances | Linked issues |
 | Tags | Archived test cases |
 
-Archived test cases are left out of a copy, just as they are when you duplicate a test run. See [Archive and Restore Test Cases](/support/docs/test-case-archive/).
+Archived test cases are left out of a copy. See [Archive and Restore Test Cases](/support/docs/test-case-archive/).
 
 ### How copies are named
 
@@ -221,7 +221,7 @@ If the copy finishes just before your cancel reaches it, the cancel does nothing
 
 ## Delete test runs
 
-1. Select the test runs and choose **Delete** from the bulk actions menu.
+1. Select the test runs and click **Delete test runs**.
 2. Review the confirmation and confirm the deletion.
 
 <!-- screenshot: confirmation dialog for bulk deleting test runs -->
@@ -297,7 +297,7 @@ See [RBAC Roles and Permissions](/support/docs/rbac-roles-and-permissions/) for 
 
 | Topic | Doc |
 |---|---|
-| Creating, editing, archiving, and duplicating a single test run | [Test Run Creation and Management](/support/docs/test-run-creation-and-management/) |
+| Creating, editing, and archiving a single test run | [Test Run Creation and Management](/support/docs/test-run-creation-and-management/) |
 | Linking bugs and issues to test runs | [Track Bugs and Issues in Test Runs](/support/docs/track-issues-in-test-runs/) |
 | Moving and copying test cases | [Copy and Move Test Cases](/support/docs/copy-and-move-support-for-test-cases/) |
 | Retiring test cases without deleting them | [Archive and Restore Test Cases](/support/docs/test-case-archive/) |
