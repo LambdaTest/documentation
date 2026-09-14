@@ -110,6 +110,8 @@ Teams organize test runs into folders that mirror their releases, sprints, or mo
 - **Copy** runs into another folder as fresh runs with the same test cases, ready to execute again.
 - **Delete** a selection of runs in one action.
 
+You can move or copy runs using the bulk action options, or by dragging them straight onto a folder.
+
 ---
 
 ## At a glance
@@ -146,6 +148,30 @@ A single bulk action covers up to **1000 test runs**. If you use **Select all *N
 
 ---
 
+## Drag test runs to a folder
+
+Instead of using the bulk action options, you can drag your selection straight onto a folder to move or copy it there.
+
+1. Select the test runs you want to move or copy.
+2. Drag the selected test runs onto the destination folder in the **Folders** panel and drop them.
+3. In the dialog that opens, choose what to do with the selected runs:
+   - **Move** relocates the test runs from their current folders to the destination folder.
+   - **Copy** creates a new copy of each test run in the destination folder.
+
+   To drop the runs without making any change, close the dialog.
+
+<!-- screenshot: selected test runs being dragged onto a folder in the Folders panel
+<img loading="lazy" src={require('../assets/images/test-run/bulk-actions/bulk-drag-to-folder.png').default} alt="Dragging selected test runs onto a folder in the Folders panel" className="doc_img"/>
+-->
+
+<!-- screenshot: dialog asking whether to move or copy the selected test runs to the folder
+<img loading="lazy" src={require('../assets/images/test-run/bulk-actions/bulk-drag-move-or-copy-dialog.png').default} alt="Dialog to choose whether to move or copy the selected test runs to the destination folder" className="doc_img"/>
+-->
+
+Dragging behaves exactly like the bulk action options. The same rules apply as described in [Move test runs](#move-test-runs) and [Copy test runs](#copy-test-runs), including the 1000-run limit.
+
+---
+
 ## Move test runs
 
 Moving a test run changes only the folder it lives in. Nothing else about the run changes.
@@ -153,6 +179,8 @@ Moving a test run changes only the folder it lives in. Nothing else about the ru
 1. Select the test runs and click **Move test runs**.
 2. In the folder picker, choose the destination folder.
 3. Confirm the move.
+
+You can also drag the selected runs onto a folder and choose **Move**. See [Drag test runs to a folder](#drag-test-runs-to-a-folder).
 
 <!-- screenshot: folder picker for moving test runs
 <img loading="lazy" src={require('../assets/images/test-run/bulk-actions/bulk-move-folder-picker.png').default} alt="Choosing a destination folder to move test runs" className="doc_img"/>
@@ -178,6 +206,8 @@ Copying creates a new test run that has the same scope as the original but no re
 1. Select the test runs and click **Copy test runs**.
 2. In the folder picker, choose the destination folder. This can be the same folder the runs are already in.
 3. Confirm the copy.
+
+You can also drag the selected runs onto a folder and choose **Copy**. See [Drag test runs to a folder](#drag-test-runs-to-a-folder).
 
 <!-- screenshot: folder picker for copying test runs
 <img loading="lazy" src={require('../assets/images/test-run/bulk-actions/bulk-copy-folder-picker.png').default} alt="Choosing a destination folder to copy test runs" className="doc_img"/>
