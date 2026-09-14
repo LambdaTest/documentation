@@ -103,7 +103,7 @@ Download the HyperExecute CLI and copy it into the root folder.
 Use the sample YAML below to configure your execution:
 
 ```yaml reference title="hyperexecute.yaml"
-https://github.com/LambdaTest/LT-detox/blob/main/yaml/hyperexecute.yaml
+https://github.com/LambdaTest/LT-detox/blob/main/yaml/hypexRDAndroid.yaml
 ```
 
 > 📘 To explore more configuration options and tailor settings to your project needs, check out the [YAML documentation](/support/docs/hyperexecute-yaml-parameters/).
