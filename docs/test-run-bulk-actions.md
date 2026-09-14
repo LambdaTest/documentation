@@ -138,9 +138,7 @@ All three actions work within a single project. Test runs cannot be moved or cop
 4. To select every test run in the chosen section, use the checkbox at the top of the list, or click **Select all *N* test runs**. From **All Test Runs**, this selects runs across all folders. From a folder, it selects only the runs in that folder.
 5. With runs selected, the bulk action options **Move test runs**, **Copy test runs**, and **Delete test runs** appear above the list. Hover over an option to see its name.
 
-<!-- screenshot: Test Runs list with multiple runs selected, showing the selected count, the Select all test runs link, and the Move test runs, Copy test runs, and Delete test runs options
 <img loading="lazy" src={require('../assets/images/test-run/bulk-actions/bulk-select-test-runs.png').default} alt="Test runs selected with the Move test runs, Copy test runs, and Delete test runs options" className="doc_img"/>
--->
 
 :::note
 A single bulk action covers up to **1000 test runs**. If you use **Select all *N* test runs** and the selection comes to more than 1000 runs, the action is rejected and you are told about the limit. Narrow the list with a folder, search, or filters, or work in batches.
@@ -162,10 +160,6 @@ Instead of using the bulk action options, you can drag your selection straight o
 
 <img loading="lazy" src={require('../assets/images/test-run/bulk-actions/bulk-drag-to-folder.gif').default} alt="Dragging selected test runs onto a folder and choosing whether to move or copy them" className="doc_img"/>
 
-<!-- screenshot: dialog asking whether to move or copy the selected test runs to the folder
-<img loading="lazy" src={require('../assets/images/test-run/bulk-actions/bulk-drag-move-or-copy-dialog.png').default} alt="Dialog to choose whether to move or copy the selected test runs to the destination folder" className="doc_img"/>
--->
-
 Dragging behaves exactly like the bulk action options. The same rules apply as described in [Move test runs](#move-test-runs) and [Copy test runs](#copy-test-runs), including the 1000-run limit.
 
 ---
@@ -180,10 +174,7 @@ Moving a test run changes only the folder it lives in. Nothing else about the ru
 
 You can also drag the selected runs onto a folder and choose **Move**. See [Drag test runs to a folder](#drag-test-runs-to-a-folder).
 
-<!-- screenshot: folder picker for moving test runs
 <img loading="lazy" src={require('../assets/images/test-run/bulk-actions/bulk-move-folder-picker.png').default} alt="Choosing a destination folder to move test runs" className="doc_img"/>
--->
-
 
 What to expect:
 
@@ -204,9 +195,7 @@ Copying creates a new test run that has the same scope as the original but no re
 
 You can also drag the selected runs onto a folder and choose **Copy**. See [Drag test runs to a folder](#drag-test-runs-to-a-folder).
 
-<!-- screenshot: folder picker for copying test runs
 <img loading="lazy" src={require('../assets/images/test-run/bulk-actions/bulk-copy-folder-picker.png').default} alt="Choosing a destination folder to copy test runs" className="doc_img"/>
--->
 
 ### What a copy contains
 
@@ -235,9 +224,7 @@ Copies are created in the background, so you can keep working while they run.
 - **A failed copy leaves nothing behind.** If a run cannot be copied, its partial copy is removed and the other runs in the selection carry on.
 - **A run deleted before its turn is skipped.** If one of the selected runs is deleted after you start the copy but before it is reached, it is reported as skipped and the rest of the selection is unaffected.
 
-<!-- screenshot: progress summary for a bulk copy of test runs
 <img loading="lazy" src={require('../assets/images/test-run/bulk-actions/bulk-copy-progress.png').default} alt="Progress summary for a bulk copy of test runs" className="doc_img"/>
--->
 
 :::tip
 You can copy the same test run more than once, and you can copy a run while someone is executing it. The copy takes only the run's structure, so results recorded during the copy never reach it.
@@ -248,9 +235,7 @@ You can copy the same test run more than once, and you can copy a run while some
 1. Select the test runs and click **Delete test runs**.
 2. Review the confirmation and confirm the deletion.
 
-<!-- screenshot: confirmation dialog for bulk deleting test runs
 <img loading="lazy" src={require('../assets/images/test-run/bulk-actions/bulk-delete-confirmation.png').default} alt="Confirmation dialog for deleting test runs in bulk" className="doc_img"/>
--->
 
 What to expect:
 
@@ -268,7 +253,7 @@ If you want a completed run out of the way but still available for reference, ar
 
 ### One bulk action per project
 
-A project runs one bulk action on test runs at a time. While a move, copy, or delete is running, any other bulk action in that project is blocked with a message that a bulk operation is already in progress. This applies whoever starts it and whichever action it is. Wait for the current action to finish, or cancel a running copy, then try again.
+A project runs one bulk action on test runs at a time. While a move, copy, or delete is running, any other bulk action in that project is blocked with a message that a bulk operation is already in progress. This applies whoever starts it and whichever action it is. Wait for the current action to finish, then try again.
 
 Bulk actions in other projects are not affected.
 
@@ -328,7 +313,6 @@ See [RBAC Roles and Permissions](/support/docs/rbac-roles-and-permissions/) for 
 | Moving and copying test cases | [Copy and Move Test Cases](/support/docs/copy-and-move-support-for-test-cases/) |
 | Retiring test cases without deleting them | [Archive and Restore Test Cases](/support/docs/test-case-archive/) |
 | Assigning permissions | [RBAC Roles and Permissions](/support/docs/rbac-roles-and-permissions/) |
-
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
