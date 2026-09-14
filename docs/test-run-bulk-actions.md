@@ -136,7 +136,9 @@ All three actions work within a single project. Test runs cannot be moved or cop
 4. To select every test run in the chosen section, use the checkbox at the top of the list, or click **Select all *N* test runs**. From **All Test Runs**, this selects runs across all folders. From a folder, it selects only the runs in that folder.
 5. With runs selected, the bulk action options **Move test runs**, **Copy test runs**, and **Delete test runs** appear above the list. Hover over an option to see its name.
 
-<!-- screenshot: Test Runs list with multiple runs selected, showing the selected count, the Select all test runs link, and the Move test runs, Copy test runs, and Delete test runs options -->
+<!-- screenshot: Test Runs list with multiple runs selected, showing the selected count, the Select all test runs link, and the Move test runs, Copy test runs, and Delete test runs options
+<img loading="lazy" src={require('../assets/images/test-run/bulk-actions/bulk-select-test-runs.png').default} alt="Test runs selected with the Move test runs, Copy test runs, and Delete test runs options" className="doc_img"/>
+-->
 
 :::note
 A single bulk action covers up to **1000 test runs**. If you use **Select all *N* test runs** and the selection comes to more than 1000 runs, the action is rejected and you are told about the limit. Narrow the list with a folder, search, or filters, or work in batches.
@@ -152,9 +154,13 @@ Moving a test run changes only the folder it lives in. Nothing else about the ru
 2. In the folder picker, choose the destination folder.
 3. Confirm the move.
 
-<!-- screenshot: folder picker for moving test runs -->
+<!-- screenshot: folder picker for moving test runs
+<img loading="lazy" src={require('../assets/images/test-run/bulk-actions/bulk-move-folder-picker.png').default} alt="Choosing a destination folder to move test runs" className="doc_img"/>
+-->
 
-<!-- screenshot: confirmation after test runs are moved -->
+<!-- screenshot: confirmation after test runs are moved
+<img loading="lazy" src={require('../assets/images/test-run/bulk-actions/bulk-move-confirmation.png').default} alt="Confirmation after test runs are moved" className="doc_img"/>
+-->
 
 What to expect:
 
@@ -173,7 +179,9 @@ Copying creates a new test run that has the same scope as the original but no re
 2. In the folder picker, choose the destination folder. This can be the same folder the runs are already in.
 3. Confirm the copy.
 
-<!-- screenshot: folder picker for copying test runs -->
+<!-- screenshot: folder picker for copying test runs
+<img loading="lazy" src={require('../assets/images/test-run/bulk-actions/bulk-copy-folder-picker.png').default} alt="Choosing a destination folder to copy test runs" className="doc_img"/>
+-->
 
 ### What a copy contains
 
@@ -202,7 +210,9 @@ Copies are created in the background, so you can keep working while they run.
 - **A failed copy leaves nothing behind.** If a run cannot be copied, its partial copy is removed and the other runs in the selection carry on.
 - **A run deleted before its turn is skipped.** If one of the selected runs is deleted after you start the copy but before it is reached, it is reported as skipped and the rest of the selection is unaffected.
 
-<!-- screenshot: progress summary for a bulk copy of test runs -->
+<!-- screenshot: progress summary for a bulk copy of test runs
+<img loading="lazy" src={require('../assets/images/test-run/bulk-actions/bulk-copy-progress.png').default} alt="Progress summary for a bulk copy of test runs" className="doc_img"/>
+-->
 
 :::tip
 You can copy the same test run more than once, and you can copy a run while someone is executing it. The copy takes only the run's structure, so results recorded during the copy never reach it.
@@ -219,7 +229,9 @@ You can cancel a bulk copy while it is running.
 
 If the copy finishes just before your cancel reaches it, the cancel does nothing and reports every run as already finished.
 
-<!-- screenshot: cancelling a bulk copy of test runs -->
+<!-- screenshot: cancelling a bulk copy of test runs
+<img loading="lazy" src={require('../assets/images/test-run/bulk-actions/bulk-copy-cancel.png').default} alt="Cancelling a bulk copy of test runs" className="doc_img"/>
+-->
 
 ---
 
@@ -228,7 +240,9 @@ If the copy finishes just before your cancel reaches it, the cancel does nothing
 1. Select the test runs and click **Delete test runs**.
 2. Review the confirmation and confirm the deletion.
 
-<!-- screenshot: confirmation dialog for bulk deleting test runs -->
+<!-- screenshot: confirmation dialog for bulk deleting test runs
+<img loading="lazy" src={require('../assets/images/test-run/bulk-actions/bulk-delete-confirmation.png').default} alt="Confirmation dialog for deleting test runs in bulk" className="doc_img"/>
+-->
 
 What to expect:
 
