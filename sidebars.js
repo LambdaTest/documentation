@@ -2585,8 +2585,12 @@ module.exports = {
         collapsed: true,
         label: "Insights & Reports",
         items: [
-          "insights-dashboard",
-          "tms-reports"
+          { type: "doc", id: "test-run-creation-and-management", label: "Create and Manage Test Runs" },
+          { type: "doc", id: "test-run-bulk-actions", label: "Bulk Move, Copy, and Delete Test Runs" },
+          { type: "doc", id: "sync-test-instance", label: "Sync Test Instances" },
+          { type: "doc", id: "test-instance-audit-logs", label: "Test Instance Audit Logs" },
+          { type: "doc", id: "track-issues-in-test-runs", label: "Raise and Manage Defects" },
+          { type: "doc", id: "milestone-creation-and-management", label: "Milestones" },
         ],
       },
       {

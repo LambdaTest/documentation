@@ -102,6 +102,10 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 The Copy and Move feature for test cases helps streamline the organization of test cases. It allows you to easily transfer test cases between different folders or projects, making it simple to keep everything organized. This feature enhances team collaboration and ensures that test cases are always accessible where needed.
 
+:::note
+Looking to move, copy, or delete test runs instead? See [Bulk Move, Copy, and Delete Test Runs](/support/docs/test-run-bulk-actions/).
+:::
+
 **How to Copy Multiple Test Cases to other Projects & Folders**
 
 1. Navigate to the list of test cases in your project. Multi-select the test cases you wish to move or copy to specific folders. Click on the **Bulk Actions** button at the top right of the screen. In the dropdown menu, select **Copy**.
