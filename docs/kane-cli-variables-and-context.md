@@ -19,6 +19,7 @@ canonical: https://www.testmuai.com/support/docs/kane-cli-variables-and-context/
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -44,6 +45,136 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/kane-cli-variables-and-context/"
+    },
+    "headline": "Variables & Context",
+    "description": "Use variables to parameterize objectives with secrets and reusable values. Use context files to give the agent project-specific knowledge.",
+    "url": "https://www.testmuai.com/support/docs/kane-cli-variables-and-context/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Kane CLI",
+    "keywords": [
+      "kane cli variables",
+      "kane cli context",
+      "kaneai"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Each entry describes a single variable",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JSON",
+        "text": "{\n  \"username\": { \"value\": \"alice\", \"secret\": false },\n  \"api_key\":  { \"value\": \"sk-live-...\", \"secret\": true }\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Reference variables with {{key}} syntax",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "kane-cli run \\\n  --url https://myapp.com \\\n  --variables-file ./creds.json \\\n  \"fill the email field with '{{email}}',\n   fill the password field with '{{password}}',\n   click Login,\n   assert the Dashboard is visible\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Pass a JSON object directly on the command line",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "kane-cli run \"Log in as {{username}}\" \\\n  --variables '{\"username\": {\"value\": \"alice\"}}'"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Point at a single JSON file",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "kane-cli run \"Log in as {{username}}\" \\\n  --variables-file ./vars.json"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Project-Local Variables",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "my-project/\n\u251c\u2500\u2500 .testmuai/\n\u2502   \u2514\u2500\u2500 variables/\n\u2502       \u251c\u2500\u2500 credentials.json\n\u2502       \u2514\u2500\u2500 urls.json\n\u2514\u2500\u2500 ..."
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Global Variables",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "~/.testmuai/kaneai/variables/\n\u251c\u2500\u2500 personal.json\n\u2514\u2500\u2500 shared.json"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Example Variable File",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JSON",
+        "text": "{\n  \"app_url\": { \"value\": \"https://staging.myapp.com\" },\n  \"admin_email\": { \"value\": \"admin@example.com\" },\n  \"admin_password\": { \"value\": \"admin_pass_123\", \"secret\": true },\n  \"customer_email\": { \"value\": \"customer@example.com\" },\n  \"customer_password\": { \"value\": \"customer_pass_456\", \"secret\": true },\n  \"test_product_sku\": { \"value\": \"PROD-2024-001\" }\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Mark a variable as secret by setting \"secret\": true",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JSON",
+        "text": "{\n  \"api_key\": { \"value\": \"sk-live-abc123\", \"secret\": true }\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Example Local Context File",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Markdown",
+        "text": "# MyApp Staging Context\n\n## Application Overview\nMyApp is a SaaS project management tool. Users create projects, invite members, and track tasks.\n\n## Test Environment\n- URL: https://staging.myapp.local\n- Database resets daily at 2 AM UTC\n- File uploads are disabled in staging\n\n## Navigation Patterns\n- Main menu is in the left sidebar (hover to expand)\n- Settings is under the top-right user avatar menu\n- Deep links work: /dashboard/projects/123/tasks\n\n## Known UI Quirks\n- The modal close button sometimes needs two clicks\n- Date picker defaults to today: click the field to open\n- The \"Copy Link\" toast appears bottom-right for 3 seconds\n\n## Common Test Flows\n1. Create a project: Dashboard > \"New Project\" > fill name > \"Create\"\n2. Invite a member: Project Settings > \"Team\" > \"Invite\" > enter email > \"Send\"\n3. Complete a task: Tasks page > click task > \"Mark Complete\" > confirm dialog\n\n## Test Data\n- Existing project for testing: \"Test Project\" (ID: proj_12345)\n- Existing user: john@example.com"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Override either context file for a single run",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "kane-cli run \"your objective\" \\\n  --global-context ./custom-global.md \\\n  --local-context ./custom-local.md"
+      }
+    ],
+    "dateModified": "2026-09-03T14:41:00+05:30"
+  }) }}
+/>
+
 **Variables** keep credentials and test data out of your objectives. **Context files** give the agent persistent background information: guidance, conventions, and notes that apply across runs.
 
 ---
@@ -55,6 +186,8 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 `{{variables}}` resolve anywhere a value is typed or set — form fills, cookie and localStorage values, and clipboard writes alike.
 
 Variables are JSON objects keyed by name. Each entry describes a single variable:
+
+<VerifiedTag value="Verified" />
 
 ```json
 {
@@ -72,6 +205,8 @@ Variables are JSON objects keyed by name. Each entry describes a single variable
 ### Usage in Objectives
 
 Reference variables with `{{key}}` syntax:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 kane-cli run \
@@ -100,6 +235,8 @@ Within a directory, files are read in alphabetical order; later files override e
 
 Pass a JSON object directly on the command line:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 kane-cli run "Log in as {{username}}" \
   --variables '{"username": {"value": "alice"}}'
@@ -108,6 +245,8 @@ kane-cli run "Log in as {{username}}" \
 ### Variables from a File
 
 Point at a single JSON file:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 kane-cli run "Log in as {{username}}" \
@@ -119,6 +258,8 @@ The file must be a JSON object whose values are variable entries (see [Format](#
 ### Project-Local Variables
 
 Drop one or more `*.json` files into `.testmuai/variables/` inside your project's working directory. They load automatically whenever you run `kane-cli` from that directory.
+
+<VerifiedTag value="Verified" />
 
 ```text
 my-project/
@@ -135,6 +276,8 @@ Project-local variables override global variables but are overridden by file and
 
 For values you want available across every project on your machine, place `*.json` files in `~/.testmuai/kaneai/variables/`.
 
+<VerifiedTag value="Verified" />
+
 ```text
 ~/.testmuai/kaneai/variables/
 ├── personal.json
@@ -144,6 +287,8 @@ For values you want available across every project on your machine, place `*.jso
 Global variables have the lowest precedence, anything else with the same key wins.
 
 ### Example Variable File
+
+<VerifiedTag value="Verified" />
 
 ```json
 {
@@ -159,6 +304,8 @@ Global variables have the lowest precedence, anything else with the same key win
 ### Secrets
 
 Mark a variable as secret by setting `"secret": true`:
+
+<VerifiedTag value="Verified" />
 
 ```json
 {
@@ -186,6 +333,8 @@ Context files are plain Markdown files whose contents are passed to the agent al
 | **Local** | `.testmuai/context.md` (in project directory) | App-specific navigation, known UI quirks, test environment details |
 
 ### Example Local Context File
+
+<VerifiedTag value="Verified" />
 
 ```markdown
 # MyApp Staging Context
@@ -221,6 +370,8 @@ MyApp is a SaaS project management tool. Users create projects, invite members, 
 ### Override Per Run
 
 Override either context file for a single run:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 kane-cli run "your objective" \

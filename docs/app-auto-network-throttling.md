@@ -22,13 +22,13 @@ site_name: TestMu AI
 slug: app-auto-network-throttling/
 canonical: https://www.testmuai.com/support/docs/app-auto-network-throttling/
 ---
+
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
-
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
-
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -54,6 +54,114 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/app-auto-network-throttling/"
+    },
+    "headline": "Network Throttling for Appium tests",
+    "description": "Now validate your mobile applications over low latency networks (2G/3G/LTE) or in offline mode with varying upload and download speeds. TestMu AI empowers you to simulate these mobile network conditions through its desired capabilities, ensuring comprehensive testing of your mobile applications.",
+    "url": "https://www.testmuai.com/support/docs/app-auto-network-throttling/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "App Automation",
+    "keywords": [
+      "cross platform testing",
+      "network throttling",
+      "Appium capabilities generator"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Initialization",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Python",
+        "text": "     caps = {\n        \"network\": True,\n        \"networkProfile\": \"2g-gprs-good\"  # Set the desired network profile\n    }"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "During Test Execution",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Python",
+        "text": "    driver.execute_script(\"updateNetworkProfile=3g-umts-good\")"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Custom Profiles",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Python",
+        "text": "    driver.execute_script(\"customNetworkProfile: { \\\"downloadSpeed\\\": 500, \\\"uploadSpeed\\\" : 250, \\\"latency\\\": 100 }\" )"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Default/Reset Network Configuration",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Python",
+        "text": "    driver.execute_script(\"updateNetworkProfile=default\")"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Offline Mode",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Python",
+        "text": "    caps = {\n        \"network\": True,\n        \"networkProfile\": \"offline\"  # Set to offline mode\n    }"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Offline Mode",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Python",
+        "text": "    driver.execute_script(\"updateNetworkProfile=offline\")"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Toggle Offline/Online Mode via API",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "    curl --location 'https://mobile-api.lambdatest.com/mobile-automation/api/v1/sessions/<session-id>/update_network' \\\n    --header 'Authorization: Basic <username:access_key>' \\\n    --header 'Content-Type: application/json' \\\n    --data '{\"mode\": \"offline\"}'"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
 
 Network throttling on TestMu AI simulates 2G, 3G, LTE, and offline conditions during Appium tests, letting you validate how your mobile app behaves under varying upload and download speeds while the device keeps uninterrupted connectivity, replicating real-world usage across devices.
 
@@ -63,6 +171,9 @@ Network throttling on TestMu AI simulates 2G, 3G, LTE, and offline conditions du
 ### Initialization
 
 - **Capability:** Initiate a test session with predefined network profiles using the `networkProfile` capability. Example:
+
+     <VerifiedTag value="Verified" />
+
      ```python
      caps = {
         "network": True,
@@ -77,6 +188,9 @@ To utilize the **networkProfile** capability, ensure that you include `network: 
 ### During Test Execution
 
 - **LambdaHook:** Dynamically alter the network profile within the test session using the following LambdaHook:
+
+    <VerifiedTag value="Verified" />
+
     ```python
     driver.execute_script("updateNetworkProfile=3g-umts-good")
     ```
@@ -94,10 +208,12 @@ To utilize the **networkProfile** capability, ensure that you include `network: 
 | 4g-lte-advanced-good     | 25 Mbps         | 12 Mbps      | 20 ms   |
 | default                  | NA             | NA           | NA      |
 
-
 ### Custom Profiles
 
 - **LambdaHook:** Define and implement custom network profiles with LambdaHook by specifying the maximum download speed (kbps), maximum upload speed (kbps), and latency (ms) for the custom condition, as illustrated in the example.
+
+    <VerifiedTag value="Verified" />
+
     ```python
     driver.execute_script("customNetworkProfile: { \"downloadSpeed\": 500, \"uploadSpeed\" : 250, \"latency\": 100 }" )
     ```
@@ -105,6 +221,9 @@ To utilize the **networkProfile** capability, ensure that you include `network: 
 ### Default/Reset Network Configuration
 
 - **LambdaHook:** Employ this webhook to seamlessly restore the device's network profile to its default state. Invocation of this LambdaHook removes any predefined or custom network settings, ensuring the device is reset to its original configuration.
+
+    <VerifiedTag value="Verified" />
+
     ```python
     driver.execute_script("updateNetworkProfile=default")
     ```
@@ -112,6 +231,9 @@ To utilize the **networkProfile** capability, ensure that you include `network: 
 ### Offline Mode
 
 - To initialize tests in **offline mode**, set the `networkProfile` capability to `offline` during session initiation:
+
+    <VerifiedTag value="Verified" />
+
     ```python
     caps = {
         "network": True,
@@ -120,14 +242,18 @@ To utilize the **networkProfile** capability, ensure that you include `network: 
     ```
 
 - **LambdaHook:** You can also switch to offline mode during the test execution with the following command:
+
+    <VerifiedTag value="Verified" />
+
     ```python
     driver.execute_script("updateNetworkProfile=offline")
     ```
 
-
 ## Toggle Offline/Online Mode via API
 
 - For Android and iOS devices, you can use the offline/online mode API within the running test session:
+
+    <VerifiedTag value="Verified" />
 
     ```bash
     curl --location 'https://mobile-api.lambdatest.com/mobile-automation/api/v1/sessions/<session-id>/update_network' \

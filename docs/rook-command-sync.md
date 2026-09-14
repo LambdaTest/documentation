@@ -6,6 +6,85 @@ description: Record the current local Rook project tree upstream as one delibera
 slug: rook-command-sync/
 ---
 
+import { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
+
+<script type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify({
+       "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": BRAND_URL
+        },{
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Support",
+          "item": `${BRAND_URL}/support/docs/`
+        },{
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Rook /sync Command",
+          "item": `${BRAND_URL}/support/docs/rook-command-sync/`
+        }]
+      })
+    }}
+></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/rook-command-sync/"
+    },
+    "headline": "Rook /sync Command",
+    "description": "Record the current local Rook project tree upstream as one deliberate write.",
+    "url": "https://www.testmuai.com/support/docs/rook-command-sync/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Agent Testing",
+    "keywords": [],
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "dateModified": "2026-09-04T12:50:18+05:30"
+  }) }}
+/>
 # <code>/sync</code> Command
 
 Use <code>/sync</code> after exploration, generation, profile changes, or manual edits to record the local project tree upstream.
@@ -13,6 +92,8 @@ Use <code>/sync</code> after exploration, generation, profile changes, or manual
 <img loading="lazy" src={require('../assets/images/rook/commands/rook-command-sync.png').default} alt="Rook sync command help showing agent and JSON options" className="doc_img"/>
 
 ## Syntax
+
+<VerifiedTag value="Verified" />
 
 ~~~text
 /sync

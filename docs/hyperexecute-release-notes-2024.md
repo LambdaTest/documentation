@@ -23,6 +23,8 @@ import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
+import VerifiedTag from '@site/src/component/verifiedTag';
+
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
        "@context": "https://schema.org",
@@ -46,6 +48,151 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       })
     }}
 ></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/hyperexecute-release-notes-2024/"
+    },
+    "headline": "HyperExecute Release Notes 2024",
+    "description": "Consolidated HyperExecute release notes for 2024",
+    "url": "https://www.testmuai.com/support/docs/hyperexecute-release-notes-2024/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "HyperExecute",
+    "keywords": [
+      "TestMu AI HyperExecute",
+      "TestMu AI HyperExecute help",
+      "TestMu AI HyperExecute documentation"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "To execute tests using the Android Emulator, add the following configurations to your hyperexecute.yaml",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "framework:\n  args:\n    isRealMobile: false"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "This can be configured with the following parameters",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "report: true\npartialReports:\n  location: target/surefire-reports/html\n  type: xml\n  frameworkName: junit"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "highlight-end",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\nPass the value of your email address via CLI by running the command\n\n```bash\n./hyperexecute --vars \"email=xyz@abc.com\" --vars \"email1=abc@xyz.com\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Add the --runson flag to your HyperExecute CLI command, followed by the desired OS",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "--runson YOUR_OS_NAME"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "HyperExecute now integrates with k6",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "runtime:\n    addons:\n      - name: k6\n        version: \"v0.52.0\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "HyperExecute now integrates with k6",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "env: \n  K6_BROWSER_ENABLED: true  \n  K6_BROWSER_HEADLESS: false \n  HE_CONTEXT_K6_SETUP_DEFAULT_BROWSER_PATH: true"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Previously, you might have needed to use",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "capabilities.setCapability(\"timezone\", \"UTC+05:30\");"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Now, you can simply set",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "capabilities.setCapability(\"timezone\", \"Kolkata\");"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "This allows you to",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "partialReports:\n  - location: reports/json\n    type: json\n    frameworkName: extent-native\n    email:\n        to:\n          - johndoe@example.com\n  - location: target/surefire-reports\n    type: html\n    frameworkName: testng\n    email:\n        to:\n          - johndoe@example.com"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Version 2.2.9",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "runtime:\n  - language: katalon\n    version: 8.6.5"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Improved test execution flow with alwaysRunPostSteps flag",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "alwaysRunPostSteps: true"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Email Delivery of HyperExecute Job Artifacts",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "uploadArtifacts:\n    ...\n    email:\n      to: \n        - <your_email_id@example.com>\n        - <another_email_id@example.com>"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 
 ---
 
@@ -82,6 +229,9 @@ HyperExecute now supports the Appium and the Maestro Android Emulator, providing
 - **Customizable Capabilities:** Define emulator configurations such as device name, platform version, and orientation directly within your test files.
 
 To execute tests using the Android Emulator, add the following configurations to your `hyperexecute.yaml`:
+
+<VerifiedTag value="Verified" />
+
 ```yaml
 framework:
   args:
@@ -194,6 +344,8 @@ This can be configured with the following parameters:
 - **type:** xml
 - **location:** Specify the directory where the reports will be generated.
 
+<VerifiedTag value="Verified" />
+
 ```yaml
 report: true
 partialReports:
@@ -293,6 +445,8 @@ HyperExecute expands its support for the latest versions of dev and beta browser
 ### HyperExecute: Set Dynamic Email Address for Report Sharing 
 HyperExecute CLI added an enhancement in the [`--vars`](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/#--vars) flag providing greater flexibility in specifying email addresses for report and artifact sharing. You can now use a variable to dynamically set the email address used to share reports or artifacts. This gives you more flexibility than hardcoding the email address in the YAML configuration file.
 
+<VerifiedTag value="Verified" />
+
 ```yaml title="hyperexecute.yaml"
 partialReports:
   location: target/surefire-reports/html
@@ -307,6 +461,8 @@ partialReports:
 ```
 
 Pass the value of your email address via CLI by running the command
+
+<VerifiedTag value="Verified" />
 
 ```bash
 ./hyperexecute --vars "email=xyz@abc.com" --vars "email1=abc@xyz.com"
@@ -357,6 +513,8 @@ The HyperExecute CLI now supports a [`--runson`](/support/docs/hyperexecute-cli-
 **Usage**
 Add the `--runson` flag to your HyperExecute CLI command, followed by the desired OS:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 --runson YOUR_OS_NAME
 ```
@@ -381,6 +539,8 @@ To maintain browser compatibility and access the newest features, we've incorpor
 
 HyperExecute now supports k6, a powerful open-source performance testing tool. HyperExecute supports all versions of k6 (till 0.52). To use any particular version, all you have to do is mention that specific version in the [runson flag](/support/docs/deep-dive-into-hyperexecute-yaml/#runson) in your [HyperExecute YAML](/support/docs/deep-dive-into-hyperexecute-yaml/) file.
 
+<VerifiedTag value="Verified" />
+
 ```yaml
 runtime:
     addons:
@@ -389,6 +549,8 @@ runtime:
 ```
 
 Also, add these environment variables in your YAML file to install the necessary dependencies for your tests
+
+<VerifiedTag value="Verified" />
 
 ```yaml
 env: 
@@ -432,11 +594,17 @@ This capability will work with Selenium, Playwright, Puppeteer, Cypress, and App
 :::
 
 Previously, you might have needed to use:
+
+<VerifiedTag value="Verified" />
+
 ```yaml
 capabilities.setCapability("timezone", "UTC+05:30");
 ```
 
 Now, you can simply set:
+
+<VerifiedTag value="Verified" />
+
 ```bash
 capabilities.setCapability("timezone", "Kolkata");
 ```
@@ -486,6 +654,8 @@ You can now create multiple reports from different frameworks for your job. This
 - **Simplify Analysis:** Focus on the results that matter most without sifting through a combined report. Explore framework-specific details and pinpoint areas for improvement with ease.
 
 - **Enhanced Organization:** Maintain a clear and organized overview of your entire test suite. Separate reports provide a structured view, allowing you to efficiently track the performance of each framework.
+
+<VerifiedTag value="Verified" />
 
 ```bash
 partialReports:
@@ -545,6 +715,8 @@ Start Testing 🚀
 HyperExecute now supports multiple versions of Katalon. You can switch to any version of Katalon for your desired use case.
 
 Add a runtime flag to your YAML file and define your required version. 
+
+<VerifiedTag value="Verified" />
 
 ```bash
 runtime:
@@ -701,6 +873,8 @@ The `alwaysRunPostSteps` flag provides finer control over post-step execution. W
 
 This enhancement streamlines your testing workflow by ensuring essential post-steps are consistently executed, even in the presence of failing test scenarios.
 
+<VerifiedTag value="Verified" />
+
 ```bash
 alwaysRunPostSteps: true
 ```
@@ -754,6 +928,8 @@ You can now test your web applications on the latest beta versions of popular br
 You can now receive [Job Artifacts](/support/docs/hyperexecute-artifacts/) directly via email, streamlining the process of accessing and managing your execution results.
 
 To receive the Artifacts via mail, you simply need to pass a `email` flag in your YAML file.
+
+<VerifiedTag value="Verified" />
 
 ```bash
 uploadArtifacts:

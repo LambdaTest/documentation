@@ -12,7 +12,96 @@ toc_max_heading_level: 2
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import VerifiedTag from '@site/src/component/verifiedTag';
+import { BRAND_URL } from '@site/src/component/BrandName';
 
+<script type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify({
+       "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": BRAND_URL
+        },{
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Support",
+          "item": `${BRAND_URL}/support/docs/`
+        },{
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Native App Automation Appium (Overview)",
+          "item": `${BRAND_URL}/support/docs/accessibility-native-app-automation-test/`
+        }]
+      })
+    }}
+></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/accessibility-native-app-automation-test/"
+    },
+    "headline": "Native App Automation Appium (Overview)",
+    "description": "Appium-based native app accessibility automation with lambda-accessibility-scan, capabilities, and dashboard reports.",
+    "url": "https://www.testmuai.com/support/docs/accessibility-native-app-automation-test/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Documentation",
+    "keywords": [],
+    "proficiencyLevel": "Beginner",
+    "dependencies": "A native Android or iOS app. Hybrid apps with embedded webview content are not supported; Appium client and test project targeting TestMu AI real devices or emulators per your subscription; LT_USERNAME / LT_ACCESS_KEY available to the process; Accessibility enabled on the mobile session (see framework guides below for capability examples).",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "After each stable screen (post-navigation waits), call",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "driver.executeScript(\"lambda-accessibility-scan\");"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
 # Appium Accessibility Testing
 
 ---
@@ -46,6 +135,8 @@ Accessibility on native apps depends on two things: a **session capability** tha
 1. **Reuse a green Appium suite** without accessibility first: confirm install, locators, and hub connectivity.
 2. **Add the accessibility capability** on the session (exact key names align with your Appium server version; mirror the examples in the runner tabs).
 3. After each **stable screen** (post-navigation waits), call the hook:
+
+<VerifiedTag value="Verified" />
 
 ```java
 driver.executeScript("lambda-accessibility-scan");
@@ -84,6 +175,8 @@ TestNG drives the session with the Appium Java client and calls the hook through
 
 Illustrative Java pattern (adapt platform names, device, and app paths to your suite):
 
+<VerifiedTag value="Verified" />
+
 ```java
 UiAutomator2Options options = new UiAutomator2Options();
 options.setDeviceName("Pixel.*");
@@ -102,6 +195,8 @@ Use the **official capability set** your account documentation lists for the cur
 
 ### 2. Call the scan hook after navigation
 
+<VerifiedTag value="Verified" />
+
 ```java
 ((JavascriptExecutor) driver).executeScript("lambda-accessibility-scan");
 ```
@@ -111,6 +206,8 @@ Place this **after** explicit waits for loading spinners, animations, or lazy co
 **Expected result:** one accessibility report is captured for the current screen.
 
 ### 3. Run TestNG
+
+<VerifiedTag value="Verified" />
 
 ```bash
 mvn test
@@ -134,6 +231,8 @@ WebdriverIO sets caps in `wdio.conf.ts` and calls the hook through `browser.exec
 
 ### 1. Set capabilities in `wdio.conf.ts` (or `.js`)
 
+<VerifiedTag value="Verified" />
+
 ```ts
 export const config = {
   capabilities: [{
@@ -156,6 +255,8 @@ Match keys to your Appium server version (`appium:` prefix for W3C caps).
 
 ### 2. Call the hook after screens load
 
+<VerifiedTag value="Verified" />
+
 ```ts
 await browser.execute('lambda-accessibility-scan');
 ```
@@ -165,6 +266,8 @@ Use WDIO's **`waitUntil`** patterns before executing the hook so dynamic content
 **Expected result:** one accessibility report is captured for the current screen.
 
 ### 3. Run the suite
+
+<VerifiedTag value="Verified" />
 
 ```bash
 npx wdio run wdio.conf.ts

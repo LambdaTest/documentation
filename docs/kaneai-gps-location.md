@@ -42,6 +42,64 @@ canonical: https://www.testmuai.com/support/docs/kaneai-gps-location/
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/kaneai-gps-location/"
+    },
+    "headline": "GPS Location Mocking for Mobile App and Mobile Browser Authoring",
+    "description": "Learn how to use GPS Location Override feature in KaneAI for testing location-based functionalities in Mobile App and Mobile Browser sessions",
+    "url": "https://www.testmuai.com/support/docs/kaneai-gps-location/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "KaneAI",
+    "keywords": [
+      "testmu ai automation",
+      "testmu ai kaneai",
+      "kaneai mobile app"
+    ],
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "dateModified": "2026-09-09T20:20:47+05:30"
+  }) }}
+/>
+
+
 # How to Mock GPS Location With KaneAI
 ***
 
@@ -130,7 +188,7 @@ Enter latitude and longitude values within the following ranges.
 Keep these limitations in mind:
 
 - GPS override is applied during session initialization and can be changed mid-session.
-- Replay and Edit sessions reuse the GPS values from the original session.
+- Reopened or edited sessions reuse the GPS values from the original session.
 
 ## Troubleshooting
 ***

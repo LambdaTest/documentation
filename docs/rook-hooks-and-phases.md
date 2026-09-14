@@ -12,11 +12,96 @@ keywords:
 slug: rook-hooks-and-phases/
 ---
 
+import { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
+
+<script type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify({
+       "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": BRAND_URL
+        },{
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Support",
+          "item": `${BRAND_URL}/support/docs/`
+        },{
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Rook Lifecycle Phases and Hooks",
+          "item": `${BRAND_URL}/support/docs/rook-hooks-and-phases/`
+        }]
+      })
+    }}
+></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/rook-hooks-and-phases/"
+    },
+    "headline": "Rook Lifecycle Phases and Hooks",
+    "description": "Learn how Rook runs prepare, open, execute, close, collect, and judge phases through script-based invocation hooks.",
+    "url": "https://www.testmuai.com/support/docs/rook-hooks-and-phases/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Agent Testing",
+    "keywords": [
+      "rook hooks",
+      "rook run phases",
+      "ai agent lifecycle testing"
+    ],
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "dateModified": "2026-09-04T12:50:18+05:30"
+  }) }}
+/>
 # Rook Lifecycle Phases and Hooks
 
 Rook reaches an agent through **hooks**: scripts assigned to named points in a fixed run lifecycle. This makes agents behind logins, sessions, CLIs, asynchronous APIs, sockets, and custom evidence systems testable without forcing them into a predefined transport schema.
 
 A profile must define an <code>execute</code> hook. The other hooks are optional. Rook owns their order; your scripts own how each phase talks to the target.
+
+<VerifiedTag value="Verified" />
 
 ~~~text
 prepare                         once per run
@@ -45,6 +130,8 @@ prepare                         once per run
 ## Define Hooks in a Profile
 
 Hook paths are relative to the active agent's directory unless you provide an absolute path.
+
+<VerifiedTag value="Verified" />
 
 ~~~yaml
 id: refund-staging
@@ -76,6 +163,8 @@ Use <code>/profile add</code> to have Rook generate and verify this profile and 
 
 Rook invokes a hook as:
 
+<VerifiedTag value="Verified" />
+
 ~~~text
 node <script> <phase>
 ~~~
@@ -98,6 +187,8 @@ The scenario goal is sent on standard input during <code>execute</code> only. Th
 ## Hook Output Contract
 
 Write progress and diagnostics to standard error. Standard output must contain one JSON object when a phase returns data.
+
+<VerifiedTag value="Verified" />
 
 ~~~json
 {
@@ -128,6 +219,8 @@ Rook also writes each completed hook result to the run directory as it happens. 
 
 Use phase selection when evidence becomes available after the agent responds:
 
+<VerifiedTag value="Verified" />
+
 ~~~bash
 rook run --phases prepare,open,execute,close
 # Wait for the trace or log pipeline.
@@ -137,6 +230,8 @@ rook run --run <run-id> --phases collect,judge
 <code>--run</code> continues the same run in place. <code>--resume</code> creates a new run and carries compatible completed work forward.
 
 You can also omit a suffix:
+
+<VerifiedTag value="Verified" />
 
 ~~~bash
 rook run --skip collect,judge

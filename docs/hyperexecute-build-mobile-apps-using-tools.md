@@ -1,6 +1,6 @@
 ---
 id: hyperexecute-build-mobile-apps-using-tools
-title: Building Mobile Applications Using Tools
+title: Building Mobile Applications Using Tools
 toc_max_heading_level: 2
 hide_title: false
 sidebar_label: "Build Mobile Apps"
@@ -20,6 +20,8 @@ canonical: https://www.testmuai.com/support/docs/hyperexecute-build-mobile-apps-
 
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -45,6 +47,81 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/hyperexecute-build-mobile-apps-using-tools/"
+    },
+    "headline": "Building Mobile Applications Using Tools",
+    "description": "Building Mobile Applications Using Tools",
+    "url": "https://www.testmuai.com/support/docs/hyperexecute-build-mobile-apps-using-tools/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Documentation",
+    "keywords": [
+      "TestMu AI HyperExecute",
+      "gradle",
+      "maven"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Building Apps with runtime Flag",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "runtime:\n  language: java\n  version: ${STATIC_DATA_1_JAVA_VERSION}\n  addons:\n    - name: \"gradle\"\n      version: \"${STATIC_DATA_1_GRADLE_VERSION}\"\n    - name: \"android-sdk\"\n      version: ${STATIC_DATA_1_ANDROID_SDK_VERSION}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Leveraging DataJsonPaths for Dependency Management",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "[\n  {\n    \"JAVA_VERSION\": \"11\",\n    \"ANDROID_SDK_VERSION\": \"24\",\n    \"GRADLE_VERSION\": \"7.5\"\n  },\n  {\n    \"JAVA_VERSION\": \"178\",\n    \"ANDROID_SDK_VERSION\": \"25\",\n    \"GRADLE_VERSION\": \"8\"\n  },\n  {\n    \"JAVA_VERSION\": \"20\",\n    \"ANDROID_SDK_VERSION\": \"32\",\n    \"GRADLE_VERSION\": \"8.4\"\n  }\n]"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
+
 Suppose you're working on an Android app using Gradle, and all of a sudden you realize that this project requires an older Java version and a specific Android SDK. Now, setting up a whole new environment in not a very convenient option.
 
 HyperExecute facilitate the development of mobile applications using various tools such as **Gradle**, **Maven**, etc. It provides a language and framework agnostic environment, supporting a wide range of tools and version combinations crucial for building **Android APKs** efficiently.
@@ -52,6 +129,8 @@ HyperExecute facilitate the development of mobile applications using various too
 ## Building Apps with `runtime` Flag
 
 HyperExecute provides a [`runtime`](/support/docs/deep-dive-into-hyperexecute-yaml/#runtime) flag feature that dynamically downloads and installs required language and framework versions based on your needs. This removes the need for pre-installed environments on the execution machines.
+
+<VerifiedTag value="Verified" />
 
 ```bash
 runtime:
@@ -71,6 +150,8 @@ runtime:
 This is useful when you have the project and you have to build it across different java, gradle and android-sdk versions.
 
 To provide multiple versions for each of these dependencies, the DataJson can be leveraged provided by HyperExecute.
+
+<VerifiedTag value="Verified" />
 
 ```bash
 [

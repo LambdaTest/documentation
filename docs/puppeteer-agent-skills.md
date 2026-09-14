@@ -19,6 +19,8 @@ canonical: https://www.testmuai.com/support/docs/puppeteer-agent-skills/
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
+import VerifiedTag from '@site/src/component/verifiedTag';
+
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
        "@context": "https://schema.org",
@@ -42,6 +44,111 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     })
   }}
 ></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/puppeteer-agent-skills/"
+    },
+    "headline": "Run Your Puppeteer Tests Using Agent Skills",
+    "description": "Learn how to use TestMu AI Agent Skills to generate production-ready Puppeteer test automation using AI coding assistants like Claude Code, GitHub Copilot, and Cursor.",
+    "url": "https://www.testmuai.com/support/docs/puppeteer-agent-skills/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Web Automation",
+    "keywords": [
+      "puppeteer agent skills",
+      "ai test automation",
+      "puppeteer ai coding"
+    ],
+    "proficiencyLevel": "Beginner",
+    "dependencies": "A TestMu AI account. If you don't have one, sign up for free.; Your TestMu AI Username and Access Key from the Automation Dashboard.; An AI coding assistant: Claude Code, GitHub Copilot, Cursor, Gemini CLI, or any compatible tool..",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Clone the repository and copy the Puppeteer skill into your AI tool's skills directory",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "codeRepository": "https://github.com/LambdaTest/agent-skills",
+        "text": "git clone https://github.com/LambdaTest/agent-skills.git\n\n# For Claude Code\ncp -r agent-skills/puppeteer-skill .claude/skills/\n\n# For Cursor\ncp -r agent-skills/puppeteer-skill .cursor/skills/\n\n# For GitHub Copilot\ncp -r agent-skills/puppeteer-skill .github/skills/\n\n# For Gemini CLI\ncp -r agent-skills/puppeteer-skill .gemini/skills/"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Configure your TestMu AI credentials as environment variables",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "export LT_USERNAME=\"YOUR_LAMBDATEST_USERNAME\"\nexport LT_ACCESS_KEY=\"YOUR_LAMBDATEST_ACCESS_KEY\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Once installed, simply ask your AI assistant to write tests in natural language",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\"Write Puppeteer tests to scrape product data and run them on TestMu AI cloud\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Running Your First Test Using Agent Skills",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\"Set up Puppeteer with Jest for E2E testing and generate PDF reports\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Running Your First Test Using Agent Skills",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\"Run headless Chrome tests on TestMu AI with network interception\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "What's Included in the Puppeteer Skill",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "puppeteer-skill/\n\u251c\u2500\u2500 SKILL.md\n\u2514\u2500\u2500 reference/\n    \u251c\u2500\u2500 playbook.md\n    \u2514\u2500\u2500 advanced-patterns.md"
+      }
+    ],
+    "dateModified": "2026-09-09T19:13:32+05:30"
+  }) }}
+/>
+
 
 # How to Run Puppeteer Tests With Agent Skills on TestMu AI
 ***
@@ -75,6 +182,8 @@ Before you install the skill, make sure you have the following in place.
 
 Clone the repository and copy the Puppeteer skill into your AI tool's skills directory. Use the command that matches your tool.
 
+<VerifiedTag value="Verified" />
+
 ```bash
 git clone https://github.com/LambdaTest/agent-skills.git
 
@@ -100,6 +209,8 @@ If you prefer installing **all available framework skills**, clone the repositor
 
 Configure your TestMu AI credentials as environment variables so the generated tests can connect to the cloud.
 
+<VerifiedTag value="Verified" />
+
 ```bash
 export LT_USERNAME="YOUR_LAMBDATEST_USERNAME"
 export LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
@@ -110,13 +221,19 @@ export LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
 
 Once the skill is installed, ask your AI assistant to write tests in natural language. The examples below show the kind of prompt the skill responds to.
 
+<VerifiedTag value="Verified" />
+
 ```text
 "Write Puppeteer tests to scrape product data and run them on TestMu AI cloud"
 ```
 
+<VerifiedTag value="Verified" />
+
 ```text
 "Set up Puppeteer with Jest for E2E testing and generate PDF reports"
 ```
+
+<VerifiedTag value="Verified" />
 
 ```text
 "Run headless Chrome tests on TestMu AI with network interception"
@@ -133,6 +250,8 @@ The Agent Skill automatically handles:
 ***
 
 The skill ships as a small set of files, with each part of the reference mapped to a specific area of Puppeteer automation. The structure and coverage are shown below.
+
+<VerifiedTag value="Verified" />
 
 ```text
 puppeteer-skill/

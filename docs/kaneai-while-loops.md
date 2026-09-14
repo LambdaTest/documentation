@@ -45,6 +45,106 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/kaneai-while-loops/"
+    },
+    "headline": "While Loops in KaneAI",
+    "description": "Learn how to use While Loops in KaneAI to repeat test steps based on dynamic conditions, iterate over collections with JavaScript, and use the built-in {{loop_counter}} variable in natural-language steps and element selectors.",
+    "url": "https://www.testmuai.com/support/docs/kaneai-while-loops/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "KaneAI",
+    "keywords": [
+      "kaneai while loop",
+      "kaneai loops",
+      "kaneai iteration"
+    ],
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "dateModified": "2026-09-09T20:21:05+05:30"
+  }) }}
+/>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Step\u2011by\u2011step Guide",
+      "description": "Learn how to use While Loops in KaneAI to repeat test steps based on dynamic conditions, iterate over collections with JavaScript, and use the built-in {{loop_counter}} variable in natural-language steps and element selectors.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Insert a While Loop Block",
+          "text": "A While Loop can only be added through the / slash command menu. In your authoring session, press / to open the slash command menu. Select Add While Loop. KaneAI inserts an empty While Loop block at the current position in your test flow. The block contains a header, an empty condition editor, and an End While control. A newly inserted block starts in an empty state with no condition and no body steps.",
+          "url": "https://www.testmuai.com/support/docs/kaneai-while-loops/#step-1-insert-a-while-loop-block"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Define the Loop Condition",
+          "text": "The condition editor opens in natural language mode by default, matching KaneAI's NL\u2011first authoring philosophy. You can switch to operand & operator mode at any time. Type your condition as a plain\u2011English sentence. KaneAI interprets the intent and re\u2011evaluates it at runtime. Examples: while the loading spinner is visible while the Next button is present while {{count}} is greater than 0 while {{job_status}} is not \"complete\" Build the condition explicitly using a left operand, a comparison operator, and a right operand: Enter a left operand: this can be a variable (e.g., {{activecount}}), a dataset parameter (e.g., ${maxattempts}), extracted text, or a literal value. Choose a comparison operator from the dropdown: Enter the right operand: a literal, variable, dataset parameter, or extracted value. Both operands support variables ({{varname}}), dataset parameters (${paramname}), extracted text, and literal values. Confirm the condition to open the loop body. Once confirmed, the condition remains editable until the loop begins executing. You can reopen it to adjust operators, operands, or the natural\u2011language expression.",
+          "url": "https://www.testmuai.com/support/docs/kaneai-while-loops/#step-2-define-the-loop-condition"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Add Steps Inside the Loop Body",
+          "text": "The loop body becomes available only after the condition is confirmed. Inside the body you get the standard KaneAI step input, the same one used in the main authoring flow, where you can type a natural\u2011language step or press / to open the slash command menu. You can add any of the following inside a loop body: Natural language steps: type your instruction in plain English. Modules: reuse existing modules by adding them via the slash command menu. JavaScript steps: execute custom JS for data extraction, array handling, or index management. API steps: make API calls as part of the iteration. DB steps: run database queries inside each iteration. If / Else blocks: insert a conditional block inside the loop body via the slash command menu to add branching logic within iterations. The cursor decides whether a new step joins the loop body or sits outside it: For the full set of cursor rules, see Cursor in While loops.",
+          "url": "https://www.testmuai.com/support/docs/kaneai-while-loops/#step-3-add-steps-inside-the-loop-body"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Step 4: Finalize the Loop with \"End While\"",
+          "text": "When your loop body is ready, click End While at the bottom of the block to finalize it. Unlike If / Else blocks (which evaluate the moment you confirm a condition), a While Loop accumulates steps first and is only executed once you finalize it with End While. Until finalization it exists as an authoring\u2011only placeholder so you can keep adding body steps. The End While button is active only after the condition is confirmed and at least one step has been added to the body. Clicking End While starts execution immediately. KaneAI re\u2011evaluates the condition before every iteration and stops when the condition becomes false or when the max iteration safety limit is reached.",
+          "url": "https://www.testmuai.com/support/docs/kaneai-while-loops/#step-4-finalize-the-loop-with-end-while"
+        }
+      ]
+    }
+  ]) }}
+/>
+
+
+
 # How to Use While Loops With KaneAI
 ***
 
@@ -165,8 +265,22 @@ You can add any of the following inside a loop body:
 - **JavaScript steps**: execute custom JS for data extraction, array handling, or index management.
 - **API steps**: make API calls as part of the iteration.
 - **DB steps**: run database queries inside each iteration.
-- **Manual interaction**: perform actions directly on the browser within the loop body using the manual interaction control.
 - **If / Else blocks**: insert a conditional block inside the loop body via the slash command menu to add branching logic within iterations.
+
+#### Where steps land inside the loop body
+
+The cursor decides whether a new step joins the loop body or sits outside it:
+
+| Cursor position | Allowed | The inserted step lands |
+|---|---|---|
+| Between two steps inside the loop body | Yes | In the body, at that point — it runs on every iteration |
+| Immediately after the **While** header | Yes | As the first step of the body |
+| Immediately before **End while** | Yes | As the last step of the body |
+| Before the **While** header | Yes | Outside the loop, above it |
+| After **End while** | Yes | Outside the loop, below it |
+| On the condition row | No | The cursor snaps to the nearest valid position |
+
+For the full set of cursor rules, see [Cursor in While loops](/support/docs/kaneai-authoring-session/#cursor-in-while-loops).
 
 **Result:** Each step you add runs once per iteration while the condition holds true.
 
@@ -190,7 +304,9 @@ Clicking **End While** starts execution immediately. KaneAI re‑evaluates the c
 
 Once a While Loop has been finalized, KaneAI runs it inline in the Playground. Each iteration evaluates the condition, runs the body steps in order if the condition is true, and then re‑evaluates. Execution finishes the moment the condition becomes false or the safety cap is reached.
 
-**While the loop is running**, the block header shows the current iteration so you can follow progress as it happens. A **Pause While** control is available during execution, which you can use to interrupt a run and inspect intermediate state.
+A While Loop executes as a single unit. Steps inside the body have no individual run control — to run the loop again later, use the **Run block** control on the block header, which evaluates the condition and runs the loop to completion. A run range that passes over the loop runs the whole loop in sequence. See [Blocks run as a unit](/support/docs/kaneai-authoring-session/#blocks-run-as-a-unit).
+
+**While the loop is running**, the session is in the **Running** state: the step list is read‑only and the application view is covered. The block header shows the current iteration so you can follow progress as it happens. A **Pause While** control is available during execution, which you can use to interrupt a run and inspect intermediate state.
 
 <img loading="lazy" src={require('../assets/images/kane-ai/features/while-loops/while-loop-running.png').default} alt="While Loop executing with the current iteration shown in the block header" className="doc_img"/>
 
@@ -290,7 +406,7 @@ Keep these tips in mind when building loops:
 
 Once a While Loop has been finalized, you can still change it. The loop itself stays in sync automatically.
 
-- **Add, remove, or reorder body steps.** Use the edit instruction action on any step inside the loop; the loop updates automatically to reflect the change.
+- **Add, remove, or reorder body steps.** Use the edit instruction action on any step inside the loop; the loop updates automatically to reflect the change. Editing, duplicating, and deleting steps is available while the session is **Paused**.
 - **Change the condition.** Edit the While Loop step directly. The new condition applies on the next test run.
 - **Finalize later.** If you closed the authoring view before clicking **End While**, the loop remains unfinalized. Re‑open the test, add the remaining body steps, and click **End While** when ready.
 - **Loops inside modules.** When a While Loop is part of a module, any change to the loop condition or body creates a new module version. Other tests using that module stay on the version they already reference until they accept the new one. In the Classic experience, the loop is read-only on the module's Overview tab. Make changes from the test case the module was authored from, and modules containing While Loops cannot be added to manual test cases in Test Manager.
@@ -305,6 +421,8 @@ The following nesting patterns are **not supported**:
 - A While Loop directly inside another While Loop.
 - A While Loop directly inside a conditional branch (If, Else‑If, or Else).
 
+These are refused at insert time: if the cursor is inside a conditional branch or another loop body, adding a While Loop is blocked with an explanation rather than creating an unsupported structure.
+
 ## Limitations
 ***
 
@@ -316,9 +434,11 @@ Keep these limitations in mind:
 - **While Loops cannot live inside conditional branches.** A While Loop cannot be placed inside an If / Else branch.
 - **No Break / Continue commands.** There is no way to exit a loop early or skip to the next iteration; structure your condition to terminate naturally.
 - **Natural language cannot create a loop.** Phrases like "repeat this 10 times" or "while the spinner is visible, do X" will not create a loop. You must use the slash command and select **While Loop**. KaneAI surfaces this as the `WHILE_NOT_SUPPORTED_VIA_NL` error.
-- **New While Loops cannot be created while a test is paused.** The **/** slash command menu and the **+ Add step** option do not offer **Add While Loop** in the Draft state. A While Loop that already exists in the test can still be edited while paused.
+- **New While Loops cannot be created while the session is Paused.** The **/** slash command menu does not offer **Add While Loop** in that state. A While Loop that already exists in the test can still be edited while paused.
 - **Both operands in a condition cannot be parameters at the same time.** At least one side must be a runtime‑updated value. See `BOTH_OPERANDS_AS_PARAMETERS` in [Error Messages and Troubleshooting](#error-messages-and-troubleshooting).
 - **Local variables must be defined inside the block.** If a local variable referenced inside a While block was created outside the block, KaneAI shows an error when you click **End While**.
+- **Body steps cannot be run individually.** The loop executes as a whole through the **Run block** control on the block header.
+- **Queued steps in a loop body count as unverified.** Unlike steps in a non‑matching conditional branch, the loop body is on the main path, so a step added there but never run keeps the test out of the Ready save state.
 
 ## Error Messages and Troubleshooting
 ***
@@ -419,6 +539,11 @@ Early exit (Break) and skip‑to‑next‑iteration (Continue) are not supported
 ***
 
 No. Nested loops are not supported, and a While Loop cannot be placed inside an If / Else branch either. A While Loop **can** contain conditional (If / Else) blocks in its body. See [Nesting Rules](#nesting-rules). If you need multi‑level iteration, split the logic across multiple test cases or use a single loop combined with JavaScript for inner bookkeeping.
+
+### Running One Step Inside a Loop
+***
+
+No. A While Loop executes as a whole through the **Run block** control on the block header. You can still insert a step anywhere in the body — run the block to verify it, and the step runs in real loop context. Steps inside a [module](/support/docs/kane-ai-modules/) are the exception and do run individually.
 
 ### When the Condition Is False on the First Check
 ***

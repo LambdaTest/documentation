@@ -31,6 +31,8 @@ import NewTag from '../src/component/newTag';
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 
+import VerifiedTag from '@site/src/component/verifiedTag';
+
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
@@ -58,6 +60,320 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       })
     }}
 ></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/smartui-cli-figma/"
+    },
+    "headline": "Getting started with TestMu AI's SmartUI Figma CLI",
+    "description": "In this documentation, learn how to perform Visual Testing of your Figma files using command line interface using SmartUI CLI.",
+    "url": "https://www.testmuai.com/support/docs/smartui-cli-figma/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "SmartUI",
+    "keywords": [
+      "Visual Regression",
+      "Visual Regression Testing Guide",
+      "Visual Regression Test Automation"
+    ],
+    "proficiencyLevel": "Beginner",
+    "dependencies": "Basic understanding of Command Line Interface is required.; Basic understanding of Figma file structuring is required.; Login to TestMu AI SmartUI with your credentials..",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Install required NPM modules for TestMu AI SmartUI CLI globally or in your project",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "npm install -g @lambdatest/smartui-cli"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 1: Install the Dependencies",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "npm install @lambdatest/smartui-cli"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 2: Create the design info file",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "smartui config:create-figma designs.json"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 2: Create the design info file",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n### **Step 3:** Configure your Project Token and Figma Token\n\n1. Setup your project token shown in the **SmartUI** app after creating your project.\n\n<Tabs className='docs__val' groupId='language'>\n<TabItem value='MacOS/Linux' label='MacOS/Linux' default>\n\n```bash\nexport PROJECT_TOKEN=\"123456#1234abcd-****-****-****-************\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 3: Configure your Project Token and Figma Token",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "set PROJECT_TOKEN=\"123456#1234abcd-****-****-****-************\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 3: Configure your Project Token and Figma Token",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "PowerShell",
+        "text": "$env:PROJECT_TOKEN=\"123456#1234abcd-****-****-****-************\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 7",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "export FIGMA_TOKEN=\"123456#1234abcd-****-****-****-************\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 8",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "set FIGMA_TOKEN=\"123456#1234abcd-****-****-****-************\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 9",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "PowerShell",
+        "text": "$env:FIGMA_TOKEN=\"123456#1234abcd-****-****-****-************\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 4: Configure your TestMu AI Credentials",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "export LT_USERNAME=\"YOUR_USERNAME\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 4: Configure your TestMu AI Credentials",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "set LT_USERNAME=\"YOUR_USERNAME\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 4: Configure your TestMu AI Credentials",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "PowerShell",
+        "text": "$env:LT_USERNAME=\"YOUR_USERNAME\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 5: Uploading the Figma files on SmartUI Cloud using CLI",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "npx smartui upload-figma designs.json"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Advanced options for baseline management",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "npx smartui upload-figma designs.json --markBaseline"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Advanced options for baseline management",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "npx smartui upload-figma designs.json --buildName \"<Build_Name>\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Advanced options for baseline management",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "npx smartui upload-figma designs.json --buildName \"<Build_Name>\" --markBaseline"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Best Practices",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "   npx smartui upload-figma designs.json --buildName \"v1.0.0\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Figma-uploaded screenshots automatically have .png appended (e.g., homepage.png), so your SDK screenshots must match",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "// \u274c Wrong - will not match Figma screenshot\nsmartuiSnapshot(driver, \"homepage\");\n\n// \u2705 Correct - matches Figma screenshot name\nsmartuiSnapshot(driver, \"homepage.png\");"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 19",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "// Java\nSmartUISnapshot.smartuiSnapshot(driver, \"homepage.png\");"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 20",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "// JavaScript\nawait smartuiSnapshot(page, \"homepage.png\");"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 21",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "// JavaScript\ncy.smartuiSnapshot(\"homepage.png\");"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Setup with Continuous Integration (CI)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "steps:\n  - name: Running SmartUI Figma CLI Tests\n    run: |\n      npm install @lambdatest/smartui-cli\n      npx playwright install-deps\n      npx smartui upload-figma designs.json"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Figma-uploaded screenshots automatically have .png appended (e.g., homepage.png), so your SDK screenshots must match",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "// \u274c Wrong - will not match Figma screenshot\nsmartuiSnapshot(driver, \"homepage\");\n\n// \u2705 Correct - matches Figma screenshot name\nsmartuiSnapshot(driver, \"homepage.png\");"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 24",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "// Java\nSmartUISnapshot.smartuiSnapshot(driver, \"homepage.png\");"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 25",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "// JavaScript\nawait smartuiSnapshot(page, \"homepage.png\");"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 26",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "// JavaScript\ncy.smartuiSnapshot(\"homepage.png\");"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Setup with Continuous Integration (CI)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "steps:\n  - name: Running SmartUI Figma CLI Tests\n    run: |\n      npm install @lambdatest/smartui-cli\n      npx playwright install-deps\n      npx smartui upload-figma designs.json"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Troubleshooting",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "   echo $FIGMA_TOKEN"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Solutions",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "   echo $PROJECT_TOKEN"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Steps to run your first test",
+      "description": "In this documentation, learn how to perform Visual Testing of your Figma files using command line interface using SmartUI CLI.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Install the Dependencies",
+          "text": "Install required NPM modules for TestMu AI SmartUI CLI globally or in your project: Global Installation (Recommended): Local Installation: If you face any problems executing tests with SmartUI-CLI versions >= v4.x.x, upgrade your Node.js version to v20.3 or above.",
+          "url": "https://www.testmuai.com/support/docs/smartui-cli-figma/#step-1-install-the-dependencies"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Create the design info file",
+          "text": "Once, the designs file will be created, you will be seeing the sample pre-filled configuration in the designs.json file:",
+          "url": "https://www.testmuai.com/support/docs/smartui-cli-figma/#step-2-create-the-design-info-file"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Configure your Project Token and Figma Token",
+          "text": "Setup your project token shown in the SmartUI app after creating your project. Setup your personal access token for Figma to authenticate Figma with SmartUI.",
+          "url": "https://www.testmuai.com/support/docs/smartui-cli-figma/#step-3-configure-your-project-token-and-figma-token"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Step 4: Configure your TestMu AI Credentials",
+          "text": "Please read the following table for more information about the configuration file:",
+          "url": "https://www.testmuai.com/support/docs/smartui-cli-figma/#step-4-configure-your-testmu-ai-credentials"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 5,
+          "name": "Step 5: Uploading the Figma files on SmartUI Cloud using CLI",
+          "text": "You can now execute tests for Visual Testing for Figma objects using the following options:.",
+          "url": "https://www.testmuai.com/support/docs/smartui-cli-figma/#step-5-uploading-the-figma-files-on-smartui-cloud-using-cli"
+        }
+      ]
+    }
+  ]) }}
+/>
+
+
 
 # SmartUI Figma Testing
 
@@ -120,11 +436,17 @@ The first step is to create a project with the application in which we will comb
 Install required NPM modules for `TestMu AI SmartUI CLI` globally or in your project:
 
 **Global Installation (Recommended):**
+
+<VerifiedTag value="Verified" />
+
 ```bash
 npm install -g @lambdatest/smartui-cli
 ```
 
 **Local Installation:**
+
+<VerifiedTag value="Verified" />
+
 ```bash
 npm install @lambdatest/smartui-cli
 ```
@@ -139,6 +461,8 @@ If you face any problems executing tests with SmartUI-CLI `versions >= v4.x.x`, 
 smartui config:create-figma designs.json
 ```
 Once, the `designs` file will be created, you will be seeing the sample pre-filled configuration in the `designs.json` file:
+
+<VerifiedTag value="Verified" />
 
 ```json title="/smartui-cli-figma-project/designs.json"
 {
@@ -167,6 +491,8 @@ Once, the `designs` file will be created, you will be seeing the sample pre-fill
 <Tabs className='docs__val' groupId='language'>
 <TabItem value='MacOS/Linux' label='MacOS/Linux' default>
 
+<VerifiedTag value="Verified" />
+
 ```bash
 export PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
 ```
@@ -174,12 +500,16 @@ export PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
 </TabItem>
 <TabItem value='Windows' label='Windows - CMD'>
 
+<VerifiedTag value="Verified" />
+
 ```bash
 set PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
 ```
 
 </TabItem>
 <TabItem value='PowerShell' label='PowerShell'>
+
+<VerifiedTag value="Verified" />
 
 ```powershell
 $env:PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
@@ -193,6 +523,8 @@ $env:PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
 <Tabs className='docs__val' groupId='language'>
 <TabItem value='MacOS/Linux-1' label='MacOS/Linux' default>
 
+<VerifiedTag value="Verified" />
+
 ```bash
 export FIGMA_TOKEN="123456#1234abcd-****-****-****-************"
 ```
@@ -200,12 +532,16 @@ export FIGMA_TOKEN="123456#1234abcd-****-****-****-************"
 </TabItem>
 <TabItem value="Windows-1" label='Windows - CMD'>
 
+<VerifiedTag value="Verified" />
+
 ```bash
 set FIGMA_TOKEN="123456#1234abcd-****-****-****-************"
 ```
 
 </TabItem>
 <TabItem value="PowerShell-1" label='PowerShell'>
+
+<VerifiedTag value="Verified" />
 
 ```powershell
 $env:FIGMA_TOKEN="123456#1234abcd-****-****-****-************"
@@ -219,6 +555,8 @@ $env:FIGMA_TOKEN="123456#1234abcd-****-****-****-************"
 <Tabs className='docs__val' groupId='language'>
 <TabItem value='MacOS/Linux-2' label='MacOS/Linux' default>
 
+<VerifiedTag value="Verified" />
+
 ```bash
 export LT_USERNAME="YOUR_USERNAME"
 ```
@@ -226,12 +564,16 @@ export LT_USERNAME="YOUR_USERNAME"
 </TabItem>
 <TabItem value="Windows-2" label='Windows - CMD'>
 
+<VerifiedTag value="Verified" />
+
 ```bash
 set LT_USERNAME="YOUR_USERNAME"
 ```
 
 </TabItem>
 <TabItem value="PowerShell-2" label='PowerShell'>
+
+<VerifiedTag value="Verified" />
 
 ```powershell
 $env:LT_USERNAME="YOUR_USERNAME"
@@ -256,6 +598,8 @@ Please read the following table for more information about the configuration fil
 
 You can now execute tests for `Visual Testing for Figma objects` using the following options:.
 
+<VerifiedTag value="Verified" />
+
 ```bash
 npx smartui upload-figma designs.json
 ```
@@ -264,16 +608,22 @@ npx smartui upload-figma designs.json
 
 1. `markBaseline` - You can mark a specific build as a baseline through the runner command
 
+<VerifiedTag value="Verified" />
+
 ```bash
 npx smartui upload-figma designs.json --markBaseline
 ```
 2. `buildName` - You can add your custom build name to a build by running the following command
+
+<VerifiedTag value="Verified" />
 
 ```bash
 npx smartui upload-figma designs.json --buildName "<Build_Name>"
 ```
 
 <b> You can use these options in a nested way as well, as shown below </b>
+
+<VerifiedTag value="Verified" />
 
 ```bash
 npx smartui upload-figma designs.json --buildName "<Build_Name>" --markBaseline
@@ -292,6 +642,8 @@ You can add more screenshots in a build by specifying the particular build name 
 <TabItem value='build-names' label='Build Names' default>
 
 **Build Names**
+
+<VerifiedTag value="Verified" />
 
 ```bash
    npx smartui upload-figma designs.json --buildName "v1.0.0"
@@ -320,6 +672,9 @@ You can add more screenshots in a build by specifying the particular build name 
 Figma-uploaded screenshots automatically have `.png` appended (e.g., `homepage.png`), so your SDK screenshots must match:
 
 **In your SDK code:**
+
+<VerifiedTag value="Verified" />
+
 ```javascript
 // ❌ Wrong - will not match Figma screenshot
 smartuiSnapshot(driver, "homepage");
@@ -333,6 +688,8 @@ smartuiSnapshot(driver, "homepage.png");
 <Tabs className='docs__val' groupId='framework'>
 <TabItem value='selenium' label='Selenium' default>
 
+<VerifiedTag value="Verified" />
+
 ```java
 // Java
 SmartUISnapshot.smartuiSnapshot(driver, "homepage.png");
@@ -341,6 +698,8 @@ SmartUISnapshot.smartuiSnapshot(driver, "homepage.png");
 </TabItem>
 <TabItem value='playwright' label='Playwright'>
 
+<VerifiedTag value="Verified" />
+
 ```javascript
 // JavaScript
 await smartuiSnapshot(page, "homepage.png");
@@ -348,6 +707,8 @@ await smartuiSnapshot(page, "homepage.png");
 
 </TabItem>
 <TabItem value='cypress' label='Cypress'>
+
+<VerifiedTag value="Verified" />
 
 ```javascript
 // JavaScript
@@ -365,6 +726,8 @@ This ensures that Figma screenshots (e.g., `homepage.png`) match SDK screenshots
 ### Setup with Continuous Integration (CI)
 
 If you are using the Continuous Integration (CI) pipeline for your application and want to integrate `SmartUI Figma CLI` execution then the following are the steps needs to be added to your `.yaml` file:
+
+<VerifiedTag value="Verified" />
 
 ```yaml
 steps:
@@ -387,6 +750,8 @@ You can see the SmartUI dashboard to view the results. This will help you identi
 <TabItem value='verify-figma-token' label='Verify Figma Token' default>
 
 Verify Figma Token
+
+<VerifiedTag value="Verified" />
 
 ```bash
    echo $FIGMA_TOKEN
@@ -446,6 +811,8 @@ Check Build Names
 
 Verify Project Token
 
+<VerifiedTag value="Verified" />
+
 ```bash
    echo $PROJECT_TOKEN
    ```
@@ -488,11 +855,17 @@ The following steps will guide you in running your Figma-to-Web visual tests on 
 Install required NPM modules for `TestMu AI SmartUI CLI` globally or in your project:
 
 **Global Installation (Recommended):**
+
+<VerifiedTag value="Verified" />
+
 ```bash
 npm install -g @lambdatest/smartui-cli
 ```
 
 **Local Installation:**
+
+<VerifiedTag value="Verified" />
+
 ```bash
 npm install @lambdatest/smartui-cli
 ```
@@ -503,6 +876,8 @@ npm install @lambdatest/smartui-cli
 smartui config:create-figma-web designs.json
 ```
 Once, the `designs` file will be created, you will be seeing the sample pre-filled configuration in the `designs.json` file:
+
+<VerifiedTag value="Verified" />
 
 ```json title="/smartui-cli-figma-project/designs.json"
 {
@@ -552,6 +927,8 @@ Once, the `designs` file will be created, you will be seeing the sample pre-fill
 <Tabs className='docs__val' groupId='language'>
 <TabItem value='MacOS/Linux-web-1' label='MacOS/Linux' default>
 
+<VerifiedTag value="Verified" />
+
 ```bash
 export PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
 ```
@@ -559,12 +936,16 @@ export PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
 </TabItem>
 <TabItem value='Windows-web-1' label='Windows - CMD'>
 
+<VerifiedTag value="Verified" />
+
 ```bash
 set PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
 ```
 
 </TabItem>
 <TabItem value='PowerShell-web-1' label='PowerShell'>
+
+<VerifiedTag value="Verified" />
 
 ```powershell
 $env:PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
@@ -578,6 +959,8 @@ $env:PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
 <Tabs className='docs__val' groupId='language'>
 <TabItem value='MacOS/Linux-web-2' label='MacOS/Linux' default>
 
+<VerifiedTag value="Verified" />
+
 ```bash
 export FIGMA_TOKEN="123456#1234abcd-****-****-****-************"
 ```
@@ -585,12 +968,16 @@ export FIGMA_TOKEN="123456#1234abcd-****-****-****-************"
 </TabItem>
 <TabItem value="Windows-web-2" label='Windows - CMD'>
 
+<VerifiedTag value="Verified" />
+
 ```bash
 set FIGMA_TOKEN="123456#1234abcd-****-****-****-************"
 ```
 
 </TabItem>
 <TabItem value="PowerShell-web-2" label='PowerShell'>
+
+<VerifiedTag value="Verified" />
 
 ```powershell
 $env:FIGMA_TOKEN="123456#1234abcd-****-****-****-************"
@@ -604,6 +991,8 @@ $env:FIGMA_TOKEN="123456#1234abcd-****-****-****-************"
 <Tabs className='docs__val' groupId='language'>
 <TabItem value='MacOS/Linux-web-3' label='MacOS/Linux' default>
 
+<VerifiedTag value="Verified" />
+
 ```bash
 export LT_USERNAME="YOUR_USERNAME"
 ```
@@ -611,12 +1000,16 @@ export LT_USERNAME="YOUR_USERNAME"
 </TabItem>
 <TabItem value="Windows-web-3" label='Windows - CMD'>
 
+<VerifiedTag value="Verified" />
+
 ```bash
 set LT_USERNAME="YOUR_USERNAME"
 ```
 
 </TabItem>
 <TabItem value="PowerShell-web-3" label='PowerShell'>
+
+<VerifiedTag value="Verified" />
 
 ```powershell
 $env:LT_USERNAME="YOUR_USERNAME"
@@ -641,6 +1034,8 @@ Please read the following table for more information about the configuration fil
 
 You can now execute tests for `Visual Testing for Figma objects` using the following options:.
 
+<VerifiedTag value="Verified" />
+
 ```powershell
 npx smartui upload-figma-web designs.json
 ```
@@ -649,10 +1044,14 @@ npx smartui upload-figma-web designs.json
 
 1. Please clone the following sample GitHub repo (`https://github.com/LambdaTest/smartui-figma-web-cli-sample`).
 
+<VerifiedTag value="Verified" />
+
 ```bash
 git clone https://github.com/LambdaTest/smartui-figma-web-cli-sample
 ```
 2. Install the node modules using the command:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 npm i
@@ -664,6 +1063,8 @@ npm i
 <Tabs className='docs__val' groupId='language'>
 <TabItem value='MacOS/Linux-web-4' label='MacOS/Linux' default>
 
+<VerifiedTag value="Verified" />
+
 ```bash
 export PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
 ```
@@ -671,12 +1072,16 @@ export PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
 </TabItem>
 <TabItem value="Windows-web-4" label='Windows - CMD'>
 
+<VerifiedTag value="Verified" />
+
 ```bash
 set PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
 ```
 
 </TabItem>
 <TabItem value='PowerShell-web-4' label='PowerShell'>
+
+<VerifiedTag value="Verified" />
 
 ```powershell
 $env:PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
@@ -690,6 +1095,8 @@ $env:PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
 <Tabs className='docs__val' groupId='language'>
 <TabItem value='MacOS/Linux-web-5' label='MacOS/Linux' default>
 
+<VerifiedTag value="Verified" />
+
 ```bash
 export FIGMA_TOKEN="123456#1234abcd-****-****-****-************"
 ```
@@ -697,12 +1104,16 @@ export FIGMA_TOKEN="123456#1234abcd-****-****-****-************"
 </TabItem>
 <TabItem value="Windows-web-5" label='Windows - CMD'>
 
+<VerifiedTag value="Verified" />
+
 ```bash
 set FIGMA_TOKEN="123456#1234abcd-****-****-****-************"
 ```
 
 </TabItem>
 <TabItem value='PowerShell-web-5' label='PowerShell'>
+
+<VerifiedTag value="Verified" />
 
 ```powershell
 $env:FIGMA_TOKEN="123456#1234abcd-****-****-****-************"
@@ -712,6 +1123,9 @@ $env:FIGMA_TOKEN="123456#1234abcd-****-****-****-************"
 </Tabs>
 
 4. Create your figma baseline
+
+<VerifiedTag value="Verified" />
+
 ```bash
 npx smartui upload-figma-web designs.json --buildName=FigmaBaseline2
 ```
@@ -730,6 +1144,8 @@ npx smartui --config web-config.json exec --buildName=web-build -- node figma-we
 <TabItem value='build-names-web' label='Build Names' default>
 
 **Build Names**
+
+<VerifiedTag value="Verified" />
 
 ```bash
    npx smartui upload-figma-web designs.json --buildName "v1.0.0"
@@ -756,6 +1172,9 @@ npx smartui --config web-config.json exec --buildName=web-build -- node figma-we
 Figma-uploaded screenshots automatically have `.png` appended (e.g., `homepage.png`), so your SDK screenshots must match:
 
 **In your SDK code:**
+
+<VerifiedTag value="Verified" />
+
 ```javascript
 // ❌ Wrong - will not match Figma screenshot
 smartuiSnapshot(driver, "homepage");
@@ -769,6 +1188,8 @@ smartuiSnapshot(driver, "homepage.png");
 <Tabs className='docs__val' groupId='framework'>
 <TabItem value='selenium-web' label='Selenium' default>
 
+<VerifiedTag value="Verified" />
+
 ```java
 // Java
 SmartUISnapshot.smartuiSnapshot(driver, "homepage.png");
@@ -777,6 +1198,8 @@ SmartUISnapshot.smartuiSnapshot(driver, "homepage.png");
 </TabItem>
 <TabItem value='playwright-web' label='Playwright'>
 
+<VerifiedTag value="Verified" />
+
 ```javascript
 // JavaScript
 await smartuiSnapshot(page, "homepage.png");
@@ -784,6 +1207,8 @@ await smartuiSnapshot(page, "homepage.png");
 
 </TabItem>
 <TabItem value='cypress-web' label='Cypress'>
+
+<VerifiedTag value="Verified" />
 
 ```javascript
 // JavaScript
@@ -794,6 +1219,9 @@ cy.smartuiSnapshot("homepage.png");
 </Tabs>
 
 **Configuration Example:**
+
+<VerifiedTag value="Verified" />
+
 ```json
 {
   "figma": {
@@ -819,6 +1247,9 @@ This ensures that Figma screenshots (e.g., `homepage.png`) match SDK screenshots
 Figma-uploaded screenshots automatically have `.png` appended (e.g., `homepage.png`), so your SDK screenshots must match:
 
 **In your SDK code:**
+
+<VerifiedTag value="Verified" />
+
 ```javascript
 // ❌ Wrong - will not match Figma screenshot
 smartuiSnapshot(driver, "homepage");
@@ -832,6 +1263,8 @@ smartuiSnapshot(driver, "homepage.png");
 <Tabs className='docs__val' groupId='framework'>
 <TabItem value='selenium-web-1' label='Selenium' default>
 
+<VerifiedTag value="Verified" />
+
 ```java
 // Java
 SmartUISnapshot.smartuiSnapshot(driver, "homepage.png");
@@ -840,6 +1273,8 @@ SmartUISnapshot.smartuiSnapshot(driver, "homepage.png");
 </TabItem>
 <TabItem value='playwright-web-1' label='Playwright'>
 
+<VerifiedTag value="Verified" />
+
 ```javascript
 // JavaScript
 await smartuiSnapshot(page, "homepage.png");
@@ -847,6 +1282,8 @@ await smartuiSnapshot(page, "homepage.png");
 
 </TabItem>
 <TabItem value='cypress-web-1' label='Cypress'>
+
+<VerifiedTag value="Verified" />
 
 ```javascript
 // JavaScript
@@ -857,6 +1294,9 @@ cy.smartuiSnapshot("homepage.png");
 </Tabs>
 
 **Configuration Example:**
+
+<VerifiedTag value="Verified" />
+
 ```json
 {
   "figma": {
@@ -882,6 +1322,8 @@ This ensures that Figma screenshots (e.g., `homepage.png`) match SDK screenshots
 <TabItem value='verify-figma-token-web' label='Verify Figma Token' default>
 
 Verify Figma Token
+
+<VerifiedTag value="Verified" />
 
 ```bash
    echo $FIGMA_TOKEN
@@ -951,6 +1393,8 @@ Browser-Specific Issues
 <TabItem value='verify-project-token-web' label='Verify Project Token' >
 
 Verify Project Token
+
+<VerifiedTag value="Verified" />
 
 ```bash
    echo $PROJECT_TOKEN
@@ -1039,6 +1483,8 @@ Note down both the **project name** and the **project token**. You need the toke
 
 #### 2. Install SmartUI CLI
 
+<VerifiedTag value="Verified" />
+
 ```bash
 npm install -g @lambdatest/smartui-cli
 ```
@@ -1047,6 +1493,8 @@ npm install -g @lambdatest/smartui-cli
 
 Run the following to create your initial design file:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 npx smartui config:create-figma-app designs.json
 ```
@@ -1054,6 +1502,8 @@ npx smartui config:create-figma-app designs.json
 The file must have a `.json` extension, and the command refuses to overwrite a file that already exists.
 
 ##### Sample `designs.json`
+
+<VerifiedTag value="Verified" />
 
 ```json title="designs.json"
 {
@@ -1103,6 +1553,8 @@ Set all four values before running the upload.
 <Tabs className='docs__val' groupId='language'>
 <TabItem value='MacOS/Linux-app-1' label='MacOS/Linux' default>
 
+<VerifiedTag value="Verified" />
+
 ```bash
 export PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
 export FIGMA_TOKEN="figd_****************************************"
@@ -1113,6 +1565,8 @@ export LT_ACCESS_KEY="YOUR_ACCESS_KEY"
 </TabItem>
 <TabItem value="Windows-app-1" label='Windows - CMD'>
 
+<VerifiedTag value="Verified" />
+
 ```bash
 set PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
 set FIGMA_TOKEN="figd_****************************************"
@@ -1122,6 +1576,8 @@ set LT_ACCESS_KEY="YOUR_ACCESS_KEY"
 
 </TabItem>
 <TabItem value="PowerShell-app-1" label='PowerShell'>
+
+<VerifiedTag value="Verified" />
 
 ```powershell
 $env:PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
@@ -1134,6 +1590,8 @@ $env:LT_ACCESS_KEY="YOUR_ACCESS_KEY"
 </Tabs>
 
 #### 5. Upload your Figma designs as the baseline
+
+<VerifiedTag value="Verified" />
 
 ```bash
 npx smartui upload-figma-app designs.json --buildName "figma-baseline" --markBaseline
@@ -1151,6 +1609,8 @@ Uploaded frames are stored with a `.png` suffix. A frame named `homepage` in `sc
 
 ##### Example
 
+<VerifiedTag value="Verified" />
+
 ```bash
 npx smartui upload-figma-app designs.json --buildName "v1.0.0" --markBaseline --fetch-results results.json
 ```
@@ -1158,6 +1618,8 @@ npx smartui upload-figma-app designs.json --buildName "v1.0.0" --markBaseline --
 #### 6. Upload your app
 
 Your Appium test needs an app that lives on the real device cloud. Upload your `.apk` or `.ipa` and note the `app_url` that is returned.
+
+<VerifiedTag value="Verified" />
 
 ```bash
 curl -u "$LT_USERNAME:$LT_ACCESS_KEY" \
@@ -1171,6 +1633,8 @@ The response contains an `app_url` field, already in `lt://APP...` form, which i
 #### 7. Configure your Appium capabilities
 
 This is the half that produces the app screenshots. Use the same device here as in `designs.json` so both sides are captured at the same viewport.
+
+<VerifiedTag value="Verified" />
 
 ```javascript title="NodeJS example"
 let capabilities = {
@@ -1221,6 +1685,8 @@ Add the screenshot hook after the point in your script where the screen you care
 
 **Critical**: Figma frames are stored with `.png` appended, so your app screenshot names must include the extension to line up with them.
 
+<VerifiedTag value="Verified" />
+
 ```javascript
 // ❌ Wrong, will not match the Figma frame
 await driver.execute("smartui.takeScreenshot=homepage");
@@ -1233,6 +1699,8 @@ await driver.execute("smartui.takeScreenshot=homepage.png");
 
 When you pass a config object, the screenshot name key is `screenshotName`. Passing `name` throws
 `Error response status: 1` and the test fails.
+
+<VerifiedTag value="Verified" />
 
 ```javascript
 // ❌ Wrong, throws
@@ -1247,6 +1715,8 @@ await driver.execute("smartui.takeScreenshot", {screenshotName: "homepage.png"})
 <Tabs className='docs__val' groupId='framework'>
 <TabItem value='appium' label='Appium NodeJS' default>
 
+<VerifiedTag value="Verified" />
+
 ```javascript
 // simple form
 await driver.execute("smartui.takeScreenshot=homepage.png");
@@ -1258,6 +1728,8 @@ await driver.execute("smartui.takeScreenshot", {screenshotName: "homepage.png"})
 </TabItem>
 <TabItem value='appium-java' label='Appium Java'>
 
+<VerifiedTag value="Verified" />
+
 ```java
 // the Selenium interface is JavascriptExecutor, with a lower case s in script
 ((JavascriptExecutor) driver).executeScript("smartui.takeScreenshot=homepage.png");
@@ -1265,6 +1737,8 @@ await driver.execute("smartui.takeScreenshot", {screenshotName: "homepage.png"})
 
 </TabItem>
 <TabItem value='appium-python' label='Appium Python'>
+
+<VerifiedTag value="Verified" />
 
 ```python
 driver.execute_script("smartui.takeScreenshot=homepage.png")
@@ -1274,6 +1748,8 @@ driver.execute_script("smartui.takeScreenshot=homepage.png")
 </Tabs>
 
 Run your test suite as you normally would.
+
+<VerifiedTag value="Verified" />
 
 ```bash
 npm i && node your_test_script.js
@@ -1303,6 +1779,8 @@ The device in `designs.json` and the device in your capabilities should also mat
 **Build Names**
 
 Give each run a build name you can trace back to a release or a commit.
+
+<VerifiedTag value="Verified" />
 
 ```bash
 npx smartui upload-figma-app designs.json --buildName "v1.0.0"
@@ -1349,6 +1827,8 @@ npx smartui upload-figma-app designs.json --buildName "v1.0.0"
 <TabItem value='verify-env-vars' label='Verify Environment Variables' default>
 
 Check that all four values are set in the shell you are running from.
+
+<VerifiedTag value="Verified" />
 
 ```bash
 echo $PROJECT_TOKEN

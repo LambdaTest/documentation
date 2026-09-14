@@ -41,6 +41,120 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/kane-ai-using-parameters/"
+    },
+    "headline": "KaneAI - Using Parameters",
+    "description": "Learn how to use parameters in the KaneAI test cases",
+    "url": "https://www.testmuai.com/support/docs/kane-ai-using-parameters/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "KaneAI",
+    "keywords": [
+      "testmu ai automation",
+      "testmu ai kaneai",
+      "kaneai scroll elements"
+    ],
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "dateModified": "2026-09-09T20:20:47+05:30"
+  }) }}
+/>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Using parameters for test runs",
+      "description": "Learn how to use parameters in the KaneAI test cases",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Navigate to Test Project",
+          "text": "Open the Test Project dashboard and go to the Test Run section.",
+          "url": "https://www.testmuai.com/support/docs/kane-ai-using-parameters/#step-1-navigate-to-test-project"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Create a New Test Run",
+          "text": "Click Create New Test Run and name it (e.g., parameters test run). Select the KaneAI-generated test cases. Optionally, add a description or relevant tags. Click Create Test Run.",
+          "url": "https://www.testmuai.com/support/docs/kane-ai-using-parameters/#step-2-create-a-new-test-run"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Add Test Cases and Data Sets",
+          "text": "Select and add the desired test cases to the run. Specify configurations (e.g., Windows 10 Chrome). Attach the required data sets for the test run.",
+          "url": "https://www.testmuai.com/support/docs/kane-ai-using-parameters/#step-3-add-test-cases-and-data-sets"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Step 4: Apply Data Sets",
+          "text": "Ensure the data sets containing necessary parameters are pre-filtered and accessible. Click Apply to confirm the Dataset selection.",
+          "url": "https://www.testmuai.com/support/docs/kane-ai-using-parameters/#step-4-apply-data-sets"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 5,
+          "name": "Step 5: Save and Prepare for Execution",
+          "text": "Save the test run with the selected parameters and Datasets. The system will create test instances ready for execution in a hybrid environment.",
+          "url": "https://www.testmuai.com/support/docs/kane-ai-using-parameters/#step-5-save-and-prepare-for-execution"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 6,
+          "name": "Step 6: Execute Tests with Parameters",
+          "text": "Utilize the parameters to run your test cases with different data sets and inputs. You can manage and monitor execution using the TestMu AI Test Manager interface.",
+          "url": "https://www.testmuai.com/support/docs/kane-ai-using-parameters/#step-6-execute-tests-with-parameters"
+        }
+      ]
+    }
+  ]) }}
+/>
+
+
+
 # How to Use Parameters With KaneAI
 ***
 
@@ -94,7 +208,7 @@ Reference a parameter using **dollar-curly braces syntax** (e.g.,`${phone_number
 ## Parameterize a Manual Interaction Step
 ***
 
-Convert a hard-coded value in a Manual Interaction step into a parameter directly, without deleting or re-recording the step. This flow works on both **Desktop** and **Mobile App** Manual Interaction sessions.
+Convert a hard-coded value in a Manual Interaction step into a parameter directly, without deleting or re-recording the step. This flow works on both **Desktop** and **Mobile App** sessions, and works while the session is **Paused**, where step editing is available.
 
 1. Open the recorded Manual Interaction step.
 2. **Select the portion** of the instruction text you want to parameterize (for example, highlight `test.com`).

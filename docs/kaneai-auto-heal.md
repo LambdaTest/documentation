@@ -50,13 +50,71 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/kaneai-auto-heal/"
+    },
+    "headline": "Auto-Heal for Automation Scripts in KaneAI with HyperExecute",
+    "description": "This documentation will help you to understand how auto-healing works on KaneAI",
+    "url": "https://www.testmuai.com/support/docs/kaneai-auto-heal/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "KaneAI",
+    "keywords": [
+      "auto-heal",
+      "locators",
+      "kane ai"
+    ],
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "dateModified": "2026-09-09T20:26:38+05:30"
+  }) }}
+/>
+
+
 # Auto-Heal in KaneAI
 ***
 
 Auto-Heal automatically repairs broken element locators (IDs, XPaths, CSS selectors) at runtime, so your KaneAI-generated tests keep passing when the application UI changes.
 
 :::note Auto-Heal is not Adaptive Heal
-Auto-Heal repairs a broken **element locator** at runtime and creates no version. [Adaptive Heal](/support/docs/kaneai-healing-and-dynamic-test/#adaptive-heal) repairs the **step** and records the change as a version you can approve or decline. The two are separate features.
+Auto-Heal repairs a broken **element locator** at runtime and creates no version. [Adaptive Heal](/support/docs/kaneai-healing-and-dynamic-test/#adaptive-heal) re-authors the whole **objective** that contains the failing step, and every objective after it. It runs only when an objective fails to replay, and records the change as a version you can approve or decline. The two are separate features.
 :::
 
 Instead of failing the test the moment a locator breaks, KaneAI finds a new locator at runtime by re-using the original natural language instruction that generated the step. KaneAI generates these scripts across multiple languages and frameworks from natural language instructions, and Auto-Heal adds a runtime reliability layer on top.

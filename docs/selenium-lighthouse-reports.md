@@ -20,6 +20,8 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import CookieTrackingLogin, { CookieTrackingSignup } from '@site/src/component/CookieTracking';
 
 
+import VerifiedTag from '@site/src/component/verifiedTag';
+
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
        "@context": "https://schema.org",
@@ -44,6 +46,74 @@ import CookieTrackingLogin, { CookieTrackingSignup } from '@site/src/component/C
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/generate-multiple-lighthouse-reports/"
+    },
+    "headline": "How to Generate Multiple Lighthouse Reports in Selenium",
+    "description": "Generate multiple Lighthouse reports in a single Selenium session using Lambda Hooks.",
+    "url": "https://www.testmuai.com/support/docs/generate-multiple-lighthouse-reports/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Web Automation",
+    "keywords": [
+      "generate multiple lighthouse reports selenium",
+      "lighthouse lambda hooks selenium",
+      "lighthouse performance report automation"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "To generate a Lighthouse report, use the following JavaScriptExecutor hook",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "JavascriptExecutor jse = (JavascriptExecutor)driver;\njse.executeScript(\"lambdatest_executor: {\\\"action\\\": \\\"generateLighthouseReport\\\", \\\"arguments\\\": {\\\"url\\\": \\\"<any url>\\\"}}\");"
+      }
+    ],
+    "dateModified": "2026-09-09T19:13:32+05:30"
+  }) }}
+/>
+
+
 # How to Generate Lighthouse Reports in Selenium on TestMu AI
 ---
 
@@ -54,6 +124,8 @@ TestMu AI lets you perform Selenium automation while generating multiple Lightho
 Use the JavaScriptExecutor hook to trigger a Lighthouse report for any URL during your test session.
 
 To generate a Lighthouse report, use the following *JavaScriptExecutor* hook:
+
+<VerifiedTag value="Verified" />
 
 ```java
 JavascriptExecutor jse = (JavascriptExecutor)driver;
@@ -112,6 +184,9 @@ Add the `performance` capability to your capabilities to enable Lighthouse metri
 You can add Lighthouse performance metrics for the website you want to test using the [Selenium automation capabilities](/support/docs/selenium-automation-capabilities/). Use the **`Performance`** feature of the **Capabilities Generator**.
 
 For example, if you are using **TestNG** for Selenium Automation on TestMu AI, include the **Lighthouse** performance feature with the below code snippet:
+
+<VerifiedTag value="Verified" />
+
 ```java
 DesiredCapabilities caps = new DesiredCapabilities();
 .
@@ -121,6 +196,9 @@ DesiredCapabilities caps = new DesiredCapabilities();
 caps.setCapability("performance", true);
 ```
 Below is the code snippet to trigger **Lighthouse** performance metrics on TestMu AI in **macOS Catalina** with **Google Chrome** browser version **86.0**.
+
+<VerifiedTag value="Verified" />
+
 ```java
 DesiredCapabilities caps = new DesiredCapabilities();
                     caps.setCapability("browser", "Chrome");

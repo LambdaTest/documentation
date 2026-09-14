@@ -23,6 +23,8 @@ canonical: https://www.testmuai.com/support/docs/run-selenium-ide-tests-on-testm
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 
+import VerifiedTag from '@site/src/component/verifiedTag';
+
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
        "@context": "https://schema.org",
@@ -52,6 +54,131 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/run-selenium-ide-tests-on-testmu-selenium-cloud-grid/"
+    },
+    "headline": "Guide to Run Selenium IDE Tests Using TestMu AI",
+    "description": "Guide on how to run Selenium IDE tests with TestMu AI online Selenium automation grid, for testing on 3000+ real browsers & browser versions hosted on TestMu AI cloud servers.",
+    "url": "https://www.testmuai.com/support/docs/run-selenium-ide-tests-on-testmu-selenium-cloud-grid/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Integration",
+    "keywords": [
+      "lamdatest",
+      "selenium ide",
+      "selenium ide testmu ai"
+    ],
+    "proficiencyLevel": "Beginner",
+    "dependencies": "Node.js programming language (version 8 or 10).; NPM or Node.js Package Manager.; Selenium IDE Plugin, for either Google Chrome and Mozilla Firefox.; Selenium IDE (SIDE) Runner. You can download SIDE runner using below code:; You also need your TestMu AI authentication credentials, which includes your TestMu AI username, and access key. These will be set up as the Secrets for configuring the pipeline. To get your Username and Access Key, go to your TestMu AI automation dashboard and click on the \"key\" icon left to the help button, on the top right corner..",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Prerequisites",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "    npm install -g selenium-side-runner"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Executing Selenium IDE Tests on TestMu AI Selenium Cloud Grid",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "        capabilities = {\n                \"platform\" : \"Windows 10\",\n                \"browserName\" : \"Chrome\",\n                \"version\" : \"72.0\"\n        }"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Executing Selenium IDE Tests on TestMu AI Selenium Cloud Grid",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "    In the string format, it will be represented as: **\"browserName='chrome' version='72.0' platform='Windows 10'\"**"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Executing Selenium IDE Tests on TestMu AI Selenium Cloud Grid",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "    https://user-name:access-key@hub.lambdatest.com/wd/hub"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Executing Selenium IDE Tests on TestMu AI Selenium Cloud Grid",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "selenium-side-runner --server <lambdatest grid=\"\" url=\"\"> --capabilities <\/lambdatest>"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 6",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": " selenium-side-runner --w <num of=\"\" parallel=\"\" processes=\"\">--server https://user-name:access-key@hub.lambdatest.com/wd/hub<\/num> "
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 7",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "selenium-side-runner --max-workers <num of=\"\" parallel=\"\" processes=\"\">--server https://user-name:access-key@hub.lambdatest.com/wd/hub<\/num>"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 8",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "selenium-side-runner -w 4 \"LambdaTest-IDE.side\" --server https://user-name:acces-key@hub.lambdatest.com/wd/hub -c \"browserName='chrome' version='72.0' platform='Windows 10'\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "For example",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "selenium-side-runner --params \"a='example-value' a.b='another example-value' a.b.c=[1,2,3]\" "
+      }
+    ],
+    "dateModified": "2026-09-09T19:13:32+05:30"
+  }) }}
+/>
+
+
 # Run Selenium IDE Tests with <BrandName /> Selenium Grid
 * * *
 [Selenium IDE](https://www.testmuai.com/blog/selenium-ide-what-is-it-why-is-it-must-for-every-qa/) is one of the most popular record and playback tool for testing which is widely used for automated browser testing. The Selenium IDE is a very easy-to-use solution for getting started with automation testing. It also provides instant feedback and has cross-browser and operating system compatibility, with the help of Selenium IDE (SIDE) Runner.
@@ -66,6 +193,8 @@ In this document, we will see how to run Selenium IDE tests on <BrandName /> clo
 *   [NPM or Node.js Package Manager](https://www.npmjs.com/get-npm).
 *   Selenium IDE Plugin, for either [Google Chrome](https://chrome.google.com/webstore/detail/selenium-ide/mooikfkahbdckldjjndioackbalphokd?hl=en) and [Mozilla Firefox](https://addons.mozilla.org/en-US/firefox/addon/selenium-ide/).
 *   Selenium IDE (SIDE) Runner. You can download SIDE runner using below code:
+
+<VerifiedTag value="Verified" />
 
 ```javascript
     npm install -g selenium-side-runner
@@ -97,6 +226,9 @@ We have successfully activated Parallel Testing in Selenium IDE. Now we can exec
 1.  **Set the [Selenium Automation Capabilities](/docs/selenium-automation-capabilities/).** For this article, we have set the Chrome browser (version 72.0) for Windows 10, to run our Selenium IDE tests.
 
     The [<BrandName /> Selenium Desired Capabilities Generator](https://www.testmuai.com/capabilities-generator/) is used to generate the capabilities. Below are the desired capabilities used in this article for the required test combination, provided in Python Language.
+
+<VerifiedTag value="Verified" />
+
 ```javascript
         capabilities = {
                 "platform" : "Windows 10",
@@ -104,6 +236,9 @@ We have successfully activated Parallel Testing in Selenium IDE. Now we can exec
                 "version" : "72.0"
         }
  ```       
+
+<VerifiedTag value="Verified" />
+
 ```javascript
     In the string format, it will be represented as: **"browserName='chrome' version='72.0' platform='Windows 10'"**
 ```
@@ -117,16 +252,23 @@ We have successfully activated Parallel Testing in Selenium IDE. Now we can exec
 
 3.  **Specify the desired capabilities along with the Grid URL.** Replace the desired capabilities and the Grid URL from the above steps in the below code:
 
+<VerifiedTag value="Verified" />
+
 ```javascript
 selenium-side-runner --server <lambdatest grid="" url=""> --capabilities </lambdatest>
 ```
 
 
 4.  **Mention the number of parallel processes to be executed at a time.** You can use any of the below syntax to specify the count of parallel processes to be executed at the above mentioned Grid URL:
+
+<VerifiedTag value="Verified" />
+
 ```javascript
  selenium-side-runner --w <num of="" parallel="" processes="">--server https://user-name:access-key@hub.lambdatest.com/wd/hub</num> 
 ```
 OR
+
+<VerifiedTag value="Verified" />
 
 ```javascript
 selenium-side-runner --max-workers <num of="" parallel="" processes="">--server https://user-name:access-key@hub.lambdatest.com/wd/hub</num>
@@ -135,6 +277,8 @@ selenium-side-runner --max-workers <num of="" parallel="" processes="">--server 
     For this article, we have set the number of parallel processes as '4'
 
 5.  Now we have all the components of the SIDE Runner command to execute the tests. So we will **run the Selenium IDE tests on <BrandName /> Selenium Cloud Grid.** Navigate to the directory where the .SIDE file is located (here it is located at "_<BrandName />-IDE.side_") and execute the below command in the terminal, after replacing the GRID URL:
+
+<VerifiedTag value="Verified" />
 
 ```javascript
 selenium-side-runner -w 4 "LambdaTest-IDE.side" --server https://user-name:acces-key@hub.lambdatest.com/wd/hub -c "browserName='chrome' version='72.0' platform='Windows 10'"
@@ -156,6 +300,8 @@ Selenium IDE provides the feature to overcome this as well. In order to run mult
 1.  Click over the three dot option of the test suite. Choose the setting option. <img loading="lazy" src={require('../assets/images/uploads/click-on-3-dots-1.webp').default} alt="test suite settings" width="1905" height="1025"  className="doc_img"/>
 2.  Then choose persist session option and submit. <img loading="lazy" src={require('../assets/images/uploads/select-persist-sessions-1.webp').default} alt="persist session" width="1905" height="1025" className="doc_img"/>
 3.  For the second query, you pass the variable value through the SIDE Runner using command line. You can use the SIDE Runner's "**param**" flag to pass the values. For example:
+
+<VerifiedTag value="Verified" />
 
 ```javascript
 selenium-side-runner --params "a='example-value' a.b='another example-value' a.b.c=[1,2,3]" 

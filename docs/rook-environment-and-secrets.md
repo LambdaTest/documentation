@@ -14,11 +14,120 @@ slug: rook-environment-and-secrets/
 canonical: https://www.testmuai.com/support/docs/rook-environment-and-secrets/
 ---
 
+import VerifiedTag from '@site/src/component/verifiedTag';
+import { BRAND_URL } from '@site/src/component/BrandName';
+
+<script type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify({
+       "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": BRAND_URL
+        },{
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Support",
+          "item": `${BRAND_URL}/support/docs/`
+        },{
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Rook Environment and Secrets",
+          "item": `${BRAND_URL}/support/docs/rook-environment-and-secrets/`
+        }]
+      })
+    }}
+></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/rook-environment-and-secrets/"
+    },
+    "headline": "Rook Environment and Secrets",
+    "description": "Store profile values locally, use environment references, isolate Rook state, and understand shared authentication behavior.",
+    "url": "https://www.testmuai.com/support/docs/rook-environment-and-secrets/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Agent Testing",
+    "keywords": [
+      "rook environment variables",
+      "rook secrets",
+      "rook home"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Manage Local Values",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "rook env list\nrook env set '{\"API_KEY\":\"sk-...\",\"BASE_URL\":\"https://staging.example.com\"}'\nrook env show API_KEY\nrook env rm API_KEY"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Profile Declaration",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "env:\n  - variable: API_KEY\n    purpose: read-only token for the staging support API\n  - variable: BASE_URL\n    purpose: environment to test"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Set ROOK_HOME when a process should not share credentials or local values",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "export ROOK_HOME=\"$RUNNER_TEMP/rook\"\nrook auth status"
+      }
+    ],
+    "dateModified": "2026-09-04T12:50:18+05:30"
+  }) }}
+/>
 # Rook Environment and Secrets
 
 Profiles contain references and operational descriptions. Secret values remain on the machine running Rook and are never included in project synchronization.
 
 ## Manage Local Values
+
+<VerifiedTag value="Verified" />
 
 ```bash
 rook env list
@@ -37,6 +146,8 @@ rook env rm API_KEY
 Values are stored in `~/.testmuai/rook/env.json`, outside the repository. A profile refers to a value as `${API_KEY}` and `rook profile show` displays the reference instead of expanding the secret.
 
 ## Profile Declaration
+
+<VerifiedTag value="Verified" />
 
 ```yaml
 env:
@@ -72,6 +183,8 @@ Rook never signs in silently.
 ## Isolate Rook State
 
 Set `ROOK_HOME` when a process should not share credentials or local values:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 export ROOK_HOME="$RUNNER_TEMP/rook"

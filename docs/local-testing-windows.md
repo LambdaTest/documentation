@@ -15,8 +15,9 @@ site_name: TestMu AI
 slug: local-testing-windows/
 canonical: https://www.testmuai.com/support/docs/local-testing-windows/
 ---
-import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -41,6 +42,94 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       })
     }}
 ></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/local-testing-windows/"
+    },
+    "headline": "Local Testing For Windows",
+    "description": "This documentation will help you perform Localhost testing on Windows OS via TestMu AI tunnel .Test private server URLs, locally hosted web-apps and websites on 3000+ real browsers on secure TestMu AI cloud infrastructure.",
+    "url": "https://www.testmuai.com/support/docs/local-testing-windows/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Testing Locally",
+    "keywords": [
+      "local testing",
+      "TestMu AI tunnel Features",
+      "local testing for windows"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "The command will look like",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "LT --user {user's login email} --key {user's access key} --tunnelName {user's tunnel name}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Configuring Connection With TestMu AI tunnel",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "LT --user example@lambdatest.com --key 123456789abcdefghijklmnopqrstuv --tunnelName LambdaTest"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Here is how the format of full command would look like",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "LT --user {user login email} --key {user key} --proxy-host {full proxy hostname} --proxy-user {proxy username} --proxy-pass {proxy password} --proxy-port {port number}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Example of full command",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "LT --user example@lambdatest.com --key 123asd123 --proxy-host abc.wonderproxy.com --proxy-user abcdefg --proxy-pass hijklmnop --proxy-port 12345"
+      }
+    ],
+    "dateModified": "2026-08-12T15:40:32+05:30"
+  }) }}
+/>
 
 # Local Testing For Windows
 
@@ -80,11 +169,16 @@ This zip file contains the tunnel binary which will help in establishing a secur
 <img loading="lazy" src={require('../assets/images/local-testing-windows/local-windows-2.webp').default} alt="extracting binary zip file" width="988" height="487" className="doc_img"/>
 
 **Step 3**:  Paste the copied string to execute the downloaded binary file. The command will look like:
+
+<VerifiedTag value="Verified" />
+
 ```
 LT --user {user's login email} --key {user's access key} --tunnelName {user's tunnel name}
 ```
 
 So for example, if your user login email is example@lambdatest.com, user key is 123456789abcdefghijklmnopqrstuv and tunnel name is <BrandName />, the command would be:
+
+<VerifiedTag value="Verified" />
 
 ```
 LT --user example@lambdatest.com --key 123456789abcdefghijklmnopqrstuv --tunnelName LambdaTest
@@ -204,11 +298,16 @@ Use the following arguments in your command line.
 
 Here is how the format of full command would look like:
 
+<VerifiedTag value="Verified" />
+
 ```
 LT --user {user login email} --key {user key} --proxy-host {full proxy hostname} --proxy-user {proxy username} --proxy-pass {proxy password} --proxy-port {port number}
 ```
 
 Example of full command:
+
+<VerifiedTag value="Verified" />
+
 ```
 LT --user example@lambdatest.com --key 123asd123 --proxy-host abc.wonderproxy.com --proxy-user abcdefg --proxy-pass hijklmnop --proxy-port 12345
 ```

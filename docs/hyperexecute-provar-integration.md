@@ -28,6 +28,8 @@ import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 
+import VerifiedTag from '@site/src/component/verifiedTag';
+
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
        "@context": "https://schema.org",
@@ -51,6 +53,165 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       })
     }}
 ></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/hyperexecute-provar-integration/"
+    },
+    "headline": "Integrate Provar with HyperExecute",
+    "description": "Integrate Provar with HyperExecute for Salesforce test automation. Configure, generate build files, set up licenses, and execute tests seamlessly.",
+    "url": "https://www.testmuai.com/support/docs/hyperexecute-provar-integration/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "HyperExecute",
+    "keywords": [
+      "TestMu AI HyperExecute",
+      "TestMu AI HyperExecute help",
+      "TestMu AI HyperExecute documentation"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 2: Generate and Update the build.xml file",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "<property name=\"provar.home\" value=\"../ProvarHome\"/>"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 2: Generate and Update the build.xml file",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "<property name=\"license.path\" value=\"../licenseHyperexeute\"/>\n<property name=\"unit.test\" value=\"*.testcase\" />"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 2: Generate and Update the build.xml file",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "<fileset id=\"testcases\" file=\"../${unit.test}\" ><\/fileset>"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 5: Configure YAML in your Test Suite",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "---\nversion: 0.2\nglobalTimeout: 150\n\nrunson: win\n\nruntime:\n  language: java\n  version: \"11\"\n\nautosplit: false\n\nconcurrency: 4\n\nretryOnFailure: true\nmaxRetries: 2\n\nenv:\n  ProvarSecretsPassword: <ENTER_YOUR_PASSWORD>\n\npre:\n  - ls\n\npost:\n  - cat ./ANT/.lambdatestBuild.xml\n\nframework:\n name: provar\n discoveryType: test\n additional_args:\n  discoveryLevel: file # required"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Run the below command in your terminal at the root folder of the project",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "./hyperexecute --config RELATIVE_PATH_OF_YOUR_YAML_FILE"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Integrate Provar with HyperExecute",
+      "description": "Integrate Provar with HyperExecute for Salesforce test automation. Configure, generate build files, set up licenses, and execute tests seamlessly.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Configure the Browser Provider Information",
+          "text": "Update the Desktop Settings to HyperExecuteGrid: ANY Chrome. Click on Test Settings >> Browser Providers section. Click on the + symbol to add a new Browser Provider. You will receive a pop-up to enter your configurations: Enter the Name for your new Browser Provider. Select the Type as TestMu AI Enter your TestMu AI User Name and Access Key Update all the browser options that you want to run your tests on. Update all the capabilities that you want to pass through the test. Click on Test Connection >> OK",
+          "url": "https://www.testmuai.com/support/docs/hyperexecute-provar-integration/#step-1-configure-the-browser-provider-information"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Generate and Update the build.xml file",
+          "text": "You have to generate the build.xml file using the Provar GUI. You can follow the steps mentioned in the documentation to generate your build file. Update the prover.home property with the installation path of Provar in HyperExceute as shown below: Add the following tags inside your build.xml file. These tags should be present inside the `` tag as mentioned below: Under the Run-Test-Case tag, replace the `` tag with the following code:",
+          "url": "https://www.testmuai.com/support/docs/hyperexecute-provar-integration/#step-2-generate-and-update-the-buildxml-file"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Set the Provar License as Secret",
+          "text": "You will have to create a new secret in HyperExecute. Set Key Name as provarLicense Set the Value as the contents of the license file.",
+          "url": "https://www.testmuai.com/support/docs/hyperexecute-provar-integration/#step-3-set-the-provar-license-as-secret"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Step 4: Setup the CLI in your Test Suite",
+          "text": "After cloning / downloading the sample repo, you need to setup the CLI and the environment variables. The CLI is used for triggering the tests on HyperExecute. It is recommend to download the CLI binary on the host system and keep it in the root directory of the suite to perform the tests on HyperExecute. You can download the CLI for your desired platform from the below mentioned links: Now, you need to export your environment variables LTUSERNAME and LTACCESSKEY* that are available in the TestMu AI Profile page. Run the below mentioned commands in your terminal to setup the CLI and the environment variables. {`export LTUSERNAME=\"${ YOURLAMBDATEST_USERNAME()}\" export LTACCESSKEY=\"${ YOURLAMBDATESTACCESS_KEY()}\"`} {`set LTUSERNAME=\"${ YOURLAMBDATEST_USERNAME()}\" set LTACCESSKEY=\"${ YOURLAMBDATESTACCESS_KEY()}\"`}",
+          "url": "https://www.testmuai.com/support/docs/hyperexecute-provar-integration/#step-4-setup-the-cli-in-your-test-suite"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 5,
+          "name": "Step 5: Configure YAML in your Test Suite",
+          "text": "Replace the pre command with your own command that discovers the desired .testcase files.",
+          "url": "https://www.testmuai.com/support/docs/hyperexecute-provar-integration/#step-5-configure-yaml-in-your-test-suite"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 6,
+          "name": "Step 6: Execute your Test Suite",
+          "text": "NOTE : In case of MacOS, if you get a permission denied warning while executing CLI, simply run chmod u+x ./hyperexecute to allow permission. In case you get a security popup, allow it from your System Preferences \u2192 Security & Privacy \u2192 General tab. Run the below command in your terminal at the root folder of the project: OR use this command if you have not exported your username and access key in the step 2. {./hyperexecute --user ${ YOURLAMBDATESTUSERNAME()} --key ${ YOURLAMBDATESTACCESSKEY()} --config RELATIVEPATHOFYOURYAMLFILE }",
+          "url": "https://www.testmuai.com/support/docs/hyperexecute-provar-integration/#step-6-execute-your-test-suite"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 7,
+          "name": "Step 5: Monitor Your Tests",
+          "text": "Visit the HyperExecute Dashboard and check your Job status.",
+          "url": "https://www.testmuai.com/support/docs/hyperexecute-provar-integration/#step-5-monitor-your-tests"
+        }
+      ]
+    }
+  ]) }}
+/>
+
+
 
 Provar is a low-code/no-code testing tool specifically designed for Salesforce applications, enabling efficient creation and execution of UI and API tests.
 
@@ -89,11 +250,15 @@ You have to generate the `build.xml` file using the Provar GUI. You can follow t
 
 -  Update the `prover.home` property with the installation path of Provar in HyperExceute as shown below:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 <property name="provar.home" value="../ProvarHome"/>
 ```
 
 - Add the following tags inside your `build.xml` file. These tags should be present inside the `<project default="runtests">` tag as mentioned below:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 <property name="license.path" value="../licenseHyperexeute"/>
@@ -101,6 +266,8 @@ You have to generate the `build.xml` file using the Provar GUI. You can follow t
 ```
 
 - Under the `Run-Test-Case` tag, replace the `<fileset>` tag with the following code:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 <fileset id="testcases" file="../${unit.test}" ></fileset>
@@ -139,6 +306,8 @@ Run the below mentioned commands in your terminal to setup the CLI and the envir
 
 <TabItem value="bash" label="Linux / MacOS" default>
 
+  <VerifiedTag value="Verified" />
+
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-bash">
   {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
@@ -149,6 +318,8 @@ export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 </TabItem>
 
 <TabItem value="powershell" label="Windows" default>
+
+  <VerifiedTag value="Verified" />
 
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-powershell">
@@ -163,6 +334,8 @@ set LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 ## Step 5: Configure YAML in your Test Suite
 
 Replace the `pre` command with your own command that discovers the desired **.testcase** files. 
+
+<VerifiedTag value="Verified" />
 
 ```yaml
 ---
@@ -204,11 +377,15 @@ framework:
 
 Run the below command in your terminal at the root folder of the project:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 ./hyperexecute --config RELATIVE_PATH_OF_YOUR_YAML_FILE
 ```
 
 OR use this command if you have not exported your username and access key in the step 2.
+
+<VerifiedTag value="Verified" />
 
 <div className="lambdatest__codeblock">
   <CodeBlock className="language-bash">

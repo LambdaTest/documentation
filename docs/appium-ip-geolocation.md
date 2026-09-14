@@ -25,6 +25,8 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
+import VerifiedTag from '@site/src/component/verifiedTag';
+
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
        "@context": "https://schema.org",
@@ -49,6 +51,74 @@ import TabItem from '@theme/TabItem';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/appium-ip-geolocation/"
+    },
+    "headline": "IP Geolocation",
+    "description": "This document provides information about configuring IP Geolocation for tests on the TestMu AI platform and also provides a list of supported geolocations on Real Devices.",
+    "url": "https://www.testmuai.com/support/docs/appium-ip-geolocation/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "App Automation",
+    "keywords": [
+      "IP Geolocation",
+      "geolocation testing",
+      "testing tools"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Support for Automation on Real Devices",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "// Java code for configuring IP Geolcation in tests on TestMu AI\nDesiredCapabilities capabilities = new DesiredCapabilities();\ncapabilities.setCapability(\"geoLocation\", \"FR\");\n// Add other capabilities as needed"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
+
 # How to Set IP Geolocation on TestMu AI
 
 Setting IP Geolocation on TestMu AI lets you test websites and mobile apps as if traffic originates from countries and regions worldwide. Pass the geoLocation capability with a two-letter code to simulate a device's location in automated and manual tests.
@@ -64,6 +134,9 @@ You'll learn to use this feature in both manual and automation tests, plus the f
 To harness the **IP Geolocation** feature in your automated tests, employ the `geoLocation` capability along with a two-letter country code from the list of supported countries provided below. This capability enables you to modify the device's geolocation to the specified location. If this capability is not added, the device will automatically update its geolocation based on its physical location.
 
 **Java Example:** 
+
+<VerifiedTag value="Verified" />
+
 ```java
 // Java code for configuring IP Geolcation in tests on TestMu AI
 DesiredCapabilities capabilities = new DesiredCapabilities();

@@ -20,7 +20,88 @@ toc_max_heading_level: 2
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import { BRAND_URL } from '@site/src/component/BrandName';
 
+<script type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify({
+       "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": BRAND_URL
+        },{
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Support",
+          "item": `${BRAND_URL}/support/docs/`
+        },{
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Web Accessibility Checklist",
+          "item": `${BRAND_URL}/support/docs/accessibility-web-what-we-cover/`
+        }]
+      })
+    }}
+></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/accessibility-web-what-we-cover/"
+    },
+    "headline": "Web Accessibility Checklist",
+    "description": "Supported WCAG web rules with links to rule pages, plus a manual test checklist for areas that need human review.",
+    "url": "https://www.testmuai.com/support/docs/accessibility-web-what-we-cover/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Accessibility Testing",
+    "keywords": [
+      "TestMu AI",
+      "Accessibility",
+      "Web"
+    ],
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
 # Accessibility Checklist
 
 See which WCAG-aligned checks the product supports on each platform, with links to rule-level guidance, plus a manual test checklist for areas that benefit from human review. Select a platform tab below.

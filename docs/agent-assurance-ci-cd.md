@@ -17,6 +17,8 @@ canonical: https://www.testmuai.com/support/docs/agent-assurance-ci-cd/
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
+import VerifiedTag from '@site/src/component/verifiedTag';
+
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
     "@context": "https://schema.org", "@type": "BreadcrumbList",
@@ -27,6 +29,130 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     ]
   }) }}
 />
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/agent-assurance-ci-cd/"
+    },
+    "headline": "Run Agent Assurance in CI/CD",
+    "description": "Run Agent Assurance headlessly in CI, consume NDJSON output, handle exit codes, isolate state, and build a safe agent testing gate.",
+    "url": "https://www.testmuai.com/support/docs/agent-assurance-ci-cd/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Agent Testing",
+    "keywords": [
+      "rook ci cd",
+      "ai agent testing github actions",
+      "rook headless"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Set ROOK_HOME to a protected runner directory",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "export ROOK_HOME=\"$RUNNER_TEMP/rook-home\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Project evidence continues to be written under",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "$GITHUB_WORKSPACE/.testmuai/rook/"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Verify the Environment",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "rook --version\nrook doctor\nrook auth status\nrook plan --json"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Use explicit agent and scenario IDs in CI",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "rook agent list --json\nrook profile use staging --entity refund-desk\nrook run \\\n  --entity refund-desk \\\n  --only SC-001,SC-004,SC-014 \\\n  --no-narrative \\\n  --json"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Pass exact, temporary allowances that were reviewed with the workflow",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "rook run \\\n  --entity refund-desk \\\n  --only SC-001,SC-004 \\\n  --allow 'run(https://refund-agent.staging.example.com/v1/chat)' \\\n  --json"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Process one object per line rather than parsing human prose",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "rook run --entity refund-desk --only SC-001 --json > rook-events.ndjson"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Use --verbose when diagnostic tool activity and cost events are needed",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "rook run --entity refund-desk --only SC-001 --verbose --json"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Example GitHub Actions Job",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "name: Rook agent assurance\n\non:\n  pull_request:\n\njobs:\n  rook:\n    runs-on: self-hosted\n    permissions:\n      contents: read\n    env:\n      ROOK_HOME: /var/lib/rook-ci/home\n      ROOK_AGENT_TOKEN: ${{ secrets.ROOK_AGENT_TOKEN }}\n    steps:\n      - uses: actions/checkout@v4\n\n      - name: Install pinned public Rook release\n        run: |\n          curl -fsSL https://raw.githubusercontent.com/LambdaTest/rook/main/install.sh \\\n            | bash -s -- --version 0.1.1 --dir \"$RUNNER_TEMP/rook-bin\"\n          echo \"$RUNNER_TEMP/rook-bin\" >> \"$GITHUB_PATH\"\n\n      - name: Verify Rook environment\n        run: |\n          rook --version\n          rook doctor\n          rook auth status\n\n      - name: Run release-gate scenarios\n        run: |\n          rook profile use staging --entity refund-desk\n          rook run \\\n            --entity refund-desk \\\n            --only SC-001,SC-004,SC-014 \\\n            --no-narrative \\\n            --allow 'run(https://refund-agent.staging.example.com/v1/chat)' \\\n            --json | tee rook-events.ndjson\n\n      - name: Print report\n        if: always()\n        run: rook report --entity refund-desk\n\n      - name: Upload evidence\n        if: always()\n        uses: actions/upload-artifact@v4\n        with:\n          name: rook-evidence\n          path: .testmuai/rook/agents/refund-desk/runs/"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Move generation into a separate scheduled or manually approved workflow",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "rook explore . --force --all --json\nrook generate --entity refund-desk --total 30 --json"
+      }
+    ],
+    "dateModified": "2026-09-07T12:29:55+05:30"
+  }) }}
+/>
+
 
 # Run Agent Assurance in CI/CD
 
@@ -49,6 +175,8 @@ Before enabling a pipeline:
 
 Set `ROOK_HOME` to a protected runner directory:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 export ROOK_HOME="$RUNNER_TEMP/rook-home"
 ```
@@ -57,11 +185,15 @@ For a persistent self-hosted runner, choose a stable protected path so token ren
 
 Project evidence continues to be written under:
 
+<VerifiedTag value="Verified" />
+
 ```text
 $GITHUB_WORKSPACE/.testmuai/rook/
 ```
 
 ## Verify the Environment
+
+<VerifiedTag value="Verified" />
 
 ```bash
 rook --version
@@ -75,6 +207,8 @@ An unreachable controller does not mean a token is invalid. When `rook auth stat
 ## Run a Deterministic Suite
 
 Use explicit agent and scenario IDs in CI:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 rook agent list --json
@@ -92,6 +226,8 @@ Headless `rook run` currently does not expose class, category, tag, concurrency,
 
 An unattended command cannot answer a permission prompt. Pass exact, temporary allowances that were reviewed with the workflow:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 rook run \
   --entity refund-desk \
@@ -108,11 +244,15 @@ Avoid broad shell or MCP allowances. `--allow` adds authority; it does not remov
 
 `--json` emits newline-delimited JSON events. Process one object per line rather than parsing human prose:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 rook run --entity refund-desk --only SC-001 --json > rook-events.ndjson
 ```
 
 Use `--verbose` when diagnostic tool activity and cost events are needed:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 rook run --entity refund-desk --only SC-001 --verbose --json
@@ -137,6 +277,8 @@ An observed agent failure outranks an invocation error if both occur in one run.
 ## Example GitHub Actions Job
 
 This example assumes a protected self-hosted runner already has an authenticated Rook home and can reach the staging agent and controller.
+
+<VerifiedTag value="Verified" />
 
 ```yaml
 name: Rook agent assurance
@@ -194,6 +336,8 @@ jobs:
 ## Separate Generation From the Gate
 
 Scenario generation uses models and can change the suite. A stable release gate should run reviewed, committed scenario IDs. Move generation into a separate scheduled or manually approved workflow:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 rook explore . --force --all --json

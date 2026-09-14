@@ -20,6 +20,8 @@ import TabItem from '@theme/TabItem';
 import CodeBlock from '@theme/CodeBlock';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
+import VerifiedTag from '@site/src/component/verifiedTag';
+
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
        "@context": "https://schema.org",
@@ -43,6 +45,151 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       })
     }}
 ></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/smartui-baseline-management/"
+    },
+    "headline": "Baseline Management in SmartUI",
+    "description": "Learn how to manage baselines effectively in TestMu AI SmartUI. Understand baseline creation, updating, and versioning for reliable visual regression testing.",
+    "url": "https://www.testmuai.com/support/docs/smartui-baseline-management/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "SmartUI",
+    "keywords": [
+      "SmartUI Baseline",
+      "Visual Regression Baseline",
+      "Baseline Management"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Branch-based Baseline",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "npx smartui --baselineBranch \"branch-name\" exec -- <execution command>"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Build-based Baseline",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "npx smartui --baselineBuild \"build-name\" exec -- <execution command>"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Basic Usage",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "npx smartui --markBaseline exec -- <execution command>"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "1. Feature Development",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "# 1. Set feature branch baseline\nnpx smartui --baselineBranch \"feature/new-login\" exec -- <execution command>"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "2. Hotfix Management",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "# 1. Set production as baseline\nnpx smartui --baselineBranch \"production\" exec -- <execution command>"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "3. Release Management",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "# 1. Set staging as baseline\nnpx smartui --baselineBranch \"staging\" upload <dirName>\n\n# 2. Mark release as new baseline\nnpx smartui --markBaseline capture urls.json"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Solutions",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "# Verify baseline exists before using\nnpx smartui --baselineBranch \"main\" exec -- <command>"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Dynamic Baseline in CLI",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "# Use specific branch as baseline\nnpx smartui --baselineBranch \"staging\" exec -- npm test\n\n# Use specific build as baseline\nnpx smartui --baselineBuild \"Release-1.0\" exec -- npm test\n\n# Mark current build as baseline\nnpx smartui --markBaseline exec -- npm test"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Scenario 1: Multi-Branch Baseline Strategy",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "# Feature branch compares against develop\nnpx smartui --baselineBranch \"develop\" exec -- npm test\n\n# Release branch compares against staging\nnpx smartui --baselineBranch \"staging\" exec -- npm test"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Scenario 2: Version-Based Baselines",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "# Compare against v1.0.0 build\nnpx smartui --baselineBuild \"v1.0.0\" exec -- npm test\n\n# Compare against v2.0.0 build\nnpx smartui --baselineBuild \"v2.0.0\" exec -- npm test"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Scenario 3: Hotfix Baseline Management",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "# Hotfix branch compares against production\nnpx smartui --baselineBranch \"production\" exec -- npm test\n\n# After approval, mark hotfix as new baseline\nnpx smartui --markBaseline exec -- npm test"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Git Branching Strategy",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "# Main branch is baseline\nBaseline: main\n\n# Feature branches compare against main\nFeature: feature/login \u2192 compares against main\n\n# Release branches compare against main\nRelease: release/1.0 \u2192 compares against main"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 
 # Baseline Management
 
@@ -70,6 +217,8 @@ SmartUI allows you to specify baselines dynamically during test execution, provi
 
 ### Branch-based Baseline
 
+<VerifiedTag value="Verified" />
+
 ```bash
 npx smartui --baselineBranch "branch-name" exec -- <execution command>
 ```
@@ -80,6 +229,8 @@ npx smartui --baselineBranch "branch-name" exec -- <execution command>
 - Testing hotfix against production branch
 
 ### Build-based Baseline
+
+<VerifiedTag value="Verified" />
 
 ```bash
 npx smartui --baselineBuild "build-name" exec -- <execution command>
@@ -96,6 +247,8 @@ SmartUI provides the ability to mark builds as baseline directly through the CLI
 
 ### Basic Usage
 
+<VerifiedTag value="Verified" />
+
 ```bash
 npx smartui --markBaseline exec -- <execution command>
 ```
@@ -106,6 +259,8 @@ npx smartui --markBaseline exec -- <execution command>
 
 **Scenario**: Managing baselines during feature development
 
+<VerifiedTag value="Verified" />
+
 ```bash
 # 1. Set feature branch baseline
 npx smartui --baselineBranch "feature/new-login" exec -- <execution command>
@@ -115,6 +270,8 @@ npx smartui --baselineBranch "feature/new-login" exec -- <execution command>
 
 **Scenario**: Managing baselines for hotfixes
 
+<VerifiedTag value="Verified" />
+
 ```bash
 # 1. Set production as baseline
 npx smartui --baselineBranch "production" exec -- <execution command>
@@ -123,6 +280,8 @@ npx smartui --baselineBranch "production" exec -- <execution command>
 ### 3. Release Management
 
 **Scenario**: Managing baselines for releases
+
+<VerifiedTag value="Verified" />
 
 ```bash
 # 1. Set staging as baseline
@@ -211,6 +370,8 @@ npx smartui --markBaseline capture urls.json
 2. Ensure the baseline has at least one approved build
 3. Check branch/build exists in your project
 
+<VerifiedTag value="Verified" />
+
 ```bash
 # Verify baseline exists before using
 npx smartui --baselineBranch "main" exec -- <command>
@@ -263,6 +424,8 @@ In Project Settings → Build Settings → Git Settings:
 
 ### Dynamic Baseline in CLI
 
+<VerifiedTag value="Verified" />
+
 ```bash
 # Use specific branch as baseline
 npx smartui --baselineBranch "staging" exec -- npm test
@@ -280,6 +443,8 @@ npx smartui --markBaseline exec -- npm test
 
 **Use Case**: Different baselines for different branches
 
+<VerifiedTag value="Verified" />
+
 ```bash
 # Feature branch compares against develop
 npx smartui --baselineBranch "develop" exec -- npm test
@@ -292,6 +457,8 @@ npx smartui --baselineBranch "staging" exec -- npm test
 
 **Use Case**: Compare against specific version builds
 
+<VerifiedTag value="Verified" />
+
 ```bash
 # Compare against v1.0.0 build
 npx smartui --baselineBuild "v1.0.0" exec -- npm test
@@ -303,6 +470,8 @@ npx smartui --baselineBuild "v2.0.0" exec -- npm test
 ### Scenario 3: Hotfix Baseline Management
 
 **Use Case**: Hotfix needs to compare against production
+
+<VerifiedTag value="Verified" />
 
 ```bash
 # Hotfix branch compares against production
@@ -324,6 +493,8 @@ For projects integrated with Git:
 4. Smart Baseline feature is not available for Git projects
 
 ### Git Branching Strategy
+
+<VerifiedTag value="Verified" />
 
 ```bash
 # Main branch is baseline

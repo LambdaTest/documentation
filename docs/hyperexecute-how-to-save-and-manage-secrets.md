@@ -19,6 +19,8 @@ canonical: https://www.testmuai.com/support/docs/hyperexecute-how-to-save-and-ma
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
+import VerifiedTag from '@site/src/component/verifiedTag';
+
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
        "@context": "https://schema.org",
@@ -42,6 +44,109 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       })
     }}
 ></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/hyperexecute-how-to-save-and-manage-secrets/"
+    },
+    "headline": "Manage User-Level Secrets in HyperExecute",
+    "description": "Securely save and manage user-level secrets in HyperExecute. Encrypt credentials, rotate keys, and use them safely across automation runs.",
+    "url": "https://www.testmuai.com/support/docs/hyperexecute-how-to-save-and-manage-secrets/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Documentation",
+    "keywords": [
+      "TestMu AI Hyperexecute",
+      "TestMu AI Hyperexecute help",
+      "TestMu AI Hyperexecute documentation"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Using Secrets in YAML",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "version: 0.1\nenv:\n  MyKey1: ${{.secrets.token}}\n \nrunson: win\ntestDiscovery:\n  type: raw\n  mode: remote\n  args:\n    featureFilePath: ${Path}\n     \ntestRunnerCommand: npm run --username abc --password ${{.secrets.SecretKey2}}"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "How to Add Project Level Secrets?",
+      "description": "Securely save and manage user-level secrets in HyperExecute. Encrypt credentials, rotate keys, and use them safely across automation runs.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Create a Project",
+          "text": "To begin, create a new project on the TestMu AI platform. Follow the instructions to Create a Project",
+          "url": "https://www.testmuai.com/support/docs/hyperexecute-how-to-save-and-manage-secrets/#step-1-create-a-project"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Add Secrets to the Project",
+          "text": "Once your project is created: Navigate to the Secrets tab within the project. Click Add Secret. Enter a Key (e.g., LTSECRETKEY) and its corresponding Value (e.g., secureP@ss123). Click Add Secret button. Your secret will be encrypted and securely stored.",
+          "url": "https://www.testmuai.com/support/docs/hyperexecute-how-to-save-and-manage-secrets/#step-2-add-secrets-to-the-project"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Use Secrets in Your HyperExecute YAML",
+          "text": "To reference the secrets in your HyperExecute configuration file (hyperexecute.yaml):",
+          "url": "https://www.testmuai.com/support/docs/hyperexecute-how-to-save-and-manage-secrets/#step-3-use-secrets-in-your-hyperexecute-yaml"
+        }
+      ]
+    }
+  ]) }}
+/>
+
+
 
 Testing your webapp or applications often involves using sensitive data like passwords, API keys, and other credentials. Storing these secrets directly in your code can be risky and exposing them can lead to potential security breaches.
 
@@ -130,6 +235,8 @@ During HyperExecute test execution, you might need to access sensitive informati
 
 Consider these secret key names: `secretKey1` and `secretKey2`.
 
+<VerifiedTag value="Verified" />
+
 ```yaml
 version: 0.1
 env:
@@ -199,6 +306,8 @@ Your secret will be encrypted and securely stored.
 
 ### Step 3: Use Secrets in Your HyperExecute YAML
 To reference the secrets in your HyperExecute configuration file (`hyperexecute.yaml`):
+
+<VerifiedTag value="Verified" />
 
 ```yaml title="hyperexecute.yaml"
 version: 0.1

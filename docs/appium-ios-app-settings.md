@@ -20,6 +20,8 @@ canonical: https://www.testmuai.com/support/docs/appium-ios-app-settings/
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 
+import VerifiedTag from '@site/src/component/verifiedTag';
+
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
        "@context": "https://schema.org",
@@ -43,6 +45,88 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       })
     }}
 ></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/appium-ios-app-settings/"
+    },
+    "headline": "iOS App Settings",
+    "description": "iOS App Settings are the permissions or preferences that can be enabled/disabled for an app through iOS settings.",
+    "url": "https://www.testmuai.com/support/docs/appium-ios-app-settings/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "App Automation",
+    "keywords": [
+      "appium",
+      "ios",
+      "app settings"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "How to use iOS app settings in App Automation",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "params = {\"Permission Settings\":{\"Camera\":\"Off\", \"Location\":\"While using the app\"},\"Reset App\":\"On\",\"Next Page\":{\"Child Toggle\":\"On\"},\"Others\":\"White\",\"Slider-1\":\"0.1\", \"TextField-2\":\"ABCD\", \"TextField-1\":\"XYZ\"}\ndriver.execute_script(\"lambda-ios-settings\", params)"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "We do not pass it inside Location object as shown",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "params = {\"Permission Settings\":{\"Location\":\"While using the app\", \"Precise Location\": \"On\"}}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Usage",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Python",
+        "text": "options = {\n    \"platformName\": \"iOS\",\n    \"lt:options\": {\n        \"deviceName\": \"iPhone 15\",\n        \"platformVersion\": \"17\",\n        \"isRealMobile\": True,\n        \"app\": \"lt://APP_ID\",\n        \"updateAppSettings\": {\n            \"Permission Settings\": {\n                \"Location\": \"While using the app\",\n                \"Precise Location\": \"On\"\n            },\n            \"Allow Cross-Website Tracking\": \"On\",\n            \"Environment\": \"QA_1\",\n            \"Slider-1\": \"0.5\",\n            \"TextField-1\": \"sample text\"\n        }\n    }\n}"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 Changing iOS app settings on TestMu AI lets you toggle permissions and preferences like camera, location, and app resets during App Automation on real iOS devices, using the lambda-ios-settings hook to manipulate settings the public cloud otherwise blocks for security.
 
 **Supported on:** Real devices
@@ -62,6 +146,8 @@ This feature is supported only on iOS 14 and above devices.
 To make it easier for the user to access the iOS app settings, we have created a **lambda-hook**. This web-hook supports the opening and manipulation of the settings.
 
 The hook `"lambda-ios-settings"` takes a JSON parameter which tells which settings we need to manipulate. Below shown is an example of the lambda hook written in python3.
+
+<VerifiedTag value="Verified" />
 
 ```bash
 params = {"Permission Settings":{"Camera":"Off", "Location":"While using the app"},"Reset App":"On","Next Page":{"Child Toggle":"On"},"Others":"White","Slider-1":"0.1", "TextField-2":"ABCD", "TextField-1":"XYZ"}
@@ -101,6 +187,8 @@ Let's say we pass Camera: "On" in the lambda hook’s preferences even before ha
 :::info
 
 Note that we have separate key for Precise Location. We do not pass it inside Location object as shown:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 params = {"Permission Settings":{"Location":"While using the app", "Precise Location": "On"}}
@@ -175,6 +263,8 @@ You can use both in the same session. The hook applies over the capability value
 ### Usage
 
 Pass `updateAppSettings` inside `lt:options` (W3C). Below shown is an example written in python3.
+
+<VerifiedTag value="Verified" />
 
 ```python
 options = {

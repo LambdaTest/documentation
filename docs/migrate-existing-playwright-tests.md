@@ -19,6 +19,8 @@ canonical: https://www.testmuai.com/support/docs/migrate-existing-playwright-tes
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
+import VerifiedTag from '@site/src/component/verifiedTag';
+
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
        "@context": "https://schema.org",
@@ -43,6 +45,81 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/migrate-existing-playwright-tests/"
+    },
+    "headline": "Migrate Existing Playwright Test Suites On TestMu AI",
+    "description": "Learn how to run migrate existing Playwright test scripts or suitesfrom your local grid on the TestMu AI platform.",
+    "url": "https://www.testmuai.com/support/docs/migrate-existing-playwright-tests/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Web Automation",
+    "keywords": [
+      "playwright testing",
+      "playwright e2e testing",
+      "playwright mobile testing"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Sample Playwright Script Running On A Local Machine",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "const { chromium } = require('playwright')\nconst { expect } = require('@playwright/test');\n\n(async () => {\n  const browser = await chromium.launch({\n    headless: false\n  });\n\n  const page = await browser.newPage()\n  await page.goto('https://www.bing.com')\n  const element = await page.$('[aria-label=\"Enter your search term\"]')\n  await element.click()\n  await element.type('LambdaTest')\n  await element.press('Enter')\n  const title = await page.title()\n\n  expect(title).toEqual('LambdaTest - Search')\n\n  await browser.close()\n})()"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Changes In Scripts To Run Playwright Tests On TestMu AI",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "const { chromium } = require('playwright')\nconst { expect } = require('@playwright/test');\n\n(async () => {\n  const capabilities = {\n    'browserName': 'Chrome', // Browsers allowed: `Chrome`, `MicrosoftEdge`, `pw-chromium`, `pw-firefox` and `pw-webkit`\n    'browserVersion': 'latest',\n    'LT:Options': {\n      'platform': 'Windows 10',\n      'build': 'Playwright Sample Build',\n      'name': 'Playwright Sample Test',\n      'user': process.env.LT_USERNAME,\n      'accessKey': process.env.LT_ACCESS_KEY,\n    }\n  }\n\n  const browser = await chromium.connect({\n    wsEndpoint: `wss://cdp.lambdatest.com/playwright?capabilities=${encodeURIComponent(JSON.stringify(capabilities))}`\n  })\n\n  // Test code ...\n\n  await browser.close()\n})()"
+      }
+    ],
+    "dateModified": "2026-09-09T19:13:32+05:30"
+  }) }}
+/>
+
+
 # How to Migrate Existing Playwright Tests to TestMu AI
 ***
 
@@ -52,6 +129,8 @@ If you already run Playwright tests on a local grid, you can move them to TestMu
 ***
 
 Start from a working local test so you can see exactly which lines change during migration. The sample Playwright script below launches a browser on your local machine and runs the script.
+
+<VerifiedTag value="Verified" />
 
 ```js
 const { chromium } = require('playwright')
@@ -80,6 +159,8 @@ const { expect } = require('@playwright/test');
 ***
 
 The local script uses `playwright['chromium'].launch`, which opens a browser on your own machine. To run the same test on TestMu AI, replace that launch call with a connection to the TestMu AI CDP endpoint, as shown below.
+
+<VerifiedTag value="Verified" />
 
 ```js
 const { chromium } = require('playwright')

@@ -46,6 +46,64 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/author-your-first-desktop-browser-test/"
+    },
+    "headline": "Author Your First Desktop Browser Test",
+    "description": "In this detailed guide, you will learn how you can manually author your first desktop browser test with KaneAI.",
+    "url": "https://www.testmuai.com/support/docs/author-your-first-desktop-browser-test/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "KaneAI",
+    "keywords": [
+      "ai testing tool",
+      "ai qa agent",
+      "genai qa agent"
+    ],
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "dateModified": "2026-09-09T20:21:05+05:30"
+  }) }}
+/>
+
+
 # How to Author Desktop Browser Tests With KaneAI
 ***
 
@@ -101,7 +159,9 @@ Once done, click **Author Test**.
 ### Step 4: Describe Your Test in Natural Language
 ***
 
-Tell KaneAI what you want to test in plain English. KaneAI translates each instruction into an executable test step automatically. As you add instructions, KaneAI queues them in real time without waiting for completion, so you can build the full flow without pausing. When you finish, click **Finish Test** to finalize the test case.
+Tell KaneAI what you want to test in plain English. KaneAI translates each instruction into an executable test step automatically. As you add instructions, KaneAI queues them in real time without waiting for completion, so you can build the full flow without pausing. When you finish, click **Save** in the top-right header to finalize the test case.
+
+Your test is saved as **Ready** when every step has run and passed, which is also when automation code is generated. If some steps were never run, or a step errored, it saves as Unverified or Faulty instead and you can finish it later. See [Save states](/support/docs/kaneai-authoring-session/#save-states).
 
 <img loading="lazy" src={require('../assets/images/kane-ai/kaneai-author-browser-tests/kaneai-desktop-authoring-min.png').default} alt="Describe Your Test in Natural Language" width="1347" height="616"  className="doc_img"/> 
 
@@ -110,7 +170,7 @@ Tell KaneAI what you want to test in plain English. KaneAI translates each instr
 ### Step 5: Capture Steps With Manual Interaction
 ***
 
-To capture an action that is hard to describe, use **Manual Interaction Mode**. Perform the step directly in the instance window, and KaneAI records it and creates the matching automation step. For the full gesture and platform matrix, see the [KaneAI Manual Interaction](/support/docs/kaneai-manual-interaction/) guide.
+To capture an action that is hard to describe, use **Manual Interaction**. While the session is in Authoring Steps, perform the step directly in the instance window, and KaneAI records it and creates the matching automation step. For the full gesture and platform matrix, see the [KaneAI Manual Interaction](/support/docs/kaneai-manual-interaction/) guide.
 
 <img loading="lazy" src={require('../assets/images/kane-ai/kaneai-author-browser-tests/desktop-manual-interaction.webp').default} alt="Capture Steps With Manual Interaction" width="1347" height="616"  className="doc_img"/>
 
@@ -146,7 +206,7 @@ Clear, specific instructions help KaneAI translate your intent into accurate ste
 - **Use numbers for position or quantity.** For example, `Click the second product in the list` or `Scroll down 100 pixels`.
 - **Wait when needed.** Pause for page loads or async operations, for example `Click 'Submit' and wait 5 seconds before the next step`.
 - **Target the right tab.** When a link opens a new tab, add `switch to the <TabTitle> tab` so actions stay on it.
-- **Verify before saving.** Re-run the flow to confirm every step executes cleanly, and refine a prompt iteratively if the result is not what you expected.
+- **Verify before saving.** Use **Run** to execute the whole test, or **Run This Step** and the range actions to check part of it, so you know every step passes before saving. A test saves as Ready only when all steps have run and passed. See [Running steps during authoring](/support/docs/kaneai-authoring-session/#running-steps-during-authoring).
 
 ## Next Steps
 ***

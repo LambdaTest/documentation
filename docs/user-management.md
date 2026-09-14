@@ -15,6 +15,85 @@ canonical: https://www.testmuai.com/support/docs/user-management/
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
+<script type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify({
+       "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": BRAND_URL
+        },{
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Support",
+          "item": `${BRAND_URL}/support/docs/`
+        },{
+          "@type": "ListItem",
+          "position": 3,
+          "name": "User Management",
+          "item": `${BRAND_URL}/support/docs/user-management/`
+        }]
+      })
+    }}
+></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/user-management/"
+    },
+    "headline": "User Management",
+    "description": "This documentation will help you create and manage users on TestMu AI.",
+    "url": "https://www.testmuai.com/support/docs/user-management/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Setting and Security",
+    "keywords": [
+      "users management testmu ai",
+      "manage user"
+    ],
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "dateModified": "2026-02-12T19:51:34+05:30"
+  }) }}
+/>
 # User Management
 ---
 
@@ -29,8 +108,6 @@ At present, <BrandName /> supports the following roles:
 **Guest:** This role provides the ability to view test logs, analytics, and other reports. However, guests do not have the privilege to initiate test runs.
 
 By leveraging the flexibility of Organization Settings, you can seamlessly manage your team members and their respective roles within your <BrandName /> Account.
-
-
 
 ## Access Organization Settings
 ---
@@ -50,14 +127,12 @@ Enter **one or multiple email addresses** along with a **role** for these users 
 
 They would be granted access to <BrandName /> with the role you selected while inviting.
 
-
 ## View Sent Invitations
 ---
 
 Click on **Pending Invitations** to see the list of invitations sent from your account. Default filter would show only the pending invitations. To see all statuses you can change to a different filter.
 
 <img loading="lazy" src={require('../assets/images/user-management/pending-invite.webp').default} alt="Image" width="404" height="206"  className="doc_img img_center"/><br/>
-
 
 ## Managing Users
 ---
@@ -69,7 +144,6 @@ As an administrator you can do the following:
 3. Change password of your users.
 4. Delete a user from your team.
 5. Reset MFA of a user.
-
 
 ### 1. List of Users
 ---
@@ -111,5 +185,3 @@ As an Admin you can **delete** users from your <BrandName /> account. Click on t
 You can **export** list of **users, service accounts and invitations** sent from your <BrandName /> account.
 
 <img loading="lazy" src={require('../assets/images/user-management/export.webp').default} alt="Image" width="404" height="206"  className="doc_img img_center"/><br/>
-
-

@@ -16,6 +16,7 @@ slug: buildkite-integration-with-testmu/
 canonical: https://www.testmuai.com/support/docs/buildkite-integration-with-testmu/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -41,6 +42,94 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       })
     }}
 ></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/buildkite-integration-with-testmu/"
+    },
+    "headline": "Buildkite Integration With TestMu AI",
+    "description": "TestMu AI offers continuous integration with Buildkite to ease your automated cross browser testing process through their Selenium grid consisting more than 3000+ browsers.",
+    "url": "https://www.testmuai.com/support/docs/buildkite-integration-with-testmu/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Integration",
+    "keywords": [
+      "testmu ai integrations",
+      "continuous integration",
+      "buildkite"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "The format should be as following",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "LT_USERNAME=YOUR_LAMBDATEST_USERNAME\nLT_ACCESS_KEY=YOUR_LAMBDATEST_ACCESS_KEY"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Integrating Buildkite with TestMu AI via UI",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "steps:\n  - command: 'yarn && yarn LT test'\n    plugins:\n      - lambdatest/lambdatest~"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "That can be done with the following code",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "python3 lambdatest.py"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Integrating Buildkite with TestMu AI via YAML",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "steps:\n  - label: \":docs-testing:\"\n    commands:\n      - python3 lambdatest.py"
+      }
+    ],
+    "dateModified": "2026-06-09T15:09:24+05:30"
+  }) }}
+/>
 
 # Triggering tests from Buildkite CI/CD to <BrandName />
 * * *
@@ -70,6 +159,8 @@ You can select the GitHub account where your repository is and add the repositor
 
 You need to set your <BrandName /> username and accesskey as your environment variables. You can retrieve them from your <BrandName /> automation dashboard by clicking on the key icon near the help button or the key icon in the side navbar. The format should be as following:
 
+<VerifiedTag value="Verified" />
+
 ```
 LT_USERNAME=YOUR_LAMBDATEST_USERNAME
 LT_ACCESS_KEY=YOUR_LAMBDATEST_ACCESS_KEY
@@ -80,6 +171,8 @@ LT_ACCESS_KEY=YOUR_LAMBDATEST_ACCESS_KEY
 **Step 4:** Add steps to add lambdatest-buildkite plugin
 
 To add a plugin to a `command` step, use the `plugins` attribute. The `plugins` attribute accepts an array, so you can add multiple plugins to the same step.
+
+<VerifiedTag value="Verified" />
 
 ```
 steps:
@@ -93,6 +186,8 @@ steps:
 The commands to run for test execution are to be mentioned as steps here. For example, the steps can be prerequisite package installs,  executing the testing code etc.
 
 In the example repository, there is only a single step - executing the `lambdatest.py` file. That can be done with the following code:
+
+<VerifiedTag value="Verified" />
 
 ```
 python3 lambdatest.py
@@ -134,6 +229,8 @@ Monitor and analyze your test result on the **[<BrandName /> automation dashboar
 **Step 3:** Go to your desired GitHub repository for which you want to build the pipeline.
 
 **Step 4:** In the root of your repository, create a file named `pipeline.yml` in a `.buildkite` directory. In `pipeline.yml`, define your pipeline steps.
+
+<VerifiedTag value="Verified" />
 
 ```bash
 steps:

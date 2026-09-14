@@ -17,6 +17,8 @@ canonical: https://www.testmuai.com/support/docs/agent-assurance-troubleshooting
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
+import VerifiedTag from '@site/src/component/verifiedTag';
+
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
     "@context": "https://schema.org", "@type": "BreadcrumbList",
@@ -28,9 +30,191 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
   }) }}
 />
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/agent-assurance-troubleshooting/"
+    },
+    "headline": "Troubleshoot Agent Assurance",
+    "description": "Diagnose Agent Assurance installation, authentication, controller, profile, scenario, MCP, evidence, tmux, and browser-viewer problems.",
+    "url": "https://www.testmuai.com/support/docs/agent-assurance-troubleshooting/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Agent Testing",
+    "keywords": [
+      "rook troubleshooting",
+      "rook cli errors",
+      "rook agent unreachable"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Start with diagnostics",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "rook --version\nrook doctor\nrook auth status"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Open a new terminal after installation and check",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "command -v rook\necho \"$PATH\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "For a shell installation, rerun the public installer with a writable directory that is already on PATH",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "curl -fsSL https://raw.githubusercontent.com/LambdaTest/rook/main/install.sh \\\n  | bash -s -- --dir \"$HOME/bin\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "The npm installation requires npm to run under Node.js 22 or newer",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "node --version"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Allow release-assets.githubusercontent.com, retry outside the VPN, or rerun the public installer from an approved network",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "curl -fsSL https://raw.githubusercontent.com/LambdaTest/rook/main/install.sh | bash"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Rook says you are signed out",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "rook login\nrook auth status"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Credits or budget are exhausted",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "/plan\n/budget"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Use",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "/explore --force"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Create and verify a profile",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "/profile add\n/profile test <name>"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "A required environment variable is missing",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "/env list\n/env set <VARIABLE_NAME>"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Run with",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "/run --concurrency 1"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Use",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "/ui --no-open"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Start a named session",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "tmux new-session -s rook-test\nrook"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "List sessions",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "tmux list-sessions"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "View and interact with the session again",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "tmux attach-session -t rook-test"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Capture recent terminal output without attaching",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "tmux capture-pane -p -S -200 -t rook-test"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "If the session contains only disposable test processes and must be terminated, run",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "tmux kill-session -t rook-test"
+      }
+    ],
+    "dateModified": "2026-09-07T12:29:55+05:30"
+  }) }}
+/>
+
+
 # Troubleshoot Agent Assurance
 
 Start with diagnostics:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 rook --version
@@ -54,12 +238,16 @@ In the TUI, run `/doctor`. It reports:
 
 Open a new terminal after installation and check:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 command -v rook
 echo "$PATH"
 ```
 
 For a shell installation, rerun the public installer with a writable directory that is already on `PATH`:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 curl -fsSL https://raw.githubusercontent.com/LambdaTest/rook/main/install.sh \
@@ -69,6 +257,8 @@ curl -fsSL https://raw.githubusercontent.com/LambdaTest/rook/main/install.sh \
 ### npm reports a Node.js engine error
 
 Homebrew and shell installations carry a matching Node.js runtime. The npm installation requires npm to run under Node.js 22 or newer:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 node --version
@@ -80,6 +270,8 @@ Upgrade the Node.js version used by npm and rerun `npm install -g @testmuai/rook
 
 Release assets are served from a different GitHub asset domain. A VPN or corporate proxy can allow the public repository request but reset the redirected asset download. Allow `release-assets.githubusercontent.com`, retry outside the VPN, or rerun the public installer from an approved network:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 curl -fsSL https://raw.githubusercontent.com/LambdaTest/rook/main/install.sh | bash
 ```
@@ -87,6 +279,8 @@ curl -fsSL https://raw.githubusercontent.com/LambdaTest/rook/main/install.sh | b
 ## Authentication and Credits
 
 ### Rook says you are signed out
+
+<VerifiedTag value="Verified" />
 
 ```bash
 rook login
@@ -107,6 +301,8 @@ Check `rook doctor`. A network failure is not evidence that the token is invalid
 If the controller remains unreachable, confirm the network, VPN, or proxy requirements with your Rook administrator.
 
 ### Credits or budget are exhausted
+
+<VerifiedTag value="Verified" />
 
 ```text
 /plan
@@ -142,6 +338,8 @@ The current release can read an explicitly selected external directory but canno
 
 Use:
 
+<VerifiedTag value="Verified" />
+
 ```text
 /explore --force
 ```
@@ -153,6 +351,8 @@ If the wrong agent is active, run `/agent` and `/agent use <id>` first.
 ### `rook does not know how to invoke this agent`
 
 Create and verify a profile:
+
+<VerifiedTag value="Verified" />
 
 ```text
 /profile add
@@ -166,6 +366,8 @@ Create and verify a profile:
 Run `/profile show <name>` and `/profile test <name>`. Paste a representative response, then set `result.path` to the actual answer, not a status, ID, or metadata field.
 
 ### A required environment variable is missing
+
+<VerifiedTag value="Verified" />
 
 ```text
 /env list
@@ -230,6 +432,8 @@ Add an exact reviewed `--allow` rule. Headless mode cannot answer a prompt. Do n
 
 Run with:
 
+<VerifiedTag value="Verified" />
+
 ```text
 /run --concurrency 1
 ```
@@ -262,6 +466,8 @@ Current runs snapshot scenario definitions. If an older pre-alpha run lacks a sn
 
 Use:
 
+<VerifiedTag value="Verified" />
+
 ```text
 /ui --no-open
 ```
@@ -292,6 +498,8 @@ Run `rook mcp list` and inspect origins. A local, project, or user definition ma
 
 Start a named session:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 tmux new-session -s rook-test
 rook
@@ -301,11 +509,15 @@ Detach without stopping Rook by pressing `Ctrl+B`, then `D`.
 
 List sessions:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 tmux list-sessions
 ```
 
 View and interact with the session again:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 tmux attach-session -t rook-test
@@ -313,11 +525,15 @@ tmux attach-session -t rook-test
 
 Capture recent terminal output without attaching:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 tmux capture-pane -p -S -200 -t rook-test
 ```
 
 Stop the application normally with `/exit`. If the session contains only disposable test processes and must be terminated, run:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 tmux kill-session -t rook-test

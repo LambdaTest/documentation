@@ -19,7 +19,126 @@ canonical: https://www.testmuai.com/support/docs/supported-browsers-and-os/
 ---
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
+<script type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify({
+       "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": BRAND_URL
+        },{
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Support",
+          "item": `${BRAND_URL}/support/docs/`
+        },{
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Supported Browsers and Operating Systems for Cypress",
+          "item": `${BRAND_URL}/support/docs/supported-browsers-and-os/`
+        }]
+      })
+    }}
+></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/supported-browsers-and-os/"
+    },
+    "headline": "Supported Browsers and Operating Systems for Cypress",
+    "description": "Check out the list of supported browsers and operating systems for Cypress testing on the TestMu AI platform.",
+    "url": "https://www.testmuai.com/support/docs/supported-browsers-and-os/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Web Automation",
+    "keywords": [
+      "Cypress Automation",
+      "Cypress Testing Guide",
+      "Cypress Test Automation"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 1",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JSON",
+        "text": "{\n   \"lambdatest_auth\": {\n      \"username\": \"<Your LambdaTest username>\",\n      \"access_key\": \"<Your LambdaTest access key>\"\n   },\n   \"browsers\": [\n      {\n         \"browser\": \"Chrome\",\n         \"platform\": \"Windows 10\",\n         \"versions\": [\n            \"latest\",\"latest-1\"\n         ]\n      }\n   ],"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Configuring The Browser And Platform Keys In lambdatest-config.json",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "   \"browsers\": [\n      {\n         \"browser\": \"Chrome\",\n         \"platform\": \"Windows 10\",\n         \"versions\": [\n            \"latest-1\"\n         ]\n      },\n   ],"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Using The Cypress CLI Command",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "lambdatest-cypress run --browsers \"platform:browser:version\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "To target it, set the browser to Webkit in the browsers array of lambdatest-config.json",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "\"browsers\": [\n   { \"browser\": \"Webkit\", \"platform\": \"Windows 11\",     \"versions\": [\"latest\"] },\n   { \"browser\": \"Webkit\", \"platform\": \"Windows 10\",     \"versions\": [\"latest\"] },\n   { \"browser\": \"Webkit\", \"platform\": \"MacOS Monterey\", \"versions\": [\"latest\"] },\n   { \"browser\": \"Webkit\", \"platform\": \"MacOS Big Sur\",  \"versions\": [\"latest\"] }\n]"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "WebKit runs on Cypress v10.8.0 only, so pin these under run_settings.npm_dependencies",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "\"npm_dependencies\": {\n   \"cypress\": \"10.8.0\",\n   \"playwright-webkit\": \"^1.28.1\"\n}"
+      }
+    ],
+    "dateModified": "2026-09-09T19:13:32+05:30"
+  }) }}
+/>
 # How to Set Browsers and OS for Cypress Tests on TestMu AI
 ***
 
@@ -54,6 +173,8 @@ You can run Cypress tests across multiple browser and OS combinations in two way
 
 To run Cypress tests on multiple browser and OS configurations, add the `browsers` object to `lambdatest-config.json` and define a list of browsers, browser versions, and platforms. Each entry sets one browser, its platform, and the versions to run, as shown in the syntax below.
 
+<VerifiedTag value="Verified" />
+
 ```js
    "browsers": [
       {
@@ -77,6 +198,8 @@ You can also select the browser and platform at run time with the Cypress CLI in
 
 Pass each combination to the `--brs, --browsers` flag using the `platform:browser:version` format shown below.
 
+<VerifiedTag value="Verified" />
+
 ```js
 lambdatest-cypress run --browsers "platform:browser:version"
 ```
@@ -94,6 +217,8 @@ Set the version in any of three ways (each option overrides the ones before it):
 
 The example below sets both `npm_dependencies` and `cypress_version` in `lambdatest-config.json`, with `cypress_version` taking priority.
 
+<VerifiedTag value="Verified" />
+
 ```json title="lambdatest-config.json"
 "run_settings": {
    "npm_dependencies": {
@@ -108,6 +233,8 @@ The example below sets both `npm_dependencies` and `cypress_version` in `lambdat
 
 WebKit is Safari's browser engine, so running your Cypress tests on WebKit shows how your site behaves in Safari. To target it, set the browser to `Webkit` in the `browsers` array of `lambdatest-config.json`, as shown below.
 
+<VerifiedTag value="Verified" />
+
 ```js
 "browsers": [
    { "browser": "Webkit", "platform": "Windows 11",     "versions": ["latest"] },
@@ -118,6 +245,8 @@ WebKit is Safari's browser engine, so running your Cypress tests on WebKit shows
 ```
 
 WebKit runs on **Cypress v10.8.0 only**, so pin both Cypress and `playwright-webkit` under `run_settings.npm_dependencies`, as shown below.
+
+<VerifiedTag value="Verified" />
 
 ```js
 "npm_dependencies": {
@@ -159,4 +288,3 @@ Continue with the guides below to configure and run your Cypress tests on TestMu
     </li>
   </ul>
 </nav>
-

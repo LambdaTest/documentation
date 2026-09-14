@@ -14,11 +14,171 @@ slug: appium-custom-headers/
 canonical: https://www.testmuai.com/support/docs/appium-custom-headers/
 ---
 
+import VerifiedTag from '@site/src/component/verifiedTag';
 
+<script type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify({
+       "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": BRAND_URL
+        },{
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Support",
+          "item": `${BRAND_URL}/support/docs/`
+        },{
+          "@type": "ListItem",
+          "position": 3,
+          "name": "How to Use CustomHeaders Capability",
+          "item": `${BRAND_URL}/support/docs/appium-custom-headers/`
+        }]
+      })
+    }}
+></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/appium-custom-headers/"
+    },
+    "headline": "How to Use CustomHeaders Capability",
+    "description": "Learn how to use TestMu AI CustomHeaders capability to add custom headers to your tests and bypass firewalls restrictions in app automation tests.",
+    "url": "https://www.testmuai.com/support/docs/appium-custom-headers/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "App Automation",
+    "keywords": [
+      "custom headers testmu ai",
+      "bypass firewalls restrictions",
+      "custom headers bypass firewalls"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "How to use CustomHeaders Capability on TestMu AI?",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "DesiredCapabilities capabilities = new DesiredCapabilities();\ncapabilities.setCapability(\"customHeaders\", new HashMap<String, String>() {{\n    put(\"headerName\", \"headerValue\");\n}});"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Here are some of its key use cases",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "X-Session-ID: 1234567890 "
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "CustomHeaders: Use Cases and Examples",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "Accept: application/json "
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "CustomHeaders: Use Cases and Examples",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "X-RateLimit-Limit: 60\nX-RateLimit-Remaining: 56\nX-RateLimit-Reset: 1372700873"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 5",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "X-Session-ID: 1234567890 //custom header X-Session-ID to track user sessions."
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 6",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "X-Session-ID: 1234567890 //custom header X-Session-ID to track user sessions."
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 7",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "X-Session-ID: 1234567890 //custom header X-Session-ID to track user sessions."
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 8",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "X-Session-ID: 1234567890 //custom header X-Session-ID to track user sessions."
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 9",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "X-Session-ID: 1234567890 //custom header X-Session-ID to track user sessions."
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 10",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "X-Session-ID: 1234567890 //custom header X-Session-ID to track user sessions."
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 11",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "X-Session-ID: 1234567890 //custom header X-Session-ID to track user sessions."
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
 #  How to Use CustomHeaders Capability on TestMu AI
 
 The customHeaders capability on TestMu AI adds custom HTTP headers to your automation requests, letting tests bypass firewall restrictions and control request or response metadata like the method, URL, and body. Configure it through the DesiredCapabilities class during automated testing.
-
 
 ## How to use CustomHeaders Capability on <BrandName />?
 
@@ -29,6 +189,8 @@ To add custom headers using <BrandName />'s CustomHeader capability, you need to
 1. Create an instance of the Desired Capabilities class.
 
 2. Use the customHeaders capability to add your custom headers.
+
+<VerifiedTag value="Verified" />
 
 ```java
 DesiredCapabilities capabilities = new DesiredCapabilities();
@@ -42,15 +204,15 @@ In the above code snippet, you need to replace **headerName** and **headerValue*
 ## CustomHeaders: Use Cases and Examples
 ---
 
-
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 Custom headers serves different purposes for development and network communications. Here are some of its key use cases:
 
-
 1. **User Identification and Session Management**: Used to send tokens, session IDs to authenticate and identify users. This helps in managing user sessions, implement stateless authentication mechanisms, track user behavior.
 
 **Example**: The Custom header `X-Session-ID`is used to track user sessions.
+
+<VerifiedTag value="Verified" />
 
 ```java
 X-Session-ID: 1234567890 
@@ -60,6 +222,8 @@ X-Session-ID: 1234567890
 
 **Example**: `Accept` header specifies the client-preferred format of the response data.
 
+<VerifiedTag value="Verified" />
+
 ```java
 Accept: application/json 
 ```
@@ -67,6 +231,8 @@ Accept: application/json
 3. **Rate Limiting**: Custom headers are often used by APIs to provide information about rate limits. They might send headers indicating how many requests a client can make in a given time period, how many requests they have left, or when they can make new requests.
 
 **Example**
+
+<VerifiedTag value="Verified" />
 
 ```java
 X-RateLimit-Limit: 60
@@ -78,6 +244,8 @@ X-RateLimit-Reset: 1372700873
 
 **Example**
 
+<VerifiedTag value="Verified" />
+
 ```java
 X-Session-ID: 1234567890 //custom header X-Session-ID to track user sessions.
 ```
@@ -85,6 +253,8 @@ X-Session-ID: 1234567890 //custom header X-Session-ID to track user sessions.
 5. **CORS (Cross-Origin Resource Sharing)**: The CORS standard uses custom headers to allow browsers and servers to interact securely with resources from different origins. This includes headers like "Access-Control-Allow-Origin" and "Access-Control-Allow-Methods".
 
 **Example**
+
+<VerifiedTag value="Verified" />
 
 ```java
 X-Session-ID: 1234567890 //custom header X-Session-ID to track user sessions.
@@ -94,6 +264,8 @@ X-Session-ID: 1234567890 //custom header X-Session-ID to track user sessions.
 
 **Example**
 
+<VerifiedTag value="Verified" />
+
 ```java
 X-Session-ID: 1234567890 //custom header X-Session-ID to track user sessions.
 ```
@@ -101,6 +273,8 @@ X-Session-ID: 1234567890 //custom header X-Session-ID to track user sessions.
 7. **Bypassing Firewalls or Proxies**: In some cases, custom headers can be used to bypass certain network restrictions, such as firewalls or proxy servers. This should, however, be done responsibly and in accordance with security policies.
 
 **Example**
+
+<VerifiedTag value="Verified" />
 
 ```java
 X-Session-ID: 1234567890 //custom header X-Session-ID to track user sessions.
@@ -110,6 +284,8 @@ X-Session-ID: 1234567890 //custom header X-Session-ID to track user sessions.
 
 **Example**
 
+<VerifiedTag value="Verified" />
+
 ```java
 X-Session-ID: 1234567890 //custom header X-Session-ID to track user sessions.
 ```
@@ -117,6 +293,8 @@ X-Session-ID: 1234567890 //custom header X-Session-ID to track user sessions.
 9. **SEO Optimization**: Custom headers like canonical and pagination headers can be used to guide search engines and optimize SEO.
 
 **Example**
+
+<VerifiedTag value="Verified" />
 
 ```java
 X-Session-ID: 1234567890 //custom header X-Session-ID to track user sessions.
@@ -126,10 +304,11 @@ X-Session-ID: 1234567890 //custom header X-Session-ID to track user sessions.
 
 **Example**
 
+<VerifiedTag value="Verified" />
+
 ```java
 X-Session-ID: 1234567890 //custom header X-Session-ID to track user sessions.
 ```
-
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">

@@ -45,6 +45,99 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/smartui-visual-ai/"
+    },
+    "headline": "Visual AI Agent for SmartUI",
+    "description": "Revolutionize your visual testing with SmartUI's Visual AI Agent. Detect changes that matter and ignore false positives with intelligent analysis.",
+    "url": "https://www.testmuai.com/support/docs/smartui-visual-ai/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "SmartUI",
+    "keywords": [
+      "Visual AI Agent",
+      "SmartUI AI",
+      "Intelligent Visual Testing"
+    ],
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "dateModified": "2026-02-12T19:51:34+05:30"
+  }) }}
+/>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "How to Use SmartUI Visual Agent",
+      "description": "Revolutionize your visual testing with SmartUI's Visual AI Agent. Detect changes that matter and ignore false positives with intelligent analysis.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Activate Visual AI Mode",
+          "text": "Navigate to any SmartUI comparison build. In the toolbar above the screenshots, locate and click the Visual AI toggle. This activates the \"Human Intelligence AI Agent.\"",
+          "url": "https://www.testmuai.com/support/docs/smartui-visual-ai/#step-1-activate-visual-ai-mode"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Investigate AI-Detected Differences",
+          "text": "Once Visual AI is active, the system automatically draws boxes around what it has identified as significant visual changes on the \"Captured\" screenshot. You can then interact with these boxes to learn more.",
+          "url": "https://www.testmuai.com/support/docs/smartui-visual-ai/#step-2-investigate-ai-detected-differences"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Understand the AI-Generated Summary",
+          "text": "When you click on a diff box, a panel appears with a concise, human-readable explanation of the change. This summary describes the full scope of the difference, allowing for quick recognition and understanding. For example, it might summarize a complex visual change as \"Content Grid Replaced with Placeholders.\"",
+          "url": "https://www.testmuai.com/support/docs/smartui-visual-ai/#step-3-understand-the-ai-generated-summary"
+        }
+      ]
+    }
+  ]) }}
+/>
+
+
+
 # Visual AI Agent
 
 <NewTag value="Beta" color="#000" bgColor="#ffec02" />

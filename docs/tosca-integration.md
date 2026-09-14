@@ -19,6 +19,86 @@ canonical: https://www.testmuai.com/support/docs/tricentis-tosca-integration-tes
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import { CookieTrackingSignup } from '@site/src/component/CookieTracking';
 
+<script type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify({
+       "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": BRAND_URL
+        },{
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Support",
+          "item": `${BRAND_URL}/support/docs/`
+        },{
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Tricentis Tosca Integration With TestMu AI’s Cloud Based Selenium Grid",
+          "item": `${BRAND_URL}/support/docs/tricentis-tosca-integration-testmu-selenium-grid/`
+        }]
+      })
+    }}
+></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/tricentis-tosca-integration-testmu-selenium-grid/"
+    },
+    "headline": "Tricentis Tosca Integration With TestMu AI\u2019s Cloud Based Selenium Grid",
+    "description": "Now you can run your Tosca  automation tests  on TestMu AI online grid of 3000+ real desktop browsers and real operating systems.",
+    "url": "https://www.testmuai.com/support/docs/tricentis-tosca-integration-testmu-selenium-grid/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Integration",
+    "keywords": [
+      "tricentis tosca",
+      "testmu ai integrations",
+      "testmu ai integration with applitools"
+    ],
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "dateModified": "2026-08-12T15:40:32+05:30"
+  }) }}
+/>
 <BrandName /> provides support with Selenium WebDriver for pacing the execution of your automation test scripts. <BrandName /> is a cloud-based, cross browser testing tool, providing a [Selenium Grid](https://www.testmuai.com/selenium-automation/) of 3000+ browsers and browser versions running through real operating systems to speed up automation testing of your web-app or website. This topic will help you to automate your website testing using Tricentis Tosca on <BrandName />.
 
 This topic will be focusing on:
@@ -43,7 +123,6 @@ For demonstrating Tosca-<BrandName /> integration, we would be considering the f
 5. Verify if the entered text is present under the "Your Message" section.
    <img loading="lazy" src={require('../assets/images/tosca-integration/tosca_int_01.webp').default} alt="Image" width="1365" height="650" className="doc_img"/>
 
-
 ## Integrating Tricentis Tosca With <BrandName />
 
 **Step 1:** Launch the Tosca Commander.
@@ -60,11 +139,9 @@ For demonstrating Tosca-<BrandName /> integration, we would be considering the f
 
 **Step 5:** On the **Select Application** screen, select the Chrome browser instance that was open in the earlier step and click **Scan**
 
-
 <img loading="lazy" src={require('../assets/images/tosca-integration/tosca_int_05_01.webp').default} alt="Image" width="1365" height="690" className="doc_img"/>
 
 <img loading="lazy" src={require('../assets/images/tosca-integration/tosca_int_05.webp').default} alt="Image" width="1365" height="650" className="doc_img"/>
-
 
 **Step 6:** Now you will be prompted to install Tosca Extension.
 
@@ -87,7 +164,6 @@ For demonstrating Tosca-<BrandName /> integration, we would be considering the f
 **Step 10:** Click **Finish Screen**.
 
 **Step 11:** In the browser click the **Simple Form Demo** link, navigate to the **Simple Form Page**. ReOpen Tosca XScan ,Click **Select on screen** and  capture required elements for test case.(input text box, "Get Checked value" button and text area to validate)
-
 
 **Step 12:**  On completion click **Finish Screen**
  All the captured elements are listed under Modules are below:
@@ -115,7 +191,6 @@ For demonstrating Tosca-<BrandName /> integration, we would be considering the f
  - **New TestCase_1** to LT_PlayGroudTest_2 
 
 <img loading="lazy" src={require('../assets/images/tosca-integration/tosca_int_17.webp').default} alt="Image" width="1365" height="650" className="doc_img"/>
-
 
 **Step 18:**  Select the first test case and press **CTRL + T**. This will display a list of all the common modules. Type **OpenUrl** in the search box and select the **OpenUrl** module to add to the test case.
 
@@ -157,10 +232,8 @@ Shown below is the final test case view.
 
 <img loading="lazy" src={require('../assets/images/tosca-integration/mba-real.webp').default} alt="Image" width="1252" height="532" className="doc_img"/>
 
-
 *You can refer our [Desired Capability Generator](https://www.testmuai.com/capabilities-generator/)
  to choose different browser combination.*
-
 
 **Step 23:** Go to the **Details** tab then Right-click on the test case and select **Run in ScratchBook**. This will launch the test on <BrandName /> Platform.
 
@@ -180,9 +253,7 @@ To use a WebDriver capability,
 - Prefix the capability with "WebDriver_"*, for ex: WebDriver_console. 
 - If the name of the capability contains a dot (.), replace this character with double underscore (\__). If the name of the capability contains a colon (:), replace this character with triple underscore (___).
 
-
 <img loading="lazy" src={require('../assets/images/tosca-integration/tosca_int_26.webp').default} alt="Image" width="1365" height="650" className="doc_img"/>
-
 
 With this enabled log when you execute the test case, you can see logs in <BrandName /> Plateform once execution completes.
 
@@ -198,12 +269,10 @@ In <BrandName /> Plateform , You can see check the log to validate the Web Appli
 
 <img loading="lazy" src={require('../assets/images/tosca-integration/tosca_int_28.webp').default} alt="Image" width="1365" height="650" className="doc_img"/>
 
-
 ## Testing Locally Hosted or Privately Hosted Projects
 ***
 To help you perform [cross browser testing](https://www.testmuai.com) of your locally stored web pages, <BrandName /> provides an SSH(Secure Shell) tunnel connection with the name Lambda Tunnel. With Lambda Tunnel, you can execute a test server inside your GitLab CI build a container to perform automated cross browser testing on browsers offered by Selenium grid on <BrandName />. So you make sure how well your changes look, even before your customers.
 Curious to know more about Lambda Tunnel?
-
 
 Follow our documentation on Lambda Tunnel to know it all. OS-specific instructions to download and set up tunnel binary are at the following links.
 
@@ -225,9 +294,7 @@ In <BrandName /> logs you can validate whether Tunnel is enaled or not from Tosc
 
 <img loading="lazy" src={require('../assets/images/tosca-integration/tosca_int_30.webp').default} alt="Image" width="1365" height="650" className="doc_img"/>
 
-
 In case you face any problems during the integration, or have any other questions, reach out to us on our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 chat support**</span>.
-
 
 Happy testing!
 

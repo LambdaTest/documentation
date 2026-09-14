@@ -6,6 +6,85 @@ description: Give Rook a natural-language request and let its orchestrator answe
 slug: rook-command-ask/
 ---
 
+import { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
+
+<script type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify({
+       "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": BRAND_URL
+        },{
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Support",
+          "item": `${BRAND_URL}/support/docs/`
+        },{
+          "@type": "ListItem",
+          "position": 3,
+          "name": "rook ask Command",
+          "item": `${BRAND_URL}/support/docs/rook-command-ask/`
+        }]
+      })
+    }}
+></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/rook-command-ask/"
+    },
+    "headline": "rook ask Command",
+    "description": "Give Rook a natural-language request and let its orchestrator answer from state or dispatch a command.",
+    "url": "https://www.testmuai.com/support/docs/rook-command-ask/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Agent Testing",
+    "keywords": [],
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "dateModified": "2026-09-04T12:50:18+05:30"
+  }) }}
+/>
 # <code>rook ask</code> Command
 
 Use <code>rook ask</code> for one natural-language orchestrator turn without opening the TUI. Inside the TUI, prose entered without a leading slash follows the same classify-and-dispatch path.
@@ -13,6 +92,8 @@ Use <code>rook ask</code> for one natural-language orchestrator turn without ope
 <img loading="lazy" src={require('../assets/images/rook/commands/rook-command-ask.png').default} alt="Current Rook ask command help showing JSON and verbose options" className="doc_img"/>
 
 ## Syntax
+
+<VerifiedTag value="Verified" />
 
 ~~~bash
 rook ask <prompt...>
@@ -26,6 +107,8 @@ rook ask <prompt...> --json
 | <code>--json</code> | Emit machine-readable events. |
 
 The orchestrator can answer questions from Rook workspace state or dispatch an existing command. Requests that spend credits, invoke a target, or need permission still pass through the same gates as the explicit command.
+
+<VerifiedTag value="Verified" />
 
 ~~~bash
 rook ask "Which agent is active and is its tree synchronized?"

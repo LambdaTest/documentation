@@ -30,6 +30,8 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 
+import VerifiedTag from '@site/src/component/verifiedTag';
+
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
        "@context": "https://schema.org",
@@ -53,6 +55,209 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       })
     }}
 ></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/smartui-running-your-first-project/"
+    },
+    "headline": "Running Your First Project on SmartUI",
+    "description": "Learn how to run your first project on smartui step by step guide for the first time users to help them understand how the platform works",
+    "url": "https://www.testmuai.com/support/docs/smartui-running-your-first-project/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "SmartUI",
+    "keywords": [
+      "smart visual testing in testmu ai",
+      "visual  ui testing,image to image comparison",
+      "free cross browser testing tool"
+    ],
+    "proficiencyLevel": "Beginner",
+    "dependencies": "Basic understanding of Command Line Interface and Selenium is required.; Login to TestMu AI SmartUI with your credentials..",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 2: Configure your Test Suite dependencies",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n:::note\nYou can check the latest version of [lambdatest-java-sdk]( https://mvnrepository.com/artifact/io.github.lambdatest/lambdatest-java-sdk) and update the latest version accordingly.\n:::\n\n- Install your CLI and required modules for running SmartUI SDK and compile your defined dependencies in the `pom.xml` file:\n\n```zsh\nnpm install -g @lambdatest/smartui-cli\nmvn clean compile"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Setting Project Token",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "export PROJECT_TOKEN=\"123456#1234abcd-****-****-****-************\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Setting Project Token",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "set PROJECT_TOKEN=\"123456#1234abcd-****-****-****-************\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Setting Project Token",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "PowerShell",
+        "text": "$env:PROJECT_TOKEN=\"123456#1234abcd-****-****-****-************\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Setting TestMu AI Credentials (for Hooks)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "export LT_USERNAME=\"${YOUR_LAMBDATEST_USERNAME}\"\nexport LT_ACCESS_KEY=\"${YOUR_LAMBDATEST_ACCESS_KEY}\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Setting TestMu AI Credentials (for Hooks)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "set LT_USERNAME=\"${YOUR_LAMBDATEST_USERNAME}\"\nset LT_ACCESS_KEY=\"${YOUR_LAMBDATEST_ACCESS_KEY}\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Setting TestMu AI Credentials (for Hooks)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "PowerShell",
+        "text": "$env:LT_USERNAME=\"${YOUR_LAMBDATEST_USERNAME}\"\n$env:LT_ACCESS_KEY=\"${YOUR_LAMBDATEST_ACCESS_KEY}\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "To generate the configuration file, please execute the following command",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "npx smartui config:create .smartui.json"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 9",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": ":::info Advanced options in SmartUI configuration\n- For capturing fullpage or viewport screenshots, please refer to this [documentation](/docs/smartui-sdk-config-options/#12-viewports)\n- For the list of available mobile viewports, please refer to this [documentation](/docs/smartui-sdk-config-options/#list-of-supported-device-viewports)\n- For more information about SmartUI config global options, please refer to this [documentation](/docs/smartui-sdk-config-options/#3-global-options-optional).\n:::\n\n## Step 5: Adding SmartUI function to take screenshot\nYou can incorporate SmartUI into your custom `Selenium` automation test (any platform) script by adding the `smartuiSnapshot` function in the required segment of selenium script of which we would like to take the screenshot, as shown below:\n\n```java\n //Importing the lambdatest-java SDK\n//Rest of your code here\n\n@Test\n    public void basicTest() throws Exception {\n        String spanText;\n        System.out.println(\"Loading URL\");\n\n        driver.get(\"<Required URL>\");\n        // ... test code snippet\n        // highlight-next-line\n        SmartUISnapshot.smartuiSnapshot(driver, \"<Screenshot Name>\");\n    }"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 6: Execute the Tests on SmartUI Cloud",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "npx smartui --config .smartui.json exec -- mvn test -D suite=\"sdk-cloud.xml\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "The smartui-skill package includes",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "smartui-skill/\n\u251c\u2500\u2500 SKILL.md\n\u2514\u2500\u2500 reference/\n    \u251c\u2500\u2500 playbook.md\n    \u2514\u2500\u2500 advanced-patterns.md"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Install a SmartUI Agent Skill using the command below",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "codeRepository": "https://github.com/LambdaTest/agent-skills",
+        "text": "# Clone the repo and copy the skill you need\ngit clone https://github.com/LambdaTest/agent-skills.git\ncp -r agent-skills/smartui-skill .claude/skills/\n\n# Or for Cursor / Copilot\ncp -r agent-skills/smartui-skill .cursor/skills/"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Running Your First Project on SmartUI",
+      "description": "Learn how to run your first project on smartui step by step guide for the first time users to help them understand how the platform works",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Create a SmartUI Project",
+          "text": "The first step is to create a project with the application in which we will combine all your builds run on the project. To create a SmartUI Project, follow these steps: Go to Projects page and click on the New Project button. Select the platform as CLI for executing your SDK tests. Add name of the project, approver's name, and tags for any filter or easy navigation. Click on the Continue button. Now select your desired framework and click on the Configure button. For the demo purpose we will select the Java framework.",
+          "url": "https://www.testmuai.com/support/docs/smartui-running-your-first-project/#step-1-create-a-smartui-project"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Configure your Test Suite dependencies",
+          "text": "You can use your own project to configure and test it. For demo purposes, we are using the sample repository. Download or Clone the code sample code repository from the TestMu AI GitHub repository to run the project on the SmartUI. Add the following dependency in your pom.xml file You can check the latest version of lambdatest-java-sdk and update the latest version accordingly. Install your CLI and required modules for running SmartUI SDK and compile your defined dependencies in the pom.xml file: If you face any problems executing tests with SmartUI-CLI versions >= v4.x.x, upgrade your Node.js version to v20.3 or above.",
+          "url": "https://www.testmuai.com/support/docs/smartui-running-your-first-project/#step-2-configure-your-test-suite-dependencies"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Setup your Project Token and Environment Variables",
+          "text": "Setup your project token and credentials shown in the SmartUI app after creating your project. For CLI projects, use PROJECT_TOKEN (no username/access key needed) For Hooks (Selenium, Playwright, etc.), use LTUSERNAME and LTACCESS_KEY",
+          "url": "https://www.testmuai.com/support/docs/smartui-running-your-first-project/#step-3-setup-your-project-token-and-environment-variables"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Step 4: Create and Configure SmartUI Config",
+          "text": "You can now configure your project configurations on using various available options to run your project with the SmartUI integration. To generate the configuration file, please execute the following command: Once, the configuration file will be created, you will be seeing the default configuration pre-filled in the configuration file: For capturing fullpage or viewport screenshots, please refer to this documentation For the list of available mobile viewports, please refer to this documentation For more information about SmartUI config global options, please refer to this documentation.",
+          "url": "https://www.testmuai.com/support/docs/smartui-running-your-first-project/#step-4-create-and-configure-smartui-config"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 5,
+          "name": "Step 5: Adding SmartUI function to take screenshot",
+          "text": "You can incorporate SmartUI into your custom Selenium automation test (any platform) script by adding the smartuiSnapshot function in the required segment of selenium script of which we would like to take the screenshot, as shown below:",
+          "url": "https://www.testmuai.com/support/docs/smartui-running-your-first-project/#step-5-adding-smartui-function-to-take-screenshot"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 6,
+          "name": "Step 6: Execute the Tests on SmartUI Cloud",
+          "text": "Execute visual regression tests on SmartUI using the following commands You may use the npx smartui --help command in case you are facing issues during the execution of SmartUI commands in the CLI. You can see the SmartUI dashboard to view the results. This will help you identify the Mismatches from the existing Baseline build and do the required visual testing.",
+          "url": "https://www.testmuai.com/support/docs/smartui-running-your-first-project/#step-6-execute-the-tests-on-smartui-cloud"
+        }
+      ]
+    }
+  ]) }}
+/>
+
+
 
 # Running Your First Project on SmartUI
 
@@ -89,6 +294,8 @@ Download or Clone the code sample code repository from the <BrandName /> GitHub 
 
 - Add the following dependency in your `pom.xml` file
 
+<VerifiedTag value="Verified" />
+
 ```xml title="pom.xml"
 <dependency>
     <groupId>io.github.lambdatest</groupId>
@@ -102,6 +309,8 @@ You can check the latest version of [lambdatest-java-sdk]( https://mvnrepository
 :::
 
 - Install your CLI and required modules for running SmartUI SDK and compile your defined dependencies in the `pom.xml` file:
+
+<VerifiedTag value="Verified" />
 
 ```zsh
 npm install -g @lambdatest/smartui-cli
@@ -121,6 +330,8 @@ Setup your project token and credentials shown in the **SmartUI** app after crea
 <Tabs className='docs__val' groupId='language'>
 <TabItem value='MacOS/Linux' label='MacOS/Linux' default>
 
+<VerifiedTag value="Verified" />
+
 ```bash
 export PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
 ```
@@ -128,12 +339,16 @@ export PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
 </TabItem>
 <TabItem value='Windows' label='Windows - CMD'>
 
+<VerifiedTag value="Verified" />
+
 ```bash
 set PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
 ```
 
 </TabItem>
 <TabItem value='PowerShell' label='PowerShell'>
+
+<VerifiedTag value="Verified" />
 
 ```powershell
 $env:PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
@@ -147,6 +362,8 @@ $env:PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
 <Tabs className='docs__val' groupId='language'>
 <TabItem value='MacOS/Linux-1' label='MacOS/Linux' default>
 
+<VerifiedTag value="Verified" />
+
 ```bash
 export LT_USERNAME="${YOUR_LAMBDATEST_USERNAME}"
 export LT_ACCESS_KEY="${YOUR_LAMBDATEST_ACCESS_KEY}"
@@ -155,6 +372,8 @@ export LT_ACCESS_KEY="${YOUR_LAMBDATEST_ACCESS_KEY}"
 </TabItem>
 <TabItem value="Windows-1" label='Windows - CMD'>
 
+<VerifiedTag value="Verified" />
+
 ```bash
 set LT_USERNAME="${YOUR_LAMBDATEST_USERNAME}"
 set LT_ACCESS_KEY="${YOUR_LAMBDATEST_ACCESS_KEY}"
@@ -162,6 +381,8 @@ set LT_ACCESS_KEY="${YOUR_LAMBDATEST_ACCESS_KEY}"
 
 </TabItem>
 <TabItem value="PowerShell-1" label='PowerShell'>
+
+<VerifiedTag value="Verified" />
 
 ```powershell
 $env:LT_USERNAME="${YOUR_LAMBDATEST_USERNAME}"
@@ -181,10 +402,14 @@ $env:LT_ACCESS_KEY="${YOUR_LAMBDATEST_ACCESS_KEY}"
 ## Step 4: Create and Configure SmartUI Config
 You can now configure your project configurations on using various available options to run your project with the SmartUI integration. To generate the configuration file, please execute the following command:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 npx smartui config:create .smartui.json
 ```
 Once, the configuration file will be created, you will be seeing the default configuration pre-filled in the configuration file:
+
+<VerifiedTag value="Verified" />
 
 ```javascript title="/smartui-sdk-project/.smartui.json"
 {
@@ -230,6 +455,8 @@ Once, the configuration file will be created, you will be seeing the default con
 ## Step 5: Adding SmartUI function to take screenshot
 You can incorporate SmartUI into your custom `Selenium` automation test (any platform) script by adding the `smartuiSnapshot` function in the required segment of selenium script of which we would like to take the screenshot, as shown below:
 
+<VerifiedTag value="Verified" />
+
 ```java
  //Importing the lambdatest-java SDK
 //Rest of your code here
@@ -248,6 +475,8 @@ You can incorporate SmartUI into your custom `Selenium` automation test (any pla
 
 ## Step 6: Execute the Tests on SmartUI Cloud
 Execute `visual regression tests` on SmartUI using the following commands
+
+<VerifiedTag value="Verified" />
 
 ```bash
 npx smartui --config .smartui.json exec -- mvn test -D suite="sdk-cloud.xml"
@@ -271,6 +500,8 @@ Set the Project Name you want to add the current build run to by exporting these
 <Tabs className='docs__val' groupId='language'>
 <TabItem value='MacOS/Linux-env-1' label='MacOS/Linux' default>
 
+<VerifiedTag value="Verified" />
+
 ```bash
 export LT_USERNAME="YOUR USERNAME"
 export LT_ACCESS_KEY="YOUR ACCESS KEY"
@@ -280,6 +511,8 @@ export PROJECT_NAME="Required Project Name"
 </TabItem>
 <TabItem value='Windows-env-1' label='Windows - CMD'>
 
+<VerifiedTag value="Verified" />
+
 ```bash
 set LT_USERNAME="YOUR USERNAME"
 set LT_ACCESS_KEY="YOUR ACCESS KEY"
@@ -288,6 +521,8 @@ set PROJECT_NAME="Required Project Name"
 
 </TabItem>
 <TabItem value='PowerShell-env-1' label='PowerShell'>
+
+<VerifiedTag value="Verified" />
 
 ```powershell
 $env:LT_USERNAME="YOUR USERNAME"
@@ -307,6 +542,8 @@ Setup your project token shown in the **SmartUI** app after creating your projec
 <Tabs className='docs__val' groupId='language'>
 <TabItem value='MacOS/Linux-env-2' label='MacOS/Linux' default>
 
+<VerifiedTag value="Verified" />
+
 ```bash
 export PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
 ```
@@ -314,12 +551,16 @@ export PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
 </TabItem>
 <TabItem value="Windows-env-2" label='Windows - CMD'>
 
+<VerifiedTag value="Verified" />
+
 ```bash
 set PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
 ```
 
 </TabItem>
 <TabItem value="PowerShell-env-2" label='PowerShell'>
+
+<VerifiedTag value="Verified" />
 
 ```powershell
 $env:PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
@@ -339,6 +580,8 @@ Set the baseline branch for `CLI` projects:
 <Tabs className='docs__val' groupId='language'>
 <TabItem value='MacOS/Linux-env-3' label='MacOS/Linux' default>
 
+<VerifiedTag value="Verified" />
+
 ```bash
 export BASELINE_BRANCH="Required branch"
 ```
@@ -346,12 +589,16 @@ export BASELINE_BRANCH="Required branch"
 </TabItem>
 <TabItem value="Windows-env-3" label='Windows - CMD'>
 
+<VerifiedTag value="Verified" />
+
 ```bash
 set BASELINE_BRANCH="Required branch"
 ```
 
 </TabItem>
 <TabItem value="PowerShell-env-3" label='PowerShell'>
+
+<VerifiedTag value="Verified" />
 
 ```powershell
 $env:BASELINE_BRANCH="Required branch"
@@ -367,6 +614,8 @@ Set the current branch for `CLI` projects:
 <Tabs className='docs__val' groupId='language'>
 <TabItem value='MacOS/Linux-env-4' label='MacOS/Linux' default>
 
+<VerifiedTag value="Verified" />
+
 ```bash
 export CURRENT_BRANCH="Required branch"
 ```
@@ -374,12 +623,16 @@ export CURRENT_BRANCH="Required branch"
 </TabItem>
 <TabItem value="Windows-env-4" label='Windows - CMD'>
 
+<VerifiedTag value="Verified" />
+
 ```bash
 set CURRENT_BRANCH="Required branch"
 ```
 
 </TabItem>
 <TabItem value='PowerShell-env-4' label='PowerShell'>
+
+<VerifiedTag value="Verified" />
 
 ```powershell
 $env:CURRENT_BRANCH="Required branch"
@@ -397,6 +650,8 @@ In case you are accessing your network using corporate proxies, set the proxies 
 <Tabs className='docs__val' groupId='language'>
 <TabItem value='MacOS/Linux-env-5' label='MacOS/Linux' default>
 
+<VerifiedTag value="Verified" />
+
 ```bash
 export HTTP_PROXY="http://<username>:<password>@<domain.com>:<port>/"
 ```
@@ -404,12 +659,16 @@ export HTTP_PROXY="http://<username>:<password>@<domain.com>:<port>/"
 </TabItem>
 <TabItem value="Windows-env-5" label='Windows - CMD'>
 
+<VerifiedTag value="Verified" />
+
 ```bash
 set HTTP_PROXY="http://<username>:<password>@<domain.com>:<port>"
 ```
 
 </TabItem>
 <TabItem value='PowerShell-env-5' label='PowerShell'>
+
+<VerifiedTag value="Verified" />
 
 ```powershell
 $env:HTTP_PROXY="http://<username>:<password>@<domain.com>:<port>/"
@@ -423,6 +682,8 @@ $env:HTTP_PROXY="http://<username>:<password>@<domain.com>:<port>/"
 <Tabs className='docs__val' groupId='language'>
 <TabItem value='MacOS/Linux-env-6' label='MacOS/Linux' default>
 
+<VerifiedTag value="Verified" />
+
 ```bash
 export HTTPS_PROXY="https://<username>:<password>@<domain.com>:<port>"
 ```
@@ -430,12 +691,16 @@ export HTTPS_PROXY="https://<username>:<password>@<domain.com>:<port>"
 </TabItem>
 <TabItem value='Windows-env-6' label='Windows - CMD'>
 
+<VerifiedTag value="Verified" />
+
 ```bash
 set HTTPS_PROXY="https://<username>:<password>@<domain.com>:<port>"
 ```
 
 </TabItem>
 <TabItem value='PowerShell-env-6' label='PowerShell'>
+
+<VerifiedTag value="Verified" />
 
 ```powershell
 $env:HTTPS_PROXY="https://<username>:<password>@<domain.com>:<port>/"
@@ -453,6 +718,8 @@ To enable SmartUI CLI Debug mode, use the following environment variable.
 <Tabs className='docs__val' groupId='language'>
 <TabItem value='MacOS/Linux-env-7' label='MacOS/Linux' default>
 
+<VerifiedTag value="Verified" />
+
 ```bash
 export LT_SDK_DEBUG=true
 ```
@@ -460,12 +727,16 @@ export LT_SDK_DEBUG=true
 </TabItem>
 <TabItem value='Windows-env-7' label='Windows - CMD' default>
 
+<VerifiedTag value="Verified" />
+
 ```bash
 set LT_SDK_DEBUG=true
 ```
 
 </TabItem>
 <TabItem value='PowerShell-env-7' label='PowerShell'>
+
+<VerifiedTag value="Verified" />
 
 ```powershell
 $env:LT_SDK_DEBUG="true"
@@ -482,6 +753,8 @@ Set the following variable to true, to stop the use of cookies captured automati
 <Tabs className='docs__val' groupId='language'>
 <TabItem value='MacOS/Linux-env-8' label='MacOS/Linux' default>
 
+<VerifiedTag value="Verified" />
+
 ```shell
 export SMARTUI_DO_NOT_USE_CAPTURED_COOKIES=true
 ```
@@ -489,12 +762,16 @@ export SMARTUI_DO_NOT_USE_CAPTURED_COOKIES=true
 </TabItem>
 <TabItem value='Windows-env-8' label='Windows - CMD' default>
 
+<VerifiedTag value="Verified" />
+
 ```shell
 set SMARTUI_DO_NOT_USE_CAPTURED_COOKIES=true
 ```
 
 </TabItem>
 <TabItem value='PowerShell-env-8' label='PowerShell'>
+
+<VerifiedTag value="Verified" />
 
 ```powershell
 $env:SMARTUI_DO_NOT_USE_CAPTURED_COOKIES="true"
@@ -510,6 +787,8 @@ For SDK integrations (non-Selenium), set the SmartUI server address:
 <Tabs className='docs__val' groupId='language'>
 <TabItem value='MacOS/Linux-env-9' label='MacOS/Linux' default>
 
+<VerifiedTag value="Verified" />
+
 ```bash
 export SMARTUI_SERVER_ADDRESS="http://localhost:8080"
 ```
@@ -517,12 +796,16 @@ export SMARTUI_SERVER_ADDRESS="http://localhost:8080"
 </TabItem>
 <TabItem value='Windows-env-9' label='Windows - CMD'>
 
+<VerifiedTag value="Verified" />
+
 ```bash
 set SMARTUI_SERVER_ADDRESS="http://localhost:8080"
 ```
 
 </TabItem>
 <TabItem value='PowerShell-env-9' label='PowerShell'>
+
+<VerifiedTag value="Verified" />
 
 ```powershell
 $env:SMARTUI_SERVER_ADDRESS="http://localhost:49152"
@@ -624,6 +907,9 @@ In CLI-based workflows, approval alone may not be sufficient for baseline persis
 - Creating unified baselines from distributed testing
 
 **CLI Usage**:
+
+<VerifiedTag value="Verified" />
+
 ```bash
 # Merge branches
 npx smartui merge branch --source feature-branch --target main
@@ -708,6 +994,9 @@ Each variant row lists its browser and resolution, and merged variants carry the
 - Best for continuous integration scenarios
 
 **Baseline Update Mechanism**:
+
+<VerifiedTag value="Verified" />
+
 ```javascript
 // SDK capability to auto-mark baseline
 capabilities.setCapability("smartUI.baseline", true);
@@ -744,6 +1033,9 @@ SmartUI maintains baseline references at multiple levels:
 Every baseline modification requires deliberate user intervention:
 
 **CLI Workflows**:
+
+<VerifiedTag value="Verified" />
+
 ```bash
 # 1. Run tests (no baseline change)
 npx smartui exec -- npm test
@@ -756,12 +1048,18 @@ npx smartui move-to-baseline --build current-build
 ```
 
 **SDK with Capabilities**:
+
+<VerifiedTag value="Verified" />
+
 ```javascript
 // Explicit capability setting required
 capabilities.setCapability("smartUI.baseline", true); // User must set this
 ```
 
 **Git Projects**:
+
+<VerifiedTag value="Verified" />
+
 ```bash
 # Explicit baseline branch configuration required
 export BASELINE_BRANCH="main" # User must configure
@@ -776,6 +1074,9 @@ export BASELINE_BRANCH="main" # User must configure
 **Root Cause**: In CLI workflows, approval updates baseline within that build's context, but doesn't necessarily persist as the global baseline for future builds unless explicitly moved.
 
 **Solution**:
+
+<VerifiedTag value="Verified" />
+
 ```bash
 # After approving in B1
 npx smartui move-to-baseline --build B1
@@ -801,6 +1102,9 @@ npx smartui move-to-baseline --build B1
 **Root Cause**: The capability must be set correctly and the build must complete successfully for baseline marking to occur.
 
 **Solution**:
+
+<VerifiedTag value="Verified" />
+
 ```javascript
 // Ensure correct capability syntax
 capabilities.setCapability("smartUI.baseline", true);
@@ -812,6 +1116,9 @@ capabilities.setCapability("smartUI.baseline", true);
 ### Ideal Usage Guidelines
 
 #### For CLI Workflows
+
+<VerifiedTag value="Verified" />
+
 ```bash
 # 1. Run initial build to establish baseline
 npx smartui exec -- npm test
@@ -830,6 +1137,9 @@ npx smartui exec -- npm test
 ```
 
 #### For SDK Integration
+
+<VerifiedTag value="Verified" />
+
 ```java
 // Set capability explicitly for baseline marking
 DesiredCapabilities capabilities = new DesiredCapabilities();
@@ -841,6 +1151,9 @@ SmartUI.takeScreenshot("screenshot-name");
 ```
 
 #### Branch-Based Development
+
+<VerifiedTag value="Verified" />
+
 ```bash
 # Feature branch development
 npx smartui --baselineBranch main exec -- npm test
@@ -852,6 +1165,9 @@ npx smartui merge branch --source feature-branch --target main
 ### Advanced Baseline Management
 
 #### Multi-Level Baseline Strategy
+
+<VerifiedTag value="Verified" />
+
 ```bash
 # Different baselines for different environments
 npx smartui --baselineBranch staging exec -- npm test  # Staging baseline
@@ -862,6 +1178,9 @@ npx smartui --baselineBuild "v2.1.0" exec -- npm test
 ```
 
 #### Baseline Rollback
+
+<VerifiedTag value="Verified" />
+
 ```bash
 # Rollback to previous baseline
 npx smartui --baselineBuild "previous-stable-build" exec -- npm test

@@ -18,6 +18,8 @@ canonical: https://www.testmuai.com/support/docs/kaneai-dynamic-url-replacement/
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 
+import VerifiedTag from '@site/src/component/verifiedTag';
+
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
        "@context": "https://schema.org",
@@ -41,6 +43,123 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       })
     }}
 ></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/kaneai-dynamic-url-replacement/"
+    },
+    "headline": "Dynamic URL Replacement",
+    "description": "This documentation will help you to understand how to dynamically update your URL during the KaneAI testing",
+    "url": "https://www.testmuai.com/support/docs/kaneai-dynamic-url-replacement/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "KaneAI",
+    "keywords": [
+      "modules versioning",
+      "enhancements",
+      "modules"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "API Endpoint",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n### Request Headers\n```javascript\nContent-Type: application/json\nAuthorization: Basic <Base64Auth>"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "The following JSON payload demonstrates how to use the API to configure Dynamic URL Replacement",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "{\n  \"test_run_id\": \"YOUR_TEST_RUN_ID\", // Replace with your test run ID\n  \"concurrency\": 1, // Optional, Default: 1\n  \"title\": \"UNIQUE_BUILD_NAME\", // Optional\n  \"region\": \"YOUR_DESIRED_REGION\", // e.g., eastus, centralindia\n  \"replaced_url\": [\n      {\n          \"pattern_url\": \"TEST_URL_1\",\n          \"replacement_url\": \"REPLACED_TEST_URL_1\"\n      },\n      {\n          \"pattern_url\": \"TEST_URL_2\",\n          \"replacement_url\": \"REPLACED_TEST_URL_2\"\n      },\n      {\n          \"pattern_url\": \"TEST_URL_3\",\n          \"replacement_url\": \"REPLACED_TEST_URL_3\"\n      }\n  ],\n  \"accessibility\": false\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Here\u2019s an example cURL command to trigger a test run with Dynamic URL Replacement",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "curl --location 'https://test-manager-api.lambdatest.com/api/atm/v1/hyperexecute' \\\n--header 'Content-Type: application/json' \\\n--header 'Authorization: Basic <Base64Auth>' \\\n--data '{\n    \"test_run_id\": \"YOUR_TEST_RUN_ID\", \n    \"concurrency\": 1, \n    \"title\": \"UNIQUE_BUILD_NAME\", \n    \"region\": \"eastus\", \n    \"replaced_url\": [\n        {\n            \"pattern_url\": \"lambdatest\",\n            \"replacement_url\": \"ajio\"\n        },\n        {\n            \"pattern_url\": \"d\",\n            \"replacement_url\": \"flipkart\"\n        },\n        {\n            \"pattern_url\": \"hello\",\n            \"replacement_url\": \"1234\"\n        }\n    ],\n    \"accessibility\": false\n}'"
+      }
+    ],
+    "dateModified": "2026-09-09T19:16:50+05:30"
+  }) }}
+/>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "How to Use Dynamic URL Replacement",
+      "description": "This documentation will help you to understand how to dynamically update your URL during the KaneAI testing",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Navigate to the Test Runs Page",
+          "text": "Log in to TestMu AI. Go to the Test Manager > Test Runs section. Click on your desired Test Run. Click on Run with HyperExecute button.",
+          "url": "https://www.testmuai.com/support/docs/kaneai-dynamic-url-replacement/#step-1-navigate-to-the-test-runs-page"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Configure the Test Execution URL",
+          "text": "In the Run on HyperExecute side drawer, locate the new field labeled Replace Test Execution URL. Enter the Pattern URL (your original URL used in the tests) and Replacement URL (URL of different environment you want to test) in the text field. You can add multiple URLs for all web tests in the run to execute in different environments",
+          "url": "https://www.testmuai.com/support/docs/kaneai-dynamic-url-replacement/#step-2-configure-the-test-execution-url"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Execute the Test Run",
+          "text": "If the Replace Test Execution URL field is filled, the entered URL will override the default (Pattern) URL during execution. If left empty, the test will run with the default URL. Click on the Execute button",
+          "url": "https://www.testmuai.com/support/docs/kaneai-dynamic-url-replacement/#step-3-execute-the-test-run"
+        }
+      ]
+    }
+  ]) }}
+/>
+
+
 
 # How to Replace URLs Dynamically With KaneAI
 ***
@@ -94,12 +213,16 @@ If you prefer to use the API to configure and execute tests with Dynamic URL Rep
 ### API Endpoint
 ***
 
+<VerifiedTag value="Verified" />
+
 ```text title="POST request"
 https://test-manager-api.lambdatest.com/api/atm/v1/hyperexecute
 ```
 
 ### Request Headers
 ***
+
+<VerifiedTag value="Verified" />
 
 ```javascript
 Content-Type: application/json
@@ -110,6 +233,8 @@ Authorization: Basic <Base64Auth>
 ***
 
 The following JSON payload demonstrates how to use the API to configure Dynamic URL Replacement:
+
+<VerifiedTag value="Verified" />
 
 ```javascript
 {
@@ -151,6 +276,8 @@ The following JSON payload demonstrates how to use the API to configure Dynamic 
 ***
 
 Here’s an example cURL command to trigger a test run with Dynamic URL Replacement:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 curl --location 'https://test-manager-api.lambdatest.com/api/atm/v1/hyperexecute' \

@@ -23,6 +23,8 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import CookieTrackingLogin from '@site/src/component/CookieTracking';
 
 
+import VerifiedTag from '@site/src/component/verifiedTag';
+
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
        "@context": "https://schema.org",
@@ -46,6 +48,181 @@ import CookieTrackingLogin from '@site/src/component/CookieTracking';
       })
     }}
 ></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/getting-started-with-xcuitest/"
+    },
+    "headline": "XCUI Testing on TestMu AI",
+    "description": "Master XCUITest automation with TestMu AI! Learn to run scripts, utilize capabilities, and execute tests on real iOS devices effortlessly. Get started now!",
+    "url": "https://www.testmuai.com/support/docs/getting-started-with-xcuitest/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "App Automation",
+    "keywords": [
+      "xcuitest",
+      "app test automation",
+      "testmu ai xcuitest"
+    ],
+    "proficiencyLevel": "Beginner",
+    "dependencies": "Your TestMu AI Username and Access key.; Access to an iOS app (.ipa) and an XCUI Test app (.ipa file)..",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 3: Executing The Test (Linux / MacOS)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "curl --location --request POST 'https://mobile-api.lambdatest.com/framework/v1/xcui/build' \\\n--header 'Authorization: Basic BASIC_AUTH_TOKEN' \\\n--header 'Content-Type: application/json' \\\n--data-raw '{\n  \"app\": \"APP_ID\",\n  \"testSuite\": \"TEST_SUITE_ID\",\n  \"device\":  [\"iPhone 11-14\"],\n  \"video\": true,\n  \"queueTimeout\": 10800,\n  \"idleTimeout\": 150,\n  \"devicelog\": true,\n  \"network\": false,\n  \"build\": \"Proverbial-XCUITest\"\n}'"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Windows",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "curl --location --request POST \"https://mobile-api.lambdatest.com/framework/v1/xcui/build\" ^\n--header \"Authorization: Basic BASIC_AUTH_TOKEN\" ^\n--header \"Content-Type: application/json\" ^\n--data \"{\\\"app\\\":\\\"APP_ID\\\",\\\"testSuite\\\":\\\"TEST_SUITE_ID\\\",\\\"device\\\":[\\\"iPhone 15-17\\\"],\\\"video\\\":true,\\\"queueTimeout\\\":10800,\\\"idleTimeout\\\":150,\\\"devicelog\\\":true,\\\"network\\\":false,\\\"build\\\":\\\"Proverbial-XCUITest\\\"}\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Linux / MacOS",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "curl --location --request POST 'https://mobile-api.lambdatest.com/framework/v1/xcui/build' \\\n--header 'Authorization: Basic BASIC_AUTH_TOKEN' \\\n--header 'Content-Type: application/json' \\\n--data-raw '{\n  \"app\": \"APP_ID\",\n  \"testSuite\": \"TEST_SUITE_ID\",\n  \"device\":  [\"iPhone 11-14.0\"],\n  \"isVirtualDevice\": true,\n  \"video\": true,\n  \"queueTimeout\": 10800,\n  \"idleTimeout\": 150,\n  \"devicelog\": true,\n  \"network\": false,\n  \"build\": \"Proverbial-XCUITest\"\n}'"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Windows",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "curl --location --request POST \"https://mobile-api.lambdatest.com/framework/v1/xcui/build\" ^\n--header \"Authorization: Basic BASIC_AUTH_TOKEN\" ^\n--header \"Content-Type: application/json\" ^\n--data \"{\\\"app\\\":\\\"APP_ID\\\",\\\"testSuite\\\":\\\"TEST_SUITE_ID\\\",\\\"device\\\":[\\\"iPhone 15-17.0\\\"],\\\"isVirtualDevice\\\":true,\\\"video\\\":true,\\\"queueTimeout\\\":10800,\\\"idleTimeout\\\":150,\\\"devicelog\\\":true,\\\"network\\\":false,\\\"build\\\":\\\"Proverbial-XCUITest\\\"}\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Running Tests in Parallel (Linux / MacOS)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "curl --location --request POST 'https://mobile-api.lambdatest.com/framework/v1/xcui/build' \\\n--header 'Authorization: Basic BASIC_AUTH_TOKEN' \\\n--header 'Content-Type: application/json' \\\n--data-raw '{\n  \"app\": \"APP_ID\",\n  \"testSuite\": \"TEST_SUITE_ID\",\n  \"device\": [\"iPhone 11-14\",\"iPhone 12 Pro-15\",\"iPhone X-13\"],\n  \"video\": true,\n  \"queueTimeout\": 10800,\n  \"idleTimeout\": 150,\n  \"devicelog\": true,\n  \"network\": false,\n  \"build\": \"Proverbial-XCUITest\"\n}'"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Windows",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "curl --location --request POST \"https://mobile-api.lambdatest.com/framework/v1/xcui/build\" ^\n--header \"Authorization: Basic BASIC_AUTH_TOKEN\" ^\n--header \"Content-Type: application/json\" ^\n--data \"{\\\"app\\\":\\\"APP_ID\\\",\\\"testSuite\\\":\\\"TEST_SUITE_ID\\\",\\\"device\\\":[\\\"iPhone 11-14\\\",\\\"iPhone 12 Pro-15\\\",\\\"iPhone X-13\\\"],\\\"video\\\":true,\\\"queueTimeout\\\":10800,\\\"idleTimeout\\\":150,\\\"devicelog\\\":true,\\\"network\\\":false,\\\"build\\\":\\\"Proverbial-XCUITest\\\"}\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Linux / MacOS",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "curl --location --request POST 'https://mobile-api.lambdatest.com/framework/v1/xcui/build' \\\n--header 'Authorization: Basic BASIC_AUTH_TOKEN' \\\n--header 'Content-Type: application/json' \\\n--data-raw '{\n  \"app\": \"APP_ID\",\n  \"testSuite\": \"TEST_SUITE_ID\",\n  \"device\":  [\"iPhone 11-14.0\",\"iPhone 12 Pro-15.0\",\"iPhone X-13.0\"],\n  \"isVirtualDevice\": true,\n  \"video\": true,\n  \"queueTimeout\": 10800,\n  \"idleTimeout\": 150,\n  \"devicelog\": true,\n  \"network\": false,\n  \"build\": \"Proverbial-XCUITest\"\n}'"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Windows",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "curl --location --request POST \"https://mobile-api.lambdatest.com/framework/v1/xcui/build\" ^\n--header \"Authorization: Basic BASIC_AUTH_TOKEN\" ^\n--header \"Content-Type: application/json\" ^\n--data \"{\\\"app\\\":\\\"APP_ID\\\",\\\"testSuite\\\":\\\"TEST_SUITE_ID\\\",\\\"device\\\":[\\\"iPhone 11-14.0\\\",\\\"iPhone 12 Pro-15.0\\\",\\\"iPhone X-13.0\\\"],\\\"video\\\":true,\\\"queueTimeout\\\":10800,\\\"isVirtualDevice\\\":true,\\\"idleTimeout\\\":150,\\\"devicelog\\\":true,\\\"network\\\":false,\\\"build\\\":\\\"Proverbial-XCUITest\\\"}\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "The xcuitest-skill package includes",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "xcuitest-skill/\n\u251c\u2500\u2500 SKILL.md\n\u2514\u2500\u2500 reference/\n    \u251c\u2500\u2500 playbook.md\n    \u2514\u2500\u2500 advanced-patterns.md"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Install a XCUITest Agent Skill using the command below",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "codeRepository": "https://github.com/LambdaTest/agent-skills",
+        "text": "# Clone the repo and copy the skill you need\ngit clone https://github.com/LambdaTest/agent-skills.git\ncp -r agent-skills/xcuitest-skill .claude/skills/\n\n# Or for Cursor / Copilot\ncp -r agent-skills/xcuitest-skill .cursor/skills/"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Running Your First Test: A Step-by-Step Guide",
+      "description": "Master XCUITest automation with TestMu AI! Learn to run scripts, utilize capabilities, and execute tests on real iOS devices effortlessly. Get started now!",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Upload Your Application",
+          "text": "To begin testing, upload your iOS application (.ipa file) to TestMu AI's servers. You'll use our REST API for this process. Authentication : You'll need your TestMu AI Username and AccessKey. Combine them in the format Username:AccessKey. Uploading the App : Use cURL command to send a request to our API. The request should include the path to your application file (appFile). import Tabs from '@theme/Tabs'; import TabItem from '@theme/TabItem'; {curl -u \"${ YOURLAMBDATESTUSERNAME()}:${ YOURLAMBDATESTACCESS_KEY()}\" --location --request POST 'https://manual-api.lambdatest.com/app/uploadFramework' --form 'appFile=@\"\"' --form 'type=\"xcuit-ios\"'} {curl -u \"${ YOURLAMBDATESTUSERNAME()}:${ YOURLAMBDATESTACCESS_KEY()}\" -X POST \"https://manual-api.lambdatest.com/app/uploadFramework\" -F \"appFile=@\"\"\" -F \"type=\"xcuit-ios\"\"} Provide the path of your iOS application in the above URL in place of `` Response of above cURL will be a JSON object containing the App URL of the format - lt://APP123456789123456789 and will be used in the last step.",
+          "url": "https://www.testmuai.com/support/docs/getting-started-with-xcuitest/#step-1-upload-your-application"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Upload Your Test Suite",
+          "text": "Upload your iOS test suite (.ipa) file to TestMu AI servers using our REST API. The following sample cURL command shows how to upload a test suite: {curl -u \"${ YOURLAMBDATESTUSERNAME()}:${ YOURLAMBDATESTACCESS_KEY()}\" --location --request POST 'https://manual-api.lambdatest.com/app/uploadFramework' --form 'appFile=@\"\"' --form 'type=\"xcuit-ios\"'} {curl -u \"${ YOURLAMBDATESTUSERNAME()}:${ YOURLAMBDATESTACCESS_KEY()}\" --location --request POST \"https://manual-api.lambdatest.com/app/uploadFramework\" --form \"appFile=@\"\"\" --form \"type=\\\"xcuit-ios\\\"\"} Provide the path of your iOS test suite in the above URL in place of `` Response of above cURL will be a JSON object containing the App URL of the format - lt://APP123456789123456789 and will be used in the last step.",
+          "url": "https://www.testmuai.com/support/docs/getting-started-with-xcuitest/#step-2-upload-your-test-suite"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Executing The Test",
+          "text": "You will need base64 encoded authentication in order to execute your XCUITest automation test suite. Enter your username:accesskey in Basic Authentication Header Generator to generate your auth token. Take note of the base64 encoded authentication which needs to be added in the next step. {${ YOURLAMBDATESTUSERNAME()}:${ YOURLAMBDATESTACCESS_KEY()}} Once you have uploaded your app and test suite, you can execute your test by running the following command: On Windows, run the following curl command from Command Prompt (cmd.exe). The command is formatted for the Windows CMD terminal and may require different syntax if executed from PowerShell or another shell. Before running the command, replace BASICAUTHTOKEN, APPID, and TESTSUITE_ID with your actual LambdaTest credentials and resource IDs obtained from the above curl commands.",
+          "url": "https://www.testmuai.com/support/docs/getting-started-with-xcuitest/#step-3-executing-the-test"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Step 4: View Test Execution",
+          "text": "Once you have run your tests, you can view the test execution along with logs. You will be able to see the test cases passing or failing. You can view the same at TestMu AI Automation.",
+          "url": "https://www.testmuai.com/support/docs/getting-started-with-xcuitest/#step-4-view-test-execution"
+        }
+      ]
+    }
+  ]) }}
+/>
+
+
 Running XCUITest on TestMu AI executes Apple's XCTest-based UI automation for your iOS apps across 5000+ real devices and OS combinations. Upload your app and test bundle, configure capabilities, trigger the run, and review results on the TestMu AI dashboard.
 
 **Supported on:** Real &amp; Virtual devices
@@ -79,6 +256,8 @@ import TabItem from '@theme/TabItem';
 
 <TabItem value="bash" label="Linux / MacOS" default>
 
+  <VerifiedTag value="Verified" />
+
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-bash">
   {`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" --location --request POST 'https://manual-api.lambdatest.com/app/uploadFramework' --form 'appFile=@"<PATH_OF_YOUR_iOS_APP>"' --form 'type="xcuit-ios"'`}
@@ -88,6 +267,8 @@ import TabItem from '@theme/TabItem';
 </TabItem>
 
 <TabItem value="powershell" label="Windows" default>
+
+  <VerifiedTag value="Verified" />
 
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-powershell">
@@ -113,6 +294,8 @@ The following sample cURL command shows how to upload a test suite:
 
 <TabItem value="bash" label="Linux / MacOS" default>
 
+  <VerifiedTag value="Verified" />
+
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-bash">
   {`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" --location --request POST 'https://manual-api.lambdatest.com/app/uploadFramework' --form 'appFile=@"<PATH_OF_YOUR_TEST_SUITE_APP>"' --form 'type="xcuit-ios"'`}
@@ -122,6 +305,8 @@ The following sample cURL command shows how to upload a test suite:
 </TabItem>
 
 <TabItem value="powershell" label="Windows" default>
+
+  <VerifiedTag value="Verified" />
 
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-powershell">
@@ -143,6 +328,8 @@ The following sample cURL command shows how to upload a test suite:
 
 Take note of the base64 encoded authentication which needs to be added in the next step.
 
+<VerifiedTag value="Verified" />
+
 <div className="lambdatest__codeblock">
     <CodeBlock className="language-powershell">
 {`${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}`}
@@ -163,8 +350,13 @@ Take note of the base64 encoded authentication which needs to be added in the 
 <Tabs className="docs__val">
 
 <TabItem value="bash" label="Linux / MacOS" default>
+
+  <VerifiedTag value="Verified" />
+
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-bash">
+
+<VerifiedTag value="Verified" />
 
 ```bash
 curl --location --request POST 'https://mobile-api.lambdatest.com/framework/v1/xcui/build' \
@@ -188,8 +380,13 @@ curl --location --request POST 'https://mobile-api.lambdatest.com/framework/v1/x
 </TabItem>
 
 <TabItem value="powershell" label="Windows" default>
+
+  <VerifiedTag value="Verified" />
+
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-powershell">
+
+<VerifiedTag value="Verified" />
 
 ```bash
 curl --location --request POST "https://mobile-api.lambdatest.com/framework/v1/xcui/build" ^
@@ -209,8 +406,13 @@ curl --location --request POST "https://mobile-api.lambdatest.com/framework/v1/x
 <Tabs className="docs__val">
 
 <TabItem value="bash" label="Linux / MacOS" default>
+
+  <VerifiedTag value="Verified" />
+
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-bash">
+
+<VerifiedTag value="Verified" />
 
 ```bash
 curl --location --request POST 'https://mobile-api.lambdatest.com/framework/v1/xcui/build' \
@@ -235,8 +437,13 @@ curl --location --request POST 'https://mobile-api.lambdatest.com/framework/v1/x
 </TabItem>
 
 <TabItem value="powershell" label="Windows" default>
+
+  <VerifiedTag value="Verified" />
+
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-powershell">
+
+<VerifiedTag value="Verified" />
 
 ```bash
 curl --location --request POST "https://mobile-api.lambdatest.com/framework/v1/xcui/build" ^
@@ -275,8 +482,13 @@ You can run tests in parallel on multiple devices by passing the device name in 
 <Tabs className="docs__val">
 
 <TabItem value="bash" label="Linux / MacOS" default>
+
+  <VerifiedTag value="Verified" />
+
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-bash">
+
+<VerifiedTag value="Verified" />
 
 ```bash
 curl --location --request POST 'https://mobile-api.lambdatest.com/framework/v1/xcui/build' \
@@ -300,8 +512,13 @@ curl --location --request POST 'https://mobile-api.lambdatest.com/framework/v1/x
 </TabItem>
 
 <TabItem value="powershell" label="Windows" default>
+
+  <VerifiedTag value="Verified" />
+
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-powershell">
+
+<VerifiedTag value="Verified" />
 
 ```bash
 curl --location --request POST "https://mobile-api.lambdatest.com/framework/v1/xcui/build" ^
@@ -321,8 +538,13 @@ curl --location --request POST "https://mobile-api.lambdatest.com/framework/v1/x
 <Tabs className="docs__val">
 
 <TabItem value="bash" label="Linux / MacOS" default>
+
+  <VerifiedTag value="Verified" />
+
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-bash">
+
+<VerifiedTag value="Verified" />
 
 ```bash
 curl --location --request POST 'https://mobile-api.lambdatest.com/framework/v1/xcui/build' \
@@ -347,8 +569,13 @@ curl --location --request POST 'https://mobile-api.lambdatest.com/framework/v1/x
 </TabItem>
 
 <TabItem value="powershell" label="Windows" default>
+
+  <VerifiedTag value="Verified" />
+
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-powershell">
+
+<VerifiedTag value="Verified" />
 
 ```bash
 curl --location --request POST "https://mobile-api.lambdatest.com/framework/v1/xcui/build" ^

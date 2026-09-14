@@ -12,8 +12,89 @@ site_name: TestMu AI
 slug: integrations-with-project-management-tools/
 canonical: https://www.testmuai.com/support/docs/integrations-with-project-management-tools/
 ---
+
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
+<script type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify({
+       "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": BRAND_URL
+        },{
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Support",
+          "item": `${BRAND_URL}/support/docs/`
+        },{
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Project Management Tools",
+          "item": `${BRAND_URL}/support/docs/integrations-with-project-management-tools/`
+        }]
+      })
+    }}
+></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/integrations-with-project-management-tools/"
+    },
+    "headline": "Project Management Tools",
+    "description": "TestMu AI offers integration with third-party tools for project management and bug tracking to help you collaborate with your colleagues as you encounter a bug while cross browser testing.",
+    "url": "https://www.testmuai.com/support/docs/integrations-with-project-management-tools/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Documentation",
+    "keywords": [
+      "testmu ai integrations",
+      "project management",
+      "free cross browser testing tool"
+    ],
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "dateModified": "2026-08-17T11:15:18+05:30"
+  }) }}
+/>
 <BrandName /> offers integration to numerous third-party tools for project management and bug tracking to help you easily collaborate with your colleagues as you encounter a bug while performing cross browser testing. After integrating your <BrandName /> account with your favourite project management tool or bug tracking tool, you can send any UI bug that you may encounter on your website, directly to your task management dashboard, in just a single click from <BrandName />.
 
 <center><a href="/support/docs/asana-integration/"><button name="button">Asana Integration With <BrandName /></button></a></center>
@@ -101,10 +182,3 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 <center><a href="/support/docs/webex-teams-integration/"><button name="button">Webex Teams Integration With <BrandName /></button></a></center>
 
 >If your favourite project management or bug tracking tool is not in the above mentioned, then just give us a <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**shout**</span> and we will have it ready shortly for you.
-
-
- 
-
- 
-
- 

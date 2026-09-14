@@ -15,12 +15,105 @@ slug: smartui-smartignore/
 canonical: https://www.testmuai.com/support/docs/smartui-smartignore/
 
 ---
+
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import NewTag from '../src/component/newTag';
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+import VerifiedTag from '@site/src/component/verifiedTag';
+import { BRAND_URL } from '@site/src/component/BrandName';
 
+<script type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify({
+       "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": BRAND_URL
+        },{
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Support",
+          "item": `${BRAND_URL}/support/docs/`
+        },{
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Smart Ignore",
+          "item": `${BRAND_URL}/support/docs/smartui-smartignore/`
+        }]
+      })
+    }}
+></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/smartui-smartignore/"
+    },
+    "headline": "Smart Ignore",
+    "description": "Learn how to use our new comparison engine Smart Ignore to efficiently ignore noise, layout shifts and displacement differences in your visual tests",
+    "url": "https://www.testmuai.com/support/docs/smartui-smartignore/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "SmartUI",
+    "keywords": [
+      "hide displacement diffs",
+      "ignore displacement differences",
+      "smart ignore layout shifts"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "3. Using Smart Ignore in Hooks Flow (Automation Capabilities)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "const capabilities = {\n  browserName: 'Chrome',\n  'LT:Options': {\n    user: process.env.LT_USERNAME,\n    accessKey: process.env.LT_ACCESS_KEY,\n    visual: true,\n    'smartUI.project': 'My-Project',\n    ignoreType: ['smartignore']\n  }\n};"
+      }
+    ],
+    "dateModified": "2026-03-11T10:47:45+05:30"
+  }) }}
+/>
 # Ignoring Displacement Differences using Smart Ignore
 ---
 
@@ -84,6 +177,8 @@ This allows you to selectively apply Smart Ignore to specific screenshots, makin
 #### 3. Using Smart Ignore in Hooks Flow (Automation Capabilities)
 
 If you are using SmartUI Hooks (for example Selenium `executeScript("smartui.takeScreenshot=...")` style), enable Smart Ignore using `ignoreType` in capabilities.
+
+<VerifiedTag value="Verified" />
 
 ```javascript
 const capabilities = {
@@ -262,7 +357,6 @@ When testing Smart Ignore, use per-screenshot mode to compare results with other
 | Layout Changes | ✅ Detected | ✅ Detected |
 | Displacement | ✅ Ignored | ✅ Ignored |
 | Best For | Content + layout | Layout only |
-
 
 ## Additional Resources
 

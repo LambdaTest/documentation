@@ -20,6 +20,8 @@ import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
+import VerifiedTag from '@site/src/component/verifiedTag';
+
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
        "@context": "https://schema.org",
@@ -44,6 +46,81 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/espresso-mockwebserver-localhost/"
+    },
+    "headline": "Testing with MockWebServer & Localhost",
+    "description": "Test applications using MockWebServer or localhost-based mock servers with Espresso on TestMu AI real devices.",
+    "url": "https://www.testmuai.com/support/docs/espresso-mockwebserver-localhost/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "App Automation",
+    "keywords": [
+      "espresso",
+      "mockwebserver",
+      "localhost testing"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Option 1: Localhost Bypass",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JSON",
+        "text": "{\n  \"app\": \"lt://APP_ID\",\n  \"testSuite\": \"lt://TESTSUITE_ID\",\n  \"device\": [\"Galaxy S21-12\", \"Pixel 6-13\"],\n  \"build\": \"MockWebServer Test\",\n  \"network\": true,\n  \"localhost\": true\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Option 2: Port Forwarding",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JSON",
+        "text": "{\n  \"app\": \"lt://APP_ID\",\n  \"testSuite\": \"lt://TESTSUITE_ID\",\n  \"device\": [\"Galaxy S21-12\", \"Pixel 6-13\"],\n  \"build\": \"MockWebServer Test\",\n  \"network\": true,\n  \"portForwarding\": {\n    \"ports\": [9091, 9092]\n  }\n}"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
+
 Testing with MockWebServer on TestMu AI lets Espresso apps reach localhost-based mock servers on real Android devices. When network capture routes traffic through a proxy, use Localhost Bypass or Port Forwarding so your device resolves mock endpoints and requests succeed.
 
 ## Why Special Configuration is Needed
@@ -55,6 +132,8 @@ Platform provides two solutions: **Localhost Bypass** and **Port Forwarding**.
 ## Option 1: Localhost Bypass
 
 Works when network is set to `true` and application uses standard HTTP libraries.Localhost network calls will not be captured.
+
+<VerifiedTag value="Verified" />
 
 ```json
 {
@@ -88,6 +167,8 @@ Works when network is set to `true` and application uses standard HTTP libraries
 ## Option 2: Port Forwarding
 
 Best when localhost network logs need to be captured and there are no port conflicts.
+
+<VerifiedTag value="Verified" />
 
 ```json
 {

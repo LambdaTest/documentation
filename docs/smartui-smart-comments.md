@@ -13,12 +13,94 @@ keywords:
   - Team collaboration
   - Comment threads
 ---
+
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import NewTag from '../src/component/newTag';
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+import { BRAND_URL } from '@site/src/component/BrandName';
 
+<script type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify({
+       "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": BRAND_URL
+        },{
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Support",
+          "item": `${BRAND_URL}/support/docs/`
+        },{
+          "@type": "ListItem",
+          "position": 3,
+          "name": "SmartUI Smart Comments",
+          "item": `${BRAND_URL}/support/docs/smartui-smart-comments/`
+        }]
+      })
+    }}
+></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/smartui-smart-comments/"
+    },
+    "headline": "SmartUI Smart Comments",
+    "description": "Learn how to collaborate on visual test results using Smart Comments. Add comments directly on screenshots and builds, mention teammates, and manage threaded discussions for better team collaboration.",
+    "url": "https://www.testmuai.com/support/docs/smartui-smart-comments/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "SmartUI",
+    "keywords": [
+      "SmartUI comments",
+      "Smart Comments",
+      "Visual testing collaboration"
+    ],
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
 Smart Comments enables real-time collaboration on SmartUI visual test results. Add comments directly on screenshots and builds, mention teammates, and manage threaded discussions, all without leaving the SmartUI dashboard.
 
 **Key Benefits:**
@@ -175,7 +257,6 @@ Mention teammates in your comments to notify them and bring them into the discus
 2. Start typing the teammate's name
 3. Select from the dropdown list
 4. The mentioned user will be highlighted in the comment
-
 
 ### Threaded Comments
 
@@ -536,4 +617,3 @@ The following features are planned for future releases:
 
 - Learn about [SmartUI Multiselect & Bulk Operations](/support/docs/smartui-multiselect-bulkops/) to combine comments with bulk actions
 - Check the [SmartUI Troubleshooting Guide](/support/docs/smartui-troubleshooting-guide/) for common issues
-

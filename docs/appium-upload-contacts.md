@@ -26,6 +26,8 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
+import VerifiedTag from '@site/src/component/verifiedTag';
+
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
        "@context": "https://schema.org",
@@ -49,6 +51,109 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       })
     }}
 ></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/upload-contacts/"
+    },
+    "headline": "Upload Contacts on Real Devices",
+    "description": "Upload custom .vcf contact files to real Android and iOS devices and inject them into the native Contacts app before your test session begins.",
+    "url": "https://www.testmuai.com/support/docs/upload-contacts/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "App Automation",
+    "keywords": [
+      "contacts upload",
+      "vcf upload",
+      "vcard"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Response",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JSON",
+        "text": "{\n  \"media_url\": \"lt://MEDIAvcf_abc123def456\",\n  \"name\": \"contacts.vcf\",\n  \"status\": \"success\",\n  \"custom_id\": \"my-contacts\",\n  \"contact_count\": 12\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 2: Set the Capability in Your Test Script",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Python",
+        "text": "desired_capabilities = {\n  \"uploadMedia\": [\"lt://MEDIAf446d4170cd946aa9ec307d10cb679b9\", \"lt://MEDIA8d13e569b3e140c18e82b066022518bd\"]\n}"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Upload Contacts (.vcf) on Real Devices",
+      "description": "Preload contacts on real devices before your test session begins. Upload .vcf (vCard) contact files using the Upload Media API, and they are automatically injected into the device's native Contacts app when your session starts. This is useful for testing: Messaging and dialer apps CRM and contact management apps Social apps with contact picker flows Any app that reads from the device's contact list",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Upload a VCF File",
+          "text": "Upload your .vcf file using the Upload Media API. {curl --user \"${YOURLAMBDATESTUSERNAME()}:${YOURLAMBDATESTACCESSKEY()}\" -X POST \"https://api.lambdatest.com/mfs/v1.0/media/upload\" -F \"mediafile=@\"/path/to/contacts.vcf\"\" -F \"type=contact\" -F \"custom_id=SampleContacts\" } Request Parameters media_file: The .vcf contact file to upload from your local system. type: Set to contact for vCard files (Optional) custom_id: A custom identifier for the uploaded file. Use the media_url from the response in the next step.",
+          "url": "https://www.testmuai.com/support/docs/upload-contacts/#step-1-upload-a-vcf-file"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Set the Capability in Your Test Script",
+          "text": "Once the contacts are uploaded to TestMu AI's cloud, set the uploadMedia capability to the mediaurl** parameter returned in the API response. Each automation session permits a maximum of five file uploads. The contact file must be in vCard (.vcf) format. Maximum file size is 5 MB with up to 100 contacts per file. Home Support Upload Contacts on Real Devices",
+          "url": "https://www.testmuai.com/support/docs/upload-contacts/#step-2-set-the-capability-in-your-test-script"
+        }
+      ]
+    }
+  ]) }}
+/>
+
+
 
 # How to Upload Contacts to Devices on TestMu AI
 
@@ -79,6 +184,8 @@ Upload your `.vcf` file using the Upload Media API.
 
 ### Request
 
+<VerifiedTag value="Verified" />
+
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">
 {`curl --user "${YOUR_LAMBDATEST_USERNAME()}:${YOUR_LAMBDATEST_ACCESS_KEY()}" -X POST "https://api.lambdatest.com/mfs/v1.0/media/upload" -F "media_file=@"/path/to/contacts.vcf"" -F "type=contact" -F "custom_id=SampleContacts"`
@@ -92,6 +199,8 @@ Upload your `.vcf` file using the Upload Media API.
 - `custom_id`: A custom identifier for the uploaded file.
 
 ### Response
+
+<VerifiedTag value="Verified" />
 
 ```json
 {
@@ -110,6 +219,8 @@ Use the `media_url` from the response in the next step.
 ## Step 2: Set the Capability in Your Test Script
 
 Once the contacts are uploaded to <BrandName />'s cloud, set the **uploadMedia** capability to the **media_url** parameter returned in the API response.
+
+<VerifiedTag value="Verified" />
 
 ```python
 desired_capabilities = {

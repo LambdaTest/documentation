@@ -21,6 +21,7 @@ site_name: TestMu AI
 slug: kaneai-kb-assertions-and-validation/
 ---
 
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -46,16 +47,207 @@ slug: kaneai-kb-assertions-and-validation/
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/kaneai-kb-assertions-and-validation/"
+    },
+    "headline": "Assertions & Validation",
+    "description": "Comprehensive guide to writing reliable assertions in KaneAI with real-world examples, best practices, and workarounds for common validation scenarios",
+    "url": "https://www.testmuai.com/support/docs/kaneai-kb-assertions-and-validation/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "KaneAI",
+    "keywords": [
+      "testmu ai automation",
+      "testmu ai kaneai",
+      "kaneai assertions"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Text Assertions",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "assert \"Welcome Back, John!\" is visible\nassert \"Your order has been placed\" is displayed\nassert error message \"Invalid email address\" is visible\nassert \"Out of Stock\" is not visible on the page"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Text Assertions",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "assert {{username}} is visible on the page\nassert {{api_response.message}} contains \"success\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Visual Assertions",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "assert the TestMu logo is visible in the header\nassert the product image is displayed\nassert the green checkmark icon appears next to \"Verified\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "URL & Browser State Assertions",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "assert the current URL is \"https://example.com/dashboard\"\nassert the current URL contains \"/dashboard\"\nassert the page title contains \"Dashboard\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Relative/Layout Assertions",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "assert the \"Login\" button is in the same row as the \"Register\" link\nassert the \"Submit\" button is below the form fields"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Mathematical Assertions",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "assert 3 + 4 = 7\nassert the cart total equals the sum of item prices visible"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "DOM Attribute Assertions",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "Assert the Sample video has a controls attribute\nAssert the input has a required attribute\nAssert the NoAlt image does not have an alt attribute"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Be Specific, Not Subjective",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "assert the page is user-friendly\nassert the layout is correct"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Be Specific, Not Subjective",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "assert the navigation menu has 5 items\nassert the \"Search\" input field is visible at the top of the page"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Avoid Asserting on Imperceivable Details",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "assert the button appears red          (instead of assert color is #ff0000)\nassert the error border is visible   (instead of assert border is 2px solid red)"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Scenario: Login Flow Validation",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "type \"admin@example.com\" in the email field\ntype \"wrong_password\" in the password field\nclick on \"Sign In\" button\nassert \"Invalid credentials\" error message is visible\n\nclear the password field\ntype \"CorrectPass123\" in the password field\nclick on \"Sign In\" button\nassert the current URL contains \"/dashboard\"\nassert \"Welcome, Admin\" is visible"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Scenario: E-Commerce Cart Validation",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "click \"Add to Cart\" for the \"Wireless Mouse\" product\nclick on the cart icon\nassert \"Wireless Mouse\" is visible in the cart\nassert the cart item count shows \"1\"\nassert the cart total is \"$29.99\"\nclick \"Remove\" next to \"Wireless Mouse\"\nassert \"Your cart is empty\" is visible"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Scenario: Form Validation Messages",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "click the \"Submit\" button without filling any fields\nassert \"First name is required\" error is visible\nassert \"Email is required\" error is visible\nassert \"Password is required\" error is visible\n\ntype \"J\" in the \"First Name\" field\nassert \"First name must be at least 2 characters\" is visible"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Scenario: Search Results Verification",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "type \"laptop\" in the search field and press Enter\nwait for 3 seconds\nassert search results are visible\nassert the first result contains the word \"laptop\"\nassert the results count is greater than 0"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Scenario: Data Table Content Validation",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "assert the \"Users\" table header is visible\nassert the table contains a row with \"john@example.com\"\nassert \"Active\" status is shown next to \"john@example.com\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "String Variable Assertions",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "set expectedTitle as \"Dashboard\"\nassert {{expectedTitle}} is visible on the page"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "After making an API call via the / command, the response is stored as a JSON variable",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "assert {{api_response.status}} is \"200\"\nassert {{api_response.data.email}} is \"john@example.com\"\nassert {{api_response.data.items}} contains \"Laptop\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Store a value from the UI, make an API call, and compare",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "Fetch the order ID displayed on the confirmation page\n-- (stored as a variable such as {{orderID}}) --\n-- Make API call to verify order via /api command --\nassert {{api_response.orderId}} equals {{orderID}}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Conditional Assertions",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "if \"Login\" button is visible then click on it\nif price < 200 then click \"Add to Cart\" else select the second product"
+      }
+    ],
+    "dateModified": "2026-09-09T19:16:50+05:30"
+  }) }}
+/>
+
 # How to Write Assertions With KaneAI
 ***
-
 
 Assertions verify that your application behaves correctly after an action. You write them in natural language, and KaneAI evaluates them against the current page state. This page covers every assertion type, how to write them reliably, and how to handle validation scenarios that need workarounds.
 
 :::note
 Every assertion has a configurable failure behavior. By default, a failed assertion fails the test during execution. You can change the default in Organisation Settings and override it per step (see [Configuring Assertion Failure Behavior](#configuring-assertion-failure-behavior) below).
 :::
-
 
 ## Assertion Categories
 ***
@@ -67,6 +259,8 @@ KaneAI supports the following categories of assertions, each with its own natura
 
 Check whether specific text content is present (or absent) on the page.
 
+<VerifiedTag value="Verified" />
+
 ```
 assert "Welcome Back, John!" is visible
 assert "Your order has been placed" is displayed
@@ -75,6 +269,9 @@ assert "Out of Stock" is not visible on the page
 ```
 
 **With variables:**
+
+<VerifiedTag value="Verified" />
+
 ```
 assert {{username}} is visible on the page
 assert {{api_response.message}} contains "success"
@@ -84,6 +281,8 @@ assert {{api_response.message}} contains "success"
 ***
 
 Verify that images, logos, icons, or visual elements appear correctly.
+
+<VerifiedTag value="Verified" />
 
 ```
 assert the TestMu logo is visible in the header
@@ -100,6 +299,8 @@ Visual assertions rely on screenshots. Elements smaller than 12×12 pixels may n
 
 Validate the browser state such as the current URL or page title.
 
+<VerifiedTag value="Verified" />
+
 ```
 assert the current URL is "https://example.com/dashboard"
 assert the current URL contains "/dashboard"
@@ -111,6 +312,8 @@ assert the page title contains "Dashboard"
 
 Check the spatial relationship between elements.
 
+<VerifiedTag value="Verified" />
+
 ```
 assert the "Login" button is in the same row as the "Register" link
 assert the "Submit" button is below the form fields
@@ -120,6 +323,8 @@ assert the "Submit" button is below the form fields
 ***
 
 Validate calculations and numeric values.
+
+<VerifiedTag value="Verified" />
 
 ```
 assert 3 + 4 = 7
@@ -134,7 +339,6 @@ Assert element states, DOM attributes, and computed CSS properties by querying t
 :::note Desktop & Mobile Web Only
 Element State & Attribute Assertions are currently supported on **desktop web** and **mobile web** only. Native mobile app assertions (Android/iOS) are planned for a future phase.
 :::
-
 
 ### Element State Assertions
 ***
@@ -175,6 +379,8 @@ Assert the value of any HTML, ARIA, or data attribute on an element.
 | **Form attributes** | `Assert the method of the form equals "POST"` |
 
 **Attribute existence checks:**
+
+<VerifiedTag value="Verified" />
 
 ```
 Assert the Sample video has a controls attribute
@@ -268,6 +474,9 @@ Follow these rules to write assertions that evaluate consistently.
 The assertion must have a clear true/false answer given the page state.
 
 :::note Bad
+
+<VerifiedTag value="Verified" />
+
 ```
 assert the page is user-friendly
 assert the layout is correct
@@ -275,6 +484,9 @@ assert the layout is correct
 :::
 
 :::tip Good
+
+<VerifiedTag value="Verified" />
+
 ```
 assert the navigation menu has 5 items
 assert the "Search" input field is visible at the top of the page
@@ -293,6 +505,9 @@ KaneAI uses a screenshot + DOM combination. Very small visual details may not be
 - Font sizes or font families
 
 **Safer alternatives:**
+
+<VerifiedTag value="Verified" />
+
 ```
 assert the button appears red          (instead of assert color is #ff0000)
 assert the error border is visible   (instead of assert border is 2px solid red)
@@ -305,6 +520,8 @@ These end-to-end examples show assertions applied to common testing flows.
 
 ### Scenario: Login Flow Validation
 ***
+
+<VerifiedTag value="Verified" />
 
 ```
 type "admin@example.com" in the email field
@@ -322,6 +539,8 @@ assert "Welcome, Admin" is visible
 ### Scenario: E-Commerce Cart Validation
 ***
 
+<VerifiedTag value="Verified" />
+
 ```
 click "Add to Cart" for the "Wireless Mouse" product
 click on the cart icon
@@ -334,6 +553,8 @@ assert "Your cart is empty" is visible
 
 ### Scenario: Form Validation Messages
 ***
+
+<VerifiedTag value="Verified" />
 
 ```
 click the "Submit" button without filling any fields
@@ -348,6 +569,8 @@ assert "First name must be at least 2 characters" is visible
 ### Scenario: Search Results Verification
 ***
 
+<VerifiedTag value="Verified" />
+
 ```
 type "laptop" in the search field and press Enter
 wait for 3 seconds
@@ -358,6 +581,8 @@ assert the results count is greater than 0
 
 ### Scenario: Data Table Content Validation
 ***
+
+<VerifiedTag value="Verified" />
 
 ```
 assert the "Users" table header is visible
@@ -373,6 +598,8 @@ Variables make assertions dynamic and reusable, especially when combined with AP
 ### String Variable Assertions
 ***
 
+<VerifiedTag value="Verified" />
+
 ```
 set expectedTitle as "Dashboard"
 assert {{expectedTitle}} is visible on the page
@@ -382,6 +609,8 @@ assert {{expectedTitle}} is visible on the page
 ***
 
 After making an API call via the `/` command, the response is stored as a JSON variable:
+
+<VerifiedTag value="Verified" />
 
 ```
 assert {{api_response.status}} is "200"
@@ -394,6 +623,8 @@ assert {{api_response.data.items}} contains "Laptop"
 
 Store a value from the UI, make an API call, and compare:
 
+<VerifiedTag value="Verified" />
+
 ```
 Fetch the order ID displayed on the confirmation page
 -- (stored as a variable such as {{orderID}}) --
@@ -405,6 +636,8 @@ assert {{api_response.orderId}} equals {{orderID}}
 ***
 
 KaneAI supports basic if-else logic for assertions that depend on page state.
+
+<VerifiedTag value="Verified" />
 
 ```
 if "Login" button is visible then click on it

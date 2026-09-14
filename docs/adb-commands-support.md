@@ -23,6 +23,8 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 
+import VerifiedTag from '@site/src/component/verifiedTag';
+
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
        "@context": "https://schema.org",
@@ -46,11 +48,277 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       })
     }}
 ></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/adb-commands-support/"
+    },
+    "headline": "ADB Commands Support",
+    "description": "TestMu AI provides support for limited commands which can be executed in your app automation test scripts via javascript executors.",
+    "url": "https://www.testmuai.com/support/docs/adb-commands-support/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "App Automation",
+    "keywords": [
+      "appium",
+      "java",
+      "testmu ai java"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 1",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Python",
+        "text": "driver.execute_script(\"lambda-adb\", params)"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Swipe",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Python",
+        "text": "  params = {\"command\":\"input-swipe\", \"startX\":200,\"startY\":900,\"endX\": 200,\"endY\":300}\n  result = driver.execute_script(\"lambda-adb\",params)"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Clipboard",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Python",
+        "text": "  params = {\"command\":\"input-text\", \"text\":\"this is my text\"}\n  result = driver.execute_script(\"lambda-adb\",params)"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Home Button",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Python",
+        "text": "params = {\"command\":\"keyevent\", \"keycode\":3}\nresult = driver.execute_script(\"lambda-adb\",params)"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Enable/Disable auto rotate",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Python",
+        "text": "  params = {\"command\":\"autorotate\", \"enableAutoRotate\": True}\n  result = driver.execute_script(\"lambda-adb\",params)"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "The output includes various details about each package.The following is a Python sample using the adb command",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Python",
+        "text": "  params = {\"command\": \"shell\", \"text\": \"dumpsys package <package_info>\"}\n  result = driver.execute_script(\"lambda-adb\",params)"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "ADB Shell Command - Public",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Python",
+        "text": "  params = {\"command\": \"shell\", \"text\": \"dumpsys package dumpsys input_method\"}\n  result = driver.execute_script(\"lambda-adb\",params)"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "The following is a Python sample using the adb command",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Python",
+        "text": "  params = {\"command\": \"shell\", \"text\": \"getprop\"}\n  result = driver.execute_script(\"lambda-adb\",params)"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "ADB Shell Command - Public",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Python",
+        "text": "  params = {\"command\": \"shell\", \"text\": \"getprop ro.build.version.security_patch\"}\n  result = driver.execute_script(\"lambda-adb\",params)"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 10",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Python",
+        "text": "  params = {\"command\": \"shell\", \"text\": \"cat /proc/version\"}\n  result = driver.execute_script(\"lambda-adb\",params)"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "The following is a Python sample using the adb command",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Python",
+        "text": "  params = {\"command\": \"shell\", \"text\": \"pm list packages\"}\n  result = driver.execute_script(\"lambda-adb\",params)"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "The following is a Python sample using the adb command",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Python",
+        "text": "  params = {\"command\": \"shell\", \"text\": \"rm /sdcard/Download/tempfile.txt\"}\n  result = driver.execute_script(\"lambda-adb\",params)"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "The following is a Python sample using the adb command",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Python",
+        "text": "  params = {\"command\": \"shell\", \"text\": \"mkdir /sdcard/TestResults\"}\n  result = driver.execute_script(\"lambda-adb\",params)"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "The following is a Python sample using the adb command",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Python",
+        "text": "  params = {\"command\": \"shell\", \"text\": \"screencap /sdcard/screen.png\"}\n  result = driver.execute_script(\"lambda-adb\",params)"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "The following is a Python sample using the adb command",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Python",
+        "text": "  params = {\"command\": \"shell\", \"text\": \"content query --uri content://contacts/phones\"}\n  result = driver.execute_script(\"lambda-adb\",params)"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "The following is a Python sample using the adb command",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Python",
+        "text": "  params = {\"command\": \"shell\", \"text\": \"am start -n com.example/.MainActivity\"}\n  result = driver.execute_script(\"lambda-adb\",params)"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "The output includes various details about each package.The following is a Python sample using the adb command",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Python",
+        "text": "  params = {\"command\": \"shell\", \"text\": \"dumpsys package <package_info>\"}\n  result = driver.execute_script(\"lambda-adb\",params)"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 18",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Python",
+        "text": "  params = {\"command\": \"shell\", \"text\": \"dumpsys package dumpsys input_method\"}\n  result = driver.execute_script(\"lambda-adb\",params)"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "The following is a Python sample using the adb command",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Python",
+        "text": "  params = {\"command\": \"shell\", \"text\": \"getprop\"}\n  result = driver.execute_script(\"lambda-adb\",params)"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "The following is a Python sample using the adb command",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Python",
+        "text": "  params = {\"command\": \"shell\", \"text\": \"setprop debug.test true\"}\n  result = driver.execute_script(\"lambda-adb\",params)"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 21",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Python",
+        "text": "  params = {\"command\": \"shell\", \"text\": \"cat /proc/version\"}\n  result = driver.execute_script(\"lambda-adb\",params)"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "These are the ls commands that can are enabled:",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Python",
+        "text": "  # List files in the Downloads folder\n  params = {\"command\": \"shell\", \"text\": \"ls /sdcard/Download\"}\n  result = driver.execute_script(\"lambda-adb\", params)\n  # List files in the Pictures folder\n  params = {\"command\": \"shell\", \"text\": \"ls /sdcard/Pictures\"}\n  result = driver.execute_script(\"lambda-adb\", params)\n  # List files in the Movies folder\n  params = {\"command\": \"shell\", \"text\": \"ls /sdcard/Movies\"}\n  result = driver.execute_script(\"lambda-adb\", params)"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "These are the cat commands that can are enabled:",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Python",
+        "text": "  params = {\"command\": \"shell\", \"text\": \"cat /proc/version\"}\n  result = driver.execute_script(\"lambda-adb\", params)\n  # Read a log or report from Downloads\n  params = {\"command\": \"shell\", \"text\": \"cat /sdcard/Download/test_log.txt\"}\n  result = driver.execute_script(\"lambda-adb\", params)\n  # Read an image file (raw binary) from Pictures\n  params = {\"command\": \"shell\", \"text\": \"cat /sdcard/Pictures/screenshot.png\"}\n  result = driver.execute_script(\"lambda-adb\", params)\n  # Read a video file (raw binary) from Movies\n  params = {\"command\": \"shell\", \"text\": \"cat /sdcard/Movies/test_video.mp4\"}\n  result = driver.execute_script(\"lambda-adb\", params)"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "The following is a Python sample using the adb command",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Python",
+        "text": "  params = {\"command\": \"shell\", \"text\": \"ping -c 4 google.com\"}\n  result = driver.execute_script(\"lambda-adb\",params)"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "The following is a Python sample using the adb command with TestMu AI executor",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Python",
+        "text": "  params = {\"command\": \"enable-notification\", \"enableNotification\":True/False}\n  result = driver.execute_script(\"lambda-adb\",params)"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "The following is a Python sample using the adb command to disable battery optimization with TestMu AI executor",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Python",
+        "text": "  params = {\"command\":\"disable-battery-optimization\", \"disableBatteryOptimization\":True/False}\n  result = driver.execute_script(\"lambda-adb\",params)"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Below is a Python example utilizing the adb command to enforce fixed screen rotation with the TestMu AI executor",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Python",
+        "text": "  params = {\"command\":\"fixed-to-user-rotation\", \"fixedToUserRotation\":True}\n  result = driver.execute_script(\"lambda-adb\",params)"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "The following commands are used to disable different types of animations",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "  Map<String, String> params = Map.of(\"command\", \"shell\", \"text\", \"settings get global animator_duration_scale\");\n  androidDriver.executeScript(\"lambda-adb\", params);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "If you're using Python with TestMu AI\u2019s App Automation, you can execute these commands using the execute_script function",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Python",
+        "text": "# Define ADB commands for enabling automatic time and timezone\nparams_timezone = {\"command\": \"shell\", \"text\": \"settings put global auto_time_zone 1\"}\nparams_time = {\"command\": \"shell\", \"text\": \"settings put global auto_time 1\"}\n\n# Execute commands using LambdaTest's ADB execution method\nresult_timezone = driver.execute_script(\"lambda-adb\", params_timezone)\nresult_time = driver.execute_script(\"lambda-adb\", params_time)"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 Running ADB commands on TestMu AI lets you drive real and virtual Android devices from your app automation scripts using JavaScript executors, triggering swipes, taps, key events, and shell actions like dumpsys to control device state during mobile test runs.
 
 Android Debug Bridge (adb) is a versatile command-line tool that lets users communicate with a device. The adb command facilitates a variety of device actions, such as installing and debugging apps. 
 
 <BrandName /> provides support for limited commands which can be executed in your app automation test scripts via javascript executors. The following command with the below mentioned parameters need to be used to execute adb command with <BrandName /> real device cloud.
+
+<VerifiedTag value="Verified" />
 
 ```python
 driver.execute_script("lambda-adb", params)
@@ -65,6 +333,8 @@ driver.execute_script("lambda-adb", params)
 
   The command is used to generate a swipe gesture by defining the coordinates of starting and ending point of the swipe. The following is a Python sample of using the adb swipe command with <BrandName /> executor.
 
+  <VerifiedTag value="Verified" />
+
   ```python
   params = {"command":"input-swipe", "startX":200,"startY":900,"endX": 200,"endY":300}
   result = driver.execute_script("lambda-adb",params)
@@ -75,6 +345,8 @@ driver.execute_script("lambda-adb", params)
 **adb shell input sendKeys** Real &amp; Virtual
 
   The command is used to sends text as if typed at the keyboard in the real devices. The following is a Python sample of using the adb sendKeys command with <BrandName /> executor.
+
+  <VerifiedTag value="Verified" />
 
   ```python
   params = {"command":"input-text", "text":"this is my text"}
@@ -87,6 +359,8 @@ driver.execute_script("lambda-adb", params)
 
 The command is used to navigate to the home screen of the device while running an app automation test script. The following is a Python sample of using the adb command to navigate to the home screen with <BrandName /> executor.
 
+<VerifiedTag value="Verified" />
+
 ```python
 params = {"command":"keyevent", "keycode":3}
 result = driver.execute_script("lambda-adb",params)
@@ -97,6 +371,8 @@ result = driver.execute_script("lambda-adb",params)
 - **enableAutoRotate** Real &amp; Virtual
 
   The command is used to auto rotate the screen of the device while running an app automation test script. The following is a Python sample using the adb command to allow auto rotation with <BrandName /> executor.
+
+  <VerifiedTag value="Verified" />
 
   ```python
   params = {"command":"autorotate", "enableAutoRotate": True}
@@ -113,11 +389,16 @@ result = driver.execute_script("lambda-adb",params)
 
   The `adb shell dumpsys` command is used to obtain detailed information about installed packages on device. When you run this command, it provides a list of information for each package installed on the device. The output includes various details about each package.The following is a Python sample using the adb command:
 
+  <VerifiedTag value="Verified" />
+
   ```python
   params = {"command": "shell", "text": "dumpsys package <package_info>"}
   result = driver.execute_script("lambda-adb",params)
   ```
   Example -
+
+   <VerifiedTag value="Verified" />
+
    ```python
   params = {"command": "shell", "text": "dumpsys package dumpsys input_method"}
   result = driver.execute_script("lambda-adb",params)
@@ -127,11 +408,16 @@ result = driver.execute_script("lambda-adb",params)
 
   The command `adb shell getprop` is used to retrieve system properties from an Android device. When executed, it provides a list of key-value pairs representing various system settings and configurations. These properties include information about the device's build, hardware, and other system-related details. The output can be useful for debugging, development or understanding the device's current state. The following is a Python sample using the adb command:
 
+  <VerifiedTag value="Verified" />
+
   ```python
   params = {"command": "shell", "text": "getprop"}
   result = driver.execute_script("lambda-adb",params)
   ```
   Example -
+
+  <VerifiedTag value="Verified" />
+
   ```python
   params = {"command": "shell", "text": "getprop ro.build.version.security_patch"}
   result = driver.execute_script("lambda-adb",params)
@@ -140,6 +426,8 @@ result = driver.execute_script("lambda-adb",params)
 - **adb shell cat /proc/version** Real
 
   The `adb shell cat /proc/version` command outputs detailed information about the Linux kernel version running on the Android device, including the build date and compiler details. This information is essential for debugging compatibility issues and understanding the device’s operating system internals.The following is a Python sample using the adb command:
+
+  <VerifiedTag value="Verified" />
 
   ```python
   params = {"command": "shell", "text": "cat /proc/version"}
@@ -152,6 +440,8 @@ result = driver.execute_script("lambda-adb",params)
 
   The `adb shell pm` command enables management of Android apps programmatically. It supports installing, uninstalling, clearing data, and querying installed packages. The following is a Python sample using the adb command:
 
+  <VerifiedTag value="Verified" />
+
   ```python
   params = {"command": "shell", "text": "pm list packages"}
   result = driver.execute_script("lambda-adb",params)
@@ -160,6 +450,8 @@ result = driver.execute_script("lambda-adb",params)
 - **adb shell rm** Real
 
   The `adb shell rm` command is used to delete files or directories from the Android device's filesystem directly from your terminal or during automated test execution. It helps in clearing residual data, removing temporary test files, or resetting the test environment by deleting specific logs, APKs, screenshots, or other generated data. The following is a Python sample using the adb command:
+
+  <VerifiedTag value="Verified" />
 
   ```python
   params = {"command": "shell", "text": "rm /sdcard/Download/tempfile.txt"}
@@ -171,6 +463,8 @@ result = driver.execute_script("lambda-adb",params)
 
   The `adb shell mkdir` command is used to create new directories on an Android device’s filesystem. It is especially useful when preparing the device environment before automated test runs, ensuring that the required folder structure exists for storing screenshots, logs, or other test-related files. The following is a Python sample using the adb command:
 
+  <VerifiedTag value="Verified" />
+
   ```python
   params = {"command": "shell", "text": "mkdir /sdcard/TestResults"}
   result = driver.execute_script("lambda-adb",params)
@@ -180,6 +474,8 @@ result = driver.execute_script("lambda-adb",params)
 
   The `adb shell screencap` command captures the current screen on a real device and saves it as an image file. It’s useful for debugging UI issues or validating visual test results during automation. The following is a Python sample using the adb command:
 
+  <VerifiedTag value="Verified" />
+
   ```python
   params = {"command": "shell", "text": "screencap /sdcard/screen.png"}
   result = driver.execute_script("lambda-adb",params)
@@ -188,6 +484,8 @@ result = driver.execute_script("lambda-adb",params)
 - **adb shell content** Real
 
   The `adb shell content` command interacts with Android’s content providers to query, insert, update, or delete shared data like contacts, SMS, or calendar entries. It's commonly used in tests to read data, insert test entries, or reset content to a known state. The following is a Python sample using the adb command:
+
+  <VerifiedTag value="Verified" />
 
   ```python
   params = {"command": "shell", "text": "content query --uri content://contacts/phones"}
@@ -199,6 +497,8 @@ result = driver.execute_script("lambda-adb",params)
 
   The `adb shell am command` uses the Activity Manager to control app components on a real device. It’s useful for launching activities, restarting apps, or sending broadcast intents, commonly done during tests to simulate user actions or reset app state. The following is a Python sample using the adb command:
 
+  <VerifiedTag value="Verified" />
+
   ```python
   params = {"command": "shell", "text": "am start -n com.example/.MainActivity"}
   result = driver.execute_script("lambda-adb",params)
@@ -207,11 +507,16 @@ result = driver.execute_script("lambda-adb",params)
 
   The `adb shell dumpsys` command is used to obtain detailed information about installed packages on device. When you run this command, it provides a list of information for each package installed on the device. The output includes various details about each package.The following is a Python sample using the adb command:
 
+  <VerifiedTag value="Verified" />
+
   ```python
   params = {"command": "shell", "text": "dumpsys package <package_info>"}
   result = driver.execute_script("lambda-adb",params)
   ```
   Example -
+
+   <VerifiedTag value="Verified" />
+
    ```python
   params = {"command": "shell", "text": "dumpsys package dumpsys input_method"}
   result = driver.execute_script("lambda-adb",params)
@@ -220,6 +525,8 @@ result = driver.execute_script("lambda-adb",params)
 - **adb shell getprop** Real
 
  The `adb shell getprop` command retrieves system-level properties in the form of key-value pairs. These properties include internal runtime details such as device model, manufacturer, OS version, network state, security patch level, and debug flags.  The following is a Python sample using the adb command:
+
+  <VerifiedTag value="Verified" />
 
   ```python
   params = {"command": "shell", "text": "getprop"}
@@ -231,6 +538,8 @@ result = driver.execute_script("lambda-adb",params)
 
   The `adb shell setprop` command sets system properties on a real device, allowing you to modify device behavior. It’s often used to change debug flags, adjust logging levels, or simulate different configurations and network conditions during testing. The following is a Python sample using the adb command:
 
+  <VerifiedTag value="Verified" />
+
   ```python
   params = {"command": "shell", "text": "setprop debug.test true"}
   result = driver.execute_script("lambda-adb",params)
@@ -238,6 +547,8 @@ result = driver.execute_script("lambda-adb",params)
 - **adb shell cat /proc/version** Real
 
   The `adb shell cat /proc/version` command outputs detailed information about the Linux kernel version running on the Android device, including the build date and compiler details. This information is essential for debugging compatibility issues and understanding the device’s operating system internals.The following is a Python sample using the adb command:
+
+  <VerifiedTag value="Verified" />
 
   ```python
   params = {"command": "shell", "text": "cat /proc/version"}
@@ -255,6 +566,8 @@ result = driver.execute_script("lambda-adb",params)
   - `ls /sdcard/Pictures`: Lists all files in the Pictures directory, which usually stores photos and screenshots. Useful for confirming screenshots are saved correctly or for accessing images created during tests.
 
   - `ls /sdcard/Movies`: Lists media files in the Movies folder. Commonly used to validate recorded or downloaded videos and manage video artifacts from test executions.
+
+  <VerifiedTag value="Verified" />
 
   ```python
   # List files in the Downloads folder
@@ -279,6 +592,8 @@ result = driver.execute_script("lambda-adb",params)
 
     - `cat /sdcard/Movies/<filename>`: Outputs raw binary content of video files in the Movies folder, helpful for validating recorded or downloaded videos.
 
+  <VerifiedTag value="Verified" />
+
   ```python
   params = {"command": "shell", "text": "cat /proc/version"}
   result = driver.execute_script("lambda-adb", params)
@@ -302,6 +617,9 @@ result = driver.execute_script("lambda-adb",params)
   This command is used to test the network connectivity between the Android device and a specified host, such as `google.com`. When executed it sends four ICMP request packets to the host and wait for responses. The output includes details such as packet transmission time, success rate and round-trip time, which helps diagnose network connectivity and latency issues. The following is a Python sample using the adb command:
 
   > **Note :** The **-c** is required in this command
+
+  <VerifiedTag value="Verified" />
+
   ```python
   params = {"command": "shell", "text": "ping -c 4 google.com"}
   result = driver.execute_script("lambda-adb",params)
@@ -313,6 +631,8 @@ result = driver.execute_script("lambda-adb",params)
 - **enableNotification** Real &amp; Virtual
 
   These commands enable or disable your app notifications on the device based on the value provided for `enableNotification`. **True** is used to enable notifications, while **False** is used to disable them. The following is a Python sample using the adb command with <BrandName /> executor:
+
+  <VerifiedTag value="Verified" />
 
   ```python
   params = {"command": "enable-notification", "enableNotification":True/False}
@@ -330,6 +650,8 @@ result = driver.execute_script("lambda-adb",params)
 
   This command is used to enable or disable battery optimization for your app on the device. The following is a Python sample using the adb command to disable battery optimization with <BrandName /> executor:
 
+  <VerifiedTag value="Verified" />
+
   ```python
   params = {"command":"disable-battery-optimization", "disableBatteryOptimization":True/False}
   result = driver.execute_script("lambda-adb",params)
@@ -340,6 +662,8 @@ result = driver.execute_script("lambda-adb",params)
 - **fixedToUserRotation** Real &amp; Virtual
 
   This command serves to lock the screen rotation in alignment with the app's default behavior and user-defined settings. Below is a Python example utilizing the adb command to enforce fixed screen rotation with the <BrandName /> executor:
+
+  <VerifiedTag value="Verified" />
 
   ```python
   params = {"command":"fixed-to-user-rotation", "fixedToUserRotation":True}
@@ -355,6 +679,8 @@ Disabling animations can enhance test execution speed by preventing unnecessary 
 
   These commands set the respective global animation scales to 0, effectively disabling animations.
 
+  <VerifiedTag value="Verified" />
+
   ```java
   Map<String, String> params = Map.of("command", "shell", "text", "settings get global animator_duration_scale");
   androidDriver.executeScript("lambda-adb", params);
@@ -367,6 +693,8 @@ By default, Automatic Timezone and Automatic Time settings are enabled on the de
 - `settings put global auto_time 1`: Enables Automatic Time, ensuring that the device syncs time automatically from the network.
 
 These commands help maintain accurate time and timezone settings without requiring manual intervention. If you're using Python with <BrandName />’s App Automation, you can execute these commands using the `execute_script` function:
+
+<VerifiedTag value="Verified" />
 
 ```python
 # Define ADB commands for enabling automatic time and timezone

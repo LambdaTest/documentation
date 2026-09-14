@@ -26,6 +26,8 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 
+import VerifiedTag from '@site/src/component/verifiedTag';
+
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
        "@context": "https://schema.org",
@@ -49,6 +51,144 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       })
     }}
 ></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/smartui-appium-sdk/"
+    },
+    "headline": "Integrate SmartUI with Appium Tests",
+    "description": "Learn how to integrate your Appium automated tests with TestMu AI's SmartUI. Java uses both SDK and hooks integration, while JavaScript, Python, Ruby, and C# use Hooks integration.",
+    "url": "https://www.testmuai.com/support/docs/smartui-appium-sdk/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Documentation",
+    "keywords": [
+      "Visual Regression",
+      "Visual Regression Testing Guide",
+      "Visual Regression Test Automation"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Add the following code snippet in your test where you want to capture a screenshot",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "driver.execute(\"smartui.takeScreenshot=<Name of your screenshot>\");"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Quick Start with Hooks",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Python",
+        "text": "driver.execute_script(\"smartui.takeScreenshot=<Your Screenshot Name>\")"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Quick Start with Hooks",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Ruby",
+        "text": "driver.execute(\"smartui.takeScreenshot=<Your Screenshot Name>\")"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 4",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "C#",
+        "text": "driver.Execute(\"smartui.takeScreenshot=<Your Screenshot Name>\");"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "For apps with scrolling functionality, you can capture full-page screenshots",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "let config = {\n  screenshotName: '<Name of your screenshot>',\n  fullPage: true,\n  pageCount: 15   // Minimum 1, Maximum 20\n};\nawait driver.execute(\"smartui.takeScreenshot\", config);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 6",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Python",
+        "text": "config = {\n  'screenshotName': '<Your Screenshot Name>',\n  'fullPage': True,\n  'pageCount': 15  # Minimum 1, Maximum 20\n}\ndriver.execute_script(\"smartui.takeScreenshot\", config)"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 7",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Ruby",
+        "text": "config = {\n  'screenshotName' => '<Your Screenshot Name>',\n  'fullPage' => true,\n  'pageCount' => 15  # Minimum 1, Maximum 20\n}\ndriver.execute(\"smartui.takeScreenshot\", config)"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 8",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "C#",
+        "text": "var config = new Dictionary<string, object> {\n  {\"screenshotName\", \"<Your Screenshot Name>\"},\n  {\"fullPage\", true},\n  {\"pageCount\", 15}  // Minimum 1, Maximum 20\n};\ndriver.Execute(\"smartui.takeScreenshot\", config);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Set your Project Token as an environment variable before running tests",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "export PROJECT_TOKEN=\"your_project_token\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 10",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "set PROJECT_TOKEN=your_project_token"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 11",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "PowerShell",
+        "text": "$env:PROJECT_TOKEN=\"your_project_token\""
+      }
+    ],
+    "dateModified": "2026-08-04T13:20:08+05:30"
+  }) }}
+/>
+
 Appium is an open-source tool for automating mobile application testing. It allows developers and testers to write tests for native, hybrid, and mobile web applications across multiple platforms, such as iOS and Android, using a single codebase.
 
 <BrandName /> SmartUI supports Appium automation tests for mobile applications through two integration methods:
@@ -135,12 +275,16 @@ Add the following code snippet in your test where you want to capture a screensh
 <Tabs className='docs__val' groupId='hooks-language'>
 <TabItem value='javascript' label='JavaScript' default>
 
+<VerifiedTag value="Verified" />
+
 ```javascript
 driver.execute("smartui.takeScreenshot=<Name of your screenshot>");
 ```
 
 </TabItem>
 <TabItem value='python' label='Python'>
+
+<VerifiedTag value="Verified" />
 
 ```python
 driver.execute_script("smartui.takeScreenshot=<Your Screenshot Name>")
@@ -149,12 +293,16 @@ driver.execute_script("smartui.takeScreenshot=<Your Screenshot Name>")
 </TabItem>
 <TabItem value='ruby' label='Ruby'>
 
+<VerifiedTag value="Verified" />
+
 ```ruby
 driver.execute("smartui.takeScreenshot=<Your Screenshot Name>")
 ```
 
 </TabItem>
 <TabItem value='csharp' label='C#'>
+
+<VerifiedTag value="Verified" />
 
 ```csharp
 driver.Execute("smartui.takeScreenshot=<Your Screenshot Name>");
@@ -170,6 +318,8 @@ For apps with scrolling functionality, you can capture full-page screenshots:
 <Tabs className='docs__val' groupId='hooks-fullpage'>
 <TabItem value='javascript-full' label='JavaScript' default>
 
+<VerifiedTag value="Verified" />
+
 ```javascript
 let config = {
   screenshotName: '<Name of your screenshot>',
@@ -181,6 +331,8 @@ await driver.execute("smartui.takeScreenshot", config);
 
 </TabItem>
 <TabItem value='python-full' label='Python'>
+
+<VerifiedTag value="Verified" />
 
 ```python
 config = {
@@ -194,6 +346,8 @@ driver.execute_script("smartui.takeScreenshot", config)
 </TabItem>
 <TabItem value='ruby-full' label='Ruby'>
 
+<VerifiedTag value="Verified" />
+
 ```ruby
 config = {
   'screenshotName' => '<Your Screenshot Name>',
@@ -205,6 +359,8 @@ driver.execute("smartui.takeScreenshot", config)
 
 </TabItem>
 <TabItem value='csharp-full' label='C#'>
+
+<VerifiedTag value="Verified" />
 
 ```csharp
 var config = new Dictionary<string, object> {
@@ -225,6 +381,8 @@ Set your Project Token as an environment variable before running tests:
 <Tabs className='docs__val' groupId='hooks-config'>
 <TabItem value='macos-linux' label='MacOS/Linux' default>
 
+<VerifiedTag value="Verified" />
+
 ```bash
 export PROJECT_TOKEN="your_project_token"
 ```
@@ -232,12 +390,16 @@ export PROJECT_TOKEN="your_project_token"
 </TabItem>
 <TabItem value='windows' label='Windows - CMD'>
 
+<VerifiedTag value="Verified" />
+
 ```bash
 set PROJECT_TOKEN=your_project_token
 ```
 
 </TabItem>
 <TabItem value='powershell' label='PowerShell'>
+
+<VerifiedTag value="Verified" />
 
 ```powershell
 $env:PROJECT_TOKEN="your_project_token"

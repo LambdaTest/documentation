@@ -23,6 +23,8 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 
+import VerifiedTag from '@site/src/component/verifiedTag';
+
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
        "@context": "https://schema.org",
@@ -47,9 +49,131 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/error-messages/"
+    },
+    "headline": "Error Messages During Test Execution",
+    "description": "Identify and resolve common error messages that occur during Selenium test execution on the cloud grid.",
+    "url": "https://www.testmuai.com/support/docs/error-messages/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Web Automation",
+    "keywords": [
+      "selenium test execution errors",
+      "authentication error fix",
+      "max duration exceeded"
+    ],
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "dateModified": "2026-09-09T19:13:32+05:30"
+  }) }}
+/>
+
+
 # How to Fix Common Selenium Errors on TestMu AI
 ---
 Below is a list of error messages that may occur during test execution, along with their causes and solutions.
+
+## Quick Lookup {#quick-lookup}
+
+Find your error by what your test printed. The **W3C error code** is the string the WebDriver protocol returns, and the **Selenium exception** is what your test code raises.
+
+### WebDriver Errors {#webdriver-errors}
+
+<!-- Verified 2026-09-11: W3C error codes and HTTP statuses from the W3C WebDriver spec; exception names from Selenium source (ErrorCodec.java, errorhandler.py). -->
+
+| Error | W3C error code | HTTP status | Selenium exception |
+|---|---|---|---|
+| [Element Click Intercepted](#element-click-intercepted---400) | `element click intercepted` | 400 | `ElementClickInterceptedException` |
+| [Element Not Interactable](#element-not-interactable---400) | `element not interactable` | 400 | `ElementNotInteractableException` |
+| [Insecure Certificate](#insecure-certificate---400) | `insecure certificate` | 400 | `InsecureCertificateException` |
+| [Invalid Argument](#invalid-argument---400) | `invalid argument` | 400 | `InvalidArgumentException` |
+| [Invalid Cookie Domain](#invalid-cookie-domain---400) | `invalid cookie domain` | 400 | `InvalidCookieDomainException` |
+| [Invalid Element State](#invalid-element-state---400) | `invalid element state` | 400 | `InvalidElementStateException` |
+| [Invalid Selector](#invalid-selector---400) | `invalid selector` | 400 | `InvalidSelectorException` |
+| [Invalid Session ID](#session-not-generated---invalid-session-id-404--session-not-created-500) | `invalid session id` | 404 | `NoSuchSessionException` (Java) · `InvalidSessionIdException` (Python) |
+| [Session Not Created](#session-not-generated---invalid-session-id-404--session-not-created-500) | `session not created` | 500 | `SessionNotCreatedException` |
+| [JavaScript Error](#javascript-error---500) | `javascript error` | 500 | `JavascriptException` |
+| [Move Target Out of Bounds](#move-target-out-of-bounds---500) | `move target out of bounds` | 500 | `MoveTargetOutOfBoundsException` |
+| [No Such Alert](#no-such-alert---404) | `no such alert` | 404 | `NoAlertPresentException` |
+| [No Such Cookie](#no-such-cookie---404) | `no such cookie` | 404 | `NoSuchCookieException` |
+| [No Such Element](#no-such-element---404) | `no such element` | 404 | `NoSuchElementException` |
+| [No Such Frame](#no-such-frame---404) | `no such frame` | 404 | `NoSuchFrameException` |
+| [No Such Window](#no-such-window---404) | `no such window` | 404 | `NoSuchWindowException` |
+| [No Such Shadow Root](#no-such-shadow-root---404) | `no such shadow root` | 404 | `NoSuchShadowRootException` |
+| [Stale Element Reference](#stale-element-reference---404) | `stale element reference` | 404 | `StaleElementReferenceException` |
+| [Unsupported Operation](#unsupported-operation---500) | `unsupported operation` | 500 | `UnsupportedCommandException` (Java) |
+| [Unknown Method](#unknown-method---405) | `unknown method` | 405 | `UnsupportedCommandException` (Java) |
+| [Unknown Error](#unknown-error---500) | `unknown error` | 500 | `WebDriverException` |
+| [Unknown Command](#unknown-command---404) | `unknown command` | 404 | `UnsupportedCommandException` (Java) |
+| [Script Timeout](#script-timeout---500) | `script timeout error` | 500 | `ScriptTimeoutException` (Java) · `TimeoutException` (Python) |
+| [Unable to Set Cookie](#unable-to-set-cookies---500) | `unable to set cookie` | 500 | `UnableToSetCookieException` |
+| [Unable to Capture Screen](#unable-to-capture-screen---500) | `unable to capture screen` | 500 | `ScreenshotException` |
+| [Unexpected Alert Open](#unexpected-alert-open---500) | `unexpected alert open` | 500 | `UnhandledAlertException` (Java) · `UnexpectedAlertPresentException` (Python) |
+
+### TestMu AI Platform Errors {#platform-errors}
+
+[Authentication Error](#authentication-error-at-the-time-of-test-execution) · [Max Duration Exceeded](#max-duration-exceeded-error) · [Test Cancellation](#test-cancellation---status-error) · [Exceeded Queue Limit](#exceeded-queue-limit-error) · [Lambda Error](#lambda-error)
+
+### Timeouts {#timeouts}
+
+| Timeout | Explained in |
+|---|---|
+| Idle timeout | [Idle Timeout](/support/docs/timeouts-issues-and-resolutions/#1-idle-timeout) |
+| Queuing timeout | [Queuing Timeout](/support/docs/timeouts-issues-and-resolutions/#4-queuing-timeout) |
+| Script timeout | [Script Timeout](#script-timeout---500) |
+| Maximum session duration | [Max Duration Exceeded](#max-duration-exceeded-error) |
+| Network latency | [Network Latency](/support/docs/timeouts-issues-and-resolutions/#3-network-latency) |
+| Firewall-protected network | [Firewall Protected Network](/support/docs/timeouts-issues-and-resolutions/#5-firewall-protected-network) |
+
+### Errors From a Specific Product {#product-errors}
+
+| Product | Reference |
+|---|---|
+| HyperExecute CLI | [HyperExecute CLI Error Codes](/support/docs/hyperexecute-how-to-debug-job/#error-codes) |
+| Kane CLI | [Kane CLI Error Codes](/support/docs/kane-cli-error-codes/) |
+| KaneAI | [KaneAI Errors](/support/docs/error-handling-kaneai/) |
+| Tunnel | [Tunnel Error Messages](/support/docs/troubleshooting-lambda-tunnel/#error-messages) |
+| SmartUI CLI | [SmartUI Error Message Reference](/support/docs/smartui-troubleshooting-guide/#error-message-reference) |
+| Espresso and iOS app tests | [Debugging Espresso Tests](/support/docs/debugging-espresso-tests/) · [Troubleshooting iOS App Testing](/support/docs/troubleshooting-ios-app-testing/) |
+
 
 ## Authentication Error at the Time of Test Execution
 ---
@@ -148,6 +272,8 @@ Another element is obscuring the element you want to click.
 
 The Element Click command could not complete because another element is obscuring the target element.
 
+<VerifiedTag value="Verified" />
+
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">
 {`org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <label _ngcontent-yrc-c26="" formcontrolname="reportingDealPermission" nz-checkbox="" class="ant-checkbox-wrapper ng-untouched ng-pristine ng-valid" ng-reflect-name="reportingDealPermission">...</label> is not clickable at point (161, 562). Other element would receive the click: <div _ngcontent-yrc-c26="" class="footer">...</div>
@@ -235,6 +361,8 @@ Example:
 
 You cannot set a window size to a negative value:
 
+<VerifiedTag value="Verified" />
+
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">
 {`from selenium import webdriver from selenium.common import exceptions session = webdriver.Firefox()
@@ -246,6 +374,8 @@ You cannot set a window size to a negative value:
 </div>
 
 Output:
+
+<VerifiedTag value="Verified" />
 
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">
@@ -279,6 +409,8 @@ An illegal attempt was made to set a cookie under a different domain than the cu
 Example:
 If the current domain is 'example.com', you cannot add a cookie for 'example.org':
 
+<VerifiedTag value="Verified" />
+
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">
 {`from selenium import webdriver
@@ -296,6 +428,9 @@ If the current domain is 'example.com', you cannot add a cookie for 'example.org
 </div>
 
 Output: 
+
+<VerifiedTag value="Verified" />
+
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">
 {`InvalidCookieDomainException: https://example.org/
@@ -334,6 +469,8 @@ The provided selector strategy is unknown or incorrect.
 
 Argument was an invalid selector.
 
+<VerifiedTag value="Verified" />
+
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">
 {`org.openqa.selenium.InvalidSelectorException: invalid selector
@@ -363,6 +500,8 @@ The session either does not exist, is not active, or could not be created.
 ---
 Occurs if the given session ID is not in the list of active sessions, meaning the session either does not exist or is not active.
 
+<VerifiedTag value="Verified" />
+
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">
 {`ERROR webdriver: Request failed with status 404 due to invalid session id: invalid session
@@ -380,6 +519,8 @@ Occurs if the given session ID is not in the list of active sessions, meaning th
 ### Session Not Created - 500
 ---
 A new session could not be created.
+
+<VerifiedTag value="Verified" />
 
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">
@@ -407,6 +548,8 @@ The JavaScript error occurs when a script supplied by the user fails to execute.
 
 Example: 
 
+<VerifiedTag value="Verified" />
+
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">
 {`from selenium import webdriver
@@ -421,6 +564,9 @@ Example:
 </div>
 
 Output:
+
+<VerifiedTag value="Verified" />
+
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">
 {`JavascriptException: ReferenceError: foo is not defined
@@ -445,6 +591,9 @@ The target for mouse interaction is outside the browser viewport.
 The target for mouse interaction is not in the browser's viewport and cannot be brought into view.
 
 Example:
+
+<VerifiedTag value="Verified" />
+
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">
 {`MoveTargetOutOfBoundsException: Element cannot be scrolled into view
@@ -469,6 +618,8 @@ You attempted to operate on a modal dialog when none was open.
 
 An attempt was made to operate on a modal dialog when one was not open.
 
+<VerifiedTag value="Verified" />
+
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">
 {`Exception in thread "main" org.openqa.selenium.UnhandledAlertException: Unexpected modal dialog (text: You need to use IE 6.0 for viewing this application. Else some features may not work): You need to use IE 6.0 for viewing this application. Else some features may not work
@@ -491,6 +642,9 @@ No cookie matching the given path name was found in the current browsing context
 No cookie matching the given path name was found among the associated cookies of the current browsing context's active document.
 
 Example:
+
+<VerifiedTag value="Verified" />
+
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">
 {`org.openqa.selenium.UnableToSetCookieException: Unable to set cookie (WARNING: The server did not provide any stacktrace information)
@@ -517,6 +671,9 @@ The element could not be located on the page using the given search parameters.
 An element could not be located on the page using the given search parameters.
 
 Example:
+
+<VerifiedTag value="Verified" />
+
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">
 {`exception selenium.common.exceptions.NoSuchElementException(msg=None, screen=None, stacktrace=None)
@@ -547,6 +704,9 @@ The command to switch to a frame could not find the specified frame.
 A command to switch to a frame could not be satisfied because the frame could not be found.
 
 Example:
+
+<VerifiedTag value="Verified" />
+
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">
 {`selenium.common.exceptions.NoSuchFrameException: Message: no such frame
@@ -573,6 +733,9 @@ The command to switch to a window could not find the specified window.
 A command to switch to a window could not be satisfied because the window could not be found.
 
 Example:
+
+<VerifiedTag value="Verified" />
+
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">
 {`webdriver: Request failed with status 404 due to no such window: Currently focused window has been closed.
@@ -611,6 +774,9 @@ The referenced element is no longer attached to the DOM.
 
 A command failed because the referenced element is no longer attached to the DOM.
 Example:
+
+<VerifiedTag value="Verified" />
+
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">
 {`StaleElementReferenceException: The element reference of e75a1764-ff73-40fa-93c1-08cb90394b65 is stale either the element is no longer attached to the DOM, it is not in the current frame context, or the document has been refreshed
@@ -636,6 +802,9 @@ Common solutions include:
  driver.findElement(By.xpath("xpath here")).click();`
 
 * Using 'try-catch' block within 'for loop':
+
+<VerifiedTag value="Verified" />
+
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">
 {`for(int i=0; i<=2;i++){
@@ -671,6 +840,9 @@ The requested operation is not supported for the given class or data structure.
 A command that should execute properly cannot be supported for some reason.
 
 Example:
+
+<VerifiedTag value="Verified" />
+
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">
 {`import java.util.Arrays;
@@ -714,6 +886,9 @@ The request matched a known URL but used an unsupported HTTP method.
 The requested command matched a known URL but did not match any method for that URL.
 
 Example:
+
+<VerifiedTag value="Verified" />
+
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">
 {`exception selenium.common.exceptions.NoSuchElementException(msg=None, screen=None, stacktrace=None)
@@ -747,6 +922,8 @@ The unknown command error occurs when the driver does not recognize the command 
 Example:
 The /session/&lbrace;session id&rbrace;/foo endpoint does not exist, and returns an unknown command error with a 404 Not Found HTTP status code.
 
+<VerifiedTag value="Verified" />
+
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">
 {`% curl -i -d '{}' http://localhost:4444/session/foo
@@ -774,6 +951,9 @@ The script timeout duration is a configurable capability. You can change how lon
 If you set the session script timeout duration to indefinite by using a `null` value, you risk putting the session into a non-recoverable state. Use this with caution.
 
 Example:
+
+<VerifiedTag value="Verified" />
+
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">
 {`from selenium import webdriver
@@ -791,6 +971,9 @@ except exceptions.ScriptTimeoutException as e:
 </div>
 
 Output:
+
+<VerifiedTag value="Verified" />
+
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">
 
@@ -808,6 +991,9 @@ A command to set a cookie's value could not be satisfied.
 `org.openqa.selenium.UnableToSetCookieException: Unable to set cookie (WARNING: The server did not provide any stacktrace information)`
 
 Example:
+
+<VerifiedTag value="Verified" />
+
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">
 {`System.setProperty("webdriver.edge.driver","C:\\Program Files\\Latest Webdriver\\MicrosoftWebDrive.exe" );
@@ -842,6 +1028,9 @@ A command could not execute because the remote end encountered an unexpected ale
 `org.openqa.selenium.UnhandledAlertException: unexpected alert open`
 
 Example:
+
+<VerifiedTag value="Verified" />
+
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">
 {`org.openqa.selenium.UnhandledAlertException: unexpected alert open

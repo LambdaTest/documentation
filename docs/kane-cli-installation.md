@@ -20,6 +20,7 @@ canonical: https://www.testmuai.com/support/docs/kane-cli-installation/
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -45,9 +46,134 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/kane-cli-installation/"
+    },
+    "headline": "Installing Kane CLI",
+    "description": "Install Kane CLI using npm or Homebrew. Supports macOS (Apple Silicon and Intel), Linux (x64 and arm64), and Windows (x64).",
+    "url": "https://www.testmuai.com/support/docs/kane-cli-installation/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Kane CLI",
+    "keywords": [
+      "kane cli",
+      "install kane cli",
+      "kaneai"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Install (npm)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "npm install -g @testmuai/kane-cli"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Install (Homebrew)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "brew install LambdaTest/kane/kane-cli"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Verify",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "kane-cli --version"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Expected output",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "0.1.0"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Upgrade with",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "npm install -g @testmuai/kane-cli@latest"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Uninstall",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "npm uninstall -g @testmuai/kane-cli"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "To wipe that state as well",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "rm -rf ~/.testmuai/kaneai"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Find it and add it",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "# Find your npm global bin directory\nnpm config get prefix\n\n# The kane-cli binary lives in <prefix>/bin on macOS/Linux, and <prefix> on Windows\n# Add it to your PATH in ~/.zshrc or ~/.bashrc\nexport PATH=\"$(npm config get prefix)/bin:$PATH\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Check your version and upgrade if needed",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "node --version"
+      }
+    ],
+    "dateModified": "2026-09-03T14:41:00+05:30"
+  }) }}
+/>
+
 Kane CLI is published to the public npm registry as `@testmuai/kane-cli` and to a Homebrew tap. Install it with `npm` or `brew` to get the `kane-cli` command on your `PATH`.
 
 ## Install
+
+<VerifiedTag value="Verified" />
 
 <Tabs>
 <TabItem value="npm" label="npm" default>
@@ -92,11 +218,15 @@ yarn (classic and Berry) has not been verified end-to-end. If you use yarn, pref
 
 ## Verify
 
+<VerifiedTag value="Verified" />
+
 ```bash
 kane-cli --version
 ```
 
 Expected output:
+
+<VerifiedTag value="Verified" />
 
 ```text
 0.1.0
@@ -124,6 +254,8 @@ Kane CLI checks the npm registry once every 24 hours when you launch it. When a 
 
 Upgrade with:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 npm install -g @testmuai/kane-cli@latest
 ```
@@ -132,11 +264,15 @@ After upgrading, run `kane-cli --version` to confirm the new version is active.
 
 ## Uninstall
 
+<VerifiedTag value="Verified" />
+
 ```bash
 npm uninstall -g @testmuai/kane-cli
 ```
 
 This removes the `kane-cli` binary but leaves your local data in place. Kane CLI stores credentials, configuration, sessions, and Chrome profile data under `~/.testmuai/kaneai/`. To wipe that state as well:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 rm -rf ~/.testmuai/kaneai
@@ -150,6 +286,8 @@ Only do this if you want a clean reset, it logs you out of all profiles and dele
 
 Your npm global bin directory is not in your PATH. Find it and add it:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 # Find your npm global bin directory
 npm config get prefix
@@ -162,6 +300,8 @@ export PATH="$(npm config get prefix)/bin:$PATH"
 **Installation fails on Node 16**
 
 Kane CLI requires Node.js 18+. Check your version and upgrade if needed:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 node --version

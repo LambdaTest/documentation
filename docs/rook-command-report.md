@@ -6,6 +6,85 @@ description: Print findings from a local Rook run and optionally generate root-c
 slug: rook-command-report/
 ---
 
+import { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
+
+<script type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify({
+       "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": BRAND_URL
+        },{
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Support",
+          "item": `${BRAND_URL}/support/docs/`
+        },{
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Rook /report Command",
+          "item": `${BRAND_URL}/support/docs/rook-command-report/`
+        }]
+      })
+    }}
+></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/rook-command-report/"
+    },
+    "headline": "Rook /report Command",
+    "description": "Print findings from a local Rook run and optionally generate root-cause analysis for failure clusters.",
+    "url": "https://www.testmuai.com/support/docs/rook-command-report/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Agent Testing",
+    "keywords": [],
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "dateModified": "2026-09-04T12:50:18+05:30"
+  }) }}
+/>
 # <code>/report</code> Command
 
 Use <code>/report</code> to read a stored run from disk. Without a run ID, Rook uses the most recent run for the active agent.
@@ -13,6 +92,8 @@ Use <code>/report</code> to read a stored run from disk. Without a run ID, Rook 
 <img loading="lazy" src={require('../assets/images/rook/commands/rook-command-report.png').default} alt="Current Rook report command help showing run ID, RCA, and allow options" className="doc_img"/>
 
 ## Syntax
+
+<VerifiedTag value="Verified" />
 
 ~~~text
 /report [run-id]

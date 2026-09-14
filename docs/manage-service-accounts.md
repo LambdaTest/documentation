@@ -17,11 +17,90 @@ canonical: https://www.testmuai.com/support/docs/service-accounts/
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import { CookieTrackingSignup } from '@site/src/component/CookieTracking';
 
+<script type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify({
+       "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": BRAND_URL
+        },{
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Support",
+          "item": `${BRAND_URL}/support/docs/`
+        },{
+          "@type": "ListItem",
+          "position": 3,
+          "name": "How to Create and Manage Service Accounts",
+          "item": `${BRAND_URL}/support/docs/service-accounts/`
+        }]
+      })
+    }}
+></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/service-accounts/"
+    },
+    "headline": "How to Create and Manage Service Accounts",
+    "description": "This documentation will help you create and manage service accounts on TestMu AI.",
+    "url": "https://www.testmuai.com/support/docs/service-accounts/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Setting and Security",
+    "keywords": [
+      "service account testmu ai",
+      "manage service account",
+      "create service account"
+    ],
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "dateModified": "2026-05-29T18:18:43+05:30"
+  }) }}
+/>
 # Creating and Managing Service Accounts
 ---
 
 Service accounts are a distinct type of user that you can use with command line interfaces. They are primarily used to perform tests through pipelines like Jenkins or GitHub Actions. Service accounts are not granted login or dashboard viewing privileges. Instead, they are helpful in monitoring and reporting test execution at the user level.
-
 
 The service account has the following benefits:
 
@@ -33,7 +112,6 @@ The service account has the following benefits:
 
 <img loading="lazy" src={require('../assets/images/service-accounts/flow.png').default} alt="Image" width="585" height="674" className="doc_img img_center"/>
 
-
 ## Creating a Service Account
 ---
 
@@ -43,7 +121,6 @@ Service accounts can only be created by Admins.
 
 To create a service account on <BrandName />, you can follow these steps:
 
-
 **Step 1:** Sign in to your <BrandName /> account. Don't have an account, <a href="https://www.testmuai.com/register/" onClick={CookieTrackingSignup}>register for free</a>.
 
 <img loading="lazy" src={require('../assets/images/lambdatest-mfa/dashboard.webp').default} alt="Image" width="404" height="206"  className="doc_img img_center"/><br/>
@@ -51,7 +128,6 @@ To create a service account on <BrandName />, you can follow these steps:
 **Step 2:**  Head to **Settings** and select **Organization Settings** from the dropdown.
 
 <img loading="lazy" src={require('../assets/images/lambdatest-mfa/org-settings.webp').default} alt="Image" width="404" height="206"  className="doc_img img_center"/><br/>
-
 
 **Step 3:** Under the **Members** tab, click on **Service Accounts**.
 
@@ -92,27 +168,3 @@ In case, you wish to delete your service account, follow the given below steps:
 Your service account associated with you will be deleted.
 
 ---
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

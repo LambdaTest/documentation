@@ -16,6 +16,8 @@ canonical: https://www.testmuai.com/support/docs/regular-expression-xcui/
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 
+import VerifiedTag from '@site/src/component/verifiedTag';
+
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
        "@context": "https://schema.org",
@@ -40,6 +42,80 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/regular-expression-xcui/"
+    },
+    "headline": "Regular Expression - XCUI",
+    "description": "There may be instances when the device you chose for a test on TestMu AI is not available. In these scenarios, REGEX will help you widen the search request for devices to run the test on.",
+    "url": "https://www.testmuai.com/support/docs/regular-expression-xcui/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "App Automation",
+    "keywords": [
+      "regular expression testmu ai",
+      "regular expression app automation"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 1",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "\"device\" : [\"Pixel 6 Pro-12\"]"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 2",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "\"device\" : [\"Pixel.*-12\"]"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
+
 Using regular expressions for XCUI device selection on TestMu AI lets you match any available device with a pattern instead of one exact model, so tests still run when your chosen iPhone or iPad is busy, widening the device search.
 
 **Supported on:** Real devices
@@ -54,11 +130,16 @@ Platform version is not mandatory only if `deviceName` is passed using regex. If
 
 Usual way to pass the `deviceName` and `platformVersion` looks like this: <br/>
 
+<VerifiedTag value="Verified" />
+
 ```java
 "device" : ["Pixel 6 Pro-12"]
 ```
 
 Passing `deviceName` using REGEX:<br/>
+
+<VerifiedTag value="Verified" />
+
 ```java
 "device" : ["Pixel.*-12"]
 ```

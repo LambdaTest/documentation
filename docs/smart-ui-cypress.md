@@ -27,6 +27,8 @@ import NewTag from '../src/component/newTag';
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 
+import VerifiedTag from '@site/src/component/verifiedTag';
+
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
@@ -55,6 +57,96 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/smart-ui-cypress/"
+    },
+    "headline": "Getting started with SmartUI using Cypress On TestMu AI",
+    "description": "Master Visual UI Testing with Cypress on TestMu AI Automation Cloud across multiple browser versions through this comprehensive documentation.",
+    "url": "https://www.testmuai.com/support/docs/smart-ui-cypress/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "SmartUI",
+    "keywords": [
+      "Visual Regression",
+      "Visual Regression Testing Guide",
+      "Visual Regression Test Automation"
+    ],
+    "proficiencyLevel": "Beginner",
+    "dependencies": "Basic understanding of Cypress is required.; Cypress version should be higher than 9.5.0. Click here to know more; Login to TestMu AI SmartUI with your credentials.; Copy LT_USERNAME and LT_ACCESS_KEY credentials from Access Key button on the top right of the dashboard..",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Steps to run your first test",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "npm install -g lambdatest-cypress-cli"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Steps to run your first test",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "lambdatest-cypress init"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 3",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n**Step 4:** Add **cy.screenshot()** method in your test script to capture the screenshots with the desired screenshot name.\n\n```js\ndescribe(\"Cypress test with Visual Regression\", () => {\n  it(\"Example test\", () => {\n    cy.visit(\"https://demo.lambdatest.com/\");\n    // highlight-next-line\n    cy.screenshot(\"<Screenshot Name>\"); //Add desired Cypress screenshot name\n  });\n});"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 5: Run the test on the TestMu AI platform by executing the below-run command",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "lambdatest-cypress run"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
+
 Using the <BrandName /> platform, perform regression testing in just one click and find Visual UI Regression bugs easily with the help of Smart Testing. This documentation will act as your step-by-step guide in performing successful Visual Regression tests.
 
 ## Prerequisites for running SmartUI with Cypress
@@ -82,17 +174,23 @@ The first step is to create a project with the application in which we will comb
 
 **Step 1**: Install the required NPM module for `LambdaTest Cypress CLI` in your project.
 
+<VerifiedTag value="Verified" />
+
 ```bash
 npm install -g lambdatest-cypress-cli
 ```
 
 **Step 2:** Use `init` command to generate the sample configuration files.
 
+<VerifiedTag value="Verified" />
+
 ```bash
 lambdatest-cypress init
 ```
 
 **Step 3:** Define SmartUI configuration in the `lambdatest-config.json` file of your Cypress project as shown in the below code snippet.
+
+<VerifiedTag value="Verified" />
 
 ```json title="/cypress-project/lambdatest-config.json"
 {
@@ -142,6 +240,8 @@ lambdatest-cypress init
 
 **Step 4:** Add **cy.screenshot()** method in your test script to capture the screenshots with the desired screenshot name.
 
+<VerifiedTag value="Verified" />
+
 ```js
 describe("Cypress test with Visual Regression", () => {
   it("Example test", () => {
@@ -153,6 +253,8 @@ describe("Cypress test with Visual Regression", () => {
 ```
 
 **Step 5:** Run the test on the <BrandName /> platform by executing the below-run command:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 lambdatest-cypress run

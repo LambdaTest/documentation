@@ -27,6 +27,8 @@ import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 
+import VerifiedTag from '@site/src/component/verifiedTag';
+
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
        "@context": "https://schema.org",
@@ -50,6 +52,95 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       })
     }}
 ></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/speedup-espresso/"
+    },
+    "headline": "Filters for Espresso Tests",
+    "description": "This document helps you learn how to speed up your Espresso Tests.",
+    "url": "https://www.testmuai.com/support/docs/speedup-espresso/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "App Automation",
+    "keywords": [
+      "espresso test filters",
+      "app test automation",
+      "espresso"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Given below is the REST API endpoint",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "POST   /framework/v1/espresso/build"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "1. To run specifically defined packages (Windows)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "  {`curl --location --request POST \"https://mobile-api.lambdatest.com/framework/v1/espresso/build\" --header \"Content-Type: application/json\" --header \"Authorization: Basic <Enter the Auth here>\" --data-raw \"{\\\"app\\\" : \\\"lt://APP_ID\\\",\\\"testSuite\\\": \\\"lt://APP_ID\\\",\\\"device\\\" :  [\\\"Pixel 6-12\\\"],\\\"queueTimeout\\\": 360,\\\"IdleTimeout\\\": 150,\\\"deviceLog\\\": true,\\\"network\\\": false,\\\"build\\\" : \\\"Proverbial-Espresso\\\",\\\"geoLocation\\\" : \\\"FR\\\", \\\"package\\\" : [\\\"com.example.proverbial.packagename1\\\", \\\"com.example.proverbial.packagename2\\\"]}\"`}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "2. To run specifically defined classes (Windows)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "  {`curl --location --request POST \"https://mobile-api.lambdatest.com/framework/v1/espresso/build\" --header \"Content-Type: application/json\" --header \"Authorization: Basic <Enter the Auth here>\" --data-raw \"{\\\"app\\\" : \\\"lt://APP_ID\\\",\\\"testSuite\\\": \\\"lt://APP_ID\\\",\\\"device\\\" :  [\\\"Pixel 6-12\\\"],\\\"queueTimeout\\\": 360,\\\"IdleTimeout\\\": 150,\\\"deviceLog\\\": true,\\\"network\\\": false,\\\"build\\\" : \\\"Proverbial-Espresso\\\",\\\"geoLocation\\\" : \\\"FR\\\", \\\"class\\\" : [\\\"com.example.proverbial.packagename.classname1\\\",\\\"com.example.proverbial.packagename.classname2\\\"]}\"`}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Windows",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "  {`curl --location --request POST \"https://mobile-api.lambdatest.com/framework/v1/espresso/build\" --header \"Authorization: Basic <Enter the Auth here>\" --header \"Content-Type: application/json\" --data-raw \"{\\\"app\\\": \\\"lt://APP_ID\\\", \\\"testSuite\\\": \\\"lt://APP_ID\\\", \\\"device\\\": [\\\"Pixel 6-12\\\"], \\\"queueTimeout\\\": 360, \\\"IdleTimeout\\\": 150, \\\"deviceLog\\\": true, \\\"network\\\": false, \\\"build\\\": \\\"Proverbial-Espresso\\\", \\\"geoLocation\\\": \\\"FR\\\", \\\"filters\\\": {\\\"annotation\\\": [\\\"com.lambdatest.proverbial.demo1\\\", \\\"com.lambdatest.proverbial.demo2\\\"]}}\"`}"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 ---
 
 Filtering Espresso tests on <BrandName /> lets you run only selected test cases instead of running the entire suite, speeding up execution. Pass parameters like package, class, annotation, and size to the REST API request through your AndroidJUnitRunner test runner.
@@ -59,6 +150,8 @@ Usually, all the test cases of your Espresso test suite are executed, but there 
 To filter the test cases, you just need to pass the suitable parameters in <BrandName />’s [REST API](/support/docs/getting-started-with-espresso-testing/) request. Refer to the table below to understand how to use various filters provided by <BrandName />.
 
 Given below is the REST API endpoint:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 POST   /framework/v1/espresso/build
@@ -97,6 +190,9 @@ Please refer to the example `cURL` requests given below for your reference.
 <Tabs className="docs__val">
 
 <TabItem value="bash" label="MacOS/Linux" default>
+
+  <VerifiedTag value="Verified" />
+
   <div className="lambdatest__codeblock">
   <CodeBlock className="language-bash">
     {`curl --location --request POST 'https://mobile-api.lambdatest.com/framework/v1/espresso/build' \\
@@ -118,6 +214,9 @@ Please refer to the example `cURL` requests given below for your reference.
 
 
 <TabItem value="powershell" label="Windows" default>
+
+  <VerifiedTag value="Verified" />
+
   <div className="lambdatest__codeblock">
   <CodeBlock className="language-powershell">
 
@@ -135,6 +234,9 @@ Please refer to the example `cURL` requests given below for your reference.
 <Tabs className="docs__val">
 
 <TabItem value="bash" label="MacOS/Linux" default>
+
+  <VerifiedTag value="Verified" />
+
   <div className="lambdatest__codeblock">
   <CodeBlock className="language-bash">
     {`curl --location --request POST 'https://mobile-api.lambdatest.com/framework/v1/espresso/build' \\
@@ -156,6 +258,9 @@ Please refer to the example `cURL` requests given below for your reference.
 
 
 <TabItem value="powershell" label="Windows" default>
+
+  <VerifiedTag value="Verified" />
+
   <div className="lambdatest__codeblock">
   <CodeBlock className="language-powershell">
 
@@ -173,6 +278,9 @@ Please refer to the example `cURL` requests given below for your reference.
 <Tabs className="docs__val">
 
 <TabItem value="bash" label="MacOS/Linux" default>
+
+  <VerifiedTag value="Verified" />
+
   <div className="lambdatest__codeblock">
   <CodeBlock className="language-bash">
     {`curl --location --request POST 'https://mobile-api.lambdatest.com/framework/v1/espresso/build' \\
@@ -198,6 +306,9 @@ Please refer to the example `cURL` requests given below for your reference.
 
 
 <TabItem value="powershell" label="Windows" default>
+
+  <VerifiedTag value="Verified" />
+
   <div className="lambdatest__codeblock">
   <CodeBlock className="language-powershell">
 

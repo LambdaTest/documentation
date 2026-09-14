@@ -18,6 +18,86 @@ canonical: https://www.testmuai.com/support/docs/local-testing-for-linux/
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
+<script type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify({
+       "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": BRAND_URL
+        },{
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Support",
+          "item": `${BRAND_URL}/support/docs/`
+        },{
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Legacy Binary For Linux",
+          "item": `${BRAND_URL}/support/docs/local-testing-for-linux/`
+        }]
+      })
+    }}
+></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/local-testing-for-linux/"
+    },
+    "headline": "Legacy Binary For Linux",
+    "description": "This TestMu AI documentation will help you perform Localhost testing of your private web app or websites on your Linux machine through TestMu AI tunnel.",
+    "url": "https://www.testmuai.com/support/docs/local-testing-for-linux/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Documentation",
+    "keywords": [
+      "local app testing",
+      "testmu ai local testing",
+      "testmu ai local tunnel"
+    ],
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "dateModified": "2026-08-12T15:40:32+05:30"
+  }) }}
+/>
 # Legacy Binary For Linux
 
 ***
@@ -26,7 +106,6 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 Feel more confident than ever, before deploying any UI specific change into Production. Test your development thoroughly with Secure TCP with TLS 1.2 network protocol hosted by <BrandName /> tunnel. Experience the flexibility to securely test your website on 3000+ browsers and their assorted versions, running on real OS code for cross platform and [cross browser compatibility](https://www.testmuai.com/feature/), even before it gets deployed over production environment.
 
 > Note: From November 2, 2020 onwards, we have deprecated our existing tunnel binary. In order to setup the new version, you can refer to [new tunnel binary for Linux](/docs/local-testing-linux/).
-
 
 You can download the binary file responsible for establishing a TCP with TLS 1.2 connection between your local device and our testing cloud by clicking on the downloadable link below.
 

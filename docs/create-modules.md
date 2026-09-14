@@ -42,6 +42,92 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/create-modules/"
+    },
+    "headline": "Create Modules",
+    "description": "Guide for creating & editing Modules in Test Manager through Modules page.",
+    "url": "https://www.testmuai.com/support/docs/create-modules/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Test Manager",
+    "keywords": [
+      "module creation",
+      "test manager",
+      "test step management"
+    ],
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "1.2 Create Module from Modules section",
+      "description": "Guide for creating & editing Modules in Test Manager through Modules page.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Go to Modules page",
+          "text": "Click on Modules button in the navbar to go to the Modules listing page. Click on Create a Module. When you duplicate a module, its steps, description, and linked projects will also be duplicated.",
+          "url": "https://www.testmuai.com/support/docs/create-modules/#step-1-go-to-modules-page"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Create New Module",
+          "text": "Click on the Create a Module button. Define your module and outline the steps you want to include. Don't worry if you don't have all the details now; you can always edit or add them later. You must provide Module name & create at least one test step to be able to create a new module. Only modules that are not linked to any test cases can be deleted. If a module is used in one or more test cases, the delete option is disabled. See Delete a Module.",
+          "url": "https://www.testmuai.com/support/docs/create-modules/#step-2-create-new-module"
+        }
+      ]
+    }
+  ]) }}
+/>
+
+
+
 # Modules - Creation and Management
 ***
 Tired of recreating the same test steps for repetitive testing flows? With Modules in <BrandName /> Test Manager you can streamline your workflow by reusing pre-existing test steps across multiple test cases. This powerful feature enables you to encapsulate redundant testing flows into modular, reusable components, saving time and ensuring consistency across your projects.

@@ -16,7 +16,9 @@ slug: google-cloud-ci-integration/
 canonical: https://www.testmuai.com/support/docs/google-cloud-ci-integration/
 
 --- 
+
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -42,6 +44,95 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/google-cloud-ci-integration/"
+    },
+    "headline": "How to run selenium test with google cloud CI",
+    "description": "This documentation will help you in integrating Selenium test suites with Google Cloud CI and perform automated testing on cloud Selenium grid.",
+    "url": "https://www.testmuai.com/support/docs/google-cloud-ci-integration/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Integration",
+    "keywords": [
+      "ci cd google cloud",
+      "ci cd pipeline google cloud",
+      "google cloud ci selenium"
+    ],
+    "proficiencyLevel": "Beginner",
+    "dependencies": "For Windows:; For Mac/Linux:.",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Before integrating Google Cloud CI with TestMu AI, make sure you have the following things",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "    set LT_USERNAME=\"YOUR_LAMBDATEST_USERNAME\"\n    set LT_ACCESS_KEY=\"YOUR_LAMBDATEST_ACCESS_KEY\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Prerequisites",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "     export LT_USERNAME=\"YOUR_LAMBDATEST_USERNAME\"\n     export LT_ACCESS_KEY=\"YOUR_LAMBDATEST_ACCESS_KEY\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Running Parallel Test Via Google Cloud CI",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "steps:\n- name: gcr.io/cloud-builders/docker\n  args: ['run' , '-d', '--name=lt', '--network=cloudbuild', 'lambdatest/tunnel', '--user', '${_LT_USERNAME}', '--key', '${_LT_ACCESS_KEY}', '--tunnelName', 'GCloud', '--infoAPIPort', '15000','--load-balanced']\n- name: curlimages/curl\n  args: ['-s', '--retry-connrefused', '--connect-timeout', '5', '--max-time', '5', '--retry', '30', '--retry-delay', '2', '--retry-max-time', '60', 'http://lt:15000/api/v1.0/info']\n- name: 'ubuntu'\n  args: ['sleep', '20']\n- name: 'bash'\n  args: ['ls']\n- name: 'maven'\n  entrypoint: 'mvn'\n  args: ['test', '-P', 'parallel']\n  env:\n  - 'LT_USERNAME=${_LT_USERNAME}'\n  - 'LT_ACCESS_KEY=${_LT_ACCESS_KEY}'"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Running Local Test Via Google Cloud CI",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "steps:\n- name: gcr.io/cloud-builders/docker\n  args: ['run' , '-d', '--name=lt', '--network=cloudbuild', 'lambdatest/tunnel', '--user', '${_LT_USERNAME}', '--key', '${_LT_ACCESS_KEY}', '--tunnelName', 'GCloud', '--infoAPIPort', '15000','--load-balanced']\n- name: curlimages/curl\n  args: ['-s', '--retry-connrefused', '--connect-timeout', '5', '--max-time', '5', '--retry', '30', '--retry-delay', '2', '--retry-max-time', '60', 'http://lt:15000/api/v1.0/info']\n- name: 'ubuntu'\n  args: ['sleep', '20']\n- name: 'bash'\n  args: ['ls']\n- name: 'maven'\n  entrypoint: 'mvn'\n  args: ['test', '-P', 'local']\n  env:\n  - 'LT_USERNAME=${_LT_USERNAME}'\n  - 'LT_ACCESS_KEY=${_LT_ACCESS_KEY}'"
+      }
+    ],
+    "dateModified": "2026-08-14T19:24:28+05:30"
+  }) }}
+/>
+
 # Run Selenium Tests With Google Cloud CI
 ***
 
@@ -59,12 +150,18 @@ Before integrating Google Cloud CI with <BrandName />, make sure you have the fo
 2. To integrate test suites with Google Cloud CI, you would need to set your <BrandName /> username and access key in environment variables. You can get them from [Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/) by clicking on the Key button from the top-right.
 
 *   **For Windows:**
+
+    <VerifiedTag value="Verified" />
+
     ```
     set LT_USERNAME="YOUR_LAMBDATEST_USERNAME"
     set LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
     ```
 
 *   **For Mac/Linux:**
+
+    <VerifiedTag value="Verified" />
+
     ```
      export LT_USERNAME="YOUR_LAMBDATEST_USERNAME"
      export LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
@@ -135,6 +232,8 @@ You can also view the detailed insights of your test execution on [<BrandName />
 
 To run parallel tests on <BrandName /> cloud, you will need to make minor tweaks in `cloudbuild.yml` file.
 
+<VerifiedTag value="Verified" />
+
 ```
 steps:
 - name: gcr.io/cloud-builders/docker
@@ -166,6 +265,8 @@ Below is the screenshot of the above-executed parallel tests.
 * * *
 
 To run local tests on <BrandName /> cloud, you will need to make minor tweaks in `cloudbuild.yml` file.
+
+<VerifiedTag value="Verified" />
 
 ```
 steps:
@@ -209,4 +310,3 @@ That's all! Ship your quality product faster using <BrandName /> and Google Clou
     </li>
   </ul>
 </nav>
-

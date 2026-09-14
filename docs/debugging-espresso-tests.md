@@ -19,6 +19,8 @@ canonical: https://www.testmuai.com/support/docs/debugging-espresso-tests/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
+import VerifiedTag from '@site/src/component/verifiedTag';
+
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
        "@context": "https://schema.org",
@@ -42,6 +44,81 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       })
     }}
 ></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/debugging-espresso-tests/"
+    },
+    "headline": "How to debug your Espresso tests",
+    "description": "Learn how to debug Espresso tests for your mobile applications to resolve different kinds of bugs for your failed test builds.",
+    "url": "https://www.testmuai.com/support/docs/debugging-espresso-tests/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "App Automation",
+    "keywords": [
+      "debug espresso tests",
+      "how to debug espresso tests",
+      "mobile app testing"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "To access consolidated instrumentation logs for a non-sharded build",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "curl -u \"YOUR_LAMBDATEST_USERNAME:YOUR_LAMBDATEST_ACCESSKEY\" \\\n--location 'https://mobile-api.lambdatest.com/mobile-automation/api/v1/framework/builds/<YOUR_BUILD_ID>/logs/instrumentation'"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "For sharded builds, use the following curl command",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "curl -u \"YOUR_LAMBDATEST_USERNAME:YOUR_LAMBDATEST_ACCESSKEY\" \\\n--location 'https://mobile-api.lambdatest.com/mobile-automation/api/v1/framework/jobs/<YOUR_JOB_ID>/logs/instrumentation'"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 
 # How to Debug Espresso Tests on TestMu AI
 ---
@@ -81,6 +158,8 @@ In-depth insights into your test runs are crucial for effective debugging and op
 
 To access consolidated instrumentation logs for a non-sharded build:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 curl -u "YOUR_LAMBDATEST_USERNAME:YOUR_LAMBDATEST_ACCESSKEY" \
 --location 'https://mobile-api.lambdatest.com/mobile-automation/api/v1/framework/builds/<YOUR_BUILD_ID>/logs/instrumentation'
@@ -88,6 +167,9 @@ curl -u "YOUR_LAMBDATEST_USERNAME:YOUR_LAMBDATEST_ACCESSKEY" \
 Replace `<YOUR_BUILD_ID>` with your actual build ID.
 #### Sharded Builds
 For sharded builds, use the following curl command:
+
+<VerifiedTag value="Verified" />
+
 ```bash
 curl -u "YOUR_LAMBDATEST_USERNAME:YOUR_LAMBDATEST_ACCESSKEY" \
 --location 'https://mobile-api.lambdatest.com/mobile-automation/api/v1/framework/jobs/<YOUR_JOB_ID>/logs/instrumentation'
@@ -146,16 +228,16 @@ This table highlights the errors encountered when running tests on [<BrandName /
 
 <img loading="lazy" src={require('../assets/images/debug-espresso-test/5.png').default} alt="Image" width="1347" Height="610" className="doc_img"/> <br />
 
-| Build Execution Errors | Root Cause of Error |
-|--------------------------------------------|--------------------------|
-|Application under test provided by you did not get installed. Please check the application.| The target application failed to install on the selected device during test execution. This indicates an issue with the provided application file or incompatibility with the chosen device configuration.| 
-|Test Suite provided by you did not get installed. Please check the application.| This indicates that the test suite you provided could not be installed on the chosen <BrandName /> environment. This might be due to invalid test suite files, incompatibility issues, or missing dependencies.| 
-|Failed to fetch runner class for test extraction. Please recheck your test suite.| Test discovery failed. The system couldn't extract test cases or classes from the provided test suite application. This might be due to issues with the test suite app itself or its configuration.| 
-|Failed to extract classes or tests from runner app - test discovery failed.| Test discovery failed. The system couldn't extract test cases or classes from the provided runner application. This might be due to issues with the test suite app itself or an incompatibility with the testing framework used. | 
-|No tests found in the test suite. Please check your test suite or applied filters.| The test execution framework couldn't locate any test cases to run due to: <br /> <b>Empty Test Suite: </b>Ensure your test suite contains at least one test class with a @Test annotated method.<br /> <b>Incorrect Filtering: </b>Verify that any applied test filters aren't accidentally excluding all tests. You can see more on espresso test filtering [here](/support/docs/speedup-espresso/).| 
-|Tests could not be run as localization setup failed. Please check locale and try again.| The test suite encountered a localization setup error. This means the system's locale or language settings could not be configured correctly. Please verify your locale settings and try re-running the tests. | 
-|Oops! An error occurred at our end. Please try again.| A temporary infrastructure issue arose. While a device was allocated for your test, it became unavailable before the test execution started. Please retry the test or reach out to support@testmuai.com if the issue persists. | 
-|Desired Capabilities Error. Please check the desired capabilities that you have passed.| The test encountered a [`Desired Capabilities`](/support/docs/espresso-supported-capabilities/) Error.  This indicates an issue with the configuration provided for the test execution.  Please verify the values you have set for desired capabilities like device, platform, or application path. | 
+| Build Execution Errors | Root Cause of Error | How to Fix |
+|--------------------------------------------|--------------------------|----------|
+|Application under test provided by you did not get installed. Please check the application.| The target application failed to install on the selected device during test execution. This indicates an issue with the provided application file or incompatibility with the chosen device configuration.| Check the application file, and that it is compatible with the device you chose, then upload it again. |
+|Test Suite provided by you did not get installed. Please check the application.| This indicates that the test suite you provided could not be installed on the chosen <BrandName /> environment. This might be due to invalid test suite files, incompatibility issues, or missing dependencies.| Check the test suite file for problems, compatibility issues, and missing dependencies, then upload it again. |
+|Failed to fetch runner class for test extraction. Please recheck your test suite.| Test discovery failed. The system couldn't extract test cases or classes from the provided test suite application. This might be due to issues with the test suite app itself or its configuration.| Check the test suite app and its configuration, then upload it again. |
+|Failed to extract classes or tests from runner app - test discovery failed.| Test discovery failed. The system couldn't extract test cases or classes from the provided runner application. This might be due to issues with the test suite app itself or an incompatibility with the testing framework used. | Check the test suite app and that it works with your testing framework, then upload it again. |
+|No tests found in the test suite. Please check your test suite or applied filters.| The test execution framework couldn't locate any test cases to run due to: <br /> <b>Empty Test Suite: </b>Ensure your test suite contains at least one test class with a @Test annotated method.<br /> <b>Incorrect Filtering: </b>Verify that any applied test filters aren't accidentally excluding all tests. You can see more on espresso test filtering [here](/support/docs/speedup-espresso/).| Add at least one `@Test` method, and check that your filters do not exclude every test. |
+|Tests could not be run as localization setup failed. Please check locale and try again.| The test suite encountered a localization setup error. This means the system's locale or language settings could not be configured correctly. Please verify your locale settings and try re-running the tests. | Check your locale settings, then run the tests again. |
+|Oops! An error occurred at our end. Please try again.| A temporary infrastructure issue arose. While a device was allocated for your test, it became unavailable before the test execution started. Please retry the test or reach out to support@testmuai.com if the issue persists. | Run the test again. If it keeps happening, contact support@testmuai.com. |
+|Desired Capabilities Error. Please check the desired capabilities that you have passed.| The test encountered a [`Desired Capabilities`](/support/docs/espresso-supported-capabilities/) Error.  This indicates an issue with the configuration provided for the test execution.  Please verify the values you have set for desired capabilities like device, platform, or application path. | Check the device, platform, and application path values against the [supported capabilities](/support/docs/espresso-supported-capabilities/). |
 
 ### Espresso via HyperExecute Shard Errors
 
@@ -163,19 +245,19 @@ This table highlights the errors encountered when running espresso tests with [S
 
 <img loading="lazy" src={require('../assets/images/debug-espresso-test/4.png').default} alt="Image" width="1347" Height="610" className="doc_img"/> <br />
 
-| Shard Execution Errors | Root Cause of Error |
-|--------------------------------------------|--------------------------|
-|Application under test provided by you did not get installed. Please check the application.| The target application failed to install on the selected device during test execution. This indicates an issue with the provided application file (APK/IPA) or incompatibility with the chosen device configuration.| 
-|Test Suite provided by you did not get installed. Please check the application.| This indicates that the test suite you provided could not be installed on the chosen <BrandName /> environment. This might be due to invalid test suite files, incompatibility issues, or missing dependencies.| 
-|Failed to fetch runner class for test extraction. Please recheck your test suite.| Test discovery failed. The system couldn't extract test cases or classes from the provided runner application. This might be due to issues with the runner app itself or its configuration.| 
-|Failed to extract classes or tests from runner app - test discovery failed.| Test discovery failed. The system couldn't extract test cases or classes from the provided runner application. This might be due to issues with the runner app itself or an incompatibility with the testing framework used. | 
-|No tests found in the test suite. Please check your test suite or applied filters.| The test execution framework couldn't locate any test cases to run due to: <br /> <b>Empty Test Suite: </b>Ensure your test suite contains at least one test class with a @Test annotated method.<br /> <b>Incorrect Filtering: </b>Verify that any applied test filters aren't accidentally excluding all tests. You can see more on espresso test filtering [here](/support/docs/speedup-espresso/).| 
-|Tests could not be run as localization setup failed. Please check locale and try again.| The test suite encountered a localization setup error. This means the system's locale or language settings could not be configured correctly. Please verify your locale settings and try re-running the tests. | 
-|Oops! An error occurred at our end. Please try again.| A temporary infrastructure issue arose. While a device was allocated for your test, it became unavailable before the test execution started. Please retry the test. | 
-|Desired Capabilities Error. Please check the desired capabilities that you have passed.| The test encountered a [`Desired Capabilities`](/support/docs/espresso-supported-capabilities/) Error.  This indicates an issue with the configuration provided for the test execution.  Please verify the values you have set for desired capabilities like device, platform, or application path. | 
-| Oops! An error occurred at our end. Please try again. | An internal error occurred while retrieving configuration details for the test execution environment (HyperExecute API).  A temporary glitch might be preventing communication with the API. Please retry the test execution. If the issue persists, contact support for further assistance. |
-|Build has been stopped. | The build process was terminated prematurely. User intervention caused this stoppage, likely due to errors encountered during the build phase. |
-|Build breached queue timeout| The test execution encountered a "Build breached queue timeout" error. This indicates the build exceeded the maximum allowed wait time while in a queue. This could be due to high system load or insufficient resources on the <BrandName /> platform. |
+| Shard Execution Errors | Root Cause of Error | How to Fix |
+|--------------------------------------------|--------------------------|----------|
+|Application under test provided by you did not get installed. Please check the application.| The target application failed to install on the selected device during test execution. This indicates an issue with the provided application file (APK/IPA) or incompatibility with the chosen device configuration.| Check the application file, and that it is compatible with the device you chose, then upload it again. |
+|Test Suite provided by you did not get installed. Please check the application.| This indicates that the test suite you provided could not be installed on the chosen <BrandName /> environment. This might be due to invalid test suite files, incompatibility issues, or missing dependencies.| Check the test suite file for problems, compatibility issues, and missing dependencies, then upload it again. |
+|Failed to fetch runner class for test extraction. Please recheck your test suite.| Test discovery failed. The system couldn't extract test cases or classes from the provided runner application. This might be due to issues with the runner app itself or its configuration.| Check the test suite app and its configuration, then upload it again. |
+|Failed to extract classes or tests from runner app - test discovery failed.| Test discovery failed. The system couldn't extract test cases or classes from the provided runner application. This might be due to issues with the runner app itself or an incompatibility with the testing framework used. | Check the test suite app and that it works with your testing framework, then upload it again. |
+|No tests found in the test suite. Please check your test suite or applied filters.| The test execution framework couldn't locate any test cases to run due to: <br /> <b>Empty Test Suite: </b>Ensure your test suite contains at least one test class with a @Test annotated method.<br /> <b>Incorrect Filtering: </b>Verify that any applied test filters aren't accidentally excluding all tests. You can see more on espresso test filtering [here](/support/docs/speedup-espresso/).| Add at least one `@Test` method, and check that your filters do not exclude every test. |
+|Tests could not be run as localization setup failed. Please check locale and try again.| The test suite encountered a localization setup error. This means the system's locale or language settings could not be configured correctly. Please verify your locale settings and try re-running the tests. | Check your locale settings, then run the tests again. |
+|Oops! An error occurred at our end. Please try again.| A temporary infrastructure issue arose. While a device was allocated for your test, it became unavailable before the test execution started. Please retry the test. | Run the test again. If it keeps happening, contact support@testmuai.com. |
+|Desired Capabilities Error. Please check the desired capabilities that you have passed.| The test encountered a [`Desired Capabilities`](/support/docs/espresso-supported-capabilities/) Error.  This indicates an issue with the configuration provided for the test execution.  Please verify the values you have set for desired capabilities like device, platform, or application path. | Check the device, platform, and application path values against the [supported capabilities](/support/docs/espresso-supported-capabilities/). |
+| Oops! An error occurred at our end. Please try again. | An internal error occurred while retrieving configuration details for the test execution environment (HyperExecute API).  A temporary glitch might be preventing communication with the API. Please retry the test execution. If the issue persists, contact support for further assistance. | Run the test again. If it keeps happening, contact support@testmuai.com. |
+|Build has been stopped. | The build process was terminated prematurely. User intervention caused this stoppage, likely due to errors encountered during the build phase. | Check why the build was stopped, then run it again. |
+|Build breached queue timeout| The test execution encountered a "Build breached queue timeout" error. This indicates the build exceeded the maximum allowed wait time while in a queue. This could be due to high system load or insufficient resources on the <BrandName /> platform. | Run the build again. |
 
 ## Next Steps
 ---

@@ -15,10 +15,144 @@ canonical: https://www.testmuai.com/support/docs/sim-support/
 site_name: TestMu AI
 url: https://www.testmuai.com/support/docs/sim-support/
 ---
+
 import CodeBlock from '@theme/CodeBlock';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
+
+<script type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify({
+       "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": BRAND_URL
+        },{
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Support",
+          "item": `${BRAND_URL}/support/docs/`
+        },{
+          "@type": "ListItem",
+          "position": 3,
+          "name": "SIM & eSIM Automation on Real Devices",
+          "item": `${BRAND_URL}/support/docs/sim-support/`
+        }]
+      })
+    }}
+></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/sim-support/"
+    },
+    "headline": "SIM & eSIM Automation on Real Devices",
+    "description": "Learn how to automate SIM and eSIM scenarios on real mobile devices using Appium, including capabilities, SMS validation, and supported devices.",
+    "url": "https://www.testmuai.com/support/docs/sim-support/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "App Automation",
+    "keywords": [
+      "SIM",
+      "eSIM",
+      "iOS"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 1: Add SIM Capabilities (iOS)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n<\/TabItem>\n<TabItem value=\"android-config\" label=\"Android\" default>\n\n```python title=\"Android(.apk)\"\ndesired_caps = {\n    'platformName': 'Android',\n    'platformVersion': '16',\n    'deviceName': 'Galaxy S25',\n    'app': 'YOUR_APP_ID',\n    'enableSim': True,\n    'simOptions': {\n        'region': 'IND',\n        'carrier': ['airtel', 'vodafone']\n    }\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 2: Retrieve SIM Properties at Runtime",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Python",
+        "text": "driver.execute_script(\n  \"lambda_executor: { \\\"action\\\": \\\"deviceInfo\\\", \\\"arguments\\\": { \\\"deviceProperties\\\": [\\\"simOptions\\\"] } }\"\n)"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "SIM support Workflow in Automation Test",
+      "description": "Learn how to automate SIM and eSIM scenarios on real mobile devices using Appium, including capabilities, SMS validation, and supported devices.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Add SIM Capabilities",
+          "text": "To enable SIM & eSIM support, include the following capability in your automation session as highlighted in the Capabilities:",
+          "url": "https://www.testmuai.com/support/docs/sim-support/#step-1-add-sim-capabilities"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Retrieve SIM Properties at Runtime",
+          "text": "Sample Response:",
+          "url": "https://www.testmuai.com/support/docs/sim-support/#step-2-retrieve-sim-properties-at-runtime"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Validate SMS Workflows",
+          "text": "Trigger an SMS to the device using your backend/system. Poll and read incoming SMS messages via Appium script. Extract OTP codes or verification text to validate end-to-end flow",
+          "url": "https://www.testmuai.com/support/docs/sim-support/#step-3-validate-sms-workflows"
+        }
+      ]
+    }
+  ]) }}
+/>
 
 # How to Automate SIM and eSIM on TestMu AI
 SIM and eSIM automation on TestMu AI lets you test SMS-driven flows like OTP verification and two-factor authentication on real devices. Request SIM-enabled devices, retrieve phone numbers at runtime, and poll incoming SMS to validate secure onboarding without physical phones.
@@ -46,7 +180,6 @@ To unlock this feature, purchase or upgrade to the required [plan](https://www.t
 
 ---
 
-
 ## Supported Countries & SIM Availability
 <BrandName /> provides SIM and eSIM-enabled devices across **specific countries**, allowing you to test SMS-driven workflows under real carrier conditions. The **availability** of physical SIMs or eSIMs varies by region and carrier, ensuring your automation scripts can validate authentication flows, messaging, and phone number handling in environments that closely resemble real-world usage.
 
@@ -66,7 +199,6 @@ When automating SIM or eSIM scenarios on real devices, you can **customize** you
 | **enableSim** | Boolean | false   | Provision a SIM-enabled device. Must be set to `True` to request SIM support. |
 | **simOptions**| Object  | None    | Define SIM preferences such as region, carrier, or eSIM request. These parameters are nested inside `simOptions`. |
 
-
 ### simOptions Configurations
 
 | Configuration | Type       | Example                  | Description |
@@ -82,7 +214,6 @@ Region and carrier values are case-sensitive. Make sure to enter them exactly as
 
 ## SIM support Workflow in Automation Test
 
-
 ### Step 1: Add SIM Capabilities
 
 To enable SIM & eSIM support, include the following capability in your automation session as highlighted in the Capabilities:
@@ -90,6 +221,8 @@ To enable SIM & eSIM support, include the following capability in your automatio
 <Tabs className="docs__val">
 
 <TabItem value="ios-config" label="iOS" default>
+
+<VerifiedTag value="Verified" />
 
 ```python title="iOS(.ipa)"
  desired_caps = {
@@ -109,6 +242,8 @@ To enable SIM & eSIM support, include the following capability in your automatio
 </TabItem>
 <TabItem value="android-config" label="Android" default>
 
+<VerifiedTag value="Verified" />
+
 ```python title="Android(.apk)"
 desired_caps = {
     'platformName': 'Android',
@@ -127,8 +262,9 @@ desired_caps = {
 
 </Tabs>
 
-
 ### Step 2: Retrieve SIM Properties at Runtime
+
+<VerifiedTag value="Verified" />
 
 ```python
 driver.execute_script(

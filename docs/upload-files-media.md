@@ -26,8 +26,87 @@ import RealDeviceTag from '../src/component/realDevice';
 import VirtualDeviceTag from '../src/component/virtualDevice';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
-# Upload & Download Files and Media on Real Devices
+<script type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify({
+       "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": BRAND_URL
+        },{
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Support",
+          "item": `${BRAND_URL}/support/docs/`
+        },{
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Files and Media",
+          "item": `${BRAND_URL}/support/docs/upload-files-media/`
+        }]
+      })
+    }}
+></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/upload-files-media/"
+    },
+    "headline": "Files and Media",
+    "description": "Learn how to upload and download files and media on real Android and iOS devices during app and browser testing on TestMu AI.",
+    "url": "https://www.testmuai.com/support/docs/upload-files-media/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Real Device",
+    "keywords": [
+      "files upload",
+      "media upload",
+      "file download"
+    ],
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+# Upload & Download Files and Media on Real Devices
 
 <BrandName />’s **Files & Media** feature allows you to seamlessly upload files or media from your system to real devices and download files the app or website generated back for verification. This ensures comprehensive validation of workflows such as document generation, media export, and file handling across Android and iOS devices — during both **App** and **Browser** testing sessions.
 
@@ -110,4 +189,4 @@ The same formats and size limits apply to both **App** and **Browser** sessions:
 You can upload up to **5 files per session**. Files uploaded to or downloaded on the device exist only for the duration of the session and are wiped when the device is recycled.
 :::
 
----  
+---

@@ -40,6 +40,64 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       })
     }}
 ></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/test-case-versioning/"
+    },
+    "headline": "Test Case Versioning",
+    "description": "Learn efficient manual test case versioning with TestMu AI's Test Manager.",
+    "url": "https://www.testmuai.com/support/docs/test-case-versioning/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Test Manager",
+    "keywords": [
+      "test case creation",
+      "test case update",
+      "test cases"
+    ],
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "dateModified": "2026-09-09T20:28:09+05:30"
+  }) }}
+/>
+
 Test Case Versioning allows teams to track every change made to a test case over time. It provides a complete audit trail, ensures traceability, supports rollbacks to earlier versions, and makes collaboration across teams more reliable.
 
 ## Creating Versions
@@ -73,5 +131,8 @@ To view the details of a test case at a specific version, open the desired commi
 
 ### Revert to a Version
 When you revert a test case to a specific version, a new version is created that copies the contents of the selected version.
+
+### Archive and Unarchive Events
+Archiving and unarchiving a test case are recorded in the **Version History** tab with the user who performed the action and when. These entries are markers rather than versions: they do not create a new version, they do not change the version count, and they carry no `Compare` or `Revert` action. See [Archive and Restore Test Cases](/support/docs/test-case-archive/).
 
 ---

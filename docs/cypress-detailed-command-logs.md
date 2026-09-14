@@ -19,6 +19,8 @@ canonical: https://www.testmuai.com/support/docs/cypress-detailed-command-logs/
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
+import VerifiedTag from '@site/src/component/verifiedTag';
+
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
        "@context": "https://schema.org",
@@ -43,6 +45,194 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/cypress-detailed-command-logs/"
+    },
+    "headline": "Detailed Command Logs for Cypress",
+    "description": "Learn how to generate detailed command logs for the test reports of cypress framework testing on TestMu AI and download the reports from the dashboard.",
+    "url": "https://www.testmuai.com/support/docs/cypress-detailed-command-logs/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Web Automation",
+    "keywords": [
+      "cypress testing",
+      "cypress automation testing",
+      "hyperexecute cypress testing"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "For Cypress < 10:",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "\"cypress-terminal-report\": \"4.1.3\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "For Cypress >= 10:",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "\"cypress-terminal-report\": \"^5.3.2\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "For Cypress >= 10:",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "\"run_settings\": {\n  \"detailed_command_logs\": true,\n  \"downloads\": \"./cypress/results\"\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 1: Configure the Plugin",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "const installLogsPrinter = require('cypress-terminal-report/src/installLogsPrinter')\n\nmodule.exports = (on, config) => {\n  // `on` is used to hook into various events Cypress emits\n  // `config` is the resolved Cypress config\n\n  installLogsPrinter(on, {\n    printLogsToFile: 'always',\n    outputRoot: 'cypress/results/detailCommandLogs',\n    outputTarget: {\n      'detailCommandLogs.json': 'json',\n    },\n  })\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "To display detailed logs in the terminal, update the installLogsPrinter with the printLogsToConsole: 'always' code",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "module.exports = (on, config) => {\n  installLogsPrinter(on, {\n    printLogsToConsole: 'always', // Enables logs in the terminal\n    printLogsToFile: 'always',\n    outputRoot: 'cypress/results/detailCommandLogs',\n    outputTarget: {\n      'detailCommandLogs.json': 'json',\n    },\n  });\n};"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 3: Install Logs Collector",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "const installLogsCollector = require('cypress-terminal-report/src/installLogsCollector')\n\ninstallLogsCollector()"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 1: Configure the Plugin",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "const { defineConfig } = require(\"cypress\");\nconst  installLogsPrinter = require(\"cypress-terminal-report/src/installLogsPrinter\");\nmodule.exports = defineConfig({\n  e2e: {\n    setupNodeEvents(on, config) {\n      // implement node event listeners here\n      installLogsPrinter(on, {\n        printLogsToFile:\"always\",\n      outputRoot: 'cypress/results/detailCommandLogs',\n      outputTarget: {\n        'detailCommandLogs.json': 'json',\n      }\n      });\n    },\n  },\n});"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "If you need logs in the terminal, update the code like this",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "const { defineConfig } = require(\"cypress\");\nconst  installLogsPrinter = require(\"cypress-terminal-report/src/installLogsPrinter\");\nmodule.exports = defineConfig({\n  e2e: {\n    setupNodeEvents(on, config) {\n      // implement node event listeners here\n      installLogsPrinter(on, {\n      printLogsToConsole: 'always'\n        printLogsToFile:\"always\",\n      outputRoot: 'cypress/results/detailCommandLogs',\n      outputTarget: {\n        'detailCommandLogs.json': 'json',\n      }\n      });\n    },\n  },\n});"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 3: Install Logs Collector",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "import installLogsCollector from 'cypress-terminal-report/src/installLogsCollector'\n\ninstallLogsCollector()"
+      }
+    ],
+    "dateModified": "2026-09-09T19:13:32+05:30"
+  }) }}
+/>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "For Cypress v9 and previous versions.",
+      "description": "Learn how to generate detailed command logs for the test reports of cypress framework testing on TestMu AI and download the reports from the dashboard.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Configure the Plugin",
+          "text": "Open the cypress/plugins/index.js file in your project. Add the following code to install and configure the cypress-terminal-report plugin:",
+          "url": "https://www.testmuai.com/support/docs/cypress-detailed-command-logs/#step-1-configure-the-plugin"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Enable Logs in the Console (Optional)",
+          "text": "To display detailed logs in the terminal, update the installLogsPrinter with the printLogsToConsole: 'always' code:",
+          "url": "https://www.testmuai.com/support/docs/cypress-detailed-command-logs/#step-2-enable-logs-in-the-console-optional"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Install Logs Collector",
+          "text": "Navigate to cypress/support/index.js. Add the following code to install the log collector:",
+          "url": "https://www.testmuai.com/support/docs/cypress-detailed-command-logs/#step-3-install-logs-collector"
+        }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "For Cypress v10 and later versions.",
+      "description": "Learn how to generate detailed command logs for the test reports of cypress framework testing on TestMu AI and download the reports from the dashboard.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Configure the Plugin",
+          "text": "Open cypress.config.js in your project. Add the following code to configure the plugin:",
+          "url": "https://www.testmuai.com/support/docs/cypress-detailed-command-logs/#step-1-configure-the-plugin-1"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Enable Logs in the Console (Optional)",
+          "text": "If you need logs in the terminal, update the code like this:",
+          "url": "https://www.testmuai.com/support/docs/cypress-detailed-command-logs/#step-2-enable-logs-in-the-console-optional-1"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Install Logs Collector",
+          "text": "Open cypress/support/e2e.js. Add the following code to install the log collector:",
+          "url": "https://www.testmuai.com/support/docs/cypress-detailed-command-logs/#step-3-install-logs-collector-1"
+        }
+      ]
+    }
+  ]) }}
+/>
+
+
+
 # How to View Detailed Cypress Command Logs on TestMu AI
 ***
 
@@ -55,17 +245,23 @@ Before you configure the plugin, install Cypress and add the cypress-terminal-re
 
 Use this version if your project runs Cypress below version 10.
 
+<VerifiedTag value="Verified" />
+
 ```javascript
 "cypress-terminal-report": "4.1.3"
 ```
 
 Use this version if your project runs Cypress version 10 or later.
 
+<VerifiedTag value="Verified" />
+
 ```javascript
 "cypress-terminal-report": "^5.3.2"
 ```
 
 Next, enable detailed command logs in `lambdatest-config.json` by adding the following setting.
+
+<VerifiedTag value="Verified" />
 
 ```javascript
 "run_settings": {
@@ -91,6 +287,8 @@ The plugin file is where you register the log printer for older Cypress versions
 - Open the `cypress/plugins/index.js` file in your project.
 - Add the following code to install and configure the cypress-terminal-report plugin.
 
+<VerifiedTag value="Verified" />
+
 ```javascript
 const installLogsPrinter = require('cypress-terminal-report/src/installLogsPrinter')
 
@@ -113,6 +311,8 @@ module.exports = (on, config) => {
 
 To also print detailed logs in the terminal, add `printLogsToConsole: 'always'` to `installLogsPrinter`. This step is optional.
 
+<VerifiedTag value="Verified" />
+
 ```javascript
 module.exports = (on, config) => {
   installLogsPrinter(on, {
@@ -134,6 +334,8 @@ The collector captures command output during each test so the printer can write 
 - Navigate to `cypress/support/index.js`.
 - Add the following code to install the log collector.
 
+<VerifiedTag value="Verified" />
+
 ```javascript
 const installLogsCollector = require('cypress-terminal-report/src/installLogsCollector')
 
@@ -152,6 +354,8 @@ The `setupNodeEvents` block replaces the legacy plugins file in Cypress v10 and 
 
 - Open `cypress.config.js` in your project.
 - Add the following code to configure the plugin.
+
+<VerifiedTag value="Verified" />
 
 ```javascript
 const { defineConfig } = require("cypress");
@@ -176,6 +380,8 @@ module.exports = defineConfig({
 ***
 
 To also print logs in the terminal, add `printLogsToConsole: 'always'` to `installLogsPrinter`. This step is optional.
+
+<VerifiedTag value="Verified" />
 
 ```javascript
 const { defineConfig } = require("cypress");
@@ -204,6 +410,8 @@ The collector captures command output during each test so the printer can write 
 
 - Open `cypress/support/e2e.js`.
 - Add the following code to install the log collector.
+
+<VerifiedTag value="Verified" />
 
 ```javascript
 import installLogsCollector from 'cypress-terminal-report/src/installLogsCollector'

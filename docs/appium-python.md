@@ -32,6 +32,8 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 
 
+import VerifiedTag from '@site/src/component/verifiedTag';
+
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
        "@context": "https://schema.org",
@@ -56,6 +58,174 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/appium-python/"
+    },
+    "headline": "Appium with Python",
+    "description": "Complete guide to running your first Python Appium automated test script on TestMu AI Real Device Cloud Platform. Test on 5000+ Real Devices.",
+    "url": "https://www.testmuai.com/support/docs/appium-python/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Documentation",
+    "keywords": [
+      "python appium",
+      "python appium tutorial",
+      "real devices"
+    ],
+    "proficiencyLevel": "Beginner",
+    "dependencies": "Your TestMu AI Username and Access key.; You should have Python installed.; Download and install pip..",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "except",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n<\/TabItem>\n\n<TabItem value=\"android\" label=\"Android\" default>\n\n```python title=\"android.py\"\nfrom appium import webdriver\nfrom appium.webdriver.common.mobileby import MobileBy\nfrom selenium.webdriver.support.ui import WebDriverWait\nfrom selenium.webdriver.support import expected_conditions as EC\nimport time\nimport os\n\ndesired_caps = {\n    \"deviceName\": \"Galaxy S20\",\n    \"platformName\": \"Android\",\n    \"platformVersion\": \"10\",\n    #highlight-next-line\n    \"app\": \"APP_URL\",  # Enter app (.apk) url\n    \"isRealMobile\": True,\n    \"build\": \"Python Vanilla Android\",\n    \"name\": \"Sample Test - Python\",\n    \"network\": False,\n    \"visual\": True,\n    \"video\": True\n}\n\n\ndef startingTest():\n    if os.environ.get(\"LT_USERNAME\") is None:\n        username = \"username\" #Add username here\n    else:\n        username = os.environ.get(\"LT_USERNAME\")\n    if os.environ.get(\"LT_ACCESS_KEY\") is None:\n        accesskey = \"accesskey\" #Add accessKey here\n    else:\n        accesskey = os.environ.get(\"LT_ACCESS_KEY\")\n\n    try:\n        driver = webdriver.Remote(desired_capabilities=desired_caps, command_executor=\"https://\" +\n                                  username+\":\"+accesskey+\"@mobile-hub.lambdatest.com/wd/hub\")\n        colorElement = WebDriverWait(driver, 20).until(EC.element_to_be_clickable(\n            (MobileBy.ID, \"com.lambdatest.proverbial:id/color\")))\n        colorElement.click()\n\n        textElement = WebDriverWait(driver, 20).until(\n            EC.element_to_be_clickable((MobileBy.ID, \"com.lambdatest.proverbial:id/Text\")))\n        textElement.click()\n\n        toastElement = WebDriverWait(driver, 20).until(EC.element_to_be_clickable(\n            (MobileBy.ID, \"com.lambdatest.proverbial:id/toast\")))\n        toastElement.click()\n\n        notification = WebDriverWait(driver, 20).until(EC.element_to_be_clickable(\n            (MobileBy.ID, \"com.lambdatest.proverbial:id/notification\")))\n        notification.click()\n\n        geolocation = WebDriverWait(driver, 20).until(EC.element_to_be_clickable(\n            (MobileBy.ID, \"com.lambdatest.proverbial:id/geoLocation\")))\n        geolocation.click()\n        time.sleep(5)\n\n        driver.back()\n\n        home = WebDriverWait(driver, 20).until(EC.element_to_be_clickable(\n            (MobileBy.ID, \"com.lambdatest.proverbial:id/buttonPage\")))\n        home.click()\n\n        speedTest = WebDriverWait(driver, 20).until(EC.element_to_be_clickable(\n            (MobileBy.ID, \"com.lambdatest.proverbial:id/speedTest\")))\n        speedTest.click()\n        time.sleep(5)\n\n        driver.back()\n\n        browser = WebDriverWait(driver, 20).until(EC.element_to_be_clickable(\n            (MobileBy.ID, \"com.lambdatest.proverbial:id/webview\")))\n        browser.click()\n\n        url = WebDriverWait(driver, 20).until(EC.element_to_be_clickable(\n            (MobileBy.ID, \"com.lambdatest.proverbial:id/url\")))\n        url.send_keys(\"https://www.testmuai.com\")\n\n        find = WebDriverWait(driver, 20).until(EC.element_to_be_clickable(\n            (MobileBy.ID, \"com.lambdatest.proverbial:id/find\")))\n        find.click()\n        driver.quit()\n    except:\n        driver.quit()\n\n\nstartingTest()"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 5: Configure the Test Capabilities (iOS)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n<\/TabItem>\n<TabItem value=\"android-config\" label=\"Android\" default>\n\n```python title=\"Android(.apk)\"\ndesired_caps = {\n    \"deviceName\":\"Galaxy S20\",\n    \"platformName\":\"Android\",\n    \"platformVersion\":\"10\",\n    \"isRealMobile\":True,\n    #highlight-next-line\n    \"app\":\"YOUR_APP_URL\",\n    \"build\":\"Python Vanilla Android\",\n    \"name\":\"Sample Test - Python\",\n    \"network\":False,\n    \"visual\":True,\n    \"video\":True\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 6: Execute and Monitor your Tests",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "pip install -r requirements.txt"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 6: Execute and Monitor your Tests (iOS)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "python3 ios.py"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 6: Execute and Monitor your Tests (Android)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "python3 android.py"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "The appium-skill package includes",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "appium-skill/\n\u251c\u2500\u2500 SKILL.md\n\u2514\u2500\u2500 reference/\n    \u251c\u2500\u2500 playbook.md\n    \u2514\u2500\u2500 advanced-patterns.md"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Install a Appium Agent Skill using the command below",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "codeRepository": "https://github.com/LambdaTest/agent-skills",
+        "text": "# Clone the repo and copy the skill you need\ngit clone https://github.com/LambdaTest/agent-skills.git\ncp -r agent-skills/appium-skill .claude/skills/\n\n# Or for Cursor / Copilot\ncp -r agent-skills/appium-skill .cursor/skills/"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Try our Sample Repository",
+      "description": "Complete guide to running your first Python Appium automated test script on TestMu AI Real Device Cloud Platform. Test on 5000+ Real Devices.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Get a Sample Project",
+          "text": "You can use your own project to configure and test it. For demo purposes, we are using the sample repository. All the code samples in this documentation can be found on TestMu AI's Github Repository. You can either download or clone the repository to quickly run your tests. View on GitHub",
+          "url": "https://www.testmuai.com/support/docs/appium-python/#step-1-get-a-sample-project"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Setup the Environment Variables",
+          "text": "You need to export your environment variables LTUSERNAME and LTACCESSKEY* that are available in your TestMu AI Profile page. Run the below mentioned commands in your terminal to setup the environment variables. {`export LTUSERNAME=\"${ YOURLAMBDATEST_USERNAME()}\" export LTACCESSKEY=\"${ YOURLAMBDATESTACCESS_KEY()}\"`} {`set LTUSERNAME=\"${ YOURLAMBDATEST_USERNAME()}\" set LTACCESSKEY=\"${ YOURLAMBDATESTACCESS_KEY()}\"`}",
+          "url": "https://www.testmuai.com/support/docs/appium-python/#step-2-setup-the-environment-variables"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Upload your Application",
+          "text": "Upload your iOS application (.ipa file) or android application (.apk or .aab file) to the TestMu AI servers using our REST API. You need to provide your Username and AccessKey in the format Username:AccessKey in the cURL command for authentication. Make sure to add the path of the appFile in the cURL request. Below is an example cURL request to upload your app using our REST API: {curl -u \"${ YOURLAMBDATESTUSERNAME()}:${ YOURLAMBDATESTACCESSKEY()}\" -X POST \"https://manual-api.lambdatest.com/app/upload/realDevice\" -F \"appFile=@\"/Users/macuser/Downloads/proverbialandroid.apk\"\" -F \"name=\"proverbial_app\"\"} {curl -u \"${ YOURLAMBDATESTUSERNAME()}:${ YOURLAMBDATESTACCESSKEY()}\" -X POST \"https://manual-api.lambdatest.com/app/upload/realDevice\" -F \"url=:https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbialandroid.apk\" -F \"name=Proverbial_App\"} If you do not have any .apk or .ipa file, you can run your sample tests on TestMu AI by using our sample apps, :link: Android app or :link: iOS app. Response of above cURL will be a JSON object containing the APP_URL of the format - lt://APP123456789123456789 and will be used in the next step",
+          "url": "https://www.testmuai.com/support/docs/appium-python/#step-3-upload-your-application"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Step 4: Update your Automation Script",
+          "text": "An automation script for the sample application given above has been provided here. Ensure to update the APP_URL, username and accessKey in the code scripts before running the tests. You must set isRealMobile capability to False in the config file to run on Virtual Devices",
+          "url": "https://www.testmuai.com/support/docs/appium-python/#step-4-update-your-automation-script"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 5,
+          "name": "Step 5: Configure the Test Capabilities",
+          "text": "You can update your custom capabilities in test scripts. In this sample project, we are passing platform name, platform version, device name and app url (generated earlier) along with other capabilities like build name and test name via capabilities object. The capabilities object in the sample code are defined as: You must add the generated APPURL** to the app capability in the config file. You must set isRealMobile capability to False in the config file to run on Virtual Devices You can generate capabilities for your test requirements with the help of our inbuilt Capabilities Generator tool.For more details, please refer to our guide on Desired Capabilities in Appium.",
+          "url": "https://www.testmuai.com/support/docs/appium-python/#step-5-configure-the-test-capabilities"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 6,
+          "name": "Step 6: Execute and Monitor your Tests",
+          "text": "Install the required packages from the cloned project directory: Run the following command in the directory where your project has been saved to execute your build. If you are unable to run the automation script with the above mentioned commands try 'python' command except for 'python3'. Your test results would be displayed on the test console (or CLI if you are using terminal/cmd) and on the TestMu AI App Automation Dashboard.",
+          "url": "https://www.testmuai.com/support/docs/appium-python/#step-6-execute-and-monitor-your-tests"
+        }
+      ]
+    }
+  ]) }}
+/>
+
+
+
 # How to Run Appium Python Tests on TestMu AI
 ---
 
@@ -71,6 +241,8 @@ Running Appium Python tests on TestMu AI executes native and hybrid mobile autom
 - Download and install [**pip**](https://pip.pypa.io/en/stable/installation/).
 - For the **PyTest** framework, also install pytest on your system with the following pip command:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 pip install pytest
 ```
@@ -82,6 +254,9 @@ You need to export your environment variables *LT_USERNAME* and *LT_ACCESS_KEY* 
 
 <Tabs className="docs__val">
 <TabItem value="bash" label="Linux / MacOS" default>
+
+  <VerifiedTag value="Verified" />
+
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-bash">
   {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
@@ -90,6 +265,9 @@ export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 </div>
 </TabItem>
 <TabItem value="powershell" label="Windows" default>
+
+  <VerifiedTag value="Verified" />
+
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-powershell">
   {`set LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
@@ -109,6 +287,9 @@ Make sure to add the path of the **appFile** in the cURL request. Below is an ex
 <Tabs className="docs__val">
 
 <TabItem value="bash" label="App File" default>
+
+  <VerifiedTag value="Verified" />
+
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-bash">
       {`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" -X POST "https://manual-api.lambdatest.com/app/upload/realDevice" -F "appFile=@"/Users/macuser/Downloads/proverbial_android.apk"" -F "name="proverbial_app""`}
@@ -117,6 +298,9 @@ Make sure to add the path of the **appFile** in the cURL request. Below is an ex
 </TabItem>
 
 <TabItem value="powershell" label="App URL" default>
+
+  <VerifiedTag value="Verified" />
+
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-bash">
       {`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" -X POST "https://manual-api.lambdatest.com/app/upload/realDevice" -F "url=:https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_android.apk" -F "name=Proverbial_App"`}
@@ -158,6 +342,8 @@ An automation script for the sample application given above has been provided he
 <Tabs className="docs__val">
 
 <TabItem value="ios" label="iOS" default>
+
+<VerifiedTag value="Verified" />
 
 ```python title="ios.py"
 from appium import webdriver
@@ -242,6 +428,8 @@ startingTest()
 </TabItem>
 
 <TabItem value="android" label="Android" default>
+
+<VerifiedTag value="Verified" />
 
 ```python title="android.py"
 from appium import webdriver
@@ -351,6 +539,8 @@ The capabilities object in the sample code are defined as:
 
 <TabItem value="ios-config" label="iOS" default>
 
+<VerifiedTag value="Verified" />
+
 ```python title="iOS(.ipa)"
  desired_caps = {
     "deviceName":"iPhone 12",
@@ -369,6 +559,8 @@ The capabilities object in the sample code are defined as:
 
 </TabItem>
 <TabItem value="android-config" label="Android" default>
+
+<VerifiedTag value="Verified" />
 
 ```python title="Android(.apk)"
 desired_caps = {
@@ -402,6 +594,8 @@ desired_caps = {
 
 - Install the required packages from the cloned project directory:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 pip install -r requirements.txt
 ```
@@ -412,6 +606,8 @@ pip install -r requirements.txt
 
 <TabItem value="ios" label="iOS" default>
 
+<VerifiedTag value="Verified" />
+
 ```bash
 python3 ios.py
 ```
@@ -419,6 +615,8 @@ python3 ios.py
 </TabItem>
 
 <TabItem value="android" label="Android" default>
+
+<VerifiedTag value="Verified" />
 
 ```bash
 python3 android.py
@@ -451,6 +649,8 @@ An automation script for the sample application given above has been provided he
 <Tabs className="docs__val">
 
 <TabItem value="android-stepdef" label="Android" default>
+
+<VerifiedTag value="Verified" />
 
 ```python title="AndroidStepDef.py"
 import sys
@@ -523,6 +723,8 @@ def startAndroidAppAutomationTest(self):
 
 </TabItem>
 <TabItem value="ios-stepdef" label="iOS" default>
+
+<VerifiedTag value="Verified" />
 
 ```python title="iOSStepDef.py"
 import sys
@@ -612,6 +814,8 @@ The capabilities for running tests on both **Android** and **iOS** apps are:
 
 <TabItem value="ios-config" label="iOS" default>
 
+<VerifiedTag value="Verified" />
+
 ```python title="appConfig.py"
 app_ios_desired_caps = {
   "lt:options": {
@@ -638,6 +842,8 @@ app_ios_desired_caps = {
 
 </TabItem>
 <TabItem value="android-config" label="Android" default>
+
+<VerifiedTag value="Verified" />
 
 ```python title="appConfig.py"
 app_android_desired_caps = {
@@ -678,6 +884,8 @@ app_android_desired_caps = {
 
 - Install the required packages from the cloned project directory:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 pip install -r requirements.txt
 ```
@@ -688,6 +896,8 @@ pip install -r requirements.txt
 
 <TabItem value="ios" label="iOS" default>
 
+<VerifiedTag value="Verified" />
+
 ```bash
 behave --tags @iosApp
 ```
@@ -695,6 +905,8 @@ behave --tags @iosApp
 </TabItem>
 
 <TabItem value="android" label="Android" default>
+
+<VerifiedTag value="Verified" />
 
 ```bash
 behave --tags @androidApp
@@ -720,11 +932,15 @@ All the code samples in this documentation can be found on **<BrandName />'s Git
 
 Create your Virtual Environment:
 
+<VerifiedTag value="Verified" />
+
 ```python
 python3 -m virtualenv venv
 ```
 
 Activate your Virtual Environment:
+
+<VerifiedTag value="Verified" />
 
 ```python
 source venv/bin/activate
@@ -735,6 +951,8 @@ These commands will create a new virtual environment name `venv` and activate it
 #### Setup Your Authentication
 
 Replace <BrandName /> `username` and `accesskey` in the `common.robot` file as mentioned below:
+
+<VerifiedTag value="Verified" />
 
 ```js title="common.robot"
 *** Settings ***
@@ -799,6 +1017,8 @@ An automation script file `*StepDef.py` for the sample application given above h
 
 <TabItem value="ios-script" label="iOS" default>
 
+<VerifiedTag value="Verified" />
+
 ```python title="IOS.robot"
 *** Settings ***
 
@@ -824,6 +1044,8 @@ Example of connecting to Lambdatest via Robot Framework
 </TabItem>
 
 <TabItem value="android-script" label="Android" default>
+
+<VerifiedTag value="Verified" />
 
 ```python title="Android.robot"
 *** Settings ***
@@ -866,6 +1088,8 @@ Example of connecting to Lambdatest via Robot Framework
 
 You can update your custom capabilities in test scripts `Makefile` file. In this sample project, we are passing platform name, platform version, device name and app url _(generated earlier)_ along with other capabilities like build name and test name via capabilities object.
 
+<VerifiedTag value="Verified" />
+
 ```python title="Makefile"
 test_Web_ios:
 	robot --variable version:15 --variable platformName:ios --variable deviceName:"iPhone.*" --variable isRealMobile:true --variable visual:true --variable network:true --variable console:true --variable devicelog:true Tests/AndroidIosWeb.robot
@@ -885,6 +1109,8 @@ test_Web_Android:
 
 - Install the required packages from the cloned project directory:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 pip install -r requirements.txt
 ```
@@ -895,6 +1121,8 @@ pip install -r requirements.txt
 
 <TabItem value="ios" label="iOS" default>
 
+<VerifiedTag value="Verified" />
+
 ```bash
 make test_iOS1
 ```
@@ -902,6 +1130,8 @@ make test_iOS1
 </TabItem>
 
 <TabItem value="android" label="Android" default>
+
+<VerifiedTag value="Verified" />
 
 ```bash
 make test_Android1
@@ -926,6 +1156,8 @@ All the code samples in this documentation can be found on **<BrandName />'s Git
 ### Step 2: Update your Automation Script
 
 An automation script for the sample application given above has been provided here.
+
+<VerifiedTag value="Verified" />
 
 ```python title="get_started.py"
 from sqlite3 import Time
@@ -978,6 +1210,8 @@ You can update your custom capabilities in test scripts. In this sample project,
 
 Ensure to update the `APP_URL`, `username` and `accessKey` in the code scripts before running the tests. The capabilities object in the sample code are defined as:
 
+<VerifiedTag value="Verified" />
+
 ```python title="driver.py"
 caps['name'] = 'Gauge Sample Test'
 caps['build'] = 'Python_Gauge_LambdaTest'
@@ -1002,6 +1236,8 @@ caps['app'] = 'APP_URL'   #add app url here
 
 - Install the required packages from the cloned project directory:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 pip install -r requirements.txt
 npm install -g @getgauge/cli
@@ -1010,6 +1246,8 @@ export PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION=python  #for MacOS/Linux
 ```
 
 - Run the following command in the directory where your project has been saved to execute your build.
+
+<VerifiedTag value="Verified" />
 
 ```bash
 gauge run specs
@@ -1034,6 +1272,8 @@ An automation script for the sample application given above has been provided he
 <Tabs className="docs__val">
 
 <TabItem value="ios" label="iOS" default>
+
+<VerifiedTag value="Verified" />
 
 ```python title="ios.py"
 from os import environ
@@ -1082,6 +1322,8 @@ def pytest_runtest_makereport(item, call):
 </TabItem>
 
 <TabItem value="android" label="Android" default>
+
+<VerifiedTag value="Verified" />
 
 ```python title="conftest.py"
 from os import environ
@@ -1141,6 +1383,8 @@ The capabilities object in the sample code are defined as:
 
 <TabItem value="ios-config" label="iOS" default>
 
+<VerifiedTag value="Verified" />
+
 ```python title="iOS(.ipa)"
    caps = {
       "deviceName": "iPhone 11",
@@ -1156,6 +1400,8 @@ The capabilities object in the sample code are defined as:
 
 </TabItem>
 <TabItem value="android-config" label="Android" default>
+
+<VerifiedTag value="Verified" />
 
 ```python title="Android(.apk)"
    caps = {
@@ -1187,6 +1433,8 @@ The capabilities object in the sample code are defined as:
 
 - Install the required packages from the cloned project directory:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 pip install -r requirements.txt
 ```
@@ -1197,6 +1445,8 @@ pip install -r requirements.txt
 
 <TabItem value="ios" label="iOS" default>
 
+<VerifiedTag value="Verified" />
+
 ```bash
 pytest test_ios.py
 ```
@@ -1204,6 +1454,8 @@ pytest test_ios.py
 </TabItem>
 
 <TabItem value="android" label="Android" default>
+
+<VerifiedTag value="Verified" />
 
 ```bash
 pytest test.py

@@ -17,6 +17,7 @@ site_name: TestMu AI
 slug: kane-cli-assurance-sources/
 canonical: https://www.testmuai.com/support/docs/kane-cli-assurance-sources/
 ---
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -41,6 +42,101 @@ canonical: https://www.testmuai.com/support/docs/kane-cli-assurance-sources/
       })
     }}
 ></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/kane-cli-assurance-sources/"
+    },
+    "headline": "Requirement Sources",
+    "description": "Every source type kane-cli can ingest as a requirement: text, PDF, Word documents, images, and remote sources by URL including Jira issues, Confluence pages, Linear issues and documents, and public web pages.",
+    "url": "https://www.testmuai.com/support/docs/kane-cli-assurance-sources/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Kane CLI",
+    "keywords": [
+      "kane cli sources",
+      "ingest jira",
+      "ingest confluence"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Jira issues",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "kane-cli context ingest https://<your-site>/browse/PROJ-123"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Confluence pages",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "kane-cli context ingest https://<site>/wiki/spaces/<KEY>/pages/<id>/..."
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Linear issues",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "kane-cli context ingest https://linear.app/<workspace>/issue/KEY-123"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Linear documents",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "kane-cli context ingest https://linear.app/<workspace>/document/<slug>"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Public web pages",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "kane-cli context ingest https://docs.example.com/guide"
+      }
+    ],
+    "dateModified": "2026-08-27T12:58:20+05:30"
+  }) }}
+/>
 
 A requirement source is any document kane-cli snapshots into the [context graph](/support/docs/kane-cli-assurance-context/) so use-cases can be extracted from it and cited back to it. Sources are ingested with `kane-cli context ingest`, and the same URLs are accepted by [`maintain reconcile --from`](/support/docs/kane-cli-assurance-maintain/) when the source later changes.
 
@@ -90,6 +186,8 @@ Remote sources are passed as a URL instead of a file path. Each requires the mat
 
 ### Jira issues
 
+<VerifiedTag value="Verified" />
+
 ```bash
 kane-cli context ingest https://<your-site>/browse/PROJ-123
 ```
@@ -106,6 +204,8 @@ The project must be one of the integration's selected projects. An issue outside
 
 ### Confluence pages
 
+<VerifiedTag value="Verified" />
+
 ```bash
 kane-cli context ingest https://<site>/wiki/spaces/<KEY>/pages/<id>/...
 ```
@@ -119,6 +219,8 @@ Re-ingesting reads the latest page version, and identity follows content. An edi
 Short links such as `/wiki/x/...` are not supported. Open the page and use its full URL.
 
 ### Linear issues
+
+<VerifiedTag value="Verified" />
 
 ```bash
 kane-cli context ingest https://linear.app/<workspace>/issue/KEY-123
@@ -134,6 +236,8 @@ Identity follows the issue itself. Renaming a team key continues the same source
 
 ### Linear documents
 
+<VerifiedTag value="Verified" />
+
 ```bash
 kane-cli context ingest https://linear.app/<workspace>/document/<slug>
 ```
@@ -145,6 +249,8 @@ Ingested: the document body with every line citable, plus its inline images. The
 Workspace pages, meaning project, team or view URLs, are not ingestable and refuse loudly. Ingest their issues or documents individually.
 
 ### Public web pages
+
+<VerifiedTag value="Verified" />
 
 ```bash
 kane-cli context ingest https://docs.example.com/guide

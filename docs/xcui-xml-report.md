@@ -24,6 +24,8 @@ import TabItem from '@theme/TabItem';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
+import VerifiedTag from '@site/src/component/verifiedTag';
+
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
        "@context": "https://schema.org",
@@ -48,6 +50,64 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/xcui-report/"
+    },
+    "headline": "XCUI XML Reports",
+    "description": "XCUI XML Report",
+    "url": "https://www.testmuai.com/support/docs/xcui-report/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "App Automation",
+    "keywords": [
+      "xcui",
+      "java",
+      "xcui junit xml reports"
+    ],
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
+
 XML reports on TestMu AI give a summary of XCUI test execution so you can understand your outcomes. Use the REST APIs below to retrieve reports for non-shard builds and shard builds, either as individual shards or all shards collectively.
 
 **Supported on:** Real &amp; Virtual devices
@@ -69,6 +129,8 @@ XML reports on TestMu AI give a summary of XCUI test execution so you can unders
 To fetch the XML report for a `non-shard` build, you can use the following cURL command:
 
 
+<VerifiedTag value="Verified" />
+
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">
 {`curl --location "https://mobile-api.lambdatest.com/mobile-automation/api/v1/framework/builds/<build_id>/report/?encoder=false" \
@@ -80,6 +142,8 @@ To fetch the XML report for a `non-shard` build, you can use the following cURL 
 **Shard build (For single shard):**
 To fetch the XML report for a `single shard` in a shard build,use:
 
+<VerifiedTag value="Verified" />
+
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">
 {`curl --location 'https://mobile-api.lambdatest.com/mobile-automation/api/v1/framework/jobs/<job_id>/report/?shard=<shard_id>&encoder=false' \
@@ -90,6 +154,8 @@ To fetch the XML report for a `single shard` in a shard build,use:
 
 **Shard build (For all the shards):**
 To fetch the XML reports for `all shards` in a shard build, use:
+
+<VerifiedTag value="Verified" />
 
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">
@@ -150,8 +216,12 @@ Below is an example cURL command to execute your test with result bundles enable
 
 <TabItem value="bash" label="Linux / MacOS" default>
 
+  <VerifiedTag value="Verified" />
+
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-bash">
+
+<VerifiedTag value="Verified" />
 
 ```bash
 curl --location --request POST 'https://mobile-api.lambdatest.com/framework/v1/xcui/build' \
@@ -178,8 +248,12 @@ curl --location --request POST 'https://mobile-api.lambdatest.com/framework/v1/x
 
 <TabItem value="powershell" label="Windows" default>
 
+  <VerifiedTag value="Verified" />
+
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-powershell">
+
+<VerifiedTag value="Verified" />
 
 ```bash
 curl --location --request POST "https://mobile-api.lambdatest.com/framework/v1/xcui/build" \
@@ -220,6 +294,8 @@ GET https://mobile-api.lambdatest.com/mobile-automation/api/v1/framework/builds/
 Replace `{build-id}` with the actual build ID.
 
 Example cURL command to download the result bundle:
+
+<VerifiedTag value="Verified" />
 
 <div className="lambdatest__codeblock">
   <CodeBlock className="language-bash">

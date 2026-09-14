@@ -15,6 +15,106 @@ slug: rook-architecture/
 canonical: https://www.testmuai.com/support/docs/rook-architecture/
 ---
 
+import VerifiedTag from '@site/src/component/verifiedTag';
+import { BRAND_URL } from '@site/src/component/BrandName';
+
+<script type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify({
+       "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": BRAND_URL
+        },{
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Support",
+          "item": `${BRAND_URL}/support/docs/`
+        },{
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Rook Architecture and Data Flow",
+          "item": `${BRAND_URL}/support/docs/rook-architecture/`
+        }]
+      })
+    }}
+></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/rook-architecture/"
+    },
+    "headline": "Rook Architecture and Data Flow",
+    "description": "Understand the boundary between the local Rook CLI, the stateless controller, the stateful Rook API, and the cloud results UI.",
+    "url": "https://www.testmuai.com/support/docs/rook-architecture/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Agent Testing",
+    "keywords": [
+      "rook architecture",
+      "rook controller",
+      "rook api"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Local Invocation Path",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "scenario goal\n    \u2193 standard input\nprofile execute hook\n    \u2193 real invocation\nagent under test\n    \u2193 JSON on standard output\nreply \u00b7 conversation \u00b7 usage \u00b7 calls \u00b7 custom evidence\n    \u2193\nlocal run directory"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Local State Is the Record",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "local project tree \u2500\u2500 rook sync \u2500\u2500\u25b6 Rook API \u2500\u2500\u25b6 cloud UI\nlocal run evidence \u2500\u2500 run sync \u2500\u2500\u2500\u25b6 Rook API \u2500\u2500\u25b6 reports and comparison"
+      }
+    ],
+    "dateModified": "2026-09-04T12:50:18+05:30"
+  }) }}
+/>
 # Rook Architecture and Data Flow
 
 Rook has 3 deployables: the CLI, the controller, and the API. The agent under test and cloud results UI are connected systems shown for context. The most important architectural fact is the boundary between code and evidence on your machine, model orchestration in the controller, and synchronized records in the API.
@@ -154,6 +254,8 @@ This keeps model credentials and centrally managed prompts out of the distribute
 
 ## Local Invocation Path
 
+<VerifiedTag value="Verified" />
+
 ```text
 scenario goal
     ↓ standard input
@@ -186,6 +288,8 @@ Commands that only inspect existing state—such as `status`, `scenarios`, `env`
 ## Local State Is the Record
 
 `.testmuai/rook/` is authoritative for the workspace. `rook sync` copies the current project tree to the Rook API. Run results are also recorded locally as they happen and can be reconciled upstream later.
+
+<VerifiedTag value="Verified" />
 
 ```text
 local project tree ── rook sync ──▶ Rook API ──▶ cloud UI

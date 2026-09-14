@@ -16,6 +16,7 @@ site_name: TestMu AI
 slug: kane-cli-assurance-design/
 canonical: https://www.testmuai.com/support/docs/kane-cli-assurance-design/
 ---
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -41,7 +42,104 @@ canonical: https://www.testmuai.com/support/docs/kane-cli-assurance-design/
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/kane-cli-assurance-design/"
+    },
+    "headline": "Designing Tests from Use-Cases",
+    "description": "Turn one committed use-case into acceptance criteria, scenarios, and exactly one runnable test per scenario with kane-cli design tests \u2014 reviewed, cited, and permanently linked to requirements via @verifies tags.",
+    "url": "https://www.testmuai.com/support/docs/kane-cli-assurance-design/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Kane CLI",
+    "keywords": [
+      "kane cli design tests",
+      "ai test design",
+      "acceptance criteria"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 1",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "kane-cli design tests --use-case uc-manage-the-cart      # design one use-case (chat)\nkane-cli design explain t-add-first-item                 # replay WHY \u2014 zero fresh AI"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Each kept test lands as a normal, runnable *_test.md under /.testmuai/tests/",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Markdown",
+        "text": "---\nassurance:\n  id: t-add-one-in-stock-product-and-verify-minimum-valid-cart\n  base: sha256:00f8\u2026\n---\n# Add one in-stock product and verify minimum valid cart pricing\n\n> Prove the customer can create the minimum valid cart and see a line total and subtotal.\n\n## Step 1\n\nOpen {{store_url}} in a fresh browser session and navigate to the product listing\u2026\n\n## Step 4 \u2014 assert @verifies ac-a-valid-cart-contains-at-least-1-item, ac-the-cart-displays-an-order-subtotal\n\nConfirm count check: 1 (equals) \u2014 the stated promise: after adding one in-stock product, the cart contains exactly 1 item."
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Then author each kept test once, and it batches like any other test",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "kane-cli testmd run .testmuai/tests/t-add-one-\u2026_test.md   # author it (first run, agent works it out)\nkane-cli testrun run --match 't-'                          # from then on: batch replay"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "A use-case with a live design refuses a re-run, staleness-aware",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "'uc-manage-the-cart' is already designed @ v1 \u2014 current; use --force to redesign\n'uc-manage-the-cart' was designed @ v1 \u2014 the use-case is now @ v2 (STALE); use --force to redesign"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "design explain \u2014 replay the why",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "kane-cli design explain <ref>"
+      }
+    ],
+    "dateModified": "2026-09-03T14:41:00+05:30"
+  }) }}
+/>
+
 `kane-cli design tests` turns **one committed use-case** into everything that proves it: acceptance criteria (ACs), scenarios, and exactly one runnable test per scenario — conversationally, on the same chat surface [`kane-cli context extract`](/support/docs/kane-cli-assurance-context/#extract) uses. Everything the engine emits is **derived** knowledge you review; approvals promote it, nothing is silently trusted.
+
+<VerifiedTag value="Verified" />
 
 ```bash
 kane-cli design tests --use-case uc-manage-the-cart      # design one use-case (chat)
@@ -86,6 +184,8 @@ Headless modes run all phases without parking and emit one combined result; a hi
 
 A design run commits to the graph **and writes files**. Each kept test lands as a normal, runnable `*_test.md` under `<cwd>/.testmuai/tests/`:
 
+<VerifiedTag value="Verified" />
+
 ```markdown
 ---
 assurance:
@@ -119,6 +219,8 @@ Design output is derived like everything else — review it with [`kane-cli cont
 
 A designed test is a normal test file — but it is still `derived`, and it has never been *run*. First review the design output like anything else the engine emits (approve, edit, or reject the generated ACs, scenarios, and tests with [`kane-cli context review`](/support/docs/kane-cli-assurance-context/#review) — the commit-time warnings resurface there). Then author each kept test once, and it batches like any other test:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 kane-cli testmd run .testmuai/tests/t-add-one-…_test.md   # author it (first run, agent works it out)
 kane-cli testrun run --match 't-'                          # from then on: batch replay
@@ -132,6 +234,8 @@ Until a test has been authored, `kane-cli testrun` preflight reports it as `miss
 
 A use-case with a live design refuses a re-run, staleness-aware:
 
+<VerifiedTag value="Verified" />
+
 ```
 'uc-manage-the-cart' is already designed @ v1 — current; use --force to redesign
 'uc-manage-the-cart' was designed @ v1 — the use-case is now @ v2 (STALE); use --force to redesign
@@ -142,6 +246,8 @@ A use-case with a live design refuses a re-run, staleness-aware:
 **Citations are verified before they commit** *(0.7.1)*. Every citation a design run wants to record is checked against the pinned source text before anything lands; one that doesn't verify is sent back to the agent to repair — designed items never carry fabricated provenance.
 
 ## `design explain` — replay the why
+
+<VerifiedTag value="Verified" />
 
 ```bash
 kane-cli design explain <ref>

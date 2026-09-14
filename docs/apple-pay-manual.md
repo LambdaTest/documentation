@@ -14,12 +14,126 @@ canonical: https://www.testmuai.com/support/docs/apple-pay-manual/
 site_name: TestMu AI
 url: https://www.testmuai.com/support/docs/apple-pay-manual/
 ---
+
 import CodeBlock from '@theme/CodeBlock';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
-
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
+<script type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify({
+       "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": BRAND_URL
+        },{
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Support",
+          "item": `${BRAND_URL}/support/docs/`
+        },{
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Apple Pay Manual Testing on Real Devices",
+          "item": `${BRAND_URL}/support/docs/apple-pay-manual/`
+        }]
+      })
+    }}
+></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/apple-pay-manual/"
+    },
+    "headline": "Apple Pay Manual Testing on Real Devices",
+    "description": "Learn how to manually test Apple Pay flows on iOS public devices in App Live, including enabling Apple Pay, configuring wallets, and completing transactions.",
+    "url": "https://www.testmuai.com/support/docs/apple-pay-manual/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Real Device",
+    "keywords": [
+      "Apple Pay",
+      "iOS",
+      "manual testing"
+    ],
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "dateModified": "2026-08-13T22:48:45+05:30"
+  }) }}
+/>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Manual Apple Pay Workflow in App Live",
+      "description": "Learn how to manually test Apple Pay flows on iOS public devices in App Live, including enabling Apple Pay, configuring wallets, and completing transactions.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Enable Apple Pay in Advanced Settings",
+          "text": "Open App Testing Live or Browser Testing Live and select your desired iOS device. Navigate to Advanced Settings. Locate the Apple Pay toggle and enable it, and confirm the device selection accordingly.",
+          "url": "https://www.testmuai.com/support/docs/apple-pay-manual/#step-1-enable-apple-pay-in-advanced-settings"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Configure Wallet",
+          "text": "Within the app, select the option to configure Wallet inside iOS settings. User can choose any of the four options: American Express, Visa, MasterCard, Discover Global Network. Wait 1\u20133 minutes for Apple Pay to configure.",
+          "url": "https://www.testmuai.com/support/docs/apple-pay-manual/#step-2-configure-wallet"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 4: Use Apple Pay in App Live",
+          "text": "Within the App Live session, you can use Apple Pay via the Assistive Touch option. Simply click on Apple Pay, and you will be prompted to enter the device passcode (default is 123456). Once the passcode is entered, you can complete a payment through Apple Pay, simulating a real user transaction. Within a single session, only one card can be selected. To switch cards, you\u2019ll need to start a new session and continue adding your desired card.",
+          "url": "https://www.testmuai.com/support/docs/apple-pay-manual/#step-4-use-apple-pay-in-app-live"
+        }
+      ]
+    }
+  ]) }}
+/>
 
 # Apple Pay Testing on Real Devices
 
@@ -32,7 +146,6 @@ This feature is available exclusively with the **Real Device Plus Live** Plan.
 
 To unlock this feature, purchase or upgrade to the required [plan](https://www.testmuai.com/pricing/). If you need assistance, please contact your <BrandName /> support representative, reach out to our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**[24×7 Chat Support]**</span>, or email us at **support@testmuai.com**.
 :::
-
 
 ---
 
@@ -80,7 +193,6 @@ Currently, Apple Pay manual testing in App Live is supported on these iOS real d
  ![card_selection](../assets/images/real-device-app-testing/Apple_Pay/Apple-pay-Wallet-2.png)
 4. Wait 1–3 minutes for Apple Pay to configure.
 ![waiting-popup-image](../assets/images/real-device-app-testing/Apple_Pay/Apple-pay-Setup.png)
-
 
 ---
 ### Step 4: Use Apple Pay in App Live

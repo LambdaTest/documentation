@@ -26,6 +26,8 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import { CookieTrackingSignup } from '@site/src/component/CookieTracking';
 
 
+import VerifiedTag from '@site/src/component/verifiedTag';
+
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
        "@context": "https://schema.org",
@@ -49,6 +51,75 @@ import { CookieTrackingSignup } from '@site/src/component/CookieTracking';
       })
     }}
 ></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/appium-androidtv/"
+    },
+    "headline": "Android TV Automation",
+    "description": "Learn how to automate Android TV apps using Appium with a step-by-step tutorial and sample Python code.",
+    "url": "https://www.testmuai.com/support/docs/appium-androidtv/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "App Automation",
+    "keywords": [
+      "android tv",
+      "appium",
+      "automation"
+    ],
+    "proficiencyLevel": "Beginner",
+    "dependencies": "You have access to TestMu AI username and accessKey. If you have not registered yet, you can do the same by visiting our website. You will be able to access the credentials in the TestMu AI Profile; Install the latest Python build from the official website. We recommend using the latest version.; Make sure pip is installed in your system. You can install pip from pip documentation..",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "3. Configure Desired Capabilities (Java)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "  DesiredCapabilities capabilities = new DesiredCapabilities();\n  HashMap<String, Object> ltOptions = new HashMap<String, Object>();\n\n  ltOptions.put(\"build\", \"Android TV Demo\");\n  ltOptions.put(\"name\", \"Android TV Demo\");\n  ltOptions.put(\"deviceName\", \"Nvidia Shield TV\");\n  ltOptions.put(\"platformVersion\", \"11\");\n  ltOptions.put(\"platformName\", \"androidtv\");\n  ltOptions.put(\"isRealMobile\", true);  \n  ltOptions.put(\"privateCloud\", true);\n  ltOptions.put(\"w3c\", true);\n  ltOptions.put(\"automationName\", \"UiAutomator2\");\n  ltOptions.put(\"app\", \"lt://APP_ID\");  \n  /* Optional Capability */\n  /* ltOptions.put(\"appPackage\", \"org.smarttube.stable\"); */\n\n  capabilities.setCapability(\"LT:Options\", ltOptions);"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 ## Tutorial To Run Your First Test On <BrandName />
 ---
 Automating Android TV apps on TestMu AI runs Appium scripts against real smart TV devices in the cloud, validating remote-based navigation, voice commands, and app behavior across many Android TV models while removing repetitive manual checks and expanding device coverage.
@@ -98,6 +169,9 @@ Make sure you have your <BrandName /> credentials with you to run test automatio
 <Tabs className="docs__val">
 
 <TabItem value="bash" label="Linux / MacOS" default>
+
+  <VerifiedTag value="Verified" />
+
   <div className="lambdatest__codeblock">
   <CodeBlock className="language-bash">
   {`export LT_USERNAME=${ YOUR_LAMBDATEST_USERNAME()} \\
@@ -108,6 +182,8 @@ export LT_ACCESS_KEY=${ YOUR_LAMBDATEST_ACCESS_KEY()}`}
 </TabItem>
 
 <TabItem value="powershell" label="Windows" default>
+
+  <VerifiedTag value="Verified" />
 
   <div className="lambdatest__codeblock">
   <CodeBlock className="language-powershell">
@@ -123,6 +199,9 @@ set LT_ACCESS_KEY=${ YOUR_LAMBDATEST_ACCESS_KEY()}`}
 Upload your **Android TV** application (.ipa file) to the <BrandName /> servers using our **REST API**. You need to provide your **Username** and **AccessKey** in the format `Username:AccessKey` in the **cURL** command for authentication. Make sure to add the path of the **appFile** in the cURL request. Here is an example cURL request to upload your app using our REST API:
 
  **Using App File from System:**
+
+ <VerifiedTag value="Verified" />
+
  <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">
 {`curl -u "$LT_USERNAME:$LT_ACCESS_KEY" \
@@ -146,6 +225,8 @@ In your automation script, set up the **platform capability** to specify that yo
 
 <Tabs>
 <TabItem value="Java" label="Java" default>
+
+<VerifiedTag value="Verified" />
 
 ```java
   DesiredCapabilities capabilities = new DesiredCapabilities();

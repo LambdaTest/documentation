@@ -27,6 +27,8 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 
+import VerifiedTag from '@site/src/component/verifiedTag';
+
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
        "@context": "https://schema.org",
@@ -50,6 +52,390 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       })
     }}
 ></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/smartui-cli-complete-reference/"
+    },
+    "headline": "SmartUI CLI Complete Reference Guide",
+    "description": "Comprehensive reference guide for SmartUI CLI and Storybook CLI commands, options, advanced features, and end-to-end workflows",
+    "url": "https://www.testmuai.com/support/docs/smartui-cli-complete-reference/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "SmartUI",
+    "keywords": [
+      "smartui cli",
+      "cli commands",
+      "cli options"
+    ],
+    "proficiencyLevel": "Beginner",
+    "dependencies": "Node.js v20.3+ installed (required for SmartUI CLI v4.x.x); npm or yarn package manager; TestMu AI account credentials; SmartUI project created.",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Installation",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "npm install -g @lambdatest/smartui-cli@latest"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Installation",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "npm install -g @lambdatest/smartui-storybook@latest"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Command Details",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "smartui exec [options] -- <command>"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 4",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "# Basic execution\nsmartui exec -- npm test\n\n# Custom port\nsmartui exec -P 5000 -- npm test\n\n# With build name and results\nsmartui exec --buildName \"Release-1.0\" --fetch-results results.json -- npm test\n\n# With custom config\nsmartui exec --config custom-config.json -- npm test\n\n# Override credentials\nsmartui exec --userName \"user\" --accessKey \"key\" -- npm test"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Override credentials",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "smartui capture [options] <file>"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 6",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "# Basic capture\nsmartui capture urls.json --config .smartui.json\n\n# With parallel execution\nsmartui capture urls.json --parallel 3 --config .smartui.json\n\n# Force parallel execution\nsmartui capture urls.json --parallel 5 --force --config .smartui.json\n\n# With build name and results\nsmartui capture urls.json --buildName \"Daily-Run\" --fetch-results daily-results.json"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "With build name and results",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "smartui upload [options] <directory>"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 8",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "# Basic upload\nsmartui upload ./screenshots\n\n# Ignore resolutions\nsmartui upload ./screenshots --ignoreResolutions\n\n# Filter file types\nsmartui upload ./screenshots --files jpg,png\n\n# Remove extensions from names\nsmartui upload ./screenshots --removeExtensions\n\n# Ignore specific directories\nsmartui upload ./screenshots --ignoreDir temp,old\n\n# Combined options\nsmartui upload ./screenshots -R -E --buildName \"Test-Run\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Combined options",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "smartui upload-pdf [options] <directory>"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Combined options",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "# Upload directory of PDFs\nsmartui upload-pdf ./pdfs --buildName \"Release-v2.1\"\n\n# Upload single PDF\nsmartui upload-pdf ./document.pdf --buildName \"Single-PDF\"\n\n# Mark as baseline\nsmartui upload-pdf ./pdfs --markBaseline --buildName \"Baseline-v1.0\"\n\n# With results\nsmartui upload-pdf ./pdfs --fetch-results pdf-results.json"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "With results",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "smartui exec:start [options]"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "With results",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "# Start on default port\nsmartui exec:start\n\n# Start on custom port\nsmartui exec:start -P 5000\n\n# With build name\nsmartui exec:start --buildName \"Server-Build\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Start server",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "   smartui exec:start"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Set server address (for non-Selenium SDKs)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "   export SMARTUI_SERVER_ADDRESS='http://localhost:49152'"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Run tests",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "   npm test"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Stop server",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "   smartui exec:stop"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "With build name",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "smartui exec:stop"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 18",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "smartui exec:ping\n# or\nsmartui exec:pingTest"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "or",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "smartui merge branch [options]"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "or",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "smartui merge build [options]"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 21",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "# Merge feature branch into main\nsmartui merge branch --source feature/new-ui --target main\n\n# Merge build\nsmartui merge build --source \"Build-123\" --target \"Baseline-Build\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Merge build",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "smartui upload-figma [options] <file>"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 23",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "smartui upload-figma-web [options] <file>"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 24",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "smartui upload-figma-app [options] <file>"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Storybook CLI Commands",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "smartui storybook [options] <url|directory>"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Storybook CLI Commands",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "# Local Storybook server\nsmartui storybook http://localhost:6006 --config .smartui.json\n\n# Static build\nsmartui storybook ./storybook-static --config .smartui.json\n\n# Public hosted URL\nsmartui storybook https://your-storybook-url.com --config .smartui.json\n\n# Force rebuild\nsmartui storybook ./storybook-static --force-rebuild\n\n# Stage environment\nsmartui storybook http://localhost:6006 --env stage"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Stage environment",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "smartui config create [filepath]"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "These options are available but may not be prominently documented",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "# Scheduled test runs\nsmartui capture urls.json --scheduled \"schedule-123\"\nsmartui exec --scheduled \"schedule-123\" -- npm test\n\n# Override credentials\nsmartui capture urls.json --userName \"user\" --accessKey \"key\"\nsmartui exec --userName \"user\" --accessKey \"key\" -- npm test\n\n# Environment switching (Storybook)\nsmartui storybook http://localhost:6006 --env stage\nsmartui storybook http://localhost:6006 --env prod\n\n# Force parallel execution\nsmartui capture urls.json --parallel 10 --force\n\n# Force rebuild (Storybook)\nsmartui storybook ./storybook-static --force-rebuild"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 29",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "export PROJECT_TOKEN=\"123456#token\"\nexport LT_USERNAME=\"username\"\nexport LT_ACCESS_KEY=\"access_key\"\nexport HTTP_PROXY=\"http://proxy:8080\"\nexport LT_SDK_DEBUG=true"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 30",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "set PROJECT_TOKEN=\"123456#token\"\nset LT_USERNAME=\"username\"\nset LT_ACCESS_KEY=\"access_key\"\nset HTTP_PROXY=\"http://proxy:8080\"\nset LT_SDK_DEBUG=true"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 31",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "PowerShell",
+        "text": "$env:PROJECT_TOKEN=\"123456#token\"\n$env:LT_USERNAME=\"username\"\n$env:LT_ACCESS_KEY=\"access_key\"\n$env:HTTP_PROXY=\"http://proxy:8080\"\n$env:LT_SDK_DEBUG=\"true\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "End-to-End Workflows",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "# 1. Install CLI\nnpm install -g @lambdatest/smartui-cli\n\n# 2. Set project token\nexport PROJECT_TOKEN=\"123456#token\"\n\n# 3. Create config\nnpx smartui config:create .smartui.json\n\n# 4. Create URLs file (urls.json)\n# 5. Capture screenshots\nnpx smartui capture urls.json --config .smartui.json\n\n# 6. Fetch results\nnpx smartui capture urls.json --fetch-results results.json"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "6. Fetch results",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "# 1. Set project token\nexport PROJECT_TOKEN=\"123456#token\"\n\n# 2. Start server\nnpx smartui exec:start\n\n# 3. Set server address (for non-Selenium)\nexport SMARTUI_SERVER_ADDRESS='http://localhost:49152'\n\n# 4. Run tests\nnpm test\n\n# 5. Stop server\nnpx smartui exec:stop"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "5. Stop server",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "# 1. Set project token\nexport PROJECT_TOKEN=\"123456#token\"\n\n# 2. Upload directory\nnpx smartui upload ./screenshots --buildName \"Manual-Test\"\n\n# 3. With options\nnpx smartui upload ./screenshots \\\n  --ignoreResolutions \\\n  --removeExtensions \\\n  --buildName \"Test-Run\" \\\n  --fetch-results results.json"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "3. With options",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "# 1. Install Storybook CLI\nnpm install -g @lambdatest/smartui-storybook\n\n# 2. Set project token\nexport PROJECT_TOKEN=\"123456#token\"\n\n# 3. Start Storybook\nnpm run storybook\n\n# 4. Capture stories\nsmartui storybook http://localhost:6006 --config .smartui.json\n\n# 5. Or use static build\nnpm run build-storybook\nsmartui storybook ./storybook-static --config .smartui.json"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "5. Or use static build",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "# 1. Set project token\nexport PROJECT_TOKEN=\"123456#token\"\n\n# 2. Upload PDFs\nnpx smartui upload-pdf ./pdfs --buildName \"PDF-Release-v1.0\"\n\n# 3. Mark as baseline\nnpx smartui upload-pdf ./pdfs --markBaseline --buildName \"PDF-Baseline\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "3. Mark as baseline",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "- name: Run SmartUI Tests\n  env:\n    PROJECT_TOKEN: ${{ secrets.PROJECT_TOKEN }}\n  run: |\n    npm install -g @lambdatest/smartui-cli\n    npx smartui exec --buildName \"${{ github.sha }}\" -- npm test"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "3. Mark as baseline",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "test:\n  variables:\n    PROJECT_TOKEN: $PROJECT_TOKEN\n  script:\n    - npm install -g @lambdatest/smartui-cli\n    - npx smartui exec --buildName \"$CI_COMMIT_SHA\" -- npm test"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Best Practices",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "# Good\n--buildName \"Release-v1.0.0\"\n--buildName \"$(git rev-parse --short HEAD)\"\n--buildName \"${{ github.sha }}\"\n\n# Bad\n--buildName \"test\"\n--buildName \"build-$(date)\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Use the SmartUI Reporter to visualize and analyze test results",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "   npx smartui capture urls.json --config config.json --fetch-results results.json"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "When working with large numbers of URLs (1000+) that can be divided into sections/groups, you have two strategies",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "# Enable Smart Git\nexport SMART_GIT=true\n\n# Run different sections in different branches\ngit checkout -b section1-bathroom\nnpx smartui capture sections/section1.json --config config.json --buildName \"Section1-Bathroom\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Run different sections in different branches",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "# Section 1 - Bathroom Project\nexport PROJECT_TOKEN=\"${PROJECT_TOKEN_BATHROOM}\"\nnpx smartui capture bathroom/urls.json --config config.json\n\n# Section 2 - Kitchens Project\nexport PROJECT_TOKEN=\"${PROJECT_TOKEN_KITCHENS}\"\nnpx smartui capture kitchens/urls.json --config config.json"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Troubleshooting",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "# Check status\nnpx smartui exec:ping\n\n# Start server\nnpx smartui exec:start\n\n# Verify address\necho $SMARTUI_SERVER_ADDRESS"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Verify address",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "# Use custom port\nnpx smartui exec:start -P 5000\nnpx smartui exec -P 5000 -- npm test"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Use custom port",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "# Verify credentials\necho $PROJECT_TOKEN\necho $LT_USERNAME\necho $LT_ACCESS_KEY\n\n# Override with command options\nnpx smartui capture urls.json --userName \"user\" --accessKey \"key\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Override with command options",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "# Validate JSON\ncat .smartui.json | python -m json.tool\n\n# Check config path\nnpx smartui capture urls.json --config .smartui.json"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 
 # Upload and Capture Screenshots with SmartUI CLI
 
@@ -86,11 +472,17 @@ Install the SmartUI CLI or Storybook CLI globally, or add the SmartUI CLI locall
 <TabItem value='smartui' label='SmartUI CLI' default>
 
 **Global Installation (Recommended):**
+
+<VerifiedTag value="Verified" />
+
 ```bash
 npm install -g @lambdatest/smartui-cli@latest
 ```
 
 **Local Installation:**
+
+<VerifiedTag value="Verified" />
+
 ```bash
 npm install @lambdatest/smartui-cli
 ```
@@ -99,6 +491,9 @@ npm install @lambdatest/smartui-cli
 
 </TabItem>
 <TabItem value='storybook' label='Storybook CLI'>
+
+<VerifiedTag value="Verified" />
+
 ```bash
 npm install -g @lambdatest/smartui-storybook@latest
 ```
@@ -119,6 +514,8 @@ Create a project to combine all builds run on it into one dashboard.
 
 After the project is created, copy the `Project Token` shown in the SmartUI app. A sample project token looks like this:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 projectToken = "123456#1234abcd-****-****-****-************"
 ```
@@ -130,6 +527,8 @@ Set the project token shown in the SmartUI app so the CLI can authenticate to yo
 <Tabs className='docs__val' groupId='language'>
 <TabItem value='MacOS/Linux' label='MacOS/Linux' default>
 
+<VerifiedTag value="Verified" />
+
 ```bash
 export PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
 ```
@@ -137,12 +536,16 @@ export PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
 </TabItem>
 <TabItem value='Windows' label='Windows - CMD'>
 
+<VerifiedTag value="Verified" />
+
 ```bash
 set PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
 ```
 
 </TabItem>
 <TabItem value='PowerShell' label='PowerShell'>
+
+<VerifiedTag value="Verified" />
 
 ```powershell
 $env:PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
@@ -197,6 +600,8 @@ You may use the `smartui upload --help` command in case you are facing issues du
 
 If you are using the Continuous Integration (CI) pipeline for your application and want to integrate `SmartUI CLI` execution then the following are the steps needs to be added to your `.yaml` file:
 
+<VerifiedTag value="Verified" />
+
 ```yaml
 steps:
   - name: Running SmartUI CLI Tests
@@ -212,11 +617,15 @@ You can fetch build results by adding the `--fetch-results` flag to your test ex
 
 **Default Usage** — If no filename is specified, results will be stored in `results.json`:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 npx smartui upload <directoryName> --fetch-results
 ```
 
 **Custom Filename** — Specify a custom filename for your results:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 npx smartui upload <directoryName> --fetch-results custom-results.json
@@ -225,6 +634,8 @@ npx smartui upload <directoryName> --fetch-results custom-results.json
 ### Adding a custom build name
 
 You can add a custom build name by adding the `--buildName` flag to your test execution command. Specify a custom build name to group your screenshots in the following way:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 npx smartui upload <directoryName>  --buildName "Sample Build Name"
@@ -255,6 +666,8 @@ Use the `capture` command to run visual regression tests against a list of stati
 
    Once the `URLs` file is created, you will see the sample pre-filled URLs in the `urls.json` file:
 
+   <VerifiedTag value="Verified" />
+
    ```json title="/smartui-cli-project/urls.json"
    [
      {
@@ -279,11 +692,15 @@ Use the `capture` command to run visual regression tests against a list of stati
 
 2. Create and configure the SmartUI config. Generate the configuration file:
 
+   <VerifiedTag value="Verified" />
+
    ```bash
    npx smartui config:create .smartui.json
    ```
 
    Once the configuration file is created, you will see the default configuration pre-filled in the configuration file:
+
+   <VerifiedTag value="Verified" />
 
    ```json title="/smartui-sdk-project/.smartui.json"
    {
@@ -319,6 +736,8 @@ Use the `capture` command to run visual regression tests against a list of stati
 
 3. Execute the tests on SmartUI Cloud using the CLI:
 
+   <VerifiedTag value="Verified" />
+
    ```bash
    npx smartui capture urls.json --config .smartui.json
    ```
@@ -328,6 +747,8 @@ Use the `capture` command to run visual regression tests against a list of stati
 ### For capturing viewport screenshots
 
 To capture a screenshot of the content currently visible in your viewport, rather than the entire page, it's important to define the viewport's width and height in your configuration settings. Specify the desired width and height parameters as demonstrated in the following example to ensure that the screenshot encompasses only the viewport area.
+
+<VerifiedTag value="Verified" />
 
 ```json
     "viewports": [
@@ -370,6 +791,9 @@ You can also use the following options with the capture command:
 - `--fetch-results [filename]` - Fetch and save results to JSON file
 
 **Example with additional options:**
+
+<VerifiedTag value="Verified" />
+
 ```bash
 npx smartui capture urls.json --config .smartui.json --buildName "Release-v1.0" --fetch-results results.json
 ```
@@ -387,6 +811,8 @@ These capabilities ensure that your visual tests accurately capture the true rep
 
 You can execute any valid JavaScript code that you would typically run inside a browser. For example, to simulate a button click, you might use:
 
+<VerifiedTag value="Verified" />
+
 ```js
 document.querySelector('.my-button-example').click();
 ```
@@ -400,6 +826,8 @@ The `execute` option accepts an object with the following keys:
 - **beforeSnapshot**: This function is called just before SmartUI captures a snapshot. It is ideal for final adjustments or interactions needed to prepare the page for capture.
 
 Example usage in a configuration:
+
+<VerifiedTag value="Verified" />
 
 ```json
 {
@@ -421,11 +849,15 @@ You can fetch build results by adding the `--fetch-results` flag to your test ex
 
 **Default Usage** — If no filename is specified, results will be stored in `results.json`:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 npx smartui capture urls.json --config .smartui.json --fetch-results
 ```
 
 **Custom Filename** — Specify a custom filename for your results:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 npx smartui capture urls.json --config .smartui.json --fetch-results custom-results.json
@@ -434,6 +866,8 @@ npx smartui capture urls.json --config .smartui.json --fetch-results custom-resu
 ### Adding a custom build name
 
 You can add a custom build name by adding the `--buildName` flag to your test execution command. Specify a custom build name to group your screenshots in the following way:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 npx smartui capture urls.json --buildName "Sample Build Name" --config .smartui.json
@@ -447,6 +881,8 @@ npx smartui capture urls.json --buildName "Sample Build Name" --config .smartui.
 ### Setup with Continuous Integration (CI)
 
 If you are using the Continuous Integration (CI) pipeline for your application and want to integrate `SmartUI CLI` execution then the following are the steps needs to be added to your `.yaml` file:
+
+<VerifiedTag value="Verified" />
 
 ```yaml
 steps:
@@ -466,6 +902,8 @@ You can see the SmartUI dashboard to view the results. This will help you identi
 ### Parallel execution of static URLs
 
 You can reduce the build time by executing parallel URLs in the following way.
+
+<VerifiedTag value="Verified" />
 
 ```bash
 npx smartui capture urls.json --config .smartui.json --parallel <number-of-parallels> --fetch-results
@@ -617,6 +1055,9 @@ Please see the below screenshots for adding the screenshots which need to be upl
 Execute test commands with SmartUI server running.
 
 **Syntax:**
+
+<VerifiedTag value="Verified" />
+
 ```bash
 smartui exec [options] -- <command>
 ```
@@ -639,6 +1080,9 @@ smartui exec [options] -- <command>
 | `--config <file>` | `-c` | Configuration file path | `.smartui.json` |
 
 **Examples:**
+
+<VerifiedTag value="Verified" />
+
 ```bash
 # Basic execution
 smartui exec -- npm test
@@ -663,6 +1107,9 @@ smartui exec --userName "user" --accessKey "key" -- npm test
 Capture screenshots of static URLs from a configuration file.
 
 **Syntax:**
+
+<VerifiedTag value="Verified" />
+
 ```bash
 smartui capture [options] <file>
 ```
@@ -686,6 +1133,9 @@ smartui capture [options] <file>
 | `--config <file>` | `-c` | Configuration file path | `.smartui.json` |
 
 **Examples:**
+
+<VerifiedTag value="Verified" />
+
 ```bash
 # Basic capture
 smartui capture urls.json --config .smartui.json
@@ -711,6 +1161,9 @@ smartui capture urls.json --buildName "Daily-Run" --fetch-results daily-results.
 Upload screenshots from a directory for comparison.
 
 **Syntax:**
+
+<VerifiedTag value="Verified" />
+
 ```bash
 smartui upload [options] <directory>
 ```
@@ -734,6 +1187,9 @@ smartui upload [options] <directory>
 | `--accessKey <string>` | | <BrandName /> access key | - |
 
 **Examples:**
+
+<VerifiedTag value="Verified" />
+
 ```bash
 # Basic upload
 smartui upload ./screenshots
@@ -761,6 +1217,9 @@ smartui upload ./screenshots -R -E --buildName "Test-Run"
 Upload PDF files for visual comparison.
 
 **Syntax:**
+
+<VerifiedTag value="Verified" />
+
 ```bash
 smartui upload-pdf [options] <directory>
 ```
@@ -780,6 +1239,9 @@ smartui upload-pdf [options] <directory>
 | `--pdfNames <string>` | Comma-separated list of PDF file names to upload | - |
 
 **Examples:**
+
+<VerifiedTag value="Verified" />
+
 ```bash
 # Upload directory of PDFs
 smartui upload-pdf ./pdfs --buildName "Release-v2.1"
@@ -801,6 +1263,9 @@ smartui upload-pdf ./pdfs --fetch-results pdf-results.json
 Start the SmartUI snapshot server.
 
 **Syntax:**
+
+<VerifiedTag value="Verified" />
+
 ```bash
 smartui exec:start [options]
 ```
@@ -813,6 +1278,9 @@ smartui exec:start [options]
 | `--buildName <string>` | | Custom build name | Random |
 
 **Examples:**
+
+<VerifiedTag value="Verified" />
+
 ```bash
 # Start on default port
 smartui exec:start
@@ -826,18 +1294,30 @@ smartui exec:start --buildName "Server-Build"
 **Usage Workflow:**
 
 1. Start server:
+
+   <VerifiedTag value="Verified" />
+
    ```bash
    smartui exec:start
    ```
 2. Set server address (for non-Selenium SDKs):
+
+   <VerifiedTag value="Verified" />
+
    ```bash
    export SMARTUI_SERVER_ADDRESS='http://localhost:49152'
    ```
 3. Run tests:
+
+   <VerifiedTag value="Verified" />
+
    ```bash
    npm test
    ```
 4. Stop server:
+
+   <VerifiedTag value="Verified" />
+
    ```bash
    smartui exec:stop
    ```
@@ -849,6 +1329,9 @@ smartui exec:start --buildName "Server-Build"
 Stop the SmartUI snapshot server.
 
 **Syntax:**
+
+<VerifiedTag value="Verified" />
+
 ```bash
 smartui exec:stop
 ```
@@ -862,6 +1345,9 @@ smartui exec:stop
 Check if the SmartUI server is running.
 
 **Syntax:**
+
+<VerifiedTag value="Verified" />
+
 ```bash
 smartui exec:ping
 # or
@@ -882,6 +1368,9 @@ smartui exec:pingTest
 Merge source branch or build into target.
 
 **Merge Branch Syntax:**
+
+<VerifiedTag value="Verified" />
+
 ```bash
 smartui merge branch [options]
 ```
@@ -893,6 +1382,9 @@ smartui merge branch [options]
 | `--target <string>` | Target branch to merge into | Yes |
 
 **Merge Build Syntax:**
+
+<VerifiedTag value="Verified" />
+
 ```bash
 smartui merge build [options]
 ```
@@ -904,6 +1396,9 @@ smartui merge build [options]
 | `--target <string>` | Target build to merge into | Yes |
 
 **Examples:**
+
+<VerifiedTag value="Verified" />
+
 ```bash
 # Merge feature branch into main
 smartui merge branch --source feature/new-ui --target main
@@ -921,6 +1416,9 @@ smartui merge build --source "Build-123" --target "Baseline-Build"
 Upload Figma designs for visual comparison.
 
 **Syntax:**
+
+<VerifiedTag value="Verified" />
+
 ```bash
 smartui upload-figma [options] <file>
 ```
@@ -943,6 +1441,9 @@ smartui upload-figma [options] <file>
 Capture Figma screenshots into CLI build.
 
 **Syntax:**
+
+<VerifiedTag value="Verified" />
+
 ```bash
 smartui upload-figma-web [options] <file>
 ```
@@ -966,6 +1467,9 @@ smartui upload-figma-web [options] <file>
 Capture Figma screenshots into App build.
 
 **Syntax:**
+
+<VerifiedTag value="Verified" />
+
 ```bash
 smartui upload-figma-app [options] <file>
 ```
@@ -1022,6 +1526,9 @@ The following are the core supported `CLI (Command Line Interface)` options for 
 **Main Command**
 
 **Syntax:**
+
+<VerifiedTag value="Verified" />
+
 ```bash
 smartui storybook [options] <url|directory>
 ```
@@ -1041,6 +1548,9 @@ smartui storybook [options] <url|directory>
 | `--env <prod\|stage>` | | Runtime environment | `prod` |
 
 **Examples:**
+
+<VerifiedTag value="Verified" />
+
 ```bash
 # Local Storybook server
 smartui storybook http://localhost:6006 --config .smartui.json
@@ -1063,6 +1573,9 @@ smartui storybook http://localhost:6006 --env stage
 **Config Command**
 
 **Syntax:**
+
+<VerifiedTag value="Verified" />
+
 ```bash
 smartui config create [filepath]
 ```
@@ -1102,6 +1615,9 @@ These options are available but may not be prominently documented:
 | `--force-rebuild` | `storybook` | Force rebuild of an already existing Storybook build | `smartui storybook ./storybook-static --force-rebuild` |
 
 **Usage Examples:**
+
+<VerifiedTag value="Verified" />
+
 ```bash
 # Scheduled test runs
 smartui capture urls.json --scheduled "schedule-123"
@@ -1175,6 +1691,9 @@ smartui storybook ./storybook-static --force-rebuild
 
 <Tabs className='docs__val' groupId='platform'>
 <TabItem value='macos-linux' label='MacOS/Linux' default>
+
+<VerifiedTag value="Verified" />
+
 ```bash
 export PROJECT_TOKEN="123456#token"
 export LT_USERNAME="username"
@@ -1184,6 +1703,9 @@ export LT_SDK_DEBUG=true
 ```
 </TabItem>
 <TabItem value='windows-cmd' label='Windows CMD'>
+
+<VerifiedTag value="Verified" />
+
 ```bash
 set PROJECT_TOKEN="123456#token"
 set LT_USERNAME="username"
@@ -1193,6 +1715,9 @@ set LT_SDK_DEBUG=true
 ```
 </TabItem>
 <TabItem value='powershell' label='PowerShell'>
+
+<VerifiedTag value="Verified" />
+
 ```powershell
 $env:PROJECT_TOKEN="123456#token"
 $env:LT_USERNAME="username"
@@ -1210,6 +1735,9 @@ $env:LT_SDK_DEBUG="true"
 <Tabs className='docs__val' groupId='workflows'>
 <TabItem value='static-capture' label='Static URL Capture' default>
 **Basic Static URL Capture**
+
+<VerifiedTag value="Verified" />
+
 ```bash
 # 1. Install CLI
 npm install -g @lambdatest/smartui-cli
@@ -1231,6 +1759,9 @@ npx smartui capture urls.json --fetch-results results.json
 
 <TabItem value='sdk-execution' label='SDK Test Execution'>
 **SDK Test Execution**
+
+<VerifiedTag value="Verified" />
+
 ```bash
 # 1. Set project token
 export PROJECT_TOKEN="123456#token"
@@ -1251,6 +1782,9 @@ npx smartui exec:stop
 
 <TabItem value='upload-screenshots' label='Upload Screenshots'>
 **Upload Existing Screenshots**
+
+<VerifiedTag value="Verified" />
+
 ```bash
 # 1. Set project token
 export PROJECT_TOKEN="123456#token"
@@ -1268,6 +1802,9 @@ npx smartui upload ./screenshots \
 </TabItem>
 <TabItem value="storybook-2" label='Storybook Testing'>
 **Storybook Testing**
+
+<VerifiedTag value="Verified" />
+
 ```bash
 # 1. Install Storybook CLI
 npm install -g @lambdatest/smartui-storybook
@@ -1289,6 +1826,9 @@ smartui storybook ./storybook-static --config .smartui.json
 
 <TabItem value='pdf-testing' label='PDF Testing'>
 **PDF Testing**
+
+<VerifiedTag value="Verified" />
+
 ```bash
 # 1. Set project token
 export PROJECT_TOKEN="123456#token"
@@ -1305,6 +1845,9 @@ npx smartui upload-pdf ./pdfs --markBaseline --buildName "PDF-Baseline"
 **CI/CD Integration**
 
 **GitHub Actions Example:**
+
+<VerifiedTag value="Verified" />
+
 ```yaml
 - name: Run SmartUI Tests
   env:
@@ -1314,6 +1857,9 @@ npx smartui upload-pdf ./pdfs --markBaseline --buildName "PDF-Baseline"
     npx smartui exec --buildName "${{ github.sha }}" -- npm test
 ```
 **GitLab CI Example:**
+
+<VerifiedTag value="Verified" />
+
 ```yaml
 test:
   variables:
@@ -1337,6 +1883,9 @@ test:
 - Include version or commit info
 - Avoid special characters
 - Use environment variables for dynamic names
+
+<VerifiedTag value="Verified" />
+
 ```bash
 # Good
 --buildName "Release-v1.0.0"
@@ -1394,6 +1943,9 @@ test:
 Use the [SmartUI Reporter](https://smartui-reporter.netlify.app/) to visualize and analyze test results:
 
 1. **Export Results**: Use `--fetch-results` flag to generate JSON
+
+   <VerifiedTag value="Verified" />
+
    ```bash
    npx smartui capture urls.json --config config.json --fetch-results results.json
    ```
@@ -1419,6 +1971,8 @@ When working with large numbers of URLs (1000+) that can be divided into section
 - Each section can have its own branch
 - Unified tracking and reporting
 
+<VerifiedTag value="Verified" />
+
 ```bash
 # Enable Smart Git
 export SMART_GIT=true
@@ -1433,6 +1987,8 @@ npx smartui capture sections/section1.json --config config.json --buildName "Sec
 - Complete isolation between sections
 - Independent baselines and approvals
 - Minimal projects with single branch
+
+<VerifiedTag value="Verified" />
 
 ```bash
 # Section 1 - Bathroom Project
@@ -1460,6 +2016,9 @@ For detailed guidance, see [SmartUI Capture Onboarding with HyperExecute](/suppo
 <Tabs className='docs__val' groupId='troubleshooting'>
 <TabItem value='server-3' label='Server Not Running' default>
 **Server Not Running**
+
+<VerifiedTag value="Verified" />
+
 ```bash
 # Check status
 npx smartui exec:ping
@@ -1474,6 +2033,9 @@ echo $SMARTUI_SERVER_ADDRESS
 
 <TabItem value='port' label='Port Conflicts'>
 **Port Conflicts**
+
+<VerifiedTag value="Verified" />
+
 ```bash
 # Use custom port
 npx smartui exec:start -P 5000
@@ -1483,6 +2045,9 @@ npx smartui exec -P 5000 -- npm test
 
 <TabItem value='auth' label='Authentication Issues'>
 **Authentication Issues**
+
+<VerifiedTag value="Verified" />
+
 ```bash
 # Verify credentials
 echo $PROJECT_TOKEN
@@ -1495,6 +2060,9 @@ npx smartui capture urls.json --userName "user" --accessKey "key"
 </TabItem>
 <TabItem value='config-3' label='Configuration Errors'>
 **Configuration Errors**
+
+<VerifiedTag value="Verified" />
+
 ```bash
 # Validate JSON
 cat .smartui.json | python -m json.tool

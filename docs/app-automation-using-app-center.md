@@ -17,6 +17,7 @@ slug: app-automation-using-app-center/
 canonical: https://www.testmuai.com/support/docs/app-automation-using-app-center/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -42,6 +43,170 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       })
     }}
 ></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/app-automation-using-app-center/"
+    },
+    "headline": "How to automate apps using App Center on TestMu AI",
+    "description": "Learn App Test Automation with App Center & how to install apps for testing in this guide.",
+    "url": "https://www.testmuai.com/support/docs/app-automation-using-app-center/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Documentation",
+    "keywords": [
+      "App Center",
+      "Microsoft App Center",
+      "VS App Center"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 2: Listing All The Apps For The API Token",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "curl -sX GET \"https://api.appcenter.ms/v0.1/apps\" \\ \n-H \"Content-Type: application/json\" \\ \n-H \"X-Api-Token: {your_api_token}\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 2: Listing All The Apps For The API Token",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JSON",
+        "text": "[\n   {\n      \"id\":\"19c6645d-3146-4853-97f4-22b1fc0a3ec4\",\n      \"app_secret\":\"9bdaef87-c3b7-4b8b-8a64-944bafdd870a\",\n      \"description\":null,\n      \"display_name\":\"Demo-2\",\n      \"name\":\"Demo-2\",\n      \"os\":\"iOS\",\n      \"platform\":\"Objective-C-Swift\",\n      \"origin\":\"appcenter\",\n      \"icon_url\":null,\n      \"created_at\":\"2022-03-31T11:29:39.019Z\",\n      \"updated_at\":\"2022-03-31T11:29:39.019Z\",\n      \"release_type\":\"Alpha\",\n      \"owner\":{\n         \"id\":\"29536631-e7c3-4035-a78e-4040bc96e9ce\",\n         \"avatar_url\":null,\n         \"display_name\":\"Gaurav Raj\",\n         \"email\":\"gauravraj@lambdatest.com\",\n         \"name\":\"gauravraj-lambdatest\",\n         \"type\":\"user\"\n      },\n      \"azure_subscription\":null,\n      \"member_permissions\":[\n         \"manager\"\n      ]\n   },\n   {\n      \"id\":\"2c90096a-ac95-4911-a545-4b40e4f66b7b\",\n      \"app_secret\":\"781a8f31-b593-48ce-8c31-497be0da89b5\",\n      \"description\":null,\n      \"display_name\":\"TodoApp\",\n      \"name\":\"TodoApp\",\n      \"os\":\"Android\",\n      \"platform\":\"Java\",\n      \"origin\":\"appcenter\",\n      \"icon_url\":\"https://appcenter-filemanagement-distrib4ede6f06e.azureedge.net/364affef-e00b-4f93-81 d3-5ee4a00755c9/launcher.png?sv=2019-02-02&sr=c&sig=OCEgMuaJlZt2wHqrLp4j8aO9xMT%2BOcy8 X4ty%2B2SKsGo%3D&se=2022-04-11T13%3A28%3A49Z&sp=r\",\n      \"created_at\":\"2022-03-07T11:44:09.627Z\",\n      \"updated_at\":\"2022-03-14T12:23:34.342Z\",\n      \"release_type\":\"Alpha\",\n      \"owner\":{\n         \"id\":\"29536631-e7c3-4035-a78e-4040bc96e9ce\",\n         \"avatar_url\":null,\n         \"display_name\":\"Gaurav Raj\",\n         \"email\":\"gauravraj@lambdatest.com\",\n         \"name\":\"gauravraj-lambdatest\",\n         \"type\":\"user\"\n      },\n      \"azure_subscription\":null,\n      \"member_permissions\":[\n         \"manager\"\n      ]\n   },\n   {\n      \".......\"\n   }\n]"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 3: Fetch All The Releases For An App",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "curl -X GET \"https://api.appcenter.ms/v0.1/apps/{owner.name}/{name}/releases\" \\ -H \"Content-Type: application/json\" \\ \n-H \"X-Api-Token: {your_api_token}\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 3: Fetch All The Releases For An App",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "[\n  {\n    \"origin\": \"appcenter\",\n    \"id\": 1,\n    \"short_version\": \"2.7.50393-r-2022-02-10\",\n    \"version\": \"50393\",\n    \"uploaded_at\": \"2022-03-07T11:46:06.590Z\",\n    \"enabled\": true,\n    \"is_external_build\": false,\n    \"file_extension\": \"apk\",\n    \"destinations\": [\n      {\n        \"id\": \"00000000-0000-0000-0000-000000000000\",\n        \"name\": \"Collaborators\",\n        \"destination_type\": \"group\"\n      }\n    ],\n    \"distribution_groups\": [\n      {\n        \"id\": \"00000000-0000-0000-0000-000000000000\",\n        \"name\": \"Collaborators\"\n      }\n    ]\n  },\n  {\n    \"origin\": \"appcenter\",\n    \"id\": 4,\n    \"short_version\": \"2.7.50392-r-2022-01-24\",\n    \"version\": \"50392\",\n    \"uploaded_at\": \"2022-03-17T10:44:11.524Z\",\n    \"enabled\": true,\n    \"is_external_build\": false,\n    \"file_extension\": \"apk\",\n    \"destinations\": [\n      {\n        \"id\": \"00000000-0000-0000-0000-000000000000\",\n        \"name\": \"Collaborators\",\n        \"destination_type\": \"group\"\n      }\n    ],\n    \"distribution_groups\": [\n      {\n        \"id\": \"00000000-0000-0000-0000-000000000000\",\n        \"name\": \"Collaborators\"\n      }\n    ]\n  }\n]"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 4: Fetch The Required App Release Information For An App",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "curl -X GET \"https://api.appcenter.ms/v0.1/apps/{owner.name}/{name}/releases/{id}\" \\ -H \"Content-Type: application/json\" \\ \n-H \"X-Api-Token: {your_api_token}\" "
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 4: Fetch The Required App Release Information For An App",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "{\n  \"app_name\": \"BCDE-1\",\n  \"app_display_name\": \"BCDE-1\",\n  \"app_os\": \"Android\",\n  \"app_icon_url\": \"https://appcenter-filemanagement-distrib1ede6f06e.azureedge.net/ad7ca44e-0459-459c-9e de-0c72fa78ae03/launcher.png?sv=2019-02-02&sr=c&sig=eFvMnfD%2B9FdYReu4OiG%2BnqvFkTTdXE LlN0dpoAItqig%3D&se=2022-04-14T12%3A03%3A16Z&sp=r\",\n  \"is_external_build\": false,\n  \"origin\": \"appcenter\",\n  \"id\": 1,\n  \"version\": \"50393\",\n  \"short_version\": \"2.7.50393-r-2022-02-10\",\n  \"size\": 13833051,\n  \"min_os\": \"5.0\",\n  \"android_min_api_level\": \"21\",\n  \"device_family\": null,\n  \"bundle_identifier\": \"org.wikipedia\",\n  \"fingerprint\": \"6a42317cc91fae15b9847f4bb4745e6f\",\n  \"uploaded_at\": \"2022-03-07T11:46:06.590Z\",\n  \"download_url\": \"https://appcenter-filemanagement-distrib3ede6f06e.azureedge.net/bd52eda2-b239-480b-b2 de-25205f705e63/Wikipedia_v2.7.50393-r-2022-02-10_apkpure.com.apk?sv=2019-02-02&sr=c&s ig=i170%2FkTlpX8146XrKVyxQRLiTUiDoPkfJYGOm%2B1UeZM%3D&se=2022-04-09T09%3A58%3A42Z&sp=r \",\n  \"install_url\": \"https://appcenter-filemanagement-distrib3ede6f06e.azureedge.net/bd52eda2-b239-480b-b2 de-25205f705e63/Wikipedia_v2.7.50393-r-2022-02-10_apkpure.com.apk?sv=2019-02-02&sr=c&s\\nig=i170%2FkTlpX8146XrKVyxQRLiTUiDoPkfJYGOm%2B1UeZM%3D&se=2022-04-09T09%3A58%3A42Z&sp=r \",\n  \"enabled\": true,\n  \"fileExtension\": \"apk\",\n  \"release_notes\": \"\",\n  \"package_hashes\": [\n    \"d1c86bcc8784a35a2ee5ada2112cde3056c2b6fb0bc9ca700af5f2826564fc98\"\n  ],\n  \"destinations\": [\n    {\n      \"destination_type\": \"group\",\n      \"id\": \"00000000-0000-0000-0000-000000000000\",\n      \"name\": \"Collaborators\"\n    }\n  ],\n  \"destination_type\": \"group\",\n  \"distribution_groups\": [\n    {\n      \"id\": \"00000000-0000-0000-0000-000000000000\",\n      \"name\": \"Collaborators\"\n    }\n  ]\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 5: Upload the Release Version Of An App On TestMu AI",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "curl -u \"<username>:<access_key>\" \\ \n-X POST \"https://manual-api.lambdatest.com/app/upload/realDevice\" \\ -F \"url=<download_url>\" \\ \n-F \"name=<app_name>\" "
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 5: Upload the Release Version Of An App On TestMu AI",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "{ \n\"app_id\": \"APP100201841649371040473417\", \n\"name\": \"name\", \n\"type\": \"ios\",\n\"app_url\": \"lt://APP100201848749371040473417\" \n} "
+      }
+    ],
+    "dateModified": "2026-04-07T12:50:21+05:30"
+  }) }}
+/>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "App Test Automation Using App Center",
+      "description": "*** Visual Studio App Center is an integrated solution for mobile app development on iOS, Android, Windows, and macOS. It combines a number of mobile development services, such as build, test, distribute, monitoring, diagnostics, etc., into a single integrated cloud platform. By automating the upload process, Visual Studio App Center can ease the manual effort of uploading an app. In this documentation, learn how to install apps from App Center for automated app testing. *** Getting started with the setup requires access to the following: Access to TestMu AI Real Devices. Access to App Center and permissions to generate API tokens on App Center.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1 - Generating API Token On App Center",
+          "text": "*** Below are the steps to generate the API Token on App Center - Launch App Center. Navigate to your Profile avatar and click Account Settings. Click on User API tokens to generate a token. Click on Add new API token to add the new token. Important: It\u2019s recommended to provide Read Only access. Once you get the API token, click on the Copy icon to copy the generated token. This token will be used in Step 2.",
+          "url": "https://www.testmuai.com/support/docs/app-automation-using-app-center/#step-1---generating-api-token-on-app-center"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Listing All The Apps For The API Token",
+          "text": "*** You can get all the Apps (specific to the API token) by using the API call below with the API token you generated in the previous step. Shown below is the response of the above API call.",
+          "url": "https://www.testmuai.com/support/docs/app-automation-using-app-center/#step-2-listing-all-the-apps-for-the-api-token"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Fetch All The Releases For An App",
+          "text": "*** If you have the &lbrace;name&rbrace; and &lbrace;owner.name&rbrace; (as received in Step 2), you can use the API call below to retrieve all the Release information for a particular app. Shown below is the response of the above API call.",
+          "url": "https://www.testmuai.com/support/docs/app-automation-using-app-center/#step-3-fetch-all-the-releases-for-an-app"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Step 4: Fetch The Required App Release Information For An App",
+          "text": "*** Using the API call below, use the &lbrace;name&rbrace; and &lbrace;owner.name&rbrace; (received from Step 2), and the id (received from Step 3) to fetch Release information for a specific App: Shown below is the response of the above API call. The downloadurl (For e.g. https://appcenter-filemanagement-distrib3ede6f06e.azureedge.net/de-25205f705e63/Wikipediav2.7.5393-r-2022-02-10_am.apk?sv=2019-&s ig=i170%2FkTlpX%3D&se=202Z&sp=r) from the above API response will be used to upload your App Release on TestMu AI.",
+          "url": "https://www.testmuai.com/support/docs/app-automation-using-app-center/#step-4-fetch-the-required-app-release-information-for-an-app"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 5,
+          "name": "Step 5: Upload the Release Version Of An App On TestMu AI",
+          "text": "*** You can upload the release version of your app on TestMu AI by using the following API call - Below is the response of the above cURL request. Using the app_url obtained in the response, you can execute your Appium tests on TestMu AI.",
+          "url": "https://www.testmuai.com/support/docs/app-automation-using-app-center/#step-5-upload-the-release-version-of-an-app-on-testmu-ai"
+        }
+      ]
+    }
+  ]) }}
+/>
 
 # App Test Automation Using App Center
 ***
@@ -86,6 +251,8 @@ Below are the steps to generate the API Token on App Center -
 
 You can get all the Apps (specific to the API token) by using the API call below with the API token you generated in the previous step. 
 
+<VerifiedTag value="Verified" />
+
 ```js
 curl -sX GET "https://api.appcenter.ms/v0.1/apps" \ 
 -H "Content-Type: application/json" \ 
@@ -93,6 +260,8 @@ curl -sX GET "https://api.appcenter.ms/v0.1/apps" \
 ```
 
 Shown below is the response of the above API call.
+
+<VerifiedTag value="Verified" />
 
 ```json
 [
@@ -159,12 +328,16 @@ Shown below is the response of the above API call.
 
 If you have the &lbrace;name&rbrace; and &lbrace;owner.name&rbrace; (as received in Step 2), you can use the API call below to retrieve all the Release information for a particular app.
 
+<VerifiedTag value="Verified" />
+
 ```js
 curl -X GET "https://api.appcenter.ms/v0.1/apps/{owner.name}/{name}/releases" \ -H "Content-Type: application/json" \ 
 -H "X-Api-Token: {your_api_token}"
 ```
 
 Shown below is the response of the above API call.
+
+<VerifiedTag value="Verified" />
 
 ```js
 [
@@ -222,12 +395,16 @@ Shown below is the response of the above API call.
 
 Using the API call below, use the &lbrace;name&rbrace; and &lbrace;owner.name&rbrace; (received from Step 2), and the id (received from Step 3) to fetch Release information for a specific App: 
 
+<VerifiedTag value="Verified" />
+
 ```js
 curl -X GET "https://api.appcenter.ms/v0.1/apps/{owner.name}/{name}/releases/{id}" \ -H "Content-Type: application/json" \ 
 -H "X-Api-Token: {your_api_token}" 
 ```
 
 Shown below is the response of the above API call.
+
+<VerifiedTag value="Verified" />
 
 ```js
 {
@@ -279,6 +456,8 @@ The download_url (For e.g. `https://appcenter-filemanagement-distrib3ede6f06e.az
 
 You can upload the release version of your app on <BrandName /> by using the following API call -
 
+<VerifiedTag value="Verified" />
+
 ```js
 curl -u "<username>:<access_key>" \ 
 -X POST "https://manual-api.lambdatest.com/app/upload/realDevice" \ -F "url=<download_url>" \ 
@@ -286,6 +465,8 @@ curl -u "<username>:<access_key>" \
 ```
 
 Below is the response of the above cURL request.
+
+<VerifiedTag value="Verified" />
 
 ```js
 { 

@@ -20,10 +20,113 @@ import CodeBlock from '@theme/CodeBlock';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
-
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
+<script type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify({
+       "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": BRAND_URL
+        },{
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Support",
+          "item": `${BRAND_URL}/support/docs/`
+        },{
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Appium Flutter Integration Driver Testing",
+          "item": `${BRAND_URL}/support/docs/appium-flutter-integration/`
+        }]
+      })
+    }}
+></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/appium-flutter-integration/"
+    },
+    "headline": "Appium Flutter Integration Driver Testing",
+    "description": "Guide to testing Flutter apps using Appium Flutter Integration Driver on TestMu AI real device cloud.",
+    "url": "https://www.testmuai.com/support/docs/appium-flutter-integration/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "App Automation",
+    "keywords": [
+      "flutter app testing",
+      "appium flutter integration",
+      "real device testing"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "In your Flutter app\u2019s pubspec.yaml, add",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "dev_dependencies:\n  appium_flutter_server: 0.0.28"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Inside it, create appium_test.dart with",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Dart",
+        "text": "import 'package:appium_flutter_server/appium_flutter_server.dart';\nimport 'package:your_app_package/main.dart'; // Replace with your app's main.dart import\n\nvoid main() {\n  initializeTest(app: const MyApp());\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Or with setup callback",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Dart",
+        "text": "import 'package:your_app_package/main.dart' as app;\n\nvoid main() {\n  initializeTest(\n    callback: (WidgetTester tester) async {\n      // Add prerequisite setup here\n      await tester.pumpWidget(const app.MyApp());\n    },\n  );\n}"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
 Testing Flutter apps on TestMu AI with Appium Flutter Integration Driver automates Flutter UI validation on real Android and iOS devices in the cloud, letting you write tests in multiple languages, switch contexts seamlessly, and drive gestures beyond native limits.
 
 **Supported on:** Real &amp; Virtual devices
@@ -46,7 +149,6 @@ After preparing your Flutter app with this integration (refer to the setup docum
 | Compatible with device farms supporting Appium     | No                   | Yes                              |
 | Interaction beyond Flutter context (e.g., OTP apps) | No                   | Yes                              |
 
-
 ---
 
 ## Why Use Appium Flutter Integration Driver?
@@ -66,6 +168,8 @@ After preparing your Flutter app with this integration (refer to the setup docum
 
 In your Flutter app’s `pubspec.yaml`, add:
 
+<VerifiedTag value="Verified" />
+
 ```yaml
 dev_dependencies:
   appium_flutter_server: 0.0.28
@@ -74,6 +178,8 @@ dev_dependencies:
 ### 2. Create integration test files 
 
 Create an `integration_test` folder at the root of your Flutter project. Inside it, create `appium_test.dart` with:
+
+<VerifiedTag value="Verified" />
 
 ```dart
 import 'package:appium_flutter_server/appium_flutter_server.dart';
@@ -85,6 +191,8 @@ void main() {
 ```
 
 Or with setup callback:
+
+<VerifiedTag value="Verified" />
 
 ```dart
 import 'package:your_app_package/main.dart' as app;
@@ -125,13 +233,9 @@ void main() {
 
 ## Uploading Your Flutter App to <BrandName />
 
-
-
 - For detailed instructions on how to upload your application to <BrandName />, please refer to our comprehensive guide.
 - Visit the [**Upload your Application**](/support/docs/application-setup-via-api/#upload-via-the-rest-api) documentation to learn more.
 - Use the returned **App ID** from above step in your automation scripts.
-
-
 
 ---
 
@@ -180,4 +284,3 @@ void main() {
 - You can generate capabilities for your test requirements with the help of our inbuilt [**Capabilities Generator tool**](https://www.testmuai.com/capabilities-generator/).For more details, please refer to our guide on [**Desired Capabilities in Appium**](/support/docs/desired-capabilities-in-appium/).
 
 :::
-

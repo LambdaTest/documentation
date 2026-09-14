@@ -27,6 +27,8 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 
+import VerifiedTag from '@site/src/component/verifiedTag';
+
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
        "@context": "https://schema.org",
@@ -50,6 +52,131 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       })
     }}
 ></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/testmu-running-your-first-selenium-test/"
+    },
+    "headline": "Run Your First Selenium Test",
+    "description": "Run your first Selenium test on TestMu AI's cloud grid. Clone a sample project, set credentials, configure capabilities, and execute.",
+    "url": "https://www.testmuai.com/support/docs/testmu-running-your-first-selenium-test/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Web Automation",
+    "keywords": [
+      "selenium first test",
+      "run selenium test online",
+      "selenium cloud testing"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 1: Clone the Sample Project",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "codeRepository": "https://github.com/LambdaTest/java-testng-selenium",
+        "text": "git clone https://github.com/LambdaTest/java-testng-selenium\ncd java-testng-selenium"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Here is an example",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "ChromeOptions browserOptions = new ChromeOptions();\nbrowserOptions.setPlatformName(\"Windows 10\");\nbrowserOptions.setBrowserVersion(\"latest\");\n\nHashMap<String, Object> ltOptions = new HashMap<String, Object>();\nltOptions.put(\"build\", \"My First Test\");\nltOptions.put(\"name\", \"Sample Test - Single\");\nltOptions.put(\"w3c\", true);\n\nbrowserOptions.setCapability(\"LT:Options\", ltOptions);"
+      }
+    ],
+    "dateModified": "2026-09-09T19:13:32+05:30"
+  }) }}
+/>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Run Your First Selenium Test",
+      "description": "Run your first Selenium test on TestMu AI's cloud grid. Clone a sample project, set credentials, configure capabilities, and execute.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Clone the Sample Project",
+          "text": "Pull the sample repo to your local machine and navigate into the project directory.",
+          "url": "https://www.testmuai.com/support/docs/testmu-running-your-first-selenium-test/#step-1-clone-the-sample-project"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Set Your Credentials",
+          "text": "Add your TestMu AI credentials as environment variables so the test can authenticate with the grid. Visit the TestMu AI Dashboard, navigate to the left sidebar, and select Credentials. Copy your Username and Access Key, then set them as environment variables: {`export LTUSERNAME=\"${ YOURLAMBDATEST_USERNAME()}\" export LTACCESSKEY=\"${ YOURLAMBDATESTACCESS_KEY()}\"`} {`set LTUSERNAME=\"${ YOURLAMBDATEST_USERNAME()}\" set LTACCESSKEY=\"${ YOURLAMBDATESTACCESS_KEY()}\"`}",
+          "url": "https://www.testmuai.com/support/docs/testmu-running-your-first-selenium-test/#step-2-set-your-credentials"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Configure Your Test Capabilities",
+          "text": "Define which browser, version, and OS your test runs on. The sample project includes a preconfigured capabilities object that tells the grid which browser and OS to use. Here is an example: You can customize these values to test on any browser, version, or OS. Use the Capabilities Generator to auto-generate the capabilities code for your target configuration. For the full list of supported capabilities, see Desired Capabilities in Selenium.",
+          "url": "https://www.testmuai.com/support/docs/testmu-running-your-first-selenium-test/#step-3-configure-your-test-capabilities"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Step 4: Run the Test",
+          "text": "Trigger the test from your terminal using Maven. Execute a single test or run multiple tests in parallel: {mvn test -D suite=single.xml} {mvn test -D suite=parallel.xml}",
+          "url": "https://www.testmuai.com/support/docs/testmu-running-your-first-selenium-test/#step-4-run-the-test"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 5,
+          "name": "Step 5: View Your Results",
+          "text": "Check the Automation Dashboard to see exactly what happened during your test. Visit the TestMu AI Automation Dashboard to see your test results. Each session includes: Video recording of the full test execution Screenshots captured at each step Console logs from the browser Network logs for every request and response Selenium command logs showing each driver action",
+          "url": "https://www.testmuai.com/support/docs/testmu-running-your-first-selenium-test/#step-5-view-your-results"
+        }
+      ]
+    }
+  ]) }}
+/>
+
+
 
 # How to Run Your First Selenium Test on TestMu AI
 ---
@@ -79,6 +206,8 @@ Make sure you have the following set up before you start.
 
 Pull the sample repo to your local machine and navigate into the project directory.
 
+<VerifiedTag value="Verified" />
+
 ```bash
 git clone https://github.com/LambdaTest/pytest-selenium-sample
 cd pytest-selenium-sample
@@ -88,6 +217,8 @@ cd pytest-selenium-sample
 ---
 
 Install the project's Python dependencies, including Selenium, pytest, and pytest-xdist (for parallel runs), from `requirements.txt`.
+
+<VerifiedTag value="Verified" />
 
 ```bash
 pip install -r requirements.txt
@@ -104,6 +235,8 @@ Visit the [TestMu AI Dashboard](https://www.testmuai.com/login/?redirectTo=https
 
 <TabItem value="bash" label="macOS / Linux" default>
 
+  <VerifiedTag value="Verified" />
+
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-bash">
   {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
@@ -114,6 +247,8 @@ export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 </TabItem>
 
 <TabItem value="powershell" label="Windows" default>
+
+  <VerifiedTag value="Verified" />
 
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-powershell">
@@ -131,6 +266,8 @@ $env:LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 Define which browser, version, and OS your test runs on.
 
 The sample keeps its capabilities in `conftest.py`, inside the `driver` fixture that starts the browser session. Here is the configuration from the sample:
+
+<VerifiedTag value="Verified" />
 
 ```python title="conftest.py"
 chrome_options = webdriver.ChromeOptions()
@@ -168,6 +305,8 @@ Trigger the test from your terminal. Run a single test, or run in parallel with 
 
 <TabItem value="single" label="Single Test" default>
 
+  <VerifiedTag value="Verified" />
+
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-bash">
   {`pytest -s tests/lt_sample_todo.py`}
@@ -177,6 +316,8 @@ Trigger the test from your terminal. Run a single test, or run in parallel with 
 </TabItem>
 
 <TabItem value="parallel" label="Parallel Test" default>
+
+  <VerifiedTag value="Verified" />
 
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-bash">

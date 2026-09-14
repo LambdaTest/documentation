@@ -18,6 +18,121 @@ canonical: https://www.testmuai.com/support/docs/network-configurations-in-real-
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
+<script type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify({
+       "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": BRAND_URL
+        },{
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Support",
+          "item": `${BRAND_URL}/support/docs/`
+        },{
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Network Configurations in App Live",
+          "item": `${BRAND_URL}/support/docs/network-configurations-in-real-devices/`
+        }]
+      })
+    }}
+></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/network-configurations-in-real-devices/"
+    },
+    "headline": "Network Configurations in App Live",
+    "description": "Learn how to configure and capture HTTP/S traffic on real devices during manual testing in App Live & Browser Live, with options for content capture and domain filtering.",
+    "url": "https://www.testmuai.com/support/docs/network-configurations-in-real-devices/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Real Device",
+    "keywords": [
+      "testmu ai manual testing",
+      "network logs",
+      "mitm proxy"
+    ],
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "dateModified": "2026-07-29T17:52:46+05:30"
+  }) }}
+/>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Enabling Network Configuration",
+      "description": "Learn how to configure and capture HTTP/S traffic on real devices during manual testing in App Live & Browser Live, with options for content capture and domain filtering.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Access App Testing",
+          "text": "Log into your TestMu AI dashboard and navigate to Real Devices > App Testing.",
+          "url": "https://www.testmuai.com/support/docs/network-configurations-in-real-devices/#step-1-access-app-testing"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Select your device or browser",
+          "text": "Choose a real Android or iOS device, upload your app (APK/IPA), or open a browser URL.",
+          "url": "https://www.testmuai.com/support/docs/network-configurations-in-real-devices/#step-2-select-your-device-or-browser"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Configure network log options",
+          "text": "Run your app. In the network logs for your device, open the Configuration Options slider and select the options you want to apply for your current session.",
+          "url": "https://www.testmuai.com/support/docs/network-configurations-in-real-devices/#step-3-configure-network-log-options"
+        }
+      ]
+    }
+  ]) }}
+/>
+
 # Network Logs and Configurations in real devices
 
 Network logs record every network interaction during your test session, from API calls and page requests to server responses and load times. These logs are stored in HAR format, giving you a complete snapshot of **network performance** for each run. By reviewing this data, you can identify slow endpoints, troubleshoot failed requests, and validate that your app communicates with the right services, all without leaving your testing workflow.
@@ -51,7 +166,6 @@ Log into your <BrandName /> dashboard and navigate to Real Devices > App Testing
 
 Choose a real Android or iOS device, upload your app (APK/IPA), or open a browser URL.
 
-
 ### Step 3: Configure network log options
 
 Run your app. In the network logs for your device, open the **Configuration Options** slider and select the options you want to apply for your current session.  
@@ -70,7 +184,6 @@ Run your app. In the network logs for your device, open the **Configuration Opti
 ---
 
 ## Available configuration options
-
 
 ### **Include specific domains**:
  Use this to capture logs only for network requests to specified domains. Enable the toggle and add the domains separated by commas, as shown below.  

@@ -27,6 +27,8 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 
+import VerifiedTag from '@site/src/component/verifiedTag';
+
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
        "@context": "https://schema.org",
@@ -50,6 +52,162 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       })
     }}
 ></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/smartui-cli-build-name/"
+    },
+    "headline": "Grouping Screenshots through Build Names",
+    "description": "In this documentation, learn how to group screenshots in a single build across multiple executions.",
+    "url": "https://www.testmuai.com/support/docs/smartui-cli-build-name/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "SmartUI",
+    "keywords": [],
+    "proficiencyLevel": "Beginner",
+    "dependencies": "Basic understanding of Command Line Interface; Login to TestMu AI SmartUI with your credentials.; Ensure you are using @lambdatest/smartui-cli version 4.1.43 or higher; A properly configured SmartUI CLI project.",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "If you haven't already installed SmartUI CLI, install it using npm",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "npm install -g @lambdatest/smartui-cli"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 1: Install SmartUI CLI",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "npm install @lambdatest/smartui-cli"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 2: Configure your Project Token",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "export PROJECT_TOKEN=\"123456#1234abcd-****-****-****-************\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 2: Configure your Project Token",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "set PROJECT_TOKEN=\"123456#1234abcd-****-****-****-************\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 2: Configure your Project Token",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "PowerShell",
+        "text": "$env:PROJECT_TOKEN=\"123456#1234abcd-****-****-****-************\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Specify a custom build name to group your screenshots in the following way",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "npx smartui --config .smartui.json exec --buildName \"Sample Build Name\" -- <execution-command>"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "If no buildname is specified, a random build name is added to the builds",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "npx smartui --config .smartui.json exec -- <execution-command>"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "This can be done as follows",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "npx smartui --config .smartui.json exec --buildName $env:JOB_ID -- node test.js"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Grouping Screenshots through Build Names",
+      "description": "In this documentation, learn how to group screenshots in a single build across multiple executions.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Install SmartUI CLI",
+          "text": "If you haven't already installed SmartUI CLI, install it using npm: Global Installation (Recommended): Local Installation:",
+          "url": "https://www.testmuai.com/support/docs/smartui-cli-build-name/#step-1-install-smartui-cli"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Configure your Project Token",
+          "text": "Setup your project token shown in the SmartUI app after creating your project.",
+          "url": "https://www.testmuai.com/support/docs/smartui-cli-build-name/#step-2-configure-your-project-token"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Execute Tests with custom Build Names",
+          "text": "You can add a custom build name by adding the --buildName flag to your test execution command. Here are different ways to use this feature: Specify a custom build name to group your screenshots in the following way: Example: For a Node.js test script : ```bash npx smartui --config .smartui.json exec --buildName \"Sample Build Name\" -- node test.js ``` If no buildname is specified, a random build name is added to the builds:",
+          "url": "https://www.testmuai.com/support/docs/smartui-cli-build-name/#step-3-execute-tests-with-custom-build-names"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Step 4: Advanced Use Case",
+          "text": "If you are running multiple test cases in a single job (e.g., using HyperExecute) and want to club all screenshots under a single build while maintaining consistent Git baseline management, you can do the following: This can be done as follows:",
+          "url": "https://www.testmuai.com/support/docs/smartui-cli-build-name/#step-4-advanced-use-case"
+        }
+      ]
+    }
+  ]) }}
+/>
+
+
 SmartUI CLI allows you to group screenshots in a build name and append new screenshots to an existing build. This feature enables you to assign build names, add screenshots to existing builds and manage your visual tests efficiently.
 
 ## Prerequisites
@@ -68,11 +226,17 @@ If you face any problems executing tests with SmartUI-CLI `versions >= v4.x.x`, 
 If you haven't already installed SmartUI CLI, install it using npm:
 
 **Global Installation (Recommended):**
+
+<VerifiedTag value="Verified" />
+
 ```bash
 npm install -g @lambdatest/smartui-cli
 ```
 
 **Local Installation:**
+
+<VerifiedTag value="Verified" />
+
 ```bash
 npm install @lambdatest/smartui-cli
 ```
@@ -84,6 +248,8 @@ Setup your project token shown in the **SmartUI** app after creating your projec
 <Tabs className='docs__val' groupId='language'>
 <TabItem value='MacOS/Linux' label='MacOS/Linux' default>
 
+<VerifiedTag value="Verified" />
+
 ```bash
 export PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
 ```
@@ -91,12 +257,16 @@ export PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
 </TabItem>
 <TabItem value='Windows' label='Windows - CMD'>
 
+<VerifiedTag value="Verified" />
+
 ```bash
 set PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
 ```
 
 </TabItem>
 <TabItem value='PowerShell' label='PowerShell'>
+
+<VerifiedTag value="Verified" />
 
 ```powershell
 $env:PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
@@ -112,6 +282,8 @@ You can add a custom build name by adding the `--buildName` flag to your test ex
 #### Custom Build Name (Expected Usage)
 Specify a custom build name to group your screenshots in the following way:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 npx smartui --config .smartui.json exec --buildName "Sample Build Name" -- <execution-command>
 ```
@@ -124,6 +296,8 @@ npx smartui --config .smartui.json exec --buildName "Sample Build Name" -- <exec
 ### Default Usage
 If no buildname is specified, a random build name is added to the builds:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 npx smartui --config .smartui.json exec -- <execution-command>
 ```
@@ -133,6 +307,8 @@ npx smartui --config .smartui.json exec -- <execution-command>
 If you are running multiple test cases in a single job (e.g., using HyperExecute) and want to club all screenshots under a single build while maintaining consistent Git baseline management, you can do the following:
 
 This can be done as follows:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 npx smartui --config .smartui.json exec --buildName $env:JOB_ID -- node test.js

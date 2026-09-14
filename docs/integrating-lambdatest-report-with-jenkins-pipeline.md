@@ -16,8 +16,89 @@ site_name: TestMu AI
 slug: integrating-testmu-report-with-jenkins-pipeline/
 canonical: https://www.testmuai.com/support/docs/integrating-testmu-report-with-jenkins-pipeline/
 ---
+
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
+<script type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify({
+       "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": BRAND_URL
+        },{
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Support",
+          "item": `${BRAND_URL}/support/docs/`
+        },{
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Integrate TestMu AI Report With Jenkins Pipeline",
+          "item": `${BRAND_URL}/support/docs/integrating-testmu-report-with-jenkins-pipeline/`
+        }]
+      })
+    }}
+></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/integrating-testmu-report-with-jenkins-pipeline/"
+    },
+    "headline": "Integrate TestMu AI Report With Jenkins Pipeline",
+    "description": "Learn how to integrate TestMu AI Report with Jenkins Pipeline.",
+    "url": "https://www.testmuai.com/support/docs/integrating-testmu-report-with-jenkins-pipeline/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Integration",
+    "keywords": [
+      "jenkins",
+      "freestyle project",
+      "testmu ai"
+    ],
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "dateModified": "2026-02-12T19:51:34+05:30"
+  }) }}
+/>
 # Integrating <BrandName /> Report With Jenkins Pipeline
 ---
 
@@ -84,10 +165,4 @@ Add a  `post { always { ... } }` block to your pipeline so that the report is ge
 
 The test report will show up, containing build details such as **Name**, **Status**, **Browser/Device**, **OS**, and **Duration**. 
 
-<img loading="lazy" src={require('../assets/images/lambdatestreport-jenkins/generatedreport.png').default} alt="Image" width="1919" height="900" className="doc_img img_center"/> 
-
-
-
-
-
-
+<img loading="lazy" src={require('../assets/images/lambdatestreport-jenkins/generatedreport.png').default} alt="Image" width="1919" height="900" className="doc_img img_center"/>

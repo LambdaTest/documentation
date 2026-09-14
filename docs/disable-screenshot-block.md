@@ -28,6 +28,8 @@ import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 
+import VerifiedTag from '@site/src/component/verifiedTag';
+
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
        "@context": "https://schema.org",
@@ -52,6 +54,74 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/disable-screenshot-block/"
+    },
+    "headline": "Disable Screenshot Block for Android",
+    "description": "Discover how to disable screenshot blocking on TestMu AI Real Device Cloud Platform. Test biometric authentication functionalities without limitations on 3000+ real mobile devices.",
+    "url": "https://www.testmuai.com/support/docs/disable-screenshot-block/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "App Automation",
+    "keywords": [
+      "screenshot unblock",
+      "disable screenshot block",
+      "app test automation"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Using desired Capabilities",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "    DesiredCapabilities capabilities = new DesiredCapabilities();\n    capabilities.setCapability(\"build\",\"Java TestNG Android\");\n    capabilities.setCapability(\"name\",platform+\" \"+device+\" \"+version);\n    capabilities.setCapability(\"deviceName\", device);\n    capabilities.setCapability(\"platformVersion\",version);\n    capabilities.setCapability(\"platformName\", platform);\n    capabilities.setCapability(\"isRealMobile\", true);\n    capabilities.setCapability(\"app\", \"APP_URL\"); //Enter your app (.apk) url\n    capabilities.setCapability(\"deviceOrientation\", \"PORTRAIT\");\n    capabilities.setCapability(\"console\", true);\n    capabilities.setCapability(\"network\", false);\n    capabilities.setCapability(\"visual\", true);\n    capabilities.setCapability(\"devicelog\", true);\n    capabilities.setCapability(\"enableScreenshotUnblock\",true); // for screenshot unblock"
+      }
+    ],
+    "dateModified": "2026-09-10T15:46:57+05:30"
+  }) }}
+/>
+
+
 
 Disabling screenshot block on TestMu AI lets you capture screenshots and video of apps that normally block them, so you can run App Live and app automation tests on real Android and iOS devices without black frames or missing captures.
 
@@ -67,7 +137,7 @@ If your app doesn't allow screenshot to be taken of the app and you want to test
 :::info
 **OS Version:** Android Disable Screenshot Unblock is supported for all os versions.
 
-This feature is in the **beta phase**. To enable it, please reach out to our 24x7 Chat Support by clicking on  <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24x7 Chat Support**</span> or you could also mail us at [support@testmuai.com](https://support.lambdatest.com/).
+This feature is in the **beta phase**. To enable it, please reach out to our 24x7 Chat Support by clicking on  <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24x7 Chat Support**</span> or you could also mail us at [support@testmuai.com](mailto:support@testmuai.com).
 
 :::
 
@@ -93,6 +163,8 @@ For app automation also, **disable screenshot block** is enabled as soon as the 
 
 You can use the appium capability to turn the **Disable Screenshot Block** on in your application. Just add `"enableScreenshotUnblock": true` in the desired capabilities while writing the automation script.
 
+  <VerifiedTag value="Verified" />
+
   ```java
     DesiredCapabilities capabilities = new DesiredCapabilities();
     capabilities.setCapability("build","Java TestNG Android");
@@ -116,7 +188,7 @@ You can use the appium capability to turn the **Disable Screenshot Block** on in
 **Disable Screenshot Block** will only work for applications that were uploaded after 28th June 2023.
 
 > Got any questions?<br/>
-> Please reach out at our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24x7 Chat Support**</span> or you could also mail us at [support@testmuai.com](https://support.lambdatest.com/).
+> Please reach out at our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24x7 Chat Support**</span> or you could also mail us at [support@testmuai.com](mailto:support@testmuai.com).
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">

@@ -19,6 +19,8 @@ canonical: https://www.testmuai.com/support/docs/puppeteer-testing/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
+import VerifiedTag from '@site/src/component/verifiedTag';
+
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
        "@context": "https://schema.org",
@@ -43,6 +45,117 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/puppeteer-testing/"
+    },
+    "headline": "How To Run Puppeteer Tests On TestMu AI Platform",
+    "description": "Learn how to run your Puppeteer tests across real browsers and operating systems on the TestMu AI automation platform",
+    "url": "https://www.testmuai.com/support/docs/puppeteer-testing/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Web Automation",
+    "keywords": [
+      "puppeteer testing",
+      "automation testing with puppeteer",
+      "how to use puppeteer for testing"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Prerequisites",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "npm install"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Prerequisites",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "`wss://cdp.lambdatest.com/puppeteer?capabilities=${encodeURIComponent(JSON.stringify(capabilities))}`"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Prerequisites",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "set LT_USERNAME=\"YOUR_LAMBDATEST_USERNAME\"\nset LT_ACCESS_KEY=\"YOUR_LAMBDATEST_ACCESS_KEY\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 4",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "export LT_USERNAME=\"YOUR_LAMBDATEST_USERNAME\"\nexport LT_ACCESS_KEY=\"YOUR_LAMBDATEST_ACCESS_KEY\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Run Your First Puppeteer Test",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "codeRepository": "https://github.com/LambdaTest/puppeteer-sample",
+        "text": "git clone https://github.com/LambdaTest/puppeteer-sample.git\ncd puppeteer-sample"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Run Your First Puppeteer Test",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "'use strict';\nconst { strict } = require('once');\nconst puppeteer = require('puppeteer');\nconst expect = require('chai').expect;\n\n(async () => {    \n    const capabilities = {\n        'browserName': 'Chrome',\n        'browserVersion': 'latest',\n        'LT:Options': {\n            'platform': 'Windows 10',\n            'build': 'puppeteer-build-1',\n            'name': 'My first Puppeteer test',\n            'resolution':'1366x768',\n            'user': process.env.LT_USERNAME || \"Your Username\",\n            'accessKey': process.env.LT_ACCESS_KEY || \"Your Access Key\",,\n            'network': true\n        }\n   };\n    \n    try {\n        const browser = await puppeteer.connect({\n            browserWSEndpoint:\n                `wss://cdp.lambdatest.com/puppeteer?capabilities=${encodeURIComponent(JSON.stringify(capabilities))}`,\n        });\n\n        const page = await browser.newPage();\n        await page.setViewport({\n            width: 1024,\n            height: 768,\n            deviceScaleFactor: 1,\n          });\n        console.log(\"Navigating to LambdaTest\");\n        await page.goto('https://www.lambdatest.com/');\n        console.log(\"Navigating to Pricing\");\n        await page.goto('https://www.lambdatest.com/pricing');\n        console.log(\"Navigating to Automation\");\n        await page.goto('https://www.lambdatest.com/automation-testing');\n        console.log(\"Closing browser\");\n        await browser.close();\n\n    } catch (e) {\n        console.log(\"Error - \", e);\n    }\n})();"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 7",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "node navigation.js"
+      }
+    ],
+    "dateModified": "2026-09-09T19:13:32+05:30"
+  }) }}
+/>
+
+
 # How to Run Your First Puppeteer Test on TestMu AI
 ***
 
@@ -58,11 +171,15 @@ Before you run a test, set up the sample project and your credentials. All code 
 
 2. Install the npm dependencies.
 
+<VerifiedTag value="Verified" />
+
 ```bash
 npm install
 ```
 
 3. Add `browserWSEndpoint` (the browser endpoint URL) in your test script.
+
+<VerifiedTag value="Verified" />
 
 ```js
 `wss://cdp.lambdatest.com/puppeteer?capabilities=${encodeURIComponent(JSON.stringify(capabilities))}`
@@ -74,12 +191,16 @@ npm install
 
 **Windows**
 
+<VerifiedTag value="Verified" />
+
 ```bash
 set LT_USERNAME="YOUR_LAMBDATEST_USERNAME"
 set LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
 ```
 
 **macOS/Linux**
+
+<VerifiedTag value="Verified" />
 
 ```bash
 export LT_USERNAME="YOUR_LAMBDATEST_USERNAME"
@@ -93,6 +214,8 @@ With the project cloned and your credentials set, follow these steps to run a Pu
 
 1. Clone the [TestMu AI Puppeteer sample repository](https://github.com/LambdaTest/puppeteer-sample) and switch to the cloned directory.
 
+<VerifiedTag value="Verified" />
+
 ```bash
 git clone https://github.com/LambdaTest/puppeteer-sample.git
 cd puppeteer-sample
@@ -105,6 +228,8 @@ cd puppeteer-sample
 Once these steps are complete, you can run your first Puppeteer test on TestMu AI.
 
 >**Test Scenario**: The below test script runs on the Chrome browser on Windows 10. It visits the TestMu AI platform, opens the Pricing page, then navigates to the Automation Testing page.
+
+<VerifiedTag value="Verified" />
 
 ```js
 'use strict';
@@ -155,6 +280,8 @@ const expect = require('chai').expect;
 ```
 
 4. Run the test with the command below.
+
+<VerifiedTag value="Verified" />
 
 ```bash
 node navigation.js

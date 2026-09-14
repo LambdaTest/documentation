@@ -25,6 +25,8 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 
 
+import VerifiedTag from '@site/src/component/verifiedTag';
+
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
        "@context": "https://schema.org",
@@ -48,6 +50,167 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       })
     }}
 ></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/appium-kotlin/"
+    },
+    "headline": "Appium With Kotlin",
+    "description": "Now you can run your Appium automation scripts using Kotlin on TestMu AI Real Device Cloud Platform of 3000+ real mobile devices.",
+    "url": "https://www.testmuai.com/support/docs/appium-kotlin/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "App Automation",
+    "keywords": [
+      "appium",
+      "Kotlin",
+      "testmu ai kotlin"
+    ],
+    "proficiencyLevel": "Beginner",
+    "dependencies": "Your TestMu AI Username and Access key.; Install the latest version of IntelliJ IDEA. You can use any other IDE also.; Download and install Maven. You can use Homebrew package manager for Linux/macOS.; Make sure that Kotlin plugins are enabled/installed in the IntelliJ IDEA if you are using a previous version..",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 1",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "<\/TabItem>\n\n<TabItem value=\"ios\" label=\"iOS\" default>\n\n```java title=\"iOS.kt\"\nimport io.appium.java_client.MobileBy\nimport io.appium.java_client.MobileElement\nimport io.appium.java_client.remote.AppiumCommandExecutor\nimport io.appium.java_client.android.AndroidDriver\nimport io.appium.java_client.android.AndroidElement\nimport io.appium.java_client.ios.IOSDriver\nimport io.appium.java_client.ios.IOSElement\nimport org.junit.jupiter.api.Test\nimport org.openqa.selenium.remote.DesiredCapabilities\nimport java.net.URL\n\nclass iOS {\n\n    @Test\n    fun `sample test`() {\n        //highlight-next-line\n        val username = \"LT_USERNAME\"  //Add your LambdaTest username here\n        //highlight-next-line\n        val accessKey = \"LT_ACCESS_KEY\"  //Add your LambdaTest accessKey here\n\n        var driver: IOSDriver<IOSElement>? = null\n\n        val hub = URL(\"https://${username}:${accessKey}@mobile-hub.lambdatest.com/wd/hub\")\n\n        val caps = DesiredCapabilities()\n        caps.setCapability(\"platformName\", \"ios\")\n        caps.setCapability(\"deviceName\", \"iPhone 12\")\n        caps.setCapability(\"platformVersion\", \"14\")\n        caps.setCapability(\"isRealMobile\", true)\n        //highlight-next-line\n        caps.setCapability(\"app\", \"APP_URL\") //Add the app (.ipa) url here\n        caps.setCapability(\"deviceOrientation\", \"PORTRAIT\")\n        caps.setCapability(\"build\", \"Kotlin Vanilla - iOS\")\n        caps.setCapability(\"name\", \"Sample Test Kotlin\")\n        caps.setCapability(\"console\", true)\n        caps.setCapability(\"network\", false)\n        caps.setCapability(\"visual\", true)\n        caps.setCapability(\"device log\", true)\n\n\n        val app = IOSDriver<IOSElement>(hub, caps)\n\n        Thread.sleep(4000)\n\n        val color: MobileElement =\n            app.findElementById(\"color\")\n            color.click()\n\n        val text: MobileElement =\n            app.findElementById(\"Text\")\n            text.click()\n\n        val toast: MobileElement =\n            app.findElementById(\"toast\")\n            toast.click()\n\n        val notification: MobileElement =\n            app.findElementById(\"notification\")\n            notification.click()\n\n        val geo: MobileElement =\n            app.findElementById(\"geoLocation\")\n            geo.click()\n\n        Thread.sleep(5000)\n\n        app.navigate().back()\n\n\n        if (app != null) {\n            app.quit()\n        };\n\n    }\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "The capabilities object in the sample code are defined as (iOS)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "val caps = DesiredCapabilities()\ncaps.setCapability(\"platformName\", \"ios\")\ncaps.setCapability(\"deviceName\", \"iPhone 12\")\ncaps.setCapability(\"platformVersion\", \"14\")\ncaps.setCapability(\"isRealMobile\", true)\n//highlight-next-line\ncaps.setCapability(\"app\", \"APP_URL\") //Add the app (.ipa) url here\ncaps.setCapability(\"deviceOrientation\", \"PORTRAIT\")\ncaps.setCapability(\"build\", \"Kotlin Vanilla - iOS\")\ncaps.setCapability(\"name\", \"Sample Test Kotlin\")\ncaps.setCapability(\"console\", true)\ncaps.setCapability(\"network\", false)\ncaps.setCapability(\"visual\", true)\ncaps.setCapability(\"device log\", true)"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 5: Configure the Test Capabilities (Android)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "val caps = DesiredCapabilities()\ncaps.setCapability(\"autoAcceptAlerts\", true)\ncaps.setCapability(\"platformName\", \"Android\")\ncaps.setCapability(\"deviceName\", \"Galaxy S20\")\ncaps.setCapability(\"platformVersion\", \"11\")\ncaps.setCapability(\"platformName\", \"Android\")\ncaps.setCapability(\"isRealMobile\", true)\n//highlight-next-line\ncaps.setCapability(\"app\", \"APP_URL\") //Add the app (.apk) url here\ncaps.setCapability(\"deviceOrientation\", \"PORTRAIT\")\ncaps.setCapability(\"build\", \"Kotlin Vanilla - Android\")\ncaps.setCapability(\"name\", \"Sample Test Kotlin\")\ncaps.setCapability(\"console\", true)\ncaps.setCapability(\"network\", false)\ncaps.setCapability(\"visual\", true)\ncaps.setCapability(\"device log\", true)"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 6: Execute and Monitor your Tests",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "mvn clean install"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "The appium-skill package includes",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "appium-skill/\n\u251c\u2500\u2500 SKILL.md\n\u2514\u2500\u2500 reference/\n    \u251c\u2500\u2500 playbook.md\n    \u2514\u2500\u2500 advanced-patterns.md"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Install a Appium Agent Skill using the command below",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "codeRepository": "https://github.com/LambdaTest/agent-skills",
+        "text": "# Clone the repo and copy the skill you need\ngit clone https://github.com/LambdaTest/agent-skills.git\ncp -r agent-skills/appium-skill .claude/skills/\n\n# Or for Cursor / Copilot\ncp -r agent-skills/appium-skill .cursor/skills/"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Try our Sample Repository",
+      "description": "Now you can run your Appium automation scripts using Kotlin on TestMu AI Real Device Cloud Platform of 3000+ real mobile devices.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Get a Sample Project",
+          "text": "You can use your own project to configure and test it. For demo purposes, we are using the sample repository. All the code samples in this documentation can be found on TestMu AI's Github Repository. You can either download or clone the repository to quickly run your tests. View on GitHub",
+          "url": "https://www.testmuai.com/support/docs/appium-kotlin/#step-1-get-a-sample-project"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Setup the Environment Variables",
+          "text": "You need to export your environment variables LTUSERNAME and LTACCESSKEY* that are available in your TestMu AI Profile page. Run the below mentioned commands in your terminal to setup the environment variables. {`export LTUSERNAME=\"${ YOURLAMBDATEST_USERNAME()}\" export LTACCESSKEY=\"${ YOURLAMBDATESTACCESS_KEY()}\"`} {`set LTUSERNAME=\"${ YOURLAMBDATEST_USERNAME()}\" set LTACCESSKEY=\"${ YOURLAMBDATESTACCESS_KEY()}\"`}",
+          "url": "https://www.testmuai.com/support/docs/appium-kotlin/#step-2-setup-the-environment-variables"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Upload your Application",
+          "text": "Upload your iOS application (.ipa file) or android application (.apk or .aab file) to the TestMu AI servers using our REST API. You need to provide your Username and AccessKey in the format Username:AccessKey in the cURL command for authentication. Make sure to add the path of the appFile in the cURL request. Below is an example cURL request to upload your app using our REST API: {curl -u \"${ YOURLAMBDATESTUSERNAME()}:${ YOURLAMBDATESTACCESSKEY()}\" -X POST \"https://manual-api.lambdatest.com/app/upload/realDevice\" -F \"appFile=@\"/Users/macuser/Downloads/proverbialandroid.apk\"\" -F \"name=\"proverbial_app\"\"} {curl -u \"${ YOURLAMBDATESTUSERNAME()}:${ YOURLAMBDATESTACCESSKEY()}\" -X POST \"https://manual-api.lambdatest.com/app/upload/realDevice\" -F \"url=:https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbialandroid.apk\" -F \"name=Proverbial_App\"} If you do not have any .apk or .ipa file, you can run your sample tests on TestMu AI by using our sample apps, :link: Android app or :link: iOS app. Response of above cURL will be a JSON object containing the APP_URL of the format - lt://APP123456789123456789 and will be used in the next step.",
+          "url": "https://www.testmuai.com/support/docs/appium-kotlin/#step-3-upload-your-application"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Step 4: Update your Automation Script",
+          "text": "An automation script for the sample application available above has been provided here. Ensure to update the APP_URL, username and accesKey in the code scripts before running the tests. You must set isRealMobile capability to False in the config file to run on Virtual Devices You must set isRealMobile capability to False in the config file to run on Virtual Devices",
+          "url": "https://www.testmuai.com/support/docs/appium-kotlin/#step-4-update-your-automation-script"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 5,
+          "name": "Step 5: Configure the Test Capabilities",
+          "text": "You can update your custom capabilities in test scripts. In this sample project, we are passing platform name, platform version, device name and app url (generated earlier) along with other capabilities like build name and test name via capabilities object. The capabilities object in the sample code are defined as: You must set isRealMobile capability to False in the config file to run on Virtual Devices You must add the generated APPURL** to the app capability in the config file. You can generate capabilities for your test requirements with the help of our inbuilt Capabilities Generator tool.For more details, please refer to our guide on Desired Capabilities in Appium.",
+          "url": "https://www.testmuai.com/support/docs/appium-kotlin/#step-5-configure-the-test-capabilities"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 6,
+          "name": "Step 6: Execute and Monitor your Tests",
+          "text": "Install the required dependencies: Now, you have to successfully build the test in your IDE. Then run the current file by using Run button in the IDE. Your test results would be displayed on the test console (or CLI if you are using terminal/cmd) and on the TestMu AI App Automation Dashboard.",
+          "url": "https://www.testmuai.com/support/docs/appium-kotlin/#step-6-execute-and-monitor-your-tests"
+        }
+      ]
+    }
+  ]) }}
+/>
+
+
 
 Running Appium tests with Kotlin on TestMu AI automates native and hybrid mobile apps across a real device cloud of 3000+ Android and iOS devices. Configure your project, set desired capabilities, upload your app, and run scripts to view results.
 
@@ -75,6 +238,9 @@ You need to export your environment variables *LT_USERNAME* and *LT_ACCESS_KEY* 
 
 <Tabs className="docs__val">
 <TabItem value="bash" label="Linux / MacOS" default>
+
+  <VerifiedTag value="Verified" />
+
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-bash">
   {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
@@ -83,6 +249,9 @@ export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 </div>
 </TabItem>
 <TabItem value="powershell" label="Windows" default>
+
+  <VerifiedTag value="Verified" />
+
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-powershell">
   {`set LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
@@ -100,6 +269,9 @@ Make sure to add the path of the **appFile** in the cURL request. Below is an ex
 <Tabs className="docs__val">
 
 <TabItem value="bash" label="App File" default>
+
+  <VerifiedTag value="Verified" />
+
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-bash">
       {`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" -X POST "https://manual-api.lambdatest.com/app/upload/realDevice" -F "appFile=@"/Users/macuser/Downloads/proverbial_android.apk"" -F "name="proverbial_app""`}
@@ -108,6 +280,9 @@ Make sure to add the path of the **appFile** in the cURL request. Below is an ex
 </TabItem>
 
 <TabItem value="powershell" label="App URL" default>
+
+  <VerifiedTag value="Verified" />
+
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-bash">
       {`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" -X POST "https://manual-api.lambdatest.com/app/upload/realDevice" -F "url=:https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_android.apk" -F "name=Proverbial_App"`}
@@ -129,6 +304,8 @@ An automation script for the sample application available above has been provide
 
 <Tabs className="docs__val">
 <TabItem value="android" label="Android" default>
+
+<VerifiedTag value="Verified" />
 
 ```java title="android.kt"
 import io.appium.java_client.MobileBy
@@ -219,6 +396,8 @@ class android {
 </TabItem>
 
 <TabItem value="ios" label="iOS" default>
+
+<VerifiedTag value="Verified" />
 
 ```java title="iOS.kt"
 import io.appium.java_client.MobileBy
@@ -316,6 +495,8 @@ The capabilities object in the sample code are defined as:
 <Tabs className="docs__val">
 <TabItem value="ios-config" label="iOS" default>
 
+<VerifiedTag value="Verified" />
+
 ```java
 val caps = DesiredCapabilities()
 caps.setCapability("platformName", "ios")
@@ -336,6 +517,8 @@ caps.setCapability("device log", true)
 </TabItem>
 
 <TabItem value="android-config" label="Android" default>
+
+<VerifiedTag value="Verified" />
 
 ```java
 val caps = DesiredCapabilities()
@@ -372,6 +555,8 @@ caps.setCapability("device log", true)
 ### Step 6: Execute and Monitor your Tests
 
 - Install the required dependencies:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 mvn clean install

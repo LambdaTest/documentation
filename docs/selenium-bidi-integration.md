@@ -18,6 +18,8 @@ canonical: https://www.testmuai.com/support/docs/selenium-bidi-integration/
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 
+import VerifiedTag from '@site/src/component/verifiedTag';
+
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
        "@context": "https://schema.org",
@@ -41,6 +43,130 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       })
     }}
 ></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/selenium-bidi-integration/"
+    },
+    "headline": "BiDi Testing with Selenium WebDriver on TestMu AI",
+    "description": "Run BiDi tests with Selenium WebDriver on the cloud grid for event-driven, cross-browser automation.",
+    "url": "https://www.testmuai.com/support/docs/selenium-bidi-integration/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Web Automation",
+    "keywords": [
+      "selenium bidi protocol testing",
+      "webdriver bidi cross browser",
+      "bidi event driven automation"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Install all the necessary dependencies of the project by running the following command",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "npm install"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 2: Set Up Your Credentials",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "LT_USERNAME = <YOUR_USERNAME>\nLT_ACCESS_KEY = <YOUR_ACCESS_KEY>"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 3: Trigger the Tests",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "  webSocketUrl: true"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 3: Trigger the Tests",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "  npm run wdio"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Steps to Run Tests",
+      "description": "Set up and run BiDi tests using WebdriverIO on the cloud grid. Follow these steps to run tests on TestMu AI using WebdriverIO with BiDi Protocol: Install Node.js >= 12. Get your TestMu AI Username and Access Key.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Set Up the Project",
+          "text": "You can use your own project to configure and test it. For demo purposes, we use the sample repository. Download or Clone the code sample for the Selenium WebdriverIO BiDi from the TestMu AI GitHub repository to run the tests. Install all the necessary dependencies of the project by running the following command:",
+          "url": "https://www.testmuai.com/support/docs/selenium-bidi-integration/#step-1-set-up-the-project"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Set Up Your Credentials",
+          "text": "Create a .env file in the root folder of your project. Add your TestMu AI Username and Access Key in place of ` and `.",
+          "url": "https://www.testmuai.com/support/docs/selenium-bidi-integration/#step-2-set-up-your-credentials"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Trigger the Tests",
+          "text": "Pass the webSocketUrl as true in the wdio.lambdatest.conf.js file to enable BiDi support. Run the following command in your terminal to trigger the tests on TestMu AI platform using the specified configuration. Home Support BiDi Testing with Selenium WebDriver on TestMu AI",
+          "url": "https://www.testmuai.com/support/docs/selenium-bidi-integration/#step-3-trigger-the-tests"
+        }
+      ]
+    }
+  ]) }}
+/>
+
+
 Selenium WebDriver BiDi is a W3C standard protocol used to establish communication between a test script and a remote WebDriver server. It introduces bi-directional communication, meaning both the script and the browser can send requests and responses, leading to a more dynamic and reactive testing experience.
 
 > BiDi is compatible with **Chrome**, **Firefox**, and **Edge** browsers. For more information, refer to the [documentation](https://wpt.fyi/results/webdriver/tests/bidi?label=stable&label=master&aligned).
@@ -83,6 +209,8 @@ Download or Clone the code sample for the Selenium WebdriverIO BiDi from the Tes
 
 Install all the necessary dependencies of the project by running the following command:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 npm install
 ```
@@ -91,6 +219,8 @@ npm install
 
 1. Create a `.env` file in the root folder of your project.
 2. Add your TestMu AI [Username and Access Key](/support/docs/using-environment-variables-for-authentication-credentials/) in place of `<YOUR_USERNAME>` and `<YOUR_ACCESS_KEY>`.
+
+<VerifiedTag value="Verified" />
 
 ```yaml
 LT_USERNAME = <YOUR_USERNAME>
@@ -101,11 +231,15 @@ LT_ACCESS_KEY = <YOUR_ACCESS_KEY>
 
 1. Pass the `webSocketUrl` as true in the `wdio.lambdatest.conf.js` file to enable BiDi support.
 
+  <VerifiedTag value="Verified" />
+
   ```yaml
   webSocketUrl: true
   ```
 
 2. Run the following command in your terminal to trigger the tests on TestMu AI platform using the specified configuration.
+
+  <VerifiedTag value="Verified" />
 
   ```bash
   npm run wdio

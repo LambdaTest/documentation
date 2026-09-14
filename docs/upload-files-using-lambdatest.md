@@ -21,6 +21,8 @@ import TabItem from '@theme/TabItem';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from '@site/src/component/keys';
 
 
+import VerifiedTag from '@site/src/component/verifiedTag';
+
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
        "@context": "https://schema.org",
@@ -44,6 +46,116 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from '@site/src/co
       })
     }}
 ></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/upload-files-using-testmu/"
+    },
+    "headline": "Upload Files Using TestMu AI Selenium Grid",
+    "description": "Upload files to the TestMu AI Selenium Grid and use them in automation test scripts across 3000+ browsers.",
+    "url": "https://www.testmuai.com/support/docs/upload-files-using-testmu/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Web Automation",
+    "keywords": [
+      "upload files selenium grid cloud",
+      "lambda userFiles capability",
+      "file upload automation testing selenium"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "How to Test the Uploaded File on TestMu AI Platform",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "HashSet<String> ab = new HashSet<>();\nab.add(\"Sample-Spreadsheet-10-rows.csv\");\nDesiredCapabilities capabilities = new DesiredCapabilities();\ncapabilities.setCapability(\"build\",\"Upload\");\ncapabilities.setCapability(\"name\",\"Upload Files\");\ncapabilities.setCapability(\"browserName\", \"Chrome\");\ncapabilities.setCapability(\"browserVersion\",\"104\");\ncapabilities.setCapability(\"platformName\", \"Windows 10\");\ncapabilities.setCapability(\"lambda:userFiles\",ab);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "How to Test the Uploaded File on TestMu AI Platform",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "C#",
+        "text": "//HashMap\nstring testName = callStack[0].ToString();\nInitCaps\nString[] ltFile = new string[] { \"file-name.csv\" };\n\n// Capabilities\ncapabilities.AddAdditionalOption(\"lambda:userFiles\", ltFile);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 3",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "$capabilities = array(\n    .\n    .\n\"lambda:userFiles\" => [\n\"804402.png\",\n\"file_example_JPG_2500kB.jpg\",\n\"Sample_File_To_Upload.txt\"\n])"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 4",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Python",
+        "text": "capabilities = {\n      .\n      .\n\"lambda:userFiles\" : [\n\"804402.png\",\n\"file_example_JPG_2500kB.jpg\",\n\"Sample_File_To_Upload.txt\"\n]\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 5",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "var capabilities = {\n    .\n    .\n\"lambda:userFiles\" : [\n\"804402.png\",\n\"file_example_JPG_2500kB.jpg\",\n\"Sample_File_To_Upload.txt\"\n]\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "For example, to upload a file on a web page via test script, use the following Java code (on Windows and macOS)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "   // If the file is 804402.png, and testing environment is Windows OS\n   WebElement addFile = driver.findElement(By.xpath(\".//input[@type='file']\"));\n   addFile.sendKeys(\"C:\\\\Users\\\\ltuser\\\\Downloads\\\\804402.png\");\n\n   // If the file is 804402.png, and testing environment is macOS\n   WebElement addFile = driver.findElement(By.xpath(\".//input[@type='file']\"));\n   addFile.sendKeys(\"/Users/ltuser/Downloads/804402.png\");"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Basic Syntax",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "driver.executeScript(\"lambda-files-download=file_name\")"
+      }
+    ],
+    "dateModified": "2026-09-09T19:13:32+05:30"
+  }) }}
+/>
+
 
 # How to Upload and Download Files in Selenium on TestMu AI
 ---
@@ -84,6 +196,8 @@ For example: If you uploaded 3 files named "804402.png", "file_example_JPG_2500k
 
 **Java**
 
+<VerifiedTag value="Verified" />
+
 ```java
 HashSet<String> ab = new HashSet<>();
 ab.add("Sample-Spreadsheet-10-rows.csv");
@@ -98,6 +212,8 @@ capabilities.setCapability("lambda:userFiles",ab);
 
 **C#**
 
+<VerifiedTag value="Verified" />
+
 ```csharp
 //HashMap
 string testName = callStack[0].ToString();
@@ -109,6 +225,8 @@ capabilities.AddAdditionalOption("lambda:userFiles", ltFile);
 ```
 
 **PHP**
+
+<VerifiedTag value="Verified" />
 
 ```javascript
 $capabilities = array(
@@ -123,6 +241,8 @@ $capabilities = array(
 
 **Python**
 
+<VerifiedTag value="Verified" />
+
 ```py
 capabilities = {
       .
@@ -136,6 +256,8 @@ capabilities = {
 ```
 
 **JavaScript**
+
+<VerifiedTag value="Verified" />
 
 ```js
 var capabilities = {
@@ -163,6 +285,8 @@ The following table shows the file path for uploaded files on both desktop and m
 
 For example, to upload a file on a web page via test script, use the following Java code (on Windows and macOS):
 
+<VerifiedTag value="Verified" />
+
 ```java
    // If the file is 804402.png, and testing environment is Windows OS
    WebElement addFile = driver.findElement(By.xpath(".//input[@type='file']"));
@@ -184,18 +308,29 @@ TestMu AI Selenium Grid provides an encoded string of base64 that you can use to
 
 - Check whether the downloaded file exists in the test machine.
 
+<VerifiedTag value="Verified" />
+
 ```javascript
 ((JavascriptExecutor) driver).executeScript("lambda-file-exists=file-name.file_format");
 ```
 - Retrieve file metadata such as md5 code, modified time, name, and size.
+
+<VerifiedTag value="Verified" />
+
 ```javascript
 ((JavascriptExecutor) driver).executeScript("lambda-file-stats=file-name.file_format");
 ```
 - Download file content using base64 encoding.
+
+<VerifiedTag value="Verified" />
+
 ```javascript
 ((JavascriptExecutor) driver).executeScript("lambda-file-content=file-name.file_format");
 ```
 - Lambda File List Custom Executor
+
+<VerifiedTag value="Verified" />
+
 ```javascript
 print driver.execute_script("lambda-file-list={match string with filename}");
 ie:. 
@@ -210,6 +345,8 @@ Use the lambda-file hooks in Java to verify, inspect, and download files from th
 
 <Tabs className="docs__val">
 <TabItem value="android" label="Selenium 4" default>
+
+<VerifiedTag value="Verified" />
 
 ```java 
 import java.io.FileOutputStream;
@@ -313,6 +450,8 @@ public class PullFileSelenium {
 </TabItem>
 
 <TabItem value="ios" label="Selenium 3" default>
+
+<VerifiedTag value="Verified" />
 
 ```java
 import java.io.FileOutputStream;
@@ -426,6 +565,8 @@ public class DownloadCheck {
 ---
 Use the lambda-file hooks in Python to verify and download files from the test VM.
 
+<VerifiedTag value="Verified" />
+
 ```python
 import unittest
 import time
@@ -512,6 +653,8 @@ if __name__ == "__main__":
 ---
 Use the lambda-file hooks in Node.js to verify and download files from the test VM.
 
+<VerifiedTag value="Verified" />
+
 ```javascript
 const webdriver = require('selenium-webdriver');
 
@@ -585,6 +728,8 @@ downloadFeature();
 ## Downloading File Using Selenium with C#
 ---
 Use the lambda-file hooks in C# to verify and download files from the test VM.
+
+<VerifiedTag value="Verified" />
 
 ```csharp
 using System;
@@ -705,6 +850,8 @@ namespace NUnitSelenium
 ## Downloading File Using Selenium with Ruby
 ---
 Use the lambda-file hooks in Ruby to verify and download files from the test VM.
+
+<VerifiedTag value="Verified" />
 
 ```ruby
 require 'selenium-webdriver'

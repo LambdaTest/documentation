@@ -43,6 +43,64 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/author-your-first-mobile-browser-test/"
+    },
+    "headline": "Author Your First Mobile Browser Test",
+    "description": "In this detailed guide, you will learn how you can manually author your first mobile browser test with KaneAI.",
+    "url": "https://www.testmuai.com/support/docs/author-your-first-mobile-browser-test/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "KaneAI",
+    "keywords": [
+      "ai testing tool",
+      "ai qa agent",
+      "genai qa agent"
+    ],
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "dateModified": "2026-09-09T20:21:05+05:30"
+  }) }}
+/>
+
+
 # How to Author Mobile Browser Tests With KaneAI
 ***
 
@@ -111,7 +169,9 @@ Click **Author Test**.
 ### Step 6: Describe Your Test in Natural Language
 ***
 
-Tell KaneAI what you want to test in plain English. KaneAI translates each instruction into an executable test step automatically. As you add instructions, KaneAI queues them in real time without waiting for completion, so you can build the full flow without pausing. When you finish, click **Finish Test** to finalize the test case.
+Tell KaneAI what you want to test in plain English. KaneAI translates each instruction into an executable test step automatically. As you add instructions, KaneAI queues them in real time without waiting for completion, so you can build the full flow without pausing. When you finish, click **Save** in the top-right header to finalize the test case.
+
+Your test is saved as **Ready** when every step has run and passed, which is also when automation code is generated. If some steps were never run, or a step errored, it saves as Unverified or Faulty instead and you can finish it later. See [Save states](/support/docs/kaneai-authoring-session/#save-states).
 
 <img loading="lazy" src={require('../assets/images/kane-ai/kaneai-author-browser-tests/mobile-browser-test-authoring.png').default} alt="Describe Your Test in Natural Language" width="1347" height="616"  className="doc_img"/> 
 
@@ -151,6 +211,8 @@ This table lists which actions are supported when authoring mobile browser tests
 | Cookies & Local Storage                                               | Supported             |                                                                                         |
 | Network Assertions                                                    | Not Supported         | Not yet available for mobile web; only supported on web.                                |
 | Negative Scenarios from App UX (e.g. switch app, go to home, go back) | Not Supported         | These are app-specific and not currently available in browser testing mode.             |
+| Manual Interaction capture                                            | Not Supported         | Mobile browser sessions are authored with natural language instructions and slash commands. |
+| Cursor placement and run actions                                      | Supported             | See [Authoring Session](/support/docs/kaneai-authoring-session/).                        |
 
 ## Next Steps
 ***

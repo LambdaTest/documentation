@@ -26,6 +26,8 @@ import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 
+import VerifiedTag from '@site/src/component/verifiedTag';
+
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
        "@context": "https://schema.org",
@@ -50,11 +52,137 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/espresso-env-variables-settings/"
+    },
+    "headline": "Setting Up Espresso Environment Variables",
+    "description": "Now you can run your Espresso framework on TestMu AI and this particular feature allows users to pass and retrieve environment variables (like STAGE, PROD, or DEV) during automated Android tests.",
+    "url": "https://www.testmuai.com/support/docs/espresso-env-variables-settings/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "App Automation",
+    "keywords": [
+      "espresso",
+      "environment",
+      "testmu ai java"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 1: Create Variables in Your Test Suite",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n``` bash title=\"Examples\"\nString stage = InstrumentationRegistry.getArguments().getString(\u201cSTAGE\u201d);\nString prod = InstrumentationRegistry.getArguments().getString(\u201cPROD\u201d);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 4: Executing The Test",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "curl --location --request POST 'https://mobile-api.lambdatest.com/framework/v1/espresso/build' \\\n--header 'Authorization: Basic BASIC_AUTH_TOKEN' \\\n--header 'Content-Type: application/json' \\\n--data-raw '{\n    \"app\" : \"APP_ID\",\n    \"testSuite\": \"TEST_SUITE_ID\",\n    \"device\" :  [\"Galaxy S21 5G-12\"],\n    \"queueTimeout\": 10800,\n    \"IdleTimeout\": 150,\n    \"deviceLog\": true,\n    \"network\": false,\n   \"build\" : \"Proverbial-Espresso\"\n   # highlight-start\n   \"envVariables\":{                     //setting up environment variables\n      \"STAGE\":\"stg1\",\n      \"PROD\":\"prod1\"\n    }\n    # highlight-end\n}'"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Run your test in HyperExecute",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "---\nversion: \"0.2\"\nconcurrency: 4\nrunson: android\nautosplit: true\nmaxRetries: 2\n# highlight-start\nenv:\n  STAGE: stg1\n  PROD: prod1\n# highlight-end\nframework:\n  name: \"android/espresso\"\n  args:\n    reservation: false \n    buildName: \"Test Espresso Sharding\"\n    appId: <TARGET_SUITE>\n    testSuiteAppId: <TEST_SUITE>\n    deviceSelectionStrategy: any\n    devices: [\".*\"]\n    shards:\n      mappings:\n      - name: shard1\n        strategy: \"only-testing/skip-testing\"\n        values: [\"<className>/<className/testName>\"]\n     - name: shard2\n       strategy: \"only-testing/skip-testing\"\n       values: [\"<className>/<className/testName>\", \"<className>/<className/testName>\"]"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Setting Up Espresso Environment Variables",
+      "description": "Now you can run your Espresso framework on TestMu AI and this particular feature allows users to pass and retrieve environment variables (like STAGE, PROD, or DEV) during automated Android tests.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Create Variables in Your Test Suite",
+          "text": "Define environment variables in your Espresso test suite to fetch the variable values during execution.",
+          "url": "https://www.testmuai.com/support/docs/espresso-env-variables-settings/#step-1-create-variables-in-your-test-suite"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Upload Your Application",
+          "text": "To begin testing, upload your Android application (.apk file) to TestMu AI's servers. You'll use our REST API for this process. Authentication : You'll need your TestMu AI Username and AccessKey. Combine them in the format Username:AccessKey. Uploading the App : Use cURL command to send a request to our API. The request should include the path to your application file (appFile). {curl -u \"${ YOURLAMBDATESTUSERNAME()}:${ YOURLAMBDATESTACCESS_KEY()}\" --location --request POST 'https://manual-api.lambdatest.com/app/uploadFramework' --form 'appFile=@\"\"' --form 'type=\"espresso-android\"'} {curl -u \"${ YOURLAMBDATESTUSERNAME()}:${ YOURLAMBDATESTACCESS_KEY()}\" --location --request POST \"https://manual-api.lambdatest.com/app/uploadFramework\" --form \"appFile=@\"\"\" --form \"type=\\\"espresso-android\\\"\"} Provide the path of your android application in the above URL in place of `` Response of above cURL will be a JSON object containing the App URL of the format - lt://APP123456789123456789 and will be used in the last step.",
+          "url": "https://www.testmuai.com/support/docs/espresso-env-variables-settings/#step-2-upload-your-application"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Upload Your Test Suite",
+          "text": "Upload your Espresso test suite (.apk) file to TestMu AI servers using our REST API. The following sample cURL command shows how to upload a test suite: {curl -u \"${ YOURLAMBDATESTUSERNAME()}:${ YOURLAMBDATESTACCESS_KEY()}\" --location --request POST 'https://manual-api.lambdatest.com/app/uploadFramework' --form 'appFile=@\"\"' --form 'type=\"espresso-android\"'} {curl -u \"${ YOURLAMBDATESTUSERNAME()}:${ YOURLAMBDATESTACCESS_KEY()}\" --location --request POST \"https://manual-api.lambdatest.com/app/uploadFramework\" --form \"appFile=@\"\"\" --form \"type=\\\"espresso-android\\\"\"} Provide the path of your android application in the above URL in place of `` Response of above cURL will be a JSON object containing the App URL of the format - lt://APP123456789123456789 and will be used in the last step.",
+          "url": "https://www.testmuai.com/support/docs/espresso-env-variables-settings/#step-3-upload-your-test-suite"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Step 4: Executing The Test",
+          "text": "You will need base64 encoded authentication in order to execute your Espresso automation test suite. Enter your username:accesskey in Basic Authentication Header Generator to generate your auth token. Take note of the base64 encoded authentication which needs to be added in the next step. {${ YOURLAMBDATESTUSERNAME()}:${ YOURLAMBDATESTACCESS_KEY()}} Once you have uploaded your app and test suite, you can execute your test by running the following command: Enter your BASICAUTHTOKEN, APPID (generated in the first step) and TESTSUITEID** (generated in the second step) in the below command.",
+          "url": "https://www.testmuai.com/support/docs/espresso-env-variables-settings/#step-4-executing-the-test"
+        }
+      ]
+    }
+  ]) }}
+/>
+
+
+
 Setting Espresso environment variables on TestMu AI lets you pass values like STAGE, PROD, or DEV into automated Android tests at runtime. Define variables in your test suite, supply them during execution, and switch environments dynamically without rebuilding your APK.
 
 ## Step 1: Create Variables in Your Test Suite
 Define environment variables in your Espresso test suite to fetch the variable values during execution.
 
+
+<VerifiedTag value="Verified" />
 
 ```bash title="Sample Script"
 String envVar = InstrumentationRegistry.getArguments().getString(ENV_VAR);
@@ -76,6 +204,8 @@ To begin testing, upload your Android application (.apk file) to <BrandName />'s
 
 <TabItem value="bash" label="Linux / MacOS" default>
 
+  <VerifiedTag value="Verified" />
+
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-bash">
   {`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" --location --request POST 'https://manual-api.lambdatest.com/app/uploadFramework' --form 'appFile=@"<PATH_OF_YOUR_ANDROID_APP>"' --form 'type="espresso-android"'`}
@@ -85,6 +215,8 @@ To begin testing, upload your Android application (.apk file) to <BrandName />'s
 </TabItem>
 
 <TabItem value="powershell" label="Windows" default>
+
+  <VerifiedTag value="Verified" />
 
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-powershell">
@@ -110,6 +242,8 @@ The following sample cURL command shows how to upload a test suite:
 
 <TabItem value="bash" label="Linux / MacOS" default>
 
+  <VerifiedTag value="Verified" />
+
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-bash">
   {`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" --location --request POST 'https://manual-api.lambdatest.com/app/uploadFramework' --form 'appFile=@"<PATH_OF_YOUR_TEST_SUITE_APP>"' --form 'type="espresso-android"'`}
@@ -119,6 +253,8 @@ The following sample cURL command shows how to upload a test suite:
 </TabItem>
 
 <TabItem value="powershell" label="Windows" default>
+
+  <VerifiedTag value="Verified" />
 
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-powershell">
@@ -140,6 +276,8 @@ The following sample cURL command shows how to upload a test suite:
 
 Take note of the base64 encoded authentication which needs to be added in the next step.
 
+<VerifiedTag value="Verified" />
+
 <div className="lambdatest__codeblock">
     <CodeBlock className="language-powershell">
 {`${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}`}
@@ -149,6 +287,8 @@ Take note of the base64 encoded authentication which needs to be added in the 
 - Once you have uploaded your app and test suite, you can execute your test by running the following command:
  
 > Enter your **BASIC_AUTH_TOKEN**, **APP_ID** (generated in the first step) and **TEST_SUITE_ID** (generated in the second step) in the below command.
+
+<VerifiedTag value="Verified" />
 
 ```bash
 curl --location --request POST 'https://mobile-api.lambdatest.com/framework/v1/espresso/build' \
@@ -174,6 +314,8 @@ curl --location --request POST 'https://mobile-api.lambdatest.com/framework/v1/e
 
 ## Run your test in HyperExecute
 To execute your test suite in HyperExecute, configure your YAML file by specifying the `<RELATIVE_APP_PATH>` and `<RELATIVE_TEST_SUITE_PATH>`.
+
+<VerifiedTag value="Verified" />
 
 ```yaml
 ---

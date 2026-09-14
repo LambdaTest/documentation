@@ -25,6 +25,8 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 
+import VerifiedTag from '@site/src/component/verifiedTag';
+
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
        "@context": "https://schema.org",
@@ -48,6 +50,193 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       })
     }}
 ></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/smartui-with-github-actions/"
+    },
+    "headline": "GitHub Actions Pipeline Integration with SmartUI",
+    "description": "SmartUI now integrates with GitHub Actions Pipeline to boost your go-to market delivery. Perform automated cross browser testing with SmartUI to ensure your development code renders seamlessly providing 3000+ real browsers running through machines.",
+    "url": "https://www.testmuai.com/support/docs/smartui-with-github-actions/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "SmartUI",
+    "keywords": [
+      "testmu ai integrations",
+      "smart ui integration",
+      "smart ui integrations with ci/cd tools"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 3: Create the GitHub Actions workflow YAML file",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n### Step 4: Run the Workflow\nTo run the new pipeline that you just created, click the **Run workflow** button on the workflow page. A prompt will ask you to enter your **PROJECT_TOKEN**. You can get your project token from the dashboard after creating your SmartUI project.\n\n<img loading=\"lazy\" src={require('../assets/images/smart-visual-testing/ci-cd-integration/github-actions/github-actions.png').default} alt=\"Create New Project\" width=\"\" height=\"\"/>\n\n> Check your output in the [SmartUI Dashboard](https://www.testmuai.com/login/?redirectTo=https://smartui.lambdatest.com/projects)\n\n## Best Practices\n\n<Tabs className='docs__val' groupId='best-practices'>\n<TabItem value='secret-management' label='Secret Management' default>\n\n**Secret Management**\n\n- Never commit credentials to repository\n- Use GitHub Secrets for all sensitive data\n- Rotate secrets regularly\n- Use different secrets for different environments\n\n<\/TabItem>\n<TabItem value='workflow-optimization' label='Workflow Optimization'>\n\n**Workflow Optimization**\n\n- Use matrix strategies for parallel execution\n- Cache dependencies to speed up workflows\n- Only run visual tests on relevant branches\n- Set up workflow conditions to avoid unnecessary runs\n\n**Example:**\n```yaml\non:\n  push:\n    branches: [ main, develop ]\n  pull_request:\n    branches: [ main ]"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 2",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "- name: Set build name\n  run: |\n    BUILD_NAME=\"PR-${{ github.event.pull_request.number }}-${{ github.sha }}\"\n    echo \"BUILD_NAME=$BUILD_NAME\" >> $GITHUB_ENV"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Pass secret to workflow step",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "   env:\n     PROJECT_TOKEN: ${{ secrets.PROJECT_TOKEN }}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "For manual workflows, add workflow input",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "   on:\n     workflow_dispatch:\n       inputs:\n         project_token:\n           required: true\n           type: string"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Check workflow logs for errors",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "   - name: View logs\n     if: failure()\n     run: |\n       # Check previous step logs"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Increase workflow timeout",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "   timeout-minutes: 60"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Run tests in parallel using matrix",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "   strategy:\n     matrix:\n       test-group: [1, 2, 3]"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Use specific Node version",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "   - uses: actions/setup-node@v3\n     with:\n       node-version: '18'"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Clear npm cache",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "   - run: npm cache clean --force"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Ensure Node.js setup step is included",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "   - uses: actions/setup-node@v3\n     with:\n       node-version: '18'"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Verify npm is available",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "   - run: npm --version"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Install SmartUI CLI explicitly",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "   - run: npm install -g @lambdatest/smartui-cli"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Steps to Integrate GitHub Actions Pipeline with SmartUI",
+      "description": "To integrate GitHub Actions Pipeline with SmartUI, follow the below steps. You can use your own project to configure and test it. For demo purposes, we are using the sample repository. Download or Clone the code sample from the TestMu AI GitHub repository to run the tests on the SmartUI.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Create your Secrets",
+          "text": "Click on the Settings of your repository. Go to the Security option > Secrets and Variables > Actions. Create your secrets with variable name LTUSERNAME and LTACCESSKEY**. You can fetch your credentials from the Accounts and Settings dashboard.",
+          "url": "https://www.testmuai.com/support/docs/smartui-with-github-actions/#step-1-create-your-secrets"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Create a New Workflow",
+          "text": "Navigate to the main page of the repository. Under your repository name, click Actions. In the left sidebar, click the New workflow button.",
+          "url": "https://www.testmuai.com/support/docs/smartui-with-github-actions/#step-2-create-a-new-workflow"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Create the GitHub Actions workflow YAML file",
+          "text": "To create the GitHub Actions pipeline YAML file, follow the sample command below:",
+          "url": "https://www.testmuai.com/support/docs/smartui-with-github-actions/#step-3-create-the-github-actions-workflow-yaml-file"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Step 4: Run the Workflow",
+          "text": "To run the new pipeline that you just created, click the Run workflow button on the workflow page. A prompt will ask you to enter your PROJECTTOKEN**. You can get your project token from the dashboard after creating your SmartUI project. Check your output in the SmartUI Dashboard",
+          "url": "https://www.testmuai.com/support/docs/smartui-with-github-actions/#step-4-run-the-workflow"
+        }
+      ]
+    }
+  ]) }}
+/>
+
+
 GitHub Actions is a powerful automation and continuous integration/continuous delivery (CI/CD) platform built into GitHub. It allows you to create custom automated YAML workflows directly within your GitHub repositories. This helps you to build and test every pull request to your repository, or deploy merged pull requests to production.
 
 This document will show you how to integrate GitHub Actions Pipeline with SmartUI to greatly shorten your test cycles.
@@ -73,6 +262,8 @@ Download or Clone the code sample from the <BrandName /> GitHub repository to ru
 
 ### Step 3: Create the GitHub Actions workflow YAML file
 To create the GitHub Actions pipeline YAML file, follow the sample command below:
+
+<VerifiedTag value="Verified" />
 
 ```yaml reference title="github-actions.yml"
 https://github.com/amanchopra1905/smartui-ci-cd-integrations/blob/main/.github/workflows/main.yml
@@ -108,6 +299,9 @@ To run the new pipeline that you just created, click the **Run workflow** button
 - Set up workflow conditions to avoid unnecessary runs
 
 **Example:**
+
+<VerifiedTag value="Verified" />
+
 ```yaml
 on:
   push:
@@ -126,6 +320,9 @@ on:
 - Use consistent naming conventions
 
 **Example:**
+
+<VerifiedTag value="Verified" />
+
 ```yaml
 - name: Set build name
   run: |
@@ -207,12 +404,18 @@ on:
 1. Add PROJECT_TOKEN as GitHub Secret
 
 2. Pass secret to workflow step:
+
+   <VerifiedTag value="Verified" />
+
    ```yaml
    env:
      PROJECT_TOKEN: ${{ secrets.PROJECT_TOKEN }}
    ```
 
 3. For manual workflows, add workflow input:
+
+   <VerifiedTag value="Verified" />
+
    ```yaml
    on:
      workflow_dispatch:
@@ -241,6 +444,9 @@ on:
    - Ensure token includes project ID prefix
 
 2. Check workflow logs for errors:
+
+   <VerifiedTag value="Verified" />
+
    ```yaml
    - name: View logs
      if: failure()
@@ -267,11 +473,17 @@ on:
 
 **Solutions**:
 1. Increase workflow timeout:
+
+   <VerifiedTag value="Verified" />
+
    ```yaml
    timeout-minutes: 60
    ```
 
 2. Run tests in parallel using matrix:
+
+   <VerifiedTag value="Verified" />
+
    ```yaml
    strategy:
      matrix:
@@ -296,6 +508,9 @@ on:
 
 **Solutions**:
 1. Use specific Node version:
+
+   <VerifiedTag value="Verified" />
+
    ```yaml
    - uses: actions/setup-node@v3
      with:
@@ -303,6 +518,9 @@ on:
    ```
 
 2. Clear npm cache:
+
+   <VerifiedTag value="Verified" />
+
    ```yaml
    - run: npm cache clean --force
    ```
@@ -325,6 +543,9 @@ on:
 
 **Solutions**:
 1. Ensure Node.js setup step is included:
+
+   <VerifiedTag value="Verified" />
+
    ```yaml
    - uses: actions/setup-node@v3
      with:
@@ -332,11 +553,17 @@ on:
    ```
 
 2. Verify npm is available:
+
+   <VerifiedTag value="Verified" />
+
    ```yaml
    - run: npm --version
    ```
 
 3. Install SmartUI CLI explicitly:
+
+   <VerifiedTag value="Verified" />
+
    ```yaml
    - run: npm install -g @lambdatest/smartui-cli
    ```

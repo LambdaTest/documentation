@@ -26,6 +26,146 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
+
+<script type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify({
+       "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": BRAND_URL
+        },{
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Support",
+          "item": `${BRAND_URL}/support/docs/`
+        },{
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Multi Reporters Support",
+          "item": `${BRAND_URL}/support/docs/cyp-multi-reporters/`
+        }]
+      })
+    }}
+></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/cyp-multi-reporters/"
+    },
+    "headline": "Multi Reporters Support",
+    "description": "Learn how to generate multiple reporters supported by Cypress.",
+    "url": "https://www.testmuai.com/support/docs/cyp-multi-reporters/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Web Automation",
+    "keywords": [
+      "Cypress Automation",
+      "Cypress Testing Guide",
+      "Cypress Test Automation"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 1",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "\"run_settings\":{\n.....\n\"reporter_config_file\": \"reporter-config_mochawesome_junit.json\",\n\"downloads\": \"./cypress/results\",\n.....\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 2",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "{   \n    \"reporterEnabled\": \"mochawesome,mocha-junit-reporter\",\n    \"mochawesomeReporterOptions\": {\n        \"reportDir\": \"cypress/results/json\",\n        \"overwrite\": true,\n        \"html\": true,\n\t\t\"json\": true\n    },\n    \"mochaJunitReporterReporterOptions\": {\n        \"mochaFile\": \"cypress/results/my-test-output.xml\",\n        \"toConsole\": true\n    }\n  }"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Sample Output",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "Waiting for build to finish...\n\u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u252c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u252c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u252c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u252c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u252c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510\n\u2502 (index) \u2502               Spec                \u2502   Status    \u2502 Platform \u2502 Browser  \u2502 Version \u2502\n\u251c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u253c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u253c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u253c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u253c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u253c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2524\n\u2502    0    \u2502 'cypress_env_params_test_spec.js' \u2502 'completed' \u2502 'win10'  \u2502 'Chrome' \u2502 '109.0' \u2502\n\u2502    1    \u2502 'cypress_env_params_test_spec.js' \u2502 'completed' \u2502 'win10'  \u2502 'Chrome' \u2502 '109.0' \u2502\n\u2514\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2534\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2534\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2534\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2534\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2534\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2518\n{ completed: 2 }\nCreating directories\nDirectory created  lambdatest-artefacts/f60aa4f9-4fca-46aa-b862-e4a0746a2eea\nExtracted 14 entries for NPE6A-VMB8F-GVMDY-AG782\nExtracted 14 entries for 0OETA-BPSP3-XZVX4-EAPWB"
+      }
+    ],
+    "dateModified": "2026-07-19T21:41:43+05:30"
+  }) }}
+/>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Multi Reporters Support",
+      "description": "Learn how to generate multiple reporters supported by Cypress.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1",
+          "text": "Provide the path where your report artefacts will be generated by the test script in the lambdatest-config.json file. In the same file, add the path of the reporter config file that contains the configurations that your reporters require. The example lambdatest-config.json file2 shown below uses 2 reporters, mochawesome and mocha-junit-reporter. ***",
+          "url": "https://www.testmuai.com/support/docs/cyp-multi-reporters/#step-1"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2",
+          "text": "Create a file with the name reporter-configmochawesomejunit.json and copy the contents of the code block below. ***",
+          "url": "https://www.testmuai.com/support/docs/cyp-multi-reporters/#step-2"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3",
+          "text": "Run your test in sync mode by using the code lambdatest-cypress run --sync=true. After all the tests are run, the generated reports will be automatically downloaded at the location lambdatest-artefacts. The location of lambdatest-artefacts is relative to the path from where you ran the command. Sample Output: *** The reports are grouped on the basis of your sessionid with a designated browser name, browser version, and a test id_.",
+          "url": "https://www.testmuai.com/support/docs/cyp-multi-reporters/#step-3"
+        }
+      ]
+    }
+  ]) }}
+/>
 
 ---
 
@@ -38,6 +178,8 @@ With <BrandName />, you can generate multiple reporters supported by Cypress for
 Provide the path where your report artefacts will be generated by the test script in the `lambdatest-config.json` file. In the same file, add the path of the reporter config file that contains the configurations that your reporters require. 
 
 The example `lambdatest-config.json` file2 shown below uses 2 reporters, `mochawesome` and `mocha-junit-reporter`.
+
+<VerifiedTag value="Verified" />
 
 ```bash
 "run_settings":{
@@ -53,6 +195,8 @@ The example `lambdatest-config.json` file2 shown below uses 2 reporters, `mochaw
 #### Step 2
 
 Create a file with the name `reporter-config_mochawesome_junit.json` and copy the contents of the code block below. 
+
+<VerifiedTag value="Verified" />
 
 ```bash
 {   
@@ -84,6 +228,8 @@ The location of `lambdatest-artefacts` is relative to the path from where you ra
 
 **Sample Output**: 
 
+<VerifiedTag value="Verified" />
+
 ```bash
 Waiting for build to finish...
 ┌─────────┬───────────────────────────────────┬─────────────┬──────────┬──────────┬─────────┐
@@ -101,7 +247,6 @@ Extracted 14 entries for 0OETA-BPSP3-XZVX4-EAPWB
 ***
 
 The reports are grouped on the basis of your session_id with a designated _browser name_, _browser version_, and a _test id_.
-
 
 <img loading="lazy" src={require('../assets/images/cypress-doc/multi.png').default} alt="cmd" width="768" height="373" className="doc_img"/>
 

@@ -17,6 +17,7 @@ canonical: https://www.testmuai.com/support/docs/browser-cloud-session-lifecycle
 ---
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -47,6 +48,122 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/browser-cloud-session-lifecycle/"
+    },
+    "headline": "Session Lifecycle - TestMu AI Browser Cloud",
+    "description": "How sessions are created, managed, and released in TestMu AI Browser Cloud.",
+    "url": "https://www.testmuai.com/support/docs/browser-cloud-session-lifecycle/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Browser Cloud",
+    "keywords": [
+      "browser cloud session lifecycle",
+      "session states",
+      "session timeout"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Every session passes through a simple set of states during its lifetime",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "create() \u2500\u2500\u2192 live \u2500\u2500\u2192 released\n                 \u2514\u2500\u2500\u2192 failed"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "You can adjust the timeout when creating a session",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "TypeScript",
+        "text": "const session = await client.sessions.create({\n    adapter: 'puppeteer',\n    timeout: 600000,  // 10 minutes\n    lambdatestOptions: { ... }\n});"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "immediately and ensures a clean recording on the dashboard",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "TypeScript",
+        "text": "// Release a single session\nawait client.sessions.release(session.id);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "them at once",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "TypeScript",
+        "text": "// Release all active sessions\nawait client.sessions.releaseAll();"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "specific session",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "TypeScript",
+        "text": "// List all active sessions\nconst sessions = client.sessions.list();\n\n// Get details of a specific session\nconst session = client.sessions.retrieve('session_12345_abc');"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "While a session is running, you can get real-time information about it",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "TypeScript",
+        "text": "const details = await client.sessions.liveDetails(session.id);\n\nconsole.log(details.pages);            // Currently open pages/tabs\nconsole.log(details.wsUrl);            // WebSocket URL\nconsole.log(details.sessionViewerUrl); // Live viewer URL"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "exist as a safety net, not as your primary cleanup mechanism",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "TypeScript",
+        "text": "const session = await client.sessions.create({ ... });\ntry {\n    const browser = await client.puppeteer.connect(session);\n    // ... your agent's work ...\n    await browser.close();\n} finally {\n    await client.sessions.release(session.id);\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "you want to make sure no sessions are left running",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "TypeScript",
+        "text": "process.on('SIGINT', async () => {\n    await client.sessions.releaseAll();\n    process.exit(0);\n});"
+      }
+    ],
+    "dateModified": "2026-03-26T15:05:31+05:30"
+  }) }}
+/>
+
 # Handle Session Lifecycle
 
 Learn how sessions move from creation to release, and how to manage timeouts and cleanup.
@@ -56,6 +173,8 @@ Understanding the session lifecycle helps you avoid leaked sessions, reduce wast
 ## Session States
 
 Every session passes through a simple set of states during its lifetime:
+
+<VerifiedTag value="Verified" />
 
 ```
 create() ──→ live ──→ released
@@ -82,6 +201,8 @@ released whether your agent is still using it or not.
 
 You can adjust the timeout when creating a session:
 
+<VerifiedTag value="Verified" />
+
 ```typescript
 const session = await client.sessions.create({
     adapter: 'puppeteer',
@@ -100,6 +221,8 @@ workflows where your agent navigates through several pages, you may want
 When your agent is done, release the session explicitly. This frees resources
 immediately and ensures a clean recording on the dashboard:
 
+<VerifiedTag value="Verified" />
+
 ```typescript
 // Release a single session
 await client.sessions.release(session.id);
@@ -107,6 +230,8 @@ await client.sessions.release(session.id);
 
 If your agent manages multiple sessions in parallel, you can release all of
 them at once:
+
+<VerifiedTag value="Verified" />
 
 ```typescript
 // Release all active sessions
@@ -118,6 +243,8 @@ await client.sessions.releaseAll();
 
 You can check which sessions are currently active and retrieve details about any
 specific session:
+
+<VerifiedTag value="Verified" />
 
 ```typescript
 // List all active sessions
@@ -131,6 +258,8 @@ const session = client.sessions.retrieve('session_12345_abc');
 ## Live Session Details
 
 While a session is running, you can get real-time information about it:
+
+<VerifiedTag value="Verified" />
 
 ```typescript
 const details = await client.sessions.liveDetails(session.id);
@@ -146,6 +275,8 @@ console.log(details.sessionViewerUrl); // Live viewer URL
 **Always release sessions when done.** Don't rely on timeouts alone - they
 exist as a safety net, not as your primary cleanup mechanism:
 
+<VerifiedTag value="Verified" />
+
 ```typescript
 const session = await client.sessions.create({ ... });
 try {
@@ -159,6 +290,8 @@ try {
 
 **Use `releaseAll()` in your shutdown handler.** If your agent process crashes,
 you want to make sure no sessions are left running:
+
+<VerifiedTag value="Verified" />
 
 ```typescript
 process.on('SIGINT', async () => {

@@ -21,6 +21,8 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 
+import VerifiedTag from '@site/src/component/verifiedTag';
+
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
        "@context": "https://schema.org",
@@ -44,6 +46,158 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       })
     }}
 ></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/saucelabs-to-hyperexecute-migrate/"
+    },
+    "headline": "Sauce Labs to HyperExecute",
+    "description": "Understand how to migrate from Sauce Labs to HyperExecute",
+    "url": "https://www.testmuai.com/support/docs/saucelabs-to-hyperexecute-migrate/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "HyperExecute",
+    "keywords": [
+      "TestMu AI HyperExecute",
+      "TestMu AI HyperExecute help",
+      "TestMu AI HyperExecute documentation"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "For macOS / Linux",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "export LT_USERNAME=YOUR_LT_USERNAME\nexport LT_ACCESS_KEY=YOUR_LT_ACCESS_KEY"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "For Windows",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "set LT_USERNAME=YOUR_LT_USERNAME\nset LT_ACCESS_KEY=YOUR_LT_ACCESS_KEY"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 3: Configure and Update your Test Scripts",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "---\nversion: 0.2\nglobalTimeout: 150\ntestSuiteTimeout: 150\ntestSuiteStep: 150\n\nrunson: win\n\nautosplit: true\nretryOnFailure: true\n\nmaxRetries: 1\nconcurrency: 4\nshell: bash\nenv:\n  # PAT: ${{ .secrets.testKey }}\n  CACHE_DIR: m2_cache_dir\n\ncacheKey: '{{ checksum \"pom.xml\" }}'\ncacheDirectories:\n  - .m2\n\npre:\n  # Skip execution of the tests in the pre step\n  - mvn -Dmaven.repo.local=./.m2 dependency:resolve\n\npost:\n  - ls target/surefire-reports/\n\nmergeArtifacts: true\n\n\nuploadArtefacts:\n - name: ExecutionSnapshots\n   path:\n    - target/surefire-reports/html/**\n\nreport: true\npartialReports:\n  location: target/surefire-reports/html\n  type: html\n  frameworkName: extent\n\nframework:\n  name: maven/testng\n  defaultReports: false\n  flags:\n    - \"-Dplatname=mac\"\n\njobLabel: [selenium-testng, mac, autosplit, migration]\n"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 4",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "MutableCapabilities sauceOptions = new MutableCapabilities();\nsauceOptions.setCapability(\"username\", System.getenv(\"SAUCE_USERNAME\"));\nsauceOptions.setCapability(\"accessKey\", System.getenv(\"SAUCE_ACCESS_KEY\"));\nsauceOptions.setCapability(\"name\", method.getName());\nsauceOptions.setCapability(\"browserVersion\", \"latest\");"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 5",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "DesiredCapabilities capabilities = new DesiredCapabilities();\ncapabilities.setCapability(\"build\", \"[HyperExecute - 2] Demonstration of the TestNG Framework\");\ncapabilities.setCapability(\"name\", \"[HyperExecute - 2] Demonstration of the TestNG Framework\");\n\ncapabilities.setCapability(\"platform\", System.getenv(\"HYPEREXECUTE_PLATFORM\"));\ncapabilities.setCapability(\"browserName\", browser);\ncapabilities.setCapability(\"version\", version);\n\ncapabilities.setCapability(\"tunnel\",false);\ncapabilities.setCapability(\"network\",true);\ncapabilities.setCapability(\"console\",true);\ncapabilities.setCapability(\"visual\",true);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Update the Hub URL and Authentication in the Test Scripts",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n**HyperExecute**\n``` js\n// test.java\npublic static final String user_name = \"LambdaTest_UserName\";\npublic static final String access_key = \"LambdaTest_AccessKey\";"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Update the Hub URL and Authentication in the Test Scripts",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "**<BrandName />**\n``` js\n// test.java\npublic static final String Hub_URL = \"https://\" + user_name + \":\" + access_key + \"@hub.lambdatest.com/wd/hub\";"
+      }
+    ],
+    "dateModified": "2026-09-09T19:13:32+05:30"
+  }) }}
+/>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Steps to Migrate",
+      "description": "To migrate your Test from Sauce Labs to HyperExecute, you need to follow the below mentioned steps: For demonstration purposes, we'll be using Selenium with the TestNG framework in our examples.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Create your account in HyperExecute",
+          "text": "Before starting the migration process, make sure you have created your account in HyperExecute and that you have also configured your HyperExecute UserName and Access Key.",
+          "url": "https://www.testmuai.com/support/docs/saucelabs-to-hyperexecute-migrate/#step-1-create-your-account-in-hyperexecute"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Configure CLI and Environment Variables",
+          "text": "Since we will be performing the test from our local system, thus in order to initiate a test execution Job, you are required to download HyperExecute CLI and set the environment variable. The HyperExecute CLI is used for triggering tests on HyperExecute. It is recommended to download the CLI binary on the host system to perform the tests on HyperExecute. The CLI download site for various platforms is displayed below: Run the below mentioned commands in the terminal to setup the CLI and the environment variables. For macOS / Linux: For Windows:",
+          "url": "https://www.testmuai.com/support/docs/saucelabs-to-hyperexecute-migrate/#step-2-configure-cli-and-environment-variables"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Configure and Update your Test Scripts",
+          "text": "Add the HyperExecute YAML file in the root folder of your test code repository. Sample YAML File Replace the Sauce Labs Hooks with TestMu AI Hooks (if required). Update the Sauce Labs Dependencies and Capabilities. Sauce Labs HyperExecute For a Java-based implementation, here are the changes in the script as far as the authentication stage is concerned: Sauce Labs HyperExecute For a Java-based implementation, here are the changes in the script as far as the Hub URL is concerned: Sauce Labs TestMu AI",
+          "url": "https://www.testmuai.com/support/docs/saucelabs-to-hyperexecute-migrate/#step-3-configure-and-update-your-test-scripts"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Step 4: Execute your Job in HyperExecute",
+          "text": "Run the below command in your downloaded CLI to trigger your test scripts in the HyperExecute Platform. {./hyperexecute --user ${ YOURLAMBDATESTUSERNAME()} --key ${ YOURLAMBDATESTACCESSKEY()} --config RELATIVEPATHOFYOURYAMLFILE } In case of MAC, if you get a permission denied warning while executing CLI, simply run chmod u+x ./hyperexecute to allow permission. In case you get a security popup, allow it from your System Preferences \u2192 Security & Privacy \u2192 General tab. Here is the output in the HyperExecute Dashboard.",
+          "url": "https://www.testmuai.com/support/docs/saucelabs-to-hyperexecute-migrate/#step-4-execute-your-job-in-hyperexecute"
+        }
+      ]
+    }
+  ]) }}
+/>
+
+
 
 # Migrate from SauceLabs to HyperExecute
 
@@ -95,12 +249,16 @@ Run the below mentioned commands in the terminal to setup the CLI and the enviro
 
 For macOS / Linux:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 export LT_USERNAME=YOUR_LT_USERNAME
 export LT_ACCESS_KEY=YOUR_LT_ACCESS_KEY
 ```
 
 For Windows:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 set LT_USERNAME=YOUR_LT_USERNAME
@@ -112,6 +270,8 @@ set LT_ACCESS_KEY=YOUR_LT_ACCESS_KEY
 - Add the [HyperExecute YAML](/support/docs/deep-dive-into-hyperexecute-yaml/) file in the root folder of your test code repository.
 
 **Sample YAML File**
+
+<VerifiedTag value="Verified" />
 
 ```yaml
 ---
@@ -172,6 +332,8 @@ jobLabel: [selenium-testng, mac, autosplit, migration]
 
 **Sauce Labs** 
 
+<VerifiedTag value="Verified" />
+
 ```java
 MutableCapabilities sauceOptions = new MutableCapabilities();
 sauceOptions.setCapability("username", System.getenv("SAUCE_USERNAME"));
@@ -181,6 +343,8 @@ sauceOptions.setCapability("browserVersion", "latest");
 ```
 
 **HyperExecute**
+
+<VerifiedTag value="Verified" />
 
 ```java
 DesiredCapabilities capabilities = new DesiredCapabilities();
@@ -231,6 +395,8 @@ public static final String Hub_URL = "https://" + user_name + ":" + access_key +
 ### Step 4: Execute your Job in HyperExecute
 
 Run the below command in your downloaded CLI to trigger your test scripts in the HyperExecute Platform.
+
+<VerifiedTag value="Verified" />
 
 <div className="lambdatest__codeblock">
   <CodeBlock className="language-bash">

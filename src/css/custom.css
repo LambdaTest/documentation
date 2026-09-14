@@ -4,6 +4,9 @@
 @tailwind utilities;
 
 :root {
+  --verified-tag-color: #1A7F37;
+  --verified-tag-bg-color: #DAFBE1;
+  --verified-tag-border-color: #4AC26B66;
   --ifm-color-primary: #333333;
   --ifm-link-color-primary: #0969DA;
   --ifm-color-primary-dark: rgb(33, 175, 144);
@@ -50,6 +53,9 @@
 }
 
 [data-theme=dark] {
+  --verified-tag-color: #3FB950;
+  --verified-tag-bg-color: #2EA04326;
+  --verified-tag-border-color: #2EA04366;
   --ifm-footer-link-color: #C9D1D9;
   --ifm-color-primary: #CAD1D9;
   --ifm-link-color-primary: #2F81F7;
@@ -1497,7 +1503,7 @@ color: var(--ifm-color-primary);
  }
 
  .p_home_inners {
-   font-size: 14px !important;
+   font-size: 16px !important;
    font-weight: 500 !important;
    margin-bottom: 12px !important;
    color: var(--ifm-link-color-primary);
@@ -2404,7 +2410,7 @@ h6[id]::before {
 .home_inners>a:hover{color:var(--ifm-color-primary);background:color-mix(in srgb, var(--ifm-color-primary) 9%, transparent);}
 .home_inners>a p{display:inline-block;margin:0;}
 .home_inners>a p span{position:static;transform:none;margin-left:6px;}
-.p_home_inners{font-size:14px!important;font-weight:500!important;margin:0!important;color:inherit;position:relative;}
+.p_home_inners{font-size:16px!important;font-weight:500!important;margin:0!important;color:inherit;position:relative;}
 .p_home_inners::after{content:none;}
 .home_inners>a::after{content:"\2192";color:var(--ifm-color-emphasis-500);transition:transform .15s ease,color .15s ease;}
 .home_inners>a:hover::after{color:var(--ifm-color-primary);transform:translateX(3px);}
@@ -2839,3 +2845,7 @@ h6[id]::before {
     grid-template-columns: 1fr;
   }
 }
+
+.verifiedTagColor{color: var(--verified-tag-color); background-color: var(--verified-tag-bg-color); font-weight:600; font-size: 12px; padding: 2px 8px; border-radius: 20px; border:1px solid var(--verified-tag-border-color); display: inline-flex; align-items: center; gap: 4px; line-height: 1.5;}
+.verifiedTagColor + div[class*='codeBlockContainer'], .verifiedTagColor + div[class*='language-']{margin-top: 6px;}
+.verifiedTagIcon{flex-shrink: 0;}

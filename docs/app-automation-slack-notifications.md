@@ -22,6 +22,8 @@ import TabItem from '@theme/TabItem';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
+import VerifiedTag from '@site/src/component/verifiedTag';
+
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
        "@context": "https://schema.org",
@@ -45,6 +47,89 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       })
     }}
 ></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/app-automation-slack-notifications/"
+    },
+    "headline": "Slack Notifications for App Automation",
+    "description": "Get real-time Slack notifications for your test sessions and build summaries on TestMu AI.",
+    "url": "https://www.testmuai.com/support/docs/app-automation-slack-notifications/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "App Automation",
+    "keywords": [
+      "slack notifications",
+      "app automation slack",
+      "slack test notifications"
+    ],
+    "proficiencyLevel": "Beginner",
+    "dependencies": "A TestMu AI account with App Automation access.; Slack Integration enabled on your TestMu AI account.; The Slack channel(s) you want to send notifications to must already exist in your Slack workspace..",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Configuration Examples (Java)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "DesiredCapabilities capabilities = new DesiredCapabilities();\ncapabilities.setCapability(\"platformName\", \"Android\");\ncapabilities.setCapability(\"deviceName\", \"Galaxy S23\");\ncapabilities.setCapability(\"app\", \"lt://APP123456789\");\ncapabilities.setCapability(\"build\", \"Regression Suite v2.0\");\ncapabilities.setCapability(\"name\", \"Login Test\");\ncapabilities.setCapability(\"isRealMobile\", true);\n//highlight-next-line\ncapabilities.setCapability(\"slackChannel\", \"mobile-test-results\");"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Configuration Examples (Python)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Python",
+        "text": "desired_caps = {\n    \"platformName\": \"Android\",\n    \"deviceName\": \"Galaxy S23\",\n    \"app\": \"lt://APP123456789\",\n    \"build\": \"Regression Suite v2.0\",\n    \"name\": \"Login Test\",\n    \"isRealMobile\": True,\n    #highlight-next-line\n    \"slackChannel\": \"mobile-test-results\"\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "JavaScript",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "const capabilities = {\n  platformName: \"Android\",\n  deviceName: \"Galaxy S23\",\n  app: \"lt://APP123456789\",\n  build: \"Regression Suite v2.0\",\n  name: \"Login Test\",\n  isRealMobile: true,\n  //highlight-next-line\n  slackChannel: \"mobile-test-results\"\n};"
+      }
+    ],
+    "dateModified": "2026-09-10T15:46:57+05:30"
+  }) }}
+/>
+
 
 Slack notifications on TestMu AI deliver real-time updates about each of your App Automation test sessions and build summaries directly in your Slack channels, eliminating manual dashboard monitoring and keeping your entire team instantly informed about mobile test execution results.
 
@@ -72,6 +157,8 @@ To enable Slack notifications for your App Automation tests, add the `slackChann
 <Tabs className="docs__val">
 <TabItem value="java" label="Java" default>
 
+<VerifiedTag value="Verified" />
+
 ```java
 DesiredCapabilities capabilities = new DesiredCapabilities();
 capabilities.setCapability("platformName", "Android");
@@ -86,6 +173,8 @@ capabilities.setCapability("slackChannel", "mobile-test-results");
 
 </TabItem>
 <TabItem value="python" label="Python">
+
+<VerifiedTag value="Verified" />
 
 ```python
 desired_caps = {
@@ -102,6 +191,8 @@ desired_caps = {
 
 </TabItem>
 <TabItem value="javascript" label="JavaScript">
+
+<VerifiedTag value="Verified" />
 
 ```javascript
 const capabilities = {
@@ -155,7 +246,7 @@ Slack notifications never block or impact your test execution. If a notification
 - [Getting Started with App Automation](/support/docs/getting-started-with-appium-testing/)
 
 > Got any questions?<br/>
-> Please reach out at our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24x7 Chat Support**</span> or you could also mail us at [support@testmuai.com](https://support.lambdatest.com/).
+> Please reach out at our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24x7 Chat Support**</span> or you could also mail us at [support@testmuai.com](mailto:support@testmuai.com).
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">

@@ -26,6 +26,8 @@ canonical: https://www.testmuai.com/support/docs/kaneai-ci-cd-automation/
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 
+import VerifiedTag from '@site/src/component/verifiedTag';
+
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
        "@context": "https://schema.org",
@@ -49,6 +51,138 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       })
     }}
 ></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/kaneai-ci-cd-automation/"
+    },
+    "headline": "Automating Test Runs Execution with CI/CD on KaneAI",
+    "description": "Automate test run execution on KaneAI with CI/CD tools like GitHub Actions and Jenkins. Follow our step-by-step guide for seamless integration.",
+    "url": "https://www.testmuai.com/support/docs/kaneai-ci-cd-automation/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "KaneAI",
+    "keywords": [
+      "testmu ai automation",
+      "testmu ai kaneai",
+      "kaneai guided walkthrough"
+    ],
+    "proficiencyLevel": "Beginner",
+    "dependencies": "Access to Test Manager.; A project with KaneAI-generated test cases.; Credentials for TestMu AI platform..",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Example API Call:",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "curl --location 'https://test-manager-api.lambdatest.com/api/atm/v1/hyperexecute' \\\n--header 'Content-Type: application/json' \\\n--header 'Authorization: Basic <Base64Auth>' \\\n--data '{\n    \"test_run_id\": \"YOUR_TEST_RUN_ID\", #enter test run id\n    \"concurrency\": 1, # Optional, default 1\n    \"title\": \"UNIQUE_BUILD_NAME\", #Optional\n    \"console_log\": false, #Optional for web tests, options - false, error, warn, info, true\n    \"network_logs\": false, #Optional to capture network calls during the test\n    \"network_full_har\": false, #Optional, Only for web, to capture complete network requests & response during the test\n    \"region\": \"YOUR_DESIRED_REGION\", #Optional for web tests, options - eastus, centralindia\n    \"mobile_region\": \"YOUR_DESIRED_REGION\", #Optional for mobile tests, options - us,eu,ap\n    \"tunnel\": \"tunnel-name\", #Optional, either tunnel or dedicated proxy or geolocation can be used\n    \"dedicated_proxy\": \"region\", #Optional, either tunnel or dedicated proxy or geolocation can be used\n    \"geolocation\": \"region\", #Optional, either tunnel or dedicated proxy or geolocation can be used\n    \"environment_id\": 0, #Optional, default null, to define the environment for test run\n    \"retry_on_failure\": true, #Optional, default true, to define if retry is needed in case of failure\n    \"max_retries\": 1, #Optional, default 1, to define the number of retries needed if retry_on_failure is enabled\n    \"timezone\": {\"region\":\"Indianapolis\"}, #Optional, Only for web, to define the timezone using which the test runs should run\n    \"app_profiling\": false, #Optional for performance metrics for native mobile apps\n    \"performance\": false, #Optional for lighthouse report for web tests\n    \"android_app_id\": \"lt://<YOUR_ANDROID_APP_ID>\", #optional \n    \"ios_app_id\": \"lt://<YOUR_iOS_APP_ID>\", #optional \n    \"accessibility\": false, #Optional only for web tests\n    \"network_throttle\": {\n        \"label\": \"No Throttling\",\n        \"value\": \"default\",\n        \"download_speed\": 0,\n        \"upload_speed\": 0,\n        \"latency\": 0,\n        \"honor_network\": true\n    }, #Optional, only for mobile tests, to define if sessions needs to be enabled with network throttling enabled\n    \"replaced_url\": [\n      {\n          \"pattern_url\": \"TEST_URL_1\",\n          \"replacement_url\": \"REPLACED_TEST_URL_1\"\n      },\n      {\n          \"pattern_url\": \"TEST_URL_2\",\n          \"replacement_url\": \"REPLACED_TEST_URL_2\"\n      }\n    ], #Optional to be used to dynamically replace any pattern URL in test cases with the replacement URL\n    \"report_enabled\": false, #Optional, set true to generate HTML report\n    \"extent_report_enabled\": false, #Optional, set true to generate Extent report\n    \"report_email_to\": [\"email1@example.com\"] #Optional, array of email addresses to receive report (max 10)\n}'"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Here is a sample response for a test run which contains both app and web test cases",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "{\n    \"job_id\": \"abcd1234-abcd-1234-abcd-1234abcd1234\",\n    \"app_job_id\": \"abcd1234-abcd-1234-abcd-1234abcd1234\",\n    \"test_run_id\": \"01LAMBDATEST2024KANEAIJ8NPGDP\",\n    \"job_link\": \"https://hyperexecute.lambdatest.com/hyperexecute/task?jobId=<job_id>\",\n    \"mobile_job_link\": \"https://hyperexecute.lambdatest.com/hyperexecute/task?jobId=<app_job_id>\"\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Here is a sample that you can use on how to integrate the API with Github Actions in your Github repository",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "name: Run Sanity Tests on LambdaTest\n\non:\n  push:\n    branches:\n      - main\n  pull_request:\n    branches:\n      - main\n\njobs:\n  sanity-test:\n    runs-on: ubuntu-latest\n\n    steps:\n      - name: Trigger Sanity Test on LambdaTest\n        id: trigger-test\n        run: |\n          echo \"Triggering sanity tests on LambdaTest\"\n          response=$(curl --location 'https://test-manager-api.lambdatest.com/api/atm/v1/hyperexecute' \\\n            --header 'accept: application/json' \\\n            --header 'Content-Type: application/json' \\\n            --header 'Authorization: Basic <Base64Auth>' \\\n            --data '{\n                \"test_run_id\" : \"<test_run_id>\",\n                \"concurrency\" : 1,\n            }')\n          echo \"Response: $response\"\n          job_id=$(echo $response | jq -r '.job_id')\n          echo \"Job ID: $job_id\"\n          echo \"::set-output name=job_id::$job_id\"\n      \n      - name: Check Test Status\n        run: |\n          echo \"Checking test status\"\n          job_id=${{ steps.trigger-test.outputs.job_id }}\n          sleep 240  # Wait before checking the status\n          response=$(curl --location \"https://api.hyperexecute.cloud/v2.0/job/$job_id\" \\\n            --header \"accept: application/json\" \\\n            --header \"Authorization: Basic <Base64Auth>\")\n            \n          echo \"Response: $response\"\n          status=$(echo $response | jq -r '.data.status')\n          echo \"Test status: $status\"\n          if [[ \"$status\" != \"completed\" ]]; then\n            echo \"Tests failed. Exiting with error.\"\n            exit 1\n          fi\n          echo \"Sanity tests passed successfully.\""
+      }
+    ],
+    "dateModified": "2026-09-09T19:16:50+05:30"
+  }) }}
+/>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Step-by-Step Guide",
+      "description": "Automate test run execution on KaneAI with CI/CD tools like GitHub Actions and Jenkins. Follow our step-by-step guide for seamless integration.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Navigate to the Test Manager",
+          "text": "Log in to the KaneAI platform and go to the Test Manager page. Access the project where the test run is located.",
+          "url": "https://www.testmuai.com/support/docs/kaneai-ci-cd-automation/#step-1-navigate-to-the-test-manager"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Locate the 'Test Runs' Section & Copy Test run ID",
+          "text": "Inside your selected project, navigate to the Test Runs section. Select the desired test run for integration or direct triggering from your CI/CD pipeline. Open the test run to view its URL. Copy the Test Run ID from the URL. This ID will be used in the API call for integration. A list of test instances with various configurations will be displayed for each test run.",
+          "url": "https://www.testmuai.com/support/docs/kaneai-ci-cd-automation/#step-2-locate-the-test-runs-section--copy-test-run-id"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Configure the API Call",
+          "text": "Replace `` with the actual ID from the URL and set additional optional parameters: concurrency: Select the concurrency you want to set for this test run. Defaults to 1 if not specified. title: Assign a unique job title; a random one will be generated if omitted. region: Choose a region for web tests such as eastus or centralindia to select the region from where the VM is allocated. mobileregion: Choose a region for mobile app tests such as us,ap or eu_ to select the region from where the device is allocated. tunnel: Add the parameter and tunnel name if you want to run using TestMu AI Tunnel for private applications. See more details for tunnel here. dedicatedproxy: Add the region of the dedicated proxy such as us or eu_, #Optional, either tunnel or dedicated proxy or geolocation can be used in a single API call. geolocation: Add the resgion of the geolocation that you want to run your tests from. You can find the list of support geolocations here. environmentid**: Define the environment on which you want to run the test run if required. retryonfailure: Define whether to retry on failure. When enabled, retries are triggered both when the testRunnerCommand execution fails and when individual test cases fail. You can set the maximum number of retries using max_retries. You can find more details here. maxretries**: Define the number of maximum retries you want (Max value 5). Default retries 1. You can find more details here. timezone: Define the timezone you want to choose for...",
+          "url": "https://www.testmuai.com/support/docs/kaneai-ci-cd-automation/#step-3-configure-the-api-call"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Step 4: Authenticate and Trigger the Job",
+          "text": "Provide your TestMu AI username and access key for Basic Authentication. Submit the API call to trigger the job. The process will start within seconds. Important : Keep your credentials secure to maintain platform integrity.",
+          "url": "https://www.testmuai.com/support/docs/kaneai-ci-cd-automation/#step-4-authenticate-and-trigger-the-job"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 5,
+          "name": "Step 5: Monitor Test Executions",
+          "text": "Follow the link provided in the API response to view the HyperExecute Job. Monitor running executions in real time through the dashboard.",
+          "url": "https://www.testmuai.com/support/docs/kaneai-ci-cd-automation/#step-5-monitor-test-executions"
+        }
+      ]
+    }
+  ]) }}
+/>
+
+
 
 # How to Run KaneAI Tests in CI/CD
 ***
@@ -121,6 +255,8 @@ Test case failure retries are supported only for code exported from **May 10, 20
 
 #### Example API Call:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 curl --location 'https://test-manager-api.lambdatest.com/api/atm/v1/hyperexecute' \
 --header 'Content-Type: application/json' \
@@ -174,6 +310,8 @@ curl --location 'https://test-manager-api.lambdatest.com/api/atm/v1/hyperexecute
 
 The API response contains the job ID for both jobs created for desktop web tests as well as mobile tests on real devices. Here is a sample response for a test run which contains both app and web test cases:
 
+<VerifiedTag value="Verified" />
+
 ```yaml
 {
     "job_id": "abcd1234-abcd-1234-abcd-1234abcd1234",
@@ -218,6 +356,8 @@ In your Git repository, navigate to `.github/workflows/` and create a file named
 ***
 
 The sample below executes a test run using `test_run_id` and then verifies the result using the HyperExecute job status API. See the [HyperExecute API reference](https://www.testmuai.com/support/api-doc/?key=hyperexecute) and update the API call in the file based on your needs.
+
+<VerifiedTag value="Verified" />
 
 ```yml
 name: Run Sanity Tests on TestMu AI

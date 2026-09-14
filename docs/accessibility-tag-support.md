@@ -19,6 +19,8 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
+import VerifiedTag from '@site/src/component/verifiedTag';
+
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
        "@context": "https://schema.org",
@@ -42,6 +44,151 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       })
     }}
 ></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/accessibility-tag-support/"
+    },
+    "headline": "Tag Support for Accessibility Scans",
+    "description": "Use tags to organize accessibility scans on mobile devices by screen, flow, or activity from the dashboard or during automation.",
+    "url": "https://www.testmuai.com/support/docs/accessibility-tag-support/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Accessibility Testing",
+    "keywords": [
+      "accessibility tags",
+      "mobile accessibility",
+      "lambda-accessibility-scan"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Basic Syntax",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "((JavascriptExecutor) driver).executeScript(\n    \"lambda-accessibility-scan\",\n    new HashMap<String, Object>() {{\n        put(\"tags\", Arrays.asList(\"Login Screen\", \"Smoke\"));\n    }}\n);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Basic Syntax",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Python",
+        "text": "driver.execute_script(\n    \"lambda-accessibility-scan\",\n    {\n        \"tags\": [\"Login Screen\", \"Smoke\"]\n    }\n)"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Basic Syntax",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "await driver.execute(\"lambda-accessibility-scan\", [{\n  tags: [\"Login Screen\", \"Smoke\"]\n}]);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Example: Tag scans for multiple screens",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "((JavascriptExecutor) driver).executeScript(\n    \"lambda-accessibility-scan\",\n    new HashMap<String, Object>() {{\n        put(\"tags\", Arrays.asList(\"Login Screen\", \"Smoke\"));\n    }}\n);\n\n((JavascriptExecutor) driver).executeScript(\n    \"lambda-accessibility-scan\",\n    new HashMap<String, Object>() {{\n        put(\"tags\", Arrays.asList(\"Cart Screen\", \"Checkout Flow\"));\n    }}\n);\n\n((JavascriptExecutor) driver).executeScript(\n    \"lambda-accessibility-scan\",\n    new HashMap<String, Object>() {{\n        put(\"tags\", Arrays.asList(\"Profile Screen\"));\n    }}\n);"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Option 1: Add Tags from the Dashboard",
+      "description": "Use this flow when the scan is already available in the dashboard and you want to label it afterward.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Open the tag action for a view",
+          "text": "In the issue view, open the scan or view you want to label and click the tag icon.",
+          "url": "https://www.testmuai.com/support/docs/accessibility-tag-support/#step-1-open-the-tag-action-for-a-view"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Assign one or more tags",
+          "text": "In the Assign Tags modal, search for an existing tag or create a new one, then save your selection. You can assign multiple tags to the same scan from the dashboard.",
+          "url": "https://www.testmuai.com/support/docs/accessibility-tag-support/#step-2-assign-one-or-more-tags"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Review tagged issues",
+          "text": "Once saved, the selected tags appear with the affected issue details.",
+          "url": "https://www.testmuai.com/support/docs/accessibility-tag-support/#step-3-review-tagged-issues"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Step 4: Filter the dashboard by tag",
+          "text": "Use the Tags filter to show only the issues or views that match the selected tags.",
+          "url": "https://www.testmuai.com/support/docs/accessibility-tag-support/#step-4-filter-the-dashboard-by-tag"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 5,
+          "name": "Step 5: Use tags in Mobile View",
+          "text": "The same tags are also available when you review the test in Mobile View.",
+          "url": "https://www.testmuai.com/support/docs/accessibility-tag-support/#step-5-use-tags-in-mobile-view"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 6,
+          "name": "Step 6: Switch how issues are grouped",
+          "text": "In the All Issues tab, you can group the results in two ways: Group by: Views to review issues screen by screen. Group by: Issue Types to review issues by accessibility problem type. Group by: Views Group by: Issue Types",
+          "url": "https://www.testmuai.com/support/docs/accessibility-tag-support/#step-6-switch-how-issues-are-grouped"
+        }
+      ]
+    }
+  ]) }}
+/>
+
+
 
 # Tag Support for Accessibility Scans
 
@@ -134,6 +281,8 @@ Trigger the scan with `lambda-accessibility-scan` and pass one or more tags.
 
 Tag support is available in all supported Appium flows for mobile accessibility automation. The exact method name depends on your client library, but the payload pattern stays the same: call `lambda-accessibility-scan` and pass a `tags` list.
 
+<VerifiedTag value="Verified" />
+
 ```java
 ((JavascriptExecutor) driver).executeScript(
     "lambda-accessibility-scan",
@@ -142,6 +291,8 @@ Tag support is available in all supported Appium flows for mobile accessibility 
     }}
 );
 ```
+
+<VerifiedTag value="Verified" />
 
 ```python
 driver.execute_script(
@@ -152,6 +303,8 @@ driver.execute_script(
 )
 ```
 
+<VerifiedTag value="Verified" />
+
 ```javascript
 await driver.execute("lambda-accessibility-scan", [{
   tags: ["Login Screen", "Smoke"]
@@ -161,6 +314,8 @@ await driver.execute("lambda-accessibility-scan", [{
 ### Example: Tag scans for multiple screens
 
 You can call the scan multiple times in the same test and use different tags for each scan.
+
+<VerifiedTag value="Verified" />
 
 ```java
 ((JavascriptExecutor) driver).executeScript(

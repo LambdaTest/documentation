@@ -18,6 +18,7 @@ site_name: TestMu AI
 slug: kaneai-kb-mobile-app-testing-patterns/
 ---
 
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -43,9 +44,236 @@ slug: kaneai-kb-mobile-app-testing-patterns/
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/kaneai-kb-mobile-app-testing-patterns/"
+    },
+    "headline": "Mobile App Testing Patterns",
+    "description": "Best practices for authoring reliable native mobile app tests in KaneAI covering Android and iOS patterns, OTP fields, keyboards, pickers, and mobile-specific interactions",
+    "url": "https://www.testmuai.com/support/docs/kaneai-kb-mobile-app-testing-patterns/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "KaneAI",
+    "keywords": [
+      "testmu ai automation",
+      "testmu ai kaneai",
+      "kaneai mobile testing"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "The keyboard typically auto-dismisses on most interactions, but you can explicitly dismiss it",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "hide keyboard"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "The best approach is to use press Enter after typing, which both submits the current field and dismisses the keyboard",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "type \"john@example.com\" in the email field and press Enter"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Alternatively, if the keyboard has a \"Done\" or \"Cancel\" button",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "click on \"Done\" button on the keyboard\nclick on \"Cancel\" button on the keyboard"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Scenario: Login Form on iOS",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "type \"admin@example.com\" in the email field and press Enter\ntype \"password123\" in the password field and press Enter\nclick on the \"Sign In\" button\nwait for 5 seconds\nassert \"Welcome\" is visible"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "OTP & PIN Fields",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "enter OTP \"123456\"\nenter OTP \"7890\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Scenario: SMS OTP Verification",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "type \"+1-555-0123\" in the phone number field and press Enter\nclick on \"Send Code\"\nwait for 10 seconds\nenter OTP \"654321\"\nclick on \"Verify\"\nassert \"Phone verified\" is visible"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Scrolling on Mobile",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "scroll down 3 times\nscroll up 2 times\nscroll down 1 time"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "The Scroll \u2192 Wait Pattern",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "scroll down 2 times\nwait for 2 seconds\nassert \"Contact Us\" section is visible"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Scenario: Scrolling Through a Long Settings Page",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "scroll down 3 times\nwait for 2 seconds\nclick on \"Privacy Settings\"\nscroll down 2 times\nwait for 2 seconds\nclick on \"Delete Account\"\nassert confirmation dialog is visible"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Interacting with Picker Wheels",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "enter \"5\" in the first column\nenter \"March\" in the second column\nenter \"2026\" in the third column"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Slider Interactions",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "drag the slider to 80 percent\nset the brightness slider to 50"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Use the spannable text keyword",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "click on spannable text: \"Terms and Conditions\" in the bottom info section\nclick on spannable text: \"Privacy Policy\" in the sign-up footer"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Generic Dialog Dismissal",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "dismiss dialog"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Permission Dialogs",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "if \"Allow\" button is visible then click on \"Allow\"\nif \"Don't Allow\" button is visible then click on \"Don't Allow\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "App Rating Dialogs",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "if \"Rate this app\" dialog is visible then dismiss dialog"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Scenario: Handling Permission Prompts on App Launch",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "-- App launches and asks for location permission --\nwait for 3 seconds\nif \"Allow While Using App\" is visible then click on \"Allow While Using App\"\n\n-- App asks for notification permission --\nwait for 2 seconds\nif \"Allow Notifications\" is visible then click on \"Allow Notifications\"\n\n-- Now proceed with the test --\nassert the home screen is visible"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Deleting Characters",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "press Del\npress Del\npress Del"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "To clear an entire field, it's more efficient to",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "clear the \"Username\" field\ntype \"new_username\" in the \"Username\" field"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Pressing Enter/Return",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "press Enter"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Using Explicit Element Identifiers",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "click on \"Continue\" button\nclick on \"Learn More\" text\nclick on \"Settings\" icon\nassert \"Welcome\" text is visible\nassert the profile button's background color is blue"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Scenario: E-Commerce App - Browse and Purchase",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "-- Handle initial permissions --\nif \"Allow Notifications\" is visible then click on \"Allow Notifications\"\nwait for 2 seconds\n\n-- Search for product --\nclick on the search icon\ntype \"wireless earbuds\" in the search field and press Enter\nwait for 3 seconds\n\n-- Browse results --\nscroll down 2 times\nwait for 2 seconds\nclick on the first \"Wireless Earbuds\" product\n\n-- Add to cart --\nscroll down 2 times\nwait for 2 seconds\nclick on \"Add to Cart\" button\nassert \"Added to cart\" toast is visible\n\n-- Go to cart --\nclick on the cart icon\nassert \"Wireless Earbuds\" is visible in the cart\nclick on \"Checkout\" button"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Scenario: Banking App - Check Balance with Biometric",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "-- App launches with biometric authentication enabled from advanced settings --\nwait for 5 seconds\n-- (Biometrics pop-up visible via LambdaTest device settings) --\nclick \"pass\" in modal\nassert the home screen is visible\n\n-- Navigate to accounts --\nclick on \"Accounts\" in the bottom navigation\nwait for 3 seconds\nassert account balance is visible\n\n-- Check recent transactions --\nscroll down 2 times\nwait for 2 seconds\nassert \"Recent Transactions\" section is visible"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Scenario: Social Media App - Post with Image",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "click on the \"New Post\" button\nclick on \"Choose from Gallery\"\nwait for 3 seconds\nclick on the first image in the gallery\nclick on \"Next\"\nwait for 2 seconds\ntype \"Testing with KaneAI! #automation\" in the caption field and press Enter\nhide keyboard\nclick on \"Share\" button\nwait for 5 seconds\nassert \"Post shared successfully\" is visible"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Test location-dependent features by mocking GPS coordinates",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "-- Set location to New York --\n-- (Configured in session settings before test starts) --\nassert \"Stores near New York\" is visible"
+      }
+    ],
+    "dateModified": "2026-09-09T20:20:47+05:30"
+  }) }}
+/>
+
 # How to Test Native Mobile Apps With KaneAI
 ***
-
 
 Mobile native app testing in KaneAI uses the same natural-language authoring as web testing, with platform-specific patterns for Android and iOS. This page is a lookup reference: each section covers one interaction (keyboards, OTP fields, scrolling, pickers, popups, and more), the natural-language keyword to use, and a worked scenario.
 
@@ -70,6 +298,8 @@ The keyboard is one of the biggest differences between web and mobile testing. O
 
 The keyboard typically auto-dismisses on most interactions, but you can explicitly dismiss it:
 
+<VerifiedTag value="Verified" />
+
 ```
 hide keyboard
 ```
@@ -79,11 +309,15 @@ hide keyboard
 
 iOS keyboards are more persistent. The best approach is to use `press Enter` after typing, which both submits the current field and dismisses the keyboard:
 
+<VerifiedTag value="Verified" />
+
 ```
 type "john@example.com" in the email field and press Enter
 ```
 
 Alternatively, if the keyboard has a "Done" or "Cancel" button:
+
+<VerifiedTag value="Verified" />
 
 ```
 click on "Done" button on the keyboard
@@ -96,6 +330,8 @@ If you skip keyboard dismissal on iOS, the keyboard may cover the next element y
 
 ### Scenario: Login Form on iOS
 ***
+
+<VerifiedTag value="Verified" />
 
 ```
 type "admin@example.com" in the email field and press Enter
@@ -110,6 +346,8 @@ assert "Welcome" is visible
 
 Mobile apps frequently use individual digit boxes for OTP entry. Use the `OTP` keyword. KaneAI automatically distributes digits across the boxes.
 
+<VerifiedTag value="Verified" />
+
 ```
 enter OTP "123456"
 enter OTP "7890"
@@ -121,6 +359,8 @@ Do **not** type into each box individually. The `OTP` keyword handles multi-box 
 
 ### Scenario: SMS OTP Verification
 ***
+
+<VerifiedTag value="Verified" />
 
 ```
 type "+1-555-0123" in the phone number field and press Enter
@@ -136,6 +376,8 @@ assert "Phone verified" is visible
 
 Mobile scrolling works differently from web. There's no pixel-based scroll. Use count-based or directional scrolling.
 
+<VerifiedTag value="Verified" />
+
 ```
 scroll down 3 times
 scroll up 2 times
@@ -147,6 +389,8 @@ scroll down 1 time
 
 Always add a wait after scrolling on mobile. Content may need time to load, and the scroll animation needs to complete.
 
+<VerifiedTag value="Verified" />
+
 ```
 scroll down 2 times
 wait for 2 seconds
@@ -155,6 +399,8 @@ assert "Contact Us" section is visible
 
 ### Scenario: Scrolling a Settings Page
 ***
+
+<VerifiedTag value="Verified" />
 
 ```
 scroll down 3 times
@@ -195,6 +441,8 @@ Mobile apps use native picker wheels for dates, numbers, and selections. KaneAI 
 
 Reference each wheel by its column position when setting a value.
 
+<VerifiedTag value="Verified" />
+
 ```
 enter "5" in the first column
 enter "March" in the second column
@@ -205,6 +453,8 @@ enter "2026" in the third column
 ***
 
 Set a slider by value or percentage.
+
+<VerifiedTag value="Verified" />
 
 ```
 drag the slider to 80 percent
@@ -219,7 +469,7 @@ If a picker doesn't respond to natural language, verify its element class.
 1. Open TestMu AI **App Live** with the [UI Inspector](https://www.testmuai.com/support/docs/ui-inspector/)
 2. Inspect the picker element to verify its class name
 3. Confirm the class is one of the supported types listed above
-4. If the class is a custom implementation, you may need to use **manual interaction** mode
+4. If the class is a custom implementation, you may need to perform the action directly on the device so it is captured by **Manual Interaction**
 
 ## Partially Clickable Text (Spannable Text)
 ***
@@ -227,6 +477,8 @@ If a picker doesn't respond to natural language, verify its element class.
 In mobile apps, text labels often contain partially clickable links, for example, "By signing up, you agree to our **Terms and Conditions** and **Privacy Policy**" where only "Terms and Conditions" is tappable.
 
 Use the `spannable text` keyword:
+
+<VerifiedTag value="Verified" />
 
 ```
 click on spannable text: "Terms and Conditions" in the bottom info section
@@ -243,6 +495,8 @@ Mobile apps frequently show permission dialogs, promotional popups, or system al
 
 Dismiss any dialog without targeting a specific button.
 
+<VerifiedTag value="Verified" />
+
 ```
 dismiss dialog
 ```
@@ -251,6 +505,8 @@ dismiss dialog
 ***
 
 Handle permission prompts with conditional taps so the test does not fail when a prompt is absent.
+
+<VerifiedTag value="Verified" />
 
 ```
 if "Allow" button is visible then click on "Allow"
@@ -262,12 +518,16 @@ if "Don't Allow" button is visible then click on "Don't Allow"
 
 Dismiss a rating prompt only when it appears.
 
+<VerifiedTag value="Verified" />
+
 ```
 if "Rate this app" dialog is visible then dismiss dialog
 ```
 
 ### Scenario: Handling Permission Prompts
 ***
+
+<VerifiedTag value="Verified" />
 
 ```
 -- App launches and asks for location permission --
@@ -290,6 +550,8 @@ Use these keywords to delete characters and press special keys during input.
 ### Deleting Characters
 ***
 
+<VerifiedTag value="Verified" />
+
 ```
 press Del
 press Del
@@ -298,6 +560,8 @@ press Del
 
 This deletes one character at a time. To clear an entire field, it's more efficient to:
 
+<VerifiedTag value="Verified" />
+
 ```
 clear the "Username" field
 type "new_username" in the "Username" field
@@ -305,6 +569,8 @@ type "new_username" in the "Username" field
 
 ### Pressing Enter/Return
 ***
+
+<VerifiedTag value="Verified" />
 
 ```
 press Enter
@@ -316,6 +582,8 @@ This can trigger form submission, keyboard dismissal, or moving to the next fiel
 ***
 
 On mobile, adding element type keywords improves accuracy because there may be multiple elements with similar text.
+
+<VerifiedTag value="Verified" />
 
 ```
 click on "Continue" button
@@ -351,6 +619,8 @@ These end-to-end scenarios combine the patterns above into complete mobile flows
 ### Scenario: E-Commerce Purchase Flow
 ***
 
+<VerifiedTag value="Verified" />
+
 ```
 -- Handle initial permissions --
 if "Allow Notifications" is visible then click on "Allow Notifications"
@@ -381,6 +651,8 @@ click on "Checkout" button
 ### Scenario: Banking Biometric Login
 ***
 
+<VerifiedTag value="Verified" />
+
 ```
 -- App launches with biometric authentication enabled from advanced settings --
 wait for 5 seconds
@@ -401,6 +673,8 @@ assert "Recent Transactions" section is visible
 
 ### Scenario: Social Media Post
 ***
+
+<VerifiedTag value="Verified" />
 
 ```
 click on the "New Post" button
@@ -436,6 +710,8 @@ See how to configure [KaneAI Network Throttling](/support/docs/kaneai-network-th
 ***
 
 Test location-dependent features by mocking GPS coordinates:
+
+<VerifiedTag value="Verified" />
 
 ```
 -- Set location to New York --

@@ -26,14 +26,117 @@ slug: smart-heal-appium/
 canonical: https://www.testmuai.com/support/docs/smart-heal-appium/
 ---
 
-
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
-
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
+<script type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify({
+       "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": BRAND_URL
+        },{
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Support",
+          "item": `${BRAND_URL}/support/docs/`
+        },{
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Smart Heal in Automation",
+          "item": `${BRAND_URL}/support/docs/smart-heal-appium/`
+        }]
+      })
+    }}
+></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/smart-heal-appium/"
+    },
+    "headline": "Smart Heal in Automation",
+    "description": "Learn how to enable Smart Heal, TestMu AI\u2019s Auto-Heal capability, for real device automation tests to reduce flakiness by automatically recovering from locator failures during execution.",
+    "url": "https://www.testmuai.com/support/docs/smart-heal-appium/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "App Automation",
+    "keywords": [
+      "appium smart-heal",
+      "self-healing tests",
+      "smart heal"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "2. Enable Smart Heal with Capabilities (iOS)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Python",
+        "text": "desired_caps = {\n    \"deviceName\": \"iPhone 16\",\n    \"platformName\": \"iOS\",\n    \"platformVersion\": \"18\",\n    \"isRealMobile\": True,\n    \"app\": \"YOUR_APP_URL\",\n    \"build\": \"Smart Heal iOS\",\n    \"name\": \"Sample Smart Heal Test\",\n    # highlight-next-line\n    \"smartHeal\": True\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "highlight-next-line (Android)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Python",
+        "text": "desired_caps = {\n    \"deviceName\": \"Galaxy S25\",\n    \"platformName\": \"Android\",\n    \"platformVersion\": \"16\",\n    \"isRealMobile\": True,\n    \"app\": \"YOUR_APP_URL\",\n    \"build\": \"Smart Heal Android\",\n    \"name\": \"Sample Smart Heal Test\",\n    # highlight-next-line\n    \"smartHeal\": True\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "3. Enable Smart Heal with Runtime Hooks",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "// Stop Smart Heal\ndriver.executeScript(\"lambda-heal-stop\");\n\n// Start Smart Heal\ndriver.executeScript(\"lambda-heal-start\");\n"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
 # How to Enable Smart Heal on TestMu AI
 
 Smart Heal on TestMu AI uses AI-powered algorithms to automatically detect and recover from locator failures during real device automation tests. It analyzes the UI in real time, applies the closest valid match, and logs both original and recovered locators.
@@ -75,7 +178,6 @@ To unlock this feature, purchase or upgrade to the required [plan](https://www.t
 5. **Fallback and Suggestions**
    If Smart Heal cannot confidently identify an alternative, it records **AI-driven suggestions** in the dashboard. These insights help you quickly update or strengthen your locators to avoid repeated failures in future runs.
 
-
 ---
 
 ## Smart Heal in Automation Tests
@@ -97,6 +199,8 @@ To enable Smart Heal, add `"smartHeal": true` to your desired capabilities in yo
 <Tabs className="docs__val">
 <TabItem value="ios" label="iOS" default>
 
+<VerifiedTag value="Verified" />
+
 ```python
 desired_caps = {
     "deviceName": "iPhone 16",
@@ -114,6 +218,8 @@ desired_caps = {
 </TabItem>
 
 <TabItem value="android" label="Android" default>
+
+<VerifiedTag value="Verified" />
 
 ```python
 desired_caps = {
@@ -139,6 +245,8 @@ You can generate capabilities for your test requirements with the help of our in
 ### 3. Enable Smart Heal with Runtime Hooks
 
 You can also control Smart Heal dynamically during test execution using runtime hooks. This is useful when you want healing active in specific phases or after major UI changes.
+
+<VerifiedTag value="Verified" />
 
 ```java
 // Stop Smart Heal
@@ -172,7 +280,6 @@ To display only healed builds, click on the **Configure** option at the top of t
 - Once filtering is applied, the dashboard highlights all healed elements in your tests. In this view, healed elements are marked clearly, while those that could not be healed are highlighted in red:  
 ![Smart Heal - Highlighted Elements](../assets/images/real-device-app-testing/Auto-heal/SmartHeal4.png)
 
-
 ### Hovering Over Healed Builds
 Each healed build has an associated icon. Hovering over this icon provides a tooltip that shows a brief summary of the session and the healing actions performed.  
 
@@ -185,7 +292,6 @@ Access detailed execution logs that clearly differentiate between **original and
 ### AI Review on Failures
 When a test case fails, the dashboard provides **AI-powered analysis and suggestions** to help you quickly identify root causes and fix issues.
 ![Smart Heal - AI Review on test failure with suggestions](../assets/images/real-device-app-testing/Auto-heal/Auto-heal2.png)
-
 
 :::info
 Smart Heal delivers the best results when applied to **static components** such as buttons or form fields, where locators remain relatively consistent across runs.

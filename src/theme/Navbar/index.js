@@ -44,7 +44,6 @@ function applyThemeChoice(choice) {
 
 const NAV_LINKS = [
   { to: '/support/docs/', label: 'Home', icon: HomeIcon },
-  { to: '/support/docs/testmu-running-your-first-selenium-test/', label: 'Docs', icon: DocsIcon },
   { to: '/support/api-doc/', label: 'APIs Reference', icon: ApiIcon },
   { to: '/support/docs/agent-skills/', label: 'Skills', icon: SkillsIcon },
   { to: '/support/docs/testmu-mcp-server/', label: 'MCP', icon: McpIcon },
@@ -57,17 +56,6 @@ function HomeIcon() {
     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
       <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
       <polyline points="9 22 9 12 15 12 15 22" />
-    </svg>
-  );
-}
-
-function DocsIcon() {
-  return (
-    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-      <rect x="3" y="3" width="7" height="7" />
-      <rect x="14" y="3" width="7" height="7" />
-      <rect x="3" y="14" width="7" height="7" />
-      <rect x="14" y="14" width="7" height="7" />
     </svg>
   );
 }
@@ -183,13 +171,6 @@ function isActiveLink(pathname, to, label) {
   // MCP link - match any MCP server doc
   if (label === 'MCP') {
     return isMcpPath;
-  }
-  // Docs link - match any /support/docs/* path EXCEPT /support/docs/, the Skills doc, and MCP docs
-  if (label === 'Docs') {
-    return normalizedPath.startsWith('/support/docs/') &&
-           normalizedPath !== '/support/docs/' &&
-           normalizedPath !== '/support/docs' &&
-           !isSkillsOrMcp;
   }
   // API Reference should match any /support/api-doc/* path
   if (normalizedTo.startsWith('/support/api-doc/')) return normalizedPath.startsWith('/support/api-doc/');

@@ -24,6 +24,7 @@ canonical: https://www.testmuai.com/support/docs/selenium-testing-with-concourse
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import { CookieTrackingSignup } from '@site/src/component/CookieTracking';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -50,6 +51,103 @@ import { CookieTrackingSignup } from '@site/src/component/CookieTracking';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/selenium-testing-with-concourse-ci-and-testmu/"
+    },
+    "headline": "Selenium Testing With Concourse CI And TestMu AI",
+    "description": "This document will help you understand how you can integrate your Concourse CI instance with cloud Selenium Grid for continuous testing.",
+    "url": "https://www.testmuai.com/support/docs/selenium-testing-with-concourse-ci-and-testmu/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Integration",
+    "keywords": [
+      "concourse ci",
+      "testmu ai",
+      "concourse ci/cd"
+    ],
+    "proficiencyLevel": "Beginner",
+    "dependencies": "For Linux/Mac:; For Windows:.",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Prerequisites",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "npm install npm@latest -g"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "We recommend using the latest fly version, you can check the fly version using",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "$ fly -v"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Configuring Concourse-CI Pipeline",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "$ fly -t ci login -c http://127.0.0.1:8080 -u test -p test"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Configuring Concourse-CI Pipeline",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "codeRepository": "https://github.com/sushobhit-lt/nodejs-selenium-sample",
+        "text": "resources:\n  - name: nodejs-selenium-sample\n    type: git\n    icon: github\n    source:\n      url: https://github.com/sushobhit-lt/nodejs-selenium-sample.git\n\njobs:\n  - name: 'Run over Lambdatest Hub'\n    public: true\n    plan:\n      - get: nodejs-selenium-sample\n        trigger: true\n      - task: 'Install dependencies and execute'\n        config:\n          platform: linux\n          image_resource:\n            type: registry-image\n            source: { repository: node, tag: \"12\" }\n          inputs:\n            - name: nodejs-selenium-sample\n          run:\n            path: /bin/sh\n            args:\n              - -c\n              - |\n                cd nodejs-selenium-sample\n                npm install\n                export LT_USERNAME=Your_LambdaTest_Username\n                export LT_ACCESS_KEY=Your_LambdaTest_Access_Key\n                node index.js"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 5",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "$ fly -t ci set-pipeline -p nodejs-lambda-sample -c pipeline-config.yml"
+      }
+    ],
+    "dateModified": "2026-06-09T15:09:24+05:30"
+  }) }}
+/>
+
 # Selenium Testing With Concourse CI And <BrandName />
 * * *
 Concourse CI is an open-source CI/CD tool which is triggered over Docker containers. It offers a scalable and straightforward solution to your CI/CD pipelines with an intuitive UI that allows you to analyze the dashboard and validate your build execution. Offering a container-centric approach, Concourse CI offers a sturdy pipeline as each task in every job is handled in its container, controlling its dependencies.
@@ -61,6 +159,8 @@ Concourse CI can be integrated with <BrandName /> to perform automation testing 
 1. A <BrandName /> account. It is free to get started. <a href="https://www.testmuai.com/register/" onClick={CookieTrackingSignup}>Sign up now</a>.
 
 2. Install NPM(Node Package Manager). If you have npm already installed, you may want to upgrade it to latest version. Here the code you can run in your terminal to upgrade npm.
+
+<VerifiedTag value="Verified" />
 
 ```
 npm install npm@latest -g
@@ -90,6 +190,8 @@ npm install npm@latest -g
 
 5. Install fly CLI tool for Concourse CI/CD. We recommend using the latest fly version, you can check the fly version using:
 
+<VerifiedTag value="Verified" />
+
 ```
 $ fly -v
 ```
@@ -100,11 +202,15 @@ $ fly -v
 
 Open your terminal or command prompt. Login to your Concourse server and save the target.
 
+<VerifiedTag value="Verified" />
+
 ```
 $ fly -t ci login -c http://127.0.0.1:8080 -u test -p test
 ```
 
 Next, we need to update the environment variables in the `YAML` file. To access your YAML file, you need to go to the project-folder/concourse-ci. Here you will find the YAML file i.e. `pipeline-config.yml`.
+
+<VerifiedTag value="Verified" />
 
 ```js
 resources:
@@ -141,6 +247,8 @@ jobs:
 ```
 
 After you specify the right configuration in the `pipeline-config.yml`, you now need to create your concourse pipeline with the help of fly CLI.
+
+<VerifiedTag value="Verified" />
 
 ```
 $ fly -t ci set-pipeline -p nodejs-lambda-sample -c pipeline-config.yml

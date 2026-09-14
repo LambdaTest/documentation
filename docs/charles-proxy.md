@@ -18,6 +18,7 @@ slug: charles-proxy/
 canonical: https://www.testmuai.com/support/docs/charles-proxy/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -43,6 +44,73 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       })
     }}
 ></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/charles-proxy/"
+    },
+    "headline": "Setting Up Charles Proxy",
+    "description": "This article will guide you on how to setup Charles Proxy for the tests run on TestMu AI platform through TestMu AI Tunnel.",
+    "url": "https://www.testmuai.com/support/docs/charles-proxy/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Testing Locally",
+    "keywords": [
+      "Charles Proxy",
+      "Network Logs With Charles Proxy",
+      "Network Logs"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "The format of the command would be",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "./LT -user {user\u2019s login email} -key {user\u2019s access key} \\\n--proxy-host localhost \\\n--proxy-port 8888"
+      }
+    ],
+    "dateModified": "2026-06-09T15:09:24+05:30"
+  }) }}
+/>
 
 # Setting Up Charles Proxy Through <BrandName /> Tunnel
 
@@ -138,6 +206,8 @@ To configure the tunnel, you need to download the **<BrandName />'s Tunnel Binar
 ---
 
 But here we need to add the Charles proxy server through which we want to route the traffic of the tunnel. We can do that by appending the `--proxy-host` (localhost) and `--proxy-port` (`8888` in this case) options to the above command. The format of the command would be:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 ./LT -user {user’s login email} -key {user’s access key} \

@@ -41,6 +41,64 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/manual-test-case-creation/"
+    },
+    "headline": "Create & Manage Test Cases",
+    "description": "Learn efficient manual test case creation with TestMu AI's Test Manager, streamlining testing processes and enhancing test execution.",
+    "url": "https://www.testmuai.com/support/docs/manual-test-case-creation/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Test Manager",
+    "keywords": [
+      "test case creation",
+      "test case",
+      "test cases"
+    ],
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "dateModified": "2026-09-09T21:31:00+05:30"
+  }) }}
+/>
+
+
 Test Manager streamlines the process of creating, managing, and editing test cases. It enables users to develop manual test cases, allowing efficient management of all testing activities from a single platform.
 
 ## Creating a Test Case
@@ -71,6 +129,10 @@ After test case is created you will be redirected to a screen listing all the te
 ***
 
 ## Manage Test Case
+
+:::note
+To retire a test case without deleting it, use **Archive** in the test case's three-dot menu. An archived test case leaves the repository and becomes read-only, but keeps its version history, past run results, and linked issues, and can be restored at any time. See [Archive and Restore Test Cases](/support/docs/test-case-archive/).
+:::
 
 ### Test Case Details
 
@@ -130,6 +192,21 @@ To save the changes made in the Test Case click on the `Save Changes` button OR 
 
 ***
 
+### Automate with KaneAI
+
+A saved test case can be handed to **KaneAI** for automated authoring. Open the test case and click **Automate with KaneAI** in the **Automate** section of the test case detail. This opens a KaneAI session pre-filled with the test case's steps, where you author the automated test and then execute it.
+
+This works for both test case templates:
+
+| Template | What KaneAI receives |
+|----------|----------------------|
+| **Manual Test Steps** | The ordered steps and their expected results |
+| **Behaviour Driven Development** | The `Given` / `When` / `Then` scenarios, read directly — no conversion is needed |
+
+:::note
+The action requires KaneAI access, and the test case must have content — a test case with no steps or no scenarios cannot be automated.
+:::
+
 ### Test Case Runs Section
 
 **Test Case Runs Section** provides an overview of a test case's executions & plannings, whether are manual or automated. It includes detailed information of Test Instances of the Test case such as **applied configuration**, **executed by**, **Test Run name**, **Test Instance Execution Status**, **Execution time** and filters based on available fields. 
@@ -151,7 +228,7 @@ To save the changes made in the Test Case click on the `Save Changes` button OR 
 
 ### Issues section
 
-This section lists the linked Jira/ADO Issues with the Test Case. For more information refer [this page](/support/docs/link-jira-issues-with-test-manager/)
+This section lists the issues linked with the Test Case. You can link issues from Jira, Azure DevOps, and Linear. For more information, refer to [Link Jira Issues](/support/docs/link-jira-issues-with-test-manager/), [Link Azure DevOps Issues](/support/docs/link-ado-issues-with-test-manager/), or [Link Linear Issues](/support/docs/link-linear-issues-with-test-manager/).
 
 ***
 

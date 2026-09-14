@@ -24,6 +24,7 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import { CookieTrackingSignup } from '@site/src/component/CookieTracking';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 
@@ -51,6 +52,129 @@ import { CookieTrackingSignup } from '@site/src/component/CookieTracking';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/browserstack-to-testmu-migration-guide/"
+    },
+    "headline": "How to migrate from BrowserStack to TestMu AI",
+    "description": "Using this guide, you can seamlessly migrate from BrowserStack to TestMu AI. It showcases a hands-on implementation using which you can run tests on TestMu AI (within few minutes)",
+    "url": "https://www.testmuai.com/support/docs/browserstack-to-testmu-migration-guide/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Other Docs",
+    "keywords": [
+      "browserstack testmu ai migration",
+      "browserstack testmu ai porting",
+      "browserstack testmu ai selenium testing"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "When migrating your Selenium 4 tests from BrowserStack to TestMu AI, the following updates are required in your existing code",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "LT_USERNAME=\"<your_username>\"\nLT_ACCESS_KEY=\"<your_access_key>\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Changes in Hub URL (BrowserStack Selenium Grid URL)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "@hub-cloud.browserstack.com/wd/hub"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Changes in Hub URL (TestMu AI Selenium Grid URL)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "@hub.lambdatest.com/wd/hub"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Shown below are the screenshots of capabilities generator of BrowserStack and TestMu AI (BrowserStack Capabilities)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "MutableCapabilities capabilities = new MutableCapabilities();\nHashMap<String, Object> bstackOptions = new HashMap<String, Object>();\ncapabilities.setCapability(\"browserName\", \"Safari\");\nbstackOptions.put(\"os\", \"OS X\");\nbstackOptions.put(\"osVersion\", \"Tahoe\");\nbstackOptions.put(\"browserVersion\", \"26.0\");\nbstackOptions.put(\"userName\", \"YOUR_USERNAME\");\nbstackOptions.put(\"accessKey\", \"YOUR_ACCESS_KEY\");\ncapabilities.setCapability(\"bstack:options\", bstackOptions);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "TestMu AI Capabilities",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "SafariOptions browserOptions = new SafariOptions();\nbrowserOptions.setPlatformName(\"MacOS Tahoe\");\nbrowserOptions.setBrowserVersion(\"26\");\nHashMap<String, Object> ltOptions = new HashMap<String, Object>();\nltOptions.put(\"username\", \"<your_username>\");\nltOptions.put(\"accessKey\", \"<your_access_key>\");\nltOptions.put(\"w3c\", true);\nbrowserOptions.setCapability(\"LT:Options\", ltOptions);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "With Selenium 3, the core capabilities remain (BrowserStack Capabilities)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "DesiredCapabilities caps = new DesiredCapabilities();\ncaps.setCapability(\"browser\", \"Safari\");\ncaps.setCapability(\"os\", \"OS X\");\ncaps.setCapability(\"os_version\", \"Tahoe\");\ncaps.setCapability(\"browser_version\", \"26.0\");\ncaps.setCapability(\"browserstack.user\", \"YOUR_USERNAME\");\ncaps.setCapability(\"browserstack.key\", \"YOUR_ACCESS_KEY\");"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "TestMu AI Capabilities",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "DesiredCapabilities capabilities = new DesiredCapabilities();\ncapabilities.setCapability(\"browserName\", \"Safari\");\ncapabilities.setCapability(\"browserVersion\", \"26\");\nHashMap<String, Object> ltOptions = new HashMap<String, Object>();\nltOptions.put(\"username\", \"<your_username>\");\nltOptions.put(\"accessKey\", \"<your_access_key>\");\nltOptions.put(\"platformName\", \"MacOS Tahoe\");\nltOptions.put(\"visual\", true);\nltOptions.put(\"video\", true);\ncapabilities.setCapability(\"LT:Options\", ltOptions);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Test Scenario (TestMu AI Execution With Selenium 4 Capabilities)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "// TextValidationTest.java\nimport org.openqa.selenium.WebDriver;\nimport org.openqa.selenium.remote.RemoteWebDriver;\nimport org.openqa.selenium.JavascriptExecutor;\nimport org.openqa.selenium.safari.SafariOptions;\n\nimport java.net.URL;\nimport java.util.HashMap;\n\npublic class TextValidationTest {\n\n\n    public static void main(String[] args) throws Exception {\n\n        String username = System.getenv(\"LT_USERNAME\") == null ? \n        \"Your LT Username\" : System.getenv(\"LT_USERNAME\");\n\n        String authkey = System.getenv(\"LT_ACCESS_KEY\") == null ? \n        \"Your LT AccessKey\\n\"  : System.getenv(\"LT_ACCESS_KEY\");\n\n        String GRID_URL = \"https://\" + username + \":\" + authkey + \"@hub.lambdatest.com/wd/hub\";\n\n\n        SafariOptions browserOptions = new SafariOptions();\n        browserOptions.setPlatformName(\"MacOS Tahoe\");\n        browserOptions.setBrowserVersion(\"26\");\n        HashMap<String, Object> ltOptions = new HashMap<String, Object>();\n        ltOptions.put(\"username\", \"<your_username>\");\n        ltOptions.put(\"accessKey\", \"<your_access_key>\");\n        ltOptions.put(\"project\", \"Text Validation Test\");\n        ltOptions.put(\"build\", \"Text Validation Test Build\");\n        ltOptions.put(\"w3c\", true);\n        browserOptions.setCapability(\"LT:Options\", ltOptions);\n\n        WebDriver driver = new RemoteWebDriver(new URL(GRID_URL), browserOptions);\n\n        try {\n\n            driver.get(\"https://ecommerce-playground.lambdatest.io/\");\n\n            String expectedText = \"This is a dummy website for Web Automation Testing\";\n            boolean isTextPresent = driver.getPageSource().contains(expectedText);\n\n            if (isTextPresent) {\n                ((JavascriptExecutor) driver).executeScript(\"lambda-status=passed\");\n                System.out.println(\"\u2714 Text validation PASSED\");\n            } else {\n                ((JavascriptExecutor) driver).executeScript(\"lambda-status=failed\");\n                System.out.println(\"\u2718 Text validation FAILED\");\n            }\n\n        } catch (Exception e) {\n            ((JavascriptExecutor) driver).executeScript(\"lambda-status=pass\");\n            e.printStackTrace();\n        } finally {\n            driver.quit();   // \ud83d\udd39 Correctly placed \u2013 runs even if test fails\n        }\n    }\n}\n"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "TestMu AI Execution With Selenium 3 Capabilities",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "// TextValidationTest.java \u2013 Selenium 3 Configuration\nimport org.openqa.selenium.WebDriver;\nimport org.openqa.selenium.remote.DesiredCapabilities;\nimport org.openqa.selenium.remote.RemoteWebDriver;\nimport org.openqa.selenium.JavascriptExecutor;\n\nimport java.net.URL;\nimport java.util.HashMap;\n\npublic class TextValidationTest {\n\n\n    public static void main(String[] args) throws Exception {\n\n        String username = System.getenv(\"LT_USERNAME\") == null ? \n        \"Your LT Username\" : System.getenv(\"LT_USERNAME\");\n\n        String authkey = System.getenv(\"LT_ACCESS_KEY\") == null ? \n        \"Your LT AccessKey\" : System.getenv(\"LT_ACCESS_KEY\");\n\n        String GRID_URL = \"https://\" + username + \":\" + authkey + \"@hub.lambdatest.com/wd/hub\";\n        \n        DesiredCapabilities capabilities = new DesiredCapabilities();\n        capabilities.setCapability(\"browserName\", \"Safari\");\n        capabilities.setCapability(\"browserVersion\", \"26\");\n        HashMap<String, Object> ltOptions = new HashMap<String, Object>();\n        ltOptions.put(\"username\", \"<your_username>\");\n        ltOptions.put(\"accessKey\", \"<your_access_key>\");\n        ltOptions.put(\"platformName\", \"MacOS Tahoe\");\n        ltOptions.put(\"visual\", true);\n        ltOptions.put(\"video\", true);\n        capabilities.setCapability(\"LT:Options\", ltOptions);\n\n        WebDriver driver = new RemoteWebDriver(new URL(GRID_URL), capabilities);\n\n        try {\n\n            driver.get(\"https://ecommerce-playground.lambdatest.io/\");\n\n            String expectedText = \"This is a dummy website for Web Automation Testing\";\n            boolean isTextPresent = driver.getPageSource().contains(expectedText);\n\n            if (isTextPresent) {\n                ((JavascriptExecutor) driver).executeScript(\"lambda-status=passed\");\n                System.out.println(\"\u2714 Text validation PASSED\");\n            } else {\n                ((JavascriptExecutor) driver).executeScript(\"lambda-status=failed\");\n                System.out.println(\"\u2718 Text validation FAILED\");\n            }\n\n        } catch (Exception e) {\n            ((JavascriptExecutor) driver).executeScript(\"lambda-status=pass\");\n            e.printStackTrace();\n        } finally {\n            driver.quit();   // \ud83d\udd39 Correctly placed \u2013 runs even if test fails\n        }\n    }\n}"
+      }
+    ],
+    "dateModified": "2026-06-02T12:20:54+05:30"
+  }) }}
+/>
+
 # Migration from BrowserStack to <BrandName />
 * * *
 <BrandName /> and BrowserStack both offer the cloud-based Selenium Grid. Hence, you can easily migrate your existing Selenium test automation scripts (or suites) from BrowserStack to <BrandName />
@@ -75,6 +199,8 @@ When migrating your Selenium 4 tests from BrowserStack to <BrandName />, the fol
 
 2. <b>Create .env file</b>: Securely store your <BrandName /> credentials, create a .env file in the root of your project and add the following values:
 
+<VerifiedTag value="Verified" />
+
 ```
 LT_USERNAME="<your_username>"
 LT_ACCESS_KEY="<your_access_key>"
@@ -85,6 +211,8 @@ Once the .env file is set up, ensure your test framework correctly reads these v
 
 ## Changes in Hub URL
 You need to now change the hub URL in the configuration settings of your test suite. Hub URL is of type String and it defines the Hub location to which the Selenium tests would be submitted for execution.
+
+<VerifiedTag value="Verified" />
 
 <Tabs className="docs__val">
 
@@ -126,6 +254,8 @@ To generate capabilities use [<BrandName /> Capabilities Generator](https://www.
 
 
 For the migration, we have considered Java-based Selenium automation tests. Shown below are the screenshots of capabilities generator of BrowserStack and <BrandName />:
+
+<VerifiedTag value="Verified" />
 
 <Tabs className="docs__val">
 
@@ -187,6 +317,8 @@ To generate capabilities for Selenium 3, you can use the [<BrandName /> Capabili
 Below are example capability representations from BrowserStack and <BrandName /> to help you understand how to adapt your existing configuration during migration.
 
 
+<VerifiedTag value="Verified" />
+
 <Tabs className="docs__val">
 
 <TabItem value="ios" label="BrowserStack Capabilities" default>
@@ -232,6 +364,8 @@ Let’s walk through a practical example demonstrating how to migrate a Selenium
 
 This test script performs a basic text validation on the website [<BrandName /> eCommerce Playground](https://ecommerce-playground.lambdatest.io/) and shows the expected execution results when running the test in the <BrandName /> cloud.
 
+
+<VerifiedTag value="Verified" />
 
 <Tabs className="docs__val">
 

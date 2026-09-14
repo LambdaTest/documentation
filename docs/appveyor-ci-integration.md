@@ -18,6 +18,7 @@ slug: appveyor-ci-integration/
 canonical: https://www.testmuai.com/support/docs/appveyor-ci-integration/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -42,6 +43,73 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       })
     }}
 ></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/appveyor-ci-integration/"
+    },
+    "headline": "How to integrate AppVeyor CI with TestMu AI",
+    "description": "TestMu AI now integrates with AppVeyor CI to boost your go-to-market delivery. Perform automated cross-browser testing on 10,000+ browser/device combinations.",
+    "url": "https://www.testmuai.com/support/docs/appveyor-ci-integration/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Integration",
+    "keywords": [
+      "testmu ai integrations",
+      "testmu ai integrations with ci/cd tools",
+      "ci/cd tools"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Here are the steps to activate and integrate your Github repository with AppVeyor CI on TestMu AI",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "mvn test"
+      }
+    ],
+    "dateModified": "2026-08-14T19:24:28+05:30"
+  }) }}
+/>
 
 # AppVeyor CI Integration with <BrandName />
 * * *
@@ -75,6 +143,8 @@ Here are the steps to activate and integrate your Github repository with AppVeyo
 Login to your [AppVeyor CI](https://ci.appveyor.com/) platform and click on **New Project** to enable CI/CD on your selected repository. For demo purposes, we have used the GitHub repository mentioned in the Prerequisites above. <img loading="lazy" src={require('../assets/images/uploads/appveyorCi-1-1024x460.webp').default} alt="appveyor ci integration" width="768" height="345" className="doc_img"/>]
 
 Once your repository is added, go to the **Settings -> Build**, and select the trigger choice for build purpose. For this demo, we have used **Script** trigger and passed the below code in command line (**Cmd**). Save the build settings when done.
+
+<VerifiedTag value="Verified" />
 
 ```
 mvn test

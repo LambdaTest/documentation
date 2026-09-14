@@ -21,6 +21,30 @@ canonical: https://www.testmuai.com/support/docs/test-manager-salesforce-app/
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import { CookieTrackingSignup } from '@site/src/component/CookieTracking';
 
+<script type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify({
+       "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": BRAND_URL
+        },{
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Support",
+          "item": `${BRAND_URL}/support/docs/`
+        },{
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Generate and Run Salesforce Test Cases with Test Manager",
+          "item": `${BRAND_URL}/support/docs/test-manager-salesforce-app/`
+        }]
+      })
+    }}
+></script>
+
 The Test Manager app for Salesforce is an AI test case generator that you install inside Salesforce. It reads the flows already configured in your Salesforce org and generates manual test cases for them, so a Salesforce professional can build a test suite and run it without writing test cases from scratch.
 
 :::note

@@ -17,6 +17,8 @@ canonical: https://www.testmuai.com/support/docs/agent-assurance-mcp/
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
+import VerifiedTag from '@site/src/component/verifiedTag';
+
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
     "@context": "https://schema.org", "@type": "BreadcrumbList",
@@ -28,6 +30,158 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
   }) }}
 />
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/agent-assurance-mcp/"
+    },
+    "headline": "Configure MCP Servers in Agent Assurance",
+    "description": "Add, inspect, approve, enable, disable, and troubleshoot MCP servers used by Agent Assurance for AI agent discovery and verification.",
+    "url": "https://www.testmuai.com/support/docs/agent-assurance-mcp/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Agent Testing",
+    "keywords": [
+      "rook mcp",
+      "mcp agent testing",
+      "model context protocol verification"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Interactive",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "/mcp\n/mcp list"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Headless",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "rook mcp list\nrook mcp list --json"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Local scope is the default",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "rook mcp add github -- npx -y @modelcontextprotocol/server-github"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Add a project or user definition",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "rook mcp add github --scope project \\\n  --env 'GITHUB_TOKEN=${GITHUB_TOKEN}' \\\n  -- npx -y @modelcontextprotocol/server-github\n\nrook mcp add github --scope user \\\n  --env 'GITHUB_TOKEN=${GITHUB_TOKEN}' \\\n  -- npx -y @modelcontextprotocol/server-github"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Record a Remote Server",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "rook mcp add notion \\\n  --transport http \\\n  --url https://mcp.example.com/mcp \\\n  --header 'Authorization: Bearer ${NOTION_TOKEN}'"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Inspect a Definition",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "rook mcp get github\nrook mcp get github --json"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Interactive",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "/mcp approve <name>"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Headless",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "rook mcp approve <name>"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "When a project and discovered definition share the name, specify which one",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "rook mcp approve <name> --origin project\nrook mcp approve <name> --origin discovered"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Enable, Disable, or Remove",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "/mcp enable <name>\n/mcp disable <name>"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Headless",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "rook mcp enable <name>\nrook mcp disable <name>\nrook mcp remove <name> --scope local"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "A scenario can require a verifier",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "verification_requires:\n  - type: mcp\n    server: github\n    op: issues.get"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Permission Prompts Still Apply",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "mcp_call(billing.get_refund_status)"
+      }
+    ],
+    "dateModified": "2026-08-25T16:54:35+05:30"
+  }) }}
+/>
+
+
 # Configure MCP Servers in Agent Assurance
 
 Rook uses MCP primarily as an evidence source. A judge can call an approved read-only tool to confirm that a ticket, refund, pull request, or other effect exists, rather than trusting the tested agent's claim.
@@ -38,12 +192,16 @@ Exploration also records MCP servers declared by the target agent. These declara
 
 Interactive:
 
+<VerifiedTag value="Verified" />
+
 ```text
 /mcp
 /mcp list
 ```
 
 Headless:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 rook mcp list
@@ -69,11 +227,15 @@ The repository-root `.mcp.json` belongs to the agent under test. Rook reads it a
 
 Local scope is the default:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 rook mcp add github -- npx -y @modelcontextprotocol/server-github
 ```
 
 Add a project or user definition:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 rook mcp add github --scope project \
@@ -91,6 +253,8 @@ Keep secret references in configuration. Rook expands `${VAR}` only when resolvi
 
 ## Record a Remote Server
 
+<VerifiedTag value="Verified" />
+
 ```bash
 rook mcp add notion \
   --transport http \
@@ -103,6 +267,8 @@ HTTP, SSE, and WebSocket definitions are accepted, stored, and listed for forwar
 :::
 
 ## Inspect a Definition
+
+<VerifiedTag value="Verified" />
 
 ```bash
 rook mcp get github
@@ -117,17 +283,23 @@ A project or discovered stdio definition can execute a command from a cloned rep
 
 Interactive:
 
+<VerifiedTag value="Verified" />
+
 ```text
 /mcp approve <name>
 ```
 
 Headless:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 rook mcp approve <name>
 ```
 
 When a project and discovered definition share the name, specify which one:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 rook mcp approve <name> --origin project
@@ -146,12 +318,16 @@ Approval is pinned to the raw definition, not only the server name. If the comma
 
 ## Enable, Disable, or Remove
 
+<VerifiedTag value="Verified" />
+
 ```text
 /mcp enable <name>
 /mcp disable <name>
 ```
 
 Headless:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 rook mcp enable <name>
@@ -176,6 +352,8 @@ Approval never guesses between two same-named definitions.
 
 A scenario can require a verifier:
 
+<VerifiedTag value="Verified" />
+
 ```yaml
 verification_requires:
   - type: mcp
@@ -193,6 +371,8 @@ Observing the tested agent's own MCP calls is a separate concern that you config
 ## Permission Prompts Still Apply
 
 An enabled registry entry does not grant every use. Starting a server, listing its tools, and calling a tool each still pass through Rook's permission gate with specific subjects such as:
+
+<VerifiedTag value="Verified" />
 
 ```text
 mcp_call(billing.get_refund_status)

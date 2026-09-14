@@ -6,6 +6,85 @@ description: Discover agent behavior from documents, images, source files, or a 
 slug: rook-command-explore/
 ---
 
+import { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
+
+<script type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify({
+       "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": BRAND_URL
+        },{
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Support",
+          "item": `${BRAND_URL}/support/docs/`
+        },{
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Rook /explore Command",
+          "item": `${BRAND_URL}/support/docs/rook-command-explore/`
+        }]
+      })
+    }}
+></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/rook-command-explore/"
+    },
+    "headline": "Rook /explore Command",
+    "description": "Discover agent behavior from documents, images, source files, or a local workspace.",
+    "url": "https://www.testmuai.com/support/docs/rook-command-explore/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Agent Testing",
+    "keywords": [],
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "dateModified": "2026-09-04T12:50:18+05:30"
+  }) }}
+/>
 # <code>/explore</code> Command
 
 Use <code>/explore</code> to tell Rook what local material describes your agent. The target can be a PRD, an office document, an image, a documentation folder, an agent source directory, or a complete local repository.
@@ -13,6 +92,8 @@ Use <code>/explore</code> to tell Rook what local material describes your agent.
 <img loading="lazy" src={require('../assets/images/rook/commands/rook-command-explore.png').default} alt="Rook explore command help with force and free-text guidance" className="doc_img"/>
 
 ## Syntax
+
+<VerifiedTag value="Verified" />
 
 ~~~text
 /explore [path] [instruction...] [--force] [--allow <exact-rule>] [--json] [--verbose]
@@ -33,11 +114,15 @@ From a shell, replace the leading slash with <code>rook</code>.
 
 PRD only:
 
+<VerifiedTag value="Verified" />
+
 ~~~text
 /explore docs/refund-agent-prd.md
 ~~~
 
 PRD and knowledge base:
+
+<VerifiedTag value="Verified" />
 
 ~~~text
 /explore docs focus on PRD.md and knowledge, and treat them as intended behavior
@@ -45,11 +130,15 @@ PRD and knowledge base:
 
 Source workspace:
 
+<VerifiedTag value="Verified" />
+
 ~~~text
 /explore services/travel-agent
 ~~~
 
 Headless:
+
+<VerifiedTag value="Verified" />
 
 ~~~bash
 rook explore docs/refund-agent-prd.md focus on refund approval rules --json

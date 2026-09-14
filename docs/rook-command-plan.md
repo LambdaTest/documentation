@@ -6,6 +6,85 @@ description: View the signed-in TestMu AI account plan and available Rook credit
 slug: rook-command-plan/
 ---
 
+import { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
+
+<script type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify({
+       "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": BRAND_URL
+        },{
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Support",
+          "item": `${BRAND_URL}/support/docs/`
+        },{
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Rook /plan Command",
+          "item": `${BRAND_URL}/support/docs/rook-command-plan/`
+        }]
+      })
+    }}
+></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/rook-command-plan/"
+    },
+    "headline": "Rook /plan Command",
+    "description": "View the signed-in TestMu AI account plan and available Rook credits.",
+    "url": "https://www.testmuai.com/support/docs/rook-command-plan/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Agent Testing",
+    "keywords": [],
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "dateModified": "2026-09-04T12:50:18+05:30"
+  }) }}
+/>
 # <code>/plan</code> Command
 
 Use <code>/plan</code> to check the TestMu AI account plan and credit balance before generating or executing a suite.
@@ -14,11 +93,15 @@ Use <code>/plan</code> to check the TestMu AI account plan and credit balance be
 
 ## Syntax
 
+<VerifiedTag value="Verified" />
+
 ~~~text
 /plan
 ~~~
 
 Headless:
+
+<VerifiedTag value="Verified" />
 
 ~~~bash
 rook plan
@@ -27,6 +110,8 @@ rook plan
 ## Real-world use
 
 Before generating 50 refund scenarios:
+
+<VerifiedTag value="Verified" />
 
 ~~~text
 /plan

@@ -42,6 +42,64 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/kane-ai-failure-conditions/"
+    },
+    "headline": "Failure Conditions",
+    "description": "Failure Conditions for test steps to decide on the behavior of test execution & status on failure of individual steps",
+    "url": "https://www.testmuai.com/support/docs/kane-ai-failure-conditions/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "KaneAI",
+    "keywords": [
+      "failure conditions",
+      "assertion",
+      "hard assertion"
+    ],
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "dateModified": "2026-09-09T20:20:47+05:30"
+  }) }}
+/>
+
+
 # How Failure Conditions Work in KaneAI
 ***
 
@@ -68,7 +126,19 @@ You can set the failure condition in the Authoring mode by clicking on the three
 <img loading="lazy" src={require('../assets/images/kane-ai/knowledge-base/failure-conditions/failure_conditions.png').default} alt="failure_conditions" className="doc_img"/>
 
 >This change will not affect your existing test cases or the generated code where you’ve used hard/soft assertions. However, when you edit these tests, the new failure conditions will be applied.
- 
+
+## Failure Conditions vs Authoring Errors
+***
+
+A failure condition and an authoring error are different situations, and only one of them affects your authoring session.
+
+| | What happened | Result |
+|---|---|---|
+| **Assertion failure** | The step ran, but its check returned false. | The failure condition you configured applies — fail immediately, fail but continue, or warn but continue. |
+| **Error** | The agent could not execute the step on the application at all, for example the element was not found or the page did not load. | The authoring session pauses with the Error flag set. Failure conditions do not apply. |
+
+Because an errored step never ran, KaneAI blocks run actions on the steps after it and disables Resume until you re-run, edit, or delete it. See [The Error flag](/support/docs/kaneai-authoring-session/#the-error-flag).
+
 ## Default Failure Condition Setting
 ***
 

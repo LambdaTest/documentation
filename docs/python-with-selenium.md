@@ -26,6 +26,8 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
+import VerifiedTag from '@site/src/component/verifiedTag';
+
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
        "@context": "https://schema.org",
@@ -49,6 +51,141 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       })
     }}
 ></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/python-with-selenium-running-python-automation-scripts-on-testmu-selenium-grid/"
+    },
+    "headline": "Selenium With Python",
+    "description": "Run Python Selenium test scripts on TestMu AI cloud grid with 10,000+ browser/device combinations. Covers unittest, pytest, Robot Framework, and Behave.",
+    "url": "https://www.testmuai.com/support/docs/python-with-selenium-running-python-automation-scripts-on-testmu-selenium-grid/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Web Automation",
+    "keywords": [
+      "python selenium cloud testing",
+      "run python selenium tests online",
+      "selenium webdriver python tutorial"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "How the sample test works",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Python",
+        "text": "capabilities = {\n    \"build\": \"your build name\",\n    \"name\": \"your test name\",\n    \"platformName\": \"Windows 10\",\n    \"browserName\": \"Chrome\",\n    \"browserVersion\": \"latest\",\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Clone the sample GitHub project",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "codeRepository": "https://github.com/LambdaTest/Python-UnitTest-Selenium",
+        "text": "git clone https://github.com/LambdaTest/Python-UnitTest-Selenium\ncd Python-UnitTest-Selenium"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Set your browser and OS in the capabilities dictionary",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Python",
+        "text": "capabilities = {\n    \"build\": \"UnitTest-Selenium-Sample\",\n    \"name\": \"UnitTest-Selenium-Test\",\n    \"platformName\": \"Windows 11\",\n    \"browserName\": \"Chrome\",\n    \"browserVersion\": \"latest\",\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Run the test",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "python lambdatest_test.py"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Clone the sample GitHub project",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "codeRepository": "https://github.com/LambdaTest/pytest-selenium-sample",
+        "text": "git clone https://github.com/LambdaTest/pytest-selenium-sample\ncd pytest-selenium-sample"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "pytest",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n3. Run a single test, or in parallel:\n\n```bash\npython tests/lt_sample_todo.py\npytest -s -n=2 tests/lt_sample_todo.py"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Clone the sample GitHub project",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "codeRepository": "https://github.com/LambdaTest/Robot-Selenium-Sample",
+        "text": "git clone https://github.com/LambdaTest/Robot-Selenium-Sample\ncd Robot-Selenium-Sample"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Robot",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n3. Run a single test, or all in parallel:\n\n```bash\nmake test_Windows_10_chrome_latest\nmake run_all_in_parallel"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Clone the sample GitHub project",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "codeRepository": "https://github.com/LambdaTest/Python-Behave-Selenium",
+        "text": "git clone https://github.com/LambdaTest/Python-Behave-Selenium\ncd Python-Behave-Selenium"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Behave",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n3. Run the test:\n\n```bash\nbehave features/test.feature"
+      }
+    ],
+    "dateModified": "2026-09-09T19:13:32+05:30"
+  }) }}
+/>
+
 
 # How to Run Selenium Tests With Python on TestMu AI
 ---
@@ -75,6 +212,8 @@ Every framework authenticates the same way: your Username and Access Key are rea
 
 <TabItem value="macos" label="macOS / Linux" default>
 
+<VerifiedTag value="Verified" />
+
 <div className="lambdatest__codeblock">
     <CodeBlock className="language-bash">
   {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
@@ -85,6 +224,8 @@ export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 </TabItem>
 
 <TabItem value="win-cmd" label="Windows (CMD)">
+
+<VerifiedTag value="Verified" />
 
 <div className="lambdatest__codeblock">
     <CodeBlock className="language-batch">
@@ -101,6 +242,8 @@ set LT_ACCESS_KEY=${ YOUR_LAMBDATEST_ACCESS_KEY()}`}
 ---
 
 Every framework below connects to the grid at `hub.lambdatest.com/wd/hub` and passes your browser and OS choices through a capabilities dictionary:
+
+<VerifiedTag value="Verified" />
 
 ```python
 capabilities = {
@@ -131,12 +274,16 @@ The standard-library `unittest` framework connects a remote WebDriver to the gri
 
 1. Clone the [sample GitHub project](https://github.com/LambdaTest/Python-UnitTest-Selenium):
 
+<VerifiedTag value="Verified" />
+
 ```bash
 git clone https://github.com/LambdaTest/Python-UnitTest-Selenium
 cd Python-UnitTest-Selenium
 ```
 
 2. Set your browser and OS in the capabilities dictionary:
+
+<VerifiedTag value="Verified" />
 
 ```python
 capabilities = {
@@ -150,11 +297,15 @@ capabilities = {
 
 3. Install the dependencies:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 pip install -r requirements.txt
 ```
 
 4. Run the test:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 python lambdatest_test.py
@@ -170,12 +321,16 @@ pytest keeps capabilities in `conftest.py` and runs in parallel via `pytest-xdis
 
 1. Clone the [sample GitHub project](https://github.com/LambdaTest/pytest-selenium-sample):
 
+<VerifiedTag value="Verified" />
+
 ```bash
 git clone https://github.com/LambdaTest/pytest-selenium-sample
 cd pytest-selenium-sample
 ```
 
 2. Set your browser and OS in `conftest.py`:
+
+<VerifiedTag value="Verified" />
 
 ```python title="conftest.py"
 capabilities = {
@@ -188,11 +343,15 @@ capabilities = {
 
 3. Install the dependencies:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 pip install -r requirements.txt
 ```
 
 4. Run the test. The actual pytest run is the `pytest` command (which also enables parallel execution); the plain `python` invocation runs the script directly:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 python tests/lt_sample_todo.py
@@ -209,12 +368,16 @@ Robot Framework uses Selenium2Library, with capabilities and the grid URL declar
 
 1. Clone the [sample GitHub project](https://github.com/LambdaTest/Robot-Selenium-Sample):
 
+<VerifiedTag value="Verified" />
+
 ```bash
 git clone https://github.com/LambdaTest/Robot-Selenium-Sample
 cd Robot-Selenium-Sample
 ```
 
 2. Set your browser and OS in the variables block of `common.robot`:
+
+<VerifiedTag value="Verified" />
 
 ```robotframework title="common.robot"
 *** Settings ***
@@ -233,11 +396,15 @@ ${REMOTE_URL}       https://${KEY}@hub.lambdatest.com/wd/hub
 
 3. Install the dependencies:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 pip install -r requirements.txt
 ```
 
 4. Run a single test, or all in parallel:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 make test_Windows_10_chrome_latest
@@ -254,12 +421,16 @@ Behave is BDD for Python: feature files plus step definitions, with capabilities
 
 1. Clone the [sample GitHub project](https://github.com/LambdaTest/Python-Behave-Selenium):
 
+<VerifiedTag value="Verified" />
+
 ```bash
 git clone https://github.com/LambdaTest/Python-Behave-Selenium
 cd Python-Behave-Selenium
 ```
 
 2. Set your browser and OS in `config/config.json`:
+
+<VerifiedTag value="Verified" />
 
 ```json title="config/config.json"
 [
@@ -275,11 +446,15 @@ cd Python-Behave-Selenium
 
 3. Install the dependencies:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 pip install -r requirements.txt
 ```
 
 4. Run the test:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 behave features/test.feature
@@ -299,6 +474,8 @@ Lettuce is a BDD framework for Python: feature files plus step definitions, with
 
 1. Clone the [sample GitHub project](https://github.com/LambdaTest/sample-lettuce):
 
+<VerifiedTag value="Verified" />
+
 ```bash
 git clone https://github.com/LambdaTest/sample-lettuce
 cd sample-lettuce
@@ -308,11 +485,15 @@ cd sample-lettuce
 
 3. Install the dependencies:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 pip install -r requirements.txt
 ```
 
 4. Run the test:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 python tests/lt_sample_todo.py

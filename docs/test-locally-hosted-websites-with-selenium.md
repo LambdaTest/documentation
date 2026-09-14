@@ -26,6 +26,8 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 import { BRAND_URL } from '@site/src/component/BrandName';
 
 
+import VerifiedTag from '@site/src/component/verifiedTag';
+
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
        "@context": "https://schema.org",
@@ -49,6 +51,179 @@ import { BRAND_URL } from '@site/src/component/BrandName';
       })
     }}
 ></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/test-locally-hosted-websites-with-selenium/"
+    },
+    "headline": "Test Locally Hosted Websites With Selenium",
+    "description": "Test locally hosted or staging web apps on the TestMu AI cloud grid using TestMu AI Tunnel with Selenium.",
+    "url": "https://www.testmuai.com/support/docs/test-locally-hosted-websites-with-selenium/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Documentation",
+    "keywords": [
+      "selenium local testing",
+      "testmu ai tunnel selenium",
+      "test localhost on cloud"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "How It Works",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "Your Machine (localhost:3000) <-- Encrypted Tunnel --> TestMu AI Grid <--> Cloud Browser"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "After downloading, make the binary executable (macOS/Linux)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "chmod +x LT"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Run multiple tunnels by giving each a name",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "LT --user YOUR_USERNAME --key YOUR_ACCESS_KEY --tunnelName my-staging-tunnel"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 3: Add the Tunnel Capability to Your Tests (Java)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "  ChromeOptions browserOptions = new ChromeOptions();\n  browserOptions.setPlatformName(\"Windows 10\");\n  browserOptions.setBrowserVersion(\"latest\");\n\n  HashMap<String, Object> ltOptions = new HashMap<String, Object>();\n  ltOptions.put(\"build\", \"Local Test Build\");\n  ltOptions.put(\"name\", \"Local Test\");\n  ltOptions.put(\"tunnel\", true);       // Enable tunnel\n  ltOptions.put(\"w3c\", true);\n  browserOptions.setCapability(\"LT:Options\", ltOptions);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 3: Add the Tunnel Capability to Your Tests (JavaScript)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "  const capabilities = {\n    browserName: 'Chrome',\n    browserVersion: 'latest',\n    'LT:Options': {\n      platformName: 'Windows 10',\n      build: 'Local Test Build',\n      name: 'Local Test',\n      tunnel: true,       // Enable tunnel\n      w3c: true,\n    }\n  };"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Python",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Python",
+        "text": "  lt_options = {\n      \"build\": \"Local Test Build\",\n      \"name\": \"Local Test\",\n      \"tunnel\": True,       # Enable tunnel\n      \"w3c\": True,\n  }\n  options.set_capability(\"LT:Options\", lt_options)"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "C#",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "C#",
+        "text": "  var ltOptions = new Dictionary<string, object>\n  {\n      { \"build\", \"Local Test Build\" },\n      { \"name\", \"Local Test\" },\n      { \"tunnel\", true },       // Enable tunnel\n      { \"w3c\", true }\n  };\n  browserOptions.AddAdditionalOption(\"LT:Options\", ltOptions);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "PHP",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "PHP",
+        "text": "  $capabilities = [\n      \"browserName\" => \"Chrome\",\n      \"browserVersion\" => \"latest\",\n      \"LT:Options\" => [\n          \"platformName\" => \"Windows 10\",\n          \"build\" => \"Local Test Build\",\n          \"name\" => \"Local Test\",\n          \"tunnel\" => true,       // Enable tunnel\n          \"w3c\" => true,\n      ]\n  ];"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Ruby",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Ruby",
+        "text": "  options = Selenium::WebDriver::Options.chrome(\n    platform_name: \"Windows 10\",\n    browser_version: \"latest\",\n    \"LT:Options\": {\n      build: \"Local Test Build\",\n      name: \"Local Test\",\n      tunnel: true,       # Enable tunnel\n      w3c: true,\n    }\n  )"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 4: Point Your Test to localhost",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "// This works because the tunnel is active\ndriver.get(\"http://localhost:3000\");"
+      }
+    ],
+    "dateModified": "2026-09-09T19:13:32+05:30"
+  }) }}
+/>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Test Locally Hosted Websites With Selenium",
+      "description": "Test locally hosted or staging web apps on the TestMu AI cloud grid using TestMu AI Tunnel with Selenium.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Download the Tunnel Binary",
+          "text": "Download the binary for your operating system and architecture. For the full list of platform binaries, see the TestMu AI Tunnel documentation. After downloading, make the binary executable (macOS/Linux):",
+          "url": "https://www.testmuai.com/support/docs/test-locally-hosted-websites-with-selenium/#step-1-download-the-tunnel-binary"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Start the Tunnel",
+          "text": "Open a terminal, navigate to the folder with the binary, and start the tunnel with your credentials. {LT --user ${ YOURLAMBDATESTUSERNAME()} --key ${ YOURLAMBDATESTACCESS_KEY()}} You should see a message confirming the tunnel is active. Keep this terminal open while running your tests. Run multiple tunnels by giving each a name: Then reference it in your capabilities with \"tunnelName\": \"my-staging-tunnel\".",
+          "url": "https://www.testmuai.com/support/docs/test-locally-hosted-websites-with-selenium/#step-2-start-the-tunnel"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Add the Tunnel Capability to Your Tests",
+          "text": "Set tunnel: true in your test capabilities. Here is how to do it in each language. If you are using a named tunnel, add \"tunnelName\": \"my-staging-tunnel\" to the LT:Options as well.",
+          "url": "https://www.testmuai.com/support/docs/test-locally-hosted-websites-with-selenium/#step-3-add-the-tunnel-capability-to-your-tests"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Step 4: Point Your Test to localhost",
+          "text": "Use localhost or your internal URL in driver.get(). The tunnel routes the request from the cloud browser to your local machine.",
+          "url": "https://www.testmuai.com/support/docs/test-locally-hosted-websites-with-selenium/#step-4-point-your-test-to-localhost"
+        }
+      ]
+    }
+  ]) }}
+/>
+
+
 
 # How to Test Locally Hosted Websites With Selenium on TestMu AI
 ---
@@ -82,6 +257,8 @@ For the full list of platform binaries, see the TestMu AI Tunnel documentation.
 
 After downloading, make the binary executable (macOS/Linux):
 
+<VerifiedTag value="Verified" />
+
 ```bash
 chmod +x LT
 ```
@@ -90,6 +267,8 @@ chmod +x LT
 ---
 
 Open a terminal, navigate to the folder with the binary, and start the tunnel with your credentials.
+
+<VerifiedTag value="Verified" />
 
 <div className="lambdatest__codeblock">
     <CodeBlock className="language-bash">
@@ -101,6 +280,8 @@ You should see a message confirming the tunnel is active. Keep this terminal ope
 
 :::tip Named tunnels
 Run multiple tunnels by giving each a name:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 LT --user YOUR_USERNAME --key YOUR_ACCESS_KEY --tunnelName my-staging-tunnel
@@ -117,6 +298,8 @@ Set `tunnel: true` in your test capabilities. Here is how to do it in each langu
 <Tabs>
   <TabItem value="java" label="Java" default>
 
+  <VerifiedTag value="Verified" />
+
   ```java
   ChromeOptions browserOptions = new ChromeOptions();
   browserOptions.setPlatformName("Windows 10");
@@ -132,6 +315,8 @@ Set `tunnel: true` in your test capabilities. Here is how to do it in each langu
 
   </TabItem>
   <TabItem value="javascript" label="JavaScript">
+
+  <VerifiedTag value="Verified" />
 
   ```javascript
   const capabilities = {
@@ -150,6 +335,8 @@ Set `tunnel: true` in your test capabilities. Here is how to do it in each langu
   </TabItem>
   <TabItem value="python" label="Python">
 
+  <VerifiedTag value="Verified" />
+
   ```python
   lt_options = {
       "build": "Local Test Build",
@@ -162,6 +349,8 @@ Set `tunnel: true` in your test capabilities. Here is how to do it in each langu
 
   </TabItem>
   <TabItem value="csharp" label="C#">
+
+  <VerifiedTag value="Verified" />
 
   ```csharp
   var ltOptions = new Dictionary<string, object>
@@ -176,6 +365,8 @@ Set `tunnel: true` in your test capabilities. Here is how to do it in each langu
 
   </TabItem>
   <TabItem value="php" label="PHP">
+
+  <VerifiedTag value="Verified" />
 
   ```php
   $capabilities = [
@@ -193,6 +384,8 @@ Set `tunnel: true` in your test capabilities. Here is how to do it in each langu
 
   </TabItem>
   <TabItem value="ruby" label="Ruby">
+
+  <VerifiedTag value="Verified" />
 
   ```ruby
   options = Selenium::WebDriver::Options.chrome(
@@ -216,6 +409,8 @@ If you are using a named tunnel, add `"tunnelName": "my-staging-tunnel"` to the 
 ---
 
 Use `localhost` or your internal URL in `driver.get()`. The tunnel routes the request from the cloud browser to your local machine.
+
+<VerifiedTag value="Verified" />
 
 ```java
 // This works because the tunnel is active

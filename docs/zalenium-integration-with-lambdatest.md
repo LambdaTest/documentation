@@ -14,8 +14,115 @@ site_name: TestMu AI
 slug: zalenium-integration-with-testmu/
 canonical: https://www.testmuai.com/support/docs/zalenium-integration-with-testmu/
 ---
-import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
+
+<script type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify({
+       "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": BRAND_URL
+        },{
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Support",
+          "item": `${BRAND_URL}/support/docs/`
+        },{
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Zalenium Integration With TestMu AI",
+          "item": `${BRAND_URL}/support/docs/zalenium-integration-with-testmu/`
+        }]
+      })
+    }}
+></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/zalenium-integration-with-testmu/"
+    },
+    "headline": "Zalenium Integration With TestMu AI",
+    "description": "TestMu AI integration with Zalenium will allow you perform automated cross browser testing for your locally hosted web pages for over 3000+ real browser and browser versions, installed and hosted on-cloud.",
+    "url": "https://www.testmuai.com/support/docs/zalenium-integration-with-testmu/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Integration",
+    "keywords": [
+      "Zelenium",
+      "testmu ai intigration with zelenium",
+      "cross browser testing"
+    ],
+    "proficiencyLevel": "Beginner",
+    "dependencies": "Ensure you have a Zalenium Docker setup.; TestMu AI Authentication Credentials; For Linux/Mac:; For Windows:.",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Prerequisites",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "    $ export LT_USERNAME= {YOUR_LAMBDATEST_USERNAME}\n    $ export LT_ACCESS_KEY= {YOUR_LAMBDATEST_ACCESS_KEY}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Prerequisites",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "    $ set LT_USERNAME= {YOUR_LAMBDATEST_USERNAME}\n    $ set LT_ACCESS_KEY= {YOUR_LAMBDATEST_ACCESS_KEY}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Specify TestMu AI Environment Variables Into Zalenium Docker",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "export LT_USERNAME=<your username>\n    export LT_ACCESS_KEY=<your accessKey>\n    export LT_URL=<your LT url : port number> # default value is \"https://hub.lambdatest.com\"\n    docker run --rm -ti --name zalenium -p 4444:4444 \\\n      -e LT_USERNAME -e LT_ACCESS_KEY -e LT_URL \\\n      -v /tmp/videos:/home/seluser/videos \\\n      -v /var/run/docker.sock:/var/run/docker.sock \\\n      --privileged dosel/zalenium start --lambdaTestEnabled true"
+      }
+    ],
+    "dateModified": "2026-06-09T15:09:24+05:30"
+  }) }}
+/>
 -----------------------------------------------------------------------------------------------------------------------------
 Brought up by Zalando, Zalenium is open-source with the vision to eliminate the hassle of maintaining an in-house [Selenium Grid](https://www.testmuai.com/blog/why-selenium-grid-is-ideal-for-automated-browser-testing/). Zalenium does so by offering a Docker-based Selenium Grid on-cloud that gets auto-updated with the latest browsers and their driver versions.
 
@@ -30,11 +137,17 @@ Zalenium offers capabilities to help you define your Desired Capabilities in you
 
    Be aware of your <BrandName /> authentication credentials i.e., your <BrandName /> username, access key, and HubURL. You need to set them up as your environment variables. You can retrieve them from your **[<BrandName /> automation dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/timeline/?viewType=build&page=1)** by clicking on the key icon near the help button.
 * For Linux/Mac:  
+
+    <VerifiedTag value="Verified" />
+
     ```
     $ export LT_USERNAME= {YOUR_LAMBDATEST_USERNAME}
     $ export LT_ACCESS_KEY= {YOUR_LAMBDATEST_ACCESS_KEY}
     ```
 * For Windows: 
+
+    <VerifiedTag value="Verified" />
+
     ```
     $ set LT_USERNAME= {YOUR_LAMBDATEST_USERNAME}
     $ set LT_ACCESS_KEY= {YOUR_LAMBDATEST_ACCESS_KEY}
@@ -42,6 +155,8 @@ Zalenium offers capabilities to help you define your Desired Capabilities in you
 ## Specify <BrandName /> Environment Variables Into Zalenium Docker
 -----------------------------------------------------------------------------------------------------------------------------
 Declare your <BrandName /> environment variable into your respective Zalenium Docker over which you wish to perform automated cross browser testing. Below is an example code representing what you need to declare in your Zalenium Docker.
+
+<VerifiedTag value="Verified" />
 
 ```
 export LT_USERNAME=<your username>
@@ -57,5 +172,3 @@ Kudos! As simple as that, you have integrated Zalenium with the <BrandName /> ac
 
 [1]: https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com
 [2]: mailto:support%40lambdatest.com
-
-  

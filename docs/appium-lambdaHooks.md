@@ -23,6 +23,8 @@ canonical: https://www.testmuai.com/support/docs/appium-testmu-hooks/
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 
+import VerifiedTag from '@site/src/component/verifiedTag';
+
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
        "@context": "https://schema.org",
@@ -47,6 +49,109 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/appium-testmu-hooks/"
+    },
+    "headline": "Lambda Hooks For Appium Automation",
+    "description": "Now you can add custom status & remark to your App Automation scripts that you run on TestMu AI.",
+    "url": "https://www.testmuai.com/support/docs/appium-testmu-hooks/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "App Automation",
+    "keywords": [
+      "appium",
+      "testmu ai hooks",
+      "custom status"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Adding custom status & remark",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "((JavascriptExecutor) driver).executeScript(\"lambda-hook: {\\\"action\\\": \\\"setTestStatus\\\",\\\"arguments\\\": {\\\"status\\\":\\\"failed\\\", \\\"remark\\\":\\\"This is a sample remark for failed test \\\"}} \");"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "//Enter your Username & Accesskey here",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\nOnce you have added the code snippet, the status and remark will be visible on the [<BrandName /> App Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://appautomation.lambdatest.com/build) as shown below:\n\n\n<img loading=\"lazy\" src={require('../assets/images/appium-lambdaHooks/01.webp').default} alt=\"Build Page Remark\" width=\"1200\" height=\"550\" className=\"doc_img\"/>\n\n## Update Test Name\n---\n\nTo update the name of the test, just add the code snippet using the ```JavascriptExecutor```.\n\nArguments | Example\n------------- | -----------------------------------------------------------------------------------------\n```lambda-name``` | For changing the Test Name.\n\n```bash\n((JavascriptExecutor) driver).executeScript(\"lambda-name=TestName\");"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "To start a test case, use the lambda-testCase-start hook",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "// To start a test case\n((JavascriptExecutor) driver).executeScript(\"lambda-testCase-start=find Name\");"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "To end a test case, use the lambda-testCase-end hook",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "// To end a test case\n((JavascriptExecutor) driver).executeScript(\"lambda-testCase-end=find Name\");"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Annotation Start",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "driver.execute_script(\"lambdatest_executor: {\\\"action\\\": \\\"stepcontext\\\", \\\"arguments\\\": {\\\"data\\\": \\\"youtube\\\", \\\"level\\\": \\\"debug\\\"}}\");"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "To close the executor at the end of your script, pass data as an empty string",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "driver.execute_script(\"lambdatest_executor: {\\\"action\\\": \\\"stepcontext\\\", \\\"arguments\\\": {\\\"data\\\": \\\"\\\"}}\");"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
+
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 
@@ -66,11 +171,16 @@ LambdaHooks on <BrandName /> are JavaScript-executor snippets you drop into Appi
 
 To add custom status & remark, just add the code snippet using the ```JavascriptExecutor```.
 
+<VerifiedTag value="Verified" />
+
 ```JavascriptExecutor``` accepts two arguments as shown below:
 
 Arguments | Example
 ------------- | -----------------------------------------------------------------------------------------
 ```status``` | ```failed``` OR ```passed```
+
+<VerifiedTag value="Verified" />
+
 ```remark``` | Any remark can be added here limited to 255 characters.
 
 ```java
@@ -132,6 +242,8 @@ Arguments | Example
 ------------- | -----------------------------------------------------------------------------------------
 ```lambda-name``` | For changing the Test Name.
 
+<VerifiedTag value="Verified" />
+
 ```bash
 ((JavascriptExecutor) driver).executeScript("lambda-name=TestName");
 ```
@@ -149,6 +261,8 @@ You can use LambdaHooks to start and end a test case within a single Appium sess
 
 To start a test case, use the `lambda-testCase-start` hook:
 
+<VerifiedTag value="Verified" />
+
 ```java
 // To start a test case
 ((JavascriptExecutor) driver).executeScript("lambda-testCase-start=find Name");
@@ -157,6 +271,8 @@ To start a test case, use the `lambda-testCase-start` hook:
 #### Test Case End
 
 To end a test case, use the `lambda-testCase-end` hook:
+
+<VerifiedTag value="Verified" />
 
 ```java
 // To end a test case
@@ -202,6 +318,9 @@ Command Annotations allow you to add metadata and debugging information to your 
 ### Using Command Annotations
 
 #### Annotation Start
+
+<VerifiedTag value="Verified" />
+
 ```java
 driver.execute_script("lambdatest_executor: {\"action\": \"stepcontext\", \"arguments\": {\"data\": \"youtube\", \"level\": \"debug\"}}");
 ```
@@ -215,6 +334,8 @@ driver.execute_script("lambdatest_executor: {\"action\": \"stepcontext\", \"argu
 
 #### Annotation End
 To close the executor at the end of your script, pass `data` as an empty string:
+
+<VerifiedTag value="Verified" />
 
 ```java
 driver.execute_script("lambdatest_executor: {\"action\": \"stepcontext\", \"arguments\": {\"data\": \"\"}}");
@@ -235,12 +356,18 @@ driver.execute_script("lambdatest_executor: {\"action\": \"stepcontext\", \"argu
 You can install apps uploaded to the <BrandName /> platform directly within your automation scripts using the `lambda-install-app` command followed by the app’s ID. This ID can be either the <BrandName />-generated ID or a custom ID assigned during upload.
 
 **Python example:**
+
+<VerifiedTag value="Verified" />
+
 ```python
 driver.execute_script("lambda-install-app=myApp")
 driver.execute_script("lambda-install-app=lt://APP100000000123456789123456789")
 ```
 
 **JavaScript example:**
+
+<VerifiedTag value="Verified" />
+
 ```javascript
 await browser.execute("lambda-install-app", {
   /* Change the App URL */
@@ -255,12 +382,18 @@ await browser.execute("lambda-install-app", {
 You can uninstall apps during the execution of an automation test using the command `lambda-uninstall-app` followed by the app's package name (for Android apps) or bundle ID (for iOS apps).
 
 **Python example:**
+
+<VerifiedTag value="Verified" />
+
 ```python
 driver.execute_script("lambda-uninstall-app=com.myApp.beta")
 driver.execute_script("lambda-uninstall-app=com.apple.myApp")
 ```
 
 **JavaScript example:**
+
+<VerifiedTag value="Verified" />
+
 ```javascript
 /* Change the App ID */
 const APP_ID = "com.lambdatest.proverbial";
@@ -276,8 +409,12 @@ Testing app upgrades is important because users often update to the latest versi
 <Tabs className="docs__val">
 <TabItem value="macos-file" label="Android" default>
 
+<VerifiedTag value="Verified" />
+
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">
+
+<VerifiedTag value="Verified" />
 
 ```python
 # Payload required to retain app data while uninstalling it
@@ -301,8 +438,13 @@ driver.execute_script("lambda-install-app", data)
 </TabItem>
 
 <TabItem value="windows-file" label="iOS" default>
+
+<VerifiedTag value="Verified" />
+
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-powershell">
+
+<VerifiedTag value="Verified" />
 
 ```python
 # Send the current app in background

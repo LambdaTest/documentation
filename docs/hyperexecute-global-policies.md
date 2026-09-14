@@ -21,6 +21,8 @@ canonical: https://www.testmuai.com/support/docs/hyperexecute-global-policies/
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
+import VerifiedTag from '@site/src/component/verifiedTag';
+
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
        "@context": "https://schema.org",
@@ -44,6 +46,144 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       })
     }}
 ></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/hyperexecute-global-policies/"
+    },
+    "headline": "Global Policies in HyperExecute",
+    "description": "Define a HyperExecute YAML rule once at the organization level and apply it automatically to every job across selected projects, without developers editing their YAML.",
+    "url": "https://www.testmuai.com/support/docs/hyperexecute-global-policies/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "HyperExecute",
+    "keywords": [
+      "TestMu AI HyperExecute",
+      "TestMu AI HyperExecute help",
+      "TestMu AI HyperExecute documentation"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "The response tells the developer which policy blocked it, the offending value, and the fix",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "Your job was rejected by org policy \"cap-retries\":\nmaxRetries is 6 \u2014 the allowed maximum is 3. Fix: set maxRetries to 3 or lower.\n(error code: POLICY_REJECTED)"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Policy routes sit under a /logistics path prefix on the HyperExecute API host",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "https://api.hyperexecute.cloud/logistics"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Authentication",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "curl -u \"<YOUR_USERNAME>:<YOUR_ACCESS_KEY>\" \\\n  -H \"Content-Type: application/json\" \\\n  \"https://api.hyperexecute.cloud/logistics/v1.0/policies?limit=5\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "This example appends a result-logging command to every job in the organization, with a per-OS command list",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JSON",
+        "text": "{\n  \"name\": \"post-job-result-logging\",\n  \"parameter\": \"globalPost\",\n  \"mode\": \"append\",\n  \"value\": {\n    \"commands\": {\n      \"linux\": [\"curl -X POST https://internal.example.com/hyperexecute/results\"],\n      \"win\": [\"curl.exe -X POST https://internal.example.com/hyperexecute/results\"]\n    },\n    \"default\": \"linux\"\n  },\n  \"scope\": {\n    \"projects\": [\"*\"],\n    \"exclude\": []\n  },\n  \"enabled\": true\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "The response returns the created policy's generated id, which you use for every subsequent call",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JSON",
+        "text": "{\n  \"data\": {\n    \"id\": \"01KXE0W6EYAV3A9NYNNXPRHP8X\"\n  },\n  \"status\": \"success\"\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "A checking policy adds a severity and drops the per-OS structure",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JSON",
+        "text": "{\n  \"name\": \"cap-retries\",\n  \"parameter\": \"maxRetries\",\n  \"mode\": \"constrain\",\n  \"value\": { \"min\": 0, \"max\": 3 },\n  \"severity\": \"error\",\n  \"scope\": { \"projects\": [\"<project-id>\"] },\n  \"enabled\": true\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "updatedBy is optional and records who made the change for the audit trail",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JSON",
+        "text": "{\n  \"enabled\": false,\n  \"updatedBy\": \"<your-name-or-service-account>\"\n}"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Create a policy",
+      "description": "You can manage policies two ways: API (recommended for automation) \u2014 create, update, enable/disable, and delete policies straight from your pipeline or Git. See Manage policies with the API. UI dashboard \u2014 a form to create and view policies. The Global Policies dashboard lives at Org Settings \u2192 Org Product Preferences \u2192 HyperExecute \u2192 Global Policies. The landing page lists every policy with its Name, Parameter, Mode, Severity, and an Enabled/Disabled toggle, along with a name search and per-row edit and delete actions. Click + Add Policy to open the create drawer. It has two steps.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Parameter Settings",
+          "text": "Give the policy a name, decide whether it starts Enabled or Disabled, and choose the Parameter. The Mode fills in automatically and is read-only \u2014 Global Post is always Append, Max Retries is always Constrain, and so on. The rest of the form changes to match the parameter you picked. Global Post (Append) \u2014 you are writing commands that run at the end of every job in scope. Because a command written for bash won't run on a Windows agent, commands are organised into per-OS tabs, Linux (default), Win, Mac etc. Add commands with + Add command, drag to reorder them, and use the Default toggle to mark the OS block to use for any runner you haven't written a block for. A single OS list applies everywhere: If you fill in commands for just one OS, they're treated as universal and run on every job in scope. Max Retries (Constrain) \u2014 set a Min and Max value. The range is capped at 0\u20135, which is the executor's own ceiling. Then choose a Severity: Warn or Error. Report (Set) \u2014 a simple on/off. Fail Fast (Set) \u2014 a maximum failure count and a failure level (scenario or test). Cache Key & Directories (Require) \u2014 a presence check with a severity.",
+          "url": "https://www.testmuai.com/support/docs/hyperexecute-global-policies/#step-1-parameter-settings"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Project Scope",
+          "text": "The Project Scope tab decides where the rule applies. Set the scope to All Projects, or pick a specific list. If a few projects need to be left out, switch on Exclude Specific Projects. The exclude list is your exception mechanism. If a team has a legitimate reason to deviate, exempt that project here rather than weakening the policy for everyone. Two enabled policies can't govern the same parameter for the same project. If a new policy's scope overlaps an existing one on the same parameter, the policy is rejected and the conflicting policy is named in the response. Narrow the scope of one of them, or disable the other.",
+          "url": "https://www.testmuai.com/support/docs/hyperexecute-global-policies/#step-2-project-scope"
+        }
+      ]
+    }
+  ]) }}
+/>
+
+
 
 Every HyperExecute job is configured by a [YAML file](/support/docs/deep-dive-into-hyperexecute-yaml/), and that file belongs to the team that owns it. So enforcing an organization-wide rule has traditionally meant asking every team to edit their own YAML, one team at a time.
 
@@ -188,6 +328,8 @@ A checking policy at `warn` severity lets the job run and records the violation.
 
 A checking policy at `error` severity rejects the submission, so no job is created. The response tells the developer which policy blocked it, the offending value, and the fix:
 
+<VerifiedTag value="Verified" />
+
 ```text
 Your job was rejected by org policy "cap-retries":
 maxRetries is 6 — the allowed maximum is 3. Fix: set maxRetries to 3 or lower.
@@ -204,6 +346,8 @@ Everything you can do in the UI, you can do over the API — which is usually wh
 
 Policy routes sit under a `/logistics` path prefix on the HyperExecute API host:
 
+<VerifiedTag value="Verified" />
+
 ```text
 https://api.hyperexecute.cloud/logistics
 ```
@@ -211,6 +355,8 @@ https://api.hyperexecute.cloud/logistics
 ### Authentication
 
 Policy endpoints use HTTP Basic authentication with your <BrandName /> **username** and **access key**, the same credentials as the rest of the HyperExecute API. Because policy management is admin-only, use an organization admin user, or a **service account** if you are driving this from automation with no interactive login.
+
+<VerifiedTag value="Verified" />
 
 ```bash
 curl -u "<YOUR_USERNAME>:<YOUR_ACCESS_KEY>" \
@@ -260,6 +406,8 @@ The `value` field takes a different shape for each parameter:
 
 This example appends a result-logging command to every job in the organization, with a per-OS command list:
 
+<VerifiedTag value="Verified" />
+
 ```json
 {
   "name": "post-job-result-logging",
@@ -282,6 +430,8 @@ This example appends a result-logging command to every job in the organization, 
 
 The response returns the created policy's generated `id`, which you use for every subsequent call:
 
+<VerifiedTag value="Verified" />
+
 ```json
 {
   "data": {
@@ -298,6 +448,8 @@ The response returns the created policy's generated `id`, which you use for ever
 :::
 
 A checking policy adds a `severity` and drops the per-OS structure:
+
+<VerifiedTag value="Verified" />
 
 ```json
 {
@@ -316,6 +468,8 @@ A checking policy adds a `severity` and drops the per-OS structure:
 `PUT /v1.0/policies/{id}` updates a policy's **value**, **scope**, **severity**, or **enabled** state. Send the full object back, including `name` and `parameter` unchanged — neither can be modified. To change either one, create a new policy instead.
 
 To pause enforcement without losing the policy, use the toggle endpoint. `updatedBy` is optional and records who made the change for the audit trail:
+
+<VerifiedTag value="Verified" />
 
 ```json
 {

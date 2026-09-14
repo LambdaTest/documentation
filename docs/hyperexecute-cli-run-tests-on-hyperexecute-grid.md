@@ -32,6 +32,8 @@ import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 
+import VerifiedTag from '@site/src/component/verifiedTag';
+
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
        "@context": "https://schema.org",
@@ -55,6 +57,263 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       })
     }}
 ></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/"
+    },
+    "headline": "HyperExecute CLI - Run test on HyperExecute",
+    "description": "Explains about HyperExecute CLI",
+    "url": "https://www.testmuai.com/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "HyperExecute",
+    "keywords": [
+      "testmu ai automation",
+      "testmu ai hyperexecute",
+      "hyperexecute automation grid"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Download the Signature and Public Key, keep it with your CLI, and paste the location in the below command",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "openssl dgst -sha256 -verify <PUBLIC_KEY_PATH> -signature <SIGNATURE_PATH> <CLI_BINARY_PATH>"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "In your terminal run the following command",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "codesign -dvvv <PATH_TO_CLI>"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "analyze",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "hyperexecute analyze"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "completion",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "hyperexecute completion"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "serve",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "hyperexecute --user USER_NAME --key ACCESS_KEY serve"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "update",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "hyperexecute update"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "--add-testids",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "hyperexecute --add-testids"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "--auto-proxy",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "hyperexecute --auto-proxy"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "--concurrency",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "--concurrency 2"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "--config",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "--config \"/home/users/work/yaml/\"  "
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "-h, --help",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "--help"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "--job-secret-file",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "--job-secret-file <RELATIVE_PATH_OF_YOUR_SECRET_FILE>"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Sample Secret File",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n:::info\nThe secrets file contains highly sensitive information and must be strictly excluded from public exposure. Here's how to ensure its security:\n\n**Store Outside the Repository (Recommended)**\n\n- Store the secrets file in a location outside your project repository altogether. This method is more secure as it automatically gets excluded from your code scripts zip file.\n\n**Exclude from Version Control**\n\n- Adding the relative path of the file (in which you have stored your secret data) to your [`.gitignore` or `.hyperexecuteignore`](/support/docs/hyperexecute-gitignore/) file. This prevents accidental inclusion of the file in your code repository.\n:::\n\n***\n\n### `-k, --key`\nThe access key of your <BrandName /> account. To find out how to retrieve your access key, visit [this page](/support/docs/hyperexecute-guided-walkthrough/#hyperexecute-dashboard).\n\n<div className=\"lambdatest__codeblock\">\n  <CodeBlock className=\"language-bash\">\n    {`--key ${ YOUR_LAMBDATEST_ACCESS_KEY()}`}\n  <\/CodeBlock>\n<\/div>\n\n***\n\n### `--labels`\nThis flag allows you to pass the labels of your Job. \n```bash\n--labels \"testing\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "--no-track",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "--no-track"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "--preserve-payload",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "--preserve-payload"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "In case of AutoSplit mode",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "--runson linux"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "In case of Matrix or Hybrid mode",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "--runson linux,win,win11,mac,mac13"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "-s, --scan",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "--scan"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "--server-port",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "--server-port=8080"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "-t, --target-directory",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "--target-directory \"/home/users/work/yaml/scripts/\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "--target-path",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "--target-path \"src/test-suite/**\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "--tests-per-tunnel",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "--tests-per-tunnel 5"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "-z, --use-zip",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "--use-zip \"/home/users/work/yaml/zip/\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "--vars",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "--vars \"org=Lambdatest\" --vars \"product=HyperExecute\" --vars \"email=xyz@abc.com\" --vars \"email1=abc@xyz.com\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "--verbose",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "--verbose "
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "--version",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "--version "
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Trigger your Test from HyperExecute CLI",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": ":::\n\n## Running HyperExecute CLI in Quiet Mode\n\nEach time a job is run in HyperExecute, a large number of logs are produced. These logs are sometimes beneficial for thorough debugging and analysis, it occasionally overwhelms Continuous Integration (CI) systems with an excessive amount of logs, especially when handling a large number of test executions.\n\nHyperExecute provides a **\"Quiet mode\"** as a solution to this issue and to give users more control over the logging output. By only displaying significant updates during the test execution, this enables you to run tests with less logs.\n\nTo enable the **Quiet Mode**, you need to paas these commands in your terminal and then trigger the command to execute your job.\n\n<Tabs className=\"docs__val\">\n<TabItem value=\"bash\" label=\"Linux / macOS\" default>\n  ```yaml\n  env | grep CI # Used to check if the CI variable is set to true or not\n  export CI=true # If it's not set to true, then use this command to set as true"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Running HyperExecute CLI in Quiet Mode (Windows)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "  env | grep CI # Used to check if the CI variable is set to true or not\n  set CI=true # If it's not set to true, then use this command to set as true"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 `HyperExecute CLI` is a command line interface that is required to run tests on HyperExecute. This page outlines all you need to know about the CLI and also explains about the different flags & functionalities supported by the HyperExecute CLI.
 
 > HyperExecute CLI credentials (access keys, API tokens, etc.) are private and confidential. A system compromise may result in their unauthorized disclosure; therefore, you must secure the machine running the <BrandName />-HyperExecute CLI. Do not share or expose credentials in public code, repositories, or environments. In the event of a compromise, you are solely responsible for immediately revoking and regenerating the credentials. <BrandName /> assumes no liability for any losses arising from failure to comply.
@@ -77,6 +336,8 @@ To ensure the binary you’ve downloaded is genuine and has not been tampered wi
 <TabItem value="zsh" label="Linux" default>
 You can verify the code signature of the binary using the `openssh` command. Download the [Signature](https://downloads.lambdatest.com/hyperexecute/linux/hyperexecute.sig) and [Public Key](https://downloads.lambdatest.com/hyperexecute/linux/public_key.pem), keep it with your CLI, and paste the location in the below command:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 openssl dgst -sha256 -verify <PUBLIC_KEY_PATH> -signature <SIGNATURE_PATH> <CLI_BINARY_PATH>
 ```
@@ -87,6 +348,8 @@ openssl dgst -sha256 -verify <PUBLIC_KEY_PATH> -signature <SIGNATURE_PATH> <CLI_
 
 <TabItem value="bash" label="macOS" default>
 You can verify the code signature of the binary using the `codesign` command. In your terminal run the following command:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 codesign -dvvv <PATH_TO_CLI>
@@ -160,6 +423,8 @@ The various flags that are supported are listed below.
 ### `analyze`
 This flag runs **HyperExecute Analyze**, which is a language and environment detection tool used to render every language and framework detail the user has in his project, which includes finding private dependencies.
 
+<VerifiedTag value="Verified" />
+
 ```bash
 hyperexecute analyze
 ```
@@ -170,6 +435,8 @@ hyperexecute analyze
 
 ### `completion`
 This flag generates the autocompletion script for HyperExecute for the specified shell.
+
+<VerifiedTag value="Verified" />
 
 ```bash
 hyperexecute completion
@@ -182,6 +449,8 @@ hyperexecute completion
 ### `serve`
 This flag starts a server for HyperExecute info APIs.
 
+<VerifiedTag value="Verified" />
+
 ```bash
 hyperexecute --user USER_NAME --key ACCESS_KEY serve
 ```
@@ -190,6 +459,8 @@ hyperexecute --user USER_NAME --key ACCESS_KEY serve
 
 ### `update`
 This flag updates the hyperexecute binary version.
+
+<VerifiedTag value="Verified" />
 
 ```bash
 hyperexecute update
@@ -200,6 +471,8 @@ hyperexecute update
 ### `--add-testids`
 This flag will add the test ids of your job in the result.json file that gets generated after your test execution.
 
+<VerifiedTag value="Verified" />
+
 ```bash
 hyperexecute --add-testids
 ```
@@ -209,6 +482,8 @@ hyperexecute --add-testids
 ### `--auto-proxy`
 This flag use detected system proxy. It identifies and sets proxies including http_proxy and https_proxy variables.
 
+<VerifiedTag value="Verified" />
+
 ```bash
 hyperexecute --auto-proxy
 ```
@@ -217,6 +492,9 @@ hyperexecute --auto-proxy
 
 ### `--concurrency`
 This flag allows you to define the number of concurrent sessions running on HyperExecute. For more information on concurrency, go to [this page](/support/docs/hyperexecute-test-splitting-and-multiplexing/#autosplit-strategy).
+
+<VerifiedTag value="Verified" />
+
 ```bash
 --concurrency 2
 ```
@@ -225,6 +503,9 @@ This flag allows you to define the number of concurrent sessions running on Hype
 ### `--config`
 
 This flag allows you to enter a custom location where you can download the HyperExecute YAML file. To learn more about the HyperExecute YAML, visit [this page](/support/docs/deep-dive-into-hyperexecute-yaml/).  
+
+<VerifiedTag value="Verified" />
+
 ```bash
 --config "/home/users/work/yaml/"  
 ```
@@ -237,6 +518,8 @@ This flag allows you to disable the auto updation of your HyperExecute binary.
 
 ### `--download-artifacts`
 This flag allows you to download all the test related results that are generated by your testing framework. You can use this key if you want to download the artifacts.
+
+<VerifiedTag value="Verified" />
 
 <div className="lambdatest__codeblock">
   <CodeBlock className="language-bash">
@@ -253,6 +536,8 @@ This flag allows you to download all the test related results that are generated
 ### `--download-artifacts-path`
 In case you want the artifacts to be downloaded to a specific directory, please provide the exact path followed by the flag as shown in the example below.
 
+<VerifiedTag value="Verified" />
+
 <div className="lambdatest__codeblock">
   <CodeBlock className="language-bash">
     {`./hyperexecute --user ${ YOUR_LAMBDATEST_USERNAME()} --key ${ YOUR_LAMBDATEST_ACCESS_KEY()} --config RELATIVE_PATH_OF_YOUR_YAML_FILE --download-artifacts-path "PATH_OF_YOUR_SPECIFIED_DIRECTORY"`}
@@ -263,6 +548,8 @@ In case you want the artifacts to be downloaded to a specific directory, please 
 
 ### `--download-artifacts-zip`
 If you want to download the zip file of the artifacts for a job.
+
+<VerifiedTag value="Verified" />
 
 <div className="lambdatest__codeblock">
   <CodeBlock className="language-bash">
@@ -289,6 +576,9 @@ This flag will download the new artifacts of your job and will store it into the
 
 ### `-h, --help`
 You can run this command if you need any help in understanding the definition of the flags on the CLI itself. However, if you need any further assistance we're just a <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**ping**</span> away. 
+
+<VerifiedTag value="Verified" />
+
 ```bash
 --help
 ```
@@ -302,11 +592,15 @@ You can run this command if you need any help in understanding the definition of
 
 - This eliminates the need to store secrets on the service account and prevents their accidental exposure through the `--vars` flag.
 
+<VerifiedTag value="Verified" />
+
 ```bash
 --job-secret-file <RELATIVE_PATH_OF_YOUR_SECRET_FILE>
 ```
 
 #### Sample Secret File
+
+<VerifiedTag value="Verified" />
 
 ```bash title="secretFile.txt"
 secret1=value1
@@ -330,6 +624,8 @@ The secrets file contains highly sensitive information and must be strictly excl
 ### `-k, --key`
 The access key of your <BrandName /> account. To find out how to retrieve your access key, visit [this page](/support/docs/hyperexecute-guided-walkthrough/#hyperexecute-dashboard).
 
+<VerifiedTag value="Verified" />
+
 <div className="lambdatest__codeblock">
   <CodeBlock className="language-bash">
     {`--key ${ YOUR_LAMBDATEST_ACCESS_KEY()}`}
@@ -340,6 +636,9 @@ The access key of your <BrandName /> account. To find out how to retrieve your a
 
 ### `--labels`
 This flag allows you to pass the labels of your Job. 
+
+<VerifiedTag value="Verified" />
+
 ```bash
 --labels "testing"
 ```
@@ -348,6 +647,8 @@ This flag allows you to pass the labels of your Job.
 ### `--no-track`
 You can track the progress of your uploaded jobs with HyperExecute. However, this flag allows you to opt out of receiving those updates. 
 
+<VerifiedTag value="Verified" />
+
 ```bash
 --no-track
 ```
@@ -355,6 +656,9 @@ You can track the progress of your uploaded jobs with HyperExecute. However, thi
 
 ### `--preserve-payload`
 This flag allows you to preserve the job payload after the job is completed successfully. 
+
+<VerifiedTag value="Verified" />
+
 ```bash
 --preserve-payload
 ```
@@ -365,11 +669,15 @@ This flag overrides the defined OS value in your YAML file's [`runson`](/support
 
 In case of [AutoSplit](/support/docs/hyperexecute-test-splitting-and-multiplexing/#autosplit-strategy) mode:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 --runson linux
 ```
 
 In case of [Matrix](/support/docs/hyperexecute-test-splitting-and-multiplexing/#matrix-multiplexing-strategy) or [Hybrid](/support/docs/hyperexecute-test-splitting-and-multiplexing/#hybrid-strategy-in-hyperexecute) mode:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 --runson linux,win,win11,mac,mac13
@@ -379,6 +687,8 @@ In case of [Matrix](/support/docs/hyperexecute-test-splitting-and-multiplexing/#
 
 ### `-s, --scan`
 This flag runs the network logs in your local machine console . 
+
+<VerifiedTag value="Verified" />
 
 ```bash
 --scan
@@ -391,6 +701,8 @@ This flag runs the network logs in your local machine console .
 ### `--server-port`
 The `--server-port` flag is used to specify the port number that the HyperExecute server will use for communication. This can be useful if you need to run the server on a specific port due to network configurations or to avoid port conflicts with other applications.
 
+<VerifiedTag value="Verified" />
+
 ```bash
 --server-port=8080
 ```
@@ -401,6 +713,8 @@ The `--server-port` flag is used to specify the port number that the HyperExecut
 <!-- You can choose the directory where the test scripts have to be uploaded by using this flag.   -->
 
 The `targetDirectory` option in the HyperExecute CLI specifies the directory where the output of the executed command will be stored. If this option is not specified, the output will be stored in the current working directory.
+
+<VerifiedTag value="Verified" />
 
 ```bash
 --target-directory "/home/users/work/yaml/scripts/"
@@ -413,6 +727,8 @@ The `targetDirectory` option in the HyperExecute CLI specifies the directory whe
 The `target-path` flag allows you to selectively upload specific files and folders as part of the suite payload. This can be used for streamlining the uploading process and ensuring that only relevant files are included in the payload.
 It can also be useful if a user wants to run tests in a monorepo for multiple services.
 
+<VerifiedTag value="Verified" />
+
 ```bash
 --target-path "src/test-suite/**"
 ```
@@ -421,6 +737,8 @@ It can also be useful if a user wants to run tests in a monorepo for multiple se
 ### `--tests-per-tunnel`
 
 This flag allows you to run a certain number of tests via tunnel. The default maximum number of tests is 10. 
+
+<VerifiedTag value="Verified" />
 
 ```bash
 --tests-per-tunnel 5
@@ -435,6 +753,8 @@ Whenever you zip your test files, it creates a folder, let's say **tests.zip**. 
 
 In another scenario, suppose you first created a folder. Inside that folder, you put all your required test files and then zip that folder (say **folder.zip**). When this zip folder is unarchived, HyperExecute will again search for the **`hyperexecute.yaml`** file, which in this case won't be available as it will be inside the folder, which will throw an error.
 
+<VerifiedTag value="Verified" />
+
 ```bash
 --use-zip "/home/users/work/yaml/zip/"
 ```
@@ -442,6 +762,8 @@ In another scenario, suppose you first created a folder. Inside that folder, you
 
 ### `-u, --user`
 The username of your <BrandName /> account. 
+
+<VerifiedTag value="Verified" />
 
 <div className="lambdatest__codeblock">
   <CodeBlock className="language-bash">
@@ -455,6 +777,9 @@ The username of your <BrandName /> account.
 This method allows you to name your variables. It helps you optimize the content of your YAML file by allowing for more flexibility.
 
 You can specify the email address for sharing [reports](/support/docs/hyperexecute-job-reports/) or [artifacts](/support/docs/hyperexecute-artifacts/) in a YAML configuration file using a variable. This allows you to dynamically set the email address and pass it via CLI, providing more flexibility than hardcoding the email address in the YAML file. Learn about this in [detail](/support/docs/hyperexecute-artifacts/#receive-job-reports-and-artifacts-via-email).
+
+<VerifiedTag value="Verified" />
+
 ```bash
 --vars "org=Lambdatest" --vars "product=HyperExecute" --vars "email=xyz@abc.com" --vars "email1=abc@xyz.com"
 ```
@@ -462,6 +787,8 @@ You can specify the email address for sharing [reports](/support/docs/hyperexecu
 
 ### `--validate`
 The new `--validate` flag in the HyperExecute CLI allows you to quickly check the syntax and structure of your YAML file without running any tests. Simply pass the `--validate` flag with your YAML file, and the CLI will validate its structure and syntax. It will then return a success or error message, helping you identify if the file is correctly formatted or if there are any issues that need attention.
+
+<VerifiedTag value="Verified" />
 
 <div className="lambdatest__codeblock">
   <CodeBlock className="language-bash">
@@ -473,6 +800,9 @@ The new `--validate` flag in the HyperExecute CLI allows you to quickly check th
 
 ### `--verbose`
 This flag allows you to log all of your proxy requests to the output section (stdout). 
+
+<VerifiedTag value="Verified" />
+
 ```bash
 --verbose 
 ```
@@ -480,6 +810,9 @@ This flag allows you to log all of your proxy requests to the output section (st
 
 ### `--version`
 This flag indicates the version of HyperExecute CLI binary that you are running on your system. 
+
+<VerifiedTag value="Verified" />
+
 ```bash
 --version 
 ```
@@ -488,6 +821,8 @@ This flag indicates the version of HyperExecute CLI binary that you are running 
 ## Trigger your Test from HyperExecute CLI 
 
 In order to trigger your job on HyperExecute, execute the following command in your terminal. You will need to insert the name of your YAML file in place of the `RELATIVE_PATH_OF_YOUR_YAML_FILE` before running this command.
+
+  <VerifiedTag value="Verified" />
 
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-bash">
@@ -522,6 +857,9 @@ To enable the **Quiet Mode**, you need to paas these commands in your terminal a
 
 <Tabs className="docs__val">
 <TabItem value="bash" label="Linux / macOS" default>
+
+  <VerifiedTag value="Verified" />
+
   ```yaml
   env | grep CI # Used to check if the CI variable is set to true or not
   export CI=true # If it's not set to true, then use this command to set as true
@@ -529,6 +867,9 @@ To enable the **Quiet Mode**, you need to paas these commands in your terminal a
 </TabItem>
 
 <TabItem value="powershell" label="Windows" default>
+
+  <VerifiedTag value="Verified" />
+
   ```yaml
   env | grep CI # Used to check if the CI variable is set to true or not
   set CI=true # If it's not set to true, then use this command to set as true

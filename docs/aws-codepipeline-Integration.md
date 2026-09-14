@@ -16,7 +16,9 @@ site_name: TestMu AI
 slug: aws-codepipeline-integration-with-testmu/
 canonical: https://www.testmuai.com/support/docs/aws-codepipeline-integration-with-testmu/
 ---
+
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 ***
 <script type="application/ld+json"
@@ -42,6 +44,96 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       })
     }}
 ></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/aws-codepipeline-integration-with-testmu/"
+    },
+    "headline": "How to integrate AWS CodePipeline with TestMu AI",
+    "description": "Rapidly commit changes in CI CD pipeline and validate them for UI/UX anomalies by integrating your AWS CodePipeline instance with TestMu AI Selenium Grid.",
+    "url": "https://www.testmuai.com/support/docs/aws-codepipeline-integration-with-testmu/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Integration",
+    "keywords": [
+      "testmu ai integrations",
+      "testmu ai integrations with ci/cd tools",
+      "continuous integration"
+    ],
+    "proficiencyLevel": "Beginner",
+    "dependencies": "Login details in AWS CodePipeline CI.; A GitHub repository. Here is our sample GitHub repository for AWS CodePipeline.; TestMu AI Authentication Credentials; For Linux/Mac:; For Windows:.",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Prerequisite",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "    $ export LT_USERNAME= {YOUR_LAMBDATEST_USERNAME}\n    $ export LT_ACCESS_KEY= {YOUR_LAMBDATEST_ACCESS_KEY}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Prerequisite",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "     $ set LT_USERNAME= {YOUR_LAMBDATEST_USERNAME}\n     $ set LT_ACCESS_KEY= {YOUR_LAMBDATEST_ACCESS_KEY}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 3",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "version: 0.2\nenv:\n  variables:\n    LT_USERNAME: \"{your_lambda_username}\"\n    LT_ACCESS_KEY: \"{your_lambda_access_key}\"\nphases:\n  install:\n    runtime-versions:\n      nodejs: 10\n  pre_build:\n    commands:\n      - echo Installing source NPM dependencies...\n      - npm install\n      - npm install -g protractor\n  build:\n    commands:\n      - echo Build started on `date`\n      - cd conf\n      - protractor single.conf.js\nartifacts:\n  files:\n      - '**/*'\n  base-directory: 'dist*'\ndiscard-paths: yes"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 4",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "[Container] 2019/07/09 05:43:39 Running command echo Build started on `date` \nBuild started on Tue Jul 9 05:43:39 UTC 2019 \n[Container] 2019/07/09 05:43:39 Running command cd conf \n[Container] 2019/07/09 05:43:39 Running command protractor single.conf.js \n[05:43:39] I/launcher - Running 1 instances of WebDriver \n[05:43:39] I/hosted - Using the selenium server at https://user:bX3VZpiN4Tp7cLD7MTfoXqqOZK3q7Xov7UcSCwGQkzf1MEB6bI@hub.lambdatest.com/wd/hub \nStarted \n\u2022[32m.\u2022[0m \n1 spec, 0 failures \nFinished in 15.406 seconds \n[05:44:04] I/launcher - 0 instance(s) of WebDriver still running \n[05:44:04] I/launcher - chrome67.0 #01 passed "
+      }
+    ],
+    "dateModified": "2026-06-09T15:09:24+05:30"
+  }) }}
+/>
+
 # AWS CodePipeline Integration With <BrandName />
 
 AWS CodePipeline is a cloud-based continuous delivery platform for fully automating your release pipelines. Provides an intuitive interface for configuring & modeling different stages of release cycles, so you can envision how your code changes would look when pushed across these different changes. You can also track your pipeline in real-time, and look into the pipeline history to understand the timestamps involved in the execution of various pipelines.
@@ -57,11 +149,16 @@ AWS CodePipeline is a cloud-based continuous delivery platform for fully automat
    Be aware of your <BrandName /> authentication credentials, i.e., your <BrandName /> username, access key,a and HubURL. You need to set them up as your environment variables. You can retrieve them from your [<BrandName /> automation dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/) by clicking on the key icon near the help button.
 
    - For Linux/Mac:
+
+    <VerifiedTag value="Verified" />
+
     ```
     $ export LT_USERNAME= {YOUR_LAMBDATEST_USERNAME}
     $ export LT_ACCESS_KEY= {YOUR_LAMBDATEST_ACCESS_KEY}
     ```
    - For Windows:
+
+     <VerifiedTag value="Verified" />
 
      ```
      $ set LT_USERNAME= {YOUR_LAMBDATEST_USERNAME}
@@ -99,6 +196,8 @@ AWS CodePipeline is a cloud-based continuous delivery platform for fully automat
 
 **Step 7:** Start a build and pull the codes from Git. Read the below `buildspec.yml` from your project’s root directory.
 
+<VerifiedTag value="Verified" />
+
 ```
 version: 0.2
 env:
@@ -127,6 +226,8 @@ discard-paths: yes
 ```
 
 **Step 8:** Monitor your test being triggered on the <BrandName /> platform. You will observe the below output generated.
+
+<VerifiedTag value="Verified" />
 
 ```
 [Container] 2019/07/09 05:43:39 Running command echo Build started on `date` 

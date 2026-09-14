@@ -15,11 +15,148 @@ slug: rook-profiles-and-hooks/
 canonical: https://www.testmuai.com/support/docs/rook-profiles-and-hooks/
 ---
 
+import VerifiedTag from '@site/src/component/verifiedTag';
+import { BRAND_URL } from '@site/src/component/BrandName';
+
+<script type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify({
+       "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": BRAND_URL
+        },{
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Support",
+          "item": `${BRAND_URL}/support/docs/`
+        },{
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Rook Profiles and Hook Contract",
+          "item": `${BRAND_URL}/support/docs/rook-profiles-and-hooks/`
+        }]
+      })
+    }}
+></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/rook-profiles-and-hooks/"
+    },
+    "headline": "Rook Profiles and Hook Contract",
+    "description": "Generate invocation profiles, understand lifecycle hook inputs and outputs, declare observed capabilities, and split execution from evidence collection.",
+    "url": "https://www.testmuai.com/support/docs/rook-profiles-and-hooks/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Agent Testing",
+    "keywords": [
+      "rook profiles",
+      "rook hooks",
+      "rook execute hook"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Let Rook Write the Profile",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "rook profile add\nrook profile add staging --from call.txt\nrook profile add local --command 'claude -p'\nrook profile test\nrook profile fix --what 'the auth header is wrong'\nrook profile show staging\nrook profile use staging"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Lifecycle",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "once per run        once per scenario                     per run\n\u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510   \u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510   \u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510\n\u2502 prepare \u2502 \u2192 \u2502 open \u2192 execute \u00d7 turns \u2192 close \u2192 collect \u2502 \u2192 \u2502 judge \u2502\n\u2514\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2518   \u2514\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2518   \u2514\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2518\n  60 s          30 s    300 s       30 s     120 s       Rook-owned"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Rook invokes",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "your-script.mjs <phase>"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Hook Output",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JSON",
+        "text": "{\n  \"output\": \"Your order ships Tuesday.\",\n  \"conversation\": \"thread_abc123\",\n  \"usage\": { \"input\": 1200, \"output\": 340 },\n  \"calls\": [\n    { \"name\": \"cancel_order\", \"arguments\": { \"id\": \"ORD-1\" } }\n  ],\n  \"trace_url\": \"https://observability.example.com/trace/abc\"\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Profile File",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "name: staging\nid: staging\nhooks:\n  prepare:\n    script: scripts/login.mjs\n    timeout_seconds: 45\n  execute: scripts/order-desk.mjs\n  collect:\n    script: scripts/trace.mjs\n    delay_seconds: 60\n    timeout_seconds: 120\nenv:\n  - variable: REFUND_API_TOKEN\n    purpose: bearer token for the staging refund API, read-only\n  - variable: BASE_URL\n    purpose: target environment base URL\ncapabilities:\n  multi_turn: true\n  calls: true\n  usage: false\nhook_env:\n  REGION: eu-west-1\nconcurrency: 1"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "For longer evidence delays, split the run",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "rook run --phases prepare,open,execute,close\nrook run --run <run-id> --phases collect,judge"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Script Location",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": ".testmuai/rook/projects/<project>/agents/order-desk/\n\u251c\u2500\u2500 profiles/\n\u2502   \u251c\u2500\u2500 active\n\u2502   \u251c\u2500\u2500 staging.yaml\n\u2502   \u2514\u2500\u2500 production.yaml\n\u2514\u2500\u2500 scripts/\n    \u251c\u2500\u2500 order-desk.mjs\n    \u2514\u2500\u2500 salesforce-login.mjs"
+      }
+    ],
+    "dateModified": "2026-09-04T12:50:18+05:30"
+  }) }}
+/>
 # Rook Profiles and Hook Contract
 
 A profile is a name, the scripts Rook runs to reach an agent, and references to the values those scripts require. Because invocation is executable code instead of a fixed transport schema, anything callable from Node.js can be tested.
 
 ## Let Rook Write the Profile
+
+<VerifiedTag value="Verified" />
 
 ```bash
 rook profile add
@@ -38,6 +175,8 @@ rook profile use staging
 ## Lifecycle
 
 Rook passes the phase name as the only script argument. A script implements the phases it needs and exits successfully for the rest. Only `execute` is required.
+
+<VerifiedTag value="Verified" />
 
 ```text
 once per run        once per scenario                     per run
@@ -61,6 +200,8 @@ Authentication, transport, session management, and evidence collection are separ
 ## Hook Inputs
 
 Rook invokes:
+
+<VerifiedTag value="Verified" />
 
 ```text
 your-script.mjs <phase>
@@ -87,6 +228,8 @@ On `execute`, the arbitrary scenario goal arrives on standard input. No other ph
 
 Write one JSON object to standard output for `execute` and `collect`. Write diagnostics to standard error.
 
+<VerifiedTag value="Verified" />
+
 ```json
 {
   "output": "Your order ships Tuesday.",
@@ -112,6 +255,8 @@ If the first turn of a multi-turn scenario returns no conversation handle, Rook 
 A non-zero exit is a failed hook and standard error is its diagnosis. An `execute` or `collect` failure fails the affected scenario. Failures in the other optional phases are reported while the run preserves completed work.
 
 ## Profile File
+
+<VerifiedTag value="Verified" />
 
 ```yaml
 name: staging
@@ -175,6 +320,8 @@ Default phase timeouts are:
 
 For longer evidence delays, split the run:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 rook run --phases prepare,open,execute,close
 rook run --run <run-id> --phases collect,judge
@@ -183,6 +330,8 @@ rook run --run <run-id> --phases collect,judge
 A phase selection may be a prefix or suffix, never a sequence with a hole.
 
 ## Script Location
+
+<VerifiedTag value="Verified" />
 
 ```text
 .testmuai/rook/projects/<project>/agents/order-desk/

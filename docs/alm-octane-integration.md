@@ -16,6 +16,7 @@ slug: alm-octane-integration/
 canonical: https://www.testmuai.com/support/docs/alm-octane-integration/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -40,6 +41,129 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       })
     }}
 ></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/alm-octane-integration/"
+    },
+    "headline": "ALM Octane Integration with TestMu AI",
+    "description": "Learn how to integrate ALM Octane with TestMu AI for seamless test management and reporting while running your automated tests on the cloud.",
+    "url": "https://www.testmuai.com/support/docs/alm-octane-integration/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Integration",
+    "keywords": [
+      "TestMu AI integration",
+      "ALM Octane integration",
+      "Micro Focus ALM Octane"
+    ],
+    "proficiencyLevel": "Beginner",
+    "dependencies": "An active TestMu AI account; An ALM Octane instance with API access; ALM Octane credentials (Client ID and Client Secret); Your test automation framework configured with ALM Octane SDK/API.",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "For Java-based projects using Maven, add the ALM Octane SDK dependency",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "XML",
+        "text": "<dependency>\n    <groupId>com.microfocus.adm.almoctane.sdk<\/groupId>\n    <artifactId>sdk-src<\/artifactId>\n    <version>16.1.100<\/version>\n<\/dependency>"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Here's an example of how to configure your test framework to report results to ALM Octane",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "import com.hp.octane.integrations.OctaneSDK;\n\npublic class ALMOctaneReporter {\n\n    private static final String OCTANE_URL = \"https://your-octane-instance.com\";\n    private static final String SHARED_SPACE_ID = \"your-shared-space-id\";\n    private static final String WORKSPACE_ID = \"your-workspace-id\";\n    private static final String CLIENT_ID = \"your-client-id\";\n    private static final String CLIENT_SECRET = \"your-client-secret\";\n\n    public void reportTestResult(String testName, String status) {\n        // Initialize Octane SDK and report results\n        // Refer to ALM Octane SDK documentation for detailed implementation\n    }\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Once your test scripts are configured with ALM Octane reporting, run them on TestMu AI",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "DesiredCapabilities capabilities = new DesiredCapabilities();\ncapabilities.setCapability(\"browserName\", \"Chrome\");\ncapabilities.setCapability(\"version\", \"latest\");\ncapabilities.setCapability(\"platform\", \"Windows 10\");\ncapabilities.setCapability(\"build\", \"ALM Octane Integration Build\");\ncapabilities.setCapability(\"name\", \"ALM Octane Test\");\n\nWebDriver driver = new RemoteWebDriver(\n    new URL(\"https://\" + username + \":\" + accessKey + \"@hub.lambdatest.com/wd/hub\"),\n    capabilities\n);\n\n// Your test code here\n// ALM Octane reporting happens automatically based on your script configuration"
+      }
+    ],
+    "dateModified": "2026-07-17T17:17:54+05:30"
+  }) }}
+/>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Configuring ALM Octane in Your Test Scripts",
+      "description": "Learn how to integrate ALM Octane with TestMu AI for seamless test management and reporting while running your automated tests on the cloud.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Set Up ALM Octane API Credentials",
+          "text": "In your ALM Octane instance, generate API credentials: Navigate to Settings > Spaces > API Access Create a new API client with appropriate permissions Note down the Client ID and Client Secret",
+          "url": "https://www.testmuai.com/support/docs/alm-octane-integration/#step-1-set-up-alm-octane-api-credentials"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Install ALM Octane SDK",
+          "text": "For Java-based projects using Maven, add the ALM Octane SDK dependency: For other languages, refer to the ALM Octane API documentation in the Micro Focus online help.",
+          "url": "https://www.testmuai.com/support/docs/alm-octane-integration/#step-2-install-alm-octane-sdk"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Configure Test Result Reporting",
+          "text": "Here's an example of how to configure your test framework to report results to ALM Octane: Java (TestNG) Example:",
+          "url": "https://www.testmuai.com/support/docs/alm-octane-integration/#step-3-configure-test-result-reporting"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Step 4: Run Tests on TestMu AI",
+          "text": "Once your test scripts are configured with ALM Octane reporting, run them on TestMu AI: Using Selenium Grid: Using HyperExecute: Create your hyperexecute.yaml configuration and run tests as usual. The ALM Octane reporting configured in your scripts will work seamlessly.",
+          "url": "https://www.testmuai.com/support/docs/alm-octane-integration/#step-4-run-tests-on-testmu-ai"
+        }
+      ]
+    }
+  ]) }}
+/>
 
 # ALM Octane Integration with <BrandName />
 
@@ -80,6 +204,8 @@ In your ALM Octane instance, generate API credentials:
 
 For Java-based projects using Maven, add the ALM Octane SDK dependency:
 
+<VerifiedTag value="Verified" />
+
 ```xml
 <dependency>
     <groupId>com.microfocus.adm.almoctane.sdk</groupId>
@@ -95,6 +221,8 @@ For other languages, refer to the ALM Octane API documentation in the Micro Focu
 Here's an example of how to configure your test framework to report results to ALM Octane:
 
 **Java (TestNG) Example:**
+
+<VerifiedTag value="Verified" />
 
 ```java
 import com.hp.octane.integrations.OctaneSDK;
@@ -119,6 +247,8 @@ public class ALMOctaneReporter {
 Once your test scripts are configured with ALM Octane reporting, run them on <BrandName />:
 
 **Using Selenium Grid:**
+
+<VerifiedTag value="Verified" />
 
 ```java
 DesiredCapabilities capabilities = new DesiredCapabilities();

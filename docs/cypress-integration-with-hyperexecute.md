@@ -23,6 +23,8 @@ import TabItem from '@theme/TabItem';
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 
+import VerifiedTag from '@site/src/component/verifiedTag';
+
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
        "@context": "https://schema.org",
@@ -46,6 +48,82 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
       })
     }}
 ></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/cypress-integration-with-hyperexecute/"
+    },
+    "headline": "Cypress Integration with HyperExecute",
+    "description": "You can now integrate Cypress with HyperExecute. To do so, follow the steps listed in the document.",
+    "url": "https://www.testmuai.com/support/docs/cypress-integration-with-hyperexecute/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Documentation",
+    "keywords": [
+      "hyperexecute integrations",
+      "hyperexecute integrations with cypress",
+      "products"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "The cypress-skill package includes",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "cypress-skill/\n\u251c\u2500\u2500 SKILL.md\n\u2514\u2500\u2500 reference/\n    \u251c\u2500\u2500 playbook.md\n    \u2514\u2500\u2500 advanced-patterns.md"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Install a Cypress Agent Skill using the command below",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "codeRepository": "https://github.com/LambdaTest/agent-skills",
+        "text": "# Clone the repo and copy the skill you need\ngit clone https://github.com/LambdaTest/agent-skills.git\ncp -r agent-skills/cypress-skill .claude/skills/\n\n# Or for Cursor / Copilot\ncp -r agent-skills/cypress-skill .cursor/skills/"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 
 # Cypress Integration with HyperExecute
 
@@ -155,6 +233,8 @@ Run the below mentioned commands in the terminal to setup the CLI and the enviro
 
 <TabItem value="bash" label="Linux / MacOS" default>
 
+  <VerifiedTag value="Verified" />
+
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-bash">
   {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
@@ -165,6 +245,8 @@ export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 </TabItem>
 
 <TabItem value="powershell" label="Windows" default>
+
+  <VerifiedTag value="Verified" />
 
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-powershell">
@@ -211,6 +293,8 @@ The Auto-Split mechanism enables you to run tests at predefined concurrency leve
 
 Auto-split YAML file in the repo contains the following configuration:
 
+<VerifiedTag value="Verified" />
+
 ```yaml
 globalTimeout: 90
 testSuiteTimeout: 90
@@ -219,17 +303,23 @@ testSuiteStep: 90
 
 The **`runson`** key determines the platform (or operating system) on which the tests are executed. Here we have set the target OS as Windows.
 
+<VerifiedTag value="Verified" />
+
 ```yaml
 runson: win
 ```
 
 **`auto-split`** is set to true in the YAML file.
 
+<VerifiedTag value="Verified" />
+
 ```yaml
  autosplit: true
 ```
 
 **`retryOnFailure`** is set to true, instructing HyperExecute to retry failed command(s). The retry operation is carried out till the number of retries mentioned in *maxRetries* are exhausted or the command execution results in a *Pass*. In addition, the concurrency (i.e. number of parallel sessions) is set to 4.
+
+<VerifiedTag value="Verified" />
 
 ```yaml
 retryOnFailure: true
@@ -239,10 +329,14 @@ concurrency: 1
 
 **`cypress`** is set to true in the YAML file.
 
+<VerifiedTag value="Verified" />
+
 ```yaml
 cypress: true
 ```
 Cypress Build name and tags are added in the YAML file.
+
+<VerifiedTag value="Verified" />
 
 ```yaml
 cypressOps:
@@ -255,6 +349,8 @@ cypressOps:
 
 Steps (or commands) that must run before the test execution are listed in the *pre* run step.
 
+<VerifiedTag value="Verified" />
+
 ```yaml
 pre:
   - npm install
@@ -264,12 +360,16 @@ pre:
 
 Steps (or commands) that need to run after the test execution are listed in the *post* step. In the example, we *cat* the contents of *yaml/.hyperexecute_autosplit.yaml*
 
+<VerifiedTag value="Verified" />
+
 ```yaml
 post:
   - cat yaml/win/.hyperexecute_autosplit.yaml
 ```
 
 The **`testDiscovery`** directive contains the command that gives details of the mode of execution, along with detailing the command that is used for test execution. Here, we are fetching the list of class names that would be further passed in the *testRunnerCommand*
+
+<VerifiedTag value="Verified" />
 
 ```yaml
 testDiscovery:
@@ -284,6 +384,8 @@ Running the above command on the terminal will give a list of scenarios present 
 
 The **`testRunnerCommand`** contains the command that is used for triggering the test. The output fetched from the *testDiscoverer* command acts as an input to the *testRunner* command.
 
+<VerifiedTag value="Verified" />
+
 ```yaml
 testRunnerCommand: npx cypress run  --spec ./cypress/e2e/2-advanced-examples/$test --browser=chrome-95.0 --headed --config video=false
 ```
@@ -294,6 +396,8 @@ Run the following command on the terminal to trigger the tests as per your machi
 <Tabs className="docs__val">
   <TabItem value="windows" label="Windows" default>
 
+<VerifiedTag value="Verified" />
+
 ```bash
 ./hyperexecute --config yaml/win/.hyperexecute_autosplit.yaml --force-clean-artifacts --download-artifacts
 ```
@@ -302,6 +406,8 @@ Run the following command on the terminal to trigger the tests as per your machi
 
   <TabItem value="mac" label="Mac" default>
 
+<VerifiedTag value="Verified" />
+
 ```bash
 ./hyperexecute --config yaml/mac/.hyperexecute_autosplit.yaml --force-clean-artifacts --download-artifacts
 ```
@@ -309,6 +415,8 @@ Run the following command on the terminal to trigger the tests as per your machi
   </TabItem>
 
   <TabItem value="linux" label="Linux" default>
+
+<VerifiedTag value="Verified" />
 
 ```bash
 ./hyperexecute --config yaml/linux/.hyperexecute_autosplit.yaml --force-clean-artifacts --download-artifacts
@@ -321,6 +429,8 @@ Run the following command on the terminal to trigger the tests as per your machi
 Visit [HyperExecute Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/hyperexecute) to check the status of execution
 
 ###### Sample YAML File for Auto-Split
+
+<VerifiedTag value="Verified" />
 
 ```yaml
 ---
@@ -377,6 +487,8 @@ Matrix-based test execution is used for running the same tests across different 
 
 In the current example, matrix YAML file in the repo contains the following configuration:
 
+<VerifiedTag value="Verified" />
+
 ```yaml
 globalTimeout: 100
 testSuiteTimeout: 90
@@ -385,11 +497,15 @@ testSuiteStep: 90
  
 The target platform is set to Win. Please set the **`runson`** key to mac if the tests have to be executed on the macOS platform.
 
+<VerifiedTag value="Verified" />
+
 ```yaml
 runson: win
 ```
 
 The **`matrix`** constitutes of the following entries - *files*. The entries represent the test file names in the test code.
+
+<VerifiedTag value="Verified" />
 
 ```yaml
 matrix:
@@ -400,6 +516,8 @@ matrix:
 
 The **`testSuites`** object contains a list of commands (that can be presented in an array). In the current YAML file, commands for executing the tests are put in an array (with a '-' preceding each item). The Maven command *mvn test* is used to run tests located in the current project. In the current project, parallel execution is achieved at the *class* level. The *maven.repo.local* parameter in Maven is used for overriding the location where the dependent Maven packages are downloaded.
 
+<VerifiedTag value="Verified" />
+
 ```yaml
 testSuites:
   - npx cypress run  --spec ./cypress/e2e/2-advanced-examples/$files --browser=$browser --headed --config video=false
@@ -407,10 +525,14 @@ testSuites:
 
 **`cypress`** is set to true in the YAML file.
 
+<VerifiedTag value="Verified" />
+
 ```yaml
 cypress: true
 ```
 Cypress build name and tags are added in the YAML file.
+
+<VerifiedTag value="Verified" />
 
 ```yaml
 cypressOps:
@@ -422,6 +544,8 @@ cypressOps:
 
 Steps (or commands) that must run before the test execution are listed in the *pre* run step.
 
+<VerifiedTag value="Verified" />
+
 ```yaml
 pre:
   -  npm install
@@ -430,6 +554,8 @@ pre:
 ###### Post Steps
 
 Steps (or commands) that need to run after the test execution are listed in the *post* step. In the example, we *cat* the contents of *yaml/.hyperexecute_matrix.yaml*
+
+<VerifiedTag value="Verified" />
 
 ```yaml
 post:
@@ -442,6 +568,8 @@ Run the following command on the terminal to trigger the tests as per your machi
 <Tabs className="docs__val">
   <TabItem value="windows" label="Windows" default>
 
+<VerifiedTag value="Verified" />
+
 ```bash
 ./hyperexecute --config yaml/win/.hyperexecute_matrix.yaml --force-clean-artifacts --download-artifacts
 ```
@@ -450,6 +578,8 @@ Run the following command on the terminal to trigger the tests as per your machi
 
   <TabItem value="mac" label="Mac" default>
 
+<VerifiedTag value="Verified" />
+
 ```bash
 ./hyperexecute --config yaml/mac/.hyperexecute_matrix.yaml --force-clean-artifacts --download-artifacts
 ```
@@ -457,6 +587,8 @@ Run the following command on the terminal to trigger the tests as per your machi
   </TabItem>
 
   <TabItem value="linux" label="Linux" default>
+
+<VerifiedTag value="Verified" />
 
 ```bash
 ./hyperexecute --config yaml/linux/.hyperexecute_matrix.yaml --force-clean-artifacts --download-artifacts
@@ -469,6 +601,9 @@ Run the following command on the terminal to trigger the tests as per your machi
 Visit [HyperExecute Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/hyperexecute) to check the status of execution
 
 ###### Sample YAML File for Matrix
+
+<VerifiedTag value="Verified" />
+
 ```yaml
 ---
 version: 0.1
@@ -537,6 +672,8 @@ Follow the below steps to run Cypress Tests on HyperExecute using Gitpod:
 
 If you want to use any secret keys in the YAML file, this can be set by clicking on the **Secrets** button on the dashboard. All you need to do is create an environment variable that uses the secret key:
 
+<VerifiedTag value="Verified" />
+
 ```yaml
 env:
   PAT: ${{ .secrets.testKey }}
@@ -554,6 +691,8 @@ HAR logs offer a comprehensive view of your application's network activity durin
 
 Network Logs are disabled by default. To enable it, pass the `Network` and `FullHar` capability to `true` in the [`cypressOps`](/support/docs/deep-dive-into-hyperexecute-yaml/#cypressops) flag.
 
+<VerifiedTag value="Verified" />
+
 ```yaml
 cypressOps:
   Network: true
@@ -570,6 +709,8 @@ You can download network logs via the Automate Dashboard. You can visualize HAR 
 The **Detailed Command Logs** feature can be used to generate a comprehensive record of all Cypress commands and their results, both in the console and in a file. This can be extremely useful for debugging and troubleshooting Cypress tests because it narrows down the logs to reveal specific information. The logs are presented in a human-readable format, making them simple to read and comprehend.
 
 Prerequisite to get the detailed logs in HyperExecute:
+
+<VerifiedTag value="Verified" />
 
 ```yaml
 pre:
@@ -615,6 +756,8 @@ The Auto-Split mechanism enables you to run tests at predefined concurrency leve
 
 Auto-split YAML file (*yaml/.hyperexecute_autosplit.yaml*) in the repo contains the following configuration:
 
+<VerifiedTag value="Verified" />
+
 ```yaml
 globalTimeout: 90
 testSuiteTimeout: 90
@@ -623,17 +766,23 @@ testSuiteStep: 90
  
 The **`runson`** key determines the platform (or operating system) on which the tests are executed. Here we have set the target OS as Windows.
 
+<VerifiedTag value="Verified" />
+
 ```yaml
 runson: win
 ```
 
 Auto-split is set to true in the YAML file.
 
+<VerifiedTag value="Verified" />
+
 ```yaml
  autosplit: true
 ```
 
 **`retryOnFailure`** is set to true, instructing HyperExecute to retry failed command(s). The retry operation is carried out till the number of retries mentioned in **`maxRetries`** are exhausted or the command execution results in a *Pass*. In addition, the **`concurrency`** (i.e. number of parallel sessions) is set to 2.
+
+<VerifiedTag value="Verified" />
 
 ```yaml
 retryOnFailure: true
@@ -642,11 +791,15 @@ concurrency: 2
 ```
 **`cypress`** is set to true in the YML file.
 
+<VerifiedTag value="Verified" />
+
 ```yaml
 cypress: true
 ```
 
 Cypress Build name and tags are added in the YML file.
+
+<VerifiedTag value="Verified" />
 
 ```yaml
 cypressOps:
@@ -659,6 +812,8 @@ cypressOps:
 
 Steps (or commands) that must run before the test execution are listed in the *pre* run step.
 
+<VerifiedTag value="Verified" />
+
 ```yaml
 pre:
   - npm install
@@ -668,12 +823,16 @@ pre:
 
 Steps (or commands) that need to run after the test execution are listed in the *post* step. In the example, we *cat* the contents of *yaml/.hyperexecute_autosplit.yaml*
 
+<VerifiedTag value="Verified" />
+
 ```yaml
 post:
   - cat yaml/.hyperexecute_autosplit.yaml
 ```
 
 The **`testDiscovery`** directive contains the command that gives details of the mode of execution, along with detailing the command that is used for test execution. Here, we are fetching the list of class names that would be further passed in the *testRunnerCommand*
+
+<VerifiedTag value="Verified" />
 
 ```yaml
 testDiscovery:
@@ -697,6 +856,8 @@ Running the above command on the terminal will give a list of scenarios present 
 
 The **`testRunnerCommand`** contains the command that is used for triggering the test. The output fetched from the *testDiscoverer* command acts as an input to the *testRunner* command.
 
+<VerifiedTag value="Verified" />
+
 ```yaml
 testRunnerCommand: npx cypress run  --spec ./cypress/integration/$test --browser=chrome-95.0 --headed --config video=false
 ```
@@ -707,6 +868,8 @@ Run the following command on the terminal to trigger the tests as per your machi
 <Tabs className="docs__val">
   <TabItem value="windows" label="Windows" default>
 
+<VerifiedTag value="Verified" />
+
 ```bash
 ./hyperexecute --config yaml/win/.hyperexecute_autosplit.yaml --force-clean-artifacts --download-artifacts
 ```
@@ -715,6 +878,8 @@ Run the following command on the terminal to trigger the tests as per your machi
 
   <TabItem value="mac" label="Mac" default>
 
+<VerifiedTag value="Verified" />
+
 ```bash
 ./hyperexecute --config yaml/mac/.hyperexecute_autosplit.yaml --force-clean-artifacts --download-artifacts
 ```
@@ -722,6 +887,8 @@ Run the following command on the terminal to trigger the tests as per your machi
   </TabItem>
 
   <TabItem value="linux" label="Linux" default>
+
+<VerifiedTag value="Verified" />
 
 ```bash
 ./hyperexecute --config yaml/linux/.hyperexecute_autosplit.yaml --force-clean-artifacts --download-artifacts
@@ -734,6 +901,8 @@ Run the following command on the terminal to trigger the tests as per your machi
 Visit [HyperExecute Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/hyperexecute) to check the status of execution
 
 ###### Sample YAML File for Auto-Split
+
+<VerifiedTag value="Verified" />
 
 ```yaml
 ---
@@ -780,6 +949,8 @@ Matrix-based test execution is used for running the same tests across different 
 
 In the current example, matrix YAML file in the repo contains the following configuration:
 
+<VerifiedTag value="Verified" />
+
 ```yaml
 globalTimeout: 90
 testSuiteTimeout: 90
@@ -788,11 +959,15 @@ testSuiteStep: 90
  
 The target platform is set to Win. Please set the **`runso`n** key to **`mac`** if the tests have to be executed on the macOS platform.
 
+<VerifiedTag value="Verified" />
+
 ```yaml
 runson: win
 ```
 
 The **`matrix`** constitutes of the following entries - *classname*. The entries represent the class names in the test code.
+
+<VerifiedTag value="Verified" />
 
 ```yaml
 matrix:
@@ -803,6 +978,8 @@ matrix:
 
 The **`testSuites`** object contains a list of commands (that can be presented in an array). In the current YAML file, commands for executing the tests are put in an array (with a '-' preceding each item). The Maven command *mvn test* is used to run tests located in the current project. In the current project, parallel execution is achieved at the *class* level. The *maven.repo.local* parameter in Maven is used for overriding the location where the dependent Maven packages are downloaded.
 
+<VerifiedTag value="Verified" />
+
 ```yaml
 testSuites:
   - npx cypress run  --spec ./cypress/integration/$files --browser=$browser --headed --config video=false
@@ -812,6 +989,8 @@ testSuites:
 
 Steps (or commands) that must run before the test execution are listed in the *pre* run step.
 
+<VerifiedTag value="Verified" />
+
 ```yaml
 pre:
   - npm install
@@ -820,6 +999,8 @@ pre:
 ###### Post Steps
 
 Steps (or commands) that need to run after the test execution are listed in the *post* step. In the example, we *cat* the contents of *yaml/.hyperexecute_matrix.yaml*
+
+<VerifiedTag value="Verified" />
 
 ```yaml
 post:
@@ -832,6 +1013,8 @@ Run the following command on the terminal to trigger the tests as per your machi
 <Tabs className="docs__val">
   <TabItem value="windows" label="Windows" default>
 
+<VerifiedTag value="Verified" />
+
 ```bash
 ./hyperexecute --config yaml/win/.hyperexecute_matrix.yaml --force-clean-artifacts --download-artifacts
 ```
@@ -840,6 +1023,8 @@ Run the following command on the terminal to trigger the tests as per your machi
 
   <TabItem value="mac" label="Mac" default>
 
+<VerifiedTag value="Verified" />
+
 ```bash
 ./hyperexecute --config yaml/mac/.hyperexecute_matrix.yaml --force-clean-artifacts --download-artifacts
 ```
@@ -847,6 +1032,8 @@ Run the following command on the terminal to trigger the tests as per your machi
   </TabItem>
 
   <TabItem value="linux" label="Linux" default>
+
+<VerifiedTag value="Verified" />
 
 ```bash
 ./hyperexecute --config yaml/linux/.hyperexecute_matrix.yaml --force-clean-artifacts --download-artifacts
@@ -859,6 +1046,8 @@ Run the following command on the terminal to trigger the tests as per your machi
 Visit [HyperExecute Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/hyperexecute) to check the status of execution:
 
 ###### Sample YAML File for Matrix
+
+<VerifiedTag value="Verified" />
 
 ```yaml
 ---
@@ -920,6 +1109,8 @@ Follow the below steps to run Cypress Tests on HyperExecute using Gitpod:
 
 If you want to use any secret keys in the YAML file, this can be set by clicking on the **Secrets** button on the dashboard. All you need to do is create an environment variable that uses the secret key:
 
+<VerifiedTag value="Verified" />
+
 ```yaml
 env:
   PAT: ${{ .secrets.testKey }}
@@ -935,6 +1126,8 @@ HAR logs offer a comprehensive view of your application's network activity durin
 - Diagnosing Load Order Issues
 
 Network Logs are disabled by default. To enable it, pass the `Network` and `FullHar` capability to `true` in the [`cypressOps`](/support/docs/deep-dive-into-hyperexecute-yaml/#cypressops) flag.
+
+<VerifiedTag value="Verified" />
 
 ```yaml
 cypressOps:
@@ -952,6 +1145,8 @@ You can download network logs via the Automate Dashboard. You can visualize HAR 
 The **Detailed Command Logs** feature can be used to generate a comprehensive record of all Cypress commands and their results, both in the console and in a file. This can be extremely useful for debugging and troubleshooting Cypress tests because it narrows down the logs to reveal specific information. The logs are presented in a human-readable format, making them simple to read and comprehend.
 
 Prerequisite to get the detailed logs in HyperExecute:
+
+<VerifiedTag value="Verified" />
 
 ```yaml
 pre:

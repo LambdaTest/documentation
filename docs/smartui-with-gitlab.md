@@ -26,6 +26,8 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 
+import VerifiedTag from '@site/src/component/verifiedTag';
+
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
        "@context": "https://schema.org",
@@ -49,6 +51,179 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       })
     }}
 ></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/smartui-with-gitlab/"
+    },
+    "headline": "GitLab Pipeline Integration with SmartUI",
+    "description": "SmartUI now integrates with GitLab Pipeline to boost your go-to market delivery. Perform automated cross browser testing with SmartUI to ensure your development code renders seamlessly providing 3000+ real browsers running through machines.",
+    "url": "https://www.testmuai.com/support/docs/smartui-with-gitlab/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "SmartUI",
+    "keywords": [
+      "testmu ai integrations",
+      "smart ui integration",
+      "smart ui integrations with ci/cd tools"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 2: Create a New Workflow",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n:::tip\nYou can also store your *LT_USERNAME*, *LT_ACCESS_KEY* and *PROJECT_TOKEN* as secrets in your GitLab project repository.\n:::\n\n### Step 3: Check the output\n\n- After triggering the workflow, check your results in the [SmartUI Dashboard](https://www.testmuai.com/login/?redirectTo=https://smartui.lambdatest.com/projects)\n\n<img loading=\"lazy\" src={require('../assets/images/smart-visual-testing/ci-cd-integration/gitlab/3.png').default} alt=\"Create New Project\" width=\"\" height=\"\"/>\n\n## Best Practices\n\n<Tabs className='docs__val' groupId='best-practices'>\n<TabItem value='secret-management' label='Secret Management' default>\n\n**Secret Management**\n\n- Never commit credentials to repository\n- Use GitLab CI/CD Variables for all sensitive data\n- Rotate secrets regularly\n- Use different secrets for different environments\n\n<\/TabItem>\n<TabItem value='pipeline-optimization' label='Pipeline Optimization'>\n\n**Pipeline Optimization**\n\n- Use parallel jobs for faster execution\n- Cache dependencies to speed up pipelines\n- Only run visual tests on relevant branches\n- Set up pipeline conditions to avoid unnecessary runs\n\n**Example:**\n```yaml\nonly:\n  - main\n  - develop\n  - merge_requests"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 2",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "variables:\n  BUILD_NAME: \"MR-$CI_MERGE_REQUEST_IID-$CI_COMMIT_SHORT_SHA\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Pass variable to job",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "   variables:\n     PROJECT_TOKEN: $PROJECT_TOKEN"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Check pipeline logs for errors",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "   after_script:\n     - if [ $CI_JOB_STATUS == 'failed' ]; then cat job.log; fi"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Increase pipeline timeout",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "   default:\n     timeout: 1h"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Run tests in parallel using parallel jobs",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "   parallel:\n     matrix:\n       - TEST_GROUP: [1, 2, 3]"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Use specific Node version",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "   image: node:18"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Clear npm cache",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "   before_script:\n     - npm cache clean --force"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Ensure Node.js is available",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "   image: node:18"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Verify npm is available",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "   before_script:\n     - npm --version"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Install SmartUI CLI explicitly",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "   before_script:\n     - npm install -g @lambdatest/smartui-cli"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Steps to Integrate GitLab Pipeline with SmartUI",
+      "description": "To integrate GitLab Pipeline with SmartUI, follow the below steps. You can use your own project to configure and test it. For demo purposes, we are using the sample repository. Download or Clone the code sample from the TestMu AI GitHub repository to run the tests on the SmartUI.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Setup your Projects in GitLab",
+          "text": "Click on the New Project > Run CI/CD for external repository. Enter your repository URL and click on Create Project.",
+          "url": "https://www.testmuai.com/support/docs/smartui-with-gitlab/#step-1-setup-your-projects-in-gitlab"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Create a New Workflow",
+          "text": "Navigate to the Build section > Pipelines. Select your required template for CI/CD workflow file. For the demo we are using the Test template. Now, write your workflow YAML file. Here is the sample file for your reference. Commit this yaml file in your repository and make the required changes in your code to automatically trigger the pipeline. You can also store your LTUSERNAME, LTACCESSKEY and PROJECTTOKEN as secrets in your GitLab project repository.",
+          "url": "https://www.testmuai.com/support/docs/smartui-with-gitlab/#step-2-create-a-new-workflow"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Check the output",
+          "text": "After triggering the workflow, check your results in the SmartUI Dashboard",
+          "url": "https://www.testmuai.com/support/docs/smartui-with-gitlab/#step-3-check-the-output"
+        }
+      ]
+    }
+  ]) }}
+/>
+
+
 A GitLab Pipeline automates building, testing, and deploying code changes. It's essential for rapid development, improved code quality, and faster delivery by catching errors early and reducing manual work.
 
 This document shows you how to integrate GitLab with SmartUI — running visual tests in your GitLab Pipeline, and posting results as merge-request (PR) checks using either SmartUI Hooks or SmartUI Exec/SDK.
@@ -75,6 +250,8 @@ Download or Clone the code sample from the <BrandName /> GitHub repository to ru
 - Select your required template for CI/CD workflow file. For the demo we are using the Test template.
 - Now, write your workflow YAML file. Here is the sample file for your reference.
 - Commit this yaml file in your repository and make the required changes in your code to automatically trigger the pipeline.
+
+<VerifiedTag value="Verified" />
 
 ```yaml reference title=".gitlab-ci.yml"
 https://github.com/amanchopra1905/smartui-ci-cd-integrations/blob/gitlab/.gitlab-ci.yml
@@ -156,6 +333,8 @@ Configure your test suite with SmartUI capabilities. Since you're using the **Ho
 <Tabs className='docs__val' groupId='web-language'>
 <TabItem value='typescript-web' label='TypeScript/JavaScript' default>
 
+<VerifiedTag value="Verified" />
+
 ```typescript title="Example: TypeScript Selenium Configuration with SmartUI Hooks and GitLab"
 import { Builder, Capabilities } from 'selenium-webdriver';
 
@@ -195,6 +374,8 @@ const driver = await new Builder()
 
 </TabItem>
 <TabItem value='java-web' label='Java'>
+
+<VerifiedTag value="Verified" />
 
 ```java title="Example: Java Selenium Configuration with SmartUI Hooks and GitLab"
 package webhook;
@@ -265,6 +446,8 @@ public class BaseClassWebhook {
 </TabItem>
 <TabItem value='python-web' label='Python'>
 
+<VerifiedTag value="Verified" />
+
 ```python title="Example: Python Selenium Configuration with SmartUI Hooks and GitLab"
 from selenium import webdriver
 from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
@@ -312,6 +495,8 @@ driver = webdriver.Remote(
 <Tabs className='docs__val' groupId='mobile-language'>
 <TabItem value='typescript-mobile' label='TypeScript/JavaScript' default>
 
+<VerifiedTag value="Verified" />
+
 ```typescript title="Example: TypeScript/WebdriverIO Mobile Configuration with SmartUI Hooks and GitLab"
 import { remote, RemoteOptions } from 'webdriverio';
 
@@ -356,6 +541,8 @@ const driver = await remote({
 
 </TabItem>
 <TabItem value='java-mobile' label='Java'>
+
+<VerifiedTag value="Verified" />
 
 ```java title="Example: Java Appium Configuration with SmartUI Hooks and GitLab"
 package webhook;
@@ -430,6 +617,8 @@ public class BaseClassWebhook {
 </TabItem>
 <TabItem value='python-mobile' label='Python'>
 
+<VerifiedTag value="Verified" />
+
 ```python title="Example: Python Appium Configuration with SmartUI Hooks and GitLab"
 from appium import webdriver
 import os
@@ -484,6 +673,8 @@ In your test code, use the SmartUI execute command to capture screenshots:
 <Tabs className='docs__val' groupId='screenshot-language'>
 <TabItem value='typescript' label='TypeScript/JavaScript' default>
 
+<VerifiedTag value="Verified" />
+
 ```typescript title="Taking Screenshots with SmartUI Hooks"
 // Viewport screenshot
 await driver.execute("smartui.takeScreenshot=Homepage");
@@ -499,6 +690,8 @@ await driver.execute("smartui.takeScreenshot", config);
 
 </TabItem>
 <TabItem value='java' label='Java'>
+
+<VerifiedTag value="Verified" />
 
 ```java title="Taking Screenshots with SmartUI Hooks in Java"
 import org.openqa.selenium.JavascriptExecutor;
@@ -519,6 +712,8 @@ config.put("pageCount", 15); // Minimum 1, Maximum 20
 </TabItem>
 <TabItem value='python' label='Python'>
 
+<VerifiedTag value="Verified" />
+
 ```python title="Taking Screenshots with SmartUI Hooks in Python"
 # Viewport screenshot
 driver.execute_script("smartui.takeScreenshot=Homepage")
@@ -535,6 +730,8 @@ driver.execute_script("smartui.takeScreenshot", config)
 </TabItem>
 <TabItem value='ruby' label='Ruby'>
 
+<VerifiedTag value="Verified" />
+
 ```ruby title="Taking Screenshots with SmartUI Hooks in Ruby"
 # Viewport screenshot
 driver.execute_script("smartui.takeScreenshot=Homepage")
@@ -550,6 +747,8 @@ driver.execute_script("smartui.takeScreenshot", config)
 
 </TabItem>
 <TabItem value='csharp' label='C#'>
+
+<VerifiedTag value="Verified" />
 
 ```csharp title="Taking Screenshots with SmartUI Hooks in C#"
 using OpenQA.Selenium;
@@ -586,6 +785,8 @@ Create or update your `.gitlab-ci.yml` file. Since you're using **Hooks**, you j
 
 <Tabs className='docs__val' groupId='ci-language'>
 <TabItem value='typescript' label='TypeScript/JavaScript' default>
+
+<VerifiedTag value="Verified" />
 
 ```yaml title=".gitlab-ci.yml - TypeScript/JavaScript Example"
 stages:
@@ -641,6 +842,8 @@ visual_regression_tests:
 
 </TabItem>
 <TabItem value='java' label='Java'>
+
+<VerifiedTag value="Verified" />
 
 ```yaml title=".gitlab-ci.yml - Java Example"
 stages:
@@ -700,6 +903,8 @@ visual_regression_tests:
 </TabItem>
 <TabItem value='python' label='Python'>
 
+<VerifiedTag value="Verified" />
+
 ```yaml title=".gitlab-ci.yml - Python Example"
 stages:
   - test
@@ -754,6 +959,8 @@ visual_regression_tests:
 
 </TabItem>
 <TabItem value='ruby' label='Ruby'>
+
+<VerifiedTag value="Verified" />
 
 ```yaml title=".gitlab-ci.yml - Ruby Example"
 stages:
@@ -889,6 +1096,8 @@ When visual differences are detected:
 <Tabs className='docs__val' groupId='web-example-lang'>
 <TabItem value='typescript-web-ex' label='TypeScript/JavaScript' default>
 
+<VerifiedTag value="Verified" />
+
 ```typescript title="example.spec.ts - Complete Web Test with SmartUI Hooks and GitLab"
 import { Builder, Capabilities } from 'selenium-webdriver';
 
@@ -951,6 +1160,8 @@ describe('Web Visual Regression Tests', () => {
 
 </TabItem>
 <TabItem value='java-web-ex' label='Java'>
+
+<VerifiedTag value="Verified" />
 
 ```java title="BaseClassWebhook.java - Complete Java Web Test with SmartUI Hooks and GitLab"
 package webhook;
@@ -1049,6 +1260,8 @@ public class BaseClassWebhook {
 <Tabs className='docs__val' groupId='mobile-example-lang'>
 <TabItem value='typescript-mobile-ex' label='TypeScript/JavaScript' default>
 
+<VerifiedTag value="Verified" />
+
 ```typescript title="example.spec.ts - Complete Mobile App Test with SmartUI Hooks and GitLab"
 import { remote, RemoteOptions } from 'webdriverio';
 
@@ -1114,6 +1327,8 @@ describe('Mobile App Visual Regression Tests', () => {
 
 </TabItem>
 <TabItem value='java-mobile-ex' label='Java'>
+
+<VerifiedTag value="Verified" />
 
 ```java title="BaseClassWebhook.java - Complete Java Mobile Test with SmartUI Hooks and GitLab"
 package webhook;
@@ -1361,6 +1576,8 @@ You can verify your GitLab integration is active by checking the [Integrations p
 
 Create or update your SmartUI configuration file (`.smartui.json`):
 
+<VerifiedTag value="Verified" />
+
 ```json title=".smartui.json"
 {
   "projectName": "your-smartui-project-name",
@@ -1385,6 +1602,8 @@ Create or update your `.gitlab-ci.yml` file. The key difference with the Exec me
 
 <Tabs className='docs__val' groupId='ci-language'>
 <TabItem value='typescript' label='TypeScript/JavaScript' default>
+
+<VerifiedTag value="Verified" />
 
 ```yaml title=".gitlab-ci.yml - TypeScript/JavaScript Example"
 stages:
@@ -1438,6 +1657,8 @@ visual_regression_tests:
 
 </TabItem>
 <TabItem value='java' label='Java'>
+
+<VerifiedTag value="Verified" />
 
 ```yaml title=".gitlab-ci.yml - Java Example"
 stages:
@@ -1495,6 +1716,8 @@ visual_regression_tests:
 </TabItem>
 <TabItem value='python' label='Python'>
 
+<VerifiedTag value="Verified" />
+
 ```yaml title=".gitlab-ci.yml - Python Example"
 stages:
   - test
@@ -1547,6 +1770,8 @@ visual_regression_tests:
 
 </TabItem>
 <TabItem value='ruby' label='Ruby'>
+
+<VerifiedTag value="Verified" />
 
 ```yaml title=".gitlab-ci.yml - Ruby Example"
 stages:
@@ -1611,6 +1836,8 @@ visual_regression_tests:
 :::info Understanding the SmartUI Exec Command
 
 The `npx smartui exec` command wraps your test execution and provides SmartUI integration:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 npx smartui exec --gitURL "<gitlab-url>" -- <your-test-command>
@@ -1690,6 +1917,8 @@ When visual differences are detected:
 <Tabs className='docs__val' groupId='web-example-lang'>
 <TabItem value='typescript-web-ex' label='TypeScript/JavaScript' default>
 
+<VerifiedTag value="Verified" />
+
 ```yaml title=".gitlab-ci.yml - Complete Web Testing Example"
 stages:
   - test
@@ -1731,6 +1960,8 @@ visual_regression_tests:
 
 </TabItem>
 <TabItem value='java-web-ex' label='Java'>
+
+<VerifiedTag value="Verified" />
 
 ```yaml title=".gitlab-ci.yml - Complete Java Web Testing Example"
 stages:
@@ -1784,6 +2015,8 @@ visual_regression_tests:
 <Tabs className='docs__val' groupId='mobile-example-lang'>
 <TabItem value='typescript-mobile-ex' label='TypeScript/JavaScript' default>
 
+<VerifiedTag value="Verified" />
+
 ```yaml title=".gitlab-ci.yml - Complete Mobile Testing Example"
 stages:
   - test
@@ -1826,6 +2059,8 @@ visual_regression_tests:
 
 </TabItem>
 <TabItem value='java-mobile-ex' label='Java'>
+
+<VerifiedTag value="Verified" />
 
 ```yaml title=".gitlab-ci.yml - Complete Java Mobile Testing Example"
 stages:
@@ -1986,6 +2221,9 @@ visual_regression_tests:
 - Set up pipeline conditions to avoid unnecessary runs
 
 **Example:**
+
+<VerifiedTag value="Verified" />
+
 ```yaml
 only:
   - main
@@ -2003,6 +2241,9 @@ only:
 - Use consistent naming conventions
 
 **Example:**
+
+<VerifiedTag value="Verified" />
+
 ```yaml
 variables:
   BUILD_NAME: "MR-$CI_MERGE_REQUEST_IID-$CI_COMMIT_SHORT_SHA"
@@ -2082,6 +2323,9 @@ variables:
 1. Add PROJECT_TOKEN as GitLab CI/CD Variable
 
 2. Pass variable to job:
+
+   <VerifiedTag value="Verified" />
+
    ```yaml
    variables:
      PROJECT_TOKEN: $PROJECT_TOKEN
@@ -2110,6 +2354,9 @@ variables:
    - Ensure token includes project ID prefix
 
 2. Check pipeline logs for errors:
+
+   <VerifiedTag value="Verified" />
+
    ```yaml
    after_script:
      - if [ $CI_JOB_STATUS == 'failed' ]; then cat job.log; fi
@@ -2134,12 +2381,18 @@ variables:
 
 **Solutions**:
 1. Increase pipeline timeout:
+
+   <VerifiedTag value="Verified" />
+
    ```yaml
    default:
      timeout: 1h
    ```
 
 2. Run tests in parallel using parallel jobs:
+
+   <VerifiedTag value="Verified" />
+
    ```yaml
    parallel:
      matrix:
@@ -2164,11 +2417,17 @@ variables:
 
 **Solutions**:
 1. Use specific Node version:
+
+   <VerifiedTag value="Verified" />
+
    ```yaml
    image: node:18
    ```
 
 2. Clear npm cache:
+
+   <VerifiedTag value="Verified" />
+
    ```yaml
    before_script:
      - npm cache clean --force
@@ -2192,17 +2451,26 @@ variables:
 
 **Solutions**:
 1. Ensure Node.js is available:
+
+   <VerifiedTag value="Verified" />
+
    ```yaml
    image: node:18
    ```
 
 2. Verify npm is available:
+
+   <VerifiedTag value="Verified" />
+
    ```yaml
    before_script:
      - npm --version
    ```
 
 3. Install SmartUI CLI explicitly:
+
+   <VerifiedTag value="Verified" />
+
    ```yaml
    before_script:
      - npm install -g @lambdatest/smartui-cli

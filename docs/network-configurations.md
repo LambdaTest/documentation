@@ -21,6 +21,122 @@ import CodeBlock from '@theme/CodeBlock';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
+
+<script type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify({
+       "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": BRAND_URL
+        },{
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Support",
+          "item": `${BRAND_URL}/support/docs/`
+        },{
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Network Configurations in Automation Tests",
+          "item": `${BRAND_URL}/support/docs/network-configurations/`
+        }]
+      })
+    }}
+></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/network-configurations/"
+    },
+    "headline": "Network Configurations in Automation Tests",
+    "description": "Learn how to configure and capture HTTP/S traffic during automation testing on TestMu AI Real Devices.",
+    "url": "https://www.testmuai.com/support/docs/network-configurations/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "App Automation",
+    "keywords": [
+      "testmu ai automation",
+      "appium network logs",
+      "espresso network logs"
+    ],
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Network Configurations in Automation Test",
+      "description": "Learn how to configure and capture HTTP/S traffic during automation testing on TestMu AI Real Devices.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Upload Your App to TestMu AI",
+          "text": "Before enabling network configurations, ensure your app is uploaded to TestMu AI. Uploading Your App \u2013 Follow the detailed steps in our Upload Your Application guide. Once uploaded, note the App ID returned by the API or dashboard. Use this App ID in the \"app\" capability in your automation script.",
+          "url": "https://www.testmuai.com/support/docs/network-configurations/#step-1-upload-your-app-to-testmu-ai"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Add Desired Capabilities",
+          "text": "{`desired_caps = { \"deviceName\": \"Galaxy S20\", \"platformName\": \"Android\", \"platformVersion\": \"15\", \"isRealMobile\": True, \"app\": \"YOURAPPID\", \"build\": \"Sample Build\", \"name\": \"Sample Test\", \"network\": True, #highlight-next-line \"networkLogsOptions\": { \"captureContent\": False, \"excludeHosts\": [\"lambdatest\"], \"includeHosts\": [\"youtube\", \"facebook\"] }, }`} {`desired_caps = { \"deviceName\": \"iPhone 16\", \"platformName\": \"ios\", \"platformVersion\": \"18\", \"isRealMobile\": True, \"app\": \"YOURAPPID\", \"build\": \"Sample Build\", \"name\": \"Sample Test\", \"network\": True, #highlight-next-line \"networkLogsOptions\": { \"captureContent\": False, \"excludeHosts\": [\"lambdatest\"], \"includeHosts\": [\"youtube\", \"facebook\"] }, }`}",
+          "url": "https://www.testmuai.com/support/docs/network-configurations/#step-2-add-desired-capabilities"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Run Your Test",
+          "text": "Execute your test script using your preferred automation framework with the above capabilities.",
+          "url": "https://www.testmuai.com/support/docs/network-configurations/#step-3-run-your-test"
+        }
+      ]
+    }
+  ]) }}
+/>
 
 # How to Configure Network Logs on TestMu AI
 Network configurations on <BrandName /> capture and analyze HTTP/S traffic in real time on real devices during automation. Logs stored in HAR format record API calls, requests, responses, and load times, while content capture and domain filtering help reduce noise.
@@ -39,13 +155,10 @@ To unlock this feature, purchase or upgrade to the required [plan](https://www.t
 
 ## Use Cases
 
-
 - **Debug API calls** by viewing HTTP/S request and response data directly from real device sessions.
 - **Verify backend integration** by checking if calls are made to the correct endpoints.
 - **Filter noise** by including/excluding specific hosts.
 - **Reproduce production issues** that depend on specific network conditions or API behaviors.
-
-
 
 ---
 
@@ -65,7 +178,6 @@ To enable the following you would need to pass them under `networkLogsOptions` C
 | **captureContent**          | Boolean                | true    | Captures the response body in network logs.                  |
 | **excludeHosts** | List                 | None    | Hosts to exclude from network logs.                          |
 | **includeHosts** | List                 | None    | Only capture network logs for these hosts; all others will be excluded. |
-
 
 :::info
 - `networkLogsExcludeHosts` and `networkLogsIncludeHosts` are mutually exclusive. If both are set, **IncludeHosts** takes precedence.
@@ -95,6 +207,9 @@ Before enabling network configurations, ensure your app is uploaded to <BrandNam
 
 <Tabs>
   <TabItem value="android" label="Android" default>
+
+    <VerifiedTag value="Verified" />
+
     <CodeBlock className="language-java">
 {`desired_caps = {
     "deviceName": "Galaxy S20",
@@ -116,6 +231,9 @@ Before enabling network configurations, ensure your app is uploaded to <BrandNam
   </TabItem>
 
   <TabItem value="ios" label="iOS">
+
+    <VerifiedTag value="Verified" />
+
     <CodeBlock className="language-java">
 {`desired_caps = {
     "deviceName": "iPhone 16",
@@ -136,8 +254,6 @@ Before enabling network configurations, ensure your app is uploaded to <BrandNam
     </CodeBlock>
   </TabItem>
 </Tabs>
-
-
 
 ---
 

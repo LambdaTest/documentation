@@ -29,6 +29,8 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 
+import VerifiedTag from '@site/src/component/verifiedTag';
+
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
        "@context": "https://schema.org",
@@ -53,6 +55,223 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/appium-ruby/"
+    },
+    "headline": "Appium with Ruby",
+    "description": "Complete guide to running your first Ruby Appium automated test script on TestMu AI Real Device Cloud Platform. Test on 5000+ Real Devices.",
+    "url": "https://www.testmuai.com/support/docs/appium-ruby/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Documentation",
+    "keywords": [
+      "ruby appium",
+      "ruby appium tutorial",
+      "real devices"
+    ],
+    "proficiencyLevel": "Beginner",
+    "dependencies": "Your TestMu AI Username and Access key.; Install Ruby on your local system. Follow these instructions to install on different operating systems..",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "For macOS, you can run a Homebrew command like this",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "brew install ruby"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "For Linux or Ubuntu, you can run a simple apt command like below",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "sudo apt-get install ruby-full"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 3",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n\n:::tip\n- You must set **isRealMobile** capability to `False` in the config file to run on **Virtual Devices**\n:::\n\n<\/TabItem>\n\n<TabItem value=\"android\" label=\"Android\" default>\n\n```ruby title=\"android.py\"\nrequire 'rubygems'\nrequire 'appium_lib'\n\n        #highlight-next-line\n        username= \"username\" #Add username here\n        #highlight-next-line\n        accessToken= \"accesKey\" #Add accessKey here\n\n        caps = {\n           \"LT:Options\" => {      \n            :deviceName => \"OnePlus 7\",  \n            :platformName => \"Android\",\n            :platformVersion => \"9\",\n            :build => \"Ruby Vanilla - Android\",\n            :name => \"Ruby Android Test\",\n            :isRealMobile => true,\n            #highlight-next-line\n            :app => \"YOUR_APP_URL\", #Enter the App URL here\n            :w3c => true,\n        } }\n\n        appium_driver = Appium::Driver.new({\n            'caps' => caps,\n            'appium_lib' => {\n               :server_url => \"http://\"+username+\":\"+accessToken+\"@mobile-hub.lambdatest.com/wd/hub\"\n            }}, true)\n\n            driver = appium_driver.start_driver\n\n            wait = Selenium::WebDriver::Wait.new(:timeout => 30)\n            el1 = driver.find_element(:id, \"com.lambdatest.proverbial:id/color\")\n            el1.click\n            el2 = driver.find_element(:id, \"com.lambdatest.proverbial:id/geoLocation\")\n            el2.click\n            sleep(5)\n            driver.back\n            el3 = driver.find_element(:id, \"com.lambdatest.proverbial:id/Text\")\n            el3.click\n            el4 = driver.find_element(:id, \"com.lambdatest.proverbial:id/notification\")\n            el4.click\n            el5 = driver.find_element(:id, \"com.lambdatest.proverbial:id/toast\")\n            el5.click\n            el6 = driver.find_element(:id, \"com.lambdatest.proverbial:id/speedTest\")\n            el6.click\n            sleep(10)\n            driver.back\n            puts \"Found results - Test Passed\"\n\n            driver.quit"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 5: Configure the Test Capabilities (iOS)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n<\/TabItem>\n<TabItem value=\"android-config\" label=\"Android\" default>\n\n```ruby title=\"Android(.apk)\"\ncaps = {\n            \"LT:Options\" => {\n            :deviceName => \"OnePlus 7\",  \n                :platformName => \"Android\",\n                :platformVersion => \"9\",\n                :build => \"Ruby Vanilla - Android\",\n                :name => \"Ruby Android Test\",\n                :isRealMobile => true,\n                #highlight-next-line\n                :app => \"YOUR_APP_URL\", #Enter the App (.apk) URL here\n                :w3c => true,\n        } }"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 6: Execute and Monitor your Tests (iOS)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "cd ios"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 6: Execute and Monitor your Tests (iOS)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "ruby ios-sample.rb"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 6: Execute and Monitor your Tests (Android)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "cd android"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Android",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "ruby android-sample.rb"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Please try this method",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "cd android"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 10",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "gem uninstall -aIx"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 11",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "gem install appium_lib -v 10.6.0\ngem install ffi\n"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 12",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "ruby android-sample.rb"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "The appium-skill package includes",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "appium-skill/\n\u251c\u2500\u2500 SKILL.md\n\u2514\u2500\u2500 reference/\n    \u251c\u2500\u2500 playbook.md\n    \u2514\u2500\u2500 advanced-patterns.md"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Install a Appium Agent Skill using the command below",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "codeRepository": "https://github.com/LambdaTest/agent-skills",
+        "text": "# Clone the repo and copy the skill you need\ngit clone https://github.com/LambdaTest/agent-skills.git\ncp -r agent-skills/appium-skill .claude/skills/\n\n# Or for Cursor / Copilot\ncp -r agent-skills/appium-skill .cursor/skills/"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Try our Sample Repository",
+      "description": "Complete guide to running your first Ruby Appium automated test script on TestMu AI Real Device Cloud Platform. Test on 5000+ Real Devices.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Get a Sample Project",
+          "text": "You can use your own project to configure and test it. For demo purposes, we are using the sample repository. All the code samples in this documentation can be found on TestMu AI's Github Repository. You can either download or clone the repository to quickly run your tests. View on GitHub",
+          "url": "https://www.testmuai.com/support/docs/appium-ruby/#step-1-get-a-sample-project"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Setup the Environment Variables",
+          "text": "You need to export your environment variables LTUSERNAME and LTACCESSKEY* that are available in your TestMu AI Profile page. Run the below mentioned commands in your terminal to setup the environment variables. {`export LTUSERNAME=\"${ YOURLAMBDATEST_USERNAME()}\" export LTACCESSKEY=\"${ YOURLAMBDATESTACCESS_KEY()}\"`} {`set LTUSERNAME=\"${ YOURLAMBDATEST_USERNAME()}\" set LTACCESSKEY=\"${ YOURLAMBDATESTACCESS_KEY()}\"`}",
+          "url": "https://www.testmuai.com/support/docs/appium-ruby/#step-2-setup-the-environment-variables"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Upload your Application",
+          "text": "Upload your iOS application (.ipa file) or android application (.apk or .aab file) to the TestMu AI servers using our REST API. You need to provide your Username and AccessKey in the format Username:AccessKey in the cURL command for authentication. Make sure to add the path of the appFile in the cURL request. Below is an example cURL request to upload your app using our REST API: {curl -u \"${ YOURLAMBDATESTUSERNAME()}:${ YOURLAMBDATESTACCESSKEY()}\" -X POST \"https://manual-api.lambdatest.com/app/upload/realDevice\" -F \"appFile=@\"/Users/macuser/Downloads/proverbialandroid.apk\"\" -F \"name=\"proverbial_app\"\"} {curl -u \"${ YOURLAMBDATESTUSERNAME()}:${ YOURLAMBDATESTACCESSKEY()}\" -X POST \"https://manual-api.lambdatest.com/app/upload/realDevice\" -F \"url=:https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbialandroid.apk\" -F \"name=Proverbial_App\"} If you do not have any .apk or .ipa file, you can run your sample tests on TestMu AI by using our sample apps, :link: Android app or :link: iOS app. Response of above cURL will be a JSON object containing the APP_URL of the format - lt://APP123456789123456789 and will be used in the next step",
+          "url": "https://www.testmuai.com/support/docs/appium-ruby/#step-3-upload-your-application"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Step 4: Update your Automation Script",
+          "text": "An automation script for the sample application given above has been provided here. Ensure to update the APP_URL, username and accessKey in the code scripts before running the tests. You must set isRealMobile capability to False in the config file to run on Virtual Devices",
+          "url": "https://www.testmuai.com/support/docs/appium-ruby/#step-4-update-your-automation-script"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 5,
+          "name": "Step 5: Configure the Test Capabilities",
+          "text": "You can update your custom capabilities in test scripts. In this sample project, we are passing platform name, platform version, device name and app url (generated earlier) along with other capabilities like build name and test name via capabilities object. The capabilities object in the sample code are defined as: In case you're using capabilities generated using the JSON Wire Protocol, then it's recommended to use ``appiumlib` version `10.6.0`. Run `gem install appiumlib -v 10.6.0`` command to install it. You must add the generated APPURL** to the app capability in the config file. You must set isRealMobile capability to False in the config file to run on Virtual Devices You can generate capabilities for your test requirements with the help of our inbuilt Capabilities Generator tool.For more details, please refer to our guide on Desired Capabilities in Appium.",
+          "url": "https://www.testmuai.com/support/docs/appium-ruby/#step-5-configure-the-test-capabilities"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 6,
+          "name": "Step 6: Execute and Monitor your Tests",
+          "text": "If you are using an iOS app, the cURL command will generate an app URL for the corresponding iOS app and install the same for running the tests. You can either use our sample :link: iOS app or upload your own app as discussed earlier. Navigate to the corresponding directory based on your app. Execute the following command to run your test on TestMu AI platform: If you are using an android app, the cURL command will generate an app URL for the corresponding Android app and install the same for running the tests. You can either use our sample :link: Android app or upload your own app as discussed earlier. Navigate to the corresponding directory based on your app. Execute the following command to run your test on TestMu AI platform: In case of Windows, if you get any error message. Please try this method: Navigate to the corresponding directory based on your app. Refresh the gem bundles through given command Re-install the gems required Now try running the corresponding automation script for your app. Your test results would be displayed on the test console (or CLI if you are using terminal/cmd) and on the TestMu AI App Automation Dashboard.",
+          "url": "https://www.testmuai.com/support/docs/appium-ruby/#step-6-execute-and-monitor-your-tests"
+        }
+      ]
+    }
+  ]) }}
+/>
+
+
+
 # How to Run Appium Ruby Tests on TestMu AI
 ---
 
@@ -76,6 +295,8 @@ Make sure you have the following set up before you start.
 
 For **macOS**, you can run a [Homebrew](https://brew.sh/) command like this:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 brew install ruby
 ```
@@ -84,6 +305,8 @@ brew install ruby
 <TabItem value="rubylinux" label="Linux" default>
 
 For **Linux** or **Ubuntu**, you can run a simple apt command like below:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 sudo apt-get install ruby-full
@@ -98,6 +321,8 @@ For **Windows**, you can download from the [official website](https://rubyinstal
 
 - Ensure you have Dependency manager bundler installed (required for the **Cucumber** and **RSpec** frameworks). If not installed, you can install with the following command:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 gem install bundler
 ```
@@ -109,6 +334,9 @@ You need to export your environment variables *LT_USERNAME* and *LT_ACCESS_KEY* 
 
 <Tabs className="docs__val">
 <TabItem value="bash" label="Linux / MacOS" default>
+
+  <VerifiedTag value="Verified" />
+
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-bash">
   {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
@@ -117,6 +345,9 @@ export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 </div>
 </TabItem>
 <TabItem value="powershell" label="Windows" default>
+
+  <VerifiedTag value="Verified" />
+
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-powershell">
   {`set LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
@@ -136,6 +367,9 @@ Make sure to add the path of the **appFile** in the cURL request. Below is an ex
 <Tabs className="docs__val">
 
 <TabItem value="bash" label="App File" default>
+
+  <VerifiedTag value="Verified" />
+
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-bash">
       {`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" -X POST "https://manual-api.lambdatest.com/app/upload/realDevice" -F "appFile=@"/Users/macuser/Downloads/proverbial_android.apk"" -F "name="proverbial_app""`}
@@ -144,6 +378,9 @@ Make sure to add the path of the **appFile** in the cURL request. Below is an ex
 </TabItem>
 
 <TabItem value="powershell" label="App URL" default>
+
+  <VerifiedTag value="Verified" />
+
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-bash">
       {`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" -X POST "https://manual-api.lambdatest.com/app/upload/realDevice" -F "url=:https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_android.apk" -F "name=Proverbial_App"`}
@@ -184,6 +421,8 @@ An automation script for the sample application given above has been provided he
 <Tabs className="docs__val">
 
 <TabItem value="ios" label="iOS" default>
+
+<VerifiedTag value="Verified" />
 
 ```ruby title="ios.rb"
 require 'rubygems'
@@ -248,6 +487,8 @@ require 'appium_lib'
 </TabItem>
 
 <TabItem value="android" label="Android" default>
+
+<VerifiedTag value="Verified" />
 
 ```ruby title="android.rb"
 require 'rubygems'
@@ -314,6 +555,8 @@ The capabilities object in the sample code are defined as:
 
 <TabItem value="ios-config" label="iOS" default>
 
+<VerifiedTag value="Verified" />
+
 ```ruby title="iOS(.ipa)"
  caps = {
             "LT:Options" => {
@@ -331,6 +574,8 @@ The capabilities object in the sample code are defined as:
 
 </TabItem>
 <TabItem value="android-config" label="Android" default>
+
+<VerifiedTag value="Verified" />
 
 ```ruby title="Android(.apk)"
 caps = {
@@ -370,11 +615,15 @@ If you are using an **iOS** app, the cURL command will generate an app URL for t
 
 - Navigate to the corresponding directory based on your app.
 
+<VerifiedTag value="Verified" />
+
 ```bash
 cd ios
 ```
 
 - Execute the following command to run your test on <BrandName /> platform:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 ruby ios-sample.rb
@@ -388,11 +637,15 @@ If you are using an **android** app, the cURL command will generate an app URL f
 
 - Navigate to the corresponding directory based on your app.
 
+<VerifiedTag value="Verified" />
+
 ```bash
 cd android
 ```
 
 - Execute the following command to run your test on <BrandName /> platform:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 ruby android-sample.rb
@@ -410,16 +663,23 @@ In case of Windows, if you get any error message. Please try this method:
 
 - Navigate to the corresponding directory based on your app.
 
+<VerifiedTag value="Verified" />
+
 ```bash
 cd android
 ```
 
 - Refresh the gem bundles through given command
+
+<VerifiedTag value="Verified" />
+
 ```bash
 gem uninstall -aIx
 ```
 
 - Re-install the gems required
+
+<VerifiedTag value="Verified" />
 
 ```bash
 gem install appium_lib -v 10.6.0
@@ -427,6 +687,8 @@ gem install ffi
 
 ```
 - Now try running the corresponding automation script for your app.
+
+<VerifiedTag value="Verified" />
 
 ```bash
 ruby android-sample.rb
@@ -453,6 +715,8 @@ An automation script file `first_steps.rb` for the sample application given abov
 <Tabs className="docs__val">
 
 <TabItem value="ios" label="iOS" default>
+
+<VerifiedTag value="Verified" />
 
 ```ruby title="first_steps.rb"
 When /^I click on buttons app$/ do 
@@ -493,6 +757,8 @@ end
 </TabItem>
 
 <TabItem value="android" label="Android" default>
+
+<VerifiedTag value="Verified" />
 
 ```ruby title="first_steps.rb"
 When /^I click on buttons app$/ do 
@@ -535,6 +801,8 @@ Ensure to update the `APP_URL`, `username` and `accesKey` in the code scripts be
 
 <TabItem value="ios-config" label="iOS" default>
 
+<VerifiedTag value="Verified" />
+
 ```ruby title="first.config.yml iOS"
 server: "mobile-hub.lambdatest.com"
 user: "LT_USERNAME"    # Add Lambdatest username here
@@ -556,6 +824,8 @@ browser_caps:
 
 </TabItem>
 <TabItem value="android-config" label="Android" default>
+
+<VerifiedTag value="Verified" />
 
 ```ruby title="first.config.yml Android"
 server: "mobile-hub.lambdatest.com"
@@ -597,6 +867,8 @@ browser_caps:
 
 - Run the following commands to run your tests
 
+<VerifiedTag value="Verified" />
+
 ```ruby
 bundle install
 bundle exec rake first
@@ -621,6 +893,8 @@ An automation script for the sample application given above has been provided he
 <Tabs className="docs__val">
 <TabItem value="Single" label="Single Test" default>
 
+<VerifiedTag value="Verified" />
+
 ```ruby title="single.config.yml"
 server: "mobile-hub.lambdatest.com"
 user: "LT_USERNAME"         #Add your LambdaTest username here
@@ -641,6 +915,8 @@ browser_caps:
 </TabItem>
 
 <TabItem value="ios" label="Parallel test" default>
+
+<VerifiedTag value="Verified" />
 
 ```ruby title="parallel.config.yml"
 server: "mobile-hub.lambdatest.com"
@@ -689,6 +965,8 @@ You can update your custom capabilities in test scripts `lambdatest.rb`. In this
 
 The capabilities object in the sample code are defined as:
 
+<VerifiedTag value="Verified" />
+
 ```ruby
     caps={
       "LT:Options" => {
@@ -714,11 +992,17 @@ The capabilities object in the sample code are defined as:
 ### Step 4: Execute and Monitor your Tests
 
 1. Run the following command to make sure that all the dependencies required for the test are installed.
+
+<VerifiedTag value="Verified" />
+
 ```bash
 bundle install
 ```
 
 2. Execute the following command to run single test on <BrandName /> platform:
+
+<VerifiedTag value="Verified" />
+
 ```bash
 bundle exec rake single
 ```

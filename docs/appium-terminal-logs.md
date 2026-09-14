@@ -21,6 +21,8 @@ import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
+import VerifiedTag from '@site/src/component/verifiedTag';
+
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
        "@context": "https://schema.org",
@@ -45,6 +47,74 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/appium-terminal-logs/"
+    },
+    "headline": "Terminal Logs for Appium Tests",
+    "description": "Upload your own Appium server, test-runner, or CI logs to any app automation session and view or download them from the TestMu AI dashboard under Logs \u203a Terminal.",
+    "url": "https://www.testmuai.com/support/docs/appium-terminal-logs/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "App Automation",
+    "keywords": [
+      "appium terminal logs",
+      "upload terminal logs appium",
+      "appium debugging logs"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "On success, the API returns",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JSON",
+        "text": "{ \"status\": \"success\", \"message\": \"File has been uploaded successfully!\" }"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
+
 # How to View Terminal Logs on TestMu AI
 ---
 
@@ -68,6 +138,8 @@ This keeps your own diagnostic logs next to the session they belong to, so you c
 
 Use the **upload** endpoint to attach a log file to a session. The file is sent as a multipart form field named `file`. Uploading again replaces the previous file.
 
+<VerifiedTag value="Verified" />
+
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">
 {`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" -X POST "https://mobile-api.lambdatest.com/mobile-automation/api/v1/sessions/<YOUR_SESSION_ID>/log/terminallog" --form "file=@/path/to/appium.log"
@@ -78,6 +150,8 @@ Use the **upload** endpoint to attach a log file to a session. The file is sent 
 Replace `<YOUR_SESSION_ID>` with your actual session ID and `/path/to/appium.log` with the path to your log file.
 
 On success, the API returns:
+
+<VerifiedTag value="Verified" />
 
 ```json
 { "status": "success", "message": "File has been uploaded successfully!" }
@@ -99,6 +173,8 @@ The **Terminal** tab is always present. It stays empty until a terminal log is u
 
 To download the uploaded log, add the `download=true` query parameter to the view endpoint:
 
+<VerifiedTag value="Verified" />
+
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">
 {`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" -X GET "https://mobile-api.lambdatest.com/mobile-automation/api/v1/sessions/<YOUR_SESSION_ID>/log/terminallog?download=true" --output terminal-logs.log
@@ -114,6 +190,8 @@ The downloaded file is always named `terminal-logs.<ext>`, where `<ext>` is your
 ---
 
 To remove the attached log from a session, use the **delete** endpoint:
+
+<VerifiedTag value="Verified" />
 
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">

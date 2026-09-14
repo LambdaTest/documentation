@@ -29,6 +29,8 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import DocCard from '@site/src/component/DocCard';
 
 
+import VerifiedTag from '@site/src/component/verifiedTag';
+
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
        "@context": "https://schema.org",
@@ -53,6 +55,138 @@ import DocCard from '@site/src/component/DocCard';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/hyperexecute-api-testing/"
+    },
+    "headline": "How to Perform API Testing With REST Assured on HyperExecute",
+    "description": "Run a REST Assured (Java + Maven) API test suite on HyperExecute. Download the CLI, set your credentials, configure hyperexecute.yaml, and trigger a cloud run.",
+    "url": "https://www.testmuai.com/support/docs/hyperexecute-api-testing/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Documentation",
+    "keywords": [
+      "hyperexecute api testing",
+      "api automation hyperexecute",
+      "run api tests hyperexecute"
+    ],
+    "proficiencyLevel": "Beginner",
+    "dependencies": "Java (JDK 8 or above) and Maven installed and on your PATH (java -version and mvn -version should both succeed). REST Assured is a Java library, so the suite builds with Maven.; Git, to clone the sample repository.; A TestMu AI account. Get your LT_USERNAME and LT_ACCESS_KEY from the TestMu AI Profile. You will export them in Step 3..",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "For example, this call fetches a resource and asserts that the API returns a 200 status code",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "given().when().get(url).then().assertThat().statusCode(200);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 4: Review the hyperexecute.yaml",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n### Step 5: Trigger the run from the CLI\n\nFrom the root folder of the project, run the CLI against your YAML file:\n\n```bash\n./hyperexecute --config RELATIVE_PATH_OF_YOUR_YAML_FILE"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Run the REST Assured suite on HyperExecute",
+      "description": "Run a REST Assured (Java + Maven) API test suite on HyperExecute. Download the CLI, set your credentials, configure hyperexecute.yaml, and trigger a cloud run.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Clone the sample repository",
+          "text": "Clone the REST Assured API testing sample from the TestMu AI GitHub repository, or use your own project. Download or clone the REST Assured API testing sample from the TestMu AI GitHub repository to run the tests on HyperExecute.",
+          "url": "https://www.testmuai.com/support/docs/hyperexecute-api-testing/#step-1-clone-the-sample-repository"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Download the HyperExecute CLI",
+          "text": "The CLI triggers your tests on HyperExecute. Download the binary for your platform and keep it in the root directory of the test suite.",
+          "url": "https://www.testmuai.com/support/docs/hyperexecute-api-testing/#step-2-download-the-hyperexecute-cli"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Set your TestMu AI credentials",
+          "text": "Export the LTUSERNAME and LTACCESS_KEY from your TestMu AI Profile (linked in the Prerequisites) as environment variables. The CLI reads these to authenticate your run. {`export LTUSERNAME=\"${ YOURLAMBDATEST_USERNAME()}\" export LTACCESSKEY=\"${ YOURLAMBDATESTACCESS_KEY()}\"`} {`$env:LTUSERNAME = \"${ YOURLAMBDATEST_USERNAME()}\" $env:LTACCESSKEY = \"${ YOURLAMBDATESTACCESS_KEY()}\"`}",
+          "url": "https://www.testmuai.com/support/docs/hyperexecute-api-testing/#step-3-set-your-testmu-ai-credentials"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Step 4: Review the hyperexecute.yaml",
+          "text": "The hyperexecute.yaml at the repository root tells HyperExecute how to build the suite, discover tests, and run them. It ships ready to use. Review it to see the pre (Maven build), testDiscovery, and testRunnerCommand steps.",
+          "url": "https://www.testmuai.com/support/docs/hyperexecute-api-testing/#step-4-review-the-hyperexecuteyaml"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 5,
+          "name": "Step 5: Trigger the run from the CLI",
+          "text": "From the root folder of the project, run the CLI against your YAML file: If you did not export your credentials in Step 3, pass them inline instead: {./hyperexecute --user ${ YOURLAMBDATESTUSERNAME()} --key ${ YOURLAMBDATESTACCESSKEY()} --config RELATIVEPATHOFYOURYAMLFILE } If macOS reports permission denied when you run the CLI, make it executable with chmod u+x ./hyperexecute. If a security popup appears, allow the binary from System Preferences \u2192 Security & Privacy \u2192 General.",
+          "url": "https://www.testmuai.com/support/docs/hyperexecute-api-testing/#step-5-trigger-the-run-from-the-cli"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 6,
+          "name": "Step 6: Monitor the run in the dashboard",
+          "text": "Open the HyperExecute Dashboard and find your job. A successful run shows the job as Completed with passing tests, and the pre, scenario, and post stages available as logs. Open each stage to validate the API responses your suite tested.",
+          "url": "https://www.testmuai.com/support/docs/hyperexecute-api-testing/#step-6-monitor-the-run-in-the-dashboard"
+        }
+      ]
+    }
+  ]) }}
+/>
+
+
+
 To run REST Assured API tests on HyperExecute, download the HyperExecute CLI, set your TestMu AI credentials, point the CLI at a `hyperexecute.yaml` configuration, and trigger the run. REST Assured is a Java library for testing REST APIs, and HyperExecute is the TestMu AI test orchestration platform that discovers your tests, runs the suite on its cloud grid, and reports the results in the dashboard.
 
 Run your own REST Assured (Java + Maven) project or the ready-made sample used in the steps below.
@@ -68,6 +202,8 @@ Before you start, make sure you have:
 ## How the REST Assured sample works
 
 The sample is a Java + Maven project that uses REST Assured with TestNG. REST Assured sends HTTP requests (GET, POST, PUT, DELETE) and asserts on the responses using a readable `given().when().then()` syntax. For example, this call fetches a resource and asserts that the API returns a `200` status code:
+
+<VerifiedTag value="Verified" />
 
 ```java
 given().when().get(url).then().assertThat().statusCode(200);
@@ -111,6 +247,8 @@ Export the `LT_USERNAME` and `LT_ACCESS_KEY` from your TestMu AI Profile (linked
 
 <TabItem value="bash" label="Linux / macOS" default>
 
+  <VerifiedTag value="Verified" />
+
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-bash">
   {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
@@ -121,6 +259,8 @@ export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 </TabItem>
 
 <TabItem value="powershell" label="Windows (PowerShell)">
+
+  <VerifiedTag value="Verified" />
 
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-powershell">
@@ -136,6 +276,8 @@ $env:LT_ACCESS_KEY = "${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 
 The `hyperexecute.yaml` at the repository root tells HyperExecute how to build the suite, discover tests, and run them. It ships ready to use. Review it to see the `pre` (Maven build), `testDiscovery`, and `testRunnerCommand` steps.
 
+<VerifiedTag value="Verified" />
+
 ```yaml reference title="hyperexecute.yaml"
 https://github.com/LambdaTest/hyp-api-testing/blob/master/hyperexecute.yaml
 ```
@@ -144,11 +286,15 @@ https://github.com/LambdaTest/hyp-api-testing/blob/master/hyperexecute.yaml
 
 From the root folder of the project, run the CLI against your YAML file:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 ./hyperexecute --config RELATIVE_PATH_OF_YOUR_YAML_FILE
 ```
 
 If you did not export your credentials in Step 3, pass them inline instead:
+
+<VerifiedTag value="Verified" />
 
 <div className="lambdatest__codeblock">
   <CodeBlock className="language-bash">

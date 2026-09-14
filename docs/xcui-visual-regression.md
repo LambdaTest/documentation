@@ -29,6 +29,8 @@ import NewTag from '../src/component/newTag';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 
+import VerifiedTag from '@site/src/component/verifiedTag';
+
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
        "@context": "https://schema.org",
@@ -52,6 +54,173 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       })
     }}
 ></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/xcui-visual-regression/"
+    },
+    "headline": "Getting Started With Visual Regression Testing Using XCUI On SmartUI Real Devices",
+    "description": "Dive into our detailed XCUI Visual Regression support documentation for step-by-step guidance! Efficiently perform visual testing, manage applications, and ensure your mobile apps are visually perfect before launch.",
+    "url": "https://www.testmuai.com/support/docs/xcui-visual-regression/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "App Automation",
+    "keywords": [
+      "Visual Regression",
+      "Visual Regression Testing Guide",
+      "Visual Regression Test Automation"
+    ],
+    "proficiencyLevel": "Beginner",
+    "dependencies": "Your TestMu AI Username and Access key.; Access to an iOS app (.ipa) and an iOS Test app (.ipa file).; Go to LambdaTest SmartUI and login along with your credentials..",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 3: Update your App Configurations",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "import XCTest\nimport SmartuiXcui // importing the package\nfinal class MyAppUITests: XCTestCase {\n  func testExample() throws {\n      // launch application\n      let app = XCUIApplication()\n      app.launch()\n      // take screenshot\n      let ltApp = LTApp()\n      try ltApp.screenshot(name: \"screenshotName\")\n  }\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 5: Executing The Test",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "curl --location 'https://mobile-api.lambdatest.com/framework/v1/xcui/build' \\\n--header 'Authorization: Basic BASIC_AUTH_TOKEN' \\\n--header 'Content-Type: application/json' \\\n--data '{\n    \"app\" : \"APP_ID\", //enter your app-id\n    \"testSuite\": \"TEST_SUITE_ID\", //enter your test-suite id\n    \"device\" :  [\"iPhone 13-16\"], //enter your device names\n    \"smartUI.project\": \"XCUI-SmartUI-Project\",\n    \"build\" : \"Proverbial-XCUITest\",\n    \"video\" : true,\n    \"queueTimeout\": 10800,\n    \"idleTimeout\": 150,\n    \"devicelog\": true,\n    \"network\": false,\n    \"only-testing\" : [\"LambdaUiKitIOSUITestsLaunchTests\"],\n    \"smartUI.cropStatusBar\" : true,\n    \"smartUI.cropNavigationBar\" : true\n}'"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "mappings",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n:::tip When shards are added\n\nIf you are using the `deviceSelectionStrategy: all`, then in that case all the mentioned shards will be executed on all the devices.<br/>\n**For example:** There are 2 shards and 2 devices mentioned, then the 2 shards will be executed on 2 devices (2 Shards * 2 Devices).\n\nIf you are using the `deviceSelectionStrategy: any`, then in that case all the mentioned shards will be executed on any one device from the list provided.<br/>\n**For example:** There are 2 shards and 2 devices mentioned, then the 2 shards will be executed on any device (2 shards * any device mentioned).\n\n:::\n\n:::caution When shards aren't added\n\nIf you are using the `deviceSelectionStrategy: all`, then in that case all the tests will be executed on all the devices based on the concurrency. <br/>\n**For example:** There are 6 tests and 10 devices mentioned, then the 6 tests will be auto distributed on the devices based on the max concurrency.\n\n\nIf you are using the `deviceSelectionStrategy: any`, then in that case all the mentioned tests will be executed on any one device from the list provided. <br/>\n**For example:** There are 6 tests and 10 devices mentioned, then the 6 tests will be executed on any one device.\n\n:::\n\n## Filters in Sharding\nYou can filter the Classes / Tests that you'd like to execute using filters.\nHere's an example of the same.\n\n```java\nfilters:\n      attributes:\n      - type: className\n        values: [\"LambdaUiKitIOSUITests\",\"LambdaUiKitIOSUITestsLaunchTests\"]\n      - type: testName\n        values: [\"LambdaUiKitIOSUITests/testverifyAppLaunch\"]"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "To implement the XCTestPlan in Sharding, add the xctestplan flag along with app and testSuite in the framework flag as shown below",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "framework:\n  name: \"ios/xcui\"\n  args:\n    \"app\" : \"lt://APP_ID\",\n    \"testSuite\": \"lt://TEST_SUITE_ID\",\n    \"xctestplan\" : \"lt://YOUR_XC_TEST_PLAN_ID\" #only when you want to use XCTestPlan"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Project and Build Naming",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JSON",
+        "text": "{\n  \"smartUI.project\": \"MyApp-iOS-VisualTests\",\n  \"smartUI.build\": \"Release-1.0.0\"\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Check project name matches exactly (case-sensitive)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JSON",
+        "text": "   {\n     \"smartUI.project\": \"ExactProjectName\"\n   }"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Increase queueTimeout and idleTimeout",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JSON",
+        "text": "   {\n     \"queueTimeout\": 10800,\n     \"idleTimeout\": 150\n   }"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Getting Started With Visual Regression Testing Using XCUI On SmartUI Real Devices",
+      "description": "Dive into our detailed XCUI Visual Regression support documentation for step-by-step guidance! Efficiently perform visual testing, manage applications, and ensure your mobile apps are visually perfect before launch.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Create a SmartUI Project",
+          "text": "The first step is to create a project with the application in which we will combine all your builds run on the project. To create a SmartUI Project, follow these steps: Go to Projects page Click on the new project button Select the platform as Real Device for executing your XCUI tests. Add name of the project, approvers for the changes found, tags for any filter or easy navigation. Click on the Submit.",
+          "url": "https://www.testmuai.com/support/docs/xcui-visual-regression/#step-1-create-a-smartui-project"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Set up your Authentication",
+          "text": "Now, you need to export your environment variables LTUSERNAME and LTACCESS_KEY that are available in the TestMu AI Profile page. Run the below mentioned commands in your terminal to setup the CLI and the environment variables. {`export LTUSERNAME=${ YOURLAMBDATEST_USERNAME()} export LTACCESSKEY=${ YOURLAMBDATESTACCESS_KEY()}`} {`set LTUSERNAME=\"${ YOURLAMBDATEST_USERNAME()}\" set LTACCESSKEY=\"${ YOURLAMBDATESTACCESS_KEY()}\"`}",
+          "url": "https://www.testmuai.com/support/docs/xcui-visual-regression/#step-2-set-up-your-authentication"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Update your App Configurations",
+          "text": "It should be in your app configurations then only you can perform the XCUI integration. Update this dependency in your test classes. You can do it as follows: Now build your application.",
+          "url": "https://www.testmuai.com/support/docs/xcui-visual-regression/#step-3-update-your-app-configurations"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Step 4: Upload your Application",
+          "text": "To begin testing, upload your iOS application (.ipa file) to TestMu AI's servers. You'll use our REST API for this process. Authentication : You'll need your TestMu AI Username and AccessKey. Combine them in the format Username:AccessKey. Uploading the App : Use cURL command to send a request to our API. The request should include the path to your application file (appFile). {curl -u \"${ YOURLAMBDATESTUSERNAME()}:${ YOURLAMBDATESTACCESS_KEY()}\" --location --request POST 'https://manual-api.lambdatest.com/app/uploadFramework' --form 'appFile=@\"\"' --form 'type=\"xcuit-ios\"'} {curl -u \"${ YOURLAMBDATESTUSERNAME()}:${ YOURLAMBDATESTACCESS_KEY()}\" --location --request POST \"https://manual-api.lambdatest.com/app/uploadFramework\" --form \"appFile=@\"\"\" --form \"type=\\\"xcuit-ios\\\"\"} Provide the path of your ios application in the above URL in place of `` Response of above cURL will be a JSON object containing the App URL of the format - lt://APP123456789123456789 and will be used in the last step.",
+          "url": "https://www.testmuai.com/support/docs/xcui-visual-regression/#step-4-upload-your-application"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 5,
+          "name": "Step 5: Upload Your Test Suite",
+          "text": "Upload your XCUI test suite (.ipa) file to TestMu AI servers using our REST API. The following sample cURL command shows how to upload a test suite: {curl -u \"${ YOURLAMBDATESTUSERNAME()}:${ YOURLAMBDATESTACCESS_KEY()}\" --location --request POST 'https://manual-api.lambdatest.com/app/uploadFramework' --form 'appFile=@\"\"' --form 'type=\"xcuit-ios\"'} {curl -u \"${ YOURLAMBDATESTUSERNAME()}:${ YOURLAMBDATESTACCESS_KEY()}\" --location --request POST \"https://manual-api.lambdatest.com/app/uploadFramework\" --form \"appFile=@\"\"\" --form \"type=\\\"xcuit-ios\\\"\"} Provide the path of your ios application in the above URL in place of `` Response of above cURL will be a JSON object containing the App URL of the format - lt://APP123456789123456789 and will be used in the last step.",
+          "url": "https://www.testmuai.com/support/docs/xcui-visual-regression/#step-5-upload-your-test-suite"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 6,
+          "name": "Step 5: Executing The Test",
+          "text": "You will need base64 encoded authentication in order to execute your Espresso automation test suite. Enter your username:accesskey in Basic Authentication Header Generator to generate your auth token. Take note of the base64 encoded authentication which needs to be added in the next step. {${ YOURLAMBDATESTUSERNAME()}:${ YOURLAMBDATESTACCESS_KEY()}} Once you have uploaded your app and test suite, you can execute your test by running the following command: Enter your BASICAUTHTOKEN, APPID (generated in the fourth step) and TESTSUITEID** (generated in the fifth step) in the below command. You can check the executed builds over at TestMu AI SmartUI.",
+          "url": "https://www.testmuai.com/support/docs/xcui-visual-regression/#step-5-executing-the-test"
+        }
+      ]
+    }
+  ]) }}
+/>
+
+
 
 XCUI (XCTest UI) is Apple's native UI testing framework used for testing iOS applications. It is part of the XCTest framework and allows developers to write UI automation tests for iOS apps. In this documentation, you will learn step-by-step how to perform regression testing and find Visual UI Regression bugs easily with the help of Smart Testing.
 
@@ -89,6 +258,8 @@ Run the below mentioned commands in your terminal to setup the CLI and the envir
 
 <TabItem value="bash" label="Linux / MacOS" default>
 
+  <VerifiedTag value="Verified" />
+
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-bash">
   {`export LT_USERNAME=${ YOUR_LAMBDATEST_USERNAME()}
@@ -99,6 +270,8 @@ export LT_ACCESS_KEY=${ YOUR_LAMBDATEST_ACCESS_KEY()}`}
 </TabItem>
 
 <TabItem value="powershell" label="Windows" default>
+
+  <VerifiedTag value="Verified" />
 
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-powershell">
@@ -114,6 +287,8 @@ set LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 
 > It should be in your app configurations then only you can perform the XCUI integration.
 - Update this [dependency](https://swiftpackageindex.com/LambdaTest/lambdatest-xcui) in your test classes. You can do it as follows:
+
+<VerifiedTag value="Verified" />
 
 ```java
 import XCTest
@@ -143,6 +318,8 @@ To begin testing, upload your iOS application (.ipa file) to <BrandName />'s ser
 
 <TabItem value="bash" label="Linux / MacOS" default>
 
+  <VerifiedTag value="Verified" />
+
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-bash">
   {`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" --location --request POST 'https://manual-api.lambdatest.com/app/uploadFramework' --form 'appFile=@"<PATH_OF_YOUR_IOS_APP>"' --form 'type="xcuit-ios"'`}
@@ -152,6 +329,8 @@ To begin testing, upload your iOS application (.ipa file) to <BrandName />'s ser
 </TabItem>
 
 <TabItem value="powershell" label="Windows" default>
+
+  <VerifiedTag value="Verified" />
 
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-powershell">
@@ -177,6 +356,8 @@ The following sample cURL command shows how to upload a test suite:
 
 <TabItem value="bash" label="Linux / MacOS" default>
 
+  <VerifiedTag value="Verified" />
+
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-bash">
   {`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" --location --request POST 'https://manual-api.lambdatest.com/app/uploadFramework' --form 'appFile=@"<PATH_OF_YOUR_TEST_SUITE_APP>"' --form 'type="xcuit-ios"'`}
@@ -186,6 +367,8 @@ The following sample cURL command shows how to upload a test suite:
 </TabItem>
 
 <TabItem value="powershell" label="Windows" default>
+
+  <VerifiedTag value="Verified" />
 
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-powershell">
@@ -207,6 +390,8 @@ The following sample cURL command shows how to upload a test suite:
 
 Take note of the base64 encoded authentication which needs to be added in the next step.
 
+<VerifiedTag value="Verified" />
+
 <div className="lambdatest__codeblock">
     <CodeBlock className="language-powershell">
 {`${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}`}
@@ -216,6 +401,8 @@ Take note of the base64 encoded authentication which needs to be added in the 
 - Once you have uploaded your app and test suite, you can execute your test by running the following command:
  
 > Enter your **BASIC_AUTH_TOKEN**, **APP_ID** (generated in the fourth step) and **TEST_SUITE_ID** (generated in the fifth step) in the below command.
+
+<VerifiedTag value="Verified" />
 
 ```javascript
 curl --location 'https://mobile-api.lambdatest.com/framework/v1/xcui/build' \
@@ -254,6 +441,8 @@ curl --location 'https://mobile-api.lambdatest.com/framework/v1/xcui/build' \
 - [LambdaUiKitIOS.ipa](https://prod-mobile-artefacts.lambdatest.com/assets/docs/LambdaUiKitIOS.ipa) 
 
 Refer to the sample `.yaml` file here
+
+<VerifiedTag value="Verified" />
 
 ```bash title="SampleYamlFile.yaml"
 version: "0.2"
@@ -325,6 +514,8 @@ If you are using the `deviceSelectionStrategy: any`, then in that case all the m
 You can filter the Classes / Tests that you'd like to execute using filters.
 Here's an example of the same.
 
+<VerifiedTag value="Verified" />
+
 ```java
 filters:
       attributes:
@@ -337,6 +528,8 @@ This example will run only the 2 classes & one test as mentioned from the TestSu
 
 ## XCTestPlan in Sharding
 To implement the XCTestPlan in Sharding, add the `xctestplan` flag along with `app` and `testSuite` in the [framework](/support/docs/deep-dive-into-hyperexecute-yaml/#hyperexecute-yaml-v02-framework-flags-and-discovery-config) flag as shown below:
+
+<VerifiedTag value="Verified" />
 
 ```yaml
 framework:
@@ -372,6 +565,9 @@ By leveraging machine learning algorithms, it accurately detects and crops the s
 - Use consistent naming conventions across test runs
 
 **Example:**
+
+<VerifiedTag value="Verified" />
+
 ```json
 {
   "smartUI.project": "MyApp-iOS-VisualTests",
@@ -445,6 +641,9 @@ By leveraging machine learning algorithms, it accurately detects and crops the s
 **Solutions**:
 1. Verify `visual: true` is set in API request (implicit for SmartUI)
 2. Check project name matches exactly (case-sensitive):
+
+   <VerifiedTag value="Verified" />
+
    ```json
    {
      "smartUI.project": "ExactProjectName"
@@ -511,6 +710,9 @@ By leveraging machine learning algorithms, it accurately detects and crops the s
 1. Verify test suite IPA is valid
 2. Check device availability
 3. Increase `queueTimeout` and `idleTimeout`:
+
+   <VerifiedTag value="Verified" />
+
    ```json
    {
      "queueTimeout": 10800,

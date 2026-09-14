@@ -21,14 +21,296 @@ slug: smartui-k6-setup/
 canonical: https://www.testmuai.com/support/docs/smartui-k6-setup/
 
 ---
+
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import NewTag from '../src/component/newTag';
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+import VerifiedTag from '@site/src/component/verifiedTag';
+
+<script type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify({
+       "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": BRAND_URL
+        },{
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Support",
+          "item": `${BRAND_URL}/support/docs/`
+        },{
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Getting started with SmartUI using K6",
+          "item": `${BRAND_URL}/support/docs/smartui-k6-setup/`
+        }]
+      })
+    }}
+></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/smartui-k6-setup/"
+    },
+    "headline": "Getting started with SmartUI using K6",
+    "description": "In this documentation, learn how to perform Visual Regression testing with K6 on the TestMu AI Automation Cloud across 40+ browser versions.",
+    "url": "https://www.testmuai.com/support/docs/smartui-k6-setup/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "SmartUI",
+    "keywords": [
+      "Visual Regression",
+      "Visual Regression Testing Guide",
+      "Visual Regression Test Automation"
+    ],
+    "proficiencyLevel": "Beginner",
+    "dependencies": "Basic understanding of K6 is required.; Go to SmartUI and login along with your credentials.; Copy LT_USERNAME and LT_ACCESS_KEY credentials from Access Key button on the top right of the dashboard..",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Prerequisites for running SmartUI with K6",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "export LT_USERNAME=\"YOUR_USERNAME\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Prerequisites for running SmartUI with K6",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "set LT_USERNAME=YOUR_USERNAME\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Prerequisites for running SmartUI with K6",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "PowerShell",
+        "text": "$env:LT_USERNAME=YOUR_USERNAME\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Clone the sample GitHub repository",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "codeRepository": "https://github.com/LambdaTest/smartui-k6-sample",
+        "text": "git clone https://github.com/LambdaTest/smartui-k6-sample\ncd smartui-k6-sample"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Install the required dependencies",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "npm install @lambdatest/smartui-cli @lambdatest/k6-driver"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Install k6 by referring to the installation guide https://k6.io/docs/get-started/installation/",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "brew install k6"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 2: Configure your test with K6 Desired Capabilities",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "winget install k6"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 8",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "export LT_USERNAME=\"YOUR_LAMBDATEST_USERNAME\"\nexport LT_ACCESS_KEY=\"YOUR_LAMBDATEST_ACCESS_KEY\"\nexport PROJECT_TOKEN=\"YOUR_PROJECT_TOKEN\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 9",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "set LT_USERNAME=\"YOUR_LAMBDATEST_USERNAME\"\nset LT_ACCESS_KEY=\"YOUR_LAMBDATEST_ACCESS_KEY\"\nset PROJECT_TOKEN=\"YOUR_PROJECT_TOKEN\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 10",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "PowerShell",
+        "text": "$env:LT_USERNAME=\"YOUR_LAMBDATEST_USERNAME\"\n$env:LT_ACCESS_KEY=\"YOUR_LAMBDATEST_ACCESS_KEY\"\n$env:PROJECT_TOKEN=\"YOUR_PROJECT_TOKEN\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Create and configure SmartUI config file",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "npx smartui config:create smartui-web.json"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 12",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n### **Step 3:** Executing the SmartUI Test Suite\n\nExecute the test using the following command:\n\n```bash\nnpx smartui exec k6 run test.js"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Best Practices",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "const response1 = http.get('https://example.com');\nsmartuiSnapshot(response1, \"HomePage-Header\");\n\nconst response2 = http.get('https://example.com/products');\nsmartuiSnapshot(response2, \"ProductPage-MainContent\");"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 14",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "import { sleep, check } from 'k6';\nimport http from 'k6/http';\nimport { smartuiSnapshot } from '@lambdatest/k6-driver';\n\nconst response = http.get('https://example.com');\ncheck(response, {\n  'status is 200': (r) => r.status === 200,\n});\nsleep(2); // Wait for dynamic content\nsmartuiSnapshot(response, \"Page-Loaded\");"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Verify PROJECT_TOKEN is set correctly",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "   echo $PROJECT_TOKEN"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Ensure you're using the SmartUI CLI wrapper",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "   npx smartui exec k6 run test.js"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Add explicit waits before screenshots",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "   import { sleep } from 'k6';\n   import http from 'k6/http';\n   import { smartuiSnapshot } from '@lambdatest/k6-driver';\n   \n   const response = http.get('https://example.com');\n   sleep(2); // Wait for content to load\n   smartuiSnapshot(response, 'Screenshot-Name');"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Check response status before taking screenshot",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "   import { check } from 'k6';\n   \n   const response = http.get('https://example.com');\n   check(response, {\n     'status is 200': (r) => r.status === 200,\n   });\n   smartuiSnapshot(response, 'Screenshot-Name');"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Install required dependencies",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "   npm install @lambdatest/smartui-cli @lambdatest/k6-driver"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Set PROJECT_TOKEN environment variable",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "   export PROJECT_TOKEN=\"YOUR_PROJECT_TOKEN\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Verify K6 is installed",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "   k6 version"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Run tests using the SmartUI CLI wrapper",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "   npx smartui exec k6 run test.js"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Check screenshot status in response",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "   if (screenshot.screenshotStatus !== \"Approved\") {\n       // Handle non-approved status\n   }"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Getting started with SmartUI using K6",
+      "description": "In this documentation, learn how to perform Visual Regression testing with K6 on the TestMu AI Automation Cloud across 40+ browser versions.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Create a SmartUI Project",
+          "text": "The first step is to create a project with the application in which we will combine all your builds run on the project. To create a SmartUI Project, follow these steps: Go to Projects page Click on the new project button Select the platform as Web for executing your K6 tests. Add name of the project, approvers for the changes found, tags for any filter or easy navigation. Click on the Submit. -->",
+          "url": "https://www.testmuai.com/support/docs/smartui-k6-setup/#step-1-create-a-smartui-project"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Configure your test with K6 Desired Capabilities",
+          "text": "Once you have created a SmartUI Project, you can generate screenshots by running automation scripts. Follow the below steps to successfully generate screenshots - Clone the sample GitHub repository: Install the required dependencies: Install k6 by referring to the installation guide https://k6.io/docs/get-started/installation/: Set up the TestMu AI credentials by using the commands below in the terminal. The account details are available on your TestMu AI Profile page. Create and configure SmartUI config file: Add the SmartUI snapshot function to your test file. Create or edit test.js:",
+          "url": "https://www.testmuai.com/support/docs/smartui-k6-setup/#step-2-configure-your-test-with-k6-desired-capabilities"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Executing the SmartUI Test Suite",
+          "text": "Execute the test using the following command: You can check the executed builds over at TestMu AI SmartUI.",
+          "url": "https://www.testmuai.com/support/docs/smartui-k6-setup/#step-3-executing-the-smartui-test-suite"
+        }
+      ]
+    }
+  ]) }}
+/>
 
 ---
-
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
@@ -43,6 +325,8 @@ This documentation will act as your step-by-step guide in to perform K6 test wit
 <Tabs className='docs__val' groupId='language'>
 <TabItem value='MacOS/Linux' label='MacOS/Linux' default>
 
+<VerifiedTag value="Verified" />
+
 ```bash
 export LT_USERNAME="YOUR_USERNAME"
 ```
@@ -50,12 +334,16 @@ export LT_USERNAME="YOUR_USERNAME"
 </TabItem>
 <TabItem value='Windows' label='Windows - CMD'>
 
+<VerifiedTag value="Verified" />
+
 ```bash
 set LT_USERNAME=YOUR_USERNAME"
 ```
 
 </TabItem>
 <TabItem value='PowerShell' label='PowerShell'>
+
+<VerifiedTag value="Verified" />
 
 ```powershell
 $env:LT_USERNAME=YOUR_USERNAME"
@@ -85,12 +373,16 @@ Once you have created a SmartUI Project, you can generate screenshots by running
 
 1. Clone the sample GitHub repository:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 git clone https://github.com/LambdaTest/smartui-k6-sample
 cd smartui-k6-sample
 ```
 
 2. Install the required dependencies:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 npm install @lambdatest/smartui-cli @lambdatest/k6-driver
@@ -101,12 +393,16 @@ npm install @lambdatest/smartui-cli @lambdatest/k6-driver
 <Tabs className='docs__val' groupId='language'>
 <TabItem value='MacOS' label='MacOS' default>
 
+<VerifiedTag value="Verified" />
+
 ```bash
 brew install k6
 ```
 </TabItem>
 
 <TabItem value='Windows-1' label='Windows' default>
+
+<VerifiedTag value="Verified" />
 
 ```bash
 winget install k6
@@ -120,6 +416,8 @@ winget install k6
 <Tabs className='docs__val' groupId='language'>
 <TabItem value='MacOS/Linux' label='MacOS/Linux' default>
 
+<VerifiedTag value="Verified" />
+
 ```bash
 export LT_USERNAME="YOUR_LAMBDATEST_USERNAME"
 export LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
@@ -129,6 +427,8 @@ export PROJECT_TOKEN="YOUR_PROJECT_TOKEN"
 </TabItem>
 <TabItem value='Windows' label='Windows - CMD'>
 
+<VerifiedTag value="Verified" />
+
 ```bash
 set LT_USERNAME="YOUR_LAMBDATEST_USERNAME"
 set LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
@@ -137,6 +437,8 @@ set PROJECT_TOKEN="YOUR_PROJECT_TOKEN"
 
 </TabItem>
 <TabItem value='PowerShell' label='PowerShell'>
+
+<VerifiedTag value="Verified" />
 
 ```powershell
 $env:LT_USERNAME="YOUR_LAMBDATEST_USERNAME"
@@ -149,11 +451,15 @@ $env:PROJECT_TOKEN="YOUR_PROJECT_TOKEN"
 
 5. Create and configure SmartUI config file:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 npx smartui config:create smartui-web.json
 ```
 
 6. Add the SmartUI snapshot function to your test file. Create or edit `test.js`:
+
+<VerifiedTag value="Verified" />
 
 ```javascript title="test.js"
 import http from 'k6/http';
@@ -171,6 +477,8 @@ export default function () {
 ### **Step 3:** Executing the SmartUI Test Suite
 
 Execute the test using the following command:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 npx smartui exec k6 run test.js
@@ -191,6 +499,9 @@ npx smartui exec k6 run test.js
 - Use consistent naming conventions across your test suite
 
 **Example:**
+
+<VerifiedTag value="Verified" />
+
 ```javascript
 const response1 = http.get('https://example.com');
 smartuiSnapshot(response1, "HomePage-Header");
@@ -209,6 +520,9 @@ smartuiSnapshot(response2, "ProductPage-MainContent");
 - Consider adding delays for lazy-loaded content
 
 **Example:**
+
+<VerifiedTag value="Verified" />
+
 ```javascript
 import { sleep, check } from 'k6';
 import http from 'k6/http';
@@ -269,6 +583,9 @@ smartuiSnapshot(response, "Page-Loaded");
 
 **Solutions**:
 1. Verify `PROJECT_TOKEN` is set correctly:
+
+   <VerifiedTag value="Verified" />
+
    ```bash
    echo $PROJECT_TOKEN
    ```
@@ -276,6 +593,9 @@ smartuiSnapshot(response, "Page-Loaded");
 2. Check project name matches exactly (case-sensitive)
 
 3. Ensure you're using the SmartUI CLI wrapper:
+
+   <VerifiedTag value="Verified" />
+
    ```bash
    npx smartui exec k6 run test.js
    ```
@@ -317,6 +637,9 @@ smartuiSnapshot(response, "Page-Loaded");
 
 **Solutions**:
 1. Add explicit waits before screenshots:
+
+   <VerifiedTag value="Verified" />
+
    ```javascript
    import { sleep } from 'k6';
    import http from 'k6/http';
@@ -328,6 +651,9 @@ smartuiSnapshot(response, "Page-Loaded");
    ```
 
 2. Check response status before taking screenshot:
+
+   <VerifiedTag value="Verified" />
+
    ```javascript
    import { check } from 'k6';
    
@@ -354,21 +680,33 @@ smartuiSnapshot(response, "Page-Loaded");
 
 **Solutions**:
 1. Install required dependencies:
+
+   <VerifiedTag value="Verified" />
+
    ```bash
    npm install @lambdatest/smartui-cli @lambdatest/k6-driver
    ```
 
 2. Set PROJECT_TOKEN environment variable:
+
+   <VerifiedTag value="Verified" />
+
    ```bash
    export PROJECT_TOKEN="YOUR_PROJECT_TOKEN"
    ```
 
 3. Verify K6 is installed:
+
+   <VerifiedTag value="Verified" />
+
    ```bash
    k6 version
    ```
 
 4. Run tests using the SmartUI CLI wrapper:
+
+   <VerifiedTag value="Verified" />
+
    ```bash
    npx smartui exec k6 run test.js
    ```
@@ -387,6 +725,9 @@ smartuiSnapshot(response, "Page-Loaded");
 
 **Solutions**:
 1. Check screenshot status in response:
+
+   <VerifiedTag value="Verified" />
+
    ```javascript
    if (screenshot.screenshotStatus !== "Approved") {
        // Handle non-approved status
@@ -428,7 +769,6 @@ If you encounter issues not covered here:
 
 </TabItem>
 </Tabs>
-
 
 ## Additional Resources
 

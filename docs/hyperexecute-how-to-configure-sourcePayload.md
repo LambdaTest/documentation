@@ -17,6 +17,8 @@ canonical: https://www.testmuai.com/support/docs/hyperexecute-how-to-configure-s
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
+import VerifiedTag from '@site/src/component/verifiedTag';
+
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
        "@context": "https://schema.org",
@@ -41,6 +43,88 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/hyperexecute-how-to-configure-sourcePayload/"
+    },
+    "headline": "How to configure sourcePayload",
+    "description": "Learn to configure sourcePayload in HyperExecute with ease, allowing secure and direct sourcing of test scripts from your Git provider for seamless testing integration.",
+    "url": "https://www.testmuai.com/support/docs/hyperexecute-how-to-configure-sourcePayload/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Documentation",
+    "keywords": [
+      "TestMu AI Hyperexecute",
+      "TestMu AI Hyperexecute help",
+      "TestMu AI Hyperexecute documentation"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Setting up",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "sourcePayload:\n  platform: git\n  link: https://--------\n  ref: <your_branch_name>\n  accessToken: <your_personal_access_token>\n  commit: <optional>"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "sourcePayload",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "> You can assign a name to your PAT via the HyperExecute vault feature and replace it in place of the `GIT_PAT` tag in the example given above. \n    \n***\n\n### Sample YAML file\n\nA sample HyperExecute YAML file is added below for your reference.\n\n```yaml title=\"hyperexecute.yaml\"\n---\nversion: \"0.1\"\nglobalTimeout: 90\ntestSuiteTimeout: 90\ntestSuiteStep: 90\nrunson: win\nautosplit: true\nretryOnFailure: false\ntestType: \"playwright\"\nmaxRetries: 1\nconcurrency: 1\npre:\n  - npm install\n  - npx playwright install\ncacheKey: '{{ checksum \"package-lock.json\" }}'\ncacheDirectories:\n  - node_modules\ntestDiscovery:\n  type: raw\n  mode: remote\n  command: grep -lr 'describe' ltblogsearch.test.js\ntestRunnerCommand: npm test -- $test\nsourcePayload:\n  platform: git\n  link: <your_github_repository>\n  ref: <your_branch_name>\n  accessToken: <your_PAT>"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Example given below",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "---\nsourcePayload:\n  platform: git\n  link: https://bitbucket.org/<username>/junit-selenium-hyperexecute-sample.git,\n  ref: main\n  accessToken: ${{ .secrets.BITBUCKET_SERVER_REPO_CLONE_SECRET_KEY }}\n  verifySSL: false\n  gitProvider: bitbucket"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
+
 # How to configure sourcePayload
 
 When you run your tests on HyperExecute, the test scripts are zipped, encrypted and uploaded to our secure servers temporarily for execution through the [HyperExecute CLI binary](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/). However, to make this process seamlessly fit in your pipeline you can use the `sourcePayload` Yaml parameter.
@@ -52,6 +136,8 @@ Once you set `sourcePayload`, your test scripts are directly sourced from your G
 ## Setting up
 
 You can start by configuring the `sourcePayload` key in the [HyperExecute YAML](/support/docs/deep-dive-into-hyperexecute-yaml/) file. The format is explained below.
+
+<VerifiedTag value="Verified" />
 
 ```bash
 sourcePayload:
@@ -76,6 +162,8 @@ sourcePayload:
 
 > As a best practice, you should not use your PAT directly in the YAML file. Instead of that, you can make use of our [vault](/support/docs/hyperexecute-how-to-save-and-manage-secrets/) feature and add the PAT to your secrets. To use the vault feature in the HyperExecute YAML file, you can refer the example given below.
 
+<VerifiedTag value="Verified" />
+
 ```yaml title="hyperexecute.yaml"
 sourcePayload:
   platform: git
@@ -91,6 +179,8 @@ sourcePayload:
 ### Sample YAML file
 
 A sample HyperExecute YAML file is added below for your reference.
+
+<VerifiedTag value="Verified" />
 
 ```yaml title="hyperexecute.yaml"
 ---
@@ -205,6 +295,8 @@ https://support.atlassian.com/bitbucket-cloud/docs/create-a-repository-access-to
 </details>
 
 In order for HyperExecute to be able to fetch tests from **bitbucket**, **bitbucket-server**, or **github**, the token has to be added in the Job Trigger API. Example given below: 
+
+<VerifiedTag value="Verified" />
 
 ```yaml
 ---

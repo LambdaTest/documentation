@@ -9,7 +9,128 @@ toc_max_heading_level: 2
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import VerifiedTag from '@site/src/component/verifiedTag';
+import { BRAND_URL } from '@site/src/component/BrandName';
 
+<script type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify({
+       "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": BRAND_URL
+        },{
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Support",
+          "item": `${BRAND_URL}/support/docs/`
+        },{
+          "@type": "ListItem",
+          "position": 3,
+          "name": "TestNG",
+          "item": `${BRAND_URL}/support/docs/accessibility-testng-test/`
+        }]
+      })
+    }}
+></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/accessibility-testng-test/"
+    },
+    "headline": "TestNG",
+    "description": "Run Accessibility Automation with Selenium and TestNG: capabilities, hooks, TestNG suite layout, and how to review reports in the dashboard.",
+    "url": "https://www.testmuai.com/support/docs/accessibility-testng-test/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Accessibility Testing",
+    "keywords": [
+      "TestMu AI",
+      "Accessibility",
+      "TestNG"
+    ],
+    "proficiencyLevel": "Beginner",
+    "dependencies": "TestMu AI username and access key (environment variables); A Selenium + TestNG project already hitting the TestMu AI grid (hub URL and capabilities); Accessibility entitlement for your organization; Access to the Automation dashboard and the Accessibility tab for the session build.",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "2. Add Accessibility capabilities",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "capabilities.setCapability(\"accessibility\", true);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "2. Add Accessibility capabilities",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "capabilities.setCapability(\"accessibility\", true);\ncapabilities.setCapability(\"accessibility.wcagVersion\", \"wcag21aa\");\ncapabilities.setCapability(\"accessibility.bestPractice\", false);\ncapabilities.setCapability(\"accessibility.needsReview\", true);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "After navigation and when the page is stable, call",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "driver.executeScript(\"lambda-accessibility-scan\");"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Scan on every navigation without hooks",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "capabilities.setCapability(\"accessibility\", true);\ncapabilities.setCapability(\"accessibility.autoscan\", true);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "5. Execute and open the report",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "mvn test"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
 # Selenium Accessibility Testing
 
 ---
@@ -64,11 +185,15 @@ Most teams initialize the driver in a **base test class** (`@BeforeMethod` / `@B
 
 **Minimal enable:**
 
+<VerifiedTag value="Verified" />
+
 ```java
 capabilities.setCapability("accessibility", true);
 ```
 
 **Optional tuning:**
+
+<VerifiedTag value="Verified" />
 
 ```java
 capabilities.setCapability("accessibility", true);
@@ -81,11 +206,15 @@ capabilities.setCapability("accessibility.needsReview", true);
 
 **A. On-demand.** After navigation and when the page is stable, call:
 
+<VerifiedTag value="Verified" />
+
 ```java
 driver.executeScript("lambda-accessibility-scan");
 ```
 
 **B. Auto-scan.** Scan on every navigation without hooks:
+
+<VerifiedTag value="Verified" />
 
 ```java
 capabilities.setCapability("accessibility", true);
@@ -97,6 +226,8 @@ capabilities.setCapability("accessibility.autoscan", true);
 Point your `testng.xml` (or Gradle/Maven TestNG config) at the packages or classes that use the shared base class so every included test inherits the same driver setup. Run a **single** `@Test` first to validate capabilities before scaling the suite.
 
 ### 5. Execute
+
+<VerifiedTag value="Verified" />
 
 ```bash
 mvn test
@@ -128,6 +259,8 @@ Use `@BeforeEach` or `@BeforeAll` (with a static `WebDriver` if you share one pe
 
 ### 2. Enable Accessibility on the session
 
+<VerifiedTag value="Verified" />
+
 ```java
 capabilities.setCapability("accessibility", true);
 capabilities.setCapability("accessibility.wcagVersion", "wcag21aa"); // optional
@@ -137,17 +270,23 @@ capabilities.setCapability("accessibility.wcagVersion", "wcag21aa"); // optional
 
 **Hook after stable UI:**
 
+<VerifiedTag value="Verified" />
+
 ```java
 driver.executeScript("lambda-accessibility-scan");
 ```
 
 **Or auto-scan every navigation:**
 
+<VerifiedTag value="Verified" />
+
 ```java
 capabilities.setCapability("accessibility.autoscan", true);
 ```
 
 ### 4. Run
+
+<VerifiedTag value="Verified" />
 
 ```bash
 mvn test
@@ -178,6 +317,8 @@ For **Selenium C#** tests run with **NUnit**: Accessibility is enabled on the `R
 
 Typical pattern in `[SetUp]` or a one-time fixture:
 
+<VerifiedTag value="Verified" />
+
 ```csharp
 var options = new ChromeOptions();
 options.BrowserVersion = "latest";
@@ -193,6 +334,8 @@ The exact hub URL and capability names should match your existing grid configura
 
 After navigation and waits:
 
+<VerifiedTag value="Verified" />
+
 ```csharp
 ((IJavaScriptExecutor)driver).ExecuteScript("lambda-accessibility-scan");
 ```
@@ -200,6 +343,8 @@ After navigation and waits:
 Without **either** the hook **or** `accessibility.autoscan`, you will not get Accessibility reports.
 
 ### 3. Run NUnit
+
+<VerifiedTag value="Verified" />
 
 ```bash
 dotnet test
@@ -228,6 +373,8 @@ Robot Framework sits **above** Selenium, so Accessibility is still configured on
 
 Define suite or global variables so every test uses the same grid options:
 
+<VerifiedTag value="Verified" />
+
 ```robot
 *** Variables ***
 ${LT_OPTIONS}    {"accessibility": true, "accessibility.wcagVersion": "wcag21aa"}
@@ -243,6 +390,8 @@ Pass the merged capabilities into `Open Browser` (or your wrapper) so the remote
 
 After the page is ready:
 
+<VerifiedTag value="Verified" />
+
 ```robot
 Execute Javascript    return document.readyState
 Execute Javascript    lambda-accessibility-scan
@@ -254,12 +403,16 @@ Use the second line only when you are **not** using `accessibility.autoscan`.
 
 If you prefer scans on every navigation without Robot keywords:
 
+<VerifiedTag value="Verified" />
+
 ```robot
 # In capabilities JSON / dict
 accessibility.autoscan    ${True}
 ```
 
 ### 5. Run the suite
+
+<VerifiedTag value="Verified" />
 
 ```bash
 robot --outputdir results tests/
@@ -284,6 +437,8 @@ Cucumber scenarios execute ordinary Selenium code under the hood: enable Accessi
 
 ### 1. Create the driver with Accessibility in `@Before`
 
+<VerifiedTag value="Verified" />
+
 ```java
 @Before(order = 0)
 public void setUp() {
@@ -300,6 +455,8 @@ public void setUp() {
 
 In a step that represents "user is on dashboard" (or after a `Given` / `When` that loads a URL):
 
+<VerifiedTag value="Verified" />
+
 ```java
 driver.executeScript("lambda-accessibility-scan");
 ```
@@ -311,6 +468,8 @@ Avoid calling the hook on every tiny interaction; align it with **logical pages*
 If scenarios bounce across many URLs and you want full coverage without per-step hooks, enable `accessibility.autoscan` in `@Before` instead.
 
 ### 4. Run Cucumber
+
+<VerifiedTag value="Verified" />
 
 ```bash
 mvn test -Dcucumber.filter.tags="@smoke"

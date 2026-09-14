@@ -1,9 +1,10 @@
 ---
 id: agent-testing-cli
-title: Getting Started
+toc_max_heading_level: 2
+title: How to Test AI Agents With the TestMu AI Agent Testing CLI
 hide_title: false
 sidebar_label: Quickstart (CLI)
-description: Get started with the TestMu Agent Testing CLI to discover projects, run Chat and Phone Caller evaluations, retrieve results, and automate tests in CI/CD.
+description: Get started with the TestMu AI Agent Testing CLI to discover projects, run Chat and Phone Caller evaluations, retrieve results, and automate tests in CI/CD.
 keywords:
   - testmu agent testing cli
   - agent testing cli
@@ -18,14 +19,314 @@ canonical: https://www.testmuai.com/support/docs/agent-testing-cli/
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import VerifiedTag from '@site/src/component/verifiedTag';
+import { BRAND_URL } from '@site/src/component/BrandName';
 
-# Getting Started
+<script type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify({
+       "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": BRAND_URL
+        },{
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Support",
+          "item": `${BRAND_URL}/support/docs/`
+        },{
+          "@type": "ListItem",
+          "position": 3,
+          "name": "How to Test AI Agents With the TestMu AI Agent Testing CLI",
+          "item": `${BRAND_URL}/support/docs/agent-testing-cli/`
+        }]
+      })
+    }}
+></script>
 
-## Before You Begin
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/agent-testing-cli/"
+    },
+    "headline": "How to Test AI Agents With the TestMu AI Agent Testing CLI",
+    "description": "Get started with the TestMu AI Agent Testing CLI to discover projects, run Chat and Phone Caller evaluations, retrieve results, and automate tests in CI/CD.",
+    "url": "https://www.testmuai.com/support/docs/agent-testing-cli/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Agent Testing",
+    "keywords": [
+      "testmu agent testing cli",
+      "agent testing cli",
+      "chat agent testing"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 1",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "# Install\npip install agent-testing-cli\n\n# Authenticate\n# Enter your TestMu username and access key when prompted.\nagent-testing-cli login\n\n# List your projects\nagent-testing-cli projects"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "How to Set Up Your Credentials (macOS or Linux)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "    export LT_USERNAME=\"YOUR_USERNAME\"\n    export LT_ACCESS_KEY=\"YOUR_ACCESS_KEY\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "How to Set Up Your Credentials (Windows PowerShell)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "PowerShell",
+        "text": "    $env:LT_USERNAME = \"YOUR_USERNAME\"\n    $env:LT_ACCESS_KEY = \"YOUR_ACCESS_KEY\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Run the following command to see all commands",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "agent-testing-cli --help"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Run the following command to see the options for one command",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "agent-testing-cli COMMAND --help"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Install the latest published version from PyPI",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "pip install agent-testing-cli"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Verify the installation",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "agent-testing-cli --help"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Run the login command",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "agent-testing-cli login"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "You can also supply the username and access key as options",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "agent-testing-cli login --user LT_USERNAME --key LT_ACCESS_KEY"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Set both environment variables in the CI/CD environment",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "export LT_USERNAME=\"your-username\"\nexport LT_ACCESS_KEY=\"your-access-key\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Check the authentication status",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "agent-testing-cli auth status"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Delete saved credentials for the selected profile",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "agent-testing-cli logout"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "List accessible projects",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "agent-testing-cli projects"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Use a project ID to list its configured resources",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "agent-testing-cli --project PROJECT_ID scenarios\nagent-testing-cli --project PROJECT_ID suites\nagent-testing-cli --project PROJECT_ID endpoint-profiles"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Add --json when a script must process the output",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "agent-testing-cli --json projects"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Start one saved suite",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "agent-testing-cli --project PROJECT_ID run \\\n  --suite SUITE_ID"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Start a suite without an interactive confirmation",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "agent-testing-cli --project PROJECT_ID run \\\n  --suite SUITE_ID \\\n  --yes"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Start multiple suites",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "agent-testing-cli --project PROJECT_ID run \\\n  --suite SUITE_ID_1 \\\n  --suite SUITE_ID_2 \\\n  --yes"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Wait for the final suite result",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "agent-testing-cli --project PROJECT_ID run \\\n  --suite SUITE_ID \\\n  --yes \\\n  --wait \\\n  --poll 5 \\\n  --timeout 1800"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "A Chat evaluation requires a project, workflow, and suite",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "agent-testing-cli --project PROJECT_ID run \\\n  --workflow WORKFLOW_ID \\\n  --suite SUITE_ID \\\n  --yes"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Select a specific endpoint profile",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "agent-testing-cli --project PROJECT_ID run \\\n  --workflow WORKFLOW_ID \\\n  --suite SUITE_ID \\\n  --endpoint-profile ENDPOINT_PROFILE_ID \\\n  --yes"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Run a suite from a supported TestMu result URL",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "agent-testing-cli run --url \"SUITE URL\" --yes"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Run multiple suite URLs in one command",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "agent-testing-cli run --url \"SUITE_URL_1\" \"SUITE_URL_2\" \"SUITE_URL_3\" --yes"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Open the terminal user interface",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "agent-testing-cli tui"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "For a Chat evaluation, provide the workflow ID as an environment variable and use this command",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "agent-testing-cli --project \"$TESTMU_PROJECT_ID\" --json run \\\n  --workflow \"$TESTMU_WORKFLOW_ID\" \\\n  --suite \"$TESTMU_SUITE_ID\" \\\n  --yes"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Fix: List the available projects and suites again",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "agent-testing-cli projects\nagent-testing-cli --project PROJECT_ID suites"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Fix: Add the workflow ID",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "agent-testing-cli --project PROJECT_ID run \\\n  --workflow WORKFLOW_ID \\\n  --suite SUITE_ID \\\n  --yes"
+      }
+    ],
+    "dateModified": "2026-08-18T16:47:39+05:30"
+  }) }}
+/>
+
+The TestMu AI Agent Testing CLI (`agent-testing-cli`) tests AI agents from a terminal, with no dashboard clicks. Use it to discover projects and test resources, run Chat and Phone Caller evaluations, retrieve results, and automate tests in a continuous integration and continuous delivery (CI/CD) pipeline.
+
+It runs the same commands on macOS, Linux, and Windows against Chat, Voice, and Phone Caller agents configured in TestMu. You can drive it with direct commands, machine-readable JSON output, or the interactive terminal user interface (TUI), and authenticate with environment variables so suites run without an interactive prompt.
+
+- **Run tests from a terminal or IDE:** Use the same commands on macOS, Linux, and Windows.
+- **Test different agent types:** Work with Chat, Voice, and Phone Caller agents that are configured in TestMu.
+- **Choose an operating mode:** Use direct commands, machine-readable output, or the interactive terminal user interface (TUI).
+- **Integrate with CI/CD:** Authenticate with environment variables and run suites without an interactive prompt.
+
+<VerifiedTag value="Verified" />
+
+```bash
+# Install
+pip install agent-testing-cli
+
+# Authenticate
+# Enter your TestMu username and access key when prompted.
+agent-testing-cli login
+
+# List your projects
+agent-testing-cli projects
+```
+
+## How to Set Up Your Credentials
+
+---
 
 1. You need a TestMu AI account. [Sign up free](https://www.testmuai.com/) if you do not have one.
 2. Follow [Get started with TestMu Agent Testing](https://agent-to-agent.lambdatest.com/agent-ui/agents) and open **Credentials** in the TestMu AI Dashboard. Copy your username and access key.
 3. Set the credentials as environment variables when you use the CLI in CI/CD or other non-interactive environments.
+
+<VerifiedTag value="Verified" />
 
 <Tabs groupId="os">
   <TabItem value="unix" label="macOS or Linux" default>
@@ -42,26 +343,9 @@ import TabItem from '@theme/TabItem';
   </TabItem>
 </Tabs>
 
-**TestMu Agent Testing CLI** (`agent-testing-cli`) is a command-line tool for testing AI agents from a terminal. Use the CLI to discover projects and test resources, run Chat and Phone Caller evaluations, retrieve results, and automate tests in a continuous integration and continuous delivery (CI/CD) pipeline.
+## Which Environments the CLI Supports
 
-- **Run tests from a terminal or IDE:** Use the same commands on macOS, Linux, and Windows.
-- **Test different agent types:** Work with Chat, Voice, and Phone Caller agents that are configured in TestMu.
-- **Choose an operating mode:** Use direct commands, machine-readable output, or the interactive terminal user interface (TUI).
-- **Integrate with CI/CD:** Authenticate with environment variables and run suites without an interactive prompt.
-
-```bash
-# Install
-pip install agent-testing-cli
-
-# Authenticate
-# Enter your TestMu username and access key when prompted.
-agent-testing-cli login
-
-# List your projects
-agent-testing-cli projects
-```
-
-## Supported Environments
+---
 
 The CLI runs in a system terminal or an integrated terminal in an IDE on:
 
@@ -69,14 +353,18 @@ The CLI runs in a system terminal or an integrated terminal in an IDE on:
 - Linux
 - Windows
 
-## Requirements
+## What the CLI Requires
+
+---
 
 - Python 3.10 or newer
 - macOS, Linux, or Windows
 - A TestMu account with access to Agent-to-Agent Testing
 - At least one TestMu project with an agent and a test suite
 
-## Usage Modes
+## How to Choose a Usage Mode
+
+---
 
 | Mode | Command | Best for |
 | --- | --- | --- |
@@ -86,7 +374,9 @@ The CLI runs in a system terminal or an integrated terminal in an IDE on:
 
 `--yes` confirms a test run without an interactive prompt. Use it for CI/CD or after you verify the selected project, suite, workflow, or URL.
 
-## Quick Reference
+## Quick Command Reference
+
+---
 
 | Command | Purpose |
 | --- | --- |
@@ -104,19 +394,27 @@ The CLI runs in a system terminal or an integrated terminal in an IDE on:
 
 Run the following command to see all commands:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 agent-testing-cli --help
 ```
 
 Run the following command to see the options for one command:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 agent-testing-cli COMMAND --help
 ```
 
-## Install the CLI
+## How to Install the CLI
+
+---
 
 Install the latest published version from PyPI:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 pip install agent-testing-cli
@@ -124,15 +422,21 @@ pip install agent-testing-cli
 
 Verify the installation:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 agent-testing-cli --help
 ```
 
-## Authenticate Your Account
+## How to Authenticate Your Account
+
+---
 
 ### Sign In Interactively
 
 Run the login command:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 agent-testing-cli login
@@ -141,6 +445,8 @@ agent-testing-cli login
 The CLI prompts for your username and access key. The CLI saves credentials in the operating-system credential store.
 
 You can also supply the username and access key as options:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 agent-testing-cli login --user LT_USERNAME --key LT_ACCESS_KEY
@@ -151,6 +457,8 @@ Do not store the access key in source control or shell history.
 ### Authenticate in CI/CD
 
 Set both environment variables in the CI/CD environment:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 export LT_USERNAME="your-username"
@@ -163,25 +471,35 @@ Store these values in the secret store of your CI/CD platform.
 
 Check the authentication status:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 agent-testing-cli auth status
 ```
 
 Delete saved credentials for the selected profile:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 agent-testing-cli logout
 ```
 
-## Discover Projects and Test Resources
+## How to Discover Projects and Test Resources
+
+---
 
 List accessible projects:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 agent-testing-cli projects
 ```
 
 Use a project ID to list its configured resources:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 agent-testing-cli --project PROJECT_ID scenarios
@@ -191,15 +509,21 @@ agent-testing-cli --project PROJECT_ID endpoint-profiles
 
 Add `--json` when a script must process the output:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 agent-testing-cli --json projects
 ```
 
-## Test a Phone Caller Agent
+## How to Test a Phone Caller Agent
+
+---
 
 For a Phone Caller run, `--project PROJECT_ID` identifies the TestMu project and `--suite SUITE_ID` identifies the suite to run.
 
 Start one saved suite:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 agent-testing-cli --project PROJECT_ID run \
@@ -210,6 +534,8 @@ The CLI asks for confirmation because a Phone Caller suite can create real calls
 
 Start a suite without an interactive confirmation:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 agent-testing-cli --project PROJECT_ID run \
   --suite SUITE_ID \
@@ -217,6 +543,8 @@ agent-testing-cli --project PROJECT_ID run \
 ```
 
 Start multiple suites:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 agent-testing-cli --project PROJECT_ID run \
@@ -226,6 +554,8 @@ agent-testing-cli --project PROJECT_ID run \
 ```
 
 Wait for the final suite result:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 agent-testing-cli --project PROJECT_ID run \
@@ -238,9 +568,13 @@ agent-testing-cli --project PROJECT_ID run \
 
 The `--poll` and `--timeout` values are in seconds.
 
-## Test a Chat Agent
+## How to Test a Chat Agent
+
+---
 
 A Chat evaluation requires a project, workflow, and suite:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 agent-testing-cli --project PROJECT_ID run \
@@ -250,6 +584,8 @@ agent-testing-cli --project PROJECT_ID run \
 ```
 
 Select a specific endpoint profile:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 agent-testing-cli --project PROJECT_ID run \
@@ -261,9 +597,13 @@ agent-testing-cli --project PROJECT_ID run \
 
 Chat evaluations are asynchronous. Do not use `--wait` with a Chat evaluation.
 
-## Run from URLs
+## How to Run from URLs
+
+---
 
 Run a suite from a supported TestMu result URL:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 agent-testing-cli run --url "SUITE URL" --yes
@@ -271,15 +611,21 @@ agent-testing-cli run --url "SUITE URL" --yes
 
 Run multiple suite URLs in one command:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 agent-testing-cli run --url "SUITE_URL_1" "SUITE_URL_2" "SUITE_URL_3" --yes
 ```
 
 The `--yes` flag confirms every selected run without an interactive prompt. Use it only after you verify the URLs.
 
-## Use the Interactive TUI
+## How to Use the Interactive TUI
+
+---
 
 Open the terminal user interface:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 agent-testing-cli tui
@@ -297,7 +643,9 @@ agent-testing-cli tui
 
 The TUI shows a copy-ready command for the selected project or suite. The TUI also asks for confirmation before it starts a test run.
 
-## Global Options
+## What the Global Options Do
+
+---
 
 The shared `--json`, `--verbose`, and `--no-tui` options can appear before or after a command. Completion options must appear before a command. Use the global form `--project PROJECT_ID` before the command for project-scoped operations. The existing command-level form remains supported for compatibility.
 
@@ -311,9 +659,13 @@ The shared `--json`, `--verbose`, and `--no-tui` options can appear before or af
 | `--show-completion` | Show the completion script for the current shell. |
 | `--help` | Show help. |
 
-## Integrate with CI/CD
+## How to Integrate with CI/CD
+
+---
 
 For a Chat evaluation, provide the workflow ID as an environment variable and use this command:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 agent-testing-cli --project "$TESTMU_PROJECT_ID" --json run \
@@ -324,7 +676,9 @@ agent-testing-cli --project "$TESTMU_PROJECT_ID" --json run \
 
 Do not add `--wait` to a Chat evaluation.
 
-## Exit Codes
+## What the Exit Codes Mean
+
+---
 
 | Code | Meaning |
 | --- | --- |
@@ -337,7 +691,9 @@ Do not add `--wait` to a Chat evaluation.
 
 Use the exit code to fail a CI/CD job when a command does not complete successfully.
 
-## Troubleshoot Common Problems
+## How to Troubleshoot Common Problems
+
+---
 
 ### Credentials Are Unavailable
 
@@ -351,6 +707,8 @@ Use the exit code to fail a CI/CD job when a command does not complete successfu
 
 **Fix:** List the available projects and suites again:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 agent-testing-cli projects
 agent-testing-cli --project PROJECT_ID suites
@@ -361,6 +719,8 @@ agent-testing-cli --project PROJECT_ID suites
 **What you see:** The CLI reports `Chat run requires --workflow`.
 
 **Fix:** Add the workflow ID:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 agent-testing-cli --project PROJECT_ID run \
@@ -387,8 +747,10 @@ agent-testing-cli --project PROJECT_ID run \
 
 **Fix:** Configure the credential store for the operating system. For CI/CD, use `LT_USERNAME` and `LT_ACCESS_KEY` instead.
 
-## Next Steps
+## Related TestMu AI Guides
 
-- Learn how [Agent Testing evaluations work](https://www.testmuai.com/support/docs/architecture-and-how-evaluation-works/).
-- Learn how to [connect a Chat agent](https://www.testmuai.com/support/docs/chat-agent-api-integration/).
+---
+
+- Learn how [Agent Testing evaluations work](/support/docs/architecture-and-how-evaluation-works/).
+- Learn how to [connect a Chat agent over its API](/support/docs/chat-agent-api-integration/).
 - Open the [agent-testing-cli package on PyPI](https://pypi.org/project/agent-testing-cli/).

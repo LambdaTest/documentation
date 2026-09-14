@@ -21,14 +21,177 @@ slug: puppeteer-visual-regression/
 canonical: https://www.testmuai.com/support/docs/puppeteer-visual-regression/
 
 ---
+
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import NewTag from '../src/component/newTag';
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+import VerifiedTag from '@site/src/component/verifiedTag';
+
+<script type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify({
+       "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": BRAND_URL
+        },{
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Support",
+          "item": `${BRAND_URL}/support/docs/`
+        },{
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Getting started with SmartUI using Puppeteer",
+          "item": `${BRAND_URL}/support/docs/puppeteer-visual-regression/`
+        }]
+      })
+    }}
+></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/puppeteer-visual-regression/"
+    },
+    "headline": "Getting started with SmartUI using Puppeteer",
+    "description": "Learn Puppeteer Visual Regression Set up SmartUI, run tests on TestMu AI Cloud across real browsers. Step-by-step guide for seamless testing.",
+    "url": "https://www.testmuai.com/support/docs/puppeteer-visual-regression/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "SmartUI",
+    "keywords": [
+      "Visual Regression",
+      "Visual Regression Testing Guide",
+      "Visual Regression Test Automation"
+    ],
+    "proficiencyLevel": "Beginner",
+    "dependencies": "Basic understanding of Puppeteer is required.; Go to SmartUI and login along with your credentials.; Copy LT_USERNAME and LT_ACCESS_KEY credentials from Access Key button on the top right of the dashboard..",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Prerequisites for running SmartUI with Puppeteer",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "export LT_USERNAME=\"YOUR_USERNAME\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Prerequisites for running SmartUI with Puppeteer",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "set LT_USERNAME=\"YOUR_USERNAME\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Prerequisites for running SmartUI with Puppeteer",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "PowerShell",
+        "text": "$env:LT_USERNAME=\"YOUR_USERNAME\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 2: Configure your test with Puppeteer Desired Capabilities",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "codeRepository": "https://github.com/LambdaTest/puppeteer-sample",
+        "text": "git clone https://github.com/LambdaTest/puppeteer-sample.git"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Install the node modules using the command",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "npm i"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 6",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n### **Step 3:** Executing the SmartUI Test Suite on Cloud\n\nExecute the test using the following command to run the test suite using `puppeteer`\n\n```bash\nnode navigation.js"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Getting started with SmartUI using Puppeteer",
+      "description": "Learn Puppeteer Visual Regression Set up SmartUI, run tests on TestMu AI Cloud across real browsers. Step-by-step guide for seamless testing.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Create a SmartUI Project",
+          "text": "The first step is to create a project with the application in which we will combine all your builds run on the project. To create a SmartUI Project, follow these steps: Go to Projects page Click on the new project button Select the platform as Web for executing your Puppeteer tests. Add name of the project, approvers for the changes found, tags for any filter or easy navigation. Click on the Submit. -->",
+          "url": "https://www.testmuai.com/support/docs/puppeteer-visual-regression/#step-1-create-a-smartui-project"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Configure your test with Puppeteer Desired Capabilities",
+          "text": "Once you have created a SmartUI Project, you can generate screenshots by running automation scripts. Follow the below steps to successfully generate screenshots - Please clone the following sample GitHub repo (https://github.com/LambdaTest/puppeteer-sample). Install the node modules using the command: Set up the TestMu AI credentials by following the instructions mentioned in the README.md file. Edit the required capabilities in your test file navigation.js.",
+          "url": "https://www.testmuai.com/support/docs/puppeteer-visual-regression/#step-2-configure-your-test-with-puppeteer-desired-capabilities"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Executing the SmartUI Test Suite on Cloud",
+          "text": "Execute the test using the following command to run the test suite using puppeteer You can check the executed builds over at TestMu AI SmartUI. For additional information about Puppteer framework please explore the documentation here",
+          "url": "https://www.testmuai.com/support/docs/puppeteer-visual-regression/#step-3-executing-the-smartui-test-suite-on-cloud"
+        }
+      ]
+    }
+  ]) }}
+/>
 
 ---
-
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
@@ -43,6 +206,8 @@ This documentation will act as your step-by-step guide in to perform Puppteer te
 <Tabs className='docs__val' groupId='language'>
 <TabItem value='MacOS/Linux' label='MacOS/Linux' default>
 
+<VerifiedTag value="Verified" />
+
 ```bash
 export LT_USERNAME="YOUR_USERNAME"
 ```
@@ -50,12 +215,16 @@ export LT_USERNAME="YOUR_USERNAME"
 </TabItem>
 <TabItem value='Windows' label='Windows - CMD'>
 
+<VerifiedTag value="Verified" />
+
 ```bash
 set LT_USERNAME="YOUR_USERNAME"
 ```
 
 </TabItem>
 <TabItem value='PowerShell' label='PowerShell'>
+
+<VerifiedTag value="Verified" />
 
 ```powershell
 $env:LT_USERNAME="YOUR_USERNAME"
@@ -85,11 +254,15 @@ Once you have created a SmartUI Project, you can generate screenshots by running
 
 1. Please clone the following sample GitHub repo (`https://github.com/LambdaTest/puppeteer-sample`).
 
+<VerifiedTag value="Verified" />
+
 ```bash
 git clone https://github.com/LambdaTest/puppeteer-sample.git
 ```
 
 2. Install the node modules using the command:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 npm i
@@ -97,6 +270,8 @@ npm i
 
 3. Set up the <BrandName /> credentials by following the instructions mentioned in the `README.md` file.
 4. Edit the required capabilities in your test file `navigation.js`.
+
+<VerifiedTag value="Verified" />
 
 ```javascript title="Add the following code snippet to run SmartUI with Puppeteer in ./navigation.js"
 "use strict";
@@ -159,6 +334,8 @@ const expect = require("chai").expect;
 ### **Step 3:** Executing the SmartUI Test Suite on Cloud
 
 Execute the test using the following command to run the test suite using `puppeteer`
+
+<VerifiedTag value="Verified" />
 
 ```bash
 node navigation.js

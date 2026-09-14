@@ -25,6 +25,8 @@ import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 
+import VerifiedTag from '@site/src/component/verifiedTag';
+
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
        "@context": "https://schema.org",
@@ -48,6 +50,131 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       })
     }}
 ></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/hyperexecute-bidi-testing/"
+    },
+    "headline": "Execute BiDi Framework Tests on HyperExecute",
+    "description": "Follow this guide to run Selenium BiDi protocol tests seamlessly on HyperExecute and capture rich browser events with TestMu AI.",
+    "url": "https://www.testmuai.com/support/docs/hyperexecute-bidi-testing/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Documentation",
+    "keywords": [
+      "xcui",
+      "iOS",
+      "testmu ai"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 3: Add the required Capabilities",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "codeRepository": "https://github.com/LambdaTest/hyperexecute-bidi-sample",
+        "text": "\n### Step 4: Configure YAML in your Test Suite\n\n```yaml reference title=\"hyperexecute.yaml\"\nhttps://github.com/LambdaTest/hyperexecute-bidi-sample/blob/main/yaml/hyperexecute-linux.yaml"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Run a Sample Project",
+      "description": "Follow this guide to run Selenium BiDi protocol tests seamlessly on HyperExecute and capture rich browser events with TestMu AI.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Clone Sample Repository",
+          "text": "Download or Clone the BiDi sample from TestMu AI\u2019s GitHub Repository",
+          "url": "https://www.testmuai.com/support/docs/hyperexecute-bidi-testing/#step-1-clone-sample-repository"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Download the CLI in your Project",
+          "text": "Download the HyperExecute CLI and copy it into the root folder of the downloaded sample repository.",
+          "url": "https://www.testmuai.com/support/docs/hyperexecute-bidi-testing/#step-2-download-the-cli-in-your-project"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Add the required Capabilities",
+          "text": "The webSocketUrl capability is set to true to enable BiDi support.",
+          "url": "https://www.testmuai.com/support/docs/hyperexecute-bidi-testing/#step-3-add-the-required-capabilities"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Step 4: Configure YAML in your Test Suite",
+          "text": "Step 4: Configure YAML in your Test Suite",
+          "url": "https://www.testmuai.com/support/docs/hyperexecute-bidi-testing/#step-4-configure-yaml-in-your-test-suite"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 5,
+          "name": "Step 5: Execute your Test Suite",
+          "text": "From the project root directory, execute the below CLI command in your terminal: NOTE : In case of MacOS, if you get a permission denied warning while executing CLI, simply run chmod u+x ./hyperexecute to allow permission. In case you get a security popup, allow it from your System Preferences \u2192 Security & Privacy \u2192 General tab. {./hyperexecute --user ${ YOURLAMBDATESTUSERNAME()} --key ${ YOURLAMBDATESTACCESS_KEY()} --config yaml/hyperexecute-linux.yaml}",
+          "url": "https://www.testmuai.com/support/docs/hyperexecute-bidi-testing/#step-5-execute-your-test-suite"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 6,
+          "name": "Step 6: Monitor the Test Execution",
+          "text": "Visit the HyperExecute Dashboard and check your Job status.",
+          "url": "https://www.testmuai.com/support/docs/hyperexecute-bidi-testing/#step-6-monitor-the-test-execution"
+        }
+      ]
+    }
+  ]) }}
+/>
+
+
 **BiDi (Bi-Directional)** refers to the **WebDriver BiDi protocol**, a new standard from the W3C (World Wide Web Consortium). Unlike the traditional WebDriver protocol (which works in a request → response model), **WebDriver BiDi enables two-way communication between your test script and the browser in real time**.
 
 That means instead of only sending commands (like “click this element” or “navigate to this URL”), your test can also **subscribe to events happening inside the browser** as they occur, such as console logs, network requests, page lifecycle events, or JavaScript exceptions. In simple terms:
@@ -87,6 +214,8 @@ Download the HyperExecute CLI and copy it into the root folder of the downloaded
 
 > The `webSocketUrl` capability is set to `true` to enable BiDi support.
 
+<VerifiedTag value="Verified" />
+
 ```javascript title="wdio.lambdatest.config.js"
 
 capabilities: [{
@@ -106,6 +235,8 @@ capabilities: [{
 
 ### Step 4: Configure YAML in your Test Suite
 
+<VerifiedTag value="Verified" />
+
 ```yaml reference title="hyperexecute.yaml"
 https://github.com/LambdaTest/hyperexecute-bidi-sample/blob/main/yaml/hyperexecute-linux.yaml
 ```
@@ -114,6 +245,8 @@ https://github.com/LambdaTest/hyperexecute-bidi-sample/blob/main/yaml/hyperexecu
 From the project root directory, execute the below CLI command in your terminal:
 
 > **NOTE :** In case of MacOS, if you get a permission denied warning while executing CLI, simply run **`chmod u+x ./hyperexecute`** to allow permission. In case you get a security popup, allow it from your **System Preferences** → **Security & Privacy** → **General tab**.
+
+<VerifiedTag value="Verified" />
 
 <div className="lambdatest__codeblock">
   <CodeBlock className="language-bash">

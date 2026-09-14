@@ -17,6 +17,8 @@ canonical: https://www.testmuai.com/support/docs/hyperexecute-projects/
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
+import VerifiedTag from '@site/src/component/verifiedTag';
+
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
        "@context": "https://schema.org",
@@ -40,6 +42,81 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       })
     }}
 ></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/hyperexecute-projects/"
+    },
+    "headline": "HyperExecute Projects",
+    "description": "Discover the power of HyperExecute Projects for agile test execution. Learn how to set up and run custom projects with ease, maximizing testing efficiency.",
+    "url": "https://www.testmuai.com/support/docs/hyperexecute-projects/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "HyperExecute",
+    "keywords": [
+      "TestMu AI Hyperexecute",
+      "TestMu AI Hyperexecute help",
+      "TestMu AI Hyperexecute documentation"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "The copied project detail which you need to add to the YAML will look like this",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": " project:\n    name: 'demo-project' #project name\n    id: '1abc2345-56de-7890-f1cg-h2ij34k56789' #project id"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Method 2: Create a New Project Automatically",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": " project:\n    name: 'unique_project_name'"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 Projects serve as a centralized platform for organizing and managing test executions. By grouping similar tests, controlling access, and tracking progress, Projects streamline the testing process. You can configure [custom project](/support/docs/hyperexecute-projects/#setup-your-project) and [workflow setups](/support/docs/hyperexecute-projects/#schedule-your-workflows), as well as [integrate Tosca, Tosca DEX, and JMeter tests](/support/docs/hyperexecute-projects/#setting-up-specialized-projects) for unified management. This enables efficient test script creation, automated execution scheduling, and valuable insights into test results.
 
 ## Link Jobs to Projects Using YAML
@@ -55,6 +132,9 @@ If you already have a project in HyperExecute, follow these steps to connect you
 5. All jobs using this YAML will automatically appear in your selected project. 
 
 The copied project detail which you need to add to the YAML will look like this:
+
+<VerifiedTag value="Verified" />
+
 ```yaml
  project:
     name: 'demo-project' #project name
@@ -71,6 +151,8 @@ Want to start fresh or organize jobs under a new project? You can create one dir
 
 1. Think of a unique name that clearly identifies what you're testing.
 2. Include the project name in your YAML file in the following format.
+
+<VerifiedTag value="Verified" />
 
 ```yaml
  project:

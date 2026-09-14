@@ -15,10 +15,140 @@ canonical: https://www.testmuai.com/support/docs/sim-support-realdevices/
 site_name: TestMu AI
 url: https://www.testmuai.com/support/docs/sim-support-realdevices/
 ---
+
 import CodeBlock from '@theme/CodeBlock';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
+<script type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify({
+       "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": BRAND_URL
+        },{
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Support",
+          "item": `${BRAND_URL}/support/docs/`
+        },{
+          "@type": "ListItem",
+          "position": 3,
+          "name": "SIM & eSIM on Real Devices",
+          "item": `${BRAND_URL}/support/docs/sim-support-realdevices/`
+        }]
+      })
+    }}
+></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/sim-support-realdevices/"
+    },
+    "headline": "SIM & eSIM on Real Devices",
+    "description": "Learn how to manually test SIM and eSIM scenarios on real mobile devices using TestMu AI, including configurations, SMS validation, and supported devices.",
+    "url": "https://www.testmuai.com/support/docs/sim-support-realdevices/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Real Device",
+    "keywords": [
+      "SIM",
+      "eSIM",
+      "iOS"
+    ],
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "dateModified": "2026-07-29T17:59:21+05:30"
+  }) }}
+/>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Configuring SIM Support for Manual Testing",
+      "description": "Learn how to manually test SIM and eSIM scenarios on real mobile devices using TestMu AI, including configurations, SMS validation, and supported devices.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Enable SIM Support",
+          "text": "On the App Testing Dashboard, click Advanced Settings and enable the SIM Enabled toggle. This will unlock additional options for configuring SIM and eSIM.",
+          "url": "https://www.testmuai.com/support/docs/sim-support-realdevices/#step-1-enable-sim-support"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Select SIM Configurations",
+          "text": "Choose your Country, Carrier, and SIM Type. The availability of SIM types may vary by region and device. For customers with the region filter enabled, the country option will not be available for selection. In such cases, the country is automatically determined by the chosen region. Currently, eSIM support is limited to selected iPhone models only. Android devices support physical SIM at this time.",
+          "url": "https://www.testmuai.com/support/docs/sim-support-realdevices/#step-2-select-sim-configurations"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Start a Manual Session",
+          "text": "Launch a real device session from the dashboard.",
+          "url": "https://www.testmuai.com/support/docs/sim-support-realdevices/#step-3-start-a-manual-session"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Step 4: Verify Device Details",
+          "text": "From the session toolbar, open Switch to view details such as Phone Number, Region, Carrier, and SIM Type. Verify that the device matches your intended test configuration.",
+          "url": "https://www.testmuai.com/support/docs/sim-support-realdevices/#step-4-verify-device-details"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 5,
+          "name": "Step 5: Begin Testing",
+          "text": "With the device configured and details verified, you can now proceed to test your application under real SIM conditions. Use the session to validate how your app interacts with SMS messages, confirm that authentication flows work as expected, and observe the overall user experience in a live environment.",
+          "url": "https://www.testmuai.com/support/docs/sim-support-realdevices/#step-5-begin-testing"
+        }
+      ]
+    }
+  ]) }}
+/>
 
 # SIM Support On Public Real Devices
 
@@ -43,7 +173,6 @@ To unlock this feature, purchase or upgrade to the required [plan](https://www.t
 - **SMS Interrupt Testing**: Receive SMS messages during testing and check how the app responds to message interrupts.  
 - **Messaging Workflows**: Validate outbound and inbound SMS behavior while interacting with the app manually.  
 
-
 ---
 
 ## Configuring SIM Support for Manual Testing
@@ -61,8 +190,6 @@ Choose your **Country**, **Carrier**, and **SIM Type**. The availability of SIM 
 | Ireland | Three                 | Physical SIM / eSIM (iOS only) |
 | India   | Airtel, Jio, Vodafone | Physical SIM                |
 | USA     | T-Mobile, Verizon, AT&T | Physical SIM / eSIM (iOS only) |
-
-
 
 :::info
 - For customers with the **region filter** enabled, the country option will not be available for selection. In such cases, the country is automatically determined by the chosen region.  

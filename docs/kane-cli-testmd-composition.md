@@ -15,6 +15,8 @@ slug: kane-cli-testmd-composition/
 canonical: https://www.testmuai.com/support/docs/kane-cli-testmd-composition/
 ---
 
+import VerifiedTag from '@site/src/component/verifiedTag';
+
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
         "@context": "https://schema.org",
@@ -37,6 +39,193 @@ canonical: https://www.testmuai.com/support/docs/kane-cli-testmd-composition/
         }]
       }) }}
 ></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/kane-cli-testmd-composition/"
+    },
+    "headline": "Composing tests with @import",
+    "description": "Split a test.md into reusable helper files with @import: syntax, path resolution, optional imports, what propagates, variables across imports, helper outputs and sharing helpers across projects.",
+    "url": "https://www.testmuai.com/support/docs/kane-cli-testmd-composition/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Kane CLI",
+    "keywords": [
+      "kane cli import",
+      "test.md helpers",
+      "reusable flows"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "There is no kane-cli new-helper command \u2014 just write the file",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Markdown",
+        "text": "---\nmode: testing\n---\n\n# Login helper\n\n## Open the login page\nOpen https://app.example.com/login.\n\n## Sign in\nType {{tester_email}} in the email field and {{tester_password}} in the password field, then submit. Verify the URL contains /home."
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "It can be referenced from any test",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Markdown",
+        "text": "## Sign in\n@import ./helpers/login.md"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "@import syntax",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Markdown",
+        "text": "## Step heading\n@import <path>"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Rules",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Markdown",
+        "text": "## OK\n@import ./helpers/login.md\n\n## OK with optional\n```yaml\noptional: true"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "NOT OK \u2014 extra config",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "timeout: 60"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "NOT OK \u2014 body mixes prose and import",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n## How paths resolve\n\nPath resolution is relative to the file that contains the `@import`, never to your shell:\n"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "How paths resolve",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\nWhen `checkout_test.md` imports `../../helpers/login.md`, the path is relative to `tests/e2e/`, so it resolves to `helpers/login.md`. When `login.md` imports `./submit-button.md`, the path is relative to `helpers/`, so it resolves to `helpers/submit-button.md`.\n\nYou can also use absolute paths:\n\n```markdown\n@import /Users/me/project/helpers/login.md"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "A test like this",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Markdown",
+        "text": "## Sign in\n@import ./helpers/login.md\n\n## Open settings\nClick the user menu and choose Settings."
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "A root-level @import step can be marked optional in the same way a prose step can",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Markdown",
+        "text": "## Skip the tour if it shows up\n```yaml\noptional: true"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Skip the tour if it shows up",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\nIf the helper fails, the run continues to the next step. The `Result.md` entry is suffixed with `(optional)`.\n\nOptional is intentionally **not** allowed on nested `@import` steps \u2014 only the root test decides which imports may fail. Helpers cannot decide on their own that they may be skipped.\n\n## What propagates through `@import`\n\nSome settings travel with the import; others are run-wide and apply only at the root.\n\n**Propagate to imported steps:**\n\n- `variables` \u2014 the root file's variables (and any added by `--variables-file` / `--variables`) are visible inside helpers. A helper can reference `{{tester_email}}` if the root test defines it.\n- `global_context` and `local_context` \u2014 context is shared across the whole run.\n- Per-step settings on an objective inside a helper apply to that step.\n\n**Do not propagate (root-only):**\n\n- Chrome settings: `target`, `chrome_profile`, `cdp_endpoint`, `ws_endpoint`, `headless`.\n- `mode` (`action` vs `testing`).\n- `on_lock_conflict`.\n- Authentication.\n\nThese are decided once for the whole run from the root file (or its CLI flags). Setting them in a helper's frontmatter has no effect \u2014 the helper's chrome / mode / auth keys are silently ignored.\n\nA practical consequence: there is only **one** browser per run, with **one** auth context. A helper cannot, for example, open a fresh Chrome with a different profile.\n\n## Variables across imports\n\nVariables are namespaced flat across the whole run \u2014 a single map merged at the root. A helper sees whatever variables the root configuration produces.\n\n```markdown\n---\n# checkout_test.md\nvariables:\n  tester_email: \"alice@example.com\"\n  tester_password:\n    value: \"s3cret\"\n    secret: true\n---\n\n## Sign in\n@import ./helpers/login.md\n\n## Add a product\nOpen https://app.example.com/products and add the first item to cart."
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Add a product",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Markdown",
+        "text": "---\n# helpers/login.md (variables block here is optional)\n---\n\n## Open the login page\nOpen https://app.example.com/login.\n\n## Submit credentials\nType {{tester_email}} and {{tester_password}}, then submit."
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "The recording for each call site lives next to the helper file",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "checkout_test.md\nhelpers/\n  login.md\n  helper-output-login-checkout-2/   # for the @import at root step 2\n    Result.md\n    .internal/...                   # cached recordings for this call site\n  helper-output-login-checkout-4/   # for the @import at root step 4\n    Result.md\n    .internal/..."
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Sharing is a filesystem operation",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "cp /projA/common/login.md /projB/common/login.md\n# Optional \u2014 copy the cached recordings too, so projB doesn't have to re-author:\ncp -r /projA/common/helper-output-login-*  /projB/common/"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "A small suite with a shared login helper and two tests that use it",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "tests/\n  checkout_test.md\n  dashboard_test.md\nhelpers/\n  login.md"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "helpers/login.md",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Markdown",
+        "text": "---\nmode: testing\n---\n\n# Login helper\n\n## Open the login page\nOpen https://app.example.com/login.\n\n## Submit credentials\nType \"{{tester_email}}\" in the email field and \"{{tester_password}}\" in the password field. Submit the form. Verify the URL contains /home."
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "tests/checkout_test.md",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Markdown",
+        "text": "---\nmode: testing\nvariables:\n  tester_email: \"alice@example.com\"\n  tester_password:\n    value: \"s3cret-pa55\"\n    secret: true\n---\n\n# Checkout\n\n## Sign in\n@import ../helpers/login.md\n\n## Add product to cart\nClick the search box, type \"wireless headphones\", press Enter, click the first product, then click Add to Cart.\n\n## Verify cart badge\nVerify the cart icon in the header shows a count of 1 or higher."
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "tests/dashboard_test.md",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Markdown",
+        "text": "---\nmode: testing\nvariables:\n  tester_email: \"alice@example.com\"\n  tester_password:\n    value: \"s3cret-pa55\"\n    secret: true\n---\n\n# Dashboard\n\n## Sign in\n@import ../helpers/login.md\n\n## Open the recent activity panel\nClick \"Recent activity\" in the left sidebar. Verify a list of activity rows is rendered."
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "After running both tests once, the layout on disk is",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "tests/\n  checkout_test.md\n  dashboard_test.md\n  output-checkout/\n    Result.md\n    .internal/...\n  output-dashboard/\n    Result.md\n    .internal/...\nhelpers/\n  login.md\n  helper-output-login-checkout-1/\n    Result.md\n    .internal/...\n  helper-output-login-dashboard-1/\n    Result.md\n    .internal/..."
+      }
+    ],
+    "dateModified": "2026-09-03T14:41:00+05:30"
+  }) }}
+/>
+
 Real test suites repeat themselves. Many tests start with the same login flow. Many regression tests visit the same setup pages before doing anything interesting. Copy-pasting those steps into every test makes them brittle and tedious to update.
 
 `@import` lets you extract a repeating flow into a helper file and reuse it from many tests. Helpers are first-class `_test.md`-style files that live alongside your tests. Editing one helper updates every test that imports it.
@@ -56,6 +245,8 @@ A few common cases where splitting pays off:
 
 A helper file is any `.md` file whose name does **not** end in `_test.md`. There is no `kane-cli new-helper` command — just write the file:
 
+<VerifiedTag value="Verified" />
+
 ```markdown
 ---
 mode: testing
@@ -72,6 +263,8 @@ Type {{tester_email}} in the email field and {{tester_password}} in the password
 
 Save this as `helpers/login.md`. It can be referenced from any test:
 
+<VerifiedTag value="Verified" />
+
 ```markdown
 ## Sign in
 @import ./helpers/login.md
@@ -82,6 +275,8 @@ Helpers cannot be run directly — `kane-cli testmd run ./helpers/login.md` is r
 ## `@import` syntax
 
 `@import` is a step body. It replaces a prose objective in a step.
+
+<VerifiedTag value="Verified" />
 
 ```markdown
 ## Step heading
@@ -94,6 +289,8 @@ Rules:
 - `<path>` may be relative or absolute. Relative paths resolve against the directory of the **importing file**, not against your shell's working directory.
 - The imported file must exist; missing paths are a parse error.
 - The `yaml` block of an `@import` step may only contain `optional`. Any other key is rejected.
+
+<VerifiedTag value="Verified" />
 
 ```markdown
 ## OK
@@ -133,6 +330,8 @@ When `checkout_test.md` imports `../../helpers/login.md`, the path is relative t
 
 You can also use absolute paths:
 
+<VerifiedTag value="Verified" />
+
 ```markdown
 @import /Users/me/project/helpers/login.md
 ```
@@ -144,6 +343,8 @@ You can also use absolute paths:
 When the resolver hits an `@import` step, it inlines every step from the imported file into the run, in order, at that position. The imported file's frontmatter — except for variables and context — is **not** merged into the run. The result is a flat list of steps from the root file's perspective.
 
 A test like this:
+
+<VerifiedTag value="Verified" />
 
 ```markdown
 ## Sign in
@@ -172,6 +373,8 @@ There is no built-in depth limit — helpers can import helpers can import helpe
 ## Optional imports
 
 A root-level `@import` step can be marked optional in the same way a prose step can:
+
+<VerifiedTag value="Verified" />
 
 ```markdown
 ## Skip the tour if it shows up
@@ -210,6 +413,8 @@ A practical consequence: there is only **one** browser per run, with **one** aut
 
 Variables are namespaced flat across the whole run — a single map merged at the root. A helper sees whatever variables the root configuration produces.
 
+<VerifiedTag value="Verified" />
+
 ```markdown
 ---
 # checkout_test.md
@@ -226,6 +431,8 @@ variables:
 ## Add a product
 Open https://app.example.com/products and add the first item to cart.
 ```
+
+<VerifiedTag value="Verified" />
 
 ```markdown
 ---
@@ -287,6 +494,8 @@ In practice: a one-line edit to a heavily-imported helper triggers a lot of re-a
 
 There is no built-in command to share a helper across two checkouts. Sharing is a filesystem operation:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 cp /projA/common/login.md /projB/common/login.md
 # Optional — copy the cached recordings too, so projB doesn't have to re-author:
@@ -309,6 +518,8 @@ helpers/
 
 ### `helpers/login.md`
 
+<VerifiedTag value="Verified" />
+
 ```markdown
 ---
 mode: testing
@@ -324,6 +535,8 @@ Type "{{tester_email}}" in the email field and "{{tester_password}}" in the pass
 ```
 
 ### `tests/checkout_test.md`
+
+<VerifiedTag value="Verified" />
 
 ```markdown
 ---
@@ -348,6 +561,8 @@ Verify the cart icon in the header shows a count of 1 or higher.
 ```
 
 ### `tests/dashboard_test.md`
+
+<VerifiedTag value="Verified" />
 
 ```markdown
 ---

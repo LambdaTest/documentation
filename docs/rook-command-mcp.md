@@ -6,6 +6,85 @@ description: Inspect, add, approve, enable, disable, or remove MCP server defini
 slug: rook-command-mcp/
 ---
 
+import { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
+
+<script type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify({
+       "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": BRAND_URL
+        },{
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Support",
+          "item": `${BRAND_URL}/support/docs/`
+        },{
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Rook /mcp Command",
+          "item": `${BRAND_URL}/support/docs/rook-command-mcp/`
+        }]
+      })
+    }}
+></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/rook-command-mcp/"
+    },
+    "headline": "Rook /mcp Command",
+    "description": "Inspect, add, approve, enable, disable, or remove MCP server definitions used by Rook.",
+    "url": "https://www.testmuai.com/support/docs/rook-command-mcp/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Agent Testing",
+    "keywords": [],
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "dateModified": "2026-09-04T12:50:18+05:30"
+  }) }}
+/>
 # <code>/mcp</code> Command
 
 Use <code>/mcp</code> to manage MCP servers that Rook can discover or use for read-only verification and controlled tool access.
@@ -13,6 +92,8 @@ Use <code>/mcp</code> to manage MCP servers that Rook can discover or use for re
 <img loading="lazy" src={require('../assets/images/rook/commands/rook-command-mcp.png').default} alt="Rook MCP command help with list enable disable and approve" className="doc_img"/>
 
 ## Interactive syntax
+
+<VerifiedTag value="Verified" />
 
 ~~~text
 /mcp
@@ -23,6 +104,8 @@ Use <code>/mcp</code> to manage MCP servers that Rook can discover or use for re
 ~~~
 
 ## Headless syntax
+
+<VerifiedTag value="Verified" />
 
 ~~~bash
 rook mcp list [--json]
@@ -41,6 +124,8 @@ For stdio servers, pass the command as the positional value after the server nam
 ## Real-world verification example
 
 A refund agent says it issued a refund. Configure a separate MCP server that has a read-only <code>get_refund_status</code> tool:
+
+<VerifiedTag value="Verified" />
 
 ~~~bash
 rook mcp add refund-reader 'refund-mcp-server --read-only' --scope project

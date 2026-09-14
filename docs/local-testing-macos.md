@@ -15,8 +15,9 @@ site_name: TestMu AI
 slug: local-testing-macos/
 canonical: https://www.testmuai.com/support/docs/local-testing-macos/
 ---
-import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -42,6 +43,80 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/local-testing-macos/"
+    },
+    "headline": "Local Testing For MacOS",
+    "description": "This documentation will help you perform Localhost testing on macOS via TestMu AI tunnel .Test private server URLs, locally hosted web-apps and websites on 3000+ real browsers on secure TestMu AI cloud infrastructure.",
+    "url": "https://www.testmuai.com/support/docs/local-testing-macos/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Testing Locally",
+    "keywords": [
+      "local app testing",
+      "testmu ai local testing",
+      "testmu ai local tunnel"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "The command will look like",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "LT --user {user's login email} --key {user's access key} --tunnelName {user's tunnel name}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Configuring Connection With TestMu AI tunnel",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "LT --user example@lambdatest.com --key 123456789abcdefghijklmnopqrstuv --tunnelName LambdaTest"
+      }
+    ],
+    "dateModified": "2026-08-12T15:40:32+05:30"
+  }) }}
+/>
+
 # Local Testing For MacOS
 
 ***
@@ -53,7 +128,6 @@ You can download the binary file responsible for establishing a tunnel connectio
 
 | [DOWNLOAD <BrandName /> tunnel ZIP FOR MAC 64 BIT](https://downloads.lambdatest.com/tunnel/v3/mac/64bit/LT_Mac.zip) |
 |:------------------------------------------------------------------------------------------------------------:|
-
 
 >This file is supported for the below listed macOS:   
 > * macOS Sonoma 
@@ -84,10 +158,16 @@ This zip file contains the tunnel binary which will help in establishing a secur
 <img loading="lazy" src={require('../assets/images/local-testing-macos/local-mac-2.webp').default} alt="extracting the binary zip file" width="1080" height="170" className="doc_img"/>
 
 **Step 3**:  Paste the copied string to execute the downloaded binary file. The command will look like:
+
+<VerifiedTag value="Verified" />
+
 ```
 LT --user {user's login email} --key {user's access key} --tunnelName {user's tunnel name}
 ```
 So for example, if your user login email is example@lambdatest.com, user key is 123456789abcdefghijklmnopqrstuv and tunnel name is <BrandName />, the command would be:
+
+<VerifiedTag value="Verified" />
+
 ```
 LT --user example@lambdatest.com --key 123456789abcdefghijklmnopqrstuv --tunnelName LambdaTest
 ```
@@ -103,7 +183,6 @@ In a few seconds, after you execute the command, a tunnel connection will be est
 <img loading="lazy" src={require('../assets/images/local-testing-macos/w11.webp').default} alt="Xampp Starting" width="511" height="458" className="doc_img"/>
 
 **Step 2**:  Navigate to **‘Real Time Testing’**  menu. Enter the localhost URL you want to test in the text field provided and Select the tunnel via which you want to run the test.
-
 
 <img loading="lazy" src={require('../assets/images/local-testing-macos/local-mac-5.webp').default} alt="Realtime Testing with <BrandName />" width="1355" height="613" className="doc_img"/>
 

@@ -13,8 +13,124 @@ canonical: https://www.testmuai.com/support/docs/multi-device-testing/
 site_name: TestMu AI
 url: https://www.testmuai.com/support/docs/multi-device-testing/
 ---
+
 import CodeBlock from '@theme/CodeBlock';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
+<script type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify({
+       "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": BRAND_URL
+        },{
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Support",
+          "item": `${BRAND_URL}/support/docs/`
+        },{
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Multi-Device Testing on Real Devices",
+          "item": `${BRAND_URL}/support/docs/multi-device-testing/`
+        }]
+      })
+    }}
+></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/multi-device-testing/"
+    },
+    "headline": "Multi-Device Testing on Real Devices",
+    "description": "Learn how to test multiple devices simultaneously in a single session on TestMu AI App Live, including setup, workflow, and best practices.",
+    "url": "https://www.testmuai.com/support/docs/multi-device-testing/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Real Device",
+    "keywords": [
+      "Multi-Device Testing",
+      "App Live",
+      "Real Devices"
+    ],
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "dateModified": "2026-07-29T17:52:46+05:30"
+  }) }}
+/>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Multi-Device Testing Workflow",
+      "description": "Learn how to test multiple devices simultaneously in a single session on TestMu AI App Live, including setup, workflow, and best practices.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Open a Real Device Session",
+          "text": "Log in to your App Live Dashboard, upload your app, and select a real device (Android or iOS).",
+          "url": "https://www.testmuai.com/support/docs/multi-device-testing/#step-1-open-a-real-device-session"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Add Devices Using Multi-Device Option",
+          "text": "Once the session is open, click on the add device option to add more devices. You can set up to 6 devices per session and select the device and application for each.",
+          "url": "https://www.testmuai.com/support/docs/multi-device-testing/#step-2-add-devices-using-multi-device-option"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Apply Multi Device Control Settings",
+          "text": "Once devices have been added to the session, you will see an option called Multi-Device Control. This feature allows you to apply common actions and settings across all connected devices simultaneously, reducing repetitive steps and ensuring consistent configurations. Supported Multi-Device Controls Currently, Record Session downloads are not compatible with QuickTime Player. If you are using macOS, you may need an alternative media player to view the recordings.",
+          "url": "https://www.testmuai.com/support/docs/multi-device-testing/#step-3-apply-multi-device-control-settings"
+        }
+      ]
+    }
+  ]) }}
+/>
 
 # Multi-Device Testing on Real Devices
 

@@ -51,6 +51,64 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/kane-ai-automation-code-generation/"
+    },
+    "headline": "KaneAI Automation Code Generation",
+    "description": "Explore KaneAI\u2019s features and components to generate automation test code.",
+    "url": "https://www.testmuai.com/support/docs/kane-ai-automation-code-generation/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "KaneAI",
+    "keywords": [
+      "testmu ai automation",
+      "testmu ai kaneai",
+      "kaneai code gen"
+    ],
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "dateModified": "2026-09-09T20:21:05+05:30"
+  }) }}
+/>
+
+
 # How KaneAI Generates Automation Code
 ***
 
@@ -153,8 +211,17 @@ After code generation completes, the **Code** tab shows the status of each gener
 
 <img loading="lazy" src={require('../assets/images/kane-ai/code-gen-view.png').default} alt="KaneAI Code tab showing generated code with status and actions" className="doc_img"/>
 
+### What determines whether code is generated
+***
+
+Code generation depends on the state your test case was saved in. A test saved as **Ready** — every step has run and passed — generates code. A test saved as **Faulty** (a step errored) or **Unverified** (steps were added or edited but never run) does not, because code generation needs a step to have run at least once in order to learn the exact elements and actions involved.
+
+To move such a test to Ready, reopen it, run the remaining or errored steps to success, and save again. See [Save states](/support/docs/kaneai-authoring-session/#save-states).
+
 ### Code Generation States
 ***
+
+The states below describe generated code on the **Code** tab. They are separate from the save state of the test case — code generation only starts once a test is saved as Ready.
 
 | State | What it means |
 |---|---|

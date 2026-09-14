@@ -16,6 +16,7 @@ canonical: https://www.testmuai.com/support/docs/smartui-hooks-element-screensho
 ---
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -40,6 +41,142 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       })
     }}
 ></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/smartui-hooks-element-screenshot/"
+    },
+    "headline": "Take a Screenshot of a Specific Element on a Webpage (SmartUI Hooks)",
+    "description": "Capture a visual baseline for a specific element on a webpage using SmartUI Hooks on LambdaTest.",
+    "url": "https://www.testmuai.com/support/docs/smartui-hooks-element-screenshot/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "SmartUI",
+    "keywords": [
+      "smartui hooks",
+      "element screenshot",
+      "smartui element capture"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 3: Call the SmartUI Element Screenshot Hook",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "const config = {\n  screenshotName: \"Checkout_Summary_Block\",\n  elementType: \"css_selector\",\n  element: \"section.checkout-summary\",\n  fullPage: false\n};\n\nawait driver.executeScript(\"smartui.takeScreenshot\", config);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "First resolve the element in your test, then pass it to the hook",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "const el = await driver.findElement(By.className('hero-heading'));\n\nconst config = {\n  screenshotName: 'region-screenshot',\n  elementType: 'webElement',\n  element: el\n};\n\nawait driver.executeScript('smartui.takeScreenshot', config);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "The following example collects visible elements, builds XPath locators, and returns metadata for the first N matches",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "const elements = await driver.executeScript(`\n  function getPath(el) {\n    if (!el || el.nodeType !== 1) return '';\n    if (el.id) return '//*[@id=\"' + el.id.replace(/\"/g, '\\\\\\\\\"') + '\"]';\n    if (el === document.body) return '/html/body';\n    let ix = 0;\n    const siblings = el.parentNode ? el.parentNode.children : [];\n    for (let i = 0; i < siblings.length; i++) {\n      if (siblings[i] === el) {\n        return getPath(el.parentNode) + '/' + el.tagName.toLowerCase() + '[' + (ix + 1) + ']';\n      }\n      if (siblings[i].tagName === el.tagName) ix++;\n    }\n    return '';\n  }\n\n  const out = [];\n  const nodes = Array.from(document.querySelectorAll('body *'));\n  const max = arguments[0];\n\n  for (let i = 0; i < nodes.length && out.length < max; i++) {\n    const n = nodes[i];\n    const r = n.getBoundingClientRect();\n    const st = window.getComputedStyle(n);\n\n    if (r.width < 8 || r.height < 8) continue;\n    if (st.display === 'none' || st.visibility === 'hidden' || st.opacity === '0') continue;\n\n    const xp = getPath(n);\n    if (!xp) continue;\n\n    out.push({\n      xpath: xp,\n      tag: n.tagName.toLowerCase(),\n      id: n.id || '',\n      cls: (n.className && String(n.className).split) ? String(n.className).split(/\\\\s+/)[0] : '',\n      idx: i\n    });\n  }\n\n  return out;\n`, 25);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Then loop through the collected elements and upload one SmartUI element screenshot for each",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "for (const item of elements) {\n  const label = item.id\n    ? `${item.tag}_id_${item.id}`\n    : item.cls\n      ? `${item.tag}_class_${item.cls}`\n      : `${item.tag}_idx_${item.idx}`;\n\n  const screenshotName = `element_${label}`.replace(/[^a-zA-Z0-9_-]+/g, '_').slice(0, 80);\n\n  await driver.executeScript(\"smartui.takeScreenshot\", {\n    screenshotName,\n    elementType: 'xpath',\n    element: item.xpath,\n    fullPage: false\n  });\n}"
+      }
+    ],
+    "dateModified": "2026-07-14T13:51:46+05:30"
+  }) }}
+/>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Take a Screenshot of a Specific Element on a Webpage (SmartUI Hooks)",
+      "description": "Use this guide when you run automated web tests on LambdaTest and want SmartUI to capture a visual baseline for a specific part of the page, such as a component, card, table, or section, instead of the full browser window. Make sure you have: A LambdaTest account with Web Automation access, such as Selenium on the LambdaTest Grid. SmartUI enabled for the session. Your SmartUI project and build must be configured on the test session. A locator for the target element, such as a CSS selector, XPath, or HTML id. You can also pass an already-resolved element handle, see Capture by Resolved Element Handle. Do not store usernames or access keys in your source repository. Use environment variables or your CI secret manager instead.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Open the Page in Your Test",
+          "text": "In your test script, navigate to the target URL and wait until the UI is fully loaded. Use explicit waits where possible so the element is present and stable before capture.",
+          "url": "https://www.testmuai.com/support/docs/smartui-hooks-element-screenshot/#step-1-open-the-page-in-your-test"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Scroll the Element Into View",
+          "text": "Before taking the screenshot, scroll the target element into the visible area of the page. This helps ensure the correct region is ready for capture. Use your framework's normal scrolling method, such as JavaScript scrollIntoView() or your Selenium helper.",
+          "url": "https://www.testmuai.com/support/docs/smartui-hooks-element-screenshot/#step-2-scroll-the-element-into-view"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Call the SmartUI Element Screenshot Hook",
+          "text": "Call the SmartUI hook through your driver's script executor, passing \"smartui.takeScreenshot\" as the command and a config object with your screenshot options: The config object must include at least these fields: Update elementType and element to match the locator used in your test.",
+          "url": "https://www.testmuai.com/support/docs/smartui-hooks-element-screenshot/#step-3-call-the-smartui-element-screenshot-hook"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Step 4: Repeat for Other Components",
+          "text": "If you want to capture more than one component, call the hook again with a different screenshotName for each one. Keep screenshot names stable across runs so SmartUI compares against the correct baseline.",
+          "url": "https://www.testmuai.com/support/docs/smartui-hooks-element-screenshot/#step-4-repeat-for-other-components"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 5,
+          "name": "Step 5: Find the Screenshot in SmartUI",
+          "text": "Open SmartUI from your LambdaTest account. Select the project and build that match your test run. Locate the screenshot using the screenshotName.",
+          "url": "https://www.testmuai.com/support/docs/smartui-hooks-element-screenshot/#step-5-find-the-screenshot-in-smartui"
+        }
+      ]
+    }
+  ]) }}
+/>
 
 # Take a Screenshot of a Specific Element on a Webpage (SmartUI Hooks)
 
@@ -72,6 +209,8 @@ This helps ensure the correct region is ready for capture. Use your framework's 
 ## Step 3: Call the SmartUI Element Screenshot Hook
 
 Call the SmartUI hook through your driver's script executor, passing `"smartui.takeScreenshot"` as the command and a config object with your screenshot options:
+
+<VerifiedTag value="Verified" />
 
 ```js
 const config = {
@@ -112,6 +251,8 @@ When `elementType` is `webElement`, you pass a real element object, not a string
 :::
 
 First resolve the element in your test, then pass it to the hook:
+
+<VerifiedTag value="Verified" />
 
 ```javascript
 const el = await driver.findElement(By.className('hero-heading'));
@@ -159,6 +300,8 @@ This is useful when you want to build a component inventory for a page without m
 
 The following example collects visible elements, builds XPath locators, and returns metadata for the first `N` matches:
 
+<VerifiedTag value="Verified" />
+
 ```javascript
 const elements = await driver.executeScript(`
   function getPath(el) {
@@ -205,6 +348,8 @@ const elements = await driver.executeScript(`
 ```
 
 Then loop through the collected elements and upload one SmartUI element screenshot for each:
+
+<VerifiedTag value="Verified" />
 
 ```javascript
 for (const item of elements) {

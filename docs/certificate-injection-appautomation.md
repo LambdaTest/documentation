@@ -33,6 +33,8 @@ import RealDeviceTag from '../src/component/realDevice';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 
+import VerifiedTag from '@site/src/component/verifiedTag';
+
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
        "@context": "https://schema.org",
@@ -56,6 +58,151 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       })
     }}
 ></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/certificate-injection-appautomation/"
+    },
+    "headline": "Certificate Injection in App Automation on Real Devices",
+    "description": "Install custom CA certificates and client identities on TestMu AI real devices during Appium app automation sessions to test certificate-based authentication, SSL pinning, and mutual TLS.",
+    "url": "https://www.testmuai.com/support/docs/certificate-injection-appautomation/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "App Automation",
+    "keywords": [
+      "certificate injection",
+      "certificate based authentication",
+      "custom certificates"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "The response returns the media_url that you reference in your capabilities",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JSON",
+        "text": "{\n  \"media_url\": \"lt://MEDIA9f2c4b18a7d54e3ba0c6f19d2e8b7c05\",\n  \"name\": \"corp-root-ca.crt\",\n  \"status\": \"success\"\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 2: Set the customCertificates Capability (JSON)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JSON",
+        "text": "{\n  \"LT:Options\": {\n    \"platformName\": \"Android\",\n    \"deviceName\": \"Pixel 7\",\n    \"platformVersion\": \"14\",\n    \"isRealMobile\": true,\n    \"app\": \"lt://APP1234567890\",\n    //highlight-start\n    \"customCertificates\": [\n      { \"certificateId\": \"MEDIA9f2c4b18a7d54e3ba0c6f19d2e8b7c05\" },\n      {\n        \"certificateId\": \"MEDIA4a71e0c93f6d48b2915ac8de7b04f6a1\",\n        \"password\": \"s3cret\"\n      }\n    ]\n    //highlight-end\n  }\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Java",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "Map<String, Object> caCert = new HashMap<>();\ncaCert.put(\"certificateId\", \"MEDIA9f2c4b18a7d54e3ba0c6f19d2e8b7c05\");\n\nMap<String, Object> identity = new HashMap<>();\nidentity.put(\"certificateId\", \"MEDIA4a71e0c93f6d48b2915ac8de7b04f6a1\");\nidentity.put(\"password\", System.getenv(\"CERT_PASSWORD\"));\n\nltOptions.put(\"isRealMobile\", true);\n//highlight-next-line\nltOptions.put(\"customCertificates\", List.of(caCert, identity));\n\ncapabilities.setCapability(\"LT:Options\", ltOptions);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Python",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Python",
+        "text": "lt_options = {\n    \"platformName\": \"iOS\",\n    \"deviceName\": \"iPhone 14\",\n    \"platformVersion\": \"17\",\n    \"isRealMobile\": True,\n    \"app\": \"lt://APP1234567890\",\n    #highlight-start\n    \"customCertificates\": [\n        {\"certificateId\": \"MEDIA9f2c4b18a7d54e3ba0c6f19d2e8b7c05\"},\n        {\"certificateId\": \"MEDIA4a71e0c93f6d48b2915ac8de7b04f6a1\",\n         \"password\": os.environ[\"CERT_PASSWORD\"]},\n    ],\n    #highlight-end\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "JavaScript",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "const capabilities = {\n  'LT:Options': {\n    platformName: 'Android',\n    deviceName: 'Galaxy S23',\n    platformVersion: '14',\n    isRealMobile: true,\n    app: 'lt://APP1234567890',\n    //highlight-start\n    customCertificates: [\n      { certificateId: 'MEDIA9f2c4b18a7d54e3ba0c6f19d2e8b7c05' },\n      { certificateId: 'MEDIA4a71e0c93f6d48b2915ac8de7b04f6a1',\n        password: process.env.CERT_PASSWORD },\n    ],\n    //highlight-end\n  },\n};"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "YAML",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "customCertificates:\n  - certificateId: \"MEDIA9f2c4b18a7d54e3ba0c6f19d2e8b7c05\"\n  - certificateId: \"MEDIA4a71e0c93f6d48b2915ac8de7b04f6a1\"\n    password: \"s3cret\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "In the build you are testing, add a network_security_config.xml file that trusts the user certificate store",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "XML",
+        "text": "<network-security-config>\n    <base-config>\n        <trust-anchors>\n            <certificates src=\"system\" />\n            <certificates src=\"user\" />\n        <\/trust-anchors>\n    <\/base-config>\n<\/network-security-config>"
+      }
+    ],
+    "dateModified": "2026-08-27T03:34:12+05:30"
+  }) }}
+/>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Certificate Injection in App Automation on Real Devices",
+      "description": "Install custom CA certificates and client identities on TestMu AI real devices during Appium app automation sessions to test certificate-based authentication, SSL pinning, and mutual TLS.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Upload the Certificate",
+          "text": "Upload the file to the media upload endpoint with type=cert, using your TestMu AI username and access key for authentication. Uploaded certificates are saved to your account, so you only need to upload each certificate once. Upload a .crt, .cer, or .mobileconfig file. No password is involved. {`curl -u \"${YOURLAMBDATESTUSERNAME()}:${YOURLAMBDATESTACCESS_KEY()}\" \\\\ -X POST \"https://api.lambdatest.com/mfs/v1.0/media/upload\" \\\\ -F \"media_file=@/Users/macuser/Downloads/corp-root-ca.crt\" \\\\ -F \"type=cert\"`} For a PKCS#12 bundle, send the password along with the upload. The password is stored securely against the certificate and applied automatically in every session that uses it. {`curl -u \"${YOURLAMBDATESTUSERNAME()}:${YOURLAMBDATESTACCESS_KEY()}\" \\\\ -X POST \"https://api.lambdatest.com/mfs/v1.0/media/upload\" \\\\ -F \"media_file=@/Users/macuser/Downloads/client-identity.pfx\" \\\\ -F \"type=cert\" \\\\ -F \"password=$CERT_PASSWORD\"`} Request Parameters The response returns the media_url that you reference in your capabilities: Use this value as the certificateId in your capabilities. Both the full lt://MEDIA... form and the bare MEDIA... identifier are accepted. The file is validated before it is stored. If it cannot be parsed as a certificate, the upload is rejected immediately instead of failing later on a device. You can also upload and manage certificates from the Certificates section of the App Testing dashboard. Certificates uploaded there are also available to your automation...",
+          "url": "https://www.testmuai.com/support/docs/certificate-injection-appautomation/#step-1-upload-the-certificate"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Set the customCertificates Capability",
+          "text": "Pass customCertificates inside LT:Options as an array of objects. Each entry requires a certificateId. The password field is optional and overrides the password stored at upload time. These two capabilities are easy to confuse and do very different things. customCertificates changes the device trust store. Use it when the device itself must trust your certificate authority, or when your app must present a client identity. Real device app automation only. acceptInsecureCerts is a standard W3C WebDriver capability that tells the browser context to proceed past an untrusted certificate. It installs nothing and does not touch the device trust store. If you are testing a native app against a private certificate authority, customCertificates is the one you want. Capabilities are validated before a device is allocated. The session request fails with a 400 if an entry is malformed, a certificateId is missing, you specify more than three certificates, a format rule is broken, or an ID does not exist on your account. No session time or concurrency slot is used.",
+          "url": "https://www.testmuai.com/support/docs/certificate-injection-appautomation/#step-2-set-the-customcertificates-capability"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Read the Installation Result",
+          "text": "Certificates are installed after the app is installed and before your test starts. Each certificate reports its own status in the session logs on the Automation dashboard, so you can see exactly which ones installed successfully. If a certificate fails to install, your session does not fail. The session starts and your test runs, so you can decide whether the missing certificate affects the scenario you are testing.",
+          "url": "https://www.testmuai.com/support/docs/certificate-injection-appautomation/#step-3-read-the-installation-result"
+        }
+      ]
+    }
+  ]) }}
+/>
+
+
 
 <RealDeviceTag value="Real Device" />
 
@@ -119,6 +266,8 @@ Upload the file to the media upload endpoint with `type=cert`, using your <Brand
 
 Upload a `.crt`, `.cer`, or `.mobileconfig` file. No password is involved.
 
+<VerifiedTag value="Verified" />
+
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">
 {`curl -u "${YOUR_LAMBDATEST_USERNAME()}:${YOUR_LAMBDATEST_ACCESS_KEY()}" \\
@@ -132,6 +281,8 @@ Upload a `.crt`, `.cer`, or `.mobileconfig` file. No password is involved.
   <TabItem value="pfx" label="PKCS#12 Identity (.pfx)">
 
 For a PKCS#12 bundle, send the password along with the upload. The password is stored securely against the certificate and applied automatically in every session that uses it.
+
+<VerifiedTag value="Verified" />
 
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">
@@ -155,6 +306,8 @@ For a PKCS#12 bundle, send the password along with the upload. The password is s
 | `password` | Only for `.pfx` | The password for the PKCS#12 bundle. Stored securely and reused automatically. |
 
 The response returns the `media_url` that you reference in your capabilities:
+
+<VerifiedTag value="Verified" />
 
 ```json
 {
@@ -196,6 +349,8 @@ If you are testing a native app against a private certificate authority, `custom
 <Tabs className="docs__val">
   <TabItem value="json" label="JSON" default>
 
+<VerifiedTag value="Verified" />
+
 ```json
 {
   "LT:Options": {
@@ -220,6 +375,8 @@ If you are testing a native app against a private certificate authority, `custom
   </TabItem>
   <TabItem value="java" label="Java">
 
+<VerifiedTag value="Verified" />
+
 ```java
 Map<String, Object> caCert = new HashMap<>();
 caCert.put("certificateId", "MEDIA9f2c4b18a7d54e3ba0c6f19d2e8b7c05");
@@ -237,6 +394,8 @@ capabilities.setCapability("LT:Options", ltOptions);
 
   </TabItem>
   <TabItem value="python" label="Python">
+
+<VerifiedTag value="Verified" />
 
 ```python
 lt_options = {
@@ -257,6 +416,8 @@ lt_options = {
 
   </TabItem>
   <TabItem value="javascript" label="JavaScript">
+
+<VerifiedTag value="Verified" />
 
 ```js
 const capabilities = {
@@ -279,6 +440,8 @@ const capabilities = {
 
   </TabItem>
   <TabItem value="yaml" label="YAML">
+
+<VerifiedTag value="Verified" />
 
 ```yaml
 customCertificates:
@@ -332,6 +495,8 @@ If a certificate fails to install, your session **does not fail**. The session s
 Since **Android 7**, an app trusts user-installed CA certificates only if its network security configuration allows it. Installing the CA on the device is **not enough on its own**. If your app uses the default configuration, it will still reject the connection.
 
 In the build you are testing, add a `network_security_config.xml` file that trusts the `user` certificate store:
+
+<VerifiedTag value="Verified" />
 
 ```xml
 <network-security-config>

@@ -16,9 +16,111 @@ site_name: TestMu AI
 slug: agent-skills/
 canonical: https://www.testmuai.com/support/docs/agent-skills/
 ---
+
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import VerifiedTag from '@site/src/component/verifiedTag';
+import { BRAND_URL } from '@site/src/component/BrandName';
 
+<script type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify({
+       "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": BRAND_URL
+        },{
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Support",
+          "item": `${BRAND_URL}/support/docs/`
+        },{
+          "@type": "ListItem",
+          "position": 3,
+          "name": "TestMu AI Agent Skills for Test Automation Frameworks",
+          "item": `${BRAND_URL}/support/docs/agent-skills/`
+        }]
+      })
+    }}
+></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/agent-skills/"
+    },
+    "headline": "TestMu AI Agent Skills for Test Automation Frameworks",
+    "description": "Install TestMu AI Agent Skills so your AI coding assistant writes and runs Selenium, Cypress, Playwright, Appium, and 70+ framework tests on the cloud.",
+    "url": "https://www.testmuai.com/support/docs/agent-skills/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Documentation",
+    "keywords": [
+      "testmu ai agent skills",
+      "ai agent skills for test automation",
+      "install agent skills"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Run the installer once per skill you want",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "codeRepository": "https://github.com/LambdaTest/agent-skills",
+        "text": "npx agentskillsforall add https://github.com/LambdaTest/agent-skills.git --skill selenium-skill\nnpx agentskillsforall add https://github.com/LambdaTest/agent-skills.git --skill playwright-skill\nnpx agentskillsforall add https://github.com/LambdaTest/agent-skills.git --skill cypress-skill"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "List every skill in the repository, then install the one you want",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "codeRepository": "https://github.com/LambdaTest/agent-skills",
+        "text": "npx agentskillsforall list https://github.com/LambdaTest/agent-skills.git"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
 # Agent Skills 
 ---
 
@@ -37,6 +139,8 @@ Use the `agentskillsforall` installer to add a skill straight from the repositor
 
 Add skills by name. Run the installer once per skill you want:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 npx agentskillsforall add https://github.com/LambdaTest/agent-skills.git --skill selenium-skill
 npx agentskillsforall add https://github.com/LambdaTest/agent-skills.git --skill playwright-skill
@@ -47,6 +151,8 @@ npx agentskillsforall add https://github.com/LambdaTest/agent-skills.git --skill
 <TabItem value='browse-all' label='Browse all available skills'>
 
 List every skill in the repository, then install the one you want:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 npx agentskillsforall list https://github.com/LambdaTest/agent-skills.git
@@ -173,9 +279,24 @@ Pick the skill for the framework you already test in. Each card opens that skill
     <div className="lt-sk-top"><p className="lt-sk-name">Kane CLI</p><span className="lt-sk-meta"><svg className="lt-sk-gh" viewBox="0 0 16 16" width="15" height="15" aria-hidden="true"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.6 7.6 0 012-.27c.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0016 8c0-4.42-3.58-8-8-8z"/></svg><span className="lt-sk-arrow">↗</span></span></div>
     <p className="lt-sk-desc">Natural-language browser automation in agent mode.</p>
   </a>
+  <a className="lt-sk-card" href="https://github.com/LambdaTest/rook/tree/main/skill-installer/skills">
+    <div className="lt-sk-top"><p className="lt-sk-name">Rook</p><span className="lt-sk-meta"><svg className="lt-sk-gh" viewBox="0 0 16 16" width="15" height="15" aria-hidden="true"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.6 7.6 0 012-.27c.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0016 8c0-4.42-3.58-8-8-8z"/></svg><span className="lt-sk-arrow">↗</span></span></div>
+    <p className="lt-sk-desc">Test, red-team and regression-check the AI agents you own.</p>
+  </a>
 </div>
 
 </div>
+
+## Skills That Ship With a Product
+
+Two TestMu AI products publish their own skill packages with a one-command installer. They are not part of the `agentskillsforall` catalog above, so install them directly (Node.js 22+):
+
+| Product | What the skill does | Install |
+|---|---|---|
+| [Rook](/support/docs/rook-installation/) | Tests, red-teams and regression-checks an AI agent you own, then reads the evidence-backed verdicts. Works with Claude Code, Codex and Gemini CLI. | `npx @testmuai/rook-skill` |
+| [Kane CLI](/support/docs/kane-cli-skills/) | Natural-language browser automation from your coding agent. | `npx @testmuai/kane-cli-skill` |
+
+Rook's skill source, references and user guide live in the [LambdaTest/rook](https://github.com/LambdaTest/rook#for-ai-coding-agents-reading-this) repository.
 
 ## Explore the Full Skill Catalog
 

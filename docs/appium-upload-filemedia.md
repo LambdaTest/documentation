@@ -30,6 +30,8 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 
 
+import VerifiedTag from '@site/src/component/verifiedTag';
+
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
        "@context": "https://schema.org",
@@ -53,6 +55,102 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       })
     }}
 ></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/uploadMedia/"
+    },
+    "headline": "Upload File and Media",
+    "description": "Seamlessly upload media and files on Real Devices during app and browser automation to enhance your testing scenarios and ensure comprehensive validation of your application's functionalities.",
+    "url": "https://www.testmuai.com/support/docs/uploadMedia/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "App Automation",
+    "keywords": [
+      "files upload",
+      "app test automation",
+      "browser test automation"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Below is a sample response demonstrating the return of the media_url parameter value",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "{\n    \"media_url\": \"lt://MEDIAb48ab11c599944ee9dcd26b3e2978d3c\",\n    \"name\": \"sample.csv\",\n    \"status\": \"success\",\n    \"custom_id\": \"Sample\"\n}"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Upload File and Media feature in App & Browser Automation",
+      "description": "This section provides a comprehensive guide on leveraging this feature within automation tests. The steps are identical for app automation and browser (web) automation on real devices. It comprises two fundamental steps: Uploading the files and obtaining the media_url. Using media_url into your tests using uploadMedia capability.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1 : Uploading the files on TestMu AI Cloud",
+          "text": "You can use the following curl command to upload any file media and non-media from your system to the TestMu AI cloud. {curl --user \"${YOURLAMBDATESTUSERNAME()}:${YOURLAMBDATESTACCESSKEY()}\" -X POST \"https://api.lambdatest.com/mfs/v1.0/media/upload\" -F \"mediafile=@\"/Users/macuser/Downloads/image.jpeg\"\" -F \"type=image\" -F \"custom_id=SampleImage\" } Request Parameters media_file: This parameter denotes the media file to be uploaded from your local. type: This parameter denotes file type out of image,video and doc. custom_id: This parameter specifies a custom identifier for the media file. Below is a sample response demonstrating the return of the media_url parameter value: You can also utilize TestMu AI's user-friendly UI to upload the files on TestMu AI cloud and get the media_url using the upload button located at the top of the automation dashboard.",
+          "url": "https://www.testmuai.com/support/docs/uploadMedia/#step-1--uploading-the-files-on-testmu-ai-cloud"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2 : Setting Capability in Your Test Script",
+          "text": "Once the files are uploaded to TestMu AI's cloud, seamlessly integrate files into your automation tests via the capability. Set the uploadMedia capability to the mediaurl** parameter returned in the API response. {`DesiredCapabilities desiredCapabilities = new DesiredCapabilities(); desiredCapabilities.setCapability(\"uploadMedia\", Arrays.asList(\"lt://MEDIAfcdb39b9602d474f825d6002416a3969\", \"lt://MEDIA8d13e569b3e140c18e82b066022518bd\"));`} {`DesiredCapabilities desiredCapabilities = new DesiredCapabilities(); desiredCapabilities.setCapability(\"uploadMedia\", [\"lt://MEDIAfcdb39b9602d474f825d6002416a3969\", \"lt://MEDIA8d13e569b3e140c18e82b066022518bd\"]);`} {`desired_capabilities = { \"uploadMedia\": [\"lt://MEDIAf446d4170cd946aa9ec307d10cb679b9\", \"lt://MEDIA8d13e569b3e140c18e82b066022518bd\"] }`} Each automation session permits a maximum of five file uploads. The uploadMedia capability is set the same way for app and browser (web) automation. In manual testing, iOS app needs to installed first to upload non-media files. For non-media files, make sure your iOS app's Info.plist file includes the UIFileSharingEnabled and LSSupportsOpeningDocumentsInPlace keys set to true. This configuration is necessary to enable your app's folder accessibility within the Files app. iOS documents uploaded in a browser session appear under Chrome in the Files app, even when testing in Safari. This is by design, as only Chrome on iOS exposes a browsable file container. Pick the file via Choose File \u2192 On...",
+          "url": "https://www.testmuai.com/support/docs/uploadMedia/#step-2--setting-capability-in-your-test-script"
+        }
+      ]
+    }
+  ]) }}
+/>
+
+
 
 # How to Upload Files and Media on TestMu AI
 Uploading files and media on <BrandName /> pushes media and non-media files to cloud real devices during testing. The uploadMedia capability works across App and Browser automation, enriching test scenarios and letting you validate your application's functionality with realistic files.
@@ -100,6 +198,8 @@ This section provides a comprehensive guide on leveraging this feature within au
 
 You can use the following curl command to upload any file `media` and `non-media` from your system to the <BrandName /> cloud.
 
+<VerifiedTag value="Verified" />
+
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">
 {`curl --user "${YOUR_LAMBDATEST_USERNAME()}:${YOUR_LAMBDATEST_ACCESS_KEY()}" -X POST "https://api.lambdatest.com/mfs/v1.0/media/upload" -F "media_file=@"/Users/macuser/Downloads/image.jpeg"" -F "type=image" -F "custom_id=SampleImage"`
@@ -113,6 +213,8 @@ You can use the following curl command to upload any file `media` and `non-media
 - `custom_id`: This parameter specifies a custom identifier for the media file.
 
 Below is a sample response demonstrating the return of the `media_url` parameter value:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 {

@@ -29,6 +29,8 @@ import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 
+import VerifiedTag from '@site/src/component/verifiedTag';
+
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
        "@context": "https://schema.org",
@@ -52,6 +54,81 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       })
     }}
 ></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/button-text-click/"
+    },
+    "headline": "Button Click By Text (OCR)",
+    "description": "Click a button by its visible text or icon description using OCR on LambdaTest Real Device Cloud. Works across Android & iOS real and virtual devices when native locators are unavailable.",
+    "url": "https://www.testmuai.com/support/docs/button-text-click/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "App Automation",
+    "keywords": [
+      "button click by text",
+      "OCR button click",
+      "app test automation"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "The feature is exposed via driver.execute_script using the lambda_executor interface",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Python",
+        "text": "driver.execute_script('lambda_executor: {\n  \"action\": \"buttonTextClick\",\n  \"arguments\": {\n    \"label\": \"Continue\"\n  }\n}')"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Full Executor Example",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Python",
+        "text": "driver.execute_script('lambda_executor: {\n  \"action\": \"buttonTextClick\",\n  \"arguments\": {\n    \"label\": \"Pay Now\",\n    \"timeout\": 0,\n    \"matchMode\": \"contain\",\n    \"ignoreCase\": true,\n    \"ignoreSpaces\": true,\n    \"index\": 0\n  }\n}')"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 Button Click by Text on TestMu AI uses OCR to click UI elements by their visible text or icon description when native locators fail. Powered by an LLM, it accepts natural language labels and works across Android and iOS devices.
 
 **Supported on:** Real &amp; Virtual devices
@@ -69,6 +146,8 @@ This feature is supported across both **Android** and **iOS** real and virtual d
 ## Executor Contract
 
 The feature is exposed via `driver.execute_script` using the `lambda_executor` interface:
+
+<VerifiedTag value="Verified" />
 
 ```python
 driver.execute_script('lambda_executor: {
@@ -104,6 +183,8 @@ driver.execute_script('lambda_executor: {
 | `index` | Number | Click the nth matched button (0-based index). Useful when multiple buttons share the same text. |
 
 ## Full Executor Example
+
+<VerifiedTag value="Verified" />
 
 ```python
 driver.execute_script('lambda_executor: {

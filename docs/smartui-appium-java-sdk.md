@@ -30,6 +30,8 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 
+import VerifiedTag from '@site/src/component/verifiedTag';
+
 ---
 
 <script type="application/ld+json"
@@ -56,6 +58,243 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/smartui-appium-java-sdk/"
+    },
+    "headline": "SmartUI App SDK Integration Guide",
+    "description": "Learn how to integrate SmartUI App SDK with your existing mobile app testing framework to perform visual regression testing on any cloud provider.",
+    "url": "https://www.testmuai.com/support/docs/smartui-appium-java-sdk/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "SmartUI",
+    "keywords": [
+      "Visual Regression",
+      "Visual Regression Testing Guide",
+      "Visual Regression Test Automation"
+    ],
+    "proficiencyLevel": "Beginner",
+    "dependencies": "Basic understanding of mobile app testing and Appium; Login to TestMu AI SmartUI with your credentials; An active subscription plan with valid screenshots limit.",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Add the following dependency to your pom.xml file",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "XML",
+        "text": "<dependency>\n    <groupId>io.github.lambdatest<\/groupId>\n    <artifactId>lambdatest-java-sdk<\/artifactId>\n    <version>1.0.23<\/version>\n<\/dependency>"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Using Environment Variables",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "export PROJECT_TOKEN=\"123456#1234abcd-****-****-****-************\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 2: Configure Your Project Token",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "set PROJECT_TOKEN=123456#1234abcd-****-****-****-************\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 2: Configure Your Project Token",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "PowerShell",
+        "text": "$env:PROJECT_TOKEN=123456#1234abcd-****-****-****-************\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Import the required SmartUI class and add the screenshot capture code where needed",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "\npublic class YourTestClass {\n    @Test\n    public void testMethod() {\n        // Initialize SmartUI\n        SmartUIAppSnapshot SmartUI = new SmartUIAppSnapshot();\n\n        // Configure screenshot settings\n        Map<String, String> ssConfig = new HashMap<>();\n        // Either use environment variable\n        ssConfig.put(\"projectToken\", \"your-project-token-here\"); // Use this if you are not setting the project token in environment variable\n        // ssConfig.put(\"buildName\", \"First Build\"); // Optional\n        ssConfig.put(\"deviceName\", \"iPhone 15\"); // Required, you can use the variables that you are setting in the cloud capabilities\n\n        ssConfig.put(\"platform\", \"iOS\"); // Optional,you can use the variables that you are setting in the cloud capabilities\n\n        try {\n            // Start SmartUI session\n            SmartUI.start(ssConfig);\n\n            // Your test code here\n// Your test code here - Example of native app interactions\n            driver.findElement(MobileBy.AccessibilityId(\"username-input\")).sendKeys(\"test@example.com\");\n            driver.findElement(MobileBy.AccessibilityId(\"password-input\")).sendKeys(\"password123\");\n\n            // Take screenshot of login form\n            SmartUI.smartuiAppSnapshot(driver, \"Login Form\", ssConfig);\n\n            driver.findElement(MobileBy.AccessibilityId(\"login-button\")).click();\n\n            // Wait for home screen to load\n            WebDriverWait wait = new WebDriverWait(driver, 10);\n            wait.until(ExpectedConditions.presenceOfElementLocated(MobileBy.AccessibilityId(\"home-screen\")));\n\n            // Take screenshot of home screen\n            SmartUI.smartuiAppSnapshot(driver, \"Home Screen\", ssConfig);\n\n            // More test steps...\n\n        } finally {\n            // Stop SmartUI session\n            SmartUI.stop();\n        }\n    }\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 4: Execute the Tests",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "mvn test"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "You can use any device name and platform that matches your cloud provider's capabilities",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "ssConfig.put(\"deviceName\", \"iPhone 15\");\nssConfig.put(\"platform\", \"iOS\");"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Example configurations for different cloud providers",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "// For an iOS test on LambdaTest\nssConfig.put(\"deviceName\", \"iPhone 12\");\nssConfig.put(\"platform\", \"iOS\");\n\n// For an Android test on BrowserStack\nssConfig.put(\"deviceName\", \"Samsung Galaxy S22\");\nssConfig.put(\"platform\", \"Android\");\n\n// For a custom device on any cloud provider\nssConfig.put(\"deviceName\", \"Custom Device Name\"); // Use the same name consistently\nssConfig.put(\"platform\", \"iOS/Android\"); // Use the actual platform"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Add it to your pom.xml if not already present",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "XML",
+        "text": "<dependency>\n    <groupId>com.google.code.gson<\/groupId>\n    <artifactId>gson<\/artifactId>\n    <version>2.10.1<\/version>\n<\/dependency>"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "1. Ignoring Regions (Recommended for Dynamic Content)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "SmartUIAppSnapshot smartUI = new SmartUIAppSnapshot();\n\nMap<String, String> config = new HashMap<>();\nconfig.put(\"projectToken\", \"your-project-token-here\");\nconfig.put(\"deviceName\", \"Pixel 6\");\nconfig.put(\"fullPage\", \"true\");\n\n// Define XPaths of elements to ignore\nList<String> ignoreXpath = Arrays.asList(\n    \"//*[@text=\\\"Backpack\\\"]\",\n    \"//*[@text=\\\"Onesie\\\"]\",\n    \"//*[@text=\\\"PRODUCTS\\\"]\",\n    \"//*[@text=\\\"Terms of Service | Privacy Policy\\\"]\"\n);\n\nMap<String, Object> ignoreBoxesMap = new HashMap<>();\nignoreBoxesMap.put(\"xpath\", ignoreXpath);\n\nGson gson = new Gson();\nconfig.put(\"ignoreBoxes\", gson.toJson(ignoreBoxesMap));\n\nsmartUI.start(config);\nsmartUI.smartuiAppSnapshot(driver, \"SmartUIAndroid\", config);\nsmartUI.stop();"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "2. Selecting Specific Regions for Comparison",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "// Replace \"ignoreBoxes\" with \"selectBoxes\" to compare only specified regions\nMap<String, Object> selectBoxesMap = new HashMap<>();\nselectBoxesMap.put(\"xpath\", Arrays.asList(\"//*[@resource-id='primary-content']\"));\n\nconfig.put(\"selectBoxes\", gson.toJson(selectBoxesMap));"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Best Practices",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "SmartUISnapshot.smartuiSnapshot(driver, \"HomeScreen-Header\");\nSmartUISnapshot.smartuiSnapshot(driver, \"CheckoutScreen-PaymentForm\");"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Best Practices",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));\nwait.until(ExpectedConditions.presenceOfElementLocated(By.id(\"main-content\")));\nSmartUISnapshot.smartuiSnapshot(driver, \"Screen Loaded\");"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Verify PROJECT_TOKEN is set correctly",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "   echo $PROJECT_TOKEN"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Verify SDK dependency is added to pom.xml",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "XML",
+        "text": "   <dependency>\n       <groupId>io.github.lambdatest<\/groupId>\n       <artifactId>lambdatest-java-sdk<\/artifactId>\n       <version>1.0.23<\/version>\n   <\/dependency>"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Add explicit waits before screenshots",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "   WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));\n   wait.until(ExpectedConditions.presenceOfElementLocated(By.id(\"content\")));"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Wait for specific elements to be visible",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "   wait.until(ExpectedConditions.visibilityOfElementLocated(By.id(\"main-content\")));"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Check JSON formatting in configuration",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "   Map<String, Object> ignoreBoxes = new HashMap<>();\n   ignoreBoxes.put(\"xpath\", new String[]{\"//*[@text='Dynamic Ad']\"});"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Clear Maven cache",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "   mvn clean"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Steps to Run Your First Test",
+      "description": "Learn how to integrate SmartUI App SDK with your existing mobile app testing framework to perform visual regression testing on any cloud provider.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Add the SmartUI SDK Dependency",
+          "text": "Add the following dependency to your pom.xml file:",
+          "url": "https://www.testmuai.com/support/docs/smartui-appium-java-sdk/#step-1-add-the-smartui-sdk-dependency"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Configure Your Project Token",
+          "text": "You can configure your project token in one of two ways: Using Environment Variables: Directly in the Configuration: You can pass the project token directly in your test configuration as shown in Step 3.",
+          "url": "https://www.testmuai.com/support/docs/smartui-appium-java-sdk/#step-2-configure-your-project-token"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Integrate SmartUI in Your Test Script",
+          "text": "Import the required SmartUI class and add the screenshot capture code where needed:",
+          "url": "https://www.testmuai.com/support/docs/smartui-appium-java-sdk/#step-3-integrate-smartui-in-your-test-script"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Step 4: Execute the Tests",
+          "text": "Run your tests as you normally would with your cloud provider. SmartUI will automatically capture and process the screenshots for visual regression testing.",
+          "url": "https://www.testmuai.com/support/docs/smartui-appium-java-sdk/#step-4-execute-the-tests"
+        }
+      ]
+    }
+  ]) }}
+/>
+
+
+
 SmartUI App SDK enables you to perform visual regression testing on your mobile applications using any cloud testing provider. This guide will help you integrate SmartUI App SDK with your existing mobile app testing framework.
 
 ## Prerequisites
@@ -80,6 +319,8 @@ The first step is to create a project that will contain all your builds. To crea
 
 Add the following dependency to your `pom.xml` file:
 
+<VerifiedTag value="Verified" />
+
 ```xml
 <dependency>
     <groupId>io.github.lambdatest</groupId>
@@ -97,6 +338,8 @@ You can configure your project token in one of two ways:
 <Tabs className='docs__val' groupId='language'>
 <TabItem value='MacOS/Linux' label='MacOS/Linux' default>
 
+<VerifiedTag value="Verified" />
+
 ```bash
 export PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
 ```
@@ -104,12 +347,16 @@ export PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
 </TabItem>
 <TabItem value='Windows' label='Windows - CMD'>
 
+<VerifiedTag value="Verified" />
+
 ```bash
 set PROJECT_TOKEN=123456#1234abcd-****-****-****-************"
 ```
 
 </TabItem>
 <TabItem value='PowerShell' label='PowerShell'>
+
+<VerifiedTag value="Verified" />
 
 ```powershell
 $env:PROJECT_TOKEN=123456#1234abcd-****-****-****-************"
@@ -124,6 +371,8 @@ You can pass the project token directly in your test configuration as shown in S
 ### Step 3: Integrate SmartUI in Your Test Script
 
 Import the required SmartUI class and add the screenshot capture code where needed:
+
+<VerifiedTag value="Verified" />
 
 ```java
 
@@ -177,6 +426,8 @@ public class YourTestClass {
 
 Run your tests as you normally would with your cloud provider. SmartUI will automatically capture and process the screenshots for visual regression testing.
 
+<VerifiedTag value="Verified" />
+
 ```bash
 mvn test
 ```
@@ -196,6 +447,8 @@ mvn test
 
 The `deviceName` and `platform` parameters in SmartUI App SDK are used as metadata to ensure consistent screenshot comparison across builds. You can use any device name and platform that matches your cloud provider's capabilities:
 
+<VerifiedTag value="Verified" />
+
 ```java
 ssConfig.put("deviceName", "iPhone 15");
 ssConfig.put("platform", "iOS");
@@ -206,6 +459,8 @@ ssConfig.put("platform", "iOS");
 - These parameters are metadata tags and don't affect the actual device selection on your cloud provider
 
 Example configurations for different cloud providers:
+
+<VerifiedTag value="Verified" />
 
 ```java
 // For an iOS test on LambdaTest
@@ -235,6 +490,8 @@ You can either:
 
 This feature requires the `Gson` library for JSON serialization. Add it to your `pom.xml` if not already present:
 
+<VerifiedTag value="Verified" />
+
 ```xml
 <dependency>
     <groupId>com.google.code.gson</groupId>
@@ -246,6 +503,8 @@ This feature requires the `Gson` library for JSON serialization. Add it to your 
 ### Usage Examples
 
 #### 1. Ignoring Regions (Recommended for Dynamic Content)
+
+<VerifiedTag value="Verified" />
 
 ```java
 SmartUIAppSnapshot smartUI = new SmartUIAppSnapshot();
@@ -275,6 +534,8 @@ smartUI.stop();
 ```
 
 #### 2. Selecting Specific Regions for Comparison
+
+<VerifiedTag value="Verified" />
 
 ```java
 // Replace "ignoreBoxes" with "selectBoxes" to compare only specified regions
@@ -323,6 +584,9 @@ After test execution, visit your SmartUI project dashboard to:
 - Use consistent naming conventions across your test suite
 
 **Example:**
+
+<VerifiedTag value="Verified" />
+
 ```java
 SmartUISnapshot.smartuiSnapshot(driver, "HomeScreen-Header");
 SmartUISnapshot.smartuiSnapshot(driver, "CheckoutScreen-PaymentForm");
@@ -338,6 +602,9 @@ SmartUISnapshot.smartuiSnapshot(driver, "CheckoutScreen-PaymentForm");
 - Consider device-specific loading times
 
 **Example:**
+
+<VerifiedTag value="Verified" />
+
 ```java
 WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 wait.until(ExpectedConditions.presenceOfElementLocated(By.id("main-content")));
@@ -388,6 +655,9 @@ SmartUISnapshot.smartuiSnapshot(driver, "Screen Loaded");
 
 **Solutions**:
 1. Verify `PROJECT_TOKEN` is set correctly:
+
+   <VerifiedTag value="Verified" />
+
    ```bash
    echo $PROJECT_TOKEN
    ```
@@ -395,6 +665,9 @@ SmartUISnapshot.smartuiSnapshot(driver, "Screen Loaded");
 2. Check project name matches exactly (case-sensitive)
 
 3. Verify SDK dependency is added to pom.xml:
+
+   <VerifiedTag value="Verified" />
+
    ```xml
    <dependency>
        <groupId>io.github.lambdatest</groupId>
@@ -441,12 +714,18 @@ SmartUISnapshot.smartuiSnapshot(driver, "Screen Loaded");
 
 **Solutions**:
 1. Add explicit waits before screenshots:
+
+   <VerifiedTag value="Verified" />
+
    ```java
    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
    wait.until(ExpectedConditions.presenceOfElementLocated(By.id("content")));
    ```
 
 2. Wait for specific elements to be visible:
+
+   <VerifiedTag value="Verified" />
+
    ```java
    wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("main-content")));
    ```
@@ -471,6 +750,9 @@ SmartUISnapshot.smartuiSnapshot(driver, "Screen Loaded");
 1. Verify XPath locators using Appium Inspector
 2. Ensure elements exist at screenshot time
 3. Check JSON formatting in configuration:
+
+   <VerifiedTag value="Verified" />
+
    ```java
    Map<String, Object> ignoreBoxes = new HashMap<>();
    ignoreBoxes.put("xpath", new String[]{"//*[@text='Dynamic Ad']"});
@@ -493,6 +775,9 @@ SmartUISnapshot.smartuiSnapshot(driver, "Screen Loaded");
 **Solutions**:
 1. Check latest version on [Maven Central](https://mvnrepository.com/artifact/io.github.lambdatest/lambdatest-java-sdk)
 2. Clear Maven cache:
+
+   <VerifiedTag value="Verified" />
+
    ```bash
    mvn clean
    ```

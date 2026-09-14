@@ -19,6 +19,8 @@ canonical: https://www.testmuai.com/support/docs/puppeteer-testing-with-pytest-p
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
+import VerifiedTag from '@site/src/component/verifiedTag';
+
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
        "@context": "https://schema.org",
@@ -43,6 +45,152 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/puppeteer-testing-with-pytest-pyppeteer/"
+    },
+    "headline": "Run Puppeteer Tests Using Pytest-Pyppeteer",
+    "description": "Learn how to integrate and run your Puppeteer tests using Pytest-Pyppeteer across multiple browser versions on the TestMu AI platform.",
+    "url": "https://www.testmuai.com/support/docs/puppeteer-testing-with-pytest-pyppeteer/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Web Automation",
+    "keywords": [
+      "puppeteer testing with pyppeteer",
+      "pyppeteer",
+      "pytest"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Prerequisites",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "cd pytest-pyppeteer"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Create a virtual environment using the following commands",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "virtualenv venv"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Prerequisites",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "source venv/bin/activate"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Prerequisites",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "poetry install"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Prerequisites",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "pip install - r requirements.txt"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Windows",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "set LT_USERNAME=\"YOUR_LAMBDATEST_USERNAME\"\nset LT_ACCESS_KEY=\"YOUR_LAMBDATEST_ACCESS_KEY\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "macOS/Linux",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "export LT_USERNAME=\"YOUR_LAMBDATEST_USERNAME\"\nexport LT_ACCESS_KEY=\"YOUR_LAMBDATEST_ACCESS_KEY\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Running Your First Pyppeteer Test",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "pytest --verbose --capture=no -s -n 2 tests/test_pytest_pyppeteer_1.py \\\n    tests/test_pytest_pyppeteer_2.py"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Run Pyppeteer Tests In Gitpod",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "eval $(gp env -e LT_USERNAME=******)\neval $(gp env -e LT_ACCESS_KEY=******)"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Run Pyppeteer Tests In Gitpod",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": " eval $(gp env -e)"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "The pytest-skill package includes",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "pytest-skill/\n\u251c\u2500\u2500 SKILL.md\n\u2514\u2500\u2500 reference/\n    \u251c\u2500\u2500 playbook.md\n    \u2514\u2500\u2500 advanced-patterns.md"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Install a Pytest Agent Skill using the command below",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "codeRepository": "https://github.com/LambdaTest/agent-skills",
+        "text": "# Clone the repo and copy the skill you need\ngit clone https://github.com/LambdaTest/agent-skills.git\ncp -r agent-skills/pytest-skill .claude/skills/\n\n# Or for Cursor / Copilot\ncp -r agent-skills/pytest-skill .cursor/skills/"
+      }
+    ],
+    "dateModified": "2026-09-09T19:13:32+05:30"
+  }) }}
+/>
+
+
 # How to Run Pyppeteer Tests With pytest on TestMu AI
 ***
 
@@ -61,15 +209,21 @@ All the code samples in this documentation are available in the TestMu AI reposi
 
 1. Clone the puppeteer-sample repository on your system and navigate to the `pytest-pyppeteer` directory.
 
+<VerifiedTag value="Verified" />
+
 ```bash
 cd pytest-pyppeteer
 ```
 
 2. Create a virtual environment using the following commands.
 
+<VerifiedTag value="Verified" />
+
 ```bash
 virtualenv venv
 ```
+
+<VerifiedTag value="Verified" />
 
 ```bash
 source venv/bin/activate
@@ -77,11 +231,15 @@ source venv/bin/activate
 
 3. Install the necessary configurations.
 
+<VerifiedTag value="Verified" />
+
 ```bash
 poetry install
 ```
 
 4. Install the necessary dependencies.
+
+<VerifiedTag value="Verified" />
 
 ```bash
 pip install -r requirements.txt
@@ -95,12 +253,16 @@ Set the credentials for your operating system.
 
 **Windows**
 
+<VerifiedTag value="Verified" />
+
 ```sh
 set LT_USERNAME="YOUR_LAMBDATEST_USERNAME"
 set LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
 ```
 
 **macOS/Linux**
+
+<VerifiedTag value="Verified" />
 
 ```sh
 export LT_USERNAME="YOUR_LAMBDATEST_USERNAME"
@@ -113,6 +275,8 @@ export LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
 After you finish the prerequisite steps, you can run your first Pyppeteer test on TestMu AI. The first test script navigates to DuckDuckGo and searches for TestMu AI. The second test script navigates to Brave Search and searches for TestMu AI. Both tests run on Chrome (latest) on Windows 11.
 
 Run the following command in the terminal to run the Pyppeteer tests in parallel.
+
+<VerifiedTag value="Verified" />
 
 ```bash
 pytest --verbose --capture=no -s -n 2 tests/test_pytest_pyppeteer_1.py \
@@ -141,12 +305,16 @@ You can run this demo in a browser-based workspace without setting up Python loc
 
 * After the Gitpod session launches, navigate to the terminal and run the following commands to save your [TestMu AI credentials](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/details/profile) to Gitpod as environment variables.
 
+<VerifiedTag value="Verified" />
+
 ```bash
 eval $(gp env -e LT_USERNAME=******)
 eval $(gp env -e LT_ACCESS_KEY=******)
 ```
 
 * If you are unsure where to find them, see [how to access your TestMu AI credentials](/support/docs/using-environment-variables-for-authentication-credentials/). If you start a new terminal in Gitpod, run the following command to reset the environment variables.
+
+<VerifiedTag value="Verified" />
 
 ```bash
 eval $(gp env -e)
@@ -158,6 +326,8 @@ eval $(gp env -e)
 The Pytest Agent Skill helps AI coding assistants generate production-ready pytest automation for TestMu AI. It is part of the [TestMu AI agent skills collection](https://github.com/LambdaTest/agent-skills/), and you can read the [Pytest Agent Skill reference on GitHub](https://github.com/LambdaTest/agent-skills/tree/main/pytest-skill).
 
 The pytest-skill package includes the following files:
+
+<VerifiedTag value="Verified" />
 
 ```text
 pytest-skill/
@@ -180,6 +350,8 @@ It provides structured guidance for the following areas:
 ***
 
 Clone the agent skills repository and copy the Pytest Agent Skill into your tool's skills directory.
+
+<VerifiedTag value="Verified" />
 
 ```bash
 # Clone the repo and copy the skill you need

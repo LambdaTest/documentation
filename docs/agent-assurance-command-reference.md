@@ -15,6 +15,89 @@ slug: agent-assurance-command-reference/
 canonical: https://www.testmuai.com/support/docs/agent-assurance-command-reference/
 ---
 
+import { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
+
+<script type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify({
+       "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": BRAND_URL
+        },{
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Support",
+          "item": `${BRAND_URL}/support/docs/`
+        },{
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Rook Command Guide",
+          "item": `${BRAND_URL}/support/docs/agent-assurance-command-reference/`
+        }]
+      })
+    }}
+></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/agent-assurance-command-reference/"
+    },
+    "headline": "Rook Command Guide",
+    "description": "Complete reference for every Rook interactive and headless command: syntax, options, examples, and safety notes for all 24 command families.",
+    "url": "https://www.testmuai.com/support/docs/agent-assurance-command-reference/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Agent Testing",
+    "keywords": [
+      "rook commands",
+      "rook cli reference",
+      "rook slash commands"
+    ],
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "dateModified": "2026-08-25T16:54:35+05:30"
+  }) }}
+/>
 # List of Rook Commands
 
 Rook has an interactive terminal for guided human testing and headless commands for shell scripts and CI. This page is the complete reference for all 24 top-level command families in the current CLI: quick-scan tables first, then full syntax, options, examples, and safety notes for each command.
@@ -69,6 +152,8 @@ Rook has an interactive terminal for guided human testing and headless commands 
 
 Inside the TUI:
 
+<VerifiedTag value="Verified" />
+
 ~~~text
 /help
 /help profile
@@ -76,6 +161,8 @@ Inside the TUI:
 ~~~
 
 From a normal shell:
+
+<VerifiedTag value="Verified" />
 
 ~~~bash
 rook --help
@@ -97,6 +184,8 @@ Human-readable text can evolve during pre-alpha. Prefer <code>--json</code> for 
 
 ## Recommended First Journey
 
+<VerifiedTag value="Verified" />
+
 ~~~text
 /explore → /agent → /generate → /profile add → /scenarios list → /run → /ui
 ~~~
@@ -112,6 +201,8 @@ See the [end-user quickstart](/support/docs/agent-assurance-quickstart/#test-you
 ### rook {#rook}
 
 Start the interactive terminal in the workspace whose agent materials and results you want to use. It keeps the current agent, profile, scenarios, spend, live subagent progress, permission questions, and next recommended command visible. It is the best starting point for a human-led run.
+
+<VerifiedTag value="Verified" />
 
 ~~~bash
 rook
@@ -139,6 +230,8 @@ rook --help
 
 Run one prose-only orchestrator turn in a script or normal shell. The current headless form has no workspace tools and does not dispatch Rook commands.
 
+<VerifiedTag value="Verified" />
+
 ~~~bash
 rook ask <prompt...>
 rook ask <prompt...> --verbose
@@ -162,6 +255,8 @@ Use it to:
 - It does **not** open the prompt, read project files, inspect stored agents or runs, or execute a proposed slash command.
 - To inspect or change stored state, use an explicit headless command (<code>rook agent list</code>, <code>rook report</code>, <code>rook run --only SC-001</code>) or the TUI.
 
+<VerifiedTag value="Verified" />
+
 ~~~bash
 rook ask "Suggest boundary cases for a refund policy with a 30-day cutoff."
 rook ask "Explain risks in testing a booking agent against shared staging data." --json
@@ -173,9 +268,13 @@ rook ask "Explain risks in testing a booking agent against shared staging data."
 
 Tell Rook what local material describes your agent. The target may be one PRD file, a documentation folder, an agent source directory, or a complete local repository.
 
+<VerifiedTag value="Verified" />
+
 ~~~text
 /explore [path] [--force] [-- guidance]
 ~~~
+
+<VerifiedTag value="Verified" />
 
 ~~~bash
 rook explore [path] [--all] [--force] [--instruction <text>] \
@@ -190,6 +289,8 @@ rook explore [path] [--all] [--force] [--instruction <text>] \
 | <code>--instruction &lt;text&gt;</code> | Headless form of the same guidance. |
 | <code>--all</code> | Headless only; register every discovered candidate without a selection question. |
 | <code>--allow</code> | Headless only; authorize one exact tool rule. Repeat when necessary. |
+
+<VerifiedTag value="Verified" />
 
 ~~~text
 /explore docs -- focus on PRD.md and knowledge/, and treat them as intended behavior
@@ -214,11 +315,15 @@ See [real-world use cases](/support/docs/agent-assurance-overview/#real-world-us
 
 List, select, or remove agents discovered in the current workspace. Use it when a workspace contains multiple agents or to confirm which agent receives generated scenarios and runs.
 
+<VerifiedTag value="Verified" />
+
 ~~~text
 /agent
 /agent use <id>
 /agent rm <id>
 ~~~
+
+<VerifiedTag value="Verified" />
 
 ~~~bash
 rook agent list [--json]
@@ -245,10 +350,14 @@ Headless mode does not provide the remove operation.
 
 Build scenarios from the active agent's requirements, policies, tools, features, and known data. Run it after exploration.
 
+<VerifiedTag value="Verified" />
+
 ~~~text
 /generate [--total <n>] [--class <list>] [--category <list>]
           [--no-validate] [--force] [-- guidance]
 ~~~
+
+<VerifiedTag value="Verified" />
 
 ~~~bash
 rook generate [--entity <id>] [--class <list>] [--category <list>] \
@@ -263,6 +372,8 @@ rook generate [--entity <id>] [--class <list>] [--category <list>] \
 | <code>--no-validate</code> | Skip the model-based runnability preflight. |
 | <code>--force</code> | Interactive only; generate even when agent evidence and scenarios appear current. |
 | Text after <code>--</code> | Focus generation on a business rule, threshold, or risk. |
+
+<VerifiedTag value="Verified" />
 
 ~~~text
 /generate --total 18 --class functional,adversarial -- verify identity, policy cutoff, duplicate requests, tool confirmation, and receipt evidence
@@ -279,6 +390,8 @@ rook generate [--entity <id>] [--class <list>] [--category <list>] \
 
 A profile is the fixed, reviewable recipe Rook uses to invoke a live agent. Use <code>/profile</code> to connect HTTP, command, asynchronous, multi-turn, and artifact-producing targets. See also [invocation profile concepts](/support/docs/agent-assurance-profiles/).
 
+<VerifiedTag value="Verified" />
+
 ~~~text
 /profile
 /profile add
@@ -290,6 +403,8 @@ A profile is the fixed, reviewable recipe Rook uses to invoke a live agent. Use 
 /profile curl <name>
 /profile rm <name>
 ~~~
+
+<VerifiedTag value="Verified" />
 
 ~~~bash
 rook profile list [name] [--entity <id>] [--json]
@@ -324,12 +439,16 @@ When you paste a cURL request, Rook lifts the Authorization value out of it, rep
 
 Review what Rook generated, see whether each scenario can run with the active profile, and control inclusion without executing anything.
 
+<VerifiedTag value="Verified" />
+
 ~~~text
 /scenarios list
 /scenarios exclude <ids>
 /scenarios include <ids>
 /scenarios delete <ids>
 ~~~
+
+<VerifiedTag value="Verified" />
 
 ~~~bash
 rook scenarios list [--entity <id>] [--json]
@@ -356,11 +475,15 @@ rook scenarios delete <ids...> [--entity <id>]
 
 Execute selected scenarios against the live agent and produce evidence-backed verdicts. Run it after selecting an agent, generating scenarios, and activating a verified profile. **This command makes real calls to the live target.**
 
+<VerifiedTag value="Verified" />
+
 ~~~text
 /run [--only <ids>] [--class <list>] [--category <list>]
      [--tag <list>] [--concurrency <n>] [--no-narrative]
      [--rca] [-- selection in words]
 ~~~
+
+<VerifiedTag value="Verified" />
 
 ~~~bash
 rook run [--entity <id>] [--only <ids>] [--no-narrative] \
@@ -397,6 +520,8 @@ Rook does not sandbox or roll back the target agent. Refunds, bookings, emails, 
 
 Inspect Rook's project files through a local, read-only browser view. The viewer starts with the interactive session and stops when that session exits; <code>/ui</code> reprints its URL and optionally opens the browser. See also [results and evidence](/support/docs/agent-assurance-results-and-evidence/).
 
+<VerifiedTag value="Verified" />
+
 ~~~text
 /ui
 /ui --no-open
@@ -418,6 +543,8 @@ Inspect Rook's project files through a local, read-only browser view. The viewer
 ### rook report {#rook-report}
 
 Print stored verdicts without opening the TUI or browser viewer. See also [CI/CD and automation](/support/docs/agent-assurance-ci-cd/).
+
+<VerifiedTag value="Verified" />
 
 ~~~bash
 rook report
@@ -445,9 +572,13 @@ rook report [run-id] --json
 
 Check the signed-in TestMu AI account plan and credit balance before generating or executing a suite.
 
+<VerifiedTag value="Verified" />
+
 ~~~text
 /plan
 ~~~
+
+<VerifiedTag value="Verified" />
 
 ~~~bash
 rook plan
@@ -466,10 +597,14 @@ rook plan --json
 
 Verify stored credentials against the Rook controller.
 
+<VerifiedTag value="Verified" />
+
 ~~~text
 /auth
 /auth status
 ~~~
+
+<VerifiedTag value="Verified" />
 
 ~~~bash
 rook auth status
@@ -488,6 +623,8 @@ rook whoami
 
 Verify which TestMu AI account is authenticated from a shell or automation. This is an alias for <code>rook auth status</code>.
 
+<VerifiedTag value="Verified" />
+
 ~~~bash
 rook whoami
 rook whoami --json
@@ -504,9 +641,13 @@ rook whoami --json
 
 Sign in through the TestMu AI browser authentication flow when Rook has no stored credential or the token is invalid.
 
+<VerifiedTag value="Verified" />
+
 ~~~text
 /login
 ~~~
+
+<VerifiedTag value="Verified" />
 
 ~~~bash
 rook login
@@ -530,9 +671,13 @@ rook login --json
 
 Revoke the current token and remove stored Rook credentials on this machine.
 
+<VerifiedTag value="Verified" />
+
 ~~~text
 /logout
 ~~~
+
+<VerifiedTag value="Verified" />
 
 ~~~bash
 rook logout
@@ -551,6 +696,8 @@ rook logout --json
 ### /env {#env}
 
 Manage tokens, endpoint values, and other variables referenced by profiles without writing literal secrets into project files. See also [invocation profiles](/support/docs/agent-assurance-profiles/).
+
+<VerifiedTag value="Verified" />
 
 ~~~text
 /env
@@ -583,6 +730,8 @@ There is no top-level headless <code>rook env</code> command in the current rele
 
 Manage MCP servers that Rook can discover or use for read-only verification and controlled tool access. See also [MCP concepts](/support/docs/agent-assurance-mcp/).
 
+<VerifiedTag value="Verified" />
+
 ~~~text
 /mcp
 /mcp list
@@ -590,6 +739,8 @@ Manage MCP servers that Rook can discover or use for read-only verification and 
 /mcp disable <name>
 /mcp approve <name>
 ~~~
+
+<VerifiedTag value="Verified" />
 
 ~~~bash
 rook mcp list [--json]
@@ -616,6 +767,8 @@ rook mcp approve <name> [--origin project|discovered] [--json]
 
 View what the current Rook session has spent, what remains, and the configured phase caps. There is no headless <code>rook budget</code> command in the current release.
 
+<VerifiedTag value="Verified" />
+
 ~~~text
 /budget
 ~~~
@@ -638,9 +791,13 @@ It shows:
 
 The first diagnostic when Rook cannot start, authenticate, discover an agent, or reach its controller. See also [troubleshooting](/support/docs/agent-assurance-troubleshooting/) and the [installation guide](/support/docs/agent-assurance-quickstart/#install-and-authenticate-the-cli).
 
+<VerifiedTag value="Verified" />
+
 ~~~text
 /doctor
 ~~~
+
+<VerifiedTag value="Verified" />
 
 ~~~bash
 rook doctor
@@ -668,6 +825,8 @@ rook doctor
 
 Show Rook's recommended end-to-end testing sequence and the meaning of its stages without leaving the terminal. There is no headless <code>rook guide</code> command.
 
+<VerifiedTag value="Verified" />
+
 ~~~text
 /guide
 ~~~
@@ -682,6 +841,8 @@ Show Rook's recommended end-to-end testing sequence and the meaning of its stage
 ### /help {#help}
 
 Command discovery inside the interactive terminal.
+
+<VerifiedTag value="Verified" />
 
 ~~~text
 /help
@@ -703,6 +864,8 @@ Examples: <code>/help explore</code>, <code>/help profile</code>, <code>/help ru
 
 Remove previous messages from the visible terminal when you want a clean screen. There is no headless <code>rook clear</code> command.
 
+<VerifiedTag value="Verified" />
+
 ~~~text
 /clear
 ~~~
@@ -719,6 +882,8 @@ Use <code>/new</code> for a new conversation session, and the specific agent, pr
 ### /new {#new}
 
 Start a fresh interactive conversation without leaving Rook or deleting the current workspace's testing data. There is no headless <code>rook new</code> command.
+
+<VerifiedTag value="Verified" />
 
 ~~~text
 /new
@@ -739,6 +904,8 @@ It:
 ### /exit {#exit}
 
 Leave the interactive terminal cleanly. There is no headless <code>rook exit</code> command because headless commands exit after completing their work.
+
+<VerifiedTag value="Verified" />
 
 ~~~text
 /exit

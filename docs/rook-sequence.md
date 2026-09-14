@@ -14,6 +14,113 @@ slug: rook-sequence/
 canonical: https://www.testmuai.com/support/docs/rook-sequence/
 ---
 
+import VerifiedTag from '@site/src/component/verifiedTag';
+import { BRAND_URL } from '@site/src/component/BrandName';
+
+<script type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify({
+       "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": BRAND_URL
+        },{
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Support",
+          "item": `${BRAND_URL}/support/docs/`
+        },{
+          "@type": "ListItem",
+          "position": 3,
+          "name": "The Rook Testing Sequence",
+          "item": `${BRAND_URL}/support/docs/rook-sequence/`
+        }]
+      })
+    }}
+></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/rook-sequence/"
+    },
+    "headline": "The Rook Testing Sequence",
+    "description": "Follow the Rook workflow from sign-in and discovery through scenario generation, live execution, evidence review, and synchronization.",
+    "url": "https://www.testmuai.com/support/docs/rook-sequence/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Agent Testing",
+    "keywords": [
+      "rook workflow",
+      "rook testing sequence",
+      "autonomous agent testing workflow"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Rook has one command set with two surfaces",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "# Interactive TUI\n/explore .\n/generate\n/run"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Interactive TUI",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "# Shell or CI\nrook explore .\nrook generate\nrook run"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Use rook ask when you know the outcome but not the command",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "rook ask \"generate adversarial tests for refund-policy bypasses\""
+      }
+    ],
+    "dateModified": "2026-09-04T12:50:18+05:30"
+  }) }}
+/>
 # The Rook Testing Sequence
 
 The first complete Rook journey has eight steps. After the initial setup, repeat only the phases affected by your agent or test changes.
@@ -37,12 +144,16 @@ You can request a later operation before completing every earlier one. Rook repo
 
 Rook has one command set with two surfaces:
 
+<VerifiedTag value="Verified" />
+
 ```text
 # Interactive TUI
 /explore .
 /generate
 /run
 ```
+
+<VerifiedTag value="Verified" />
 
 ```bash
 # Shell or CI
@@ -58,6 +169,8 @@ Bare `/project`, `/agent`, and `/profile` commands open pickers. Use the arrow k
 ## Ask in Plain Language
 
 Use `rook ask` when you know the outcome but not the command:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 rook ask "generate adversarial tests for refund-policy bypasses"

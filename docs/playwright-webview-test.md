@@ -23,6 +23,8 @@ import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
+import VerifiedTag from '@site/src/component/verifiedTag';
+
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
        "@context": "https://schema.org",
@@ -47,6 +49,137 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/playwright-webview-test/"
+    },
+    "headline": "Playwright Webview Testing",
+    "description": "Learn how to perform webview testing on android using playwright framework on TestMu AI platform with real browsers cross platform.",
+    "url": "https://www.testmuai.com/support/docs/playwright-webview-test/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Documentation",
+    "keywords": [
+      "playwright testing",
+      "playwright mobile testing",
+      "playwright testing tool"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 1: Setup your test suite",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "wsEndpoint: `wss://cdp.lambdatest.com/playwright?capabilities=${encodeURIComponent(JSON.stringify(capabilities))}`"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 1: Setup your test suite",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n### Step 2: Update the dependencies\nBefore proceeding forward, run the below command to update the outdated dependencies\n\n```bash\nnpm install"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 3: Update your test Capabilities",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n:::tip\nUse our [Capability Generator](https://www.testmuai.com/capabilities-generator/) to select from a wide range of options for customizing your tests.\n:::\n\n### Step 4: Setup your <BrandName /> credentials\n\nIn your terminal (as per your respective Operating System), run these command to setup your <BrandName /> credentials.\n> You can see your credentials below if you have logged into our platform.\n\n<Tabs className=\"docs__val\">\n\n<TabItem value=\"bash\" label=\"Linux / MacOS\" default>\n\n  <div className=\"lambdatest__codeblock\">\n    <CodeBlock className=\"language-bash\">\n  {`export LT_USERNAME=\"${ YOUR_LAMBDATEST_USERNAME()}\"\nexport LT_ACCESS_KEY=\"${ YOUR_LAMBDATEST_ACCESS_KEY()}\"`}\n  <\/CodeBlock>\n<\/div>\n\n<\/TabItem>\n\n<TabItem value=\"powershell\" label=\"Windows\" default>\n\n  <div className=\"lambdatest__codeblock\">\n    <CodeBlock className=\"language-powershell\">\n  {`set LT_USERNAME=\"${ YOUR_LAMBDATEST_USERNAME()}\"\nset LT_ACCESS_KEY=\"${ YOUR_LAMBDATEST_ACCESS_KEY()}\"`}\n  <\/CodeBlock>\n<\/div>\n\n<\/TabItem>\n<\/Tabs>\n\n### Step 5: Execute your test\nReplace the `TEST_FILE_NAME` in the below command with your desired test file to execute that particular test on <BrandName />:\n\n```bash\nnode playwrightwebview.js"
+      }
+    ],
+    "dateModified": "2026-09-10T15:46:57+05:30"
+  }) }}
+/>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Steps to perform Webview testing",
+      "description": "Learn how to perform webview testing on android using playwright framework on TestMu AI platform with real browsers cross platform.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Setup your test suite",
+          "text": "You can use your own project to configure and test it. For demo purposes, we are using the sample repository. Download or Clone the code sample from the TestMu AI GitHub repository to run your tests. If you are using your own project, configure the browserWSEndpoint (browser end point URL) in your test script to run the test on TestMu AI Here is the sample test script for your reference:",
+          "url": "https://www.testmuai.com/support/docs/playwright-webview-test/#step-1-setup-your-test-suite"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Update the dependencies",
+          "text": "Before proceeding forward, run the below command to update the outdated dependencies",
+          "url": "https://www.testmuai.com/support/docs/playwright-webview-test/#step-2-update-the-dependencies"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Update your test Capabilities",
+          "text": "Include the following field in the capabilities object to enable WebView testing: Use our Capability Generator to select from a wide range of options for customizing your tests.",
+          "url": "https://www.testmuai.com/support/docs/playwright-webview-test/#step-3-update-your-test-capabilities"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Step 4: Setup your TestMu AI credentials",
+          "text": "In your terminal (as per your respective Operating System), run these command to setup your TestMu AI credentials. You can see your credentials below if you have logged into our platform. {`export LTUSERNAME=\"${ YOURLAMBDATEST_USERNAME()}\" export LTACCESSKEY=\"${ YOURLAMBDATESTACCESS_KEY()}\"`} {`set LTUSERNAME=\"${ YOURLAMBDATEST_USERNAME()}\" set LTACCESSKEY=\"${ YOURLAMBDATESTACCESS_KEY()}\"`}",
+          "url": "https://www.testmuai.com/support/docs/playwright-webview-test/#step-4-setup-your-testmu-ai-credentials"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 5,
+          "name": "Step 5: Execute your test",
+          "text": "Replace the TESTFILENAME in the below command with your desired test file to execute that particular test on TestMu AI: Visit the TestMu AI Web Automation page to check the status of your test execution.",
+          "url": "https://www.testmuai.com/support/docs/playwright-webview-test/#step-5-execute-your-test"
+        }
+      ]
+    }
+  ]) }}
+/>
+
+
+
 # How to Test WebViews With Playwright on TestMu AI
 ***
 
@@ -68,11 +201,15 @@ Clone the code sample from the TestMu AI GitHub repository to run your tests.
 
 If you are using your own project, configure the `browserWSEndpoint` (browser endpoint URL) in your test script to run the test on TestMu AI.
 
+<VerifiedTag value="Verified" />
+
 ```javascript
 wsEndpoint: `wss://cdp.lambdatest.com/playwright?capabilities=${encodeURIComponent(JSON.stringify(capabilities))}`
 ```
 
 Here is the sample test script for your reference:
+
+<VerifiedTag value="Verified" />
 
 ```javascript reference title="playwrightwebview.js"
 https://github.com/LambdaTest/playwright-sample/blob/main/playwrightwebview.js
@@ -82,6 +219,8 @@ https://github.com/LambdaTest/playwright-sample/blob/main/playwrightwebview.js
 ***
 
 Update the outdated dependencies before you run the test.
+
+<VerifiedTag value="Verified" />
 
 ```bash
 npm install
@@ -96,6 +235,8 @@ Set your TestMu AI credentials in the terminal for your operating system. The co
 
 <TabItem value="bash" label="Linux / MacOS" default>
 
+  <VerifiedTag value="Verified" />
+
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-bash">
   {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
@@ -106,6 +247,8 @@ export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 </TabItem>
 
 <TabItem value="powershell" label="Windows" default>
+
+  <VerifiedTag value="Verified" />
 
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-powershell">
@@ -121,6 +264,8 @@ set LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 ***
 
 Include the following field in the capabilities object to enable WebView testing.
+
+<VerifiedTag value="Verified" />
 
 ```javascript title="playwrightwebview.js"
 const capabilities = {
@@ -140,6 +285,8 @@ Use the [Playwright capability generator](https://www.lambdatest.com/capabilitie
 ***
 
 Run the command below with your test file to execute the WebView test on TestMu AI. Replace `playwrightwebview.js` with your own file name if it differs.
+
+<VerifiedTag value="Verified" />
 
 ```bash
 node playwrightwebview.js

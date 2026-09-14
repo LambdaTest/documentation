@@ -25,6 +25,8 @@ import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 
+import VerifiedTag from '@site/src/component/verifiedTag';
+
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
        "@context": "https://schema.org",
@@ -48,6 +50,148 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       })
     }}
 ></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/c-with-selenium-running-c-automation-scripts-on-testmu-selenium-grid/"
+    },
+    "headline": "Selenium With C#",
+    "description": "Run C# Selenium tests on TestMu AI cloud grid with 3000+ browsers. Covers NUnit, MSTest, SpecFlow, and xUnit.",
+    "url": "https://www.testmuai.com/support/docs/c-with-selenium-running-c-automation-scripts-on-testmu-selenium-grid/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Web Automation",
+    "keywords": [
+      "run C# Selenium tests cloud",
+      "C# Selenium grid setup",
+      "C# Selenium WebDriver tutorial"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Every framework below connects to the grid and passes your browser and OS choices through an LT:Options object",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "C#",
+        "text": "var browserOptions = new ChromeOptions();\nbrowserOptions.PlatformName = \"Windows 10\";\nbrowserOptions.BrowserVersion = \"latest\";\n\nvar ltOptions = new Dictionary<string, object>\n{\n    { \"username\", LT_USERNAME },\n    { \"accessKey\", LT_ACCESS_KEY },\n    { \"project\", \"Demo LT\" },\n    { \"w3c\", true }\n};\nbrowserOptions.AddAdditionalOption(\"LT:Options\", ltOptions);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Clone the sample GitHub project",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "codeRepository": "https://github.com/LambdaTest/CSharp-NUnit-Selenium",
+        "text": "git clone https://github.com/LambdaTest/CSharp-NUnit-Selenium\ncd CSharp-NUnit-Selenium"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Set your browser and OS in the LT:Options object",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "C#",
+        "text": "var browserOptions = new ChromeOptions();\nbrowserOptions.PlatformName = \"Windows 10\";\nbrowserOptions.BrowserVersion = \"latest\";\n\nvar ltOptions = new Dictionary<string, object>\n{\n    { \"build\", \"NUnit Build\" },\n    { \"name\", \"NUnit Test\" },\n    { \"w3c\", true }\n};\nbrowserOptions.AddAdditionalOption(\"LT:Options\", ltOptions);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Build the solution, then run in the Test Explorer, or on Linux/macOS",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "nmake clean build"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Clone the sample GitHub project",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "codeRepository": "https://github.com/LambdaTest/MSTest-Selenium-Sample",
+        "text": "git clone https://github.com/LambdaTest/MSTest-Selenium-Sample\ncd MSTest-Selenium-Sample"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Set your browser and OS in the LT:Options object",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "C#",
+        "text": "var browserOptions = new ChromeOptions();\nbrowserOptions.PlatformName = \"Windows 10\";\nbrowserOptions.BrowserVersion = \"latest\";\n\nvar ltOptions = new Dictionary<string, object>\n{\n    { \"build\", \"MSTest Build\" },\n    { \"name\", \"MSTest Test\" },\n    { \"w3c\", true }\n};\nbrowserOptions.AddAdditionalOption(\"LT:Options\", ltOptions);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Run the test",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "dotnet test MS-Test-Cross-Browser.csproj"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Clone the sample GitHub project",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "codeRepository": "https://github.com/LambdaTest/SpecFlow-Selenium-Sample",
+        "text": "git clone https://github.com/LambdaTest/SpecFlow-Selenium-Sample\ncd SpecFlow-Selenium-Sample"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Set your browser and OS in the LT:Options object",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "C#",
+        "text": "var browserOptions = new ChromeOptions();\nbrowserOptions.PlatformName = \"Windows 10\";\nbrowserOptions.BrowserVersion = \"latest\";\n\nvar ltOptions = new Dictionary<string, object>\n{\n    { \"build\", \"SpecFlow Build\" },\n    { \"name\", \"SpecFlow Test\" },\n    { \"w3c\", true }\n};\nbrowserOptions.AddAdditionalOption(\"LT:Options\", ltOptions);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Clone the sample GitHub project",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "codeRepository": "https://github.com/LambdaTest/CSharp-xUnit-Selenium",
+        "text": "git clone https://github.com/LambdaTest/CSharp-xUnit-Selenium\ncd CSharp-xUnit-Selenium"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 11",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n3. Run a single test, or the parallel profile:\n\n```bash\ndotnet clean\ndotnet test --filter \"profile=single\"\ndotnet test --filter \"profile=parallel\""
+      }
+    ],
+    "dateModified": "2026-09-09T19:13:32+05:30"
+  }) }}
+/>
+
 
 # How to Run Selenium Tests With C# on TestMu AI
 ---
@@ -74,6 +218,8 @@ Every framework authenticates the same way: your Username and Access Key are rea
 
 <TabItem value="macos" label="macOS / Linux" default>
 
+<VerifiedTag value="Verified" />
+
 <div className="lambdatest__codeblock">
     <CodeBlock className="language-bash">
   {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
@@ -84,6 +230,8 @@ export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 </TabItem>
 
 <TabItem value="win-cmd" label="Windows (CMD)">
+
+<VerifiedTag value="Verified" />
 
 <div className="lambdatest__codeblock">
     <CodeBlock className="language-batch">
@@ -100,6 +248,8 @@ set LT_ACCESS_KEY=${ YOUR_LAMBDATEST_ACCESS_KEY()}`}
 ---
 
 Every framework below connects to the grid and passes your browser and OS choices through an `LT:Options` object:
+
+<VerifiedTag value="Verified" />
 
 ```csharp
 var browserOptions = new ChromeOptions();
@@ -135,12 +285,16 @@ NUnit runs from the Visual Studio Test Explorer, or from the CLI on Linux/macOS.
 
 1. Clone the [sample GitHub project](https://github.com/LambdaTest/CSharp-NUnit-Selenium):
 
+<VerifiedTag value="Verified" />
+
 ```bash
 git clone https://github.com/LambdaTest/CSharp-NUnit-Selenium
 cd CSharp-NUnit-Selenium
 ```
 
 2. Set your browser and OS in the `LT:Options` object:
+
+<VerifiedTag value="Verified" />
 
 ```csharp
 var browserOptions = new ChromeOptions();
@@ -158,6 +312,8 @@ browserOptions.AddAdditionalOption("LT:Options", ltOptions);
 
 3. Build the solution, then run in the Test Explorer, or on Linux/macOS:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 dotnet test
 ```
@@ -172,12 +328,16 @@ MSTest requires .NET Core SDK 3.0.0 and runs via `dotnet test` or the Test Explo
 
 1. Clone the [sample GitHub project](https://github.com/LambdaTest/MSTest-Selenium-Sample):
 
+<VerifiedTag value="Verified" />
+
 ```bash
 git clone https://github.com/LambdaTest/MSTest-Selenium-Sample
 cd MSTest-Selenium-Sample
 ```
 
 2. Set your browser and OS in the `LT:Options` object:
+
+<VerifiedTag value="Verified" />
 
 ```csharp
 var browserOptions = new ChromeOptions();
@@ -194,6 +354,8 @@ browserOptions.AddAdditionalOption("LT:Options", ltOptions);
 ```
 
 3. Run the test:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 dotnet test MS-Test-Cross-Browser.csproj
@@ -213,12 +375,16 @@ SpecFlow is BDD for .NET: you write Gherkin feature files, and step definitions 
 
 1. Clone the [sample GitHub project](https://github.com/LambdaTest/SpecFlow-Selenium-Sample):
 
+<VerifiedTag value="Verified" />
+
 ```bash
 git clone https://github.com/LambdaTest/SpecFlow-Selenium-Sample
 cd SpecFlow-Selenium-Sample
 ```
 
 2. Set your browser and OS in the `LT:Options` object:
+
+<VerifiedTag value="Verified" />
 
 ```csharp
 var browserOptions = new ChromeOptions();
@@ -246,12 +412,16 @@ xUnit reads its capabilities and environments from a `config.json`, filtered by 
 
 1. Clone the [sample GitHub project](https://github.com/LambdaTest/CSharp-xUnit-Selenium):
 
+<VerifiedTag value="Verified" />
+
 ```bash
 git clone https://github.com/LambdaTest/CSharp-xUnit-Selenium
 cd CSharp-xUnit-Selenium
 ```
 
 2. Set your browsers in `config.json`. Replace the `user` and `key` values with your actual credentials, or have them read from the `LT_USERNAME` and `LT_ACCESS_KEY` environment variables you set earlier:
+
+<VerifiedTag value="Verified" />
 
 ```json title="config.json"
 {
@@ -277,6 +447,8 @@ cd CSharp-xUnit-Selenium
 
 3. Run a single test, or the parallel profile:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 dotnet clean
 dotnet test --filter "profile=single"
@@ -293,6 +465,8 @@ Reqnroll is the actively-maintained, open-source successor to SpecFlow. It is a 
 
 1. Clone the [sample GitHub project](https://github.com/LambdaTest/reqnroll-automation-sample):
 
+<VerifiedTag value="Verified" />
+
 ```bash
 git clone https://github.com/LambdaTest/reqnroll-automation-sample
 cd reqnroll-automation-sample
@@ -300,6 +474,8 @@ cd reqnroll-automation-sample
 
 2. Set your browser and OS, and your credentials, in the Makefile, or export them as the `LT_USERNAME` and `LT_ACCESS_KEY` environment variables you set earlier.
 3. Build and run the tests using the project Makefile:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 make clean

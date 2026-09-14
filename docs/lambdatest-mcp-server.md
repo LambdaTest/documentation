@@ -19,6 +19,7 @@ canonical: https://www.testmuai.com/support/docs/testmu-mcp-server/
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -44,6 +45,150 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       })
     }}
 ></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/testmu-mcp-server/"
+    },
+    "headline": "Introducing TestMu AI MCP Server",
+    "description": "With TestMu AI MCP Server, explore all TestMu AI MCP Server tools in one place, from setup to usage.",
+    "url": "https://www.testmuai.com/support/docs/testmu-mcp-server/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "TestMu AI MCP Server",
+    "keywords": [
+      "hyperexecute performance testing",
+      "hyperexecute",
+      "testmu ai"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Paste the configuration",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JSON",
+        "text": "{\n  \"mcpServers\": {\n    \"mcp-lambdatest\": {\n      \"url\": \"https://mcp.lambdatest.com/mcp\"\n    }\n  }\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Run this in your terminal",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "claude mcp add --transport http mcp-lambdatest https://mcp.lambdatest.com/mcp"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Click Add Custom Connector and enter the URL",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "https://mcp.lambdatest.com/mcp"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Or create .vscode/mcp.json manually",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JSON",
+        "text": "{\n  \"servers\": {\n    \"mcp-lambdatest\": {\n      \"type\": \"http\",\n      \"url\": \"https://mcp.lambdatest.com/mcp\"\n    }\n  }\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Click View raw config and add the configuration to mcp_config.json",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JSON",
+        "text": "{\n  \"mcpServers\": {\n    \"mcp-lambdatest\": {\n      \"serverUrl\": \"https://mcp.lambdatest.com/mcp\"\n    }\n  }\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Run this in your terminal",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "codex mcp add mcp-lambdatest --url https://mcp.lambdatest.com/mcp"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Then start an OAuth login",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "codex mcp login mcp-lambdatest"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Manual config: Add the following to ~/.codex/config.toml",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "TOML",
+        "text": "[mcp_servers.mcp-lambdatest]\nurl = \"https://mcp.lambdatest.com/mcp\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Paste the configuration",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JSON",
+        "text": "{\n  \"mcpServers\": {\n    \"mcp-lambdatest\": {\n      \"disabled\": false,\n      \"timeout\": 60,\n      \"command\": \"npx\",\n      \"args\": [\"mcp-remote@latest\", \"https://mcp.lambdatest.com/mcp\"],\n      \"alwaysAllow\": []\n    }\n  }\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Create .continue/mcpServers/testmu-ai.yaml in your workspace and add",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "name: TestMu AI mcpServer\nversion: 0.0.1\nschema: v1\nmcpServers:\n  - name: TestMu AI\n    type: streamable-http\n    url: https://mcp.lambdatest.com/mcp"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Universal STDIO configuration for any client that accepts the standard mcpServers format",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JSON",
+        "text": "{\n  \"mcpServers\": {\n    \"mcp-lambdatest\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"mcp-remote@latest\", \"https://mcp.lambdatest.com/mcp\"]\n    }\n  }\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Use the full path to npx",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "which npx   # macOS/Linux\nwhere npx   # Windows"
+      }
+    ],
+    "dateModified": "2026-07-22T12:56:44+05:30"
+  }) }}
+/>
 
 # Getting Started with TestMu AI MCP Server
 
@@ -82,6 +227,8 @@ Use the one-click install button to add the server to Cursor:
 1. Open **Cursor Settings > Tools & MCP** and click **Add new MCP server**.
 2. Paste the configuration:
 
+<VerifiedTag value="Verified" />
+
 ```json
 {
   "mcpServers": {
@@ -100,6 +247,8 @@ Use the one-click install button to add the server to Cursor:
 
 Run this in your terminal:
 
+<VerifiedTag value="Verified" />
+
 ```shell
 claude mcp add --transport http mcp-lambdatest https://mcp.lambdatest.com/mcp
 ```
@@ -112,6 +261,8 @@ Then run `/mcp` inside Claude Code, select **mcp-lambdatest**, and complete the 
 
 1. Open **Settings > Connectors**.
 2. Click **Add Custom Connector** and enter the URL:
+
+<VerifiedTag value="Verified" />
 
 ```
 https://mcp.lambdatest.com/mcp
@@ -134,6 +285,8 @@ Custom connectors in Claude Desktop are configured through **Settings > Connecto
 
 1. Open the Command Palette (`Cmd+Shift+P` / `Ctrl+Shift+P`) and run **MCP: Add Server**, choosing **Workspace** or **Global**. Or create `.vscode/mcp.json` manually:
 
+<VerifiedTag value="Verified" />
+
 ```json
 {
   "servers": {
@@ -152,6 +305,8 @@ Custom connectors in Claude Desktop are configured through **Settings > Connecto
 
 1. In the Agent panel, click the **...** menu, then **MCP Servers**, then **Manage MCP Servers**.
 2. Click **View raw config** and add the configuration to `mcp_config.json`:
+
+<VerifiedTag value="Verified" />
 
 ```json
 {
@@ -173,11 +328,15 @@ Antigravity has a global limit of around 100 active MCP tools across all servers
 
 Run this in your terminal:
 
+<VerifiedTag value="Verified" />
+
 ```shell
 codex mcp add mcp-lambdatest --url https://mcp.lambdatest.com/mcp
 ```
 
 Then start an OAuth login:
+
+<VerifiedTag value="Verified" />
 
 ```shell
 codex mcp login mcp-lambdatest
@@ -186,6 +345,8 @@ codex mcp login mcp-lambdatest
 Verify with `codex mcp list`.
 
 **Manual config:** Add the following to `~/.codex/config.toml`:
+
+<VerifiedTag value="Verified" />
 
 ```toml
 [mcp_servers.mcp-lambdatest]
@@ -196,6 +357,8 @@ url = "https://mcp.lambdatest.com/mcp"
 
 1. Open the **Cline panel** in VS Code, then **MCP Servers > Configure MCP Servers**.
 2. Paste the configuration:
+
+<VerifiedTag value="Verified" />
 
 ```json
 {
@@ -216,6 +379,8 @@ url = "https://mcp.lambdatest.com/mcp"
 ### Continue
 
 1. Create `.continue/mcpServers/testmu-ai.yaml` in your workspace and add:
+
+<VerifiedTag value="Verified" />
 
 ```yaml
 name: TestMu AI mcpServer
@@ -243,6 +408,8 @@ If your MCP client is not listed above, use one of these connection methods:
 | **STDIO** (via `mcp-remote`) | See below | Fallback for clients that only support stdio |
 
 **Universal STDIO configuration** for any client that accepts the standard `mcpServers` format:
+
+<VerifiedTag value="Verified" />
 
 ```json
 {
@@ -303,6 +470,8 @@ You can also ask questions like:
 **Command not found: npx errors**
 
 This usually means your MCP client cannot find Node.js on its PATH. Use the full path to `npx`:
+
+<VerifiedTag value="Verified" />
 
 ```shell
 which npx   # macOS/Linux

@@ -21,6 +21,8 @@ canonical: https://www.testmuai.com/support/docs/build-ios-app-for-simulator-tes
 import CodeBlock from '@theme/CodeBlock';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
+import VerifiedTag from '@site/src/component/verifiedTag';
+
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
        "@context": "https://schema.org",
@@ -44,6 +46,117 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       })
     }}
 ></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/build-ios-app-for-simulator-testing/"
+    },
+    "headline": "Building Your iOS App for Simulator Testing",
+    "description": "Learn how to build your iOS app correctly for testing on iOS Simulators on TestMu AI Cloud. Covers Xcode UI, command line builds, and build verification.",
+    "url": "https://www.testmuai.com/support/docs/build-ios-app-for-simulator-testing/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "App Automation",
+    "keywords": [
+      "ios simulator testing",
+      "build ios app for simulator",
+      "iphonesimulator sdk"
+    ],
+    "proficiencyLevel": "Beginner",
+    "dependencies": "Xcode installed on a Mac (macOS 13 or later recommended); Your iOS project source code; A TestMu AI account with access to iOS Simulator testing.",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 2: Run the following build command",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "xcodebuild -project YourProject.xcodeproj \\\n           -scheme YourScheme \\\n           -configuration Debug \\\n           -sdk iphonesimulator \\\n           -arch arm64 \\\n           build"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "You can find the path in the build output, or use",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "xcodebuild -project YourProject.xcodeproj \\\n           -scheme YourScheme \\\n           -configuration Debug \\\n           -sdk iphonesimulator \\\n           -arch arm64 \\\n           -showBuildSettings | grep \"BUILT_PRODUCTS_DIR\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 4: Compress the .app into a .zip file",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "cd /path/to/build/output/\nzip -r YourApp.zip YourApp.app"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 1: Run the following command",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "vtool -show-build YourApp.app/YourApp"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 2: Check the output",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "  platform: IOSSIMULATOR"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Verifying Your Build",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "  platform: IOS"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "You can also use otool to check the architecture",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "lipo -info YourApp.app/YourApp"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 
 Building an iOS app for Simulator testing on TestMu AI requires compiling against the iphonesimulator SDK, not a physical-device build. This produces a .app targeting Mach-O platform 7, which the Simulator accepts, so your uploads run without any immediate crash.
 
@@ -100,6 +213,8 @@ If you use a CI/CD pipeline or prefer the terminal, use `xcodebuild` with the `-
 
 **Step 2:** Run the following build command:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 xcodebuild -project YourProject.xcodeproj \
            -scheme YourScheme \
@@ -123,6 +238,8 @@ If your project uses a **workspace** (e.g., with CocoaPods), replace `-project Y
 
 **Step 3:** Locate the `.app` output from the **Derived Data** directory. You can find the path in the build output, or use:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 xcodebuild -project YourProject.xcodeproj \
            -scheme YourScheme \
@@ -133,6 +250,8 @@ xcodebuild -project YourProject.xcodeproj \
 ```
 
 **Step 4:** Compress the `.app` into a `.zip` file:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 cd /path/to/build/output/
@@ -146,6 +265,8 @@ The `.zip` file is now ready for upload.
 Before uploading, verify that your `.app` is targeting the correct platform using the `vtool` command.
 
 **Step 1:** Run the following command:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 vtool -show-build YourApp.app/YourApp
@@ -171,6 +292,9 @@ If the platform shows `IOS` or `platform 2`, the build is for physical devices a
 
 :::tip Alternative Verification
 You can also use `otool` to check the architecture:
+
+<VerifiedTag value="Verified" />
+
 ```bash
 lipo -info YourApp.app/YourApp
 ```

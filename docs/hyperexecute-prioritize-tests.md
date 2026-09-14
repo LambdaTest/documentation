@@ -1,6 +1,6 @@
 ---
 id: hyperexecute-prioritize-tests
-title: Prioritize Your Tests
+title: Prioritize Your Tests
 toc_max_heading_level: 2
 hide_title: false
 sidebar_label: "Jobs Prioritization"
@@ -18,6 +18,8 @@ canonical: https://www.testmuai.com/support/docs/hyperexecute-prioritize-tests/
 
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -42,6 +44,74 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       })
     }}
 ></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/hyperexecute-prioritize-tests/"
+    },
+    "headline": "Prioritize Your Tests",
+    "description": "Learn more about how to prioritize your tests with HyperExecute.",
+    "url": "https://www.testmuai.com/support/docs/hyperexecute-prioritize-tests/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "HyperExecute",
+    "keywords": [
+      "TestMu AI Hyperexecute",
+      "TestMu AI Hyperexecute help",
+      "TestMu AI Hyperexecute documentation"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Prioritize your Jobs using jobLabel",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "jobLabel: ['high', 'medium', 'low']"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 HyperExecute's job prioritization feature empowers you to ensure that your most crucial tests are executed with precision and timeliness. This feature not only enhances the order of execution but also enables effortless searchability within your testing repository.
 
 ## `jobLabel`
@@ -51,6 +121,8 @@ The `jobLabel` YAML key is used to add tags or labels to jobs. In addition to pr
 ## Prioritize your Jobs using `jobLabel`
 
 You can prioritize your jobs by assigning the job labels **low**, **medium** or **high** to your jobs. The jobs with the priority **high** will be executed first, followed by **medium** priority jobs with **low** priority jobs at the end.
+
+<VerifiedTag value="Verified" />
 
 ```yaml
 jobLabel: ['high', 'medium', 'low']

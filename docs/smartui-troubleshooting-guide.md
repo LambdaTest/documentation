@@ -24,6 +24,8 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 
+import VerifiedTag from '@site/src/component/verifiedTag';
+
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
        "@context": "https://schema.org",
@@ -47,6 +49,536 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       })
     }}
 ></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/smartui-troubleshooting-guide/"
+    },
+    "headline": "Comprehensive Troubleshooting Guide for SmartUI",
+    "description": "Comprehensive troubleshooting guide for common SmartUI issues, including solutions, best practices, and diagnostic steps",
+    "url": "https://www.testmuai.com/support/docs/smartui-troubleshooting-guide/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "SmartUI",
+    "keywords": [
+      "troubleshooting",
+      "smartui issues",
+      "visual testing problems"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Verify Project Token",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "   echo $PROJECT_TOKEN"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "If empty, set it",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "   export PROJECT_TOKEN=\"123456#1234abcd-****-****-****-************\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 3",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "   echo %PROJECT_TOKEN%"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "If empty, set it",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "   set PROJECT_TOKEN=\"123456#1234abcd-****-****-****-************\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 5",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "PowerShell",
+        "text": "   echo $env:PROJECT_TOKEN"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "If empty, set it",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "PowerShell",
+        "text": "   $env:PROJECT_TOKEN=\"123456#1234abcd-****-****-****-************\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Verify SmartUI CLI Installation",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "   npx smartui --version"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "If outdated, update",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "   npm install -g @lambdatest/smartui-cli@latest"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Check Network Connectivity",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "   curl -I https://smartui.lambdatest.com"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Verify Credentials Are Set",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "   echo $LT_USERNAME\n   echo $LT_ACCESS_KEY"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Issue: Credentials Not Working (Hooks)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "   echo %LT_USERNAME%\n   echo %LT_ACCESS_KEY%"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Issue: Credentials Not Working (Hooks)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "PowerShell",
+        "text": "   echo $env:LT_USERNAME\n   echo $env:LT_ACCESS_KEY"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Set Credentials Correctly",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "   export LT_USERNAME=\"your_username\"\n   export LT_ACCESS_KEY=\"your_access_key\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 14",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "   set LT_USERNAME=\"your_username\"\n   set LT_ACCESS_KEY=\"your_access_key\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 15",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "PowerShell",
+        "text": "   $env:LT_USERNAME=\"your_username\"\n   $env:LT_ACCESS_KEY=\"your_access_key\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Global Installation (-g flag)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "   npm install -g @lambdatest/smartui-cli"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Local Installation (without -g)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "   npm install @lambdatest/smartui-cli\n   npx smartui --version"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "SmartUI CLI",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "   # Global installation (latest)\n   npm install -g @lambdatest/smartui-cli@latest\n\n   # Local installation (latest)\n   npm install @lambdatest/smartui-cli@latest\n\n   # Using npx (always uses latest)\n   npx @lambdatest/smartui-cli@latest --version"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "SmartUI Storybook CLI",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "   # Global installation (latest)\n   npm install -g @lambdatest/smartui-storybook@latest\n\n   # Local installation (latest)\n   npm install @lambdatest/smartui-storybook@latest\n\n   # Using npx (always uses latest)\n   npx @lambdatest/smartui-storybook@latest --version"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Checking Current Version",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "   # If installed globally\n   smartui --version\n\n   # If installed locally or using npx\n   npx smartui --version"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Updating to Latest Version",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "   # Global update\n   npm update -g @lambdatest/smartui-cli\n\n   # Local update\n   npm update @lambdatest/smartui-cli\n\n   # Force reinstall latest\n   npm install -g @lambdatest/smartui-cli@latest --force"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "If installed globally",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "     echo $PATH | grep -i node\n     npm config get prefix"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Force reinstall latest",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "     # macOS/Linux - Add to ~/.bashrc or ~/.zshrc\n     export PATH=\"$PATH:$(npm config get prefix)/bin\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "If installed locally",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "     npx smartui --version\n     npx smartui exec -- <command>"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "macOS/Linux - Add to ~/.bashrc or ~/.zshrc",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "     ./node_modules/.bin/smartui --version"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Selenium (Java)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "   WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));\n   wait.until(ExpectedConditions.presenceOfElementLocated(By.id(\"content\")));\n   SmartUISnapshot.smartuiSnapshot(driver, \"Screenshot Name\");"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Playwright (JavaScript)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "   await page.goto('https://example.com');\n   await page.waitForSelector('#content', { state: 'visible' });\n   await page.waitForLoadState('networkidle');\n   await smartuiSnapshot.smartuiSnapshot(page, \"Screenshot Name\");"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Cypress",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "   cy.visit('https://example.com');\n   cy.get('#content').should('be.visible');\n   cy.wait(2000); // Wait for animations\n   cy.smartuiSnapshot('Screenshot Name');"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Enable JavaScript in Configuration",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JSON",
+        "text": "   {\n     \"enableJavaScript\": true,\n     \"waitForTimeout\": 2000,\n     \"waitForPageRender\": 5000\n   }"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Increase Wait Timeouts",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JSON",
+        "text": "   {\n     \"waitForTimeout\": 3000,\n     \"waitForPageRender\": 10000\n   }"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Use Meaningful Names",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "   // Good\n   cy.smartuiSnapshot('ProductPage-MainContent');\n   cy.smartuiSnapshot('CheckoutPage-PaymentForm');\n\n   // Bad\n   cy.smartuiSnapshot('screenshot1');\n   cy.smartuiSnapshot('test-' + Date.now());"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Use ignoreDOM for Dynamic Content",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "   let options = {\n     ignoreDOM: {\n       id: [\"timestamp\", \"user-id\", \"session-token\"],\n       class: [\"dynamic-content\", \"ad-banner\"],\n       cssSelector: [\"[data-testid='timestamp']\"]\n     }\n   };\n   smartuiSnapshot(driver, \"Screenshot Name\", options);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Verify Configuration File Exists",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "   ls -la .smartui.json"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "If missing, create it",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "   npx smartui config:create .smartui.json"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Validate JSON Syntax",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "   cat .smartui.json | python -m json.tool"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Check Port Availability",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "   # Check if port 5000 is in use\n   lsof -i :5000"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Use different port",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "   npx smartui exec -P 5001 -- <command>"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Check File Permissions",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "   chmod 644 .smartui.json"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Update CLI",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "   npm install -g @lambdatest/smartui-cli@latest"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Check CLI Help",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "   npx smartui --help\n   npx smartui exec --help"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "npm packages",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "   npm view @lambdatest/smartui-cli version\n   npm view @lambdatest/playwright-driver version"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "pip (Python)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "   pip index versions lambdatest-selenium-driver"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "npm",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "   npm cache clean --force"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Maven",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "   mvn clean"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "pip",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "   pip cache purge"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Verify Internet Connectivity",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "   ping registry.npmjs.org"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Check Node Version (for npm)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "   node --version"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "GitHub Actions",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "   env:\n     PROJECT_TOKEN: ${{ secrets.PROJECT_TOKEN }}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "GitLab",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "   variables:\n     PROJECT_TOKEN: $PROJECT_TOKEN"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Validate JSON Syntax",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "   cat .smartui.json | python -m json.tool"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "To keep environment variables consistent across all terminals, configure them in your shell's startup file",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "   # Edit ~/.bashrc\n   nano ~/.bashrc\n\n   # Add your environment variables\n   export PROJECT_TOKEN=\"123456#1234abcd-****-****-****-************\"\n   export LT_USERNAME=\"your_username\"\n   export LT_ACCESS_KEY=\"your_access_key\"\n\n   # Reload the configuration\n   source ~/.bashrc"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Reload the configuration",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "   # Edit ~/.zshrc\n   nano ~/.zshrc\n\n   # Add your environment variables\n   export PROJECT_TOKEN=\"123456#1234abcd-****-****-****-************\"\n   export LT_USERNAME=\"your_username\"\n   export LT_ACCESS_KEY=\"your_access_key\"\n\n   # Reload the configuration\n   source ~/.zshrc"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Reload the configuration",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "PowerShell",
+        "text": "   # Check if profile exists\n   Test-Path $PROFILE\n\n   # Create profile if it doesn't exist\n   if (!(Test-Path $PROFILE)) {\n       New-Item -Type File -Path $PROFILE -Force\n   }\n\n   # Edit profile\n   notepad $PROFILE\n\n   # Add your environment variables\n   $env:PROJECT_TOKEN=\"123456#1234abcd-****-****-****-************\"\n   $env:LT_USERNAME=\"your_username\"\n   $env:LT_ACCESS_KEY=\"your_access_key\"\n\n   # Reload the profile\n   . $PROFILE"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Open VS Code settings (Ctrl+, or Cmd+,) and add",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JSON",
+        "text": "   {\n     \"terminal.integrated.env.linux\": {\n       \"PROJECT_TOKEN\": \"123456#1234abcd-****-****-****-************\",\n       \"LT_USERNAME\": \"your_username\",\n       \"LT_ACCESS_KEY\": \"your_access_key\"\n     },\n     \"terminal.integrated.env.osx\": {\n       \"PROJECT_TOKEN\": \"123456#1234abcd-****-****-****-************\",\n       \"LT_USERNAME\": \"your_username\",\n       \"LT_ACCESS_KEY\": \"your_access_key\"\n     },\n     \"terminal.integrated.env.windows\": {\n       \"PROJECT_TOKEN\": \"123456#1234abcd-****-****-****-************\",\n       \"LT_USERNAME\": \"your_username\",\n       \"LT_ACCESS_KEY\": \"your_access_key\"\n     }\n   }"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Create or edit .vscode/settings.json in your project root",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JSON",
+        "text": "   {\n     \"terminal.integrated.env.linux\": {\n       \"PROJECT_TOKEN\": \"123456#1234abcd-****-****-****-************\"\n     },\n     \"terminal.integrated.env.osx\": {\n       \"PROJECT_TOKEN\": \"123456#1234abcd-****-****-****-************\"\n     },\n     \"terminal.integrated.env.windows\": {\n       \"PROJECT_TOKEN\": \"123456#1234abcd-****-****-****-************\"\n     }\n   }"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Create .env file in project root",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "   PROJECT_TOKEN=123456#1234abcd-****-****-****-************\n   LT_USERNAME=your_username\n   LT_ACCESS_KEY=your_access_key"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "For Node.js projects",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "     npm install dotenv"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 58",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "     require('dotenv').config();"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 59",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "     npm install -g dotenv-cli\n     dotenv smartui exec -- <command>"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "For Python projects",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "     pip install python-dotenv"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 61",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Python",
+        "text": "     from dotenv import load_dotenv\n     load_dotenv()"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Verifying Environment Variables",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "   # Check if variable is set\n   echo $PROJECT_TOKEN\n   echo $LT_USERNAME\n   echo $LT_ACCESS_KEY\n\n   # List all SmartUI-related variables\n   env | grep -E \"PROJECT_TOKEN|LT_USERNAME|LT_ACCESS_KEY|SMARTUI\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "List all SmartUI-related variables",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "   # Check if variable is set\n   echo %PROJECT_TOKEN%\n   echo %LT_USERNAME%\n   echo %LT_ACCESS_KEY%\n\n   # List all environment variables\n   set | findstr /i \"PROJECT_TOKEN LT_USERNAME LT_ACCESS_KEY SMARTUI\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "List all environment variables",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "PowerShell",
+        "text": "   # Check if variable is set\n   echo $env:PROJECT_TOKEN\n   echo $env:LT_USERNAME\n   echo $env:LT_ACCESS_KEY\n\n   # List all SmartUI-related variables\n   Get-ChildItem Env: | Where-Object { $_.Name -like \"*PROJECT_TOKEN*\" -or $_.Name -like \"*LT_*\" -or $_.Name -like \"*SMARTUI*\" }"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Set Proxy Environment Variables",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "   export HTTP_PROXY=\"http://proxy.example.com:8080\"\n   export HTTPS_PROXY=\"http://proxy.example.com:8080\"\n   export NO_PROXY=\"localhost,127.0.0.1\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Verify Proxy Settings",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "   echo $HTTP_PROXY\n   echo $HTTPS_PROXY"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Start Tunnel",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "   ./LT --user <username> --key <access_key>"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 
 This comprehensive troubleshooting guide covers common issues you may encounter when using SmartUI for visual regression testing. Each issue includes symptoms, possible causes, and step-by-step solutions.
 
@@ -87,28 +619,46 @@ Before diving into specific issues, run through this quick checklist:
 1. **Verify Project Token**:
    <Tabs className='docs__val' groupId='platform'>
    <TabItem value='macos-linux' label='MacOS/Linux' default>
+
+   <VerifiedTag value="Verified" />
+
    ```bash
    echo $PROJECT_TOKEN
    ```
    If empty, set it:
+
+   <VerifiedTag value="Verified" />
+
    ```bash
    export PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
    ```
    </TabItem>
    <TabItem value='windows-cmd' label='Windows CMD'>
+
+   <VerifiedTag value="Verified" />
+
    ```bash
    echo %PROJECT_TOKEN%
    ```
    If empty, set it:
+
+   <VerifiedTag value="Verified" />
+
    ```bash
    set PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
    ```
    </TabItem>
    <TabItem value='powershell' label='PowerShell'>
+
+   <VerifiedTag value="Verified" />
+
    ```powershell
    echo $env:PROJECT_TOKEN
    ```
    If empty, set it:
+
+   <VerifiedTag value="Verified" />
+
    ```powershell
    $env:PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
    ```
@@ -118,14 +668,23 @@ Before diving into specific issues, run through this quick checklist:
 2. **Check Project Name**: Verify project name in dashboard matches exactly (case-sensitive)
 
 3. **Verify SmartUI CLI Installation**:
+
+   <VerifiedTag value="Verified" />
+
    ```bash
    npx smartui --version
    ```
    If outdated, update:
+
+   <VerifiedTag value="Verified" />
+
    ```bash
    npm install -g @lambdatest/smartui-cli@latest
    ```
 4. **Check Network Connectivity**:
+
+   <VerifiedTag value="Verified" />
+
    ```bash
    curl -I https://smartui.lambdatest.com
    ```
@@ -192,18 +751,27 @@ Before diving into specific issues, run through this quick checklist:
 1. **Verify Credentials Are Set**:
    <Tabs className='docs__val' groupId='platform'>
    <TabItem value='macos-linux-1' label='MacOS/Linux' default>
+
+   <VerifiedTag value="Verified" />
+
    ```bash
    echo $LT_USERNAME
    echo $LT_ACCESS_KEY
    ```
    </TabItem>
    <TabItem value='windows-cmd-1' label='Windows CMD'>
+
+   <VerifiedTag value="Verified" />
+
    ```bash
    echo %LT_USERNAME%
    echo %LT_ACCESS_KEY%
    ```
    </TabItem>
    <TabItem value='powershell-1' label='PowerShell'>
+
+   <VerifiedTag value="Verified" />
+
    ```powershell
    echo $env:LT_USERNAME
    echo $env:LT_ACCESS_KEY
@@ -219,18 +787,27 @@ Before diving into specific issues, run through this quick checklist:
 3. **Set Credentials Correctly**:
    <Tabs className='docs__val' groupId='platform'>
    <TabItem value='macos-linux-2' label='MacOS/Linux' default>
+
+   <VerifiedTag value="Verified" />
+
    ```bash
    export LT_USERNAME="your_username"
    export LT_ACCESS_KEY="your_access_key"
    ```
    </TabItem>
    <TabItem value="windows-cmd-2" label='Windows CMD'>
+
+   <VerifiedTag value="Verified" />
+
    ```bash
    set LT_USERNAME="your_username"
    set LT_ACCESS_KEY="your_access_key"
    ```
    </TabItem>
    <TabItem value='powershell-2' label='PowerShell'>
+
+   <VerifiedTag value="Verified" />
+
    ```powershell
    $env:LT_USERNAME="your_username"
    $env:LT_ACCESS_KEY="your_access_key"
@@ -266,6 +843,9 @@ Before diving into specific issues, run through this quick checklist:
    - Command available as `smartui` directly
    - Requires administrator/sudo privileges
    - Best for: Single user, consistent environment
+
+<VerifiedTag value="Verified" />
+
 ```bash
    npm install -g @lambdatest/smartui-cli
    ```
@@ -274,6 +854,9 @@ Before diving into specific issues, run through this quick checklist:
    - Access via `npx smartui` or `./node_modules/.bin/smartui`
    - No admin privileges needed
    - Best for: Project-specific versions, CI/CD pipelines
+
+<VerifiedTag value="Verified" />
+
 ```bash
    npm install @lambdatest/smartui-cli
    npx smartui --version
@@ -281,6 +864,9 @@ Before diving into specific issues, run through this quick checklist:
 2. **Installing Latest Versions**:
 
    **SmartUI CLI**:
+
+   <VerifiedTag value="Verified" />
+
    ```bash
    # Global installation (latest)
    npm install -g @lambdatest/smartui-cli@latest
@@ -292,6 +878,9 @@ Before diving into specific issues, run through this quick checklist:
    npx @lambdatest/smartui-cli@latest --version
    ```
    **SmartUI Storybook CLI**:
+
+   <VerifiedTag value="Verified" />
+
    ```bash
    # Global installation (latest)
    npm install -g @lambdatest/smartui-storybook@latest
@@ -303,6 +892,9 @@ Before diving into specific issues, run through this quick checklist:
    npx @lambdatest/smartui-storybook@latest --version
    ```
 3. **Checking Current Version**:
+
+   <VerifiedTag value="Verified" />
+
    ```bash
    # If installed globally
    smartui --version
@@ -311,6 +903,9 @@ Before diving into specific issues, run through this quick checklist:
    npx smartui --version
    ```
 4. **Updating to Latest Version**:
+
+   <VerifiedTag value="Verified" />
+
    ```bash
    # Global update
    npm update -g @lambdatest/smartui-cli
@@ -375,12 +970,18 @@ Before diving into specific issues, run through this quick checklist:
 1. **Add Explicit Waits** (Framework-specific):
 
    **Selenium (Java)**:
+
+   <VerifiedTag value="Verified" />
+
    ```java
    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
    wait.until(ExpectedConditions.presenceOfElementLocated(By.id("content")));
    SmartUISnapshot.smartuiSnapshot(driver, "Screenshot Name");
    ```
    **Playwright (JavaScript)**:
+
+   <VerifiedTag value="Verified" />
+
    ```javascript
    await page.goto('https://example.com');
    await page.waitForSelector('#content', { state: 'visible' });
@@ -388,6 +989,9 @@ Before diving into specific issues, run through this quick checklist:
    await smartuiSnapshot.smartuiSnapshot(page, "Screenshot Name");
    ```
    **Cypress**:
+
+   <VerifiedTag value="Verified" />
+
    ```javascript
    cy.visit('https://example.com');
    cy.get('#content').should('be.visible');
@@ -395,6 +999,9 @@ Before diving into specific issues, run through this quick checklist:
    cy.smartuiSnapshot('Screenshot Name');
    ```
 2. **Enable JavaScript in Configuration**:
+
+   <VerifiedTag value="Verified" />
+
    ```json
    {
      "enableJavaScript": true,
@@ -403,6 +1010,9 @@ Before diving into specific issues, run through this quick checklist:
    }
    ```
 3. **Increase Wait Timeouts**:
+
+   <VerifiedTag value="Verified" />
+
    ```json
    {
      "waitForTimeout": 3000,
@@ -459,6 +1069,9 @@ Before diving into specific issues, run through this quick checklist:
    - Use consistent casing
 
 5. **Use Meaningful Names**:
+
+   <VerifiedTag value="Verified" />
+
    ```javascript
    // Good
    cy.smartuiSnapshot('ProductPage-MainContent');
@@ -488,6 +1101,9 @@ Before diving into specific issues, run through this quick checklist:
 **Solutions**:
 
 1. **Use ignoreDOM for Dynamic Content**:
+
+   <VerifiedTag value="Verified" />
+
    ```javascript
    let options = {
      ignoreDOM: {
@@ -539,37 +1155,61 @@ Before diving into specific issues, run through this quick checklist:
 **Solutions**:
 
 1. **Verify Configuration File Exists**:
+
+   <VerifiedTag value="Verified" />
+
    ```bash
    ls -la .smartui.json
    ```
    If missing, create it:
+
+   <VerifiedTag value="Verified" />
+
    ```bash
    npx smartui config:create .smartui.json
    ```
 2. **Validate JSON Syntax**:
+
+   <VerifiedTag value="Verified" />
+
    ```bash
    cat .smartui.json | python -m json.tool
    ```
    Or use online JSON validator
 
 3. **Check Port Availability**:
+
+   <VerifiedTag value="Verified" />
+
    ```bash
    # Check if port 5000 is in use
    lsof -i :5000
    ```
    Use different port:
+
+   <VerifiedTag value="Verified" />
+
    ```bash
    npx smartui exec -P 5001 -- <command>
    ```
 4. **Check File Permissions**:
+
+   <VerifiedTag value="Verified" />
+
    ```bash
    chmod 644 .smartui.json
    ```
 5. **Update CLI**:
+
+   <VerifiedTag value="Verified" />
+
    ```bash
    npm install -g @lambdatest/smartui-cli@latest
    ```
 6. **Check CLI Help**:
+
+   <VerifiedTag value="Verified" />
+
    ```bash
    npx smartui --help
    npx smartui exec --help
@@ -596,6 +1236,9 @@ Before diving into specific issues, run through this quick checklist:
 1. **Check Latest Versions**:
 
    **npm packages**:
+
+   <VerifiedTag value="Verified" />
+
    ```bash
    npm view @lambdatest/smartui-cli version
    npm view @lambdatest/playwright-driver version
@@ -604,28 +1247,46 @@ Before diving into specific issues, run through this quick checklist:
    - Check [Maven Central](https://mvnrepository.com/artifact/io.github.lambdatest/lambdatest-java-sdk)
 
    **pip (Python)**:
+
+   <VerifiedTag value="Verified" />
+
    ```bash
    pip index versions lambdatest-selenium-driver
    ```
 2. **Clear Package Manager Cache**:
 
    **npm**:
+
+   <VerifiedTag value="Verified" />
+
    ```bash
    npm cache clean --force
    ```
    **Maven**:
+
+   <VerifiedTag value="Verified" />
+
    ```bash
    mvn clean
    ```
    **pip**:
+
+   <VerifiedTag value="Verified" />
+
    ```bash
    pip cache purge
    ```
 3. **Verify Internet Connectivity**:
+
+   <VerifiedTag value="Verified" />
+
    ```bash
    ping registry.npmjs.org
    ```
 4. **Check Node Version** (for npm):
+
+   <VerifiedTag value="Verified" />
+
    ```bash
    node --version
    ```
@@ -683,11 +1344,17 @@ Before diving into specific issues, run through this quick checklist:
 4. **Pass Variables to Steps**:
 
    **GitHub Actions**:
+
+   <VerifiedTag value="Verified" />
+
    ```yaml
    env:
      PROJECT_TOKEN: ${{ secrets.PROJECT_TOKEN }}
    ```
    **GitLab**:
+
+   <VerifiedTag value="Verified" />
+
    ```yaml
    variables:
      PROJECT_TOKEN: $PROJECT_TOKEN
@@ -752,6 +1419,9 @@ Before diving into specific issues, run through this quick checklist:
 **Solutions**:
 
 1. **Validate JSON Syntax**:
+
+   <VerifiedTag value="Verified" />
+
    ```bash
    cat .smartui.json | python -m json.tool
    ```
@@ -797,6 +1467,9 @@ Before diving into specific issues, run through this quick checklist:
 
    <Tabs className='docs__val' groupId='platform'>
    <TabItem value='bash' label='Bash (.bashrc)' default>
+
+   <VerifiedTag value="Verified" />
+
    ```bash
    # Edit ~/.bashrc
    nano ~/.bashrc
@@ -811,6 +1484,9 @@ Before diving into specific issues, run through this quick checklist:
    ```
    </TabItem>
    <TabItem value='zsh' label='Zsh (.zshrc)'>
+
+   <VerifiedTag value="Verified" />
+
    ```bash
    # Edit ~/.zshrc
    nano ~/.zshrc
@@ -825,6 +1501,9 @@ Before diving into specific issues, run through this quick checklist:
    ```
    </TabItem>
    <TabItem value='powershell-3' label='PowerShell ($PROFILE)'>
+
+   <VerifiedTag value="Verified" />
+
    ```powershell
    # Check if profile exists
    Test-Path $PROFILE
@@ -855,6 +1534,9 @@ Before diving into specific issues, run through this quick checklist:
    **Option 1: User Settings (settings.json)**
 
    Open VS Code settings (`Ctrl+,` or `Cmd+,`) and add:
+
+<VerifiedTag value="Verified" />
+
 ```json
    {
      "terminal.integrated.env.linux": {
@@ -877,6 +1559,9 @@ Before diving into specific issues, run through this quick checklist:
    **Option 2: Workspace Settings (.vscode/settings.json)**
 
    Create or edit `.vscode/settings.json` in your project root:
+
+<VerifiedTag value="Verified" />
+
 ```json
    {
      "terminal.integrated.env.linux": {
@@ -897,6 +1582,9 @@ Before diving into specific issues, run through this quick checklist:
    For project-specific environment variables, use a `.env` file:
 
    **Create `.env` file in project root**:
+
+   <VerifiedTag value="Verified" />
+
    ```bash
    PROJECT_TOKEN=123456#1234abcd-****-****-****-************
    LT_USERNAME=your_username
@@ -936,6 +1624,9 @@ Before diving into specific issues, run through this quick checklist:
 
 <Tabs className='docs__val' groupId='platform'>
 <TabItem value='macos-linux-3' label='MacOS/Linux' default>
+
+   <VerifiedTag value="Verified" />
+
    ```bash
    # Check if variable is set
    echo $PROJECT_TOKEN
@@ -948,6 +1639,9 @@ Before diving into specific issues, run through this quick checklist:
 
 </TabItem>
 <TabItem value='windows-cmd-3' label='Windows CMD'>
+
+   <VerifiedTag value="Verified" />
+
    ```bash
    # Check if variable is set
    echo %PROJECT_TOKEN%
@@ -959,6 +1653,9 @@ Before diving into specific issues, run through this quick checklist:
    ```
    </TabItem>
    <TabItem value='powershell-4' label='PowerShell'>
+
+   <VerifiedTag value="Verified" />
+
    ```powershell
    # Check if variable is set
    echo $env:PROJECT_TOKEN
@@ -1017,6 +1714,9 @@ Before diving into specific issues, run through this quick checklist:
 **Solutions**:
 
 1. **Set Proxy Environment Variables**:
+
+   <VerifiedTag value="Verified" />
+
    ```bash
    export HTTP_PROXY="http://proxy.example.com:8080"
    export HTTPS_PROXY="http://proxy.example.com:8080"
@@ -1028,6 +1728,9 @@ Before diving into specific issues, run through this quick checklist:
    - Contact support for proxy authentication support
 
 3. **Verify Proxy Settings**:
+
+   <VerifiedTag value="Verified" />
+
    ```bash
    echo $HTTP_PROXY
    echo $HTTPS_PROXY
@@ -1052,6 +1755,9 @@ Before diving into specific issues, run through this quick checklist:
 **Solutions**:
 
 1. **Start Tunnel**:
+
+   <VerifiedTag value="Verified" />
+
    ```bash
    ./LT --user <username> --key <access_key>
    ```
@@ -1068,6 +1774,285 @@ Before diving into specific issues, run through this quick checklist:
 </TabItem>
 
 </Tabs>
+
+---
+
+## Error Message Reference {#error-message-reference}
+
+<!-- Verified 2026-09-11 against @lambdatest/smartui-cli 4.1.81 (dist/index.cjs): every message is in the source, and each explanation matches the code that throws it. -->
+
+When a SmartUI CLI command fails, it prints a plain-text message. This section lists those messages exactly as the CLI prints them, what each one means, and what to do.
+
+Some messages end with details from your run, such as a file name or the reason the server gave. Those details are shown here as `…`. For many failures, the CLI prints the underlying reason just above the message.
+
+Documented for `@lambdatest/smartui-cli` **v4.1.81**.
+
+### Authentication and Setup {#smartui-errors-credentials}
+
+#### Authentication failed {#authentication-failed}
+
+| Field | Value |
+|-------|-------|
+| **Message** | `Authentication failed` |
+| **What happened** | The CLI could not authenticate with SmartUI. When the server gives a reason, the CLI prints that reason instead. |
+| **What to do** | Check `LT_USERNAME`, `LT_ACCESS_KEY`, and your project token. The project token uses the format `PROJECT_ID#TOKEN_VALUE`. See [Project Not Found](#issue-project-not-found-error) above. |
+
+#### SmartUI capabilities are missing in env variables or in driver capabilities {#capabilities-missing}
+
+| Field | Value |
+|-------|-------|
+| **Message** | `SmartUI capabilities are missing in env variables or in driver capabilities` |
+| **What happened** | An SDK run needed to create a build, but no SmartUI settings were found in environment variables or in driver capabilities. |
+| **What to do** | Set the SmartUI environment variables before the run, or pass them in your driver capabilities. See [SmartUI SDK Environment Variables](/support/docs/smartui-running-your-first-project/). |
+
+### Configuration File {#smartui-errors-configuration}
+
+#### Invalid config; web config must have either customViewports or both browsers and viewports {#web-config-viewports}
+
+| Field | Value |
+|-------|-------|
+| **Message** | `Invalid config; web config must have either customViewports or both browsers and viewports` |
+| **What happened** | The `web` block in your config does not say which screens to capture. |
+| **What to do** | In the `web` block, set either `customViewports`, or both `browsers` and `viewports`. |
+
+#### Invalid config; rejectionThreshold must be greater than approvalThreshold {#thresholds}
+
+| Field | Value |
+|-------|-------|
+| **Message** | `Invalid config; rejectionThreshold must be greater than approvalThreshold` |
+| **What happened** | The rejection threshold is not greater than the approval threshold. |
+| **What to do** | Set `rejectionThreshold` to a value higher than `approvalThreshold`. |
+
+#### customViewports is only supported for the exec command. Use browsers and viewports instead. {#custom-viewports-exec}
+
+| Field | Value |
+|-------|-------|
+| **Message** | `customViewports is only supported for the exec command. Use browsers and viewports instead.` |
+| **What happened** | `customViewports` was set for a command other than `exec`. |
+| **What to do** | Define `browsers` and `viewports` instead, or use [the exec command](/support/docs/smartui-cli-exec/). |
+
+#### No URLs found in the specified config file {#no-urls}
+
+| Field | Value |
+|-------|-------|
+| **Message** | `No URLs found in the specified config file -> …` |
+| **What happened** | The file listing the URLs to capture contains none. |
+| **What to do** | Add at least one URL to the file. See [Capture Static URLs via CLI](/support/docs/smartui-cli-complete-reference/). |
+
+#### Web Static Config file not found {#web-static-config-not-found}
+
+| Field | Value |
+|-------|-------|
+| **Message** | `Web Static Config file … not found.` |
+| **What happened** | The static config file named in the command does not exist at that path. |
+| **What to do** | Check the path, or run the command from the directory that contains the file. |
+| **Also seen as** | `Invalid Web Static Config; …` |
+
+#### Invalid customCSS file type {#custom-css-type}
+
+| Field | Value |
+|-------|-------|
+| **Message** | `Invalid customCSS file type: … Only .css files are supported.` |
+| **What happened** | `customCSS` points to a file that is not a `.css` file. |
+| **What to do** | Point `customCSS` at an existing `.css` file. |
+| **Also seen as** | `customCSS file not found: …` · `customCSS path is not a file: …` · `customCSS must be a non-empty string` · `customCSS cannot be empty` |
+
+### Builds and Uploads {#smartui-errors-builds}
+
+#### SmartUI build creation failed {#build-creation-failed}
+
+| Field | Value |
+|-------|-------|
+| **Message** | `SmartUI build creation failed` |
+| **What happened** | The CLI could not create a build. |
+| **What to do** | Read the reason printed with it. `Build creation failed: Build ID is empty` means the server returned no build ID; run the command again. |
+| **Also seen as** | `Error while creation of build: …` · `Build creation failed: Build ID is empty` |
+
+#### Finalize build failed {#finalize-build-failed}
+
+| Field | Value |
+|-------|-------|
+| **Message** | `Finalize build failed` |
+| **What happened** | The build could not be finalized. The reason is printed just above the message. |
+| **What to do** | Fix the problem it names, then run the command again. |
+
+#### Uploading screenshots failed {#uploading-screenshots-failed}
+
+| Field | Value |
+|-------|-------|
+| **Message** | `Uploading screenshots failed` |
+| **What happened** | The screenshots could not be uploaded. The reason is printed just above the message. |
+| **What to do** | Fix the problem it names, then run the upload again. See [Upload your Screenshots via CLI](/support/docs/smartui-cli-complete-reference/). |
+
+#### PDF upload failed {#pdf-upload-failed}
+
+| Field | Value |
+|-------|-------|
+| **Message** | `PDF upload failed` |
+| **What happened** | The PDFs could not be uploaded. The reason is printed just above the message. |
+| **What to do** | Fix the problem it names, then run the upload again. See [Upload PDFs via CLI](/support/docs/smartui-pdf-comparison/). |
+
+#### Project ID not found to fetch PDF results {#pdf-project-id}
+
+| Field | Value |
+|-------|-------|
+| **Message** | `Project ID not found to fetch PDF results` |
+| **What happened** | The CLI had no project ID when it tried to fetch PDF results. |
+| **What to do** | Run the upload again. If it happens again, contact support. |
+
+#### Snapshot processing failed {#snapshot-processing-failed}
+
+| Field | Value |
+|-------|-------|
+| **Message** | `Snapshot processing failed` |
+| **What happened** | A snapshot was still processing after the CLI waited about five minutes for it. |
+| **What to do** | Run the command again. If it happens again, contact support. |
+| **Also seen as** | `Snapshot Failed`, when processing finished with a failure |
+
+### Local Server and Network {#smartui-errors-server}
+
+#### SmartUI server setup failed {#server-setup-failed}
+
+| Field | Value |
+|-------|-------|
+| **Message** | `SmartUI server setup failed` |
+| **What happened** | The local SmartUI server that receives SDK snapshots could not start. The reason is printed just above the message. |
+| **What to do** | Fix the problem it names, then run the command again. |
+
+#### No available ports found in range {#no-available-ports}
+
+| Field | Value |
+|-------|-------|
+| **Message** | `No available ports found in range …` |
+| **What happened** | Every port in the range the CLI tried for its local server was in use. |
+| **What to do** | Free a port in the range shown in the message, then run the command again. |
+
+#### Invalid port number. Port number must be an integer between 1 and 65535. {#invalid-port}
+
+| Field | Value |
+|-------|-------|
+| **Message** | `Invalid port number. Port number must be an integer between 1 and 65535.` |
+| **What happened** | The value passed to `--port` is not a valid port. |
+| **What to do** | Pass a whole number from 1 to 65535. |
+
+#### Invalid proxy URL {#invalid-proxy-url}
+
+| Field | Value |
+|-------|-------|
+| **Message** | `Invalid proxy URL:` |
+| **What happened** | The value of the `SMARTUI_API_PROXY` environment variable could not be read as a URL. |
+| **What to do** | Set `SMARTUI_API_PROXY` to a proxy address such as `proxy.example.com:8080`, or to a full URL that starts with `http`. |
+
+### Merging Builds and Branches {#smartui-errors-merging}
+
+#### Merging two similar build is not possible {#merge-same-build}
+
+| Field | Value |
+|-------|-------|
+| **Message** | `Merging two similar build is not possible` |
+| **What happened** | The source and target of the merge are the same build. |
+| **What to do** | Choose two different builds. |
+
+#### Merging two similar branch is not possible {#merge-same-branch}
+
+| Field | Value |
+|-------|-------|
+| **Message** | `Merging two similar branch is not possible` |
+| **What happened** | The source and target of the merge are the same branch. |
+| **What to do** | Choose two different branches. See [Branching Strategy](/support/docs/smartui-git-branching-strategy/). |
+
+#### Error: The --source option cannot be empty. {#merge-source-empty}
+
+| Field | Value |
+|-------|-------|
+| **Message** | `Error: The --source option cannot be empty.` |
+| **What happened** | A merge was started without a source. |
+| **What to do** | Pass both `--source` and `--target`. |
+| **Also seen as** | `Error: The --target option cannot be empty.` |
+
+#### Merging SmartUI build failed {#merge-failed}
+
+| Field | Value |
+|-------|-------|
+| **Message** | `Merging SmartUI build failed` |
+| **What happened** | The merge did not complete. The reason is printed just above the message. |
+| **What to do** | Fix the problem it names, then run the merge again. |
+| **Also seen as** | `Error while initiating merging process: …` · `Error while fetching buildInfo: …` · `Error while fetching branch Info: …` |
+
+### Figma {#smartui-errors-figma}
+
+Errors about the Figma token and about Figma config validation are documented on the [SmartUI Figma App CLI](/support/docs/smartui-cli-figma/) page: see [Understanding the Tokens and Credentials](/support/docs/smartui-cli-figma/#understanding-the-tokens-and-credentials) and [The config file is rejected](/support/docs/smartui-cli-figma/#the-config-file-is-rejected).
+
+#### Missing LT_USERNAME in Environment Variables {#missing-lt-username}
+
+| Field | Value |
+|-------|-------|
+| **Message** | `Missing LT_USERNAME in Environment Variables` |
+| **What happened** | A Figma command found `LT_USERNAME` set to an empty value. |
+| **What to do** | Set it to your username, or leave it unset. See [Understanding the Tokens and Credentials](/support/docs/smartui-cli-figma/#understanding-the-tokens-and-credentials). |
+| **Also seen as** | `Missing LT_ACCESS_KEY in Environment Variables`, the same check for `LT_ACCESS_KEY` |
+
+#### No Figma configuration found in config file {#no-figma-config}
+
+| Field | Value |
+|-------|-------|
+| **Message** | `No Figma configuration found in config file` |
+| **What happened** | A Figma command ran against a config file with no Figma section. |
+| **What to do** | Add the Figma configuration to your config file. See [SmartUI Figma CLI](/support/docs/smartui-cli-figma/). |
+
+#### Mismatch in Figma Ids and Screenshot Viewports in figma config {#figma-viewport-mismatch}
+
+| Field | Value |
+|-------|-------|
+| **Message** | `Mismatch in Figma Ids and Screenshot Viewports in figma config` |
+| **What happened** | The number of Figma IDs does not match the number of screenshot viewports. |
+| **What to do** | Give every Figma ID a matching viewport. |
+
+#### Uploading Figma designs failed {#figma-upload-failed}
+
+| Field | Value |
+|-------|-------|
+| **Message** | `Uploading Figma designs failed` |
+| **What happened** | The Figma designs could not be uploaded. |
+| **What to do** | Run the command again. If it happens again, contact support. |
+| **Also seen as** | `Uploading Web Figma Screenshots failed` · `Uploading App Figma Screenshots failed` |
+
+#### Timeout: Fetching figma results took more than 5 minutes. {#figma-timeout}
+
+| Field | Value |
+|-------|-------|
+| **Message** | `Timeout: Fetching figma results took more than 5 minutes.` |
+| **What happened** | The CLI stopped waiting for Figma comparison results. |
+| **What to do** | Run the command again. |
+| **Also seen as** | `Stopping execution after 5 minutes.` |
+
+<!-- Product note for the SmartUI team: the CLI stops after 180 seconds, although the message says 5 minutes (callFetchWebFigmaRecursive in dist/index.cjs). -->
+
+### SDK {#smartui-errors-sdk}
+
+#### contextId and snapshotName are required parameters {#context-snapshot-required}
+
+| Field | Value |
+|-------|-------|
+| **Message** | `contextId and snapshotName are required parameters` |
+| **What happened** | A snapshot request reached the CLI without a `contextId` or a `snapshotName`. |
+| **What to do** | Send both values with every snapshot request. |
+
+#### No buildId found for contextId {#no-build-id}
+
+| Field | Value |
+|-------|-------|
+| **Message** | `No buildId found for contextId: …` |
+| **What happened** | A snapshot finished processing, but no build was linked to it. |
+| **What to do** | Run the command again. If it happens again, contact support. |
+
+#### Page instance not available {#page-instance}
+
+| Field | Value |
+|-------|-------|
+| **Message** | `Page instance not available` |
+| **What happened** | The CLI tried to run a page script, but its browser page was not available. |
+| **What to do** | Run the command again. If it happens again, contact support. |
 
 ---
 

@@ -14,6 +14,7 @@ slug: troubleshooting-ios-app-testing/
 canonical: https://www.testmuai.com/support/docs/troubleshooting-ios-app-testing/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -40,6 +41,80 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/troubleshooting-ios-app-testing/"
+    },
+    "headline": "How to build .app file for iOS App testing on Simulators",
+    "description": "Facing issues in uploading .app files on Simulators? Here is a quick guide to troubleshoot it.",
+    "url": "https://www.testmuai.com/support/docs/troubleshooting-ios-app-testing/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Real Time",
+    "keywords": [
+      "how to upload .app files on ios simulators",
+      "how to upload .app files on simulators",
+      "how to upload .app files for ios simulator testing"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "For command line builds, use the -sdk iphonesimulator flag",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "xcodebuild -project YourProject.xcodeproj \\\n           -scheme YourScheme \\\n           -configuration Debug \\\n           -sdk iphonesimulator \\\n           -arch arm64 \\\n           build"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "You can verify the platform using",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "vtool -show-build YourApp.app/YourApp"
+      }
+    ],
+    "dateModified": "2026-07-03T19:09:57+05:30"
+  }) }}
+/>
+
 # Troubleshooting iOS App Testing
 ***
 
@@ -57,6 +132,8 @@ For a complete step-by-step guide on building your iOS app for Simulator testing
 
 **Solution:** Rebuild your app targeting the iOS Simulator SDK. In Xcode, select a **Simulator destination** (e.g., *iPhone 15 Pro*) instead of *Any iOS Device*, then build. For command line builds, use the `-sdk iphonesimulator` flag:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 xcodebuild -project YourProject.xcodeproj \
            -scheme YourScheme \
@@ -67,6 +144,8 @@ xcodebuild -project YourProject.xcodeproj \
 ```
 
 You can verify the platform using:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 vtool -show-build YourApp.app/YourApp

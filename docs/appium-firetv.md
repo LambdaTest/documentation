@@ -27,6 +27,8 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import { CookieTrackingSignup } from '@site/src/component/CookieTracking';
 
+import VerifiedTag from '@site/src/component/verifiedTag';
+
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
        "@context": "https://schema.org",
@@ -50,6 +52,97 @@ import { CookieTrackingSignup } from '@site/src/component/CookieTracking';
       })
     }}
 ></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/appium-firetv/"
+    },
+    "headline": "Fire TV With Appium",
+    "description": "Complete guide to running your first FireTV Appium automated test script on TestMu AI Real Device Cloud Platform. Test on 5000+ Real Devices.",
+    "url": "https://www.testmuai.com/support/docs/appium-firetv/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "App Automation",
+    "keywords": [
+      "python appium",
+      "firetv",
+      "python appium tutorial"
+    ],
+    "proficiencyLevel": "Beginner",
+    "dependencies": "You have access to TestMu AI username and accessKey. If you have not registered yet, you can do the same by visiting our website. You will be able to access the credentials in the TestMu AI Profile; Install the latest Python build from the official website. We recommend using the latest version.; Make sure pip is installed in your system. You can install pip from pip documentation..",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Clone the TestMu AI's LT-appium-firetv and navigate to the code directory as shown below",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "codeRepository": "https://github.com/LambdaTest/LT-appium-firetv",
+        "text": "git clone https://github.com/LambdaTest/LT-appium-firetv\ncd LT-appium-firetv"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "if __name__ == \"__main__\"",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n### Configure the test capabilities\n\nYou can update your custom capabilities in test scripts. In this sample project, we are passing platform name, platform version, device name and app url (generated earlier) along with other capabilities like build name and test name via capabilities object. The capabilities object in the sample code are defined as:\n\n**Supported Model:**\n- Device: `\"Amazon Fire TV Stick\"` ; OS Version:`\"7\"`\n\n**Supported Capabilities:**\nSame as Android.\n\n**Platform:**\n`\"fireos\"`\n\n```python title=\"firetv.py\"\ndef getCaps():\n    desired_cap= {\n        \"deviceName\" : \"Amazon Fire TV Stick\",\n        \"platformVersion\" :  \"7\",\n        \"platformName\":\"fireos\",\n        \"isRealMobile\":True,\n        \"build\": \"firetv\",\n        \"video\": True,\n        \"app\":\"APP_URL\",  #Add app url here\n        \"network\": False,\n        \"geoLocation\": \"RU\",\n        \"devicelog\": True,\n        \"visual\":True\n    }"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Install the required packages from the cloned project directory",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "pip install -r requirements.txt"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "5. Execute your test case",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Python",
+        "text": "python firetv.py"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 
 Running Fire TV tests on TestMu AI executes Appium automation for Amazon Fire TV apps on the real device cloud. Configure the required desired capabilities, connect to the hub, and run scripts to validate Fire TV app behaviour without hardware.
 
@@ -99,6 +192,9 @@ Before you can start performing App automation testing with Appium, you would ne
 Upload your **Fire TV** application (.apk file) to the <BrandName /> servers using our **REST API**. You need to provide your **Username** and **AccessKey** in the format `Username:AccessKey` in the **cURL** command for authentication. Make sure to add the path of the **appFile** in the cURL request. Here is an example cURL request to upload your app using our REST API:
 
  **Using App File from System:**
+
+ <VerifiedTag value="Verified" />
+
  <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">
 {`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" -X POST "https://manual-api.lambdatest.com/app/upload/realDevice" -F "appFile=@"/Users/macuser/Downloads/fireos-sample-app.apk"" -F "name="fireos_app""
@@ -107,6 +203,8 @@ Upload your **Fire TV** application (.apk file) to the <BrandName /> servers usi
 </div>
 
 <!-- **Using App URL:**
+
+<VerifiedTag value="Verified" />
 
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">
@@ -126,6 +224,8 @@ Upload your **Fire TV** application (.apk file) to the <BrandName /> servers usi
 
 1. Clone the <BrandName />'s [LT-appium-firetv](https://github.com/LambdaTest/LT-appium-firetv) and navigate to the code directory as shown below:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 git clone https://github.com/LambdaTest/LT-appium-firetv
 cd LT-appium-firetv
@@ -138,6 +238,9 @@ Make sure you have your <BrandName /> credentials with you to run test automatio
 <Tabs className="docs__val">
 
 <TabItem value="bash" label="Linux / MacOS" default>
+
+  <VerifiedTag value="Verified" />
+
   <div className="lambdatest__codeblock">
   <CodeBlock className="language-bash">
   {`export LT_USERNAME=${ YOUR_LAMBDATEST_USERNAME()} \\
@@ -148,6 +251,8 @@ export LT_ACCESS_KEY=${ YOUR_LAMBDATEST_ACCESS_KEY()}`}
 </TabItem>
 
 <TabItem value="powershell" label="Windows" default>
+
+  <VerifiedTag value="Verified" />
 
   <div className="lambdatest__codeblock">
   <CodeBlock className="language-powershell">
@@ -163,6 +268,8 @@ set LT_ACCESS_KEY=${ YOUR_LAMBDATEST_ACCESS_KEY()}`}
 
 An automation script for the sample application available above has been provided below. Ensure to update the `APP_URL`, `username` and `accessKey` in the code scripts before running the tests.
 
+
+<VerifiedTag value="Verified" />
 
 ```python title="firetv.py"
 from xml.dom.expatbuilder import Rejecter
@@ -250,6 +357,8 @@ Same as Android.
 **Platform:**
 `"fireos"`
 
+<VerifiedTag value="Verified" />
+
 ```python title="firetv.py"
 def getCaps():
     desired_cap= {
@@ -278,11 +387,15 @@ def getCaps():
 
 1. Install the required packages from the cloned project directory:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 pip install -r requirements.txt
 ```
 
 2. Run the following command in the directory where your project has been saved to execute your build.
+
+<VerifiedTag value="Verified" />
 
 ```python
 python firetv.py

@@ -30,6 +30,9 @@ jobs:
           echo "HOST=${{ secrets.TYPESENSE_HOST }}" >> .env
           echo "API=${{ secrets.PUBLIC_APY_TYPESENSE }}" >> .env
           echo "TYPESENSE_COLLECTION_NAME=lambdatest-internal" >> .env
+          # Stage must never be indexed. This also means stage ships no
+          # sitemap.xml — the sitemap plugin skips a noindexed build entirely.
+          echo "DOCS_NOINDEX=true" >> .env
 
      
 

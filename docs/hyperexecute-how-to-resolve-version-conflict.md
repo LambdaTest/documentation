@@ -1,6 +1,6 @@
 ---
 id: hyperexecute-how-to-resolve-version-conflict
-title: How to Resolve Version Conflict Issues
+title: How to Resolve Version Conflict Issues
 toc_max_heading_level: 2
 hide_title: false
 sidebar_label: "Resolve Version Conflict Issues"
@@ -16,6 +16,8 @@ canonical: https://www.testmuai.com/support/docs/hyperexecute-how-to-resolve-ver
 
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -40,6 +42,87 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       })
     }}
 ></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/hyperexecute-how-to-perform-group-based-test-discovery-in-testng/"
+    },
+    "headline": "How to Resolve Version Conflict Issues",
+    "description": "Resolve version conflicts by ensuring consistency across YAML, package files, and environment variables for frameworks like Selenium, Playwright, and Cypress to avoid errors.",
+    "url": "https://www.testmuai.com/support/docs/hyperexecute-how-to-perform-group-based-test-discovery-in-testng/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "HyperExecute",
+    "keywords": [
+      "hyperexecute yaml",
+      "resolve version conflicts"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Selenium - Java",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "XML",
+        "text": "<dependency>\n    <groupId>org.testng<\/groupId>\n    <artifactId>testng<\/artifactId>\n    <version>7.5<\/version>\n    <scope>test<\/scope>\n<\/dependency>"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Selenium/Playwright/Puppeteer/Cypress - JavaScript",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JSON",
+        "text": "{\n  \"dependencies\": {\n    \"selenium-webdriver\": \"4.1.0\",\n    \"cypress\": \"9.5.0\",\n    \"playwright\": \"1.15.0\"\n  }\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Selenium/Playwright - C# (.NET)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "XML",
+        "text": "<PropertyGroup>\n    <TargetFramework>net6.0<\/TargetFramework>\n    <OutputType>Library<\/OutputType>\n<\/PropertyGroup>"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 Maintaining consistent versions across testing frameworks in your project setup is crucial to avoid runtime errors, compatibility issues, and unexpected behaviors. This guide focuses on specifying framework versions in YAML configuration files and aligning them with the version details in project-specific files like `package.json`, `pom.xml`, `.csproj`, and system environment variables for frameworks like Selenium, Playwright, Puppeteer, Cypress, Maestro, and Appium.
 
 ## Why Version Consistency Matters
@@ -57,6 +140,9 @@ This section provides detailed instructions for version consistency across diffe
 For Java projects using Selenium, TestNG and Cucumber dependencies should match between the YAML pre-steps and the pom.xml file.
 
 - **TestNG :** Ensure the TestNG version in your `pom.xml` matches the version specified in the YAML configuration under [`pre-steps`](/support/docs/deep-dive-into-hyperexecute-yaml/#pre):
+
+<VerifiedTag value="Verified" />
+
 ```xml
 <dependency>
     <groupId>org.testng</groupId>
@@ -70,6 +156,8 @@ For Java projects using Selenium, TestNG and Cucumber dependencies should match 
 
 ### Selenium/Playwright/Puppeteer/Cypress - JavaScript
 For JavaScript frameworks like Selenium, Playwright, Puppeteer, and Cypress, the framework versions specified in the YAML configuration should align with `package.json`:
+
+<VerifiedTag value="Verified" />
 
 ```json
 {
@@ -85,6 +173,8 @@ Consistency ensures dependencies are installed with the expected versions, avoid
 
 ### Selenium/Playwright - C# (.NET)
 For .NET projects, Selenium and Playwright versions should match between the YAML pre-steps and the `.csproj` file, which specifies NuGet packages:
+
+<VerifiedTag value="Verified" />
 
 ```xml
 <PropertyGroup>

@@ -30,6 +30,8 @@ import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 
+import VerifiedTag from '@site/src/component/verifiedTag';
+
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
        "@context": "https://schema.org",
@@ -54,6 +56,81 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/biometric-authentication/"
+    },
+    "headline": "Biometric Authentication",
+    "description": "Test biometric authentication functionalities such as fingerprint or face recognition in your app on TestMu AI Real Device Cloud Platform with 3000+ real mobile devices.",
+    "url": "https://www.testmuai.com/support/docs/biometric-authentication/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "App Automation",
+    "keywords": [
+      "biometric authentication",
+      "Fingerprint authentication",
+      "app test automation"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Using desired Capabilities",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "DesiredCapabilities capabilities = new DesiredCapabilities();\ncapabilities.setcapability(\"enableBiometricsAuthentication\",true)"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Using Lambda-Hook",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Python",
+        "text": "driver.execute_script(\"lambda-biometric-injection=fail\")"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
+
 Testing biometric authentication on TestMu AI lets you validate fingerprint and face recognition flows in native apps on real iOS and Android devices. Simulate both successful and failed biometric prompts through supported APIs to confirm your app handles authentication securely.
 
 **Supported on:** Real devices
@@ -74,6 +151,8 @@ Below given is the list of Biometric Authentication APIs which are supported. Pl
 
 <TabItem value="bash" label="iOS" default>
 
+  <VerifiedTag value="Verified" />
+
   <div className="lambdatest__codeblock">
     | Supported APIs |
     |----------------|
@@ -89,6 +168,8 @@ Below given is the list of Biometric Authentication APIs which are supported. Pl
 </TabItem>
 
 <TabItem value="powershell" label="Android >= version 11" default>
+
+  <VerifiedTag value="Verified" />
 
   <div className="lambdatest__codeblock">
     | Supported APIs |
@@ -112,6 +193,8 @@ The OS versions and APIs mentioned above are subject to change as per the latest
 
 To enable biometric authentication feature in your automation script, set the capability `enableBiometricsAuthentication` to `true`.
 
+<VerifiedTag value="Verified" />
+
 ```java
 DesiredCapabilities capabilities = new DesiredCapabilities();
 capabilities.setcapability("enableBiometricsAuthentication",true)
@@ -120,6 +203,8 @@ capabilities.setcapability("enableBiometricsAuthentication",true)
 ### Using Lambda-Hook
 
 To implement `pass` or `fail` conditions for biometric authentication in your automation script, you have to use our Lambda-hook mentioned below:
+
+<VerifiedTag value="Verified" />
 
 ```python
 driver.execute_script("lambda-biometric-injection=fail")

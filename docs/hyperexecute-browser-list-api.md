@@ -1,6 +1,6 @@
 ---
 id: hyperexecute-browser-list-api
-title: How to List Supported Browser in HyperExecute via API
+title: How to List Supported Browser in HyperExecute via API
 toc_max_heading_level: 2
 hide_title: true
 sidebar_label: "List Supported Browsers via API"
@@ -18,6 +18,8 @@ canonical: https://www.testmuai.com/support/docs/hyperexecute-browser-list-api/
 
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -43,6 +45,116 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/hyperexecute-browser-list-api/"
+    },
+    "headline": "How to List Supported Browser in HyperExecute via API",
+    "description": "Find out how to list the browser used in hyperexecute using the BrowserList API",
+    "url": "https://www.testmuai.com/support/docs/hyperexecute-browser-list-api/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "HyperExecute",
+    "keywords": [
+      "TestMu AI Hyperexecute",
+      "TestMu AI Hyperexecute help",
+      "TestMu AI Hyperexecute documentation"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "The Endpoint for the Browser List API is",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "https://api.hyperexecute.cloud/v2.0/browsers"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "API Endpoint and Authorization",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "Request Type : GET \nAuthorization: Basic"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Request",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "https://api.hyperexecute.cloud/v2.0/browsers"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Sample Response",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "{\n    \"message\": \"\",\n    \"platforms\": {\n        \"desktop\": [\n            {\n                \"platform\": \"ubuntu 20\",\n                \"browsers\": [\n                    {\n                        \"name\": \"Chrome\",\n                        \"version\": \"99.0\"\n                    },\n                    \n                    {\n                        \"name\": \"Firefox\",\n                        \"version\": \"99.0\"\n                    },\n                    \n                    {\n                        \"name\": \"MicrosoftEdge\",\n                        \"version\": \"canary\"\n                    },\n                    \n                    {\n                        \"name\": \"Opera\",\n                        \"version\": \"85.0\"\n                    },\n                    {\n                        \"name\": \"Chrome\",\n                        \"version\": \"latest\"\n                    },\n                    {\n                        \"name\": \"Firefox\",\n                        \"version\": \"latest\"\n                    },\n                    {\n                        \"name\": \"MicrosoftEdge\",\n                        \"version\": \"latest\"\n                    },\n                    {\n                        \"name\": \"Opera\",\n                        \"version\": \"latest\"\n                    }\n                ],\n                \"resolutions\": [\n                    \"1024x768\",\n                    \"1280x800\",\n                    \"1280x1024\",\n                    \"1366x768\",\n                    \"1440x900\",\n                    \"1680x1050\",\n                    \"1600x1200\",\n                    \"1920x1200\",\n                    \"1920x1080\",\n                    \"2048x1536\",\n                    \"2560x1440\",\n                    \"1280x960\"\n                ]\n            },\n        ]\n    },\n    \"status\": 200\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Params",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "{\n \"platform\": \"windows 10\" #optional\n \"stable\":  true  #if passed we will return only stable version of browsers\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Sample Response",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "{\n   \"message\": \"\",\n   \"platforms\": {\n       \"desktop\": [\n           {\n               \"platform\": \"Windows 10\",\n               \"browsers\": [\n                    {\n                       \"name\": \"Firefox\",\n                       \"version\": \"99.0\"\n                    },               \n                    {\n                       \"name\": \"Firefox\",\n                       \"version\": \"100.0\"\n                    },\n                    {\n                       \"name\": \"Firefox\",\n                       \"version\": \"latest\"\n                    }\n                ],\n                \"resolutions\": [\n                    \"1024x768\",\n                    \"1280x800\",\n                    \"1280x1024\",\n                    \"1366x768\",\n                    \"1440x900\",\n                    \"1680x1050\",\n                    \"1600x1200\",\n                    \"1920x1200\",\n                    \"1920x1080\",\n                    \"2048x1536\",\n                    \"2560x1440\"\n                ]\n            }\n        ]\n    },\n   \"status\": 200\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "You can also use the curl command to trigger the following api",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "curl --location --request GET 'https://api-hyperexecute.lambdatest.com/sentinel/v2.0/browsers'"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
+
 # How to GET Supported Browsers in HyperExecute via API
 
 The Browser List API is a service provided by HyperExecute. It allows users to programmatically retrieve a list of all supported browsers and their versions on the HyperExecute platform. This information can be useful for compatibility checks and ensuring your web applications work across various browsers.
@@ -66,6 +178,8 @@ It will provide you the details like:
 
 The Endpoint for the Browser List API is:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 https://api.hyperexecute.cloud/v2.0/browsers
 ```
@@ -83,6 +197,8 @@ Authorization: Basic
 ## Request
 The Browser List API supports a simple HTTP GET request to fetch the list of supported browsers
 
+<VerifiedTag value="Verified" />
+
 ```bash
 https://api.hyperexecute.cloud/v2.0/browsers
 ```
@@ -90,6 +206,8 @@ https://api.hyperexecute.cloud/v2.0/browsers
 ## Sample Response
 
 The response will be in JSON format, containing an array of objects representing each supported browser along with its versions.
+
+<VerifiedTag value="Verified" />
 
 ```bash
 {
@@ -163,6 +281,8 @@ Example Error Response: -->
 
 ## Params
 
+<VerifiedTag value="Verified" />
+
 ```bash
 {
  "platform": "windows 10" #optional
@@ -173,6 +293,8 @@ Example Error Response: -->
 ### Sample Response
 
 The response will be in JSON format, containing an array of objects representing each supported browser in **windows 10**  only along with its versions.
+
+<VerifiedTag value="Verified" />
 
 ```bash
 {

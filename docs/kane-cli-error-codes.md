@@ -19,6 +19,7 @@ canonical: https://www.testmuai.com/support/docs/kane-cli-error-codes/
 import CodeBlock from '@theme/CodeBlock';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -44,6 +45,87 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/kane-cli-error-codes/"
+    },
+    "headline": "Error Codes Reference",
+    "description": "Complete reference of Kane CLI result codes: what each code means, why it occurred, and what action to take. Designed for both human and AI agent consumption.",
+    "url": "https://www.testmuai.com/support/docs/kane-cli-error-codes/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Kane CLI",
+    "keywords": [
+      "kane cli error codes",
+      "kane cli result codes",
+      "kaneai errors"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "The run_end event includes both result_code (numeric) and reason_code (descriptive string)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JSON",
+        "text": "{\n  \"type\": \"run_end\",\n  \"status\": \"failed\",\n  \"result_code\": 310,\n  \"reason_code\": \"stuck.max_steps\",\n  \"summary\": \"Agent reached maximum step limit...\"\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "660 AUTH_NO_CREDENTIALS",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "kane-cli run \"Log in and navigate to dashboard\" \\\n  --url https://myapp.com/login \\\n  --variables '{\"username\": {\"value\": \"test@example.com\"}, \"password\": {\"value\": \"s3cret\", \"secret\": true}}' \\\n  --agent"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "When consuming Kane CLI output programmatically, use result_code ranges to determine your next action",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "# Run and capture the result\nRESULT=$(kane-cli run \"...\" --agent --headless 2>/dev/null | tail -1)\nCODE=$(echo \"$RESULT\" | jq -r '.result_code')\n\ncase $CODE in\n  100) echo \"Passed\" ;;\n  2*) echo \"Cancelled\" ;;\n  3*) echo \"Stuck: $(echo $RESULT | jq -r '.reason_code')\" ;;\n  4*) echo \"Agent error: retry recommended\" ;;\n  5*) echo \"Infra error: check environment\" ;;\n  6*) echo \"Blocked: manual intervention needed\" ;;\n  7*) echo \"Assertion failed: check test conditions\" ;;\nesac"
+      }
+    ],
+    "dateModified": "2026-07-01T18:40:16+05:30"
+  }) }}
+/>
+
 Every Kane CLI run ends with a `result_code` in the `run_end` event. This page lists every code, explains what triggered it, and tells you what to do next.
 
 ## How to Read Result Codes
@@ -61,6 +143,8 @@ Result codes follow HTTP-style groupings:
 | **7xx** | Assertion Error | The objective's assertions or checkpoints failed. |
 
 The `run_end` event includes both `result_code` (numeric) and `reason_code` (descriptive string):
+
+<VerifiedTag value="Verified" />
 
 ```json
 {
@@ -224,6 +308,8 @@ Platform or infrastructure failures. These are independent of the objective itse
 | **What happened** | The <BrandName /> controller returned a `401 Unauthorized` response. Your authentication token has expired or is invalid. |
 | **Action** | Refresh your authentication token: |
 
+<VerifiedTag value="Verified" />
+
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">
 {`kane-cli login
@@ -293,6 +379,8 @@ An external obstacle on the target website prevented the agent from completing t
 | **Status** | `ERROR` |
 | **What happened** | The agent encountered a login page but no credentials were provided in the objective or variables. |
 | **Action** | Provide login credentials using [variables](/support/docs/kane-cli-variables-and-context/): |
+
+<VerifiedTag value="Verified" />
 
 ```bash
 kane-cli run "Log in and navigate to dashboard" \
@@ -369,6 +457,8 @@ The agent completed its actions but one or more assertions or checkpoints did no
 ## Handling Errors in Agent Mode
 
 When consuming Kane CLI output programmatically, use `result_code` ranges to determine your next action:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 # Run and capture the result

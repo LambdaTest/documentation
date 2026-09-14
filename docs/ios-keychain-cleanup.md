@@ -22,6 +22,8 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 
+import VerifiedTag from '@site/src/component/verifiedTag';
+
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
        "@context": "https://schema.org",
@@ -45,6 +47,74 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       })
     }}
 ></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/ios-keychain-cleanup/"
+    },
+    "headline": "Support for iOS keychain cleanup and access groups",
+    "description": "Secure and clean iOS testing with TestMu AI's iOS Keychain cleanup and seamless access group handling support.",
+    "url": "https://www.testmuai.com/support/docs/ios-keychain-cleanup/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "App Automation",
+    "keywords": [
+      "appium",
+      "manual testing",
+      "keychain"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Example using cURL",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "curl -u \"USERNAME:ACCESS_KEY\" \\\n-X POST \"https://manual-api.lambdatest.com/app/upload/realDevice\" \\\n-F \"appFile=@/path/to/your-app.ipa\" \\\n-F \"name=YourAppName\" \\\n-F \"ios_keychain_enabled=true\""
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 
 iOS Keychain cleanup on TestMu AI automatically clears all Keychain entries after each real-device session, preventing login details and tokens from carrying over between runs. It also preserves keychain-access-groups entitlements during app resigning, keeping secure-storage flows working correctly after resigning.
 
@@ -74,6 +144,8 @@ By enabling Keychain support, <BrandName /> takes care of these changes, allowin
 To activate Keychain cleanup and access group handling, simply pass the `ios_keychain_enabled` parameter during app upload.
 
 Example using **cURL**:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 curl -u "USERNAME:ACCESS_KEY" \

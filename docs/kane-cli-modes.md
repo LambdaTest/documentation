@@ -20,6 +20,8 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
+import VerifiedTag from '@site/src/component/verifiedTag';
+
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
        "@context": "https://schema.org",
@@ -44,6 +46,109 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/kane-cli-modes/"
+    },
+    "headline": "Modes of Operation",
+    "description": "Kane CLI has three modes: Interactive TUI for development, Headless CLI for scripts and CI/CD, and Agent Mode for AI coding agent integrations.",
+    "url": "https://www.testmuai.com/support/docs/kane-cli-modes/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Kane CLI",
+    "keywords": [
+      "kane cli modes",
+      "interactive tui",
+      "headless cli"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Launch the TUI",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "kane-cli --tui"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Multi-Run Sessions",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "> go to https://myapp.com and log in as admin\n  \u2713 PASSED (5 steps, 8.2s)\n\n> navigate to User Management and create a new user \"testuser@example.com\"\n  \u2713 PASSED (7 steps, 12.1s)\n\n> verify the new user appears in the users table\n  \u2713 PASSED (3 steps, 4.5s)"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Non-Interactive CLI Mode",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "kane-cli run \"Search for 'automation testing' on Google\" \\\n  --url https://google.com \\\n  --headless"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Mobile runs",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "# desktop (default): nothing changes for web runs\nkane-cli run \"Search for 'noise-cancelling headphones' on amazon.com\"\n\n# emulator (Android): install an .apk build and run against it\nkane-cli run \"Add the first item to the cart\" --target emulator --app ./builds/app-debug.apk\n\n# simulator (iOS): install a .zip build and run against it\nkane-cli run \"Sign in and open the account tab\" --target simulator --app ./builds/MyApp.zip"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "This separation lets you capture each independently",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "kane-cli run \"...\" > result.json 2> progress.log"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Add --agent to get structured NDJSON output designed for AI coding agents",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "kane-cli run \"Verify login page loads\" --url https://myapp.com --agent --headless"
+      }
+    ],
+    "dateModified": "2026-09-03T14:41:00+05:30"
+  }) }}
+/>
+
+
 Kane CLI has three modes. Choose based on who (or what) is running the test.
 
 | Mode | Command | Output | Best For |
@@ -57,6 +162,8 @@ Kane CLI has three modes. Choose based on who (or what) is running the test.
 ## Interactive TUI
 
 Launch the TUI:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 kane-cli --tui
@@ -173,6 +280,8 @@ A graceful `/exit` runs the upload pipeline (if applicable) and prints any final
 
 ## Non-Interactive CLI Mode
 
+<VerifiedTag value="Verified" />
+
 ```bash
 kane-cli run "Search for 'automation testing' on Google" \
   --url https://google.com \
@@ -216,6 +325,8 @@ For variables and context file behavior, see [Variables and context](/support/do
 
 By default a run targets the **desktop** browser (Chrome), so every example above is unchanged. On macOS Apple Silicon you can instead point a run at a virtual mobile device: an `emulator` (a virtual Android device) or a `simulator` (a virtual iOS device). Every mobile run needs an app under test.
 
+<VerifiedTag value="Verified" />
+
 ```bash
 # desktop (default): nothing changes for web runs
 kane-cli run "Search for 'noise-cancelling headphones' on amazon.com"
@@ -245,6 +356,8 @@ For setup (Xcode or Android Studio, `kane-cli login`, and `kane-cli doctor --ins
 | stdout | The final JSON `run_end` payload, including the share URL when an upload succeeds |
 
 This separation lets you capture each independently:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 kane-cli run "..." > result.json 2> progress.log
@@ -299,6 +412,8 @@ After the result and links print, Kane CLI prompts you to rate the session with 
 ## Agent Mode
 
 Add `--agent` to get structured NDJSON output designed for AI coding agents:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 kane-cli run "Verify login page loads" --url https://myapp.com --agent --headless

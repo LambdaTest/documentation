@@ -18,6 +18,7 @@ canonical: https://www.testmuai.com/support/docs/katalon-integration-with-testmu
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import { CookieTrackingSignup } from '@site/src/component/CookieTracking';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -43,6 +44,73 @@ import { CookieTrackingSignup } from '@site/src/component/CookieTracking';
       })
     }}
 ></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/katalon-integration-with-testmu/"
+    },
+    "headline": "Step By Step Guide to Integrate TestMu AI With Katalon",
+    "description": "TestMu AI offers integration with Katalon Studio to ease your automated cross browser testing process through their Selenium grid consisting more than 3000+ browsers.",
+    "url": "https://www.testmuai.com/support/docs/katalon-integration-with-testmu/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Integration",
+    "keywords": [
+      "testmu ai integrations",
+      "katalon",
+      "katalon studio"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "How To Integrate TestMu AI With Katalon?",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JSON",
+        "text": "Remote URL = \"http://username:accessKey@hub.lambdatest.com/wd/hub\" \n \n/* Below is an example remote URL based on the image shared above in Step 2.*/\n \nExample remote URL = \"http://harshitp:ABCD1234PQRS@hub.lambdatest.com/wd/hub\""
+      }
+    ],
+    "dateModified": "2026-07-31T21:18:17+05:30"
+  }) }}
+/>
 
 # Katalon Integration With <BrandName />
 ---
@@ -72,6 +140,8 @@ For integrating <BrandName /> with Katalon, make sure to run your test scripts t
 <img loading="lazy" src={require('../assets/images/katalon/Katalon-1.webp').default} alt="katalon integration"  className="doc_img" width="1365" height="652"/>
 
 **Step 3:** You would require these values for generating a secure remote connection with Katalon through <BrandName /> remote URL.
+
+<VerifiedTag value="Verified" />
 
 ```json
 Remote URL = "http://username:accessKey@hub.lambdatest.com/wd/hub" 

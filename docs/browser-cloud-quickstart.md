@@ -19,6 +19,7 @@ canonical: https://www.testmuai.com/support/docs/launch-first-session/
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -49,6 +50,101 @@ import TabItem from '@theme/TabItem';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/launch-first-session/"
+    },
+    "headline": "Quickstart - TestMu AI Browser Cloud",
+    "description": "Get up and running with your first TestMu AI Browser Cloud session in a few minutes using TypeScript and Puppeteer.",
+    "url": "https://www.testmuai.com/support/docs/launch-first-session/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Browser Cloud",
+    "keywords": [
+      "browser cloud quickstart",
+      "browser cloud getting started",
+      "testmu sdk setup"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Add your credentials",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "LT_USERNAME=your_username\nLT_ACCESS_KEY=your_access_key"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Installing the TestMu AI Browser SDK",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "npm i @testmuai/browser-cloud"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "and cleans up (Puppeteer)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "TypeScript",
+        "text": "// my-first-session.ts\n\nimport { Browser } from '@testmuai/browser-cloud';\n\nconst client = new Browser();\n\nasync function main() {\n    const session = await client.sessions.create({\n        adapter: 'puppeteer',\n        lambdatestOptions: {\n            build: 'Getting Started',\n            name: 'My First Session',\n            'LT:Options': {\n                username: process.env.LT_USERNAME,\n                accessKey: process.env.LT_ACCESS_KEY,\n            }\n        }\n    });\n\n    console.log('Session created:', session.id);\n    console.log('View live session at:', session.sessionViewerUrl);\n\n    // Connect and use the browser\n    const browser = await client.puppeteer.connect(session);\n    const page = (await browser.pages())[0];\n\n    await page.goto('https://example.com');\n    console.log('Title:', await page.title());\n\n    // Clean up\n    await browser.close();\n    await client.sessions.release(session.id);\n    console.log('Session released');\n}\n\nmain().catch(console.error);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Playwright",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "TypeScript",
+        "text": "// my-first-session.ts\n\nimport { Browser } from '@testmuai/browser-cloud';\n\nconst client = new Browser();\n\nasync function main() {\n    const session = await client.sessions.create({\n        adapter: 'playwright',\n        lambdatestOptions: {\n            build: 'Getting Started',\n            name: 'My First Session',\n            'LT:Options': {\n                username: process.env.LT_USERNAME,\n                accessKey: process.env.LT_ACCESS_KEY,\n            }\n        }\n    });\n\n    console.log('Session created:', session.id);\n    console.log('View live session at:', session.sessionViewerUrl);\n\n    // Connect and use the browser\n    const { browser, context, page } = await client.playwright.connect(session);\n\n    await page.goto('https://example.com');\n    console.log('Title:', await page.title());\n\n    // Clean up\n    await browser.close();\n    await client.sessions.release(session.id);\n    console.log('Session released');\n}\n\nmain().catch(console.error);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Selenium",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "TypeScript",
+        "text": "// my-first-session.ts\n\nimport { Browser } from '@testmuai/browser-cloud';\n\nconst client = new Browser();\n\nasync function main() {\n    const session = await client.sessions.create({\n        adapter: 'selenium',\n        lambdatestOptions: {\n            build: 'Getting Started',\n            name: 'My First Session',\n            'LT:Options': {\n                username: process.env.LT_USERNAME,\n                accessKey: process.env.LT_ACCESS_KEY,\n            }\n        }\n    });\n\n    console.log('Session created:', session.id);\n    console.log('View live session at:', session.sessionViewerUrl);\n\n    // Connect and use the browser\n    const driver = await client.selenium.connect(session);\n\n    await driver.get('https://example.com');\n    console.log('Title:', await driver.getTitle());\n\n    // Clean up\n    await driver.quit();\n    await client.sessions.release(session.id);\n    console.log('Session released');\n}\n\nmain().catch(console.error);"
+      }
+    ],
+    "dateModified": "2026-05-29T18:18:43+05:30"
+  }) }}
+/>
+
 # Launch Your First Browser Session
 ***
 
@@ -73,6 +169,8 @@ controlling a cloud browser.
 1. Create a `.env` file in your project root (if you don't have one)
 2. Add your credentials:
 
+<VerifiedTag value="Verified" />
+
 ```
 LT_USERNAME=your_username
 LT_ACCESS_KEY=your_access_key
@@ -83,6 +181,8 @@ LT_ACCESS_KEY=your_access_key
 
 ## Installing the TestMu AI Browser SDK
 ***
+
+<VerifiedTag value="Verified" />
 
 ```bash
 npm i @testmuai/browser-cloud
@@ -96,6 +196,8 @@ npm i @testmuai/browser-cloud
 
 Let's create a simple script that launches a cloud browser, navigates to a page,
 and cleans up:
+
+<VerifiedTag value="Verified" />
 
 <Tabs>
   <TabItem value="puppeteer" label="Puppeteer" default>

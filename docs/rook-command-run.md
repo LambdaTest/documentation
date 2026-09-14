@@ -6,6 +6,85 @@ description: Plan and run scenarios through prepare, open, execute, close, colle
 slug: rook-command-run/
 ---
 
+import { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
+
+<script type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify({
+       "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": BRAND_URL
+        },{
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Support",
+          "item": `${BRAND_URL}/support/docs/`
+        },{
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Rook /run Command",
+          "item": `${BRAND_URL}/support/docs/rook-command-run/`
+        }]
+      })
+    }}
+></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/rook-command-run/"
+    },
+    "headline": "Rook /run Command",
+    "description": "Plan and run scenarios through prepare, open, execute, close, collect, and judge phases against a live agent.",
+    "url": "https://www.testmuai.com/support/docs/rook-command-run/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Agent Testing",
+    "keywords": [],
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "dateModified": "2026-09-04T12:50:18+05:30"
+  }) }}
+/>
 # <code>/run</code> Command
 
 Use <code>/run</code> to plan a selection, execute the active profile's lifecycle hooks, collect evidence, and judge each acceptance criterion.
@@ -13,6 +92,8 @@ Use <code>/run</code> to plan a selection, execute the active profile's lifecycl
 <img loading="lazy" src={require('../assets/images/rook/commands/rook-command-run.png').default} alt="Current Rook run command help with lifecycle phases, continuation, selection, profile, test, resume, and RCA options" className="doc_img"/>
 
 ## Syntax
+
+<VerifiedTag value="Verified" />
 
 ~~~text
 /run [selection options] [-- free-text instruction]
@@ -41,6 +122,8 @@ The shell form is <code>rook run</code> with the same options.
 
 ## Examples
 
+<VerifiedTag value="Verified" />
+
 ~~~text
 /run --only SC-001,SC-004 --concurrency 1
 /run --class adversarial --profile staging --name security-gate
@@ -57,6 +140,8 @@ A normal timeline run requires an agent that has been synchronized at least once
 ## Lifecycle Phase Selection
 
 The fixed order is:
+
+<VerifiedTag value="Verified" />
 
 ~~~text
 prepare → open → execute → close → collect → judge

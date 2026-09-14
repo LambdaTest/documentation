@@ -38,6 +38,63 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       })
     }}
 ></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/test-run-creation-and-management/"
+    },
+    "headline": "Test Run - Creation and Management",
+    "description": "Gain insights into effective Test Run Creation with TestMu AI, designed to streamline your workflow.",
+    "url": "https://www.testmuai.com/support/docs/test-run-creation-and-management/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Test Manager",
+    "keywords": [
+      "test run",
+      "test run creation"
+    ],
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "dateModified": "2026-09-09T20:28:09+05:30"
+  }) }}
+/>
+
 This guide outlines the steps required to create, configure, and manage test runs within <BrandName />'s Test Manager. It provides developers and testers with a clear understanding of the process, enabling efficient test execution and organization.
 
 ## 1. Creating a Test Run
@@ -174,6 +231,10 @@ You can manage your test runs using the options available in the **three-dot men
 | **Archive** | Move completed test runs to the archive to keep your workspace clean and organized. |
 | **Delete** | Permanently remove a test run that is no longer needed. |
 
+:::note
+Archiving a test run is not the same as archiving a test case. An archived test case stays in any run it was already part of and keeps its executions as history, but it is not offered when you create a new test run and is not carried across when you duplicate one. See [Archive and Restore Test Cases](/support/docs/test-case-archive/).
+:::
+
 <img loading="lazy" src={require('../assets/images/test-run/13.png').default} alt="Real "  className="doc_img"/>
 
 <img loading="lazy" src={require('../assets/images/test-run/12.png').default} alt="Editing an existing test run"  className="doc_img"/>
@@ -186,16 +247,17 @@ Test Manager connects the bugs found during testing to the test instances that e
 
 There are two ways to put a bug on a test instance:
 
-- **Link an existing issue**: connect a Jira or Azure DevOps ticket that already exists.
+- **Link an existing issue**: connect a Jira, Azure DevOps, or Linear issue that already exists.
 - **Raise a new bug with Mark as Bug**: create a new ticket in your bug tracker while you execute the test.
 
 This works in Manual, KaneAI, and Automation Test Runs.
 
 ### Before you begin
 
-- To link or raise bugs that are visible inside Test Manager, integrate **Jira** or **Azure DevOps** with your <BrandName /> account:
+- To link or raise bugs that are visible inside Test Manager, integrate **Jira**, **Azure DevOps**, or **Linear** with your <BrandName /> account:
   - [Link Jira Issues with Test Manager](/support/docs/link-jira-issues-with-test-manager/)
   - [Link Azure DevOps Issues with Test Manager](/support/docs/link-ado-issues-with-test-manager/)
+  - [Link Linear Issues with Test Manager](/support/docs/link-linear-issues-with-test-manager/)
 - Mark as Bug can also create tickets in other [bug tracking tools](/support/docs/bug-tracking-tools/). See [Supported trackers and visibility](#supported-trackers-and-visibility) for what that means inside Test Manager.
 
 ### How bug tracking works in a Test Run
@@ -210,14 +272,14 @@ You can add a bug from any of these points: from the run's instance list, from i
 
 ### Link an existing issue to a test instance
 
-Use this when the defect is already tracked in Jira or Azure DevOps and you want to connect it to the test that found it.
+Use this when the defect is already tracked in Jira, Azure DevOps, or Linear and you want to connect it to the test that found it.
 
 1. Open the Test Run and stay on the **Test Instances** tab.
 2. On the test instance you want, open the bug menu on its row and select **Link Issue**.
 
 <img loading="lazy" src={require('../assets/images/test-run-issues/test-instance-issue-menu.png').default} alt="Bug menu on a test instance row with Link Issue and View Issues options" className="doc_img"/>
 
-3. In the **Link Issues** dialog, choose the tracker: **Jira** or **Azure DevOps**. Only trackers you have integrated are available.
+3. In the **Link Issues** dialog, choose the tracker: **Jira**, **Azure DevOps**, or **Linear**. Only trackers you have integrated are available.
 4. Enter the issue key or paste its URL.
 5. Click **Link Issue**.
 
@@ -272,13 +334,15 @@ The Test Run's **Issues** tab is the consolidated view of every bug raised or li
 
 ### Unlink an issue
 
-If a bug no longer belongs on a test instance, open the instance's **Issues** tab (or the **View Issues** panel), find the issue, and use its unlink action. Unlinking removes the association in Test Manager only. The ticket itself stays in Jira or Azure DevOps.
+If a bug no longer belongs on a test instance, open the instance's **Issues** tab (or the **View Issues** panel), find the issue, and use its unlink action. Unlinking removes the association in Test Manager only. The ticket itself stays in Jira, Azure DevOps, or Linear.
 
 ### Supported trackers and visibility
 
-Linking an existing issue is available for **Jira** and **Azure DevOps**.
+The two ways of putting a bug on a test instance do not cover the same set of trackers.
 
-Mark as Bug can create tickets in several bug tracking tools, but only **Jira** and **Azure DevOps** tickets are associated with, and visible in, Test Runs, Test Cases, and test instances. A bug raised in any other tracker is created successfully but does not appear in these views.
+Linking an existing issue is available for **Jira**, **Azure DevOps**, and **Linear**.
+
+Mark as Bug can create tickets in several bug tracking tools, but only **Jira** and **Azure DevOps** tickets are associated with, and visible in, Test Runs, Test Cases, and test instances. A bug raised in any other tracker, Linear included, is created successfully but does not appear in these views. To track a Linear issue against a test, link it instead.
 
 ## Test Instance Audit Logs
 

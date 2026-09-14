@@ -46,6 +46,113 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/kaneai-hyperexecute-test-run-execution/"
+    },
+    "headline": "Create and Execute your Test Run for KaneAI Generated Tests on HyperExecute",
+    "description": "Learn how to execute KaneAI-generated test runs directly on HyperExecute with this step-by-step guide for efficient and rapid test execution.",
+    "url": "https://www.testmuai.com/support/docs/kaneai-hyperexecute-test-run-execution/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "KaneAI",
+    "keywords": [
+      "testmu ai automation",
+      "testmu ai kaneai",
+      "kaneai guided walkthrough"
+    ],
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "dateModified": "2026-09-09T20:26:38+05:30"
+  }) }}
+/>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Step-by-Step Guide",
+      "description": "Learn how to execute KaneAI-generated test runs directly on HyperExecute with this step-by-step guide for efficient and rapid test execution.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Navigate to the Projects Page",
+          "text": "Log in to Test Manager. Navigate to the Projects page and select the desired project. Proceed to the Test Cases section.",
+          "url": "https://www.testmuai.com/support/docs/kaneai-hyperexecute-test-run-execution/#step-1-navigate-to-the-projects-page"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Create a Test Run",
+          "text": "Go to the Test Run section within the project. Click on Create Test Run. Provide the following details: Name : e.g., Demo Test Run 123. Description : A brief overview of the run. Tags : Any label to differentiate your test run. Type : Choose KaneAI Generated Test Cases.",
+          "url": "https://www.testmuai.com/support/docs/kaneai-hyperexecute-test-run-execution/#step-2-create-a-test-run"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Select and Add Test Cases",
+          "text": "Click Next to view available test cases. Select the required test cases for the run. Click Add Test Case to include them. Every test case carries a label showing the experience it was authored with, either New Experience or Classic. The banner above the list explains what that label means for your run. Evidence and Coverage reporting needs every selected test case to be authored with New Experience. Classic test cases run on the default execution mode, so a run that includes even one Classic test case produces the standard report. All KaneAI test cases with generated code are available for selection here, regardless of whether Sample Run Execution has been triggered or its outcome. Test cases where code generation has not started or is still in progress will not be available.",
+          "url": "https://www.testmuai.com/support/docs/kaneai-hyperexecute-test-run-execution/#step-3-select-and-add-test-cases"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Step 4: Assign and Configure Test Cases",
+          "text": "On the test run page, review the added test cases. Assign team members in bulk. Update configurations as required. A test case that is still missing an assignee or a configuration is flagged on its row, so you can see what is left to complete before the run can be saved. Choose from available desktop browser and mobile app configurations. If a new configuration is needed, click on Create Configuration button and choose from thousands of configuration options. Enter configuration name and the following details to create a new Desktop configuration: OS : e.g., macOS. OS Version : e.g., Monterey. Browser : e.g., Chrome. Browser Version : e.g., 131. Resolution : e.g., 1440x900. Enter configuration name and the following details to create a new Real Device configuration: OS : e.g., android. Manufacturer : e.g., Samsung. Device : e.g., Galaxy S24. OS Version : e.g., 14. App : e.g., Proverbial. Click on Create Configuration You can also pick from your saved configurations in the Add a Configuration panel and apply them to the selected test cases. Applying a configuration to all test cases appends it to their existing configurations rather than replacing them.",
+          "url": "https://www.testmuai.com/support/docs/kaneai-hyperexecute-test-run-execution/#step-4-assign-and-configure-test-cases"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 5,
+          "name": "Step 5: Run with HyperExecute",
+          "text": "Once every test case has an assignee and at least one configuration, the run is ready to save and execute. Review the test instances generated from your test cases and configurations. Click Show execution preview to confirm what will run. The preview shows the execution type, the total number of instances, and the unique configurations involved. Click Save test run. On the saved run, click Run on HyperExecute and choose Run Instances Now. To run it later instead, choose Schedule Test Run. Set the desired concurrency level, e.g., 5, then start the run. The Run with HyperExecute panel summarises the run before you start it, including the number of unique tests, the unique configurations, and the concurrency. The execute button names the report you are about to generate. For a run that contains a Classic test case, or one that is not on Chrome, the button reads Run with Classic Report and the panel notes that Evidence reporting is not part of this run.",
+          "url": "https://www.testmuai.com/support/docs/kaneai-hyperexecute-test-run-execution/#step-5-run-with-hyperexecute"
+        }
+      ]
+    }
+  ]) }}
+/>
+
+
+
 # How to Run KaneAI Tests on HyperExecute
 ***
 
@@ -246,8 +353,8 @@ A run using **Evidence Reporting** shows a different Advanced Configurations pan
 
 | Setting | Description |
 |---|---|
-| **Failure handling** | Turn on to keep the run going when a step fails, then pick one strategy. Off by default, and with it off the run stops at the first failed step. |
-| **Adaptive Heal** | Repair a step that fails to replay, so the run continues instead of stopping at the failure. The repair is saved as a new version of the test case. |
+| **Self-maintenance** | Turn on to have KaneAI re-author the test when a step fails, then pick one strategy. Off by default. With it off nothing is re-authored, Auto-Heal still runs, and only a step Auto-Heal cannot recover ends the run. |
+| **Adaptive Heal** | Re-author the objective that fails to replay, and every objective after it, so the run continues instead of stopping at the failure. The re-authored content is saved as a new version of the test case. |
 | **Dynamic Test** | Author the test from its objective instead of replaying the recorded steps. Every run consumes authoring credits. |
 | **Retry on Failure** | Run the whole test again from the start after it fails. Nothing about the test is changed. |
 | **Maximum Retries** | Appears under Retry on Failure. Sets how many further attempts to make, up to 5. |
@@ -259,7 +366,7 @@ Only one of Adaptive Heal, Dynamic Test and Retry on Failure can be active at a 
 A run made of **Classic** test cases shows the full panel described above. A run whose test cases are all **New Experience** on **Chrome** can choose between the Classic report and Evidence Reporting, and choosing Evidence Reporting shows the Test Configurations panel instead.
 :::
 
-See [Adaptive Heal and Dynamic Test](/support/docs/kaneai-healing-and-dynamic-test/) for what each strategy does, how it is set at the organization and project level, and how repaired versions are reviewed.
+See [Adaptive Heal and Dynamic Test](/support/docs/kaneai-healing-and-dynamic-test/) for what each strategy does, how it is set at the organization and project level, and how re-authored versions are reviewed.
 
 ### Reports
 ***

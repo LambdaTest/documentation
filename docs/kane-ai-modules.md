@@ -53,6 +53,128 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/kane-ai-modules/"
+    },
+    "headline": "Modules",
+    "description": "Learn how to create, manage, and reuse modules in KaneAI to streamline your test automation workflows across platforms.",
+    "url": "https://www.testmuai.com/support/docs/kane-ai-modules/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Documentation",
+    "keywords": [
+      "kaneai modules",
+      "reusable test steps",
+      "test automation modules"
+    ],
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "dateModified": "2026-09-09T20:20:47+05:30"
+  }) }}
+/>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Create a Module",
+      "description": "You create modules by extracting test steps from an active KaneAI session.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Author Test Steps",
+          "text": "Begin by authoring your test in KaneAI and executing the steps that you want to turn into a module.",
+          "url": "https://www.testmuai.com/support/docs/kane-ai-modules/#step-1-author-test-steps"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Select Test Steps",
+          "text": "Pause the session. Multi-select is available only while the session is Paused. Tick the checkbox on each step you want to include in the module \u2014 for example, the steps that handle login. A select-all checkbox sits in the panel header if you want every step. A selection toolbar appears showing how many steps are selected, with Create Module and Delete actions. The selection must be contiguous \u2014 adjacent steps with no gaps \u2014 and must not already sit inside a conditional block, While loop, module, or generative instruction. If it does not qualify, an explanation tells you why. Checkboxes do not appear in Authoring Steps, Running, or Setting up, and any selection is cleared when you leave Paused. Selecting steps is independent of the cursor \u2014 ticking a checkbox does not move it.",
+          "url": "https://www.testmuai.com/support/docs/kane-ai-modules/#step-2-select-test-steps"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Define Module Properties",
+          "text": "Click Create Module. Enter the module details: Name: A descriptive name (e.g., [Web] Login Flow) Description: What the module does and when to use it Tags: Keywords for easier discovery Click Create Module to save. The selected steps are now saved as a reusable module with an initial version.",
+          "url": "https://www.testmuai.com/support/docs/kane-ai-modules/#step-3-define-module-properties"
+        }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Use a Module in a Test",
+      "description": "Once a module exists, you can import it into any KaneAI test.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Open a Test",
+          "text": "Create a new test or open an existing one in the KaneAI web agent.",
+          "url": "https://www.testmuai.com/support/docs/kane-ai-modules/#step-1-open-a-test"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Import the Module",
+          "text": "Type a slash (/) to invoke the command menu and select Add Module. Browse the list of available modules and select the one you need. Modules that contain KaneAI instructions, such as variable steps, If-Else blocks, or While Loops, can be imported only into KaneAI test cases, not into manual test cases in Test Manager. This applies to the Classic experience. See Importing Modules into Test Cases.",
+          "url": "https://www.testmuai.com/support/docs/kane-ai-modules/#step-2-import-the-module"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Execute",
+          "text": "Click Add in Queue to execute the module's test steps. The steps run automatically as part of the test. Any step that has not run yet carries the Queued status until it does \u2014 see Step Statuses.",
+          "url": "https://www.testmuai.com/support/docs/kane-ai-modules/#step-3-execute"
+        }
+      ]
+    }
+  ]) }}
+/>
+
+
+
 # How to Use Modules With KaneAI
 ***
 
@@ -88,8 +210,13 @@ Begin by authoring your test in KaneAI and executing the steps that you want to 
 ### Step 2: Select Test Steps
 ***
 
-1. Click the **Pause Test** button.
-2. Select the test steps you want to include in the module. For example, highlight the steps that handle login functionality.
+1. Pause the session. Multi-select is available only while the session is **Paused**.
+2. Tick the checkbox on each step you want to include in the module — for example, the steps that handle login. A select-all checkbox sits in the panel header if you want every step.
+3. A selection toolbar appears showing how many steps are selected, with **Create Module** and **Delete** actions.
+
+The selection must be **contiguous** — adjacent steps with no gaps — and must not already sit inside a conditional block, While loop, module, or generative instruction. If it does not qualify, an explanation tells you why.
+
+Checkboxes do not appear in Authoring Steps, Running, or Setting up, and any selection is cleared when you leave Paused. Selecting steps is independent of the cursor — ticking a checkbox does not move it.
 
 <img loading="lazy" src={require('../assets/images/kane-ai/features/modules/2.png').default} alt="select-test-steps" className="doc_img"/>
 
@@ -139,7 +266,7 @@ Modules that contain KaneAI instructions, such as variable steps, If-Else blocks
 ### Step 3: Execute
 ***
 
-Click **Add in Queue** to execute the module's test steps. The steps run automatically as part of the test.
+Click **Add in Queue** to execute the module's test steps. The steps run automatically as part of the test. Any step that has not run yet carries the **Queued** status until it does — see [Step Statuses](/support/docs/kaneai-authoring-session/#step-statuses).
 
 <img loading="lazy" src={require('../assets/images/kane-ai/features/modules/7.png').default} alt="execute-module" className="doc_img"/>
 
@@ -191,6 +318,19 @@ The example below is a module built in a mobile browser session, carrying an ass
 Modules are platform-specific, and a module containing a network assertion is no exception. Create a separate module for each platform you test, and name it accordingly, for example `[Web] Checkout API Check` and `[Android-App] Checkout API Check`. See [Create Platform-Specific Modules](#create-platform-specific-modules).
 
 A network assertion can only be added from a KaneAI session, so it cannot be added to a simple module created directly on the Modules page. Where the assertion cannot apply, KaneAI blocks the action and states the reason inline rather than adding a step that would check nothing.
+
+---
+
+## How Modules Behave in a Session
+
+A module is a **labelled group of ordinary steps**, not a single execution unit. This is what separates it from conditional blocks, While loops, and generative instructions, which all run as a whole.
+
+- **Steps inside a module run individually.** Run This Step, Run From Here, and Run Till Here all work on them, and a run range may start or end inside a module.
+- **The cursor moves freely inside a module.** You can place it between any two internal steps and insert a new step there.
+- **Editing inside a module updates the module.** Adding, editing, or reordering steps creates a new module version, following normal [versioning](#module-versioning) behavior.
+- **A module cannot contain another module.**
+
+For how this compares with the other block types, see [Blocks run as a unit](/support/docs/kaneai-authoring-session/#blocks-run-as-a-unit).
 
 ---
 
@@ -476,6 +616,7 @@ Continue with these guides:
 - [datasets](/support/docs/kane-ai-using-parameters/#datasets)
 - [KaneAI Conditional Logic](/support/docs/kaneai-conditional-logic/)
 - [KaneAI While Loops](/support/docs/kaneai-while-loops/)
+- [KaneAI Authoring Session](/support/docs/kaneai-authoring-session/)
 
 ---
 

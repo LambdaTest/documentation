@@ -19,6 +19,8 @@ canonical: https://www.testmuai.com/support/docs/playwright-testing/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
+import VerifiedTag from '@site/src/component/verifiedTag';
+
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
        "@context": "https://schema.org",
@@ -43,6 +45,123 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/playwright-testing/"
+    },
+    "headline": "How To Run Playwright Tests On TestMu AI Platform",
+    "description": "Here you can learn how to run Playwright tests on the TestMu AI test automation platform on real browsers and operating systems.",
+    "url": "https://www.testmuai.com/support/docs/playwright-testing/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Web Automation",
+    "keywords": [
+      "playwright testing",
+      "playwright e2e testing",
+      "playwright mobile testing"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Prerequisites",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "npm install"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Prerequisites",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "wsEndpoint: `wss://cdp.lambdatest.com/playwright?capabilities=${encodeURIComponent(JSON.stringify(capabilities))}`"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Prerequisites",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "set LT_USERNAME=\"YOUR_LAMBDATEST_USERNAME\"\nset LT_ACCESS_KEY=\"YOUR_LAMBDATEST_ACCESS_KEY\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 4",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "export LT_USERNAME=\"YOUR_LAMBDATEST_USERNAME\"\nexport LT_ACCESS_KEY=\"YOUR_LAMBDATEST_ACCESS_KEY\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Run Your First Test",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "(async () => {\n  const capabilities = {\n    'browserName': 'Chrome', // Browsers allowed: `Chrome`, `MicrosoftEdge`, `pw-chromium`, `pw-firefox` and `pw-webkit`\n    'browserVersion': 'latest',\n    'LT:Options': {\n      'platform': 'Windows 10',\n      'build': 'Playwright Sample Build',\n      'name': 'Playwright Sample Test',\n      'user': process.env.LT_USERNAME,\n      'accessKey': process.env.LT_ACCESS_KEY,\n      'network': true,\n      'video': true,\n      'console': true\n    }\n  }\n\n  const browser = await chromium.connect({\n    wsEndpoint: `wss://cdp.lambdatest.com/playwright?capabilities=${encodeURIComponent(JSON.stringify(capabilities))}`\n  })"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 6",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "const { chromium } = require('playwright')\nconst { expect } = require('@playwright/test');\n\n(async () => {\n  const capabilities = {\n    'browserName': 'Chrome', // Browsers allowed: `Chrome`, `MicrosoftEdge`, `pw-chromium`, `pw-firefox` and `pw-webkit`\n    'browserVersion': 'latest',\n    'LT:Options': {\n      'platform': 'Windows 10',\n      'build': 'Playwright Sample Build',\n      'name': 'Playwright Sample Test',\n      'user': process.env.LT_USERNAME,\n      'accessKey': process.env.LT_ACCESS_KEY,\n      'network': true,\n      'video': true,\n      'console': true\n    }\n  }\n\n  const browser = await chromium.connect({\n    wsEndpoint: `wss://cdp.lambdatest.com/playwright?capabilities=${encodeURIComponent(JSON.stringify(capabilities))}`\n  })\n\n  const page = await browser.newPage()\n\n  await page.goto('https://duckduckgo.com')\n\n  const element = await page.$('[name=\"q\"]')\n  await element.click()\n  await element.type('TestMu AI')\n  await element.press('Enter')\n  const title = await page.title()\n\n  try {\n    expect(title).toEqual('TestMu AI at DuckDuckGo')\n    // Mark the test as completed or failed\n    await page.evaluate(_ => {}, `lambdatest_action: ${JSON.stringify({ action: 'setTestStatus', arguments: { status: 'passed', remark: 'Title matched' } })}`)\n  } catch {\n    await page.evaluate(_ => {}, `lambdatest_action: ${JSON.stringify({ action: 'setTestStatus', arguments: { status: 'failed', remark: 'Title not matched' } })}`)\n  }\n\n  await browser.close()\n})()\n"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 7",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "node playwright-single.js"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 8",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\nRun the parallel test:\n\n```bash\nnode playwright-parallel.js"
+      }
+    ],
+    "dateModified": "2026-09-10T15:46:57+05:30"
+  }) }}
+/>
+
+
 # How to Run Your First Playwright Test on TestMu AI
 ***
 
@@ -57,7 +176,7 @@ Set up the following before you run the test so Playwright can authenticate and 
 
 :::tip Sample repo
 
-Clone the TestMu AI Playwright sample repository used in this document to follow along with the same files shown here. <a href="https://github.com/LambdaTest/playwright-sample/" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="TestMu AI Playwright sample repository on GitHub" className="doc_img"/> View on GitHub</a>
+Clone the TestMu AI Playwright sample repository used in this document to follow along with the same files shown here. <a href="https://github.com/LambdaTest/playwright-sample/tree/main/playwright-test-js" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="TestMu AI Playwright sample repository on GitHub" className="doc_img"/> View on GitHub</a>
 
 :::
 
@@ -65,11 +184,15 @@ Clone the TestMu AI Playwright sample repository used in this document to follow
 
 2. Install the npm dependencies.
 
+<VerifiedTag value="Verified" />
+
 ```bash
 npm install
 ```
 
 3. Add the `wsEndpoint` (browser endpoint URL) to your test script.
+
+<VerifiedTag value="Verified" />
 
 ```js
 wsEndpoint: `wss://cdp.lambdatest.com/playwright?capabilities=${encodeURIComponent(JSON.stringify(capabilities))}`
@@ -81,6 +204,8 @@ wsEndpoint: `wss://cdp.lambdatest.com/playwright?capabilities=${encodeURICompone
 
 **Windows**
 
+<VerifiedTag value="Verified" />
+
 ```js
 set LT_USERNAME="YOUR_LAMBDATEST_USERNAME"
 set LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
@@ -88,17 +213,19 @@ set LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
 
 **macOS/Linux**
 
+<VerifiedTag value="Verified" />
+
 ```js
 export LT_USERNAME="YOUR_LAMBDATEST_USERNAME"
 export LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
 ```
 
 ## Run Your First Test
-***
+---
 
-This section builds a single Playwright script that connects to the TestMu AI grid and runs one test. Start with the connection snippet, then use the full script that searches Bing and reports its status.
+1. Add the below code snippet in your test scripts.
 
-1. Add the code snippet below to your test script.
+<VerifiedTag value="Verified" />
 
 ```js
 (async () => {
@@ -120,9 +247,13 @@ This section builds a single Playwright script that connects to the TestMu AI gr
   const browser = await chromium.connect({
     wsEndpoint: `wss://cdp.lambdatest.com/playwright?capabilities=${encodeURIComponent(JSON.stringify(capabilities))}`
   })
-```
+  ```
 
-After the connection is in place, you can run your first Playwright test on TestMu AI. The full test script below searches the term `LambdaTest` on Bing and marks the session as passed or failed based on the page title.
+Once you are done with the above-mentioned steps, you can initiate your first Playwright test on <BrandName />. 
+
+The below test script searches the term '<BrandName />' on DuckDuckGo.
+
+<VerifiedTag value="Verified" />
 
 ```js
 const { chromium } = require('playwright')
@@ -150,16 +281,16 @@ const { expect } = require('@playwright/test');
 
   const page = await browser.newPage()
 
-  await page.goto('https://www.bing.com')
+  await page.goto('https://duckduckgo.com')
 
-  const element = await page.$('[aria-label="Enter your search term"]')
+  const element = await page.$('[name="q"]')
   await element.click()
-  await element.type('LambdaTest')
+  await element.type('TestMu AI')
   await element.press('Enter')
   const title = await page.title()
 
   try {
-    expect(title).toEqual('LambdaTest - Search')
+    expect(title).toEqual('TestMu AI at DuckDuckGo')
     // Mark the test as completed or failed
     await page.evaluate(_ => {}, `lambdatest_action: ${JSON.stringify({ action: 'setTestStatus', arguments: { status: 'passed', remark: 'Title matched' } })}`)
   } catch {
@@ -171,18 +302,22 @@ const { expect } = require('@playwright/test');
 
 ```
 
-2. Run the test with the command below.
+2. Pass the below command to run the test.
 
-```bash
+<VerifiedTag value="Verified" />
+
+```
 node playwright-single.js
 ```
 
 ## Run Tests in Parallel
-***
+---
 
-Once your first test runs, you can execute the same test across multiple browser and OS configurations at once. Define a `capabilities` array with one entry per configuration, then run each through a shared function.
+Once your first test runs, you can execute the same test across multiple browser and OS configurations at once. Define a `capabilities` array (one entry per configuration) and run each through a shared function.
 
-The example below runs the Bing search test on three configurations: Chrome on Windows 10, Microsoft Edge on Windows 8, and Chrome on macOS Big Sur.
+The example below runs the DuckDuckGo search test on three configurations: Chrome on Windows 10, Microsoft Edge on Windows 11, and Chrome on macOS Sonoma.
+
+<VerifiedTag value="Verified" />
 
 ```js title="playwright-parallel.js"
 const { chromium } = require('playwright')
@@ -197,16 +332,16 @@ const parallelTests = async (capability) => {
 
   const page = await browser.newPage()
 
-  await page.goto('https://www.bing.com')
+  await page.goto('https://duckduckgo.com')
 
-  const element = await page.$('[aria-label="Enter your search term"]')
+  const element = await page.$('[name="q"]')
   await element.click()
-  await element.type('LambdaTest')
+  await element.type('TestMu AI')
   await element.press('Enter')
   const title = await page.title()
 
   try {
-    expect(title).toEqual('LambdaTest - Search')
+    expect(title).toEqual('TestMu AI at DuckDuckGo')
     // Mark the test as completed or failed
     await page.evaluate(_ => {}, `lambdatest_action: ${JSON.stringify({ action: 'setTestStatus', arguments: { status: 'passed', remark: 'Title matched' } })}`)
   } catch {
@@ -236,9 +371,9 @@ const capabilities = [
     'browserName': 'MicrosoftEdge',
     'browserVersion': 'latest',
     'LT:Options': {
-      'platform': 'Windows 8',
+      'platform': 'Windows 11',
       'build': 'Playwright Sample Build',
-      'name': 'Playwright Sample Test on Windows 8 - MicrosoftEdge',
+      'name': 'Playwright Sample Test on Windows 11 - MicrosoftEdge',
       'user': process.env.LT_USERNAME,
       'accessKey': process.env.LT_ACCESS_KEY,
       'network': true,
@@ -250,9 +385,9 @@ const capabilities = [
     'browserName': 'Chrome',
     'browserVersion': 'latest',
     'LT:Options': {
-      'platform': 'MacOS Big sur',
+      'platform': 'MacOS Sonoma',
       'build': 'Playwright Sample Build',
-      'name': 'Playwright Sample Test on MacOS Big sur - Chrome',
+      'name': 'Playwright Sample Test on MacOS Sonoma - Chrome',
       'user': process.env.LT_USERNAME,
       'accessKey': process.env.LT_ACCESS_KEY,
       'network': true,
@@ -268,6 +403,8 @@ capabilities.forEach(async (capability) => {
 
 Run the parallel test:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 node playwright-parallel.js
 ```
@@ -279,11 +416,15 @@ If you would rather not edit your scripts to connect to the grid, run your exist
 
 **1. Install the SDK** as a dev dependency in your project:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 npm install @lambdatest/playwright-node-sdk
 ```
 
 **2. Generate the config file,** then set your credentials, platforms, and run settings in it:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 npx playwright-node-sdk --init
@@ -291,6 +432,8 @@ npx playwright-node-sdk --init
 
 <details>
 <summary>Example lambdatest.yml</summary>
+
+<VerifiedTag value="Verified" />
 
 ```yaml
 # Access your LambdaTest credentials from https://accounts.lambdatest.com/security/username-accesskey
@@ -350,6 +493,8 @@ platforms:
 
 **3. Run your tests** through the SDK wrapper (you can pass any standard Playwright CLI option):
 
+<VerifiedTag value="Verified" />
+
 ```bash
 npx playwright-node-sdk playwright test
 ```
@@ -377,4 +522,5 @@ Continue with the guides below to migrate, configure, and customize your Playwri
 - [Migrate your existing Playwright suite to the cloud](/support/docs/migrate-existing-playwright-tests/) moves tests you already run locally onto the TestMu AI grid.
 - [Set up Playwright test execution on TestMu AI](/support/docs/playwright-test-execution-setup/) configures your project to run Playwright tests on the cloud.
 - [Configure Playwright capabilities](/support/docs/capabilities-for-playwright/) customizes browser, OS, and session options for your runs.
+- [Test WebView apps with Playwright](/support/docs/playwright-webview-test/) automates WebView components using Playwright on TestMu AI.
 

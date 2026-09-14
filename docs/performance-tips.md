@@ -19,6 +19,8 @@ canonical: https://www.testmuai.com/support/docs/performance-tips/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
+import VerifiedTag from '@site/src/component/verifiedTag';
+
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
        "@context": "https://schema.org",
@@ -43,6 +45,123 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/performance-tips/"
+    },
+    "headline": "Maximize Test Execution Performance on Automation Platform",
+    "description": "Speed up Selenium test execution on the cloud grid by disabling optional logging capabilities.",
+    "url": "https://www.testmuai.com/support/docs/performance-tips/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Web Automation",
+    "keywords": [
+      "reduce selenium test execution time",
+      "disable visual network console logs",
+      "cloud grid performance optimization"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "If you do not need these logs, disable them through capabilities",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "ChromeOptions browserOptions = new ChromeOptions();\nbrowserOptions.setPlatformName(\"Windows 10\");\nbrowserOptions.setBrowserVersion(\"latest\");\nHashMap<String, Object> ltOptions = new HashMap<String, Object>();\nltOptions.put(\"build\", \"your build name\");\nltOptions.put(\"name\", \"your test name\");\nltOptions.put(\"console\", false);  // Disable console logs\nltOptions.put(\"network\", false);  // Disable network logs\nltOptions.put(\"visual\", false);   // Disable step-by-step screenshots\nbrowserOptions.setCapability(\"LT:Options\", ltOptions);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Using latest ensures your tests run on the most readily available browser instances",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "browserOptions.setBrowserVersion(\"latest\");"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Set an Appropriate Idle Timeout",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "ltOptions.put(\"idleTimeout\", 120); // seconds - adjust based on your longest expected wait"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "If you are not running visual or screenshot-based tests, use a standard resolution",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "ltOptions.put(\"resolution\", \"1024x768\");"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Explicit waits poll for the expected condition and continue immediately",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "// Avoid this\nThread.sleep(5000);\n\n// Use this instead\nWebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));\nwait.until(ExpectedConditions.visibilityOfElementLocated(By.id(\"element-id\")));"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Close Sessions Properly",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "@AfterMethod\npublic void tearDown() {\n    if (driver != null) {\n        driver.quit();\n    }\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "For Windows",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "tracert hub.lambdatest.com"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "For Linux/Mac",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "traceroute hub.lambdatest.com"
+      }
+    ],
+    "dateModified": "2026-09-09T19:13:32+05:30"
+  }) }}
+/>
+
+
 # How to Speed Up Your Selenium Tests on TestMu AI
 ---
 
@@ -53,6 +172,8 @@ Running Selenium tests on a cloud grid introduces network latency compared to lo
 Turn off visual, network, and console logging to reduce per-command overhead.
 
 TestMu AI runs complementary services that capture screenshots after every command, record video, and collect network and console logs. Each service adds processing time. If you do not need these logs, disable them through capabilities:
+
+<VerifiedTag value="Verified" />
 
 ```java
 ChromeOptions browserOptions = new ChromeOptions();
@@ -85,6 +206,8 @@ Set `browserVersion` to `latest` instead of pinning a specific version number.
 
 Pinning old browser versions can cause delays if TestMu AI needs to spin up a less common environment. Using `latest` ensures your tests run on the most readily available browser instances:
 
+<VerifiedTag value="Verified" />
+
 ```java
 browserOptions.setBrowserVersion("latest");
 ```
@@ -94,6 +217,8 @@ browserOptions.setBrowserVersion("latest");
 Configure `idleTimeout` to balance between premature timeouts and wasted session time.
 
 The `idleTimeout` capability controls how long TestMu AI waits before closing an idle session. Setting it too high wastes concurrency slots. Setting it too low causes premature session termination during long page loads or waits.
+
+<VerifiedTag value="Verified" />
 
 ```java
 ltOptions.put("idleTimeout", 120); // seconds - adjust based on your longest expected wait
@@ -106,6 +231,8 @@ A value between 60 and 150 seconds works well for most test suites.
 Set a lower screen resolution if your tests do not require visual validation.
 
 Higher resolutions increase rendering time. If you are not running visual or screenshot-based tests, use a standard resolution:
+
+<VerifiedTag value="Verified" />
 
 ```java
 ltOptions.put("resolution", "1024x768");
@@ -123,6 +250,8 @@ Replace fixed sleep calls with explicit waits to proceed as soon as the conditio
 
 `Thread.sleep()` always waits the full duration, even if the element is ready in milliseconds. Explicit waits poll for the expected condition and continue immediately:
 
+<VerifiedTag value="Verified" />
+
 ```java
 // Avoid this
 Thread.sleep(5000);
@@ -137,6 +266,8 @@ wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("element-id")));
 Always call `driver.quit()` to release the session and free up concurrency slots.
 
 If a test exits without calling `driver.quit()`, the session stays open until the idle timeout expires. This wastes concurrency and slows down queued tests.
+
+<VerifiedTag value="Verified" />
 
 ```java
 @AfterMethod

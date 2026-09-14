@@ -20,6 +20,8 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
+import VerifiedTag from '@site/src/component/verifiedTag';
+
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
        "@context": "https://schema.org",
@@ -43,6 +45,144 @@ import TabItem from '@theme/TabItem';
       })
     }}
 ></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/smartui-comparison-capabilities/"
+    },
+    "headline": "Set SmartUI Comparison Modes at the Session Level",
+    "description": "Enable SmartUI comparison modes such as layout and Smart Ignore once in LT:Options and apply them to every screenshot in the session, with per-screenshot overrides.",
+    "url": "https://www.testmuai.com/support/docs/smartui-comparison-capabilities/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "SmartUI",
+    "keywords": [
+      "smartui comparison capabilities",
+      "smartUI.ignoreType layout",
+      "smartUI.smartIgnore"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "1. Layout comparison for the whole session (Java)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "import java.util.Arrays;\nimport java.util.HashMap;\nimport org.openqa.selenium.chrome.ChromeOptions;\n\nChromeOptions browserOptions = new ChromeOptions();\nHashMap<String, Object> ltOptions = new HashMap<>();\nltOptions.put(\"username\", System.getenv(\"LT_USERNAME\"));\nltOptions.put(\"accessKey\", System.getenv(\"LT_ACCESS_KEY\"));\nltOptions.put(\"visual\", true);\nltOptions.put(\"smartUI.project\", \"Your_Project_Name\");\nltOptions.put(\"smartUI.ignoreType\", Arrays.asList(\"layout\")); // applies to every screenshot\n\nbrowserOptions.setCapability(\"LT:Options\", ltOptions);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "1. Layout comparison for the whole session (NodeJS)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "'LT:Options': {\n  user: process.env.LT_USERNAME,\n  accessKey: process.env.LT_ACCESS_KEY,\n  visual: true,\n  'smartUI.project': 'Your_Project_Name',\n  'smartUI.ignoreType': ['layout'], // applies to every screenshot\n},"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Python",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Python",
+        "text": "lt_options = {\n    \"username\": os.getenv(\"LT_USERNAME\"),\n    \"accessKey\": os.getenv(\"LT_ACCESS_KEY\"),\n    \"visual\": True,\n    \"smartUI.project\": \"Your_Project_Name\",\n    \"smartUI.ignoreType\": [\"layout\"],  # applies to every screenshot\n}\noptions.set_capability(\"LT:Options\", lt_options)"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "C#",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "C#",
+        "text": "capabilities.SetCapability(\"visual\", true);\ncapabilities.SetCapability(\"smartUI.project\", \"Your_Project_Name\");\ncapabilities.SetCapability(\"smartUI.ignoreType\", new[] { \"layout\" }); // applies to every screenshot"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "With this set, your screenshot calls stay clean, no comparison option is needed on each one",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "Map<String, Object> options = new HashMap<>();\noptions.put(\"screenshotName\", \"home-page\");\n((JavascriptExecutor) driver).executeScript(\"smartui.takeScreenshot\", options);\n// compared in layout mode because of the session default"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "2. Smart Ignore for the whole session (Java)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "ltOptions.put(\"smartUI.project\", \"Your_Project_Name\");\nltOptions.put(\"smartUI.smartIgnore\", true); // applies to every screenshot"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "2. Smart Ignore for the whole session (NodeJS)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "'LT:Options': {\n  'smartUI.project': 'Your_Project_Name',\n  'smartUI.smartIgnore': true, // applies to every screenshot\n},"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "2. Smart Ignore for the whole session (Python)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Python",
+        "text": "lt_options = {\n    \"smartUI.project\": \"Your_Project_Name\",\n    \"smartUI.smartIgnore\": True,  # applies to every screenshot\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "C#",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "C#",
+        "text": "capabilities.SetCapability(\"smartUI.project\", \"Your_Project_Name\");\ncapabilities.SetCapability(\"smartUI.smartIgnore\", true); // applies to every screenshot"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "3. Ignore regions are set per screenshot, not per session",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "HashMap<String, String[]> ignoreByCoord = new HashMap<>();\nignoreByCoord.put(\"coordinates\", new String[]{\"847,185,1571,734\"});\n\nMap<String, Object> options = new HashMap<>();\noptions.put(\"screenshotName\", \"home-page\");\noptions.put(\"ignoreDOM\", ignoreByCoord); // applies to this screenshot only\n((JavascriptExecutor) driver).executeScript(\"smartui.takeScreenshot\", options);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "4. Override the session default for one screenshot",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "Map<String, Object> options = new HashMap<>();\noptions.put(\"screenshotName\", \"pricing-table\");\noptions.put(\"ignoreType\", Arrays.asList()); // override: compare this one in full detail\n((JavascriptExecutor) driver).executeScript(\"smartui.takeScreenshot\", options);"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 
 # Set SmartUI Comparison Modes at the Session Level
 
@@ -85,6 +225,8 @@ Set `smartUI.ignoreType` to `["layout"]` in `LT:Options`. Every screenshot in th
 <Tabs className="docs__val" groupId="language">
 <TabItem value="java" label="Java" default>
 
+<VerifiedTag value="Verified" />
+
 ```java
 import java.util.Arrays;
 import java.util.HashMap;
@@ -104,6 +246,8 @@ browserOptions.setCapability("LT:Options", ltOptions);
 </TabItem>
 <TabItem value="nodejs" label="NodeJS">
 
+<VerifiedTag value="Verified" />
+
 ```javascript
 'LT:Options': {
   user: process.env.LT_USERNAME,
@@ -116,6 +260,8 @@ browserOptions.setCapability("LT:Options", ltOptions);
 
 </TabItem>
 <TabItem value="python" label="Python">
+
+<VerifiedTag value="Verified" />
 
 ```python
 lt_options = {
@@ -131,6 +277,8 @@ options.set_capability("LT:Options", lt_options)
 </TabItem>
 <TabItem value="csharp" label="C#">
 
+<VerifiedTag value="Verified" />
+
 ```csharp
 capabilities.SetCapability("visual", true);
 capabilities.SetCapability("smartUI.project", "Your_Project_Name");
@@ -141,6 +289,8 @@ capabilities.SetCapability("smartUI.ignoreType", new[] { "layout" }); // applies
 </Tabs>
 
 With this set, your screenshot calls stay clean, no comparison option is needed on each one:
+
+<VerifiedTag value="Verified" />
 
 ```java
 Map<String, Object> options = new HashMap<>();
@@ -156,6 +306,8 @@ Set `smartUI.smartIgnore` to `true` in `LT:Options` to apply [Smart Ignore](/sup
 <Tabs className="docs__val" groupId="language">
 <TabItem value="java" label="Java" default>
 
+<VerifiedTag value="Verified" />
+
 ```java
 ltOptions.put("smartUI.project", "Your_Project_Name");
 ltOptions.put("smartUI.smartIgnore", true); // applies to every screenshot
@@ -163,6 +315,8 @@ ltOptions.put("smartUI.smartIgnore", true); // applies to every screenshot
 
 </TabItem>
 <TabItem value="nodejs" label="NodeJS">
+
+<VerifiedTag value="Verified" />
 
 ```javascript
 'LT:Options': {
@@ -174,6 +328,8 @@ ltOptions.put("smartUI.smartIgnore", true); // applies to every screenshot
 </TabItem>
 <TabItem value="python" label="Python">
 
+<VerifiedTag value="Verified" />
+
 ```python
 lt_options = {
     "smartUI.project": "Your_Project_Name",
@@ -183,6 +339,8 @@ lt_options = {
 
 </TabItem>
 <TabItem value="csharp" label="C#">
+
+<VerifiedTag value="Verified" />
 
 ```csharp
 capabilities.SetCapability("smartUI.project", "Your_Project_Name");
@@ -195,6 +353,8 @@ capabilities.SetCapability("smartUI.smartIgnore", true); // applies to every scr
 ## 3. Ignore regions are set per screenshot, not per session
 
 There is no session-level ignore-regions capability. Ignore regions are configured **per screenshot** through the `ignoreDOM` (and `selectDOM`) argument on each `smartui.takeScreenshot` call, where you can pass DOM selectors or pixel coordinates:
+
+<VerifiedTag value="Verified" />
 
 ```java
 HashMap<String, String[]> ignoreByCoord = new HashMap<>();
@@ -211,6 +371,8 @@ For the full set of coordinate and selector options on the Web Hooks path, see [
 ## 4. Override the session default for one screenshot
 
 Because the screenshot-level option always wins, you can keep a session default and still change the mode for a specific screenshot. For example, with a layout default set in `LT:Options`, you can compare one screenshot in the standard pixel mode by passing a different `ignoreType` on that call:
+
+<VerifiedTag value="Verified" />
 
 ```java
 Map<String, Object> options = new HashMap<>();

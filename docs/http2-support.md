@@ -1,4 +1,5 @@
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 ﻿---
 id: http2-support
@@ -18,6 +19,73 @@ slug: http2-support/
 canonical: https://www.testmuai.com/support/docs/http2-support/
 ---
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/http2-support/"
+    },
+    "headline": "HTTP/2 Support in TestMu AI Tunnel",
+    "description": "Learn how TestMu AI Tunnel supports HTTP/2 for modern, high-performance web application testing.",
+    "url": "https://www.testmuai.com/support/docs/http2-support/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Testing Locally",
+    "keywords": [
+      "http2",
+      "testmu ai tunnel",
+      "performance testing"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "To start using TestMu AI Tunnel with HTTP/2 support, simply initiate the tunnel as you normally would",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "./LambdaTestTunnel --user YourLambdaTestUsername --key YourLambdaTestAccessKey"
+      }
+    ],
+    "dateModified": "2026-02-12T19:51:34+05:30"
+  }) }}
+/>
+
 # HTTP/2 Support in <BrandName /> Tunnel
 
 ## Overview
@@ -35,6 +103,8 @@ canonical: https://www.testmuai.com/support/docs/http2-support/
 Using HTTP/2 with <BrandName /> Tunnel does not require any special configuration or flags. The tunnel automatically detects and proxies HTTP/2 traffic alongside HTTP/1, ensuring that your tests accurately reflect the behavior of web applications under real-world conditions.
 
 To start using <BrandName /> Tunnel with HTTP/2 support, simply initiate the tunnel as you normally would:
+
+<VerifiedTag value="Verified" />
 
 ```sh
 ./LambdaTestTunnel --user YourLambdaTestUsername --key YourLambdaTestAccessKey

@@ -1,6 +1,6 @@
 ﻿---
 id: aws-codepipeline-with-hyperexecute
-title: How to integrate AWS CodePipeline with HyperExecute
+title: How to integrate AWS CodePipeline with HyperExecute
 toc_max_heading_level: 2
 hide_title: true
 sidebar_label: "AWS CodePipeline"
@@ -20,6 +20,8 @@ slug: aws-codepipeline-with-hyperexecute/
 canonical: https://www.testmuai.com/support/docs/aws-codepipeline-with-hyperexecute/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -44,6 +46,116 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       })
     }}
 ></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/aws-codepipeline-with-hyperexecute/"
+    },
+    "headline": "How to integrate AWS CodePipeline with HyperExecute",
+    "description": "Optimize AWS CodePipeline with HyperExecute for seamless, efficient testing. Streamline your CI/CD workflow with TestMu AI's comprehensive guide.",
+    "url": "https://www.testmuai.com/support/docs/aws-codepipeline-with-hyperexecute/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "HyperExecute",
+    "keywords": [
+      "testmu ai integrations",
+      "testmu ai integrations with ci/cd tools",
+      "hyperexecute integrations"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 4: Create a buildspec.yml file",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "version: 0.2\n\nphases:\n  install:\n    commands:\n      # Download Hyperexecute CLI for macOS (adjust for other OS)\n      - name: Download Hyperexecute CLI\n        command: wget https://downloads.lambdatest.com/hyperexecute/darwin/hyperexecute\n      # Grant execute permission to the downloaded binary\n      - name: Make HyperExecute executable\n        command: chmod u+x hyperexecute\n  build:\n    commands:\n      # Run Hyperexecute with user credentials and configuration file\n      - name: Trigger HyperExecute tests\n        command: ./hyperexecute --user <your_user_name> --key <your_access_key> --config <your_yaml_file>"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "How to Integrate AWS CodePipeline with HyperExecute",
+      "description": "*** To integrate AWS CodePipeline with HyperExecute, follow the below mentioned steps: You can use your own project to configure and test it. For demo purposes, we are using the sample repository. Download or Clone the code sample from the TestMu AI GitHub repository to run the tests on the HyperExecute.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Create a new AWS CodePipeline pipeline.",
+          "text": "Enter the Pipeline Name. Under Service role, select New service role. Click Next.",
+          "url": "https://www.testmuai.com/support/docs/aws-codepipeline-with-hyperexecute/#step-1-create-a-new-aws-codepipeline-pipeline"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Add a Source Provider",
+          "text": "In the Source Provider, select the GitHub (Version 2) option. Connect your GitHub account. Select the desired Repository. Select the specified branch name, for which you want to establish the pipeline.",
+          "url": "https://www.testmuai.com/support/docs/aws-codepipeline-with-hyperexecute/#step-2-add-a-source-provider"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Select the Build Provider",
+          "text": "Add a Build action to the pipeline. Select the CodeBuild as the build provider. Click on Create a Project button. For the demo we are selecting OS as Amazon Linux 2, Runtime as standard, Image - amazonlinux2-x8664standard:4.0, and Runtime Environment as Linux.",
+          "url": "https://www.testmuai.com/support/docs/aws-codepipeline-with-hyperexecute/#step-3-select-the-build-provider"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Step 4: Create a buildspec.yml file",
+          "text": "Create a buildspec.yml file in the root directory of the repository where the tests are written. ### Sample buildspec.yml file In the buildspec specification, choose the first option - \"Use a buildspec file\". Now Click the \"continue to code pipeline\" button and then click on Next. You can \"Skip deploy stage\" and finally click \"Create Pipeline\" button.",
+          "url": "https://www.testmuai.com/support/docs/aws-codepipeline-with-hyperexecute/#step-4-create-a-buildspecyml-file"
+        }
+      ]
+    }
+  ]) }}
+/>
+
+
 
 # AWS CodePipeline Integration With HyperExecute
 
@@ -95,6 +207,8 @@ Download or Clone the code sample from the <BrandName /> GitHub repository to ru
 - Create a `buildspec.yml` file in the root directory of the repository where the tests are written.
 
 - ### Sample `buildspec.yml` file
+
+<VerifiedTag value="Verified" />
 
 ```bash
 version: 0.2

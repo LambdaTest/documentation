@@ -40,6 +40,106 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/spirateam-integration/"
+    },
+    "headline": "SpiraTeam Integration",
+    "description": "TestMu AI provides integrations with SpiraTeam to help you log bugs directly from the middle of your test session on TestMu AI to SpiraTeam platform.",
+    "url": "https://www.testmuai.com/support/docs/spirateam-integration/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Integration",
+    "keywords": [
+      "TestMu AI integrations",
+      "Push issues to SpiraTeam",
+      "TestMu AI SpiraTeam integration"
+    ],
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "dateModified": "2026-06-02T12:20:54+05:30"
+  }) }}
+/>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Steps to Integrate TestMu AI with SpiraTeam",
+      "description": "TestMu AI provides integrations with SpiraTeam to help you log bugs directly from the middle of your test session on TestMu AI to SpiraTeam platform.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Setup Your Accounts",
+          "text": "Sign in to your TestMu AI account. If you don't have an account, Register for FREE !!. Create your SpiraTeam account and login to your account.",
+          "url": "https://www.testmuai.com/support/docs/spirateam-integration/#step-1-setup-your-accounts"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Configure the Integration",
+          "text": "On the TestMu AI Dashboard, click on the Settings option and select the Integrations. In the Bug Tracker Section, select the SpiraTeam and click on the Connect button. Enter the configuration details and click on Install button. Username : Go to your SpiraTeam account profile to find your Username. SpiraTeam URL : Enter your organization URL using for the integration. RSS / API Key : In your SpiraTeam profile, toggle the Enable RSS Feeds to yes and copy the RSS / API Key and click on the Save button.",
+          "url": "https://www.testmuai.com/support/docs/spirateam-integration/#step-2-configure-the-integration"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Create Your Incident Ticket",
+          "text": "Go to the Automation section. Click on the desired test for which you want to create the incident ticket. Click on Create an issue. Configure the ticket details as shown below and click on Create Issue button.",
+          "url": "https://www.testmuai.com/support/docs/spirateam-integration/#step-3-create-your-incident-ticket"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Step 4: (Optional) Complete Your Ticket Configuration if needed",
+          "text": "Visit your SpiraTeam profile. Go to your desired dashboard in which you have created the ticket in the above step. Update your ticket information here and click on the Save button.",
+          "url": "https://www.testmuai.com/support/docs/spirateam-integration/#step-4-optional-complete-your-ticket-configuration-if-needed"
+        }
+      ]
+    }
+  ]) }}
+/>
+
+
+
 SpiraTeam is a software tool used for Application Lifecycle Management (ALM). It's designed to help teams manage various aspects of software development, from programs and portfolios to requirements, releases, test cases, issues, baselines, workflows, and tasks.
 
 It is very useful for managing teams programs, portfolios, requirements, releases, test cases, issues, baselines, workflows, and tasks in one unified environment.

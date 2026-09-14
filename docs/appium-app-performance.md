@@ -19,6 +19,8 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 
+import VerifiedTag from '@site/src/component/verifiedTag';
+
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
        "@context": "https://schema.org",
@@ -42,6 +44,73 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       })
     }}
 ></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/appium-app-performance-analytics/"
+    },
+    "headline": "Application Performance Analytics",
+    "description": "Learn more about the metrics that are crucial in tracking the performance of your app.",
+    "url": "https://www.testmuai.com/support/docs/appium-app-performance-analytics/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "App Automation",
+    "keywords": [
+      "regular expression testmu ai",
+      "regular expression app automation"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "You can enable performance tracking in your existing automation tests with the following capability",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "\"appProfiling\" : true;"
+      }
+    ],
+    "dateModified": "2026-09-10T15:46:57+05:30"
+  }) }}
+/>
+
 App performance analytics on TestMu AI surface CPU, memory, network, and frame-rate metrics captured during Appium runs on real Android and iOS devices, helping you detect bottlenecks, startup delays, and resource leaks early so you can optimize apps before release.
 
 **Supported on:** Real devices
@@ -49,6 +118,8 @@ App performance analytics on TestMu AI surface CPU, memory, network, and frame-r
 App performance is critical factor for user satisfaction and adoption. Identifying and resolving bottlenecks early is essential for delivering a high-quality experience but it requires constant monitoring and optimization across various device metrics. <BrandName />’s App Profiling feature helps you to detect and optimize performance issues before release by providing real-time insights into key metrics like CPU usage, memory consumption, and network activity on real devices.
 
 You can enable performance tracking in your existing automation tests with the following capability:
+
+<VerifiedTag value="Verified" />
 
 ```javascript
 "appProfiling" : true;
@@ -165,6 +236,8 @@ Application start-up time significantly impacts the first impression and overall
 
 To retrieve profiling details, simply make a request to the <BrandName /> API using your **authentication token (username and access key)** and the relevant **session ID**. The response will include comprehensive metrics in JSON format, allowing easy integration with other tools or reporting systems for further insights.
 
+<VerifiedTag value="Verified" />
+
 <div className="lambdatest__codeblock">
   <CodeBlock className="language-bash">
     {`https://${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}@mobile-api.lambdatest.com/mobile-automation/api/v1/sessions/SESSION_ID/log/appmetrics`}
@@ -177,6 +250,8 @@ To retrieve profiling details, simply make a request to the <BrandName /> API us
 <img loading="lazy" src={require('../assets/images/appium-app/meta-data.png').default} alt="cmd" width="768" height="373" className="doc_img"/>
 
 **Step 3:** Replace the `YOUR_SESSION_ID` parameter in the given API with your actual session id.
+
+<VerifiedTag value="Verified" />
 
 <div className="lambdatest__codeblock">
   <CodeBlock className="language-bash">
@@ -191,7 +266,7 @@ To retrieve profiling details, simply make a request to the <BrandName /> API us
 
 
 > Got any questions?<br/>
-> Please reach out at our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24x7 Chat Support**</span> or you could also mail us at [support@testmuai.com](https://support.lambdatest.com/).
+> Please reach out at our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24x7 Chat Support**</span> or you could also mail us at [support@testmuai.com](mailto:support@testmuai.com).
 
 
 <nav aria-label="breadcrumbs">

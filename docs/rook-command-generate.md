@@ -6,6 +6,85 @@ description: Generate grounded functional, non-functional, and adversarial scena
 slug: rook-command-generate/
 ---
 
+import { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
+
+<script type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify({
+       "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": BRAND_URL
+        },{
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Support",
+          "item": `${BRAND_URL}/support/docs/`
+        },{
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Rook /generate Command",
+          "item": `${BRAND_URL}/support/docs/rook-command-generate/`
+        }]
+      })
+    }}
+></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/rook-command-generate/"
+    },
+    "headline": "Rook /generate Command",
+    "description": "Generate grounded functional, non-functional, and adversarial scenarios for the active agent.",
+    "url": "https://www.testmuai.com/support/docs/rook-command-generate/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Agent Testing",
+    "keywords": [],
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "dateModified": "2026-09-04T12:50:18+05:30"
+  }) }}
+/>
 # <code>/generate</code> Command
 
 Use <code>/generate</code> after exploration to write test scenarios for the active agent's discovered features.
@@ -13,6 +92,8 @@ Use <code>/generate</code> after exploration to write test scenarios for the act
 <img loading="lazy" src={require('../assets/images/rook/commands/rook-command-generate.png').default} alt="Current Rook generate command help with total, class, category, force, allow, JSON, and verbose options" className="doc_img"/>
 
 ## Syntax
+
+<VerifiedTag value="Verified" />
 
 ~~~text
 /generate [options] [-- free-text instruction]
@@ -29,6 +110,8 @@ The shell form is <code>rook generate</code> with the same options.
 | <code>--allow &lt;rule&gt;</code> | Pre-authorize one exact tool rule for this launch. Repeatable. |
 | <code>--json</code> | Emit machine-readable events. |
 | <code>--verbose</code> | Show subagent activity and credits as work happens. |
+
+<VerifiedTag value="Verified" />
 
 ~~~text
 /generate --total 20 --class functional,adversarial

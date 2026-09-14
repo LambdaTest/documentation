@@ -15,6 +15,7 @@ slug: rktracer-integration/
 canonical: https://www.testmuai.com/support/docs/rktracer-integration/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -41,6 +42,94 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/rktracer-integration/"
+    },
+    "headline": "RKTracer Integration",
+    "description": "Generate code coverage for web and mobile apps across 5000+ real devices and 10,000+ browser/device combinations with TestMu AI and RKTracer.",
+    "url": "https://www.testmuai.com/support/docs/rktracer-integration/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Integration",
+    "keywords": [
+      "rktracer testmu ai",
+      "rktracer integration",
+      "rktracer integration with testmu ai"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "RKTracer With Web Automation On TestMu AI",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "rktracer mvn test -D suite=single.xml"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "RKTracer With Web Automation On TestMu AI",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "rkresults"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "RKTracer With App Automation On TestMu AI",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "rkresults"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "RKTracer With Real Time App Testing On TestMu AI",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\"rkresults\""
+      }
+    ],
+    "dateModified": "2026-08-14T19:24:28+05:30"
+  }) }}
+/>
+
 # RKTracer Integration
 ***
 
@@ -55,6 +144,8 @@ With <BrandName /> and RKTracer, you can generate Code coverage for your web and
 
 2. To run the single test using TestNG, pass the build command by prefixing it with `"rktracer"`
 
+<VerifiedTag value="Verified" />
+
 ```
 rktracer mvn test -D suite=single.xml
 ```
@@ -62,6 +153,8 @@ rktracer mvn test -D suite=single.xml
 <img loading="lazy" src={require('../assets/images/rktracer-integration/1.png').default} alt="rktracer" width="1345" height="627" className="doc_img"/>
 
 3. Pass the below command to get the test results.
+
+<VerifiedTag value="Verified" />
 
 ```
 rkresults
@@ -87,6 +180,8 @@ rkresults
 
 7. Pass the below command to get the test results.
 
+<VerifiedTag value="Verified" />
+
 ```
 rkresults
 ```
@@ -106,6 +201,8 @@ rkresults
 4. Open the terminal from that folder and run the command `node har2rk.js <name of device log har file>`. It will convert the harfile into `rkcoverage.txt`.
 
 5. Run the below command to get the results.
+
+<VerifiedTag value="Verified" />
 
 ```
 "rkresults"

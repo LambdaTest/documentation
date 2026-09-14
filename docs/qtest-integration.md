@@ -12,7 +12,9 @@ site_name: TestMu AI
 slug: qtest-integration/
 canonical: https://www.testmuai.com/support/docs/qtest-integration/
 ---
+
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -38,6 +40,73 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/qtest-integration/"
+    },
+    "headline": "How to integrate qTest With TestMu AI",
+    "description": "Run your tests using qTest Launch on TestMu AI.",
+    "url": "https://www.testmuai.com/support/docs/qtest-integration/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Documentation",
+    "keywords": [
+      "TestMu AI integration",
+      "testmu ai integration with qTest"
+    ],
+    "proficiencyLevel": "Beginner",
+    "dependencies": "Login to qTest Manager as an Administrator and access the Resources page.; Expand the APIs and SDK section..",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Start the host by running the following command",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "  /path/to/agentctl-[version]$ ./agentctl start"
+      }
+    ],
+    "dateModified": "2026-02-12T19:51:34+05:30"
+  }) }}
+/>
+
 # qTest Integration With <BrandName />
 
 ***
@@ -61,6 +130,9 @@ qTest is a comprehensive test management tool designed for Project Management, B
 3. Setup host and agent
 
   Start the host by running the following command:
+
+  <VerifiedTag value="Verified" />
+
   ```
   /path/to/agentctl-[version]$ ./agentctl start
   ```
@@ -87,4 +159,4 @@ qTest is a comprehensive test management tool designed for Project Management, B
       <span className="breadcrumbs__link">qTest Integration With <BrandName /></span>
     </li>
   </ul>
-</nav> 
+</nav>

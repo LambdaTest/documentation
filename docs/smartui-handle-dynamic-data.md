@@ -23,6 +23,7 @@ import NewTag from '../src/component/newTag';
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -47,6 +48,283 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       })
     }}
 ></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/smartui-handle-dynamic-data/"
+    },
+    "headline": "Handle Dynamic Data in Visual Tests",
+    "description": "Learn how to handle dynamic data in SmartUI visual regression tests by ignoring or selecting specific DOM elements that change between test runs.",
+    "url": "https://www.testmuai.com/support/docs/smartui-handle-dynamic-data/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "SmartUI",
+    "keywords": [
+      "testmu ai",
+      "smart ui",
+      "dynamic data"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Dynamic Data Handling Methods",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "let options = {\n    ignoreDOM: {\n        id: [\"element-id-1\", \"element-id-2\"],\n        class: [\"class-name-1\", \"class-name-2\"],\n        cssSelector: [\"selector-1\", \"selector-2\"],\n        xpath: [\"xpath-1\", \"xpath-2\"]\n    }\n}\nsmartuiSnapshot(driver, 'Screenshot Name', options);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Dynamic Data Handling Methods",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "const { Builder } = require('selenium-webdriver');\nconst { smartuiSnapshot } = require('@lambdatest/selenium-driver');\n\nlet driver = await new Builder().forBrowser(\"chrome\").build();\nawait driver.get('https://example.com');\n\nlet options = {\n    ignoreDOM: {\n        id: [\"timestamp\", \"user-id\", \"session-token\"]\n    }\n};\nawait smartuiSnapshot(driver, 'Home Page', options);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 3",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "\nHashMap<String, ArrayList<String>> ignoreDOM = new HashMap<>();\nArrayList<String> ids = new ArrayList<>();\nids.add(\"timestamp\");\nids.add(\"user-id\");\nids.add(\"session-token\");\nignoreDOM.put(\"id\", ids);\n\nHashMap<String, Object> options = new HashMap<>();\noptions.put(\"ignoreDOM\", ignoreDOM);\n\nSmartUISnapshot.smartuiSnapshot(driver, \"Home Page\", options);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 4",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Python",
+        "text": "from lambdatest import smartui_snapshot\n\noptions = {\n    \"ignoreDOM\": {\n        \"id\": [\"timestamp\", \"user-id\", \"session-token\"]\n    }\n}\nsmartui_snapshot(driver, \"Home Page\", options)"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 5",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "let options = {\n    ignoreDOM: {\n        class: [\"dynamic-content\", \"timestamp\", \"user-info\"]\n    }\n};\nawait smartuiSnapshot(driver, 'Home Page', options);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 6",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "ArrayList<String> classes = new ArrayList<>();\nclasses.add(\"dynamic-content\");\nclasses.add(\"timestamp\");\nclasses.add(\"user-info\");\nignoreDOM.put(\"class\", classes);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 7",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Python",
+        "text": "options = {\n    \"ignoreDOM\": {\n        \"class\": [\"dynamic-content\", \"timestamp\", \"user-info\"]\n    }\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 8",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "let options = {\n    ignoreDOM: {\n        cssSelector: [\n            \"#timestamp\",\n            \".user-info\",\n            \"[data-testid='session-token']\",\n            \"div.dynamic-content > span\"\n        ]\n    }\n};\nawait smartuiSnapshot(driver, 'Home Page', options);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 9",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "ArrayList<String> selectors = new ArrayList<>();\nselectors.add(\"#timestamp\");\nselectors.add(\".user-info\");\nselectors.add(\"[data-testid='session-token']\");\nignoreDOM.put(\"cssSelector\", selectors);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 10",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Python",
+        "text": "options = {\n    \"ignoreDOM\": {\n        \"cssSelector\": [\n            \"#timestamp\",\n            \".user-info\",\n            \"[data-testid='session-token']\",\n            \"div.dynamic-content > span\"\n        ]\n    }\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 11",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "let options = {\n    ignoreDOM: {\n        xpath: [\n            \"//div[@id='timestamp']\",\n            \"//span[@class='user-id']\",\n            \"//*[@data-testid='session-token']\"\n        ]\n    }\n};\nawait smartuiSnapshot(driver, 'Home Page', options);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 12",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "ArrayList<String> xpaths = new ArrayList<>();\nxpaths.add(\"//div[@id='timestamp']\");\nxpaths.add(\"//span[@class='user-id']\");\nxpaths.add(\"//*[@data-testid='session-token']\");\nignoreDOM.put(\"xpath\", xpaths);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 13",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Python",
+        "text": "options = {\n    \"ignoreDOM\": {\n        \"xpath\": [\n            \"//div[@id='timestamp']\",\n            \"//span[@class='user-id']\",\n            \"//*[@data-testid='session-token']\"\n        ]\n    }\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 14",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "let options = {\n    selectDOM: {\n        id: [\"element-id-1\", \"element-id-2\"],\n        class: [\"class-name-1\", \"class-name-2\"],\n        cssSelector: [\"selector-1\", \"selector-2\"],\n        xpath: [\"xpath-1\", \"xpath-2\"]\n    }\n}\nsmartuiSnapshot(driver, 'Screenshot Name', options);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 15",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "let options = {\n    selectDOM: {\n        id: [\"main-content\", \"header\", \"footer\"]\n    }\n};\nawait smartuiSnapshot(driver, 'Home Page', options);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 16",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "HashMap<String, ArrayList<String>> selectDOM = new HashMap<>();\nArrayList<String> ids = new ArrayList<>();\nids.add(\"main-content\");\nids.add(\"header\");\nids.add(\"footer\");\nselectDOM.put(\"id\", ids);\n\nHashMap<String, Object> options = new HashMap<>();\noptions.put(\"selectDOM\", selectDOM);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 17",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Python",
+        "text": "options = {\n    \"selectDOM\": {\n        \"id\": [\"main-content\", \"header\", \"footer\"]\n    }\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 18",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "let options = {\n    selectDOM: {\n        class: [\"product-card\", \"price\", \"description\"]\n    }\n};\nawait smartuiSnapshot(driver, 'Product Page', options);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 19",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "ArrayList<String> classes = new ArrayList<>();\nclasses.add(\"product-card\");\nclasses.add(\"price\");\nclasses.add(\"description\");\nselectDOM.put(\"class\", classes);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 20",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Python",
+        "text": "options = {\n    \"selectDOM\": {\n        \"class\": [\"product-card\", \"price\", \"description\"]\n    }\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 21",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "let options = {\n    selectDOM: {\n        cssSelector: [\n            \".main-content\",\n            \"#product-grid\",\n            \"[data-testid='product-list']\"\n        ]\n    }\n};\nawait smartuiSnapshot(driver, 'Product Page', options);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 22",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "ArrayList<String> selectors = new ArrayList<>();\nselectors.add(\".main-content\");\nselectors.add(\"#product-grid\");\nselectors.add(\"[data-testid='product-list']\");\nselectDOM.put(\"cssSelector\", selectors);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 23",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Python",
+        "text": "options = {\n    \"selectDOM\": {\n        \"cssSelector\": [\n            \".main-content\",\n            \"#product-grid\",\n            \"[data-testid='product-list']\"\n        ]\n    }\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 24",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "let options = {\n    selectDOM: {\n        xpath: [\n            \"//div[@class='main-content']\",\n            \"//section[@id='product-grid']\",\n            \"//ul[@data-testid='product-list']\"\n        ]\n    }\n};\nawait smartuiSnapshot(driver, 'Product Page', options);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 25",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "ArrayList<String> xpaths = new ArrayList<>();\nxpaths.add(\"//div[@class='main-content']\");\nxpaths.add(\"//section[@id='product-grid']\");\nxpaths.add(\"//ul[@data-testid='product-list']\");\nselectDOM.put(\"xpath\", xpaths);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 26",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Python",
+        "text": "options = {\n    \"selectDOM\": {\n        \"xpath\": [\n            \"//div[@class='main-content']\",\n            \"//section[@id='product-grid']\",\n            \"//ul[@data-testid='product-list']\"\n        ]\n    }\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 27",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "let options = {\n    selectDOM: {\n        cssSelector: [\".main-content\"]\n    },\n    ignoreDOM: {\n        id: [\"timestamp\", \"user-id\"]\n    }\n};\nawait smartuiSnapshot(driver, 'Home Page', options);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 28",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "let options = {\n    ignoreDOM: {\n        cssSelector: [\n            \".price\",\n            \".stock-count\",\n            \".review-count\",\n            \"[data-testid='timestamp']\"\n        ]\n    }\n};\nawait smartuiSnapshot(driver, 'Product Page', options);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 29",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "let options = {\n    selectDOM: {\n        cssSelector: [\n            \".dashboard-layout\",\n            \".navigation\",\n            \".sidebar\"\n        ]\n    },\n    ignoreDOM: {\n        class: [\"metric-value\", \"timestamp\", \"user-info\"]\n    }\n};\nawait smartuiSnapshot(driver, 'Dashboard', options);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 30",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "let options = {\n    ignoreDOM: {\n        id: [\"article-timestamp\", \"author-info\"],\n        class: [\"related-articles\", \"social-share-count\"]\n    }\n};\nawait smartuiSnapshot(driver, 'Article Page', options);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Troubleshooting",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "// Wait for element before snapshot\nawait driver.wait(until.elementLocated(By.id('timestamp')), 5000);\nlet options = {\n    ignoreDOM: {\n        id: [\"timestamp\"]\n    }\n};\nawait smartuiSnapshot(driver, 'Page', options);"
+      }
+    ],
+    "dateModified": "2026-03-02T15:19:46+05:30"
+  }) }}
+/>
 
 ## What is Dynamic Data?
 
@@ -76,6 +354,8 @@ You should use dynamic data handling in the following scenarios:
 
 ## Dynamic Data Handling Methods
 
+<VerifiedTag value="Verified" />
+
 <Tabs className='docs__val' groupId='dynamic-data-methods'>
 <TabItem value='ignore' label='Ignore DOM Elements' default>
 
@@ -98,6 +378,8 @@ smartuiSnapshot(driver, 'Screenshot Name', options);
 ```
 
 **Examples by Selector Type**
+
+<VerifiedTag value="Verified" />
 
 <Tabs className='docs__val' groupId='selector'>
 <TabItem value='id' label='By ID' default>
@@ -283,6 +565,8 @@ smartuiSnapshot(driver, 'Screenshot Name', options);
 ```
 
 **Examples by Selector Type**
+
+<VerifiedTag value="Verified" />
 
 <Tabs className='docs__val' groupId='selector'>
 <TabItem value='select-id' label='By ID' default>
@@ -533,6 +817,8 @@ await smartuiSnapshot(driver, 'Article Page', options);
 </Tabs>
 
 ## Troubleshooting
+
+<VerifiedTag value="Verified" />
 
 <Tabs className='docs__val' groupId='troubleshooting'>
 <TabItem value='elements-not-being-ignored' label='Elements Not Being Ignored' default>

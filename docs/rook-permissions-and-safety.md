@@ -14,6 +14,113 @@ slug: rook-permissions-and-safety/
 canonical: https://www.testmuai.com/support/docs/rook-permissions-and-safety/
 ---
 
+import VerifiedTag from '@site/src/component/verifiedTag';
+import { BRAND_URL } from '@site/src/component/BrandName';
+
+<script type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify({
+       "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": BRAND_URL
+        },{
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Support",
+          "item": `${BRAND_URL}/support/docs/`
+        },{
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Rook Permissions and Safety",
+          "item": `${BRAND_URL}/support/docs/rook-permissions-and-safety/`
+        }]
+      })
+    }}
+></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/rook-permissions-and-safety/"
+    },
+    "headline": "Rook Permissions and Safety",
+    "description": "Control Rook tool calls with phase-scoped rules, understand unattended execution, and test autonomous agents against safe targets.",
+    "url": "https://www.testmuai.com/support/docs/rook-permissions-and-safety/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Agent Testing",
+    "keywords": [
+      "rook permissions",
+      "rook allow rules",
+      "autonomous agent testing safety"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Rules identify the tool and the allowed subject",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "bash(npm test)              exact command\nbash(git *)                 glob over the command\nread_file(.)                any file below the current path\nmcp_start(payments)         one named MCP server\nmcp_call(billing.lookup)    one server tool"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Add @phase to limit a grant to one phase",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "bash(git *)@explore\nread_file(.)@generate"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "These flags solve different problems",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "rook explore . \\\n  --allow 'bash(npm test)' \\\n  --allow 'bash(git *)@explore'\n\nrook run --yes"
+      }
+    ],
+    "dateModified": "2026-09-04T12:50:18+05:30"
+  }) }}
+/>
 # Rook Permissions and Safety
 
 Rook's internal roles can call tools while discovering, generating, invoking, and verifying. Every call must be covered by a rule or approved through an interactive prompt.
@@ -21,6 +128,8 @@ Rook's internal roles can call tools while discovering, generating, invoking, an
 ## Rule Grammar
 
 Rules identify the tool and the allowed subject:
+
+<VerifiedTag value="Verified" />
 
 ```text
 bash(npm test)              exact command
@@ -31,6 +140,8 @@ mcp_call(billing.lookup)    one server tool
 ```
 
 Add `@phase` to limit a grant to one phase:
+
+<VerifiedTag value="Verified" />
 
 ```text
 bash(git *)@explore
@@ -61,6 +172,8 @@ These flags solve different problems:
 |---|---|---|
 | `--yes` | Approves tool calls for the current command | Writes nothing to settings |
 | `--allow <rule>` | Supplies one explicit rule to the current process; repeatable | Visible in the launch command or pipeline definition |
+
+<VerifiedTag value="Verified" />
 
 ```bash
 rook explore . \

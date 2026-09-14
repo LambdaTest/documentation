@@ -18,14 +18,12 @@ slug: appium-date-and-time/
 canonical: https://www.testmuai.com/support/docs/appium-date-and-time/
 ---
 
-
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
-
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
-
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -51,6 +49,63 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/appium-date-and-time/"
+    },
+    "headline": "Configure Date, Time & Hour Format on Real Devices Using Appium",
+    "description": "This document provides information about configuring date, time, and hour-format on Real Devices using Appium automation on TestMu AI.",
+    "url": "https://www.testmuai.com/support/docs/appium-date-and-time/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "App Automation",
+    "keywords": [
+      "Appium",
+      "TestMu AI",
+      "Set Date and Time"
+    ],
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 # How to Set Device Date and Time on TestMu AI
 
 Setting device date and time on TestMu AI lets you configure custom date, time, and hour format on real devices during Appium automation, simulating scheduled events, alarms, chats, and time-format localization by using the lambda_executor hook with the updateDeviceSettings action.
@@ -60,7 +115,6 @@ Setting device date and time on TestMu AI lets you configure custom date, time, 
 ## Support for Automation on Real Devices
 
 To modify the date and time settings programmatically, use the `lambda_executor` Appium hook with the `updateDeviceSettings` action. You can provide multiple arguments including custom date, time, format toggle, and auto-time setting.
-
 
 ---
 ## Supported Arguments
@@ -74,9 +128,10 @@ To modify the date and time settings programmatically, use the `lambda_executor`
 
 > 💡 **Note:** When `setAutomatically` is turned **On**, all Other Arguments for  **Date and Time**  are automatically disabled on the device.
 
-
 ---
 ### Appium Hook Example
+
+<VerifiedTag value="Verified" />
 
 <CodeBlock language="js">
 {`driver.execute_script('lambda_executor: { 
@@ -89,8 +144,6 @@ To modify the date and time settings programmatically, use the `lambda_executor`
   } 
 }')`}
 </CodeBlock>
-
-
 
 ---
 ## Supported Platforms
@@ -116,11 +169,7 @@ If you encounter this error, retry your automation run on a different Android de
 - Test reminder or calendar event triggering logic.
 - Test 12-hour vs. 24-hour format layout rendering.
 
-
 > For Configuring Device **Date and Time** during **Manual Testing** on Real Devices, please refer to our [Set Date & Time on Real Devices (Manual)](/support/docs/set-date-time-hour-format-real-devices/) guide.
-
-
-
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">

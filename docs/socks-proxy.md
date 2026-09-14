@@ -17,6 +17,98 @@ canonical: https://www.testmuai.com/support/docs/socks5-proxy-support/
 ---
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
+
+<script type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify({
+       "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": BRAND_URL
+        },{
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Support",
+          "item": `${BRAND_URL}/support/docs/`
+        },{
+          "@type": "ListItem",
+          "position": 3,
+          "name": "SOCKS5 Proxy Support in TestMu AI Tunnel",
+          "item": `${BRAND_URL}/support/docs/socks5-proxy-support/`
+        }]
+      })
+    }}
+></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/socks5-proxy-support/"
+    },
+    "headline": "SOCKS5 Proxy Support in TestMu AI Tunnel",
+    "description": "Learn how to use TestMu AI Tunnel with SOCKS5 proxy for secure, private, and flexible local testing.",
+    "url": "https://www.testmuai.com/support/docs/socks5-proxy-support/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Testing Locally",
+    "keywords": [
+      "socks5 proxy",
+      "testmu ai tunnel",
+      "secure proxy testing"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Here is an example command",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "   ./LambdaTestTunnel --user YourLambdaTestUsername --key YourLambdaTestAccessKey --proxy-type socks5"
+      }
+    ],
+    "dateModified": "2026-02-12T19:51:34+05:30"
+  }) }}
+/>
 
 # SOCKS5 Proxy Support in <BrandName /> Tunnel
 
@@ -36,6 +128,8 @@ To use <BrandName /> Tunnel with a SOCKS5 proxy, follow the steps outlined below
 
 1. **Start <BrandName /> Tunnel:** Open your command-line interface (CLI) and navigate to the directory where the <BrandName /> Tunnel is installed.
 2. **Activate SOCKS5 Proxy:** Use the `--proxy-type` flag with the value `socks5` to specify the SOCKS5 proxy type for tunneling. Here is an example command:
+
+   <VerifiedTag value="Verified" />
 
    ```sh
    ./LambdaTestTunnel --user YourLambdaTestUsername --key YourLambdaTestAccessKey --proxy-type socks5

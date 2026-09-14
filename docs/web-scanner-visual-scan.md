@@ -18,6 +18,7 @@ canonical: https://www.testmuai.com/support/docs/web-scanner-visual-scan/
 
 import CodeBlock from '@theme/CodeBlock';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -47,6 +48,63 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       })
     }}
 ></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/web-scanner-visual-scan/"
+    },
+    "headline": "Starting a Visual UI Scan with Web Scanner",
+    "description": "Learn how to configure a Visual UI scan, including default settings for browsers and resolutions, and advanced options using a SmartUI JSON config.",
+    "url": "https://www.testmuai.com/support/docs/web-scanner-visual-scan/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "SmartUI",
+    "keywords": [
+      "testmu ai",
+      "web scanner",
+      "visual ui scan"
+    ],
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
 
 ## Purpose of Visual UI Scan
 
@@ -88,6 +146,8 @@ You can create your own `.smartui.json` file for full control over:
 
 #### Default SmartUI Config
 
+<VerifiedTag value="Verified" />
+
 <CodeBlock language="json">
 {`
   "web": {
@@ -127,9 +187,7 @@ You can create your own `.smartui.json` file for full control over:
 
 > **Note:** Using a SmartUI config bypasses manual browser, resolution, and delay selections, even in the "Edit Config" mode.
 
-
 #### Navigating Results for your Visual Scan
-
 
 ## Dashboard Overview
 
@@ -167,7 +225,6 @@ Access additional functions for your build:
 
 5. **Stop Recurring Scan**  
    Halt any scheduled recurring scans instantly.
-
 
 **Access your SmartUI Dashboard**:
 SmartUI detects pixel-based layout changes, design mismatches, missing elements, or unintended visual regressions by comparing screenshots taken at scheduled intervals.

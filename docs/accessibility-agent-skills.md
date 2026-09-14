@@ -25,6 +25,8 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
+import VerifiedTag from '@site/src/component/verifiedTag';
+
 # Run Your Accessibility Tests Using Agent Skills
 
 ***
@@ -53,6 +55,132 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/accessibility-agent-skills/"
+    },
+    "headline": "Run Your Accessibility Tests Using Agent Skills",
+    "description": "Use TestMu AI Agent Skills to let AI coding agents add automated accessibility (WCAG) scanning to your test suite directly from natural language prompts.",
+    "url": "https://www.testmuai.com/support/docs/accessibility-agent-skills/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Accessibility Testing",
+    "keywords": [
+      "TestMu AI",
+      "Accessibility",
+      "Accessibility Testing"
+    ],
+    "proficiencyLevel": "Beginner",
+    "dependencies": "A TestMu AI account; Your TestMu AI Username and Access Key from the Automation Dashboard; An existing Selenium, Playwright, or Cypress suite that runs on the TestMu AI cloud; A compatible AI coding agent (Claude Code, GitHub Copilot, Cursor, Gemini CLI, or similar).",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Clone the Agent Skills repository and copy the accessibility skill into your agent's skills directory",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "codeRepository": "https://github.com/LambdaTest/agent-skills",
+        "text": "git clone https://github.com/LambdaTest/agent-skills.git\n\n# For Claude Code\ncp -r agent-skills/accessibility-skill .claude/skills/\n\n# For Cursor\ncp -r agent-skills/accessibility-skill .cursor/skills/\n\n# For GitHub Copilot\ncp -r agent-skills/accessibility-skill .github/skills/\n\n# For Gemini CLI\ncp -r agent-skills/accessibility-skill .gemini/skills/"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Export them as environment variables (Linux / MacOS)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "export LT_USERNAME=\"YOUR_LAMBDATEST_USERNAME\"\nexport LT_ACCESS_KEY=\"YOUR_LAMBDATEST_ACCESS_KEY\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Set Up Your Authentication (Windows)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "PowerShell",
+        "text": "$env:LT_USERNAME=\"YOUR_LAMBDATEST_USERNAME\"\n$env:LT_ACCESS_KEY=\"YOUR_LAMBDATEST_ACCESS_KEY\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Ask the agent to run it, or run your usual test command yourself",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "mvn test"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "How to Run Accessibility Tests Using the Accessibility Skill",
+      "description": "Once the skill is installed and your credentials are set, you drive everything through natural-language prompts. Your agent reads the skill, applies the right pattern for your framework, and runs the scan on the TestMu AI cloud. You do not write the capabilities or the scan hooks yourself.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Ask the agent to add accessibility scanning",
+          "text": "Describe the pages you want scanned and, if it matters, the WCAG version: \"Add accessibility scanning to my Selenium suite. Scan the homepage and the checkout page against WCAG 2.1 AA.\" From this, the agent will: Enable the accessibility capability on your driver, along with settings like accessibility.wcagVersion Add the lambda-accessibility-scan hook at the pages you named, or enable accessibility.autoscan to scan every navigation on Selenium Wire the run to execute your suite on the TestMu AI cloud",
+          "url": "https://www.testmuai.com/support/docs/accessibility-agent-skills/#step-1-ask-the-agent-to-add-accessibility-scanning"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Run the accessibility scan",
+          "text": "Ask the agent to run it, or run your usual test command yourself: Your suite runs on the TestMu AI cloud, and a WCAG scan is captured at each point the hook is called (or on every navigation, with autoscan).",
+          "url": "https://www.testmuai.com/support/docs/accessibility-agent-skills/#step-2-run-the-accessibility-scan"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Review the report",
+          "text": "The agent points you to your Accessibility dashboard, where each scan's issues, WCAG mappings, and score live (see Understanding the Results). From there you can keep iterating in plain language: \"Also scan the pricing page and include best-practice checks.\" \"Scan the login page against WCAG 2.1 A instead.\"",
+          "url": "https://www.testmuai.com/support/docs/accessibility-agent-skills/#step-3-review-the-report"
+        }
+      ]
+    }
+  ]) }}
+/>
+
+
+
 The Accessibility Agent Skill is an instruction pack that teaches your AI coding agent to add automated WCAG scanning to an existing Selenium, Playwright, or Cypress suite and run it on the TestMu AI cloud. Accessibility scanning checks your pages against WCAG rules for issues like missing alt text, unlabeled form fields, and low colour contrast. Instead of wiring capabilities and scan hooks by hand, you describe the pages you want scanned in plain language and the agent does the wiring.
 
 The [`accessibility-skill`](https://github.com/LambdaTest/agent-skills/tree/main/accessibility-skill) is part of [TestMu AI Agent Skills](https://github.com/LambdaTest/agent-skills), a library of instruction packs that give AI coding agents the know-how to build working test automation on TestMu AI. Tell it which pages to scan, and it wires accessibility into your existing framework and runs the scan on the TestMu AI cloud.
@@ -79,6 +207,8 @@ Clone the Agent Skills repository, then copy the accessibility skill into your a
 <Tabs className="docs__val" groupId="agent">
 <TabItem value="claude-code" label="Claude Code" default>
 
+<VerifiedTag value="Verified" />
+
 ```bash
 git clone https://github.com/LambdaTest/agent-skills.git
 
@@ -90,6 +220,8 @@ The skill now lives in `.claude/skills/accessibility-skill`, and Claude Code loa
 
 </TabItem>
 <TabItem value="cursor" label="Cursor">
+
+<VerifiedTag value="Verified" />
 
 ```bash
 git clone https://github.com/LambdaTest/agent-skills.git
@@ -103,6 +235,8 @@ The skill now lives in `.cursor/skills/accessibility-skill`, and Cursor picks it
 </TabItem>
 <TabItem value="github-copilot" label="GitHub Copilot">
 
+<VerifiedTag value="Verified" />
+
 ```bash
 git clone https://github.com/LambdaTest/agent-skills.git
 
@@ -114,6 +248,8 @@ The skill now lives in `.github/skills/accessibility-skill`, and GitHub Copilot 
 
 </TabItem>
 <TabItem value="gemini-cli" label="Gemini CLI">
+
+<VerifiedTag value="Verified" />
 
 ```bash
 git clone https://github.com/LambdaTest/agent-skills.git
@@ -140,6 +276,8 @@ Accessibility scanning runs on the TestMu AI cloud alongside your automation, so
 <Tabs className="docs__val">
 <TabItem value="bash" label="Linux / MacOS" default>
 
+<VerifiedTag value="Verified" />
+
 ```bash
 export LT_USERNAME="YOUR_LAMBDATEST_USERNAME"
 export LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
@@ -147,6 +285,8 @@ export LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
 
 </TabItem>
 <TabItem value="powershell" label="Windows">
+
+<VerifiedTag value="Verified" />
 
 ```powershell
 $env:LT_USERNAME="YOUR_LAMBDATEST_USERNAME"
@@ -181,6 +321,8 @@ From this, the agent will:
 ***
 
 Ask the agent to run it, or run your usual test command yourself. The command below is the Maven example for a Java Selenium suite; substitute your own runner (`npx playwright test`, `npx cypress run`, and so on).
+
+<VerifiedTag value="Verified" />
 
 ```bash
 mvn test

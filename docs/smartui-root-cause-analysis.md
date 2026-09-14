@@ -46,6 +46,99 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/smartui-root-cause-analysis/"
+    },
+    "headline": "SmartUI Root Cause Analysis (RCA)",
+    "description": "Identify and resolve visual regression issues quickly with SmartUI Root Cause Analysis (RCA). Understand the underlying causes of visual mismatches.",
+    "url": "https://www.testmuai.com/support/docs/smartui-root-cause-analysis/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "SmartUI",
+    "keywords": [
+      "SmartUI RCA",
+      "Root Cause Analysis",
+      "Visual Regression Debugging"
+    ],
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "How to Use Root Cause Analysis",
+      "description": "Before you begin, please ensure the build was generated using a TestMu AI CLI (exec) command.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Activate RCA Mode",
+          "text": "Open a visual build from your SmartUI dashboard. In the comparison toolbar, click the RCA icon. When RCA is activated, DOM diff boxes are automatically enabled. There's nothing manual to configure, you're ready to investigate immediately.",
+          "url": "https://www.testmuai.com/support/docs/smartui-root-cause-analysis/#step-1-activate-rca-mode"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Investigate DOM Differences Visually",
+          "text": "As soon as RCA mode is on, you can interact with the highlighted differences to see the underlying code changes. The selection is visually precise, with overlays that follow the true element boundaries, not just approximate pixel areas.",
+          "url": "https://www.testmuai.com/support/docs/smartui-root-cause-analysis/#step-2-investigate-dom-differences-visually"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Understand Detailed Changes in the RCA Panel",
+          "text": "Once an element is selected, the RCA panel opens on the right sidebar. It displays structured diff breakdowns across several categories:",
+          "url": "https://www.testmuai.com/support/docs/smartui-root-cause-analysis/#step-3-understand-detailed-changes-in-the-rca-panel"
+        }
+      ]
+    }
+  ]) }}
+/>
+
+
+
 # Smart Root Cause Analysis (RCA)
 
 <NewTag value="Beta" color="#000" bgColor="#ffec02" />

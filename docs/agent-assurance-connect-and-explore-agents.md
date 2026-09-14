@@ -17,6 +17,8 @@ canonical: https://www.testmuai.com/support/docs/agent-assurance-connect-and-exp
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
+import VerifiedTag from '@site/src/component/verifiedTag';
+
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
     "@context": "https://schema.org", "@type": "BreadcrumbList",
@@ -28,6 +30,186 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
   }) }}
 />
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/agent-assurance-connect-and-explore-agents/"
+    },
+    "headline": "Connect and Explore AI Agents",
+    "description": "Explore agents from a workspace, external checkout, PRD, or GitHub repository and manage multiple discovered agents in Agent Assurance.",
+    "url": "https://www.testmuai.com/support/docs/agent-assurance-connect-and-explore-agents/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Agent Testing",
+    "keywords": [
+      "rook explore agent",
+      "connect ai agent",
+      "test agent github repository"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Start Rook from the repository root and run",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "/explore ."
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "The headless equivalent is",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "rook explore ."
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Use a narrower path when a monorepo contains a specific agent package",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "/explore packages/travel-agent"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Put free-form guidance after --",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "/explore . -- focus on the refund approval threshold and identity checks"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "In headless mode",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "rook explore . \\\n  --instruction \"focus on the refund approval threshold and identity checks\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Use --force after a substantial change or when you want to ignore the incremental freshness check",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "/explore --force"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Create a clean directory containing the material you are authorized to share",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "travel-agent-spec/\n  PRD.md\n  policies.md\n  api-examples.md\n  fixtures/"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Start Rook inside that directory",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "cd travel-agent-spec\nrook"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Then run",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "/explore . -- the deployed agent is a multi-turn travel planner"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Clone the repository, enter the checkout, and run Rook locally",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "git clone https://github.com/<owner>/<repository>.git\ncd <repository>\nrook"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Then",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "/explore ."
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "For a pull request, check out the exact head you want to test",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "gh repo clone <owner>/<repository>\ncd <repository>\ngh pr checkout <number>\nrook"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "You can explicitly point interactive Rook at a directory outside the current workspace",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "/explore ../another-agent"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Interactive commands",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "/agent\n/agent use <id>\n/agent rm <id>"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Headless commands",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "rook agent list\nrook agent list --json\nrook agent use <id>"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "For automation, use --all",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "rook explore . --all --json"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Use --allow only for a narrowly reviewed tool call",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "rook explore . --allow 'bash(npm test)'"
+      }
+    ],
+    "dateModified": "2026-08-25T16:54:35+05:30"
+  }) }}
+/>
+
+
 # Connect and Explore AI Agents
 
 Exploration tells Rook what an agent is supposed to do before you tell it how to invoke the agent. Rook reads local material such as source code, prompts, skills, manifests, tool declarations, tests, README files, and product requirements.
@@ -38,17 +220,23 @@ The target can be a complete application, one agent directory, or a documentatio
 
 Start Rook from the repository root and run:
 
+<VerifiedTag value="Verified" />
+
 ```text
 /explore .
 ```
 
 The headless equivalent is:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 rook explore .
 ```
 
 Use a narrower path when a monorepo contains a specific agent package:
+
+<VerifiedTag value="Verified" />
 
 ```text
 /explore packages/travel-agent
@@ -79,11 +267,15 @@ Discovery does not invent missing facts. If a tool's write behavior cannot be es
 
 Put free-form guidance after `--`:
 
+<VerifiedTag value="Verified" />
+
 ```text
 /explore . -- focus on the refund approval threshold and identity checks
 ```
 
 In headless mode:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 rook explore . \
@@ -93,6 +285,8 @@ rook explore . \
 The instruction guides the discovery model, but it does not widen the filesystem scope.
 
 Use `--force` after a substantial change or when you want to ignore the incremental freshness check:
+
+<VerifiedTag value="Verified" />
 
 ```text
 /explore --force
@@ -104,6 +298,8 @@ Normally Rook hashes the relevant files and re-reads only what changed.
 
 Create a clean directory containing the material you are authorized to share:
 
+<VerifiedTag value="Verified" />
+
 ```text
 travel-agent-spec/
   PRD.md
@@ -114,12 +310,16 @@ travel-agent-spec/
 
 Start Rook inside that directory:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 cd travel-agent-spec
 rook
 ```
 
 Then run:
+
+<VerifiedTag value="Verified" />
 
 ```text
 /explore . -- the deployed agent is a multi-turn travel planner
@@ -133,6 +333,8 @@ You still need an invocation profile that reaches the deployed agent. See [Confi
 
 Rook does not read a GitHub URL directly. Clone the repository, enter the checkout, and run Rook locally:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 git clone https://github.com/<owner>/<repository>.git
 cd <repository>
@@ -141,6 +343,8 @@ rook
 
 Then:
 
+<VerifiedTag value="Verified" />
+
 ```text
 /explore .
 ```
@@ -148,6 +352,8 @@ Then:
 If you paste a GitHub URL into `/explore`, Rook refuses it before spending credits and prints the corresponding clone workflow.
 
 For a pull request, check out the exact head you want to test:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 gh repo clone <owner>/<repository>
@@ -165,6 +371,8 @@ Never clone or check out untrusted code and then run its setup scripts without r
 ## Explore an External Local Directory
 
 You can explicitly point interactive Rook at a directory outside the current workspace:
+
+<VerifiedTag value="Verified" />
 
 ```text
 /explore ../another-agent
@@ -189,6 +397,8 @@ The browser inventory shows all registered agents and their scenario and run his
 
 Interactive commands:
 
+<VerifiedTag value="Verified" />
+
 ```text
 /agent
 /agent use <id>
@@ -196,6 +406,8 @@ Interactive commands:
 ```
 
 Headless commands:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 rook agent list
@@ -209,11 +421,15 @@ rook agent use <id>
 
 The interactive flow asks which candidates to register. For automation, use `--all`:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 rook explore . --all --json
 ```
 
 Use `--allow` only for a narrowly reviewed tool call:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 rook explore . --allow 'bash(npm test)'

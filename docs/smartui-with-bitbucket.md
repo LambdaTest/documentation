@@ -25,6 +25,8 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 
+import VerifiedTag from '@site/src/component/verifiedTag';
+
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
        "@context": "https://schema.org",
@@ -48,6 +50,172 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       })
     }}
 ></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/smartui-with-bitbucket/"
+    },
+    "headline": "Bitbucket Pipeline Integration with SmartUI",
+    "description": "SmartUI now integrates with Bitbucket Pipeline to boost pipeline delivery. Perform automated cross browser testing with SmartUI to seamlessly providing 3000+ real browsers running through machines.",
+    "url": "https://www.testmuai.com/support/docs/smartui-with-bitbucket/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "SmartUI",
+    "keywords": [
+      "testmu ai integrations",
+      "smart ui integration",
+      "smart ui integrations with ci/cd tools"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 2: Create a New Workflow",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n:::tip\nYou can also store your *LT_USERNAME*, *LT_ACCESS_KEY* and *PROJECT_TOKEN* as secrets in your Bitbucket project repository.\n:::\n\n### Step 3: Check the output\n\n- After triggering the workflow, check your results in the [SmartUI Dashboard](https://www.testmuai.com/login/?redirectTo=https://smartui.lambdatest.com/projects)\n\n<img loading=\"lazy\" src={require('../assets/images/smart-visual-testing/ci-cd-integration/gitlab/3.png').default} alt=\"Create New Project\" width=\"\" height=\"\"/>\n\n## Best Practices\n\n<Tabs className='docs__val' groupId='best-practices'>\n<TabItem value='secret-management' label='Secret Management' default>\n\n**Secret Management**\n\n- Never commit credentials to repository\n- Use Bitbucket Pipelines Variables for all sensitive data\n- Rotate secrets regularly\n- Use different secrets for different environments\n\n<\/TabItem>\n<TabItem value='pipeline-optimization' label='Pipeline Optimization'>\n\n**Pipeline Optimization**\n\n- Use parallel steps for faster execution\n- Cache dependencies to speed up pipelines\n- Only run visual tests on relevant branches\n- Set up pipeline conditions to avoid unnecessary runs\n\n**Example:**\n```yaml\nbranches:\n  main:\n    - step:\n        name: Run Visual Tests"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 2",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "variables:\n  BUILD_NAME: \"$BITBUCKET_BRANCH-$BITBUCKET_COMMIT\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Pass variable to step",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "   variables:\n     PROJECT_TOKEN: $PROJECT_TOKEN"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Check pipeline logs for errors",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "   after-script:\n     - echo \"Checking logs...\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Run tests in parallel using parallel steps",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "   parallel:\n     - step:\n         name: Test Group 1\n     - step:\n         name: Test Group 2"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Use specific Node version",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "   image: node:18"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Clear npm cache",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "   script:\n     - npm cache clean --force\n     - npm install"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Ensure Node.js is available",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "   image: node:18"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Verify npm is available",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "   script:\n     - npm --version"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Install SmartUI CLI explicitly",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "   script:\n     - npm install -g @lambdatest/smartui-cli"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Steps to Integrate Bitbucket Pipeline with SmartUI",
+      "description": "To integrate Bitbucket Pipeline with SmartUI, follow the below steps. You can use your own project to configure and test it. For demo purposes, we are using the sample repository. Download or Clone the code sample from the TestMu AI GitHub repository to run the tests on the SmartUI.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Setup your Projects and Repository in Bitbucket",
+          "text": "Click on the Create >> Project. Enter your Project details and click on Create Project. Now click on the Create Repository button. You can either create a new repository or import your existing repository.",
+          "url": "https://www.testmuai.com/support/docs/smartui-with-bitbucket/#step-1-setup-your-projects-and-repository-in-bitbucket"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Create a New Workflow",
+          "text": "Navigate to the Deployment section. Select your required template for CI/CD workflow file. For the demo we are using the Test template. Now, write your workflow YAML file. Here is the sample file for your reference. Commit this yaml file in your repository and make the required changes in your code to automatically trigger the pipeline. You can also store your LTUSERNAME, LTACCESSKEY and PROJECTTOKEN as secrets in your Bitbucket project repository.",
+          "url": "https://www.testmuai.com/support/docs/smartui-with-bitbucket/#step-2-create-a-new-workflow"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Check the output",
+          "text": "After triggering the workflow, check your results in the SmartUI Dashboard",
+          "url": "https://www.testmuai.com/support/docs/smartui-with-bitbucket/#step-3-check-the-output"
+        }
+      ]
+    }
+  ]) }}
+/>
+
+
 Bitbucket is a web-based version control repository hosting service owned by Atlassian. It is primarily designed for development teams to manage their code, collaborate on projects, and streamline their workflows.
 
 This document will show you how to integrate Bitbucket Pipeline with SmartUI to shorten your test cycles.
@@ -74,6 +242,8 @@ Download or Clone the code sample from the <BrandName /> GitHub repository to ru
 - Navigate to the **Deployment** section. Select your required template for CI/CD workflow file. For the demo we are using the Test template.
 - Now, write your workflow YAML file. Here is the sample file for your reference.
 - Commit this yaml file in your repository and make the required changes in your code to automatically trigger the pipeline.
+
+<VerifiedTag value="Verified" />
 
 ```yaml reference title="bitbucket-pipelines.yml"
 https://github.com/amanchopra1905/smartui-ci-cd-integrations/blob/bitbucket/bitbucket-pipelines.yml
@@ -112,6 +282,9 @@ You can also store your *LT_USERNAME*, *LT_ACCESS_KEY* and *PROJECT_TOKEN* as se
 - Set up pipeline conditions to avoid unnecessary runs
 
 **Example:**
+
+<VerifiedTag value="Verified" />
+
 ```yaml
 branches:
   main:
@@ -129,6 +302,9 @@ branches:
 - Use consistent naming conventions
 
 **Example:**
+
+<VerifiedTag value="Verified" />
+
 ```yaml
 variables:
   BUILD_NAME: "$BITBUCKET_BRANCH-$BITBUCKET_COMMIT"
@@ -208,6 +384,9 @@ variables:
 1. Add PROJECT_TOKEN as Bitbucket Repository Variable
 
 2. Pass variable to step:
+
+   <VerifiedTag value="Verified" />
+
    ```yaml
    variables:
      PROJECT_TOKEN: $PROJECT_TOKEN
@@ -236,6 +415,9 @@ variables:
    - Ensure token includes project ID prefix
 
 2. Check pipeline logs for errors:
+
+   <VerifiedTag value="Verified" />
+
    ```yaml
    after-script:
      - echo "Checking logs..."
@@ -262,6 +444,9 @@ variables:
 1. Increase pipeline timeout in Bitbucket settings
 
 2. Run tests in parallel using parallel steps:
+
+   <VerifiedTag value="Verified" />
+
    ```yaml
    parallel:
      - step:
@@ -288,11 +473,17 @@ variables:
 
 **Solutions**:
 1. Use specific Node version:
+
+   <VerifiedTag value="Verified" />
+
    ```yaml
    image: node:18
    ```
 
 2. Clear npm cache:
+
+   <VerifiedTag value="Verified" />
+
    ```yaml
    script:
      - npm cache clean --force
@@ -317,17 +508,26 @@ variables:
 
 **Solutions**:
 1. Ensure Node.js is available:
+
+   <VerifiedTag value="Verified" />
+
    ```yaml
    image: node:18
    ```
 
 2. Verify npm is available:
+
+   <VerifiedTag value="Verified" />
+
    ```yaml
    script:
      - npm --version
    ```
 
 3. Install SmartUI CLI explicitly:
+
+   <VerifiedTag value="Verified" />
+
    ```yaml
    script:
      - npm install -g @lambdatest/smartui-cli

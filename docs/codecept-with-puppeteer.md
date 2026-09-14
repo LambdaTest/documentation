@@ -20,6 +20,7 @@ slug: puppeteer-testing-with-codecept/
 canonical: https://www.testmuai.com/support/docs/puppeteer-testing-with-codecept/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -45,6 +46,116 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/puppeteer-testing-with-codecept/"
+    },
+    "headline": "Run Puppeteer Tests Using CodeceptJS",
+    "description": "Learn how to integrate and run your Puppeteer tests using CodeceptJS across multiple browser versions on the TestMu AI platform.",
+    "url": "https://www.testmuai.com/support/docs/puppeteer-testing-with-codecept/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Documentation",
+    "keywords": [
+      "puppeteer testing with codeceptjs",
+      "puppeteer codecept",
+      "puppeteer mocha"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Prerequisites",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "codeRepository": "https://github.com/LambdaTest/puppeteer-sample",
+        "text": "git clone https://github.com/LambdaTest/puppeteer-sample.git\ncd puppeteer-sample\ncd puppeteer-codecept\n"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Prerequisites",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "npm install"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "If you are running Codecept for the first time, run the below command",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "npm install codeceptjs puppeteer --save"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 4",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "set LT_USERNAME=\"YOUR_LAMBDATEST_USERNAME\"\nset LT_ACCESS_KEY=\"YOUR_LAMBDATEST_ACCESS_KEY\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 5",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "export LT_USERNAME=\"YOUR_LAMBDATEST_USERNAME\"\nexport LT_ACCESS_KEY=\"YOUR_LAMBDATEST_ACCESS_KEY\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Running Tests Using CodeceptJS",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "const { setHeadlessWhen } = require('@codeceptjs/configure');\n\n// turn on headless mode when running with HEADLESS=true environment variable\n// export HEADLESS=true && npx codeceptjs run\nsetHeadlessWhen(process.env.HEADLESS);\n\nconst caps_chrome = {\n\tbrowserName    : 'Chrome',\n\tbrowserVersion : 'latest',\n\t'LT:Options'   : {\n\t\tplatform   : 'Windows 10',\n\t\tbuild      : 'Sample Puppeteer-Codecept',\n\t\tname       : 'Puppeteer-Codecept test on Chrome',\n\t\tresolution : '1366x768',\n\t\tuser       : process.env.LT_USERNAME,\n\t\taccessKey  : process.env.LT_USER_KEY,\n\t\tnetwork    : true\n\t}\n};\n\nconst caps_edge = {\n\tbrowserName    : 'MicrosoftEdge',\n\tbrowserVersion : 'latest',\n\t'LT:Options'   : {\n\t\tplatform   : 'Windows 10',\n\t\tbuild      : 'Sample Puppeteer-Codecept',\n\t\tname       : 'Puppeteer-Codecept test on Edge',\n\t\tresolution : '1366x768',\n\t\tuser       : process.env.LT_USERNAME,\n\t\taccessKey  : process.env.LT_USER_KEY,\n\t\tnetwork    : true\n\t}\n};\n\nexports.config = {\n  tests: './specs/*.spec.js',\n  output: './output',\n  helpers: {\n    Puppeteer: {\n      chrome: {\n        browserWSEndpoint : `wss://cdp.lambdatest.com/puppeteer?capabilities=${encodeURIComponent(JSON.stringify(caps_chrome))}`,\n        \"ignoreHTTPSErrors\": true\n      }\n    }\n  },\n  include: {\n    I: './steps_file.js'\n  },\n  bootstrap: null,\n  mocha: {},\n  name: 'codeceptjs-example',\n  plugins: {\n    pauseOnFail: {},\n    retryFailedStep: {\n      enabled: true\n    },\n    tryTo: {\n      enabled: true\n    },\n    screenshotOnFail: {\n      enabled: true\n    }\n  }\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 7",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "npx codeceptjs run"
+      }
+    ],
+    "dateModified": "2026-08-14T19:24:28+05:30"
+  }) }}
+/>
+
 # Puppeteer Testing With CodeceptJS
 * * *
 
@@ -61,6 +172,8 @@ Download or clone the code sample for the Puppeteer Codecept from the <BrandName
 <a href="https://github.com/LambdaTest/puppeteer-sample" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className="doc_img"/> View on GitHub</a>
 :::
 
+<VerifiedTag value="Verified" />
+
 ```js
 git clone https://github.com/LambdaTest/puppeteer-sample.git
 cd puppeteer-sample
@@ -70,11 +183,15 @@ cd puppeteer-codecept
 
 2. Install the npm dependencies.
 
+<VerifiedTag value="Verified" />
+
 ```
 npm install
 ```
 
 3. If you are running Codecept for the first time, run the below command:
+
+<VerifiedTag value="Verified" />
 
 ```
 npm install codeceptjs puppeteer --save
@@ -87,12 +204,16 @@ npm install codeceptjs puppeteer --save
 
 **Windows**
 
+<VerifiedTag value="Verified" />
+
 ```js
 set LT_USERNAME="YOUR_LAMBDATEST_USERNAME"
 set LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
 ```
 
 **macOS/Linux**
+
+<VerifiedTag value="Verified" />
 
 ```js
 export LT_USERNAME="YOUR_LAMBDATEST_USERNAME"
@@ -106,6 +227,8 @@ export LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
 
 1. Navigate to the `codecept.conf.js` file in the `puppeteer-codecept` directory.
 
+
+<VerifiedTag value="Verified" />
 
 ```js
 const { setHeadlessWhen } = require('@codeceptjs/configure');
@@ -175,6 +298,8 @@ exports.config = {
 ```
 
 2. Now pass the below command to run your test.
+
+<VerifiedTag value="Verified" />
 
 ```
 npx codeceptjs run

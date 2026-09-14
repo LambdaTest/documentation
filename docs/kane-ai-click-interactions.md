@@ -25,6 +25,7 @@ canonical: https://www.testmuai.com/support/docs/kane-ai-click-interactions/
 ---
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -50,11 +51,91 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/kane-ai-click-interactions/"
+    },
+    "headline": "Advanced Click Interactions in KaneAI",
+    "description": "Author press and hold, multi-click, and right click interactions in KaneAI on Desktop Web, Android apps, iOS apps, and Mobile Web using natural language or manual recording. Covers supported patterns, replay behavior, and limitations.",
+    "url": "https://www.testmuai.com/support/docs/kane-ai-click-interactions/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "KaneAI",
+    "keywords": [
+      "testmu ai automation",
+      "testmu ai kaneai",
+      "kaneai click interactions"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Author with Natural Language",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "long press the menu icon\npress and hold the build number for 10 seconds\ntap and hold the profile avatar\nhold down the record button for 5 seconds\nlong press the Submit button for 30 seconds"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Author with Natural Language",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "double click on the submit button\nclick the increment button 5 times\ntap twice on the like button\ntap thrice on the notification bell"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Author with Natural Language",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "right click on the file item\nright-click the table row\ncontext click on the selected text\nsecondary click on the canvas element"
+      }
+    ],
+    "dateModified": "2026-09-09T20:20:47+05:30"
+  }) }}
+/>
+
 # How to Author Clicks and Drag With KaneAI
 ***
 
-
-KaneAI supports advanced click variants beyond a standard single click: **press and hold (long press)**, **multi-click (double / triple / N-click)**, and **right click (context click)**, across Desktop Web, Android apps, iOS apps, and Mobile Web. Each can be authored with natural language or captured via Manual Interaction, and renders as a distinct step with its own icon and pill label.
+KaneAI supports advanced click variants beyond a standard single click: **press and hold (long press)**, **multi-click (double / triple / N-click)**, and **right click (context click)**, across Desktop Web, Android apps, iOS apps, and Mobile Web. Each can be authored with natural language or captured via Manual Interaction, and each renders as its own distinct step in the step list.
 
 ## Authoring Modes
 ***
@@ -96,6 +177,8 @@ Author a long press with natural language or capture it through Manual Interacti
 ### Author With Natural Language
 ***
 
+<VerifiedTag value="Verified" />
+
 ```
 long press the menu icon
 press and hold the build number for 10 seconds
@@ -133,7 +216,7 @@ Only phrases containing **`long press`**, **`press and hold`**, **`tap and hold`
 ### Manual Interaction Capture
 ***
 
-In Recording mode, the capture layer classifies touch gestures by duration and movement:
+While the session is in the **Authoring Steps** state, the capture layer classifies touch gestures by duration and movement:
 
 | Gesture | Rule |
 |---------|------|
@@ -162,6 +245,8 @@ Author a multi-click with natural language or capture it through Manual Interact
 
 ### Author With Natural Language
 ***
+
+<VerifiedTag value="Verified" />
 
 ```
 double click on the submit button
@@ -211,6 +296,8 @@ Right click is supported on **Desktop Web only**. On mobile, use long press inst
 
 ### Author With Natural Language
 ***
+
+<VerifiedTag value="Verified" />
 
 ```
 right click on the file item
@@ -278,7 +365,6 @@ Each click type displays a distinct icon and pill label in the **Sidebar**, **Te
 | Right click | RIGHT CLICK | Context menu |
 
 ---
-
 
 ## Best Practices
 ***
@@ -426,6 +512,8 @@ Type the instruction into the KaneAI authoring panel.
 
 **More examples:**
 
+<VerifiedTag value="Verified" />
+
 ```
 drag "Task Card" to "Done column"
 move the 3rd item to the top
@@ -444,7 +532,7 @@ Natural language drag and drop works best when:
 ### Author Drag With Manual Interaction
 ***
 
-Switch to **Manual Interaction** mode in the KaneAI authoring panel and perform the drag directly on the device viewport.
+With the session in the **Authoring Steps** state, perform the drag directly on the device viewport. The gesture is captured and the step lands at the cursor — there is no mode to switch to.
 
 #### Drag Gesture Classification
 
@@ -502,11 +590,15 @@ Manual recording is recommended for any scenario where the **drop location isn't
 
 #### E-commerce Product Sorting
 
+<VerifiedTag value="Verified" />
+
 ```
 drag product "iPhone 15" from available items to comparison table
 ```
 
 #### Project Management Board
+
+<VerifiedTag value="Verified" />
 
 ```
 move task card from "To Do" column to "In Progress" column
@@ -542,7 +634,7 @@ Use Manual Interaction to adjust date-range sliders, resize chart panels, and re
 - **NL slider authoring**: not supported. Use Manual Interaction.
 - **NL confirmation gestures** (slide-to-confirm): not supported. Use Manual Interaction.
 - **Drag and drop on canvas-based elements via NL**: canvas elements rely on custom rendering; use Manual Interaction.
-- **Editing manual drag steps**: source/target locators and step-level config can be edited; the drag vector and gesture timing are immutable to preserve replay fidelity.
+- **Editing manual drag steps**: available while the session is **Paused**. Source/target locators and step-level config can be edited; the drag vector and gesture timing are immutable to preserve replay fidelity.
 
 ### Drag FAQs
 ***
@@ -563,7 +655,7 @@ No. Confirmation gestures depend on dynamic UI state and must be captured via Ma
 KaneAI replays use element resolution by default. Cross-device failures usually indicate that the source or target element identifier changed across builds. Inspect the step logs to see the resolution path used (element vs. coordinate) and ensure the elements expose stable accessibility IDs.
 
 **Why isn't manual recording available on Mobile Web?**
-The KaneAI agent does not enter Recording state for mobile browser sessions. Use natural language instructions or slash commands instead.
+Interaction capture is not supported for mobile browser sessions. Use natural language instructions or slash commands instead.
 
 **Can I edit a captured Manual Interaction drag step?**
 You can edit the source / target locators and step-level configuration. The drag vector and gesture timing are immutable for Manual steps to preserve replay fidelity.
@@ -589,4 +681,3 @@ Continue with these guides:
 - [KaneAI Scroll in Feature](/support/docs/kane-ai-scroll-in-feature/)
 - [KaneAI Forms Inputs and Data Entry](/support/docs/kaneai-kb-forms-inputs-and-data-entry/)
 - [KaneAI Command Guide](/support/docs/kane-ai-command-guide/)
-

@@ -26,6 +26,8 @@ import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import CookieTrackingLogin from '@site/src/component/CookieTracking';
 
+import VerifiedTag from '@site/src/component/verifiedTag';
+
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
        "@context": "https://schema.org",
@@ -49,6 +51,230 @@ import CookieTrackingLogin from '@site/src/component/CookieTracking';
       })
     }}
 ></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/javascript-with-selenium-running-javascript-automation-scripts-on-testmu-selenium-grid/"
+    },
+    "headline": "Selenium With JavaScript",
+    "description": "Run JavaScript Selenium test scripts on TestMu AI cloud grid with 3000+ real browsers and operating systems. Covers Mocha, Nightwatch, WebdriverIO, Jest, CucumberJS, Jasmine, Karma, TestCafe, NemoJS, and CodeceptJS.",
+    "url": "https://www.testmuai.com/support/docs/javascript-with-selenium-running-javascript-automation-scripts-on-testmu-selenium-grid/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Web Automation",
+    "keywords": [
+      "javascript selenium grid testing",
+      "run javascript selenium tests cloud",
+      "selenium webdriver javascript setup"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "A minimal one looks like this",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "const capabilities = {\n  build: 'NodeJS build',\n  name: 'Test 1',\n  platformName: 'Windows 10',\n  browserName: 'chrome',\n  browserVersion: 'latest',\n  network: true,\n  visual: true,\n  console: true,\n  video: true\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Clone the sample GitHub project",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "codeRepository": "https://github.com/LambdaTest/mocha-selenium-sample",
+        "text": "git clone https://github.com/LambdaTest/mocha-selenium-sample\ncd mocha-selenium-sample"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Mocha",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n3. Run the test:\n\n```bash\nnpm run single"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Clone the sample GitHub project",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "codeRepository": "https://github.com/LambdaTest/nightwatch-selenium-sample",
+        "text": "git clone https://github.com/LambdaTest/nightwatch-selenium-sample\ncd nightwatch-selenium-sample"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Run the test",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "npm run single"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Clone the sample GitHub project",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "codeRepository": "https://github.com/LambdaTest/webdriverio-selenium",
+        "text": "git clone https://github.com/LambdaTest/webdriverio-selenium\ncd webdriverio-selenium"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 7",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n3. Run the test:\n\n```bash\nnpm run single"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Clone the sample GitHub project",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "codeRepository": "https://github.com/LambdaTest/jest-selenium-webdriver-sample",
+        "text": "git clone https://github.com/LambdaTest/jest-selenium-webdriver-sample\ncd jest-selenium-webdriver-sample"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Set your browser and OS in the capabilities object",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "const capabilities = {\n  build: 'jest-LambdaTest-Single',\n  browserName: 'chrome',\n  browserVersion: 'latest',\n  platformName: 'Windows 10',\n};"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Run the test",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "npm test single.test.js"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Clone the sample GitHub project",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "codeRepository": "https://github.com/LambdaTest/NodeJs-Cucumber-Selenium",
+        "text": "git clone https://github.com/LambdaTest/NodeJs-Cucumber-Selenium\ncd NodeJs-Cucumber-Selenium"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "CucumberJS",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n3. Run the test:\n\n```bash\nnpm run single"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Clone the sample GitHub project",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "codeRepository": "https://github.com/LambdaTest/karma-jasmine-sample",
+        "text": "git clone https://github.com/LambdaTest/karma-jasmine-sample\ncd karma-jasmine-sample"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Jasmine",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n3. Run the test:\n\n```bash\nkarma start karma.conf.js"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Clone the sample GitHub project",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "codeRepository": "https://github.com/LambdaTest/angular-karma-sample",
+        "text": "git clone https://github.com/LambdaTest/angular-karma-sample\ncd angular-karma-sample"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Karma",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n3. Run the test:\n\n```bash\nkarma start karma.conf.js"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Install the plugin in your TestCafe project",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "npm install testcafe-browser-provider-lambdatest"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Run your test against the grid, naming the browser and OS in the command",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "testcafe \"lambdatest:Chrome@74.0:Windows 8\" 'path/to/test/file.js'"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Clone the sample GitHub project",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "codeRepository": "https://github.com/LambdaTest/Nemo-Lambdatest-sample",
+        "text": "git clone https://github.com/LambdaTest/Nemo-Lambdatest-sample\ncd Nemo-Lambdatest-sample"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "NemoJS",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n3. Run the test:\n\n```bash\nnpx nemo -P chrome"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Clone the sample GitHub project",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "codeRepository": "https://github.com/LambdaTest/lambdatest-codeceptjs-sample",
+        "text": "git clone https://github.com/LambdaTest/lambdatest-codeceptjs-sample\ncd lambdatest-codeceptjs-sample"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 22",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n3. Run the test:\n\n```bash\nnpm test"
+      }
+    ],
+    "dateModified": "2026-09-09T19:13:32+05:30"
+  }) }}
+/>
+
 
 # How to Run Selenium Tests With JavaScript on TestMu AI
 ---
@@ -75,6 +301,8 @@ Every framework authenticates the same way: your Username and Access Key are rea
 
 <TabItem value="macos" label="macOS / Linux" default>
 
+<VerifiedTag value="Verified" />
+
 <div className="lambdatest__codeblock">
     <CodeBlock className="language-bash">
   {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
@@ -85,6 +313,8 @@ export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 </TabItem>
 
 <TabItem value="win-cmd" label="Windows (CMD)">
+
+<VerifiedTag value="Verified" />
 
 <div className="lambdatest__codeblock">
     <CodeBlock className="language-batch">
@@ -101,6 +331,8 @@ set LT_ACCESS_KEY=${ YOUR_LAMBDATEST_ACCESS_KEY()}`}
 ---
 
 Every framework below connects to the grid at `hub.lambdatest.com/wd/hub` and passes your browser and OS choices through a capabilities object. A minimal one looks like this:
+
+<VerifiedTag value="Verified" />
 
 ```js
 const capabilities = {
@@ -135,12 +367,16 @@ Mocha reads its capabilities from a `conf/single.conf.js` file.
 
 1. Clone the [sample GitHub project](https://github.com/LambdaTest/mocha-selenium-sample):
 
+<VerifiedTag value="Verified" />
+
 ```bash
 git clone https://github.com/LambdaTest/mocha-selenium-sample
 cd mocha-selenium-sample
 ```
 
 2. Set your browser and OS in `conf/single.conf.js`:
+
+<VerifiedTag value="Verified" />
 
 ```js title="conf/single.conf.js"
 exports.capabilities = {
@@ -158,11 +394,15 @@ exports.capabilities = {
 
 3. Install the project dependencies:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 npm install
 ```
 
 4. Run the test:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 npm run single
@@ -178,6 +418,8 @@ Nightwatch reads its grid setup from `nightwatch.conf.js` in the cloned project.
 
 1. Clone the [sample GitHub project](https://github.com/LambdaTest/nightwatch-selenium-sample):
 
+<VerifiedTag value="Verified" />
+
 ```bash
 git clone https://github.com/LambdaTest/nightwatch-selenium-sample
 cd nightwatch-selenium-sample
@@ -186,11 +428,15 @@ cd nightwatch-selenium-sample
 2. Set your browser and OS in `nightwatch.conf.js`.
 3. Install the project dependencies:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 npm install
 ```
 
 4. Run the test:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 npm run single
@@ -206,12 +452,16 @@ WebdriverIO reads user, key, and capabilities from `conf/single.conf.js`.
 
 1. Clone the [sample GitHub project](https://github.com/LambdaTest/webdriverio-selenium):
 
+<VerifiedTag value="Verified" />
+
 ```bash
 git clone https://github.com/LambdaTest/webdriverio-selenium
 cd webdriverio-selenium
 ```
 
 2. Set your browser and OS in `conf/single.conf.js`:
+
+<VerifiedTag value="Verified" />
 
 ```js title="conf/single.conf.js"
 exports.config = {
@@ -235,11 +485,15 @@ exports.config = {
 
 3. Install the project dependencies:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 npm install
 ```
 
 4. Run the test:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 npm run single
@@ -255,12 +509,16 @@ Jest defines capabilities inline in the test file, so there is no separate confi
 
 1. Clone the [sample GitHub project](https://github.com/LambdaTest/jest-selenium-webdriver-sample):
 
+<VerifiedTag value="Verified" />
+
 ```bash
 git clone https://github.com/LambdaTest/jest-selenium-webdriver-sample
 cd jest-selenium-webdriver-sample
 ```
 
 2. Set your browser and OS in the capabilities object:
+
+<VerifiedTag value="Verified" />
 
 ```js
 const capabilities = {
@@ -273,11 +531,15 @@ const capabilities = {
 
 3. Install the project dependencies:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 npm install
 ```
 
 4. Run the test:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 npm test single.test.js
@@ -293,12 +555,16 @@ CucumberJS runs BDD feature files, with grid capabilities set in `conf/single.co
 
 1. Clone the [sample GitHub project](https://github.com/LambdaTest/NodeJs-Cucumber-Selenium):
 
+<VerifiedTag value="Verified" />
+
 ```bash
 git clone https://github.com/LambdaTest/NodeJs-Cucumber-Selenium
 cd NodeJs-Cucumber-Selenium
 ```
 
 2. Set your browser and OS in `conf/single.conf.js`:
+
+<VerifiedTag value="Verified" />
 
 ```js title="conf/single.conf.js"
 capabilities: [{
@@ -312,11 +578,15 @@ capabilities: [{
 
 3. Install the project dependencies:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 npm install
 ```
 
 4. Run the test:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 npm run single
@@ -332,12 +602,16 @@ Jasmine runs through Karma, which defines cloud browsers in `customLaunchers` in
 
 1. Clone the [sample GitHub project](https://github.com/LambdaTest/karma-jasmine-sample):
 
+<VerifiedTag value="Verified" />
+
 ```bash
 git clone https://github.com/LambdaTest/karma-jasmine-sample
 cd karma-jasmine-sample
 ```
 
 2. Set your browser and OS in `karma.conf.js`:
+
+<VerifiedTag value="Verified" />
 
 ```js title="karma.conf.js"
 customLaunchers: {
@@ -357,11 +631,15 @@ customLaunchers: {
 
 3. Install the project dependencies:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 npm install
 ```
 
 4. Run the test:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 karma start karma.conf.js
@@ -377,12 +655,16 @@ Karma with Angular CLI defines cloud browsers in `customLaunchers` inside `karma
 
 1. Clone the [sample GitHub project](https://github.com/LambdaTest/angular-karma-sample):
 
+<VerifiedTag value="Verified" />
+
 ```bash
 git clone https://github.com/LambdaTest/angular-karma-sample
 cd angular-karma-sample
 ```
 
 2. Set your browser and OS in `karma.conf.js`:
+
+<VerifiedTag value="Verified" />
 
 ```js title="karma.conf.js"
 customLaunchers: {
@@ -402,11 +684,15 @@ customLaunchers: {
 
 3. Install the project dependencies:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 npm install
 ```
 
 4. Run the test:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 karma start karma.conf.js
@@ -422,11 +708,15 @@ TestCafe connects through an npm plugin rather than a sample repo, so there is n
 
 1. Install the plugin in your TestCafe project:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 npm install testcafe-browser-provider-lambdatest
 ```
 
 2. Run your test against the grid, naming the browser and OS in the command:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 testcafe "lambdatest:Chrome@74.0:Windows 8" 'path/to/test/file.js'
@@ -440,12 +730,16 @@ NemoJS reads its capabilities from `nemo.config.js`.
 
 1. Clone the [sample GitHub project](https://github.com/LambdaTest/Nemo-Lambdatest-sample):
 
+<VerifiedTag value="Verified" />
+
 ```bash
 git clone https://github.com/LambdaTest/Nemo-Lambdatest-sample
 cd Nemo-Lambdatest-sample
 ```
 
 2. Set your browser and OS in `nemo.config.js`:
+
+<VerifiedTag value="Verified" />
 
 ```js title="nemo.config.js"
 "withCapabilities": [{
@@ -461,11 +755,15 @@ cd Nemo-Lambdatest-sample
 
 3. Install the project dependencies:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 npm install
 ```
 
 4. Run the test:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 npx nemo -P chrome
@@ -481,12 +779,16 @@ CodeceptJS uses a WebDriver helper in `codecept.conf.js`, with an optional servi
 
 1. Clone the [sample GitHub project](https://github.com/LambdaTest/lambdatest-codeceptjs-sample):
 
+<VerifiedTag value="Verified" />
+
 ```bash
 git clone https://github.com/LambdaTest/lambdatest-codeceptjs-sample
 cd lambdatest-codeceptjs-sample
 ```
 
 2. Set your browser and OS in `codecept.conf.js`:
+
+<VerifiedTag value="Verified" />
 
 ```js title="codecept.conf.js"
 helpers: {
@@ -510,11 +812,15 @@ helpers: {
 
 3. Install the project dependencies:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 npm install
 ```
 
 4. Run the test:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 npm test
@@ -534,6 +840,8 @@ Protractor reads its grid setup from the config file in the cloned project.
 
 1. Clone the [sample GitHub project](https://github.com/LambdaTest/protractor-selenium-sample):
 
+<VerifiedTag value="Verified" />
+
 ```bash
 git clone https://github.com/LambdaTest/protractor-selenium-sample
 cd protractor-selenium-sample
@@ -542,11 +850,15 @@ cd protractor-selenium-sample
 2. Set your browser and OS in the config file.
 3. Install the project dependencies:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 npm install
 ```
 
 4. Run the test:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 npm run single
@@ -566,6 +878,8 @@ WD reads its capabilities from `conf/single.conf.js` in the cloned project.
 
 1. Clone the [sample GitHub project](https://github.com/LambdaTest/wd-selenium-sample):
 
+<VerifiedTag value="Verified" />
+
 ```bash
 git clone https://github.com/LambdaTest/wd-selenium-sample
 cd wd-selenium-sample
@@ -574,11 +888,15 @@ cd wd-selenium-sample
 2. Set your browser and OS in `conf/single.conf.js`.
 3. Install the project dependencies:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 npm install
 ```
 
 4. Run the test:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 npm run single
@@ -598,6 +916,8 @@ AngularJS runs through Karma, which defines cloud browsers in `customLaunchers` 
 
 1. Clone the [sample GitHub project](https://github.com/LambdaTest/angular-karma-sample):
 
+<VerifiedTag value="Verified" />
+
 ```bash
 git clone https://github.com/LambdaTest/angular-karma-sample
 cd angular-karma-sample
@@ -606,11 +926,15 @@ cd angular-karma-sample
 2. Set your browser and OS in `karma.conf.js`.
 3. Install the project dependencies:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 npm install
 ```
 
 4. Run the test:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 karma start karma.conf.js

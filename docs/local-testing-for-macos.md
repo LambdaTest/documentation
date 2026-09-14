@@ -14,15 +14,95 @@ site_name: TestMu AI
 slug: local-testing-for-macos/
 canonical: https://www.testmuai.com/support/docs/local-testing-for-macos/
 ---
+
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
+<script type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify({
+       "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": BRAND_URL
+        },{
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Support",
+          "item": `${BRAND_URL}/support/docs/`
+        },{
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Legacy Binary For macOS",
+          "item": `${BRAND_URL}/support/docs/local-testing-for-macos/`
+        }]
+      })
+    }}
+></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/local-testing-for-macos/"
+    },
+    "headline": "Legacy Binary For macOS",
+    "description": "This document will help you modify your open file limit temporarily or permanently while using a proxy with TestMu AI for seamless cross browser testing.",
+    "url": "https://www.testmuai.com/support/docs/local-testing-for-macos/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Documentation",
+    "keywords": [
+      "proxy settings",
+      "set open file limit",
+      "open file limit testmu ai"
+    ],
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "dateModified": "2026-08-12T15:40:32+05:30"
+  }) }}
+/>
 ***
 <BrandName /> tunnel feature allows you to test your private server URLs or locally hosted web-apps or websites through <BrandName /> cloud servers. Through our TCP with TLS 1.2 secure connection features, you can also test plain HTML, CSS, PHP, Python or other similar web files saved on your local system, on combinations of operating systems, browsers, and screen resolutions that are available on <BrandName />.
 
 Feel more confident than ever, before deploying any UI specific change into Production. Test your development thoroughly with TCP with TLS 1.2 secure connection hosted by <BrandName /> tunnel. Experience the flexibility to securely test your website on 3000+ browsers and their assorted versions, running on real OS code for cross platform and [cross browser compatibility](https://www.testmuai.com/feature/), even before it gets deployed over the production environment.
 
 > **Note**: From November 2, 2020 onwards, we have deprecated our existing tunnel binary. In order to setup the new version, you can refer to [new tunnel binary for macOS](/docs/local-testing-macos/).
-
 
 You can download the binary file responsible for establishing a TCP with TLS 1.2 secure connection between your local device and our testing cloud by clicking on the downloadable link below.
 

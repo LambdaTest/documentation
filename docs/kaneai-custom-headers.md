@@ -17,8 +17,8 @@ slug: kaneai-custom-headers/
 canonical: https://www.testmuai.com/support/docs/kaneai-custom-headers/
 ---
 
-
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -43,6 +43,121 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       })
     }}
 ></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/kaneai-custom-headers/"
+    },
+    "headline": "Custom Headers in KaneAI",
+    "description": "Learn how to configure and use custom HTTP headers in KaneAI for Desktop Web and Mobile Browser test authoring, including support for secrets.",
+    "url": "https://www.testmuai.com/support/docs/kaneai-custom-headers/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "KaneAI",
+    "keywords": [
+      "Custom Headers",
+      "Headers",
+      "secrets"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Example Use Cases",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "  X-Session-ID: 1234567890"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Example Use Cases",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "  Authorization: {{secrets.org.BearerToken}}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Example Use Cases",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "  Accept: application/json"
+      }
+    ],
+    "dateModified": "2026-09-09T19:16:50+05:30"
+  }) }}
+/>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Configure Custom Headers for Desktop Web",
+      "description": "Learn how to configure and use custom HTTP headers in KaneAI for Desktop Web and Mobile Browser test authoring, including support for secrets.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Create a Web Test",
+          "text": "Navigate to the KaneAI page and click the Desktop Browser option to create a new web test.",
+          "url": "https://www.testmuai.com/support/docs/kaneai-custom-headers/#step-1-create-a-web-test"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Enable and Add Custom Headers",
+          "text": "In the Create a Web Test dialog, enable the Custom Headers toggle. Add your headers by entering a Header Name and Header Value for each row. Click the + button to add more rows. You can add up to 10 custom headers per session. If you provide a default header (e.g., Accept) in the Custom Headers section, it will override the browser's default value for that header.",
+          "url": "https://www.testmuai.com/support/docs/kaneai-custom-headers/#step-2-enable-and-add-custom-headers"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Start the Test Session",
+          "text": "Click Start Testing to launch the session. The headers you configured will be applied to all HTTP requests made during the session, including navigation requests and API calls.",
+          "url": "https://www.testmuai.com/support/docs/kaneai-custom-headers/#step-3-start-the-test-session"
+        }
+      ]
+    }
+  ]) }}
+/>
 
 # Custom Headers in KaneAI
 ***
@@ -120,14 +235,23 @@ Each custom header has a **Type** field that determines how the value is handled
 ***
 
 - **Session management**: track user sessions across requests:
+
+  <VerifiedTag value="Verified" />
+
   ```
   X-Session-ID: 1234567890
   ```
 - **Authentication tokens**: use the **Secret** type to inject API keys or bearer tokens without exposing them in plain text:
+
+  <VerifiedTag value="Verified" />
+
   ```
   Authorization: {{secrets.org.BearerToken}}
   ```
 - **Content negotiation**: override the `Accept` header to test specific response formats:
+
+  <VerifiedTag value="Verified" />
+
   ```
   Accept: application/json
   ```

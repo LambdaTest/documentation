@@ -41,6 +41,64 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/tms-reports/"
+    },
+    "headline": "Reports",
+    "description": "View & Download the Execution & Traceability reports for Test Instances execution.",
+    "url": "https://www.testmuai.com/support/docs/tms-reports/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Test Manager",
+    "keywords": [
+      "reports",
+      "execution",
+      "traciability"
+    ],
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
+
 # Reports in Test Manager  
 
 Test Manager provides powerful reporting capabilities to help teams gain actionable insights from their testing activities. With **Execution and Traceability Reports**, you can measure test coverage, track progress, and ensure alignment between requirements, test cases, and defects.  
@@ -121,6 +179,10 @@ The report data can be filtered using Test, Issue, and Run metadata.
 ## Insights Dashboard
 
 The insights section provides a comprehensive project level data overview of key Test Manager features, including Projects, Test Plans, Builds, and Test Cases, available at both the project and organizational levels.
+
+:::note
+Archived test cases are excluded from every count and coverage metric on this dashboard. The exclusion applies to historical data as well, so archiving a test case changes the numbers for past periods. Reports you have already generated are not affected. See [Archive and Restore Test Cases](/support/docs/test-case-archive/).
+:::
 
 1. The insights is segregated on various parameters such as
 

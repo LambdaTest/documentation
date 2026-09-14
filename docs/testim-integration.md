@@ -19,6 +19,8 @@ canonical: https://www.testmuai.com/support/docs/testim-integration/
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 
+import VerifiedTag from '@site/src/component/verifiedTag';
+
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
        "@context": "https://schema.org",
@@ -42,6 +44,89 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       })
     }}
 ></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/testim-integration/"
+    },
+    "headline": "Testim Integration",
+    "description": "TestMu AI offers integration with Testim to help you perform automated browser testing on 3000+ real browsers and OS.",
+    "url": "https://www.testmuai.com/support/docs/testim-integration/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Integration",
+    "keywords": [
+      "testmu ai integrations",
+      "testmu ai integrations with testim",
+      "testim integration"
+    ],
+    "proficiencyLevel": "Beginner",
+    "dependencies": "Create an account on Testim.; Create a TestMu AI account. You can sign up for free.; Get your TestMu AI Username and Access Key..",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Configuring the Capabilities",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JSON",
+        "text": "{\n  \"resolution\": \"1280x800\",\n  \"browserName\": \"chrome\",\n  \"version\": \"latest\"\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "To execute the tests, check",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JSON",
+        "text": "npm i -g @testim/testim-cli && testim --token \"2jWxWxXcmJRON0PA73YZWt92fFGU76cd\" --project \"GTJL28fMHad\" --grid \"LAMBDA-TEST\" --test-id \"2u8QnIm454\" --selenium-caps-file \"local.json\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Running the Testim Tests on TestMu AI",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JSON",
+        "text": "testim --token \"2jWxWxXcmJRON0PA73YZWt92fFGU76cd\" --project \"GTJL28fMHad\" --grid \"LAMBDA-TEST\" --test-id \"2u8QnIm454\" --selenium-caps-file \"local.json\""
+      }
+    ],
+    "dateModified": "2026-06-02T12:20:54+05:30"
+  }) }}
+/>
+
 Testim provides an automated testing platform to create stable tests using AI Native capabilities, along with tools that facilitate scaling quality across your software development process.
 
 Integrating <BrandName /> with Testim lets you run Testim automated tests on <BrandName /> cloud-based grid across 3000+ real browsers and OS.
@@ -83,6 +168,8 @@ Shown below are the steps to record your tests on Testim.
 ## Configuring the Capabilities
 Include the capabilities you wish to use in a `.json` file and ensure this file is located in the same directory as your Testim runner.
 
+<VerifiedTag value="Verified" />
+
 ```json
 {
   "resolution": "1280x800",
@@ -97,6 +184,9 @@ To execute the tests, check:
 * If the Testim CLI is not already installed on your system, use the entire command provided by the Testim CLI or dashboard. 
 
 **For example:**
+
+<VerifiedTag value="Verified" />
+
 ```json
 npm i -g @testim/testim-cli && testim --token "2jWxWxXcmJRON0PA73YZWt92fFGU76cd" --project "GTJL28fMHad" --grid "LAMBDA-TEST" --test-id "2u8QnIm454" --selenium-caps-file "local.json"
 ```
@@ -104,6 +194,8 @@ npm i -g @testim/testim-cli && testim --token "2jWxWxXcmJRON0PA73YZWt92fFGU76cd"
 * If the Testim CLI is already installed, you can run a simpler command that includes your Testim token, project ID, grid, test ID, and the name of your Selenium capabilities file.
 
 **For example:**
+
+<VerifiedTag value="Verified" />
 
 ```json
 testim --token "2jWxWxXcmJRON0PA73YZWt92fFGU76cd" --project "GTJL28fMHad" --grid "LAMBDA-TEST" --test-id "2u8QnIm454" --selenium-caps-file "local.json"

@@ -20,7 +20,133 @@ canonical: https://www.testmuai.com/support/docs/applitools-integration-cypress/
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
+<script type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify({
+       "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": BRAND_URL
+        },{
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Support",
+          "item": `${BRAND_URL}/support/docs/`
+        },{
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Applitools Integration With TestMu AI For Cypress",
+          "item": `${BRAND_URL}/support/docs/applitools-integration-cypress/`
+        }]
+      })
+    }}
+></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/applitools-integration-with-testmu/"
+    },
+    "headline": "Applitools Integration With TestMu AI For Cypress",
+    "description": "Run Applitools with Cypress on TestMu AI for automated cross browser testing on real browsers and operating systems, right from your Applitools instance.",
+    "url": "https://www.testmuai.com/support/docs/applitools-integration-with-testmu/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Web Automation",
+    "keywords": [
+      "testmu ai integrations",
+      "applitools for cypress",
+      "testmu ai cypress"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Navigate to your project directory and follow these steps",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "  npm install"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Setting Up Applitools Dependencies And Packages",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "  npx eyes-setup"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Setting Up Applitools Dependencies And Packages",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "  npm install @applitools/eyes-cypress --save-dev"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Setting up TestMu AI CLI and Dependencies",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "  npm install -g lambdatest-cypress-cli"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Setting up TestMu AI CLI and Dependencies",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "  lambdatest-cypress init"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Execute your first test case using the below command",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "lambdatest-cypress run"
+      }
+    ],
+    "dateModified": "2026-09-09T19:13:32+05:30"
+  }) }}
+/>
 # How to Integrate Applitools With Cypress on TestMu AI
 ***
 
@@ -37,11 +163,15 @@ Start by installing the Applitools packages and adding your API key so Cypress c
 
 - Install the **NPM dependencies** using the below command:
 
+  <VerifiedTag value="Verified" />
+
   ```bash
   npm install
   ```
 
 - Set up **Applitools Eyes** using the below command:
+
+  <VerifiedTag value="Verified" />
 
   ```bash
   npx eyes-setup
@@ -57,6 +187,8 @@ Start by installing the Applitools packages and adding your API key so Cypress c
 
 - Install Applitools Eyes dependencies using the below command:
 
+  <VerifiedTag value="Verified" />
+
   ```bash
   npm install @applitools/eyes-cypress --save-dev
   ```
@@ -70,11 +202,15 @@ With Applitools ready, configure the TestMu AI CLI so the tests run on the cloud
 
 - Install the TestMu AI CLI using the below command:
 
+  <VerifiedTag value="Verified" />
+
   ```bash
   npm install -g lambdatest-cypress-cli
   ```
 
 - Set up the configuration for your test run using the below command:
+
+  <VerifiedTag value="Verified" />
 
   ```bash
   lambdatest-cypress init
@@ -90,6 +226,8 @@ With Applitools ready, configure the TestMu AI CLI so the tests run on the cloud
 ***
 
 Run the sample tests to generate a baseline and then compare a second run against it. Execute your first test case using the below command:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 lambdatest-cypress run

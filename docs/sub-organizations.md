@@ -14,9 +14,88 @@ slug: sub-organizations/
 canonical: https://www.testmuai.com/support/docs/sub-organizations/
 ---
 
+<script type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify({
+       "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": BRAND_URL
+        },{
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Support",
+          "item": `${BRAND_URL}/support/docs/`
+        },{
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Sub Organizations",
+          "item": `${BRAND_URL}/support/docs/sub-organizations/`
+        }]
+      })
+    }}
+></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/sub-organizations/"
+    },
+    "headline": "Sub Organizations",
+    "description": "This documentation will help you create and manage sub-organizations on TestMu AI.",
+    "url": "https://www.testmuai.com/support/docs/sub-organizations/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Setting and Security",
+    "keywords": [
+      "sub organizations testmu ai",
+      "manage sub organizations",
+      "create sub organizations"
+    ],
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "dateModified": "2026-09-01T00:03:46+05:30"
+  }) }}
+/>
 # Sub Organizations
 ---
-
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import { CookieTrackingSignup } from '@site/src/component/CookieTracking';
@@ -59,8 +138,6 @@ Allocate concurrency to at least one product using the sliders. Each row shows t
 <img loading="lazy" src={require('../assets/images/lambdatest-mfa/sub-organization-created-success.png').default} alt="New sub-organization listed with its user and service account counts" width="1920" height="649"  className="doc_img img_center"/><br/>
 
 Your **sub-organization** appears in the list with its user and service account counts, and is ready to configure.
-
-
 
 ## Manage Your Sub-Organization
 ---
@@ -183,6 +260,3 @@ Your new **Service Account** is now ready to use.
     </li>
   </ul>
 </nav>
-
-
-

@@ -17,10 +17,128 @@ canonical: https://www.testmuai.com/support/docs/applitools-integration-with-tes
 
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
-
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
+<script type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify({
+       "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": BRAND_URL
+        },{
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Support",
+          "item": `${BRAND_URL}/support/docs/`
+        },{
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Applitools Integration With TestMu AI",
+          "item": `${BRAND_URL}/support/docs/applitools-integration-with-testmu/`
+        }]
+      })
+    }}
+></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/applitools-integration-with-testmu/"
+    },
+    "headline": "Applitools Integration With TestMu AI",
+    "description": "TestMu AI integration with Applitools will allow you perform automated cross browser testing on more than 2000 real browsers running on real operating systems, hosted on a cloud-based Selenium Grid. You can execute your automation test script on TestMu AI Selenium Grid directly from your Applitools instance.",
+    "url": "https://www.testmuai.com/support/docs/applitools-integration-with-testmu/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Integration",
+    "keywords": [
+      "testmu ai integrations",
+      "testmu ai integration with applitools",
+      "applitools integration"
+    ],
+    "proficiencyLevel": "Beginner",
+    "dependencies": "TestMu AI Authentication Credentials; For Linux/Mac:; For Windows:; Applitools API Key; For Linux/Mac:; For Windows:; Global Dependencies; Make sure you have Java installed in your operating system.; Download and install Maven Apache.; Install Maven dependencies using the below command..",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Prerequisites To Integrate TestMu AI With Applitools",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "        $ export APPLITOOLS_API_KEY=<your applitool api key> "
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 2",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "        $ set APPLITOOLS_API_KEY=<your applitool api key>"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 3",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "$ mvn install"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 4",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "$ mvn -Dtest=BasicDemo test"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Test Your Locally Hosted Applications On TestMu AI From Applitools",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": " DesiredCapabilities capabilities = new DesiredCapabilities();\n         capability.setCapability(\"tunnel\", true);"
+      }
+    ],
+    "dateModified": "2026-06-09T15:09:24+05:30"
+  }) }}
+/>
 -----------------------------------------------------------------------------------------------------------------------------
 Applitools offers a cloud-based platform to help you perform AI Native, end-to-end visual testing and monitoring. The platform is designed to make life easier for automation testers by delivering a flexible way to directly integrate their test scripts without worrying about learning a new language or creating a new automation script.
 
@@ -40,6 +158,8 @@ In this topic, you will learn about the:
  Be aware of your <BrandName /> authentication credentials i.e., your <BrandName /> username, access key, and HubURL. You need to set them up as your environment variables. You can retrieve them from your [<BrandName /> automation dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com) by clicking on the key icon near the help button. 
 * For Linux/Mac:  
 
+<VerifiedTag value="Verified" />
+
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-javascript">
 {`$ export LT_USERNAME= ${ YOUR_LAMBDATEST_USERNAME()}
@@ -47,8 +167,9 @@ $ export LT_ACCESS_KEY= ${ YOUR_LAMBDATEST_ACCESS_KEY()}`}
 </CodeBlock>
 </div>
 
-
 * For Windows: 
+
+<VerifiedTag value="Verified" />
 
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-javascript">
@@ -84,7 +205,7 @@ Below is a code to run a demo test on <BrandName /> Selenium Grid from Applitool
 
 >**Important:** You can clone the below code from our [GitHub repository for <BrandName /> Integration with Applitools](https://github.com/LambdaTest/applitools-lambdatest-integration/blob/master/src/test/java/com/applitools/quickstarts/BasicDemo.java).
 
-
+<VerifiedTag value="Verified" />
 
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-jsx">
@@ -221,7 +342,6 @@ To run your Applitools automation script for locally hosted web applications on 
 ```
 >**Important Note:**   
 Some Safari & IE browsers don't support automatic resolution of the URL string *localhost*. Therefore if you test on URLs like `http://localhost/` or `http://localhost:8080` etc., you would get an error in these browsers. A possible solution is to use `localhost.lambdatest.com` or replace the string *localhost* with a machine IP address. For example, if you wanted to test `http://localhost/dashboard` or, and your machine, IP is 192.168.2.6, you can instead try on `http://192.168.2.6/dashboard` or `https://localhost.lambdatest.com/dashboard`.
-
 
 **Got Questions?**   
 Feel free to give us a shout on our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>24/7 in-app customer chat support</span>. You can even mail to support@testmuai.com. Happy Testing! 🙂

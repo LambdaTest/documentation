@@ -12,14 +12,94 @@ site_name: TestMu AI
 slug: role-based-access-control/
 canonical: https://www.testmuai.com/support/docs/role-based-access-control/
 ---
+
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
+<script type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify({
+       "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": BRAND_URL
+        },{
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Support",
+          "item": `${BRAND_URL}/support/docs/`
+        },{
+          "@type": "ListItem",
+          "position": 3,
+          "name": "TestMu AI Role-Based Access Control (RBAC)",
+          "item": `${BRAND_URL}/support/docs/role-based-access-control/`
+        }]
+      })
+    }}
+></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/role-based-access-control/"
+    },
+    "headline": "TestMu AI Role-Based Access Control (RBAC)",
+    "description": "This documentation will help you in creating the different teams and allot concurrency to those teams to perform test automation easily.",
+    "url": "https://www.testmuai.com/support/docs/role-based-access-control/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Documentation",
+    "keywords": [
+      "role-based access control",
+      "testmu ai",
+      "testmu ai rbac"
+    ],
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "dateModified": "2026-04-07T12:50:21+05:30"
+  }) }}
+/>
 ***
 
 For every enterprise that uses cloud services, access management for those cloud resources is vital. <BrandName /> RBAC is an authorization system that allows seamless access management of <BrandName /> resources. With <BrandName /> role-based access control, you can control who has access to <BrandName /> resources, how they can leverage those resources, and what domains they can have access to.
 
 The <BrandName /> RBAC will help you in creating the different teams and allot concurrency to those teams. In this way, you can perform the test automation by dividing the concurrency among the teams.
-
 
 ## How To Add A New Team Member?
 
@@ -37,7 +117,6 @@ The <BrandName /> RBAC will help you in creating the different teams and allot c
 
 >
 **Note**: You can also add multiple users by selecting **'ADD ANOTHER'** or **'ADD MULTIPLE'**.
-
 
 <img loading="lazy" src={require('../assets/images/role-based-access-control/add-team-member.webp').default} alt="Image"  className="doc_img"/>
 
@@ -106,7 +185,6 @@ Your group details will be updated.
 <img loading="lazy" src={require('../assets/images/role-based-access-control/Screenshot-202.webp').default} alt="Image"  className="doc_img"/>
 Then click on **'Edit'**.
 <img loading="lazy" src={require('../assets/images/role-based-access-control/edit-group.webp').default} alt="Image"  className="doc_img"/>
-
 
 ## How To Delete A Group?
 

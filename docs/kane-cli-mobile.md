@@ -29,6 +29,7 @@ canonical: https://www.testmuai.com/support/docs/kane-cli-mobile/
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -52,6 +53,156 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         }]
       })}}
 ></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/kane-cli-mobile/"
+    },
+    "headline": "Mobile Testing with Kane CLI",
+    "description": "Run Kane CLI tests against local mobile virtual devices. Set up the iOS Simulator or the Android Emulator, then drive a native app on macOS Apple Silicon.",
+    "url": "https://www.testmuai.com/support/docs/kane-cli-mobile/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Kane CLI",
+    "keywords": [
+      "kane cli mobile",
+      "kane cli emulator",
+      "kane cli simulator"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Point the Command Line Tools at Xcode",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "sudo xcode-select -s /Applications/Xcode.app/Contents/Developer\nsudo xcodebuild -license accept   # accept the license non-interactively"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Confirm Xcode and simctl are reachable",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "xcodebuild -version                # should report 16.x or newer\nxcrun simctl list devices available"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "From the command line",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "sdkmanager \"system-images;android-35;google_apis;arm64-v8a\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "From the command line",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "avdmanager create avd -n kane_pixel \\\n  -k \"system-images;android-35;google_apis;arm64-v8a\" \\\n  -d pixel"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "If your SDK lives somewhere else, point Kane CLI at it",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "export ANDROID_HOME=\"/path/to/your/Android/sdk\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "This is the same for both platforms",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "kane-cli login\nkane-cli doctor --install"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Confirm Kane CLI sees a ready toolchain and, optionally, the devices on your machine",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "kane-cli doctor              # required checks, each with a fix if it fails\nkane-cli doctor --targets    # also list the simulators and emulators Kane CLI can run against"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Once a target is set up, point a run at it",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "# one-off, from the command line\nkane-cli run \"Sign in and open the account tab\" --target simulator --app ./builds/MyApp.zip\nkane-cli run \"Add the first item to the cart\" --target emulator --app ./builds/app-debug.apk\n\n# or set a default target once, then just run\nkane-cli config set-target emulator\nkane-cli run \"Add the first item to the cart\" --app ./builds/app-debug.apk"
+      }
+    ],
+    "dateModified": "2026-09-07T15:23:26+05:30"
+  }) }}
+/>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Setup",
+      "description": "Run Kane CLI tests against local mobile virtual devices. Set up the iOS Simulator or the Android Emulator, then drive a native app on macOS Apple Silicon.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Prepare the Virtual Device",
+          "text": "Follow the tab for the platform you intend to test. Set up both if you test on both. The exact iOS runtime versions and simulator device models in the supported matrix are pinned by the product team. The versions shown below are current, working examples. Confirm the officially supported set before you rely on a specific one. Kane CLI requires Xcode 16 or newer, which bundles the iOS Simulator, the simctl tool, and at least one iOS runtime. Kane CLI talks to the simulator through simctl, so make sure the developer directory resolves to the full Xcode install, not the standalone Command Line Tools: Confirm Xcode and simctl are reachable: You should see one or more iOS devices grouped under an iOS runtime. Xcode ships with default simulators. If none are listed, add one from Xcode \u2192 Settings \u2192 Platforms, or Xcode \u2192 Window \u2192 Devices and Simulators. On Apple Silicon, always use an arm64-v8a system image. The x86 and x86_64 images do not run natively and are effectively unusable. This is the single most common setup mistake. The exact Android API levels and device profiles in the supported matrix are pinned by the product team. The values shown below, API 35 and Pixel, are current, working examples. Confirm the officially supported set before you rely on a specific one. Android Studio bundles the Android SDK, the emulator, the system image manager, and the Device Manager, which are the pieces the steps below use. If you prefer a headless setup, install the command line SDK tools...",
+          "url": "https://www.testmuai.com/support/docs/kane-cli-mobile/#step-1-prepare-the-virtual-device"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Install the Kane CLI Test Tooling",
+          "text": "Sign in and let Kane CLI install the tooling it manages. This is the same for both platforms: You do not need to boot a simulator, boot an emulator, or run adb yourself. Kane CLI discovers the device, boots it, installs your app, and runs the test.",
+          "url": "https://www.testmuai.com/support/docs/kane-cli-mobile/#step-2-install-the-kane-cli-test-tooling"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Ready Check",
+          "text": "Confirm Kane CLI sees a ready toolchain and, optionally, the devices on your machine: When the checks for your platform pass, setup is complete. On Android, confirm your AVD is listed by --targets.",
+          "url": "https://www.testmuai.com/support/docs/kane-cli-mobile/#step-3-ready-check"
+        }
+      ]
+    }
+  ]) }}
+/>
 
 Kane CLI can run tests against local mobile virtual devices: Apple's **iOS Simulator** and Google's **Android Emulator**. You author and run mobile tests the same way you already do for the browser. The differences are that a mobile test runs against an **app you provide**, and that the target device is a simulator or emulator on your machine.
 
@@ -101,6 +252,8 @@ Both targets require macOS on Apple Silicon and a one-time `kane-cli doctor --in
 ### Step 1: Prepare the Virtual Device
 
 Follow the tab for the platform you intend to test. Set up both if you test on both.
+
+<VerifiedTag value="Verified" />
 
 <Tabs>
 <TabItem value="simulator" label="iOS Simulator" default>
@@ -177,6 +330,8 @@ If your SDK is at the default path, skip this step.
 
 Sign in and let Kane CLI install the tooling it manages. This is the same for both platforms:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 kane-cli login
 kane-cli doctor --install
@@ -188,6 +343,8 @@ You do not need to boot a simulator, boot an emulator, or run `adb` yourself. Ka
 
 Confirm Kane CLI sees a ready toolchain and, optionally, the devices on your machine:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 kane-cli doctor              # required checks, each with a fix if it fails
 kane-cli doctor --targets    # also list the simulators and emulators Kane CLI can run against
@@ -198,6 +355,8 @@ When the checks for your platform pass, setup is complete. On Android, confirm y
 ## Running a Mobile Test
 
 Once a target is set up, point a run at it:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 # one-off, from the command line

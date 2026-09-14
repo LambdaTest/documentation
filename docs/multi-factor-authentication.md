@@ -14,10 +14,89 @@ slug: multi-factor-authentication/
 canonical: https://www.testmuai.com/support/docs/multi-factor-authentication/
 ---
 
-
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import { CookieTrackingSignup } from '@site/src/component/CookieTracking';
 
+<script type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify({
+       "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": BRAND_URL
+        },{
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Support",
+          "item": `${BRAND_URL}/support/docs/`
+        },{
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Multi-Factor Authentication",
+          "item": `${BRAND_URL}/support/docs/multi-factor-authentication/`
+        }]
+      })
+    }}
+></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/multi-factor-authentication/"
+    },
+    "headline": "Multi-Factor Authentication",
+    "description": "This documentation will help you enable and manage multi-factor authentication for your account.",
+    "url": "https://www.testmuai.com/support/docs/multi-factor-authentication/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Setting and Security",
+    "keywords": [
+      "multi factor authentication",
+      "mfa",
+      "password and security"
+    ],
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "dateModified": "2026-05-29T18:18:43+05:30"
+  }) }}
+/>
 # Multi-Factor Authentication (MFA)
 ---
 
@@ -54,7 +133,6 @@ You have successfully enabled User MFA on your <BrandName /> account.
 
 <img loading="lazy" src={require('../assets/images/lambdatest-mfa/user-setup-complete.webp').default} alt="User MFA setup complete confirmation" width="404" height="206"  className="doc_img img_center"/><br/>
 
-
 ## Disable User MFA
 ---
 
@@ -75,7 +153,6 @@ You have successfully enabled User MFA on your <BrandName /> account.
 <img loading="lazy" src={require('../assets/images/lambdatest-mfa/disable-two.webp').default} alt="Six-digit authentication code field" width="404" height="206"  className="doc_img img_center"/><br/>
 
 MFA is now disabled on your account, and you will be redirected to the login page.
-
 
 ## Enforce <BrandName /> MFA for Your Organization
 ---
@@ -120,7 +197,6 @@ You have successfully set up MFA for your <BrandName /> account.
 
 <img loading="lazy" src={require('../assets/images/lambdatest-mfa/auth-code.webp').default} alt="Authentication code entry on login" width="404" height="206"  className="doc_img img_center"/><br/>
 
-
 ## Disable Enforced MFA for Your Organization
 ---
 
@@ -131,7 +207,6 @@ You have successfully set up MFA for your <BrandName /> account.
 **Step 2:** Open the **Authentication and SSO** tab and **toggle off** the **Require MFA** option.
 
 <img loading="lazy" src={require('../assets/images/lambdatest-mfa/toggle-off.webp').default} alt="Require MFA toggled off in Authentication and SSO" width="404" height="206"  className="doc_img img_center"/><br/>
-
 
 ## Disable <BrandName /> MFA for a User
 ---

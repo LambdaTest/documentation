@@ -53,6 +53,99 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/smartui-slack-integration/"
+    },
+    "headline": "Slack Integration with SmartUI",
+    "description": "Integrate Slack with TestMu AI SmartUI for real-time notifications. Follow our guide to set up, configure, and receive SmartUI job updates directly in your Slack workspace.",
+    "url": "https://www.testmuai.com/support/docs/smartui-slack-integration/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "SmartUI",
+    "keywords": [
+      "Visual Regression",
+      "Visual Regression Testing Guide",
+      "Visual Regression Test Automation"
+    ],
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Slack Integration with SmartUI",
+      "description": "Integrate Slack with TestMu AI SmartUI for real-time notifications. Follow our guide to set up, configure, and receive SmartUI job updates directly in your Slack workspace.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Navigate to the Integration Page",
+          "text": "Login to your TestMu AI Account. Navigate to the Settings > Integration page. Select the Communication tab and search for Slack.",
+          "url": "https://www.testmuai.com/support/docs/smartui-slack-integration/#step-1-navigate-to-the-integration-page"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Integrate the Slack with your TestMu AI Account",
+          "text": "Click on the Connect button and then Install for the Slack integration. NOTE : If you are already logged into Slack, you'll be redirected to a page where you have to post to a channel to confirm your identity or else you will be asked to provide Slack URL of your workspace. Select the channel you want to post on. Click on Allow button. A notification would be shared on to all the members belonging to that channel, informing about your integration.",
+          "url": "https://www.testmuai.com/support/docs/smartui-slack-integration/#step-2-integrate-the-slack-with-your-testmu-ai-account"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Update the Notification Settings and Trigger the Job",
+          "text": "Once you integrate Slack, you need to configure notification settings to get test automation notifications on your integrated Slack channel. Go to your desired Project. Click on the Project Settings button. In the Notifications tab, toggle the slack alerts to true Click on the Update Settings button. Now again trigger the project with the changes and visit the Slack channel to view the notification containing meta information about the build. Once you save that configuration, you will start receiving the custom notifications in Slack!",
+          "url": "https://www.testmuai.com/support/docs/smartui-slack-integration/#step-3-update-the-notification-settings-and-trigger-the-job"
+        }
+      ]
+    }
+  ]) }}
+/>
+
+
+
 This document will guide you to integrate your SmartUI jobs and Slack, allowing you to receive real-time notifications and crucial job details directly within your Slack workspace.
 
 ## Prerequisite

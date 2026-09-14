@@ -20,6 +20,8 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
+import VerifiedTag from '@site/src/component/verifiedTag';
+
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
        "@context": "https://schema.org",
@@ -43,6 +45,151 @@ import TabItem from '@theme/TabItem';
       })
     }}
 ></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/smartui-hooks-layout-fullpage-smartignore/"
+    },
+    "headline": "SmartUI Hooks - Layout, Full Page, and Smart Ignore",
+    "description": "SmartUI Hooks on LambdaTest covering layout comparison via screenshot hook options, Smart Ignore via smartUI.smartIgnore in LT:Options, and full-page capture.",
+    "url": "https://www.testmuai.com/support/docs/smartui-hooks-layout-fullpage-smartignore/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "SmartUI",
+    "keywords": [
+      "smartui hooks",
+      "layout testing hooks",
+      "full page screenshot hooks"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "1. Session capabilities (LT:Options) (Java)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "import java.util.HashMap;\nimport org.openqa.selenium.chrome.ChromeOptions;\n\nChromeOptions browserOptions = new ChromeOptions();\nHashMap<String, Object> ltOptions = new HashMap<>();\nltOptions.put(\"username\", System.getenv(\"LT_USERNAME\"));\nltOptions.put(\"accessKey\", System.getenv(\"LT_ACCESS_KEY\"));\nltOptions.put(\"visual\", true);\nltOptions.put(\"smartUI.project\", \"Your_Project_Name\");\nltOptions.put(\"smartUI.smartIgnore\", true);\n\nbrowserOptions.setCapability(\"LT:Options\", ltOptions);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "1. Session capabilities (LT:Options) (NodeJS)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "'LT:Options': {\n  user: process.env.LT_USERNAME,\n  accessKey: process.env.LT_ACCESS_KEY,\n  visual: true,\n  'smartUI.project': 'Your_Project_Name',\n  'smartUI.smartIgnore': true,\n},"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Python",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Python",
+        "text": "lt_options = {\n    \"username\": os.getenv(\"LT_USERNAME\"),\n    \"accessKey\": os.getenv(\"LT_ACCESS_KEY\"),\n    \"visual\": True,\n    \"smartUI.project\": \"Your_Project_Name\",\n    \"smartUI.smartIgnore\": True,\n}\noptions.set_capability(\"LT:Options\", lt_options)"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "C#",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "C#",
+        "text": "capabilities.SetCapability(\"visual\", true);\ncapabilities.SetCapability(\"smartUI.project\", \"Your_Project_Name\");\ncapabilities.SetCapability(\"smartUI.smartIgnore\", true);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "2. Layout comparison (Java)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "import java.util.Arrays;\nimport java.util.HashMap;\nimport java.util.Map;\nimport org.openqa.selenium.JavascriptExecutor;\n\nMap<String, Object> options = new HashMap<>();\noptions.put(\"screenshotName\", \"my-layout-screenshot-01\");\noptions.put(\"ignoreType\", Arrays.asList(\"layout\"));\n\n((JavascriptExecutor) driver).executeScript(\"smartui.takeScreenshot\", options);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "2. Layout comparison (NodeJS)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "await driver.executeScript('smartui.takeScreenshot', {\n  screenshotName: 'my-layout-screenshot-01',\n  ignoreType: ['layout'],\n});"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Python",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Python",
+        "text": "driver.execute_script(\"smartui.takeScreenshot\", {\n    \"screenshotName\": \"my-layout-screenshot-01\",\n    \"ignoreType\": [\"layout\"],\n})"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "C#",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "C#",
+        "text": "var options = new Dictionary<string, object>\n{\n    { \"screenshotName\", \"my-layout-screenshot-01\" },\n    { \"ignoreType\", new[] { \"layout\" } }\n};\n((IJavaScriptExecutor)driver).ExecuteScript(\"smartui.takeScreenshot\", options);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "3. Full-page screenshot (Java)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "Map<String, Object> options = new HashMap<>();\noptions.put(\"screenshotName\", \"Home_Page_Desktop\");\noptions.put(\"fullPage\", true);\n\n((JavascriptExecutor) driver).executeScript(\"smartui.takeScreenshot\", options);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "3. Full-page screenshot (NodeJS)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "await driver.executeScript('smartui.takeScreenshot', {\n  screenshotName: 'Home_Page_Desktop',\n  fullPage: true,\n});"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "3. Full-page screenshot (Python)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Python",
+        "text": "driver.execute_script(\"smartui.takeScreenshot\", {\n    \"screenshotName\": \"Home_Page_Desktop\",\n    \"fullPage\": True,\n})"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "C#",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "C#",
+        "text": "var options = new Dictionary<string, object>\n{\n    { \"screenshotName\", \"Home_Page_Desktop\" },\n    { \"fullPage\", true }\n};\n((IJavaScriptExecutor)driver).ExecuteScript(\"smartui.takeScreenshot\", options);"
+      }
+    ],
+    "dateModified": "2026-07-14T14:14:05+05:30"
+  }) }}
+/>
+
 
 # SmartUI Hooks: Layout, Full-Page Screenshots, and Smart Ignore
 
@@ -72,6 +219,8 @@ Every Hooks session needs `username`, `accessKey`, `visual: true`, and `smartUI.
 <Tabs className="docs__val" groupId="language">
 <TabItem value="java" label="Java" default>
 
+<VerifiedTag value="Verified" />
+
 ```java
 import java.util.HashMap;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -90,6 +239,8 @@ browserOptions.setCapability("LT:Options", ltOptions);
 </TabItem>
 <TabItem value="nodejs" label="NodeJS">
 
+<VerifiedTag value="Verified" />
+
 ```javascript
 'LT:Options': {
   user: process.env.LT_USERNAME,
@@ -102,6 +253,8 @@ browserOptions.setCapability("LT:Options", ltOptions);
 
 </TabItem>
 <TabItem value="python" label="Python">
+
+<VerifiedTag value="Verified" />
 
 ```python
 lt_options = {
@@ -116,6 +269,8 @@ options.set_capability("LT:Options", lt_options)
 
 </TabItem>
 <TabItem value="csharp" label="C#">
+
+<VerifiedTag value="Verified" />
 
 ```csharp
 capabilities.SetCapability("visual", true);
@@ -133,6 +288,8 @@ Pass a single options map to `smartui.takeScreenshot` with a `screenshotName` an
 <Tabs className="docs__val" groupId="language">
 <TabItem value="java" label="Java" default>
 
+<VerifiedTag value="Verified" />
+
 ```java
 import java.util.Arrays;
 import java.util.HashMap;
@@ -149,6 +306,8 @@ options.put("ignoreType", Arrays.asList("layout"));
 </TabItem>
 <TabItem value="nodejs" label="NodeJS">
 
+<VerifiedTag value="Verified" />
+
 ```javascript
 await driver.executeScript('smartui.takeScreenshot', {
   screenshotName: 'my-layout-screenshot-01',
@@ -159,6 +318,8 @@ await driver.executeScript('smartui.takeScreenshot', {
 </TabItem>
 <TabItem value="python" label="Python">
 
+<VerifiedTag value="Verified" />
+
 ```python
 driver.execute_script("smartui.takeScreenshot", {
     "screenshotName": "my-layout-screenshot-01",
@@ -168,6 +329,8 @@ driver.execute_script("smartui.takeScreenshot", {
 
 </TabItem>
 <TabItem value="csharp" label="C#">
+
+<VerifiedTag value="Verified" />
 
 ```csharp
 var options = new Dictionary<string, object>
@@ -188,6 +351,8 @@ Pass `fullPage: true` to `smartui.takeScreenshot` along with a `screenshotName`.
 <Tabs className="docs__val" groupId="language">
 <TabItem value="java" label="Java" default>
 
+<VerifiedTag value="Verified" />
+
 ```java
 Map<String, Object> options = new HashMap<>();
 options.put("screenshotName", "Home_Page_Desktop");
@@ -199,6 +364,8 @@ options.put("fullPage", true);
 </TabItem>
 <TabItem value="nodejs" label="NodeJS">
 
+<VerifiedTag value="Verified" />
+
 ```javascript
 await driver.executeScript('smartui.takeScreenshot', {
   screenshotName: 'Home_Page_Desktop',
@@ -209,6 +376,8 @@ await driver.executeScript('smartui.takeScreenshot', {
 </TabItem>
 <TabItem value="python" label="Python">
 
+<VerifiedTag value="Verified" />
+
 ```python
 driver.execute_script("smartui.takeScreenshot", {
     "screenshotName": "Home_Page_Desktop",
@@ -218,6 +387,8 @@ driver.execute_script("smartui.takeScreenshot", {
 
 </TabItem>
 <TabItem value="csharp" label="C#">
+
+<VerifiedTag value="Verified" />
 
 ```csharp
 var options = new Dictionary<string, object>

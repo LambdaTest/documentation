@@ -20,6 +20,8 @@ canonical: https://www.testmuai.com/support/docs/kane-ai-using-variables/
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
+import VerifiedTag from '@site/src/component/verifiedTag';
+
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
        "@context": "https://schema.org",
@@ -43,6 +45,102 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       })
     }}
 ></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/kane-ai-using-variables/"
+    },
+    "headline": "Variables in KaneAI",
+    "description": "Learn how to use variables in KaneAI test cases",
+    "url": "https://www.testmuai.com/support/docs/kane-ai-using-variables/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "KaneAI",
+    "keywords": [
+      "testmu ai automation",
+      "testmu ai kaneai",
+      "kaneai scroll elements"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "For instance, you can write",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "Set username as John"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "String variables example:",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "Enter {{username}} in user input field"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "String variables example:",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "assert {{username}} contains 'John'"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "JSON variables example:",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "assert {{api_variable.response.email}} is 'john.doe@example.com'"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Leveraging API",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "curl --location 'https://test-manager-api.lambdatest.com/api/atm/v1/hyperexecute' \\\n--header 'Content-Type: application/json' \\\n--header 'Authorization: Basic <Base64Auth>' \\\n--data '{\n    \"test_run_id\": \"<YOUR_TEST_RUN_ID>\",\n    \"concurrency\": 1,\n    \"environment_id\": <Environment_ID> #Optional"
+      }
+    ],
+    "dateModified": "2026-09-09T20:21:05+05:30"
+  }) }}
+/>
+
 
 # How to Use Variables and Secrets With KaneAI
 ***
@@ -100,6 +198,8 @@ Define a variable directly with the `/` command in the step input, then select *
 
 Create a variable in plain English inside a step. For example:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 Set username as John
 ```
@@ -113,7 +213,7 @@ On the [variables page](https://www.testmuai.com/login/?redirectTo=https://kanea
 ### From a Manual Interaction Step
 ***
 
-While reviewing a Manual Interaction step, replace any hard-coded value in the step's instruction with a Parameter, Variable, or Secret, without deleting or re-recording the step. This flow works on both **Desktop** and **Mobile App** Manual Interaction sessions.
+While reviewing a Manual Interaction step, replace any hard-coded value in the step's instruction with a Parameter, Variable, or Secret, without deleting or re-recording the step. This flow works on both **Desktop** and **Mobile App** sessions, and works while the session is **Paused**, where step editing is available.
 
 #### Convert a Value in a Step
 
@@ -156,10 +256,14 @@ Type the `{{` prefix in the KaneAI session input box to list all existing variab
 
 #### String variables example:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 Enter {{username}} in user input field
 ```
 This will input the value of the username variable in the user input field.
+
+<VerifiedTag value="Verified" />
 
 ```bash
 assert {{username}} contains 'John'
@@ -168,6 +272,8 @@ This will assert if the username variable contains the value "John".
 
 #### JSON variables example:
 JSON variables come from an API response used via the slash command or from a database query output. Reach a specific object inside the JSON hierarchy by typing the `{{` prefix in the KaneAI session input box. For example, assert that the email field inside the API response variable matches "john.doe@example.com".
+
+<VerifiedTag value="Verified" />
 
 ```bash
 assert {{api_variable.response.email}} is 'john.doe@example.com'
@@ -244,6 +350,8 @@ Pass the environment name programmatically when you start a test run via the API
 * For example, if the URL contains `envId=4133`, use **4133** as the environment_id.
 :::
 
+<VerifiedTag value="Verified" />
+
 ```bash
 curl --location 'https://test-manager-api.lambdatest.com/api/atm/v1/hyperexecute' \
 --header 'Content-Type: application/json' \
@@ -301,6 +409,9 @@ Once created, reference a secret in your test steps using **double-curly braces 
 > To use a previously created variable in any subsequent step or test case, reference the variable using the same `{{` syntax. This will list down all existing variables for this test.
 
 Format:
+
+<VerifiedTag value="Verified" />
+
 ```bash
 use the value of {{secrets.user.email}} in the email text field
 ```

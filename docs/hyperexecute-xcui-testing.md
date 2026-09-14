@@ -26,6 +26,8 @@ import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 
+import VerifiedTag from '@site/src/component/verifiedTag';
+
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
        "@context": "https://schema.org",
@@ -49,6 +51,152 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       })
     }}
 ></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/hyperexecute-xcui-testing/"
+    },
+    "headline": "Execute XCUI Framework Tests on HyperExecute",
+    "description": "Follow the instructions in this documentation, so that you can seamlessly execute XCUI tests on HyperExecute via TestMu AI.",
+    "url": "https://www.testmuai.com/support/docs/hyperexecute-xcui-testing/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Documentation",
+    "keywords": [
+      "xcui",
+      "iOS",
+      "testmu ai"
+    ],
+    "proficiencyLevel": "Beginner",
+    "dependencies": "Your TestMu AI Username and Access key; HyperExecute CLI in order to initiate a test execution Job .; Setup the Environmental Variable; HyperExecute YAML file which contains all the necessary instructions..",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 4: Configure YAML in your Test Suite",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "---\nversion: \"0.2\"\n\nrunson: ios\n\nautosplit: true\n\nconcurrency: 1\n\nretryOnFailure: true\nmaxRetries: 2\n\nframework:\n  name: \"ios/xcui\"\n  args:\n  # highlight-next-line\n    appPath: <RELATIVE_APP_PATH>\n    # highlight-next-line\n    testSuitePath: <RELATIVE_TEST_SUITE_PATH>\n    video: true\n    filters:\n      attributes:\n      - type: className\n        values: [\"LambdaUiKitIOSUITestsLaunchTests\"]\n      - type: testName\n        values: [\"LambdaUiKitIOSUITests/testverifyAppLaunch\"]\n    deviceSelectionStrategy: any\n    devices: [\".*\"]\n    artifacts: true\n\n    shards:\n      mappings:\n      - name: shard1\n        strategy: \"only-testing/skip-testing\"\n        values: [\"<className>/<className/testName>\"]\n     - name: shard2\n       strategy: \"only-testing/skip-testing\"\n       values: [\"<className>/<className/testName>\", \"<className>/<className/testName>\"]\n\njobLabel: ['HyperExecute', 'XCUI', 'Real Device']"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "To generate artifacts for your XCUI tests, add the artifacts: true and report: true flag in your YAML file",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "report: true\n\nframework:\n  name: \"ios/xcui\"\n  args:\n    artifacts: true\n    ...//"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Run the below command in your terminal at the root folder of the project",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "./hyperexecute --config RELATIVE_PATH_OF_YOUR_YAML_FILE --download-artifacts --download-report"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Execute XCUI Framework Tests on HyperExecute",
+      "description": "Follow the instructions in this documentation, so that you can seamlessly execute XCUI tests on HyperExecute via TestMu AI.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Setup Your Test Suite",
+          "text": "You can use your own project to configure and test it. For demo purposes, we are using the sample repository. Download or Clone the code sample for the XCUI framework from the TestMu AI GitHub repository to run the tests on the HyperExecute.",
+          "url": "https://www.testmuai.com/support/docs/hyperexecute-xcui-testing/#step-1-setup-your-test-suite"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Setup the CLI in your Test Suite",
+          "text": "After cloning / downloading the sample repo, you need to setup the CLI and the environment variables. The CLI is used for triggering the tests on HyperExecute. It is recommend to download the CLI binary on the host system and keep it in the root directory of the suite to perform the tests on HyperExecute. You can download the CLI for your desired platform from the below mentioned links: Now, you need to export your environment variables LTUSERNAME and LTACCESSKEY* that are available in the TestMu AI Profile page. Run the below mentioned commands in your terminal to setup the CLI and the environment variables. {`export LTUSERNAME=\"${ YOURLAMBDATEST_USERNAME()}\" export LTACCESSKEY=\"${ YOURLAMBDATESTACCESS_KEY()}\"`} {`set LTUSERNAME=\"${ YOURLAMBDATEST_USERNAME()}\" set LTACCESSKEY=\"${ YOURLAMBDATESTACCESS_KEY()}\"`}",
+          "url": "https://www.testmuai.com/support/docs/hyperexecute-xcui-testing/#step-2-setup-the-cli-in-your-test-suite"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Upload your Application and Test Suite",
+          "text": "Upload your iOS application (.ipa file) to the TestMu AI servers using our REST API. You need to provide your Username and AccessKey in the format ``Username:AccessKey`` in the cURL command for authentication. Make sure to add the path of the appFile in the cURL request. Here is an example cURL request to upload your app using our REST API: {`curl -u \"${ YOURLAMBDATESTUSERNAME()}:${ YOURLAMBDATESTACCESS_KEY()}\" \\\\ --location --request POST 'https://manual-api.lambdatest.com/app/uploadFramework' \\\\ --form 'appFile=@\"/Users/macuser/Downloads/proverbial.ipa\"' \\\\ --form 'type=\"xcuit-ios\"'`} {curl -u \"${ YOURLAMBDATESTUSERNAME()}:${ YOURLAMBDATESTACCESS_KEY()}\" -X POST \"https://manual-api.lambdatest.com/app/uploadFramework\" -F \"appFile=@\"/Users/macuser/Downloads/proverbial.ipa\"\" -F \"type=\"xcuit-ios\"\"} Response of above cURL will be a JSON object containing the App URL of the format - APP123456789123456789 and will be used in the last step as appId. Upload your test suite (.ipa file) to the TestMu AI servers using our REST API. You need to provide your Username and AccessKey in the format Username:AccessKey in the cURL command for authentication. Make sure to add the path of the appFile in the cURL request. Here is an example cURL request to upload your app using our REST API: {`curl -u \"${ YOURLAMBDATESTUSERNAME()}:${ YOURLAMBDATESTACCESS_KEY()}\" \\\\ --location --request POST 'https://manual-api.lambdatest.com/app/uploadFramework' \\ --form...",
+          "url": "https://www.testmuai.com/support/docs/hyperexecute-xcui-testing/#step-3-upload-your-application-and-test-suite"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Step 4: Configure YAML in your Test Suite",
+          "text": "Enter your ` and ` in the YAML file If you are using the deviceSelectionStrategy: all, then in that case all the mentioned shards will be executed on all the devices. For example: There are 2 shards and 2 devices mentioned, then the 2 shards will be executed on 2 devices (2 Shards * 2 Devices). If you are using the deviceSelectionStrategy: any, then in that case all the mentioned shards will be executed on any one device from the list provided. For example: There are 2 shards and 2 devices mentioned, then the 2 shards will be executed on any device (2 shards * any device mentioned). If you are using the deviceSelectionStrategy: all, then in that case all the tests will be executed on all the devices based on the concurrency. For example: There are 6 tests and 10 devices mentioned, then the 6 tests will be auto distributed on the devices based on the max concurrency. If you are using the deviceSelectionStrategy: any, then in that case all the mentioned tests will be executed on any one device from the list provided. For example: There are 6 tests and 10 devices mentioned, then the 6 tests will be executed on any one device.",
+          "url": "https://www.testmuai.com/support/docs/hyperexecute-xcui-testing/#step-4-configure-yaml-in-your-test-suite"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 5,
+          "name": "Step 5: Generate Reports and Artifacts",
+          "text": "To generate artifacts for your XCUI tests, add the artifacts: true and report: true flag in your YAML file: To download these artifacts in your local machine, you can pass the --download-artifacts and --download-report flag with the CLI command to execute the tests as shown in the next step.",
+          "url": "https://www.testmuai.com/support/docs/hyperexecute-xcui-testing/#step-5-generate-reports-and-artifacts"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 6,
+          "name": "Step 6: Execute your Test Suite",
+          "text": "NOTE : In case of macOS, if you get a permission denied warning while executing CLI, simply run chmod u+x ./hyperexecute to allow permission. In case you get a security popup, allow it from your System Preferences \u2192 Security & Privacy \u2192 General tab. Run the below command in your terminal at the root folder of the project: OR use this command if you have not exported your username and access key in the step 2. {./hyperexecute --user ${ YOURLAMBDATESTUSERNAME()} --key ${ YOURLAMBDATESTACCESSKEY()} --config RELATIVEPATHOFYOURYAMLFILE --download-artifacts --download-report}",
+          "url": "https://www.testmuai.com/support/docs/hyperexecute-xcui-testing/#step-6-execute-your-test-suite"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 7,
+          "name": "Step 7: Monitor the Test Execution",
+          "text": "Visit the HyperExecute Dashboard and check your Job status.",
+          "url": "https://www.testmuai.com/support/docs/hyperexecute-xcui-testing/#step-7-monitor-the-test-execution"
+        }
+      ]
+    }
+  ]) }}
+/>
+
+
 
 This page outlines how to execute your XCUI tests on HyperExecute with [YAML 0.2](/support/docs/deep-dive-into-hyperexecute-yaml/#hyperexecute-yaml-v02-framework-flags-and-discovery-config)
 
@@ -99,6 +247,8 @@ Run the below mentioned commands in your terminal to setup the CLI and the envir
 
 <TabItem value="bash" label="Linux / MacOS" default>
 
+  <VerifiedTag value="Verified" />
+
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-bash">
   {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
@@ -109,6 +259,8 @@ export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 </TabItem>
 
 <TabItem value="powershell" label="Windows" default>
+
+  <VerifiedTag value="Verified" />
 
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-powershell">
@@ -132,6 +284,8 @@ Here is an example cURL request to upload your app using our REST API:
 
 <TabItem value="bash" label="Linux / MacOS" default>
 
+  <VerifiedTag value="Verified" />
+
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-bash">
   {`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" \\
@@ -144,6 +298,8 @@ Here is an example cURL request to upload your app using our REST API:
 </TabItem>
 
 <TabItem value="powershell" label="Windows" default>
+
+  <VerifiedTag value="Verified" />
 
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-powershell">
@@ -166,6 +322,8 @@ Upload your **test suite** (.ipa file) to the <BrandName /> servers using our **
 
 <TabItem value="bash" label="Linux / MacOS" default>
 
+  <VerifiedTag value="Verified" />
+
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-bash">
   {`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" \\
@@ -178,6 +336,8 @@ Upload your **test suite** (.ipa file) to the <BrandName /> servers using our **
 </TabItem>
 
 <TabItem value="powershell" label="Windows" default>
+
+  <VerifiedTag value="Verified" />
 
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-powershell">
@@ -197,6 +357,8 @@ Response of above cURL will be a **JSON** object containing the `App URL` of the
 ## Step 4: Configure YAML in your Test Suite
 
 Enter your `<RELATIVE_APP_PATH>` and `<RELATIVE_TEST_SUITE_PATH>` in the YAML file
+
+<VerifiedTag value="Verified" />
 
 ```yaml
 ---
@@ -265,6 +427,8 @@ If you are using the `deviceSelectionStrategy: any`, then in that case all the m
 ## Step 5: Generate Reports and Artifacts
 To generate artifacts for your XCUI tests, add the `artifacts: true` and `report: true` flag in your YAML file:
 
+<VerifiedTag value="Verified" />
+
 ```yaml
 report: true
 
@@ -283,11 +447,15 @@ To download these artifacts in your local machine, you can pass the `--download-
 
 Run the below command in your terminal at the root folder of the project:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 ./hyperexecute --config RELATIVE_PATH_OF_YOUR_YAML_FILE --download-artifacts --download-report
 ```
 
 OR use this command if you have not exported your username and access key in the step 2.
+
+<VerifiedTag value="Verified" />
 
 <div className="lambdatest__codeblock">
   <CodeBlock className="language-bash">

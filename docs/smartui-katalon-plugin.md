@@ -29,6 +29,7 @@ import NewTag from '../src/component/newTag';
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -54,6 +55,149 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       })
     }}
 ></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/smartui-katalon-plugin/"
+    },
+    "headline": "SmartUI Plugin for Katalon Studio",
+    "description": "Integrate TestMu AI SmartUI with Katalon Studio to perform visual regression testing directly in your test automation workflows.",
+    "url": "https://www.testmuai.com/support/docs/smartui-katalon-plugin/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "SmartUI",
+    "keywords": [
+      "Visual Regression",
+      "Visual Regression Testing Guide",
+      "Visual Regression Test Automation"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 2: Start your Katalon Instance from terminal",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "/Applications/Katalon\\ Studio\\ Enterprise.app/Contents/MacOS/katalon"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Via Project Settings:",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "PROJECT_TOKEN = \"project_token...\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Minimal Example:",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Groovy",
+        "text": "// Start SmartUI Server\n// Replace 'buildName' with your desired build name (optional)\nCustomKeywords.'com.katalon.plugin.keyword.smartui.SmartKeywords.startServer'('My Katalon Build', '', '')\n\n// Open Browser\nWebUI.openBrowser('')\nWebUI.navigateToUrl('https://lambdatest.com')\n\n// Capture Snapshot with SmartUI\n// The string parameter is the snapshot name (will appear in SmartUI Dashboard)\nCustomKeywords.'com.katalon.plugin.keyword.smartui.SmartKeywords.takeSnapshot'('Homepage Snapshot')\n\n// Stop SmartUI Server\nCustomKeywords.'com.katalon.plugin.keyword.smartui.SmartKeywords.stopServer'()\n\n// Close Browser\nWebUI.closeBrowser()"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Using a Config File (config.json):",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JSON",
+        "text": "{\n  \"deviceName\": \"Chrome Desktop\",\n  \"platform\": \"Windows\",\n  \"fullPage\": true,\n  \"ignoreBoxes\": {\n    \"xpath\": [\n      \"//*[@class='dynamic-ad']\",\n      \"//*[@id='timestamp']\"\n    ]\n  }\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Then use it in your test",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Groovy",
+        "text": "CustomKeywords.'com.katalon.plugin.keyword.smartui.SmartKeywords.startServer'('Build v1.0', 'config.json', '')"
+      }
+    ],
+    "dateModified": "2026-06-09T15:09:24+05:30"
+  }) }}
+/>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Configuration & Usage",
+      "description": "Integrate TestMu AI SmartUI with Katalon Studio to perform visual regression testing directly in your test automation workflows.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Create a SmartUI Project",
+          "text": "Go to SmartUI Projects Page. Click New Project. Select platform as CLI (for Katalon integration). Enter project name, approvers, and tags (optional). Click Submit and copy your Project Token from the dashboard. Your Project Token will be used to authenticate screenshot uploads to SmartUI.",
+          "url": "https://www.testmuai.com/support/docs/smartui-katalon-plugin/#step-1-create-a-smartui-project"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Start your Katalon Instance from terminal",
+          "text": "Run the following command in the terminal to start the Katalon instance.",
+          "url": "https://www.testmuai.com/support/docs/smartui-katalon-plugin/#step-2-start-your-katalon-instance-from-terminal"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Set Environment Variable",
+          "text": "In your Katalon project, set the PROJECT_TOKEN environment variable: Go to Project > Settings > Plugins > SmartUI Integration. Here you may set your project token",
+          "url": "https://www.testmuai.com/support/docs/smartui-katalon-plugin/#step-3-set-environment-variable"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Step 4: Configure SmartUI in Your Test Case",
+          "text": "Use the provided custom keywords to start, capture, and stop SmartUI sessions.",
+          "url": "https://www.testmuai.com/support/docs/smartui-katalon-plugin/#step-4-configure-smartui-in-your-test-case"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 5,
+          "name": "Step 5: Advanced Configuration (Optional)",
+          "text": "You can pass additional configuration via a JSON file or inline parameters. Then use it in your test: Use ignoreBoxes to exclude dynamic elements (ads, timestamps) from comparison. Use selectBoxes to compare only specific regions (e.g., main content area).",
+          "url": "https://www.testmuai.com/support/docs/smartui-katalon-plugin/#step-5-advanced-configuration-optional"
+        }
+      ]
+    }
+  ]) }}
+/>
 
 The **Katalon Studio SmartUI Plugin** integrates [Katalon Studio](https://www.katalon.com/) with [<BrandName /> SmartUI](/support/docs/smart-visual-regression-testing/), enabling **visual regression testing** directly inside your test automation workflows.
 
@@ -98,6 +242,8 @@ With this plugin, you can:
 
 Run the following command in the terminal to start the Katalon instance.
 
+<VerifiedTag value="Verified" />
+
 ```bash
 /Applications/Katalon\ Studio\ Enterprise.app/Contents/MacOS/katalon
 ```
@@ -111,6 +257,8 @@ In your Katalon project, set the `PROJECT_TOKEN` environment variable:
 1. Go to **Project > Settings > Plugins > SmartUI Integration**.
 2. Here you may set your project token
 
+<VerifiedTag value="Verified" />
+
 ```bash
 PROJECT_TOKEN = "project_token..."
 ```
@@ -122,6 +270,8 @@ PROJECT_TOKEN = "project_token..."
 Use the provided custom keywords to start, capture, and stop SmartUI sessions.
 
 #### Minimal Example:
+
+<VerifiedTag value="Verified" />
 
 ```groovy
 // Start SmartUI Server
@@ -151,6 +301,8 @@ You can pass additional configuration via a JSON file or inline parameters.
 
 #### Using a Config File (`config.json`):
 
+<VerifiedTag value="Verified" />
+
 ```json
 {
   "deviceName": "Chrome Desktop",
@@ -166,6 +318,8 @@ You can pass additional configuration via a JSON file or inline parameters.
 ```
 
 Then use it in your test:
+
+<VerifiedTag value="Verified" />
 
 ```groovy
 CustomKeywords.'com.katalon.plugin.keyword.smartui.SmartKeywords.startServer'('Build v1.0', 'config.json', '')

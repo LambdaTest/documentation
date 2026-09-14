@@ -43,6 +43,64 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/test-case-deduplication/"
+    },
+    "headline": "Find and Remove Duplicate Test Cases in Test Manager",
+    "description": "Scan a Test Manager project for duplicate test cases with AI, review each match side by side, and delete the duplicates you no longer need.",
+    "url": "https://www.testmuai.com/support/docs/test-case-deduplication/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Test Manager",
+    "keywords": [
+      "test case deduplication",
+      "duplicate test cases",
+      "review duplicates"
+    ],
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "dateModified": "2026-09-09T20:28:09+05:30"
+  }) }}
+/>
+
+
 # Find and Remove Duplicate Test Cases
 
 Large test repositories accumulate duplicates over time, exact copies created by different people, and near-duplicates that describe the same behaviour in slightly different words. Once a project holds a few thousand test cases, finding them by hand stops being practical.
@@ -222,14 +280,14 @@ The footer bar tracks your selection across the whole scan, not just the group y
 Test Manager deletes the marked test cases and returns you to the project's test cases list.
 
 :::note
-Deletion is permanent. Deleted test cases cannot be restored, and there is no archive to recover them from. Review your marked selection in the footer breakdown before you commit.
+Deletion is permanent. Deleted test cases cannot be restored. Review your marked selection in the footer breakdown before you commit.
 :::
 
 ---
 
 ## Limitations
 
-- **Deletion cannot be undone.** There is no archive or restore for test cases removed through the duplicate scan.
+- **Deletion cannot be undone.** The duplicate scan deletes the test cases you mark. There is no archive step in this flow, and removed test cases cannot be restored.
 - **Each scan costs 5 credits**, charged only when the scan produces at least one duplicate group. The cost is flat, regardless of how many test cases are scanned or how many duplicates are found.
 - **One scan at a time.** A project can only run a single duplicate scan at once.
 - **A scope needs at least two test cases** before a scan can start.
