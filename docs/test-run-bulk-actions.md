@@ -129,9 +129,11 @@ All three actions work within a single project. Test runs cannot be moved or cop
 ## Select test runs
 
 1. Open your project in Test Manager and go to the **Test Runs** tab.
-2. Choose **All Test Runs** or a folder in the **Folders** panel, and use search or filters to narrow the list if needed.
+2. In the **Folders** panel, choose the section to work in. Use search or filters to narrow the list if needed.
+   - **All Test Runs** lists test runs across all folders in the project.
+   - A folder lists only the test runs in that folder.
 3. Select the test runs you want to act on using their checkboxes. The number of selected runs is shown above the list.
-4. To select every run in the current view, click **Select all *N* test runs** above the list, where *N* is the number of runs in the view.
+4. To select every test run in the chosen section, use the checkbox at the top of the list, or click **Select all *N* test runs**. From **All Test Runs**, this selects runs across all folders. From a folder, it selects only the runs in that folder.
 5. With runs selected, the bulk action options **Move test runs**, **Copy test runs**, and **Delete test runs** appear above the list. Hover over an option to see its name.
 
 <!-- screenshot: Test Runs list with multiple runs selected, showing the selected count, the Select all test runs link, and the Move test runs, Copy test runs, and Delete test runs options -->
