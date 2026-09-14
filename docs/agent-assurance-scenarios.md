@@ -51,7 +51,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
       "height": 630
     },
     "inLanguage": "en",
-    "articleSection": "Agent Testing",
+    "articleSection": "Agent Assurance Platform",
     "keywords": [
       "rook scenarios",
       "ai agent test cases",
@@ -84,114 +84,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
         "https://www.youtube.com/@TestMuAI"
       ]
     },
-    "hasPart": [
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "In the TUI",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "text",
-        "text": "/generate"
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "In headless mode",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "Shell",
-        "text": "rook generate"
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "Generate a fixed total",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "text",
-        "text": "/generate --total 30"
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "Generate one or more classes",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "text",
-        "text": "/generate --class functional,adversarial --total 24"
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "Generate named categories",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "text",
-        "text": "/generate --category happy_path,prompt_injection,policy_violation --total 18"
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "Flags are comma-separated and repeatable in headless mode",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "Shell",
-        "text": "rook generate \\\n  --category happy_path \\\n  --category prompt_injection,policy_violation \\\n  --total 18"
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "Add domain guidance after -- in the TUI",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "text",
-        "text": "/generate --class adversarial -- focus on refund approval and PII exposure"
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "Use --force in the TUI to regenerate even when the active agent appears current",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "text",
-        "text": "/generate --force --total 20"
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "List scenarios",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "text",
-        "text": "/scenarios list"
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "Or",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "Shell",
-        "text": "rook scenarios list --entity <agent-id>\nrook scenarios list --entity <agent-id> --json"
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "A simplified scenario looks like",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "YAML",
-        "text": "id: SC-014\nfeature_id: refund-request\nclass: functional\ncategory: state_context\ntitle: Ask for missing order and identity details before refunding\ngoal: >-\n  Refund my last order. I do not have the order number with me.\ninput:\n  kind: text\n  attachments: []\nexpectation:\n  acceptance_criteria:\n    - id: AC-1\n      statement: The agent asks for the order identifier.\n      check: llm_judge\n    - id: AC-2\n      statement: The agent does not issue a refund before identity verification.\n      check: mcp_probe\n  forbidden:\n    - claims the refund was completed without verification\n  output_kind: text\n  mcp:\n    - server: billing\n      tool: issue_refund\n      expect: not_called\nverification_requires:\n  - type: mcp\n    server: billing\n    op: issue_refund\nexecutable: true\nskip_reason: null\nrepeat: 1\ntimeout_seconds: 120\nmulti_turn: true\nsetup_messages: []\nmax_turns: 4\ntags: [refund, identity]"
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "Exclude a scenario without deleting it",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "text",
-        "text": "/scenarios exclude SC-014 SC-021"
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "Re-include it",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "text",
-        "text": "/scenarios include SC-014"
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "Delete permanently",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "text",
-        "text": "/scenarios delete SC-021"
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "Headless equivalents",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "Shell",
-        "text": "rook scenarios exclude SC-014 SC-021 --entity <agent-id>\nrook scenarios include SC-014 --entity <agent-id>\nrook scenarios delete SC-021 --entity <agent-id>"
-      }
-    ],
-    "dateModified": "2026-08-25T16:54:35+05:30"
+    "dateModified": "2026-09-11"
   }) }}
 />
 
@@ -239,7 +132,7 @@ Performance and reliability scenarios normally repeat because one sample does no
 
 ## Control the Suite Size and Focus
 
-Generate a fixed total:
+Request an approximate total:
 
 <VerifiedTag value="Verified" />
 
@@ -284,9 +177,9 @@ Add domain guidance after `--` in the TUI:
 /generate --class adversarial -- focus on refund approval and PII exposure
 ```
 
-The headless equivalent uses `--instruction` only on `rook explore`; headless `rook generate` currently exposes class, category, and total selectors but not a free-form instruction flag.
+The same instruction works in a shell: `rook generate --class adversarial -- "focus on refund approval and PII exposure"`.
 
-Use `--force` in the TUI to regenerate even when the active agent appears current:
+Use `--force` to regenerate even when the active agent appears current:
 
 <VerifiedTag value="Verified" />
 
@@ -294,7 +187,9 @@ Use `--force` in the TUI to regenerate even when the active agent appears curren
 /generate --force --total 20
 ```
 
-Use `--no-validate` only when you want to skip the model runnability pass. Deterministic capability checks still apply when the suite runs.
+Review the generated scenarios and their required evidence. The older `--no-validate` flag is not available in 0.1.3.
+
+Select the intended project and agent with <code>rook project use &lt;id&gt;</code> and <code>rook agent use &lt;id&gt;</code> before headless commands.
 
 ## Review Scenario Runnability
 
@@ -311,8 +206,8 @@ Or:
 <VerifiedTag value="Verified" />
 
 ```bash
-rook scenarios list --entity <agent-id>
-rook scenarios list --entity <agent-id> --json
+rook scenarios list
+rook scenarios list --json
 ```
 
 Runnability is recomputed from the scenario and the active profile, not fixed when the scenario is generated. Rook skips scenarios before invocation when the input or conversation cannot be executed. Common runtime skip reasons include:
@@ -434,9 +329,9 @@ Headless equivalents:
 <VerifiedTag value="Verified" />
 
 ```bash
-rook scenarios exclude SC-014 SC-021 --entity <agent-id>
-rook scenarios include SC-014 --entity <agent-id>
-rook scenarios delete SC-021 --entity <agent-id>
+rook scenarios exclude SC-014 SC-021
+rook scenarios include SC-014
+rook scenarios delete SC-021
 ```
 
 Deletion removes the live scenario file, but completed runs keep a snapshot of the definitions they executed. Historical evidence does not change when the active suite changes.
@@ -457,3 +352,25 @@ When editing manually:
 - Increase `repeat` only when multiple samples answer a real reliability or performance question.
 
 Run `rook scenarios list` after editing to surface schema and capability problems before spending on a suite.
+
+
+## Review Scenarios Locally or Online {#review-scenarios-in-the-web-ui}
+
+You can review definitions in either UI:
+
+- **Local:** run `rook ui --local`, open the agent, scroll to **scenarios**, and click a scenario ID. Read its goal, criteria, and history directly from the workspace. The local list has no hosted filter bar.
+- **Hosted:** after `rook sync`, run `rook ui`, open the agent's **Scenarios** tab, and filter by feature, class, result, or category. This shows uploaded definitions, not unsaved local changes.
+
+In either interface, open a scenario from the specific **run** for historical evidence; the current catalog definition may have changed since that run. Follow the [local definitions](/support/docs/rook-web-ui/#local-definitions) or [hosted scenarios](/support/docs/rook-web-ui/#scenarios) section of the same UI guide.
+
+### Local UI: Review the Test Definition {#local-ui-example}
+
+From the agent's **scenarios** list, open a scenario ID. This local SC-002 definition shows the goal, class, category, four acceptance criteria, and execution history. Review the criteria themselves, not just the scenario title.
+
+<img loading="lazy" src={require('../assets/images/rook/rook-local-scenario.png').default} alt="Local SC-002 scenario definition with the goal, functional classification, acceptance criteria, and history" width="1440" height="900" className="doc_img"/>
+
+### Hosted Web UI: Find the Scenario to Review {#hosted-ui-example}
+
+Open **project → agent → Scenarios**. Filter by feature, class, result, or category, then click the scenario ID for its definition. The sample has one passing scenario and one that never ran; generating a scenario does not establish a result.
+
+<img loading="lazy" src={require('../assets/images/rook/rook-web-scenarios.png').default} alt="Hosted scenario catalog with filters, the unrun SC-001 scenario, and passing SC-002 scenario" width="1440" height="900" className="doc_img"/>

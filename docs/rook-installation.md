@@ -65,7 +65,7 @@ import { BRAND_URL } from '@site/src/component/BrandName';
       "height": 630
     },
     "inLanguage": "en",
-    "articleSection": "Agent Testing",
+    "articleSection": "Agent Assurance Platform",
     "keywords": [
       "install rook cli",
       "rook homebrew",
@@ -98,86 +98,15 @@ import { BRAND_URL } from '@site/src/component/BrandName';
         "https://www.youtube.com/@TestMuAI"
       ]
     },
-    "hasPart": [
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "Install With Homebrew",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "Shell",
-        "codeRepository": "https://github.com/LambdaTest/rook",
-        "text": "brew tap LambdaTest/rook https://github.com/LambdaTest/rook.git\nbrew install lambdatest/rook/rook"
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "To upgrade a Homebrew installation",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "Shell",
-        "text": "brew update\nbrew upgrade lambdatest/rook/rook"
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "Install With the Shell Installer",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "Shell",
-        "text": "curl -fsSL https://raw.githubusercontent.com/LambdaTest/rook/main/install.sh | bash"
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "Pass installer options after bash -s --",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "Shell",
-        "text": "# Install the current production release explicitly.\ncurl -fsSL https://raw.githubusercontent.com/LambdaTest/rook/main/install.sh \\\n  | bash -s -- --version 0.1.1\n\n# Link the executable into another writable directory.\ncurl -fsSL https://raw.githubusercontent.com/LambdaTest/rook/main/install.sh \\\n  | bash -s -- --dir \"$HOME/bin\""
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "Run the installer with --help to list its supported options",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "Shell",
-        "text": "curl -fsSL https://raw.githubusercontent.com/LambdaTest/rook/main/install.sh \\\n  | bash -s -- --help"
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "Install With npm",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "Shell",
-        "text": "npm install -g @testmuai/rook"
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "To upgrade an npm installation",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "Shell",
-        "text": "npm update -g @testmuai/rook"
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "Verify the Installation",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "Shell",
-        "text": "command -v rook\nrook --version\nrook doctor"
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "Then enter an agent repository and start the TUI",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "Shell",
-        "text": "cd your-project\nrook"
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "Release assets follow this pattern",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "text",
-        "text": "rook-<version>-darwin-arm64.tar.gz\nrook-<version>-darwin-x64.tar.gz\nrook-<version>-linux-arm64.tar.gz\nrook-<version>-linux-x64.tar.gz"
-      }
-    ],
-    "dateModified": "2026-09-07T12:29:55+05:30"
+    "dateModified": "2026-09-11"
   }) }}
 />
 
 # Install Rook
 
 Rook is publicly available from the [LambdaTest/rook repository](https://github.com/LambdaTest/rook). Install it with Homebrew, the shell installer, or npm. Use one method per machine so an older executable from another method does not take precedence on `PATH`.
+
+The latest public release checked on September 11, 2026 was [v0.1.3](https://github.com/LambdaTest/rook/releases/tag/v0.1.3). The npm package, Homebrew formula, and GitHub release archive agree on this version.
 
 ## Prerequisites
 
@@ -239,9 +168,9 @@ Pass installer options after `bash -s --`:
 <VerifiedTag value="Verified" />
 
 ```bash
-# Install the current production release explicitly.
+# Pin the release verified for this guide.
 curl -fsSL https://raw.githubusercontent.com/LambdaTest/rook/main/install.sh \
-  | bash -s -- --version 0.1.1
+  | bash -s -- --version 0.1.3
 
 # Link the executable into another writable directory.
 curl -fsSL https://raw.githubusercontent.com/LambdaTest/rook/main/install.sh \
@@ -278,6 +207,18 @@ npm update -g @testmuai/rook
 ```
 
 The npm package installs the `rook` executable and publishes platform runtime packages with it. If npm reports an engine error, update the Node.js version used to run npm to Node.js 22 or newer.
+
+### Repair an npm 0.1.1 or 0.1.2 installation
+
+The 0.1.3 release fixes the npm update path. If an older install cannot update normally, use the public registry explicitly:
+
+```bash
+npm install -g @testmuai/rook@0.1.3 \
+  --registry=https://registry.npmjs.org \
+  --@testmuai:registry=https://registry.npmjs.org
+```
+
+Then run <code>command -v rook</code> and <code>rook --version</code> to make sure another installation is not shadowing it.
 
 ## Verify the Installation
 
@@ -331,3 +272,24 @@ If a public install path still fails, [open a Rook issue](https://github.com/Lam
 ## Next Step
 
 Continue with [How to Get Started With Agent Assurance](/support/docs/agent-assurance-quickstart/).
+
+
+## Open the Local or Hosted UI {#select-the-web-ui-environment}
+
+The public CLI includes the local viewer: from an agent workspace, run `rook ui --local`. No separate frontend installation or browser login is needed. Open the printed loopback URL and keep the serving process running. It reads existing workspace files; follow the quickstart first if you have not created any test data.
+
+For shared review, open [rook.lambdatest.com/projects](https://rook.lambdatest.com/projects), or use <code>rook ui</code>. Public packages default to <code>ROOK_ENV=prod</code>. You do not need a private package or a source-repository installation. If an older CLI opens a different address, use the Projects link above and update to the current public release.
+
+See [local versus hosted review](/support/docs/rook-web-ui/#choose-your-ui) for the data, sign-in, and sharing differences.
+
+### Local UI: What You Can Open After Setup {#local-ui-example}
+
+The local viewer starts at **agents**. This screenshot shows a workspace populated by the quickstart; installing Rook alone does not create an agent or test run. If your workspace is empty, complete discovery before expecting this inventory.
+
+<img loading="lazy" src={require('../assets/images/rook/rook-local-agents.png').default} alt="Local Rook agents page after the quickstart has populated a sample workspace" width="1440" height="400" className="doc_img"/>
+
+### Hosted Web UI: Your Recorded Projects {#hosted-ui-example}
+
+The hosted UI opens at **Projects** after browser sign-in. The example project already contains synchronized test data. An empty organization shows onboarding instead; no separate Web UI package needs to be installed.
+
+<img loading="lazy" src={require('../assets/images/rook/rook-web-projects.png').default} alt="Hosted Projects view with an existing synchronized documentation project" width="1440" height="224" className="doc_img"/>

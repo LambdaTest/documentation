@@ -59,7 +59,7 @@ import { BRAND_URL } from '@site/src/component/BrandName';
       "height": 630
     },
     "inLanguage": "en",
-    "articleSection": "Agent Testing",
+    "articleSection": "Agent Assurance Platform",
     "keywords": [
       "rook features",
       "ai agent assurance",
@@ -91,7 +91,7 @@ import { BRAND_URL } from '@site/src/component/BrandName';
         "https://www.youtube.com/@TestMuAI"
       ]
     },
-    "dateModified": "2026-09-04T12:50:18+05:30"
+    "dateModified": "2026-09-11"
   }) }}
 />
 
@@ -141,12 +141,12 @@ Rook owns a fixed lifecycle while each profile supplies the scripts that reach t
 |---|---|---|
 | <code>prepare</code> | Once per run | Authenticate, seed fixtures, or warm a cache. |
 | <code>open</code> | Before each scenario | Create a session or reset scenario state. |
-| <code>execute</code> | Once per turn | Send the goal and return <code>output</code>. Required. |
+| <code>execute</code> | Once per turn | Send the goal and return <code>agent_reply</code>. Required. |
 | <code>close</code> | After each scenario | End a session or release a resource. |
 | <code>collect</code> | After <code>close</code> | Fetch traces, calls, logs, usage, or delayed evidence. |
 | <code>judge</code> | After evidence is available | Rook evaluates the recorded response and evidence. |
 
-Use <code>--phases</code> or <code>--skip</code> to run a contiguous part of the lifecycle. Use <code>--run &lt;id&gt;</code> to continue the same run later—for example, call the agent now and collect a trace after the logging pipeline catches up. See [Lifecycle Phases and Hooks](/support/docs/rook-hooks-and-phases/) for the complete script contract and state model.
+Use <code>--phases</code> or <code>--skip</code> to run a contiguous part of the lifecycle. Use <code>--run &lt;id&gt;</code> to continue the same run later—for example, call the agent now and collect a trace after the logging pipeline catches up. See [Lifecycle Phases and Hooks](/support/docs/rook-profiles-and-hooks/#lifecycle) for the complete script contract and state model.
 
 ## Incremental by Default
 
@@ -196,4 +196,23 @@ Judges must not mutate the state they are verifying. If the only available check
 
 Start <code>rook</code> for the TUI. Slash commands, completion, <code>/help</code>, and <code>/guide</code> are derived from the same command registry used by shell invocations. This keeps flags and subcommands consistent across both surfaces.
 
-Long-running commands emit structured progress. In the TUI, Rook renders active subagents and parallel scenario lanes; in automation, <code>--json</code> emits machine-readable events and <code>--verbose</code> exposes tool activity and credit use.
+Long-running commands emit structured progress. In the TUI, Rook renders active subagents and parallel scenario lanes; in automation, <code>--json</code> returns a command-specific JSON document and <code>--verbose</code> exposes tool activity and credit use.
+
+
+## Local and Hosted UIs {#hosted-web-ui}
+
+Use `rook ui --local` for the current workspace's agents, profiles, features, scenarios, runs, and evidence, including unsynchronized work and `--test` runs. Its agent page groups the lists together; it has no separate hosted Versions or Insights tabs.
+
+Use `rook ui` for synchronized projects, versions, profile specifications, scenario filters, shared runs, and Insights in the hosted Web UI. Browser sign-in and project access are required. Create and execute tests in the CLI in both cases; see the [local and hosted screenshot walkthrough](/support/docs/rook-web-ui/#choose-your-ui).
+
+### Local UI: Inspect a Discovered Behavior {#local-ui-example}
+
+Open **agent → features → feature ID**. The local F-002 page shows the user story, expected behavior, validation rules, and edge cases extracted for outage triage. Use these requirements to decide which scenarios are still needed.
+
+<img loading="lazy" src={require('../assets/images/rook/rook-local-feature.png').default} alt="Local F-002 feature showing the outage-triage user story, expected behavior, validation rules, and edge cases" width="1440" height="900" className="doc_img"/>
+
+### Hosted Web UI: Review the Same Feature With Your Team {#hosted-ui-example}
+
+After synchronization, open **project → agent → Features** and click the feature ID. The dialog shows the recorded behavior and source materials. A feature definition describes intended behavior; it is not proof that a test has passed.
+
+<img loading="lazy" src={require('../assets/images/rook/rook-web-feature-details.png').default} alt="Hosted F-002 feature dialog showing expected behavior, validation rules, edge cases, and source files" width="1440" height="900" className="doc_img"/>

@@ -1,20 +1,5 @@
-# /docs Command
+# Rook documentation has moved
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+This topic is now part of a consolidated guide. Read [agent-assurance-command-reference](https://www.testmuai.com/support/docs/agent-assurance-command-reference/#docs).
 
-Use /docs to print and open the public Rook repository.
-
-## Syntax
-
-~~~text
-/docs
-/docs --no-open
-~~~
-
-The shell form is rook docs with the same option.
-
---no-open prints the URL without launching a browser. The command does not require a selected project, invoke an agent, or spend credits.
-
-## Related Commands
-
-[/help](/support/docs/rook-command-help/) · [/guide](/support/docs/rook-command-guide/) · [/update](/support/docs/rook-command-update/)
+For the complete plain-Markdown guide, open [agent-assurance-command-reference.md](https://www.testmuai.com/support/docs/agent-assurance-command-reference.md).

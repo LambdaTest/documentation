@@ -40,7 +40,7 @@ Performance and reliability scenarios normally repeat because one sample does no
 
 ## Control the Suite Size and Focus
 
-Generate a fixed total:
+Request an approximate total:
 
 ```text
 /generate --total 30
@@ -75,15 +75,17 @@ Add domain guidance after `--` in the TUI:
 /generate --class adversarial -- focus on refund approval and PII exposure
 ```
 
-The headless equivalent uses `--instruction` only on `rook explore`; headless `rook generate` currently exposes class, category, and total selectors but not a free-form instruction flag.
+The same instruction works in a shell: `rook generate --class adversarial -- "focus on refund approval and PII exposure"`.
 
-Use `--force` in the TUI to regenerate even when the active agent appears current:
+Use `--force` to regenerate even when the active agent appears current:
 
 ```text
 /generate --force --total 20
 ```
 
-Use `--no-validate` only when you want to skip the model runnability pass. Deterministic capability checks still apply when the suite runs.
+Review the generated scenarios and their required evidence. The older `--no-validate` flag is not available in 0.1.3.
+
+Select the intended project and agent with rook project use &lt;id&gt; and rook agent use &lt;id&gt; before headless commands.
 
 ## Review Scenario Runnability
 
@@ -96,8 +98,8 @@ List scenarios:
 Or:
 
 ```bash
-rook scenarios list --entity <agent-id>
-rook scenarios list --entity <agent-id> --json
+rook scenarios list
+rook scenarios list --json
 ```
 
 Runnability is recomputed from the scenario and the active profile, not fixed when the scenario is generated. Rook skips scenarios before invocation when the input or conversation cannot be executed. Common runtime skip reasons include:
@@ -209,9 +211,9 @@ Delete permanently:
 Headless equivalents:
 
 ```bash
-rook scenarios exclude SC-014 SC-021 --entity <agent-id>
-rook scenarios include SC-014 --entity <agent-id>
-rook scenarios delete SC-021 --entity <agent-id>
+rook scenarios exclude SC-014 SC-021
+rook scenarios include SC-014
+rook scenarios delete SC-021
 ```
 
 Deletion removes the live scenario file, but completed runs keep a snapshot of the definitions they executed. Historical evidence does not change when the active suite changes.
@@ -232,3 +234,20 @@ When editing manually:
 - Increase `repeat` only when multiple samples answer a real reliability or performance question.
 
 Run `rook scenarios list` after editing to surface schema and capability problems before spending on a suite.
+
+## Review Scenarios Locally or Online {#review-scenarios-in-the-web-ui}
+
+You can review definitions in either UI:
+
+- **Local:** run `rook ui --local`, open the agent, scroll to **scenarios**, and click a scenario ID. Read its goal, criteria, and history directly from the workspace. The local list has no hosted filter bar.
+- **Hosted:** after `rook sync`, run `rook ui`, open the agent's **Scenarios** tab, and filter by feature, class, result, or category. This shows uploaded definitions, not unsaved local changes.
+
+In either interface, open a scenario from the specific **run** for historical evidence; the current catalog definition may have changed since that run. Follow the [local definitions](/support/docs/rook-web-ui/#local-definitions) or [hosted scenarios](/support/docs/rook-web-ui/#scenarios) section of the same UI guide.
+
+### Local UI: Review the Test Definition {#local-ui-example}
+
+From the agent's **scenarios** list, open a scenario ID. This local SC-002 definition shows the goal, class, category, four acceptance criteria, and execution history. Review the criteria themselves, not just the scenario title.
+
+### Hosted Web UI: Find the Scenario to Review {#hosted-ui-example}
+
+Open **project → agent → Scenarios**. Filter by feature, class, result, or category, then click the scenario ID for its definition. The sample has one passing scenario and one that never ran; generating a scenario does not establish a result.

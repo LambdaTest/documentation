@@ -47,6 +47,8 @@ Rook can identify agents from evidence including:
 
 Discovery does not invent missing facts. If a tool's write behavior cannot be established, Rook records it as unknown rather than guessing from its name.
 
+Before discovery, use the public service default ROOK_ENV=prod and select a project with rook project. Use the same account and project when opening the [hosted Web UI](https://rook.lambdatest.com/projects).
+
 ## Give Exploration Extra Context
 
 Put free-form guidance after `--`:
@@ -59,7 +61,7 @@ In headless mode:
 
 ```bash
 rook explore . \
---instruction "focus on the refund approval threshold and identity checks"
+-- "focus on the refund approval threshold and identity checks"
 ```
 
 The instruction guides the discovery model, but it does not widen the filesystem scope.
@@ -99,7 +101,7 @@ Then run:
 
 If no structural agent signal is found, Rook can ask whether to register the directory anyway. A documentation-only exploration generates requirement-grounded scenarios, but it has less evidence about implementation details, tool behavior, and side effects than a source-backed exploration.
 
-You still need an invocation profile that reaches the deployed agent. See [Configure Rook Profiles](/support/docs/agent-assurance-profiles/).
+You still need an invocation profile that reaches the deployed agent. See [Configure Rook Profiles](/support/docs/rook-profiles-and-hooks/#add-a-profile-interactively).
 
 ## Explore a GitHub Repository
 
@@ -159,25 +161,24 @@ Interactive commands:
 ```text
 /agent
 /agent use <id>
-/agent rm <id>
 ```
 
 Headless commands:
 
 ```bash
-rook agent list
-rook agent list --json
+rook agent
+rook agent
 rook agent use <id>
 ```
 
-`/agent rm` forgets the agent and everything stored below its project record. Review the target ID carefully before using it.
+The current command lists or selects agents; it does not provide an `rm` subcommand.
 
 ## Explore All Discovered Agents in Headless Mode
 
-The interactive flow asks which candidates to register. For automation, use `--all`:
+Select a project before discovery. For automation, supply focused guidance and explicit, reviewed permissions; the older `--all` flag is not available:
 
 ```bash
-rook explore . --all --json
+rook explore . --json -- "discover the agents in this reviewed workspace"
 ```
 
 Use `--allow` only for a narrowly reviewed tool call:
@@ -193,3 +194,19 @@ rook explore . --allow 'bash(npm test)'
 Run `/explore` again when prompts, tools, policies, skills, or agent source change. Rook compares the current files with the stored index and updates the existing record, so it keeps your scenario and run history.
 
 After exploration, run `/generate` to refresh scenarios. Rook shows a plan and names the stale prerequisite before it spends credits.
+
+## Review Discovered Agents Locally or Online
+
+Run `rook ui --local` to see the current workspace's **agents** list. Open an agent and scroll through its findings, features, profiles, scenarios, and runs. This does not require publishing the discovery result.
+
+For team review, sync the reviewed definitions and run `rook ui`. In the hosted Web UI, open project → agent → **Summary**, **Versions**, or **Features**. Those screens show uploaded records, not your latest unsynchronized exploration. Neither UI performs discovery or edits the definition. See [local agents](/support/docs/rook-web-ui/#local-agent) and [hosted agent configuration](/support/docs/rook-web-ui/#agent-configuration) in the same walkthrough.
+
+### Local UI: Discovery Findings {#local-ui-example}
+
+Open **agents → triage-service**. The local agent page shows the discovered description, findings, profile, and feature list. In this sample, findings identify the unknown-ticket error path and an unreachable search tool; review these before generating more tests.
+
+### Hosted Web UI: Synchronized Discovery {#hosted-ui-example}
+
+Open **project → agent → Summary**. **Context** identifies the source files used for discovery; **View Full Spec** and **View findings** open uploaded artifacts when available. Changes from a new exploration are not visible here until synchronized.
+
+The capture's **1%** and empty tool detail list are [known display issues](/support/docs/rook-web-ui/#screenshot-display-notes), not evidence that discovery or the smoke run failed.

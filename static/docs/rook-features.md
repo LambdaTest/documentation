@@ -44,12 +44,12 @@ Rook owns a fixed lifecycle while each profile supplies the scripts that reach t
 |---|---|---|
 | prepare | Once per run | Authenticate, seed fixtures, or warm a cache. |
 | open | Before each scenario | Create a session or reset scenario state. |
-| execute | Once per turn | Send the goal and return output. Required. |
+| execute | Once per turn | Send the goal and return agent_reply. Required. |
 | close | After each scenario | End a session or release a resource. |
 | collect | After close | Fetch traces, calls, logs, usage, or delayed evidence. |
 | judge | After evidence is available | Rook evaluates the recorded response and evidence. |
 
-Use --phases or --skip to run a contiguous part of the lifecycle. Use --run &lt;id&gt; to continue the same run later—for example, call the agent now and collect a trace after the logging pipeline catches up. See [Lifecycle Phases and Hooks](/support/docs/rook-hooks-and-phases/) for the complete script contract and state model.
+Use --phases or --skip to run a contiguous part of the lifecycle. Use --run &lt;id&gt; to continue the same run later—for example, call the agent now and collect a trace after the logging pipeline catches up. See [Lifecycle Phases and Hooks](/support/docs/rook-profiles-and-hooks/#lifecycle) for the complete script contract and state model.
 
 ## Incremental by Default
 
@@ -99,4 +99,18 @@ Judges must not mutate the state they are verifying. If the only available check
 
 Start rook for the TUI. Slash commands, completion, /help, and /guide are derived from the same command registry used by shell invocations. This keeps flags and subcommands consistent across both surfaces.
 
-Long-running commands emit structured progress. In the TUI, Rook renders active subagents and parallel scenario lanes; in automation, --json emits machine-readable events and --verbose exposes tool activity and credit use.
+Long-running commands emit structured progress. In the TUI, Rook renders active subagents and parallel scenario lanes; in automation, --json returns a command-specific JSON document and --verbose exposes tool activity and credit use.
+
+## Local and Hosted UIs {#hosted-web-ui}
+
+Use `rook ui --local` for the current workspace's agents, profiles, features, scenarios, runs, and evidence, including unsynchronized work and `--test` runs. Its agent page groups the lists together; it has no separate hosted Versions or Insights tabs.
+
+Use `rook ui` for synchronized projects, versions, profile specifications, scenario filters, shared runs, and Insights in the hosted Web UI. Browser sign-in and project access are required. Create and execute tests in the CLI in both cases; see the [local and hosted screenshot walkthrough](/support/docs/rook-web-ui/#choose-your-ui).
+
+### Local UI: Inspect a Discovered Behavior {#local-ui-example}
+
+Open **agent → features → feature ID**. The local F-002 page shows the user story, expected behavior, validation rules, and edge cases extracted for outage triage. Use these requirements to decide which scenarios are still needed.
+
+### Hosted Web UI: Review the Same Feature With Your Team {#hosted-ui-example}
+
+After synchronization, open **project → agent → Features** and click the feature ID. The dialog shows the recorded behavior and source materials. A feature definition describes intended behavior; it is not proof that a test has passed.
