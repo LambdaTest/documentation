@@ -129,13 +129,15 @@ All three actions work within a single project. Test runs cannot be moved or cop
 ## Select test runs
 
 1. Open your project in Test Manager and go to the **Test Runs** tab.
-2. Select the test runs you want to act on using the checkboxes in the list. To select every run in the current view, use the select-all checkbox at the top of the list.
-3. Once runs are selected, the bulk action options become available: **Move test runs**, **Copy test runs**, and **Delete test runs**. Hover over an option to see its name.
+2. Choose **All Test Runs** or a folder in the **Folders** panel, and use search or filters to narrow the list if needed.
+3. Select the test runs you want to act on using their checkboxes. The number of selected runs is shown above the list.
+4. To select every run in the current view, click **Select all *N* test runs** above the list, where *N* is the number of runs in the view.
+5. With runs selected, the bulk action options **Move test runs**, **Copy test runs**, and **Delete test runs** appear above the list. Hover over an option to see its name.
 
-<!-- screenshot: Test Runs list with multiple runs selected and the bulk action options shown -->
+<!-- screenshot: Test Runs list with multiple runs selected, showing the selected count, the Select all test runs link, and the Move test runs, Copy test runs, and Delete test runs options -->
 
 :::note
-A single bulk action covers up to **1000 test runs**. If a select-all covers more than 1000 runs, the action is rejected and you are told about the limit. Narrow the selection or work in batches.
+A single bulk action covers up to **1000 test runs**. If you use **Select all *N* test runs** and the selection comes to more than 1000 runs, the action is rejected and you are told about the limit. Narrow the list with a folder, search, or filters, or work in batches.
 :::
 
 ---
@@ -283,7 +285,7 @@ See [RBAC Roles and Permissions](/support/docs/rbac-roles-and-permissions/) for 
 
 ## Limitations
 
-- **Up to 1000 test runs per action.** Larger selections, including a select-all that covers more than 1000 runs, need to be split into batches.
+- **Up to 1000 test runs per action.** Larger selections, including **Select all *N* test runs** when the view holds more than 1000 runs, need to be split into batches.
 - **Within one project only.** Test runs cannot be moved or copied to another project.
 - **One bulk action per project at a time.** A second bulk action in the same project is blocked until the first finishes.
 - **Delete skips runs that are In Progress.** To delete them, wait until they finish, then delete them again.
