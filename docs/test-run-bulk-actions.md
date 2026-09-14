@@ -160,9 +160,7 @@ Instead of using the bulk action options, you can drag your selection straight o
 
    To drop the runs without making any change, close the dialog.
 
-<!-- screenshot: selected test runs being dragged onto a folder in the Folders panel
-<img loading="lazy" src={require('../assets/images/test-run/bulk-actions/bulk-drag-to-folder.png').default} alt="Dragging selected test runs onto a folder in the Folders panel" className="doc_img"/>
--->
+<img loading="lazy" src={require('../assets/images/test-run/bulk-actions/bulk-drag-to-folder.gif').default} alt="Dragging selected test runs onto a folder and choosing whether to move or copy them" className="doc_img"/>
 
 <!-- screenshot: dialog asking whether to move or copy the selected test runs to the folder
 <img loading="lazy" src={require('../assets/images/test-run/bulk-actions/bulk-drag-move-or-copy-dialog.png').default} alt="Dialog to choose whether to move or copy the selected test runs to the destination folder" className="doc_img"/>
@@ -186,9 +184,6 @@ You can also drag the selected runs onto a folder and choose **Move**. See [Drag
 <img loading="lazy" src={require('../assets/images/test-run/bulk-actions/bulk-move-folder-picker.png').default} alt="Choosing a destination folder to move test runs" className="doc_img"/>
 -->
 
-<!-- screenshot: confirmation after test runs are moved
-<img loading="lazy" src={require('../assets/images/test-run/bulk-actions/bulk-move-confirmation.png').default} alt="Confirmation after test runs are moved" className="doc_img"/>
--->
 
 What to expect:
 
@@ -247,23 +242,6 @@ Copies are created in the background, so you can keep working while they run.
 :::tip
 You can copy the same test run more than once, and you can copy a run while someone is executing it. The copy takes only the run's structure, so results recorded during the copy never reach it.
 :::
-
-### Cancel a copy
-
-You can cancel a bulk copy while it is running.
-
-- Runs that have not finished copying are stopped, and their partial copies are removed.
-- Runs that had already finished copying are kept.
-- The summary tells you how many runs were stopped and how many had already finished.
-- As soon as the cancel completes, the project is free for another bulk action.
-
-If the copy finishes just before your cancel reaches it, the cancel does nothing and reports every run as already finished.
-
-<!-- screenshot: cancelling a bulk copy of test runs
-<img loading="lazy" src={require('../assets/images/test-run/bulk-actions/bulk-copy-cancel.png').default} alt="Cancelling a bulk copy of test runs" className="doc_img"/>
--->
-
----
 
 ## Delete test runs
 
