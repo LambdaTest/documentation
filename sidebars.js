@@ -2513,9 +2513,10 @@ module.exports = {
         label: "Test Runs",
         items: [
           "test-run-creation-and-management",
-          "track-issues-in-test-runs",
+          "test-run-bulk-actions",
           "sync-test-instance",
-          "test-instance-audit-logs"
+          "test-instance-audit-logs",
+          "track-issues-in-test-runs"
         ],
       },
       {
