@@ -158,7 +158,9 @@ Instead of using the bulk action options, you can drag your selection straight o
 
    To drop the runs without making any change, close the dialog.
 
-<img loading="lazy" src={require('../assets/images/test-run/bulk-actions/bulk-drag-to-folder.gif').default} alt="Dragging selected test runs onto a folder and choosing whether to move or copy them" className="doc_img"/>
+<video class="right-side" width="100%" autoPlay muted loop playsInline id="vid" aria-label="Dragging selected test runs onto a folder and choosing whether to move or copy them">
+<source src= {require('../assets/images/test-run/bulk-actions/bulk-drag-to-folder.mp4').default} type="video/mp4" />
+</video>
 
 Dragging behaves exactly like the bulk action options. The same rules apply as described in [Move test runs](#move-test-runs) and [Copy test runs](#copy-test-runs), including the 1000-run limit.
 
