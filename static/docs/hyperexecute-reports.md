@@ -51,6 +51,7 @@ frameworkName: testng
 You can now use **glob-style wildcards `(**)`** in the location field of `partialReports` to dynamically match nested folders and custom report paths. This is especially useful when your test reports are generated inside directories that include date stamps, environment names, or other runtime variables.
 
 Example:
+
 ```yaml title="hyperexecute.yaml"
 partialReports:
 location: reports/**/cucumber/

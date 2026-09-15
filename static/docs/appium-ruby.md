@@ -334,6 +334,7 @@ cd android
 ```
 
 - Refresh the gem bundles through given command
+
 ```bash
 gem uninstall -aIx
 ```

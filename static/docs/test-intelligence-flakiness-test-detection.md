@@ -123,6 +123,7 @@ Go to the `Test Intelligence` section in `Org Product Preferences` under `Organi
 
 **Test Capabilities**
     For instance, if you execute a test suite for the login functionality of your application, the test group name could be designated as `Login` in the capabilities of your test.
+
 ```
 const capability = {
 "browserName": "Chrome",

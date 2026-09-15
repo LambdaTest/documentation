@@ -167,6 +167,7 @@ For notification or location permission popups, handle them before they appear u
 ### Dismissing Popups Without Close Buttons (Mobile)
 
 On mobile apps, use:
+
 ```
 dismiss dialog
 ```

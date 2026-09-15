@@ -49,6 +49,7 @@ $env:SMART_GIT="true"
 ### Comparison Flow
 
 1. **Build Execution**:
+
 ```bash
 # Enable Smart Git
 export SMART_GIT=true

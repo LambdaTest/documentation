@@ -28,6 +28,7 @@ cd Nemo-Lambdatest-sample
 ```
 
 Install the required dependencies:
+
 ```bash
 npm install
 ```

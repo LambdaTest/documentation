@@ -20,11 +20,13 @@ If you face any problems executing tests with SmartUI-CLI `versions >= v4.x.x`, 
 If you haven't already installed SmartUI CLI, install it using npm:
 
 **Global Installation (Recommended):**
+
 ```bash
 npm install -g @lambdatest/smartui-cli
 ```
 
 **Local Installation:**
+
 ```bash
 npm install @lambdatest/smartui-cli
 ```
@@ -195,26 +197,31 @@ You can get the `results.json` file using one of the following methods:
 Use the `--fetch-results` flag when executing your SmartUI tests:
 
 **For Capture Command:**
+
 ```bash
 npx smartui capture urls.json --config config.json --fetch-results results.json
 ```
 
 **For Exec Command:**
+
 ```bash
 npx smartui --config .smartui.json exec --fetch-results results.json -- <execution-command>
 ```
 
 **Example with Capture:**
+
 ```bash
 npx smartui capture urlTest.json --config config.json --fetch-results results.json
 ```
 
 **Example with Exec:**
+
 ```bash
 npx smartui --config .smartui.json exec --fetch-results results.json -- npm test
 ```
 
 If no filename is specified, results will be saved as `results.json` by default:
+
 ```bash
 npx smartui capture urls.json --config config.json --fetch-results
 ```
@@ -224,6 +231,7 @@ npx smartui capture urls.json --config config.json --fetch-results
 You can also fetch the results JSON file directly from the SmartUI API using the [Fetch Build Screenshots endpoint](https://swagger-api-support.lambdatest.com/smartui/index.html#/Fetch%20Build%20Screenshots).
 
 **API Endpoint:**
+
 ```
 GET /build/screenshots
 ```
@@ -234,6 +242,7 @@ GET /build/screenshots
 - `build_name` (optional): Build name (if both build_id and build_name are provided, build_id takes priority)
 
 **Example API Request:**
+
 ```bash
 curl -X GET "https://api.lambdatest.com/smartui/build/screenshots?project_id=YOUR_PROJECT_ID&build_id=YOUR_BUILD_ID" \
 -H "Authorization: Bearer YOUR_ACCESS_TOKEN"

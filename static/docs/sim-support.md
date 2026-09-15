@@ -107,6 +107,7 @@ driver.execute_script(
 )
 ```
 Sample Response:
+
 ``` JSON
 {
 "simOptions": {

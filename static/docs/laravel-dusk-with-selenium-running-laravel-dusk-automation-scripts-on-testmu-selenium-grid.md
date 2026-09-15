@@ -38,6 +38,7 @@ Complete the following steps before you begin automation testing with Laravel Du
 1. Download **PHP 8.1 or later** (current LTS recommended). Use the following commands in the terminal:
 
    * **MacOS:** Previous versions of **MacOS** have **PHP** installed by default. For the latest **MacOS** versions starting with **Monterey**, download and install **PHP** manually:
+
 ```bash
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 brew install php
@@ -47,6 +48,7 @@ brew install php
 2. Download **composer** in the project directory ([Linux/MacOS](https://getcomposer.org/download/), [Windows](https://getcomposer.org/doc/00-intro.md#installation-windows)).
 
    **Note:** To use the **composer** command directly, it either should have been downloaded in the project directory or should be accessible globally which can be done by the command below:
+
 ```bash
 mv composer.phar /usr/local/bin/composer
 ```
@@ -61,6 +63,7 @@ cd php-laravel-dusk-todo
 ```
 
 Install the composer dependencies:
+
 ```bash
 composer install
 composer dump-autoload
@@ -71,11 +74,13 @@ composer dump-autoload
 Configure your credentials to connect to the TestMu AI Selenium Grid.
 
 Create .env from the example file:
+
 ```bash
 cp .env.example .env
 ```
 
 Update your TestMu AI credentials in the newly created .env file:
+
 ```bash
 LT_USERNAME="<Your_Username>"
 LT_ACCESS_KEY="<Your_Access_Key>"

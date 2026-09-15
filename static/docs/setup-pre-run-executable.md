@@ -96,11 +96,13 @@ Replace the placeholder values in each script file before use.
 Following are the contents of the sample file:
 
 **For Installing:**
+
 ```bash
 sudo security add-trusted-cert -d -r trustRoot -k /Library/Keychains/System.keychain /Users/ltuser/Downloads/{CERTIFICATE-FILE-NAME}
 ```
 
 **For Deleting:**
+
 ```bash
 sudo security delete-certificate -c "Local Certificate"
 ```
@@ -115,10 +117,12 @@ Replace the placeholder values in each script file before use.
 Following are the contents of the sample file:
 
 **For Installing:**
+
 ```bash
 Import-Certificate -FilePath "C:\Users\ltuser\Downloads\{NAME-OF-THE-CERTIFICATE}" -CertStoreLocation 'Cert:\LocalMachine\Root' -Verbose
 ```
 **For Deleting:**
+
 ```bash
 Get-ChildItem Cert:\CurrentUser\Root\{THUMBPRINT-OF-THE-CERTIFICATE} | Remove-Item
 ```

@@ -70,6 +70,7 @@ lambdatestAccessKey = System.getenv("LT_ACCESS_KEY");
 ### Python
 
 - For **PyTest** & **unittest**:
+
 ```
 lambdatest_username = os.environ["LT_USERNAME"]
 lambdatest_access_key = os.environ["LT_ACCESS_KEY"]

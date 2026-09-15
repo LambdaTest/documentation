@@ -84,6 +84,9 @@ Variable usage can be done using the `{{` prefix to list all existing variables 
 
 ```bash
 Enter {{username}} in user input field
+
+<VerifiedTag value="Verified" />
+
 ```
 This will input the value of the username variable in the user input field.
 
@@ -97,6 +100,9 @@ JSON variables are generated from the response of an API used via the slash comm
 
 ```bash
 assert {{api_variable.response.email}} is 'john.doe@example.com'
+
+<VerifiedTag value="Verified" />
+
 ```
 Here is a video to further explain the JSON variables usage:
 

@@ -24,11 +24,13 @@ The first step is to create a project with the application in which we will comb
 Install required NPM modules for `TestMu AI SmartUI CLI` globally or in your project:
 
 **Global Installation (Recommended):**
+
 ```bash
 npm install -g @lambdatest/smartui-cli
 ```
 
 **Local Installation:**
+
 ```bash
 npm install @lambdatest/smartui-cli
 ```
@@ -170,6 +172,7 @@ You can also use the following options with the capture command:
 - `--fetch-results [filename]` - Fetch and save results to JSON file
 
 **Example with additional options:**
+
 ```bash
 npx smartui capture urls.json --config .smartui.json --buildName "Release-v1.0" --fetch-results results.json
 ```

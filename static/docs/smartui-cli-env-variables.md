@@ -106,6 +106,8 @@ $env:HTTP_PROXY="http://:@:/"
 
 #### HTTPS_PROXY:
 
+<VerifiedTag value="Verified" />
+
 <Tabs className='docs__val' groupId='language'>
 <TabItem value='MacOS/Linux-5' label='MacOS/Linux' default>
 
@@ -136,6 +138,8 @@ $env:HTTPS_PROXY="https://:@:/"
 
 To enable SmartUI CLI Debug mode, use the following environment variable.
 
+<VerifiedTag value="Verified" />
+
 <Tabs className='docs__val' groupId='language'>
 <TabItem value='MacOS/Linux-6' label='MacOS/Linux' default>
 
@@ -165,6 +169,8 @@ $env:LT_SDK_DEBUG="true"
 
 Set the following variable to true, to stop the use of cookies captured automatically. The default is set to `false`.
 
+<VerifiedTag value="Verified" />
+
 <Tabs className='docs__val' groupId='language'>
 <TabItem value='MacOS/Linux-7' label='MacOS/Linux' default>
 
@@ -192,6 +198,8 @@ $env:SMARTUI_DO_NOT_USE_CAPTURED_COOKIES="true"
 ## 8. Setting Server Address
 
 For SDK integrations (non-Selenium), set the SmartUI server address:
+
+<VerifiedTag value="Verified" />
 
 <Tabs className='docs__val' groupId='language'>
 <TabItem value='MacOS/Linux-8' label='MacOS/Linux' default>

@@ -106,10 +106,12 @@ Run a traceroute if performance remains slow after applying the above tips.
 If you still experience latency after applying these optimizations, reach out to us on our **in-app chat support** or email [automationsupport@testmuai.com](mailto:automationsupport@testmuai.com). Include a screenshot of the traceroute output:
 
 For Windows:
+
 ```
 tracert hub.lambdatest.com
 ```
 For Linux/Mac:
+
 ```
 traceroute hub.lambdatest.com
 ```

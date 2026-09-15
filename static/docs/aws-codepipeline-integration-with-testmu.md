@@ -14,6 +14,7 @@ TestMu AI integration with AWS CodePipeline will help you perform automated cros
    Be aware of your TestMu AI authentication credentials, i.e., your TestMu AI username, access key,a and HubURL. You need to set them up as your environment variables. You can retrieve them from your [TestMu AI automation dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/) by clicking on the key icon near the help button.
 
    - For Linux/Mac:
+
 ```
 $ export LT_USERNAME= {YOUR_LAMBDATEST_USERNAME}
 $ export LT_ACCESS_KEY= {YOUR_LAMBDATEST_ACCESS_KEY}

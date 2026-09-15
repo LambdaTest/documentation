@@ -38,10 +38,12 @@ Complete the following steps before you start Ruby automation testing with Selen
 1. Install Ruby and gem on your local system. Follow these instructions to install on different operating systems.
    * For **Windows**, download from the [Ruby Installer for Windows](https://rubyinstaller.org/downloads/).
    * For **Linux** or **Ubuntu**, run a simple apt command like below:
+
 ```bash
 sudo apt-get install ruby-full
 ```
    * For **macOS**, run a [Homebrew](https://brew.sh/) command like this:
+
 ```bash
 brew install ruby
 ```
@@ -58,6 +60,7 @@ cd Ruby-UnitTest-Selenium
 ```
 
 Install project dependencies:
+
 ```bash
 bundle install
 ```

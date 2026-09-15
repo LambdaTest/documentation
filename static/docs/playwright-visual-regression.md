@@ -153,16 +153,19 @@ npm i
 3. Set up the TestMu AI credentials by using the commands below in the terminal.The account details are available on your [TestMu AI Profile](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/details/profile) page.
 
 For macOS:
+
 ```bash
 export LT_USERNAME=LT_USERNAME
 export LT_ACCESS_KEY=LT_ACCESS_KEY
 ```
 For Linux:
+
 ```bash
 export LT_USERNAME=LT_USERNAME
 export LT_ACCESS_KEY=LT_ACCESS_KEY
 ```
 For Windows:
+
 ```bash
 set LT_USERNAME=LT_USERNAME
 set LT_ACCESS_KEY=LT_ACCESS_KEY

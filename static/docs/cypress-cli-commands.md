@@ -6,6 +6,7 @@ The TestMu AI-Cypress CLI provides a set of commands to streamline and enhance y
 
 ## General Syntax
 To use any command in the TestMu AI-Cypress CLI, follow this basic syntax:
+
 ```bash
 lambdatest-cypress <command> [options]
 ```

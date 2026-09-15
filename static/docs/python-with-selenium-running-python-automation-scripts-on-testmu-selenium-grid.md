@@ -22,6 +22,7 @@ cd python-selenium-sample
 ```
 
 Install the Selenium driver using pip:
+
 ```bash
 pip install selenium
 export PYTHONWARNINGS="ignore:Unverified HTTPS request"   //Disable ssl warning

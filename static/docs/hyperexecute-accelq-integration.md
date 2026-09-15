@@ -47,6 +47,7 @@ Agent.property file is a type of file that gets generated when you configures th
 - You can also find the same at the location `(ACCELQAgent/AgentInstances//agent.properties)` in your local system.
 
 #### Sample File
+
 ```bash
 # name of the agent, which will appear in your Run modal
 # must be a unique name across all projects in the tenant

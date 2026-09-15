@@ -324,6 +324,7 @@ Standard discovery may fail with complex NUnit tag setups.
 
 ### Solution
 Uses NUnit console to explore feature tests by tags.
+
 ```yaml
 & "C:\PROGRA~2\NUnit.org\nunit-console\nunit3-console.exe" "<dll_path>" --where="cat==$tag" --explore
 ```

@@ -44,10 +44,12 @@ We will be performing a demonstration by using the Protractor framework
     * A [Git or GitHub](https://github.com/) repository
     * Download and install node.js and node package manager or npm.
     To install node.js with homebrew, use the below command.
+
 ```
 $ brew install node
 ```
     * If you have npm already installed, you may want to upgrade it to the latest version. Here the code you can run in your terminal to upgrade npm.
+
 ```
 npm install npm@latest -g
 ```
@@ -55,6 +57,7 @@ npm install npm@latest -g
 * TestMu AI Authentication Credentials
 
     * Be aware of your TestMu AI authentication credentials, i.e., your TestMu AI username, access key, and HubURL. You need to set them up as your environment variables. You can retrieve them from your TestMu AI automation dashboard by clicking on the key icon near the help button.
+
 ```
 $ export LT_USERNAME=<YOUR_LAMBDATEST_USERNAME>
 $ export LT_ACCESS_KEY=<YOUR_LAMBDATEST_ACCESS_KEY>

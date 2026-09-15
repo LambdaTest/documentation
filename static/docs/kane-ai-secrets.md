@@ -31,8 +31,12 @@ Once created, you can now reference any secret variables in your test steps usin
 > To use a previously created variable in any subsequent step or test case, reference the variable using the same `{{` syntax. This will list down all existing variables for this test.
 
 Format:
+
 ```bash
 use the value of {{secrets.user.email}} in the email text field
+
+<VerifiedTag value="Verified" />
+
 ```
 
 ## How to Update your Secrets?

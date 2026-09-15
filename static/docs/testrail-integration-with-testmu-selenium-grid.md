@@ -11,6 +11,7 @@ TestRail also offers integration with TestMu AI to help you perform automated cr
 1. Global Dependencies
     * Make sure you have [Maven installed](https://maven.apache.org/install.html).
     * You could also install Maven with Homebrew with the below command:
+
 ```
 $ install maven
 ```
@@ -19,11 +20,13 @@ $ install maven
 
     * Clone our [GitHub repository for Selenium & TestRail](https://github.com/LambdaTest/Java-TestNG-Selenium-TestRail).
     * Ensure that the required packages are made available using the below command:
+
 ```
 $ cd Java-TestNG-Selenium-TestRail
 ```
 
     * We recommend, you execute the below command for evaluating any outdated dependencies. As a best practice, it is always suggested to go for a verification check & perform any update, if needed, prior editing your pom.xml in order to avoid any code incompatibility.
+
 ```
 mvn versions:display-dependency-updates
 ```
@@ -53,6 +56,7 @@ TestRailHandler trh = new TestRailHandler(testrailusername,testrailpassword, tes
 ```
 
 **Step 3:**  Then call it’s method as below:
+
 ```
 trh.updateResultToTestRail(executionstatus, run_id, testcase_id);
 ```
@@ -60,6 +64,7 @@ trh.updateResultToTestRail(executionstatus, run_id, testcase_id);
 **Step 4:**  In above arguments execution status is numeric number that denotes pass, fail statuses defined in TestRail. Example: Pass -> 1, Fail -> 5 etc.
 
 **Step 5:**Use the below command to execute a single test.
+
 ```
 //To run single test
 $ mvn test -P single

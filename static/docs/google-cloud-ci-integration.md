@@ -15,12 +15,14 @@ Before integrating Google Cloud CI with TestMu AI, make sure you have the follow
 2. To integrate test suites with Google Cloud CI, you would need to set your TestMu AI username and access key in environment variables. You can get them from [Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/) by clicking on the Key button from the top-right.
 
 *   **For Windows:**
+
 ```
 set LT_USERNAME="YOUR_LAMBDATEST_USERNAME"
 set LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
 ```
 
 *   **For Mac/Linux:**
+
 ```
 export LT_USERNAME="YOUR_LAMBDATEST_USERNAME"
 export LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"

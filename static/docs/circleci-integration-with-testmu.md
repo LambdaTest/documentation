@@ -58,6 +58,7 @@ To perform your karma tests with TestMu AI, you would need the following things 
    - A Git or GitHub repository
    - Download and install node.js and node package manager or npm.
     To install node.js with homebrew, use the below command.
+
 ```
 $ brew install node
 ```

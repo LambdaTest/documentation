@@ -58,12 +58,14 @@ Extractions read a value from the page and store it in the run output's `final_s
 **Always use the explicit `store X as 'name'` syntax.** Vague phrasing like "tell me" or "read" does not reliably capture data.
 
 ❌ Bad: agent may see it but won't persist it:
+
 ```
 "go to example.com and tell me the price"
 "read the page title"
 ```
 
 ✅ Good: value is captured in `final_state`:
+
 ```
 "go to example.com, store the price of the first item as 'price'"
 "store the page title as 'page_title'"

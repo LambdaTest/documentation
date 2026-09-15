@@ -127,6 +127,7 @@ Go to Pipeline Settings > Variables. Add the following variables:
 - `LT_ACCESS_KEY`: Your TestMu AI access key.
 
 ### Step 4: Setup your Workflow
+
 ```yaml title="azure-pipelines.yml"
 trigger:
 - '*'

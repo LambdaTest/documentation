@@ -28,6 +28,7 @@ cd angular-karma-sample
 ```
 
 Install the required dependencies and Karma CLI globally:
+
 ```bash
 npm install -g karma-cli
 npm install
@@ -74,6 +75,7 @@ karma start karma.conf.js
 ```
 
 **Parallel tests:**
+
 ```bash
 ng test
 ```

@@ -216,6 +216,7 @@ concurrency: 10
 
 ### `testDiscovery`
 This is used to locate or discover relevant tests via class names, filters, file names, etc.
+
 ```yaml
 testDiscovery:
 type: raw
@@ -225,6 +226,7 @@ command: grep 'public class' src/test/java/hyperexecute/*.java | awk '{print$3}'
 
 It contains the following attributes:
 #### `type`
+
 ```yaml
 #(Recommended). When we are passing a command to discover tests.
 type: raw   #or
@@ -289,6 +291,7 @@ This setup helps to ease the discovery process and makes it more efficient, espe
 
 #### `command`
 The command that fetches the list of test scenario that would be further executed using the value passed in `testRunnerCommand`
+
 ```yaml
 command: grep 'public class' src/test/java/hyperexecute/*.java | awk '{print$3}'
 ```
@@ -493,6 +496,7 @@ pre:
 ```
 
 If you are using Java-based frameworks, you can also set the encoding via `JAVA_TOOL_OPTIONS`:
+
 ```yaml
 env:
 JAVA_TOOL_OPTIONS: "-Dfile.encoding=UTF-8"
@@ -614,6 +618,7 @@ frameworkName: testng
 ```
 
 Set `defaultReport` as false in the [`framework`](/support/docs/hyperexecute-yaml-version0.2/#framework) if you are using [`YAML version 0.2`](/support/docs/hyperexecute-yaml-version0.2/) and you want to generate a report using `partialReports` as shown below.
+
 ```yaml
 framework:
 name: maven/testng
@@ -624,6 +629,7 @@ defaultReports: false
 You can now use **glob-style wildcards `(**)`** in the location field of `partialReports` to dynamically match nested folders and custom report paths. This is especially useful when your test reports are generated inside directories that include date stamps, environment names, or other runtime variables.
 
 Example:
+
 ```yaml title="hyperexecute.yaml"
 partialReports:
 location: reports/**/cucumber/
@@ -683,6 +689,7 @@ jobLabel: ['chrome', 'linux', 'low']
 
 ### `mergeArtifacts`
 It is used to combine the artifacts created under each task to one.
+
 ```yaml
 mergeArtifacts: true
 ```
@@ -790,6 +797,7 @@ runson: linux
 ### `captureScreenRecordingForScenarios`
 If this key is set to true, it will record whole scenario execution, and then video is accessible from your HyperExecute dashboard.
 This can be majorly used for non selenium based tests to have the recorded video of the whole scenario.
+
 ```yaml
 captureScreenRecordingForScenarios: true
 ```
@@ -871,6 +879,7 @@ Set status of scenario based on framework tests status. For instance, if you run
 
 ### `testSuiteTimeout`
 It is used to set the timeout on all scenario  stages in a task. If defined, your complete test suite should get executed within this time. Its max value is 150 minutes.  If you want to increase this time beyond the default maximum limit of 150 minutes, you need to contact the support team.
+
 ```yaml
 testSuiteTimeout: 30
 ```
@@ -1022,12 +1031,14 @@ linkValidity: 5
 
 ### `stripParentDirectory`
 When mergeArtifacts is true, providing this flag will strip the parent directory from all the downloaded artifacts and place the artifacts in the base path.
+
 ```yaml
 stripParentDirectory: true
 ```
 
 ### `generateArtifactAfterEveryStage`
 With this flag artifacts will be generated after every stage,without this flag artifacts are generated after every task and avoid any overrides for artifacts of the same name.
+
 ``` bash
 generateArtifactAfterEveryStage: true
 ```
@@ -1129,6 +1140,7 @@ ProjectName: "Cypress_Project"
 
 ### `shell`
 Shell defines the shell/terminal type on which all of the commands defined under pre, post, testRunnerCommand mentioned in yaml should run. If shell is also defined under PreDirectives then for PreDirectives command that shell would be used.
+
 ```yaml
 shell: bash
 ```
@@ -1172,11 +1184,13 @@ STATIC_DATA_1_<ParameterName>
 > **NOTE:-** In the above syntax, **1** represents the file passed in the yaml file and not the data object within the file.
 
 For instance, to access data from **file1.json**, the syntax would be:
+
 ```
 STATIC_DATA_1_Username
 ```
 
 Similarly, to access the data from the second file i.e **file2.json**:
+
 ```
 STATIC_DATA_2_Username
 ```
@@ -1197,19 +1211,23 @@ values: [<value1>, <value2>, ...]
 
 #### Configuration
 - **path (required) :** Specifies the path to the JSON file containing the data. Example:
+
 ```yaml
 path: data/file/abc.json
 ```
 - **index (optional) :** Specifies the JSON key on which the indexing is required. Example:
+
 ```yaml
 index: username
 ```
 - **filters (optional) :** Applies filtering on the JSON objects before indexing. Either `query` or `attributes` can be used, if both are mentioned then the `attributes` will have higher precedence.
   - **query:** These are used for more complex filtering operations. If both attributes and queries are provided, attributes take precedence. This means that if there’s a conflict, the filter based on attributes will be used. Example:
+
 ```yaml
 query: (username == "abc" or username == "bcd")
 ```
   - **attributes:** These are key-value pairs used for filtering. You can provide a list of attributes with their corresponding values, and the filtering will include only those JSON objects where each specified attribute matches one of the provided values. Attributes are applied with an "AND" logic between different keys and an "OR" logic within the same key. Example:
+
 ```yaml
 attributes:
 - key: username
@@ -1324,6 +1342,7 @@ Test cases related to `username: "abc"` will be split between **VM1** and **VM3*
 
 #### Use Cases
 - **Filtering and Indexing :** When both filtering and indexing are required, filters are applied first, followed by indexing of the filtered results.
+
 ```yaml
 dataJsonBuilder:
 path: data/file/abc.json
@@ -1337,6 +1356,7 @@ values: ["abc", "bcd"]
 ```
 
 - **Only Filtering :** If only filtering is required without indexing, omit the index key. In this case, no indexing will occur, and each JSON object will be distributed in a round-robin manner among parallel executions.
+
 ```yaml
 dataJsonBuilder:
 path: data/file/abc.json
@@ -1345,6 +1365,7 @@ query: (username == "abc" or username == "bcd")
 ```
 
 - **Only Indexing :** If only indexing is required without filtering, omit the filters section.
+
 ```yaml
 dataJsonBuilder:
 path: data/file/abc.json
@@ -1358,6 +1379,7 @@ If strict is set to true in yaml then the variables used in yaml must be present
 
 ### `cacheTestURL`
 It enables you to cache static test files in the browser.
+
 ```yaml
 cacheTestURL: true
 ```
@@ -1373,6 +1395,7 @@ if your test loads jquery static library multiple times and for some reason it i
 > This flag is deprecated, instead use [`globalPost`](/support/docs/deep-dive-into-hyperexecute-yaml/#globalpost)
 
 It is used to run commands after the job has finished. Currently only local directive is allowed, means that all the commands would be run on the same host on which HyperExecute CLI was run. Running commands in `afterAll` on HyperExecute VMs(remote commands) is not yet supported. Users will have access to all the artifacts when these commands would be run.
+
 ```yaml
 afterAll:
 local:
@@ -1388,6 +1411,7 @@ For instance you want to further process the artifacts and create a custom PDF. 
 > This flag is deprecated, instead use [`globalPre`](/support/docs/deep-dive-into-hyperexecute-yaml/#globalpre)
 
 BeforeAll is used for running pre operations like discovery and payload_update. It can be executed either on local system or on hyperexecute beforeAll VM.
+
 ```yaml
 beforeAll:
 location: local/remote
@@ -1428,6 +1452,7 @@ buildName : "name=${name}"
 If you prefer to set `buildPrefix` and `buildName` values through the command-line interface (CLI), the following commands can be used:
 
 To set `buildPrefix`:
+
 ```yaml
 --labels buildPrefix --vars "name=xyz"
 ```
@@ -1468,6 +1493,7 @@ These commands utilize `--labels` to specify the parameter being configured and 
 
 ### `captureCSVResult`
 By enabling the boolean yaml directive `​​captureCSVResult`,  you can get the statistics of the time taken by Selenium Commands run across the job. It will gather the time taken by the Selenium commands, calculate the aggregated info for the statistics like Average, 95, 99 percentiles etc and publish it in the form of a separate artifact.
+
 ```yaml
 captureCSVResult: true
 ```
@@ -1488,6 +1514,7 @@ Here is a brief information about these headers:
 7. **P99**: 99th percentile of the time taken by the Selenium command across the whole job
 
 Here is the sample code showing how we can use the above mentioned Lambda hooks:
+
 ```yaml
 ((JavascriptExecutor) driver).executeScript("lambda-start-timer=t1");
 
@@ -1577,6 +1604,7 @@ Commands:
 
 ### `tunnel`
 Indicates whether to enable a tunnel for accessing your applications which are  locally hosted or behind a firewall. The cli will launch a tunnel as sub process if tunnel is set to true
+
 ```yaml
 tunnel: true
 ```

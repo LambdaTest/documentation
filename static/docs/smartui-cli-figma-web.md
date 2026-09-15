@@ -279,11 +279,13 @@ The first step is to create a project with the application in which we will comb
 Install required NPM modules for `TestMu AI SmartUI CLI` globally or in your project:
 
 **Global Installation (Recommended):**
+
 ```bash
 npm install -g @lambdatest/smartui-cli
 ```
 
 **Local Installation:**
+
 ```bash
 npm install @lambdatest/smartui-cli
 ```
@@ -441,10 +443,12 @@ $env:FIGMA_TOKEN="123456#1234abcd-****-****-****-************"
 ```
 
 4. Create your figma baseline
+
 ```bash
 npx smartui upload-figma-web designs.json --buildName=FigmaBaseline2
 ```
 5. Execute your functional test script (Selenium Nodejs in this sample)
+
 ```
 npx smartui --config web-config.json exec --buildName=web-build -- node figma-web-local.js
 ```
@@ -476,6 +480,7 @@ npx smartui upload-figma-web designs.json --buildName "v1.0.0"
 Figma-uploaded screenshots automatically have `.png` appended (e.g., `homepage.png`), so your SDK screenshots must match:
 
 **In your SDK code:**
+
 ```javascript
 // ❌ Wrong - will not match Figma screenshot
 smartuiSnapshot(driver, "homepage");
@@ -502,6 +507,7 @@ cy.smartuiSnapshot("homepage.png");
 ```
 
 **Configuration Example:**
+
 ```json
 {
 "figma": {
@@ -527,6 +533,7 @@ This ensures that Figma screenshots (e.g., `homepage.png`) match SDK screenshots
 Figma-uploaded screenshots automatically have `.png` appended (e.g., `homepage.png`), so your SDK screenshots must match:
 
 **In your SDK code:**
+
 ```javascript
 // ❌ Wrong - will not match Figma screenshot
 smartuiSnapshot(driver, "homepage");
@@ -553,6 +560,7 @@ cy.smartuiSnapshot("homepage.png");
 ```
 
 **Configuration Example:**
+
 ```json
 {
 "figma": {

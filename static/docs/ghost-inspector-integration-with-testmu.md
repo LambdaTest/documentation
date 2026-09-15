@@ -86,6 +86,7 @@ capabilities = {
 ```
 
 In the string format, it will be represented as:
+
 ```bash
 **"browserName='chrome' version='72.0' platform='Windows 10'"**
 ```

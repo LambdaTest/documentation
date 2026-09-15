@@ -20,6 +20,7 @@ Complete these steps before running your first Lettuce Selenium test.
 2. Verify that **pip** is installed in your system. Install **pip** from [pip documentation](https://pip.pypa.io/en/stable/installation/).
 3. Download the latest **Selenium Client** and its **WebDriver bindings** from the [official website](https://www.selenium.dev/downloads/).
 4. Install **virtualenv** to isolate the build from other setups and ensure tests run with the specified module versions.
+
 ```bash
 pip install virtualenv
 ```
@@ -34,12 +35,14 @@ cd sample-lettuce
 ```
 
 Create a virtual environment and activate it:
+
 ```bash
 virtualenv venv
 source venv/bin/activate
 ```
 
 Install the required packages:
+
 ```bash
 pip install -r requirements.txt
 ```
@@ -79,6 +82,7 @@ Use the TestMu AI [Capabilities Generator](https://www.testmuai.com/capabilities
 Execute the Lettuce test from the command line.
 
 Navigate to the `tests` directory and run:
+
 ```bash
 cd tests //navigate to tests directory
 python lt_sample_todo.py

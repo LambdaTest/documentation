@@ -58,16 +58,19 @@ Use the TestMu AI [Capabilities Generator](https://www.testmuai.com/capabilities
 Build and execute the Reqnroll tests on the TestMu AI platform.
 
 Clean temporary files:
+
 ```bash
 make clean
 ```
 
 Build the automation project:
+
 ```bash
 make build
 ```
 
 Run the Reqnroll tests:
+
 ```bash
 make reqnroll-automation-test
 ```

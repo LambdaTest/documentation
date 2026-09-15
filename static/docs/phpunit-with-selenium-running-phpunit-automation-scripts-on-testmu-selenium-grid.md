@@ -52,6 +52,7 @@ Complete the following steps before you begin automation testing with Selenium a
 1. Install the latest **PHP** on your system. Use the following commands in the terminal:
 
    * **MacOS:** Previous versions of **MacOS** have **PHP** installed by default. For the latest **MacOS** versions starting with **Monterey**, download and install **PHP** manually:
+
 ```bash
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 brew install php
@@ -61,6 +62,7 @@ brew install php
 2. Download **composer** in the project directory ([Linux/MacOS](https://getcomposer.org/download/), [Windows](https://getcomposer.org/doc/00-intro.md#installation-windows)).
 
    **Note:** To use the **composer** command directly, it either should have been downloaded in the project directory or should be accessible globally which can be done by the command below:
+
 ```bash
 mv composer.phar /usr/local/bin/composer
 ```
@@ -75,6 +77,7 @@ cd Php-PhpUnit-Selenium
 ```
 
 Install the composer dependencies:
+
 ```bash
 composer install
 ```
@@ -119,11 +122,13 @@ composer single
 ```
 
 To run parallel tests:
+
 ```bash
 composer parallel
 ```
 
 To run both single and parallel tests at once:
+
 ```bash
 composer test
 ```

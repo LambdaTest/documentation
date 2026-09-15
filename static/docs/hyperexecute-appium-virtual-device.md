@@ -99,6 +99,7 @@ https://github.com/LambdaTest/hyperexecute-appium-testng/blob/android-emulator/s
 ```
 
 ### Step 4: Configure YAML and Execute your Script
+
 ```yaml reference title="android-emulator.yaml"
 https://github.com/LambdaTest/hyperexecute-appium-testng/blob/android-emulator/yaml/hyp-android-emulator.yaml
 ```

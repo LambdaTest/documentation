@@ -17,6 +17,7 @@ Complete these steps before running your first Robot Framework Selenium test.
 2. Verify that **pip** is installed in your system. Install **pip** from [official pip documentation](https://pip.pypa.io/en/stable/installation/).
 3. Download the latest **Selenium Client** and its **WebDriver bindings** from the [official website](https://www.selenium.dev/downloads/).
 4. Install **virtualenv** to isolate the build from other setups and ensure tests run with the specified module versions.
+
 ```bash
 pip install virtualenv
 ```
@@ -31,12 +32,14 @@ cd Robot-Selenium-Sample
 ```
 
 Create a virtual environment and activate it:
+
 ```bash
 virtualenv venv
 source venv/bin/activate
 ```
 
 Install the required packages:
+
 ```bash
 pip install -r requirements.txt
 ```
@@ -99,6 +102,7 @@ make test_Windows_10_chrome_latest
 ```
 
 To run parallel tests:
+
 ```bash
 make run_all_in_parallel
 ```

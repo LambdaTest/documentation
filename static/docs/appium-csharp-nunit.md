@@ -22,10 +22,12 @@ In this documentation, you will learn how to trigger a automation script of **NU
 ## Install and Setup the Dependencies
 
 - Install the NuGet packages for the project:
+
 ```bash
 nuget.exe install ..\NUnitSelenium\packages.config
 ```
 - Clean and rebuild the project
+
 ```bash
 nmake clean build
 ```

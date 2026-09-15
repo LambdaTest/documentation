@@ -23,6 +23,7 @@ cd nodejs-selenium-sample
 ```
 
 Install the required dependencies:
+
 ```bash
 npm install selenium-webdriver
 ```

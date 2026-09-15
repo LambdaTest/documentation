@@ -186,11 +186,13 @@ caps={
 ### Step 6: Execute and Monitor your Tests
 
 - Run the following command to make sure that all the dependencies required for the test are installed.
+
 ```bash
 bundle install
 ```
 
 2. Execute the following command to run single test on TestMu AI platform:
+
 ```bash
 bundle exec rake single
 ```

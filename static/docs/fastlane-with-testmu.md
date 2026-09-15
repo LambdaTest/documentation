@@ -30,11 +30,13 @@ LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
 ## Installing TestMu AI fastlane Plugin
 
 **Step 1:** Add TestMu AI [fastlane](https://rubygems.org/gems/fastlane-plugin-lambdatest) plugin by running.
+
 ```
 fastlane add_plugin lambdatest
 ```
 
 **Step 2:** Add the below action in fastfile in desired lane to upload the app to TestMu AI.
+
 ```
 upload_to_lambdatest(
 lt_username: ENV["LT_USERNAME"],

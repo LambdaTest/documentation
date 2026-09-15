@@ -104,3 +104,6 @@ You can manage your test runs using the options available in the **three-dot men
 | **Delete** | Permanently remove a test run that is no longer needed. |
 
 Archiving a test run is not the same as archiving a test case. An archived test case stays in any run it was already part of and keeps its executions as history, but it is not offered when you create a new test run and is not carried across when you duplicate one. See [Archive and Restore Test Cases](/support/docs/test-case-archive/).
+
+**Act on many test runs at once**
+Select several test runs in the list to move them to another folder, copy them into fresh runs for the next cycle, or delete them in one action. You can also drag selected runs onto a folder to move or copy them. A moved run keeps its ID and execution history, and a copied run starts with every test instance at Not Started. See [Bulk Move, Copy, and Delete Test Runs](/support/docs/test-run-bulk-actions/).

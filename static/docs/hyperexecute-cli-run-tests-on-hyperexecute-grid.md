@@ -238,6 +238,7 @@ hyperexecute --auto-proxy
 
 ### `--concurrency`
 This flag allows you to define the number of concurrent sessions running on HyperExecute. For more information on concurrency, go to [this page](/support/docs/hyperexecute-auto-split-strategy/).
+
 ```bash
 --concurrency 2
 ```
@@ -245,6 +246,7 @@ This flag allows you to define the number of concurrent sessions running on Hype
 ### `--config`
 
 This flag allows you to enter a custom location where you can download the HyperExecute YAML file. To learn more about the HyperExecute YAML, visit [this page](/support/docs/deep-dive-into-hyperexecute-yaml/).
+
 ```bash
 --config "/home/users/work/yaml/"
 ```
@@ -280,6 +282,7 @@ This flag will download the new artifacts of your job and will store it into the
 
 ### `-h, --help`
 You can run this command if you need any help in understanding the definition of the flags on the CLI itself. However, if you need any further assistance we're just a **ping** away.
+
 ```bash
 --help
 ```
@@ -320,6 +323,7 @@ The access key of your TestMu AI account. To find out how to retrieve your acces
 
 ### `--labels`
 This flag allows you to pass the labels of your Job.
+
 ```bash
 --labels "testing"
 ```
@@ -333,6 +337,7 @@ You can track the progress of your uploaded jobs with HyperExecute. However, thi
 
 ### `--preserve-payload`
 This flag allows you to preserve the job payload after the job is completed successfully.
+
 ```bash
 --preserve-payload
 ```
@@ -412,6 +417,7 @@ The username of your TestMu AI account.
 This method allows you to name your variables. It helps you optimize the content of your YAML file by allowing for more flexibility.
 
 You can specify the email address for sharing [reports](/support/docs/hyperexecute-reports/) or [artifacts](/support/docs/hyperexecute-artifacts/) in a YAML configuration file using a variable. This allows you to dynamically set the email address and pass it via CLI, providing more flexibility than hardcoding the email address in the YAML file. Learn about this in [detail](/support/docs/hyperexecute-email-reports/#how-to-dynamically-set-your-email-address).
+
 ```bash
 --vars "org=Lambdatest" --vars "product=HyperExecute" --vars "email=xyz@abc.com" --vars "email1=abc@xyz.com"
 ```
@@ -423,12 +429,14 @@ The new `--validate` flag in the HyperExecute CLI allows you to quickly check th
 
 ### `--verbose`
 This flag allows you to log all of your proxy requests to the output section (stdout).
+
 ```bash
 --verbose
 ```
 
 ### `--version`
 This flag indicates the version of HyperExecute CLI binary that you are running on your system.
+
 ```bash
 --version
 ```
@@ -443,6 +451,7 @@ In case of macOS, if you get a permission denied warning while executing CLI, si
 
 If you're running on a minimal alpine image, please make sure to install essential linux dependencies for HyperExecute CLI to work.
 (An example with our sample repo has been given below):
+
 ``` bash
 apk add libc6-compat git bash
 git clone https://github.com/LambdaTest/behave-selenium-hyperexecute-sample.git

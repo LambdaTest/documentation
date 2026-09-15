@@ -41,11 +41,13 @@ Download or Clone the code sample from the TestMu AI GitHub repository to run th
 - Go to the gocd/bin folder and run the following commands:
 
   - To start the Server
+
 ```bash
 ./bin/go-server start
 ```
 
   - To start the Agent
+
 ```bash
 ./bin/go-agent start
 ```

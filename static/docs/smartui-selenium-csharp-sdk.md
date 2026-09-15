@@ -400,6 +400,7 @@ Console.WriteLine(result);
 - When `sync` is `true`, the `result` variable will hold the value of the snapshot status response.
 
 **Sample response:**
+
 ```json
 {
 "snapshotName": "Sync-True",

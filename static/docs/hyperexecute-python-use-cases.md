@@ -172,6 +172,7 @@ In Python versions 3.3 to 3.9, MutableMapping was part of the collections module
 **Solution :** To ensure compatibility, match the Python runtime version with your local setup. Specify the version explicitly in your YAML configuration.
 
 **YAML Translation :**
+
 ```yaml title="hyperexecute.yaml"
 runtime:
 - language: python
@@ -195,6 +196,7 @@ python3 -m pip install --upgrade pip
 ```
 
 **YAML Translation :**
+
 ```yaml title="hyperexecute.yaml"
 pre:
 - python3 -m pip install --upgrade pip
@@ -443,16 +445,19 @@ pytest path/to/test_file.py
 ```
 
 ### Case 2: Run a Specific Test Function Within a File
+
 ```bash
 pytest path/to/test_file.py::test_function_name
 ```
 
 ### Case 3: Run Tests Matching a Substring or Keyword
+
 ```bash
 pytest -k "test_keyword"
 ```
 
 **Example :**
+
 ```bash
 pytest -k "login"
 ```
@@ -506,16 +511,19 @@ curl -X GET "https://mobile-api.lambdatest.com/mobile-automation/api/v1/sessions
 **Solution :** Use the TestMu AI Screenshot Downloader & PDF Generator CLI.
 
 - **Installation :**
+
 ```bash
 npm install -g lambdatest-screenshot-pdf
 ```
 
 - **Usage :**
+
 ```bash
 AUTH_HEADER="Basic your_encoded_auth_string" lambdatest-screenshot-pdf <session_id> --output <output_directory>
 ```
 
 - **Example :**
+
 ```bash
 AUTH_HEADER="Basic cmF0aG9yZXYXYXYXYXXgybFlXTm5LclZPeVRRQ01RRGdyNTZjVg==" \
 lambdatest-screenshot-pdf 1a80510a-289a-46b7-9f60-da01d108de10 --output ~/Desktop/screenshots

@@ -110,6 +110,7 @@ The embedded string method is useful for quick edits and single-use CSS rules. P
 - **CLI Version**: Ensure SmartUI CLI v4.1.40+ is installed. You can verify this by running `npx smartui --version`. Older versions may not support the `customCSS` feature.
 
 - **Waiting for UI Readiness**: If you need to wait for UI elements to be ready before snapshots, add these options to your configuration:
+
 ```json
 {
 "waitForTimeout": 2000,

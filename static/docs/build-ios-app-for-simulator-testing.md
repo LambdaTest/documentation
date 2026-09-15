@@ -109,12 +109,14 @@ Replace the second `YourApp` with the actual binary name inside the `.app` bundl
 **Step 2:** Check the output:
 
 - **Correct (Simulator build):**
+
 ```
 platform: IOSSIMULATOR
 ```
   or `platform 7`
 
 - **Incorrect (Device build):**
+
 ```
 platform: IOS
 ```
@@ -124,6 +126,7 @@ If the platform shows `IOS` or `platform 2`, the build is for physical devices a
 
 **Alternative Verification**
 You can also use `otool` to check the architecture:
+
 ```bash
 lipo -info YourApp.app/YourApp
 ```

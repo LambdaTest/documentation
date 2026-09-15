@@ -112,6 +112,7 @@ Download or Clone the code sample from the TestMu AI GitHub repository to run th
 ### Step 2: Setup your Workflow
 - Select your desired build tool and edit your workflow as per your requirement. A sample workflow is given for your reference:
 - Click on **Run the Workflow** button to trigger your tests
+
 ```yaml reference title="semaphore.yml"
 https://github.com/amanchopra1905/smartui-ci-cd-integrations/blob/semaphore/.semaphore/semaphore.yml
 ```

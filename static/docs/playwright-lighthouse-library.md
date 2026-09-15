@@ -33,11 +33,13 @@ The code sample for generating the Lighthouse Performance Metrics in the Playwri
 
 ## Prerequisites
 - Ensure that you have the Playwright Lighthouse Library installed in your web project.
+
 ```bash
 npm install playwright-lighthouse
 ```
 
 - Export the *LIGHTHOUSE_LAMBDATEST* environment variable to your project environment.
+
 ```bash
 export LIGHTHOUSE_LAMBDATEST='true'
 ```
@@ -99,6 +101,7 @@ set LT_ACCESS_KEY=${ YOUR_LAMBDATEST_ACCESS_KEY()}`}
 
 ### Run your test
 Pass the below command in the terminal to run the test:
+
 ```bash
 node RELATIVE_PATH_OF_YOUR_TEST_FILE
 ```

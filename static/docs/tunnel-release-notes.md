@@ -2,6 +2,12 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
+## Version 3.2.35 (13th September 2026)
+- **Security Updates and Stability Fixes**
+- Security Fixes for CVE.
+- Fix for HTTP traffic to be routed via SOCKS5 proxy.
+- Support of auto rotating multiple tcp data streams per tunnel.
+
 ## Version 3.2.34 (6th September 2026)
 - **Security Updates and Stability Fixes**
   - Security Fixes for CVE

@@ -72,6 +72,7 @@ await driver.get("https://www.google.com");
 ```
 
 **Response:**
+
 ```json
 {
 "status": "success",
@@ -133,6 +134,7 @@ await driver.get("https://jsonplaceholder.typicode.com/todos/1");
 ```
 
 **Response:**
+
 ```json
 {
 "status": "success",
@@ -174,6 +176,7 @@ await driver.get("https://example.com/images/photo.jpg");
 ```
 
 **Response:**
+
 ```json
 {
 "status": "success",
@@ -227,6 +230,7 @@ await driver.get("https://www.wikipedia.org");
 ```
 
 **Response:**
+
 ```json
 {
 "status": "success",
@@ -281,6 +285,7 @@ await driver.get("https://www.cnn.com");
 ```
 
 **Response:**
+
 ```json
 {
 "status": "success",
@@ -355,6 +360,7 @@ output_file: "network.har"
 ```
 
 **Response:**
+
 ```json
 {
 "status": "success",

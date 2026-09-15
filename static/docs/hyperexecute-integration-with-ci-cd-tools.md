@@ -32,6 +32,7 @@ chmod u+x hyperexecute
 To execute the HyperExecute CLI binary, run the following command:
 
 - **For Windows**
+
 ```
 hyperexecute.exe –user LT_USERNAME –key LT_ACCESS_KEY –config path of the Hyperexecute YAML file
 ```
