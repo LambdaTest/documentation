@@ -15,11 +15,13 @@ In order to perform your karma tests with TestMu AI, you would need the below th
 * A [Git or GitHub repository](https://github.com/)
 * Download and [install node.js](https://nodejs.org/en/) and node package manager or npm.
 To install node.js with homebrew use the below command.
+
 ```
 $ brew install node
 ```
 
 * If you have npm already installed, you may want to upgrade it to latest version. Here the code you can run in your terminal to upgrade npm.
+
 ```
 npm install npm@latest -g
 ```
@@ -29,6 +31,7 @@ npm install npm@latest -g
 Be aware of your TestMu AI authentication credentials i.e. your TestMu AI username, access key and HubURL. You need to set them up as your environment variables. You can retrieve them from your [TestMu AI automation dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/) by clicking on the key icon near the help button.
 
 * For Linux/Mac:
+
 ```
 $ export LT_USERNAME= {YOUR_LAMBDATEST_USERNAME}
 $ export LT_ACCESS_KEY= {YOUR_LAMBDATEST_ACCESS_KEY}
@@ -85,6 +88,7 @@ For Instance, if you select the below configurations:
 |Selenium Version|3.11.0|
 
 Then Capabilities Generator at TestMu AI will provide you with the below program:
+
 ```
 var capabilities = {
 "build" : "your build name", //You can edit this and assign a build name
@@ -164,11 +168,13 @@ Once, the tunnel is successfully set up. You can add the below code to your capa
 Parallel Testing is one of the most demanding feature of TestMu AI Selenium Grid. By parallel testing, you can run more than one test case, simultaneously. This means that, Parallel testing would allow you to execute numerous automation test cases altogether. So you execute a single test scenario across different browsers or could run different test scenarios across the same browser but with different browser versions.
 
 To perform automation testing in parallel on Windows use the below command.
+
 ```
 $ node_modules\.bin\nightwatch -e chrome,edge,firefox tests
 ```
 
 To perform automation testing in parallel on macOS/Linux use the below command.
+
 ```
 $ ./node_modules/.bin/nightwatch -e chrome,edge,firefox tests
 ```

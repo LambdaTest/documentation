@@ -2,6 +2,27 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
+= v4.x.x, upgrade your Node.js version to v20.3 or above.",
+          "url": "https://www.testmuai.com/support/docs/smartui-cli-upload/#step-1-install-the-dependencies"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Configure your Project Token",
+          "text": "Setup your project token shown in the SmartUI app after creating your project.",
+          "url": "https://www.testmuai.com/support/docs/smartui-cli-upload/#step-2-configure-your-project-token"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Upload the required directory of images",
+          "text": "The screenshots in the directory name will be uploaded to SmartUI. By default, SmartUI captures and considers image resolutions. If you prefer to ignore resolutions and compare images solely based on their names, use the following flag: Please read the following table for more information about the options available to upload a directory of static images to SmartUI. You may use the smartui upload --help command in case you are facing issues during the execution of SmartUI Upload options in the CLI.",
+          "url": "https://www.testmuai.com/support/docs/smartui-cli-upload/#step-3-upload-the-required-directory-of-images"
+        }
+      ]
+    }
+  ]) }}
+/>
 With SmartUI CLI, you can seamlessly perform visual regression testing on the TestMu AI platform using your command line, identifying Visual UI Regression bugs effortlessly. This guide will walk you through the process of uploading and comparing images using the SmartUI CLI.
 
 ## Prerequisites for running SmartUI CLI
@@ -26,11 +47,13 @@ The first step is to create a project with the application in which we will comb
 Install required NPM modules for `TestMu AI SmartUI CLI` globally or in your project:
 
 **Global Installation (Recommended):**
+
 ```bash
 npm install -g @lambdatest/smartui-cli
 ```
 
 **Local Installation:**
+
 ```bash
 npm install @lambdatest/smartui-cli
 ```

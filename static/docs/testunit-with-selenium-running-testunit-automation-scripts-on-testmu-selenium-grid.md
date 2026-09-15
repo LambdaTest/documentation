@@ -2,6 +2,28 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
+lt_browser,\t\t\t\n\t\t\t:browser_version => lt_browser_version,\t\t\t\n\t\t\t:platform_name =>  lt_os,\n\t\t\t:name =>  \"UnitTest Sample Test\",\n\t\t\t:build =>  \"UnitTest Selenium Build\"\n\t\t} \t"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 4: Run the Test",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "ruby LambdaTest.rb"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Install the skill",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "codeRepository": "https://github.com/LambdaTest/agent-skills",
+        "text": "git clone https://github.com/LambdaTest/agent-skills.git\ncp -r agent-skills/testunit-skill .claude/skills/\n\n# For Cursor / Copilot\ncp -r agent-skills/testunit-skill .cursor/skills/"
+      }
+    ],
+    "dateModified": "2026-09-09T19:13:32+05:30"
+  }) }}
+/>
+
 Run Test::Unit tests on the TestMu AI cloud grid. This guide covers setup, running a sample test, configuring capabilities, and testing locally hosted pages.
 
 **Sample repo**
@@ -16,10 +38,12 @@ Complete the following steps before you start Ruby automation testing with Selen
 1. Install Ruby and gem on your local system. Follow these instructions to install on different operating systems.
    * For **Windows**, download from the [Ruby Installer for Windows](https://rubyinstaller.org/downloads/).
    * For **Linux** or **Ubuntu**, run a simple apt command like below:
+
 ```bash
 sudo apt-get install ruby-full
 ```
    * For **macOS**, run a [Homebrew](https://brew.sh/) command like this:
+
 ```bash
 brew install ruby
 ```
@@ -36,6 +60,7 @@ cd Ruby-UnitTest-Selenium
 ```
 
 Install project dependencies:
+
 ```bash
 bundle install
 ```

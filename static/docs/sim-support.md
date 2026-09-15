@@ -1,6 +1,22 @@
-# SIM Support On Public Real Devices
+# SIM & eSIM Automation on Real Devices
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
+\n\n\n```python title=\"Android(.apk)\"\ndesired_caps = {\n    'platformName': 'Android',\n    'platformVersion': '16',\n    'deviceName': 'Galaxy S25',\n    'app': 'YOUR_APP_ID',\n    'enableSim': True,\n    'simOptions': {\n        'region': 'IND',\n        'carrier': ['airtel', 'vodafone']\n    }\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 2: Retrieve SIM Properties at Runtime",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Python",
+        "text": "driver.execute_script(\n  \"lambda_executor: { \\\"action\\\": \\\"deviceInfo\\\", \\\"arguments\\\": { \\\"deviceProperties\\\": [\\\"simOptions\\\"] } }\"\n)"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
+# SIM Support On Public Real Devices
 
 SIM & eSIM support enables testing of SMS-driven use cases on real mobile devices, such as **OTP verification** and **two-factor authentication** workflows. By automating SIM interactions, teams can validate SMS handling, **verify phone numbers**, and confirm secure onboarding processes without relying on physical test phones.
 
@@ -91,6 +107,7 @@ driver.execute_script(
 )
 ```
 Sample Response:
+
 ``` JSON
 {
 "simOptions": {

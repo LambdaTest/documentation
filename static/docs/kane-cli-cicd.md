@@ -2,6 +2,62 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
+/etc/apt/sources.list.d/google-chrome.list\n    - apt-get update && apt-get install -y google-chrome-stable\n    - npm install -g @testmuai/kane-cli\n  script:\n    - |\n      kane-cli run \"Verify the homepage loads and the login button is visible\" \\\n        --headless \\\n        --timeout 300 \\\n        --username \"$LT_USERNAME\" \\\n        --access-key \"$LT_ACCESS_KEY\" \\\n        --variables-file ./tests/variables.json\n  variables:\n    LT_USERNAME: $LT_USERNAME\n    LT_ACCESS_KEY: $LT_ACCESS_KEY\n  artifacts:\n    paths:\n      - ~/.testmuai/kaneai/sessions/\n    when: always\n    expire_in: 7 days"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Jenkins",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Groovy",
+        "text": "// Jenkinsfile\npipeline {\n    agent any\n    environment {\n        LT_USERNAME   = credentials('lt-username')\n        LT_ACCESS_KEY = credentials('lt-access-key')\n    }\n    stages {\n        stage('Install') {\n            steps {\n                sh 'npm install -g @testmuai/kane-cli'\n            }\n        }\n        stage('Run kane-cli') {\n            steps {\n                sh '''\n                    kane-cli run \"Sign in and confirm the dashboard renders\" \\\n                        --headless \\\n                        --timeout 300 \\\n                        --username \"$LT_USERNAME\" \\\n                        --access-key \"$LT_ACCESS_KEY\" \\\n                        --variables-file ./tests/variables.json\n                '''\n            }\n        }\n    }\n    post {\n        always {\n            archiveArtifacts artifacts: '~/.testmuai/kaneai/sessions/**',\n                             allowEmptyArchive: true\n        }\n    }\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Bitbucket Pipelines",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "# bitbucket-pipelines.yml\npipelines:\n  default:\n    - step:\n        name: Browser Tests\n        image: node:20\n        script:\n          - npm install -g @testmuai/kane-cli\n          - kane-cli run\n              --url https://staging.myapp.com\n              --username $LT_USERNAME\n              --access-key $LT_ACCESS_KEY\n              --headless\n              --agent\n              --timeout 300\n              --max-steps 50\n              \"Complete the checkout flow and verify order confirmation\"\n        artifacts:\n          - ~/.testmuai/kaneai/sessions/**"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "The shell command below works in any CI that can run a Linux container with Chrome installed",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "kane-cli run \"Open the pricing page and verify the Pro plan is listed\" \\\n    --headless \\\n    --timeout 300 \\\n    --username \"$LT_USERNAME\" \\\n    --access-key \"$LT_ACCESS_KEY\" \\\n    --variables-file ./tests/variables.json"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "If your CI image cannot install Chrome (for example, a minimal Node Alpine image), point Kane CLI at a remote browser instead",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "kane-cli run \"Open the pricing page and verify the Pro plan is listed\" \\\n    --headless \\\n    --timeout 300 \\\n    --ws-endpoint \"$LT_BROWSER_WSS\" \\\n    --username \"$LT_USERNAME\" \\\n    --access-key \"$LT_ACCESS_KEY\" \\\n    --variables-file ./tests/variables.json"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Run several tests and fail the pipeline if any fail",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "#!/bin/bash\nset -e\n\nPASS=0\nFAIL=0\nFAILED_TESTS=()\n\nrun_test() {\n  local name=\"$1\"\n  local objective=\"$2\"\n  echo \"Running: $name\"\n  if kane-cli run \"$objective\" \\\n      --url https://staging.myapp.com \\\n      --username $LT_USERNAME \\\n      --access-key $LT_ACCESS_KEY \\\n      --headless --agent --timeout 120; then\n    ((PASS++))\n  else\n    ((FAIL++))\n    FAILED_TESTS+=(\"$name\")\n  fi\n}\n\nrun_test \"Login\" \"Log in with valid credentials and verify dashboard appears\"\nrun_test \"Search\" \"Search for 'laptop' and verify at least one result appears\"\nrun_test \"Checkout\" \"Add first product to cart and complete checkout\"\nrun_test \"Settings\" \"Open account settings and verify profile page loads\"\n\necho \"\"\necho \"Results: $PASS passed, $FAIL failed\"\nif [[ $FAIL -gt 0 ]]; then\n  echo \"Failed tests: ${FAILED_TESTS[*]}\"\n  exit 1\nfi"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Commit a non-secret variables file to your repo, and inject secrets at runtime",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JSON",
+        "text": "{\n  \"app_url\": { \"value\": \"https://staging.myapp.com\" },\n  \"test_product_sku\": { \"value\": \"PROD-001\" }\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Merge with secrets in your pipeline",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "kane-cli run \"Log in as {{email}} with {{password}} and verify dashboard\" \\\n  --variables-file ./test-variables.json \\\n  --variables \"{\\\"email\\\": {\\\"value\\\": \\\"$TEST_EMAIL\\\"}, \\\"password\\\": {\\\"value\\\": \\\"$TEST_PASSWORD\\\", \\\"secret\\\": true}}\" \\\n  --username $LT_USERNAME \\\n  --access-key $LT_ACCESS_KEY \\\n  --headless --agent"
+      }
+    ],
+    "dateModified": "2026-07-03T19:09:57+05:30"
+  }) }}
+/>
+
 Kane CLI runs headlessly in CI/CD pipelines using credentials passed as environment variables or inline flags. Tests fail fast on assertion errors and return standard exit codes for pipeline control flow.
 
 ## Common Patterns

@@ -10,6 +10,7 @@ Learn how to run your Puppeteer tests with CodeceptJS across real browsers and o
  View on GitHub
 
 1. Clone the puppeteer-sample repository on your system and navigate to the `pytest-pyppeteer` directory.
+
 ```
 cd pytest-pyppeteer
 ```
@@ -85,6 +86,7 @@ eval $(gp env -e LT_ACCESS_KEY=******)
 ```
 
 * Click the following link if you're unsure how to [access your TestMu AI credentials.](/support/docs/using-environment-variables-for-authentication-credentials/). Also, if you start a new terminal in Gitpod, you have to run the following command to reset environment variables:
+
 ```
 eval $(gp env -e)
 ```

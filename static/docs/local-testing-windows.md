@@ -32,6 +32,7 @@ This zip file contains the tunnel binary which will help in establishing a secur
 **Step 2**:  Extract the downloaded zip file. Go to **‘Command Prompt’**  and route your pointer to the same directory where you extracted the zip file.
 
 **Step 3**:  Paste the copied string to execute the downloaded binary file. The command will look like:
+
 ```
 LT --user {user's login email} --key {user's access key} --tunnelName {user's tunnel name}
 ```
@@ -130,6 +131,7 @@ LT --user {user login email} --key {user key} --proxy-host {full proxy hostname}
 ```
 
 Example of full command:
+
 ```
 LT --user example@lambdatest.com --key 123asd123 --proxy-host abc.wonderproxy.com --proxy-user abcdefg --proxy-pass hijklmnop --proxy-port 12345
 ```

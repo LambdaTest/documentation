@@ -2,6 +2,84 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
+\n<\/div>\n\n<\/TabItem>\n\n\n\n  \n    \n{`curl -u \"${YOUR_LAMBDATEST_USERNAME}:${YOUR_LAMBDATEST_ACCESS_KEY}\" --location --request POST \"https://manual-api.lambdatest.com/app/uploadFramework\" --form \"appFile=@\"\"\" --form \"type=\\\"espresso-android\\\"\"`}\n  <\/CodeBlock>\n<\/div>\n\n<\/TabItem>\n<\/Tabs>\n\n:::info\n- Provide the path of your android application in the above URL in place of ``\n- Response of above cURL will be a **JSON** object containing the `App URL` of the format - `lt://APP123456789123456789` and will be used in the last step.\n:::\n\n## Step 5: Upload Your Test Suite\n\nUpload your Espresso test suite (.apk) file to TestMu AI servers using our REST API.\n\nThe following sample cURL command shows how to upload a test suite:\n\n\n\n\n\n  \n    \n{`curl -u \"${YOUR_LAMBDATEST_USERNAME}:${YOUR_LAMBDATEST_ACCESS_KEY}\" --location --request POST 'https://manual-api.lambdatest.com/app/uploadFramework' --form 'appFile=@\"\"' --form 'type=\"espresso-android\"'`}\n  <\/CodeBlock>\n<\/div>\n\n<\/TabItem>\n\n\n\n  \n    \n{`curl -u \"${YOUR_LAMBDATEST_USERNAME}:${YOUR_LAMBDATEST_ACCESS_KEY}\" --location --request POST \"https://manual-api.lambdatest.com/app/uploadFramework\" --form \"appFile=@\"\"\" --form \"type=\\\"espresso-android\\\"\"`}\n  <\/CodeBlock>\n<\/div>\n\n<\/TabItem>\n<\/Tabs>\n\n:::info\n- Provide the path of your android application in the above URL in place of ``\n- Response of above cURL will be a **JSON** object containing the `App URL` of the format - `lt://APP123456789123456789` and will be used in the last step.\n:::\n\n## Step 6: Executing The Test\n\n- You will need **base64 encoded authentication** in order to execute your Espresso automation test suite. Enter your `username:accesskey`\u00a0in **[Basic Authentication Header Generator](https://mixedanalytics.com/knowledge-base/api-connector-encode-credentials-to-base-64/)** to generate your auth token.\n\nTake note of the\u00a0base64\u00a0encoded authentication which needs to be added in the next step.\n\n\n    \n{`${YOUR_LAMBDATEST_USERNAME}:${YOUR_LAMBDATEST_ACCESS_KEY}`}\n  <\/CodeBlock>\n<\/div>\n\n- Once you have uploaded your app and test suite, you can execute your test by running the following command:\n \n> Enter your **BASIC_AUTH_TOKEN**, **APP_ID** (generated in the fourth step) and **TEST_SUITE_ID** (generated in the fifth step) in the below command.\n\n```javascript\ncurl --location 'https://mobile-api.lambdatest.com/framework/v1/espresso/build' \\\n--header 'Authorization: Basic BASIC_AUTH_TOKEN' \\\n--header 'Content-Type: application/json' \\\n--data '{\n    \"app\": \"APP_ID\", //enter your app-id\n    \"testSuite\": \"TEST_SUITE_ID\", //enter your test-suite id\n    \"device\": [\n        \"Galaxy.*\"\n    ],\n    \"smartUI.project\": \"Espresso-SmartUI-Project\", \n    \"smartUI.build\": \"Espresso-SmartUI-Build\", // Optional\n    \"smartUI.cropNavigationBar\" : true, // Optional (By default false)\n    \"smartUI.cropStatusBar\" : true, // Optional (By default true)\n    \"queueTimeout\": 300,\n    \"IdleTimeout\": 30,\n    \"deviceLog\": true,\n    \"network\": false,\n    \"visual\": true,\n    \"build\": \"Proverbial-Espresso-Test\",\n    \"singleRunnerInvocation\": false\n}'"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "This shard will avoid running tests from the class com.lambdatest.proverbial.BrowserTest.",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n\n:::tip When shards are added\n\nIf you are using the `deviceSelectionStrategy: all`,then in that case all the specified shards will be executed on every device available.\n**For example:** If there are 3 shards, 2 devices in list (d1, d2) and test suites contains total 10 test cases.\nThen, d1 has 3 shards, i.e., total 3 devices of d1 configuration will be used. 10 test cases distributed among these 3 shards and similarly d2 also has 3 shards, i.e., total 3 devices of d2 configuration will be used. 10 test cases will be distributed among these 3 shards.\n\nIf you are using the `deviceSelectionStrategy: any`, then in that case all the mentioned shards will be executed on just one device from the provided list.\n**For example:** If there are 2 shards mentioned in `.yaml`and 3 devices mentioned, the system will create 2 shards. These shards might use any 2 devices from the given 3 configurations. It's also possible that the same device configuration could be used for both shards. In this setup, test cases will be distributed between these shards.\n:::\n\n---\n\n\n**Auto Sharding** : The system intelligently determines the distribution of tests across devices, employing specific criteria to optimize the testing process.\n\nRefer to the sample `.yaml` file here\n\n```bash title=\"SampleYamlFile.yaml\"\nversion: \"0.2\"\nconcurrency: 2\nrunson: android\nautosplit: true\nglobalTimeout: 180  #MAXQUEUETIMEOUT\n\nframework:\n  name: \"android/espresso\"\n  args:\n    buildName: \"Espresso\"\n    video: true\n    deviceLog: true\n    \n    # You can use either the appId (lt://APP1234567) or provide the path of the application using appPath. Both examples are given below.\n\n    #highlight-next-line\n    appPath: Proverbial.apk \n\n    testSuitePath: ProverbialExpressoTest.apk\n    # We have used the appPath and testSuitePath here. \n\n    \n    #highlight-next-line\n    appId: lt://APP1010461471690377432133206\n    testSuiteAppId: lt://APP10104592261690377454846669\n    # We have used the appId and testSuiteAppID here.\n\n    smartUI:\n      project: \"Espresso-SmartUI-Project\"\n\n    deviceSelectionStrategy: all\n    devices: [\"Galaxy.*\", \"Pixel.*\"]\n"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Project and Build Naming",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JSON",
+        "text": "{\n  \"smartUI.project\": \"MyApp-VisualTests\",\n  \"smartUI.build\": \"Release-1.0.0\"\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Verify visual: true is set in API request",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JSON",
+        "text": "   {\n     \"visual\": true,\n     \"smartUI.project\": \"ProjectName\"\n   }"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Increase queueTimeout and IdleTimeout",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JSON",
+        "text": "   {\n     \"queueTimeout\": 600,\n     \"IdleTimeout\": 60\n   }"
+      }
+    ],
+    "dateModified": "2026-08-18T16:55:27+05:30"
+  }) }}
+/>
+
+",
+          "url": "https://www.testmuai.com/support/docs/espresso-visual-regression/#step-1-create-a-smartui-project"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Set up your Authentication",
+          "text": "Now, you need to export your environment variables LTUSERNAME and LTACCESS_KEY that are available in the TestMu AI Profile page. Run the below mentioned commands in your terminal to setup the CLI and the environment variables. {`export LTUSERNAME=\"${YOURLAMBDATEST_USERNAME}\" export LTACCESSKEY=\"${YOURLAMBDATESTACCESS_KEY}\"`} {`set LTUSERNAME=\"${YOURLAMBDATEST_USERNAME}\" set LTACCESSKEY=\"${YOURLAMBDATESTACCESS_KEY}\"`}",
+          "url": "https://www.testmuai.com/support/docs/espresso-visual-regression/#step-2-set-up-your-authentication"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Update your App Configurations",
+          "text": "It should be in your app configurations then only you can perform the Espresso integration. In your build.gradle file, add the lambdatest-espresso dependency: Initialize this dependency in your test classes. You can do it as follows: Now build your application.",
+          "url": "https://www.testmuai.com/support/docs/espresso-visual-regression/#step-3-update-your-app-configurations"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Step 4: Upload your Application",
+          "text": "To begin testing, upload your Android application (.apk file) to TestMu AI's servers. You'll use our REST API for this process. Authentication : You'll need your TestMu AI Username and AccessKey. Combine them in the format Username:AccessKey. Uploading the App : Use cURL command to send a request to our API. The request should include the path to your application file (appFile). {curl -u \"${YOURLAMBDATESTUSERNAME}:${YOURLAMBDATESTACCESS_KEY}\" --location --request POST 'https://manual-api.lambdatest.com/app/uploadFramework' --form 'appFile=@\"\"' --form 'type=\"espresso-android\"'} {curl -u \"${YOURLAMBDATESTUSERNAME}:${YOURLAMBDATESTACCESS_KEY}\" --location --request POST \"https://manual-api.lambdatest.com/app/uploadFramework\" --form \"appFile=@\"\"\" --form \"type=\\\"espresso-android\\\"\"} Provide the path of your android application in the above URL in place of `` Response of above cURL will be a JSON object containing the App URL of the format - lt://APP123456789123456789 and will be used in the last step.",
+          "url": "https://www.testmuai.com/support/docs/espresso-visual-regression/#step-4-upload-your-application"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 5,
+          "name": "Step 5: Upload Your Test Suite",
+          "text": "Upload your Espresso test suite (.apk) file to TestMu AI servers using our REST API. The following sample cURL command shows how to upload a test suite: {curl -u \"${YOURLAMBDATESTUSERNAME}:${YOURLAMBDATESTACCESS_KEY}\" --location --request POST 'https://manual-api.lambdatest.com/app/uploadFramework' --form 'appFile=@\"\"' --form 'type=\"espresso-android\"'} {curl -u \"${YOURLAMBDATESTUSERNAME}:${YOURLAMBDATESTACCESS_KEY}\" --location --request POST \"https://manual-api.lambdatest.com/app/uploadFramework\" --form \"appFile=@\"\"\" --form \"type=\\\"espresso-android\\\"\"} Provide the path of your android application in the above URL in place of `` Response of above cURL will be a JSON object containing the App URL of the format - lt://APP123456789123456789 and will be used in the last step.",
+          "url": "https://www.testmuai.com/support/docs/espresso-visual-regression/#step-5-upload-your-test-suite"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 6,
+          "name": "Step 6: Executing The Test",
+          "text": "You will need base64 encoded authentication in order to execute your Espresso automation test suite. Enter your username:accesskey in Basic Authentication Header Generator to generate your auth token. Take note of the base64 encoded authentication which needs to be added in the next step. {${YOURLAMBDATESTUSERNAME}:${YOURLAMBDATESTACCESS_KEY}} Once you have uploaded your app and test suite, you can execute your test by running the following command: Enter your BASICAUTHTOKEN, APPID (generated in the fourth step) and TESTSUITEID** (generated in the fifth step) in the below command. You can check the executed builds over at TestMu AI SmartUI.",
+          "url": "https://www.testmuai.com/support/docs/espresso-visual-regression/#step-6-executing-the-test"
+        }
+      ]
+    }
+  ]) }}
+/>
+
 Espresso is a widely-used testing framework for Android, designed to simplify the process of writing reliable and efficient UI tests. It allows developers to create automated tests that simulate user interactions within an app, ensuring that the app's UI behaves as expected.
 
 In this documentation, you will learn step-by-step how to perform regression testing and find Visual UI Regression bugs easily with the help of Smart Testing.

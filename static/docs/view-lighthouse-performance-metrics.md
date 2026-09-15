@@ -28,6 +28,7 @@ Add the `performance` capability to your desired capabilities to enable Lighthou
 You can add Lighthouse performance metrics for the website you want to test using the [Desired Capabilities](/docs/selenium-automation-capabilities/). Use the **`Performance`** feature of the **Desired Capabilities Generator**.
 
 For example, if you are using **TestNG** for Selenium Automation on TestMu AI, include the **Lighthouse** performance feature with the below code snippet:
+
 ```java
 DesiredCapabilities caps = new DesiredCapabilities();
 .
@@ -37,6 +38,7 @@ DesiredCapabilities caps = new DesiredCapabilities();
 caps.setCapability("performance", true);
 ```
 Below is the code snippet to trigger **Lighthouse** performance metrics on TestMu AI in **macOS Catalina** with **Google Chrome** browser version **86.0**.
+
 ```java
 DesiredCapabilities caps = new DesiredCapabilities();
 caps.setCapability("browser", "Chrome");

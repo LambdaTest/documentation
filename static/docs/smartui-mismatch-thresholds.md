@@ -1,6 +1,43 @@
-# Mismatch Thresholds
+# Mismatch Thresholds for SmartUI Visual Regression Testing
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
+\n\n\n```java title=\"Add thresholds to your LT:Options capabilities\"\nHashMap ltOptions = new HashMap<>();\nltOptions.put(\"user\", System.getenv(\"LT_USERNAME\"));\nltOptions.put(\"accessKey\", System.getenv(\"LT_ACCESS_KEY\"));\n// highlight-next-line\nltOptions.put(\"smartUI.approvalThreshold\", 2);\n// highlight-next-line\nltOptions.put(\"smartUI.rejectionThreshold\", 5);\n\ncapabilities.setCapability(\"LT:Options\", ltOptions);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "highlight-next-line",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n<\/TabItem>\n\n\n```csharp title=\"Add thresholds to your LT:Options capabilities\"\nvar ltOptions = new Dictionary\n{\n    { \"user\", Environment.GetEnvironmentVariable(\"LT_USERNAME\") },\n    { \"accessKey\", Environment.GetEnvironmentVariable(\"LT_ACCESS_KEY\") },\n    // highlight-next-line\n    { \"smartUI.approvalThreshold\", 2 },\n    // highlight-next-line\n    { \"smartUI.rejectionThreshold\", 5 }\n};\ncapabilities.AddAdditionalOption(\"LT:Options\", ltOptions);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "highlight-next-line",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n<\/TabItem>\n<\/Tabs>\n\n---\n\n## Screenshot-Level Configuration\n\nOverride the build or project thresholds for individual screenshots. This is useful when specific pages contain dynamic content (e.g., live feeds, timestamps, ads) that naturally causes higher mismatch.\n\nThe `smartuiSnapshot` method accepts an optional options object with threshold parameters.\n\n### Options Parameters\n\n| Parameter | Type | Description |\n|---|---|---|\n| `approvalThreshold` | Number | Mismatch percentage at or below which this screenshot is auto-approved. |\n| `rejectionThreshold` | Number | Mismatch percentage at or above which this screenshot is auto-rejected. |\n\n### Examples\n\n\n\n\n```javascript title=\"Pass thresholds as the third argument to smartuiSnapshot\"\n// Screenshot using build/project-level thresholds (no override)\nawait smartuiSnapshot(driver, \"Homepage\");\n\n// Screenshot with a custom threshold for a dynamic page\n// highlight-start\nawait smartuiSnapshot(driver, \"Live Dashboard\", {\n    approvalThreshold: 5,\n    rejectionThreshold: 10\n});\n// highlight-end"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Java",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n<\/TabItem>\n\n\n```python title=\"Pass thresholds in the options dictionary\"\n# Screenshot using build/project-level thresholds (no override)\ndriver.execute_script(\"smartui.takeScreenshot\", {\"screenshotName\": \"Homepage\"})\n\n# Screenshot with a custom threshold for a dynamic page\n# highlight-start\noptions = {\n    \"screenshotName\": \"Live Dashboard\",\n    \"approvalThreshold\": 5,\n    \"rejectionThreshold\": 10\n}\ndriver.execute_script(\"smartui.takeScreenshot\", options)\n# highlight-end"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "highlight-end (C#)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n<\/TabItem>\n\n\n```ruby title=\"Pass thresholds as a hash to smartui_snapshot\"\n# Screenshot using build/project-level thresholds (no override)\nsmartui_snapshot(driver, \"Homepage\")\n\n# Screenshot with a custom threshold for a dynamic page\n# highlight-start\nsmartui_snapshot(driver, \"Live Dashboard\", {\n  approvalThreshold: 5,\n  rejectionThreshold: 10\n})\n# highlight-end"
+      }
+    ],
+    "dateModified": "2026-06-09T15:09:24+05:30"
+  }) }}
+/>
+
+# Mismatch Thresholds
 
 When running visual regression tests, not every pixel-level difference is a real bug. Minor rendering variations such as font anti-aliasing, date/time stamps, or animated content can cause screenshots to fail even when the page looks correct to the human eye.
 

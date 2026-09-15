@@ -500,6 +500,7 @@ These options are available but may not be prominently documented:
 | `--force-rebuild` | `storybook` | Force rebuild of an already existing Storybook build | `smartui storybook ./storybook-static --force-rebuild` |
 
 **Usage Examples:**
+
 ```bash
 # Scheduled test runs
 smartui capture urls.json --scheduled "schedule-123"

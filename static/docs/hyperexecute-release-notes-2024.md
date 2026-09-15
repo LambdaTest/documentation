@@ -33,6 +33,7 @@ HyperExecute now supports the Appium and the Maestro Android Emulator, providing
 - **Customizable Capabilities:** Define emulator configurations such as device name, platform version, and orientation directly within your test files.
 
 To execute tests using the Android Emulator, add the following configurations to your `hyperexecute.yaml`:
+
 ```yaml
 framework:
 args:
@@ -338,11 +339,13 @@ With this exciting update, you can now use location names (e.g., "Kolkata") alon
 This capability will work with Selenium, Playwright, Puppeteer, Cypress, and Appium, except for Espresso and XCUI frameworks.
 
 Previously, you might have needed to use:
+
 ```yaml
 capabilities.setCapability("timezone", "UTC+05:30");
 ```
 
 Now, you can simply set:
+
 ```bash
 capabilities.setCapability("timezone", "Kolkata");
 ```

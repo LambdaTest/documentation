@@ -2,6 +2,56 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
+\n<!DOCTYPE suite SYSTEM \"http://testng.org/testng-1.0.dtd\">\n\n    \n        \n        \n        \n        \n            \n        <\/classes>\n    <\/test> \n<\/suite>"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 5: Configure the Test Capabilities (Parallel)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<!DOCTYPE suite SYSTEM \"http://testng.org/testng-1.0.dtd\">\n\n    \n        \n        \n        \n        \n            \n        <\/classes>\n    <\/test> \n    \n        \n        \n        \n        \n            \n        <\/classes>\n    <\/test> \n\n<\/suite>"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 6: Execute and Monitor your Tests",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "  mvn clean install"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 6: Execute and Monitor your Tests (Single)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "  mvn test -D suite=single.xml"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 6: Execute and Monitor your Tests (Parallel)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "  mvn test -D suite=parallel.xml"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "The cucumber-skill package includes",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "cucumber-skill/\n\u251c\u2500\u2500 SKILL.md\n\u2514\u2500\u2500 reference/\n    \u251c\u2500\u2500 playbook.md\n    \u2514\u2500\u2500 advanced-patterns.md"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Install a Cucumber Agent Skill using the command below",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "codeRepository": "https://github.com/LambdaTest/agent-skills",
+        "text": "# Clone the repo and copy the skill you need\ngit clone https://github.com/LambdaTest/agent-skills.git\ncp -r agent-skills/cucumber-skill .claude/skills/\n\n# Or for Cursor / Copilot\ncp -r agent-skills/cucumber-skill .cursor/skills/"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 In this documentation, you will learn how to trigger a automation script of **Cucumber** for application testing with **Appium** on TestMu AI, set the [**desired capabilities**](/support/docs/desired-capabilities-in-appium/) for appium testing, and other advanced features of TestMu AI.
 
 ## Prerequisites

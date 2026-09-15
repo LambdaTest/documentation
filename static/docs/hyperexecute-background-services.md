@@ -2,52 +2,6 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
-Background Services is a feature of HyperExecute which is generally used to run the long running **Application Servers**. You can trigger the background services by using either the `background` or `backgroundDirectives` property in the [HyperExecute YAML](/support/docs/deep-dive-into-hyperexecute-yaml/#background) file.
-
-This feature is useful for the following cases:
-
-- Web Applications or Servers.
-- Running databases.
-- Providing file sharing or streaming services.
-- Running messaging or chat applications.
-- Providing APIs for other applications to use.
-
-## Enable Background Service
-There are two methods to enable the **Background Service** from the HyperExecute YAML file:
-
-### 1. Using `backgroundDirectives`
-
-```yaml
-backgroundDirectives:
-shell: bash
-commands:
-- name: YOUR_SERVICE_NAME
-command: npx static-server
-- name: Database
-command: mysql-server
-```
-- `shell`: defines the terminal it should use to run the background service.
-- `command`: specifies the command to be executed in the background.
-- `name`: specifies the name of your Background Service.
-
-### 2. Using `background`
-
-```yaml
-background:
-- npx static-server
-- mysql-server
-```
-
-## Background Service Logs
-
-To check the background service logs, follow the below mentioned steps:
-
-**Step 1:** After executing your job, go to the [HyperExecute Dashboard](https://www.testmuai.com/login/?redirectTo=https://hyperexecute.lambdatest.com/hyperexecute/jobs) to check the status of the job.
-
-**Step 2:** Click on the **Background Service** button.
-
-**Step 3:** Click on the desired **background service** you have triggered to check its logs.
-
 ## Frequently Asked Questions
 
 Is the service intended to operate within the same Virtual Machine or externally? Yes, the service will run within the same Virtual Machine.

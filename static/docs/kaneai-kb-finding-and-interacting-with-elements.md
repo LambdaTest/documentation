@@ -45,24 +45,28 @@ Wrap element text in quotes when you need an exact match. This prevents KaneAI f
 When multiple elements look the same (e.g., a table with "Edit" buttons on every row, or a page with multiple "Submit" buttons), use position or context to narrow down the target.
 
 **Absolute positions:**
+
 ```
 click on the "Submit" button at the bottom of the page
 click on the search icon in the top right corner
 ```
 
 **Relative positions (near another element):**
+
 ```
 click the "Edit" button next to "john@example.com"
 click the "Delete" icon beside the "Quarterly Report" row
 ```
 
 **Ordering (nth element):**
+
 ```
 click on the second "Add to Cart" button
 select the third item in the dropdown
 ```
 
 **Inside a container:**
+
 ```
 click "Submit" inside the payment form
 click "Save" inside the modal dialog
@@ -78,6 +82,7 @@ Your page shows a grid of products, each with an "Add to Cart" button.
 `click on Add to Cart`. KaneAI won't know which product you mean.
 
 **Good approaches**
+
 ```
 click the "Add to Cart" button below the "Running Shoes" product
 click the "Add to Cart" button for the first product in the list

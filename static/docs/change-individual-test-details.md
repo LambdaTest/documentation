@@ -2,6 +2,64 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
+executeScript(\"lambda-status=passed\");\n\n// Mark test as failed\n$driver->executeScript(\"lambda-status=failed\");"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Ruby",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Ruby",
+        "text": "# Mark test as passed\ndriver.execute_script(\"lambda-status=passed\")\n\n# Mark test as failed\ndriver.execute_script(\"lambda-status=failed\")"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Pass the new name through JavascriptExecutor (Java)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "((JavascriptExecutor) driver).executeScript(\"lambda-name=Your_test_name\");"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Rename Your Test (JavaScript)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "await driver.executeScript('lambda-name=Your_test_name');"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Rename Your Test (Python)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Python",
+        "text": "driver.execute_script(\"lambda-name=Your_test_name\")"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "C#",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "C#",
+        "text": "((IJavaScriptExecutor)driver).ExecuteScript(\"lambda-name=Your_test_name\");"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "PHP",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "PHP",
+        "text": "$driver->executeScript(\"lambda-name=Your_test_name\");"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Ruby",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Ruby",
+        "text": "driver.execute_script(\"lambda-name=Your_test_name\")"
+      }
+    ],
+    "dateModified": "2026-09-09T19:13:32+05:30"
+  }) }}
+/>
+
+# Changing Individual Test Details
+
 You can modify individual test details from your automation test build while running Selenium tests on TestMu AI. This guide covers marking test status and renaming tests during execution.
 
 ## Mark Test Status as Pass or Fail

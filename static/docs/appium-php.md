@@ -2,6 +2,49 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
+\n\n\n\n```php title=\"AndroidApp.php\"\n<?php\n    require 'vendor/autoload.php';\n    use Facebook\\WebDriver\\Remote\\DesiredCapabilities;\n    use Facebook\\WebDriver\\WebDriverBy;\n    use Facebook\\WebDriver\\Remote;\n    use Facebook\\WebDriver\\Chrome\\ChromeOptions;\n    use Facebook\\WebDriver\\WebDriverExpectedCondition;\n    use Facebook\\WebDriver\\Remote\\RemoteWebDriver;\n\n    $caps = array(\n        \"app\"=> \"APP_URL\", //Enter app_url here\n        \"deviceName\" => \"Galaxy S20\",\n        \"platformName\" => \"Android\",\n        \"platformVersion\" => \"10\",\n        \"isRealMobile\" => TRUE,\n        \"visual\" => TRUE,\n        \"video\" => TRUE,\n        \"name\" => \"Php - Android test\",\n        \"build\" => \"Php Vanilla - Android\"\n    );\n\n    //highlight-next-line\n    $username = getenv(\"LT_USERNAME\") ? getenv(\"LT_USERNAME\") : \"USERNAME\"; //Enter username here\n    //highlight-next-line\n    $accesskey = getenv(\"LT_ACCESS_KEY\") ? getenv(\"LT_ACCESS_KEY\") : \"ACCESS_KEY\"; //Enter accesskey here\n\n    $driver = RemoteWebDriver::create(\"http://$username:$accesskey@mobile-hub.lambdatest.com/wd/hub\",$caps);\n\n try{\n    $color_element = $driver->findElement(WebDriverBy::id('color'));\n    $color_element->click();\n\n    $text_element = $driver->findElement(WebDriverBy::id('Text'));\n    $text_element->click();\n\n    $toast_element = $driver->findElement(WebDriverBy::id('toast'));\n    $toast_element->click();\n\n    $notification_element = $driver->findElement(WebDriverBy::id('notification'));\n    $notification_element->click();\n\n    $geoLocation_element = $driver->findElement(WebDriverBy::id('geoLocation'));\n    $geoLocation_element->click();\n    sleep(5);\n    \n    $url_element = $driver->findElement(WebDriverBy::id('url'));\n    $url_element->sendkeys(\"https://www.testmuai.com\");\n\n    $find_element = $driver->findElement(WebDriverBy::id('find'));\n    $find_element->click();\n    sleep(2);\n\n    $driver->quit();\n } finally {\n    $driver->quit();\n }\n\n?>"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 5: Configure the Test Capabilities (iOS)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n<\/TabItem>\n\n\n```php title=\"Android(.apk)\"\n  $caps = array(\n        //highlight-next-line\n        \"app\"=> \"APP_URL\", //Enter app_url here\n        \"deviceName\" => \"Galaxy S20\",\n        \"platformName\" => \"Android\",\n        \"platformVersion\" => \"10\",\n        \"isRealMobile\" => TRUE,\n        \"visual\" => TRUE,\n        \"video\" => TRUE,\n        \"name\" => \"Php - Android test\",\n        \"build\" => \"Php Vanilla - Android\"\n    );"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 6: Execute and Monitor your Tests (iOS)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "php IOSApp.php"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 6: Execute and Monitor your Tests (Android)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "php AndroidApp.php"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "The appium-skill package includes",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "appium-skill/\n\u251c\u2500\u2500 SKILL.md\n\u2514\u2500\u2500 reference/\n    \u251c\u2500\u2500 playbook.md\n    \u2514\u2500\u2500 advanced-patterns.md"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Install a Appium Agent Skill using the command below",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "codeRepository": "https://github.com/LambdaTest/agent-skills",
+        "text": "# Clone the repo and copy the skill you need\ngit clone https://github.com/LambdaTest/agent-skills.git\ncp -r agent-skills/appium-skill .claude/skills/\n\n# Or for Cursor / Copilot\ncp -r agent-skills/appium-skill .cursor/skills/"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 In this documentation, you will learn how to trigger a automation script of **PHP** for application testing with **Appium** on TestMu AI, set the [**desired capabilities**](/support/docs/desired-capabilities-in-appium/) for appium testing, and other advanced features of TestMu AI.
 
 ## Prerequisites

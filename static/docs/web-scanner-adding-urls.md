@@ -23,6 +23,7 @@ Use this method when you already maintain URL lists in a spreadsheet or text fil
 
 **CSV Format:**
 One URL per line (no header).
+
 ```csv
 [https://example.com](https://example.com)
 [https://example.com/pricing](https://example.com/pricing)

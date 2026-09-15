@@ -2,6 +2,161 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
+\n\ndescribe('Test Case name', () => {\n  beforeEach(() => {\n\n    cy.visit('Required URL')\n  })\n\n  it('SmartUI Snapshot', () => {\n    cy.smartuiSnapshot('Screenshot Name');\n  })\n})\n"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 6: Execute the Tests on SmartUI Cloud",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "npx smartui --config .smartui.json exec -- npx cypress run --spec cypress/e2e/smartuiSDKLocal.cy.js --browser chrome --headed"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Handling Dynamic Data in SmartUI SDK ****",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n<\/TabItem>\n\n\n```js title=\"This is a sample for your configuration for Cypress to ignore by Class\"\nlet options = {\n            ignoreDOM: {\n                class: [\"Class-1\", \"Class-2\"],\n            }\n        }\ncy.smartuiSnapshot('Screenshot Name', options);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 12",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n<\/TabItem>\n\n\n\n```js title=\"This is a sample for your configuration for Cypress to ignore by CSS Selector\"\nlet options = {\n            ignoreDOM: {\n                cssSelector: [\"CSS-Selector-1\", \"CSS-Selector-2\"],\n            }\n        }\ncy.smartuiSnapshot('Screenshot Name', options);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 13",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n<\/TabItem>\n\n\n```js title=\"This is a sample for your configuration for Cypress to select by Class\"\nlet options = {\n            selectDOM: {\n                class: [\"Class-1\", \"Class-2\"],\n            }\n        }\ncy.smartuiSnapshot('Screenshot Name', options);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 14",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n<\/TabItem>\n\n\n\n```js title=\"This is a sample for your webhook configuration for Cypress to select by CSS Selector\"\nlet options = {\n            selectDOM: {\n                cssSelector: [\"CSS-Selector-1\", \"CSS-Selector-2\"],\n            }\n        }\ncy.smartuiSnapshot('Screenshot Name', options);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "For capturing the screenshot of a specific element",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n<\/TabItem>\n\n\n```js title=\"This is a sample for your configuration for Cypress to capture an element by Class\"\nlet options = {\n      element: {\n          class: 'Required Class',\n      }\n  };\ncy.smartuiSnapshot('Screenshot Name', options);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 16",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n<\/TabItem>\n\n\n\n```js title=\"This is a sample for your webhook configuration for Cypress to capture an element by CSS Selector\"\nlet options = {\n      element: {\n          cssSelector: 'Required CSS Selector',\n      }\n  };\ncy.smartuiSnapshot('Screenshot Name', options);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Best Practices",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "cy.smartuiSnapshot('HomePage-Header');\ncy.smartuiSnapshot('ProductPage-MainContent');"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Best Practices",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "cy.visit('https://example.com');\ncy.get('#main-content').should('be.visible');\ncy.wait(1000); // Wait for animations\ncy.smartuiSnapshot('Page Loaded');"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Verify PROJECT_TOKEN is set correctly",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "   echo $PROJECT_TOKEN"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Verify SmartUI CLI is installed",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "   npx smartui --version"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Add explicit waits before screenshots",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "   cy.visit('https://example.com');\n   cy.get('#content').should('be.visible');\n   cy.wait(2000); // Wait for content to load\n   cy.smartuiSnapshot('Page');"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Enable JavaScript in configuration",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JSON",
+        "text": "   {\n     \"enableJavaScript\": true\n   }"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Try different port if default is in use",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "   npx smartui exec -P 5000 -- "
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Check latest versions on npm",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "   npm view @lambdatest/cypress-driver version\n   npm view @lambdatest/smartui-cli version"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Clear npm cache",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "   npm cache clean --force"
+      }
+    ],
+    "dateModified": "2026-08-18T16:55:27+05:30"
+  }) }}
+/>
+
+= v4.x.x, upgrade your Node.js version to v20.3 or above. Import the TestMu AI Cypress driver in support/e2e.js. Update your config (cypress.config.js) or plugins/index.js with the following snippet SmartUI SDK only supports Cypress versions >= 10.0.0",
+          "url": "https://www.testmuai.com/support/docs/smartui-cypress-sdk/#step-2-install-the-dependencies"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Configure your Project Token",
+          "text": "Setup your project token shown in the SmartUI app after creating your project.",
+          "url": "https://www.testmuai.com/support/docs/smartui-cypress-sdk/#step-3-configure-your-project-token"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Step 4: Create and Configure SmartUI Config",
+          "text": "You can now configure your project configurations on using various available options to run your tests with the SmartUI integration. To generate the configuration file, please execute the following command: Once, the configuration file will be created, you will be seeing the default configuration pre-filled in the configuration file: For capturing fullpage or viewport screenshots, please refer to this documentation For the list of available mobile viewports, please refer to this documentation For more information about SmartUI config global options, please refer to this documentation.",
+          "url": "https://www.testmuai.com/support/docs/smartui-cypress-sdk/#step-4-create-and-configure-smartui-config"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 5,
+          "name": "Step 5: Adding SmartUI function to take screenshot",
+          "text": "You can incorporate SmartUI into your custom Cypress test script, as shown below:",
+          "url": "https://www.testmuai.com/support/docs/smartui-cypress-sdk/#step-5-adding-smartui-function-to-take-screenshot"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 6,
+          "name": "Step 6: Execute the Tests on SmartUI Cloud",
+          "text": "Execute visual regression tests on SmartUI using the following commands You may use the npx smartui --help command in case you are facing issues during the execution of SmartUI commands in the CLI.",
+          "url": "https://www.testmuai.com/support/docs/smartui-cypress-sdk/#step-6-execute-the-tests-on-smartui-cloud"
+        }
+      ]
+    }
+  ]) }}
+/>
+
 Welcome to the world of simplified visual testing with the SmartUI SDK.
 
 Integrating seamlessly into your existing Cypress testing suite, SmartUI SDK revolutionizes the way you approach visual regression testing. Our robust solution empowers you to effortlessly capture, compare, and analyze screenshots across a multitude of browsers and resolutions, ensuring comprehensive coverage and accuracy in your visual testing endeavors.

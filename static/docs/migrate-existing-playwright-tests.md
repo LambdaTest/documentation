@@ -1,6 +1,22 @@
-# Migrate Your Existing Playwright Tests
+# Migrate Existing Playwright Test Suites On TestMu AI
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
+{\n  const browser = await chromium.launch({\n    headless: false\n  });\n\n  const page = await browser.newPage()\n  await page.goto('https://www.bing.com')\n  const element = await page.$('[aria-label=\"Enter your search term\"]')\n  await element.click()\n  await element.type('LambdaTest')\n  await element.press('Enter')\n  const title = await page.title()\n\n  expect(title).toEqual('LambdaTest - Search')\n\n  await browser.close()\n})()"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Changes In Scripts To Run Playwright Tests On TestMu AI",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "const { chromium } = require('playwright')\nconst { expect } = require('@playwright/test');\n\n(async () => {\n  const capabilities = {\n    'browserName': 'Chrome', // Browsers allowed: `Chrome`, `MicrosoftEdge`, `pw-chromium`, `pw-firefox` and `pw-webkit`\n    'browserVersion': 'latest',\n    'LT:Options': {\n      'platform': 'Windows 10',\n      'build': 'Playwright Sample Build',\n      'name': 'Playwright Sample Test',\n      'user': process.env.LT_USERNAME,\n      'accessKey': process.env.LT_ACCESS_KEY,\n    }\n  }\n\n  const browser = await chromium.connect({\n    wsEndpoint: `wss://cdp.lambdatest.com/playwright?capabilities=${encodeURIComponent(JSON.stringify(capabilities))}`\n  })\n\n  // Test code ...\n\n  await browser.close()\n})()"
+      }
+    ],
+    "dateModified": "2026-09-09T19:13:32+05:30"
+  }) }}
+/>
+
+# Migrate Your Existing Playwright Tests
 
 TestMu AI offers an online automation platform for test automation. Therefore you can easily migrate Playwright tests from your local grid to the TestMu AI platform.
 

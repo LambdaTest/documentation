@@ -2,6 +2,27 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
+//g'\n# highlight-end\n\ntestRunnerCommand: mvn test -Dplatname=linux -Dmaven.repo.local=./.m2 dependency:resolve -DselectedTests=$test\n\nretryOnFailure: true\nmaxRetries: 1\n\n# highlight-next-line\njobLabel: [selenium-testng, linux, v1, autosplit]"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Base YAML",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "---\nversion: 0.1\n# highlight-next-line\nrunson: win\n\nautosplit: true\n# highlight-next-line\nconcurrency: 2\n\npre:\n  - mvn dependency:resolve\n\n# highlight-start\ntestDiscovery:\n  type: raw\n  mode: static\n  command: grep 'test name' xml/testng_linux.xml | awk '{print$2}' | sed 's/name=//g' | sed 's/>//g'\n# highlight-end\n\ntestRunnerCommand: mvn test -Dplatname=linux -Dmaven.repo.local=./.m2 dependency:resolve -DselectedTests=$test\n\nretryOnFailure: true\nmaxRetries: 1\n\n# highlight-next-line\njobLabel: [selenium-testng, autosplit]"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Resultant YAML",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "version: 0.1\n# highlight-next-line\nrunson: linux\n\nautosplit: true\n# highlight-next-line\nconcurrency: 4\n\nbase:\n    yamls:\n        - ./base.yaml\n\npre:\n    - mvn dependency:resolve\n\n# highlight-start\ntestDiscovery:\n    command: grep 'test name' xml/testng_linux.xml | awk '{print$2}' | sed 's/name=//g' | sed 's/>//g'\n    mode: remote\n# highlight-end\n\ntestRunnerCommand: mvn test -Dplatname=linux -Dmaven.repo.local=./.m2 dependency:resolve -DselectedTests=$test\n\nmaxRetries: 1\nretryOnFailure: true\n\n# highlight-next-line\njobLabel: [selenium-testng, linux, v1, autosplit]"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 YAML inheritance in HyperExecute allows you to reuse common configuration settings across multiple [YAML](/support/docs/deep-dive-into-hyperexecute-yaml) files, improving efficiency, consistency, and flexibility.
 
 For example, you can create a base YAML file with common settings like **browsers**, **OS versions**, and **devices**, and then inherit from it in other YAML files for different environments or test types. This **reduces boilerplate code and errors** while making it easy to switch between environments and manage complex test execution configurations.
@@ -64,6 +85,7 @@ jobLabel: [selenium-testng, linux, v1, autosplit]
 ```
 
 ### Base YAML
+
 ```yaml
 ---
 version: 0.1
@@ -94,6 +116,7 @@ jobLabel: [selenium-testng, autosplit]
 ```
 
 ### Resultant YAML
+
 ```yaml
 version: 0.1
 # highlight-next-line

@@ -2,6 +2,15 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
+0)\n\n# Invoke driver.quit() after the test is done to indicate that the test is completed.\n    driver.quit()\n\n\n# The Thread function takes run_session function and each set of capability from the caps array as an argument to run each session in parallel\nfor cap in caps:\n    Thread(target=run_session, args=(cap,)).start()\n"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
+# Migrate Appium Tests From Local Grid
+
 TestMu AI offers an online Appium automation grid to perform App automation. Therefore you can easily migrate Appium tests from your local grid to the TestMu AI platform.
 
 In this documentation, we look at how to leverage TestMu AI cloud for App automation and migrate your test scripts (or test suites) from your local grid. You can use TestMu AI's desired capabilities in your tests, authenticate your test session, and execute tests on the cloud.

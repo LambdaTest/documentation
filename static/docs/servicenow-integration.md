@@ -20,7 +20,9 @@ To enable integration, you need to create an OAuth application in your ServiceNo
    - **Name:** Enter a name (e.g., TestMu AI Integration).
    - **Client ID:** (Optional) Leave blank to auto-generate or specify your own.
    - **Client Secret:** (Optional) Leave blank to auto-generate or specify your own.
+
    - **Redirect URL:** https://integrations.lambdatest.com/servicenow/auth/callback
+
    - **Logo URL:** https://assets.testmuai.com/resources/images/logos/logo.svg
 
 5. Click **Submit** to create the application.

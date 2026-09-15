@@ -2,6 +2,20 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
+{\n  it(\"Example test\", () => {\n    cy.visit(\"https://demo.lambdatest.com/\");\n    // highlight-next-line\n    cy.screenshot(\"\"); //Add desired Cypress screenshot name\n  });\n});"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 5: Run the test on the TestMu AI platform by executing the below-run command",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "lambdatest-cypress run"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 Using the TestMu AI platform, perform regression testing in just one click and find Visual UI Regression bugs easily with the help of Smart Testing. This documentation will act as your step-by-step guide in performing successful Visual Regression tests.
 
 ## Prerequisites for running SmartUI with Cypress

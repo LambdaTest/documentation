@@ -2,6 +2,44 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
+, /, or .; anything else needs converting first. See Step 2. Alt ID, if you use Jira. It holds the Jira ID for linked test cases and is the cleanest source for Test Manager's Link Jira field. Zephyr Enterprise has no Precondition, Status, or Type field on a test case \u2014 Test Manager has all three. Teams usually keep preconditions at the top of the Description, in a custom field, or as the first test step, so check where yours live...",
+          "url": "https://www.testmuai.com/support/docs/migrate-from-zephyr-enterprise/#step-1-export-from-zephyr-enterprise"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Prepare the CSV",
+          "text": "Convert to CSV. Use File > Save As > CSV UTF-8 (Comma delimited). Pick the UTF-8 variant specifically \u2014 plain CSV uses your system encoding and corrupts accented and non-Latin characters. Check your folder path column. Test Manager rebuilds your entire folder hierarchy from a single column containing the full path \u2014 you don't create folders manually or import folder by folder. Map that column to Folder, tell the importer which delimiter separates the levels, and each test case lands in the right place, with any missing folders created automatically. The importer offers three delimiters, plus a no-split option: If your Zephyr export uses any other separator \u2014 \\, |, ::, - \u2014 find-and-replace it with >, /, or . in your spreadsheet before importing. Anything else won't split. Then open your export and check what the folder column contains: Full path already present \u2192 map it and select the matching delimiter. Only the leaf folder name \u2192 your cases will all sit at one level. Rebuild the path before importing. Levels split across separate columns \u2192 join them: =TEXTJOIN(\"/\",TRUE,D2,E2,F2) Rows with no folder value land in a folder called Untitled. Keep folder names within 100 characters \u2014 longer names are truncated. Check your folder names don't contain the delimiter A folder called Login / Logout split by / silently becomes two folders. This bites hardest with Split by (.) \u2014 periods are common in names like v2.1 Regression or Module 3.4. If your names contain the separator, switch...",
+          "url": "https://www.testmuai.com/support/docs/migrate-from-zephyr-enterprise/#step-2-prepare-the-csv"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Set up the target project",
+          "text": "Go to Test Manager Projects and create the project. Go to Project Settings > Custom Fields and create every custom field your CSV carries, with the right type (dropdown, date, user, checkbox). You can create them inline during import via Add New Field, but doing it now gives you control over field types and speeds up mapping. Connect Jira if you use it. If you forget, links resolve automatically once the integration is added later. Decide whether Zephyr releases become separate projects or top-level folders. Folders usually win \u2014 everything stays searchable in one place.",
+          "url": "https://www.testmuai.com/support/docs/migrate-from-zephyr-enterprise/#step-3-set-up-the-target-project"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Step 4: Import",
+          "text": "Upload. Open the project and go to Add Test Case > Import CSV (or use Drop your CSV or browse on an empty project). Select the layout: Check the preview's valid-row count. If it looks wrong, fix the file rather than continuing. Map fields. Mapping a column to Title is mandatory. Leave unwanted columns as Ignore Field \u2014 they're never written. Columns with no matching field can become custom fields via Add New Field. Map values. Existing system field values map automatically; use Create new value for ones that don't exist (for example, Zephyr's \"Blocker\" \u2192 Test Manager's \"Critical\"). Then set the Folder Delimiter \u2014 the options are Split by (>), Split by (/), Split by (.), and Plain text. Pick the one matching your folder column and the importer builds the full hierarchy, creating any folders that don't yet exist. Choose Plain text only if you want each value treated as a single flat folder name. Preview and import. Nothing is written until you confirm. The importer checks every row and reports what it will do: On a first migration into an empty project, every row should fall under Will be created new. If you see a meaningful number of skipped rows, stop and investigate before importing \u2014 use Download Skipped Rows (CSV) to get each one with its reason, fix them in your spreadsheet, and import that file separately. Keep the tab open while the file prepares \u2014 closing or refreshing cancels preparation. Once the import is running you can navigate away; it continues in the...",
+          "url": "https://www.testmuai.com/support/docs/migrate-from-zephyr-enterprise/#step-4-import"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 5,
+          "name": "Step 5: Verify",
+          "text": "Test case count and folder structure match the export. Nothing unexpected in the Untitled folder. Spot-check 5 cases across different folders: steps present and in order, expected results aligned, preconditions, priority, custom fields, tags. Check the awkward ones: longest test case, heaviest formatting, non-English characters, deepest folder path. Jira links resolve correctly. Skipped rows report reviewed, fixed, and re-imported.",
+          "url": "https://www.testmuai.com/support/docs/migrate-from-zephyr-enterprise/#step-5-verify"
+        }
+      ]
+    }
+  ]) }}
+/>
+
+# Migrating from Zephyr Enterprise to Test Manager
+
 Move your test case library from **Zephyr Enterprise** into TestMu AI Test Manager using CSV import.
 
 ## What migrates

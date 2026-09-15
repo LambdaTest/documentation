@@ -2,6 +2,104 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
+\n\n## Best Practices\n\n\n\n\n**Secret Management**\n\n- Never commit credentials to repository\n- Use GitLab CI/CD Variables for all sensitive data\n- Rotate secrets regularly\n- Use different secrets for different environments\n\n<\/TabItem>\n\n\n**Pipeline Optimization**\n\n- Use parallel jobs for faster execution\n- Cache dependencies to speed up pipelines\n- Only run visual tests on relevant branches\n- Set up pipeline conditions to avoid unnecessary runs\n\n**Example:**\n```yaml\nonly:\n  - main\n  - develop\n  - merge_requests"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 2",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "variables:\n  BUILD_NAME: \"MR-$CI_MERGE_REQUEST_IID-$CI_COMMIT_SHORT_SHA\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Pass variable to job",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "   variables:\n     PROJECT_TOKEN: $PROJECT_TOKEN"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Check pipeline logs for errors",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "   after_script:\n     - if [ $CI_JOB_STATUS == 'failed' ]; then cat job.log; fi"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Increase pipeline timeout",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "   default:\n     timeout: 1h"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Run tests in parallel using parallel jobs",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "   parallel:\n     matrix:\n       - TEST_GROUP: [1, 2, 3]"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Use specific Node version",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "   image: node:18"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Clear npm cache",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "   before_script:\n     - npm cache clean --force"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Ensure Node.js is available",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "   image: node:18"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Verify npm is available",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "   before_script:\n     - npm --version"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Install SmartUI CLI explicitly",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "   before_script:\n     - npm install -g @lambdatest/smartui-cli"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
+ Run CI/CD for external repository. Enter your repository URL and click on Create Project.",
+          "url": "https://www.testmuai.com/support/docs/smartui-with-gitlab/#step-1-setup-your-projects-in-gitlab"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Create a New Workflow",
+          "text": "Navigate to the Build section > Pipelines. Select your required template for CI/CD workflow file. For the demo we are using the Test template. Now, write your workflow YAML file. Here is the sample file for your reference. Commit this yaml file in your repository and make the required changes in your code to automatically trigger the pipeline. You can also store your LTUSERNAME, LTACCESSKEY and PROJECTTOKEN as secrets in your GitLab project repository.",
+          "url": "https://www.testmuai.com/support/docs/smartui-with-gitlab/#step-2-create-a-new-workflow"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Check the output",
+          "text": "After triggering the workflow, check your results in the SmartUI Dashboard",
+          "url": "https://www.testmuai.com/support/docs/smartui-with-gitlab/#step-3-check-the-output"
+        }
+      ]
+    }
+  ]) }}
+/>
 A GitLab Pipeline automates building, testing, and deploying code changes. It's essential for rapid development, improved code quality, and faster delivery by catching errors early and reducing manual work.
 
 This document will show you how to integrate GitLab Pipeline with SmartUI to shorten your test cycles.

@@ -2,6 +2,21 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
+Kick-off shell scripts now button to start the shell script. This will upload all of the tests cases to qTest.",
+          "url": "https://www.testmuai.com/support/docs/hyperexecute-qtest-integration/#step-4-execute-the-shell-script"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 5,
+          "name": "Step 5: Monitor Your Tests",
+          "text": "Login into qTest Manager, go to the Test Execution tab, and there should be a test cycle under your project called Junit Automated Tests Click on the test cycle and it should show all of the tests that were run through the maven build and their statuses. Visit the HyperExecute Dashboard and check your Job status.",
+          "url": "https://www.testmuai.com/support/docs/hyperexecute-qtest-integration/#step-5-monitor-your-tests"
+        }
+      ]
+    }
+  ]) }}
+/>
+
 qTest is a comprehensive test management tool designed for Project Management, Bug Tracking, and Test Management. It embraces a centralized test management approach, facilitating seamless communication and accelerating task development across QA teams and stakeholders.
 
 This document details the seamless integration between HyperExecute and qTest, enabling you to run your automated tests on a variety of devices and real devices provided by TestMu AI.

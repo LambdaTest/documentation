@@ -2,6 +2,90 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
+\n\n### Muted Test Count & Bulk Unmute Option\nWe've enhanced the Test Muting functionality in HyperExecute with improved visibility and control:\n\n- **Total Muted Test :** The dashboard now shows the number of muted test cases in your suite.\n- **Unmute All :** You can now unmute all tests at once instead of manually unmuting them one by one.\n\nThis update streamlines test management and makes it easier to re-enable muted tests when they are ready to be executed again.\n\n \n\n---\n\n## Version 3.0.1\n### Workflow Variables on HyperExecute\nWith Workflow Variables, you can now customize your workflow execution. This makes it easier to reuse the same workflow across multiple scenarios without editing YAML or creating duplicate workflows.\n\n- **Workflow-level Variables :** Define reusable variables (e.g., ENVIRONMENT, BROWSER) while creating or editing workflows.\n- **Default & Multiple Values :** Assign defaults or provide multiple values per variable.\n- **Runtime Overrides :** Update variable values at run time without changing saved defaults.\n\n> To learn more about Workflow Variables on HyperExecute, refer to our [detailed documentation](/support/docs/hyperexecute-workflows/#workflow-variables)\n\n---\n\n## Version 3.0.0\n### Language Support for Android Real Device Maestro Framework\n\nWe have introduced language support for Maestro tests on Android devices in HyperExecute. Now, you can configure the language parameter directly in your HyperExecute YAML under the [framework](/support/docs/hyperexecute-yaml-version0.2/#framework) flag.\n\nThis enhancement is particularly useful when your testing applications in non-English environments. For example, you can now run tests in Spanish by setting:\n\n```yaml title=\"hyperexecute.yaml\"\nframework:\n  name: raw\n  args:\n    language: es\n    locale: ES"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "partialReports",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\nThis will successfully match paths like:\n\n```yaml\nreports/2025-07-29/cucumber/\nreports/staging/run_001/cucumber/\nreports/builds/test_42/cucumber/"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "args",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n> **Note:** Currently supported on Safari for iOS real devices.\n\n---\n\n## Version 2.9.4\n### YAML-Based Capability Overrides for Selenium Tests\nYou can now override Selenium capabilities directly from your `hyperexecute.yaml` file using the new `ltOptions` flag. This enhancement allows you to define key-value pairs, like browser type, version, logs, video, tunnel, and more without changing your test scripts.\n\n**Why it matters?**\n- Avoid code changes for environment-specific needs.\n- Reuse the same script across different setups.\n- Keep test code clean and capability-agnostic.\n\n```yaml hyperexecute.yaml\nltOptions:\n  browserName: firefox\n  build: 'testng_build_yaml_ltOptions'\n  console: true\n  name: 'testng_test_yaml_ltOptions'\n  network: true\n  selenium_version: 4.20.0\n  tunnel: false\n  version: latest\n  video: false"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Support for customHeaders in HyperExecute",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "caps.setCapability(\"customHeaders\", new HashMap() {{\n  put(\"x-px-access-token\", \"testuil\");\n}});"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Example YAML Configuration",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "failFast:\n  maxNumberOfTests: 2\n  level: scenario"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Default Reporter Configuration in CypressOps",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "cypressOps:\n  reporterConfigFile: \"reporter_config.json\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Value of this JSON",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JSON",
+        "text": "{\n  \"reporterEnabled\": \"mochawesome,mocha-junit-reporter\",\n  \"mochawesomeReporterOptions\": {\n      \"reportDir\": \"cypress/results\",\n      \"overwrite\": true,\n      \"html\": false,\n      \"json\": true\n  },\n  \"mochaJunitReporterReporterOptions\": {\n        \"mochaFile\": \"cypress/results/my-test-output.xml\",\n        \"toConsole\": true\n  }\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Setup Runtime Updates",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "runtime:\n  - language: dotnet\n    version: \"4.7\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Support for Project Capability in CypressOps",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "cypressOps:\n  ProjectName: \"Cypress_Project\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Add the following configurations in your YAML file",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "testRunnerCommand: YOUR_RUNNER_COMMAND --outputdir Reports \n\nreport: true\npartialReports:\n  type: json\n  location: Reports\n  frameworkName: robot"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Parameterising appium flag",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "version: 0.1\n\nrunson: ${matrix.os}\n\nmatrix:\n  os: [mac, linux]\n  appium: [true,false]\n\nexclusionMatrix:\n  - os: [\"mac\"]\n    appium: [true]\n  - os: [\"linux\"]\n    appium: [false]\n    \nappium: ${matrix.appium}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "commands",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n\n\n> \ud83d\udcd8 Refer to our detailed documentation for [`globalPre`](/support/docs/deep-dive-into-hyperexecute-yaml/#globalpre) and [`globalPost`](/support/docs/deep-dive-into-hyperexecute-yaml/#globalpost) flags.\n\n---\n\n## Version 2.7.1\n### Artifact Extraction on Job Abortion\n- Artifacts will now be extracted even if a job is aborted in the middle of a test.\n- This ensures that partial test results and logs are still available for review, improving debugging and post-test analysis.\n\n\n### `afterEachScenario` Flag for Test Cleanup\n- Introduced the `afterEachScenario` flag to automate post-test scenario tasks. This flag is useful for cleanup activities such as clearing cookies, resetting databases, or capturing logs.\n- Commands or scripts listed under this flag will execute sequentially after each test scenario, ensuring test isolation and consistency.\n\n```yaml\nafterEachScenario:\n  - echo \"Running a script\"\n  - pwsh run.test"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 ## Version 3.1.8
 ### Firefox Support for Console Logs with Playwright and Selenium
 HyperExecute now captures browser console logs on **Firefox** for both **Playwright** and **Selenium** test runs, extending existing console log support beyond Chrome and Edge. Enable the `console` capability in your test configuration to capture JavaScript and DOM console output when running your tests on Firefox.

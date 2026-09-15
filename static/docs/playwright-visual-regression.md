@@ -2,6 +2,105 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
+{}, `lambdatest_action: ${JSON.stringify({action: 'smartui.fetchScreenshotStatus', arguments: { screenshotName: \"\" }})}`)\n\nconsole.log(response)"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Fetching Screenshot Status and Results using WebHook",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JSON",
+        "text": "screenshotStatus response:  {\n  screenshotsData: [\n    {\n      screenshotName: '',\n      screenshotURL: '',\n      screenshotStatus: 'Approved', // current status of the screenshot\n      approvedBy: 'system', // Approver details\n      misMatchPercentage: 31.8, // percentage mismatch of the screenshot\n      threshold: 5000, // Threshold set for the screenshot\n      browserName: 'chrome', // Browser used for capturing the screenshot\n      resolution: '1920x1080' // Resolution of the screenshot\n    },\n    \n  buildId: '',\n  projectName: ''\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "To add this integration, you can add the following capability",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "const capabilities: {\n  ...\n   \"smartUIProjectName\": \"\"\n   \"github\": {\n    \"url\": \"https://api.github.com/repos/OWNER/REPO/statuses/commitId\"\n   }\n  ...\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Capability Configuration",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "const capabilities = {\n  browserName: 'Chrome',\n  browserVersion: 'latest',\n  platformName: 'Windows 10',\n  'LT:Options': {\n    username: process.env.LT_USERNAME,\n    accessKey: process.env.LT_ACCESS_KEY,\n    visual: true,\n    name: 'Homepage Visual Test',\n    build: 'Release 1.0',\n    'smartUI.project': 'MyProject',\n    'smartUI.build': 'Build-1.0'\n  }\n};"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Screenshot Timing",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "await page.goto('https://example.com');\nawait page.waitForSelector('.main-content', { state: 'visible' });\nawait page.waitForLoadState('networkidle');"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Verify visual: true is set in capabilities",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "   'LT:Options': {\n     visual: true, // Must be set\n     // ... other options\n   }"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Check project name matches exactly (case-sensitive)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "   'smartUI.project': 'ExactProjectName'"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Verify credentials are set",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "   echo $LT_USERNAME\n   echo $LT_ACCESS_KEY"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Add explicit waits before screenshot",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "   await page.waitForSelector('#content', { state: 'visible' });\n   await page.waitForLoadState('networkidle');"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Wait for specific elements to be visible",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "   await page.waitForSelector('.main-content', { state: 'visible' });"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Set build name in capabilities",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "   'smartUI.build': 'ConsistentBuildName'"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Use ignoreDOM for dynamic content",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "   'smartUI.options': {\n     'ignoreDOM': {\n       'id': ['timestamp', 'user-id']\n     }\n   }"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
+",
+          "url": "https://www.testmuai.com/support/docs/playwright-visual-regression/#step-1-create-a-smartui-project"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Configure your test with Playwright Desired Capabilities",
+          "text": "Once you have created a SmartUI Project, you can generate screenshots by running automation scripts. Follow the below steps to successfully generate screenshots - Please clone the following sample Github repo Install the node modules using the command Set up the TestMu AI credentials by using the commands below in the terminal.The account details are available on your TestMu AI Profile page. For macOS: For Linux: For Windows: Edit the required capabilities in your test file playwright-smartui.js. Execute the test using the following command You can check the executed builds over at TestMu AI SmartUI.",
+          "url": "https://www.testmuai.com/support/docs/playwright-visual-regression/#step-2-configure-your-test-with-playwright-desired-capabilities"
+        }
+      ]
+    }
+  ]) }}
+/>
+
 This documentation will act as your step-by-step guide in to perform Playwright test with SmartUI.
 - Basic understanding of Playwright is required.
 - Go to [SmartUI](https://www.testmuai.com/login/?redirectTo=https://smartui.lambdatest.com/) and login along with your credentials.
@@ -54,16 +153,19 @@ npm i
 3. Set up the TestMu AI credentials by using the commands below in the terminal.The account details are available on your [TestMu AI Profile](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/details/profile) page.
 
 For macOS:
+
 ```bash
 export LT_USERNAME=LT_USERNAME
 export LT_ACCESS_KEY=LT_ACCESS_KEY
 ```
 For Linux:
+
 ```bash
 export LT_USERNAME=LT_USERNAME
 export LT_ACCESS_KEY=LT_ACCESS_KEY
 ```
 For Windows:
+
 ```bash
 set LT_USERNAME=LT_USERNAME
 set LT_ACCESS_KEY=LT_ACCESS_KEY

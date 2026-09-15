@@ -2,6 +2,13 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
+setCapability('browserName',$LT_BROWSER);\n        $desired_capabilities->setCapability('version', $LT_BROWSER_VERSION);\n        $desired_capabilities->setCapability('platform', $LT_PLATFORM);\n        $desired_capabilities->setCapability('name', \"Php\");\n        $desired_capabilities->setCapability('build', \"Php Build\");\n        $desired_capabilities->setCapability('network', true);\n        $desired_capabilities->setCapability('visual', true);\n        $desired_capabilities->setCapability('video ', true);\n        $desired_capabilities->setCapability('console', true);\n     \n    /*\n        Setup remote driver\n        Params\n        ----------\n        Execute test:  navigate google.com search LambdaTest\n        Result\n        -------\n        print title\n    */\n        self::$driver = RemoteWebDriver::create($url, $desired_capabilities);      \n                 \n    self::$driver->get(\"https://www.google.com/ncr\");\n \n        $element = self::$driver->findElement(WebDriverBy::name(\"q\"));\n    if($element) {\n      $element->sendKeys(\"LambdaTest\");\n      $element->submit();\n    }\n     \n    print self::$driver->getTitle();\n    self::$driver->quit();\n  }    \n}\n \n$lambdaTest = new LambdaTest();\n$lambdaTest->searchTextOnGoogle(); \n \n?>"
+      }
+    ],
+    "dateModified": "2026-09-09T19:13:32+05:30"
+  }) }}
+/>
+
 TestMu AI's cloud-based Selenium grid can be leveraged to run your automation test scripts on 3000+ different browser and operating system environments. It’s a scalable, reliable, and secure online [Selenium grid](https://www.testmuai.com/selenium-automation/) infrastructure that not only helps you in increasing test coverage, but also cut down execution of your test automation builds by significant margin. This post will help you get started with running your PHP based Selenium automation scripts on TestMu AI Selenium grid.
 
 ## Prerequisites

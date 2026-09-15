@@ -40,6 +40,7 @@ curl -u "YOUR_LAMBDATEST_USERNAME:YOUR_LAMBDATEST_ACCESSKEY" \
 Replace `` with your actual build ID.
 #### Sharded Builds
 For sharded builds, use the following curl command:
+
 ```bash
 curl -u "YOUR_LAMBDATEST_USERNAME:YOUR_LAMBDATEST_ACCESSKEY" \
 --location 'https://mobile-api.lambdatest.com/mobile-automation/api/v1/framework/jobs/<YOUR_JOB_ID>/logs/instrumentation'

@@ -45,41 +45,49 @@ npx smartui exec [options] -- <command>
 ### Examples
 
 1. Running with a custom port:
+
 ```bash
 npx smartui exec -P 5000 -- npm test
 ```
 
 2. Fetching results with custom filename:
+
 ```bash
 npx smartui exec --fetch-results custom-results.json -- npm test
 ```
 
 3. Specifying a build name:
+
 ```bash
 npx smartui exec --buildName "Release-1.0" -- npm test
 ```
 
 4. Using a configuration file:
+
 ```bash
 npx smartui exec --config smartui-config.json -- npm test
 ```
 
 5. Combining multiple options:
+
 ```bash
 npx smartui exec -P 5000 --buildName "Release-1.0" --config smartui-config.json --fetch-results -- npm test
 ```
 
 6. Running scheduled tests:
+
 ```bash
 npx smartui exec --scheduled "schedule-123" -- npm test
 ```
 
 7. Showing render errors:
+
 ```bash
 npx smartui exec --show-render-errors -- npm test
 ```
 
 8. Overriding credentials:
+
 ```bash
 npx smartui exec --userName "user" --accessKey "key" -- npm test
 ```
@@ -109,11 +117,13 @@ npx smartui exec:stop
 To verify if the SmartUI server is running, you can use either of these commands:
 
 **Using exec:ping (custom HTTP client):**
+
 ```bash
 npx smartui exec:ping
 ```
 
 **Using exec:pingTest (default HTTP client):**
+
 ```bash
 npx smartui exec:pingTest
 ```

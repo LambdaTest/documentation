@@ -2,6 +2,34 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
+\n<!DOCTYPE suite SYSTEM \"http://testng.org/testng-1.0.dtd\">\n\n\n\n    \n        \n        \n        \n        \n            \n        <\/classes>\n    <\/test>\n\n    \n        \n        \n        \n        \n            \n        <\/classes>\n    <\/test>\n<\/suite>"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "iOS",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "XML",
+        "text": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<!DOCTYPE suite SYSTEM \"http://testng.org/testng-1.0.dtd\">\n\n\n\n    \n        \n        \n        \n        \n            \n        <\/classes>\n    <\/test>\n\n    \n        \n        \n        \n        \n            \n        <\/classes>\n    <\/test>\n<\/suite>"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "More About Desired Capabilities (Android)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "{\n    \"deviceName\": \"Galaxy Tab S4\",\n    \"platformName\": \"android\",\n    \"platformVersion\": \"10\",\n    \"app\": \"App_url\",\n    \"visual\": true,\n    \"console\": true,\n    \"deviceOrientation\": \"PORTRAIT\",\n    \"build\": \"new-12\",\n    \"isRealMobile\": false,\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "More About Desired Capabilities (iOS)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "{\n    \"deviceName\": \"iPhone 12 Mini\",\n    \"platformName\": \"ios\",\n    \"platformVersion\": \"14\",\n    \"app\": \"App_url\",\n    \"isRealMobile\": false,\n    \"visual\": true,\n    \"console\": true,\n    \"build\": \"lt-web-4\",\n    \"network\": false,\n}"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 TestMu AI enables developers and testers to automate mobile app testing using cloud-based emulators and simulators. This eliminates the need for physical devices, streamlining the process of validating app functionality across a wide range of configurations.
 
 In this documеntation, learn how to run app automated tests on Emulators and Simulators using TestMu AI virtual testing cloud.

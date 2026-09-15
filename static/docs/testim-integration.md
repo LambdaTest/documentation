@@ -49,6 +49,7 @@ To execute the tests, check:
 * If the Testim CLI is not already installed on your system, use the entire command provided by the Testim CLI or dashboard.
 
 **For example:**
+
 ```json
 npm i -g @testim/testim-cli && testim --token "2jWxWxXcmJRON0PA73YZWt92fFGU76cd" --project "GTJL28fMHad" --grid "LAMBDA-TEST" --test-id "2u8QnIm454" --selenium-caps-file "local.json"
 ```

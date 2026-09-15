@@ -1,6 +1,36 @@
-# How to Debug your Scenario Steps Errors
+# Debug your Scenario Steps Errors
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
+\nOpenQA.Selenium.WebDriverException: unknown error: net::ERR_NAME_NOT_RESOLVED"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "To resolve this, you have to pass this flag in your YAML file",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "tunnel: true"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Here's an example of how you can set connection and socket timeouts",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "public static void main(String[] args) {\n\n        // Set connection and socket timeouts\n        int connectionTimeout = 5000; // in milliseconds\n        int socketTimeout = 5000; // in milliseconds\n\n        RestAssured.config = RestAssuredConfig.config().socketConfig(\n                SocketConfig.socketConfig().setConnectTimeout(connectionTimeout)\n                        .setReadTimeout(socketTimeout));\n\n        // Your Rest Assured request code here\n        // For example:\n        RestAssured.given()\n                .baseUri(\"https://api.example.com\")\n                .basePath(\"/some/path\")\n                .get()\n                .then()\n                .statusCode(200);\n\n    }"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "If you are using Maven, you can add the following dependencies to your pom.xml file",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "\n    \n        io.rest-assured<\/groupId>\n        rest-assured<\/artifactId>\n        4.5.0<\/version> \n        test<\/scope>\n    <\/dependency>\n<\/dependencies>"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
+# How to Debug your Scenario Steps Errors
 
 This document will help you debug your failed job if you are facing any errors in the Scenario stage.
 

@@ -1,6 +1,50 @@
-# Puppeteer - Test Execution Setup
+# Test Execution Setup For Running Puppeteer Tests
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
+{    \n    const capabilities = {\n        'browserName': 'Chrome',\n        'browserVersion': 'latest',\n        'LT:Options': {\n            'platform': 'Windows 10',\n            'build': 'puppeteer-build-1',\n            'name': 'My first Puppeteer test',\n            'resolution':'1366x768',\n            'user': process.env.LT_USERNAME || \"LT_USERNAME\",\n            'accessKey': process.env.LT_ACCESS_KEY || \"LT_ACCESS_KEY\",\n            'network': true\n        }\n   };\n    \n    try {\n        const browser = await puppeteer.connect({\n            browserWSEndpoint:\n                `wss://cdp.lambdatest.com/puppeteer?capabilities=${encodeURIComponent(JSON.stringify(capabilities))}`,\n        });\n\n        const page = await browser.newPage();\n        await page.setViewport({\n            width: 1024,\n            height: 768,\n            deviceScaleFactor: 1,\n          });\n        console.log(\"Navigating to LambdaTest\");\n        await page.goto('https://www.lambdatest.com/');\n        console.log(\"Navigating to Pricing\");\n        await page.goto('https://www.lambdatest.com/pricing');\n        console.log(\"Navigating to Automation\");\n        await page.goto('https://www.lambdatest.com/automation-testing');\n        console.log(\"Closing browser\");\n        await browser.close();\n\n    } catch (e) {\n        console.log(\"Error - \", e);\n    }\n})();"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Getting Session Details",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "let response = await page.evaluate(_ => {}, `lambdatest_action: ${JSON.stringify({ action: 'getTestDetails' })}`)\nconsole.log(\"Test details: \", JSON.parse(response).data);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Getting Session Details",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "{\n  data: {\n    test_id: 'RWA9R-AC4V8-GJRET-YHBO2',\n    build_id: 9415381,\n    name: 'Puppeteer Sample Test',\n    user_id: 1001150,\n    username: 'newuser',\n    test_type: 'puppeteer',\n    platform: 'win10',\n    browser: 'Chrome',\n    browser_version: '107.0',\n    status_ind: 'running',\n    session_id: 'RWA9R-AC4V8-GJRET-YHBO2',\n    build_name: 'Puppeteer Sample Build',\n    create_timestamp: '2022-12-07 10:53:16',\n    start_timestamp: '2022-12-07 10:53:16',\n    remark: 'running',\n    console_logs_url: 'https://api.lambdatest.com/automation/api/v1/sessions/RWA9R-AC4V8-GJRET-YHBO2/log/console',\n    network_logs_url: 'https://api.lambdatest.com/automation/api/v1/sessions/RWA9R-AC4V8-GJRET-YHBO2/log/network',\n    command_logs_url: 'https://api.lambdatest.com/automation/api/v1/sessions/RWA9R-AC4V8-GJRET-YHBO2/log/command',\n    video_url: 'https://automation.lambdatest.com/public/video?testID=RWA9R-AC4V8-GJRET-YHBO2&auth=50471585dd55293d204fe87f63400f5f',\n    screenshot_url: 'https://video-bundler.lambdatest.com/RWA9R-AC4V8-GJRET-YHBO2/screenshots.zip?orgId=588659&createTimestamp=1670410396&testCreateTimestamp=2022-12-07%2010:53:16'\n  },\n  message: 'Retrieve session was successful',\n  status: 'success'\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Changing Browser Window Size",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "\nawait page.setViewport({\n            width: 1024,\n            height: 768,\n            deviceScaleFactor: 1,\n          });"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Mark Tests As Passed Or Failed",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "await page.evaluate(_ => {}, `lambdatest_action: ${JSON.stringify({ action: 'setTestStatus', arguments: { status:'passed', remark: 'Title matched' } })}`)"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Mark Tests As Passed Or Failed",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "await page.evaluate(_ => {}, `lambdatest_action: ${JSON.stringify({ action: 'setTestStatus', arguments: { status:'failed', remark: 'Title not matched' } })}`)"
+      }
+    ],
+    "dateModified": "2026-09-09T19:13:32+05:30"
+  }) }}
+/>
+
+# Puppeteer - Test Execution Setup
 
 Whenever you run a Puppeteer test, you must specify the operating system and the browser you wish to use. The TestMu AI Desired Capabilities Generator allows you to automatically create the capabilities class needed to run your Puppeteer automation scripts on TestMu AI.
 

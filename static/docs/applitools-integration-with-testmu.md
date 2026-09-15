@@ -32,11 +32,13 @@ $ set LT_ACCESS_KEY= ${ YOUR_LAMBDATEST_ACCESS_KEY()}`}
 
   You can find your Applitools API key by logging into your Applitools account and going to your **Profile > My API Key.**   In your terminal or CMD, you need to export the Applitools API key along with TestMu AI Credentials.
    * For Linux/Mac:
+
 ```
 $ export APPLITOOLS_API_KEY=<your applitool api key>
 ```
 
     * For Windows:
+
 ```
 $ set APPLITOOLS_API_KEY=<your applitool api key>
 ```
@@ -46,6 +48,7 @@ $ set APPLITOOLS_API_KEY=<your applitool api key>
     * Download and install [Maven Apache.](https://maven.apache.org/download.cgi)
 
 * Install **Maven dependencies** using the below command.
+
 ```
 $ mvn install
 ```

@@ -20,6 +20,7 @@ assert "Out of Stock" is not visible on the page
 ```
 
 **With variables:**
+
 ```
 assert {{username}} is visible on the page
 assert {{api_response.message}} contains "success"
@@ -190,12 +191,14 @@ Negation is supported across all assertion types using "NOT", "is not", "isn't",
 The assertion must have a clear true/false answer given the page state.
 
 **Bad**
+
 ```
 assert the page is user-friendly
 assert the layout is correct
 ```
 
 **Good**
+
 ```
 assert the navigation menu has 5 items
 assert the "Search" input field is visible at the top of the page
@@ -212,6 +215,7 @@ KaneAI uses a screenshot + DOM combination. Very small visual details may not be
 - Font sizes or font families
 
 **Safer alternatives:**
+
 ```
 assert the button appears red          (instead of assert color is #ff0000)
 assert the error border is visible   (instead of assert border is 2px solid red)

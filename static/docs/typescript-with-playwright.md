@@ -1,6 +1,37 @@
-# TypeScript with Playwright: Running Your First Test
+# Run your TypeScript automation scripts with Playwright on TestMu AI
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
+{\n  let config = configName.split(\"@lambdatest\")[0];\n  let [browserName, browserVersion, platform] = config.split(\":\");\n  capabilities.browserName = browserName\n    ? browserName\n    : capabilities.browserName;\n  capabilities.browserVersion = browserVersion\n    ? browserVersion\n    : capabilities.browserVersion;\n  capabilities[\"LT:Options\"][\"platform\"] = platform\n    ? platform\n    : capabilities[\"LT:Options\"][\"platform\"];\n  capabilities[\"LT:Options\"][\"name\"] = testName;\n};\n\nconst getErrorMessage = (obj, keys) =>\n  keys.reduce(\n    (obj, key) => (typeof obj == \"object\" ? obj[key] : undefined),\n    obj\n  );\n\nconst test = base.test.extend({\n  page: async ({ page, playwright }, use, testInfo) => {\n    // Configure LambdaTest platform for cross-browser testing\n    let fileName = testInfo.file.split(path.sep).pop();\n    if (testInfo.project.name.match(/lambdatest/)) {\n      modifyCapabilities(\n        testInfo.project.name,\n        `${testInfo.title} - ${fileName}`\n      );\n\n      const browser = await chromium.connect({\n        wsEndpoint: `wss://cdp.lambdatest.com/playwright?capabilities=${encodeURIComponent(\n          JSON.stringify(capabilities)\n        )}`,\n      });\n\n      const ltPage = await browser.newPage(testInfo.project.use);\n      await use(ltPage);\n\n      const testStatus = {\n        action: \"setTestStatus\",\n        arguments: {\n          status: testInfo.status,\n          remark: getErrorMessage(testInfo, [\"error\", \"message\"]),\n        },\n      };\n      await ltPage.evaluate(() => {},\n      `lambdatest_action: ${JSON.stringify(testStatus)}`);\n      await ltPage.close();\n      await browser.close();\n    } else {\n      // Run tests in local in case of local config provided\n      await use(page);\n    }\n  },\n});\n\nexport default test;"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 4",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "npm run test"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "The playwright-skill package includes",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "playwright-skill/\n\u251c\u2500\u2500 SKILL.md\n\u2514\u2500\u2500 reference/\n    \u251c\u2500\u2500 playbook.md\n    \u2514\u2500\u2500 advanced-patterns.md"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Install a Playwright Agent Skill using the command below",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "codeRepository": "https://github.com/LambdaTest/agent-skills",
+        "text": "# Clone the repo and copy the skill you need\ngit clone https://github.com/LambdaTest/agent-skills.git\ncp -r agent-skills/playwright-skill .claude/skills/\n\n# Or for Cursor / Copilot\ncp -r agent-skills/playwright-skill .cursor/skills/"
+      }
+    ],
+    "dateModified": "2026-09-09T19:13:32+05:30"
+  }) }}
+/>
+
+# TypeScript with Playwright: Running Your First Test
 
 Learn how to use Playwright with TypeScript to automate web application testing across real browsers and operating systems on TestMu AI cloud platform.
 

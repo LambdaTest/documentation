@@ -2,6 +2,15 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
+{\n\n    myReporter = {\n        specStarted: function(result) {\n          specStr= result.id\n          spec_id = parseInt(specStr[specStr.length -1])\n          browser.getProcessedConfig().then(function (config) {\n            var fullName = config.specs[spec_id];\n            //var fileName = fullName.substring(fullName.lastIndexOf('/')+1);\n            browser.executeScript(\"lambda-name=\"+fullName.split(/(\\\\|\\/)/g).pop())\n          });\n        }\n      };\n      jasmine.getEnv().addReporter(myReporter);\n  },\n  onComplete: () => {\n    browser.quit();\n  }\n\n};\n\n// Code to support common capabilities\nexports.config.multiCapabilities.forEach(function(caps){\n  for(var i in exports.config.commonCapabilities) caps[i] = caps[i] || exports.config.commonCapabilities[i];\n});"
+      }
+    ],
+    "dateModified": "2026-06-09T15:09:24+05:30"
+  }) }}
+/>
+
+# TeamCity Integration With TestMu AI
+
 Developed by JetBrains, TeamCity is Java-based build management to help you with continuous integration and continuous deployment. With TeamCity, you can deploy your automated pipeline quicker, pacing your go-to-market launch.
 
 TestMu AI now integrates with TeamCity to boost your go-to-market delivery. Perform automated cross browser testing with TestMu AI to ensure your development code renders seamlessly through an online Selenium grid providing 3000+ real browsers running through machines, on the cloud. Perform automation testing in parallel with TestMu AI’s Selenium grid to drastically trim down your test cycles.

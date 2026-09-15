@@ -58,6 +58,7 @@ Project-level instructions are specific to a single project and are applied when
 5. Save your changes.
 
 **Example project-level instructions:**
+
 ```
 - All test cases must include preconditions for user authentication state.
 - Use the naming convention: [Module]_[Feature]_[Scenario]_[Positive/Negative].
@@ -76,6 +77,7 @@ Organization-level instructions apply globally across all projects within your o
 4. Save your changes.
 
 **Example organization-level instructions:**
+
 ```
 - Include accessibility testing considerations where applicable.
 - Severity and priority must be assigned to every test case.

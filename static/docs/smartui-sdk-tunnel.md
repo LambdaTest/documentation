@@ -69,6 +69,7 @@ The tunnel configuration automatically uses the following environment variables 
 ## Example Configurations
 
 ### Basic Automatic Setup
+
 ```json
 {
 "web": {
@@ -84,6 +85,7 @@ The tunnel configuration automatically uses the following environment variables 
 ```
 
 ### Advanced Automatic Setup with Proxy
+
 ```json
 {
 "web": {
@@ -103,6 +105,7 @@ The tunnel configuration automatically uses the following environment variables 
 ```
 
 ### Manual Tunnel Setup
+
 ```json
 {
 "web": {

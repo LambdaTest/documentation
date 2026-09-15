@@ -10,6 +10,7 @@ TestMu AI simplifies testing by enabling simulation of diverse network condition
 ### Initialization
 
 - **Capability:** Initiate a test session with predefined network profiles using the `networkProfile` capability. Example:
+
 ```python
 caps = {
 "network": True,
@@ -22,6 +23,7 @@ To utilize the **networkProfile** capability, ensure that you include `network: 
 ### During Test Execution
 
 - **LambdaHook:** Dynamically alter the network profile within the test session using the following LambdaHook:
+
 ```python
 driver.execute_script("updateNetworkProfile=3g-umts-good")
 ```
@@ -42,6 +44,7 @@ driver.execute_script("updateNetworkProfile=3g-umts-good")
 ### Custom Profiles
 
 - **LambdaHook:** Define and implement custom network profiles with LambdaHook by specifying the maximum download speed (kbps), maximum upload speed (kbps), and latency (ms) for the custom condition, as illustrated in the example.
+
 ```python
 driver.execute_script("customNetworkProfile: { \"downloadSpeed\": 500, \"uploadSpeed\" : 250, \"latency\": 100 }" )
 ```
@@ -49,6 +52,7 @@ driver.execute_script("customNetworkProfile: { \"downloadSpeed\": 500, \"uploadS
 ### Default/Reset Network Configuration
 
 - **LambdaHook:** Employ this webhook to seamlessly restore the device's network profile to its default state. Invocation of this LambdaHook removes any predefined or custom network settings, ensuring the device is reset to its original configuration.
+
 ```python
 driver.execute_script("updateNetworkProfile=default")
 ```
@@ -56,6 +60,7 @@ driver.execute_script("updateNetworkProfile=default")
 ### Offline Mode
 
 - To initialize tests in **offline mode**, set the `networkProfile` capability to `offline` during session initiation:
+
 ```python
 caps = {
 "network": True,
@@ -64,6 +69,7 @@ caps = {
 ```
 
 - **LambdaHook:** You can also switch to offline mode during the test execution with the following command:
+
 ```python
 driver.execute_script("updateNetworkProfile=offline")
 ```

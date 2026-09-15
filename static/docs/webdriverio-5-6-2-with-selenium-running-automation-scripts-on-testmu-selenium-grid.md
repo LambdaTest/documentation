@@ -31,6 +31,7 @@ cd webdriverio-selenium
 ```
 
 Install the required dependencies:
+
 ```bash
 npm i selenium-webdriver
 npm install

@@ -64,6 +64,7 @@ In CLI-based workflows, approval alone may not be sufficient for baseline persis
 - Creating unified baselines from distributed testing
 
 **CLI Usage**:
+
 ```bash
 # Merge branches
 npx smartui merge branch --source feature-branch --target main
@@ -138,6 +139,7 @@ Each variant row lists its browser and resolution, and merged variants carry the
 - Best for continuous integration scenarios
 
 **Baseline Update Mechanism**:
+
 ```javascript
 // SDK capability to auto-mark baseline
 capabilities.setCapability("smartUI.baseline", true);
@@ -174,6 +176,7 @@ SmartUI maintains baseline references at multiple levels:
 Every baseline modification requires deliberate user intervention:
 
 **CLI Workflows**:
+
 ```bash
 # 1. Run tests (no baseline change)
 npx smartui exec -- npm test
@@ -186,12 +189,14 @@ npx smartui move-to-baseline --build current-build
 ```
 
 **SDK with Capabilities**:
+
 ```javascript
 // Explicit capability setting required
 capabilities.setCapability("smartUI.baseline", true); // User must set this
 ```
 
 **Git Projects**:
+
 ```bash
 # Explicit baseline branch configuration required
 export BASELINE_BRANCH="main" # User must configure
@@ -206,6 +211,7 @@ export BASELINE_BRANCH="main" # User must configure
 **Root Cause**: In CLI workflows, approval updates baseline within that build's context, but doesn't necessarily persist as the global baseline for future builds unless explicitly moved.
 
 **Solution**:
+
 ```bash
 # After approving in B1
 npx smartui move-to-baseline --build B1
@@ -231,6 +237,7 @@ npx smartui move-to-baseline --build B1
 **Root Cause**: The capability must be set correctly and the build must complete successfully for baseline marking to occur.
 
 **Solution**:
+
 ```javascript
 // Ensure correct capability syntax
 capabilities.setCapability("smartUI.baseline", true);
@@ -242,6 +249,7 @@ capabilities.setCapability("smartUI.baseline", true);
 ## Ideal Usage Guidelines
 
 ### For CLI Workflows
+
 ```bash
 # 1. Run initial build to establish baseline
 npx smartui exec -- npm test
@@ -260,6 +268,7 @@ npx smartui exec -- npm test
 ```
 
 ### For SDK Integration
+
 ```java
 // Set capability explicitly for baseline marking
 DesiredCapabilities capabilities = new DesiredCapabilities();
@@ -271,6 +280,7 @@ SmartUI.takeScreenshot("screenshot-name");
 ```
 
 ### Branch-Based Development
+
 ```bash
 # Feature branch development
 npx smartui --baselineBranch main exec -- npm test
@@ -281,6 +291,7 @@ npx smartui merge branch --source feature-branch --target main
 ## Advanced Baseline Management
 
 ### Multi-Level Baseline Strategy
+
 ```bash
 # Different baselines for different environments
 npx smartui --baselineBranch staging exec -- npm test  # Staging baseline
@@ -291,6 +302,7 @@ npx smartui --baselineBuild "v2.1.0" exec -- npm test
 ```
 
 ### Baseline Rollback
+
 ```bash
 # Rollback to previous baseline
 npx smartui --baselineBuild "previous-stable-build" exec -- npm test

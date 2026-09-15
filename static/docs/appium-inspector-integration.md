@@ -2,6 +2,14 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
+24x7 Chat Support or you could also mail us at support@testmuai.com. Home Support Appium Inspector",
+          "url": "https://www.testmuai.com/support/docs/appium-inspector-integration/#step-5-viewing-the-session"
+        }
+      ]
+    }
+  ]) }}
+/>
+
 This post will help you in integrating **Appium Inspector** to interact with **TestMu AI's Real Devices**.
 
 ## Introduction

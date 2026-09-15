@@ -1,6 +1,57 @@
-# Auto Healing for Selenium Web Automation
+# How to Use Auto Healing for Selenium Test Suites
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
+\"Chrome\",\n\t\"browserVersion\" => \"118.0\",\n\t\"LT:Options\" => array(\n\t\t\"username\" => \"YOUR_LAMBDATEST_USERNAME\",\n\t\t\"accessKey\" => \"YOUR_LAMBDATEST_ACCESS_KEY\",\n\t\t\"project\" => \"Untitled\",\n\t\t\"w3c\" => true,\n\t\t\"plugin\" => \"php-php\",\n\t\t// highlight-next-line\n\t\t\"autoHeal\" => true\n\t)\n);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "For Python, use the following code",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Python",
+        "text": "options = ChromeOptions()\noptions.browser_version = \"118.0\"\nlt_options = {}\nlt_options[\"username\"] = \"YOUR_LAMBDATEST_USERNAME\"\nlt_options[\"accessKey\"] = \"YOUR_LAMBDATEST_ACCESS_KEY\"\nlt_options[\"project\"] = \"Untitled\"\nlt_options[\"w3c\"] = True\nlt_options[\"plugin\"] = \"python-python\"\n# highlight-next-line\nlt_options[\"autoHeal\"] = True\noptions.set_capability('LT:Options', lt_options)"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "For Ruby, use the following code",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Ruby",
+        "text": "options = Selenium::WebDriver::Options.chrome\noptions.browser_version = \"118.0\"\nlt_options = {}\nlt_options[:username] = \"YOUR_LAMBDATEST_USERNAME\"\nlt_options[:accessKey] = \"YOUR_LAMBDATEST_ACCESS_KEY\"\nlt_options[:project] = \"Untitled\"\nlt_options[:w3c] = true\nlt_options[:plugin] = \"ruby-ruby\"\n# highlight-next-line\nlt_options[:autoHeal] = true\noptions.set_capability('LT:Options', lt_options)"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Here is an example test case demonstrating this",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "import assert from 'assert';\nimport { Builder, By, until, Capabilities } from 'selenium-webdriver';\n\ndescribe('Amazon Search Box Test', function () {\n    this.timeout(30000);\n    let driver;\n    let vars;\n\n    const capability = {\n        \"browserName\": \"Chrome\",\n        \"browserVersion\": \"114.0\",\n        \"LT:Options\": {\n            \"platformName\": \"Windows 10\",\n            \"project\": \"Untitled\",\n            \"w3c\": true,\n            \"plugin\": \"node_js-node_js\",\n            \"autoHeal\": true\n        }\n    }\n\n    beforeEach(async function () {\n        driver = await new Builder()\n            .usingServer('https://YOUR_LAMBDATEST_USERNAME:YOUR_LAMBDATEST_ACCESS_KEY@hub.lambdatest.com/wd/hub')\n            .withCapabilities(capability)\n            .build();\n        vars = {};\n    });\n\n    afterEach(async function () {\n        await driver.quit();\n    });\n\n    it('should change id of search box and find element', async function () {\n        await driver.get('https://www.amazon.com');\n        const searchBoxActual = await driver.findElement(By.id('nav-search-submit-button'));\n        await driver.executeScript(\"document.getElementById('nav-search-submit-button').id='amazonsearchbox'\");\n        // const searchBox = await driver.findElement(By.id('amazonsearchbox'));\n        const searchBoxHeal = await driver.findElement(By.id('nav-search-submit-button'));\n        assert(searchBoxHeal, 'Element not found');\n    });\n});\n"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "To run the test, execute the below command",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "./node_modules/.bin/mocha autohealingTest.js "
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Enable Auto Heal",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "driver.execute_script('lambdatest_executor:{\"action\":\"lambda-heal-start\"}')"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Disable Auto Heal",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "driver.execute_script('lambdatest_executor:{\"action\":\"lambda-heal-stop\"}')"
+      }
+    ],
+    "dateModified": "2026-09-09T19:13:32+05:30"
+  }) }}
+/>
+
+# Auto Healing for Selenium Web Automation
 
 The TestMu AI Auto Healing feature for Selenium testing automatically recovers from certain types of failures during test execution. When enabled, it reduces test flakiness and improves test reliability by handling unexpected situations and errors in your test suites.
 

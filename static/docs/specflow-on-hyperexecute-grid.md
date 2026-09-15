@@ -1,7 +1,37 @@
-# Running SpecFlow Framework Tests on HyperExecute
+# Run automation tests on HyperExecute using SpecFlow
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
+packages.txt\n#  - chmod 777 /tmp/NuGetScratch\n#  - nuget locals all -clear\n - dotnet build -c Release\n \ncacheKey: '{{ checksum \"packages.txt\" }}'\n\npost:\n  - cat yaml/linux/specflow_hyperexecute_autosplit_sample.yaml\n\nmergeArtifacts: true\n\nuploadArtefacts:\n - name: Execution_Report\n   path:\n    - Report/**\n - name: Execution_Screenshots\n   path:\n    - Screenshots/**/**\n\nreport: true\npartialReports:\n  location: Report/\n  type: html\n  frameworkName: specflow\n\n# The below testDiscovery command will give the feature name in the respective feature files\ntestDiscovery:\n  type: raw\n  mode: remote\n  #Parallel execution at feature level\n  #command: grep -rni 'Features' -e 'Feature:' | sed 's/.*://'\n\n  command: grep -rni 'Features' -e '@' --include=\\*.feature | sed 's/.*@//'\n\n#Parallel execution at feature level\n#testRunnerCommand: dotnet test --filter \"(Name~$test)\"\ntestRunnerCommand: dotnet test --filter \"(Category=$test)\"\n\njobLabel: [selenium-specflow, linux, autosplit]"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Run the below command in your terminal at the root folder of the project",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "./hyperexecute --config RELATIVE_PATH_OF_YOUR_YAML_FILE"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "The specflow-skill package includes",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "specflow-skill/\n\u251c\u2500\u2500 SKILL.md\n\u2514\u2500\u2500 reference/\n    \u251c\u2500\u2500 playbook.md\n    \u2514\u2500\u2500 advanced-patterns.md"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Install a SpecFlow Agent Skill using the command below",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "codeRepository": "https://github.com/LambdaTest/agent-skills",
+        "text": "# Clone the repo and copy the skill you need\ngit clone https://github.com/LambdaTest/agent-skills.git\ncp -r agent-skills/specflow-skill .claude/skills/\n\n# Or for Cursor / Copilot\ncp -r agent-skills/specflow-skill .cursor/skills/"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
+# Running SpecFlow Framework Tests on HyperExecute
 SpecFlow is a behavior-driven development (BDD) framework for .NET languages, often used with Selenium for automated testing. It enables collaboration between technical and non-technical team members by expressing tests in natural language.
 
 HyperExecute is an AI Native Test Orchestration Cloud Platform that empowers you to run **end-to-end** tests **quickly** and **efficiently**. It provides Just-in-Time (JIT) testing infrastructure with fast execution **speeds**, **smart orchestration**, and **detailed logs**.

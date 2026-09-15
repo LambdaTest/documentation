@@ -27,6 +27,7 @@ cd karma-jasmine-sample
 ```
 
 Install the required dependencies:
+
 ```bash
 npm install
 ```
@@ -72,6 +73,7 @@ karma start karma.conf.js
 ```
 
 Or run the test using:
+
 ```bash
 npm test
 ```

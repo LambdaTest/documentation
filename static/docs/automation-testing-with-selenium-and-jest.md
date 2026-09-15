@@ -28,6 +28,7 @@ cd jest-selenium-webdriver-sample
 ```
 
 Install the required dependencies:
+
 ```bash
 npm install --save-dev jest --force
 ```

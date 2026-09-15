@@ -2,6 +2,28 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
+\ud83d\udcd8 To explore more configuration options and tailor settings to your project needs, check out the [YAML documentation](/support/docs/hyperexecute-yaml-parameters/).\n\n### Step 3: Monitor the Test Execution\n\nVisit the [HyperExecute Dashboard](https://www.testmuai.com/login/?redirectTo=https://hyperexecute.lambdatest.com/hyperexecute) and check your Job status. \n\n\n\nYou can click on **View Test** from the **HyperExecute logs**, which will take you to the [App Automation dashboard](https://www.testmuai.com/login/?redirectTo=https://appautomation.lambdatest.com/build). There, you can access detailed **device logs**, **crash logs**, and **Metadata** for your test. You\u2019ll also be able to watch a **video recording** of the Test sessions for better **debugging** and **analysis**.\n\n## Advanced Configuration\n\nHyperExecute supports the following capabilities for your Detox test runs. Add the relevant keys to your `hyperexecute.yaml` file.\n\n### Tunnel\n\nTest applications hosted on your local or private network by routing traffic through a secure TestMu AI Tunnel. Enable it by setting the top-level `tunnel` flag in your YAML:\n\n```yaml\ntunnel: true"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "The detox-skill package includes",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "detox-skill/\n\u251c\u2500\u2500 SKILL.md\n\u2514\u2500\u2500 reference/\n    \u251c\u2500\u2500 playbook.md\n    \u2514\u2500\u2500 advanced-patterns.md"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Install a Detox Agent Skill using the command below",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "codeRepository": "https://github.com/LambdaTest/agent-skills",
+        "text": "# Clone the repo and copy the skill you need\ngit clone https://github.com/LambdaTest/agent-skills.git\ncp -r agent-skills/detox-skill .claude/skills/\n\n# Or for Cursor / Copilot\ncp -r agent-skills/detox-skill .cursor/skills/"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 Detox is a popular end-to-end testing framework for React Native applications. This documentation will help you run your Detox tests on TestMu AI HyperExecute using your local system setup.
 
 Detox testing on TestMu AI is supported via HyperExecute on **Android real devices** and **iOS simulators**.
@@ -55,7 +77,7 @@ Download the HyperExecute CLI and copy it into the root folder.
 Use the sample YAML below to configure your execution:
 
 ```yaml reference title="hyperexecute.yaml"
-https://github.com/LambdaTest/LT-detox/blob/main/yaml/hyperexecute.yaml
+https://github.com/LambdaTest/LT-detox/blob/main/yaml/hypexRDAndroid.yaml
 ```
 
 > 📘 To explore more configuration options and tailor settings to your project needs, check out the [YAML documentation](/support/docs/hyperexecute-yaml-parameters/).

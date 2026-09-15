@@ -2,6 +2,153 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
+\n\n\n```python title=\"This is a sample for your configuration for Python to ignore by Class\"\noptions = {\n    \"ignoreDOM\": {\n        \"class\": [\"Class-1\", \"Class-2\"],\n    }\n}\npage.goto(\"Required URL\")\nsmartui_snapshot(page,\"\", options)"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 14",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n<\/TabItem>\n\n\n\n```python title=\"This is a sample for your configuration for Python to ignore by CSS Selector\"\noptions = {\n            \"ignoreDOM\": {\n                \"cssSelector\": [\"CSS-Selector-1\", \"CSS-Selector-2\"],\n            }\n        }\npage.goto(\"Required URL\")\nsmartui_snapshot(page,\"\", options)"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 15",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n<\/TabItem>\n\n\n```python title=\"This is a sample for your configuration for Python to select by Class\"\noptions = {\n    \"selectDOM\": {\n        \"class\": [\"Class-1\", \"Class-2\"],\n    }\n}\npage.goto(\"Required URL\")\nsmartui_snapshot(page,\"\", options)"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 16",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n<\/TabItem>\n\n\n\n```python title=\"This is a sample for your webhook configuration for Python to select by CSS Selector\"\noptions = {\n            \"selectDOM\": {\n                \"cssSelector\": [\"CSS-Selector-1\", \"CSS-Selector-2\"],\n            }\n        }\npage.goto(\"Required URL\")\nsmartui_snapshot(page,\"\", options)"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "For capturing the screenshot of a specific element",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n<\/TabItem>\n\n\n```python title=\"This is a sample for your configuration for Python to capture an element by Class\"\noptions = {\n    \"element\": {\n        \"class\": \"Required Class\",\n    }\n}\npage.goto(\"Required URL\")\nsmartui_snapshot(page,\"\", options)"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 18",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n<\/TabItem>\n\n\n\n```python title=\"This is a sample for your webhook configuration for Python to capture an element by CSS Selector\"\noptions = {\n      \"element\": {\n          \"cssSelector\": \"Required CSS Selector\",\n      }\n  }\npage.goto(\"Required URL\")\nsmartui_snapshot(page,\"\", options)"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Best Practices",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Python",
+        "text": "smartui_snapshot(page, \"HomePage-Header\")\nsmartui_snapshot(page, \"ProductPage-MainContent\")"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Best Practices",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Python",
+        "text": "page.goto(\"https://example.com\")\npage.wait_for_selector(\"#main-content\", state=\"visible\")\npage.wait_for_load_state(\"networkidle\")\nsmartui_snapshot(page, \"Page Loaded\")"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Verify PROJECT_TOKEN is set correctly",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "   echo $PROJECT_TOKEN"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Verify SmartUI CLI is installed",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "   npx smartui --version"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Add explicit waits before screenshots",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Python",
+        "text": "   page.wait_for_selector(\"#content\", state=\"visible\")\n   page.wait_for_selector(\".main-content\", state=\"visible\")\n   page.wait_for_load_state(\"networkidle\")"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Enable JavaScript in configuration",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JSON",
+        "text": "   {\n     \"enableJavaScript\": true\n   }"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Try different port if default is in use",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "   npx smartui exec -P 5000 -- "
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Check latest version",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "   pip index versions lambdatest-playwright-driver"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Clear pip cache",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "   pip cache purge"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Check Python version compatibility",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "   python --version"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Use virtual environment",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "   python -m venv venv\n   source venv/bin/activate  # On Windows: venv\\Scripts\\activate\n   pip install lambdatest-playwright-driver"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
+= v4.x.x, upgrade your Node.js version to v20.3 or above.",
+          "url": "https://www.testmuai.com/support/docs/smartui-playwright-python-sdk/#step-2-install-the-dependencies"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Configure your Project Token",
+          "text": "Setup your project token shown in the SmartUI app after creating your project.",
+          "url": "https://www.testmuai.com/support/docs/smartui-playwright-python-sdk/#step-3-configure-your-project-token"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Step 4: Create and Configure SmartUI Config",
+          "text": "You can now configure your project configurations on using various available options to run your tests with the SmartUI integration. To generate the configuration file, please execute the following command: Once, the configuration file will be created, you will be seeing the default configuration pre-filled in the configuration file: For capturing fullpage or viewport screenshots, please refer to this documentation For the list of available mobile viewports, please refer to this documentation For more information about SmartUI config global options, please refer to this documentation.",
+          "url": "https://www.testmuai.com/support/docs/smartui-playwright-python-sdk/#step-4-create-and-configure-smartui-config"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 5,
+          "name": "Step 6: Execute the Tests on SmartUI Cloud",
+          "text": "Execute visual regression tests on SmartUI using the following commands You may use the npx smartui --help command in case you are facing issues during the execution of SmartUI commands in the CLI.",
+          "url": "https://www.testmuai.com/support/docs/smartui-playwright-python-sdk/#step-6-execute-the-tests-on-smartui-cloud"
+        }
+      ]
+    }
+  ]) }}
+/>
 Welcome to the world of simplified visual testing with the SmartUI SDK.
 
 Integrating seamlessly into your existing Playwright testing suite, SmartUI SDK revolutionizes the way you approach visual regression testing. Our robust solution empowers you to effortlessly capture, compare, and analyze screenshots across a multitude of browsers and resolutions, ensuring comprehensive coverage and accuracy in your visual testing endeavors.

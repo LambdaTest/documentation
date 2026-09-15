@@ -28,6 +28,7 @@ cd mocha-selenium-sample
 ```
 
 Install the required dependencies:
+
 ```bash
 npm i
 npm install selenium-webdriver
@@ -72,11 +73,13 @@ Generate capabilities for your test requirements with the [Capabilities Generato
 Execute the test using the following command.
 
 **Single test:**
+
 ```bash
 npm run single
 ```
 
 **Parallel tests:**
+
 ```bash
 npm run parallel
 ```

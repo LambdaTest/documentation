@@ -2,6 +2,28 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
+Settings > Plugins > SmartUI Integration. Here you may set your project token",
+          "url": "https://www.testmuai.com/support/docs/smartui-katalon-plugin/#step-3-set-environment-variable"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Step 4: Configure SmartUI in Your Test Case",
+          "text": "Use the provided custom keywords to start, capture, and stop SmartUI sessions.",
+          "url": "https://www.testmuai.com/support/docs/smartui-katalon-plugin/#step-4-configure-smartui-in-your-test-case"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 5,
+          "name": "Step 5: Advanced Configuration (Optional)",
+          "text": "You can pass additional configuration via a JSON file or inline parameters. Then use it in your test: Use ignoreBoxes to exclude dynamic elements (ads, timestamps) from comparison. Use selectBoxes to compare only specific regions (e.g., main content area).",
+          "url": "https://www.testmuai.com/support/docs/smartui-katalon-plugin/#step-5-advanced-configuration-optional"
+        }
+      ]
+    }
+  ]) }}
+/>
+
 The **Katalon Studio SmartUI Plugin** integrates [Katalon Studio](https://www.katalon.com/) with [TestMu AI SmartUI](/support/docs/smart-visual-regression-testing/), enabling **visual regression testing** directly inside your test automation workflows.
 
 With this plugin, you can:

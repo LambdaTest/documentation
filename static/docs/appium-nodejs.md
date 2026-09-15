@@ -2,6 +2,63 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
+\n\n\n\n```javascript title=\"Android.js\"\nconst wd = require(\"wd\");\n//highlight-next-line\nconst username = process.env.LT_USERNAME || \"username\"; //Add username here\n\nconst accessKey = process.env.LT_ACCESS_KEY || \"accessKey\"; //Add accessKey here\n\nconst desiredCapabilities = {\n  app: \"APP_URL\", // Enter the app (.apk) url\n  build: \"NodeJS - Android\",\n  name: \"Sample Test NodeJS\",\n  deviceName: \"Galaxy S20\",\n  isRealMobile: true,\n  platformName: \"android\",\n  platformVersion: \"11\",\n  video: true,\n  visual: true,\n};\n\nconst driver = wd.promiseRemote(\n  `https://${username}:${accessKey}@mobile-hub.lambdatest.com/wd/hub`\n);\n\nconst DEFAULT_TIMEOUT = 10000;\n\nasync function runAndroidTest() {\n  try {\n    driver\n      .init(desiredCapabilities)\n      .then(function () {\n        return driver.waitForElementById(\"color\", DEFAULT_TIMEOUT);\n      })\n      .then(function (colorButton) {\n        return colorButton.click();\n      })\n      .then(function () {\n        return driver.waitForElementById(\"Text\", DEFAULT_TIMEOUT);\n      })\n      .then(function (text) {\n        text.click();\n        return driver.waitForElementById(\"toast\", DEFAULT_TIMEOUT);\n      })\n      .then(function (toast) {\n        toast.click();\n        return driver.waitForElementById(\"notification\", DEFAULT_TIMEOUT);\n      })\n      .then(function (notification) {\n        notification.click();\n        return driver.waitForElementById(\"geoLocation\", DEFAULT_TIMEOUT);\n      })\n      .then(function (geoLocation) {\n        geoLocation.click();\n        return driver.waitForElementById(\"buttonPage\", DEFAULT_TIMEOUT);\n      })\n      .then(function (Home) {\n        Home.click();\n        return driver.waitForElementById(\"speedTest\", DEFAULT_TIMEOUT);\n      })\n      .then(function (speedTest) {\n        speedTest.click();\n        return driver.waitForElementById(\"webview\", DEFAULT_TIMEOUT);\n      })\n      .then(function (Browser) {\n        Browser.click();\n        return driver.waitForElementById(\"url\", DEFAULT_TIMEOUT);\n      })\n      .then(function (url) {\n        url.type(\"https://www.lambdatest.com\");\n        return driver.waitForElementById(\"find\", DEFAULT_TIMEOUT);\n      })\n      .then(function (find) {\n        find.click();\n        driver.quit();\n      });\n  } catch (e) {\n    driver.quit();\n  }\n}\n\nrunAndroidTest();"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "The capabilities object in the sample code are defined as (iOS.js)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "desired_capabilities = {\n  deviceName: \"iPhone 12\",\n  platformVersion: \"14\",\n  platformName: \"iOS\",\n  isRealMobile: true,\n  //highlight-next-line\n  app: \"APP_URL\", //Enter the app (.ipa) url\n  visual: true,\n  video: true,\n  build: \"NodeJS Vanilla - iOS\",\n  name: \"Sample Test - NodeJS\",\n};"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 5: Configure the Test Capabilities (Android.js)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "desired_capabilities = {\n  deviceName: \"Galaxy S20\",\n  platformVersion: \"11\",\n  platformName: \"android\",\n  isRealMobile: true,\n  //highlight-next-line\n  app: \"APP_URL\", //Enter the app (.apk) url\n  visual: true,\n  video: true,\n  build: \"NodeJS Vanilla - Android\",\n  name: \"Sample Test - NodeJS\",\n};"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 6: Execute and Monitor your Tests",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "  npm i wd"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 6: Execute and Monitor your Tests (iOS)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "  node IOS.js"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 6: Execute and Monitor your Tests (Android)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "  node Android.js"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "The appium-skill package includes",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "appium-skill/\n\u251c\u2500\u2500 SKILL.md\n\u2514\u2500\u2500 reference/\n    \u251c\u2500\u2500 playbook.md\n    \u2514\u2500\u2500 advanced-patterns.md"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Install a Appium Agent Skill using the command below",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "codeRepository": "https://github.com/LambdaTest/agent-skills",
+        "text": "# Clone the repo and copy the skill you need\ngit clone https://github.com/LambdaTest/agent-skills.git\ncp -r agent-skills/appium-skill .claude/skills/\n\n# Or for Cursor / Copilot\ncp -r agent-skills/appium-skill .cursor/skills/"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 In this documentation, you will learn how to configure and run your **NodeJS** automation testing scripts with **Appium** on TestMu AI, set the desired capabilities for appium testing, and other advanced features of TestMu AI.
 
 ## Prerequisites

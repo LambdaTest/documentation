@@ -2,56 +2,28 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
-Vapi is a voice AI platform where a single assistant configuration carries the model, voice, transcriber, tools, and call behaviour, then ships across phone, web, and chat. TestMu AI connects to the assistant on whichever surface it runs on, drives full multi-turn conversations across personas and edge cases, and scores every run.
+Vapi is a voice AI platform where a single assistant configuration carries the model, voice, transcriber, tools, and call behaviour, then ships across phone, web, and chat. With the TestMu AI Agent Testing Platform you can put your Vapi assistant through multi-turn conversations across personas and edge cases on every surface it ships to, and score each run.
 
-## Before You Begin
+To connect one, you need a Vapi account with a published assistant, a provisioned phone number for phone caller agents only, source docs for scenario generation (prompt, PRD, or knowledge base), and a TestMu AI workspace with agent-testing permissions.
 
-Before you connect a Vapi assistant, make sure you have:
+## How do you test Vapi tools and Squad handoffs?
 
-- Vapi account with a published assistant
-- A provisioned phone number, for phone caller agents only
-- TestMu AI workspace with agent-testing permissions
-- Source docs for scenario generation: prompt, PRD, or knowledge base
+A single Vapi assistant carries its tools and transport across every surface, so a few behaviours are worth building dedicated scenarios around:
 
-## Test a Vapi Phone Agent
+- **Default tools.** Default tools each need their own scenario: `transferCall`, `endCall`, `dtmf`, `sms`, `apiRequest`.
+- **Squad handoffs.** Squads hand off mid-call, so the transfer boundary needs testing.
+- **WebSocket transport.** WebSocket transport rejects phone parameters, and audio pauses trigger silence timeouts.
+- **Chat session state.** Chat context carries through session IDs, so multi-turn state needs its own tests.
 
-Phone testing covers inbound and outbound callers running over the phone network. Paste the assistant's system prompt to generate scenarios, then add the number under Phone Numbers and pick from 100+ voices, background noise conditions, and personas. It covers DTMF entry, transfers, voicemail handling, and carrier latency.
+## How is a Vapi assistant reached on phone, voice, and chat?
 
-Full setup: [Phone agent testing](/support/docs/phone-agent/)
+A single Vapi assistant ships across surfaces. Generate scenarios from the system prompt or supporting docs, then follow the linked setup for the surface you test:
 
-## Test a Vapi Voice Agent
+- **Phone** covers inbound and outbound callers over the phone network: DTMF entry, transfers, voicemail handling, and carrier latency. Setup: [phone agent testing](/support/docs/phone-agent/).
+- **Voice** reaches the assistant over a direct audio stream rather than a phone number, with the endpoint profile created using REST API or WebSocket. It isolates the speech pipeline, so STT and TTS accuracy, turn-taking, and interruption handling get tested without telephony noise. Setup: [voice agent testing](/support/docs/voice-agent/).
+- **Chat** runs text conversations through Vapi's Chat API, catching reasoning, tool call, and grounding failures, and can run on every commit. Setup: [chat agent testing](/support/docs/chat-agent/).
 
-Voice testing applies to assistants reached over a direct audio stream rather than a phone number. Paste the system prompt to generate scenarios, then create the endpoint profile using REST API or WebSocket. It isolates the speech pipeline, so STT and TTS accuracy, turn-taking, and interruption handling get tested without telephony noise in the results.
-
-Full setup: [Voice agent testing](/support/docs/voice-agent/)
-
-## Test a Vapi Chat Agent
-
-Chat testing covers text conversations through Vapi's Chat API. Upload the supporting docs and Confluence pages the agent answers from to generate scenarios, then create the endpoint profile using REST API or WebSocket. It catches reasoning, tool call, and grounding failures, and can run on every commit.
-
-Full setup: [Chat agent testing](/support/docs/chat-agent/)
-
-## What You Get With Agent Testing
-
-Every Vapi run, on any surface it supports, is scored across:
-
-- 30+ metrics across 8 categories, with configurable thresholds
-- Context-aware scenario generation
-- Adversarial testing and automated issue detection
-- 100+ voices and personas
-- Multilingual conversations
-- Quality scoring and real-time call monitoring
-
-## Vapi-Specific Considerations
-
-A few Vapi behaviours are worth building dedicated scenarios around:
-
-- Default tools each need their own scenario: `transferCall`, `endCall`, `dtmf`, `sms`, `apiRequest`
-- Squads hand off mid-call, so the transfer boundary needs testing
-- WebSocket transport rejects phone parameters, and audio pauses trigger silence timeouts
-- Chat context carries through session IDs, so multi-turn state needs its own tests
-
-## Troubleshooting
+## Where do Vapi test runs go wrong?
 
 Common failure modes to watch for:
 

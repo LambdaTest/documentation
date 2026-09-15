@@ -2,6 +2,104 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
+\n\n## Best Practices\n\n\n\n\n**Secret Management**\n\n- Never commit credentials to repository\n- Use CircleCI Environment Variables for all sensitive data\n- Mark variables as secret to hide values in logs\n- Rotate secrets regularly\n- Use different secrets for different environments\n\n<\/TabItem>\n\n\n**Pipeline Optimization**\n\n- Use parallel jobs for faster execution\n- Cache dependencies to speed up pipelines\n- Only run visual tests on relevant branches\n- Set up pipeline conditions to avoid unnecessary runs\n\n**Example:**\n```yaml\nworkflows:\n  version: 2\n  smartui_pipeline:\n    jobs:\n      - smartui_test:\n          filters:\n            branches:\n              only:\n                - main\n                - develop"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 2",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "environment:\n  BUILD_NAME: \"${CIRCLE_BRANCH}-${CIRCLE_SHA1:0:7}\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Pass variable to job",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "   environment:\n     PROJECT_TOKEN: $PROJECT_TOKEN"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Check pipeline logs for errors",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "   - run:\n       name: Check Logs\n       when: on_failure\n       command: |\n         cat /tmp/*.log || true"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Increase pipeline timeout",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "   - run:\n       name: Execute Tests\n       no_output_timeout: 60m"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Run tests in parallel using matrix",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "   jobs:\n     smartui_test:\n       matrix:\n         parameters:\n           test_group: [1, 2, 3]"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Use specific Node version",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "   docker:\n     - image: circleci/node:18"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Clear npm cache",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "   - run:\n       name: Install Dependencies\n       command: |\n         npm cache clean --force\n         npm install"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Ensure Node.js is available in Docker image",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "   docker:\n     - image: circleci/node:18"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Verify npm is available",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "   - run:\n       name: Check npm\n       command: npm --version"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Install SmartUI CLI explicitly",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "   - run:\n       name: Install SmartUI CLI\n       command: npm install -g @lambdatest/smartui-cli"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
+ Variables. Add the following variables: LT_USERNAME: Your TestMu AI username. LTACCESSKEY: Your TestMu AI access key.",
+          "url": "https://www.testmuai.com/support/docs/smartui-with-circle-ci/#step-3-add-environment-variables"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Step 4: Setup your Workflow",
+          "text": "Step 4: Setup your Workflow",
+          "url": "https://www.testmuai.com/support/docs/smartui-with-circle-ci/#step-4-setup-your-workflow"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 5,
+          "name": "Step 5: Check the output",
+          "text": "After triggering the workflow, check your results in the SmartUI Dashboard",
+          "url": "https://www.testmuai.com/support/docs/smartui-with-circle-ci/#step-5-check-the-output"
+        }
+      ]
+    }
+  ]) }}
+/>
 CircleCI is a popular CI/CD tool known for its speed, flexibility, and seamless integration with version control systems like GitHub and Bitbucket. It is cloud-native and also offers an on-premises solution.
 
 This guide explains how to integrate your project with the CircleCI CI/CD pipeline to trigger visual regression testing with TestMu AI SmartUI whenever changes are made to your repository.

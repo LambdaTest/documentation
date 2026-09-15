@@ -21,11 +21,13 @@ This zip file contains the tunnel binary which will help in establishing a secur
 **Step 2**:  Extract the downloaded zip file. Go to the terminal and route your pointer to the same directory where you extracted the zip file.
 
 **Step 3**:  Paste the copied string to execute the downloaded binary file. The command will look like:
+
 ```
 LT --user {user's login email} --key {user's access key} --tunnelName {user's tunnel name}
 ```
 
 So for example, if your user login email is example@lambdatest.com, user key is 123456789abcdefghijklmnopqrstuv and tunnel name is TestMu AI, the command would be:
+
 ```
 LT --user example@lambdatest.com --key 123456789abcdefghijklmnopqrstuv --tunnelName LambdaTest
 ```
@@ -85,11 +87,13 @@ Use the following arguments in your command line.
 |`--proxy-user`|abcdefg|WonderProxy username of the user.|
 
 Here is how the format of full command would look like:
+
 ```
 LT --user {user login email} --key {user key} --proxy-host {full proxy hostname} --proxy-user {proxy username} --proxy-pass {proxy password} --proxy-port {port number}
 ```
 
 Example of full command:
+
 ```
 LT --user example@lambdatest.com --key 123asd123 --proxy-host abc.wonderproxy.com --proxy-user abcdefg --proxy-pass hijklmnop --proxy-port 12345
 ```

@@ -2,6 +2,161 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
+{\n  // Launch a local browser instance\n  const browser = await chromium.launch({\n    headless: false, // Set to false to see the browser UI\n  });\n\n  const page = await browser.newPage();\n\n  // Navigate to the desired URL\n  await page.goto(\"https://www.lambdatest.com\");\n\n  // Use smartuiSnapshot to take a visual snapshot locally\n  await smartuiSnapshot.smartuiSnapshot(page, \"LambdaTest\");\n\n  // Close the browser\n  await browser.close();\n})();\n"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 6: Execute the Tests on SmartUI Cloud",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "npx smartui exec node playwrightCloud.js --config .smartui.json"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Handling Dynamic Data in SmartUI SDK ****",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n<\/TabItem>\n\n\n```js title=\"This is a sample for your configuration for Playwright to ignore by Class\"\nlet options = {\n            ignoreDOM: {\n                class: [\"Class-1\", \"Class-2\"],\n            }\n        }\n        await page.goto('Required URL');\n        await smartuiSnapshot.smartuiSnapshot(page, \"Screenshot Name\", options);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 10",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n<\/TabItem>\n\n\n\n```js title=\"This is a sample for your configuration for Playwright to ignore by CSS Selector\"\nlet options = {\n            ignoreDOM: {\n                cssSelector: [\"CSS-Selector-1\", \"CSS-Selector-2\"],\n            }\n        }\n        await page.goto('Required URL');\n        await smartuiSnapshot.smartuiSnapshot(page, \"Screenshot Name\", options);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 11",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n<\/TabItem>\n\n\n```js title=\"This is a sample for your configuration for Playwright to select by Class\"\nlet options = {\n            selectDOM: {\n                class: [\"Class-1\", \"Class-2\"],\n            }\n        }\n        await page.goto('Required URL');\n        await smartuiSnapshot.smartuiSnapshot(page, \"Screenshot Name\", options);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 12",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n<\/TabItem>\n\n\n\n```js title=\"This is a sample for your webhook configuration for Playwright to select by CSS Selector\"\nlet options = {\n            selectDOM: {\n                cssSelector: [\"CSS-Selector-1\", \"CSS-Selector-2\"],\n            }\n        }\n        await page.goto('Required URL');\n        await smartuiSnapshot.smartuiSnapshot(page, \"Screenshot Name\", options);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "For capturing the screenshot of a specific element",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n<\/TabItem>\n\n\n```js title=\"This is a sample for your configuration for Playwright to capture an element by Class\"\nlet options = {\n      element: {\n          class: 'Required Class',\n      }\n  };\n        await page.goto('Required URL');\n        await smartuiSnapshot.smartuiSnapshot(page, \"Screenshot Name\", options);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 14",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n<\/TabItem>\n\n\n\n```js title=\"This is a sample for your webhook configuration for Playwright to capture an element by CSS Selector\"\nlet options = {\n      element: {\n          cssSelector: 'Required CSS Selector',\n      }\n  };\n        await page.goto('Required URL');\n        await smartuiSnapshot.smartuiSnapshot(page, \"Screenshot Name\", options);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 15",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n## Best Practices\n\n\n\n\n**Screenshot Naming**\n\n- Use descriptive, consistent names for screenshots\n- Include page/component name in screenshot names\n- Avoid special characters that might cause issues\n- Use consistent naming conventions across your test suite\n\n**Example:**\n```javascript\nawait smartuiSnapshot.smartuiSnapshot(page, \"HomePage-Header\");\nawait smartuiSnapshot.smartuiSnapshot(page, \"ProductPage-MainContent\");"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Best Practices",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "await page.goto('https://example.com');\nawait page.waitForSelector('#main-content', { state: 'visible' });\nawait smartuiSnapshot.smartuiSnapshot(page, \"Page Loaded\");"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Verify PROJECT_TOKEN is set correctly",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "   echo $PROJECT_TOKEN"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Verify SmartUI CLI is installed",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "   npx smartui --version"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Add explicit waits before screenshots",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "   await page.waitForSelector('#content', { state: 'visible' });\n   await page.waitForLoadState('networkidle');"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Enable JavaScript in configuration",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JSON",
+        "text": "   {\n     \"enableJavaScript\": true\n   }"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Try different port if default is in use",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "   npx smartui exec -P 5000 -- "
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Check latest versions on npm",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "   npm view @lambdatest/playwright-driver version\n   npm view @lambdatest/smartui-cli version"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Clear npm cache",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "   npm cache clean --force"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
+= v4.x.x, upgrade your Node.js version to v20.3 or above.",
+          "url": "https://www.testmuai.com/support/docs/smartui-playwright-sdk/#step-2-install-the-dependencies"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Configure your Project Token",
+          "text": "Setup your project token shown in the SmartUI app after creating your project.",
+          "url": "https://www.testmuai.com/support/docs/smartui-playwright-sdk/#step-3-configure-your-project-token"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Step 4: Create and Configure SmartUI Config",
+          "text": "You can now configure your project configurations on using various available options to run your tests with the SmartUI integration. To generate the configuration file, please execute the following command: Once, the configuration file will be created, you will be seeing the default configuration pre-filled in the configuration file: For capturing fullpage or viewport screenshots, please refer to this documentation For the list of available mobile viewports, please refer to this documentation For more information about SmartUI config global options, please refer to this documentation.",
+          "url": "https://www.testmuai.com/support/docs/smartui-playwright-sdk/#step-4-create-and-configure-smartui-config"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 5,
+          "name": "Step 5: Adding SmartUI function to take screenshot",
+          "text": "You can incorporate SmartUI into your custom Playwright automation test (any platform) script by adding the smartuiSnapshot function in the required segment of Playwright script of which we would like to take the screenshot, as shown below:",
+          "url": "https://www.testmuai.com/support/docs/smartui-playwright-sdk/#step-5-adding-smartui-function-to-take-screenshot"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 6,
+          "name": "Step 6: Execute the Tests on SmartUI Cloud",
+          "text": "Execute visual regression tests on SmartUI using the following commands You may use the npx smartui --help command in case you are facing issues during the execution of SmartUI commands in the CLI.",
+          "url": "https://www.testmuai.com/support/docs/smartui-playwright-sdk/#step-6-execute-the-tests-on-smartui-cloud"
+        }
+      ]
+    }
+  ]) }}
+/>
+
 Welcome to the world of simplified visual testing with the SmartUI SDK.
 
 Integrating seamlessly into your existing Playwright testing suite, SmartUI SDK revolutionizes the way you approach visual regression testing. Our robust solution empowers you to effortlessly capture, compare, and analyze screenshots across a multitude of browsers and resolutions, ensuring comprehensive coverage and accuracy in your visual testing endeavors.

@@ -2,6 +2,117 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
+\n<\/div>\n\n***\n\n### `--labels`\nThis flag allows you to pass the labels of your Job. \n```bash\n--labels \"testing\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "--no-track",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "--no-track"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "--preserve-payload",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "--preserve-payload"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "In case of AutoSplit mode",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "--runson linux"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "In case of Matrix or Hybrid mode",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "--runson linux,win,win11,mac,mac13"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "-s, --scan",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "--scan"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "--server-port",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "--server-port=8080"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "-t, --target-directory",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "--target-directory \"/home/users/work/yaml/scripts/\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "--target-path",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "--target-path \"src/test-suite/**\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "--tests-per-tunnel",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "--tests-per-tunnel 5"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "-z, --use-zip",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "--use-zip \"/home/users/work/yaml/zip/\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "--vars",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "--vars \"org=Lambdatest\" --vars \"product=HyperExecute\" --vars \"email=xyz@abc.com\" --vars \"email1=abc@xyz.com\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "--verbose",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "--verbose "
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "--version",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "--version "
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Trigger your Test from HyperExecute CLI",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": ":::\n\n## Running HyperExecute CLI in Quiet Mode\n\nEach time a job is run in HyperExecute, a large number of logs are produced. These logs are sometimes beneficial for thorough debugging and analysis, it occasionally overwhelms Continuous Integration (CI) systems with an excessive amount of logs, especially when handling a large number of test executions.\n\nHyperExecute provides a **\"Quiet mode\"** as a solution to this issue and to give users more control over the logging output. By only displaying significant updates during the test execution, this enables you to run tests with less logs.\n\nTo enable the **Quiet Mode**, you need to paas these commands in your terminal and then trigger the command to execute your job.\n\n\n\n  ```yaml\n  env | grep CI # Used to check if the CI variable is set to true or not\n  export CI=true # If it's not set to true, then use this command to set as true"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Running HyperExecute CLI in Quiet Mode (Windows)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "  env | grep CI # Used to check if the CI variable is set to true or not\n  set CI=true # If it's not set to true, then use this command to set as true"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
 `HyperExecute CLI` is a command line interface that is required to run tests on HyperExecute. This page outlines all you need to know about the CLI and also explains about the different flags & functionalities supported by the HyperExecute CLI.
 
 > HyperExecute CLI credentials (access keys, API tokens, etc.) are private and confidential. A system compromise may result in their unauthorized disclosure; therefore, you must secure the machine running the TestMu AI-HyperExecute CLI. Do not share or expose credentials in public code, repositories, or environments. In the event of a compromise, you are solely responsible for immediately revoking and regenerating the credentials. TestMu AI assumes no liability for any losses arising from failure to comply.
@@ -127,6 +238,7 @@ hyperexecute --auto-proxy
 
 ### `--concurrency`
 This flag allows you to define the number of concurrent sessions running on HyperExecute. For more information on concurrency, go to [this page](/support/docs/hyperexecute-auto-split-strategy/).
+
 ```bash
 --concurrency 2
 ```
@@ -134,6 +246,7 @@ This flag allows you to define the number of concurrent sessions running on Hype
 ### `--config`
 
 This flag allows you to enter a custom location where you can download the HyperExecute YAML file. To learn more about the HyperExecute YAML, visit [this page](/support/docs/deep-dive-into-hyperexecute-yaml/).
+
 ```bash
 --config "/home/users/work/yaml/"
 ```
@@ -169,6 +282,7 @@ This flag will download the new artifacts of your job and will store it into the
 
 ### `-h, --help`
 You can run this command if you need any help in understanding the definition of the flags on the CLI itself. However, if you need any further assistance we're just a **ping** away.
+
 ```bash
 --help
 ```
@@ -209,6 +323,7 @@ The access key of your TestMu AI account. To find out how to retrieve your acces
 
 ### `--labels`
 This flag allows you to pass the labels of your Job.
+
 ```bash
 --labels "testing"
 ```
@@ -222,6 +337,7 @@ You can track the progress of your uploaded jobs with HyperExecute. However, thi
 
 ### `--preserve-payload`
 This flag allows you to preserve the job payload after the job is completed successfully.
+
 ```bash
 --preserve-payload
 ```
@@ -301,6 +417,7 @@ The username of your TestMu AI account.
 This method allows you to name your variables. It helps you optimize the content of your YAML file by allowing for more flexibility.
 
 You can specify the email address for sharing [reports](/support/docs/hyperexecute-reports/) or [artifacts](/support/docs/hyperexecute-artifacts/) in a YAML configuration file using a variable. This allows you to dynamically set the email address and pass it via CLI, providing more flexibility than hardcoding the email address in the YAML file. Learn about this in [detail](/support/docs/hyperexecute-email-reports/#how-to-dynamically-set-your-email-address).
+
 ```bash
 --vars "org=Lambdatest" --vars "product=HyperExecute" --vars "email=xyz@abc.com" --vars "email1=abc@xyz.com"
 ```
@@ -312,12 +429,14 @@ The new `--validate` flag in the HyperExecute CLI allows you to quickly check th
 
 ### `--verbose`
 This flag allows you to log all of your proxy requests to the output section (stdout).
+
 ```bash
 --verbose
 ```
 
 ### `--version`
 This flag indicates the version of HyperExecute CLI binary that you are running on your system.
+
 ```bash
 --version
 ```
@@ -332,6 +451,7 @@ In case of macOS, if you get a permission denied warning while executing CLI, si
 
 If you're running on a minimal alpine image, please make sure to install essential linux dependencies for HyperExecute CLI to work.
 (An example with our sample repo has been given below):
+
 ``` bash
 apk add libc6-compat git bash
 git clone https://github.com/LambdaTest/behave-selenium-hyperexecute-sample.git

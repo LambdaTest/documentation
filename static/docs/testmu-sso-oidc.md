@@ -87,6 +87,7 @@ The exact steps vary by identity provider, but the general process involves crea
 ### Step 5: Collect OpenID Connect Metadata
 
 1. **Get Well-Known OIDC URL**: The OpenID Connect well-known configuration URL follows this pattern:
+
 ```
 https://login.microsoftonline.com/{tenant-id}/v2.0/.well-known/openid-configuration
 ```
@@ -116,6 +117,7 @@ Since OIDC integration requires server-side configuration, you cannot create the
    - **Email**: [support@testmuai.com](mailto:support@testmuai.com)
 
 3. **Provide Configuration Details**: Include the following information in your support request:
+
 ```
 Identity Provider: Azure AD
 Client ID: [Your Application (client) ID]

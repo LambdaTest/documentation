@@ -2,31 +2,6 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
-This page outlines how you can run your first test execution job on HyperExecute.
-
-## Before you start
-
-We recommend running your first test execution job using a sample project on HyperExecute. This can be done in three different ways, as mentioned below:
-
-1. [**Using Quick Run**](/support/docs/hyperexecute-running-your-first-job/#1-using-quick-run): Execute tests directly from the HyperExecute Portal. ([Recommended](https://www.testmuai.com/login/?redirectTo=https://hyperexecute.lambdatest.com/quickstart) for new users)
-2. [**Using Local System**](/support/docs/hyperexecute-running-your-first-job/#2-using-local-system): Execute tests from your Local System. (Requires [HyperExecute CLI](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/))
-3. [**Using the HyperExecute Agent Skill**](/support/docs/getting-started-with-hyperexecute/#using-the-hyperexecute-agent-skill-with-testmu-ai): Generate and run tests using an AI coding assistant with the HyperExecute Agent Skill.
-
-## 1. Using Quick Run
-
-As you are running tests directly from the HyperExecute GUI, you don't need to do anything.
-The platform automatically gets the instructions from the HyperExecute YAML file and starts execution using the HyperExecute CLI.
-
-**Step 1:** Go to the [Quickstart](https://www.testmuai.com/login/?redirectTo=https://hyperexecute.lambdatest.com/quickstart) page.
-
-**Step 2:** Select your preferred test automation framework and hit **Get Started**.
-
-**Step 3:** Configure your [HyperExecute YAML](/support/docs/deep-dive-into-hyperexecute-yaml) (optional), otherwise just click on **Trigger test** to run your first job.
-
-**Step 4:** Your test execution is initiated using the [HyperExecute CLI](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/) in the background.
-
-**Step 5:** Click on **View Test Result** to navigate to [HyperExecute Dashboard](https://www.testmuai.com/login/?redirectTo=https://hyperexecute.lambdatest.com/hyperexecute/jobs) where you can see the job getting executed and the test results.
-
 ## 2. Using Local System
 
 To run your Test Scripts on HyperExecute from you Local system, you'll need the following:

@@ -2,6 +2,29 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
+\n- John <\n- John johndoe@example.com\n- John Doe"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "highlight-end",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\nThis is how you can pass the value of your email address via CLI by running the command\n\n```bash\n./hyperexecute --config RELATIVE_PATH_OF_YOUR_YAML_FILE --vars \"email=xyz@abc.com\" --vars \"email1=abc@xyz.com\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "highlight-end",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n```bash\n./hyperexecute --config RELATIVE_PATH_OF_YOUR_YAML_FILE --vars \"email=xyz@abc.com,abc@xyz.com,def@wxy.com\""
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
+# Receive Job Reports and Artifacts via Email
+
 Downloading Job Reports and Artifacts manually from the HyperExecute UI can be a time-consuming and repetitive task. To address this pain point, HyperExecute now provides the convenience of receiving Job Reports and Artifacts directly to your specified email addresses. This eliminates the need for manual downloads, allowing you to access critical job information instantly and effortlessly. Embrace the efficiency of automated delivery and spend less time navigating the UI and more time focusing on your development tasks.
 
 ## YAML Configuration

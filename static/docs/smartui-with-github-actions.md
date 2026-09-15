@@ -2,6 +2,118 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
+\n\n> Check your output in the [SmartUI Dashboard](https://www.testmuai.com/login/?redirectTo=https://smartui.lambdatest.com/projects)\n\n## Best Practices\n\n\n\n\n**Secret Management**\n\n- Never commit credentials to repository\n- Use GitHub Secrets for all sensitive data\n- Rotate secrets regularly\n- Use different secrets for different environments\n\n<\/TabItem>\n\n\n**Workflow Optimization**\n\n- Use matrix strategies for parallel execution\n- Cache dependencies to speed up workflows\n- Only run visual tests on relevant branches\n- Set up workflow conditions to avoid unnecessary runs\n\n**Example:**\n```yaml\non:\n  push:\n    branches: [ main, develop ]\n  pull_request:\n    branches: [ main ]"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 2",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "- name: Set build name\n  run: |\n    BUILD_NAME=\"PR-${{ github.event.pull_request.number }}-${{ github.sha }}\"\n    echo \"BUILD_NAME=$BUILD_NAME\" >> $GITHUB_ENV"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Pass secret to workflow step",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "   env:\n     PROJECT_TOKEN: ${{ secrets.PROJECT_TOKEN }}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "For manual workflows, add workflow input",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "   on:\n     workflow_dispatch:\n       inputs:\n         project_token:\n           required: true\n           type: string"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Check workflow logs for errors",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "   - name: View logs\n     if: failure()\n     run: |\n       # Check previous step logs"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Increase workflow timeout",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "   timeout-minutes: 60"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Run tests in parallel using matrix",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "   strategy:\n     matrix:\n       test-group: [1, 2, 3]"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Use specific Node version",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "   - uses: actions/setup-node@v3\n     with:\n       node-version: '18'"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Clear npm cache",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "   - run: npm cache clean --force"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Ensure Node.js setup step is included",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "   - uses: actions/setup-node@v3\n     with:\n       node-version: '18'"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Verify npm is available",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "   - run: npm --version"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Install SmartUI CLI explicitly",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "   - run: npm install -g @lambdatest/smartui-cli"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
+ Secrets and Variables > Actions. Create your secrets with variable name LTUSERNAME and LTACCESSKEY**. You can fetch your credentials from the Accounts and Settings dashboard.",
+          "url": "https://www.testmuai.com/support/docs/smartui-with-github-actions/#step-1-create-your-secrets"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Create a New Workflow",
+          "text": "Navigate to the main page of the repository. Under your repository name, click Actions. In the left sidebar, click the New workflow button.",
+          "url": "https://www.testmuai.com/support/docs/smartui-with-github-actions/#step-2-create-a-new-workflow"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Create the GitHub Actions workflow YAML file",
+          "text": "To create the GitHub Actions pipeline YAML file, follow the sample command below:",
+          "url": "https://www.testmuai.com/support/docs/smartui-with-github-actions/#step-3-create-the-github-actions-workflow-yaml-file"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Step 4: Run the Workflow",
+          "text": "To run the new pipeline that you just created, click the Run workflow button on the workflow page. A prompt will ask you to enter your PROJECTTOKEN**. You can get your project token from the dashboard after creating your SmartUI project. Check your output in the SmartUI Dashboard",
+          "url": "https://www.testmuai.com/support/docs/smartui-with-github-actions/#step-4-run-the-workflow"
+        }
+      ]
+    }
+  ]) }}
+/>
 GitHub Actions is a powerful automation and continuous integration/continuous delivery (CI/CD) platform built into GitHub. It allows you to create custom automated YAML workflows directly within your GitHub repositories. This helps you to build and test every pull request to your repository, or deploy merged pull requests to production.
 
 This document will show you how to integrate GitHub Actions Pipeline with SmartUI to greatly shorten your test cycles.

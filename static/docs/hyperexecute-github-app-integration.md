@@ -71,6 +71,7 @@ The redirect URL includes an `installation_id` parameter required for configurat
    - Example URL format: `https://github.com/settings/installations/{installation_id}`
 
 2. Navigate to the TestMu AI setup page:
+
 ```
 https://{{accounts_base_url}}/org-settings/hyperexecute/git-integration
 ```
@@ -84,6 +85,7 @@ https://{{accounts_base_url}}/org-settings/hyperexecute/git-integration
 **Additional Required Configuration**
 
 Create an org-level secret via the Logistics Secret API:
+
 ```
 github_app_private_key_{{git_tenant}}
 ```
@@ -101,6 +103,7 @@ This private key is used to generate short-lived tokens internally.
 **Installation Steps**
 
 1. Navigate to the private app installation URL:
+
 ```
 https://github.com/apps/{private-app-name}/installations/new
 ```
@@ -115,6 +118,7 @@ https://github.com/apps/{private-app-name}/installations/new
 **Post-Installation Configuration**
 
 GitHub will redirect you to the private setup URL configured for your environment:
+
 ```
 https://{{private_accounts_base_url}}/org-settings/hyperexecute/git-integration
 ```

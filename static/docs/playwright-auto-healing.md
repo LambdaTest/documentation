@@ -1,6 +1,29 @@
-# Auto Healing for Playwright Web Automation
+# How to use Auto Healing for your Playwright test suites
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
+();\ncapabilities.put(\"browserName\", \"Chrome\");\ncapabilities.put(\"browserVersion\", \"latest\");\n\nMap ltOptions = new HashMap<>();\nltOptions.put(\"platform\", \"Windows 10\");\nltOptions.put(\"build\", \"Playwright Auto Heal Build\");\nltOptions.put(\"name\", \"Playwright Auto Heal Test\");\nltOptions.put(\"autoHeal\", true);\nltOptions.put(\"user\", System.getenv(\"LT_USERNAME\"));\nltOptions.put(\"accessKey\", System.getenv(\"LT_ACCESS_KEY\"));\n\ncapabilities.put(\"LT:Options\", ltOptions);\n\nBrowser browser = playwright.chromium().connect(\"wss://cdp.lambdatest.com/playwright?capabilities=\" + URLEncoder.encode(new Gson().toJson(capabilities), \"UTF-8\"));"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Here is an example test case demonstrating this",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "const { test } = require('../lambdatest-setup');\nconst { expect } = require('@playwright/test');\n\ntest.describe('Browse LambdaTest in different search engines', () => {\n    test('Test Auto Heal', async ({ page }) => {\n        await page.goto('https://www.lambdatest.com/selenium-playground/auto-healing');\n        await page.waitForTimeout(1000); // sleep 1s\n\n        // Locate element before DOM change\n        let buttonBeforeDOMChange = await page.locator('#username'); // equivalent to FindElement ByID\n        await buttonBeforeDOMChange.click();\n\n        // Trigger DOM change\n        await page.click('p.selenium_btn');\n        await page.waitForTimeout(1000); // sleep 1s\n\n        // Try to locate the same element after DOM change\n        // Auto healing will automatically detect the new locator\n        let buttonAfterDOMChange = await page.locator('#username'); // again check for element\n        await buttonAfterDOMChange.click();\n\n        await page.waitForTimeout(1000); // sleep 1s\n    });\n});"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "To run the test, execute the below command",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "npx playwright test auto-heal.spec.js"
+      }
+    ],
+    "dateModified": "2026-09-09T19:13:32+05:30"
+  }) }}
+/>
+
+# Auto Healing for Playwright Web Automation
 
 The TestMu AI Auto Healing feature for Playwright testing automatically recovers from certain types of failures during test execution. When enabled, it reduces test flakiness and improves test reliability by detecting broken locators and handling unexpected errors in your test suites.
 

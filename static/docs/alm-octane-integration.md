@@ -2,6 +2,58 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
+\n    sdk-src<\/artifactId>\n    16.1.100<\/version>\n<\/dependency>"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Here's an example of how to configure your test framework to report results to ALM Octane",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "import com.hp.octane.integrations.OctaneSDK;\n\npublic class ALMOctaneReporter {\n\n    private static final String OCTANE_URL = \"https://your-octane-instance.com\";\n    private static final String SHARED_SPACE_ID = \"your-shared-space-id\";\n    private static final String WORKSPACE_ID = \"your-workspace-id\";\n    private static final String CLIENT_ID = \"your-client-id\";\n    private static final String CLIENT_SECRET = \"your-client-secret\";\n\n    public void reportTestResult(String testName, String status) {\n        // Initialize Octane SDK and report results\n        // Refer to ALM Octane SDK documentation for detailed implementation\n    }\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Once your test scripts are configured with ALM Octane reporting, run them on TestMu AI",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "DesiredCapabilities capabilities = new DesiredCapabilities();\ncapabilities.setCapability(\"browserName\", \"Chrome\");\ncapabilities.setCapability(\"version\", \"latest\");\ncapabilities.setCapability(\"platform\", \"Windows 10\");\ncapabilities.setCapability(\"build\", \"ALM Octane Integration Build\");\ncapabilities.setCapability(\"name\", \"ALM Octane Test\");\n\nWebDriver driver = new RemoteWebDriver(\n    new URL(\"https://\" + username + \":\" + accessKey + \"@hub.lambdatest.com/wd/hub\"),\n    capabilities\n);\n\n// Your test code here\n// ALM Octane reporting happens automatically based on your script configuration"
+      }
+    ],
+    "dateModified": "2026-07-17T17:17:54+05:30"
+  }) }}
+/>
+
+ Spaces > API Access Create a new API client with appropriate permissions Note down the Client ID and Client Secret",
+          "url": "https://www.testmuai.com/support/docs/alm-octane-integration/#step-1-set-up-alm-octane-api-credentials"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Install ALM Octane SDK",
+          "text": "For Java-based projects using Maven, add the ALM Octane SDK dependency: For other languages, refer to the ALM Octane API documentation in the Micro Focus online help.",
+          "url": "https://www.testmuai.com/support/docs/alm-octane-integration/#step-2-install-alm-octane-sdk"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Configure Test Result Reporting",
+          "text": "Here's an example of how to configure your test framework to report results to ALM Octane: Java (TestNG) Example:",
+          "url": "https://www.testmuai.com/support/docs/alm-octane-integration/#step-3-configure-test-result-reporting"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Step 4: Run Tests on TestMu AI",
+          "text": "Once your test scripts are configured with ALM Octane reporting, run them on TestMu AI: Using Selenium Grid: Using HyperExecute: Create your hyperexecute.yaml configuration and run tests as usual. The ALM Octane reporting configured in your scripts will work seamlessly.",
+          "url": "https://www.testmuai.com/support/docs/alm-octane-integration/#step-4-run-tests-on-testmu-ai"
+        }
+      ]
+    }
+  ]) }}
+/>
+
+# ALM Octane Integration with TestMu AI
+
 [ALM Octane](https://www.microfocus.com/en-us/products/alm-octane/overview) is an enterprise-grade Application Lifecycle Management (ALM) platform from Micro Focus. It provides comprehensive test management capabilities including test planning, test case management, defect tracking, and detailed analytics for your software development lifecycle.
 
 TestMu AI supports seamless integration with ALM Octane through your test automation scripts. If you already have ALM Octane configured in your test framework, your tests will work seamlessly when executed on TestMu AI's cloud infrastructure.

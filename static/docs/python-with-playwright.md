@@ -1,6 +1,22 @@
-# Python with Playwright: Running Your First Test
+# Run your Python automation scripts with Playwright on TestMu AI
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
+input\", 'LambdaTest')\n        page.keyboard.press(\"Enter\")\n        page.wait_for_timeout(1000)\n\n        title = page.title()\n\n        print(\"Title:: \", title)\n\n        if \"LambdaTest\" in title:\n            set_test_status(page, \"passed\", \"Title matched\")\n        else:\n            set_test_status(page, \"failed\", \"Title did not match\")\n    except Exception as err:\n        print(\"Error:: \", err)\n        set_test_status(page, \"failed\", str(err))\n\n    browser.close()\n\n\ndef set_test_status(page, status, remark):\n    page.evaluate(\"_ => {}\",\n                  \"lambdatest_action: {\\\"action\\\": \\\"setTestStatus\\\", \\\"arguments\\\": {\\\"status\\\":\\\"\" + status + \"\\\", \\\"remark\\\": \\\"\" + remark + \"\\\"}}\");\n\n\nwith sync_playwright() as playwright:\n    run(playwright)\n"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 4",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "npm run test"
+      }
+    ],
+    "dateModified": "2026-09-09T19:13:32+05:30"
+  }) }}
+/>
+
+# Python with Playwright: Running Your First Test
 
 Learn how to use Playwright with Python to automate web application testing across real browsers and operating systems on TestMu AI cloud platform.
 

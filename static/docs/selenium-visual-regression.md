@@ -2,6 +2,372 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
+\n\n\n\n```python title=\"Please replace your capabilities in your Remote Webdriver DesiredCapabilities configuration\"\noptions = ChromeOptions()\noptions.browser_version = \"120.0\"\noptions.platform_name = \"Windows 10\"\nlt_options = {};\nlt_options[\"username\"] = \"USERNAME\";\nlt_options[\"accessKey\"] = \"ACCESS_KEY\";\nlt_options[\"project\"] = \"Untitled\";\n#highlight-start\nlt_options[\"smartUI.project\"] = \"\";\n#highlight-end\nlt_options[\"w3c\"] = True;\nlt_options[\"plugin\"] = \"python-python\";\noptions.set_capability('LT:Options', lt_options);\n\n\noptions.set_capability('LT:Options', lt_options);\n\n#Connecting to the Lambdatest Selenium Cloud Grid with SmartUI\nself.driver = webdriver.Remote(\ncommand_executor=\"https://\" + \"\" + \":\" + \"\" + \"@hub.lambdatest.com/wd/hub\", options=options)"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Ruby",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n<\/TabItem>\n\n\n```csharp title=\"Please replace your capabilities in your Remote Webdriver DesiredCapabilities configuration\"\nString LT_USERNAME = GetEnvironmentVariable(\"LT_USERNAME\");\nString LT_ACCESS_KEY =  GetEnvironmentVariable(\"LT_ACCESS_KEY\");\nIWebDriver driver;\nChromeOptions capabilities = new ChromeOptions();\ncapabilities.BrowserVersion = \"latest\";\nDictionary ltOptions = new Dictionary();\nltOptions.Add(\"username\", LT_USERNAME);\nltOptions.Add(\"accessKey\", LT_ACCESS_KEY);\nltOptions.Add(\"platformName\", \"Windows 10\");\nltOptions.Add(\"project\", \"Demo LT\");\nltOptions.Add(\"build\", \"C# Build\");\nltOptions.Add(\"sessionName\", \"C# Single Test\");\n//highlight-start\nltOptions.Add(\"smartUI.project\", \"\");\n//highlight-end\nltOptions.Add(\"w3c\", true);\nltOptions.Add(\"plugin\", \"c#-c#\");\ncapabilities.AddAdditionalOption(\"LT:Options\", ltOptions);\n\n// Connecting to the Lambdatest Selenium Cloud Grid with SmartUI\ndriver = new RemoteWebDriver(new Uri(\"https://hub.lambdatest.com/wd/hub/\"), capabilities);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Java",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n<\/TabItem>\n<\/Tabs>\n\n- Installing dependency and for executing the test.\n\n\n\n"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "NodeJS",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "<\/TabItem>\n\n\n"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Python",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "<\/TabItem>\n\n"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Ruby",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "<\/TabItem>\n\n\n"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "C#",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n<\/TabItem>\n\n"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Java",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n<\/TabItem>\n<\/Tabs>\n\n\n\nHere you can explore multiple features and execute more such builds.\n\n## Step 3: Configure your Screenshot Capturing Options\n---\n\n### For taking viewport screenshot\n\nThis part of the code needs to be attached below the required segment of selenium script of which we would like to take the screenshot to test on.\n\n\n\n```javascript\nlet config = {\n  screenshotName: ''\n};\nawait driver.executeScript(\"smartui.takeScreenshot\", config);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "For taking viewport screenshot (Python)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Python",
+        "text": "config = {\n  'screenshotName': ''\n}\ndriver.execute_script(\"smartui.takeScreenshot\", config)"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "For taking viewport screenshot (Ruby)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Ruby",
+        "text": "config = {\n  'screenshotName' => ''\n}\ndriver.execute_script(\"smartui.takeScreenshot\", config)"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "C#",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "C#",
+        "text": "var config = new Dictionary {\n  {\"screenshotName\", \"\"}\n};\ndriver.ExecuteScript(\"smartui.takeScreenshot\", config);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Java",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "Map config = new HashMap<>();\nconfig.put(\"screenshotName\", \"\");\n((JavascriptExecutor)driver).executeScript(\"smartui.takeScreenshot\", config);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "For capturing full page screenshot (NodeJS)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "await driver.executeScript(\"smartui.takeScreenshot\", { screenshotName: \"\", fullPage: true });"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "For capturing full page screenshot (Python)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Python",
+        "text": "driver.execute_script(\"smartui.takeScreenshot\", {\"screenshotName\": \"\", \"fullPage\": True})"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "For capturing full page screenshot (Ruby)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Ruby",
+        "text": "driver.execute_script(\"smartui.takeScreenshot\", {\"screenshotName\" => \"\", \"fullPage\" => true})"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "C#",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "C#",
+        "text": "driver.ExecuteScript(\"smartui.takeScreenshot\", new Dictionary { { \"screenshotName\", \"\" }, { \"fullPage\", true } });"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Java",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "Map config = new HashMap<>();\nconfig.put(\"screenshotName\", \"\");\nconfig.put(\"fullPage\", true);\n((JavascriptExecutor)driver).executeScript(\"smartui.takeScreenshot\", config);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "SmartScroll (For browsers other than Chrome) (NodeJS)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "await driver.executeScript(\"smartui.takeScreenshot\", { screenshotName: \"\", fullPage: true, smartScroll: true });"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "SmartScroll (For browsers other than Chrome) (Python)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Python",
+        "text": "driver.execute_script(\"smartui.takeScreenshot\", {\"screenshotName\": \"\", \"fullPage\": True, \"smartScroll\": True})"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "SmartScroll (For browsers other than Chrome) (Ruby)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Ruby",
+        "text": "driver.execute_script(\"smartui.takeScreenshot\", {\"screenshotName\" => \"\", \"fullPage\" => true, \"smartScroll\" => true})"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "SmartScroll (For browsers other than Chrome) (C#)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "C#",
+        "text": "driver.ExecuteScript(\"smartui.takeScreenshot\", new Dictionary { { \"screenshotName\", \"\" }, { \"fullPage\", true }, { \"smartScroll\", true } });"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Java",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "Map config = new HashMap<>();\nconfig.put(\"screenshotName\", \"\");\nconfig.put(\"fullPage\", true);\nconfig.put(\"smartScroll\", true);\n((JavascriptExecutor)driver).executeScript(\"smartui.takeScreenshot\", config);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "For capturing the screenshot of a specific element (NodeJS)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "let config = {\n      screenshotName: '',\n      elementType: 'xpath',   //Choose one of: xpath, css_selector, id, class\n      element: ''\n};\nawait driver.executeScript(\"smartui.takeScreenshot\", config);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "For capturing the screenshot of a specific element (Python)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Python",
+        "text": "config = {\n  'screenshotName': '',\n   'elementType': 'xpath'/'css_selector'/'id'/'class', #Choose one from the following options - xpath, css_selector, id or class\n    'element': ''                    #Add your required element here\n}\ndriver.execute_script(\"smartui.takeScreenshot\", config)"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Ruby",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Ruby",
+        "text": "config = {\n  'screenshotName' => '',\n    'elementType'=> 'xpath'/'css_selector'/'id'/'class', #Choose one from the following options - xpath, css_selector, id or class\n    'element'=> ''                     #Add your required element here\n}\ndriver.execute_script(\"smartui.takeScreenshot\", config)"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "C#",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "C#",
+        "text": "var config = new Dictionary {\n  {\"screenshotName\", \"\"},\n  {\"elementType\",\"xpath\"/\"css_selector\"/\"id\"/\"class\"},       //Choose one from the following options - xpath, css_selector, id or class\n    {\"element\", \"\"}                        //Add your required element here\n};\ndriver.ExecuteScript(\"smartui.takeScreenshot\", config);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Java",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "Map config = new HashMap<>();\nconfig.put(\"screenshotName\", \"\");\nconfig.put(\"elementType\", \"xpath\"/\"css_selector\"/\"id\"/\"class\"); //Choose one from the following options - xpath, css_selector, id or class\nconfig.put(\"element\", \"\");                    //Add your required element here\n((JavascriptExecutor)driver).executeScript(\"smartui.takeScreenshot\", config);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Fetching Screenshot Status and Results using WebHook (NodeJS)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "driver.executeScript(\"smartui.fetchScreenshotStatus\")"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Fetching Screenshot Status and Results using WebHook (Python)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Python",
+        "text": "driver.execute_script(\"smartui.fetchScreenshotStatus\")"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Fetching Screenshot Status and Results using WebHook (Ruby)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Ruby",
+        "text": "driver.execute_script(\"smartui.fetchScreenshotStatus=\")"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Fetching Screenshot Status and Results using WebHook (C#)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "C#",
+        "text": "driver.ExecuteScript(\"smartui.fetchScreenshotStatus\");"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Java",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "((JavascriptExecutor)driver).executeScript(\"smartui.fetchScreenshotStatus\");"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "NodeJS",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "driver.executeScript(\"smartui.fetchScreenshotStatus=\")"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Python",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Python",
+        "text": "driver.execute_script(\"smartui.fetchScreenshotStatus=\")"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Ruby",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Ruby",
+        "text": "driver.execute_script(\"smartui.fetchScreenshotStatus=\")"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "C#",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "C#",
+        "text": "driver.ExecuteScript(\"smartui.fetchScreenshotStatus=\");"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Java",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "((JavascriptExecutor)driver).executeScript(\"smartui.fetchScreenshotStatus=\");"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "The status can be one of the following",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JSON",
+        "text": "{\n  screenshotsData: [\n    {\n      screenshotName: '',\n      screenshotURL: '',\n      screenshotStatus: 'Changes found', // Status of the screenshot\n      misMatchPercentage: 10.04, // Percentage of mismatch in the screenshot\n      threshold: 100,            // Threshold set for the screenshot\n      browserName: 'chrome',     // Browser used for capturing the screenshot\n      resolution: '1920x1080'    // Resolution of the screenshot\n    }\n\n    ../Other Screenshots\n  ],\n  buildId: '',\n  buildName: '',\n  projectName: ''\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Capability Configuration",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "let capabilities = {\n  visual: true,\n  name: \"Homepage Visual Test\",\n  build: \"Release 1.0\",\n  \"smartUI.project\": \"MyProject\",\n  \"smartUI.build\": \"Build-1.0\"\n};"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Verify visual: true is set in capabilities",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "   let capabilities = {\n     visual: true, // Must be set\n     // ... other capabilities\n   };"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Check project name matches exactly (case-sensitive)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "   \"smartUI.project\": \"ExactProjectName\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Verify credentials are set",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "   echo $LT_USERNAME\n   echo $LT_ACCESS_KEY"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Add explicit waits before screenshot",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "   await driver.wait(until.elementLocated(By.id('content')), 10000);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Wait for specific elements to be visible",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "   await driver.wait(until.elementIsVisible(By.css('.main-content')), 10000);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Set build name in capabilities",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "   \"smartUI.build\": \"ConsistentBuildName\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Add sufficient delay before fetching results",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "   await new Promise(resolve => setTimeout(resolve, 10000)); // Wait 10 seconds"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Use ignoreDOM for dynamic content",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "   \"smartUI.options\": {\n     \"ignoreDOM\": {\n       \"id\": [\"timestamp\", \"user-id\"]\n     }\n   }"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
+",
+          "url": "https://www.testmuai.com/support/docs/selenium-visual-regression/#step-1-create-a-smartui-project"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Configure your test with Selenium Desired Capabilities",
+          "text": "Once you have created a SmartUI Project, you can generate screenshots by running automation scripts. Follow the below steps to successfully generate screenshots - Please clone the following sample Github repo (https://github.com/LambdaTest/smartui-node-sample). Set up the TestMu AI credentials by following the instructions mentioned in the README.md file. Edit the required capabilities for your test suite. Installing dependency and for executing the test. --> Here you can explore multiple features and execute more such builds.",
+          "url": "https://www.testmuai.com/support/docs/selenium-visual-regression/#step-2-configure-your-test-with-selenium-desired-capabilities"
+        }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Getting Started With Visual Regression Testing Using Selenium On SmartUI",
+      "description": "Master Selenium Visual Regression testing with TestMu AI. Detect visual deviations early in your web applications to ensure a seamless user experience.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 3: Configure your Screenshot Capturing Options",
+          "text": "This part of the code needs to be attached below the required segment of selenium script of which we would like to take the screenshot to test on. You can capture the full page screenshot for all different websites which have a scrolling functionality on their application user interface for your Selenium functional testing. Add the following Webhook to your test cases where we need to capture the screenshot of your application. The following feature is applicable for Selenium >= 4.0.0 with Chrome versions only. Please ensure that the Lambdatest Capabilities are updated in your project for executing full page screenshot(s). For browsers other than chrome (Mozilla, Safari etc.) and for websites Full Page Screenshot fails, you can use smartscroll to take a full page screenshot of your web page by adding this hook in your test script. You can capture screenshots of targeted elements by leveraging various locator mechanisms such as XPath, CSS ID, class, and selectors. This precision-driven approach ensures accurate and specific visual regression testing for your web application. Add the following Webhook to your test cases where you need to capture the screenshot of a particular element on your UI.",
+          "url": "https://www.testmuai.com/support/docs/selenium-visual-regression/#step-3-configure-your-screenshot-capturing-options"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 4: View SmartUI Results",
+          "text": "You have successfully integrated SmartUI with your Selenium tests. Visit your SmartUI project to view builds and compare snapshots between different test runs. You can see the SmartUI dashboard to view the results. This will help you identify the Mismatches from the existing Baseline build and do the required visual testing.",
+          "url": "https://www.testmuai.com/support/docs/selenium-visual-regression/#step-4-view-smartui-results"
+        }
+      ]
+    }
+  ]) }}
+/>
+
 Using the TestMu AI platform, perform regression testing in just one click and find Visual UI Regression bugs easily with the help of Smart Testing. This documentation will act as your step-by-step guide in performing successful Visual Regression tests.
 
 - Basic understanding of Selenium and WebDriver is required.

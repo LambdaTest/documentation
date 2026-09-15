@@ -2,6 +2,131 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
+\n\n  \n\n  ```javascript title=\"lambdatest-config.json\"\n  // In case of Cypress 10 and above, you can specify your custom config files by using the --cy flag.\n  lambdatest-cypress-cli run --env=stage,video=true --verbose --specs \"./cypress/integration/examples/*\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Using lambdatest-config.json (Cypress v10)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "  <\/TabItem>\n\n  \n\n  ```javascript title=\"lambdatest-config.json\"\n  {\n    \"run_settings\": {\n      \"specs\": \"./cypress/integration/examples/*.spec.js\",\n    }\n  }\n"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Exclude Specs Files (Cypress v10)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "  <\/TabItem>\n\n  \n\n  ```javascript title=\"lambdatest-config.json\"\n  {\n    \"run_settings\": {\n          \"exclude_specs\": \"./examples/assertion.spec.js, ./examples/connectors.spec.js\",\n    }\n  }"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Using lambdatest-config.json (Cypress v10)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "  <\/TabItem>\n\n  \n\n  ```javascript title=\"lambdatest-config.json\"\n  {\n    \"run_settings\": {\n      \"geo_location\": \"\",\n    }\n  }"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Using lambdatest-config.json (Cypress v10)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "  <\/TabItem>\n\n  \n\n  ```javascript title=\"lambdatest-config.json\"\n  {\n    \"run_settings\": {\n      \"resolution\": \"1024x768\",\n    }\n  }"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Set the viewport globally with viewportWidth and viewportHeight in the Cypress config, or per test",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "cy.viewport(550, 750) // Set viewport to 550px x 750px\ncy.viewport('iphone-6') // Set viewport to 375px x 667px"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "For Cypress v9 and below, use the following script in the plugin/index.js file",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "module.exports = (on, config) => {\n  on('before:browser:launch', (browser = {}, launchOptions) => {\n    if (browser.family === 'chromium' && browser.name !== 'electron') {\n      launchOptions.args.push('--start-fullscreen')\n  \n      return launchOptions\n    }\n  \n    if (browser.name === 'electron') {\n      launchOptions.preferences.fullscreen = true\n  \n      return launchOptions\n    }\n  })\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "For Cypress v10 and above, add the below code in the cypress.config.js file",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "const { defineConfig } = require('cypress')\n\nmodule.exports = defineConfig({\n  \n  e2e: {\n    setupNodeEvents(on, config) {\n      on('before:browser:launch', (browser = {}, launchOptions) => {\n        if (browser.family === 'chromium' && browser.name !== 'electron') {\n          launchOptions.args.push('--start-fullscreen')\n      \n          return launchOptions\n        }\n      \n        if (browser.name === 'electron') {\n          launchOptions.preferences.fullscreen = true\n      \n          return launchOptions\n        }\n      })\n    }\n  }\n})"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Using lambdatest-config.json (Cypress v10)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "  <\/TabItem>\n\n  \n\n  ```javascript title=\"lambdatest-config.json\"\n  {\n    \"run_settings\": {\n      \"ignore_files\": \"\",\n    }\n  }"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Using lambdatest-config.json (Cypress v10)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "  <\/TabItem>\n\n  \n\n  ```javascript title=\"lambdatest-config.json\"\n  {\n    \"run_settings\": {\n      \"max_duration\":2\n    }\n  }"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Organizing Tests",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n## Headless Browser\nYou can run Headless tests with Cypress by the `headless` key to `true`.\n\n| Key      | Description               | Type    |\n| -------- | ------------------------- | ------- |\n| headless | Run test in Headless mode | Boolean |\n\n**Example**:\n\n```javascript title=\"lambdatest-config.json\"\n{\n  \"run_settings\": {\n    \"headless\": \"true\",\n  }\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Capture Network Logs",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n## NPM Package Dependencies\nIn order to run your tests on TestMu AI, we refer to your `package.json` and use those dependencies and devDependencies. Since, `package.json` may contain several dependencies which may not be required to run your Cypress tests. We recommend to use `npm_dependencies` parameter to list down the required dependencies to run your test, because it will reduce your build time on TestMu AI.\n\nBelow are the ways through which TestMu AI detects the dependencies which has to be installed before running the test on TestMu AI.\n\n#### Using `npm_dependencies`\nInside `run_settings` of `lambdatest-config.json`, you can provide the list of NPM dependencies:\n\n```javascript title=\"lambdatest-config.json\"\n\"run_settings\": {\n  \"npm_dependencies\": {\n    \"cypress\": \"9.0.0\",\n  },\n},"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Using package.json",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n:::tip note\nIt's recommended to use `npm_dependencies` instead of `package.json` because `package.json` may contain the dependencies which are not actually used while running the Cypress tests and also, installing these unwanted dependencies will increase the build time.\n:::\n\n#### Install npm packages via a tunnel\nUse the `npm_via_tunnel` flag to route npm install traffic through a tunnel. This is useful when installing packages from a private registry, or in a restricted environment where the public npm registry isn't directly reachable. Add it to `run_settings`:\n\n```bash\n\"npm_via_tunnel\": true"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Specific Node Version",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n## Environment Variables\nYou can set environment variables for your Cypress tests in three ways: via the Cypress config file, via `cypress.env.json`, or via the TestMu AI Cypress CLI. If you set variables via both the CLI and `cypress.env.json`, the `cypress.env.json` file is ignored and only the CLI values are used.\n\n#### Via the config file\n**Cypress 9.** A sample `cypress.json`:\n\n```bash\n{\n......\n\t\"env\":{\n\t\t\"CYPRESS_BASE_URL\":\"https://example.cypress.io/\",\n\t\t\"ACTIONS_URL\": \"commands/actions\",\n\t\t\"WINDOW_URL\": \"commands/window\"\n\t},\n......\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Cypress 10. A sample cypress.config.js",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "module.exports = defineConfig({\n  env: {\n    'CYPRESS_BASE_URL':'https://example.cypress.io/',\n    'ACTIONS_URL' : 'commands/actions',\n    'WINDOW_URL': 'commands/window'\n  },"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Use them in your test spec",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "describe('Sample test', () => {\n    it('test case - actions', () => {\n      cy.visit(Cypress.env('CYPRESS_BASE_URL') + Cypress.env('ACTIONS_URL'))\n      cy.wait(3000)\n    })\n    it('test case - window', () => {\n        cy.visit(Cypress.env('CYPRESS_BASE_URL') + Cypress.env('WINDOW_URL'))\n        cy.wait(3000)\n    })\n})"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Via cypress.env.json",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "{\n    \"CYPRESS_BASE_URL\":\"https://example.cypress.io/\",\n    \"ACTIONS_URL\" : \"commands/actions\",\n    \"WINDOW_URL\": \"commands/window\"\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Add variables with the --envs parameter",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "lambdatest-cypress run --envs \"CYPRESS_BASE_URL=https://example.cypress.io/,ACTIONS_URL=commands/actions,WINDOW_URL=commands/window\""
+      }
+    ],
+    "dateModified": "2026-09-09T19:13:32+05:30"
+  }) }}
+/>
 You can specify Cypress CLI flags to run on TestMu AI in two ways:
 
 1. Adding the CLI flag details in `lambdatest-config.json` file

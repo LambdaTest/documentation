@@ -28,6 +28,7 @@ cd Nemo-Lambdatest-sample
 ```
 
 Install the required dependencies:
+
 ```bash
 npm install
 ```
@@ -67,11 +68,13 @@ Generate capabilities for your test requirements with the [Capabilities Generato
 Execute the test using the following command.
 
 **Single test:**
+
 ``` js
 npx nemo -P chrome
 ```
 
 **Parallel tests:**
+
 ``` js
 npx nemo -P chrome,chrome_2,firefox
 ```

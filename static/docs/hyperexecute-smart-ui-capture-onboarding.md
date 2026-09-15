@@ -471,17 +471,20 @@ The [SmartUI Reporter](https://smartui-reporter.netlify.app/) is a web-based too
 #### Step 1: Export Results JSON
 
 **From CLI Capture Command:**
+
 ```bash
 npx smartui capture urlTest.json --config config.json --fetch-results results.json
 ```
 
 **From CLI Exec Command:**
+
 ```bash
 npx smartui --config config.json exec --fetch-results results.json -- <execution-command>
 ```
 
 **From SmartUI API:**
 You can also fetch results using the [Fetch Build Screenshots API endpoint](https://swagger-api-support.lambdatest.com/smartui/index.html#/Fetch%20Build%20Screenshots):
+
 ```
 GET /build/screenshots?project_id=YOUR_PROJECT_ID&build_id=YOUR_BUILD_ID
 ```
@@ -974,6 +977,7 @@ concurrency: 1  # Start with 1, increase gradually
 ### Debugging Tips
 
 1. **Test Locally First**: Run SmartUI capture locally before HyperExecute:
+
 ```bash
 npx smartui capture urlTest.json --config config.json
 ```

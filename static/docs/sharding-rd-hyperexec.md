@@ -2,6 +2,41 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
+\n<\/div>\n<\/TabItem>\n\n\n\n\n\n```yaml title=\"SampleYamlFile.yaml\"\nversion: \"0.2\"\nconcurrency: 2\nrunson: ios\n\n# Set autosplit to true to enable auto sharding.\n# The system will automatically split and distribute tests across the selected devices.\n#highlight-next-line\nautosplit: false\n\nmaxRetries: 2\nretryOnFailure: true\nglobalTimeout: 180 #MAXQUEUETIMEOUT\n\nframework:\n  name: \"ios/xcui\"\n  args:\n    buildName: \"XCUIT\"\n    video: true\n    networkLog: true\n    deviceLog: true\n\n    # You can use either the appId (lt://APP1234567) or provide the path of the application using appPath.\n    # Both examples are given below.\n\n    appPath: ProverbialTest.ipa\n    testSuitePath: LambdaUiKitIOS.ipa\n    # We have used the appPath and testSuitePath here.\n\n    appId: lt://APP1010461471690377432133206\n    testSuiteAppId: lt://APP10104592261690377454846669\n    # We have used the appId and testSuiteAppID here.\n\n    deviceSelectionStrategy: all\n    devices: [\"iPhone 12 Pro-14\", \"iPad Air (2019)-16\"]\n\n    #highlight-next-line\n    isVirtualDevice: true\n\n    shards:\n      mappings:\n        - name: shard1\n          strategy: \"only-testing/skip-testing\"\n          values:\n            - \"/\"\n        # The strategy for this shard is based on \"only-testing/skip-testing\".\n        # This shard will either execute only the specified test(s) or skip the specified test(s),\n        # depending on the strategy value configured.\n\n        - name: shard2\n          strategy: \"only-testing/skip-testing\"\n          values:\n            - \"/\"\n            - \"/\"\n        # The strategy for this shard is based on \"only-testing/skip-testing\".\n        # This shard will either execute only the specified test(s) or skip the specified test(s),\n        # depending on the strategy value configured."
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 2",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "chmod u+x \n./ --u  --k  --verbose -i .yaml"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "You can refer to this example and screenshot below",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "./hyperexecute --u my_user_name --k xyx123abc --verbose -i hyperexecute.yaml"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Filters in Sharding",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "filters:\n      attributes:\n      - type: className\n        values: [\"LambdaUiKitIOSUITests\",\"LambdaUiKitIOSUITestsLaunchTests\"]\n      - type: testName\n        values: [\"LambdaUiKitIOSUITests/testverifyAppLaunch\"]"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "To implement the XCTestPlan in Sharding, add the xctestplan flag along with app and testSuite in the framework flag as shown below",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "framework:\n  name: \"ios/xcui\"\n  args:\n    \"app\" : \"lt://APP_ID\",\n    \"testSuite\": \"lt://TEST_SUITE_ID\",\n    \"xctestplan\" : \"lt://YOUR_XC_TEST_PLAN_ID\" #only when you want to use XCTestPlan"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 Generally the XCUI tests are run in sequence which is a time taking process. This document explains how you can speed up this process by splitting the tests into **shards**. We can divide the various tests into shards which can run parallelly and save time while running various XCUI tests.
 
 This document will cover how to execute **XCUI Tests** on real devices with **HyperExecute**. HyperExecute is a smart test orchestration platform to run end-to-end tests at the fastest speed possible. HyperExecute is configured using a YAML file.
@@ -208,6 +243,7 @@ chmod u+x <cliFileNAme>
 ```
 
 You can refer to this example and screenshot below:
+
 ```
 ./hyperexecute --u my_user_name --k xyx123abc --verbose -i hyperexecute.yaml
 ```

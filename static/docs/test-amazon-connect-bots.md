@@ -2,50 +2,27 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
-Amazon Connect is a contact centre rather than an agent builder. The conversational logic lives in a Lex bot invoked from a contact flow, while the flow controls routing, queueing, and escalation around it. TestMu AI tests both layers together, drives full multi-turn conversations across personas and edge cases, and scores every run.
+Amazon Connect is a contact centre rather than an agent builder. The conversational logic lives in a Lex bot invoked from a contact flow, while the flow controls routing, queueing, and escalation around it. The TestMu AI Agent Testing Platform tests both layers together with multi-turn conversations across personas and edge cases and scores each run, so you can validate the bot and the contact flow the way callers actually hit them.
 
-## Before You Begin
+To connect one, you need an Amazon Connect instance with a published contact flow, the Connect phone number for phone testing, a TestMu AI workspace with agent-testing permissions, and source docs for scenario generation such as the bot definition, contact flow export, or knowledge base.
 
-Before you connect an Amazon Connect bot, make sure you have:
+## Why do you test the Lex bot and contact flow together in Amazon Connect?
 
-- An Amazon Connect instance with a published contact flow
-- The Connect phone number, for phone testing
-- TestMu AI workspace with agent-testing permissions
-- Source docs for scenario generation: bot definition, contact flow export, or knowledge base
+Amazon Connect runs conversational logic in a Lex bot invoked from a contact flow, so a few behaviours drive how you write scenarios:
 
-## Test an Amazon Connect Phone Bot
+- **Bot or contact flow.** A failure can sit in the bot or in the contact flow, so each metric needs to name which layer it reflects.
+- **Contact attributes.** Contact attributes carry state between the flow and the bot, which makes a value set in one place and read in another a real failure mode.
+- **Queue, hold, and handoff.** Queue behaviour, hold, and representative handoff are part of the caller experience and belong in scenarios.
+- **Bot covered separately.** The bot itself is covered on the Amazon Lex page.
 
-Phone testing covers callers reaching your bot inbound or outbound on the Connect number. Upload the contact flow and bot definition to generate scenarios, then add the Connect number and pick from 100+ voices, background noise conditions, and personas. It covers what telephony introduces around the bot's conversational accuracy: DTMF entry, queue routing, hold behaviour, transfer to a representative, and carrier latency.
+## Can you test Amazon Connect by phone and by chat?
 
-Full setup: [Phone agent testing](/support/docs/phone-agent/)
+Amazon Connect tests the Lex bot and the contact flow together across surfaces. Generate scenarios from the contact flow, bot definition, and supporting docs, then follow the linked setup for the surface you test:
 
-## Test an Amazon Connect Chat Bot
+- **Phone** covers callers reaching your bot inbound or outbound on the Connect number. It covers what telephony introduces around the bot's conversational accuracy: DTMF entry, queue routing, hold behaviour, transfer to a representative, and carrier latency. Setup: [phone agent testing](/support/docs/phone-agent/).
+- **Chat** covers text conversations through the Connect chat widget or a custom client, using the chat contact API with messages received over the participant WebSocket. It catches reasoning, slot filling, and routing failures. Setup: [chat agent testing](/support/docs/chat-agent/).
 
-Chat testing covers text conversations through the Connect chat widget or a custom client. Upload the contact flow and supporting docs to generate scenarios, then create the endpoint profile using the chat contact API, with messages received over the participant WebSocket. It catches reasoning, slot filling, and routing failures.
-
-Full setup: [Chat agent testing](/support/docs/chat-agent/)
-
-## What You Get With Agent Testing
-
-Every Amazon Connect run, on any surface it supports, is scored across:
-
-- 30+ metrics across 8 categories, with configurable thresholds
-- Context-aware scenario generation
-- Adversarial testing and automated issue detection
-- 100+ voices and personas
-- Multilingual conversations
-- Quality scoring and real-time call monitoring
-
-## Amazon Connect-Specific Considerations
-
-A few Amazon Connect behaviours are worth building dedicated scenarios around:
-
-- A failure can sit in the bot or in the contact flow, so each metric needs to name which layer it reflects
-- Contact attributes carry state between the flow and the bot, which makes a value set in one place and read in another a real failure mode
-- Queue behaviour, hold, and representative handoff are part of the caller experience and belong in scenarios
-- The bot itself is covered on the Amazon Lex page
-
-## Troubleshooting
+## Where do Amazon Connect tests drop?
 
 Common failure modes to watch for:
 

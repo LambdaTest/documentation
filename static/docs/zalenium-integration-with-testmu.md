@@ -15,11 +15,13 @@ TestMu AI integration with Zalenium will help you perform automated cross browse
 
    Be aware of your TestMu AI authentication credentials i.e., your TestMu AI username, access key, and HubURL. You need to set them up as your environment variables. You can retrieve them from your **[TestMu AI automation dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/timeline/?viewType=build&page=1)** by clicking on the key icon near the help button.
 * For Linux/Mac:
+
 ```
 $ export LT_USERNAME= {YOUR_LAMBDATEST_USERNAME}
 $ export LT_ACCESS_KEY= {YOUR_LAMBDATEST_ACCESS_KEY}
 ```
 * For Windows:
+
 ```
 $ set LT_USERNAME= {YOUR_LAMBDATEST_USERNAME}
 $ set LT_ACCESS_KEY= {YOUR_LAMBDATEST_ACCESS_KEY}

@@ -67,6 +67,7 @@ For the rest of the details, quickly head over to [Capabilities Generator](https
 Add in all the [Desired Capabilities](https://www.testmuai.com/capabilities-generator/) as shown below, then click Apply and Close.
 
 **Mandatory Capabilities:**
+
 ```java
 "platformName", "android";
 "deviceName", "Pixel 6";

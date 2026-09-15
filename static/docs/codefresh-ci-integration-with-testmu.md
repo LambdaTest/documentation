@@ -32,6 +32,7 @@ TestMu AI now integrates with Codeship to boost your go-to-market delivery. Perf
   - Then to execute the pipeline, click the ```RUN``` button.
 
 You may take reference from this YAML to run your own test project/scripts
+
 ```
 version: "1.0"
 stages:

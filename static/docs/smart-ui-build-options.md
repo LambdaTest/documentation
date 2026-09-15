@@ -2,6 +2,41 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
+\n\n\n```json title=\"Please make the changes in lambdatest-config.json\"\n\"smart_ui\": {\n    // highlight-next-line\n      \"build\":  // Please add your build name of choice here\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Playwright",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "<\/TabItem>\n\n\n```js title=\"Please add the following in  in your capabilities configuration \"\n\nconst capabilities = {\n'LT:Options': {\n    // highlight-next-line\n      \"smartUIBuildName\":  // Please add your build name of choice here\n    \n}}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "K6",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "<\/TabItem>\n<\/Tabs>\n\n---\n\n## Enabling build as a baseline\n\nIf you want to mark your build as a baseline from your test suite while executing tests then you have to enable the below mentioned capability configuration needs to be enabled.\n\n\n\n\n```js title=\"Please add the following to your capabilities configuration\"\nlet capabilities = {\n  // highlight-next-line\n  \"smartUI.baseline\": true / false, // Enable if you want to update to a new baseline build\n};"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Enabling build as a baseline (Cypress)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n<\/TabItem>\n\n\n```js title=\"Please add the following in  in your capabilities configuration \"\n\nconst capabilities = {\n'LT:Options': {\n    // highlight-next-line\n      \"smartUIBaseline\": true // Please add if you want to make this build as baseline\n    \n}}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Puppeteer",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "<\/TabItem>\n\n\n```js title=\"Please add the following in  in your capabilities configuration \"\n\nconst capabilities = {\n'LT:Options': {\n    // highlight-next-line\n      \"smartUIBaseline\": true // Please add if you want to make this build as baseline\n    \n}}"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 Using the TestMu AI platform, perform regression testing in just one click and explore various possible solutions for grouping your screenshots into different builds and map as per your testing suite needs.
 
 ## Enabling build mapping for multiple screenshots

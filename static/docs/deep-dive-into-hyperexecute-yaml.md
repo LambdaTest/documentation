@@ -2,44 +2,192 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
-This document contains detailed explanations for all YAML flags, providing an in-depth understanding of each configuration parameter.
-
-## Mandatory Parameters
-
-### `version`
-The version of HyperExecute YAML being used to run the tests. Currently there are two supported versions are [0.1](/support/docs/deep-dive-into-hyperexecute-yaml/#hyperexecute-yaml-parameters) and [0.2](/support/docs/hyperexecute-yaml-version0.2/).
-```yaml
-version: 0.1
-```
-
-### `runson`
-In this flag, you will define your required Operating System on which you want to run your tests.
-> Currently we support linux, mac (macOS Monterey), mac13 (macOS Ventura), win (Windows 10) and win11 (Windows 11).
-
-```yaml
-runson: linux # mac, mac13, win, win11
-```
-
-If you want to run a multi OS job, you can use [matrix method](/support/docs/hyperexecute-matrix-multiplexing-strategy/) as shown below
-
-```yaml
-runson: ${matrix.os}
-matrix:
-os: [linux, mac, mac13, win, win11]
-```
-
-### `pre`
-All actions you need to perform before each test execution, such as installing dependencies. You’ll ideally want to use this parameter to "pre" run simple commands like `npm install`, `yarn install`, `mvn install` etc
-
-```yaml
-pre:
-- npm install
-- mvn install
-```
-
->📘 Refer to [globalPre](/support/docs/deep-dive-into-hyperexecute-yaml/#globalpre) command to perform a common global setup for all your tasks, such as installing dependencies or configuring environments.
-
-## AutoSplit Mode Parameters
+macParallelism, winParallelism, and linuxParallelism",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "parallelism: 2\nlinuxParallelism: 2\nwinParallelism: 1\nmacParallelism: 3\n\nmatrix:\n os: [win, mac]\n version: [1, 2, 3]\n browser: [chrome]"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "testRunnerCommand",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "testRunnerCommand: mvn test -Dcucumber.options=\"$test\" -Dscenario=\"$test\" -DOs=\"win 10\"\n\n# This command runs the test using Maven and passes in the options for Cucumber, the scenario to run, and the operating system to use."
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Platform specific testRunnerCommand",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "testRunnerCommand: mvn test -Dcucumber.options=\"$test\" -Dscenario=\"$test\" -DOs=\"win 10\"\nlinuxTestRunnerCommand: mvn test `-Dcucumber.options=\"$test\"`  `-Dscenario=\"$test\"`   `-DOs=\"linux\"`\nwinTestRunnerCommand: mvn test `-Dcucumber.options=\"$test\"` `-Dscenario=\"$test\"`  `-DOs=\"win 10\"`\nmacTestRunnerCommand: mvn test -Dcucumber.options=\"$test\" -Dscenario=\"$test\" -DOs=\"mac\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "cacheKey",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "cacheKey: '{{ checksum \"pom.xml\" }}'"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "cacheKey",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "cacheKey: {{ checksum \"dir1/dir2/package-lock.json\" }}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "cacheDirectories",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "cacheDirectories:\n  - .m2"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "cacheDirectories",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "cacheKey: '{{ checksum \"pom.xml\" }}'\ncacheDirectories:\n  - .m2"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "env",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "env:\n  USERNAME: abc\n  PLATFORM: windows"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Special Character Encoding",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "env:\n  LANG: es_ES.UTF-8\n  LC_ALL: es_ES.UTF-8\n\npre:\n  - sudo locale-gen es_ES.UTF-8\n  - sudo update-locale LANG=es_ES.UTF-8"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "If you are using Java-based frameworks, you can also set the encoding via JAVA_TOOL_OPTIONS",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "env:\n  JAVA_TOOL_OPTIONS: \"-Dfile.encoding=UTF-8\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "The runtime flag is used to",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "runtime:\n  - language: java\n    version: \"11\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "runtime",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "runtime:\n  - language: java\n    version: 11\n    addons:\n      - name: \"gauge\"\n        version: \"1.4.0\"\n      - name: \"gradle\"\n        version : \"7.0\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 29",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "runtime:\n  - language: java\n    version: '17'\n    addons:\n      - name: gauge\n        version: '1.5.6'\n      - name: gradle\n        version: '7.6'\n  - language: python\n    version: '3.10'\n  - language: node\n    version: '16'"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "retryOnFailure",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "retryOnFailure: true"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "\u2705 Use Case:",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "false<\/testFailureIgnore>"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "maxRetries",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "retryOnFailure: true\nmaxRetries: 2"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "post",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "post:\n  - echo /output/output.log\n  - curl https://www.example.com"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "report",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "report: true\npartialReports:\n location: target/surefire-reports/html\n type: html\n frameworkName: extent"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "If you want to generate multiple reports of different types supported by HyperExecute",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "partialReports:\n  - location: reports/json\n    type: json\n    frameworkName: extent-native\n\n  - location: target/surefire-reports\n    type: html\n    frameworkName: testng"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "report",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "framework:\n  name: maven/testng\n  defaultReports: false"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "location: target/abc//pqr//cucumber-reports",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\nEnsure that your Testrunner.java file should have the complete path from where partial reports will be added. Example:\n\n```java title=\"Testrunner.java\"\nplugin = {\n    \"json:target/abc/mno/pqr/xyz/cucumber-reports/CucumberTestReport.json\",\n    \"json:target/abc/its/pqr/abc/cucumber-reports/CucumberTestReport.json\"\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "errorCategorizedOnFailureOnly",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "errorCategorizedOnFailureOnly: true"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "errorCategorizedReport",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "errorCategorizedReport:\n  enabled: true"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "You can also use it along with your existing job labels like this",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "jobLabel: ['chrome', 'linux', 'low']"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "mergeArtifacts",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "mergeArtifacts: true"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "uploadArtefacts",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "uploadArtefacts:\n\n# Will upload your reports from target/site/** to HyperExecute as FinalReport\n  - name: FinalReport \n    path:\n    - target/site/**\n  \n  # Will upload your Surefire reports from target/surefire-reports/**to HyperExecute as Surefire Report\n  - name: Surefire Report\n     path:\n     - target/surefire-reports/**"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "commands",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "
 
 ### `autosplit`
 Auto-Split mode automatically splits your [`scenarios`](/support/docs/hyperexecute-status/#3-stage-level-status) among the concurrent number of [`tasks`](/support/docs/hyperexecute-status/#2-task-level-status) and executes them parallelly. This ensures optimal utilization of resources and significantly reduces the overall execution time of your test suite.
@@ -68,6 +216,7 @@ concurrency: 10
 
 ### `testDiscovery`
 This is used to locate or discover relevant tests via class names, filters, file names, etc.
+
 ```yaml
 testDiscovery:
 type: raw
@@ -77,6 +226,7 @@ command: grep 'public class' src/test/java/hyperexecute/*.java | awk '{print$3}'
 
 It contains the following attributes:
 #### `type`
+
 ```yaml
 #(Recommended). When we are passing a command to discover tests.
 type: raw   #or
@@ -141,6 +291,7 @@ This setup helps to ease the discovery process and makes it more efficient, espe
 
 #### `command`
 The command that fetches the list of test scenario that would be further executed using the value passed in `testRunnerCommand`
+
 ```yaml
 command: grep 'public class' src/test/java/hyperexecute/*.java | awk '{print$3}'
 ```
@@ -345,6 +496,7 @@ pre:
 ```
 
 If you are using Java-based frameworks, you can also set the encoding via `JAVA_TOOL_OPTIONS`:
+
 ```yaml
 env:
 JAVA_TOOL_OPTIONS: "-Dfile.encoding=UTF-8"
@@ -466,6 +618,7 @@ frameworkName: testng
 ```
 
 Set `defaultReport` as false in the [`framework`](/support/docs/hyperexecute-yaml-version0.2/#framework) if you are using [`YAML version 0.2`](/support/docs/hyperexecute-yaml-version0.2/) and you want to generate a report using `partialReports` as shown below.
+
 ```yaml
 framework:
 name: maven/testng
@@ -476,6 +629,7 @@ defaultReports: false
 You can now use **glob-style wildcards `(**)`** in the location field of `partialReports` to dynamically match nested folders and custom report paths. This is especially useful when your test reports are generated inside directories that include date stamps, environment names, or other runtime variables.
 
 Example:
+
 ```yaml title="hyperexecute.yaml"
 partialReports:
 location: reports/**/cucumber/
@@ -535,6 +689,7 @@ jobLabel: ['chrome', 'linux', 'low']
 
 ### `mergeArtifacts`
 It is used to combine the artifacts created under each task to one.
+
 ```yaml
 mergeArtifacts: true
 ```
@@ -642,6 +797,7 @@ runson: linux
 ### `captureScreenRecordingForScenarios`
 If this key is set to true, it will record whole scenario execution, and then video is accessible from your HyperExecute dashboard.
 This can be majorly used for non selenium based tests to have the recorded video of the whole scenario.
+
 ```yaml
 captureScreenRecordingForScenarios: true
 ```
@@ -723,6 +879,7 @@ Set status of scenario based on framework tests status. For instance, if you run
 
 ### `testSuiteTimeout`
 It is used to set the timeout on all scenario  stages in a task. If defined, your complete test suite should get executed within this time. Its max value is 150 minutes.  If you want to increase this time beyond the default maximum limit of 150 minutes, you need to contact the support team.
+
 ```yaml
 testSuiteTimeout: 30
 ```
@@ -874,12 +1031,14 @@ linkValidity: 5
 
 ### `stripParentDirectory`
 When mergeArtifacts is true, providing this flag will strip the parent directory from all the downloaded artifacts and place the artifacts in the base path.
+
 ```yaml
 stripParentDirectory: true
 ```
 
 ### `generateArtifactAfterEveryStage`
 With this flag artifacts will be generated after every stage,without this flag artifacts are generated after every task and avoid any overrides for artifacts of the same name.
+
 ``` bash
 generateArtifactAfterEveryStage: true
 ```
@@ -981,6 +1140,7 @@ ProjectName: "Cypress_Project"
 
 ### `shell`
 Shell defines the shell/terminal type on which all of the commands defined under pre, post, testRunnerCommand mentioned in yaml should run. If shell is also defined under PreDirectives then for PreDirectives command that shell would be used.
+
 ```yaml
 shell: bash
 ```
@@ -1024,11 +1184,13 @@ STATIC_DATA_1_<ParameterName>
 > **NOTE:-** In the above syntax, **1** represents the file passed in the yaml file and not the data object within the file.
 
 For instance, to access data from **file1.json**, the syntax would be:
+
 ```
 STATIC_DATA_1_Username
 ```
 
 Similarly, to access the data from the second file i.e **file2.json**:
+
 ```
 STATIC_DATA_2_Username
 ```
@@ -1049,19 +1211,23 @@ values: [<value1>, <value2>, ...]
 
 #### Configuration
 - **path (required) :** Specifies the path to the JSON file containing the data. Example:
+
 ```yaml
 path: data/file/abc.json
 ```
 - **index (optional) :** Specifies the JSON key on which the indexing is required. Example:
+
 ```yaml
 index: username
 ```
 - **filters (optional) :** Applies filtering on the JSON objects before indexing. Either `query` or `attributes` can be used, if both are mentioned then the `attributes` will have higher precedence.
   - **query:** These are used for more complex filtering operations. If both attributes and queries are provided, attributes take precedence. This means that if there’s a conflict, the filter based on attributes will be used. Example:
+
 ```yaml
 query: (username == "abc" or username == "bcd")
 ```
   - **attributes:** These are key-value pairs used for filtering. You can provide a list of attributes with their corresponding values, and the filtering will include only those JSON objects where each specified attribute matches one of the provided values. Attributes are applied with an "AND" logic between different keys and an "OR" logic within the same key. Example:
+
 ```yaml
 attributes:
 - key: username
@@ -1073,6 +1239,7 @@ values: ["@x", "@y"]
 #### Working of `dataJsonBuilder`
 
 - The **input JSON data** should follow this format:
+
 ```javascript title="sample.json"
 [
 {
@@ -1112,6 +1279,7 @@ values: ["@x", "@y"]
 ```
 
 - The **filtered JSON data** will be:
+
 ```javascript title="sample.json"
 [
 {
@@ -1141,6 +1309,7 @@ After filtering, the JSON data is indexed to distribute test cases. Here’s how
 So as per the above filtered JSON data:
 
 - **VM1** will receive all test cases related to `username: "abc"`
+
 ```javascript
 {
 "accesskey": "jhscuystc7ewgucu79as8yc9",
@@ -1150,6 +1319,7 @@ So as per the above filtered JSON data:
 ```
 
 - **VM2** will receive all test cases related to `username: "bcd"`.
+
 ```javascript
 {
 "accesskey": "cjdy87328yeiqhd93urd28hh",
@@ -1159,6 +1329,7 @@ So as per the above filtered JSON data:
 ```
 
 - **VM3** will handle the JSON object:
+
 ```javascript
 {
 "accesskey": "jhscuystc7ewgucu79as8yc9",
@@ -1171,6 +1342,7 @@ Test cases related to `username: "abc"` will be split between **VM1** and **VM3*
 
 #### Use Cases
 - **Filtering and Indexing :** When both filtering and indexing are required, filters are applied first, followed by indexing of the filtered results.
+
 ```yaml
 dataJsonBuilder:
 path: data/file/abc.json
@@ -1184,6 +1356,7 @@ values: ["abc", "bcd"]
 ```
 
 - **Only Filtering :** If only filtering is required without indexing, omit the index key. In this case, no indexing will occur, and each JSON object will be distributed in a round-robin manner among parallel executions.
+
 ```yaml
 dataJsonBuilder:
 path: data/file/abc.json
@@ -1192,6 +1365,7 @@ query: (username == "abc" or username == "bcd")
 ```
 
 - **Only Indexing :** If only indexing is required without filtering, omit the filters section.
+
 ```yaml
 dataJsonBuilder:
 path: data/file/abc.json
@@ -1205,6 +1379,7 @@ If strict is set to true in yaml then the variables used in yaml must be present
 
 ### `cacheTestURL`
 It enables you to cache static test files in the browser.
+
 ```yaml
 cacheTestURL: true
 ```
@@ -1220,6 +1395,7 @@ if your test loads jquery static library multiple times and for some reason it i
 > This flag is deprecated, instead use [`globalPost`](/support/docs/deep-dive-into-hyperexecute-yaml/#globalpost)
 
 It is used to run commands after the job has finished. Currently only local directive is allowed, means that all the commands would be run on the same host on which HyperExecute CLI was run. Running commands in `afterAll` on HyperExecute VMs(remote commands) is not yet supported. Users will have access to all the artifacts when these commands would be run.
+
 ```yaml
 afterAll:
 local:
@@ -1235,6 +1411,7 @@ For instance you want to further process the artifacts and create a custom PDF. 
 > This flag is deprecated, instead use [`globalPre`](/support/docs/deep-dive-into-hyperexecute-yaml/#globalpre)
 
 BeforeAll is used for running pre operations like discovery and payload_update. It can be executed either on local system or on hyperexecute beforeAll VM.
+
 ```yaml
 beforeAll:
 location: local/remote
@@ -1275,6 +1452,7 @@ buildName : "name=${name}"
 If you prefer to set `buildPrefix` and `buildName` values through the command-line interface (CLI), the following commands can be used:
 
 To set `buildPrefix`:
+
 ```yaml
 --labels buildPrefix --vars "name=xyz"
 ```
@@ -1315,6 +1493,7 @@ These commands utilize `--labels` to specify the parameter being configured and 
 
 ### `captureCSVResult`
 By enabling the boolean yaml directive `​​captureCSVResult`,  you can get the statistics of the time taken by Selenium Commands run across the job. It will gather the time taken by the Selenium commands, calculate the aggregated info for the statistics like Average, 95, 99 percentiles etc and publish it in the form of a separate artifact.
+
 ```yaml
 captureCSVResult: true
 ```
@@ -1335,6 +1514,7 @@ Here is a brief information about these headers:
 7. **P99**: 99th percentile of the time taken by the Selenium command across the whole job
 
 Here is the sample code showing how we can use the above mentioned Lambda hooks:
+
 ```yaml
 ((JavascriptExecutor) driver).executeScript("lambda-start-timer=t1");
 
@@ -1424,6 +1604,7 @@ Commands:
 
 ### `tunnel`
 Indicates whether to enable a tunnel for accessing your applications which are  locally hosted or behind a firewall. The cli will launch a tunnel as sub process if tunnel is set to true
+
 ```yaml
 tunnel: true
 ```

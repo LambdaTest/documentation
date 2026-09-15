@@ -2,6 +2,48 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
+/dev/null | tail -1 | jq ."
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "For example, instead of \"navigate through the sign-up flow\", be explicit",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\"click Sign Up, fill email with '{{email}}', fill password with '{{password}}', click Create Account\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "kane-cli: command not found after install",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "npm config get prefix\n\n# Add to PATH (adjust path based on above output)\nexport PATH=\"$(npm config get prefix)/bin:$PATH\"\n\n# Make permanent: add to ~/.zshrc or ~/.bashrc\necho 'export PATH=\"$(npm config get prefix)/bin:$PATH\"' >> ~/.zshrc"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Fix: Check your version and upgrade",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "node --version   # Must be 18 or higher"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Install fails with \"sharp: Please add node-addon-api\"",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "# Diagnose: a printed version means libvips is the cause\npkg-config --modversion vips-cpp\n\n# Bypass libvips detection. Uninstall first, since npm considers\n# kane-cli already installed and will not re-resolve sharp otherwise.\nnpm uninstall -g @testmuai/kane-cli\nSHARP_IGNORE_GLOBAL_LIBVIPS=1 npm install -g @testmuai/kane-cli\n\n# Make it permanent\necho 'export SHARP_IGNORE_GLOBAL_LIBVIPS=1' >> ~/.zshrc && source ~/.zshrc"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Start every mobile problem with doctor, which prints one line per required check, each with a fix",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "kane-cli doctor              # required checks, each with a fix if it fails\nkane-cli doctor --install    # install the test tooling Kane CLI manages\nkane-cli doctor --targets    # list the emulators and simulators available"
+      }
+    ],
+    "dateModified": "2026-09-07T15:18:23+05:30"
+  }) }}
+/>
+
 ## Log Locations
 
 Before diagnosing, know where to look:
@@ -28,12 +70,14 @@ Kane CLI manages a Chrome process and connects to it over the Chrome DevTools Pr
 **Fix:**
 1. Install Google Chrome if not present
 2. Check for processes on CDP ports:
+
 ```bash
 lsof -i :9222-9230
 ```
 3. Quit any extra Chrome processes hoarding the 9222–9230 port range
 4. Pick a different Chrome user-data directory, or quit the Chrome instance using it. See [Chrome Management](/support/docs/kane-cli-configuration/#chrome-management)
 5. If you only need to connect to an already-running Chrome:
+
 ```bash
 kane-cli run "..." --cdp-endpoint http://localhost:9222
 ```
@@ -54,6 +98,7 @@ kane-cli run "..." --cdp-endpoint http://localhost:9222
 **Cause:** Another Kane CLI instance is already running and holds the Chrome profile lock.
 
 **Fix:** Check for running kane-cli processes:
+
 ```bash
 ps aux | grep kane-cli
 ```
@@ -67,10 +112,12 @@ Kill any existing processes, then retry.
 
 **Fix for interactive use:**
 1. Re-run the login flow:
+
 ```bash
 kane-cli login
 ```
 2. Confirm which profile, environment, and token state are active:
+
 ```bash
 kane-cli whoami
 ```
@@ -185,6 +232,7 @@ If your environment also breaks `kane-cli login`, apply the Node-side fix in the
 **Cause:** The agent is stuck in a loop: the page didn't change after the action.
 
 **Fix:** Rephrase the objective to be more explicit. Add an assertion after the action to confirm state changed:
+
 ```
 "click the Save button, assert the page shows 'Saved successfully'"
 ```
@@ -197,6 +245,7 @@ If your environment also breaks `kane-cli login`, apply the Node-side fix in the
 1. **JSON syntax.** Variable files are JSON. A missing comma or unquoted key will cause the file to be skipped silently.
 2. **File location.** Confirm your file is in the right place, see [loading order](/support/docs/kane-cli-variables-and-context/#loading-order).
 3. **Inline test.** Bypass file loading by passing the variable on the command line:
+
 ```bash
 kane-cli run "log in as {{user}}" \
 --variables '{"user":{"value":"alice"}}'
@@ -237,6 +286,7 @@ In dev mode, setup and resolver failures print an explanatory line before the pr
 1. **Authentication.** Re-check `kane-cli whoami` and re-login if needed. Test Manager upload requires a valid token (or basic auth) for the configured environment.
 2. **Network connectivity.** The upload talks to the TestMu AI control plane and a cloud storage endpoint. Verify outbound HTTPS is not blocked by a proxy or firewall.
 3. **Project is set.** The pipeline will not commit a test case without a project. Confirm one is configured:
+
 ```bash
 kane-cli config show
 ```
@@ -249,6 +299,7 @@ kane-cli config show
 **Cause:** Missing `--agent` flag.
 
 **Fix:** Add `--agent` to your command:
+
 ```bash
 kane-cli run "..." --agent --headless
 ```
@@ -258,6 +309,7 @@ kane-cli run "..." --agent --headless
 **Cause:** Stderr is mixing with stdout, or you're trying to parse mid-stream events.
 
 **Fix:** Redirect stderr and use `tail -1` to get only the `run_end` event:
+
 ```bash
 kane-cli run "..." --agent 2>/dev/null | tail -1 | jq .
 ```
@@ -267,6 +319,7 @@ kane-cli run "..." --agent 2>/dev/null | tail -1 | jq .
 **Cause:** The objective requires human input in an agent context.
 
 **Fix:** Rewrite the objective to avoid prompts. For example, instead of "navigate through the sign-up flow", be explicit:
+
 ```
 "click Sign Up, fill email with '{{email}}', fill password with '{{password}}', click Create Account"
 ```
@@ -278,6 +331,7 @@ kane-cli run "..." --agent 2>/dev/null | tail -1 | jq .
 **Cause:** npm global bin directory is not in your PATH.
 
 **Fix:**
+
 ```bash
 npm config get prefix
 
@@ -293,6 +347,7 @@ echo 'export PATH="$(npm config get prefix)/bin:$PATH"' >> ~/.zshrc
 **Cause:** Node.js version is below 18.
 
 **Fix:** Check your version and upgrade:
+
 ```bash
 node --version   # Must be 18 or higher
 ```
@@ -306,6 +361,7 @@ Kane CLI 0.3.4+ treats `sharp` as an optional dependency, so the install still s
 **Cause:** `sharp` powers optional PNG to WebP screenshot compression. When it cannot load its prebuilt binary it tries to build from source, which fails. The most common trigger on macOS is a system-wide libvips (often pulled in by `brew install appium`, `imagemagick`, or `gdal`).
 
 **Fix (most common, macOS):**
+
 ```bash
 # Diagnose: a printed version means libvips is the cause
 pkg-config --modversion vips-cpp

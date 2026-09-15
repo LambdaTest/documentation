@@ -2,6 +2,41 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
+go to https://myapp.com and log in as admin\n  \u2713 PASSED (5 steps, 8.2s)\n\n> navigate to User Management and create a new user \"testuser@example.com\"\n  \u2713 PASSED (7 steps, 12.1s)\n\n> verify the new user appears in the users table\n  \u2713 PASSED (3 steps, 4.5s)"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Non-Interactive CLI Mode",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "kane-cli run \"Search for 'automation testing' on Google\" \\\n  --url https://google.com \\\n  --headless"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Mobile runs",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "# desktop (default): nothing changes for web runs\nkane-cli run \"Search for 'noise-cancelling headphones' on amazon.com\"\n\n# emulator (Android): install an .apk build and run against it\nkane-cli run \"Add the first item to the cart\" --target emulator --app ./builds/app-debug.apk\n\n# simulator (iOS): install a .zip build and run against it\nkane-cli run \"Sign in and open the account tab\" --target simulator --app ./builds/MyApp.zip"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "This separation lets you capture each independently",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "kane-cli run \"...\" > result.json 2> progress.log"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Add --agent to get structured NDJSON output designed for AI coding agents",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "kane-cli run \"Verify login page loads\" --url https://myapp.com --agent --headless"
+      }
+    ],
+    "dateModified": "2026-09-03T14:41:00+05:30"
+  }) }}
+/>
+
 Kane CLI has three modes. Choose based on who (or what) is running the test.
 
 | Mode | Command | Output | Best For |

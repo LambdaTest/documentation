@@ -2,6 +2,97 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
+\n\n## Best Practices\n\n\n\n\n**Secret Management**\n\n- Never commit credentials to repository\n- Use Bitbucket Pipelines Variables for all sensitive data\n- Rotate secrets regularly\n- Use different secrets for different environments\n\n<\/TabItem>\n\n\n**Pipeline Optimization**\n\n- Use parallel steps for faster execution\n- Cache dependencies to speed up pipelines\n- Only run visual tests on relevant branches\n- Set up pipeline conditions to avoid unnecessary runs\n\n**Example:**\n```yaml\nbranches:\n  main:\n    - step:\n        name: Run Visual Tests"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 2",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "variables:\n  BUILD_NAME: \"$BITBUCKET_BRANCH-$BITBUCKET_COMMIT\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Pass variable to step",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "   variables:\n     PROJECT_TOKEN: $PROJECT_TOKEN"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Check pipeline logs for errors",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "   after-script:\n     - echo \"Checking logs...\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Run tests in parallel using parallel steps",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "   parallel:\n     - step:\n         name: Test Group 1\n     - step:\n         name: Test Group 2"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Use specific Node version",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "   image: node:18"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Clear npm cache",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "   script:\n     - npm cache clean --force\n     - npm install"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Ensure Node.js is available",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "   image: node:18"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Verify npm is available",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "   script:\n     - npm --version"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Install SmartUI CLI explicitly",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "   script:\n     - npm install -g @lambdatest/smartui-cli"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
+> Project. Enter your Project details and click on Create Project. Now click on the Create Repository button. You can either create a new repository or import your existing repository.",
+          "url": "https://www.testmuai.com/support/docs/smartui-with-bitbucket/#step-1-setup-your-projects-and-repository-in-bitbucket"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Create a New Workflow",
+          "text": "Navigate to the Deployment section. Select your required template for CI/CD workflow file. For the demo we are using the Test template. Now, write your workflow YAML file. Here is the sample file for your reference. Commit this yaml file in your repository and make the required changes in your code to automatically trigger the pipeline. You can also store your LTUSERNAME, LTACCESSKEY and PROJECTTOKEN as secrets in your Bitbucket project repository.",
+          "url": "https://www.testmuai.com/support/docs/smartui-with-bitbucket/#step-2-create-a-new-workflow"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Check the output",
+          "text": "After triggering the workflow, check your results in the SmartUI Dashboard",
+          "url": "https://www.testmuai.com/support/docs/smartui-with-bitbucket/#step-3-check-the-output"
+        }
+      ]
+    }
+  ]) }}
+/>
 Bitbucket is a web-based version control repository hosting service owned by Atlassian. It is primarily designed for development teams to manage their code, collaborate on projects, and streamline their workflows.
 
 This document will show you how to integrate Bitbucket Pipeline with SmartUI to shorten your test cycles.

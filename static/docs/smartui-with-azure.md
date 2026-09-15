@@ -2,6 +2,104 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
+\n\n## Best Practices\n\n\n\n\n**Secret Management**\n\n- Never commit credentials to repository\n- Use Azure Pipeline Variables for all sensitive data\n- Mark variables as secret to hide values in logs\n- Rotate secrets regularly\n- Use different secrets for different environments\n\n<\/TabItem>\n\n\n**Pipeline Optimization**\n\n- Use parallel jobs for faster execution\n- Cache dependencies to speed up pipelines\n- Only run visual tests on relevant branches\n- Set up pipeline conditions to avoid unnecessary runs\n\n**Example:**\n```yaml\ntrigger:\n  branches:\n    include:\n      - main\n      - develop"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 2",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "variables:\n  BUILD_NAME: \"$(Build.SourceBranchName)-$(Build.SourceVersion)\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Pass variable to job",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "   variables:\n     PROJECT_TOKEN: $(PROJECT_TOKEN)"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Check pipeline logs for errors",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "   - task: PowerShell@2\n     displayName: 'Check Logs'\n     condition: failed()\n     inputs:\n       script: |\n         Get-Content $(Agent.TempDirectory)/*.log"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Increase pipeline timeout",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "   timeoutInMinutes: 60"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Run tests in parallel using matrix",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "   strategy:\n     matrix:\n       TestGroup1:\n         TEST_GROUP: 1\n       TestGroup2:\n         TEST_GROUP: 2"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Use specific Node version",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "   - task: UseNode@2\n     inputs:\n       version: '18.x'"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Clear npm cache",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "   - script: |\n       npm cache clean --force\n       npm install"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Ensure Node.js setup task is included",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "   - task: UseNode@2\n     inputs:\n       version: '18.x'"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Verify npm is available",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "   - script: npm --version"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Install SmartUI CLI explicitly",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "   - script: |\n       npm install -g @lambdatest/smartui-cli"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
+ Variables. Add the following variables: LT_USERNAME: Your TestMu AI username. LTACCESSKEY: Your TestMu AI access key.",
+          "url": "https://www.testmuai.com/support/docs/smartui-with-azure/#step-3-add-environment-variables"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Step 4: Setup your Workflow",
+          "text": "Step 4: Setup your Workflow",
+          "url": "https://www.testmuai.com/support/docs/smartui-with-azure/#step-4-setup-your-workflow"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 5,
+          "name": "Step 5: Check the output",
+          "text": "After triggering the workflow, check your results in the SmartUI Dashboard",
+          "url": "https://www.testmuai.com/support/docs/smartui-with-azure/#step-5-check-the-output"
+        }
+      ]
+    }
+  ]) }}
+/>
 Azure Pipelines is a cloud-based CI/CD service offered by Microsoft, part of the Azure DevOps suite. It helps automate the process of building, testing, and deploying applications to various platforms.
 
 This guide explains how to integrate your project with the Azure CI/CD pipeline to trigger visual regression testing with TestMu AI SmartUI whenever changes are made to your repository.
@@ -29,6 +127,7 @@ Go to Pipeline Settings > Variables. Add the following variables:
 - `LT_ACCESS_KEY`: Your TestMu AI access key.
 
 ### Step 4: Setup your Workflow
+
 ```yaml title="azure-pipelines.yml"
 trigger:
 - '*'

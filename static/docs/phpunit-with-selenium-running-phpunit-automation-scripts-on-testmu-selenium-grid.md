@@ -2,6 +2,42 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
+\"Sample PHPUnit Build\",\n\t\"name\" => \"Sample PHPUnit Test\",\n\t\"platform\" => \"Windows 10\",\n\t\"browserName\" => \"Chrome\",\n\t\"version\" => \"latest\"\n );\t"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 4: Run the Test",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "composer single"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "To run parallel tests",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "composer parallel"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "To run both single and parallel tests at once",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "composer test"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Install the skill",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "codeRepository": "https://github.com/LambdaTest/agent-skills",
+        "text": "git clone https://github.com/LambdaTest/agent-skills.git\ncp -r agent-skills/phpunit-skill .claude/skills/\n\n# For Cursor / Copilot\ncp -r agent-skills/phpunit-skill .cursor/skills/"
+      }
+    ],
+    "dateModified": "2026-09-09T19:13:32+05:30"
+  }) }}
+/>
+
 Run PHPUnit tests on the TestMu AI cloud grid. This guide covers setup, running a sample test, configuring capabilities, and testing locally hosted pages.
 
 **Sample repo**
@@ -16,6 +52,7 @@ Complete the following steps before you begin automation testing with Selenium a
 1. Install the latest **PHP** on your system. Use the following commands in the terminal:
 
    * **MacOS:** Previous versions of **MacOS** have **PHP** installed by default. For the latest **MacOS** versions starting with **Monterey**, download and install **PHP** manually:
+
 ```bash
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 brew install php
@@ -25,6 +62,7 @@ brew install php
 2. Download **composer** in the project directory ([Linux/MacOS](https://getcomposer.org/download/), [Windows](https://getcomposer.org/doc/00-intro.md#installation-windows)).
 
    **Note:** To use the **composer** command directly, it either should have been downloaded in the project directory or should be accessible globally which can be done by the command below:
+
 ```bash
 mv composer.phar /usr/local/bin/composer
 ```
@@ -39,6 +77,7 @@ cd Php-PhpUnit-Selenium
 ```
 
 Install the composer dependencies:
+
 ```bash
 composer install
 ```
@@ -83,11 +122,13 @@ composer single
 ```
 
 To run parallel tests:
+
 ```bash
 composer parallel
 ```
 
 To run both single and parallel tests at once:
+
 ```bash
 composer test
 ```

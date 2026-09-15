@@ -72,6 +72,7 @@ params = {"command": "shell", "text": "dumpsys package <package_info>"}
 result = driver.execute_script("lambda-adb",params)
 ```
   Example -
+
 ```python
 params = {"command": "shell", "text": "dumpsys package dumpsys input_method"}
 result = driver.execute_script("lambda-adb",params)
@@ -86,6 +87,7 @@ params = {"command": "shell", "text": "getprop"}
 result = driver.execute_script("lambda-adb",params)
 ```
   Example -
+
 ```python
 params = {"command": "shell", "text": "getprop ro.build.version.security_patch"}
 result = driver.execute_script("lambda-adb",params)
@@ -164,6 +166,7 @@ params = {"command": "shell", "text": "dumpsys package <package_info>"}
 result = driver.execute_script("lambda-adb",params)
 ```
   Example -
+
 ```python
 params = {"command": "shell", "text": "dumpsys package dumpsys input_method"}
 result = driver.execute_script("lambda-adb",params)
@@ -251,6 +254,7 @@ result = driver.execute_script("lambda-adb", params)
   This command is used to test the network connectivity between the Android device and a specified host, such as `google.com`. When executed it sends four ICMP request packets to the host and wait for responses. The output includes details such as packet transmission time, success rate and round-trip time, which helps diagnose network connectivity and latency issues. The following is a Python sample using the adb command:
 
   > **Note :** The **-c** is required in this command
+
 ```python
 params = {"command": "shell", "text": "ping -c 4 google.com"}
 result = driver.execute_script("lambda-adb",params)

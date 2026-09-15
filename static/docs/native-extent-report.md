@@ -2,6 +2,26 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
+\n    extentreports<\/artifactId>\n    5.0.0<\/version>\n<\/dependency>"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "2. Modify Import Statements",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "// Before\nimport com.relevantcodes.extentreports.ExtentReports;\nimport com.relevantcodes.extentreports.ExtentTest;\n\n// After\nimport com.aventstack.extentreports.ExtentReports;\nimport com.aventstack.extentreports.ExtentTest;"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "4. Update HyperExecute YAML Configuration",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "report: true\npartialReports:\n    type: json\n    location: reports/json\n    frameworkName: extent-native"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
 The Extent Native Reports offer a standardized and easily accessible summary of information extracted from raw Extent reports per Virtual Machine (VM) at the end of a HyperExecute job.
 
 ### Prerequisites

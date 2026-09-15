@@ -11,6 +11,7 @@ By the end of this document, you'll learn how to use this feature in both manual
 To harness the **IP Geolocation** feature in your automated tests, employ the `geoLocation` capability along with a two-letter country code from the list of supported countries provided below. This capability enables you to modify the device's geolocation to the specified location. If this capability is not added, the device will automatically update its geolocation based on its physical location.
 
 **Java Example:**
+
 ```java
 // Java code for configuring IP Geolcation in tests on TestMu AI
 DesiredCapabilities capabilities = new DesiredCapabilities();

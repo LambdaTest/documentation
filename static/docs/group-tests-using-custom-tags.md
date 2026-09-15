@@ -11,6 +11,7 @@ Add a tags capability with a String array to your desired capabilities.
 You can create a custom tag while writing your Selenium automation tests. When you create the [Desired Capabilities](/docs/selenium-automation-capabilities/) via code, add the below lines of code.
 
 *   Create a String array that contains the names of your custom tags, separated by a comma.
+
 ```javascript
 // In case for just 1 tag, just add 1 element in the array
 String[] customTags = {"Custom Tag"};
@@ -20,6 +21,7 @@ String[] customTags = {"Tag 1", "Tag 2", "Tag 3", ...};
 ```
 
 *   Now add this custom tag in your Desired Capabilities instance:
+
 ```javascript
 DesiredCapabilities caps = new DesiredCapabilities();
 .

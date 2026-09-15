@@ -1,6 +1,50 @@
-# Vividus Tests On TestMu AI
+# How to Perform Vividus Automation Tests Using TestMu AI?
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
+\n- Check the first item in the list\n- Check the second item in the list\n- Add a new item in the list, with text \"Yey, Let's add it to list\"."
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Running Tests From Your Vividus App On TestMu AI Platform",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "selenium.grid.capabilities.="
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "For example, we have used the below desired capabilities for demo purpose",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "selenium.grid.capabilities.build=VividusDemo\nselenium.grid.capabilities.visual=true\nselenium.grid.capabilities.console=true\nselenium.grid.capabilities.network=true\nselenium.grid.capabilities.version=13.0\nselenium.grid.capabilities.platform=MacOS Big Sur"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Syntax",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "configuration.profiles=lambdatest/web,web/desktop/"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "For example, let\u2019s change the browser to Safari",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "configuration.profiles=lambdatest/web,web/desktop/safari\n\n// Previously it was configuration.profiles=lambdatest/web,web/desktop/chrome"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 9",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "./gradlew runStories"
+      }
+    ],
+    "dateModified": "2026-08-26T14:02:45+05:30"
+  }) }}
+/>
+
+# Vividus Tests On TestMu AI
 
 Vividus is a codeless test automation tool, developed with the aim to help testers perform automation testing for any application, test, or scenario, using a single tool and common language.
 

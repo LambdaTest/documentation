@@ -2,6 +2,238 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
+Note:  Unlike vanilla Figma CLI, designs.json includes browser parameters and auto-fetches viewports of Figma frames for efficient comparison.\n\n### **Step 3:** Configure your Project Token and Figma Token\n\n1. Setup your project token shown in the **SmartUI** app after creating your project.\n\n\n\n\n```bash\nexport PROJECT_TOKEN=\"123456#1234abcd-****-****-****-************\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 3: Configure your Project Token and Figma Token",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "set PROJECT_TOKEN=\"123456#1234abcd-****-****-****-************\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 3: Configure your Project Token and Figma Token",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "PowerShell",
+        "text": "$env:PROJECT_TOKEN=\"123456#1234abcd-****-****-****-************\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 7",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "export FIGMA_TOKEN=\"123456#1234abcd-****-****-****-************\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 8",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "set FIGMA_TOKEN=\"123456#1234abcd-****-****-****-************\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 9",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "PowerShell",
+        "text": "$env:FIGMA_TOKEN=\"123456#1234abcd-****-****-****-************\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 4: Configure your TestMu AI Credentials",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "export LT_USERNAME=\"YOUR_USERNAME\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 4: Configure your TestMu AI Credentials",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "set LT_USERNAME=\"YOUR_USERNAME\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 4: Configure your TestMu AI Credentials",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "PowerShell",
+        "text": "$env:LT_USERNAME=\"YOUR_USERNAME\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 5: Uploading the Figma files on SmartUI Cloud using CLI",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "PowerShell",
+        "text": "npx smartui upload-figma-web designs.json"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Working example with actual web comparisons",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "codeRepository": "https://github.com/LambdaTest/smartui-figma-web-cli-sample",
+        "text": "git clone https://github.com/LambdaTest/smartui-figma-web-cli-sample"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Install the node modules using the command",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "npm i"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Working example with actual web comparisons",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "export PROJECT_TOKEN=\"123456#1234abcd-****-****-****-************\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Working example with actual web comparisons",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "set PROJECT_TOKEN=\"123456#1234abcd-****-****-****-************\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 18",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "PowerShell",
+        "text": "$env:PROJECT_TOKEN=\"123456#1234abcd-****-****-****-************\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 19",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "export FIGMA_TOKEN=\"123456#1234abcd-****-****-****-************\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 20",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "set FIGMA_TOKEN=\"123456#1234abcd-****-****-****-************\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 21",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "PowerShell",
+        "text": "$env:FIGMA_TOKEN=\"123456#1234abcd-****-****-****-************\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 22",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "npx smartui upload-figma-web designs.json --buildName=FigmaBaseline2"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 23",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "npx smartui --config web-config.json exec --buildName=web-build -- node figma-web-local.js"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Best Practices",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "   npx smartui upload-figma-web designs.json --buildName \"v1.0.0\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Figma-uploaded screenshots automatically have .png appended (e.g., homepage.png), so your SDK screenshots must match",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "// \u274c Wrong - will not match Figma screenshot\nsmartuiSnapshot(driver, \"homepage\");\n\n// \u2705 Correct - matches Figma screenshot name\nsmartuiSnapshot(driver, \"homepage.png\");"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 26",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "// Java\nSmartUISnapshot.smartuiSnapshot(driver, \"homepage.png\");"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 27",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "// JavaScript\nawait smartuiSnapshot(page, \"homepage.png\");"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 28",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "// JavaScript\ncy.smartuiSnapshot(\"homepage.png\");"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 29",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JSON",
+        "text": "{\n  \"figma\": {\n    \"configs\": [\n      {\n        \"figma_file_token\": \"abc12345\",\n        \"figma_ids\": [\"id-1\", \"id-2\"],\n        \"screenshot_names\": [\"homepage.png\", \"about.png\"]  // Include .png extension\n      }\n    ]\n  }\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Figma-uploaded screenshots automatically have .png appended (e.g., homepage.png), so your SDK screenshots must match",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "// \u274c Wrong - will not match Figma screenshot\nsmartuiSnapshot(driver, \"homepage\");\n\n// \u2705 Correct - matches Figma screenshot name\nsmartuiSnapshot(driver, \"homepage.png\");"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Screenshot Naming for SDK Comparisons",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "// Java\nSmartUISnapshot.smartuiSnapshot(driver, \"homepage.png\");"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Screenshot Naming for SDK Comparisons",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "// JavaScript\nawait smartuiSnapshot(page, \"homepage.png\");"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 33",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "// JavaScript\ncy.smartuiSnapshot(\"homepage.png\");"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 34",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JSON",
+        "text": "{\n  \"figma\": {\n    \"configs\": [\n      {\n        \"figma_file_token\": \"abc12345\",\n        \"figma_ids\": [\"id-1\", \"id-2\"],\n        \"screenshot_names\": [\"homepage.png\", \"about.png\"]  // Include .png extension\n      }\n    ]\n  }\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Troubleshooting",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "   echo $FIGMA_TOKEN"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Solutions",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "   echo $PROJECT_TOKEN"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 Welcome to the TestMu AI SmartUI Figma Web CLI documentation!
 
 With SmartUI Figma-Web CLI, you can seamlessly perform visual regression testing of your Figma designs on SmartUI using your command line, identifying discrepancies between your designs and live websites. This guide will walk you through the process of running successful Figma-Web Visual tests using SmartUI CLI.
@@ -47,11 +279,13 @@ The first step is to create a project with the application in which we will comb
 Install required NPM modules for `TestMu AI SmartUI CLI` globally or in your project:
 
 **Global Installation (Recommended):**
+
 ```bash
 npm install -g @lambdatest/smartui-cli
 ```
 
 **Local Installation:**
+
 ```bash
 npm install @lambdatest/smartui-cli
 ```
@@ -209,10 +443,12 @@ $env:FIGMA_TOKEN="123456#1234abcd-****-****-****-************"
 ```
 
 4. Create your figma baseline
+
 ```bash
 npx smartui upload-figma-web designs.json --buildName=FigmaBaseline2
 ```
 5. Execute your functional test script (Selenium Nodejs in this sample)
+
 ```
 npx smartui --config web-config.json exec --buildName=web-build -- node figma-web-local.js
 ```
@@ -244,6 +480,7 @@ npx smartui upload-figma-web designs.json --buildName "v1.0.0"
 Figma-uploaded screenshots automatically have `.png` appended (e.g., `homepage.png`), so your SDK screenshots must match:
 
 **In your SDK code:**
+
 ```javascript
 // ❌ Wrong - will not match Figma screenshot
 smartuiSnapshot(driver, "homepage");

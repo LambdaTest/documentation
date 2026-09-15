@@ -2,6 +2,21 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
+Build Solution. Open Test Explorer in Visual Studio. Click Run from the Test Explorer to run the sample test. In Linux/macOS: Install NuGet packages and build the project:",
+          "url": "https://www.testmuai.com/support/docs/nunit-with-selenium-running-nunit-automation-scripts-on-testmu-selenium-grid/#step-4-run-the-test"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 5,
+          "name": "Step 5: View Your Results",
+          "text": "Check the test output on the console and the TestMu AI dashboard. Visit the TestMu AI Automation Dashboard to view your test results. The dashboard provides: Text logs for each test step Screenshots captured during execution Video recordings of the full test session",
+          "url": "https://www.testmuai.com/support/docs/nunit-with-selenium-running-nunit-automation-scripts-on-testmu-selenium-grid/#step-5-view-your-results"
+        }
+      ]
+    }
+  ]) }}
+/>
+
 Run NUnit tests on the TestMu AI cloud grid. This guide covers setup, running a sample test, configuring capabilities, and testing locally hosted pages.
 
 **Sample repo**
@@ -78,10 +93,12 @@ Execute the NUnit test from Visual Studio or the command line.
 **In Linux/macOS:**
 
 Install NuGet packages and build the project:
+
 ```csharp
 cd Packages
 nuget.exe install ..\NUnitSelenium\packages.config
 ```
+
 ```csharp
 nmake clean build
 ```

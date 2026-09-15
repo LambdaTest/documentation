@@ -254,6 +254,7 @@ require("./tests/test.js")
 If Playwright is not configured to capture screenshots, videos, or traces, or if these artifacts are not uploaded correctly from HyperExecute, they will not appear in the report. Correct configuration in both `playwright.config.ts` and YAML ensures artifacts are captured and visible.
 
 - Update the `playwright.config.ts` file:
+
 ```javascript title="playwright.config.ts"
 use: {
 screenshot: 'on',
@@ -263,6 +264,7 @@ trace: 'on-first-retry',
 ```
 
 - Update the `hyperexecute.yaml` file:
+
 ```yaml title="hyperexecute.yaml"
 uploadArtefacts:
 - name: FinalReport
