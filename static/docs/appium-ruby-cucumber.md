@@ -2,6 +2,42 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
+\n\n\n\n```ruby title=\"first_steps.rb\"\nWhen /^I click on buttons app$/ do \n\n  $driver.find_element(:id, \"com.lambdatest.proverbial:id/color\").click\n  #Click on Color Button\n  $driver.find_element(:id, \"com.lambdatest.proverbial:id/color\").click\n  #Click on Geolocation Button\n  $driver.find_element(:id, \"com.lambdatest.proverbial:id/geoLocation\").click\n  #wait of 5 seconds\n  sleep(5)\n  #Click on back Button\n  $driver.back\n  #Click on text Button to enter value\n  $driver.find_element(:id, \"com.lambdatest.proverbial:id/Text\").click\n  #Click on Notification Button\n  $driver.find_element(:id, \"com.lambdatest.proverbial:id/notification\").click\n  #Click on toast Button      \n  $driver.find_element(:id, \"com.lambdatest.proverbial:id/toast\").click\n  #Click on speedtest Button      \n  $driver.find_element(:id, \"com.lambdatest.proverbial:id/speedTest\").click\n  #Wait for 10 seconds       \n  sleep(10)\n  $driver.back\n  $driver.execute_script(\"lambda-status=passed\")\n\nend "
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "browser_caps",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n<\/TabItem>\n\n\n```ruby title=\"first.config.yml Android\"\nserver: \"mobile-hub.lambdatest.com\"\nuser: \"LT_USERNAME\"    # Add Lambdatest username here\nkey: \"LT_ACCESS_KEY\"   # Add Lambdtest accessKey here\n\n\ncommon_caps:\n\n  \"build\": \"br-1\"\n  \n\nbrowser_caps:\n  -\n    \"isRealMobile\": \"true\"\n    \"platform\": \"android\"\n    \"deviceName\": \"Galaxy S21 5G\"\n    \"platformVersion\": \"11\"\n    \"app\": \"APP_URL\"      # Add your app url here"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 6: Execute and Monitor your Tests",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Ruby",
+        "text": "bundle install\nbundle exec rake first"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "The cucumber-skill package includes",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "cucumber-skill/\n\u251c\u2500\u2500 SKILL.md\n\u2514\u2500\u2500 reference/\n    \u251c\u2500\u2500 playbook.md\n    \u2514\u2500\u2500 advanced-patterns.md"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Install a Cucumber Agent Skill using the command below",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "codeRepository": "https://github.com/LambdaTest/agent-skills",
+        "text": "# Clone the repo and copy the skill you need\ngit clone https://github.com/LambdaTest/agent-skills.git\ncp -r agent-skills/cucumber-skill .claude/skills/\n\n# Or for Cursor / Copilot\ncp -r agent-skills/cucumber-skill .cursor/skills/"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 In this documentation, you will learn how to trigger a automation script of **Cucumber** for application testing with **Appium** on TestMu AI, set the [**desired capabilities**](/support/docs/desired-capabilities-in-appium/) for appium testing, and other advanced features of TestMu AI.
 
 ## Prerequisites

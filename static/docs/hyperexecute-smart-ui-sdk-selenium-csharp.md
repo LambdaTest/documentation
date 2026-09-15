@@ -2,6 +2,27 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
+"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Configuring your Project",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n### Adding SmartUI function to take screenshot\n\nYou can incorporate SmartUI into your custom `Selenium` automation test (any platform) script by adding the `smartuiSnapshot` function in the required segment of selenium script of which we would like to take the screenshot, as shown below: \n  \n```java title=\"LTCloudTest.cs\"\nusing System;\nusing System.Threading.Tasks;\nusing OpenQA.Selenium;\nusing OpenQA.Selenium.Chrome;\nusing LambdaTest.Selenium.Driver;\n\nnamespace LambdaTest.Selenium.TestProject\n{\n  public static class LocalTest{\n    public static async Task Run(){\n      using IWebDriver driver = new ChromeDriver();\n      try {   \n        Console.WriteLine(\"Driver started\");\n        driver.Navigate().GoToUrl(\"Required URL\");\n        // highlight-next-line\n        await SmartUISnapshot.CaptureSnapshot(driver, \"Screenshot Name\"); //utilize this function to take the dom snapshot of your test\n      }catch (Exception ex) {\n        Console.WriteLine(ex);\n      }finally {\n          driver.Quit();\n      }\n    }\n  }\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "testDiscovery",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n## Step 5: Execute your Test Suite\n\n> **NOTE :** In case of macOS, if you get a permission denied warning while executing CLI, simply run **`chmod u+x ./hyperexecute`** to allow permission. In case you get a security popup, allow it from your **System Preferences** \u2192 **Security & Privacy** \u2192 **General tab**.\n\nRun the below command in your terminal at the root folder of the project:\n\n```bash\n./hyperexecute --config RELATIVE_PATH_OF_YOUR_YAML_FILE"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 This documentation will guide you step-by-step to execute the SmartUI SDK tests on the HyperExecute platform using **Selenium - C Sharp**
 
 ## Prerequisites

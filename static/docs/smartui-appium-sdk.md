@@ -2,6 +2,40 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
+'',\n  'fullPage' => true,\n  'pageCount' => 15  # Minimum 1, Maximum 20\n}\ndriver.execute(\"smartui.takeScreenshot\", config)"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 8",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "C#",
+        "text": "var config = new Dictionary {\n  {\"screenshotName\", \"\"},\n  {\"fullPage\", true},\n  {\"pageCount\", 15}  // Minimum 1, Maximum 20\n};\ndriver.Execute(\"smartui.takeScreenshot\", config);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Set your Project Token as an environment variable before running tests",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "export PROJECT_TOKEN=\"your_project_token\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 10",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "set PROJECT_TOKEN=your_project_token"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 11",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "PowerShell",
+        "text": "$env:PROJECT_TOKEN=\"your_project_token\""
+      }
+    ],
+    "dateModified": "2026-08-04T13:20:08+05:30"
+  }) }}
+/>
 Appium is an open-source tool for automating mobile application testing. It allows developers and testers to write tests for native, hybrid, and mobile web applications across multiple platforms, such as iOS and Android, using a single codebase.
 
 TestMu AI SmartUI supports Appium automation tests for mobile applications through two integration methods:

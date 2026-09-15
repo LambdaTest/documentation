@@ -1,6 +1,22 @@
-# TestMu AI Capability Map to Migrate from BrowserStack & SauceLabs
+# TestMu AI Capability Map to Migrate from BrowserStack & Sauce Labs
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
+();\nsauceOptions.put(\"username\", \"YOUR_USERNAME\");\nsauceOptions.put(\"accessKey\", \"YOUR_ACCESS_KEY\");\nsauceOptions.put(\"build\", \"\");\nsauceOptions.put(\"name\", \"\");\nsauceOptions.put(\"armRequired\", true);\nbrowserOptions.setCapability(\"sauce:options\", sauceOptions);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "TestMu AI Capabilities",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "SafariOptions browserOptions = new SafariOptions();\nbrowserOptions.setPlatformName(\"MacOS Tahoe\");\nbrowserOptions.setBrowserVersion(\"26\");\nHashMap ltOptions = new HashMap();\nltOptions.put(\"username\", \"\");\nltOptions.put(\"accessKey\", \"\");\nltOptions.put(\"w3c\", true);\nbrowserOptions.setCapability(\"LT:Options\", ltOptions);"
+      }
+    ],
+    "dateModified": "2026-07-31T21:18:17+05:30"
+  }) }}
+/>
+
+# TestMu AI Capability Map to Migrate from BrowserStack & SauceLabs
 
 Switching automation platforms can seem challenging, but a clear capability comparison helps simplify the decision and migration process. Teams often explore alternative testing platforms to improve speed, scalability, test coverage, and overall efficiency in their delivery pipelines.
 

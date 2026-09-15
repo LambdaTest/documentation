@@ -17,6 +17,7 @@ To specify the timezone for automated tests in Appium on TestMu AI, the **timezo
 Here's an example of how to set the timezone in your Appium test script:
 
 **Java Example:**
+
 ```java
 // Java code example for configuring timezone in Appium tests on LambdaTest
 

@@ -2,6 +2,48 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
+cell.textContent.trim());\nconst sorted = [...values].sort((a, b) => a.localeCompare(b));\nconst isSorted = JSON.stringify(values) === JSON.stringify(sorted);\nif (isSorted) {\n  return 'PASS: Table is sorted alphabetically by first column';\n} else {\n  throw new Error('FAIL: Table is not sorted. Got: ' + values.join(', '));\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Copy Text to Clipboard",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "const text = document.querySelector('.referral-code').textContent;\nawait navigator.clipboard.writeText(text);\nreturn 'Copied to clipboard: ' + text;"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Read Clipboard Content",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "const clipText = await navigator.clipboard.readText();\nreturn 'Clipboard contains: ' + clipText;"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Read a Local Storage Value",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "const token = localStorage.getItem('authToken');\nif (token) {\n  return 'Auth token exists: ' + token.substring(0, 20) + '...';\n} else {\n  throw new Error('FAIL: No auth token in localStorage');\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Set a Local Storage Value (Test Setup)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "localStorage.setItem('feature_flag_newUI', 'true');\nreturn 'Feature flag set';"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Clear Session Storage (Logout Simulation)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "sessionStorage.clear();\nreturn 'Session storage cleared';"
+      }
+    ],
+    "dateModified": "2026-09-09T19:16:50+05:30"
+  }) }}
+/>
+
 KaneAI's natural language engine handles the vast majority of web testing scenarios. However, some interactions require direct DOM manipulation or precise programmatic control that natural language can't reliably express. For these cases, KaneAI provides **JS Snippets**: the ability to execute JavaScript code directly on the page.
 
 This guide is organized by common QA scenario, showing you **when** natural language falls short and **exactly what JS snippet** to use as a workaround.

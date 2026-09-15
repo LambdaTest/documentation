@@ -2,6 +2,43 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
+> ~/.bashrc\n    echo 'export LT_ACCESS_KEY=\"{your_lambda_access_key}\"' >> ~/.bashrc\n    npm install\n    npm install -g protractor\n  \njob:\n  script:\n    #Running test!\n    protractor single.conf.js"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Then Capabilities Generator at TestMu AI will provide you with the below program",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "// Basic Test Configurations For JavaScript\n\nvar capabilities = {\n    \"build\" : \"your build name\", //You can edit this and assign a build name\n    \"name\" : \"your test name\", // Assign a name to your Test\n    \"platform\" : \"Windows 8.1\", // The operating system on which you want to test your website\n    \"browserName\" : \"Firefox\", // The browser on which you want to test\n    \"version\" : \"62.0\", // The browser version which you've selected to perform the test upon\n    \"resolution\" : \"1280x1024\", // The resolution in which you want to run the test as per your operating system\n    \"selenium_version\" : \"3.11.0\", //The version of Selenium on which the test will run\n    \"visual\" : true,\n    \"firefox.driver\" : v0.21.0\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Testing Locally Hosted or Privately Hosted Projects",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "// Example of .gitlab-ci.yml for Lambda Tunnel\n\nimage: node:7.10\n\nbefore_script:\n  - |\n    cd /builds/qarachit/protractor-selenium-sample-gitlab\n    wget https://downloads.lambdatest.com/tunnel/v3/linux/64bit/LT_Linux.zip\n    #Extracting tunnel binary\n    sudo apt-get install unzip\n    unzip LT_Linux.zip\n    #Executing tunnel library\n    ./LT -user ${LAMBDATEST_EMAIL} -key ${LAMBDATEST_KEY} &\n    sleep 30\n    #Installing Dependencies\n    echo 'export LT_USERNAME=\"{your_lambdatest_username}\"' >> ~/.bashrc\n    echo 'export LT_ACCESS_KEY=\"{your_lambda_access_key}\"' >> ~/.bashrc\n    npm install\n    npm install -g protractor\n  \njob:\n  script:\n    #Running Test!\n    protractor single.conf.js"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 9",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\"desiredCapabilities\": {\n        \"tunnel\":true\n      }\t\t"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Parallel Testing",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "protractor parallel.conf.js"
+      }
+    ],
+    "dateModified": "2026-06-09T15:09:24+05:30"
+  }) }}
+/>
+
+# GitLab CI Integration
+
 GitLab is one of the finest tools which facilitates continuous integration for Git projects from small to enterprise level clients. Now, deploy your code rapidly and test it thoroughly for a robust delivery in your go-to-market launch.
 
 TestMu AI now integrates with GitLab CI to boost your go-to-market delivery. Perform automated cross browser testing with TestMu AI to ensure your development code renders seamlessly through an online Selenium grid providing 3000+ real browsers running through machines, on our cloud servers. Perform automation testing in parallel with TestMu AI’s Selenium grid to drastically trim down your test cycles.

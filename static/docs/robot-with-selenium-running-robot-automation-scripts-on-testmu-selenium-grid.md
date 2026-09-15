@@ -58,6 +58,7 @@ set LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 Define browser, version, and OS settings for your test run.
 
 Here is `common.robot` file to setup mandatory details to run at TestMu AI.
+
 ```python
 *** Settings ***
 Library  Selenium2Library

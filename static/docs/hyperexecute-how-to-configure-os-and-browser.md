@@ -15,6 +15,7 @@ Configuring the capabilities is the first step to define the environment for you
 - **`version` :** Defines the specific version or sets it as latest to always use the most recent version.
 
 Below is a Java example using the TestNG framework:
+
 ```java title="Test.java"
 DesiredCapabilities caps = new DesiredCapabilities();
 caps.setCapability("platform", "Windows");

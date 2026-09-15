@@ -1,6 +1,15 @@
-# Playwright Testing With Playwright Test Runner
+# Running Playwright Tests With Playwright Test Runner
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
+{\n  test('Search LambdaTest on Bing', async ({ page }) => {\n    await page.goto('https://www.bing.com')\n    const element = await page.$('[aria-label=\"Enter your search term\"]')\n    await element.click()\n    await element.type('LambdaTest')\n    await element.press('Enter')\n    const title = await page.title()\n\n    console.log('Page title:: ', title)\n    // Use the expect API for assertions provided by playwright\n    expect(title).toEqual(expect.stringContaining('LambdaTest'))\n  })\n})"
+      }
+    ],
+    "dateModified": "2026-09-09T19:13:32+05:30"
+  }) }}
+/>
+
+# Playwright Testing With Playwright Test Runner
 
 Playwright Test Runner is used for end-to-end automated testing of websites and web apps across all major browsers. You can run parallel tests, get context isolation out of the box, capture videos, screenshots, and other test artifacts on test failure, and use fixtures with Playwright test runner.
 

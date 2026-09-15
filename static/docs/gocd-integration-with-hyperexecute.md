@@ -1,6 +1,23 @@
-# GoCD Integration With HyperExecute
+# How to integrate GoCD With HyperExecute
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
+\n    <\/job>\n  <\/stage>\n  \n    \n        # Adjust for macOS if needed\n      \n        \n      <\/tasks>\n    <\/job>\n  <\/stage>\n<\/pipeline>"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
+ darwin Linux -> linux Windows-> windows Click on Save + Run This Pipeline button.",
+          "url": "https://www.testmuai.com/support/docs/gocd-integration-with-hyperexecute/#step-2-configure-the-gocd-pipeline"
+        }
+      ]
+    }
+  ]) }}
+/>
+
+# GoCD Integration With HyperExecute
 
 GoCD, short for "Go Continuous Delivery," is an open-source continuous integration and continuous delivery (CI/CD) server that helps automate and streamline the software development and release process. It is designed to facilitate the efficient and reliable delivery of software from development to production.
 

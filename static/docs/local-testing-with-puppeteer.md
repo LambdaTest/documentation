@@ -1,6 +1,15 @@
-# Local Testing Using Puppeteer
+# Run Local Tests Using Puppeteer
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
+{    \n    const capabilities = {\n        'browserName': 'Chrome',\n        'browserVersion': 'latest',\n        'LT:Options': {\n            'platform': 'Windows 10',\n            'build': 'puppeteer-build-1',\n            'name': 'My first Puppeteer test',\n            'resolution':'1366x768',\n            'user': process.env.LT_USERNAME || \"Your Username\",\n            'accessKey': process.env.LT_ACCESS_KEY || \"Your Access Key\",\n            'tunnel': false, // Add tunnel configuration if testing locally hosted webpage\n            'tunnelName': '' // Optional\n        }\n   };"
+      }
+    ],
+    "dateModified": "2026-09-09T19:13:32+05:30"
+  }) }}
+/>
+
+# Local Testing Using Puppeteer
 
 TestMu AI tunnel feature lets you test private server URLs, locally hosted web apps, and websites on real browsers and operating systems. On TestMu AI, you can test plain HTML, CSS, PHP, Python, and other similar web files saved locally. When connecting to corporate firewalls or proxy settings, no restrictions apply to the new TestMu AI tunnel binary. To establish a secure and unique tunnel connection between your system and TestMu AI cloud servers, the TestMu AI tunnel utilizes various protocols like Web Sockets, HTTPS, SSH(Secure Shell), etc.
 

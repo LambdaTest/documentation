@@ -2,6 +2,30 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
+(); shippingDetails.put(\"firstName\", \"John\"); shippingDetails.put(\"lastName\", \"Doe\"); shippingDetails.put(\"street\", \"221B Baker Street\"); shippingDetails.put(\"city\", \"London\"); shippingDetails.put(\"postalCode\", \"NW1 6XE\"); shippingDetails.put(\"state\", \"London\"); shippingDetails.put(\"country\", \"UK\"); Map billingDetails = new HashMap<>(); billingDetails.put(\"firstName\", \"John\"); billingDetails.put(\"lastName\", \"Doe\"); billingDetails.put(\"street\", \"221B Baker Street\"); billingDetails.put(\"city\", \"London\"); billingDetails.put(\"postalCode\", \"NW1 6XE\"); billingDetails.put(\"state\", \"London\"); billingDetails.put(\"country\", \"UK\"); Map contact = new HashMap<>(); contact.put(\"email\", \"john.doe@example.com\");...",
+          "url": "https://www.testmuai.com/support/docs/apple-pay-auto/#step-3-update-shipping-billing-and-contact-details-optional"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Step 4: Confirm Apple Pay Payment",
+          "text": "To confirm Apple Pay payment at the payment step, add a hook to confirm and complete the payment. This can be done using TestMu AI hooks. A sample script is provided below to trigger confirmation of the Apple Pay payment step:",
+          "url": "https://www.testmuai.com/support/docs/apple-pay-auto/#step-4-confirm-apple-pay-payment"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 5,
+          "name": "Step 5: Enter Passcode to Complete Payment",
+          "text": "After confirming the Apple Pay payment, the device will prompt for the passcode to securely authorize the transaction. Your automation script must handle this prompt by entering the passcode using Appium's keyboard input methods to simulate the user securely confirming the payment. The default passcode is 123456 unless configured differently on the device. This step is essential to simulate secure confirmation and complete the Apple Pay transaction during automation.",
+          "url": "https://www.testmuai.com/support/docs/apple-pay-auto/#step-5-enter-passcode-to-complete-payment"
+        }
+      ]
+    }
+  ]) }}
+/>
+
+# Apple Pay Automation on Real Devices
+
 **Apple Pay** is Apple’s secure digital wallet and payment system that enables purchases, one-click checkouts, and adds an extra layer of protection for financial transactions. In real-world apps and websites, Apple Pay is widely used for simplifying checkout experiences, reducing friction, and improving user trust.
 
 For **testing payment flows**, validating Apple Pay becomes critical. Automation of Apple Pay ensures you can reliably test end-to-end purchase scenarios, confirm that payment sheets open correctly, details are pre-filled, and transactions are processed securely, without relying on production cards.

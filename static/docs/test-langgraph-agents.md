@@ -2,44 +2,23 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
-LangGraph agents are text agents exposed over HTTP, with state held in a graph and threaded across turns. There is no voice or phone surface. TestMu AI connects to the deployed endpoint, drives full multi-turn conversations across personas and edge cases, and scores every run.
+LangGraph agents are text agents exposed over HTTP, with state held in a graph and threaded across turns. There is no voice or phone surface. The TestMu AI Agent Testing Platform connects to your deployed endpoint and drives the graph through multi-turn conversations across personas and edge cases, scoring each run so you can test it in CI on every commit.
 
-## Before You Begin
+To connect one, you need a deployed graph with a reachable endpoint (self-hosted or on LangGraph Platform), a TestMu AI workspace with agent-testing permissions, and source docs for scenario generation such as the prompt, PRD, or knowledge base.
 
-Before you connect a LangGraph agent, make sure you have:
+## Why does LangGraph thread state change how you test the agent?
 
-- A deployed graph with a reachable endpoint, self-hosted or on LangGraph Platform
-- TestMu AI workspace with agent-testing permissions
-- Source docs for scenario generation: prompt, PRD, or knowledge base
+A LangGraph agent is a graph with state on the thread, so a few behaviours drive how you write scenarios:
 
-## Test a LangGraph Chat Agent
+- **Thread state.** State lives on the thread, so reusing one across scenarios contaminates results. Use a fresh thread per scenario.
+- **Human-in-the-loop interrupts.** Interrupts pause the graph mid-run, and a harness that does not resume reads the pause as a hang.
+- **Tool-call branches.** Tool calls and their failure branches are where these agents actually break, so weight scenarios there.
+- **Deployment shape.** Self-hosted, LangGraph Platform, and custom servers each change the endpoint shape.
+- **No voice or phone surface.** Voice metrics and personas do not apply.
 
-Chat testing covers text conversations against a deployed graph, whether streaming or non-streaming. Upload the graph definition and supporting docs to generate scenarios, then create the endpoint profile using the deployment's REST endpoint, with a fresh thread per scenario. It scores reasoning, tool call correctness, grounding, and safety, and runs in CI on every commit.
+Chat testing covers text conversations against a deployed graph, whether streaming or non-streaming. Upload the graph definition and supporting docs to generate scenarios, then create the endpoint profile using the deployment's REST endpoint, with a fresh thread per scenario. It scores reasoning, tool call correctness, grounding, and safety, and runs in CI on every commit. See [chat agent testing](/support/docs/chat-agent/) for the full setup.
 
-Full setup: [Chat agent testing](/support/docs/chat-agent/)
-
-## What You Get With Agent Testing
-
-Every LangGraph run, on any surface it supports, is scored across:
-
-- 30+ metrics across 8 categories, with configurable thresholds
-- Context-aware scenario generation
-- Adversarial testing and automated issue detection
-- Multilingual conversations
-- Quality scoring
-- Automated issue detection
-
-## LangGraph-Specific Considerations
-
-A few LangGraph behaviours are worth building dedicated scenarios around:
-
-- State lives on the thread, so reusing one across scenarios contaminates results
-- Human-in-the-loop interrupts pause the graph mid-run, and a harness that does not resume reads the pause as a hang
-- Tool calls and their failure branches are where these agents actually break, so weight scenarios there
-- Deployment varies across self-hosted, LangGraph Platform, and custom servers, which changes the endpoint shape
-- There is no voice or phone surface, so voice metrics and personas do not apply
-
-## Troubleshooting
+## Where does a LangGraph run get stuck?
 
 Common failure modes to watch for:
 

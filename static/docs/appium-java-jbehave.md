@@ -2,6 +2,63 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
+c = Class.forName(System.getProperty(\"embedder\"));\n        Constructor<?> cons = c.getConstructor(WebDriver.class);\n        Embedder storyEmbedder = (Embedder) cons.newInstance(driver);\n\n        List storyPaths = Arrays.asList(System.getProperty(\"stories\"));\n        storyEmbedder.runStoriesAsPaths(storyPaths);\n    }\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "The capabilities object in the sample code are defined as (Single)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "//Single Tests\n{\n  \"server\": \"mobile-hub.lambdatest.com\",\n\n  \"capabilities\": {\n    \"build\": \"jbehave-LambdaTest-AppAutomate-Single\",\n    \"name\": \"Single Test 1\"\n  },\n\n  \"environments\": [\n    {\n    \"platformName\": \"android\",\n    \"deviceName\": \"Galaxy S21 5G\",\n    \"platformVersion\": \"11\"\n    }\n  ]\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Parallel",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "//Parallel Tests\n{\n  \"server\": \"mobile-hub.lambdatest.com\",\n\n  \"capabilities\": {\n    \"build\": \"jbehave-LambdaTest-AppAutomate-Parallel\",\n    \"name\": \"Parallel Test 1\"\n  },\n\n  \"environments\": [\n    {\n      \"platformName\": \"android\",\n      \"deviceName\": \"Galaxy S21 5G\",\n      \"platformVersion\": \"11\"\n    },\n    {\n      \"platformName\": \"android\",\n      \"deviceName\": \"OnePlus 10 Pro\",\n      \"platformVersion\": \"12\"\n    },\n    {\n      \"platformName\": \"android\",\n      \"deviceName\": \"Pixel 3a\",\n      \"platformVersion\": \"10\"\n    }\n  ]\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 6: Execute and Monitor your Tests",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "  mvn clean install"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 6: Execute and Monitor your Tests (Single)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "  mvn test -P single"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 6: Execute and Monitor your Tests (Parallel)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "  mvn test -P parallel"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "The appium-skill package includes",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "appium-skill/\n\u251c\u2500\u2500 SKILL.md\n\u2514\u2500\u2500 reference/\n    \u251c\u2500\u2500 playbook.md\n    \u2514\u2500\u2500 advanced-patterns.md"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Install a Appium Agent Skill using the command below",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "codeRepository": "https://github.com/LambdaTest/agent-skills",
+        "text": "# Clone the repo and copy the skill you need\ngit clone https://github.com/LambdaTest/agent-skills.git\ncp -r agent-skills/appium-skill .claude/skills/\n\n# Or for Cursor / Copilot\ncp -r agent-skills/appium-skill .cursor/skills/"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 In this documentation, you will learn how to trigger a automation script of **JBehave** for application testing with **Appium** on TestMu AI, set the [**desired capabilities**](/support/docs/desired-capabilities-in-appium/) for appium testing, and other advanced features of TestMu AI.
 
 ## Prerequisites

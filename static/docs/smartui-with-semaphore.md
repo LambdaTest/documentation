@@ -2,6 +2,97 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
+\n\n## Best Practices\n\n\n\n\n**Secret Management**\n\n- Never commit credentials to repository\n- Use Semaphore Secrets for all sensitive data\n- Rotate secrets regularly\n- Use different secrets for different environments\n\n<\/TabItem>\n\n\n**Pipeline Optimization**\n\n- Use parallel blocks for faster execution\n- Cache dependencies to speed up pipelines\n- Only run visual tests on relevant branches\n- Set up pipeline conditions to avoid unnecessary runs\n\n**Example:**\n```yaml\nauto_cancel:\n  running:\n    when: \"branch != 'main'\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 2",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "env_vars:\n  - name: BUILD_NAME\n    value: \"${SEMAPHORE_GIT_BRANCH}-${SEMAPHORE_GIT_SHA}\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Pass secret to job",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "   env_vars:\n     - name: PROJECT_TOKEN\n       value: ${PROJECT_TOKEN}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Check pipeline logs for errors",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "   - name: Check Logs\n     commands:\n       - cat /tmp/*.log || true"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Run tests in parallel using parallel blocks",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "   blocks:\n     - name: Test Group 1\n       task:\n         jobs:\n           - name: Run Tests\n             commands:\n               - npx smartui exec -- \n     - name: Test Group 2\n       task:\n         jobs:\n           - name: Run Tests\n             commands:\n               - npx smartui exec -- "
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Use specific Node version",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "   prologue:\n     commands:\n       - nvm use 18"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Clear npm cache",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "   commands:\n     - npm cache clean --force\n     - npm install"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Ensure Node.js is available",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "   prologue:\n     commands:\n       - nvm use 18"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Verify npm is available",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "   commands:\n     - npm --version"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Install SmartUI CLI explicitly",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "   commands:\n     - npm install -g @lambdatest/smartui-cli"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
+> Choose Repository. Select your desired repository from your VCS (GitHub or Bitbucket)",
+          "url": "https://www.testmuai.com/support/docs/smartui-with-semaphore/#step-1-create-your-project"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Setup your Workflow",
+          "text": "Select your desired build tool and edit your workflow as per your requirement. A sample workflow is given for your reference: Click on Run the Workflow button to trigger your tests You can also store your LTUSERNAME, LTACCESSKEY and PROJECTTOKEN as secrets in your Semaphore project repository.",
+          "url": "https://www.testmuai.com/support/docs/smartui-with-semaphore/#step-2-setup-your-workflow"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Check the output",
+          "text": "After triggering the workflow, check your results in the SmartUI Dashboard",
+          "url": "https://www.testmuai.com/support/docs/smartui-with-semaphore/#step-3-check-the-output"
+        }
+      ]
+    }
+  ]) }}
+/>
 Semaphore is a modern CI/CD (Continuous Integration and Continuous Delivery) platform designed for developers to automate the process of building, testing, and deploying software.
 
 This guide explains how to integrate your project with the Semaphore CI/CD pipeline to trigger visual regression testing with TestMu AI SmartUI whenever changes are made to your repository.

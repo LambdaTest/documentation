@@ -2,6 +2,20 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
+\"New Project\" > fill name > \"Create\"\n2. Invite a member: Project Settings > \"Team\" > \"Invite\" > enter email > \"Send\"\n3. Complete a task: Tasks page > click task > \"Mark Complete\" > confirm dialog\n\n## Test Data\n- Existing project for testing: \"Test Project\" (ID: proj_12345)\n- Existing user: john@example.com"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Override either context file for a single run",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "kane-cli run \"your objective\" \\\n  --global-context ./custom-global.md \\\n  --local-context ./custom-local.md"
+      }
+    ],
+    "dateModified": "2026-09-03T14:41:00+05:30"
+  }) }}
+/>
+
 **Variables** keep credentials and test data out of your objectives. **Context files** give the agent persistent background information: guidance, conventions, and notes that apply across runs.
 
 ## Variables

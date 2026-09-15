@@ -1,6 +1,30 @@
-# Network Logs and Configurations in real devices
+# Network Configurations in Browser Live
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
+App Testing.",
+          "url": "https://www.testmuai.com/support/docs/browser-network-configurations/#step-1-access-app-testing"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Select your device or browser",
+          "text": "Choose a real Android or iOS device, upload your app (APK/IPA), or open a browser URL.",
+          "url": "https://www.testmuai.com/support/docs/browser-network-configurations/#step-2-select-your-device-or-browser"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Configure network log options",
+          "text": "Run your app. In the network logs for your device, open the Configuration Options slider and select the options you want to apply for your current session.",
+          "url": "https://www.testmuai.com/support/docs/browser-network-configurations/#step-3-configure-network-log-options"
+        }
+      ]
+    }
+  ]) }}
+/>
+
+# Network Logs and Configurations in real devices
 
 Network logs record every network interaction during your test session, from API calls and page requests to server responses and load times. These logs are stored in HAR format, giving you a complete snapshot of **network performance** for each run. By reviewing this data, you can identify slow endpoints, troubleshoot failed requests, and validate that your app communicates with the right services, all without leaving your testing workflow.
 

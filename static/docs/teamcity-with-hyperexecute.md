@@ -1,6 +1,23 @@
-# TeamCity Integration With HyperExecute
+# How to integrate TeamCity with HyperExecute
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
+darwin Linux -> linux Windows-> windows",
+          "url": "https://www.testmuai.com/support/docs/teamcity-with-hyperexecute/#step-4-start-the-build-process"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 5,
+          "name": "Step 5: Build process is complete",
+          "text": "Now your build process is completed. This will take a couple of minutes to completely execute all the stages. After the build is successful, go to your TestMu AI Dashboard and check the output of the triggered Job.",
+          "url": "https://www.testmuai.com/support/docs/teamcity-with-hyperexecute/#step-5-build-process-is-complete"
+        }
+      ]
+    }
+  ]) }}
+/>
+
+# TeamCity Integration With HyperExecute
 
 TeamCity is a build management and continuous integration server developed by JetBrains. It is used to automate the process of building, testing, and deploying software. It supports a wide range of programming languages and technologies, including Java, .NET, Ruby, and Python.
 

@@ -138,6 +138,7 @@ Each variant row lists its browser and resolution, and merged variants carry the
 - Best for continuous integration scenarios
 
 **Baseline Update Mechanism**:
+
 ```javascript
 // SDK capability to auto-mark baseline
 capabilities.setCapability("smartUI.baseline", true);
@@ -186,6 +187,7 @@ npx smartui move-to-baseline --build current-build
 ```
 
 **SDK with Capabilities**:
+
 ```javascript
 // Explicit capability setting required
 capabilities.setCapability("smartUI.baseline", true); // User must set this
@@ -231,6 +233,7 @@ npx smartui move-to-baseline --build B1
 **Root Cause**: The capability must be set correctly and the build must complete successfully for baseline marking to occur.
 
 **Solution**:
+
 ```javascript
 // Ensure correct capability syntax
 capabilities.setCapability("smartUI.baseline", true);
@@ -260,6 +263,7 @@ npx smartui exec -- npm test
 ```
 
 ### For SDK Integration
+
 ```javascript
 // Set capability explicitly for baseline marking
 DesiredCapabilities capabilities = new DesiredCapabilities();

@@ -2,6 +2,15 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
+{}, `lambdatest_action: ${JSON.stringify({ action: 'setTestStatus', arguments: { status: 'passed', remark: 'Title matched' } })}`);"
+      }
+    ],
+    "dateModified": "2026-09-09T19:13:32+05:30"
+  }) }}
+/>
+
+# Lambda Hooks for Automation Testing
+
 TestMu AI offers a set of hooks (Lambda Hooks) that you can use to modify your automation test cases and perform multiple operations in your automation scripts — set the test status, verify downloaded files, throttle the network, capture screenshots, and more.
 
 Hooks are grouped into three categories so you can quickly find what applies to your framework:

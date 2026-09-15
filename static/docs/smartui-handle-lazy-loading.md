@@ -2,6 +2,34 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
+setTimeout(resolve, 1000));\n\n        // Update position\n        currentPosition += scrollStep;\n\n        // Recalculate total height (in case of infinite scroll)\n        let newHeight = await driver.executeScript(\"return document.body.scrollHeight\");\n        if (newHeight > totalHeight) {\n          totalHeight = newHeight;\n        }\n      }\n\n      // Scroll back to top\n      await driver.executeScript(\"window.scrollTo(0, 0)\");\n\n      // Final wait for any remaining content\n      await new Promise(resolve => setTimeout(resolve, 2000));\n    }\n\n    // Scroll to load all lazy content\n    await scrollToLoadLazyContent();\n\n    // Take snapshot\n    await smartuiSnapshot(driver, \"Lazy Loaded Page\");\n\n  } finally {\n    await driver.quit();\n  }\n})();"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Java (Selenium) Example",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "\npublic void handleLazyLoading(WebDriver driver) throws InterruptedException {\n    driver.get(\"https://example.com\");\n\n    JavascriptExecutor js = (JavascriptExecutor) driver;\n\n    // Get total page height\n    Long totalHeight = (Long) js.executeScript(\"return document.body.scrollHeight\");\n    Long viewportHeight = (Long) js.executeScript(\"return window.innerHeight\");\n\n    int scrollStep = 500;\n    long currentPosition = 0;\n\n    // Scroll through the page\n    while (currentPosition < totalHeight) {\n        js.executeScript(\"window.scrollTo(0, \" + currentPosition + \")\");\n        Thread.sleep(1000); // Wait for lazy content\n\n        currentPosition += scrollStep;\n\n        // Recalculate height for infinite scroll\n        Long newHeight = (Long) js.executeScript(\"return document.body.scrollHeight\");\n        if (newHeight > totalHeight) {\n            totalHeight = newHeight;\n        }\n    }\n\n    // Scroll back to top\n    js.executeScript(\"window.scrollTo(0, 0)\");\n    Thread.sleep(2000);\n\n    // Take snapshot\n    SmartUISnapshot.smartuiSnapshot(driver, \"Lazy Loaded Page\");\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Python (Selenium) Example",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Python",
+        "text": "from selenium import webdriver\nfrom selenium.webdriver.common.by import By\nfrom lambdatest import smartui_snapshot\nimport time\n\ndriver = webdriver.Chrome()\ndriver.get(\"https://example.com\")\n\ndef scroll_to_load_lazy_content(driver):\n    # Get total page height\n    total_height = driver.execute_script(\"return document.body.scrollHeight\")\n    viewport_height = driver.execute_script(\"return window.innerHeight\")\n\n    scroll_step = 500\n    current_position = 0\n\n    # Scroll through the page\n    while current_position < total_height:\n        driver.execute_script(f\"window.scrollTo(0, {current_position})\")\n        time.sleep(1)  # Wait for lazy content\n\n        current_position += scroll_step\n\n        # Recalculate height for infinite scroll\n        new_height = driver.execute_script(\"return document.body.scrollHeight\")\n        if new_height > total_height:\n            total_height = new_height\n\n    # Scroll back to top\n    driver.execute_script(\"window.scrollTo(0, 0)\")\n    time.sleep(2)\n\n# Scroll to load all lazy content\nscroll_to_load_lazy_content(driver)\n\n# Take snapshot\nsmartui_snapshot(driver, \"Lazy Loaded Page\")"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "JavaScript Example",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "const { Builder, By, until } = require('selenium-webdriver');\nconst { smartuiSnapshot } = require('@lambdatest/selenium-driver');\n\nlet driver = await new Builder().forBrowser(\"chrome\").build();\nawait driver.get(\"https://example.com\");\n\n// Wait for lazy-loaded images to load\nawait driver.wait(until.elementsLocated(By.css('img[data-src]')), 10000);\n\n// Trigger lazy loading by scrolling\nlet images = await driver.findElements(By.css('img[data-src]'));\nfor (let img of images) {\n    await driver.executeScript(\"arguments[0].scrollIntoView(true);\", img);\n    await driver.sleep(500);\n}\n\n// Wait for images to actually load\nawait driver.sleep(3000);\n\nawait smartuiSnapshot(driver, \"Lazy Loaded Images\");"
+      }
+    ],
+    "dateModified": "2026-07-22T20:15:59+05:30"
+  }) }}
+/>
+
 ## What is Lazy Loading?
 
 Lazy loading is a web performance optimization technique where content (images, videos, or other elements) is loaded only when it's about to enter the viewport or when the user scrolls near it. While this improves page load performance, it can cause issues in visual regression testing because elements may not be loaded when the snapshot is captured.

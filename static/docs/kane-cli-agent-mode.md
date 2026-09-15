@@ -2,6 +2,34 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
+/dev/null | tail -1 | jq .\n\n# Extract status\nkane-cli run \"...\" --agent 2>/dev/null | tail -1 | jq -r '.status'\n\n# Extract a stored value\nkane-cli run \"go to example.com, store the price as 'price'\" --agent 2>/dev/null \\\n  | tail -1 | jq -r '.final_state.price'"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "If an objective requires user input mid-run, Kane CLI fires ask_user",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JSON",
+        "text": "{\"type\": \"ask_user\", \"question\": \"Which item should I select?\", \"options\": [\"Small\", \"Medium\", \"Large\"]}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "If stdin IS a TTY, respond by writing JSON to stdin",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JSON",
+        "text": "{\"type\": \"user_response\", \"answer\": \"Medium\"}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "To cancel",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JSON",
+        "text": "{\"type\": \"cancel\"}"
+      }
+    ],
+    "dateModified": "2026-07-23T20:51:45+05:30"
+  }) }}
+/>
+
 Agent Mode outputs structured NDJSON instead of the interactive terminal UI. It's how AI coding agents (Claude Code, Codex CLI, Gemini CLI) consume Kane CLI results: parse events programmatically, extract the final result, and present it to the user.
 
 ## Enable Agent Mode

@@ -2,6 +2,41 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
+\n\n// Adds a new commit to your current active branch\n$ git commit -m \"Your commit message\"\n\n// Executing the SmartUI StoryBook tests\n$ smartui storybook  --config .smartui.json"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Here is an example of the above workflow",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "$ git branch\n* master\n\n$ git commit -m \"Second Build Changes\"\n\n$ smartui storybook http://localhost:6006 --config .smartui.json"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Here is an example of the above workflow",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "// Step 1 - Commit changes to Git\n$ git commit -am \"Changes in login stories\"\n(git) Changes added to your branch\n\n// Step 2 - Execute SmartUI CLI to trigger Build in the SmartUI project\n$ smartui storybook http://localhost:6006 --config .smatui.json"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Here is an example of the above workflow",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "// Baseline Branch\n$ git branch\n* master\n\n// Non-Baseline branch\n$ git checkout -b develop\n* develop\n  master\n\n// Executing SmartUI Build with Non-Baseline Git branch\n$ smartui storybook http://localhost:6006 --config .smartui.json"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Running Force Builds",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "$ smartui storybook  --config .smartui.json --force-rebuild"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 This is the guide to understand our Git Branching with SmartUI projects which can detect the commit history and execute the appropriate actions for your visual regression testing.
 
 ### Prerequisites for running Git with SmartUI

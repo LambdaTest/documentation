@@ -1,6 +1,50 @@
-# CircleCI Integration With TestMu AI
+# How to integrate CircleCI with TestMu AI
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
+> $BASH_ENV\n \n      - run:\n \n          name: \"Setup custom environment variables\"\n \n          command: |\n \n            echo 'export LT_ACCESS_KEY=\"{your_lambda_access_key}\"' >> $BASH_ENV\n \n      - run: # Validating your above mentioned environment variables\n \n          name: \"Here is the LT_Username : \"\n \n          command: echo ${LT_USERNAME}      \n \n      # Download and cache dependencies\n \n      - restore_cache:\n \n          keys:\n \n            - v1-dependencies-{{ checksum \"package.json\" }}\n \n            # fallback to using the latest cache if no exact match is found\n \n      - run: npm install\n \n      # run tests!\n \n      - run: node_modules/.bin/nightwatch -e chrome // Executing test in bash."
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Then Capabilities Generator at TestMu AI will provide you with the below program",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "var capabilities = {\n    \"build\" : \"your build name\", //You can edit this and assign a build name\n    \"name\" : \"your test name\", // Assign a name to your Test\n    \"platform\" : \"Windows 8.1\", // The operating system on which you want to test your website\n    \"browserName\" : \"Firefox\", // The browser on which you want to test\n    \"version\" : \"62.0\", // The browser version which you've selected to perform the test upon\n    \"resolution\" : \"1280x1024\", // The resolution in which you want to run the test as per your operating system\n    \"selenium_version\" : \"3.11.0\", //The version of Selenium on which the test will run\n    \"visual\" : true,\n    \"firefox.driver\" : v0.21.0\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Testing Locally Hosted or Privately Hosted Projects",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "# Javascript Node CircleCI 2.0 configuration file\n#\n# Check https://circleci.com/docs/2.0/language-javascript/ for more details\n#\nversion: 2\njobs:\n build:\n   docker:\n     # specify the version you desire here\n     - image: circleci/node:7.10\n \n     # Specify service dependencies here if necessary\n     working_directory: ~/Nightwatch-circleci-selenium\n     \n     steps:\n      - checkout\n      - run:\n           name: \"Downloading tunnel binary\"\n          command: |\n          wget https://downloads.lambdatest.com/tunnel/v3/linux/64bit/LT_Linux.zip\n \n      - run:\n           name: \"Extracting tunnel binary\"\n          command: |\n          sudo apt-get install unzip\n          unzip LT_Linux.zip\n \n      - run:\n           name: \"Executing tunnel binary\"\n          background: true\n          command: |\n            ./LT -user ${LAMBDATEST_EMAIL} -key ${LAMBDATEST_KEY}\n            sleep 40\n \n      - run:\n           name: \"Setup custom environment variables\"\n          command: |\n            echo 'export LT_USERNAME=\"${LAMBDATEST_USERNAME}\"' >> $BASH_ENV\n \n      - run:\n          name: \"Setup custom environment variables\"\n          command: |\n            echo 'export LT_ACCESS_KEY=\"${LAMBDATEST_ACCESS_KEY}\"' >> $BASH_ENV\n \n      - run: # test what branch we're on.\n          name: \"Here is the LT_Username : \"\n          command: echo ${LT_USERNAME}      \n       \n# Download and cache dependencies\n#    - restore_cache:\n#        keys:\n#          - v1-dependencies-{{ checksum \"package.json\" }}           \n        # fallback to using the latest cache if no exact match is found\n       \n        - run: npm install\n#      - save_cache:\n#        paths:\n#      - node_modules\n#        key: v1-dependencies-{{ checksum \"package.json\" }}\n   \n    # run tests!\n      - run: node_modules/.bin/nightwatch -e chrome"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "run tests!",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\"desiredCapabilities\": {\n       \"tunnel\":true\n     }"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Parallel Testing",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "$ node_modules\\.bin\\nightwatch -e chrome,edge,firefox tests"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Parallel Testing",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "$ ./node_modules/.bin/nightwatch -e chrome,edge,firefox tests"
+      }
+    ],
+    "dateModified": "2026-07-17T17:17:54+05:30"
+  }) }}
+/>
+
+# CircleCI Integration With TestMu AI
 
 CircleCI is one of the most renowned CI/CD tools due to its easy-to-use interface, simplistic configuration, and huge support for numerous libraries and services. CircleCI ensures that your code deployment is of high quality and in less time. It does so by passing every commit to run through your automated pipeline before pushing it to the respective feature branch. So if anything goes south, then you know instantly where to look for. This helps in preventing a major breakdown by eliminating any bottleneck at an early stage. CircleCI facilitates rapid as well as robust fixes at scale.
 

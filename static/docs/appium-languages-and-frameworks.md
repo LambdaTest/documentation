@@ -2,7 +2,7 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
-Here is a list of languages and frameworks that are supported by the TestMu AI to run Appium automation tests on [TestMu AI Real Device Cloud Platform](https://www.testmuai.com/real-device-cloud).
+Here is a list of languages and frameworks that are supported by the TestMu AI to run Appium automation tests on [TestMu AI Real Device Cloud Platform](https://www.testmuai.com/real-device-cloud/).
 
           Java
 

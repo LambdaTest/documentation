@@ -59,11 +59,13 @@ There are two primary ways to run accessibility tests:
 For precise control over which pages are scanned, you can trigger scans manually at specific points in your test execution. This is the recommended approach to reduce test execution time and focus only on relevant pages.
 
 To use this, simply enable accessibility in your capabilities:
+
 ```java
 capability.setCapability("accessibility", true); // Enable accessibility testing
 ```
 
 Then, trigger the scan directly within your test script when the desired page is fully loaded:
+
 ```java
 // Execute the LambdaTest accessibility scan hook
 driver.executeScript("lambda-accessibility-scan");

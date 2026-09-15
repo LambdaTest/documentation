@@ -20,6 +20,7 @@ To configure the Appium version for your tests on TestMu AI, use the `appiumVers
 | tvos | 1.22.3, 2.2.1 | 1.22.3 | 1.22.3 |
 
 **Java Example:**
+
 ```java
 // Java code for configuring Appium version in tests on LambdaTest
 DesiredCapabilities capabilities = new DesiredCapabilities();

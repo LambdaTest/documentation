@@ -2,6 +2,55 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
+= 4.1.0; For Java SDK: SmartUI SDK version >= 1.0.7; For JavaScript: Selenium WebDriver version >= 1.0.7.",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "For JavaScript",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "let capabilities = {\n  platform: \"catalina\",\n  browserName: \"chrome\",\n  version: \"latest\",\n  \"LT:Options\": {\n    username: USERNAME,\n    accessKey: KEY,\n    project: \"ElementSS-MobileConfig\",\n    w3c: true,\n    name: \"Test Name\", // name of the test\n    build: \"Automation Build Name\", // name of the build\n    // highlight-next-line\n    \"smartUI.project\": \"YOUR_PROJECT_NAME\",\n    // highlight-next-line\n    \"smartUI.build\": \"YOUR_BUILD_NAME\",\n    // highlight-next-line\n    \"smartUI.baseline\": true,\n  },\n};"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "For Java",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "DesiredCapabilities capabilities = new DesiredCapabilities();\ncapabilities.setCapability(\"platform\", \"Windows 10\");\ncapabilities.setCapability(\"browserName\", \"chrome\");\ncapabilities.setCapability(\"version\", \"latest\");\n\nHashMap ltOptions = new HashMap();\nltOptions.put(\"username\", \"YOUR_USERNAME\");\nltOptions.put(\"accessKey\", \"YOUR_ACCESS_KEY\");\nltOptions.put(\"w3c\", true);\nltOptions.put(\"name\", \"Test Name\");\nltOptions.put(\"build\", \"Automation Build Name\");\n// highlight-next-line\nltOptions.put(\"smartUI.project\", \"YOUR_PROJECT_NAME\");\n// highlight-next-line\nltOptions.put(\"smartUI.build\", \"SmartUI_BUILD_NAME\");\n// highlight-next-line\nltOptions.put(\"smartUI.baseline\", true);\n\ncapabilities.setCapability(\"LT:Options\", ltOptions);"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
+# SmartUI SDK Capabilities
+
 SmartUI SDK provides several capabilities that allow you to configure your visual regression tests. These capabilities can be added to your test configuration to control various aspects of the testing process.
 
 **Important**

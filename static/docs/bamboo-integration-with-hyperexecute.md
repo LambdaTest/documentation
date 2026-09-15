@@ -1,6 +1,23 @@
-# Bamboo CI Integration with HyperExecute
+# Bamboo CI
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
+Enable Plan button. Click on Run -> Run plan button. Test will get triggered and start executing. You can check the activity status of your Job here.",
+          "url": "https://www.testmuai.com/support/docs/bamboo-integration-with-hyperexecute/#step-5-configure-job"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 6,
+          "name": "Step 6: Check the Output",
+          "text": "Logs of the Job Build Result on HyperExecute Dashboard",
+          "url": "https://www.testmuai.com/support/docs/bamboo-integration-with-hyperexecute/#step-6-check-the-output"
+        }
+      ]
+    }
+  ]) }}
+/>
+
+# Bamboo CI Integration with HyperExecute
 
 Bamboo is a continuous integration (CI) and continuous delivery (CD) server from Atlassian. It helps teams automate the software development and delivery process, from code commit to production deployment. Bamboo can be used to build, test, and deploy software on a variety of platforms, including cloud, on-premises, and hybrid environments.
 

@@ -2,6 +2,20 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
+();\nconfig.put(\"screenshotName\", \"\");\n((JavascriptExecutor) driver).executeScript(\"smartui.takeScreenshot\", config);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Run it",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "mvn clean install exec:java -Dexec.mainClass=\"com.lambdatest.SmartUI\" -Dexec.classpathScope=test -e"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 TestMu AI’s SmartUI allows you to organize your visual regression screenshots logically by linking them to the automation test cases they were captured in. Grouping screenshots by test cases reduces triage fatigue and allows you to review visual differences with full automation execution context.
 
 This guide’s **recommended flow** is **Selenium on the grid + SmartUI Hooks** (`smartUI.project` in Java `LT:Options` and **`smartui.takeScreenshot`** in the browser). That path works with **Hooks-oriented** SmartUI projects (including many **Omni** projects) and matches the **Capability Generator** output in the TestMu AI dashboard.

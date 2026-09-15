@@ -2,6 +2,55 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
+\n\n\n\n```json title=\"Add the following in your /project/lambdatest-config.json\"\n\"smart_ui\": {\n      \"project\": \"\" // Add your SmartUI Project Name here\n      \"options\": {\n        // highlight-next-line\n        \"largeImageThreshold\": 100 // The image threshold for comparison the min of 100 and max of 1200\n      }\n    }"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Error Identifier Types (Selenium)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n<\/TabItem>\n\n\n\n```json title=\"Make changes in your /project/lambdatest-config.json\"\n\"smart_ui\": {\n      \"project\": \"\" // Add your SmartUI Project Name here\n      \"options\": {\n        // highlight-next-line\n        \"errorType\": \"movement\" // To set the error identifier\n      }\n    }\n"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Ignore - P2P False Positives (Selenium)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n<\/TabItem>\n\n\n\n```json title=\"Make changes in your /project/lambdatest-config.json\"\n\"smart_ui\": {\n      \"project\": \"\" // Add your SmartUI Project Name here\n      \"options\": {\n        // highlight-next-line\n        \"ignore\": \"antialiasing\" // To set the ignore identifier\n      }\n    }\n"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Transparency (Selenium)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n<\/TabItem>\n\n\n\n```json title=\"Make changes in your /project/lambdatest-config.json\"\n\"smart_ui\": {\n      \"project\": \"\" // Add your SmartUI Project Name here\n      \"options\": {\n        // highlight-next-line\n        \"transparency\": 0.3 // minimum = 0 and maximum = 1 supports upto one decimal such as 0.1 to 0.9\n      }\n    }\n"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Selenium",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n<\/TabItem>\n\n\n\n```json title=\"Make changes in your /project/lambdatest-config.json\"\n\"smart_ui\": {\n  \"project\": \"\",\n  \"options\": {\n    \"boundingBoxes\": [\n      {\n        \"left\": 100,\n        \"top\": 500,\n        \"right\": 800,\n        \"bottom\": 300\n      },\n      {\n        \"left\": 800,\n        \"top\": 50,\n        \"right\": 20,\n        \"bottom\": 700\n      }\n    ]\n  }\n}\n"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Selenium",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n<\/TabItem>\n\n\n\n```json title=\"Make changes in your /project/lambdatest-config.json\"\n\"smart_ui\": {\n  \"project\": \"\",\n  \"options\": {\n    \"ignoredBoxes\": [\n      {\n        \"left\": 100,\n        \"top\": 500,\n        \"right\": 800,\n        \"bottom\": 300\n      },\n      {\n        \"left\": 800,\n        \"top\": 50,\n        \"right\": 20,\n        \"bottom\": 700\n      }\n    ]\n  }\n}\n"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Selenium",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n<\/TabItem>\n\n\n\n```json title=\"Make changes in your /project/lambdatest-config.json\"\n\"smart_ui\": {\n  \"project\": \"\",\n  \"options\": {\n    \"ignoreAreasColoredWith\": {\n      \"r\": 242,\n      \"g\": 201,\n      \"b\": 76,\n      \"a\": 1\n    }\n  }\n}\n"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 ## Our Pixel to Pixel (P2P) Comparison Options
 
 We offer multiple options for comparing the **Baseline** and the **Test Output** screenshots captured during your automation testing suites.

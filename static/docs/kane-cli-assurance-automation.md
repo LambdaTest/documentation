@@ -2,6 +2,20 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
+verdicts.json <<'EOF'\n[\n  {\"ref\": \"uc-create-an-account-to-order\", \"resolution\": \"approved\"},\n  {\"ref\": \"uc-manage-the-cart\",            \"resolution\": \"approved\"}\n]\nEOF\nkane-cli context review --verdicts verdicts.json --json"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "A CI shape that works",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "# fail the pipeline on unresolved high-risk ambiguity, never guess:\nkane-cli context extract --mode ci\n\n# or: let it pause, surface the questions as a build artifact, resume in a follow-up job:\nkane-cli context extract --mode agent > extract.ndjson; code=$?\nif [ \"$code\" -eq 3 ]; then\n  kane-cli context sessions --json > pending-sessions.ndjson   # hand to a human or an agent\nfi\n\n# design a specific use-case unattended, bounded:\nkane-cli design tests --use-case uc-checkout --max 8 --mode ci\n\n# keep the suite honest on requirement changes:\nkane-cli maintain reconcile --from ./docs/prd.md --source-id prd --plan"
+      }
+    ],
+    "dateModified": "2026-09-03T14:41:00+05:30"
+  }) }}
+/>
+
 The conversational assurance commands — `context extract`, `design tests`, and `maintain reconcile` — are interactive by default. This page is the contract for running them **headless**: from CI, from a script, or from an AI agent driving kane-cli.
 
 ## The ask policy: `--mode`

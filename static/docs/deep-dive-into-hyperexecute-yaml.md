@@ -2,44 +2,192 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
-This document contains detailed explanations for all YAML flags, providing an in-depth understanding of each configuration parameter.
-
-## Mandatory Parameters
-
-### `version`
-The version of HyperExecute YAML being used to run the tests. Currently there are two supported versions are [0.1](/support/docs/deep-dive-into-hyperexecute-yaml/#hyperexecute-yaml-parameters) and [0.2](/support/docs/hyperexecute-yaml-version0.2/).
-```yaml
-version: 0.1
-```
-
-### `runson`
-In this flag, you will define your required Operating System on which you want to run your tests.
-> Currently we support linux, mac (macOS Monterey), mac13 (macOS Ventura), win (Windows 10) and win11 (Windows 11).
-
-```yaml
-runson: linux # mac, mac13, win, win11
-```
-
-If you want to run a multi OS job, you can use [matrix method](/support/docs/hyperexecute-matrix-multiplexing-strategy/) as shown below
-
-```yaml
-runson: ${matrix.os}
-matrix:
-os: [linux, mac, mac13, win, win11]
-```
-
-### `pre`
-All actions you need to perform before each test execution, such as installing dependencies. You’ll ideally want to use this parameter to "pre" run simple commands like `npm install`, `yarn install`, `mvn install` etc
-
-```yaml
-pre:
-- npm install
-- mvn install
-```
-
->📘 Refer to [globalPre](/support/docs/deep-dive-into-hyperexecute-yaml/#globalpre) command to perform a common global setup for all your tasks, such as installing dependencies or configuring environments.
-
-## AutoSplit Mode Parameters
+macParallelism, winParallelism, and linuxParallelism",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "parallelism: 2\nlinuxParallelism: 2\nwinParallelism: 1\nmacParallelism: 3\n\nmatrix:\n os: [win, mac]\n version: [1, 2, 3]\n browser: [chrome]"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "testRunnerCommand",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "testRunnerCommand: mvn test -Dcucumber.options=\"$test\" -Dscenario=\"$test\" -DOs=\"win 10\"\n\n# This command runs the test using Maven and passes in the options for Cucumber, the scenario to run, and the operating system to use."
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Platform specific testRunnerCommand",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "testRunnerCommand: mvn test -Dcucumber.options=\"$test\" -Dscenario=\"$test\" -DOs=\"win 10\"\nlinuxTestRunnerCommand: mvn test `-Dcucumber.options=\"$test\"`  `-Dscenario=\"$test\"`   `-DOs=\"linux\"`\nwinTestRunnerCommand: mvn test `-Dcucumber.options=\"$test\"` `-Dscenario=\"$test\"`  `-DOs=\"win 10\"`\nmacTestRunnerCommand: mvn test -Dcucumber.options=\"$test\" -Dscenario=\"$test\" -DOs=\"mac\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "cacheKey",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "cacheKey: '{{ checksum \"pom.xml\" }}'"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "cacheKey",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "cacheKey: {{ checksum \"dir1/dir2/package-lock.json\" }}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "cacheDirectories",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "cacheDirectories:\n  - .m2"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "cacheDirectories",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "cacheKey: '{{ checksum \"pom.xml\" }}'\ncacheDirectories:\n  - .m2"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "env",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "env:\n  USERNAME: abc\n  PLATFORM: windows"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Special Character Encoding",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "env:\n  LANG: es_ES.UTF-8\n  LC_ALL: es_ES.UTF-8\n\npre:\n  - sudo locale-gen es_ES.UTF-8\n  - sudo update-locale LANG=es_ES.UTF-8"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "If you are using Java-based frameworks, you can also set the encoding via JAVA_TOOL_OPTIONS",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "env:\n  JAVA_TOOL_OPTIONS: \"-Dfile.encoding=UTF-8\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "The runtime flag is used to",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "runtime:\n  - language: java\n    version: \"11\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "runtime",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "runtime:\n  - language: java\n    version: 11\n    addons:\n      - name: \"gauge\"\n        version: \"1.4.0\"\n      - name: \"gradle\"\n        version : \"7.0\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 29",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "runtime:\n  - language: java\n    version: '17'\n    addons:\n      - name: gauge\n        version: '1.5.6'\n      - name: gradle\n        version: '7.6'\n  - language: python\n    version: '3.10'\n  - language: node\n    version: '16'"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "retryOnFailure",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "retryOnFailure: true"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "\u2705 Use Case:",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "false<\/testFailureIgnore>"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "maxRetries",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "retryOnFailure: true\nmaxRetries: 2"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "post",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "post:\n  - echo /output/output.log\n  - curl https://www.example.com"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "report",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "report: true\npartialReports:\n location: target/surefire-reports/html\n type: html\n frameworkName: extent"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "If you want to generate multiple reports of different types supported by HyperExecute",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "partialReports:\n  - location: reports/json\n    type: json\n    frameworkName: extent-native\n\n  - location: target/surefire-reports\n    type: html\n    frameworkName: testng"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "report",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "framework:\n  name: maven/testng\n  defaultReports: false"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "location: target/abc//pqr//cucumber-reports",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\nEnsure that your Testrunner.java file should have the complete path from where partial reports will be added. Example:\n\n```java title=\"Testrunner.java\"\nplugin = {\n    \"json:target/abc/mno/pqr/xyz/cucumber-reports/CucumberTestReport.json\",\n    \"json:target/abc/its/pqr/abc/cucumber-reports/CucumberTestReport.json\"\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "errorCategorizedOnFailureOnly",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "errorCategorizedOnFailureOnly: true"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "errorCategorizedReport",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "errorCategorizedReport:\n  enabled: true"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "You can also use it along with your existing job labels like this",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "jobLabel: ['chrome', 'linux', 'low']"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "mergeArtifacts",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "mergeArtifacts: true"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "uploadArtefacts",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "uploadArtefacts:\n\n# Will upload your reports from target/site/** to HyperExecute as FinalReport\n  - name: FinalReport \n    path:\n    - target/site/**\n  \n  # Will upload your Surefire reports from target/surefire-reports/**to HyperExecute as Surefire Report\n  - name: Surefire Report\n     path:\n     - target/surefire-reports/**"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "commands",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "
 
 ### `autosplit`
 Auto-Split mode automatically splits your [`scenarios`](/support/docs/hyperexecute-status/#3-stage-level-status) among the concurrent number of [`tasks`](/support/docs/hyperexecute-status/#2-task-level-status) and executes them parallelly. This ensures optimal utilization of resources and significantly reduces the overall execution time of your test suite.
@@ -1073,6 +1221,7 @@ values: ["@x", "@y"]
 #### Working of `dataJsonBuilder`
 
 - The **input JSON data** should follow this format:
+
 ```javascript title="sample.json"
 [
 {
@@ -1112,6 +1261,7 @@ values: ["@x", "@y"]
 ```
 
 - The **filtered JSON data** will be:
+
 ```javascript title="sample.json"
 [
 {
@@ -1141,6 +1291,7 @@ After filtering, the JSON data is indexed to distribute test cases. Here’s how
 So as per the above filtered JSON data:
 
 - **VM1** will receive all test cases related to `username: "abc"`
+
 ```javascript
 {
 "accesskey": "jhscuystc7ewgucu79as8yc9",
@@ -1150,6 +1301,7 @@ So as per the above filtered JSON data:
 ```
 
 - **VM2** will receive all test cases related to `username: "bcd"`.
+
 ```javascript
 {
 "accesskey": "cjdy87328yeiqhd93urd28hh",
@@ -1159,6 +1311,7 @@ So as per the above filtered JSON data:
 ```
 
 - **VM3** will handle the JSON object:
+
 ```javascript
 {
 "accesskey": "jhscuystc7ewgucu79as8yc9",

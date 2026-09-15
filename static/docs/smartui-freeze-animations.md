@@ -2,6 +2,12 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
+{\n    // Freeze all SVGs animated using animate and animateTransform tag\n    // SVGs animated through CSS or JS will require custom solutions\n    const allSVGs = document.getElementsByTagName('svg');\n    let allSVGAnimations = [];\n    for (let svg of allSVGs) {\n        const svgAnimation = [...svg.getElementsByTagName('animate'), ...svg.getElementsByTagName('animateTransform')];\n        allSVGAnimations = allSVGAnimations.concat(svgAnimation);\n    }\n\n    allSVGAnimations.forEach(animation => {\n        const duration = animation.getAttribute('dur');\n        animation.setAttribute('begin', '0s');\n        animation.setAttribute('dur', '0s');\n    });\n}"
+      }
+    ],
+    "dateModified": "2026-02-12T19:51:34+05:30"
+  }) }}
+/>
 Animations, while visually appealing, can pose challenges during visual testing by causing false positives in visual diffs. These false positives often arise because animations can create minor variations between screenshots, even when there are no actual changes to the content. To address this, TestMu AI SmartUI provides the capability to automatically freeze animations during visual testing, ensuring consistent and reliable test results.
 
 ## Freezing SVG Animations

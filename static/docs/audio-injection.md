@@ -1,6 +1,36 @@
-# Audio Injection on Real Devices
+# Audio Injection/Input on Real Devices
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
+[24\u00d77 Chat Support], or email us at support@testmuai.com. Audio Injection enables you to simulate microphone input on real devices by injecting pre-recorded audio files (MP3, WAV) into the device's mic pipeline during automated tests. Use it to test speech-to-text, voice commands, voice assistants, in-app recording, KYC voice verification, and any other microphone-dependent feature. Audio Injection is supported on selected Real Devices only. It is not available on Emulators or Simulators. The audio file must be uploaded to TestMu AI before it can be injected.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1 - Upload Audio File",
+          "text": "Use the Upload Media API to upload an audio file to your TestMu AI account. Response Save the returned media_url. You will use it in subsequent steps.",
+          "url": "https://www.testmuai.com/support/docs/audio-injection/#step-1---upload-audio-file"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2 - Enable Audio Injection on Your Session",
+          "text": "Set the enableAudioInjection capability when creating your driver session. Setting the media capability pre-injects the audio when the session starts. You can still use the lambda-audio-injection hook later to switch to a different file mid-session.",
+          "url": "https://www.testmuai.com/support/docs/audio-injection/#step-2---enable-audio-injection-on-your-session"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3 - Inject and Control Audio with Lambda Hooks",
+          "text": "Use the following hooks via driver.executeScript:",
+          "url": "https://www.testmuai.com/support/docs/audio-injection/#step-3---inject-and-control-audio-with-lambda-hooks"
+        }
+      ]
+    }
+  ]) }}
+/>
+
+# Audio Injection on Real Devices
 
 Test audio-driven and microphone-dependent features on real Android and iOS devices through Appium / Selenium automation. Inject pre-recorded audio files directly into the device microphone, no physical mic input required.
 

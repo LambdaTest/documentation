@@ -15,12 +15,14 @@ TestMu AI enables you to install and uninstall applications during automation te
 You can install apps uploaded to the TestMu AI platform directly within your automation scripts using the `lambda-install-app` command followed by the app’s ID. This ID can be either the TestMu AI-generated ID or a custom ID assigned during upload.
 
 **Python example:**
+
 ```python
 driver.execute_script("lambda-install-app=myApp")
 driver.execute_script("lambda-install-app=lt://APP100000000123456789123456789")
 ```
 
 **JavaScript example:**
+
 ```javascript
 await browser.execute("lambda-install-app", {
 /* Change the App URL */
@@ -35,12 +37,14 @@ retainData: true
 You can uninstall apps during the execution of an automation test using the command `lambda-uninstall-app` followed by the app's package name (for Android apps) or bundle ID (for iOS apps).
 
 **Python example:**
+
 ```python
 driver.execute_script("lambda-uninstall-app=com.myApp.beta")
 driver.execute_script("lambda-uninstall-app=com.apple.myApp")
 ```
 
 **JavaScript example:**
+
 ```javascript
 /* Change the App ID */
 const APP_ID = "com.lambdatest.proverbial";

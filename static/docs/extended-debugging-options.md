@@ -52,6 +52,7 @@ Redirect outgoing requests to a different URL using the `lt:intercept:redirect` 
 #### Example Usage
 
 **Python:**
+
 ```python
 driver.execute_script("lt:intercept:redirect", {
 "url": "https://www.google.com",
@@ -61,6 +62,7 @@ driver.get("https://www.google.com")
 ```
 
 **Node.js:**
+
 ```javascript
 await driver.executeScript("lt:intercept:redirect", {
 url: "https://www.google.com",
@@ -94,6 +96,7 @@ Mock a custom response for the intercepted URL using the `lt:intercept:response`
 #### Example Usage
 
 **Python:**
+
 ```python
 driver.execute_script("lt:intercept:response", {
 "url": "https://www.amazon.com",
@@ -110,6 +113,7 @@ driver.get("https://www.amazon.com")
 ```
 
 **Node.js:**
+
 ```javascript
 await driver.executeScript("lt:intercept:response", {
 url: "https://jsonplaceholder.typicode.com/todos/1",
@@ -150,6 +154,7 @@ Inject error responses to test how your application handles failures using the `
 #### Example Usage
 
 **Python:**
+
 ```python
 driver.execute_script("lt:intercept:error", {
 "url": "https://www.testmuai.com",
@@ -159,6 +164,7 @@ driver.get("https://www.lambdatest.com")
 ```
 
 **Node.js:**
+
 ```javascript
 await driver.executeScript("lt:intercept:error", {
 url: "https://example.com/images/*",
@@ -207,12 +213,14 @@ The `lt:throttle:cpu` method simulates lower or higher CPU usage on the testing 
 ### Example Usage
 
 **Python:**
+
 ```python
 driver.execute_script("lt:throttle:cpu", {"rate": 4})
 driver.get("https://lambdatest.com")
 ```
 
 **Node.js:**
+
 ```javascript
 await driver.executeScript("lt:throttle:cpu", { rate: 4 });
 await driver.get("https://www.wikipedia.org");
@@ -251,6 +259,7 @@ Alternatively, you can pass a predefined network profile name as a string (e.g.,
 ### Custom Network Configuration
 
 **Python:**
+
 ```python
 driver.execute_script("lambda-throttle-network", {
 "download": 1000,
@@ -261,6 +270,7 @@ driver.get("https://lambdatest.com")
 ```
 
 **Node.js:**
+
 ```javascript
 await driver.executeScript("lambda-throttle-network", {
 download: 1000,
@@ -281,12 +291,14 @@ await driver.get("https://www.cnn.com");
 ### Using Predefined Network Profiles
 
 **Python:**
+
 ```python
 driver.execute_script("lambda-throttle-network", "Offline")
 driver.get("https://lambdatest.com")
 ```
 
 **Node.js:**
+
 ```javascript
 await driver.executeScript("lambda-throttle-network", "Regular 3G");
 await driver.get("https://www.nytimes.com");
@@ -325,6 +337,7 @@ The `lt:downloadHAR` method downloads network activity data in HAR (HTTP Archive
 ### Example Usage
 
 **Python:**
+
 ```python
 driver.execute_script("lt:downloadHAR", {
 "job_id": "123456",
@@ -333,6 +346,7 @@ driver.execute_script("lt:downloadHAR", {
 ```
 
 **Node.js:**
+
 ```javascript
 await driver.executeScript("lt:downloadHAR", {
 job_id: "123456",

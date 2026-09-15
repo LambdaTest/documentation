@@ -1,12 +1,12 @@
-# How the TestMu AI Agent Assurance Platform Evaluates Agents
+# How the TestMu AI Agent Testing Platform Evaluates Agents
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
-The Agent Assurance Platform runs every evaluation through five phases: configure context, generate scenarios, run the testing agents, score each interaction, and return a production readiness verdict. 15+ specialized testing agents drive it, each probing one quality dimension, all in parallel against your agent's real endpoint.
+The TestMu AI Agent Testing Platform runs every evaluation through five phases: configure context, generate scenarios, run the testing agents, score each interaction, and return a production readiness verdict. 15+ specialized testing agents drive it, each probing one quality dimension, all in parallel against your agent's real endpoint.
 
 You run it from one hosted web application, the REST API, the CLI, or a CI/CD pipeline. There is no SDK to install and no local infrastructure to operate.
 
-## The Five-Phase Evaluation Loop
+## How the Five-Phase Evaluation Loop Works
 
 Every run follows the same path, from the context you upload to a go or no-go verdict. The phases always execute in order.
 
@@ -22,7 +22,7 @@ Every run follows the same path, from the context you upload to a go or no-go ve
 
 The agent prompt in phase one is the evaluation baseline. It tells the platform what a correct response looks like, so the quality of the verdict depends on how precisely you define it.
 
-## The Specialized Testing Agents
+## What the Specialized Testing Agents Evaluate
 
 The platform does not rely on a single evaluator. 15+ testing agents each own one quality dimension, the way a review panel produces a more reliable assessment than one reviewer. They run against the same conversation in parallel.
 
@@ -44,13 +44,13 @@ The platform does not rely on a single evaluator. 15+ testing agents each own on
 | Performance Monitor | Tracks latency and response completeness under load |
 | User Experience Evaluator | Assesses overall user journey quality |
 
-## Security & red-teaming
+## How the Platform Red-Teams Your Agent
 
 Agent Testing red-teams AI agents with adversarial scenario suites aligned to the OWASP Top 10 for LLM applications: prompt injection (LLM01), insecure output handling (LLM02), sensitive-information disclosure and PII leakage (LLM06), data exfiltration, jailbreak, and policy violations.
 
-Toxicity, bias and harmful-content generation are evaluated as first-class metrics across the tested persona set. Every finding is evidence-backed - the specific conversation turns that triggered a flag are preserved with per-turn attribution and confidence intervals, exportable for regulatory documentation - and the A2A CLI runs the same scenarios in CI so security testing gates every release.
+Toxicity, bias and harmful-content generation are evaluated as first-class metrics across the tested persona set. Every finding is evidence-backed. The specific conversation turns that triggered a flag are preserved with per-turn attribution and confidence intervals, exportable for regulatory documentation, and the A2A CLI runs the same scenarios in CI so security testing gates every release.
 
-## Platform Architecture Layers
+## How the Platform Architecture Layers Fit Together
 
 The platform is a single hosted web application. A request flows through six layers, from the interface you configure in to the external providers that place calls and run models.
 
@@ -144,7 +144,7 @@ Results, recordings & assets persisted
 All data encrypted at rest · TLS in transit · Per-org isolation
 
 ▼
-Platform connects to your existing providers - no vendor lock-in
+Platform connects to your existing providers, with no vendor lock-in
 
     EXTERNAL INTEGRATIONS
 
@@ -190,6 +190,6 @@ The testing agents score chat and voice agents across 9 quality metrics and phon
 
 The verdict is a deployment decision, not just a number. Green clears the agent for production, Yellow flags specific issues to fix first, and Red blocks deployment. Every verdict links back to the conversation turns that drove it, so a failing result points straight at the fix.
 
-## Related Agent Testing Guides
+## Related TestMu AI Guides
 
 - See how to [run your first evaluation from the dashboard](/support/docs/testing-your-first-ai-agent/).

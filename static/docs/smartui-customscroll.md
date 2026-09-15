@@ -2,6 +2,57 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
+();\noptions.put(\"pageCustomScroll\", true);\noptions.put(\"elementsCustomScroll\", true);\n\nSmartUISnapshot.smartuiSnapshot(driver, \"PDF-Viewer-Page-25\", options);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Java And Playwright Examples (Playwright)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "await page.goto('https://vault.example.com/ui/#doc_info/2/0/1?anQS=page25');\n\nawait page.waitForSelector('.pageContent-scrollbar-content');\nawait page.waitForTimeout(1500);\n\nawait smartuiSnapshot(page, 'Vault-PDF-Page-25', {\n  elementsCustomScroll: true,\n  pageCustomScroll: false,\n});"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Enable CustomScroll Only Where Needed",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "await smartuiSnapshot(page, 'Header');\n\nawait smartuiSnapshot(page, 'Doc-Viewer-Page-25', {\n  pageCustomScroll: true,\n  elementsCustomScroll: true,\n});\n\nawait smartuiSnapshot(page, 'Footer');"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Recommended option",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "{\n  elementsCustomScroll: true\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Use both options if the page and viewer can both scroll",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "{\n  pageCustomScroll: true,\n  elementsCustomScroll: true\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Recommended option",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "{\n  elementsCustomScroll: true\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Recommended option",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "{\n  elementsCustomScroll: true\n}"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
+# Custom Viewport Capture in SmartUI Screenshots
+
 In TestMu AI **SmartUI**, **custom viewport capture screenshots** preserve the scroll position that exists when you take a snapshot. This helps SmartUI capture the exact visual state of pages that use nested scroll containers, PDF viewers, document viewers, virtualized lists, infinite-scroll pages, data grids, modals, drawers, and embedded scrollable components.
 
 Use CustomScroll when the content you want to validate is not fully represented by the top-level page viewport. SmartUI records the active scroll state during snapshot capture, restores it before rendering the screenshot, and compares the resulting image against your baseline.

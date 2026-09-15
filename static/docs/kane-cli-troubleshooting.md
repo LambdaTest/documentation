@@ -2,6 +2,48 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
+/dev/null | tail -1 | jq ."
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "For example, instead of \"navigate through the sign-up flow\", be explicit",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\"click Sign Up, fill email with '{{email}}', fill password with '{{password}}', click Create Account\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "kane-cli: command not found after install",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "npm config get prefix\n\n# Add to PATH (adjust path based on above output)\nexport PATH=\"$(npm config get prefix)/bin:$PATH\"\n\n# Make permanent: add to ~/.zshrc or ~/.bashrc\necho 'export PATH=\"$(npm config get prefix)/bin:$PATH\"' >> ~/.zshrc"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Fix: Check your version and upgrade",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "node --version   # Must be 18 or higher"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Install fails with \"sharp: Please add node-addon-api\"",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "# Diagnose: a printed version means libvips is the cause\npkg-config --modversion vips-cpp\n\n# Bypass libvips detection. Uninstall first, since npm considers\n# kane-cli already installed and will not re-resolve sharp otherwise.\nnpm uninstall -g @testmuai/kane-cli\nSHARP_IGNORE_GLOBAL_LIBVIPS=1 npm install -g @testmuai/kane-cli\n\n# Make it permanent\necho 'export SHARP_IGNORE_GLOBAL_LIBVIPS=1' >> ~/.zshrc && source ~/.zshrc"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Start every mobile problem with doctor, which prints one line per required check, each with a fix",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "kane-cli doctor              # required checks, each with a fix if it fails\nkane-cli doctor --install    # install the test tooling Kane CLI manages\nkane-cli doctor --targets    # list the emulators and simulators available"
+      }
+    ],
+    "dateModified": "2026-09-07T15:18:23+05:30"
+  }) }}
+/>
+
 ## Log Locations
 
 Before diagnosing, know where to look:

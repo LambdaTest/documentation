@@ -2,6 +2,26 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
+\n    testng<\/artifactId>\n    7.5<\/version>\n    test<\/scope>\n<\/dependency>"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Selenium/Playwright/Puppeteer/Cypress - JavaScript",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JSON",
+        "text": "{\n  \"dependencies\": {\n    \"selenium-webdriver\": \"4.1.0\",\n    \"cypress\": \"9.5.0\",\n    \"playwright\": \"1.15.0\"\n  }\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Selenium/Playwright - C# (.NET)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "XML",
+        "text": "\n    net6.0<\/TargetFramework>\n    Library<\/OutputType>\n<\/PropertyGroup>"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
 Maintaining consistent versions across testing frameworks in your project setup is crucial to avoid runtime errors, compatibility issues, and unexpected behaviors. This guide focuses on specifying framework versions in YAML configuration files and aligning them with the version details in project-specific files like `package.json`, `pom.xml`, `.csproj`, and system environment variables for frameworks like Selenium, Playwright, Puppeteer, Cypress, Maestro, and Appium.
 
 ## Why Version Consistency Matters

@@ -2,6 +2,35 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
+\n<\/Tabs>\n\n:::info\n\n- You must add the generated **APP_URL** to the `app` capability in the config file.\n- You must set **isRealMobile** capability to `false` in the config file to run on **Virtual Devices**\n- You can generate capabilities for your test requirements with the help of our inbuilt [**Capabilities Generator tool**](https://www.testmuai.com/capabilities-generator/).For more details, please refer to our guide on [**Desired Capabilities in Appium**](/support/docs/desired-capabilities-in-appium/).\n\n:::\n\n### Step 6: Execute and Monitor your Tests\n\n- Execute the following command to run your test on TestMu AI platform:\n\n\n\n\n\n```php\ncomposer iossingle   #for single tests\ncomposer iosparallel  #for parallel tests"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 6: Execute and Monitor your Tests (Android)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "PHP",
+        "text": "composer androidsingle   #for single tests\ncomposer androidparallel  #for parallel tests"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "The behat-skill package includes",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "behat-skill/\n\u251c\u2500\u2500 SKILL.md\n\u2514\u2500\u2500 reference/\n    \u251c\u2500\u2500 playbook.md\n    \u2514\u2500\u2500 advanced-patterns.md"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Install a Behat Agent Skill using the command below",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "codeRepository": "https://github.com/LambdaTest/agent-skills",
+        "text": "# Clone the repo and copy the skill you need\ngit clone https://github.com/LambdaTest/agent-skills.git\ncp -r agent-skills/behat-skill .claude/skills/\n\n# Or for Cursor / Copilot\ncp -r agent-skills/behat-skill .cursor/skills/"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 In this documentation, you will learn how to trigger a automation script of **Behat** for application testing with **Appium** on TestMu AI, set the [**desired capabilities**](/support/docs/desired-capabilities-in-appium/) for appium testing, and other advanced features of TestMu AI.
 
 ## Prerequisites

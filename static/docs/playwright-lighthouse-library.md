@@ -2,6 +2,26 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
+This feature is only supported on **Windows** and **macOS** platforms.\n\nThe feature allows you to generate Lighthouse reports for authenticated web pages using Playwright. This is particularly useful for testing performance, accessibility, SEO, and other quality metrics for pages that require authentication. By leveraging authentication tokens, you can analyze restricted pages in your Playwright tests on both **Windows** and **macOS** environments.\n\n\n\n\n```javascript\nawait page.evaluate(() => {}, `lambdatest_action: ${JSON.stringify({ \n  action: 'lighthouseReport', \n  arguments: { url: 'https://www.example.com', \n  args: `--extra-headers \n  ${JSON.stringify({ authtoken: \"YOUR_AUTH_TOKEN\" })}` \n} })}` ); "
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "For Authenticated Pages (macOS)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "await page.evaluate(() => {}, `lambdatest_action: ${JSON.stringify({ \n  action: 'lighthouseReport', \n  arguments: { url: 'https://www.example.com', \n  args: '--extra-headers \n  \"{\\\\\"authtoken\\\\\": \\\\\"YOUR_AUTH_TOKEN\\\\\"}\"' \n} })}`);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Sample Test Script",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n## Trigger your Test on TestMu AI\n### Set up your authentication\n\nMake sure you have your TestMu AI credentials with you to run test automation scripts on TestMu AI. To obtain your access credentials, [purchase a plan](https://billing.lambdatest.com/billing/plans) or access the [Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://appautomation.lambdatest.com/). Then, set TestMu AI `Username` and `Access Key` in environment variables with following commands.\n\n\n\n\n  \n  \n  {`export LT_USERNAME=${ YOUR_LAMBDATEST_USERNAME()}\nexport LT_ACCESS_KEY=${ YOUR_LAMBDATEST_ACCESS_KEY()}`}\n<\/CodeBlock>\n<\/div>\n\n<\/TabItem>\n\n\n\n  \n  \n  {`set LT_USERNAME=${ YOUR_LAMBDATEST_USERNAME()}\nset LT_ACCESS_KEY=${ YOUR_LAMBDATEST_ACCESS_KEY()}`}\n<\/CodeBlock>\n<\/div>\n\n<\/TabItem>\n<\/Tabs>\n\n### Run your test\nPass the below command in the terminal to run the test:\n```bash\nnode RELATIVE_PATH_OF_YOUR_TEST_FILE"
+      }
+    ],
+    "dateModified": "2026-09-09T19:13:32+05:30"
+  }) }}
+/>
 A Lighthouse Report is a performance, accessibility, SEO, and best practices evaluation report generated using [Google Lighthouse](https://developers.google.com/web/tools/lighthouse), an open-source, automated tool developed by Google. It is commonly used to assess and optimize the quality of web pages.
 
 TestMu AI lets you perform Playwright automation while allowing you to generate Lighthouse reports with Playwright Lighthouse Library in a single test.
@@ -27,6 +47,7 @@ export LIGHTHOUSE_LAMBDATEST='true'
 Generating lighthouse report within the test might increase the test duration. It is advisable to generate the lighthouse reports only in the required tests.
 
 You can easily add the Lighthouse Performance Metrics of the website you want to test by using the `lighthouseReport` action via the test. Following is the code snippet for generating Lighthouse report from the Playwright if you are using JavaScript:
+
 ```js title="playwright-lighthouse-report.js"
 await page.evaluate(_ => {}, `lambdatest_action: ${JSON.stringify({
 action: 'lighthouseReport',

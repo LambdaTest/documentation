@@ -2,6 +2,20 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
+\n\n\n\n**devices**\n\nAn array of mobile devices to capture screenshots from. List of supported device names can be found [here](#list-of-supported-device-viewports).\n\n:::note\n Mobile viewports are emulated in desktop environments.Android devices will have the screenshots rendered in Chrome, while iOS devices in Safari.\n SmartUI SDK will soon be supported simulation in case of iOS devices.\n:::\n\n**fullPage**\n\nSpecifies whether to capture full-page screenshots for mobile devices. By default<\/b>, `fullPage` is taken as true<\/b>; set it to `false` in order to take a viewport screenshot on a mobile viewport.\n\n**orientation**\n\nSpecifies the orientation of the mobile device. You can choose from `portrait` or `landscape` according to your usecase. By default<\/b>, the orientation is taken as portrait<\/b>.\n\n<\/TabItem>\n\n\n\n**waitForPageRender**\n\nIf one or more URLs in your script require a relatively higher amount of time to load, you may use the `waitForPageRender` key in the config file to make sure the screenshots are rendered correctly. Avoid using the same in case your websites render in less than 30 seconds as it might increase the execution time of your tests.\n\n**waitForTimeout**\n\nIf you are using any async components, you can add wait time for the page to load the DOM of your components. This can help avoid false-positive results for your tests. You can add the wait time in milliseconds, which might increase the execution time of your tests.\n\n**enableJavaScript**\n\nThe `enableJavaScript` option is a boolean parameter that determines whether JavaScript is enabled for all snapshots within the project. Enabling JavaScript may lead to side-effects such as animations or redirects, potentially affecting the reliability of your snapshots.  By default<\/b>, this option is set to false.<\/b>\n\n**allowedHostnames**\n\nThe `allowedHostnames` option controls the capture of assets from specific hostnames. By default, the SmartUI SDK only captures assets that match the hostname of the snapshot location. For instance, if snapshots are taken on `https://xyz.com`, assets hosted on `https://cdn.xyz.com` will not be captured. To include assets from other hostnames, each additional hostname needs to be added to the allowedHostnames configuration.\n\n<\/TabItem>\n\n\n\n**lazyLoadConfiguration**\n\nThe `lazyLoadConfiguration` option is used to handle lazy-loaded content on web pages. This configuration helps ensure that all content is loaded before capturing screenshots, preventing incomplete captures due to lazy loading.\n\nTo use this feature, ensure you have the latest version of SmartUI CLI installed:\n\n```bash\nnpm install -g @lambdatest/smartui-cli@latest"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Add the following configuration to your .smartui.json file",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JSON",
+        "text": "{\n  \"lazyLoadConfiguration\": {\n    \"enabled\": true,\n    \"jumpBackToTop\": true,\n    \"scrollDelay\": 250,\n    \"scrollStep\": 250\n  }\n}"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 Welcome to the world of simplified visual testing with the SmartUI SDK.
 
 This guide is designed to provide you with comprehensive information about the various configuration options available within the SmartUI SDK. Whether you're a new user seeking to customize your SmartUI integration or an experienced developer looking to optimize your testing workflows, this documentation will serve as your go-to resource for understanding and utilizing the configuration options effectively.

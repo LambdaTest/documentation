@@ -1,6 +1,71 @@
-# Ignore and Select Regions on SmartUI Web Hooks
+# Ignore and Select Regions on SmartUI Web Hooks (Coordinates and Selectors)
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
+left, top, right, bottom (pixels)\nHashMap ignoreByCoord = new HashMap<>();\nignoreByCoord.put(\"coordinates\", new String[]{\"847,185,1571,734\"});\n\nMap config = new HashMap<>();\nconfig.put(\"screenshotName\", \"home\");\nconfig.put(\"ignoreDOM\", ignoreByCoord);\n\n((JavascriptExecutor) driver).executeScript(\"smartui.takeScreenshot\", config);\n// the 847,185 -> 1571,734 rectangle is excluded from the comparison"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "NodeJS",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "await driver.executeScript('smartui.takeScreenshot', {\n  screenshotName: 'home',\n  ignoreDOM: {\n    coordinates: ['847,185,1571,734'], // left, top, right, bottom\n  },\n});"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Python",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Python",
+        "text": "driver.execute_script(\"smartui.takeScreenshot\", {\n    \"screenshotName\": \"home\",\n    \"ignoreDOM\": {\n        \"coordinates\": [\"847,185,1571,734\"],  # left, top, right, bottom\n    },\n})"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "2. Select a region instead of ignoring it (selectDOM) (Java)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "// compare ONLY this rectangle\nHashMap selectByCoord = new HashMap<>();\nselectByCoord.put(\"coordinates\", new String[]{\"0,0,1280,200\"});\nconfig.put(\"selectDOM\", selectByCoord);\n\n// ...or compare only the region of a matched element\nHashMap selectBySelector = new HashMap<>();\nselectBySelector.put(\"cssSelector\", new String[]{\"#price-table\"});\nconfig.put(\"selectDOM\", selectBySelector);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "2. Select a region instead of ignoring it (selectDOM) (NodeJS)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "// compare ONLY this rectangle\nconfig.selectDOM = { coordinates: ['0,0,1280,200'] };\n\n// ...or compare only the region of a matched element\nconfig.selectDOM = { cssSelector: ['#price-table'] };"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Python",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Python",
+        "text": "# compare ONLY this rectangle\nconfig[\"selectDOM\"] = {\"coordinates\": [\"0,0,1280,200\"]}\n\n# ...or compare only the region of a matched element\nconfig[\"selectDOM\"] = {\"cssSelector\": [\"#price-table\"]}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "4. Combine selectors and coordinates (Java)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "Map ignore = new HashMap<>();\nignore.put(\"cssSelector\", new String[]{\".promo\"});          // selector\nignore.put(\"coordinates\", new String[]{\"847,185,1571,734\"}); // coordinates\n\nconfig.put(\"ignoreDOM\", ignore);\n((JavascriptExecutor) driver).executeScript(\"smartui.takeScreenshot\", config);\n// both regions are ignored"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "4. Combine selectors and coordinates (NodeJS)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "config.ignoreDOM = {\n  cssSelector: ['.promo'],         // selector\n  coordinates: ['847,185,1571,734'], // coordinates\n};\nawait driver.executeScript('smartui.takeScreenshot', config);\n// both regions are ignored"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Python",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Python",
+        "text": "config[\"ignoreDOM\"] = {\n    \"cssSelector\": [\".promo\"],          # selector\n    \"coordinates\": [\"847,185,1571,734\"],  # coordinates\n}\ndriver.execute_script(\"smartui.takeScreenshot\", config)\n# both regions are ignored"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
+# Ignore and Select Regions on SmartUI Web Hooks
 
 On the **Web Hooks** path (Selenium with `driver.executeScript("smartui.takeScreenshot", config)`), you can define an ignore or select region in two ways: a **DOM selector** or raw **pixel coordinates**. Coordinate regions work the same way as selectors and need no extra setup.
 

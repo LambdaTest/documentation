@@ -2,6 +2,27 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
+'\n  appFilePath = 'PATH_TO_YOUR_APP_FILE'\n  testSuiteFilePath = 'PATH_TO_YOUR_TEST_SUITE'\n  device = 'YOUR_DESIRED_DEVICE_FOR_TESTING'\n  isFlutter = true //if you are running flutter dart tests\n  appId = \"lt://1234343\" //provide this only if you have already uploaded the app\n  testSuiteId = \"lt://1223444\" //provide this only if you have already uploaded the app\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 3: Configure Upload APK Parameters",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "### Step 4: Execute the Plugin\nTo run the plugin configured in build.gradle, execute the following command:\n\n```bash\n./gradlew runLambdaTest"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "If you only want to upload your APK files to TestMu AI, use the following command",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "./gradlew uploadApkToLambdaTest"
+      }
+    ],
+    "dateModified": "2026-02-12T19:51:34+05:30"
+  }) }}
+/>
+
 Gradle is a build automation tool for multi-language software development. It controls the development process across various tasks, including compilation, packaging, testing, deployment, and publishing. Supported languages include Java, Kotlin, Groovy, Scala, C/C++, and JavaScript.
 
 ## Steps to Setup the Gradle Plugin

@@ -73,6 +73,7 @@ assert the loading spinner is not visible
 ### Scenario: Toast Notification (Auto-Dismiss)
 
 Toast notifications appear briefly (typically 3-5 seconds) and then disappear. KaneAI does not currently support interacting with toast notifications via natural language commands. Use a JS snippet to capture them instead.
+
 ```javascript
 // Wait briefly and capture the toast content
 return document.querySelector('.toast-message')?.textContent || 'NO TOAST FOUND';

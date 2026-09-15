@@ -1,6 +1,43 @@
-# Perform Headless Browser Testing on Cloud Selenium Grid
+# How To Perform Headless Browser Testing
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
+\"your build name\",\n\t\t\"name\" => \"your test name\",\n\t\t\"platform\" => \"MacOS Catalina\",\n\t\t\"browserName\" => \"Chrome\",\n\t\t\"version\" => \"86.0\",\n\n\t\t\"headless\" => true\n\t\t)"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 4",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Ruby",
+        "text": "capabilities = Selenium::WebDriver::Remote::Capabilities.new\ncapabilities[\"build\"] = \"your build name\"\ncapabilities[\"name\"] = \"your test name\"\ncapabilities[\"platform\"] = \"MacOS Catalina\"\ncapabilities[\"browserName\"] = \"Chrome\"\ncapabilities[\"version\"] = \"86.0\",\n\ncapabilities[\"headless\"] = true"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 5",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "var capabilities = {\n\t\t\"build\" : \"your build name\",\n\t\t\"name\" : \"your test name\",\n\t\t\"platform\" : \"MacOS Catalina\",\n\t\t\"browserName\" : \"Chrome\",\n\t\t\"version\" : \"86.0\",\n\n\t\t\"headless\" : true\n\t}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 6",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Python",
+        "text": "capabilities = {\n\t\t\"build\" : \"your build name\",\n\t\t\"name\" : \"your test name\",\n\t\t\"platform\" : \"MacOS Catalina\",\n\t\t\"browserName\" : \"Chrome\",\n\t\t\"version\" : \"86.0\",\n\n\t\t\"headless\" : True\n\t}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Perform Headless Browser Testing on TestMu AI",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "package com.lambdatest;\n\nimport java.net.MalformedURLException;\nimport java.net.URL;\nimport org.openqa.selenium.By;\nimport org.openqa.selenium.remote.DesiredCapabilities;\nimport org.openqa.selenium.remote.RemoteWebDriver;\nimport org.testng.Assert;\nimport org.testng.annotations.AfterSuite;\nimport org.testng.annotations.BeforeSuite;\nimport org.testng.annotations.Test;\n\npublic class HeadlessAutomation {\n\n\tprivate static RemoteWebDriver driver;\n\tprivate static String Status=\"failed\";\n\n\t@BeforeSuite\n\tpublic void setup() throws MalformedURLException {\n\n\t\ttry {\n\t\t\tString username = System.getenv(\"LT_USERNAME\");\n\t\t\tString authkey = System.getenv(\"LT_ACCESS_KEY\");\n\t\t\tString hub = \"@hub.lambdatest.com/wd/hub\";\n\n\t\t\tDesiredCapabilities caps = new DesiredCapabilities();\n\t\t\tcaps.setCapability(\"browser\", \"Chrome\");\n\t\t\tcaps.setCapability(\"version\", \"86\");\n\t\t\tcaps.setCapability(\"platform\", \"MacOS Catalina\");\n\t\t\tcaps.setCapability(\"build\", \"Headless Automation\");\n\t\t\tcaps.setCapability(\"name\", \"Headless Automation\");\n\t\t\tcaps.setCapability(\"network\", true);\n\t\t\tcaps.setCapability(\"visual\", true); \n\t\t\tcaps.setCapability(\"video\", true);\n\t\t\tcaps.setCapability(\"console\", true);\n\n\t\t\t// Capability setting to enable Headless browsing\n\t\t\tcaps.setCapability(\"headless\",true);\n\n\n\t\t\tSystem.out.println(\"Desired Caps: \" + caps);\n\t\t\tdriver = new RemoteWebDriver(new URL(\"https://\" + username + \":\" + authkey + hub), caps);\n\t\t}\n\t\tcatch(Exception e)\n\t\t{\n\t\t\tSystem.out.println(e);\n\t\t}\n\t}\n\n\n\t@Test\n\tpublic static void testAssertion() {\n\n\t\ttry {\n\t\t\tdriver.get(\"https://opensource-demo.orangehrmlive.com/\"); //define the url\n\n\t\t\tString pageTitle = driver.getTitle();\t\t//get the title of the webpage\n\t\t\tSystem.out.println(\"The title of this page is ===> \" +pageTitle);\n\t\t\tAssert.assertEquals(\"OrangeHRM\", pageTitle);\t//verify the title of the webpage\n\n\t\t\tdriver.findElement(By.id(\"txtUsername\")).clear();//clear the input field before entering any value\n\t\t\tdriver.findElement(By.id(\"txtUsername\")).sendKeys(\"Admin\");//enter the value of username\n\t\t\tdriver.findElement(By.id(\"txtPassword\")).clear();\n\t\t\tdriver.findElement(By.id(\"txtPassword\")).sendKeys(\"admin123\");//enter the value of password\n\t\t\tdriver.findElement(By.id(\"btnLogin\")).click();\t\t//click Login button\n\t\t\tSystem.out.println(\"Successfully logged in\");\n\t\t\tStatus = \"passed\";\n\t\t}\n\t\tcatch(Exception e)\n\t\t{\n\t\t\tStatus = \"failed\";\n\t\t}\n\t}\n\n\t@AfterSuite\n\tpublic void tearDown() {\n\t\tdriver.executeScript(\"lambda-status=\" + Status);\n\t\tdriver.quit();\n\t}\n\n}"
+      }
+    ],
+    "dateModified": "2026-09-09T19:13:32+05:30"
+  }) }}
+/>
+
+# Perform Headless Browser Testing on Cloud Selenium Grid
 
 TestMu AI allows you to run headless browser tests on its cloud-based Selenium Grid. This guide shows you how to enable and run headless browser testing on the TestMu AI platform.
 

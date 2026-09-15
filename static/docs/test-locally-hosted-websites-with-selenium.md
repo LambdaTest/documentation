@@ -2,6 +2,76 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
+TestMu AI Grid <--> Cloud Browser"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "After downloading, make the binary executable (macOS/Linux)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "chmod +x LT"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Run multiple tunnels by giving each a name",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "LT --user YOUR_USERNAME --key YOUR_ACCESS_KEY --tunnelName my-staging-tunnel"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 3: Add the Tunnel Capability to Your Tests (Java)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "  ChromeOptions browserOptions = new ChromeOptions();\n  browserOptions.setPlatformName(\"Windows 10\");\n  browserOptions.setBrowserVersion(\"latest\");\n\n  HashMap ltOptions = new HashMap();\n  ltOptions.put(\"build\", \"Local Test Build\");\n  ltOptions.put(\"name\", \"Local Test\");\n  ltOptions.put(\"tunnel\", true);       // Enable tunnel\n  ltOptions.put(\"w3c\", true);\n  browserOptions.setCapability(\"LT:Options\", ltOptions);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 3: Add the Tunnel Capability to Your Tests (JavaScript)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "  const capabilities = {\n    browserName: 'Chrome',\n    browserVersion: 'latest',\n    'LT:Options': {\n      platformName: 'Windows 10',\n      build: 'Local Test Build',\n      name: 'Local Test',\n      tunnel: true,       // Enable tunnel\n      w3c: true,\n    }\n  };"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Python",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Python",
+        "text": "  lt_options = {\n      \"build\": \"Local Test Build\",\n      \"name\": \"Local Test\",\n      \"tunnel\": True,       # Enable tunnel\n      \"w3c\": True,\n  }\n  options.set_capability(\"LT:Options\", lt_options)"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "C#",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "C#",
+        "text": "  var ltOptions = new Dictionary\n  {\n      { \"build\", \"Local Test Build\" },\n      { \"name\", \"Local Test\" },\n      { \"tunnel\", true },       // Enable tunnel\n      { \"w3c\", true }\n  };\n  browserOptions.AddAdditionalOption(\"LT:Options\", ltOptions);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "PHP",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "PHP",
+        "text": "  $capabilities = [\n      \"browserName\" => \"Chrome\",\n      \"browserVersion\" => \"latest\",\n      \"LT:Options\" => [\n          \"platformName\" => \"Windows 10\",\n          \"build\" => \"Local Test Build\",\n          \"name\" => \"Local Test\",\n          \"tunnel\" => true,       // Enable tunnel\n          \"w3c\" => true,\n      ]\n  ];"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Ruby",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Ruby",
+        "text": "  options = Selenium::WebDriver::Options.chrome(\n    platform_name: \"Windows 10\",\n    browser_version: \"latest\",\n    \"LT:Options\": {\n      build: \"Local Test Build\",\n      name: \"Local Test\",\n      tunnel: true,       # Enable tunnel\n      w3c: true,\n    }\n  )"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 4: Point Your Test to localhost",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "// This works because the tunnel is active\ndriver.get(\"http://localhost:3000\");"
+      }
+    ],
+    "dateModified": "2026-09-09T19:13:32+05:30"
+  }) }}
+/>
+
 TestMu AI Tunnel creates a secure, encrypted connection between your local machine and the TestMu AI cloud grid. Use it to test web apps running on `localhost`, staging servers, or behind a firewall without exposing them to the internet. The tunnel uses TCP with TLS 1.2 over port 443 or WebSocket.
 
 ## How It Works

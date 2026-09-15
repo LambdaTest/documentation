@@ -2,6 +2,28 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
+\n<\/div>\n\n<\/TabItem>\n\n\n\n  \n    \n  {`set LT_USERNAME=\"${ YOUR_LAMBDATEST_USERNAME()}\"\nset LT_ACCESS_KEY=\"${ YOUR_LAMBDATEST_ACCESS_KEY()}\"`}\n  <\/CodeBlock>\n<\/div>\n\n<\/TabItem>\n<\/Tabs>\n\n## Step 3: Configure Your Test Capabilities\n---\nConfigure your tests using environment variables for resolution, build name, and other settings.\n\n| VARIABLE            | DESCRIPTION                                                                                                                                                                                                                                                                          |\n|---------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|\n| LT_TEST_NAME        | Specify a name for your test on TestMu AI Selenium Grid.                                                                                                                                                                                                                          |\n| LT_BUILD            | Specify a name for your build on TestMu AI Selenium Grid.                                                                                                                                                                                                                         |\n| LT_CAPABILITY_PATH  | Specify the path of a JSON file that declares additional Desired Capabilities.  `     \"Chrome@63.0:Windows 8.1\" : {`             `\"network\" : true,`         `\"visual\" : true,`         `\"timezone\" : \"UTC+11:00\"`     `}`  Here, ``Chrome@63.0:Windows 8.1`` represents browser alias. | \n| LT_RESOLUTION       | Perform cross browser testing on a specific screen resolution in the &#36;&lbrace;width&rbrace;x&#36;&lbrace;height&rbrace; format.                                                                                                                                                                                   |\n| LT_LOGFILE          | View detailed logs of your automation script execution. Provide a specific path to this file. If you don't provide a path, the logs save in your present working directory by the filename: tunnel.log.                                                            |\n| LT_VERBOSE          | Set flag for verbose to either true or false.                                                                                                                                                                                                                                         |\n| LT_PROXY_HOST       | A required variable if you perform cross browser testing through proxy. Declare the hostname/IP of proxy.                                                                                                                                |\n| LT_PROXY_PORT       | Port of the proxy. Default value for proxy port is 3128.                                                                                                                                                                                                                       |\n| LT_PROXY_USER       | Username for connecting to proxy. Required for using 'proxypass'.                                                                                                                                                                                                             |\n| LT_PROXY_PASS       | Password for the USERNAME option.                                                                                                                                                                                                                                                    |\n| LT_TUNNEL_NAME      | Human readable tunnel identifier (Name of the tunnel).                                                                                                                                                                                                                               |\n| LT_DIR              | Path of the local folder you want to test.                                                                                                                                                                                                                                           |\n| LT_SELENIUM_VERSION | Browser specific capability.                                                                                                                                                                                                                                                          |\n| LT_CONSOLE          | Set flag as true or false.                                                                                                                                                                                                                                                           |\n| LT_NETWORK          | Set flag as true or false.                                                                                                                                                                                                                                                           |\n| LT_VIDEO            | Set flag as true or false.                                                                                                                                                                                                                                                           |\n| LT_SCREENSHOT       | Set flag as true or false.                                                                                                                                                                                                                                                           |\n| LT_TIMEZONE         | Configure tests to run on a custom time zone.                                                                                                                                                                                                                                        |\n| LT_TUNNEL_NUMBER       |  Number of tunnels to spawn at a time.                                                                                                                                                                                                                                                           |\n| LOAD_BALANCED_MODE       | Load Balanced Mode in TestCafe.                                                                                                                                                                                                                                                         |\n\n:::tip\nGenerate capabilities for your test requirements with the [Capabilities Generator](https://www.testmuai.com/capabilities-generator/).\n:::\n\n## Step 4: Run the Test\n---\nExecute the test using the following command.\n\n**Single test:**\n``` js\n$ testcafe \"lambdatest:Chrome@74.0:Windows 8\" 'path/to/test/file.js'"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 4: Run the Test",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n**Using the API:**\n``` js\ntestCafe\n    .createRunner()\n    .src('path/to/test/file.js')\n    .browsers('lambdatest:Chrome@74.0:Windows 8')\n    .run();"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 4: Run the Test",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "codeRepository": "https://github.com/LambdaTest/agent-skills",
+        "text": "\n## Step 5: View Your Results\n---\nAfter running the test, view your results on the [TestMu AI Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build).\n\nThe dashboard provides:\n- Video recordings of each test session\n- Screenshots captured at each step\n- Console logs from the browser\n- Network logs for debugging\n- Detailed command logs\n\n## Run TestCafe Tests Using Agent Skills\n---\n\nUse AI coding assistants to generate and run TestCafe tests with the TestMu AI Agent Skill.\n\nThe [testcafe-skill](https://github.com/LambdaTest/agent-skills/tree/main/testcafe-skill) is part of [TestMu AI Agent Skills](https://github.com/LambdaTest/agent-skills/) - structured packages that teach AI coding assistants how to write production-grade test automation.\n\nInstall the skill:\n\n```bash\ngit clone https://github.com/LambdaTest/agent-skills.git\ncp -r agent-skills/testcafe-skill .claude/skills/\n\n# For Cursor / Copilot\ncp -r agent-skills/testcafe-skill .cursor/skills/"
+      }
+    ],
+    "dateModified": "2026-09-09T19:13:32+05:30"
+  }) }}
+/>
+
 Run TestCafe tests on the TestMu AI cloud grid. This guide covers setup, running a sample test, configuring capabilities, and testing locally hosted pages.
 
 **npm package**
@@ -66,16 +88,19 @@ Generate capabilities for your test requirements with the [Capabilities Generato
 Execute the test using the following command.
 
 **Single test:**
+
 ``` js
 $ testcafe "lambdatest:Chrome@74.0:Windows 8" 'path/to/test/file.js'
 ```
 
 **Parallel tests:**
+
 ``` js
 $ testcafe "lambdatest:Chrome@74.0:Windows 8","lambdatest:Chrome@75.0:Windows 10" "path/to/test/file.js"
 ```
 
 **Using the API:**
+
 ``` js
 testCafe
 .createRunner()
@@ -85,6 +110,7 @@ testCafe
 ```
 
 To list all available browser aliases:
+
 ``` js
 testcafe -b lambdatest
 ```

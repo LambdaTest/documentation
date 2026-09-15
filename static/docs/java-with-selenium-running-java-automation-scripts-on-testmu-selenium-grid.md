@@ -2,6 +2,20 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
+\n\n\n\nThe **Java SDK** is the zero-code option: it runs your **existing** TestNG tests on the grid unchanged, injecting credentials and capabilities from a YAML file via a Java agent. Use this when you already have a local suite and don't want to edit test code. See the [SDK reference project on GitHub](https://github.com/Lambdatest/lambdatest-java-selenium-sdk).\n\n1. Add the SDK dependency and agent to your `pom.xml` (the agent is attached to Surefire via `-javaagent`):\n\n```xml title=\"pom.xml (key additions)\"\n\n    io.github.lambdatest<\/groupId>\n    lambdatest-selenium-java-sdk<\/artifactId>\n    1.0.1<\/version>\n<\/dependency>\n"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "platforms",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n3. Register the SDK's TestNG listener in `testng.xml`, then run. Your existing test classes execute as-is:\n\n```bash\nmvn test -D suite=testng.xml"
+      }
+    ],
+    "dateModified": "2026-09-09T19:13:32+05:30"
+  }) }}
+/>
+
 Run your Java Selenium tests on the TestMu AI cloud grid across 10,000+ browser/device combinations. The setup is the same for every framework: you connect to the grid, pass your capabilities, and run. This guide walks through that shared flow once, then gives you a per-framework quickstart for **TestNG, JUnit, Cucumber, Selenide, Gauge, Geb, Serenity**, and the **Java SDK**.
 
 ## Prerequisites

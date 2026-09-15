@@ -17,6 +17,7 @@ Usual way to pass the `deviceName` and `platformVersion` looks like this:
 ```
 
 Passing `deviceName` using REGEX:
+
 ```java
 "device" : ["Pixel.*-12"]
 ```

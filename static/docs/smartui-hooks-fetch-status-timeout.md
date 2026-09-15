@@ -1,6 +1,22 @@
-# Auto-Wait and Retry for Screenshot Status
+# Auto-Wait and Retry for Screenshot Status (fetchScreenshotStatus timeout)
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
+();\nconfig.put(\"screenshotName\", \"checkout-page\");\nconfig.put(\"timeout\", 120);\n\nObject result = ((JavascriptExecutor) driver)\n    .executeScript(\"smartui.fetchScreenshotStatus\", config);\nSystem.out.println(result);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Playwright / Puppeteer",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "const result = await page.evaluate(_ => {}, `lambdatest_action: ${JSON.stringify({\n  action: \"smartui.fetchScreenshotStatus\",\n  arguments: {\n    screenshotName: \"checkout-page\",\n    timeout: 120\n  }\n})}`);\nconsole.log(result);"
+      }
+    ],
+    "dateModified": "2026-07-22T03:53:07+05:30"
+  }) }}
+/>
+
+# Auto-Wait and Retry for Screenshot Status
 
 The `smartui.fetchScreenshotStatus` hook now accepts an optional **`timeout`** option. With a timeout set, SmartUI **polls for the comparison result on the server side** and returns as soon as it is ready, instead of failing immediately when the screenshot is still processing.
 

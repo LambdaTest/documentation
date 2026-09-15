@@ -1,6 +1,43 @@
-# Run Selenium IDE Tests with TestMu AI Selenium Grid
+# Guide to Run Selenium IDE Tests Using TestMu AI
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
+"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 6",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": " selenium-side-runner --w --server https://user-name:access-key@hub.lambdatest.com/wd/hub<\/num> "
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 7",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "selenium-side-runner --max-workers --server https://user-name:access-key@hub.lambdatest.com/wd/hub<\/num>"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 8",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "selenium-side-runner -w 4 \"LambdaTest-IDE.side\" --server https://user-name:acces-key@hub.lambdatest.com/wd/hub -c \"browserName='chrome' version='72.0' platform='Windows 10'\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "For example",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "selenium-side-runner --params \"a='example-value' a.b='another example-value' a.b.c=[1,2,3]\" "
+      }
+    ],
+    "dateModified": "2026-09-09T19:13:32+05:30"
+  }) }}
+/>
+
+# Run Selenium IDE Tests with TestMu AI Selenium Grid
 
 [Selenium IDE](https://www.testmuai.com/blog/selenium-ide-what-is-it-why-is-it-must-for-every-qa/) is one of the most popular record and playback tool for testing which is widely used for automated browser testing. The Selenium IDE is a very easy-to-use solution for getting started with automation testing. It also provides instant feedback and has cross-browser and operating system compatibility, with the help of Selenium IDE (SIDE) Runner.
 
@@ -36,6 +73,7 @@ We have successfully activated Parallel Testing in Selenium IDE. Now we can exec
 1.  **Set the [Desired Capabilities in Selenium](/docs/selenium-automation-capabilities/).** For this article, we have set the Chrome browser (version 72.0) for Windows 10, to run our Selenium IDE tests.
 
     The [TestMu AI Selenium Desired Capabilities Generator](https://www.testmuai.com/capabilities-generator/) is used to generate the capabilities. Below are the desired capabilities used in this article for the required test combination, provided in Python Language.
+
 ```javascript
 capabilities = {
 "platform" : "Windows 10",
@@ -43,6 +81,7 @@ capabilities = {
 "version" : "72.0"
 }
 ```
+
 ```javascript
 In the string format, it will be represented as: **"browserName='chrome' version='72.0' platform='Windows 10'"**
 ```
@@ -60,6 +99,7 @@ selenium-side-runner --server <lambdatest grid="" url=""> --capabilities </lambd
 ```
 
 4.  **Mention the number of parallel processes to be executed at a time.** You can use any of the below syntax to specify the count of parallel processes to be executed at the above mentioned Grid URL:
+
 ```javascript
 selenium-side-runner --w <num of="" parallel="" processes="">--server https://user-name:access-key@hub.lambdatest.com/wd/hub</num>
 ```

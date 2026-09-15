@@ -2,6 +2,50 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
+\n\n\n\n```javascript title=\"Test.js\"\n\"LT:Options\": {\n  \"customData\": {\n    \"jiraTicket\": \"JIRA-12345\",\n    \"githubPR\": \"https://github.com/organization/repo/pull/678\",\n    \"testDescription\": \"This test validates login functionality under high load.\"\n  }\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "TypeScript",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "codeRepository": "https://github.com/organization/repo",
+        "text": "<\/TabItem>\n\n\n\n```php title=\"Test.php\"\n\"LT:Options\" => [\n  \"customData\" => [\n    \"jiraTicket\" => \"JIRA-12345\",\n    \"githubPR\" => \"https://github.com/organization/repo/pull/678\",\n    \"testDescription\" => \"This test validates login functionality under high load.\"\n  ]\n]"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Python",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "codeRepository": "https://github.com/organization/repo",
+        "text": "<\/TabItem>\n\n\n\n```csharp title=\"Test.cs\"\nltOptions.Add(\"customData\", new Dictionary{\n  { \"jiraTicket\", \"JIRA-12345\" },\n  { \"githubPR\", \"https://github.com/organization/repo/pull/678\" },\n  { \"testDescription\", \"This test validates login functionality under high load.\" }\n});"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Ruby",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "codeRepository": "https://github.com/organization/repo",
+        "text": "<\/TabItem>\n\n<\/Tabs>\n\n## Use Cases for `customData`\n---\nSee how teams use the customData capability in different testing workflows.\n\n### 1. Enhanced Reporting With GitHub and Jira Links\n**Scenario:** A QA team wants to include direct links to GitHub pull requests or Jira issues related to a test. This helps developers and testers quickly access related code changes or tasks when a test fails.\n\n```javascript title=\"Test.js\"\n'customData': { \t\n  \"jiraTicket\": \"JIRA-12345\",\n  \"githubPR\": \"https://github.com/organization/repo/pull/678\",\n  \"testDescription\": \"This test validates login functionality under high load.\"\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "2. Linking Test Management Systems",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n- **`testCaseID`:** Maps the execution to a specific test case in the test management system.\n- **`testSuite`:** Specifies the test suite or category the test belongs to.\n- **`priority`:** Indicates the importance or severity of the test.\n- **`owner`:** Identifies the owner or responsible party for the test.\n\n### 3. Debugging With Environment Metadata\n**Scenario:** When debugging test failures, include information about the environment or build being tested.\n\n```javascript title=\"Test.js\"\n'customData': { \t\n  \"buildNumber\": \"1234\",\n  \"environment\": \"Staging\",\n  \"apiVersion\": \"v1.2.3\",\n  \"releaseTag\": \"v1.2.3-rc1\"\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "4. Capturing User Story or Feature Metadata",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n- **`featureID`:** Links the test to a specific feature ID in the product backlog.\n- **`userStory`:** Describes the user story being validated.\n- **`sprint`:** Indicates the sprint or iteration in which the feature is being developed.\n\n### 5. Tracking Third-Party Dependencies\n**Scenario:** A test depends on third-party APIs or integrations, and tracking the versions or configurations of these dependencies is critical.\n\n```javascript title=\"Test.js\"\n'customData': { \t\n  \"thirdPartyAPI\": \"Stripe\",\n  \"apiVersion\": \"2023-01-15\",\n  \"status\": \"Active\"\n}"
+      }
+    ],
+    "dateModified": "2026-09-09T19:13:32+05:30"
+  }) }}
+/>
 The `customData` capability allows you to associate additional metadata with test runs, enabling better traceability, debugging, and reporting. This metadata can include information like issue tracker links, test case IDs, and other critical test context. By embedding this metadata in test configurations, your team can integrate with existing tools and workflows, such as GitHub, Jira, or any test management system.
 
 ## How to Add Custom Metadata for Running Automation Tests on TestMu AI

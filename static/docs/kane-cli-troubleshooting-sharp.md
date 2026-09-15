@@ -2,6 +2,40 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
+> ~/.zshrc\nsource ~/.zshrc\n\n# Option B: remove libvips if nothing else needs it\nbrew uses --installed vips   # check first\nbrew uninstall vips && brew autoremove"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "2. npm skipped optional dependencies",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "npm config get omit          # should NOT contain \"optional\"\ncat ~/.npmrc | grep -i omit  # should be empty\nenv | grep -i NPM_CONFIG_OMIT"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "2. npm skipped optional dependencies",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "# Force optionals for this install\nnpm uninstall -g @testmuai/kane-cli\nnpm install -g @testmuai/kane-cli --include=optional\n\n# Or remove the config permanently\nnpm config delete omit"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "3. Proxy or firewall blocking @img/* packages",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "# Check if proxy is set\nenv | grep -iE \"proxy|PROXY\"\n\n# Try fetching sharp's platform package directly\nnpm view @img/sharp-darwin-arm64 version\n\n# If ECONNREFUSED on localhost \u2014 you have a local proxy that's either\n# down or only listening on IPv4 while npm resolves to IPv6 (::1)"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "If using a private registry (Artifactory, Verdaccio, GitHub Packages), add a pass-through in your .npmrc",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "INI",
+        "text": "@img:registry=https://registry.npmjs.org/"
+      }
+    ],
+    "dateModified": "2026-09-03T14:41:00+05:30"
+  }) }}
+/>
 ## Symptom
 
 `npm install -g @testmuai/kane-cli` fails with:

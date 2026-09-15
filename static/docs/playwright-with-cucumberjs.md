@@ -1,6 +1,43 @@
-# Playwright Testing With Cucumber.js
+# Running Playwright Tests With Cucumber.js
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
+{}, `lambdatest_action: ${JSON.stringify({ action: 'setTestStatus', arguments: { status, remark } })}`)\n  }\n}\n\nBefore(async (scenario) => {\n  const capabilities = {\n    'browserName': 'Chrome', // Browsers allowed: `Chrome`, `MicrosoftEdge`, `pw-chromium`, `pw-firefox` and `pw-webkit`\n    'browserVersion': 'latest',\n    'LT:Options': {\n      'platform': 'Windows 10',\n      'build': 'Playwright Sample Build with Cucumber Runner',\n      'name': scenario.pickle.name,\n      'user': process.env.LT_USERNAME,\n      'accessKey': process.env.LT_ACCESS_KEY,\n      'network': true,\n      'video': true,\n      'console': true,\n      'tunnel': false, // Add tunnel configuration if testing locally hosted webpage\n      'tunnelName': '' // Optional\n    }\n  }\n\n  // Create page and browser globals to be used in the scenarios\n  global.browser = await chromium.connect({\n    wsEndpoint: `wss://cdp.lambdatest.com/playwright?capabilities=${encodeURIComponent(JSON.stringify(capabilities))}`\n  })\n\n  const context = await global.browser.newContext();\n\n  global.page = await context.newPage();\n})\n\nAfter(async () => {\n  await global.browser.close()\n})\n\nsetWorldConstructor(CustomWorld);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 5",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "npm run test"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Testing With Cucumber.js When Migrating To TestMu AI",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "Before(async (scenario) => {\n  const capabilities = {\n    'browserName': 'Chrome', // Browsers allowed: `Chrome`, `MicrosoftEdge`, `pw-chromium`, `pw-firefox` and `pw-webkit`\n    'browserVersion': 'latest',\n    'LT:Options': {\n      'platform': 'Windows 10',\n      'build': 'Playwright Sample Build with Cucumber Runner',\n      'name': scenario.pickle.name,\n      'user': process.env.LT_USERNAME,\n      'accessKey': process.env.LT_ACCESS_KEY,\n      'network': true,\n      'video': true,\n      'console': true,\n      'tunnel': false, // Add tunnel configuration if testing locally hosted webpage\n      'tunnelName': '' // Optional\n    }\n  }\n\n  // Create page and browser globals to be used in the scenarios\n  global.browser = await chromium.connect({\n    wsEndpoint: `wss://cdp.lambdatest.com/playwright?capabilities=${encodeURIComponent(JSON.stringify(capabilities))}`\n  })\n\n  const context = await global.browser.newContext();\n\n  global.page = await context.newPage();\n})\n\nAfter(async () => {\n  await global.browser.close()\n})\n\nsetWorldConstructor(CustomWorld);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 7",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "class CustomWorld extends World{\n  async setTestStatus(status, remark) {\n    await page.evaluate(_ => {}, `lambdatest_action: ${JSON.stringify({ action: 'setTestStatus', arguments: { status, remark } })}`)\n  }\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "After any assertions in your script mark the test status as passed as shown below",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "try {\n    assert.equal(title,\n        \"How to use HyperExecute for scalable and reliable web automation testing | TestMu AI\",\n        \"Page title does not match\");\n\n    await this.setTestStatus(\"passed\", \"Title matched\");\n  } catch (e) {\n    await this.setTestStatus(\"failed\", e);\n    throw(e);\n  }"
+      }
+    ],
+    "dateModified": "2026-09-09T19:13:32+05:30"
+  }) }}
+/>
+
+# Playwright Testing With Cucumber.js
 
 Cucumber.js is a JavaScript-based open-source framework for web automation testing. It runs on Node.js and latest web browsers. Cucumber.js allows you to write and execute tests in Gherkin - a non-technical and human-readable language.
 

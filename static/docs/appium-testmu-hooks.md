@@ -2,6 +2,41 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
+\n\n## Update Test Name\n---\n\nTo update the name of the test, just add the code snippet using the ```JavascriptExecutor```.\n\nArguments | Example\n------------- | -----------------------------------------------------------------------------------------\n```lambda-name``` | For changing the Test Name.\n\n```bash\n((JavascriptExecutor) driver).executeScript(\"lambda-name=TestName\");"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "To start a test case, use the lambda-testCase-start hook",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "// To start a test case\n((JavascriptExecutor) driver).executeScript(\"lambda-testCase-start=find Name\");"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "To end a test case, use the lambda-testCase-end hook",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "// To end a test case\n((JavascriptExecutor) driver).executeScript(\"lambda-testCase-end=find Name\");"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Annotation Start",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "driver.execute_script(\"lambdatest_executor: {\\\"action\\\": \\\"stepcontext\\\", \\\"arguments\\\": {\\\"data\\\": \\\"youtube\\\", \\\"level\\\": \\\"debug\\\"}}\");"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "To close the executor at the end of your script, pass data as an empty string",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "driver.execute_script(\"lambdatest_executor: {\\\"action\\\": \\\"stepcontext\\\", \\\"arguments\\\": {\\\"data\\\": \\\"\\\"}}\");"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 This document will help you provide lambdahooks which can be used to improve your test scripts to easily debug your test cases for **App Automation on Real Devices** on **TestMu AI Cloud**.
 
 ## Adding custom status & remark
@@ -130,6 +165,7 @@ Command Annotations allow you to add metadata and debugging information to your 
 ### Using Command Annotations
 
 #### Annotation Start
+
 ```java
 driver.execute_script("lambdatest_executor: {\"action\": \"stepcontext\", \"arguments\": {\"data\": \"youtube\", \"level\": \"debug\"}}");
 ```

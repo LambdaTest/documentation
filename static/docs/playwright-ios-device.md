@@ -1,6 +1,85 @@
-# Getting Started With Playwright Testing on iOS Real Devices
+# How To Run Playwright Tests On TestMu AI iOS Devices
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
+\n    playwright<\/artifactId>\n    1.60.0<\/version>\n<\/dependency>"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Add the Playwright NuGet package",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "dotnet add package Microsoft.Playwright"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 7",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\nRun the test:\n\n```bash\nnode playwright-ios-test.js"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "if __name__ == \"__main__\"",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\nRun the test:\n\n```bash\npython playwright_ios_test.py"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 9",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\nRun the test:\n\n```bash\nmvn compile exec:java -Dexec.mainClass=\"com.lambdatest.PlaywrightIosTest\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 10",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\nRun the test:\n\n```bash\ndotnet run"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Add the Apple Pay keys to the same LT:Options object you already use to start your Playwright session (see Run Your First Test)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "const capabilities = {\n  \"LT:Options\": {\n    // ...your existing iOS capabilities (platformName, deviceName, platformVersion, user, accessKey, etc.)\n    // highlight-start\n    \"applePay\": true,\n    \"applePayCardType\": [\"master\", \"visa\"], // priority order \u2014 master preferred, visa as fallback\n    // highlight-end\n  },\n};"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Adding a card to Wallet requires a device passcode",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "// Private cloud only \u2014 set a custom passcode\n\"LT:Options\": { /* ...other caps */, \"applePay\": true, \"passcode\": \"654321\" }"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "A small reusable wrapper keeps the calls readable",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "async function ltAction(page, action, args = {}) {\n  return page.evaluate(\n    (_) => {},\n    `lambdatest_action: ${JSON.stringify({ action, arguments: args })}`\n  );\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Hook 1 \u2014 lambda-applepay-details (pre-fill the sheet)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "await ltAction(page, \"lambda-applepay-details\", {\n  shippingDetails: {\n    firstName: \"John\", lastName: \"Doe\",\n    street: \"1 Infinite Loop\", city: \"Cupertino\",\n    state: \"California\", postalCode: \"95014\", country: \"United States\",\n  },\n  billingDetails: {\n    firstName: \"John\", lastName: \"Doe\",\n    street: \"1 Infinite Loop\", city: \"Cupertino\",\n    state: \"California\", postalCode: \"95014\", country: \"United States\",\n    email: \"john.doe@example.com\", phone: \"+14085551234\",\n  },\n  contact: {\n    firstName: \"John\", lastName: \"Doe\",\n    email: \"john.doe@example.com\", phone: \"+14085551234\",\n  },\n});"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Hook 2 \u2014 lambda-applepay (confirm / authorize payment)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "await ltAction(page, \"lambda-applepay\", { confirm: true });"
+      }
+    ],
+    "dateModified": "2026-09-09T19:13:32+05:30"
+  }) }}
+/>
+
+# Getting Started With Playwright Testing on iOS Real Devices
 
 Playwright test automation on real iOS devices is now supported on TestMu AI across **Node.js, Java, C#, and Python**. Test on latest iPhone and iPad Safari combinations to catch device-specific issues that mobile emulation may miss. Integrate with your existing CI pipeline, and access logs and debugging artifacts for each test run.
 

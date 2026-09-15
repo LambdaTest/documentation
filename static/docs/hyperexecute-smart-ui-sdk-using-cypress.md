@@ -2,6 +2,34 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
+\ndescribe('Test Case name', () => {\n  beforeEach(() => {\n\n    cy.visit('Required URL')\n  })\n\n  it('SmartUI Snapshot', () => {\n    cy.smartuiSnapshot('Screenshot Name');\n  })\n})"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 4: Configure YAML in your Test Suite",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "---\nversion: 0.1\nglobalTimeout: 90\ntestSuiteTimeout: 90\ntestSuiteStep: 90\n\nrunson: linux\n\nautosplit: true\n\n# highlight-next-line\ncypress: true\n\nretryOnFailure: true\nmaxRetries: 1\n\nconcurrency: 1\n\nenv:\n  CYPRESS_CACHE_FOLDER: cypressCache\n  PROJECT_TOKEN: \"YOUR_PROJECT_TOKEN\"\n\ncacheKey: '{{ checksum \"package.json\" }}'\ncacheDirectories:\n  - node_modules\n  - cypressCache\n\npre:\n  - npm install @lambdatest/smartui-cli @lambdatest/cypress-driver cypress@v13\n  - npx smartui config:create smartui-web.json\n\npost:\n  - cat hyp-smartui-sdk-cypress.yaml\n\ntestDiscovery:\n  type: raw\n  mode: static\n  command: ls cypress/e2e\n\ntestRunnerCommand: npx smartui --config smartui-web.json exec -- npx cypress run --spec cypress/e2e/smartuiSDKLocal.cy.js --browser chrome --headed\n\njobLabel: [\"smart-ui-sdk\", \"hyperexecute\", \"cypress\"]"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 3",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "pre:\n  - npm install @lambdatest/smartui-cli @lambdatest/cypress-driver cypress@v13\n  - npx smartui config:create smartui-web.json"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Run the below command in your terminal at the root folder of the project",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "./hyperexecute --config RELATIVE_PATH_OF_YOUR_YAML_FILE"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 This documentation will guide you step-by-step to execute the SmartUI tests on the HyperExecute platform using Selenium
 
 > **Note :** SmartUI SDK only supports Cypress versions >= 10.0.0

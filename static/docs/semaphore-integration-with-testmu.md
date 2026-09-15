@@ -2,6 +2,36 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
+> ~/.bashrc\n          - echo 'export LT_ACCESS_KEY=\"{your_lambda_access_key}\"' >> ~/.bashrc\n  \n  - name: Run Tests\n    task:\n      jobs:\n      - name: Run Protractor\n        commands:\n          - checkout\n          - cd /home/semaphore/protractor-selenium-semaphore-sample\n          - npm install\n          - node node_modules/protractor/bin/protractor single.conf.js"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Then Capabilities Generator at TestMu AI will provide you with the below program",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "var capabilities = {\n    \"build\" : \"your build name\", //You can edit this and assign a build name\n    \"name\" : \"your test name\", // Assign a name to your Test\n    \"platform\" : \"Windows 8.1\", // The operating system on which you want to test your website\n    \"browserName\" : \"Firefox\", // The browser on which you want to test\n    \"version\" : \"62.0\", // The browser version which you've selected to perform the test upon\n    \"resolution\" : \"1280x1024\", // The resolution in which you want to run the test as per your operating system\n    \"selenium_version\" : \"3.11.0\", //The version of Selenium on which the test will run\n    \"visual\" : true,\n    \"firefox.driver\" : v0.21.0\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Testing Locally Hosted or Privately Hosted Projects",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "//Example of .semaphore/semaphore.yml for Lambda Tunnel\nversion: v1.0\nname: Run Protractor Test In LambdaTest\nagent:\n  machine:\n    type: e1-standard-2\n    os_image: ubuntu1804\nexecution_time_limit:\n  hours: 3\n\nblocks:\n  - name: Set Env Variables\n    task:\n      jobs:\n      - name: NODE_ENV\n        commands:\n          - ls -al\n          - echo 'export LT_USERNAME=\"\"' >> .bashrc\n          - echo 'export LT_ACCESS_KEY=\"\"' >> .bashrc\n          \n  - name: Set Tunnel\n    task:\n      jobs:\n      - name: Download and install tunnel\n        commands:\n          - checkout\n          - cd /home/semaphore/protractor-selenium-semaphore-sample\n          - wget https://downloads.lambdatest.com/tunnel/v3/linux/64bit/LT_Linux.zip\n          #Extracting tunnel binary\n          - sudo apt-get install unzip\n          - unzip LT_Linux.zip\n          #Executing tunnel library\n          - ./LT -user ${LAMBDATEST_EMAIL} -key ${LAMBDATEST_KEY} & sleep 30\n\n  - name: Run Tests\n    task:\n      jobs:\n      - name: Run Protractor\n        commands:\n          - checkout\n          - cd /home/semaphore/protractor-selenium-semaphore-sample\n          - npm install\n          - node node_modules/protractor/bin/protractor single.conf.js"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Parallel Testing",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "node ./node_modules/protractor/bin/protractor parallel.conf.js"
+      }
+    ],
+    "dateModified": "2026-06-09T15:09:24+05:30"
+  }) }}
+/>
+
+# Semaphore CI Integration With TestMu AI
+
 Semaphore is a hosted continuous integration and deployment service used to test and deploy software projects hosted on GitHub and BitBucket. While open-source projects can use Semaphore for free in its full capacity, free use for private projects is limited to 100 builds per month.
 TestMu AI now integrates with Semaphore CI to boost your go-to-market delivery. Perform automated cross browser testing hand in hand with your CI/CD pipeline and ensure your web-app renders seamlessly on more than 2000 real browsers and browser versions. Using TestMu AI Selenium Grid, you can fully automate your continuous testing process and trim down your test cycles significantly.
 

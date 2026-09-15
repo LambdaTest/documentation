@@ -2,6 +2,56 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
+\n:::\n\n### Step 2: Setup the Environment Variables\n\nYou need to export your environment variables *LT_USERNAME* and *LT_ACCESS_KEY* that are available in your [TestMu AI Profile page](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/security). Run the below mentioned commands in your terminal to setup the environment variables.\n\n\n\n  \n    \n  {`export LT_USERNAME=\"${ YOUR_LAMBDATEST_USERNAME()}\"\nexport LT_ACCESS_KEY=\"${ YOUR_LAMBDATEST_ACCESS_KEY()}\"`}\n  <\/CodeBlock>\n<\/div>\n<\/TabItem>\n\n  \n    \n  {`set LT_USERNAME=\"${ YOUR_LAMBDATEST_USERNAME()}\"\nset LT_ACCESS_KEY=\"${ YOUR_LAMBDATEST_ACCESS_KEY()}\"`}\n  <\/CodeBlock>\n<\/div>\n<\/TabItem>\n<\/Tabs>\n\n### Step 3: Upload your Application\nUpload your **_iOS_** application (.ipa file) or **_android_** application (.apk or .aab file) to the TestMu AI servers using our **REST API**. You need to provide your **Username** and **AccessKey** in the format `Username:AccessKey` in the **cURL** command for authentication.\n\nMake sure to add the path of the **appFile** in the cURL request. Below is an example cURL request to upload your app using our REST API:\n\n\n\n\n  \n    \n      {`curl -u \"${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}\" -X POST \"https://manual-api.lambdatest.com/app/upload/realDevice\" -F \"appFile=@\"/Users/macuser/Downloads/proverbial_android.apk\"\" -F \"name=\"proverbial_app\"\"`}\n    <\/CodeBlock>\n  <\/div>\n<\/TabItem>\n\n\n  \n    \n      {`curl -u \"${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}\" -X POST \"https://manual-api.lambdatest.com/app/upload/realDevice\" -F \"url=:https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_android.apk\" -F \"name=Proverbial_App\"`}\n    <\/CodeBlock>\n  <\/div>\n<\/TabItem>\n\n<\/Tabs>\n\n:::tip\n\n- If you do not have any **.apk** or **.ipa** file, you can run your sample tests on TestMu AI by using our sample apps, :link: [Android app](https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_android.apk) or :link: [iOS app](https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_ios.ipa).\n\n- Response of above cURL will be a **JSON** object containing the `APP_URL` of the format - `lt://APP123456789123456789` and will be used in the next step\n\n:::\n\n### Step 4: Update your Automation Script\n\nAn automation script file `*StepDef.py` for the sample application given above has been provided here.\n\n\n\n\n\n```python title=\"IOS.robot\"\n*** Settings ***\n\nResource  ../Resources/Common.robot\n\nTest Setup  Common.Open test app\nTest Teardown  Common.Close test app\n\n*** Variables ***\n${TIMEOUT}          3000\n\n*** Test Cases ***\n\nExample of connecting to Lambdatest via Robot Framework\n\t[Timeout]   ${TIMEOUT}\n\tClick element  id=color\n\tClick element  id=Text\n\tClick element  id=toast\n\tClick element  id=notification\n\tClick element  id=geoLocation"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 4",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n<\/TabItem>\n\n<\/Tabs>\n\n### Step 5: Configure the Test Capabilities\n\nYou can update your custom capabilities in test scripts `Makefile` file. In this sample project, we are passing platform name, platform version, device name and app url _(generated earlier)_ along with other capabilities like build name and test name via capabilities object.\n\n```python title=\"Makefile\"\ntest_Web_ios:\n\trobot --variable version:15 --variable platformName:ios --variable deviceName:\"iPhone.*\" --variable isRealMobile:true --variable visual:true --variable network:true --variable console:true --variable devicelog:true Tests/AndroidIosWeb.robot\n\ntest_Web_Android:\n\trobot --variable version:11 --variable platformName:android --variable deviceName:\"Galaxy.*\" --variable isRealMobile:true --variable visual:true --variable network:true --variable console:true --variable devicelog:true  Tests/AndroidIosWeb.robot\t"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 6: Execute and Monitor your Tests",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "pip install -r requirements.txt"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 6: Execute and Monitor your Tests (iOS)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "make test_iOS1"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 6: Execute and Monitor your Tests (Android)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "make test_Android1"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "The robot-framework-skill package includes",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "robot-framework-skill/\n\u251c\u2500\u2500 SKILL.md\n\u2514\u2500\u2500 reference/\n    \u251c\u2500\u2500 playbook.md\n    \u2514\u2500\u2500 advanced-patterns.md"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Install a Robot Framework Agent Skill using the command below",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "codeRepository": "https://github.com/LambdaTest/agent-skills",
+        "text": "# Clone the repo and copy the skill you need\ngit clone https://github.com/LambdaTest/agent-skills.git\ncp -r agent-skills/robot-framework-skill .claude/skills/\n\n# Or for Cursor / Copilot\ncp -r agent-skills/robot-framework-skill .cursor/skills/"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 In this documentation, you will learn how to trigger a automation script of **Robot** for application testing with **Appium** on TestMu AI, set the [**desired capabilities**](/support/docs/desired-capabilities-in-appium/) for appium testing, and other advanced features of TestMu AI.
 
 ## Prerequisites

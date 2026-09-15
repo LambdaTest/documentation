@@ -141,6 +141,7 @@ curl --location --request POST 'https://mobile-api.lambdatest.com/framework/v1/x
 ```
 
 - When setting language or locale parameters, make sure your tests use the `ProcessInfo` object to pass these arguments correctly. This ensures the app launches with the specified language and locale settings.
+
 ```swift
 let app = XCUIApplication()
 app.launchArguments += ProcessInfo().arguments

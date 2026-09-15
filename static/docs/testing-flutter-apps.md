@@ -1,6 +1,30 @@
-# Testing Flutter Apps With Appium
+# How to test flutter apps using Appium framework
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
+();\n\n            ltOptions.put(\"automationName\", \"FlutterIntegration\");\n            ltOptions.put(\"nativeFlutterLaunch\", true);\n            ltOptions.put(\"platformName\", platform);\n            ltOptions.put(\"deviceName\", device);\n            ltOptions.put(\"platformVersion\", version);\n            ltOptions.put(\"isRealMobile\", true);\n\n            capabilities.setCapability(\"LT:Options\", ltOptions);\n\n            driver = new FlutterAndroidDriver(\n                new URL(\"https://username:accessKey@mobile-hub.lambdatest.com/wd/hub\"),\n                capabilities\n            );\n\n            WebElement username = driver.findElement(AppiumBy.flutterKey(\"username\"));\n            username.sendKeys(\"user@example.com\");\n\n            WebElement password = driver.findElement(AppiumBy.flutterKey(\"password\"));\n            password.sendKeys(\"password123\");\n\n            WebElement loginBtn = driver.findElement(AppiumBy.flutterKey(\"login_btn\"));\n            loginBtn.click();\n\n            driver.quit();\n        } catch (Exception e) {\n            driver.quit();\n        }\n    }\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "The flutter-testing-skill package includes",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "flutter-testing-skill/\n\u251c\u2500\u2500 SKILL.md\n\u2514\u2500\u2500 reference/\n    \u251c\u2500\u2500 playbook.md\n    \u2514\u2500\u2500 advanced-patterns.md"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Install a Flutter Testing Agent Skill using the command below",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "codeRepository": "https://github.com/LambdaTest/agent-skills",
+        "text": "# Clone the repo and copy the skill you need\ngit clone https://github.com/LambdaTest/agent-skills.git\ncp -r agent-skills/flutter-testing-skill .claude/skills/\n\n# Or for Cursor / Copilot\ncp -r agent-skills/flutter-testing-skill .cursor/skills/"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
+# Testing Flutter Apps With Appium
 
 Google's Flutter is an open-source tool for developing native mobile apps. It enables developers to create cross-platform apps for both Android and iOS using a single codebase and programming language.
 
