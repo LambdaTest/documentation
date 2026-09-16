@@ -123,7 +123,6 @@ export default function Home() {
                   <a href="/support/docs/key-features-of-hyperexecute/"><p className="p_home_inners">Features</p></a>
                   <a href="/support/docs/hyperexecute-yaml-parameters/"><p className="p_home_inners">HyperExecute YAML</p></a>
                   <a href="/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/"><p className="p_home_inners">HyperExecute CLI</p></a>
-                  <a href="/support/docs/hyperexecute-cli-gui/"><p className="p_home_inners">HyperExecute GUI &nbsp;<NewTag value="BETA" /></p></a>
                   <a href="/support/docs/hyperexecute-mcp-server/"><p className="p_home_inners">HyperExecute MCP</p></a>
                  <a href="/support/docs/hyperexecute-run-jmeter-tests/"><p className="p_home_inners">JMeter Performance Testing</p></a>
                   <a href="/support/docs/hyperexecute-gattling-testing/"><p className="p_home_inners">Gatling Performance Testing</p></a>
