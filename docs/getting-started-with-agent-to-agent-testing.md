@@ -147,8 +147,8 @@ Learn what the platform tests and how it scores an agent before you run anything
 
 <div style={{display:'flex',flexWrap:'wrap',gap:'16px',margin:'20px 0'}}>
   <a href="/support/docs/architecture-and-how-evaluation-works/" style={{flex:'1 1 260px',minWidth:'240px',border:'1px solid #e2e8f0',borderRadius:'12px',padding:'20px 22px',textDecoration:'none',color:'inherit',display:'block'}}>
-    <div style={{fontWeight:700,marginBottom:'6px',color:'#1e293b'}}>Architecture &amp; How Evaluation Works</div>
-    <div style={{fontSize:'14px',color:'#64748b',lineHeight:1.5}}>The five-phase evaluation loop and the 15+ testing agents that score your agent.</div>
+    <div style={{fontWeight:700,marginBottom:'6px',color:'#F0F6FCCC'}}>Architecture &amp; How Evaluation Works</div>
+    <div style={{fontSize:'14px',color:'#FFFFFF',lineHeight:1.5}}>The five-phase evaluation loop and the 15+ testing agents that score your agent.</div>
   </a></div>
 
 ## Run Your First Test
@@ -159,20 +159,20 @@ Pick the interface that matches how you work and run an evaluation end to end.
 
 <div style={{display:'flex',flexWrap:'wrap',gap:'16px',margin:'20px 0'}}>
   <a href="/support/docs/testing-your-first-ai-agent/" style={{flex:'1 1 260px',minWidth:'240px',border:'1px solid #e2e8f0',borderRadius:'12px',padding:'20px 22px',textDecoration:'none',color:'inherit',display:'block'}}>
-    <div style={{fontWeight:700,marginBottom:'6px',color:'#1e293b'}}>Quickstart (UI)</div>
-    <div style={{fontSize:'14px',color:'#64748b',lineHeight:1.5}}>Create an agent, generate scenarios, and run an evaluation from the dashboard.</div>
+    <div style={{fontWeight:700,marginBottom:'6px',color:'#F0F6FCCC'}}>Quickstart (UI)</div>
+    <div style={{fontSize:'14px',color:'#FFFFFF',lineHeight:1.5}}>Create an agent, generate scenarios, and run an evaluation from the dashboard.</div>
   </a>
   <a href="/support/docs/agent-testing-cli/" style={{flex:'1 1 260px',minWidth:'240px',border:'1px solid #e2e8f0',borderRadius:'12px',padding:'20px 22px',textDecoration:'none',color:'inherit',display:'block'}}>
-    <div style={{fontWeight:700,marginBottom:'6px',color:'#1e293b'}}>Quickstart (CLI)</div>
-    <div style={{fontSize:'14px',color:'#64748b',lineHeight:1.5}}>Test chat and phone agents from your terminal and wire them into CI/CD.</div>
+    <div style={{fontWeight:700,marginBottom:'6px',color:'#F0F6FCCC'}}>Quickstart (CLI)</div>
+    <div style={{fontSize:'14px',color:'#FFFFFF',lineHeight:1.5}}>Test chat and phone agents from your terminal and wire them into CI/CD.</div>
   </a>
   <a href="/support/docs/chat-agent-api-integration/" style={{flex:'1 1 260px',minWidth:'240px',border:'1px solid #e2e8f0',borderRadius:'12px',padding:'20px 22px',textDecoration:'none',color:'inherit',display:'block'}}>
-    <div style={{fontWeight:700,marginBottom:'6px',color:'#1e293b'}}>Quickstart (API)</div>
-    <div style={{fontSize:'14px',color:'#64748b',lineHeight:1.5}}>Connect a chat agent over its API: request format, authentication, and response schema.</div>
+    <div style={{fontWeight:700,marginBottom:'6px',color:'#F0F6FCCC'}}>Quickstart (API)</div>
+    <div style={{fontSize:'14px',color:'#FFFFFF',lineHeight:1.5}}>Connect a chat agent over its API: request format, authentication, and response schema.</div>
   </a>
   <a href="/support/docs/ai-agent-testing-platform-overview/" style={{flex:'1 1 260px',minWidth:'240px',border:'1px solid #e2e8f0',borderRadius:'12px',padding:'20px 22px',textDecoration:'none',color:'inherit',display:'block'}}>
-    <div style={{fontWeight:700,marginBottom:'6px',color:'#1e293b'}}>Quality Dimensions</div>
-    <div style={{fontSize:'14px',color:'#64748b',lineHeight:1.5}}>How scoring, thresholds, and the Green, Yellow, or Red go-live verdict work.</div>
+    <div style={{fontWeight:700,marginBottom:'6px',color:'#F0F6FCCC'}}>Quality Dimensions</div>
+    <div style={{fontSize:'14px',color:'#FFFFFF',lineHeight:1.5}}>How scoring, thresholds, and the Green, Yellow, or Red go-live verdict work.</div>
   </a>
 </div>
 
@@ -184,24 +184,24 @@ Go deeper into the workflow and metrics for your specific agent type.
 
 <div style={{display:'flex',flexWrap:'wrap',gap:'16px',margin:'20px 0'}}>
   <a href="/support/docs/chat-agent/" style={{flex:'1 1 260px',minWidth:'240px',border:'1px solid #e2e8f0',borderRadius:'12px',padding:'20px 22px',textDecoration:'none',color:'inherit',display:'block'}}>
-    <div style={{fontWeight:700,marginBottom:'6px',color:'#1e293b'}}>Chat Agent Testing</div>
-    <div style={{fontSize:'14px',color:'#64748b',lineHeight:1.5}}>How multi-turn chat conversations are simulated and scored.</div>
+    <div style={{fontWeight:700,marginBottom:'6px',color:'#F0F6FCCC'}}>Chat Agent Testing</div>
+    <div style={{fontSize:'14px',color:'#FFFFFF',lineHeight:1.5}}>How multi-turn chat conversations are simulated and scored.</div>
   </a>
   <a href="/support/docs/phone-agent/" style={{flex:'1 1 260px',minWidth:'240px',border:'1px solid #e2e8f0',borderRadius:'12px',padding:'20px 22px',textDecoration:'none',color:'inherit',display:'block'}}>
-    <div style={{fontWeight:700,marginBottom:'6px',color:'#1e293b'}}>Phone Agent Testing</div>
-    <div style={{fontSize:'14px',color:'#64748b',lineHeight:1.5}}>Real calls, voice and noise simulation, and the two phone directions.</div>
+    <div style={{fontWeight:700,marginBottom:'6px',color:'#F0F6FCCC'}}>Phone Agent Testing</div>
+    <div style={{fontSize:'14px',color:'#FFFFFF',lineHeight:1.5}}>Real calls, voice and noise simulation, and the two phone directions.</div>
   </a>
   <a href="/support/docs/inbound-phone-agent/" style={{flex:'1 1 260px',minWidth:'240px',border:'1px solid #e2e8f0',borderRadius:'12px',padding:'20px 22px',textDecoration:'none',color:'inherit',display:'block'}}>
-    <div style={{fontWeight:700,marginBottom:'6px',color:'#1e293b'}}>Inbound Phone Agent Testing</div>
-    <div style={{fontSize:'14px',color:'#64748b',lineHeight:1.5}}>The full workflow for an agent that answers calls.</div>
+    <div style={{fontWeight:700,marginBottom:'6px',color:'#F0F6FCCC'}}>Inbound Phone Agent Testing</div>
+    <div style={{fontSize:'14px',color:'#FFFFFF',lineHeight:1.5}}>The full workflow for an agent that answers calls.</div>
   </a>
   <a href="/support/docs/outbound-phone-agent/" style={{flex:'1 1 260px',minWidth:'240px',border:'1px solid #e2e8f0',borderRadius:'12px',padding:'20px 22px',textDecoration:'none',color:'inherit',display:'block'}}>
-    <div style={{fontWeight:700,marginBottom:'6px',color:'#1e293b'}}>Outbound Phone Agent Testing</div>
-    <div style={{fontSize:'14px',color:'#64748b',lineHeight:1.5}}>The workflow for an agent that places calls.</div>
+    <div style={{fontWeight:700,marginBottom:'6px',color:'#F0F6FCCC'}}>Outbound Phone Agent Testing</div>
+    <div style={{fontSize:'14px',color:'#FFFFFF',lineHeight:1.5}}>The workflow for an agent that places calls.</div>
   </a>
   <a href="/support/docs/image-analyzer/" style={{flex:'1 1 260px',minWidth:'240px',border:'1px solid #e2e8f0',borderRadius:'12px',padding:'20px 22px',textDecoration:'none',color:'inherit',display:'block'}}>
-    <div style={{fontWeight:700,marginBottom:'6px',color:'#1e293b'}}>Image Analyzer Testing</div>
-    <div style={{fontSize:'14px',color:'#64748b',lineHeight:1.5}}>Score generated images against a prompt, brand rules, and technical specs.</div>
+    <div style={{fontWeight:700,marginBottom:'6px',color:'#F0F6FCCC'}}>Image Analyzer Testing</div>
+    <div style={{fontSize:'14px',color:'#FFFFFF',lineHeight:1.5}}>Score generated images against a prompt, brand rules, and technical specs.</div>
   </a>
 </div>
 
@@ -213,7 +213,7 @@ Find answers to common questions about the platform.
 
 <div style={{display:'flex',flexWrap:'wrap',gap:'16px',margin:'20px 0'}}>
   <a href="/support/docs/agent-testing-platform-faqs/" style={{flex:'1 1 260px',minWidth:'240px',border:'1px solid #e2e8f0',borderRadius:'12px',padding:'20px 22px',textDecoration:'none',color:'inherit',display:'block'}}>
-    <div style={{fontWeight:700,marginBottom:'6px',color:'#1e293b'}}>Agent Testing FAQs</div>
-    <div style={{fontSize:'14px',color:'#64748b',lineHeight:1.5}}>Answers on multilingual support, model governance, and data connectors.</div>
+    <div style={{fontWeight:700,marginBottom:'6px',color:'#F0F6FCCC'}}>Agent Testing FAQs</div>
+    <div style={{fontSize:'14px',color:'#FFFFFF',lineHeight:1.5}}>Answers on multilingual support, model governance, and data connectors.</div>
   </a>
 </div>

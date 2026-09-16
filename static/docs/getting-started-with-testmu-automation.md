@@ -28,21 +28,17 @@ https://{username}:{accessKey}@hub.lambdatest.com/wd/hub
 
 ## Choose How to Start
 
-### Run Your First Test
+    Run Your First Test
+    New to cloud testing? Clone a sample project, set credentials, and run your first Selenium script on the grid.
 
-New to cloud testing? Clone a sample project, set credentials, and run your first Selenium script on the grid.
+    Migrate Your Test Suite
+    Already have Selenium tests? Change the hub URL, add credentials, and run them on the cloud.
 
-### Migrate Your Test Suite
+    Explore the Dashboard
+    See where test results live - video playback, command logs, screenshots, and analytics.
 
-Already have Selenium tests? Change the hub URL, add credentials, and run them on the cloud.
-
-### Explore the Dashboard
-
-See where test results live - video playback, command logs, screenshots, and analytics.
-
-### Configure Capabilities
-
-Control which browser, version, OS, and advanced features your tests use.
+    Configure Capabilities
+    Control which browser, version, OS, and advanced features your tests use.
 
 ## Related Selenium guides
 
