@@ -1,0 +1,53 @@
+name: Lint code blocks
+
+# Syntax-checks fenced code blocks in docs changed by this PR.
+#
+# Scoped to CHANGED FILES on purpose: the repo has pre-existing debt, and a
+# repo-wide gate would block every PR on unrelated pages. This stops new
+# breakage landing while the backlog is worked down. To sweep everything:
+#   node scripts/lint-code-blocks.js --all
+
+on:
+  pull_request:
+    paths:
+      - 'docs/**/*.md'
+      - 'docs/**/*.mdx'
+      - 'scripts/lint-code-blocks.js'
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install PyYAML
+        run: pip install --quiet pyyaml
+
+      # ruby and bash are already present on ubuntu-latest
+
+      - name: Collect changed docs
+        id: changed
+        run: |
+          git diff --name-only --diff-filter=ACMR \
+            "origin/${{ github.base_ref }}" HEAD -- 'docs/**/*.md' 'docs/**/*.mdx' \
+            > changed.txt || true
+          echo "count=$(wc -l < changed.txt | tr -d ' ')" >> "$GITHUB_OUTPUT"
+          echo "Changed doc files:"; cat changed.txt
+
+      - name: Lint fenced code blocks
+        if: steps.changed.outputs.count != '0'
+        run: xargs -a changed.txt node scripts/lint-code-blocks.js
+
+      - name: Nothing to lint
+        if: steps.changed.outputs.count == '0'
+        run: echo "No documentation files changed."
