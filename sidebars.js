@@ -650,6 +650,7 @@ module.exports = {
           "test-runs-configurations",
           "kaneai-scheduled-test-runs",
           "kaneai-test-run-instance-view",
+          { type: "doc", id: "kaneai-healing-and-dynamic-test", label: "Adaptive Heal and Dynamic Test" },
         ],
       },
 
