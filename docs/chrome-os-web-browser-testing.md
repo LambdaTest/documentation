@@ -119,6 +119,7 @@ Apart from these features, <BrandName /> also offers you the
 ## Device Controls
 The Device Control feature allows you tp perform certain actions with your device  within your current test session:
 
+- **Home:** Use this option to navigate to the device's home screen during a manual session.
 - **Volume:** Adjust the device volume directly within your testing session, ensuring optimal audio levels for your tests.
 - **Lock Device :** Lock or unlock your device seamlessly during testing sessions without interrupting your workflow.
 
