@@ -119,6 +119,10 @@ Let's dive in to learn how to test apps installed from App Store.
 - If you can't find an app on the Apple App Store, ensure you're signed in with an Apple ID from the region where the app is published. For example, if the app is available only in India, sign in with an Indian Apple ID and search again.
 
 - App availability may also depend on the device's region. If the app isn't visible on devices from one region, try launching a device from the region where the app is available (for example, a US-region device for apps published only in the United States).
+
+- Apps cannot be downloaded directly from the App Store or TestFlight during App Automation, as App Store or TestFlight authentication require Apple ID login steps and Multi-Factor Authentication (MFA), which cannot be automated through scripts due to iOS security restrictions. To automate an app, upload the .ipa file and provide the corresponding appID in the automation capabilities. Alternatively, on a private device, manually install the app from the App Store or TestFlight and launch it during automation using the app’s Bundle ID.
+
+- When signing in with an Apple ID, the password field may appear blank due to Apple’s screen-streaming security restrictions. However, the password input is accepted, and login works successfully with valid Apple ID credentials.
 :::
 
 <nav aria-label="breadcrumbs">
