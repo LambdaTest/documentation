@@ -8,6 +8,7 @@ keywords: ['kane cli tms', 'kane cli test manager', 'kane cli upload', 'kane cli
 
 import { BrandName } from "/snippets/BrandName.mdx";
 import AgentSkillCallout from "/snippets/AgentSkillCallout.mdx";
+import { KaneCliCta } from "/snippets/KaneCliCta.mdx";
 
 ---
 
@@ -192,3 +193,5 @@ Every session, regardless of upload outcome, leaves a directory on your machine:
 `<session-id>` is a UUID generated when the session starts. The runner writes its step logs and screenshots into `runs/<n>/`, where `n` increments per run within the session.
 
 This directory is useful when you want to look back at a past run without going to Test Manager, debug a session that failed to upload, or hand a teammate the raw artefacts.
+
+<KaneCliCta />

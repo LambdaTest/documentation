@@ -7,6 +7,7 @@ keywords: ['sharp install failure', 'libvips', 'kane cli troubleshooting', 'npm 
 ---
 
 import AgentSkillCallout from "/snippets/AgentSkillCallout.mdx";
+import { KaneCliCta } from "/snippets/KaneCliCta.mdx";
 
 ---
 
@@ -142,3 +143,5 @@ Starting from kane-cli 0.3.4+, sharp is an optional dependency. When sharp is no
 | npm skips optionals | `npm config get omit` | `npm config delete omit` then uninstall + reinstall |
 | Proxy blocks @img/* | `npm view @img/sharp-darwin-arm64` | Add `@img` pass-through to proxy/registry |
 | Bleeding-edge Node | `node -v` | Use Node 22 LTS |
+
+<KaneCliCta />

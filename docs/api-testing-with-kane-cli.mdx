@@ -7,6 +7,7 @@ keywords: ['kane cli api testing', 'api testing use cases', 'kane cli', 'kaneai'
 ---
 
 import AgentSkillCallout from "/snippets/AgentSkillCallout.mdx";
+import { KaneCliCta } from "/snippets/KaneCliCta.mdx";
 
 ---
 
@@ -228,3 +229,5 @@ Real-world workflows often span several dependent API calls, for example logging
 6. Assert the order was placed, for example `confirm the response status is 201, the status field is 'placed', and the itemCount is 2`.
 7. Run the command. Kane CLI executes all three requests in order, automatically passing the token and cart data forward, and validates each step along the way.
 8. Review the full pass or fail summary and the generated multi-step test case, which documents the entire transaction from login to order confirmation and can be rerun as a single, reliable end-to-end check.
+
+<KaneCliCta />

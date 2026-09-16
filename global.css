@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600&display=swap');
+
 a {
     text-decoration: none !important;
 }
@@ -257,4 +259,453 @@ header [class*="nav-tabs"] {
   list-style: none;
   padding: 0;
   margin: 0;
+}
+
+.kane_cli_cta {
+  --kane-cli-font: 'Manrope', 'SF Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --kane-cli-ink: #121212;
+
+  position: relative;
+  width: 100%;
+  margin: 20px 0 40px;
+  padding: 0;
+  overflow: hidden;
+  background: var(--kane-cli-ink) url('https://assets.testmu.ai/resources/images/Terminal-KaneCLIBg.png') center / cover no-repeat;
+}
+
+.kane_cli_cta_box {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin: 24px;
+  overflow: hidden;
+  background: #fff;
+}
+
+.kane_cli_cta .kane_cli_cta_content {
+  position: relative;
+  box-sizing: border-box;
+  width: 55%;
+  padding: 20px;
+
+  @media screen and (max-width: 1100px){
+    width: 100%;
+  }
+}
+
+.kane_cli_cta .kane_cli_cta_content h2,
+.kane_cli_cta .kane_cli_cta_content p,
+.kane_cli_cta .kane_cli_cta_content button.demoBtn {
+  font-family: var(--kane-cli-font);
+}
+
+.kane_cli_cta .kane_cli_cta_content h2 {
+  margin: 0 0 4px;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 28px;
+  letter-spacing: -0.5px;
+  text-wrap: balance;
+  color: var(--kane-cli-ink);
+}
+
+.kane_cli_cta .kane_cli_cta_content p {
+  max-width: 240px;
+  margin: 0 0 18px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  color: #4D4D4D;
+
+  @media screen and (max-width: 1100px){
+    max-width: 100%;
+  }
+}
+
+.kane_cli_cta .kane_cli_cta_content button.demoBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  box-sizing: border-box;
+  width: auto;
+  height: 32px;
+  padding: 12px;
+  border: 1px solid rgba(31, 35, 40, 0.15);
+  border-radius: 6px;
+  outline: none;
+  background: var(--kane-cli-ink);
+  filter: drop-shadow(0 1px 0 rgba(31, 35, 40, 0.04));
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 16px;
+  color: #fff;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+/* Right arrow */
+.kane_cli_cta .kane_cli_cta_content button.demoBtn::after {
+  content: '';
+  flex-shrink: 0;
+  width: 8px;
+  height: 8px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10.2857' height='10.2857' viewBox='0 0 10.2857 10.2857' fill='none'%3E%3Cpath d='M0.642857 5.14286H9.64286M5.14286 0.642857L9.64286 5.14286L5.14286 9.64286' stroke='white' stroke-width='1.28571' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center / 10.2857px 10.2857px no-repeat;
+}
+
+/* Terminal artwork, flush with the box's bottom-right corner */
+.kane_cli_cta .kane_cli_cta_terminal {
+  position: absolute;
+  z-index: 1;
+  right: 0;
+  bottom: 0;
+  width: 320px;
+  max-width: none;
+  height: auto;
+
+  @media screen and (max-width: 1279px){
+    width: 280px;
+  }
+  @media screen and (max-width: 1163px){
+    width: 320px;
+  }
+  @media screen and (max-width: 1100px){
+    display: none;
+  }
+}
+
+/* Decorative ASCII icon, behind the terminal */
+.kane_cli_cta .kane_cli_cta_icon {
+  position: absolute;
+  z-index: 0;
+  top: 12px;
+  left: 40%;
+  width: 22%;
+  max-width: none;
+  height: auto;
+  pointer-events: none;
+
+  @media screen and (max-width: 1279px){
+    width: 18%;
+    left: 50%;
+  }
+  @media screen and (max-width: 1163px){
+    width: 22%;
+    left: 40%;
+  }
+  @media screen and (max-width: 1100px){
+    display: none;
+  }
+}
+
+/* Narrow column: text above, terminal below */
+@media (max-width: 660px),
+  (min-width: 1280px) and (max-width: 1440px) {
+  .kane_cli_cta_box {
+    flex-direction: column;
+    align-items: stretch;
+    margin: 16px;
+  }
+
+  .kane_cli_cta .kane_cli_cta_content {
+    width: 100%;
+    padding: 20px 20px 16px;
+  }
+
+  .kane_cli_cta .kane_cli_cta_terminal {
+    position: static;
+    align-self: flex-end;
+    width: 80%;
+  }
+
+  .kane_cli_cta .kane_cli_cta_icon {
+    display: none;
+  }
+}
+
+/* Sidebar and table of contents both visible: text only */
+@media (min-width: 1280px) and (max-width: 1440px) {
+  .kane_cli_cta .kane_cli_cta_terminal {
+    display: none;
+  }
+}
+
+/* ==========================================================================
+   Book a Demo popup (snippets/KaneCliCta.mdx)
+   ========================================================================== */
+
+.demo_popup_overlay {
+  position: fixed !important;
+  inset: 0;
+  z-index: 99999;
+  display: none;
+  box-sizing: border-box;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.demo_popup_overlay.shown {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.demo_popup_header_demo {
+  background: #4D4D4DA3;
+  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
+}
+
+.demo_popup_overlay .content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  text-align: left;
+}
+
+.demo_popup_header_demo .demo_popup_box {
+  position: relative;
+  width: 90%;
+  max-width: 550px;
+  max-height: calc(100vh - 40px);
+  margin: 20px auto;
+  padding: 40px;
+  overflow-y: auto;
+  background-color: #fff;
+}
+
+.demo_popup_close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  font-size: 32px;
+  line-height: 1;
+  color: #000;
+  cursor: pointer;
+}
+
+.demo_popup_close:hover {
+  color: #333;
+}
+
+.demo_popup_form_title {
+  margin-bottom: 24px;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 32px;
+  letter-spacing: -1px;
+  text-align: center;
+  color: #000;
+}
+
+.demo_popup_form label {
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 22px;
+  color: #333;
+  cursor: pointer;
+}
+
+/* Layout */
+.demo_popup_grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.demo_popup_field {
+  margin-top: 16px;
+}
+
+.demo_popup_phone_row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Fields: native inputs and the custom select share one look */
+.demo_popup_form input,
+.demo_popup_form textarea,
+.demo_popup_form select,
+.demo_popup_select {
+  height: 38px;
+  margin-top: 4px;
+  padding: 0 12px;
+  border: 1px solid #D3D2CD;
+  border-radius: 4px;
+  background-color: #fff;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  color: #4D4D4D;
+}
+
+.demo_popup_form input,
+.demo_popup_form textarea,
+.demo_popup_form select {
+  box-sizing: border-box;
+  width: 100%;
+  font-family: inherit;
+}
+
+.demo_popup_form textarea {
+  height: 65px;
+  padding: 12px;
+  resize: none;
+}
+
+.demo_popup_form input::placeholder,
+.demo_popup_form textarea::placeholder {
+  color: #4D4D4D;
+}
+
+.demo_popup_form input:focus-visible,
+.demo_popup_form textarea:focus-visible,
+.demo_popup_form select:focus-visible {
+  outline: none;
+  border-color: #000;
+}
+
+.demo_popup_error {
+  margin-top: 5px;
+  font-size: 12px;
+  color: #ef4444;
+}
+
+.demo_popup_action {
+  text-align: center;
+}
+
+.demo_popup_submit {
+  width: 100%;
+  margin-top: 12px;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+  background-color: #000;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 22px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.demo_popup_submit:disabled {
+  background-color: #5F5E5E;
+  cursor: not-allowed;
+}
+
+.demo_popup_submit:hover {
+  background-color: #3C3C3C;
+}
+
+/* Custom select (country and product) */
+.demo_popup_select_wrapper {
+  position: relative;
+}
+
+.demo_popup_select {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: border-color 0.2s ease;
+}
+
+.demo_popup_product_select {
+  width: 100%;
+}
+
+.demo_popup_select_open {
+  border-color: #000;
+}
+
+.demo_popup_select_text {
+  flex: 1;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.demo_popup_select_arrow {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  margin-left: 8px;
+  color: #4D4D4D;
+  transition: transform 0.2s ease;
+}
+
+.demo_popup_select_open .demo_popup_select_arrow {
+  transform: rotate(180deg);
+}
+
+.demo_popup_select_options {
+  position: absolute;
+  top: 46px;
+  right: 0;
+  left: 0;
+  z-index: 1000;
+  min-width: 200px;
+  max-height: 200px;
+  margin: 0;
+  padding: 0;
+  overflow-y: auto;
+  border: 1px solid #D3D2CD;
+  background: #fff;
+  list-style: none;
+}
+
+.demo_popup_select_option {
+  padding: 4px 12px;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 22px;
+  color: #4D4D4D;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.demo_popup_select_option:hover {
+  background-color: #f5f5f5;
+}
+
+.demo_popup_select_option_selected {
+  background-color: #f0f0f0;
+  font-weight: 500;
+}
+
+@media (max-width: 1400px) {
+  .demo_popup_header_demo .demo_popup_box {
+    padding: 30px;
+  }
+
+  .demo_popup_form_title {
+    margin-bottom: 16px;
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .demo_popup_header_demo .demo_popup_box {
+    padding: 30px 20px;
+  }
+
+  .demo_popup_close {
+    top: 10px;
+    right: 10px;
+  }
+
+  .demo_popup_field {
+    margin-top: 8px;
+  }
 }
