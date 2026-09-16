@@ -1103,6 +1103,7 @@ module.exports = {
         collapsed: false,
         items: [
           { type: "doc", label: "Overview", id: "agent-assurance-overview" },
+          { type: "doc", label: "Install Rook", id: "rook-installation" },
           { type: "doc", label: "Getting Started", id: "agent-assurance-quickstart" },
            { type: "doc", label: "Command Reference", id: "agent-assurance-command-reference" },
           {
