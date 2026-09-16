@@ -1,7 +1,6 @@
 ﻿---
 id: espresso-visual-regression
 title: Getting Started With Visual Regression Testing Using Espresso On SmartUI Real Devices
-sidebar_label: Espresso
 description: Dive into our detailed Appium Visual Regression support documentation for step-by-step guidance! Efficiently perform visual testing, manage applications, and ensure your mobile apps are visually perfect before launch.
 keywords:
   - Visual Regression
