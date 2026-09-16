@@ -74,6 +74,20 @@ Cloud, Visual &amp; Platform
     Kane CLI↗
     Natural-language browser automation in agent mode.
 
+    Rook↗
+    Test, red-team and regression-check the AI agents you own.
+
+## Skills That Ship With a Product
+
+Two TestMu AI products publish their own skill packages with a one-command installer. They are not part of the `agentskillsforall` catalog above, so install them directly (Node.js 22+):
+
+| Product | What the skill does | Install |
+|---|---|---|
+| [Rook](/support/docs/rook-installation/) | Tests, red-teams and regression-checks an AI agent you own, then reads the evidence-backed verdicts. Works with Claude Code, Codex and Gemini CLI. | `npx @testmuai/rook-skill` |
+| [Kane CLI](/support/docs/kane-cli-skills/) | Natural-language browser automation from your coding agent. | `npx @testmuai/kane-cli-skill` |
+
+Rook's skill source, references and user guide live in the [LambdaTest/rook](https://github.com/LambdaTest/rook#for-ai-coding-agents-reading-this) repository.
+
 ## Explore the Full Skill Catalog
 
 The 12 skills above are the most common starting points. The repository ships 70+ skills across eight testing categories.
