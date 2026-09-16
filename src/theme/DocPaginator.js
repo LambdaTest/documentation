@@ -22,12 +22,15 @@ export default function DocPaginator(props) {
       <div className="Doc_bottom_Cta">
         <div className="Doc_cta">
           <div className='right_sec'>
-            <h2>Test across 3000+ combinations of browsers, real devices & OS.</h2>
-            <DemoPopup />
+            <h2>Terminal First Testing With Kane CLI</h2>
+            <p>Natural language browser &amp; mobile app tests <br />right from terminal.</p>
+            <DemoPopup preselectedProductType="Kane-CLI" />
           </div>
-          <img loading="lazy" src="https://assets.testmu.ai/resources/images/DocBottomImg.png" alt="Book Demo" title="Book Demo" width="1160" height="736" className='left_sec no-zoom'></img>
+          <img loading="lazy" src="https://assets.testmu.ai/resources/images/Terminal-KaneCLIIcon.svg" alt="" aria-hidden="true" className='cta_icon no-zoom'></img>
+          <img loading="lazy" src="https://assets.testmu.ai/resources/images/Terminal-KaneCLI.png" alt="Kane CLI terminal" title="Kane CLI" className='left_sec no-zoom'></img>
         </div>
       </div>
+
       <h2 className='main_heading_support'>Help and Support</h2>
       
       
