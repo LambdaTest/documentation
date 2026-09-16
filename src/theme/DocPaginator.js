@@ -19,15 +19,17 @@ export default function DocPaginator(props) {
   return (
     <>
       {showFeedback && <>
-      <div className="Doc_bottom_Cta">
-        <div className="Doc_cta">
-          <div className='right_sec'>
+      <div className="kane_cli_cta">
+        <div className="kane_cli_cta_box">
+          <div className='kane_cli_cta_content'>
             <h2>Terminal First Testing With Kane CLI</h2>
-            <p>Natural language browser &amp; mobile app tests <br />right from terminal.</p>
+            <p>Natural language browser &amp; mobile app tests right from terminal.</p>
+
             <DemoPopup preselectedProductType="Kane-CLI" />
+            
           </div>
-          <img loading="lazy" src="https://assets.testmu.ai/resources/images/Terminal-KaneCLIIcon.svg" alt="" aria-hidden="true" className='cta_icon no-zoom'></img>
-          <img loading="lazy" src="https://assets.testmu.ai/resources/images/Terminal-KaneCLI.png" alt="Kane CLI terminal" title="Kane CLI" className='left_sec no-zoom'></img>
+          <img loading="lazy" src="https://assets.testmu.ai/resources/images/Terminal-KaneCLIIcon.svg" alt="" aria-hidden="true" className='kane_cli_cta_icon no-zoom'></img>
+          <img loading="lazy" src="https://assets.testmu.ai/resources/images/Terminal-KaneCLI.png" alt="Kane CLI terminal" title="Kane CLI" className='kane_cli_cta_terminal no-zoom'></img>
         </div>
       </div>
 
