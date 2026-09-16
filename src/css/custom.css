@@ -1935,7 +1935,6 @@ h6[id]::before {
 .navbar__inner .navbar__items--right{padding-right: 30px;}
 
 .kane_cli_cta {
-  container-type: inline-size;
   position: relative;
   width: 100%;
   margin: 20px 0 40px;
@@ -2021,7 +2020,7 @@ h6[id]::before {
   height: auto;
 
   @media screen and (max-width: 1809px) {
-    width: 360px !important;
+    width: 360px;
   }
 
   @media screen and (max-width: 1440px) {
@@ -2042,6 +2041,10 @@ h6[id]::before {
   max-width: none;
   height: auto;
   pointer-events: none;
+
+  @media screen and (max-width: 1809px) {
+    left: 50%;
+  }
 }
 
 @media (max-width: 1440px) {
@@ -2056,7 +2059,7 @@ h6[id]::before {
   }
 }
 
-@container (max-width: 1100px) {
+@media (max-width: 1809px) {
   .kane_cli_cta_box {
     margin: 24px;
   }
@@ -2077,18 +2080,9 @@ h6[id]::before {
     font-size: 15px;
     line-height: 22px;
   }
-
-  .kane_cli_cta .kane_cli_cta_terminal {
-    width: 42%;
-  }
-
-  .kane_cli_cta .kane_cli_cta_icon {
-    left: 44%;
-    width: 15%;
-  }
 }
 
-@container (max-width: 860px) {
+@media (max-width: 1489px) {
   .kane_cli_cta .kane_cli_cta_content h2 {
     font-size: 18px;
     line-height: 26px;
@@ -2100,7 +2094,18 @@ h6[id]::before {
   }
 }
 
-@container (max-width: 620px) {
+@media screen and (max-width: 1279px) {
+  .kane_cli_cta_content{
+    width: 100% !important;
+    
+    p {
+      max-width: 100% !important;
+    }
+  }
+}
+
+@media (max-width: 767px),
+  (min-width: 997px) and (max-width: 1169px) {
   .kane_cli_cta_box {
     flex-direction: column;
     align-items: stretch;
