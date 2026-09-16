@@ -2,6 +2,14 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
+Manage NuGet Packages. Your test results would be displayed on the test console (or CLI if you are using terminal/cmd) and on the TestMu AI App Automation Dashboard.",
+          "url": "https://www.testmuai.com/support/docs/appium-csharp-nunit/#step-6-execute-and-monitor-your-tests"
+        }
+      ]
+    }
+  ]) }}
+/>
+
 In this documentation, you will learn how to trigger a automation script of **NUnit** for application testing with **Appium** on TestMu AI, set the [**desired capabilities**](/support/docs/desired-capabilities-in-appium/) for appium testing, and other advanced features of TestMu AI.
 
 ## Prerequisites

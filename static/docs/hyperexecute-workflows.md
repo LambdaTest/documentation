@@ -2,40 +2,6 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
-Workflows give you the speed, reliability, and platform‑native orchestration of HyperExecute on a schedule. Think of Workflows as a lightweight, cloud-native alternative and companion to CI/CD, with all the functionalities of HyperExecute such as reporting, RCA etc.
-
-## Why Workflows
-- **Schedule-first orchestration:** Run regular suites by just connecting your Git repo, without wiring a CI pipeline.
-- **Native to HyperExecute:** Leverage JIT infrastructure, smart test discovery/splitting, and rich artifacts in one place.
-- **Chainable runs:** Trigger downstream workflows on success to form full test chains across projects.
-- **Customizable:** Use Workflow Variables to reuse the same YAML across environments and scenarios.
-
-## How Workflows are Used
-Workflows are schedule and platform driven, not commit-driven yet. Workflows can be thought of as UI alternative for CLI-based executions, if your project is available on Git. They’re great for:
-- Nightly smoke/regression runs across browsers/devices.
-- Scheduled environment checks (staging, pre-prod) before business hours.
-- Chaining suites across multiple repositories or projects.
-
-## Prerequisites
-- A [HyperExecute Project](/support/docs/hyperexecute-projects/) connected to **GitHub** or **Bitbucket**.
-- A HyperExecute YAML present on the specified branch, or provide a Custom YAML during setup. New to YAML? See [Generate YAML](/support/docs/hyperexecute-generate-sample-yaml/) and the [Deep Dive](/support/docs/deep-dive-into-hyperexecute-yaml/).
-- Note: Workflows currently work with the [remote mode of test discovery](/support/docs/deep-dive-into-hyperexecute-yaml/#testdiscovery).
-
-## Create a Workflow
-1) In your Project, click **Setup Workflow**.
-2) Enter details:
-   - **Workflow name**
-   - **Branch name** (source branch containing the YAML)
-   - **YAML file path** (path in repo) or add Custom YAML
-3) (Optional) Configure the **schedule** or skip it if you want to run workflow manually. See [Schedule Configuration](#schedule-configuration) for details.
-4) (Optional) You can **link your workflow** by selecting existing workflows to trigger automatically after this workflow completes successfully.
-5) (Optional) You may also define **Workflow Variables** which can be used in the YAML to customize behavior at runtime for a specific workflow.
-6) Click **Finish** and your workflow is ready. Click on Play button in the workflow list to run the job manually.
-
-All jobs appear under the same Project. View jobs from the Project’s **Jobs** tab or by clicking the workflow name to open **Past Jobs** view.
-
-If you don’t see a job after clicking Run or after the scheduled time, open the workflow and check **Past Occurrences**. Runs that failed to create a job (e.g., due to YAML validation, missing file path, or branch mismatch) are listed there with error details.
-
 ## Schedule Configuration
 
 During workflow creation (Step 2 of 3), you can configure the **Triggering Schedule Details** to automate when and how often your workflow runs.

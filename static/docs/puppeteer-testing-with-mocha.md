@@ -1,6 +1,37 @@
-# Puppeteer Testing With Mocha
+# Run Puppeteer Tests Using Mocha
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
+{\n\tbeforeEach(async () => {\n\t\tbrowser = await puppeteer.connect({\n\t\t\tbrowserWSEndpoint : `wss://cdp.lambdatest.com/puppeteer?capabilities=${encodeURIComponent(\n\t\t\t\tJSON.stringify(caps_chrome)\n\t\t\t)}`\n\t\t});\n\t\tpage = await browser.newPage();\n\t});\n\n\tit('should be titled \"Google\"', async () => {\n\t\tlet text = 'Google';\n\t\tawait page.goto('https://www.duckduckgo.com');\n\t\tvar element = await page.$('[name=\"q\"]');\n\t\tawait element.click();\n\t\tawait element.type(text);\n\t\tawait Promise.all([\n\t\t\tpage.keyboard.press('Enter'),\n\t\t\tpage.waitForNavigation()\n\t\t]);\n\t\tvar title = await page.title();\n\t\ttry {\n\t\t\texpect(title).equal(text + ' at DuckDuckGo', 'Expected page title is incorrect!');\n\t\t\tawait page.evaluate(\n\t\t\t\t(_) => {},\n\t\t\t\t`lambdatest_action: ${JSON.stringify({\n\t\t\t\t\taction    : 'setTestStatus',\n\t\t\t\t\targuments : { status: 'passed', remark: 'assertion passed' }\n\t\t\t\t})}`\n\t\t\t);\n\t\t} catch (e) {\n\t\t\tawait page.evaluate(\n\t\t\t\t(_) => {},\n\t\t\t\t`lambdatest_action: ${JSON.stringify({\n\t\t\t\t\taction    : 'setTestStatus',\n\t\t\t\t\targuments : { status: 'failed', remark: e.name }\n\t\t\t\t})}`\n\t\t\t);\n\t\t}\n\t});\n\n\tafterEach(async () => {\n\t\tawait page.close();\n\t\tawait browser.close();\n\t});\n});"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 5",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "npm run test"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "The mocha-skill package includes",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "mocha-skill/\n\u251c\u2500\u2500 SKILL.md\n\u2514\u2500\u2500 reference/\n    \u251c\u2500\u2500 playbook.md\n    \u2514\u2500\u2500 advanced-patterns.md"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Install a Mocha Agent Skill using the command below",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "codeRepository": "https://github.com/LambdaTest/agent-skills",
+        "text": "# Clone the repo and copy the skill you need\ngit clone https://github.com/LambdaTest/agent-skills.git\ncp -r agent-skills/mocha-skill .claude/skills/\n\n# Or for Cursor / Copilot\ncp -r agent-skills/mocha-skill .cursor/skills/"
+      }
+    ],
+    "dateModified": "2026-09-09T19:13:32+05:30"
+  }) }}
+/>
+
+# Puppeteer Testing With Mocha
 
 Mocha is a JavaScript automation testing framework to run the tests on Node.js and the browser. It enables you to run test cases serially, providing greater flexibility and accurate test reporting while mapping unidentified bugs to the correct test cases.
 

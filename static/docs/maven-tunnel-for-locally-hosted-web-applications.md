@@ -2,6 +2,41 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
+\n\tlambdatest-tunnel-binary<\/artifactId>\n\t4.0.2<\/version>\n<\/dependency>"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Running Maven Tunnel",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "package com.lambdatest.tunnel;\n\nimport java.net.URL;\nimport java.util.HashMap;\nimport org.openqa.selenium.JavascriptExecutor;\nimport org.openqa.selenium.WebDriver;\nimport org.openqa.selenium.remote.DesiredCapabilities;\nimport org.openqa.selenium.remote.RemoteWebDriver;\nimport org.testng.annotations.AfterTest;\nimport org.testng.annotations.BeforeTest;\nimport org.testng.annotations.Test;\nimport com.lambdatest.tunnel.Tunnel;\n\npublic class MavenSingle {\n    Tunnel t;\n\n    WebDriver driver = null;\n    public static String status = \"passed\";\n\n    String username = System.getenv(\"LT_USERNAME\");\n    String access_key = System.getenv(\"LT_ACCESS_KEY\");\n\n\n    @BeforeTest\n    public void setUp() throws Exception {\n\n        DesiredCapabilities capabilities = new DesiredCapabilities();\n        capabilities.setCapability(\"build\", \"Single Maven Tunnel\");\n        capabilities.setCapability(\"name\", \"Maven Tunnel\");\n        capabilities.setCapability(\"platform\", \"Windows 10\");\n        capabilities.setCapability(\"browserName\", \"Chrome\");\n        capabilities.setCapability(\"version\",\"latest\");\n        capabilities.setCapability(\"tunnel\",true);\n        capabilities.setCapability(\"network\",true);\n        capabilities.setCapability(\"console\",true);\n        capabilities.setCapability(\"visual\",true);\n\n        //create tunnel instance\n        t = new Tunnel();\n        HashMap options = new HashMap();\n        options.put(\"user\", username);\n        options.put(\"key\", access_key);\n\n        //start tunnel\n        t.start(options);\n        driver = new RemoteWebDriver(new URL(\"http://\" + username + \":\" + access_key + \"@hub.lambdatest.com/wd/hub\"), capabilities);\n        System.out.println(\"Started session\");\n    }\n\n    @Test()\n    public void testTunnel() throws Exception {\n            //Check LocalHost on XAMPP\n            driver.get(\"http://localhost.lambdatest.com\");\n            // Let's check that the item we added is added in the list.\n            driver.get(\"https://google.com\");\n    } \n\n    @AfterTest\n    public void tearDown() throws Exception {\n        ((JavascriptExecutor) driver).executeScript(\"lambda-status=\" + status);\n        driver.quit();\n        //close tunnel\n        t.stop();\n    }\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Parallel Testing With Maven Tunnel",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<!DOCTYPE suite SYSTEM \"https://testng.org/testng-1.0.dtd\">\n\n\n\t\n\t\t\n\t<\/listeners>\n\t\n   \n   \n      \n        \n        \n        \n            \n        <\/classes>\n    <\/test> \n    \n   \n   \n      \n        \n        \n        \n            \n        <\/classes>\n    <\/test> \n    \n   \n   \n      \n        \n        \n        \n            \n        <\/classes>\n    <\/test> \n    \n   \n   \n      \n        \n        \n        \n            \n        <\/classes>\n    <\/test> \n    <\/suite>"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 6",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "package com.lambdatest.tunnel;\n\nimport java.net.MalformedURLException;\nimport java.net.URL;\nimport java.util.HashMap;\nimport org.openqa.selenium.JavascriptExecutor;\nimport org.openqa.selenium.remote.DesiredCapabilities;\nimport org.openqa.selenium.remote.RemoteWebDriver;\nimport org.testng.IExecutionListener;\nimport org.testng.annotations.AfterTest;\nimport org.testng.annotations.BeforeTest;\nimport org.testng.annotations.Test;\nimport com.lambdatest.tunnel.Tunnel;\n\n\npublic class MavenParallel implements IExecutionListener{\n\n    public RemoteWebDriver driver = null;\n    String status = \"passed\";\n    String username = System.getenv(\"LT_USERNAME\");\n    String accessKey = System.getenv(\"LT_ACCESS_KEY\");\n    Tunnel t;\n    \n    @Override\n    public void onExecutionStart() {\n\ttry {\n\t      //start the tunnel\n\t      t = new Tunnel();\n\t      HashMap options = new HashMap();\n\t      options.put(\"user\", username);\n\t      options.put(\"key\", accessKey);\n\t      t.start(options);\n\t} catch (Exception e) {\n\t      e.printStackTrace();\n\t}\n    }\n\n    @BeforeTest\n    @org.testng.annotations.Parameters(value={\"browser\",\"version\",\"platform\", \"resolution\"})\n    public void setUp(String browser, String version, String platform, String resolution) throws Exception {\n        DesiredCapabilities capabilities = new DesiredCapabilities();\n\n        capabilities.setCapability(\"build\", \"Parallel Maven Tunnel\");\n        capabilities.setCapability(\"name\", \"Maven Tunnel\");\n        capabilities.setCapability(\"browserName\", browser);\n        capabilities.setCapability(\"version\", version);\n        capabilities.setCapability(\"platform\", platform);\n        capabilities.setCapability(\"tunnel\",true);\n        capabilities.setCapability(\"network\",true);\n        capabilities.setCapability(\"console\",true);\n        capabilities.setCapability(\"visual\",true);\n\n        try {\n            driver= new RemoteWebDriver(new URL(\"https://\"+username+\":\"+accessKey+\"@hub.lambdatest.com/wd/hub\"), capabilities);\n        } catch (MalformedURLException e) {\n            System.out.println(\"Invalid grid URL\");\n        }\n    }\n   \n    @Test()\n    public void testTunnel() throws Exception {\n            //Check LocalHost on XAMPP\n            driver.get(\"http://localhost.lambdatest.com\");\n            // Let's check that the item we added is added in the list.\n            driver.get(\"https://google.com\");\n    } \n\n    @AfterTest\n    public void tearDown() throws Exception {\n        if (driver != null) {\n            ((JavascriptExecutor) driver).executeScript(\"lambda-status=\" + status);\n            driver.quit();\n        }\n    }\n\t\n    @Override\t\n    public void onExecutionFinish() {\n\ttry {\n\t      //stop the Tunnel;\n\t      t.stop();\n\t    } catch (Exception e) {\n\t\te.printStackTrace();\n\t    }\t\t\n\t}\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Enable Parallel Testing With Maven Tunnel using Serentiy BDD",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "\n   com.github.lambdatest<\/groupId>\n   lambdatest-tunnel-binary<\/artifactId>\n   4.0.2<\/version>\n   \n      \n         org.testng<\/groupId>\n         testng<\/artifactId>\n      <\/exclusion>\n   <\/exclusions>\n<\/dependency>"
+      }
+    ],
+    "dateModified": "2026-08-12T15:40:32+05:30"
+  }) }}
+/>
+
 Maven is a renowned build automation tool for orchestrating project builds by automatically handling Selenium dependencies, compiling source code to binary & then packaging of the binary. TestMu AI offers an SSH (Secure Shell) tunnel which allows you to test your locally hosted websites over 3000+ browsers for both mobile and desktop through TestMu AI Selenium Grid.
 
 This document will help you configure a secure TestMu AI Tunnel to execute your [Selenium test automation](https://www.testmuai.com/selenium-automation) scripts through your Maven project on our online Selenium Grid.

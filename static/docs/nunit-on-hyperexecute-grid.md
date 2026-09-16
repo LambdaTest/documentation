@@ -1,7 +1,37 @@
-# Running NUnit Framework Tests on HyperExecute
+# Run automation tests on HyperExecute using NUnit
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
+packages.txt\n - dotnet build -c Release\n\npost:\n  - cat yaml/linux/nunit_hyperexecute_autosplit_sample.yaml\n\nmergeArtifacts: true\n\nuploadArtefacts:\n  - name: ExecutionSnapshots\n    path:\n     - NUnitHyperTestDemo/Reports/**\n\nreport: true\npartialReports:\n    type: json\n    location: NUnitHyperTestDemo/\n    frameworkName: extent\n\ntestDiscovery:\n  type: raw\n  mode: remote\n  command: grep 'Category' NUnitHyperTestDemo -ir --include=\\*.cs --exclude=DriverFactory.cs --exclude=HyperTestDemo.AssemblyInfo.cs | awk '{print$2}' | grep -o '\".*\"'\n\ntestRunnerCommand: dotnet test $solution --filter TestCategory=$test \n\njobLabel: [selenium-Nunit, linux, autosplit]"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Run the below command in your terminal at the root folder of the project",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "./hyperexecute --config RELATIVE_PATH_OF_YOUR_YAML_FILE"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "The nunit-skill package includes",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "nunit-skill/\n\u251c\u2500\u2500 SKILL.md\n\u2514\u2500\u2500 reference/\n    \u251c\u2500\u2500 playbook.md\n    \u2514\u2500\u2500 advanced-patterns.md"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Install a NUnit Agent Skill using the command below",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "codeRepository": "https://github.com/LambdaTest/agent-skills",
+        "text": "# Clone the repo and copy the skill you need\ngit clone https://github.com/LambdaTest/agent-skills.git\ncp -r agent-skills/nunit-skill .claude/skills/\n\n# Or for Cursor / Copilot\ncp -r agent-skills/nunit-skill .cursor/skills/"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
+# Running NUnit Framework Tests on HyperExecute
 NUnit is a testing framework for .NET languages, commonly used with Selenium for automated testing. It provides a structure for organizing and executing tests, supporting features like test fixtures, assertions, and setup/teardown methods.
 
 HyperExecute is an AI Native Test Orchestration Cloud Platform that empowers you to run **end-to-end** tests **quickly** and **efficiently**. It provides Just-in-Time (JIT) testing infrastructure with fast execution **speeds**, **smart orchestration**, and **detailed logs**.

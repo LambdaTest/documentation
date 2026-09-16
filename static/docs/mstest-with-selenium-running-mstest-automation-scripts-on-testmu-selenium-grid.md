@@ -2,6 +2,21 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
+Build Solution. Open Test Explorer in Visual Studio. Click Run from the Test Explorer to run the sample test. In Linux/macOS:",
+          "url": "https://www.testmuai.com/support/docs/mstest-with-selenium-running-mstest-automation-scripts-on-testmu-selenium-grid/#step-4-run-the-test"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 5,
+          "name": "Step 5: View Your Results",
+          "text": "Check the test output on the console and the TestMu AI dashboard. Visit the TestMu AI Automation Dashboard to view your test results. The dashboard provides: Text logs for each test step Screenshots captured during execution Video recordings of the full test session",
+          "url": "https://www.testmuai.com/support/docs/mstest-with-selenium-running-mstest-automation-scripts-on-testmu-selenium-grid/#step-5-view-your-results"
+        }
+      ]
+    }
+  ]) }}
+/>
+
 Run MSTest tests on the TestMu AI cloud grid. This guide covers setup, running a sample test, configuring capabilities, and testing locally hosted pages.
 
 **Sample repo**

@@ -2,6 +2,42 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
+\"Sample PHPUnit Build\",\n\t\"name\" => \"Sample PHPUnit Test\",\n\t\"platform\" => \"Windows 10\",\n\t\"browserName\" => \"Chrome\",\n\t\"version\" => \"latest\"\n );\t"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 4: Run the Test",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "composer single"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "To run parallel tests",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "composer parallel"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "To run both single and parallel tests at once",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "composer test"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Install the skill",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "codeRepository": "https://github.com/LambdaTest/agent-skills",
+        "text": "git clone https://github.com/LambdaTest/agent-skills.git\ncp -r agent-skills/phpunit-skill .claude/skills/\n\n# For Cursor / Copilot\ncp -r agent-skills/phpunit-skill .cursor/skills/"
+      }
+    ],
+    "dateModified": "2026-09-09T19:13:32+05:30"
+  }) }}
+/>
+
 Run PHPUnit tests on the TestMu AI cloud grid. This guide covers setup, running a sample test, configuring capabilities, and testing locally hosted pages.
 
 **Sample repo**

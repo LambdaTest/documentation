@@ -2,6 +2,57 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
+();\nab.add(\"Sample-Spreadsheet-10-rows.csv\");\nDesiredCapabilities capabilities = new DesiredCapabilities();\ncapabilities.setCapability(\"build\",\"Upload\");\ncapabilities.setCapability(\"name\",\"Upload Files\");\ncapabilities.setCapability(\"browserName\", \"Chrome\");\ncapabilities.setCapability(\"browserVersion\",\"104\");\ncapabilities.setCapability(\"platformName\", \"Windows 10\");\ncapabilities.setCapability(\"lambda:userFiles\",ab);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "How to Test the Uploaded File on TestMu AI Platform",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "C#",
+        "text": "//HashMap\nstring testName = callStack[0].ToString();\nInitCaps\nString[] ltFile = new string[] { \"file-name.csv\" };\n\n// Capabilities\ncapabilities.AddAdditionalOption(\"lambda:userFiles\", ltFile);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 3",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "$capabilities = array(\n    .\n    .\n\"lambda:userFiles\" => [\n\"804402.png\",\n\"file_example_JPG_2500kB.jpg\",\n\"Sample_File_To_Upload.txt\"\n])"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 4",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Python",
+        "text": "capabilities = {\n      .\n      .\n\"lambda:userFiles\" : [\n\"804402.png\",\n\"file_example_JPG_2500kB.jpg\",\n\"Sample_File_To_Upload.txt\"\n]\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 5",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "var capabilities = {\n    .\n    .\n\"lambda:userFiles\" : [\n\"804402.png\",\n\"file_example_JPG_2500kB.jpg\",\n\"Sample_File_To_Upload.txt\"\n]\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "For example, to upload a file on a web page via test script, use the following Java code (on Windows and macOS)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "   // If the file is 804402.png, and testing environment is Windows OS\n   WebElement addFile = driver.findElement(By.xpath(\".//input[@type='file']\"));\n   addFile.sendKeys(\"C:\\\\Users\\\\ltuser\\\\Downloads\\\\804402.png\");\n\n   // If the file is 804402.png, and testing environment is macOS\n   WebElement addFile = driver.findElement(By.xpath(\".//input[@type='file']\"));\n   addFile.sendKeys(\"/Users/ltuser/Downloads/804402.png\");"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Basic Syntax",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "driver.executeScript(\"lambda-files-download=file_name\")"
+      }
+    ],
+    "dateModified": "2026-09-09T19:13:32+05:30"
+  }) }}
+/>
+
+# Upload Files Using TestMu AI Selenium Grid
+
 In Selenium automation testing, you may need to test the upload functionality on a web app or website. TestMu AI lets you test the upload feature on the cloud-based Selenium Grid across 10,000+ browser/device combinations.
 
 This document explains how to upload a file on the TestMu AI platform and access it via an automation test script.

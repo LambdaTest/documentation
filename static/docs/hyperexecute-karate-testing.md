@@ -4,8 +4,7 @@
 
 Karate is a popular open-source test automation framework that combines API test-automation, mocks, performance testing, and even UI testing into a single framework. It allows writing expressive tests in a simple Gherkin syntax, while leveraging Java for extensibility.
 
-## Why Choose Karate for API Testing?
-Karate is a unified test automation framework that combines API test automation, mocks, performance testing, and UI automation into a single tool. It’s designed for simplicity and power:
+To run Karate API tests on HyperExecute, set your TestMu AI credentials, configure `HyperExecute.yaml`, and trigger the run with the HyperExecute CLI. Karate is an open-source framework for API test automation, mocks, performance testing, and UI automation that uses Gherkin syntax with Java. On HyperExecute, the TestMu AI test orchestration platform, it autosplits your `.feature` files across parallel nodes, retries only the scenarios that fail, can start Karate mock servers inside the same run, and collects logs and Cucumber reports in the dashboard.
 
 ### Key Benefits of Karate:
 

@@ -2,6 +2,34 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
+\n\n\n```yaml title=\".gitlab-ci.yml - Python Example\"\nstages:\n  - test\n\nvariables:\n  PYTHON_VERSION: \"3.9\"\n  LT_USERNAME: $LT_USERNAME\n  LT_ACCESS_KEY: $LT_ACCESS_KEY\n  PROJECT_TOKEN: $PROJECT_TOKEN\n\nvisual_regression_tests:\n  stage: test\n  image: python:${PYTHON_VERSION}\n  \n  before_script:\n    - pip install -r requirements.txt\n    - npm install -g @lambdatest/smartui-cli\n  \n  script:\n    # Get GitLab project ID and commit SHA\n    - |\n      PROJECT_ID=${CI_PROJECT_ID}\n      COMMIT_SHA=${CI_COMMIT_SHA}\n      \n      # For merge requests, use the merge request commit SHA\n      if [ -n \"$CI_MERGE_REQUEST_IID\" ]; then\n        COMMIT_SHA=${CI_MERGE_REQUEST_SHA:-${CI_COMMIT_SHA}}\n      fi\n      \n      # Construct GitLab API URL for status updates\n      GIT_URL=\"https://gitlab.com/api/v4/projects/${PROJECT_ID}/statuses/${COMMIT_SHA}\"\n      \n      echo \"GitLab Project ID: ${PROJECT_ID}\"\n      echo \"Commit SHA: ${COMMIT_SHA}\"\n      echo \"GitLab Status URL: ${GIT_URL}\"\n      \n      # Run tests with SmartUI Exec and GitLab integration\n      npx smartui exec --gitURL \"${GIT_URL}\" -- pytest\n      # Or: npx smartui exec --gitURL \"${GIT_URL}\" -- python -m unittest discover\n      # Or: npx smartui exec --gitURL \"${GIT_URL}\" -- behave\n      \n  only:\n    - merge_requests\n    - main\n    - develop\n  \n  environment:\n    name: visual-regression/$CI_COMMIT_REF_NAME"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "environment",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n<\/TabItem>\n<\/Tabs>\n\n### Key Configuration Points\n\n1. **SmartUI CLI Installation**: Install SmartUI CLI globally or use `npx @lambdatest/smartui-cli`\n2. **GitLab Project ID**: Automatically available as `CI_PROJECT_ID` in GitLab CI/CD\n3. **Commit SHA**: Use `CI_COMMIT_SHA` for regular commits, or `CI_MERGE_REQUEST_SHA` for merge requests\n4. **GitLab API URL**: Construct as `https://gitlab.com/api/v4/projects/{projectId}/statuses/{commitId}`\n5. **Exec Command**: Use `npx smartui exec --gitURL \"${GIT_URL}\" -- `\n\n:::info Understanding the SmartUI Exec Command\n\nThe `npx smartui exec` command wraps your test execution and provides SmartUI integration:\n\n```bash\nnpx smartui exec --gitURL \"\" -- "
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "only",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n<\/TabItem>\n\n\n```yaml title=\".gitlab-ci.yml - Complete Java Web Testing Example\"\nstages:\n  - test\n\nvariables:\n  MAVEN_OPTS: \"-Dmaven.repo.local=.m2/repository\"\n  LT_USERNAME: $LT_USERNAME\n  LT_ACCESS_KEY: $LT_ACCESS_KEY\n  PROJECT_TOKEN: $PROJECT_TOKEN\n\nvisual_regression_tests:\n  stage: test\n  image: maven:3.8-openjdk-11\n  \n  cache:\n    paths:\n      - .m2/repository/\n  \n  before_script:\n    - mvn clean install -DskipTests\n    - npm install -g @lambdatest/smartui-cli\n  \n  script:\n    - |\n      PROJECT_ID=${CI_PROJECT_ID}\n      COMMIT_SHA=${CI_COMMIT_SHA}\n      \n      if [ -n \"$CI_MERGE_REQUEST_IID\" ]; then\n        COMMIT_SHA=${CI_MERGE_REQUEST_SHA:-${CI_COMMIT_SHA}}\n      fi\n      \n      GIT_URL=\"https://gitlab.com/api/v4/projects/${PROJECT_ID}/statuses/${COMMIT_SHA}\"\n      \n      echo \"GitLab Status URL: ${GIT_URL}\"\n      \n      # Run Java tests with SmartUI Exec\n      npx smartui exec --gitURL \"${GIT_URL}\" -- mvn test\n      \n  only:\n    - merge_requests\n    - main"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "only",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n<\/TabItem>\n\n\n```yaml title=\".gitlab-ci.yml - Complete Java Mobile Testing Example\"\nstages:\n  - test\n\nvariables:\n  MAVEN_OPTS: \"-Dmaven.repo.local=.m2/repository\"\n  LT_USERNAME: $LT_USERNAME\n  LT_ACCESS_KEY: $LT_ACCESS_KEY\n  PROJECT_TOKEN: $PROJECT_TOKEN\n\nvisual_regression_tests:\n  stage: test\n  image: maven:3.8-openjdk-11\n  \n  cache:\n    paths:\n      - .m2/repository/\n  \n  before_script:\n    - mvn clean install -DskipTests\n    - npm install -g @lambdatest/smartui-cli\n  \n  script:\n    - |\n      PROJECT_ID=${CI_PROJECT_ID}\n      COMMIT_SHA=${CI_COMMIT_SHA}\n      \n      if [ -n \"$CI_MERGE_REQUEST_IID\" ]; then\n        COMMIT_SHA=${CI_MERGE_REQUEST_SHA:-${CI_COMMIT_SHA}}\n      fi\n      \n      GIT_URL=\"https://gitlab.com/api/v4/projects/${PROJECT_ID}/statuses/${COMMIT_SHA}\"\n      \n      echo \"GitLab Status URL: ${GIT_URL}\"\n      \n      # Run Java mobile tests with SmartUI Exec\n      npx smartui exec --gitURL \"${GIT_URL}\" -- mvn test -D suite=mobile-tests.xml\n      \n  only:\n    - merge_requests\n    - main"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 This guide shows you how to integrate SmartUI visual regression testing with GitLab merge requests using the **SmartUI SDK/Exec method**. This works for both **web testing** (Selenium, Playwright, Cypress, Puppeteer) and **mobile app testing** (Appium, WebdriverIO) across all supported languages.
 
 **SmartUI SDK/Exec vs Hooks**

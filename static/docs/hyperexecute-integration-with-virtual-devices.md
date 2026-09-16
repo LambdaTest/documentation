@@ -1,75 +1,36 @@
-# Virtual Device Integration with HyperExecute
+# Virtual Devices
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
-This page outlines how to execute your Virtual Device tests on HyperExecute with [YAML 0.2](/support/docs/hyperexecute-yaml-version0.2/)
+\n<!DOCTYPE suite SYSTEM \"http://testng.org/testng-1.0.dtd\">\n\n\n\n    \n        \n        \n        \n        \n            \n        <\/classes>\n    <\/test>\n\n    \n        \n        \n        \n        \n            \n        <\/classes>\n    <\/test>\n<\/suite>"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "iOS",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "XML",
+        "text": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<!DOCTYPE suite SYSTEM \"http://testng.org/testng-1.0.dtd\">\n\n\n\n    \n        \n        \n        \n        \n            \n        <\/classes>\n    <\/test>\n\n    \n        \n        \n        \n        \n            \n        <\/classes>\n    <\/test>\n<\/suite>"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 5: Configure YAML in your Test Suite",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "---\nversion: 0.2\nglobalTimeout: 150\ntestSuiteTimeout: 150\ntestSuiteStep: 150\n\nrunson: android\n\nconcurrency: 2\n\nautosplit: true\n\nretryOnFailure: false\nmaxRetries: 1\n\nappium: true\nframework:\n  name: maven/testng\n  defaultReports: false\n  discoveryType: xmltest\n  flags: [\"-Pios-single\"]\n\njobLabel: ['HYP', 'Virtual Device', 'iOS', 'Single Device']"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Run the below command in your terminal at the root folder of the project",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "./hyperexecute --config RELATIVE_PATH_OF_YOUR_YAML_FILE"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
 
-**Note**
-
-Currently, App Automation is available for Emulators and Simulators in the Beta phase, with support for the Appium framework. To use this feature, [Contact Sales](https://www.testmuai.com/contact-us).
-
-## Prerequisites
-
-To run the Tests on HyperExecute from your Local System, you are required:
-
-- Install [Appium Java Client](https://github.com/appium/java-client).
-- Your TestMu AI [Username and Access key](/support/docs/hyperexecute-how-to-get-my-username-and-access-key/)
-- [HyperExecute CLI](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/) in order to initiate a test execution Job .
-- Setup the [Environmental Variable](/support/docs/hyperexecute-environment-variable-setup/)
-- [HyperExecute YAML](/support/docs/hyperexecute-yaml-version0.2/) file which contains all the necessary instructions.
-- You have an access to an **Android** app (*.apk* or *.aab* file) or an **iOS** *zip* file (containing *.app* file).
-
-Run your samplе tеsts on HyperExecute using our samplе Android and iOS applications:
-* [Samplе Android App](https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_android.apk)
-* [Samplе iOS App](https://prod-mobile-artefacts.lambdatest.com/assets/docs/firefox.zip)
-
-## Step 1: Setup Your Test Suite
-
-You can use your own project to configure and test it. For demo purposes, we are using the sample repository.
-
-## Step 2: Setup the CLI in your Test Suite
-
-After cloning / downloading the sample repo, you need to setup the CLI and the environment variables.
-
-### Download the HyperExecute CLI
-
-The CLI is used for triggering the tests on HyperExecute. It is recommend to download the CLI binary on the host system and keep it in the root directory of the suite to perform the tests on HyperExecute.
-
-You can download the CLI for your desired platform from the below mentioned links:
-
-| Platform | HyperExecute CLI |
-| ---------| ---------------- |
-| Windows | https://downloads.lambdatest.com/hyperexecute/windows/hyperexecute.exe |
-| MacOS | https://downloads.lambdatest.com/hyperexecute/darwin/hyperexecute |
-| Linux | https://downloads.lambdatest.com/hyperexecute/linux/hyperexecute |
-
-### Setup Environment Variable
-
-Now, you need to export your environment variables *LT_USERNAME* and *LT_ACCESS_KEY* that are available in the [TestMu AI Profile page](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/details/profile).
-
-Run the below mentioned commands in your terminal to setup the CLI and the environment variables.
-
-  {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
-export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
-
-  {`set LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
-set LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
-
-## Step 3: Upload your Application
-
-Upload your **iOS** application (*.app* file) or **Android** application (*.apk* file) to the TestMu AI servers using our **REST API**. You need to provide your **Username** and **AccessKey** in the format `Username:AccessKey` in the **cURL** command for authentication. Make sure to add the path of the **appFile** in the cURL request. Here is an example cURL request to upload your app using our REST API:
-
-{`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" --location --request POST 'https://manual-api.lambdatest.com/app/upload/virtualDevice' --form 'name="Android_App"' --form 'appFile=@"/Users/macuser/Downloads/proverbial_android.apk"'
-`}
-
-{`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" --location --request POST 'https://manual-api.lambdatest.com/app/upload/virtualDevice' --form 'name="Android_App"' --form 'appFile=@"/Users/macuser/Downloads/proverbial_android.apk"'
-`}
-
-{`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" --location --request POST 'https://manual-api.lambdatest.com/app/upload/virtualDevice' --form 'name="Android_App"' --form 'url="https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_android.apk"'`}
-
-{`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" --location --request POST "https://manual-api.lambdatest.com/app/upload/virtualDevice" --header "Content-Type: application/x-www-form-urlencoded" --data-urlencode "url=:https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_android.apk" --data-urlencode "name=Proverbial_App"`}
-
-> Response of above cURL will be a **JSON** object containing the `App URL` of the format `lt://APP123456789123456789`
+ Response of above cURL will be a **JSON** object containing the `App URL` of the format `lt://APP123456789123456789`
 
 ## Step 4: Update Your Automation Script
 

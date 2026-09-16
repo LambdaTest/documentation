@@ -2,6 +2,34 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
+\n\n\n```js title=\"This is a sample for your webhook configuration for JavaScript to ignore by Class\"\nlet config = {\n  screenshotName: \"Ignore-Class\",\n  fullPage: false, //You can make this property as true in case of Chrome browser\n  ignoreDOM: {\n    class: [\"Class-1\", \"Class-2\"], // Ignoring elements by class, you can ignore multiple at once\n  },\n};\nawait driver.executeScript(\"smartui.takeScreenshot\", config);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Ignore XPath",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n<\/TabItem>\n\n\n\n```js title=\"This is a sample for your webhook configuration for JavaScript to ignore by CSS Selector\"\nlet config = {\n  screenshotName: \"Ignore-cssSelector\",\n  fullPage: false, //You can make this property as true in case of Chrome browser\n  ignoreDOM: {\n    cssSelector: [\"CSS-Selector-1\", \"CSS-Selector-2\"], // Ignoring elements by CSS selector, you can ignore multiple at once\n  },\n};\nawait driver.executeScript(\"smartui.takeScreenshot\", config);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Select ID",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n<\/TabItem>\n\n\n```js title=\"This is a sample for your webhook configuration for JavaScript to select by Class\"\nlet config = {\n  screenshotName: \"Select-Class\",\n  fullPage: false, //You can make this property as true in case of Chrome browser\n  selectDOM: {\n    class: [\"Class-1\", \"Class-2\"], // Selecting elements by class, you can select multiple at once\n  },\n};\nawait driver.executeScript(\"smartui.takeScreenshot\", config);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Select XPath",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n<\/TabItem>\n\n\n\n```js title=\"This is a sample for your webhook configuration for JavaScript to select by CSS Selector\"\nlet config = {\n  screenshotName: \"Select-cssSelector\",\n  fullPage: false, //You can make this property as true in case of Chrome browser\n  selectDOM: {\n    cssSelector: [\"CSS-Selector-1\", \"CSS-Selector-2\"], // Selecting elements by CSS selector, you can select multiple at once\n  },\n};\nawait driver.executeScript(\"smartui.takeScreenshot\", config);"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 This documentation will guide you step-by-step to execute the SmartUI tests on the HyperExecute platform using Selenium
 
 ## Prerequisites

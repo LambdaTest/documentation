@@ -2,6 +2,35 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
+\n\n\n\n```csharp title=\"csharp-appium-first.sln\"\nusing System;\nusing OpenQA.Selenium.Appium;\nusing OpenQA.Selenium.Support.UI;\nusing OpenQA.Selenium.Appium.Android;\nusing System.Threading;\n\nnamespace csharp_appium {\n  class Program {\n    static void Main(string[] args) {\n        AppiumOptions caps = new AppiumOptions();\n\n        caps.AddAdditionalCapability(\"user\", \"########\"); //Add the LT Username\n        caps.AddAdditionalCapability(\"accessKey\", \"########\"); //Add the LT Access key\n\n        // Set URL of the application under test\n        caps.AddAdditionalCapability(\"app\", \"###########\"); //Add the App ID\n\n        // Specify device and os_version\n        caps.AddAdditionalCapability(\"deviceName\", \"Galaxy S21 Ultra 5G\"); //Add the Device Details\n        caps.AddAdditionalCapability(\"platformVersion\", \"11\");\n        caps.AddAdditionalCapability(\"platformName\", \"Android\");\n        caps.AddAdditionalCapability(\"isRealMobile\", true);\n        caps.AddAdditionalCapability(\"network\", false);\n        caps.AddAdditionalCapability(\"w3c\", true);\n        caps.AddAdditionalCapability(\"visual\", true);\n        caps.AddAdditionalCapability(\"video\", true);\n        caps.AddAdditionalCapability(\"project\", \"CSharp Sample Android\");\n        caps.AddAdditionalCapability(\"build\", \"CSharp Sample Android\");\n        caps.AddAdditionalCapability(\"name\", \"CSharp Sample Android\");\n\n        // Initialize the remote Webdriver using LambdaTest remote URL\n        // and desired capabilities defined above\n        AndroidDriver < AndroidElement > driver = new AndroidDriver < AndroidElement > (\n          new Uri(\"https://mobile-hub.lambdatest.com/wd/hub\"), caps);\n\n        // Test case for the sample Android app.\n        // If you have uploaded your app, update the test case here.\n        AndroidElement color = (AndroidElement) new WebDriverWait(driver, TimeSpan.FromSeconds(30)).Until(\n          SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(MobileBy.Id(\"color\"))\n        );\n        color.Click();\n        color.Click();\n\n        AndroidElement text = (AndroidElement) new WebDriverWait(driver, TimeSpan.FromSeconds(30)).Until(\n          SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(MobileBy.Id(\"Text\"))\n        );\n        text.Click();\n\n        AndroidElement toast = (AndroidElement) new WebDriverWait(driver, TimeSpan.FromSeconds(30)).Until(\n          SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(MobileBy.Id(\"toast\"))\n        );\n        toast.Click();\n\n        AndroidElement nf = (AndroidElement) new WebDriverWait(driver, TimeSpan.FromSeconds(30)).Until(\n          SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(MobileBy.Id(\"notification\"))\n        );\n        nf.Click();\n\n        AndroidElement gl = (AndroidElement) new WebDriverWait(driver, TimeSpan.FromSeconds(30)).Until(\n          SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(MobileBy.Id(\"geoLocation\"))\n        );\n        gl.Click();\n\n        Thread.Sleep(5000);\n\n        driver.Navigate().Back();\n\n        AndroidElement st = (AndroidElement) new WebDriverWait(driver, TimeSpan.FromSeconds(30)).Until(\n          SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(MobileBy.Id(\"speedTest\"))\n        );\n        st.Click();\n\n        Thread.Sleep(5000);\n\n        driver.Navigate().Back();"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 5: Configure the Test Capabilities (iOS)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n<\/TabItem>\n\n\n```csharp title=\"Android(.apk)\"\n  AppiumOptions caps = new AppiumOptions(); \n  caps.AddAdditionalCapability(\"LT_USERNAME\", \"username\"); \n  caps.AddAdditionalCapability(\"LT_ACCESSKEY\", \"accessKey\");\n\tcaps.setCapability(\"platformName\", \"Android\");\n\tcaps.setCapability(\"deviceName\", \"Galaxy S20\");\n\tcaps.setCapability(\"isRealMobile\", true);\n\tcaps.setCapability(\"platformVersion\",\"11\");\n\tcaps.setCapability(\"Visual\", true);\n\tcaps.setCapability(\"Console\", true);\n\tcaps.setCapability(\"Network\", false);\n"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "The appium-skill package includes",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "appium-skill/\n\u251c\u2500\u2500 SKILL.md\n\u2514\u2500\u2500 reference/\n    \u251c\u2500\u2500 playbook.md\n    \u2514\u2500\u2500 advanced-patterns.md"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Install a Appium Agent Skill using the command below",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "codeRepository": "https://github.com/LambdaTest/agent-skills",
+        "text": "# Clone the repo and copy the skill you need\ngit clone https://github.com/LambdaTest/agent-skills.git\ncp -r agent-skills/appium-skill .claude/skills/\n\n# Or for Cursor / Copilot\ncp -r agent-skills/appium-skill .cursor/skills/"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 In this documentation, you will learn how to trigger a automation script of **CSharp** for application testing with **Appium** on TestMu AI, set the [**desired capabilities**](/support/docs/desired-capabilities-in-appium/) for appium testing, and other advanced features of TestMu AI.
 
 ## Prerequisites

@@ -2,6 +2,48 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
+> ~/.codex/AGENTS.md"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Project-level install",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "curl -o /tmp/kane-cli-agents.md \\\n  https://raw.githubusercontent.com/LambdaTest/kane-cli/main/skill-installer/skills/SKILL.md\n\ncat /tmp/kane-cli-agents.md >> AGENTS.md"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Append to global AGENTS.md (creates the file if it doesn't exist)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\"Verify the staging site checkout flow works\"\n\"Run the login test and tell me what happened\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Global install (available in all projects)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "mkdir -p ~/.gemini/skills/kane-cli\ncurl -o ~/.gemini/skills/kane-cli/SKILL.md \\\n  https://raw.githubusercontent.com/LambdaTest/kane-cli/main/skill-installer/skills/SKILL.md"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Project-level install",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "mkdir -p .gemini/skills/kane-cli\ncurl -o .gemini/skills/kane-cli/SKILL.md \\\n  https://raw.githubusercontent.com/LambdaTest/kane-cli/main/skill-installer/skills/SKILL.md"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Gemini CLI",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\"Test that the homepage loads correctly on staging\"\n\"Verify the registration flow works end to end\""
+      }
+    ],
+    "dateModified": "2026-07-01T18:40:16+05:30"
+  }) }}
+/>
+
 A Kane CLI **skill** is a markdown instruction file that teaches an AI coding agent how to use `kane-cli`: when to invoke it, how to build commands, how to parse NDJSON output, how to present results, and how to handle failures. Install the skill once, and your agent handles browser automation tasks automatically whenever you ask.
 
 Skills work on top of [Agent Mode](/support/docs/kane-cli-agent-mode/) (`--agent` flag). The skill tells the agent to always use `--agent`, parse the NDJSON stream, and present structured results back to you.

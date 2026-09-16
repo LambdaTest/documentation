@@ -1,6 +1,29 @@
-# C# with Playwright: Running Your First Test
+# Run your C# automation scripts with Playwright on TestMu AI
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
+{}\", \"lambdatest_action: {\\\"action\\\": \\\"setTestStatus\\\", \\\"arguments\\\": {\\\"status\\\":\\\"\" + status + \"\\\", \\\"remark\\\": \\\"\" + remark + \"\\\"}}\");\n    }\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Pass the below command in the terminal",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "dotnet build"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "To run the test, pass the below command",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "dotnet run single"
+      }
+    ],
+    "dateModified": "2026-09-09T19:13:32+05:30"
+  }) }}
+/>
+
+# C# with Playwright: Running Your First Test
 
 Learn how to use Playwright with C# to automate web application testing across real browsers and operating systems on TestMu AI cloud platform.
 

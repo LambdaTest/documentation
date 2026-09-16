@@ -20,6 +20,8 @@ If this page's slug changes, update that regex or the buttons silently stop appe
 console warning (see VALID_VALUE in copy-ips.js) — extend it before adding IPv6 or ranges.
 */}
 
+**Note:** The IP addresses listed below are static Public IPs. If your application or network is protected by IP-based firewall rules, you can whitelist the relevant TestMu AI IP ranges to allow TestMu AI cloud devices to access your environment.
+
 These are the list of the IP ranges that you need to whitelist with respect to the specific TestMu AI products.
 
 Whitelist these Firewall IPs to allow TestMu AI cloud infrastructure to access your firewall-protected application or environment. Configure them as **inbound** allow rules.

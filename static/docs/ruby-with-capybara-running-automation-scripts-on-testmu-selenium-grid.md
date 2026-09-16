@@ -2,6 +2,35 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
+lt_browser, \n            \"browserVersion\"=>lt_browser_version, \n            \"platformName\"=>lt_os, \n            \"resolution\"=>lt_res, \n            \"build\"=>\"capybara-lambdatest\", \n            \"name\"=>\"single-Test-Jenkins\",\n            \"video\"=>true, \n            \"network\"=>true, \n            \"console\"=>true, \n            \"visual\"=>true \n        }  "
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 4: Run the Test",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "bundle exec rake single"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "To run parallel tests",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "bundle exec rake parallel"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Install the skill",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "codeRepository": "https://github.com/LambdaTest/agent-skills",
+        "text": "git clone https://github.com/LambdaTest/agent-skills.git\ncp -r agent-skills/capybara-skill .claude/skills/\n\n# For Cursor / Copilot\ncp -r agent-skills/capybara-skill .cursor/skills/"
+      }
+    ],
+    "dateModified": "2026-09-09T19:13:32+05:30"
+  }) }}
+/>
+
 Run Capybara tests on the TestMu AI cloud grid. This guide covers setup, running a sample test, configuring capabilities, and testing locally hosted pages.
 
 **Sample repo**

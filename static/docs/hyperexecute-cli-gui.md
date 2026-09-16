@@ -2,12 +2,6 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
-**HyperExecute Graphical User Interface (GUI)** streamlines your test automation workflow and brings HyperExecute's power of test orchestration with the most intuitive way to interact. HyperExecute GUI makes testing simple, fast, and powerful. It abstracts all technical complexity to make **high-performance test execution available to everyone**.
-
-## Why HyperExecute GUI?
-
-**[HyperExecute](https://www.testmuai.com/hyperexecute)** has been a **cornerstone for automation testing**, offering unparalleled flexibility with its YAML configurations and command-line interface. Now, with HyperExecute GUI, you can experience AI-powered test detection, set up test environments with simple clicks and run your tests without coding.
-
 ## Prerequisites
 
 **BETA**

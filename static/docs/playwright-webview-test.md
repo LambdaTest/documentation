@@ -2,6 +2,13 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
+You can see your credentials below if you have logged into our platform.\n\n\n\n\n\n  \n    \n  {`export LT_USERNAME=\"${ YOUR_LAMBDATEST_USERNAME()}\"\nexport LT_ACCESS_KEY=\"${ YOUR_LAMBDATEST_ACCESS_KEY()}\"`}\n  <\/CodeBlock>\n<\/div>\n\n<\/TabItem>\n\n\n\n  \n    \n  {`set LT_USERNAME=\"${ YOUR_LAMBDATEST_USERNAME()}\"\nset LT_ACCESS_KEY=\"${ YOUR_LAMBDATEST_ACCESS_KEY()}\"`}\n  <\/CodeBlock>\n<\/div>\n\n<\/TabItem>\n<\/Tabs>\n\n### Step 5: Execute your test\nReplace the `TEST_FILE_NAME` in the below command with your desired test file to execute that particular test on TestMu AI:\n\n```bash\nnode playwrightwebview.js"
+      }
+    ],
+    "dateModified": "2026-09-10T15:46:57+05:30"
+  }) }}
+/>
+
 WebView testing is an essential process for ensuring the functionality and reliability of applications that rely on embedded web browsers. This guide provides detailed steps to perform WebView testing using Playwright. It is designed for developers, QA engineers, and anyone involved in software quality assurance.
 
 ## Steps to perform Webview testing

@@ -168,15 +168,15 @@ import NewTag from '../src/component/newTag';
           <div className="home_inners_box">
             <h2 className="homeMain_h2"><HyperexecuteLightIcon className="home_icons home_light_icon" role="presentation"/> <HyperexecuteDarkIcon className="home_icons home_dark_icon" role="presentation"/>HyperExecute</h2>
             <div className="home_inners">
-              <a href="/support/docs/getting-started-with-hyperexecute/"><p className="p_home_inners">Getting Started</p></a>
-              <a href="/support/docs/hyperexecute-yaml-parameters/"><p className="p_home_inners">HyperExecute YAML</p></a>
-              <a href="/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/"><p className="p_home_inners">HyperExecute CLI</p></a>
-              <a href="/support/docs/hyperexecute-cli-gui/"><p className="p_home_inners">HyperExecute GUI &nbsp;<NewTag value="BETA" /></p></a>
-              <a href="/support/docs/hyperexecute-mcp-server/"><p className="p_home_inners">HyperExecute MCP Server</p></a>
-              <a href="/support/docs/key-features-of-hyperexecute/"><p className="p_home_inners">Features</p></a>
-              <a href="/support/docs/integration-with-hyperexecute/"><p className="p_home_inners">Integrations</p></a>
-              <a href="/support/docs/hyperexecute-private-cloud-setup/"><p className="p_home_inners">Private Cloud</p></a>
-            </div>
+                  <a href="/support/docs/getting-started-with-hyperexecute/"><p className="p_home_inners">Getting Started</p></a>
+                  <a href="/support/docs/key-features-of-hyperexecute/"><p className="p_home_inners">Features</p></a>
+                  <a href="/support/docs/hyperexecute-yaml-parameters/"><p className="p_home_inners">HyperExecute YAML</p></a>
+                  <a href="/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/"><p className="p_home_inners">HyperExecute CLI</p></a>
+                  <a href="/support/docs/hyperexecute-mcp-server/"><p className="p_home_inners">HyperExecute MCP</p></a>
+                 <a href="/support/docs/hyperexecute-run-jmeter-tests/"><p className="p_home_inners">JMeter Performance Testing</p></a>
+                  <a href="/support/docs/hyperexecute-gattling-testing/"><p className="p_home_inners">Gatling Performance Testing</p></a>
+                  <a href="/support/docs/hyperexecute-private-cloud-setup/"><p className="p_home_inners">Private Cloud</p></a>
+                </div>
           </div>
           <div className="home_inners_box">
             <h2 className="homeMain_h2"><AnalyticsLightIcon className="home_icons home_light_icon" role="presentation"/> <AnalyticsDarkIcon className="home_icons home_dark_icon" role="presentation"/>Insights</h2>

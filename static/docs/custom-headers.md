@@ -1,6 +1,85 @@
-# Bypass Firewalls with customHeaders and customUrlFilters
+# How to Bypass Firewalls Using CustomHeaders Capability
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
+();\nheaders.put(\"WebView\", \"Enable\");\nheaders.put(\"X-Custom-Token\", \"secure-token-123\");\n\nList urlFilters = Arrays.asList(\n    \"https://www.xhaus.com/headers\",\n    \"https://.*\\\\.example\\\\.com/.*\"\n);\n\ncapabilities.setCapability(\"customHeaders\", headers);\ncapabilities.setCapability(\"customUrlFilters\", urlFilters);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Send tokens or session IDs with headers like",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "X-Session-ID: 1234567890"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Specify expected response formats",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "Accept: application/json"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Get limits and usage from APIs",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "X-RateLimit-Remaining: 10"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Include trace info or timing metrics",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "X-Execution-Time: 150ms"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Enable cross-origin requests",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "Access-Control-Allow-Origin: *"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Pass app-level config",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "X-App-Version: v2.3.1"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Mask the request with common headers",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "User-Agent: Mozilla/5.0 (Windows NT 10.0...)"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Return backend state",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "X-Server-Status: All systems operational"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Guide search engines",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "Link: ; rel=\"canonical\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Track experimental groups",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "X-Experiment-ID: variant_b"
+      }
+    ],
+    "dateModified": "2026-09-09T19:13:32+05:30"
+  }) }}
+/>
+
+# Bypass Firewalls with customHeaders and customUrlFilters
 
 Corporate firewalls keep networks secure but can occasionally interfere with your testing process. The customHeaders and customUrlFilters capabilities give developers precise control over network requests and firewall bypassing during testing.
 

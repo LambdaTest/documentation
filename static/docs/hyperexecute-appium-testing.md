@@ -2,6 +2,65 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
+\n\n\n```java reference title=\"iOSApp.java\"\nhttps://github.com/LambdaTest/hyperexecute-real-device-appium-testng/blob/main/src/main/java/iOSApp.java"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 3: Update your XML file (Android)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "codeRepository": "https://github.com/LambdaTest/hyperexecute-real-device-appium-testng",
+        "text": "<\/TabItem>\n\n\n```xml reference title=\"ios-parallel.xml\"\nhttps://github.com/LambdaTest/hyperexecute-real-device-appium-testng/blob/main/src/test/java/ios-parallel.xml"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 4: Configure YAML and Execute your Script (Android)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "codeRepository": "https://github.com/LambdaTest/hyperexecute-real-device-appium-testng",
+        "text": "<\/TabItem>\n\n\n```yaml reference title=\"ios-parallel.yaml\"\nhttps://github.com/LambdaTest/hyperexecute-real-device-appium-testng/blob/main/yaml/ios/hyp-rd-ios-multiple.yaml"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Run the below command in your terminal at the root folder of the project",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "./hyperexecute --config RELATIVE_PATH_OF_YOUR_YAML_FILE"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Configure Smart UI",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n> Refer to the [Automation Capabilities Generator](https://www.testmuai.com/capabilities-generator/) to understand how to write the capability in different languages.\n\n\n\n## More About Desired Capabilities\nSample Capabilities for both android and iOS are mentioned below -\n\n\n\n```java\n{\n  \"deviceName\": \"Galaxy Tab S4\",\n  \"platformName\": \"android\",\n  \"platformVersion\": \"10\",\n  \"app\": \"App_url\",\n  \"visual\": True,\n  \"console\": True,\n  \"deviceOrientation\": \"PORTRAIT\",\n  \"build\": \"new-12\",\n  \"isRealMobile\": True,\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "More About Desired Capabilities (iOS)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "{\n  \"deviceName\": \"iPhone 12 Mini\",\n  \"platformName\": \"ios\",\n  \"platformVersion\": \"14\",\n  \"app\": \"App_url\",\n  \"isRealMobile\": True,\n  \"visual\": True,\n  \"console\": True,\n  \"build\": \"lt-web-4\",\n  \"network\": True,\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "The appium-skill package includes",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "appium-skill/\n\u251c\u2500\u2500 SKILL.md\n\u2514\u2500\u2500 reference/\n    \u251c\u2500\u2500 playbook.md\n    \u2514\u2500\u2500 advanced-patterns.md"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Install a Appium Agent Skill using the command below",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "codeRepository": "https://github.com/LambdaTest/agent-skills",
+        "text": "# Clone the repo and copy the skill you need\ngit clone https://github.com/LambdaTest/agent-skills.git\ncp -r agent-skills/appium-skill .claude/skills/\n\n# Or for Cursor / Copilot\ncp -r agent-skills/appium-skill .cursor/skills/"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 This page outlines how to execute your Appium tests on HyperExecute using TestNG with YAML 0.2
 > HyperExecute uses [YAML 0.2](/support/docs/hyperexecute-yaml-version0.2/) to perform the tests using Appium.
 

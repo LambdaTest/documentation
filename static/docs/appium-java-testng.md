@@ -2,6 +2,63 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
+\n\n\n\n```java title=\"iOSApp.java\"\nimport io.appium.java_client.AppiumDriver;\nimport io.appium.java_client.MobileBy;\nimport io.appium.java_client.MobileElement;\nimport io.appium.java_client.android.AndroidElement;\nimport org.openqa.selenium.remote.DesiredCapabilities;\nimport org.openqa.selenium.support.ui.ExpectedConditions;\nimport org.openqa.selenium.support.ui.WebDriverWait;\nimport org.openqa.selenium.JavascriptExecutor;\nimport org.openqa.selenium.remote.DesiredCapabilities;\nimport java.net.URL;\nimport org.testng.annotations.Test;\n\npublic class iOSApp {\n\n    String userName = System.getenv(\"LT_USERNAME\") == null ?\n            \"username\" : System.getenv(\"LT_USERNAME\"); //Add username here\n    String accessKey = System.getenv(\"LT_ACCESS_KEY\") == null ?\n            \"accessKey\" : System.getenv(\"LT_ACCESS_KEY\"); //Add accessKey here\n\n    public String gridURL = \"@mobile-hub.lambdatest.com/wd/hub\";\n\n    AppiumDriver driver;\n\n    @Test\n    @org.testng.annotations.Parameters(value = {\"device\", \"version\", \"platform\"})\n    public void iOSApp1(String device, String version, String platform) {\n\n        try {\n            DesiredCapabilities capabilities = new DesiredCapabilities();\n            capabilities.setCapability(\"build\",\"Java TestNG iOS\");\n            capabilities.setCapability(\"name\",platform+\" \"+device+\" \"+version);\n            capabilities.setCapability(\"deviceName\", device);\n            capabilities.setCapability(\"platformVersion\",version);\n            capabilities.setCapability(\"platformName\", platform);\n            capabilities.setCapability(\"isRealMobile\", true);\n            // highlight-next-line\n            capabilities.setCapability(\"app\", \"APP_URL\"); //Enter your app (.ipa) url\n            capabilities.setCapability(\"deviceOrientation\", \"PORTRAIT\");\n            capabilities.setCapability(\"console\", true);\n            capabilities.setCapability(\"network\", false);\n            capabilities.setCapability(\"visual\", true);\n            capabilities.setCapability(\"devicelog\", true);\n            //capabilities.setCapability(\"geoLocation\", \"HK\");\n\n            String hub = \"https://\" + userName + \":\" + accessKey + gridURL;\n            driver = new AppiumDriver(new URL(hub), capabilities);\n\n            WebDriverWait Wait = new WebDriverWait(driver,30);\n\n            //Changes the color of the text\n            Wait.until(ExpectedConditions.presenceOfElementLocated(MobileBy.AccessibilityId(\"color\"))).click();\n            Thread.sleep(1000);\n\n            //Changes the text to \"Proverbial\"\n            Wait.until(ExpectedConditions.presenceOfElementLocated(MobileBy.AccessibilityId(\"Text\"))).click();\n            Thread.sleep(1000);\n\n            //Toast will be visible\n            Wait.until(ExpectedConditions.presenceOfElementLocated(MobileBy.AccessibilityId(\"toast\"))).click();\n            Thread.sleep(1000);\n\n            //Notification will be visible\n            Wait.until(ExpectedConditions.presenceOfElementLocated(MobileBy.AccessibilityId(\"notification\"))).click();\n            Thread.sleep(4000);\n\n            //Opens the geolocation page\n            Wait.until(ExpectedConditions.presenceOfElementLocated(MobileBy.AccessibilityId(\"geoLocation\"))).click();\n            Thread.sleep(4000);\n\n            //Takes back\n            driver.navigate().back();\n\n            //Takes to speedtest page\n            Wait.until(ExpectedConditions.presenceOfElementLocated(MobileBy.AccessibilityId(\"speedTest\"))).click();\n            Thread.sleep(4000);\n\n            driver.navigate().back();\n\n            //Opens the browser\n            Wait.until(ExpectedConditions.presenceOfElementLocated(MobileBy.AccessibilityId(\"Browser\"))).click();\n            Thread.sleep(1000);\n\n            MobileElement url = (MobileElement) driver.findElementByAccessibilityId(\"url\");\n            url.click();\n            url.sendKeys(\"https://www.testmuai.com\");\n\n            Wait.until(ExpectedConditions.presenceOfElementLocated(MobileBy.AccessibilityId(\"find\"))).click();\n            Thread.sleep(1000);\n\n            driver.quit();\n\n        } catch (Exception e) {\n            e.printStackTrace();\n            try{\n                driver.quit();\n            }catch(Exception e1){\n                e.printStackTrace();\n            }\n        }\n\n\n    }\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "The capabilities object in the sample code are defined as (Android)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "DesiredCapabilities capabilities = new DesiredCapabilities();\n            capabilities.setCapability(\"build\",\"Java TestNG Android\");\n            capabilities.setCapability(\"name\",platform+\" \"+device+\" \"+version);\n            capabilities.setCapability(\"deviceName\", device);\n            capabilities.setCapability(\"platformVersion\",version);\n            capabilities.setCapability(\"platformName\", platform);\n            capabilities.setCapability(\"isRealMobile\", true);\n            // highlight-next-line\n            capabilities.setCapability(\"app\", \"APP_URL\"); //Enter your app (.apk) url\n            capabilities.setCapability(\"deviceOrientation\", \"PORTRAIT\");\n            capabilities.setCapability(\"console\", true);\n            capabilities.setCapability(\"network\", false);\n            capabilities.setCapability(\"visual\", true);\n            capabilities.setCapability(\"devicelog\", true);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 5: Configure the Test Capabilities (iOS)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "DesiredCapabilities capabilities = new DesiredCapabilities();\n            capabilities.setCapability(\"build\",\"Java TestNG iOS\");\n            capabilities.setCapability(\"name\",platform+\" \"+device+\" \"+version);\n            capabilities.setCapability(\"deviceName\", device);\n            capabilities.setCapability(\"platformVersion\",version);\n            capabilities.setCapability(\"platformName\", platform);\n            capabilities.setCapability(\"isRealMobile\", true);\n            // highlight-next-line\n            capabilities.setCapability(\"app\", \"APP_URL\"); //Enter your app (.ipa) url\n            capabilities.setCapability(\"deviceOrientation\", \"PORTRAIT\");\n            capabilities.setCapability(\"console\", true);\n            capabilities.setCapability(\"network\", false);\n            capabilities.setCapability(\"visual\", true);\n            capabilities.setCapability(\"devicelog\", true);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 6: Execute and Monitor your Tests",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "  mvn clean install"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 6: Execute and Monitor your Tests (Android)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "  mvn test -P android-single"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 6: Execute and Monitor your Tests (iOS)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "  mvn test -P ios-single"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "The testng-skill package includes",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "testng-skill/\n\u251c\u2500\u2500 SKILL.md\n\u2514\u2500\u2500 reference/\n    \u251c\u2500\u2500 playbook.md\n    \u2514\u2500\u2500 advanced-patterns.md"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Install a TestNG Agent Skill using the command below",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "codeRepository": "https://github.com/LambdaTest/agent-skills",
+        "text": "# Clone the repo and copy the skill you need\ngit clone https://github.com/LambdaTest/agent-skills.git\ncp -r agent-skills/testng-skill .claude/skills/\n\n# Or for Cursor / Copilot\ncp -r agent-skills/testng-skill .cursor/skills/"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 In this documentation, you will learn how to trigger a automation script of **TestNG** for application testing with **Appium** on TestMu AI, set the [**desired capabilities**](/support/docs/desired-capabilities-in-appium/) for appium testing, and other advanced features of TestMu AI.
 
 ## Prerequisites

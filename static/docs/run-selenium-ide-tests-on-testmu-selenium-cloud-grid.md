@@ -1,6 +1,43 @@
-# Run Selenium IDE Tests with TestMu AI Selenium Grid
+# Guide to Run Selenium IDE Tests Using TestMu AI
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
+"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 6",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": " selenium-side-runner --w --server https://user-name:access-key@hub.lambdatest.com/wd/hub<\/num> "
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 7",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "selenium-side-runner --max-workers --server https://user-name:access-key@hub.lambdatest.com/wd/hub<\/num>"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 8",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "selenium-side-runner -w 4 \"LambdaTest-IDE.side\" --server https://user-name:acces-key@hub.lambdatest.com/wd/hub -c \"browserName='chrome' version='72.0' platform='Windows 10'\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "For example",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "selenium-side-runner --params \"a='example-value' a.b='another example-value' a.b.c=[1,2,3]\" "
+      }
+    ],
+    "dateModified": "2026-09-09T19:13:32+05:30"
+  }) }}
+/>
+
+# Run Selenium IDE Tests with TestMu AI Selenium Grid
 
 [Selenium IDE](https://www.testmuai.com/blog/selenium-ide-what-is-it-why-is-it-must-for-every-qa/) is one of the most popular record and playback tool for testing which is widely used for automated browser testing. The Selenium IDE is a very easy-to-use solution for getting started with automation testing. It also provides instant feedback and has cross-browser and operating system compatibility, with the help of Selenium IDE (SIDE) Runner.
 

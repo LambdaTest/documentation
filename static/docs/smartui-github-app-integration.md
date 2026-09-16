@@ -2,6 +2,13 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
+> $GITHUB_ENV\n      if: github.event_name == 'push'\n\n    - name: Step for pull_request event\n      run: |\n        echo \"This is a pull_request event!\"\n        git log -n 5 --format=\"%H %an %s\" | while read line; do echo \"$line\"; done\n        echo \"The latest commitId $(git log -n 2 --format='%H' | tail -n 1)\"\n        echo \"COMMIT_ID=$(git log -n 2 --format='%H' | tail -n 1)\" >> $GITHUB_ENV\n      if: github.event_name == 'pull_request'\n\n    - name: Create GitHub URL\n      run: |\n        API_HOST=https://api.github.com\n        echo \"The latest commitId is $COMMIT_ID\"\n        GITHUB_URL=$API_HOST/repos/$GITHUB_REPOSITORY/statuses/$COMMIT_ID\n        echo \"GITHUB_URL: $GITHUB_URL\"\n        echo \"GITHUB_URL=$GITHUB_URL\" >> $GITHUB_ENV"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 This is the guide to setup your GitHub Repos with SmartUI projects and run your CI along with visual regression testing.
 
 ## Prerequisites

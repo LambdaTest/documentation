@@ -23,14 +23,15 @@ Your Ultimate Resource for Seamless Cross-Browser Testing Across Desktop and Mob
 
              HyperExecute
 
-              Getting Started
-              HyperExecute YAML
-              HyperExecute CLI
-              HyperExecute GUI &nbsp;
-              HyperExecute MCP Server
-              Features
-              Integrations
-              Private Cloud
+                  Getting Started
+                  Features
+                  HyperExecute YAML
+                  HyperExecute CLI
+                  HyperExecute GUI &nbsp;
+                  HyperExecute MCP
+                 JMeter Performance Testing
+                  Gatling Performance Testing
+                  Private Cloud
 
              Insights
 

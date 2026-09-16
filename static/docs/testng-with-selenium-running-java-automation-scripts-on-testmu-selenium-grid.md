@@ -2,6 +2,21 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
+\n<!DOCTYPE suite SYSTEM \"http://testng.org/testng-1.0.dtd\">\n\n\n  \n  \n  \n  \n    \n      \n    <\/classes>\n  <\/test> \n\n  \n  \n  \n  \n    \n      \n    <\/classes>\n  <\/test> \n  \n  \n  \n  \n    \n      \n    <\/classes>\n  <\/test> \n\n<\/suite>"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Install the skill",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "codeRepository": "https://github.com/LambdaTest/agent-skills",
+        "text": "git clone https://github.com/LambdaTest/agent-skills.git\ncp -r agent-skills/testng-skill .claude/skills/\n\n# For Cursor / Copilot\ncp -r agent-skills/testng-skill .cursor/skills/"
+      }
+    ],
+    "dateModified": "2026-09-09T19:13:32+05:30"
+  }) }}
+/>
+
 Run TestNG tests on the TestMu AI cloud grid. This guide covers setup, running a sample test, configuring capabilities, and testing locally hosted pages.
 
 **Sample repo**

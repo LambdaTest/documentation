@@ -1,6 +1,15 @@
-# Local Testing Using Playwright
+# Run Local Tests Using Playwright
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
+{\n  const capabilities = {\n    'browserName': 'Chrome', // Browsers allowed: `Chrome`, `MicrosoftEdge`, `pw-chromium`, `pw-firefox` and `pw-webkit`\n    'browserVersion': 'latest',\n    'LT:Options': {\n      'platform': 'Windows 10',\n      'build': 'Playwright Sample Build',\n      'name': 'Playwright Sample Test',\n      'user': process.env.LT_USERNAME,\n      'accessKey': process.env.LT_ACCESS_KEY,\n      'tunnel': false, // Add tunnel configuration if testing locally hosted webpage\n      'tunnelName': '' // Optional\n    }\n  }"
+      }
+    ],
+    "dateModified": "2026-09-09T19:13:32+05:30"
+  }) }}
+/>
+
+# Local Testing Using Playwright
 
 TestMu AI tunnel feature lets you test private server URLs, locally hosted web apps, and websites on real browsers and operating systems. On TestMu AI, you can test plain HTML, CSS, PHP, Python, and other similar web files saved locally. When connecting to corporate firewalls or proxy settings, no restrictions apply to the new TestMu AI tunnel binary. To establish a secure and unique tunnel connection between your system and TestMu AI cloud servers, the TestMu AI tunnel utilizes various protocols like Web Sockets, HTTPS, SSH(Secure Shell), etc.
 

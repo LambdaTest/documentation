@@ -2,6 +2,49 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
+\n\n\n\n```ruby title=\"parallel.config.yml\"\nserver: \"mobile-hub.lambdatest.com\"\nuser: \"LT_USERNAME\"  #Add your LambdaTest username here\nkey: \"LT_ACCESS_KEY\"  #Add your LambdaTest accessKey here\n\ncommon_caps:\n  \"build\": \"RSpec Parallel\"\n  \"visual\": false\n  \"network\": false\n  \"console\": false\n\napp_caps:\n  -\n    \"isRealMobile\": \"true\"\n    \"platform\": \"Android\"\n    \"deviceName\": \"Galaxy A31\"\n    \"platformVersion\": \"10\"\n    \"app\": \"APP_URL\"   #Add the app url here\n  -\n    \"isRealMobile\": \"true\"\n    \"platform\": \"Android\"\n    \"deviceName\": \"Galaxy A32\"\n    \"platformVersion\": \"11\"\n    \"app\": \"APP_URL\"   #Add the app url here\n  -\n    \"isRealMobile\": \"true\"\n    \"platform\": \"iOS\"\n    \"deviceName\": \"iPhone 13 Pro\"\n    \"platformVersion\": \"15.0\"\n    \"app\": \"APP_URL\"   #Add the app url here"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "The capabilities object in the sample code are defined as",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Ruby",
+        "text": "    caps={\n      \"LT:Options\" => {\n        \"build\" => \"Ruby RSpec\",\n        \"name\" => \"Sample Test\",\n        \"platformName\" => platform,\n        \"isRealMobile\" => isRealMobile,\n        \"deviceName\" => deviceName,\n        \"platformVersion\" => platformVersion,\n        \"app\" => app,\n        \"w3c\" => true\n      }},"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 6: Execute and Monitor your Tests",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "bundle install"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Execute the following command to run single test on TestMu AI platform",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "bundle exec rake single"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "The rspec-skill package includes",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "rspec-skill/\n\u251c\u2500\u2500 SKILL.md\n\u2514\u2500\u2500 reference/\n    \u251c\u2500\u2500 playbook.md\n    \u2514\u2500\u2500 advanced-patterns.md"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Install a RSpec Agent Skill using the command below",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "codeRepository": "https://github.com/LambdaTest/agent-skills",
+        "text": "# Clone the repo and copy the skill you need\ngit clone https://github.com/LambdaTest/agent-skills.git\ncp -r agent-skills/rspec-skill .claude/skills/\n\n# Or for Cursor / Copilot\ncp -r agent-skills/rspec-skill .cursor/skills/"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 In this documentation, you will learn how to trigger a automation script of **Rspec** for application testing with **Appium** on TestMu AI, set the [**desired capabilities**](/support/docs/desired-capabilities-in-appium/) for appium testing, and other advanced features of TestMu AI.
 
 ## Prerequisites

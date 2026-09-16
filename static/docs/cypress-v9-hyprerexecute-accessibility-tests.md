@@ -2,6 +2,20 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
+{\n  // `on` is used to hook into various events Cypress emits\n  // `config` is the resolved Cypress config\n  lambdatestAccessibility(on, config);\n  return config;\n};"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Run the below command in your terminal at the root folder of the project",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "./hyperexecute --config RELATIVE_PATH_OF_YOUR_YAML_FILE"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 This document provides a detailed, step-by-step walkthrough for executing automated accessibility tests using TestMu AI's Accessibility Tool on HyperExecute using Cypress v9 and below.
 
 This documentation is applicable for **Cypress v9** and **previous versions**.

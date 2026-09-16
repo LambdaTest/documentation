@@ -2,6 +2,20 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
+"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "You can override the default value when running the test",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "jmeter:\n  variables:\n    f_threads: 99"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 ## Prerequisites
 
 - Setup the [JMeter Test Plan](https://jmeter.apache.org/usermanual/build-web-test-plan.html) using Apache JMeter GUI. After setting up a Test Plan, now you need to associate your test cases and execute it as well via HyperExecute.

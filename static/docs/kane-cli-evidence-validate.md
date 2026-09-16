@@ -2,6 +2,13 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
+report.json || exit 1"
+      }
+    ],
+    "dateModified": "2026-08-21T00:24:19+05:30"
+  }) }}
+/>
+
 `kane-cli evidence validate` checks a pack's integrity and completeness:
 
 ```bash

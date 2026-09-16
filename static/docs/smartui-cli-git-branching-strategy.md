@@ -2,6 +2,55 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
+\n\n// Adds a new commit to your current active branch\n$ git commit -m \"Your commit message\"\n\n// Executing the SmartUI SDK/Static CLI/Storybook tests\n$ npx smartui --config .smartui.json exec -- "
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Here is an example of the above workflow",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "$ git branch\n* master\n\n$ git commit -m \"Second Build Changes\"\n\n$ npx smartui --config .smartui.json exec -- "
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 11",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "export CURRENT_BRANCH=\"Required branch\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 12",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "set CURRENT_BRANCH=\"Required branch\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 13",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "PowerShell",
+        "text": "$env:CURRENT_BRANCH=\"Required branch\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Here is an example of the above workflow",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "// Step 1 - Commit changes to Git\n$ git commit -am \"Changes in login Flow\"\n(git) Changes added to your branch\n\n// Step 2 - Execute SmartUI CLI to trigger Build in the SmartUI project\n$ npx smartui --config .smartui.json exec -- "
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Here is an example of the above workflow",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "// Baseline Branch\n$ git branch\n* master\n\n// Non-Baseline branch\n$ git checkout -b develop\n* develop\n  master\n\n// Executing SmartUI Build with Non-Baseline Git branch\n$ npx smartui --config .smartui.json exec -- "
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 This is the guide to understand our Git Branching with SmartUI projects which can detect the commit history and execute the appropriate actions for your visual regression testing.
 
 ### Prerequisites for running Git with SmartUI

@@ -2,6 +2,92 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
+getSessionID();\necho \"Session ID: \" . $sessionId;"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Ruby",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Ruby",
+        "text": "session_id = driver.session_id\nputs \"Session ID: #{session_id}\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Once you have the Session ID, share the automation logs URL with your colleague",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "https://automation.lambdatest.com/logs/?sessionID=YOUR_SESSION_ID"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Build the URL in the following format",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "https://automation.lambdatest.com/public/video?testID={testid/sessionid}&auth=AUTH_TOKEN"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "For example, if your SessionID is HJKXM-RHZL1-SVPWY-AB8X6, the URL becomes",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "https://automation.lambdatest.com/public/video?testID=HJKXM-RHZL1-SVPWY-AB8X6&auth=AUTH_TOKEN"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 2 - Generate the AUTH_TOKEN (Java)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "MessageDigest m = MessageDigest.getInstance(\"MD5\");\nString s = \"username:access_key\";\nm.update(s.getBytes(), 0, s.length());\nSystem.out.println(\"MD5: \" + new BigInteger(1, m.digest()).toString(16));"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 2 - Generate the AUTH_TOKEN (JavaScript)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "var crypto = require('crypto');\nvar token = crypto.createHash('md5').update(\"username:access_key\").digest(\"hex\");\nconsole.log(\"AUTH_TOKEN: \" + token);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 2 - Generate the AUTH_TOKEN (Python)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Python",
+        "text": "import hashlib\ntoken = hashlib.md5(\"username:access_key\".encode('utf-8')).hexdigest()\nprint(\"AUTH_TOKEN: \" + token)"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "C#",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "C#",
+        "text": "byte[] inputBytes = System.Text.Encoding.ASCII.GetBytes(\"username:access_key\");\nbyte[] hashBytes = System.Security.Cryptography.MD5.Create().ComputeHash(inputBytes);\nStringBuilder sb = new StringBuilder();\nfor (int i = 0; i < hashBytes.Length; i++)\n{\n    sb.Append(hashBytes[i].ToString(\"X2\"));\n}\nConsole.WriteLine(\"AUTH_TOKEN: \" + sb.ToString());"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "PHP",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "PHP",
+        "text": "$token = md5(\"username:access_key\");\necho \"AUTH_TOKEN: \" . $token;"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Ruby",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Ruby",
+        "text": "require 'digest'\ntoken = Digest::MD5.hexdigest(\"username:access_key\")\nputs \"AUTH_TOKEN: #{token}\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "For example, if the generated AUTH_TOKEN is 331k534uf3toef, the final URL becomes",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "https://automation.lambdatest.com/public/video?testID=HJKXM-RHZL1-SVPWY-AB8X6&auth=331k534uf3toef"
+      }
+    ],
+    "dateModified": "2026-09-09T19:13:32+05:30"
+  }) }}
+/>
+
+# Sharing Test Results on TestMu AI
+
 TestMu AI lets you share individual test results with team members. Retrieve the Session ID from your test script, then build a shareable URL for automation logs or execution videos.
 
 ## Get the Session ID

@@ -1,6 +1,15 @@
-# Handle Session Lifecycle
+# Session Lifecycle - TestMu AI Browser Cloud
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
+{\n    await client.sessions.releaseAll();\n    process.exit(0);\n});"
+      }
+    ],
+    "dateModified": "2026-03-26T15:05:31+05:30"
+  }) }}
+/>
+
+# Handle Session Lifecycle
 
 Learn how sessions move from creation to release, and how to manage timeouts and cleanup.
 Understanding the session lifecycle helps you avoid leaked sessions, reduce wasted resources, and ensure clean recordings on your dashboard.

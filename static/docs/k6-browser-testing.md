@@ -1,6 +1,22 @@
-# Getting Started With k6 Browser Testing
+# How To Run k6 Browser Tests On TestMu AI Platform
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
+{}, `lambdatest_action: ${JSON.stringify(\n          {action: \"setTestStatus\", arguments: {status: \"passed\", remark: \"Assertions passed\"},})}`);\n    } catch (e) {\n      await page.evaluate(_ => {}, `lambdatest_action: ${JSON.stringify(\n          {action: \"setTestStatus\", arguments: {status: \"failed\", remark: e.stack}})}`);\n      console.log(\"Error:: \", e.stack);\n    }\n  } finally {\n    page.close();\n    browser.close();\n  }\n};"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 5",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "K6_BROWSER_ENABLED=true k6 run k6_sample.js"
+      }
+    ],
+    "dateModified": "2026-05-14T14:47:09+05:30"
+  }) }}
+/>
+
+# Getting Started With k6 Browser Testing
 
 The [k6 Browser module](https://github.com/grafana/xk6-browser) brings browser automation and end-to-end web testing to k6 while supporting core k6 features. The Browser module introduces browser-level APIs that enable seamless interaction with browsers and facilitate the collection of frontend performance metrics as an integral part of your k6 tests.
 

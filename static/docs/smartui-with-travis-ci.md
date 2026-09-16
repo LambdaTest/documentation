@@ -2,6 +2,97 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
+\n\n## Best Practices\n\n\n\n\n**Secret Management**\n\n- Never commit credentials to repository\n- Use Travis CI Environment Variables for all sensitive data\n- Mark variables as secret to hide values in logs\n- Rotate secrets regularly\n- Use different secrets for different environments\n\n<\/TabItem>\n\n\n**Pipeline Optimization**\n\n- Use matrix builds for parallel execution\n- Cache dependencies to speed up pipelines\n- Only run visual tests on relevant branches\n- Set up pipeline conditions to avoid unnecessary runs\n\n**Example:**\n```yaml\nbranches:\n  only:\n    - main\n    - develop"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 2",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "env:\n  global:\n    - BUILD_NAME=\"${TRAVIS_BRANCH}-${TRAVIS_COMMIT:0:7}\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Pass variable to build",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "   env:\n     global:\n       - PROJECT_TOKEN=$PROJECT_TOKEN"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Check build logs for errors",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "   after_failure:\n     - cat /tmp/*.log || true"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Run tests in parallel using matrix",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "   matrix:\n     include:\n       - env: TEST_GROUP=1\n       - env: TEST_GROUP=2"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Use specific Node version",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "   node_js:\n     - \"18\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Clear npm cache",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "   before_install:\n     - npm cache clean --force"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Ensure Node.js is specified",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "   node_js:\n     - \"18\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Verify npm is available",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "   before_script:\n     - npm --version"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Install SmartUI CLI explicitly",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "   before_script:\n     - npm install -g @lambdatest/smartui-cli"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
+ Variables. Add the following variables: LT_USERNAME: Your TestMu AI username. LTACCESSKEY: Your TestMu AI access key.",
+          "url": "https://www.testmuai.com/support/docs/smartui-with-travis-ci/#step-3-add-environment-variables"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Step 4: Setup your Workflow",
+          "text": "Step 4: Setup your Workflow",
+          "url": "https://www.testmuai.com/support/docs/smartui-with-travis-ci/#step-4-setup-your-workflow"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 5,
+          "name": "Step 5: Check the output",
+          "text": "After triggering the workflow, check your results in the SmartUI Dashboard",
+          "url": "https://www.testmuai.com/support/docs/smartui-with-travis-ci/#step-5-check-the-output"
+        }
+      ]
+    }
+  ]) }}
+/>
 Travis CI is one of the most popular CI/CD platforms, known for its simplicity and support for open-source projects. It provides continuous integration for projects hosted on GitHub and Bitbucket.
 
 This guide explains how to integrate your project with the Travis CI CI/CD pipeline to trigger visual regression testing with TestMu AI SmartUI whenever changes are made to your repository.

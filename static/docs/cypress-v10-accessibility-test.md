@@ -2,6 +2,41 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
+\n<\/div>\n\n<\/TabItem>\n\n\n\n  \n    \n  {`set LT_USERNAME=\"${ YOUR_LAMBDATEST_USERNAME()}\"\nset LT_ACCESS_KEY=\"${ YOUR_LAMBDATEST_ACCESS_KEY()}\"`}\n  <\/CodeBlock>\n<\/div>\n\n<\/TabItem>\n<\/Tabs>\n\n### Step 3: Update the Necessary Capabilities and Configurations in your project\n\n#### 1. Install the Cypress CLI\n\n- If you are passing npm dependencies through **package.json**, then add the below mentioned line there:\n\n```javascript reference title=\"package.json\"\nhttps://github.com/LambdaTest/lambdatest-accessibility-cypress-v10/blob/main/package.json"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "1. Install the Cypress CLI",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n- if you are not passing npm dependency in **lambdatest-config.json** you can run\n\n```bash\nnpm i lambdatest-cypress-cli   "
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "2. In the e2e.js file",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "import 'lambdatest-cypress-cli/accessibility/scanner'"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "3. In the cypress.config.js file",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n#### 4. Add the capabilities in the `lambdatest-config.json` file\n\nTo enable the accessibility testing within your automated test suite, set the `accessibility: true` in your configuration file. You can also define other settings capabilities as described below.\n\n```javascript title=\"lambdatest-config.json\"\n\"accessibility\" : true,                 // Enable accessibility testing\n\"accessibility.wcagVersion\": \"wcag21a\", // Specify WCAG version (e.g., WCAG 2.1 Level A)\n\"accessibility.bestPractice\": false,    // Exclude best practice issues from results\n\"accessibility.needsReview\": true       // Include issues that need review"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 4: Execute and Monitor your Test",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "lambdatest-cypress-cli run"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 This guide takes you step-by-step through the process of using TestMu AI's Accessibility Tool with Cypress v10 and above to run automated tests for your website.
 
 > **NOTE:** This documentation is applicable for **Cypress v10** and **later versions**.

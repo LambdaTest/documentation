@@ -2,6 +2,75 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
+packages.txt\n#  - chmod 777 /tmp/NuGetScratch\n#  - nuget locals all -clear\n - dotnet build -c Release"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "path",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n### What Happens If We Don\u2019t Use It\n- No visual proof or logs\n- Debugging intermittent failures is hard\n- Manual reporting is required\n\n---\n\n## 6. Report Generation\n### Edge Case\nPartial or misconfigured reports can be unreadable, incomplete, or fail to merge in parallel executions.\n\n### Solution\nGenerates human-readable HTML reports showing pass/fail, steps, screenshots, and aggregated results for stakeholders.\n\n```yaml title=\"hyperexecute.yaml\"\nreport: true\npartialReports:\n  location: Report/\n  type: html\n  frameworkName: specflow"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "testDiscovery",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n### What Happens If We Don\u2019t Use It\n- Manual selection of tests\n- New tests may never run\n- Reduced test coverage\n  \n---\n\n## 8. testRunnerCommand\n### Edge Case\nRunning all tests every time is inefficient, and category typos or missing attributes can prevent execution.\n\n### Solution\nExecutes only tests with the specified Category. Supports parallelization and selective reruns.\n\n```yaml title=\"hyperexecute.yaml\"\ntestRunnerCommand: dotnet test --filter \"(Category=$test)\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "testDiscovery",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n- Dynamically extracts test names based on tags\n- Ensures new tests are automatically included\n- Supports parallel execution and CI/CD pipelines\n  \n### What Happens If We Don\u2019t Use It\n- Missing tests due to inconsistent tagging\n- Manual updates required\n- Increased risk of regressions\n  \n---\n\n## 10. Framework Version Compatibility Handling\n### Edge Case\nDifferent .NET versions require different build steps; incorrect handling causes build failures or runner crashes.\n\n### Solution\nBuilds projects correctly based on target framework, ensuring compatibility with HyperExecute runners.\n\n**`.NET 6`+**: Use dotnet build in pre-steps\n**`.NET <6`**: Build locally and upload DLLs\n\n```yaml title=\"hyperexecute.yaml\"\nC:\\PROGRA~2\\Micros~1\\2019\\Community\\MSBuild\\Current\\Bin\\MSBuild.exe /p:Configuration=Release /p:TargetFramework=net472 /t:restore"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Solution",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "XML",
+        "text": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n \n  \n    \n    \n  <\/packageSources>\n  \n    \n        \n        \n    <\/Testplayer>\n  <\/packageSourceCredentials>\n<\/configuration>"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Solution",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "vstest.console.exe \"GlobalPolaris\\bin\\Debug\\net472\\GlobalPolaris.dll\" /Settings:GlobalPolaris\\RunSettings.runsettings /TestCaseFilter:\"FullyQualifiedName~$test\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Solution",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "& \"C:\\PROGRA~2\\NUnit.org\\nunit-console\\nunit3-console.exe\" \"\" --where=\"cat==$tag\" --explore"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "differentialUpload",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n### What Happens If We Don\u2019t Use It\n- Slow uploads\n- Wasted resources\n- Longer pipeline durations\n\n---\n\n## 15. Certificate Management for Browser Authentication\n### Edge Case\nBrowser tests requiring client certificates fail without proper installation.\n\n### Solution\nInstalls certificates in browser environment for authenticated sessions.\n\n```yaml title=\"hyperexecute.yaml\"\n%HYPEREXECUTE_WORKING_DIR%//Hyperexecute//cert_manager.exe --chrome -i atest089.pfx"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Solution",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n### What Happens If We Don\u2019t Use It\n- Missing or inaccurate test reporting \n- Dashboard metrics incomplete\n\n---\n\n## 17. Custom SpecFlow Reporting Configuration\n### Edge Case\nStandard reports may not provide enough detail for complex SpecFlow tests.\n\n### Solution\nGenerates custom reports with metadata and email notifications.\n\n```yaml title=\"hyperexecute.yaml\"\nreport: true\npartialReports:\n  location: GlobalPolaris/Reports\n  type: html\n  frameworkName: specflow-custom\nemail:\n  to: [\"example@lambdatest.com\"]\nmetaInfo: [\"project-name:Global Polaris Regression\",\"project-env:QA\"]"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "commands",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n### What Happens If We Don\u2019t Use It\n- Tests fail\n- New features not executed\n- Manual DLL verification required\n\n---\n\n## 19. Feature File Level Discovery (Matrix)\n### Edge Case\nAll tests running together reduce parallelism and rerun flexibility.\n\n### Solution\nRun each feature individually to enable parallel execution and selective reruns.\n\n```yaml title=\"hyperexecute.yaml\"\nmatrix:\n  featurefile:\n    - \"Features/Login.feature\"\n    - \"Features/Search.feature\"\n    - \"Features/Checkout.feature\"\n\ntest:\n  commands:\n    - nunit3-console.exe \"bin/Release/net6.0/YourProject.dll\" --where \"cat == '$featurefile'\""
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
 This guide provides a complete reference for integrating C# NUnit SpecFlow tests with HyperExecute, covering edge cases, solutions, YAML setup, artifact management, remote test discovery, and reporting.
 
 ## 1. Autosplit

@@ -2,6 +2,41 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
+();\ncaCert.put(\"certificateId\", \"MEDIA9f2c4b18a7d54e3ba0c6f19d2e8b7c05\");\n\nMap identity = new HashMap<>();\nidentity.put(\"certificateId\", \"MEDIA4a71e0c93f6d48b2915ac8de7b04f6a1\");\nidentity.put(\"password\", System.getenv(\"CERT_PASSWORD\"));\n\nltOptions.put(\"isRealMobile\", true);\n//highlight-next-line\nltOptions.put(\"customCertificates\", List.of(caCert, identity));\n\ncapabilities.setCapability(\"LT:Options\", ltOptions);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Python",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Python",
+        "text": "lt_options = {\n    \"platformName\": \"iOS\",\n    \"deviceName\": \"iPhone 14\",\n    \"platformVersion\": \"17\",\n    \"isRealMobile\": True,\n    \"app\": \"lt://APP1234567890\",\n    #highlight-start\n    \"customCertificates\": [\n        {\"certificateId\": \"MEDIA9f2c4b18a7d54e3ba0c6f19d2e8b7c05\"},\n        {\"certificateId\": \"MEDIA4a71e0c93f6d48b2915ac8de7b04f6a1\",\n         \"password\": os.environ[\"CERT_PASSWORD\"]},\n    ],\n    #highlight-end\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "JavaScript",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "const capabilities = {\n  'LT:Options': {\n    platformName: 'Android',\n    deviceName: 'Galaxy S23',\n    platformVersion: '14',\n    isRealMobile: true,\n    app: 'lt://APP1234567890',\n    //highlight-start\n    customCertificates: [\n      { certificateId: 'MEDIA9f2c4b18a7d54e3ba0c6f19d2e8b7c05' },\n      { certificateId: 'MEDIA4a71e0c93f6d48b2915ac8de7b04f6a1',\n        password: process.env.CERT_PASSWORD },\n    ],\n    //highlight-end\n  },\n};"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "YAML",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "customCertificates:\n  - certificateId: \"MEDIA9f2c4b18a7d54e3ba0c6f19d2e8b7c05\"\n  - certificateId: \"MEDIA4a71e0c93f6d48b2915ac8de7b04f6a1\"\n    password: \"s3cret\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "In the build you are testing, add a network_security_config.xml file that trusts the user certificate store",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "XML",
+        "text": "\n    \n        \n            \n            \n        <\/trust-anchors>\n    <\/base-config>\n<\/network-security-config>"
+      }
+    ],
+    "dateModified": "2026-08-27T03:34:12+05:30"
+  }) }}
+/>
+
 Many apps connect to servers that use certificates issued by a private or corporate certificate authority. Some apps also pin a **self-signed certificate**, or present a **client certificate** to authenticate themselves before a server will respond. On a standard device, these connections fail because the device does not trust your organization's certificates.
 
 TestMu AI's **Certificate Injection** allows you to test certificate-based authentication on real devices. You upload a certificate once and reference it by ID in your Appium capabilities. TestMu AI then installs it on the allocated device before your test begins, with no manual steps on the device and no password entry during the run. Certificates are removed when the session ends.

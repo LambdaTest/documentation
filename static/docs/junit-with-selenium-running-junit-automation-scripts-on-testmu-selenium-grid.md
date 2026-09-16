@@ -2,6 +2,21 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
+klass) throws Throwable {\n        super(klass);\n        setScheduler(new ThreadPoolScheduler());\n    }\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 7",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "codeRepository": "https://github.com/LambdaTest/agent-skills",
+        "text": "\n## Step 5: View Your Results\n---\n\nCheck the Automation Dashboard to see exactly what happened during your test.\n\nVisit the [TestMu AI Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build) to see your test results. Each session includes:\n\n- **Video recording** of the full test execution\n- **Screenshots** captured at each step\n- **Console logs** from the browser\n- **Network logs** for every request and response\n- **Selenium command logs** showing each driver action\n\n## Run JUnit Tests Using Agent Skills\n---\n\nUse AI coding assistants to generate and run JUnit tests with the TestMu AI Agent Skill.\n\nThe [junit-5-skill](https://github.com/LambdaTest/agent-skills/tree/main/junit-5-skill) is part of [TestMu AI Agent Skills](https://github.com/LambdaTest/agent-skills/) - structured packages that teach AI coding assistants how to write production-grade test automation.\n\nInstall the skill:\n\n```bash\ngit clone https://github.com/LambdaTest/agent-skills.git\ncp -r agent-skills/junit-5-skill .claude/skills/\n\n# For Cursor / Copilot\ncp -r agent-skills/junit-5-skill .cursor/skills/"
+      }
+    ],
+    "dateModified": "2026-09-09T19:13:32+05:30"
+  }) }}
+/>
+
 Run JUnit tests on the TestMu AI cloud grid. This guide covers setup, running a sample test, configuring capabilities, and testing locally hosted pages.
 
 **Sample repo**

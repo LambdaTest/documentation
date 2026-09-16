@@ -2,6 +2,36 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
+"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 6",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "selenium-side-runner --w --server \nhttps://user-name:access-key@hub.lambdatest.com/wd/hub<\/num>"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 7",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "selenium-side-runner --max-workers --server \nhttps://user-name:access-key@hub.lambdatest.com/wd/hub<\/num>"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 8",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "selenium-side-runner -w 4 \"LambdaTest-IDE.side\" --server \nhttps://user-name:acces-key@hub.lambdatest.com/wd/hub -c \"browserName='chrome' \nversion='72.0' platform='Windows 10'\""
+      }
+    ],
+    "dateModified": "2026-05-14T14:47:09+05:30"
+  }) }}
+/>
+
+# Ghost Inspector Integration With TestMu AI’s Cloud
+
 TestMu AI provides support with Selenium WebDriver for pacing the execution of your automation test scripts. TestMu AI is a cloud-based, cross browser testing tool, providing a [Selenium Grid](https://www.testmuai.com/selenium-automation/) of 3000+ browsers and browser versions running through real operating systems to speed up automation testing of your web-app or website. This topic will help you to automate your website testing using Ghost Inspector on TestMu AI.
 
 ## What is Ghost Inspector?

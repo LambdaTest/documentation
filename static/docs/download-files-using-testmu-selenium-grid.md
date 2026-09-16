@@ -2,6 +2,15 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
+\"chrome\",         \n            :version =>   \"80.0\",\n            :platform =>  \"win10\",\n            :name =>  \"LambdaTest ruby google search name\",\n            :build =>  \"LambdaTest ruby google search build\",\n            :network =>  false,\n            :visual =>  false,\n            :video =>  true,\n            :console =>  false\n        }  \n \n        puts (caps)\n        # URL: https://{username}:{accessToken}@hub.lambdatest.com/wd/hub\n        @driver = Selenium::WebDriver.for(:remote,\n            :url => \"https://\"+username+\":\"+accessToken+\"@\"+gridUrl,\n            :desired_capabilities => caps)\n    end\n\n    def test_Login\n        \"\"\"\n        Setup remote driver\n        Params\n        ----------\n        Execute test:  Download File from remote browser Sample in Ruby\n        Result\n        -------\n        File exists\n        \"\"\"\n        puts(\"Navigate the URL\")\n        sleep(10)\n        @driver.get(\"https://www.w3schools.com/tags/tryit.asp?filename=tryhtml5_a_download\")\n        @driver.switch_to.frame('iframeResult')\n        elem = @driver.find_element(:xpath, \"//a[@href='/images/myw3schoolsimage.jpg']\")\n        elem.click\n        fileExist=   @driver.execute_script(\"lambda-file-exists=myw3schoolsimage.jpg\")\n        puts(fileExist)\n        fileGet =  @driver.execute_script('lambda-file-stats=myw3schoolsimage.jpg')\n        puts(fileGet)\n        fileCon = @driver.execute_script('lambda-file-content=myw3schoolsimage.jpg')\n        puts(fileCon)\n\n    end\n \n    def teardown\n        \"\"\"\n        Quit selenium driver\n        \"\"\"\n        @driver.quit\n    end\nend"
+      }
+    ],
+    "dateModified": "2026-09-09T19:13:32+05:30"
+  }) }}
+/>
+
+# Download Files Using TestMu AI Selenium Grid
+
 While performing Selenium test automation, you may want to test the download functionality of your web-application or website. With TestMu AI Selenium Grid, you can test the download feature on 3000+ real browsers for mobile and desktop. You can download a file inside the test machine through your Selenium test automation script by Base64 encryption and decryption.
 
 TestMu AI Selenium Grid provides an encoded string of base64 that you can use to download any file inside the virtual machine triggered through your Selenium testing scripts. TestMu AI provides three main flags using JavascriptExecutor to:

@@ -1,6 +1,15 @@
-# Quick Guide To Run Ruby Tests On TestMu AI Selenium Grid
+# How To Run Ruby Tests On Online Selenium Grid
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
+\"chrome\",        \n            :version =>   \"67.0\",        \n            :platform =>  \"win10\",\n            :name =>  \"LambdaTest ruby google search name\",\n            :build =>  \"LambdaTest ruby google search build\",     \n            :network =>  true,\n            :visual =>  true,\n            :video =>  true,\n            :console =>  true\n        } \n  \n        puts (caps)\n        # URL: https://{username}:{accessToken}@hub.lambdatest.com/wd/hub\n        @driver = Selenium::WebDriver.for(:remote,\n            :url => \"https://\"+username+\":\"+accessToken+\"@\"+gridUrl,\n            :desired_capabilities => caps)\n    end\n  \n    def test_Login\n        \"\"\"\n        Setup remote driver\n        Params\n        ----------\n        Execute test:  navigate google.com search LambdaTest\n        Result\n        -------\n        print title\n        \"\"\"\n        puts(\"Searching LambdaTest on google.com \")\n        sleep(15)\n        @driver.get(\"https://www.google.com/ncr\")\n        elem = @driver.find_element(:name, 'q')\n        elem.send_keys(\"LambdaTest.com\")\n        elem.submit()\n \n        puts(\"Printing title of current page :\"+@driver.title)\n    end\n    def teardown\n        \"\"\"\n        Quit selenium driver\n        \"\"\"\n        @driver.quit\n    end\nend"
+      }
+    ],
+    "dateModified": "2026-05-26T08:58:31+05:30"
+  }) }}
+/>
+
+# Quick Guide To Run Ruby Tests On TestMu AI Selenium Grid
 
 TestMu AI Selenium Automation Grid is a secure, scalable, and reliable [Selenium Grid](https://www.testmuai.com/blog/why-selenium-grid-is-ideal-for-automated-browser-testing/) on cloud that can help you run your Ruby automation scripts on 3000+ different browsers and operating system environments. The grid is specifically built for high performance and gives you not only a greater browser coverage but also an ability to run automation tests in parallel. This helps you reduce your automation test execution time significantly. This post will help you quickly get started with running Ruby test scripts on TestMu AI Selenium Grid.
 

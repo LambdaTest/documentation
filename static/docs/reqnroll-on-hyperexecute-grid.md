@@ -1,6 +1,30 @@
-# Running Reqnroll Framework Tests on HyperExecute
+# Run automation tests on HyperExecute using Reqnroll
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
+packages.txt\n - dotnet build -c Release\n\ncacheKey: '{{ checksum \"packages.txt\" }}'\n\npost:\n  - cat yaml/linux/reqnroll_hyperexecute_autosplit_sample.yaml\n\nmergeArtifacts: true\n\nuploadArtefacts:\n - name: Execution_Report\n   path:\n    - Report/**\n    - Reports/**\n - name: Execution_Screenshots\n   path:\n    - Screenshots/**/**\n    - Reports/**/Screenshots/**\n\ntestDiscovery:\n  type: raw\n  mode: remote\n  command: grep -rni 'Features' -e '@' --include=\\*.feature | sed 's/.*@//'\n\ntestRunnerCommand: dotnet test --logger \"console;verbosity=detailed\" --filter \"(Category=$test)\"\n\njobLabel: [selenium-reqnroll, linux, autosplit]"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Run the below command in your terminal at the root folder of the project",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "./hyperexecute --config RELATIVE_PATH_OF_YOUR_YAML_FILE"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
+24\u00d77 chat support or you can also drop a mail to support@testmuai.com. Happy testing! Home Support Run Reqnroll tests on HyperExecute",
+          "url": "https://www.testmuai.com/support/docs/reqnroll-on-hyperexecute-grid/#step-6-download-artifacts-and-reports"
+        }
+      ]
+    }
+  ]) }}
+/>
+
+# Running Reqnroll Framework Tests on HyperExecute
 
 Reqnroll is an open-source behavior-driven development (BDD) framework for .NET, the successor to SpecFlow. It allows you to define test scenarios in plain language using Gherkin syntax, making collaboration between technical and non-technical team members seamless.
 

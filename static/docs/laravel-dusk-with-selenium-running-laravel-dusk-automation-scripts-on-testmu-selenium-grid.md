@@ -2,6 +2,28 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
+\"LaravelDusk Build\",\n\t\t\t\"name\" => \"LaravelDusk Build\",\n\t\t\t\"platform\" => \"Windows 10\",\n\t\t\t\"browserName\" => \"Chrome\",\n\t\t\t\"version\" => \"latest\"\n     );"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 4: Run the Test",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "php artisan dusk"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Install the skill",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "codeRepository": "https://github.com/LambdaTest/agent-skills",
+        "text": "git clone https://github.com/LambdaTest/agent-skills.git\ncp -r agent-skills/laravel-dusk-skill .claude/skills/\n\n# For Cursor / Copilot\ncp -r agent-skills/laravel-dusk-skill .cursor/skills/"
+      }
+    ],
+    "dateModified": "2026-09-09T19:13:32+05:30"
+  }) }}
+/>
+
 Run Laravel Dusk tests on the TestMu AI cloud grid. This guide covers setup, running a sample test, configuring capabilities, and testing locally hosted pages.
 
 **Sample repo**

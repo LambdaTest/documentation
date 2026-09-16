@@ -1,6 +1,22 @@
-# Parallel Testing With Playwright
+# How To Run Playwright Tests In Parallel
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
+{\n  console.log('Initialising test:: ', capability['LT:Options']['name'])\n\n  const browser = await chromium.connect({\n    wsEndpoint: `wss://cdp.lambdatest.com/playwright?capabilities=${encodeURIComponent(JSON.stringify(capability))}`\n  })\n\n  const page = await browser.newPage()\n\n  await page.goto('https://www.bing.com')\n\n  const element = await page.$('[aria-label=\"Enter your search term\"]')\n  await element.click()\n  await element.type('LambdaTest')\n  await element.press('Enter')\n  const title = await page.title()\n\n  try {\n    expect(title).toEqual('LambdaTest - Search')\n    // Mark the test as completed or failed\n    await page.evaluate(_ => {}, `lambdatest_action: ${JSON.stringify({ action: 'setTestStatus', arguments: { status: 'passed', remark: 'Title matched' } })}`)\n  } catch {\n    await page.evaluate(_ => {}, `lambdatest_action: ${JSON.stringify({ action: 'setTestStatus', arguments: { status: 'failed', remark: 'Title not matched' } })}`)\n  }\n\n  await browser.close()\n}\n\n// Capabilities array for with the respective configuration for the parallel tests\nconst capabilities = [\n  {\n    'browserName': 'Chrome', // Browsers allowed: `Chrome`, `MicrosoftEdge`, `pw-chromium`, `pw-firefox` and `pw-webkit`\n    'browserVersion': 'latest',\n    'LT:Options': {\n      'platform': 'Windows 10',\n      'build': 'Playwright Sample Build',\n      'name': 'Playwright Sample Test on Windows 10 - Chrome',\n      'user': process.env.LT_USERNAME,\n      'accessKey': process.env.LT_ACCESS_KEY,\n      'network': true,\n      'video': true,\n      'console': true\n    }\n  },\n  {\n    'browserName': 'MicrosoftEdge',\n    'browserVersion': 'latest',\n    'LT:Options': {\n      'platform': 'Windows 8',\n      'build': 'Playwright Sample Build',\n      'name': 'Playwright Sample Test on Windows 8 - MicrosoftEdge',\n      'user': process.env.LT_USERNAME,\n      'accessKey': process.env.LT_ACCESS_KEY,\n      'network': true,\n      'video': true,\n      'console': true\n    }\n  },\n  {\n    'browserName': 'Chrome',\n    'browserVersion': 'latest',\n    'LT:Options': {\n      'platform': 'MacOS Big sur',\n      'build': 'Playwright Sample Build',\n      'name': 'Playwright Sample Test on MacOS Big sur - Chrome',\n      'user': process.env.LT_USERNAME,\n      'accessKey': process.env.LT_ACCESS_KEY,\n      'network': true,\n      'video': true,\n      'console': true\n    }\n  }]\n\ncapabilities.forEach(async (capability) => {\n  await parallelTests(capability)\n})\n"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 3",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "node playwright-parallel.js"
+      }
+    ],
+    "dateModified": "2026-09-09T19:13:32+05:30"
+  }) }}
+/>
+
+# Parallel Testing With Playwright
 
 TestMu AI allows you to perform parallel testing with Playwright across real browsers and OS to automate your several test cases simultaneously. You can run one test case across various browsers, or you can run multiple test case scenarios in the same browser with different browser versions.
 

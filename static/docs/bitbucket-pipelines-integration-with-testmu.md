@@ -2,6 +2,14 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
+protractor-lambdatest@0.1.0 single /opt/atlassian/pipelines/agent/build\n> protractor conf/single.conf.js\n[10:23:53] I/launcher - Running 1 instances of WebDriver\n[10:23:53] I/hosted - Using the selenium server at https://LT_USERNAME:LT_ACCESS_KEY@hub.lambdatest.com/wd/hub\nStarted\n.\n1 spec, 0 failures\nFinished in 7.713 seconds\n[10:24:10] I/launcher - 0 instance(s) of WebDriver still running\n[10:24:10] I/launcher - chrome67.0 #01 passed"
+      }
+    ],
+    "dateModified": "2026-05-14T14:47:09+05:30"
+  }) }}
+/>
+# Bitbucket Pipelines Integration With TestMu AI
+
 Bitbucket Pipelines offers a free, automated continuous integration service through Bitbucket cloud servers. With Bitbucket Pipelines, teams can ship their product faster as they could rapidly test their code as soon as they commit. Once the code is tested, Bitbucket Pipeline deploys it into the Production environment automatically. It does so with the help of containers that can be fully customized according to your project requirements.
 
 TestMu AI integration with Bitbucket Pipelines will help you perform cross browser testing on 3000+ real browsers & browser versions through a Selenium Grid hosted on TestMu AI cloud servers. All you need is to set up your Bitbucket Pipelines with your TestMu AI account & you can trigger tests onto TestMu AI, directly from your Bitbucket Pipelines.

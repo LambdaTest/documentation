@@ -1,6 +1,22 @@
-# How to Debug your Pre Steps Errors
+# Pre Steps Errors
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
+[Help 1]\norg.apache.maven.lifecycle.LifecycleExecutionException: Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.7.0:compile (default-compile) on project My-Project: Fatal error compiling"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Java version Conflict",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "runtime:\n  language: java\n  version: \"11\""
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
+# How to Debug your Pre Steps Errors
 
 This document will help you debug your failed job if you are facing any errors in the pre-command stage.
 

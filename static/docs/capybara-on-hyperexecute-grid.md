@@ -1,7 +1,44 @@
-# Running Capybara Framework Tests on HyperExecute
+# Run automation tests on HyperExecute using Capybara
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
+lt_browser,\n  \"version\"=>lt_browser_version,\n  \"platform\"=>lt_os,\n  \"resolution\"=>lt_res,\n  \"build\"=>\"capybara-lambdatest\",\n  \"name\"=>\"single-Test-Jenkins\",\n  \"video\"=>true,\n  \"network\"=>true,\n  \"console\"=>true,\n  \"visual\"=>true \n}  "
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "In this sample YAML file, we have mentioned",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "---\nversion: \"0.1\"\n\nglobalTimeout: 90\ntestSuiteTimeout: 90\ntestSuiteStep: 90\n\nrunson: linux\n\nautosplit: true\n\nretryOnFailure: true\nmaxRetries: 5\n\nconcurrency: 2\n\npre:\n  - bundle install --deployment\n\nenv:\n   CONFIG_NAME: \"linux\"\n\ncacheKey: '{{ checksum \"Gemfile.lock\" }}'\ncacheDirectories:\n  - ./vendor/bundle\n\nuploadArtefacts:\n - name: report\n   path:\n     - cucumber_results.html\n\nreport: true\npartialReports:\n location: cucumber_results.html\n type: html\n\ntestDiscovery:\n  type: raw\n  mode: remote\n  command: snooper --featureFilePaths=features/ --frameWork=java\n  \ntestRunnerCommand: bundle exec cucumber \"$test\" --format html --out cucumber_results.html\n\njobLabel: [selenium-capybara, linux, autosplit]"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Run the below command in your terminal at the root folder of the project",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "./hyperexecute --config RELATIVE_PATH_OF_YOUR_YAML_FILE"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "The capybara-skill package includes",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "capybara-skill/\n\u251c\u2500\u2500 SKILL.md\n\u2514\u2500\u2500 reference/\n    \u251c\u2500\u2500 playbook.md\n    \u2514\u2500\u2500 advanced-patterns.md"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Install a Capybara Agent Skill using the command below",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "codeRepository": "https://github.com/LambdaTest/agent-skills",
+        "text": "# Clone the repo and copy the skill you need\ngit clone https://github.com/LambdaTest/agent-skills.git\ncp -r agent-skills/capybara-skill .claude/skills/\n\n# Or for Cursor / Copilot\ncp -r agent-skills/capybara-skill .cursor/skills/"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
+# Running Capybara Framework Tests on HyperExecute
 Capybara is a Ruby-based testing framework commonly used with Selenium for end-to-end web application testing. It provides a clean and expressive DSL (Domain-Specific Language) for interacting with web pages and handling common browser interactions.
 
 HyperExecute is an AI Native Test Orchestration Cloud Platform that empowers you to run **end-to-end** tests **quickly** and **efficiently**. It provides Just-in-Time (JIT) testing infrastructure with fast execution **speeds**, **smart orchestration**, and **detailed logs**.

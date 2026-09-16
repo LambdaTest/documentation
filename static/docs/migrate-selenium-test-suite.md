@@ -2,6 +2,34 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
+\"Chrome\",\n    \"browserVersion\" => \"latest\",\n    \"LT:Options\" => [\n        \"platformName\" => \"Windows 10\",\n        \"build\" => \"My First Cloud Build\",\n        \"name\" => \"Sample Test\",\n        \"w3c\" => true,\n    ]\n];\n\n$driver = RemoteWebDriver::create($hubURL, $capabilities);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Ruby",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Ruby",
+        "text": "driver = Selenium::WebDriver.for :chrome"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Ruby",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Ruby",
+        "text": "username = ENV[\"LT_USERNAME\"]\naccess_key = ENV[\"LT_ACCESS_KEY\"]\nhub_url = \"https://#{username}:#{access_key}@hub.lambdatest.com/wd/hub\"\n\noptions = Selenium::WebDriver::Options.chrome(\n  platform_name: \"Windows 10\",\n  browser_version: \"latest\",\n  \"LT:Options\": {\n    build: \"My First Cloud Build\",\n    name: \"Sample Test\",\n    w3c: true,\n  }\n)\n\ndriver = Selenium::WebDriver.for :remote, url: hub_url, capabilities: options"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 3: Run Your Tests",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "# Java (Maven)\nmvn test\n\n# JavaScript (npm)\nnpm test\n\n# Python (pytest)\npytest\n\n# C# (dotnet)\ndotnet test\n\n# PHP (PHPUnit)\nvendor/bin/phpunit\n\n# Ruby (RSpec)\nbundle exec rspec"
+      }
+    ],
+    "dateModified": "2026-09-09T19:13:32+05:30"
+  }) }}
+/>
+
 Already have Selenium tests running locally? You can run them on the TestMu AI cloud grid with three changes: swap the driver URL, add your credentials, and set the desired capabilities. Your test logic stays the same.
 
 If you are moving from BrowserStack or Sauce Labs, use these dedicated migration guides with capability mapping tables.

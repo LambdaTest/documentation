@@ -1,24 +1,10 @@
-# Getting Started
+# How to Test AI Agents With the TestMu AI Agent Testing CLI
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
-## Before You Begin
+The TestMu AI Agent Testing CLI (`agent-testing-cli`) tests AI agents from a terminal, with no dashboard clicks. Use it to discover projects and test resources, run Chat and Phone Caller evaluations, retrieve results, and automate tests in a continuous integration and continuous delivery (CI/CD) pipeline.
 
-1. You need a TestMu AI account. [Sign up free](https://www.testmuai.com/) if you do not have one.
-2. Follow [Get started with TestMu Agent Testing](https://agent-to-agent.lambdatest.com/agent-ui/agents) and open **Credentials** in the TestMu AI Dashboard. Copy your username and access key.
-3. Set the credentials as environment variables when you use the CLI in CI/CD or other non-interactive environments.
-
-```bash
-export LT_USERNAME="YOUR_USERNAME"
-export LT_ACCESS_KEY="YOUR_ACCESS_KEY"
-```
-
-```powershell
-$env:LT_USERNAME = "YOUR_USERNAME"
-$env:LT_ACCESS_KEY = "YOUR_ACCESS_KEY"
-```
-
-**TestMu Agent Testing CLI** (`agent-testing-cli`) is a command-line tool for testing AI agents from a terminal. Use the CLI to discover projects and test resources, run Chat and Phone Caller evaluations, retrieve results, and automate tests in a continuous integration and continuous delivery (CI/CD) pipeline.
+It runs the same commands on macOS, Linux, and Windows against Chat, Voice, and Phone Caller agents configured in TestMu. You can drive it with direct commands, machine-readable JSON output, or the interactive terminal user interface (TUI), and authenticate with environment variables so suites run without an interactive prompt.
 
 - **Run tests from a terminal or IDE:** Use the same commands on macOS, Linux, and Windows.
 - **Test different agent types:** Work with Chat, Voice, and Phone Caller agents that are configured in TestMu.
@@ -37,7 +23,23 @@ agent-testing-cli login
 agent-testing-cli projects
 ```
 
-## Supported Environments
+## How to Set Up Your Credentials
+
+1. You need a TestMu AI account. [Sign up free](https://www.testmuai.com/) if you do not have one.
+2. Follow [Get started with TestMu Agent Testing](https://agent-to-agent.lambdatest.com/agent-ui/agents) and open **Credentials** in the TestMu AI Dashboard. Copy your username and access key.
+3. Set the credentials as environment variables when you use the CLI in CI/CD or other non-interactive environments.
+
+```bash
+export LT_USERNAME="YOUR_USERNAME"
+export LT_ACCESS_KEY="YOUR_ACCESS_KEY"
+```
+
+```powershell
+$env:LT_USERNAME = "YOUR_USERNAME"
+$env:LT_ACCESS_KEY = "YOUR_ACCESS_KEY"
+```
+
+## Which Environments the CLI Supports
 
 The CLI runs in a system terminal or an integrated terminal in an IDE on:
 
@@ -45,14 +47,14 @@ The CLI runs in a system terminal or an integrated terminal in an IDE on:
 - Linux
 - Windows
 
-## Requirements
+## What the CLI Requires
 
 - Python 3.10 or newer
 - macOS, Linux, or Windows
 - A TestMu account with access to Agent-to-Agent Testing
 - At least one TestMu project with an agent and a test suite
 
-## Usage Modes
+## How to Choose a Usage Mode
 
 | Mode | Command | Best for |
 | --- | --- | --- |
@@ -62,7 +64,7 @@ The CLI runs in a system terminal or an integrated terminal in an IDE on:
 
 `--yes` confirms a test run without an interactive prompt. Use it for CI/CD or after you verify the selected project, suite, workflow, or URL.
 
-## Quick Reference
+## Quick Command Reference
 
 | Command | Purpose |
 | --- | --- |
@@ -90,7 +92,7 @@ Run the following command to see the options for one command:
 agent-testing-cli COMMAND --help
 ```
 
-## Install the CLI
+## How to Install the CLI
 
 Install the latest published version from PyPI:
 
@@ -104,7 +106,7 @@ Verify the installation:
 agent-testing-cli --help
 ```
 
-## Authenticate Your Account
+## How to Authenticate Your Account
 
 ### Sign In Interactively
 
@@ -149,7 +151,7 @@ Delete saved credentials for the selected profile:
 agent-testing-cli logout
 ```
 
-## Discover Projects and Test Resources
+## How to Discover Projects and Test Resources
 
 List accessible projects:
 
@@ -171,7 +173,7 @@ Add `--json` when a script must process the output:
 agent-testing-cli --json projects
 ```
 
-## Test a Phone Caller Agent
+## How to Test a Phone Caller Agent
 
 For a Phone Caller run, `--project PROJECT_ID` identifies the TestMu project and `--suite SUITE_ID` identifies the suite to run.
 
@@ -214,7 +216,7 @@ agent-testing-cli --project PROJECT_ID run \
 
 The `--poll` and `--timeout` values are in seconds.
 
-## Test a Chat Agent
+## How to Test a Chat Agent
 
 A Chat evaluation requires a project, workflow, and suite:
 
@@ -237,7 +239,7 @@ agent-testing-cli --project PROJECT_ID run \
 
 Chat evaluations are asynchronous. Do not use `--wait` with a Chat evaluation.
 
-## Run from URLs
+## How to Run from URLs
 
 Run a suite from a supported TestMu result URL:
 
@@ -253,7 +255,7 @@ agent-testing-cli run --url "SUITE_URL_1" "SUITE_URL_2" "SUITE_URL_3" --yes
 
 The `--yes` flag confirms every selected run without an interactive prompt. Use it only after you verify the URLs.
 
-## Use the Interactive TUI
+## How to Use the Interactive TUI
 
 Open the terminal user interface:
 
@@ -273,7 +275,7 @@ agent-testing-cli tui
 
 The TUI shows a copy-ready command for the selected project or suite. The TUI also asks for confirmation before it starts a test run.
 
-## Global Options
+## What the Global Options Do
 
 The shared `--json`, `--verbose`, and `--no-tui` options can appear before or after a command. Completion options must appear before a command. Use the global form `--project PROJECT_ID` before the command for project-scoped operations. The existing command-level form remains supported for compatibility.
 
@@ -287,7 +289,7 @@ The shared `--json`, `--verbose`, and `--no-tui` options can appear before or af
 | `--show-completion` | Show the completion script for the current shell. |
 | `--help` | Show help. |
 
-## Integrate with CI/CD
+## How to Integrate with CI/CD
 
 For a Chat evaluation, provide the workflow ID as an environment variable and use this command:
 
@@ -300,7 +302,7 @@ agent-testing-cli --project "$TESTMU_PROJECT_ID" --json run \
 
 Do not add `--wait` to a Chat evaluation.
 
-## Exit Codes
+## What the Exit Codes Mean
 
 | Code | Meaning |
 | --- | --- |
@@ -313,7 +315,7 @@ Do not add `--wait` to a Chat evaluation.
 
 Use the exit code to fail a CI/CD job when a command does not complete successfully.
 
-## Troubleshoot Common Problems
+## How to Troubleshoot Common Problems
 
 ### Credentials Are Unavailable
 
@@ -363,8 +365,8 @@ agent-testing-cli --project PROJECT_ID run \
 
 **Fix:** Configure the credential store for the operating system. For CI/CD, use `LT_USERNAME` and `LT_ACCESS_KEY` instead.
 
-## Next Steps
+## Related TestMu AI Guides
 
-- Learn how [Agent Testing evaluations work](https://www.testmuai.com/support/docs/architecture-and-how-evaluation-works/).
-- Learn how to [connect a Chat agent](https://www.testmuai.com/support/docs/chat-agent-api-integration/).
+- Learn how [Agent Testing evaluations work](/support/docs/architecture-and-how-evaluation-works/).
+- Learn how to [connect a Chat agent over its API](/support/docs/chat-agent-api-integration/).
 - Open the [agent-testing-cli package on PyPI](https://pypi.org/project/agent-testing-cli/).

@@ -2,7 +2,7 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
-An API acts as a middleman between different software applications, allowing them to communicate and exchange data. Just like any other part of a software system, APIs need to be thoroughly tested to ensure they function as intended.
+To run REST Assured API tests on HyperExecute, download the HyperExecute CLI, set your TestMu AI credentials, point the CLI at a `hyperexecute.yaml` configuration, and trigger the run. REST Assured is a Java library for testing REST APIs, and HyperExecute is the TestMu AI test orchestration platform that discovers your tests, runs the suite on its cloud grid, and reports the results in the dashboard.
 
 ## Why is API Testing Important?
 

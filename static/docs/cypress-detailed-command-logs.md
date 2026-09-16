@@ -2,6 +2,66 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
+= 10:",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "\"cypress-terminal-report\": \"^5.3.2\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "For Cypress >= 10:",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "\"run_settings\": {\n  \"detailed_command_logs\": true,\n  \"downloads\": \"./cypress/results\"\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 1: Configure the Plugin",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "const installLogsPrinter = require('cypress-terminal-report/src/installLogsPrinter')\n\nmodule.exports = (on, config) => {\n  // `on` is used to hook into various events Cypress emits\n  // `config` is the resolved Cypress config\n\n  installLogsPrinter(on, {\n    printLogsToFile: 'always',\n    outputRoot: 'cypress/results/detailCommandLogs',\n    outputTarget: {\n      'detailCommandLogs.json': 'json',\n    },\n  })\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "To display detailed logs in the terminal, update the installLogsPrinter with the printLogsToConsole: 'always' code",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "module.exports = (on, config) => {\n  installLogsPrinter(on, {\n    printLogsToConsole: 'always', // Enables logs in the terminal\n    printLogsToFile: 'always',\n    outputRoot: 'cypress/results/detailCommandLogs',\n    outputTarget: {\n      'detailCommandLogs.json': 'json',\n    },\n  });\n};"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 3: Install Logs Collector",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "const installLogsCollector = require('cypress-terminal-report/src/installLogsCollector')\n\ninstallLogsCollector()"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 1: Configure the Plugin",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "const { defineConfig } = require(\"cypress\");\nconst  installLogsPrinter = require(\"cypress-terminal-report/src/installLogsPrinter\");\nmodule.exports = defineConfig({\n  e2e: {\n    setupNodeEvents(on, config) {\n      // implement node event listeners here\n      installLogsPrinter(on, {\n        printLogsToFile:\"always\",\n      outputRoot: 'cypress/results/detailCommandLogs',\n      outputTarget: {\n        'detailCommandLogs.json': 'json',\n      }\n      });\n    },\n  },\n});"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "If you need logs in the terminal, update the code like this",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "const { defineConfig } = require(\"cypress\");\nconst  installLogsPrinter = require(\"cypress-terminal-report/src/installLogsPrinter\");\nmodule.exports = defineConfig({\n  e2e: {\n    setupNodeEvents(on, config) {\n      // implement node event listeners here\n      installLogsPrinter(on, {\n      printLogsToConsole: 'always'\n        printLogsToFile:\"always\",\n      outputRoot: 'cypress/results/detailCommandLogs',\n      outputTarget: {\n        'detailCommandLogs.json': 'json',\n      }\n      });\n    },\n  },\n});"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 3: Install Logs Collector",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "import installLogsCollector from 'cypress-terminal-report/src/installLogsCollector'\n\ninstallLogsCollector()"
+      }
+    ],
+    "dateModified": "2026-09-09T19:13:32+05:30"
+  }) }}
+/>
+
+# Detailed Command Logs for Cypress
 The **Detailed Command Logs** feature provides a comprehensive record of all Cypress commands and their results, both in the console and in a file. This functionality is ideal for debugging and troubleshooting, enabling you to pinpoint specific logs quickly and effectively.
 
 The logs are presented in an easy-to-read, human-readable format using the [cypress-terminal-report](https://www.npmjs.com/package/cypress-terminal-report) plugin. Below are the steps to implement this feature for Cypress versions below and above 10.

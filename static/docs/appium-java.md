@@ -2,6 +2,63 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
+\n\n\n\n```java title=\"vanilla_ios.java\"\nimport io.appium.java_client.AppiumDriver;\nimport io.appium.java_client.MobileBy;\nimport io.appium.java_client.MobileElement;\nimport io.appium.java_client.ios.IOSDriver;\n\nimport org.openqa.selenium.remote.DesiredCapabilities;\nimport org.openqa.selenium.support.ui.ExpectedConditions;\nimport org.openqa.selenium.support.ui.WebDriverWait;\n\nimport java.net.URL;\n\npublic class vanilla_ios {\n    //highlight-next-line\n    public static String userName = System.getenv(\"LT_USERNAME\") == null ? \"LT_USERNAME\"  //Add LambdaTest username here\n            : System.getenv(\"LT_USERNAME\");\n    //highlight-next-line\n    public static String accessKey = System.getenv(\"LT_ACCESS_KEY\") == null ? \"LT_ACCESS_KEY\" //Add LambdaTest accessKey here\n            : System.getenv(\"LT_ACCESS_KEY\");\n\n    public static final String URL = \"https://\" + userName + \":\" + accessKey + \"@mobile-hub.lambdatest.com/wd/hub\";\n    public static IOSDriver driver = null;\n\n    public static void main(String[] args) throws Exception {\n\n       try {\n            DesiredCapabilities caps = new DesiredCapabilities();\n            caps.setCapability(\"platformVersion\", \"15\");\n            caps.setCapability(\"deviceName\", \"iPhone 12\");\n            caps.setCapability(\"isRealMobile\", true);\n            //highlight-next-line\n            caps.setCapability(\"app\", \"APP_URL\"); //Enter your app url\n            caps.setCapability(\"platformName\", \"iOS\");\n            caps.setCapability(\"build\", \"Java Vanilla - iOS\");\n            caps.setCapability(\"name\", \"Sample Test Java\");\n            caps.setCapability(\"devicelog\", true);\n            caps.setCapability(\"network\", false);\n\n\n        driver = new IOSDriver(new URL(\"https://\" + userName + \":\" + accessKey + \"@beta-hub.lambdatest.com/wd/hub\"), caps);\n\n\n            Thread.sleep(2000);\n\n            //Changes color\n\n            driver.findElement(MobileBy.id(\"color\")).click();\n            Thread.sleep(1000);\n\n            //Back to black color\n            driver.navigate().back();\n\n            Thread.sleep(1000);\n\n            //Changes the text to proverbial\n            driver.findElement(MobileBy.id(\"Text\")).click();\n            Thread.sleep(1000);\n\n            //toast is visible\n            driver.findElement(MobileBy.id(\"toast\")).click();\n            Thread.sleep(1000);\n\n            //notification is visible\n            driver.findElement(MobileBy.id(\"notification\")).click();\n            Thread.sleep(2000);\n\n            //Open the geolocation page\n            driver.findElement(MobileBy.id(\"geoLocation\")).click();\n            Thread.sleep(4000);\n            driver.navigate().back();\n            Thread.sleep(1000);\n\n            //Takes to speed test page\n            driver.findElement(MobileBy.id(\"speedTest\")).click();\n            Thread.sleep(5000);\n            driver.navigate().back();\n            Thread.sleep(1000);\n\n            //Opens the browser\n            MobileElement browser = (MobileElement) driver.findElementByAccessibilityId(\"Browser\");\n            browser.click();\n            Thread.sleep(3000);\n\n           WebDriverWait el7 =  new WebDriverWait(driver, 30);\n           el7.until(ExpectedConditions.elementToBeClickable(MobileBy.id(\"url\")));\n           driver.findElementById(\"url\").sendKeys(\"https://www.testmuai.com/\");\n\n            //Clicks on the text box\n            WebDriverWait el = new WebDriverWait(driver,90);\n            MobileElement el4 = (MobileElement) driver.findElementByAccessibilityId(\"find\");\n            el.until(ExpectedConditions.elementToBeClickable(el4));\n            el4.click();\n            el4.sendKeys(\"Lambdatest\");\n\n            //((JavascriptExecutor) driver).executeScript(\"lambda-status=passed\");\n            driver.quit();\n\n        } catch (Exception t) {\n           System.out.println(t);\n           driver.quit();\n\n       }\n    }\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "The capabilities object in the sample code are defined as (Android)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "DesiredCapabilities capabilities = new DesiredCapabilities();\n            capabilities.setCapability(\"deviceName\", \"Galaxy S20\");\n            capabilities.setCapability(\"platformVersion\", \"11\");\n            capabilities.setCapability(\"platformName\", \"Android\");\n            capabilities.setCapability(\"isRealMobile\", true);\n            //highlight-next-line\n            capabilities.setCapability(\"app\", \"YOUR_APP_URL\"); //Enter your app url\n            capabilities.setCapability(\"deviceOrientation\", \"PORTRAIT\");\n            capabilities.setCapability(\"build\", \"Java Vanilla - Android\");\n            capabilities.setCapability(\"name\", \"Sample Test Java\");\n            capabilities.setCapability(\"console\", true);\n            capabilities.setCapability(\"network\", false);\n            capabilities.setCapability(\"visual\", true);\n            capabilities.setCapability(\"devicelog\", true);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "iOS",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "DesiredCapabilities caps = new DesiredCapabilities();\n            caps.setCapability(\"platformVersion\", \"15\");\n            caps.setCapability(\"deviceName\", \"iPhone 12\");\n            caps.setCapability(\"isRealMobile\", true);\n            //highlight-next-line\n            caps.setCapability(\"app\", \"YOUR_APP_URL\"); //Enter your app url\n            caps.setCapability(\"platformName\", \"iOS\");\n            caps.setCapability(\"build\", \"Java Vanilla - iOS\");\n            caps.setCapability(\"name\", \"Sample Test Java\");\n            caps.setCapability(\"devicelog\", true);\n            caps.setCapability(\"network\", false);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 6: Execute and Monitor your Tests",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "  mvn clean install"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 6: Execute and Monitor your Tests (Android)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "  mvn test -P android"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 6: Execute and Monitor your Tests (iOS)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "  mvn test -P ios"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "The appium-skill package includes",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "appium-skill/\n\u251c\u2500\u2500 SKILL.md\n\u2514\u2500\u2500 reference/\n    \u251c\u2500\u2500 playbook.md\n    \u2514\u2500\u2500 advanced-patterns.md"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Install a Appium Agent Skill using the command below",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "codeRepository": "https://github.com/LambdaTest/agent-skills",
+        "text": "# Clone the repo and copy the skill you need\ngit clone https://github.com/LambdaTest/agent-skills.git\ncp -r agent-skills/appium-skill .claude/skills/\n\n# Or for Cursor / Copilot\ncp -r agent-skills/appium-skill .cursor/skills/"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 In this documentation, you will learn how to trigger a automation script of **Java** for application testing with **Appium** on TestMu AI, set the [**desired capabilities**](/support/docs/desired-capabilities-in-appium/) for appium testing, and other advanced features of TestMu AI.
 
 ## Prerequisites

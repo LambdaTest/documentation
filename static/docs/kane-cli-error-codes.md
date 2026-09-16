@@ -2,6 +2,13 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
+/dev/null | tail -1)\nCODE=$(echo \"$RESULT\" | jq -r '.result_code')\n\ncase $CODE in\n  100) echo \"Passed\" ;;\n  2*) echo \"Cancelled\" ;;\n  3*) echo \"Stuck: $(echo $RESULT | jq -r '.reason_code')\" ;;\n  4*) echo \"Agent error: retry recommended\" ;;\n  5*) echo \"Infra error: check environment\" ;;\n  6*) echo \"Blocked: manual intervention needed\" ;;\n  7*) echo \"Assertion failed: check test conditions\" ;;\nesac"
+      }
+    ],
+    "dateModified": "2026-07-01T18:40:16+05:30"
+  }) }}
+/>
+
 Every Kane CLI run ends with a `result_code` in the `run_end` event. This page lists every code, explains what triggered it, and tells you what to do next.
 
 ## How to Read Result Codes

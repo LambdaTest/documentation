@@ -2,6 +2,34 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
+';"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Search Fields with Autocomplete",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "type \"New Yo\" in the search field\nwait for 2 seconds\nclick on \"New York, NY\" in the suggestions dropdown"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Scenario: Address Autocomplete (Google Places)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "type \"221B Baker\" in the address field\nwait for 3 seconds\nclick on \"221B Baker Street, London\" in the autocomplete suggestions\nassert the city field contains \"London\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Hiding the Keyboard (Mobile)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "type \"test@example.com\" in the email field and press Enter"
+      }
+    ],
+    "dateModified": "2026-09-09T19:16:50+05:30"
+  }) }}
+/>
+
 Forms are at the heart of most web applications: login pages, registration flows, checkout processes, search filters, and admin panels. This guide covers how to handle every type of form element in KaneAI with real-world testing scenarios.
 
 ## Text Input Fields

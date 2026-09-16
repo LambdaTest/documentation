@@ -2,7 +2,7 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
-The Agent Testing Platform tests a voice agent the same way it tests a chat agent, except the conversation happens as audio instead of text. It holds a spoken conversation with your agent, transcribes the responses, and scores the interaction across the same 9 quality metrics. It covers voice assistants and voice-enabled support agents.
+The TestMu AI Agent Testing Platform tests a voice agent the same way it tests a chat agent, except the conversation happens as audio instead of text. It holds a spoken conversation with your agent, transcribes the responses, and scores the interaction across the same 9 quality metrics. It covers voice assistants and voice-enabled support agents.
 
 A voice agent uses the same setup as a chat agent: upload the documents that describe it, generate scenarios, and run an evaluation. The difference is the medium, audio rather than text.
 
@@ -20,7 +20,7 @@ Voice testing differs from chat in the medium, not the metrics.
 - The agent's voice responses are captured and transcribed for evaluation.
 - Evaluation runs on the full audio conversation transcript.
 
-## Features
+## What the Voice Agent Workflow Includes
 
 A voice agent has all the features of a chat agent.
 

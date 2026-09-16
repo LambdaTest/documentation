@@ -1,4 +1,4 @@
-# JavaScript with Playwright: Running Your First Test
+# JavaScript and TypeScript with Playwright
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 

@@ -2,6 +2,20 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
+go to https://myapp.com and log in as admin\n  \u2713 PASSED\n\n> navigate to User Management and create a new user \"qa@example.com\"\n  \u2713 PASSED\n\n> verify the new user appears in the users table\n  \u2713 PASSED"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "In Headless CLI, use --max-steps to cap each run",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "kane-cli run \"login flow\" --url https://myapp.com --max-steps 10\nkane-cli run \"dashboard check\" --url https://myapp.com --max-steps 10"
+      }
+    ],
+    "dateModified": "2026-08-12T13:15:00+05:30"
+  }) }}
+/>
+
 The objective string is the most important input to Kane CLI. How you phrase it determines what the agent does and whether it succeeds. Objectives follow three patterns that you can combine freely.
 
 ## Three Patterns

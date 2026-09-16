@@ -2,6 +2,13 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
+\n    <\/base-config>\n<\/network-security-config>"
+      }
+    ],
+    "dateModified": "2026-08-27T03:34:12+05:30"
+  }) }}
+/>
+
 Many apps connect to servers that use certificates issued by a private or corporate certificate authority. Some apps also pin a **self-signed certificate**, or present a **client certificate** to authenticate themselves before a server will respond. On a standard device, these connections fail because the device does not trust your organization's certificates.
 
 TestMu AI's **Certificate Injection** allows you to upload your own certificates and install them on a real device during a manual App Testing session. Your app then behaves on the TestMu AI cloud exactly as it does on your internal network. Certificates are installed for a single session and are removed when the session ends.

@@ -1,6 +1,22 @@
-# Deque axe Integration
+# How to perform Accessibility testing using Deque's axe
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
+{\n            return axeWdio.analyze()\n            .then(async (result) => {\n              \n             \n                return result\n            })\n            .catch(err => {\n                console.log(err)\n            })\n        })\n \n    },"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 5",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": " browser.getAxeResults()"
+      }
+    ],
+    "dateModified": "2026-02-12T19:51:34+05:30"
+  }) }}
+/>
+
+# Deque axe Integration
 
 Deque's axe is a world-class digital accessibility toolkit that allows you to integrate functionality into your tests to scan content and generate an a11y score.
 

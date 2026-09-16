@@ -1,6 +1,57 @@
-# Transfer Cookies and Storage Between Sessions
+# Reusing Context & Auth - TestMu AI Browser Cloud
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
+;\n    sessionStorage?: Record>;\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Get all browser state from a page",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "TypeScript",
+        "text": "const context = await client.context.getContext(page);\n\ncontext.cookies;        // Array of cookies\ncontext.localStorage;   // { \"origin\": { \"key\": \"value\" } }\ncontext.sessionStorage; // { \"origin\": { \"key\": \"value\" } }"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Or extract individual parts",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "TypeScript",
+        "text": "const cookies = await client.context.getCookies(page);\nconst localStorage = await client.context.getLocalStorage(page);\nconst sessionStorage = await client.context.getSessionStorage(page);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Set browser state on a new page",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "TypeScript",
+        "text": "await client.context.setContext(page, {\n    cookies: [\n        { name: 'session_id', value: 'abc123', domain: '.example.com', path: '/' }\n    ],\n    localStorage: {\n        'https://example.com': { theme: 'dark', lang: 'en' }\n    },\n});"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Or set individual parts",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "TypeScript",
+        "text": "await client.context.setCookies(page, cookies);\nawait client.context.setLocalStorage(page, localStorageData);\nawait client.context.setSessionStorage(page, sessionStorageData);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Clearing Context",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "TypeScript",
+        "text": "await client.context.clearContext(page);    // Clear everything\nawait client.context.clearCookies(page);    // Just cookies\nawait client.context.clearStorage(page);    // localStorage + sessionStorage"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "The most common use case - log in once, reuse the auth state",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "TypeScript",
+        "text": "// Session 1: Log in and capture\nconst session1 = await client.sessions.create({ adapter: 'puppeteer', ... });\nconst browser1 = await client.puppeteer.connect(session1);\nconst page1 = (await browser1.pages())[0];\n\nawait page1.goto('https://app.example.com/login');\nawait page1.type('#email', 'user@example.com');\nawait page1.type('#password', 'password');\nawait page1.click('#login-button');\nawait page1.waitForNavigation();\n\nconst savedContext = await client.context.getContext(page1);\nawait browser1.close();\nawait client.sessions.release(session1.id);\n\n// Session 2: Skip login entirely\nconst session2 = await client.sessions.create({ adapter: 'puppeteer', ... });\nconst browser2 = await client.puppeteer.connect(session2);\nconst page2 = (await browser2.pages())[0];\n\nawait client.context.setContext(page2, savedContext);\nawait page2.goto('https://app.example.com/dashboard');\n// Already logged in!"
+      }
+    ],
+    "dateModified": "2026-03-26T15:05:31+05:30"
+  }) }}
+/>
+
+# Transfer Cookies and Storage Between Sessions
 
 Extract and inject browser state - cookies, localStorage, and sessionStorage - across sessions to preserve login and user data without re-authenticating.
 

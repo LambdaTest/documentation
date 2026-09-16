@@ -2,6 +2,98 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
+r.status === 200,\n});\nsleep(2); // Wait for dynamic content\nsmartuiSnapshot(response, \"Page-Loaded\");"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Verify PROJECT_TOKEN is set correctly",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "   echo $PROJECT_TOKEN"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Ensure you're using the SmartUI CLI wrapper",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "   npx smartui exec k6 run test.js"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Add explicit waits before screenshots",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "   import { sleep } from 'k6';\n   import http from 'k6/http';\n   import { smartuiSnapshot } from '@lambdatest/k6-driver';\n   \n   const response = http.get('https://example.com');\n   sleep(2); // Wait for content to load\n   smartuiSnapshot(response, 'Screenshot-Name');"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Check response status before taking screenshot",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "   import { check } from 'k6';\n   \n   const response = http.get('https://example.com');\n   check(response, {\n     'status is 200': (r) => r.status === 200,\n   });\n   smartuiSnapshot(response, 'Screenshot-Name');"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Install required dependencies",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "   npm install @lambdatest/smartui-cli @lambdatest/k6-driver"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Set PROJECT_TOKEN environment variable",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "   export PROJECT_TOKEN=\"YOUR_PROJECT_TOKEN\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Verify K6 is installed",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "   k6 version"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Run tests using the SmartUI CLI wrapper",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "   npx smartui exec k6 run test.js"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Check screenshot status in response",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "   if (screenshot.screenshotStatus !== \"Approved\") {\n       // Handle non-approved status\n   }"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
+",
+          "url": "https://www.testmuai.com/support/docs/smartui-k6-setup/#step-1-create-a-smartui-project"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Configure your test with K6 Desired Capabilities",
+          "text": "Once you have created a SmartUI Project, you can generate screenshots by running automation scripts. Follow the below steps to successfully generate screenshots - Clone the sample GitHub repository: Install the required dependencies: Install k6 by referring to the installation guide https://k6.io/docs/get-started/installation/: Set up the TestMu AI credentials by using the commands below in the terminal. The account details are available on your TestMu AI Profile page. Create and configure SmartUI config file: Add the SmartUI snapshot function to your test file. Create or edit test.js:",
+          "url": "https://www.testmuai.com/support/docs/smartui-k6-setup/#step-2-configure-your-test-with-k6-desired-capabilities"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Executing the SmartUI Test Suite",
+          "text": "Execute the test using the following command: You can check the executed builds over at TestMu AI SmartUI.",
+          "url": "https://www.testmuai.com/support/docs/smartui-k6-setup/#step-3-executing-the-smartui-test-suite"
+        }
+      ]
+    }
+  ]) }}
+/>
+
 This documentation will act as your step-by-step guide in to perform K6 test with SmartUI.
 
 ### Prerequisites for running SmartUI with K6

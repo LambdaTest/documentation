@@ -1,6 +1,50 @@
-# How to Run Web Automation Tests With WebDriver BiDi
+# Run Web Automation Tests With WebDriver BiDi on TestMu AI
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
+{\n  console.error('Run failed:', e.message);\n  process.exit(1);\n});"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Run it** with a TypeScript runner",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "npx tsx bidi-test.ts"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "WebdriverIO connects over BiDi, runs the checks, and marks the session Passed",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "Passed: \"Components\" loaded 15 products, screenshot saved"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Running Web Automation With WebDriver BiDi From an AI Agent",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "TypeScript",
+        "text": "// agent-bidi.ts\nimport { remote } from 'webdriverio';\n\nasync function run() {\n  const browser = await remote({\n    hostname: 'hub.lambdatest.com',\n    port: 443,\n    protocol: 'https',\n    path: '/wd/hub',\n    capabilities: {\n      browserName: 'Chrome',\n      browserVersion: 'latest',\n      webSocketUrl: true,\n      'LT:Options': {\n        platformName: 'Windows 10',\n        build: 'BiDi Web Automation',\n        name: 'Agent Event Monitor',\n        username: process.env.LT_USERNAME,\n        accessKey: process.env.LT_ACCESS_KEY,\n        w3c: true,\n      },\n    },\n  });\n\n  let responses = 0;\n  try {\n    // Subscribe to BiDi network events so the agent sees the browser's real activity\n    await browser.sessionSubscribe({ events: ['network.responseCompleted'] });\n    browser.on('network.responseCompleted', () => {\n      responses += 1;\n    });\n\n    await browser.url(\n      'https://ecommerce-playground.lambdatest.io/index.php?route=product/category&path=25'\n    );\n    await browser.pause(3000);\n\n    if (responses === 0) throw new Error('No network responses observed');\n    console.log(`Validated: the page issued ${responses} network responses over BiDi`);\n\n    // Mark the test as passed on the TestMu AI dashboard\n    await browser.executeScript('lambda-status=passed', []);\n  } catch (e) {\n    // Mark the test as failed so the dashboard reflects the real outcome\n    await browser.executeScript('lambda-status=failed', []);\n    throw e;\n  } finally {\n    await browser.deleteSession();\n  }\n}\n\nrun().catch((e) => {\n  console.error('Run failed:', e.message);\n  process.exit(1);\n});"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 10",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "npx tsx agent-bidi.ts"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "The agent subscribes to the event stream and reports what the browser actually did",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "Validated: the page issued 56 network responses over BiDi"
+      }
+    ],
+    "dateModified": "2026-09-09T19:13:32+05:30"
+  }) }}
+/>
+
+# How to Run Web Automation Tests With WebDriver BiDi
 
 WebDriver BiDi is a W3C standard protocol for browser automation. It adds bidirectional, event-driven communication on top of WebDriver, so a test both drives the browser and subscribes to its events, such as console logs and network traffic, across Chrome, Firefox, and Edge.
 

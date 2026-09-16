@@ -2,6 +2,20 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
+{\n    console.log(JSON.stringify(response.data));\n  })\n  .catch((error) => {\n    console.log(error);\n  });\n"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Windows",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "./hyperexecute --config RELATIVE_PATH_OF_YOUR_YAML_FILE"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 Testsigma is an AI Native, cloud-based test automation platform that helps testers create, run, and maintain automated tests for web, mobile, and API applications.
 
 Testsigma can help you with:

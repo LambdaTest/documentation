@@ -2,6 +2,72 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
+\"chrome\",\n  :version     => \"latest\",\n  :platform    => \"Windows 10\",\n  :name        => \"Ruby Selenium Test\",\n  :build       => \"Ruby Selenium Build\",\n  :video       => true\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Clone the sample GitHub project",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "codeRepository": "https://github.com/LambdaTest/Capybara-Cucumber-Ruby",
+        "text": "git clone https://github.com/LambdaTest/Capybara-Cucumber-Ruby\ncd Capybara-Cucumber-Ruby"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Set your browser and OS in the capabilities hash",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Ruby",
+        "text": "@caps = {\n  \"browserName\" => \"chrome\",\n  \"browserVersion\" => \"latest\",\n  \"platformName\" => \"Windows 10\",\n  \"build\" => \"capybara-lambdatest\",\n  \"name\" => \"single-Test\"\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Run a single test, or in parallel",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "bundle exec rake single\nbundle exec rake parallel"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Clone the sample GitHub project",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "codeRepository": "https://github.com/LambdaTest/RSpec-Selenium-Sample",
+        "text": "git clone https://github.com/LambdaTest/RSpec-Selenium-Sample\ncd RSpec-Selenium-Sample"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Run a single test, or in parallel",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "bundle exec rake single\nbundle exec rake parallel"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Clone the sample GitHub project",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "codeRepository": "https://github.com/LambdaTest-sample-test-frameworks/Ruby-UnitTest-Selenium",
+        "text": "git clone https://github.com/LambdaTest-sample-test-frameworks/Ruby-UnitTest-Selenium\ncd Ruby-UnitTest-Selenium"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Set your browser and OS in the capabilities hash",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Ruby",
+        "text": "caps = {\n  :browserName => \"chrome\",\n  :browser_version => \"latest\",\n  :platform_name => \"Windows 10\",\n  :name => \"UnitTest Sample Test\",\n  :build => \"UnitTest Selenium Build\"\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Run the test",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "ruby LambdaTest.rb"
+      }
+    ],
+    "dateModified": "2026-09-09T19:13:32+05:30"
+  }) }}
+/>
+
 Run your Ruby Selenium tests on the TestMu AI cloud grid across 10,000+ browser/device combinations. The setup is the same for every framework: you connect to the grid and pass your capabilities. This guide covers that shared flow once, then gives you a per-framework quickstart in the tabs below.
 
 ## Prerequisites
