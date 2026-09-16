@@ -165,27 +165,23 @@ https://{username}:{accessKey}@hub.lambdatest.com/wd/hub
 ## Choose How to Start
 ---
 
-<div style={{display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '16px'}}>
-  <DocCard
-    heading="Run Your First Test"
-    link="/support/docs/testmu-running-your-first-selenium-test/"
-    description="New to cloud testing? Clone a sample project, set credentials, and run your first Selenium script on the grid."
-  />
-  <DocCard
-    heading="Migrate Your Test Suite"
-    link="/support/docs/migrate-selenium-test-suite/"
-    description="Already have Selenium tests? Change the hub URL, add credentials, and run them on the cloud."
-  />
-  <DocCard
-    heading="Explore the Dashboard"
-    link="/support/docs/inside-testmu-platform/"
-    description="See where test results live - video playback, command logs, screenshots, and analytics."
-  />
-  <DocCard
-    heading="Configure Capabilities"
-    link="/support/docs/selenium-automation-capabilities/"
-    description="Control which browser, version, OS, and advanced features your tests use."
-  />
+<div style={{display:'flex',flexWrap:'wrap',gap:'16px',margin:'20px 0'}}>
+  <a href="/support/docs/testmu-running-your-first-selenium-test/" style={{flex:'1 1 calc(50% - 8px)',minWidth:'240px',border:'1px solid #e2e8f0',borderRadius:'12px',padding:'20px 22px',textDecoration:'none',color:'inherit',display:'block'}}>
+    <div style={{fontWeight:700,marginBottom:'6px',color:'#F0F6FCCC'}}>Run Your First Test</div>
+    <div style={{fontSize:'14px',color:'#FFFFFF',lineHeight:1.5}}>New to cloud testing? Clone a sample project, set credentials, and run your first Selenium script on the grid.</div>
+  </a>
+  <a href="/support/docs/migrate-selenium-test-suite/" style={{flex:'1 1 calc(50% - 8px)',minWidth:'240px',border:'1px solid #e2e8f0',borderRadius:'12px',padding:'20px 22px',textDecoration:'none',color:'inherit',display:'block'}}>
+    <div style={{fontWeight:700,marginBottom:'6px',color:'#F0F6FCCC'}}>Migrate Your Test Suite</div>
+    <div style={{fontSize:'14px',color:'#FFFFFF',lineHeight:1.5}}>Already have Selenium tests? Change the hub URL, add credentials, and run them on the cloud.</div>
+  </a>
+  <a href="/support/docs/inside-testmu-platform/" style={{flex:'1 1 calc(50% - 8px)',minWidth:'240px',border:'1px solid #e2e8f0',borderRadius:'12px',padding:'20px 22px',textDecoration:'none',color:'inherit',display:'block'}}>
+    <div style={{fontWeight:700,marginBottom:'6px',color:'#F0F6FCCC'}}>Explore the Dashboard</div>
+    <div style={{fontSize:'14px',color:'#FFFFFF',lineHeight:1.5}}>See where test results live - video playback, command logs, screenshots, and analytics.</div>
+  </a>
+  <a href="/support/docs/selenium-automation-capabilities/" style={{flex:'1 1 calc(50% - 8px)',minWidth:'240px',border:'1px solid #e2e8f0',borderRadius:'12px',padding:'20px 22px',textDecoration:'none',color:'inherit',display:'block'}}>
+    <div style={{fontWeight:700,marginBottom:'6px',color:'#F0F6FCCC'}}>Configure Capabilities</div>
+    <div style={{fontSize:'14px',color:'#FFFFFF',lineHeight:1.5}}>Control which browser, version, OS, and advanced features your tests use.</div>
+  </a>
 </div>
 
 
