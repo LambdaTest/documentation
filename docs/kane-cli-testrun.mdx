@@ -58,9 +58,17 @@ error: plan invalid — 2 offending test(s):
   tests/other_project_test.md: project_mismatch
 ```
 
-<Warning>
-**Mobile is not supported in a batch run.** A `_test.md` with a mobile [`target:`](/docs/kane-cli-testmd/#mobile-target) (`emulator` / `simulator`) is rejected up front, before the suite runs. Run mobile tests one at a time with `kane-cli testmd run <path>`.
-</Warning>
+## Mobile members
+
+A `_test.md` with a mobile [`target:`](/docs/kane-cli-testmd/#mobile-target) (`emulator` / `simulator`) is a normal member *(0.8.7)*:
+
+- **Locally**, the suite drives the emulators and simulators on this machine, so the host must be macOS Apple Silicon with the [mobile setup](/docs/kane-cli-mobile/#setup) done. Pick the device with `--device-name` / `--os-version` as `kane-cli devices list --target emulator|simulator` prints it, or set `device_name:` / `os_version:` in the file.
+- **On the cloud grid** (`--remote`), the suite runs on a virtual device on a HyperExecute macOS host, so it works **from any machine**: Linux, Windows, or a Mac with no Xcode or Android Studio. Pick the device from `kane-cli devices list --target emulator|simulator --remote`. One grid job runs one platform (emulator members on one Android version, simulator members on one HyperExecute pool), and a member's local build is uploaded from your machine before dispatch and handed to the grid as an `APP…` id. Everything else is in [Remote runs on the cloud grid](https://github.com/LambdaTest/kane-cli/blob/main/docs/user-guide/remote-execution.md).
+
+```bash
+kane-cli testrun run tests/app/ --device-name "Pixel 7 API 35" --os-version 15            # local emulators
+kane-cli testrun run tests/app/ --remote --device-name "Pixel 7" --os-version 14           # the grid
+```
 
 ## Running
 
@@ -76,6 +84,9 @@ error: plan invalid — 2 offending test(s):
 | `--retry-count <n>` | Max replay restart attempts before a full re-author | `3` |
 | `--bug-detection <mode>` | `off` \| `stop` \| `continue` — see [Configuration](/docs/kane-cli-configuration/#bug-detection) | config value |
 | `--headless` | Run Chrome without a visible window | off |
+| `--remote [backend]` | Dispatch the suite to the cloud grid instead of local Chrome or local devices (default backend: `hyper`). Needs `kane-cli plugin install remote-execution`. See [Remote runs on the cloud grid](https://github.com/LambdaTest/kane-cli/blob/main/docs/user-guide/remote-execution.md) | off |
+| `--device-name <name>` | Device for the suite's mobile members: as `kane-cli devices list --target <kind>` prints it locally, or a grid catalog device with `--remote` | member's `device_name:` |
+| `--os-version <version>` | OS version for the mobile members (`14`, `17.5`). Alone, it matches any device on that version | member's `os_version:` |
 | `--env <name>` | Environment (`prod` or `stage`) | active env |
 | `--username <user>` / `--access-key <key>` | Basic auth (skips OAuth) | — |
 
