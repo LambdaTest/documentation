@@ -19,6 +19,7 @@
 # One-time setup (Settings, Secrets and variables, Actions):
 #   Secret   DOCS_RETRIEVAL_DISPATCH_TOKEN  same value as INDEX_DISPATCH_HMAC on the service
 #   Variable DOCS_RETRIEVAL_URL             service base URL, no trailing slash
+#            (while it is unset, the docs-retrieval job logs a notice and succeeds)
 #   Secret   PRODUCT_CONTEXT_DISPATCH_TOKEN token with dispatch rights on product-context
 #
 # Manual run: Actions, "Notify indexes after prod deploy", Run workflow, with the
@@ -65,8 +66,14 @@ jobs:
           BASE_URL: ${{ vars.DOCS_RETRIEVAL_URL }}
         run: |
           set -euo pipefail
-          if [ -z "${HMAC_SECRET}" ] || [ -z "${BASE_URL}" ]; then
-            echo "::error::DOCS_RETRIEVAL_DISPATCH_TOKEN secret or DOCS_RETRIEVAL_URL variable is not set."
+          # Until docs-retrieval-service is deployed and DOCS_RETRIEVAL_URL is
+          # set, this job does nothing and succeeds, so prod deploys stay green.
+          if [ -z "${BASE_URL}" ]; then
+            echo "::notice::DOCS_RETRIEVAL_URL variable is not set, so the docs-retrieval index is not notified. Nothing to do."
+            exit 0
+          fi
+          if [ -z "${HMAC_SECRET}" ]; then
+            echo "::error::DOCS_RETRIEVAL_URL is set but the DOCS_RETRIEVAL_DISPATCH_TOKEN secret is not."
             exit 1
           fi
           if ! printf '%s' "${SHA}" | grep -Eq '^[0-9a-f]{40}$'; then
