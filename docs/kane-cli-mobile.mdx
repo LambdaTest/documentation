@@ -1,27 +1,14 @@
 ---
-title: "Mobile Testing with Kane CLI"
+title: "How to Test Mobile Apps with Kane CLI"
 sidebarTitle: "Mobile Testing"
 description: "Run Kane CLI tests on mobile virtual devices, locally on macOS Apple Silicon or on the cloud grid from any machine. Set up the iOS Simulator or the Android Emulator and drive a native app."
 keywords: ['kane cli mobile', 'kane cli emulator', 'kane cli simulator', 'kane cli ios simulator', 'kane cli android emulator', 'mobile app testing', 'android emulator testing', 'ios simulator testing', 'ios simulator setup', 'android emulator setup', 'xcode simctl', 'arm64-v8a system image', 'avdmanager', 'kane cli doctor', 'kane cli devices list', 'kane cli testrun remote', 'hyperexecute mobile', 'kaneai', 'testmu ai']
 "og:description": "Run Kane CLI tests on mobile virtual devices, locally on macOS Apple Silicon or on the cloud grid from any machine. Set up the iOS Simulator or the Android Emulator and drive a native app."
 ---
 
-import { BrandName } from "/snippets/BrandName.mdx";
-import AgentSkillCallout from "/snippets/AgentSkillCallout.mdx";
 import { KaneCliCta } from "/snippets/KaneCliCta.mdx";
 
----
-
-<AgentSkillCallout />
-
-Kane CLI can run tests against mobile virtual devices: Apple's **iOS Simulator** and Google's **Android Emulator**. You author and run mobile tests the same way you already do for the browser. The differences are that a mobile test runs against an **app you provide**, and that the target device is a simulator or emulator instead of a browser.
-
-There are two places that device can live:
-
-| | Where the device runs | Host requirement | How |
-|---|---|---|---|
-| **Local** | A simulator or emulator on your machine | **macOS on Apple Silicon (arm64)** with Xcode, Android Studio, or both | `kane-cli run … --target emulator\|simulator`, `kane-cli testmd run`, `kane-cli testrun run` |
-| **Cloud grid** | A virtual device on a **HyperExecute macOS host** | **Any machine**: Linux, Windows, or an Intel or Apple Silicon Mac, with no mobile tooling needed. Your <BrandName /> plan must include HyperExecute with macOS runners | `kane-cli testrun run … --remote`. See [Running a Mobile Suite on the Cloud Grid](#running-a-mobile-suite-on-the-cloud-grid) |
+Kane CLI can run tests against local mobile virtual devices: Apple's **iOS Simulator** and Google's **Android Emulator**. You author and run mobile tests the same way you already do for the browser. The differences are that a mobile test runs against an **app you provide**, and that the target device is a simulator or emulator on your machine.
 
 <Note>
 **Local mobile runs need macOS on Apple Silicon (arm64).** Intel Macs, Linux, and Windows cannot boot the simulator or emulator locally. On those hosts, run mobile suites on the cloud grid with `--remote`. The setup sections below are for the local path.

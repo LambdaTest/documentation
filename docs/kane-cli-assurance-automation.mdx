@@ -1,17 +1,12 @@
 ---
-title: "Assurance in CI and from Agents"
+title: "How to Run Kane CLI Assurance in CI"
 sidebarTitle: "Agents & CI"
-description: "The headless contract for kane-cli assurance — the --mode agent|ci|override ask policy, exit codes, the NDJSON event streams for extract, design, and reconcile, and the pause → answer → resume loop."
+description: "The headless contract for kane-cli assurance: the --mode ask policy, exit codes, NDJSON event streams, and the pause-answer-resume loop."
 keywords: ['kane cli assurance ci', 'headless test design', 'ndjson event stream', 'ai agent automation', 'kaneai', 'testmu ai']
-"og:description": "The headless contract for kane-cli assurance — the --mode ask policy, exit codes, NDJSON event streams, and the pause → answer → resume loop."
+"og:description": "The headless contract for kane-cli assurance: the --mode ask policy, exit codes, NDJSON event streams, and the pause-answer-resume loop."
 ---
 
-import AgentSkillCallout from "/snippets/AgentSkillCallout.mdx";
 import { KaneCliCta } from "/snippets/KaneCliCta.mdx";
-
----
-
-<AgentSkillCallout />
 
 The conversational assurance commands — `context extract`, `design tests`, and `maintain reconcile` — are interactive by default. This page is the contract for running them **headless**: from CI, from a script, or from an AI agent driving kane-cli.
 

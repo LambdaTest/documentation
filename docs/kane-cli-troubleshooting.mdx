@@ -1,18 +1,13 @@
 ---
-title: "Troubleshooting"
+title: "How to Troubleshoot Kane CLI Issues"
 sidebarTitle: "Troubleshooting"
-description: "Fix common Kane CLI issues: Chrome launch failures, authentication errors, run timeouts, variables not resolving, upload failures, and Agent Mode output problems."
+description: "Fix common Kane CLI issues: Chrome launch failures, auth errors, run timeouts, variables not resolving, upload failures, and Agent Mode output problems."
 keywords: ['kane cli troubleshooting', 'kaneai errors', 'testmu ai', 'chrome failed to launch', 'authentication failed']
-"og:description": "Fix common Kane CLI issues: Chrome launch failures, authentication errors, run timeouts, variables not resolving, upload failures, and Agent Mode output problems."
+"og:description": "Fix common Kane CLI issues: Chrome launch failures, auth errors, run timeouts, variables not resolving, upload failures, and Agent Mode output problems."
 ---
 
 import { BrandName } from "/snippets/BrandName.mdx";
-import AgentSkillCallout from "/snippets/AgentSkillCallout.mdx";
 import { KaneCliCta } from "/snippets/KaneCliCta.mdx";
-
----
-
-<AgentSkillCallout />
 
 ## Log Locations
 
@@ -134,6 +129,7 @@ Fixes, in order of preference:
 
    ```bash
    export NODE_USE_SYSTEM_CA=1
+
    kane-cli login
    ```
 
@@ -143,6 +139,7 @@ Fixes, in order of preference:
 
    ```bash
    export NODE_EXTRA_CA_CERTS=/path/to/corp-ca.pem
+
    kane-cli login
    ```
 
@@ -182,6 +179,7 @@ Fix — give the runner a CA bundle that includes the corporate root:
 
    ```bash
    export SSL_CERT_FILE=/path/to/corp-bundle.pem
+
    ```
 
    Add the `export` line to `~/.zshrc` / `~/.bashrc` to persist it.

@@ -1,17 +1,12 @@
 ---
-title: "Test.md"
+title: "How to Write Kane CLI Tests in Markdown"
 sidebarTitle: "Test.md"
-description: "Write browser tests as Markdown files that replay from cache after the first run: no LLM cost, faster execution. Commit tests to git, share recordings, and run in CI."
+description: "Write browser tests as Markdown that replay from cache after the first run: no LLM cost, faster runs. Commit to git, share recordings, and run in CI."
 keywords: ['kane cli testmd', 'kane cli replayable tests', 'kane cli test files', 'kaneai', 'testmu ai', 'markdown tests', 'browser test automation']
-"og:description": "Write browser tests as Markdown files that replay from cache after the first run: no LLM cost, faster execution. Commit tests to git, share recordings, and run in CI."
+"og:description": "Write browser tests as Markdown that replay from cache after the first run: no LLM cost, faster runs. Commit to git, share recordings, and run in CI."
 ---
 
-import AgentSkillCallout from "/snippets/AgentSkillCallout.mdx";
 import { KaneCliCta } from "/snippets/KaneCliCta.mdx";
-
----
-
-<AgentSkillCallout />
 
 `testmd` lets you write browser tests as Markdown files (`_test.md`) and commit them to your repo. On the first run, the AI agent authors each step and saves a recording. On every subsequent run, each step **replays from cache** with no LLM cost and much faster execution. Commit the test file and its recordings to git so teammates and CI can re-run the same tests without re-authoring.
 

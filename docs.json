@@ -1,7 +1,7 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "aspen",
-  "name": "LambdaTest",
+  "name": "TestMu AI",
   "colors": {
     "primary": "#c24e00",
     "light": "#c24e00",
@@ -174,14 +174,14 @@
     "global": {
       "anchors": [
         {
+          "anchor": "Back to TestMu AI Docs",
+          "href": "https://www.testmuai.com/support/docs/",
+          "icon": "arrow-left"
+        },
+        {
           "anchor": "Status",
           "href": "https://status.lambdatest.io/",
           "icon": "signal"
-        },
-        {
-          "anchor": "Community",
-          "href": "https://community.testmuai.com/",
-          "icon": "users"
         },
         {
           "anchor": "Blog",
@@ -199,19 +199,19 @@
   "navbar": {
     "links": [
       {
-        "label": "Github",
-        "href": "https://github.com/LambdaTest",
+        "label": "GitHub",
+        "href": "https://github.com/LambdaTest/",
         "icon": "github"
       },
       {
         "label": "Login",
-        "href": "https://accounts.lambdatest.com/login?_gl=1*il1bzu*_gcl_au*MTAzNzUyNzAwMC4xNzYxODg2NjEy"
+        "href": "https://www.testmuai.com/login/"
       }
     ],
     "primary": {
       "type": "button",
       "label": "Get Started Free",
-      "href": "https://accounts.lambdatest.com/register?_gl=1*il1bzu*_gcl_au*MTAzNzUyNzAwMC4xNzYxODg2NjEy"
+      "href": "https://www.testmuai.com/register/"
     }
   },
   "contextual": {
@@ -242,8 +242,8 @@
   "footer": {
     "socials": {
       "facebook": "https://www.facebook.com/testmuai/",
-      "x": "https://x.com/testmuai",
-      "github": "https://github.com/LambdaTest/",
+      "x": "https://x.com/kane_cli",
+      "github": "https://github.com/LambdaTest/kane-cli/",
       "linkedin": "https://www.linkedin.com/company/testmu-ai",
       "youtube": "https://www.youtube.com/@TestMuAI"
     }

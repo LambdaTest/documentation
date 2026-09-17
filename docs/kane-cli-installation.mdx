@@ -1,17 +1,12 @@
 ---
-title: "Installing Kane CLI"
+title: "How to Install Kane CLI"
 sidebarTitle: "Installation"
 description: "Install Kane CLI using npm or Homebrew. Supports macOS (Apple Silicon and Intel), Linux (x64 and arm64), and Windows (x64)."
 keywords: ['kane cli', 'install kane cli', 'kaneai', 'testmu ai', 'npm install']
 "og:description": "Install Kane CLI using npm or Homebrew. Supports macOS (Apple Silicon and Intel), Linux (x64 and arm64), and Windows (x64)."
 ---
 
-import AgentSkillCallout from "/snippets/AgentSkillCallout.mdx";
 import { KaneCliCta } from "/snippets/KaneCliCta.mdx";
-
----
-
-<AgentSkillCallout />
 
 Kane CLI is published to the public npm registry as `@testmuai/kane-cli` and to a Homebrew tap. Install it with `npm` or `brew` to get the `kane-cli` command on your `PATH`.
 
@@ -126,6 +121,7 @@ npm config get prefix
 # The kane-cli binary lives in <prefix>/bin on macOS/Linux, and <prefix> on Windows
 # Add it to your PATH in ~/.zshrc or ~/.bashrc
 export PATH="$(npm config get prefix)/bin:$PATH"
+
 ```
 
 **Installation fails on Node 16**
