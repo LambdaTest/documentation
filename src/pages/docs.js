@@ -125,9 +125,15 @@ export default function Home() {
               <a href="/support/docs/hyperexecute-yaml-parameters/"><p className="p_home_inners">HyperExecute YAML</p></a>
               <a href="/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/"><p className="p_home_inners">HyperExecute CLI</p></a>
               <a href="/support/docs/hyperexecute-mcp-server/"><p className="p_home_inners">HyperExecute MCP</p></a>
-              <a href="/support/docs/hyperexecute-run-jmeter-tests/"><p className="p_home_inners">JMeter Performance Testing</p></a>
-              <a href="/support/docs/hyperexecute-gattling-testing/"><p className="p_home_inners">Gatling Performance Testing</p></a>
               <a href="/support/docs/hyperexecute-private-cloud-setup/"><p className="p_home_inners">Private Cloud</p></a>
+            </div>
+          </div>
+          <div className="home_inners_box">
+            <h2 className="homeMain_h2"><Icon light="analytics-light-icon.svg" dark="analytics-dark-icon.svg" alt="" />Performance Testing &nbsp;<NewTag value="NEW" /></h2>
+            <div className="home_inners">
+              <a href="/support/docs/hyperexecute-performance-testing/"><p className="p_home_inners">Getting Started</p></a>
+              <a href="/support/docs/hyperexecute-run-jmeter-tests/"><p className="p_home_inners">JMeter Testing</p></a>
+              <a href="/support/docs/hyperexecute-gattling-testing/"><p className="p_home_inners">Gatling Testing</p></a>
             </div>
           </div>
           <div className="home_inners_box">
@@ -206,16 +212,20 @@ export default function Home() {
             <div className="home_inners">
               <a href="/support/docs/getting-started-with-agent-testing-platform/"><p className="p_home_inners">Overview</p></a>
               <a href="/support/docs/chat-agent/"><p className="p_home_inners">Supported Agent Types</p></a>
-               <a href="/support/docs/testing-your-first-ai-agent/"><p className="p_home_inners">Test Your First Agent</p></a>
-                <a href="/support/docs/agent-testing-cli/"><p className="p_home_inners">Test With Agent Testing CLI</p></a>
-                     <a href="/support/docs/chat-agent-api-integration/"><p className="p_home_inners">Integrate a Chat Agent API</p></a>
-
-                      <a href="/support/docs/agent-assurance-overview/"><p className="p_home_inners">Agent Assurance &nbsp;<NewTag value="NEW" /></p></a>
+              <a href="/support/docs/testing-your-first-ai-agent/"><p className="p_home_inners">Test Your First Agent</p></a>
+              <a href="/support/docs/agent-testing-cli/"><p className="p_home_inners">Test With Agent Testing CLI</p></a>
+              <a href="/support/docs/chat-agent-api-integration/"><p className="p_home_inners">Integrate a Chat Agent API</p></a>
+              <a href="/support/docs/agent-testing-platform-faqs/"><p className="p_home_inners">FAQs</p></a>
+            </div>
+          </div>
+          <div className="home_inners_box">
+            <h2 className="homeMain_h2"><Icon light="Realtime-light-icon.svg" dark="Realtime-dark-icon.svg" alt="" />Agent Assurance &nbsp;<NewTag value="NEW" /></h2>
+            <div className="home_inners">
+              <a href="/support/docs/agent-assurance-overview/"><p className="p_home_inners">Overview</p></a>
               <a href="/support/docs/agent-assurance-quickstart/"><p className="p_home_inners">Rook Quickstart</p></a>
               <a href="/support/docs/rook-architecture/"><p className="p_home_inners">Rook Architecture</p></a>
               <a href="/support/docs/rook-profiles-and-hooks/"><p className="p_home_inners">Profiles, Phases & Hooks</p></a>
               <a href="/support/docs/agent-assurance-command-reference/"><p className="p_home_inners">Rook Command Reference</p></a>
-              <a href="/support/docs/agent-testing-platform-faqs/"><p className="p_home_inners">FAQs</p></a>
             </div>
           </div>
           <div className="home_inners_box">
