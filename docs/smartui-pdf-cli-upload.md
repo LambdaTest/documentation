@@ -375,6 +375,10 @@ smartui upload-pdf <directory_or_filename> [options]
 - `--buildName <string>`: Assign a custom name to the build.
 - `--markBaseline`: Mark this build as the baseline.
 - `--pdfNames <string>`: Comma-separated list of PDF file names to upload.
+- `--config <filepath>`: Path to a config file. Use it for [per-PDF thresholds](#per-pdf-approval-and-rejection-thresholds) and [project tags](/support/docs/smartui-project-tags/).
+- `--approvalThreshold <number>`: Mismatch percentage (0 to 100) at or below which every PDF in this upload is auto-approved.
+- `--rejectionThreshold <number>`: Mismatch percentage (0 to 100) at or above which every PDF in this upload is auto-rejected.
+- `--sync`: Wait until the uploaded PDFs are compared and print the result for every page.
 
 ### Example Usage:
 
@@ -409,6 +413,96 @@ Upload with custom project token:
 ```bash
 smartui upload-pdf ./pdfs/ --projectToken "123456#1234abcd-****-****-****-************" --buildName "Custom-Build"
 ```
+
+## Per-PDF Approval and Rejection Thresholds <NewTag value='New' color='#000' bgColor='#ffec02' /> {#per-pdf-approval-and-rejection-thresholds}
+
+By default every PDF in a project uses the **Accept** and **Reject** percentages from the project's comparison settings. When some documents need a different tolerance from the rest, set the thresholds at upload time instead of splitting them into separate projects.
+
+- **Approval threshold**: a page whose mismatch is at or below this percentage is auto-approved.
+- **Rejection threshold**: a page whose mismatch is at or above this percentage is auto-rejected.
+- Anything in between is marked **Changes found** and waits for an approver.
+
+Per-PDF thresholds need SmartUI CLI **4.1.82** or later and work on both PDF projects and Omni projects.
+
+### Set one threshold for the whole upload
+
+Pass the flags to apply the same values to every PDF in the command:
+
+```bash
+smartui upload-pdf ./pdfs/strict --buildName "release-42" --approvalThreshold 0 --rejectionThreshold 1
+```
+
+To use several tolerances in one build, run one command per folder and pass the same `--buildName` each time. All uploads land in a single build, so the build status still covers every document.
+
+```bash
+smartui upload-pdf ./pdfs/strict  --buildName "release-42" --approvalThreshold 0  --rejectionThreshold 1
+smartui upload-pdf ./pdfs/review  --buildName "release-42" --approvalThreshold 1  --rejectionThreshold 20
+smartui upload-pdf ./pdfs/lenient --buildName "release-42" --approvalThreshold 10 --rejectionThreshold 30
+```
+
+### Set thresholds for individual PDFs
+
+To mix tolerances inside one folder, list the PDFs in a `pdf.thresholds` block in a config file. Each key is a PDF file name, and each entry takes `approval`, `rejection` or both.
+
+```json title="pdf-thresholds.json"
+{
+  "pdf": {
+    "approvalThreshold": 1,
+    "rejectionThreshold": 20,
+    "thresholds": {
+      "ifu-dosage-EN.pdf":   { "approval": 0,  "rejection": 1 },
+      "brochure-hcp-EN.pdf": { "approval": 10, "rejection": 30 },
+      "label-carton-EN.pdf": { "rejection": 5 }
+    }
+  }
+}
+```
+
+```bash
+smartui upload-pdf ./pdfs --config pdf-thresholds.json --buildName "release-42" --sync
+```
+
+The `pdf` block accepts only `approvalThreshold`, `rejectionThreshold` and `thresholds`. The top-level `approvalThreshold` and `rejectionThreshold` used for web screenshots are **not** applied to PDFs, so put PDF values inside the `pdf` block.
+
+### Which value applies
+
+For each PDF, SmartUI resolves the approval and rejection values separately, highest priority first:
+
+| Priority | Source |
+|---|---|
+| 1 | The PDF's entry in `pdf.thresholds` |
+| 2 | `--approvalThreshold` / `--rejectionThreshold` on the command |
+| 3 | `pdf.approvalThreshold` / `pdf.rejectionThreshold` in the config file |
+| 4 | The project's comparison settings |
+
+An entry that sets only one side takes the other side from the next level down. In the example above, `label-carton-EN.pdf` is rejected at 5% and approved at 1% from the `pdf` block, and any PDF not listed uses 1% and 20%.
+
+A page with 0% mismatch is always approved. A rejection threshold of `0` means the page is never auto-rejected, so `"approval": 5, "rejection": 0` approves up to 5% and sends everything above that to review.
+
+Values can have decimals and the boundaries are inclusive. For a page with a 4.2049% mismatch, an approval threshold of `4.21` approves it, `4.2` does not, and a rejection threshold of `4.2` rejects it.
+
+### Validation
+
+The CLI checks thresholds before anything is uploaded. When a check fails, it prints the reason, uploads nothing and creates no build.
+
+| Problem | Message |
+|---|---|
+| A key in `pdf.thresholds` matches no uploaded file | `pdf.thresholds in the config file names PDFs that are not in this upload: typo-lable.pdf. Keys must match the uploaded file names (or --pdfNames) exactly.` |
+| Approval is higher than a non-zero rejection | `thresholds[label-carton-EN.pdf]: approvalThreshold (6) cannot exceed rejectionThreshold (3)` |
+| A config file value outside 0 to 100, or not a number | `Invalid config; pdf.thresholds.<name>.approval must be a number between 0 and 100` |
+| A flag value that is not a number | `approvalThreshold must be a number between 0 and 100, got "abc"` |
+
+Keys must match the file name exactly, including `.pdf`. If you rename documents with `--pdfNames`, use those names as the keys.
+
+:::caution Check the output, not only the exit code
+A config file that fails schema validation (the `Invalid config; ...` messages) stops the CLI with exit code 1. Every other refusal in the table above ends with `PDF upload failed` and exit code **0**. In CI, also fail the step when the output contains `PDF upload failed`.
+:::
+
+### Things to know
+
+- **Thresholds are fixed at upload.** Each PDF keeps the values it was uploaded with. They cannot be edited later from the dashboard, and changing the project's Accept and Reject settings does not change them. To apply new values, upload again.
+- **The viewer does not show the applied threshold.** The **Threshold** value in the comparison viewer is the pixel comparison setting, not the approval or rejection percentage that decided the result.
+- **Use `--sync` for results on PDF projects.** `--sync` returns the status and mismatch for every page. On PDF (non-Omni) projects, `--fetch-results` currently reports `Total PDFs: 0` even when pages were rejected, so do not use it to gate a pipeline there.
 
 ## Advanced CLI Options
 
