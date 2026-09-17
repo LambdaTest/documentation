@@ -1,0 +1,44 @@
+# Fails a pull request when the plain-Markdown copies written by
+# scripts/generate-static-md.js (served as <slug>.md and linked from llms.txt)
+# lose or change code: every fenced code block must keep its lines and their
+# relative indentation. Needs no npm install; both scripts use Node built-ins only.
+name: Static Markdown fence fidelity
+
+on:
+  pull_request:
+    branches: [testmuCom, stage]
+    paths:
+      - 'docs/**'
+      - 'scripts/generate-static-md.js'
+      - 'scripts/check-static-md-fences.js'
+      - '.github/workflows/static-md-fence-fidelity.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: static-md-fence-fidelity-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            docs
+            scripts
+            package.json
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Generate static Markdown
+        run: node scripts/generate-static-md.js
+
+      - name: Check fenced code survives unchanged
+        run: npm run check-static-md-fences
