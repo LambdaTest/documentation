@@ -1823,6 +1823,7 @@ module.exports = {
           "create-modules",
           "modules-in-manual-testcases",
           "copy-and-move-support-for-test-cases",
+          "share-test-cases-across-projects",
           "test-case-deduplication",
           "test-case-archive",
           "update-fields",
