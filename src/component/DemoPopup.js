@@ -19,6 +19,17 @@ const DemoPopup = ({ show, open_modal, preselectedProductType, sub_source }) => 
             document.body.style.overflow = "unset";
         }
     }
+
+    // `logAmplitude` is only defined by the main website's header, not on the docs
+    // site, so calls to it never fire. `sendAmplitudeEvents` is defined in custom.js.
+    const handleDemoBtnClick = () => {
+        window.sendAmplitudeEvents?.("click CTA - web pages", {
+            "cta_text": "Book a Demo",
+            "cta_type": "Support_Docs_Bottom-KaneCLI",
+            "page_category": "Documentation Footer",
+        });
+        toggleModal();
+    }
     useEffect(() => {
         setShowModal(modalOpen);
     }, [modalOpen])
@@ -255,7 +266,7 @@ const DemoPopup = ({ show, open_modal, preselectedProductType, sub_source }) => 
 
     return (<>
 
-        <button className='demoBtn' onClick={toggleModal}>Book a Demo</button>
+        <button className='demoBtn' onClick={handleDemoBtnClick}>Book a Demo</button>
 
         <div id="m_class" className={`demo_popup_overlay demo_popup_header_demo ${showModal ? 'shown' : ''}`}>
             <div className='content text-left'>
