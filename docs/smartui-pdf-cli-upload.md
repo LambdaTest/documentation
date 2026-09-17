@@ -460,6 +460,8 @@ For each PDF, SmartUI resolves the approval and rejection values separately, hig
 
 An entry that sets only one side takes the other side from the next level down. In the example above, `label-carton-EN.pdf` is rejected at 5% and approved at 1% from the `pdf` block, and any PDF not listed uses 1% and 20%.
 
+A page with 0% mismatch is always approved. A rejection threshold of `0` means the page is never auto-rejected, so `"approval": 5, "rejection": 0` approves up to 5% and sends everything above that to review.
+
 Values can have decimals and the boundaries are inclusive. For a page with a 4.2049% mismatch, an approval threshold of `4.21` approves it, `4.2` does not, and a rejection threshold of `4.2` rejects it.
 
 ### Validation
@@ -469,7 +471,7 @@ The CLI checks thresholds before anything is uploaded. When a check fails, it pr
 | Problem | Message |
 |---|---|
 | A key in `pdf.thresholds` matches no uploaded file | `pdf.thresholds in the config file names PDFs that are not in this upload: typo-lable.pdf. Keys must match the uploaded file names (or --pdfNames) exactly.` |
-| Approval is higher than rejection | `thresholds[label-carton-EN.pdf]: approvalThreshold (6) cannot exceed rejectionThreshold (3)` |
+| Approval is higher than a non-zero rejection | `thresholds[label-carton-EN.pdf]: approvalThreshold (6) cannot exceed rejectionThreshold (3)` |
 | A config file value outside 0 to 100, or not a number | `Invalid config; pdf.thresholds.<name>.approval must be a number between 0 and 100` |
 | A flag value that is not a number | `approvalThreshold must be a number between 0 and 100, got "abc"` |
 

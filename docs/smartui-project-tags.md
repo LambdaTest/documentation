@@ -190,9 +190,12 @@ A tag list is applied in full or not at all. If any rule below is broken, no tag
 | Rule | Limit |
 |---|---|
 | Tags per run | At most 50 |
-| Tag length | 1 to 50 characters |
+| Tags on a project | At most 50 in total, counting the tags the project already has |
+| Tag length | 1 to 50 characters, after leading and trailing spaces are removed |
 | Duplicates | Not allowed in the same list, compared without case (`Foo` and `foo` count as the same tag) |
 | Type | Array of strings |
+
+If a run would take the project past 50 tags, it fails with `project tag limit reached: project has 49 tags and 2 more were requested; the limit is 50`. Tags the project already has do not count as new. If the project is linked to Test Manager and Test Manager refuses the new tags, the run fails with `Test Manager rejected the tags` and no tags are added.
 
 What you see when a list is refused:
 
