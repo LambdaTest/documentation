@@ -227,7 +227,7 @@ Changing the Project Name will automatically update the `smartUI.project` capabi
 Altering Approvers will impact email notifications, which will be sent to the latest approver list for recent builds.
 :::
 
-- **Tags:** Add tags to your project for better organization and categorization.
+- **Tags:** Add tags to your project for better organization and categorization. You can also [set tags from your test code](/support/docs/smartui-project-tags/); tags added that way are never removed by later runs.
 
 </TabItem>
 

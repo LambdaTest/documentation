@@ -405,6 +405,14 @@ await smartuiSnapshot(driver, "Homepage with Ads", {
 
 ---
 
+## PDF Uploads
+
+PDFs uploaded with the SmartUI CLI have their own threshold options. You can set approval and rejection thresholds for a whole `smartui upload-pdf` command with `--approvalThreshold` and `--rejectionThreshold`, or for individual PDFs with a `pdf.thresholds` block in the config file. The value for a single PDF wins over the command, and the command wins over the project settings.
+
+See [Per-PDF Approval and Rejection Thresholds](/support/docs/smartui-pdf-cli-upload/#per-pdf-approval-and-rejection-thresholds) for the config format, precedence and validation rules.
+
+---
+
 ## Common Use Cases
 
 | Scenario | Recommended Configuration |

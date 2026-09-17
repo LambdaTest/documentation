@@ -174,6 +174,9 @@ This capability allows you to group your screenshots into specific builds. This 
 ### smartUI.baseline
 This boolean capability determines whether the current build should be set as the baseline for future comparisons. When set to `true`, the build will be automatically approved and set as the baseline build. This capability works in conjunction with the [Git branching strategy](/support/docs/smartui-cli-git-branching-strategy/), meaning it will also update the baseline branch accordingly.
 
+### smartUI.tags
+An array of strings that adds tags to the SmartUI project, for example `["regression", "checkout-flow"]`. Tags are only ever added, never removed, and each run may send up to 50 tags of up to 50 characters. See [Set Project Tags from Code](/support/docs/smartui-project-tags/) for the full rules.
+
 :::info Note
 If you need capabilities' support for SDKs other than Selenium Java and JavaScript, please contact support@testmuai.com. Our team will be happy to assist you with integrating SmartUI capabilities into your preferred testing framework.
 :::
