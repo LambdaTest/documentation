@@ -291,7 +291,7 @@ Rules:
 
 <VerifiedTag value="Verified" />
 
-```markdown
+````markdown
 ## OK
 @import ./helpers/login.md
 
@@ -302,9 +302,6 @@ optional: true
 @import ./helpers/skip-tour.md
 
 ## NOT OK — extra config
-
-<VerifiedTag value="Verified" />
-
 ```yaml
 timeout: 60
 ```
@@ -313,10 +310,7 @@ timeout: 60
 ## NOT OK — body mixes prose and import
 Click somewhere first.
 @import ./helpers/login.md
-
-<VerifiedTag value="Verified" />
-
-```
+````
 
 ## How paths resolve
 
@@ -329,9 +323,6 @@ tests/
   helpers/
     login.md               # contains: @import ./submit-button.md
     submit-button.md
-
-<VerifiedTag value="Verified" />
-
 ```
 
 When `checkout_test.md` imports `../../helpers/login.md`, the path is relative to `tests/e2e/`, so it resolves to `helpers/login.md`. When `login.md` imports `./submit-button.md`, the path is relative to `helpers/`, so it resolves to `helpers/submit-button.md`.
@@ -382,16 +373,13 @@ A root-level `@import` step can be marked optional in the same way a prose step 
 
 <VerifiedTag value="Verified" />
 
-```markdown
+````markdown
 ## Skip the tour if it shows up
 ```yaml
 optional: true
 ```
 @import ./helpers/dismiss-product-tour.md
-
-<VerifiedTag value="Verified" />
-
-```
+````
 
 If the helper fails, the run continues to the next step. The `Result.md` entry is suffixed with `(optional)`.
 

@@ -1,0 +1,118 @@
+# Runs after every successful production deploy of testmuCom and tells
+# docs-retrieval-service (TE-28101) which commit is now live: an HMAC-signed
+# POST /v1/index with the deployed commit sha. The service downloads that
+# commit, diffs it against what it has indexed and updates the search index in
+# the background.
+#
+# Why workflow_run and not push: a push fires before the site is built and
+# uploaded, so an indexer triggered by it would read pages that are not live
+# yet. workflow_run waits for the deploy to finish, and the `if` below skips
+# failed or cancelled deploys.
+#
+# workflow_run only fires for a workflow file on the default branch
+# (testmuCom). On any other branch this file is dormant.
+#
+# This is its own file on purpose: documentation-notify.yml (the product-context
+# notifier) is a separate workflow and is not changed by this one.
+#
+# One-time setup (Settings, Secrets and variables, Actions):
+#   Secret   DOCS_RETRIEVAL_DISPATCH_TOKEN  same value as INDEX_DISPATCH_HMAC on the service
+#   Variable DOCS_RETRIEVAL_URL             service base URL, no trailing slash
+#            (while it is unset, the job logs a notice and succeeds)
+#
+# Manual run: Actions, "Notify docs retrieval index after prod deploy", Run
+# workflow, with the 40-character sha of a commit that is already deployed.
+name: Notify docs retrieval index after prod deploy
+
+on:
+  workflow_run:
+    workflows: ['Deployment (Prod - testmucom New Bucket)']
+    types: [completed]
+    branches: [testmuCom]
+  workflow_dispatch:
+    inputs:
+      sha:
+        description: 'Deployed commit sha (40 hex characters)'
+        required: true
+
+permissions:
+  contents: read
+
+concurrency:
+  group: docs-retrieval-index-${{ github.event.workflow_run.head_sha || inputs.sha }}
+  cancel-in-progress: false
+
+jobs:
+  docs-retrieval-index:
+    name: 'docs-retrieval-service: index deployed commit'
+    if: github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Signed POST /v1/index
+        env:
+          SHA: ${{ github.event.workflow_run.head_sha || inputs.sha }}
+          HMAC_SECRET: ${{ secrets.DOCS_RETRIEVAL_DISPATCH_TOKEN }}
+          BASE_URL: ${{ vars.DOCS_RETRIEVAL_URL }}
+        run: |
+          set -euo pipefail
+          # Until docs-retrieval-service is deployed and DOCS_RETRIEVAL_URL is
+          # set, this job does nothing and succeeds, so prod deploys stay green.
+          if [ -z "${BASE_URL}" ]; then
+            echo "::notice::DOCS_RETRIEVAL_URL variable is not set, so the docs-retrieval index is not notified. Nothing to do."
+            exit 0
+          fi
+          if [ -z "${HMAC_SECRET}" ]; then
+            echo "::error::DOCS_RETRIEVAL_URL is set but the DOCS_RETRIEVAL_DISPATCH_TOKEN secret is not."
+            exit 1
+          fi
+          if ! printf '%s' "${SHA}" | grep -Eq '^[0-9a-f]{40}$'; then
+            echo "::error::sha must be 40 lowercase hex characters, got '${SHA}'."
+            exit 1
+          fi
+
+          attempt=0
+          max_attempts=6
+          delay=15
+          while :; do
+            attempt=$((attempt + 1))
+            # Sign the exact bytes that are sent. The timestamp is fresh on every
+            # attempt because the service rejects a ts more than 5 minutes old.
+            printf '{"sha":"%s","ts":%s,"trigger":"deploy"}' "${SHA}" "$(date +%s)" > body.json
+            sig=$(openssl dgst -sha256 -hmac "${HMAC_SECRET}" -r body.json | cut -d' ' -f1)
+            status=$(curl -sS -o response.json -w '%{http_code}' \
+              --max-time 30 \
+              -X POST "${BASE_URL}/v1/index" \
+              -H 'Content-Type: application/json' \
+              -H "X-Signature-256: sha256=${sig}" \
+              --data-binary @body.json || echo 000)
+            echo "attempt ${attempt}: HTTP ${status}"
+            cat response.json 2>/dev/null || true
+            echo
+
+            case "${status}" in
+              200|202)
+                echo "Index run accepted for ${SHA}."
+                exit 0
+                ;;
+              400|401|403|404|413)
+                echo "::error::docs-retrieval-service refused the request (HTTP ${status}); retrying will not help."
+                exit 1
+                ;;
+              409|429|5*|000)
+                # 409: another index run is in progress. The nightly reconcile
+                # also catches up, but retry so this deploy is indexed promptly.
+                if [ "${attempt}" -ge "${max_attempts}" ]; then
+                  echo "::error::Giving up after ${attempt} attempts (last HTTP ${status})."
+                  exit 1
+                fi
+                echo "Retrying in ${delay}s."
+                sleep "${delay}"
+                delay=$((delay * 2))
+                ;;
+              *)
+                echo "::error::Unexpected HTTP ${status}."
+                exit 1
+                ;;
+            esac
+          done
