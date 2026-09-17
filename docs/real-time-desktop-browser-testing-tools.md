@@ -151,6 +151,8 @@ The [Upload and Download Files](/support/docs/real-time-upload-and-download-file
 ## Network Throttling
 <BrandName />'s network throttling feature empowers you to simulate real-world network conditions (Offline, Slow 3G, Fast 3G, 4G, 5G and Custom) during testing. This allows you to assess your application performance under varying internet speeds, ensuring a seamless user experience across different network environments. You can leverage predefined network profiles or craft custom settings for comprehensive testing.
 
+<img loading="lazy" src={require('../assets/images/real-time-testing/web-browser/network-throttling.png').default} alt="Image" className="doc_img"/>
+
 ## Chrome Extension
 Enhance your testing capabilities with <BrandName /> by leveraging various Chrome extensions that provide additional functionalities and streamline your testing process. These extensions can help automate repetitive tasks, assist in accessibility checks, and integrate AI tools into your workflow.
 
