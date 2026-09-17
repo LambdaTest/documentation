@@ -397,7 +397,7 @@ Upload with custom project token:
 smartui upload-pdf ./pdfs/ --projectToken "123456#1234abcd-****-****-****-************" --buildName "Custom-Build"
 ```
 
-## Per-PDF Approval and Rejection Thresholds <NewTag value='New' color='#000' bgColor='#ffec02' />
+## Per-PDF Approval and Rejection Thresholds <NewTag value='New' color='#000' bgColor='#ffec02' /> {#per-pdf-approval-and-rejection-thresholds}
 
 By default every PDF in a project uses the **Accept** and **Reject** percentages from the project's comparison settings. When some documents need a different tolerance from the rest, set the thresholds at upload time instead of splitting them into separate projects.
 
