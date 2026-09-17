@@ -240,7 +240,7 @@
       <div class="lt-bottom-cta">
         <div class="lt-cta-content">
           <h2>Test across 3000+ combinations of browsers, real devices & OS.</h2>
-          <a href="https://www.lambdatest.com/demo" target="_blank" class="lt-cta-btn">Book a Demo</a>
+          <a href="https://www.testmuai.com/demo/" target="_blank" class="lt-cta-btn">Book a Demo</a>
         </div>
         <div class="lt-cta-image">
           <img src="https://assets.testmu.ai/resources/uploads/2024/05/DocBottomImg.png" alt="LambdaTest Platform" loading="lazy" />
@@ -405,7 +405,7 @@
     container.innerHTML = `
       <ul class="list-none">
         <li class="list-none">
-          <a href="https://www.lambdatest.com/demo" target="_blank" rel="noreferrer" class="link nav-anchor pl-4 group flex items-center lg:text-sm lg:leading-6 mb-3 gap-3.5 text-gray-700 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300">
+          <a href="https://www.testmuai.com/demo/" target="_blank" rel="noreferrer" class="link nav-anchor pl-4 group flex items-center lg:text-sm lg:leading-6 mb-3 gap-3.5 text-gray-700 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300">
             <div class="h-4 w-4 secondary-opacity group-hover:fill-primary-dark group-hover:bg-gray-900 dark:group-hover:bg-gray-300 bg-gray-400 dark:bg-gray-500" style="-webkit-mask-image:url(https://d3gk2c5xim1je2.cloudfront.net/v7.1.0/solid/calendar-check.svg);-webkit-mask-repeat:no-repeat;-webkit-mask-position:center;mask-image:url(https://d3gk2c5xim1je2.cloudfront.net/v7.1.0/solid/calendar-check.svg);mask-repeat:no-repeat;mask-position:center"></div>
             <span>Book a Demo</span>
           </a>

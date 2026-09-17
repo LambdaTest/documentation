@@ -1,17 +1,12 @@
 ---
-title: "Maintaining the Suite as Sources Change"
+title: "How to Maintain a Kane CLI Test Suite"
 sidebarTitle: "Maintaining the Suite"
-description: "Keep tests aligned with changing requirements — kane-cli maintain reconcile triages one changed source into an ADD/MODIFY/ARCHIVE plan you approve card by card, and maintain evolve re-designs stale use-cases."
+description: "Keep tests aligned with changing requirements: kane-cli maintain reconcile triages each changed source into an ADD/MODIFY/ARCHIVE plan you approve."
 keywords: ['kane cli maintain', 'maintain reconcile', 'test suite maintenance', 'requirements change', 'stale tests', 'kaneai', 'testmu ai']
-"og:description": "Keep tests aligned with changing requirements — kane-cli maintain reconcile triages one changed source into an ADD/MODIFY/ARCHIVE plan you approve card by card."
+"og:description": "Keep tests aligned with changing requirements: kane-cli maintain reconcile triages each changed source into an ADD/MODIFY/ARCHIVE plan you approve."
 ---
 
-import AgentSkillCallout from "/snippets/AgentSkillCallout.mdx";
 import { KaneCliCta } from "/snippets/KaneCliCta.mdx";
-
----
-
-<AgentSkillCallout />
 
 Products change; tests shouldn't rot. `kane-cli maintain` closes the [assurance loop](/docs/kane-cli-assurance/): when a requirement document changes, `maintain reconcile` turns that one changed source into an honest, row-by-row update plan for your suite, and `maintain evolve` re-designs a use-case whose design went stale. Everything works over the same `.context/` store — maintain adds no new knowledge kinds, it moves the existing ones.
 

@@ -1,17 +1,12 @@
 ---
-title: "Mobile Testing with Kane CLI"
+title: "How to Test Mobile Apps with Kane CLI"
 sidebarTitle: "Mobile Testing"
 description: "Run Kane CLI tests against local mobile virtual devices. Set up the iOS Simulator or the Android Emulator, then drive a native app on macOS Apple Silicon."
 keywords: ['kane cli mobile', 'kane cli emulator', 'kane cli simulator', 'kane cli ios simulator', 'kane cli android emulator', 'mobile app testing', 'android emulator testing', 'ios simulator testing', 'ios simulator setup', 'android emulator setup', 'xcode simctl', 'arm64-v8a system image', 'avdmanager', 'kane cli doctor', 'kaneai', 'testmu ai']
 "og:description": "Run Kane CLI tests against local mobile virtual devices. Set up the iOS Simulator or the Android Emulator, then drive a native app on macOS Apple Silicon."
 ---
 
-import AgentSkillCallout from "/snippets/AgentSkillCallout.mdx";
 import { KaneCliCta } from "/snippets/KaneCliCta.mdx";
-
----
-
-<AgentSkillCallout />
 
 Kane CLI can run tests against local mobile virtual devices: Apple's **iOS Simulator** and Google's **Android Emulator**. You author and run mobile tests the same way you already do for the browser. The differences are that a mobile test runs against an **app you provide**, and that the target device is a simulator or emulator on your machine.
 
@@ -127,6 +122,7 @@ Kane CLI uses its own managed `adb`, so you do not need `platform-tools` or `adb
 
 ```bash
 export ANDROID_HOME="/path/to/your/Android/sdk"
+
 ```
 
 If your SDK is at the default path, skip this step.
