@@ -353,12 +353,20 @@ Two other triggers: npm configured to skip optional dependencies (`npm config ge
 
 ## Mobile Issues
 
-Mobile testing is supported on **macOS Apple Silicon (arm64) only**. Start every mobile problem with `doctor`, which prints one line per required check, each with a fix:
+Local mobile runs are supported on **macOS Apple Silicon (arm64) only**. On other hosts, run mobile suites on the cloud grid with `kane-cli testrun run --remote`. See [Running a Mobile Suite on the Cloud Grid](/docs/kane-cli-mobile/#running-a-mobile-suite-on-the-cloud-grid).
+
+Start every local mobile problem with `doctor`, which prints one line per required check, each with a fix. `doctor` checks one target at a time, so pass `--target`:
 
 ```bash
-kane-cli doctor              # required checks, each with a fix if it fails
-kane-cli doctor --install    # install the test tooling Kane CLI manages
-kane-cli doctor --targets    # list the emulators and simulators available
+# iOS Simulator
+kane-cli doctor --target simulator              # required checks, each with a fix if it fails
+kane-cli doctor --target simulator --install    # install the test tooling Kane CLI manages
+kane-cli devices list --target simulator        # the simulators Kane CLI can run against
+
+# Android Emulator
+kane-cli doctor --target emulator
+kane-cli doctor --target emulator --install
+kane-cli devices list --target emulator
 ```
 
 The common setup failures for each platform, and their fixes, are listed on the mobile testing page:

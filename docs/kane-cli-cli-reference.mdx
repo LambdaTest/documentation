@@ -57,24 +57,45 @@ kane-cli run "<objective>" [options]
 | Flag | Description | Default |
 |------|-------------|---------|
 | `--target <name>` | Which target to run against: `desktop`, `emulator`, or `simulator` | Saved session target, otherwise `desktop` |
-| `--device <id>` | Pick a device by name, serial, `ip:port`, or udid | TTY opens a one-time picker and saves the choice; non-interactive runs require it |
+| `--device-name <name>` | Pick a device as `kane-cli devices list --target emulator\|simulator` prints it. A name needs a version | Config value. When unset, a TTY run opens a one-time picker and saves the choice. Non-interactive runs require a device |
+| `--os-version <version>` | The device's OS version, for example `14` or `17.5`. Alone, it matches any device on that version | Config value |
 | `--app <path\|APPid>` | The app under test. A build (emulator `.apk`, simulator `.zip`) or an uploaded app id | Config value. Required for every mobile run |
 
-On the `desktop` target, `--device` and `--app` are ignored. See [Mobile Testing](/docs/kane-cli-mobile/) for setup.
+On the `desktop` target, the device flags and `--app` are ignored. See [Mobile Testing](/docs/kane-cli-mobile/) for setup.
 
 ---
 
 ### `kane-cli doctor`
 
-Check the mobile tooling on this machine, and install the tooling Kane CLI manages.
+Check the mobile tooling this machine needs for one target, `emulator` or `simulator`, and install the tooling Kane CLI manages for it. `--target` is required.
 
 ```bash
-kane-cli doctor              # required checks, each with a fix if it fails
-kane-cli doctor --install    # install the test tooling Kane CLI manages
-kane-cli doctor --targets    # also list the emulators and simulators available
+kane-cli doctor --target emulator              # required checks, each with a fix if it fails
+kane-cli doctor --target simulator --install   # install the test tooling Kane CLI manages
 ```
 
-`doctor` prints one line per required check. Run `kane-cli login` before `--install`. See [Mobile Testing](/docs/kane-cli-mobile/).
+`doctor` prints one line per required check, each with a fix. Run `kane-cli login` before `--install`. See [Mobile Testing](/docs/kane-cli-mobile/).
+
+---
+
+### `kane-cli devices list`
+
+List the emulators or simulators Kane CLI can run against. `--target` is required. Address a device on a run with `--device-name` and `--os-version` as the list prints them.
+
+```bash
+kane-cli devices list --target emulator             # the emulators on this machine
+kane-cli devices list --target simulator --remote   # the simulators the cloud grid can provision
+```
+
+---
+
+### `kane-cli apps list`
+
+List the uploaded builds your account can use for a target. The **APP ID** column is what `--app` and `kane-cli config set-app` accept.
+
+```bash
+kane-cli apps list --target emulator
+```
 
 ---
 
@@ -152,7 +173,8 @@ kane-cli config chrome-profile [path]      # Set Chrome profile (interactive pic
 kane-cli config project [id]               # Set Test Manager project (interactive picker if no id)
 kane-cli config folder [id]                # Set Test Manager folder (interactive picker if no id)
 kane-cli config set-target <target>        # Set run target: desktop | emulator | simulator
-kane-cli config set-device <id>            # Set default mobile device
+kane-cli config set-device-name <name>     # Set default mobile device, as kane-cli devices list prints it
+kane-cli config set-os-version <version>   # Set the default mobile device's OS version
 kane-cli config set-app <path|APPid>       # Set default app under test for mobile runs
 ```
 
