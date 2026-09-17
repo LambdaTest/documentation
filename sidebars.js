@@ -4031,6 +4031,11 @@ module.exports = {
           },
           {
             type: "doc",
+            label: "Project Tags from Code",
+            id: "smartui-project-tags",
+          },
+          {
+            type: "doc",
             label: "Test Settings",
             id: "test-settings-options",
           },
