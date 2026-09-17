@@ -126,6 +126,10 @@ Use descriptive names to easily identify test runs later.
 - Add test case configurations individually or in bulk.
 > Note: Configurations allow you to define environment settings, such as browser and device combinations.
 
+:::tip
+Test cases shared into your project from other projects can be added to a test run too. Select them from **Shared Incoming**. See [Share Test Cases Across Projects](/support/docs/share-test-cases-across-projects/#add-shared-test-cases-to-test-runs).
+:::
+
 <img loading="lazy" src={require('../assets/images/test-run/4.png').default} alt="Real "  className="doc_img"/>
 
 ### Add Configurations

@@ -116,6 +116,10 @@ Creating projects within Test Manager is the foundational step in organizing and
 
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/create-project-two.webp').default} alt="Real "  className="doc_img" width="1366" height="629"/>
 
+:::tip
+Projects can share test cases with each other, so one project can act as a central repository for others. To control whether a project can share or receive test cases, see [Share Test Cases Across Projects](/support/docs/share-test-cases-across-projects/#turn-on-sharing-in-project-settings).
+:::
+
 
 
 <nav aria-label="breadcrumbs">
