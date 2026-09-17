@@ -13,8 +13,7 @@
   },
   "seo": {
     "metatags": {
-      "robots": "noindex, nofollow",
-      "canonical": "https://www.testmuai.com/docs"
+      "canonical": "https://www.testmuai.com"
     }
   },
   "fonts": {
@@ -65,17 +64,18 @@
                   "docs/kane-cli-variables-and-context",
                   "docs/kane-cli-configuration",
                   "docs/kane-cli-tms-integration",
-                  "docs/kane-cli-testmd"
+                  {
+                    "group": "Test.md",
+                    "pages": [
+                      "docs/kane-cli-testmd",
+                      "docs/kane-cli-testmd-composition",
+                      "docs/kane-cli-testmd-running"
+                    ]
+                  },
+                  "docs/kane-cli-testrun"
                 ]
               },
-              {
-                "group": "Mobile Testing",
-                "pages": [
-                  "docs/kane-cli-mobile",
-                  "docs/kane-cli-mobile-simulator",
-                  "docs/kane-cli-mobile-emulator"
-                ]
-              },
+              "docs/kane-cli-mobile",
               {
                 "group": "Use Cases",
                 "pages": [
@@ -96,6 +96,7 @@
                 "pages": [
                   "docs/kane-cli-assurance",
                   "docs/kane-cli-assurance-context",
+                  "docs/kane-cli-assurance-sources",
                   "docs/kane-cli-assurance-design",
                   "docs/kane-cli-assurance-coverage",
                   "docs/kane-cli-assurance-maintain",
@@ -155,7 +156,13 @@
                 "pages": [
                   "docs/kane-cli-cli-reference",
                   "docs/kane-cli-error-codes",
-                  "docs/kane-cli-troubleshooting",
+                  {
+                    "group": "Troubleshooting",
+                    "pages": [
+                      "docs/kane-cli-troubleshooting",
+                      "docs/kane-cli-troubleshooting-sharp"
+                    ]
+                  },
                   "docs/kane-cli-changelog"
                 ]
               }
@@ -262,6 +269,16 @@
     {
       "source": "/docs/scim/azure",
       "destination": "/docs/scim-azure"
+    },
+    {
+      "source": "/docs/kane-cli-mobile-simulator",
+      "destination": "/docs/kane-cli-mobile",
+      "permanent": true
+    },
+    {
+      "source": "/docs/kane-cli-mobile-emulator",
+      "destination": "/docs/kane-cli-mobile",
+      "permanent": true
     }
   ]
 }

@@ -7,6 +7,7 @@ keywords: ['performance assertion', 'core web vitals', 'lcp', 'cls', 'inp', 'kan
 ---
 
 import AgentSkillCallout from "/snippets/AgentSkillCallout.mdx";
+import { KaneCliCta } from "/snippets/KaneCliCta.mdx";
 
 ---
 
@@ -69,3 +70,5 @@ If LCP is under 2500ms then continue, else report performance issue
 - **Wait for load**: Place a wait step before performance assertions to ensure the page has fully loaded and metrics are available
 - **Navigate first**: Metrics are per-navigation. Make sure you've navigated to the target page before asserting
 - **Not all metrics are instant**: CLS accumulates over time, INP requires interaction. LCP and FCP are typically available after the page visually completes loading
+
+<KaneCliCta />
