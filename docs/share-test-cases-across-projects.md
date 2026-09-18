@@ -212,9 +212,7 @@ You can't turn a setting off while shares exist in that direction. To turn off s
 
    <img loading="lazy" src={require('../assets/images/test-manager/test-cases/share/share-dialog-folder.png').default} alt="Choosing a folder in the receiving project for the shared test cases" className="doc_img"/>
 
-5. Review the summary and confirm.
-
-After you confirm, the result is shown for each project. Test cases or projects that couldn't be shared are listed as skipped, with the reason. The rest are shared.
+5. Click **Share Test Cases**. A message confirms that the test cases are shared.
 
 In the source project, a shared test case shows how many projects it is shared with.
 
