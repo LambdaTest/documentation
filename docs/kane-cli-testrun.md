@@ -1,0 +1,297 @@
+---
+id: kane-cli-testrun
+title: Batch runs with testrun
+sidebar_label: Batch Runs (testrun)
+description: "Run many authored _test.md files as one execution with kane-cli testrun run: tag and regex selection, parallel workers, preflight, dry runs, exit codes and a single sealed evidence pack."
+keywords:
+  - kane cli testrun
+  - batch test run
+  - parallel
+  - tags
+  - evidence pack
+  - testmu ai
+url: https://www.testmuai.com/support/docs/kane-cli-testrun/
+site_name: TestMu AI
+slug: kane-cli-testrun/
+canonical: https://www.testmuai.com/support/docs/kane-cli-testrun/
+---
+import VerifiedTag from '@site/src/component/verifiedTag';
+
+
+<script type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.testmuai.com"
+        },{
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Support",
+          "item": "https://www.testmuai.com/support/docs/"
+        },{
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Batch runs with testrun",
+          "item": "https://www.testmuai.com/support/docs/kane-cli-testrun/"
+        }]
+      }) }}
+></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/kane-cli-testrun/"
+    },
+    "headline": "Batch runs with testrun",
+    "description": "Run many authored _test.md files as one execution with kane-cli testrun run: tag and regex selection, parallel workers, preflight, dry runs, exit codes and a single sealed evidence pack.",
+    "url": "https://www.testmuai.com/support/docs/kane-cli-testrun/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Kane CLI",
+    "keywords": [
+      "kane cli testrun",
+      "batch test run",
+      "parallel"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 1",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "kane-cli testrun run                                              # every *_test.md under the cwd\nkane-cli testrun run tests/checkout_test.md tests/login_test.md   # explicit paths\nkane-cli testrun run --tags smoke --parallel 4                    # select by tags, 4 workers"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Two filters then apply, in order",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "kane-cli testrun run --match 'tests/e2e/.*' --tags smoke"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "The offenders print to stderr",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "error: plan invalid \u2014 2 offending test(s):\n  tests/other_org_test.md: org_mismatch\n  tests/other_project_test.md: project_mismatch"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Dry runs",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "kane-cli testrun run --tags smoke --parallel 4 --dry-run"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Using testrun in CI",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "kane-cli testrun run --tags smoke --parallel 4 --headless --on-failure fail-fast"
+      }
+    ],
+    "dateModified": "2026-09-03T14:41:00+05:30"
+  }) }}
+/>
+`kane-cli testrun run` executes many authored `_test.md` files as **one execution** — one summary, one exit code, and one sealed [evidence pack](/support/docs/kane-cli-evidence/) for the whole suite.
+
+<VerifiedTag value="Verified" />
+
+```bash
+kane-cli testrun run                                              # every *_test.md under the cwd
+kane-cli testrun run tests/checkout_test.md tests/login_test.md   # explicit paths
+kane-cli testrun run --tags smoke --parallel 4                    # select by tags, 4 workers
+```
+
+Use `testrun` when you have a suite of committed tests to run together — nightly regression, pre-merge smoke, release gates. For a single test, `kane-cli testmd run` is all you need.
+
+## Selecting tests
+
+Members come either from explicit paths (each must end in `_test.md`) or, when no paths are given, from a recursive walk of the current directory. Two filters then apply, in order:
+
+- **`--match <regex>`** — keep tests whose project-relative path matches the regex.
+- **`--tags <list>`** — keep tests whose [`tags:` frontmatter](/support/docs/kane-cli-testmd/#yaml-frontmatter) matches **any** of the given tags (case-insensitive). Repeat the flag or pass a comma-separated list; `--tags smoke,checkout` and `--tags smoke --tags checkout` are equivalent.
+
+Duplicates are removed and the final list runs in a stable order.
+
+<VerifiedTag value="Verified" />
+
+```bash
+kane-cli testrun run --match 'tests/e2e/.*' --tags smoke
+```
+
+## Preflight
+
+Before anything runs, every member is checked:
+
+- *(0.8.4)* **It need not be authored** — a member with no recording classifies as an **author** member: the agent authors it during the run, and afterwards the authored and replayed evidence consolidates into one published execution (best-effort — when consolidation can't complete, the evidence stays split rather than lost). Before 0.8.4, unauthored members failed preflight (`missing_meta` / `not_authored`).
+- **All members must belong to one org and one project** — a testrun is one execution in Test Manager, so it can't span projects.
+
+A member can fail preflight for these reasons:
+
+| Reason | Meaning | Fix |
+|---|---|---|
+| `org_mismatch` | Belongs to a different organisation than the rest | Check with `kane-cli testmd status <path>` |
+| `project_mismatch` | Belongs to a different project than the rest | Check with `kane-cli testmd status <path>`; run project-by-project |
+| `unresolved_variables` | An authored step references a `{{name}}` that has no value in any variable file or in the member's own `variables:` frontmatter | Fill the value in `.testmuai/variables/*.json` (the receipt names the file) or remove the reference. `testrun run` has no `--variables` flag |
+
+If any member fails preflight, the plan is invalid and **nothing runs** (exit `2`). The offenders print to stderr:
+
+<VerifiedTag value="Verified" />
+
+```
+error: plan invalid — 2 offending test(s):
+  tests/other_org_test.md: org_mismatch
+  tests/other_project_test.md: project_mismatch
+```
+
+Variable offenders get the full receipt instead of a one-line code: every unresolved name across the members, each with the test files and steps that use it.
+
+```
+✗ 2 variables have no value — nothing was dispatched
+
+  Not in any variables file
+    other_key   b_test.md step 1
+    shared_url  a_test.md step 1 · b_test.md step 1
+
+    Add them to .testmuai/variables/variables.json
+
+  If {{name}} is literal page text, write \{{name}} to keep it as-is.
+  Fill the values and run again.
+```
+
+In agent mode (stdin is not a TTY) the same information arrives as one `error` event with `code: "unresolved_variables"` right after `testrun_plan`. See [Modes of Operation](/support/docs/kane-cli-modes/#unresolved-variables) for the shape.
+
+## Mobile members
+
+A `_test.md` with a mobile [`target:`](/support/docs/kane-cli-testmd/#mobile-target) (`emulator` or `simulator`) is a normal member:
+
+- **On this machine**, the suite drives the emulators and simulators installed here, so the host must be macOS Apple Silicon with the [mobile setup](/support/docs/kane-cli-mobile/#setup) done. Pick the device with `--device-name` and `--os-version` as `kane-cli devices list --target emulator|simulator` prints it, or set `device_name:` and `os_version:` in the file.
+- **On the cloud grid** (`--remote`), the suite runs on a virtual device on a HyperExecute macOS host, so it works from any machine: Linux, Windows, or a Mac with no Xcode or Android Studio. Pick the device from `kane-cli devices list --target emulator|simulator --remote`. One grid job runs one platform, emulator members on one Android version and simulator members on one HyperExecute pool, and a member's local build is uploaded from your machine before dispatch and handed to the grid as an `APP…` id. Everything else is in [Remote Runs](/support/docs/kane-cli-remote-execution/).
+
+<VerifiedTag value="Verified" />
+
+```bash
+kane-cli testrun run tests/app/ --device-name "Pixel 7 API 35" --os-version 15    # devices on this machine
+kane-cli testrun run tests/app/ --remote --device-name "Pixel 7" --os-version 14   # the cloud grid
+```
+
+## Running
+
+| Flag | Description | Default |
+|---|---|---|
+| `--match <regex>` | Filter candidates by project-relative path regex | — |
+| `--tags <list>` | ANY-match on frontmatter tags (repeatable or comma-separated) | — |
+| `--parallel <n>` | Worker count | `1` |
+| `--on-failure <mode>` | `continue` \| `fail-fast` | `continue` |
+| `--name <label>` | Run title | derived from the selection |
+| `--dry-run` | Plan + validate only, execute nothing | off |
+| `--retry` | On replay failure, restart with a shrinking replay window | off |
+| `--retry-count <n>` | Max replay restart attempts before a full re-author | `3` |
+| `--bug-detection <mode>` | `off` \| `stop` \| `continue` — see [Configuration](/support/docs/kane-cli-configuration/#bug-detection) | config value |
+| `--headless` | Run Chrome without a visible window | off |
+| `--remote [backend]` | Dispatch the suite to the cloud grid instead of Chrome or devices on this machine (default backend: `hyper`). Needs `kane-cli plugin install remote-execution`. See [Remote Runs](/support/docs/kane-cli-remote-execution/) | off |
+| `--device-name <name>` | Device for the suite's mobile members: as `kane-cli devices list --target <kind>` prints it locally, or a grid catalog device with `--remote` | member's `device_name:` |
+| `--os-version <version>` | OS version for the mobile members (`14`, `17.5`). On its own, it matches any device running it | member's `os_version:` |
+| `--username <user>` / `--access-key <key>` | Basic auth (skips OAuth) | — |
+
+Each worker gets its **own isolated Chrome** with a fresh temporary profile, so parallel members never share cookies, logins, or tabs — and never fight over your real browser profile.
+
+`--on-failure` controls what a failed member does to the rest of the suite:
+
+- **`continue`** (default) — every member runs; failures are collected in the summary.
+- **`fail-fast`** — a failure stops *new* members from starting; members already in flight finish normally.
+
+**Ctrl-C is graceful**: no new members start, in-flight members finish, the evidence pack still seals, and the run exits `3`. Members that never started are reported as skipped — the pack accounts for every planned member, including skipped and broken ones.
+
+## Dry runs
+
+`--dry-run` prints exactly the plan the real run would execute — the selected members, any preflight failures, and the parallelism — then exits without launching anything:
+
+<VerifiedTag value="Verified" />
+
+```bash
+kane-cli testrun run --tags smoke --parallel 4 --dry-run
+```
+
+Exit `0` means the plan is valid and a real run would proceed; exit `2` means it wouldn't, and the offender list shows why. The dry run and the real run share the same planner, so they can never disagree.
+
+## Reading results
+
+At the end of a run you get a suite summary — totals for passed / failed / broken / skipped members and the overall duration — plus one sealed evidence pack covering every member, created directly in `.testmuai/evidence/`.
+
+In a terminal, kane-cli offers to open the pack in the [evidence viewer](/support/docs/kane-cli-evidence-viewing/); in CI it prints the `evidence serve` hint instead. The pack is also published to your project's execution history in Test Manager.
+
+`--name` sets the run's title — useful for telling nightly runs apart in the dashboard.
+
+## Exit codes
+
+| Code | Meaning |
+|---|---|
+| `0` | All members passed. |
+| `1` | At least one member failed or broke. |
+| `2` | Usage error, invalid plan (preflight failures), or auth error. Nothing ran. |
+| `3` | Cancelled (Ctrl-C). |
+
+## Using testrun in CI
+
+<VerifiedTag value="Verified" />
+
+```bash
+kane-cli testrun run --tags smoke --parallel 4 --headless --on-failure fail-fast
+```
+
+The exit code gates the pipeline, and `.testmuai/evidence/*.evidence` is a natural CI artifact — a single file per suite run that anyone can drop into the viewer. Full recipes: [CI/CD](/support/docs/kane-cli-cicd/).
+
+## For agents: NDJSON events
+
+In agent / non-TTY mode, `testrun run` emits its own typed NDJSON events on stdout — `testrun_plan`, `testrun_start`, `testrun_member_start`, `testrun_member_end`, `testrun_investigations_wait`, `testrun_evidence_ingest`, `testrun_summary`, and finally the terminal `testrun_done`. Stop parsing at `testrun_done`. The full event schema ships with the [kane-cli agent skill](https://testmuai.com/kane-cli/agents.md).
+
+## Next steps
+
+- [Evidence packs](/support/docs/kane-cli-evidence/) — what's in the pack and how to view it.
+- [Writing test.md files](/support/docs/kane-cli-testmd/) — the file format, including `tags:`.
+- [Running test.md files](/support/docs/kane-cli-testmd-running/) — single-test runs, replay, and flags.
+- [CI/CD recipes](/support/docs/kane-cli-cicd/) — pipeline patterns.

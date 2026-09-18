@@ -168,7 +168,6 @@ Open the `viewer` URL in your browser.
 |---|---|---|
 | `--port <n>` | Pin the local port | ephemeral |
 | `--viewer-url <base>` | Override the hosted viewer base URL | environment's viewer |
-| `--env <name>` | Environment (`prod` or `stage`) | active profile's env |
 
 `serve` accepts sealed `.evidence` files only. A live, unsealed pack directory is rejected.
 

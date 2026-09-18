@@ -250,7 +250,7 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
         "name": "Start every mobile problem with doctor, which prints one line per required check, each with a fix",
         "codeSampleType": "code snippet",
         "programmingLanguage": "Shell",
-        "text": "kane-cli doctor              # required checks, each with a fix if it fails\nkane-cli doctor --install    # install the test tooling Kane CLI manages\nkane-cli doctor --targets    # list the emulators and simulators available"
+        "text": "# iOS Simulator\nkane-cli doctor --target simulator              # required checks, each with a fix if it fails\nkane-cli doctor --target simulator --install    # install the test tooling Kane CLI manages\nkane-cli devices list --target simulator        # the simulators Kane CLI can run against\n\n# Android Emulator\nkane-cli doctor --target emulator\nkane-cli doctor --target emulator --install\nkane-cli devices list --target emulator"
       }
     ],
     "dateModified": "2026-09-07T15:18:23+05:30"
@@ -393,6 +393,14 @@ Get credentials from the <BrandName /> [dashboard](https://www.testmuai.com/logi
 
 ### "Variables not resolving": `{{key}}` appears literally
 
+A run **refuses to start** when an authored step references a `{{name}}` that has no value. You get a receipt naming each variable, the file that is waiting for its value (or `Not in any variables file`), and the step that uses it, with exit code `2` and nothing dispatched. Read the receipt first: it tells you whether to fill an existing key or add a new one, and which file. See [Before a run](/support/docs/kane-cli-variables-and-context/#before-a-run-unresolved-variables).
+
+If a `{{my_var}}` placeholder appears **literally** in a browser action, one of three things is true:
+
+- **The step is a replay.** Replayed steps resolve from their tape and from Test Manager, and a missing value there produces a warning line rather than a refusal. Fill the value and run again.
+- **The reference is escaped.** `\{{my_var}}` is typed as is on purpose, for pages where the braces are real text.
+- **The variable file is not being loaded at all.** Check the three points below.
+
 **Cause:** Variable file not loaded, wrong JSON format, or wrong variable key name.
 
 **Fix:**
@@ -494,12 +502,20 @@ node --version   # Must be 18 or higher
 
 ## Mobile Issues
 
-Mobile testing is supported on **macOS Apple Silicon (arm64) only**. Start every mobile problem with `doctor`, which prints one line per required check, each with a fix:
+Mobile runs on your own machine are supported on **macOS Apple Silicon (arm64) only**. On other machines, run mobile suites on the cloud grid with `kane-cli testrun run --remote`, see [Running a Mobile Suite on the Cloud Grid](/support/docs/kane-cli-mobile/#running-a-mobile-suite-on-the-cloud-grid).
+
+Start every local mobile problem with `doctor`, which prints one line per required check, each with a fix. `doctor` checks one target at a time, so pass `--target`:
 
 ```bash
-kane-cli doctor              # required checks, each with a fix if it fails
-kane-cli doctor --install    # install the test tooling Kane CLI manages
-kane-cli doctor --targets    # list the emulators and simulators available
+# iOS Simulator
+kane-cli doctor --target simulator              # required checks, each with a fix if it fails
+kane-cli doctor --target simulator --install    # install the test tooling Kane CLI manages
+kane-cli devices list --target simulator        # the simulators Kane CLI can run against
+
+# Android Emulator
+kane-cli doctor --target emulator
+kane-cli doctor --target emulator --install
+kane-cli devices list --target emulator
 ```
 
 The common setup failures for each platform, and their fixes, are listed on the mobile testing page:
@@ -513,6 +529,108 @@ The common setup failures for each platform, and their fixes, are listed on the 
 Kane CLI checks the public npm registry for a newer release once every 24 hours. The result is cached locally so the check itself is non-blocking and silent on failure. When a newer version exists, Kane CLI surfaces an "update available" notification with the current and latest versions and a severity label (`major`, `minor`, or `patch`).
 
 The notice is informational, your current version still works. To upgrade, follow the steps in [Updates](/support/docs/kane-cli-installation/#update).
+
+---
+
+## Debugging a failed run with its evidence pack
+
+Every run seals an [evidence pack](/support/docs/kane-cli-evidence/) with everything needed to diagnose a failure in one place. The short version:
+
+1. Open the pack — accept the post-run "View evidence in browser?" offer, or run `kane-cli evidence serve <pack>` and open the printed `viewer` URL.
+2. Go to the failed step and read its **failure record** — the error and the page state at the moment of failure.
+3. Check the step's **console and network logs** — a 4xx/5xx response or a JS error there usually explains it.
+4. Compare the **annotated screenshot** (what the agent acted on) against what you expected.
+
+The full walkthrough is in [Evidence packs → Debugging a failed run from its pack](/support/docs/kane-cli-evidence-debugging/), and the pack's file layout is in [Inside the pack](/support/docs/kane-cli-evidence-pack-structure/). The pack is the only place run logs live — a `.evidence` file is a plain zip, so even without the viewer you can `unzip` it and read the logs directly. If a pack won't open in the viewer, run `kane-cli evidence validate <pack>` — a truncated or unsealed pack reports invalid; the session directory's `tui.log` still has the session narrative.
+
+One more debugging aid for batch runs: `testrun` members normally run silently — set `KANE_TESTRUN_MEMBER_DEBUG=1` to route their per-member output to stderr (prefixed `[member]`).
+
+## A `--remote` run refused, failed, or came back empty
+
+Three different situations, told apart by the exit code and what came back:
+
+- **Exit `2` and no job link.** The remote preflight refused the selection before anything was dispatched. The reason is printed with the offending paths: the plugin is missing (`kane-cli plugin install remote-execution`, then `kane-cli plugin doctor remote-execution`), the selection mixes web and device tests or two mobile platforms (run them as two suites), a device test names a build that is not on this machine or that the cloud cannot take (`mobile_app_missing`, `mobile_app_not_uploadable`), the build's upload from your machine failed (`mobile_app_upload_failed`), or required recordings are gitignored (`gitignored_inputs`, un-ignore with `!output-*/`). `--dry-run` reproduces the check without creating a job.
+- **Exit `1` with recordings and a pack.** The job ran and a member failed. Debug it like a failure on your own machine: `output-<stem>/Result.md` names the step and reason, and the pack has the screenshots and logs (next section).
+- **A member reported `broken` with no steps, nothing published.** The grid-side Kane CLI refused before launching. Open the printed job link and read the scenario stage's log. For mobile members the usual cause is an `APP…` id that belongs to a different organisation than the account running the job, and `kane-cli apps list --target <kind>` for the active profile is the authority. The members' session logs are also under `~/.testmuai/kaneai/sessions/remote/<job-id>/`.
+
+Full reference: [Remote Runs](/support/docs/kane-cli-remote-execution/).
+
+---
+
+## testrun says "plan invalid" or skips members
+
+`kane-cli testrun run` refuses to start unless every selected test passes preflight; the offenders are listed with a reason each:
+
+| Reason | Meaning | Fix |
+|---|---|---|
+| `missing_meta` | The test has no recorded output directory next to it. | Run it once: `kane-cli testmd run <path>`. |
+| `not_authored` | The test ran but never committed (no test id). | Run it to completion so it commits. |
+| `org_mismatch` | The test belongs to a different organisation than the other members. | Check identities with `kane-cli testmd status <path>`. |
+| `project_mismatch` | The test belongs to a different project than the other members. | Same check; run project-by-project, or re-home the test. |
+
+Use `kane-cli testrun run --dry-run …` to see the full plan and every offender without executing anything. See [Batch runs with testrun](/support/docs/kane-cli-testrun/#preflight).
+
+## Context sync: Git not found or too old
+
+A GitHub location (`kane-cli context sync add`, `kane-cli context clone`, or `kane-cli context sync setup`) needs Git **2.31 or newer** on the machine that runs Kane CLI. Without it the command refuses before touching anything:
+
+```
+$ kane-cli context sync add team git@github.com:example-org/team-context.git
+checking team: read access and safe publishing…
+error: This location needs Git 2.31 or newer.
+next: Install or update Git, then run setup again: https://git-scm.com/downloads
+```
+
+Install Git from the link, or update it (`brew install git`, `apt-get install git`, or the Windows installer), open a new terminal so `git --version` reports 2.31 or newer, and run the same command again. On a CI runner, add a Git install step before Kane CLI. Folder and S3-compatible locations do not need Git at all, see [Sharing the context graph](/support/docs/kane-cli-assurance-sharing/#locations).
+
+## Context sync: a location cannot be reached or refuses you
+
+Two different refusals, told apart by the message:
+
+- **Nothing answered.** The folder does not exist and cannot be created, the host is down, or no repository answered at that address, and a private repository you have not been invited to looks missing:
+
+  ```
+  error: nothing answered at /no/such/parent/team-context: that folder does not exist and cannot be created
+  next: check the path, then run the command again
+  ```
+
+  Check the address (`kane-cli context sync list` shows what the store has), that the drive is mounted, and that the repository exists and is shared with your account.
+
+- **The location answered and refused you.** Keys, a key pair, or an account without read permission:
+
+  ```
+  error: the bucket at https://team-context.s3.eu-west-1.amazonaws.com did not accept origin's access keys, even for reading
+  next: ask the owner of the bucket for access, or bind it again with the right keys: kane-cli context sync add origin <descriptor> --credential-env <VAR>
+  ```
+
+  `<descriptor>` in that line is the address of the location. Ask the owner for access, or bind the location again under the same name with the right keys: `kane-cli context sync add` on an existing name replaces its keys, and a pair the location refuses never replaces one that worked. For a GitHub location over HTTPS in CI, check that `KANE_SYNC_GIT_TOKEN` grants Contents read and write on *that* repository.
+
+- **Over SSH.** Kane CLI never answers an SSH prompt. A host key this computer has not accepted yet refuses with `this computer has not accepted github.com's SSH host key yet`: run `ssh -T git@github.com` once in a terminal and answer yes. A key that is not loaded, or not on the account, refuses with `github.com did not accept your SSH key`: load it with `ssh-add`, or ask the repository owner to grant your account access. Over HTTPS without a stored login the message is `sign in is needed, or your account has no access to this repository on github.com`: sign in through Git with `gh auth login --hostname github.com --git-protocol https --web`, then `gh auth setup-git --hostname github.com`, and run the command again.
+
+- **The connection check could not finish.** `The server did not complete the concurrent connection check. Its scratch-ref policy may differ from the storage branch.` (`SYNC_PROBE_INCONCLUSIVE`) means the concurrent connection check did not finish, and repository rules that block the scratch reference the check pushes under `refs/kane/probe/` are the usual cause. Nothing was bound: ask the repository owner to check that the reference is allowed, then run the command again.
+
+A location you can read but not write is not a refusal: it binds as download-only (`read-only: this location can be cloned and pulled, never pushed`). `kane-cli context push` to it refuses with `SYNC_READ_ONLY`, and so does `kane-cli context sync`, after its pull has already landed, so its exit `2` does not mean nothing happened. Take records from such a location with `kane-cli context pull`. The two refusals above change nothing in your store.
+
+## Context sync: "a rebase is open" and every change is refused
+
+```
+error: a rebase (2026-09-14T10-13-45-679Z-reset) is open with 2 decisions unresolved; this store takes no other change until it is finished — run kane-cli context sync or kane-cli context pull to continue, or kane-cli context sync doctor --abort to close it
+next: run kane-cli context sync or kane-cli context pull to continue, or kane-cli context sync doctor --abort to close it
+```
+
+A `kane-cli context pull origin --rebase` stopped on decisions you have not answered yet, or was interrupted, and until it is finished the store takes writes from the rebase only, exactly like git mid-rebase. `kane-cli context extract`, `kane-cli design tests`, `kane-cli maintain reconcile`, `kane-cli context ingest`, `kane-cli context review`, `kane-cli context name`, `kane-cli context retire` and `kane-cli context revert` refuse with these two lines. `kane-cli context push` refuses with the same code (`SYNC_REBASE_PENDING`) and the same `next:` line, its reason naming the rebase and saying nothing was pushed. A test run does not refuse, and nothing is lost: its results wait to the side and land on the first run after the rebase closes.
+
+1. See what is open: `kane-cli context sync status origin` lists each decision on one line, and `--show <n>` prints one saved record in full.
+2. Answer: `kane-cli context sync origin` walks the cards on a terminal. Headless, use `kane-cli context sync origin --answer <id>=keep-theirs` (or `apply-mine`), one flag per decision. `keep-theirs` writes nothing, but it is a choice, not a default: the local change stays in the backup unapplied, and a later record that was built on it is looked at again.
+3. Or close it: `kane-cli context sync doctor --abort` keeps what was already reapplied and leaves the unanswered records in the backup. A rebase interrupted before it imported origin's records is undone by the same command, and the store is put back as it was. Once the import has landed it can only be finished (`SYNC_RESET_IMPORTED`): run `kane-cli context sync` or `kane-cli context pull` to finish it, then close it if you still want to. `kane-cli context sync doctor --export <dir>` rebuilds the pre-rebase store beside, as its own store.
+
+:::warning
+Never delete files under `.context/` to get past the refusal. See [When two people changed the same thing](/support/docs/kane-cli-assurance-sharing/#rebase).
+:::
+
+## Context sync: publication could not be confirmed
+
+A `kane-cli context push` to a GitHub location can lose the server's answer after the upload, through a dropped connection or a proxy timeout. Kane CLI then refuses with `SYNC_PUBLICATION_UNKNOWN` (exit `2`) rather than guess, because the batch may have landed. Your store is unchanged and nothing needs to be redone. Check connectivity and run the **same** command again: it reads the location first and reconciles what actually landed, so a batch that arrived is recognised as already there and never published twice, and a batch that did not is published now. Only after that should anything else run. If a proxy rejects large uploads, `KANE_SYNC_GIT_HTTP_POST_BUFFER=33554432` raises Git's upload buffer for that command, and a very slow link gets more time with `KANE_SYNC_GIT_TRANSFER_TIMEOUT_SECONDS`. See [Context sync environment variables](/support/docs/kane-cli-configuration/#context-sync-environment-variables).
 
 ---
 

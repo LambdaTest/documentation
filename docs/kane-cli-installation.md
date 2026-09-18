@@ -219,7 +219,7 @@ If the command is not found, your shell is not seeing the npm global `bin` direc
 | Windows | x64 | ✅ |
 
 :::note
-**Mobile testing**, the iOS Simulator and the Android Emulator, is supported on **macOS Apple Silicon (arm64) only** for the initial release. See [Mobile Testing](/support/docs/kane-cli-mobile/) for the simulator and emulator prerequisites.
+**Mobile testing**, the iOS Simulator and the Android Emulator, runs on your own machine on **macOS Apple Silicon (arm64) only**. See [Mobile Testing](/support/docs/kane-cli-mobile/) for the simulator and emulator prerequisites. On every other platform, mobile suites run on the cloud grid with [`testrun run --remote`](/support/docs/kane-cli-remote-execution/), which needs no mobile tooling on your machine.
 :::
 
 ## Update
@@ -271,6 +271,22 @@ Kane CLI requires Node.js 18+. Check your version and upgrade if needed:
 node --version
 ```
 
+## Plugins
+
+Some capabilities ship as plugins that Kane CLI installs into a versioned local layout under `~/.testmuai/kaneai/plugins/`. The one you are most likely to need is `remote-execution`, which owns the HyperExecute binary behind [`kane-cli testrun run --remote`](/support/docs/kane-cli-remote-execution/):
+
+<VerifiedTag value="Verified" />
+
+```bash
+kane-cli plugin install remote-execution      # install (add --version <v> to pin one)
+kane-cli plugin list                          # what is installed, with versions
+kane-cli plugin doctor remote-execution       # readiness: installed, binary present, logged in
+kane-cli plugin remove remote-execution
+```
+
 ## Next Step
 
 [Quick Start](/support/docs/kane-cli-quickstart/): Authenticate and run your first test.
+
+- [Authentication](/support/docs/kane-cli-authentication/)
+- [Remote Runs](/support/docs/kane-cli-remote-execution/)

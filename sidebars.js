@@ -5351,9 +5351,41 @@ module.exports = {
             id: "kane-cli-tms-integration",
           },
           {
-            type: "doc",
+            type: "category",
+            collapsed: true,
             label: "Test.md",
-            id: "kane-cli-testmd",
+            link: {
+              type: "doc",
+              id: "kane-cli-testmd",
+            },
+            items: [
+              {
+                type: "doc",
+                label: "Composing Tests (@import)",
+                id: "kane-cli-testmd-composition",
+              },
+              {
+                type: "doc",
+                label: "Running test.md Files",
+                id: "kane-cli-testmd-running",
+              },
+            ],
+          },
+          {
+            type: "category",
+            collapsed: true,
+            label: "Batch Runs (testrun)",
+            link: {
+              type: "doc",
+              id: "kane-cli-testrun",
+            },
+            items: [
+              {
+                type: "doc",
+                label: "Remote Runs",
+                id: "kane-cli-remote-execution",
+              },
+            ],
           },
         ],
       },
@@ -5434,6 +5466,11 @@ module.exports = {
             type: "doc",
             label: "Maintaining the Suite",
             id: "kane-cli-assurance-maintain",
+          },
+          {
+            type: "doc",
+            label: "Sharing with Your Team",
+            id: "kane-cli-assurance-sharing",
           },
           {
             type: "doc",

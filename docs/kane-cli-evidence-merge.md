@@ -130,7 +130,6 @@ Targets are execution ids or pack paths, and **order matters**. Earlier targets 
 | `--title <title>` | Title for the merged run | first eligible pack's |
 | `--no-finalize` | Keep the merged pack live instead of sealing it | seals by default |
 | `--json` | Machine-readable merge report | off |
-| `--env <name>` | Environment (`prod` or `stage`) | active env |
 
 `--rules` and `--on-collision` are mutually exclusive.
 
