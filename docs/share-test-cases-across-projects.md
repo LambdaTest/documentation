@@ -148,7 +148,9 @@ Use sharing when several projects need the same test case and it must stay ident
 
 ### Availability
 
-Sharing test cases across projects is being rolled out to organizations gradually. If you don't see the option to share a test case, contact <BrandName /> support to enable it for your organization.
+:::note
+This feature is not generally available yet. It is turned on for selected organizations and is being rolled out gradually. To have it enabled for your organization, contact <BrandName /> support.
+:::
 
 ### Permissions
 
