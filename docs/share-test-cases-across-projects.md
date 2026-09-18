@@ -2,6 +2,7 @@
 id: share-test-cases-across-projects
 title: Share Test Cases Across Projects in Test Manager
 hide_title: true
+toc_max_heading_level: 2
 sidebar_label: Share Test Cases Across Projects
 description: Maintain a test case in one project and share it with other projects under the same ID. Receiving projects use it read-only in their own test runs, and every change in the source reaches them automatically.
 keywords:
