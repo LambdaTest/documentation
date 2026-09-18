@@ -166,7 +166,7 @@ Customize your test environment with various settings:
 
 - **Idle Timeout:** Set the idle timeout duration for your test session (default is 5 minutes, maximum is 60 minutes).
 - **Time Zone:** Select the time zone that aligns with your testing needs to ensure accurate testing across different regions.
-- **Keyboard Input:** Change the keyboard language during the test session for localized testing scenarios.
+- **Self Signed Certificate Support:** It helps to test websites using self-signed certificates on your local system or internal network.
 
 <img loading="lazy" src={require('../assets/images/real-time-testing/web-browser/settings.png').default} alt="Image" className="doc_img"/>
  

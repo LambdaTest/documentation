@@ -180,8 +180,11 @@ Organizes your testing sessions within the <BrandName /> platform by grouping th
   -->
 
 ## Settings
-Settings provide a central location to configure various aspects of your emulated ChromeOS environment. Change the language settings to conduct localized testing, or define the timeout scenario to manage test session duration based on your needs.
-  
+The settings section offer the following features:
+- **Idle Timeout :** This feature allows you to set the idle timeout for your test session. The default Idle Timeout is 5 minutes and the maximum limit is 60 minutes.
+- **Time Zone :** With this feature, you can select the time zone of your preferred region that align with your testing needs.
+- **Keyboard Input** With this feature, you can change the language in your test session for a more localized testing experience.
+
 <img loading="lazy" src={require('../assets/videos/real-time/chromeos-app/setting.png').default} style={{ height: '350px' }} className="doc_img"/>
  
 
