@@ -71,12 +71,12 @@ In the `PostTestResults.java` script, add the following String parameters.
 ```js
 public class PostTestResults {
 
-public void callApi() {
+    public void callApi() {
 
-String fileName = "TEST-com.lambdatest.JUnitTodo.xml" ; //provide the file name of the test results
-String filePath = "target/surefire-reports/TEST-com.lambdatest.JUnitTodo.xml"; //provide the file path of the test result file
-String projectKey = "ZD"; //provide the Jira project key
-String token = "abcdefghijklmnop123456"; // provide Zephyr Scale access token
+        String fileName = "TEST-com.lambdatest.JUnitTodo.xml" ; //provide the file name of the test results
+        String filePath = "target/surefire-reports/TEST-com.lambdatest.JUnitTodo.xml"; //provide the file path of the test result file
+        String projectKey = "ZD"; //provide the Jira project key
+        String token = "abcdefghijklmnop123456"; // provide Zephyr Scale access token
 ```
 
 ## Step 4: Configure YAML in your Test Suite
@@ -97,28 +97,28 @@ maxRetries: 1
 concurrency: 3
 
 env:
-# PAT: ${{ .secrets.testKey }}
-CACHE_DIR: m2_cache_dir
-TARGET_OS: linux
+  # PAT: ${{ .secrets.testKey }}
+  CACHE_DIR: m2_cache_dir
+  TARGET_OS: linux
 
 cacheKey: '{{ checksum "pom.xml" }}'
 cacheDirectories:
-- ${CACHE_DIR}
+  - ${CACHE_DIR}
 
 shell: bash
 
 pre:
-# Download and install packages in the CACHE_DIR.
-# Skip execution of the tests in the pre step
-- mvn -Dmaven.repo.local=${CACHE_DIR} -Dmaven.test.skip=true clean install
+  # Download and install packages in the CACHE_DIR.
+  # Skip execution of the tests in the pre step
+  - mvn -Dmaven.repo.local=${CACHE_DIR} -Dmaven.test.skip=true clean install
 
 post:
-- cat hyperexecute-zephyr-scale.yaml
+  - cat hyperexecute-zephyr-scale.yaml
 
 testDiscovery:
-type: raw
-mode: remote
-command: grep 'public class' src/test/java/com/lambdatest/*.java | awk '{print$3}'
+  type: raw
+  mode: remote
+  command: grep 'public class' src/test/java/com/lambdatest/*.java | awk '{print$3}'
 
 testRunnerCommand: mvn -Dplatname=linux -Dmaven.repo.local=m2_cache_dir -Dtest=$test -P single
 # test site

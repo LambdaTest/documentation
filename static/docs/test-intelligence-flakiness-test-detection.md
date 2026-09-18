@@ -126,17 +126,17 @@ Go to the `Test Intelligence` section in `Org Product Preferences` under `Organi
 
 ```
 const capability = {
-"browserName": "Chrome",
-"browserVersion": "118.0",
-"LT:Options": {
-"username": "<USERNAME>",
-"accessKey": "<ACCESS_KEY>",
-"platformName": "Windows 10",
-"project": "Flaky Test Detection",
-"name": "Login",
-"w3c": true,
-"plugin": "node_js-node_js"
-}
+  "browserName": "Chrome",
+  "browserVersion": "118.0",
+  "LT:Options": {
+    "username": "<USERNAME>",
+    "accessKey": "<ACCESS_KEY>",
+    "platformName": "Windows 10",
+    "project": "Flaky Test Detection",
+    "name": "Login",
+    "w3c": true,
+    "plugin": "node_js-node_js"
+  }
 }
 ```
 

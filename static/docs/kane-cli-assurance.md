@@ -9,20 +9,20 @@ Requires kane-cli **0.6.1 or later** (`kane-cli --version`). On 0.6.0 these comm
 ## The loop
 
 ```
-requirement docs                          product changes
-│                                          │
-▼                                          ▼
-context ingest ──► context extract ──► context review ──► design tests
-(snapshot the      (agent proposes       (promote to       (ACs, scenarios,
-sources)           use-cases, cites      trusted)          one test per
-every claim)                            scenario — written
-as *_test.md files)
-│
-▼
-maintain ◄── cover ◄── evidence pack ◄── testrun run ◄── testmd run ◄── context review
-(reconcile   (proven     (sealed proof)   (batch replay)   (author each    (approve the
-a changed    vs owed)                                      test once)      design output)
-source)
+  requirement docs                          product changes
+        │                                          │
+        ▼                                          ▼
+  context ingest ──► context extract ──► context review ──► design tests
+  (snapshot the      (agent proposes       (promote to       (ACs, scenarios,
+   sources)           use-cases, cites      trusted)          one test per
+                      every claim)                            scenario — written
+                                                              as *_test.md files)
+                                                                     │
+                                                                     ▼
+  maintain ◄── cover ◄── evidence pack ◄── testrun run ◄── testmd run ◄── context review
+  (reconcile   (proven     (sealed proof)   (batch replay)   (author each    (approve the
+   a changed    vs owed)                                      test once)      design output)
+   source)
 ```
 
 Every stage is a separate command, so you can stop, review, and resume at any point — nothing downstream happens without the upstream commit.

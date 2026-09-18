@@ -160,13 +160,13 @@ With the toggle on, each test case carries one or more Gherkin scenarios instead
 
 ```gherkin
 Scenario: Complete a motorcycle purchase successfully
-Given I am on the homepage "https://www.example.com"
-When I type "motorcycle" into the **Search** bar and submit
-And I click on the first product result in the list
-Then the product detail page for the motorcycle is displayed
-When I click the **Add to Cart** button
-And I navigate to the cart and click **Proceed to Buy**
-Then I see an order confirmation page with the message "Order placed, thank you!"
+  Given I am on the homepage "https://www.example.com"
+  When I type "motorcycle" into the **Search** bar and submit
+  And I click on the first product result in the list
+  Then the product detail page for the motorcycle is displayed
+  When I click the **Add to Cart** button
+  And I navigate to the cart and click **Proceed to Buy**
+  Then I see an order confirmation page with the message "Order placed, thank you!"
 ```
 
 What the AI generates:

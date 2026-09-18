@@ -90,21 +90,21 @@ The capabilities live in the `lt_options` dictionary in `tests/conftest.py`. Thi
 
 ```python
 lt_options = {
-"user": username,
-"accessKey": access_key,
-"app": app_url,
-"deviceName": "Pixel.*",
-"platformVersion": "14",
-"platformName": "android",
-# "deviceName": "iPhone 14",
-# "platformVersion": "16",
-# "platformName": "ios",
-"build": "AltTester TestMu AI demo with TrashCat",
-"name": f"tests - {datetime.now().strftime('%B %d - %H:%M')}",
-"isRealMobile": True,
-"idleTimeout": 300,
-"tunnel": True,
-"tunnelName": TUNNEL_NAME,
+    "user": username,
+    "accessKey": access_key,
+    "app": app_url,
+    "deviceName": "Pixel.*",
+    "platformVersion": "14",
+    "platformName": "android",
+    # "deviceName": "iPhone 14",
+    # "platformVersion": "16",
+    # "platformName": "ios",
+    "build": "AltTester TestMu AI demo with TrashCat",
+    "name": f"tests - {datetime.now().strftime('%B %d - %H:%M')}",
+    "isRealMobile": True,
+    "idleTimeout": 300,
+    "tunnel": True,
+    "tunnelName": TUNNEL_NAME,
 }
 
 options = AppiumOptions()
@@ -112,8 +112,8 @@ options.set_capability("lt:options", lt_options)
 options.set_capability("platformName", "android")
 
 appium_driver = appium_webdriver.Remote(
-command_executor=f"https://{username}:{access_key}@mobile-hub.lambdatest.com/wd/hub",
-options=options,
+    command_executor=f"https://{username}:{access_key}@mobile-hub.lambdatest.com/wd/hub",
+    options=options,
 )
 ```
 
@@ -140,12 +140,12 @@ The tunnel itself is launched by `conftest.py` with the binary at `tunnel/LT`. T
 
 ```python
 [
-"./tunnel/LT",
-"--user", username,
-"--key", access_key,
-"--tunnelName", TUNNEL_NAME,
-"--verbose",
-"--infoAPIPort", str(TUNNEL_INFO_PORT),
+    "./tunnel/LT",
+    "--user", username,
+    "--key", access_key,
+    "--tunnelName", TUNNEL_NAME,
+    "--verbose",
+    "--infoAPIPort", str(TUNNEL_INFO_PORT),
 ]
 ```
 

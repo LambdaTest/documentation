@@ -39,19 +39,19 @@ fastlane add_plugin lambdatest
 
 ```
 upload_to_lambdatest(
-lt_username: ENV["LT_USERNAME"],
-lt_access_key: ENV["LT_ACCESS_KEY"],
-file_path: "app_file_path"
+    lt_username: ENV["LT_USERNAME"],
+    lt_access_key: ENV["LT_ACCESS_KEY"],
+    file_path: "app_file_path"
 )
 ```
 or if you want to used custom_id.
 
 ```
 upload_to_lambdatest(
-lt_username: ENV["LT_USERNAME"],
-lt_access_key: ENV["LT_ACCESS_KEY"],
-file_path: "<app_file_path>",
-custom_id: "<custom_id>
+    lt_username: ENV["LT_USERNAME"],
+    lt_access_key: ENV["LT_ACCESS_KEY"],
+    file_path: "<app_file_path>",
+    custom_id: "<custom_id>
 )
 ```
 **_NOTE:_**  custom_id is an optional field.

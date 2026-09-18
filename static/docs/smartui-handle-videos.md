@@ -85,11 +85,11 @@ If videos take time to load, you can add a wait timeout to ensure the first fram
 
 ```json
 {
-"web": {
-"browsers": ["chrome"],
-"viewports": [[1920, 1080]]
-},
-"waitForTimeout": 3000
+  "web": {
+    "browsers": ["chrome"],
+    "viewports": [[1920, 1080]]
+  },
+  "waitForTimeout": 3000
 }
 ```
 
@@ -101,9 +101,9 @@ You can combine video handling with other SmartUI features:
 
 ```javascript
 let options = {
-ignoreDOM: {
-cssSelector: [".video-controls", ".play-button"]
-}
+    ignoreDOM: {
+        cssSelector: [".video-controls", ".play-button"]
+    }
 };
 await smartuiSnapshot(driver, 'Video Page', options);
 ```

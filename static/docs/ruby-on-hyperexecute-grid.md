@@ -96,32 +96,32 @@ maxRetries: 1
 concurrency: 2
 
 pre:
-- bundle install --deployment
+  - bundle install --deployment
 
 cacheKey: '{{ checksum "Gemfile.lock" }}'
 cacheDirectories:
-- /vendor
+  - /vendor
 
 env:
-CONFIG_NAME: "linux"
+   CONFIG_NAME: "linux"
 
 testDiscovery:
-type: raw
-mode: remote
-command: grep -nri -E 'it ".*." do' spec/*.rb | awk '{print$1}' | sed 's/\(.*\):/\1 /'
+  type: raw
+  mode: remote
+  command: grep -nri -E 'it ".*." do' spec/*.rb | awk '{print$1}' | sed 's/\(.*\):/\1 /'
 
 testRunnerCommand: bundle exec rspec "$test" --format html --out rspec_results.html
 
 mergeArtifacts: true
 uploadArtefacts:
-- name: report
-path:
-- rspec_results.html
+ - name: report
+   path:
+     - rspec_results.html
 
 report: true
 partialReports:
-location: rspec_results.html
-type: html
+ location: rspec_results.html
+ type: html
 
 jobLabel: [selenium-Rspec, linux, autosplit]
 ```

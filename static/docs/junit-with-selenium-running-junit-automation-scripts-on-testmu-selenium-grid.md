@@ -66,18 +66,18 @@ Define the browser, version, and OS for your test run.
 
 ```java
 ChromeOptions browserOptions = new ChromeOptions();
-browserOptions.setPlatformName("Windows 10");
-browserOptions.setBrowserVersion("latest");
+        browserOptions.setPlatformName("Windows 10");
+        browserOptions.setBrowserVersion("latest");
 
-HashMap<String, Object> ltOptions = new HashMap<String, Object>();
-ltOptions.put("build", "LambdaTestSampleApp");
-ltOptions.put("name", "LambdaTestJavaSample");
-ltOptions.put("network", true); // To enable network logs
-ltOptions.put("visual", true); // To enable step by step screenshot
-ltOptions.put("video", true); // To enable video recording
-ltOptions.put("console", true); // To capture console logs
-ltOptions.put("w3c", true);
-browserOptions.setCapability("LT:Options", ltOptions);
+        HashMap<String, Object> ltOptions = new HashMap<String, Object>();
+        ltOptions.put("build", "LambdaTestSampleApp");
+        ltOptions.put("name", "LambdaTestJavaSample");
+        ltOptions.put("network", true); // To enable network logs
+        ltOptions.put("visual", true); // To enable step by step screenshot
+        ltOptions.put("video", true); // To enable video recording
+        ltOptions.put("console", true); // To capture console logs
+        ltOptions.put("w3c", true);
+        browserOptions.setCapability("LT:Options", ltOptions);
 ```
 
 Use the [Capabilities Generator](https://www.testmuai.com/capabilities-generator/) to auto-generate capabilities for any browser, version, and OS combination.
@@ -108,65 +108,65 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 import java.net.URL;
 import java.util.HashMap;
 public class JUnitTodo {
-public String username = "YOUR_USERNAME";
-public String accesskey = "YOUR_ACCESS_KEY";
-public static RemoteWebDriver driver = null;
-public String gridURL = "@hub.lambdatest.com/wd/hub";
-boolean status = false;
-@Before
-public void setUp() throws Exception {
-ChromeOptions browserOptions = new ChromeOptions();
-browserOptions.setPlatformName("Windows 10");
-browserOptions.setBrowserVersion("latest");
+    public String username = "YOUR_USERNAME";
+    public String accesskey = "YOUR_ACCESS_KEY";
+    public static RemoteWebDriver driver = null;
+    public String gridURL = "@hub.lambdatest.com/wd/hub";
+    boolean status = false;
+    @Before
+    public void setUp() throws Exception {
+       ChromeOptions browserOptions = new ChromeOptions();
+        browserOptions.setPlatformName("Windows 10");
+        browserOptions.setBrowserVersion("latest");
 
-HashMap<String, Object> ltOptions = new HashMap<String, Object>();
-ltOptions.put("build", "LambdaTestSampleApp");
-ltOptions.put("name", "LambdaTestJavaSample");
-ltOptions.put("network", true); // To enable network logs
-ltOptions.put("visual", true); // To enable step by step screenshot
-ltOptions.put("video", true); // To enable video recording
-ltOptions.put("console", true); // To capture console logs
-ltOptions.put("w3c", true);
-browserOptions.setCapability("LT:Options", ltOptions);
-try {
-driver = new RemoteWebDriver(new URL("https://" + username + ":" + accesskey + gridURL), browserOptions);
-} catch (MalformedURLException e) {
-System.out.println("Invalid grid URL");
-} catch (Exception e) {
-System.out.println(e.getMessage());
-}
-}
+        HashMap<String, Object> ltOptions = new HashMap<String, Object>();
+        ltOptions.put("build", "LambdaTestSampleApp");
+        ltOptions.put("name", "LambdaTestJavaSample");
+        ltOptions.put("network", true); // To enable network logs
+        ltOptions.put("visual", true); // To enable step by step screenshot
+        ltOptions.put("video", true); // To enable video recording
+        ltOptions.put("console", true); // To capture console logs
+        ltOptions.put("w3c", true);
+        browserOptions.setCapability("LT:Options", ltOptions);
+        try {
+            driver = new RemoteWebDriver(new URL("https://" + username + ":" + accesskey + gridURL), browserOptions);
+        } catch (MalformedURLException e) {
+            System.out.println("Invalid grid URL");
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+    }
 
-@Test
-public void testSimple() throws Exception {
-try {
-//Change it to production page
-driver.get("https://lambdatest.github.io/sample-todo-app/");
+    @Test
+    public void testSimple() throws Exception {
+       try {
+              //Change it to production page
+            driver.get("https://lambdatest.github.io/sample-todo-app/");
 
-//Let's mark done first two items in the list.
-driver.findElement(By.name("li1")).click();
-driver.findElement(By.name("li2")).click();
+              //Let's mark done first two items in the list.
+              driver.findElement(By.name("li1")).click();
+            driver.findElement(By.name("li2")).click();
 
-// Let's add an item in the list.
-driver.findElement(By.id("sampletodotext")).sendKeys("Yey, Let's add it to list");
-driver.findElement(By.id("addbutton")).click();
+             // Let's add an item in the list.
+              driver.findElement(By.id("sampletodotext")).sendKeys("Yey, Let's add it to list");
+            driver.findElement(By.id("addbutton")).click();
 
-// Let's check that the item we added is added in the list.
-String enteredText =       driver.findElementByXPath("/html/body/div/div/div/ul/li[6]/span").getText();
-if (enteredText.equals("Yey, Let's add it to list")) {
-status = true;
-}
-} catch (Exception e) {
-System.out.println(e.getMessage());
-}
-}
-@After
-public void tearDown() throws Exception {
-if (driver != null) {
-((JavascriptExecutor) driver).executeScript("lambda-status=" + status);
-driver.quit();
-}
-}
+              // Let's check that the item we added is added in the list.
+            String enteredText =       driver.findElementByXPath("/html/body/div/div/div/ul/li[6]/span").getText();
+            if (enteredText.equals("Yey, Let's add it to list")) {
+                status = true;
+            }
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+    }
+    @After
+    public void tearDown() throws Exception {
+       if (driver != null) {
+            ((JavascriptExecutor) driver).executeScript("lambda-status=" + status);
+            driver.quit();
+        }
+    }
 }
 ```
 
@@ -182,35 +182,35 @@ import org.junit.runners.model.RunnerScheduler;
 
 public class Parallelized extends Parameterized {
 
-private static class ThreadPoolScheduler implements RunnerScheduler {
-private ExecutorService executor;
+    private static class ThreadPoolScheduler implements RunnerScheduler {
+        private ExecutorService executor;
 
-public ThreadPoolScheduler() {
-String threads = System.getProperty("junit.parallel.threads", "15");
-int numThreads = Integer.parseInt(threads);
-executor = Executors.newFixedThreadPool(numThreads);
-}
+        public ThreadPoolScheduler() {
+            String threads = System.getProperty("junit.parallel.threads", "15");
+            int numThreads = Integer.parseInt(threads);
+            executor = Executors.newFixedThreadPool(numThreads);
+        }
 
-@Override
-public void finished() {
-executor.shutdown();
-try {
-executor.awaitTermination(10, TimeUnit.MINUTES);
-} catch (InterruptedException exc) {
-throw new RuntimeException(exc);
-}
-}
+        @Override
+        public void finished() {
+            executor.shutdown();
+            try {
+                executor.awaitTermination(10, TimeUnit.MINUTES);
+            } catch (InterruptedException exc) {
+                throw new RuntimeException(exc);
+            }
+        }
 
-@Override
-public void schedule(Runnable childStatement) {
-executor.submit(childStatement);
-}
-}
+        @Override
+        public void schedule(Runnable childStatement) {
+            executor.submit(childStatement);
+        }
+    }
 
-public Parallelized(Class<?> klass) throws Throwable {
-super(klass);
-setScheduler(new ThreadPoolScheduler());
-}
+    public Parallelized(Class<?> klass) throws Throwable {
+        super(klass);
+        setScheduler(new ThreadPoolScheduler());
+    }
 }
 ```
 
@@ -231,76 +231,76 @@ import java.util.HashMap;
 import java.util.LinkedList;
 @RunWith(Parallelized.class)
 public class JUnitConcurrentTodo {
-public String username = "YOUR_LT_USERNAME";
-public String accesskey = "YOUR_LT_ACCESS_KEY";
-public String gridURL = "@hub.lambdatest.com/wd/hub";
-public String platform;
-public String browserName;
-public String browserVersion;
-public RemoteWebDriver driver = null;
-boolean status = false;
-@Parameterized.Parameters
-public static LinkedList<String[]> getEnvironments() throws Exception {
-LinkedList<String[]> env = new LinkedList<String[]>();
-env.add(new String[]{"Windows 10", "chrome", "latest"});
-env.add(new String[]{"macOS Monterey","firefox","latest"});
-env.add(new String[]{"Windows 10","internet explorer","latest"});
-return env;
-}
-public JUnitConcurrentTodo(String platform, String browserName, String browserVersion) {
-this.platform = platform;
-this.browserName = browserName;
-this.browserVersion = browserVersion;
-}
-@Before
-public void setUp() throws Exception {
-ChromeOptions browserOptions = new ChromeOptions();
-browserOptions.setPlatformName(platform);
-browserOptions.setBrowserVersion(browserVersion);
+     public String username = "YOUR_LT_USERNAME";
+    public String accesskey = "YOUR_LT_ACCESS_KEY";
+    public String gridURL = "@hub.lambdatest.com/wd/hub";
+     public String platform;
+     public String browserName;
+     public String browserVersion;
+    public RemoteWebDriver driver = null;
+     boolean status = false;
+        @Parameterized.Parameters
+     public static LinkedList<String[]> getEnvironments() throws Exception {
+        LinkedList<String[]> env = new LinkedList<String[]>();
+        env.add(new String[]{"Windows 10", "chrome", "latest"});
+        env.add(new String[]{"macOS Monterey","firefox","latest"});
+        env.add(new String[]{"Windows 10","internet explorer","latest"});
+        return env;
+    }
+    public JUnitConcurrentTodo(String platform, String browserName, String browserVersion) {
+        this.platform = platform;
+        this.browserName = browserName;
+        this.browserVersion = browserVersion;
+     }
+    @Before
+    public void setUp() throws Exception {
+       ChromeOptions browserOptions = new ChromeOptions();
+        browserOptions.setPlatformName(platform);
+        browserOptions.setBrowserVersion(browserVersion);
 
-HashMap<String, Object> ltOptions = new HashMap<String, Object>();
-ltOptions.put("build", "JUnitParallelSample");
-ltOptions.put("name", "JUnitParallelSampleTest");
-ltOptions.put("w3c", true);
-browserOptions.setCapability("LT:Options", ltOptions);
-try {
-driver = new RemoteWebDriver(new URL("https://" + username + ":" + accesskey + gridURL), browserOptions);
-} catch (MalformedURLException e) {
-System.out.println("Invalid grid URL");
-} catch (Exception e) {
-System.out.println(e.getMessage());
-}
-}
-@Test
-public void testParallel() throws Exception {
-try {
-//Change it to production page
-driver.get("https://lambdatest.github.io/sample-todo-app/");
+        HashMap<String, Object> ltOptions = new HashMap<String, Object>();
+        ltOptions.put("build", "JUnitParallelSample");
+        ltOptions.put("name", "JUnitParallelSampleTest");
+        ltOptions.put("w3c", true);
+        browserOptions.setCapability("LT:Options", ltOptions);
+        try {
+            driver = new RemoteWebDriver(new URL("https://" + username + ":" + accesskey + gridURL), browserOptions);
+        } catch (MalformedURLException e) {
+            System.out.println("Invalid grid URL");
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+    }
+    @Test
+    public void testParallel() throws Exception {
+       try {
+              //Change it to production page
+            driver.get("https://lambdatest.github.io/sample-todo-app/");
 
-//Let's mark done first two items in the list.
-driver.findElement(By.name("li1")).click();
-driver.findElement(By.name("li2")).click();
+              //Let's mark done first two items in the list.
+              driver.findElement(By.name("li1")).click();
+            driver.findElement(By.name("li2")).click();
 
-// Let's add an item in the list.
-driver.findElement(By.id("sampletodotext")).sendKeys("Yey, Let's add it to list");
-driver.findElement(By.id("addbutton")).click();
+             // Let's add an item in the list.
+              driver.findElement(By.id("sampletodotext")).sendKeys("Yey, Let's add it to list");
+            driver.findElement(By.id("addbutton")).click();
 
-// Let's check that the item we added is added in the list.
-String enteredText = driver.findElementByXPath("/html/body/div/div/div/ul/li[6]/span").getText();
-if (enteredText.equals("Yey, Let's add it to list")) {
-status = true;
-}
-} catch (Exception e) {
-System.out.println(e.getMessage());
-}
-}
-@After
-public void tearDown() throws Exception {
-if (driver != null) {
-((JavascriptExecutor) driver).executeScript("lambda-status=" + status);
-driver.quit();
-}
-}
+              // Let's check that the item we added is added in the list.
+            String enteredText = driver.findElementByXPath("/html/body/div/div/div/ul/li[6]/span").getText();
+            if (enteredText.equals("Yey, Let's add it to list")) {
+                status = true;
+            }
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+    }
+    @After
+    public void tearDown() throws Exception {
+       if (driver != null) {
+            ((JavascriptExecutor) driver).executeScript("lambda-status=" + status);
+            driver.quit();
+        }
+    }
 }
 ```
 

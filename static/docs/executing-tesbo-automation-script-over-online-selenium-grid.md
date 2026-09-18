@@ -47,34 +47,34 @@ Update `config.json` to point to the TestMu AI Selenium Grid. Set the Selenium a
 
 ```json
 {
-"run": {
-"baseUrl": "https://www.seleniumeasy.com/test/",
-"seleniumAddress": "https://{userName}:{ApiKey}@hub.lambdatest.com/wd/hub",
-"by": {
-"tag": ["FO1"]
-},
-"browser": {
-"name": ["chrome"]
-},
-"capabilities": {
-"chrome": {
-"build": "Tesbo_With_TestMuAI",
-"name": "Tesbo",
-"platformName": "Windows 10",
-"browserName": "Chrome",
-"browserVersion": "latest"
-}
-},
-"parallel": {
-"status": false,
-"count": "3"
-},
-"retryAnalyser": {
-"count": "0"
-},
-"highlightElement": true,
-"IsGrid": true
-}
+  "run": {
+    "baseUrl": "https://www.seleniumeasy.com/test/",
+    "seleniumAddress": "https://{userName}:{ApiKey}@hub.lambdatest.com/wd/hub",
+    "by": {
+      "tag": ["FO1"]
+    },
+    "browser": {
+      "name": ["chrome"]
+    },
+    "capabilities": {
+      "chrome": {
+        "build": "Tesbo_With_TestMuAI",
+        "name": "Tesbo",
+        "platformName": "Windows 10",
+        "browserName": "Chrome",
+        "browserVersion": "latest"
+      }
+    },
+    "parallel": {
+      "status": false,
+      "count": "3"
+    },
+    "retryAnalyser": {
+      "count": "0"
+    },
+    "highlightElement": true,
+    "IsGrid": true
+  }
 }
 ```
 
@@ -99,8 +99,8 @@ Set the parallel status to `true` and specify the count in `config.json`:
 
 ```json
 "parallel": {
-"status": true,
-"count": "3"
+  "status": true,
+  "count": "3"
 }
 ```
 
@@ -108,27 +108,27 @@ To run across multiple browsers, add more capabilities:
 
 ```json
 "capabilities": {
-"chrome": {
-"build": "Tesbo_With_TestMuAI",
-"name": "Tesbo",
-"platformName": "Windows 10",
-"browserName": "Chrome",
-"browserVersion": "latest"
-},
-"firefox": {
-"build": "Tesbo_With_TestMuAI",
-"name": "Tesbo",
-"platformName": "Windows 10",
-"browserName": "Firefox",
-"browserVersion": "latest"
-},
-"safari": {
-"build": "Tesbo_With_TestMuAI",
-"name": "Tesbo",
-"platformName": "MacOS Catalina",
-"browserName": "Safari",
-"browserVersion": "latest"
-}
+  "chrome": {
+    "build": "Tesbo_With_TestMuAI",
+    "name": "Tesbo",
+    "platformName": "Windows 10",
+    "browserName": "Chrome",
+    "browserVersion": "latest"
+  },
+  "firefox": {
+    "build": "Tesbo_With_TestMuAI",
+    "name": "Tesbo",
+    "platformName": "Windows 10",
+    "browserName": "Firefox",
+    "browserVersion": "latest"
+  },
+  "safari": {
+    "build": "Tesbo_With_TestMuAI",
+    "name": "Tesbo",
+    "platformName": "MacOS Catalina",
+    "browserName": "Safari",
+    "browserVersion": "latest"
+  }
 }
 ```
 

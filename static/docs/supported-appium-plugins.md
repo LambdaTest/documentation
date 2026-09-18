@@ -19,10 +19,10 @@ Below is a list of the supported Appium plugins on TestMu AI:
 
 ```python
 capabilities = {
-"appiumVersion": "2.2.1",
-"platformName": "iOS",
-"appiumPlugins": ["images", "element-wait", "gestures"],
-# Add other capabilities as needed
+    "appiumVersion": "2.2.1",
+    "platformName": "iOS",
+    "appiumPlugins": ["images", "element-wait", "gestures"],
+    # Add other capabilities as needed
 }
 ```
 

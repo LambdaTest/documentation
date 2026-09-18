@@ -95,14 +95,14 @@ capabilities.setCapability("headless",true);
 
 ```php
 $capabilities = array(
-"build" => "your build name",
-"name" => "your test name",
-"platform" => "MacOS Catalina",
-"browserName" => "Chrome",
-"version" => "86.0",
+		"build" => "your build name",
+		"name" => "your test name",
+		"platform" => "MacOS Catalina",
+		"browserName" => "Chrome",
+		"version" => "86.0",
 
-"headless" => true
-)
+		"headless" => true
+		)
 ```
 
 **Ruby**
@@ -122,28 +122,28 @@ capabilities["headless"] = true
 
 ```javascript
 var capabilities = {
-"build" : "your build name",
-"name" : "your test name",
-"platform" : "MacOS Catalina",
-"browserName" : "Chrome",
-"version" : "86.0",
+		"build" : "your build name",
+		"name" : "your test name",
+		"platform" : "MacOS Catalina",
+		"browserName" : "Chrome",
+		"version" : "86.0",
 
-"headless" : true
-}
+		"headless" : true
+	}
 ```
 
 **Python**
 
 ```py
 capabilities = {
-"build" : "your build name",
-"name" : "your test name",
-"platform" : "MacOS Catalina",
-"browserName" : "Chrome",
-"version" : "86.0",
+		"build" : "your build name",
+		"name" : "your test name",
+		"platform" : "MacOS Catalina",
+		"browserName" : "Chrome",
+		"version" : "86.0",
 
-"headless" : True
-}
+		"headless" : True
+	}
 ```
 
 ## Perform Headless Browser Testing on TestMu AI
@@ -167,69 +167,69 @@ import org.testng.annotations.Test;
 
 public class HeadlessAutomation {
 
-private static RemoteWebDriver driver;
-private static String Status="failed";
+	private static RemoteWebDriver driver;
+	private static String Status="failed";
 
-@BeforeSuite
-public void setup() throws MalformedURLException {
+	@BeforeSuite
+	public void setup() throws MalformedURLException {
 
-try {
-String username = System.getenv("LT_USERNAME");
-String authkey = System.getenv("LT_ACCESS_KEY");
-String hub = "@hub.lambdatest.com/wd/hub";
+		try {
+			String username = System.getenv("LT_USERNAME");
+			String authkey = System.getenv("LT_ACCESS_KEY");
+			String hub = "@hub.lambdatest.com/wd/hub";
 
-DesiredCapabilities caps = new DesiredCapabilities();
-caps.setCapability("browser", "Chrome");
-caps.setCapability("version", "86");
-caps.setCapability("platform", "MacOS Catalina");
-caps.setCapability("build", "Headless Automation");
-caps.setCapability("name", "Headless Automation");
-caps.setCapability("network", true);
-caps.setCapability("visual", true);
-caps.setCapability("video", true);
-caps.setCapability("console", true);
+			DesiredCapabilities caps = new DesiredCapabilities();
+			caps.setCapability("browser", "Chrome");
+			caps.setCapability("version", "86");
+			caps.setCapability("platform", "MacOS Catalina");
+			caps.setCapability("build", "Headless Automation");
+			caps.setCapability("name", "Headless Automation");
+			caps.setCapability("network", true);
+			caps.setCapability("visual", true);
+			caps.setCapability("video", true);
+			caps.setCapability("console", true);
 
-// Capability setting to enable Headless browsing
-caps.setCapability("headless",true);
+			// Capability setting to enable Headless browsing
+			caps.setCapability("headless",true);
 
-System.out.println("Desired Caps: " + caps);
-driver = new RemoteWebDriver(new URL("https://" + username + ":" + authkey + hub), caps);
-}
-catch(Exception e)
-{
-System.out.println(e);
-}
-}
+			System.out.println("Desired Caps: " + caps);
+			driver = new RemoteWebDriver(new URL("https://" + username + ":" + authkey + hub), caps);
+		}
+		catch(Exception e)
+		{
+			System.out.println(e);
+		}
+	}
 
-@Test
-public static void testAssertion() {
+	@Test
+	public static void testAssertion() {
 
-try {
-driver.get("https://opensource-demo.orangehrmlive.com/"); //define the url
+		try {
+			driver.get("https://opensource-demo.orangehrmlive.com/"); //define the url
 
-String pageTitle = driver.getTitle();		//get the title of the webpage
-System.out.println("The title of this page is ===> " +pageTitle);
-Assert.assertEquals("OrangeHRM", pageTitle);	//verify the title of the webpage
+			String pageTitle = driver.getTitle();		//get the title of the webpage
+			System.out.println("The title of this page is ===> " +pageTitle);
+			Assert.assertEquals("OrangeHRM", pageTitle);	//verify the title of the webpage
 
-driver.findElement(By.id("txtUsername")).clear();//clear the input field before entering any value
-driver.findElement(By.id("txtUsername")).sendKeys("Admin");//enter the value of username
-driver.findElement(By.id("txtPassword")).clear();
-driver.findElement(By.id("txtPassword")).sendKeys("admin123");//enter the value of password
-driver.findElement(By.id("btnLogin")).click();		//click Login button
-System.out.println("Successfully logged in");
-Status = "passed";
-}
-catch(Exception e)
-{
-Status = "failed";
-}
-}
+			driver.findElement(By.id("txtUsername")).clear();//clear the input field before entering any value
+			driver.findElement(By.id("txtUsername")).sendKeys("Admin");//enter the value of username
+			driver.findElement(By.id("txtPassword")).clear();
+			driver.findElement(By.id("txtPassword")).sendKeys("admin123");//enter the value of password
+			driver.findElement(By.id("btnLogin")).click();		//click Login button
+			System.out.println("Successfully logged in");
+			Status = "passed";
+		}
+		catch(Exception e)
+		{
+			Status = "failed";
+		}
+	}
 
-@AfterSuite
-public void tearDown() {
-driver.executeScript("lambda-status=" + Status);
-driver.quit();
-}
+	@AfterSuite
+	public void tearDown() {
+		driver.executeScript("lambda-status=" + Status);
+		driver.quit();
+	}
 
 }
 ```

@@ -39,27 +39,27 @@ capabilities.setCapability("slackChannel", "mobile-test-results");
 
 ```python
 desired_caps = {
-"platformName": "Android",
-"deviceName": "Galaxy S23",
-"app": "lt://APP123456789",
-"build": "Regression Suite v2.0",
-"name": "Login Test",
-"isRealMobile": True,
-#highlight-next-line
-"slackChannel": "mobile-test-results"
+    "platformName": "Android",
+    "deviceName": "Galaxy S23",
+    "app": "lt://APP123456789",
+    "build": "Regression Suite v2.0",
+    "name": "Login Test",
+    "isRealMobile": True,
+    #highlight-next-line
+    "slackChannel": "mobile-test-results"
 }
 ```
 
 ```javascript
 const capabilities = {
-platformName: "Android",
-deviceName: "Galaxy S23",
-app: "lt://APP123456789",
-build: "Regression Suite v2.0",
-name: "Login Test",
-isRealMobile: true,
-//highlight-next-line
-slackChannel: "mobile-test-results"
+  platformName: "Android",
+  deviceName: "Galaxy S23",
+  app: "lt://APP123456789",
+  build: "Regression Suite v2.0",
+  name: "Login Test",
+  isRealMobile: true,
+  //highlight-next-line
+  slackChannel: "mobile-test-results"
 };
 ```
 

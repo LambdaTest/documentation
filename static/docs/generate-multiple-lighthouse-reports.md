@@ -26,10 +26,10 @@ Execute the hook multiple times with different URLs to generate reports for each
 - Successful generation of the report returns a *200* status and a response body containing:
 
 ``` java
-{
-"message": "Lighthouse report generated successfully",
-"data": "<STRINGIFIED LIGHTHOUSE JSON REPORT>"
-}
-```
+  {
+    "message": "Lighthouse report generated successfully",
+    "data": "<STRINGIFIED LIGHTHOUSE JSON REPORT>"
+  }
+  ```
 
 - Lighthouse reports for all hooks executed are visible on the TestMu AI Web Automation Dashboard under the **Performance** tab.

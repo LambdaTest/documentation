@@ -64,11 +64,11 @@ In the test script, update your test capabilities. This code passes browser, bro
 
 ```python
 capabilities = {
-"build": "UnitTest-Selenium-Sample",
-"name": "UnitTest-Selenium-Test",
-"platformName": "Windows 11",
-"browserName": "Chrome",
-"browserVersion": "latest",
+        "build": "UnitTest-Selenium-Sample",
+        "name": "UnitTest-Selenium-Test",
+        "platformName": "Windows 11",
+        "browserName": "Chrome",
+        "browserVersion": "latest",
 }
 ```
 

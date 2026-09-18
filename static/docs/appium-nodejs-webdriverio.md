@@ -98,115 +98,115 @@ An automation script for the sample application available above has been provide
 
 ```javascript title="specs/ios-test.js"
 describe("Proverbial APK", () => {
-it("Changes color", async () => {
-var color = await $("id=color");
-await color.waitForDisplayed({ timeout: 30000 });
-await color.click();
-await color.click();
-});
+  it("Changes color", async () => {
+    var color = await $("id=color");
+    await color.waitForDisplayed({ timeout: 30000 });
+    await color.click();
+    await color.click();
+  });
 
-it("Changes text", async () => {
-var text = await $("id=Text");
-await text.waitForDisplayed({ timeout: 30000 });
-await text.click();
-});
+  it("Changes text", async () => {
+    var text = await $("id=Text");
+    await text.waitForDisplayed({ timeout: 30000 });
+    await text.click();
+  });
 
-it("Toast", async () => {
-var toast = await $("id=toast");
-await toast.waitForDisplayed({ timeout: 30000 });
-await toast.click();
-});
+  it("Toast", async () => {
+    var toast = await $("id=toast");
+    await toast.waitForDisplayed({ timeout: 30000 });
+    await toast.click();
+  });
 
-it("Notification", async () => {
-var nf = await $("id=notification");
-await nf.waitForDisplayed({ timeout: 30000 });
-await nf.click();
-});
+  it("Notification", async () => {
+    var nf = await $("id=notification");
+    await nf.waitForDisplayed({ timeout: 30000 });
+    await nf.click();
+  });
 
-it("Geolocation", async () => {
-var geo = await $("id=geoLocation");
-await geo.waitForDisplayed({ timeout: 30000 });
-await geo.click();
+  it("Geolocation", async () => {
+    var geo = await $("id=geoLocation");
+    await geo.waitForDisplayed({ timeout: 30000 });
+    await geo.click();
 
-driver.back();
-});
+    driver.back();
+  });
 
-it("SpeedTest", async () => {
-var st = await $("id=speedTest");
-await st.waitForDisplayed({ timeout: 30000 });
-await st.click();
+  it("SpeedTest", async () => {
+    var st = await $("id=speedTest");
+    await st.waitForDisplayed({ timeout: 30000 });
+    await st.click();
 
-await browser.pause(10000);
-driver.back();
-});
+    await browser.pause(10000);
+    driver.back();
+  });
 
-it("Browser", async () => {
-var browser = await $("id=Browser");
-await browser.waitForDisplayed({ timeout: 30000 });
-await browser.click();
+  it("Browser", async () => {
+    var browser = await $("id=Browser");
+    await browser.waitForDisplayed({ timeout: 30000 });
+    await browser.click();
 
-let el7 = await $("id=url");
-await el7.click();
-await el7.setValue("https://www.testmuai.com/");
-driver.back();
-});
+    let el7 = await $("id=url");
+    await el7.click();
+    await el7.setValue("https://www.testmuai.com/");
+    driver.back();
+  });
 });
 ```
 
 ```javascript title="specs/android-test.js"
 describe("Proverbial APK", () => {
-it("Changes color", async () => {
-var color = await $("id=color");
-await color.waitForDisplayed({ timeout: 30000 });
-await color.click();
-await color.click();
-});
+  it("Changes color", async () => {
+    var color = await $("id=color");
+    await color.waitForDisplayed({ timeout: 30000 });
+    await color.click();
+    await color.click();
+  });
 
-it("Changes text", async () => {
-var text = await $("id=Text");
-await text.waitForDisplayed({ timeout: 30000 });
-await text.click();
-});
+  it("Changes text", async () => {
+    var text = await $("id=Text");
+    await text.waitForDisplayed({ timeout: 30000 });
+    await text.click();
+  });
 
-it("Toast", async () => {
-var toast = await $("id=toast");
-await toast.waitForDisplayed({ timeout: 30000 });
-await toast.click();
-});
+  it("Toast", async () => {
+    var toast = await $("id=toast");
+    await toast.waitForDisplayed({ timeout: 30000 });
+    await toast.click();
+  });
 
-it("Notification", async () => {
-var nf = await $("id=notification");
-await nf.waitForDisplayed({ timeout: 30000 });
-await nf.click();
-});
+  it("Notification", async () => {
+    var nf = await $("id=notification");
+    await nf.waitForDisplayed({ timeout: 30000 });
+    await nf.click();
+  });
 
-it("Geolocation", async () => {
-var geo = await $("id=geoLocation");
-await geo.waitForDisplayed({ timeout: 30000 });
-await geo.click();
+  it("Geolocation", async () => {
+    var geo = await $("id=geoLocation");
+    await geo.waitForDisplayed({ timeout: 30000 });
+    await geo.click();
 
-driver.back();
-});
+    driver.back();
+  });
 
-it("SpeedTest", async () => {
-var st = await $("id=speedTest");
-await st.waitForDisplayed({ timeout: 30000 });
-await st.click();
+  it("SpeedTest", async () => {
+    var st = await $("id=speedTest");
+    await st.waitForDisplayed({ timeout: 30000 });
+    await st.click();
 
-await browser.pause(10000);
-driver.back();
-});
+    await browser.pause(10000);
+    driver.back();
+  });
 
-it("Browser", async () => {
-var browser = await $("id=Browser");
-await browser.waitForDisplayed({ timeout: 30000 });
-await browser.click();
+  it("Browser", async () => {
+    var browser = await $("id=Browser");
+    await browser.waitForDisplayed({ timeout: 30000 });
+    await browser.click();
 
-let el7 = await $("id=url");
-await el7.click();
-await el7.setValue("https://www.testmuai.com/");
-driver.back();
-});
+    let el7 = await $("id=url");
+    await el7.click();
+    await el7.setValue("https://www.testmuai.com/");
+    driver.back();
+  });
 });
 ```
 
@@ -218,45 +218,45 @@ We are passing platform name, platform version, device name and app url (generat
 
 ```javascript title="ios-sample/ios-single.conf.js"
 exports.config = {
-//highlight-next-line
-user: process.env.LT_USERNAME || "YOUR_USERNAME",
-//highlight-next-line
-key: process.env.LT_ACCESS_KEY || "YOUR_ACCESS_KEY",
+  //highlight-next-line
+  user: process.env.LT_USERNAME || "YOUR_USERNAME",
+  //highlight-next-line
+  key: process.env.LT_ACCESS_KEY || "YOUR_ACCESS_KEY",
 
-updateJob: false,
-//highlight-next-line
-specs: ["./../specs/ios-test.js"], //path of your test script
-exclude: [],
+  updateJob: false,
+  //highlight-next-line
+  specs: ["./../specs/ios-test.js"], //path of your test script
+  exclude: [],
 
-capabilities: [
-{
-build: "NodeJS WebDriverIO iOS",
-name: "Sample Test - WebDriverIO",
-isRealMobile: true,
-deviceName: "iPhone 13 Pro",
-platformVersion: "15",
-platformName: "iOS",
-//highlight-next-line
-app: "YOUR_APP_URL", //Enter your app (.ipa) url
-},
-],
+  capabilities: [
+    {
+      build: "NodeJS WebDriverIO iOS",
+      name: "Sample Test - WebDriverIO",
+      isRealMobile: true,
+      deviceName: "iPhone 13 Pro",
+      platformVersion: "15",
+      platformName: "iOS",
+      //highlight-next-line
+      app: "YOUR_APP_URL", //Enter your app (.ipa) url
+    },
+  ],
 
-logLevel: "info",
-coloredLogs: true,
-screenshotPath: "./errorShots/",
-baseUrl: "",
-waitforTimeout: 10000,
-connectionRetryTimeout: 90000,
-connectionRetryCount: 3,
-path: "/wd/hub",
-hostname: "mobile-hub.lambdatest.com",
-port: 80,
+  logLevel: "info",
+  coloredLogs: true,
+  screenshotPath: "./errorShots/",
+  baseUrl: "",
+  waitforTimeout: 10000,
+  connectionRetryTimeout: 90000,
+  connectionRetryCount: 3,
+  path: "/wd/hub",
+  hostname: "mobile-hub.lambdatest.com",
+  port: 80,
 
-framework: "mocha",
-mochaOpts: {
-ui: "bdd",
-timeout: 20000,
-},
+  framework: "mocha",
+  mochaOpts: {
+    ui: "bdd",
+    timeout: 20000,
+  },
 };
 ```
 
@@ -264,44 +264,44 @@ timeout: 20000,
 
 ```javascript title="android-sample/android-single.conf.js"
 exports.config = {
-//highlight-next-line
-user: process.env.LT_USERNAME || "YOUR_USERNAME",
-//highlight-next-line
-key: process.env.LT_ACCESS_KEY || "YOUR_ACCESS_KEY",
+  //highlight-next-line
+  user: process.env.LT_USERNAME || "YOUR_USERNAME",
+  //highlight-next-line
+  key: process.env.LT_ACCESS_KEY || "YOUR_ACCESS_KEY",
 
-updateJob: false,
-//highlight-next-line
-specs: ["./../specs/android-test.js"], //path of your test script
-exclude: [],
+  updateJob: false,
+  //highlight-next-line
+  specs: ["./../specs/android-test.js"], //path of your test script
+  exclude: [],
 
-capabilities: [
-{
-build: "NodeJS WebDriverIO Android",
-name: "Sample Test - WebDriverIO",
-isRealMobile: true,
-platformName: "Android",
-deviceName: "Galaxy S9",
-platformVersion: "10",
-app: "YOUR_APP_URL", //Enter your app (.apk) url
-},
-],
+  capabilities: [
+    {
+      build: "NodeJS WebDriverIO Android",
+      name: "Sample Test - WebDriverIO",
+      isRealMobile: true,
+      platformName: "Android",
+      deviceName: "Galaxy S9",
+      platformVersion: "10",
+      app: "YOUR_APP_URL", //Enter your app (.apk) url
+    },
+  ],
 
-logLevel: "info",
-coloredLogs: true,
-screenshotPath: "./errorShots/",
-baseUrl: "",
-waitforTimeout: 10000,
-connectionRetryTimeout: 90000,
-connectionRetryCount: 3,
-path: "/wd/hub",
-hostname: "mobile-hub.lambdatest.com",
-port: 80,
+  logLevel: "info",
+  coloredLogs: true,
+  screenshotPath: "./errorShots/",
+  baseUrl: "",
+  waitforTimeout: 10000,
+  connectionRetryTimeout: 90000,
+  connectionRetryCount: 3,
+  path: "/wd/hub",
+  hostname: "mobile-hub.lambdatest.com",
+  port: 80,
 
-framework: "mocha",
-mochaOpts: {
-ui: "bdd",
-timeout: 20000,
-},
+  framework: "mocha",
+  mochaOpts: {
+    ui: "bdd",
+    timeout: 20000,
+  },
 };
 ```
 
@@ -340,8 +340,8 @@ The webdriverio-skill package includes:
 webdriverio-skill/
 ├── SKILL.md
 └── reference/
-├── playbook.md
-└── advanced-patterns.md
+    ├── playbook.md
+    └── advanced-patterns.md
 ```
 
 It provides structured guidance for:

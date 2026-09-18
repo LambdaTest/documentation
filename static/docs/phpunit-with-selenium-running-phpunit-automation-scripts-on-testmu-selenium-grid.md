@@ -102,12 +102,12 @@ In `LambdaTestSetup.php` file, update your test capabilities to select OS, brows
 
 ```php
 $capabilities = array(
-"build" => "Sample PHPUnit Build",
-"name" => "Sample PHPUnit Test",
-"platform" => "Windows 10",
-"browserName" => "Chrome",
-"version" => "latest"
-);
+	"build" => "Sample PHPUnit Build",
+	"name" => "Sample PHPUnit Test",
+	"platform" => "Windows 10",
+	"browserName" => "Chrome",
+	"version" => "latest"
+ );
 ```
 
 **Capabilities Generator**

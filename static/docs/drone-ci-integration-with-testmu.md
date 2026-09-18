@@ -65,40 +65,40 @@ kind: pipeline
 name: Build
 
 trigger:
-event:
-- push
+  event:
+  - push
 
 steps:
 - name: Tunnel
-image: lambdatest/tunnel
-environment:
-PASSWORD:
-from_secret: LT_ACCESS_KEY
-USERNAME:
-from_secret: LT_USERNAME
-commands:
-- ls
-- apt-get update && \
-- apt-get upgrade -y && \
-- apt-get install -y wget unzip
-- wget https://downloads.lambdatest.com/tunnel/alpha/linux/64bit/LT_Linux.zip && \
-- unzip LT_Linux.zip && \
-- rm LT_Linux.zip && \
-- chmod +x /LT
-- ls
-- /LT -user $USERNAME -key $PASSWORD &
+  image: lambdatest/tunnel
+  environment:
+    PASSWORD:
+      from_secret: LT_ACCESS_KEY
+    USERNAME:
+      from_secret: LT_USERNAME
+  commands:
+  - ls
+  - apt-get update && \
+  - apt-get upgrade -y && \
+  - apt-get install -y wget unzip
+  - wget https://downloads.lambdatest.com/tunnel/alpha/linux/64bit/LT_Linux.zip && \
+  - unzip LT_Linux.zip && \
+  - rm LT_Linux.zip && \
+  - chmod +x /LT
+  - ls
+  - /LT -user $USERNAME -key $PASSWORD &
 
 - name: Test
-image: node
-environment:
-PASSWORD:
-from_secret: LT_ACCESS_KEY
-USERNAME:
-from_secret: LT_USERNAME
-commands:
-- export LT_USERNAME=$USERNAME
-- export LT_ACCESS_KEY=$PASSWORD
-- npm install
+  image: node
+  environment:
+    PASSWORD:
+      from_secret: LT_ACCESS_KEY
+    USERNAME:
+      from_secret: LT_USERNAME
+  commands:
+  - export LT_USERNAME=$USERNAME
+  - export LT_ACCESS_KEY=$PASSWORD
+  - npm install
 ```
 
 Let’s try to understand what’s written in this YAML file by deconstructing it into multiple steps.
@@ -116,8 +116,8 @@ We are making a docker pipeline so here the type defined will be docker. (Note: 
 
 ```
 trigger:
-event:
-- push
+  event:
+  - push
 ```
 
 Here the pipeline will be triggered when the event will be a push event received through the webhook. This can be changed to pull events, commit events, etc as well. (Note: To see the full list of ways and events to restrict over pipeline execution kindly refer to official documentation)
@@ -128,23 +128,23 @@ Here the pipeline will be triggered when the event will be a push event received
 
 ```
 - name: Tunnel
-image: lambdatest/tunnel
-environment:
-PASSWORD:
-from_secret: LT_ACCESS_KEY
-USERNAME:
-from_secret: LT_USERNAME
-commands:
-- ls
-- apt-get update && \
-- apt-get upgrade -y && \
-- apt-get install -y wget unzip
-- wget https://downloads.lambdatest.com/tunnel/alpha/linux/64bit/LT_Linux.zip && \
-- unzip LT_Linux.zip && \
-- rm LT_Linux.zip && \
-- chmod +x /LT
-- ls
-- /LT -user $USERNAME -key $PASSWORD &
+  image: lambdatest/tunnel
+  environment:
+    PASSWORD:
+      from_secret: LT_ACCESS_KEY
+    USERNAME:
+      from_secret: LT_USERNAME
+  commands:
+  - ls
+  - apt-get update && \
+  - apt-get upgrade -y && \
+  - apt-get install -y wget unzip
+  - wget https://downloads.lambdatest.com/tunnel/alpha/linux/64bit/LT_Linux.zip && \
+  - unzip LT_Linux.zip && \
+  - rm LT_Linux.zip && \
+  - chmod +x /LT
+  - ls
+  - /LT -user $USERNAME -key $PASSWORD &
 ```
 
 Here we are giving a name to our step, i.e. "Tunnel". Image is used for builder containers and commands are the steps to be executed to connect to the TestMu AI Tunnel, build our source code, and make it executable. Here the LT_ACCESS_KEY and LT_USERNAME are fetched from Secrets.
@@ -153,16 +153,16 @@ Here we are giving a name to our step, i.e. "Tunnel". Image is used for builder 
 
 ```
 - name: SampleTest
-image: node
-environment:
-PASSWORD:
-from_secret: LT_ACCESS_KEY
-USERNAME:
-from_secret: LT_USERNAME
-commands:
-- export LT_USERNAME=$USERNAME
-- export LT_ACCESS_KEY=$PASSWORD
-- npm install
+  image: node
+  environment:
+    PASSWORD:
+      from_secret: LT_ACCESS_KEY
+    USERNAME:
+      from_secret: LT_USERNAME
+  commands:
+  - export LT_USERNAME=$USERNAME
+  - export LT_ACCESS_KEY=$PASSWORD
+  - npm install
 ```
 
 In this step, we are just installing node on our TestMu AI Tunnel.
@@ -171,17 +171,17 @@ Similarly, we can also write a Test to deploy our executable formed in the build
 
 ```
 - name: upload
-image: plugins/s3
-settings:
-bucket: lambda-devops-use-only
-region: us-east-1
-access_key:
-from_secret: aws_access_key_id
-secret_key:
-from_secret: aws_secret_access_key
-source: mobile-node-remote-client
-target: /magicleap/LMRC/latest/
-acl: public-read
+  image: plugins/s3
+  settings:
+    bucket: lambda-devops-use-only
+    region: us-east-1
+    access_key:
+      from_secret: aws_access_key_id
+    secret_key:
+      from_secret: aws_secret_access_key
+    source: mobile-node-remote-client
+    target: /magicleap/LMRC/latest/
+    acl: public-read
 ```
 
 Here AWS credentials are fetched through the secrets.
@@ -209,7 +209,7 @@ If you want to restrict the default clone in the pipeline and want to use your c
 
 ```
 clone:
-disable:  true
+    disable:  true
 ```
 
 5. Now based on the tests in the .drone.yml file, this activity can pass or fail. If passed, a green tick will appear on the left of the activity name. Else if failed, a red cross will appear instead, as shown below.

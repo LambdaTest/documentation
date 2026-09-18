@@ -101,9 +101,9 @@ Add the Playwright dependency to your `pom.xml`:
 
 ```xml
 <dependency>
-<groupId>com.microsoft.playwright</groupId>
-<artifactId>playwright</artifactId>
-<version>1.61.0</version>
+    <groupId>com.microsoft.playwright</groupId>
+    <artifactId>playwright</artifactId>
+    <version>1.61.0</version>
 </dependency>
 ```
 
@@ -123,61 +123,61 @@ Node.js supports both the Chromium API (`chromium.connect()`) and the Android-na
 const { chromium } = require("playwright");
 
 (async () => {
-const capabilities = {
-"LT:Options": {
-platformName: "android",
-deviceName: ".*",
-platformVersion: ".*",
-isRealMobile: true,
-build: "Playwright Android Build",
-name: "Playwright Android Test",
-user: process.env.LT_USERNAME,
-accessKey: process.env.LT_ACCESS_KEY,
-network: true,
-video: true,
-console: true,
-playwrightClientVersion: "1.61.0",
-},
-};
+  const capabilities = {
+    "LT:Options": {
+      platformName: "android",
+      deviceName: ".*",
+      platformVersion: ".*",
+      isRealMobile: true,
+      build: "Playwright Android Build",
+      name: "Playwright Android Test",
+      user: process.env.LT_USERNAME,
+      accessKey: process.env.LT_ACCESS_KEY,
+      network: true,
+      video: true,
+      console: true,
+      playwrightClientVersion: "1.61.0",
+    },
+  };
 
-const cdpUrl = `wss://cdp.lambdatest.com/playwright?capabilities=${encodeURIComponent(
-JSON.stringify(capabilities)
-)}`;
+  const cdpUrl = `wss://cdp.lambdatest.com/playwright?capabilities=${encodeURIComponent(
+    JSON.stringify(capabilities)
+  )}`;
 
-const browser = await chromium.connect(cdpUrl);
-const context = browser.contexts()[0] || (await browser.newContext());
-const page = context.pages()[0] || (await context.newPage());
+  const browser = await chromium.connect(cdpUrl);
+  const context = browser.contexts()[0] || (await browser.newContext());
+  const page = context.pages()[0] || (await context.newPage());
 
-await page.goto("https://duckduckgo.com", { timeout: 30000 });
-await page.locator('[name="q"]').fill("LambdaTest");
-await page.locator('[name="q"]').press("Enter");
-await page.waitForTimeout(3000);
+  await page.goto("https://duckduckgo.com", { timeout: 30000 });
+  await page.locator('[name="q"]').fill("LambdaTest");
+  await page.locator('[name="q"]').press("Enter");
+  await page.waitForTimeout(3000);
 
-const title = await page.title();
-console.log("Page title:", title);
+  const title = await page.title();
+  console.log("Page title:", title);
 
-try {
-if (title.includes("LambdaTest")) {
-await page.evaluate(
-(_) => {},
-`lambdatest_action: ${JSON.stringify({
-action: "setTestStatus",
-arguments: { status: "passed", remark: "Title verified" },
-})}`
-);
-}
-} catch (e) {
-await page.evaluate(
-(_) => {},
-`lambdatest_action: ${JSON.stringify({
-action: "setTestStatus",
-arguments: { status: "failed", remark: e.message },
-})}`
-);
-}
+  try {
+    if (title.includes("LambdaTest")) {
+      await page.evaluate(
+        (_) => {},
+        `lambdatest_action: ${JSON.stringify({
+          action: "setTestStatus",
+          arguments: { status: "passed", remark: "Title verified" },
+        })}`
+      );
+    }
+  } catch (e) {
+    await page.evaluate(
+      (_) => {},
+      `lambdatest_action: ${JSON.stringify({
+        action: "setTestStatus",
+        arguments: { status: "failed", remark: e.message },
+      })}`
+    );
+  }
 
-await page.close();
-await browser.close();
+  await page.close();
+  await browser.close();
 })();
 ```
 
@@ -187,65 +187,65 @@ await browser.close();
 const { _android } = require("playwright");
 
 (async () => {
-const capabilities = {
-"LT:Options": {
-platformName: "android",
-deviceName: ".*",
-platformVersion: ".*",
-isRealMobile: true,
-build: "Playwright Android Build",
-name: "Playwright Android Test",
-user: process.env.LT_USERNAME,
-accessKey: process.env.LT_ACCESS_KEY,
-network: true,
-video: true,
-console: true,
-playwrightClientVersion: "1.61.0",
-},
-};
+  const capabilities = {
+    "LT:Options": {
+      platformName: "android",
+      deviceName: ".*",
+      platformVersion: ".*",
+      isRealMobile: true,
+      build: "Playwright Android Build",
+      name: "Playwright Android Test",
+      user: process.env.LT_USERNAME,
+      accessKey: process.env.LT_ACCESS_KEY,
+      network: true,
+      video: true,
+      console: true,
+      playwrightClientVersion: "1.61.0",
+    },
+  };
 
-const cdpUrl = `wss://cdp.lambdatest.com/playwright?capabilities=${encodeURIComponent(
-JSON.stringify(capabilities)
-)}`;
+  const cdpUrl = `wss://cdp.lambdatest.com/playwright?capabilities=${encodeURIComponent(
+    JSON.stringify(capabilities)
+  )}`;
 
-const device = await _android.connect(cdpUrl);
-console.log(`Model: ${device.model()}, Serial: ${device.serial()}`);
-await device.shell("am force-stop com.android.chrome");
+  const device = await _android.connect(cdpUrl);
+  console.log(`Model: ${device.model()}, Serial: ${device.serial()}`);
+  await device.shell("am force-stop com.android.chrome");
 
-const context = await device.launchBrowser();
-context.setDefaultTimeout(120000);
-const page = await context.newPage();
+  const context = await device.launchBrowser();
+  context.setDefaultTimeout(120000);
+  const page = await context.newPage();
 
-await page.goto("https://duckduckgo.com");
-await page.locator('[name="q"]').fill("LambdaTest");
-await page.locator('[name="q"]').press("Enter");
-await page.waitForTimeout(3000);
+  await page.goto("https://duckduckgo.com");
+  await page.locator('[name="q"]').fill("LambdaTest");
+  await page.locator('[name="q"]').press("Enter");
+  await page.waitForTimeout(3000);
 
-const title = await page.title();
-console.log("Page title:", title);
+  const title = await page.title();
+  console.log("Page title:", title);
 
-try {
-if (title.includes("LambdaTest")) {
-await page.evaluate(
-(_) => {},
-`lambdatest_action: ${JSON.stringify({
-action: "setTestStatus",
-arguments: { status: "passed", remark: "Title verified" },
-})}`
-);
-}
-} catch (e) {
-await page.evaluate(
-(_) => {},
-`lambdatest_action: ${JSON.stringify({
-action: "setTestStatus",
-arguments: { status: "failed", remark: e.message },
-})}`
-);
-}
+  try {
+    if (title.includes("LambdaTest")) {
+      await page.evaluate(
+        (_) => {},
+        `lambdatest_action: ${JSON.stringify({
+          action: "setTestStatus",
+          arguments: { status: "passed", remark: "Title verified" },
+        })}`
+      );
+    }
+  } catch (e) {
+    await page.evaluate(
+      (_) => {},
+      `lambdatest_action: ${JSON.stringify({
+        action: "setTestStatus",
+        arguments: { status: "failed", remark: e.message },
+      })}`
+    );
+  }
 
-await page.close();
-await device.close();
+  await page.close();
+  await device.close();
 })();
 ```
 
@@ -266,57 +266,57 @@ import os, json, urllib.parse
 from playwright.sync_api import sync_playwright
 
 def main():
-capabilities = {
-"LT:Options": {
-"platformName": "android",
-"deviceName": ".*",
-"platformVersion": ".*",
-"isRealMobile": True,
-"build": "Playwright Android Build",
-"name": "Playwright Android Test",
-"user": os.environ["LT_USERNAME"],
-"accessKey": os.environ["LT_ACCESS_KEY"],
-"network": True,
-"video": True,
-"console": True,
-}
-}
+    capabilities = {
+        "LT:Options": {
+            "platformName": "android",
+            "deviceName": ".*",
+            "platformVersion": ".*",
+            "isRealMobile": True,
+            "build": "Playwright Android Build",
+            "name": "Playwright Android Test",
+            "user": os.environ["LT_USERNAME"],
+            "accessKey": os.environ["LT_ACCESS_KEY"],
+            "network": True,
+            "video": True,
+            "console": True,
+        }
+    }
 
-cdp_url = (
-f"wss://cdp.lambdatest.com/playwright?capabilities="
-f"{urllib.parse.quote(json.dumps(capabilities))}"
-)
+    cdp_url = (
+        f"wss://cdp.lambdatest.com/playwright?capabilities="
+        f"{urllib.parse.quote(json.dumps(capabilities))}"
+    )
 
-with sync_playwright() as p:
-browser = p.chromium.connect(cdp_url)
-context = browser.contexts[0] if browser.contexts else browser.new_context()
-page = context.pages[0] if context.pages else context.new_page()
+    with sync_playwright() as p:
+        browser = p.chromium.connect(cdp_url)
+        context = browser.contexts[0] if browser.contexts else browser.new_context()
+        page = context.pages[0] if context.pages else context.new_page()
 
-page.goto("https://duckduckgo.com", timeout=30000)
-page.locator('[name="q"]').fill("LambdaTest")
-page.locator('[name="q"]').press("Enter")
-page.wait_for_timeout(3000)
+        page.goto("https://duckduckgo.com", timeout=30000)
+        page.locator('[name="q"]').fill("LambdaTest")
+        page.locator('[name="q"]').press("Enter")
+        page.wait_for_timeout(3000)
 
-title = page.title()
-print(f"Page title: {title}")
+        title = page.title()
+        print(f"Page title: {title}")
 
-try:
-if "LambdaTest" in title:
-page.evaluate(
-"_ => {}",
-'lambdatest_action: {"action": "setTestStatus", "arguments": {"status": "passed", "remark": "Title verified"}}',
-)
-except Exception as e:
-page.evaluate(
-"_ => {}",
-f'lambdatest_action: {json.dumps({"action": "setTestStatus", "arguments": {"status": "failed", "remark": str(e)}})}',
-)
+        try:
+            if "LambdaTest" in title:
+                page.evaluate(
+                    "_ => {}",
+                    'lambdatest_action: {"action": "setTestStatus", "arguments": {"status": "passed", "remark": "Title verified"}}',
+                )
+        except Exception as e:
+            page.evaluate(
+                "_ => {}",
+                f'lambdatest_action: {json.dumps({"action": "setTestStatus", "arguments": {"status": "failed", "remark": str(e)}})}',
+            )
 
-page.close()
-browser.close()
+        page.close()
+        browser.close()
 
 if __name__ == "__main__":
-main()
+    main()
 ```
 
 Run the test:
@@ -336,58 +336,58 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 
 public class PlaywrightAndroidTest {
-public static void main(String[] args) {
-Map<String, Object> ltOptions = new LinkedHashMap<>();
-ltOptions.put("platformName", "android");
-ltOptions.put("deviceName", ".*");
-ltOptions.put("platformVersion", ".*");
-ltOptions.put("isRealMobile", true);
-ltOptions.put("build", "Playwright Android Build");
-ltOptions.put("name", "Playwright Android Test");
-ltOptions.put("user", System.getenv("LT_USERNAME"));
-ltOptions.put("accessKey", System.getenv("LT_ACCESS_KEY"));
-ltOptions.put("network", true);
-ltOptions.put("video", true);
-ltOptions.put("console", true);
-ltOptions.put("playwrightClientVersion", "1.61.0");
+    public static void main(String[] args) {
+        Map<String, Object> ltOptions = new LinkedHashMap<>();
+        ltOptions.put("platformName", "android");
+        ltOptions.put("deviceName", ".*");
+        ltOptions.put("platformVersion", ".*");
+        ltOptions.put("isRealMobile", true);
+        ltOptions.put("build", "Playwright Android Build");
+        ltOptions.put("name", "Playwright Android Test");
+        ltOptions.put("user", System.getenv("LT_USERNAME"));
+        ltOptions.put("accessKey", System.getenv("LT_ACCESS_KEY"));
+        ltOptions.put("network", true);
+        ltOptions.put("video", true);
+        ltOptions.put("console", true);
+        ltOptions.put("playwrightClientVersion", "1.61.0");
 
-Map<String, Object> capabilities = new LinkedHashMap<>();
-capabilities.put("LT:Options", ltOptions);
+        Map<String, Object> capabilities = new LinkedHashMap<>();
+        capabilities.put("LT:Options", ltOptions);
 
-String capsJson = new Gson().toJson(capabilities);
-String cdpUrl = "wss://cdp.lambdatest.com/playwright?capabilities="
-+ URLEncoder.encode(capsJson, StandardCharsets.UTF_8);
+        String capsJson = new Gson().toJson(capabilities);
+        String cdpUrl = "wss://cdp.lambdatest.com/playwright?capabilities="
+            + URLEncoder.encode(capsJson, StandardCharsets.UTF_8);
 
-try (Playwright playwright = Playwright.create()) {
-Browser browser = playwright.chromium().connect(cdpUrl);
-BrowserContext context = browser.contexts().size() > 0
-? browser.contexts().get(0) : browser.newContext();
-Page page = context.pages().size() > 0
-? context.pages().get(0) : context.newPage();
+        try (Playwright playwright = Playwright.create()) {
+            Browser browser = playwright.chromium().connect(cdpUrl);
+            BrowserContext context = browser.contexts().size() > 0
+                ? browser.contexts().get(0) : browser.newContext();
+            Page page = context.pages().size() > 0
+                ? context.pages().get(0) : context.newPage();
 
-page.navigate("https://duckduckgo.com",
-new Page.NavigateOptions().setTimeout(30000));
-page.locator("[name=\"q\"]").fill("LambdaTest");
-page.locator("[name=\"q\"]").press("Enter");
-page.waitForTimeout(3000);
+            page.navigate("https://duckduckgo.com",
+                new Page.NavigateOptions().setTimeout(30000));
+            page.locator("[name=\"q\"]").fill("LambdaTest");
+            page.locator("[name=\"q\"]").press("Enter");
+            page.waitForTimeout(3000);
 
-String title = page.title();
-System.out.println("Page title: " + title);
+            String title = page.title();
+            System.out.println("Page title: " + title);
 
-try {
-if (title.contains("LambdaTest")) {
-page.evaluate("_ => {}",
-"lambdatest_action: {\"action\": \"setTestStatus\", \"arguments\": {\"status\": \"passed\", \"remark\": \"Title verified\"}}");
-}
-} catch (Exception e) {
-page.evaluate("_ => {}",
-"lambdatest_action: {\"action\": \"setTestStatus\", \"arguments\": {\"status\": \"failed\", \"remark\": \"" + e.getMessage() + "\"}}");
-}
+            try {
+                if (title.contains("LambdaTest")) {
+                    page.evaluate("_ => {}",
+                        "lambdatest_action: {\"action\": \"setTestStatus\", \"arguments\": {\"status\": \"passed\", \"remark\": \"Title verified\"}}");
+                }
+            } catch (Exception e) {
+                page.evaluate("_ => {}",
+                    "lambdatest_action: {\"action\": \"setTestStatus\", \"arguments\": {\"status\": \"failed\", \"remark\": \"" + e.getMessage() + "\"}}");
+            }
 
-page.close();
-browser.close();
-}
-}
+            page.close();
+            browser.close();
+        }
+    }
 }
 ```
 
@@ -403,21 +403,21 @@ using System.Text.Json;
 
 var capabilities = new Dictionary<string, object>
 {
-["LT:Options"] = new Dictionary<string, object>
-{
-["platformName"] = "android",
-["deviceName"] = ".*",
-["platformVersion"] = ".*",
-["isRealMobile"] = true,
-["build"] = "Playwright Android Build",
-["name"] = "Playwright Android Test",
-["user"] = Environment.GetEnvironmentVariable("LT_USERNAME")!,
-["accessKey"] = Environment.GetEnvironmentVariable("LT_ACCESS_KEY")!,
-["network"] = true,
-["video"] = true,
-["console"] = true,
-["playwrightClientVersion"] = "1.61.0",
-}
+    ["LT:Options"] = new Dictionary<string, object>
+    {
+        ["platformName"] = "android",
+        ["deviceName"] = ".*",
+        ["platformVersion"] = ".*",
+        ["isRealMobile"] = true,
+        ["build"] = "Playwright Android Build",
+        ["name"] = "Playwright Android Test",
+        ["user"] = Environment.GetEnvironmentVariable("LT_USERNAME")!,
+        ["accessKey"] = Environment.GetEnvironmentVariable("LT_ACCESS_KEY")!,
+        ["network"] = true,
+        ["video"] = true,
+        ["console"] = true,
+        ["playwrightClientVersion"] = "1.61.0",
+    }
 };
 
 var capsJson = JsonSerializer.Serialize(capabilities);
@@ -426,9 +426,9 @@ var cdpUrl = $"wss://cdp.lambdatest.com/playwright?capabilities={Uri.EscapeDataS
 using var playwright = await Playwright.CreateAsync();
 var browser = await playwright.Chromium.ConnectAsync(cdpUrl);
 var context = browser.Contexts.Count > 0
-? browser.Contexts[0] : await browser.NewContextAsync();
+    ? browser.Contexts[0] : await browser.NewContextAsync();
 var page = context.Pages.Count > 0
-? context.Pages[0] : await context.NewPageAsync();
+    ? context.Pages[0] : await context.NewPageAsync();
 
 await page.GotoAsync("https://duckduckgo.com", new PageGotoOptions { Timeout = 30000 });
 await page.Locator("[name=\"q\"]").FillAsync("LambdaTest");
@@ -440,16 +440,16 @@ Console.WriteLine($"Page title: {title}");
 
 try
 {
-if (title.Contains("LambdaTest"))
-{
-await page.EvaluateAsync("_ => {}",
-"lambdatest_action: {\"action\": \"setTestStatus\", \"arguments\": {\"status\": \"passed\", \"remark\": \"Title verified\"}}");
-}
+    if (title.Contains("LambdaTest"))
+    {
+        await page.EvaluateAsync("_ => {}",
+            "lambdatest_action: {\"action\": \"setTestStatus\", \"arguments\": {\"status\": \"passed\", \"remark\": \"Title verified\"}}");
+    }
 }
 catch (Exception e)
 {
-await page.EvaluateAsync("_ => {}",
-$"lambdatest_action: {{\"action\": \"setTestStatus\", \"arguments\": {{\"status\": \"failed\", \"remark\": \"{e.Message}\"}}}}");
+    await page.EvaluateAsync("_ => {}",
+        $"lambdatest_action: {{\"action\": \"setTestStatus\", \"arguments\": {{\"status\": \"failed\", \"remark\": \"{e.Message}\"}}}}");
 }
 
 await page.CloseAsync();
@@ -502,12 +502,12 @@ To test embedded WebViews on a real Android device, add the mandatory `isPwMobil
 
 ```javascript title="playwrightwebview.js"
 const capabilities = {
-"LT:Options": {
-"platformName": "android",
-"isRealMobile": true, //if true, test will run on real devices
-// highlight-next-line
-"isPwMobileWebviewTest": true, //mandatory capability to enable WebView testing
-},
+  "LT:Options": {
+    "platformName": "android",
+    "isRealMobile": true, //if true, test will run on real devices
+    // highlight-next-line
+    "isPwMobileWebviewTest": true, //mandatory capability to enable WebView testing
+  },
 ```
 
 Run the test as usual (for example, `node playwrightwebview.js`) and check the [Automation dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build) for results.

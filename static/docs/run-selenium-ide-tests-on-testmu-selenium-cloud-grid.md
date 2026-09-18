@@ -51,7 +51,7 @@ In this document, we will see how to run Selenium IDE tests on TestMu AI cloud [
 *   Selenium IDE (SIDE) Runner. You can download SIDE runner using below code:
 
 ```javascript
-npm install -g selenium-side-runner
+    npm install -g selenium-side-runner
 ```
 
 *   You also need your TestMu AI authentication credentials, which includes your TestMu AI username, and access key. These will be set up as the Secrets for configuring the pipeline. To get your Username and Access Key, go to your [TestMu AI automation dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/) and click on the "key" icon left to the help button, on the top right corner.
@@ -75,15 +75,15 @@ We have successfully activated Parallel Testing in Selenium IDE. Now we can exec
     The [TestMu AI Selenium Desired Capabilities Generator](https://www.testmuai.com/capabilities-generator/) is used to generate the capabilities. Below are the desired capabilities used in this article for the required test combination, provided in Python Language.
 
 ```javascript
-capabilities = {
-"platform" : "Windows 10",
-"browserName" : "Chrome",
-"version" : "72.0"
-}
-```
+        capabilities = {
+                "platform" : "Windows 10",
+                "browserName" : "Chrome",
+                "version" : "72.0"
+        }
+ ```
 
 ```javascript
-In the string format, it will be represented as: **"browserName='chrome' version='72.0' platform='Windows 10'"**
+    In the string format, it will be represented as: **"browserName='chrome' version='72.0' platform='Windows 10'"**
 ```
 
 2.  **Get the Grid URL for executing tests on TestMu AI.** Get your username and access key from your TestMu AI's Profile section (as shown in the prerequisites), and replace it in the below URL.
@@ -101,7 +101,7 @@ selenium-side-runner --server <lambdatest grid="" url=""> --capabilities </lambd
 4.  **Mention the number of parallel processes to be executed at a time.** You can use any of the below syntax to specify the count of parallel processes to be executed at the above mentioned Grid URL:
 
 ```javascript
-selenium-side-runner --w <num of="" parallel="" processes="">--server https://user-name:access-key@hub.lambdatest.com/wd/hub</num>
+ selenium-side-runner --w <num of="" parallel="" processes="">--server https://user-name:access-key@hub.lambdatest.com/wd/hub</num>
 ```
 OR
 

@@ -140,15 +140,15 @@ curl --location --request POST 'https://mobile-api.lambdatest.com/espresso/v1/bu
 --header 'Authorization: Basic <Enter_Basic_Auth>' \
 --header 'Content-Type: application/json' \
 --data-raw '{
-"app" : "app_id",
-"testSuite": "testsuite_id",
-"device" :  ["Galaxy S20-10"],
-"queueTimeout": 360,
-"IdleTimeout": 150,
-"deviceLog": true,
-"build" : "Proverbial-Espresso",
-"language": "fr",
-"locale": "CA"
+    "app" : "app_id",
+    "testSuite": "testsuite_id",
+    "device" :  ["Galaxy S20-10"],
+    "queueTimeout": 360,
+    "IdleTimeout": 150,
+    "deviceLog": true,
+    "build" : "Proverbial-Espresso",
+    "language": "fr",
+    "locale": "CA"
 }'
 ```
 

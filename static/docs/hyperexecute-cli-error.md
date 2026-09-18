@@ -33,33 +33,33 @@ The CLI prints output like this:
 
 ```text
 Snooper failed:
-Error occurred while running snooper command
-Caused by -> Unable to extract scenarios
-Caused by -> Unable to parse file: <path>/<file>.feature
+ Error occurred while running snooper command
+ Caused by -> Unable to extract scenarios
+ Caused by -> Unable to parse file: <path>/<file>.feature
 ```
 
 Use **Examples** only under a **Scenario Outline**:
 
 ```text
 Scenario Outline: test
-Then Click on User Profile
-And Click on Admin Dashboard
-Then Click on Save button
-Examples:
-| User |
-| home |
+  Then Click on User Profile
+  And Click on Admin Dashboard
+  Then Click on Save button
+  Examples:
+    | User |
+    | home |
 ```
 
 Not under a plain **Scenario**, which causes the error above:
 
 ```text
 Scenario: test
-Then Click on User Profile
-And Click on Admin Dashboard
-Then Click on Save button
-Examples:
-| User |
-| home |
+  Then Click on User Profile
+  And Click on Admin Dashboard
+  Then Click on Save button
+  Examples:
+    | User |
+    | home |
 ```
 
 ## Authentication Error
@@ -213,13 +213,13 @@ STATUS=$?
 CODE=$(echo "$OUTPUT" | grep -oE 'ERR::?[A-Z0-9_]+(::?[A-Z0-9_]+)*' | head -1)
 
 if [ "$STATUS" -ne 0 ]; then
-case "$CODE" in
-ERR::NO::USER|ERR::NO::KEY|ERR::HTTP::RESP)
-echo "Credentials problem - check LT_USERNAME and LT_ACCESS_KEY" ;;
-*)
-echo "HyperExecute CLI failed with $CODE" ;;
-esac
-exit 1
+  case "$CODE" in
+    ERR::NO::USER|ERR::NO::KEY|ERR::HTTP::RESP)
+      echo "Credentials problem - check LT_USERNAME and LT_ACCESS_KEY" ;;
+    *)
+      echo "HyperExecute CLI failed with $CODE" ;;
+  esac
+  exit 1
 fi
 ```
 

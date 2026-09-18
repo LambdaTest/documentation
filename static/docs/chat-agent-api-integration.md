@@ -19,12 +19,12 @@ The platform sends each message as an HTTP POST request with a JSON body. The ex
 
 ```bash title="Example Request"
 curl -X POST https://api.examplechatbot.com/chat \
--H "Authorization: Bearer sk-example-a1b2c3d4e5f6" \
--H "Content-Type: application/json" \
--d '{
-"assistantId": "asst_7xG9kPqR2mN4",
-"input": "Hi, I need help with my account"
-}'
+  -H "Authorization: Bearer sk-example-a1b2c3d4e5f6" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "assistantId": "asst_7xG9kPqR2mN4",
+    "input": "Hi, I need help with my account"
+  }'
 ```
 
 The field names above (`assistantId`, `input`) are illustrative. Your chat agent may use different field names (for example `message`, `query`, `botId`, `agentId`). The platform adapts to whatever request structure your API expects.
@@ -109,15 +109,15 @@ The platform reads the reply from each response, uses it to continue the convers
 
 ```json title="Example Response"
 {
-"id": "1310ab59-9477-4311-8f1b-b3eb81105133",
-"input": [
-{ "role": "user", "content": "Hi, I need help with my account" }
-],
-"output": [
-{ "role": "assistant", "content": "Sure! Could you please provide more details…" }
-],
-"createdAt": "2025-10-29T06:02:45.616Z",
-"cost": 0.0063
+  "id": "1310ab59-9477-4311-8f1b-b3eb81105133",
+  "input": [
+    { "role": "user", "content": "Hi, I need help with my account" }
+  ],
+  "output": [
+    { "role": "assistant", "content": "Sure! Could you please provide more details…" }
+  ],
+  "createdAt": "2025-10-29T06:02:45.616Z",
+  "cost": 0.0063
 }
 ```
 

@@ -36,8 +36,8 @@ To execute tests using the Android Emulator, add the following configurations to
 
 ```yaml
 framework:
-args:
-isRealMobile: false
+  args:
+    isRealMobile: false
 ```
 
 > Refer to our detailed documentation for [Appium](/support/docs/hyperexecute-appium-virtual-device/) and [Maestro](/support/docs/hyperexecute-maestro-testing/) on configuring and running tests with Android emulators.
@@ -135,9 +135,9 @@ This can be configured with the following parameters:
 ```yaml
 report: true
 partialReports:
-location: target/surefire-reports/html
-type: xml
-frameworkName: junit
+  location: target/surefire-reports/html
+  type: xml
+  frameworkName: junit
 ```
 
 ## Version 2.5.4
@@ -217,15 +217,15 @@ HyperExecute CLI added an enhancement in the [`--vars`](/support/docs/hyperexecu
 
 ```yaml title="hyperexecute.yaml"
 partialReports:
-location: target/surefire-reports/html
-type: html
-frameworkName: extent
-# highlight-start
-email:
-to:
-- "${email}"
-- "${email1}"
-# highlight-end
+  location: target/surefire-reports/html
+  type: html
+  frameworkName: extent
+  # highlight-start
+  email:
+      to:
+        - "${email}"
+        - "${email1}"
+  # highlight-end
 ```
 
 Pass the value of your email address via CLI by running the command
@@ -295,18 +295,18 @@ HyperExecute now supports k6, a powerful open-source performance testing tool. H
 
 ```yaml
 runtime:
-addons:
-- name: k6
-version: "v0.52.0"
+    addons:
+      - name: k6
+        version: "v0.52.0"
 ```
 
 Also, add these environment variables in your YAML file to install the necessary dependencies for your tests
 
 ```yaml
 env:
-K6_BROWSER_ENABLED: true
-K6_BROWSER_HEADLESS: false
-HE_CONTEXT_K6_SETUP_DEFAULT_BROWSER_PATH: true
+  K6_BROWSER_ENABLED: true
+  K6_BROWSER_HEADLESS: false
+  HE_CONTEXT_K6_SETUP_DEFAULT_BROWSER_PATH: true
 ```
 
 📕 Check the [k6 integration documentation](/support/docs/hyperexecute-k6-testing/) to learn more about it.
@@ -392,18 +392,18 @@ You can now create multiple reports from different frameworks for your job. This
 
 ```bash
 partialReports:
-- location: reports/json
-type: json
-frameworkName: extent-native
-email:
-to:
-- johndoe@example.com
-- location: target/surefire-reports
-type: html
-frameworkName: testng
-email:
-to:
-- johndoe@example.com
+  - location: reports/json
+    type: json
+    frameworkName: extent-native
+    email:
+        to:
+          - johndoe@example.com
+  - location: target/surefire-reports
+    type: html
+    frameworkName: testng
+    email:
+        to:
+          - johndoe@example.com
 ```
 
 > 📕 Read the documentation - [Test Reports](/support/docs/hyperexecute-reports/) to learn more about it.
@@ -443,8 +443,8 @@ Add a runtime flag to your YAML file and define your required version.
 
 ```bash
 runtime:
-- language: katalon
-version: 8.6.5
+  - language: katalon
+    version: 8.6.5
 ```
 
 📕 Refer to our [runtime YAML flag](/support/docs/deep-dive-into-hyperexecute-yaml/#runtime/) to know more!
@@ -620,11 +620,11 @@ To receive the Artifacts via mail, you simply need to pass a `email` flag in you
 
 ```bash
 uploadArtifacts:
-...
-email:
-to:
-- <your_email_id@example.com>
-- <another_email_id@example.com>
+    ...
+    email:
+      to:
+        - <your_email_id@example.com>
+        - <another_email_id@example.com>
 ```
 
 > Refer to the detailed documentation on [how to receive artifacts via email](/support/docs/hyperexecute-email-reports/#how-to-receive-your-artifacts-via-email)

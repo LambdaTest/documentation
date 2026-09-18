@@ -39,7 +39,7 @@ Specifies the testing framework used in your repository.
 
 ```yaml
 framework:
-name: "maven/testng"
+  name: "maven/testng"
 ```
 
 To enable maven runner with Appium, you have to pass `appium: true` before the `framework` field
@@ -65,7 +65,7 @@ Both **Maven** and **Gradle** build tools are supported for the Java runners:
 
 ```yaml
 framework:
-name: gradle/testng
+  name: gradle/testng
 ```
 
 **Prerequisites for the Gradle runners**
@@ -78,8 +78,8 @@ Specifies the command line flags to pass to the custom runner for both test disc
 
 ```yaml
 framework:
-name: "maven/testng"
-flags: ["-Dplatname=win", "-Dgroups=selenium-test"]
+  name: "maven/testng"
+  flags: ["-Dplatname=win", "-Dgroups=selenium-test"]
 ```
 
 ### `discoveryFlags`
@@ -87,8 +87,8 @@ Specifies the command line flags to pass to the custom runner for test discovery
 
 ```yaml
 framework:
-name: "maven/testng"
-discoveryFlags: ["-Dgroups=selenium-test"]
+  name: "maven/testng"
+  discoveryFlags: ["-Dgroups=selenium-test"]
 ```
 
 ### `runnerFlags`
@@ -96,8 +96,8 @@ Specifies the command line flags to pass to the custom runner for test execution
 
 ```yaml
 framework:
-name: "maven/testng"
-runnerFlags: ["-Dgroups=database"]
+  name: "maven/testng"
+  runnerFlags: ["-Dgroups=database"]
 ```
 
 ### `discoveryType`
@@ -105,12 +105,12 @@ Specifies the level at which user wants to discover the tests. Supported values 
 
 ```yaml
 framework:
-name: maven/testng
-#highlight-next-line
-discoveryType: method
-# instead of method you can also use xmltest or class as a discovery type
-flags:
-- "-Dplatname=win"
+  name: maven/testng
+  #highlight-next-line
+  discoveryType: method
+  # instead of method you can also use xmltest or class as a discovery type
+  flags:
+    - "-Dplatname=win"
 ```
 
 - For **maven/testng** the supported discovery types are **method, class** and **xmltest**. The default is **method**.
@@ -125,9 +125,9 @@ Specifies where the test discovery runs. Supported values are `local` and `remot
 
 ```yaml
 framework:
-name: gradle/testng
-#highlight-next-line
-discoveryMode: remote
+  name: gradle/testng
+  #highlight-next-line
+  discoveryMode: remote
 ```
 
 Remote discovery is supported for all Java runners: **maven/testng**, **maven/junit4**, **maven/junit5**, **maven/spock**, **gradle/testng**, **gradle/junit4**, **gradle/junit5**, and **gradle/spock**.
@@ -138,11 +138,11 @@ The `working directory` specifies the location of the directory in which all tes
 
 ```yaml
 framework:
-name: maven/testng
-discoveryType: method
-workingDirectory: src/main
-flags:
-- "-Dplatname=win"
+  name: maven/testng
+  discoveryType: method
+  workingDirectory: src/main
+  flags:
+    - "-Dplatname=win"
 ```
 
 ### `defaultReports`
@@ -150,10 +150,10 @@ Specifies whether to create default reports for the specified framework.
 
 ```yaml
 framework:
-name: maven/testng
-defaultReports: false
-flags:
-- "-Dplatname=win"
+  name: maven/testng
+  defaultReports: false
+  flags:
+    - "-Dplatname=win"
 ```
 
 ### `region`
@@ -168,8 +168,8 @@ The region parameter specifies the region or location where the Appium tests wil
 
 ```yaml
 framework:
-args:
-region: us
+  args:
+    region: us
 ```
 
 ### `artifacts`
@@ -178,8 +178,8 @@ To generate artifacts for your Espresso tests, add the `artifacts: true` flag in
 
 ```yaml
 framework:
-args:
-artifacts: true
+  args:
+    artifacts: true
 ```
 
 > 📕 Learn [how to perform group-based test discovery in TestNG](/support/docs/hyperexecute-how-to-perform-group-based-test-discovery-in-testng)
@@ -190,8 +190,8 @@ Specifies the device’s system language for the test session. This determines t
 
 ```yaml
 framework:
-args:
-language: es
+  args:
+    language: es
 ```
 
 ### `locale`
@@ -200,8 +200,8 @@ Defines the regional format settings such as date, time, currency, and number co
 
 ```yaml
 framework:
-args:
-locale: ES
+  args:
+    locale: ES
 ```
 
 ### `mitmProxy`
@@ -210,8 +210,8 @@ You can now capture network logs directly from emulator sessions using MITM. Thi
 
 ```yaml
 framework:
-args:
-mitmProxy: true
+  args:
+    mitmProxy: true
 ```
 
 ## Sample Yaml Version 0.2
@@ -225,34 +225,34 @@ autosplit: true
 concurrency: 2
 
 pre:
-# Skip execution of the tests in the pre step
-- mvn dependency:resolve
+  # Skip execution of the tests in the pre step
+  - mvn dependency:resolve
 
 framework:
-name: maven/testng
-flags:
-- "-Dplatname=win"
-discoveryFlags: ["-Dgroups=selenium-test"]
-runnerFlags: ["-Dgroups=database"]
-discoveryType: method
-discoveryMode: remote
-workingDirectory: src/main
-defaultReports: false
-args:
-region: ap
-language: es
-locale: es
-mitmProxy: true
+  name: maven/testng
+  flags:
+    - "-Dplatname=win"
+  discoveryFlags: ["-Dgroups=selenium-test"]
+  runnerFlags: ["-Dgroups=database"]
+  discoveryType: method
+  discoveryMode: remote
+  workingDirectory: src/main
+  defaultReports: false
+  args:
+    region: ap
+    language: es
+    locale: es
+    mitmProxy: true
 
 retryOnFailure: true
 maxRetries: 1
 
 post:
-- ls target/surefire-reports/
+  - ls target/surefire-reports/
 
 mergeArtifacts: true
 uploadArtefacts:
-- name: ExecutionSnapshots
-path:
-- target/surefire-reports/html/**
+ - name: ExecutionSnapshots
+   path:
+    - target/surefire-reports/html/**
 ```

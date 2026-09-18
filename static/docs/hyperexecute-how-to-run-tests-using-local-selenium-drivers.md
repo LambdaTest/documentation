@@ -47,31 +47,31 @@ parallelism: 1
 concurrency: 1
 
 env:
-CACHE_DIR: m2_cache_dir
+  CACHE_DIR: m2_cache_dir
 
 cacheKey: '{{ checksum "pom.xml" }}'
 cacheDirectories:
-- m2_cache
+  - m2_cache
 
 pre:
-- mvn dependency:resolve
+  - mvn dependency:resolve
 
 mergeArtifacts: true
 uploadArtefacts:
-- name: ExecutionSnapshots
-path:
-- target/surefire-reports/html/**
+ - name: ExecutionSnapshots
+   path:
+    - target/surefire-reports/html/**
 
 report: true
 partialReports:
-location: target/surefire-reports/html
-type: html
-frameworkName: extent
+  location: target/surefire-reports/html
+  type: html
+  frameworkName: extent
 
 testDiscovery:
-type: raw
-mode: remote
-command: grep 'test name' xml/testng.xml | awk '{print$2}' | sed 's/name=//g' | sed 's/\x3e//g'
+  type: raw
+  mode: remote
+  command: grep 'test name' xml/testng.xml | awk '{print$2}' | sed 's/name=//g' | sed 's/\x3e//g'
 
 testRunnerCommand: mvn test dependency:resolve
 winTestRunnerCommand: mvn test dependency:resolve
@@ -80,32 +80,32 @@ linuxTestRunnerCommand: mvn test dependency:resolve
 
 #highlight-start
 platformConfig:
-platform:
-- os: win10
-browserName: chrome
-browserVersion: latest
-build: win10
-network: false
-- os: win11
-browserName: chrome
-goog:chromeOptions:
-args: [ "--start-maximized", "--disable-gpu" ]
-- os: mac
-browserName: firefox
-browserVersion: 119
-- os: linux
-browserName: firefox
-browserVersion: 115
-- os: android
-deviceName: .*
-browserName: chrome
-- os: ios
-deviceName: .*
+  platform:
+    - os: win10
+      browserName: chrome
+      browserVersion: latest
+      build: win10
+      network: false
+    - os: win11
+      browserName: chrome
+      goog:chromeOptions:
+        args: [ "--start-maximized", "--disable-gpu" ]
+    - os: mac
+      browserName: firefox
+      browserVersion: 119
+    - os: linux
+      browserName: firefox
+      browserVersion: 115
+    - os: android
+      deviceName: .*
+      browserName: chrome
+    - os: ios
+      deviceName: .*
 
-config:
-build: latest
-network: true
-console: true
+  config:
+    build: latest
+    network: true
+    console: true
 #highlight-end
 ```
 

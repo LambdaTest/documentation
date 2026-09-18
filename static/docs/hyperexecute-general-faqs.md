@@ -67,8 +67,8 @@
   You can access your Microsoft Excel files with HyperExecute by modifying the files that contain your tests. In order to automate the opening of your Excel file, set the `ms:waitForAppLaunch` and `appArguments` capabilities to:
 
 ```bash
-cap.setCapability("ms:waitForAppLaunch", 15);
-cap.setCapability("appArguments", " /e ");
+ cap.setCapability("ms:waitForAppLaunch", 15);
+ cap.setCapability("appArguments", " /e ");
 ```
 
   This will ensure that your Excel file is opened after 15 seconds, and that it is opened in edit mode. If you want your file to open after a certain period of time, just enter that time in the `ms:waitForAppLaunch` field.

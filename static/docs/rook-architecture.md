@@ -104,13 +104,13 @@ This keeps model credentials and centrally managed prompts out of the distribute
 
 ```text
 scenario goal
-↓ standard input
+    ↓ standard input
 profile execute hook
-↓ real invocation
+    ↓ real invocation
 agent under test
-↓ JSON on standard output
+    ↓ JSON on standard output
 reply · conversation · usage · calls · custom evidence
-↓
+    ↓
 local run directory
 ```
 

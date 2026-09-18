@@ -230,37 +230,37 @@ Once, the configuration file will be created, you will be seeing the default con
 
 ```json title="/smartui-sdk-project/.smartui.json"
 {
-"web": {
-"browsers": [
-"chrome",
-"firefox",
-"safari",
-"edge"
-],
-"viewports": [
-[
-1920
-],
-[
-1366
-],
-[
-1028
-]
-] // Full Page screenshots are captured by default for web viewports
-},
-"mobile": {
-"devices": [
-"iPhone 14",  //iPhone 14 viewport
-"Galaxy S24"  //Galaxy S24 viewport
-],
-"fullPage": true, //Full Page is true by default for mobile viewports
-"orientation": "portrait" //Change to "landscape" for landscape snapshot
-},
-"waitForTimeout": 1000, //Optional (Should only be used in case lazy-loading/async components are present)
-"waitForPageRender": 50000, //Optional (Should only be used in case of websites which take more than 30s to load)
-"enableJavaScript": false, //Enable javascript for all the screenshots of the project
-"allowedHostnames": [] //Additional hostnames to capture assets from
+  "web": {
+    "browsers": [
+      "chrome",
+      "firefox",
+      "safari",
+      "edge"
+    ],
+    "viewports": [
+      [
+        1920
+      ],
+      [
+        1366
+      ],
+      [
+        1028
+      ]
+    ] // Full Page screenshots are captured by default for web viewports
+  },
+  "mobile": {
+    "devices": [
+      "iPhone 14",  //iPhone 14 viewport
+      "Galaxy S24"  //Galaxy S24 viewport
+    ],
+    "fullPage": true, //Full Page is true by default for mobile viewports
+    "orientation": "portrait" //Change to "landscape" for landscape snapshot
+  },
+  "waitForTimeout": 1000, //Optional (Should only be used in case lazy-loading/async components are present)
+  "waitForPageRender": 50000, //Optional (Should only be used in case of websites which take more than 30s to load)
+  "enableJavaScript": false, //Enable javascript for all the screenshots of the project
+  "allowedHostnames": [] //Additional hostnames to capture assets from
 }
 ```
 **Advanced options in SmartUI configuration**
@@ -277,11 +277,11 @@ const { expect, browser, $ } = require('@wdio/globals')
 const { smartuiSnapshot } = require('@lambdatest/wdio-driver');
 
 describe('My first visual test', () => {
-it('should use appropriate project token', async () => {
-await browser.url(`https://webdriver.io`)
-await smartuiSnapshot(browser, "SS-1");
+    it('should use appropriate project token', async () => {
+        await browser.url(`https://webdriver.io`)
+        await smartuiSnapshot(browser, "SS-1");
 
-})
+    })
 })
 ```
 
@@ -318,82 +318,82 @@ When conducting visual tests, you may encounter scenarios where certain elements
 
 ```js title="This is a sample for your configuration for JavaScript to ignore by ID"
 let options = {
-ignoreDOM: {
-id: ["ID-1", "ID-2"],
-}
-}
-await browser.url('Required URL');
-await smartuiSnapshot(driver, 'Screenshot Name', options);
+            ignoreDOM: {
+                id: ["ID-1", "ID-2"],
+            }
+        }
+        await browser.url('Required URL');
+        await smartuiSnapshot(driver, 'Screenshot Name', options);
 ```
 
 ```js title="This is a sample for your configuration for JavaScript to ignore by Class"
 let options = {
-ignoreDOM: {
-class: ["Class-1", "Class-2"],
-}
-}
-await browser.url('Required URL');
-await smartuiSnapshot(driver, 'Screenshot Name', options);
+            ignoreDOM: {
+                class: ["Class-1", "Class-2"],
+            }
+        }
+        await browser.url('Required URL');
+        await smartuiSnapshot(driver, 'Screenshot Name', options);
 ```
 
 ```js title="This is a sample for your configuration for JavaScript to ignore by XPath"
 let options = {
-ignoreDOM: {
-xpath: ["Xpath-1", "Xpath-2"],
-}
-}
-await browser.url('Required URL');
-await smartuiSnapshot(driver, 'Screenshot Name', options);
+            ignoreDOM: {
+                xpath: ["Xpath-1", "Xpath-2"],
+            }
+        }
+        await browser.url('Required URL');
+        await smartuiSnapshot(driver, 'Screenshot Name', options);
 ```
 
 ```js title="This is a sample for your configuration for JavaScript to ignore by CSS Selector"
 let options = {
-ignoreDOM: {
-cssSelector: ["CSS-Selector-1", "CSS-Selector-2"],
-}
-}
-await browser.url('Required URL');
-await smartuiSnapshot(driver, 'Screenshot Name', options);
+            ignoreDOM: {
+                cssSelector: ["CSS-Selector-1", "CSS-Selector-2"],
+            }
+        }
+        await browser.url('Required URL');
+        await smartuiSnapshot(driver, 'Screenshot Name', options);
 ```
 
 ```js title="This is a sample for your configuration for JavaScript to select by ID"
 let options = {
-selectDOM: {
-id: ["ID-1", "ID-2"],
-}
-}
-await browser.url('Required URL');
-await smartuiSnapshot(driver, 'Screenshot Name', options);
+            selectDOM: {
+                id: ["ID-1", "ID-2"],
+            }
+        }
+        await browser.url('Required URL');
+        await smartuiSnapshot(driver, 'Screenshot Name', options);
 ```
 
 ```js title="This is a sample for your configuration for JavaScript to select by Class"
 let options = {
-selectDOM: {
-class: ["Class-1", "Class-2"],
-}
-}
-await browser.url('Required URL');
-await smartuiSnapshot(driver, 'Screenshot Name', options);
+            selectDOM: {
+                class: ["Class-1", "Class-2"],
+            }
+        }
+        await browser.url('Required URL');
+        await smartuiSnapshot(driver, 'Screenshot Name', options);
 ```
 
 ```js title="This is a sample for your configuration for JavaScript to select by XPath"
 let options = {
-selectDOM: {
-xpath: ["Xpath-1", "Xpath-2"],
-}
-}
-await browser.url('Required URL');
-await smartuiSnapshot(driver, 'Screenshot Name', options);
+            selectDOM: {
+                xpath: ["Xpath-1", "Xpath-2"],
+            }
+        }
+        await browser.url('Required URL');
+        await smartuiSnapshot(driver, 'Screenshot Name', options);
 ```
 
 ```js title="This is a sample for your webhook configuration for JavaScript to select by CSS Selector"
 let options = {
-selectDOM: {
-cssSelector: ["CSS-Selector-1", "CSS-Selector-2"],
-}
-}
-await browser.url('Required URL');
-await smartuiSnapshot(driver, 'Screenshot Name', options);
+            selectDOM: {
+                cssSelector: ["CSS-Selector-1", "CSS-Selector-2"],
+            }
+        }
+        await browser.url('Required URL');
+        await smartuiSnapshot(driver, 'Screenshot Name', options);
 ```
 
 ## For capturing the screenshot of a specific element
@@ -402,42 +402,42 @@ You can capture screenshots of targeted elements by leveraging various locator m
 
 ```js title="This is a sample for your configuration for JavaScript to capture an element by" ID."
 let options = {
-element: {
-id: 'Required ID',
-}
-};
-await browser.url('Required URL');
-await smartuiSnapshot(driver, 'Screenshot Name', options);
+      element: {
+          id: 'Required ID',
+      }
+  };
+        await browser.url('Required URL');
+        await smartuiSnapshot(driver, 'Screenshot Name', options);
 ```
 
 ```js title="This is a sample for your configuration for JavaScript to capture an element by Class"
 let options = {
-element: {
-class: 'Required Class',
-}
-};
-await browser.url('Required URL');
-await smartuiSnapshot(driver, 'Screenshot Name', options);
+      element: {
+          class: 'Required Class',
+      }
+  };
+        await browser.url('Required URL');
+        await smartuiSnapshot(driver, 'Screenshot Name', options);
 ```
 
 ```js title="This is a sample for your configuration for JavaScript to capture an element by XPath"
 let options = {
-element: {
-xpath: 'Required Xpath',
-}
-};
-await browser.url('Required URL');
-await smartuiSnapshot(driver, 'Screenshot Name', options);
+      element: {
+          xpath: 'Required Xpath',
+      }
+  };
+        await browser.url('Required URL');
+        await smartuiSnapshot(driver, 'Screenshot Name', options);
 ```
 
 ```js title="This is a sample for your webhook configuration for JavaScript to capture an element by CSS Selector"
 let options = {
-element: {
-cssSelector: 'Required CSS Selector',
-}
-};
-await browser.url('Required URL');
-await smartuiSnapshot(driver, 'Screenshot Name', options);
+      element: {
+          cssSelector: 'Required CSS Selector',
+      }
+  };
+        await browser.url('Required URL');
+        await smartuiSnapshot(driver, 'Screenshot Name', options);
 ```
 
 ## Best Practices
@@ -551,7 +551,7 @@ await $('.main-content').waitForDisplayed({ timeout: 10000 });
 2. Enable JavaScript in configuration:
 ```json
 {
-"enableJavaScript": true
+  "enableJavaScript": true
 }
 ```
 

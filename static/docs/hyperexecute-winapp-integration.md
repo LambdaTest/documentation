@@ -23,26 +23,26 @@ import java.io.IOException;
 import java.awt.Desktop;
 
 public class LtWinDriver {
-public static void start() {
-try {
-Desktop d = Desktop.getDesktop();
-d.open(new File("C:\\Program Files (x86)\\Windows Application Driver\\WinAppDriver.exe"));
-//d.open(new File("drivers/WinAppDriver.exe"));
-} catch (IOException e) {
-e.printStackTrace();
-throw new RuntimeException(e);
-}
-}
+    public static void start() {
+        try {
+            Desktop d = Desktop.getDesktop();
+            d.open(new File("C:\\Program Files (x86)\\Windows Application Driver\\WinAppDriver.exe"));
+            //d.open(new File("drivers/WinAppDriver.exe"));
+        } catch (IOException e) {
+            e.printStackTrace();
+            throw new RuntimeException(e);
+        }
+    }
 
-public static void stopExcel() {
-try {
-ProcessBuilder killexcel =new ProcessBuilder("taskkill ","/f","/IM","Excel.exe");
-killexcel.start();
-} catch (IOException e) {
-e.printStackTrace();
-throw new RuntimeException(e);
-}
-}
+    public static void stopExcel() {
+        try {
+            ProcessBuilder killexcel =new ProcessBuilder("taskkill ","/f","/IM","Excel.exe");
+            killexcel.start();
+        } catch (IOException e) {
+            e.printStackTrace();
+            throw new RuntimeException(e);
+        }
+    }
 }
 ```
 
@@ -151,24 +151,24 @@ maxRetries: 1
 concurrency: 2
 
 betaFeature:
-setPartiallyCompletedAsCompleted: true
+  setPartiallyCompletedAsCompleted: true
 
 env:
-CACHE_DIR: m2_cache_dir
+  CACHE_DIR: m2_cache_dir
 
 cacheKey: '{{ checksum "pom.xml" }}'
 cacheDirectories:
-- .m2
+  - .m2
 
 pre:
-- mvn -Dmaven.repo.local=$CACHE_DIR -Dmaven.test.skip=true clean install
+  - mvn -Dmaven.repo.local=$CACHE_DIR -Dmaven.test.skip=true clean install
 
 mergeArtifacts: true
 
 testDiscovery:
-type: raw
-mode: remote
-command: grep 'public class' src/test/java/*.java | awk '{print$3}'
+  type: raw
+  mode: remote
+  command: grep 'public class' src/test/java/*.java | awk '{print$3}'
 
 testRunnerCommand:  mvn `-Dplatname=win `-Dmaven.repo.local=m2_cache_dir `-Dtest=$test test
 ```

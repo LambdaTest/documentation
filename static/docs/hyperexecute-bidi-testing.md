@@ -43,16 +43,16 @@ Download the HyperExecute CLI and copy it into the root folder of the downloaded
 ```javascript title="wdio.lambdatest.config.js"
 
 capabilities: [{
-"LT:Options": {
-browserName: "chrome",
-// highlight-next-line
-webSocketUrl: true,
-version: "latest",
-platform: process.env.HYPEREXECUTE_PLATFORM || 'windows 10',
-name: "HyperExecute BiDi Test",
-build: "HyperExecute BiDi Test",
-console: true,
-}
+    "LT:Options": {
+      browserName: "chrome",
+      // highlight-next-line
+      webSocketUrl: true,
+      version: "latest",
+      platform: process.env.HYPEREXECUTE_PLATFORM || 'windows 10',
+      name: "HyperExecute BiDi Test",
+      build: "HyperExecute BiDi Test",
+      console: true,
+    }
 }],
 
 ```

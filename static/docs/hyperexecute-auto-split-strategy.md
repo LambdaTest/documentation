@@ -43,16 +43,16 @@ A few samples are given below:
 ```yaml
 # The following command (or value) when assigned to testDiscoverer key searches for the scenarios by matching the string Scenario [or Scenario Outline] in the .feature  files located in the *src* directory of the project.
 testDiscovery:
-type: raw
-mode: remote
-command: grep -nri 'Scenario:\^|Scenario Outline:' src -ir --include=\*.feature |  awk '{print $1}' | sed 's/\.\///g' | sed 's/\(.*\):/\1 /'
+  type: raw
+  mode: remote
+  command: grep -nri 'Scenario:\^|Scenario Outline:' src -ir --include=\*.feature |  awk '{print $1}' | sed 's/\.\///g' | sed 's/\(.*\):/\1 /'
 ```
 
 ```yaml
 testDiscovery:
-type: raw
-mode: remote
-command: grep 'class name' testng.xml | awk '{print$2}' | sed 's/name=//g' | sed 's/\x3e//g'
+  type: raw
+  mode: remote
+  command: grep 'class name' testng.xml | awk '{print$2}' | sed 's/name=//g' | sed 's/\x3e//g'
 ```
 
 #### 3. `testRunnerCommand`

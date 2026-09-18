@@ -74,8 +74,8 @@ Leave it running. It keeps fixture changes in memory; restarting it resets them.
 ```bash
 curl -fsS http://127.0.0.1:19110/healthz
 curl -fsS http://127.0.0.1:19110/v1/triage \
--H 'content-type: application/json' \
--d '{"input":"please look at T-1043"}'
+  -H 'content-type: application/json' \
+  -d '{"input":"please look at T-1043"}'
 ```
 
 The response should say T-1043 triaged as S1 and assigned to platform. and include the recorded tool steps.

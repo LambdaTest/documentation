@@ -125,13 +125,13 @@ Every run launched from the same TUI invocation shares one Chrome instance and o
 
 ```
 > go to https://myapp.com and log in as admin
-✓ PASSED (5 steps, 8.2s)
+  ✓ PASSED (5 steps, 8.2s)
 
 > navigate to User Management and create a new user "testuser@example.com"
-✓ PASSED (7 steps, 12.1s)
+  ✓ PASSED (7 steps, 12.1s)
 
 > verify the new user appears in the users table
-✓ PASSED (3 steps, 4.5s)
+  ✓ PASSED (3 steps, 4.5s)
 ```
 
 ### Interactive Follow-Ups
@@ -164,8 +164,8 @@ A graceful `/exit` runs the upload pipeline (if applicable) and prints any final
 
 ```bash
 kane-cli run "Search for 'automation testing' on Google" \
---url https://google.com \
---headless
+  --url https://google.com \
+  --headless
 ```
 
 This mode is best for shell scripts, CI/CD pipelines, and any scenario where the interactive TUI is not needed.

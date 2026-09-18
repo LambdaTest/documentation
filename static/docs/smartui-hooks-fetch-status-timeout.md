@@ -44,16 +44,16 @@ Pass a config object with the `screenshotName` and the `timeout` in seconds.
 
 ```javascript
 const result = await driver.executeScript("smartui.fetchScreenshotStatus", {
-screenshotName: "checkout-page",
-timeout: 120
+  screenshotName: "checkout-page",
+  timeout: 120
 });
 console.log("status:", JSON.stringify(result, null, 2));
 ```
 
 ```python
 result = driver.execute_script("smartui.fetchScreenshotStatus", {
-"screenshotName": "checkout-page",
-"timeout": 120,
+    "screenshotName": "checkout-page",
+    "timeout": 120,
 })
 print("status:", result)
 ```
@@ -68,7 +68,7 @@ config.put("screenshotName", "checkout-page");
 config.put("timeout", 120);
 
 Object result = ((JavascriptExecutor) driver)
-.executeScript("smartui.fetchScreenshotStatus", config);
+    .executeScript("smartui.fetchScreenshotStatus", config);
 System.out.println(result);
 ```
 
@@ -76,11 +76,11 @@ System.out.println(result);
 
 ```javascript
 const result = await page.evaluate(_ => {}, `lambdatest_action: ${JSON.stringify({
-action: "smartui.fetchScreenshotStatus",
-arguments: {
-screenshotName: "checkout-page",
-timeout: 120
-}
+  action: "smartui.fetchScreenshotStatus",
+  arguments: {
+    screenshotName: "checkout-page",
+    timeout: 120
+  }
 })}`);
 console.log(result);
 ```

@@ -49,12 +49,12 @@ Add a project or user definition:
 
 ```bash
 rook mcp add github --scope project \
---env 'GITHUB_TOKEN=${GITHUB_TOKEN}' \
--- npx -y @modelcontextprotocol/server-github
+  --env 'GITHUB_TOKEN=${GITHUB_TOKEN}' \
+  -- npx -y @modelcontextprotocol/server-github
 
 rook mcp add github --scope user \
---env 'GITHUB_TOKEN=${GITHUB_TOKEN}' \
--- npx -y @modelcontextprotocol/server-github
+  --env 'GITHUB_TOKEN=${GITHUB_TOKEN}' \
+  -- npx -y @modelcontextprotocol/server-github
 ```
 
 Everything after `--` is the stdio command and its arguments. You can repeat `--env`.
@@ -65,9 +65,9 @@ Keep secret references in configuration. Rook expands `${VAR}` only when resolvi
 
 ```bash
 rook mcp add notion \
---transport http \
---url https://mcp.example.com/mcp \
---header 'Authorization: Bearer ${NOTION_TOKEN}'
+  --transport http \
+  --url https://mcp.example.com/mcp \
+  --header 'Authorization: Bearer ${NOTION_TOKEN}'
 ```
 
 **Remote transport status**
@@ -149,9 +149,9 @@ A scenario can require a verifier:
 
 ```yaml
 verification_requires:
-- type: mcp
-server: github
-op: issues.get
+  - type: mcp
+    server: github
+    op: issues.get
 ```
 
 If the server cannot be called, Rook names it in the skip reason. The next run recomputes MCP capability, so enabling a server can make the scenario runnable without regenerating it.

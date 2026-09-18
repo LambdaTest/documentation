@@ -13,18 +13,18 @@ runson: linux
 concurrency: 2
 autosplit: true
 pre:
-- npm install
+  - npm install
 
 cacheKey: '{{ checksum "package-lock.json" }}'
 cacheDirectories:
-- node_modules
+  - node_modules
 testDiscovery:
-type: automatic
-mode: static
-args:
-featureFilePaths: <the_path_to_your_folder>
-frameWork: javascript
-specificTags: ["@ToDoOne", "@ToDoTwo", "@ToDoThree"]
+  type: automatic
+  mode: static
+  args:
+    featureFilePaths: <the_path_to_your_folder>
+    frameWork: javascript
+    specificTags: ["@ToDoOne", "@ToDoTwo", "@ToDoThree"]
 
 testRunnerCommand: <your_test_execution_command>
 ```
@@ -61,11 +61,11 @@ runson: linux
 concurrency: 2
 autosplit: true
 tunnelOpts:
-global: true
+  global: true
 
 preDirectives:
-commands:
-- mvn -Dmaven.repo.local=$CACHE_DIR -Dmaven.test.skip=true clean install -DproxyHost=${LT_PROXY_HOST} -DproxyPort=${LT_PROXY_PORT}
+  commands:
+  - mvn -Dmaven.repo.local=$CACHE_DIR -Dmaven.test.skip=true clean install -DproxyHost=${LT_PROXY_HOST} -DproxyPort=${LT_PROXY_PORT}
 ```
 
 > **Note**: The variables ‘LT_PROXY_HOST’ and ‘LT_PROXY_PORT’ are exposed with the tunnel proxy value by default on HyperExecute machines when the tunnel flag is set to _true_ in the HyperExecute YAML.
@@ -76,8 +76,8 @@ You can do this by adding the following command in the preDirectives section of 
 
 ```bash
 preDirectives:
-commands:
-- npm config set registry <artifactory_URL>
+  commands:
+    - npm config set registry <artifactory_URL>
 ```
 
 **Note**: Replace the placeholder value &lt;artifactory_URL&gt; with the link to your private node registry.
@@ -96,11 +96,11 @@ You can set up your Gradle project with HyperExecute by configuring the runtime 
 
 ```bash
 runtime:
-language: java
-version: 17
-addons:
-- name: "gradle"
-version: "7.0"
+  language: java
+  version: 17
+  addons:
+    - name: "gradle"
+	  version: "7.0"
 ```
 
 #### 7. I want to pass a specific package through npm in the YAML file,  instead of npm picking the package present in the directory. Can I do that with HyperExecute?
@@ -109,8 +109,8 @@ You can accomplish this by running the following command in the preDirectives se
 
 ```bash
 preDirectives:
-commands:
-- npm --prefix /path/to/project/my_package.json
+  commands:
+    - npm --prefix /path/to/project/my_package.json
 ```
 This command will install a package called **my_package.json** from the path that you have provided.
 
@@ -126,9 +126,9 @@ In this example, **browser** and **version** are the two choice parameters from 
 
 ```bash
 testDiscovery:
-type: raw
-mode: remote
-command: grep 'test name' src/test/java/${xml} | awk '{print$2}' | sed 's/name=//g' | sed 's/\x3e//g'
+    type: raw
+    mode: remote
+    command: grep 'test name' src/test/java/${xml} | awk '{print$2}' | sed 's/name=//g' | sed 's/\x3e//g'
 
 testRunnerCommand: mvn test `-DselectedTests="$test" `-Dmaven.repo.local=./.m2 dependency:resolve `-Dbrowser=${browser} `-Dversion=${version}
 ```
@@ -139,9 +139,9 @@ You can solve this problem by using HyperExecute's inheritance feature. This fea
 
 ```bash
 base:
-yamls:
-- ./<baseConfiguration1.yaml>
-- ./<baseConfiguration2.yaml>
+  yamls:
+    - ./<baseConfiguration1.yaml>
+    - ./<baseConfiguration2.yaml>
 ```
 
 To learn more about how to use this feature, go through [this page](/support/docs/hyperexecute-inherit-config/).
@@ -152,10 +152,10 @@ You can use the `sourcePayload` parameter for the same. Your test scripts are di
 
 ```bash
 sourcePayload:
-platform: git
-link: https://--------
-ref: master
-accessToken: <your_personal_access_token>
+  platform: git
+  link: https://--------
+  ref: master
+  accessToken: <your_personal_access_token>
 ```
 
 #### 11. I am running a non-hub based test on HyperExecute. How can I capture a video of it?

@@ -9,8 +9,8 @@ If your project uses private dependencies hosted on a custom registry, you must 
 
 ```yaml title="hyperexecute.yaml"
 pre:
-- npm config set registry <URL>
-- npm install
+  - npm config set registry <URL>
+  - npm install
 ```
 
 ## Q: How can a specific Playwright project be executed?
@@ -35,7 +35,7 @@ To ignore test cases marked with test.skip, create a custom Node.js script.
 
 ```yaml title="hyperexecute.yaml"
 testDiscovery:
-command: node discovery.js
+  command: node discovery.js
 ```
 
 ## Q: How can private dependencies be accessed through a private network proxy?
@@ -45,16 +45,16 @@ When private dependencies require access through a private network, configure HT
 
 ```yaml title="hyperexecute.yaml"
 pre:
-- npm config set proxy http://${LT_PROXY_HOST}:${LT_PROXY_PORT}
-- npm config set https-proxy http://${LT_PROXY_HOST}:${LT_PROXY_PORT}
+  - npm config set proxy http://${LT_PROXY_HOST}:${LT_PROXY_PORT}
+  - npm config set https-proxy http://${LT_PROXY_HOST}:${LT_PROXY_PORT}
 ```
 
 **For yarn:**
 
 ```yaml title="hyperexecute.yaml"
 pre:
-- yarn config set proxy http://${LT_PROXY_HOST}:${LT_PROXY_PORT}
-- yarn config set https-proxy http://${LT_PROXY_HOST}:${LT_PROXY_PORT}
+  - yarn config set proxy http://${LT_PROXY_HOST}:${LT_PROXY_PORT}
+  - yarn config set https-proxy http://${LT_PROXY_HOST}:${LT_PROXY_PORT}
 ```
 
 ## Q: How can scripts be run on each machine after test execution?
@@ -66,8 +66,8 @@ Use the `post` parameter in the YAML file. Typical use cases include:
 
 ```yaml title="hyperexecute.yaml"
 post:
-- ./scripts/cleanup.sh
-- ./scripts/upload-results.sh
+  - ./scripts/cleanup.sh
+  - ./scripts/upload-results.sh
 ```
 
 ## Q: How can tasks be executed after all test executions are complete?
@@ -80,8 +80,8 @@ Common use cases:
 
 ```yaml title="hyperexecute.yaml"
 globalPost:
-- ./scripts/merge-reports.sh
-- ./scripts/send-summary.sh
+  - ./scripts/merge-reports.sh
+  - ./scripts/send-summary.sh
 ```
 
 ## Q: How can scripts be executed before all test executions start?
@@ -94,8 +94,8 @@ Examples:
 
 ```yaml title="hyperexecute.yaml"
 globalPre:
-- ./scripts/setup-env.sh
-- ./scripts/import-data.sh
+  - ./scripts/setup-env.sh
+  - ./scripts/import-data.sh
 ```
 
 ## Q: How can smart caching be enabled in HyperExecute?
@@ -106,7 +106,7 @@ Caching dependencies improves efficiency by avoiding repeated installations. Usi
 ```yaml title="hyperexecute.yaml"
 cacheKey: '{{ checksum "package-lock.json" }}'
 cacheDirectories:
-- node_modules
+  - node_modules
 ```
 
 **For yarn:**
@@ -114,7 +114,7 @@ cacheDirectories:
 ```yaml title="hyperexecute.yaml"
 cacheKey: '{{ checksum "yarn.lock" }}'
 cacheDirectories:
-- node_modules
+  - node_modules
 ```
 
 ## Q: What is `testDiscovery` and how can it be configured?
@@ -124,18 +124,18 @@ cacheDirectories:
 
 ```yaml title="hyperexecute.yaml"
 testDiscovery:
-type: raw
-mode: static
-command: grep -lr 'describe' tests
+  type: raw
+  mode: static
+  command: grep -lr 'describe' tests
 ```
 
 **Test-level discovery:**
 
 ```yaml title="hyperexecute.yaml"
 testDiscovery:
-type: raw
-mode: remote
-command: grep -rn "test(" tests | cut -d: -f1,2
+  type: raw
+  mode: remote
+  command: grep -rn "test(" tests | cut -d: -f1,2
 ```
 
 ## Q: How can Playwright reports be configured in HyperExecute?
@@ -152,9 +152,9 @@ reporter: [["html", { outputFolder: "playwright-report", open: "never" }]]
 ```yaml title="hyperexecute.yaml"
 report: true
 partialReports:
-frameworkName: playwright
-location: playwright-report
-type: HTML
+  frameworkName: playwright
+  location: playwright-report
+  type: HTML
 ```
 
 ## Q: How can tag-level discovery be performed in Playwright tests?
@@ -166,9 +166,9 @@ If tests include tags and only specific tags need to be executed, a custom Node.
 
 ```yaml title="hyperexecute.yaml"
 testDiscovery:
-type: raw
-mode: static
-command: node discovery.js '(?=.*@PROD)(?=.*@LOGIN)'
+  type: raw
+  mode: static
+  command: node discovery.js '(?=.*@PROD)(?=.*@LOGIN)'
 ```
 
 ## Q: Why do tests pass locally and on the automation grid but fail in HyperExecute?
@@ -179,7 +179,7 @@ This occurs due to a version mismatch between the Playwright client and server. 
 
 ```yaml title="hyperexecute.yaml"
 pre:
-- npx playwright@1.41.0 install
+  - npx playwright@1.41.0 install
 ```
 > Replace `1.41.0` with the version specified in the project’s package.json.
 
@@ -196,8 +196,8 @@ Certain frameworks or projects require specific environment variables, such as c
 
 ```yaml title="hyperexecute.yaml"
 env:
-BASE_URL: https://example.com
-API_KEY: your_api_key_here
+  BASE_URL: https://example.com
+  API_KEY: your_api_key_here
 ```
 
 ```bash title=".env"
@@ -224,7 +224,7 @@ For example, to install version `1.50.0`:
 
 ```yaml title="hyperexecute.yaml"
 pre:
-- npx playwright@1.50.0 install
+  - npx playwright@1.50.0 install
 ```
 
 ## Q: Why might the browser fail to launch on HyperExecute?
@@ -232,7 +232,7 @@ Tests may fail to start if required browser binaries are missing or not installe
 
 ```yaml title="hyperexecute.yaml"
 pre:
-- npx playwright install --with-deps
+  - npx playwright install --with-deps
 ```
 
 ## Q: Why do tests time out on HyperExecute but pass locally?
@@ -257,9 +257,9 @@ If Playwright is not configured to capture screenshots, videos, or traces, or if
 
 ```javascript title="playwright.config.ts"
 use: {
-screenshot: 'on',
-video: 'on',
-trace: 'on-first-retry',
+  screenshot: 'on',
+  video: 'on',
+  trace: 'on-first-retry',
 }
 ```
 
@@ -267,10 +267,10 @@ trace: 'on-first-retry',
 
 ```yaml title="hyperexecute.yaml"
 uploadArtefacts:
-- name: FinalReport
-path:
-- test-results/**
-- playwright-report/**
+  - name: FinalReport
+    path:
+      - test-results/**
+      - playwright-report/**
 ```
 
 ## Q: Why do "Cannot find module" errors occur during execution?
@@ -278,5 +278,5 @@ These errors occur when required modules are missing or the installation step is
 
 ```yaml title="hyperexecute.yaml"
 pre:
-- npm install
+  - npm install
 ```

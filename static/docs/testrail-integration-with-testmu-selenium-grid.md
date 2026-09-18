@@ -22,8 +22,8 @@ $ install maven
     * Ensure that the required packages are made available using the below command:
 
 ```
-$ cd Java-TestNG-Selenium-TestRail
-```
+ $ cd Java-TestNG-Selenium-TestRail
+ ```
 
     * We recommend, you execute the below command for evaluating any outdated dependencies. As a best practice, it is always suggested to go for a verification check & perform any update, if needed, prior editing your pom.xml in order to avoid any code incompatibility.
 

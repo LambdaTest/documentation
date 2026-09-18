@@ -42,7 +42,7 @@ version: 0.1
 runson: linux
 testSuiteStep: 90
 pre:
-- npm install   # or mvn dependency:go-offline
+  - npm install   # or mvn dependency:go-offline
 testRunnerCommand: npm run test:a11y   # must invoke tests that set accessibility caps
 ```
 

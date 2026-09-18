@@ -193,53 +193,53 @@ dynamicAllocation: true
 
 # Test framework configuration
 framework:
-# Name of the test framework (raw in this case)
-name: raw
-args:
-# List of devices to run tests on (iPhone 17 on iOS 26.0 in this case)
-# devices: [".*-.*", ".*-.*", ".*-.*"]
-devices: ["iPhone 17"]
-# devices: [".*-26.0"]
-# Enable or disable video recording support
-video: true
-# Enable or disable device log support
-deviceLog: true
-# App ID to be installed (mandatory field, using <app_id>)
-# x86 build
-# appId: lt://APP10160362031781245339521143 #Need to upload .zip file
-# ARM Build for iOS 26.0 & above
-appId: lt://APP123456789012345678901234567
-# Build name for identification on the automation dashboard
-buildName: maestro-t1
-# Timeout for device queue
-queueTimeout: 600
-# Configuration fields specific to running raw tests
-# region: ap
-disableReleaseDevice: true
-reservation: false
-isRealMobile: false
-network: true
-platformName: ios
+  # Name of the test framework (raw in this case)
+  name: raw
+  args:
+    # List of devices to run tests on (iPhone 17 on iOS 26.0 in this case)
+    # devices: [".*-.*", ".*-.*", ".*-.*"]
+    devices: ["iPhone 17"]
+    # devices: [".*-26.0"]
+    # Enable or disable video recording support
+    video: true
+    # Enable or disable device log support
+    deviceLog: true
+    # App ID to be installed (mandatory field, using <app_id>)
+    # x86 build
+    # appId: lt://APP10160362031781245339521143 #Need to upload .zip file
+    # ARM Build for iOS 26.0 & above
+    appId: lt://APP123456789012345678901234567
+    # Build name for identification on the automation dashboard
+    buildName: maestro-t1
+    # Timeout for device queue
+    queueTimeout: 600
+    # Configuration fields specific to running raw tests
+    # region: ap
+    disableReleaseDevice: true
+    reservation: false
+    isRealMobile: false
+    network: true
+    platformName: ios
 
 env:
-MAESTRO: true
-MAESTRO_LOGS_DIR: MaestroLogs
+  MAESTRO: true
+  MAESTRO_LOGS_DIR: MaestroLogs
 
 # Pre-install required dependencies using pip
 # will need java and maestro inside the container
 pre:
-- chmod +x maestro-test/setup-script-iOS.sh
-- chmod +x ./maestro-test/runTest_ios.sh
-- ./maestro-test/setup-script-iOS.sh
+  - chmod +x maestro-test/setup-script-iOS.sh
+  - chmod +x ./maestro-test/runTest_ios.sh
+  - ./maestro-test/setup-script-iOS.sh
 
 # Test discovery configuration
 testDiscovery:
-# Command to discover tests from the test.txt file
-command: cat ./maestro-test/discover-iOS.txt
-# Test discovery mode can be static/dynamic
-mode: static
-# Test type is raw (custom test implementation)
-type: raw
+  # Command to discover tests from the test.txt file
+  command: cat ./maestro-test/discover-iOS.txt
+  # Test discovery mode can be static/dynamic
+  mode: static
+  # Test type is raw (custom test implementation)
+  type: raw
 
 # Command to run the tests using the testRunnerCommand
 testRunnerCommand: ./maestro-test/runTest_ios.sh $test
@@ -249,9 +249,9 @@ frameworkStatusOnly: true
 
 report: true
 partialReports:
-- location: .
-type: xml
-frameworkName: junit
+  - location: .
+    type: xml
+    frameworkName: junit
 
 jobLabel: ['HYP', 'Maestro', 'iOS', Simulator]
 ```
@@ -281,9 +281,9 @@ https://github.com/LambdaTest/hyperexecute-maestro-sample-test/blob/main/maestro
 ```yaml title="hyperexecute.yaml"
 report: true
 partialReports:
-- location: .
-type: xml
-frameworkName: junit
+  - location: .
+    type: xml
+    frameworkName: junit
 ```
 
 ### 📘 Use Cases
@@ -325,10 +325,10 @@ You can configure your YAML files to launch the pre-installed app instead of upl
 ```yaml title="hyperexecute.yaml"
 ...//
 framework:
-name: raw
-args:
-#highlight-next-line
-appId: stock
+  name: raw
+  args:
+    #highlight-next-line
+    appId: stock
 ```
 
 and the launcher yaml file to tells maestro to use the pre-installed Wikipedia app.

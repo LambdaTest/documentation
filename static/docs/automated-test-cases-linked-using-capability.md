@@ -12,10 +12,10 @@ To link an automated test run with a specific test case, add the `tms.tc_id` key
 
 ```javascript
 const capabilities = {
-"lt:Options": {
-"project": "Your Project Name", // Specify the project where the test run should be created
-"tms.tc_id": "TC-1470" // Link the test execution to the Test Case ID 'TC-1470'
-}
+  "lt:Options": {
+      "project": "Your Project Name", // Specify the project where the test run should be created
+      "tms.tc_id": "TC-1470" // Link the test execution to the Test Case ID 'TC-1470'
+  }
 };
 ```
 
@@ -31,15 +31,15 @@ To ensure the test run is created in the correct project, use the `project` capa
 
 ```javascript
 const capabilities = {
-"browserName": "Chrome",
-"browserVersion": "latest",
-"lt:Options": {
-"platform": "Windows 10",
-"build": "Playwright Build",
-"name": "Sample Test",
-"project": "Demo-Project", // Target project name
-"tms.tc_id": "TC-95668" // Test case ID from the target project
-}
+  "browserName": "Chrome",
+  "browserVersion": "latest",
+  "lt:Options": {
+      "platform": "Windows 10",
+      "build": "Playwright Build",
+      "name": "Sample Test",
+      "project": "Demo-Project", // Target project name
+      "tms.tc_id": "TC-95668" // Test case ID from the target project
+  }
 };
 ```
 

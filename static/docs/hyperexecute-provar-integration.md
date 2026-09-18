@@ -182,8 +182,8 @@ globalTimeout: 150
 runson: win
 
 runtime:
-language: java
-version: "11"
+  language: java
+  version: "11"
 
 autosplit: false
 
@@ -193,19 +193,19 @@ retryOnFailure: true
 maxRetries: 2
 
 env:
-ProvarSecretsPassword: <ENTER_YOUR_PASSWORD>
+  ProvarSecretsPassword: <ENTER_YOUR_PASSWORD>
 
 pre:
-- ls
+  - ls
 
 post:
-- cat ./ANT/.lambdatestBuild.xml
+  - cat ./ANT/.lambdatestBuild.xml
 
 framework:
-name: provar
-discoveryType: test
-additional_args:
-discoveryLevel: file # required
+ name: provar
+ discoveryType: test
+ additional_args:
+  discoveryLevel: file # required
 ```
 
 ## Step 6: Execute your Test Suite

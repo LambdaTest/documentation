@@ -102,12 +102,12 @@ Update platform configuration in the driver method of `tests/DuskTestCase.php` t
 
 ```php
 $capabilities = array(
-"build" => "LaravelDusk Build",
-"name" => "LaravelDusk Build",
-"platform" => "Windows 10",
-"browserName" => "Chrome",
-"version" => "latest"
-);
+			"build" => "LaravelDusk Build",
+			"name" => "LaravelDusk Build",
+			"platform" => "Windows 10",
+			"browserName" => "Chrome",
+			"version" => "latest"
+     );
 ```
 
 **Capabilities Generator**

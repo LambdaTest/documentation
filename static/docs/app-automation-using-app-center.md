@@ -41,61 +41,61 @@ Shown below is the response of the above API call.
 
 ```json
 [
-{
-"id":"19c6645d-3146-4853-97f4-22b1fc0a3ec4",
-"app_secret":"9bdaef87-c3b7-4b8b-8a64-944bafdd870a",
-"description":null,
-"display_name":"Demo-2",
-"name":"Demo-2",
-"os":"iOS",
-"platform":"Objective-C-Swift",
-"origin":"appcenter",
-"icon_url":null,
-"created_at":"2022-03-31T11:29:39.019Z",
-"updated_at":"2022-03-31T11:29:39.019Z",
-"release_type":"Alpha",
-"owner":{
-"id":"29536631-e7c3-4035-a78e-4040bc96e9ce",
-"avatar_url":null,
-"display_name":"Gaurav Raj",
-"email":"gauravraj@lambdatest.com",
-"name":"gauravraj-lambdatest",
-"type":"user"
-},
-"azure_subscription":null,
-"member_permissions":[
-"manager"
-]
-},
-{
-"id":"2c90096a-ac95-4911-a545-4b40e4f66b7b",
-"app_secret":"781a8f31-b593-48ce-8c31-497be0da89b5",
-"description":null,
-"display_name":"TodoApp",
-"name":"TodoApp",
-"os":"Android",
-"platform":"Java",
-"origin":"appcenter",
-"icon_url":"https://appcenter-filemanagement-distrib4ede6f06e.azureedge.net/364affef-e00b-4f93-81 d3-5ee4a00755c9/launcher.png?sv=2019-02-02&sr=c&sig=OCEgMuaJlZt2wHqrLp4j8aO9xMT%2BOcy8 X4ty%2B2SKsGo%3D&se=2022-04-11T13%3A28%3A49Z&sp=r",
-"created_at":"2022-03-07T11:44:09.627Z",
-"updated_at":"2022-03-14T12:23:34.342Z",
-"release_type":"Alpha",
-"owner":{
-"id":"29536631-e7c3-4035-a78e-4040bc96e9ce",
-"avatar_url":null,
-"display_name":"Gaurav Raj",
-"email":"gauravraj@lambdatest.com",
-"name":"gauravraj-lambdatest",
-"type":"user"
-},
-"azure_subscription":null,
-"member_permissions":[
-"manager"
-]
-},
-{
-"......."
-}
+   {
+      "id":"19c6645d-3146-4853-97f4-22b1fc0a3ec4",
+      "app_secret":"9bdaef87-c3b7-4b8b-8a64-944bafdd870a",
+      "description":null,
+      "display_name":"Demo-2",
+      "name":"Demo-2",
+      "os":"iOS",
+      "platform":"Objective-C-Swift",
+      "origin":"appcenter",
+      "icon_url":null,
+      "created_at":"2022-03-31T11:29:39.019Z",
+      "updated_at":"2022-03-31T11:29:39.019Z",
+      "release_type":"Alpha",
+      "owner":{
+         "id":"29536631-e7c3-4035-a78e-4040bc96e9ce",
+         "avatar_url":null,
+         "display_name":"Gaurav Raj",
+         "email":"gauravraj@lambdatest.com",
+         "name":"gauravraj-lambdatest",
+         "type":"user"
+      },
+      "azure_subscription":null,
+      "member_permissions":[
+         "manager"
+      ]
+   },
+   {
+      "id":"2c90096a-ac95-4911-a545-4b40e4f66b7b",
+      "app_secret":"781a8f31-b593-48ce-8c31-497be0da89b5",
+      "description":null,
+      "display_name":"TodoApp",
+      "name":"TodoApp",
+      "os":"Android",
+      "platform":"Java",
+      "origin":"appcenter",
+      "icon_url":"https://appcenter-filemanagement-distrib4ede6f06e.azureedge.net/364affef-e00b-4f93-81 d3-5ee4a00755c9/launcher.png?sv=2019-02-02&sr=c&sig=OCEgMuaJlZt2wHqrLp4j8aO9xMT%2BOcy8 X4ty%2B2SKsGo%3D&se=2022-04-11T13%3A28%3A49Z&sp=r",
+      "created_at":"2022-03-07T11:44:09.627Z",
+      "updated_at":"2022-03-14T12:23:34.342Z",
+      "release_type":"Alpha",
+      "owner":{
+         "id":"29536631-e7c3-4035-a78e-4040bc96e9ce",
+         "avatar_url":null,
+         "display_name":"Gaurav Raj",
+         "email":"gauravraj@lambdatest.com",
+         "name":"gauravraj-lambdatest",
+         "type":"user"
+      },
+      "azure_subscription":null,
+      "member_permissions":[
+         "manager"
+      ]
+   },
+   {
+      "......."
+   }
 ]
 ```
 
@@ -112,52 +112,52 @@ Shown below is the response of the above API call.
 
 ```js
 [
-{
-"origin": "appcenter",
-"id": 1,
-"short_version": "2.7.50393-r-2022-02-10",
-"version": "50393",
-"uploaded_at": "2022-03-07T11:46:06.590Z",
-"enabled": true,
-"is_external_build": false,
-"file_extension": "apk",
-"destinations": [
-{
-"id": "00000000-0000-0000-0000-000000000000",
-"name": "Collaborators",
-"destination_type": "group"
-}
-],
-"distribution_groups": [
-{
-"id": "00000000-0000-0000-0000-000000000000",
-"name": "Collaborators"
-}
-]
-},
-{
-"origin": "appcenter",
-"id": 4,
-"short_version": "2.7.50392-r-2022-01-24",
-"version": "50392",
-"uploaded_at": "2022-03-17T10:44:11.524Z",
-"enabled": true,
-"is_external_build": false,
-"file_extension": "apk",
-"destinations": [
-{
-"id": "00000000-0000-0000-0000-000000000000",
-"name": "Collaborators",
-"destination_type": "group"
-}
-],
-"distribution_groups": [
-{
-"id": "00000000-0000-0000-0000-000000000000",
-"name": "Collaborators"
-}
-]
-}
+  {
+    "origin": "appcenter",
+    "id": 1,
+    "short_version": "2.7.50393-r-2022-02-10",
+    "version": "50393",
+    "uploaded_at": "2022-03-07T11:46:06.590Z",
+    "enabled": true,
+    "is_external_build": false,
+    "file_extension": "apk",
+    "destinations": [
+      {
+        "id": "00000000-0000-0000-0000-000000000000",
+        "name": "Collaborators",
+        "destination_type": "group"
+      }
+    ],
+    "distribution_groups": [
+      {
+        "id": "00000000-0000-0000-0000-000000000000",
+        "name": "Collaborators"
+      }
+    ]
+  },
+  {
+    "origin": "appcenter",
+    "id": 4,
+    "short_version": "2.7.50392-r-2022-01-24",
+    "version": "50392",
+    "uploaded_at": "2022-03-17T10:44:11.524Z",
+    "enabled": true,
+    "is_external_build": false,
+    "file_extension": "apk",
+    "destinations": [
+      {
+        "id": "00000000-0000-0000-0000-000000000000",
+        "name": "Collaborators",
+        "destination_type": "group"
+      }
+    ],
+    "distribution_groups": [
+      {
+        "id": "00000000-0000-0000-0000-000000000000",
+        "name": "Collaborators"
+      }
+    ]
+  }
 ]
 ```
 
@@ -174,44 +174,44 @@ Shown below is the response of the above API call.
 
 ```js
 {
-"app_name": "BCDE-1",
-"app_display_name": "BCDE-1",
-"app_os": "Android",
-"app_icon_url": "https://appcenter-filemanagement-distrib1ede6f06e.azureedge.net/ad7ca44e-0459-459c-9e de-0c72fa78ae03/launcher.png?sv=2019-02-02&sr=c&sig=eFvMnfD%2B9FdYReu4OiG%2BnqvFkTTdXE LlN0dpoAItqig%3D&se=2022-04-14T12%3A03%3A16Z&sp=r",
-"is_external_build": false,
-"origin": "appcenter",
-"id": 1,
-"version": "50393",
-"short_version": "2.7.50393-r-2022-02-10",
-"size": 13833051,
-"min_os": "5.0",
-"android_min_api_level": "21",
-"device_family": null,
-"bundle_identifier": "org.wikipedia",
-"fingerprint": "6a42317cc91fae15b9847f4bb4745e6f",
-"uploaded_at": "2022-03-07T11:46:06.590Z",
-"download_url": "https://appcenter-filemanagement-distrib3ede6f06e.azureedge.net/bd52eda2-b239-480b-b2 de-25205f705e63/Wikipedia_v2.7.50393-r-2022-02-10_apkpure.com.apk?sv=2019-02-02&sr=c&s ig=i170%2FkTlpX8146XrKVyxQRLiTUiDoPkfJYGOm%2B1UeZM%3D&se=2022-04-09T09%3A58%3A42Z&sp=r ",
-"install_url": "https://appcenter-filemanagement-distrib3ede6f06e.azureedge.net/bd52eda2-b239-480b-b2 de-25205f705e63/Wikipedia_v2.7.50393-r-2022-02-10_apkpure.com.apk?sv=2019-02-02&sr=c&s\nig=i170%2FkTlpX8146XrKVyxQRLiTUiDoPkfJYGOm%2B1UeZM%3D&se=2022-04-09T09%3A58%3A42Z&sp=r ",
-"enabled": true,
-"fileExtension": "apk",
-"release_notes": "",
-"package_hashes": [
-"d1c86bcc8784a35a2ee5ada2112cde3056c2b6fb0bc9ca700af5f2826564fc98"
-],
-"destinations": [
-{
-"destination_type": "group",
-"id": "00000000-0000-0000-0000-000000000000",
-"name": "Collaborators"
-}
-],
-"destination_type": "group",
-"distribution_groups": [
-{
-"id": "00000000-0000-0000-0000-000000000000",
-"name": "Collaborators"
-}
-]
+  "app_name": "BCDE-1",
+  "app_display_name": "BCDE-1",
+  "app_os": "Android",
+  "app_icon_url": "https://appcenter-filemanagement-distrib1ede6f06e.azureedge.net/ad7ca44e-0459-459c-9e de-0c72fa78ae03/launcher.png?sv=2019-02-02&sr=c&sig=eFvMnfD%2B9FdYReu4OiG%2BnqvFkTTdXE LlN0dpoAItqig%3D&se=2022-04-14T12%3A03%3A16Z&sp=r",
+  "is_external_build": false,
+  "origin": "appcenter",
+  "id": 1,
+  "version": "50393",
+  "short_version": "2.7.50393-r-2022-02-10",
+  "size": 13833051,
+  "min_os": "5.0",
+  "android_min_api_level": "21",
+  "device_family": null,
+  "bundle_identifier": "org.wikipedia",
+  "fingerprint": "6a42317cc91fae15b9847f4bb4745e6f",
+  "uploaded_at": "2022-03-07T11:46:06.590Z",
+  "download_url": "https://appcenter-filemanagement-distrib3ede6f06e.azureedge.net/bd52eda2-b239-480b-b2 de-25205f705e63/Wikipedia_v2.7.50393-r-2022-02-10_apkpure.com.apk?sv=2019-02-02&sr=c&s ig=i170%2FkTlpX8146XrKVyxQRLiTUiDoPkfJYGOm%2B1UeZM%3D&se=2022-04-09T09%3A58%3A42Z&sp=r ",
+  "install_url": "https://appcenter-filemanagement-distrib3ede6f06e.azureedge.net/bd52eda2-b239-480b-b2 de-25205f705e63/Wikipedia_v2.7.50393-r-2022-02-10_apkpure.com.apk?sv=2019-02-02&sr=c&s\nig=i170%2FkTlpX8146XrKVyxQRLiTUiDoPkfJYGOm%2B1UeZM%3D&se=2022-04-09T09%3A58%3A42Z&sp=r ",
+  "enabled": true,
+  "fileExtension": "apk",
+  "release_notes": "",
+  "package_hashes": [
+    "d1c86bcc8784a35a2ee5ada2112cde3056c2b6fb0bc9ca700af5f2826564fc98"
+  ],
+  "destinations": [
+    {
+      "destination_type": "group",
+      "id": "00000000-0000-0000-0000-000000000000",
+      "name": "Collaborators"
+    }
+  ],
+  "destination_type": "group",
+  "distribution_groups": [
+    {
+      "id": "00000000-0000-0000-0000-000000000000",
+      "name": "Collaborators"
+    }
+  ]
 }
 ```
 

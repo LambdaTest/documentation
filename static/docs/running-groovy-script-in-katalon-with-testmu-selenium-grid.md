@@ -40,68 +40,68 @@ import com.kms.katalon.core.configuration.RunConfiguration
 
 class LambdaListener {
 
-TestSuiteContext suiteContext;
+	TestSuiteContext suiteContext;
 
-/**
-* Executes before every test case starts.
-* @param testCaseContext related information of the executed test case.
-*/
-@BeforeTestCase
-def sampleBeforeTestCase(TestCaseContext testCaseContext) {
+	/**
+	 * Executes before every test case starts.
+	 * @param testCaseContext related information of the executed test case.
+	 */
+	@BeforeTestCase
+	def sampleBeforeTestCase(TestCaseContext testCaseContext) {
 
-//To set the test name at LambdaTest.
-RunConfiguration.setDriverPreferencesProperty("Remote", "name", testCaseContext.getTestCaseId());
-if (suiteContext != null){
-RunConfiguration.setDriverPreferencesProperty("Remote","build", suiteContext.getTestSuiteId());
-}
-println testCaseContext.getTestCaseId();
-println RunConfiguration.getDriverPreferencesProperties();
-}
-/**
-* Executes after every test case ends.
-* @param testCaseContext related information of the executed test case.
-*/
-@com.kms.katalon.core.annotation.TearDown
-@AfterTestCase
-def sampleAfterTestCase(TestCaseContext testCaseContext) {
-//To set the status of test at LambdaTest.
-String result="failed";
-if(testCaseContext.getTestCaseStatus().equalsIgnoreCase("PASSED")){
-result="passed"
-}
-try{
-WebUI.executeJavaScript("lambda-status="+result,null)
-}catch (Exception e)
-{
-println e.toString()
-}
-finally {
-WebUI.closeBrowser()
-}
-println testCaseContext.getTestCaseId()
-println testCaseContext.getTestCaseStatus()
-}
+		//To set the test name at LambdaTest.
+		RunConfiguration.setDriverPreferencesProperty("Remote", "name", testCaseContext.getTestCaseId());
+		if (suiteContext != null){
+			RunConfiguration.setDriverPreferencesProperty("Remote","build", suiteContext.getTestSuiteId());
+		}
+		println testCaseContext.getTestCaseId();
+		println RunConfiguration.getDriverPreferencesProperties();
+	}
+	/**
+	 * Executes after every test case ends.
+	 * @param testCaseContext related information of the executed test case.
+	 */
+	@com.kms.katalon.core.annotation.TearDown
+	@AfterTestCase
+	def sampleAfterTestCase(TestCaseContext testCaseContext) {
+		//To set the status of test at LambdaTest.
+		String result="failed";
+		if(testCaseContext.getTestCaseStatus().equalsIgnoreCase("PASSED")){
+			result="passed"
+		}
+		try{
+			WebUI.executeJavaScript("lambda-status="+result,null)
+		}catch (Exception e)
+		{
+			println e.toString()
+		}
+		finally {
+			WebUI.closeBrowser()
+		}
+		println testCaseContext.getTestCaseId()
+		println testCaseContext.getTestCaseStatus()
+	}
 
-/**
-* Executes before every test suite starts.
-* @param testSuiteContext: related information of the executed test suite.
-*/
-@BeforeTestSuite
-def sampleBeforeTestSuite(TestSuiteContext testSuiteContext) {
-suiteContext=testSuiteContext
-//To Set the build Name at LambdaTest.
-RunConfiguration.setDriverPreferencesProperty("Remote","build", suiteContext.getTestSuiteId());
-println testSuiteContext.getTestSuiteId()
-}
+	/**
+	 * Executes before every test suite starts.
+	 * @param testSuiteContext: related information of the executed test suite.
+	 */
+	@BeforeTestSuite
+	def sampleBeforeTestSuite(TestSuiteContext testSuiteContext) {
+		suiteContext=testSuiteContext
+		//To Set the build Name at LambdaTest.
+		RunConfiguration.setDriverPreferencesProperty("Remote","build", suiteContext.getTestSuiteId());
+		println testSuiteContext.getTestSuiteId()
+	}
 
-/**
-* Executes after every test suite ends.
-* @param testSuiteContext: related information of the executed test suite.
-*/
-@AfterTestSuite
-def sampleAfterTestSuite(TestSuiteContext testSuiteContext) {
-println testSuiteContext.getTestSuiteId()
-}
+	/**
+	 * Executes after every test suite ends.
+	 * @param testSuiteContext: related information of the executed test suite.
+	 */
+	@AfterTestSuite
+	def sampleAfterTestSuite(TestSuiteContext testSuiteContext) {
+		println testSuiteContext.getTestSuiteId()
+	}
 }
 ```
 

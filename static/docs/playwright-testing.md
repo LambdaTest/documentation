@@ -79,25 +79,25 @@ export LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
 
 ```js
 (async () => {
-const capabilities = {
-'browserName': 'Chrome', // Browsers allowed: `Chrome`, `MicrosoftEdge`, `pw-chromium`, `pw-firefox` and `pw-webkit`
-'browserVersion': 'latest',
-'LT:Options': {
-'platform': 'Windows 10',
-'build': 'Playwright Sample Build',
-'name': 'Playwright Sample Test',
-'user': process.env.LT_USERNAME,
-'accessKey': process.env.LT_ACCESS_KEY,
-'network': true,
-'video': true,
-'console': true
-}
-}
+  const capabilities = {
+    'browserName': 'Chrome', // Browsers allowed: `Chrome`, `MicrosoftEdge`, `pw-chromium`, `pw-firefox` and `pw-webkit`
+    'browserVersion': 'latest',
+    'LT:Options': {
+      'platform': 'Windows 10',
+      'build': 'Playwright Sample Build',
+      'name': 'Playwright Sample Test',
+      'user': process.env.LT_USERNAME,
+      'accessKey': process.env.LT_ACCESS_KEY,
+      'network': true,
+      'video': true,
+      'console': true
+    }
+  }
 
-const browser = await chromium.connect({
-wsEndpoint: `wss://cdp.lambdatest.com/playwright?capabilities=${encodeURIComponent(JSON.stringify(capabilities))}`
-})
-```
+  const browser = await chromium.connect({
+    wsEndpoint: `wss://cdp.lambdatest.com/playwright?capabilities=${encodeURIComponent(JSON.stringify(capabilities))}`
+  })
+  ```
 
 Once you are done with the above-mentioned steps, you can initiate your first Playwright test on TestMu AI.
 
@@ -108,44 +108,44 @@ const { chromium } = require('playwright')
 const { expect } = require('@playwright/test');
 
 (async () => {
-const capabilities = {
-'browserName': 'Chrome', // Browsers allowed: `Chrome`, `MicrosoftEdge`, `pw-chromium`, `pw-firefox` and `pw-webkit`
-'browserVersion': 'latest',
-'LT:Options': {
-'platform': 'Windows 10',
-'build': 'Playwright Sample Build',
-'name': 'Playwright Sample Test',
-'user': process.env.LT_USERNAME,
-'accessKey': process.env.LT_ACCESS_KEY,
-'network': true,
-'video': true,
-'console': true
-}
-}
+  const capabilities = {
+    'browserName': 'Chrome', // Browsers allowed: `Chrome`, `MicrosoftEdge`, `pw-chromium`, `pw-firefox` and `pw-webkit`
+    'browserVersion': 'latest',
+    'LT:Options': {
+      'platform': 'Windows 10',
+      'build': 'Playwright Sample Build',
+      'name': 'Playwright Sample Test',
+      'user': process.env.LT_USERNAME,
+      'accessKey': process.env.LT_ACCESS_KEY,
+      'network': true,
+      'video': true,
+      'console': true
+    }
+  }
 
-const browser = await chromium.connect({
-wsEndpoint: `wss://cdp.lambdatest.com/playwright?capabilities=${encodeURIComponent(JSON.stringify(capabilities))}`
-})
+  const browser = await chromium.connect({
+    wsEndpoint: `wss://cdp.lambdatest.com/playwright?capabilities=${encodeURIComponent(JSON.stringify(capabilities))}`
+  })
 
-const page = await browser.newPage()
+  const page = await browser.newPage()
 
-await page.goto('https://duckduckgo.com')
+  await page.goto('https://duckduckgo.com')
 
-const element = await page.$('[name="q"]')
-await element.click()
-await element.type('TestMu AI')
-await element.press('Enter')
-const title = await page.title()
+  const element = await page.$('[name="q"]')
+  await element.click()
+  await element.type('TestMu AI')
+  await element.press('Enter')
+  const title = await page.title()
 
-try {
-expect(title).toEqual('TestMu AI at DuckDuckGo')
-// Mark the test as completed or failed
-await page.evaluate(_ => {}, `lambdatest_action: ${JSON.stringify({ action: 'setTestStatus', arguments: { status: 'passed', remark: 'Title matched' } })}`)
-} catch {
-await page.evaluate(_ => {}, `lambdatest_action: ${JSON.stringify({ action: 'setTestStatus', arguments: { status: 'failed', remark: 'Title not matched' } })}`)
-}
+  try {
+    expect(title).toEqual('TestMu AI at DuckDuckGo')
+    // Mark the test as completed or failed
+    await page.evaluate(_ => {}, `lambdatest_action: ${JSON.stringify({ action: 'setTestStatus', arguments: { status: 'passed', remark: 'Title matched' } })}`)
+  } catch {
+    await page.evaluate(_ => {}, `lambdatest_action: ${JSON.stringify({ action: 'setTestStatus', arguments: { status: 'failed', remark: 'Title not matched' } })}`)
+  }
 
-await browser.close()
+  await browser.close()
 })()
 
 ```
@@ -167,80 +167,80 @@ const { chromium } = require('playwright')
 const { expect } = require('@playwright/test')
 
 const parallelTests = async (capability) => {
-console.log('Initialising test:: ', capability['LT:Options']['name'])
+  console.log('Initialising test:: ', capability['LT:Options']['name'])
 
-const browser = await chromium.connect({
-wsEndpoint: `wss://cdp.lambdatest.com/playwright?capabilities=${encodeURIComponent(JSON.stringify(capability))}`
-})
+  const browser = await chromium.connect({
+    wsEndpoint: `wss://cdp.lambdatest.com/playwright?capabilities=${encodeURIComponent(JSON.stringify(capability))}`
+  })
 
-const page = await browser.newPage()
+  const page = await browser.newPage()
 
-await page.goto('https://duckduckgo.com')
+  await page.goto('https://duckduckgo.com')
 
-const element = await page.$('[name="q"]')
-await element.click()
-await element.type('TestMu AI')
-await element.press('Enter')
-const title = await page.title()
+  const element = await page.$('[name="q"]')
+  await element.click()
+  await element.type('TestMu AI')
+  await element.press('Enter')
+  const title = await page.title()
 
-try {
-expect(title).toEqual('TestMu AI at DuckDuckGo')
-// Mark the test as completed or failed
-await page.evaluate(_ => {}, `lambdatest_action: ${JSON.stringify({ action: 'setTestStatus', arguments: { status: 'passed', remark: 'Title matched' } })}`)
-} catch {
-await page.evaluate(_ => {}, `lambdatest_action: ${JSON.stringify({ action: 'setTestStatus', arguments: { status: 'failed', remark: 'Title not matched' } })}`)
-}
+  try {
+    expect(title).toEqual('TestMu AI at DuckDuckGo')
+    // Mark the test as completed or failed
+    await page.evaluate(_ => {}, `lambdatest_action: ${JSON.stringify({ action: 'setTestStatus', arguments: { status: 'passed', remark: 'Title matched' } })}`)
+  } catch {
+    await page.evaluate(_ => {}, `lambdatest_action: ${JSON.stringify({ action: 'setTestStatus', arguments: { status: 'failed', remark: 'Title not matched' } })}`)
+  }
 
-await browser.close()
+  await browser.close()
 }
 
 // Capabilities array with the respective configuration for the parallel tests
 const capabilities = [
-{
-'browserName': 'Chrome', // Browsers allowed: `Chrome`, `MicrosoftEdge`, `pw-chromium`, `pw-firefox` and `pw-webkit`
-'browserVersion': 'latest',
-'LT:Options': {
-'platform': 'Windows 10',
-'build': 'Playwright Sample Build',
-'name': 'Playwright Sample Test on Windows 10 - Chrome',
-'user': process.env.LT_USERNAME,
-'accessKey': process.env.LT_ACCESS_KEY,
-'network': true,
-'video': true,
-'console': true
-}
-},
-{
-'browserName': 'MicrosoftEdge',
-'browserVersion': 'latest',
-'LT:Options': {
-'platform': 'Windows 11',
-'build': 'Playwright Sample Build',
-'name': 'Playwright Sample Test on Windows 11 - MicrosoftEdge',
-'user': process.env.LT_USERNAME,
-'accessKey': process.env.LT_ACCESS_KEY,
-'network': true,
-'video': true,
-'console': true
-}
-},
-{
-'browserName': 'Chrome',
-'browserVersion': 'latest',
-'LT:Options': {
-'platform': 'MacOS Sonoma',
-'build': 'Playwright Sample Build',
-'name': 'Playwright Sample Test on MacOS Sonoma - Chrome',
-'user': process.env.LT_USERNAME,
-'accessKey': process.env.LT_ACCESS_KEY,
-'network': true,
-'video': true,
-'console': true
-}
-}]
+  {
+    'browserName': 'Chrome', // Browsers allowed: `Chrome`, `MicrosoftEdge`, `pw-chromium`, `pw-firefox` and `pw-webkit`
+    'browserVersion': 'latest',
+    'LT:Options': {
+      'platform': 'Windows 10',
+      'build': 'Playwright Sample Build',
+      'name': 'Playwright Sample Test on Windows 10 - Chrome',
+      'user': process.env.LT_USERNAME,
+      'accessKey': process.env.LT_ACCESS_KEY,
+      'network': true,
+      'video': true,
+      'console': true
+    }
+  },
+  {
+    'browserName': 'MicrosoftEdge',
+    'browserVersion': 'latest',
+    'LT:Options': {
+      'platform': 'Windows 11',
+      'build': 'Playwright Sample Build',
+      'name': 'Playwright Sample Test on Windows 11 - MicrosoftEdge',
+      'user': process.env.LT_USERNAME,
+      'accessKey': process.env.LT_ACCESS_KEY,
+      'network': true,
+      'video': true,
+      'console': true
+    }
+  },
+  {
+    'browserName': 'Chrome',
+    'browserVersion': 'latest',
+    'LT:Options': {
+      'platform': 'MacOS Sonoma',
+      'build': 'Playwright Sample Build',
+      'name': 'Playwright Sample Test on MacOS Sonoma - Chrome',
+      'user': process.env.LT_USERNAME,
+      'accessKey': process.env.LT_ACCESS_KEY,
+      'network': true,
+      'video': true,
+      'console': true
+    }
+  }]
 
 capabilities.forEach(async (capability) => {
-await parallelTests(capability)
+  await parallelTests(capability)
 })
 ```
 

@@ -26,3 +26,6 @@ When you revert a test case to a specific version, a new version is created that
 
 ### Archive and Unarchive Events
 Archiving and unarchiving a test case are recorded in the **Version History** tab with the user who performed the action and when. These entries are markers rather than versions: they do not create a new version, they do not change the version count, and they carry no `Compare` or `Revert` action. See [Archive and Restore Test Cases](/support/docs/test-case-archive/).
+
+### Shared Test Cases
+Sharing and unsharing a test case with other projects is recorded in the **Version History** tab without changing the version count. A test case [shared with other projects](/support/docs/share-test-cases-across-projects/) is versioned only in its source project, and every project it is shared with sees the latest version. Test instances in those projects keep the version they were added with until the team updates them. See [Version updates](/support/docs/share-test-cases-across-projects/#version-updates).

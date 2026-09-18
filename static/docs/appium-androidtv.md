@@ -63,23 +63,23 @@ Upload your **Android TV** application (.ipa file) to the TestMu AI servers usin
 In your automation script, set up the **platform capability** to specify that you are testing on an Android TV device.
 
 ```java
-DesiredCapabilities capabilities = new DesiredCapabilities();
-HashMap<String, Object> ltOptions = new HashMap<String, Object>();
+  DesiredCapabilities capabilities = new DesiredCapabilities();
+  HashMap<String, Object> ltOptions = new HashMap<String, Object>();
 
-ltOptions.put("build", "Android TV Demo");
-ltOptions.put("name", "Android TV Demo");
-ltOptions.put("deviceName", "Nvidia Shield TV");
-ltOptions.put("platformVersion", "11");
-ltOptions.put("platformName", "androidtv");
-ltOptions.put("isRealMobile", true);
-ltOptions.put("privateCloud", true);
-ltOptions.put("w3c", true);
-ltOptions.put("automationName", "UiAutomator2");
-ltOptions.put("app", "lt://APP_ID");
-/* Optional Capability */
-/* ltOptions.put("appPackage", "org.smarttube.stable"); */
+  ltOptions.put("build", "Android TV Demo");
+  ltOptions.put("name", "Android TV Demo");
+  ltOptions.put("deviceName", "Nvidia Shield TV");
+  ltOptions.put("platformVersion", "11");
+  ltOptions.put("platformName", "androidtv");
+  ltOptions.put("isRealMobile", true);
+  ltOptions.put("privateCloud", true);
+  ltOptions.put("w3c", true);
+  ltOptions.put("automationName", "UiAutomator2");
+  ltOptions.put("app", "lt://APP_ID");
+  /* Optional Capability */
+  /* ltOptions.put("appPackage", "org.smarttube.stable"); */
 
-capabilities.setCapability("LT:Options", ltOptions);
+  capabilities.setCapability("LT:Options", ltOptions);
 ```
 
 Shown below is an execution snapshot from TestMu AI Dashboard:

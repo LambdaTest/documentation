@@ -35,20 +35,20 @@ Configure the desired capabilities based on your test requirements. For example:
 
 ```bash
 const capabilities = {
-'browserName': 'Chrome', // Browsers allowed: `Chrome`, `MicrosoftEdge`, `pw-chromium`, `pw-firefox` and `pw-webkit`
-'browserVersion': 'latest',
-'LT:Options': {
-'platform': process.env.HYPEREXECUTE_PLATFORM,
-'build': 'Playwright SmartUI Build',
-'name': 'Playwright SmartUI Test',
-'user': process.env.LT_USERNAME,
-'accessKey': process.env.LT_ACCESS_KEY,
-'network': true,
-'video': true,
-'console': true,
-'smartUIProjectName': process.env.SMARTUI_PROJECT || 'SmartUI-PW',
-'smartUIBaseline': true
-}
+  'browserName': 'Chrome', // Browsers allowed: `Chrome`, `MicrosoftEdge`, `pw-chromium`, `pw-firefox` and `pw-webkit`
+  'browserVersion': 'latest',
+  'LT:Options': {
+    'platform': process.env.HYPEREXECUTE_PLATFORM,
+    'build': 'Playwright SmartUI Build',
+    'name': 'Playwright SmartUI Test',
+    'user': process.env.LT_USERNAME,
+    'accessKey': process.env.LT_ACCESS_KEY,
+    'network': true,
+    'video': true,
+    'console': true,
+    'smartUIProjectName': process.env.SMARTUI_PROJECT || 'SmartUI-PW',
+    'smartUIBaseline': true
+  }
 }
 ```
 
@@ -108,22 +108,22 @@ maxRetries: 1
 concurrency: 1
 
 env:
-CACHE_DIR: m2_cache_dir
+  CACHE_DIR: m2_cache_dir
 
 # Dependency caching for Windows
 cacheKey: '{{ checksum "pom.xml" }}'
 cacheDirectories:
-- ${CACHE_DIR}
+  - ${CACHE_DIR}
 
 matrix:
-classname: ["pw-smartui.js"]
+  classname: ["pw-smartui.js"]
 
 pre:
-# install playwright version to be used.
-- npm install playwright@1.42.0 --save-exact
+  # install playwright version to be used.
+  - npm install playwright@1.42.0 --save-exact
 
 testSuites:
-- node hooks/pw-smartui.js
+  - node hooks/pw-smartui.js
 
 jobLabel: ['HYP', 'Playwright' 'SmartUI']
 

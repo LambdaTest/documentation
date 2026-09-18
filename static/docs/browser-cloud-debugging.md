@@ -35,16 +35,16 @@ dashboard. This is especially helpful when running multiple agents or scenarios:
 
 ```typescript
 const session = await client.sessions.create({
-lambdatestOptions: {
-build: 'Price Monitor Agent - v2.1',
-name: 'Extract Competitor Pricing - Amazon',
-'LT:Options': {
-username: process.env.LT_USERNAME,
-accessKey: process.env.LT_ACCESS_KEY,
-video: true,     // Record video
-console: true,   // Capture console logs,
-}
-}
+    lambdatestOptions: {
+        build: 'Price Monitor Agent - v2.1',
+        name: 'Extract Competitor Pricing - Amazon',
+        'LT:Options': {
+            username: process.env.LT_USERNAME,
+            accessKey: process.env.LT_ACCESS_KEY,
+            video: true,     // Record video
+            console: true,   // Capture console logs,
+        }
+    }
 });
 ```
 

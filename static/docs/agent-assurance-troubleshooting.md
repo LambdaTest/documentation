@@ -33,7 +33,7 @@ For a shell installation, rerun the public installer with a writable directory t
 
 ```bash
 curl -fsSL https://raw.githubusercontent.com/LambdaTest/rook/main/install.sh \
-| bash -s -- --dir "$HOME/bin"
+  | bash -s -- --dir "$HOME/bin"
 ```
 
 ### npm reports a Node.js engine error

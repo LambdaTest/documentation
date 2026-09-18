@@ -303,8 +303,8 @@ By default, HyperExecute VMs are provisioned with **Java 8**. If your project re
 
 ```yaml title="hyperexecute.yaml"
 runtime:
-language: java
-version: "11"
+  language: java
+  version: "11"
 ```
 
 ### Q: What is test discovery in HyperExecute, and how does it help?
@@ -327,21 +327,21 @@ Automatic Discovery (Tag-based)
 
 ```yaml title="hyperexecute.yaml"
 testDiscovery:
-type: automatic
-mode: static
-args:
-featureFilePaths: web/src/test/resources/features
-frameWork: java
-specificTags: ["@AccountCombineSet"]
+  type: automatic
+  mode: static
+  args:
+    featureFilePaths: web/src/test/resources/features
+    frameWork: java
+    specificTags: ["@AccountCombineSet"]
 ```
 
 Raw Command Discovery
 
 ```yaml title="hyperexecute.yaml"
 testDiscovery:
-type: raw
-mode: local
-command: grep 'public class' src/test/java/hyperexecute/*.java | awk '{print $3}'
+  type: raw
+  mode: local
+  command: grep 'public class' src/test/java/hyperexecute/*.java | awk '{print $3}'
 ```
 
 ##### Discovery Modes
@@ -355,13 +355,13 @@ Example: Logical Tag Filtering
 
 ```yaml title="hyperexecute.yaml"
 testDiscovery:
-command: .hyperexecute/snooper --targetOs=win \
---featureFilePaths=web/src/test/resources/features \
---frameWork=java \
---query="@UAT2Miniregression and not @FLNAUAT2" \
-| awk '{gsub("web/", ""); print}'
-mode: static
-type: raw
+  command: .hyperexecute/snooper --targetOs=win \
+           --featureFilePaths=web/src/test/resources/features \
+           --frameWork=java \
+           --query="@UAT2Miniregression and not @FLNAUAT2" \
+  | awk '{gsub("web/", ""); print}'
+  mode: static
+  type: raw
 ```
 
 Example: Ignored Tags
@@ -384,13 +384,13 @@ In projects with modules (web, api, mobile), discovered test paths may include t
 
 ```yaml title="hyperexecute.yaml"
 testDiscovery:
-command: .hyperexecute/snooper --targetOs=win \
---featureFilePaths=web/src/test/resources/features \
---frameWork=java \
---specificTags=@AccountCombineSet \
-| awk '{gsub("web/", ""); print}'
-mode: static
-type: raw
+  command: .hyperexecute/snooper --targetOs=win \
+           --featureFilePaths=web/src/test/resources/features \
+           --frameWork=java \
+           --specificTags=@AccountCombineSet \
+  | awk '{gsub("web/", ""); print}'
+  mode: static
+  type: raw
 ```
 
 ### Q: How should I configure testng.xml when I have multiple runners?
@@ -405,11 +405,11 @@ To avoid duplicate executions:
 
 ```xml title="testng.xml"
 <suite name="Sanity Suite">
-<test name="Test">
-<classes>
-<class name="com.qt.sid.bdd.Runner.RunnerSanity.TestRunnerUK"/>
-</classes>
-</test>
+  <test name="Test">
+    <classes>
+      <class name="com.qt.sid.bdd.Runner.RunnerSanity.TestRunnerUK"/>
+    </classes>
+  </test>
 </suite>
 ```
 
@@ -417,17 +417,17 @@ To avoid duplicate executions:
 
 ```javascript
 @CucumberOptions(
-features = "src/test/resources/features",
-// tags = "@Regression and not @ignore",   // Commented out
-glue = "com/qt/sid/stepdefinitions",
-plugin = {
-"pretty",
-"html:test-output/cucumber-reports/html-report.html",
-"json:test-output/cucumber-reports/json-report.json",
-"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
-"json:target/cucumber.json"
-},
-monochrome = true
+  features = "src/test/resources/features",
+  // tags = "@Regression and not @ignore",   // Commented out
+  glue = "com/qt/sid/stepdefinitions",
+  plugin = {
+    "pretty",
+    "html:test-output/cucumber-reports/html-report.html",
+    "json:test-output/cucumber-reports/json-report.json",
+    "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
+    "json:target/cucumber.json"
+  },
+  monochrome = true
 )
 ```
 
@@ -435,12 +435,12 @@ Discovery YAML Example
 
 ```yaml title="hyperexecute.yaml"
 testDiscovery:
-type: automatic
-mode: static
-args:
-featureFilePaths: src/test/resources/features/SanitySuite
-frameWork: java
-specificTags: ["@Regression"]
+  type: automatic
+  mode: static
+  args:
+    featureFilePaths: src/test/resources/features/SanitySuite
+    frameWork: java
+    specificTags: ["@Regression"]
 ```
 
 ### Q: What if my Allure reports/screenshots are too large to render on the dashboard?
@@ -451,9 +451,9 @@ YAML Example
 ```yaml title="hyperexecute.yaml"
 report: true
 partialReports:
-location: allure-results/webapp
-type: zip
-frameworkName: allure-zip
+  location: allure-results/webapp
+  type: zip
+  frameworkName: allure-zip
 ```
 
 To view Locally
@@ -479,8 +479,8 @@ Sometimes, test scripts fail due to Python version incompatibility. For example:
 ```bash title="Terminal"
 $ python test_script.py
 Traceback (most recent call last):
-File "test_script.py", line 3, in <module>
-from collections import MutableMapping
+  File "test_script.py", line 3, in <module>
+    from collections import MutableMapping
 ImportError: cannot import name 'MutableMapping' from 'collections'
 ```
 In Python versions 3.3 to 3.9, MutableMapping was part of the collections module. From Python 3.10 onward, it was moved to collections.abc, causing import errors in older code.
@@ -491,8 +491,8 @@ In Python versions 3.3 to 3.9, MutableMapping was part of the collections module
 
 ```yaml title="hyperexecute.yaml"
 runtime:
-- language: python
-version: "3.9"
+  - language: python
+    version: "3.9"
 ```
 
 ### 2. Ensuring PIP Version Compatibility
@@ -515,7 +515,7 @@ python3 -m pip install --upgrade pip
 
 ```yaml title="hyperexecute.yaml"
 pre:
-- python3 -m pip install --upgrade pip
+  - python3 -m pip install --upgrade pip
 ```
 
 ### 3. Fixing Missing requirements.txt Errors
@@ -550,9 +550,9 @@ YAML Translation:
 ```yaml title="hyperexecute.yaml"
 cacheKey: '{{ checksum "requirements.txt" }}'
 cacheDirectories:
-- CacheDir
+  - CacheDir
 pre:
-- pip install -r requirements.txt --cache-dir CacheDir
+  - pip install -r requirements.txt --cache-dir CacheDir
 ```
 
 ### 6. Building Projects with Public and Private Registries
@@ -567,7 +567,7 @@ pip3 install -r requirements.txt --cache-dir CacheDir
 
 ```yaml title="hyperexecute.yaml"
 pre:
-- pip3 install -r requirements.txt --cache-dir CacheDir
+  - pip3 install -r requirements.txt --cache-dir CacheDir
 ```
 
 #### Case 2: Private Registry Installation
@@ -575,17 +575,17 @@ When using a private registry, authentication is required. Use proxy variables a
 
 ```bash
 pip3 install --proxy http://$LT_PROXY_HOST:$LT_PROXY_PORT \
---header "Authorization: Bearer $PRIVATE_REGISTRY_TOKEN" \
--r requirements.txt
+  --header "Authorization: Bearer $PRIVATE_REGISTRY_TOKEN" \
+  -r requirements.txt
 ```
 
 **YAML Translation :**
 
 ```yaml title="hyperexecute.yaml"
 pre:
-- pip3 install --proxy http://$LT_PROXY_HOST:$LT_PROXY_PORT \
---header "Authorization: Bearer $PRIVATE_REGISTRY_TOKEN" \
--r requirements.txt
+  - pip3 install --proxy http://$LT_PROXY_HOST:$LT_PROXY_PORT \
+      --header "Authorization: Bearer $PRIVATE_REGISTRY_TOKEN" \
+      -r requirements.txt
 ```
 
 **Sample `requirements.txt` file :**
@@ -612,8 +612,8 @@ When connecting to a database during test runs, you may encounter:
 
 ```yaml title="hyperexecute.yaml"
 args:
-- "--expose mysql1:localhost:3309"
-- "--expose mysql2:localhost:3307"
+  - "--expose mysql1:localhost:3309"
+  - "--expose mysql2:localhost:3307"
 ```
 
 **Sample Connection Code :**
@@ -626,11 +626,11 @@ db_host = os.getenv("MYSQL1_PROXY_HOST", "localhost")
 db_port = os.getenv("MYSQL1_PROXY_PORT", "3309")
 
 connection = mysql.connector.connect(
-host=db_host,
-port=db_port,
-user="your_user",
-password="your_password",
-database="your_database"
+  host=db_host,
+  port=db_port,
+  user="your_user",
+  password="your_password",
+  database="your_database"
 )
 ```
 
@@ -676,8 +676,8 @@ grep -rl "@smoke" features/*.feature
 
 ```yaml title="hyperexecute.yaml"
 testDiscovery:
-type: raw
-command: grep -rl "@smoke" features/*.feature
+  type: raw
+  command: grep -rl "@smoke" features/*.feature
 ```
 
 - List all scenarios under that tag :
@@ -690,8 +690,8 @@ grep -rH -A 3 "@smoke" features/*.feature | grep -i "Scenario" | cut -d ":" -f 2
 
 ```yaml title="hyperexecute.yaml"
 testDiscovery:
-type: raw
-command: grep -rH -A 3 "@smoke" features/*.feature | grep -i "Scenario" | cut -d ":" -f 2-
+  type: raw
+  command: grep -rH -A 3 "@smoke" features/*.feature | grep -i "Scenario" | cut -d ":" -f 2-
 ```
 
 ### 10. Generating JSON Reports with Behave
@@ -705,7 +705,7 @@ behave -f json.pretty -o reports/test_report.json
 
 ```yaml title="hyperexecute.yaml"
 post:
-- behave -f json.pretty -o reports/test_report.json
+  - behave -f json.pretty -o reports/test_report.json
 ```
 
 ### 11. Dynamically Assigning Artifact Names
@@ -715,9 +715,9 @@ To dynamically name artifacts using environment variables, define them in your Y
 
 ```yaml title="hyperexecute.yaml"
 uploadArtefacts:
-- name: "${abcd}"
-path:
-- reports/**
+  - name: "${abcd}"
+    path:
+      - reports/**
 ```
 
 Pass variable values through CLI during job execution:
@@ -791,16 +791,16 @@ logging.basicConfig(level=logging.DEBUG)
 logger = logging.getLogger()
 
 def test_debug_logging():
-value = 42
-if value == 42:
-logger.debug("Value is 42, running debug checks")
-logger.debug("This is a debug message")
-logger.info("Test info message")
-logger.warning("Test warning message")
-logger.error("Test error message")
-if value != 42:
-logger.critical("Critical issue: Value should be 42!")
-assert value == 42
+    value = 42
+    if value == 42:
+        logger.debug("Value is 42, running debug checks")
+    logger.debug("This is a debug message")
+    logger.info("Test info message")
+    logger.warning("Test warning message")
+    logger.error("Test error message")
+    if value != 42:
+        logger.critical("Critical issue: Value should be 42!")
+    assert value == 42
 ```
 
 **Terminal Output Example :**
@@ -818,8 +818,8 @@ During native app automation, screenshots captured per session ID can be retriev
 
 ```bash
 curl -X GET "https://mobile-api.lambdatest.com/mobile-automation/api/v1/sessions/${session_id}/screenshots" \
--H "accept: application/json" \
--H "Authorization: Basic <auth>"
+     -H "accept: application/json" \
+     -H "Authorization: Basic <auth>"
 ```
 
 **Problem :** Manually downloading, extracting, and arranging screenshots into a PDF is time-consuming.
@@ -868,21 +868,21 @@ runson: win
 autosplit: true
 concurrency: 2
 runtime:
-language: python
-version: "3"
+  language: python
+  version: "3"
 
 cacheKey: '{{ checksum "requirements.txt" }}'
 cacheDirectories:
-- CacheDir
+  - CacheDir
 pre:
-- pip3 install -r requirements.txt --cache-dir CacheDir
+  - pip3 install -r requirements.txt --cache-dir CacheDir
 post:
-- cat yaml/win/pytest_hyperexecute_autosplit_sample.yaml
+  - cat yaml/win/pytest_hyperexecute_autosplit_sample.yaml
 
 testDiscovery:
-type: raw
-mode: remote
-command: grep -nri 'class' tests -ir --include=\*.py | sed 's/:.*//'
+  type: raw
+  mode: remote
+  command: grep -nri 'class' tests -ir --include=\*.py | sed 's/:.*//'
 
 testRunnerCommand: pytest -s --verbose $test
 
@@ -920,7 +920,7 @@ The matrix runs tests concurrently on Mac, Windows, and Linux, detecting OS-spec
 
 ```yaml title="hyperexecute.yaml"
 matrix:
-os: [mac, win, linux]
+  os: [mac, win, linux]
 
 runson: ${matrix.os}
 ```
@@ -939,9 +939,9 @@ Predefining NuGet paths ensures controlled caching, reliable builds across OSes,
 
 ```yaml title="hyperexecute.yaml"
 env:
-NUGET_PACKAGES: '/home/ltuser/.nuget/packages/'
-NUGET_HTTP_CACHE_PATH: '/home/ltuser/.local/share/NuGet/v3-cache'
-NUGET_PLUGINS_CACHE_PATH: '/home/ltuser/.local/share/NuGet/plugins-cache'
+  NUGET_PACKAGES: '/home/ltuser/.nuget/packages/'
+  NUGET_HTTP_CACHE_PATH: '/home/ltuser/.local/share/NuGet/v3-cache'
+  NUGET_PLUGINS_CACHE_PATH: '/home/ltuser/.local/share/NuGet/plugins-cache'
 ```
 
 #### What Happens If We Don’t Use It
@@ -959,11 +959,11 @@ Dependencies may not be restored or projects may not build correctly if pre-step
 
 ```yaml title="hyperexecute.yaml"
 pre:
-- dotnet restore
-- dotnet list OnlySpecTest.csproj package > packages.txt
+ - dotnet restore
+ - dotnet list OnlySpecTest.csproj package > packages.txt
 #  - chmod 777 /tmp/NuGetScratch
 #  - nuget locals all -clear
-- dotnet build -c Release
+ - dotnet build -c Release
 ```
 
 - **dotnet restore** -> Restores NuGet packages
@@ -985,12 +985,12 @@ Artifacts centralize outputs like HTML reports and screenshots, enabling debug, 
 
 ```yaml title="hyperexecute.yaml"
 uploadArtefacts:
-- name: Execution_Report
-path:
-- Report/**
-- name: Execution_Screenshots
-path:
-- Screenshots/**/**
+ - name: Execution_Report
+   path:
+    - Report/**
+ - name: Execution_Screenshots
+   path:
+    - Screenshots/**/**
 ```
 
 #### What Happens If We Don’t Use It
@@ -1008,9 +1008,9 @@ Generates human-readable HTML reports showing pass/fail, steps, screenshots, and
 ```yaml title="hyperexecute.yaml"
 report: true
 partialReports:
-location: Report/
-type: html
-frameworkName: specflow
+  location: Report/
+  type: html
+  frameworkName: specflow
 ```
 
 #### What Happens If We Don’t Use It
@@ -1027,9 +1027,9 @@ Remote discovery automatically detects new @tags or features, enabling paralleli
 
 ```yaml title="hyperexecute.yaml"
 testDiscovery:
-type: raw
-mode: remote
-command: grep -rni 'Features' -e '@' --include=*.feature | sed 's/.*@//'
+  type: raw
+  mode: remote
+  command: grep -rni 'Features' -e '@' --include=*.feature | sed 's/.*@//'
 ```
 
 #### What Happens If We Don’t Use It
@@ -1061,10 +1061,10 @@ Projects may have diverse tagging strategies, making standard discovery unreliab
 
 ```yaml title="hyperexecute.yaml"
 testDiscovery:
-type: raw
-mode: remote
-shell: bash
-command: grep -E -w -R -A10 --include='*.feature.cs' ${tagname} AllInOneProject/features | grep 'public void' | cut -d' ' -f2- | awk '{print $3}' | sed 's/()$//'  | sed 's/TestTearDown//g'
+  type: raw
+  mode: remote
+  shell: bash
+  command: grep -E -w -R -A10 --include='*.feature.cs' ${tagname} AllInOneProject/features | grep 'public void' | cut -d' ' -f2- | awk '{print $3}' | sed 's/()$//'  | sed 's/TestTearDown//g'
 ```
 
 - Dynamically extracts test names based on tags
@@ -1105,16 +1105,16 @@ Configures private feeds securely to ensure reliable dependency resolution acros
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <configuration>
-<packageSources>
-<add key="nuget.org" value="https://api.nuget.org/v3/index.json" protocolVersion="3" />
-<add key="Testplayer" value="http://testplayer.jfrog.io/tcgplayer/api/nuget/nuget" />
-</packageSources>
-<packageSourceCredentials>
-<Testplayer>
-<add key="Username" value="readonlyuser" />
-<add key="ClearTextPassword" value="R3dD3ckW1ns" />
-</Testplayer>
-</packageSourceCredentials>
+  <packageSources>
+    <add key="nuget.org" value="https://api.nuget.org/v3/index.json" protocolVersion="3" />
+    <add key="Testplayer" value="http://testplayer.jfrog.io/tcgplayer/api/nuget/nuget" />
+  </packageSources>
+  <packageSourceCredentials>
+    <Testplayer>
+        <add key="Username" value="readonlyuser" />
+        <add key="ClearTextPassword" value="R3dD3ckW1ns" />
+    </Testplayer>
+  </packageSourceCredentials>
 </configuration>
 ```
 
@@ -1163,8 +1163,8 @@ Uploads only changed files, reducing upload time and network usage.
 
 ```yaml title="hyperexecute.yaml"
 differentialUpload:
-enabled: true
-ttlHours: 300
+  enabled: true
+  ttlHours: 300
 ```
 
 #### What Happens If We Don’t Use It
@@ -1197,14 +1197,14 @@ Custom function reports statuses for tracking and dashboards.
 ```java title="test.java"
 public void CleanUp(string[] tagName, ScenarioExecutionStatus scenarioStatus, string scenarioName)
 {
-string STATUS = scenarioStatus.ToString() switch
-{
-"OK" => "passed",
-"UndefinedStep" => "skipped",
-"TestError" => "failed",
-_ => "others"
-};
-((IJavaScriptExecutor)Properties.driver).ExecuteScript($"lambda-status={STATUS}");
+    string STATUS = scenarioStatus.ToString() switch
+    {
+        "OK" => "passed",
+        "UndefinedStep" => "skipped",
+        "TestError" => "failed",
+        _ => "others"
+    };
+    ((IJavaScriptExecutor)Properties.driver).ExecuteScript($"lambda-status={STATUS}");
 }
 ```
 
@@ -1222,11 +1222,11 @@ Generates custom reports with metadata and email notifications.
 ```yaml title="hyperexecute.yaml"
 report: true
 partialReports:
-location: GlobalPolaris/Reports
-type: html
-frameworkName: specflow-custom
+  location: GlobalPolaris/Reports
+  type: html
+  frameworkName: specflow-custom
 email:
-to: ["example@lambdatest.com"]
+  to: ["example@lambdatest.com"]
 metaInfo: ["project-name:Global Polaris Regression","project-env:QA"]
 ```
 
@@ -1246,13 +1246,13 @@ Ensures correct DLL is built and executed on the proper runner.
 runson: win
 
 pre:
-commands:
-- dotnet restore
-- dotnet build YourSolution.sln -c Release
+  commands:
+    - dotnet restore
+    - dotnet build YourSolution.sln -c Release
 
 test:
-commands:
-- nunit3-console.exe "bin/Release/net6.0/YourProject.dll"
+  commands:
+    - nunit3-console.exe "bin/Release/net6.0/YourProject.dll"
 ```
 
 #### What Happens If We Don’t Use It
@@ -1269,14 +1269,14 @@ Run each feature individually to enable parallel execution and selective reruns.
 
 ```yaml title="hyperexecute.yaml"
 matrix:
-featurefile:
-- "Features/Login.feature"
-- "Features/Search.feature"
-- "Features/Checkout.feature"
+  featurefile:
+    - "Features/Login.feature"
+    - "Features/Search.feature"
+    - "Features/Checkout.feature"
 
 test:
-commands:
-- nunit3-console.exe "bin/Release/net6.0/YourProject.dll" --where "cat == '$featurefile'"
+  commands:
+    - nunit3-console.exe "bin/Release/net6.0/YourProject.dll" --where "cat == '$featurefile'"
 ```
 
 #### What Happens If We Don’t Use It
@@ -1293,8 +1293,8 @@ Properly passing arguments ensures selective execution and saves results for art
 
 ```yaml title="hyperexecute.yaml"
 test:
-commands:
-- nunit3-console.exe "bin/Release/net6.0/YourProject.dll" --where "cat == 'Regression'" --result="regression-result.xml"
+  commands:
+    - nunit3-console.exe "bin/Release/net6.0/YourProject.dll" --where "cat == 'Regression'" --result="regression-result.xml"
 ```
 
 #### What Happens If We Don’t Use It

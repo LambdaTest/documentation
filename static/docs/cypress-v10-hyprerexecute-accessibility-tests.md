@@ -53,10 +53,10 @@ You will have to pass the `npm i lambdatest-cypress-cli` command in your [pre st
 
 ```yaml title="hyperexecute.yaml"
 pre:
-- npm install
-- npm install cypress --save-dev
+  - npm install
+  - npm install cypress --save-dev
 #   highlight-next-line
-- npm i lambdatest-cypress-cli
+  - npm i lambdatest-cypress-cli
 ```
 
 #### 2. Add the capabilities in the YAML file
@@ -65,10 +65,10 @@ To enable the accessibility testing within your automated test suite, set the `a
 
 ```yaml title="hyperexecute.yaml"
 cypressOps:
-accessibility: true                 #Enable accessibility testing
-accessibilityWcagVersion: "wcag21a" #Specify WCAG version (e.g., WCAG 2.1 Level A)
-accessibilityBestPractice: false    #Exclude best practice issues from results
-accessibilityNeedsReview: true      #Include issues that need review
+  accessibility: true                 #Enable accessibility testing
+  accessibilityWcagVersion: "wcag21a" #Specify WCAG version (e.g., WCAG 2.1 Level A)
+  accessibilityBestPractice: false    #Exclude best practice issues from results
+  accessibilityNeedsReview: true      #Include issues that need review
 ```
 
 #### 3. In the `e2e.js` file
@@ -88,15 +88,15 @@ const { defineConfig } = require("cypress");
 const lambdatestAccessibility = require('lambdatest-cypress-cli/accessibility/plugin');
 
 module.exports = defineConfig({
-...//
-e2e: {
-setupNodeEvents(on, config) {
-// implement node event listeners here
-lambdatestAccessibility(on, config);
-return config;
-},
-},
-...//
+    ...//
+    e2e: {
+      setupNodeEvents(on, config) {
+        // implement node event listeners here
+        lambdatestAccessibility(on, config);
+        return config;
+      },
+    },
+    ...//
 });
 ```
 

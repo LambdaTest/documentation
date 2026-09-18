@@ -12,33 +12,33 @@ Rook uses plain files rather than a hidden workspace database. That makes agents
 ├── .gitignore                            machine-only and sensitive exclusions
 ├── cache/                                derived indexes; safe to rebuild
 └── projects/
-└── <project-id>/
-├── project.yaml
-├── active                        selected agent
-├── jobs/                         in-flight upstream writes
-└── agents/
-└── <agent-id>/
-├── agent.yaml            derived agent definition
-├── state.json            machine-local server IDs
-├── features/
-│   ├── F-001.yaml
-│   └── F-005.yaml
-├── scenarios/
-│   ├── SC-001.yaml
-│   └── SC-011.yaml
-├── profiles/
-│   ├── active
-│   └── staging.yaml
-├── scripts/
-│   └── order-desk.mjs
-└── runs/
-└── 01M0VPKFSDC07CWWF51FGAVCCR/
-├── run.yaml
-├── agent.yaml
-├── features.yaml
-├── profile.yaml
-├── scenarios/
-└── report.yaml
+    └── <project-id>/
+        ├── project.yaml
+        ├── active                        selected agent
+        ├── jobs/                         in-flight upstream writes
+        └── agents/
+            └── <agent-id>/
+                ├── agent.yaml            derived agent definition
+                ├── state.json            machine-local server IDs
+                ├── features/
+                │   ├── F-001.yaml
+                │   └── F-005.yaml
+                ├── scenarios/
+                │   ├── SC-001.yaml
+                │   └── SC-011.yaml
+                ├── profiles/
+                │   ├── active
+                │   └── staging.yaml
+                ├── scripts/
+                │   └── order-desk.mjs
+                └── runs/
+                    └── 01M0VPKFSDC07CWWF51FGAVCCR/
+                        ├── run.yaml
+                        ├── agent.yaml
+                        ├── features.yaml
+                        ├── profile.yaml
+                        ├── scenarios/
+                        └── report.yaml
 ```
 
 ## Why Runs Copy Their Inputs

@@ -12,13 +12,13 @@ HyperExecute provides a [`runtime`](/support/docs/deep-dive-into-hyperexecute-ya
 
 ```bash
 runtime:
-language: java
-version: ${STATIC_DATA_1_JAVA_VERSION}
-addons:
-- name: "gradle"
-version: "${STATIC_DATA_1_GRADLE_VERSION}"
-- name: "android-sdk"
-version: ${STATIC_DATA_1_ANDROID_SDK_VERSION}
+  language: java
+  version: ${STATIC_DATA_1_JAVA_VERSION}
+  addons:
+    - name: "gradle"
+      version: "${STATIC_DATA_1_GRADLE_VERSION}"
+    - name: "android-sdk"
+      version: ${STATIC_DATA_1_ANDROID_SDK_VERSION}
 ```
 
 ## Leveraging DataJsonPaths for Dependency Management
@@ -31,21 +31,21 @@ To provide multiple versions for each of these dependencies, the DataJson can be
 
 ```bash
 [
-{
-"JAVA_VERSION": "11",
-"ANDROID_SDK_VERSION": "24",
-"GRADLE_VERSION": "7.5"
-},
-{
-"JAVA_VERSION": "178",
-"ANDROID_SDK_VERSION": "25",
-"GRADLE_VERSION": "8"
-},
-{
-"JAVA_VERSION": "20",
-"ANDROID_SDK_VERSION": "32",
-"GRADLE_VERSION": "8.4"
-}
+  {
+    "JAVA_VERSION": "11",
+    "ANDROID_SDK_VERSION": "24",
+    "GRADLE_VERSION": "7.5"
+  },
+  {
+    "JAVA_VERSION": "178",
+    "ANDROID_SDK_VERSION": "25",
+    "GRADLE_VERSION": "8"
+  },
+  {
+    "JAVA_VERSION": "20",
+    "ANDROID_SDK_VERSION": "32",
+    "GRADLE_VERSION": "8.4"
+  }
 ]
 ```
 

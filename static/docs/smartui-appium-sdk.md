@@ -112,36 +112,36 @@ For apps with scrolling functionality, you can capture full-page screenshots:
 
 ```javascript
 let config = {
-screenshotName: '<Name of your screenshot>',
-fullPage: true,
-pageCount: 15   // Minimum 1, Maximum 20
+  screenshotName: '<Name of your screenshot>',
+  fullPage: true,
+  pageCount: 15   // Minimum 1, Maximum 20
 };
 await driver.execute("smartui.takeScreenshot", config);
 ```
 
 ```python
 config = {
-'screenshotName': '<Your Screenshot Name>',
-'fullPage': True,
-'pageCount': 15  # Minimum 1, Maximum 20
+  'screenshotName': '<Your Screenshot Name>',
+  'fullPage': True,
+  'pageCount': 15  # Minimum 1, Maximum 20
 }
 driver.execute_script("smartui.takeScreenshot", config)
 ```
 
 ```ruby
 config = {
-'screenshotName' => '<Your Screenshot Name>',
-'fullPage' => true,
-'pageCount' => 15  # Minimum 1, Maximum 20
+  'screenshotName' => '<Your Screenshot Name>',
+  'fullPage' => true,
+  'pageCount' => 15  # Minimum 1, Maximum 20
 }
 driver.execute("smartui.takeScreenshot", config)
 ```
 
 ```csharp
 var config = new Dictionary<string, object> {
-{"screenshotName", "<Your Screenshot Name>"},
-{"fullPage", true},
-{"pageCount", 15}  // Minimum 1, Maximum 20
+  {"screenshotName", "<Your Screenshot Name>"},
+  {"fullPage", true},
+  {"pageCount", 15}  // Minimum 1, Maximum 20
 };
 driver.Execute("smartui.takeScreenshot", config);
 ```

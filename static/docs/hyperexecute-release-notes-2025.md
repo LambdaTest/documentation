@@ -205,9 +205,9 @@ We've added Man-in-the-Middle (MITM) proxy support in HyperExecute Emulators.
 
 ```yaml title="hyperexecute.yaml"
 framework:
-name: raw
-args:
-mitmProxy: true
+  name: raw
+  args:
+    mitmProxy: true
 ```
 
 This enhancement enables deeper debugging of API calls, request/response payloads, and overall network traffic during test execution.
@@ -248,10 +248,10 @@ This enhancement is particularly useful when your testing applications in non-En
 
 ```yaml title="hyperexecute.yaml"
 framework:
-name: raw
-args:
-language: es
-locale: ES
+  name: raw
+  args:
+    language: es
+    locale: ES
 ```
 
 ### BiDi Testing Support with Selenium WebDriver
@@ -314,9 +314,9 @@ HyperExecute now supports regex-style directory matching (using **) to recursive
 
 ```yaml title="hyperexecute.yaml"
 partialReports:
-location: reports/**/cucumber/
-frameworkName: cucumber
-type: json
+  location: reports/**/cucumber/
+  frameworkName: cucumber
+  type: json
 ```
 
 This will successfully match paths like:
@@ -354,10 +354,10 @@ You can now run Playwright tests on real iOS devices using HyperExecute. This un
 runson: ios
 
 framework:
-name: appium
-args:
-playwrightRD: true
-mobileDC: true
+  name: appium
+  args:
+    playwrightRD: true
+    mobileDC: true
 ```
 
 > **Note:** Currently supported on Safari for iOS real devices.
@@ -373,15 +373,15 @@ You can now override Selenium capabilities directly from your `hyperexecute.yaml
 
 ```yaml hyperexecute.yaml
 ltOptions:
-browserName: firefox
-build: 'testng_build_yaml_ltOptions'
-console: true
-name: 'testng_test_yaml_ltOptions'
-network: true
-selenium_version: 4.20.0
-tunnel: false
-version: latest
-video: false
+  browserName: firefox
+  build: 'testng_build_yaml_ltOptions'
+  console: true
+  name: 'testng_test_yaml_ltOptions'
+  network: true
+  selenium_version: 4.20.0
+  tunnel: false
+  version: latest
+  video: false
 ```
 
 > 📘 Refer to our detailed documentation for [`ltOptions`](/support/docs/hyperexecute-yaml-capability-overrides/) flag.
@@ -402,7 +402,7 @@ You can now inject custom HTTP headers into your test sessions using the `custom
 
 ```java
 caps.setCapability("customHeaders", new HashMap<String, String>() {{
-put("x-px-access-token", "testuil");
+  put("x-px-access-token", "testuil");
 }});
 ```
 
@@ -556,8 +556,8 @@ Example YAML Configuration:
 
 ```yaml
 failFast:
-maxNumberOfTests: 2
-level: scenario
+  maxNumberOfTests: 2
+  level: scenario
 ```
 
 > **Note:** You can use `failFast` either at the test level or scenario level, but not both simultaneously.
@@ -570,24 +570,24 @@ You can now explicitly specify a custom reporter setup using the new `reporterCo
 
 ```yaml
 cypressOps:
-reporterConfigFile: "reporter_config.json"
+  reporterConfigFile: "reporter_config.json"
 ```
 
 Value of this JSON:
 
 ```json
 {
-"reporterEnabled": "mochawesome,mocha-junit-reporter",
-"mochawesomeReporterOptions": {
-"reportDir": "cypress/results",
-"overwrite": true,
-"html": false,
-"json": true
-},
-"mochaJunitReporterReporterOptions": {
-"mochaFile": "cypress/results/my-test-output.xml",
-"toConsole": true
-}
+  "reporterEnabled": "mochawesome,mocha-junit-reporter",
+  "mochawesomeReporterOptions": {
+      "reportDir": "cypress/results",
+      "overwrite": true,
+      "html": false,
+      "json": true
+  },
+  "mochaJunitReporterReporterOptions": {
+        "mochaFile": "cypress/results/my-test-output.xml",
+        "toConsole": true
+  }
 }
 ```
 
@@ -596,8 +596,8 @@ HyperExecute expands its support for the dotnet by introducing the versions `4.7
 
 ```yaml
 runtime:
-- language: dotnet
-version: "4.7"
+  - language: dotnet
+    version: "4.7"
 ```
 
 ### Support for Project Capability in CypressOps
@@ -605,7 +605,7 @@ You can now define your [Project](/support/docs/hyperexecute-projects/) name and
 
 ```yaml
 cypressOps:
-ProjectName: "Cypress_Project"
+  ProjectName: "Cypress_Project"
 ```
 
 ### Consolidated Native Robot Report Generation
@@ -618,9 +618,9 @@ testRunnerCommand: YOUR_RUNNER_COMMAND --outputdir Reports
 
 report: true
 partialReports:
-type: json
-location: Reports
-frameworkName: robot
+  type: json
+  location: Reports
+  frameworkName: robot
 ```
 
 ## Version 2.7.6
@@ -633,14 +633,14 @@ version: 0.1
 runson: ${matrix.os}
 
 matrix:
-os: [mac, linux]
-appium: [true,false]
+  os: [mac, linux]
+  appium: [true,false]
 
 exclusionMatrix:
-- os: ["mac"]
-appium: [true]
-- os: ["linux"]
-appium: [false]
+  - os: ["mac"]
+    appium: [true]
+  - os: ["linux"]
+    appium: [false]
 
 appium: ${matrix.appium}
 ```
@@ -652,21 +652,21 @@ The [`globalPre`](/support/docs/deep-dive-into-hyperexecute-yaml/#globalpre) and
 ```yaml title="hyperexecute.yaml"
 # globalPre
 globalPre:
-mode: remote #local or remote
-commands:
-- "echo 'Setting up environment'"
-- "apt-get update && apt-get install -y curl"
-- "curl -X POST https://api.example.com/init"
-runson: linux
+  mode: remote #local or remote
+  commands:
+    - "echo 'Setting up environment'"
+    - "apt-get update && apt-get install -y curl"
+    - "curl -X POST https://api.example.com/init"
+  runson: linux
 
 # globalPost
 globalPost:
-mode: remote #local or remote
-commands:
-- "echo 'Cleaning up test environment'"
-- "rm -rf /tmp/test-results"
-- "curl -X POST https://api.example.com/cleanup"
-runson: linux
+  mode: remote #local or remote
+  commands:
+    - "echo 'Cleaning up test environment'"
+    - "rm -rf /tmp/test-results"
+    - "curl -X POST https://api.example.com/cleanup"
+  runson: linux
 ```
 
 > 📘 Refer to our detailed documentation for [`globalPre`](/support/docs/deep-dive-into-hyperexecute-yaml/#globalpre) and [`globalPost`](/support/docs/deep-dive-into-hyperexecute-yaml/#globalpost) flags.
@@ -682,8 +682,8 @@ runson: linux
 
 ```yaml
 afterEachScenario:
-- echo "Running a script"
-- pwsh run.test
+  - echo "Running a script"
+  - pwsh run.test
 ```
 
 > 📘 Refer to our detailed documentation for [`afterEachScenario`](/support/docs/deep-dive-into-hyperexecute-yaml/#aftereachscenario) flag

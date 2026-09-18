@@ -48,9 +48,9 @@ Use the Selenium JavaScript Executor to apply custom network throttling during t
 ```java
 // Using executeScript to apply custom network throttling
 Map<String, Object> throttleParams = Map.of(
-"download", 500,  // Maximum download speed in kbps
-"upload", 100,    // Maximum upload speed in kbps
-"latency", 30     // Latency in ms
+    "download", 500,  // Maximum download speed in kbps
+    "upload", 100,    // Maximum upload speed in kbps
+    "latency", 30     // Latency in ms
 );
 
 driver.executeScript("lambda-throttle-network", throttleParams);
@@ -98,111 +98,111 @@ import org.testng.annotations.Test;
 
 public class TestNGTodo1 {
 
-private RemoteWebDriver driver;
-private String Status="failed";
+	private RemoteWebDriver driver;
+	private String Status="failed";
 
-@BeforeSuite
-public void setup() throws MalformedURLException {
-String username = System.getenv("LT_USERNAME");
-String authkey = System.getenv("LT_ACCESS_KEY");
-String hub = "@hub.lambdatest.com/wd/hub";
+	@BeforeSuite
+	public void setup() throws MalformedURLException {
+		String username = System.getenv("LT_USERNAME");
+		String authkey = System.getenv("LT_ACCESS_KEY");
+		String hub = "@hub.lambdatest.com/wd/hub";
 
-DesiredCapabilities caps = new DesiredCapabilities();
-caps.setCapability("browserName", "Chrome");
-caps.setCapability("build", "Demo-TestNG");
-caps.setCapability("name", "TestNG-Todo-Script-1");
-caps.setCapability("networkThrottling", true);  //To enable network throttling
+		DesiredCapabilities caps = new DesiredCapabilities();
+		caps.setCapability("browserName", "Chrome");
+		caps.setCapability("build", "Demo-TestNG");
+		caps.setCapability("name", "TestNG-Todo-Script-1");
+		caps.setCapability("networkThrottling", true);  //To enable network throttling
 
-driver = new RemoteWebDriver(new URL("https://" + username + ":" + authkey + hub), caps);
+	driver = new RemoteWebDriver(new URL("https://" + username + ":" + authkey + hub), caps);
 
-// Custom network throttling using executeScript
-Map<String, Object> throttleParams = new HashMap<>();
-throttleParams.put("download", 500); // Maximum download speed in kbps
-throttleParams.put("upload", 100);   // Maximum upload speed in kbps
-throttleParams.put("latency", 30);   // Latency in ms
+	// Custom network throttling using executeScript
+        Map<String, Object> throttleParams = new HashMap<>();
+        throttleParams.put("download", 500); // Maximum download speed in kbps
+        throttleParams.put("upload", 100);   // Maximum upload speed in kbps
+        throttleParams.put("latency", 30);   // Latency in ms
 
-// Use executeScript with the provided payload
-driver.executeScript("lambda-throttle-network", throttleParams);
+        // Use executeScript with the provided payload
+        driver.executeScript("lambda-throttle-network", throttleParams);
 
-}
+	}
 
-@Test
-public void basicTest() throws InterruptedException {
-String spanText;
-System.out.println("Loading Url");
-Thread.sleep(100);
-driver.get("https://4dvanceboy.github.io/lambdatest/todo.html");
-Thread.sleep(100);
+	@Test
+	public void basicTest() throws InterruptedException {
+		String spanText;
+		System.out.println("Loading Url");
+		Thread.sleep(100);
+		driver.get("https://4dvanceboy.github.io/lambdatest/todo.html");
+		Thread.sleep(100);
 
-System.out.println("Checking Box");
-driver.findElement(By.name("todo-1")).click();
-Thread.sleep(400);
+		System.out.println("Checking Box");
+		driver.findElement(By.name("todo-1")).click();
+		Thread.sleep(400);
 
-System.out.println("Checking Another Box");
-driver.findElement(By.name("todo-2")).click();
-Thread.sleep(400);
+		System.out.println("Checking Another Box");
+		driver.findElement(By.name("todo-2")).click();
+		Thread.sleep(400);
 
-System.out.println("Checking Box");
-driver.findElement(By.name("todo-3")).click();
-Thread.sleep(400);
+		System.out.println("Checking Box");
+		driver.findElement(By.name("todo-3")).click();
+		Thread.sleep(400);
 
-System.out.println("Checking Another Box");
-driver.findElement(By.name("todo-4")).click();
-Thread.sleep(400);
+		System.out.println("Checking Another Box");
+		driver.findElement(By.name("todo-4")).click();
+		Thread.sleep(400);
 
-driver.findElement(By.id("todotext")).sendKeys(" List Item 6");
-driver.findElement(By.id("addbutton")).click();
-Thread.sleep(200);
+		driver.findElement(By.id("todotext")).sendKeys(" List Item 6");
+		driver.findElement(By.id("addbutton")).click();
+		Thread.sleep(200);
 
-driver.findElement(By.id("todotext")).sendKeys(" List Item 7");
-driver.findElement(By.id("addbutton")).click();
-Thread.sleep(200);
+		driver.findElement(By.id("todotext")).sendKeys(" List Item 7");
+		driver.findElement(By.id("addbutton")).click();
+		Thread.sleep(200);
 
-driver.findElement(By.id("todotext")).sendKeys(" List Item 8");
-driver.findElement(By.id("addbutton")).click();
-Thread.sleep(200);
+		driver.findElement(By.id("todotext")).sendKeys(" List Item 8");
+		driver.findElement(By.id("addbutton")).click();
+		Thread.sleep(200);
 
-System.out.println("Checking Another Box");
-driver.findElement(By.name("todo-1")).click();
-Thread.sleep(300);
+		System.out.println("Checking Another Box");
+		driver.findElement(By.name("todo-1")).click();
+		Thread.sleep(300);
 
-System.out.println("Checking Another Box");
-driver.findElement(By.name("todo-3")).click();
-Thread.sleep(300);
+		System.out.println("Checking Another Box");
+		driver.findElement(By.name("todo-3")).click();
+		Thread.sleep(300);
 
-System.out.println("Checking Another Box");
-driver.findElement(By.name("todo-7")).click();
-Thread.sleep(300);
+		System.out.println("Checking Another Box");
+		driver.findElement(By.name("todo-7")).click();
+		Thread.sleep(300);
 
-System.out.println("Checking Another Box");
-driver.findElement(By.name("todo-8")).click();
-Thread.sleep(300);
+		System.out.println("Checking Another Box");
+		driver.findElement(By.name("todo-8")).click();
+		Thread.sleep(300);
 
-System.out.println("Entering Text");
-driver.findElement(By.id("todotext")).sendKeys("Get Taste of Lambda and Stick to It");
-Thread.sleep(300);
+		System.out.println("Entering Text");
+		driver.findElement(By.id("todotext")).sendKeys("Get Taste of Lambda and Stick to It");
+		Thread.sleep(300);
 
-driver.findElement(By.id("addbutton")).click();
+		driver.findElement(By.id("addbutton")).click();
 
-System.out.println("Checking Another Box");
-driver.findElement(By.name("todo-9")).click();
-Thread.sleep(300);
-// Let's also assert that the todo we added is present in the list.
+		System.out.println("Checking Another Box");
+		driver.findElement(By.name("todo-9")).click();
+		Thread.sleep(300);
+		// Let's also assert that the todo we added is present in the list.
 
-spanText = driver.findElementByXPath("/html/body/div/div/div/ul/li[9]/span").getText();
-Assert.assertEquals("Get Taste of Lambda and Stick to It", spanText);
-Status="passed";
-Thread.sleep(150);
+		spanText = driver.findElementByXPath("/html/body/div/div/div/ul/li[9]/span").getText();
+		Assert.assertEquals("Get Taste of Lambda and Stick to It", spanText);
+		Status="passed";
+		Thread.sleep(150);
 
-System.out.println("TestFinished");
+		System.out.println("TestFinished");
 
-}
+	}
 
-@AfterSuite
-public void tearDown() {
-driver.executeScript("lambda-status=" + Status);
-driver.quit();
-}
+	@AfterSuite
+	public void tearDown() {
+		driver.executeScript("lambda-status=" + Status);
+		driver.quit();
+	}
 
 }
 ```

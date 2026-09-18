@@ -627,10 +627,10 @@ npx smartui upload ./screenshots --buildName "Manual-Test"
 
 # 3. With options
 npx smartui upload ./screenshots \
---ignoreResolutions \
---removeExtensions \
---buildName "Test-Run" \
---fetch-results results.json
+  --ignoreResolutions \
+  --removeExtensions \
+  --buildName "Test-Run" \
+  --fetch-results results.json
 ```
 
 **Storybook Testing**
@@ -669,20 +669,20 @@ npx smartui upload-pdf ./pdfs --markBaseline --buildName "PDF-Baseline"
 **GitHub Actions Example:**
 ```yaml
 - name: Run SmartUI Tests
-env:
-PROJECT_TOKEN: ${{ secrets.PROJECT_TOKEN }}
-run: |
-npm install -g @lambdatest/smartui-cli
-npx smartui exec --buildName "${{ github.sha }}" -- npm test
+  env:
+    PROJECT_TOKEN: ${{ secrets.PROJECT_TOKEN }}
+  run: |
+    npm install -g @lambdatest/smartui-cli
+    npx smartui exec --buildName "${{ github.sha }}" -- npm test
 ```
 **GitLab CI Example:**
 ```yaml
 test:
-variables:
-PROJECT_TOKEN: $PROJECT_TOKEN
-script:
-- npm install -g @lambdatest/smartui-cli
-- npx smartui exec --buildName "$CI_COMMIT_SHA" -- npm test
+  variables:
+    PROJECT_TOKEN: $PROJECT_TOKEN
+  script:
+    - npm install -g @lambdatest/smartui-cli
+    - npx smartui exec --buildName "$CI_COMMIT_SHA" -- npm test
 ```
 
 ## Best Practices

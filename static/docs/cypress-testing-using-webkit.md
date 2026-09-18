@@ -98,61 +98,61 @@ Once you run the above command, below is the project structure for the `lambdate
 
 ```js
 {
-"lambdatest_auth": {
-"username": "<Your LambdaTest username>",
-"access_key": "<Your LambdaTest access key>"
-},
-"browsers": [
-{
-"browser": "Webkit",
-"platform": "Windows 11",
-"versions": [
-"latest"
-]
-},
-{
-"browser": "Webkit",
-"platform": "Windows 10",
-"versions": [
-"latest"
-]
-}
-{
-"browser": "Webkit",
-"platform": "MacOS Monterey",
-"versions": [
-"latest"
-]
-},
-{
-"browser": "Webkit",
-"platform": "MacOS Big sur",
-"versions": [
-"latest"
-]
-},
+  "lambdatest_auth": {
+     "username": "<Your LambdaTest username>",
+     "access_key": "<Your LambdaTest access key>"
+  },
+  "browsers": [
+     {
+        "browser": "Webkit",
+        "platform": "Windows 11",
+        "versions": [
+           "latest"
+        ]
+     },
+     {
+        "browser": "Webkit",
+        "platform": "Windows 10",
+        "versions": [
+           "latest"
+        ]
+     }
+      {
+       "browser": "Webkit",
+       "platform": "MacOS Monterey",
+       "versions": [
+          "latest"
+       ]
+    },
+ {
+       "browser": "Webkit",
+       "platform": "MacOS Big sur",
+       "versions": [
+          "latest"
+       ]
+    },
 
-],
-"run_settings": {
-"cypress_config_file": "cypress.config.js",
-"reporter_config_file": "base_reporter_config.json",
-"build_name": "build-name",
-"parallels": 1,
-"specs": "./*.cy.js",
-"ignore_files": "",
-"network": false,
-"headless": false,
-"npm_dependencies": {
-"cypress": "10.8.0"
-"playwright-webkit": "^1.28.1",
-"mochawesome": "7.0.1"
+ ],
+  "run_settings": {
+     "cypress_config_file": "cypress.config.js",
+     "reporter_config_file": "base_reporter_config.json",
+     "build_name": "build-name",
+     "parallels": 1,
+     "specs": "./*.cy.js",
+     "ignore_files": "",
+     "network": false,
+     "headless": false,
+     "npm_dependencies": {
+        "cypress": "10.8.0"
+        "playwright-webkit": "^1.28.1",
+        "mochawesome": "7.0.1"
 
-}
-},
-"tunnel_settings": {
-"tunnel": false,
-"tunnel_name": null
-}
+     }
+  },
+  "tunnel_settings": {
+     "tunnel": false,
+     "tunnel_name": null
+  }
 }
 ```
 
@@ -171,10 +171,10 @@ To tests locally hosted websites on the TestMu AI platform, you need to setup [T
 Now you need to activate the tunnel capability in the `lambdatest-config.json` file under the section "tunnel_settings" as shown below:
 
 ```json
-"tunnel_settings": {
-"tunnel": true,
-"tunnel_name": "LT_Tunnel"
-}
+  "tunnel_settings": {
+		"tunnel": true,
+		"tunnel_name": "LT_Tunnel"
+	}
 ```
 
 You can provide the name of the **TestMu AI tunnel** as per your requirements.
@@ -187,8 +187,8 @@ You can provide the name of the **TestMu AI tunnel** as per your requirements.
 
 ```js
 "npm_dependencies": {
-"cypress": "10.8.0",
-"playwright-webkit": "^1.28.1"
+   "cypress": "10.8.0",
+   "playwright-webkit": "^1.28.1"
 }
 ```
 

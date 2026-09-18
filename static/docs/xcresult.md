@@ -41,16 +41,16 @@ curl --location --request POST 'https://mobile-api.lambdatest.com/framework/v1/x
 --header 'Authorization: Basic BASIC_AUTH_TOKEN' \
 --header 'Content-Type: application/json' \
 --data-raw '{
-"app" : "APP_ID",
-"testSuite": "TEST_SUITE_ID",
-"device" :  ["iPhone 11-14"],
-"video" : true,
-"queueTimeout": 10800,
-"idleTimeout": 150,
-"devicelog": true,
-"network": false,
-"build" : "Proverbial-XCUITest",
-"enableResultBundle": true
+  "app" : "APP_ID",
+  "testSuite": "TEST_SUITE_ID",
+  "device" :  ["iPhone 11-14"],
+  "video" : true,
+  "queueTimeout": 10800,
+  "idleTimeout": 150,
+  "devicelog": true,
+  "network": false,
+  "build" : "Proverbial-XCUITest",
+  "enableResultBundle": true
 }'
 ```
 
@@ -59,16 +59,16 @@ curl --location --request POST "https://mobile-api.lambdatest.com/framework/v1/x
 --header "Authorization: Basic BASIC_AUTH_TOKEN" \
 --header "Content-Type: application/json" \
 --data-raw "{
-"app" : "APP_ID",
-"testSuite": "TEST_SUITE_ID",
-"device" :  ["iPhone 11-14"],
-"video" : true,
-"queueTimeout": 10800,
-"idleTimeout": 150,
-"devicelog": true,
-"network": false,
-"build" : "Proverbial-XCUITest",
-"enableResultBundle": true
+  "app" : "APP_ID",
+  "testSuite": "TEST_SUITE_ID",
+  "device" :  ["iPhone 11-14"],
+  "video" : true,
+  "queueTimeout": 10800,
+  "idleTimeout": 150,
+  "devicelog": true,
+  "network": false,
+  "build" : "Proverbial-XCUITest",
+  "enableResultBundle": true
 }"
 ```
 

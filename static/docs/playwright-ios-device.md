@@ -128,9 +128,9 @@ Add the Playwright dependency to your `pom.xml`:
 
 ```xml
 <dependency>
-<groupId>com.microsoft.playwright</groupId>
-<artifactId>playwright</artifactId>
-<version>1.60.0</version>
+    <groupId>com.microsoft.playwright</groupId>
+    <artifactId>playwright</artifactId>
+    <version>1.60.0</version>
 </dependency>
 ```
 
@@ -146,62 +146,62 @@ dotnet add package Microsoft.Playwright
 const { webkit } = require("playwright");
 
 (async () => {
-const capabilities = {
-"LT:Options": {
-"platformName": "ios",
-"deviceName": "iPhone 16",
-"platformVersion": "18",
-"isRealMobile": true,
-"build": "Playwright iOS Build",
-"name": "Playwright iOS Test",
-"user": process.env.LT_USERNAME,
-"accessKey": process.env.LT_ACCESS_KEY,
-"network": true,
-"video": true,
-"console": true,
-},
-};
+  const capabilities = {
+    "LT:Options": {
+      "platformName": "ios",
+      "deviceName": "iPhone 16",
+      "platformVersion": "18",
+      "isRealMobile": true,
+      "build": "Playwright iOS Build",
+      "name": "Playwright iOS Test",
+      "user": process.env.LT_USERNAME,
+      "accessKey": process.env.LT_ACCESS_KEY,
+      "network": true,
+      "video": true,
+      "console": true,
+    },
+  };
 
-const browser = await webkit.connect(
-`wss://cdp.lambdatest.com/playwright?capabilities=${encodeURIComponent(
-JSON.stringify(capabilities)
-)}`
-);
+  const browser = await webkit.connect(
+    `wss://cdp.lambdatest.com/playwright?capabilities=${encodeURIComponent(
+      JSON.stringify(capabilities)
+    )}`
+  );
 
-const context = await browser.newContext();
-const page = await context.newPage();
+  const context = await browser.newContext();
+  const page = await context.newPage();
 
-await page.goto("https://duckduckgo.com", { timeout: 30000 });
-await page.locator('[name="q"]').fill("LambdaTest");
-await page.locator('[name="q"]').press("Enter");
-await page.waitForTimeout(3000);
+  await page.goto("https://duckduckgo.com", { timeout: 30000 });
+  await page.locator('[name="q"]').fill("LambdaTest");
+  await page.locator('[name="q"]').press("Enter");
+  await page.waitForTimeout(3000);
 
-const title = await page.title();
-console.log("Page title:", title);
+  const title = await page.title();
+  console.log("Page title:", title);
 
-try {
-if (title.includes("LambdaTest")) {
-await page.evaluate(
-(_) => {},
-`lambdatest_action: ${JSON.stringify({
-action: "setTestStatus",
-arguments: { status: "passed", remark: "Title verified" },
-})}`
-);
-}
-} catch (e) {
-await page.evaluate(
-(_) => {},
-`lambdatest_action: ${JSON.stringify({
-action: "setTestStatus",
-arguments: { status: "failed", remark: e.message },
-})}`
-);
-}
+  try {
+    if (title.includes("LambdaTest")) {
+      await page.evaluate(
+        (_) => {},
+        `lambdatest_action: ${JSON.stringify({
+          action: "setTestStatus",
+          arguments: { status: "passed", remark: "Title verified" },
+        })}`
+      );
+    }
+  } catch (e) {
+    await page.evaluate(
+      (_) => {},
+      `lambdatest_action: ${JSON.stringify({
+        action: "setTestStatus",
+        arguments: { status: "failed", remark: e.message },
+      })}`
+    );
+  }
 
-await page.close();
-await context.close();
-await browser.close();
+  await page.close();
+  await context.close();
+  await browser.close();
 })();
 ```
 
@@ -216,58 +216,58 @@ import os, json, urllib.parse
 from playwright.sync_api import sync_playwright
 
 def main():
-capabilities = {
-"LT:Options": {
-"platformName": "ios",
-"deviceName": "iPhone 16",
-"platformVersion": "18",
-"isRealMobile": True,
-"build": "Playwright iOS Build",
-"name": "Playwright iOS Test",
-"user": os.environ["LT_USERNAME"],
-"accessKey": os.environ["LT_ACCESS_KEY"],
-"network": True,
-"video": True,
-"console": True,
-}
-}
+    capabilities = {
+        "LT:Options": {
+            "platformName": "ios",
+            "deviceName": "iPhone 16",
+            "platformVersion": "18",
+            "isRealMobile": True,
+            "build": "Playwright iOS Build",
+            "name": "Playwright iOS Test",
+            "user": os.environ["LT_USERNAME"],
+            "accessKey": os.environ["LT_ACCESS_KEY"],
+            "network": True,
+            "video": True,
+            "console": True,
+        }
+    }
 
-ws_endpoint = (
-f"wss://cdp.lambdatest.com/playwright?capabilities="
-f"{urllib.parse.quote(json.dumps(capabilities))}"
-)
+    ws_endpoint = (
+        f"wss://cdp.lambdatest.com/playwright?capabilities="
+        f"{urllib.parse.quote(json.dumps(capabilities))}"
+    )
 
-with sync_playwright() as p:
-browser = p.webkit.connect(ws_endpoint)
-context = browser.new_context()
-page = context.new_page()
+    with sync_playwright() as p:
+        browser = p.webkit.connect(ws_endpoint)
+        context = browser.new_context()
+        page = context.new_page()
 
-page.goto("https://duckduckgo.com", timeout=30000)
-page.locator('[name="q"]').fill("LambdaTest")
-page.locator('[name="q"]').press("Enter")
-page.wait_for_timeout(3000)
+        page.goto("https://duckduckgo.com", timeout=30000)
+        page.locator('[name="q"]').fill("LambdaTest")
+        page.locator('[name="q"]').press("Enter")
+        page.wait_for_timeout(3000)
 
-title = page.title()
-print(f"Page title: {title}")
+        title = page.title()
+        print(f"Page title: {title}")
 
-try:
-if "LambdaTest" in title:
-page.evaluate(
-"_ => {}",
-'lambdatest_action: {"action": "setTestStatus", "arguments": {"status": "passed", "remark": "Title verified"}}',
-)
-except Exception as e:
-page.evaluate(
-"_ => {}",
-f'lambdatest_action: {json.dumps({"action": "setTestStatus", "arguments": {"status": "failed", "remark": str(e)}})}',
-)
+        try:
+            if "LambdaTest" in title:
+                page.evaluate(
+                    "_ => {}",
+                    'lambdatest_action: {"action": "setTestStatus", "arguments": {"status": "passed", "remark": "Title verified"}}',
+                )
+        except Exception as e:
+            page.evaluate(
+                "_ => {}",
+                f'lambdatest_action: {json.dumps({"action": "setTestStatus", "arguments": {"status": "failed", "remark": str(e)}})}',
+            )
 
-page.close()
-context.close()
-browser.close()
+        page.close()
+        context.close()
+        browser.close()
 
 if __name__ == "__main__":
-main()
+    main()
 ```
 
 Run the test:
@@ -286,55 +286,55 @@ import java.nio.charset.StandardCharsets;
 import java.util.Map;
 
 public class PlaywrightIosTest {
-public static void main(String[] args) {
-Map<String, Object> ltOptions = Map.of(
-"platformName", "ios",
-"deviceName", "iPhone 16",
-"platformVersion", "18",
-"isRealMobile", true,
-"build", "Playwright iOS Build",
-"name", "Playwright iOS Test",
-"user", System.getenv("LT_USERNAME"),
-"accessKey", System.getenv("LT_ACCESS_KEY"),
-"network", true,
-"video", true,
-"console", true
-);
+    public static void main(String[] args) {
+        Map<String, Object> ltOptions = Map.of(
+            "platformName", "ios",
+            "deviceName", "iPhone 16",
+            "platformVersion", "18",
+            "isRealMobile", true,
+            "build", "Playwright iOS Build",
+            "name", "Playwright iOS Test",
+            "user", System.getenv("LT_USERNAME"),
+            "accessKey", System.getenv("LT_ACCESS_KEY"),
+            "network", true,
+            "video", true,
+            "console", true
+        );
 
-Map<String, Object> capabilities = Map.of("LT:Options", ltOptions);
-String capsJson = new Gson().toJson(capabilities);
-String wsEndpoint = "wss://cdp.lambdatest.com/playwright?capabilities="
-+ URLEncoder.encode(capsJson, StandardCharsets.UTF_8);
+        Map<String, Object> capabilities = Map.of("LT:Options", ltOptions);
+        String capsJson = new Gson().toJson(capabilities);
+        String wsEndpoint = "wss://cdp.lambdatest.com/playwright?capabilities="
+            + URLEncoder.encode(capsJson, StandardCharsets.UTF_8);
 
-try (Playwright playwright = Playwright.create()) {
-Browser browser = playwright.webkit().connect(wsEndpoint);
-BrowserContext context = browser.newContext();
-Page page = context.newPage();
+        try (Playwright playwright = Playwright.create()) {
+            Browser browser = playwright.webkit().connect(wsEndpoint);
+            BrowserContext context = browser.newContext();
+            Page page = context.newPage();
 
-page.navigate("https://duckduckgo.com",
-new Page.NavigateOptions().setTimeout(30000));
-page.locator("[name=\"q\"]").fill("LambdaTest");
-page.locator("[name=\"q\"]").press("Enter");
-page.waitForTimeout(3000);
+            page.navigate("https://duckduckgo.com",
+                new Page.NavigateOptions().setTimeout(30000));
+            page.locator("[name=\"q\"]").fill("LambdaTest");
+            page.locator("[name=\"q\"]").press("Enter");
+            page.waitForTimeout(3000);
 
-String title = page.title();
-System.out.println("Page title: " + title);
+            String title = page.title();
+            System.out.println("Page title: " + title);
 
-try {
-if (title.contains("LambdaTest")) {
-page.evaluate("_ => {}",
-"lambdatest_action: {\"action\": \"setTestStatus\", \"arguments\": {\"status\": \"passed\", \"remark\": \"Title verified\"}}");
-}
-} catch (Exception e) {
-page.evaluate("_ => {}",
-"lambdatest_action: {\"action\": \"setTestStatus\", \"arguments\": {\"status\": \"failed\", \"remark\": \"" + e.getMessage() + "\"}}");
-}
+            try {
+                if (title.contains("LambdaTest")) {
+                    page.evaluate("_ => {}",
+                        "lambdatest_action: {\"action\": \"setTestStatus\", \"arguments\": {\"status\": \"passed\", \"remark\": \"Title verified\"}}");
+                }
+            } catch (Exception e) {
+                page.evaluate("_ => {}",
+                    "lambdatest_action: {\"action\": \"setTestStatus\", \"arguments\": {\"status\": \"failed\", \"remark\": \"" + e.getMessage() + "\"}}");
+            }
 
-page.close();
-context.close();
-browser.close();
-}
-}
+            page.close();
+            context.close();
+            browser.close();
+        }
+    }
 }
 ```
 
@@ -351,21 +351,21 @@ using System.Web;
 
 var capabilities = new Dictionary<string, object>
 {
-["LT:Options"] = new Dictionary<string, object>
-{
-["platformName"] = "ios",
-["deviceName"] = "iPhone 16",
-["platformVersion"] = "18",
-["isRealMobile"] = true,
-["build"] = "Playwright iOS Build",
-["name"] = "Playwright iOS Test",
-["user"] = Environment.GetEnvironmentVariable("LT_USERNAME")!,
-["accessKey"] = Environment.GetEnvironmentVariable("LT_ACCESS_KEY")!,
-["network"] = true,
-["video"] = true,
-["console"] = true,
-["playwrightClientVersion"] = "1.60.0",
-}
+    ["LT:Options"] = new Dictionary<string, object>
+    {
+        ["platformName"] = "ios",
+        ["deviceName"] = "iPhone 16",
+        ["platformVersion"] = "18",
+        ["isRealMobile"] = true,
+        ["build"] = "Playwright iOS Build",
+        ["name"] = "Playwright iOS Test",
+        ["user"] = Environment.GetEnvironmentVariable("LT_USERNAME")!,
+        ["accessKey"] = Environment.GetEnvironmentVariable("LT_ACCESS_KEY")!,
+        ["network"] = true,
+        ["video"] = true,
+        ["console"] = true,
+        ["playwrightClientVersion"] = "1.60.0",
+    }
 };
 
 var capsJson = JsonSerializer.Serialize(capabilities);
@@ -386,16 +386,16 @@ Console.WriteLine($"Page title: {title}");
 
 try
 {
-if (title.Contains("LambdaTest"))
-{
-await page.EvaluateAsync("_ => {}",
-"lambdatest_action: {\"action\": \"setTestStatus\", \"arguments\": {\"status\": \"passed\", \"remark\": \"Title verified\"}}");
-}
+    if (title.Contains("LambdaTest"))
+    {
+        await page.EvaluateAsync("_ => {}",
+            "lambdatest_action: {\"action\": \"setTestStatus\", \"arguments\": {\"status\": \"passed\", \"remark\": \"Title verified\"}}");
+    }
 }
 catch (Exception e)
 {
-await page.EvaluateAsync("_ => {}",
-$"lambdatest_action: {{\"action\": \"setTestStatus\", \"arguments\": {{\"status\": \"failed\", \"remark\": \"{e.Message}\"}}}}");
+    await page.EvaluateAsync("_ => {}",
+        $"lambdatest_action: {{\"action\": \"setTestStatus\", \"arguments\": {{\"status\": \"failed\", \"remark\": \"{e.Message}\"}}}}");
 }
 
 await page.CloseAsync();
@@ -427,13 +427,13 @@ Add the Apple Pay keys to the **same `LT:Options` object** you already use to st
 
 ```javascript
 const capabilities = {
-"LT:Options": {
-// ...your existing iOS capabilities (platformName, deviceName, platformVersion, user, accessKey, etc.)
-// highlight-start
-"applePay": true,
-"applePayCardType": ["master", "visa"], // priority order — master preferred, visa as fallback
-// highlight-end
-},
+  "LT:Options": {
+    // ...your existing iOS capabilities (platformName, deviceName, platformVersion, user, accessKey, etc.)
+    // highlight-start
+    "applePay": true,
+    "applePayCardType": ["master", "visa"], // priority order — master preferred, visa as fallback
+    // highlight-end
+  },
 };
 ```
 
@@ -466,10 +466,10 @@ Apple Pay hooks are invoked through the TestMu AI server-side action channel —
 
 ```javascript
 async function ltAction(page, action, args = {}) {
-return page.evaluate(
-(_) => {},
-`lambdatest_action: ${JSON.stringify({ action, arguments: args })}`
-);
+  return page.evaluate(
+    (_) => {},
+    `lambdatest_action: ${JSON.stringify({ action, arguments: args })}`
+  );
 }
 ```
 
@@ -479,21 +479,21 @@ Sets shipping, billing, and contact details on the Apple Pay sheet. Call it **be
 
 ```javascript
 await ltAction(page, "lambda-applepay-details", {
-shippingDetails: {
-firstName: "John", lastName: "Doe",
-street: "1 Infinite Loop", city: "Cupertino",
-state: "California", postalCode: "95014", country: "United States",
-},
-billingDetails: {
-firstName: "John", lastName: "Doe",
-street: "1 Infinite Loop", city: "Cupertino",
-state: "California", postalCode: "95014", country: "United States",
-email: "john.doe@example.com", phone: "+14085551234",
-},
-contact: {
-firstName: "John", lastName: "Doe",
-email: "john.doe@example.com", phone: "+14085551234",
-},
+  shippingDetails: {
+    firstName: "John", lastName: "Doe",
+    street: "1 Infinite Loop", city: "Cupertino",
+    state: "California", postalCode: "95014", country: "United States",
+  },
+  billingDetails: {
+    firstName: "John", lastName: "Doe",
+    street: "1 Infinite Loop", city: "Cupertino",
+    state: "California", postalCode: "95014", country: "United States",
+    email: "john.doe@example.com", phone: "+14085551234",
+  },
+  contact: {
+    firstName: "John", lastName: "Doe",
+    email: "john.doe@example.com", phone: "+14085551234",
+  },
 });
 ```
 
@@ -514,58 +514,58 @@ const { webkit } = require("playwright");
 
 // Reusable wrapper for any TestMu AI server-side action.
 async function ltAction(page, action, args = {}) {
-return page.evaluate(
-(_) => {},
-`lambdatest_action: ${JSON.stringify({ action, arguments: args })}`
-);
+  return page.evaluate(
+    (_) => {},
+    `lambdatest_action: ${JSON.stringify({ action, arguments: args })}`
+  );
 }
 
 (async () => {
-const capabilities = {
-"LT:Options": {
-platformName: "ios",
-deviceName: "iPhone 16",
-platformVersion: "26",
-isRealMobile: true,
-user: process.env.LT_USERNAME,
-accessKey: process.env.LT_ACCESS_KEY,
-build: "Apple Pay 26.0",
-name: "Apple Pay via Playwright",
-applePay: true,
-applePayCardType: ["master", "visa"],
-},
-};
+  const capabilities = {
+    "LT:Options": {
+      platformName: "ios",
+      deviceName: "iPhone 16",
+      platformVersion: "26",
+      isRealMobile: true,
+      user: process.env.LT_USERNAME,
+      accessKey: process.env.LT_ACCESS_KEY,
+      build: "Apple Pay 26.0",
+      name: "Apple Pay via Playwright",
+      applePay: true,
+      applePayCardType: ["master", "visa"],
+    },
+  };
 
-const browser = await webkit.connect(
-`wss://cdp.lambdatest.com/playwright?capabilities=${encodeURIComponent(
-JSON.stringify(capabilities)
-)}`
-);
+  const browser = await webkit.connect(
+    `wss://cdp.lambdatest.com/playwright?capabilities=${encodeURIComponent(
+      JSON.stringify(capabilities)
+    )}`
+  );
 
-const context = await browser.newContext();
-const page = await context.newPage();
+  const context = await browser.newContext();
+  const page = await context.newPage();
 
-// Navigate to your checkout page and trigger the Apple Pay sheet here...
+  // Navigate to your checkout page and trigger the Apple Pay sheet here...
 
-// Optional: pre-fill shipping / billing / contact on the sheet.
-await ltAction(page, "lambda-applepay-details", {
-billingDetails: {
-firstName: "John", lastName: "Doe",
-street: "1 Infinite Loop", city: "Cupertino",
-state: "California", postalCode: "95014", country: "United States",
-email: "john.doe@example.com", phone: "+14085551234",
-},
-});
+  // Optional: pre-fill shipping / billing / contact on the sheet.
+  await ltAction(page, "lambda-applepay-details", {
+    billingDetails: {
+      firstName: "John", lastName: "Doe",
+      street: "1 Infinite Loop", city: "Cupertino",
+      state: "California", postalCode: "95014", country: "United States",
+      email: "john.doe@example.com", phone: "+14085551234",
+    },
+  });
 
-// Confirm the sheet. On iOS 26 the passcode is entered automatically.
-await ltAction(page, "lambda-applepay", { confirm: true });
+  // Confirm the sheet. On iOS 26 the passcode is entered automatically.
+  await ltAction(page, "lambda-applepay", { confirm: true });
 
-// Assert your post-payment state (swap for a real locator on your app).
-// await page.getByText(/order confirmed/i).waitFor();
+  // Assert your post-payment state (swap for a real locator on your app).
+  // await page.getByText(/order confirmed/i).waitFor();
 
-await page.close();
-await context.close();
-await browser.close();
+  await page.close();
+  await context.close();
+  await browser.close();
 })();
 ```
 

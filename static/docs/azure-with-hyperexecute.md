@@ -37,24 +37,24 @@ trigger:
 - main
 
 pool:
-vmImage: 'ubuntu-latest'  # Adjust for macOS if needed
+  vmImage: 'ubuntu-latest'  # Adjust for macOS if needed
 
 steps:
-- task: Bash@3
-inputs:
-targetType: 'inline'
-script: |
-# Download Hyperexecute CLI for macOS (adjust for other OS)
-name: Download HyperExecute CLI
-script: wget https://downloads.lambdatest.com/hyperexecute/darwin/hyperexecute
+  - task: Bash@3
+    inputs:
+      targetType: 'inline'
+      script: |
+        # Download Hyperexecute CLI for macOS (adjust for other OS)
+        name: Download HyperExecute CLI
+        script: wget https://downloads.lambdatest.com/hyperexecute/darwin/hyperexecute
 
-# Grant execute permission to the downloaded binary
-name: Make HyperExecute executable
-script: chmod +x hyperexecute
+        # Grant execute permission to the downloaded binary
+        name: Make HyperExecute executable
+        script: chmod +x hyperexecute
 
-# Run Hyperexecute with user credentials and configuration file
-name: Run Hyperexecute Tests
-script: ./hyperexecute --user <your_username> --key <your_access_key> --config <your_yaml_file_path>
+        # Run Hyperexecute with user credentials and configuration file
+        name: Run Hyperexecute Tests
+        script: ./hyperexecute --user <your_username> --key <your_access_key> --config <your_yaml_file_path>
 ```
 
 - **Trigger:** In the **trigger** section, state the branch of your your test repository that you would like to trigger.

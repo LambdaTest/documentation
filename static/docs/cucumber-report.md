@@ -13,15 +13,15 @@ In your `TestRunner` file, configure `@CucumberOptions` to specify report format
 
 ```javascript title="TestRunner.java"
 @CucumberOptions(
-features = "src/main/java/Features",
-glue = {"Steps"},
-tags = {"~@Ignore"},
-format = {
-"pretty",
-"html:target/cucumber-reports/cucumber-pretty",
-"json:target/cucumber-reports/CucumberTestReport.json",
-"rerun:target/cucumber-reports/rerun.txt"
-},plugin = "json:target/cucumber-reports/CucumberTestReport.json")
+        features = "src/main/java/Features",
+        glue = {"Steps"},
+        tags = {"~@Ignore"},
+        format = {
+                "pretty",
+                "html:target/cucumber-reports/cucumber-pretty",
+                "json:target/cucumber-reports/CucumberTestReport.json",
+                "rerun:target/cucumber-reports/rerun.txt"
+        },plugin = "json:target/cucumber-reports/CucumberTestReport.json")
 ```
 
 Explanation of plugin Options:
@@ -37,9 +37,9 @@ In your HyperExecute YAML configuration, define the [`report`](/support/docs/dee
 ```yaml title="hyperexecute.yaml"
 report: true
 partialReports:
-location: target/cucumber-reports/
-frameworkName: cucumber
-type: json
+ location: target/cucumber-reports/
+ frameworkName: cucumber
+ type: json
 ```
 
 ### Step 3: Execute Your Tests

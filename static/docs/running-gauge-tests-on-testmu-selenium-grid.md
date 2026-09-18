@@ -58,18 +58,18 @@ Define the browser, version, and OS for your test run.
 
 ```java
 ChromeOptions browserOptions = new ChromeOptions();
-browserOptions.setPlatformName("Windows 10");
-browserOptions.setBrowserVersion("latest");
+        browserOptions.setPlatformName("Windows 10");
+        browserOptions.setBrowserVersion("latest");
 
-HashMap<String, Object> ltOptions = new HashMap<String, Object>();
-ltOptions.put("build", "LambdaTestSampleApp");
-ltOptions.put("name", "LambdaTestJavaSample");
-ltOptions.put("network", true); // To enable network logs
-ltOptions.put("visual", true); // To enable step by step screenshot
-ltOptions.put("video", true); // To enable video recording
-ltOptions.put("console", true); // To capture console logs
-ltOptions.put("w3c", true);
-browserOptions.setCapability("LT:Options", ltOptions);
+        HashMap<String, Object> ltOptions = new HashMap<String, Object>();
+        ltOptions.put("build", "LambdaTestSampleApp");
+        ltOptions.put("name", "LambdaTestJavaSample");
+        ltOptions.put("network", true); // To enable network logs
+        ltOptions.put("visual", true); // To enable step by step screenshot
+        ltOptions.put("video", true); // To enable video recording
+        ltOptions.put("console", true); // To capture console logs
+        ltOptions.put("w3c", true);
+        browserOptions.setCapability("LT:Options", ltOptions);
 ```
 
 Use the [Capabilities Generator](https://www.testmuai.com/capabilities-generator/) to auto-generate capabilities for any browser, version, and OS combination.
@@ -91,43 +91,43 @@ import static org.junit.Assert.assertEquals;
 
 public class StepImplementation_ToDo {
 
-private final WebDriver driver;
+    private final WebDriver driver;
 
-public StepImplementation_ToDo() {
-this.driver = DriverFactory.getDriver();
-}
+    public StepImplementation_ToDo() {
+        this.driver = DriverFactory.getDriver();
+    }
 
-@Step("Open the todo app")
-public void gotoApp() throws InterruptedException {
+  @Step("Open the todo app")
+  public void gotoApp() throws InterruptedException {
 
-System.out.println(DriverFactory.getDriver());
-driver.get("https://lambdatest.github.io/sample-todo-app/");
-String title = driver.getTitle();
-assertEquals(title,"Sample page - lambdatest.com");
-}
+        System.out.println(DriverFactory.getDriver());
+        driver.get("https://lambdatest.github.io/sample-todo-app/");
+        String title = driver.getTitle();
+        assertEquals(title,"Sample page - lambdatest.com");
+  }
 
-@Step("Select the desired items")
-public void selectItems() throws InterruptedException {
+  @Step("Select the desired items")
+  public void selectItems() throws InterruptedException {
 
-WebElement itemOne = driver.findElement(By.name("li1"));
-itemOne.click();
+      WebElement itemOne = driver.findElement(By.name("li1"));
+      itemOne.click();
 
-driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+      driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
-WebElement itemThird = driver.findElement(By.name("li3"));
-itemThird.click();
-}
+      WebElement itemThird = driver.findElement(By.name("li3"));
+      itemThird.click();
+  }
 
-@Step("Add new item <itemName>")
-public void addNewItem(String itemName) throws InterruptedException {
+  @Step("Add new item <itemName>")
+  public void addNewItem(String itemName) throws InterruptedException {
 
-WebElement addItem  = driver.findElement(By.id("sampletodotext"));
-addItem.sendKeys(itemName);
-Thread.sleep(2000);
+      WebElement addItem  = driver.findElement(By.id("sampletodotext"));
+      addItem.sendKeys(itemName);
+      Thread.sleep(2000);
 
-WebElement addButton = driver.findElement(By.id("addbutton"));
-addButton.click();
-}
+      WebElement addButton = driver.findElement(By.id("addbutton"));
+      addButton.click();
+  }
 }
 ```
 

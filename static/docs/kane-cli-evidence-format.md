@@ -60,9 +60,9 @@ import { validate, finalize } from "@testmuai/evidence-cli";
 
 const report = await validate("my-run.evidence", { profile: "L1" });
 if (!report.valid) {
-for (const d of report.diagnostics) {
-console.error(`${d.severity} ${d.location}: ${d.message} [${d.code}]`);
-}
+  for (const d of report.diagnostics) {
+    console.error(`${d.severity} ${d.location}: ${d.message} [${d.code}]`);
+  }
 }
 ```
 

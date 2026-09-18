@@ -192,35 +192,35 @@ Here's an example of how you can set connection and **socket timeouts**:
 ```java
 public static void main(String[] args) {
 
-// Set connection and socket timeouts
-int connectionTimeout = 5000; // in milliseconds
-int socketTimeout = 5000; // in milliseconds
+        // Set connection and socket timeouts
+        int connectionTimeout = 5000; // in milliseconds
+        int socketTimeout = 5000; // in milliseconds
 
-RestAssured.config = RestAssuredConfig.config().socketConfig(
-SocketConfig.socketConfig().setConnectTimeout(connectionTimeout)
-.setReadTimeout(socketTimeout));
+        RestAssured.config = RestAssuredConfig.config().socketConfig(
+                SocketConfig.socketConfig().setConnectTimeout(connectionTimeout)
+                        .setReadTimeout(socketTimeout));
 
-// Your Rest Assured request code here
-// For example:
-RestAssured.given()
-.baseUri("https://api.example.com")
-.basePath("/some/path")
-.get()
-.then()
-.statusCode(200);
+        // Your Rest Assured request code here
+        // For example:
+        RestAssured.given()
+                .baseUri("https://api.example.com")
+                .basePath("/some/path")
+                .get()
+                .then()
+                .statusCode(200);
 
-}
+    }
 ```
 
 Make sure to include the necessary dependencies in your project. If you are using Maven, you can add the following dependencies to your pom.xml file:
 
 ```bash
 <dependencies>
-<dependency>
-<groupId>io.rest-assured</groupId>
-<artifactId>rest-assured</artifactId>
-<version>4.5.0</version> <!-- Use the latest version available -->
-<scope>test</scope>
-</dependency>
+    <dependency>
+        <groupId>io.rest-assured</groupId>
+        <artifactId>rest-assured</artifactId>
+        <version>4.5.0</version> <!-- Use the latest version available -->
+        <scope>test</scope>
+    </dependency>
 </dependencies>
 ```

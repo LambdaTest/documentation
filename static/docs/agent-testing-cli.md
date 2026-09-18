@@ -181,7 +181,7 @@ Start one saved suite:
 
 ```bash
 agent-testing-cli --project PROJECT_ID run \
---suite SUITE_ID
+  --suite SUITE_ID
 ```
 
 The CLI asks for confirmation because a Phone Caller suite can create real calls. Review the selected project and suite before you confirm the run.
@@ -190,28 +190,28 @@ Start a suite without an interactive confirmation:
 
 ```bash
 agent-testing-cli --project PROJECT_ID run \
---suite SUITE_ID \
---yes
+  --suite SUITE_ID \
+  --yes
 ```
 
 Start multiple suites:
 
 ```bash
 agent-testing-cli --project PROJECT_ID run \
---suite SUITE_ID_1 \
---suite SUITE_ID_2 \
---yes
+  --suite SUITE_ID_1 \
+  --suite SUITE_ID_2 \
+  --yes
 ```
 
 Wait for the final suite result:
 
 ```bash
 agent-testing-cli --project PROJECT_ID run \
---suite SUITE_ID \
---yes \
---wait \
---poll 5 \
---timeout 1800
+  --suite SUITE_ID \
+  --yes \
+  --wait \
+  --poll 5 \
+  --timeout 1800
 ```
 
 The `--poll` and `--timeout` values are in seconds.
@@ -222,19 +222,19 @@ A Chat evaluation requires a project, workflow, and suite:
 
 ```bash
 agent-testing-cli --project PROJECT_ID run \
---workflow WORKFLOW_ID \
---suite SUITE_ID \
---yes
+  --workflow WORKFLOW_ID \
+  --suite SUITE_ID \
+  --yes
 ```
 
 Select a specific endpoint profile:
 
 ```bash
 agent-testing-cli --project PROJECT_ID run \
---workflow WORKFLOW_ID \
---suite SUITE_ID \
---endpoint-profile ENDPOINT_PROFILE_ID \
---yes
+  --workflow WORKFLOW_ID \
+  --suite SUITE_ID \
+  --endpoint-profile ENDPOINT_PROFILE_ID \
+  --yes
 ```
 
 Chat evaluations are asynchronous. Do not use `--wait` with a Chat evaluation.
@@ -295,9 +295,9 @@ For a Chat evaluation, provide the workflow ID as an environment variable and us
 
 ```bash
 agent-testing-cli --project "$TESTMU_PROJECT_ID" --json run \
---workflow "$TESTMU_WORKFLOW_ID" \
---suite "$TESTMU_SUITE_ID" \
---yes
+  --workflow "$TESTMU_WORKFLOW_ID" \
+  --suite "$TESTMU_SUITE_ID" \
+  --yes
 ```
 
 Do not add `--wait` to a Chat evaluation.
@@ -342,9 +342,9 @@ agent-testing-cli --project PROJECT_ID suites
 
 ```bash
 agent-testing-cli --project PROJECT_ID run \
---workflow WORKFLOW_ID \
---suite SUITE_ID \
---yes
+  --workflow WORKFLOW_ID \
+  --suite SUITE_ID \
+  --yes
 ```
 
 ### JSON Output Requires Confirmation Bypass

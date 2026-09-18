@@ -59,10 +59,10 @@ Update the `capabilities.json` file with your desired browser, version, and plat
 
 ```json title="capabilities.json"
 {
-"build": "GebFirstTest",
-"platformName": "Windows 10",
-"browserName": "firefox",
-"browserVersion": "latest"
+  "build": "GebFirstTest",
+  "platformName": "Windows 10",
+  "browserName": "firefox",
+  "browserVersion": "latest"
 }
 ```
 

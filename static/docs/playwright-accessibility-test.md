@@ -33,18 +33,18 @@ If you are using your own project, make sure you update the **Hub endpoint** in 
 Configure the desired capabilities based on your test requirements. For example:
 
 ```javascript
-const capabilities = {
-'browserName': 'Chrome',
-'browserVersion': 'latest',
-'LT:Options': {
-'platform': 'Windows 10',
-'build': 'Playwright Accessibility',
-'name': 'Playwright Accessibility',
-'user': process.env.LT_USERNAME,
-'accessKey': process.env.LT_ACCESS_KEY,
-..//
-}
-}
+  const capabilities = {
+    'browserName': 'Chrome',
+    'browserVersion': 'latest',
+    'LT:Options': {
+      'platform': 'Windows 10',
+      'build': 'Playwright Accessibility',
+      'name': 'Playwright Accessibility',
+      'user': process.env.LT_USERNAME,
+      'accessKey': process.env.LT_ACCESS_KEY,
+      ..//
+    }
+  }
 ```
 
 > You can generate capabilities for your test requirements with the help of our inbuilt 🔗 Capabilities Generator.
@@ -100,10 +100,10 @@ You can also define other settings capabilities to refine your scan rules as des
 
 ```javascript
 const capabilities = {
-"accessibility": true,
-"accessibility.wcagVersion": "wcag21aa", // Specify WCAG version (e.g., WCAG 2.1 Level AA)
-"accessibility.bestPractice": false,     // Exclude best practice issues from results
-"accessibility.needsReview": true        // Include issues that need review
+  "accessibility": true,
+  "accessibility.wcagVersion": "wcag21aa", // Specify WCAG version (e.g., WCAG 2.1 Level AA)
+  "accessibility.bestPractice": false,     // Exclude best practice issues from results
+  "accessibility.needsReview": true        // Include issues that need review
 };
 ```
 

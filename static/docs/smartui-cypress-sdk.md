@@ -210,11 +210,11 @@ import '@lambdatest/cypress-driver'
 
 ```js
 on('task', {
-log(message) {
-console.log(message);
-return null;
-},
-});
+        log(message) {
+            console.log(message);
+            return null;
+        },
+ });
 ```
 
 SmartUI SDK only supports Cypress versions >= 10.0.0
@@ -247,37 +247,37 @@ Once, the configuration file will be created, you will be seeing the default con
 
 ```json title="/smartui-sdk-project/.smartui.json"
 {
-"web": {
-"browsers": [
-"chrome",
-"firefox",
-"safari",
-"edge"
-],
-"viewports": [
-[
-1920
-],
-[
-1366
-],
-[
-1028
-]
-] // Full Page screenshots are captured by default for web viewports
-},
-"mobile": {
-"devices": [
-"iPhone 14",  //iPhone 14 viewport
-"Galaxy S24"  //Galaxy S24 viewport
-],
-"fullPage": true, //Full Page is true by default for mobile viewports
-"orientation": "portrait" //Change to "landscape" for landscape snapshot
-},
-"waitForTimeout": 1000, //Optional (Should only be used in case lazy-loading/async components are present)
-"waitForPageRender": 50000, //Optional (Should only be used in case of websites which take more than 30s to load)
-"enableJavaScript": false, //Enable javascript for all the screenshots of the project
-"allowedHostnames": [] //Additional hostnames to capture assets from
+  "web": {
+    "browsers": [
+      "chrome",
+      "firefox",
+      "safari",
+      "edge"
+    ],
+    "viewports": [
+      [
+        1920
+      ],
+      [
+        1366
+      ],
+      [
+        1028
+      ]
+    ] // Full Page screenshots are captured by default for web viewports
+  },
+  "mobile": {
+    "devices": [
+      "iPhone 14",  //iPhone 14 viewport
+      "Galaxy S24"  //Galaxy S24 viewport
+    ],
+    "fullPage": true, //Full Page is true by default for mobile viewports
+    "orientation": "portrait" //Change to "landscape" for landscape snapshot
+  },
+  "waitForTimeout": 1000, //Optional (Should only be used in case lazy-loading/async components are present)
+  "waitForPageRender": 50000, //Optional (Should only be used in case of websites which take more than 30s to load)
+  "enableJavaScript": false, //Enable javascript for all the screenshots of the project
+  "allowedHostnames": [] //Additional hostnames to capture assets from
 }
 ```
 **Advanced options in SmartUI configuration**
@@ -293,14 +293,14 @@ Once, the configuration file will be created, you will be seeing the default con
 /// <reference types="cypress" />
 
 describe('Test Case name', () => {
-beforeEach(() => {
+  beforeEach(() => {
 
-cy.visit('Required URL')
-})
+    cy.visit('Required URL')
+  })
 
-it('SmartUI Snapshot', () => {
-cy.smartuiSnapshot('Screenshot Name');
-})
+  it('SmartUI Snapshot', () => {
+    cy.smartuiSnapshot('Screenshot Name');
+  })
 })
 
 ```
@@ -337,73 +337,73 @@ When conducting visual tests, you may encounter scenarios where certain elements
 
 ```js title="This is a sample for your configuration for Cypress to ignore by ID"
 let options = {
-ignoreDOM: {
-id: ["ID-1", "ID-2"],
-}
-}
+            ignoreDOM: {
+                id: ["ID-1", "ID-2"],
+            }
+        }
 cy.smartuiSnapshot('Screenshot Name', options);
 ```
 
 ```js title="This is a sample for your configuration for Cypress to ignore by Class"
 let options = {
-ignoreDOM: {
-class: ["Class-1", "Class-2"],
-}
-}
+            ignoreDOM: {
+                class: ["Class-1", "Class-2"],
+            }
+        }
 cy.smartuiSnapshot('Screenshot Name', options);
 ```
 
 ```js title="This is a sample for your configuration for Cypress to ignore by XPath"
 let options = {
-ignoreDOM: {
-xpath: ["Xpath-1", "Xpath-2"],
-}
-}
+            ignoreDOM: {
+                xpath: ["Xpath-1", "Xpath-2"],
+            }
+        }
 cy.smartuiSnapshot('Screenshot Name', options);
 ```
 
 ```js title="This is a sample for your configuration for Cypress to ignore by CSS Selector"
 let options = {
-ignoreDOM: {
-cssSelector: ["CSS-Selector-1", "CSS-Selector-2"],
-}
-}
+            ignoreDOM: {
+                cssSelector: ["CSS-Selector-1", "CSS-Selector-2"],
+            }
+        }
 cy.smartuiSnapshot('Screenshot Name', options);
 ```
 
 ```js title="This is a sample for your configuration for Cypress to select by" ID."
 let options = {
-selectDOM: {
-id: ["ID-1", "ID-2"],
-}
-}
+            selectDOM: {
+                id: ["ID-1", "ID-2"],
+            }
+        }
 cy.smartuiSnapshot('Screenshot Name', options);
 ```
 
 ```js title="This is a sample for your configuration for Cypress to select by Class"
 let options = {
-selectDOM: {
-class: ["Class-1", "Class-2"],
-}
-}
+            selectDOM: {
+                class: ["Class-1", "Class-2"],
+            }
+        }
 cy.smartuiSnapshot('Screenshot Name', options);
 ```
 
 ```js title="This is a sample for your configuration for Cypress to select by XPath"
 let options = {
-selectDOM: {
-xpath: ["Xpath-1", "Xpath-2"],
-}
-}
+            selectDOM: {
+                xpath: ["Xpath-1", "Xpath-2"],
+            }
+        }
 cy.smartuiSnapshot('Screenshot Name', options);
 ```
 
 ```js title="This is a sample for your webhook configuration for Cypress to select by CSS Selector"
 let options = {
-selectDOM: {
-cssSelector: ["CSS-Selector-1", "CSS-Selector-2"],
-}
-}
+            selectDOM: {
+                cssSelector: ["CSS-Selector-1", "CSS-Selector-2"],
+            }
+        }
 cy.smartuiSnapshot('Screenshot Name', options);
 ```
 
@@ -413,38 +413,38 @@ You can capture screenshots of targeted elements by leveraging various locator m
 
 ```js title="This is a sample for your configuration for Cypress to capture an element by" ID."
 let options = {
-element: {
-id: 'Required ID',
-}
-};
+      element: {
+          id: 'Required ID',
+      }
+  };
 cy.smartuiSnapshot('Screenshot Name', options);
 ```
 
 ```js title="This is a sample for your configuration for Cypress to capture an element by Class"
 let options = {
-element: {
-class: 'Required Class',
-}
-};
+      element: {
+          class: 'Required Class',
+      }
+  };
 cy.smartuiSnapshot('Screenshot Name', options);
 ```
 
 ```js title="This is a sample for your configuration for Cypress to capture an element by XPath"
 let options = {
-element: {
-xpath: 'Required Xpath',
-}
-};
+      element: {
+          xpath: 'Required Xpath',
+      }
+  };
 cy.smartuiSnapshot('Screenshot Name', options);
 
 ```
 
 ```js title="This is a sample for your webhook configuration for Cypress to capture an element by CSS Selector"
 let options = {
-element: {
-cssSelector: 'Required CSS Selector',
-}
-};
+      element: {
+          cssSelector: 'Required CSS Selector',
+      }
+  };
 cy.smartuiSnapshot('Screenshot Name', options);
 ```
 
@@ -561,7 +561,7 @@ cy.smartuiSnapshot('Page');
 2. Enable JavaScript in configuration:
 ```json
 {
-"enableJavaScript": true
+  "enableJavaScript": true
 }
 ```
 

@@ -82,38 +82,38 @@ maxRetries: 1
 concurrency: 4
 shell: bash
 env:
-# PAT: ${{ .secrets.testKey }}
-CACHE_DIR: m2_cache_dir
+  # PAT: ${{ .secrets.testKey }}
+  CACHE_DIR: m2_cache_dir
 
 cacheKey: '{{ checksum "pom.xml" }}'
 cacheDirectories:
-- .m2
+  - .m2
 
 pre:
-# Skip execution of the tests in the pre step
-- mvn -Dmaven.repo.local=./.m2 dependency:resolve
+  # Skip execution of the tests in the pre step
+  - mvn -Dmaven.repo.local=./.m2 dependency:resolve
 
 post:
-- ls target/surefire-reports/
+  - ls target/surefire-reports/
 
 mergeArtifacts: true
 
 uploadArtefacts:
-- name: ExecutionSnapshots
-path:
-- target/surefire-reports/html/**
+ - name: ExecutionSnapshots
+   path:
+    - target/surefire-reports/html/**
 
 report: true
 partialReports:
-location: target/surefire-reports/html
-type: html
-frameworkName: extent
+  location: target/surefire-reports/html
+  type: html
+  frameworkName: extent
 
 framework:
-name: maven/testng
-defaultReports: false
-flags:
-- "-Dplatname=mac"
+  name: maven/testng
+  defaultReports: false
+  flags:
+    - "-Dplatname=mac"
 
 jobLabel: [selenium-testng, mac, autosplit, migration]
 

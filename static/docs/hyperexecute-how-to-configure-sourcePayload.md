@@ -28,11 +28,11 @@ You can start by configuring the `sourcePayload` key in the [HyperExecute YAML](
 
 ```bash
 sourcePayload:
-platform: git
-link: https://--------
-ref: <your_branch_name>
-accessToken: <your_personal_access_token>
-commit: <optional>
+  platform: git
+  link: https://--------
+  ref: <your_branch_name>
+  accessToken: <your_personal_access_token>
+  commit: <optional>
 ```
 
 1.  **platform**: The platform on which your repository exists. It should be set to `git` if your repository is deployed on GitHub or GitLab.
@@ -51,11 +51,11 @@ commit: <optional>
 
 ```yaml title="hyperexecute.yaml"
 sourcePayload:
-platform: git
-link: https://--------
-ref: <your_branch_name>
-accessToken: ${{ .secrets.<GIT_PAT> }}
-commit: <optional>
+  platform: git
+  link: https://--------
+  ref: <your_branch_name>
+  accessToken: ${{ .secrets.<GIT_PAT> }}
+  commit: <optional>
 ```
 > You can assign a name to your PAT via the HyperExecute vault feature and replace it in place of the `GIT_PAT` tag in the example given above.
 
@@ -76,21 +76,21 @@ testType: "playwright"
 maxRetries: 1
 concurrency: 1
 pre:
-- npm install
-- npx playwright install
+  - npm install
+  - npx playwright install
 cacheKey: '{{ checksum "package-lock.json" }}'
 cacheDirectories:
-- node_modules
+  - node_modules
 testDiscovery:
-type: raw
-mode: remote
-command: grep -lr 'describe' ltblogsearch.test.js
+  type: raw
+  mode: remote
+  command: grep -lr 'describe' ltblogsearch.test.js
 testRunnerCommand: npm test -- $test
 sourcePayload:
-platform: git
-link: <your_github_repository>
-ref: <your_branch_name>
-accessToken: <your_PAT>
+  platform: git
+  link: <your_github_repository>
+  ref: <your_branch_name>
+  accessToken: <your_PAT>
 ```
 
 ### Generating a Personal Access Token
@@ -147,12 +147,12 @@ In order for HyperExecute to be able to fetch tests from **bitbucket**, **bitbuc
 ```yaml
 ---
 sourcePayload:
-platform: git
-link: https://bitbucket.org/<username>/junit-selenium-hyperexecute-sample.git,
-ref: main
-accessToken: ${{ .secrets.BITBUCKET_SERVER_REPO_CLONE_SECRET_KEY }}
-verifySSL: false
-gitProvider: bitbucket
+  platform: git
+  link: https://bitbucket.org/<username>/junit-selenium-hyperexecute-sample.git,
+  ref: main
+  accessToken: ${{ .secrets.BITBUCKET_SERVER_REPO_CLONE_SECRET_KEY }}
+  verifySSL: false
+  gitProvider: bitbucket
 ```
 
 > Note: Please make sure yo enter your username while adding the repository URL.

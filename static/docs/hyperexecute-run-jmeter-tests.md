@@ -78,8 +78,8 @@ You can override the default value when running the test:
 
 ```yaml
 jmeter:
-variables:
-f_threads: 99
+  variables:
+    f_threads: 99
 ```
 
 In this example, HyperExecute uses `99` instead of the default value `5`.

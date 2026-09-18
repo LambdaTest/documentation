@@ -32,12 +32,12 @@ This command helps to discover all the test scenarios within the project. It off
 
 ```yaml
 testDiscovery:
-type: automatic
-mode: static
-args:
-featureFilePaths: src/test/java/Features/
-frameWork: java
-specificTags: [""]
+  type: automatic
+  mode: static
+  args:
+    featureFilePaths: src/test/java/Features/
+    frameWork: java
+    specificTags: [""]
 ```
 
 #### Method 2: Discovering test cases on Local machines
@@ -46,9 +46,9 @@ specificTags: [""]
 
 ```yaml
 testDiscovery:
-type: raw
-mode: static
-command: snooper  --targetOs=win --featureFilePaths=src/test/java/Features/ --frameWork=java --specificTags=@tag1,@tag2
+  type: raw
+  mode: static
+  command: snooper  --targetOs=win --featureFilePaths=src/test/java/Features/ --frameWork=java --specificTags=@tag1,@tag2
 ```
 
 ### `testRunnerCommand`
@@ -123,18 +123,18 @@ maxRetries: 1
 
 cacheKey: '{{ checksum "package-lock.json" }}'
 cacheDirectories:
-- node_modules
+  - node_modules
 
 pre:
-- npm install
+  - npm install
 
 testDiscovery:
-type: automatic
-mode: remote
-args:
-featureFilePaths: features/sample_website
-frameWork: javascript
-specificTags: [ "@test" ]
+  type: automatic
+  mode: remote
+  args:
+    featureFilePaths: features/sample_website
+    frameWork: javascript
+    specificTags: [ "@test" ]
 #  command: .hyperexecute/snooper  --targetOs=win --featureFilePaths=features/onepass_website --frameWork=javascript --specificTags=@test | sed 's/:.*//' | uniq
 
 testRunnerCommand: npm run execute-tests $test

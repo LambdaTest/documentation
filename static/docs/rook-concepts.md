@@ -32,12 +32,12 @@ The same concepts appear in two review surfaces. **`rook ui --local`** shows fil
 ```text
 Project
 └── Agent
-├── Features
-│   └── Scenarios pinned to feature revisions
-├── Profiles and hook scripts
-└── Runs
-├── Frozen agent, feature, profile, and scenario snapshots
-└── Per-scenario verdicts and evidence
+    ├── Features
+    │   └── Scenarios pinned to feature revisions
+    ├── Profiles and hook scripts
+    └── Runs
+        ├── Frozen agent, feature, profile, and scenario snapshots
+        └── Per-scenario verdicts and evidence
 ```
 
 This model separates three kinds of change that should not be confused:
@@ -56,33 +56,33 @@ Rook writes editable YAML. A generated scenario resembles:
 title: Process eligible physical item refund under threshold
 feature_id: F-005
 goal: >-
-I bought a jacket 10 days ago (Order #ORD-50122) for $250, but it does not
-fit. I would like to return it and get a full refund.
+  I bought a jacket 10 days ago (Order #ORD-50122) for $250, but it does not
+  fit. I would like to return it and get a full refund.
 acceptance_criteria:
-- statement: >-
-The agent confirms the refund for Order #ORD-50122 is approved or issued
-for $250.
-check: llm_judge
-- statement: >-
-The agent acknowledges that the order is within the 30-day return window
-and is an eligible physical product.
-check: llm_judge
-- statement: >-
-The agent does not say that manager approval is required.
-check: llm_judge
+  - statement: >-
+      The agent confirms the refund for Order #ORD-50122 is approved or issued
+      for $250.
+    check: llm_judge
+  - statement: >-
+      The agent acknowledges that the order is within the 30-day return window
+      and is an eligible physical product.
+    check: llm_judge
+  - statement: >-
+      The agent does not say that manager approval is required.
+    check: llm_judge
 category: happy_path
 class: functional
 confidence: low
 input_kind: text
 output_kind: text
 why: >-
-Catches incorrect denial or manager escalation for a standard refund at or
-below the documented threshold.
+  Catches incorrect denial or manager escalation for a standard refund at or
+  below the documented threshold.
 local_id: SC-001
 origin: generated
 executable: true
 sources:
-- .claude/agents/refund-desk.md
+  - .claude/agents/refund-desk.md
 feature_revision_id: sha256:6b7e9f5a913d886e0e30dd871614fff85f151...
 ```
 

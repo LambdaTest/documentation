@@ -24,8 +24,8 @@ set LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
 *   **For Mac/Linux:**
 
 ```
-export LT_USERNAME="YOUR_LAMBDATEST_USERNAME"
-export LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
+ export LT_USERNAME="YOUR_LAMBDATEST_USERNAME"
+ export LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
 ```
 
 ## Integrating A GitHub Repository With Google Cloud CI
@@ -67,19 +67,19 @@ To run parallel tests on TestMu AI cloud, you will need to make minor tweaks in 
 ```
 steps:
 - name: gcr.io/cloud-builders/docker
-args: ['run' , '-d', '--name=lt', '--network=cloudbuild', 'lambdatest/tunnel', '--user', '${_LT_USERNAME}', '--key', '${_LT_ACCESS_KEY}', '--tunnelName', 'GCloud', '--infoAPIPort', '15000','--load-balanced']
+  args: ['run' , '-d', '--name=lt', '--network=cloudbuild', 'lambdatest/tunnel', '--user', '${_LT_USERNAME}', '--key', '${_LT_ACCESS_KEY}', '--tunnelName', 'GCloud', '--infoAPIPort', '15000','--load-balanced']
 - name: curlimages/curl
-args: ['-s', '--retry-connrefused', '--connect-timeout', '5', '--max-time', '5', '--retry', '30', '--retry-delay', '2', '--retry-max-time', '60', 'http://lt:15000/api/v1.0/info']
+  args: ['-s', '--retry-connrefused', '--connect-timeout', '5', '--max-time', '5', '--retry', '30', '--retry-delay', '2', '--retry-max-time', '60', 'http://lt:15000/api/v1.0/info']
 - name: 'ubuntu'
-args: ['sleep', '20']
+  args: ['sleep', '20']
 - name: 'bash'
-args: ['ls']
+  args: ['ls']
 - name: 'maven'
-entrypoint: 'mvn'
-args: ['test', '-P', 'parallel']
-env:
-- 'LT_USERNAME=${_LT_USERNAME}'
-- 'LT_ACCESS_KEY=${_LT_ACCESS_KEY}'
+  entrypoint: 'mvn'
+  args: ['test', '-P', 'parallel']
+  env:
+  - 'LT_USERNAME=${_LT_USERNAME}'
+  - 'LT_ACCESS_KEY=${_LT_ACCESS_KEY}'
 ```
 
 In the above YAML code, you need to add the following command to **args**.
@@ -95,19 +95,19 @@ To run local tests on TestMu AI cloud, you will need to make minor tweaks in `cl
 ```
 steps:
 - name: gcr.io/cloud-builders/docker
-args: ['run' , '-d', '--name=lt', '--network=cloudbuild', 'lambdatest/tunnel', '--user', '${_LT_USERNAME}', '--key', '${_LT_ACCESS_KEY}', '--tunnelName', 'GCloud', '--infoAPIPort', '15000','--load-balanced']
+  args: ['run' , '-d', '--name=lt', '--network=cloudbuild', 'lambdatest/tunnel', '--user', '${_LT_USERNAME}', '--key', '${_LT_ACCESS_KEY}', '--tunnelName', 'GCloud', '--infoAPIPort', '15000','--load-balanced']
 - name: curlimages/curl
-args: ['-s', '--retry-connrefused', '--connect-timeout', '5', '--max-time', '5', '--retry', '30', '--retry-delay', '2', '--retry-max-time', '60', 'http://lt:15000/api/v1.0/info']
+  args: ['-s', '--retry-connrefused', '--connect-timeout', '5', '--max-time', '5', '--retry', '30', '--retry-delay', '2', '--retry-max-time', '60', 'http://lt:15000/api/v1.0/info']
 - name: 'ubuntu'
-args: ['sleep', '20']
+  args: ['sleep', '20']
 - name: 'bash'
-args: ['ls']
+  args: ['ls']
 - name: 'maven'
-entrypoint: 'mvn'
-args: ['test', '-P', 'local']
-env:
-- 'LT_USERNAME=${_LT_USERNAME}'
-- 'LT_ACCESS_KEY=${_LT_ACCESS_KEY}'
+  entrypoint: 'mvn'
+  args: ['test', '-P', 'local']
+  env:
+  - 'LT_USERNAME=${_LT_USERNAME}'
+  - 'LT_ACCESS_KEY=${_LT_ACCESS_KEY}'
 ```
 
 Add the below command to **args**.

@@ -32,13 +32,13 @@ Declare your TestMu AI environment variable into your respective Zalenium Docker
 
 ```
 export LT_USERNAME=<your username>
-export LT_ACCESS_KEY=<your accessKey>
-export LT_URL=<your LT url : port number> # default value is "https://hub.lambdatest.com"
-docker run --rm -ti --name zalenium -p 4444:4444 \
--e LT_USERNAME -e LT_ACCESS_KEY -e LT_URL \
--v /tmp/videos:/home/seluser/videos \
--v /var/run/docker.sock:/var/run/docker.sock \
---privileged dosel/zalenium start --lambdaTestEnabled true
+    export LT_ACCESS_KEY=<your accessKey>
+    export LT_URL=<your LT url : port number> # default value is "https://hub.lambdatest.com"
+    docker run --rm -ti --name zalenium -p 4444:4444 \
+      -e LT_USERNAME -e LT_ACCESS_KEY -e LT_URL \
+      -v /tmp/videos:/home/seluser/videos \
+      -v /var/run/docker.sock:/var/run/docker.sock \
+      --privileged dosel/zalenium start --lambdaTestEnabled true
 ```
 Kudos! As simple as that, you have integrated Zalenium with the TestMu AI account. In case you have any questions, feel free to let us know by dropping an email at [support@testmuai.com][2], or just giving a shout to our **24/7 chat support**. Happy testing! 🙂
 

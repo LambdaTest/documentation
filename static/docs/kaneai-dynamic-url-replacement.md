@@ -70,25 +70,25 @@ The following JSON payload demonstrates how to use the API to configure Dynamic 
 
 ```javascript
 {
-"test_run_id": "YOUR_TEST_RUN_ID", // Replace with your test run ID
-"concurrency": 1, // Optional, Default: 1
-"title": "UNIQUE_BUILD_NAME", // Optional
-"region": "YOUR_DESIRED_REGION", // e.g., eastus, centralindia
-"replaced_url": [
-{
-"pattern_url": "TEST_URL_1",
-"replacement_url": "REPLACED_TEST_URL_1"
-},
-{
-"pattern_url": "TEST_URL_2",
-"replacement_url": "REPLACED_TEST_URL_2"
-},
-{
-"pattern_url": "TEST_URL_3",
-"replacement_url": "REPLACED_TEST_URL_3"
-}
-],
-"accessibility": false
+  "test_run_id": "YOUR_TEST_RUN_ID", // Replace with your test run ID
+  "concurrency": 1, // Optional, Default: 1
+  "title": "UNIQUE_BUILD_NAME", // Optional
+  "region": "YOUR_DESIRED_REGION", // e.g., eastus, centralindia
+  "replaced_url": [
+      {
+          "pattern_url": "TEST_URL_1",
+          "replacement_url": "REPLACED_TEST_URL_1"
+      },
+      {
+          "pattern_url": "TEST_URL_2",
+          "replacement_url": "REPLACED_TEST_URL_2"
+      },
+      {
+          "pattern_url": "TEST_URL_3",
+          "replacement_url": "REPLACED_TEST_URL_3"
+      }
+  ],
+  "accessibility": false
 }
 ```
 
@@ -110,25 +110,25 @@ curl --location 'https://test-manager-api.lambdatest.com/api/atm/v1/hyperexecute
 --header 'Content-Type: application/json' \
 --header 'Authorization: Basic <Base64Auth>' \
 --data '{
-"test_run_id": "YOUR_TEST_RUN_ID",
-"concurrency": 1,
-"title": "UNIQUE_BUILD_NAME",
-"region": "eastus",
-"replaced_url": [
-{
-"pattern_url": "lambdatest",
-"replacement_url": "ajio"
-},
-{
-"pattern_url": "d",
-"replacement_url": "flipkart"
-},
-{
-"pattern_url": "hello",
-"replacement_url": "1234"
-}
-],
-"accessibility": false
+    "test_run_id": "YOUR_TEST_RUN_ID",
+    "concurrency": 1,
+    "title": "UNIQUE_BUILD_NAME",
+    "region": "eastus",
+    "replaced_url": [
+        {
+            "pattern_url": "lambdatest",
+            "replacement_url": "ajio"
+        },
+        {
+            "pattern_url": "d",
+            "replacement_url": "flipkart"
+        },
+        {
+            "pattern_url": "hello",
+            "replacement_url": "1234"
+        }
+    ],
+    "accessibility": false
 }'
 ```
 

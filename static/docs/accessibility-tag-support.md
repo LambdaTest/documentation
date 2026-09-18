@@ -77,25 +77,25 @@ Tag support is available in all supported Appium flows for mobile accessibility 
 
 ```java
 ((JavascriptExecutor) driver).executeScript(
-"lambda-accessibility-scan",
-new HashMap<String, Object>() {{
-put("tags", Arrays.asList("Login Screen", "Smoke"));
-}}
+    "lambda-accessibility-scan",
+    new HashMap<String, Object>() {{
+        put("tags", Arrays.asList("Login Screen", "Smoke"));
+    }}
 );
 ```
 
 ```python
 driver.execute_script(
-"lambda-accessibility-scan",
-{
-"tags": ["Login Screen", "Smoke"]
-}
+    "lambda-accessibility-scan",
+    {
+        "tags": ["Login Screen", "Smoke"]
+    }
 )
 ```
 
 ```javascript
 await driver.execute("lambda-accessibility-scan", [{
-tags: ["Login Screen", "Smoke"]
+  tags: ["Login Screen", "Smoke"]
 }]);
 ```
 
@@ -105,24 +105,24 @@ You can call the scan multiple times in the same test and use different tags for
 
 ```java
 ((JavascriptExecutor) driver).executeScript(
-"lambda-accessibility-scan",
-new HashMap<String, Object>() {{
-put("tags", Arrays.asList("Login Screen", "Smoke"));
-}}
+    "lambda-accessibility-scan",
+    new HashMap<String, Object>() {{
+        put("tags", Arrays.asList("Login Screen", "Smoke"));
+    }}
 );
 
 ((JavascriptExecutor) driver).executeScript(
-"lambda-accessibility-scan",
-new HashMap<String, Object>() {{
-put("tags", Arrays.asList("Cart Screen", "Checkout Flow"));
-}}
+    "lambda-accessibility-scan",
+    new HashMap<String, Object>() {{
+        put("tags", Arrays.asList("Cart Screen", "Checkout Flow"));
+    }}
 );
 
 ((JavascriptExecutor) driver).executeScript(
-"lambda-accessibility-scan",
-new HashMap<String, Object>() {{
-put("tags", Arrays.asList("Profile Screen"));
-}}
+    "lambda-accessibility-scan",
+    new HashMap<String, Object>() {{
+        put("tags", Arrays.asList("Profile Screen"));
+    }}
 );
 ```
 

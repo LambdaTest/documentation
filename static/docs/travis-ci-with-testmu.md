@@ -54,25 +54,25 @@ Below is a sample config file for integrating [Travis CI](https://github.com/La
 # Choose language and version
 language: node_js
 node_js:
-- "8"
+  - "8"
 branches:
-only:
-- master
+  only:
+    - master
 
 # Setup custom environment variables
 env:
-global:
-- LT_USERNAME=${LAMBDATEST_USERNAME}
-- LT_ACCESS_KEY=${LAMBDATEST_ACCESS_KEY}
+  global:
+    - LT_USERNAME=${LAMBDATEST_USERNAME}
+    - LT_ACCESS_KEY=${LAMBDATEST_ACCESS_KEY}
 
 # All the step which you want to run in container.
 script:
-# Fetching latest code from  git
-- git pull origin master
-# Installing dependencies
-- npm install
-# Running test!
-- node_modules/.bin/nightwatch -e chrome
+  # Fetching latest code from  git
+  - git pull origin master
+  # Installing dependencies
+  - npm install
+  # Running test!
+  - node_modules/.bin/nightwatch -e chrome
 ```
 
 TestMu AI offers a [**Selenium Desired Capabilities Generator**](https://www.testmuai.com/capabilities-generator/) to fetch coded values for your desired test configurations.
@@ -91,15 +91,15 @@ Then Capabilities Generator at TestMu AI will provide you with the below program
 
 ```
 var capabilities = {
-"build" : "your build name", //You can edit this and assign a build name
-"name" : "your test name", // Assign a name to your Test
-"platform" : "Windows 8.1", // The operating system on which you want to test your website
-"browserName" : "Firefox", // The browser on which you want to test
-"version" : "62.0", // The browser version which you've selected to perform the test upon
-"resolution" : "1280x1024", // The resolution in which you want to run the test as per your operating system
-"selenium_version" : "3.11.0", //The version of Selenium on which the test will run
-"visual" : true,
-"firefox.driver" : v0.21.0
+    "build" : "your build name", //You can edit this and assign a build name
+    "name" : "your test name", // Assign a name to your Test
+    "platform" : "Windows 8.1", // The operating system on which you want to test your website
+    "browserName" : "Firefox", // The browser on which you want to test
+    "version" : "62.0", // The browser version which you've selected to perform the test upon
+    "resolution" : "1280x1024", // The resolution in which you want to run the test as per your operating system
+    "selenium_version" : "3.11.0", //The version of Selenium on which the test will run
+    "visual" : true,
+    "firefox.driver" : v0.21.0
 }
 ```
 
@@ -126,41 +126,41 @@ The below example of ***travis.yml***  file would demonstrate you on how to le
 # Choose language and version
 language: node_js
 node_js:
-- "8"
+  - "8"
 branches:
-only:
-- master
+  only:
+    - master
 
 # Setup custom environment variables
 env:
-global:
-- LT_USERNAME=${LAMBDATEST_USERNAME}
-- LT_ACCESS_KEY=${LAMBDATEST_ACCESS_KEY}
+  global:
+    - LT_USERNAME=${LAMBDATEST_USERNAME}
+    - LT_ACCESS_KEY=${LAMBDATEST_ACCESS_KEY}
 
 # All the step which you want to run in container.
 script:
-# Fetching latest code from  git
-- git pull origin master
-# Downloading tunnel binary
-- wget https://downloads.lambdatest.com/tunnel/v3/linux/64bit/LT_Linux.zip
-# Extracting tunnel binary
-- sudo apt-get install unzip
-- unzip LT_Linux.zip
-# Executing tunnel binary
-- ./LT -user ${LAMBDATEST_EMAIL} -key ${LAMBDATEST_KEY} &
-- sleep 30
-# Installing dependencies
-- npm install
-# Running test!
-- node_modules/.bin/nightwatch -e chrome
+  # Fetching latest code from  git
+  - git pull origin master
+  # Downloading tunnel binary
+  - wget https://downloads.lambdatest.com/tunnel/v3/linux/64bit/LT_Linux.zip
+  # Extracting tunnel binary
+  - sudo apt-get install unzip
+  - unzip LT_Linux.zip
+  # Executing tunnel binary
+  - ./LT -user ${LAMBDATEST_EMAIL} -key ${LAMBDATEST_KEY} &
+  - sleep 30
+  # Installing dependencies
+  - npm install
+  # Running test!
+  - node_modules/.bin/nightwatch -e chrome
 ```
 
 Once, the tunnel is successfully set up. You can add the below code to your capabilities for testing internal servers on your network.
 
 ```
 "desiredCapabilities": {
-"tunnel":true
-}
+       "tunnel":true
+     }
 ```
 
 ## Parallel Testing

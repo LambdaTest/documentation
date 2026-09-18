@@ -39,8 +39,8 @@ chmod u+x hyperexecute
   - **For Windows**:
 
 ```
-curl -O https://downloads.lambdatest.com/hyperexecute/windows/hyperexecute.exe
-hyperexecute.exe -u <your_username> -k <your_access_key> -i <path_of_RELATIVE_PATH_OF_YOUR_YAML_FILE>
+  curl -O https://downloads.lambdatest.com/hyperexecute/windows/hyperexecute.exe
+  hyperexecute.exe -u <your_username> -k <your_access_key> -i <path_of_RELATIVE_PATH_OF_YOUR_YAML_FILE>
 ```
 
     **Note**: Replace the placeholder values in the code with your username and access key for HyperExecute.
@@ -59,20 +59,20 @@ You have successfully integrated your Jenkins project with HyperExecute.
 
 ```bash
 pipeline {
-agent any
+    agent any
 
-stages {
-# Download and Run Hyperexecute stage (optional)
-stage('Download & Run Hyperexecute') {
-steps {
-# Download Hyperexecute CLI for macOS (adjust for other OS)
-sh name: 'Download Hyperexecute CLI', script: 'wget https://downloads.lambdatest.com/hyperexecute/darwin/hyperexecute'
-# Grant execute permission to the downloaded binary
-sh name: 'Make Hyperexecute executable', script: 'chmod +x hyperexecute'
-# Run Hyperexecute with user credentials and configuration file
-sh name: 'Run Hyperexecute Tests', script: './hyperexecute --user <your_username> --key <your_access_key> --config <RELATIVE_PATH_OF_YOUR_YAML_FILE_path>
-}
-}
-}
+    stages {
+        # Download and Run Hyperexecute stage (optional)
+        stage('Download & Run Hyperexecute') {
+            steps {
+                # Download Hyperexecute CLI for macOS (adjust for other OS)
+                sh name: 'Download Hyperexecute CLI', script: 'wget https://downloads.lambdatest.com/hyperexecute/darwin/hyperexecute'
+                # Grant execute permission to the downloaded binary
+                sh name: 'Make Hyperexecute executable', script: 'chmod +x hyperexecute'
+                # Run Hyperexecute with user credentials and configuration file
+                sh name: 'Run Hyperexecute Tests', script: './hyperexecute --user <your_username> --key <your_access_key> --config <RELATIVE_PATH_OF_YOUR_YAML_FILE_path>
+            }
+        }
+    }
 }
 ```

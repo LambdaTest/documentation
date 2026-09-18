@@ -78,37 +78,37 @@ Once you have created a SmartUI Project, you can generate screenshots by running
 
 ```javascript title="Please replace your capabilities in your Remote Webdriver DesiredCapabilities configuration. This sample is for NodeJS"
 let capabilities = {
-deviceName: "iPhone 12", // Configure your Device for appium test (Mandatory)
-platformName: "ios", // Configure your OS for appium test (Mandatory)
-platformVersion: "14", // Configure your OS Version for appium test (Mandatory)
-isRealMobile: true, // Configure if you want to test in a real-device (Mandatory)
-app: "APP_URL", // Set your uploaded App URL for testing (Mandatory)
-//highlight-next-line
-visual: true, // Configure your Capture screenshot  for appium test (Mandatory)
-name: "testing app session ", // Name of the test for appium (Recommended)
-build: "Real Device App Build", // Name of the build for appium (Recommended)
-//highlight-start
-"smartUI.project": "<Your Project Name>", // Replace the name of project with the new project name (Mandatory)
-"smartUI.build": "<Your Build Name>", // Replace the name of Build with the new Build name (Optional)
-"smartUI.baseline": false, // Enable if you want to update to a new baseline build (Optional)
-"smartUI.cropStatusBar" : true, // Optional (By default true)
-"smartUI.cropFooter" : true, // Optional (By default false)
-//highlight-end
+  deviceName: "iPhone 12", // Configure your Device for appium test (Mandatory)
+  platformName: "ios", // Configure your OS for appium test (Mandatory)
+  platformVersion: "14", // Configure your OS Version for appium test (Mandatory)
+  isRealMobile: true, // Configure if you want to test in a real-device (Mandatory)
+  app: "APP_URL", // Set your uploaded App URL for testing (Mandatory)
+  //highlight-next-line
+  visual: true, // Configure your Capture screenshot  for appium test (Mandatory)
+  name: "testing app session ", // Name of the test for appium (Recommended)
+  build: "Real Device App Build", // Name of the build for appium (Recommended)
+  //highlight-start
+  "smartUI.project": "<Your Project Name>", // Replace the name of project with the new project name (Mandatory)
+  "smartUI.build": "<Your Build Name>", // Replace the name of Build with the new Build name (Optional)
+  "smartUI.baseline": false, // Enable if you want to update to a new baseline build (Optional)
+  "smartUI.cropStatusBar" : true, // Optional (By default true)
+  "smartUI.cropFooter" : true, // Optional (By default false)
+  //highlight-end
 };
 
 // Connecting to the LambdaTest appium Cloud Grid with SmartUI
 let gridUrl =
-"https://" +
-"<Your Username>" +
-":" +
-"<Your Access Key>" +
-`@mobile-hub.lambdatest.com/wd/hub`;
+  "https://" +
+  "<Your Username>" +
+  ":" +
+  "<Your Access Key>" +
+  `@mobile-hub.lambdatest.com/wd/hub`;
 
 // Here is your Remote WebDrive Connection
 let driver = await new webdriver.Builder()
-.usingServer(gridUrl)
-.withCapabilities(capabilities)
-.build();
+  .usingServer(gridUrl)
+  .withCapabilities(capabilities)
+  .build();
 ```
 **Important**
 
@@ -154,15 +154,15 @@ This is especially useful for enterprise applications where certain UI elements 
 
 ```javascript title="Example: Ignoring Dynamic Elements in Node.js"
 let config = {
-screenshotName: 'Home Screen',
-ignoreBoxes: JSON.stringify({
-xpath: [
-"//*[@text='Backpack']",
-"//*[@text='Onesie']",
-"//*[@text='PRODUCTS']",
-"//*[@text='Terms of Service | Privacy Policy']"
-]
-})
+  screenshotName: 'Home Screen',
+  ignoreBoxes: JSON.stringify({
+    xpath: [
+      "//*[@text='Backpack']",
+      "//*[@text='Onesie']",
+      "//*[@text='PRODUCTS']",
+      "//*[@text='Terms of Service | Privacy Policy']"
+    ]
+  })
 };
 
 await driver.execute("smartui.takeScreenshot", config);
@@ -170,13 +170,13 @@ await driver.execute("smartui.takeScreenshot", config);
 
 ```javascript title="Example: Selecting Only Critical Regions in Node.js"
 let config = {
-screenshotName: 'Checkout Form',
-selectBoxes: JSON.stringify({
-xpath: [
-"//*[@resource-id='checkout-form']",
-"//*[@resource-id='total-amount']"
-]
-})
+  screenshotName: 'Checkout Form',
+  selectBoxes: JSON.stringify({
+    xpath: [
+      "//*[@resource-id='checkout-form']",
+      "//*[@resource-id='total-amount']"
+    ]
+  })
 };
 
 await driver.execute("smartui.takeScreenshot", config);
@@ -186,18 +186,18 @@ await driver.execute("smartui.takeScreenshot", config);
 
 ```javascript
 let config = {
-screenshotName: '<Your Screenshot Name>',
-ignoreBoxes: JSON.stringify({
-xpath: ["//*[@text='Dynamic Ad']", "//*[@id='timestamp']"]
-})
+  screenshotName: '<Your Screenshot Name>',
+  ignoreBoxes: JSON.stringify({
+    xpath: ["//*[@text='Dynamic Ad']", "//*[@id='timestamp']"]
+  })
 };
 await driver.execute("smartui.takeScreenshot", config);
 ```
 
 ```python
 config = {
-'screenshotName': '<Your Screenshot Name>',
-'ignoreBoxes': '{"xpath": ["//*[@text=\'Dynamic Ad\']", "//*[@id=\'timestamp\']"]}'
+    'screenshotName': '<Your Screenshot Name>',
+    'ignoreBoxes': '{"xpath": ["//*[@text=\'Dynamic Ad\']", "//*[@id=\'timestamp\']"]}'
 }
 driver.execute_script("smartui.takeScreenshot", config)
 ```
@@ -208,7 +208,7 @@ configIgnore.put("screenshotName", "Screenshot");
 
 Map<String, Object> ignoreBoxes = new HashMap<>();
 ignoreBoxes.put("xpath", new String[]{
-"//*[@name='Toast']"
+    "//*[@name='Toast']"
 });
 
 configIgnore.put("ignoreBoxes", ignoreBoxes);
@@ -218,16 +218,16 @@ configIgnore.put("ignoreBoxes", ignoreBoxes);
 
 ```csharp
 var config = new Dictionary<string, object> {
-{"screenshotName", "<Your Screenshot Name>"},
-{"ignoreBoxes", "{\"xpath\": [\"//*[@text='Dynamic Ad']\", \"//*[@id='timestamp']\"]}"}
+  {"screenshotName", "<Your Screenshot Name>"},
+  {"ignoreBoxes", "{\"xpath\": [\"//*[@text='Dynamic Ad']\", \"//*[@id='timestamp']\"]}"}
 };
 driver.ExecuteScript("smartui.takeScreenshot", config);
 ```
 
 ```ruby
 config = {
-'screenshotName' => '<Your Screenshot Name>',
-'ignoreBoxes' => '{"xpath": ["//*[@text=\'Dynamic Ad\']", "//*[@id=\'timestamp\']"]}'
+  'screenshotName' => '<Your Screenshot Name>',
+  'ignoreBoxes' => '{"xpath": ["//*[@text=\'Dynamic Ad\']", "//*[@id=\'timestamp\']"]}'
 }
 driver.execute_script("smartui.takeScreenshot", config)
 ```
@@ -284,36 +284,36 @@ Add the following **Webhook** to your test cases where we need to capture the sc
 
 ```javascript
 let config = {
-screenshotName: '<Name of your screenshot>',
-fullPage: true,
-pageCount: 15   // Enter the number of pages for the Full Page screenshot (Minimum 1, Maximum 20)
+  screenshotName: '<Name of your screenshot>',
+  fullPage: true,
+  pageCount: 15   // Enter the number of pages for the Full Page screenshot (Minimum 1, Maximum 20)
 };
 await driver.execute("smartui.takeScreenshot", config);
 ```
 
 ```python
 config = {
-'screenshotName': '<Your Screenshot Name>',
-'fullPage': True,
-'pageCount': 15 # Enter the number of pages for the Full Page screenshot (Minimum 1, Maximum 20)
+  'screenshotName': '<Your Screenshot Name>',
+  'fullPage': True,
+  'pageCount': 15 # Enter the number of pages for the Full Page screenshot (Minimum 1, Maximum 20)
 }
 driver.execute_script("smartui.takeScreenshot", config)
 ```
 
 ```ruby
 config = {
-'screenshotName' => '<Your Screenshot Name>',
-'fullPage': true,
-'pageCount': 15 # Enter the number of pages for the Full Page screenshot (Minimum 1, Maximum 20)
+  'screenshotName' => '<Your Screenshot Name>',
+  'fullPage': true,
+  'pageCount': 15 # Enter the number of pages for the Full Page screenshot (Minimum 1, Maximum 20)
 }
 driver.execute("smartui.takeScreenshot", config)
 ```
 
 ```csharp
 var config = new Dictionary<string, string> {
-{"screenshotName", "<Your Screenshot Name>"},
-{"fullPage", true},
-{"pageCount", 15} // Enter the number of pages for the Full Page screenshot (Minimum 1, Maximum 20)
+  {"screenshotName", "<Your Screenshot Name>"},
+  {"fullPage", true},
+  {"pageCount", 15} // Enter the number of pages for the Full Page screenshot (Minimum 1, Maximum 20)
 };
 driver.Execute("smartui.takeScreenshot", config);
 ```
@@ -390,8 +390,8 @@ await driver.execute("smartui.takeScreenshot=Screen Loaded");
 1. Verify `visual: true` is set in capabilities:
 ```javascript
 let capabilities = {
-visual: true, // Must be set
-// ... other capabilities
+  visual: true, // Must be set
+  // ... other capabilities
 };
 ```
 
@@ -461,9 +461,9 @@ await driver.wait(until.elementIsVisible(By.id('main-content')), 10000);
 1. Increase `pageCount` value (between 1-20):
 ```javascript
 let config = {
-screenshotName: 'Full Page',
-fullPage: true,
-pageCount: 15  // Increase if needed
+  screenshotName: 'Full Page',
+  fullPage: true,
+  pageCount: 15  // Increase if needed
 };
 ```
 
@@ -486,7 +486,7 @@ pageCount: 15  // Increase if needed
 3. Check JSON string formatting:
 ```javascript
 ignoreBoxes: JSON.stringify({
-xpath: ["//*[@text='Dynamic Ad']"]
+  xpath: ["//*[@text='Dynamic Ad']"]
 })
 ```
 

@@ -42,12 +42,12 @@ Configure the desired capabilities based on your test requirements. For example:
 
 ```yaml
 capabilities: [{
-browserName: 'chrome',
-platform: 'Windows 10',
-version: 'latest',
-name: "single-test",
-build: "wd-lambdatest-sample",
-geoLocation : "US"
+  browserName: 'chrome',
+  platform: 'Windows 10',
+  version: 'latest',
+  name: "single-test",
+  build: "wd-lambdatest-sample",
+  geoLocation : "US"
 }]
 ```
 
@@ -110,32 +110,32 @@ maxRetries: 1
 concurrency: 2
 
 pre:
-- npm install
+  - npm install
 
 cacheKey: '{{ checksum "package-lock.json" }}'
 cacheDirectories:
-- node_modules
+  - node_modules
 
 mergeArtifacts: true
 
 uploadArtefacts:
-[{
-"name": "Reports",
-"path": ["Reports/*"]
-}]
+  [{
+    "name": "Reports",
+    "path": ["Reports/*"]
+  }]
 
 report: true
 partialReports:
-type: json
-location: Reports/
-frameworkName: extent
+    type: json
+    location: Reports/
+    frameworkName: extent
 
 testDiscovery:
-type: automatic
-args:
-featureFilePaths: Features/
-frameWork: java
-specificTags: ["@ToDoOne", "@ToDoTwo", "@ToDoThree"]
+  type: automatic
+  args:
+    featureFilePaths: Features/
+    frameWork: java
+    specificTags: ["@ToDoOne", "@ToDoTwo", "@ToDoThree"]
 
 testRunnerCommand: npx wdio wdio.conf.js --spec=$test
 
@@ -204,8 +204,8 @@ The webdriverio-skill package includes:
 webdriverio-skill/
 ├── SKILL.md
 └── reference/
-├── playbook.md
-└── advanced-patterns.md
+    ├── playbook.md
+    └── advanced-patterns.md
 ```
 
 It provides structured guidance for:

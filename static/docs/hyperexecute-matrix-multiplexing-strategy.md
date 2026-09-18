@@ -22,9 +22,9 @@ You can use a key as [browser], [files]  or any other unique key name.
 
 ``` yaml
 matrix:
-files: ["Test1","Test2","Test3"]
+  files: ["Test1","Test2","Test3"]
 testSuites:
-- mvn test -Dtest=$files
+  - mvn test -Dtest=$files
 ```
 
 In the YAML file shown above, **files**  is a user-generated key. **Files**  and its associated value(s) are opaque to HyperExecute. You can also name it as **Files1**, **FileNames**, etc., as long as the Key is unique in that YAML file.
@@ -44,10 +44,10 @@ Let’s modify the above YAML file to run the scenarios on "latest" version of t
 runson: ${matrix.os}
 
 matrix:
-os: ["win", "linux"]
-version: ["latest", "beta", "dev"]
-browser: ["Chrome", "Firefox"]
-files: ["@File1","@File2"]
+  os: ["win", "linux"]
+  version: ["latest", "beta", "dev"]
+  browser: ["Chrome", "Firefox"]
+  files: ["@File1","@File2"]
 
 ```
 
@@ -72,17 +72,17 @@ Assuming that you created a matrix but there is one specific combination that yo
 runson: ${matrix.os}
 
 matrix:
-# Browser version(s) separated by Comma
-version: ["latest"]
-# OS name sepataed by Coma
-os: ["win", "mac", "linux"]
-# Browser name separated by Comma
-browser: ["Chrome", "Firefox", "Safari"]
-# Test Files separated by Comma
-files: ["@File1","@File2","@File3","@File4"]
+  # Browser version(s) separated by Comma
+  version: ["latest"]
+  # OS name sepataed by Coma
+  os: ["win", "mac", "linux"]
+  # Browser name separated by Comma
+  browser: ["Chrome", "Firefox", "Safari"]
+  # Test Files separated by Comma
+  files: ["@File1","@File2","@File3","@File4"]
 
 exclusionMatrix:
-- os: [win]
-browser: ["Safari"]
-files: ["@File2","@File3"]
+  - os: [win]
+    browser: ["Safari"]
+    files: ["@File2","@File3"]
 ```

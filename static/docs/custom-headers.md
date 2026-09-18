@@ -100,7 +100,7 @@ Add custom headers using the Desired Capabilities class.
 ```java
 DesiredCapabilities capabilities = new DesiredCapabilities();
 capabilities.setCapability("customHeaders", new HashMap<String, String>() {{
-put("headerName", "headerValue");
+    put("headerName", "headerValue");
 }});
 ```
 
@@ -218,8 +218,8 @@ headers.put("WebView", "Enable");
 headers.put("X-Custom-Token", "secure-token-123");
 
 List<String> urlFilters = Arrays.asList(
-"https://www.xhaus.com/headers",
-"https://.*\\.example\\.com/.*"
+    "https://www.xhaus.com/headers",
+    "https://.*\\.example\\.com/.*"
 );
 
 capabilities.setCapability("customHeaders", headers);

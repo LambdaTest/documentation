@@ -49,32 +49,32 @@ import { Browser } from '@testmuai/browser-cloud';
 const client = new Browser();
 
 async function main() {
-const session = await client.sessions.create({
-adapter: 'puppeteer',
-lambdatestOptions: {
-build: 'Getting Started',
-name: 'My First Session',
-'LT:Options': {
-username: process.env.LT_USERNAME,
-accessKey: process.env.LT_ACCESS_KEY,
-}
-}
-});
+    const session = await client.sessions.create({
+        adapter: 'puppeteer',
+        lambdatestOptions: {
+            build: 'Getting Started',
+            name: 'My First Session',
+            'LT:Options': {
+                username: process.env.LT_USERNAME,
+                accessKey: process.env.LT_ACCESS_KEY,
+            }
+        }
+    });
 
-console.log('Session created:', session.id);
-console.log('View live session at:', session.sessionViewerUrl);
+    console.log('Session created:', session.id);
+    console.log('View live session at:', session.sessionViewerUrl);
 
-// Connect and use the browser
-const browser = await client.puppeteer.connect(session);
-const page = (await browser.pages())[0];
+    // Connect and use the browser
+    const browser = await client.puppeteer.connect(session);
+    const page = (await browser.pages())[0];
 
-await page.goto('https://example.com');
-console.log('Title:', await page.title());
+    await page.goto('https://example.com');
+    console.log('Title:', await page.title());
 
-// Clean up
-await browser.close();
-await client.sessions.release(session.id);
-console.log('Session released');
+    // Clean up
+    await browser.close();
+    await client.sessions.release(session.id);
+    console.log('Session released');
 }
 
 main().catch(console.error);
@@ -90,31 +90,31 @@ import { Browser } from '@testmuai/browser-cloud';
 const client = new Browser();
 
 async function main() {
-const session = await client.sessions.create({
-adapter: 'playwright',
-lambdatestOptions: {
-build: 'Getting Started',
-name: 'My First Session',
-'LT:Options': {
-username: process.env.LT_USERNAME,
-accessKey: process.env.LT_ACCESS_KEY,
-}
-}
-});
+    const session = await client.sessions.create({
+        adapter: 'playwright',
+        lambdatestOptions: {
+            build: 'Getting Started',
+            name: 'My First Session',
+            'LT:Options': {
+                username: process.env.LT_USERNAME,
+                accessKey: process.env.LT_ACCESS_KEY,
+            }
+        }
+    });
 
-console.log('Session created:', session.id);
-console.log('View live session at:', session.sessionViewerUrl);
+    console.log('Session created:', session.id);
+    console.log('View live session at:', session.sessionViewerUrl);
 
-// Connect and use the browser
-const { browser, context, page } = await client.playwright.connect(session);
+    // Connect and use the browser
+    const { browser, context, page } = await client.playwright.connect(session);
 
-await page.goto('https://example.com');
-console.log('Title:', await page.title());
+    await page.goto('https://example.com');
+    console.log('Title:', await page.title());
 
-// Clean up
-await browser.close();
-await client.sessions.release(session.id);
-console.log('Session released');
+    // Clean up
+    await browser.close();
+    await client.sessions.release(session.id);
+    console.log('Session released');
 }
 
 main().catch(console.error);
@@ -128,31 +128,31 @@ import { Browser } from '@testmuai/browser-cloud';
 const client = new Browser();
 
 async function main() {
-const session = await client.sessions.create({
-adapter: 'selenium',
-lambdatestOptions: {
-build: 'Getting Started',
-name: 'My First Session',
-'LT:Options': {
-username: process.env.LT_USERNAME,
-accessKey: process.env.LT_ACCESS_KEY,
-}
-}
-});
+    const session = await client.sessions.create({
+        adapter: 'selenium',
+        lambdatestOptions: {
+            build: 'Getting Started',
+            name: 'My First Session',
+            'LT:Options': {
+                username: process.env.LT_USERNAME,
+                accessKey: process.env.LT_ACCESS_KEY,
+            }
+        }
+    });
 
-console.log('Session created:', session.id);
-console.log('View live session at:', session.sessionViewerUrl);
+    console.log('Session created:', session.id);
+    console.log('View live session at:', session.sessionViewerUrl);
 
-// Connect and use the browser
-const driver = await client.selenium.connect(session);
+    // Connect and use the browser
+    const driver = await client.selenium.connect(session);
 
-await driver.get('https://example.com');
-console.log('Title:', await driver.getTitle());
+    await driver.get('https://example.com');
+    console.log('Title:', await driver.getTitle());
 
-// Clean up
-await driver.quit();
-await client.sessions.release(session.id);
-console.log('Session released');
+    // Clean up
+    await driver.quit();
+    await client.sessions.release(session.id);
+    console.log('Session released');
 }
 
 main().catch(console.error);

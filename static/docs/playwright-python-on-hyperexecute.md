@@ -99,24 +99,24 @@ maxRetries: 1
 concurrency: 1
 
 env:
-TARGET_OS: "LINUX"
+  TARGET_OS: "LINUX"
 
 cacheKey: '{{ checksum "requirement.txt" }}'
 cacheDirectories:
-- CacheDir
+  - CacheDir
 
 pre:
-- pip3 install -r requirement.txt --cache-dir CacheDir
-- playwright install
-- npm install playwright --save-exact
+  - pip3 install -r requirement.txt --cache-dir CacheDir
+  - playwright install
+  - npm install playwright --save-exact
 
 post:
-- cat yaml/linux/.hyperexecute_autosplits.yaml
+  - cat yaml/linux/.hyperexecute_autosplits.yaml
 
 testDiscovery:
-type: raw
-mode: remote
-command: grep -lr 'def' *.py
+  type: raw
+  mode: remote
+  command: grep -lr 'def' *.py
 
 testRunnerCommand: python $test
 
@@ -184,8 +184,8 @@ The playwright-skill package includes:
 playwright-skill/
 ├── SKILL.md
 └── reference/
-├── playbook.md
-└── advanced-patterns.md
+    ├── playbook.md
+    └── advanced-patterns.md
 ```
 
 It provides structured guidance for:

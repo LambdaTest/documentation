@@ -53,10 +53,10 @@ The sample feature file checks for the word "LambdaTest" on Google and validates
 
 ```bash
 Feature: Google's Search Functionality
-Scenario: Can find search results
-When I type query as "LambdaTest"
-And I submit
-Then I should see title "LambdaTest - Google Search"
+    Scenario: Can find search results
+        When I type query as "LambdaTest"
+        And I submit
+        Then I should see title "LambdaTest - Google Search"
 ```
 
 Below is the `GooglePage.java` file for the above test case scenario:
@@ -75,23 +75,23 @@ import net.thucydides.core.pages.PageObject;
 @DefaultUrl("https://www.google.com/ncr")
 public class GooglePage extends PageObject {
 
-@FindBy(name = "q")
-WebElementFacade search;
+    @FindBy(name = "q")
+    WebElementFacade search;
 
-@FindBy(name = "btnK")
-WebElementFacade searchButton;
+    @FindBy(name = "btnK")
+    WebElementFacade searchButton;
 
-public void searchForString(String searchString) {
-search.sendKeys(searchString);
-}
-public void submitForm() throws Exception {
-searchButton.click();
-Thread.sleep(5000);
-}
+    public void searchForString(String searchString) {
+        search.sendKeys(searchString);
+    }
+ public void submitForm() throws Exception {
+        searchButton.click();
+        Thread.sleep(5000);
+    }
 
-public void titleShouldMatch(String matchTitle) {
-assertThat(this.getTitle()).containsIgnoringCase(matchTitle);
-}
+    public void titleShouldMatch(String matchTitle) {
+        assertThat(this.getTitle()).containsIgnoringCase(matchTitle);
+    }
 }
 ```
 
@@ -114,55 +114,55 @@ import net.thucydides.core.webdriver.DriverSource;
 
 public class LambdaTestSerenityDriver implements DriverSource {
 
-public WebDriver newDriver() {
-EnvironmentVariables environmentVariables = SystemEnvironmentVariables.createEnvironmentVariables();
+    public WebDriver newDriver() {
+        EnvironmentVariables environmentVariables = SystemEnvironmentVariables.createEnvironmentVariables();
 
-String username = System.getenv("LT_USERNAME");
-if (username == null) {
-username = (String) environmentVariables.getProperty("lt.user");
-}
+        String username = System.getenv("LT_USERNAME");
+        if (username == null) {
+            username = (String) environmentVariables.getProperty("lt.user");
+        }
 
-String accessKey = System.getenv("LT_ACCESS_KEY");
-if (accessKey == null) {
-accessKey = (String) environmentVariables.getProperty("lt.key");
-}
+        String accessKey = System.getenv("LT_ACCESS_KEY");
+        if (accessKey == null) {
+            accessKey = (String) environmentVariables.getProperty("lt.key");
+        }
 
-String environment = System.getProperty("environment");
-ChromeOptions browserOptions = new ChromeOptions();
-HashMap<String, Object> ltOptions = new HashMap<String, Object>();
-ltOptions.put("plugin", "Serenity LambdaTest Plugin");
-ltOptions.put("w3c", true);
+        String environment = System.getProperty("environment");
+                ChromeOptions browserOptions = new ChromeOptions();
+        HashMap<String, Object> ltOptions = new HashMap<String, Object>();
+        ltOptions.put("plugin", "Serenity LambdaTest Plugin");
+        ltOptions.put("w3c", true);
 
-Iterator it = environmentVariables.getKeys().iterator();
-while (it.hasNext()) {
-String key = (String) it.next();
+        Iterator it = environmentVariables.getKeys().iterator();
+        while (it.hasNext()) {
+            String key = (String) it.next();
 
-if (key.equals("lt.user") || key.equals("lt.key") || key.equals("lt.grid")) {
-continue;
-} else if (key.startsWith("lt_")) {
-ltOptions.put(key.replace("lt_", ""), environmentVariables.getProperty(key));
+            if (key.equals("lt.user") || key.equals("lt.key") || key.equals("lt.grid")) {
+                continue;
+            } else if (key.startsWith("lt_")) {
+                ltOptions.put(key.replace("lt_", ""), environmentVariables.getProperty(key));
 
-} else if (environment != null && key.startsWith("environment." + environment)) {
+            } else if (environment != null && key.startsWith("environment." + environment)) {
 
-ltOptions.put(key.replace("environment." + environment + ".", ""),
-environmentVariables.getProperty(key));
-}
-}
-browserOptions.setCapability("LT:Options", ltOptions);
+                ltOptions.put(key.replace("environment." + environment + ".", ""),
+                        environmentVariables.getProperty(key));
+            }
+        }
+        browserOptions.setCapability("LT:Options", ltOptions);
 
-try {
-String url = "https://" + username + ":" + accessKey + "@" + environmentVariables.getProperty("lt.grid")
-+ "/wd/hub";
-return new RemoteWebDriver(new URL(url), browserOptions);
-} catch (Exception e) {
-System.out.println(e);
-return null;
-}
-}
+        try {
+            String url = "https://" + username + ":" + accessKey + "@" + environmentVariables.getProperty("lt.grid")
+                    + "/wd/hub";
+            return new RemoteWebDriver(new URL(url), browserOptions);
+        } catch (Exception e) {
+            System.out.println(e);
+            return null;
+        }
+    }
 
-public boolean takesScreenshots() {
-return false;
-}
+    public boolean takesScreenshots() {
+        return false;
+    }
 }
 ```
 

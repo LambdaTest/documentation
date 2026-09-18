@@ -112,23 +112,23 @@ parallelism: 2
 concurrency: 2
 scenarioCommandStatusOnly: true
 runtime:
-language: python
-version: 3.9.16
+  language: python
+  version: 3.9.16
 pre:
-- pip install -r requirements-dev.txt
-- LOCALSTACK_API_KEY=${{ .secrets.LOCALSTACK_API_KEY }} localstack start -d
-- localstack wait -t 60
-- bin/deploy.sh
+  - pip install -r requirements-dev.txt
+  - LOCALSTACK_API_KEY=${{ .secrets.LOCALSTACK_API_KEY }} localstack start -d
+  - localstack wait -t 60
+  - bin/deploy.sh
 testDiscovery:
 type: raw
 mode: remote
 command: pytest --co -q tests | sed '$d'
 testRunnerCommand: pytest $test
 sourcePayload:
-platform: git
-link: https://github.com/macnev2013/sample-serverless-image-resizer-s3-lambda
-ref: main
-accessToken: ${{ .secrets.PAT }}
+  platform: git
+  link: https://github.com/macnev2013/sample-serverless-image-resizer-s3-lambda
+  ref: main
+  accessToken: ${{ .secrets.PAT }}
 ```
 
 **Step 2:** Commit the he.yml file on your repository. Ensure that the `LOCALSTACK_API_KEY` secret has been configured in your GitHub repository as a secret.
@@ -142,19 +142,19 @@ accessToken: ${{ .secrets.PAT }}
 ```bash
 name: HyperExecute
 on:
-push:
-branches:
-- main
+  push:
+    branches:
+      - main
 jobs:
-HE:
-runs-on: ubuntu-latest
-steps:
-- uses: actions/checkout@v2
-- run: |
+  HE:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - run: |
 
 wget https://downloads.lambdatest.com/hyperexecute/linux/hyperexecute
-chmod +x hyperexecute
-./hyperexecute --user nevil.macwan --key ${{ secrets.HE }}
+          chmod +x hyperexecute
+          ./hyperexecute --user nevil.macwan --key ${{ secrets.HE }}
 --config he.yaml
 ```
 

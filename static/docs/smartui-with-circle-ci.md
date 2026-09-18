@@ -131,29 +131,29 @@ Go to Pipeline Settings > Variables. Add the following variables:
 ```yaml title=".circleci/config.yml"
 version: 2.1
 jobs:
-smartui_test:
-docker:
-- image: circleci/node:16
-environment:
-LT_USERNAME: $LT_USERNAME
-LT_ACCESS_KEY: $LT_ACCESS_KEY
-steps:
-- checkout
-- run:
-name: Install Dependencies
-command: npm install @lambdatest/smartui-cli
-- run:
-name: Execute SmartUI Tests
-command: |
-npx smartui --version
-npx smartui config:create smartui-web.json
-npx smartui --config smartui-web.json exec -- mvn --quiet test -D suite=sdk-cloud.xml
+  smartui_test:
+    docker:
+      - image: circleci/node:16
+    environment:
+      LT_USERNAME: $LT_USERNAME
+      LT_ACCESS_KEY: $LT_ACCESS_KEY
+    steps:
+      - checkout
+      - run:
+          name: Install Dependencies
+          command: npm install @lambdatest/smartui-cli
+      - run:
+          name: Execute SmartUI Tests
+          command: |
+            npx smartui --version
+            npx smartui config:create smartui-web.json
+            npx smartui --config smartui-web.json exec -- mvn --quiet test -D suite=sdk-cloud.xml
 
 workflows:
-version: 2
-smartui_pipeline:
-jobs:
-- smartui_test
+  version: 2
+  smartui_pipeline:
+    jobs:
+      - smartui_test
 ```
 
 ### Step 5: Check the output
@@ -180,15 +180,15 @@ jobs:
 **Example:**
 ```yaml
 workflows:
-version: 2
-smartui_pipeline:
-jobs:
-- smartui_test:
-filters:
-branches:
-only:
-- main
-- develop
+  version: 2
+  smartui_pipeline:
+    jobs:
+      - smartui_test:
+          filters:
+            branches:
+              only:
+                - main
+                - develop
 ```
 
 **Build Naming**
@@ -200,7 +200,7 @@ only:
 **Example:**
 ```yaml
 environment:
-BUILD_NAME: "${CIRCLE_BRANCH}-${CIRCLE_SHA1:0:7}"
+  BUILD_NAME: "${CIRCLE_BRANCH}-${CIRCLE_SHA1:0:7}"
 ```
 
 **Error Handling**
@@ -262,7 +262,7 @@ BUILD_NAME: "${CIRCLE_BRANCH}-${CIRCLE_SHA1:0:7}"
 2. Pass variable to job:
 ```yaml
 environment:
-PROJECT_TOKEN: $PROJECT_TOKEN
+  PROJECT_TOKEN: $PROJECT_TOKEN
 ```
 
 3. Check variable is accessible to the job
@@ -287,10 +287,10 @@ PROJECT_TOKEN: $PROJECT_TOKEN
 2. Check pipeline logs for errors:
 ```yaml
 - run:
-name: Check Logs
-when: on_failure
-command: |
-cat /tmp/*.log || true
+    name: Check Logs
+    when: on_failure
+    command: |
+      cat /tmp/*.log || true
 ```
 
 3. Verify network connectivity in pipeline
@@ -311,17 +311,17 @@ cat /tmp/*.log || true
 1. Increase pipeline timeout:
 ```yaml
 - run:
-name: Execute Tests
-no_output_timeout: 60m
+    name: Execute Tests
+    no_output_timeout: 60m
 ```
 
 2. Run tests in parallel using matrix:
 ```yaml
 jobs:
-smartui_test:
-matrix:
-parameters:
-test_group: [1, 2, 3]
+  smartui_test:
+    matrix:
+      parameters:
+        test_group: [1, 2, 3]
 ```
 
 3. Optimize test execution
@@ -341,16 +341,16 @@ test_group: [1, 2, 3]
 1. Use specific Node version:
 ```yaml
 docker:
-- image: circleci/node:18
+  - image: circleci/node:18
 ```
 
 2. Clear npm cache:
 ```yaml
 - run:
-name: Install Dependencies
-command: |
-npm cache clean --force
-npm install
+    name: Install Dependencies
+    command: |
+      npm cache clean --force
+      npm install
 ```
 
 3. Use package-lock.json for consistent installs
@@ -370,21 +370,21 @@ npm install
 1. Ensure Node.js is available in Docker image:
 ```yaml
 docker:
-- image: circleci/node:18
+  - image: circleci/node:18
 ```
 
 2. Verify npm is available:
 ```yaml
 - run:
-name: Check npm
-command: npm --version
+    name: Check npm
+    command: npm --version
 ```
 
 3. Install SmartUI CLI explicitly:
 ```yaml
 - run:
-name: Install SmartUI CLI
-command: npm install -g @lambdatest/smartui-cli
+    name: Install SmartUI CLI
+    command: npm install -g @lambdatest/smartui-cli
 ```
 
 **Getting Help**

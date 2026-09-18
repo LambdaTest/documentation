@@ -2,7 +2,7 @@
 id: puppeteer-test-execution
 title: Test Execution Setup For Running Puppeteer Tests
 hide_title: true
-sidebar_label: Configure Capabilities
+sidebar_label: Test Execution Setup
 description: Learn how to configure the desired capability for selecting browsers and OS, organzing tests, changing desktop resolution, and more for your Puppeteer tests.
 keywords:
   - puppeteer testing

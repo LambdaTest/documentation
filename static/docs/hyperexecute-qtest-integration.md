@@ -83,10 +83,10 @@ You can download the CLI for your desired platform from the below mentioned link
 
 ```bash
 {
-"git_url": "<YOUR_PROJECT_GItHUB_URL>",
-"local_repository": "<RELATIVE_PATH_OF_THE_PROJECT>",
-"qtest_api_token": "<TOKEN_ACQUIRED_IN_PREREQUISITES>",
-"qtest_url": "<YOUR_QTEST_URL>"
+  "git_url": "<YOUR_PROJECT_GItHUB_URL>",
+  "local_repository": "<RELATIVE_PATH_OF_THE_PROJECT>",
+  "qtest_api_token": "<TOKEN_ACQUIRED_IN_PREREQUISITES>",
+  "qtest_url": "<YOUR_QTEST_URL>"
 }
 ```
 

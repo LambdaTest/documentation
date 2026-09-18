@@ -113,15 +113,15 @@ user: "LT_USERNAME"         #Add your LambdaTest username here
 key: "LT_ACCESS_KEY"  #Add your LambdaTest accessKey here
 
 common_caps:
-"build": "RSpec Selenium Demo"
+  "build": "RSpec Selenium Demo"
 
 browser_caps:
--
-"isRealMobile": "true"
-"platform": "Android"
-"deviceName": "Galaxy A31"
-"platformVersion": "10"
-"app": "APP_URL"        #Add the app url here
+  -
+    "isRealMobile": "true"
+    "platform": "Android"
+    "deviceName": "Galaxy A31"
+    "platformVersion": "10"
+    "app": "APP_URL"        #Add the app url here
 ```
 
 ```ruby title="parallel.config.yml"
@@ -130,30 +130,30 @@ user: "LT_USERNAME"  #Add your LambdaTest username here
 key: "LT_ACCESS_KEY"  #Add your LambdaTest accessKey here
 
 common_caps:
-"build": "RSpec Parallel"
-"visual": false
-"network": false
-"console": false
+  "build": "RSpec Parallel"
+  "visual": false
+  "network": false
+  "console": false
 
 app_caps:
--
-"isRealMobile": "true"
-"platform": "Android"
-"deviceName": "Galaxy A31"
-"platformVersion": "10"
-"app": "APP_URL"   #Add the app url here
--
-"isRealMobile": "true"
-"platform": "Android"
-"deviceName": "Galaxy A32"
-"platformVersion": "11"
-"app": "APP_URL"   #Add the app url here
--
-"isRealMobile": "true"
-"platform": "iOS"
-"deviceName": "iPhone 13 Pro"
-"platformVersion": "15.0"
-"app": "APP_URL"   #Add the app url here
+  -
+    "isRealMobile": "true"
+    "platform": "Android"
+    "deviceName": "Galaxy A31"
+    "platformVersion": "10"
+    "app": "APP_URL"   #Add the app url here
+  -
+    "isRealMobile": "true"
+    "platform": "Android"
+    "deviceName": "Galaxy A32"
+    "platformVersion": "11"
+    "app": "APP_URL"   #Add the app url here
+  -
+    "isRealMobile": "true"
+    "platform": "iOS"
+    "deviceName": "iPhone 13 Pro"
+    "platformVersion": "15.0"
+    "app": "APP_URL"   #Add the app url here
 ```
 
 - You must set **isRealMobile** capability to `False` in the config file to run on **Virtual Devices**
@@ -166,17 +166,17 @@ You can update your custom capabilities in test scripts `lambdatest.rb`. In this
 The capabilities object in the sample code are defined as:
 
 ```ruby
-caps={
-"LT:Options" => {
-"build" => "Ruby RSpec",
-"name" => "Sample Test",
-"platformName" => platform,
-"isRealMobile" => isRealMobile,
-"deviceName" => deviceName,
-"platformVersion" => platformVersion,
-"app" => app,
-"w3c" => true
-}},
+    caps={
+      "LT:Options" => {
+        "build" => "Ruby RSpec",
+        "name" => "Sample Test",
+        "platformName" => platform,
+        "isRealMobile" => isRealMobile,
+        "deviceName" => deviceName,
+        "platformVersion" => platformVersion,
+        "app" => app,
+        "w3c" => true
+      }},
 ```
 
 - You must add the generated **APP_URL** to the `app` capability in the config file.
@@ -209,8 +209,8 @@ The rspec-skill package includes:
 rspec-skill/
 ├── SKILL.md
 └── reference/
-├── playbook.md
-└── advanced-patterns.md
+    ├── playbook.md
+    └── advanced-patterns.md
 ```
 
 It provides structured guidance for:

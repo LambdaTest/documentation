@@ -89,12 +89,12 @@ https://github.com/LambdaTest/lambdatest-accessibility-cypress-v10/blob/main/pac
 
 ```javascript title="lambdatest-config.json"
 "run_settings": {
-//...
-"npm_dependencies": {
-"cypress": "10.0.0",
-"lambdatest-cypress-cli": "^3.0.30"
-},
-//...
+  //...
+  "npm_dependencies": {
+     "cypress": "10.0.0",
+     "lambdatest-cypress-cli": "^3.0.30"
+  },
+  //...
 }
 ```
 

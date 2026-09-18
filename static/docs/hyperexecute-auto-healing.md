@@ -10,12 +10,12 @@ HyperExecute's Auto Healing feature automatically recovers from locator failures
 
 ```javascript
 const capability = {
-"browserName": "Chrome",
-"LT:Options": {
-"platformName": "Windows 10",
-# highlight-next-line
-"autoHeal": true
-}
+    "browserName": "Chrome",
+    "LT:Options": {
+        "platformName": "Windows 10",
+        # highlight-next-line
+        "autoHeal": true
+    }
 }
 ```
 **Step 2:** Now, trigger your test on HyperExecute using the mentioned command. Please replace the placeholder values with your details.

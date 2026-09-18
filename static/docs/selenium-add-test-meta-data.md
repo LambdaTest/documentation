@@ -56,67 +56,67 @@ To add custom metadata in your automation tests, add the capability `customData`
 
 ```java title="Test.java"
 ltOptions.put("customData", new HashMap<String, Object>() {{
-put("jiraTicket", "JIRA-12345");
-put("githubPR", "https://github.com/organization/repo/pull/678");
-put("testDescription", "This test validates login functionality under high load.");
+    put("jiraTicket", "JIRA-12345");
+    put("githubPR", "https://github.com/organization/repo/pull/678");
+    put("testDescription", "This test validates login functionality under high load.");
 }});
 ```
 
 ```javascript title="Test.js"
 "LT:Options": {
-"customData": {
-"jiraTicket": "JIRA-12345",
-"githubPR": "https://github.com/organization/repo/pull/678",
-"testDescription": "This test validates login functionality under high load."
-}
+  "customData": {
+    "jiraTicket": "JIRA-12345",
+    "githubPR": "https://github.com/organization/repo/pull/678",
+    "testDescription": "This test validates login functionality under high load."
+  }
 }
 ```
 
 ```typescript title="Test.ts"
 "LT:Options": {
-customData: {
-jiraTicket: "JIRA-12345",
-githubPR: "https://github.com/organization/repo/pull/678",
-testDescription: "This test validates login functionality under high load."
-}
+  customData: {
+    jiraTicket: "JIRA-12345",
+    githubPR: "https://github.com/organization/repo/pull/678",
+    testDescription: "This test validates login functionality under high load."
+  }
 }
 ```
 
 ```php title="Test.php"
 "LT:Options" => [
-"customData" => [
-"jiraTicket" => "JIRA-12345",
-"githubPR" => "https://github.com/organization/repo/pull/678",
-"testDescription" => "This test validates login functionality under high load."
-]
+  "customData" => [
+    "jiraTicket" => "JIRA-12345",
+    "githubPR" => "https://github.com/organization/repo/pull/678",
+    "testDescription" => "This test validates login functionality under high load."
+  ]
 ]
 ```
 
 ```python title="Test.py"
 "LT:Options": {
-"customData": {
-"jiraTicket": "JIRA-12345",
-"githubPR": "https://github.com/organization/repo/pull/678",
-"testDescription": "This test validates login functionality under high load."
-}
+  "customData": {
+    "jiraTicket": "JIRA-12345",
+    "githubPR": "https://github.com/organization/repo/pull/678",
+    "testDescription": "This test validates login functionality under high load."
+  }
 }
 ```
 
 ```csharp title="Test.cs"
 ltOptions.Add("customData", new Dictionary<string, object>{
-{ "jiraTicket", "JIRA-12345" },
-{ "githubPR", "https://github.com/organization/repo/pull/678" },
-{ "testDescription", "This test validates login functionality under high load." }
+  { "jiraTicket", "JIRA-12345" },
+  { "githubPR", "https://github.com/organization/repo/pull/678" },
+  { "testDescription", "This test validates login functionality under high load." }
 });
 ```
 
 ```ruby title="Test.rb"
 "LT:Options" => {
-customData: {
-jiraTicket: "JIRA-12345",
-githubPR: "https://github.com/organization/repo/pull/678",
-testDescription: "This test validates login functionality under high load."
-}
+  customData: {
+    jiraTicket: "JIRA-12345",
+    githubPR: "https://github.com/organization/repo/pull/678",
+    testDescription: "This test validates login functionality under high load."
+  }
 }
 ```
 
@@ -129,9 +129,9 @@ See how teams use the customData capability in different testing workflows.
 
 ```javascript title="Test.js"
 'customData': {
-"jiraTicket": "JIRA-12345",
-"githubPR": "https://github.com/organization/repo/pull/678",
-"testDescription": "This test validates login functionality under high load."
+  "jiraTicket": "JIRA-12345",
+  "githubPR": "https://github.com/organization/repo/pull/678",
+  "testDescription": "This test validates login functionality under high load."
 }
 ```
 
@@ -144,10 +144,10 @@ See how teams use the customData capability in different testing workflows.
 
 ```javascript title="Test.js"
 'customData': {
-"testCaseID": "TC-56789",
-"testSuite": "Regression Suite",
-"priority": "High",
-"owner": "qa_team@company.com"
+  "testCaseID": "TC-56789",
+  "testSuite": "Regression Suite",
+  "priority": "High",
+  "owner": "qa_team@company.com"
 }
 ```
 
@@ -161,10 +161,10 @@ See how teams use the customData capability in different testing workflows.
 
 ```javascript title="Test.js"
 'customData': {
-"buildNumber": "1234",
-"environment": "Staging",
-"apiVersion": "v1.2.3",
-"releaseTag": "v1.2.3-rc1"
+  "buildNumber": "1234",
+  "environment": "Staging",
+  "apiVersion": "v1.2.3",
+  "releaseTag": "v1.2.3-rc1"
 }
 ```
 
@@ -178,9 +178,9 @@ See how teams use the customData capability in different testing workflows.
 
 ```javascript title="Test.js"
 'customData': {
-"featureID": "FEAT-9876",
-"userStory": "As a user, I want to reset my password securely.",
-"sprint": "Sprint 45"
+  "featureID": "FEAT-9876",
+  "userStory": "As a user, I want to reset my password securely.",
+  "sprint": "Sprint 45"
 }
 ```
 
@@ -193,9 +193,9 @@ See how teams use the customData capability in different testing workflows.
 
 ```javascript title="Test.js"
 'customData': {
-"thirdPartyAPI": "Stripe",
-"apiVersion": "2023-01-15",
-"status": "Active"
+  "thirdPartyAPI": "Stripe",
+  "apiVersion": "2023-01-15",
+  "status": "Active"
 }
 ```
 
@@ -208,10 +208,10 @@ See how teams use the customData capability in different testing workflows.
 
 ```javascript title="Test.js"
 'customData': {
-"pipelineID": "Pipeline-001",
-"jobID": "Job-456",
-"triggeredBy": "GitHub Actions",
-"commitHash": "a1b2c3d4e5f67890"
+  "pipelineID": "Pipeline-001",
+  "jobID": "Job-456",
+  "triggeredBy": "GitHub Actions",
+  "commitHash": "a1b2c3d4e5f67890"
 }
 ```
 

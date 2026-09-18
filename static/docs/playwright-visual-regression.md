@@ -178,48 +178,48 @@ const { chromium } = require('playwright')
 const { expect } = require('@playwright/test');
 
 (async () => {
-const capabilities = {
-'browserName': 'Chrome', // Browsers allowed: `Chrome`, `MicrosoftEdge`, `pw-chromium`, `pw-firefox` and `pw-webkit`
-'browserVersion': 'latest',
-'LT:Options': {
-'platform': 'Windows 10',
-'build': 'Playwright Sample Build',
-'name': 'Playwright Sample Test',
-'user': process.env.LT_USERNAME,
-'accessKey': process.env.LT_ACCESS_KEY,
-'network': true,
-'video': true,
-'console': true,
-"smartUIProjectName": "<projectName>" //Add the required SmartUI Project name
-}
-}
+  const capabilities = {
+    'browserName': 'Chrome', // Browsers allowed: `Chrome`, `MicrosoftEdge`, `pw-chromium`, `pw-firefox` and `pw-webkit`
+    'browserVersion': 'latest',
+    'LT:Options': {
+      'platform': 'Windows 10',
+      'build': 'Playwright Sample Build',
+      'name': 'Playwright Sample Test',
+      'user': process.env.LT_USERNAME,
+      'accessKey': process.env.LT_ACCESS_KEY,
+      'network': true,
+      'video': true,
+      'console': true,
+      "smartUIProjectName": "<projectName>" //Add the required SmartUI Project name
+    }
+  }
 
-const browser = await chromium.connect({
-wsEndpoint: `wss://cdp.lambdatest.com/playwright?capabilities=${encodeURIComponent(JSON.stringify(capabilities))}`
-})
+  const browser = await chromium.connect({
+    wsEndpoint: `wss://cdp.lambdatest.com/playwright?capabilities=${encodeURIComponent(JSON.stringify(capabilities))}`
+  })
 
-const page = await browser.newPage()
+  const page = await browser.newPage()
 
-await page.goto('https://www.bing.com')
-// Add the following command in order to take screenshot in SmartUI
-await page.evaluate((_) => {},
+  await page.goto('https://www.bing.com')
+  // Add the following command in order to take screenshot in SmartUI
+ await page.evaluate((_) => {},
 `lambdatest_action: ${JSON.stringify({ action: "smartui.takeScreenshot", arguments: { fullPage: true, screenshotName: "<Your Screenshot Name>" } })}`); // Add a relevant screenshot name here
 
-const element = await page.$('[aria-label="Enter your search term"]')
-await element.click()
-await element.type('LambdaTest')
-await element.press('Enter')
-const title = await page.title()
+  const element = await page.$('[aria-label="Enter your search term"]')
+  await element.click()
+  await element.type('LambdaTest')
+  await element.press('Enter')
+  const title = await page.title()
 
-try {
-expect(title).toEqual('LambdaTest - Search')
-// Mark the test as completed or failed
-await page.evaluate(_ => {}, `lambdatest_action: ${JSON.stringify({ action: 'setTestStatus', arguments: { status: 'passed', remark: 'Title matched' } })}`)
-} catch {
-await page.evaluate(_ => {}, `lambdatest_action: ${JSON.stringify({ action: 'setTestStatus', arguments: { status: 'failed', remark: 'Title not matched' } })}`)
-}
+  try {
+    expect(title).toEqual('LambdaTest - Search')
+    // Mark the test as completed or failed
+    await page.evaluate(_ => {}, `lambdatest_action: ${JSON.stringify({ action: 'setTestStatus', arguments: { status: 'passed', remark: 'Title matched' } })}`)
+  } catch {
+    await page.evaluate(_ => {}, `lambdatest_action: ${JSON.stringify({ action: 'setTestStatus', arguments: { status: 'failed', remark: 'Title not matched' } })}`)
+  }
 
-await browser.close()
+  await browser.close()
 })()
 ```
 
@@ -236,7 +236,7 @@ node playwright-smartui.js
 To retrieve the status and results of a captured screenshot, you can utilize the provided webhook. Follow the steps below to fetch this information:
 
 ```javascript
-// Add this code snippet within your script to fetch the screenshot status during runtime
+ // Add this code snippet within your script to fetch the screenshot status during runtime
 
 response = await page.evaluate(_ => {}, `lambdatest_action: ${JSON.stringify({action: 'smartui.fetchScreenshotStatus', arguments: { screenshotName: "" }})}`)
 
@@ -246,20 +246,20 @@ A sample response for the same can be seen below
 
 ```json
 screenshotStatus response:  {
-screenshotsData: [
-{
-screenshotName: '<Your Screenshot Name>',
-screenshotURL: '<Link to the screenshot captured>',
-screenshotStatus: 'Approved', // current status of the screenshot
-approvedBy: 'system', // Approver details
-misMatchPercentage: 31.8, // percentage mismatch of the screenshot
-threshold: 5000, // Threshold set for the screenshot
-browserName: 'chrome', // Browser used for capturing the screenshot
-resolution: '1920x1080' // Resolution of the screenshot
-},
+  screenshotsData: [
+    {
+      screenshotName: '<Your Screenshot Name>',
+      screenshotURL: '<Link to the screenshot captured>',
+      screenshotStatus: 'Approved', // current status of the screenshot
+      approvedBy: 'system', // Approver details
+      misMatchPercentage: 31.8, // percentage mismatch of the screenshot
+      threshold: 5000, // Threshold set for the screenshot
+      browserName: 'chrome', // Browser used for capturing the screenshot
+      resolution: '1920x1080' // Resolution of the screenshot
+    },
 
-buildId: '<Your Build ID>',
-projectName: '<Your Project Name>'
+  buildId: '<Your Build ID>',
+  projectName: '<Your Project Name>'
 }
 ```
 The following are the description of the parameters:
@@ -289,12 +289,12 @@ To add this integration, you can add the following capability:
 
 ```bash
 const capabilities: {
-...
-"smartUIProjectName": "<projectName>"
-"github": {
-"url": "https://api.github.com/repos/OWNER/REPO/statuses/commitId"
-}
-...
+  ...
+   "smartUIProjectName": "<projectName>"
+   "github": {
+    "url": "https://api.github.com/repos/OWNER/REPO/statuses/commitId"
+   }
+  ...
 }
 ```
 **For step by step guide for  `Github Integration` click [here](/support/docs/smartui-github-app-integration/)**
@@ -318,18 +318,18 @@ For additional information about Playwright framework please explore the documen
 **Example:**
 ```javascript
 const capabilities = {
-browserName: 'Chrome',
-browserVersion: 'latest',
-platformName: 'Windows 10',
-'LT:Options': {
-username: process.env.LT_USERNAME,
-accessKey: process.env.LT_ACCESS_KEY,
-visual: true,
-name: 'Homepage Visual Test',
-build: 'Release 1.0',
-'smartUI.project': 'MyProject',
-'smartUI.build': 'Build-1.0'
-}
+  browserName: 'Chrome',
+  browserVersion: 'latest',
+  platformName: 'Windows 10',
+  'LT:Options': {
+    username: process.env.LT_USERNAME,
+    accessKey: process.env.LT_ACCESS_KEY,
+    visual: true,
+    name: 'Homepage Visual Test',
+    build: 'Release 1.0',
+    'smartUI.project': 'MyProject',
+    'smartUI.build': 'Build-1.0'
+  }
 };
 ```
 
@@ -386,8 +386,8 @@ await page.waitForLoadState('networkidle');
 1. Verify `visual: true` is set in capabilities:
 ```javascript
 'LT:Options': {
-visual: true, // Must be set
-// ... other options
+  visual: true, // Must be set
+  // ... other options
 }
 ```
 
@@ -480,9 +480,9 @@ await page.waitForSelector('.main-content', { state: 'visible' });
 2. Use `ignoreDOM` for dynamic content:
 ```javascript
 'smartUI.options': {
-'ignoreDOM': {
-'id': ['timestamp', 'user-id']
-}
+  'ignoreDOM': {
+    'id': ['timestamp', 'user-id']
+  }
 }
 ```
 

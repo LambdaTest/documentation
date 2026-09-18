@@ -153,8 +153,8 @@ Policy endpoints use HTTP Basic authentication with your TestMu AI **username** 
 
 ```bash
 curl -u "<YOUR_USERNAME>:<YOUR_ACCESS_KEY>" \
--H "Content-Type: application/json" \
-"https://api.hyperexecute.cloud/logistics/v1.0/policies?limit=5"
+  -H "Content-Type: application/json" \
+  "https://api.hyperexecute.cloud/logistics/v1.0/policies?limit=5"
 ```
 
 Run that list call first to confirm your credentials work. A `200` with a list — possibly empty — means you are set.
@@ -201,21 +201,21 @@ This example appends a result-logging command to every job in the organization, 
 
 ```json
 {
-"name": "post-job-result-logging",
-"parameter": "globalPost",
-"mode": "append",
-"value": {
-"commands": {
-"linux": ["curl -X POST https://internal.example.com/hyperexecute/results"],
-"win": ["curl.exe -X POST https://internal.example.com/hyperexecute/results"]
-},
-"default": "linux"
-},
-"scope": {
-"projects": ["*"],
-"exclude": []
-},
-"enabled": true
+  "name": "post-job-result-logging",
+  "parameter": "globalPost",
+  "mode": "append",
+  "value": {
+    "commands": {
+      "linux": ["curl -X POST https://internal.example.com/hyperexecute/results"],
+      "win": ["curl.exe -X POST https://internal.example.com/hyperexecute/results"]
+    },
+    "default": "linux"
+  },
+  "scope": {
+    "projects": ["*"],
+    "exclude": []
+  },
+  "enabled": true
 }
 ```
 
@@ -223,10 +223,10 @@ The response returns the created policy's generated `id`, which you use for ever
 
 ```json
 {
-"data": {
-"id": "01KXE0W6EYAV3A9NYNNXPRHP8X"
-},
-"status": "success"
+  "data": {
+    "id": "01KXE0W6EYAV3A9NYNNXPRHP8X"
+  },
+  "status": "success"
 }
 ```
 
@@ -239,13 +239,13 @@ A checking policy adds a `severity` and drops the per-OS structure:
 
 ```json
 {
-"name": "cap-retries",
-"parameter": "maxRetries",
-"mode": "constrain",
-"value": { "min": 0, "max": 3 },
-"severity": "error",
-"scope": { "projects": ["<project-id>"] },
-"enabled": true
+  "name": "cap-retries",
+  "parameter": "maxRetries",
+  "mode": "constrain",
+  "value": { "min": 0, "max": 3 },
+  "severity": "error",
+  "scope": { "projects": ["<project-id>"] },
+  "enabled": true
 }
 ```
 
@@ -257,8 +257,8 @@ To pause enforcement without losing the policy, use the toggle endpoint. `update
 
 ```json
 {
-"enabled": false,
-"updatedBy": "<your-name-or-service-account>"
+  "enabled": false,
+  "updatedBy": "<your-name-or-service-account>"
 }
 ```
 

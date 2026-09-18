@@ -92,17 +92,17 @@ In the test script, update your test capabilities. This code passes browser, bro
 
 ```ruby
 @caps = {
-"browserName"=>lt_browser,
-"browserVersion"=>lt_browser_version,
-"platformName"=>lt_os,
-"resolution"=>lt_res,
-"build"=>"capybara-lambdatest",
-"name"=>"single-Test-Jenkins",
-"video"=>true,
-"network"=>true,
-"console"=>true,
-"visual"=>true
-}
+            "browserName"=>lt_browser,
+            "browserVersion"=>lt_browser_version,
+            "platformName"=>lt_os,
+            "resolution"=>lt_res,
+            "build"=>"capybara-lambdatest",
+            "name"=>"single-Test-Jenkins",
+            "video"=>true,
+            "network"=>true,
+            "console"=>true,
+            "visual"=>true
+        }
 ```
 
 **Capabilities Generator**

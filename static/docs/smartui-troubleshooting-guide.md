@@ -196,17 +196,17 @@ $env:LT_ACCESS_KEY="your_access_key"
    - Requires administrator/sudo privileges
    - Best for: Single user, consistent environment
 ```bash
-npm install -g @lambdatest/smartui-cli
-```
+   npm install -g @lambdatest/smartui-cli
+   ```
    **Local Installation (without `-g`)**:
    - Installs CLI in project's `node_modules`
    - Access via `npx smartui` or `./node_modules/.bin/smartui`
    - No admin privileges needed
    - Best for: Project-specific versions, CI/CD pipelines
 ```bash
-npm install @lambdatest/smartui-cli
-npx smartui --version
-```
+   npm install @lambdatest/smartui-cli
+   npx smartui --version
+   ```
 2. **Installing Latest Versions**:
 
    **SmartUI CLI**:
@@ -323,16 +323,16 @@ cy.smartuiSnapshot('Screenshot Name');
 2. **Enable JavaScript in Configuration**:
 ```json
 {
-"enableJavaScript": true,
-"waitForTimeout": 2000,
-"waitForPageRender": 5000
+  "enableJavaScript": true,
+  "waitForTimeout": 2000,
+  "waitForPageRender": 5000
 }
 ```
 3. **Increase Wait Timeouts**:
 ```json
 {
-"waitForTimeout": 3000,
-"waitForPageRender": 10000
+  "waitForTimeout": 3000,
+  "waitForPageRender": 10000
 }
 ```
 4. **Verify Viewport Size**:
@@ -412,11 +412,11 @@ cy.smartuiSnapshot('test-' + Date.now());
 1. **Use ignoreDOM for Dynamic Content**:
 ```javascript
 let options = {
-ignoreDOM: {
-id: ["timestamp", "user-id", "session-token"],
-class: ["dynamic-content", "ad-banner"],
-cssSelector: ["[data-testid='timestamp']"]
-}
+  ignoreDOM: {
+    id: ["timestamp", "user-id", "session-token"],
+    class: ["dynamic-content", "ad-banner"],
+    cssSelector: ["[data-testid='timestamp']"]
+  }
 };
 smartuiSnapshot(driver, "Screenshot Name", options);
 ```
@@ -599,12 +599,12 @@ node --version
    **GitHub Actions**:
 ```yaml
 env:
-PROJECT_TOKEN: ${{ secrets.PROJECT_TOKEN }}
+  PROJECT_TOKEN: ${{ secrets.PROJECT_TOKEN }}
 ```
    **GitLab**:
 ```yaml
 variables:
-PROJECT_TOKEN: $PROJECT_TOKEN
+  PROJECT_TOKEN: $PROJECT_TOKEN
 ```
 **Related Documentation**: [GitHub Actions Integration](/support/docs/smartui-with-github-actions), [GitLab Integration](/support/docs/smartui-with-gitlab), [Bitbucket Integration](/support/docs/smartui-with-bitbucket)
 
@@ -734,7 +734,7 @@ Test-Path $PROFILE
 
 # Create profile if it doesn't exist
 if (!(Test-Path $PROFILE)) {
-New-Item -Type File -Path $PROFILE -Force
+    New-Item -Type File -Path $PROFILE -Force
 }
 
 # Edit profile
@@ -757,40 +757,40 @@ $env:LT_ACCESS_KEY="your_access_key"
 
    Open VS Code settings (`Ctrl+,` or `Cmd+,`) and add:
 ```json
-{
-"terminal.integrated.env.linux": {
-"PROJECT_TOKEN": "123456#1234abcd-****-****-****-************",
-"LT_USERNAME": "your_username",
-"LT_ACCESS_KEY": "your_access_key"
-},
-"terminal.integrated.env.osx": {
-"PROJECT_TOKEN": "123456#1234abcd-****-****-****-************",
-"LT_USERNAME": "your_username",
-"LT_ACCESS_KEY": "your_access_key"
-},
-"terminal.integrated.env.windows": {
-"PROJECT_TOKEN": "123456#1234abcd-****-****-****-************",
-"LT_USERNAME": "your_username",
-"LT_ACCESS_KEY": "your_access_key"
-}
-}
-```
+   {
+     "terminal.integrated.env.linux": {
+       "PROJECT_TOKEN": "123456#1234abcd-****-****-****-************",
+       "LT_USERNAME": "your_username",
+       "LT_ACCESS_KEY": "your_access_key"
+     },
+     "terminal.integrated.env.osx": {
+       "PROJECT_TOKEN": "123456#1234abcd-****-****-****-************",
+       "LT_USERNAME": "your_username",
+       "LT_ACCESS_KEY": "your_access_key"
+     },
+     "terminal.integrated.env.windows": {
+       "PROJECT_TOKEN": "123456#1234abcd-****-****-****-************",
+       "LT_USERNAME": "your_username",
+       "LT_ACCESS_KEY": "your_access_key"
+     }
+   }
+   ```
    **Option 2: Workspace Settings (.vscode/settings.json)**
 
    Create or edit `.vscode/settings.json` in your project root:
 ```json
-{
-"terminal.integrated.env.linux": {
-"PROJECT_TOKEN": "123456#1234abcd-****-****-****-************"
-},
-"terminal.integrated.env.osx": {
-"PROJECT_TOKEN": "123456#1234abcd-****-****-****-************"
-},
-"terminal.integrated.env.windows": {
-"PROJECT_TOKEN": "123456#1234abcd-****-****-****-************"
-}
-}
-```
+   {
+     "terminal.integrated.env.linux": {
+       "PROJECT_TOKEN": "123456#1234abcd-****-****-****-************"
+     },
+     "terminal.integrated.env.osx": {
+       "PROJECT_TOKEN": "123456#1234abcd-****-****-****-************"
+     },
+     "terminal.integrated.env.windows": {
+       "PROJECT_TOKEN": "123456#1234abcd-****-****-****-************"
+     }
+   }
+   ```
    **Note**: Restart VS Code or reload the window after making changes.
 
 3. **Using .env Files**:

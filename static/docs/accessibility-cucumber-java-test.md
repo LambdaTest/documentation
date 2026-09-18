@@ -19,12 +19,12 @@ Cucumber scenarios still execute **ordinary Selenium** code under the hood. Enab
 ```java
 @Before(order = 0)
 public void setUp() {
-MutableCapabilities caps = new MutableCapabilities();
-caps.setCapability("browserName", "chrome");
-caps.setCapability("accessibility", true);
-// caps.setCapability("accessibility.autoscan", true); // optional
-driver = new RemoteWebDriver(new URL(HUB_URL), caps);
-// inject driver into step defs
+    MutableCapabilities caps = new MutableCapabilities();
+    caps.setCapability("browserName", "chrome");
+    caps.setCapability("accessibility", true);
+    // caps.setCapability("accessibility.autoscan", true); // optional
+    driver = new RemoteWebDriver(new URL(HUB_URL), caps);
+    // inject driver into step defs
 }
 ```
 

@@ -37,9 +37,9 @@ Include the capabilities you wish to use in a `.json` file and ensure this file 
 
 ```json
 {
-"resolution": "1280x800",
-"browserName": "chrome",
-"version": "latest"
+  "resolution": "1280x800",
+  "browserName": "chrome",
+  "version": "latest"
 }
 ```
 

@@ -57,11 +57,11 @@ Add `waitForTimeout` to your `.smartui.json` file:
 
 ```json
 {
-"web": {
-"browsers": ["chrome"],
-"viewports": [[1920, 1080]]
-},
-"waitForTimeout": 3000
+  "web": {
+    "browsers": ["chrome"],
+    "viewports": [[1920, 1080]]
+  },
+  "waitForTimeout": 3000
 }
 ```
 
@@ -91,54 +91,54 @@ const { Builder, By, until } = require('selenium-webdriver');
 const { smartuiSnapshot } = require('@lambdatest/selenium-driver');
 
 (async function example() {
-let driver = await new Builder().forBrowser("chrome").build();
+  let driver = await new Builder().forBrowser("chrome").build();
 
-try {
-await driver.get("https://example.com");
+  try {
+    await driver.get("https://example.com");
 
-// Function to scroll through the entire page
-async function scrollToLoadLazyContent() {
-// Get the total page height
-let totalHeight = await driver.executeScript("return document.body.scrollHeight");
-let viewportHeight = await driver.executeScript("return window.innerHeight");
+    // Function to scroll through the entire page
+    async function scrollToLoadLazyContent() {
+      // Get the total page height
+      let totalHeight = await driver.executeScript("return document.body.scrollHeight");
+      let viewportHeight = await driver.executeScript("return window.innerHeight");
 
-// Scroll in increments
-let scrollStep = 500;
-let currentPosition = 0;
+      // Scroll in increments
+      let scrollStep = 500;
+      let currentPosition = 0;
 
-while (currentPosition < totalHeight) {
-// Scroll down
-await driver.executeScript(`window.scrollTo(0, ${currentPosition})`);
+      while (currentPosition < totalHeight) {
+        // Scroll down
+        await driver.executeScript(`window.scrollTo(0, ${currentPosition})`);
 
-// Wait for lazy content to load
-await new Promise(resolve => setTimeout(resolve, 1000));
+        // Wait for lazy content to load
+        await new Promise(resolve => setTimeout(resolve, 1000));
 
-// Update position
-currentPosition += scrollStep;
+        // Update position
+        currentPosition += scrollStep;
 
-// Recalculate total height (in case of infinite scroll)
-let newHeight = await driver.executeScript("return document.body.scrollHeight");
-if (newHeight > totalHeight) {
-totalHeight = newHeight;
-}
-}
+        // Recalculate total height (in case of infinite scroll)
+        let newHeight = await driver.executeScript("return document.body.scrollHeight");
+        if (newHeight > totalHeight) {
+          totalHeight = newHeight;
+        }
+      }
 
-// Scroll back to top
-await driver.executeScript("window.scrollTo(0, 0)");
+      // Scroll back to top
+      await driver.executeScript("window.scrollTo(0, 0)");
 
-// Final wait for any remaining content
-await new Promise(resolve => setTimeout(resolve, 2000));
-}
+      // Final wait for any remaining content
+      await new Promise(resolve => setTimeout(resolve, 2000));
+    }
 
-// Scroll to load all lazy content
-await scrollToLoadLazyContent();
+    // Scroll to load all lazy content
+    await scrollToLoadLazyContent();
 
-// Take snapshot
-await smartuiSnapshot(driver, "Lazy Loaded Page");
+    // Take snapshot
+    await smartuiSnapshot(driver, "Lazy Loaded Page");
 
-} finally {
-await driver.quit();
-}
+  } finally {
+    await driver.quit();
+  }
 })();
 ```
 
@@ -147,37 +147,37 @@ await driver.quit();
 ```java
 
 public void handleLazyLoading(WebDriver driver) throws InterruptedException {
-driver.get("https://example.com");
+    driver.get("https://example.com");
 
-JavascriptExecutor js = (JavascriptExecutor) driver;
+    JavascriptExecutor js = (JavascriptExecutor) driver;
 
-// Get total page height
-Long totalHeight = (Long) js.executeScript("return document.body.scrollHeight");
-Long viewportHeight = (Long) js.executeScript("return window.innerHeight");
+    // Get total page height
+    Long totalHeight = (Long) js.executeScript("return document.body.scrollHeight");
+    Long viewportHeight = (Long) js.executeScript("return window.innerHeight");
 
-int scrollStep = 500;
-long currentPosition = 0;
+    int scrollStep = 500;
+    long currentPosition = 0;
 
-// Scroll through the page
-while (currentPosition < totalHeight) {
-js.executeScript("window.scrollTo(0, " + currentPosition + ")");
-Thread.sleep(1000); // Wait for lazy content
+    // Scroll through the page
+    while (currentPosition < totalHeight) {
+        js.executeScript("window.scrollTo(0, " + currentPosition + ")");
+        Thread.sleep(1000); // Wait for lazy content
 
-currentPosition += scrollStep;
+        currentPosition += scrollStep;
 
-// Recalculate height for infinite scroll
-Long newHeight = (Long) js.executeScript("return document.body.scrollHeight");
-if (newHeight > totalHeight) {
-totalHeight = newHeight;
-}
-}
+        // Recalculate height for infinite scroll
+        Long newHeight = (Long) js.executeScript("return document.body.scrollHeight");
+        if (newHeight > totalHeight) {
+            totalHeight = newHeight;
+        }
+    }
 
-// Scroll back to top
-js.executeScript("window.scrollTo(0, 0)");
-Thread.sleep(2000);
+    // Scroll back to top
+    js.executeScript("window.scrollTo(0, 0)");
+    Thread.sleep(2000);
 
-// Take snapshot
-SmartUISnapshot.smartuiSnapshot(driver, "Lazy Loaded Page");
+    // Take snapshot
+    SmartUISnapshot.smartuiSnapshot(driver, "Lazy Loaded Page");
 }
 ```
 
@@ -193,28 +193,28 @@ driver = webdriver.Chrome()
 driver.get("https://example.com")
 
 def scroll_to_load_lazy_content(driver):
-# Get total page height
-total_height = driver.execute_script("return document.body.scrollHeight")
-viewport_height = driver.execute_script("return window.innerHeight")
+    # Get total page height
+    total_height = driver.execute_script("return document.body.scrollHeight")
+    viewport_height = driver.execute_script("return window.innerHeight")
 
-scroll_step = 500
-current_position = 0
+    scroll_step = 500
+    current_position = 0
 
-# Scroll through the page
-while current_position < total_height:
-driver.execute_script(f"window.scrollTo(0, {current_position})")
-time.sleep(1)  # Wait for lazy content
+    # Scroll through the page
+    while current_position < total_height:
+        driver.execute_script(f"window.scrollTo(0, {current_position})")
+        time.sleep(1)  # Wait for lazy content
 
-current_position += scroll_step
+        current_position += scroll_step
 
-# Recalculate height for infinite scroll
-new_height = driver.execute_script("return document.body.scrollHeight")
-if new_height > total_height:
-total_height = new_height
+        # Recalculate height for infinite scroll
+        new_height = driver.execute_script("return document.body.scrollHeight")
+        if new_height > total_height:
+            total_height = new_height
 
-# Scroll back to top
-driver.execute_script("window.scrollTo(0, 0)")
-time.sleep(2)
+    # Scroll back to top
+    driver.execute_script("window.scrollTo(0, 0)")
+    time.sleep(2)
 
 # Scroll to load all lazy content
 scroll_to_load_lazy_content(driver)
@@ -242,8 +242,8 @@ await driver.wait(until.elementsLocated(By.css('img[data-src]')), 10000);
 // Trigger lazy loading by scrolling
 let images = await driver.findElements(By.css('img[data-src]'));
 for (let img of images) {
-await driver.executeScript("arguments[0].scrollIntoView(true);", img);
-await driver.sleep(500);
+    await driver.executeScript("arguments[0].scrollIntoView(true);", img);
+    await driver.sleep(500);
 }
 
 // Wait for images to actually load

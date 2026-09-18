@@ -59,8 +59,8 @@ autosplit: true
 concurrency: 10  # number of test sessions to run in parallel
 
 runtime:
-language: java
-version: 11
+  language: java
+  version: 11
 ```
 
 #### Resolve Maven dependencies
@@ -69,7 +69,7 @@ The `pre` step pulls all Maven dependencies into a local `.m2` directory once, s
 
 ```yaml
 pre:
-- mvn -Dmaven.repo.local=./.m2 dependency:resolve
+  - mvn -Dmaven.repo.local=./.m2 dependency:resolve
 ```
 
 #### Test runner command
@@ -99,9 +99,9 @@ mvn test -Dkarate.options="--tags @smoke"
 
 ```yaml
 testDiscovery:
-type: raw
-mode: static
-command: snooper --targetOs=win --featureFilePaths=src/test/java/app --frameWork=java | sed 's/:.*//' | uniq
+  type: raw
+  mode: static
+  command: snooper --targetOs=win --featureFilePaths=src/test/java/app --frameWork=java | sed 's/:.*//' | uniq
 ```
 
 - **`snooper`**: a built-in TestMu AI utility that lists matching test files.

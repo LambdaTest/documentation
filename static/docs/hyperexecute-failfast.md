@@ -18,15 +18,15 @@ To leverage the **FailFast** feature, simply incorporate the following command i
 
 ```yaml
 failFast:
-maxNumberOfTests: 2
+    maxNumberOfTests: 2
 ```
 
 To apply `failFast` at the **scenario** level instead of the default test level, set the `level: scenario` in the YAML configuration.
 
 ```yaml
 failFast:
-maxNumberOfTests: 2
-level: scenario
+  maxNumberOfTests: 2
+  level: scenario
 ```
 
 > **NOTE :** You can specify `failFast` at either the test level or scenario level, depending on your requirements. Both configurations will work, but can lead to unexpected results, only one should be used at a time.

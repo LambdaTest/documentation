@@ -103,88 +103,88 @@ The following are the different options which are currently supported:
 
 ```js title="This is a sample for your webhook configuration for JavaScript to ignore by ID"
 let config = {
-screenshotName: "Ignore-ID",
-fullPage: false, //You can make this property as true in case of Chrome browser
-ignoreDOM: {
-id: ["ID-1", "ID-2"], // Ignoring elements by ID, you can ignore multiple at once
-},
+  screenshotName: "Ignore-ID",
+  fullPage: false, //You can make this property as true in case of Chrome browser
+  ignoreDOM: {
+    id: ["ID-1", "ID-2"], // Ignoring elements by ID, you can ignore multiple at once
+  },
 };
 await driver.executeScript("smartui.takeScreenshot", config);
 ```
 
 ```js title="This is a sample for your webhook configuration for JavaScript to ignore by Class"
 let config = {
-screenshotName: "Ignore-Class",
-fullPage: false, //You can make this property as true in case of Chrome browser
-ignoreDOM: {
-class: ["Class-1", "Class-2"], // Ignoring elements by class, you can ignore multiple at once
-},
+  screenshotName: "Ignore-Class",
+  fullPage: false, //You can make this property as true in case of Chrome browser
+  ignoreDOM: {
+    class: ["Class-1", "Class-2"], // Ignoring elements by class, you can ignore multiple at once
+  },
 };
 await driver.executeScript("smartui.takeScreenshot", config);
 ```
 
 ```js title="This is a sample for your webhook configuration for JavaScript to ignore by XPath"
 let config = {
-screenshotName: "Ignore-XPath",
-fullPage: false, //You can make this property as true in case of Chrome browser
-ignoreDOM: {
-xpath: ["Xpath-1", "Xpath-2"], // Ignoring elements by XPath, you can ignore multiple at once
-},
+  screenshotName: "Ignore-XPath",
+  fullPage: false, //You can make this property as true in case of Chrome browser
+  ignoreDOM: {
+    xpath: ["Xpath-1", "Xpath-2"], // Ignoring elements by XPath, you can ignore multiple at once
+  },
 };
 await driver.executeScript("smartui.takeScreenshot", config);
 ```
 
 ```js title="This is a sample for your webhook configuration for JavaScript to ignore by CSS Selector"
 let config = {
-screenshotName: "Ignore-cssSelector",
-fullPage: false, //You can make this property as true in case of Chrome browser
-ignoreDOM: {
-cssSelector: ["CSS-Selector-1", "CSS-Selector-2"], // Ignoring elements by CSS selector, you can ignore multiple at once
-},
+  screenshotName: "Ignore-cssSelector",
+  fullPage: false, //You can make this property as true in case of Chrome browser
+  ignoreDOM: {
+    cssSelector: ["CSS-Selector-1", "CSS-Selector-2"], // Ignoring elements by CSS selector, you can ignore multiple at once
+  },
 };
 await driver.executeScript("smartui.takeScreenshot", config);
 ```
 
 ```js title="This is a sample for your webhook configuration for JavaScript to select by ID."
 let config = {
-screenshotName: "Select-ID",
-fullPage: false, //You can make this property as true in case of Chrome browser
-selectDOM: {
-id: ["ID-1", "ID-2"], // Selecting elements by ID, you can select multiple at once
-},
+  screenshotName: "Select-ID",
+  fullPage: false, //You can make this property as true in case of Chrome browser
+  selectDOM: {
+    id: ["ID-1", "ID-2"], // Selecting elements by ID, you can select multiple at once
+  },
 };
 await driver.executeScript("smartui.takeScreenshot", config);
 ```
 
 ```js title="This is a sample for your webhook configuration for JavaScript to select by Class"
 let config = {
-screenshotName: "Select-Class",
-fullPage: false, //You can make this property as true in case of Chrome browser
-selectDOM: {
-class: ["Class-1", "Class-2"], // Selecting elements by class, you can select multiple at once
-},
+  screenshotName: "Select-Class",
+  fullPage: false, //You can make this property as true in case of Chrome browser
+  selectDOM: {
+    class: ["Class-1", "Class-2"], // Selecting elements by class, you can select multiple at once
+  },
 };
 await driver.executeScript("smartui.takeScreenshot", config);
 ```
 
 ```js title="This is a sample for your webhook configuration for JavaScript to select by XPath"
 let config = {
-screenshotName: "Select-XPath",
-fullPage: false, //You can make this property as true in case of Chrome browser
-selectDOM: {
-xpath: ["Xpath-1", "Xpath-2"], // Selecting elements by XPath, you can select multiple at once
-},
+  screenshotName: "Select-XPath",
+  fullPage: false, //You can make this property as true in case of Chrome browser
+  selectDOM: {
+    xpath: ["Xpath-1", "Xpath-2"], // Selecting elements by XPath, you can select multiple at once
+  },
 };
 await driver.executeScript("smartui.takeScreenshot", config);
 ```
 
 ```js title="This is a sample for your webhook configuration for JavaScript to select by CSS Selector"
 let config = {
-screenshotName: "Select-cssSelector",
-fullPage: false, //You can make this property as true in case of Chrome browser
-selectDOM: {
-cssSelector: ["CSS-Selector-1", "CSS-Selector-2"], // Selecting elements by CSS selector, you can select multiple at once
-},
+  screenshotName: "Select-cssSelector",
+  fullPage: false, //You can make this property as true in case of Chrome browser
+  selectDOM: {
+    cssSelector: ["CSS-Selector-1", "CSS-Selector-2"], // Selecting elements by CSS selector, you can select multiple at once
+  },
 };
 await driver.executeScript("smartui.takeScreenshot", config);
 ```
@@ -203,42 +203,42 @@ The following are the different options which are currently supported:
 
 ```js title="This is a sample for your webhook configuration for Puppeteer"
 await page.evaluate((_) => {},
-`lambdatest_action: ${JSON.stringify({ action: 'smartui.takeScreenshot', arguments: { fullPage: false, screenshotName: 'dom-screenshot', ignoreDOM : {id:["HTML DOM Id"]} }})}`)
+    `lambdatest_action: ${JSON.stringify({ action: 'smartui.takeScreenshot', arguments: { fullPage: false, screenshotName: 'dom-screenshot', ignoreDOM : {id:["HTML DOM Id"]} }})}`)
 ```
 
 ```js title="This is a sample for your webhook configuration for Puppeteer"
 await page.evaluate((_) => {},
-`lambdatest_action: ${JSON.stringify({ action: 'smartui.takeScreenshot', arguments: { fullPage: false, screenshotName: 'dom-screenshot', ignoreDOM : {class:["<CSS Class>"]} }})}`)
+    `lambdatest_action: ${JSON.stringify({ action: 'smartui.takeScreenshot', arguments: { fullPage: false, screenshotName: 'dom-screenshot', ignoreDOM : {class:["<CSS Class>"]} }})}`)
 ```
 
 ```js title="This is a sample for your webhook configuration for Puppeteer"
 await page.evaluate((_) => {},
-`lambdatest_action: ${JSON.stringify({ action: 'smartui.takeScreenshot', arguments: { fullPage: false, screenshotName: 'dom-screenshot',  ignoreXPath: ['Xpath-1', 'Xpath-2']} })}`)
+    `lambdatest_action: ${JSON.stringify({ action: 'smartui.takeScreenshot', arguments: { fullPage: false, screenshotName: 'dom-screenshot',  ignoreXPath: ['Xpath-1', 'Xpath-2']} })}`)
 ```
 
 ```js title="This is a sample for your webhook configuration for Puppeteer"
 await page.evaluate((_) => {},
-`lambdatest_action: ${JSON.stringify({ action: 'smartui.takeScreenshot', arguments: { fullPage: false, screenshotName: 'dom-screenshot', ignoreDOM : {cssSelector:["<CSS Selector>"]} }})}`)
+    `lambdatest_action: ${JSON.stringify({ action: 'smartui.takeScreenshot', arguments: { fullPage: false, screenshotName: 'dom-screenshot', ignoreDOM : {cssSelector:["<CSS Selector>"]} }})}`)
 ```
 
 ```js title="This is a sample for your webhook configuration for Puppeteer"
 await page.evaluate((_) => {},
-`lambdatest_action: ${JSON.stringify({ action: 'smartui.takeScreenshot', arguments: { fullPage: false, screenshotName: 'dom-screenshot', selectDOM : {id:["HTML DOM Id"]} }})}`)
+    `lambdatest_action: ${JSON.stringify({ action: 'smartui.takeScreenshot', arguments: { fullPage: false, screenshotName: 'dom-screenshot', selectDOM : {id:["HTML DOM Id"]} }})}`)
 ```
 
 ```js title="This is a sample for your webhook configuration for Puppeteer"
 await page.evaluate((_) => {},
-`lambdatest_action: ${JSON.stringify({ action: 'smartui.takeScreenshot', arguments: { fullPage: false, screenshotName: 'dom-screenshot', selectDOM : {class:["<CSS Class>"]} }})}`)
+    `lambdatest_action: ${JSON.stringify({ action: 'smartui.takeScreenshot', arguments: { fullPage: false, screenshotName: 'dom-screenshot', selectDOM : {class:["<CSS Class>"]} }})}`)
 ```
 
 ```js title="This is a sample for your webhook configuration for Puppeteer"
 await page.evaluate((_) => {},
-`lambdatest_action: ${JSON.stringify({ action: 'smartui.takeScreenshot', arguments: { fullPage: false, screenshotName: 'dom-screenshot',  selectXPath: ['Xpath-1', 'Xpath-2']} })}`)
+    `lambdatest_action: ${JSON.stringify({ action: 'smartui.takeScreenshot', arguments: { fullPage: false, screenshotName: 'dom-screenshot',  selectXPath: ['Xpath-1', 'Xpath-2']} })}`)
 ```
 
 ```js title="This is a sample for your webhook configuration for Puppeteer"
 await page.evaluate((_) => {},
-`lambdatest_action: ${JSON.stringify({ action: 'smartui.takeScreenshot', arguments: { fullPage: false, screenshotName: 'dom-screenshot', selectDOM : {cssSelector:["<CSS Selector>"]} }})}`)
+    `lambdatest_action: ${JSON.stringify({ action: 'smartui.takeScreenshot', arguments: { fullPage: false, screenshotName: 'dom-screenshot', selectDOM : {cssSelector:["<CSS Selector>"]} }})}`)
 ```
 
 ## Configuration for Playwright
@@ -255,40 +255,40 @@ The following are the different options which are currently supported:
 
 ```js title="This is a sample for your webhook configuration for Playwright"
 await page.evaluate((_) => {},
-`lambdatest_action: ${JSON.stringify({ action: 'smartui.takeScreenshot', arguments: { fullPage: false, screenshotName: 'dom-screenshot', ignoreDOM : {id:["HTML DOM Id"]} }})}`)
+    `lambdatest_action: ${JSON.stringify({ action: 'smartui.takeScreenshot', arguments: { fullPage: false, screenshotName: 'dom-screenshot', ignoreDOM : {id:["HTML DOM Id"]} }})}`)
 ```
 
 ```js title="This is a sample for your webhook configuration for Playwright"
 await page.evaluate((_) => {},
-`lambdatest_action: ${JSON.stringify({ action: 'smartui.takeScreenshot', arguments: { fullPage: false, screenshotName: 'dom-screenshot', ignoreDOM : {class:["<CSS Class>"]} }})}`)
+    `lambdatest_action: ${JSON.stringify({ action: 'smartui.takeScreenshot', arguments: { fullPage: false, screenshotName: 'dom-screenshot', ignoreDOM : {class:["<CSS Class>"]} }})}`)
 ```
 
 ```js title="This is a sample for your webhook configuration for Playwright"
 await page.evaluate((_) => {},
-`lambdatest_action: ${JSON.stringify({ action: 'smartui.takeScreenshot', arguments: { fullPage: false, screenshotName: 'dom-screenshot',  ignoreXPath: ['Xpath-1', 'Xpath-2']} })}`)
+    `lambdatest_action: ${JSON.stringify({ action: 'smartui.takeScreenshot', arguments: { fullPage: false, screenshotName: 'dom-screenshot',  ignoreXPath: ['Xpath-1', 'Xpath-2']} })}`)
 ```
 
 ```js title="This is a sample for your webhook configuration for Playwright"
 await page.evaluate((_) => {},
-`lambdatest_action: ${JSON.stringify({ action: 'smartui.takeScreenshot', arguments: { fullPage: false, screenshotName: 'dom-screenshot', ignoreDOM : {cssSelector:["<CSS Selector>"]} }})}`)
+    `lambdatest_action: ${JSON.stringify({ action: 'smartui.takeScreenshot', arguments: { fullPage: false, screenshotName: 'dom-screenshot', ignoreDOM : {cssSelector:["<CSS Selector>"]} }})}`)
 ```
 
 ```js title="This is a sample for your webhook configuration for Playwright"
 await page.evaluate((_) => {},
-`lambdatest_action: ${JSON.stringify({ action: 'smartui.takeScreenshot', arguments: { fullPage: false, screenshotName: 'dom-screenshot', selectDOM : {id:["HTML DOM Id"]} }})}`)
+    `lambdatest_action: ${JSON.stringify({ action: 'smartui.takeScreenshot', arguments: { fullPage: false, screenshotName: 'dom-screenshot', selectDOM : {id:["HTML DOM Id"]} }})}`)
 ```
 
 ```js title="This is a sample for your webhook configuration for Playwright"
 await page.evaluate((_) => {},
-`lambdatest_action: ${JSON.stringify({ action: 'smartui.takeScreenshot', arguments: { fullPage: false, screenshotName: 'dom-screenshot', selectDOM : {class:["<CSS Class>"]} }})}`)
+    `lambdatest_action: ${JSON.stringify({ action: 'smartui.takeScreenshot', arguments: { fullPage: false, screenshotName: 'dom-screenshot', selectDOM : {class:["<CSS Class>"]} }})}`)
 ```
 
 ```js title="This is a sample for your webhook configuration for Playwright"
 await page.evaluate((_) => {},
-`lambdatest_action: ${JSON.stringify({ action: 'smartui.takeScreenshot', arguments: { fullPage: false, screenshotName: 'dom-screenshot',  selectXPath: ['Xpath-1', 'Xpath-2']} })}`)
+    `lambdatest_action: ${JSON.stringify({ action: 'smartui.takeScreenshot', arguments: { fullPage: false, screenshotName: 'dom-screenshot',  selectXPath: ['Xpath-1', 'Xpath-2']} })}`)
 ```
 
 ```js title="This is a sample for your webhook configuration for Playwright"
 await page.evaluate((_) => {},
-`lambdatest_action: ${JSON.stringify({ action: 'smartui.takeScreenshot', arguments: { fullPage: false, screenshotName: 'dom-screenshot', selectDOM : {cssSelector:["<CSS Selector>"]} }})}`)
+    `lambdatest_action: ${JSON.stringify({ action: 'smartui.takeScreenshot', arguments: { fullPage: false, screenshotName: 'dom-screenshot', selectDOM : {cssSelector:["<CSS Selector>"]} }})}`)
 ```

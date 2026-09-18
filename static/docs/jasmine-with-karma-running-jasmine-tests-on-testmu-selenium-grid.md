@@ -48,18 +48,18 @@ Update the capabilities in the `karma.conf.js` file to define the browser and pl
 
 ``` js
 customLaunchers: {
-chrome: {
-base: 'WebDriver',
-config: webdriverConfig,
-browserName: 'chrome',
-platform: 'windows 10',
-version: '71.0',
-name: 'Karma With Heartbeat',
-user: process.env.LT_USERNAME,
-accessKey: process.env.LT_ACCESS_KEY,
-pseudoActivityInterval: 15000 // 15000 ms heartbeat to avoid timeouts
-}
-}
+        chrome: {
+             base: 'WebDriver',
+             config: webdriverConfig,
+             browserName: 'chrome',
+             platform: 'windows 10',
+             version: '71.0',
+             name: 'Karma With Heartbeat',
+             user: process.env.LT_USERNAME,
+             accessKey: process.env.LT_ACCESS_KEY,
+             pseudoActivityInterval: 15000 // 15000 ms heartbeat to avoid timeouts
+        }
+    }
 ```
 
 Generate capabilities for your test requirements with the [Capabilities Generator](https://www.testmuai.com/capabilities-generator/).

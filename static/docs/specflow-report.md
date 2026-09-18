@@ -16,9 +16,9 @@ This technical document provides a guide on generating SpecFlow reports after ex
 ```yaml
 report: true
 partialReports:
-location: YOUR_REPORTS_LOCATION
-type: html
-frameworkName: specflow
+  location: YOUR_REPORTS_LOCATION
+  type: html
+  frameworkName: specflow
 ```
 
 **Step 3:** Now execute your job by triggering the HyperExecute CLI. You can visit the HyperExecute dashboard to download the report after job completion.

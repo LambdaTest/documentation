@@ -69,9 +69,9 @@ browserOptions.BrowserVersion = "latest";
 
 var ltOptions = new Dictionary<string, object>
 {
-{ "build", "SpecFlow Build" },
-{ "name", "SpecFlow Test" },
-{ "w3c", true }
+    { "build", "SpecFlow Build" },
+    { "name", "SpecFlow Test" },
+    { "w3c", true }
 };
 browserOptions.AddAdditionalOption("LT:Options", ltOptions);
 ```

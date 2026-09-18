@@ -92,8 +92,8 @@ curl -u "LT_USERNAME:LT_ACCESS_KEY"   -X POST "https://api.lambdatest.com/mfs/v1
 
 ```json
 {
-"media_url": "lt://MEDIAID",
-"status": "success"
+  "media_url": "lt://MEDIAID",
+  "status": "success"
 }
 ```
 
@@ -111,17 +111,17 @@ caps.setCapability("media", "lt://MEDIA1234567890abcdef"); // optional: pre-set 
 
 ```python
 desired_caps = {
-"enableAudioInjection": True,
-"media": "lt://MEDIA1234567890abcdef",  # optional
-# ... other capabilities
+    "enableAudioInjection": True,
+    "media": "lt://MEDIA1234567890abcdef",  # optional
+    # ... other capabilities
 }
 ```
 
 ```javascript
 const capabilities = {
-enableAudioInjection: true,
-media: "lt://MEDIA1234567890abcdef", // optional
-// ... other capabilities
+  enableAudioInjection: true,
+  media: "lt://MEDIA1234567890abcdef", // optional
+  // ... other capabilities
 };
 ```
 

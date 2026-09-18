@@ -52,13 +52,13 @@ curl --location --request POST 'https://mobile-api.lambdatest.com/framework/v1/f
 --header 'Authorization: Basic <Enter_Basic_Auth>' \
 --header 'Content-Type: application/json' \
 --data-raw '{
-"testSuite": "lt://App_id",
-"device": ["iPhone.*-16"],
-"video": true,
-"deviceLog": true,
-"queueTimeout": 9000,
-"network": true,
-"build": "Flutter iOS"
+    "testSuite": "lt://App_id",
+    "device": ["iPhone.*-16"],
+    "video": true,
+    "deviceLog": true,
+    "queueTimeout": 9000,
+    "network": true,
+    "build": "Flutter iOS"
 }'
 ```
 
@@ -98,13 +98,13 @@ curl --location --request POST 'https://mobile-api.lambdatest.com/framework/v1/f
 --header 'Authorization: Basic <Enter_Basic_Auth>' \
 --header 'Content-Type: application/json' \
 --data-raw '{
-"testSuite": "lt://App_id",
-"device": ["iPhone.*-16","iPhone 14-16","iPhone 15-17"],
-"video": true,
-"deviceLog": true,
-"queueTimeout": 9000,
-"network": true,
-"build": "Flutter iOS - Parallel"
+    "testSuite": "lt://App_id",
+    "device": ["iPhone.*-16","iPhone 14-16","iPhone 15-17"],
+    "video": true,
+    "deviceLog": true,
+    "queueTimeout": 9000,
+    "network": true,
+    "build": "Flutter iOS - Parallel"
 }'
 ```
 
@@ -120,8 +120,8 @@ The flutter-testing-skill package includes:
 flutter-testing-skill/
 ├── SKILL.md
 └── reference/
-├── playbook.md
-└── advanced-patterns.md
+    ├── playbook.md
+    └── advanced-patterns.md
 ```
 
 It provides structured guidance for:

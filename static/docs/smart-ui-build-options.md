@@ -45,15 +45,15 @@ If you have multiple screenshots running the same test suite and want to run the
 
 ```js title="Please add the following to your capabilities configuration"
 let capabilities = {
-// highlight-next-line
-"smartUI.build": <Your_Build_Name> // Please add your build name of choice here
+    // highlight-next-line
+    "smartUI.build": <Your_Build_Name> // Please add your build name of choice here
 }
 ```
 
 ```json title="Please make the changes in lambdatest-config.json"
 "smart_ui": {
-// highlight-next-line
-"build": <Your_Build_Name> // Please add your build name of choice here
+    // highlight-next-line
+      "build": <Your_Build_Name> // Please add your build name of choice here
 }
 ```
 
@@ -61,8 +61,8 @@ let capabilities = {
 
 const capabilities = {
 'LT:Options': {
-// highlight-next-line
-"smartUIBuildName": <Your_Build_Name> // Please add your build name of choice here
+    // highlight-next-line
+      "smartUIBuildName": <Your_Build_Name> // Please add your build name of choice here
 
 }}
 ```
@@ -71,8 +71,8 @@ const capabilities = {
 
 const capabilities = {
 'LT:Options': {
-// highlight-next-line
-"smartUIBuildName": <Your_Build_Name> // Please add your build name of choice here
+    // highlight-next-line
+      "smartUIBuildName": <Your_Build_Name> // Please add your build name of choice here
 
 }}
 ```
@@ -81,8 +81,8 @@ const capabilities = {
 
 const capabilities = {
 'LT:Options': {
-// highlight-next-line
-"smartUIBuildName": <Your_Build_Name> // Please add your build name of choice here
+    // highlight-next-line
+      "smartUIBuildName": <Your_Build_Name> // Please add your build name of choice here
 
 }}
 ```
@@ -93,15 +93,15 @@ If you want to mark your build as a baseline from your test suite while executin
 
 ```js title="Please add the following to your capabilities configuration"
 let capabilities = {
-// highlight-next-line
-"smartUI.baseline": true / false, // Enable if you want to update to a new baseline build
+  // highlight-next-line
+  "smartUI.baseline": true / false, // Enable if you want to update to a new baseline build
 };
 ```
 
 ```json title="Please make the changes in lambdatest-config.json"
 "smart_ui": {
-// highlight-next-line
-"baseline": true/false // Enable if you want to update to a new baseline build
+    // highlight-next-line
+      "baseline": true/false // Enable if you want to update to a new baseline build
 }
 ```
 
@@ -109,8 +109,8 @@ let capabilities = {
 
 const capabilities = {
 'LT:Options': {
-// highlight-next-line
-"smartUIBaseline": true // Please add if you want to make this build as baseline
+    // highlight-next-line
+      "smartUIBaseline": true // Please add if you want to make this build as baseline
 
 }}
 ```
@@ -119,8 +119,8 @@ const capabilities = {
 
 const capabilities = {
 'LT:Options': {
-// highlight-next-line
-"smartUIBaseline": true // Please add if you want to make this build as baseline
+    // highlight-next-line
+      "smartUIBaseline": true // Please add if you want to make this build as baseline
 
 }}
 ```
@@ -129,8 +129,8 @@ const capabilities = {
 
 const capabilities = {
 'LT:Options': {
-// highlight-next-line
-"smartUIBaseline": true // Please add if you want to make this build as baseline
+    // highlight-next-line
+      "smartUIBaseline": true // Please add if you want to make this build as baseline
 
 }}
 ```

@@ -38,23 +38,23 @@ Use the `enablePasscode` capability to configure passcode-protected devices duri
 
 ```python
 {
-"platformName": "ios",
-"deviceName": "iPhone 16",
-"platformVersion": "18",
-"isRealMobile": True,
-#highlight-next-line
-"enablePasscode": True
+    "platformName": "ios",
+    "deviceName": "iPhone 16",
+    "platformVersion": "18",
+    "isRealMobile": True,
+    #highlight-next-line
+    "enablePasscode": True
 }
 ```
 
 ```python
 {
-"platformName": "android",
-"deviceName": "Samsung Galaxy S25",
-"platformVersion": "15",
-"isRealMobile": True,
-#highlight-next-line
-"enablePasscode": True
+    "platformName": "android",
+    "deviceName": "Samsung Galaxy S25",
+    "platformVersion": "15",
+    "isRealMobile": True,
+    #highlight-next-line
+    "enablePasscode": True
 }
 ```
 

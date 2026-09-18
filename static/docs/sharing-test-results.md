@@ -185,7 +185,7 @@ byte[] hashBytes = System.Security.Cryptography.MD5.Create().ComputeHash(inputBy
 StringBuilder sb = new StringBuilder();
 for (int i = 0; i < hashBytes.Length; i++)
 {
-sb.Append(hashBytes[i].ToString("X2"));
+    sb.Append(hashBytes[i].ToString("X2"));
 }
 Console.WriteLine("AUTH_TOKEN: " + sb.ToString());
 ```

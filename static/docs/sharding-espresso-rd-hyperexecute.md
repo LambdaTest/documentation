@@ -138,48 +138,48 @@ autosplit: false
 globalTimeout: 180 #MAXQUEUETIMEOUT
 
 framework:
-name: "android/espresso"
-args:
-buildName: "Espresso"
-video: true
-deviceLog: true
+  name: "android/espresso"
+  args:
+    buildName: "Espresso"
+    video: true
+    deviceLog: true
 
-# You can use either the appId (lt://APP1234567) or provide the path of the application using appPath.
-# Both examples are given below.
+    # You can use either the appId (lt://APP1234567) or provide the path of the application using appPath.
+    # Both examples are given below.
 
-appPath: Proverbial.apk
-testSuitePath: ProverbialExpressoTest.apk
-# We have used the appPath and testSuitePath here.
+    appPath: Proverbial.apk
+    testSuitePath: ProverbialExpressoTest.apk
+    # We have used the appPath and testSuitePath here.
 
-appId: lt://APP1016025651781520733656681
-testSuiteAppId: lt://APP10160332171784881008900412
-# We have used the appId and testSuiteAppID here.
+    appId: lt://APP1016025651781520733656681
+    testSuiteAppId: lt://APP10160332171784881008900412
+    # We have used the appId and testSuiteAppID here.
 
-deviceSelectionStrategy: all
-devices: ["Galaxy.*", "Pixel.*"]
+    deviceSelectionStrategy: all
+    devices: ["Galaxy.*", "Pixel.*"]
 
-shards:
-mappings:
-- name: shard1
-strategy: "class"
-values:
-- "com.lambdatest.proverbial.BrowserTest"
-# The strategy for this shard is based on "class".
-# This shard will run all tests from the class com.lambdatest.proverbial.BrowserTest.
+    shards:
+      mappings:
+        - name: shard1
+          strategy: "class"
+          values:
+            - "com.lambdatest.proverbial.BrowserTest"
+        # The strategy for this shard is based on "class".
+        # This shard will run all tests from the class com.lambdatest.proverbial.BrowserTest.
 
-- name: shard2
-strategy: "package"
-values:
-- "com.lambdatest.proverbial"
-# The strategy for this shard is based on "package".
-# This shard will run all tests that belong to the package com.lambdatest.proverbial.
+        - name: shard2
+          strategy: "package"
+          values:
+            - "com.lambdatest.proverbial"
+        # The strategy for this shard is based on "package".
+        # This shard will run all tests that belong to the package com.lambdatest.proverbial.
 
-- name: shard3
-strategy: "skipClass"
-values:
-- "com.lambdatest.proverbial.BrowserTest"
-# The strategy for this shard is to skip a specific class.
-# This shard will avoid running tests from the class com.lambdatest.proverbial.BrowserTest.
+        - name: shard3
+          strategy: "skipClass"
+          values:
+            - "com.lambdatest.proverbial.BrowserTest"
+        # The strategy for this shard is to skip a specific class.
+        # This shard will avoid running tests from the class com.lambdatest.proverbial.BrowserTest.
 ```
 
 ```yaml title="SampleYamlFile.yaml"
@@ -195,51 +195,51 @@ autosplit: false
 globalTimeout: 180 #MAXQUEUETIMEOUT
 
 framework:
-name: "android/espresso"
-args:
-buildName: "Espresso"
-video: true
-deviceLog: true
+  name: "android/espresso"
+  args:
+    buildName: "Espresso"
+    video: true
+    deviceLog: true
 
-# You can use either the appId (lt://APP1234567) or provide the path of the application using appPath.
-# Both examples are given below.
+    # You can use either the appId (lt://APP1234567) or provide the path of the application using appPath.
+    # Both examples are given below.
 
-appPath: Proverbial.apk
-testSuitePath: ProverbialExpressoTest.apk
-# We have used the appPath and testSuitePath here.
+    appPath: Proverbial.apk
+    testSuitePath: ProverbialExpressoTest.apk
+    # We have used the appPath and testSuitePath here.
 
-appId: lt://APP1016025651781520733656681
-testSuiteAppId: lt://APP10160332171784881008900412
-# We have used the appId and testSuiteAppID here.
+    appId: lt://APP1016025651781520733656681
+    testSuiteAppId: lt://APP10160332171784881008900412
+    # We have used the appId and testSuiteAppID here.
 
-deviceSelectionStrategy: all
-devices: ["Galaxy.*", "Pixel.*"]
+    deviceSelectionStrategy: all
+    devices: ["Galaxy.*", "Pixel.*"]
 
-#highlight-next-line
-isVirtualDevice: true
+    #highlight-next-line
+    isVirtualDevice: true
 
-shards:
-mappings:
-- name: shard1
-strategy: "class"
-values:
-- "com.lambdatest.proverbial.BrowserTest"
-# The strategy for this shard is based on "class".
-# This shard will run all tests from the class com.lambdatest.proverbial.BrowserTest.
+    shards:
+      mappings:
+        - name: shard1
+          strategy: "class"
+          values:
+            - "com.lambdatest.proverbial.BrowserTest"
+        # The strategy for this shard is based on "class".
+        # This shard will run all tests from the class com.lambdatest.proverbial.BrowserTest.
 
-- name: shard2
-strategy: "package"
-values:
-- "com.lambdatest.proverbial"
-# The strategy for this shard is based on "package".
-# This shard will run all tests that belong to the package com.lambdatest.proverbial.
+        - name: shard2
+          strategy: "package"
+          values:
+            - "com.lambdatest.proverbial"
+        # The strategy for this shard is based on "package".
+        # This shard will run all tests that belong to the package com.lambdatest.proverbial.
 
-- name: shard3
-strategy: "skipClass"
-values:
-- "com.lambdatest.proverbial.BrowserTest"
-# The strategy for this shard is to skip a specific class.
-# This shard will avoid running tests from the class com.lambdatest.proverbial.BrowserTest.
+        - name: shard3
+          strategy: "skipClass"
+          values:
+            - "com.lambdatest.proverbial.BrowserTest"
+        # The strategy for this shard is to skip a specific class.
+        # This shard will avoid running tests from the class com.lambdatest.proverbial.BrowserTest.
 ```
 
 **When shards are added**
@@ -268,25 +268,25 @@ autosplit: true
 globalTimeout: 180 #MAXQUEUETIMEOUT
 
 framework:
-name: "android/espresso"
-args:
-buildName: "Espresso"
-video: true
-deviceLog: true
+  name: "android/espresso"
+  args:
+    buildName: "Espresso"
+    video: true
+    deviceLog: true
 
-# You can use either the appId (lt://APP1234567) or provide the path of the application using appPath.
-# Both examples are given below.
+    # You can use either the appId (lt://APP1234567) or provide the path of the application using appPath.
+    # Both examples are given below.
 
-appPath: Proverbial.apk
-testSuitePath: ProverbialExpressoTest.apk
-# We have used the appPath and testSuitePath here.
+    appPath: Proverbial.apk
+    testSuitePath: ProverbialExpressoTest.apk
+    # We have used the appPath and testSuitePath here.
 
-appId: lt://APP1016025651781520733656681
-testSuiteAppId: lt://APP10160332171784881008900412
-# We have used the appId and testSuiteAppID here.
+    appId: lt://APP1016025651781520733656681
+    testSuiteAppId: lt://APP10160332171784881008900412
+    # We have used the appId and testSuiteAppID here.
 
-deviceSelectionStrategy: all
-devices: ["Galaxy.*", "Pixel.*"]
+    deviceSelectionStrategy: all
+    devices: ["Galaxy.*", "Pixel.*"]
 ```
 
 ```yaml title="SampleYamlFile.yaml"
@@ -302,28 +302,28 @@ autosplit: true
 globalTimeout: 180 #MAXQUEUETIMEOUT
 
 framework:
-name: "android/espresso"
-args:
-buildName: "Espresso"
-video: true
-deviceLog: true
+  name: "android/espresso"
+  args:
+    buildName: "Espresso"
+    video: true
+    deviceLog: true
 
-# You can use either the appId (lt://APP1234567) or provide the path of the application using appPath.
-# Both examples are given below.
+    # You can use either the appId (lt://APP1234567) or provide the path of the application using appPath.
+    # Both examples are given below.
 
-appPath: Proverbial.apk
-testSuitePath: ProverbialExpressoTest.apk
-# We have used the appPath and testSuitePath here.
+    appPath: Proverbial.apk
+    testSuitePath: ProverbialExpressoTest.apk
+    # We have used the appPath and testSuitePath here.
 
-appId: lt://APP1016025651781520733656681
-testSuiteAppId: lt://APP10160332171784881008900412
-# We have used the appId and testSuiteAppID here.
+    appId: lt://APP1016025651781520733656681
+    testSuiteAppId: lt://APP10160332171784881008900412
+    # We have used the appId and testSuiteAppID here.
 
-#highlight-next-line
-isVirtualDevice: true
+    #highlight-next-line
+    isVirtualDevice: true
 
-deviceSelectionStrategy: all
-devices: ["Galaxy.*", "Pixel.*"]
+    deviceSelectionStrategy: all
+    devices: ["Galaxy.*", "Pixel.*"]
 ```
 
 **When shards aren't added**
@@ -361,11 +361,11 @@ You can filter the Classes / Tests that you'd like to execute using filters. Her
 
 ```java
 filters:
-attributes:
-- type: class
-values: ["com.lambdatest.proverbial.BrowserTest","com.lambdatest.proverbial.MainActivityTest"]
-- type: package
-values: ["com.lambdatest.proverbial"]
+      attributes:
+      - type: class
+        values: ["com.lambdatest.proverbial.BrowserTest","com.lambdatest.proverbial.MainActivityTest"]
+      - type: package
+        values: ["com.lambdatest.proverbial"]
 ```
 
 This example will fetch all the test cases from 2 classes and 1 package as defined above and divide them with respect to concurrency given in the yaml file.
@@ -376,9 +376,9 @@ You can also filter your Espresso tests based on annotations while using shardin
 
 ```yaml
 filters:
-attributes:
-- type: annotation
-values: ["com.lambdatest.proverbial.demo1", "com.lambdatest.proverbial.demo2"]
+      attributes:
+      - type: annotation
+        values: ["com.lambdatest.proverbial.demo1", "com.lambdatest.proverbial.demo2"]
 ```
 
 This configuration will run tests annotated with multiple annotations, i.e., only the intersection of all mentioned annotations will be considered.
@@ -389,10 +389,10 @@ To generate artifacts for your Espresso tests, add the `artifacts: true`, and `r
 ```yaml
 report: true
 framework:
-name: "android/espresso"
-args:
-artifacts: true
-...//
+  name: "android/espresso"
+  args:
+    artifacts: true
+    ...//
 ```
 
 To download these artifacts in your local machine, you can pass the `--download-artifacts` and `--download-report` flag with the CLI command to execute the tests as shown in the next step.

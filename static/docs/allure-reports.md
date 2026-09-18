@@ -14,11 +14,11 @@ If your testing framework already generates Allure reports, you can seamlessly i
 
 ```javascript title="wdio.conf.js"
 export const config = {
-reporters: [['allure', {
-outputDir: 'reports/allure-results',
-disableWebdriverStepsReporting: true,
-disableWebdriverScreenshotsReporting: true,
-}]],
+    reporters: [['allure', {
+        outputDir: 'reports/allure-results',
+        disableWebdriverStepsReporting: true,
+        disableWebdriverScreenshotsReporting: true,
+    }]],
 }
 ```
 - The `outputDir` parameter specifies the directory where Allure reports will be stored. In this example, it is set to **'reports/allure-results'**. This parent folder is essential for HyperExecute integration, as detailed later.
@@ -36,9 +36,9 @@ allure.results.directory=reports/allure-results
 ```yaml
 report: true
 partialReports:
-location: reports
-type: html
-frameworkName: allure
+  location: reports
+  type: html
+  frameworkName: allure
 ```
 
 > **NOTE:** The above example is only for the WDIO framework and the baseline concept remains the same across all the frameworks that the allure-results should be saved in a parent folder and that location of the parent folder is to be provided in the location parameters of reports in the HyperExecute YAML file.
@@ -50,11 +50,11 @@ To achieve this, you can use `configPath` flag within HyperExecute YAML. This sp
 ```bash
 report: true
 partialReports:
-location: reports
-# highlight-next-line
-configPath: allure-config.yml
-type: html
-frameworkName: allure
+  location: reports
+  # highlight-next-line
+  configPath: allure-config.yml
+  type: html
+  frameworkName: allure
 ```
 
 ## Allure Test Insights

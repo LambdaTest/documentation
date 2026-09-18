@@ -60,26 +60,26 @@ Here **'my-image'** is the name of the image which will be rendered on the Dashb
 
 ```bash
 cypressOps:
-Build: "test_01"
-Tags: ["smart-ui", "hyperexecute", "cypress"]
-BuildTags: ["t1"]
-smartUICaps:
-# highlight-next-line
-smartUIProjectName: <Enter your Project Name>
-smartUIOptions:
-output:
-errorColor:
-red: 0
-green: 200
-blue: 0
-errorType: flat,
-transparency: 1,
-largeImageThreshold: 100,
-useCrossOrigin: false,
-outputDiff: true
-scaleToSameSize: true,
-ignore: antialiasing
-SmartUIBaseline: true
+    Build: "test_01"
+    Tags: ["smart-ui", "hyperexecute", "cypress"]
+    BuildTags: ["t1"]
+    smartUICaps:
+    # highlight-next-line
+        smartUIProjectName: <Enter your Project Name>
+        smartUIOptions:
+            output:
+                errorColor:
+                    red: 0
+                    green: 200
+                    blue: 0
+                errorType: flat,
+                transparency: 1,
+                largeImageThreshold: 100,
+                useCrossOrigin: false,
+                outputDiff: true
+            scaleToSameSize: true,
+            ignore: antialiasing
+        SmartUIBaseline: true
 ```
 
 ## Step 3: Execute your Project and Compare the Results

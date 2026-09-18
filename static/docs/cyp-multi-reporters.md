@@ -25,18 +25,18 @@ Create a file with the name `reporter-config_mochawesome_junit.json` and copy th
 
 ```bash
 {
-"reporterEnabled": "mochawesome,mocha-junit-reporter",
-"mochawesomeReporterOptions": {
-"reportDir": "cypress/results/json",
-"overwrite": true,
-"html": true,
-"json": true
-},
-"mochaJunitReporterReporterOptions": {
-"mochaFile": "cypress/results/my-test-output.xml",
-"toConsole": true
-}
-}
+    "reporterEnabled": "mochawesome,mocha-junit-reporter",
+    "mochawesomeReporterOptions": {
+        "reportDir": "cypress/results/json",
+        "overwrite": true,
+        "html": true,
+		"json": true
+    },
+    "mochaJunitReporterReporterOptions": {
+        "mochaFile": "cypress/results/my-test-output.xml",
+        "toConsole": true
+    }
+  }
 ```
 
 #### Step 3

@@ -35,7 +35,7 @@ In your Flutter app’s `pubspec.yaml`, add:
 
 ```yaml
 dev_dependencies:
-appium_flutter_server: 0.0.28
+  appium_flutter_server: 0.0.28
 ```
 
 ### 2. Create integration test files
@@ -47,7 +47,7 @@ import 'package:appium_flutter_server/appium_flutter_server.dart';
 import 'package:your_app_package/main.dart'; // Replace with your app's main.dart import
 
 void main() {
-initializeTest(app: const MyApp());
+  initializeTest(app: const MyApp());
 }
 ```
 
@@ -57,12 +57,12 @@ Or with setup callback:
 import 'package:your_app_package/main.dart' as app;
 
 void main() {
-initializeTest(
-callback: (WidgetTester tester) async {
-// Add prerequisite setup here
-await tester.pumpWidget(const app.MyApp());
-},
-);
+  initializeTest(
+    callback: (WidgetTester tester) async {
+      // Add prerequisite setup here
+      await tester.pumpWidget(const app.MyApp());
+    },
+  );
 }
 ```
 

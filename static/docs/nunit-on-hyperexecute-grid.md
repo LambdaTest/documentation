@@ -139,35 +139,35 @@ project: NUnitHyperTestDemo/NUnitHyperTestDemo.csproj
 solution: NUnitHyperTestDemo.sln
 
 env:
-NUGET_PACKAGES: '/home/ltuser/.nuget/packages/'
-NUGET_HTTP_CACHE_PATH: '/home/ltuser/.local/share/NuGet/v3-cache'
-NUGET_PLUGINS_CACHE_PATH: '/home/ltuser/.local/share/NuGet/plugins-cache'
+  NUGET_PACKAGES: '/home/ltuser/.nuget/packages/'
+  NUGET_HTTP_CACHE_PATH: '/home/ltuser/.local/share/NuGet/v3-cache'
+  NUGET_PLUGINS_CACHE_PATH: '/home/ltuser/.local/share/NuGet/plugins-cache'
 
 pre:
-- dotnet restore
-- dotnet list $project package > packages.txt
-- dotnet build -c Release
+ - dotnet restore
+ - dotnet list $project package > packages.txt
+ - dotnet build -c Release
 
 post:
-- cat yaml/linux/nunit_hyperexecute_autosplit_sample.yaml
+  - cat yaml/linux/nunit_hyperexecute_autosplit_sample.yaml
 
 mergeArtifacts: true
 
 uploadArtefacts:
-- name: ExecutionSnapshots
-path:
-- NUnitHyperTestDemo/Reports/**
+  - name: ExecutionSnapshots
+    path:
+     - NUnitHyperTestDemo/Reports/**
 
 report: true
 partialReports:
-type: json
-location: NUnitHyperTestDemo/
-frameworkName: extent
+    type: json
+    location: NUnitHyperTestDemo/
+    frameworkName: extent
 
 testDiscovery:
-type: raw
-mode: remote
-command: grep 'Category' NUnitHyperTestDemo -ir --include=\*.cs --exclude=DriverFactory.cs --exclude=HyperTestDemo.AssemblyInfo.cs | awk '{print$2}' | grep -o '".*"'
+  type: raw
+  mode: remote
+  command: grep 'Category' NUnitHyperTestDemo -ir --include=\*.cs --exclude=DriverFactory.cs --exclude=HyperTestDemo.AssemblyInfo.cs | awk '{print$2}' | grep -o '".*"'
 
 testRunnerCommand: dotnet test $solution --filter TestCategory=$test
 
@@ -235,8 +235,8 @@ The nunit-skill package includes:
 nunit-skill/
 ├── SKILL.md
 └── reference/
-├── playbook.md
-└── advanced-patterns.md
+    ├── playbook.md
+    └── advanced-patterns.md
 ```
 
 It provides structured guidance for:

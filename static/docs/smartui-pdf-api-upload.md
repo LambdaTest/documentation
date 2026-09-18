@@ -50,11 +50,11 @@ Here's a sample API request using cURL:
 
 ```bash
 curl -X POST "YOUR_API_ENDPOINT" \
--H "Content-Type: multipart/form-data" \
--F "projectToken=123456#1234abcd-****-****-****-************" \
--F "pathToFiles[]=path/to/document1.pdf" \
--F "pathToFiles[]=path/to/document2.pdf" \
--F "buildName=Release-v2.1"
+  -H "Content-Type: multipart/form-data" \
+  -F "projectToken=123456#1234abcd-****-****-****-************" \
+  -F "pathToFiles[]=path/to/document1.pdf" \
+  -F "pathToFiles[]=path/to/document2.pdf" \
+  -F "buildName=Release-v2.1"
 ```
 
 ## Response Format

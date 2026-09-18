@@ -91,65 +91,65 @@ version: 2
 
 jobs:
 
-build:
+  build:
 
-docker:
+    docker:
 
-# specify the version you desire here
+      # specify the version you desire here
 
-- image: circleci/node:7.10
+      - image: circleci/node:7.10
 
-# Specify service dependencies here if necessary
+      # Specify service dependencies here if necessary
 
-# CircleCI maintains a library of pre-built images
+      # CircleCI maintains a library of pre-built images
 
-# documented at https://circleci.com/docs/2.0/circleci-images/
+      # documented at https://circleci.com/docs/2.0/circleci-images/
 
-# the working dir is github repo that you need to fork to become owner.
+      # the working dir is github repo that you need to fork to become owner.
 
-working_directory: ~/nightwatch-saple-for-circleci
+    working_directory: ~/nightwatch-saple-for-circleci
 
-steps:
+    steps:
 
-- checkout
+      - checkout
 
-- run:
+      - run:
 
-name: "Setup custom environment variables // its your workflow step"
+          name: "Setup custom environment variables // its your workflow step"
 
-command: |
+          command: |
 
-echo 'export LT_USERNAME="{your_lambdatest_username}"' >> $BASH_ENV
+            echo 'export LT_USERNAME="{your_lambdatest_username}"' >> $BASH_ENV
 
-- run:
+      - run:
 
-name: "Setup custom environment variables"
+          name: "Setup custom environment variables"
 
-command: |
+          command: |
 
-echo 'export LT_ACCESS_KEY="{your_lambda_access_key}"' >> $BASH_ENV
+            echo 'export LT_ACCESS_KEY="{your_lambda_access_key}"' >> $BASH_ENV
 
-- run: # Validating your above mentioned environment variables
+      - run: # Validating your above mentioned environment variables
 
-name: "Here is the LT_Username : "
+          name: "Here is the LT_Username : "
 
-command: echo ${LT_USERNAME}
+          command: echo ${LT_USERNAME}
 
-# Download and cache dependencies
+      # Download and cache dependencies
 
-- restore_cache:
+      - restore_cache:
 
-keys:
+          keys:
 
-- v1-dependencies-{{ checksum "package.json" }}
+            - v1-dependencies-{{ checksum "package.json" }}
 
-# fallback to using the latest cache if no exact match is found
+            # fallback to using the latest cache if no exact match is found
 
-- run: npm install
+      - run: npm install
 
-# run tests!
+      # run tests!
 
-- run: node_modules/.bin/nightwatch -e chrome // Executing test in bash.
+      - run: node_modules/.bin/nightwatch -e chrome // Executing test in bash.
 ```
 
 TestMu AI offers a [Selenium Desired Capabilities Generator](https://www.testmuai.com/capabilities-generator/) to fetch coded values for your desired test configurations.
@@ -168,15 +168,15 @@ Then Capabilities Generator at TestMu AI will provide you with the below program
 
 ```
 var capabilities = {
-"build" : "your build name", //You can edit this and assign a build name
-"name" : "your test name", // Assign a name to your Test
-"platform" : "Windows 8.1", // The operating system on which you want to test your website
-"browserName" : "Firefox", // The browser on which you want to test
-"version" : "62.0", // The browser version which you've selected to perform the test upon
-"resolution" : "1280x1024", // The resolution in which you want to run the test as per your operating system
-"selenium_version" : "3.11.0", //The version of Selenium on which the test will run
-"visual" : true,
-"firefox.driver" : v0.21.0
+    "build" : "your build name", //You can edit this and assign a build name
+    "name" : "your test name", // Assign a name to your Test
+    "platform" : "Windows 8.1", // The operating system on which you want to test your website
+    "browserName" : "Firefox", // The browser on which you want to test
+    "version" : "62.0", // The browser version which you've selected to perform the test upon
+    "resolution" : "1280x1024", // The resolution in which you want to run the test as per your operating system
+    "selenium_version" : "3.11.0", //The version of Selenium on which the test will run
+    "visual" : true,
+    "firefox.driver" : v0.21.0
 }
 ```
 
@@ -206,70 +206,70 @@ The below example of *config.yml* file would demonstrate to you how to leverage 
 #
 version: 2
 jobs:
-build:
-docker:
-# specify the version you desire here
-- image: circleci/node:7.10
+ build:
+   docker:
+     # specify the version you desire here
+     - image: circleci/node:7.10
 
-# Specify service dependencies here if necessary
-working_directory: ~/Nightwatch-circleci-selenium
+     # Specify service dependencies here if necessary
+     working_directory: ~/Nightwatch-circleci-selenium
 
-steps:
-- checkout
-- run:
-name: "Downloading tunnel binary"
-command: |
-wget https://downloads.lambdatest.com/tunnel/v3/linux/64bit/LT_Linux.zip
+     steps:
+      - checkout
+      - run:
+           name: "Downloading tunnel binary"
+          command: |
+          wget https://downloads.lambdatest.com/tunnel/v3/linux/64bit/LT_Linux.zip
 
-- run:
-name: "Extracting tunnel binary"
-command: |
-sudo apt-get install unzip
-unzip LT_Linux.zip
+      - run:
+           name: "Extracting tunnel binary"
+          command: |
+          sudo apt-get install unzip
+          unzip LT_Linux.zip
 
-- run:
-name: "Executing tunnel binary"
-background: true
-command: |
-./LT -user ${LAMBDATEST_EMAIL} -key ${LAMBDATEST_KEY}
-sleep 40
+      - run:
+           name: "Executing tunnel binary"
+          background: true
+          command: |
+            ./LT -user ${LAMBDATEST_EMAIL} -key ${LAMBDATEST_KEY}
+            sleep 40
 
-- run:
-name: "Setup custom environment variables"
-command: |
-echo 'export LT_USERNAME="${LAMBDATEST_USERNAME}"' >> $BASH_ENV
+      - run:
+           name: "Setup custom environment variables"
+          command: |
+            echo 'export LT_USERNAME="${LAMBDATEST_USERNAME}"' >> $BASH_ENV
 
-- run:
-name: "Setup custom environment variables"
-command: |
-echo 'export LT_ACCESS_KEY="${LAMBDATEST_ACCESS_KEY}"' >> $BASH_ENV
+      - run:
+          name: "Setup custom environment variables"
+          command: |
+            echo 'export LT_ACCESS_KEY="${LAMBDATEST_ACCESS_KEY}"' >> $BASH_ENV
 
-- run: # test what branch we're on.
-name: "Here is the LT_Username : "
-command: echo ${LT_USERNAME}
+      - run: # test what branch we're on.
+          name: "Here is the LT_Username : "
+          command: echo ${LT_USERNAME}
 
 # Download and cache dependencies
 #    - restore_cache:
 #        keys:
 #          - v1-dependencies-{{ checksum "package.json" }}
-# fallback to using the latest cache if no exact match is found
+        # fallback to using the latest cache if no exact match is found
 
-- run: npm install
+        - run: npm install
 #      - save_cache:
 #        paths:
 #      - node_modules
 #        key: v1-dependencies-{{ checksum "package.json" }}
 
-# run tests!
-- run: node_modules/.bin/nightwatch -e chrome
+    # run tests!
+      - run: node_modules/.bin/nightwatch -e chrome
 ```
 
 Once the tunnel is successfully set up. You can add the below code to your capabilities for testing internal servers on your network.
 
 ```
 "desiredCapabilities": {
-"tunnel":true
-}
+       "tunnel":true
+     }
 ```
 
 ## Parallel Testing

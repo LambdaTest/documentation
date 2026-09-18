@@ -89,47 +89,47 @@ testSuiteStep: 10
 
 # Environment variables available to both mock servers and Robot Framework suites
 env:
-FNB_MOCK_PORT: "3271"         # ASCII mock server port
-MAINFRAME_HOST: "127.0.0.1"
-MAINFRAME_PORT: "3270"        # TN3270 mock server port (headless s3270 track)
-MAINFRAME_GUI_PORT: "3272"    # TN3270 mock server port (GUI x3270 track)
-MAINFRAME_USER: "MOCKUSER"
-MAINFRAME_PASS: "MOCKPASS"
-DEBIAN_FRONTEND: "noninteractive"  # Prevents apt-get from prompting during install
+  FNB_MOCK_PORT: "3271"         # ASCII mock server port
+  MAINFRAME_HOST: "127.0.0.1"
+  MAINFRAME_PORT: "3270"        # TN3270 mock server port (headless s3270 track)
+  MAINFRAME_GUI_PORT: "3272"    # TN3270 mock server port (GUI x3270 track)
+  MAINFRAME_USER: "MOCKUSER"
+  MAINFRAME_PASS: "MOCKPASS"
+  DEBIAN_FRONTEND: "noninteractive"  # Prevents apt-get from prompting during install
 
 # Cache pip packages across runs using requirements.txt as the cache key
 cacheKey: '{{ checksum "requirements.txt" }}'
 cacheDirectories:
-- pip_cache
+  - pip_cache
 
 # Start both mock servers in the background before tests run.
 # HyperExecute manages these processes for the lifetime of the job.
 background:
-- nohup python3 mock_server/fnb_mock_server.py   # ASCII mock on port 3271
-- nohup python3 mock_server/fnb_mock_tn3270.py   # TN3270 mock on port 3270 (headless s3270)
-- nohup python3 mock_server/fnb_mock_tnX3270.py  # TN3270 mock on port 3272 (GUI x3270)
+  - nohup python3 mock_server/fnb_mock_server.py   # ASCII mock on port 3271
+  - nohup python3 mock_server/fnb_mock_tn3270.py   # TN3270 mock on port 3270 (headless s3270)
+  - nohup python3 mock_server/fnb_mock_tnX3270.py  # TN3270 mock on port 3272 (GUI x3270)
 
 # Steps run once on each VM before test execution begins
 pre:
-- sudo apt-get update -y
-- sudo apt-get install -y s3270  # Headless 3270 emulator needed by the headless TN3270 suites
-# GUI 3270 emulator, plus the X core-font packages it needs to render.
-- sudo apt-get install -y x3270 x11-utils x11-xserver-utils xfonts-base xfonts-100dpi xfonts-75dpi fonts-dejavu-core
-- pip3 install -r requirements.txt --cache-dir pip_cache
+  - sudo apt-get update -y
+  - sudo apt-get install -y s3270  # Headless 3270 emulator needed by the headless TN3270 suites
+  # GUI 3270 emulator, plus the X core-font packages it needs to render.
+  - sudo apt-get install -y x3270 x11-utils x11-xserver-utils xfonts-base xfonts-100dpi xfonts-75dpi fonts-dejavu-core
+  - pip3 install -r requirements.txt --cache-dir pip_cache
 
 # Dynamically discover all Robot Framework test files under tests/
 testDiscovery:
-type: raw
-mode: remote
-command: find tests -name "*.robot" | sort
+  type: raw
+  mode: remote
+  command: find tests -name "*.robot" | sort
 
 # Register the X core-font dirs onto the recorded display so x3270 can render,
 # wait for the mock servers to bind, then run each discovered suite.
 testRunnerCommand: >
-for d in /usr/share/fonts/X11/misc /usr/share/fonts/X11/100dpi /usr/share/fonts/X11/75dpi /usr/share/fonts/X11/Type1;
-do [ -d "$d" ] && xset +fp "$d" 2>/dev/null || true; done;
-xset fp rehash 2>/dev/null || true;
-sleep 3 && robot --outputdir results --output output_$(basename "$test" .robot).xml --log log_$(basename "$test" .robot).html --report NONE $test
+  for d in /usr/share/fonts/X11/misc /usr/share/fonts/X11/100dpi /usr/share/fonts/X11/75dpi /usr/share/fonts/X11/Type1;
+  do [ -d "$d" ] && xset +fp "$d" 2>/dev/null || true; done;
+  xset fp rehash 2>/dev/null || true;
+  sleep 3 && robot --outputdir results --output output_$(basename "$test" .robot).xml --log log_$(basename "$test" .robot).html --report NONE $test
 
 # Determine pass/fail from the robot command exit code only
 scenarioCommandStatusOnly: true
@@ -137,16 +137,16 @@ scenarioCommandStatusOnly: true
 # Merge artifacts from all parallel VMs into a single results folder
 mergeArtifacts: true
 uploadArtefacts:
-- name: FNB_Reports
-path:
-- results/**
+  - name: FNB_Reports
+    path:
+      - results/**
 
 # Render a combined Robot Framework report on the HyperExecute dashboard
 report: true
 partialReports:
-type: json
-location: results
-frameworkName: robot
+  type: json
+  location: results
+  frameworkName: robot
 
 jobLabel: [fnb-mainframe-mock, robotframework, linux, autosplit, x3270-gui]
 ```
@@ -217,9 +217,9 @@ To run a single suite without editing the whole flow, narrow the discovery comma
 
 ```yaml title="hyperexecute.yaml"
 testDiscovery:
-type: raw
-mode: remote
-command: find tests -name "06_tn3270_logon.robot"
+  type: raw
+  mode: remote
+  command: find tests -name "06_tn3270_logon.robot"
 ```
 
 All suites run in parallel on HyperExecute's Linux VMs, and the merged Robot Framework report lands on the dashboard under `FNB_Reports`.

@@ -11,48 +11,48 @@ Here's a preview of the planned endpoint structure:
 
 ```
 Sessions
-POST   /v1/sessions              Create a session
-GET    /v1/sessions              List sessions
-GET    /v1/sessions/:id          Get session details
-GET    /v1/sessions/:id/live     Get live session details
-DELETE /v1/sessions/:id          Release a session
-DELETE /v1/sessions              Release all sessions
+  POST   /v1/sessions              Create a session
+  GET    /v1/sessions              List sessions
+  GET    /v1/sessions/:id          Get session details
+  GET    /v1/sessions/:id/live     Get live session details
+  DELETE /v1/sessions/:id          Release a session
+  DELETE /v1/sessions              Release all sessions
 
 Context
-GET    /v1/sessions/:id/context          Get full context
-PUT    /v1/sessions/:id/context          Set full context
-GET    /v1/sessions/:id/context/cookies  Get cookies
-PUT    /v1/sessions/:id/context/cookies  Set cookies
-DELETE /v1/sessions/:id/context          Clear context
+  GET    /v1/sessions/:id/context          Get full context
+  PUT    /v1/sessions/:id/context          Set full context
+  GET    /v1/sessions/:id/context/cookies  Get cookies
+  PUT    /v1/sessions/:id/context/cookies  Set cookies
+  DELETE /v1/sessions/:id/context          Clear context
 
 Profiles
-GET    /v1/profiles              List profiles
-POST   /v1/profiles              Create/save profile
-GET    /v1/profiles/:id          Get profile
-PUT    /v1/profiles/:id          Update profile
-DELETE /v1/profiles/:id          Delete profile
+  GET    /v1/profiles              List profiles
+  POST   /v1/profiles              Create/save profile
+  GET    /v1/profiles/:id          Get profile
+  PUT    /v1/profiles/:id          Update profile
+  DELETE /v1/profiles/:id          Delete profile
 
 Files
-POST   /v1/sessions/:id/files           Upload file
-GET    /v1/sessions/:id/files           List files
-GET    /v1/sessions/:id/files/:path     Download file
-GET    /v1/sessions/:id/files/archive   Download all (zip)
-DELETE /v1/sessions/:id/files/:path     Delete file
-DELETE /v1/sessions/:id/files           Delete all files
+  POST   /v1/sessions/:id/files           Upload file
+  GET    /v1/sessions/:id/files           List files
+  GET    /v1/sessions/:id/files/:path     Download file
+  GET    /v1/sessions/:id/files/archive   Download all (zip)
+  DELETE /v1/sessions/:id/files/:path     Delete file
+  DELETE /v1/sessions/:id/files           Delete all files
 
 Extensions
-POST   /v1/extensions            Register extension
-GET    /v1/extensions            List extensions
-GET    /v1/extensions/:id        Get extension
-DELETE /v1/extensions/:id        Delete extension
+  POST   /v1/extensions            Register extension
+  GET    /v1/extensions            List extensions
+  GET    /v1/extensions/:id        Get extension
+  DELETE /v1/extensions/:id        Delete extension
 
 Quick Actions
-POST   /v1/scrape               Scrape a URL
-POST   /v1/screenshot           Screenshot a URL
-POST   /v1/pdf                  Generate PDF from URL
+  POST   /v1/scrape               Scrape a URL
+  POST   /v1/screenshot           Screenshot a URL
+  POST   /v1/pdf                  Generate PDF from URL
 
 Tunnel
-POST   /v1/tunnel/start         Start tunnel
-POST   /v1/tunnel/stop          Stop tunnel
-GET    /v1/tunnel/status        Get tunnel status
+  POST   /v1/tunnel/start         Start tunnel
+  POST   /v1/tunnel/stop          Stop tunnel
+  GET    /v1/tunnel/status        Get tunnel status
 ```

@@ -69,18 +69,18 @@ You will have to add these flags mandatorily in your YAML file to execute the k6
 
 ```yaml
 runtime:
-addons:
-- name: k6
-version: "v0.52.0"
+    addons:
+      - name: k6
+        version: "v0.52.0"
 ```
 
 - [env flag](/support/docs/deep-dive-into-hyperexecute-yaml/#env) is used to install certain dependencies to run your test cases
 
 ```yaml
 env:
-K6_BROWSER_ENABLED: true  #Indicates whether browser emulation is enabled for the k6 test.
-K6_BROWSER_HEADLESS: false #Determines if the browser should run in headless mode
-HE_CONTEXT_K6_SETUP_DEFAULT_BROWSER_PATH: true
+  K6_BROWSER_ENABLED: true  #Indicates whether browser emulation is enabled for the k6 test.
+  K6_BROWSER_HEADLESS: false #Determines if the browser should run in headless mode
+  HE_CONTEXT_K6_SETUP_DEFAULT_BROWSER_PATH: true
 ```
 
 ```yaml reference title="hyperexecute.yaml"

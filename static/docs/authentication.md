@@ -40,9 +40,9 @@ For example -
 
 ```json title="lambdatest-config.json"
 "lambdatest_auth": {
-"username": "<your username>",
-"access_key": "<your access key>"
-},
+      "username": "<your username>",
+      "access_key": "<your access key>"
+   },
 ```
 
 ## Setup the Environment Variables:

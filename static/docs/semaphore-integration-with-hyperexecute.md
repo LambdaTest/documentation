@@ -49,22 +49,22 @@ version: 1
 image: ubuntu:latest  # Adjust for macOS if needed
 
 stages:
-- download  # Descriptive stage name
-- run-tests  # Descriptive stage name
+  - download  # Descriptive stage name
+  - run-tests  # Descriptive stage name
 
 jobs:
-download:  # Descriptive job name
-stage: download
-tasks:
-- name: Download Hyperexecute CLI  # Descriptive task name
-command: wget https://downloads.lambdatest.com/hyperexecute/darwin/hyperexecute
-- name: Make Hyperexecute executable  # Descriptive task name
-command: chmod u+x hyperexecute
+  download:  # Descriptive job name
+    stage: download
+    tasks:
+      - name: Download Hyperexecute CLI  # Descriptive task name
+        command: wget https://downloads.lambdatest.com/hyperexecute/darwin/hyperexecute
+      - name: Make Hyperexecute executable  # Descriptive task name
+        command: chmod u+x hyperexecute
 
-run-tests:  # Descriptive job name
-stage: run-tests
-depends_on: download  # Specify dependency on download job
-tasks:
-- name: Run Hyperexecute Tests  # Descriptive task name
-command: ./hyperexecute --user <your_username> --key <your_access_key> --config <RELATIVE_PATH_OF_YOUR_YAML_FILE_path>
+  run-tests:  # Descriptive job name
+    stage: run-tests
+    depends_on: download  # Specify dependency on download job
+    tasks:
+      - name: Run Hyperexecute Tests  # Descriptive task name
+        command: ./hyperexecute --user <your_username> --key <your_access_key> --config <RELATIVE_PATH_OF_YOUR_YAML_FILE_path>
 ```

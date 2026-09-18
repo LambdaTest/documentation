@@ -141,26 +141,26 @@ stripParentDirectory: true
 taskIdentifierInNonConflictingArtefacts: true
 
 pre:
-- pwd
-- echo ${PAT}
-- echo ${qa}
-- echo %PAT%
-- echo %qa%
-- sed -i -e 's/MyKey/%PAT%/g' key.txt
-- cat key.txt
-- mvn compile
-- cat longlogs.txt
+  - pwd
+  - echo ${PAT}
+  - echo ${qa}
+  - echo %PAT%
+  - echo %qa%
+  - sed -i -e 's/MyKey/%PAT%/g' key.txt
+  - cat key.txt
+  - mvn compile
+  - cat longlogs.txt
 
 post:
-- cat hyperexecute.yaml
-- cat longlogs.txt
+  - cat hyperexecute.yaml
+  - cat longlogs.txt
 
 testRunnerCommand: mvn test `-Dcucumber.options="$test" `-Dscenario="$test" `-Dmaven.repo.local=m2_cache_dir
 
 testDiscovery:
-type: raw
-mode: static
-command: snooper --featureFilePaths=src/main/**/ --frameWork=java --query="@Addition AND @me"| sed -n 1,'5p'
+  type: raw
+  mode: static
+  command: snooper --featureFilePaths=src/main/**/ --frameWork=java --query="@Addition AND @me"| sed -n 1,'5p'
 
 jobLabel: [ 'HYP', 'Selenium', 'smartUI']
 ```
@@ -196,88 +196,88 @@ Here you can see the difference.
 
 ```js title="This is a sample for your webhook configuration for JavaScript to ignore by ID"
 let config = {
-screenshotName: "Ignore-ID",
-fullPage: false, //You can make this property as true in case of Chrome browser
-ignoreDOM: {
-id: ["ID-1", "ID-2"], // Ignoring elements by ID, you can ignore multiple at once
-},
+  screenshotName: "Ignore-ID",
+  fullPage: false, //You can make this property as true in case of Chrome browser
+  ignoreDOM: {
+    id: ["ID-1", "ID-2"], // Ignoring elements by ID, you can ignore multiple at once
+  },
 };
 await driver.executeScript("smartui.takeScreenshot", config);
 ```
 
 ```js title="This is a sample for your webhook configuration for JavaScript to ignore by Class"
 let config = {
-screenshotName: "Ignore-Class",
-fullPage: false, //You can make this property as true in case of Chrome browser
-ignoreDOM: {
-class: ["Class-1", "Class-2"], // Ignoring elements by class, you can ignore multiple at once
-},
+  screenshotName: "Ignore-Class",
+  fullPage: false, //You can make this property as true in case of Chrome browser
+  ignoreDOM: {
+    class: ["Class-1", "Class-2"], // Ignoring elements by class, you can ignore multiple at once
+  },
 };
 await driver.executeScript("smartui.takeScreenshot", config);
 ```
 
 ```js title="This is a sample for your webhook configuration for JavaScript to ignore by XPath"
 let config = {
-screenshotName: "Ignore-XPath",
-fullPage: false, //You can make this property as true in case of Chrome browser
-ignoreDOM: {
-xpath: ["Xpath-1", "Xpath-2"], // Ignoring elements by XPath, you can ignore multiple at once
-},
+  screenshotName: "Ignore-XPath",
+  fullPage: false, //You can make this property as true in case of Chrome browser
+  ignoreDOM: {
+    xpath: ["Xpath-1", "Xpath-2"], // Ignoring elements by XPath, you can ignore multiple at once
+  },
 };
 await driver.executeScript("smartui.takeScreenshot", config);
 ```
 
 ```js title="This is a sample for your webhook configuration for JavaScript to ignore by CSS Selector"
 let config = {
-screenshotName: "Ignore-cssSelector",
-fullPage: false, //You can make this property as true in case of Chrome browser
-ignoreDOM: {
-cssSelector: ["CSS-Selector-1", "CSS-Selector-2"], // Ignoring elements by CSS selector, you can ignore multiple at once
-},
+  screenshotName: "Ignore-cssSelector",
+  fullPage: false, //You can make this property as true in case of Chrome browser
+  ignoreDOM: {
+    cssSelector: ["CSS-Selector-1", "CSS-Selector-2"], // Ignoring elements by CSS selector, you can ignore multiple at once
+  },
 };
 await driver.executeScript("smartui.takeScreenshot", config);
 ```
 
 ```js title="This is a sample for your webhook configuration for JavaScript to select by ID."
 let config = {
-screenshotName: "Select-ID",
-fullPage: false, //You can make this property as true in case of Chrome browser
-selectDOM: {
-id: ["ID-1", "ID-2"], // Selecting elements by ID, you can select multiple at once
-},
+  screenshotName: "Select-ID",
+  fullPage: false, //You can make this property as true in case of Chrome browser
+  selectDOM: {
+    id: ["ID-1", "ID-2"], // Selecting elements by ID, you can select multiple at once
+  },
 };
 await driver.executeScript("smartui.takeScreenshot", config);
 ```
 
 ```js title="This is a sample for your webhook configuration for JavaScript to select by Class"
 let config = {
-screenshotName: "Select-Class",
-fullPage: false, //You can make this property as true in case of Chrome browser
-selectDOM: {
-class: ["Class-1", "Class-2"], // Selecting elements by class, you can select multiple at once
-},
+  screenshotName: "Select-Class",
+  fullPage: false, //You can make this property as true in case of Chrome browser
+  selectDOM: {
+    class: ["Class-1", "Class-2"], // Selecting elements by class, you can select multiple at once
+  },
 };
 await driver.executeScript("smartui.takeScreenshot", config);
 ```
 
 ```js title="This is a sample for your webhook configuration for JavaScript to select by XPath"
 let config = {
-screenshotName: "Select-XPath",
-fullPage: false, //You can make this property as true in case of Chrome browser
-selectDOM: {
-xpath: ["Xpath-1", "Xpath-2"], // Selecting elements by XPath, you can select multiple at once
-},
+  screenshotName: "Select-XPath",
+  fullPage: false, //You can make this property as true in case of Chrome browser
+  selectDOM: {
+    xpath: ["Xpath-1", "Xpath-2"], // Selecting elements by XPath, you can select multiple at once
+  },
 };
 await driver.executeScript("smartui.takeScreenshot", config);
 ```
 
 ```js title="This is a sample for your webhook configuration for JavaScript to select by CSS Selector"
 let config = {
-screenshotName: "Select-cssSelector",
-fullPage: false, //You can make this property as true in case of Chrome browser
-selectDOM: {
-cssSelector: ["CSS-Selector-1", "CSS-Selector-2"], // Selecting elements by CSS selector, you can select multiple at once
-},
+  screenshotName: "Select-cssSelector",
+  fullPage: false, //You can make this property as true in case of Chrome browser
+  selectDOM: {
+    cssSelector: ["CSS-Selector-1", "CSS-Selector-2"], // Selecting elements by CSS selector, you can select multiple at once
+  },
 };
 await driver.executeScript("smartui.takeScreenshot", config);
 ```

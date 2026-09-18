@@ -83,8 +83,8 @@ The cicd-pipeline-skill package includes:
 cicd-pipeline-skill/
 ├── SKILL.md
 └── reference/
-├── playbook.md
-└── advanced-patterns.md
+    ├── playbook.md
+    └── advanced-patterns.md
 ```
 
 It provides structured guidance for:

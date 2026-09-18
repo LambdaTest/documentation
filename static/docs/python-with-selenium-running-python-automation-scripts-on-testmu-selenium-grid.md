@@ -27,11 +27,11 @@ Every framework below connects to the grid at `hub.lambdatest.com/wd/hub` and pa
 
 ```python
 capabilities = {
-"build": "your build name",
-"name": "your test name",
-"platformName": "Windows 10",
-"browserName": "Chrome",
-"browserVersion": "latest",
+    "build": "your build name",
+    "name": "your test name",
+    "platformName": "Windows 10",
+    "browserName": "Chrome",
+    "browserVersion": "latest",
 }
 ```
 
@@ -56,11 +56,11 @@ cd Python-UnitTest-Selenium
 
 ```python
 capabilities = {
-"build": "UnitTest-Selenium-Sample",
-"name": "UnitTest-Selenium-Test",
-"platformName": "Windows 11",
-"browserName": "Chrome",
-"browserVersion": "latest",
+    "build": "UnitTest-Selenium-Sample",
+    "name": "UnitTest-Selenium-Test",
+    "platformName": "Windows 11",
+    "browserName": "Chrome",
+    "browserVersion": "latest",
 }
 ```
 
@@ -83,10 +83,10 @@ cd pytest-selenium-sample
 
 ```python title="conftest.py"
 capabilities = {
-"build": "Sample PY Build",
-"platformName": "Windows 11",
-"browserName": "Chrome",
-"browserVersion": "latest",
+    "build": "Sample PY Build",
+    "platformName": "Windows 11",
+    "browserName": "Chrome",
+    "browserVersion": "latest",
 }
 ```
 
@@ -114,10 +114,10 @@ Library  Selenium2Library
 
 *** Variables ***
 @{_tmp}
-...  browserName: %{browserName},
-...  platformName: %{platform},
-...  browserVersion: %{version},
-...  name: RobotFramework Lambda Test
+    ...  browserName: %{browserName},
+    ...  platformName: %{platform},
+    ...  browserVersion: %{version},
+    ...  name: RobotFramework Lambda Test
 ${BROWSER}          %{ROBOT_BROWSER}
 ${CAPABILITIES}     ${EMPTY.join(${_tmp})}
 ${REMOTE_URL}       https://${KEY}@hub.lambdatest.com/wd/hub
@@ -143,13 +143,13 @@ cd Python-Behave-Selenium
 
 ```json title="config/config.json"
 [
-{
-"platformName": "Windows 10",
-"browserName": "chrome",
-"browserVersion": "latest",
-"build": "Behave Selenium Sample",
-"name": "Behave Sample Test"
-}
+  {
+    "platformName": "Windows 10",
+    "browserName": "chrome",
+    "browserVersion": "latest",
+    "build": "Behave Selenium Sample",
+    "name": "Behave Sample Test"
+  }
 ]
 ```
 

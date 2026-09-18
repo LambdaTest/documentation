@@ -99,17 +99,17 @@ maxRetries: 1
 concurrency: 2
 
 pre:
-- npm install
-- npx playwright install
+  - npm install
+  - npx playwright install
 
 cacheKey: '{{ checksum "package-lock.json" }}'
 cacheDirectories:
-- node_modules
+  - node_modules
 
 testDiscovery:
-type: raw
-mode: remote
-command: grep -nri 'describe' tests  | sed 's/:test.*//'
+  type: raw
+  mode: remote
+  command: grep -nri 'describe' tests  | sed 's/:test.*//'
 
 testRunnerCommand: npx playwright test $test
 
@@ -177,8 +177,8 @@ The playwright-skill package includes:
 playwright-skill/
 ├── SKILL.md
 └── reference/
-├── playbook.md
-└── advanced-patterns.md
+    ├── playbook.md
+    └── advanced-patterns.md
 ```
 
 It provides structured guidance for:

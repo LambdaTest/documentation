@@ -1783,32 +1783,22 @@ module.exports = {
       },
     },
     [
-      // NOTE: 'manual-to-automated-test-conversion' is NOT in the proposed
-      // structure and has been dropped from the nav (file retained on disk,
-      // still 200). Re-add if this omission was unintended.
-
-      // 1. Get Started
-      {
-        type: "category",
-        collapsed: true,
-        label: "Get Started",
-        items: [
-          { type: "doc", id: "test-manager", label: "Introduction" },
-        ],
-      },
-
-      // 2. Set up your project (direct doc)
       {
         type: "doc",
-        id: "create-projects",
-        label: "Set up your project",
+        label: "Introduction to Test Manager",
+        id: "test-manager",
       },
-
-      // 3. Import Test Case Data
+      "manual-to-automated-test-conversion",
       {
         type: "category",
         collapsed: true,
-        label: "Import Test Case Data",
+        label: "Projects",
+        items: ["create-projects", "system-and-custom-fields"],
+      },
+      {
+        type: "category",
+        collapsed: true,
+        label: "Test Cases",
         items: [
           {
             type: "category",
@@ -1823,6 +1813,7 @@ module.exports = {
           "create-modules",
           "modules-in-manual-testcases",
           "copy-and-move-support-for-test-cases",
+          "share-test-cases-across-projects",
           "test-case-deduplication",
           "test-case-archive",
           "update-fields",
@@ -1842,81 +1833,42 @@ module.exports = {
           },
         ],
       },
-
-      // 4. Test Case Organization
       {
         type: "category",
         collapsed: true,
-        label: "Test Case Organization",
+        label: "Test Runs",
         items: [
-          { type: "doc", id: "manual-test-case-creation", label: "Create and Manage Test Cases" },
-          { type: "doc", id: "test-case-versioning", label: "Manage Versions" },
-          { type: "doc", id: "create-modules", label: "Modules: Share Test steps" },
-          { type: "doc", id: "modules-in-manual-testcases", label: "Importing Modules into Test Cases" },
-          { type: "doc", id: "system-and-custom-fields", label: "Manage System & Custom fields" },
-          { type: "doc", id: "copy-and-move-support-for-test-cases", label: "Copy & Move Test Cases" },
-          { type: "doc", id: "test-case-deduplication", label: "Find & Remove Duplicates" },
-          { type: "doc", id: "update-fields", label: "Bulk Update Test Case fields" },
-          { type: "doc", id: "export-test-cases", label: "Export Test Cases" },
+          "test-run-creation-and-management",
+          "test-run-bulk-actions",
+          "sync-test-instance",
+          "test-instance-audit-logs",
+          "track-issues-in-test-runs"
         ],
       },
-
-      // 5. AI Test Case Generator (direct doc)
       {
         type: "doc",
-        id: "generate-test-cases-with-ai",
-        label: "AI Test Case Generator",
+        label: "Milestones",
+        id: "milestone-creation-and-management",
       },
-
-      // 6. Run Tests and Track Execution
       {
         type: "category",
         collapsed: true,
-        label: "Run Tests and Track Execution",
+        label: "Insights & Reports",
         items: [
-          { type: "doc", id: "test-run-creation-and-management", label: "Create and Manage Test Runs" },
-          { type: "doc", id: "test-run-bulk-actions", label: "Bulk Move, Copy, and Delete Test Runs" },
-          { type: "doc", id: "sync-test-instance", label: "Sync Test Instances" },
-          { type: "doc", id: "test-instance-audit-logs", label: "Test Instance Audit Logs" },
-          { type: "doc", id: "track-issues-in-test-runs", label: "Raise and Manage Defects" },
-          { type: "doc", id: "milestone-creation-and-management", label: "Milestones" },
+          "insights-dashboard",
+          "tms-reports"
         ],
       },
-
-      // 7. Link Automated Tests
-      {
-        type: "category",
-        collapsed: true,
-        label: "Link Automated Tests",
-        items: [
-          { type: "doc", id: "automated-test-cases-with-ai", label: "Link Automation Runs Automatically" },
-          { type: "doc", id: "automated-test-cases-linked-using-dashboard", label: "Link Runs Manually from Dashboard" },
-          { type: "doc", id: "automated-test-cases-linked-using-capability", label: "Link Runs Via Capabilities" },
-        ],
-      },
-
-      // 8. Reporting and Analysis
-      {
-        type: "category",
-        collapsed: true,
-        label: "Reporting and Analysis",
-        items: [
-          { type: "doc", id: "insights-dashboard", label: "View Test metrics and trends" },
-          { type: "doc", id: "tms-reports", label: "Generate execution and Traceability reports" },
-        ],
-      },
-
-      // 9. Issue Tracker Integration
       {
         type: "category",
         collapsed: true,
         label: "Issue Tracker Integration",
         items: [
-          { type: "doc", id: "link-jira-issues-with-test-manager", label: "Jira Integration for Test Manager" },
-          { type: "doc", id: "lambdatest-jira-app", label: "TestMu AI Jira App" },
-          { type: "doc", id: "link-ado-issues-with-test-manager", label: "Azure DevOps Integration for Test Manager" },
-          { type: "doc", id: "lambdatest-azure-devops-app", label: "TestMu AI Azure DevOps App" },
-          { type: "doc", id: "link-linear-issues-with-test-manager", label: "Linear Integration for Test Manager" },
+          "link-jira-issues-with-test-manager",
+          "lambdatest-jira-app",
+          "link-ado-issues-with-test-manager",
+          "lambdatest-azure-devops-app",
+          "link-linear-issues-with-test-manager",
         ],
       },
     ]
@@ -2065,79 +2017,237 @@ module.exports = {
       },
     },
     [
-      
       {
-      type: "category",
-        collapsed: false,
+        type: "category",
+        collapsed: true,
         label: "Get Started",
         items: [
-          { type: "doc", id: "getting-started-with-lambdatest-automation", label: "Overview" },
-          { type: "doc", id: "lambdatest-running-your-first-selenium-test", label: "Run Your First Test" },
-          { type: "doc", id: "selenium-agent-skills", label: "Run Tests With Agent Skills" },
-           { type: "doc", id: "inside-lambdatest-automation-platform", label: "See Your Results (Dashboard)" },
-          { type: "doc", id: "migrate-selenium-test-suite", label: "Migrate an Existing Suite" },
-         
-           { type: "doc", id: "selenium-automation-capabilities", label: "Desired Capabilities" },
-           { type: "doc", id: "supported-browsers-and-operating-systems-for-the-web-interface", label: "Supported Browsers & OS" },
-         
+          "getting-started-with-lambdatest-automation",
+          "lambdatest-running-your-first-selenium-test",
+          "selenium-agent-skills",
+          "migrate-selenium-test-suite",
+          "inside-lambdatest-automation-platform",
+          "selenium-supported-languages-and-frameworks",
+          "supported-browsers-and-operating-systems-for-the-web-interface",
+
         ],
       },
       {
         type: "category",
         collapsed: true,
-        label: "Languages & Frameworks",
+        label: "Choose Your Language & Framework",
         items: [
-          { type: "doc", id: "java-framework", label: "Java With Selenium" },
-          { type: "doc", id: "running-javascript-test-scripts-on-lambdatest", label: "JavaScript With Selenium" },
-          { type: "doc", id: "csharp-with-selenium", label: "C# With Selenium" },
-          { type: "doc", id: "python-with-selenium-running-python-automation-scripts-on-testmu-selenium-grid", label: "Python With Selenium" },
-          { type: "doc", id: "php-framework", label: "PHP With Selenium" },
-          { type: "doc", id: "ruby", label: "Ruby With Selenium" },
+
+          {
+            type: "category",
+            collapsed: true,
+            label: "Java",
+            items: [
+              "java-framework",
+              "selenium-java-sdk",
+              "testng-framework",
+              "junit-frameworks",
+              "cucumber-script-testng-selenium",
+              "selenide-frameworks",
+              "gauge-frameworks",
+              "geb-frameworks",
+              "running-serenity-test-on-selenium-grid",
+            ],
+          },
+          {
+            type: "category",
+            collapsed: true,
+            label: "JavaScript",
+            items: [
+              "running-javascript-test-scripts-on-lambdatest",
+              "running-protractor-test-scripts-on-lambdatest",
+              "automation-testing-with-mocha-and-selenium",
+              "run-nightwatch-tests-on-lambdatest-selenium-grid",
+              "run-wd-atomation-test-on-lambdatest-selenium-grid",
+              "automation-testing-using-webdriverIO-5-6-2",
+              "run-webdriverio-automation-scripts-on-lambdatest",
+              "automation-testing-with-selenium-and-jest",
+              "run-automation-tests-using-angularjs-with-karma",
+              "cucumberjs-testing-using-lambdatest-selenium-grid",
+              "automation-testing-using-jasmine-with-karma",
+              "karma-integration-with-lambdatest",
+              "npm-plugin-for-testcafe-integration-with-lambdatest",
+              "selenium-tests-with-nemojs",
+              "codeceptjs-with-selenium",
+            ],
+          },
+          {
+            type: "category",
+            collapsed: true,
+            label: "C#",
+            items: [
+              "csharp-with-selenium",
+              "nunit-with-selenium",
+              "selenium-xunit",
+              "mstest-with-selenium",
+              "specflow-with-selenium",
+            ],
+          },
+          {
+            type: "category",
+            collapsed: true,
+            label: "Python",
+            items: [
+              "python-with-selenium-running-python-automation-scripts-on-testmu-selenium-grid",
+              "unit-testing-in-python",
+              "pytest-with-selenium-running-pytest-automation-script-on-testmu-selenium-grid",
+              "robot-with-selenium-running-robot-automation-scripts-on-testmu-selenium-grid",
+              "behave-with-selenium-running-behave-automation-scripts-on-testmu-selenium-grid",
+              "automation-testing-selenium-with-lettuce",
+            ],
+          },
+          {
+            type: "category",
+            collapsed: true,
+            label: "PHP",
+            items: [
+              "php-framework",
+              "behat-php-framework",
+              "laravel-php-framework",
+              "codeception-php-framework",
+              "phpunit-php-framework",
+            ],
+          },
+          {
+            type: "category",
+            collapsed: true,
+            label: "Ruby",
+            items: [
+              "ruby",
+              "ruby-capybara",
+              "ruby-rspec",
+              "ruby-testunit",
+            ],
+          },
+          "executing-tesbo-automation-script-over-online-selenium-grid",
         ],
       },
-    
       {
         type: "category",
         collapsed: true,
-        label: "Advanced Capabilities",
+        label: "Set Up Test Environment",
         items: [
-          { type: "doc", id: "smart-wait", label: "Enable SmartWait" },
-          { type: "doc", id: "auto-heal", label: "Auto-Heal Broken Locators" },
-            { type: "doc", id: "selenium-bidi-integration", label: "Use the Selenium BiDi Protocol" },
-          { type: "doc", id: "custom-chrome", label: "Upload a Custom Chrome Profile" },
-          { type: "doc", id: "mock-video-injection-web-automation-selenium-chromium", label: "Inject a Mock Video Stream" },
-          { type: "doc", id: "network-data-masking", label: "Mask Sensitive Data" },
-          { type: "doc", id: "selenium-geolocation-capabilities", label: "Test Location & Timezone" },
-          { type: "doc", id: "perform-selenium-automation-on-headless-browsers", label: "Run Headless Tests" },
-          { type: "doc", id: "network-throttling", label: "Simulate Network Conditions" },
-          { type: "doc", id: "upload-files-using-lambdatest", label: "Upload & Download Files" },
-          { type: "doc", id: "setup-pre-run-executable", label: "Run a Pre-Test Script" },
+          {
+            type: "category",
+            collapsed: true,
+            label: "Configure Capabilities",
+            items: [
+              "selenium-automation-capabilities",
+              "selenium-default-capabilities",
+              "selenium-three-capabilities",
+              "selenium-four-capabilities",
+              "lambdatest-selenium-advance-capabilities",
+            ],
+          },
+          "perform-selenium-automation-on-headless-browsers",
+          "custom-chrome",
+          "selenium-set-browser-options",
+          "ie-mode-on-edge",
+          "change-browser-window-size",
+          "Selenium-Grid-Configuration",
+          "auto-heal",
+          "autoheal-with-hooks",
+          "smart-wait",
+        ],
+      },
+
+      {
+        type: "category",
+        collapsed: true,
+        label: "Simulate Real User Conditions",
+        items: [
+          "selenium-geolocation-capabilities",
+          "network-throttling",
+          "configure-timezones",
+          "custom-header",
+          "custom-dns-map",
+          "mock-video-injection-web-automation-selenium-chromium",
+          "mobile-web-automation-on-real-devices",
         ],
       },
       {
         type: "category",
         collapsed: true,
-        label: "Monitor & Debug",
+        label: "Handle Files and Sensitive Data",
         items: [
-          { type: "doc", id: "filter-your-selenium-tests", label: "Organize Tests & Builds" },
-          { type: "doc", id: "mark-as-bug-in-automation-testing", label: "File a Bug From a Session" },
-          { type: "doc", id: "live-interaction", label: "Take Over a Live Session" },
-          { type: "doc", id: "rerun-automation-tests", label: "Re-Run & Reproduce a Test" },
-          { type: "doc", id: "mute-test-scenarios", label: "Mute Test Scenarios" },
-          { type: "doc", id: "debugging-options", label: "Set Debugging Options & Logs" },
-          { type: "doc", id: "lighthouse-reports-hooks", label: "Measure Page Performance" },
-          { type: "doc", id: "lambda-hooks", label: "Use Lambda Hooks & Metadata" },
-      
+          "upload-files-using-lambdatest",
+          "download-files-using-lambdatest-selenium-grid",
+          "selenium-mask-your-data",
+          "network-data-masking",
+          "setup-pre-run-executable",
         ],
       },
       {
         type: "category",
         collapsed: true,
-        label: "Troubleshoot & Optimize",
+        label: "Test in Local Environments",
         items: [
-          { type: "doc", id: "error-messages", label: "Fix Errors & Timeouts" },
-          { type: "doc", id: "performance-tips", label: "Speed Up Your Tests" },
-          { type: "doc", id: "timeouts-issues-and-resolutions", label: "Fix Timeout Issues" },
+          "test-locally-hosted-websites-with-selenium",
+          "white-listing-proxy-with-lambdatest",
+          "run-selenium-test-behind-the-proxy",
+        ],
+      },
+      {
+        type: "category",
+        collapsed: true,
+        label: "Manage Your Runs",
+        items: [
+          "filter-your-selenium-tests",
+          "group-tests-using-custom-tags",
+          "group-and-filter-your-test-builds-using-build-tags",
+          "change-individual-test-details",
+          "rerun-automation-tests",
+          "mute-test-scenarios",
+          "sharing-test-results",
+          "mark-as-bug-in-automation-testing",
+          "live-interaction",
+          "build-split",
+        ],
+      },
+      {
+        type: "category",
+        collapsed: true,
+        label: "Debug Your Test Suites",
+        items: [
+          "debugging-options",
+          "telemetry-logs",
+          "extended-debugging-options",
+          "har-log-viewer",
+          "view-lighthouse-performance-metrics",
+          "lighthouse-reports-hooks",
+        ],
+      },
+      {
+        type: "category",
+        collapsed: true,
+        label: "Connect Your Tools",
+        items: [
+          "selenium-bidi-integration",
+          "lambda-hooks",
+          "command-annotations",
+          "selenium-add-test-meta-data",
+        ],
+      },
+      {
+        type: "link",
+        label: "Trigger Tests From CI/CD",
+        href: "/support/docs/integrations-with-ci-cd-tools/",
+
+      },
+      {
+        type: "category",
+        collapsed: true,
+        label: "Troubleshoot",
+        items: [
+          "error-messages",
+          "timeouts-issues-and-resolutions",
+          "lambda-exceptions",
+          "performance-tips",
         ],
       },
     ],
@@ -2168,7 +2278,11 @@ module.exports = {
             label: "Run Your Test With Agent Skills",
             id: "cypress-agent-skills",
           },
-       
+          {
+            type: "doc",
+            label: "Authentication",
+            id: "authentication",
+          },
         ],
       },
       {
@@ -2178,6 +2292,11 @@ module.exports = {
         items: [
           {
             type: "doc",
+            label: "Parallel Testing",
+            id: "run-your-cypress-tests-in-parallel",
+          },
+          {
+            type: "doc",
             label: "Specify Browsers and OS",
             id: "supported-browsers-and-os",
           },
@@ -2185,6 +2304,11 @@ module.exports = {
             type: "doc",
             label: "Supported Cypress Versions",
             id: "supported-cypress-versions",
+          },
+          {
+            type: "doc",
+            label: "Cypress Testing Using WebKit",
+            id: "cypress-webkit",
           },
           {
             type: "doc",
@@ -2198,8 +2322,23 @@ module.exports = {
           },
           {
             type: "doc",
+            label: "Test On Different Screen Resolutions",
+            id: "screen-resolution-cypress",
+          },
+          {
+            type: "doc",
+            label: "Environment Variables Support for Cypress Tests",
+            id: "cyp-environment",
+          },
+          {
+            type: "doc",
             label: "Execute Including Private Dependencies",
             id: "private-dependencies-cypress",
+          },
+          {
+            type: "doc",
+            label: "Install NPM via Tunnel",
+            id: "npm-via-tunnel",
           },
           {
             type: "doc",
@@ -2222,6 +2361,11 @@ module.exports = {
             type: "doc",
             label: "Applitools Integration For Cypress",
             id: "applitools-integration-cypress",
+          },
+          {
+            type: "doc",
+            label: "Report Portal IO Integration For Cypress",
+            id: "report-portal-cypress",
           },
           {
             type: "doc",
@@ -2256,31 +2400,66 @@ module.exports = {
           "playwright-testing-guide",
           "playwright-agent-skills",
           "playwright-sdk",
-           "migrate-playwright-tests",
-             "playwright-test-execution-setup",
         ],
       },
       {
         type: "category",
         collapsed: true,
-        label: "Languages & Frameworks",
+        label: "Languages and Frameworks",
         items: [
-          { type: "doc", id: "java-with-playwright", label: "Java With Playwright" },
-          { type: "doc", id: "javascript-with-playwright", label: "JavaScript With Playwright" },
-          { type: "doc", id: "csharp-with-playwright", label: "C# With Playwright" },
-          { type: "doc", id: "python-with-playwright", label: "Python With Playwright" },
+          {
+            type: "category",
+            collapsed: true,
+            label: "Java",
+            items: ["java-with-playwright", "junit-with-playwright"],
+          },
+          {
+            type: "category",
+            collapsed: true,
+            label: "JavaScript",
+            items: [
+              "javascript-with-playwright",
+              "jest-with-playwright",
+              "typescript-with-playwright",
+            ],
+          },
+          {
+            type: "category",
+            collapsed: true,
+            label: "C#",
+            items: ["csharp-with-playwright"],
+          },
+          {
+            type: "category",
+            collapsed: true,
+            label: "Python",
+            items: ["python-with-playwright"],
+          },
         ],
       },
-    
       {
         type: "category",
         collapsed: true,
-        label: "Features",
+        label: "Test Capabilities",
         items: [
-          "playwright-android-guide",
+          {
+            type: "category",
+            collapsed: true,
+            label: "Test on Android Device",
+            link: {
+              type: "doc",
+              id: "playwright-android-guide",
+            },
+            items: ["playwright-android-caps", "playwright-webview-test"],
+          },
           "playwright-ios-guide",
+          "parallel-playwright-test",
+          "migrate-playwright-tests",
+          "playwright-test-execution-setup",
+          "playwright-bundled-browser-support",
+          "playwright-caps",
+          "local-testing-playwright",
           "playwright-auto-heal",
-          "mute-test-scenarios",
         ],
       },
       {
@@ -2314,10 +2493,18 @@ module.exports = {
         items: [
           "puppeteer-testing-guide",
           "puppeteer-agent-skills",
-          "puppeteer-test-execution",
         ],
       },
-  
+      {
+        type: "category",
+        collapsed: true,
+        label: "Test Capabilities",
+        items: [
+          "puppeteer-test-execution",
+          "puppeteer-capabilities",
+          "local-testing-puppeteer",
+        ],
+      },
       {
         type: "category",
         collapsed: true,
@@ -2328,7 +2515,14 @@ module.exports = {
           "puppeteer-pytest-pyppeteer",
         ],
       },
-     
+      {
+        type: "category",
+        collapsed: true,
+        label: "CI/CD",
+        items: [
+          "puppeteer-cicd",
+        ],
+      },
     ],
   ],
 

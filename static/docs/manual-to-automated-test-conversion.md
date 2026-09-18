@@ -111,21 +111,21 @@ For the full guide, see [Manual Interaction in KaneAI](/support/docs/kaneai-manu
 
 ```
 Requirements (text, docs, images, audio, Jira, ADO)
-│
-▼
-AI Test Case Generator (Test Manager / KaneAI)
-│
-├── Create ──► Test Case Repository (manual testing)
-│
-└── Create and Automate ──► KaneAI Automation
-│
-▼
-Code Generation
-(Selenium, Playwright,
-Cypress, Appium, etc.)
-│
-▼
-Download / CI/CD / HyperExecute
+        │
+        ▼
+   AI Test Case Generator (Test Manager / KaneAI)
+        │
+        ├── Create ──► Test Case Repository (manual testing)
+        │
+        └── Create and Automate ──► KaneAI Automation
+                                        │
+                                        ▼
+                                  Code Generation
+                              (Selenium, Playwright,
+                               Cypress, Appium, etc.)
+                                        │
+                                        ▼
+                              Download / CI/CD / HyperExecute
 ```
 
 ## Related Docs

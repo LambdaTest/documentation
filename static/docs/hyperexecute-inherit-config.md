@@ -38,9 +38,9 @@ You can use the inheritance feature by entering the following flag in your YAML 
 
 ```yaml
 base:
-yamls:
-- ./<baseConfiguration1.yaml>
-- ./<baseConfiguration2.yaml>
+  yamls:
+    - ./<baseConfiguration1.yaml>
+    - ./<baseConfiguration2.yaml>
 ```
 -   Insert the path of the YAML files you want to inherit in place of the placeholder value ``. The path of the YAML file that you want to inherit is relative to the main YAML file.
 
@@ -63,16 +63,16 @@ autosplit: true
 concurrency: 4
 
 base:
-yamls:
-- ./base.yaml
+  yamls:
+    - ./base.yaml
 
 pre:
-- mvn dependency:resolve
+  - mvn dependency:resolve
 
 # highlight-start
 testDiscovery:
-mode: remote
-command: grep 'test name' xml/testng_linux.xml | awk '{print$2}' | sed 's/name=//g' | sed 's/>//g'
+  mode: remote
+  command: grep 'test name' xml/testng_linux.xml | awk '{print$2}' | sed 's/name=//g' | sed 's/>//g'
 # highlight-end
 
 testRunnerCommand: mvn test -Dplatname=linux -Dmaven.repo.local=./.m2 dependency:resolve -DselectedTests=$test
@@ -97,13 +97,13 @@ autosplit: true
 concurrency: 2
 
 pre:
-- mvn dependency:resolve
+  - mvn dependency:resolve
 
 # highlight-start
 testDiscovery:
-type: raw
-mode: static
-command: grep 'test name' xml/testng_linux.xml | awk '{print$2}' | sed 's/name=//g' | sed 's/>//g'
+  type: raw
+  mode: static
+  command: grep 'test name' xml/testng_linux.xml | awk '{print$2}' | sed 's/name=//g' | sed 's/>//g'
 # highlight-end
 
 testRunnerCommand: mvn test -Dplatname=linux -Dmaven.repo.local=./.m2 dependency:resolve -DselectedTests=$test
@@ -127,16 +127,16 @@ autosplit: true
 concurrency: 4
 
 base:
-yamls:
-- ./base.yaml
+    yamls:
+        - ./base.yaml
 
 pre:
-- mvn dependency:resolve
+    - mvn dependency:resolve
 
 # highlight-start
 testDiscovery:
-command: grep 'test name' xml/testng_linux.xml | awk '{print$2}' | sed 's/name=//g' | sed 's/>//g'
-mode: remote
+    command: grep 'test name' xml/testng_linux.xml | awk '{print$2}' | sed 's/name=//g' | sed 's/>//g'
+    mode: remote
 # highlight-end
 
 testRunnerCommand: mvn test -Dplatname=linux -Dmaven.repo.local=./.m2 dependency:resolve -DselectedTests=$test

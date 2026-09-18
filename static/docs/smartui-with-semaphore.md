@@ -142,8 +142,8 @@ You can also store your *LT_USERNAME*, *LT_ACCESS_KEY* and *PROJECT_TOKEN* as se
 **Example:**
 ```yaml
 auto_cancel:
-running:
-when: "branch != 'main'"
+  running:
+    when: "branch != 'main'"
 ```
 
 **Build Naming**
@@ -155,8 +155,8 @@ when: "branch != 'main'"
 **Example:**
 ```yaml
 env_vars:
-- name: BUILD_NAME
-value: "${SEMAPHORE_GIT_BRANCH}-${SEMAPHORE_GIT_SHA}"
+  - name: BUILD_NAME
+    value: "${SEMAPHORE_GIT_BRANCH}-${SEMAPHORE_GIT_SHA}"
 ```
 
 **Error Handling**
@@ -218,8 +218,8 @@ value: "${SEMAPHORE_GIT_BRANCH}-${SEMAPHORE_GIT_SHA}"
 2. Pass secret to job:
 ```yaml
 env_vars:
-- name: PROJECT_TOKEN
-value: ${PROJECT_TOKEN}
+  - name: PROJECT_TOKEN
+    value: ${PROJECT_TOKEN}
 ```
 
 3. Check secret is accessible to the pipeline
@@ -244,8 +244,8 @@ value: ${PROJECT_TOKEN}
 2. Check pipeline logs for errors:
 ```yaml
 - name: Check Logs
-commands:
-- cat /tmp/*.log || true
+  commands:
+    - cat /tmp/*.log || true
 ```
 
 3. Verify network connectivity in pipeline
@@ -268,18 +268,18 @@ commands:
 2. Run tests in parallel using parallel blocks:
 ```yaml
 blocks:
-- name: Test Group 1
-task:
-jobs:
-- name: Run Tests
-commands:
-- npx smartui exec -- <your-test-command>
-- name: Test Group 2
-task:
-jobs:
-- name: Run Tests
-commands:
-- npx smartui exec -- <your-test-command>
+  - name: Test Group 1
+    task:
+      jobs:
+        - name: Run Tests
+          commands:
+            - npx smartui exec -- <your-test-command>
+  - name: Test Group 2
+    task:
+      jobs:
+        - name: Run Tests
+          commands:
+            - npx smartui exec -- <your-test-command>
 ```
 
 3. Optimize test execution
@@ -299,15 +299,15 @@ commands:
 1. Use specific Node version:
 ```yaml
 prologue:
-commands:
-- nvm use 18
+  commands:
+    - nvm use 18
 ```
 
 2. Clear npm cache:
 ```yaml
 commands:
-- npm cache clean --force
-- npm install
+  - npm cache clean --force
+  - npm install
 ```
 
 3. Use package-lock.json for consistent installs
@@ -327,20 +327,20 @@ commands:
 1. Ensure Node.js is available:
 ```yaml
 prologue:
-commands:
-- nvm use 18
+  commands:
+    - nvm use 18
 ```
 
 2. Verify npm is available:
 ```yaml
 commands:
-- npm --version
+  - npm --version
 ```
 
 3. Install SmartUI CLI explicitly:
 ```yaml
 commands:
-- npm install -g @lambdatest/smartui-cli
+  - npm install -g @lambdatest/smartui-cli
 ```
 
 **Getting Help**

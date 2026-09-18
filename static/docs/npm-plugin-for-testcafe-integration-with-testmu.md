@@ -103,10 +103,10 @@ $ testcafe "lambdatest:Chrome@74.0:Windows 8","lambdatest:Chrome@75.0:Windows 10
 
 ``` js
 testCafe
-.createRunner()
-.src('path/to/test/file.js')
-.browsers('lambdatest:Chrome@74.0:Windows 8')
-.run();
+    .createRunner()
+    .src('path/to/test/file.js')
+    .browsers('lambdatest:Chrome@74.0:Windows 8')
+    .run();
 ```
 
 To list all available browser aliases:

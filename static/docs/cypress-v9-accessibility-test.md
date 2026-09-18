@@ -53,7 +53,7 @@ Download or Clone the code sample from the TestMu AI GitHub repository to run yo
 Configure the desired capabilities based on your test requirements. For example:
 
 ```yaml reference title="lambdatest-config.json"
-https://github.com/LambdaTest/lambdatest-accessibility-cypress-v9/blob/main/lambdatest-config.json
+  https://github.com/LambdaTest/lambdatest-accessibility-cypress-v9/blob/main/lambdatest-config.json
 ```
 
 ### Step 2: Establish User Authentication
@@ -77,9 +77,9 @@ set LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 ```javascript title="package.json"
 // ...
 "devDependencies": {
-"@cypress/eslint-plugin-dev": "5.0.0",
-// highlight-next-line
-"lambdatest-cypress-cli": "^3.0.30"
+  "@cypress/eslint-plugin-dev": "5.0.0",
+  // highlight-next-line
+  "lambdatest-cypress-cli": "^3.0.30"
 },
 ```
 
@@ -87,12 +87,12 @@ set LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 
 ```javascript title="lambdatest-config.json"
 "run_settings": {
-//...
-"npm_dependencies": {
-"cypress": "10.0.0",
-"lambdatest-cypress-cli": "^3.0.30"
-},
-//...
+  //...
+  "npm_dependencies": {
+     "cypress": "10.0.0",
+     "lambdatest-cypress-cli": "^3.0.30"
+  },
+  //...
 }
 ```
 
@@ -118,11 +118,11 @@ Add this template in your `index.js` file.
 const lambdatestAccessibility = require('lambdatest-cypress-cli/accessibility/plugin');
 
 module.exports = (on, config) => {
-// `on` is used to hook into various events Cypress emits
-// `config` is the resolved Cypress config
+  // `on` is used to hook into various events Cypress emits
+  // `config` is the resolved Cypress config
 
-lambdatestAccessibility(on, config);
-return config;
+  lambdatestAccessibility(on, config);
+  return config;
 }
 
 ```

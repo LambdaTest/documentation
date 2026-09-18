@@ -114,40 +114,40 @@ name: Browser Tests
 on: [push, pull_request]
 
 jobs:
-kane-tests:
-runs-on: ubuntu-latest
-steps:
-- uses: actions/checkout@v4
+  kane-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
 
-- uses: actions/setup-node@v4
-with:
-node-version: '20'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
 
-- name: Install Chrome
-uses: browser-actions/setup-chrome@v1
+      - name: Install Chrome
+        uses: browser-actions/setup-chrome@v1
 
-- name: Install Kane CLI
-run: npm install -g @testmuai/kane-cli
+      - name: Install Kane CLI
+        run: npm install -g @testmuai/kane-cli
 
-- name: Run browser tests
-env:
-LT_USERNAME: ${{ secrets.LT_USERNAME }}
-LT_ACCESS_KEY: ${{ secrets.LT_ACCESS_KEY }}
-run: |
-kane-cli run \
-"Search for 'wireless headphones' on Amazon and open the first result" \
---headless \
---timeout 300 \
---username "$LT_USERNAME" \
---access-key "$LT_ACCESS_KEY" \
---variables-file ./tests/variables.json
+      - name: Run browser tests
+        env:
+          LT_USERNAME: ${{ secrets.LT_USERNAME }}
+          LT_ACCESS_KEY: ${{ secrets.LT_ACCESS_KEY }}
+        run: |
+          kane-cli run \
+            "Search for 'wireless headphones' on Amazon and open the first result" \
+            --headless \
+            --timeout 300 \
+            --username "$LT_USERNAME" \
+            --access-key "$LT_ACCESS_KEY" \
+            --variables-file ./tests/variables.json
 
-- name: Upload test logs
-if: always()
-uses: actions/upload-artifact@v4
-with:
-name: kane-test-logs
-path: ~/.testmuai/kaneai/sessions/
+      - name: Upload test logs
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: kane-test-logs
+          path: ~/.testmuai/kaneai/sessions/
 ```
 
 Define `LT_USERNAME` and `LT_ACCESS_KEY` as masked CI/CD variables in your project settings.
@@ -155,33 +155,33 @@ Define `LT_USERNAME` and `LT_ACCESS_KEY` as masked CI/CD variables in your proje
 ```yaml
 # .gitlab-ci.yml
 stages:
-- test
+  - test
 
 kane-cli:
-stage: test
-image: node:20
-before_script:
-- apt-get update && apt-get install -y wget gnupg
-- wget -qO- https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add -
-- echo "deb http://dl.google.com/linux/chrome/deb/ stable main" > /etc/apt/sources.list.d/google-chrome.list
-- apt-get update && apt-get install -y google-chrome-stable
-- npm install -g @testmuai/kane-cli
-script:
-- |
-kane-cli run "Verify the homepage loads and the login button is visible" \
---headless \
---timeout 300 \
---username "$LT_USERNAME" \
---access-key "$LT_ACCESS_KEY" \
---variables-file ./tests/variables.json
-variables:
-LT_USERNAME: $LT_USERNAME
-LT_ACCESS_KEY: $LT_ACCESS_KEY
-artifacts:
-paths:
-- ~/.testmuai/kaneai/sessions/
-when: always
-expire_in: 7 days
+  stage: test
+  image: node:20
+  before_script:
+    - apt-get update && apt-get install -y wget gnupg
+    - wget -qO- https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add -
+    - echo "deb http://dl.google.com/linux/chrome/deb/ stable main" > /etc/apt/sources.list.d/google-chrome.list
+    - apt-get update && apt-get install -y google-chrome-stable
+    - npm install -g @testmuai/kane-cli
+  script:
+    - |
+      kane-cli run "Verify the homepage loads and the login button is visible" \
+        --headless \
+        --timeout 300 \
+        --username "$LT_USERNAME" \
+        --access-key "$LT_ACCESS_KEY" \
+        --variables-file ./tests/variables.json
+  variables:
+    LT_USERNAME: $LT_USERNAME
+    LT_ACCESS_KEY: $LT_ACCESS_KEY
+  artifacts:
+    paths:
+      - ~/.testmuai/kaneai/sessions/
+    when: always
+    expire_in: 7 days
 ```
 
 Store credentials in **Jenkins > Manage Jenkins > Manage Credentials**. The two `credentials(...)` IDs refer to Username/Password or Secret Text credentials configured in Jenkins.
@@ -189,36 +189,36 @@ Store credentials in **Jenkins > Manage Jenkins > Manage Credentials**. The two 
 ```groovy
 // Jenkinsfile
 pipeline {
-agent any
-environment {
-LT_USERNAME   = credentials('lt-username')
-LT_ACCESS_KEY = credentials('lt-access-key')
-}
-stages {
-stage('Install') {
-steps {
-sh 'npm install -g @testmuai/kane-cli'
-}
-}
-stage('Run kane-cli') {
-steps {
-sh '''
-kane-cli run "Sign in and confirm the dashboard renders" \
---headless \
---timeout 300 \
---username "$LT_USERNAME" \
---access-key "$LT_ACCESS_KEY" \
---variables-file ./tests/variables.json
-'''
-}
-}
-}
-post {
-always {
-archiveArtifacts artifacts: '~/.testmuai/kaneai/sessions/**',
-allowEmptyArchive: true
-}
-}
+    agent any
+    environment {
+        LT_USERNAME   = credentials('lt-username')
+        LT_ACCESS_KEY = credentials('lt-access-key')
+    }
+    stages {
+        stage('Install') {
+            steps {
+                sh 'npm install -g @testmuai/kane-cli'
+            }
+        }
+        stage('Run kane-cli') {
+            steps {
+                sh '''
+                    kane-cli run "Sign in and confirm the dashboard renders" \
+                        --headless \
+                        --timeout 300 \
+                        --username "$LT_USERNAME" \
+                        --access-key "$LT_ACCESS_KEY" \
+                        --variables-file ./tests/variables.json
+                '''
+            }
+        }
+    }
+    post {
+        always {
+            archiveArtifacts artifacts: '~/.testmuai/kaneai/sessions/**',
+                             allowEmptyArchive: true
+        }
+    }
 }
 ```
 
@@ -229,46 +229,46 @@ Add `LT_USERNAME` and `LT_ACCESS_KEY` as repository variables under **Repository
 ```yaml
 # bitbucket-pipelines.yml
 pipelines:
-default:
-- step:
-name: Browser Tests
-image: node:20
-script:
-- npm install -g @testmuai/kane-cli
-- kane-cli run
---url https://staging.myapp.com
---username $LT_USERNAME
---access-key $LT_ACCESS_KEY
---headless
---agent
---timeout 300
---max-steps 50
-"Complete the checkout flow and verify order confirmation"
-artifacts:
-- ~/.testmuai/kaneai/sessions/**
+  default:
+    - step:
+        name: Browser Tests
+        image: node:20
+        script:
+          - npm install -g @testmuai/kane-cli
+          - kane-cli run
+              --url https://staging.myapp.com
+              --username $LT_USERNAME
+              --access-key $LT_ACCESS_KEY
+              --headless
+              --agent
+              --timeout 300
+              --max-steps 50
+              "Complete the checkout flow and verify order confirmation"
+        artifacts:
+          - ~/.testmuai/kaneai/sessions/**
 ```
 
 The shell command below works in any CI that can run a Linux container with Chrome installed:
 
 ```bash
 kane-cli run "Open the pricing page and verify the Pro plan is listed" \
---headless \
---timeout 300 \
---username "$LT_USERNAME" \
---access-key "$LT_ACCESS_KEY" \
---variables-file ./tests/variables.json
+    --headless \
+    --timeout 300 \
+    --username "$LT_USERNAME" \
+    --access-key "$LT_ACCESS_KEY" \
+    --variables-file ./tests/variables.json
 ```
 
 If your CI image cannot install Chrome (for example, a minimal Node Alpine image), point Kane CLI at a remote browser instead:
 
 ```bash
 kane-cli run "Open the pricing page and verify the Pro plan is listed" \
---headless \
---timeout 300 \
---ws-endpoint "$LT_BROWSER_WSS" \
---username "$LT_USERNAME" \
---access-key "$LT_ACCESS_KEY" \
---variables-file ./tests/variables.json
+    --headless \
+    --timeout 300 \
+    --ws-endpoint "$LT_BROWSER_WSS" \
+    --username "$LT_USERNAME" \
+    --access-key "$LT_ACCESS_KEY" \
+    --variables-file ./tests/variables.json
 ```
 
 `--cdp-endpoint ` works the same way for browsers that expose a Chrome DevTools Protocol URL. With either flag, Kane CLI skips its own Chrome launch and connects to the endpoint you provide.
@@ -286,19 +286,19 @@ FAIL=0
 FAILED_TESTS=()
 
 run_test() {
-local name="$1"
-local objective="$2"
-echo "Running: $name"
-if kane-cli run "$objective" \
---url https://staging.myapp.com \
---username $LT_USERNAME \
---access-key $LT_ACCESS_KEY \
---headless --agent --timeout 120; then
-((PASS++))
-else
-((FAIL++))
-FAILED_TESTS+=("$name")
-fi
+  local name="$1"
+  local objective="$2"
+  echo "Running: $name"
+  if kane-cli run "$objective" \
+      --url https://staging.myapp.com \
+      --username $LT_USERNAME \
+      --access-key $LT_ACCESS_KEY \
+      --headless --agent --timeout 120; then
+    ((PASS++))
+  else
+    ((FAIL++))
+    FAILED_TESTS+=("$name")
+  fi
 }
 
 run_test "Login" "Log in with valid credentials and verify dashboard appears"
@@ -309,8 +309,8 @@ run_test "Settings" "Open account settings and verify profile page loads"
 echo ""
 echo "Results: $PASS passed, $FAIL failed"
 if [[ $FAIL -gt 0 ]]; then
-echo "Failed tests: ${FAILED_TESTS[*]}"
-exit 1
+  echo "Failed tests: ${FAILED_TESTS[*]}"
+  exit 1
 fi
 ```
 
@@ -320,8 +320,8 @@ Commit a non-secret variables file to your repo, and inject secrets at runtime:
 
 ```json
 {
-"app_url": { "value": "https://staging.myapp.com" },
-"test_product_sku": { "value": "PROD-001" }
+  "app_url": { "value": "https://staging.myapp.com" },
+  "test_product_sku": { "value": "PROD-001" }
 }
 ```
 
@@ -329,9 +329,9 @@ Merge with secrets in your pipeline:
 
 ```bash
 kane-cli run "Log in as {{email}} with {{password}} and verify dashboard" \
---variables-file ./test-variables.json \
---variables "{\"email\": {\"value\": \"$TEST_EMAIL\"}, \"password\": {\"value\": \"$TEST_PASSWORD\", \"secret\": true}}" \
---username $LT_USERNAME \
---access-key $LT_ACCESS_KEY \
---headless --agent
+  --variables-file ./test-variables.json \
+  --variables "{\"email\": {\"value\": \"$TEST_EMAIL\"}, \"password\": {\"value\": \"$TEST_PASSWORD\", \"secret\": true}}" \
+  --username $LT_USERNAME \
+  --access-key $LT_ACCESS_KEY \
+  --headless --agent
 ```

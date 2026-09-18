@@ -28,8 +28,8 @@ Variables are JSON objects keyed by name. Each entry describes a single variable
 
 ```json
 {
-"username": { "value": "alice", "secret": false },
-"api_key":  { "value": "sk-live-...", "secret": true }
+  "username": { "value": "alice", "secret": false },
+  "api_key":  { "value": "sk-live-...", "secret": true }
 }
 ```
 
@@ -45,12 +45,12 @@ Reference variables with `{{key}}` syntax:
 
 ```bash
 kane-cli run \
---url https://myapp.com \
---variables-file ./creds.json \
-"fill the email field with '{{email}}',
-fill the password field with '{{password}}',
-click Login,
-assert the Dashboard is visible"
+  --url https://myapp.com \
+  --variables-file ./creds.json \
+  "fill the email field with '{{email}}',
+   fill the password field with '{{password}}',
+   click Login,
+   assert the Dashboard is visible"
 ```
 
 Before the objective is sent to the agent, `{{email}}` and `{{password}}` are rewritten to internal namespaced forms; the agent sees the resolved values at runtime.
@@ -72,7 +72,7 @@ Pass a JSON object directly on the command line:
 
 ```bash
 kane-cli run "Log in as {{username}}" \
---variables '{"username": {"value": "alice"}}'
+  --variables '{"username": {"value": "alice"}}'
 ```
 
 ### Variables from a File
@@ -81,7 +81,7 @@ Point at a single JSON file:
 
 ```bash
 kane-cli run "Log in as {{username}}" \
---variables-file ./vars.json
+  --variables-file ./vars.json
 ```
 
 The file must be a JSON object whose values are variable entries (see [Format](#format)).
@@ -117,12 +117,12 @@ Global variables have the lowest precedence, anything else with the same key win
 
 ```json
 {
-"app_url": { "value": "https://staging.myapp.com" },
-"admin_email": { "value": "admin@example.com" },
-"admin_password": { "value": "admin_pass_123", "secret": true },
-"customer_email": { "value": "customer@example.com" },
-"customer_password": { "value": "customer_pass_456", "secret": true },
-"test_product_sku": { "value": "PROD-2024-001" }
+  "app_url": { "value": "https://staging.myapp.com" },
+  "admin_email": { "value": "admin@example.com" },
+  "admin_password": { "value": "admin_pass_123", "secret": true },
+  "customer_email": { "value": "customer@example.com" },
+  "customer_password": { "value": "customer_pass_456", "secret": true },
+  "test_product_sku": { "value": "PROD-2024-001" }
 }
 ```
 
@@ -132,7 +132,7 @@ Mark a variable as secret by setting `"secret": true`:
 
 ```json
 {
-"api_key": { "value": "sk-live-abc123", "secret": true }
+  "api_key": { "value": "sk-live-abc123", "secret": true }
 }
 ```
 
@@ -190,8 +190,8 @@ Override either context file for a single run:
 
 ```bash
 kane-cli run "your objective" \
---global-context ./custom-global.md \
---local-context ./custom-local.md
+  --global-context ./custom-global.md \
+  --local-context ./custom-local.md
 ```
 
 If a context file is missing or empty, it is silently ignored, no error is raised.

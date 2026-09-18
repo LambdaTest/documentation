@@ -161,7 +161,7 @@ Your final repository structure should look like this:
 your-repo/
 ├── .lambdatest/
 │   └── config.yaml          # LambdaTest configuration
-└── agent.md             # Optional file for custom instructions to enhance responses
+    └── agent.md             # Optional file for custom instructions to enhance responses
 ├── src/                     # Your application source code
 ├── README.md                # Detailed project documentation (used by AI)
 └── ... other project files

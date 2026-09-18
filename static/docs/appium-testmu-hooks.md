@@ -65,33 +65,33 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import java.net.MalformedURLException;
 import java.net.URL;
 public class vanilla_android {
-private static AppiumDriver driver;
-public static void main(String args[]) throws MalformedURLException, InterruptedException {
+    private static AppiumDriver driver;
+    public static void main(String args[]) throws MalformedURLException, InterruptedException {
 
-try {
-DesiredCapabilities capabilities = new DesiredCapabilities();
+        try {
+            DesiredCapabilities capabilities = new DesiredCapabilities();
 
-capabilities.setCapability("deviceName", "Galaxy S20");
-capabilities.setCapability("platformVersion", "11");
-capabilities.setCapability("platformName", "Android");
-capabilities.setCapability("isRealMobile", true);
-capabilities.setCapability("app", "APP_ID"); //Enter your app url
-capabilities.setCapability("build", "Java Vanilla - Android");
-capabilities.setCapability("name", "Sample Test Java");
+            capabilities.setCapability("deviceName", "Galaxy S20");
+            capabilities.setCapability("platformVersion", "11");
+            capabilities.setCapability("platformName", "Android");
+            capabilities.setCapability("isRealMobile", true);
+            capabilities.setCapability("app", "APP_ID"); //Enter your app url
+            capabilities.setCapability("build", "Java Vanilla - Android");
+            capabilities.setCapability("name", "Sample Test Java");
 
-//Enter your Username & Accesskey here:
-driver = new AppiumDriver(new URL("https://" +userName + ":" + accessKey + "@mobile-hub.lambdatest.com/wd/hub"), capabilities);
+            //Enter your Username & Accesskey here:
+            driver = new AppiumDriver(new URL("https://" +userName + ":" + accessKey + "@mobile-hub.lambdatest.com/wd/hub"), capabilities);
 
-MobileElement color = (MobileElement) driver.findElement(MobileBy.id("com.lambdatest.proverbial:id/color"));
-color.click();
+            MobileElement color = (MobileElement) driver.findElement(MobileBy.id("com.lambdatest.proverbial:id/color"));
+            color.click();
 
-//Javascript Executor for marking the status and custom remark.
-//highlight-next-line
-((JavascriptExecutor) driver).executeScript("lambda-hook: {\"action\": \"setTestStatus\",\"arguments\": {\"status\":\"failed\", \"remark\":\"This is a sample remark for failed test \"}} ");
-}
-// The driver.quit statement is required, otherwise the test continues to execute, leading to a timeout.
-driver.quit();
-}
+            //Javascript Executor for marking the status and custom remark.
+            //highlight-next-line
+            ((JavascriptExecutor) driver).executeScript("lambda-hook: {\"action\": \"setTestStatus\",\"arguments\": {\"status\":\"failed\", \"remark\":\"This is a sample remark for failed test \"}} ");
+        }
+        // The driver.quit statement is required, otherwise the test continues to execute, leading to a timeout.
+        driver.quit();
+    }
 }
 ```
 

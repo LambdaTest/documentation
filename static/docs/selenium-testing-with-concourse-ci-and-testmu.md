@@ -52,36 +52,36 @@ Next, we need to update the environment variables in the `YAML` file. To access 
 
 ```js
 resources:
-- name: nodejs-selenium-sample
-type: git
-icon: github
-source:
-url: https://github.com/sushobhit-lt/nodejs-selenium-sample.git
+  - name: nodejs-selenium-sample
+    type: git
+    icon: github
+    source:
+      url: https://github.com/sushobhit-lt/nodejs-selenium-sample.git
 
 jobs:
-- name: 'Run over Lambdatest Hub'
-public: true
-plan:
-- get: nodejs-selenium-sample
-trigger: true
-- task: 'Install dependencies and execute'
-config:
-platform: linux
-image_resource:
-type: registry-image
-source: { repository: node, tag: "12" }
-inputs:
-- name: nodejs-selenium-sample
-run:
-path: /bin/sh
-args:
-- -c
-- |
-cd nodejs-selenium-sample
-npm install
-export LT_USERNAME=Your_LambdaTest_Username
-export LT_ACCESS_KEY=Your_LambdaTest_Access_Key
-node index.js
+  - name: 'Run over Lambdatest Hub'
+    public: true
+    plan:
+      - get: nodejs-selenium-sample
+        trigger: true
+      - task: 'Install dependencies and execute'
+        config:
+          platform: linux
+          image_resource:
+            type: registry-image
+            source: { repository: node, tag: "12" }
+          inputs:
+            - name: nodejs-selenium-sample
+          run:
+            path: /bin/sh
+            args:
+              - -c
+              - |
+                cd nodejs-selenium-sample
+                npm install
+                export LT_USERNAME=Your_LambdaTest_Username
+                export LT_ACCESS_KEY=Your_LambdaTest_Access_Key
+                node index.js
 ```
 
 After you specify the right configuration in the `pipeline-config.yml`, you now need to create your concourse pipeline with the help of fly CLI.

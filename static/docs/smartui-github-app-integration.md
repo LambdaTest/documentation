@@ -49,18 +49,18 @@ Please check out GitHub sample here: https://github.com/LambdaTest/smartui-node-
 
 ```js
 const capabilities: {
-platform: "Windows 10",
-browserName: "chrome",
-version: "latest",
-"smartUI.project": "SmartUI sample test",
-// highlight-start
-github: {
+  platform: "Windows 10",
+  browserName: "chrome",
+  version: "latest",
+  "smartUI.project": "SmartUI sample test",
+  // highlight-start
+   github: {
 
-"url": process.env.GITHUB_URL  // Mandatory
-//GitHub URL format-https://api.github.com/repos/OWNER/REPO/statuses/commitId
+    "url": process.env.GITHUB_URL  // Mandatory
+    //GitHub URL format-https://api.github.com/repos/OWNER/REPO/statuses/commitId
 
-}
-// highlight-end
+   }
+   // highlight-end
 }
 ```
 
@@ -71,35 +71,35 @@ Setting up your **CI** workflow to execute on **GitHub**. Here is an example set
 Go to `.github/workflows/.yml`
 
 ```yaml
-name: Execute SmartUI Test with GitHub App Integration
-runs-on: ubuntu-latest
-steps:
-- uses: actions/checkout@v1
-with:
-fetch-depth: 10
+    name: Execute SmartUI Test with GitHub App Integration
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+      with:
+        fetch-depth: 10
 
-- name: Step for push event
-run: |
-echo "This is a push event!"
-echo "The latest commitId $(git log -1 --format='%H')"
-echo "COMMIT_ID=$(git log -1 --format='%H')" >> $GITHUB_ENV
-if: github.event_name == 'push'
+    - name: Step for push event
+      run: |
+        echo "This is a push event!"
+        echo "The latest commitId $(git log -1 --format='%H')"
+        echo "COMMIT_ID=$(git log -1 --format='%H')" >> $GITHUB_ENV
+      if: github.event_name == 'push'
 
-- name: Step for pull_request event
-run: |
-echo "This is a pull_request event!"
-git log -n 5 --format="%H %an %s" | while read line; do echo "$line"; done
-echo "The latest commitId $(git log -n 2 --format='%H' | tail -n 1)"
-echo "COMMIT_ID=$(git log -n 2 --format='%H' | tail -n 1)" >> $GITHUB_ENV
-if: github.event_name == 'pull_request'
+    - name: Step for pull_request event
+      run: |
+        echo "This is a pull_request event!"
+        git log -n 5 --format="%H %an %s" | while read line; do echo "$line"; done
+        echo "The latest commitId $(git log -n 2 --format='%H' | tail -n 1)"
+        echo "COMMIT_ID=$(git log -n 2 --format='%H' | tail -n 1)" >> $GITHUB_ENV
+      if: github.event_name == 'pull_request'
 
-- name: Create GitHub URL
-run: |
-API_HOST=https://api.github.com
-echo "The latest commitId is $COMMIT_ID"
-GITHUB_URL=$API_HOST/repos/$GITHUB_REPOSITORY/statuses/$COMMIT_ID
-echo "GITHUB_URL: $GITHUB_URL"
-echo "GITHUB_URL=$GITHUB_URL" >> $GITHUB_ENV
+    - name: Create GitHub URL
+      run: |
+        API_HOST=https://api.github.com
+        echo "The latest commitId is $COMMIT_ID"
+        GITHUB_URL=$API_HOST/repos/$GITHUB_REPOSITORY/statuses/$COMMIT_ID
+        echo "GITHUB_URL: $GITHUB_URL"
+        echo "GITHUB_URL=$GITHUB_URL" >> $GITHUB_ENV
 ```
 
 **Note**

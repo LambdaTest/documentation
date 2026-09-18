@@ -28,11 +28,11 @@ To run your Cypress testing parallelly, you can also use the **lambdatest-config
 
 ```json
 {
-"run_settings": {
-...
-"parallels": <number of parallel sessions>,
-...
-}
+  "run_settings": {
+    ...
+    "parallels": <number of parallel sessions>,
+    ...
+  }
 }
 ```
 
@@ -40,11 +40,11 @@ For example, if you want to run your Cypress tests on 5 parallel sessions, use t
 
 ```json
 {
-"run_settings": {
-...
-"parallels": 5,
-...
-}
+  "run_settings": {
+    ...
+    "parallels": 5,
+    ...
+  }
 }
 ```
 
@@ -62,8 +62,8 @@ The cypress-skill package includes:
 cypress-skill/
 ├── SKILL.md
 └── reference/
-├── playbook.md
-└── advanced-patterns.md
+    ├── playbook.md
+    └── advanced-patterns.md
 ```
 
 It provides structured guidance for:

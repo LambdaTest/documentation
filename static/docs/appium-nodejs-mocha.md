@@ -105,43 +105,43 @@ const { element } = require("wd/lib/element-commands");
 
 require("appium-base-driver")
 var assert= require("assert"),
-webdriver = require("selenium-webdriver"),
-conf_file= process.argv[3] || "conf/ios.conf.js";
+  webdriver = require("selenium-webdriver"),
+   conf_file= process.argv[3] || "conf/ios.conf.js";
 
 var caps = require("../" + conf_file).capabilities;
 
 var buildDriver = function(caps) {
-return new webdriver.Builder()
-.usingServer(
-"http://" +
-LT_USERNAME +
-":" +
-LT_ACCESS_KEY +
-"@mobile-hub.lambdatest.com/wd/hub"
-)
-.withCapabilities(caps)
-.build();
+  return new webdriver.Builder()
+    .usingServer(
+      "http://" +
+      LT_USERNAME +
+      ":" +
+      LT_ACCESS_KEY +
+      "@mobile-hub.lambdatest.com/wd/hub"
+    )
+    .withCapabilities(caps)
+    .build();
 };
 
 describe("Mocha Appium iOS Test " + caps.browserName, function() {
-var driver;
-this.timeout(0);
-it ('Application is launched', function name(done) {
-driver=buildDriver(caps);
-driver.findElement(By.xpath('//XCUIElementTypeButton[@name="color"]')).click().then(function(){
-console.log("Successfully clicked Color");
+  var driver;
+  this.timeout(0);
+    it ('Application is launched', function name(done) {
+        driver=buildDriver(caps);
+        driver.findElement(By.xpath('//XCUIElementTypeButton[@name="color"]')).click().then(function(){
+          console.log("Successfully clicked Color");
 
-});
-driver.findElement(By.xpath('//XCUIElementTypeStaticText[@name="Notification"]')).click().then(function(){
-console.log("Successfully clicked Notification");
-});
-driver.findElement(By.xpath('//XCUIElementTypeStaticText[@name="Toast"]')).click().then(function(){
-console.log("Successfully clicked Toast");
-});
-driver.findElement(By.xpath('//XCUIElementTypeButton[@name="Text"]')).click().then(function(){
-console.log("Successfully clicked Text");
-driver.quit()
-});
+        });
+        driver.findElement(By.xpath('//XCUIElementTypeStaticText[@name="Notification"]')).click().then(function(){
+          console.log("Successfully clicked Notification");
+        });
+        driver.findElement(By.xpath('//XCUIElementTypeStaticText[@name="Toast"]')).click().then(function(){
+            console.log("Successfully clicked Toast");
+    });
+         driver.findElement(By.xpath('//XCUIElementTypeButton[@name="Text"]')).click().then(function(){
+             console.log("Successfully clicked Text");
+             driver.quit()
+    });
 });
 });
 
@@ -154,44 +154,44 @@ const { capabilities } = require("../conf/android.conf");
 
 require("appium-android-driver")
 var assert= require("assert"),
-webdriver = require("selenium-webdriver"),
-conf_file= process.argv[3] || "conf/Appp.conf.js";
+  webdriver = require("selenium-webdriver"),
+   conf_file= process.argv[3] || "conf/Appp.conf.js";
 
 var caps = require("../" + conf_file).capabilities;
 
 var buildDriver = function(caps) {
-return new webdriver.Builder()
-.usingServer(
-"http://" +
-LT_USERNAME +
-":" +
-LT_ACCESS_KEY +
-"@mobile-hub.lambdatest.com/wd/hub"
-)
-.withCapabilities(caps)
-.build();
+  return new webdriver.Builder()
+    .usingServer(
+      "http://" +
+      LT_USERNAME +
+      ":" +
+      LT_ACCESS_KEY +
+      "@mobile-hub.lambdatest.com/wd/hub"
+    )
+    .withCapabilities(caps)
+    .build();
 };
 
 describe("Mocha Appium Test " + caps.browserName, function() {
-var driver;
-this.timeout(0);
+  var driver;
+  this.timeout(0);
 
-it ('Application is launched', function name(done) {
-driver=buildDriver(caps);
+    it ('Application is launched', function name(done) {
+        driver=buildDriver(caps);
 
-driver.findElement(By.id('com.lambdatest.proverbial:id/color')).click().then(function(){
-console.log("Successfully clicked Color");
-});
-driver.findElement(By.id('com.lambdatest.proverbial:id/Text')).click().then(function(){
-console.log("Successfully clicked Text");
-});
-driver.findElement(By.id('com.lambdatest.proverbial:id/notification')).click().then(function(){
-console.log("Successfully clicked Notification");
-})
-driver.findElement(By.id('com.lambdatest.proverbial:id/toast')).click().then(function(){
-console.log("Successfully clicked Toast");
-driver.quit()
-})
+        driver.findElement(By.id('com.lambdatest.proverbial:id/color')).click().then(function(){
+        console.log("Successfully clicked Color");
+    });
+     driver.findElement(By.id('com.lambdatest.proverbial:id/Text')).click().then(function(){
+        console.log("Successfully clicked Text");
+    });
+    driver.findElement(By.id('com.lambdatest.proverbial:id/notification')).click().then(function(){
+        console.log("Successfully clicked Notification");
+    })
+    driver.findElement(By.id('com.lambdatest.proverbial:id/toast')).click().then(function(){
+        console.log("Successfully clicked Toast");
+        driver.quit()
+    })
 });
 
 });
@@ -210,18 +210,18 @@ LT_USERNAME = process.env.LT_USERNAME || "<your username>";      //Enter your La
 LT_ACCESS_KEY = process.env.LT_ACCESS_KEY || "<your accessKey>";  //Enter your LambdaTest accessKey here
 
 exports.capabilities = {
-'build': 'Mocha-Appium-Sample', //Build name
-'name': 'Mocha-Android', // Test name
-'platformName':'android', // OS name
-'deviceName': 'Galaxy S10', // Device name
-'platformVersion': '11', // OS version
-'app' : 'lt://proverbial-android',     // Add app (.apk) url here
-'isRealMobile' : true,
-'visual': false,  // To take step by step screenshot
-'network':false,  // To capture network Logs
-'console':false, // To capture console logs.
-'tunnel': false // If you want to run the localhost than change it to true
-};
+  'build': 'Mocha-Appium-Sample', //Build name
+  'name': 'Mocha-Android', // Test name
+  'platformName':'android', // OS name
+  'deviceName': 'Galaxy S10', // Device name
+  'platformVersion': '11', // OS version
+  'app' : 'lt://proverbial-android',     // Add app (.apk) url here
+  'isRealMobile' : true,
+  'visual': false,  // To take step by step screenshot
+  'network':false,  // To capture network Logs
+  'console':false, // To capture console logs.
+  'tunnel': false // If you want to run the localhost than change it to true
+  };
 ```
 
 - You must set **isRealMobile** capability to `False` in the config file to run on **Virtual Devices**
@@ -231,18 +231,18 @@ LT_USERNAME = process.env.LT_USERNAME || "<your username>";        //Enter your 
 LT_ACCESS_KEY = process.env.LT_ACCESS_KEY || "<your accessKey>";    //Enter your LambdaTest accessKey here
 
 exports.capabilities = {
-'build': 'Mocha-iOS-Sample', //Build name
-'name': 'Mocha-iOS', // Test name
-'platformName':'ios', // OS name
-'deviceName': 'iPhone 12 Pro', // Device name
-'platformVersion': '15', // OS version
-'app' : 'lt://proverbial-ios',     // Add app (.ipa) url here
-'isRealMobile' : true,
-'visual': false,  // To take step by step screenshot
-'network':false,  // To capture network Logs
-'console':false, // To capture console logs.
-'tunnel': false // If you want to run the localhost than change it to true
-};
+  'build': 'Mocha-iOS-Sample', //Build name
+  'name': 'Mocha-iOS', // Test name
+  'platformName':'ios', // OS name
+  'deviceName': 'iPhone 12 Pro', // Device name
+  'platformVersion': '15', // OS version
+  'app' : 'lt://proverbial-ios',     // Add app (.ipa) url here
+  'isRealMobile' : true,
+  'visual': false,  // To take step by step screenshot
+  'network':false,  // To capture network Logs
+  'console':false, // To capture console logs.
+  'tunnel': false // If you want to run the localhost than change it to true
+  };
 ```
 
 - You must add the generated **APP_URL** to the `app` capability in the config file.
@@ -285,8 +285,8 @@ The mocha-skill package includes:
 mocha-skill/
 ├── SKILL.md
 └── reference/
-├── playbook.md
-└── advanced-patterns.md
+    ├── playbook.md
+    └── advanced-patterns.md
 ```
 
 It provides structured guidance for:

@@ -92,20 +92,20 @@ testSuiteStep: 150
 runson: mac
 
 pre:
-- npm i -g @testim/testim-cli
+  - npm i -g @testim/testim-cli
 
 runtime:
-language: node
-version: "18.0.0"
+  language: node
+  version: "18.0.0"
 
 autosplit: true
 
 concurrency: 1
 
 testDiscovery:
-type: raw
-mode: static
-command: echo "HYP with Testim"
+ type: raw
+ mode: static
+ command: echo "HYP with Testim"
 
 testRunnerCommand: ./.hyperexecute/snooper --frameWork testim --testimProject YOUR_PROJECT_ID --testimToken YOUR_TESTIM_TOKEN --testimProjectBranch YOUR_BRANCH_NAME
 ```

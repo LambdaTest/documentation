@@ -32,10 +32,10 @@ browserOptions.BrowserVersion = "latest";
 
 var ltOptions = new Dictionary<string, object>
 {
-{ "username", LT_USERNAME },
-{ "accessKey", LT_ACCESS_KEY },
-{ "project", "Demo LT" },
-{ "w3c", true }
+    { "username", LT_USERNAME },
+    { "accessKey", LT_ACCESS_KEY },
+    { "project", "Demo LT" },
+    { "w3c", true }
 };
 browserOptions.AddAdditionalOption("LT:Options", ltOptions);
 ```
@@ -66,9 +66,9 @@ browserOptions.BrowserVersion = "latest";
 
 var ltOptions = new Dictionary<string, object>
 {
-{ "build", "NUnit Build" },
-{ "name", "NUnit Test" },
-{ "w3c", true }
+    { "build", "NUnit Build" },
+    { "name", "NUnit Test" },
+    { "w3c", true }
 };
 browserOptions.AddAdditionalOption("LT:Options", ltOptions);
 ```
@@ -97,9 +97,9 @@ browserOptions.BrowserVersion = "latest";
 
 var ltOptions = new Dictionary<string, object>
 {
-{ "build", "MSTest Build" },
-{ "name", "MSTest Test" },
-{ "w3c", true }
+    { "build", "MSTest Build" },
+    { "name", "MSTest Test" },
+    { "w3c", true }
 };
 browserOptions.AddAdditionalOption("LT:Options", ltOptions);
 ```
@@ -128,9 +128,9 @@ browserOptions.BrowserVersion = "latest";
 
 var ltOptions = new Dictionary<string, object>
 {
-{ "build", "SpecFlow Build" },
-{ "name", "SpecFlow Test" },
-{ "w3c", true }
+    { "build", "SpecFlow Build" },
+    { "name", "SpecFlow Test" },
+    { "w3c", true }
 };
 browserOptions.AddAdditionalOption("LT:Options", ltOptions);
 ```
@@ -150,23 +150,23 @@ cd CSharp-xUnit-Selenium
 
 ```json title="config.json"
 {
-"server": "hub.lambdatest.com",
-"user": "LT_USERNAME",
-"key": "LT_ACCESS_KEY",
-"capabilities": {
-"lt:options": {
-"buildName": "xunit build",
-"sessionName": "lambdatest xunit sample test",
-"visual": "true",
-"plugin": "xunit:sample"
-}
-},
-"environments": [
-{ "browserName": "chrome" },
-{ "browserName": "firefox" },
-{ "browserName": "safari" }
-],
-"TunnelOptions": { "tunnel": false }
+  "server": "hub.lambdatest.com",
+  "user": "LT_USERNAME",
+  "key": "LT_ACCESS_KEY",
+  "capabilities": {
+    "lt:options": {
+      "buildName": "xunit build",
+      "sessionName": "lambdatest xunit sample test",
+      "visual": "true",
+      "plugin": "xunit:sample"
+    }
+  },
+  "environments": [
+    { "browserName": "chrome" },
+    { "browserName": "firefox" },
+    { "browserName": "safari" }
+  ],
+  "TunnelOptions": { "tunnel": false }
 }
 ```
 

@@ -21,9 +21,9 @@ Follow the below mentioned steps to generate the Reports for your desired framew
 ```yaml
 report: true
 partialReports:
-frameworkName: testng
-location: target/surefire-reports/html
-type: html
+  frameworkName: testng
+  location: target/surefire-reports/html
+  type: html
 ```
 > **Note**: If you do not specify a framework but you do mention the type of the report, then a report of the default framework is created.
 
@@ -38,13 +38,13 @@ If you want to generate multiple reports of different types [supported by HyperE
 
 ```yaml
 partialReports:
-- location: reports/json
-type: json
-frameworkName: extent-native
+  - location: reports/json
+    type: json
+    frameworkName: extent-native
 
-- location: target/surefire-reports
-type: html
-frameworkName: testng
+  - location: target/surefire-reports
+    type: html
+    frameworkName: testng
 ```
 
 ## Regex Support for Dynamic Report Paths
@@ -54,17 +54,17 @@ Example:
 
 ```yaml title="hyperexecute.yaml"
 partialReports:
-location: reports/**/cucumber/
-# location: target/abc/**/pqr/**/cucumber-reports
-frameworkName: cucumber
-type: json
+  location: reports/**/cucumber/
+  # location: target/abc/**/pqr/**/cucumber-reports
+  frameworkName: cucumber
+  type: json
 ```
 
 Ensure that your Testrunner.java file should have the complete path from where partial reports will be added. Example:
 
 ```java title="Testrunner.java"
 plugin = {
-"json:target/abc/mno/pqr/xyz/cucumber-reports/CucumberTestReport.json",
-"json:target/abc/its/pqr/abc/cucumber-reports/CucumberTestReport.json"
+    "json:target/abc/mno/pqr/xyz/cucumber-reports/CucumberTestReport.json",
+    "json:target/abc/its/pqr/abc/cucumber-reports/CucumberTestReport.json"
 }
 ```

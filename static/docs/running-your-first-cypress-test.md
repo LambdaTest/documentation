@@ -21,37 +21,37 @@ Here, we have used the below configuration as default and generated it in the `l
 
 ```json
 {
-"lambdatest_auth": {
-"username": "<YOUR_LAMBDATEST_USERNAME>",
-"access_key": "<Your LambdaTest access key>"
-},
-"browsers": [
-{
-"browser": "Chrome",
-"platform": "Windows 10",
-"versions": ["86.0"]
-},
-{
-"browser": "Firefox",
-"platform": "Windows 10",
-"versions": ["82.0"]
-}
-],
-"run_settings": {
-"cypress_config_file": "cypress.json",
-"build_name": "build-name",
-"parallels": 1,
-"specs": "./*.spec.js",
-"ignore_files": "",
-"npm_dependencies": {
-"cypress": "6.1.0"
-},
-"feature_file_suppport": false
-},
-"tunnel_settings": {
-"tunnel": false,
-"tunnelName": null
-}
+  "lambdatest_auth": {
+    "username": "<YOUR_LAMBDATEST_USERNAME>",
+    "access_key": "<Your LambdaTest access key>"
+  },
+  "browsers": [
+    {
+      "browser": "Chrome",
+      "platform": "Windows 10",
+      "versions": ["86.0"]
+    },
+    {
+      "browser": "Firefox",
+      "platform": "Windows 10",
+      "versions": ["82.0"]
+    }
+  ],
+  "run_settings": {
+    "cypress_config_file": "cypress.json",
+    "build_name": "build-name",
+    "parallels": 1,
+    "specs": "./*.spec.js",
+    "ignore_files": "",
+    "npm_dependencies": {
+      "cypress": "6.1.0"
+    },
+    "feature_file_suppport": false
+  },
+  "tunnel_settings": {
+    "tunnel": false,
+    "tunnelName": null
+  }
 }
 ```
 
@@ -86,10 +86,10 @@ To run your tests locally on the TestMu AI platform, you need to setup [TestMu A
 Now you need to activate the tunnel capability in the `lambdatest_config.json` file under the section "connection_settings" as shown below:
 
 ```json title="lambdatest_config.json"
-"connection_settings": {
-"tunnel": true,
-"tunnel_name": "lt-cypress-tunnel"
-},
+  "connection_settings": {
+    "tunnel": true,
+    "tunnel_name": "lt-cypress-tunnel"
+  },
 ```
 
 You can provide the name of the **TestMu AI tunnel** as per your requirements.
@@ -104,8 +104,8 @@ The cypress-skill package includes:
 cypress-skill/
 ├── SKILL.md
 └── reference/
-├── playbook.md
-└── advanced-patterns.md
+    ├── playbook.md
+    └── advanced-patterns.md
 ```
 
 It provides structured guidance for:

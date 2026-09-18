@@ -32,11 +32,11 @@ Use the one-click install button to add the server to Cursor:
 
 ```json
 {
-"mcpServers": {
-"mcp-lambdatest": {
-"url": "https://mcp.lambdatest.com/mcp"
-}
-}
+  "mcpServers": {
+    "mcp-lambdatest": {
+      "url": "https://mcp.lambdatest.com/mcp"
+    }
+  }
 }
 ```
 
@@ -84,12 +84,12 @@ Custom connectors in Claude Desktop are configured through **Settings > Connecto
 
 ```json
 {
-"servers": {
-"mcp-lambdatest": {
-"type": "http",
-"url": "https://mcp.lambdatest.com/mcp"
-}
-}
+  "servers": {
+    "mcp-lambdatest": {
+      "type": "http",
+      "url": "https://mcp.lambdatest.com/mcp"
+    }
+  }
 }
 ```
 
@@ -103,11 +103,11 @@ Custom connectors in Claude Desktop are configured through **Settings > Connecto
 
 ```json
 {
-"mcpServers": {
-"mcp-lambdatest": {
-"serverUrl": "https://mcp.lambdatest.com/mcp"
-}
-}
+  "mcpServers": {
+    "mcp-lambdatest": {
+      "serverUrl": "https://mcp.lambdatest.com/mcp"
+    }
+  }
 }
 ```
 
@@ -145,15 +145,15 @@ url = "https://mcp.lambdatest.com/mcp"
 
 ```json
 {
-"mcpServers": {
-"mcp-lambdatest": {
-"disabled": false,
-"timeout": 60,
-"command": "npx",
-"args": ["mcp-remote@latest", "https://mcp.lambdatest.com/mcp"],
-"alwaysAllow": []
-}
-}
+  "mcpServers": {
+    "mcp-lambdatest": {
+      "disabled": false,
+      "timeout": 60,
+      "command": "npx",
+      "args": ["mcp-remote@latest", "https://mcp.lambdatest.com/mcp"],
+      "alwaysAllow": []
+    }
+  }
 }
 ```
 
@@ -168,9 +168,9 @@ name: TestMu AI mcpServer
 version: 0.0.1
 schema: v1
 mcpServers:
-- name: TestMu AI
-type: streamable-http
-url: https://mcp.lambdatest.com/mcp
+  - name: TestMu AI
+    type: streamable-http
+    url: https://mcp.lambdatest.com/mcp
 ```
 
 2. Switch to **Agent Mode** in Continue and complete the OAuth flow when prompted.
@@ -190,12 +190,12 @@ If your MCP client is not listed above, use one of these connection methods:
 
 ```json
 {
-"mcpServers": {
-"mcp-lambdatest": {
-"command": "npx",
-"args": ["-y", "mcp-remote@latest", "https://mcp.lambdatest.com/mcp"]
-}
-}
+  "mcpServers": {
+    "mcp-lambdatest": {
+      "command": "npx",
+      "args": ["-y", "mcp-remote@latest", "https://mcp.lambdatest.com/mcp"]
+    }
+  }
 }
 ```
 

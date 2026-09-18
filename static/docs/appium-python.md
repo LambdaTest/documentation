@@ -104,71 +104,71 @@ import time
 import os
 
 desired_caps = {
-"deviceName": "iPhone 12",
-"platformName": "ios",
-"platformVersion": "14",
-"isRealMobile": True,
-#highlight-next-line
-"app": "APP_URL",  # Enter app (.ipa) url
-"build": "Python Vanilla iOS",
-"name": "Sample Test - Python",
-"network": False,
-"visual": True,
-"video": True
+    "deviceName": "iPhone 12",
+    "platformName": "ios",
+    "platformVersion": "14",
+    "isRealMobile": True,
+    #highlight-next-line
+    "app": "APP_URL",  # Enter app (.ipa) url
+    "build": "Python Vanilla iOS",
+    "name": "Sample Test - Python",
+    "network": False,
+    "visual": True,
+    "video": True
 }
 
 def startingTest():
-if os.environ.get("LT_USERNAME") is None:
-username = "username" #Add username here
-else:
-username = os.environ.get("LT_USERNAME")
-if os.environ.get("LT_ACCESS_KEY") is None:
-accesskey = "accesskey" #Add accessKey here
-else:
-accesskey = os.environ.get("LT_ACCESS_KEY")
+    if os.environ.get("LT_USERNAME") is None:
+        username = "username" #Add username here
+    else:
+        username = os.environ.get("LT_USERNAME")
+    if os.environ.get("LT_ACCESS_KEY") is None:
+        accesskey = "accesskey" #Add accessKey here
+    else:
+        accesskey = os.environ.get("LT_ACCESS_KEY")
 
-try:
-driver = webdriver.Remote(desired_capabilities=desired_caps, command_executor="https://" +
-username+":"+accesskey+"@mobile-hub.lambdatest.com/wd/hub")
-time.sleep(3)
-colorElement = WebDriverWait(driver, 20).until(
-EC.element_to_be_clickable((MobileBy.ACCESSIBILITY_ID, "color")))
-colorElement.click()
-textElement = WebDriverWait(driver, 20).until(
-EC.element_to_be_clickable((MobileBy.ACCESSIBILITY_ID, "Text")))
-textElement.click()
-toastElement = WebDriverWait(driver, 20).until(
-EC.element_to_be_clickable((MobileBy.ACCESSIBILITY_ID, "toast")))
-toastElement.click()
-notification = WebDriverWait(driver, 20).until(
-EC.element_to_be_clickable((MobileBy.ACCESSIBILITY_ID, "notification")))
-notification.click()
-time.sleep(3)
-geolocation = WebDriverWait(driver, 20).until(
-EC.element_to_be_clickable((MobileBy.ACCESSIBILITY_ID, "geoLocation")))
-geolocation.click()
-time.sleep(5)
-driver.back()
-home = WebDriverWait(driver, 20).until(
-EC.element_to_be_clickable((MobileBy.ACCESSIBILITY_ID, "Home")))
-home.click()
-speedTest = WebDriverWait(driver, 20).until(
-EC.element_to_be_clickable((MobileBy.ACCESSIBILITY_ID, "speedTest")))
-speedTest.click()
-time.sleep(5)
-driver.back()
-browser = WebDriverWait(driver, 20).until(
-EC.element_to_be_clickable((MobileBy.ACCESSIBILITY_ID, "Browser")))
-browser.click()
-url = WebDriverWait(driver, 20).until(
-EC.element_to_be_clickable((MobileBy.ACCESSIBILITY_ID, "url")))
-url.send_keys("https://www.testmuai.com")
-find = WebDriverWait(driver, 20).until(
-EC.element_to_be_clickable((MobileBsy.ACCESSIBILITY_ID, "find")))
-find.click()
-driver.quit()
-except:
-driver.quit()
+    try:
+        driver = webdriver.Remote(desired_capabilities=desired_caps, command_executor="https://" +
+                                  username+":"+accesskey+"@mobile-hub.lambdatest.com/wd/hub")
+        time.sleep(3)
+        colorElement = WebDriverWait(driver, 20).until(
+            EC.element_to_be_clickable((MobileBy.ACCESSIBILITY_ID, "color")))
+        colorElement.click()
+        textElement = WebDriverWait(driver, 20).until(
+            EC.element_to_be_clickable((MobileBy.ACCESSIBILITY_ID, "Text")))
+        textElement.click()
+        toastElement = WebDriverWait(driver, 20).until(
+            EC.element_to_be_clickable((MobileBy.ACCESSIBILITY_ID, "toast")))
+        toastElement.click()
+        notification = WebDriverWait(driver, 20).until(
+            EC.element_to_be_clickable((MobileBy.ACCESSIBILITY_ID, "notification")))
+        notification.click()
+        time.sleep(3)
+        geolocation = WebDriverWait(driver, 20).until(
+            EC.element_to_be_clickable((MobileBy.ACCESSIBILITY_ID, "geoLocation")))
+        geolocation.click()
+        time.sleep(5)
+        driver.back()
+        home = WebDriverWait(driver, 20).until(
+            EC.element_to_be_clickable((MobileBy.ACCESSIBILITY_ID, "Home")))
+        home.click()
+        speedTest = WebDriverWait(driver, 20).until(
+            EC.element_to_be_clickable((MobileBy.ACCESSIBILITY_ID, "speedTest")))
+        speedTest.click()
+        time.sleep(5)
+        driver.back()
+        browser = WebDriverWait(driver, 20).until(
+            EC.element_to_be_clickable((MobileBy.ACCESSIBILITY_ID, "Browser")))
+        browser.click()
+        url = WebDriverWait(driver, 20).until(
+            EC.element_to_be_clickable((MobileBy.ACCESSIBILITY_ID, "url")))
+        url.send_keys("https://www.testmuai.com")
+        find = WebDriverWait(driver, 20).until(
+            EC.element_to_be_clickable((MobileBsy.ACCESSIBILITY_ID, "find")))
+        find.click()
+        driver.quit()
+    except:
+        driver.quit()
 
 startingTest()
 ```
@@ -182,80 +182,80 @@ import time
 import os
 
 desired_caps = {
-"deviceName": "Galaxy S20",
-"platformName": "Android",
-"platformVersion": "10",
-#highlight-next-line
-"app": "APP_URL",  # Enter app (.apk) url
-"isRealMobile": True,
-"build": "Python Vanilla Android",
-"name": "Sample Test - Python",
-"network": False,
-"visual": True,
-"video": True
+    "deviceName": "Galaxy S20",
+    "platformName": "Android",
+    "platformVersion": "10",
+    #highlight-next-line
+    "app": "APP_URL",  # Enter app (.apk) url
+    "isRealMobile": True,
+    "build": "Python Vanilla Android",
+    "name": "Sample Test - Python",
+    "network": False,
+    "visual": True,
+    "video": True
 }
 
 def startingTest():
-if os.environ.get("LT_USERNAME") is None:
-username = "username" #Add username here
-else:
-username = os.environ.get("LT_USERNAME")
-if os.environ.get("LT_ACCESS_KEY") is None:
-accesskey = "accesskey" #Add accessKey here
-else:
-accesskey = os.environ.get("LT_ACCESS_KEY")
+    if os.environ.get("LT_USERNAME") is None:
+        username = "username" #Add username here
+    else:
+        username = os.environ.get("LT_USERNAME")
+    if os.environ.get("LT_ACCESS_KEY") is None:
+        accesskey = "accesskey" #Add accessKey here
+    else:
+        accesskey = os.environ.get("LT_ACCESS_KEY")
 
-try:
-driver = webdriver.Remote(desired_capabilities=desired_caps, command_executor="https://" +
-username+":"+accesskey+"@mobile-hub.lambdatest.com/wd/hub")
-colorElement = WebDriverWait(driver, 20).until(EC.element_to_be_clickable(
-(MobileBy.ID, "com.lambdatest.proverbial:id/color")))
-colorElement.click()
+    try:
+        driver = webdriver.Remote(desired_capabilities=desired_caps, command_executor="https://" +
+                                  username+":"+accesskey+"@mobile-hub.lambdatest.com/wd/hub")
+        colorElement = WebDriverWait(driver, 20).until(EC.element_to_be_clickable(
+            (MobileBy.ID, "com.lambdatest.proverbial:id/color")))
+        colorElement.click()
 
-textElement = WebDriverWait(driver, 20).until(
-EC.element_to_be_clickable((MobileBy.ID, "com.lambdatest.proverbial:id/Text")))
-textElement.click()
+        textElement = WebDriverWait(driver, 20).until(
+            EC.element_to_be_clickable((MobileBy.ID, "com.lambdatest.proverbial:id/Text")))
+        textElement.click()
 
-toastElement = WebDriverWait(driver, 20).until(EC.element_to_be_clickable(
-(MobileBy.ID, "com.lambdatest.proverbial:id/toast")))
-toastElement.click()
+        toastElement = WebDriverWait(driver, 20).until(EC.element_to_be_clickable(
+            (MobileBy.ID, "com.lambdatest.proverbial:id/toast")))
+        toastElement.click()
 
-notification = WebDriverWait(driver, 20).until(EC.element_to_be_clickable(
-(MobileBy.ID, "com.lambdatest.proverbial:id/notification")))
-notification.click()
+        notification = WebDriverWait(driver, 20).until(EC.element_to_be_clickable(
+            (MobileBy.ID, "com.lambdatest.proverbial:id/notification")))
+        notification.click()
 
-geolocation = WebDriverWait(driver, 20).until(EC.element_to_be_clickable(
-(MobileBy.ID, "com.lambdatest.proverbial:id/geoLocation")))
-geolocation.click()
-time.sleep(5)
+        geolocation = WebDriverWait(driver, 20).until(EC.element_to_be_clickable(
+            (MobileBy.ID, "com.lambdatest.proverbial:id/geoLocation")))
+        geolocation.click()
+        time.sleep(5)
 
-driver.back()
+        driver.back()
 
-home = WebDriverWait(driver, 20).until(EC.element_to_be_clickable(
-(MobileBy.ID, "com.lambdatest.proverbial:id/buttonPage")))
-home.click()
+        home = WebDriverWait(driver, 20).until(EC.element_to_be_clickable(
+            (MobileBy.ID, "com.lambdatest.proverbial:id/buttonPage")))
+        home.click()
 
-speedTest = WebDriverWait(driver, 20).until(EC.element_to_be_clickable(
-(MobileBy.ID, "com.lambdatest.proverbial:id/speedTest")))
-speedTest.click()
-time.sleep(5)
+        speedTest = WebDriverWait(driver, 20).until(EC.element_to_be_clickable(
+            (MobileBy.ID, "com.lambdatest.proverbial:id/speedTest")))
+        speedTest.click()
+        time.sleep(5)
 
-driver.back()
+        driver.back()
 
-browser = WebDriverWait(driver, 20).until(EC.element_to_be_clickable(
-(MobileBy.ID, "com.lambdatest.proverbial:id/webview")))
-browser.click()
+        browser = WebDriverWait(driver, 20).until(EC.element_to_be_clickable(
+            (MobileBy.ID, "com.lambdatest.proverbial:id/webview")))
+        browser.click()
 
-url = WebDriverWait(driver, 20).until(EC.element_to_be_clickable(
-(MobileBy.ID, "com.lambdatest.proverbial:id/url")))
-url.send_keys("https://www.testmuai.com")
+        url = WebDriverWait(driver, 20).until(EC.element_to_be_clickable(
+            (MobileBy.ID, "com.lambdatest.proverbial:id/url")))
+        url.send_keys("https://www.testmuai.com")
 
-find = WebDriverWait(driver, 20).until(EC.element_to_be_clickable(
-(MobileBy.ID, "com.lambdatest.proverbial:id/find")))
-find.click()
-driver.quit()
-except:
-driver.quit()
+        find = WebDriverWait(driver, 20).until(EC.element_to_be_clickable(
+            (MobileBy.ID, "com.lambdatest.proverbial:id/find")))
+        find.click()
+        driver.quit()
+    except:
+        driver.quit()
 
 startingTest()
 ```
@@ -269,34 +269,34 @@ You can update your custom capabilities in test scripts. In this sample project,
 The capabilities object in the sample code are defined as:
 
 ```python title="iOS(.ipa)"
-desired_caps = {
-"deviceName":"iPhone 12",
-"platformName":"ios",
-"platformVersion":"14",
-"isRealMobile":True,
-#highlight-next-line
-"app":"YOUR_APP_URL",
-"build":"Python Vanilla iOS",
-"name":"Sample Test - Python",
-"network":False,
-"visual":True,
-"video":True
+ desired_caps = {
+    "deviceName":"iPhone 12",
+    "platformName":"ios",
+    "platformVersion":"14",
+    "isRealMobile":True,
+    #highlight-next-line
+    "app":"YOUR_APP_URL",
+    "build":"Python Vanilla iOS",
+    "name":"Sample Test - Python",
+    "network":False,
+    "visual":True,
+    "video":True
 }
 ```
 
 ```python title="Android(.apk)"
 desired_caps = {
-"deviceName":"Galaxy S20",
-"platformName":"Android",
-"platformVersion":"10",
-"isRealMobile":True,
-#highlight-next-line
-"app":"YOUR_APP_URL",
-"build":"Python Vanilla Android",
-"name":"Sample Test - Python",
-"network":False,
-"visual":True,
-"video":True
+    "deviceName":"Galaxy S20",
+    "platformName":"Android",
+    "platformVersion":"10",
+    "isRealMobile":True,
+    #highlight-next-line
+    "app":"YOUR_APP_URL",
+    "build":"Python Vanilla Android",
+    "name":"Sample Test - Python",
+    "network":False,
+    "visual":True,
+    "video":True
 }
 ```
 
@@ -336,8 +336,8 @@ The appium-skill package includes:
 appium-skill/
 ├── SKILL.md
 └── reference/
-├── playbook.md
-└── advanced-patterns.md
+    ├── playbook.md
+    └── advanced-patterns.md
 ```
 
 It provides structured guidance for:

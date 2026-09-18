@@ -69,10 +69,10 @@ Library  Selenium2Library
 *** Variables ***
 
 @{_tmp}
-...  browserName: %{browserName},
-...  platformName: %{platform},
-...  browserVersion: %{version},
-...  name: RobotFramework Lambda Test
+    ...  browserName: %{browserName},
+    ...  platformName: %{platform},
+    ...  browserVersion: %{version},
+    ...  name: RobotFramework Lambda Test
 
 ${BROWSER}          %{ROBOT_BROWSER}
 ${CAPABILITIES}     ${EMPTY.join(${_tmp})}
@@ -82,12 +82,12 @@ ${REMOTE_URL}       https://${KEY}@hub.lambdatest.com/wd/hub
 *** Keywords ***
 
 Open test browser
-Open browser  https://lambdatest.github.io/sample-todo-app/  browser=${BROWSER}
-...  remote_url=${REMOTE_URL}
-...  desired_capabilities=${CAPABILITIES}
+    Open browser  https://lambdatest.github.io/sample-todo-app/  browser=${BROWSER}
+    ...  remote_url=${REMOTE_URL}
+    ...  desired_capabilities=${CAPABILITIES}
 
 Close test browser
-Close all browsers
+    Close all browsers
 ```
 
 **Capabilities Generator**

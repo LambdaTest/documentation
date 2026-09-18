@@ -55,8 +55,8 @@ macParallelism: 3
 
 ```yaml
 matrix:
-os: [mac, win, linux]
-var: [1,2,3]
+  os: [mac, win, linux]
+  var: [1,2,3]
 runson: ${matrix.os}
 ```
 
@@ -66,20 +66,20 @@ runson: ${matrix.os}
 
 ```yaml
 testDiscovery:
-type: raw
-mode: remote
-command: snooper --featureFilePaths=src/main//Features/ --frameWork=java
+  type: raw
+  mode: remote
+  command: snooper --featureFilePaths=src/main//Features/ --frameWork=java
 ```
 
 - It can also be defined selectively for every platform. If you have not defined the `testDiscovery` command for a specific OS, then it takes the global value of the command.
 
 ```yaml
 testDiscovery:
-type: raw
-mode: remote
-command: snooper --featureFilePaths=src/main//Features/ --frameWork=java
-winCommand: snooper --featureFilePaths=src/main//Features/ --frameWork=java
-macCommand: snooper --featureFilePaths=src/main/**/Features/ --frameWork=java
+  type: raw
+  mode: remote
+  command: snooper --featureFilePaths=src/main//Features/ --frameWork=java
+    winCommand: snooper --featureFilePaths=src/main//Features/ --frameWork=java
+    macCommand: snooper --featureFilePaths=src/main/**/Features/ --frameWork=java
 ```
 
 - In the example given above, the `testDiscovery` command for Linux will be: `snooper --featureFilePaths=src/main//Features/ --frameWork=java`
@@ -88,9 +88,9 @@ macCommand: snooper --featureFilePaths=src/main/**/Features/ --frameWork=java
 
 ```yaml
 testRunnerCommand: mvn test -Dcucumber.options="$test" -Dscenario="$test" -DOs="win 10"
-winTestRunnerCommand: mvn test -Dcucumber.options="$test" -Dscenario="$test" -DOs="win 10"
-macTestRunnerCommand: mvn test -Dcucumber.options="$test" -Dscenario="$test" -DOs="Mac"
-linuxTestRunnerCommand: mvn test -Dcucumber.options="$test" -Dscenario="$test" -DOs="linux"
+  winTestRunnerCommand: mvn test -Dcucumber.options="$test" -Dscenario="$test" -DOs="win 10"
+  macTestRunnerCommand: mvn test -Dcucumber.options="$test" -Dscenario="$test" -DOs="Mac"
+  linuxTestRunnerCommand: mvn test -Dcucumber.options="$test" -Dscenario="$test" -DOs="linux"
 ```
 
 -   If the `testRunnerCommand` is not defined for a particular OS, then it takes the global value of the parameter that is defined. In the example given above, if the `testRunnerCommand` was not defined for macOS, then it would have taken the value: `mvn test -Dcucumber.options="$test" -Dscenario="$test" -DOs="win 10"`
@@ -108,28 +108,28 @@ autosplit: true
 concurrency: 3
 
 matrix:
-os: [mac, win, linux]
+  os: [mac, win, linux]
 parallelism: 2
 
 env:
-CACHE_DIR: m2_cache_dir
+  CACHE_DIR: m2_cache_dir
 
 cacheKey: '{{ checksum "pom.xml" }}'
 cacheDirectories:
-- ${CACHE_DIR}
+  - ${CACHE_DIR}
 
 pre:
-- mvn -Dmaven.repo.local=${CACHE_DIR} -Dmaven.test.skip=true clean install
+  - mvn -Dmaven.repo.local=${CACHE_DIR} -Dmaven.test.skip=true clean install
 
 testDiscovery:
-type: raw
-mode: remote
-macCommand: |
-grep 'test name' xml/testng_mac.xml | awk '{print$2}' | sed 's/name=//g' | sed 's/\x3e//g'
-winCommand: |
-grep 'test name' xml/testng_win.xml | awk '{print$2}' | sed 's/name=//g' | sed 's/\x3e//g'
-linuxCommand: |
-grep 'test name' xml/testng_linux.xml | awk '{print$2}' | sed 's/name=//g' | sed 's/\x3e//g' ${param}
+  type: raw
+  mode: remote
+  macCommand: |
+    grep 'test name' xml/testng_mac.xml | awk '{print$2}' | sed 's/name=//g' | sed 's/\x3e//g'
+  winCommand: |
+    grep 'test name' xml/testng_win.xml | awk '{print$2}' | sed 's/name=//g' | sed 's/\x3e//g'
+  linuxCommand: |
+    grep 'test name' xml/testng_linux.xml | awk '{print$2}' | sed 's/name=//g' | sed 's/\x3e//g' ${param}
 
 linuxTestRunnerCommand: mvn test -Dplatname=linux -Dmaven.repo.local=./.m2 dependency:resolve -DselectedTests=$tests
 winTestRunnerCommand: mvn test `-Dplatname=win `-Dmaven.repo.local=.m2 dependency:resolve `-DselectedTests=$tests
@@ -139,14 +139,14 @@ retryOnFailure: false
 maxRetries: 1
 
 post:
-- cat yaml/${matrix.os}/testng_hyperexecute_matrix_sample.yaml
+  - cat yaml/${matrix.os}/testng_hyperexecute_matrix_sample.yaml
 
 mergeArtifacts: true
 
 uploadArtefacts:
-- name: XmlReports
-path:
-- target/surefire-reports/html/**
+  - name: XmlReports
+    path:
+      - target/surefire-reports/html/**
 
 jobLabel: ['hybrid-mode']
 ```

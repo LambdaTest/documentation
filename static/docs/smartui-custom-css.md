@@ -53,12 +53,12 @@ body { font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif; }
 
 ```json
 {
-"web": {
-"browsers": ["chrome"],
-"viewports": [[1440, 900]]
-},
-"enableJavaScript": true,
-"customCSS": "./visual-test-styles.css"
+  "web": {
+    "browsers": ["chrome"],
+    "viewports": [[1440, 900]]
+  },
+  "enableJavaScript": true,
+  "customCSS": "./visual-test-styles.css"
 }
 ```
 
@@ -74,12 +74,12 @@ The embedded string method is useful for quick edits and single-use CSS rules. P
 
 ```json
 {
-"web": {
-"browsers": ["chrome"],
-"viewports": [[1440, 900]]
-},
-"enableJavaScript": true,
-"customCSS": "body{font-family:'Inter',sans-serif!important;} .banner,.ad{display:none!important;}"
+  "web": {
+    "browsers": ["chrome"],
+    "viewports": [[1440, 900]]
+  },
+  "enableJavaScript": true,
+  "customCSS": "body{font-family:'Inter',sans-serif!important;} .banner,.ad{display:none!important;}"
 }
 ```
 
@@ -113,9 +113,9 @@ The embedded string method is useful for quick edits and single-use CSS rules. P
 
 ```json
 {
-"waitForTimeout": 2000,
-"waitForPageRender": 5000,
-"customCSS": "./visual-test-styles.css"
+  "waitForTimeout": 2000,
+  "waitForPageRender": 5000,
+  "customCSS": "./visual-test-styles.css"
 }
 ```
 
@@ -168,11 +168,11 @@ body { background: #0f172a !important; color: #e5e7eb !important; } */
 ```css
 /* Deliberately apply a very different theme */
 body {
-font-family: "Century Gothic","URW Gothic","Apple Gothic",system-ui,Helvetica,Arial,sans-serif !important;
-background-image: linear-gradient(180deg,rgba(0,0,0,.55),rgba(0,0,0,.75)),
-url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1920&auto=format&fit=crop');
-background-size: cover; background-attachment: fixed; background-position: center;
-color: #e6e6e6 !important;
+  font-family: "Century Gothic","URW Gothic","Apple Gothic",system-ui,Helvetica,Arial,sans-serif !important;
+  background-image: linear-gradient(180deg,rgba(0,0,0,.55),rgba(0,0,0,.75)),
+                    url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1920&auto=format&fit=crop');
+  background-size: cover; background-attachment: fixed; background-position: center;
+  color: #e6e6e6 !important;
 }
 ```
 
@@ -193,11 +193,11 @@ header, footer, nav { background: rgba(0,0,0,.45) !important; box-shadow: none !
 
 ```json
 {
-"web": {
-"browsers": ["chrome"],
-"viewports": [[1440, 900]]
-},
-"customCSS": "./path/to/visual-test-styles.css"
+  "web": {
+    "browsers": ["chrome"],
+    "viewports": [[1440, 900]]
+  },
+  "customCSS": "./path/to/visual-test-styles.css"
 }
 ```
 
@@ -205,11 +205,11 @@ header, footer, nav { background: rgba(0,0,0,.45) !important; box-shadow: none !
 
 ```json
 {
-"web": {
-"browsers": ["chrome"],
-"viewports": [[1440, 900]]
-},
-"customCSS": "body{font-family:'Inter',sans-serif!important;} .ad,.banner{display:none!important;}"
+  "web": {
+    "browsers": ["chrome"],
+    "viewports": [[1440, 900]]
+  },
+  "customCSS": "body{font-family:'Inter',sans-serif!important;} .ad,.banner{display:none!important;}"
 }
 ```
 

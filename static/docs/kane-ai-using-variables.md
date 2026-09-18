@@ -129,9 +129,9 @@ curl --location 'https://test-manager-api.lambdatest.com/api/atm/v1/hyperexecute
 --header 'Content-Type: application/json' \
 --header 'Authorization: Basic <Base64Auth>' \
 --data '{
-"test_run_id": "<YOUR_TEST_RUN_ID>",
-"concurrency": 1,
-"environment_id": <Environment_ID> #Optional
+    "test_run_id": "<YOUR_TEST_RUN_ID>",
+    "concurrency": 1,
+    "environment_id": <Environment_ID> #Optional
 ```
 
 This will run the test case in the environment associated with the specified environment Id.

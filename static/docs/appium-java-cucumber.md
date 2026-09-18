@@ -115,60 +115,60 @@ import org.openqa.selenium.JavascriptExecutor;
 import java.net.MalformedURLException;
 
 @CucumberOptions(
-features = "src/main/java/Features/todo.feature",
-glue = {"stepDefinitions"},
-plugin = "json:target/cucumber-reports/CucumberTestReport.json")
+        features = "src/main/java/Features/todo.feature",
+        glue = {"stepDefinitions"},
+        plugin = "json:target/cucumber-reports/CucumberTestReport.json")
 
 public class TestRunner extends AbstractTestNGCucumberTests {
 
-private TestNGCucumberRunner testNGCucumberRunner;
+    private TestNGCucumberRunner testNGCucumberRunner;
 
-public static RemoteWebDriver connection;
+    public static RemoteWebDriver connection;
 
-@BeforeClass(alwaysRun = true)
-public void setUpCucumber() {
-testNGCucumberRunner = new TestNGCucumberRunner(this.getClass());
+    @BeforeClass(alwaysRun = true)
+    public void setUpCucumber() {
+         testNGCucumberRunner = new TestNGCucumberRunner(this.getClass());
+    }
+
+    @BeforeMethod(alwaysRun = true)
+    @Parameters({ "deviceName", "platformVersion", "platformName" })
+    public void setUpClass(String deviceName, String platformVersion, String platformName) throws Exception {
+
+            String username = System.getenv("LT_USERNAME") == null ? "YOUR_LT_USERNAME" : System.getenv("LT_USERNAME");      //Enter your LambdaTest username at the place of YOUR_LT_USERNAME
+            String accesskey = System.getenv("LT_ACCESS_KEY") == null ? "YOUR_LT_ACCESSKEY" : System.getenv("LT_ACCESS_KEY");     //Enter your LambdaTest accessKey at the place of YOUR_LT_ACCESSKEY
+
+            DesiredCapabilities capability = new DesiredCapabilities();
+
+            capability.setCapability("platformName", platformName);
+            capability.setCapability("deviceName", deviceName);
+            capability.setCapability("platformVersion",platformVersion);
+
+            capability.setCapability("build", "Native App automate Demo");
+            capability.setCapability("test", "Test Parallel");
+            capability.setCapability("isRealMobile", true);
+            // highlight-next-line
+            capability.setCapability("app","lt://proverbial-android");     //Enter the app url here
+            capability.setCapability("network", false);
+            capability.setCapability("video", true);
+            capability.setCapability("console", true);
+            capability.setCapability("visual", true);
+
+            String gridURL = "https://" + username + ":" + accesskey + "@mobile-hub.lambdatest.com/wd/hub";
+            System.out.println(gridURL);
+            connection = new RemoteWebDriver(new URL(gridURL), capability);
+            System.out.println(capability);
+            System.out.println(connection.getSessionId());
 }
 
-@BeforeMethod(alwaysRun = true)
-@Parameters({ "deviceName", "platformVersion", "platformName" })
-public void setUpClass(String deviceName, String platformVersion, String platformName) throws Exception {
+    @DataProvider
+    public Object[][] features() {
+        return testNGCucumberRunner.provideScenarios();
+    }
 
-String username = System.getenv("LT_USERNAME") == null ? "YOUR_LT_USERNAME" : System.getenv("LT_USERNAME");      //Enter your LambdaTest username at the place of YOUR_LT_USERNAME
-String accesskey = System.getenv("LT_ACCESS_KEY") == null ? "YOUR_LT_ACCESSKEY" : System.getenv("LT_ACCESS_KEY");     //Enter your LambdaTest accessKey at the place of YOUR_LT_ACCESSKEY
-
-DesiredCapabilities capability = new DesiredCapabilities();
-
-capability.setCapability("platformName", platformName);
-capability.setCapability("deviceName", deviceName);
-capability.setCapability("platformVersion",platformVersion);
-
-capability.setCapability("build", "Native App automate Demo");
-capability.setCapability("test", "Test Parallel");
-capability.setCapability("isRealMobile", true);
-// highlight-next-line
-capability.setCapability("app","lt://proverbial-android");     //Enter the app url here
-capability.setCapability("network", false);
-capability.setCapability("video", true);
-capability.setCapability("console", true);
-capability.setCapability("visual", true);
-
-String gridURL = "https://" + username + ":" + accesskey + "@mobile-hub.lambdatest.com/wd/hub";
-System.out.println(gridURL);
-connection = new RemoteWebDriver(new URL(gridURL), capability);
-System.out.println(capability);
-System.out.println(connection.getSessionId());
-}
-
-@DataProvider
-public Object[][] features() {
-return testNGCucumberRunner.provideScenarios();
-}
-
-@AfterClass(alwaysRun = true)
-public void tearDownClass() {
-testNGCucumberRunner.finish();
-}
+    @AfterClass(alwaysRun = true)
+    public void tearDownClass() {
+        testNGCucumberRunner.finish();
+    }
 }
 ```
 
@@ -184,16 +184,16 @@ The capabilities object in the sample code are defined as:
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="BDD Test Suite" verbose="1" parallel="tests"
-thread-count="3" >
-<test name="ANDROIDTEST" annotations="JDK"
-preserve-order="true">
-<parameter name="deviceName" value=".*"/>
-<parameter name="platformVersion" value="12"/>
-<parameter name="platformName" value="Android"/>
-<classes>
-<class name="MyRunner.TestRunner" />
-</classes>
-</test> <!-- Test -->
+	thread-count="3" >
+    <test name="ANDROIDTEST" annotations="JDK"
+		preserve-order="true">
+        <parameter name="deviceName" value=".*"/>
+        <parameter name="platformVersion" value="12"/>
+        <parameter name="platformName" value="Android"/>
+        <classes>
+            <class name="MyRunner.TestRunner" />
+        </classes>
+    </test> <!-- Test -->
 </suite>
 ```
 
@@ -201,25 +201,25 @@ preserve-order="true">
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="BDD Test Suite" verbose="1" parallel="tests"
-thread-count="2">
-<test name="Galaxy" annotations="JDK"
-preserve-order="true">
-<parameter name="deviceName" value="Galaxy.*"/>
-<parameter name="platformVersion" value="11"/>
-<parameter name="platformName" value="Android"/>
-<classes>
-<class name="MyRunner.TestRunner"/>
-</classes>
-</test> <!-- Test -->
-<test name="OnePlus" annotations="JDK"
-preserve-order="true">
-<parameter name="deviceName" value="Pixel.*"/>
-<parameter name="platformVersion" value="12"/>
-<parameter name="platformName" value="Android"/>
-<classes>
-<class name="MyRunner.TestRunner"/>
-</classes>
-</test> <!-- Test -->
+       thread-count="2">
+    <test name="Galaxy" annotations="JDK"
+          preserve-order="true">
+        <parameter name="deviceName" value="Galaxy.*"/>
+        <parameter name="platformVersion" value="11"/>
+        <parameter name="platformName" value="Android"/>
+        <classes>
+            <class name="MyRunner.TestRunner"/>
+        </classes>
+    </test> <!-- Test -->
+    <test name="OnePlus" annotations="JDK"
+          preserve-order="true">
+        <parameter name="deviceName" value="Pixel.*"/>
+        <parameter name="platformVersion" value="12"/>
+        <parameter name="platformName" value="Android"/>
+        <classes>
+            <class name="MyRunner.TestRunner"/>
+        </classes>
+    </test> <!-- Test -->
 
 </suite>
 ```
@@ -259,8 +259,8 @@ The cucumber-skill package includes:
 cucumber-skill/
 ├── SKILL.md
 └── reference/
-├── playbook.md
-└── advanced-patterns.md
+    ├── playbook.md
+    └── advanced-patterns.md
 ```
 
 It provides structured guidance for:

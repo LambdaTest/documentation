@@ -242,37 +242,37 @@ Once, the configuration file will be created, you will be seeing the default con
 
 ```json title="/smartui-sdk-project/.smartui.json"
 {
-"web": {
-"browsers": [
-"chrome",
-"firefox",
-"safari",
-"edge"
-],
-"viewports": [
-[
-1920
-],
-[
-1366
-],
-[
-1028
-]
-] // Full Page screenshots are captured by default for web viewports
-},
-"mobile": {
-"devices": [
-"iPhone 14",  //iPhone 14 viewport
-"Galaxy S24"  //Galaxy S24 viewport
-],
-"fullPage": true, //Full Page is true by default for mobile viewports
-"orientation": "portrait" //Change to "landscape" for landscape snapshot
-},
-"waitForTimeout": 1000, //Optional (Should only be used in case lazy-loading/async components are present)
-"waitForPageRender": 50000, //Optional (Should only be used in case of websites which take more than 30s to load)
-"enableJavaScript": false, //Enable javascript for all the screenshots of the project
-"allowedHostnames": [] //Additional hostnames to capture assets from
+  "web": {
+    "browsers": [
+      "chrome",
+      "firefox",
+      "safari",
+      "edge"
+    ],
+    "viewports": [
+      [
+        1920
+      ],
+      [
+        1366
+      ],
+      [
+        1028
+      ]
+    ] // Full Page screenshots are captured by default for web viewports
+  },
+  "mobile": {
+    "devices": [
+      "iPhone 14",  //iPhone 14 viewport
+      "Galaxy S24"  //Galaxy S24 viewport
+    ],
+    "fullPage": true, //Full Page is true by default for mobile viewports
+    "orientation": "portrait" //Change to "landscape" for landscape snapshot
+  },
+  "waitForTimeout": 1000, //Optional (Should only be used in case lazy-loading/async components are present)
+  "waitForPageRender": 50000, //Optional (Should only be used in case of websites which take more than 30s to load)
+  "enableJavaScript": false, //Enable javascript for all the screenshots of the project
+  "allowedHostnames": [] //Additional hostnames to capture assets from
 }
 ```
 **Advanced options in SmartUI configuration**
@@ -289,25 +289,25 @@ from playwright.sync_api import sync_playwright, Playwright
 from lambdatest_playwright_driver import smartui_snapshot
 
 def run(playwright: Playwright):
-webkit = playwright.webkit
-browser = webkit.launch()
-context = browser.new_context()
-page = context.new_page()
+    webkit = playwright.webkit
+    browser = webkit.launch()
+    context = browser.new_context()
+    page = context.new_page()
 
-try:
-page.goto("Required URL")
-smartui_snapshot(page, "Screenshot Name")
+    try:
+        page.goto("Required URL")
+        smartui_snapshot(page, "Screenshot Name")
 
-print("SmartUI snapshot taken successfully!")
+        print("SmartUI snapshot taken successfully!")
 
-except Exception as e:
-print(f"Error occurred during SmartUI snapshot: {e}")
+    except Exception as e:
+        print(f"Error occurred during SmartUI snapshot: {e}")
 
-finally:
-browser.close()
+    finally:
+        browser.close()
 
 with sync_playwright() as playwright:
-run(playwright)
+    run(playwright)
 ```
 
 ### Step 6: Execute the Tests on SmartUI Cloud
@@ -342,19 +342,19 @@ When conducting visual tests, you may encounter scenarios where certain elements
 
 ```python title="This is a sample for your configuration for Python to ignore by ID"
 options = {
-"ignoreDOM": {
-"id": ["ID-1", "ID-2"],
-}
-}
+            "ignoreDOM": {
+                "id": ["ID-1", "ID-2"],
+            }
+        }
 page.goto("Required URL")
 smartui_snapshot(page,"<Screenshot Name>", options)
 ```
 
 ```python title="This is a sample for your configuration for Python to ignore by Class"
 options = {
-"ignoreDOM": {
-"class": ["Class-1", "Class-2"],
-}
+    "ignoreDOM": {
+        "class": ["Class-1", "Class-2"],
+    }
 }
 page.goto("Required URL")
 smartui_snapshot(page,"<Screenshot Name>", options)
@@ -362,39 +362,39 @@ smartui_snapshot(page,"<Screenshot Name>", options)
 
 ```python title="This is a sample for your configuration for Python to ignore by XPath"
 options = {
-"ignoreDOM": {
-"xpath": ["Xpath-1", "Xpath-2"],
-}
-}
+            "ignoreDOM": {
+                "xpath": ["Xpath-1", "Xpath-2"],
+            }
+        }
 page.goto("Required URL")
 smartui_snapshot(page,"<Screenshot Name>", options)
 ```
 
 ```python title="This is a sample for your configuration for Python to ignore by CSS Selector"
 options = {
-"ignoreDOM": {
-"cssSelector": ["CSS-Selector-1", "CSS-Selector-2"],
-}
-}
+            "ignoreDOM": {
+                "cssSelector": ["CSS-Selector-1", "CSS-Selector-2"],
+            }
+        }
 page.goto("Required URL")
 smartui_snapshot(page,"<Screenshot Name>", options)
 ```
 
 ```python title="This is a sample for your configuration for Python to select by ID."
 options = {
-"selectDOM": {
-"id": ["ID-1", "ID-2"],
-}
-}
+            "selectDOM": {
+                "id": ["ID-1", "ID-2"],
+            }
+        }
 page.goto("Required URL")
 smartui_snapshot(page,"<Screenshot Name>", options)
 ```
 
 ```python title="This is a sample for your configuration for Python to select by Class"
 options = {
-"selectDOM": {
-"class": ["Class-1", "Class-2"],
-}
+    "selectDOM": {
+        "class": ["Class-1", "Class-2"],
+    }
 }
 page.goto("Required URL")
 smartui_snapshot(page,"<Screenshot Name>", options)
@@ -402,20 +402,20 @@ smartui_snapshot(page,"<Screenshot Name>", options)
 
 ```python title="This is a sample for your configuration for Python to select by XPath"
 options = {
-"selectDOM": {
-"xpath": ["Xpath-1", "Xpath-2"],
-}
-}
+            "selectDOM": {
+                "xpath": ["Xpath-1", "Xpath-2"],
+            }
+        }
 page.goto("Required URL")
 smartui_snapshot(page,"<Screenshot Name>", options)
 ```
 
 ```python title="This is a sample for your webhook configuration for Python to select by CSS Selector"
 options = {
-"selectDOM": {
-"cssSelector": ["CSS-Selector-1", "CSS-Selector-2"],
-}
-}
+            "selectDOM": {
+                "cssSelector": ["CSS-Selector-1", "CSS-Selector-2"],
+            }
+        }
 page.goto("Required URL")
 smartui_snapshot(page,"<Screenshot Name>", options)
 ```
@@ -426,19 +426,19 @@ You can capture screenshots of targeted elements by leveraging various locator m
 
 ```python title="This is a sample for your configuration for Python to capture an element by ID."
 options = {
-"element": {
-"id": "Required ID",
-}
-}
+      "element": {
+          "id": "Required ID",
+      }
+  }
 page.goto("Required URL")
 smartui_snapshot(page,"<Screenshot Name>", options)
 ```
 
 ```python title="This is a sample for your configuration for Python to capture an element by Class"
 options = {
-"element": {
-"class": "Required Class",
-}
+    "element": {
+        "class": "Required Class",
+    }
 }
 page.goto("Required URL")
 smartui_snapshot(page,"<Screenshot Name>", options)
@@ -446,20 +446,20 @@ smartui_snapshot(page,"<Screenshot Name>", options)
 
 ```python title="This is a sample for your configuration for Python to capture an element by XPath"
 options = {
-"element": {
-"xpath": "Required Xpath",
-}
-}
+      "element": {
+          "xpath": "Required Xpath",
+      }
+  }
 page.goto("Required URL")
 smartui_snapshot(page,"<Screenshot Name>", options)
 ```
 
 ```python title="This is a sample for your webhook configuration for Python to capture an element by CSS Selector"
 options = {
-"element": {
-"cssSelector": "Required CSS Selector",
-}
-}
+      "element": {
+          "cssSelector": "Required CSS Selector",
+      }
+  }
 page.goto("Required URL")
 smartui_snapshot(page,"<Screenshot Name>", options)
 ```
@@ -576,7 +576,7 @@ page.wait_for_load_state("networkidle")
 2. Enable JavaScript in configuration:
 ```json
 {
-"enableJavaScript": true
+  "enableJavaScript": true
 }
 ```
 

@@ -31,36 +31,36 @@ To create the GitHub Actions pipeline YAML file, follow the sample command below
 ```bash
 name: HyperExecute
 on:
-workflow_dispatch:
-inputs:
-username:
-required: true
-description: LT Username
-accessKey:
-description: LT Access Key
-required: true
+  workflow_dispatch:
+    inputs:
+      username:
+        required: true
+        description: LT Username
+      accessKey:
+        description: LT Access Key
+        required: true
 
 jobs:
-HyperExecute:
-runs-on: ubuntu-latest
-timeout-minutes: 15
-strategy:
-fail-fast: false
-steps:
-- name: Checkout sources
-uses: actions/checkout@v2
+  HyperExecute:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    strategy:
+      fail-fast: false
+    steps:
+      - name: Checkout sources
+        uses: actions/checkout@v2
 
-- name: Download CLI and Setting Environment Variables
-shell: bash
-run: |
-curl https://downloads.lambdatest.com/hyperexecute/linux/hyperexecute -o hyperexecute
-chmod +x hyperexecute
+      - name: Download CLI and Setting Environment Variables
+        shell: bash
+        run: |
+          curl https://downloads.lambdatest.com/hyperexecute/linux/hyperexecute -o hyperexecute
+          chmod +x hyperexecute
 
-- name: Executing the Job
-shell: bash
-run: |
-./hyperexecute --user ${{ github.event.inputs.username }} --key ${{ github.event.inputs.accessKey }} --download-artifacts --config yaml/autosplit_linux.yaml
-echo "Test completion"
+      - name: Executing the Job
+        shell: bash
+        run: |
+          ./hyperexecute --user ${{ github.event.inputs.username }} --key ${{ github.event.inputs.accessKey }} --download-artifacts --config yaml/autosplit_linux.yaml
+          echo "Test completion"
 ```
 - **On:**
   - **Workflow_dispatch:** In the **workflow_dispatch** section, you should declare the pre-defined variables that will be used before running the GitHub Actions PipeLine as an input.

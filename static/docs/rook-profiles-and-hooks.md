@@ -67,8 +67,8 @@ Generated files live below:
 
 ```text
 .testmuai/rook/projects/<project-id>/agents/<agent-id>/
-profiles/staging.yaml
-scripts/staging.mjs
+  profiles/staging.yaml
+  scripts/staging.mjs
 ```
 
 For a single-turn HTTP target, a minimal generated profile looks like:
@@ -77,14 +77,14 @@ For a single-turn HTTP target, a minimal generated profile looks like:
 id: staging
 name: staging
 hooks:
-execute: scripts/staging.mjs
+  execute: scripts/staging.mjs
 env:
-- variable: AGENT_TOKEN
-purpose: Access to the staging agent
+  - variable: AGENT_TOKEN
+    purpose: Access to the staging agent
 capabilities:
-calls: false
-usage: false
-multi_turn: false
+  calls: false
+  usage: false
+  multi_turn: false
 concurrency: 1
 ```
 
@@ -96,11 +96,11 @@ Only `execute` is required. Add authentication, session setup, teardown, and col
 
 ```text
 prepare                         once per run
-open                          once per scenario
-execute × N                 once per turn
-close                         once per scenario
-collect                       once per scenario
-judge                         Rook evaluates the recorded evidence
+  open                          once per scenario
+    execute × N                 once per turn
+  close                         once per scenario
+  collect                       once per scenario
+  judge                         Rook evaluates the recorded evidence
 ```
 
 | Phase | Scope | Typical work | If it fails |
@@ -122,25 +122,25 @@ A CLI can require authentication and a session; an HTTP endpoint can require nei
 name: staging
 id: staging
 hooks:
-prepare:
-script: scripts/login.mjs
-timeout_seconds: 45
-execute: scripts/order-desk.mjs
-collect:
-script: scripts/trace.mjs
-delay_seconds: 60
-timeout_seconds: 120
+  prepare:
+    script: scripts/login.mjs
+    timeout_seconds: 45
+  execute: scripts/order-desk.mjs
+  collect:
+    script: scripts/trace.mjs
+    delay_seconds: 60
+    timeout_seconds: 120
 env:
-- variable: REFUND_API_TOKEN
-purpose: bearer token for the staging refund API, read-only
-- variable: BASE_URL
-purpose: target environment base URL
+  - variable: REFUND_API_TOKEN
+    purpose: bearer token for the staging refund API, read-only
+  - variable: BASE_URL
+    purpose: target environment base URL
 capabilities:
-multi_turn: true
-calls: true
-usage: false
+  multi_turn: true
+  calls: true
+  usage: false
 hook_env:
-REGION: eu-west-1
+  REGION: eu-west-1
 concurrency: 1
 ```
 
@@ -186,13 +186,13 @@ Write one JSON object to standard output for `execute` and `collect`. Write diag
 
 ```json
 {
-"agent_reply": "Your order ships Tuesday.",
-"conversation": "thread_abc123",
-"usage": { "input": 1200, "output": 340 },
-"calls": [
-{ "name": "cancel_order", "arguments": { "id": "ORD-1" } }
-],
-"trace_url": "https://observability.example.com/trace/abc"
+  "agent_reply": "Your order ships Tuesday.",
+  "conversation": "thread_abc123",
+  "usage": { "input": 1200, "output": 340 },
+  "calls": [
+    { "name": "cancel_order", "arguments": { "id": "ORD-1" } }
+  ],
+  "trace_url": "https://observability.example.com/trace/abc"
 }
 ```
 
@@ -287,8 +287,8 @@ For local stored values, see [Environment and Secrets](/support/docs/rook-enviro
 │   ├── staging.yaml
 │   └── production.yaml
 └── scripts/
-├── order-desk.mjs
-└── salesforce-login.mjs
+    ├── order-desk.mjs
+    └── salesforce-login.mjs
 ```
 
 Scripts belong to the agent. One script can switch on the phase argument, or separate scripts can implement independently owned phases.

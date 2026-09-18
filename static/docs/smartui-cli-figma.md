@@ -102,22 +102,22 @@ Once, the `designs` file will be created, you will be seeing the sample pre-fill
 
 ```json title="/smartui-cli-figma-project/designs.json"
 {
-"depth":2, //Figma Tree depth - (Optional), change the value according to the your file structure
-"figma_config": [
-{
-"figma_file_token": "<Required Figma File token>",
-"figma_ids":[
-"Id-1", "Id-2"
-]
-},
-{
-"figma_file_token": "<Required Figma File token>",
-"figma_ids":[
-"Id-3", "Id-4"
-]
-}
-]
-}
+    "depth":2, //Figma Tree depth - (Optional), change the value according to the your file structure
+    "figma_config": [
+      {
+        "figma_file_token": "<Required Figma File token>",
+        "figma_ids":[
+          "Id-1", "Id-2"
+        ]
+      },
+       {
+        "figma_file_token": "<Required Figma File token>",
+        "figma_ids":[
+          "Id-3", "Id-4"
+        ]
+      }
+    ]
+  }
 ```
 
 ### **Step 3:** Configure your Project Token and Figma Token
@@ -210,8 +210,8 @@ You can add more screenshots in a build by specifying the particular build name 
 **Build Names**
 
 ```bash
-npx smartui upload-figma designs.json --buildName "v1.0.0"
-```
+   npx smartui upload-figma designs.json --buildName "v1.0.0"
+   ```
 
 **Screenshot Names**
 
@@ -261,11 +261,11 @@ If you are using the Continuous Integration (CI) pipeline for your application a
 
 ```yaml
 steps:
-- name: Running SmartUI Figma CLI Tests
-run: |
-npm install @lambdatest/smartui-cli
-npx playwright install-deps
-npx smartui upload-figma designs.json
+  - name: Running SmartUI Figma CLI Tests
+    run: |
+      npm install @lambdatest/smartui-cli
+      npx playwright install-deps
+      npx smartui upload-figma designs.json
 ```
 
 ### View SmartUI Results
@@ -315,11 +315,11 @@ If you are using the Continuous Integration (CI) pipeline for your application a
 
 ```yaml
 steps:
-- name: Running SmartUI Figma CLI Tests
-run: |
-npm install @lambdatest/smartui-cli
-npx playwright install-deps
-npx smartui upload-figma designs.json
+  - name: Running SmartUI Figma CLI Tests
+    run: |
+      npm install @lambdatest/smartui-cli
+      npx playwright install-deps
+      npx smartui upload-figma designs.json
 ```
 
 ### View SmartUI Results
@@ -331,8 +331,8 @@ You can see the SmartUI dashboard to view the results. This will help you identi
 Verify Figma Token
 
 ```bash
-echo $FIGMA_TOKEN
-```
+   echo $FIGMA_TOKEN
+   ```
    Ensure the token is valid and has not expired. Generate a new token from [Figma Settings](https://www.figma.com/settings).
 
 Check File Token
@@ -371,8 +371,8 @@ Check Build Names
 Verify Project Token
 
 ```bash
-echo $PROJECT_TOKEN
-```
+   echo $PROJECT_TOKEN
+   ```
    Ensure the token is set correctly and matches your SmartUI project.
 
 Check Project Type

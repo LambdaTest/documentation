@@ -143,10 +143,10 @@ You can use the `cypress_config_file` key in `run_settings` option to specify th
 
 ```javascript title="lambdatest-config.json"
 {
-"run_settings": {
-"cypress_config_file": "cypress.json",
-"video": true
-}
+  "run_settings": {
+    "cypress_config_file": "cypress.json",
+    "video": true
+  }
 }
 ```
 
@@ -168,17 +168,17 @@ You can use the *specs* key in *run_settings* option to specify the Spec files.
 
 ```javascript title="lambdatest-config.json"
 {
-"run_settings": {
-"specs": "**/*.cy.js",
-}
+  "run_settings": {
+    "specs": "**/*.cy.js",
+  }
 }
 ```
 
 ```javascript title="lambdatest-config.json"
 {
-"run_settings": {
-"specs": "./cypress/integration/examples/*.spec.js",
-}
+  "run_settings": {
+    "specs": "./cypress/integration/examples/*.spec.js",
+  }
 }
 
 ```
@@ -195,17 +195,17 @@ You can use the *exclude_specs* key in *run_settings* option to specify the spec
 
 ```javascript title="lambdatest-config.json"
 {
-"run_settings": {
-"exclude_specs": "./examples/assertion.spec.js, ./examples/connectors.spec.js",
-}
+  "run_settings": {
+    "exclude_specs": "./examples/assertion.spec.js, ./examples/connectors.spec.js",
+  }
 }
 ```
 
 ```javascript title="lambdatest-config.json"
 {
-"run_settings": {
-"exclude_specs": "./examples/assertion.spec.js, ./examples/connectors.spec.js",
-}
+  "run_settings": {
+        "exclude_specs": "./examples/assertion.spec.js, ./examples/connectors.spec.js",
+  }
 }
 ```
 
@@ -215,17 +215,17 @@ You can use the *geo_location* key in *run_settings* option to specify the Spec 
 
 ```javascript title="lambdatest-config.json"
 {
-"run_settings": {
-"geo_location": "<country_code>",
-}
+  "run_settings": {
+    "geo_location": "<country_code>",
+  }
 }
 ```
 
 ```javascript title="lambdatest-config.json"
 {
-"run_settings": {
-"geo_location": "<country_code>",
-}
+  "run_settings": {
+    "geo_location": "<country_code>",
+  }
 }
 ```
 
@@ -242,17 +242,17 @@ Use the *resolution* key in *run_settings* option to specify the resolution.
 
 ```javascript title="lambdatest-config.json"
 {
-"run_settings": {
-"resolution": "1024x768",
-}
+  "run_settings": {
+    "resolution": "1024x768",
+  }
 }
 ```
 
 ```javascript title="lambdatest-config.json"
 {
-"run_settings": {
-"resolution": "1024x768",
-}
+  "run_settings": {
+    "resolution": "1024x768",
+  }
 }
 ```
 
@@ -289,19 +289,19 @@ For **Cypress v9 and below**, use the following script in the `plugin/index.js` 
 
 ```js
 module.exports = (on, config) => {
-on('before:browser:launch', (browser = {}, launchOptions) => {
-if (browser.family === 'chromium' && browser.name !== 'electron') {
-launchOptions.args.push('--start-fullscreen')
+  on('before:browser:launch', (browser = {}, launchOptions) => {
+    if (browser.family === 'chromium' && browser.name !== 'electron') {
+      launchOptions.args.push('--start-fullscreen')
 
-return launchOptions
-}
+      return launchOptions
+    }
 
-if (browser.name === 'electron') {
-launchOptions.preferences.fullscreen = true
+    if (browser.name === 'electron') {
+      launchOptions.preferences.fullscreen = true
 
-return launchOptions
-}
-})
+      return launchOptions
+    }
+  })
 }
 ```
 
@@ -312,23 +312,23 @@ const { defineConfig } = require('cypress')
 
 module.exports = defineConfig({
 
-e2e: {
-setupNodeEvents(on, config) {
-on('before:browser:launch', (browser = {}, launchOptions) => {
-if (browser.family === 'chromium' && browser.name !== 'electron') {
-launchOptions.args.push('--start-fullscreen')
+  e2e: {
+    setupNodeEvents(on, config) {
+      on('before:browser:launch', (browser = {}, launchOptions) => {
+        if (browser.family === 'chromium' && browser.name !== 'electron') {
+          launchOptions.args.push('--start-fullscreen')
 
-return launchOptions
-}
+          return launchOptions
+        }
 
-if (browser.name === 'electron') {
-launchOptions.preferences.fullscreen = true
+        if (browser.name === 'electron') {
+          launchOptions.preferences.fullscreen = true
 
-return launchOptions
-}
-})
-}
-}
+          return launchOptions
+        }
+      })
+    }
+  }
 })
 ```
 
@@ -338,17 +338,17 @@ You can use the *ignore_files* key in *run_settings* option to ignore or exclude
 
 ```javascript title="lambdatest-config.json"
 {
-"run_settings": {
-"ignore_files": "<glob_pattern>",
-}
+  "run_settings": {
+    "ignore_files": "<glob_pattern>",
+  }
 }
 ```
 
 ```javascript title="lambdatest-config.json"
 {
-"run_settings": {
-"ignore_files": "<glob_pattern>",
-}
+  "run_settings": {
+    "ignore_files": "<glob_pattern>",
+  }
 }
 ```
 
@@ -368,17 +368,17 @@ You can use the `max_duration` key in *run_settings* option to specify the sessi
 
 ```javascript title="lambdatest-config.json"
 {
-"run_settings": {
-"max_duration":2
-}
+  "run_settings": {
+    "max_duration":2
+  }
 }
 ```
 
 ```javascript title="lambdatest-config.json"
 {
-"run_settings": {
-"max_duration":2
-}
+  "run_settings": {
+    "max_duration":2
+  }
 }
 ```
 
@@ -402,11 +402,11 @@ You can name your test cases and categorize your Cypress builds by build number,
 
 ```javascript title="lambdatest-config.json"
 {
-"run_settings": {
-"build-name": "Cypress 10 Demo",
-"project-name": "DemoTest",
-"tags": "Sprint1",
-}
+  "run_settings": {
+    "build-name": "Cypress 10 Demo",
+    "project-name": "DemoTest",
+    "tags": "Sprint1",
+  }
 }
 ```
 
@@ -421,9 +421,9 @@ You can run Headless tests with Cypress by the `headless` key to `true`.
 
 ```javascript title="lambdatest-config.json"
 {
-"run_settings": {
-"headless": "true",
-}
+  "run_settings": {
+    "headless": "true",
+  }
 }
 ```
 
@@ -438,9 +438,9 @@ You can generate Network logs with Cypress by setting the `network` key to `true
 
 ```javascript title="lambdatest-config.json"
 {
-"run_settings": {
-"network": "true",
-}
+  "run_settings": {
+    "network": "true",
+  }
 }
 ```
 
@@ -454,9 +454,9 @@ Inside `run_settings` of `lambdatest-config.json`, you can provide the list of N
 
 ```javascript title="lambdatest-config.json"
 "run_settings": {
-"npm_dependencies": {
-"cypress": "9.0.0",
-},
+  "npm_dependencies": {
+    "cypress": "9.0.0",
+  },
 },
 ```
 
@@ -465,11 +465,11 @@ TestMu AI will automatically detects the dependencies that has to be installed f
 
 ```javascript title="package.json"
 "devDependencies": {
-"cypress": "9.2.1",
-"eslint": "7.0.0",
-"eslint-plugin-json-format": "2.0.1",
-"eslint-plugin-mocha": "5.3.0",
-},
+    "cypress": "9.2.1",
+    "eslint": "7.0.0",
+    "eslint-plugin-json-format": "2.0.1",
+    "eslint-plugin-mocha": "5.3.0",
+  },
 ```
 
 **note**
@@ -491,7 +491,7 @@ TestMu AI allows you to specify the Node.js version for running your tests using
 
 ```javascript title="lambdatest-config.json"
 "run_settings": {
-"useNodeVersion":"20"
+  "useNodeVersion":"20"
 }
 ```
 
@@ -504,11 +504,11 @@ You can set environment variables for your Cypress tests in three ways: via the 
 ```bash
 {
 ......
-"env":{
-"CYPRESS_BASE_URL":"https://example.cypress.io/",
-"ACTIONS_URL": "commands/actions",
-"WINDOW_URL": "commands/window"
-},
+	"env":{
+		"CYPRESS_BASE_URL":"https://example.cypress.io/",
+		"ACTIONS_URL": "commands/actions",
+		"WINDOW_URL": "commands/window"
+	},
 ......
 }
 ```
@@ -517,25 +517,25 @@ You can set environment variables for your Cypress tests in three ways: via the 
 
 ```bash
 module.exports = defineConfig({
-env: {
-'CYPRESS_BASE_URL':'https://example.cypress.io/',
-'ACTIONS_URL' : 'commands/actions',
-'WINDOW_URL': 'commands/window'
-},
+  env: {
+    'CYPRESS_BASE_URL':'https://example.cypress.io/',
+    'ACTIONS_URL' : 'commands/actions',
+    'WINDOW_URL': 'commands/window'
+  },
 ```
 
 Use them in your test spec:
 
 ```bash
 describe('Sample test', () => {
-it('test case - actions', () => {
-cy.visit(Cypress.env('CYPRESS_BASE_URL') + Cypress.env('ACTIONS_URL'))
-cy.wait(3000)
-})
-it('test case - window', () => {
-cy.visit(Cypress.env('CYPRESS_BASE_URL') + Cypress.env('WINDOW_URL'))
-cy.wait(3000)
-})
+    it('test case - actions', () => {
+      cy.visit(Cypress.env('CYPRESS_BASE_URL') + Cypress.env('ACTIONS_URL'))
+      cy.wait(3000)
+    })
+    it('test case - window', () => {
+        cy.visit(Cypress.env('CYPRESS_BASE_URL') + Cypress.env('WINDOW_URL'))
+        cy.wait(3000)
+    })
 })
 ```
 
@@ -543,9 +543,9 @@ cy.wait(3000)
 
 ```bash
 {
-"CYPRESS_BASE_URL":"https://example.cypress.io/",
-"ACTIONS_URL" : "commands/actions",
-"WINDOW_URL": "commands/window"
+    "CYPRESS_BASE_URL":"https://example.cypress.io/",
+    "ACTIONS_URL" : "commands/actions",
+    "WINDOW_URL": "commands/window"
 }
 ```
 

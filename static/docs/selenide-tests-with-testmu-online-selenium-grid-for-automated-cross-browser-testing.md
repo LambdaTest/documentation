@@ -55,18 +55,18 @@ Define the browser, version, and OS for your test run.
 
 ```java
 ChromeOptions browserOptions = new ChromeOptions();
-browserOptions.setPlatformName("Windows 10");
-browserOptions.setBrowserVersion("latest");
+        browserOptions.setPlatformName("Windows 10");
+        browserOptions.setBrowserVersion("latest");
 
-HashMap<String, Object> ltOptions = new HashMap<String, Object>();
-ltOptions.put("build", "LambdaTestSampleApp");
-ltOptions.put("name", "LambdaTestJavaSample");
-ltOptions.put("network", true); // To enable network logs
-ltOptions.put("visual", true); // To enable step by step screenshot
-ltOptions.put("video", true); // To enable video recording
-ltOptions.put("console", true); // To capture console logs
-ltOptions.put("w3c", true);
-browserOptions.setCapability("LT:Options", ltOptions);
+        HashMap<String, Object> ltOptions = new HashMap<String, Object>();
+        ltOptions.put("build", "LambdaTestSampleApp");
+        ltOptions.put("name", "LambdaTestJavaSample");
+        ltOptions.put("network", true); // To enable network logs
+        ltOptions.put("visual", true); // To enable step by step screenshot
+        ltOptions.put("video", true); // To enable video recording
+        ltOptions.put("console", true); // To capture console logs
+        ltOptions.put("w3c", true);
+        browserOptions.setCapability("LT:Options", ltOptions);
 ```
 
 Use the [Capabilities Generator](https://www.testmuai.com/capabilities-generator/) to auto-generate capabilities for any browser, version, and OS combination.
@@ -102,90 +102,90 @@ import org.testng.annotations.Test;
 import com.codeborne.selenide.WebDriverRunner;
 
 public class LambdaTestSetup {
-public RemoteWebDriver driver;
-public String status="failed";
+    public RemoteWebDriver driver;
+    public String status="failed";
 
-public static String username;
-public static String accessKey;
-public static String sessionId;
+    public static String username;
+    public static String accessKey;
+    public static String sessionId;
 
-@BeforeMethod(alwaysRun = true)
-@Parameters(value = { "config", "environment" })
-public void setUp(String config_file, String environment) throws Exception {
-JSONParser parser = new JSONParser();
-JSONObject config = (JSONObject) parser.parse(new FileReader("src/test/resources/conf/" + config_file));
-JSONObject envs = (JSONObject) config.get("environments");
+    @BeforeMethod(alwaysRun = true)
+    @Parameters(value = { "config", "environment" })
+    public void setUp(String config_file, String environment) throws Exception {
+        JSONParser parser = new JSONParser();
+        JSONObject config = (JSONObject) parser.parse(new FileReader("src/test/resources/conf/" + config_file));
+        JSONObject envs = (JSONObject) config.get("environments");
 
-ChromeOptions browserOptions = new ChromeOptions();
-HashMap<String, Object> ltOptions = new HashMap<String, Object>();
+        ChromeOptions browserOptions = new ChromeOptions();
+        HashMap<String, Object> ltOptions = new HashMap<String, Object>();
 
-Map<String, String> envCapabilities = (Map<String, String>) envs.get(environment);
-Iterator it = envCapabilities.entrySet().iterator();
-while (it.hasNext()) {
-Map.Entry pair = (Map.Entry) it.next();
-String key = pair.getKey().toString();
-if (key.equals("platformName")) {
-browserOptions.setPlatformName(pair.getValue().toString());
-} else if (key.equals("browserVersion")) {
-browserOptions.setBrowserVersion(pair.getValue().toString());
-} else {
-ltOptions.put(key, pair.getValue().toString());
-}
-}
+        Map<String, String> envCapabilities = (Map<String, String>) envs.get(environment);
+        Iterator it = envCapabilities.entrySet().iterator();
+        while (it.hasNext()) {
+            Map.Entry pair = (Map.Entry) it.next();
+            String key = pair.getKey().toString();
+            if (key.equals("platformName")) {
+                browserOptions.setPlatformName(pair.getValue().toString());
+            } else if (key.equals("browserVersion")) {
+                browserOptions.setBrowserVersion(pair.getValue().toString());
+            } else {
+                ltOptions.put(key, pair.getValue().toString());
+            }
+        }
 
-Map<String, String> commonCapabilities = (Map<String, String>) config.get("capabilities");
-it = commonCapabilities.entrySet().iterator();
-while (it.hasNext()) {
-Map.Entry pair = (Map.Entry) it.next();
-if (!ltOptions.containsKey(pair.getKey().toString())) {
-ltOptions.put(pair.getKey().toString(),
-(pair.getValue().toString().equalsIgnoreCase("true")
-|| (pair.getValue().toString().equalsIgnoreCase("false"))
-? Boolean.parseBoolean(pair.getValue().toString())
-: pair.getValue().toString()));
-}
-}
-ltOptions.put("name", this.getClass().getName());
-ltOptions.put("w3c", true);
-browserOptions.setCapability("LT:Options", ltOptions);
+        Map<String, String> commonCapabilities = (Map<String, String>) config.get("capabilities");
+        it = commonCapabilities.entrySet().iterator();
+        while (it.hasNext()) {
+            Map.Entry pair = (Map.Entry) it.next();
+            if (!ltOptions.containsKey(pair.getKey().toString())) {
+                ltOptions.put(pair.getKey().toString(),
+                        (pair.getValue().toString().equalsIgnoreCase("true")
+                                || (pair.getValue().toString().equalsIgnoreCase("false"))
+                                        ? Boolean.parseBoolean(pair.getValue().toString())
+                                        : pair.getValue().toString()));
+            }
+        }
+        ltOptions.put("name", this.getClass().getName());
+        ltOptions.put("w3c", true);
+        browserOptions.setCapability("LT:Options", ltOptions);
 
-username = System.getenv("LT_USERNAME");
-if (username == null) {
-username = (String) config.get("user");
-}
+        username = System.getenv("LT_USERNAME");
+        if (username == null) {
+            username = (String) config.get("user");
+        }
 
-accessKey = System.getenv("LT_ACCESS_KEY");
-if (accessKey == null) {
-accessKey = (String) config.get("key");
-}
+        accessKey = System.getenv("LT_ACCESS_KEY");
+        if (accessKey == null) {
+            accessKey = (String) config.get("key");
+        }
 
-driver = new RemoteWebDriver(
-new URL("https://" + username + ":" + accessKey + "@" + config.get("server") + "/wd/hub"), browserOptions);
-driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-sessionId = driver.getSessionId().toString();
+        driver = new RemoteWebDriver(
+                new URL("https://" + username + ":" + accessKey + "@" + config.get("server") + "/wd/hub"), browserOptions);
+        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+        sessionId = driver.getSessionId().toString();
 
-WebDriverRunner.setWebDriver(driver);
-}
+        WebDriverRunner.setWebDriver(driver);
+    }
 
-@Test
-public void test() throws Exception {
+    @Test
+    public void test() throws Exception {
 
-open("http://www.google.co.uk");
+        open("http://www.google.co.uk");
 
-$(By.name("q")).setValue("LambdaTest").pressEnter();
+        $(By.name("q")).setValue("LambdaTest").pressEnter();
 
-sleep(2000);
+        sleep(2000);
 
-Assert.assertEquals(title(), "LambdaTest - Google Search");
+        Assert.assertEquals(title(), "LambdaTest - Google Search");
 
-status = "passed";
-}
+        status = "passed";
+    }
 
-@AfterMethod(alwaysRun = true)
-public void tearDown() throws Exception {
-driver.executeScript("lambda-status="+status);
-driver.quit();
-}
+    @AfterMethod(alwaysRun = true)
+    public void tearDown() throws Exception {
+        driver.executeScript("lambda-status="+status);
+        driver.quit();
+    }
 
 }
 ```
@@ -216,59 +216,59 @@ For parallel execution, the sample project includes a `parallel.testng.xml` that
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Parallel" thread-count="3" parallel="tests">
-<test name="SingleTestChrome">
-<parameter name="config" value="parallel.conf.json"/>
-<parameter name="environment" value="chrome"/>
-<classes>
-<class name="com.lambdatest.SingleTest"/>
-</classes>
-</test>
+	<test name="SingleTestChrome">
+    <parameter name="config" value="parallel.conf.json"/>
+    <parameter name="environment" value="chrome"/>
+    <classes>
+      <class name="com.lambdatest.SingleTest"/>
+    </classes>
+	</test>
 
-<test name="SingleTestFirefox">
-<parameter name="config" value="parallel.conf.json"/>
-<parameter name="environment" value="firefox"/>
-<classes>
-<class name="com.lambdatest.SingleTest"/>
-</classes>
-</test>
+	<test name="SingleTestFirefox">
+    <parameter name="config" value="parallel.conf.json"/>
+    <parameter name="environment" value="firefox"/>
+    <classes>
+      <class name="com.lambdatest.SingleTest"/>
+    </classes>
+	</test>
 
-<test name="SingleTestSafari">
-<parameter name="config" value="parallel.conf.json"/>
-<parameter name="environment" value="safari"/>
-<classes>
-<class name="com.lambdatest.SingleTest"/>
-</classes>
-</test>
+	<test name="SingleTestSafari">
+    <parameter name="config" value="parallel.conf.json"/>
+    <parameter name="environment" value="safari"/>
+    <classes>
+      <class name="com.lambdatest.SingleTest"/>
+    </classes>
+	</test>
 </suite>
 ```
 
 ```json title="parallel.config.json"
 {
-"server": "hub.lambdatest.com",
-"user": "YOUR_USERNAME",
-"key": "YOUR_ACCESS_KEY",
+  "server": "hub.lambdatest.com",
+  "user": "YOUR_USERNAME",
+  "key": "YOUR_ACCESS_KEY",
 
-"capabilities": {
-"build": "Java Selenide Parallel"
-},
+  "capabilities": {
+    "build": "Java Selenide Parallel"
+  },
 
-"environments": {
-"chrome": {
-"platformName": "Windows 10",
-"browserName": "chrome",
-"browserVersion": "latest"
-},
-"firefox": {
-"platformName": "Windows 10",
-"browserName": "firefox",
-"browserVersion": "latest"
-},
-"safari": {
-"platformName": "macOS Mojave",
-"browserName": "safari",
-"browserVersion": "latest"
-}
-}
+  "environments": {
+    "chrome": {
+      "platformName": "Windows 10",
+      "browserName": "chrome",
+      "browserVersion": "latest"
+    },
+    "firefox": {
+      "platformName": "Windows 10",
+      "browserName": "firefox",
+      "browserVersion": "latest"
+    },
+    "safari": {
+      "platformName": "macOS Mojave",
+      "browserName": "safari",
+      "browserVersion": "latest"
+    }
+  }
 }
 ```
 

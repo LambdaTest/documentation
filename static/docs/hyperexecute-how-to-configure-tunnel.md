@@ -109,7 +109,7 @@ These are the parameters you can use to configure your [tunnel](/support/docs/de
 tunnel: true
 
 tunnelOpts:
-global: true
+  global: true
 ```
 
 ## Clone a Repository via Tunnel
@@ -124,16 +124,16 @@ After specifying the details of your repository, you need to set the `useInCodeS
 
 ```bash
 sourcePayload:
-platform: git
-link: https://--------
-ref: <your_branch_name>
-accessToken: <your_personal_access_token>
-commit: <optional>
+  platform: git
+  link: https://--------
+  ref: <your_branch_name>
+  accessToken: <your_personal_access_token>
+  commit: <optional>
 
 # highlight-next-line
 tunnelOpts:
 # highlight-next-line
-useInCodeSetUp: true
+  useInCodeSetUp: true
 ## this flag is mandatory to pass to enable cloning via tunnel
 ```
 

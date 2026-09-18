@@ -32,9 +32,9 @@ Be aware of your TestMu AI authentication credentials i.e. your TestMu AI userna
   - For Linux/Mac:
 
 ```
-$ export LT_USERNAME= {YOUR_LAMBDATEST_USERNAME}
-$ export LT_ACCESS_KEY= {YOUR_LAMBDATEST_ACCESS_KEY}
-```
+ $ export LT_USERNAME= {YOUR_LAMBDATEST_USERNAME}
+ $ export LT_ACCESS_KEY= {YOUR_LAMBDATEST_ACCESS_KEY}
+ ```
 
   - For Windows:
 
@@ -58,13 +58,13 @@ $ set LT_ACCESS_KEY= {YOUR_LAMBDATEST_ACCESS_KEY}
 image: node:10.15.3
 
 pipelines:
-default:
-- step:
-caches:
-- node
-script: # Modify the commands below to build your repository.
-- npm install
-- npm run single
+  default:
+    - step:
+        caches:
+          - node
+        script: # Modify the commands below to build your repository.
+          - npm install
+          - npm run single
 ```
 **Step 3:** Now, you need to add TestMu AI environment variables into your Bitbucket pipelines. These environment variables will help to authenticate your test before they are executed on TestMu AI Selenium Grid. Go to **Settings** --> **General** --> **Username aliases** --> **Repository variables**.
 

@@ -124,20 +124,20 @@ Go to Pipeline Settings > Variables. Add the following variables:
 ```yaml title=".travis.yml"
 language: node_js
 node_js:
-- "16"
+  - "16"
 
 env:
-global:
-- LT_USERNAME=${LT_USERNAME}
-- LT_ACCESS_KEY=${LT_ACCESS_KEY}
+  global:
+    - LT_USERNAME=${LT_USERNAME}
+    - LT_ACCESS_KEY=${LT_ACCESS_KEY}
 
 script:
-- echo "Installing SmartUI CLI"
-- npm install @lambdatest/smartui-cli
-- echo "Running SmartUI tests"
-- npx smartui --version
-- npx smartui config:create smartui-web.json
-- npx smartui --config smartui-web.json exec -- mvn --quiet test -D suite=sdk-cloud.xml
+  - echo "Installing SmartUI CLI"
+  - npm install @lambdatest/smartui-cli
+  - echo "Running SmartUI tests"
+  - npx smartui --version
+  - npx smartui config:create smartui-web.json
+  - npx smartui --config smartui-web.json exec -- mvn --quiet test -D suite=sdk-cloud.xml
 ```
 
 ### Step 5: Check the output
@@ -164,9 +164,9 @@ script:
 **Example:**
 ```yaml
 branches:
-only:
-- main
-- develop
+  only:
+    - main
+    - develop
 ```
 
 **Build Naming**
@@ -178,8 +178,8 @@ only:
 **Example:**
 ```yaml
 env:
-global:
-- BUILD_NAME="${TRAVIS_BRANCH}-${TRAVIS_COMMIT:0:7}"
+  global:
+    - BUILD_NAME="${TRAVIS_BRANCH}-${TRAVIS_COMMIT:0:7}"
 ```
 
 **Error Handling**
@@ -241,8 +241,8 @@ global:
 2. Pass variable to build:
 ```yaml
 env:
-global:
-- PROJECT_TOKEN=$PROJECT_TOKEN
+  global:
+    - PROJECT_TOKEN=$PROJECT_TOKEN
 ```
 
 3. Check variable is accessible to the build
@@ -267,7 +267,7 @@ global:
 2. Check build logs for errors:
 ```yaml
 after_failure:
-- cat /tmp/*.log || true
+  - cat /tmp/*.log || true
 ```
 
 3. Verify network connectivity in build
@@ -290,9 +290,9 @@ after_failure:
 2. Run tests in parallel using matrix:
 ```yaml
 matrix:
-include:
-- env: TEST_GROUP=1
-- env: TEST_GROUP=2
+  include:
+    - env: TEST_GROUP=1
+    - env: TEST_GROUP=2
 ```
 
 3. Optimize test execution
@@ -312,13 +312,13 @@ include:
 1. Use specific Node version:
 ```yaml
 node_js:
-- "18"
+  - "18"
 ```
 
 2. Clear npm cache:
 ```yaml
 before_install:
-- npm cache clean --force
+  - npm cache clean --force
 ```
 
 3. Use package-lock.json for consistent installs
@@ -338,19 +338,19 @@ before_install:
 1. Ensure Node.js is specified:
 ```yaml
 node_js:
-- "18"
+  - "18"
 ```
 
 2. Verify npm is available:
 ```yaml
 before_script:
-- npm --version
+  - npm --version
 ```
 
 3. Install SmartUI CLI explicitly:
 ```yaml
 before_script:
-- npm install -g @lambdatest/smartui-cli
+  - npm install -g @lambdatest/smartui-cli
 ```
 
 **Getting Help**

@@ -228,37 +228,37 @@ Once, the configuration file will be created, you will be seeing the default con
 
 ```json title="/smartui-sdk-project/.smartui.json"
 {
-"web": {
-"browsers": [
-"chrome",
-"firefox",
-"safari",
-"edge"
-],
-"viewports": [
-[
-1920
-],
-[
-1366
-],
-[
-1028
-]
-] // Full Page screenshots are captured by default for web viewports
-},
-"mobile": {
-"devices": [
-"iPhone 14",  //iPhone 14 viewport
-"Galaxy S24"  //Galaxy S24 viewport
-],
-"fullPage": true, //Full Page is true by default for mobile viewports
-"orientation": "portrait" //Change to "landscape" for landscape snapshot
-},
-"waitForTimeout": 1000, //Optional (Should only be used in case lazy-loading/async components are present)
-"waitForPageRender": 50000, //Optional (Should only be used in case of websites which take more than 30s to load)
-"enableJavaScript": false, //Enable javascript for all the screenshots of the project
-"allowedHostnames": [] //Additional hostnames to capture assets from
+  "web": {
+    "browsers": [
+      "chrome",
+      "firefox",
+      "safari",
+      "edge"
+    ],
+    "viewports": [
+      [
+        1920
+      ],
+      [
+        1366
+      ],
+      [
+        1028
+      ]
+    ] // Full Page screenshots are captured by default for web viewports
+  },
+  "mobile": {
+    "devices": [
+      "iPhone 14",  //iPhone 14 viewport
+      "Galaxy S24"  //Galaxy S24 viewport
+    ],
+    "fullPage": true, //Full Page is true by default for mobile viewports
+    "orientation": "portrait" //Change to "landscape" for landscape snapshot
+  },
+  "waitForTimeout": 1000, //Optional (Should only be used in case lazy-loading/async components are present)
+  "waitForPageRender": 50000, //Optional (Should only be used in case of websites which take more than 30s to load)
+  "enableJavaScript": false, //Enable javascript for all the screenshots of the project
+  "allowedHostnames": [] //Additional hostnames to capture assets from
 }
 ```
 **Advanced options in SmartUI configuration**
@@ -273,11 +273,11 @@ Once, the configuration file will be created, you will be seeing the default con
 ```js
 
 fixture('Amazon Test')
-.page('https://www.testmuai.com');
+  .page('https://www.testmuai.com');
 
 test('Take Amazon Homepage Screenshot', async (t) => {
-// Take a screenshot using LambdaTest's TestCafe driver
-await smartuiSnapshot(t, 'LT-Homepage');
+  // Take a screenshot using LambdaTest's TestCafe driver
+  await smartuiSnapshot(t, 'LT-Homepage');
 });
 
 ```
@@ -314,74 +314,74 @@ When conducting visual tests, you may encounter scenarios where certain elements
 
 ```js title="This is a sample for your configuration for Testcafe to ignore by ID"
 let options = {
-ignoreDOM: {
-id: ["ID-1", "ID-2"],
-}
-}
-await smartuiSnapshot(t, 'Screenshot Name', options);
+            ignoreDOM: {
+                id: ["ID-1", "ID-2"],
+            }
+        }
+        await smartuiSnapshot(t, 'Screenshot Name', options);
 ```
 
 ```js title="This is a sample for your configuration for Testcafe to ignore by Class"
 let options = {
-ignoreDOM: {
-class: ["Class-1", "Class-2"],
-}
-}
-await smartuiSnapshot(t, 'Screenshot Name', options);
+            ignoreDOM: {
+                class: ["Class-1", "Class-2"],
+            }
+        }
+        await smartuiSnapshot(t, 'Screenshot Name', options);
 ```
 
 ```js title="This is a sample for your configuration for Testcafe to ignore by XPath"
 let options = {
-ignoreDOM: {
-xpath: ["Xpath-1", "Xpath-2"],
-}
-}
-await smartuiSnapshot(t, 'Screenshot Name', options);
+            ignoreDOM: {
+                xpath: ["Xpath-1", "Xpath-2"],
+            }
+        }
+        await smartuiSnapshot(t, 'Screenshot Name', options);
 ```
 
 ```js title="This is a sample for your configuration for Testcafe to ignore by CSS Selector"
 let options = {
-ignoreDOM: {
-cssSelector: ["CSS-Selector-1", "CSS-Selector-2"],
-}
-}
-await smartuiSnapshot(t, 'Screenshot Name', options);
+            ignoreDOM: {
+                cssSelector: ["CSS-Selector-1", "CSS-Selector-2"],
+            }
+        }
+        await smartuiSnapshot(t, 'Screenshot Name', options);
 ```
 
 ```js title="This is a sample for your configuration for Testcafe to select by" ID."
 let options = {
-selectDOM: {
-id: ["ID-1", "ID-2"],
-}
-}
-await smartuiSnapshot(t, 'Screenshot Name', options);
+            selectDOM: {
+                id: ["ID-1", "ID-2"],
+            }
+        }
+        await smartuiSnapshot(t, 'Screenshot Name', options);
 ```
 
 ```js title="This is a sample for your configuration for Testcafe to select by Class"
 let options = {
-selectDOM: {
-class: ["Class-1", "Class-2"],
-}
-}
-await smartuiSnapshot(t, 'Screenshot Name', options);
+            selectDOM: {
+                class: ["Class-1", "Class-2"],
+            }
+        }
+        await smartuiSnapshot(t, 'Screenshot Name', options);
 ```
 
 ```js title="This is a sample for your configuration for Testcafe to select by XPath"
 let options = {
-selectDOM: {
-xpath: ["Xpath-1", "Xpath-2"],
-}
-}
-await smartuiSnapshot(t, 'Screenshot Name', options);
+            selectDOM: {
+                xpath: ["Xpath-1", "Xpath-2"],
+            }
+        }
+        await smartuiSnapshot(t, 'Screenshot Name', options);
 ```
 
 ```js title="This is a sample for your webhook configuration for Testcafe to select by CSS Selector"
 let options = {
-selectDOM: {
-cssSelector: ["CSS-Selector-1", "CSS-Selector-2"],
-}
-}
-await smartuiSnapshot(t, 'Screenshot Name', options);
+            selectDOM: {
+                cssSelector: ["CSS-Selector-1", "CSS-Selector-2"],
+            }
+        }
+        await smartuiSnapshot(t, 'Screenshot Name', options);
 ```
 
 ## For capturing the screenshot of a specific element
@@ -390,38 +390,38 @@ You can capture screenshots of targeted elements by leveraging various locator m
 
 ```js title="This is a sample for your configuration for Testcafe to capture an element by" ID."
 let options = {
-element: {
-id: 'Required ID',
-}
-};
-await smartuiSnapshot(t, 'Screenshot Name', options);
+      element: {
+          id: 'Required ID',
+      }
+  };
+        await smartuiSnapshot(t, 'Screenshot Name', options);
 ```
 
 ```js title="This is a sample for your configuration for Testcafe to capture an element by Class"
 let options = {
-element: {
-class: 'Required Class',
-}
-};
-await smartuiSnapshot(t, 'Screenshot Name', options);
+      element: {
+          class: 'Required Class',
+      }
+  };
+        await smartuiSnapshot(t, 'Screenshot Name', options);
 ```
 
 ```js title="This is a sample for your configuration for Testcafe to capture an element by XPath"
 let options = {
-element: {
-xpath: 'Required Xpath',
-}
-};
-await smartuiSnapshot(t, 'Screenshot Name', options);
+      element: {
+          xpath: 'Required Xpath',
+      }
+  };
+        await smartuiSnapshot(t, 'Screenshot Name', options);
 ```
 
 ```js title="This is a sample for your webhook configuration for Testcafe to capture an element by CSS Selector"
 let options = {
-element: {
-cssSelector: 'Required CSS Selector',
-}
-};
-await smartuiSnapshot(t, 'Screenshot Name', options);
+      element: {
+          cssSelector: 'Required CSS Selector',
+      }
+  };
+        await smartuiSnapshot(t, 'Screenshot Name', options);
 ```
 
 ## For capturing interactive lazy loading elements
@@ -432,32 +432,32 @@ If you encounter difficulties loading interactive elements that appear on scroll
 
 // Function to scroll through the page and then back to the top
 async function scrollToBottomAndTop(t, lastPageWait = 100) {
-const getScrollHeight = Selector(() => document.body.scrollHeight);
-const heightOfPage = await getScrollHeight();
-let size = 200;
-let noOfLoop = Math.floor(heightOfPage / size);
+    const getScrollHeight = Selector(() => document.body.scrollHeight);
+    const heightOfPage = await getScrollHeight();
+    let size = 200;
+    let noOfLoop = Math.floor(heightOfPage / size);
 
-for (let i = 1; i <= noOfLoop; i++) {
-await t.scrollBy({ x: 0, y: size });
-await t.wait(1000);
-if (i === noOfLoop) {
-await t.scrollTo({ x: 0, y: heightOfPage });
-await t.wait(lastPageWait);
-}
-}
+    for (let i = 1; i <= noOfLoop; i++) {
+        await t.scrollBy({ x: 0, y: size });
+        await t.wait(1000);
+        if (i === noOfLoop) {
+            await t.scrollTo({ x: 0, y: heightOfPage });
+            await t.wait(lastPageWait);
+        }
+    }
 
-// Scroll to the top
-await t.scrollTo({ x: 0, y: 0 });
-await t.wait(10000);
-console.log("Scroll Completed");
+    // Scroll to the top
+    await t.scrollTo({ x: 0, y: 0 });
+    await t.wait(10000);
+    console.log("Scroll Completed");
 }
 
 fixture `Page Scroll Test`
-.page `Required URL`; // Replace `Required URL` with the actual URL
+    .page `Required URL`; // Replace `Required URL` with the actual URL
 
 test('Scroll through the page, then take a smartUI Snapshot', async t => {
-await scrollToBottomAndTop(t, 100); // Adjust wait time as needed
-await smartuiSnapshot(t, 'Screenshot Name'); // Adjust the screenshot name as needed
+    await scrollToBottomAndTop(t, 100); // Adjust wait time as needed
+    await smartuiSnapshot(t, 'Screenshot Name'); // Adjust the screenshot name as needed
 });
 
 ```
@@ -487,12 +487,12 @@ await smartuiSnapshot(t, 'ProductPage-MainContent');
 ```javascript
 
 fixture `Page Test`
-.page `https://example.com`;
+    .page `https://example.com`;
 
 test('Take screenshot after page loads', async t => {
-await t.expect(Selector('#main-content').exists).ok();
-await t.wait(1000); // Wait for animations
-await smartuiSnapshot(t, 'Page Loaded');
+    await t.expect(Selector('#main-content').exists).ok();
+    await t.wait(1000); // Wait for animations
+    await smartuiSnapshot(t, 'Page Loaded');
 });
 ```
 
@@ -579,7 +579,7 @@ await t.wait(2000); // Wait for content to load
 2. Enable JavaScript in configuration:
 ```json
 {
-"enableJavaScript": true
+  "enableJavaScript": true
 }
 ```
 

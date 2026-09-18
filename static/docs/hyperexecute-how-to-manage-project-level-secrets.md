@@ -42,12 +42,12 @@ concurrency: 2
 # Note: 'id' is mandatory, while 'name' is optional.
 # You can provide both 'id' and 'name', or specify only the 'id'.
 project:
-name: 'demo-project' # Optional
-id: '1abc2345-56de-7890-f1cg-h2ij34k56789' # Mandatory
+  name: 'demo-project' # Optional
+  id: '1abc2345-56de-7890-f1cg-h2ij34k56789' # Mandatory
 
 # highlight-start
 env:
-LT_SECRET_KEY: ${{.secrets.token}}
+  LT_SECRET_KEY: ${{.secrets.token}}
 # highlight-end
 ```
 

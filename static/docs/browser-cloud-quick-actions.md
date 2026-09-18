@@ -24,10 +24,10 @@ console.log(result.content);
 
 ```typescript
 const result = await client.scrape({
-url: 'https://example.com',
-format: 'markdown',     // 'html' | 'markdown' | 'text' | 'readability'
-delay: 3000,             // Wait 3 seconds for JS-heavy pages
-waitFor: '#content',     // Wait for this CSS selector before extracting
+    url: 'https://example.com',
+    format: 'markdown',     // 'html' | 'markdown' | 'text' | 'readability'
+    delay: 3000,             // Wait 3 seconds for JS-heavy pages
+    waitFor: '#content',     // Wait for this CSS selector before extracting
 });
 ```
 
@@ -35,12 +35,12 @@ waitFor: '#content',     // Wait for this CSS selector before extracting
 
 ```typescript
 interface ScrapeResponse {
-title: string;           // Page title
-content: string;         // Extracted content in requested format
-url: string;             // Final URL (after redirects)
-markdown?: string;       // Markdown version
-html?: string;           // Raw HTML
-metadata?: Record<string, string>; // Meta tags
+    title: string;           // Page title
+    content: string;         // Extracted content in requested format
+    url: string;             // Final URL (after redirects)
+    markdown?: string;       // Markdown version
+    html?: string;           // Raw HTML
+    metadata?: Record<string, string>; // Meta tags
 }
 ```
 
@@ -64,11 +64,11 @@ fs.writeFileSync('screenshot.png', result.data);
 
 // With options
 const result = await client.screenshot({
-url: 'https://example.com',
-fullPage: true,          // Capture entire scrollable page
-format: 'jpeg',          // 'png' | 'jpeg' | 'webp'
-quality: 80,             // JPEG/WebP quality (1-100)
-delay: 2000,             // Wait before capturing
+    url: 'https://example.com',
+    fullPage: true,          // Capture entire scrollable page
+    format: 'jpeg',          // 'png' | 'jpeg' | 'webp'
+    quality: 80,             // JPEG/WebP quality (1-100)
+    delay: 2000,             // Wait before capturing
 });
 ```
 
@@ -85,11 +85,11 @@ fs.writeFileSync('page.pdf', result.data);
 
 // With options
 const result = await client.pdf({
-url: 'https://example.com',
-format: 'A4',            // 'A4' | 'Letter' | 'Legal'
-landscape: false,
-printBackground: true,
-margin: { top: '1cm', right: '1cm', bottom: '1cm', left: '1cm' },
+    url: 'https://example.com',
+    format: 'A4',            // 'A4' | 'Letter' | 'Legal'
+    landscape: false,
+    printBackground: true,
+    margin: { top: '1cm', right: '1cm', bottom: '1cm', left: '1cm' },
 });
 ```
 
@@ -117,8 +117,8 @@ client.quick.registerSessionPage(session.id, page);
 
 // Now Quick Actions use the existing session
 const result = await client.scrape({
-url: 'https://example.com',
-sessionId: session.id,
+    url: 'https://example.com',
+    sessionId: session.id,
 });
 ```
 

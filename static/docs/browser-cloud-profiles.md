@@ -35,9 +35,9 @@ and preferences.
 ```typescript
 // Run 1: Your agent logs in. Profile is saved automatically on close.
 const session = await client.sessions.create({
-adapter: 'puppeteer',
-profileId: 'my-app-login',    // This ID enables auto-save
-lambdatestOptions: { ... }
+    adapter: 'puppeteer',
+    profileId: 'my-app-login',    // This ID enables auto-save
+    lambdatestOptions: { ... }
 });
 
 const browser = await client.puppeteer.connect(session);
@@ -53,9 +53,9 @@ await client.sessions.release(session.id);
 ```typescript
 // Run 2 (days later): Agent loads saved state. No login needed.
 const session2 = await client.sessions.create({
-adapter: 'puppeteer',
-profileId: 'my-app-login',   // Same ID = loads saved cookies
-lambdatestOptions: { ... }
+    adapter: 'puppeteer',
+    profileId: 'my-app-login',   // Same ID = loads saved cookies
+    lambdatestOptions: { ... }
 });
 
 const browser2 = await client.puppeteer.connect(session2);
@@ -75,19 +75,19 @@ Profiles are stored as JSON files at `.profiles/{profileId}.json`:
 
 ```json
 {
-"id": "my-app-login",
-"cookies": [
-{
-"name": "session_token",
-"value": "abc123...",
-"domain": ".example.com",
-"path": "/",
-"expires": 1735689600,
-"httpOnly": true,
-"secure": true
-}
-],
-"updatedAt": "2024-01-15T10:30:00.000Z"
+    "id": "my-app-login",
+    "cookies": [
+        {
+            "name": "session_token",
+            "value": "abc123...",
+            "domain": ".example.com",
+            "path": "/",
+            "expires": 1735689600,
+            "httpOnly": true,
+            "secure": true
+        }
+    ],
+    "updatedAt": "2024-01-15T10:30:00.000Z"
 }
 ```
 

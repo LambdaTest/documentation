@@ -198,9 +198,9 @@ Add the SmartUI Java SDK to your `pom.xml`:
 
 ```xml
 <dependency>
-<groupId>io.github.lambdatest</groupId>
-<artifactId>lambdatest-java-sdk</artifactId>
-<version>1.0.23</version>
+    <groupId>io.github.lambdatest</groupId>
+    <artifactId>lambdatest-java-sdk</artifactId>
+    <version>1.0.23</version>
 </dependency>
 ```
 
@@ -241,21 +241,21 @@ Upload pre-existing PDFs from your local machine:
 ```java
 
 public class SmartuiPdfLocalTest {
-public void uploadLocalPdf() throws Exception {
-String projectToken = System.getenv("PROJECT_TOKEN");
+    public void uploadLocalPdf() throws Exception {
+        String projectToken = System.getenv("PROJECT_TOKEN");
 
-SmartUIConfig config = new SmartUIConfig()
-.withProjectToken(projectToken)
-.withFetchResult(true);
+        SmartUIConfig config = new SmartUIConfig()
+            .withProjectToken(projectToken)
+            .withFetchResult(true);
 
-SmartUIPdf pdfUploader = new SmartUIPdf(config);
+        SmartUIPdf pdfUploader = new SmartUIPdf(config);
 
-// Upload PDF file
-String pdfPath = "path/to/your/document.pdf";
-FormattedResults result = pdfUploader.uploadPDF(pdfPath);
+        // Upload PDF file
+        String pdfPath = "path/to/your/document.pdf";
+        FormattedResults result = pdfUploader.uploadPDF(pdfPath);
 
-System.out.println("Upload result: " + result);
-}
+        System.out.println("Upload result: " + result);
+    }
 }
 ```
 
@@ -266,30 +266,30 @@ Upload PDFs downloaded during TestMu AI cloud test execution:
 ```java
 
 public class SmartuiPdfCloudTest {
-public void uploadCloudPdf(WebDriver driver) throws Exception {
-String projectToken = System.getenv("PROJECT_TOKEN");
+    public void uploadCloudPdf(WebDriver driver) throws Exception {
+        String projectToken = System.getenv("PROJECT_TOKEN");
 
-// Download PDF from cloud session
-String base64Content = (String) ((JavascriptExecutor) driver)
-.executeAsyncScript("lambda-file-content=LambdaTest.pdf");
+        // Download PDF from cloud session
+        String base64Content = (String) ((JavascriptExecutor) driver)
+            .executeAsyncScript("lambda-file-content=LambdaTest.pdf");
 
-// Convert base64 to PDF file
-byte[] pdfBytes = Base64.getDecoder().decode(base64Content);
-File pdfFile = new File("downloaded.pdf");
-try (FileOutputStream fos = new FileOutputStream(pdfFile)) {
-fos.write(pdfBytes);
-}
+        // Convert base64 to PDF file
+        byte[] pdfBytes = Base64.getDecoder().decode(base64Content);
+        File pdfFile = new File("downloaded.pdf");
+        try (FileOutputStream fos = new FileOutputStream(pdfFile)) {
+            fos.write(pdfBytes);
+        }
 
-// Upload to SmartUI
-SmartUIConfig config = new SmartUIConfig()
-.withProjectToken(projectToken)
-.withFetchResult(true);
+        // Upload to SmartUI
+        SmartUIConfig config = new SmartUIConfig()
+            .withProjectToken(projectToken)
+            .withFetchResult(true);
 
-SmartUIPdf pdfUploader = new SmartUIPdf(config);
-FormattedResults result = pdfUploader.uploadPDF(pdfFile.getAbsolutePath());
+        SmartUIPdf pdfUploader = new SmartUIPdf(config);
+        FormattedResults result = pdfUploader.uploadPDF(pdfFile.getAbsolutePath());
 
-System.out.println("Upload result: " + result);
-}
+        System.out.println("Upload result: " + result);
+    }
 }
 ```
 
@@ -313,27 +313,27 @@ mvn test
 
 ```java
 public class SmartuiPdfBatchTest {
-public void uploadMultiplePdfs() throws Exception {
-String projectToken = System.getenv("PROJECT_TOKEN");
+    public void uploadMultiplePdfs() throws Exception {
+        String projectToken = System.getenv("PROJECT_TOKEN");
 
-SmartUIConfig config = new SmartUIConfig()
-.withProjectToken(projectToken)
-.withFetchResult(true)
-.withBuildName("Batch-Upload-v1.0");
+        SmartUIConfig config = new SmartUIConfig()
+            .withProjectToken(projectToken)
+            .withFetchResult(true)
+            .withBuildName("Batch-Upload-v1.0");
 
-SmartUIPdf pdfUploader = new SmartUIPdf(config);
+        SmartUIPdf pdfUploader = new SmartUIPdf(config);
 
-String[] pdfPaths = {
-"documents/report1.pdf",
-"documents/report2.pdf",
-"documents/specification.pdf"
-};
+        String[] pdfPaths = {
+            "documents/report1.pdf",
+            "documents/report2.pdf",
+            "documents/specification.pdf"
+        };
 
-for (String pdfPath : pdfPaths) {
-FormattedResults result = pdfUploader.uploadPDF(pdfPath);
-System.out.println("Uploaded " + pdfPath + ": " + result);
-}
-}
+        for (String pdfPath : pdfPaths) {
+            FormattedResults result = pdfUploader.uploadPDF(pdfPath);
+            System.out.println("Uploaded " + pdfPath + ": " + result);
+        }
+    }
 }
 ```
 
@@ -341,24 +341,24 @@ System.out.println("Uploaded " + pdfPath + ": " + result);
 
 ```java
 public class SmartuiPdfErrorHandling {
-public void uploadWithErrorHandling() {
-try {
-String projectToken = System.getenv("PROJECT_TOKEN");
+    public void uploadWithErrorHandling() {
+        try {
+            String projectToken = System.getenv("PROJECT_TOKEN");
 
-SmartUIConfig config = new SmartUIConfig()
-.withProjectToken(projectToken)
-.withFetchResult(true);
+            SmartUIConfig config = new SmartUIConfig()
+                .withProjectToken(projectToken)
+                .withFetchResult(true);
 
-SmartUIPdf pdfUploader = new SmartUIPdf(config);
-FormattedResults result = pdfUploader.uploadPDF("document.pdf");
+            SmartUIPdf pdfUploader = new SmartUIPdf(config);
+            FormattedResults result = pdfUploader.uploadPDF("document.pdf");
 
-System.out.println("Upload successful: " + result);
+            System.out.println("Upload successful: " + result);
 
-} catch (Exception e) {
-System.err.println("Upload failed: " + e.getMessage());
-e.printStackTrace();
-}
-}
+        } catch (Exception e) {
+            System.err.println("Upload failed: " + e.getMessage());
+            e.printStackTrace();
+        }
+    }
 }
 ```
 
@@ -381,8 +381,8 @@ e.printStackTrace();
 **Example:**
 ```java
 String[] pdfPaths = {
-"documents/reports/report-v1.0.pdf",
-"documents/specs/spec-v2.1.pdf"
+    "documents/reports/report-v1.0.pdf",
+    "documents/specs/spec-v2.1.pdf"
 };
 ```
 
@@ -448,7 +448,7 @@ file document.pdf
 ```java
 File pdfFile = new File("path/to/document.pdf");
 if (!pdfFile.exists()) {
-throw new FileNotFoundException("PDF file not found");
+    throw new FileNotFoundException("PDF file not found");
 }
 ```
 
@@ -495,7 +495,7 @@ config.withFetchResult(true);
 ```java
 FormattedResults result = pdfUploader.uploadPDF(pdfPath);
 if (result == null) {
-// Handle null result
+    // Handle null result
 }
 ```
 
@@ -535,12 +535,12 @@ mvn clean
 1. Implement individual error handling:
 ```java
 for (String pdfPath : pdfPaths) {
-try {
-FormattedResults result = pdfUploader.uploadPDF(pdfPath);
-System.out.println("Uploaded: " + pdfPath);
-} catch (Exception e) {
-System.err.println("Failed: " + pdfPath + " - " + e.getMessage());
-}
+    try {
+        FormattedResults result = pdfUploader.uploadPDF(pdfPath);
+        System.out.println("Uploaded: " + pdfPath);
+    } catch (Exception e) {
+        System.err.println("Failed: " + pdfPath + " - " + e.getMessage());
+    }
 }
 ```
 

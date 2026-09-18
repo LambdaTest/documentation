@@ -129,28 +129,28 @@ retryOnFailure: true
 maxRetries: 5
 
 env:
-NUGET_PACKAGES: 'C:\nuget_global_cache'
-NUGET_HTTP_CACHE_PATH: 'C:\nuget_http_cache'
-NUGET_PLUGINS_CACHE_PATH: 'C:\nuget_plugins_cache'
+  NUGET_PACKAGES: 'C:\nuget_global_cache'
+  NUGET_HTTP_CACHE_PATH: 'C:\nuget_http_cache'
+  NUGET_PLUGINS_CACHE_PATH: 'C:\nuget_plugins_cache'
 
 pre:
-# https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet-list-package
-- npm install playwright@1.25.0 --save-exact
-- dotnet list PlaywrightDotnetTests.csproj package > packages.txt
-- nuget locals all -clear
-- dotnet build -c Release
+ # https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet-list-package
+ - npm install playwright@1.25.0 --save-exact
+ - dotnet list PlaywrightDotnetTests.csproj package > packages.txt
+ - nuget locals all -clear
+ - dotnet build -c Release
 
 runtime:
-language: dotnet
-version: "6.0.303"
+  language: dotnet
+  version: "6.0.303"
 
 testDiscovery:
-type: raw
-mode: remote
-command: grep -lr 'GotoAsync' -ir --include=*.cs
+  type: raw
+  mode: remote
+  command: grep -lr 'GotoAsync' -ir --include=*.cs
 
 post:
-- cat yaml/linux/dotnet_playwright_hyperexecute_autosplit_sample.yaml
+  - cat yaml/linux/dotnet_playwright_hyperexecute_autosplit_sample.yaml
 
 testRunnerCommand: dotnet run $test
 
@@ -218,8 +218,8 @@ The playwright-skill package includes:
 playwright-skill/
 ├── SKILL.md
 └── reference/
-├── playbook.md
-└── advanced-patterns.md
+    ├── playbook.md
+    └── advanced-patterns.md
 ```
 
 It provides structured guidance for:

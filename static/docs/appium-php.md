@@ -125,126 +125,126 @@ An automation script for the sample application given above has been provided he
 
 ```php title="iOSApp.php"
 <?php
-require __dir__.'/vendor/autoload.php';
-use Facebook\WebDriver\Remote\DesiredCapabilities;
-use Facebook\WebDriver\WebDriverBy;
-use Facebook\WebDriver\WebDriverWait;
-use Facebook\WebDriver\WebDriverExpectedCondition;
-use Facebook\WebDriver\Chrome\ChromeOptions;
-use Facebook\WebDriver\Remote\RemoteWebDriver;
+ require __dir__.'/vendor/autoload.php';
+ use Facebook\WebDriver\Remote\DesiredCapabilities;
+ use Facebook\WebDriver\WebDriverBy;
+ use Facebook\WebDriver\WebDriverWait;
+ use Facebook\WebDriver\WebDriverExpectedCondition;
+ use Facebook\WebDriver\Chrome\ChromeOptions;
+ use Facebook\WebDriver\Remote\RemoteWebDriver;
 
-$caps = array(
-//highlight-next-line
-"app"=> "APP_URL", //Enter app_url here
-"deviceName" => "iPhone 11",
-"platformName" => "ios",
-"platformVersion" => "14",
-"isRealMobile" => TRUE,
-"visual" => TRUE,
-"video" => TRUE,
-"name" => "Php - iOS test",
-"build" => "Php Vanilla - iOS"
+ $caps = array(
+    //highlight-next-line
+   "app"=> "APP_URL", //Enter app_url here
+   "deviceName" => "iPhone 11",
+   "platformName" => "ios",
+   "platformVersion" => "14",
+   "isRealMobile" => TRUE,
+   "visual" => TRUE,
+   "video" => TRUE,
+   "name" => "Php - iOS test",
+   "build" => "Php Vanilla - iOS"
 );
 
-//highlight-next-line
-$username = getenv("LT_USERNAME") ? getenv("LT_USERNAME") : "USERNAME"; //Enter username here
-//highlight-next-line
-$accesskey = getenv("LT_ACCESS_KEY") ? getenv("LT_ACCESS_KEY") : "ACCESS_KEY"; //Enter accesskey here
-$driver = RemoteWebDriver::create("http://$username:$accesskey@mobile-hub.lambdatest.com/wd/hub",$caps);
+    //highlight-next-line
+    $username = getenv("LT_USERNAME") ? getenv("LT_USERNAME") : "USERNAME"; //Enter username here
+    //highlight-next-line
+    $accesskey = getenv("LT_ACCESS_KEY") ? getenv("LT_ACCESS_KEY") : "ACCESS_KEY"; //Enter accesskey here
+ $driver = RemoteWebDriver::create("http://$username:$accesskey@mobile-hub.lambdatest.com/wd/hub",$caps);
 try{
-$wait = new WebDriverWait($driver, 30);
-$wait->until(WebDriverExpectedCondition::visibilityOfElementLocated(WebDriverBy::id('color')));
-$color_element = $driver->findElement(WebDriverBy::id('color'));
-$color_element->click();
-$text_element = $driver->findElement(WebDriverBy::id('Text'));
-$text_element->click();
-$toast_element = $driver->findElement(WebDriverBy::id('toast'));
-$toast_element->click();
-$notification_element = $driver->findElement(WebDriverBy::id('notification'));
-$notification_element->click();
-sleep(2);
-$wait->until(WebDriverExpectedCondition::visibilityOfElementLocated(WebDriverBy::id('geoLocation')));
-$geolocation_element = $driver->findElement(WebDriverBy::id('geoLocation'));
-$geolocation_element->click();
-sleep(5);
-$home_element = $driver->findElement(WebDriverBy::id('Back'));
-$home_element->click();
-$speedtest_element = $driver->findElement(WebDriverBy::id('speedTest'));
-$speedtest_element->click();
-sleep(5);
-$home_element = $driver->findElement(WebDriverBy::id('Back'));
-$home_element->click();
-$browser_element = $driver->findElement(WebDriverBy::id('Browser'));
-$browser_element->click();
-$url_element = $driver->findElement(WebDriverBy::id('url'));
-$url_element->sendKeys("https://www.testmuai.com");
-$find_element = $driver->findElement(WebDriverBy::id('find'));
-$find_element->click();
-sleep(2);
-$driver->quit();
-}  finally {
-$driver->quit();
-}
+    $wait = new WebDriverWait($driver, 30);
+    $wait->until(WebDriverExpectedCondition::visibilityOfElementLocated(WebDriverBy::id('color')));
+    $color_element = $driver->findElement(WebDriverBy::id('color'));
+    $color_element->click();
+    $text_element = $driver->findElement(WebDriverBy::id('Text'));
+    $text_element->click();
+    $toast_element = $driver->findElement(WebDriverBy::id('toast'));
+    $toast_element->click();
+    $notification_element = $driver->findElement(WebDriverBy::id('notification'));
+    $notification_element->click();
+    sleep(2);
+    $wait->until(WebDriverExpectedCondition::visibilityOfElementLocated(WebDriverBy::id('geoLocation')));
+    $geolocation_element = $driver->findElement(WebDriverBy::id('geoLocation'));
+    $geolocation_element->click();
+    sleep(5);
+    $home_element = $driver->findElement(WebDriverBy::id('Back'));
+    $home_element->click();
+    $speedtest_element = $driver->findElement(WebDriverBy::id('speedTest'));
+    $speedtest_element->click();
+    sleep(5);
+    $home_element = $driver->findElement(WebDriverBy::id('Back'));
+    $home_element->click();
+    $browser_element = $driver->findElement(WebDriverBy::id('Browser'));
+    $browser_element->click();
+    $url_element = $driver->findElement(WebDriverBy::id('url'));
+    $url_element->sendKeys("https://www.testmuai.com");
+    $find_element = $driver->findElement(WebDriverBy::id('find'));
+    $find_element->click();
+    sleep(2);
+    $driver->quit();
+ }  finally {
+     $driver->quit();
+ }
 ?>
 ```
 
 ```php title="AndroidApp.php"
 <?php
-require 'vendor/autoload.php';
-use Facebook\WebDriver\Remote\DesiredCapabilities;
-use Facebook\WebDriver\WebDriverBy;
-use Facebook\WebDriver\Remote;
-use Facebook\WebDriver\Chrome\ChromeOptions;
-use Facebook\WebDriver\WebDriverExpectedCondition;
-use Facebook\WebDriver\Remote\RemoteWebDriver;
+    require 'vendor/autoload.php';
+    use Facebook\WebDriver\Remote\DesiredCapabilities;
+    use Facebook\WebDriver\WebDriverBy;
+    use Facebook\WebDriver\Remote;
+    use Facebook\WebDriver\Chrome\ChromeOptions;
+    use Facebook\WebDriver\WebDriverExpectedCondition;
+    use Facebook\WebDriver\Remote\RemoteWebDriver;
 
-$caps = array(
-"app"=> "APP_URL", //Enter app_url here
-"deviceName" => "Galaxy S20",
-"platformName" => "Android",
-"platformVersion" => "10",
-"isRealMobile" => TRUE,
-"visual" => TRUE,
-"video" => TRUE,
-"name" => "Php - Android test",
-"build" => "Php Vanilla - Android"
-);
+    $caps = array(
+        "app"=> "APP_URL", //Enter app_url here
+        "deviceName" => "Galaxy S20",
+        "platformName" => "Android",
+        "platformVersion" => "10",
+        "isRealMobile" => TRUE,
+        "visual" => TRUE,
+        "video" => TRUE,
+        "name" => "Php - Android test",
+        "build" => "Php Vanilla - Android"
+    );
 
-//highlight-next-line
-$username = getenv("LT_USERNAME") ? getenv("LT_USERNAME") : "USERNAME"; //Enter username here
-//highlight-next-line
-$accesskey = getenv("LT_ACCESS_KEY") ? getenv("LT_ACCESS_KEY") : "ACCESS_KEY"; //Enter accesskey here
+    //highlight-next-line
+    $username = getenv("LT_USERNAME") ? getenv("LT_USERNAME") : "USERNAME"; //Enter username here
+    //highlight-next-line
+    $accesskey = getenv("LT_ACCESS_KEY") ? getenv("LT_ACCESS_KEY") : "ACCESS_KEY"; //Enter accesskey here
 
-$driver = RemoteWebDriver::create("http://$username:$accesskey@mobile-hub.lambdatest.com/wd/hub",$caps);
+    $driver = RemoteWebDriver::create("http://$username:$accesskey@mobile-hub.lambdatest.com/wd/hub",$caps);
 
-try{
-$color_element = $driver->findElement(WebDriverBy::id('color'));
-$color_element->click();
+ try{
+    $color_element = $driver->findElement(WebDriverBy::id('color'));
+    $color_element->click();
 
-$text_element = $driver->findElement(WebDriverBy::id('Text'));
-$text_element->click();
+    $text_element = $driver->findElement(WebDriverBy::id('Text'));
+    $text_element->click();
 
-$toast_element = $driver->findElement(WebDriverBy::id('toast'));
-$toast_element->click();
+    $toast_element = $driver->findElement(WebDriverBy::id('toast'));
+    $toast_element->click();
 
-$notification_element = $driver->findElement(WebDriverBy::id('notification'));
-$notification_element->click();
+    $notification_element = $driver->findElement(WebDriverBy::id('notification'));
+    $notification_element->click();
 
-$geoLocation_element = $driver->findElement(WebDriverBy::id('geoLocation'));
-$geoLocation_element->click();
-sleep(5);
+    $geoLocation_element = $driver->findElement(WebDriverBy::id('geoLocation'));
+    $geoLocation_element->click();
+    sleep(5);
 
-$url_element = $driver->findElement(WebDriverBy::id('url'));
-$url_element->sendkeys("https://www.testmuai.com");
+    $url_element = $driver->findElement(WebDriverBy::id('url'));
+    $url_element->sendkeys("https://www.testmuai.com");
 
-$find_element = $driver->findElement(WebDriverBy::id('find'));
-$find_element->click();
-sleep(2);
+    $find_element = $driver->findElement(WebDriverBy::id('find'));
+    $find_element->click();
+    sleep(2);
 
-$driver->quit();
-} finally {
-$driver->quit();
-}
+    $driver->quit();
+ } finally {
+    $driver->quit();
+ }
 
 ?>
 ```
@@ -256,33 +256,33 @@ You can update your custom capabilities in test scripts. In this sample project,
 The capabilities object in the sample code are defined as:
 
 ```csharp title="iOS(.ipa)"
-$caps = array(
-//highlight-next-line
-"app"=> "APP_URL", //Enter app_url here
-"deviceName" => "iPhone 11",
-"platformName" => "ios",
-"platformVersion" => "14",
-"isRealMobile" => TRUE,
-"visual" => TRUE,
-"video" => TRUE,
-"name" => "Php - iOS test",
-"build" => "Php Vanilla - iOS"
-);
+  $caps = array(
+    //highlight-next-line
+    "app"=> "APP_URL", //Enter app_url here
+   "deviceName" => "iPhone 11",
+   "platformName" => "ios",
+   "platformVersion" => "14",
+   "isRealMobile" => TRUE,
+   "visual" => TRUE,
+   "video" => TRUE,
+   "name" => "Php - iOS test",
+   "build" => "Php Vanilla - iOS"
+ );
 ```
 
 ```php title="Android(.apk)"
-$caps = array(
-//highlight-next-line
-"app"=> "APP_URL", //Enter app_url here
-"deviceName" => "Galaxy S20",
-"platformName" => "Android",
-"platformVersion" => "10",
-"isRealMobile" => TRUE,
-"visual" => TRUE,
-"video" => TRUE,
-"name" => "Php - Android test",
-"build" => "Php Vanilla - Android"
-);
+  $caps = array(
+        //highlight-next-line
+        "app"=> "APP_URL", //Enter app_url here
+        "deviceName" => "Galaxy S20",
+        "platformName" => "Android",
+        "platformVersion" => "10",
+        "isRealMobile" => TRUE,
+        "visual" => TRUE,
+        "video" => TRUE,
+        "name" => "Php - Android test",
+        "build" => "Php Vanilla - Android"
+    );
 ```
 
 - You must add the generated **APP_URL** to the `app` capability in the config file.
@@ -313,8 +313,8 @@ The appium-skill package includes:
 appium-skill/
 ├── SKILL.md
 └── reference/
-├── playbook.md
-└── advanced-patterns.md
+    ├── playbook.md
+    └── advanced-patterns.md
 ```
 
 It provides structured guidance for:

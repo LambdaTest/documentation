@@ -76,111 +76,111 @@ The fetched results JSON file contains detailed information about your build and
 
 ```json
 {
-"screenshots": {
-"Screenshot-1": [
-{
-"screenshot_name": "Screenshot-1",
-"captured_image": "image_url",
-"baseline_image": "image_url",
-"compared_image": "image_url",
-"browser_name": "edge",
-"viewport": "1920",
-"mismatch_percentage": 3.3,
-"status": "Changes found"
-},
-{
-"screenshot_name": "Screenshot-1",
-"captured_image": "image_url",
-"baseline_image": "image_url",
-"compared_image": "image_url",
-"browser_name": "firefox",
-"viewport": "1366",
-"mismatch_percentage": 4.74,
-"status": "Changes found"
-},
-{
-"screenshot_name": "Screenshot-1",
-"captured_image": "image_url",
-"baseline_image": "image_url",
-"compared_image": "image_url",
-"browser_name": "chrome",
-"viewport": "1366",
-"mismatch_percentage": 4.64,
-"status": "Changes found"
-},
-{
-"screenshot_name": "Screenshot-1",
-"captured_image": "image_url",
-"baseline_image": "image_url",
-"compared_image": "image_url",
-"browser_name": "chrome",
-"viewport": "1920",
-"mismatch_percentage": 3.3,
-"status": "Changes found"
-},
-],
-"Screenshot-2": [
-{
-"screenshot_name": "Screenshot-2",
-"captured_image": "image_url",
-"baseline_image": "image_url",
-"compared_image": "image_url",
-"browser_name": "edge",
-"viewport": "1920",
-"mismatch_percentage": 0.0,
-"status": "Approved"
-},
-{
-"screenshot_name": "Screenshot-2",
-"captured_image": "image_url",
-"baseline_image": "image_url",
-"compared_image": "image_url",
-"browser_name": "firefox",
-"viewport": "1366",
-"mismatch_percentage": 4.74,
-"status": "Changes found"
-},
-{
-"screenshot_name": "Screenshot-2",
-"captured_image": "image_url",
-"baseline_image": "image_url",
-"compared_image": "image_url",
-"browser_name": "chrome",
-"viewport": "1366",
-"mismatch_percentage": 4.64,
-"status": "Changes found"
-},
-{
-"screenshot_name": "Screenshot-2",
-"captured_image": "image_url",
-"baseline_image": "image_url",
-"compared_image": "image_url",
-"browser_name": "chrome",
-"viewport": "1920",
-"mismatch_percentage": 3.3,
-"status": "Changes found"
-},
-]
-},
-"build": {
-"build_id": "b420b7a9-77c6-****-****",
-"baseline": false,
-"build_type": "smartui-cli",
-"build_status_ind": "completed",
-"build_status": "pending-approval",
-"commitId": "2b93***",
-"branch": "main",
-"commitAuthor": "John Doe",
-"commitMessage": "Merge pull request from xyz/main"
-},
-"project": {
-"project_id": "1dfb7712-7f20-446f-***-***",
-"name": "Project-Name",
-"username": "johndoe",
-"project_type": "smartui-cli",
-"projectCategory": "web",
-"platform": "cli"
-}
+  "screenshots": {
+    "Screenshot-1": [
+      {
+        "screenshot_name": "Screenshot-1",
+        "captured_image": "image_url",
+        "baseline_image": "image_url",
+        "compared_image": "image_url",
+        "browser_name": "edge",
+        "viewport": "1920",
+        "mismatch_percentage": 3.3,
+        "status": "Changes found"
+      },
+      {
+        "screenshot_name": "Screenshot-1",
+        "captured_image": "image_url",
+        "baseline_image": "image_url",
+        "compared_image": "image_url",
+        "browser_name": "firefox",
+        "viewport": "1366",
+        "mismatch_percentage": 4.74,
+        "status": "Changes found"
+      },
+      {
+        "screenshot_name": "Screenshot-1",
+        "captured_image": "image_url",
+        "baseline_image": "image_url",
+        "compared_image": "image_url",
+        "browser_name": "chrome",
+        "viewport": "1366",
+        "mismatch_percentage": 4.64,
+        "status": "Changes found"
+      },
+      {
+        "screenshot_name": "Screenshot-1",
+        "captured_image": "image_url",
+        "baseline_image": "image_url",
+        "compared_image": "image_url",
+        "browser_name": "chrome",
+        "viewport": "1920",
+        "mismatch_percentage": 3.3,
+        "status": "Changes found"
+      },
+    ],
+    "Screenshot-2": [
+      {
+        "screenshot_name": "Screenshot-2",
+        "captured_image": "image_url",
+        "baseline_image": "image_url",
+        "compared_image": "image_url",
+        "browser_name": "edge",
+        "viewport": "1920",
+        "mismatch_percentage": 0.0,
+        "status": "Approved"
+      },
+      {
+        "screenshot_name": "Screenshot-2",
+        "captured_image": "image_url",
+        "baseline_image": "image_url",
+        "compared_image": "image_url",
+        "browser_name": "firefox",
+        "viewport": "1366",
+        "mismatch_percentage": 4.74,
+        "status": "Changes found"
+      },
+      {
+        "screenshot_name": "Screenshot-2",
+        "captured_image": "image_url",
+        "baseline_image": "image_url",
+        "compared_image": "image_url",
+        "browser_name": "chrome",
+        "viewport": "1366",
+        "mismatch_percentage": 4.64,
+        "status": "Changes found"
+      },
+      {
+        "screenshot_name": "Screenshot-2",
+        "captured_image": "image_url",
+        "baseline_image": "image_url",
+        "compared_image": "image_url",
+        "browser_name": "chrome",
+        "viewport": "1920",
+        "mismatch_percentage": 3.3,
+        "status": "Changes found"
+      },
+    ]
+  },
+  "build": {
+    "build_id": "b420b7a9-77c6-****-****",
+    "baseline": false,
+    "build_type": "smartui-cli",
+    "build_status_ind": "completed",
+    "build_status": "pending-approval",
+    "commitId": "2b93***",
+    "branch": "main",
+    "commitAuthor": "John Doe",
+    "commitMessage": "Merge pull request from xyz/main"
+  },
+  "project": {
+    "project_id": "1dfb7712-7f20-446f-***-***",
+    "name": "Project-Name",
+    "username": "johndoe",
+    "project_type": "smartui-cli",
+    "projectCategory": "web",
+    "platform": "cli"
+  }
 }
 ```
 
@@ -245,7 +245,7 @@ GET /build/screenshots
 
 ```bash
 curl -X GET "https://api.lambdatest.com/smartui/build/screenshots?project_id=YOUR_PROJECT_ID&build_id=YOUR_BUILD_ID" \
--H "Authorization: Bearer YOUR_ACCESS_TOKEN"
+  -H "Authorization: Bearer YOUR_ACCESS_TOKEN"
 ```
 
 For detailed API documentation, visit the [SmartUI API Swagger Documentation](https://swagger-api-support.lambdatest.com/smartui/index.html#/Fetch%20Build%20Screenshots).

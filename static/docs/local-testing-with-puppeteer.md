@@ -70,20 +70,20 @@ const puppeteer = require('puppeteer');
 const expect = require('chai').expect;
 
 (async () => {
-const capabilities = {
-'browserName': 'Chrome',
-'browserVersion': 'latest',
-'LT:Options': {
-'platform': 'Windows 10',
-'build': 'puppeteer-build-1',
-'name': 'My first Puppeteer test',
-'resolution':'1366x768',
-'user': process.env.LT_USERNAME || "Your Username",
-'accessKey': process.env.LT_ACCESS_KEY || "Your Access Key",
-'tunnel': false, // Add tunnel configuration if testing locally hosted webpage
-'tunnelName': '' // Optional
-}
-};
-```
+    const capabilities = {
+        'browserName': 'Chrome',
+        'browserVersion': 'latest',
+        'LT:Options': {
+            'platform': 'Windows 10',
+            'build': 'puppeteer-build-1',
+            'name': 'My first Puppeteer test',
+            'resolution':'1366x768',
+            'user': process.env.LT_USERNAME || "Your Username",
+            'accessKey': process.env.LT_ACCESS_KEY || "Your Access Key",
+            'tunnel': false, // Add tunnel configuration if testing locally hosted webpage
+            'tunnelName': '' // Optional
+        }
+   };
+   ```
 
 You can view test reports for your local tests on the TestMu AI automation dashboard.

@@ -2,7 +2,7 @@
 id: playwright-test-execution-setup
 title: Playwright Test Execution Setup
 hide_title: true
-sidebar_label: Configure Capabilities
+sidebar_label: Test Execution Setup
 description: Learn how to configure the desired capability for selecting browsers and OS, organzing tests, changing desktop resolution, and more for your Playwright tests.
 keywords:
   - playwright testing

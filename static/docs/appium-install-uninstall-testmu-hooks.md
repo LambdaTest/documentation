@@ -25,10 +25,10 @@ driver.execute_script("lambda-install-app=lt://APP100000000123456789123456789")
 
 ```javascript
 await browser.execute("lambda-install-app", {
-/* Change the App URL */
-appUrl: "lt://APP1234567890ABCDEF1234567890",
-/* Optional */
-retainData: true
+  /* Change the App URL */
+  appUrl: "lt://APP1234567890ABCDEF1234567890",
+  /* Optional */
+  retainData: true
 });
 ```
 
@@ -60,16 +60,16 @@ Testing app upgrades is important because users often update to the latest versi
 ```python
 # Payload required to retain app data while uninstalling it
 data = {
-"appPackage": "sampleapp.android.app",
-"retainData": True
+  "appPackage": "sampleapp.android.app",
+  "retainData": True
 }
 
 driver.execute_script("lambda-uninstall-app", data)
 
 # Payload required to reuse data of the old app while installing the new one
 data = {
-"appUrl": "lt://APPID",
-"retainData": True
+  "appUrl": "lt://APPID",
+  "retainData": True
 }
 driver.execute_script("lambda-install-app", data)
 ```
@@ -80,16 +80,16 @@ driver.background_app(-1)
 
 # Payload required while installing the new upgrade
 data = {
-"appUrl": "lt://APPID",
-"retainData": True
+  "appUrl": "lt://APPID",
+  "retainData": True
 }
 driver.execute_script("lambda-install-app", data)
 
 # Note : In case of enterprise app, user have to pass the below payload
 data = {
-"appUrl": "lt://APPID",
-"resignApp": False,
-"retainData": True
+  "appUrl": "lt://APPID",
+  "resignApp": False,
+  "retainData": True
 }
 
 ```

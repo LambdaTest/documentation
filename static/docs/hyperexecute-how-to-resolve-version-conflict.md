@@ -42,10 +42,10 @@ For Java projects using Selenium, TestNG and Cucumber dependencies should match 
 
 ```xml
 <dependency>
-<groupId>org.testng</groupId>
-<artifactId>testng</artifactId>
-<version>7.5</version>
-<scope>test</scope>
+    <groupId>org.testng</groupId>
+    <artifactId>testng</artifactId>
+    <version>7.5</version>
+    <scope>test</scope>
 </dependency>
 ```
 
@@ -56,11 +56,11 @@ For JavaScript frameworks like Selenium, Playwright, Puppeteer, and Cypress, the
 
 ```json
 {
-"dependencies": {
-"selenium-webdriver": "4.1.0",
-"cypress": "9.5.0",
-"playwright": "1.15.0"
-}
+  "dependencies": {
+    "selenium-webdriver": "4.1.0",
+    "cypress": "9.5.0",
+    "playwright": "1.15.0"
+  }
 }
 ```
 
@@ -71,7 +71,7 @@ For .NET projects, Selenium and Playwright versions should match between the YAM
 
 ```xml
 <PropertyGroup>
-<TargetFramework>net6.0</TargetFramework>
-<OutputType>Library</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    <OutputType>Library</OutputType>
 </PropertyGroup>
 ```

@@ -23,22 +23,22 @@ Now, you can write or paste your custom JavaScript code snippet directly into th
 
 ```javascript
 function simulateTyping(element, text) {
-element.value = '';  // Clear any existing value
+    element.value = '';  // Clear any existing value
 
-for (let i = 0; i < text.length; i++) {
-let char = text[i];
-let keyDownEvent = new KeyboardEvent('keydown', {key: char});
-element.dispatchEvent(keyDownEvent);
-element.value += char;
+    for (let i = 0; i < text.length; i++) {
+        let char = text[i];
+        let keyDownEvent = new KeyboardEvent('keydown', {key: char});
+        element.dispatchEvent(keyDownEvent);
+        element.value += char;
 
-let inputEvent = new Event('input', {bubbles: true});
-element.dispatchEvent(inputEvent);
-let keyUpEvent = new KeyboardEvent('keyup', {key: char});
-element.dispatchEvent(keyUpEvent);
-}
+        let inputEvent = new Event('input', {bubbles: true});
+        element.dispatchEvent(inputEvent);
+        let keyUpEvent = new KeyboardEvent('keyup', {key: char});
+        element.dispatchEvent(keyUpEvent);
+    }
 
-let changeEvent = new Event('change', {bubbles: true});
-element.dispatchEvent(changeEvent);
+    let changeEvent = new Event('change', {bubbles: true});
+    element.dispatchEvent(changeEvent);
 }
 
 // Example usage

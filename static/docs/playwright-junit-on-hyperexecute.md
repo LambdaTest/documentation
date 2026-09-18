@@ -97,37 +97,37 @@ maxRetries: 1
 concurrency: 1
 
 env:
-# PAT: ${{ .secrets.testKey }}
-CACHE_DIR: m2_cache_dir
-TARGET_OS: linux
+  # PAT: ${{ .secrets.testKey }}
+  CACHE_DIR: m2_cache_dir
+  TARGET_OS: linux
 
 cacheKey: '{{ checksum "pom.xml" }}'
 cacheDirectories:
-- ${CACHE_DIR}
+  - ${CACHE_DIR}
 
 shell: bash
 
 pre:
-# install playwright version to be used.
-- npm install playwright@1.23.0 --save-exact
-# Download and install packages in the CACHE_DIR.
-# Skip execution of the tests in the pre step
-- mvn -Dmaven.repo.local=${CACHE_DIR} -Dmaven.test.skip=true clean install
+  # install playwright version to be used.
+  - npm install playwright@1.23.0 --save-exact
+  # Download and install packages in the CACHE_DIR.
+  # Skip execution of the tests in the pre step
+  - mvn -Dmaven.repo.local=${CACHE_DIR} -Dmaven.test.skip=true clean install
 
 post:
-- cat yaml/linux/junit_hyperexecute_autosplit_sample.yaml
+  - cat yaml/linux/junit_hyperexecute_autosplit_sample.yaml
 
 mergeArtifacts: true
 
 uploadArtefacts:
-- name: Surefire-Report
-path:
-- target/surefire-reports/**
+ - name: Surefire-Report
+   path:
+    - target/surefire-reports/**
 
 testDiscovery:
-type: raw
-mode: remote
-command: grep 'public class' src/test/java/SampleTest.java | awk '{print$3}'
+  type: raw
+  mode: remote
+  command: grep 'public class' src/test/java/SampleTest.java | awk '{print$3}'
 
 testRunnerCommand: mvn -Dplatname=linux -Dmaven.repo.local=m2_cache_dir -Dtest=$test test surefire-report:report
 
@@ -195,8 +195,8 @@ The junit-5-skill package includes:
 junit-5-skill/
 ├── SKILL.md
 └── reference/
-├── playbook.md
-└── advanced-patterns.md
+    ├── playbook.md
+    └── advanced-patterns.md
 ```
 
 It provides structured guidance for:

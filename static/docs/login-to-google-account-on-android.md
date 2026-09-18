@@ -39,9 +39,9 @@ To log in to Google Account on Real Devices [Android], and perform testing using
 Add the following HashMap structure to store the credentials:
 
 ```java
-HashMap<String, String> playstorelogin = new HashMap<>();
-playstorelogin.put("email", "EMAIL_ID@gmail.com"); //Add in your Google account ID
-playstorelogin.put("password", "GOOGLE_PASSWORD"); //Add in your Google account Password
+  HashMap<String, String> playstorelogin = new HashMap<>();
+        playstorelogin.put("email", "EMAIL_ID@gmail.com"); //Add in your Google account ID
+        playstorelogin.put("password", "GOOGLE_PASSWORD"); //Add in your Google account Password
 ```
 
 Once we have added this HashMap, we can now add the capability linking this HashMap to the capability.
@@ -67,51 +67,51 @@ import java.net.URL;
 import java.util.HashMap;
 
 public class gmailLoginCap {
+  //highlight-next-line
+    public static String userName = System.getenv("LT_USERNAME") == null ? "LT_USERNAME"  //Add LambdaTest username here
+    : System.getenv("LT_USERNAME");
 //highlight-next-line
-public static String userName = System.getenv("LT_USERNAME") == null ? "LT_USERNAME"  //Add LambdaTest username here
-: System.getenv("LT_USERNAME");
-//highlight-next-line
-public static String accessKey = System.getenv("LT_ACCESS_KEY") == null ? "LT_ACCESS_KEY" //Add LambdaTest accessKey here
-: System.getenv("LT_ACCESS_KEY");
+    public static String accessKey = System.getenv("LT_ACCESS_KEY") == null ? "LT_ACCESS_KEY" //Add LambdaTest accessKey here
+    : System.getenv("LT_ACCESS_KEY");
 
-private static AppiumDriver driver;
+    private static AppiumDriver driver;
 
-public static void main(String[] args) throws MalformedURLException, InterruptedException {
-DesiredCapabilities capabilities = new DesiredCapabilities();
+    public static void main(String[] args) throws MalformedURLException, InterruptedException {
+        DesiredCapabilities capabilities = new DesiredCapabilities();
 
-capabilities.setCapability("deviceName", "Pixel 5");
-capabilities.setCapability("platformVersion", "11");
-capabilities.setCapability("platformName", "android");
-capabilities.setCapability("isRealMobile", true);
-capabilities.setCapability("video", true);
-capabilities.setCapability("visual", true);
-capabilities.setCapability("network", false);
-capabilities.setCapability("devicelog", true);
-capabilities.setCapability("console", true);
-capabilities.setCapability("project", "labs");
-capabilities.setCapability("build", "gmailLoginCap");
-capabilities.setCapability("unicodeKeyboard", true);
-capabilities.setCapability("autoGrantPermissions", true);
-capabilities.setCapability("app", "APP_URL");               //Add in your app ID
-capabilities.setCapability("autoGrantPermissions", true);
-HashMap<String, String> playstorelogin = new HashMap<>();
-playstorelogin.put("email", "EMAIL_ID@gmail.com");          //Add in your Google account ID
-playstorelogin.put("password", "GOOGLE_PASSWORD");          //Add in your Google account Password
-capabilities.setCapability("playStoreLogin", playstorelogin);
+        capabilities.setCapability("deviceName", "Pixel 5");
+        capabilities.setCapability("platformVersion", "11");
+        capabilities.setCapability("platformName", "android");
+        capabilities.setCapability("isRealMobile", true);
+        capabilities.setCapability("video", true);
+        capabilities.setCapability("visual", true);
+        capabilities.setCapability("network", false);
+        capabilities.setCapability("devicelog", true);
+        capabilities.setCapability("console", true);
+        capabilities.setCapability("project", "labs");
+        capabilities.setCapability("build", "gmailLoginCap");
+        capabilities.setCapability("unicodeKeyboard", true);
+        capabilities.setCapability("autoGrantPermissions", true);
+        capabilities.setCapability("app", "APP_URL");               //Add in your app ID
+        capabilities.setCapability("autoGrantPermissions", true);
+        HashMap<String, String> playstorelogin = new HashMap<>();
+        playstorelogin.put("email", "EMAIL_ID@gmail.com");          //Add in your Google account ID
+        playstorelogin.put("password", "GOOGLE_PASSWORD");          //Add in your Google account Password
+        capabilities.setCapability("playStoreLogin", playstorelogin);
 
-AppiumDriver appiumDriver = new AppiumDriver(
-new URL("https://" +userName + ":" + accessKey + "@mobile-hub.lambdatest.com/wd/hub"), capabilities);
+        AppiumDriver appiumDriver = new AppiumDriver(
+                new URL("https://" +userName + ":" + accessKey + "@mobile-hub.lambdatest.com/wd/hub"), capabilities);
 
-try {
-Thread.sleep(5000);
-appiumDriver.findElementById("google").click();
-Thread.sleep(15000);
-appiumDriver.quit();
+        try {
+            Thread.sleep(5000);
+            appiumDriver.findElementById("google").click();
+            Thread.sleep(15000);
+            appiumDriver.quit();
 
-} catch (Exception e) {
-appiumDriver.quit();
-}
-}
+        } catch (Exception e) {
+            appiumDriver.quit();
+        }
+    }
 }
 ```
 

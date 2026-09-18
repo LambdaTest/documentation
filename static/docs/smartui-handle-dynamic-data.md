@@ -240,12 +240,12 @@ Use `ignoreDOM` to exclude specific elements from visual comparison. This is use
 
 ```javascript
 let options = {
-ignoreDOM: {
-id: ["element-id-1", "element-id-2"],
-class: ["class-name-1", "class-name-2"],
-cssSelector: ["selector-1", "selector-2"],
-xpath: ["xpath-1", "xpath-2"]
-}
+    ignoreDOM: {
+        id: ["element-id-1", "element-id-2"],
+        class: ["class-name-1", "class-name-2"],
+        cssSelector: ["selector-1", "selector-2"],
+        xpath: ["xpath-1", "xpath-2"]
+    }
 }
 smartuiSnapshot(driver, 'Screenshot Name', options);
 ```
@@ -261,9 +261,9 @@ let driver = await new Builder().forBrowser("chrome").build();
 await driver.get('https://example.com');
 
 let options = {
-ignoreDOM: {
-id: ["timestamp", "user-id", "session-token"]
-}
+    ignoreDOM: {
+        id: ["timestamp", "user-id", "session-token"]
+    }
 };
 await smartuiSnapshot(driver, 'Home Page', options);
 ```
@@ -289,9 +289,9 @@ SmartUISnapshot.smartuiSnapshot(driver, "Home Page", options);
 from lambdatest import smartui_snapshot
 
 options = {
-"ignoreDOM": {
-"id": ["timestamp", "user-id", "session-token"]
-}
+    "ignoreDOM": {
+        "id": ["timestamp", "user-id", "session-token"]
+    }
 }
 smartui_snapshot(driver, "Home Page", options)
 ```
@@ -299,9 +299,9 @@ smartui_snapshot(driver, "Home Page", options)
 **JavaScript (Selenium)**
 ```javascript
 let options = {
-ignoreDOM: {
-class: ["dynamic-content", "timestamp", "user-info"]
-}
+    ignoreDOM: {
+        class: ["dynamic-content", "timestamp", "user-info"]
+    }
 };
 await smartuiSnapshot(driver, 'Home Page', options);
 ```
@@ -318,23 +318,23 @@ ignoreDOM.put("class", classes);
 **Python (Selenium)**
 ```python
 options = {
-"ignoreDOM": {
-"class": ["dynamic-content", "timestamp", "user-info"]
-}
+    "ignoreDOM": {
+        "class": ["dynamic-content", "timestamp", "user-info"]
+    }
 }
 ```
 
 **JavaScript (Selenium)**
 ```javascript
 let options = {
-ignoreDOM: {
-cssSelector: [
-"#timestamp",
-".user-info",
-"[data-testid='session-token']",
-"div.dynamic-content > span"
-]
-}
+    ignoreDOM: {
+        cssSelector: [
+            "#timestamp",
+            ".user-info",
+            "[data-testid='session-token']",
+            "div.dynamic-content > span"
+        ]
+    }
 };
 await smartuiSnapshot(driver, 'Home Page', options);
 ```
@@ -351,27 +351,27 @@ ignoreDOM.put("cssSelector", selectors);
 **Python (Selenium)**
 ```python
 options = {
-"ignoreDOM": {
-"cssSelector": [
-"#timestamp",
-".user-info",
-"[data-testid='session-token']",
-"div.dynamic-content > span"
-]
-}
+    "ignoreDOM": {
+        "cssSelector": [
+            "#timestamp",
+            ".user-info",
+            "[data-testid='session-token']",
+            "div.dynamic-content > span"
+        ]
+    }
 }
 ```
 
 **JavaScript (Selenium)**
 ```javascript
 let options = {
-ignoreDOM: {
-xpath: [
-"//div[@id='timestamp']",
-"//span[@class='user-id']",
-"//*[@data-testid='session-token']"
-]
-}
+    ignoreDOM: {
+        xpath: [
+            "//div[@id='timestamp']",
+            "//span[@class='user-id']",
+            "//*[@data-testid='session-token']"
+        ]
+    }
 };
 await smartuiSnapshot(driver, 'Home Page', options);
 ```
@@ -388,13 +388,13 @@ ignoreDOM.put("xpath", xpaths);
 **Python (Selenium)**
 ```python
 options = {
-"ignoreDOM": {
-"xpath": [
-"//div[@id='timestamp']",
-"//span[@class='user-id']",
-"//*[@data-testid='session-token']"
-]
-}
+    "ignoreDOM": {
+        "xpath": [
+            "//div[@id='timestamp']",
+            "//span[@class='user-id']",
+            "//*[@data-testid='session-token']"
+        ]
+    }
 }
 ```
 
@@ -406,12 +406,12 @@ Use `selectDOM` to include only specific elements in visual comparison. This is 
 
 ```javascript
 let options = {
-selectDOM: {
-id: ["element-id-1", "element-id-2"],
-class: ["class-name-1", "class-name-2"],
-cssSelector: ["selector-1", "selector-2"],
-xpath: ["xpath-1", "xpath-2"]
-}
+    selectDOM: {
+        id: ["element-id-1", "element-id-2"],
+        class: ["class-name-1", "class-name-2"],
+        cssSelector: ["selector-1", "selector-2"],
+        xpath: ["xpath-1", "xpath-2"]
+    }
 }
 smartuiSnapshot(driver, 'Screenshot Name', options);
 ```
@@ -421,9 +421,9 @@ smartuiSnapshot(driver, 'Screenshot Name', options);
 **JavaScript (Selenium)**
 ```javascript
 let options = {
-selectDOM: {
-id: ["main-content", "header", "footer"]
-}
+    selectDOM: {
+        id: ["main-content", "header", "footer"]
+    }
 };
 await smartuiSnapshot(driver, 'Home Page', options);
 ```
@@ -444,18 +444,18 @@ options.put("selectDOM", selectDOM);
 **Python (Selenium)**
 ```python
 options = {
-"selectDOM": {
-"id": ["main-content", "header", "footer"]
-}
+    "selectDOM": {
+        "id": ["main-content", "header", "footer"]
+    }
 }
 ```
 
 **JavaScript (Selenium)**
 ```javascript
 let options = {
-selectDOM: {
-class: ["product-card", "price", "description"]
-}
+    selectDOM: {
+        class: ["product-card", "price", "description"]
+    }
 };
 await smartuiSnapshot(driver, 'Product Page', options);
 ```
@@ -472,22 +472,22 @@ selectDOM.put("class", classes);
 **Python (Selenium)**
 ```python
 options = {
-"selectDOM": {
-"class": ["product-card", "price", "description"]
-}
+    "selectDOM": {
+        "class": ["product-card", "price", "description"]
+    }
 }
 ```
 
 **JavaScript (Selenium)**
 ```javascript
 let options = {
-selectDOM: {
-cssSelector: [
-".main-content",
-"#product-grid",
-"[data-testid='product-list']"
-]
-}
+    selectDOM: {
+        cssSelector: [
+            ".main-content",
+            "#product-grid",
+            "[data-testid='product-list']"
+        ]
+    }
 };
 await smartuiSnapshot(driver, 'Product Page', options);
 ```
@@ -504,26 +504,26 @@ selectDOM.put("cssSelector", selectors);
 **Python (Selenium)**
 ```python
 options = {
-"selectDOM": {
-"cssSelector": [
-".main-content",
-"#product-grid",
-"[data-testid='product-list']"
-]
-}
+    "selectDOM": {
+        "cssSelector": [
+            ".main-content",
+            "#product-grid",
+            "[data-testid='product-list']"
+        ]
+    }
 }
 ```
 
 **JavaScript (Selenium)**
 ```javascript
 let options = {
-selectDOM: {
-xpath: [
-"//div[@class='main-content']",
-"//section[@id='product-grid']",
-"//ul[@data-testid='product-list']"
-]
-}
+    selectDOM: {
+        xpath: [
+            "//div[@class='main-content']",
+            "//section[@id='product-grid']",
+            "//ul[@data-testid='product-list']"
+        ]
+    }
 };
 await smartuiSnapshot(driver, 'Product Page', options);
 ```
@@ -540,13 +540,13 @@ selectDOM.put("xpath", xpaths);
 **Python (Selenium)**
 ```python
 options = {
-"selectDOM": {
-"xpath": [
-"//div[@class='main-content']",
-"//section[@id='product-grid']",
-"//ul[@data-testid='product-list']"
-]
-}
+    "selectDOM": {
+        "xpath": [
+            "//div[@class='main-content']",
+            "//section[@id='product-grid']",
+            "//ul[@data-testid='product-list']"
+        ]
+    }
 }
 ```
 
@@ -556,12 +556,12 @@ You can combine both `ignoreDOM` and `selectDOM` in the same options object. Whe
 
 ```javascript
 let options = {
-selectDOM: {
-cssSelector: [".main-content"]
-},
-ignoreDOM: {
-id: ["timestamp", "user-id"]
-}
+    selectDOM: {
+        cssSelector: [".main-content"]
+    },
+    ignoreDOM: {
+        id: ["timestamp", "user-id"]
+    }
 };
 await smartuiSnapshot(driver, 'Home Page', options);
 ```
@@ -576,14 +576,14 @@ await smartuiSnapshot(driver, 'Home Page', options);
 
 ```javascript
 let options = {
-ignoreDOM: {
-cssSelector: [
-".price",
-".stock-count",
-".review-count",
-"[data-testid='timestamp']"
-]
-}
+    ignoreDOM: {
+        cssSelector: [
+            ".price",
+            ".stock-count",
+            ".review-count",
+            "[data-testid='timestamp']"
+        ]
+    }
 };
 await smartuiSnapshot(driver, 'Product Page', options);
 ```
@@ -596,16 +596,16 @@ await smartuiSnapshot(driver, 'Product Page', options);
 
 ```javascript
 let options = {
-selectDOM: {
-cssSelector: [
-".dashboard-layout",
-".navigation",
-".sidebar"
-]
-},
-ignoreDOM: {
-class: ["metric-value", "timestamp", "user-info"]
-}
+    selectDOM: {
+        cssSelector: [
+            ".dashboard-layout",
+            ".navigation",
+            ".sidebar"
+        ]
+    },
+    ignoreDOM: {
+        class: ["metric-value", "timestamp", "user-info"]
+    }
 };
 await smartuiSnapshot(driver, 'Dashboard', options);
 ```
@@ -618,10 +618,10 @@ await smartuiSnapshot(driver, 'Dashboard', options);
 
 ```javascript
 let options = {
-ignoreDOM: {
-id: ["article-timestamp", "author-info"],
-class: ["related-articles", "social-share-count"]
-}
+    ignoreDOM: {
+        id: ["article-timestamp", "author-info"],
+        class: ["related-articles", "social-share-count"]
+    }
 };
 await smartuiSnapshot(driver, 'Article Page', options);
 ```
@@ -658,9 +658,9 @@ await smartuiSnapshot(driver, 'Article Page', options);
 // Wait for element before snapshot
 await driver.wait(until.elementLocated(By.id('timestamp')), 5000);
 let options = {
-ignoreDOM: {
-id: ["timestamp"]
-}
+    ignoreDOM: {
+        id: ["timestamp"]
+    }
 };
 await smartuiSnapshot(driver, 'Page', options);
 ```

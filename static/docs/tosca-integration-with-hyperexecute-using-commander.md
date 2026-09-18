@@ -115,8 +115,8 @@ post:
 
 uploadArtefacts:
 - name: Logs
-path:
-- Demo_Sample/**
+  path:
+    - Demo_Sample/**
 
 ```
 > Each machine has a Tosca commander Client installed on HyperExecute. To successfully run your tests, your Tosca licenses must be pre-configured on the machine. To do so, we use the **ToscaLicenseConfiguration.exe** along with the **connect-cloud** parameter to validate the licenses as a **pre-step** before triggering the tests. The complete command is added under **pre** in the above sample.

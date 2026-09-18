@@ -134,6 +134,10 @@ Archiving behaves like deleting everywhere it matters to the rest of the product
 This feature is not the same as the **Archived** value in a test case's **Status** field. Status is a label you set on an active test case and has no effect on where the test case appears. Archiving is a lifecycle action taken from the test case menu. Setting Status to Archived does not archive a test case.
 :::
 
+:::note
+Archiving a test case that is [shared with other projects](/support/docs/share-test-cases-across-projects/) does not unshare it. It can't be added to new test runs in any of those projects, and existing test runs keep their results. See [how archiving affects shared test cases](/support/docs/share-test-cases-across-projects/#archive).
+:::
+
 ---
 
 ## Permissions
@@ -293,6 +297,7 @@ To include an archived test case in a new run, unarchive it first.
 | Tracking changes to a test case over time | [Test Case Versioning](/support/docs/test-case-versioning/) |
 | Removing duplicate test cases permanently | [Find and Remove Duplicate Test Cases](/support/docs/test-case-deduplication/) |
 | Reorganizing test cases across folders and projects | [Copy and Move Test Cases](/support/docs/copy-and-move-support-for-test-cases/) |
+| Using one test case in several projects | [Share Test Cases Across Projects](/support/docs/share-test-cases-across-projects/) |
 | Building and running test runs | [Test Run Creation and Management](/support/docs/test-run-creation-and-management/) |
 | Coverage and execution metrics | [Insights Dashboard](/support/docs/insights-dashboard/) |
 

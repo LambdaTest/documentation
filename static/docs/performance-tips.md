@@ -93,9 +93,9 @@ If a test exits without calling `driver.quit()`, the session stays open until th
 ```java
 @AfterMethod
 public void tearDown() {
-if (driver != null) {
-driver.quit();
-}
+    if (driver != null) {
+        driver.quit();
+    }
 }
 ```
 

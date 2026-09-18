@@ -28,13 +28,13 @@ everything else automatically:
 
 ```typescript
 const session = await client.sessions.create({
-adapter: 'puppeteer',
-stealthConfig: {
-humanizeInteractions: true,
-randomizeUserAgent: true,
-randomizeViewport: true,
-},
-lambdatestOptions: { ... }
+    adapter: 'puppeteer',
+    stealthConfig: {
+        humanizeInteractions: true,
+        randomizeUserAgent: true,
+        randomizeViewport: true,
+    },
+    lambdatestOptions: { ... }
 });
 ```
 
@@ -120,13 +120,13 @@ don't use bot detection):
 
 ```typescript
 const session = await client.sessions.create({
-adapter: 'puppeteer',
-stealthConfig: {
-skipFingerprintInjection: true,
-randomizeUserAgent: false,
-randomizeViewport: false,
-},
-lambdatestOptions: { ... }
+    adapter: 'puppeteer',
+    stealthConfig: {
+        skipFingerprintInjection: true,
+        randomizeUserAgent: false,
+        randomizeViewport: false,
+    },
+    lambdatestOptions: { ... }
 });
 ```
 
@@ -143,25 +143,25 @@ OFF shows red failures.
 
 ```
 Session Creation
-│
-├─ stealthConfig present?
-│   ├─ Yes → pick random UA, store on session.userAgent
-│   └─ No  → skip
-│
-▼
+    │
+    ├─ stealthConfig present?
+    │   ├─ Yes → pick random UA, store on session.userAgent
+    │   └─ No  → skip
+    │
+    ▼
 Adapter.connect()
-│
-├─ Puppeteer:
-│   ├─ skipFingerprintInjection? → raw puppeteer.connect()
-│   └─ else → puppeteerExtra.connect() with stealth plugin
-│       ├─ Set random UA via page.setUserAgent()
-│       ├─ Set random viewport via page.setViewport()
-│       └─ Humanize: monkey-patch click/type
-│
-└─ Playwright:
-├─ Inject stealth scripts via page.addInitScript()
-├─ Auto-apply to new pages via context.on('page')
-├─ Set random UA via page.evaluate()
-├─ Set random viewport via page.setViewportSize()
-└─ Humanize: monkey-patch click/type/fill
+    │
+    ├─ Puppeteer:
+    │   ├─ skipFingerprintInjection? → raw puppeteer.connect()
+    │   └─ else → puppeteerExtra.connect() with stealth plugin
+    │       ├─ Set random UA via page.setUserAgent()
+    │       ├─ Set random viewport via page.setViewport()
+    │       └─ Humanize: monkey-patch click/type
+    │
+    └─ Playwright:
+        ├─ Inject stealth scripts via page.addInitScript()
+        ├─ Auto-apply to new pages via context.on('page')
+        ├─ Set random UA via page.evaluate()
+        ├─ Set random viewport via page.setViewportSize()
+        └─ Humanize: monkey-patch click/type/fill
 ```

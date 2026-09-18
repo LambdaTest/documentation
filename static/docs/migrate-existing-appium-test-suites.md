@@ -34,12 +34,12 @@ Let’s say you want to run an app test in Python on SAMSUNG GALAXY TAB S4 runni
 ```python
 caps = [
 
-{
-"deviceName": "Galaxy Tab S4",
-"platformName": "Android",
-"platformVersion": "10",
-"build": "Demo",
-},
+    {
+        "deviceName": "Galaxy Tab S4",
+        "platformName": "Android",
+        "platformVersion": "10",
+        "build": "Demo",
+    },
 ]
 ```
 
@@ -55,13 +55,13 @@ Pass the capabilities to `@hub.lambdatest.com/wd/hub` with your TestMu AI authen
 import ssl
 
 try:
-_create_unverified_https_context = ssl._create_unverified_context
+    _create_unverified_https_context = ssl._create_unverified_context
 except AttributeError:
-# Legacy Python that doesn't verify HTTPS certificates by default
-pass
+    # Legacy Python that doesn't verify HTTPS certificates by default
+    pass
 else:
-# Handle target environment that doesn't support HTTPS verification
-ssl._create_default_https_context = _create_unverified_https_context
+    # Handle target environment that doesn't support HTTPS verification
+    ssl._create_default_https_context = _create_unverified_https_context
 
 from threading import Thread
 import time
@@ -77,51 +77,51 @@ from appium import webdriver
 # This array 'caps' defines the capabilities of the browser, device, and OS combinations where the test will run
 caps = [
 
-{
-"deviceName": "Galaxy Tab S4",
-"platformName": "Android",
-"platformVersion": "10",
-"app": "lt://APP10051525539885437397",
-"isRealMobile": True,
-"deviceOrientation": "PORTRAIT",
-"visual": True,
-"console": True,
-"build": "Demo",
-},
+    {
+        "deviceName": "Galaxy Tab S4",
+        "platformName": "Android",
+        "platformVersion": "10",
+        "app": "lt://APP10051525539885437397",
+        "isRealMobile": True,
+        "deviceOrientation": "PORTRAIT",
+        "visual": True,
+        "console": True,
+        "build": "Demo",
+           },
 ]
 # run_session function searches for 'lambdatest' on google.com
 
 def run_session(desired_cap):
-driver = webdriver.Remote(
-# hub.mobile-dev-1.dev.lambdatest.io/wd/hub",
-command_executor="https://LT_USERNAME:LT_ACCESS_KEY@mobile-hub.lambdatest.com/wd/hub",
-desired_capabilities=desired_cap)
+    driver = webdriver.Remote(
+        # hub.mobile-dev-1.dev.lambdatest.io/wd/hub",
+        command_executor="https://LT_USERNAME:LT_ACCESS_KEY@mobile-hub.lambdatest.com/wd/hub",
+        desired_capabilities=desired_cap)
 
-# driver.get("https://www.ifconfig.me")
-# time.sleep(10)
-# Test case for the lambdatest sample Android app.
+    # driver.get("https://www.ifconfig.me")
+    # time.sleep(10)
+    # Test case for the lambdatest sample Android app.
 # If you have uploaded your app, update the test case here.
-search_element = WebDriverWait(driver, 30).until(
-EC.element_to_be_clickable(
-(MobileBy.ACCESSIBILITY_ID, "Search Wikipedia"))
-)
-search_element.click()
-search_input = WebDriverWait(driver, 30).until(
-EC.element_to_be_clickable(
-(MobileBy.ID, "org.wikipedia.alpha:id/search_src_text"))
-)
-search_input.send_keys("lambdatest")
-time.sleep(5)
-search_results = driver.find_elements_by_class_name(
-"android.widget.TextView")
-assert(len(search_results) > 0)
+    search_element = WebDriverWait(driver, 30).until(
+        EC.element_to_be_clickable(
+            (MobileBy.ACCESSIBILITY_ID, "Search Wikipedia"))
+    )
+    search_element.click()
+    search_input = WebDriverWait(driver, 30).until(
+        EC.element_to_be_clickable(
+            (MobileBy.ID, "org.wikipedia.alpha:id/search_src_text"))
+    )
+    search_input.send_keys("lambdatest")
+    time.sleep(5)
+    search_results = driver.find_elements_by_class_name(
+        "android.widget.TextView")
+    assert(len(search_results) > 0)
 
 # Invoke driver.quit() after the test is done to indicate that the test is completed.
-driver.quit()
+    driver.quit()
 
 # The Thread function takes run_session function and each set of capability from the caps array as an argument to run each session in parallel
 for cap in caps:
-Thread(target=run_session, args=(cap,)).start()
+    Thread(target=run_session, args=(cap,)).start()
 
 ```
 

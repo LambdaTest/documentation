@@ -20,7 +20,7 @@ Every session passes through a simple set of states during its lifetime:
 
 ```
 create() ──→ live ──→ released
-└──→ failed
+                 └──→ failed
 ```
 
 **Live.** The session has been created and is ready for connections. Your agent
@@ -44,9 +44,9 @@ You can adjust the timeout when creating a session:
 
 ```typescript
 const session = await client.sessions.create({
-adapter: 'puppeteer',
-timeout: 600000,  // 10 minutes
-lambdatestOptions: { ... }
+    adapter: 'puppeteer',
+    timeout: 600000,  // 10 minutes
+    lambdatestOptions: { ... }
 });
 ```
 
@@ -105,11 +105,11 @@ exist as a safety net, not as your primary cleanup mechanism:
 ```typescript
 const session = await client.sessions.create({ ... });
 try {
-const browser = await client.puppeteer.connect(session);
-// ... your agent's work ...
-await browser.close();
+    const browser = await client.puppeteer.connect(session);
+    // ... your agent's work ...
+    await browser.close();
 } finally {
-await client.sessions.release(session.id);
+    await client.sessions.release(session.id);
 }
 ```
 
@@ -118,7 +118,7 @@ you want to make sure no sessions are left running:
 
 ```typescript
 process.on('SIGINT', async () => {
-await client.sessions.releaseAll();
-process.exit(0);
+    await client.sessions.releaseAll();
+    process.exit(0);
 });
 ```

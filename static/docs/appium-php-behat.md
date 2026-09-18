@@ -115,50 +115,50 @@ An automation script for the sample application given above has been provided he
 require "vendor/autoload.php";
 
 class FeatureContext extends LambdaContext {
-/**
-* @Given I am on the proverbial home page
-*/
-public function iAmOnTheProverbialHomePage()
-{
-echo "I am on the proverbial home page";
+    /**
+     * @Given I am on the proverbial home page
+     */
+    public function iAmOnTheProverbialHomePage()
+    {
+      echo "I am on the proverbial home page";
 
-}
+    }
 
-/**
-* @When I click on color
-*/
-public function iClickOnColor()
-{
-$element = self::$driver->findElement(WebDriverBy::id("color"));
-$element->click();
-}
+    /**
+     * @When I click on color
+     */
+    public function iClickOnColor()
+    {
+      $element = self::$driver->findElement(WebDriverBy::id("color"));
+      $element->click();
+    }
 
-/**
-* @When I click on text element
-*/
-public function iClickOnTextElement()
-{
-$element = self::$driver->findElement(WebDriverBy::id("Text"));
-$element->click();
-}
+    /**
+     * @When I click on text element
+     */
+    public function iClickOnTextElement()
+    {
+      $element = self::$driver->findElement(WebDriverBy::id("Text"));
+      $element->click();
+    }
 
-/**
-* @When I click on notification element
-*/
-public function iClickOnNotificationElement()
-{
-$element = self::$driver->findElement(WebDriverBy::id("notification"));
-$element->click();
-}
+    /**
+     * @When I click on notification element
+     */
+    public function iClickOnNotificationElement()
+    {
+      $element = self::$driver->findElement(WebDriverBy::id("notification"));
+      $element->click();
+    }
 
-/**
-* @Then I click on toast element
-*/
-public function iClickOnToastElement()
-{
-$element = self::$driver->findElement(WebDriverBy::id("toast"));
-$element->click();
-}
+    /**
+     * @Then I click on toast element
+     */
+    public function iClickOnToastElement()
+    {
+      $element = self::$driver->findElement(WebDriverBy::id("toast"));
+      $element->click();
+    }
 }
 ```
 
@@ -171,31 +171,31 @@ Ensure to update the `APP_URL`, `username` and `accessKey` in the code scripts b
 ```php title="iossingle.conf.yml"
 user: "YOUR USERNAME HERE"       #Add LambdaTest username here
 key: "YOUR ACCESS KEY HERE"      #Add LambdaTest accessKey here
-capabilities:
-build: "behat-appium-ios"
-name: "single-behat-test"
-isRealMobile: true
-app: "lt://proverbial-ios"    #Add app url here
-environments:
--
-deviceName: iPhone 11
-platform: ios
-platformVersion: 14
+    capabilities:
+        build: "behat-appium-ios"
+        name: "single-behat-test"
+        isRealMobile: true
+        app: "lt://proverbial-ios"    #Add app url here
+    environments:
+        -
+        deviceName: iPhone 11
+        platform: ios
+        platformVersion: 14
 ```
 
 ```php title="androidsingle.conf.yml"
 user: "YOUR USERNAME HERE"       #Add LambdaTest username here
 key: "YOUR ACCESS KEY HERE"      #Add LambdaTest accessKey here
-capabilities:
-build: "behat-appium-android"
-name: "single-behat-test"
-isRealMobile: true
-app: "lt://proverbial-android"   #Add your app url here
-environments:
--
-deviceName: Galaxy S21 Ultra 5G
-platform: Android
-platformVersion: 11
+    capabilities:
+        build: "behat-appium-android"
+        name: "single-behat-test"
+        isRealMobile: true
+        app: "lt://proverbial-android"   #Add your app url here
+    environments:
+        -
+        deviceName: Galaxy S21 Ultra 5G
+        platform: Android
+        platformVersion: 11
 ```
 
 - You must add the generated **APP_URL** to the `app` capability in the config file.
@@ -228,8 +228,8 @@ The behat-skill package includes:
 behat-skill/
 ├── SKILL.md
 └── reference/
-├── playbook.md
-└── advanced-patterns.md
+    ├── playbook.md
+    └── advanced-patterns.md
 ```
 
 It provides structured guidance for:

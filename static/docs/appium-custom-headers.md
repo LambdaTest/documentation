@@ -17,7 +17,7 @@ To add custom headers using TestMu AI's CustomHeader capability, you need to use
 ```java
 DesiredCapabilities capabilities = new DesiredCapabilities();
 capabilities.setCapability("customHeaders", new HashMap<String, String>() {{
-put("headerName", "headerValue");
+    put("headerName", "headerValue");
 }});
 ```
 

@@ -32,12 +32,12 @@ autosplit: true
 concurrency: 2
 
 pre:
-- mvn dependency:resolve
+  - mvn dependency:resolve
 
 testDiscovery:
-type: raw
-mode: static
-command: grep 'test name' xml/testng_linux.xml | awk '{print$2}' | sed 's/name=//g' | sed 's/>//g'
+  type: raw
+  mode: static
+  command: grep 'test name' xml/testng_linux.xml | awk '{print$2}' | sed 's/name=//g' | sed 's/>//g'
 
 testRunnerCommand: mvn test -Dplatname=linux -Dmaven.repo.local=./.m2 dependency:resolve -DselectedTests=$test
 

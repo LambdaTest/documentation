@@ -79,17 +79,17 @@ npm install -g selenium-side-runner
 
 ```bash
 capabilities = {
-"platform" : "Windows 10",
-"browserName" : "Chrome",
-"version" : "72.0"
-}
+                "platform" : "Windows 10",
+                "browserName" : "Chrome",
+                "version" : "72.0"
+        }
 ```
 
 In the string format, it will be represented as:
 
 ```bash
-**"browserName='chrome' version='72.0' platform='Windows 10'"**
-```
+ **"browserName='chrome' version='72.0' platform='Windows 10'"**
+ ```
 
 * Get the Grid URL for executing tests on TestMu AI. Get your username and access key from your TestMu AI's Profile section (as shown in the prerequisites), and replace it in the below URL.
 

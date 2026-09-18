@@ -131,21 +131,21 @@ browserOptions.setCapability("LT:Options", ltOptions);
 
 ```javascript
 'LT:Options': {
-user: process.env.LT_USERNAME,
-accessKey: process.env.LT_ACCESS_KEY,
-visual: true,
-'smartUI.project': 'Your_Project_Name',
-'smartUI.ignoreType': ['layout'], // applies to every screenshot
+  user: process.env.LT_USERNAME,
+  accessKey: process.env.LT_ACCESS_KEY,
+  visual: true,
+  'smartUI.project': 'Your_Project_Name',
+  'smartUI.ignoreType': ['layout'], // applies to every screenshot
 },
 ```
 
 ```python
 lt_options = {
-"username": os.getenv("LT_USERNAME"),
-"accessKey": os.getenv("LT_ACCESS_KEY"),
-"visual": True,
-"smartUI.project": "Your_Project_Name",
-"smartUI.ignoreType": ["layout"],  # applies to every screenshot
+    "username": os.getenv("LT_USERNAME"),
+    "accessKey": os.getenv("LT_ACCESS_KEY"),
+    "visual": True,
+    "smartUI.project": "Your_Project_Name",
+    "smartUI.ignoreType": ["layout"],  # applies to every screenshot
 }
 options.set_capability("LT:Options", lt_options)
 ```
@@ -176,15 +176,15 @@ ltOptions.put("smartUI.smartIgnore", true); // applies to every screenshot
 
 ```javascript
 'LT:Options': {
-'smartUI.project': 'Your_Project_Name',
-'smartUI.smartIgnore': true, // applies to every screenshot
+  'smartUI.project': 'Your_Project_Name',
+  'smartUI.smartIgnore': true, // applies to every screenshot
 },
 ```
 
 ```python
 lt_options = {
-"smartUI.project": "Your_Project_Name",
-"smartUI.smartIgnore": True,  # applies to every screenshot
+    "smartUI.project": "Your_Project_Name",
+    "smartUI.smartIgnore": True,  # applies to every screenshot
 }
 ```
 

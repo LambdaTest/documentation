@@ -99,24 +99,24 @@ maxRetries: 1
 concurrency: 1
 
 env:
-TARGET_OS: "LINUX"
+  TARGET_OS: "LINUX"
 
 cacheKey: '{{ checksum "requirement.txt" }}'
 cacheDirectories:
-- CacheDir
+  - CacheDir
 
 pre:
-- npm install playwright --save-exact
-- pip install -r requirement.txt --cache-dir CacheDir
-- playwright install
+  - npm install playwright --save-exact
+  - pip install -r requirement.txt --cache-dir CacheDir
+  - playwright install
 
 post:
-- cat yaml/linux/.hyperexecute_autosplits.yaml
+  - cat yaml/linux/.hyperexecute_autosplits.yaml
 
 testDiscovery:
-type: raw
-mode: remote
-command: grep -lr 'def' *.py
+  type: raw
+  mode: remote
+  command: grep -lr 'def' *.py
 
 testRunnerCommand: pytest $test
 
@@ -184,8 +184,8 @@ The pytest-skill package includes:
 pytest-skill/
 ├── SKILL.md
 └── reference/
-├── playbook.md
-└── advanced-patterns.md
+    ├── playbook.md
+    └── advanced-patterns.md
 ```
 
 It provides structured guidance for:

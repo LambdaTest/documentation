@@ -38,18 +38,18 @@ Update your **APP_ID**, **YOUR_LAMBDATEST_USERNAME**, and **YOUR_LAMBDATEST_ACCE
 
 ```bash title="Sample code for capabilities"
 {
-"platformName": "android",
-"deviceName": "Galaxy s21 5G",
-"lt:options": {
-"w3c": true,
-"platformName": "android",
-"deviceName": "Galaxy s21 5G",
-"platformVersion": "12",
-"isRealMobile": true,
-"app":"<APP_ID>",
-"user":"<YOUR_LAMBDATEST_USERNAME>",
-"accessKey":"<YOUR_LAMBDATEST_ACCESS_KEY>"
-}
+    "platformName": "android",
+		"deviceName": "Galaxy s21 5G",
+	"lt:options": {
+		"w3c": true,
+		"platformName": "android",
+		"deviceName": "Galaxy s21 5G",
+		"platformVersion": "12",
+		"isRealMobile": true,
+                 "app":"<APP_ID>",
+                 "user":"<YOUR_LAMBDATEST_USERNAME>",
+                 "accessKey":"<YOUR_LAMBDATEST_ACCESS_KEY>"
+	}
 }
 ```
 

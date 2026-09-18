@@ -48,24 +48,24 @@ Below is a sample of CircleCI YAML created for your reference:
 ```bash
 version: 2.1
 jobs:
-test-java:
-docker:
-- image: cimg/openjdk:17.0
-steps:
-- checkout
-- run:
-name: "Download HE CLI"
-command: wget https://downloads.lambdatest.com/hyperexecute/linux/hyperexecute
-- run:
-name: "Permissions"
-command: chmod u+x hyperexecute
-- run:
-name: "Runner Command"
-command: ./hyperexecute --config yaml/autosplit_linux.yaml
+  test-java:
+    docker:
+      - image: cimg/openjdk:17.0
+    steps:
+      - checkout
+      - run:
+          name: "Download HE CLI"
+          command: wget https://downloads.lambdatest.com/hyperexecute/linux/hyperexecute
+      - run:
+          name: "Permissions"
+          command: chmod u+x hyperexecute
+      - run:
+          name: "Runner Command"
+          command: ./hyperexecute --config yaml/autosplit_linux.yaml
 workflows:
-build-and-test:
-jobs:
-- test-java
+  build-and-test:
+    jobs:
+      - test-java
 ```
 
 - Click the blue **Set Up Project** button.

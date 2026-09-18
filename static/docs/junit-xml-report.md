@@ -16,9 +16,9 @@ In your HyperExecute YAML configuration, define the [report](/support/docs/deep-
 ```yaml
 report: true
 partialReports:
-frameworkName: junit
-location: reports/
-type: xml
+    frameworkName: junit
+    location: reports/
+    type: xml
 ```
 
 ### Step 3: Execute Your Tests

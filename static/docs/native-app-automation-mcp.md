@@ -47,8 +47,8 @@ Most clients handle this for you: your AI client will either ask you to confirm 
 
 ```json
 {
-"testId": "RMAA-IOS-585984-1767376885020815122FLT",
-"platform": "app"
+  "testId": "RMAA-IOS-585984-1767376885020815122FLT",
+  "platform": "app"
 }
 ```
 
@@ -104,19 +104,19 @@ The standard configuration works in most MCP clients. Add the following to your 
 
 ```json
 {
-"mcpServers": {
-"appium-mcp": {
-"disabled": false,
-"timeout": 100,
-"type": "stdio",
-"command": "npx",
-"args": ["appium-mcp@latest"],
-"env": {
-"ANDROID_HOME": "/path/to/android/sdk",
-"CAPABILITIES_CONFIG": "/path/to/your/capabilities.json"
-}
-}
-}
+  "mcpServers": {
+    "appium-mcp": {
+      "disabled": false,
+      "timeout": 100,
+      "type": "stdio",
+      "command": "npx",
+      "args": ["appium-mcp@latest"],
+      "env": {
+        "ANDROID_HOME": "/path/to/android/sdk",
+        "CAPABILITIES_CONFIG": "/path/to/your/capabilities.json"
+      }
+    }
+  }
 }
 ```
 
@@ -140,20 +140,20 @@ Create a `capabilities.json` file to define per-platform device capabilities, an
 
 ```json
 {
-"android": {
-"appium:app": "/path/to/your/android/app.apk",
-"appium:deviceName": "Android Device",
-"appium:platformVersion": "11.0",
-"appium:automationName": "UiAutomator2",
-"appium:udid": "your-device-udid"
-},
-"ios": {
-"appium:app": "/path/to/your/ios/app.ipa",
-"appium:deviceName": "iPhone 15 Pro",
-"appium:platformVersion": "17.0",
-"appium:automationName": "XCUITest",
-"appium:udid": "your-device-udid"
-}
+  "android": {
+    "appium:app": "/path/to/your/android/app.apk",
+    "appium:deviceName": "Android Device",
+    "appium:platformVersion": "11.0",
+    "appium:automationName": "UiAutomator2",
+    "appium:udid": "your-device-udid"
+  },
+  "ios": {
+    "appium:app": "/path/to/your/ios/app.ipa",
+    "appium:deviceName": "iPhone 15 Pro",
+    "appium:platformVersion": "17.0",
+    "appium:automationName": "XCUITest",
+    "appium:udid": "your-device-udid"
+  }
 }
 ```
 
@@ -223,14 +223,14 @@ Also confirm that the authenticated MCP user actually has access to that TestID.
 
 ```json
 {
-"mcp-lambdatest": {
-"autoApprove": [],
-"disabled": false,
-"timeout": 120,
-"command": "npx",
-"args": ["mcp-remote@latest", "https://mcp.lambdatest.com/mcp"],
-"alwaysAllow": []
-}
+  "mcp-lambdatest": {
+    "autoApprove": [],
+    "disabled": false,
+    "timeout": 120,
+    "command": "npx",
+    "args": ["mcp-remote@latest", "https://mcp.lambdatest.com/mcp"],
+    "alwaysAllow": []
+  }
 }
 ```
 

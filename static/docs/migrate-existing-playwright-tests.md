@@ -31,21 +31,21 @@ const { chromium } = require('playwright')
 const { expect } = require('@playwright/test');
 
 (async () => {
-const browser = await chromium.launch({
-headless: false
-});
+  const browser = await chromium.launch({
+    headless: false
+  });
 
-const page = await browser.newPage()
-await page.goto('https://www.bing.com')
-const element = await page.$('[aria-label="Enter your search term"]')
-await element.click()
-await element.type('LambdaTest')
-await element.press('Enter')
-const title = await page.title()
+  const page = await browser.newPage()
+  await page.goto('https://www.bing.com')
+  const element = await page.$('[aria-label="Enter your search term"]')
+  await element.click()
+  await element.type('LambdaTest')
+  await element.press('Enter')
+  const title = await page.title()
 
-expect(title).toEqual('LambdaTest - Search')
+  expect(title).toEqual('LambdaTest - Search')
 
-await browser.close()
+  await browser.close()
 })()
 ```
 
@@ -58,25 +58,25 @@ const { chromium } = require('playwright')
 const { expect } = require('@playwright/test');
 
 (async () => {
-const capabilities = {
-'browserName': 'Chrome', // Browsers allowed: `Chrome`, `MicrosoftEdge`, `pw-chromium`, `pw-firefox` and `pw-webkit`
-'browserVersion': 'latest',
-'LT:Options': {
-'platform': 'Windows 10',
-'build': 'Playwright Sample Build',
-'name': 'Playwright Sample Test',
-'user': process.env.LT_USERNAME,
-'accessKey': process.env.LT_ACCESS_KEY,
-}
-}
+  const capabilities = {
+    'browserName': 'Chrome', // Browsers allowed: `Chrome`, `MicrosoftEdge`, `pw-chromium`, `pw-firefox` and `pw-webkit`
+    'browserVersion': 'latest',
+    'LT:Options': {
+      'platform': 'Windows 10',
+      'build': 'Playwright Sample Build',
+      'name': 'Playwright Sample Test',
+      'user': process.env.LT_USERNAME,
+      'accessKey': process.env.LT_ACCESS_KEY,
+    }
+  }
 
-const browser = await chromium.connect({
-wsEndpoint: `wss://cdp.lambdatest.com/playwright?capabilities=${encodeURIComponent(JSON.stringify(capabilities))}`
-})
+  const browser = await chromium.connect({
+    wsEndpoint: `wss://cdp.lambdatest.com/playwright?capabilities=${encodeURIComponent(JSON.stringify(capabilities))}`
+  })
 
-// Test code ...
+  // Test code ...
 
-await browser.close()
+  await browser.close()
 })()
 ```
 

@@ -35,11 +35,11 @@ Upload your `.vcf` file using the Upload Media API.
 
 ```json
 {
-"media_url": "lt://MEDIAvcf_abc123def456",
-"name": "contacts.vcf",
-"status": "success",
-"custom_id": "my-contacts",
-"contact_count": 12
+  "media_url": "lt://MEDIAvcf_abc123def456",
+  "name": "contacts.vcf",
+  "status": "success",
+  "custom_id": "my-contacts",
+  "contact_count": 12
 }
 ```
 
@@ -51,7 +51,7 @@ Once the contacts are uploaded to TestMu AI's cloud, set the **uploadMedia** cap
 
 ```python
 desired_capabilities = {
-"uploadMedia": ["lt://MEDIAf446d4170cd946aa9ec307d10cb679b9", "lt://MEDIA8d13e569b3e140c18e82b066022518bd"]
+  "uploadMedia": ["lt://MEDIAf446d4170cd946aa9ec307d10cb679b9", "lt://MEDIA8d13e569b3e140c18e82b066022518bd"]
 }
 ```
 

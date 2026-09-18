@@ -60,18 +60,18 @@ Pass installer options after `bash -s --`:
 ```bash
 # Pin the release verified for this guide.
 curl -fsSL https://raw.githubusercontent.com/LambdaTest/rook/main/install.sh \
-| bash -s -- --version 0.1.3
+  | bash -s -- --version 0.1.3
 
 # Link the executable into another writable directory.
 curl -fsSL https://raw.githubusercontent.com/LambdaTest/rook/main/install.sh \
-| bash -s -- --dir "$HOME/bin"
+  | bash -s -- --dir "$HOME/bin"
 ```
 
 Run the installer with `--help` to list its supported options:
 
 ```bash
 curl -fsSL https://raw.githubusercontent.com/LambdaTest/rook/main/install.sh \
-| bash -s -- --help
+  | bash -s -- --help
 ```
 
 The public installer uses `--version` and `--dir` flags and does not require GitHub authentication.
@@ -98,8 +98,8 @@ The 0.1.3 release fixes the npm update path. If an older install cannot update n
 
 ```bash
 npm install -g @testmuai/rook@0.1.3 \
---registry=https://registry.npmjs.org \
---@testmuai:registry=https://registry.npmjs.org
+  --registry=https://registry.npmjs.org \
+  --@testmuai:registry=https://registry.npmjs.org
 ```
 
 Then run command -v rook and rook --version to make sure another installation is not shadowing it.

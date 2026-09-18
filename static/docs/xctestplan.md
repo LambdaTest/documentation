@@ -42,32 +42,32 @@ Upload your iOS test suite (.ipa) file to TestMu AI servers using our REST API. 
 
 ```js title="testLaunch.xctestplan"
 {
-"configurations" : [
-{
-"id" : "1D354D3E-7B86-4201-A441-6D23AF535802",
-"name" : "Configuration 1",
-"options" : {
-}
-}
-],
-"defaultOptions" : {
-},
-"testTargets" : [
-{
-// highlight-next-line
-"skippedTests" : [
-// highlight-next-line
-"LambdaUiKitIOSUITests\/testverifyAppLaunch()"
-// highlight-next-line
-],
-"target" : {
-"containerPath" : "container:LambdaUiKitIOS.xcodeproj",
-"identifier" : "84946A3027745AFD000E2562",
-"name" : "LambdaUiKitIOSUITests"
-}
-}
-],
-"version" : 1
+  "configurations" : [
+    {
+      "id" : "1D354D3E-7B86-4201-A441-6D23AF535802",
+      "name" : "Configuration 1",
+      "options" : {
+      }
+    }
+  ],
+  "defaultOptions" : {
+  },
+  "testTargets" : [
+    {
+      // highlight-next-line
+      "skippedTests" : [
+        // highlight-next-line
+        "LambdaUiKitIOSUITests\/testverifyAppLaunch()"
+        // highlight-next-line
+      ],
+      "target" : {
+        "containerPath" : "container:LambdaUiKitIOS.xcodeproj",
+        "identifier" : "84946A3027745AFD000E2562",
+        "name" : "LambdaUiKitIOSUITests"
+      }
+    }
+  ],
+  "version" : 1
 }
 ```
 
@@ -99,16 +99,16 @@ curl --location --request POST 'https://mobile-api.lambdatest.com/framework/v1/x
 --header 'Authorization: Basic BASIC_AUTH_TOKEN' \
 --header 'Content-Type: application/json' \
 --data-raw '{
-"app" : "lt://APP_ID",
-"testSuite": "lt://TEST_SUITE_ID",
-"xctestplan" : "lt://YOUR_XC_TEST_PLAN_ID" #only when you want to use XCTestPlan
-"device" :  ["iPhone 11-14"],
-"video" : true,
-"queueTimeout": 10800,
-"idleTimeout": 150,
-"devicelog": true,
-"network": false,
-"build" : "Proverbial-XCUITest"
+  "app" : "lt://APP_ID",
+  "testSuite": "lt://TEST_SUITE_ID",
+  "xctestplan" : "lt://YOUR_XC_TEST_PLAN_ID" #only when you want to use XCTestPlan
+  "device" :  ["iPhone 11-14"],
+  "video" : true,
+  "queueTimeout": 10800,
+  "idleTimeout": 150,
+  "devicelog": true,
+  "network": false,
+  "build" : "Proverbial-XCUITest"
 }'
 ```
 
@@ -117,16 +117,16 @@ curl --location --request POST "https://mobile-api.lambdatest.com/framework/v1/x
 --header "Authorization: Basic BASIC_AUTH_TOKEN" \
 --header "Content-Type: application/json" \
 --data-raw "{
-"app" : "lt://APP_ID",
-"testSuite": "lt://TEST_SUITE_ID",
-"xctestplan" : "lt://YOUR_XC_TEST_PLAN_ID" #only when you want to use XCTestPlan
-"device" :  ["iPhone 11-14"],
-"video" : true,
-"queueTimeout": 10800,
-"idleTimeout": 150,
-"devicelog": true,
-"network": false,
-"build" : "Proverbial-XCUITest"
+  "app" : "lt://APP_ID",
+  "testSuite": "lt://TEST_SUITE_ID",
+  "xctestplan" : "lt://YOUR_XC_TEST_PLAN_ID" #only when you want to use XCTestPlan
+  "device" :  ["iPhone 11-14"],
+  "video" : true,
+  "queueTimeout": 10800,
+  "idleTimeout": 150,
+  "devicelog": true,
+  "network": false,
+  "build" : "Proverbial-XCUITest"
 }"
 ```
 

@@ -83,14 +83,14 @@ set LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 import XCTest
 import SmartuiXcui // importing the package
 final class MyAppUITests: XCTestCase {
-func testExample() throws {
-// launch application
-let app = XCUIApplication()
-app.launch()
-// take screenshot
-let ltApp = LTApp()
-try ltApp.screenshot(name: "screenshotName")
-}
+  func testExample() throws {
+      // launch application
+      let app = XCUIApplication()
+      app.launch()
+      // take screenshot
+      let ltApp = LTApp()
+      try ltApp.screenshot(name: "screenshotName")
+  }
 }
 ```
 
@@ -140,19 +140,19 @@ curl --location 'https://mobile-api.lambdatest.com/framework/v1/xcui/build' \
 --header 'Authorization: Basic BASIC_AUTH_TOKEN' \
 --header 'Content-Type: application/json' \
 --data '{
-"app" : "APP_ID", //enter your app-id
-"testSuite": "TEST_SUITE_ID", //enter your test-suite id
-"device" :  ["iPhone 13-16"], //enter your device names
-"smartUI.project": "XCUI-SmartUI-Project",
-"build" : "Proverbial-XCUITest",
-"video" : true,
-"queueTimeout": 10800,
-"idleTimeout": 150,
-"devicelog": true,
-"network": false,
-"only-testing" : ["LambdaUiKitIOSUITestsLaunchTests"],
-"smartUI.cropStatusBar" : true,
-"smartUI.cropNavigationBar" : true
+    "app" : "APP_ID", //enter your app-id
+    "testSuite": "TEST_SUITE_ID", //enter your test-suite id
+    "device" :  ["iPhone 13-16"], //enter your device names
+    "smartUI.project": "XCUI-SmartUI-Project",
+    "build" : "Proverbial-XCUITest",
+    "video" : true,
+    "queueTimeout": 10800,
+    "idleTimeout": 150,
+    "devicelog": true,
+    "network": false,
+    "only-testing" : ["LambdaUiKitIOSUITestsLaunchTests"],
+    "smartUI.cropStatusBar" : true,
+    "smartUI.cropNavigationBar" : true
 }'
 ```
 
@@ -180,39 +180,39 @@ retryOnFailure: true
 globalTimeout: 180    #MAXQUEUETIMEOUT
 
 framework:
-name: "ios/xcui"
-args:
-buildName: "XCUIT"
-video: true
-networkLog: true
-deviceLog: true
+  name: "ios/xcui"
+  args:
+    buildName: "XCUIT"
+    video: true
+    networkLog: true
+    deviceLog: true
 
-# You can use either the appId (APP1234567) or provide the path of the application using appPath.
+    # You can use either the appId (APP1234567) or provide the path of the application using appPath.
 
-#highlight-next-line
-appPath: LambdaUiKitIOS.ipa
-# We have used the appPath here instead of appId
+    #highlight-next-line
+    appPath: LambdaUiKitIOS.ipa
+    # We have used the appPath here instead of appId
 
-# You can use either the APP ID (APP1234567) or provide the path of the application.
+    # You can use either the APP ID (APP1234567) or provide the path of the application.
 
-#highlight-next-line
-testSuiteAppId: lt://APP10160202521675167637685231
-# We have used the testSuiteAppID here instead of testSuitePath
+    #highlight-next-line
+    testSuiteAppId: lt://APP10160202521675167637685231
+    # We have used the testSuiteAppID here instead of testSuitePath
 
-deviceSelectionStrategy: all
-devices: ["iPhone 12 Pro-14", "iPad Air (2019)-16"]
+    deviceSelectionStrategy: all
+    devices: ["iPhone 12 Pro-14", "iPad Air (2019)-16"]
 
-smartUI:
-project: "Espresso-SmartUI-Project"
+    smartUI:
+      project: "Espresso-SmartUI-Project"
 
-shards:
-mappings:
-- name: shard1
-strategy: "only-testing/skip-testing"
-values: ["<className>/<className/testName>"]
-- name: shard2
-strategy: "only-testing/skip-testing"
-values: ["<className>/<className/testName>", "<className>/<className/testName>"]
+    shards:
+      mappings:
+      - name: shard1
+        strategy: "only-testing/skip-testing"
+        values: ["<className>/<className/testName>"]
+     - name: shard2
+       strategy: "only-testing/skip-testing"
+       values: ["<className>/<className/testName>", "<className>/<className/testName>"]
 ```
 
 **When shards are added**
@@ -237,11 +237,11 @@ Here's an example of the same.
 
 ```java
 filters:
-attributes:
-- type: className
-values: ["LambdaUiKitIOSUITests","LambdaUiKitIOSUITestsLaunchTests"]
-- type: testName
-values: ["LambdaUiKitIOSUITests/testverifyAppLaunch"]
+      attributes:
+      - type: className
+        values: ["LambdaUiKitIOSUITests","LambdaUiKitIOSUITestsLaunchTests"]
+      - type: testName
+        values: ["LambdaUiKitIOSUITests/testverifyAppLaunch"]
 ```
 This example will run only the 2 classes & one test as mentioned from the TestSuite.
 
@@ -250,11 +250,11 @@ To implement the XCTestPlan in Sharding, add the `xctestplan` flag along with `a
 
 ```yaml
 framework:
-name: "ios/xcui"
-args:
-"app" : "lt://APP_ID",
-"testSuite": "lt://TEST_SUITE_ID",
-"xctestplan" : "lt://YOUR_XC_TEST_PLAN_ID" #only when you want to use XCTestPlan
+  name: "ios/xcui"
+  args:
+    "app" : "lt://APP_ID",
+    "testSuite": "lt://TEST_SUITE_ID",
+    "xctestplan" : "lt://YOUR_XC_TEST_PLAN_ID" #only when you want to use XCTestPlan
 ```
 
 > Refer the documentation to learn how to use [XCTestPlan feature](/support/docs/xctestplan/).
@@ -281,8 +281,8 @@ By leveraging machine learning algorithms, it accurately detects and crops the s
 **Example:**
 ```json
 {
-"smartUI.project": "MyApp-iOS-VisualTests",
-"smartUI.build": "Release-1.0.0"
+  "smartUI.project": "MyApp-iOS-VisualTests",
+  "smartUI.build": "Release-1.0.0"
 }
 ```
 
@@ -333,7 +333,7 @@ By leveraging machine learning algorithms, it accurately detects and crops the s
 2. Check project name matches exactly (case-sensitive):
 ```json
 {
-"smartUI.project": "ExactProjectName"
+  "smartUI.project": "ExactProjectName"
 }
 ```
 
@@ -390,8 +390,8 @@ By leveraging machine learning algorithms, it accurately detects and crops the s
 3. Increase `queueTimeout` and `idleTimeout`:
 ```json
 {
-"queueTimeout": 10800,
-"idleTimeout": 150
+  "queueTimeout": 10800,
+  "idleTimeout": 150
 }
 ```
 

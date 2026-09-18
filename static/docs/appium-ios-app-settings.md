@@ -115,23 +115,23 @@ Pass `updateAppSettings` inside `lt:options` (W3C). Below shown is an example wr
 
 ```python
 options = {
-"platformName": "iOS",
-"lt:options": {
-"deviceName": "iPhone 15",
-"platformVersion": "17",
-"isRealMobile": True,
-"app": "lt://APP_ID",
-"updateAppSettings": {
-"Permission Settings": {
-"Location": "While using the app",
-"Precise Location": "On"
-},
-"Allow Cross-Website Tracking": "On",
-"Environment": "QA_1",
-"Slider-1": "0.5",
-"TextField-1": "sample text"
-}
-}
+    "platformName": "iOS",
+    "lt:options": {
+        "deviceName": "iPhone 15",
+        "platformVersion": "17",
+        "isRealMobile": True,
+        "app": "lt://APP_ID",
+        "updateAppSettings": {
+            "Permission Settings": {
+                "Location": "While using the app",
+                "Precise Location": "On"
+            },
+            "Allow Cross-Website Tracking": "On",
+            "Environment": "QA_1",
+            "Slider-1": "0.5",
+            "TextField-1": "sample text"
+        }
+    }
 }
 ```
 

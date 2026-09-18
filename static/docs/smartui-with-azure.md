@@ -130,33 +130,33 @@ Go to Pipeline Settings > Variables. Add the following variables:
 
 ```yaml title="azure-pipelines.yml"
 trigger:
-- '*'
+  - '*'
 
 variables:
-LT_USERNAME: $(LT_USERNAME)
-LT_ACCESS_KEY: $(LT_ACCESS_KEY)
+  LT_USERNAME: $(LT_USERNAME)
+  LT_ACCESS_KEY: $(LT_ACCESS_KEY)
 
 jobs:
 - job: SmartUI_Tests
-pool:
-vmImage: 'ubuntu-latest'
+  pool:
+    vmImage: 'ubuntu-latest'
 
-steps:
-- task: UseNode@2
-inputs:
-version: '16.x'
+  steps:
+  - task: UseNode@2
+    inputs:
+      version: '16.x'
 
-- script: |
-echo "Installing dependencies"
-npm install @lambdatest/smartui-cli
-displayName: 'Install Dependencies'
+  - script: |
+      echo "Installing dependencies"
+      npm install @lambdatest/smartui-cli
+    displayName: 'Install Dependencies'
 
-- script: |
-echo "Running SmartUI tests"
-npx smartui --version
-npx smartui config:create smartui-web.json
-npx smartui --config smartui-web.json exec -- mvn --quiet test -D suite=sdk-cloud.xml
-displayName: 'Execute SmartUI Tests'
+  - script: |
+      echo "Running SmartUI tests"
+      npx smartui --version
+      npx smartui config:create smartui-web.json
+      npx smartui --config smartui-web.json exec -- mvn --quiet test -D suite=sdk-cloud.xml
+    displayName: 'Execute SmartUI Tests'
 ```
 
 ### Step 5: Check the output
@@ -183,10 +183,10 @@ displayName: 'Execute SmartUI Tests'
 **Example:**
 ```yaml
 trigger:
-branches:
-include:
-- main
-- develop
+  branches:
+    include:
+      - main
+      - develop
 ```
 
 **Build Naming**
@@ -198,7 +198,7 @@ include:
 **Example:**
 ```yaml
 variables:
-BUILD_NAME: "$(Build.SourceBranchName)-$(Build.SourceVersion)"
+  BUILD_NAME: "$(Build.SourceBranchName)-$(Build.SourceVersion)"
 ```
 
 **Error Handling**
@@ -260,7 +260,7 @@ BUILD_NAME: "$(Build.SourceBranchName)-$(Build.SourceVersion)"
 2. Pass variable to job:
 ```yaml
 variables:
-PROJECT_TOKEN: $(PROJECT_TOKEN)
+  PROJECT_TOKEN: $(PROJECT_TOKEN)
 ```
 
 3. Check variable is accessible to the job
@@ -285,11 +285,11 @@ PROJECT_TOKEN: $(PROJECT_TOKEN)
 2. Check pipeline logs for errors:
 ```yaml
 - task: PowerShell@2
-displayName: 'Check Logs'
-condition: failed()
-inputs:
-script: |
-Get-Content $(Agent.TempDirectory)/*.log
+  displayName: 'Check Logs'
+  condition: failed()
+  inputs:
+    script: |
+      Get-Content $(Agent.TempDirectory)/*.log
 ```
 
 3. Verify network connectivity in pipeline
@@ -315,11 +315,11 @@ timeoutInMinutes: 60
 2. Run tests in parallel using matrix:
 ```yaml
 strategy:
-matrix:
-TestGroup1:
-TEST_GROUP: 1
-TestGroup2:
-TEST_GROUP: 2
+  matrix:
+    TestGroup1:
+      TEST_GROUP: 1
+    TestGroup2:
+      TEST_GROUP: 2
 ```
 
 3. Optimize test execution
@@ -339,15 +339,15 @@ TEST_GROUP: 2
 1. Use specific Node version:
 ```yaml
 - task: UseNode@2
-inputs:
-version: '18.x'
+  inputs:
+    version: '18.x'
 ```
 
 2. Clear npm cache:
 ```yaml
 - script: |
-npm cache clean --force
-npm install
+    npm cache clean --force
+    npm install
 ```
 
 3. Use package-lock.json for consistent installs
@@ -367,8 +367,8 @@ npm install
 1. Ensure Node.js setup task is included:
 ```yaml
 - task: UseNode@2
-inputs:
-version: '18.x'
+  inputs:
+    version: '18.x'
 ```
 
 2. Verify npm is available:
@@ -379,7 +379,7 @@ version: '18.x'
 3. Install SmartUI CLI explicitly:
 ```yaml
 - script: |
-npm install -g @lambdatest/smartui-cli
+    npm install -g @lambdatest/smartui-cli
 ```
 
 **Getting Help**

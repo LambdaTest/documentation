@@ -34,9 +34,9 @@ To add a plugin to a `command` step, use the `plugins` attribute. The `plugins` 
 
 ```
 steps:
-- command: 'yarn && yarn LT test'
-plugins:
-- lambdatest/lambdatest~
+  - command: 'yarn && yarn LT test'
+    plugins:
+      - lambdatest/lambdatest~
 ```
 
 **Step 5:** Add steps for execution
@@ -77,9 +77,9 @@ Monitor and analyze your test result on the **[TestMu AI automation dashboard](h
 
 ```bash
 steps:
-- label: ":docs-testing:"
-commands:
-- python3 lambdatest.py
+  - label: ":docs-testing:"
+    commands:
+      - python3 lambdatest.py
 ```
 
 **Step 5:** Now go to your **Buildkite dashboard** and click on the **Pipelines** > select **New pipeline**.

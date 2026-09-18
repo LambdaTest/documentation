@@ -160,53 +160,53 @@ Here's a GitHub Actions workflow that automates the branch merging process in yo
 name: Visual Regression Tests with Branch Merging
 
 on:
-pull_request:
-types: [opened, synchronize, reopened]
-branches: [ main, develop ]
+  pull_request:
+    types: [opened, synchronize, reopened]
+    branches: [ main, develop ]
 
 jobs:
-visual-tests:
-runs-on: ubuntu-latest
-steps:
-- uses: actions/checkout@v2
+  visual-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
 
-- name: Setup Node.js
-uses: actions/setup-node@v2
-with:
-node-version: '16'
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '16'
 
-- name: Install dependencies
-run: npm install
+      - name: Install dependencies
+        run: npm install
 
-- name: Run SmartUI tests
-env:
-PROJECT_TOKEN: ${{ secrets.PROJECT_TOKEN }}
-run: |
-# Run different types of tests
-npx smartui --config .smartui.json exec -- <Your execution command> --buildName "pr-${{ github.event.pull_request.number }}-tests"
+      - name: Run SmartUI tests
+        env:
+          PROJECT_TOKEN: ${{ secrets.PROJECT_TOKEN }}
+        run: |
+          # Run different types of tests
+          npx smartui --config .smartui.json exec -- <Your execution command> --buildName "pr-${{ github.event.pull_request.number }}-tests"
 
-merge-visual-changes:
-needs: visual-tests
-if: github.event.pull_request.merged == true
-runs-on: ubuntu-latest
-steps:
-- uses: actions/checkout@v2
+  merge-visual-changes:
+    needs: visual-tests
+    if: github.event.pull_request.merged == true
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
 
-- name: Setup Node.js
-uses: actions/setup-node@v2
-with:
-node-version: '16'
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '16'
 
-- name: Install dependencies
-run: npm install
+      - name: Install dependencies
+        run: npm install
 
-- name: Merge visual changes
-env:
-PROJECT_TOKEN: ${{ secrets.PROJECT_TOKEN }}
-run: |
-# Merge visual changes from PR branch to target branch
-# Creates: merged-branch/<pr-branch>-<target-branch>
-npx smartui merge branch --source ${{ github.event.pull_request.head.ref }} --target ${{ github.event.pull_request.base.ref }}
+      - name: Merge visual changes
+        env:
+          PROJECT_TOKEN: ${{ secrets.PROJECT_TOKEN }}
+        run: |
+          # Merge visual changes from PR branch to target branch
+          # Creates: merged-branch/<pr-branch>-<target-branch>
+          npx smartui merge branch --source ${{ github.event.pull_request.head.ref }} --target ${{ github.event.pull_request.base.ref }}
 ```
 
 ### Best Practices for PR Branch Merging

@@ -112,8 +112,8 @@ capabilities.AddAdditionalOption("lambda:userFiles", ltFile);
 
 ```javascript
 $capabilities = array(
-.
-.
+    .
+    .
 "lambda:userFiles" => [
 "804402.png",
 "file_example_JPG_2500kB.jpg",
@@ -125,8 +125,8 @@ $capabilities = array(
 
 ```py
 capabilities = {
-.
-.
+      .
+      .
 "lambda:userFiles" : [
 "804402.png",
 "file_example_JPG_2500kB.jpg",
@@ -139,8 +139,8 @@ capabilities = {
 
 ```js
 var capabilities = {
-.
-.
+    .
+    .
 "lambda:userFiles" : [
 "804402.png",
 "file_example_JPG_2500kB.jpg",
@@ -164,13 +164,13 @@ The following table shows the file path for uploaded files on both desktop and m
 For example, to upload a file on a web page via test script, use the following Java code (on Windows and macOS):
 
 ```java
-// If the file is 804402.png, and testing environment is Windows OS
-WebElement addFile = driver.findElement(By.xpath(".//input[@type='file']"));
-addFile.sendKeys("C:\\Users\\ltuser\\Downloads\\804402.png");
+   // If the file is 804402.png, and testing environment is Windows OS
+   WebElement addFile = driver.findElement(By.xpath(".//input[@type='file']"));
+   addFile.sendKeys("C:\\Users\\ltuser\\Downloads\\804402.png");
 
-// If the file is 804402.png, and testing environment is macOS
-WebElement addFile = driver.findElement(By.xpath(".//input[@type='file']"));
-addFile.sendKeys("/Users/ltuser/Downloads/804402.png");
+   // If the file is 804402.png, and testing environment is macOS
+   WebElement addFile = driver.findElement(By.xpath(".//input[@type='file']"));
+   addFile.sendKeys("/Users/ltuser/Downloads/804402.png");
 ```
 
 # Download Files from TestMu AI Storage During Test Execution

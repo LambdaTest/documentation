@@ -108,13 +108,13 @@ These capabilities are designed to work as a pipeline. Each stage feeds into the
 
 ```
 Test Execution
-↓
+    ↓
 Smart Tags (early warning: flaky, always failing, new failure)
-↓
+    ↓
 Flaky Test Detection (deep analysis of inconsistent tests)
-↓
+    ↓
 Failure Categorization AI (classify: app bug vs script vs environment)
-↓
+    ↓
 AI Root Cause Analysis (diagnose root cause + recommended fix)
 ```
 

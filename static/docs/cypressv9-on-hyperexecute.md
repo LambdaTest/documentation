@@ -78,7 +78,7 @@ runson: win
 Auto-split is set to true in the YAML file.
 
 ```yaml
-autosplit: true
+ autosplit: true
 ```
 
 **`retryOnFailure`** is set to true, instructing HyperExecute to retry failed command(s). The retry operation is carried out till the number of retries mentioned in **`maxRetries`** are exhausted or the command execution results in a *Pass*. In addition, the **`concurrency`** (i.e. number of parallel sessions) is set to 2.
@@ -98,9 +98,9 @@ Cypress Build name and tags are added in the YML file.
 
 ```yaml
 cypressOps:
-Build: "Hyperexecute Cypress Sample Build"
-Tags: ["Hyperexecute","Cypress", "Windows", "Autosplit", "V9"]
-BuildTags: ["Hyperexecute-Cypress"]
+ Build: "Hyperexecute Cypress Sample Build"
+ Tags: ["Hyperexecute","Cypress", "Windows", "Autosplit", "V9"]
+ BuildTags: ["Hyperexecute-Cypress"]
 ```
 
 #### Pre Steps
@@ -109,7 +109,7 @@ Steps (or commands) that must run before the test execution are listed in the *p
 
 ```yaml
 pre:
-- npm install
+  - npm install
 ```
 
 #### Post Steps
@@ -118,16 +118,16 @@ Steps (or commands) that need to run after the test execution are listed in the 
 
 ```yaml
 post:
-- cat yaml/.hyperexecute_autosplit.yaml
+  - cat yaml/.hyperexecute_autosplit.yaml
 ```
 
 The **`testDiscovery`** directive contains the command that gives details of the mode of execution, along with detailing the command that is used for test execution. Here, we are fetching the list of class names that would be further passed in the *testRunnerCommand*
 
 ```yaml
 testDiscovery:
-type: raw
-mode: static
-command: ls cypress/integration | sed -n 1,'10p'
+  type: raw
+  mode: static
+  command: ls cypress/integration | sed -n 1,'10p'
 ```
 
 Running the above command on the terminal will give a list of scenarios present in the *feature* files:
@@ -186,20 +186,20 @@ autosplit: true
 #   - node_modules
 #   - cypressCache
 env:
-CYPRESS_CACHE_FOLDER: cypressCache
+  CYPRESS_CACHE_FOLDER: cypressCache
 testDiscovery:
-mode: static
-type: raw
-command: ls cypress/integration
+  mode: static
+  type: raw
+  command: ls cypress/integration
 testRunnerCommand: npx cypress run  --spec ./cypress/integration/$test --browser=chrome-95.0 --headed --config video=false
 cypressOps:
-Build: "Hyperexecute Cypress Sample Build"
-Tags: ["Hyperexecute","Cypress", "Windows", "Autosplit", "V9"]
-BuildTags: ["Hyperexecute-Cypress"]
+ Build: "Hyperexecute Cypress Sample Build"
+ Tags: ["Hyperexecute","Cypress", "Windows", "Autosplit", "V9"]
+ BuildTags: ["Hyperexecute-Cypress"]
 post:
-- cat ./yaml/win/.hyperexecute_matrix.yaml
+  - cat ./yaml/win/.hyperexecute_matrix.yaml
 pre:
-- npm install
+  - npm install
 
 jobLabel: [cypress-v9, win, autosplit]
 ```
@@ -230,16 +230,16 @@ The **`matrix`** constitutes of the following entries - *classname*. The entries
 
 ```yaml
 matrix:
-os: [win]
-browser: ["chrome-95.0","chrome-96.0","chrome-97.0","chrome-98.0","chrome-99.0","chrome-100.0","chrome-101.0","chrome-102.0","chrome-103.0","chrome-104.0","chrome-105.0"]
-files: ["actions.spec.js", "aliasing.spec.js", "assertions.spec.js", "connectors.spec.js", "cookies.spec.js", "local_storage.spec.js", "navigation.spec.js", "querying.spec.js"]
+   os: [win]
+   browser: ["chrome-95.0","chrome-96.0","chrome-97.0","chrome-98.0","chrome-99.0","chrome-100.0","chrome-101.0","chrome-102.0","chrome-103.0","chrome-104.0","chrome-105.0"]
+   files: ["actions.spec.js", "aliasing.spec.js", "assertions.spec.js", "connectors.spec.js", "cookies.spec.js", "local_storage.spec.js", "navigation.spec.js", "querying.spec.js"]
 ```
 
 The **`testSuites`** object contains a list of commands (that can be presented in an array). In the current YAML file, commands for executing the tests are put in an array (with a '-' preceding each item). The Maven command *mvn test* is used to run tests located in the current project. In the current project, parallel execution is achieved at the *class* level. The *maven.repo.local* parameter in Maven is used for overriding the location where the dependent Maven packages are downloaded.
 
 ```yaml
 testSuites:
-- npx cypress run  --spec ./cypress/integration/$files --browser=$browser --headed --config video=false
+  - npx cypress run  --spec ./cypress/integration/$files --browser=$browser --headed --config video=false
 ```
 
 #### Pre Steps
@@ -248,7 +248,7 @@ Steps (or commands) that must run before the test execution are listed in the *p
 
 ```yaml
 pre:
-- npm install
+  - npm install
 ```
 
 #### Post Steps
@@ -257,7 +257,7 @@ Steps (or commands) that need to run after the test execution are listed in the 
 
 ```yaml
 post:
-- cat yaml/.hyperexecute_matrix.yaml
+  - cat yaml/.hyperexecute_matrix.yaml
 ```
 
 #### Test Execution
@@ -294,21 +294,21 @@ parallelism: 1
 concurrency: 2
 cacheKey: '{{ checksum "package.json" }}'
 cacheDirectories:
-- node_modules
+  - node_modules
 pre:
-- npm install
+  - npm install
 matrix:
-os: [win]
-browser: ["chrome-104.0","chrome-105.0"]
-files: ["actions.spec.js", "aliasing.spec.js"]
+   os: [win]
+   browser: ["chrome-104.0","chrome-105.0"]
+   files: ["actions.spec.js", "aliasing.spec.js"]
 testSuites:
-- npx cypress run  --spec ./cypress/integration/$files --browser=$browser --headed --config video=false
+  - npx cypress run  --spec ./cypress/integration/$files --browser=$browser --headed --config video=false
 cypressOps:
-Build: "Hyperexecute Cypress Sample Build"
-Tags: ["Hyperexecute","Cypress", "Windows", "Matrix", "V9"]
-BuildTags: ["Hyperexecute-Cypress"]
+ Build: "Hyperexecute Cypress Sample Build"
+ Tags: ["Hyperexecute","Cypress", "Windows", "Matrix", "V9"]
+ BuildTags: ["Hyperexecute-Cypress"]
 post:
-- cat ./yaml/win/.hyperexecute_autosplit.yaml
+  - cat ./yaml/win/.hyperexecute_autosplit.yaml
 
 jobLabel: [cypress-v9, win, matrix]
 ```
@@ -336,7 +336,7 @@ If you want to use any secret keys in the YAML file, this can be set by clicking
 
 ```yaml
 env:
-PAT: ${{ .secrets.testKey }}
+  PAT: ${{ .secrets.testKey }}
 ```
 
 ### HAR Logs
@@ -352,8 +352,8 @@ Network Logs are disabled by default. To enable it, pass the `Network` and `Full
 
 ```yaml
 cypressOps:
-Network: true
-FullHar: true
+  Network: true
+  FullHar: true
 ```
 
 You can download network logs via the Automate Dashboard. You can visualize HAR files using the [HAR Viewer](http://www.softwareishard.com/har/viewer/).
@@ -367,7 +367,7 @@ Prerequisite to get the detailed logs in HyperExecute:
 
 ```yaml
 pre:
-- npm install cypress-terminal-report --save-dev
+  - npm install cypress-terminal-report --save-dev
 ```
 
 For in detailed information on how to configure it properly, visit [Cypress Detailed Command Logs](/support/docs/cypress-detailed-command-logs/#for-cypress-v9-and-previous-versions) documentation.
@@ -382,8 +382,8 @@ The cypress-skill package includes:
 cypress-skill/
 ├── SKILL.md
 └── reference/
-├── playbook.md
-└── advanced-patterns.md
+    ├── playbook.md
+    └── advanced-patterns.md
 ```
 
 It provides structured guidance for:

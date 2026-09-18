@@ -253,7 +253,7 @@ cd smartui-csharp-sample/LambdaTest.Selenium.Driver.Test
 
 ```cs
 <ItemGroup>
-<PackageReference Include="LambdaTest.Selenium.Driver" Version="1.0.4" />
+    <PackageReference Include="LambdaTest.Selenium.Driver" Version="1.0.4" />
 </ItemGroup>
 ```
 
@@ -301,37 +301,37 @@ Once, the configuration file will be created, you will be seeing the default con
 
 ```json title="/smartui-sdk-project/.smartui.json"
 {
-"web": {
-"browsers": [
-"chrome",
-"firefox",
-"safari",
-"edge"
-],
-"viewports": [
-[
-1920
-],
-[
-1366
-],
-[
-1028
-]
-] // Full Page screenshots are captured by default for web viewports
-},
-"mobile": {
-"devices": [
-"iPhone 14",  //iPhone 14 viewport
-"Galaxy S24"  //Galaxy S24 viewport
-],
-"fullPage": true, //Full Page is true by default for mobile viewports
-"orientation": "portrait" //Change to "landscape" for landscape snapshot
-},
-"waitForTimeout": 1000, //Optional (Should only be used in case lazy-loading/async components are present)
-"waitForPageRender": 50000, //Optional (Should only be used in case of websites which take more than 30s to load)
-"enableJavaScript": false, //Enable javascript for all the screenshots of the project
-"allowedHostnames": [] //Additional hostnames to capture assets from
+  "web": {
+    "browsers": [
+      "chrome",
+      "firefox",
+      "safari",
+      "edge"
+    ],
+    "viewports": [
+      [
+        1920
+      ],
+      [
+        1366
+      ],
+      [
+        1028
+      ]
+    ] // Full Page screenshots are captured by default for web viewports
+  },
+  "mobile": {
+    "devices": [
+      "iPhone 14",  //iPhone 14 viewport
+      "Galaxy S24"  //Galaxy S24 viewport
+    ],
+    "fullPage": true, //Full Page is true by default for mobile viewports
+    "orientation": "portrait" //Change to "landscape" for landscape snapshot
+  },
+  "waitForTimeout": 1000, //Optional (Should only be used in case lazy-loading/async components are present)
+  "waitForPageRender": 50000, //Optional (Should only be used in case of websites which take more than 30s to load)
+  "enableJavaScript": false, //Enable javascript for all the screenshots of the project
+  "allowedHostnames": [] //Additional hostnames to capture assets from
 }
 ```
 **Advanced options in SmartUI configuration**
@@ -352,24 +352,24 @@ using LambdaTest.Selenium.Driver;
 
 namespace LambdaTest.Selenium.TestProject
 {
-public static class LocalTest
-{
-using IWebDriver driver = new ChromeDriver();
-try
-{
-Console.WriteLine("Driver started");
-driver.Navigate().GoToUrl("Required URL");
-await SmartUISnapshot.CaptureSnapshot(driver, "Screenshot Name"); //utilize this function to take the dom snapshot of your test
-}
-catch (Exception ex)
-{
-Console.WriteLine(ex);
-}
-finally
-{
-driver.Quit();
-}
-}
+        public static class LocalTest
+        {
+            using IWebDriver driver = new ChromeDriver();
+            try
+            {
+                Console.WriteLine("Driver started");
+                driver.Navigate().GoToUrl("Required URL");
+                await SmartUISnapshot.CaptureSnapshot(driver, "Screenshot Name"); //utilize this function to take the dom snapshot of your test
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+            }
+            finally
+            {
+                driver.Quit();
+            }
+        }
 }
 ```
 
@@ -384,8 +384,8 @@ You can enable synchronous snapshot status response by setting the `sync` option
 ```csharp
 var optionsForSync = new Dictionary<string, object>
 {
-{ "sync", true },
-{ "timeout", 100 } // timeout in seconds (30-900, default 600)
+        { "sync", true },
+        { "timeout", 100 } // timeout in seconds (30-900, default 600)
 };
 
 Console.WriteLine("Driver started");
@@ -403,27 +403,27 @@ Console.WriteLine(result);
 
 ```json
 {
-"snapshotName": "Sync-True",
-"snapshotUUID": "95226130-72b6-4d45-ad6d-4ad8ddsa1",
-"buildId": "8e0c078d-e85a-41ae-a8d5-4a0dsdf8bbd5",
-"snapshotStatus": "failed",
-"startedProcessingAt": "2025-08-26 09:58:21",
-"finishedProcessingAt": "2025-08-26 10:03:12",
-"screenshots": [
-{
-"captured_image": "<URL>",
-"baseline_image": "<URL>",
-"browser_name": "firefox",
-"viewport": "1028",
-"mismatch_percentage": 89.58,
-"status": "Changes found",
-"captured_image_timestamp": "2025-08-26 10:00:40",
-"compared_image_timestamp": "2025-08-26 10:00:58",
-"captured_diff": "<URL>",
-"baseline_diff": "<URL>",
-},
-// ... more screenshots in the same format
-]
+    "snapshotName": "Sync-True",
+    "snapshotUUID": "95226130-72b6-4d45-ad6d-4ad8ddsa1",
+    "buildId": "8e0c078d-e85a-41ae-a8d5-4a0dsdf8bbd5",
+    "snapshotStatus": "failed",
+    "startedProcessingAt": "2025-08-26 09:58:21",
+    "finishedProcessingAt": "2025-08-26 10:03:12",
+    "screenshots": [
+        {
+            "captured_image": "<URL>",
+            "baseline_image": "<URL>",
+            "browser_name": "firefox",
+            "viewport": "1028",
+            "mismatch_percentage": 89.58,
+            "status": "Changes found",
+            "captured_image_timestamp": "2025-08-26 10:00:40",
+            "compared_image_timestamp": "2025-08-26 10:00:58",
+            "captured_diff": "<URL>",
+            "baseline_diff": "<URL>",
+        },
+        // ... more screenshots in the same format
+    ]
 }
 ```
 
@@ -462,11 +462,11 @@ driver.Navigate().GoToUrl("Required URL");
 
 var options = new Dictionary<string, object>
 {
-{ "ignoreDOM", new Dictionary<string, object>
-{
-{ "id", new[] { "ID-1", "ID-2" } }
-}
-}
+    { "ignoreDOM", new Dictionary<string, object>
+        {
+            { "id", new[] { "ID-1", "ID-2" } }
+        }
+    }
 };
 await SmartUISnapshot.CaptureSnapshot(driver, "Screenshot Name",options);
 ```
@@ -476,11 +476,11 @@ driver.Navigate().GoToUrl("Required URL");
 
 var options = new Dictionary<string, object>
 {
-{ "ignoreDOM", new Dictionary<string, object>
-{
-{ "class", new[] { "class-1", "class-2" } }
-}
-}
+    { "ignoreDOM", new Dictionary<string, object>
+        {
+            { "class", new[] { "class-1", "class-2" } }
+        }
+    }
 };
 await SmartUISnapshot.CaptureSnapshot(driver, "Screenshot Name",options);
 ```
@@ -490,11 +490,11 @@ driver.Navigate().GoToUrl("Required URL");
 
 var options = new Dictionary<string, object>
 {
-{ "ignoreDOM", new Dictionary<string, object>
-{
-{ "xpath", new[] { "xpath-1", "xpath-2" } }
-}
-}
+    { "ignoreDOM", new Dictionary<string, object>
+        {
+            { "xpath", new[] { "xpath-1", "xpath-2" } }
+        }
+    }
 };
 await SmartUISnapshot.CaptureSnapshot(driver, "Screenshot Name",options);
 ```
@@ -504,11 +504,11 @@ driver.Navigate().GoToUrl("Required URL");
 
 var options = new Dictionary<string, object>
 {
-{ "ignoreDOM", new Dictionary<string, object>
-{
-{ "cssSelector", new[] { "cssSelector-1", "cssSelector-2" } }
-}
-}
+    { "ignoreDOM", new Dictionary<string, object>
+        {
+            { "cssSelector", new[] { "cssSelector-1", "cssSelector-2" } }
+        }
+    }
 };
 await SmartUISnapshot.CaptureSnapshot(driver, "Screenshot Name",options);
 ```
@@ -518,11 +518,11 @@ driver.Navigate().GoToUrl("Required URL");
 
 var options = new Dictionary<string, object>
 {
-{ "selectDOM", new Dictionary<string, object>
-{
-{ "id", new[] { "ID-1", "ID-2" } }
-}
-}
+    { "selectDOM", new Dictionary<string, object>
+        {
+            { "id", new[] { "ID-1", "ID-2" } }
+        }
+    }
 };
 await SmartUISnapshot.CaptureSnapshot(driver, "Screenshot Name",options);
 ```
@@ -532,11 +532,11 @@ driver.Navigate().GoToUrl("Required URL");
 
 var options = new Dictionary<string, object>
 {
-{ "selectDOM", new Dictionary<string, object>
-{
-{ "class", new[] { "class-1", "class-2" } }
-}
-}
+    { "selectDOM", new Dictionary<string, object>
+        {
+            { "class", new[] { "class-1", "class-2" } }
+        }
+    }
 };
 await SmartUISnapshot.CaptureSnapshot(driver, "Screenshot Name",options);
 ```
@@ -546,11 +546,11 @@ driver.Navigate().GoToUrl("Required URL");
 
 var options = new Dictionary<string, object>
 {
-{ "selectDOM", new Dictionary<string, object>
-{
-{ "xpath", new[] { "xpath-1", "xpath-2" } }
-}
-}
+    { "selectDOM", new Dictionary<string, object>
+        {
+            { "xpath", new[] { "xpath-1", "xpath-2" } }
+        }
+    }
 };
 await SmartUISnapshot.CaptureSnapshot(driver, "Screenshot Name",options);
 ```
@@ -560,11 +560,11 @@ driver.Navigate().GoToUrl("Required URL");
 
 var options = new Dictionary<string, object>
 {
-{ "selectDOM", new Dictionary<string, object>
-{
-{ "cssSelector", new[] { "cssSelector-1", "cssSelector-2" } }
-}
-}
+    { "selectDOM", new Dictionary<string, object>
+        {
+            { "cssSelector", new[] { "cssSelector-1", "cssSelector-2" } }
+        }
+    }
 };
 await SmartUISnapshot.CaptureSnapshot(driver, "Screenshot Name",options);
 ```
@@ -578,11 +578,11 @@ driver.Navigate().GoToUrl("Required URL");
 
 var options = new Dictionary<string, object>
 {
-{ "element", new Dictionary<string, object>
-{
-{ "id", new[] { "Required ID"} }
-}
-}
+    { "element", new Dictionary<string, object>
+        {
+            { "id", new[] { "Required ID"} }
+        }
+    }
 };
 await SmartUISnapshot.CaptureSnapshot(driver, "Screenshot Name",options);
 ```
@@ -592,11 +592,11 @@ driver.Navigate().GoToUrl("Required URL");
 
 var options = new Dictionary<string, object>
 {
-{ "element", new Dictionary<string, object>
-{
-{ "class", new[] { "Required class" } }
-}
-}
+    { "element", new Dictionary<string, object>
+        {
+            { "class", new[] { "Required class" } }
+        }
+    }
 };
 await SmartUISnapshot.CaptureSnapshot(driver, "Screenshot Name",options);
 ```
@@ -606,11 +606,11 @@ driver.Navigate().GoToUrl("Required URL");
 
 var options = new Dictionary<string, object>
 {
-{ "element", new Dictionary<string, object>
-{
-{ "xpath", new[] { "Required xpath"} }
-}
-}
+    { "element", new Dictionary<string, object>
+        {
+            { "xpath", new[] { "Required xpath"} }
+        }
+    }
 };
 await SmartUISnapshot.CaptureSnapshot(driver, "Screenshot Name",options);
 ```
@@ -620,11 +620,11 @@ driver.Navigate().GoToUrl("Required URL");
 
 var options = new Dictionary<string, object>
 {
-{ "element", new Dictionary<string, object>
-{
-{ "cssSelector", new[] { "Required cssSelector"} }
-}
-}
+    { "element", new Dictionary<string, object>
+        {
+            { "cssSelector", new[] { "Required cssSelector"} }
+        }
+    }
 };
 await SmartUISnapshot.CaptureSnapshot(driver, "Screenshot Name",options);
 ```
@@ -744,7 +744,7 @@ wait.Until(ExpectedConditions.ElementIsVisible(By.CssSelector(".main-content")))
 2. Enable JavaScript in configuration:
 ```json
 {
-"enableJavaScript": true
+  "enableJavaScript": true
 }
 ```
 

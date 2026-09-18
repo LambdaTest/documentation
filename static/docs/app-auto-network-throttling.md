@@ -13,8 +13,8 @@ TestMu AI simplifies testing by enabling simulation of diverse network condition
 
 ```python
 caps = {
-"network": True,
-"networkProfile": "2g-gprs-good"  # Set the desired network profile
+   "network": True,
+   "networkProfile": "2g-gprs-good"  # Set the desired network profile
 }
 ```
 
@@ -63,8 +63,8 @@ driver.execute_script("updateNetworkProfile=default")
 
 ```python
 caps = {
-"network": True,
-"networkProfile": "offline"  # Set to offline mode
+    "network": True,
+    "networkProfile": "offline"  # Set to offline mode
 }
 ```
 

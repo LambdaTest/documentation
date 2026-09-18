@@ -46,12 +46,12 @@ Include the following field in the capabilities object to enable WebView testing
 
 ```javascript title="playwrightwebview.js"
 const capabilities = {
-"LT:Options": {
-"platformName": "android",
-"isRealMobile": true, //if true, test will run on real devices
-// highlight-next-line
-"isPwMobileWebviewTest": true, //mandatory capability to enable WebView testing
-},
+  "LT:Options": {
+    "platformName": "android",
+    "isRealMobile": true, //if true, test will run on real devices
+    // highlight-next-line
+    "isPwMobileWebviewTest": true, //mandatory capability to enable WebView testing
+  },
 ```
 
 Use our [Capability Generator](https://www.testmuai.com/capabilities-generator/) to select from a wide range of options for customizing your tests.

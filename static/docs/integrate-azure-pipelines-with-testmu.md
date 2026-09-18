@@ -48,24 +48,24 @@ trigger:
 - master
 
 pool:
-vmImage: 'Ubuntu-16.04'
+  vmImage: 'Ubuntu-16.04'
 
 variables:
-LT_USERNAME: 'Your_LambdaTest_Username'
-LT_ACCESS_KEY: 'Your_LambdaTest_Access_Key'
+  LT_USERNAME: 'Your_LambdaTest_Username'
+  LT_ACCESS_KEY: 'Your_LambdaTest_Access_Key'
 
 steps:
 - task: NodeTool@0
-inputs:
-versionSpec: '10.x'
-displayName: 'Install Node.js'
+  inputs:
+    versionSpec: '10.x'
+  displayName: 'Install Node.js'
 
 - script: |
-npm install
-npm install -g protractor
-cd conf
-protractor single.conf.js
-displayName: 'npm install and build'
+    npm install
+    npm install -g protractor
+    cd conf
+    protractor single.conf.js
+  displayName: 'npm install and build'
 ```
 
 **Step 4:** Executing the above file will run the script in TestMu AI Grid successfully. See the below image of the output.
@@ -84,24 +84,24 @@ trigger:
 - master
 
 pool:
-vmImage: 'Ubuntu-16.04'
+  vmImage: 'Ubuntu-16.04'
 
 variables:
-LT_USERNAME: 'Your_LambdaTest_Username'
-LT_ACCESS_KEY: 'Your_LambdaTest_Access_Key'
+  LT_USERNAME: 'Your_LambdaTest_Username'
+  LT_ACCESS_KEY: 'Your_LambdaTest_Access_Key'
 
 steps:
 - task: NodeTool@0
-inputs:
-versionSpec: '10.x'
-displayName: 'Install Node.js'
+  inputs:
+    versionSpec: '10.x'
+  displayName: 'Install Node.js'
 
 - script: |
-npm install
-npm install -g protractor
-cd conf
-protractor parallel.conf.js  //for executing parallel testing
-displayName: 'npm install and build'
+    npm install
+    npm install -g protractor
+    cd conf
+    protractor parallel.conf.js  //for executing parallel testing
+  displayName: 'npm install and build'
 ```
 
 Monitor and analyze your test result on the TestMu AI Automation Dashboard.

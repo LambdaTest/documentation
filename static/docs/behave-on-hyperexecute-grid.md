@@ -42,13 +42,13 @@ Configure the desired capabilities based on your test requirements. For example:
 
 ```bash
 [
-{
-"platform": "Windows 10",
-"browserName": "chrome",
-"version": "latest",
-"build": "Behave Selenium Sample",
-"name": "Behave Sample Test"
-}
+  {
+    "platform": "Windows 10",
+    "browserName": "chrome",
+    "version": "latest",
+    "build": "Behave Selenium Sample",
+    "name": "Behave Sample Test"
+  }
 ]
 ```
 
@@ -112,36 +112,36 @@ concurrency: 2
 
 env:
 #  PAT: ${{ .secrets.testKey }}
-TARGET_OS: LINUX
+ TARGET_OS: LINUX
 
 cacheKey: '{{ checksum "requirements.txt" }}'
 cacheDirectories:
-- pip_cache
+  - pip_cache
 pre:
-- pip3 install -r requirements.txt --cache-dir pip_cache
+  - pip3 install -r requirements.txt --cache-dir pip_cache
 post:
-- cat yaml/linux/behave_hyperexecute_autosplit_sample.yaml
+  - cat yaml/linux/behave_hyperexecute_autosplit_sample.yaml
 upload:
-- reports/test_report.json
+  - reports/test_report.json
 
 mergeArtifacts: true
 
 uploadArtefacts:
-- name: TestReports
-path:
-- reports/**
+  - name: TestReports
+    path:
+    - reports/**
 
 report: true
 partialReports:
-type: json
-location: /
-frameworkName: extent
+    type: json
+    location: /
+    frameworkName: extent
 
 # Details about HTML Formatter at https://pypi.org/project/behave-html-formatter/
 testDiscovery:
-type: raw
-mode: remote
-command: grep -nri 'Feature' features -ir --include=\*.feature | sed 's/:.*//'
+  type: raw
+  mode: remote
+  command: grep -nri 'Feature' features -ir --include=\*.feature | sed 's/:.*//'
 
 # Reports are generated in the pretty JSON format
 testRunnerCommand: behave -f json.pretty -o reports/test_report.json $test
@@ -209,8 +209,8 @@ The behave-skill package includes:
 behave-skill/
 ├── SKILL.md
 └── reference/
-├── playbook.md
-└── advanced-patterns.md
+    ├── playbook.md
+    └── advanced-patterns.md
 ```
 
 It provides structured guidance for:

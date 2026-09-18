@@ -18,35 +18,35 @@ For example:
 ```java
 public class GroupIntegrationTest {
 
-@BeforeGroups("database")
-public void setupDB() {
-System.out.println("setupDB()");
-}
+    @BeforeGroups("database")
+    public void setupDB() {
+        System.out.println("setupDB()");
+    }
 
-@AfterGroups("database")
-public void cleanDB() {
-System.out.println("cleanDB()");
-}
+    @AfterGroups("database")
+    public void cleanDB() {
+        System.out.println("cleanDB()");
+    }
 
-@Test(groups = "selenium-test")
-public void runSelenium() {
-System.out.println("runSelenium()");
-}
+    @Test(groups = "selenium-test")
+    public void runSelenium() {
+        System.out.println("runSelenium()");
+    }
 
-@Test(groups = "selenium-test")
-public void runSelenium1() {
-System.out.println("runSelenium()1");
-}
+    @Test(groups = "selenium-test")
+    public void runSelenium1() {
+        System.out.println("runSelenium()1");
+    }
 
-@Test(groups = "database")
-public void testConnectOracle() {
-System.out.println("testConnectOracle()");
-}
+    @Test(groups = "database")
+    public void testConnectOracle() {
+        System.out.println("testConnectOracle()");
+    }
 
-@Test(groups = "database")
-public void testConnectMsSQL() {
-System.out.println("testConnectMsSQL");
-}
+    @Test(groups = "database")
+    public void testConnectMsSQL() {
+        System.out.println("testConnectMsSQL");
+    }
 
 }
 ```
@@ -55,8 +55,8 @@ In the HyperExecute YAML Version 0.2 configuration, you can use the ```discovery
 
 ```yaml
 framework:
-name: "maven/testng"
-discoveryFlags: ["-Dgroups=database"]
+  name: "maven/testng"
+  discoveryFlags: ["-Dgroups=database"]
 ```
 
 Here it will only discover tests belonging to the group database. Use comma-separated values if you want to specify multiple groups.
@@ -65,8 +65,8 @@ Similarly, you can use the ```excludedGroups``` parameter that can be used to ru
 
 ```yaml
 framework:
-name: "maven/testng"
-discoveryFlags: ["-DexcludedGroups=database"]
+  name: "maven/testng"
+  discoveryFlags: ["-DexcludedGroups=database"]
 ```
 
 This discovers all test of groups except database.
@@ -75,15 +75,15 @@ Alternatively, you can also specify the groups or excluded groups directly in th
 
 ```yaml
 <plugins>
-[...]
-<plugin>
-<groupId>org.apache.maven.plugins</groupId>
-<artifactId>maven-surefire-plugin</artifactId>
-<version>2.22.1</version>
-<configuration>
-<groups>database,selenium-test</groups>
-</configuration>
-</plugin>
-[...]
+    [...]
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <version>2.22.1</version>
+        <configuration>
+          <groups>database,selenium-test</groups>
+        </configuration>
+      </plugin>
+    [...]
 </plugins>
 ```

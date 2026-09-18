@@ -41,9 +41,9 @@ Update the `pom.xml` file to include the latest version of the Extent Reporting 
 
 ```xml
 <dependency>
-<groupId>com.aventstack</groupId>
-<artifactId>extentreports</artifactId>
-<version>5.0.0</version>
+    <groupId>com.aventstack</groupId>
+    <artifactId>extentreports</artifactId>
+    <version>5.0.0</version>
 </dependency>
 ```
 
@@ -72,9 +72,9 @@ In the HyperExecute YAML configuration, add the following section to instruct th
 ```yaml
 report: true
 partialReports:
-type: json
-location: reports/json
-frameworkName: extent-native
+    type: json
+    location: reports/json
+    frameworkName: extent-native
 ```
 
 - Set `report: true` to enable report generation.

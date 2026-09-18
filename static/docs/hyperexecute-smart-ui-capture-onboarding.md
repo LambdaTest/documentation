@@ -168,21 +168,21 @@ Alternatively, create your URL file manually. Here's the structure:
 
 ```json title="urlTest.json"
 [
-{
-"name": "homepage",
-"url": "https://test.example.com/",
-"waitForTimeout": 5000
-},
-{
-"name": "about_page",
-"url": "https://test.example.com/about/",
-"waitForTimeout": 5000
-},
-{
-"name": "contact_page",
-"url": "https://test.example.com/contact/",
-"waitForTimeout": 5000
-}
+    {
+        "name": "homepage",
+        "url": "https://test.example.com/",
+        "waitForTimeout": 5000
+    },
+    {
+        "name": "about_page",
+        "url": "https://test.example.com/about/",
+        "waitForTimeout": 5000
+    },
+    {
+        "name": "contact_page",
+        "url": "https://test.example.com/contact/",
+        "waitForTimeout": 5000
+    }
 ]
 ```
 
@@ -208,16 +208,16 @@ For large test suites, you can split URLs into multiple files for better paralle
 
 ```json title="test/urls_test_1.json"
 [
-{
-"name": "product_category_feature_a",
-"url": "https://test.example.com/product-category/feature-a/",
-"waitForTimeout": 5000
-},
-{
-"name": "product_category_feature_b",
-"url": "https://test.example.com/product-category/feature-b/",
-"waitForTimeout": 5000
-}
+    {
+        "name": "product_category_feature_a",
+        "url": "https://test.example.com/product-category/feature-a/",
+        "waitForTimeout": 5000
+    },
+    {
+        "name": "product_category_feature_b",
+        "url": "https://test.example.com/product-category/feature-b/",
+        "waitForTimeout": 5000
+    }
 ]
 ```
 
@@ -237,31 +237,31 @@ Create `config.json` with your desired settings:
 
 ```json title="config.json"
 {
-"web": {
-"browsers": [
-"safari",
-"chrome"
-],
-"viewports": [
-[1367]
-]
-},
-"mobile": {
-"devices": [
-"iPhone 14",
-"iPad 10.2 (2021)",
-"Pixel 8"
-],
-"orientation": "portrait"
-},
-"cliEnableJavaScript": true,
-"lazyLoadConfiguration": {
-"enabled": true,
-"jumpBackToTop": true,
-"scrollDelay": 250,
-"scrollStep": 250
-},
-"waitForTimeout": 5000
+  "web": {
+    "browsers": [
+      "safari",
+      "chrome"
+    ],
+    "viewports": [
+      [1367]
+    ]
+  },
+  "mobile": {
+    "devices": [
+      "iPhone 14",
+      "iPad 10.2 (2021)",
+      "Pixel 8"
+    ],
+    "orientation": "portrait"
+  },
+  "cliEnableJavaScript": true,
+  "lazyLoadConfiguration": {
+    "enabled": true,
+    "jumpBackToTop": true,
+    "scrollDelay": 250,
+    "scrollStep": 250
+  },
+  "waitForTimeout": 5000
 }
 ```
 
@@ -311,22 +311,22 @@ maxRetries: 1
 concurrency: 1
 
 env:
-CACHE_DIR: node_modules_cache
-PROJECT_TOKEN: ${PROJECT_TOKEN}
+  CACHE_DIR: node_modules_cache
+  PROJECT_TOKEN: ${PROJECT_TOKEN}
 
 # Dependency caching
 cacheKey: '{{ checksum "package.json" }}'
 cacheDirectories:
-- ${CACHE_DIR}
+  - ${CACHE_DIR}
 
 pre:
-# Install SmartUI CLI and dependencies
-- npm install @lambdatest/smartui-cli@4.1.54-beta.0
-- npm install playwright@1.57.0
-- npx playwright install
+  # Install SmartUI CLI and dependencies
+  - npm install @lambdatest/smartui-cli@4.1.54-beta.0
+  - npm install playwright@1.57.0
+  - npx playwright install
 
 testSuites:
-- npx smartui capture urlTest.json --config config.json --buildName "Test-Release-v1.0"
+  - npx smartui capture urlTest.json --config config.json --buildName "Test-Release-v1.0"
 
 jobLabel: ['HYP', 'SmartUI', 'Capture']
 ```
@@ -350,23 +350,23 @@ maxRetries: 1
 concurrency: 3
 
 env:
-CACHE_DIR: node_modules_cache
-PROJECT_TOKEN: ${PROJECT_TOKEN}
+  CACHE_DIR: node_modules_cache
+  PROJECT_TOKEN: ${PROJECT_TOKEN}
 
 cacheKey: '{{ checksum "package.json" }}'
 cacheDirectories:
-- ${CACHE_DIR}
+  - ${CACHE_DIR}
 
 pre:
-- npm install @lambdatest/smartui-cli@4.1.54-beta.0
-- npm install playwright@1.57.0
-- npx playwright install
+  - npm install @lambdatest/smartui-cli@4.1.54-beta.0
+  - npm install playwright@1.57.0
+  - npx playwright install
 
 matrix:
-urlFile: ["urlTest.json", "urlProd.json"]
+  urlFile: ["urlTest.json", "urlProd.json"]
 
 testSuites:
-- npx smartui capture ${urlFile} --config config.json --buildName "Build-${urlFile}"
+  - npx smartui capture ${urlFile} --config config.json --buildName "Build-${urlFile}"
 
 jobLabel: ['HYP', 'SmartUI', 'Capture', 'Parallel']
 ```
@@ -526,9 +526,9 @@ For projects with many URLs, split them into multiple files:
 
 ```
 test/
-├── urls_test_1.json  (10 URLs)
-├── urls_test_2.json  (10 URLs)
-└── urls_test_3.json  (10 URLs)
+  ├── urls_test_1.json  (10 URLs)
+  ├── urls_test_2.json  (10 URLs)
+  └── urls_test_3.json  (10 URLs)
 ```
 
 This enables better parallel execution and easier management.
@@ -539,8 +539,8 @@ Use clear, descriptive names for your URLs:
 
 ```json
 {
-"name": "product_category_feature_a",
-"url": "https://example.com/product-category/feature-a/"
+  "name": "product_category_feature_a",
+  "url": "https://example.com/product-category/feature-a/"
 }
 ```
 
@@ -593,17 +593,17 @@ runson: win
 concurrency: 5
 
 env:
-PROJECT_TOKEN: ${PROJECT_TOKEN}
-SMART_GIT: true  # Enable Smart Git for branch management
+  PROJECT_TOKEN: ${PROJECT_TOKEN}
+  SMART_GIT: true  # Enable Smart Git for branch management
 
 pre:
-- npm install @lambdatest/smartui-cli@4.1.54-beta.0
+  - npm install @lambdatest/smartui-cli@4.1.54-beta.0
 
 matrix:
-section: ["section1_category_a", "section2_category_b", "section3_category_c", "section4_category_d", "section5_category_e"]
+  section: ["section1_category_a", "section2_category_b", "section3_category_c", "section4_category_d", "section5_category_e"]
 
 testSuites:
-- npx smartui capture sections/${section}.json --config config.json --buildName "${section}-Build"
+  - npx smartui capture sections/${section}.json --config config.json --buildName "${section}-Build"
 ```
 
 **Step 3: Use Branching for Organization**
@@ -677,9 +677,9 @@ project/
 │   ├── config.json
 │   └── hyperexecute_category_b.yaml
 └── category_c/
-├── urls_category_c.json
-├── config.json
-└── hyperexecute_category_c.yaml
+    ├── urls_category_c.json
+    ├── config.json
+    └── hyperexecute_category_c.yaml
 ```
 
 **Step 3: Configure Each Project Separately**
@@ -696,13 +696,13 @@ runson: win
 concurrency: 2
 
 env:
-PROJECT_TOKEN: ${PROJECT_TOKEN_CATEGORY_A}  # Unique token per project
+  PROJECT_TOKEN: ${PROJECT_TOKEN_CATEGORY_A}  # Unique token per project
 
 pre:
-- npm install @lambdatest/smartui-cli@4.1.54-beta.0
+  - npm install @lambdatest/smartui-cli@4.1.54-beta.0
 
 testSuites:
-- npx smartui capture urls_category_a.json --config config.json --buildName "CategoryA-Build"
+  - npx smartui capture urls_category_a.json --config config.json --buildName "CategoryA-Build"
 ```
 
 **Step 4: Execute Projects Independently**
@@ -795,9 +795,9 @@ Only test browsers that your users actually use:
 
 ```json
 {
-"web": {
-"browsers": ["chrome", "safari", "firefox"]
-}
+  "web": {
+    "browsers": ["chrome", "safari", "firefox"]
+  }
 }
 ```
 
@@ -809,11 +809,11 @@ Test realistic viewport sizes:
 
 ```json
 {
-"viewports": [
-[1920],    // Desktop
-[1366],    // Laptop
-[768]      // Tablet
-]
+  "viewports": [
+    [1920],    // Desktop
+    [1366],    // Laptop
+    [768]      // Tablet
+  ]
 }
 ```
 
@@ -825,7 +825,7 @@ Start with minimal timeouts and increase only when needed:
 
 ```json
 {
-"waitForTimeout": 2000  // Start low, increase if needed
+  "waitForTimeout": 2000  // Start low, increase if needed
 }
 ```
 
@@ -861,7 +861,7 @@ Cache node_modules to speed up subsequent runs:
 ```yaml
 cacheKey: '{{ checksum "package.json" }}'
 cacheDirectories:
-- node_modules_cache
+  - node_modules_cache
 ```
 
 This significantly reduces setup time.
@@ -931,9 +931,9 @@ npm --version
 1. Increase `waitForTimeout` in URL files:
 ```json
 {
-"name": "slow-page",
-"url": "https://example.com/",
-"waitForTimeout": 10000
+  "name": "slow-page",
+  "url": "https://example.com/",
+  "waitForTimeout": 10000
 }
 ```
 
@@ -1000,36 +1000,36 @@ Integrate SmartUI Capture with your CI/CD pipeline:
 name: SmartUI Capture Tests
 
 on:
-pull_request:
-branches: [main]
-workflow_dispatch:
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
 
 env:
-LT_USERNAME: ${{ secrets.LT_USERNAME }}
-LT_ACCESS_KEY: ${{ secrets.LT_ACCESS_KEY }}
-PROJECT_TOKEN: ${{ secrets.PROJECT_TOKEN }}
+  LT_USERNAME: ${{ secrets.LT_USERNAME }}
+  LT_ACCESS_KEY: ${{ secrets.LT_ACCESS_KEY }}
+  PROJECT_TOKEN: ${{ secrets.PROJECT_TOKEN }}
 
 jobs:
-smartui-capture:
-name: Execute SmartUI Capture
-runs-on: ubuntu-latest
-steps:
-- name: Checkout repo
-uses: actions/checkout@v2
+  smartui-capture:
+    name: Execute SmartUI Capture
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v2
 
-- name: Install Dependencies
-run: |
-npm install @lambdatest/smartui-cli@4.1.54-beta.0
-npm install playwright@1.57.0
-npx playwright install
+      - name: Install Dependencies
+        run: |
+          npm install @lambdatest/smartui-cli@4.1.54-beta.0
+          npm install playwright@1.57.0
+          npx playwright install
 
-- name: Run SmartUI Capture
-run: |
-npx smartui capture urlTest.json --config config.json --buildName "PR-${{ github.event.pull_request.number }}"
+      - name: Run SmartUI Capture
+        run: |
+          npx smartui capture urlTest.json --config config.json --buildName "PR-${{ github.event.pull_request.number }}"
 
-- name: Fetch Results
-run: |
-npx smartui capture urlTest.json --config config.json --fetch-results results.json
+      - name: Fetch Results
+        run: |
+          npx smartui capture urlTest.json --config config.json --fetch-results results.json
 ```
 
 ### Scheduled Test Runs
@@ -1046,7 +1046,7 @@ Use environment variables in build names:
 
 ```yaml
 testSuites:
-- npx smartui capture urlTest.json --config config.json --buildName "Build-${BUILD_NUMBER}"
+  - npx smartui capture urlTest.json --config config.json --buildName "Build-${BUILD_NUMBER}"
 ```
 
 ## Next Steps

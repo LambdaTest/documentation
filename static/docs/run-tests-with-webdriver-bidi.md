@@ -107,55 +107,55 @@ set LT_ACCESS_KEY=your_access_key
 import { remote } from 'webdriverio';
 
 async function run() {
-const browser = await remote({
-hostname: 'hub.lambdatest.com',
-port: 443,
-protocol: 'https',
-path: '/wd/hub',
-capabilities: {
-browserName: 'Chrome',
-browserVersion: 'latest',
-webSocketUrl: true, // enable WebDriver BiDi
-'LT:Options': {
-platformName: 'Windows 10',
-build: 'BiDi Web Automation',
-name: 'Product Listing',
-username: process.env.LT_USERNAME,
-accessKey: process.env.LT_ACCESS_KEY,
-w3c: true,
-},
-},
-});
+  const browser = await remote({
+    hostname: 'hub.lambdatest.com',
+    port: 443,
+    protocol: 'https',
+    path: '/wd/hub',
+    capabilities: {
+      browserName: 'Chrome',
+      browserVersion: 'latest',
+      webSocketUrl: true, // enable WebDriver BiDi
+      'LT:Options': {
+        platformName: 'Windows 10',
+        build: 'BiDi Web Automation',
+        name: 'Product Listing',
+        username: process.env.LT_USERNAME,
+        accessKey: process.env.LT_ACCESS_KEY,
+        w3c: true,
+      },
+    },
+  });
 
-try {
-await browser.url(
-'https://ecommerce-playground.lambdatest.io/index.php?route=product/category&path=25'
-);
+  try {
+    await browser.url(
+      'https://ecommerce-playground.lambdatest.io/index.php?route=product/category&path=25'
+    );
 
-// Action: capture a screenshot of the listing
-await browser.saveScreenshot('./components.png');
+    // Action: capture a screenshot of the listing
+    await browser.saveScreenshot('./components.png');
 
-// Validation: the category rendered its products
-const products = await browser.$$('.product-thumb');
-const title = await browser.getTitle();
-if (products.length === 0) throw new Error('No products found on the page');
+    // Validation: the category rendered its products
+    const products = await browser.$$('.product-thumb');
+    const title = await browser.getTitle();
+    if (products.length === 0) throw new Error('No products found on the page');
 
-console.log(`Passed: "${title}" loaded ${products.length} products, screenshot saved`);
+    console.log(`Passed: "${title}" loaded ${products.length} products, screenshot saved`);
 
-// Mark the test as passed on the TestMu AI dashboard
-await browser.executeScript('lambda-status=passed', []);
-} catch (e) {
-// Mark the test as failed so the dashboard reflects the real outcome
-await browser.executeScript('lambda-status=failed', []);
-throw e;
-} finally {
-await browser.deleteSession();
-}
+    // Mark the test as passed on the TestMu AI dashboard
+    await browser.executeScript('lambda-status=passed', []);
+  } catch (e) {
+    // Mark the test as failed so the dashboard reflects the real outcome
+    await browser.executeScript('lambda-status=failed', []);
+    throw e;
+  } finally {
+    await browser.deleteSession();
+  }
 }
 
 run().catch((e) => {
-console.error('Run failed:', e.message);
-process.exit(1);
+  console.error('Run failed:', e.message);
+  process.exit(1);
 });
 ```
 
@@ -186,56 +186,56 @@ Here the agent watches network responses to confirm the page loaded its resource
 import { remote } from 'webdriverio';
 
 async function run() {
-const browser = await remote({
-hostname: 'hub.lambdatest.com',
-port: 443,
-protocol: 'https',
-path: '/wd/hub',
-capabilities: {
-browserName: 'Chrome',
-browserVersion: 'latest',
-webSocketUrl: true,
-'LT:Options': {
-platformName: 'Windows 10',
-build: 'BiDi Web Automation',
-name: 'Agent Event Monitor',
-username: process.env.LT_USERNAME,
-accessKey: process.env.LT_ACCESS_KEY,
-w3c: true,
-},
-},
-});
+  const browser = await remote({
+    hostname: 'hub.lambdatest.com',
+    port: 443,
+    protocol: 'https',
+    path: '/wd/hub',
+    capabilities: {
+      browserName: 'Chrome',
+      browserVersion: 'latest',
+      webSocketUrl: true,
+      'LT:Options': {
+        platformName: 'Windows 10',
+        build: 'BiDi Web Automation',
+        name: 'Agent Event Monitor',
+        username: process.env.LT_USERNAME,
+        accessKey: process.env.LT_ACCESS_KEY,
+        w3c: true,
+      },
+    },
+  });
 
-let responses = 0;
-try {
-// Subscribe to BiDi network events so the agent sees the browser's real activity
-await browser.sessionSubscribe({ events: ['network.responseCompleted'] });
-browser.on('network.responseCompleted', () => {
-responses += 1;
-});
+  let responses = 0;
+  try {
+    // Subscribe to BiDi network events so the agent sees the browser's real activity
+    await browser.sessionSubscribe({ events: ['network.responseCompleted'] });
+    browser.on('network.responseCompleted', () => {
+      responses += 1;
+    });
 
-await browser.url(
-'https://ecommerce-playground.lambdatest.io/index.php?route=product/category&path=25'
-);
-await browser.pause(3000);
+    await browser.url(
+      'https://ecommerce-playground.lambdatest.io/index.php?route=product/category&path=25'
+    );
+    await browser.pause(3000);
 
-if (responses === 0) throw new Error('No network responses observed');
-console.log(`Validated: the page issued ${responses} network responses over BiDi`);
+    if (responses === 0) throw new Error('No network responses observed');
+    console.log(`Validated: the page issued ${responses} network responses over BiDi`);
 
-// Mark the test as passed on the TestMu AI dashboard
-await browser.executeScript('lambda-status=passed', []);
-} catch (e) {
-// Mark the test as failed so the dashboard reflects the real outcome
-await browser.executeScript('lambda-status=failed', []);
-throw e;
-} finally {
-await browser.deleteSession();
-}
+    // Mark the test as passed on the TestMu AI dashboard
+    await browser.executeScript('lambda-status=passed', []);
+  } catch (e) {
+    // Mark the test as failed so the dashboard reflects the real outcome
+    await browser.executeScript('lambda-status=failed', []);
+    throw e;
+  } finally {
+    await browser.deleteSession();
+  }
 }
 
 run().catch((e) => {
-console.error('Run failed:', e.message);
-process.exit(1);
+  console.error('Run failed:', e.message);
+  process.exit(1);
 });
 ```
 

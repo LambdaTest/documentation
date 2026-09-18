@@ -50,8 +50,8 @@ capabilities.setCapability("network.mask", "true");
 
 ```python
 capabilities = {
-"network.mask": "true"
-# Add other capabilities as needed
+    "network.mask": "true"
+    # Add other capabilities as needed
 }
 ```
 
@@ -59,8 +59,8 @@ capabilities = {
 
 ```javascript
 const capabilities = {
-"network.mask": "true"
-// Add other capabilities as needed
+    "network.mask": "true"
+    // Add other capabilities as needed
 };
 ```
 

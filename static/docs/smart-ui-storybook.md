@@ -50,10 +50,10 @@ Add the following to your .storybook/main.js. You can read more about this here 
 
 ```js
 module.exports = {
-features: {
-// Required for Storybook < v9
-buildStoriesJson: true,
-},
+  features: {
+    // Required for Storybook < v9
+    buildStoriesJson: true,
+  },
 };
 ```
 
@@ -68,19 +68,19 @@ SmartUI supports Storybook's `play` function (available in Storybook v9+) for in
 ```js title="Button.stories.js"
 
 export default {
-title: 'Components/Button',
-component: Button,
+  title: 'Components/Button',
+  component: Button,
 };
 
 export const InteractiveButton = {
-play: async ({ canvasElement }) => {
-const canvas = within(canvasElement);
-const button = canvas.getByRole('button', { name: /click me/i });
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+    const button = canvas.getByRole('button', { name: /click me/i });
 
-// Interact with the button before screenshot
-await userEvent.click(button);
-await expect(button).toHaveTextContent('Clicked!');
-},
+    // Interact with the button before screenshot
+    await userEvent.click(button);
+    await expect(button).toHaveTextContent('Clicked!');
+  },
 };
 ```
 
@@ -99,13 +99,13 @@ SmartUI supports Storybook's global decorators and parameters, including theme s
 
 ```json title=".smartui.json"
 {
-"storybook": {
-"browsers": ["chrome", "firefox", "safari", "edge"],
-"viewports": [[1920, 1080]],
-"backgroundTheme": "light",  // Options: "light", "dark", or "both"
-"useGlobals": true,  // Enable global decorators and parameters
-"waitForTimeout": 0
-}
+  "storybook": {
+    "browsers": ["chrome", "firefox", "safari", "edge"],
+    "viewports": [[1920, 1080]],
+    "backgroundTheme": "light",  // Options: "light", "dark", or "both"
+    "useGlobals": true,  // Enable global decorators and parameters
+    "waitForTimeout": 0
+  }
 }
 ```
 
@@ -119,42 +119,42 @@ SmartUI supports Storybook's global decorators and parameters, including theme s
 
 ```js title="Card.stories.js"
 export default {
-title: 'Components/Card',
-component: Card,
-parameters: {
-backgrounds: {
-default: 'light',
-values: [
-{ name: 'light', value: '#ffffff' },
-{ name: 'dark', value: '#1a1a1a' },
-],
-},
-},
-globalTypes: {
-theme: {
-description: 'Global theme for components',
-defaultValue: 'light',
-toolbar: {
-title: 'Theme',
-icon: 'circlehollow',
-items: ['light', 'dark'],
-dynamicTitle: true,
-},
-},
-},
+  title: 'Components/Card',
+  component: Card,
+  parameters: {
+    backgrounds: {
+      default: 'light',
+      values: [
+        { name: 'light', value: '#ffffff' },
+        { name: 'dark', value: '#1a1a1a' },
+      ],
+    },
+  },
+  globalTypes: {
+    theme: {
+      description: 'Global theme for components',
+      defaultValue: 'light',
+      toolbar: {
+        title: 'Theme',
+        icon: 'circlehollow',
+        items: ['light', 'dark'],
+        dynamicTitle: true,
+      },
+    },
+  },
 };
 
 export const Default = {
-decorators: [
-(Story, context) => {
-const theme = context.globals.theme || 'light';
-return (
-<div className={`theme-${theme}`}>
-<Story />
-</div>
-);
-},
-],
+  decorators: [
+    (Story, context) => {
+      const theme = context.globals.theme || 'light';
+      return (
+        <div className={`theme-${theme}`}>
+          <Story />
+        </div>
+      );
+    },
+  ],
 };
 ```
 
@@ -206,21 +206,21 @@ Once, the configuration file will be created, you will be seeing the default con
 
 ```json title="/smartUi-storybook-project/smartui.json"
 {
-"storybook": {
-"browsers": [
-"chrome",
-"firefox",
-"safari",
-"edge",
-// Add more browser configuration here
-],
-"viewports": [
-[1920, 1080]        // Add more view ports to capture here
-],
-"waitForTimeout": 0, // (Optional) Add wait time for the page to load
-"include": [],       // (Optional) Only compare limited stories
-"exclude": []        // (Optional) Don't compare the stories // Apply exclusions/inclusions at directory, sub-directory, or individual story level
-}
+  "storybook": {
+    "browsers": [
+      "chrome",
+      "firefox",
+      "safari",
+      "edge",
+      // Add more browser configuration here
+    ],
+    "viewports": [
+      [1920, 1080]        // Add more view ports to capture here
+    ],
+    "waitForTimeout": 0, // (Optional) Add wait time for the page to load
+    "include": [],       // (Optional) Only compare limited stories
+    "exclude": []        // (Optional) Don't compare the stories // Apply exclusions/inclusions at directory, sub-directory, or individual story level
+  }
 }
 ```
 
@@ -251,8 +251,8 @@ For capturing the stories in **full page** without limiting the height to the vi
 
 ```json
 "viewports": [
-[1920],  // Only mention the width of the viewport
-[1440]
+  [1920],  // Only mention the width of the viewport
+  [1440]
 ]
 ```
 
@@ -267,41 +267,41 @@ To configure custom viewports for your stories, you can update the `.smartui.jso
 ...
 ...
 "customViewports": [
-{
-"stories": [
-"<name of the stories/components>"
-],
-{
-"styles": {
-"width": 322,
-"height": 321
-},
-"exclude": [ // Example: Excluding stories for a specific viewport
-"/directory1",
-"/directory2/subdirectory1",
-"/directory2/subdirectory2",
-"/directory3/subdirectory3/item1",
-]
-},
-},
-{
-"stories": [
-"<name of the stories/components>"
-],
-"styles": {
-"width": 834, //Tablet view
-"height": 1112
-},
-"waitForTimeout": 4000 //Story-level waitForTimeout (Applied to all the combinations of the mentioned stories)
-}
-{
-"stories": [
-"<name of the stories/components>"
-],
-"waitForTimeout": 3000 //Story-level waitForTimeout (Applied to all the combinations of the mentioned stories)
-}
-}
-// Additional custom viewport configurations can be added here
+      {
+        "stories": [
+          "<name of the stories/components>"
+        ],
+      {
+        "styles": {
+            "width": 322,
+            "height": 321
+          },
+        "exclude": [ // Example: Excluding stories for a specific viewport
+          "/directory1",
+          "/directory2/subdirectory1",
+          "/directory2/subdirectory2",
+          "/directory3/subdirectory3/item1",
+        ]
+      },
+      },
+      {
+        "stories": [
+          "<name of the stories/components>"
+        ],
+        "styles": {
+          "width": 834, //Tablet view
+          "height": 1112
+        },
+        "waitForTimeout": 4000 //Story-level waitForTimeout (Applied to all the combinations of the mentioned stories)
+      }
+      {
+        "stories": [
+          "<name of the stories/components>"
+        ],
+        "waitForTimeout": 3000 //Story-level waitForTimeout (Applied to all the combinations of the mentioned stories)
+        }
+      }
+      // Additional custom viewport configurations can be added here
 ]
 ...
 ...
@@ -336,21 +336,21 @@ If you are using the Continuous Integration (CI) pipeline for your application a
 
 ```yaml
 steps:
-- name: Running SmartUI StoryBook Tests
-run: |
-npm i
-npm install @lambdatest/smartui-storybook -g
-npm run build-storybook
-smartui storybook ./storybook-static --config .smartui.json
+  - name: Running SmartUI StoryBook Tests
+    run: |
+      npm i
+      npm install @lambdatest/smartui-storybook -g
+      npm run build-storybook
+      smartui storybook ./storybook-static --config .smartui.json
 ```
 
 ```yaml
 steps:
-- name: Running SmartUI StoryBook Tests
-run: |
-npm i
-npm install @lambdatest/smartui-storybook -g
-smartui storybook https://<replace_with_your_url> --config .smartui.json
+  - name: Running SmartUI StoryBook Tests
+    run: |
+      npm i
+      npm install @lambdatest/smartui-storybook -g
+      smartui storybook https://<replace_with_your_url> --config .smartui.json
 ```
 
 #### CLI Options and Keys
@@ -383,8 +383,8 @@ Check Story Inclusion/Exclusion
 Validate Configuration
 
 ```bash
-cat .smartui.json | python -m json.tool
-```
+   cat .smartui.json | python -m json.tool
+   ```
    Ensure JSON is valid and configuration is correct
 **Symptoms**:
 - Play functions not executing
@@ -394,12 +394,12 @@ cat .smartui.json | python -m json.tool
 Increase Wait Timeout
 
 ```json
-{
-"storybook": {
-"waitForTimeout": 3000  // Increase if play functions need more time
-}
-}
-```
+   {
+     "storybook": {
+       "waitForTimeout": 3000  // Increase if play functions need more time
+     }
+   }
+   ```
 
 Check Play Function Syntax
 
@@ -414,12 +414,12 @@ Check Play Function Syntax
 Verify useGlobals Setting
 
 ```json
-{
-"storybook": {
-"useGlobals": true  // Must be true to use globals
-}
-}
-```
+   {
+     "storybook": {
+       "useGlobals": true  // Must be true to use globals
+     }
+   }
+   ```
 
 Check Storybook Version
 

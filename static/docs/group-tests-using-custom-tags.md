@@ -13,23 +13,23 @@ You can create a custom tag while writing your Selenium automation tests. When y
 *   Create a String array that contains the names of your custom tags, separated by a comma.
 
 ```javascript
-// In case for just 1 tag, just add 1 element in the array
-String[] customTags = {"Custom Tag"};
+        // In case for just 1 tag, just add 1 element in the array
+        String[] customTags = {"Custom Tag"};
 
-// In case for multiple tags, add them in the array separated by comma
-String[] customTags = {"Tag 1", "Tag 2", "Tag 3", ...};
+        // In case for multiple tags, add them in the array separated by comma
+        String[] customTags = {"Tag 1", "Tag 2", "Tag 3", ...};
 ```
 
 *   Now add this custom tag in your Desired Capabilities instance:
 
 ```javascript
-DesiredCapabilities caps = new DesiredCapabilities();
-.
-.
+        DesiredCapabilities caps = new DesiredCapabilities();
+        .
+        .
 
-// To create custom tags
-caps.setCapability("tags", customTags);
-```
+        // To create custom tags
+        caps.setCapability("tags", customTags);
+  ```
 *For example:*
 
 You have successfully created the custom tags. Let us now see how to view and group tests based on custom tags.

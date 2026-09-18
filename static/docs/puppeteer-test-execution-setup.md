@@ -82,44 +82,44 @@ const puppeteer = require('puppeteer');
 const expect = require('chai').expect;
 
 (async () => {
-const capabilities = {
-'browserName': 'Chrome',
-'browserVersion': 'latest',
-'LT:Options': {
-'platform': 'Windows 10',
-'build': 'puppeteer-build-1',
-'name': 'My first Puppeteer test',
-'resolution':'1366x768',
-'user': process.env.LT_USERNAME || "LT_USERNAME",
-'accessKey': process.env.LT_ACCESS_KEY || "LT_ACCESS_KEY",
-'network': true
-}
-};
+    const capabilities = {
+        'browserName': 'Chrome',
+        'browserVersion': 'latest',
+        'LT:Options': {
+            'platform': 'Windows 10',
+            'build': 'puppeteer-build-1',
+            'name': 'My first Puppeteer test',
+            'resolution':'1366x768',
+            'user': process.env.LT_USERNAME || "LT_USERNAME",
+            'accessKey': process.env.LT_ACCESS_KEY || "LT_ACCESS_KEY",
+            'network': true
+        }
+   };
 
-try {
-const browser = await puppeteer.connect({
-browserWSEndpoint:
-`wss://cdp.lambdatest.com/puppeteer?capabilities=${encodeURIComponent(JSON.stringify(capabilities))}`,
-});
+    try {
+        const browser = await puppeteer.connect({
+            browserWSEndpoint:
+                `wss://cdp.lambdatest.com/puppeteer?capabilities=${encodeURIComponent(JSON.stringify(capabilities))}`,
+        });
 
-const page = await browser.newPage();
-await page.setViewport({
-width: 1024,
-height: 768,
-deviceScaleFactor: 1,
-});
-console.log("Navigating to LambdaTest");
-await page.goto('https://www.lambdatest.com/');
-console.log("Navigating to Pricing");
-await page.goto('https://www.lambdatest.com/pricing');
-console.log("Navigating to Automation");
-await page.goto('https://www.lambdatest.com/automation-testing');
-console.log("Closing browser");
-await browser.close();
+        const page = await browser.newPage();
+        await page.setViewport({
+            width: 1024,
+            height: 768,
+            deviceScaleFactor: 1,
+          });
+        console.log("Navigating to LambdaTest");
+        await page.goto('https://www.lambdatest.com/');
+        console.log("Navigating to Pricing");
+        await page.goto('https://www.lambdatest.com/pricing');
+        console.log("Navigating to Automation");
+        await page.goto('https://www.lambdatest.com/automation-testing');
+        console.log("Closing browser");
+        await browser.close();
 
-} catch (e) {
-console.log("Error - ", e);
-}
+    } catch (e) {
+        console.log("Error - ", e);
+    }
 })();
 ```
 
@@ -136,30 +136,30 @@ Upon executing the script, you will get the details for the particular test sess
 
 ```js
 {
-data: {
-test_id: 'RWA9R-AC4V8-GJRET-YHBO2',
-build_id: 9415381,
-name: 'Puppeteer Sample Test',
-user_id: 1001150,
-username: 'newuser',
-test_type: 'puppeteer',
-platform: 'win10',
-browser: 'Chrome',
-browser_version: '107.0',
-status_ind: 'running',
-session_id: 'RWA9R-AC4V8-GJRET-YHBO2',
-build_name: 'Puppeteer Sample Build',
-create_timestamp: '2022-12-07 10:53:16',
-start_timestamp: '2022-12-07 10:53:16',
-remark: 'running',
-console_logs_url: 'https://api.lambdatest.com/automation/api/v1/sessions/RWA9R-AC4V8-GJRET-YHBO2/log/console',
-network_logs_url: 'https://api.lambdatest.com/automation/api/v1/sessions/RWA9R-AC4V8-GJRET-YHBO2/log/network',
-command_logs_url: 'https://api.lambdatest.com/automation/api/v1/sessions/RWA9R-AC4V8-GJRET-YHBO2/log/command',
-video_url: 'https://automation.lambdatest.com/public/video?testID=RWA9R-AC4V8-GJRET-YHBO2&auth=50471585dd55293d204fe87f63400f5f',
-screenshot_url: 'https://video-bundler.lambdatest.com/RWA9R-AC4V8-GJRET-YHBO2/screenshots.zip?orgId=588659&createTimestamp=1670410396&testCreateTimestamp=2022-12-07%2010:53:16'
-},
-message: 'Retrieve session was successful',
-status: 'success'
+  data: {
+    test_id: 'RWA9R-AC4V8-GJRET-YHBO2',
+    build_id: 9415381,
+    name: 'Puppeteer Sample Test',
+    user_id: 1001150,
+    username: 'newuser',
+    test_type: 'puppeteer',
+    platform: 'win10',
+    browser: 'Chrome',
+    browser_version: '107.0',
+    status_ind: 'running',
+    session_id: 'RWA9R-AC4V8-GJRET-YHBO2',
+    build_name: 'Puppeteer Sample Build',
+    create_timestamp: '2022-12-07 10:53:16',
+    start_timestamp: '2022-12-07 10:53:16',
+    remark: 'running',
+    console_logs_url: 'https://api.lambdatest.com/automation/api/v1/sessions/RWA9R-AC4V8-GJRET-YHBO2/log/console',
+    network_logs_url: 'https://api.lambdatest.com/automation/api/v1/sessions/RWA9R-AC4V8-GJRET-YHBO2/log/network',
+    command_logs_url: 'https://api.lambdatest.com/automation/api/v1/sessions/RWA9R-AC4V8-GJRET-YHBO2/log/command',
+    video_url: 'https://automation.lambdatest.com/public/video?testID=RWA9R-AC4V8-GJRET-YHBO2&auth=50471585dd55293d204fe87f63400f5f',
+    screenshot_url: 'https://video-bundler.lambdatest.com/RWA9R-AC4V8-GJRET-YHBO2/screenshots.zip?orgId=588659&createTimestamp=1670410396&testCreateTimestamp=2022-12-07%2010:53:16'
+  },
+  message: 'Retrieve session was successful',
+  status: 'success'
 }
 ```
 
@@ -178,10 +178,10 @@ If you wish to modify the browser window size during your Puppeteer test, you ca
 ```js
 
 await page.setViewport({
-width: 1024,
-height: 768,
-deviceScaleFactor: 1,
-});
+            width: 1024,
+            height: 768,
+            deviceScaleFactor: 1,
+          });
 ```
 
 ## Naming your Project

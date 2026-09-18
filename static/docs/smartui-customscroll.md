@@ -123,8 +123,8 @@ await page.waitForSelector('.pageContent-scrollbar-content');
 await page.waitForTimeout(1500);
 
 await smartuiSnapshot(page, 'Vault-PDF-Page-25', {
-elementsCustomScroll: true,
-pageCustomScroll: false,
+  elementsCustomScroll: true,
+  pageCustomScroll: false,
 });
 ```
 
@@ -143,8 +143,8 @@ You can keep standard screenshots unchanged and enable CustomScroll only for scr
 await smartuiSnapshot(page, 'Header');
 
 await smartuiSnapshot(page, 'Doc-Viewer-Page-25', {
-pageCustomScroll: true,
-elementsCustomScroll: true,
+  pageCustomScroll: true,
+  elementsCustomScroll: true,
 });
 
 await smartuiSnapshot(page, 'Footer');
@@ -169,7 +169,7 @@ Recommended option:
 
 ```javascript
 {
-elementsCustomScroll: true
+  elementsCustomScroll: true
 }
 ```
 
@@ -177,8 +177,8 @@ Use both options if the page and viewer can both scroll:
 
 ```javascript
 {
-pageCustomScroll: true,
-elementsCustomScroll: true
+  pageCustomScroll: true,
+  elementsCustomScroll: true
 }
 ```
 
@@ -199,7 +199,7 @@ Recommended option:
 
 ```javascript
 {
-elementsCustomScroll: true
+  elementsCustomScroll: true
 }
 ```
 
@@ -219,7 +219,7 @@ Recommended option:
 
 ```javascript
 {
-elementsCustomScroll: true
+  elementsCustomScroll: true
 }
 ```
 

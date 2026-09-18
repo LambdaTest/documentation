@@ -56,20 +56,20 @@ RESULTS_DIR=$(mktemp -d)
 
 # Start all tests in background
 kane-cli run "Log in and verify dashboard" \
---url https://myapp.com --agent --headless --timeout 120 \
-> "$RESULTS_DIR/test1.ndjson" 2>&1 &
+  --url https://myapp.com --agent --headless --timeout 120 \
+  > "$RESULTS_DIR/test1.ndjson" 2>&1 &
 
 kane-cli run "Search for products and verify results" \
---url https://myapp.com --agent --headless --timeout 120 \
-> "$RESULTS_DIR/test2.ndjson" 2>&1 &
+  --url https://myapp.com --agent --headless --timeout 120 \
+  > "$RESULTS_DIR/test2.ndjson" 2>&1 &
 
 kane-cli run "Complete checkout and confirm order" \
---url https://myapp.com --agent --headless --timeout 120 \
-> "$RESULTS_DIR/test3.ndjson" 2>&1 &
+  --url https://myapp.com --agent --headless --timeout 120 \
+  > "$RESULTS_DIR/test3.ndjson" 2>&1 &
 
 kane-cli run "Verify admin user management page" \
---url https://myapp.com --agent --headless --timeout 120 \
-> "$RESULTS_DIR/test4.ndjson" 2>&1 &
+  --url https://myapp.com --agent --headless --timeout 120 \
+  > "$RESULTS_DIR/test4.ndjson" 2>&1 &
 
 # Wait for all to finish
 wait
@@ -81,12 +81,12 @@ echo "|---|------|--------|-------|------|---------|"
 
 i=1
 for f in "$RESULTS_DIR"/test*.ndjson; do
-result=$(tail -1 "$f")
-status=$(echo "$result" | jq -r '.status')
-duration=$(echo "$result" | jq -r '.duration')
-summary=$(echo "$result" | jq -r '.one_liner')
-echo "| $i | $(basename $f .ndjson) | $status | - | ${duration}s | $summary |"
-((i++))
+  result=$(tail -1 "$f")
+  status=$(echo "$result" | jq -r '.status')
+  duration=$(echo "$result" | jq -r '.duration')
+  summary=$(echo "$result" | jq -r '.one_liner')
+  echo "| $i | $(basename $f .ndjson) | $status | - | ${duration}s | $summary |"
+  ((i++))
 done
 
 rm -rf "$RESULTS_DIR"
@@ -121,7 +121,7 @@ For AI coding agents (Claude Code, Codex CLI, Gemini CLI), use the agent's paral
 ```
 Run this Kane CLI browser test and report the results:
 
-kane-cli run "<objective>" --agent --headless --timeout 120
+    kane-cli run "<objective>" --agent --headless --timeout 120
 
 After the command completes:
 1. Capture the exit code

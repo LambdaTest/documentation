@@ -21,7 +21,7 @@ Do not run untrusted pull-request hook scripts with repository secrets. Use a re
 
 ```bash
 curl -fsSL https://raw.githubusercontent.com/LambdaTest/rook/main/install.sh \
-| bash -s -- --version 0.1.3 --dir "$RUNNER_TEMP/rook-bin"
+  | bash -s -- --version 0.1.3 --dir "$RUNNER_TEMP/rook-bin"
 export PATH="$RUNNER_TEMP/rook-bin:$PATH"
 rook --version
 ```
@@ -67,8 +67,8 @@ Unattended commands cannot answer permission prompts. Use the exact rule Rook re
 
 ```bash
 rook run --only SC-001,SC-004,SC-014 \
---profile staging --concurrency 1 --name release-gate \
---allow '<exact-reviewed-rule>' --json > rook-run.json
+  --profile staging --concurrency 1 --name release-gate \
+  --allow '<exact-reviewed-rule>' --json > rook-run.json
 ```
 
 Replace the rule placeholder with the actual tool-and-target rule for your hook. Repeat --allow if several operations are required. HTTP, command, and MCP integrations do not necessarily request the same rule.
@@ -93,23 +93,23 @@ const totals = result.report?.totals;
 const expected = 3; // Must match the reviewed --only list.
 
 const complete =
-result.ok === true &&
-typeof result.run_id === 'string' &&
-result.halted === false &&
-!result.discarded &&
-totals?.planned === expected &&
-totals.executed === expected &&
-totals.decided === expected &&
-totals.passed === expected &&
-totals.failed === 0 &&
-totals.unverifiable === 0 &&
-totals.unjudged === 0 &&
-totals.not_run === 0 &&
-totals.unrunnable === 0;
+  result.ok === true &&
+  typeof result.run_id === 'string' &&
+  result.halted === false &&
+  !result.discarded &&
+  totals?.planned === expected &&
+  totals.executed === expected &&
+  totals.decided === expected &&
+  totals.passed === expected &&
+  totals.failed === 0 &&
+  totals.unverifiable === 0 &&
+  totals.unjudged === 0 &&
+  totals.not_run === 0 &&
+  totals.unrunnable === 0;
 
 if (!complete) {
-console.error('Rook gate failed: incomplete, failed, or unverifiable suite.');
-process.exit(1);
+  console.error('Rook gate failed: incomplete, failed, or unverifiable suite.');
+  process.exit(1);
 }
 console.log('Rook gate passed for the selected suite.');
 ```

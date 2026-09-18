@@ -28,7 +28,7 @@ To resolve this issue, you need to pass the below mentioned command in the pre s
 
 ```bash
 pre:
-- npx install playwright
+  - npx install playwright
 ```
 
 ## .Net Build Issue in C#
@@ -84,7 +84,7 @@ If you incorporate any npm registry related error in the **Pre** stage, then pas
 
 ```bash
 pre:
-- npm config set registry <artifactory_URL>
+  - npm config set registry <artifactory_URL>
 ```
 
 ## Incompatible Node Version
@@ -99,8 +99,8 @@ To resolve this, simply pass the below mentioned command in your YAML file
 
 ```bash
 runtime:
-language: node
-version: "15"
+  language: node
+  version: "15"
 ```
 
 ## Java version Conflict
@@ -116,6 +116,6 @@ To rectify this, you need to simply pass the **runtime** flag with the correct j
 
 ```bash
 runtime:
-language: java
-version: "11"
+  language: java
+  version: "11"
 ```
