@@ -183,13 +183,11 @@ Each project has two sharing settings, one for each direction:
 
 To change them:
 
-1. Open the project in Test Manager and go to the project's **Settings**.
-2. Open the test case sharing settings.
-3. Turn each setting on or off.
+1. Open the project in Test Manager and go to the **Settings** tab.
+2. Select **Test Cases Sharing**.
+3. Turn each setting on or off, then save the change.
 
-<!-- screenshot: project settings showing the share out and receive in sharing settings
 <img loading="lazy" src={require('../assets/images/test-manager/test-cases/share/project-sharing-settings.png').default} alt="Project settings for sharing test cases with other projects and receiving test cases from other projects" className="doc_img"/>
--->
 
 :::note
 You can't turn a setting off while shares exist in that direction. To turn off sharing out, first unshare every test case this project shares with other projects. To turn off receiving, first remove this project's access to every test case shared into it. The two directions are checked separately, so test cases shared into a project don't stop you from turning off sharing out.
@@ -214,11 +212,9 @@ You can't turn a setting off while shares exist in that direction. To turn off s
    <img loading="lazy" src={require('../assets/images/test-manager/test-cases/share/share-dialog-targets.png').default} alt="Selecting the projects to share test cases with" className="doc_img"/>
    -->
 
-4. Optionally, for each selected project, add the test cases to a folder in that project. You can choose one folder per project. If you don't choose a folder, the test cases are still available in that project under **Shared Incoming** and in its test case list.
+4. Optionally, for each selected project, add the test cases to a folder in that project. That adds a shortcut to the folder, and you can choose one folder per project. If you don't choose a folder, the test cases are still available in that project under **Shared Incoming**.
 
-   <!-- screenshot: choosing a folder in the receiving project
    <img loading="lazy" src={require('../assets/images/test-manager/test-cases/share/share-dialog-folder.png').default} alt="Choosing a folder in the receiving project for the shared test cases" className="doc_img"/>
-   -->
 
 5. Review the summary and confirm.
 
@@ -252,9 +248,7 @@ If some of the test cases you select are already shared with a project and some 
 | **Share all** | All selected test cases are shared, and test cases already shared are moved into the folder you choose. If you don't choose a folder, they are removed from the folders they were in |
 | **Remove for all** | Every selected test case is unshared from that project |
 
-<!-- screenshot: options for a project where some selected test cases are already shared
 <img loading="lazy" src={require('../assets/images/test-manager/test-cases/share/reshare-options.png').default} alt="Options for a receiving project where some of the selected test cases are already shared" className="doc_img"/>
--->
 
 :::warning
 **Share all** reorganizes the receiving project's folders without asking that project's team. **Remove for all** is an unshare, and permanently removes that project's test instances and results for those test cases. See [Unshare test cases](#unshare-test-cases).
@@ -274,11 +268,9 @@ In the receiving project's **Test Cases** tab:
 - **All Test Cases** also includes shared test cases, and they can be found by title and ID in search.
 - A folder includes the shared test cases added to it.
 
-Every shared test case shows its **source project and folder path**, wherever it is listed or opened. This helps you tell apart test cases with similar titles. The path always reflects where the test case currently is in the source project, so it updates if the source project renames or moves the folder. If you have access to the source project, the path opens the test case's folder there.
+Every shared test case names the **project it is shared from**, wherever it is listed or opened. This helps you tell apart test cases with similar titles. If you have access to the source project, you can open the test case there from its summary.
 
-<!-- screenshot: Shared Incoming in a receiving project
 <img loading="lazy" src={require('../assets/images/test-manager/test-cases/share/shared-incoming.png').default} alt="Shared Incoming list in the receiving project with the source project and folder path of each test case" className="doc_img"/>
--->
 
 ### Add shared test cases to a folder
 
@@ -288,20 +280,18 @@ Removing a shared test case from a folder does not remove the project's access t
 
 ### Shared test cases are read-only
 
-In a receiving project, a shared test case can't be edited. This applies to its details, fields, and steps, and to every role, including project and organization admins. The test case summary names the source project where it is maintained.
+In a receiving project, a shared test case can't be edited. This applies to its details, fields, and steps, and to every role, including project and organization admins. The test case summary opens in view-only mode and names the source project it is shared from, with a link to open it there.
 
 To change a shared test case, edit it in its source project. The change reaches every project it is shared with.
 
-<!-- screenshot: shared test case summary in a receiving project
 <img loading="lazy" src={require('../assets/images/test-manager/test-cases/share/shared-case-readonly.png').default} alt="Read-only summary of a shared test case in a receiving project, naming its source project" className="doc_img"/>
--->
 
 Bulk actions that change test cases, such as bulk update, move to folder, change status, and delete, skip shared test cases in a mixed selection and report how many were skipped. Actions that don't change test cases, such as search, sort, filter, and adding to a test run, include them.
 
 ### Counts
 
-- The test case count of a receiving project, including the **Test Cases** tab count and **All Test Cases**, includes shared test cases. **Shared Incoming** shows its own count, so you can see how many of the total are shared in.
-- **Test Run Insights** counts only test cases the project owns. Shared test cases are not included there.
+- **Shared Incoming** carries its own count, separate from the project's folders, so you can see how many test cases are shared into the project.
+- **Test Run Insights** covers only test cases the project owns. Shared test cases are not included there.
 
 ---
 
@@ -312,9 +302,7 @@ When you create a test run or add test cases to an existing test run in a receiv
 - Select **Shared Incoming** to see the test cases shared into the project, or filter by source project.
 - Select shared test cases that are in a folder from that folder.
 
-<!-- screenshot: selecting shared test cases for a test run
 <img loading="lazy" src={require('../assets/images/test-manager/test-cases/share/add-shared-to-run.png').default} alt="Selecting shared test cases when adding test cases to a test run" className="doc_img"/>
--->
 
 Test runs, test instances, and results belong to the project that created them. If two projects run the same shared test case, neither project sees the other's results, and the source project does not see either.
 
@@ -345,11 +333,9 @@ A share can be removed from either side:
 - **From the source project:** unshare a test case from one or more receiving projects. Unsharing from one project does not affect the others.
 - **From a receiving project:** remove the project's access to a shared test case, one at a time or in bulk.
 
-The confirmation shows the test instances and test runs in the receiving project that will be affected.
+The confirmation names the test case and states that it is removed from the project along with any folder shortcuts, that test runs using it can fail afterwards, and that getting it back takes a new share from the source project.
 
-<!-- screenshot: unshare confirmation
 <img loading="lazy" src={require('../assets/images/test-manager/test-cases/share/unshare-confirm.png').default} alt="Confirmation before unsharing a test case, showing the affected test runs" className="doc_img"/>
--->
 
 :::danger
 Unsharing permanently removes the receiving project's test instances of that test case, along with their results, from its test runs. They can't be restored. Sharing the test case again gives the project access again, but does not bring back the removed results.
