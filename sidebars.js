@@ -2278,7 +2278,11 @@ module.exports = {
             label: "Run Your Test With Agent Skills",
             id: "cypress-agent-skills",
           },
-       
+          {
+            type: "doc",
+            label: "Authentication",
+            id: "authentication",
+          },
         ],
       },
       {
@@ -2288,6 +2292,11 @@ module.exports = {
         items: [
           {
             type: "doc",
+            label: "Parallel Testing",
+            id: "run-your-cypress-tests-in-parallel",
+          },
+          {
+            type: "doc",
             label: "Specify Browsers and OS",
             id: "supported-browsers-and-os",
           },
@@ -2295,6 +2304,11 @@ module.exports = {
             type: "doc",
             label: "Supported Cypress Versions",
             id: "supported-cypress-versions",
+          },
+          {
+            type: "doc",
+            label: "Cypress Testing Using WebKit",
+            id: "cypress-webkit",
           },
           {
             type: "doc",
@@ -2308,8 +2322,23 @@ module.exports = {
           },
           {
             type: "doc",
+            label: "Test On Different Screen Resolutions",
+            id: "screen-resolution-cypress",
+          },
+          {
+            type: "doc",
+            label: "Environment Variables Support for Cypress Tests",
+            id: "cyp-environment",
+          },
+          {
+            type: "doc",
             label: "Execute Including Private Dependencies",
             id: "private-dependencies-cypress",
+          },
+          {
+            type: "doc",
+            label: "Install NPM via Tunnel",
+            id: "npm-via-tunnel",
           },
           {
             type: "doc",
@@ -2332,6 +2361,11 @@ module.exports = {
             type: "doc",
             label: "Applitools Integration For Cypress",
             id: "applitools-integration-cypress",
+          },
+          {
+            type: "doc",
+            label: "Report Portal IO Integration For Cypress",
+            id: "report-portal-cypress",
           },
           {
             type: "doc",
@@ -2366,31 +2400,66 @@ module.exports = {
           "playwright-testing-guide",
           "playwright-agent-skills",
           "playwright-sdk",
-           "migrate-playwright-tests",
-             "playwright-test-execution-setup",
         ],
       },
       {
         type: "category",
         collapsed: true,
-        label: "Languages & Frameworks",
+        label: "Languages and Frameworks",
         items: [
-          { type: "doc", id: "java-with-playwright", label: "Java With Playwright" },
-          { type: "doc", id: "javascript-with-playwright", label: "JavaScript With Playwright" },
-          { type: "doc", id: "csharp-with-playwright", label: "C# With Playwright" },
-          { type: "doc", id: "python-with-playwright", label: "Python With Playwright" },
+          {
+            type: "category",
+            collapsed: true,
+            label: "Java",
+            items: ["java-with-playwright", "junit-with-playwright"],
+          },
+          {
+            type: "category",
+            collapsed: true,
+            label: "JavaScript",
+            items: [
+              "javascript-with-playwright",
+              "jest-with-playwright",
+              "typescript-with-playwright",
+            ],
+          },
+          {
+            type: "category",
+            collapsed: true,
+            label: "C#",
+            items: ["csharp-with-playwright"],
+          },
+          {
+            type: "category",
+            collapsed: true,
+            label: "Python",
+            items: ["python-with-playwright"],
+          },
         ],
       },
-    
       {
         type: "category",
         collapsed: true,
-        label: "Features",
+        label: "Test Capabilities",
         items: [
-          "playwright-android-guide",
+          {
+            type: "category",
+            collapsed: true,
+            label: "Test on Android Device",
+            link: {
+              type: "doc",
+              id: "playwright-android-guide",
+            },
+            items: ["playwright-android-caps", "playwright-webview-test"],
+          },
           "playwright-ios-guide",
+          "parallel-playwright-test",
+          "migrate-playwright-tests",
+          "playwright-test-execution-setup",
+          "playwright-bundled-browser-support",
+          "playwright-caps",
+          "local-testing-playwright",
           "playwright-auto-heal",
-          "mute-test-scenarios",
         ],
       },
       {
@@ -2424,10 +2493,18 @@ module.exports = {
         items: [
           "puppeteer-testing-guide",
           "puppeteer-agent-skills",
-          "puppeteer-test-execution",
         ],
       },
-  
+      {
+        type: "category",
+        collapsed: true,
+        label: "Test Capabilities",
+        items: [
+          "puppeteer-test-execution",
+          "puppeteer-capabilities",
+          "local-testing-puppeteer",
+        ],
+      },
       {
         type: "category",
         collapsed: true,
@@ -2438,7 +2515,14 @@ module.exports = {
           "puppeteer-pytest-pyppeteer",
         ],
       },
-     
+      {
+        type: "category",
+        collapsed: true,
+        label: "CI/CD",
+        items: [
+          "puppeteer-cicd",
+        ],
+      },
     ],
   ],
 
