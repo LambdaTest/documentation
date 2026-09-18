@@ -222,13 +222,6 @@ In the source project, a shared test case shows how many projects it is shared w
 - **Test cases with automation.** The automation travels with the test case, so receiving projects can execute it as well.
 - **Only test cases the project owns.** A test case shared into a project can't be shared on to another project. Share it from its source project instead.
 
-### Limits
-
-- Up to **10 receiving projects** in one share action.
-- Up to **500 test case and project pairs** in one share action. For example, 50 test cases shared with 10 projects is 500 pairs.
-
-If a share action goes over either limit, nothing is shared. Split the selection into smaller batches.
-
 ---
 
 ## Change sharing for test cases that are already shared
@@ -373,7 +366,6 @@ Deleting a shared test case removes it from every project it is shared with, alo
 ## Limitations
 
 - **Same organization only.** Test cases can be shared only with projects in the same organization.
-- **Up to 10 projects and 500 test case and project pairs per share action.** Larger selections need to be split into batches.
 - **No sharing onward.** A test case shared into a project can't be shared from that project to another.
 - **Test Run Insights** includes only test cases the project owns.
 - **Unsharing and deleting remove results permanently** in receiving projects.
