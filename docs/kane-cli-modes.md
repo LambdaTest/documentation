@@ -310,7 +310,6 @@ The customer-facing flags accepted by `kane-cli run`:
 | `--session-context <json>` | Prior runs context JSON. | None |
 | `--username <user>` | Basic auth username (skip OAuth). | None |
 | `--access-key <key>` | Basic auth access key (skip OAuth). | None |
-| `--env <name>` | Environment (`prod`). | Active profile's env |
 | `--mode <name>` | Run mode: `action` (strict) or `testing` (lenient). | Config value, otherwise `testing` |
 | `--bug-detection <mode>` | Detect product bugs while authoring: `off`, `stop` (halt the run on a confirmed bug), or `continue` (record it and keep going). Overrides `config set-bug-detection`. See [Configuration](/support/docs/kane-cli-configuration/). | Config value, otherwise `off` |
 | `--agent` | Plain NDJSON output, no colors or UI. | Off |
@@ -319,11 +318,21 @@ The customer-facing flags accepted by `kane-cli run`:
 | `--skip-code-validation` | Skip post-codegen worker-side validation. | On |
 | `--no-skip-code-validation` | Force post-codegen worker-side validation. | Off |
 
+### Unresolved variables
+
+Every `{{name}}` in the objective must have a value before the run starts. A name with no value stops the run there, with no browser and no session, exit code `2`, and a receipt naming each variable and what it needs. There is no flag to bypass it: fill the value or remove the reference. With `--agent`, the refusal is a single typed event:
+
+```json
+{"type":"error","code":"unresolved_variables","message":"2 variable(s) have no value — nothing was dispatched","suggested_file":".testmuai/variables/variables.json","variables":[{"name":"checkout_url","reason":"not_declared","used_by":[{"file":"objective","step":1}]},{"name":"login_password","reason":"value_missing","file":".testmuai/variables/variables.json","used_by":[{"file":"objective","step":1}]}]}
+```
+
+`reason` is `value_missing` (the key exists in `file`, with no value) or `not_declared` (the key is in no file, and `suggested_file` is where to add it). Names an earlier step stores, and the `{{smart.*}}`, `{{environment.*}}`, `{{secrets.*}}` and `{{totp.*}}` namespaces, are never checked.
+
 For variables and context file behavior, see [Variables and context](/support/docs/kane-cli-variables-and-context/). For code export and the run mode toggle, see [Configuration](/support/docs/kane-cli-configuration/).
 
 ### Mobile runs
 
-By default a run targets the **desktop** browser (Chrome), so every example above is unchanged. On macOS Apple Silicon you can instead point a run at a virtual mobile device: an `emulator` (a virtual Android device) or a `simulator` (a virtual iOS device). Every mobile run needs an app under test.
+By default a run targets the **desktop** browser (Chrome), so every example above is unchanged. On macOS Apple Silicon you can instead point a run at a virtual mobile device on this machine: an `emulator` (a virtual Android device) or a `simulator` (a virtual iOS device). Every mobile run needs an app under test. From any other machine, run a saved mobile suite on the cloud grid with [`testrun run --remote`](/support/docs/kane-cli-remote-execution/).
 
 <VerifiedTag value="Verified" />
 
@@ -341,12 +350,12 @@ kane-cli run "Sign in and open the account tab" --target simulator --app ./build
 The mobile run flags:
 
 - `--target desktop|emulator|simulator`: which target to run against. Defaults to the saved session target, otherwise `desktop`.
-- `--device <id>`: pick a device by name, serial, `ip:port`, or udid. In the TUI/TTY, omitting it opens a one-time picker and the choice is saved; in non-interactive runs a device must already be set (via `--device` or `kane-cli config set-device`) or the run exits with the fix spelled out.
-- `--app <path|APPid>`: the app under test, required for every mobile run. Pass a build (emulator: `.apk`, simulator: `.zip`) or an uploaded app id (`APP` followed by six or more digits). On the `desktop` target, `--device` and `--app` are ignored.
+- `--device-name <name>` and `--os-version <version>`: pick a device as `kane-cli devices list --target emulator|simulator` prints it. A name needs a version, and a version on its own matches any device running it. In the TUI or an interactive terminal, omitting them opens a one-time picker and the choice is saved. In non-interactive runs a device must already be set, with the flags or with `kane-cli config set-device-name` and `kane-cli config set-os-version`, or the run exits with the fix spelled out.
+- `--app <path|APPid>`: the app under test, required for every mobile run. Pass a build (emulator: `.apk`, simulator: `.zip`) or an uploaded app id (`APP` followed by six or more digits), and `kane-cli apps list --target <kind>` lists yours. On the `desktop` target, the device flags and `--app` are ignored.
 
 In the interactive TUI, a first run offers a Desktop / Emulator / Simulator chooser, and you can switch targets at any time with `/mobile` and `/desktop`. Run `/doctor` to check mobile tooling and devices.
 
-For setup (Xcode or Android Studio, `kane-cli login`, and `kane-cli doctor --install`) and the app formats each target accepts, see [Mobile testing](/support/docs/kane-cli-mobile/).
+For setup (Xcode or Android Studio, `kane-cli login`, and `kane-cli doctor --target emulator|simulator --install`) and the app formats each target accepts, see [Mobile testing](/support/docs/kane-cli-mobile/).
 
 ### Output Streams
 

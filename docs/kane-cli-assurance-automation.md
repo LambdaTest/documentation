@@ -167,11 +167,11 @@ extract: no TTY — pass an explicit --mode agent|ci|override to run headless
 | Mode | Questions | stdout |
 |---|---|---|
 | `interactive` | asked in the chat (TTY default) | the Ink chat UI |
-| `agent` | low/medium-risk defaults are auto-taken (each reported); a **high-risk** question pauses the session — exit `3`, resumable | **NDJSON events** (one JSON object per line); prose diagnostics go to stderr |
-| `ci` | any high-risk question **fails closed** — exit `1`, error code `HIGH_RISK_CI` | prose transcript |
+| `agent` | **every** question pauses the session — exit `3`, resumable; the agent that drives the run answers at resume or escalates to its person | **NDJSON events** (one JSON object per line); prose diagnostics go to stderr |
+| `ci` | any high-risk question **fails closed** — exit `1`, error code `HIGH_RISK_CI`; low- and medium-risk questions take their recommended default (each reported) | prose transcript |
 | `override` | every default is auto-taken, including high-risk (each flagged in the commit record) | prose transcript |
 
-Rule of thumb: `agent` when something can read the pause and answer (an AI agent, a human on the next shift); `ci` when a pipeline must never guess; `override` when you accept the recommended defaults wholesale and want one unattended pass.
+Rule of thumb: `agent` when something can read the pause and answer (an AI agent, a human on the next shift); `ci` when a pipeline must fail rather than guess on anything high-risk; `override` when you accept the recommended defaults wholesale and want one unattended pass.
 
 The same matrix drives `maintain reconcile`, with two reconcile-specific rules: no headless mode ever archives anything — ARCHIVE decisions wait for an interactive session — and a `ci`-mode run that hits a decision needing a human **stores the plan and exits `2`** (the work isn't lost; walk the stored plan interactively or apply it in `agent` mode).
 
@@ -201,7 +201,9 @@ With `--mode agent`, stdout speaks a versioned NDJSON vocabulary — envelope `{
 | `corpus` | extract: the `sources[]` this run covers + already-extracted `skipped[]` |
 | `source_start` / `source_skipped` | `source_id`, `index`/`total`, `resumed` / `reason` |
 | `plan` | the `--plan` transcription payload |
-| `assumed_default` | a question auto-answered with its recommended default: `id`, `selected_index`, `risk` |
+| `assumed_default` | a question auto-answered with its recommended default: `id`, `selected_index`, `risk`. `ci` and `override` runs only, since an `agent` run pauses instead |
+| `variables_declared` | design: the stubs a phase commit wrote — `file` (the pool file) and `variables[]` (`name`, `description`, `secret`). Only names that existed in no variable file, and it fires after the `commit` that minted the tests |
+| `variables_summary` | design, at the end of the run: every name still needing a value, in the same shape as `variables_declared` |
 | `agent_activity` | progress: `kind` (`tool` / `decision` / `progress` / `thinking_done`) + a display `label` |
 | `agent_message` *(0.7.2)* | the agent's narrative `text` — the conversational lead-in before a question batch and the closing statement at the end of a run |
 | `warning` *(0.7.2)* | an actionable non-fatal condition: `code` (`ZERO_USE_CASES`, `SAVE_FAILED`) + `message` |
@@ -332,6 +334,31 @@ Two 0.7.1 additions:
 The rule stands: there is no auto-approve. These paths land **your** decisions faster; they never make them.
 
 ## Coverage on the stream *(0.7.1)*
+
+## The sync verbs on the stream {#the-sync-verbs-on-the-stream}
+
+`kane-cli context sync`, `kane-cli context push`, `kane-cli context pull`, `kane-cli context clone` and the subcommands `kane-cli context sync add`, `kane-cli context sync list`, `kane-cli context sync remove`, `kane-cli context sync status` and `kane-cli context sync doctor` all take `--mode agent` and speak the same strict envelope with `verb: "sync"`: stdout is NDJSON only, stderr stays empty, and `done` is last. None of them calls the agent or spends credits. `kane-cli context sync setup` is the one command that needs a terminal, and under `--mode agent` it answers `error{code: TTY_REQUIRED}` naming `kane-cli context sync add` and `kane-cli context clone` as the alternatives. What these commands do is in [Sharing the context graph with your team](/support/docs/kane-cli-assurance-sharing/).
+
+| type | payload highlights |
+|---|---|
+| `sync_probe_started` / `sync_probe` | `kane-cli context sync add` and `kane-cli context clone`, around the location check (the slow part on a first GitHub fetch): `name`, `kind`, then `tier` (`1` means the location can publish, `2` or `3` download only) and `detail` |
+| `sync_status` | `kane-cli context sync status`: `name`, `relation` — `kind` (`up-to-date`, `behind`, `ahead`, `diverged`, `empty-storage`, `empty-local`, `foreign-lineage`), `local` and `storage` (each `{seq, hash}` of that side's last record, or null when that side is empty) and, on `diverged`, `at` (the first record number where the two sides differ, so the last shared record is `at - 1`) — then `rebase_id` (the open rebase, or null) and `decisions[]` (each in the `sync_rebase_decision` shape). The event needs the location: when it cannot be reached the command refuses instead, and the decisions are not listed |
+| `sync_status` with `--show <n>` | needs no location: `record[]` (the saved record in full, one line each), `decision`, `rebase_id`, `decisions[]`, while `name` and `relation` are null |
+| `sync_locations` / `sync_removed` | `kane-cli context sync list` / `kane-cli context sync remove` |
+| `sync_pull_done` | `kane-cli context pull`, `kane-cli context sync`, `kane-cli context clone`: `name`, `imported`, `from`, `to`, `blobs`, `proposals`, and `clone` adds `dir` |
+| `sync_push_done` | `kane-cli context push`, `kane-cli context sync`: `name`, `from`, `to`, `pushed`, `blobs`, `proposals`, `already_there` |
+| `sync_rebase_started` | `kane-cli context pull --rebase --yes`: `rebase_id`, `from`, `backup_path`, `moved[]`, `quarantined_tests[]` |
+| `sync_rebase_item` | one per saved record: `seq`, `intent` (`extract`, `review`, `names`, `retire` and so on), `outcome` (`reapplied`, `already-present`, `not-reapplied`, `decision`), `reason?` |
+| `sync_rebase_decision` | one per open decision, in dependency order: `decision_id`, `kind`, `intent`, `seq`, `label`, `location`, `mine` and `theirs` (one line per side, the local change and the location's), `answers[]` (only the legal ones, each `{answer, consequence}`) |
+| `sync_rebase_done` | once per walk, and once when `kane-cli context sync doctor --abort` closes a readable rebase: the four counts, `decisions_open`, `status` (`complete`, `paused`, `aborted`) |
+| `sync_rebase_open` | `kane-cli context push` or `kane-cli context sync` while a rebase is still open, followed by `sync_error{SYNC_REBASE_PENDING}` |
+| `sync_doctor` / `sync_rebase_exported` | `kane-cli context sync doctor` / `kane-cli context sync doctor --export` |
+| `sync_behind` | the advisory from `kane-cli context extract`, `kane-cli design tests` and `kane-cli maintain reconcile` when a teammate has pushed since you pulled: `name`, `local_seq`, `storage_seq`, `text`. Nothing is refused |
+| `gitignore_updated` | `kane-cli context clone` and `kane-cli context sync doctor --export` (and `kane-cli context ingest` on its `extract` stream) when the new store's folder is inside a git repository and `.context/` was added to its `.gitignore`: `path`. When the line could not be written, the store is still created and a `warning{message}` says why |
+
+Exit codes keep their meanings, with one addition: exit `3` is also **a person has to decide something**, which covers a `kane-cli context push` or `kane-cli context pull` refused because you are behind or diverged (the remedy names the command), and a rebase that stopped on open decisions (answer them with `--answer`, or on a terminal). Exit `2` is a precondition (a location that cannot be reached, a rebase still open, missing keys), and exit `1` a record that cannot be used. A refusal says what stopped, not that nothing happened.
+
+## Coverage on the stream
 
 `cover --mode agent` and `cover gaps --mode agent` speak the same envelope (`verb: "cover"` / `"gaps"`): the full `--json` payload arrives as **one** `coverage` (or `gaps`) event — *(0.8.2)* `cover gaps <uc-id>` emits the document closed over that use-case — and `done` closes the stream carrying the worklist's ready-to-paste commands in `next[]`. `--mode ci` speaks the identical stream. Any refusal is an `error` event + `done` with exit `2`.
 
