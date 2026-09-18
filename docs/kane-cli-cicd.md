@@ -178,11 +178,29 @@ These patterns apply to every CI system; the platform-specific recipes below dif
 - **Always pass `--headless`**. CI runners have no display.
 - **Always set `--timeout <seconds>`**. A hung run cannot be allowed to block the pipeline.
 - **Authenticate with `--username` and `--access-key`** from CI secrets. Do not call `kane-cli login` in CI. That flow opens a browser for OAuth and will not work on a runner.
-- **Load test data with `--variables-file <path>`**. Check the file into your repo (without secret values), or generate it before the step.
+- **Load test data with `--variables-file <path>`**. Check the file into your repo (without secret values), or generate it before the step. A `{{name}}` with no value fails the job with exit `2` **before** any browser starts, with a receipt naming the variable, so fill values from CI secrets in that step, not later.
+- **Run the suite on the cloud grid when the runner cannot run it.** `kane-cli testrun run … --remote` turns the suite into one HyperExecute job: the grid supplies Chrome on a macOS runner, or, for mobile `_test.md` members, a virtual Android emulator or iOS simulator, so the runner needs no Chrome, Xcode or Android Studio, and `--parallel N` spreads the members across N grid runners. The recordings and the evidence pack come back to the checkout as if the suite had run on your machine.
+
+  ```bash
+  kane-cli plugin install remote-execution
+
+  # a web suite on 4 grid runners
+  kane-cli testrun run tests/web/ --remote --parallel 4 \
+    --username "$LT_USERNAME" --access-key "$LT_ACCESS_KEY" \
+    --on-failure fail-fast
+
+  # a mobile suite, from a Linux runner
+  kane-cli testrun run tests/app/ --remote \
+    --device-name "Pixel 7" --os-version 14 \
+    --username "$LT_USERNAME" --access-key "$LT_ACCESS_KEY" \
+    --on-failure fail-fast
+  ```
+
+  It needs a <BrandName /> plan with HyperExecute macOS runners. Web and mobile members go in separate runs. Pick devices with `kane-cli devices list --target emulator|simulator --remote`, and allow a timeout of about 10 minutes. See [Remote Runs](/support/docs/kane-cli-remote-execution/).
 - **Check the exit code**. `0` passed, `1` failed, `2` error, `3` timeout or cancellation.
 
 :::warning Chrome Requirement
-The runner spawns Chrome itself, so the CI image must have Chrome available on `PATH`. If your runner image cannot install Chrome, point Kane CLI at a remote browser with `--cdp-endpoint <url>` or `--ws-endpoint <url>` (for example, a <BrandName /> `wss://` endpoint).
+The runner spawns Chrome itself, so the CI image must have Chrome available on `PATH`. If your runner image cannot install Chrome, you have two options. For a single `kane-cli run` or `testmd run`, point Kane CLI at a remote browser with `--cdp-endpoint <url>` or `--ws-endpoint <url>` (for example, a <BrandName /> `wss://` endpoint), where Kane CLI still runs on the runner and drives that browser. For a whole suite, `kane-cli testrun run … --remote` moves the run itself to the grid, as above.
 :::
 
 ## Authentication in CI/CD
@@ -401,7 +419,7 @@ kane-cli run "Open the pricing page and verify the Pro plan is listed" \
     --variables-file ./tests/variables.json
 ```
 
-If your CI image cannot install Chrome (for example, a minimal Node Alpine image), point Kane CLI at a remote browser instead:
+If your CI image cannot install Chrome (for example, a minimal Node Alpine image), either run a whole suite on the grid with `kane-cli testrun run … --remote` (see [Remote Runs](/support/docs/kane-cli-remote-execution/)), or point a single run at a remote browser:
 
 ```bash
 kane-cli run "Open the pricing page and verify the Pro plan is listed" \
@@ -490,4 +508,38 @@ kane-cli run "Log in as {{email}} with {{password}} and verify dashboard" \
   --username $LT_USERNAME \
   --access-key $LT_ACCESS_KEY \
   --headless --agent
+```
+
+## A shared context store in CI {#a-shared-context-store-in-ci}
+
+When your team [shares the context graph](/support/docs/kane-cli-assurance-sharing/) through a location, a pipeline works on the same store: clone it once, pull before each run, and push the facts the run produced after. The sync commands never call the agent or spend credits, while the run between them, `kane-cli context extract` below, is an ordinary extraction and consumes credits like any other.
+
+- **Sign in without a person.** For a GitHub location over HTTPS, set `KANE_SYNC_GIT_TOKEN` from a CI secret: a repository-scoped personal access token with Contents read and write, or a GitHub App installation token. A workflow's own `GITHUB_TOKEN` only reaches the workflow's repository, so a separate context repository needs its own token. Over SSH, an SSH deploy key on the context repository works with no token. Kane CLI never answers an SSH prompt, so the runner must have the key loaded and the host's key already accepted (`ssh-keyscan github.com >> ~/.ssh/known_hosts`). Repository rules must also allow the connection check's scratch reference under `refs/kane/probe/`, see [Three kinds of location](/support/docs/kane-cli-assurance-sharing/#locations). For an S3-compatible location, set `KANE_SYNC_S3_ACCESS_KEY_ID` and `KANE_SYNC_S3_SECRET_ACCESS_KEY`. Neither is ever written to disk by Kane CLI. See [Context sync environment variables](/support/docs/kane-cli-configuration/#context-sync-environment-variables).
+- **Use `--mode agent`** for structured output, and read the exit code: `0` done, `3` a person has to decide (the runner is behind or diverged, or a rebase stopped on decisions), `2` a precondition (the location cannot be reached, keys missing, a rebase still open).
+- **Do not answer decisions blindly.** A rebase that stops on a decision is a job that stops. Save `kane-cli context sync status origin --json` as a build artifact: it is a report of what is waiting, not something a later job can replay on its own, because answers go to the store that holds the open rebase. The follow-up job must run on the same persisted `.context/`, a workspace or cache that survives between jobs, where a person or an agent answers with `kane-cli context sync origin --answer <id>=<choice>`. `keep-theirs` writes nothing, but it is a choice: the local change stays in the backup. The full contract is in [Agents and CI](/support/docs/kane-cli-assurance-automation/#the-sync-verbs-on-the-stream).
+- **Keep `.context/` out of version control.** The store never goes through a git merge, and the location is where it is shared.
+
+<VerifiedTag value="Verified" />
+
+```bash
+set -e   # stop at the first failing command, so every exit code below is read
+
+# GitHub Actions step, where the secret CONTEXT_REPO_TOKEN grants Contents read and write on the context repository
+export KANE_SYNC_GIT_TOKEN="$CONTEXT_REPO_TOKEN"
+
+# first run on this runner: a store from the team location
+[ -d .context ] || kane-cli context clone https://github.com/example-org/team-context.git . --mode agent
+
+# before the run: take the team's new records, and stop the job if a person has to decide
+kane-cli context pull origin --mode agent > pull.ndjson || {
+  code=$?
+  [ "$code" -eq 3 ] && kane-cli context sync status origin --json > sync-status.json
+  exit "$code"
+}
+
+# the run itself: it fails on a high-risk question and takes the recommended default for the rest
+kane-cli context extract --mode ci
+
+# after the run: publish what landed
+kane-cli context push origin --mode agent
 ```

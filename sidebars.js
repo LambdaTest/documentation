@@ -4652,9 +4652,20 @@ module.exports = {
             ],
           },
           {
-            type: "doc",
+            type: "category",
+            collapsed: true,
             label: "Batch Runs (testrun)",
-            id: "kane-cli-testrun",
+            link: {
+              type: "doc",
+              id: "kane-cli-testrun",
+            },
+            items: [
+              {
+                type: "doc",
+                label: "Remote Runs",
+                id: "kane-cli-remote-execution",
+              },
+            ],
           },
         ],
       },
@@ -4735,6 +4746,11 @@ module.exports = {
             type: "doc",
             label: "Maintaining the Suite",
             id: "kane-cli-assurance-maintain",
+          },
+          {
+            type: "doc",
+            label: "Sharing with Your Team",
+            id: "kane-cli-assurance-sharing",
           },
           {
             type: "doc",

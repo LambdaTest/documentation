@@ -127,7 +127,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
         "name": "Mobile Target",
         "codeSampleType": "code snippet",
         "programmingLanguage": "YAML",
-        "text": "---\ntarget: emulator             # emulator (Android) | simulator (iOS)\napp: ./builds/app-debug.apk\nno_reset: false              # optional\n---"
+        "text": "---\ntarget: emulator             # emulator (Android) | simulator (iOS)\napp: ./builds/app-debug.apk  # or an APP… id from kane-cli apps list --target emulator\ndevice_name: Pixel 7         # optional default device, with os_version\nos_version: \"14\"             # optional, overridden by --device-name and --os-version\nno_reset: false              # optional\n---"
       },
       {
         "@type": "SoftwareSourceCode",
@@ -307,9 +307,11 @@ headless: true
 | `code_export` | root + step | Generate Playwright code after the run |
 | `code_language` | root + step | `python` or `javascript` for code export |
 | `global_context` / `local_context` | root + step | Inline Markdown or file path for agent context |
-| `target` | root | Where the test runs: a browser transport (`chrome`, the default, `cdp`, or `ws`) or a mobile target (`emulator` or `simulator`, macOS Apple Silicon). See [Mobile Target](#mobile-target). |
+| `target` | root | Where the test runs: a browser transport (`chrome`, the default, `cdp`, or `ws`) or a mobile target (`emulator` or `simulator`, a virtual Android or iOS device, on macOS Apple Silicon or on the cloud grid with `testrun run --remote`). See [Mobile Target](#mobile-target). |
 | `app` | root | Mobile only. The app under test: a build path (emulator `.apk`, simulator `.zip`) or an uploaded `APP…` id. Required with a mobile target, rejected with a browser target. |
 | `no_reset` | root | Mobile only. Keep the app's existing state between runs instead of resetting it. |
+| `device_name` | root | Mobile only. The default device for this test, as `kane-cli devices list --target <kind>` prints it (add `--remote` for the grid catalog). Overridden by `--device-name`. |
+| `os_version` | root | Mobile only. The device's OS version (`14`, `17.5`). Overridden by `--os-version`. Required alongside `device_name`. |
 | `chrome_profile` | root only | Named Chrome profile under `~/.testmuai/kaneai/chrome-profiles/`. |
 | `cdp_endpoint` | root only | Reuse an external Chrome over CDP. |
 | `ws_endpoint` | root only | LambdaTest / Playwright WebSocket endpoint. |
@@ -317,14 +319,16 @@ headless: true
 
 ### Mobile Target
 
-On macOS Apple Silicon, `target:` also accepts the two mobile values, `emulator` for a virtual Android device and `simulator` for a virtual iOS device, with the app under test as its own root key:
+`target:` also accepts the two mobile values, `emulator` for a virtual Android device and `simulator` for a virtual iOS device, with the app under test as its own root key:
 
 <VerifiedTag value="Verified" />
 
 ```yaml
 ---
 target: emulator             # emulator (Android) | simulator (iOS)
-app: ./builds/app-debug.apk
+app: ./builds/app-debug.apk  # or an APP… id from `kane-cli apps list --target emulator`
+device_name: Pixel 7         # optional default device, with os_version
+os_version: "14"             # optional, overridden by --device-name and --os-version
 no_reset: false              # optional
 ---
 ```
@@ -332,12 +336,13 @@ no_reset: false              # optional
 - **`target`**: `emulator` runs on an Android emulator, `simulator` on an iOS simulator. The platform never appears separately, the target implies it.
 - **`app`**: the app under test, required with a mobile target and rejected with a browser one. A build path (emulator `.apk`, simulator `.zip`) or an uploaded app id, `APP` followed by six or more digits. On-device package ids are not accepted.
 - **`no_reset`**: optional. Keep the app's existing state between runs instead of resetting it.
+- **`device_name`** and **`os_version`**: optional per-test defaults for the device, in the vocabulary of `kane-cli devices list --target <kind>` for a device on this machine, or `kane-cli devices list --target <kind> --remote` for the grid catalog. The run flags `--device-name` and `--os-version` override them, and a name needs a version.
 
 :::warning
 The nested form, `target: {platform, app}`, is not accepted. The parser refuses it and spells out the flat shape above.
 :::
 
-Mobile tests run with `kane-cli testmd run`. A batch run does not support mobile members: a `_test.md` with a mobile target is rejected up front, before the suite runs. Setup is covered in [Mobile Testing](/support/docs/kane-cli-mobile/).
+Mobile tests run with `kane-cli testmd run`, and a folder of them runs in one execution with [`testrun`](/support/docs/kane-cli-testrun/#mobile-members). On this machine that needs macOS Apple Silicon, and setup is covered in [Mobile Testing](/support/docs/kane-cli-mobile/). With [`testrun run --remote`](/support/docs/kane-cli-remote-execution/), the suite runs on a grid emulator or simulator from any machine.
 
 ### Root-only vs root-or-per-step
 
