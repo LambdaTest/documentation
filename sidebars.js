@@ -1783,118 +1783,92 @@ module.exports = {
       },
     },
     [
-      // NOTE: 'manual-to-automated-test-conversion' is NOT in the proposed
-      // structure and has been dropped from the nav (file retained on disk,
-      // still 200). Re-add if this omission was unintended.
-
-      // 1. Get Started
-      {
-        type: "category",
-        collapsed: true,
-        label: "Get Started",
-        items: [
-          { type: "doc", id: "test-manager", label: "Introduction" },
-        ],
-      },
-
-      // 2. Set up your project (direct doc)
       {
         type: "doc",
-        id: "create-projects",
-        label: "Set up your project",
+        label: "Introduction to Test Manager",
+        id: "test-manager",
       },
-
-      // 3. Import Test Case Data
+      "manual-to-automated-test-conversion",
       {
         type: "category",
         collapsed: true,
-        label: "Import Test Case Data",
-        items: [
-          { type: "doc", id: "csv-import", label: "Import from CSV" },
-          { type: "doc", id: "one-click-migration-from-testrail", label: "Migrate from TestRail" },
-          { type: "doc", id: "one-click-migration-from-xray", label: "Migrate from X-Ray" },
-          { type: "doc", id: "one-click-migration-from-zephyr-scale", label: "Migrate from Zephyr Scale" },
-          { type: "doc", id: "migrate-from-zephyr-enterprise", label: "Migrate from Zephyr Enterprise" },
-          { type: "doc", id: "one-click-migration-from-qtest", label: "Migrate from qTest" },
-        ],
+        label: "Projects",
+        items: ["create-projects", "system-and-custom-fields"],
       },
-
-      // 4. Test Case Organization
       {
         type: "category",
         collapsed: true,
-        label: "Test Case Organization",
+        label: "Test Cases",
         items: [
-          { type: "doc", id: "manual-test-case-creation", label: "Create and Manage Test Cases" },
-          { type: "doc", id: "test-case-versioning", label: "Manage Versions" },
-          { type: "doc", id: "create-modules", label: "Modules: Share Test steps" },
-          { type: "doc", id: "modules-in-manual-testcases", label: "Importing Modules into Test Cases" },
-          { type: "doc", id: "system-and-custom-fields", label: "Manage System & Custom fields" },
-          { type: "doc", id: "copy-and-move-support-for-test-cases", label: "Copy & Move Test Cases" },
-          { type: "doc", id: "share-test-cases-across-projects", label: "Share Test Cases Across Projects" },
-          { type: "doc", id: "test-case-deduplication", label: "Find & Remove Duplicates" },
-          { type: "doc", id: "test-case-archive", label: "Archive Test Cases" },
-          { type: "doc", id: "update-fields", label: "Bulk Update Test Case fields" },
-          { type: "doc", id: "export-test-cases", label: "Export Test Cases" },
+          {
+            type: "category",
+            collapsed: true,
+            label: "Import Test Cases",
+            items: ["csv-import", "one-click-migration-from-testrail", "one-click-migration-from-xray", "one-click-migration-from-zephyr-scale", "migrate-from-zephyr-enterprise", "one-click-migration-from-qtest"],
+          },
+          "generate-test-cases-with-ai",
+          // "create-manage-test-cases",
+          "manual-test-case-creation",
+          "test-case-versioning",
+          "create-modules",
+          "modules-in-manual-testcases",
+          "copy-and-move-support-for-test-cases",
+          "share-test-cases-across-projects",
+          "test-case-deduplication",
+          "test-case-archive",
+          "update-fields",
+          "export-test-cases",
+          {
+            type: "category",
+            collapsed: true,
+            label: "Linking Automated Test Cases",
+            link: {
+              type: "doc",
+              id: "automated-test-cases-with-ai",
+            },
+            items: [
+              "automated-test-cases-linked-using-dashboard",
+              "automated-test-cases-linked-using-capability",
+            ],
+          },
         ],
       },
-
-      // 5. AI Test Case Generator (direct doc)
+      {
+        type: "category",
+        collapsed: true,
+        label: "Test Runs",
+        items: [
+          "test-run-creation-and-management",
+          "test-run-bulk-actions",
+          "sync-test-instance",
+          "test-instance-audit-logs",
+          "track-issues-in-test-runs"
+        ],
+      },
       {
         type: "doc",
-        id: "generate-test-cases-with-ai",
-        label: "AI Test Case Generator",
+        label: "Milestones",
+        id: "milestone-creation-and-management",
       },
-
-      // 6. Run Tests and Track Execution
       {
         type: "category",
         collapsed: true,
-        label: "Run Tests and Track Execution",
+        label: "Insights & Reports",
         items: [
-          { type: "doc", id: "test-run-creation-and-management", label: "Create and Manage Test Runs" },
-          { type: "doc", id: "test-run-bulk-actions", label: "Bulk Move, Copy, and Delete Test Runs" },
-          { type: "doc", id: "sync-test-instance", label: "Sync Test Instances" },
-          { type: "doc", id: "test-instance-audit-logs", label: "Test Instance Audit Logs" },
-          { type: "doc", id: "track-issues-in-test-runs", label: "Raise and Manage Defects" },
-          { type: "doc", id: "milestone-creation-and-management", label: "Milestones" },
+          "insights-dashboard",
+          "tms-reports"
         ],
       },
-
-      // 7. Link Automated Tests
-      {
-        type: "category",
-        collapsed: true,
-        label: "Link Automated Tests",
-        items: [
-          { type: "doc", id: "automated-test-cases-with-ai", label: "Link Automation Runs Automatically" },
-          { type: "doc", id: "automated-test-cases-linked-using-dashboard", label: "Link Runs Manually from Dashboard" },
-          { type: "doc", id: "automated-test-cases-linked-using-capability", label: "Link Runs Via Capabilities" },
-        ],
-      },
-
-      // 8. Reporting and Analysis
-      {
-        type: "category",
-        collapsed: true,
-        label: "Reporting and Analysis",
-        items: [
-          { type: "doc", id: "insights-dashboard", label: "View Test metrics and trends" },
-          { type: "doc", id: "tms-reports", label: "Generate execution and Traceability reports" },
-        ],
-      },
-
-      // 9. Issue Tracker Integration
       {
         type: "category",
         collapsed: true,
         label: "Issue Tracker Integration",
         items: [
-          { type: "doc", id: "link-jira-issues-with-test-manager", label: "Jira Integration for Test Manager" },
-          { type: "doc", id: "lambdatest-jira-app", label: "TestMu AI Jira App" },
-          { type: "doc", id: "link-ado-issues-with-test-manager", label: "Azure DevOps Integration for Test Manager" },
-          { type: "doc", id: "lambdatest-azure-devops-app", label: "TestMu AI Azure DevOps App" },
-          { type: "doc", id: "link-linear-issues-with-test-manager", label: "Linear Integration for Test Manager" },
+          "link-jira-issues-with-test-manager",
+          "lambdatest-jira-app",
+          "link-ado-issues-with-test-manager",
+          "lambdatest-azure-devops-app",
+          "link-linear-issues-with-test-manager",
         ],
       },
     ]
