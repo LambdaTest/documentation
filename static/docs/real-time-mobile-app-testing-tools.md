@@ -7,6 +7,7 @@ TestMu AI offers a comprehensive suite of real-time mobile app testing tools des
 ## Device Controls
 The Device Controls feature allows you to simulate various actions on your test device during a testing session, enabling comprehensive testing of your web applications' behavior in real-world scenarios.
 
+- **Home:** Use this option to navigate to the device's home screen during a manual session.
 - **Volume Control:** Adjust the device volume directly within your test session to test audio-related features, such as media playback or notifications, ensuring they function correctly at different volume levels.
 - **Lock Device:** Seamlessly lock or unlock the device during your testing session without interrupting your workflow. This is useful for verifying app behavior upon device unlocking or handling lock-screen notifications.
 - **Shake Device:** Simulate a device shake to test functionalities that rely on shake gestures, such as undo actions or triggering specific in-app events.
@@ -26,7 +27,7 @@ Capture high-quality screenshots of the current screen on your test device insta
 Record your entire test session for detailed analysis and playback. Click on the Record Session button to begin recording. A timer will display the recording duration, helping you pinpoint specific moments during playback. To end the recording, click the Stop button. The recorded video will be saved automatically in the [gallery](/support/docs/real-time-mobile-app-testing-tools/#gallery) for review.
 
 ## Gallery
-All screenshots and video recordings from test sessions are stored in the Gallery. To access, select Gallery from the left toolbar and you'll find the saved screenshots and videos. To download the screenshots or videos to your local machine, click on the Download icon. You can also mark them as bug by clicking on the Bug icon.
+All screenshots and video recordings from test sessions are stored in the Gallery. To access, select Gallery from the left toolbar and you'll find the saved screenshots and videos. To download the screenshots or videos to your local machine, click on the Download icon. You can also mark them as bug by clicking on the Bug icon. To mark multiple screenshots as bugs, select the screenshots using the checkbox option, then click "Mark as Bug."
 
 ## Mark as Bug
 This feature allows you to mark any bug in your UI during the session. You can mark the bug in your UI via different shapes, texts and of different colors. You can also configure different project management tools with your session to create a ticket for the same. You can also share that bug, save the image to the gallery or download that screenshot.
@@ -41,7 +42,7 @@ GPS Geolocation testing allows you to simulate specific device locations using e
 The [Upload and Download Files](/support/docs/real-time-upload-and-download-files/) feature allows to manage files directly within remote testing environments. This functionality streamlines the testing process by allowing seamless file transfers between local and remote environments across desktop and mobile platforms.
 
 ## Network Throttling
-TestMu AI's network throttling feature empowers you to simulate real-world network conditions (2G, 3G, LTE) during testing. This allows you to assess your application performance under varying internet speeds, ensuring a seamless user experience across different network environments. You can leverage predefined network profiles or craft custom settings for comprehensive testing.
+TestMu AI's network throttling feature empowers you to simulate real-world network conditions (Offline, Slow 3G, Fast 3G, 4G, 5G and Custom) during testing. This allows you to assess your application performance under varying internet speeds, ensuring a seamless user experience across different network environments. You can leverage predefined network profiles or craft custom settings for comprehensive testing.
 
 ## Settings
 The settings section offer the following features:

@@ -147,4 +147,14 @@ Confirm the value is a boolean, not the string `"true"`, in clients that disting
 
 `tunnelName` is only required when you run more than one named tunnel; a single default tunnel needs `tunnel: true` alone. For connection failures on the tunnel itself, see [Troubleshooting TestMu AI Tunnel](/support/docs/troubleshooting-lambda-tunnel/).
 
+### TerminateApp command error
+
+**Why it happens:** The 500 Internal Server Error can occur when using terminateApp command if Appium detects that the application process is still running after the configured timeout period.
+
+**Fix:** This issue has been addressed in newer Appium versions. Using Appium `2.12.1` is recommended, after which the standard terminateApp command should execute successfully.
+
+```json
+{ "command": "driver.terminateApp(\"your.bundleid or appPackage\");" }
+```
+
 That's all! If you are still blocked, reach out to our **24x7 Chat Support** or mail us at [support@testmuai.com](mailto:support@testmuai.com).
