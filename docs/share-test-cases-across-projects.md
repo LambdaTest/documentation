@@ -134,12 +134,10 @@ Use sharing when several projects need the same test case and it must stay ident
 | Topic | Behaviour |
 |---|---|
 | **Who can share** | Users who can update test cases in the source project and create test cases in each receiving project |
-| **Which projects** | Other Test Manager projects in the same organization. Restricted and isolated projects can't share or receive |
-| **Limits per share action** | Up to 10 receiving projects and 500 test case and project pairs |
-| **In the receiving project** | Listed under **Shared Incoming** and in the test case list, with its source project and folder path. Optionally added to a folder |
+| **In the receiving project** | Listed under **Shared Incoming**, naming the project it is shared from. Optionally added to a folder as well |
 | **Editing** | Only in the source project. Read-only in receiving projects for every role, including admins |
 | **Versions** | Receiving projects always see the latest version. Test instances keep the version they were added at until the team updates them |
-| **Execution** | Manual execution only in receiving projects |
+| **Execution** | Each receiving project executes the test case in its own test runs |
 | **Unsharing** | Removes the receiving project's test instances and results for that test case permanently |
 
 ---
@@ -227,7 +225,7 @@ In the source project, a shared test case shows how many projects it is shared w
 ### What can be shared
 
 - **Test cases of any status.** There is no approval step. The test case's status is shown to receiving projects so they can judge whether it is ready to use.
-- **Test cases with automation.** Receiving projects can run them manually only.
+- **Test cases with automation.** The automation travels with the test case, so receiving projects can execute it as well.
 - **Only test cases the project owns.** A test case shared into a project can't be shared on to another project. Share it from its source project instead.
 
 ### Limits
@@ -272,7 +270,7 @@ In the receiving project's **Test Cases** tab:
 
 Every shared test case names the **project it is shared from**, wherever it is listed or opened. This helps you tell apart test cases with similar titles. If you have access to the source project, you can open the test case there from its summary.
 
-<img loading="lazy" src={require('../assets/images/test-manager/test-cases/share/shared-incoming.png').default} alt="Shared Incoming list in the receiving project with the source project and folder path of each test case" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/test-manager/test-cases/share/shared-incoming.png').default} alt="Shared Incoming list in the receiving project, showing the project each test case is shared from" className="doc_img"/>
 
 ### Add shared test cases to a folder
 
@@ -308,7 +306,7 @@ When you create a test run or add test cases to an existing test run in a receiv
 
 Test runs, test instances, and results belong to the project that created them. If two projects run the same shared test case, neither project sees the other's results, and the source project does not see either.
 
-Shared test cases can be executed manually in receiving projects. Automated and KaneAI execution of a shared test case is not available in a receiving project.
+Shared test cases are executed in the receiving project like any other test case, both manually and through automated runs.
 
 ### Version updates
 
@@ -362,7 +360,7 @@ For more, see [Archive and Restore Test Cases](/support/docs/test-case-archive/)
 
 | Move | What happens |
 |---|---|
-| **To another folder in the source project** | Allowed. Receiving projects see the new folder path. Their own folder placement is unchanged |
+| **To another folder in the source project** | Allowed. Receiving projects keep their access, and the folder they added it to is unchanged |
 | **To another project** | Allowed after a warning. The destination project becomes the new source project, and every share moves with the test case, so receiving projects keep their access. The original project loses access to the test case |
 | **To a project the test case is already shared with** | Allowed. That project now owns the test case instead of receiving it. The folder it was added to in that project is pre-selected as the destination. Other receiving projects keep access |
 
@@ -381,7 +379,6 @@ Deleting a shared test case removes it from every project it is shared with, alo
 ## Limitations
 
 - **Same organization only.** Test cases can be shared only with projects in the same organization.
-- **Manual execution only in receiving projects.** Automated and KaneAI execution of shared test cases is not available there.
 - **Up to 10 projects and 500 test case and project pairs per share action.** Larger selections need to be split into batches.
 - **No sharing onward.** A test case shared into a project can't be shared from that project to another.
 - **Restricted and isolated projects** can't share or receive test cases.
@@ -402,7 +399,7 @@ No. Edit it in the source project, and the change reaches every receiving projec
 No. Existing test instances keep their version and show that an update is available. The receiving team chooses when to update.
 
 **Can a user without access to the source project use a shared test case?**
-Yes. They can view it, add it to test runs, and update test instances to a newer version in the receiving project. The source folder path is shown as text only.
+Yes. They can view it, add it to test runs, and update test instances to a newer version in the receiving project. Only the option to open it in the source project needs access there.
 
 **Why can't I turn off sharing in project settings?**
 The project still has test cases shared in that direction. Unshare them, or remove access to them, then turn the setting off.
