@@ -95,7 +95,17 @@
     if (!isLoggedIn) return;
     document.querySelectorAll('nav a[href*="register"], header a[href*="register"]').forEach(btn => {
       btn.href = "https://billing.lambdatest.com/billing/plans";
-      btn.textContent = "Upgrade";
+      btn.textContent = "Pricing";
+    });
+  };
+
+  // Force the "Back to TestMu AI Docs" anchor to open in the same tab.
+  // Mintlify opens external anchor hrefs in a new tab by default and its
+  // docs.json schema has no target option, so we override it at runtime.
+  const forceSameTabAnchor = () => {
+    document.querySelectorAll('a[href*="testmuai.com/support/docs"]').forEach(a => {
+      a.target = "_self";
+      a.removeAttribute("rel");
     });
   };
 
@@ -196,6 +206,7 @@
     getUsernameToken();
     setupNavbarTracking();
     injectSidebarBottomLinks();
+    forceSameTabAnchor();
   };
 
   // ============================================
@@ -430,6 +441,7 @@
     setupNavbarTracking();
     setupHistoryListener();
     injectSidebarBottomLinks();
+    forceSameTabAnchor();
   };
 
   // Load chat scripts
