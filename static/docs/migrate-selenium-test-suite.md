@@ -103,20 +103,20 @@ const accessKey = process.env.LT_ACCESS_KEY;
 const hubURL = `https://${username}:${accessKey}@hub.lambdatest.com/wd/hub`;
 
 const capabilities = {
-browserName: 'Chrome',
-browserVersion: 'latest',
-'LT:Options': {
-platformName: 'Windows 10',
-build: 'My First Cloud Build',
-name: 'Sample Test',
-w3c: true,
-}
+  browserName: 'Chrome',
+  browserVersion: 'latest',
+  'LT:Options': {
+    platformName: 'Windows 10',
+    build: 'My First Cloud Build',
+    name: 'Sample Test',
+    w3c: true,
+  }
 };
 
 const driver = new Builder()
-.usingServer(hubURL)
-.withCapabilities(capabilities)
-.build();
+  .usingServer(hubURL)
+  .withCapabilities(capabilities)
+  .build();
 ```
 
 **Before (local):**
@@ -138,9 +138,9 @@ options.platform_name = "Windows 10"
 options.browser_version = "latest"
 
 lt_options = {
-"build": "My First Cloud Build",
-"name": "Sample Test",
-"w3c": True,
+    "build": "My First Cloud Build",
+    "name": "Sample Test",
+    "w3c": True,
 }
 options.set_capability("LT:Options", lt_options)
 
@@ -164,9 +164,9 @@ options.BrowserVersion = "latest";
 
 var ltOptions = new Dictionary<string, object>
 {
-{ "build", "My First Cloud Build" },
-{ "name", "Sample Test" },
-{ "w3c", true }
+    { "build", "My First Cloud Build" },
+    { "name", "Sample Test" },
+    { "w3c", true }
 };
 options.AddAdditionalOption("LT:Options", ltOptions);
 
@@ -185,14 +185,14 @@ $accessKey = getenv("LT_ACCESS_KEY");
 $hubURL = "https://{$username}:{$accessKey}@hub.lambdatest.com/wd/hub";
 
 $capabilities = [
-"browserName" => "Chrome",
-"browserVersion" => "latest",
-"LT:Options" => [
-"platformName" => "Windows 10",
-"build" => "My First Cloud Build",
-"name" => "Sample Test",
-"w3c" => true,
-]
+    "browserName" => "Chrome",
+    "browserVersion" => "latest",
+    "LT:Options" => [
+        "platformName" => "Windows 10",
+        "build" => "My First Cloud Build",
+        "name" => "Sample Test",
+        "w3c" => true,
+    ]
 ];
 
 $driver = RemoteWebDriver::create($hubURL, $capabilities);
@@ -210,13 +210,13 @@ access_key = ENV["LT_ACCESS_KEY"]
 hub_url = "https://#{username}:#{access_key}@hub.lambdatest.com/wd/hub"
 
 options = Selenium::WebDriver::Options.chrome(
-platform_name: "Windows 10",
-browser_version: "latest",
-"LT:Options": {
-build: "My First Cloud Build",
-name: "Sample Test",
-w3c: true,
-}
+  platform_name: "Windows 10",
+  browser_version: "latest",
+  "LT:Options": {
+    build: "My First Cloud Build",
+    name: "Sample Test",
+    w3c: true,
+  }
 )
 
 driver = Selenium::WebDriver.for :remote, url: hub_url, capabilities: options

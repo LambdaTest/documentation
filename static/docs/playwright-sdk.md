@@ -87,42 +87,42 @@ resolution: "1280x960" # To set the global resolution/viewport size to execute t
 
 # Tunnel-specific tests
 tunnel_settings:
-# tunnel: true
-# autostart: true
-# tunnelName: "app-behind-firewall-localhost-test-tunnel"
-# localdirectory: "./log"
-# verbose: true
-# loglevel: "debug"
+  # tunnel: true
+  # autostart: true
+  # tunnelName: "app-behind-firewall-localhost-test-tunnel"
+  # localdirectory: "./log"
+  # verbose: true
+  # loglevel: "debug"
 
 # Global Playwright configuration (inherited by all platforms unless overridden)
 playwrightConfigOptions:
-testDir: "tests"
-# use:
-#   viewport: { width: 1280, height: 720 }
+  testDir: "tests"
+  # use:
+  #   viewport: { width: 1280, height: 720 }
 
 # Refer to the capability generator for detailed configurations: https://www.lambdatest.com/capabilities-generator/
 platforms:
-- platform: "macOS Sequoia" # Or "Windows 11", "android", "ios"
-browserName: "chrome" # Or pw-firefox, pw-webkit
-# You can specify an exact browser version or use "latest", "latest-1", etc.
-browserVersion: "latest"
-# For mobile testing
-# deviceName: "Pixel 7" # Or "iPhone 14"
-# platformVersion: "13" # Or "16"
-# isRealMobile: true
-# ltOptions:
-#   Geolocation-specific tests
-#   geoLocation: "GB"
-#   Network communication tests (enable network logging)
-#   network: true
-#   console: true
-#   fullHar: true # To capture request and response body (might slow the test execution)
-# playwrightConfigOptions:
-#   testDir: "additional-tests"
-#   testMatch: ["**/mobile-responsive.spec.ts"]
-#   # For mobile testing
-#   use:
-#     viewport: { width: 390, height: 844 }
+  - platform: "macOS Sequoia" # Or "Windows 11", "android", "ios"
+    browserName: "chrome" # Or pw-firefox, pw-webkit
+    # You can specify an exact browser version or use "latest", "latest-1", etc.
+    browserVersion: "latest"
+    # For mobile testing
+    # deviceName: "Pixel 7" # Or "iPhone 14"
+    # platformVersion: "13" # Or "16"
+    # isRealMobile: true
+    # ltOptions:
+    #   Geolocation-specific tests
+    #   geoLocation: "GB"
+    #   Network communication tests (enable network logging)
+    #   network: true
+    #   console: true
+    #   fullHar: true # To capture request and response body (might slow the test execution)
+    # playwrightConfigOptions:
+    #   testDir: "additional-tests"
+    #   testMatch: ["**/mobile-responsive.spec.ts"]
+    #   # For mobile testing
+    #   use:
+    #     viewport: { width: 390, height: 844 }
 ```
 
 ### 2. Credentials Configuration
@@ -145,36 +145,36 @@ The `playwrightConfigOptions` section provides a powerful mechanism to override 
 
 ```yaml
 playwrightConfigOptions:
-testDir: './tests'
+  testDir: './tests'
 ```
 
 *   **testMatch** and **testIgnore**: Defines glob patterns to include or exclude specific test files from the run.
 
 ```yaml
 playwrightConfigOptions:
-testMatch: /.*\.e2e\.js/
-testIgnore: /.*\.spec\.js/
+  testMatch: /.*\.e2e\.js/
+  testIgnore: /.*\.spec\.js/
 ```
 
 *   **setup** and **teardown**: Specifies scripts to be executed before and after your test suite.
 
 ```yaml
 playwrightConfigOptions:
-setup:
-- name: 'setup1'
-testMatch: '**/*.setup.ts'
-teardown: 'teardown1'
-teardown:
-- name: 'teardown1'
-testMatch: '/teardown\.ts/'
+  setup:
+    - name: 'setup1'
+      testMatch: '**/*.setup.ts'
+      teardown: 'teardown1'
+  teardown:
+    - name: 'teardown1'
+      testMatch: '/teardown\.ts/'
 ```
 
 *   **use**: Sets global options that are applied to all tests within the run.
 
 ```yaml
 playwrightConfigOptions:
-use:
-baseURL: 'https://www.example.com'
+  use:
+    baseURL: 'https://www.example.com'
 ```
 
 ### 6. Tunnel Configuration
@@ -206,3 +206,4 @@ You can pass any standard Playwright CLI options directly to this command. For i
 
 ```bash
 npx playwright-node-sdk playwright test tests/my-test.spec.js
+```

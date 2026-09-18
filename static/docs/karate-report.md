@@ -15,9 +15,9 @@ Karate framework supports generating detailed test execution reports that help v
 ```yaml
 report: true
 partialReports:
-location: target
-type: html
-frameworkName: karate
+    location: target
+    type: html
+    frameworkName: karate
 ```
 
 **Step 3:** Now execute your job by triggering the HyperExecute CLI. You can visit the HyperExecute dashboard to download the report after job completion.

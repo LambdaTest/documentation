@@ -40,16 +40,16 @@ Configure the desired capabilities based on your test requirements. For example:
 
 ```bash
 exports.capabilities = {
-"browserName": "Chrome",
-"browserVersion": "122.0",
-"LT:Options": {
-"username": "YOUR_USERNAME",
-"accessKey": "YOUR_ACCESS_KEY",
-"platformName": "Windows 10",
-"project": "Untitled",
-"w3c": true,
-"plugin": "node_js-mocha"
-}
+	"browserName": "Chrome",
+	"browserVersion": "122.0",
+	"LT:Options": {
+		"username": "YOUR_USERNAME",
+		"accessKey": "YOUR_ACCESS_KEY",
+		"platformName": "Windows 10",
+		"project": "Untitled",
+		"w3c": true,
+		"plugin": "node_js-mocha"
+	}
 };
 ```
 > You can also use **dev** and **beta** browser versions. To generate capabilities for your test requirements, you can use our inbuilt 🔗 Capabilities Generator.
@@ -113,16 +113,16 @@ maxRetries: 1
 concurrency: 2
 
 pre:
-- npm install
+  - npm install
 
 cacheKey: '{{ checksum "package.json" }}'
 cacheDirectories:
-- node_modules
+  - node_modules
 
 testDiscovery:
-type: raw
-mode: remote
-command: grep -lr 'describe' specs/*.spec.js
+  type: raw
+  mode: remote
+  command: grep -lr 'describe' specs/*.spec.js
 
 testRunnerCommand: npm test $test
 
@@ -190,8 +190,8 @@ The mocha-skill package includes:
 mocha-skill/
 ├── SKILL.md
 └── reference/
-├── playbook.md
-└── advanced-patterns.md
+    ├── playbook.md
+    └── advanced-patterns.md
 ```
 
 It provides structured guidance for:

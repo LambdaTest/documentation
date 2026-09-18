@@ -72,14 +72,14 @@ You can incorporate SmartUI into your custom `Cypress` test script, as shown bel
 ```javascript
 /// <reference types="cypress" />
 describe('Test Case name', () => {
-beforeEach(() => {
+  beforeEach(() => {
 
-cy.visit('Required URL')
-})
+    cy.visit('Required URL')
+  })
 
-it('SmartUI Snapshot', () => {
-cy.smartuiSnapshot('Screenshot Name');
-})
+  it('SmartUI Snapshot', () => {
+    cy.smartuiSnapshot('Screenshot Name');
+  })
 })
 ```
 
@@ -135,25 +135,25 @@ maxRetries: 1
 concurrency: 1
 
 env:
-CYPRESS_CACHE_FOLDER: cypressCache
-PROJECT_TOKEN: "YOUR_PROJECT_TOKEN"
+  CYPRESS_CACHE_FOLDER: cypressCache
+  PROJECT_TOKEN: "YOUR_PROJECT_TOKEN"
 
 cacheKey: '{{ checksum "package.json" }}'
 cacheDirectories:
-- node_modules
-- cypressCache
+  - node_modules
+  - cypressCache
 
 pre:
-- npm install @lambdatest/smartui-cli @lambdatest/cypress-driver cypress@v13
-- npx smartui config:create smartui-web.json
+  - npm install @lambdatest/smartui-cli @lambdatest/cypress-driver cypress@v13
+  - npx smartui config:create smartui-web.json
 
 post:
-- cat hyp-smartui-sdk-cypress.yaml
+  - cat hyp-smartui-sdk-cypress.yaml
 
 testDiscovery:
-type: raw
-mode: static
-command: ls cypress/e2e
+  type: raw
+  mode: static
+  command: ls cypress/e2e
 
 testRunnerCommand: npx smartui --config smartui-web.json exec -- npx cypress run --spec cypress/e2e/smartuiSDKLocal.cy.js --browser chrome --headed
 
@@ -164,8 +164,8 @@ It is mandatory to mention these commands in the pre flag to download all the ne
 
 ```bash
 pre:
-- npm install @lambdatest/smartui-cli @lambdatest/cypress-driver cypress@v13
-- npx smartui config:create smartui-web.json
+  - npm install @lambdatest/smartui-cli @lambdatest/cypress-driver cypress@v13
+  - npx smartui config:create smartui-web.json
 ```
 
 ## Step 5: Execute your Test Suite

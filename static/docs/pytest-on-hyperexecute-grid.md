@@ -109,37 +109,37 @@ concurrency: 2
 
 env:
 #  PAT: ${{ .secrets.testKey }}
-TARGET_OS: LINUX
+ TARGET_OS: LINUX
 
 cacheKey: '{{ checksum "requirements.txt" }}'
 cacheDirectories:
-- CacheDir
+  - CacheDir
 pre:
-- pip install py
-- pip install -r requirements.txt --cache-dir CacheDir
+  - pip install py
+  - pip install -r requirements.txt --cache-dir CacheDir
 post:
-- cat yaml/linux/pytest_hyperexecute_autosplit_sample.yaml
+  - cat yaml/linux/pytest_hyperexecute_autosplit_sample.yaml
 
 runtime:
-language: python
-version: "3"
+  language: python
+  version: "3"
 
 mergeArtifacts: true
 uploadArtefacts:
-- name: TestReports
-path:
-- reports/**
+  - name: TestReports
+    path:
+    - reports/**
 
 report: true
 partialReports:
-type: json
-location: reports/
-frameworkName: extent
+    type: json
+    location: reports/
+    frameworkName: extent
 
 testDiscovery:
-type: raw
-mode: remote
-command: grep -nri 'class' tests -ir --include=\*.py | sed 's/:.*//'
+  type: raw
+  mode: remote
+  command: grep -nri 'class' tests -ir --include=\*.py | sed 's/:.*//'
 
 testRunnerCommand: pytest -s  --verbose --html=reports/report.html $test
 
@@ -207,8 +207,8 @@ The pytest-skill package includes:
 pytest-skill/
 ├── SKILL.md
 └── reference/
-├── playbook.md
-└── advanced-patterns.md
+    ├── playbook.md
+    └── advanced-patterns.md
 ```
 
 It provides structured guidance for:

@@ -48,42 +48,42 @@ The `codecept.conf.js` file connects your tests to the TestMu AI Selenium Grid u
 
 ```js title="codecept.conf.js"
 exports.config = {
-tests: './*_test.js',
-output: './output',
+  tests: './*_test.js',
+  output: './output',
 
-helpers: {
-WebDriver: {
-url: 'http://google.com/ncr',
-browser: 'chrome',
-host: 'hub.lambdatest.com',
-port: 80,
-user: process.env.LT_USERNAME,
-key: process.env.LT_ACCESS_KEY,
+  helpers: {
+    WebDriver: {
+      url: 'http://google.com/ncr',
+      browser: 'chrome',
+      host: 'hub.lambdatest.com',
+      port: 80,
+      user: process.env.LT_USERNAME,
+      key: process.env.LT_ACCESS_KEY,
 
-desiredCapabilities: {
-name: '[CodeceptJS] Automation Sample',
-build: '[CodeceptJS] Automation Sample',
-platformName: 'Windows 11',
-browserName: 'Chrome',
-browserVersion: 'dev'
-}
-},
+      desiredCapabilities: {
+        name: '[CodeceptJS] Automation Sample',
+        build: '[CodeceptJS] Automation Sample',
+        platformName: 'Windows 11',
+        browserName: 'Chrome',
+        browserVersion: 'dev'
+      }
+    },
 
-LTHelper: {
-require: 'codeceptjs-lambdatest-service',
-user: process.env.LT_USERNAME,
-key: process.env.LT_ACCESS_KEY,
-updateTestName: true
-}
-},
+    LTHelper: {
+      require: 'codeceptjs-lambdatest-service',
+      user: process.env.LT_USERNAME,
+      key: process.env.LT_ACCESS_KEY,
+      updateTestName: true
+    }
+  },
 
-include: {
-I: './steps_file.js'
-},
+  include: {
+    I: './steps_file.js'
+  },
 
-bootstrap: null,
-mocha: {},
-name: 'CodeceptJS'
+  bootstrap: null,
+  mocha: {},
+  name: 'CodeceptJS'
 }
 ```
 
@@ -107,14 +107,14 @@ Add the `LTHelper` block inside the `helpers` section of `codecept.conf.js`:
 
 ```js
 helpers: {
-// ... your WebDriver helper config
+  // ... your WebDriver helper config
 
-LTHelper: {
-require: 'codeceptjs-lambdatest-service',
-user: process.env.LT_USERNAME,
-key: process.env.LT_ACCESS_KEY,
-updateTestName: true
-}
+  LTHelper: {
+    require: 'codeceptjs-lambdatest-service',
+    user: process.env.LT_USERNAME,
+    key: process.env.LT_ACCESS_KEY,
+    updateTestName: true
+  }
 }
 ```
 
@@ -128,8 +128,8 @@ For example, if your test is:
 Feature('GoogleTest');
 
 Scenario('test something', async ({ I }) => {
-await I.amOnPage('http://google.com/ncr');
-await I.seeInTitle('Google');
+  await I.amOnPage('http://google.com/ncr');
+  await I.seeInTitle('Google');
 });
 ```
 

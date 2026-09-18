@@ -130,36 +130,36 @@ maxRetries: 1
 concurrency: 4
 
 env:
-NUGET_PACKAGES: '/home/ltuser/.nuget/packages/'
-NUGET_HTTP_CACHE_PATH: '/home/ltuser/.local/share/NuGet/v3-cache'
-NUGET_PLUGINS_CACHE_PATH: '/home/ltuser/.local/share/NuGet/plugins-cache'
+  NUGET_PACKAGES: '/home/ltuser/.nuget/packages/'
+  NUGET_HTTP_CACHE_PATH: '/home/ltuser/.local/share/NuGet/v3-cache'
+  NUGET_PLUGINS_CACHE_PATH: '/home/ltuser/.local/share/NuGet/plugins-cache'
 
 pre:
-- dotnet restore
-- dotnet list reqnroll.cloud.csproj package > packages.txt
-- dotnet build -c Release
+ - dotnet restore
+ - dotnet list reqnroll.cloud.csproj package > packages.txt
+ - dotnet build -c Release
 
 cacheKey: '{{ checksum "packages.txt" }}'
 
 post:
-- cat yaml/linux/reqnroll_hyperexecute_autosplit_sample.yaml
+  - cat yaml/linux/reqnroll_hyperexecute_autosplit_sample.yaml
 
 mergeArtifacts: true
 
 uploadArtefacts:
-- name: Execution_Report
-path:
-- Report/**
-- Reports/**
-- name: Execution_Screenshots
-path:
-- Screenshots/**/**
-- Reports/**/Screenshots/**
+ - name: Execution_Report
+   path:
+    - Report/**
+    - Reports/**
+ - name: Execution_Screenshots
+   path:
+    - Screenshots/**/**
+    - Reports/**/Screenshots/**
 
 testDiscovery:
-type: raw
-mode: remote
-command: grep -rni 'Features' -e '@' --include=\*.feature | sed 's/.*@//'
+  type: raw
+  mode: remote
+  command: grep -rni 'Features' -e '@' --include=\*.feature | sed 's/.*@//'
 
 testRunnerCommand: dotnet test --logger "console;verbosity=detailed" --filter "(Category=$test)"
 

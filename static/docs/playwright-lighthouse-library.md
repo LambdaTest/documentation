@@ -52,8 +52,8 @@ You can easily add the Lighthouse Performance Metrics of the website you want to
 
 ```js title="playwright-lighthouse-report.js"
 await page.evaluate(_ => {}, `lambdatest_action: ${JSON.stringify({
-action: 'lighthouseReport',
-arguments: { url: 'https://www.example.com' }
+  action: 'lighthouseReport',
+  arguments: { url: 'https://www.example.com' }
 })}`)
 ```
 
@@ -64,19 +64,19 @@ The feature allows you to generate Lighthouse reports for authenticated web page
 
 ```javascript
 await page.evaluate(() => {}, `lambdatest_action: ${JSON.stringify({
-action: 'lighthouseReport',
-arguments: { url: 'https://www.example.com',
-args: `--extra-headers
-${JSON.stringify({ authtoken: "YOUR_AUTH_TOKEN" })}`
+  action: 'lighthouseReport',
+  arguments: { url: 'https://www.example.com',
+  args: `--extra-headers
+  ${JSON.stringify({ authtoken: "YOUR_AUTH_TOKEN" })}`
 } })}` );
 ```
 
 ```javascript
 await page.evaluate(() => {}, `lambdatest_action: ${JSON.stringify({
-action: 'lighthouseReport',
-arguments: { url: 'https://www.example.com',
-args: '--extra-headers
-"{\\"authtoken\\": \\"YOUR_AUTH_TOKEN\\"}"'
+  action: 'lighthouseReport',
+  arguments: { url: 'https://www.example.com',
+  args: '--extra-headers
+  "{\\"authtoken\\": \\"YOUR_AUTH_TOKEN\\"}"'
 } })}`);
 ```
 

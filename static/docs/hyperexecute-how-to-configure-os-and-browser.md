@@ -46,6 +46,6 @@ runson: linux #linux, win, win11, mac, mac13
 runson: ${matrix.os}
 
 matrix:
-os: ["win", "mac", "linux"] #linux, win, win11, mac, mac13
+  os: ["win", "mac", "linux"] #linux, win, win11, mac, mac13
 ```
     > 📕 Learn more about [Matrix Test Method](/support/docs/hyperexecute-matrix-multiplexing-strategy/)

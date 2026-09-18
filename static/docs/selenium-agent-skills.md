@@ -88,8 +88,8 @@ A breakdown of everything the skill package contains.
 selenium-skill/
 ├── SKILL.md
 └── reference/
-├── playbook.md
-└── advanced-patterns.md
+    ├── playbook.md
+    └── advanced-patterns.md
 ```
 
 | Section | Details |

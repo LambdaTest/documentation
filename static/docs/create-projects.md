@@ -13,3 +13,5 @@ Creating projects within Test Manager is the foundational step in organizing and
 2. Click on the **Create Project** button.
 
 3. Enter the **Project name**, **Description**, and **Tag(s)**. Be descriptive to ensure clarity for all team members. Click on **Create** to complete the project creation.
+
+Projects can share test cases with each other, so one project can act as a central repository for others. To control whether a project can share or receive test cases, see [Share Test Cases Across Projects](/support/docs/share-test-cases-across-projects/#turn-on-sharing-in-project-settings).

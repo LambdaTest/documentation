@@ -72,28 +72,28 @@ concurrency: 2
 
 cacheKey: '{{ checksum "pom.xml" }}'
 cacheDirectories:
-- .m2
+  - .m2
 
 pre:
-- mvn -Dmaven.repo.local=./.m2 dependency:resolve
+  - mvn -Dmaven.repo.local=./.m2 dependency:resolve
 
 report: true
 partialReports:
-type: json
-location: target/
-frameworkName: extent-native
+    type: json
+    location: target/
+    frameworkName: extent-native
 
 uploadArtifacts:
-- name: FinalReport
-path:
-- ExtentReports/**
+  - name: FinalReport
+    path:
+    - ExtentReports/**
 
 testDiscovery:
-type: automatic
-mode: static
-args:
-featureFilePaths: src/test/java/features/
-frameWork: java
+  type: automatic
+  mode: static
+  args:
+    featureFilePaths: src/test/java/features/
+    frameWork: java
 
 testRunnerCommand: mvn test `-Dplatname=win `-Dmaven.repo.local=./.m2 `-Dcucumber.features="$test"
 

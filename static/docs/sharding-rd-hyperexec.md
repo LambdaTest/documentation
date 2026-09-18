@@ -119,45 +119,45 @@ retryOnFailure: true
 globalTimeout: 180 #MAXQUEUETIMEOUT
 
 framework:
-name: "ios/xcui"
-args:
-buildName: "XCUIT"
-video: true
-networkLog: true
-deviceLog: true
+  name: "ios/xcui"
+  args:
+    buildName: "XCUIT"
+    video: true
+    networkLog: true
+    deviceLog: true
 
-# You can use either the appId (lt://APP1234567) or provide the path of the application using appPath.
-# Both examples are given below.
+    # You can use either the appId (lt://APP1234567) or provide the path of the application using appPath.
+    # Both examples are given below.
 
-appPath: ProverbialTest.ipa
-testSuitePath: LambdaUiKitIOS.ipa
-# We have used the appPath and testSuitePath here.
+    appPath: ProverbialTest.ipa
+    testSuitePath: LambdaUiKitIOS.ipa
+    # We have used the appPath and testSuitePath here.
 
-appId: lt://APP1010461471690377432133206
-testSuiteAppId: lt://APP10104592261690377454846669
-# We have used the appId and testSuiteAppID here.
+    appId: lt://APP1010461471690377432133206
+    testSuiteAppId: lt://APP10104592261690377454846669
+    # We have used the appId and testSuiteAppID here.
 
-deviceSelectionStrategy: all
-devices: ["iPhone 12 Pro-14", "iPad Air (2019)-16"]
+    deviceSelectionStrategy: all
+    devices: ["iPhone 12 Pro-14", "iPad Air (2019)-16"]
 
-shards:
-mappings:
-- name: shard1
-strategy: "only-testing/skip-testing"
-values:
-- "<className>/<className/testName>"
-# The strategy for this shard is based on "only-testing/skip-testing".
-# This shard will either execute only the specified test(s) or skip the specified test(s),
-# depending on the strategy value configured.
+    shards:
+      mappings:
+        - name: shard1
+          strategy: "only-testing/skip-testing"
+          values:
+            - "<className>/<className/testName>"
+        # The strategy for this shard is based on "only-testing/skip-testing".
+        # This shard will either execute only the specified test(s) or skip the specified test(s),
+        # depending on the strategy value configured.
 
-- name: shard2
-strategy: "only-testing/skip-testing"
-values:
-- "<className>/<className/testName>"
-- "<className>/<className/testName>"
-# The strategy for this shard is based on "only-testing/skip-testing".
-# This shard will either execute only the specified test(s) or skip the specified test(s),
-# depending on the strategy value configured.
+        - name: shard2
+          strategy: "only-testing/skip-testing"
+          values:
+            - "<className>/<className/testName>"
+            - "<className>/<className/testName>"
+        # The strategy for this shard is based on "only-testing/skip-testing".
+        # This shard will either execute only the specified test(s) or skip the specified test(s),
+        # depending on the strategy value configured.
 ```
 
 ```yaml title="SampleYamlFile.yaml"
@@ -175,48 +175,48 @@ retryOnFailure: true
 globalTimeout: 180 #MAXQUEUETIMEOUT
 
 framework:
-name: "ios/xcui"
-args:
-buildName: "XCUIT"
-video: true
-networkLog: true
-deviceLog: true
+  name: "ios/xcui"
+  args:
+    buildName: "XCUIT"
+    video: true
+    networkLog: true
+    deviceLog: true
 
-# You can use either the appId (lt://APP1234567) or provide the path of the application using appPath.
-# Both examples are given below.
+    # You can use either the appId (lt://APP1234567) or provide the path of the application using appPath.
+    # Both examples are given below.
 
-appPath: ProverbialTest.ipa
-testSuitePath: LambdaUiKitIOS.ipa
-# We have used the appPath and testSuitePath here.
+    appPath: ProverbialTest.ipa
+    testSuitePath: LambdaUiKitIOS.ipa
+    # We have used the appPath and testSuitePath here.
 
-appId: lt://APP1010461471690377432133206
-testSuiteAppId: lt://APP10104592261690377454846669
-# We have used the appId and testSuiteAppID here.
+    appId: lt://APP1010461471690377432133206
+    testSuiteAppId: lt://APP10104592261690377454846669
+    # We have used the appId and testSuiteAppID here.
 
-deviceSelectionStrategy: all
-devices: ["iPhone 12 Pro-14", "iPad Air (2019)-16"]
+    deviceSelectionStrategy: all
+    devices: ["iPhone 12 Pro-14", "iPad Air (2019)-16"]
 
-#highlight-next-line
-isVirtualDevice: true
+    #highlight-next-line
+    isVirtualDevice: true
 
-shards:
-mappings:
-- name: shard1
-strategy: "only-testing/skip-testing"
-values:
-- "<className>/<className/testName>"
-# The strategy for this shard is based on "only-testing/skip-testing".
-# This shard will either execute only the specified test(s) or skip the specified test(s),
-# depending on the strategy value configured.
+    shards:
+      mappings:
+        - name: shard1
+          strategy: "only-testing/skip-testing"
+          values:
+            - "<className>/<className/testName>"
+        # The strategy for this shard is based on "only-testing/skip-testing".
+        # This shard will either execute only the specified test(s) or skip the specified test(s),
+        # depending on the strategy value configured.
 
-- name: shard2
-strategy: "only-testing/skip-testing"
-values:
-- "<className>/<className/testName>"
-- "<className>/<className/testName>"
-# The strategy for this shard is based on "only-testing/skip-testing".
-# This shard will either execute only the specified test(s) or skip the specified test(s),
-# depending on the strategy value configured.
+        - name: shard2
+          strategy: "only-testing/skip-testing"
+          values:
+            - "<className>/<className/testName>"
+            - "<className>/<className/testName>"
+        # The strategy for this shard is based on "only-testing/skip-testing".
+        # This shard will either execute only the specified test(s) or skip the specified test(s),
+        # depending on the strategy value configured.
 ```
 
 **When shards are added**
@@ -261,11 +261,11 @@ Here's an example of the same.
 
 ```java
 filters:
-attributes:
-- type: className
-values: ["LambdaUiKitIOSUITests","LambdaUiKitIOSUITestsLaunchTests"]
-- type: testName
-values: ["LambdaUiKitIOSUITests/testverifyAppLaunch"]
+      attributes:
+      - type: className
+        values: ["LambdaUiKitIOSUITests","LambdaUiKitIOSUITestsLaunchTests"]
+      - type: testName
+        values: ["LambdaUiKitIOSUITests/testverifyAppLaunch"]
 ```
 This example will run only the 2 classes & one test as mentioned from the TestSuite.
 
@@ -274,11 +274,11 @@ To implement the XCTestPlan in Sharding, add the `xctestplan` flag along with `a
 
 ```yaml
 framework:
-name: "ios/xcui"
-args:
-"app" : "lt://APP_ID",
-"testSuite": "lt://TEST_SUITE_ID",
-"xctestplan" : "lt://YOUR_XC_TEST_PLAN_ID" #only when you want to use XCTestPlan
+  name: "ios/xcui"
+  args:
+    "app" : "lt://APP_ID",
+    "testSuite": "lt://TEST_SUITE_ID",
+    "xctestplan" : "lt://YOUR_XC_TEST_PLAN_ID" #only when you want to use XCTestPlan
 ```
 
 > Refer the documentation to learn how to use [XCTestPlan feature](/support/docs/xctestplan/).

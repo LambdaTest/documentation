@@ -74,7 +74,7 @@ You will have to update the **CDP (Chrome DevTools Protocol) URL** which is a pr
 
 ```javascript title="playwright-ios-real-device.js"
 const browser = await chromium.connect({
-wsEndpoint: `wss://cdp.lambdatest.com/playwright?capabilities=${encodeURIComponent(JSON.stringify(capabilities))}`
+  wsEndpoint: `wss://cdp.lambdatest.com/playwright?capabilities=${encodeURIComponent(JSON.stringify(capabilities))}`
 })
 ```
 
@@ -106,11 +106,11 @@ To Run test on Mobile Containers in a Particular Region
 dynamicAllocation: true
 
 framework:
-name: appium
-args:
-playwrightRD : true
-region: ap       # supported regions -> ap, eu, us
-reservation: false
+  name: appium
+  args:
+    playwrightRD : true
+    region: ap       # supported regions -> ap, eu, us
+    reservation: false
 ```
 - If **`reservation : false`**, it means that it will allocate the device from any region. If you want to allocate the device of any specific region, keep the **`reservation : true`**.
 
@@ -140,8 +140,8 @@ The playwright-skill package includes:
 playwright-skill/
 ├── SKILL.md
 └── reference/
-├── playbook.md
-└── advanced-patterns.md
+    ├── playbook.md
+    └── advanced-patterns.md
 ```
 
 It provides structured guidance for:

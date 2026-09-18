@@ -115,11 +115,11 @@ If you are using the Continuous Integration (CI) pipeline for your application a
 
 ```yaml
 steps:
-- name: Running SmartUI CLI Tests
-- run: |
-npm install @lambdatest/smartui-cli
-npx playwright install-deps
-npx smartui upload <Directory Name> --removeExtensions
+  - name: Running SmartUI CLI Tests
+    - run: |
+       npm install @lambdatest/smartui-cli
+       npx playwright install-deps
+       npx smartui upload <Directory Name> --removeExtensions
 ```
 
 ## SmartUI CLI Options and Keys

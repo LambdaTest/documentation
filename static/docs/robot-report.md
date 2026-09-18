@@ -19,9 +19,9 @@ testRunnerCommand: YOUR_RUNNER_COMMAND --outputdir Reports
 
 report: true
 partialReports:
-type: json
-location: Reports
-frameworkName: robot
+  type: json
+  location: Reports
+  frameworkName: robot
 ```
 
 **Step 3:** Now execute your job by triggering the HyperExecute CLI. You can visit the HyperExecute dashboard to download the report after job completion.

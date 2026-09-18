@@ -40,25 +40,25 @@ You can enable the dark mode setting through `darkMode` capability before the se
 
 ```json
 {
-"deviceName":"iPhone 16",
-"platformName":"ios",
-"platformVersion":"18",
-"isRealMobile":True,
-"app":"YOUR_APP_URL",
-#highlight-next-line
-"darkMode": true
+    "deviceName":"iPhone 16",
+    "platformName":"ios",
+    "platformVersion":"18",
+    "isRealMobile":True,
+    "app":"YOUR_APP_URL",
+    #highlight-next-line
+    "darkMode": true
 }
 ```
 
 ```json
 {
-"deviceName":"Galaxy S20",
-"platformName":"Android",
-"platformVersion":"10",
-"isRealMobile":True,
-"app":"YOUR_APP_URL",
-#highlight-next-line
-"darkMode": true
+    "deviceName":"Galaxy S20",
+    "platformName":"Android",
+    "platformVersion":"10",
+    "isRealMobile":True,
+    "app":"YOUR_APP_URL",
+    #highlight-next-line
+    "darkMode": true
 }
 ```
 
@@ -71,19 +71,19 @@ To change dark mode settings during test execution, use the hook with the `updat
 
 ```python
 driver.execute_script('lambda_executor: {
-"action": "updateDeviceSettings",
-"arguments": {
-"darkMode" : "on"
-}
+      "action": "updateDeviceSettings",
+      "arguments": {
+        "darkMode" : "on"
+        }
 }')
 ```
 
 ```python
 driver.execute_script('lambdatest_executor: {
-"action": "updateDeviceSettings",
-"arguments": {
-"DarkMode": "true"
-}
+      "action": "updateDeviceSettings",
+      "arguments": {
+        "DarkMode": "true"
+       }
 }')
 ```
 

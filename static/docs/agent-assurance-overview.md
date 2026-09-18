@@ -141,9 +141,9 @@ Use an HTTP profile such as:
 
 ```bash
 curl https://refund-agent.staging.example.com/v1/chat \
--H 'authorization: Bearer replace-with-your-token' \
--H 'content-type: application/json' \
--d '{"message":"I need a refund for order ORD-1042","session_id":"test-session"}'
+  -H 'authorization: Bearer replace-with-your-token' \
+  -H 'content-type: application/json' \
+  -d '{"message":"I need a refund for order ORD-1042","session_id":"test-session"}'
 ```
 
 **Interpretation:** The PRD supplies expected behavior. The API response and observations supply actual evidence. Rook should not infer implementation tools or mark a backend refund successful merely because the PRD says that tool exists.
@@ -156,9 +156,9 @@ curl https://refund-agent.staging.example.com/v1/chat \
 support-agent-test/
 ├── PRD.md
 └── knowledge/
-├── refunds.md
-├── warranty.md
-└── escalation.md
+    ├── refunds.md
+    ├── warranty.md
+    └── escalation.md
 ```
 
 Explore the folder with focus:
@@ -201,9 +201,9 @@ The profile might invoke:
 
 ```bash
 curl https://travel-agent.staging.example.com/v2/trips \
--H 'authorization: Bearer replace-with-your-token' \
--H 'content-type: application/json' \
--d '{"goal":"Find a refundable flight to Singapore next Friday","thread_id":"rook-demo"}'
+  -H 'authorization: Bearer replace-with-your-token' \
+  -H 'content-type: application/json' \
+  -d '{"goal":"Find a refundable flight to Singapore next Friday","thread_id":"rook-demo"}'
 ```
 
 Use a conversation field when the agent returns a thread or session ID. Without that mapping, a scenario that requires follow-up questions cannot run as a real conversation.

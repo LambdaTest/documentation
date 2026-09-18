@@ -49,10 +49,10 @@ Update the capabilities object to define the browser and platform settings.
 
 ```js
 const capabilities = {
-build: 'jest-LambdaTest-Single',
-browserName: 'chrome',
-browserVersion: 'latest',
-platformName: 'Windows 10',
+  build: 'jest-LambdaTest-Single',
+  browserName: 'chrome',
+  browserVersion: 'latest',
+  platformName: 'Windows 10',
 };
 ```
 

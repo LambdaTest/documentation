@@ -49,12 +49,12 @@ Update the capabilities in `conf/single.conf.js` to define the browser and platf
 
 ```js
 capabilities: [{
-browserName: 'chrome',
-platformName: 'Windows 10',
-browserVersion: 'latest',
-name: "cucumber-js-single-test",
-build: "cucumber-js-LambdaTest-single"
-}]
+    browserName: 'chrome',
+    platformName: 'Windows 10',
+    browserVersion: 'latest',
+    name: "cucumber-js-single-test",
+    build: "cucumber-js-LambdaTest-single"
+  }]
 ```
 
 Generate capabilities for your test requirements with the [Capabilities Generator](https://www.testmuai.com/capabilities-generator/).

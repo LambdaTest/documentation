@@ -107,46 +107,46 @@ maxRetries: 1
 concurrency: 4
 
 env:
-# PAT: ${{ .secrets.testKey }}
-CACHE_DIR: m2_cache_dir
+  # PAT: ${{ .secrets.testKey }}
+  CACHE_DIR: m2_cache_dir
 
 # Dependency caching for Windows
 cacheKey: '{{ checksum "pom.xml" }}'
 cacheDirectories:
-- ${CACHE_DIR}
+  - ${CACHE_DIR}
 
 shell: bash
 
 pre:
-# Download and install packages in the CACHE_DIR.
-# Skip execution of the tests in the pre step
-- mvn -Dmaven.repo.local=${CACHE_DIR} -Dmaven.test.skip=true clean install
+  # Download and install packages in the CACHE_DIR.
+  # Skip execution of the tests in the pre step
+  - mvn -Dmaven.repo.local=${CACHE_DIR} -Dmaven.test.skip=true clean install
 
 post:
-- cat yaml/linux/cucumber_hyperexecute_autosplit_sample.yaml
+  - cat yaml/linux/cucumber_hyperexecute_autosplit_sample.yaml
 
 mergeArtifacts: true
 
 uploadArtefacts:
-- name: XmlReports
-path:
-- target/surefire-reports/testng-results.xml
-- name: JsonReports
-path:
-- target/cucumber-reports/CucumberTestReport.json
+  - name: XmlReports
+    path:
+      - target/surefire-reports/testng-results.xml
+  - name: JsonReports
+    path:
+      - target/cucumber-reports/CucumberTestReport.json
 
 report: true
 partialReports:
-location: target/cucumber-reports/
-frameworkName: cucumber
-type: json
+  location: target/cucumber-reports/
+  frameworkName: cucumber
+  type: json
 
 testDiscovery:
-type: raw
-mode: remote
-#Parallel execution at feature level
-#command: grep -rni 'Features' -e 'Feature:' | sed 's/.*://'
-command: grep -nri '@' src/main/java/Features --include=\*.feature | sed 's/^.*://'
+  type: raw
+  mode: remote
+  #Parallel execution at feature level
+  #command: grep -rni 'Features' -e 'Feature:' | sed 's/.*://'
+  command: grep -nri '@' src/main/java/Features --include=\*.feature | sed 's/^.*://'
 
 testRunnerCommand: mvn test -Dplatname=linux -Dmaven.repo.local=m2_cache_dir -Dcucumber.options="--tags $test"
 
@@ -215,8 +215,8 @@ The cucumber-skill package includes:
 cucumber-skill/
 ├── SKILL.md
 └── reference/
-├── playbook.md
-└── advanced-patterns.md
+    ├── playbook.md
+    └── advanced-patterns.md
 ```
 
 It provides structured guidance for:

@@ -55,47 +55,47 @@ lambdatest-cypress init
 
 ```json title="/cypress-project/lambdatest-config.json"
 {
-"lambdatest_auth": {
-"username": "<Your LambdaTest username>",
-"access_key": "<Your LambdaTest access key>"
-},
-"browsers": [
-{
-"browser": "Chrome",
-"platform": "Windows 10",
-"versions": ["latest-1"]
-},
-{
-"browser": "Firefox",
-"platform": "Windows 10",
-"versions": ["latest-1"]
-}
-],
-"run_settings": {
-"cypress_config_file": "cypress.json",
-"build_name": "build-name",
-"parallels": 2,
-"specs": "./cypress/integration/examples/*.spec.js",
-"ignore_files": "",
-"feature_file_suppport": false,
-"network": false,
-"headless": false,
-"reporter_config_file": "",
-"npm_dependencies": {
-"cypress": "9.0.0"
-},
-"smart_ui": {
-// highlight-start
-"project": "<Your Project Name>", // Add your SmartUI Project Name here
-"build": "<Your_Build_Name>", // Please add your build name of choice here
-"baseline": false,// Enable if you want to update to a new baseline build
-// highlight-end
-}
-},
-"tunnel_settings": {
-"tunnel": false,
-"tunnel_name": null
-}
+  "lambdatest_auth": {
+    "username": "<Your LambdaTest username>",
+    "access_key": "<Your LambdaTest access key>"
+  },
+  "browsers": [
+    {
+      "browser": "Chrome",
+      "platform": "Windows 10",
+      "versions": ["latest-1"]
+    },
+    {
+      "browser": "Firefox",
+      "platform": "Windows 10",
+      "versions": ["latest-1"]
+    }
+  ],
+  "run_settings": {
+    "cypress_config_file": "cypress.json",
+    "build_name": "build-name",
+    "parallels": 2,
+    "specs": "./cypress/integration/examples/*.spec.js",
+    "ignore_files": "",
+    "feature_file_suppport": false,
+    "network": false,
+    "headless": false,
+    "reporter_config_file": "",
+    "npm_dependencies": {
+      "cypress": "9.0.0"
+    },
+    "smart_ui": {
+      // highlight-start
+      "project": "<Your Project Name>", // Add your SmartUI Project Name here
+      "build": "<Your_Build_Name>", // Please add your build name of choice here
+      "baseline": false,// Enable if you want to update to a new baseline build
+      // highlight-end
+    }
+  },
+  "tunnel_settings": {
+    "tunnel": false,
+    "tunnel_name": null
+  }
 }
 ```
 
@@ -103,11 +103,11 @@ lambdatest-cypress init
 
 ```js
 describe("Cypress test with Visual Regression", () => {
-it("Example test", () => {
-cy.visit("https://demo.lambdatest.com/");
-// highlight-next-line
-cy.screenshot("<Screenshot Name>"); //Add desired Cypress screenshot name
-});
+  it("Example test", () => {
+    cy.visit("https://demo.lambdatest.com/");
+    // highlight-next-line
+    cy.screenshot("<Screenshot Name>"); //Add desired Cypress screenshot name
+  });
 });
 ```
 

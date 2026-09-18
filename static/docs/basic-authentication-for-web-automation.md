@@ -17,9 +17,9 @@ Here is an example of how to use the Basic Authentication hook in Python:
 
 ```python
 data = {
-"username": "admin",
-"password": "admin",
-"url": "https://the-internet.herokuapp.com/basic_auth",
+  "username": "admin",
+  "password": "admin",
+  "url": "https://the-internet.herokuapp.com/basic_auth",
 }
 driver.execute_script("lambda-ios-set-basic-auth", data)
 ```

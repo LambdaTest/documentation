@@ -39,28 +39,28 @@ Before automating Flutter apps using Appium, make sure you have the following th
 2. Add the below dependencies in Flutter app's `pubspec.yaml`
 
 ```
-dev_dependencies:
-test: Demo
-flutter_test:
-sdk: flutter
-flutter_driver:
-sdk: flutter
+ dev_dependencies:
+   test: Demo
+   flutter_test:
+     sdk: flutter
+   flutter_driver:
+     sdk: flutter
 ```
 
 3. In `main.dart` file, ensure the app has `enableFlutterDriverExtension()` enabled before `runApp`.
 
 ```
 void main() {
-enableFlutterDriverExtension();
-init();
-runApp(MyApp());
-}
-```
+    enableFlutterDriverExtension();
+    init();
+    runApp(MyApp());
+ }
+ ```
 
  4. Set the `automationName` capability to `flutter` in Appium desired capabilities.
 
 ```
-desiredCapabilities.setCapability("automationName", "flutter");
+ desiredCapabilities.setCapability("automationName", "flutter");
 ```
 
 Shown below is the test script for automating Flutter apps on TestMu AI platform.
@@ -74,12 +74,12 @@ from appium_flutter_finder.flutter_finder import FlutterElement, FlutterFinder
 # Example
 
 driver = Remote('http://<LT username>:<LT accesskey>@mobile-hub.lambdatest.com/wd/hub/', dict(
-platformName='Android',
-automationName='flutter',
-platformVersion='11',
-deviceName='Google Pixel 4',
-app='<App URL>',
-isRealMobile=True
+    platformName='Android',
+    automationName='flutter',
+    platformVersion='11',
+    deviceName='Google Pixel 4',
+    app='<App URL>',
+    isRealMobile=True
 ))
 
 finder = FlutterFinder()
@@ -118,14 +118,14 @@ To run Appium tests using the Flutter Integration Driver on TestMu AI, set the *
 
 ```java
 desired_caps = {
-"deviceName": "Galaxy S20",
-"platformName": "Android",
-"platformVersion": "15",
-"isRealMobile": True,   # Set False for virtual devices
-"app": "YOUR_APP_URL",
-"build": "Sample Build",
-"name": "Sample Test",
-"automationName": "FlutterIntegration"  # Use Flutter Integration Driver
+  "deviceName": "Galaxy S20",
+  "platformName": "Android",
+  "platformVersion": "15",
+  "isRealMobile": True,   # Set False for virtual devices
+  "app": "YOUR_APP_URL",
+  "build": "Sample Build",
+  "name": "Sample Test",
+  "automationName": "FlutterIntegration"  # Use Flutter Integration Driver
 }
 ```
 
@@ -145,43 +145,43 @@ import io.appium.java_client.flutter.android.FlutterAndroidDriver;
 
 public class AndroidApp_Flutter_Integration {
 
-FlutterIntegrationTestDriver driver;
+    FlutterIntegrationTestDriver driver;
 
-@Test
-@Parameters(value = { "device", "version", "platform" })
-public void AndroidApp1(String device, String version, String platform) {
-try {
-DesiredCapabilities capabilities = new DesiredCapabilities();
-HashMap<String, Object> ltOptions = new HashMap<>();
+    @Test
+    @Parameters(value = { "device", "version", "platform" })
+    public void AndroidApp1(String device, String version, String platform) {
+        try {
+            DesiredCapabilities capabilities = new DesiredCapabilities();
+            HashMap<String, Object> ltOptions = new HashMap<>();
 
-ltOptions.put("automationName", "FlutterIntegration");
-ltOptions.put("nativeFlutterLaunch", true);
-ltOptions.put("platformName", platform);
-ltOptions.put("deviceName", device);
-ltOptions.put("platformVersion", version);
-ltOptions.put("isRealMobile", true);
+            ltOptions.put("automationName", "FlutterIntegration");
+            ltOptions.put("nativeFlutterLaunch", true);
+            ltOptions.put("platformName", platform);
+            ltOptions.put("deviceName", device);
+            ltOptions.put("platformVersion", version);
+            ltOptions.put("isRealMobile", true);
 
-capabilities.setCapability("LT:Options", ltOptions);
+            capabilities.setCapability("LT:Options", ltOptions);
 
-driver = new FlutterAndroidDriver(
-new URL("https://username:accessKey@mobile-hub.lambdatest.com/wd/hub"),
-capabilities
-);
+            driver = new FlutterAndroidDriver(
+                new URL("https://username:accessKey@mobile-hub.lambdatest.com/wd/hub"),
+                capabilities
+            );
 
-WebElement username = driver.findElement(AppiumBy.flutterKey("username"));
-username.sendKeys("user@example.com");
+            WebElement username = driver.findElement(AppiumBy.flutterKey("username"));
+            username.sendKeys("user@example.com");
 
-WebElement password = driver.findElement(AppiumBy.flutterKey("password"));
-password.sendKeys("password123");
+            WebElement password = driver.findElement(AppiumBy.flutterKey("password"));
+            password.sendKeys("password123");
 
-WebElement loginBtn = driver.findElement(AppiumBy.flutterKey("login_btn"));
-loginBtn.click();
+            WebElement loginBtn = driver.findElement(AppiumBy.flutterKey("login_btn"));
+            loginBtn.click();
 
-driver.quit();
-} catch (Exception e) {
-driver.quit();
-}
-}
+            driver.quit();
+        } catch (Exception e) {
+            driver.quit();
+        }
+    }
 }
 ```
 
@@ -199,8 +199,8 @@ The flutter-testing-skill package includes:
 flutter-testing-skill/
 ├── SKILL.md
 └── reference/
-├── playbook.md
-└── advanced-patterns.md
+    ├── playbook.md
+    └── advanced-patterns.md
 ```
 
 It provides structured guidance for:

@@ -54,9 +54,9 @@ If using Maven, add the following dependency to your `pom.xml` file:
 
 ```xml title="pom.xml"
 <dependency>
-<groupId>com.relevantcodes</groupId>
-<artifactId>extentreports</artifactId>
-<version>2.41.2</version>
+  <groupId>com.relevantcodes</groupId>
+  <artifactId>extentreports</artifactId>
+  <version>2.41.2</version>
 </dependency>
 ```
 
@@ -71,14 +71,14 @@ import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult
 public class ExtentReportListenerV2 implements ITestListener {
-private static ExtentReports extent;
-private static ThreadLocal<ExtentTest> test = new ThreadLocal<>()
-@Override
-public void onStart(ITestContext context) {
-// Initialize ExtentReports with the report path
-extent = new ExtentReports("extent-report.html", true);
-extent.addSystemInfo("Environment", "QA").addSystemInfo("User", "Tester");
-}
+    private static ExtentReports extent;
+    private static ThreadLocal<ExtentTest> test = new ThreadLocal<>()
+    @Override
+    public void onStart(ITestContext context) {
+        // Initialize ExtentReports with the report path
+        extent = new ExtentReports("extent-report.html", true);
+        extent.addSystemInfo("Environment", "QA").addSystemInfo("User", "Tester");
+    }
 ```
 
 ## Steps to Generate Extent Reports `(Version > 2)` on HyperExecute
@@ -89,9 +89,9 @@ If using Maven, add the latest extentreports dependency to `pom.xml` file:
 
 ```xml title="pom.xml"
 <dependency>
-<groupId>com.aventstack</groupId>
-<artifactId>extentreports</artifactId>
-<version>5.0.9</version> <!-- Use latest version available -->
+  <groupId>com.aventstack</groupId>
+  <artifactId>extentreports</artifactId>
+  <version>5.0.9</version> <!-- Use latest version available -->
 </dependency>
 ```
 
@@ -107,17 +107,17 @@ import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult
 public class ExtentReportListener implements ITestListener {
-private static ExtentReports extent;
-private static ThreadLocal<ExtentTest> test = new ThreadLocal<>()
-@Override
-public void onStart(ITestContext context) {
-ExtentHtmlReporter htmlReporter = new ExtentHtmlReporter("extent-report.html");
-htmlReporter.config().setTheme(Theme.STANDARD);
-htmlReporter.config().setDocumentTitle("Test Report");
-htmlReporter.config().setReportName("Automation Test Results")
-extent = new ExtentReports();
-extent.attachReporter(htmlReporter);
-}
+    private static ExtentReports extent;
+    private static ThreadLocal<ExtentTest> test = new ThreadLocal<>()
+    @Override
+    public void onStart(ITestContext context) {
+        ExtentHtmlReporter htmlReporter = new ExtentHtmlReporter("extent-report.html");
+        htmlReporter.config().setTheme(Theme.STANDARD);
+        htmlReporter.config().setDocumentTitle("Test Report");
+        htmlReporter.config().setReportName("Automation Test Results")
+        extent = new ExtentReports();
+        extent.attachReporter(htmlReporter);
+    }
 ```
 
 ## Configure the HyperExecute YAML File
@@ -126,7 +126,7 @@ In your HyperExecute YAML configuration, define the [`report`](/support/docs/dee
 ```yaml
 report: true
 partialReports:
-type: json
-location: reports/json
-frameworkName: extent
+    type: json
+    location: reports/json
+    frameworkName: extent
 ```

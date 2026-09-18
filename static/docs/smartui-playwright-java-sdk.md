@@ -207,37 +207,37 @@ Once, the configuration file will be created, you will be seeing the default con
 
 ```json title="/smartui-sdk-project/.smartui.json"
 {
-"web": {
-"browsers": [
-"chrome",
-"firefox",
-"safari",
-"edge"
-],
-"viewports": [
-[
-1920
-],
-[
-1366
-],
-[
-1028
-]
-] // Full Page screenshots are captured by default for web viewports
-},
-"mobile": {
-"devices": [
-"iPhone 14",  //iPhone 14 viewport
-"Galaxy S24"  //Galaxy S24 viewport
-],
-"fullPage": true, //Full Page is true by default for mobile viewports
-"orientation": "portrait" //Change to "landscape" for landscape snapshot
-},
-"waitForTimeout": 1000, //Optional (Should only be used in case lazy-loading/async components are present)
-"waitForPageRender": 50000, //Optional (Should only be used in case of websites which take more than 30s to load)
-"enableJavaScript": false, //Enable javascript for all the screenshots of the project
-"allowedHostnames": [] //Additional hostnames to capture assets from
+  "web": {
+    "browsers": [
+      "chrome",
+      "firefox",
+      "safari",
+      "edge"
+    ],
+    "viewports": [
+      [
+        1920
+      ],
+      [
+        1366
+      ],
+      [
+        1028
+      ]
+    ] // Full Page screenshots are captured by default for web viewports
+  },
+  "mobile": {
+    "devices": [
+      "iPhone 14",  //iPhone 14 viewport
+      "Galaxy S24"  //Galaxy S24 viewport
+    ],
+    "fullPage": true, //Full Page is true by default for mobile viewports
+    "orientation": "portrait" //Change to "landscape" for landscape snapshot
+  },
+  "waitForTimeout": 1000, //Optional (Should only be used in case lazy-loading/async components are present)
+  "waitForPageRender": 50000, //Optional (Should only be used in case of websites which take more than 30s to load)
+  "enableJavaScript": false, //Enable javascript for all the screenshots of the project
+  "allowedHostnames": [] //Additional hostnames to capture assets from
 }
 ```
 **Advanced options in SmartUI configuration**
@@ -419,36 +419,36 @@ If you encounter difficulties loading interactive elements that appear on scroll
 
 @Test
 public void basicTest() throws Exception {
-System.out.println("Loading Url");
-driver.get("Required URL");
-quickScrollToBottom();
+    System.out.println("Loading Url");
+    driver.get("Required URL");
+    quickScrollToBottom();
 
-SmartUISnapshot.smartuiSnapshot(driver, "Screenshot Name");
-Thread.sleep(5000); // wait for 5 seconds
-System.out.println("Test Finished");
+    SmartUISnapshot.smartuiSnapshot(driver, "Screenshot Name");
+    Thread.sleep(5000); // wait for 5 seconds
+    System.out.println("Test Finished");
 }
 
 public void quickScrollToBottom() throws InterruptedException {
-long lastHeight = ((Number) ((JavascriptExecutor) driver).executeScript("return document.body.scrollHeight")).longValue();
-while (true) {
-((JavascriptExecutor) driver).executeScript("window.scrollTo(0, document.body.scrollHeight);");
-Thread.sleep(2000);
+    long lastHeight = ((Number) ((JavascriptExecutor) driver).executeScript("return document.body.scrollHeight")).longValue();
+    while (true) {
+        ((JavascriptExecutor) driver).executeScript("window.scrollTo(0, document.body.scrollHeight);");
+        Thread.sleep(2000);
 
-long newHeight = ((Number) ((JavascriptExecutor) driver).executeScript("return document.body.scrollHeight")).longValue();
-if (newHeight == lastHeight) {
-break;
-}
-lastHeight = newHeight;
-}
-((JavascriptExecutor) driver).executeScript("window.scrollTo(0, 0);");
-Thread.sleep(1000); // wait for 1 second
+        long newHeight = ((Number) ((JavascriptExecutor) driver).executeScript("return document.body.scrollHeight")).longValue();
+        if (newHeight == lastHeight) {
+            break;
+        }
+        lastHeight = newHeight;
+    }
+    ((JavascriptExecutor) driver).executeScript("window.scrollTo(0, 0);");
+    Thread.sleep(1000); // wait for 1 second
 }
 
 @AfterMethod
 public void tearDown() {
-if (driver != null) {
-driver.quit();
-}
+    if (driver != null) {
+        driver.quit();
+    }
 }
 }
 ```
@@ -563,7 +563,7 @@ page.waitForLoadState(LoadState.NETWORKIDLE);
 2. Enable JavaScript in configuration:
 ```json
 {
-"enableJavaScript": true
+  "enableJavaScript": true
 }
 ```
 

@@ -69,7 +69,7 @@ The Kane CLI skill for Claude Code is a `SKILL.md` file placed in your skills di
 ```bash
 mkdir -p ~/.claude/skills/kane-cli
 curl -o ~/.claude/skills/kane-cli/SKILL.md \
-https://raw.githubusercontent.com/LambdaTest/kane-cli/main/skill-installer/skills/SKILL.md
+  https://raw.githubusercontent.com/LambdaTest/kane-cli/main/skill-installer/skills/SKILL.md
 ```
 
 **Project-level install** (available only in this project):
@@ -77,7 +77,7 @@ https://raw.githubusercontent.com/LambdaTest/kane-cli/main/skill-installer/skill
 ```bash
 mkdir -p .claude/skills/kane-cli
 curl -o .claude/skills/kane-cli/SKILL.md \
-https://raw.githubusercontent.com/LambdaTest/kane-cli/main/skill-installer/skills/SKILL.md
+  https://raw.githubusercontent.com/LambdaTest/kane-cli/main/skill-installer/skills/SKILL.md
 ```
 
 After installing, Claude Code automatically loads the skill. No restart required.
@@ -105,7 +105,7 @@ The Kane CLI skill for Codex CLI is appended to your `AGENTS.md` file. Codex rea
 
 ```bash
 curl -o /tmp/kane-cli-agents.md \
-https://raw.githubusercontent.com/LambdaTest/kane-cli/main/skill-installer/skills/SKILL.md
+  https://raw.githubusercontent.com/LambdaTest/kane-cli/main/skill-installer/skills/SKILL.md
 
 # Append to global AGENTS.md (creates the file if it doesn't exist)
 cat /tmp/kane-cli-agents.md >> ~/.codex/AGENTS.md
@@ -115,7 +115,7 @@ cat /tmp/kane-cli-agents.md >> ~/.codex/AGENTS.md
 
 ```bash
 curl -o /tmp/kane-cli-agents.md \
-https://raw.githubusercontent.com/LambdaTest/kane-cli/main/skill-installer/skills/SKILL.md
+  https://raw.githubusercontent.com/LambdaTest/kane-cli/main/skill-installer/skills/SKILL.md
 
 cat /tmp/kane-cli-agents.md >> AGENTS.md
 ```
@@ -141,7 +141,7 @@ The Kane CLI skill for Gemini CLI is a `SKILL.md` file placed in your Gemini ski
 ```bash
 mkdir -p ~/.gemini/skills/kane-cli
 curl -o ~/.gemini/skills/kane-cli/SKILL.md \
-https://raw.githubusercontent.com/LambdaTest/kane-cli/main/skill-installer/skills/SKILL.md
+  https://raw.githubusercontent.com/LambdaTest/kane-cli/main/skill-installer/skills/SKILL.md
 ```
 
 **Project-level install**:
@@ -149,7 +149,7 @@ https://raw.githubusercontent.com/LambdaTest/kane-cli/main/skill-installer/skill
 ```bash
 mkdir -p .gemini/skills/kane-cli
 curl -o .gemini/skills/kane-cli/SKILL.md \
-https://raw.githubusercontent.com/LambdaTest/kane-cli/main/skill-installer/skills/SKILL.md
+  https://raw.githubusercontent.com/LambdaTest/kane-cli/main/skill-installer/skills/SKILL.md
 ```
 
 **What Gemini can do with this skill:**

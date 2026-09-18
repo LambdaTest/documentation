@@ -60,23 +60,23 @@ Upload your `.mjpeg` file using the web automation user-files API.
 
 ```bash
 curl -X POST \
-"https://api.lambdatest.com/automation/api/v1/user-files" \
--u "$LT_USERNAME:$LT_ACCESS_KEY" \
--F "files=@/path/to/sample_640x360.mjpeg"
+  "https://api.lambdatest.com/automation/api/v1/user-files" \
+  -u "$LT_USERNAME:$LT_ACCESS_KEY" \
+  -F "files=@/path/to/sample_640x360.mjpeg"
 ```
 
 ### Response
 
 ```json
 {
-"status": "success",
-"data": [
-{
-"error": "",
-"message": "File have been uploaded successfully to our lambda storage",
-"key": "sample_640x360.mjpeg"
-}
-]
+  "status": "success",
+  "data": [
+    {
+      "error": "",
+      "message": "File have been uploaded successfully to our lambda storage",
+      "key": "sample_640x360.mjpeg"
+    }
+  ]
 }
 ```
 
@@ -99,9 +99,9 @@ import java.util.*;
 ChromeOptions options = new ChromeOptions();
 
 options.addArguments(
-"--use-fake-ui-for-media-stream",
-"--use-fake-device-for-media-stream",
-"--use-file-for-fake-video-capture=/home/ltuser/Downloads/sample_640x360.mjpeg"
+    "--use-fake-ui-for-media-stream",
+    "--use-fake-device-for-media-stream",
+    "--use-file-for-fake-video-capture=/home/ltuser/Downloads/sample_640x360.mjpeg"
 );
 
 HashSet<String> userFiles = new HashSet<>();
@@ -118,8 +118,8 @@ options.setCapability("LT:Options", ltOptions);
 options.setCapability("lambda:userFiles", userFiles);
 
 RemoteWebDriver driver = new RemoteWebDriver(
-new URL("https://" + LT_USERNAME + ":" + LT_ACCESS_KEY + "@hub.lambdatest.com/wd/hub"),
-options
+    new URL("https://" + LT_USERNAME + ":" + LT_ACCESS_KEY + "@hub.lambdatest.com/wd/hub"),
+    options
 );
 ```
 
@@ -134,19 +134,19 @@ options.add_argument("--use-fake-device-for-media-stream")
 options.add_argument("--use-file-for-fake-video-capture=/home/ltuser/Downloads/sample_640x360.mjpeg")
 
 lt_options = {
-"platform": "Linux",
-"build": "Mock Video Injection Test",
-"name": "Fake Camera Feed Test",
-"video": True,
-"w3c": True,
+    "platform": "Linux",
+    "build": "Mock Video Injection Test",
+    "name": "Fake Camera Feed Test",
+    "video": True,
+    "w3c": True,
 }
 
 options.set_capability("LT:Options", lt_options)
 options.set_capability("lambda:userFiles", ["sample_640x360.mjpeg"])
 
 driver = webdriver.Remote(
-command_executor=f"https://{LT_USERNAME}:{LT_ACCESS_KEY}@hub.lambdatest.com/wd/hub",
-options=options,
+    command_executor=f"https://{LT_USERNAME}:{LT_ACCESS_KEY}@hub.lambdatest.com/wd/hub",
+    options=options,
 )
 ```
 
@@ -154,26 +154,26 @@ options=options,
 
 ```javascript
 const capabilities = {
-browserName: "Chrome",
-browserVersion: "latest",
-platformName: "Linux",
-"LT:Options": {
-platform: "Linux",
-build: "Mock Video Injection Test",
-name: "Fake Camera Feed Test",
-video: true,
-w3c: true,
-},
-"lambda:userFiles": ["sample_640x360.mjpeg"],
-"goog:chromeOptions": {
-args: [
-"--use-fake-ui-for-media-stream",
-"--use-fake-device-for-media-stream",
-"--use-file-for-fake-video-capture=/home/ltuser/Downloads/sample_640x360.mjpeg",
-"--no-sandbox",
-"--disable-gpu",
-],
-},
+  browserName: "Chrome",
+  browserVersion: "latest",
+  platformName: "Linux",
+  "LT:Options": {
+    platform: "Linux",
+    build: "Mock Video Injection Test",
+    name: "Fake Camera Feed Test",
+    video: true,
+    w3c: true,
+  },
+  "lambda:userFiles": ["sample_640x360.mjpeg"],
+  "goog:chromeOptions": {
+    args: [
+      "--use-fake-ui-for-media-stream",
+      "--use-fake-device-for-media-stream",
+      "--use-file-for-fake-video-capture=/home/ltuser/Downloads/sample_640x360.mjpeg",
+      "--no-sandbox",
+      "--disable-gpu",
+    ],
+  },
 };
 ```
 
@@ -190,8 +190,8 @@ driver.get("https://www.lambdatest.com/selenium-playground/webrtc-video");
 driver.get("https://your-app.com/video-call");
 
 Boolean isPlaying = (Boolean) driver.executeScript(
-"const video = document.querySelector('video');" +
-"return video && !video.paused && video.readyState >= 2;"
+    "const video = document.querySelector('video');" +
+    "return video && !video.paused && video.readyState >= 2;"
 );
 ```
 

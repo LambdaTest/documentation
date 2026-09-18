@@ -42,20 +42,20 @@ runson: win
 
 tunnel: true
 tunnelOpts:
-global: true
+  global: true
 
 concurrency: 2
 
 pre:
-- pip install requests # To install pip request
-- python installer.py # To install the certs in the Machine
+  - pip install requests # To install pip request
+  - python installer.py # To install the certs in the Machine
 
 runtime: katalon
 
 testDiscovery:
-type: raw
-mode: remote
-command: grep -lr 'testSuiteGuid' */*.ts | sed 's/:.*//' | sed 's/.ts//g'
+  type: raw
+  mode: remote
+  command: grep -lr 'testSuiteGuid' */*.ts | sed 's/:.*//' | sed 's/.ts//g'
 
 testRunnerCommand:  katalonc `-noSplash `-runMode=console `-projectPath="G:\foreman\Hyperexecute_Sample\Hyperexecute_Sample.prj" `-retry=0 `-testSuitePath="$test" `-browserType="firefox" `-executionProfile="default" `-apiKey="aaa9402b-6a2e-4621-a4c3-05fe356f5aad" `-`-config `-webui.autoUpdateDrivers=true
 

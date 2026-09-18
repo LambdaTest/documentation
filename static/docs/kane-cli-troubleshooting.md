@@ -248,7 +248,7 @@ If your environment also breaks `kane-cli login`, apply the Node-side fix in the
 
 ```bash
 kane-cli run "log in as {{user}}" \
---variables '{"user":{"value":"alice"}}'
+  --variables '{"user":{"value":"alice"}}'
 ```
    If the inline form works, the issue is with file loading, not the variable itself.
 

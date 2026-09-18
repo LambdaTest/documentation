@@ -68,19 +68,19 @@ const { chromium } = require('playwright')
 const { expect } = require('@playwright/test');
 
 (async () => {
-const capabilities = {
-'browserName': 'Chrome', // Browsers allowed: `Chrome`, `MicrosoftEdge`, `pw-chromium`, `pw-firefox` and `pw-webkit`
-'browserVersion': 'latest',
-'LT:Options': {
-'platform': 'Windows 10',
-'build': 'Playwright Sample Build',
-'name': 'Playwright Sample Test',
-'user': process.env.LT_USERNAME,
-'accessKey': process.env.LT_ACCESS_KEY,
-'tunnel': false, // Add tunnel configuration if testing locally hosted webpage
-'tunnelName': '' // Optional
-}
-}
-```
+  const capabilities = {
+    'browserName': 'Chrome', // Browsers allowed: `Chrome`, `MicrosoftEdge`, `pw-chromium`, `pw-firefox` and `pw-webkit`
+    'browserVersion': 'latest',
+    'LT:Options': {
+      'platform': 'Windows 10',
+      'build': 'Playwright Sample Build',
+      'name': 'Playwright Sample Test',
+      'user': process.env.LT_USERNAME,
+      'accessKey': process.env.LT_ACCESS_KEY,
+      'tunnel': false, // Add tunnel configuration if testing locally hosted webpage
+      'tunnelName': '' // Optional
+    }
+  }
+ ```
 
 You can view test reports for your local tests on the TestMu AI automation dashboard.

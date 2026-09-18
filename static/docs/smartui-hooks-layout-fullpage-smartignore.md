@@ -124,21 +124,21 @@ browserOptions.setCapability("LT:Options", ltOptions);
 
 ```javascript
 'LT:Options': {
-user: process.env.LT_USERNAME,
-accessKey: process.env.LT_ACCESS_KEY,
-visual: true,
-'smartUI.project': 'Your_Project_Name',
-'smartUI.smartIgnore': true,
+  user: process.env.LT_USERNAME,
+  accessKey: process.env.LT_ACCESS_KEY,
+  visual: true,
+  'smartUI.project': 'Your_Project_Name',
+  'smartUI.smartIgnore': true,
 },
 ```
 
 ```python
 lt_options = {
-"username": os.getenv("LT_USERNAME"),
-"accessKey": os.getenv("LT_ACCESS_KEY"),
-"visual": True,
-"smartUI.project": "Your_Project_Name",
-"smartUI.smartIgnore": True,
+    "username": os.getenv("LT_USERNAME"),
+    "accessKey": os.getenv("LT_ACCESS_KEY"),
+    "visual": True,
+    "smartUI.project": "Your_Project_Name",
+    "smartUI.smartIgnore": True,
 }
 options.set_capability("LT:Options", lt_options)
 ```
@@ -168,23 +168,23 @@ options.put("ignoreType", Arrays.asList("layout"));
 
 ```javascript
 await driver.executeScript('smartui.takeScreenshot', {
-screenshotName: 'my-layout-screenshot-01',
-ignoreType: ['layout'],
+  screenshotName: 'my-layout-screenshot-01',
+  ignoreType: ['layout'],
 });
 ```
 
 ```python
 driver.execute_script("smartui.takeScreenshot", {
-"screenshotName": "my-layout-screenshot-01",
-"ignoreType": ["layout"],
+    "screenshotName": "my-layout-screenshot-01",
+    "ignoreType": ["layout"],
 })
 ```
 
 ```csharp
 var options = new Dictionary<string, object>
 {
-{ "screenshotName", "my-layout-screenshot-01" },
-{ "ignoreType", new[] { "layout" } }
+    { "screenshotName", "my-layout-screenshot-01" },
+    { "ignoreType", new[] { "layout" } }
 };
 ((IJavaScriptExecutor)driver).ExecuteScript("smartui.takeScreenshot", options);
 ```
@@ -203,23 +203,23 @@ options.put("fullPage", true);
 
 ```javascript
 await driver.executeScript('smartui.takeScreenshot', {
-screenshotName: 'Home_Page_Desktop',
-fullPage: true,
+  screenshotName: 'Home_Page_Desktop',
+  fullPage: true,
 });
 ```
 
 ```python
 driver.execute_script("smartui.takeScreenshot", {
-"screenshotName": "Home_Page_Desktop",
-"fullPage": True,
+    "screenshotName": "Home_Page_Desktop",
+    "fullPage": True,
 })
 ```
 
 ```csharp
 var options = new Dictionary<string, object>
 {
-{ "screenshotName", "Home_Page_Desktop" },
-{ "fullPage", true }
+    { "screenshotName", "Home_Page_Desktop" },
+    { "fullPage", true }
 };
 ((IJavaScriptExecutor)driver).ExecuteScript("smartui.takeScreenshot", options);
 ```

@@ -38,31 +38,31 @@ The SmartUI configuration file follows a JSON structure. Below is a sample confi
 
 ```json
 {
-"web": {
-"browsers": [
-"chrome",
-"firefox",
-"safari",
-"edge"
-],
-"viewports": [
-[1920],
-[1366],
-[1028]
-]
-},
-"mobile": {
-"devices": [
-"iPhone 14",
-"Galaxy S24"
-],
-"fullPage": true,
-"orientation": "portrait"
-},
-"waitForTimeout": 1000,
-"waitForPageRender": 50000,
-"enableJavaScript": false,
-"allowedHostnames": ["cdn.xyz.com"]
+  "web": {
+    "browsers": [
+      "chrome",
+      "firefox",
+      "safari",
+      "edge"
+    ],
+    "viewports": [
+      [1920],
+      [1366],
+      [1028]
+    ]
+  },
+  "mobile": {
+    "devices": [
+      "iPhone 14",
+      "Galaxy S24"
+    ],
+    "fullPage": true,
+    "orientation": "portrait"
+  },
+  "waitForTimeout": 1000,
+  "waitForPageRender": 50000,
+  "enableJavaScript": false,
+  "allowedHostnames": ["cdn.xyz.com"]
 }
 ```
 
@@ -81,17 +81,17 @@ An array of arrays representing different screen resolutions for web browsers. E
 To capture a screenshot of the entire page, you only need to define the viewport width in your configuration settings. Specify the desired width parameters as demonstrated in the following example to ensure a fullpage capture.
 
 ```json title="Full Page Capture"
-"viewports": [
-[
-1920
-],
-[
-1366
-],
-[
-360
-]
-],
+    "viewports": [
+      [
+        1920
+      ],
+      [
+        1366
+      ],
+      [
+        360
+      ]
+    ],
 ```
 
 **For capturing viewport screenshots**
@@ -99,20 +99,20 @@ To capture a screenshot of the entire page, you only need to define the viewport
 To capture a screenshot of the content currently visible in your viewport, rather than the entire page, it's important to define the viewport's width and height in your configuration settings. Specify the desired width and height parameters as demonstrated in the following example to ensure that the screenshot encompasses only the viewport area.
 
 ```json title="Viewport Capture"
-"viewports": [
-[
-1920,
-1080
-],
-[
-1366,
-768
-],
-[
-360,
-640
-]
-],
+    "viewports": [
+      [
+        1920,
+        1080
+      ],
+      [
+        1366,
+        768
+      ],
+      [
+        360,
+        640
+      ]
+    ],
 ```
 
 **customViewports**
@@ -131,12 +131,12 @@ The `customViewports` option and the standard `browsers` / `viewports` arrays ar
 Below is an example of providing targeted sizes depending on the browser context. When using this configuration, SmartUI will generate screenshots only for the explicitly declared matches, allowing for highly optimized test metrics.
 
 ```json title="Sample web object with customViewports"
-"customViewports": [
-{ "browser": "chrome", "viewport": { "width": 1200, "height": 800 } },
-{ "browser": "chrome", "viewport": { "width": 375, "height": 667 } },
-{ "browser": "firefox", "viewport": { "width": 1200, "height": 800 } },
-{ "browser": "safari", "viewport": { "width": 1200 } }
-]
+    "customViewports": [
+      { "browser": "chrome", "viewport": { "width": 1200, "height": 800 } },
+      { "browser": "chrome", "viewport": { "width": 375, "height": 667 } },
+      { "browser": "firefox", "viewport": { "width": 1200, "height": 800 } },
+      { "browser": "safari", "viewport": { "width": 1200 } }
+    ]
 ```
 
 *Note: As demonstrated with `safari` above, the `height` property within a viewport object is optional. If omitted, SmartUI performs a full-page capture automatically.*
@@ -186,12 +186,12 @@ Add the following configuration to your `.smartui.json` file:
 
 ```json
 {
-"lazyLoadConfiguration": {
-"enabled": true,
-"jumpBackToTop": true,
-"scrollDelay": 250,
-"scrollStep": 250
-}
+  "lazyLoadConfiguration": {
+    "enabled": true,
+    "jumpBackToTop": true,
+    "scrollDelay": 250,
+    "scrollStep": 250
+  }
 }
 ```
 

@@ -57,20 +57,20 @@ After configuring your environment variables, select **Commit file** at the bott
 image: ubuntu:latest  # Adjust for macOS if needed
 
 pipelines:
-default:
-branches:
-- master  # Adjust as needed
-steps:
-## Download Hyperexecute CLI (descriptive name)
-- name: Download Hyperexecute CLI
-script: |
-wget https://downloads.lambdatest.com/hyperexecute/darwin/hyperexecute
-chmod u+x hyperexecute
+  default:
+    branches:
+      - master  # Adjust as needed
+    steps:
+      ## Download Hyperexecute CLI (descriptive name)
+      - name: Download Hyperexecute CLI
+        script: |
+          wget https://downloads.lambdatest.com/hyperexecute/darwin/hyperexecute
+          chmod u+x hyperexecute
 
-## Run Hyperexecute tests (descriptive name)
-- name: Run Hyperexecute Tests
-script: |
-./hyperexecute --user <your_username> --key <your_access_key> --config <your_yaml_file_path>
+      ## Run Hyperexecute tests (descriptive name)
+      - name: Run Hyperexecute Tests
+        script: |
+          ./hyperexecute --user <your_username> --key <your_access_key> --config <your_yaml_file_path>
 ```
 
 >

@@ -51,57 +51,57 @@ import com.microsoft.playwright.*;
 import java.net.URLEncoder;
 
 public class PlaywrightTestSingle {
-public static void main(String[] args) {
-try (Playwright playwright = Playwright.create()) {
-JsonObject capabilities = new JsonObject();
-JsonObject ltOptions = new JsonObject();
+    public static void main(String[] args) {
+        try (Playwright playwright = Playwright.create()) {
+            JsonObject capabilities = new JsonObject();
+            JsonObject ltOptions = new JsonObject();
 
-String user = System.getenv("LT_USERNAME");
-String accessKey = System.getenv("LT_ACCESS_KEY");
+            String user = System.getenv("LT_USERNAME");
+            String accessKey = System.getenv("LT_ACCESS_KEY");
 
-capabilities.addProperty("browsername", "Chrome"); // Browsers allowed: `Chrome`, `MicrosoftEdge`, `pw-chromium`, `pw-firefox` and `pw-webkit`
-capabilities.addProperty("browserVersion", "latest");
-ltOptions.addProperty("platform", "Windows 10");
-ltOptions.addProperty("name", "Playwright Test");
-ltOptions.addProperty("build", "Playwright Testing in Java");
-ltOptions.addProperty("user", user);
-ltOptions.addProperty("accessKey", accessKey);
-capabilities.add("LT:Options", ltOptions);
+            capabilities.addProperty("browsername", "Chrome"); // Browsers allowed: `Chrome`, `MicrosoftEdge`, `pw-chromium`, `pw-firefox` and `pw-webkit`
+            capabilities.addProperty("browserVersion", "latest");
+            ltOptions.addProperty("platform", "Windows 10");
+            ltOptions.addProperty("name", "Playwright Test");
+            ltOptions.addProperty("build", "Playwright Testing in Java");
+            ltOptions.addProperty("user", user);
+            ltOptions.addProperty("accessKey", accessKey);
+            capabilities.add("LT:Options", ltOptions);
 
-BrowserType chromium = playwright.chromium();
-String caps = URLEncoder.encode(capabilities.toString(), "utf-8");
-String cdpUrl = "wss://cdp.lambdatest.com/playwright?capabilities=" + capabilities;
-Browser browser = chromium.connect(cdpUrl);
-Page page = browser.newPage();
-try {
-page.navigate("https://www.duckduckgo.com");
-Locator locator = page.locator("#search_form_input_homepage");
-locator.click();
-page.fill("#search_form_input_homepage", "LambdaTest");
-page.keyboard().press("Enter");
-String title = page.title();
+            BrowserType chromium = playwright.chromium();
+            String caps = URLEncoder.encode(capabilities.toString(), "utf-8");
+            String cdpUrl = "wss://cdp.lambdatest.com/playwright?capabilities=" + capabilities;
+            Browser browser = chromium.connect(cdpUrl);
+            Page page = browser.newPage();
+            try {
+                page.navigate("https://www.duckduckgo.com");
+                Locator locator = page.locator("#search_form_input_homepage");
+                locator.click();
+                page.fill("#search_form_input_homepage", "LambdaTest");
+                page.keyboard().press("Enter");
+                String title = page.title();
 
-if (title.equals("LambdaTest at DuckDuckGo")) {
-// Use the following code to mark the test status.
-setTestStatus("passed", "Title matched", page);
-} else {
-setTestStatus("failed", "Title not matched", page);
-}
+                if (title.equals("LambdaTest at DuckDuckGo")) {
+                    // Use the following code to mark the test status.
+                    setTestStatus("passed", "Title matched", page);
+                } else {
+                    setTestStatus("failed", "Title not matched", page);
+                }
 
-} catch (Exception err) {
-setTestStatus("failed", err.getMessage(), page);
-err.printStackTrace();
-}
-browser.close();
-} catch (Exception err) {
-err.printStackTrace();
-}
-}
+            } catch (Exception err) {
+                setTestStatus("failed", err.getMessage(), page);
+                err.printStackTrace();
+            }
+            browser.close();
+        } catch (Exception err) {
+            err.printStackTrace();
+        }
+    }
 
-public static void setTestStatus(String status, String remark, Page page) {
-Object result;
-result = page.evaluate("_ => {}", "lambdatest_action: { \"action\": \"setTestStatus\", \"arguments\": { \"status\": \"" + status + "\", \"remark\": \"" + remark + "\"}}");
-}
+    public static void setTestStatus(String status, String remark, Page page) {
+        Object result;
+        result = page.evaluate("_ => {}", "lambdatest_action: { \"action\": \"setTestStatus\", \"arguments\": { \"status\": \"" + status + "\", \"remark\": \"" + remark + "\"}}");
+    }
 }
 ```
 
@@ -126,37 +126,37 @@ import com.google.gson.JsonObject;
 import com.tngtech.JUnit.junit.dataprovider.DataProvider;
 
 public class LTCapability {
-@DataProvider
-public static Object[] getDefaultTestCapability() {
-JsonObject capabilities1 = new JsonObject();
-JsonObject ltOptions1 = new JsonObject();
+  @DataProvider
+  public static Object[] getDefaultTestCapability() {
+    JsonObject capabilities1 = new JsonObject();
+    JsonObject ltOptions1 = new JsonObject();
 
-String user = System.getenv("LT_USERNAME");
-String accessKey = System.getenv("LT_ACCESS_KEY");
+    String user = System.getenv("LT_USERNAME");
+    String accessKey = System.getenv("LT_ACCESS_KEY");
 
-capabilities1.addProperty("browserName", "Chrome"); // Browsers allowed: `Chrome`, `MicrosoftEdge`, `pw-chromium`, `pw-firefox` and `pw-webkit`
-capabilities1.addProperty("browserVersion", "latest");
-ltOptions1.addProperty("platform", "Windows 10");
-ltOptions1.addProperty("name", "Playwright Test");
-ltOptions1.addProperty("build", "Playwright Testing using Junit");
-ltOptions1.addProperty("user", user);
-ltOptions1.addProperty("accessKey", accessKey);
-capabilities1.add("LT:Options", ltOptions1);
+    capabilities1.addProperty("browserName", "Chrome"); // Browsers allowed: `Chrome`, `MicrosoftEdge`, `pw-chromium`, `pw-firefox` and `pw-webkit`
+    capabilities1.addProperty("browserVersion", "latest");
+    ltOptions1.addProperty("platform", "Windows 10");
+    ltOptions1.addProperty("name", "Playwright Test");
+    ltOptions1.addProperty("build", "Playwright Testing using Junit");
+    ltOptions1.addProperty("user", user);
+    ltOptions1.addProperty("accessKey", accessKey);
+    capabilities1.add("LT:Options", ltOptions1);
 
-JsonObject capabilities2 = new JsonObject();
-JsonObject ltOptions2 = new JsonObject();
-capabilities2.addProperty("browserName", "MicrosoftEdge"); // Browsers allowed: `Chrome`, `MicrosoftEdge`, `pw-chromium`, `pw-firefox` and `pw-webkit`
-capabilities2.addProperty("browserVersion", "latest");
-ltOptions2.addProperty("platform", "Windows 10");
-ltOptions2.addProperty("name", "Playwright Test");
-ltOptions2.addProperty("build", "Playwright Testing using Junit");
-ltOptions2.addProperty("user", user);
-ltOptions2.addProperty("accessKey", accessKey);
-capabilities2.add("LT:Options", ltOptions2);
-return new Object[]{
-capabilities1,capabilities2
-};
-}
+    JsonObject capabilities2 = new JsonObject();
+    JsonObject ltOptions2 = new JsonObject();
+    capabilities2.addProperty("browserName", "MicrosoftEdge"); // Browsers allowed: `Chrome`, `MicrosoftEdge`, `pw-chromium`, `pw-firefox` and `pw-webkit`
+    capabilities2.addProperty("browserVersion", "latest");
+    ltOptions2.addProperty("platform", "Windows 10");
+    ltOptions2.addProperty("name", "Playwright Test");
+    ltOptions2.addProperty("build", "Playwright Testing using Junit");
+    ltOptions2.addProperty("user", user);
+    ltOptions2.addProperty("accessKey", accessKey);
+    capabilities2.add("LT:Options", ltOptions2);
+    return new Object[]{
+      capabilities1,capabilities2
+    };
+  }
 }
 ```
 

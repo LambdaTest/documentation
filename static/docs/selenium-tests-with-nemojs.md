@@ -51,13 +51,13 @@ Update the capabilities in `nemo.config.js` to define the browser and platform s
 
 ``` js
 "withCapabilities": [{
-"build": "LT Nemo Sample Tests",
-"name": "LT Nemo sample test",
-"platformName" : "Windows 10",
-"browserName" : "Chrome",
-"browserVersion" : "latest",
-"user": "env:LT_USERNAME",
-"accessKey": "env:LT_ACCESS_KEY"
+    "build": "LT Nemo Sample Tests",
+    "name": "LT Nemo sample test",
+    "platformName" : "Windows 10",
+    "browserName" : "Chrome",
+    "browserVersion" : "latest",
+    "user": "env:LT_USERNAME",
+    "accessKey": "env:LT_ACCESS_KEY"
 }]
 ```
 

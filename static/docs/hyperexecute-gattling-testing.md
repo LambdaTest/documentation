@@ -77,7 +77,7 @@ Before running the actual performance test, ensure all project dependencies are 
 
 ```yaml
 pre:
-- mvn -Dmaven.repo.local=./.m2 dependency:resolve
+  - mvn -Dmaven.repo.local=./.m2 dependency:resolve
 ```
 
 #### 3. Configure Test Discovery (Optional)
@@ -85,9 +85,9 @@ Test discovery determines what files or test suites should be run. You can custo
 
 ```yaml
 testDiscovery:
-type: raw
-mode: static
-command: echo "Test"
+  type: raw
+  mode: static
+  command: echo "Test"
 ```
 The `command` is a placeholder here. In advanced setups, you can provide a script to programmatically discover test files.
 
@@ -103,7 +103,7 @@ If your test depends on a backend server or application under test, you can spin
 
 ```yaml
 background:
-- mvn spring-boot:run -Dspring-boot.run.main-class=dev.simonverhoeven.gatlingdemo.GatlingDemoApplication || true
+  - mvn spring-boot:run -Dspring-boot.run.main-class=dev.simonverhoeven.gatlingdemo.GatlingDemoApplication || true
 ```
 
 When `autosplit` is enabled, this command can be intelligently distributed across runners.
@@ -113,9 +113,9 @@ Once the test completes, use uploadArtefacts to store Gatling reports:
 
 ```yaml
 uploadArtefacts:
-- name: TestReport
-path:
-- target/gatling/**
+  - name: TestReport
+    path:
+    - target/gatling/**
 ```
 
 These will be visible in the HyperExecute logs UI after the run.
@@ -228,72 +228,72 @@ To leverage the UI-based configuration, your Gatling simulation should read para
 
 ```java
 /**
-* Open workload model - users arrive at a specified rate
-*/
+ * Open workload model - users arrive at a specified rate
+ */
 public static OpenInjectionStep openLoadProfile() {
-String injectType = System.getProperty("injectType", "constantUsersPerSec");
-int users = Integer.getInteger("users", 10);
-int duration = Integer.getInteger("duration", 30);
-int rampDuration = Integer.getInteger("rampDuration", 60);
-int usersStart = Integer.getInteger("usersStart", users / 2);
-int usersEnd = Integer.getInteger("usersEnd", users);
+  String injectType = System.getProperty("injectType", "constantUsersPerSec");
+  int users = Integer.getInteger("users", 10);
+  int duration = Integer.getInteger("duration", 30);
+  int rampDuration = Integer.getInteger("rampDuration", 60);
+  int usersStart = Integer.getInteger("usersStart", users / 2);
+  int usersEnd = Integer.getInteger("usersEnd", users);
 
-switch (injectType.toLowerCase()) {
-case "soaktest":
-// Gradual ramp up followed by sustained load - ideal for soak tests
-return rampUsers(users).during(Duration.ofSeconds(rampDuration));
+  switch (injectType.toLowerCase()) {
+    case "soaktest":
+      // Gradual ramp up followed by sustained load - ideal for soak tests
+      return rampUsers(users).during(Duration.ofSeconds(rampDuration));
 
-case "capacitytest":
-// Gradual increase to find capacity limits
-return rampUsersPerSec(1).to(users).during(Duration.ofSeconds(duration));
+    case "capacitytest":
+      // Gradual increase to find capacity limits
+      return rampUsersPerSec(1).to(users).during(Duration.ofSeconds(duration));
 
-case "stresspeakusers":
-return stressPeakUsers(users).during(Duration.ofSeconds(duration));
+    case "stresspeakusers":
+      return stressPeakUsers(users).during(Duration.ofSeconds(duration));
 
-case "rampuserspersec":
-return rampUsersPerSec(usersStart).to(usersEnd).during(Duration.ofSeconds(duration));
+    case "rampuserspersec":
+      return rampUsersPerSec(usersStart).to(usersEnd).during(Duration.ofSeconds(duration));
 
-case "constantusers":
-return rampUsers(users).during(Duration.ofSeconds(rampDuration));
+    case "constantusers":
+      return rampUsers(users).during(Duration.ofSeconds(rampDuration));
 
-default:
-return constantUsersPerSec(users).during(Duration.ofSeconds(duration));
-}
+    default:
+      return constantUsersPerSec(users).during(Duration.ofSeconds(duration));
+  }
 }
 
 /**
-* Closed workload model - maintains constant concurrent users
-*/
+ * Closed workload model - maintains constant concurrent users
+ */
 public static ClosedInjectionStep closedLoadProfile() {
-int users = Integer.getInteger("users", 10);
-int duration = Integer.getInteger("duration", 30);
-String injectType = System.getProperty("injectType", "constantUsersPerSec");
+  int users = Integer.getInteger("users", 10);
+  int duration = Integer.getInteger("duration", 30);
+  String injectType = System.getProperty("injectType", "constantUsersPerSec");
 
-switch (injectType.toLowerCase()) {
-case "soaktest":
-case "capacitytest":
-// For soak/capacity tests, ramp up to target concurrent users then maintain
-return rampConcurrentUsers(1).to(users).during(Duration.ofSeconds(duration));
-default:
-return constantConcurrentUsers(users).during(Duration.ofSeconds(duration));
-}
+  switch (injectType.toLowerCase()) {
+    case "soaktest":
+    case "capacitytest":
+      // For soak/capacity tests, ramp up to target concurrent users then maintain
+      return rampConcurrentUsers(1).to(users).during(Duration.ofSeconds(duration));
+    default:
+      return constantConcurrentUsers(users).during(Duration.ofSeconds(duration));
+  }
 }
 
 /**
-* Determine which workload model to use based on test type
-*/
+ * Determine which workload model to use based on test type
+ */
 private PopulationBuilder getPopulationBuilder() {
-String workloadModel = System.getProperty("workloadModel", "open");
-String injectType = System.getProperty("injectType", "constantUsersPerSec");
+  String workloadModel = System.getProperty("workloadModel", "open");
+  String injectType = System.getProperty("injectType", "constantUsersPerSec");
 
-// Use closed model for soak and capacity tests by default
-if ("closed".equalsIgnoreCase(workloadModel) ||
-"soaktest".equalsIgnoreCase(injectType) ||
-"capacitytest".equalsIgnoreCase(injectType)) {
-return scenario.injectClosed(closedLoadProfile());
-} else {
-return scenario.injectOpen(openLoadProfile());
-}
+  // Use closed model for soak and capacity tests by default
+  if ("closed".equalsIgnoreCase(workloadModel) ||
+      "soaktest".equalsIgnoreCase(injectType) ||
+      "capacitytest".equalsIgnoreCase(injectType)) {
+    return scenario.injectClosed(closedLoadProfile());
+  } else {
+    return scenario.injectOpen(openLoadProfile());
+  }
 }
 ```
 

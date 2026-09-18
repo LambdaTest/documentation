@@ -12,17 +12,17 @@ In your Cypress configuration file `cypress.config.js`, add the following code t
 
 ```javascript title="cypress.config.js"
 "reporter": "cypress-multi-reporters",
-"reporterOptions": {
-"reporterEnabled": [
-"mochawesome"
-],
-"mochawesomeReporterOptions": {
-"reportDir": "cypress/results",
-"overwrite": true,
-"html": false,
-"json": true
-}
-}
+  "reporterOptions": {
+    "reporterEnabled": [
+      "mochawesome"
+    ],
+    "mochawesomeReporterOptions": {
+      "reportDir": "cypress/results",
+      "overwrite": true,
+      "html": false,
+      "json": true
+    }
+  }
 ```
 
 - The `overwrite` parameter should be set to `true` to ensure the report is replaced with the latest run results.
@@ -35,9 +35,9 @@ In your HyperExecute YAML configuration, define the [`report`](/support/docs/dee
 ```yaml title="hyperexecute.yaml"
 report: true
 partialReports:
-frameworkName: cypress
-location: cypress/results
-type: html
+  frameworkName: cypress
+  location: cypress/results
+  type: html
 ```
 
 ### Step 3: Execute Your Tests

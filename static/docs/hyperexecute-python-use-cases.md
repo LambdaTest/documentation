@@ -163,8 +163,8 @@ Sometimes, test scripts fail due to Python version incompatibility. For example:
 ```bash title="Terminal"
 $ python test_script.py
 Traceback (most recent call last):
-File "test_script.py", line 3, in <module>
-from collections import MutableMapping
+  File "test_script.py", line 3, in <module>
+    from collections import MutableMapping
 ImportError: cannot import name 'MutableMapping' from 'collections'
 ```
 In Python versions 3.3 to 3.9, MutableMapping was part of the collections module. From Python 3.10 onward, it was moved to collections.abc, causing import errors in older code.
@@ -175,8 +175,8 @@ In Python versions 3.3 to 3.9, MutableMapping was part of the collections module
 
 ```yaml title="hyperexecute.yaml"
 runtime:
-- language: python
-version: "3.9"
+  - language: python
+    version: "3.9"
 ```
 
 ## 2. Ensuring PIP Version Compatibility
@@ -199,7 +199,7 @@ python3 -m pip install --upgrade pip
 
 ```yaml title="hyperexecute.yaml"
 pre:
-- python3 -m pip install --upgrade pip
+  - python3 -m pip install --upgrade pip
 ```
 
 ## 3. Fixing Missing requirements.txt Errors
@@ -234,9 +234,9 @@ YAML Translation:
 ```yaml title="hyperexecute.yaml"
 cacheKey: '{{ checksum "requirements.txt" }}'
 cacheDirectories:
-- CacheDir
+  - CacheDir
 pre:
-- pip install -r requirements.txt --cache-dir CacheDir
+  - pip install -r requirements.txt --cache-dir CacheDir
 ```
 
 ## 6. Building Projects with Public and Private Registries
@@ -251,7 +251,7 @@ pip3 install -r requirements.txt --cache-dir CacheDir
 
 ```yaml title="hyperexecute.yaml"
 pre:
-- pip3 install -r requirements.txt --cache-dir CacheDir
+  - pip3 install -r requirements.txt --cache-dir CacheDir
 ```
 
 ### Case 2: Private Registry Installation
@@ -259,17 +259,17 @@ When using a private registry, authentication is required. Use proxy variables a
 
 ```bash
 pip3 install --proxy http://$LT_PROXY_HOST:$LT_PROXY_PORT \
---header "Authorization: Bearer $PRIVATE_REGISTRY_TOKEN" \
--r requirements.txt
+  --header "Authorization: Bearer $PRIVATE_REGISTRY_TOKEN" \
+  -r requirements.txt
 ```
 
 **YAML Translation :**
 
 ```yaml title="hyperexecute.yaml"
 pre:
-- pip3 install --proxy http://$LT_PROXY_HOST:$LT_PROXY_PORT \
---header "Authorization: Bearer $PRIVATE_REGISTRY_TOKEN" \
--r requirements.txt
+  - pip3 install --proxy http://$LT_PROXY_HOST:$LT_PROXY_PORT \
+      --header "Authorization: Bearer $PRIVATE_REGISTRY_TOKEN" \
+      -r requirements.txt
 ```
 
 **Sample `requirements.txt` file :**
@@ -296,8 +296,8 @@ When connecting to a database during test runs, you may encounter:
 
 ```yaml title="hyperexecute.yaml"
 args:
-- "--expose mysql1:localhost:3309"
-- "--expose mysql2:localhost:3307"
+  - "--expose mysql1:localhost:3309"
+  - "--expose mysql2:localhost:3307"
 ```
 
 **Sample Connection Code :**
@@ -310,11 +310,11 @@ db_host = os.getenv("MYSQL1_PROXY_HOST", "localhost")
 db_port = os.getenv("MYSQL1_PROXY_PORT", "3309")
 
 connection = mysql.connector.connect(
-host=db_host,
-port=db_port,
-user="your_user",
-password="your_password",
-database="your_database"
+  host=db_host,
+  port=db_port,
+  user="your_user",
+  password="your_password",
+  database="your_database"
 )
 ```
 
@@ -360,8 +360,8 @@ grep -rl "@smoke" features/*.feature
 
 ```yaml title="hyperexecute.yaml"
 testDiscovery:
-type: raw
-command: grep -rl "@smoke" features/*.feature
+  type: raw
+  command: grep -rl "@smoke" features/*.feature
 ```
 
 - List all scenarios under that tag :
@@ -374,8 +374,8 @@ grep -rH -A 3 "@smoke" features/*.feature | grep -i "Scenario" | cut -d ":" -f 2
 
 ```yaml title="hyperexecute.yaml"
 testDiscovery:
-type: raw
-command: grep -rH -A 3 "@smoke" features/*.feature | grep -i "Scenario" | cut -d ":" -f 2-
+  type: raw
+  command: grep -rH -A 3 "@smoke" features/*.feature | grep -i "Scenario" | cut -d ":" -f 2-
 ```
 
 ## 10. Generating JSON Reports with Behave
@@ -389,7 +389,7 @@ behave -f json.pretty -o reports/test_report.json
 
 ```yaml title="hyperexecute.yaml"
 post:
-- behave -f json.pretty -o reports/test_report.json
+  - behave -f json.pretty -o reports/test_report.json
 ```
 
 ## 11. Dynamically Assigning Artifact Names
@@ -399,9 +399,9 @@ To dynamically name artifacts using environment variables, define them in your Y
 
 ```yaml title="hyperexecute.yaml"
 uploadArtefacts:
-- name: "${abcd}"
-path:
-- reports/**
+  - name: "${abcd}"
+    path:
+      - reports/**
 ```
 
 Pass variable values through CLI during job execution:
@@ -475,16 +475,16 @@ logging.basicConfig(level=logging.DEBUG)
 logger = logging.getLogger()
 
 def test_debug_logging():
-value = 42
-if value == 42:
-logger.debug("Value is 42, running debug checks")
-logger.debug("This is a debug message")
-logger.info("Test info message")
-logger.warning("Test warning message")
-logger.error("Test error message")
-if value != 42:
-logger.critical("Critical issue: Value should be 42!")
-assert value == 42
+    value = 42
+    if value == 42:
+        logger.debug("Value is 42, running debug checks")
+    logger.debug("This is a debug message")
+    logger.info("Test info message")
+    logger.warning("Test warning message")
+    logger.error("Test error message")
+    if value != 42:
+        logger.critical("Critical issue: Value should be 42!")
+    assert value == 42
 ```
 
 **Terminal Output Example :**
@@ -502,8 +502,8 @@ During native app automation, screenshots captured per session ID can be retriev
 
 ```bash
 curl -X GET "https://mobile-api.lambdatest.com/mobile-automation/api/v1/sessions/${session_id}/screenshots" \
--H "accept: application/json" \
--H "Authorization: Basic <auth>"
+     -H "accept: application/json" \
+     -H "Authorization: Basic <auth>"
 ```
 
 **Problem :** Manually downloading, extracting, and arranging screenshots into a PDF is time-consuming.
@@ -552,21 +552,21 @@ runson: win
 autosplit: true
 concurrency: 2
 runtime:
-language: python
-version: "3"
+  language: python
+  version: "3"
 
 cacheKey: '{{ checksum "requirements.txt" }}'
 cacheDirectories:
-- CacheDir
+  - CacheDir
 pre:
-- pip3 install -r requirements.txt --cache-dir CacheDir
+  - pip3 install -r requirements.txt --cache-dir CacheDir
 post:
-- cat yaml/win/pytest_hyperexecute_autosplit_sample.yaml
+  - cat yaml/win/pytest_hyperexecute_autosplit_sample.yaml
 
 testDiscovery:
-type: raw
-mode: remote
-command: grep -nri 'class' tests -ir --include=\*.py | sed 's/:.*//'
+  type: raw
+  mode: remote
+  command: grep -nri 'class' tests -ir --include=\*.py | sed 's/:.*//'
 
 testRunnerCommand: pytest -s --verbose $test
 

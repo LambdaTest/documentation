@@ -29,11 +29,11 @@ The `run_end` event includes both `result_code` (numeric) and `reason_code` (des
 
 ```json
 {
-"type": "run_end",
-"status": "failed",
-"result_code": 310,
-"reason_code": "stuck.max_steps",
-"summary": "Agent reached maximum step limit..."
+  "type": "run_end",
+  "status": "failed",
+  "result_code": 310,
+  "reason_code": "stuck.max_steps",
+  "summary": "Agent reached maximum step limit..."
 }
 ```
 
@@ -245,9 +245,9 @@ An external obstacle on the target website prevented the agent from completing t
 
 ```bash
 kane-cli run "Log in and navigate to dashboard" \
---url https://myapp.com/login \
---variables '{"username": {"value": "test@example.com"}, "password": {"value": "s3cret", "secret": true}}' \
---agent
+  --url https://myapp.com/login \
+  --variables '{"username": {"value": "test@example.com"}, "password": {"value": "s3cret", "secret": true}}' \
+  --agent
 ```
 
 ## 7xx -- Assertion Error
@@ -319,13 +319,13 @@ RESULT=$(kane-cli run "..." --agent --headless 2>/dev/null | tail -1)
 CODE=$(echo "$RESULT" | jq -r '.result_code')
 
 case $CODE in
-100) echo "Passed" ;;
-2*) echo "Cancelled" ;;
-3*) echo "Stuck: $(echo $RESULT | jq -r '.reason_code')" ;;
-4*) echo "Agent error: retry recommended" ;;
-5*) echo "Infra error: check environment" ;;
-6*) echo "Blocked: manual intervention needed" ;;
-7*) echo "Assertion failed: check test conditions" ;;
+  100) echo "Passed" ;;
+  2*) echo "Cancelled" ;;
+  3*) echo "Stuck: $(echo $RESULT | jq -r '.reason_code')" ;;
+  4*) echo "Agent error: retry recommended" ;;
+  5*) echo "Infra error: check environment" ;;
+  6*) echo "Blocked: manual intervention needed" ;;
+  7*) echo "Assertion failed: check test conditions" ;;
 esac
 ```
 

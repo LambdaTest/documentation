@@ -219,9 +219,9 @@ This is used to locate or discover relevant tests via class names, filters, file
 
 ```yaml
 testDiscovery:
-type: raw
-mode: local
-command: grep 'public class' src/test/java/hyperexecute/*.java | awk '{print$3}'
+  type: raw
+  mode: local
+  command: grep 'public class' src/test/java/hyperexecute/*.java | awk '{print$3}'
 ```
 
 It contains the following attributes:
@@ -317,10 +317,10 @@ The [matrix mode](/support/docs/hyperexecute-matrix-multiplexing-strategy/) allo
 runson: ${matrix.os}
 
 matrix:
-os: ["win", "mac", "linux"]
-version: ["latest, dev"]
-browser: ["Chrome", "Firefox"]
-files: ["@File1","@File2"]
+  os: ["win", "mac", "linux"]
+  version: ["latest, dev"]
+  browser: ["Chrome", "Firefox"]
+  files: ["@File1","@File2"]
 ```
 
 ### `exclusionMatrix`
@@ -331,19 +331,19 @@ The [exclusion matrix](/support/docs/hyperexecute-matrix-multiplexing-strategy/#
 runson: ${matrix.os}
 
 matrix:
-# Browser version(s) separated by Comma
-version: ["latest"]
-# OS name sepataed by Coma
-os: ["win", "mac", "linux"]
-# Browser name separated by Comma
-browser: ["Chrome", "Firefox", "Safari"]
-# Test Files separated by Comma
-files: ["@File1","@File2","@File3","@File4"]
+  # Browser version(s) separated by Comma
+  version: ["latest"]
+  # OS name sepataed by Coma
+  os: ["win", "mac", "linux"]
+  # Browser name separated by Comma
+  browser: ["Chrome", "Firefox", "Safari"]
+  # Test Files separated by Comma
+  files: ["@File1","@File2","@File3","@File4"]
 
 exclusionMatrix:
-- os: [win]
-browser: ["Safari"]
-files: ["@File2","@File3"]
+  - os: [win]
+    browser: ["Safari"]
+    files: ["@File2","@File3"]
 ```
 
 ### `combineTasksInMatrixMode`
@@ -359,9 +359,9 @@ concurrency: 2
 combineTasksInMatrixMode: true
 
 matrix:
-os: ["mac", "linux"]
-browser: ["edge", "brave"]
-files: ["Test1", "Test2"]
+   os: ["mac", "linux"]
+   browser: ["edge", "brave"]
+   files: ["Test1", "Test2"]
 ```
 
 ### `testSuites`
@@ -381,9 +381,9 @@ runson: ${matrix.os}
 parallelism: 2
 
 matrix:
-os: [win, mac]
-version: [1, 2, 3]
-browser: [chrome]
+ os: [win, mac]
+ version: [1, 2, 3]
+ browser: [chrome]
 ```
 
 In the above example we have total of 3 combinations for each os i.e.
@@ -409,9 +409,9 @@ winParallelism: 1
 macParallelism: 3
 
 matrix:
-os: [win, mac]
-version: [1, 2, 3]
-browser: [chrome]
+ os: [win, mac]
+ version: [1, 2, 3]
+ browser: [chrome]
 ```
 In the above example linux combinations will run on a parallelism on 2, `windows` combinations will run on a parallelism on 1, and `mac` combinations will run on a parallelism defined of 3.
 
@@ -459,7 +459,7 @@ It is used to cache files that do not change frequently, such as dependency file
 
 ```yaml
 cacheDirectories:
-- .m2
+  - .m2
 ```
 
 In [version 0.2 YAML](/support/docs/hyperexecute-yaml-version0.2/), the support for caching is by default, you don't have to specify any directories to cache for faster performance. For example, in Maven, we cache the entire .m2 directory in the home folder so that subsequent tasks run faster.
@@ -469,7 +469,7 @@ If you add the `cacheDirectories` and `cacheKey` keys in your YAML file, then th
 ```yaml
 cacheKey: '{{ checksum "pom.xml" }}'
 cacheDirectories:
-- .m2
+  - .m2
 ```
 
 ### `env`
@@ -477,8 +477,8 @@ This is helpful to set environment variables on the machine and use it in your c
 
 ```yaml
 env:
-USERNAME: abc
-PLATFORM: windows
+  USERNAME: abc
+  PLATFORM: windows
 ```
 
 #### Special Character Encoding
@@ -487,19 +487,19 @@ HyperExecute VMs support special character encoding, ensuring tests with multili
 
 ```yaml
 env:
-LANG: es_ES.UTF-8
-LC_ALL: es_ES.UTF-8
+  LANG: es_ES.UTF-8
+  LC_ALL: es_ES.UTF-8
 
 pre:
-- sudo locale-gen es_ES.UTF-8
-- sudo update-locale LANG=es_ES.UTF-8
+  - sudo locale-gen es_ES.UTF-8
+  - sudo update-locale LANG=es_ES.UTF-8
 ```
 
 If you are using Java-based frameworks, you can also set the encoding via `JAVA_TOOL_OPTIONS`:
 
 ```yaml
 env:
-JAVA_TOOL_OPTIONS: "-Dfile.encoding=UTF-8"
+  JAVA_TOOL_OPTIONS: "-Dfile.encoding=UTF-8"
 ```
 
 ### `runtime`
@@ -514,38 +514,38 @@ Current Languages Supported: **maven, java, dotnet, node**, **ruby**, **android-
 
 ```yaml
 runtime:
-- language: java
-version: "11"
+  - language: java
+    version: "11"
 ```
 
 - You can also install **gauge** and **gradle** only as an additional frameworks or tools independent of the language defined.
 
 ```yaml
 runtime:
-- language: java
-version: 11
-addons:
-- name: "gauge"
-version: "1.4.0"
-- name: "gradle"
-version : "7.0"
+  - language: java
+    version: 11
+    addons:
+      - name: "gauge"
+        version: "1.4.0"
+      - name: "gradle"
+        version : "7.0"
 ```
 
 - You can also provide **multiple languages** and their **specified versions** that you want installed on your machine.
 
 ```yaml
 runtime:
-- language: java
-version: '17'
-addons:
-- name: gauge
-version: '1.5.6'
-- name: gradle
-version: '7.6'
-- language: python
-version: '3.10'
-- language: node
-version: '16'
+  - language: java
+    version: '17'
+    addons:
+      - name: gauge
+        version: '1.5.6'
+      - name: gradle
+        version: '7.6'
+  - language: python
+    version: '3.10'
+  - language: node
+    version: '16'
 ```
 
 ### `retryOnFailure`
@@ -585,8 +585,8 @@ This parameter is used for executing actions after every test execution, such as
 
 ```yaml
 post:
-- echo <some-dir>/output/output.log
-- curl https://www.example.com
+  - echo <some-dir>/output/output.log
+  - curl https://www.example.com
 ```
 
 >📘 Refer to [globalPost](/support/docs/deep-dive-into-hyperexecute-yaml/#globalpost) command to perform a common global setup for all your tasks, such as clean up tasks and or killing the environments.
@@ -597,9 +597,9 @@ This allows you to generate a consolidated report across the VMs. To use this fe
 ```yaml
 report: true
 partialReports:
-location: target/surefire-reports/html
-type: html
-frameworkName: extent
+ location: target/surefire-reports/html
+ type: html
+ frameworkName: extent
 ```
 
 It helps you to view the report on the dashboard itself. You can download the report either from the [jobs detail page](/support/docs/hyperexecute-guided-walkthrough/#job-details-page) or you can pass[`-–download-report`](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/#--download-report) flag in the job triggering command from [HyperExecute CLI](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/).
@@ -608,21 +608,21 @@ If you want to generate multiple reports of different types [supported by HyperE
 
 ```yaml
 partialReports:
-- location: reports/json
-type: json
-frameworkName: extent-native
+  - location: reports/json
+    type: json
+    frameworkName: extent-native
 
-- location: target/surefire-reports
-type: html
-frameworkName: testng
+  - location: target/surefire-reports
+    type: html
+    frameworkName: testng
 ```
 
 Set `defaultReport` as false in the [`framework`](/support/docs/hyperexecute-yaml-version0.2/#framework) if you are using [`YAML version 0.2`](/support/docs/hyperexecute-yaml-version0.2/) and you want to generate a report using `partialReports` as shown below.
 
 ```yaml
 framework:
-name: maven/testng
-defaultReports: false
+  name: maven/testng
+  defaultReports: false
 ```
 
 #### Regex Support for Dynamic Report Paths
@@ -632,18 +632,18 @@ Example:
 
 ```yaml title="hyperexecute.yaml"
 partialReports:
-location: reports/**/cucumber/
-# location: target/abc/**/pqr/**/cucumber-reports
-frameworkName: cucumber
-type: json
+  location: reports/**/cucumber/
+  # location: target/abc/**/pqr/**/cucumber-reports
+  frameworkName: cucumber
+  type: json
 ```
 
 Ensure that your Testrunner.java file should have the complete path from where partial reports will be added. Example:
 
 ```java title="Testrunner.java"
 plugin = {
-"json:target/abc/mno/pqr/xyz/cucumber-reports/CucumberTestReport.json",
-"json:target/abc/its/pqr/abc/cucumber-reports/CucumberTestReport.json"
+    "json:target/abc/mno/pqr/xyz/cucumber-reports/CucumberTestReport.json",
+    "json:target/abc/its/pqr/abc/cucumber-reports/CucumberTestReport.json"
 }
 ```
 
@@ -667,7 +667,7 @@ The `errorCategorizedReport` flag is used to export a RCA report that has been g
 
 ```yaml
 errorCategorizedReport:
-enabled: true
+  enabled: true
 ```
 
 > Refer to the [Error Categorized Report documentation](/support/docs/error-categorization-report/) for detailed instructions on generating this RCA report.
@@ -701,14 +701,14 @@ It uploads the artifacts generated from running the tests, these artifacts are u
 uploadArtefacts:
 
 # Will upload your reports from target/site/** to HyperExecute as FinalReport
-- name: FinalReport
-path:
-- target/site/**
+  - name: FinalReport
+    path:
+    - target/site/**
 
-# Will upload your Surefire reports from target/surefire-reports/**to HyperExecute as Surefire Report
-- name: Surefire Report
-path:
-- target/surefire-reports/**
+  # Will upload your Surefire reports from target/surefire-reports/**to HyperExecute as Surefire Report
+  - name: Surefire Report
+     path:
+     - target/surefire-reports/**
 ```
 
 > You can use the flag `--download-artifacts-zip` to download the single zip file for all the artifacts that are generated.
@@ -730,13 +730,13 @@ The `globalPre` flag allows you to define a pre-execution step that runs once be
 
 ```yaml title="hyperexecute.yaml"
 globalPre:
-mode: remote #local or remote
-commands:
-- "echo 'Setting up environment'"
-- "apt-get update && apt-get install -y curl"
-- "curl -X POST https://api.example.com/init"
-runson: win
-cache: true
+  mode: remote #local or remote
+  commands:
+    - "echo 'Setting up environment'"
+    - "apt-get update && apt-get install -y curl"
+    - "curl -X POST https://api.example.com/init"
+  runson: win
+  cache: true
 ```
 
 #### Parameters
@@ -769,12 +769,12 @@ The `globalPost` flag defines a post-execution step that runs once after all tas
 
 ```yaml title="hyperexecute.yaml"
 globalPost:
-mode: remote #local or remote
-commands:
-- "echo 'Cleaning up test environment'"
-- "rm -rf /tmp/test-results"
-- "curl -X POST https://api.example.com/cleanup"
-runson: linux
+  mode: remote #local or remote
+  commands:
+    - "echo 'Cleaning up test environment'"
+    - "rm -rf /tmp/test-results"
+    - "curl -X POST https://api.example.com/cleanup"
+  runson: linux
 ```
 
 >📘 `globalPost` can also download every task's artifacts onto a VM, run custom commands against them, upload the processed output to the dashboard, and email the result. See [Download and Process Job Artifacts in Global Post](/support/docs/hyperexecute-global-post-artifacts/).
@@ -827,7 +827,7 @@ FailFast feature allows you to stop running your tests in case there is a series
 
 ```yaml
 failFast:
-maxNumberOfTests: 2
+  maxNumberOfTests: 2
 ```
 In case retryOnFailure flag is enabled in yaml, then there will be multiple retries for a failed test. In that case, only the failure of last retry will be considered to increment the test failure count.
 
@@ -835,8 +835,8 @@ To apply `failFast` at the **scenario** level instead of the default test level,
 
 ```yaml
 failFast:
-maxNumberOfTests: 2
-level: scenario
+  maxNumberOfTests: 2
+  level: scenario
 ```
 
 > **NOTE :** You can specify `failFast` at either the test level or scenario level, depending on your requirements. Both configurations will work, but can lead to unexpected results, only one should be used at a time.
@@ -846,9 +846,9 @@ This feature allows you to use one YAML as a base for another YAML file. By inhe
 
 ```yaml
 base:
-yamls:
-- ./<baseConfiguration1.yaml>
-- ./<baseConfiguration2.yaml>
+  yamls:
+    - ./<baseConfiguration1.yaml>
+    - ./<baseConfiguration2.yaml>
 ```
 
 ### `sourcePayload`
@@ -856,11 +856,11 @@ You can use this flag to use to define the source of your test scripts so that t
 
 ```yaml
 sourcePayload:
-platform: git
-link: https://--------
-ref: master
-accessToken: <your_personal_access_token>
-commit: <optional>
+  platform: git
+  link: https://--------
+  ref: master
+  accessToken: <your_personal_access_token>
+  commit: <optional>
 ```
 
 ### `hostsOverride`
@@ -868,10 +868,10 @@ This field allows you to add domain mappings which are required to be added in t
 
 ```yaml
 hostsOverride:
-- host: example.com
-ip: 127.0.0.1
-- host: example1.com
-ip: 127.0.0.1
+  - host: example.com
+    ip: 127.0.0.1
+  - host: example1.com
+    ip: 127.0.0.1
 ```
 
 ### `frameworkStatusOnly`
@@ -911,7 +911,7 @@ Regular Expressions provides more granular control over when test retries are tr
 retryOnFailure: true
 maxRetries: 3
 retryOptions:
-errorRegexps: ["org.openqa.selenium.NoSuchElementException"]
+  errorRegexps: ["org.openqa.selenium.NoSuchElementException"]
 ```
 
 ### `preDirectives`
@@ -924,10 +924,10 @@ preDirectives currently has the ability to take the following additional inputs:
 
 ```yaml
 preDirectives:
-commands: ['mvn -Dmaven.repo.local=./.m2 dependency:resolve', sleep 60]
-maxRetries: 0
-shell: ""
-workingDirectory: ""
+    commands: ['mvn -Dmaven.repo.local=./.m2 dependency:resolve', sleep 60]
+    maxRetries: 0
+    shell: ""
+    workingDirectory: ""
 ```
 
 ### `postDirectives`
@@ -941,9 +941,9 @@ postDirectives currently has the ability to take the following additional inputs
 
 ```yaml
 postDirectives:
-commands: [cat yaml/linux/v1/testng_hyperexecute_autosplit_sample.yaml]
-shell: ""
-workingDirectory: ""
+    commands: [cat yaml/linux/v1/testng_hyperexecute_autosplit_sample.yaml]
+    shell: ""
+    workingDirectory: ""
 ```
 
 ### `alwaysRunPostSteps`
@@ -967,8 +967,8 @@ This flag is used to set the Name of your Projects which would later allow you t
 ```yaml
 # 'id' is mandatory; 'name' is optional. You can pass both or just the 'id'.
 project:
-name: 'demo-project' # Optional
-id: '1abc2345-56de-7890-f1cg-h2ij34k56789' # Mandatory
+  name: 'demo-project' # Optional
+  id: '1abc2345-56de-7890-f1cg-h2ij34k56789' # Mandatory
 ```
 
 ### `differentialUpload`
@@ -989,10 +989,10 @@ When you pass the `differentialUpload` flag, it ensures that whenever you upload
 
 ```yaml
 project:
-name: XYZ Name
+  name: XYZ Name
 differentialUpload:
-enabled: #true/false
-ttlHours: #int value, with possible range of values [1 hour to 360 hours]
+  enabled: #true/false
+  ttlHours: #int value, with possible range of values [1 hour to 360 hours]
 ```
 
 If the project flag is not passed then the name for the project will be set to **"Default Project"**.
@@ -1009,24 +1009,24 @@ The **`linkValidity`** flag is used to customize the duration of validity for re
 report: true
 
 partialReports:
-location: target/surefire-reports/html
-type: html
-frameworkName: extent
-email:
-to:
-- johndoe@example.com
-linkValidity: 5
+  location: target/surefire-reports/html
+  type: html
+  frameworkName: extent
+  email:
+    to:
+      - johndoe@example.com
+    linkValidity: 5
 ```
 
 ```yaml
 uploadArtefacts:
-- name: ExecutionSnapshots
-path:
-- <path of artifact>
-email:
-to:
--
-linkValidity: 5
+  - name: ExecutionSnapshots
+    path:
+      - <path of artifact>
+    email:
+      to:
+        -
+      linkValidity: 5
 ```
 
 ### `stripParentDirectory`
@@ -1128,14 +1128,14 @@ Additional options include:
 
 ```yaml
 cypressOps:
-Build: "Hyperexecute Cypress Sample Build"
-Tags: ["Hyperexecute","Cypress", "Windows", "Matrix"]
-BuildTags: ["Hyperexecute-Cypress"]
-Network: true
-FullHar: true
-geoLocation: IN
-reporterConfigFile: "reporter_config.json",
-ProjectName: "Cypress_Project"
+  Build: "Hyperexecute Cypress Sample Build"
+  Tags: ["Hyperexecute","Cypress", "Windows", "Matrix"]
+  BuildTags: ["Hyperexecute-Cypress"]
+  Network: true
+  FullHar: true
+  geoLocation: IN
+  reporterConfigFile: "reporter_config.json",
+  ProjectName: "Cypress_Project"
 ```
 
 ### `shell`
@@ -1150,14 +1150,14 @@ DataJsonPaths helps to distribute data/configs over the VMs. In this you can cre
 
 ```yaml
 [
-{
-"Username": "user1",
-"Password": "pass1"
-},
-{
-"Username": "user2",
-"Password": "pass2"
-}
+ {
+  "Username": "user1",
+  "Password": "pass1"
+ },
+ {
+  "Username": "user2",
+  "Password": "pass2"
+ }
 ]
 ```
 
@@ -1169,8 +1169,8 @@ In the JSON file, we have a data object and not an array of objects, hence you c
 
 ```yaml
 {
-"Username": "user1",
-"Password": "pass1"
+  "Username": "user1",
+  "Password": "pass1"
 }
 ```
 
@@ -1200,13 +1200,13 @@ The `dataJsonBuilder` flag in the HyperExecute YAML file is used to facilitate e
 
 ```yaml title="hyperexecute.yaml"
 dataJsonBuilder:
-path: <path_to_json_file>
-index: <indexing_key>
-filters:
-query: <filter_query>
-attributes:
-- key: <attribute_key>
-values: [<value1>, <value2>, ...]
+  path: <path_to_json_file>
+  index: <indexing_key>
+  filters:
+    query: <filter_query>
+    attributes:
+      - key: <attribute_key>
+        values: [<value1>, <value2>, ...]
 ```
 
 #### Configuration
@@ -1230,10 +1230,10 @@ query: (username == "abc" or username == "bcd")
 
 ```yaml
 attributes:
-- key: username
-value: ["abc", "bcd"]
-- key: tags
-values: ["@x", "@y"]
+  - key: username
+    value: ["abc", "bcd"]
+  - key: tags
+    values: ["@x", "@y"]
 ```
 
 #### Working of `dataJsonBuilder`
@@ -1242,26 +1242,26 @@ values: ["@x", "@y"]
 
 ```javascript title="sample.json"
 [
-{
-"accesskey": "jhscuystc7ewgucu79as8yc9",
-"username": "abc",
-"tags": "@x"
-},
-{
-"accesskey": "cjdy87328yeiqhd93urd28hh",
-"username": "bcd",
-"tags": "@y"
-},
-{
-"accesskey": "jhscuystc7ewgucu79as8yc9",
-"username": "abc",
-"tags": "@y"
-},
-{
-"accesskey": "cjdy87328yeiqhd93urd28hh",
-"username": "bcd",
-"tags": "@a"
-}
+  {
+    "accesskey": "jhscuystc7ewgucu79as8yc9",
+    "username": "abc",
+    "tags": "@x"
+  },
+  {
+    "accesskey": "cjdy87328yeiqhd93urd28hh",
+    "username": "bcd",
+    "tags": "@y"
+  },
+  {
+    "accesskey": "jhscuystc7ewgucu79as8yc9",
+    "username": "abc",
+    "tags": "@y"
+  },
+  {
+    "accesskey": "cjdy87328yeiqhd93urd28hh",
+    "username": "bcd",
+    "tags": "@a"
+  }
 ]
 ```
 
@@ -1269,34 +1269,34 @@ values: ["@x", "@y"]
 
 ```yaml title="hyperexecute.yaml"
 dataJsonBuilder:
-path: sample.json
-filters:
-attributes:
-- key: username
-values: ["abc", "bcd"]
-- key: tags
-values: ["@x", "@y"]
+  path: sample.json
+  filters:
+    attributes:
+      - key: username
+        values: ["abc", "bcd"]
+      - key: tags
+        values: ["@x", "@y"]
 ```
 
 - The **filtered JSON data** will be:
 
 ```javascript title="sample.json"
 [
-{
-"accesskey": "jhscuystc7ewgucu79as8yc9",
-"username": "abc",
-"tags": "@x"
-},
-{
-"accesskey": "cjdy87328yeiqhd93urd28hh",
-"username": "bcd",
-"tags": "@y"
-},
-{
-"accesskey": "jhscuystc7ewgucu79as8yc9",
-"username": "abc",
-"tags": "@y"
-}
+  {
+    "accesskey": "jhscuystc7ewgucu79as8yc9",
+    "username": "abc",
+    "tags": "@x"
+  },
+  {
+    "accesskey": "cjdy87328yeiqhd93urd28hh",
+    "username": "bcd",
+    "tags": "@y"
+  },
+  {
+    "accesskey": "jhscuystc7ewgucu79as8yc9",
+    "username": "abc",
+    "tags": "@y"
+  }
 ]
 ```
 The objects with **usernames** `"abc"` and `"bcd"` and **tags** `"@x"` and `"@y"` are selected as they meet the criteria defined by the attributes filter.
@@ -1312,9 +1312,9 @@ So as per the above filtered JSON data:
 
 ```javascript
 {
-"accesskey": "jhscuystc7ewgucu79as8yc9",
-"username": "abc",
-"tags": "@x"
+  "accesskey": "jhscuystc7ewgucu79as8yc9",
+  "username": "abc",
+  "tags": "@x"
 }
 ```
 
@@ -1322,9 +1322,9 @@ So as per the above filtered JSON data:
 
 ```javascript
 {
-"accesskey": "cjdy87328yeiqhd93urd28hh",
-"username": "bcd",
-"tags": "@y"
+  "accesskey": "cjdy87328yeiqhd93urd28hh",
+  "username": "bcd",
+  "tags": "@y"
 }
 ```
 
@@ -1332,9 +1332,9 @@ So as per the above filtered JSON data:
 
 ```javascript
 {
-"accesskey": "jhscuystc7ewgucu79as8yc9",
-"username": "abc",
-"tags": "@y"
+  "accesskey": "jhscuystc7ewgucu79as8yc9",
+  "username": "abc",
+  "tags": "@y"
 }
 ```
 
@@ -1345,31 +1345,31 @@ Test cases related to `username: "abc"` will be split between **VM1** and **VM3*
 
 ```yaml
 dataJsonBuilder:
-path: data/file/abc.json
-index: username
-filters:
-#either query or attributes can be used, if both are mentioned then the attributes will have higher precedence.
-query: (username == "abc" or username == "bcd")
-attributes:
-- key: username
-values: ["abc", "bcd"]
+  path: data/file/abc.json
+  index: username
+  filters:
+    #either query or attributes can be used, if both are mentioned then the attributes will have higher precedence.
+    query: (username == "abc" or username == "bcd")
+    attributes:
+      - key: username
+        values: ["abc", "bcd"]
 ```
 
 - **Only Filtering :** If only filtering is required without indexing, omit the index key. In this case, no indexing will occur, and each JSON object will be distributed in a round-robin manner among parallel executions.
 
 ```yaml
 dataJsonBuilder:
-path: data/file/abc.json
-filters:
-query: (username == "abc" or username == "bcd")
+  path: data/file/abc.json
+  filters:
+    query: (username == "abc" or username == "bcd")
 ```
 
 - **Only Indexing :** If only indexing is required without filtering, omit the filters section.
 
 ```yaml
 dataJsonBuilder:
-path: data/file/abc.json
-index: username
+  path: data/file/abc.json
+  index: username
 ```
 
 You can access the data on the machines using environment variables: `${STATIC_DATA_1_username}` - for the **username** key
@@ -1398,9 +1398,9 @@ It is used to run commands after the job has finished. Currently only local dire
 
 ```yaml
 afterAll:
-local:
-commands:
-- stitch-artifacts.sh artifacts-directory
+ local:
+   commands:
+   - stitch-artifacts.sh artifacts-directory
 ```
 
 For instance you want to further process the artifacts and create a custom PDF. You can use `afterAll` for this purpose wherein custom commands can be invoked. Other use cases can be in case you :
@@ -1414,10 +1414,10 @@ BeforeAll is used for running pre operations like discovery and payload_update. 
 
 ```yaml
 beforeAll:
-location: local/remote
-type: discovery/update_payload
-local:
-commands:
+  location: local/remote
+  type: discovery/update_payload
+  local:
+    commands:
 pip install -r requirements.txt
 ```
 We can choose to run on local/remote(on HYP Vms) from the location command. Type can be either discovery/update_payload (type of operation to be performed) and commands will have all the commands that needs to be run for that operation.
@@ -1427,8 +1427,8 @@ The `afterEachScenario` flag is used to define tasks that should be executed aft
 
 ```yaml
 afterEachScenario:
-- echo "Running a script"
-- pwsh run.test
+  - echo "Running a script"
+  - pwsh run.test
 ```
 
 ### `buildConfig`
@@ -1441,8 +1441,8 @@ This is used to manage hyperlink behavior based on test status. Here's a breakdo
 
 ```yaml
 buildConfig:
-buildPrefix: myCustomBuildPrefix-${name}
-buildName : "name=${name}"
+  buildPrefix: myCustomBuildPrefix-${name}
+  buildName : "name=${name}"
 ```
 
   > The value for `${name}` in the above command can be passed through the vars command either by the [CLI](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/#--vars) as mentioned below or through [YAML](/support/docs/deep-dive-into-hyperexecute-yaml/#vars).
@@ -1518,17 +1518,17 @@ Here is the sample code showing how we can use the above mentioned Lambda hooks:
 ```yaml
 ((JavascriptExecutor) driver).executeScript("lambda-start-timer=t1");
 
-/* Add 5 items in the list */
-Integer item_count = 15;
-for (int count = 1; count <= item_count; count++)
-{
-/* Enter the text box for entering the new item */
-elem_new_item.click();
-elem_new_item.sendKeys("Adding a new item " + count + Keys.ENTER);
-Thread.sleep(2000);
-}
-Object t1 =  ((JavascriptExecutor) driver).executeScript("lambda-end-timer=t1");
-System.out.println(t1);
+  /* Add 5 items in the list */
+  Integer item_count = 15;
+  for (int count = 1; count <= item_count; count++)
+  {
+      /* Enter the text box for entering the new item */
+      elem_new_item.click();
+      elem_new_item.sendKeys("Adding a new item " + count + Keys.ENTER);
+      Thread.sleep(2000);
+  }
+  Object t1 =  ((JavascriptExecutor) driver).executeScript("lambda-end-timer=t1");
+  System.out.println(t1);
 ```
 
 > **Note**: t1 will denote the time taken by each selenium command between start and end.
@@ -1559,12 +1559,12 @@ To enable this feature from the YAML file you can use either of the below mentio
 
 ```yaml
 backgroundDirectives:
-shell: bash
-commands:
-- name: YOUR_SERVICE_NAME
-command: npx static-server
-- name: Database
-command: mysql-server
+  shell: bash
+  commands:
+    - name: YOUR_SERVICE_NAME
+      command: npx static-server
+    - name: Database
+      command: mysql-server
 ```
 
 It contains the following attributes:
@@ -1579,8 +1579,8 @@ It contains the following attributes:
 
 ```yaml
 background:
-- npx static-server
-- mysql-server
+  - npx static-server
+  - mysql-server
 ```
 
 > To learn more about it, refer to the [Background Service](/support/docs/hyperexecute-background-services/) page.
@@ -1591,13 +1591,13 @@ Below example shows how to use vars keyword and how to use the variables define 
 
 ```yaml
 vars:
-test: e2e
-framework: net5.0
-runtime: win-x64
-testPath: ${test}\bin\build\${framework}\${runtime}
+ test: e2e
+ framework: net5.0
+ runtime: win-x64
+ testPath: ${test}\bin\build\${framework}\${runtime}
 preDirectives:
-Commands:
-- echo ${framework}
+ Commands:
+  - echo ${framework}
 ```
 
 > You can also use the vars method using the [CLI](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/#--vars).
@@ -1625,33 +1625,33 @@ The options to use when running the [tunnel](/support/docs/deep-dive-into-hypere
 ```yaml
 tunnel: true
 tunnelOpts:
-args:
-- "--verbose"
+	args:
+	 - "--verbose"
 ```
 
 ```yaml
 tunnel: true
 tunnelOpts:
-preOnly: true
-#------OR------
-postOnly: true
-#------OR------
-global: true
-#------OR------
-systemProxy: true
+	preOnly: true
+  #------OR------
+	postOnly: true
+  #------OR------
+	global: true
+  #------OR------
+	systemProxy: true
 ```
 
 ```yaml
 pre:
-- echo %LT_PROXY_PORT%
-- echo %LT_PROXY_HOST%
-- echo %MYSQL_PROXY_HOST%
-- echo %MYSQL_PROXY_PORT%
+  - echo %LT_PROXY_PORT%
+  - echo %LT_PROXY_HOST%
+  - echo %MYSQL_PROXY_HOST%
+  - echo %MYSQL_PROXY_PORT%
 
 tunnel: true
 tunnelOpts:
-args:
-- "--expose mysql:localhost:3306"
+  args:
+    - "--expose mysql:localhost:3306"
 ```
 
 ### `tunnelNames`
@@ -1676,11 +1676,11 @@ The `working directory` specifies the location of the directory in which all tes
 
 ```yaml
 framework:
-name: maven/testng
-discoveryType: method
-workingDirectory: src/main
-flags:
-- "-Dplatname=win"
+  name: maven/testng
+  discoveryType: method
+  workingDirectory: src/main
+  flags:
+    - "-Dplatname=win"
 ```
 
 ### `syncStart`
@@ -1690,7 +1690,7 @@ To support this, HyperExecute provides the `syncStart` directive in the job YAML
 
 ```yaml
 execution:
-syncStart: true
+  syncStart: true
 ```
 
 - When `syncStart` is enabled, the job ensures that all VMs are allocated and ready before starting scenario execution i.e. tests.

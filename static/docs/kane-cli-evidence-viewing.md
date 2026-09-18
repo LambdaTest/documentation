@@ -31,8 +31,8 @@ kane-cli evidence serve .testmuai/evidence/<execution_id>.evidence
 ```text
 serving 1 pack on http://127.0.0.1:54321
 <execution_id>.evidence
-pack    http://127.0.0.1:54321/<token>/<execution_id>.evidence
-viewer  https://evidence.lambdatest.com/?pack=http%3A%2F%2F127.0.0.1%3A54321%2F...
+  pack    http://127.0.0.1:54321/<token>/<execution_id>.evidence
+  viewer  https://evidence.lambdatest.com/?pack=http%3A%2F%2F127.0.0.1%3A54321%2F...
 press Ctrl-C to stop
 ```
 

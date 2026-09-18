@@ -43,49 +43,49 @@ To run the test on Emulator/Simulator, set the `isRealMobile` capability to `fal
 @Test
 @org.testng.annotations.Parameters(value = {"device", "version", "platform"})
 public void AndroidApp1(String device, String version, String platform) {
-version = System.getProperty("platformVersion");
-try {
-DesiredCapabilities capabilities = new DesiredCapabilities();
-capabilities.setCapability("build","Java TestNG Android");
-capabilities.setCapability("name",platform+" "+device+" "+version);
-capabilities.setCapability("deviceName", device);
-capabilities.setCapability("platformVersion",version);
-capabilities.setCapability("platformName", platform);
-// highlight-next-line
-capabilities.setCapability("isRealMobile", false);
+    version = System.getProperty("platformVersion");
+    try {
+        DesiredCapabilities capabilities = new DesiredCapabilities();
+        capabilities.setCapability("build","Java TestNG Android");
+        capabilities.setCapability("name",platform+" "+device+" "+version);
+        capabilities.setCapability("deviceName", device);
+        capabilities.setCapability("platformVersion",version);
+        capabilities.setCapability("platformName", platform);
+        // highlight-next-line
+        capabilities.setCapability("isRealMobile", false);
 
-// highlight-next-line
-capabilities.setCapability("app", "lt://APP1123456789"); //Enter your app url
-capabilities.setCapability("deviceOrientation", "PORTRAIT");
-capabilities.setCapability("console", true);
-capabilities.setCapability("network", false);
-// capabilities.setCapability("visual", true);
-capabilities.setCapability("devicelog", true);
-//capabilities.setCapability("geoLocation", "HK");
+        // highlight-next-line
+        capabilities.setCapability("app", "lt://APP1123456789"); //Enter your app url
+        capabilities.setCapability("deviceOrientation", "PORTRAIT");
+        capabilities.setCapability("console", true);
+        capabilities.setCapability("network", false);
+        // capabilities.setCapability("visual", true);
+        capabilities.setCapability("devicelog", true);
+        //capabilities.setCapability("geoLocation", "HK");
 ```
 
 ```java
 @Test
 @org.testng.annotations.Parameters(value = {"device", "version", "platform"})
 public void iOSApp1(String device, String version, String platform) {
-try {
-DesiredCapabilities capabilities = new DesiredCapabilities();
-capabilities.setCapability("build","Java TestNG iOS");
-capabilities.setCapability("name",platform+" "+device+" "+version);
-capabilities.setCapability("deviceName", device);
-capabilities.setCapability("platformVersion",version);
-capabilities.setCapability("platformName", platform);
-// highlight-next-line
-capabilities.setCapability("isRealMobile", false);
+    try {
+        DesiredCapabilities capabilities = new DesiredCapabilities();
+        capabilities.setCapability("build","Java TestNG iOS");
+        capabilities.setCapability("name",platform+" "+device+" "+version);
+        capabilities.setCapability("deviceName", device);
+        capabilities.setCapability("platformVersion",version);
+        capabilities.setCapability("platformName", platform);
+        // highlight-next-line
+        capabilities.setCapability("isRealMobile", false);
 
-// highlight-next-line
-capabilities.setCapability("app", "lt://APP123456789"); //Enter your app url
-capabilities.setCapability("deviceOrientation", "PORTRAIT");
-capabilities.setCapability("console", true);
-capabilities.setCapability("network", false);
-// capabilities.setCapability("visual", true);
-capabilities.setCapability("devicelog", true);
-//capabilities.setCapability("geoLocation", "HK");
+        // highlight-next-line
+        capabilities.setCapability("app", "lt://APP123456789"); //Enter your app url
+        capabilities.setCapability("deviceOrientation", "PORTRAIT");
+        capabilities.setCapability("console", true);
+        capabilities.setCapability("network", false);
+        // capabilities.setCapability("visual", true);
+        capabilities.setCapability("devicelog", true);
+        //capabilities.setCapability("geoLocation", "HK");
 ```
 
 2. Create `.XML` file in order to run your test and define device capabilities. Please find sample code below for the same.
@@ -95,23 +95,23 @@ capabilities.setCapability("devicelog", true);
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite thread-count="100" name="Mobile" parallel="tests">
 
-<test name="AppTest 1">
-<parameter name="version" value="11"/>
-<parameter name="platform" value="Android"/>
-<parameter name="device" value="Galaxy S21 Ultra 5G"/>
-<classes>
-<class name="AndroidApp"/>
-</classes>
-</test>
+    <test name="AppTest 1">
+        <parameter name="version" value="11"/>
+        <parameter name="platform" value="Android"/>
+        <parameter name="device" value="Galaxy S21 Ultra 5G"/>
+        <classes>
+            <class name="AndroidApp"/>
+        </classes>
+    </test>
 
-<test name="AppTest 2">
-<parameter name="version" value="11"/>
-<parameter name="platform" value="Android"/>
-<parameter name="device" value="Galaxy S21"/>
-<classes>
-<class name="AndroidApp"/>
-</classes>
-</test>
+    <test name="AppTest 2">
+        <parameter name="version" value="11"/>
+        <parameter name="platform" value="Android"/>
+        <parameter name="device" value="Galaxy S21"/>
+        <classes>
+            <class name="AndroidApp"/>
+        </classes>
+    </test>
 </suite>
 ```
 
@@ -120,23 +120,23 @@ capabilities.setCapability("devicelog", true);
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite thread-count="100" name="Mobile" parallel="tests">
 
-<test name="iOSApp 1">
-<parameter name="version" value="14"/>
-<parameter name="platform" value="iOS"/>
-<parameter name="device" value="iPhone 11"/>
-<classes>
-<class name="iOSApp"/>
-</classes>
-</test>
+    <test name="iOSApp 1">
+        <parameter name="version" value="14"/>
+        <parameter name="platform" value="iOS"/>
+        <parameter name="device" value="iPhone 11"/>
+        <classes>
+            <class name="iOSApp"/>
+        </classes>
+    </test>
 
-<test name="iOSApp 2">
-<parameter name="version" value="14"/>
-<parameter name="platform" value="iOS"/>
-<parameter name="device" value="iPhone 12 Pro"/>
-<classes>
-<class name="iOSApp"/>
-</classes>
-</test>
+    <test name="iOSApp 2">
+        <parameter name="version" value="14"/>
+        <parameter name="platform" value="iOS"/>
+        <parameter name="device" value="iPhone 12 Pro"/>
+        <classes>
+            <class name="iOSApp"/>
+        </classes>
+    </test>
 </suite>
 ```
 
@@ -160,10 +160,10 @@ maxRetries: 1
 
 appium: true
 framework:
-name: maven/testng
-defaultReports: false
-discoveryType: xmltest
-flags: ["-Pios-single"]
+  name: maven/testng
+  defaultReports: false
+  discoveryType: xmltest
+  flags: ["-Pios-single"]
 
 jobLabel: ['HYP', 'Virtual Device', 'iOS', 'Single Device']
 ```

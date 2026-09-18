@@ -35,20 +35,20 @@ Add a `globalPost` section to your HyperExecute YAML and set `downloadArtifacts:
 
 ```yaml
 globalPost:
-mode: remote
-commands:
-- echo "Downloaded artifacts are at: ${ARTIFACTS_DIR}"
-- echo "Place upload files here: ${UPLOAD_DIR}"
-- ls ${ARTIFACTS_DIR}
-- mkdir -p ${UPLOAD_DIR}/processed-reports
-- # ... your processing commands here ...
-runson: linux
-downloadArtifacts: true
-email:
-to:
-- alice@yourcompany.com
-- bob@yourcompany.com
-templatePath: mailtemplates/template.html
+  mode: remote
+  commands:
+    - echo "Downloaded artifacts are at: ${ARTIFACTS_DIR}"
+    - echo "Place upload files here: ${UPLOAD_DIR}"
+    - ls ${ARTIFACTS_DIR}
+    - mkdir -p ${UPLOAD_DIR}/processed-reports
+    - # ... your processing commands here ...
+  runson: linux
+  downloadArtifacts: true
+  email:
+    to:
+      - alice@yourcompany.com
+      - bob@yourcompany.com
+    templatePath: mailtemplates/template.html
 ```
 
 ### Fields
@@ -96,7 +96,7 @@ $UPLOAD_DIR/
 ├── merged-report.html     ← created by user commands
 ├── summary.json
 └── processed/
-└── final-results.csv
+    └── final-results.csv
 ```
 
 If `downloadArtifacts` is enabled but your commands don't write anything to `${UPLOAD_DIR}`, `globalPost` still completes successfully. There is simply nothing new in the **Artifacts** section — an empty upload is not treated as a failure.
@@ -115,12 +115,12 @@ To suppress email entirely, set `disableEmail: true` under `globalPost`. This is
 
 ```yaml
 globalPost:
-mode: remote
-runson: linux
-downloadArtifacts: true
-commands:
-- ls ${ARTIFACTS_DIR}
-disableEmail: true
+  mode: remote
+  runson: linux
+  downloadArtifacts: true
+  commands:
+    - ls ${ARTIFACTS_DIR}
+  disableEmail: true
 ```
 
 ### Custom email templates

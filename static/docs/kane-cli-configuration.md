@@ -20,20 +20,20 @@ The output groups settings under three headings:
 Configuration
 
 Auth
-method   oauth | basic (user@example.com) | not configured
-profile  default
-env      prod
+  method   oauth | basic (user@example.com) | not configured
+  profile  default
+  env      prod
 
 Defaults
-url      https://kaneai-playground.lambdatest.io
-model    v16-alpha
-mode     testing
-window   1920x1080
-project  (none)
-folder   (none)
+  url      https://kaneai-playground.lambdatest.io
+  model    v16-alpha
+  mode     testing
+  window   1920x1080
+  project  (none)
+  folder   (none)
 
 Paths
-chrome   /Users/you/.testmuai/kaneai/chrome-profiles/work
+  chrome   /Users/you/.testmuai/kaneai/chrome-profiles/work
 ```
 
 Empty fields are shown as `(none)`. The `chrome` path is empty by default, in which case Kane CLI launches Chrome with a temporary profile each run.

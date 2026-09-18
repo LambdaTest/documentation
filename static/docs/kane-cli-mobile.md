@@ -87,8 +87,8 @@ Kane CLI runs against an existing AVD. It does not create one for you. Create an
 
 ```bash
 avdmanager create avd -n kane_pixel \
--k "system-images;android-35;google_apis;arm64-v8a" \
--d pixel
+  -k "system-images;android-35;google_apis;arm64-v8a" \
+  -d pixel
 ```
 
 #### Point Kane CLI at a Non-Default SDK Location

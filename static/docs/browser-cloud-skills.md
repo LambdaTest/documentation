@@ -80,8 +80,8 @@ const result = await scrapeWithAgent('https://example.com');
 
 // Multiple URLs, 3 concurrent sessions
 const results = await batchScrape(
-['https://a.com', 'https://b.com', 'https://c.com'],
-3
+  ['https://a.com', 'https://b.com', 'https://c.com'],
+  3
 );
 ```
 
@@ -106,7 +106,7 @@ import { buildBrowserAgent } from './browser-cloud/examples/langchain-browser-to
 
 const agent = await buildBrowserAgent();
 const result = await agent.invoke({
-input: 'Research the latest pricing for our top three competitors.',
+  input: 'Research the latest pricing for our top three competitors.',
 });
 ```
 
@@ -118,9 +118,9 @@ Run multiple isolated browser sessions concurrently with progress tracking:
 import { parallelResearch } from './browser-cloud/examples/parallel-research';
 
 const results = await parallelResearch([
-'https://competitor-a.com/pricing',
-'https://competitor-b.com/pricing',
-'https://competitor-c.com/pricing',
+  'https://competitor-a.com/pricing',
+  'https://competitor-b.com/pricing',
+  'https://competitor-c.com/pricing',
 ], 3);
 ```
 
@@ -156,24 +156,24 @@ const results = await parallelResearch([
 ├── README.md
 │
 └── browser-cloud/                      ← Skill bundle
-├── SKILL.md                        ← Load this into your AI tool
-├── examples/
-│   ├── scrape-agent.ts             ← Batch scraping with concurrency control
-│   ├── form-fill-agent.ts          ← Form interaction with Playwright + stealth
-│   ├── auth-persist-agent.ts       ← Login once, reuse session across runs
-│   ├── parallel-research.ts        ← Parallel sessions with progress tracking
-│   └── langchain-browser-tool.ts   ← Four LangChain tool variants
-└── references/
-├── patterns/
-│   ├── quick-actions.md        ← Scrape / screenshot / PDF one-liners
-│   ├── session-navigate.md     ← Multi-step navigation and interaction
-│   ├── auth-profile.md         ← Auth persistence patterns
-│   ├── parallel-sessions.md    ← Concurrent agent sessions
-│   ├── tunnel.md              ← Localhost and internal network access
-│   └── files.md               ← Upload/download between agent and browser
-└── integrations/
-├── openai-functions.md     ← OpenAI + Anthropic function calling
-└── crewai.md              ← CrewAI BaseTool (Python + Node bridge)
+    ├── SKILL.md                        ← Load this into your AI tool
+    ├── examples/
+    │   ├── scrape-agent.ts             ← Batch scraping with concurrency control
+    │   ├── form-fill-agent.ts          ← Form interaction with Playwright + stealth
+    │   ├── auth-persist-agent.ts       ← Login once, reuse session across runs
+    │   ├── parallel-research.ts        ← Parallel sessions with progress tracking
+    │   └── langchain-browser-tool.ts   ← Four LangChain tool variants
+    └── references/
+        ├── patterns/
+        │   ├── quick-actions.md        ← Scrape / screenshot / PDF one-liners
+        │   ├── session-navigate.md     ← Multi-step navigation and interaction
+        │   ├── auth-profile.md         ← Auth persistence patterns
+        │   ├── parallel-sessions.md    ← Concurrent agent sessions
+        │   ├── tunnel.md              ← Localhost and internal network access
+        │   └── files.md               ← Upload/download between agent and browser
+        └── integrations/
+            ├── openai-functions.md     ← OpenAI + Anthropic function calling
+            └── crewai.md              ← CrewAI BaseTool (Python + Node bridge)
 ```
 
 ## Contributing

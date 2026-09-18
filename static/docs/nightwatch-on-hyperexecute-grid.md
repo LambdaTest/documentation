@@ -44,20 +44,20 @@ Configure the desired capabilities based on your test requirements. For example:
 # nightwatch.conf.js
 
 module.exports = (function(settings) {
-console.log(settings["test_settings"]["default"]["username"])
-if (process.env.LT_USERNAME) {
-settings["test_settings"]["default"]["username"] = process.env.LT_USERNAME;
-}
-if (process.env.LT_ACCESS_KEY) {
-settings["test_settings"]["default"]["access_key"] = process.env.LT_ACCESS_KEY;
-}
-if (process.env.SELENIUM_HOST) {
-settings.selenium.host = process.env.SELENIUM_HOST;
-}
-if (process.env.SELENIUM_PORT) {
-settings.selenium.host = process.env.SELENIUM_PORT;
-}
-return settings;
+  console.log(settings["test_settings"]["default"]["username"])
+  if (process.env.LT_USERNAME) {
+    settings["test_settings"]["default"]["username"] = process.env.LT_USERNAME;
+  }
+  if (process.env.LT_ACCESS_KEY) {
+    settings["test_settings"]["default"]["access_key"] = process.env.LT_ACCESS_KEY;
+  }
+  if (process.env.SELENIUM_HOST) {
+    settings.selenium.host = process.env.SELENIUM_HOST;
+  }
+  if (process.env.SELENIUM_PORT) {
+    settings.selenium.host = process.env.SELENIUM_PORT;
+  }
+  return settings;
 })(require('./nightwatch.json'));
 ```
 
@@ -121,27 +121,27 @@ parallelism: 1
 
 cacheKey: '{{ checksum "package-lock.json" }}'
 cacheDirectories:
-- node_modules
+  - node_modules
 
 pre:
-- npm install
+  - npm install
 
 mergeArtifacts: true
 uploadArtifacts:
-- name: Reports
-path:
-- reports/
+  - name: Reports
+    path:
+      - reports/
 
 report: true
 partialReports:
-type: json
-location: reports/
-frameworkName: extent
+    type: json
+    location: reports/
+    frameworkName: extent
 
 testDiscovery:
-type: raw
-mode: remote
-command: grep -B1 'desiredCapabilities' nightwatch.json | sed 's/-//g' | grep -vE 'desiredCapabilities' | grep -vE 'skip_testcases_on_fail' | awk '{print$1}' | sed 's/://g' | sed 's/"//g'
+  type: raw
+  mode: remote
+  command: grep -B1 'desiredCapabilities' nightwatch.json | sed 's/-//g' | grep -vE 'desiredCapabilities' | grep -vE 'skip_testcases_on_fail' | awk '{print$1}' | sed 's/://g' | sed 's/"//g'
 
 testRunnerCommand: ./node_modules/.bin/nightwatch -e $test
 
@@ -209,8 +209,8 @@ The nightwatchjs-skill package includes:
 nightwatchjs-skill/
 ├── SKILL.md
 └── reference/
-├── playbook.md
-└── advanced-patterns.md
+    ├── playbook.md
+    └── advanced-patterns.md
 ```
 
 It provides structured guidance for:

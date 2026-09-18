@@ -110,58 +110,58 @@ from selenium.webdriver.support import expected_conditions as EC
 
 @given("Start the android app automation test")
 def startAndroidAppAutomationTest(self):
-if os.environ.get("LT_USERNAME") is None:
-#highlight-next-line
-username = "username" #Enter username here
-else:
-username = os.environ.get("LT_USERNAME")
-if os.environ.get("LT_ACCESS_KEY") is None:
-#highlight-next-line
-accesskey = "accesskey" #Enter accessKey here
-else:
-accesskey = os.environ.get("LT_ACCESS_KEY")
+    if os.environ.get("LT_USERNAME") is None:
+        #highlight-next-line
+        username = "username" #Enter username here
+    else:
+        username = os.environ.get("LT_USERNAME")
+    if os.environ.get("LT_ACCESS_KEY") is None:
+        #highlight-next-line
+        accesskey = "accesskey" #Enter accessKey here
+    else:
+        accesskey = os.environ.get("LT_ACCESS_KEY")
 
-driver = webdriver.Remote(
-command_executor="https://"+username+":"+accesskey+"@mobile-hub.lambdatest.com/wd/hub",
-desired_capabilities=appConf.app_android_desired_caps
-)
-try:
-colorElement = WebDriverWait(driver,20).until(EC.element_to_be_clickable((MobileBy.ID,"com.lambdatest.proverbial:id/color")))
-colorElement.click()
+    driver = webdriver.Remote(
+        command_executor="https://"+username+":"+accesskey+"@mobile-hub.lambdatest.com/wd/hub",
+        desired_capabilities=appConf.app_android_desired_caps
+        )
+    try:
+        colorElement = WebDriverWait(driver,20).until(EC.element_to_be_clickable((MobileBy.ID,"com.lambdatest.proverbial:id/color")))
+        colorElement.click()
 
-textElement = WebDriverWait(driver,20).until(EC.element_to_be_clickable((MobileBy.ID,"com.lambdatest.proverbial:id/Text")))
-textElement.click()
+        textElement = WebDriverWait(driver,20).until(EC.element_to_be_clickable((MobileBy.ID,"com.lambdatest.proverbial:id/Text")))
+        textElement.click()
 
-toastElement = WebDriverWait(driver,20).until(EC.element_to_be_clickable((MobileBy.ID,"com.lambdatest.proverbial:id/toast")))
-toastElement.click()
+        toastElement = WebDriverWait(driver,20).until(EC.element_to_be_clickable((MobileBy.ID,"com.lambdatest.proverbial:id/toast")))
+        toastElement.click()
 
-notification = WebDriverWait(driver,20).until(EC.element_to_be_clickable((MobileBy.ID,"com.lambdatest.proverbial:id/notification")))
-notification.click()
+        notification = WebDriverWait(driver,20).until(EC.element_to_be_clickable((MobileBy.ID,"com.lambdatest.proverbial:id/notification")))
+        notification.click()
 
-geolocation = WebDriverWait(driver,20).until(EC.element_to_be_clickable((MobileBy.ID,"com.lambdatest.proverbial:id/geoLocation")))
-geolocation.click()
+        geolocation = WebDriverWait(driver,20).until(EC.element_to_be_clickable((MobileBy.ID,"com.lambdatest.proverbial:id/geoLocation")))
+        geolocation.click()
 
-home = WebDriverWait(driver,20).until(EC.element_to_be_clickable((MobileBy.ID,"com.lambdatest.proverbial:id/Home")))
-home.click()
+        home = WebDriverWait(driver,20).until(EC.element_to_be_clickable((MobileBy.ID,"com.lambdatest.proverbial:id/Home")))
+        home.click()
 
-speedTest = WebDriverWait(driver,20).until(EC.element_to_be_clickable((MobileBy.ID,"com.lambdatest.proverbial:id/speedTest")))
-speedTest.click()
+        speedTest = WebDriverWait(driver,20).until(EC.element_to_be_clickable((MobileBy.ID,"com.lambdatest.proverbial:id/speedTest")))
+        speedTest.click()
 
-home = WebDriverWait(driver,20).until(EC.element_to_be_clickable((MobileBy.ID,"com.lambdatest.proverbial:id/Home")))
-home.click()
+        home = WebDriverWait(driver,20).until(EC.element_to_be_clickable((MobileBy.ID,"com.lambdatest.proverbial:id/Home")))
+        home.click()
 
-browser = WebDriverWait(driver,20).until(EC.element_to_be_clickable((MobileBy.ID,"com.lambdatest.proverbial:id/Browser")))
-browser.click()
+        browser = WebDriverWait(driver,20).until(EC.element_to_be_clickable((MobileBy.ID,"com.lambdatest.proverbial:id/Browser")))
+        browser.click()
 
-url = WebDriverWait(driver,20).until(EC.element_to_be_clickable((MobileBy.ID,"com.lambdatest.proverbial:id/url")))
-url.send_keys("https://www.testmuai.com")
+        url = WebDriverWait(driver,20).until(EC.element_to_be_clickable((MobileBy.ID,"com.lambdatest.proverbial:id/url")))
+        url.send_keys("https://www.testmuai.com")
 
-find = WebDriverWait(driver,20).until(EC.element_to_be_clickable((MobileBy.ID,"com.lambdatest.proverbial:id/find")))
-find.click()
+        find = WebDriverWait(driver,20).until(EC.element_to_be_clickable((MobileBy.ID,"com.lambdatest.proverbial:id/find")))
+        find.click()
 
-driver.quit()
-except:
-driver.quit()
+        driver.quit()
+    except:
+        driver.quit()
 ```
 
 ```python title="iOSStepDef.py"
@@ -179,61 +179,61 @@ from selenium.webdriver.support import expected_conditions as EC
 
 @given("Start the ios app automation test")
 def startIOSAppAutomationTest(self):
-if os.environ.get("LT_USERNAME") is None:
-#highlight-next-line
-username = "username" #Enter username here
-else:
-username = os.environ.get("LT_USERNAME")
-if os.environ.get("LT_ACCESS_KEY") is None:
-#highlight-next-line
-accesskey = "accesskey" #Enter accesskey herE
-else:
-accesskey = os.environ.get("LT_ACCESS_KEY")
+    if os.environ.get("LT_USERNAME") is None:
+        #highlight-next-line
+        username = "username" #Enter username here
+    else:
+        username = os.environ.get("LT_USERNAME")
+    if os.environ.get("LT_ACCESS_KEY") is None:
+      #highlight-next-line
+        accesskey = "accesskey" #Enter accesskey herE
+    else:
+        accesskey = os.environ.get("LT_ACCESS_KEY")
 
-driver = webdriver.Remote(
-command_executor="https://"+username+":"+accesskey+"@mobile-hub.lambdatest.com/wd/hub",
-desired_capabilities=appConf.app_ios_desired_caps
-)
-try:
-colorElement = WebDriverWait(driver,20).until(EC.element_to_be_clickable((MobileBy.ACCESSIBILITY_ID,"color")))
-colorElement.click()
+    driver = webdriver.Remote(
+        command_executor="https://"+username+":"+accesskey+"@mobile-hub.lambdatest.com/wd/hub",
+        desired_capabilities=appConf.app_ios_desired_caps
+    )
+    try:
+        colorElement = WebDriverWait(driver,20).until(EC.element_to_be_clickable((MobileBy.ACCESSIBILITY_ID,"color")))
+        colorElement.click()
 
-textElement = WebDriverWait(driver,20).until(EC.element_to_be_clickable((MobileBy.ACCESSIBILITY_ID,"Text")))
-textElement.click()
+        textElement = WebDriverWait(driver,20).until(EC.element_to_be_clickable((MobileBy.ACCESSIBILITY_ID,"Text")))
+        textElement.click()
 
-toastElement = WebDriverWait(driver,20).until(EC.element_to_be_clickable((MobileBy.ACCESSIBILITY_ID,"toast")))
-toastElement.click()
+        toastElement = WebDriverWait(driver,20).until(EC.element_to_be_clickable((MobileBy.ACCESSIBILITY_ID,"toast")))
+        toastElement.click()
 
-notification = WebDriverWait(driver,20).until(EC.element_to_be_clickable((MobileBy.ACCESSIBILITY_ID,"notification")))
-notification.click()
-time.sleep(3)
+        notification = WebDriverWait(driver,20).until(EC.element_to_be_clickable((MobileBy.ACCESSIBILITY_ID,"notification")))
+        notification.click()
+        time.sleep(3)
 
-geolocation = WebDriverWait(driver,20).until(EC.element_to_be_clickable((MobileBy.ACCESSIBILITY_ID,"geoLocation")))
-geolocation.click()
-time.sleep(3)
+        geolocation = WebDriverWait(driver,20).until(EC.element_to_be_clickable((MobileBy.ACCESSIBILITY_ID,"geoLocation")))
+        geolocation.click()
+        time.sleep(3)
 
-home = WebDriverWait(driver,20).until(EC.element_to_be_clickable((MobileBy.ACCESSIBILITY_ID,"Back")))
-home.click()
+        home = WebDriverWait(driver,20).until(EC.element_to_be_clickable((MobileBy.ACCESSIBILITY_ID,"Back")))
+        home.click()
 
-speedTest = WebDriverWait(driver,20).until(EC.element_to_be_clickable((MobileBy.ACCESSIBILITY_ID,"speedTest")))
-speedTest.click()
-time.sleep(3)
+        speedTest = WebDriverWait(driver,20).until(EC.element_to_be_clickable((MobileBy.ACCESSIBILITY_ID,"speedTest")))
+        speedTest.click()
+        time.sleep(3)
 
-home = WebDriverWait(driver,20).until(EC.element_to_be_clickable((MobileBy.ACCESSIBILITY_ID,"Back")))
-home.click()
+        home = WebDriverWait(driver,20).until(EC.element_to_be_clickable((MobileBy.ACCESSIBILITY_ID,"Back")))
+        home.click()
 
-browser = WebDriverWait(driver,20).until(EC.element_to_be_clickable((MobileBy.ACCESSIBILITY_ID,"Browser")))
-browser.click()
+        browser = WebDriverWait(driver,20).until(EC.element_to_be_clickable((MobileBy.ACCESSIBILITY_ID,"Browser")))
+        browser.click()
 
-url = WebDriverWait(driver,20).until(EC.element_to_be_clickable((MobileBy.ACCESSIBILITY_ID,"url")))
-url.send_keys("https://www.testmuai.com")
+        url = WebDriverWait(driver,20).until(EC.element_to_be_clickable((MobileBy.ACCESSIBILITY_ID,"url")))
+        url.send_keys("https://www.testmuai.com")
 
-find = WebDriverWait(driver,20).until(EC.element_to_be_clickable((MobileBy.ACCESSIBILITY_ID,"find")))
-find.click()
+        find = WebDriverWait(driver,20).until(EC.element_to_be_clickable((MobileBy.ACCESSIBILITY_ID,"find")))
+        find.click()
 
-driver.quit()
-except:
-driver.quit()
+        driver.quit()
+    except:
+        driver.quit()
 
 ```
 
@@ -245,20 +245,20 @@ The capabilities for running tests on both **Android** and **iOS** apps are:
 
 ```python title="appConfig.py"
 app_ios_desired_caps = {
-"lt:options": {
-"deviceName":"iPhone 12",
-"platformName":"ios",
-"platformVersion":"14",
-"build":"Python Behave - iOS",
-"name":"Sample Test iOS",
-#highlight-next-line
-"app":"APP_URL" ,#Enter app (.ipa) url here
-"isRealMobile":True,
-"network":False,
-"visual":True,
-"video":True,
-"w3c":True
-}
+  "lt:options": {
+    "deviceName":"iPhone 12",
+    "platformName":"ios",
+    "platformVersion":"14",
+    "build":"Python Behave - iOS",
+    "name":"Sample Test iOS",
+    #highlight-next-line
+    "app":"APP_URL" ,#Enter app (.ipa) url here
+    "isRealMobile":True,
+    "network":False,
+    "visual":True,
+    "video":True,
+    "w3c":True
+  }
 }
 ```
 
@@ -266,19 +266,19 @@ app_ios_desired_caps = {
 
 ```python title="appConfig.py"
 app_android_desired_caps = {
-"lt:options": {
-"platformName": "android",
-"deviceName": "OnePlus 6",
-"platformVersion": "8",
-"build": "Python Behave - Android",
-"name": "Sample Test Android",
-#highlight-next-line
-"app": "APP_URL", #Enter app (.apk) url here
-"visual": True,
-"video": True,
-"w3c": True,
-"isRealMobile": True
-}
+ 	"lt:options": {
+		"platformName": "android",
+		"deviceName": "OnePlus 6",
+		"platformVersion": "8",
+    "build": "Python Behave - Android",
+		"name": "Sample Test Android",
+    #highlight-next-line
+		"app": "APP_URL", #Enter app (.apk) url here
+		"visual": True,
+		"video": True,
+    "w3c": True,
+		"isRealMobile": True
+	}
 }
 ```
 
@@ -318,8 +318,8 @@ The behave-skill package includes:
 behave-skill/
 ├── SKILL.md
 └── reference/
-├── playbook.md
-└── advanced-patterns.md
+    ├── playbook.md
+    └── advanced-patterns.md
 ```
 
 It provides structured guidance for:

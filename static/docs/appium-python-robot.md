@@ -98,34 +98,34 @@ ${TIMEOUT}              3000
 *** Keywords ***
 
 Open test app
-[Timeout]   ${TIMEOUT}
-${CAPABILITIES}=    Create Dictionary
-...   platformName=${platformName}
-...   platformVersion=${version}
-...   deviceName=${deviceName}
-...   visual=${visual}
-...   network=${network}
-...   devicelog=${devicelog}
-...   isRealMobile=${isRealMobile}
-...   name=LT_Appium_Robot_App_iOS
-...   build=LT_Appium_Robot_App_Automation
-...   app=${LT_APP_ID}
-TRY
-${REMOTE_URL}=    Set Variable If    '%{LT_GRID_URL}' == ''    mobile-hub.lambdatest.com    %{LT_GRID_URL}
-EXCEPT
-${REMOTE_URL}=    Set Variable    mobile-hub.lambdatest.com
-END
-TRY
-${APP_ID}=    Set Variable If    '%{LT_APP_ID}' == ''    lt://proverbial-ios    %{LT_APP_ID}
-EXCEPT
-${APP_ID}=    Set Variable    lt://proverbial-ios
-END
-${REMOTE_URL}=   Set Variable       https://%{LT_USERNAME}:%{LT_ACCESS_KEY}@${REMOTE_URL}/wd/hub
+    [Timeout]   ${TIMEOUT}
+    ${CAPABILITIES}=    Create Dictionary
+    ...   platformName=${platformName}
+    ...   platformVersion=${version}
+    ...   deviceName=${deviceName}
+    ...   visual=${visual}
+    ...   network=${network}
+    ...   devicelog=${devicelog}
+    ...   isRealMobile=${isRealMobile}
+    ...   name=LT_Appium_Robot_App_iOS
+    ...   build=LT_Appium_Robot_App_Automation
+    ...   app=${LT_APP_ID}
+    TRY
+        ${REMOTE_URL}=    Set Variable If    '%{LT_GRID_URL}' == ''    mobile-hub.lambdatest.com    %{LT_GRID_URL}
+    EXCEPT
+        ${REMOTE_URL}=    Set Variable    mobile-hub.lambdatest.com
+    END
+    TRY
+        ${APP_ID}=    Set Variable If    '%{LT_APP_ID}' == ''    lt://proverbial-ios    %{LT_APP_ID}
+    EXCEPT
+        ${APP_ID}=    Set Variable    lt://proverbial-ios
+    END
+    ${REMOTE_URL}=   Set Variable       https://%{LT_USERNAME}:%{LT_ACCESS_KEY}@${REMOTE_URL}/wd/hub
 
-Open Application  ${REMOTE_URL}  platformName=ios  platformVersion=${version}  deviceName=${deviceName}  visual=${visual}  network=${network}  devicelog=${devicelog}  isRealMobile=${isRealMobile}  app=${APP_ID}  name=LT_Appium_Robot_App_iOS  build=LT_Appium_Robot_App_Automation
+    Open Application  ${REMOTE_URL}  platformName=ios  platformVersion=${version}  deviceName=${deviceName}  visual=${visual}  network=${network}  devicelog=${devicelog}  isRealMobile=${isRealMobile}  app=${APP_ID}  name=LT_Appium_Robot_App_iOS  build=LT_Appium_Robot_App_Automation
 
 Close test app
-Close All Applications
+    Close All Applications
 ```
 
 - You must set **isRealMobile** capability to `False` in the config file to run on **Virtual Devices**
@@ -180,12 +180,12 @@ ${TIMEOUT}          3000
 *** Test Cases ***
 
 Example of connecting to Lambdatest via Robot Framework
-[Timeout]   ${TIMEOUT}
-Click element  id=color
-Click element  id=Text
-Click element  id=toast
-Click element  id=notification
-Click element  id=geoLocation
+	[Timeout]   ${TIMEOUT}
+	Click element  id=color
+	Click element  id=Text
+	Click element  id=toast
+	Click element  id=notification
+	Click element  id=geoLocation
 ```
 
 ```python title="Android.robot"
@@ -202,22 +202,22 @@ ${TIMEOUT}          3000
 *** Test Cases ***
 
 Example of connecting to Lambdatest via Robot Framework
-[Timeout]   ${TIMEOUT}
-Click element  id=color
-Click element  id=Text
-Click element  id=toast
+	[Timeout]   ${TIMEOUT}
+	Click element  id=color
+	Click element  id=Text
+	Click element  id=toast
 
-Click element  id=notification
-Click element  id=geoLocation
-Sleep	2 seconds
-Click element  id=Home
-Sleep	2 seconds
-Click element  id=speedTest
-Sleep	2 seconds
+	Click element  id=notification
+	Click element  id=geoLocation
+	Sleep	2 seconds
+	Click element  id=Home
+	Sleep	2 seconds
+	Click element  id=speedTest
+	Sleep	2 seconds
 
-Click element  id=Browser
-Input Text   id=url	https://lambdatest.com
-Click element  id=find
+	Click element  id=Browser
+	Input Text   id=url	https://lambdatest.com
+	Click element  id=find
 
 ```
 
@@ -227,10 +227,10 @@ You can update your custom capabilities in test scripts `Makefile` file. In this
 
 ```python title="Makefile"
 test_Web_ios:
-robot --variable version:15 --variable platformName:ios --variable deviceName:"iPhone.*" --variable isRealMobile:true --variable visual:true --variable network:true --variable console:true --variable devicelog:true Tests/AndroidIosWeb.robot
+	robot --variable version:15 --variable platformName:ios --variable deviceName:"iPhone.*" --variable isRealMobile:true --variable visual:true --variable network:true --variable console:true --variable devicelog:true Tests/AndroidIosWeb.robot
 
 test_Web_Android:
-robot --variable version:11 --variable platformName:android --variable deviceName:"Galaxy.*" --variable isRealMobile:true --variable visual:true --variable network:true --variable console:true --variable devicelog:true  Tests/AndroidIosWeb.robot
+	robot --variable version:11 --variable platformName:android --variable deviceName:"Galaxy.*" --variable isRealMobile:true --variable visual:true --variable network:true --variable console:true --variable devicelog:true  Tests/AndroidIosWeb.robot
 ```
 
 - You must add the generated **APP_URL** to the `app` capability in the config file.
@@ -266,8 +266,8 @@ The robot-framework-skill package includes:
 robot-framework-skill/
 ├── SKILL.md
 └── reference/
-├── playbook.md
-└── advanced-patterns.md
+    ├── playbook.md
+    └── advanced-patterns.md
 ```
 
 It provides structured guidance for:

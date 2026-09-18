@@ -44,24 +44,24 @@ image: ubuntu:latest
 
 ## Define pipelines (can have multiple pipelines)
 pipelines:
-## Default pipeline (can be named differently)
-default:
-## Branches to trigger this pipeline on (adjust as needed)
-branches:
-- master
+  ## Default pipeline (can be named differently)
+  default:
+    ## Branches to trigger this pipeline on (adjust as needed)
+    branches:
+      - master
 
-## Define steps in the pipeline
-steps:
-## Download Hyperexecute CLI (descriptive name)
-- name: Download Hyperexecute CLI
-script: |
-wget https://downloads.lambdatest.com/hyperexecute/darwin/hyperexecute
-chmod u+x hyperexecute
+    ## Define steps in the pipeline
+    steps:
+      ## Download Hyperexecute CLI (descriptive name)
+      - name: Download Hyperexecute CLI
+        script: |
+          wget https://downloads.lambdatest.com/hyperexecute/darwin/hyperexecute
+          chmod u+x hyperexecute
 
-## Run Hyperexecute tests (descriptive name)
-- name: Run Hyperexecute Tests
-script: |
-./hyperexecute --user <your_user_name> --key <your_access_key> --config <your_yaml_file_path>
+      ## Run Hyperexecute tests (descriptive name)
+      - name: Run Hyperexecute Tests
+        script: |
+          ./hyperexecute --user <your_user_name> --key <your_access_key> --config <your_yaml_file_path>
 ```
 
 ### 5. Run Your Job

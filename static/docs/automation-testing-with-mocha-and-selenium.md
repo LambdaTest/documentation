@@ -54,15 +54,15 @@ Update the capabilities in `conf/single.conf.js` to define the browser and platf
 
 ```js
 exports.capabilities = {
-'build': 'Mocha-Selenium-Sample', //Build name
-'name': 'Your Test Name', // Test name
-'platformName':'Windows 10', // OS name
-'browserName': 'chrome', // Browser name
-'browserVersion': 'latest', // Browser version
-'visual': false,  // To take step by step screenshot
-'network':false,  // To capture network Logs
-'console':false, // To capture console logs.
-'tunnel': false // If you want to run the localhost than change it to true
+        'build': 'Mocha-Selenium-Sample', //Build name
+        'name': 'Your Test Name', // Test name
+        'platformName':'Windows 10', // OS name
+        'browserName': 'chrome', // Browser name
+        'browserVersion': 'latest', // Browser version
+        'visual': false,  // To take step by step screenshot
+        'network':false,  // To capture network Logs
+        'console':false, // To capture console logs.
+        'tunnel': false // If you want to run the localhost than change it to true
 };
 ```
 

@@ -73,20 +73,20 @@ In the test script, update your test capabilities. Notice the declaration of cla
 
 class_name: AcceptanceTester
 modules:
-enabled:
-- WebDriver:
-url: 'https://lambdatest.github.io/sample-todo-app/'
-host: '{username}:{token}@hub.lambdatest.com' #provide your TestMu AI credentials
-port: 80
-browser: chrome
+    enabled:
+        - WebDriver:
+            url: 'https://lambdatest.github.io/sample-todo-app/'
+            host: '{username}:{token}@hub.lambdatest.com' #provide your TestMu AI credentials
+            port: 80
+            browser: chrome
 
-capabilities:
-name: 'Codeception Example'
-build: '1.0'
-browserName: 'Chrome' # request the latest version of chrome
-platform: 'ANY'
-version: '71.0'
-tunnel: false # sets tunnel value to true for routing traffic through your local machine
+            capabilities:
+            name: 'Codeception Example'
+            build: '1.0'
+            browserName: 'Chrome' # request the latest version of chrome
+            platform: 'ANY'
+            version: '71.0'
+            tunnel: false # sets tunnel value to true for routing traffic through your local machine
 ```
 
 **Capabilities Generator**

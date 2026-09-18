@@ -225,37 +225,37 @@ Once, the configuration file will be created, you will be seeing the default con
 
 ```json title="/smartui-sdk-project/.smartui.json"
 {
-"web": {
-"browsers": [
-"chrome",
-"firefox",
-"safari",
-"edge"
-],
-"viewports": [
-[
-1920
-],
-[
-1366
-],
-[
-1028
-]
-] // Full Page screenshots are captured by default for web viewports
-},
-"mobile": {
-"devices": [
-"iPhone 14",  //iPhone 14 viewport
-"Galaxy S24"  //Galaxy S24 viewport
-],
-"fullPage": true, //Full Page is true by default for mobile viewports
-"orientation": "portrait" //Change to "landscape" for landscape snapshot
-},
-"waitForTimeout": 1000, //Optional (Should only be used in case lazy-loading/async components are present)
-"waitForPageRender": 50000, //Optional (Should only be used in case of websites which take more than 30s to load)
-"enableJavaScript": false, //Enable javascript for all the screenshots of the project
-"allowedHostnames": [] //Additional hostnames to capture assets from
+  "web": {
+    "browsers": [
+      "chrome",
+      "firefox",
+      "safari",
+      "edge"
+    ],
+    "viewports": [
+      [
+        1920
+      ],
+      [
+        1366
+      ],
+      [
+        1028
+      ]
+    ] // Full Page screenshots are captured by default for web viewports
+  },
+  "mobile": {
+    "devices": [
+      "iPhone 14",  //iPhone 14 viewport
+      "Galaxy S24"  //Galaxy S24 viewport
+    ],
+    "fullPage": true, //Full Page is true by default for mobile viewports
+    "orientation": "portrait" //Change to "landscape" for landscape snapshot
+  },
+  "waitForTimeout": 1000, //Optional (Should only be used in case lazy-loading/async components are present)
+  "waitForPageRender": 50000, //Optional (Should only be used in case of websites which take more than 30s to load)
+  "enableJavaScript": false, //Enable javascript for all the screenshots of the project
+  "allowedHostnames": [] //Additional hostnames to capture assets from
 }
 ```
 **Advanced options in SmartUI configuration**
@@ -312,80 +312,80 @@ When conducting visual tests, you may encounter scenarios where certain elements
 
 ```rb title="This is a sample for your configuration for Ruby to ignore by ID"
 options = {
-ignoreDOM: {
-id: ["ID-1", "ID-2"],
-}
-}
+            ignoreDOM: {
+                id: ["ID-1", "ID-2"],
+            }
+        }
 driver.navigate.to 'Required URL'
 LambdaTest::Selenium::Driver.smartui_snapshot(driver, "Screenshot Name", options)
 ```
 
 ```rb title="This is a sample for your configuration for Ruby to ignore by Class"
 options = {
-ignoreDOM: {
-class: ["Class-1", "Class-2"],
-}
-}
+            ignoreDOM: {
+                class: ["Class-1", "Class-2"],
+            }
+        }
 driver.navigate.to 'Required URL'
 LambdaTest::Selenium::Driver.smartui_snapshot(driver, "Screenshot Name", options)
 ```
 
 ```rb title="This is a sample for your configuration for Ruby to ignore by XPath"
 options = {
-ignoreDOM: {
-xpath: ["Xpath-1", "Xpath-2"],
-}
-}
+            ignoreDOM: {
+                xpath: ["Xpath-1", "Xpath-2"],
+            }
+        }
 driver.navigate.to 'Required URL'
 LambdaTest::Selenium::Driver.smartui_snapshot(driver, "Screenshot Name", options)
 ```
 
 ```rb title="This is a sample for your configuration for Ruby to ignore by CSS Selector"
 options = {
-ignoreDOM: {
-cssSelector: ["CSS-Selector-1", "CSS-Selector-2"],
-}
-}
+            ignoreDOM: {
+                cssSelector: ["CSS-Selector-1", "CSS-Selector-2"],
+            }
+        }
 driver.navigate.to 'Required URL'
 LambdaTest::Selenium::Driver.smartui_snapshot(driver, "Screenshot Name", options)
 ```
 
 ```rb title="This is a sample for your configuration for Ruby to select by" ID."
 options = {
-selectDOM: {
-id: ["ID-1", "ID-2"],
-}
-}
+            selectDOM: {
+                id: ["ID-1", "ID-2"],
+            }
+        }
 driver.navigate.to 'Required URL'
 LambdaTest::Selenium::Driver.smartui_snapshot(driver, "Screenshot Name", options)
 ```
 
 ```rb title="This is a sample for your configuration for Ruby to select by Class"
 options = {
-selectDOM: {
-class: ["Class-1", "Class-2"],
-}
-}
+            selectDOM: {
+                class: ["Class-1", "Class-2"],
+            }
+        }
 driver.navigate.to 'Required URL'
 LambdaTest::Selenium::Driver.smartui_snapshot(driver, "Screenshot Name", options)
 ```
 
 ```rb title="This is a sample for your configuration for Ruby to select by XPath"
 options = {
-selectDOM: {
-xpath: ["Xpath-1", "Xpath-2"],
-}
-}
+            selectDOM: {
+                xpath: ["Xpath-1", "Xpath-2"],
+            }
+        }
 driver.navigate.to 'Required URL'
 LambdaTest::Selenium::Driver.smartui_snapshot(driver, "Screenshot Name", options)
 ```
 
 ```rb title="This is a sample for your webhook configuration for Ruby to select by CSS Selector"
 options = {
-selectDOM: {
-cssSelector: ["CSS-Selector-1", "CSS-Selector-2"],
-}
-}
+            selectDOM: {
+                cssSelector: ["CSS-Selector-1", "CSS-Selector-2"],
+            }
+        }
 driver.navigate.to 'Required URL'
 LambdaTest::Selenium::Driver.smartui_snapshot(driver, "Screenshot Name", options)
 ```
@@ -396,40 +396,40 @@ You can capture screenshots of targeted elements by leveraging various locator m
 
 ```rb title="This is a sample for your configuration for Ruby to capture an element by" ID."
 options = {
-element: {
-id: 'Required ID',
-}
-}
+      element: {
+          id: 'Required ID',
+      }
+  }
 driver.navigate.to 'Required URL'
 LambdaTest::Selenium::Driver.smartui_snapshot(driver, "Screenshot Name", options)
 ```
 
 ```rb title="This is a sample for your configuration for Ruby to capture an element by Class"
 options = {
-element: {
-class: 'Required Class',
-}
-}
+      element: {
+          class: 'Required Class',
+      }
+  }
 driver.navigate.to 'Required URL'
 LambdaTest::Selenium::Driver.smartui_snapshot(driver, "Screenshot Name", options)
 ```
 
 ```rb title="This is a sample for your configuration for Ruby to capture an element by XPath"
 options = {
-element: {
-xpath: 'Required Xpath',
-}
-}
+      element: {
+          xpath: 'Required Xpath',
+      }
+  }
 driver.navigate.to 'Required URL'
 LambdaTest::Selenium::Driver.smartui_snapshot(driver, "Screenshot Name", options)
 ```
 
 ```rb title="This is a sample for your webhook configuration for Ruby to capture an element by CSS Selector"
 options = {
-element: {
-cssSelector: 'Required CSS Selector',
-}
-}
+      element: {
+          cssSelector: 'Required CSS Selector',
+      }
+  }
 driver.navigate.to 'Required URL'
 LambdaTest::Selenium::Driver.smartui_snapshot(driver, "Screenshot Name", options)
 ```
@@ -443,35 +443,35 @@ require 'selenium-webdriver'
 require 'lambdatest/selenium/driver'
 
 def quick_scroll_to_bottom(driver, last_page_wait)
-height = driver.execute_script("return document.body.scrollHeight")
-height_of_page = height.to_i
-size = 200
-no_of_loop = height_of_page / size
+  height = driver.execute_script("return document.body.scrollHeight")
+  height_of_page = height.to_i
+  size = 200
+  no_of_loop = height_of_page / size
 
-(1..no_of_loop).each do |i|
-driver.execute_script("window.scrollTo(#{(i - 1) * size}, #{i * size})")
-sleep 1
-if i == no_of_loop
-driver.execute_script("window.scrollTo(#{i * size}, #{height_of_page})")
-sleep last_page_wait / 1000.0
-end
-end
+  (1..no_of_loop).each do |i|
+    driver.execute_script("window.scrollTo(#{(i - 1) * size}, #{i * size})")
+    sleep 1
+    if i == no_of_loop
+      driver.execute_script("window.scrollTo(#{i * size}, #{height_of_page})")
+      sleep last_page_wait / 1000.0
+    end
+  end
 
-# Now scroll to the top
-driver.execute_script("window.scrollTo(0,0)")
-sleep 10 # Wait for 10 seconds
-puts "Scroll Completed"
+  # Now scroll to the top
+  driver.execute_script("window.scrollTo(0,0)")
+  sleep 10 # Wait for 10 seconds
+  puts "Scroll Completed"
 rescue => e
-puts "Got some errors: #{e}"
+  puts "Got some errors: #{e}"
 end
 
 driver = Selenium::WebDriver.for :chrome
 begin
-driver.get("Required URL")
-quick_scroll_to_bottom(driver, 100) # Use wait time accordingly
-LambdaTest::Selenium::Driver.smartui_snapshot(driver, "Screenshot Name")
+  driver.get("Required URL")
+  quick_scroll_to_bottom(driver, 100) # Use wait time accordingly
+  LambdaTest::Selenium::Driver.smartui_snapshot(driver, "Screenshot Name")
 ensure
-driver.quit
+  driver.quit
 end
 
 ```
@@ -590,7 +590,7 @@ wait.until { driver.find_element(css: '.main-content').displayed? }
 2. Enable JavaScript in configuration:
 ```json
 {
-"enableJavaScript": true
+  "enableJavaScript": true
 }
 ```
 

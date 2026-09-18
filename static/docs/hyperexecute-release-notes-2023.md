@@ -10,17 +10,17 @@ You can now download and install **multiple languages** and and frameworks of a 
 
 ```bash
 runtime:
-- language: java
-version: '17'
-addons:
-- name: gauge
-version: '1.5.6'
-- name: gradle
-version: '7.6'
-- language: python
-version: '3.10'
-- language: node
-version: '16'
+  - language: java
+    version: '17'
+    addons:
+      - name: gauge
+        version: '1.5.6'
+      - name: gradle
+        version: '7.6'
+  - language: python
+    version: '3.10'
+  - language: node
+    version: '16'
 ```
 
 > Go through the documentation to understand the [runtime](/support/docs/deep-dive-into-hyperexecute-yaml/#runtime) flag.
@@ -35,7 +35,7 @@ After specifying the details of your repository, you need to set the useInCodeSe
 
 ```bash
 tunnelOpts:
-useInCodeSetUp: true
+  useInCodeSetUp: true
 ### this flag is mandatory to pass to enable cloning via tunnel
 ```
 

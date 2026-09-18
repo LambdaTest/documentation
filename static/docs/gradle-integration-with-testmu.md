@@ -31,13 +31,13 @@ Gradle is a build automation tool for multi-language software development. It co
 
 ```java title="build.gradle"
 plugins {
-id 'io.github.lambdatest.gradle' version '1.0.7'
+    id 'io.github.lambdatest.gradle' version '1.0.7'
 }
 
 repositories {
-maven {
-url "https://plugins.gradle.org/m2/"
-}
+    maven {
+        url "https://plugins.gradle.org/m2/"
+    }
 }
 ```
 
@@ -45,14 +45,14 @@ url "https://plugins.gradle.org/m2/"
 
 ```java title="build.gradle"
 runLambdaTest {
-username = 'YOUR_LAMBDATEST_USERNAME'
-accessKey = 'YOUR_LAMBDATEST_ACCESS_KEY>'
-appFilePath = 'PATH_TO_YOUR_APP_FILE'
-testSuiteFilePath = 'PATH_TO_YOUR_TEST_SUITE'
-device = 'YOUR_DESIRED_DEVICE_FOR_TESTING'
-isFlutter = true //if you are running flutter dart tests
-appId = "lt://1234343" //provide this only if you have already uploaded the app
-testSuiteId = "lt://1223444" //provide this only if you have already uploaded the app
+  username = 'YOUR_LAMBDATEST_USERNAME'
+  accessKey = 'YOUR_LAMBDATEST_ACCESS_KEY>'
+  appFilePath = 'PATH_TO_YOUR_APP_FILE'
+  testSuiteFilePath = 'PATH_TO_YOUR_TEST_SUITE'
+  device = 'YOUR_DESIRED_DEVICE_FOR_TESTING'
+  isFlutter = true //if you are running flutter dart tests
+  appId = "lt://1234343" //provide this only if you have already uploaded the app
+  testSuiteId = "lt://1223444" //provide this only if you have already uploaded the app
 }
 ```
 
@@ -61,10 +61,10 @@ With the release of version **`1.0.7`** of the `lambdatest-gradle-plugin`, users
 
 ```java title="build.gradle"
 uploadApkToLambdaTest {
-username = 'YOUR_LAMBDATEST_USERNAME'
-accessKey = 'YOUR_LAMBDATEST_ACCESS_KEY>'
-appFilePath = 'PATH_TO_YOUR_APP_FILE'
-testSuiteFilePath = 'PATH_TO_YOUR_TEST_SUITE'
+  username = 'YOUR_LAMBDATEST_USERNAME'
+  accessKey = 'YOUR_LAMBDATEST_ACCESS_KEY>'
+  appFilePath = 'PATH_TO_YOUR_APP_FILE'
+  testSuiteFilePath = 'PATH_TO_YOUR_TEST_SUITE'
 }
 ```
 ### Step 4: Execute the Plugin

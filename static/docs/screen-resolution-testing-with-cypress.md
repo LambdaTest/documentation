@@ -54,19 +54,19 @@ For **Cypress v9 and below**, use the following script in the `plugin/index.js` 
 
 ```js
 module.exports = (on, config) => {
-on('before:browser:launch', (browser = {}, launchOptions) => {
-if (browser.family === 'chromium' && browser.name !== 'electron') {
-launchOptions.args.push('--start-fullscreen')
+  on('before:browser:launch', (browser = {}, launchOptions) => {
+    if (browser.family === 'chromium' && browser.name !== 'electron') {
+      launchOptions.args.push('--start-fullscreen')
 
-return launchOptions
-}
+      return launchOptions
+    }
 
-if (browser.name === 'electron') {
-launchOptions.preferences.fullscreen = true
+    if (browser.name === 'electron') {
+      launchOptions.preferences.fullscreen = true
 
-return launchOptions
-}
-})
+      return launchOptions
+    }
+  })
 }
 ```
 
@@ -77,22 +77,22 @@ const { defineConfig } = require('cypress')
 
 module.exports = defineConfig({
 
-e2e: {
-setupNodeEvents(on, config) {
-on('before:browser:launch', (browser = {}, launchOptions) => {
-if (browser.family === 'chromium' && browser.name !== 'electron') {
-launchOptions.args.push('--start-fullscreen')
+  e2e: {
+    setupNodeEvents(on, config) {
+      on('before:browser:launch', (browser = {}, launchOptions) => {
+        if (browser.family === 'chromium' && browser.name !== 'electron') {
+          launchOptions.args.push('--start-fullscreen')
 
-return launchOptions
-}
+          return launchOptions
+        }
 
-if (browser.name === 'electron') {
-launchOptions.preferences.fullscreen = true
+        if (browser.name === 'electron') {
+          launchOptions.preferences.fullscreen = true
 
-return launchOptions
-}
-})
-}
-}
+          return launchOptions
+        }
+      })
+    }
+  }
 })
 ```

@@ -91,9 +91,9 @@ For Java-based projects using Maven, add the ALM Octane SDK dependency:
 
 ```xml
 <dependency>
-<groupId>com.microfocus.adm.almoctane.sdk</groupId>
-<artifactId>sdk-src</artifactId>
-<version>16.1.100</version>
+    <groupId>com.microfocus.adm.almoctane.sdk</groupId>
+    <artifactId>sdk-src</artifactId>
+    <version>16.1.100</version>
 </dependency>
 ```
 
@@ -110,16 +110,16 @@ import com.hp.octane.integrations.OctaneSDK;
 
 public class ALMOctaneReporter {
 
-private static final String OCTANE_URL = "https://your-octane-instance.com";
-private static final String SHARED_SPACE_ID = "your-shared-space-id";
-private static final String WORKSPACE_ID = "your-workspace-id";
-private static final String CLIENT_ID = "your-client-id";
-private static final String CLIENT_SECRET = "your-client-secret";
+    private static final String OCTANE_URL = "https://your-octane-instance.com";
+    private static final String SHARED_SPACE_ID = "your-shared-space-id";
+    private static final String WORKSPACE_ID = "your-workspace-id";
+    private static final String CLIENT_ID = "your-client-id";
+    private static final String CLIENT_SECRET = "your-client-secret";
 
-public void reportTestResult(String testName, String status) {
-// Initialize Octane SDK and report results
-// Refer to ALM Octane SDK documentation for detailed implementation
-}
+    public void reportTestResult(String testName, String status) {
+        // Initialize Octane SDK and report results
+        // Refer to ALM Octane SDK documentation for detailed implementation
+    }
 }
 ```
 
@@ -138,8 +138,8 @@ capabilities.setCapability("build", "ALM Octane Integration Build");
 capabilities.setCapability("name", "ALM Octane Test");
 
 WebDriver driver = new RemoteWebDriver(
-new URL("https://" + username + ":" + accessKey + "@hub.lambdatest.com/wd/hub"),
-capabilities
+    new URL("https://" + username + ":" + accessKey + "@hub.lambdatest.com/wd/hub"),
+    capabilities
 );
 
 // Your test code here

@@ -116,86 +116,86 @@ Once you run the above command, below is the project structure for the `lambdate
 
 ```js
 {
-"lambdatest_auth": {
-"username": "<Your LambdaTest username>",
-"access_key": "<Your LambdaTest access key>"
-},
-"browsers": [
-{
-"browser": "Chrome",
-"platform": "Windows 10",
-"versions": [
-"latest-1"
-]
-},
-{
-"browser": "Firefox",
-"platform": "Windows 10",
-"versions": [
-"latest-1"
-]
-}
-],
-"run_settings": {
-"cypress_config_file": "cypress.config.js",
-"reporter_config_file": "base_reporter_config.json",
-"build_name": "build-name",
-"parallels": 1,
-"specs": "./*.cy.js",
-"ignore_files": "",
-"network": false,
-"headless": false,
-"npm_dependencies": {
-"cypress": "10.0.0"
-}
-},
-"tunnel_settings": {
-"tunnel": false,
-"tunnel_name": null
-}
+  "lambdatest_auth": {
+     "username": "<Your LambdaTest username>",
+     "access_key": "<Your LambdaTest access key>"
+  },
+  "browsers": [
+     {
+        "browser": "Chrome",
+        "platform": "Windows 10",
+        "versions": [
+           "latest-1"
+        ]
+     },
+     {
+        "browser": "Firefox",
+        "platform": "Windows 10",
+        "versions": [
+           "latest-1"
+        ]
+     }
+  ],
+  "run_settings": {
+     "cypress_config_file": "cypress.config.js",
+     "reporter_config_file": "base_reporter_config.json",
+     "build_name": "build-name",
+     "parallels": 1,
+     "specs": "./*.cy.js",
+     "ignore_files": "",
+     "network": false,
+     "headless": false,
+     "npm_dependencies": {
+        "cypress": "10.0.0"
+     }
+  },
+  "tunnel_settings": {
+     "tunnel": false,
+     "tunnel_name": null
+  }
 }
 ```
 
 ```bash
 app
 {
-"lambdatest_auth": {
-"username": "<Your LambdaTest username>",
-"access_key": "<Your LambdaTest access key>"
-},
-"browsers": [
-{
-"browser": "Chrome",
-"platform": "Windows 10",
-"versions": [
-"latest-1"
-]
-},
-{
-"browser": "Firefox",
-"platform": "Windows 10",
-"versions": [
-"latest-1"
-]
-}
-],
-"run_settings": {
-"cypress_config_file": "cypress.json",
-"reporter_config_file": "base_reporter_config.json",
-"build_name": "build-name",
-"parallels": 1,
-"specs": "./*.spec.js",
-"ignore_files": "",
-"network": false,
-"headless": false,
-"npm_dependencies": {
-"cypress": "9.0.0"
-}
-},
-"tunnel_settings": {
-"tunnel": false,
-"tunnel_name": null
-}
+  "lambdatest_auth": {
+     "username": "<Your LambdaTest username>",
+     "access_key": "<Your LambdaTest access key>"
+  },
+  "browsers": [
+     {
+        "browser": "Chrome",
+        "platform": "Windows 10",
+        "versions": [
+           "latest-1"
+        ]
+     },
+     {
+        "browser": "Firefox",
+        "platform": "Windows 10",
+        "versions": [
+           "latest-1"
+        ]
+     }
+  ],
+  "run_settings": {
+     "cypress_config_file": "cypress.json",
+     "reporter_config_file": "base_reporter_config.json",
+     "build_name": "build-name",
+     "parallels": 1,
+     "specs": "./*.spec.js",
+     "ignore_files": "",
+     "network": false,
+     "headless": false,
+     "npm_dependencies": {
+        "cypress": "9.0.0"
+     }
+  },
+  "tunnel_settings": {
+     "tunnel": false,
+     "tunnel_name": null
+  }
 }
 ```
 
@@ -221,9 +221,9 @@ lambdatest-cypress run --parallels 5
 
 ```json
 {
-"run_settings": {
-"parallels": 5
-}
+  "run_settings": {
+    "parallels": 5
+  }
 }
 ```
 
@@ -237,10 +237,10 @@ To tests locally hosted websites on the TestMu AI platform, you need to setup [T
 Now you need to activate the tunnel capability in the `lambdatest-config.json` file under the section "tunnel_settings" as shown below:
 
 ```json
-"tunnel_settings": {
-"tunnel": true,
-"tunnel_name": "LT_Tunnel"
-}
+  "tunnel_settings": {
+		"tunnel": true,
+		"tunnel_name": "LT_Tunnel"
+	}
 ```
 
 You can provide the name of the **TestMu AI tunnel** as per your requirements.

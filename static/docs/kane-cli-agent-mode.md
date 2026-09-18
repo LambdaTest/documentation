@@ -38,9 +38,9 @@ Add `--agent` to any run command:
 
 ```bash
 kane-cli run "Verify the checkout flow completes successfully" \
---url https://myapp.com \
---agent \
---headless
+  --url https://myapp.com \
+  --agent \
+  --headless
 ```
 
 When `--agent` is active:
@@ -95,30 +95,30 @@ Kane CLI outputs one JSON object per line (NDJSON) to stdout:
 
 ```json
 {
-"type": "run_end",
-"status": "passed",
-"summary": "Searched for laptop and added first result to cart",
-"one_liner": "Searched for laptop on Amazon and added to cart",
-"reason": "Objective completed",
-"duration": 45.2,
-"final_state": {
-"price": "$29.99",
-"product_name": "Wireless Headphones"
-},
-"context": {
-"memory": {},
-"variables": {},
-"pointer": "(passed) Searched for laptop on Amazon"
-},
-"token_usage": {
-"reasoning_input": 12000,
-"reasoning_output": 800,
-"vision_input": 5000,
-"vision_output": 200
-},
-"session_dir": "~/.testmuai/kaneai/sessions/2026-04-14_10-30-45_a1b2c3",
-"run_dir": "~/.testmuai/kaneai/sessions/2026-04-14_10-30-45_a1b2c3/runs/0",
-"test_url": "https://test-manager.lambdatest.com/projects/123/test-cases/456"
+  "type": "run_end",
+  "status": "passed",
+  "summary": "Searched for laptop and added first result to cart",
+  "one_liner": "Searched for laptop on Amazon and added to cart",
+  "reason": "Objective completed",
+  "duration": 45.2,
+  "final_state": {
+    "price": "$29.99",
+    "product_name": "Wireless Headphones"
+  },
+  "context": {
+    "memory": {},
+    "variables": {},
+    "pointer": "(passed) Searched for laptop on Amazon"
+  },
+  "token_usage": {
+    "reasoning_input": 12000,
+    "reasoning_output": 800,
+    "vision_input": 5000,
+    "vision_output": 200
+  },
+  "session_dir": "~/.testmuai/kaneai/sessions/2026-04-14_10-30-45_a1b2c3",
+  "run_dir": "~/.testmuai/kaneai/sessions/2026-04-14_10-30-45_a1b2c3/runs/0",
+  "test_url": "https://test-manager.lambdatest.com/projects/123/test-cases/456"
 }
 ```
 
@@ -153,7 +153,7 @@ kane-cli run "..." --agent 2>/dev/null | tail -1 | jq -r '.status'
 
 # Extract a stored value
 kane-cli run "go to example.com, store the price as 'price'" --agent 2>/dev/null \
-| tail -1 | jq -r '.final_state.price'
+  | tail -1 | jq -r '.final_state.price'
 ```
 
 ## Handling `ask_user` Events

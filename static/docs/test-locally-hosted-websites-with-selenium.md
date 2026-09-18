@@ -138,24 +138,24 @@ browserOptions.setCapability("LT:Options", ltOptions);
 
 ```javascript
 const capabilities = {
-browserName: 'Chrome',
-browserVersion: 'latest',
-'LT:Options': {
-platformName: 'Windows 10',
-build: 'Local Test Build',
-name: 'Local Test',
-tunnel: true,       // Enable tunnel
-w3c: true,
-}
+  browserName: 'Chrome',
+  browserVersion: 'latest',
+  'LT:Options': {
+    platformName: 'Windows 10',
+    build: 'Local Test Build',
+    name: 'Local Test',
+    tunnel: true,       // Enable tunnel
+    w3c: true,
+  }
 };
 ```
 
 ```python
 lt_options = {
-"build": "Local Test Build",
-"name": "Local Test",
-"tunnel": True,       # Enable tunnel
-"w3c": True,
+    "build": "Local Test Build",
+    "name": "Local Test",
+    "tunnel": True,       # Enable tunnel
+    "w3c": True,
 }
 options.set_capability("LT:Options", lt_options)
 ```
@@ -163,38 +163,38 @@ options.set_capability("LT:Options", lt_options)
 ```csharp
 var ltOptions = new Dictionary<string, object>
 {
-{ "build", "Local Test Build" },
-{ "name", "Local Test" },
-{ "tunnel", true },       // Enable tunnel
-{ "w3c", true }
+    { "build", "Local Test Build" },
+    { "name", "Local Test" },
+    { "tunnel", true },       // Enable tunnel
+    { "w3c", true }
 };
 browserOptions.AddAdditionalOption("LT:Options", ltOptions);
 ```
 
 ```php
 $capabilities = [
-"browserName" => "Chrome",
-"browserVersion" => "latest",
-"LT:Options" => [
-"platformName" => "Windows 10",
-"build" => "Local Test Build",
-"name" => "Local Test",
-"tunnel" => true,       // Enable tunnel
-"w3c" => true,
-]
+    "browserName" => "Chrome",
+    "browserVersion" => "latest",
+    "LT:Options" => [
+        "platformName" => "Windows 10",
+        "build" => "Local Test Build",
+        "name" => "Local Test",
+        "tunnel" => true,       // Enable tunnel
+        "w3c" => true,
+    ]
 ];
 ```
 
 ```ruby
 options = Selenium::WebDriver::Options.chrome(
-platform_name: "Windows 10",
-browser_version: "latest",
-"LT:Options": {
-build: "Local Test Build",
-name: "Local Test",
-tunnel: true,       # Enable tunnel
-w3c: true,
-}
+  platform_name: "Windows 10",
+  browser_version: "latest",
+  "LT:Options": {
+    build: "Local Test Build",
+    name: "Local Test",
+    tunnel: true,       # Enable tunnel
+    w3c: true,
+  }
 )
 ```
 

@@ -51,9 +51,9 @@ npm install
 
 ```js title="lambdatest-setup.js"
 /**
-* Add the file in your test suite to run tests on LambdaTest.
-* Import `test` object from this file in the tests.
-*/
+ * Add the file in your test suite to run tests on LambdaTest.
+ * Import `test` object from this file in the tests.
+ */
 const base = require('@playwright/test')
 const path = require('path')
 const { chromium } = require('playwright')
@@ -62,66 +62,66 @@ const playwrightClientVersion = cp.execSync('npx playwright --version').toString
 
 // LambdaTest capabilities
 const capabilities = {
-'browserName': 'Chrome', // Browsers allowed: `Chrome`, `MicrosoftEdge`, `pw-chromium`, `pw-firefox` and `pw-webkit`
-'browserVersion': 'latest',
-'LT:Options': {
-'platform': 'Windows 10',
-'build': 'Playwright Build',
-'name': 'Playwright Test',
-'user': process.env.LT_USERNAME,
-'accessKey': process.env.LT_ACCESS_KEY,
-'network': true,
-'video': true,
-'console': true,
-'tunnel': false, // Add tunnel configuration if testing locally hosted webpage
-'tunnelName': '', // Optional
-'geoLocation': '', // country code can be fetched from https://www.lambdatest.com/capabilities-generator/
-'playwrightClientVersion': playwrightClientVersion
-}
+  'browserName': 'Chrome', // Browsers allowed: `Chrome`, `MicrosoftEdge`, `pw-chromium`, `pw-firefox` and `pw-webkit`
+  'browserVersion': 'latest',
+  'LT:Options': {
+    'platform': 'Windows 10',
+    'build': 'Playwright Build',
+    'name': 'Playwright Test',
+    'user': process.env.LT_USERNAME,
+    'accessKey': process.env.LT_ACCESS_KEY,
+    'network': true,
+    'video': true,
+    'console': true,
+    'tunnel': false, // Add tunnel configuration if testing locally hosted webpage
+    'tunnelName': '', // Optional
+    'geoLocation': '', // country code can be fetched from https://www.lambdatest.com/capabilities-generator/
+    'playwrightClientVersion': playwrightClientVersion
+  }
 }
 
 // Patching the capabilities dynamically according to the project name.
 const modifyCapabilities = (configName, testName) => {
-let config = configName.split('@lambdatest')[0]
-let [browserName, browserVersion, platform] = config.split(':')
-capabilities.browserName = browserName ? browserName : capabilities.browserName
-capabilities.browserVersion = browserVersion ? browserVersion : capabilities.browserVersion
-capabilities['LT:Options']['platform'] = platform ? platform : capabilities['LT:Options']['platform']
-capabilities['LT:Options']['name'] = testName
+  let config = configName.split('@lambdatest')[0]
+  let [browserName, browserVersion, platform] = config.split(':')
+  capabilities.browserName = browserName ? browserName : capabilities.browserName
+  capabilities.browserVersion = browserVersion ? browserVersion : capabilities.browserVersion
+  capabilities['LT:Options']['platform'] = platform ? platform : capabilities['LT:Options']['platform']
+  capabilities['LT:Options']['name'] = testName
 }
 
 const getErrorMessage = (obj, keys) => keys.reduce((obj, key) => (typeof obj == 'object' ? obj[key] : undefined), obj)
 
 exports.test = base.test.extend({
-page: async ({ page, playwright }, use, testInfo) => {
-// Configure LambdaTest platform for cross-browser testing
-let fileName = testInfo.file.split(path.sep).pop()
-if (testInfo.project.name.match(/lambdatest/)) {
-modifyCapabilities(testInfo.project.name, `${testInfo.title} - ${fileName}`)
+  page: async ({ page, playwright }, use, testInfo) => {
+    // Configure LambdaTest platform for cross-browser testing
+    let fileName = testInfo.file.split(path.sep).pop()
+    if (testInfo.project.name.match(/lambdatest/)) {
+      modifyCapabilities(testInfo.project.name, `${testInfo.title} - ${fileName}`)
 
-const browser = await chromium.connect({
-wsEndpoint: `wss://cdp.lambdatest.com/playwright?capabilities=${encodeURIComponent(JSON.stringify(capabilities))}`
-})
+      const browser = await chromium.connect({
+        wsEndpoint: `wss://cdp.lambdatest.com/playwright?capabilities=${encodeURIComponent(JSON.stringify(capabilities))}`
+      })
 
-const ltPage = await browser.newPage(testInfo.project.use)
-await use(ltPage)
+      const ltPage = await browser.newPage(testInfo.project.use)
+      await use(ltPage)
 
-const testStatus = {
-action: 'setTestStatus',
-arguments: {
-status: testInfo.status,
-remark: getErrorMessage(testInfo, ['error', 'message'])
-}
-}
-await ltPage.evaluate(() => {},
-`lambdatest_action: ${JSON.stringify(testStatus)}`)
-await ltPage.close()
-await browser.close()
-} else {
-// Run tests in local in case of local config provided
-await use(page)
-}
-}
+      const testStatus = {
+        action: 'setTestStatus',
+        arguments: {
+          status: testInfo.status,
+          remark: getErrorMessage(testInfo, ['error', 'message'])
+        }
+      }
+      await ltPage.evaluate(() => {},
+        `lambdatest_action: ${JSON.stringify(testStatus)}`)
+      await ltPage.close()
+      await browser.close()
+    } else {
+      // Run tests in local in case of local config provided
+      await use(page)
+    }
+  }
 })
 ```
 
@@ -145,73 +145,73 @@ const cp = require('child_process');
 const playwrightClientVersion = cp.execSync('npx playwright --version').toString().trim().split(' ')[1];
 
 const caps_chromium = {
-'browserName': 'pw-chromium', // Browsers allowed: `Chrome`, `MicrosoftEdge`, `pw-chromium`, `pw-firefox` and `pw-webkit`
-'browserVersion': 'latest',
-'LT:Options': {
-'platform': 'Windows 10',
-'build': 'Playwright-Jest Build',
-'name': 'Playwright-Jest Test on Chromium',
-'user': process.env.LT_USERNAME,
-'accessKey': process.env.LT_ACCESS_KEY,
-'network': true,
-'video': true,
-'console': true,
-'tunnel': false, // Add tunnel configuration if testing locally hosted webpage
-'tunnelName': '', // Optional
-'geoLocation': '', // country code can be fetched from https://www.lambdatest.com/capabilities-generator/
-'playwrightClientVersion': playwrightClientVersion
-}
+  'browserName': 'pw-chromium', // Browsers allowed: `Chrome`, `MicrosoftEdge`, `pw-chromium`, `pw-firefox` and `pw-webkit`
+  'browserVersion': 'latest',
+  'LT:Options': {
+    'platform': 'Windows 10',
+    'build': 'Playwright-Jest Build',
+    'name': 'Playwright-Jest Test on Chromium',
+    'user': process.env.LT_USERNAME,
+    'accessKey': process.env.LT_ACCESS_KEY,
+    'network': true,
+    'video': true,
+    'console': true,
+    'tunnel': false, // Add tunnel configuration if testing locally hosted webpage
+    'tunnelName': '', // Optional
+    'geoLocation': '', // country code can be fetched from https://www.lambdatest.com/capabilities-generator/
+    'playwrightClientVersion': playwrightClientVersion
+  }
 };
 
 const caps_firefox = {
-'browserName': 'pw-firefox',
-'browserVersion': 'latest',
-'LT:Options': {
-'platform': 'Windows 10',
-'build': 'Playwright-Jest Build ',
-'name': 'Playwright-Jest Test on Firefox',
-'user': process.env.LT_USERNAME,
-'accessKey': process.env.LT_ACCESS_KEY,
-'network': true,
-'video': true,
-'console': true,
-'tunnel': false,
-'tunnelName': '',
-'geoLocation': '',
-}
+  'browserName': 'pw-firefox',
+  'browserVersion': 'latest',
+  'LT:Options': {
+    'platform': 'Windows 10',
+    'build': 'Playwright-Jest Build ',
+    'name': 'Playwright-Jest Test on Firefox',
+    'user': process.env.LT_USERNAME,
+    'accessKey': process.env.LT_ACCESS_KEY,
+    'network': true,
+    'video': true,
+    'console': true,
+    'tunnel': false,
+    'tunnelName': '',
+    'geoLocation': '',
+  }
 };
 
 const caps_webkit = {
-'browserName': 'pw-webkit',
-'browserVersion': 'latest',
-'LT:Options': {
-'platform': 'Windows 10',
-'build': 'Playwright-Jest Build',
-'name': 'Playwright-Jest Test on WebKit',
-'user': process.env.LT_USERNAME,
-'accessKey': process.env.LT_ACCESS_KEY,
-'network': true,
-'video': true,
-'console': true,
-'tunnel': false,
-'tunnelName': '',
-'geoLocation': '',
-}
+  'browserName': 'pw-webkit',
+  'browserVersion': 'latest',
+  'LT:Options': {
+    'platform': 'Windows 10',
+    'build': 'Playwright-Jest Build',
+    'name': 'Playwright-Jest Test on WebKit',
+    'user': process.env.LT_USERNAME,
+    'accessKey': process.env.LT_ACCESS_KEY,
+    'network': true,
+    'video': true,
+    'console': true,
+    'tunnel': false,
+    'tunnelName': '',
+    'geoLocation': '',
+  }
 };
 
 module.exports = {
-connectOptions: {
-chromium: {
-wsEndpoint: `wss://cdp.lambdatest.com/playwright?capabilities=${encodeURIComponent(JSON.stringify(caps_chromium))}`
-},
-firefox: {
-wsEndpoint: `wss://cdp.lambdatest.com/playwright?capabilities=${encodeURIComponent(JSON.stringify(caps_firefox))}`
-},
-webkit: {
-wsEndpoint: `wss://cdp.lambdatest.com/playwright?capabilities=${encodeURIComponent(JSON.stringify(caps_webkit))}`
-}
-},
-browsers: ['chromium', 'firefox', 'webkit'],
+    connectOptions: {
+        chromium: {
+          wsEndpoint: `wss://cdp.lambdatest.com/playwright?capabilities=${encodeURIComponent(JSON.stringify(caps_chromium))}`
+        },
+        firefox: {
+          wsEndpoint: `wss://cdp.lambdatest.com/playwright?capabilities=${encodeURIComponent(JSON.stringify(caps_firefox))}`
+        },
+        webkit: {
+            wsEndpoint: `wss://cdp.lambdatest.com/playwright?capabilities=${encodeURIComponent(JSON.stringify(caps_webkit))}`
+        }
+      },
+      browsers: ['chromium', 'firefox', 'webkit'],
 }
 ```
 
@@ -232,9 +232,9 @@ npm install
 
 ```ts title="lambdatest-setup.ts"
 /**
-* Add the file in your test suite to run tests on LambdaTest.
-* Import `test` object from this file in the tests.
-*/
+ * Add the file in your test suite to run tests on LambdaTest.
+ * Import `test` object from this file in the tests.
+ */
 
 import * as base from "@playwright/test";
 import path from "path";
@@ -242,80 +242,80 @@ import { chromium } from "playwright";
 
 // LambdaTest capabilities
 const capabilities = {
-browserName: "Chrome", // Browsers allowed: `Chrome`, `MicrosoftEdge`, `pw-chromium`, `pw-firefox` and `pw-webkit`
-browserVersion: "latest",
-"LT:Options": {
-platform: "Windows 10",
-build: "Playwright TypeScript Build",
-name: "Playwright TypeScript Test",
-user: process.env.LT_USERNAME,
-accessKey: process.env.LT_ACCESS_KEY,
-network: true,
-video: true,
-console: true,
-tunnel: false, // Add tunnel configuration if testing locally hosted webpage
-tunnelName: "", // Optional
-geoLocation: '', // country code can be fetched from https://www.lambdatest.com/capabilities-generator/
-},
+  browserName: "Chrome", // Browsers allowed: `Chrome`, `MicrosoftEdge`, `pw-chromium`, `pw-firefox` and `pw-webkit`
+  browserVersion: "latest",
+  "LT:Options": {
+    platform: "Windows 10",
+    build: "Playwright TypeScript Build",
+    name: "Playwright TypeScript Test",
+    user: process.env.LT_USERNAME,
+    accessKey: process.env.LT_ACCESS_KEY,
+    network: true,
+    video: true,
+    console: true,
+    tunnel: false, // Add tunnel configuration if testing locally hosted webpage
+    tunnelName: "", // Optional
+    geoLocation: '', // country code can be fetched from https://www.lambdatest.com/capabilities-generator/
+  },
 };
 
 // Patching the capabilities dynamically according to the project name.
 const modifyCapabilities = (configName, testName) => {
-let config = configName.split("@lambdatest")[0];
-let [browserName, browserVersion, platform] = config.split(":");
-capabilities.browserName = browserName
-? browserName
-: capabilities.browserName;
-capabilities.browserVersion = browserVersion
-? browserVersion
-: capabilities.browserVersion;
-capabilities["LT:Options"]["platform"] = platform
-? platform
-: capabilities["LT:Options"]["platform"];
-capabilities["LT:Options"]["name"] = testName;
+  let config = configName.split("@lambdatest")[0];
+  let [browserName, browserVersion, platform] = config.split(":");
+  capabilities.browserName = browserName
+    ? browserName
+    : capabilities.browserName;
+  capabilities.browserVersion = browserVersion
+    ? browserVersion
+    : capabilities.browserVersion;
+  capabilities["LT:Options"]["platform"] = platform
+    ? platform
+    : capabilities["LT:Options"]["platform"];
+  capabilities["LT:Options"]["name"] = testName;
 };
 
 const getErrorMessage = (obj, keys) =>
-keys.reduce(
-(obj, key) => (typeof obj == "object" ? obj[key] : undefined),
-obj
-);
+  keys.reduce(
+    (obj, key) => (typeof obj == "object" ? obj[key] : undefined),
+    obj
+  );
 
 const test = base.test.extend({
-page: async ({ page, playwright }, use, testInfo) => {
-// Configure LambdaTest platform for cross-browser testing
-let fileName = testInfo.file.split(path.sep).pop();
-if (testInfo.project.name.match(/lambdatest/)) {
-modifyCapabilities(
-testInfo.project.name,
-`${testInfo.title} - ${fileName}`
-);
+  page: async ({ page, playwright }, use, testInfo) => {
+    // Configure LambdaTest platform for cross-browser testing
+    let fileName = testInfo.file.split(path.sep).pop();
+    if (testInfo.project.name.match(/lambdatest/)) {
+      modifyCapabilities(
+        testInfo.project.name,
+        `${testInfo.title} - ${fileName}`
+      );
 
-const browser = await chromium.connect({
-wsEndpoint: `wss://cdp.lambdatest.com/playwright?capabilities=${encodeURIComponent(
-JSON.stringify(capabilities)
-)}`,
-});
+      const browser = await chromium.connect({
+        wsEndpoint: `wss://cdp.lambdatest.com/playwright?capabilities=${encodeURIComponent(
+          JSON.stringify(capabilities)
+        )}`,
+      });
 
-const ltPage = await browser.newPage(testInfo.project.use);
-await use(ltPage);
+      const ltPage = await browser.newPage(testInfo.project.use);
+      await use(ltPage);
 
-const testStatus = {
-action: "setTestStatus",
-arguments: {
-status: testInfo.status,
-remark: getErrorMessage(testInfo, ["error", "message"]),
-},
-};
-await ltPage.evaluate(() => {},
-`lambdatest_action: ${JSON.stringify(testStatus)}`);
-await ltPage.close();
-await browser.close();
-} else {
-// Run tests in local in case of local config provided
-await use(page);
-}
-},
+      const testStatus = {
+        action: "setTestStatus",
+        arguments: {
+          status: testInfo.status,
+          remark: getErrorMessage(testInfo, ["error", "message"]),
+        },
+      };
+      await ltPage.evaluate(() => {},
+      `lambdatest_action: ${JSON.stringify(testStatus)}`);
+      await ltPage.close();
+      await browser.close();
+    } else {
+      // Run tests in local in case of local config provided
+      await use(page);
+    }
+  },
 });
 
 export default test;

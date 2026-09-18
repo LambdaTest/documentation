@@ -63,8 +63,8 @@ Now that we have set up our TestMu AI Authentication Credentials as System Envir
 - For **JUnit** & **TestNG**:
 
 ```
-lambdatestUserName = System.getenv("LT_USERNAME");
-lambdatestAccessKey = System.getenv("LT_ACCESS_KEY");
+  lambdatestUserName = System.getenv("LT_USERNAME");
+  lambdatestAccessKey = System.getenv("LT_ACCESS_KEY");
 ```
 
 ### Python
@@ -89,9 +89,9 @@ accessKey = process.env.LT_ACCESS_KEY,
 
 ```
 exports.config = {
-lambdatestUser: process.env.LT_USERNAME,
-lambdatestKey: process.env.LT_ACCESS_KEY
-}
+          lambdatestUser: process.env.LT_USERNAME,
+          lambdatestKey: process.env.LT_ACCESS_KEY
+        }
 ```
 
 ### Ruby
@@ -99,8 +99,8 @@ lambdatestKey: process.env.LT_ACCESS_KEY
 - For **RSpec**:
 
 ```
-username: ENV['LT_USERNAME'],
-accessKey: ENV['LT_ACCESS_KEY']
+        username: ENV['LT_USERNAME'],
+        accessKey: ENV['LT_ACCESS_KEY']
 ```
 
 ### C#
@@ -109,9 +109,9 @@ accessKey: ENV['LT_ACCESS_KEY']
 
 ```
 var lambdatestUserName =
-Environment.GetEnvironmentVariable("LT_USERNAME", EnvironmentVariableTarget.User);
+    Environment.GetEnvironmentVariable("LT_USERNAME", EnvironmentVariableTarget.User);
 var lambdatestAccessKey =
-Environment.GetEnvironmentVariable("LT_ACCESS_KEY", EnvironmentVariableTarget.User);
+    Environment.GetEnvironmentVariable("LT_ACCESS_KEY", EnvironmentVariableTarget.User);
 ```
 
 ### PHP

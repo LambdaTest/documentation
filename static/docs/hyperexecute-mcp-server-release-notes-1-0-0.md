@@ -49,22 +49,22 @@ http://mcp.lambdatest.com/hyperexecute?&username=[your-lt-username]&accessKey=[y
 
 ```json
 {
-"mcpServers": {
-"mcp-lambdatest-remote": {
-"disabled": false,
-"timeout": 60,
-"command": "npx",
-"args": [
-"mcp-remote@latest",
-"https://mcp.lambdatest.com/mcp",
-"--header",
-"username:<LT_USERNAME>",
-"--header",
-"accessKey:<LT_ACCESSKEY>"
-],
-"transportType": "streamableHTTP"
-}
-}
+  "mcpServers": {
+    "mcp-lambdatest-remote": {
+      "disabled": false,
+      "timeout": 60,
+      "command": "npx",
+      "args": [
+        "mcp-remote@latest",
+        "https://mcp.lambdatest.com/mcp",
+        "--header",
+        "username:<LT_USERNAME>",
+        "--header",
+        "accessKey:<LT_ACCESSKEY>"
+      ],
+      "transportType": "streamableHTTP"
+    }
+  }
 }
 ```
 
@@ -72,19 +72,19 @@ http://mcp.lambdatest.com/hyperexecute?&username=[your-lt-username]&accessKey=[y
 
 ```json
 {
-"mcpServers": {
-"mcp-lambdatest-stdio": {
-"disabled": false,
-"timeout": 100,
-"command": "npx",
-"args": ["-y", "mcp-lambdatest", "--transport=stdio"],
-"env": {
-"LT_USERNAME": "<LT_USERNAME>",
-"LT_ACCESS_KEY": "<LT_ACCESSKEY>"
-},
-"transportType": "stdio"
-}
-}
+  "mcpServers": {
+    "mcp-lambdatest-stdio": {
+      "disabled": false,
+      "timeout": 100,
+      "command": "npx",
+      "args": ["-y", "mcp-lambdatest", "--transport=stdio"],
+      "env": {
+        "LT_USERNAME": "<LT_USERNAME>",
+        "LT_ACCESS_KEY": "<LT_ACCESSKEY>"
+      },
+      "transportType": "stdio"
+    }
+  }
 }
 ```
 

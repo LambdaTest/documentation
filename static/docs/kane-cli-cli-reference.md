@@ -143,9 +143,9 @@ Submit feedback on a completed test run.
 
 ```bash
 kane-cli feedback \
---test-id <id> \
---feedback-type <positive|negative> \
---details "optional message"
+  --test-id <id> \
+  --feedback-type <positive|negative> \
+  --details "optional message"
 ```
 
 ## Exit Codes
@@ -230,10 +230,10 @@ Settings are stored at `~/.testmuai/kaneai/tui-config.json`. See [Configuration]
 │       │           └── screenshots/
 │       └── code-export/         # Generated code (when enabled)
 └── variables/                   # Global variable files
-└── *.json
+    └── *.json
 
 .testmuai/                       # Project-local (in cwd)
 ├── context.md                   # Project-specific agent context
 └── variables/
-└── *.json                   # Project-specific variables
+    └── *.json                   # Project-specific variables
 ```

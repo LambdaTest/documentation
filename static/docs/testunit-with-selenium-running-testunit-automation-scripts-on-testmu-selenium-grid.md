@@ -85,12 +85,12 @@ In the test script, update your test capabilities. This code passes browser, bro
 
 ```ruby
 caps = {
-:browserName => lt_browser,
-:browser_version => lt_browser_version,
-:platform_name =>  lt_os,
-:name =>  "UnitTest Sample Test",
-:build =>  "UnitTest Selenium Build"
-}
+			:browserName => lt_browser,
+			:browser_version => lt_browser_version,
+			:platform_name =>  lt_os,
+			:name =>  "UnitTest Sample Test",
+			:build =>  "UnitTest Selenium Build"
+		}
 ```
 
 **Capabilities Generator**

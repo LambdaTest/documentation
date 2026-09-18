@@ -23,34 +23,34 @@ For testing, you need to build a Flutter app and test suite. You can create Flut
 
 ```java title="SampleTest.java"
 package com.example.lambdatestSampleApp;
-import androidx.test.rule.SampleTestRule;
-import dev.flutter.plugins.integration_test.FlutterTestRunner;
-import org.junit.Rule;
-import org.junit.runner.RunWith;
-import com.example.lambdatestSampleApp.Sample;
-@RunWith(FlutterTestRunner.class)
-public class SampleTest {
-@Rule
-public SampleTestRule<Sample> rule = new SampleTestRule<>(Sample.class, true, false);
-}
+    import androidx.test.rule.SampleTestRule;
+    import dev.flutter.plugins.integration_test.FlutterTestRunner;
+    import org.junit.Rule;
+    import org.junit.runner.RunWith;
+    import com.example.lambdatestSampleApp.Sample;
+    @RunWith(FlutterTestRunner.class)
+    public class SampleTest {
+      @Rule
+      public SampleTestRule<Sample> rule = new SampleTestRule<>(Sample.class, true, false);
+    }
 ```
 
 - Update your application's `lambdatestSampleApp/android/app/build.gradle` file to use androidx's version of `AndroidJUnitRunner` and include the `androidx` libraries as dependencies.
 
 ```java title="build.gradle"
 android {
-...
-defaultConfig {
-...
-testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-}
-}
-dependencies {
-testImplementation 'junit:junit:4.12'
-androidTestImplementation 'androidx.test:runner:1.2.0'
-androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
-}
-```
+      ...
+      defaultConfig {
+        ...
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+      }
+    }
+    dependencies {
+        testImplementation 'junit:junit:4.12'
+        androidTestImplementation 'androidx.test:runner:1.2.0'
+        androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    }
+ ```
 
 - Use the following `Gradle` commands to build an instrumentation `test.apk` file(test suite) using the `Sample.java` created in the `androidTest` directory as mentioned in step 1.
 
@@ -130,12 +130,12 @@ curl --location --request POST 'https://mobile-api.lambdatest.com/framework/v1/f
 --header 'Authorization: Basic <Enter_Basic_Auth>' \
 --header 'Content-Type: application/json' \
 --data-raw '{
-"app" : "lt://APP_ID",
-"testSuite": "lt://TestSuite_ID",
-"device" :  ["Galaxy S21 5G-12"],
-"deviceLog": true,
-"network": false,
-"build" : "Sample-Flutter"
+    "app" : "lt://APP_ID",
+    "testSuite": "lt://TestSuite_ID",
+    "device" :  ["Galaxy S21 5G-12"],
+    "deviceLog": true,
+    "network": false,
+    "build" : "Sample-Flutter"
 }'
 ```
 
@@ -156,13 +156,13 @@ curl --location --request POST 'https://mobile-api.lambdatest.com/framework/v1/f
 --header 'Authorization: Basic <Enter_Basic_Auth>' \
 --header 'Content-Type: application/json' \
 --data-raw '{
-"app" : "app_id",
-"testSuite": "testsuite_id",
-"device" :  ["Galaxy S22 5G-12","Galaxy S24-14","Pixel 7-13","Galaxy S10+-10"],
-"queueTimeout": 10800,
-"testTimeout": 900,
-"deviceLog": true,
-"build" : "Sample-Flutter",
+    "app" : "app_id",
+    "testSuite": "testsuite_id",
+    "device" :  ["Galaxy S22 5G-12","Galaxy S24-14","Pixel 7-13","Galaxy S10+-10"],
+    "queueTimeout": 10800,
+    "testTimeout": 900,
+    "deviceLog": true,
+    "build" : "Sample-Flutter",
 }'
 ```
 
@@ -179,14 +179,14 @@ curl --location --request POST 'https://mobile-api.lambdatest.com/framework/v1/f
 --header 'Authorization: Basic <Enter_Basic_Auth>' \
 --header 'Content-Type: application/json' \
 --data-raw '{
-"app" : "app_id",
-"testSuite": "testsuite_id",
-"device" :  ["Galaxy S22 5G-12"]
-"queueTimeout": 10800,
-"testTimeout": 900,
-"deviceLog": true,
-"build" : "Sample-Flutter",
-"autoGrantPermissions" : true
+    "app" : "app_id",
+    "testSuite": "testsuite_id",
+    "device" :  ["Galaxy S22 5G-12"]
+    "queueTimeout": 10800,
+    "testTimeout": 900,
+    "deviceLog": true,
+    "build" : "Sample-Flutter",
+    "autoGrantPermissions" : true
 }'
 ```
 
@@ -200,8 +200,8 @@ The flutter-testing-skill package includes:
 flutter-testing-skill/
 ├── SKILL.md
 └── reference/
-├── playbook.md
-└── advanced-patterns.md
+    ├── playbook.md
+    └── advanced-patterns.md
 ```
 
 It provides structured guidance for:

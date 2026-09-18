@@ -126,26 +126,26 @@ curl --location --request POST 'https://mobile-api.lambdatest.com/framework/v1/x
 --header 'Authorization: Basic <Enter_Basic_Auth>' \
 --header 'Content-Type: application/json' \
 --data-raw '{
-"app" : "lt://APP_ID",
-"testSuite": "lt://TestSuite_ID",
-"device" :  ["iPhone 11-14"],
-"video" : true,
-"queueTimeout": 10800,
-"idleTimeout": 150,
-"devicelog": true,
-"network": false,
-"build" : "Proverbial-XCUITest",
-"language": "fr",
-"locale": "CA"
+    "app" : "lt://APP_ID",
+    "testSuite": "lt://TestSuite_ID",
+    "device" :  ["iPhone 11-14"],
+    "video" : true,
+    "queueTimeout": 10800,
+    "idleTimeout": 150,
+    "devicelog": true,
+    "network": false,
+    "build" : "Proverbial-XCUITest",
+    "language": "fr",
+    "locale": "CA"
 }'
 ```
 
 - When setting language or locale parameters, make sure your tests use the `ProcessInfo` object to pass these arguments correctly. This ensures the app launches with the specified language and locale settings.
 
 ```swift
-let app = XCUIApplication()
-app.launchArguments += ProcessInfo().arguments
-app.launch()
+   let app = XCUIApplication()
+   app.launchArguments += ProcessInfo().arguments
+   app.launch()
 ```
 -	The language and locale settings are applied at the app level.
 -	To ensure your application under test displays the correct localized strings, dates, times, and calendar formats, include both language and locale in your desired capabilities.

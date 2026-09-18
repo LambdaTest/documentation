@@ -63,7 +63,7 @@ Run the following command on the terminal to run the Pyppeteer tests in parallel
 
 ```
 pytest --verbose --capture=no -s -n 2 tests/test_pytest_pyppeteer_1.py \
-tests/test_pytest_pyppeteer_2.py
+    tests/test_pytest_pyppeteer_2.py
 ```
 
 ## View your Pyppeteer test results
@@ -83,12 +83,12 @@ Select the button below to try this demo in [Gitpod](https://www.gitpod.io/)
 ```
 eval $(gp env -e LT_USERNAME=******)
 eval $(gp env -e LT_ACCESS_KEY=******)
-```
+  ```
 
 * Click the following link if you're unsure how to [access your TestMu AI credentials.](/support/docs/using-environment-variables-for-authentication-credentials/). Also, if you start a new terminal in Gitpod, you have to run the following command to reset environment variables:
 
 ```
-eval $(gp env -e)
+ eval $(gp env -e)
 ```
 
 ## Using the Pytest Agent Skill with TestMu AI
@@ -101,8 +101,8 @@ The pytest-skill package includes:
 pytest-skill/
 ├── SKILL.md
 └── reference/
-├── playbook.md
-└── advanced-patterns.md
+    ├── playbook.md
+    └── advanced-patterns.md
 ```
 
 It provides structured guidance for:

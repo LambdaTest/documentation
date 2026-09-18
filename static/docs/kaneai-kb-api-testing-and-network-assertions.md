@@ -32,21 +32,21 @@ KaneAI supports all standard HTTP methods:
 
 ```bash
 curl -X GET "https://api.example.com/users/123" \
--H "Authorization: Bearer {{secret.api_token}}" \
--H "Content-Type: application/json"
+  -H "Authorization: Bearer {{secret.api_token}}" \
+  -H "Content-Type: application/json"
 ```
 
 ### Example: POST Request
 
 ```bash
 curl -X POST "https://api.example.com/users" \
--H "Authorization: Bearer {{secret.api_token}}" \
--H "Content-Type: application/json" \
--d '{
-"name": "John Doe",
-"email": "john@example.com",
-"role": "admin"
-}'
+  -H "Authorization: Bearer {{secret.api_token}}" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "name": "John Doe",
+    "email": "john@example.com",
+    "role": "admin"
+  }'
 ```
 
 ## API Response Variables

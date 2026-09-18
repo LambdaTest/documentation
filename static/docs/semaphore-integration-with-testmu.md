@@ -73,30 +73,30 @@ Here is a sample config file for integrating your TestMu AI account with your Se
 version: v1.0
 name: Run Protractor Test In LambdaTest
 agent:
-machine:
-type: e1-standard-2
-os_image: ubuntu1804
+  machine:
+    type: e1-standard-2
+    os_image: ubuntu1804
 execution_time_limit:
-hours: 3
+  hours: 3
 
 blocks:
-- name: Set Env Variables
-task:
-jobs:
-- name: NODE_ENV
-commands:
-- echo 'export LT_USERNAME="{your_lambdatest_username}"' >> ~/.bashrc
-- echo 'export LT_ACCESS_KEY="{your_lambda_access_key}"' >> ~/.bashrc
+  - name: Set Env Variables
+    task:
+      jobs:
+      - name: NODE_ENV
+        commands:
+          - echo 'export LT_USERNAME="{your_lambdatest_username}"' >> ~/.bashrc
+          - echo 'export LT_ACCESS_KEY="{your_lambda_access_key}"' >> ~/.bashrc
 
-- name: Run Tests
-task:
-jobs:
-- name: Run Protractor
-commands:
-- checkout
-- cd /home/semaphore/protractor-selenium-semaphore-sample
-- npm install
-- node node_modules/protractor/bin/protractor single.conf.js
+  - name: Run Tests
+    task:
+      jobs:
+      - name: Run Protractor
+        commands:
+          - checkout
+          - cd /home/semaphore/protractor-selenium-semaphore-sample
+          - npm install
+          - node node_modules/protractor/bin/protractor single.conf.js
 ```
 
 TestMu AI offers a Selenium [Desired Capabilities Generator](https://www.testmuai.com/capabilities-generator/) to fetch coded values for your desired test configurations.
@@ -114,15 +114,15 @@ Then Capabilities Generator at TestMu AI will provide you with the below program
 
 ```
 var capabilities = {
-"build" : "your build name", //You can edit this and assign a build name
-"name" : "your test name", // Assign a name to your Test
-"platform" : "Windows 8.1", // The operating system on which you want to test your website
-"browserName" : "Firefox", // The browser on which you want to test
-"version" : "62.0", // The browser version which you've selected to perform the test upon
-"resolution" : "1280x1024", // The resolution in which you want to run the test as per your operating system
-"selenium_version" : "3.11.0", //The version of Selenium on which the test will run
-"visual" : true,
-"firefox.driver" : v0.21.0
+    "build" : "your build name", //You can edit this and assign a build name
+    "name" : "your test name", // Assign a name to your Test
+    "platform" : "Windows 8.1", // The operating system on which you want to test your website
+    "browserName" : "Firefox", // The browser on which you want to test
+    "version" : "62.0", // The browser version which you've selected to perform the test upon
+    "resolution" : "1280x1024", // The resolution in which you want to run the test as per your operating system
+    "selenium_version" : "3.11.0", //The version of Selenium on which the test will run
+    "visual" : true,
+    "firefox.driver" : v0.21.0
 }
 ```
 
@@ -151,45 +151,45 @@ Now, let us take an example of Semaphore.yml for Lambda Tunnel.
 version: v1.0
 name: Run Protractor Test In LambdaTest
 agent:
-machine:
-type: e1-standard-2
-os_image: ubuntu1804
+  machine:
+    type: e1-standard-2
+    os_image: ubuntu1804
 execution_time_limit:
-hours: 3
+  hours: 3
 
 blocks:
-- name: Set Env Variables
-task:
-jobs:
-- name: NODE_ENV
-commands:
-- ls -al
-- echo 'export LT_USERNAME="<YOUR_LAMBDATEST_USERNAME>"' >> .bashrc
-- echo 'export LT_ACCESS_KEY="<YOUR_LAMBDATEST_ACCESS_KEY>"' >> .bashrc
+  - name: Set Env Variables
+    task:
+      jobs:
+      - name: NODE_ENV
+        commands:
+          - ls -al
+          - echo 'export LT_USERNAME="<YOUR_LAMBDATEST_USERNAME>"' >> .bashrc
+          - echo 'export LT_ACCESS_KEY="<YOUR_LAMBDATEST_ACCESS_KEY>"' >> .bashrc
 
-- name: Set Tunnel
-task:
-jobs:
-- name: Download and install tunnel
-commands:
-- checkout
-- cd /home/semaphore/protractor-selenium-semaphore-sample
-- wget https://downloads.lambdatest.com/tunnel/v3/linux/64bit/LT_Linux.zip
-#Extracting tunnel binary
-- sudo apt-get install unzip
-- unzip LT_Linux.zip
-#Executing tunnel library
-- ./LT -user ${LAMBDATEST_EMAIL} -key ${LAMBDATEST_KEY} & sleep 30
+  - name: Set Tunnel
+    task:
+      jobs:
+      - name: Download and install tunnel
+        commands:
+          - checkout
+          - cd /home/semaphore/protractor-selenium-semaphore-sample
+          - wget https://downloads.lambdatest.com/tunnel/v3/linux/64bit/LT_Linux.zip
+          #Extracting tunnel binary
+          - sudo apt-get install unzip
+          - unzip LT_Linux.zip
+          #Executing tunnel library
+          - ./LT -user ${LAMBDATEST_EMAIL} -key ${LAMBDATEST_KEY} & sleep 30
 
-- name: Run Tests
-task:
-jobs:
-- name: Run Protractor
-commands:
-- checkout
-- cd /home/semaphore/protractor-selenium-semaphore-sample
-- npm install
-- node node_modules/protractor/bin/protractor single.conf.js
+  - name: Run Tests
+    task:
+      jobs:
+      - name: Run Protractor
+        commands:
+          - checkout
+          - cd /home/semaphore/protractor-selenium-semaphore-sample
+          - npm install
+          - node node_modules/protractor/bin/protractor single.conf.js
 ```
 
 ## Parallel Testing

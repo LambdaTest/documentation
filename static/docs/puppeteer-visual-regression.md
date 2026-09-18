@@ -83,54 +83,54 @@ const puppeteer = require("puppeteer");
 const expect = require("chai").expect;
 
 (async () => {
-const capabilities = {
-browserName: "Chrome",
-browserVersion: "latest",
-"LT:Options": {
-platform: "Windows 10",
-build: "puppeteer-build-1",
-name: "My first Puppeteer test",
-resolution: "1366x768",
-user: process.env.LT_USERNAME || "Your Username",
-accessKey: process.env.LT_ACCESS_KEY || "Your Access Key",
-network: true,
-smartUIProjectName: "Testing Puppeteer Connection", // Add your SmartUI Project Name here
-smartUIBuildName: "My First Build", // Replace with your build name of choice here
-// smartUIBaseline: false, // (Optional) To set your current build as baseline to compare
-},
-};
+  const capabilities = {
+    browserName: "Chrome",
+    browserVersion: "latest",
+    "LT:Options": {
+      platform: "Windows 10",
+      build: "puppeteer-build-1",
+      name: "My first Puppeteer test",
+      resolution: "1366x768",
+      user: process.env.LT_USERNAME || "Your Username",
+      accessKey: process.env.LT_ACCESS_KEY || "Your Access Key",
+      network: true,
+      smartUIProjectName: "Testing Puppeteer Connection", // Add your SmartUI Project Name here
+      smartUIBuildName: "My First Build", // Replace with your build name of choice here
+      // smartUIBaseline: false, // (Optional) To set your current build as baseline to compare
+    },
+  };
 
-try {
-const browser = await puppeteer.connect({
-browserWSEndpoint: `wss://cdp.lambdatest.com/puppeteer?capabilities=${encodeURIComponent(
-JSON.stringify(capabilities)
-)}`,
-});
+  try {
+    const browser = await puppeteer.connect({
+      browserWSEndpoint: `wss://cdp.lambdatest.com/puppeteer?capabilities=${encodeURIComponent(
+        JSON.stringify(capabilities)
+      )}`,
+    });
 
-const page = await browser.newPage();
-await page.setViewport({
-width: 1024,
-height: 768,
-deviceScaleFactor: 1,
-});
-console.log("Navigating to LambdaTest");
-await page.goto("https://www.lambdatest.com/");
-await page.evaluate((_) => {},
-`lambdatest_action: ${JSON.stringify({ action: "smartui.takeScreenshot", arguments: { fullPage: true, screenshotName: "Navigating to LambdaTest" } })}`);
-console.log("Navigating to Pricing");
-await page.goto("https://www.lambdatest.com/pricing");
-await page.evaluate((_) => {},
-`lambdatest_action: ${JSON.stringify({ action: "smartui.takeScreenshot", arguments: { fullPage: true, screenshotName: "Navigating to Pricing" } })}`);
-console.log("Navigating to Automation");
+    const page = await browser.newPage();
+    await page.setViewport({
+      width: 1024,
+      height: 768,
+      deviceScaleFactor: 1,
+    });
+    console.log("Navigating to LambdaTest");
+    await page.goto("https://www.lambdatest.com/");
+    await page.evaluate((_) => {},
+    `lambdatest_action: ${JSON.stringify({ action: "smartui.takeScreenshot", arguments: { fullPage: true, screenshotName: "Navigating to LambdaTest" } })}`);
+    console.log("Navigating to Pricing");
+    await page.goto("https://www.lambdatest.com/pricing");
+    await page.evaluate((_) => {},
+    `lambdatest_action: ${JSON.stringify({ action: "smartui.takeScreenshot", arguments: { fullPage: true, screenshotName: "Navigating to Pricing" } })}`);
+    console.log("Navigating to Automation");
 
-await page.goto("https://www.lambdatest.com/automation-testing");
-await page.evaluate((_) => {},
-`lambdatest_action: ${JSON.stringify({ action: "smartui.takeScreenshot", arguments: { fullPage: true, screenshotName: "Navigating to Automation" } })}`);
-console.log("Closing browser");
-await browser.close();
-} catch (e) {
-console.log("Error - ", e);
-}
+    await page.goto("https://www.lambdatest.com/automation-testing");
+    await page.evaluate((_) => {},
+    `lambdatest_action: ${JSON.stringify({ action: "smartui.takeScreenshot", arguments: { fullPage: true, screenshotName: "Navigating to Automation" } })}`);
+    console.log("Closing browser");
+    await browser.close();
+  } catch (e) {
+    console.log("Error - ", e);
+  }
 })();
 ```
 

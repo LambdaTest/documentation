@@ -18,12 +18,12 @@ Add the `accessibility.captureScreenshot: true` capability to your test configur
 
 ```javascript
 'LT:Options': {
-"accessibility": true,
-"accessibility.wcagversion": "wcag21aa",
-"accessibility.bestPractice": true,
-"accessibility.needsReview": false,
-"accessibility.captureScreenshot": true,
-"accessibility.passedTestCases": false
+    "accessibility": true,
+    "accessibility.wcagversion": "wcag21aa",
+    "accessibility.bestPractice": true,
+    "accessibility.needsReview": false,
+    "accessibility.captureScreenshot": true,
+    "accessibility.passedTestCases": false
 }
 ```
 

@@ -16,13 +16,13 @@ Use this guide when **WebdriverIO** orchestrates **Appium** tests for Android or
 
 ```ts
 export const config = {
-capabilities: [{
-platformName: 'Android',
-'appium:deviceName': 'Pixel.*',
-'appium:app': 'lt://APP_ID',
-'accessibility': true,
-}],
-// host/user/key per your standard WDIO LambdaTest preset
+  capabilities: [{
+    platformName: 'Android',
+    'appium:deviceName': 'Pixel.*',
+    'appium:app': 'lt://APP_ID',
+    'accessibility': true,
+  }],
+  // host/user/key per your standard WDIO LambdaTest preset
 };
 ```
 

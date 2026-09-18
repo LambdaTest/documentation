@@ -15,19 +15,19 @@ Consider an SVG element on your page with a loading animation that spins using t
 
 ```javascript
 const freezeAnimations = () =>  {
-// Freeze all SVGs animated using animate and animateTransform tag
-// SVGs animated through CSS or JS will require custom solutions
-const allSVGs = document.getElementsByTagName('svg');
-let allSVGAnimations = [];
-for (let svg of allSVGs) {
-const svgAnimation = [...svg.getElementsByTagName('animate'), ...svg.getElementsByTagName('animateTransform')];
-allSVGAnimations = allSVGAnimations.concat(svgAnimation);
-}
+    // Freeze all SVGs animated using animate and animateTransform tag
+    // SVGs animated through CSS or JS will require custom solutions
+    const allSVGs = document.getElementsByTagName('svg');
+    let allSVGAnimations = [];
+    for (let svg of allSVGs) {
+        const svgAnimation = [...svg.getElementsByTagName('animate'), ...svg.getElementsByTagName('animateTransform')];
+        allSVGAnimations = allSVGAnimations.concat(svgAnimation);
+    }
 
-allSVGAnimations.forEach(animation => {
-const duration = animation.getAttribute('dur');
-animation.setAttribute('begin', '0s');
-animation.setAttribute('dur', '0s');
-});
+    allSVGAnimations.forEach(animation => {
+        const duration = animation.getAttribute('dur');
+        animation.setAttribute('begin', '0s');
+        animation.setAttribute('dur', '0s');
+    });
 }
 ```

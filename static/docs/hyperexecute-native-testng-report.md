@@ -19,9 +19,9 @@ In the HyperExecute YAML configuration, add the following section to instruct th
 ```yaml
 report: true
 partialReports:
-type: json
-location: <location_of_the_emailable-report.html_file>
-frameworkName: testng-native
+    type: json
+    location: <location_of_the_emailable-report.html_file>
+    frameworkName: testng-native
 ```
 
 - Set `report: true` to enable report generation.

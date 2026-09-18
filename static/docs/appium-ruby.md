@@ -147,54 +147,54 @@ An automation script for the sample application given above has been provided he
 require 'rubygems'
 require 'appium_lib'
 
-#highlight-next-line
-username= "username" #Add username here
-#highlight-next-line
-accessToken= "accesKey" #Add accessKey here
+        #highlight-next-line
+        username= "username" #Add username here
+        #highlight-next-line
+        accessToken= "accesKey" #Add accessKey here
 
-caps = {
-"LT:Options" => {
-:deviceName => "iPhone 13 Pro",
-:platformName => "iOS",
-:platformVersion => "15",
-:build => "Ruby Vanilla - iOS",
-:name => "Ruby iOS Test",
-:isRealMobile => true,
-#highlight-next-line
-:app => "YOUR_APP_URL", #Enter the App URL here
-:w3c => true,
-} }
+        caps = {
+          "LT:Options" => {
+                :deviceName => "iPhone 13 Pro",
+                :platformName => "iOS",
+                :platformVersion => "15",
+                :build => "Ruby Vanilla - iOS",
+                :name => "Ruby iOS Test",
+                :isRealMobile => true,
+                #highlight-next-line
+                :app => "YOUR_APP_URL", #Enter the App URL here
+                :w3c => true,
+        } }
 
-appium_driver = Appium::Driver.new({
-'caps' => caps,
-'appium_lib' => {
-:server_url => "http://"+username+":"+accessToken+"@mobile-hub.lambdatest.com/wd/hub"
-}}, true)
+        appium_driver = Appium::Driver.new({
+            'caps' => caps,
+            'appium_lib' => {
+                :server_url => "http://"+username+":"+accessToken+"@mobile-hub.lambdatest.com/wd/hub"
+            }}, true)
 
-driver = appium_driver.start_driver
+            driver = appium_driver.start_driver
 
-wait = Selenium::WebDriver::Wait.new(:timeout => 30)
+            wait = Selenium::WebDriver::Wait.new(:timeout => 30)
 
-el1 = driver.find_element(:id, "color")
-el1.click
-el2 = driver.find_element(:id, "geoLocation")
-el2.click
-sleep(5)
-driver.back
-el3 = driver.find_element(:id, "Text")
-el3.click
-el4 = driver.find_element(:id, "notification")
-el4.click
-el5 = driver.find_element(:id, "Toast")
-el5.click
-el6 = driver.find_element(:id, "speedTest")
-el6.click
-sleep(10)
-driver.back
+            el1 = driver.find_element(:id, "color")
+            el1.click
+            el2 = driver.find_element(:id, "geoLocation")
+            el2.click
+            sleep(5)
+            driver.back
+            el3 = driver.find_element(:id, "Text")
+            el3.click
+            el4 = driver.find_element(:id, "notification")
+            el4.click
+            el5 = driver.find_element(:id, "Toast")
+            el5.click
+            el6 = driver.find_element(:id, "speedTest")
+            el6.click
+            sleep(10)
+            driver.back
 
-puts "Found results - Test Passed"
+            puts "Found results - Test Passed"
 
-driver.quit
+            driver.quit
 ```
 
 - You must set **isRealMobile** capability to `False` in the config file to run on **Virtual Devices**
@@ -203,52 +203,52 @@ driver.quit
 require 'rubygems'
 require 'appium_lib'
 
-#highlight-next-line
-username= "username" #Add username here
-#highlight-next-line
-accessToken= "accesKey" #Add accessKey here
+        #highlight-next-line
+        username= "username" #Add username here
+        #highlight-next-line
+        accessToken= "accesKey" #Add accessKey here
 
-caps = {
-"LT:Options" => {
-:deviceName => "OnePlus 7",
-:platformName => "Android",
-:platformVersion => "9",
-:build => "Ruby Vanilla - Android",
-:name => "Ruby Android Test",
-:isRealMobile => true,
-#highlight-next-line
-:app => "YOUR_APP_URL", #Enter the App URL here
-:w3c => true,
-} }
+        caps = {
+           "LT:Options" => {
+            :deviceName => "OnePlus 7",
+            :platformName => "Android",
+            :platformVersion => "9",
+            :build => "Ruby Vanilla - Android",
+            :name => "Ruby Android Test",
+            :isRealMobile => true,
+            #highlight-next-line
+            :app => "YOUR_APP_URL", #Enter the App URL here
+            :w3c => true,
+        } }
 
-appium_driver = Appium::Driver.new({
-'caps' => caps,
-'appium_lib' => {
-:server_url => "http://"+username+":"+accessToken+"@mobile-hub.lambdatest.com/wd/hub"
-}}, true)
+        appium_driver = Appium::Driver.new({
+            'caps' => caps,
+            'appium_lib' => {
+               :server_url => "http://"+username+":"+accessToken+"@mobile-hub.lambdatest.com/wd/hub"
+            }}, true)
 
-driver = appium_driver.start_driver
+            driver = appium_driver.start_driver
 
-wait = Selenium::WebDriver::Wait.new(:timeout => 30)
-el1 = driver.find_element(:id, "com.lambdatest.proverbial:id/color")
-el1.click
-el2 = driver.find_element(:id, "com.lambdatest.proverbial:id/geoLocation")
-el2.click
-sleep(5)
-driver.back
-el3 = driver.find_element(:id, "com.lambdatest.proverbial:id/Text")
-el3.click
-el4 = driver.find_element(:id, "com.lambdatest.proverbial:id/notification")
-el4.click
-el5 = driver.find_element(:id, "com.lambdatest.proverbial:id/toast")
-el5.click
-el6 = driver.find_element(:id, "com.lambdatest.proverbial:id/speedTest")
-el6.click
-sleep(10)
-driver.back
-puts "Found results - Test Passed"
+            wait = Selenium::WebDriver::Wait.new(:timeout => 30)
+            el1 = driver.find_element(:id, "com.lambdatest.proverbial:id/color")
+            el1.click
+            el2 = driver.find_element(:id, "com.lambdatest.proverbial:id/geoLocation")
+            el2.click
+            sleep(5)
+            driver.back
+            el3 = driver.find_element(:id, "com.lambdatest.proverbial:id/Text")
+            el3.click
+            el4 = driver.find_element(:id, "com.lambdatest.proverbial:id/notification")
+            el4.click
+            el5 = driver.find_element(:id, "com.lambdatest.proverbial:id/toast")
+            el5.click
+            el6 = driver.find_element(:id, "com.lambdatest.proverbial:id/speedTest")
+            el6.click
+            sleep(10)
+            driver.back
+            puts "Found results - Test Passed"
 
-driver.quit
+            driver.quit
 ```
 
 ### Step 5: Configure the Test Capabilities
@@ -258,33 +258,33 @@ You can update your custom capabilities in test scripts. In this sample project,
 The capabilities object in the sample code are defined as:
 
 ```ruby title="iOS(.ipa)"
-caps = {
-"LT:Options" => {
-:deviceName => "iPhone 13 Pro",
-:platformName => "iOS",
-:platformVersion => "15",
-:build => "Ruby Vanilla - iOS",
-:name => "Ruby iOS Test",
-:isRealMobile => true,
-#highlight-next-line
-:app => "YOUR_APP_URL", #Enter the App (.ipa) URL here
-:w3c => true,
-} }
+ caps = {
+            "LT:Options" => {
+                :deviceName => "iPhone 13 Pro",
+                :platformName => "iOS",
+                :platformVersion => "15",
+                :build => "Ruby Vanilla - iOS",
+                :name => "Ruby iOS Test",
+                :isRealMobile => true,
+                #highlight-next-line
+                :app => "YOUR_APP_URL", #Enter the App (.ipa) URL here
+                :w3c => true,
+        } }
 ```
 
 ```ruby title="Android(.apk)"
 caps = {
-"LT:Options" => {
-:deviceName => "OnePlus 7",
-:platformName => "Android",
-:platformVersion => "9",
-:build => "Ruby Vanilla - Android",
-:name => "Ruby Android Test",
-:isRealMobile => true,
-#highlight-next-line
-:app => "YOUR_APP_URL", #Enter the App (.apk) URL here
-:w3c => true,
-} }
+            "LT:Options" => {
+            :deviceName => "OnePlus 7",
+                :platformName => "Android",
+                :platformVersion => "9",
+                :build => "Ruby Vanilla - Android",
+                :name => "Ruby Android Test",
+                :isRealMobile => true,
+                #highlight-next-line
+                :app => "YOUR_APP_URL", #Enter the App (.apk) URL here
+                :w3c => true,
+        } }
 ```
 
 > In case you're using capabilities generated using the JSON Wire Protocol, then it's recommended to use ```appium_lib``` version ```10.6.0```. Run ```gem install appium_lib -v 10.6.0``` command to install it.
@@ -364,8 +364,8 @@ The appium-skill package includes:
 appium-skill/
 ├── SKILL.md
 └── reference/
-├── playbook.md
-└── advanced-patterns.md
+    ├── playbook.md
+    └── advanced-patterns.md
 ```
 
 It provides structured guidance for:

@@ -20,10 +20,10 @@ The feature is exposed via `driver.execute_script` using the `lambda_executor` i
 
 ```python
 driver.execute_script('lambda_executor: {
-"action": "buttonTextClick",
-"arguments": {
-"label": "Continue"
-}
+  "action": "buttonTextClick",
+  "arguments": {
+    "label": "Continue"
+  }
 }')
 ```
 
@@ -55,15 +55,15 @@ driver.execute_script('lambda_executor: {
 
 ```python
 driver.execute_script('lambda_executor: {
-"action": "buttonTextClick",
-"arguments": {
-"label": "Pay Now",
-"timeout": 0,
-"matchMode": "contain",
-"ignoreCase": true,
-"ignoreSpaces": true,
-"index": 0
-}
+  "action": "buttonTextClick",
+  "arguments": {
+    "label": "Pay Now",
+    "timeout": 0,
+    "matchMode": "contain",
+    "ignoreCase": true,
+    "ignoreSpaces": true,
+    "index": 0
+  }
 }')
 ```
 

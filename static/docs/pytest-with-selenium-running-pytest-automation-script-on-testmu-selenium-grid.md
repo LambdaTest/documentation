@@ -64,10 +64,10 @@ In the `conftest.py` file, update your test capabilities. This code passes brows
 
 ```python
 capabilities = {
-"build": "Sample PY Build",
-"platformName": "Windows 11",
-"browserName": "Chrome",
-"browserVersion": "latest",
+        "build": "Sample PY Build",
+        "platformName": "Windows 11",
+        "browserName": "Chrome",
+        "browserVersion": "latest",
 }
 ```
 

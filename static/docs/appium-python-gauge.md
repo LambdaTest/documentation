@@ -55,39 +55,39 @@ from step_impl.utils.driver import Driver
 
 @step("changes color to pink")
 def change_color():
-colorElement = WebDriverWait(Driver.driver, 20).until(EC.element_to_be_clickable(
-(MobileBy.ID, "com.lambdatest.proverbial:id/color")))
-colorElement.click()
+  colorElement = WebDriverWait(Driver.driver, 20).until(EC.element_to_be_clickable(
+            (MobileBy.ID, "com.lambdatest.proverbial:id/color")))
+  colorElement.click()
 
 @step("changes the text to Proverbial")
 def chnage_text():
-textElement = WebDriverWait(Driver.driver, 20).until(
-EC.element_to_be_clickable((MobileBy.ID, "com.lambdatest.proverbial:id/Text")))
-textElement.click()
+    textElement = WebDriverWait(Driver.driver, 20).until(
+            EC.element_to_be_clickable((MobileBy.ID, "com.lambdatest.proverbial:id/Text")))
+    textElement.click()
 
 @step("toast will be visible")
 def toast_visible():
-toastElement = WebDriverWait(Driver.driver, 20).until(EC.element_to_be_clickable(
-(MobileBy.ID, "com.lambdatest.proverbial:id/toast")))
-toastElement.click()
+    toastElement = WebDriverWait(Driver.driver, 20).until(EC.element_to_be_clickable(
+            (MobileBy.ID, "com.lambdatest.proverbial:id/toast")))
+    toastElement.click()
 
 @step("notification will be visible")
 def notification():
-notification = WebDriverWait(Driver.driver, 20).until(EC.element_to_be_clickable(
-(MobileBy.ID, "com.lambdatest.proverbial:id/notification")))
-notification.click()
+  notification = WebDriverWait(Driver.driver, 20).until(EC.element_to_be_clickable(
+            (MobileBy.ID, "com.lambdatest.proverbial:id/notification")))
+  notification.click()
 
 @step("perform the speed test")
 def speedTest():
-speedTest = WebDriverWait(Driver.driver, 20).until(EC.element_to_be_clickable(
-(MobileBy.ID, "com.lambdatest.proverbial:id/speedTest")))
-speedTest.click()
+  speedTest = WebDriverWait(Driver.driver, 20).until(EC.element_to_be_clickable(
+            (MobileBy.ID, "com.lambdatest.proverbial:id/speedTest")))
+  speedTest.click()
 
 @step("back to home")
 def home():
-home = WebDriverWait(Driver.driver, 20).until(EC.element_to_be_clickable(
-(MobileBy.ID, "com.lambdatest.proverbial:id/buttonPage")))
-home.click()
+  home = WebDriverWait(Driver.driver, 20).until(EC.element_to_be_clickable(
+            (MobileBy.ID, "com.lambdatest.proverbial:id/buttonPage")))
+  home.click()
 ```
 
 ### Step 5: Configure the Test Capabilities
@@ -142,8 +142,8 @@ The gauge-skill package includes:
 gauge-skill/
 ├── SKILL.md
 └── reference/
-├── playbook.md
-└── advanced-patterns.md
+    ├── playbook.md
+    └── advanced-patterns.md
 ```
 
 It provides structured guidance for:

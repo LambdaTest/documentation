@@ -47,9 +47,9 @@ Rendered first, before any actions. The line list below is what `--plan` and the
 
 ```
 changeset: 3 item(s)
-[MODIFY] uc-manage-the-cart — updated: title, criteria
-[ADD] uc-save-cart-for-later
-[ARCHIVE] uc-legacy-flow — evidence decayed: no quote from the source relocates into the new text, no other live source, no fresh evidence this run
+  [MODIFY] uc-manage-the-cart — updated: title, criteria
+  [ADD] uc-save-cart-for-later
+  [ARCHIVE] uc-legacy-flow — evidence decayed: no quote from the source relocates into the new text, no other live source, no fresh evidence this run
 ```
 
 - **MODIFY** — the re-extract matched an existing use-case whose content moved. Each MODIFY knows *why*: a content change in the source, or a structural break the change caused.

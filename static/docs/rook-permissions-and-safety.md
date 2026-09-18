@@ -50,8 +50,8 @@ These flags solve different problems:
 
 ```bash
 rook explore . \
---allow 'bash(npm test)' \
---allow 'bash(git *)@explore'
+  --allow 'bash(npm test)' \
+  --allow 'bash(git *)@explore'
 
 rook run --yes
 ```

@@ -46,15 +46,15 @@ Once, the `URLs` file will be created, you will be seeing the sample pre-filled 
 
 ```json title="/smartui-cli-project/urls.json"
 [
-{
-"name": "lambdatest-home-page",
-"url": "https://www.testmuai.com",
-"waitForTimeout": 1000 //Optional
-},
-{
-"name": "example-page",
-"url": "https://example.com/"
-}
+  {
+    "name": "lambdatest-home-page",
+    "url": "https://www.testmuai.com",
+    "waitForTimeout": 1000 //Optional
+  },
+  {
+    "name": "example-page",
+    "url": "https://example.com/"
+  }
 ]
 
 ```
@@ -91,33 +91,33 @@ Once, the configuration file will be created, you will be seeing the default con
 
 ```json title="/smartui-sdk-project/.smartui.json"
 {
-"web": {
-"browsers": [
-"chrome",
-"firefox",
-"safari",
-"edge"
-],
-"viewports": [
-[
-1920
-],
-[
-1366
-],
-[
-1028
-]
-] // Full Page screenshots are captured by default for web viewports
-},
-"mobile": {
-"devices": [
-"iPhone 14",  //iPhone 14 viewport
-"Galaxy S24"  //Galaxy S24 viewport
-],
-"fullPage": true, //Full Page is true by default for mobile viewports
-"orientation": "portrait" //Change to "landscape" for landscape snapshot
-}
+  "web": {
+    "browsers": [
+      "chrome",
+      "firefox",
+      "safari",
+      "edge"
+    ],
+    "viewports": [
+      [
+        1920
+      ],
+      [
+        1366
+      ],
+      [
+        1028
+      ]
+    ] // Full Page screenshots are captured by default for web viewports
+  },
+  "mobile": {
+    "devices": [
+      "iPhone 14",  //iPhone 14 viewport
+      "Galaxy S24"  //Galaxy S24 viewport
+    ],
+    "fullPage": true, //Full Page is true by default for mobile viewports
+    "orientation": "portrait" //Change to "landscape" for landscape snapshot
+  }
 }
 ```
 
@@ -126,20 +126,20 @@ Once, the configuration file will be created, you will be seeing the default con
 To capture a screenshot of the content currently visible in your viewport, rather than the entire page, it's important to define the viewport's width and height in your configuration settings. Specify the desired width and height parameters as demonstrated in the following example to ensure that the screenshot encompasses only the viewport area.
 
 ```json
-"viewports": [
-[
-1920,
-1080
-],
-[
-1366,
-768
-],
-[
-360,
-640
-]
-],
+    "viewports": [
+      [
+        1920,
+        1080
+      ],
+      [
+        1366,
+        768
+      ],
+      [
+        360,
+        640
+      ]
+    ],
 ```
 
 You may use the `smartui --help` command in case you are facing issues during the execution of SmartUI commands in the CLI.
@@ -206,13 +206,13 @@ Example usage in a configuration:
 
 ```json
 {
-"name": "Example Page",
-"url": "https://example.com/",
-"waitForTimeout": 3000,
-"execute": {
-"afterNavigation": "await page.waitForSelector('.loading', { hidden: true })",
-"beforeSnapshot": "document.querySelector('.cookie-banner').click()"
-}
+  "name": "Example Page",
+  "url": "https://example.com/",
+  "waitForTimeout": 3000,
+  "execute": {
+    "afterNavigation": "await page.waitForSelector('.loading', { hidden: true })",
+    "beforeSnapshot": "document.querySelector('.cookie-banner').click()"
+  }
 }
 ```
 
@@ -256,11 +256,11 @@ If you are using the Continuous Integration (CI) pipeline for your application a
 
 ```yaml
 steps:
-- name: Running SmartUI CLI Tests
-run: |
-npm install -g @lambdatest/smartui-cli
-npx playwright install-deps
-smartui capture urls.json --config smartui-web.json
+  - name: Running SmartUI CLI Tests
+    run: |
+      npm install -g @lambdatest/smartui-cli
+      npx playwright install-deps
+      smartui capture urls.json --config smartui-web.json
 ```
 
 ## SmartUI CLI Options and Keys

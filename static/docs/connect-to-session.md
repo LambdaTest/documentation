@@ -42,15 +42,15 @@ const client = new Browser();
 
 // 1. Create a cloud session
 const session = await client.sessions.create({
-adapter: 'puppeteer',
-lambdatestOptions: {
-build: 'My Agent',
-name: 'Puppeteer Session',
-'LT:Options': {
-username: process.env.LT_USERNAME,
-accessKey: process.env.LT_ACCESS_KEY,
-}
-}
+    adapter: 'puppeteer',
+    lambdatestOptions: {
+        build: 'My Agent',
+        name: 'Puppeteer Session',
+        'LT:Options': {
+            username: process.env.LT_USERNAME,
+            accessKey: process.env.LT_ACCESS_KEY,
+        }
+    }
 });
 
 // 2. Connect - returns a standard Puppeteer Browser object
@@ -84,15 +84,15 @@ import { Browser } from '@testmuai/browser-cloud';
 const client = new Browser();
 
 const session = await client.sessions.create({
-adapter: 'playwright',
-lambdatestOptions: {
-build: 'My Agent',
-name: 'Playwright Session',
-'LT:Options': {
-username: process.env.LT_USERNAME,
-accessKey: process.env.LT_ACCESS_KEY,
-}
-}
+    adapter: 'playwright',
+    lambdatestOptions: {
+        build: 'My Agent',
+        name: 'Playwright Session',
+        'LT:Options': {
+            username: process.env.LT_USERNAME,
+            accessKey: process.env.LT_ACCESS_KEY,
+        }
+    }
 });
 
 // Returns browser, context, AND page - all three ready to use
@@ -122,15 +122,15 @@ import { Browser } from '@testmuai/browser-cloud';
 const client = new Browser();
 
 const session = await client.sessions.create({
-adapter: 'selenium',
-lambdatestOptions: {
-build: 'My Agent',
-name: 'Selenium Session',
-'LT:Options': {
-username: process.env.LT_USERNAME,
-accessKey: process.env.LT_ACCESS_KEY,
-}
-}
+    adapter: 'selenium',
+    lambdatestOptions: {
+        build: 'My Agent',
+        name: 'Selenium Session',
+        'LT:Options': {
+            username: process.env.LT_USERNAME,
+            accessKey: process.env.LT_ACCESS_KEY,
+        }
+    }
 });
 
 // Returns a standard Selenium WebDriver
@@ -190,15 +190,15 @@ The Selenium adapter **ignores** `session.websocketUrl` and builds its own conne
 
 ```typescript
 const session = await client.sessions.create({
-adapter: 'puppeteer',   // or 'playwright' or 'selenium'
-stealthConfig: {                   // Anti-bot detection
-humanizeInteractions: true,
-randomizeUserAgent: true,
-},
-profileId: 'my-app-login',         // Persist auth state
-tunnel: true,                      // Access localhost
-timeout: 600000,                   // 10-minute timeout
-lambdatestOptions: { ... }
+    adapter: 'puppeteer',   // or 'playwright' or 'selenium'
+    stealthConfig: {                   // Anti-bot detection
+        humanizeInteractions: true,
+        randomizeUserAgent: true,
+    },
+    profileId: 'my-app-login',         // Persist auth state
+    tunnel: true,                      // Access localhost
+    timeout: 600000,                   // 10-minute timeout
+    lambdatestOptions: { ... }
 });
 ```
 
@@ -213,71 +213,32 @@ import { Browser } from '@testmuai/browser-cloud';
 const client = new Browser();
 
 async function main() {
-const session = await client.sessions.create({
-adapter: 'puppeteer',
-lambdatestOptions: {
-build: 'Agent Scripts',
-name: 'Scrape Example',
-'LT:Options': {
-username: process.env.LT_USERNAME,
-accessKey: process.env.LT_ACCESS_KEY,
-}
-}
-});
+    const session = await client.sessions.create({
+        adapter: 'puppeteer',
+        lambdatestOptions: {
+            build: 'Agent Scripts',
+            name: 'Scrape Example',
+            'LT:Options': {
+                username: process.env.LT_USERNAME,
+                accessKey: process.env.LT_ACCESS_KEY,
+            }
+        }
+    });
 
-console.log(`View session: ${session.sessionViewerUrl}`);
+    console.log(`View session: ${session.sessionViewerUrl}`);
 
-try {
-const browser = await client.puppeteer.connect(session);
-const page = (await browser.pages())[0];
+    try {
+        const browser = await client.puppeteer.connect(session);
+        const page = (await browser.pages())[0];
 
-await page.goto('https://news.ycombinator.com');
-const title = await page.title();
-console.log('Page title:', title);
+        await page.goto('https://news.ycombinator.com');
+        const title = await page.title();
+        console.log('Page title:', title);
 
-await browser.close();
-} finally {
-await client.sessions.release(session.id);
-}
-}
-
-main().catch(console.error);
-```
-
-A complete script that creates a session, scrapes a page title, and cleans up
-with proper error handling:
-
-```typescript
-import { Browser } from '@testmuai/browser-cloud';
-
-const client = new Browser();
-
-async function main() {
-const session = await client.sessions.create({
-adapter: 'playwright',
-lambdatestOptions: {
-build: 'Agent Scripts',
-name: 'Scrape Example',
-'LT:Options': {
-username: process.env.LT_USERNAME,
-accessKey: process.env.LT_ACCESS_KEY,
-}
-}
-});
-
-console.log(`View session: ${session.sessionViewerUrl}`);
-
-try {
-const { browser, context, page } = await client.playwright.connect(session);
-
-await page.goto('https://news.ycombinator.com');
-const title = await page.title();
-console.log('Page title:', title);
-
-await browser.close();
-} finally {
-await client.sessions.release(session.id);
-}
+        await browser.close();
+    } finally {
+        await client.sessions.release(session.id);
+    }
 }
 
 main().catch(console.error);
@@ -292,31 +253,70 @@ import { Browser } from '@testmuai/browser-cloud';
 const client = new Browser();
 
 async function main() {
-const session = await client.sessions.create({
-adapter: 'selenium',
-lambdatestOptions: {
-build: 'Agent Scripts',
-name: 'Scrape Example',
-'LT:Options': {
-username: process.env.LT_USERNAME,
-accessKey: process.env.LT_ACCESS_KEY,
+    const session = await client.sessions.create({
+        adapter: 'playwright',
+        lambdatestOptions: {
+            build: 'Agent Scripts',
+            name: 'Scrape Example',
+            'LT:Options': {
+                username: process.env.LT_USERNAME,
+                accessKey: process.env.LT_ACCESS_KEY,
+            }
+        }
+    });
+
+    console.log(`View session: ${session.sessionViewerUrl}`);
+
+    try {
+        const { browser, context, page } = await client.playwright.connect(session);
+
+        await page.goto('https://news.ycombinator.com');
+        const title = await page.title();
+        console.log('Page title:', title);
+
+        await browser.close();
+    } finally {
+        await client.sessions.release(session.id);
+    }
 }
-}
-});
 
-console.log(`View session: ${session.sessionViewerUrl}`);
+main().catch(console.error);
+```
 
-try {
-const driver = await client.selenium.connect(session);
+A complete script that creates a session, scrapes a page title, and cleans up
+with proper error handling:
 
-await driver.get('https://news.ycombinator.com');
-const title = await driver.getTitle();
-console.log('Page title:', title);
+```typescript
+import { Browser } from '@testmuai/browser-cloud';
 
-await driver.quit();
-} finally {
-await client.sessions.release(session.id);
-}
+const client = new Browser();
+
+async function main() {
+    const session = await client.sessions.create({
+        adapter: 'selenium',
+        lambdatestOptions: {
+            build: 'Agent Scripts',
+            name: 'Scrape Example',
+            'LT:Options': {
+                username: process.env.LT_USERNAME,
+                accessKey: process.env.LT_ACCESS_KEY,
+            }
+        }
+    });
+
+    console.log(`View session: ${session.sessionViewerUrl}`);
+
+    try {
+        const driver = await client.selenium.connect(session);
+
+        await driver.get('https://news.ycombinator.com');
+        const title = await driver.getTitle();
+        console.log('Page title:', title);
+
+        await driver.quit();
+    } finally {
+        await client.sessions.release(session.id);
+    }
 }
 
 main().catch(console.error);

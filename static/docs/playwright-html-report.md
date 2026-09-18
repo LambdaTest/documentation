@@ -15,9 +15,9 @@ In your Playwright configuration file `playwright.config.js`, add the following 
 import { devices } from '@playwright/test';
 
 const config = {
-...//
-reporter: [['html', { open: 'never' }]],
-...//
+  ...//
+  reporter: [['html', { open: 'never' }]],
+  ...//
 };
 ```
 
@@ -31,9 +31,9 @@ In your HyperExecute YAML configuration, define the [`report`](/support/docs/dee
 ```yaml title="hyperexecute.yaml"
 report: true
 partialReports:
-frameworkName: playwright
-location: playwright-report
-type: html
+  frameworkName: playwright
+  location: playwright-report
+  type: html
 ```
 
 ### Step 3: Execute Your Tests

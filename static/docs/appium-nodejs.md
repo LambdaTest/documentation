@@ -111,91 +111,91 @@ var wd = require("wd");
 var assert = require("assert");
 var asserter = wd.asserters;
 username =
-process.env.LT_USERNAME == undefined
-//highlight-next-line
-? "username" //Enter the username here
-: process.env.LT_USERNAME;
+  process.env.LT_USERNAME == undefined
+    //highlight-next-line
+    ? "username" //Enter the username here
+    : process.env.LT_USERNAME;
 accesskey =
-process.env.LT_ACCESS_KEY == undefined
-//highlight-next-line
-? "access_key" //Enter the access_key here
-: process.env.LT_ACCESS_KEY;
+  process.env.LT_ACCESS_KEY == undefined
+    //highlight-next-line
+    ? "access_key" //Enter the access_key here
+    : process.env.LT_ACCESS_KEY;
 
 desired_capabilities = {
-deviceName: "iPhone 12",
-platformVersion: "14",
-platformName: "iOS",
-isRealMobile: true,
-//highlight-next-line
-app: "APP_URL", //Enter the app (.ipa) url
-visual: true,
-video: true,
-build: "NodeJS Vanilla - iOS",
-name: "Sample Test - NodeJS",
+  deviceName: "iPhone 12",
+  platformVersion: "14",
+  platformName: "iOS",
+  isRealMobile: true,
+  //highlight-next-line
+  app: "APP_URL", //Enter the app (.ipa) url
+  visual: true,
+  video: true,
+  build: "NodeJS Vanilla - iOS",
+  name: "Sample Test - NodeJS",
 };
 
 driver = wd.promiseRemote(
-`https://${username}:${accesskey}@mobile-hub.lambdatest.com/wd/hub`
+  `https://${username}:${accesskey}@mobile-hub.lambdatest.com/wd/hub`
 );
 
 async function iOStest() {
-try {
-driver
-.init(desired_capabilities)
-.then(function () {
-return driver.waitForElementById("color", 10000);
-})
-.then(function (color) {
-return color.click();
-})
-.then(function () {
-return driver.waitForElementById("Text", 10000);
-})
-.then(function (text) {
-text.click();
-return driver.waitForElementById("toast", 10000);
-})
-.then(function (toast) {
-toast.click();
-return driver.waitForElementById("notification", 10000);
-})
-.then(function (notification) {
-notification.click();
-return driver.waitForElementById("geoLocation", 10000);
-})
-.then(function (geoLocation) {
-return geoLocation.click();
-})
-.then(async function () {
-return driver.waitForElementById("Back", 10000);
-})
-.then(function (Back) {
-Back.click();
-return driver.waitForElementById("speedTest", 10000);
-})
-.then(async function (speedTest) {
-speedTest.click();
-return driver.waitForElementById("Back", 10000);
-})
-.then(function (back) {
-back.click();
-return driver.waitForElementById("Browser", 10000);
-})
-.then(function (Browser) {
-Browser.click();
-return driver.waitForElementById("url", 10000);
-})
-.then(function (url) {
-url.type("https://www.lambdatest.com");
-return driver.waitForElementById("find", 10000);
-})
-.then(function (find) {
-find.click();
-driver.quit();
-});
-} catch (e) {
-driver.quit();
-}
+  try {
+    driver
+      .init(desired_capabilities)
+      .then(function () {
+        return driver.waitForElementById("color", 10000);
+      })
+      .then(function (color) {
+        return color.click();
+      })
+      .then(function () {
+        return driver.waitForElementById("Text", 10000);
+      })
+      .then(function (text) {
+        text.click();
+        return driver.waitForElementById("toast", 10000);
+      })
+      .then(function (toast) {
+        toast.click();
+        return driver.waitForElementById("notification", 10000);
+      })
+      .then(function (notification) {
+        notification.click();
+        return driver.waitForElementById("geoLocation", 10000);
+      })
+      .then(function (geoLocation) {
+        return geoLocation.click();
+      })
+      .then(async function () {
+        return driver.waitForElementById("Back", 10000);
+      })
+      .then(function (Back) {
+        Back.click();
+        return driver.waitForElementById("speedTest", 10000);
+      })
+      .then(async function (speedTest) {
+        speedTest.click();
+        return driver.waitForElementById("Back", 10000);
+      })
+      .then(function (back) {
+        back.click();
+        return driver.waitForElementById("Browser", 10000);
+      })
+      .then(function (Browser) {
+        Browser.click();
+        return driver.waitForElementById("url", 10000);
+      })
+      .then(function (url) {
+        url.type("https://www.lambdatest.com");
+        return driver.waitForElementById("find", 10000);
+      })
+      .then(function (find) {
+        find.click();
+        driver.quit();
+      });
+  } catch (e) {
+    driver.quit();
+  }
 }
 
 iOStest();
@@ -209,75 +209,75 @@ const username = process.env.LT_USERNAME || "username"; //Add username here
 const accessKey = process.env.LT_ACCESS_KEY || "accessKey"; //Add accessKey here
 
 const desiredCapabilities = {
-app: "APP_URL", // Enter the app (.apk) url
-build: "NodeJS - Android",
-name: "Sample Test NodeJS",
-deviceName: "Galaxy S20",
-isRealMobile: true,
-platformName: "android",
-platformVersion: "11",
-video: true,
-visual: true,
+  app: "APP_URL", // Enter the app (.apk) url
+  build: "NodeJS - Android",
+  name: "Sample Test NodeJS",
+  deviceName: "Galaxy S20",
+  isRealMobile: true,
+  platformName: "android",
+  platformVersion: "11",
+  video: true,
+  visual: true,
 };
 
 const driver = wd.promiseRemote(
-`https://${username}:${accessKey}@mobile-hub.lambdatest.com/wd/hub`
+  `https://${username}:${accessKey}@mobile-hub.lambdatest.com/wd/hub`
 );
 
 const DEFAULT_TIMEOUT = 10000;
 
 async function runAndroidTest() {
-try {
-driver
-.init(desiredCapabilities)
-.then(function () {
-return driver.waitForElementById("color", DEFAULT_TIMEOUT);
-})
-.then(function (colorButton) {
-return colorButton.click();
-})
-.then(function () {
-return driver.waitForElementById("Text", DEFAULT_TIMEOUT);
-})
-.then(function (text) {
-text.click();
-return driver.waitForElementById("toast", DEFAULT_TIMEOUT);
-})
-.then(function (toast) {
-toast.click();
-return driver.waitForElementById("notification", DEFAULT_TIMEOUT);
-})
-.then(function (notification) {
-notification.click();
-return driver.waitForElementById("geoLocation", DEFAULT_TIMEOUT);
-})
-.then(function (geoLocation) {
-geoLocation.click();
-return driver.waitForElementById("buttonPage", DEFAULT_TIMEOUT);
-})
-.then(function (Home) {
-Home.click();
-return driver.waitForElementById("speedTest", DEFAULT_TIMEOUT);
-})
-.then(function (speedTest) {
-speedTest.click();
-return driver.waitForElementById("webview", DEFAULT_TIMEOUT);
-})
-.then(function (Browser) {
-Browser.click();
-return driver.waitForElementById("url", DEFAULT_TIMEOUT);
-})
-.then(function (url) {
-url.type("https://www.lambdatest.com");
-return driver.waitForElementById("find", DEFAULT_TIMEOUT);
-})
-.then(function (find) {
-find.click();
-driver.quit();
-});
-} catch (e) {
-driver.quit();
-}
+  try {
+    driver
+      .init(desiredCapabilities)
+      .then(function () {
+        return driver.waitForElementById("color", DEFAULT_TIMEOUT);
+      })
+      .then(function (colorButton) {
+        return colorButton.click();
+      })
+      .then(function () {
+        return driver.waitForElementById("Text", DEFAULT_TIMEOUT);
+      })
+      .then(function (text) {
+        text.click();
+        return driver.waitForElementById("toast", DEFAULT_TIMEOUT);
+      })
+      .then(function (toast) {
+        toast.click();
+        return driver.waitForElementById("notification", DEFAULT_TIMEOUT);
+      })
+      .then(function (notification) {
+        notification.click();
+        return driver.waitForElementById("geoLocation", DEFAULT_TIMEOUT);
+      })
+      .then(function (geoLocation) {
+        geoLocation.click();
+        return driver.waitForElementById("buttonPage", DEFAULT_TIMEOUT);
+      })
+      .then(function (Home) {
+        Home.click();
+        return driver.waitForElementById("speedTest", DEFAULT_TIMEOUT);
+      })
+      .then(function (speedTest) {
+        speedTest.click();
+        return driver.waitForElementById("webview", DEFAULT_TIMEOUT);
+      })
+      .then(function (Browser) {
+        Browser.click();
+        return driver.waitForElementById("url", DEFAULT_TIMEOUT);
+      })
+      .then(function (url) {
+        url.type("https://www.lambdatest.com");
+        return driver.waitForElementById("find", DEFAULT_TIMEOUT);
+      })
+      .then(function (find) {
+        find.click();
+        driver.quit();
+      });
+  } catch (e) {
+    driver.quit();
+  }
 }
 
 runAndroidTest();
@@ -293,31 +293,31 @@ The capabilities object in the sample code are defined as:
 
 ```javascript
 desired_capabilities = {
-deviceName: "iPhone 12",
-platformVersion: "14",
-platformName: "iOS",
-isRealMobile: true,
-//highlight-next-line
-app: "APP_URL", //Enter the app (.ipa) url
-visual: true,
-video: true,
-build: "NodeJS Vanilla - iOS",
-name: "Sample Test - NodeJS",
+  deviceName: "iPhone 12",
+  platformVersion: "14",
+  platformName: "iOS",
+  isRealMobile: true,
+  //highlight-next-line
+  app: "APP_URL", //Enter the app (.ipa) url
+  visual: true,
+  video: true,
+  build: "NodeJS Vanilla - iOS",
+  name: "Sample Test - NodeJS",
 };
 ```
 
 ```javascript
 desired_capabilities = {
-deviceName: "Galaxy S20",
-platformVersion: "11",
-platformName: "android",
-isRealMobile: true,
-//highlight-next-line
-app: "APP_URL", //Enter the app (.apk) url
-visual: true,
-video: true,
-build: "NodeJS Vanilla - Android",
-name: "Sample Test - NodeJS",
+  deviceName: "Galaxy S20",
+  platformVersion: "11",
+  platformName: "android",
+  isRealMobile: true,
+  //highlight-next-line
+  app: "APP_URL", //Enter the app (.apk) url
+  visual: true,
+  video: true,
+  build: "NodeJS Vanilla - Android",
+  name: "Sample Test - NodeJS",
 };
 ```
 
@@ -356,8 +356,8 @@ The appium-skill package includes:
 appium-skill/
 ├── SKILL.md
 └── reference/
-├── playbook.md
-└── advanced-patterns.md
+    ├── playbook.md
+    └── advanced-patterns.md
 ```
 
 It provides structured guidance for:

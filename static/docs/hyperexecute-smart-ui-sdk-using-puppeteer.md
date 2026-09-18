@@ -40,12 +40,12 @@ Download or Clone the code sample for the Puppeteer framework from the TestMu AI
 In the `sdkCloud.js` file, update the following capabilities
 
 ```javascript
-const capabilities = {
-"LT:Options": {
-"build": "Puppeteer SmartUI Build", // Mention your desired build name
-"name": "Puppeteer SmartUI Test", // Provide the name of your test
-},
-};
+  const capabilities = {
+    "LT:Options": {
+      "build": "Puppeteer SmartUI Build", // Mention your desired build name
+      "name": "Puppeteer SmartUI Test", // Provide the name of your test
+    },
+  };
 ```
 
 ## Step 3: Setup the CLI in your Test Suite
@@ -97,19 +97,19 @@ maxRetries: 1
 concurrency: 1
 
 env:
-PROJECT_TOKEN: "YOUR_PROJECT_TOKEN" #Enter your project token here
+  PROJECT_TOKEN: "YOUR_PROJECT_TOKEN" #Enter your project token here
 
 pre:
-- npm install @lambdatest/smartui-cli @lambdatest/puppeteer-driver puppeteer
-- npx smartui config:create smartui-web.json
+  - npm install @lambdatest/smartui-cli @lambdatest/puppeteer-driver puppeteer
+  - npx smartui config:create smartui-web.json
 
 post:
-- cat hyperexecute-smartui-sdk.yaml
+  - cat hyperexecute-smartui-sdk.yaml
 
 testDiscovery:
-type: raw
-mode: static
-command: ls sdk/puppeteerCloud.js
+  type: raw
+  mode: static
+  command: ls sdk/puppeteerCloud.js
 
 testRunnerCommand: npx smartui exec node sdk/puppeteerCloud.js --config smartui-web.json
 
@@ -120,8 +120,8 @@ It is mandatory to mention these commands in the pre flag to download all the ne
 
 ```bash
 pre:
-- npm install @lambdatest/smartui-cli @lambdatest/puppeteer-driver puppeteer
-- npx smartui config:create smartui-web.json
+  - npm install @lambdatest/smartui-cli @lambdatest/puppeteer-driver puppeteer
+  - npx smartui config:create smartui-web.json
 ```
 
 ## Step 5: Execute your Test Suite

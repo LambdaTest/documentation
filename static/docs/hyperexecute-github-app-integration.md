@@ -73,7 +73,7 @@ The redirect URL includes an `installation_id` parameter required for configurat
 2. Navigate to the TestMu AI setup page:
 
 ```
-https://{{accounts_base_url}}/org-settings/hyperexecute/git-integration
+   https://{{accounts_base_url}}/org-settings/hyperexecute/git-integration
 ```
 
 3. Manually enter:
@@ -105,7 +105,7 @@ This private key is used to generate short-lived tokens internally.
 1. Navigate to the private app installation URL:
 
 ```
-https://github.com/apps/{private-app-name}/installations/new
+   https://github.com/apps/{private-app-name}/installations/new
 ```
 
 2. Select your GitHub organization

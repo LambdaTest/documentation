@@ -50,11 +50,11 @@ Enable accessibility, target WCAG 2.1 AA, keep Best Practice and Beta rules on, 
 
 ```json
 {
-"accessibility": true,
-"accessibility.wcagVersion": "wcag21aa",
-"accessibility.bestPractice": true,
-"accessibility.betaRules": true,
-"accessibility.aiEnabled": false
+  "accessibility": true,
+  "accessibility.wcagVersion": "wcag21aa",
+  "accessibility.bestPractice": true,
+  "accessibility.betaRules": true,
+  "accessibility.aiEnabled": false
 }
 ```
 
@@ -69,21 +69,21 @@ caps.setCapability("accessibility.aiEnabled", false);
 
 ```python
 caps = {
-"accessibility": True,
-"accessibility.wcagVersion": "wcag21aa",
-"accessibility.bestPractice": True,
-"accessibility.betaRules": True,
-"accessibility.aiEnabled": False,
+    "accessibility": True,
+    "accessibility.wcagVersion": "wcag21aa",
+    "accessibility.bestPractice": True,
+    "accessibility.betaRules": True,
+    "accessibility.aiEnabled": False,
 }
 ```
 
 ```javascript
 const capabilities = {
-"accessibility": true,
-"accessibility.wcagVersion": "wcag21aa",
-"accessibility.bestPractice": true,
-"accessibility.betaRules": true,
-"accessibility.aiEnabled": false,
+  "accessibility": true,
+  "accessibility.wcagVersion": "wcag21aa",
+  "accessibility.bestPractice": true,
+  "accessibility.betaRules": true,
+  "accessibility.aiEnabled": false,
 };
 ```
 

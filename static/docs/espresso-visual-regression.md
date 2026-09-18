@@ -131,12 +131,12 @@ implementation 'io.github.lambdatest:lambdatest-espresso:1.0.1'
 import io.github.lambdatest.LTApp;
 public class BrowserTest {
 
-LTApp smartUIApp = new LTApp();
+  LTApp smartUIApp = new LTApp();
 
-@Test
-public void checkBrowserPageIsOpened() throws InterruptedException {
-String response = smartUIApp.screenshot("LT-Espresso-Test");
-}
+  @Test
+  public void checkBrowserPageIsOpened() throws InterruptedException {
+    String response = smartUIApp.screenshot("LT-Espresso-Test");
+  }
 }
 ```
 
@@ -186,22 +186,22 @@ curl --location 'https://mobile-api.lambdatest.com/framework/v1/espresso/build' 
 --header 'Authorization: Basic BASIC_AUTH_TOKEN' \
 --header 'Content-Type: application/json' \
 --data '{
-"app": "APP_ID", //enter your app-id
-"testSuite": "TEST_SUITE_ID", //enter your test-suite id
-"device": [
-"Galaxy.*"
-],
-"smartUI.project": "Espresso-SmartUI-Project",
-"smartUI.build": "Espresso-SmartUI-Build", // Optional
-"smartUI.cropNavigationBar" : true, // Optional (By default false)
-"smartUI.cropStatusBar" : true, // Optional (By default true)
-"queueTimeout": 300,
-"IdleTimeout": 30,
-"deviceLog": true,
-"network": false,
-"visual": true,
-"build": "Proverbial-Espresso-Test",
-"singleRunnerInvocation": false
+    "app": "APP_ID", //enter your app-id
+    "testSuite": "TEST_SUITE_ID", //enter your test-suite id
+    "device": [
+        "Galaxy.*"
+    ],
+    "smartUI.project": "Espresso-SmartUI-Project",
+    "smartUI.build": "Espresso-SmartUI-Build", // Optional
+    "smartUI.cropNavigationBar" : true, // Optional (By default false)
+    "smartUI.cropStatusBar" : true, // Optional (By default true)
+    "queueTimeout": 300,
+    "IdleTimeout": 30,
+    "deviceLog": true,
+    "network": false,
+    "visual": true,
+    "build": "Proverbial-Espresso-Test",
+    "singleRunnerInvocation": false
 }'
 ```
 
@@ -222,48 +222,48 @@ autosplit: false
 globalTimeout: 180  #MAXQUEUETIMEOUT
 
 framework:
-name: "android/espresso"
-args:
-buildName: "Espresso"
-video: true
-deviceLog: true
+  name: "android/espresso"
+  args:
+    buildName: "Espresso"
+    video: true
+    deviceLog: true
 
-# You can use either the appId (lt://APP1234567) or provide the path of the application using appPath. Both examples are given below.
+    # You can use either the appId (lt://APP1234567) or provide the path of the application using appPath. Both examples are given below.
 
-#highlight-next-line
-appPath: Proverbial.apk
+    #highlight-next-line
+    appPath: Proverbial.apk
 
-testSuitePath: ProverbialExpressoTest.apk
-# We have used the appPath and testSuitePath here.
+    testSuitePath: ProverbialExpressoTest.apk
+    # We have used the appPath and testSuitePath here.
 
-#highlight-next-line
-appId: lt://APP1010461471690377432133206
-testSuiteAppId: lt://APP10104592261690377454846669
-# We have used the appId and testSuiteAppID here.
+    #highlight-next-line
+    appId: lt://APP1010461471690377432133206
+    testSuiteAppId: lt://APP10104592261690377454846669
+    # We have used the appId and testSuiteAppID here.
 
-deviceSelectionStrategy: all
-devices: ["Galaxy.*", "Pixel.*"]
+    deviceSelectionStrategy: all
+    devices: ["Galaxy.*", "Pixel.*"]
 
-smartUI:
-project: "Espresso-SmartUI-Project"
+    smartUI:
+      project: "Espresso-SmartUI-Project"
 
-shards:
-mappings:
-- name: shard1
-strategy: "class"
-values: ["com.lambdatest.proverbial.BrowserTest"]
-# The strategy for this shard is based on "class".
-# This shard will run all tests from the class com.lambdatest.proverbial.BrowserTest.
-- name: shard2
-strategy: "package"
-values: ["com.lambdatest.proverbial"]
-# The strategy for this shard is based on "package".
-# This shard will run all tests that belong to the package com.lambdatest.proverbial.l.
-- name: shard3
-strategy: "skipClass"
-values: ["com.lambdatest.proverbial.BrowserTest"]
-# The strategy for this shard is to skip a specific class.
-# This shard will avoid running tests from the class com.lambdatest.proverbial.BrowserTest.
+    shards:
+      mappings:
+     - name: shard1
+        strategy: "class"
+        values: ["com.lambdatest.proverbial.BrowserTest"]
+    # The strategy for this shard is based on "class".
+    # This shard will run all tests from the class com.lambdatest.proverbial.BrowserTest.
+     - name: shard2
+       strategy: "package"
+       values: ["com.lambdatest.proverbial"]
+    # The strategy for this shard is based on "package".
+    # This shard will run all tests that belong to the package com.lambdatest.proverbial.l.
+     - name: shard3
+       strategy: "skipClass"
+       values: ["com.lambdatest.proverbial.BrowserTest"]
+    # The strategy for this shard is to skip a specific class.
+    # This shard will avoid running tests from the class com.lambdatest.proverbial.BrowserTest.
 ```
 
 **When shards are added**
@@ -287,30 +287,30 @@ autosplit: true
 globalTimeout: 180  #MAXQUEUETIMEOUT
 
 framework:
-name: "android/espresso"
-args:
-buildName: "Espresso"
-video: true
-deviceLog: true
+  name: "android/espresso"
+  args:
+    buildName: "Espresso"
+    video: true
+    deviceLog: true
 
-# You can use either the appId (lt://APP1234567) or provide the path of the application using appPath. Both examples are given below.
+    # You can use either the appId (lt://APP1234567) or provide the path of the application using appPath. Both examples are given below.
 
-#highlight-next-line
-appPath: Proverbial.apk
+    #highlight-next-line
+    appPath: Proverbial.apk
 
-testSuitePath: ProverbialExpressoTest.apk
-# We have used the appPath and testSuitePath here.
+    testSuitePath: ProverbialExpressoTest.apk
+    # We have used the appPath and testSuitePath here.
 
-#highlight-next-line
-appId: lt://APP1010461471690377432133206
-testSuiteAppId: lt://APP10104592261690377454846669
-# We have used the appId and testSuiteAppID here.
+    #highlight-next-line
+    appId: lt://APP1010461471690377432133206
+    testSuiteAppId: lt://APP10104592261690377454846669
+    # We have used the appId and testSuiteAppID here.
 
-smartUI:
-project: "Espresso-SmartUI-Project"
+    smartUI:
+      project: "Espresso-SmartUI-Project"
 
-deviceSelectionStrategy: all
-devices: ["Galaxy.*", "Pixel.*"]
+    deviceSelectionStrategy: all
+    devices: ["Galaxy.*", "Pixel.*"]
 
 ```
 
@@ -345,8 +345,8 @@ By leveraging machine learning algorithms, it accurately detects and crops the s
 **Example:**
 ```json
 {
-"smartUI.project": "MyApp-VisualTests",
-"smartUI.build": "Release-1.0.0"
+  "smartUI.project": "MyApp-VisualTests",
+  "smartUI.build": "Release-1.0.0"
 }
 ```
 
@@ -396,8 +396,8 @@ By leveraging machine learning algorithms, it accurately detects and crops the s
 1. Verify `visual: true` is set in API request:
 ```json
 {
-"visual": true,
-"smartUI.project": "ProjectName"
+  "visual": true,
+  "smartUI.project": "ProjectName"
 }
 ```
 
@@ -456,8 +456,8 @@ By leveraging machine learning algorithms, it accurately detects and crops the s
 3. Increase `queueTimeout` and `IdleTimeout`:
 ```json
 {
-"queueTimeout": 600,
-"IdleTimeout": 60
+  "queueTimeout": 600,
+  "IdleTimeout": 60
 }
 ```
 

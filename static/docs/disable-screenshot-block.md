@@ -28,20 +28,20 @@ For app automation also, **disable screenshot block** is enabled as soon as the 
 You can use the appium capability to turn the **Disable Screenshot Block** on in your application. Just add `"enableScreenshotUnblock": true` in the desired capabilities while writing the automation script.
 
 ```java
-DesiredCapabilities capabilities = new DesiredCapabilities();
-capabilities.setCapability("build","Java TestNG Android");
-capabilities.setCapability("name",platform+" "+device+" "+version);
-capabilities.setCapability("deviceName", device);
-capabilities.setCapability("platformVersion",version);
-capabilities.setCapability("platformName", platform);
-capabilities.setCapability("isRealMobile", true);
-capabilities.setCapability("app", "APP_URL"); //Enter your app (.apk) url
-capabilities.setCapability("deviceOrientation", "PORTRAIT");
-capabilities.setCapability("console", true);
-capabilities.setCapability("network", false);
-capabilities.setCapability("visual", true);
-capabilities.setCapability("devicelog", true);
-capabilities.setCapability("enableScreenshotUnblock",true); // for screenshot unblock
+  DesiredCapabilities capabilities = new DesiredCapabilities();
+  capabilities.setCapability("build","Java TestNG Android");
+  capabilities.setCapability("name",platform+" "+device+" "+version);
+  capabilities.setCapability("deviceName", device);
+  capabilities.setCapability("platformVersion",version);
+  capabilities.setCapability("platformName", platform);
+  capabilities.setCapability("isRealMobile", true);
+  capabilities.setCapability("app", "APP_URL"); //Enter your app (.apk) url
+  capabilities.setCapability("deviceOrientation", "PORTRAIT");
+  capabilities.setCapability("console", true);
+  capabilities.setCapability("network", false);
+  capabilities.setCapability("visual", true);
+  capabilities.setCapability("devicelog", true);
+  capabilities.setCapability("enableScreenshotUnblock",true); // for screenshot unblock
 ```
 
 ## Important Notes

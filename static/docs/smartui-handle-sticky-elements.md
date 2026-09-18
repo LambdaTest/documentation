@@ -109,9 +109,9 @@ If you want to exclude sticky elements from comparison entirely:
 
 ```javascript
 let options = {
-ignoreDOM: {
-cssSelector: [".sticky-header", ".sticky-footer", ".floating-button"]
-}
+    ignoreDOM: {
+        cssSelector: [".sticky-header", ".sticky-footer", ".floating-button"]
+    }
 };
 await smartuiSnapshot(driver, 'Page with Sticky Elements', options);
 ```
@@ -122,9 +122,9 @@ If you only want to compare non-sticky content:
 
 ```javascript
 let options = {
-selectDOM: {
-cssSelector: [".main-content", ".article-body"]
-}
+    selectDOM: {
+        cssSelector: [".main-content", ".article-body"]
+    }
 };
 await smartuiSnapshot(driver, 'Content Only', options);
 ```
@@ -165,9 +165,9 @@ You can combine sticky element handling with other SmartUI features like dynamic
 ```javascript
 // Ignore sticky element with dynamic content
 let options = {
-ignoreDOM: {
-cssSelector: [".sticky-header .notification-badge"]
-}
+    ignoreDOM: {
+        cssSelector: [".sticky-header .notification-badge"]
+    }
 };
 await smartuiSnapshot(driver, 'Page', options);
 ```

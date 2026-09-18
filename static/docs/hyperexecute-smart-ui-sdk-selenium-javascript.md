@@ -41,11 +41,11 @@ In the `sdkCloud.js` file, update the following capabilities
 
 ```java
 let capabilities = {
-"LT:Options": {
-project: "PROJECT_NAME", // Enter your Project Name
-name: "TEST_NAME", // Provide the name of your test
-build: "BUILD_NAME", // Mention your desired build name
-},
+  "LT:Options": {
+    project: "PROJECT_NAME", // Enter your Project Name
+    name: "TEST_NAME", // Provide the name of your test
+    build: "BUILD_NAME", // Mention your desired build name
+  },
 };
 ```
 
@@ -98,24 +98,24 @@ maxRetries: 1
 concurrency: 1
 
 env:
-CACHE_DIR: m2_cache_dir
-PROJECT_TOKEN: "YOUR_PROJECT_TOKEN" #Enter your project token here
+  CACHE_DIR: m2_cache_dir
+  PROJECT_TOKEN: "YOUR_PROJECT_TOKEN" #Enter your project token here
 
 cacheKey: '{{ checksum "package.json" }}'
 cacheDirectories:
-- node_modules
+  - node_modules
 
 pre:
-- npm install @lambdatest/smartui-cli @lambdatest/selenium-driver selenium-webdriver
-- npx smartui config:create smartui-web.json
+  - npm install @lambdatest/smartui-cli @lambdatest/selenium-driver selenium-webdriver
+  - npx smartui config:create smartui-web.json
 
 post:
-- cat hyp-smartui-sdk.yaml
+  - cat hyp-smartui-sdk.yaml
 
 testDiscovery:
-type: raw
-mode: static
-command: ls sdk/sdkCloud.js
+  type: raw
+  mode: static
+  command: ls sdk/sdkCloud.js
 
 testRunnerCommand: npx smartui exec node sdk/sdkCloud.js --config smartui-web.json
 
@@ -126,8 +126,8 @@ It is mandatory to mention these commands in the pre flag to download all the ne
 
 ```bash
 pre:
-- npm install @lambdatest/smartui-cli @lambdatest/selenium-driver selenium-webdriver
-- npx smartui config:create smartui-web.json
+  - npm install @lambdatest/smartui-cli @lambdatest/selenium-driver selenium-webdriver
+  - npx smartui config:create smartui-web.json
 ```
 
 ## Step 5: Execute your Test Suite

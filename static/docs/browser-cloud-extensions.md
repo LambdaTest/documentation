@@ -20,16 +20,16 @@ First, register an extension. Then pass its ID when creating a session:
 ```typescript
 // Step 1: Register (one time)
 const ext = await client.extensions.register({
-name: 'My Extension',
-version: '1.0.0',
-cloudUrl: 'https://s3.amazonaws.com/bucket/extension.zip',
+    name: 'My Extension',
+    version: '1.0.0',
+    cloudUrl: 'https://s3.amazonaws.com/bucket/extension.zip',
 });
 
 // Step 2: Load into sessions
 const session = await client.sessions.create({
-adapter: 'puppeteer',
-extensionIds: [ext.id],    // Pass registered extension IDs
-lambdatestOptions: { ... }
+    adapter: 'puppeteer',
+    extensionIds: [ext.id],    // Pass registered extension IDs
+    lambdatestOptions: { ... }
 });
 ```
 
@@ -50,14 +50,14 @@ await client.extensions.delete('ext_abc123');
 
 ```typescript
 interface Extension {
-id: string;
-name: string;
-version: string;
-description?: string;
-enabled: boolean;
-createdAt: string;
-cloudUrl?: string;     // S3 URL
-localPath?: string;    // Local file path
+    id: string;
+    name: string;
+    version: string;
+    description?: string;
+    enabled: boolean;
+    createdAt: string;
+    cloudUrl?: string;     // S3 URL
+    localPath?: string;    // Local file path
 }
 ```
 

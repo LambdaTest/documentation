@@ -138,37 +138,37 @@ To setup your azure pipeline using TestMu AI Azure Pipeline Extension, you can r
 
 ```
 resources:
-repositories:
-- repository: self
-type: git
-ref: refs/heads/main
+  repositories:
+  - repository: self
+    type: git
+    ref: refs/heads/main
 jobs:
 - job: Job_1
-displayName: Agent job 1
-pool:
-vmImage: windows-2019
-steps:
-- checkout: self
-clean: true
-fetchTags: false
-- task: Lambdatest.lambda-azure-pipeline-extention.configuration-task.configuration@1
-displayName: LambdaTest configuration setup
-inputs:
-connection: 'connect endpoint'  // provide your connection name
-isTunnelActivate: true
-isAppAutomate: false // set true if you want to run your app automate test scripts
+  displayName: Agent job 1
+  pool:
+    vmImage: windows-2019
+  steps:
+  - checkout: self
+    clean: true
+    fetchTags: false
+  - task: Lambdatest.lambda-azure-pipeline-extention.configuration-task.configuration@1
+    displayName: LambdaTest configuration setup
+    inputs:
+      connection: 'connect endpoint'  // provide your connection name
+      isTunnelActivate: true
+      isAppAutomate: false // set true if you want to run your app automate test scripts
 
-- task: PythonScript@0
-displayName: Run a Python script
-inputs:
-scriptSource: inline
-script: >-
-print('Hello world') // provide your python script or command to run your test scripts
+  - task: PythonScript@0
+    displayName: Run a Python script
+    inputs:
+      scriptSource: inline
+      script: >-
+        print('Hello world') // provide your python script or command to run your test scripts
 
-- task: Lambdatest.lambda-azure-pipeline-extention.stopLambdaTunnel-task.stoptunnel@1
-displayName: LambdaTest Stop Tunnel
-- task: Lambdatest.lambda-azure-pipeline-extention.showResults-task.LambdatestResults@1
-displayName: Lambdatest Results
+  - task: Lambdatest.lambda-azure-pipeline-extention.stopLambdaTunnel-task.stoptunnel@1
+    displayName: LambdaTest Stop Tunnel
+  - task: Lambdatest.lambda-azure-pipeline-extention.showResults-task.LambdatestResults@1
+    displayName: Lambdatest Results
 ...
 ```
 Also you may use the YAMl assistant to add your tasks in the pipeline YAML file

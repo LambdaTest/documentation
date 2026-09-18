@@ -187,11 +187,11 @@ import http from 'k6/http';
 import { smartuiSnapshot } from '@lambdatest/k6-driver';
 
 export default function () {
-const response = http.get('https://www.lambdatest.com'); // Enter your desired URL here
-smartuiSnapshot(response, 'Homepage-Screenshot');
-// Please specify your response and the screenshot name in this function
-// response - k6 http response instance (required)
-// Screenshot_Name - Name of the screenshot; unique to each screenshot (required)
+  const response = http.get('https://www.lambdatest.com'); // Enter your desired URL here
+  smartuiSnapshot(response, 'Homepage-Screenshot');
+  // Please specify your response and the screenshot name in this function
+  // response - k6 http response instance (required)
+  // Screenshot_Name - Name of the screenshot; unique to each screenshot (required)
 }
 ```
 
@@ -237,7 +237,7 @@ import { smartuiSnapshot } from '@lambdatest/k6-driver';
 
 const response = http.get('https://example.com');
 check(response, {
-'status is 200': (r) => r.status === 200,
+  'status is 200': (r) => r.status === 200,
 });
 sleep(2); // Wait for dynamic content
 smartuiSnapshot(response, "Page-Loaded");
@@ -333,7 +333,7 @@ import { check } from 'k6';
 
 const response = http.get('https://example.com');
 check(response, {
-'status is 200': (r) => r.status === 200,
+  'status is 200': (r) => r.status === 200,
 });
 smartuiSnapshot(response, 'Screenshot-Name');
 ```
@@ -383,7 +383,7 @@ npx smartui exec k6 run test.js
 1. Check screenshot status in response:
 ```javascript
 if (screenshot.screenshotStatus !== "Approved") {
-// Handle non-approved status
+    // Handle non-approved status
 }
 ```
 

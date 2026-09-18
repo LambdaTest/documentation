@@ -47,8 +47,8 @@ export TESTMO_TOKEN=<YOUR_API_TOKEN>
 
 ```
 testmo automation:run:submit --instance <https://<your_testmo_address>.testmo.net
---project-id 1 --name "lambdatest" --source "frontend" --results
-<your_test_result_file_path>.xml
+ --project-id 1 --name "lambdatest" --source "frontend" --results
+ <your_test_result_file_path>.xml
 ```
 
 - Output in the Dashboard

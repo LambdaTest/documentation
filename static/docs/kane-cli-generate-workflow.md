@@ -18,16 +18,16 @@ kane-cli generates scenarios and cases and prints the result, ending with a **re
 ✓ Generated 3 scenarios · 11 cases  (request 23271)
 
 ▸ Login
-- Valid credentials [Positive]
-- Wrong password [Negative]
-- Empty fields [Edge]
+   - Valid credentials [Positive]
+   - Wrong password [Negative]
+   - Empty fields [Edge]
 ▸ Checkout
-- Guest checkout [Positive]
-- Expired card [Negative]
-...
+   - Guest checkout [Positive]
+   - Expired card [Negative]
+   ...
 
-Refine:  kane-cli generate "<refinement>" --refine --req 23271
-Save:    kane-cli generate --save --req 23271
+  Refine:  kane-cli generate "<refinement>" --refine --req 23271
+  Save:    kane-cli generate --save --req 23271
 ```
 
 Keep the request id, every later command uses it.
@@ -73,13 +73,13 @@ By default this writes under `/.testmuai/tests`:
 
 ```
 .testmuai/tests/
-checkout-23271/
-login/
-valid-credentials_test.md
-wrong-password_test.md
-checkout/
-guest-checkout_test.md
-...
+  checkout-23271/
+    login/
+      valid-credentials_test.md
+      wrong-password_test.md
+    checkout/
+      guest-checkout_test.md
+      ...
 ```
 
 Choose a different location with `--out`, and name the suite with `--name`:

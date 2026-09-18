@@ -145,9 +145,9 @@ You can also store your *LT_USERNAME*, *LT_ACCESS_KEY* and *PROJECT_TOKEN* as se
 **Example:**
 ```yaml
 branches:
-main:
-- step:
-name: Run Visual Tests
+  main:
+    - step:
+        name: Run Visual Tests
 ```
 
 **Build Naming**
@@ -159,7 +159,7 @@ name: Run Visual Tests
 **Example:**
 ```yaml
 variables:
-BUILD_NAME: "$BITBUCKET_BRANCH-$BITBUCKET_COMMIT"
+  BUILD_NAME: "$BITBUCKET_BRANCH-$BITBUCKET_COMMIT"
 ```
 
 **Error Handling**
@@ -220,7 +220,7 @@ BUILD_NAME: "$BITBUCKET_BRANCH-$BITBUCKET_COMMIT"
 2. Pass variable to step:
 ```yaml
 variables:
-PROJECT_TOKEN: $PROJECT_TOKEN
+  PROJECT_TOKEN: $PROJECT_TOKEN
 ```
 
 3. Check variable is secured if needed
@@ -245,7 +245,7 @@ PROJECT_TOKEN: $PROJECT_TOKEN
 2. Check pipeline logs for errors:
 ```yaml
 after-script:
-- echo "Checking logs..."
+  - echo "Checking logs..."
 ```
 
 3. Verify network connectivity in pipeline
@@ -268,10 +268,10 @@ after-script:
 2. Run tests in parallel using parallel steps:
 ```yaml
 parallel:
-- step:
-name: Test Group 1
-- step:
-name: Test Group 2
+  - step:
+      name: Test Group 1
+  - step:
+      name: Test Group 2
 ```
 
 3. Optimize test execution
@@ -296,8 +296,8 @@ image: node:18
 2. Clear npm cache:
 ```yaml
 script:
-- npm cache clean --force
-- npm install
+  - npm cache clean --force
+  - npm install
 ```
 
 3. Use package-lock.json for consistent installs
@@ -322,13 +322,13 @@ image: node:18
 2. Verify npm is available:
 ```yaml
 script:
-- npm --version
+  - npm --version
 ```
 
 3. Install SmartUI CLI explicitly:
 ```yaml
 script:
-- npm install -g @lambdatest/smartui-cli
+  - npm install -g @lambdatest/smartui-cli
 ```
 
 **Getting Help**

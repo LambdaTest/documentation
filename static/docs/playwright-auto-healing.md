@@ -33,19 +33,19 @@ To enable the Auto Healing feature, you need to pass the `autoHeal: true` as a c
 
 ```js
 const capabilities = {
-browserName: "Chrome",
-browserVersion: "latest",
-"LT:Options": {
-platform: "Windows 10",
-build: "Playwright Auto Heal Build",
-name: "Playwright Auto Heal Test",
-user: process.env.LT_USERNAME,
-accessKey: process.env.LT_ACCESS_KEY,
-network: true,
-video: true,
-console: true,
-autoHeal: true,
-},
+  browserName: "Chrome",
+  browserVersion: "latest",
+  "LT:Options": {
+    platform: "Windows 10",
+    build: "Playwright Auto Heal Build",
+    name: "Playwright Auto Heal Test",
+    user: process.env.LT_USERNAME,
+    accessKey: process.env.LT_ACCESS_KEY,
+    network: true,
+    video: true,
+    console: true,
+    autoHeal: true,
+  },
 };
 ```
 
@@ -58,22 +58,22 @@ For **JavaScript/NodeJS**, you can use the following code:
 ```javascript
 // playwright.config.js
 module.exports = {
-use: {
-connectOptions: {
-wsEndpoint: `wss://cdp.lambdatest.com/playwright?capabilities=${encodeURIComponent(JSON.stringify({
-'browserName': 'Chrome',
-'browserVersion': 'latest',
-'LT:Options': {
-'platform': 'Windows 10',
-'build': 'Playwright Auto Heal Build',
-'name': 'Playwright Auto Heal Test',
-'autoHeal': true,
-'user': process.env.LT_USERNAME,
-'accessKey': process.env.LT_ACCESS_KEY,
-}
-}))}`
-}
-}
+  use: {
+    connectOptions: {
+      wsEndpoint: `wss://cdp.lambdatest.com/playwright?capabilities=${encodeURIComponent(JSON.stringify({
+        'browserName': 'Chrome',
+        'browserVersion': 'latest',
+        'LT:Options': {
+          'platform': 'Windows 10',
+          'build': 'Playwright Auto Heal Build',
+          'name': 'Playwright Auto Heal Test',
+          'autoHeal': true,
+          'user': process.env.LT_USERNAME,
+          'accessKey': process.env.LT_ACCESS_KEY,
+        }
+      }))}`
+    }
+  }
 };
 ```
 
@@ -86,23 +86,23 @@ import urllib.parse
 from playwright.async_api import async_playwright
 
 capabilities = {
-'browserName': 'Chrome',
-'browserVersion': 'latest',
-'LT:Options': {
-'platform': 'Windows 10',
-'build': 'Playwright Auto Heal Build',
-'name': 'Playwright Auto Heal Test',
-'autoHeal': True,
-'user': 'your_username',
-'accessKey': 'your_access_key',
-}
+    'browserName': 'Chrome',
+    'browserVersion': 'latest',
+    'LT:Options': {
+        'platform': 'Windows 10',
+        'build': 'Playwright Auto Heal Build',
+        'name': 'Playwright Auto Heal Test',
+        'autoHeal': True,
+        'user': 'your_username',
+        'accessKey': 'your_access_key',
+    }
 }
 
 async def run():
-async with async_playwright() as playwright:
-browser = await playwright.chromium.connect(
-ws_endpoint=f"wss://cdp.lambdatest.com/playwright?capabilities={urllib.parse.quote(json.dumps(capabilities))}"
-)
+    async with async_playwright() as playwright:
+        browser = await playwright.chromium.connect(
+            ws_endpoint=f"wss://cdp.lambdatest.com/playwright?capabilities={urllib.parse.quote(json.dumps(capabilities))}"
+        )
 ```
 
 For **C#**, you can use the following code:
@@ -112,17 +112,17 @@ using Microsoft.Playwright;
 
 var capabilities = new Dictionary<string, object>()
 {
-["browserName"] = "Chrome",
-["browserVersion"] = "latest",
-["LT:Options"] = new Dictionary<string, object>()
-{
-["platform"] = "Windows 10",
-["build"] = "Playwright Auto Heal Build",
-["name"] = "Playwright Auto Heal Test",
-["autoHeal"] = true,
-["user"] = Environment.GetEnvironmentVariable("LT_USERNAME"),
-["accessKey"] = Environment.GetEnvironmentVariable("LT_ACCESS_KEY"),
-}
+    ["browserName"] = "Chrome",
+    ["browserVersion"] = "latest",
+    ["LT:Options"] = new Dictionary<string, object>()
+    {
+        ["platform"] = "Windows 10",
+        ["build"] = "Playwright Auto Heal Build",
+        ["name"] = "Playwright Auto Heal Test",
+        ["autoHeal"] = true,
+        ["user"] = Environment.GetEnvironmentVariable("LT_USERNAME"),
+        ["accessKey"] = Environment.GetEnvironmentVariable("LT_ACCESS_KEY"),
+    }
 };
 
 var browser = await Playwright.Chromium.ConnectAsync($"wss://cdp.lambdatest.com/playwright?capabilities={Uri.EscapeDataString(JsonSerializer.Serialize(capabilities))}");
@@ -169,25 +169,25 @@ const { test } = require('../lambdatest-setup');
 const { expect } = require('@playwright/test');
 
 test.describe('Browse LambdaTest in different search engines', () => {
-test('Test Auto Heal', async ({ page }) => {
-await page.goto('https://www.lambdatest.com/selenium-playground/auto-healing');
-await page.waitForTimeout(1000); // sleep 1s
+    test('Test Auto Heal', async ({ page }) => {
+        await page.goto('https://www.lambdatest.com/selenium-playground/auto-healing');
+        await page.waitForTimeout(1000); // sleep 1s
 
-// Locate element before DOM change
-let buttonBeforeDOMChange = await page.locator('#username'); // equivalent to FindElement ByID
-await buttonBeforeDOMChange.click();
+        // Locate element before DOM change
+        let buttonBeforeDOMChange = await page.locator('#username'); // equivalent to FindElement ByID
+        await buttonBeforeDOMChange.click();
 
-// Trigger DOM change
-await page.click('p.selenium_btn');
-await page.waitForTimeout(1000); // sleep 1s
+        // Trigger DOM change
+        await page.click('p.selenium_btn');
+        await page.waitForTimeout(1000); // sleep 1s
 
-// Try to locate the same element after DOM change
-// Auto healing will automatically detect the new locator
-let buttonAfterDOMChange = await page.locator('#username'); // again check for element
-await buttonAfterDOMChange.click();
+        // Try to locate the same element after DOM change
+        // Auto healing will automatically detect the new locator
+        let buttonAfterDOMChange = await page.locator('#username'); // again check for element
+        await buttonAfterDOMChange.click();
 
-await page.waitForTimeout(1000); // sleep 1s
-});
+        await page.waitForTimeout(1000); // sleep 1s
+    });
 });
 ```
 

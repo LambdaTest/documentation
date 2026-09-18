@@ -175,7 +175,7 @@ The default viewport size for Playwright tests is 1280x720. If you wish to maxim
 ```js
 // Create context with given viewport
 const context = await browser.newContext({
-viewport: { width: 1280, height: 1024 }
+  viewport: { width: 1280, height: 1024 }
 });
 ```
 The above Playwright test runs on a default viewport of 1280x1024. However, you can also select any other viewport when creating a `new context`.
@@ -196,25 +196,25 @@ Playwright lets you set browser arguments for Chromium based browsers. When sele
 const { chromium } = require('playwright');
 
 const capabilities = {
-'browserName': 'Chrome', // Browsers allowed: `Chrome`, `MicrosoftEdge`, `pw-chromium`, `pw-firefox` and `pw-webkit`
-'browserVersion': 'latest',
-'LT:Options': {
-'platform': 'Windows 10',
-'build': 'Playwright Sample Build',
-'name': 'Playwright Sample Test',
-'user': process.env.LT_USERNAME,
-'accessKey': process.env.LT_ACCESS_KEY,
-'goog:chromeOptions':[
-'--user-agent=<Any custom user agent>',
-],
+    'browserName': 'Chrome', // Browsers allowed: `Chrome`, `MicrosoftEdge`, `pw-chromium`, `pw-firefox` and `pw-webkit`
+    'browserVersion': 'latest',
+    'LT:Options': {
+      'platform': 'Windows 10',
+      'build': 'Playwright Sample Build',
+      'name': 'Playwright Sample Test',
+      'user': process.env.LT_USERNAME,
+      'accessKey': process.env.LT_ACCESS_KEY,
+      'goog:chromeOptions':[
+         '--user-agent=<Any custom user agent>',
+       ],
 
-}
-}
+    }
+  }
 
-const browser = await chromium.connect({
-wsEndpoint: `wss://cdp.lambdatest.com/playwright?capabilities=${encodeURIComponent(JSON.stringify(capabilities))}`
-})
-```
+  const browser = await chromium.connect({
+    wsEndpoint: `wss://cdp.lambdatest.com/playwright?capabilities=${encodeURIComponent(JSON.stringify(capabilities))}`
+  })
+  ```
 
   **For Edge**
 
@@ -222,23 +222,23 @@ wsEndpoint: `wss://cdp.lambdatest.com/playwright?capabilities=${encodeURICompone
 const { chromium } = require('playwright');
 
 const capabilities = {
-'browserName': 'Chrome', // Browsers allowed: `Chrome`, `MicrosoftEdge`, `pw-chromium`, `pw-firefox` and `pw-webkit`
-'browserVersion': 'latest',
-'LT:Options': {
-'platform': 'Windows 10',
-'build': 'Playwright Sample Build',
-'name': 'Playwright Sample Test',
-'user': process.env.LT_USERNAME,
-'accessKey': process.env.LT_ACCESS_KEY,
-'ms:edgeOptions':[
-'--user-agent=<Any custom user agent>',
-],
+  'browserName': 'Chrome', // Browsers allowed: `Chrome`, `MicrosoftEdge`, `pw-chromium`, `pw-firefox` and `pw-webkit`
+  'browserVersion': 'latest',
+  'LT:Options': {
+    'platform': 'Windows 10',
+    'build': 'Playwright Sample Build',
+    'name': 'Playwright Sample Test',
+    'user': process.env.LT_USERNAME,
+    'accessKey': process.env.LT_ACCESS_KEY,
+    'ms:edgeOptions':[
+       '--user-agent=<Any custom user agent>',
+     ],
 
-}
+  }
 }
 
 const browser = await chromium.connect({
-wsEndpoint: `wss://cdp.lambdatest.com/playwright?capabilities=${encodeURIComponent(JSON.stringify(capabilities))}`
+  wsEndpoint: `wss://cdp.lambdatest.com/playwright?capabilities=${encodeURIComponent(JSON.stringify(capabilities))}`
 })
 ```
 
@@ -257,30 +257,30 @@ Upon executing the script, you will get the details for the particular test sess
 
 ```js
 {
-data: {
-test_id: 'RWA9R-AC4V8-GJRET-YHBO2',
-build_id: 9415381,
-name: 'Playwright Sample Test',
-user_id: 1001150,
-username: 'kaustubhd',
-test_type: 'playwright',
-platform: 'win10',
-browser: 'Chrome',
-browser_version: '107.0',
-status_ind: 'running',
-session_id: 'RWA9R-AC4V8-GJRET-YHBO2',
-build_name: 'Playwright Sample Build',
-create_timestamp: '2022-12-07 10:53:16',
-start_timestamp: '2022-12-07 10:53:16',
-remark: 'running',
-console_logs_url: 'https://api.lambdatest.com/automation/api/v1/sessions/RWA9R-AC4V8-GJRET-YHBO2/log/console',
-network_logs_url: 'https://api.lambdatest.com/automation/api/v1/sessions/RWA9R-AC4V8-GJRET-YHBO2/log/network',
-command_logs_url: 'https://api.lambdatest.com/automation/api/v1/sessions/RWA9R-AC4V8-GJRET-YHBO2/log/command',
-video_url: 'https://automation.lambdatest.com/public/video?testID=RWA9R-AC4V8-GJRET-YHBO2&auth=50471585dd55293d204fe87f63400f5f',
-screenshot_url: 'https://video-bundler.lambdatest.com/RWA9R-AC4V8-GJRET-YHBO2/screenshots.zip?orgId=588659&createTimestamp=1670410396&testCreateTimestamp=2022-12-07%2010:53:16'
-},
-message: 'Retrieve session was successful',
-status: 'success'
+  data: {
+    test_id: 'RWA9R-AC4V8-GJRET-YHBO2',
+    build_id: 9415381,
+    name: 'Playwright Sample Test',
+    user_id: 1001150,
+    username: 'kaustubhd',
+    test_type: 'playwright',
+    platform: 'win10',
+    browser: 'Chrome',
+    browser_version: '107.0',
+    status_ind: 'running',
+    session_id: 'RWA9R-AC4V8-GJRET-YHBO2',
+    build_name: 'Playwright Sample Build',
+    create_timestamp: '2022-12-07 10:53:16',
+    start_timestamp: '2022-12-07 10:53:16',
+    remark: 'running',
+    console_logs_url: 'https://api.lambdatest.com/automation/api/v1/sessions/RWA9R-AC4V8-GJRET-YHBO2/log/console',
+    network_logs_url: 'https://api.lambdatest.com/automation/api/v1/sessions/RWA9R-AC4V8-GJRET-YHBO2/log/network',
+    command_logs_url: 'https://api.lambdatest.com/automation/api/v1/sessions/RWA9R-AC4V8-GJRET-YHBO2/log/command',
+    video_url: 'https://automation.lambdatest.com/public/video?testID=RWA9R-AC4V8-GJRET-YHBO2&auth=50471585dd55293d204fe87f63400f5f',
+    screenshot_url: 'https://video-bundler.lambdatest.com/RWA9R-AC4V8-GJRET-YHBO2/screenshots.zip?orgId=588659&createTimestamp=1670410396&testCreateTimestamp=2022-12-07%2010:53:16'
+  },
+  message: 'Retrieve session was successful',
+  status: 'success'
 }
 ```
 

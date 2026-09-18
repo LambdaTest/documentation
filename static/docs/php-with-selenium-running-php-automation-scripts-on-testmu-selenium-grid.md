@@ -108,11 +108,11 @@ Every framework below connects to the grid and passes your browser and OS choice
 
 ```php
 $capabilities = array(
-"build" => "your build name",
-"name" => "your test name",
-"platform" => "Windows 10",
-"browserName" => "Chrome",
-"version" => "latest"
+    "build" => "your build name",
+    "name" => "your test name",
+    "platform" => "Windows 10",
+    "browserName" => "Chrome",
+    "version" => "latest"
 );
 ```
 
@@ -137,19 +137,19 @@ cd behat-selenium-sample
 
 ```yaml title="behat.yml"
 default:
-context:
-parameters:
-lambdatest:
-server: "hub.lambdatest.com"
-user: "YOUR_LAMBDATEST_USERNAME"
-key: "YOUR_LAMBDATEST_ACCESS_KEY"
-capabilities:
-build: "behat-selenium-sample"
-name: "single-behat-test"
-environments:
-- browserName: chrome
-version: 71.0
-platform: Win10
+  context:
+    parameters:
+      lambdatest:
+        server: "hub.lambdatest.com"
+        user: "YOUR_LAMBDATEST_USERNAME"
+        key: "YOUR_LAMBDATEST_ACCESS_KEY"
+        capabilities:
+          build: "behat-selenium-sample"
+          name: "single-behat-test"
+        environments:
+          - browserName: chrome
+            version: 71.0
+            platform: Win10
 ```
 
 3. Run a single test, or in parallel:
@@ -172,11 +172,11 @@ cd php-laravel-dusk-todo
 
 ```php
 $capabilities = array(
-"build" => "LaravelDusk Build",
-"name" => "LaravelDusk Build",
-"platform" => "Windows 10",
-"browserName" => "Chrome",
-"version" => "latest"
+    "build" => "LaravelDusk Build",
+    "name" => "LaravelDusk Build",
+    "platform" => "Windows 10",
+    "browserName" => "Chrome",
+    "version" => "latest"
 );
 ```
 
@@ -199,18 +199,18 @@ cd codeception-selenium-sample
 
 ```yaml title="acceptance.suite.yml"
 modules:
-enabled:
-- WebDriver:
-url: 'https://lambdatest.github.io/sample-todo-app/'
-host: '{username}:{token}@hub.lambdatest.com'
-port: 80
-browser: chrome
-capabilities:
-name: 'Codeception Example'
-build: '1.0'
-browserName: 'Chrome'
-platform: 'Windows 10'
-version: '71.0'
+  enabled:
+    - WebDriver:
+        url: 'https://lambdatest.github.io/sample-todo-app/'
+        host: '{username}:{token}@hub.lambdatest.com'
+        port: 80
+        browser: chrome
+        capabilities:
+          name: 'Codeception Example'
+          build: '1.0'
+          browserName: 'Chrome'
+          platform: 'Windows 10'
+          version: '71.0'
 ```
 
 3. Run the test:
@@ -232,11 +232,11 @@ cd Php-PhpUnit-Selenium
 
 ```php
 $capabilities = array(
-"build" => "Sample PHPUnit Build",
-"name" => "Sample PHPUnit Test",
-"platform" => "Windows 10",
-"browserName" => "Chrome",
-"version" => "latest"
+    "build" => "Sample PHPUnit Build",
+    "name" => "Sample PHPUnit Test",
+    "platform" => "Windows 10",
+    "browserName" => "Chrome",
+    "version" => "latest"
 );
 ```
 

@@ -101,11 +101,11 @@ In `~/.testmuai/kaneai/tui-config.json`, set the `code_export` block:
 
 ```json
 {
-"code_export": {
-"enabled": true,
-"language": "python",
-"skip_validation": true
-}
+  "code_export": {
+    "enabled": true,
+    "language": "python",
+    "skip_validation": true
+  }
 }
 ```
 
@@ -115,9 +115,9 @@ For one-off CLI runs, use flags:
 
 ```bash
 kane-cli run "Add an item to the cart" \
---code-export \
---code-language python \
---skip-code-validation
+  --code-export \
+  --code-language python \
+  --skip-code-validation
 ```
 
 `--no-skip-code-validation` forces validation on for that run. `--code-language` accepts `python` or `javascript`.

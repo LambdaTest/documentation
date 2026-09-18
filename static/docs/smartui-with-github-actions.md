@@ -167,10 +167,10 @@ To run the new pipeline that you just created, click the **Run workflow** button
 **Example:**
 ```yaml
 on:
-push:
-branches: [ main, develop ]
-pull_request:
-branches: [ main ]
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main ]
 ```
 
 **Build Naming**
@@ -182,9 +182,9 @@ branches: [ main ]
 **Example:**
 ```yaml
 - name: Set build name
-run: |
-BUILD_NAME="PR-${{ github.event.pull_request.number }}-${{ github.sha }}"
-echo "BUILD_NAME=$BUILD_NAME" >> $GITHUB_ENV
+  run: |
+    BUILD_NAME="PR-${{ github.event.pull_request.number }}-${{ github.sha }}"
+    echo "BUILD_NAME=$BUILD_NAME" >> $GITHUB_ENV
 ```
 
 **Error Handling**
@@ -245,17 +245,17 @@ echo "BUILD_NAME=$BUILD_NAME" >> $GITHUB_ENV
 2. Pass secret to workflow step:
 ```yaml
 env:
-PROJECT_TOKEN: ${{ secrets.PROJECT_TOKEN }}
+  PROJECT_TOKEN: ${{ secrets.PROJECT_TOKEN }}
 ```
 
 3. For manual workflows, add workflow input:
 ```yaml
 on:
-workflow_dispatch:
-inputs:
-project_token:
-required: true
-type: string
+  workflow_dispatch:
+    inputs:
+      project_token:
+        required: true
+        type: string
 ```
 
 **Issue: Tests Run But No Results in Dashboard**
@@ -276,9 +276,9 @@ type: string
 2. Check workflow logs for errors:
 ```yaml
 - name: View logs
-if: failure()
-run: |
-# Check previous step logs
+  if: failure()
+  run: |
+    # Check previous step logs
 ```
 
 3. Verify network connectivity in workflow
@@ -304,8 +304,8 @@ timeout-minutes: 60
 2. Run tests in parallel using matrix:
 ```yaml
 strategy:
-matrix:
-test-group: [1, 2, 3]
+  matrix:
+    test-group: [1, 2, 3]
 ```
 
 3. Optimize test execution
@@ -325,8 +325,8 @@ test-group: [1, 2, 3]
 1. Use specific Node version:
 ```yaml
 - uses: actions/setup-node@v3
-with:
-node-version: '18'
+  with:
+    node-version: '18'
 ```
 
 2. Clear npm cache:
@@ -351,8 +351,8 @@ node-version: '18'
 1. Ensure Node.js setup step is included:
 ```yaml
 - uses: actions/setup-node@v3
-with:
-node-version: '18'
+  with:
+    node-version: '18'
 ```
 
 2. Verify npm is available:

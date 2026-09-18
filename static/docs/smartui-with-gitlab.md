@@ -153,9 +153,9 @@ You can also store your *LT_USERNAME*, *LT_ACCESS_KEY* and *PROJECT_TOKEN* as se
 **Example:**
 ```yaml
 only:
-- main
-- develop
-- merge_requests
+  - main
+  - develop
+  - merge_requests
 ```
 
 **Build Naming**
@@ -167,7 +167,7 @@ only:
 **Example:**
 ```yaml
 variables:
-BUILD_NAME: "MR-$CI_MERGE_REQUEST_IID-$CI_COMMIT_SHORT_SHA"
+  BUILD_NAME: "MR-$CI_MERGE_REQUEST_IID-$CI_COMMIT_SHORT_SHA"
 ```
 
 **Error Handling**
@@ -228,7 +228,7 @@ BUILD_NAME: "MR-$CI_MERGE_REQUEST_IID-$CI_COMMIT_SHORT_SHA"
 2. Pass variable to job:
 ```yaml
 variables:
-PROJECT_TOKEN: $PROJECT_TOKEN
+  PROJECT_TOKEN: $PROJECT_TOKEN
 ```
 
 3. Check variable is not masked if you need to see it in logs
@@ -253,7 +253,7 @@ PROJECT_TOKEN: $PROJECT_TOKEN
 2. Check pipeline logs for errors:
 ```yaml
 after_script:
-- if [ $CI_JOB_STATUS == 'failed' ]; then cat job.log; fi
+  - if [ $CI_JOB_STATUS == 'failed' ]; then cat job.log; fi
 ```
 
 3. Verify network connectivity in pipeline
@@ -274,14 +274,14 @@ after_script:
 1. Increase pipeline timeout:
 ```yaml
 default:
-timeout: 1h
+  timeout: 1h
 ```
 
 2. Run tests in parallel using parallel jobs:
 ```yaml
 parallel:
-matrix:
-- TEST_GROUP: [1, 2, 3]
+  matrix:
+    - TEST_GROUP: [1, 2, 3]
 ```
 
 3. Optimize test execution
@@ -306,7 +306,7 @@ image: node:18
 2. Clear npm cache:
 ```yaml
 before_script:
-- npm cache clean --force
+  - npm cache clean --force
 ```
 
 3. Use package-lock.json for consistent installs
@@ -331,13 +331,13 @@ image: node:18
 2. Verify npm is available:
 ```yaml
 before_script:
-- npm --version
+  - npm --version
 ```
 
 3. Install SmartUI CLI explicitly:
 ```yaml
 before_script:
-- npm install -g @lambdatest/smartui-cli
+  - npm install -g @lambdatest/smartui-cli
 ```
 
 **Getting Help**

@@ -34,11 +34,11 @@ A sample `cypress.json` file:
 ```bash
 {
 ......
-"env":{
-"CYPRESS_BASE_URL":"https://example.cypress.io/",
-"ACTIONS_URL": "commands/actions",
-"WINDOW_URL": "commands/window"
-},
+	"env":{
+		"CYPRESS_BASE_URL":"https://example.cypress.io/",
+		"ACTIONS_URL": "commands/actions",
+		"WINDOW_URL": "commands/window"
+	},
 ......
 }
 ```
@@ -49,34 +49,34 @@ A sample `cypress.config.js` file:
 
 ```bash
 module.exports = defineConfig({
-env: {
-'CYPRESS_BASE_URL':'https://example.cypress.io/',
-'ACTIONS_URL' : 'commands/actions',
-'WINDOW_URL': 'commands/window'
-},
+  env: {
+    'CYPRESS_BASE_URL':'https://example.cypress.io/',
+    'ACTIONS_URL' : 'commands/actions',
+    'WINDOW_URL': 'commands/window'
+  },
 ```
 
 You can use both of these in your test specifications file. An example of a test specifications file is:
 
 ```bash
 describe('Sample test', () => {
-it('test case - actions', () => {
-cy.visit(Cypress.env('CYPRESS_BASE_URL') + Cypress.env('ACTIONS_URL'))
-cy.wait(3000)
-})
-it('test case - window', () => {
-cy.visit(Cypress.env('CYPRESS_BASE_URL') + Cypress.env('WINDOW_URL'))
-cy.wait(3000)
-})
+    it('test case - actions', () => {
+      cy.visit(Cypress.env('CYPRESS_BASE_URL') + Cypress.env('ACTIONS_URL'))
+      cy.wait(3000)
+    })
+    it('test case - window', () => {
+        cy.visit(Cypress.env('CYPRESS_BASE_URL') + Cypress.env('WINDOW_URL'))
+        cy.wait(3000)
+    })
 })
 ```
 ### 2. Via the `cypress.env.json` File
 
 ```bash
 {
-"CYPRESS_BASE_URL":"https://example.cypress.io/",
-"ACTIONS_URL" : "commands/actions",
-"WINDOW_URL": "commands/window"
+    "CYPRESS_BASE_URL":"https://example.cypress.io/",
+    "ACTIONS_URL" : "commands/actions",
+    "WINDOW_URL": "commands/window"
 }
 ```
 

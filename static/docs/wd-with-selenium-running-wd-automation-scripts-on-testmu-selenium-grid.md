@@ -52,13 +52,13 @@ Update the capabilities in `conf/single.conf.js` to define the browser and platf
 
 ```js
 capabilities: [{
-browserName: 'chrome',
-platform: 'Windows 10',
-version: 'latest',
-name: "single-test",
-build: "wd-lambdatest-sample",
-geoLocation : "US"
-}]
+    browserName: 'chrome',
+    platform: 'Windows 10',
+    version: 'latest',
+    name: "single-test",
+    build: "wd-lambdatest-sample",
+    geoLocation : "US"
+  }]
 ```
 
 Generate capabilities for your test requirements with the [Capabilities Generator](https://www.testmuai.com/capabilities-generator/).

@@ -49,27 +49,27 @@ key: process.env.LT_ACCESS_KEY,
 const AxeWebdriverIO = require('@axe-core/webdriverio').default;
 
 before: function (capabilities, specs, browser) {
-const axeWdio = new AxeWebdriverIO({
-client: browser
-})
+        const axeWdio = new AxeWebdriverIO({
+            client: browser
+        })
 
-// Configure Command to run axe
-browser.addCommand('getAxeResults', async () => {
-return axeWdio.analyze()
-.then(async (result) => {
+        // Configure Command to run axe
+        browser.addCommand('getAxeResults', async () => {
+            return axeWdio.analyze()
+            .then(async (result) => {
 
-return result
-})
-.catch(err => {
-console.log(err)
-})
-})
+                return result
+            })
+            .catch(err => {
+                console.log(err)
+            })
+        })
 
-},
-```
+    },
+ ```
 
  5. Now call the below method in your tests
 
 ```js
-browser.getAxeResults()
+ browser.getAxeResults()
 ```

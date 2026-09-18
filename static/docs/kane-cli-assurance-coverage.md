@@ -20,12 +20,12 @@ kane-cli cover gaps [--stage design|cover|all] [--top <n>] [--from <pack>]  # th
 coverage — 8f0e…f2.evidence
 
 depth (proven by the pack):
-◐ ███░░░░░░░  38%  uc-buy-as-a-guest — partial (1/4 ACs proven, 1 failed, 1 blocked)
-✔ ██████████ 100%  uc-mobile-sign-in — covered (1/1 ACs proven)  · 1 stale
+  ◐ ███░░░░░░░  38%  uc-buy-as-a-guest — partial (1/4 ACs proven, 1 failed, 1 blocked)
+  ✔ ██████████ 100%  uc-mobile-sign-in — covered (1/1 ACs proven)  · 1 stale
 
 completeness (live graph):
-[high] create ac-payment-declined-message — no test verifies this AC
-→ kane-cli design tests --use-case uc-buy-as-a-guest
+  [high] create ac-payment-declined-message — no test verifies this AC
+         → kane-cli design tests --use-case uc-buy-as-a-guest
 ```
 
 The panel always shows **both** axes: the pack's proven depth, then the live-graph completeness worklist with its ready-to-paste commands (`--json` emits both as one document).
@@ -41,10 +41,10 @@ One ranked list (risk first) of what to do next, each row with a ready-to-paste 
 
 ```
 gaps — stage design (5)
-1. [high] create uc-checkout-while-signed-in — use-case has no scenarios
-→ kane-cli design tests --use-case uc-checkout-while-signed-in
-2. [med] create ac-the-cart-displays-an-order-subtotal — no live test verifies this acceptance criterion
-→ kane-cli design tests --use-case uc-manage-the-cart
+   1. [high] create uc-checkout-while-signed-in — use-case has no scenarios
+      → kane-cli design tests --use-case uc-checkout-while-signed-in
+   2. [med] create ac-the-cart-displays-an-order-subtotal — no live test verifies this acceptance criterion
+      → kane-cli design tests --use-case uc-manage-the-cart
 ```
 
 - `--stage design` (default, no pack needed) — criteria no test verifies, use-cases with no or only-happy scenarios, recorded gap nodes from design runs, stale designed entities.

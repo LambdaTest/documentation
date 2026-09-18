@@ -161,9 +161,9 @@ Add the following dependency to your `pom.xml` file:
 
 ```xml
 <dependency>
-<groupId>io.github.lambdatest</groupId>
-<artifactId>lambdatest-java-sdk</artifactId>
-<version>1.0.23</version>
+    <groupId>io.github.lambdatest</groupId>
+    <artifactId>lambdatest-java-sdk</artifactId>
+    <version>1.0.23</version>
 </dependency>
 ```
 
@@ -195,48 +195,48 @@ Import the required SmartUI class and add the screenshot capture code where need
 ```java
 
 public class YourTestClass {
-@Test
-public void testMethod() {
-// Initialize SmartUI
-SmartUIAppSnapshot SmartUI = new SmartUIAppSnapshot();
+    @Test
+    public void testMethod() {
+        // Initialize SmartUI
+        SmartUIAppSnapshot SmartUI = new SmartUIAppSnapshot();
 
-// Configure screenshot settings
-Map<String, String> ssConfig = new HashMap<>();
-// Either use environment variable
-ssConfig.put("projectToken", "your-project-token-here"); // Use this if you are not setting the project token in environment variable
-// ssConfig.put("buildName", "First Build"); // Optional
-ssConfig.put("deviceName", "iPhone 15"); // Required, you can use the variables that you are setting in the cloud capabilities
+        // Configure screenshot settings
+        Map<String, String> ssConfig = new HashMap<>();
+        // Either use environment variable
+        ssConfig.put("projectToken", "your-project-token-here"); // Use this if you are not setting the project token in environment variable
+        // ssConfig.put("buildName", "First Build"); // Optional
+        ssConfig.put("deviceName", "iPhone 15"); // Required, you can use the variables that you are setting in the cloud capabilities
 
-ssConfig.put("platform", "iOS"); // Optional,you can use the variables that you are setting in the cloud capabilities
+        ssConfig.put("platform", "iOS"); // Optional,you can use the variables that you are setting in the cloud capabilities
 
-try {
-// Start SmartUI session
-SmartUI.start(ssConfig);
+        try {
+            // Start SmartUI session
+            SmartUI.start(ssConfig);
 
-// Your test code here
+            // Your test code here
 // Your test code here - Example of native app interactions
-driver.findElement(MobileBy.AccessibilityId("username-input")).sendKeys("test@example.com");
-driver.findElement(MobileBy.AccessibilityId("password-input")).sendKeys("password123");
+            driver.findElement(MobileBy.AccessibilityId("username-input")).sendKeys("test@example.com");
+            driver.findElement(MobileBy.AccessibilityId("password-input")).sendKeys("password123");
 
-// Take screenshot of login form
-SmartUI.smartuiAppSnapshot(driver, "Login Form", ssConfig);
+            // Take screenshot of login form
+            SmartUI.smartuiAppSnapshot(driver, "Login Form", ssConfig);
 
-driver.findElement(MobileBy.AccessibilityId("login-button")).click();
+            driver.findElement(MobileBy.AccessibilityId("login-button")).click();
 
-// Wait for home screen to load
-WebDriverWait wait = new WebDriverWait(driver, 10);
-wait.until(ExpectedConditions.presenceOfElementLocated(MobileBy.AccessibilityId("home-screen")));
+            // Wait for home screen to load
+            WebDriverWait wait = new WebDriverWait(driver, 10);
+            wait.until(ExpectedConditions.presenceOfElementLocated(MobileBy.AccessibilityId("home-screen")));
 
-// Take screenshot of home screen
-SmartUI.smartuiAppSnapshot(driver, "Home Screen", ssConfig);
+            // Take screenshot of home screen
+            SmartUI.smartuiAppSnapshot(driver, "Home Screen", ssConfig);
 
-// More test steps...
+            // More test steps...
 
-} finally {
-// Stop SmartUI session
-SmartUI.stop();
-}
-}
+        } finally {
+            // Stop SmartUI session
+            SmartUI.stop();
+        }
+    }
 }
 ```
 
@@ -302,9 +302,9 @@ This feature requires the `Gson` library for JSON serialization. Add it to your 
 
 ```xml
 <dependency>
-<groupId>com.google.code.gson</groupId>
-<artifactId>gson</artifactId>
-<version>2.10.1</version>
+    <groupId>com.google.code.gson</groupId>
+    <artifactId>gson</artifactId>
+    <version>2.10.1</version>
 </dependency>
 ```
 
@@ -322,10 +322,10 @@ config.put("fullPage", "true");
 
 // Define XPaths of elements to ignore
 List<String> ignoreXpath = Arrays.asList(
-"//*[@text=\"Backpack\"]",
-"//*[@text=\"Onesie\"]",
-"//*[@text=\"PRODUCTS\"]",
-"//*[@text=\"Terms of Service | Privacy Policy\"]"
+    "//*[@text=\"Backpack\"]",
+    "//*[@text=\"Onesie\"]",
+    "//*[@text=\"PRODUCTS\"]",
+    "//*[@text=\"Terms of Service | Privacy Policy\"]"
 );
 
 Map<String, Object> ignoreBoxesMap = new HashMap<>();
@@ -441,9 +441,9 @@ echo $PROJECT_TOKEN
 3. Verify SDK dependency is added to pom.xml:
 ```xml
 <dependency>
-<groupId>io.github.lambdatest</groupId>
-<artifactId>lambdatest-java-sdk</artifactId>
-<version>1.0.23</version>
+    <groupId>io.github.lambdatest</groupId>
+    <artifactId>lambdatest-java-sdk</artifactId>
+    <version>1.0.23</version>
 </dependency>
 ```
 

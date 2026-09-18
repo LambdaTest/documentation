@@ -41,12 +41,12 @@ Download or Clone the code sample for the Maestro framework from the TestMu AI G
 In the `playwrightCloud.js` file, update the following capabilities
 
 ```javascript
-const capabilities = {
-"LT:Options": {
-build: "Playwright SmartUI Build", // Mention your desired build nameP
-name: "Playwright SmartUI Test", // Provide the name of your test
-},
-};
+  const capabilities = {
+    "LT:Options": {
+      build: "Playwright SmartUI Build", // Mention your desired build nameP
+      name: "Playwright SmartUI Test", // Provide the name of your test
+    },
+  };
 ```
 
 ## Step 3: Setup the CLI in your Test Suite
@@ -98,19 +98,19 @@ maxRetries: 1
 concurrency: 1
 
 env:
-PROJECT_TOKEN: "YOUR_PROJECT_TOKEN" #Enter your project token here
+  PROJECT_TOKEN: "YOUR_PROJECT_TOKEN" #Enter your project token here
 
 pre:
-- npm install @lambdatest/smartui-cli @lambdatest/playwright-driver playwright
-- npx smartui config:create smartui-web.json
+  - npm install @lambdatest/smartui-cli @lambdatest/playwright-driver playwright
+  - npx smartui config:create smartui-web.json
 
 post:
-- cat hyp-smartui-sdk.yaml
+  - cat hyp-smartui-sdk.yaml
 
 testDiscovery:
-type: raw
-mode: static
-command: ls sdk/playwrightCloud.js
+  type: raw
+  mode: static
+  command: ls sdk/playwrightCloud.js
 
 testRunnerCommand: npx smartui exec node sdk/playwrightCloud.js --config smartui-web.json
 
@@ -121,8 +121,8 @@ It is mandatory to mention these commands in the pre flag to download all the ne
 
 ```bash
 pre:
-- npm install @lambdatest/smartui-cli @lambdatest/playwright-driver playwright
-- npx smartui config:create smartui-web.json
+  - npm install @lambdatest/smartui-cli @lambdatest/playwright-driver playwright
+  - npx smartui config:create smartui-web.json
 ```
 
 ## Step 5: Execute your Test Suite

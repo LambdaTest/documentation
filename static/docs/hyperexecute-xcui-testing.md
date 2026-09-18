@@ -99,31 +99,31 @@ retryOnFailure: true
 maxRetries: 2
 
 framework:
-name: "ios/xcui"
-args:
-# highlight-next-line
-appPath: <RELATIVE_APP_PATH>
-# highlight-next-line
-testSuitePath: <RELATIVE_TEST_SUITE_PATH>
-video: true
-filters:
-attributes:
-- type: className
-values: ["LambdaUiKitIOSUITestsLaunchTests"]
-- type: testName
-values: ["LambdaUiKitIOSUITests/testverifyAppLaunch"]
-deviceSelectionStrategy: any
-devices: [".*"]
-artifacts: true
+  name: "ios/xcui"
+  args:
+  # highlight-next-line
+    appPath: <RELATIVE_APP_PATH>
+    # highlight-next-line
+    testSuitePath: <RELATIVE_TEST_SUITE_PATH>
+    video: true
+    filters:
+      attributes:
+      - type: className
+        values: ["LambdaUiKitIOSUITestsLaunchTests"]
+      - type: testName
+        values: ["LambdaUiKitIOSUITests/testverifyAppLaunch"]
+    deviceSelectionStrategy: any
+    devices: [".*"]
+    artifacts: true
 
-shards:
-mappings:
-- name: shard1
-strategy: "only-testing/skip-testing"
-values: ["<className>/<className/testName>"]
-- name: shard2
-strategy: "only-testing/skip-testing"
-values: ["<className>/<className/testName>", "<className>/<className/testName>"]
+    shards:
+      mappings:
+      - name: shard1
+        strategy: "only-testing/skip-testing"
+        values: ["<className>/<className/testName>"]
+     - name: shard2
+       strategy: "only-testing/skip-testing"
+       values: ["<className>/<className/testName>", "<className>/<className/testName>"]
 
 jobLabel: ['HyperExecute', 'XCUI', 'Real Device']
 ```
@@ -151,10 +151,10 @@ To generate artifacts for your XCUI tests, add the `artifacts: true` and `report
 report: true
 
 framework:
-name: "ios/xcui"
-args:
-artifacts: true
-...//
+  name: "ios/xcui"
+  args:
+    artifacts: true
+    ...//
 ```
 
 To download these artifacts in your local machine, you can pass the `--download-artifacts` and `--download-report` flag with the CLI command to execute the tests as shown in the next step.

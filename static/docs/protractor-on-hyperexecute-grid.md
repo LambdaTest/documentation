@@ -42,10 +42,10 @@ Configure the desired capabilities based on your test requirements. For example:
 
 ```bash
 capabilities = {
-build: 'protractor-LambdaTest-Single',
-browserName: 'chrome',
-version:'latest',
-platform: 'Windows 10',
+  build: 'protractor-LambdaTest-Single',
+  browserName: 'chrome',
+  version:'latest',
+  platform: 'Windows 10',
 },
 ```
 
@@ -109,30 +109,30 @@ concurrency: 2
 
 cacheKey: '{{ checksum "package-lock.json" }}'
 cacheDirectories:
-- node_modules
+  - node_modules
 
 pre:
-- npm install -g protractor
-- npm install
+  - npm install -g protractor
+  - npm install
 
 mergeArtifacts: true
 
 uploadArtefacts:
-- name: Reports
-path:
-- ProtractorTestReport.html
-- xmlresults.xml
+  - name: Reports
+    path:
+      - ProtractorTestReport.html
+      - xmlresults.xml
 
 report: true
 partialReports:
-type: json
-location: /
-frameworkName: extent
+    type: json
+    location: /
+    frameworkName: extent
 
 testDiscovery:
-type: raw
-mode: remote
-command: grep -nri 'describe' specs -ir --include=*.js | sed 's/:.*//'
+  type: raw
+  mode: remote
+  command: grep -nri 'describe' specs -ir --include=*.js | sed 's/:.*//'
 testRunnerCommand: protractor conf/single.conf.js --specs=$test --browser=chrome
 
 jobLabel: [selenium-protractor, linux, autosplit]
@@ -199,8 +199,8 @@ The protractor-skill package includes:
 protractor-skill/
 ├── SKILL.md
 └── reference/
-├── playbook.md
-└── advanced-patterns.md
+    ├── playbook.md
+    └── advanced-patterns.md
 ```
 
 It provides structured guidance for:

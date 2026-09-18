@@ -75,24 +75,24 @@ You can specify the following `capability` in the following format:
 ```js title="Make changes in your  your test configuration file"
 let capabilities = {
 
-/*  ....Your Selenium capabilities go here */
+  /*  ....Your Selenium capabilities go here */
 
-"smartUI.project": "<Your Project Name>" // Your SmartUI project name
-"smartUI.options": {
-// highlight-next-line
-"largeImageThreshold": 100 // The image threshold for comparison the min of 100 and max of 1200
-}
+  "smartUI.project": "<Your Project Name>" // Your SmartUI project name
+  "smartUI.options": {
+    // highlight-next-line
+    "largeImageThreshold": 100 // The image threshold for comparison the min of 100 and max of 1200
+  }
 };
 ```
 
 ```json title="Add the following in your /project/lambdatest-config.json"
 "smart_ui": {
-"project": "<Your Project Name>" // Add your SmartUI Project Name here
-"options": {
-// highlight-next-line
-"largeImageThreshold": 100 // The image threshold for comparison the min of 100 and max of 1200
-}
-}
+      "project": "<Your Project Name>" // Add your SmartUI Project Name here
+      "options": {
+        // highlight-next-line
+        "largeImageThreshold": 100 // The image threshold for comparison the min of 100 and max of 1200
+      }
+    }
 ```
 
 ### Error Identifier Types
@@ -109,24 +109,24 @@ You can specify the following `capability` in the following format:
 ```js title="Make changes in your  your test configuration file"
 let capabilities = {
 
-/*  ....Your Selenium capabilities go here */
+  /*  ....Your Selenium capabilities go here */
 
-"smartUI.project": "<Your Project Name>" // Your SmartUI project name
-"smartUI.options": {
-// highlight-next-line
-"errorType": "movement" // To set the error identifier
-}
+  "smartUI.project": "<Your Project Name>" // Your SmartUI project name
+  "smartUI.options": {
+    // highlight-next-line
+    "errorType": "movement" // To set the error identifier
+  }
 };
 ```
 
 ```json title="Make changes in your /project/lambdatest-config.json"
 "smart_ui": {
-"project": "<Your Project Name>" // Add your SmartUI Project Name here
-"options": {
-// highlight-next-line
-"errorType": "movement" // To set the error identifier
-}
-}
+      "project": "<Your Project Name>" // Add your SmartUI Project Name here
+      "options": {
+        // highlight-next-line
+        "errorType": "movement" // To set the error identifier
+      }
+    }
 
 ```
 
@@ -146,24 +146,24 @@ You can specify the following `capability` in the following format:
 ```js title="Make changes in your  your test configuration file"
 let capabilities = {
 
-/*  ....Your Selenium capabilities go here */
+  /*  ....Your Selenium capabilities go here */
 
-"smartUI.project": "<Your Project Name>" // Your SmartUI project name
-"smartUI.options": {
-// highlight-next-line
-"ignore": "antialiasing" // To set the ignore identifier
-}
+  "smartUI.project": "<Your Project Name>" // Your SmartUI project name
+  "smartUI.options": {
+    // highlight-next-line
+    "ignore": "antialiasing" // To set the ignore identifier
+  }
 };
 ```
 
 ```json title="Make changes in your /project/lambdatest-config.json"
 "smart_ui": {
-"project": "<Your Project Name>" // Add your SmartUI Project Name here
-"options": {
-// highlight-next-line
-"ignore": "antialiasing" // To set the ignore identifier
-}
-}
+      "project": "<Your Project Name>" // Add your SmartUI Project Name here
+      "options": {
+        // highlight-next-line
+        "ignore": "antialiasing" // To set the ignore identifier
+      }
+    }
 
 ```
 
@@ -176,24 +176,24 @@ You can specify the following `capability` in the following format:
 ```js title="Make changes in your  your test configuration file"
 let capabilities = {
 
-/*  ....Your Selenium capabilities go here */
+  /*  ....Your Selenium capabilities go here */
 
-"smartUI.project": "<Your Project Name>" // Your SmartUI project name
-"smartUI.options": {
-// highlight-next-line
-"transparency": 0.3 // minimum = 0 and maximum = 1 supports upto one decimal such as 0.1 to 0.9
-}
+  "smartUI.project": "<Your Project Name>" // Your SmartUI project name
+  "smartUI.options": {
+    // highlight-next-line
+    "transparency": 0.3 // minimum = 0 and maximum = 1 supports upto one decimal such as 0.1 to 0.9
+  }
 };
 ```
 
 ```json title="Make changes in your /project/lambdatest-config.json"
 "smart_ui": {
-"project": "<Your Project Name>" // Add your SmartUI Project Name here
-"options": {
-// highlight-next-line
-"transparency": 0.3 // minimum = 0 and maximum = 1 supports upto one decimal such as 0.1 to 0.9
-}
-}
+      "project": "<Your Project Name>" // Add your SmartUI Project Name here
+      "options": {
+        // highlight-next-line
+        "transparency": 0.3 // minimum = 0 and maximum = 1 supports upto one decimal such as 0.1 to 0.9
+      }
+    }
 
 ```
 
@@ -228,36 +228,36 @@ bottom: 700
 
 let capabilities = {
 
-/*  ....Your Selenium capabilities go here */
+  /*  ....Your Selenium capabilities go here */
 
-"smartUI.project": "<Your Project Name>", // Your SmartUI project name
-"smartUI.options": {
-// highlight-next-line
-"boundingBoxes": [box1, box2] // Compare only these regions (P2P)
-}
+  "smartUI.project": "<Your Project Name>", // Your SmartUI project name
+  "smartUI.options": {
+    // highlight-next-line
+    "boundingBoxes": [box1, box2] // Compare only these regions (P2P)
+  }
 };
 
 ```
 
 ```json title="Make changes in your /project/lambdatest-config.json"
 "smart_ui": {
-"project": "<Your Project Name>",
-"options": {
-"boundingBoxes": [
-{
-"left": 100,
-"top": 500,
-"right": 800,
-"bottom": 300
-},
-{
-"left": 800,
-"top": 50,
-"right": 20,
-"bottom": 700
-}
-]
-}
+  "project": "<Your Project Name>",
+  "options": {
+    "boundingBoxes": [
+      {
+        "left": 100,
+        "top": 500,
+        "right": 800,
+        "bottom": 300
+      },
+      {
+        "left": 800,
+        "top": 50,
+        "right": 20,
+        "bottom": 700
+      }
+    ]
+  }
 }
 
 ```
@@ -290,36 +290,36 @@ bottom: 700
 
 let capabilities = {
 
-/*  ....Your Selenium capabilities go here */
+  /*  ....Your Selenium capabilities go here */
 
-"smartUI.project": "<Your Project Name>", // Your SmartUI project name
-"smartUI.options": {
-// highlight-next-line
-"ignoredBoxes": [box1, box2] // Ignore these regions during P2P compare
-}
+  "smartUI.project": "<Your Project Name>", // Your SmartUI project name
+  "smartUI.options": {
+    // highlight-next-line
+    "ignoredBoxes": [box1, box2] // Ignore these regions during P2P compare
+  }
 };
 
 ```
 
 ```json title="Make changes in your /project/lambdatest-config.json"
 "smart_ui": {
-"project": "<Your Project Name>",
-"options": {
-"ignoredBoxes": [
-{
-"left": 100,
-"top": 500,
-"right": 800,
-"bottom": 300
-},
-{
-"left": 800,
-"top": 50,
-"right": 20,
-"bottom": 700
-}
-]
-}
+  "project": "<Your Project Name>",
+  "options": {
+    "ignoredBoxes": [
+      {
+        "left": 100,
+        "top": 500,
+        "right": 800,
+        "bottom": 300
+      },
+      {
+        "left": 800,
+        "top": 50,
+        "right": 20,
+        "bottom": 700
+      }
+    ]
+  }
 }
 
 ```
@@ -335,36 +335,36 @@ You can specify the following `capability` in the following format:
 ```js title="Make changes in your  your test configuration file"
 // Bounding box sample settings
 const color = {
-r: 242,
-g: 201,
-b: 76,
-a: 1
+  r: 242,
+  g: 201,
+  b: 76,
+  a: 1
 };
 
 let capabilities = {
 
-/*  ....Your Selenium capabilities go here */
+  /*  ....Your Selenium capabilities go here */
 
-"smartUI.project": "<Your Project Name>", // Your SmartUI project name
-"smartUI.options": {
-// highlight-next-line
-"ignoreAreasColoredWith": color // Ignore pixels matching this RGBA in P2P compare
-}
+  "smartUI.project": "<Your Project Name>", // Your SmartUI project name
+  "smartUI.options": {
+    // highlight-next-line
+    "ignoreAreasColoredWith": color // Ignore pixels matching this RGBA in P2P compare
+  }
 };
 
 ```
 
 ```json title="Make changes in your /project/lambdatest-config.json"
 "smart_ui": {
-"project": "<Your Project Name>",
-"options": {
-"ignoreAreasColoredWith": {
-"r": 242,
-"g": 201,
-"b": 76,
-"a": 1
-}
-}
+  "project": "<Your Project Name>",
+  "options": {
+    "ignoreAreasColoredWith": {
+      "r": 242,
+      "g": 201,
+      "b": 76,
+      "a": 1
+    }
+  }
 }
 
 ```

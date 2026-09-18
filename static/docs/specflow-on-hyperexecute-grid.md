@@ -136,46 +136,46 @@ maxRetries: 1
 concurrency: 3
 
 env:
-NUGET_PACKAGES: '/home/ltuser/.nuget/packages/'
-NUGET_HTTP_CACHE_PATH: '/home/ltuser/.local/share/NuGet/v3-cache'
-NUGET_PLUGINS_CACHE_PATH: '/home/ltuser/.local/share/NuGet/plugins-cache'
+  NUGET_PACKAGES: '/home/ltuser/.nuget/packages/'
+  NUGET_HTTP_CACHE_PATH: '/home/ltuser/.local/share/NuGet/v3-cache'
+  NUGET_PLUGINS_CACHE_PATH: '/home/ltuser/.local/share/NuGet/plugins-cache'
 
 pre:
-- dotnet restore
-- dotnet list OnlySpecTest.csproj package > packages.txt
+ - dotnet restore
+ - dotnet list OnlySpecTest.csproj package > packages.txt
 #  - chmod 777 /tmp/NuGetScratch
 #  - nuget locals all -clear
-- dotnet build -c Release
+ - dotnet build -c Release
 
 cacheKey: '{{ checksum "packages.txt" }}'
 
 post:
-- cat yaml/linux/specflow_hyperexecute_autosplit_sample.yaml
+  - cat yaml/linux/specflow_hyperexecute_autosplit_sample.yaml
 
 mergeArtifacts: true
 
 uploadArtefacts:
-- name: Execution_Report
-path:
-- Report/**
-- name: Execution_Screenshots
-path:
-- Screenshots/**/**
+ - name: Execution_Report
+   path:
+    - Report/**
+ - name: Execution_Screenshots
+   path:
+    - Screenshots/**/**
 
 report: true
 partialReports:
-location: Report/
-type: html
-frameworkName: specflow
+  location: Report/
+  type: html
+  frameworkName: specflow
 
 # The below testDiscovery command will give the feature name in the respective feature files
 testDiscovery:
-type: raw
-mode: remote
-#Parallel execution at feature level
-#command: grep -rni 'Features' -e 'Feature:' | sed 's/.*://'
+  type: raw
+  mode: remote
+  #Parallel execution at feature level
+  #command: grep -rni 'Features' -e 'Feature:' | sed 's/.*://'
 
-command: grep -rni 'Features' -e '@' --include=\*.feature | sed 's/.*@//'
+  command: grep -rni 'Features' -e '@' --include=\*.feature | sed 's/.*@//'
 
 #Parallel execution at feature level
 #testRunnerCommand: dotnet test --filter "(Name~$test)"
@@ -245,8 +245,8 @@ The specflow-skill package includes:
 specflow-skill/
 ├── SKILL.md
 └── reference/
-├── playbook.md
-└── advanced-patterns.md
+    ├── playbook.md
+    └── advanced-patterns.md
 ```
 
 It provides structured guidance for:

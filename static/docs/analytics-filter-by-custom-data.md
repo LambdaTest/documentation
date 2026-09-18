@@ -18,16 +18,16 @@ You can use the `customData` capability to send custom data to the TestMu AI pla
 
 ```js
 {
-"capabilities": {
-"browserName": "chrome",
-"version": "latest",
-"platform": "Windows 10",
-// highlight-start
-"customData": {
-"key": "value"
-}
-// highlight-end
-}
+  "capabilities": {
+    "browserName": "chrome",
+    "version": "latest",
+    "platform": "Windows 10",
+    // highlight-start
+    "customData": {
+      "key": "value"
+    }
+    // highlight-end
+  }
 }
 
 ```

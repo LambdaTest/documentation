@@ -104,17 +104,17 @@ image: node:7.10
 
 # setup required installers
 before_script:
-- |
-cd ~/protractor-selenium-sample-gitlab
-echo 'export LT_USERNAME="{your_lambdatest_username}"' >> ~/.bashrc
-echo 'export LT_ACCESS_KEY="{your_lambda_access_key}"' >> ~/.bashrc
-npm install
-npm install -g protractor
+  - |
+    cd ~/protractor-selenium-sample-gitlab
+    echo 'export LT_USERNAME="{your_lambdatest_username}"' >> ~/.bashrc
+    echo 'export LT_ACCESS_KEY="{your_lambda_access_key}"' >> ~/.bashrc
+    npm install
+    npm install -g protractor
 
 job:
-script:
-#Running test!
-protractor single.conf.js
+  script:
+    #Running test!
+    protractor single.conf.js
 ```
 
 TestMu AI offers a [Selenium Desired Capabilities Generator](https://www.testmuai.com/capabilities-generator/) to fetch coded values for your desired test configurations. For Instance, if you select the below configurations:
@@ -133,15 +133,15 @@ Then Capabilities Generator at TestMu AI will provide you with the below program
 // Basic Test Configurations For JavaScript
 
 var capabilities = {
-"build" : "your build name", //You can edit this and assign a build name
-"name" : "your test name", // Assign a name to your Test
-"platform" : "Windows 8.1", // The operating system on which you want to test your website
-"browserName" : "Firefox", // The browser on which you want to test
-"version" : "62.0", // The browser version which you've selected to perform the test upon
-"resolution" : "1280x1024", // The resolution in which you want to run the test as per your operating system
-"selenium_version" : "3.11.0", //The version of Selenium on which the test will run
-"visual" : true,
-"firefox.driver" : v0.21.0
+    "build" : "your build name", //You can edit this and assign a build name
+    "name" : "your test name", // Assign a name to your Test
+    "platform" : "Windows 8.1", // The operating system on which you want to test your website
+    "browserName" : "Firefox", // The browser on which you want to test
+    "version" : "62.0", // The browser version which you've selected to perform the test upon
+    "resolution" : "1280x1024", // The resolution in which you want to run the test as per your operating system
+    "selenium_version" : "3.11.0", //The version of Selenium on which the test will run
+    "visual" : true,
+    "firefox.driver" : v0.21.0
 }
 ```
 
@@ -172,33 +172,33 @@ The below example of **.gitlab-ci.yml** file would demonstrate you on how to lev
 image: node:7.10
 
 before_script:
-- |
-cd /builds/qarachit/protractor-selenium-sample-gitlab
-wget https://downloads.lambdatest.com/tunnel/v3/linux/64bit/LT_Linux.zip
-#Extracting tunnel binary
-sudo apt-get install unzip
-unzip LT_Linux.zip
-#Executing tunnel library
-./LT -user ${LAMBDATEST_EMAIL} -key ${LAMBDATEST_KEY} &
-sleep 30
-#Installing Dependencies
-echo 'export LT_USERNAME="{your_lambdatest_username}"' >> ~/.bashrc
-echo 'export LT_ACCESS_KEY="{your_lambda_access_key}"' >> ~/.bashrc
-npm install
-npm install -g protractor
+  - |
+    cd /builds/qarachit/protractor-selenium-sample-gitlab
+    wget https://downloads.lambdatest.com/tunnel/v3/linux/64bit/LT_Linux.zip
+    #Extracting tunnel binary
+    sudo apt-get install unzip
+    unzip LT_Linux.zip
+    #Executing tunnel library
+    ./LT -user ${LAMBDATEST_EMAIL} -key ${LAMBDATEST_KEY} &
+    sleep 30
+    #Installing Dependencies
+    echo 'export LT_USERNAME="{your_lambdatest_username}"' >> ~/.bashrc
+    echo 'export LT_ACCESS_KEY="{your_lambda_access_key}"' >> ~/.bashrc
+    npm install
+    npm install -g protractor
 
 job:
-script:
-#Running Test!
-protractor single.conf.js
+  script:
+    #Running Test!
+    protractor single.conf.js
 ```
 
 Once, the tunnel is successfully set up. You can add the below code to your capabilities for testing internal servers on your network.
 
 ```
 "desiredCapabilities": {
-"tunnel":true
-}
+        "tunnel":true
+      }
 ```
 
 ## Parallel Testing

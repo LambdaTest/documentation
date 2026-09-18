@@ -16,6 +16,7 @@ Apart from these features, TestMu AI also offers you the
 ## Device Controls
 The Device Control feature allows you tp perform certain actions with your device  within your current test session:
 
+- **Home:** Use this option to navigate to the device's home screen during a manual session.
 - **Volume:** Adjust the device volume directly within your testing session, ensuring optimal audio levels for your tests.
 - **Lock Device :** Lock or unlock your device seamlessly during testing sessions without interrupting your workflow.
 
@@ -26,7 +27,7 @@ Capture clear screenshots of the current screen on your test device. Easily acce
 Record your entire test session for detailed playback. A timer keeps track of recording duration, allowing you to pinpoint specific moments for review. You can click on the stop button to stop the video recording.
 
 ## Gallery
-All screenshots and video recordings from test sessions are stored in the Gallery. To access, select Gallery from the left toolbar and you'll find the saved screenshots and videos. To download the screenshots or videos to your local machine, click on the Download icon. You can also mark them as bug by clicking on the Bug icon.
+All screenshots and video recordings from test sessions are stored in the Gallery. To access, select Gallery from the left toolbar and you'll find the saved screenshots and videos. To download the screenshots or videos to your local machine, click on the Download icon. You can also mark them as bug by clicking on the Bug icon. To mark multiple screenshots as bugs, select the screenshots using the checkbox option, then click "Mark as Bug."
 
 ## Mark as Bug
 This feature allows you to mark any bug in your UI during the session. You can mark the bug in your UI via different shapes, texts and of different colors. You can also configure different project management tools with your session to create a ticket for the same.
@@ -37,7 +38,7 @@ You can also share that bug, save the image to the gallery or download that scre
 The IP Geolocation feature enables you to simulate website and mobile experiences from over 45 countries by using local IP addresses. This allows you to test localized features such as pricing, languages, and product offerings. With IP Geolocation enabled, you can verify that your app's traffic is coming from a specific country, allowing for comprehensive global testing.
 
 ## Network Throttling
-TestMu AI's network throttling feature empowers you to simulate real-world network conditions (2G, 3G, LTE) during testing. This allows you to assess your application performance under varying internet speeds, ensuring a seamless user experience across different network environments. You can leverage predefined network profiles or craft custom settings for comprehensive testing.
+TestMu AI's network throttling feature empowers you to simulate real-world network conditions (Offline, Slow 3G, Fast 3G, 4G, 5G and Custom) during testing. This allows you to assess your application performance under varying internet speeds, ensuring a seamless user experience across different network environments. You can leverage predefined network profiles or craft custom settings for comprehensive testing.
 
 ## Settings
 The settings section offer the following features:

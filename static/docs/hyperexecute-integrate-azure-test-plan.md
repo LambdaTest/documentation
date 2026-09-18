@@ -18,9 +18,9 @@ To execute the Test Plan with HyperExecute, you will have to follow the below me
 
 ```yaml
 testDiscovery:
-command: testplan-discovery-win.exe <test_plan_id> <test_suite_id> <azure_org> <azure_project> <azure_access_token>
-mode: static
-type: raw
+  command: testplan-discovery-win.exe <test_plan_id> <test_suite_id> <azure_org> <azure_project> <azure_access_token>
+  mode: static
+  type: raw
 ```
 
 **Step 3:** To keep the test case distribution perfectly, make sure you pass the `dynamicAllocation` flag as `true`.

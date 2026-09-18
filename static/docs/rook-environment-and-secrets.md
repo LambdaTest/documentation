@@ -26,10 +26,10 @@ Values are stored below the global Rook home, outside the repository, and scoped
 
 ```yaml
 env:
-- variable: API_KEY
-purpose: read-only token for the staging support API
-- variable: BASE_URL
-purpose: environment to test
+  - variable: API_KEY
+    purpose: read-only token for the staging support API
+  - variable: BASE_URL
+    purpose: environment to test
 ```
 
 The `purpose` field should state the authority behind the value. A variable name alone does not tell a reviewer whether the credential can only read status or can move money.

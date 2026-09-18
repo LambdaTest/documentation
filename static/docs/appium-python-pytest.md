@@ -107,41 +107,41 @@ from appium import webdriver
 
 @pytest.fixture(scope='function')
 def test_setup_ios(request):
-test_name = request.node.name
-build = environ.get('BUILD', "Pytest IOS Sample")
-caps = {}
-caps["deviceName"] = "iPhone 11"
-caps["platformName"] = "iOS"
-caps["platformVersion"] = "14"
-caps["app"] = "lt://proverbial-ios"     #Enter the app (.ipa) url here
-caps["isRealMobile"] = True
-caps['build'] = build
-caps['name'] = test_name
-caps['project'] = project_name
-driver = webdriver.Remote("https://<username>:<accessKey>@mobile-hub.lambdatest.com/wd/hub", caps)   #Add LambdaTest username and accessKey here
-request.cls.driver = driver
+    test_name = request.node.name
+    build = environ.get('BUILD', "Pytest IOS Sample")
+    caps = {}
+    caps["deviceName"] = "iPhone 11"
+    caps["platformName"] = "iOS"
+    caps["platformVersion"] = "14"
+    caps["app"] = "lt://proverbial-ios"     #Enter the app (.ipa) url here
+    caps["isRealMobile"] = True
+    caps['build'] = build
+    caps['name'] = test_name
+    caps['project'] = project_name
+    driver = webdriver.Remote("https://<username>:<accessKey>@mobile-hub.lambdatest.com/wd/hub", caps)   #Add LambdaTest username and accessKey here
+    request.cls.driver = driver
 
-yield driver
+    yield driver
 
-def fin():
-#browser.execute_script("lambda-status=".format(str(not request.node.rep_call.failed if "passed" else "failed").lower()))
-if request.node.rep_call.failed:
-driver.execute_script('lambda-status=failed')
-else:
-driver.execute_script('lambda-status=passed')
-driver.quit()
-request.addfinalizer(fin)
+    def fin():
+        #browser.execute_script("lambda-status=".format(str(not request.node.rep_call.failed if "passed" else "failed").lower()))
+        if request.node.rep_call.failed:
+            driver.execute_script('lambda-status=failed')
+        else:
+            driver.execute_script('lambda-status=passed')
+        driver.quit()
+    request.addfinalizer(fin)
 
 @pytest.hookimpl(tryfirst=True, hookwrapper=True)
 def pytest_runtest_makereport(item, call):
-# this sets the result as a test attribute for LambdaTest reporting.
-# execute all other hooks to obtain the report object
-outcome = yield
-rep = outcome.get_result()
+    # this sets the result as a test attribute for LambdaTest reporting.
+    # execute all other hooks to obtain the report object
+    outcome = yield
+    rep = outcome.get_result()
 
-# set an report attribute for each phase of a call, which can
-# be "setup", "call", "teardown"
-setattr(item, "rep_" + rep.when, rep)
+    # set an report attribute for each phase of a call, which can
+    # be "setup", "call", "teardown"
+    setattr(item, "rep_" + rep.when, rep)
 ```
 
 ```python title="conftest.py"
@@ -151,41 +151,41 @@ from appium import webdriver
 
 @pytest.fixture(scope='function')
 def test_setup_android(request):
-test_name = request.node.name
-build = environ.get('BUILD', "Pytest Android Sample")
-caps = {}
-caps["deviceName"] = "Galaxy S21 5G"
-caps["platformName"] = "Android"
-caps["platformVersion"] = "11"
-caps["app"] = "lt://proverbial-android"   #Enter the app (.apk) url here
-caps["isRealMobile"] = True
-caps['build'] = build
-caps['name'] = test_name
-caps['project'] = project_name
-driver = webdriver.Remote("https://<username>:<accessKey>@mobile-hub.lambdatest.com/wd/hub", caps)  #Add LambdaTest username and accessKey here
-request.cls.driver = driver
+    test_name = request.node.name
+    build = environ.get('BUILD', "Pytest Android Sample")
+    caps = {}
+    caps["deviceName"] = "Galaxy S21 5G"
+    caps["platformName"] = "Android"
+    caps["platformVersion"] = "11"
+    caps["app"] = "lt://proverbial-android"   #Enter the app (.apk) url here
+    caps["isRealMobile"] = True
+    caps['build'] = build
+    caps['name'] = test_name
+    caps['project'] = project_name
+    driver = webdriver.Remote("https://<username>:<accessKey>@mobile-hub.lambdatest.com/wd/hub", caps)  #Add LambdaTest username and accessKey here
+    request.cls.driver = driver
 
-yield driver
+    yield driver
 
-def fin():
-#browser.execute_script("lambda-status=".format(str(not request.node.rep_call.failed if "passed" else "failed").lower()))
-if request.node.rep_call.failed:
-driver.execute_script('lambda-status=failed')
-else:
-driver.execute_script('lambda-status=passed')
-driver.quit()
-request.addfinalizer(fin)
+    def fin():
+        #browser.execute_script("lambda-status=".format(str(not request.node.rep_call.failed if "passed" else "failed").lower()))
+        if request.node.rep_call.failed:
+            driver.execute_script('lambda-status=failed')
+        else:
+            driver.execute_script('lambda-status=passed')
+        driver.quit()
+    request.addfinalizer(fin)
 
 @pytest.hookimpl(tryfirst=True, hookwrapper=True)
 def pytest_runtest_makereport(item, call):
-# this sets the result as a test attribute for LambdaTest reporting.
-# execute all other hooks to obtain the report object
-outcome = yield
-rep = outcome.get_result()
+    # this sets the result as a test attribute for LambdaTest reporting.
+    # execute all other hooks to obtain the report object
+    outcome = yield
+    rep = outcome.get_result()
 
-# set an report attribute for each phase of a call, which can
-# be "setup", "call", "teardown"
-setattr(item, "rep_" + rep.when, rep)
+    # set an report attribute for each phase of a call, which can
+    # be "setup", "call", "teardown"
+    setattr(item, "rep_" + rep.when, rep)
 ```
 
 ### Step 5: Configure the Test Capabilities
@@ -195,29 +195,29 @@ You can update your custom capabilities in test scripts. In this sample project,
 The capabilities object in the sample code are defined as:
 
 ```python title="iOS(.ipa)"
-caps = {
-"deviceName": "iPhone 11",
-"platformName": "iOS",
-"platformVersion": "14",
-"app": "lt://proverbial-ios"     # Enter the app (.ipa) URL here,
-"isRealMobile": True,
-"build": build,
-"name": test_name,
-"project": project_name
-}
+   caps = {
+      "deviceName": "iPhone 11",
+      "platformName": "iOS",
+      "platformVersion": "14",
+      "app": "lt://proverbial-ios"     # Enter the app (.ipa) URL here,
+      "isRealMobile": True,
+      "build": build,
+      "name": test_name,
+      "project": project_name
+   }
 ```
 
 ```python title="Android(.apk)"
-caps = {
-"deviceName": "Galaxy S21 5G",
-"platformName": "Android",
-"platformVersion": "11",
-"app": "lt://proverbial-android"     # Enter the app (.apk) URL here,
-"isRealMobile": True,
-"build": build,
-"name": test_name,
-"project": project_name
-}
+   caps = {
+      "deviceName": "Galaxy S21 5G",
+      "platformName": "Android",
+      "platformVersion": "11",
+      "app": "lt://proverbial-android"     # Enter the app (.apk) URL here,
+      "isRealMobile": True,
+      "build": build,
+      "name": test_name,
+      "project": project_name
+   }
 ```
 
 - You must add the generated **APP_URL** to the `app` capability in the config file.
@@ -256,8 +256,8 @@ The pytest-skill package includes:
 pytest-skill/
 ├── SKILL.md
 └── reference/
-├── playbook.md
-└── advanced-patterns.md
+    ├── playbook.md
+    └── advanced-patterns.md
 ```
 
 It provides structured guidance for:

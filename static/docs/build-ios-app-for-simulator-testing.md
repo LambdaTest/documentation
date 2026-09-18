@@ -57,11 +57,11 @@ If you use a CI/CD pipeline or prefer the terminal, use `xcodebuild` with the `-
 
 ```bash
 xcodebuild -project YourProject.xcodeproj \
--scheme YourScheme \
--configuration Debug \
--sdk iphonesimulator \
--arch arm64 \
-build
+           -scheme YourScheme \
+           -configuration Debug \
+           -sdk iphonesimulator \
+           -arch arm64 \
+           build
 ```
 
 If your project uses a **workspace** (e.g., with CocoaPods), replace `-project YourProject.xcodeproj` with `-workspace YourProject.xcworkspace`.
@@ -78,11 +78,11 @@ If your project uses a **workspace** (e.g., with CocoaPods), replace `-project Y
 
 ```bash
 xcodebuild -project YourProject.xcodeproj \
--scheme YourScheme \
--configuration Debug \
--sdk iphonesimulator \
--arch arm64 \
--showBuildSettings | grep "BUILT_PRODUCTS_DIR"
+           -scheme YourScheme \
+           -configuration Debug \
+           -sdk iphonesimulator \
+           -arch arm64 \
+           -showBuildSettings | grep "BUILT_PRODUCTS_DIR"
 ```
 
 **Step 4:** Compress the `.app` into a `.zip` file:

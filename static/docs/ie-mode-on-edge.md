@@ -36,25 +36,25 @@ import java.net.URL;
 import java.util.HashMap;
 
 public class IEModeTest {
-public static void main(String[] args) throws Exception {
-InternetExplorerOptions browserOptions = new InternetExplorerOptions();
-browserOptions.setPlatformName("Windows 11");
-browserOptions.setBrowserVersion("11.0");
+    public static void main(String[] args) throws Exception {
+        InternetExplorerOptions browserOptions = new InternetExplorerOptions();
+        browserOptions.setPlatformName("Windows 11");
+        browserOptions.setBrowserVersion("11.0");
 
-HashMap<String, Object> ltOptions = new HashMap<>();
-ltOptions.put("username", System.getenv("LT_USERNAME"));
-ltOptions.put("accessKey", System.getenv("LT_ACCESS_KEY"));
-ltOptions.put("project", "IE Mode Test");
-ltOptions.put("w3c", true);
-browserOptions.setCapability("LT:Options", ltOptions);
+        HashMap<String, Object> ltOptions = new HashMap<>();
+        ltOptions.put("username", System.getenv("LT_USERNAME"));
+        ltOptions.put("accessKey", System.getenv("LT_ACCESS_KEY"));
+        ltOptions.put("project", "IE Mode Test");
+        ltOptions.put("w3c", true);
+        browserOptions.setCapability("LT:Options", ltOptions);
 
-RemoteWebDriver driver = new RemoteWebDriver(
-new URL("https://hub.lambdatest.com/wd/hub"), browserOptions);
-driver.get("https://example.com");
+        RemoteWebDriver driver = new RemoteWebDriver(
+            new URL("https://hub.lambdatest.com/wd/hub"), browserOptions);
+        driver.get("https://example.com");
 
-System.out.println("Page title: " + driver.getTitle());
-driver.quit();
-}
+        System.out.println("Page title: " + driver.getTitle());
+        driver.quit();
+    }
 }
 ```
 
@@ -75,7 +75,7 @@ ltOptions.Add("w3c", true);
 browserOptions.AddAdditionalOption("LT:Options", ltOptions);
 
 IWebDriver driver = new RemoteWebDriver(
-new Uri("https://hub.lambdatest.com/wd/hub"), browserOptions);
+    new Uri("https://hub.lambdatest.com/wd/hub"), browserOptions);
 driver.Navigate().GoToUrl("https://example.com");
 
 Console.WriteLine("Page title: " + driver.Title);

@@ -38,9 +38,9 @@ Out of the box, merge is strict:
 
 ```bash
 kane-cli evidence merge \
-.testmuai/evidence/*.evidence \
---run-id nightly-2026-07-11 \
---title "Nightly regression"
+  .testmuai/evidence/*.evidence \
+  --run-id nightly-2026-07-11 \
+  --title "Nightly regression"
 ```
 
 With no `-o`, the merged pack is written to `.testmuai/evidence/.evidence`, which stays unique as long as the run id does.

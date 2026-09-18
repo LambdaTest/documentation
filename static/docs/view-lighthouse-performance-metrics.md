@@ -41,19 +41,19 @@ Below is the code snippet to trigger **Lighthouse** performance metrics on TestM
 
 ```java
 DesiredCapabilities caps = new DesiredCapabilities();
-caps.setCapability("browser", "Chrome");
-caps.setCapability("version", "86");
-caps.setCapability("platform", "macOS Catalina");
-caps.setCapability("build", "Lighthouse Performance Demo");
-caps.setCapability("name", "TestNG Test 3");
-caps.setCapability("network", true);
-caps.setCapability("visual", true);
-caps.setCapability("video", true);
-caps.setCapability("console", true);
-caps.setCapability("selenium_version", "4");
+                    caps.setCapability("browser", "Chrome");
+                    caps.setCapability("version", "86");
+                    caps.setCapability("platform", "macOS Catalina");
+                    caps.setCapability("build", "Lighthouse Performance Demo");
+                    caps.setCapability("name", "TestNG Test 3");
+                    caps.setCapability("network", true);
+                    caps.setCapability("visual", true);
+                    caps.setCapability("video", true);
+                    caps.setCapability("console", true);
+                    caps.setCapability("selenium_version", "4");
 
-// To view performance metrics
-caps.setCapability("performance", true);
+                    // To view performance metrics
+                    caps.setCapability("performance", true);
 ```
 ## How to View Lighthouse Performance Metrics on TestMu AI
 

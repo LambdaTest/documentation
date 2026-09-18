@@ -23,21 +23,21 @@ Below is an example of how to configure custom headers in your `smartui.json` fi
 
 ```json title="smartui.json"
 {
-"smartUI": {
-"project": "Your Project Name",
-"build": "Build Name"
-},
-"requestHeaders": [
-{
-"X-Custom-Header-1": "custom-value-1"
-},
-{
-"Authorization": "Bearer your-access-token"
-},
-{
-"X-Custom-Header-2": "custom-value-2"
-}
-]
+  "smartUI": {
+    "project": "Your Project Name",
+    "build": "Build Name"
+  },
+  "requestHeaders": [
+    {
+      "X-Custom-Header-1": "custom-value-1"
+    },
+    {
+      "Authorization": "Bearer your-access-token"
+    },
+    {
+        "X-Custom-Header-2": "custom-value-2"
+    }
+  ]
 }
 ````
 

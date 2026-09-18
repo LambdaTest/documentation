@@ -55,8 +55,8 @@ Redirect outgoing requests to a different URL using the `lt:intercept:redirect` 
 
 ```python
 driver.execute_script("lt:intercept:redirect", {
-"url": "https://www.google.com",
-"redirectUrl": "https://www.bing.com"
+    "url": "https://www.google.com",
+    "redirectUrl": "https://www.bing.com"
 })
 driver.get("https://www.google.com")
 ```
@@ -65,8 +65,8 @@ driver.get("https://www.google.com")
 
 ```javascript
 await driver.executeScript("lt:intercept:redirect", {
-url: "https://www.google.com",
-redirectUrl: "https://www.bing.com"
+    url: "https://www.google.com",
+    redirectUrl: "https://www.bing.com"
 });
 await driver.get("https://www.google.com");
 ```
@@ -75,8 +75,8 @@ await driver.get("https://www.google.com");
 
 ```json
 {
-"status": "success",
-"message": "Requests to 'https://www.google.com' will be redirected to 'https://www.bing.com'"
+    "status": "success",
+    "message": "Requests to 'https://www.google.com' will be redirected to 'https://www.bing.com'"
 }
 ```
 
@@ -100,15 +100,15 @@ Mock a custom response for the intercepted URL using the `lt:intercept:response`
 
 ```python
 driver.execute_script("lt:intercept:response", {
-"url": "https://www.amazon.com",
-"response": {
-"status": 200,
-"headers": {
-"Content-Type": "application/json",
-"keyheader": "valueheader"
-},
-"body": "{\"keybody\":\"valuebody\"}"
-}
+    "url": "https://www.amazon.com",
+    "response": {
+        "status": 200,
+        "headers": {
+            "Content-Type": "application/json",
+            "keyheader": "valueheader"
+        },
+        "body": "{\"keybody\":\"valuebody\"}"
+    }
 })
 driver.get("https://www.amazon.com")
 ```
@@ -117,18 +117,18 @@ driver.get("https://www.amazon.com")
 
 ```javascript
 await driver.executeScript("lt:intercept:response", {
-url: "https://jsonplaceholder.typicode.com/todos/1",
-response: {
-status: 200,
-headers: {
-"Content-Type": "application/json"
-},
-body: JSON.stringify({
-id: 999,
-title: "Custom mocked response",
-completed: true
-})
-}
+    url: "https://jsonplaceholder.typicode.com/todos/1",
+    response: {
+        status: 200,
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            id: 999,
+            title: "Custom mocked response",
+            completed: true
+        })
+    }
 });
 await driver.get("https://jsonplaceholder.typicode.com/todos/1");
 ```
@@ -137,8 +137,8 @@ await driver.get("https://jsonplaceholder.typicode.com/todos/1");
 
 ```json
 {
-"status": "success",
-"message": "Mock response configured for the specified URL"
+    "status": "success",
+    "message": "Mock response configured for the specified URL"
 }
 ```
 
@@ -159,8 +159,8 @@ Inject error responses to test how your application handles failures using the `
 
 ```python
 driver.execute_script("lt:intercept:error", {
-"url": "https://www.testmuai.com",
-"error": "TimedOut"
+    "url": "https://www.testmuai.com",
+    "error": "TimedOut"
 })
 driver.get("https://www.lambdatest.com")
 ```
@@ -169,8 +169,8 @@ driver.get("https://www.lambdatest.com")
 
 ```javascript
 await driver.executeScript("lt:intercept:error", {
-url: "https://example.com/images/*",
-error: "Failed"
+    url: "https://example.com/images/*",
+    error: "Failed"
 });
 await driver.get("https://example.com/images/photo.jpg");
 ```
@@ -179,8 +179,8 @@ await driver.get("https://example.com/images/photo.jpg");
 
 ```json
 {
-"status": "success",
-"message": "Error 'TimedOut' configured for the specified URL"
+    "status": "success",
+    "message": "Error 'TimedOut' configured for the specified URL"
 }
 ```
 
@@ -233,8 +233,8 @@ await driver.get("https://www.wikipedia.org");
 
 ```json
 {
-"status": "success",
-"message": "CPU throttled to 4x slowdown."
+    "status": "success",
+    "message": "CPU throttled to 4x slowdown."
 }
 ```
 
@@ -266,9 +266,9 @@ Alternatively, you can pass a predefined network profile name as a string (e.g.,
 
 ```python
 driver.execute_script("lambda-throttle-network", {
-"download": 1000,
-"upload": 750,
-"latency": 20
+    "download": 1000,
+    "upload": 750,
+    "latency": 20
 })
 driver.get("https://lambdatest.com")
 ```
@@ -277,9 +277,9 @@ driver.get("https://lambdatest.com")
 
 ```javascript
 await driver.executeScript("lambda-throttle-network", {
-download: 1000,
-upload: 500,
-latency: 40
+    download: 1000,
+    upload: 500,
+    latency: 40
 });
 await driver.get("https://www.cnn.com");
 ```
@@ -288,8 +288,8 @@ await driver.get("https://www.cnn.com");
 
 ```json
 {
-"status": "success",
-"message": "Network conditions set with 1000 kb/s download, 750 kb/s upload, and 20 ms latency."
+    "status": "success",
+    "message": "Network conditions set with 1000 kb/s download, 750 kb/s upload, and 20 ms latency."
 }
 ```
 
@@ -345,8 +345,8 @@ The `lt:downloadHAR` method downloads network activity data in HAR (HTTP Archive
 
 ```python
 driver.execute_script("lt:downloadHAR", {
-"job_id": "123456",
-"output_file": "network.har"
+    "job_id": "123456",
+    "output_file": "network.har"
 })
 ```
 
@@ -354,8 +354,8 @@ driver.execute_script("lt:downloadHAR", {
 
 ```javascript
 await driver.executeScript("lt:downloadHAR", {
-job_id: "123456",
-output_file: "network.har"
+    job_id: "123456",
+    output_file: "network.har"
 });
 ```
 
@@ -363,8 +363,8 @@ output_file: "network.har"
 
 ```json
 {
-"status": "success",
-"message": "HAR file downloaded as 'network.har'."
+    "status": "success",
+    "message": "HAR file downloaded as 'network.har'."
 }
 ```
 

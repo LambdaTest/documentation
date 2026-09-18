@@ -72,29 +72,29 @@ In the test script, update your test capabilities to validate your TestMu AI cre
 
 ```php
 default:
-paths:
-features: '../features/single'
-bootstrap:  '../features/bootstrap'
-context:
-parameters:
-lambdatest:
-server: "hub.lambdatest.com"
-user: "YOUR_LAMBDATEST_USERNAME"
-key: "YOUR_LAMBDATEST_ACCESS_KEY"
+   paths:
+       features: '../features/single'
+       bootstrap:  '../features/bootstrap'
+   context:
+       parameters:
+           lambdatest:
+               server: "hub.lambdatest.com"
+               user: "YOUR_LAMBDATEST_USERNAME"
+               key: "YOUR_LAMBDATEST_ACCESS_KEY"
 
-capabilities:
-build: "behat-selenium-sample"
-name: "single-behat-test"
-video: true
-visual: true
-network: true
-console: true
+               capabilities:
+                   build: "behat-selenium-sample"
+                   name: "single-behat-test"
+                   video: true
+                   visual: true
+                   network: true
+                   console: true
 
-environments:
--
-browserName: chrome
-version: 71.0
-platform: Win10
+               environments:
+                   -
+                       browserName: chrome
+                       version: 71.0
+                       platform: Win10
 ```
 
 **Capabilities Generator**

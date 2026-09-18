@@ -10,10 +10,10 @@ Each parallel test opens its own session on the grid. Your framework splits the 
 
 ```
 Your Machine
-├── Thread 1 → Chrome / Windows 11
-├── Thread 2 → Firefox / Windows 10
-├── Thread 3 → Safari / macOS Sonoma
-└── Thread 4 → Edge / Windows 11
+  ├── Thread 1 → Chrome / Windows 11
+  ├── Thread 2 → Firefox / Windows 10
+  ├── Thread 3 → Safari / macOS Sonoma
+  └── Thread 4 → Edge / Windows 11
 ```
 
 The number of sessions you can run simultaneously depends on your TestMu AI plan's concurrency limit.
@@ -29,32 +29,32 @@ TestNG uses `parallel="tests"` and `thread-count` in the `testng.xml` file to ru
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite thread-count="3" name="ParallelSuite" parallel="tests">
 
-<test name="Chrome Test">
-<parameter name="browser" value="Chrome"/>
-<parameter name="browserVersion" value="latest"/>
-<parameter name="platformName" value="Windows 11"/>
-<classes>
-<class name="com.example.SampleTest"/>
-</classes>
-</test>
+  <test name="Chrome Test">
+    <parameter name="browser" value="Chrome"/>
+    <parameter name="browserVersion" value="latest"/>
+    <parameter name="platformName" value="Windows 11"/>
+    <classes>
+      <class name="com.example.SampleTest"/>
+    </classes>
+  </test>
 
-<test name="Firefox Test">
-<parameter name="browser" value="Firefox"/>
-<parameter name="browserVersion" value="latest"/>
-<parameter name="platformName" value="Windows 10"/>
-<classes>
-<class name="com.example.SampleTest"/>
-</classes>
-</test>
+  <test name="Firefox Test">
+    <parameter name="browser" value="Firefox"/>
+    <parameter name="browserVersion" value="latest"/>
+    <parameter name="platformName" value="Windows 10"/>
+    <classes>
+      <class name="com.example.SampleTest"/>
+    </classes>
+  </test>
 
-<test name="Safari Test">
-<parameter name="browser" value="Safari"/>
-<parameter name="browserVersion" value="latest"/>
-<parameter name="platformName" value="macOS Sonoma"/>
-<classes>
-<class name="com.example.SampleTest"/>
-</classes>
-</test>
+  <test name="Safari Test">
+    <parameter name="browser" value="Safari"/>
+    <parameter name="browserVersion" value="latest"/>
+    <parameter name="platformName" value="macOS Sonoma"/>
+    <classes>
+      <class name="com.example.SampleTest"/>
+    </classes>
+  </test>
 
 </suite>
 ```
@@ -118,7 +118,7 @@ NUnit runs tests in parallel using the `[Parallelizable]` attribute:
 [Parallelizable(ParallelScope.All)]
 public class ParallelTests
 {
-// Each test method runs in its own thread
+    // Each test method runs in its own thread
 }
 ```
 

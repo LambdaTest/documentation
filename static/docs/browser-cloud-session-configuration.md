@@ -13,20 +13,20 @@ Here is a typical `create` call that sets the most common options:
 
 ```javascript
 const session = await client.sessions.create({
-adapter: 'playwright',
-dimensions: { width: 1920, height: 1080 },
-blockAds: true,
-stealthConfig: {
-humanizeInteractions: true,
-randomizeUserAgent: true,
-},
-proxy: 'http://my-proxy:8080',
-lambdatestOptions: {
-build: 'my-build',
-name: 'my-test',
-user: process.env.LT_USERNAME,
-accessKey: process.env.LT_ACCESS_KEY,
-},
+  adapter: 'playwright',
+  dimensions: { width: 1920, height: 1080 },
+  blockAds: true,
+  stealthConfig: {
+    humanizeInteractions: true,
+    randomizeUserAgent: true,
+  },
+  proxy: 'http://my-proxy:8080',
+  lambdatestOptions: {
+    build: 'my-build',
+    name: 'my-test',
+    user: process.env.LT_USERNAME,
+    accessKey: process.env.LT_ACCESS_KEY,
+  },
 });
 ```
 
@@ -91,16 +91,16 @@ After creation, you receive a Session object with these fields:
 
 ```typescript
 interface Session {
-id: string;                    // Unique session ID
-websocketUrl: string;          // WebSocket URL for adapter connection
-debugUrl: string;              // TestMu AI dashboard URL
-config: SessionConfig;         // Original configuration
-status: 'live' | 'released' | 'failed';
-createdAt: string;             // ISO timestamp
-timeout: number;               // Session timeout in ms
-dimensions: Dimensions;        // Viewport dimensions
-sessionViewerUrl?: string;     // Live session viewer URL
-userAgent?: string;            // Resolved user-agent
-stealthConfig?: StealthConfig; // Active stealth settings
+    id: string;                    // Unique session ID
+    websocketUrl: string;          // WebSocket URL for adapter connection
+    debugUrl: string;              // TestMu AI dashboard URL
+    config: SessionConfig;         // Original configuration
+    status: 'live' | 'released' | 'failed';
+    createdAt: string;             // ISO timestamp
+    timeout: number;               // Session timeout in ms
+    dimensions: Dimensions;        // Viewport dimensions
+    sessionViewerUrl?: string;     // Live session viewer URL
+    userAgent?: string;            // Resolved user-agent
+    stealthConfig?: StealthConfig; // Active stealth settings
 }
 ```

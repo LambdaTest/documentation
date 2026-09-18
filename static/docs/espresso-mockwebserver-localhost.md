@@ -16,12 +16,12 @@ Works when network is set to `true` and application uses standard HTTP libraries
 
 ```json
 {
-"app": "lt://APP_ID",
-"testSuite": "lt://TESTSUITE_ID",
-"device": ["Galaxy S21-12", "Pixel 6-13"],
-"build": "MockWebServer Test",
-"network": true,
-"localhost": true
+  "app": "lt://APP_ID",
+  "testSuite": "lt://TESTSUITE_ID",
+  "device": ["Galaxy S21-12", "Pixel 6-13"],
+  "build": "MockWebServer Test",
+  "network": true,
+  "localhost": true
 }
 ```
 
@@ -49,14 +49,14 @@ Best when localhost network logs need to be captured and there are no port confl
 
 ```json
 {
-"app": "lt://APP_ID",
-"testSuite": "lt://TESTSUITE_ID",
-"device": ["Galaxy S21-12", "Pixel 6-13"],
-"build": "MockWebServer Test",
-"network": true,
-"portForwarding": {
-"ports": [9091, 9092]
-}
+  "app": "lt://APP_ID",
+  "testSuite": "lt://TESTSUITE_ID",
+  "device": ["Galaxy S21-12", "Pixel 6-13"],
+  "build": "MockWebServer Test",
+  "network": true,
+  "portForwarding": {
+    "ports": [9091, 9092]
+  }
 }
 ```
 

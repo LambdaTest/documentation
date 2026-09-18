@@ -187,29 +187,29 @@ Sample Capabilities for both android and iOS are mentioned below -
 
 ```java
 {
-"deviceName": "Galaxy Tab S4",
-"platformName": "android",
-"platformVersion": "10",
-"app": "App_url",
-"visual": True,
-"console": True,
-"deviceOrientation": "PORTRAIT",
-"build": "new-12",
-"isRealMobile": True,
+  "deviceName": "Galaxy Tab S4",
+  "platformName": "android",
+  "platformVersion": "10",
+  "app": "App_url",
+  "visual": True,
+  "console": True,
+  "deviceOrientation": "PORTRAIT",
+  "build": "new-12",
+  "isRealMobile": True,
 }
 ```
 
 ```java
 {
-"deviceName": "iPhone 12 Mini",
-"platformName": "ios",
-"platformVersion": "14",
-"app": "App_url",
-"isRealMobile": True,
-"visual": True,
-"console": True,
-"build": "lt-web-4",
-"network": True,
+  "deviceName": "iPhone 12 Mini",
+  "platformName": "ios",
+  "platformVersion": "14",
+  "app": "App_url",
+  "isRealMobile": True,
+  "visual": True,
+  "console": True,
+  "build": "lt-web-4",
+  "network": True,
 }
 ```
 
@@ -231,8 +231,8 @@ The appium-skill package includes:
 appium-skill/
 ├── SKILL.md
 └── reference/
-├── playbook.md
-└── advanced-patterns.md
+    ├── playbook.md
+    └── advanced-patterns.md
 ```
 
 It provides structured guidance for:

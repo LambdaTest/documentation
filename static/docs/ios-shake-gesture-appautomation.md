@@ -35,14 +35,14 @@ To trigger a shake gesture, use the `lambda_executor` Appium hook with the `gest
 
 ```python
 response = driver.execute_script(
-'lambda_executor: {"action": "gestures", "arguments": {"shake": true}}'
+  'lambda_executor: {"action": "gestures", "arguments": {"shake": true}}'
 )
 # response → "shake gesture triggered successfully"
 ```
 
 ```java
 String response = (String) ((JavascriptExecutor) driver).executeScript(
-"lambda_executor: {\"action\": \"gestures\", \"arguments\": {\"shake\": true}}"
+  "lambda_executor: {\"action\": \"gestures\", \"arguments\": {\"shake\": true}}"
 );
 // response → "shake gesture triggered successfully"
 ```

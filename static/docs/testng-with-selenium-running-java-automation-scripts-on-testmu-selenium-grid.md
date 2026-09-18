@@ -66,14 +66,14 @@ Define the browser, version, and OS for your test run.
 
 ```java
 ChromeOptions browserOptions = new ChromeOptions();
-browserOptions.setPlatformName("Windows 10");
-browserOptions.setBrowserVersion("latest");
+        browserOptions.setPlatformName("Windows 10");
+        browserOptions.setBrowserVersion("latest");
 
-HashMap<String, Object> ltOptions = new HashMap<String, Object>();
-ltOptions.put("build", "TestMu AISampleApp");
-ltOptions.put("name", "TestMu AIJavaSample");
-ltOptions.put("w3c", true);
-browserOptions.setCapability("LT:Options", ltOptions);
+        HashMap<String, Object> ltOptions = new HashMap<String, Object>();
+        ltOptions.put("build", "TestMu AISampleApp");
+        ltOptions.put("name", "TestMu AIJavaSample");
+        ltOptions.put("w3c", true);
+        browserOptions.setCapability("LT:Options", ltOptions);
 ```
 
 Use the [Capabilities Generator](https://www.testmuai.com/capabilities-generator/) to auto-generate capabilities for any browser, version, and OS combination.
@@ -106,56 +106,56 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.HashMap;
 public class TestNGTodo{
-public String username = "YOUR_LAMBDATEST_USERNAME";
-public String accesskey = "YOUR_LAMBDATEST_ACCESS_KEY";
-public static RemoteWebDriver driver = null;
-public String gridURL = "@hub.lambdatest.com/wd/hub";
-boolean status = false;
-@BeforeClass
-public void setUp() throws Exception {
-ChromeOptions browserOptions = new ChromeOptions();
-browserOptions.setPlatformName("Windows 10");
-browserOptions.setBrowserVersion("latest");
+    public String username = "YOUR_LAMBDATEST_USERNAME";
+    public String accesskey = "YOUR_LAMBDATEST_ACCESS_KEY";
+    public static RemoteWebDriver driver = null;
+    public String gridURL = "@hub.lambdatest.com/wd/hub";
+    boolean status = false;
+    @BeforeClass
+    public void setUp() throws Exception {
+       ChromeOptions browserOptions = new ChromeOptions();
+        browserOptions.setPlatformName("Windows 10");
+        browserOptions.setBrowserVersion("latest");
 
-HashMap<String, Object> ltOptions = new HashMap<String, Object>();
-ltOptions.put("build", "TestMu AISampleApp");
-ltOptions.put("name", "TestMu AIJavaSample");
-ltOptions.put("w3c", true);
-browserOptions.setCapability("LT:Options", ltOptions);
-try {
-driver = new RemoteWebDriver(new URL("https://" + username + ":" + accesskey + gridURL), browserOptions);
-} catch (MalformedURLException e) {
-System.out.println("Invalid grid URL");
-} catch (Exception e) {
-System.out.println(e.getMessage());
-}
-}
-@Test
-public void testSimple() throws Exception {
-try {//Change it to production page
-driver.get("https://lambdatest.github.io/sample-todo-app/");
-//Let's mark done first two items in the list.
-driver.findElement(By.name("li1")).click();
-driver.findElement(By.name("li2")).click();
-// Let's add an item in the list.
-driver.findElement(By.id("sampletodotext")).sendKeys("Yey, Let's add it to list");
-driver.findElement(By.id("addbutton")).click();
-// Let's check that the item we added is added in the list.
-String enteredText = driver.findElementByXPath("/html/body/div/div/div/ul/li[6]/span").getText();
-if (enteredText.equals("Yey, Let's add it to list")) {
-status = true;
-}
-} catch (Exception e) {
-System.out.println(e.getMessage());
-}
-}
-@AfterClass
-public void tearDown() throws Exception {
-if (driver != null) {
-((JavascriptExecutor) driver).executeScript("lambda-status=" + status);
-driver.quit();
-}
-}
+        HashMap<String, Object> ltOptions = new HashMap<String, Object>();
+        ltOptions.put("build", "TestMu AISampleApp");
+        ltOptions.put("name", "TestMu AIJavaSample");
+        ltOptions.put("w3c", true);
+        browserOptions.setCapability("LT:Options", ltOptions);
+        try {
+            driver = new RemoteWebDriver(new URL("https://" + username + ":" + accesskey + gridURL), browserOptions);
+        } catch (MalformedURLException e) {
+            System.out.println("Invalid grid URL");
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+    }
+    @Test
+    public void testSimple() throws Exception {
+       try {//Change it to production page
+            driver.get("https://lambdatest.github.io/sample-todo-app/");
+              //Let's mark done first two items in the list.
+              driver.findElement(By.name("li1")).click();
+            driver.findElement(By.name("li2")).click();
+             // Let's add an item in the list.
+              driver.findElement(By.id("sampletodotext")).sendKeys("Yey, Let's add it to list");
+            driver.findElement(By.id("addbutton")).click();
+              // Let's check that the item we added is added in the list.
+            String enteredText = driver.findElementByXPath("/html/body/div/div/div/ul/li[6]/span").getText();
+            if (enteredText.equals("Yey, Let's add it to list")) {
+                status = true;
+            }
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+    }
+    @AfterClass
+    public void tearDown() throws Exception {
+       if (driver != null) {
+            ((JavascriptExecutor) driver).executeScript("lambda-status=" + status);
+            driver.quit();
+        }
+    }
 }
 ```
 
@@ -166,31 +166,31 @@ For parallel execution, the sample project includes a `testng.xml` that runs the
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite thread-count="3" name="LambaTestSuite" parallel="tests">
 
-<test name="WIN8TEST">
-<parameter name="browser" value="firefox"/>
-<parameter name="version" value="latest"/>
-<parameter name="platform" value="WIN8"/>
-<classes>
-<class name="LambdaTest.TestNGToDo"/>
-</classes>
-</test> <!-- Test -->
+  <test name="WIN8TEST">
+  <parameter name="browser" value="firefox"/>
+  <parameter name="version" value="latest"/>
+  <parameter name="platform" value="WIN8"/>
+    <classes>
+      <class name="LambdaTest.TestNGToDo"/>
+    </classes>
+  </test> <!-- Test -->
 
-<test name="WIN10TEST">
-<parameter name="browser" value="chrome"/>
-<parameter name="version" value="latest"/>
-<parameter name="platform" value="WIN10"/>
-<classes>
-<class name="LambdaTest.TestNGToDo"/>
-</classes>
-</test> <!-- Test -->
-<test name="MACTEST">
-<parameter name="browser" value="safari"/>
-<parameter name="version" value="latest"/>
-<parameter name="platform" value="macos 10.13"/>
-<classes>
-<class name="LambdaTest.TestNGToDo"/>
-</classes>
-</test> <!-- Test -->
+  <test name="WIN10TEST">
+  <parameter name="browser" value="chrome"/>
+  <parameter name="version" value="latest"/>
+  <parameter name="platform" value="WIN10"/>
+    <classes>
+      <class name="LambdaTest.TestNGToDo"/>
+    </classes>
+  </test> <!-- Test -->
+  <test name="MACTEST">
+  <parameter name="browser" value="safari"/>
+  <parameter name="version" value="latest"/>
+  <parameter name="platform" value="macos 10.13"/>
+    <classes>
+      <class name="LambdaTest.TestNGToDo"/>
+    </classes>
+  </test> <!-- Test -->
 
 </suite>
 ```

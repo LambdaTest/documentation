@@ -13,7 +13,7 @@ The `allowedHostnames` configuration option can be defined in your config file f
 
 ```javascript title=".smartui.json"
 {
-..// mobile or web configurations...
-"allowedHostnames": ["cdn.xyz.com"]
+  ..// mobile or web configurations...
+  "allowedHostnames": ["cdn.xyz.com"]
 }
 ```

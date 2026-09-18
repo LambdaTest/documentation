@@ -23,134 +23,134 @@ You can enable Vnet peering and Vnet linking in your account by following the pr
     **ARM Template**
 
 ```bash
-// ####################################################################################
-// ####                                                                            ####
-// ####              HyperExecute Private Cloud Vnet Peering ARM                   ####
-// ####                                                                            ####
-// ####################################################################################
+  // ####################################################################################
+  // ####                                                                            ####
+  // ####              HyperExecute Private Cloud Vnet Peering ARM                   ####
+  // ####                                                                            ####
+  // ####################################################################################
 
 {
-"$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
-"contentVersion": "1.0.0.0",
-"parameters": {
-"existingHyperExecuteVirtualNetworkName": {
-"type": "String",
-"metadata": {
-"description": "Set the HyperExecute VNet name"      }
-},
-"existingHyperExecuteVirtualNetworkResourceGroupName": {
-"type": "String",
-"metadata": {
-"description": "Sets the HyperExecute VNet Resource group"      }
-},
-"existingRemoteVirtualNetworkName": {
-"type": "String",
-"metadata": {
-"description": "Set the remote VNet name"      }
-},
-"existingRemoteVirtualNetworkResourceGroupName": {
-"type": "String",
-"metadata": {
-"description": "Sets the remote VNet Resource group"      }
-},
-"blobPrivateDnsZoneName": {
-"type": "String",
-"defaultValue": "privatelink.blob.core.windows.net",
-"metadata": {
-"description": "Sets the Private DNS zone created for Storage account's privatelink"      }
-},
-"redisPrivateDnsZoneName": {
-"type": "String",
-"defaultValue": "privatelink.redis.cache.windows.net",
-"metadata": {
-"description": "SSets the Private DNS zone created for Redis privatelink"      }
-}
-},
-"resources": [
-{
-"type": "Microsoft.Resources/deployments",
-"resourceGroup": "[parameters('existingHyperExecuteVirtualNetworkResourceGroupName')]",
-"apiVersion": "2020-10-01",
-"name": "[guid(parameters('existingHyperExecuteVirtualNetworkName'), parameters('existingHyperExecuteVirtualNetworkResourceGroupName'), 'peering')]",
-"properties": {
-"mode": "Incremental",
-"template": {
-"$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
-"contentVersion": "1.0.0.0",
-"parameters": {},
-"resources": [
-{
-"type": "Microsoft.Network/virtualNetworks/virtualNetworkPeerings",
-"apiVersion": "2021-02-01",
-"name": "[format('{0}/local-to-remote-vnet', parameters('existingHyperExecuteVirtualNetworkName'))]",
-"properties": {
-"allowVirtualNetworkAccess": true,
-"allowForwardedTraffic": false,
-"allowGatewayTransit": false,
-"useRemoteGateways": false,
-"remoteVirtualNetwork": {
-"id": "[resourceId(parameters('existingRemoteVirtualNetworkResourceGroupName'), 'Microsoft.Network/virtualNetworks', parameters('existingRemoteVirtualNetworkName'))]"                }
-}
-},
-{
-"type": "Microsoft.Network/privateDnsZones/virtualNetworkLinks",
-"apiVersion": "2020-06-01",
-"name": "[format('{0}/{1}', parameters('blobPrivateDnsZoneName'), format('{0}-link', parameters('existingRemoteVirtualNetworkName')))]",
-"location": "global",
-"properties": {
-"registrationEnabled": false,
-"virtualNetwork": {
-"id": "[resourceId(parameters('existingRemoteVirtualNetworkResourceGroupName'), 'Microsoft.Network/virtualNetworks', parameters('existingRemoteVirtualNetworkName'))]"
-}
-}
-},
-{
-"type": "Microsoft.Network/privateDnsZones/virtualNetworkLinks",
-"apiVersion": "2020-06-01",
-"name": "[format('{0}/{1}', parameters('redisPrivateDnsZoneName'), format('{0}-link', parameters('existingRemoteVirtualNetworkName')))]",
-"location": "global",
-"properties": {
-"registrationEnabled": false,
-"virtualNetwork": {
-"id": "[resourceId(parameters('existingRemoteVirtualNetworkResourceGroupName'), 'Microsoft.Network/virtualNetworks', parameters('existingRemoteVirtualNetworkName'))]"
-}
-}
-}
-]
-}
-}
-},
-{
-"type": "Microsoft.Resources/deployments",
-"resourceGroup": "[parameters('existingRemoteVirtualNetworkResourceGroupName')]",
-"apiVersion": "2020-10-01",
-"name": "[guid(parameters('existingRemoteVirtualNetworkName'), parameters('existingRemoteVirtualNetworkResourceGroupName'), 'peering')]",
-"properties": {
-"mode": "Incremental",
-"template": {
-"$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
-"contentVersion": "1.0.0.0",
-"parameters": {},
-"resources": [
-{
-"type": "Microsoft.Network/virtualNetworks/virtualNetworkPeerings",
-"apiVersion": "2021-02-01",
-"name": "[format('{0}/remote-to-local-vnet', parameters('existingRemoteVirtualNetworkName'))]",
-"properties": {
-"allowVirtualNetworkAccess": true,
-"allowForwardedTraffic": false,
-"allowGatewayTransit": false,
-"useRemoteGateways": false,
-"remoteVirtualNetwork": {
-"id": "[resourceId(parameters('existingHyperExecuteVirtualNetworkResourceGroupName'), 'Microsoft.Network/virtualNetworks', parameters('existingHyperExecuteVirtualNetworkName'))]"                }
-}
-}
-]
-}
-}
-}
-]
-}
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+      "existingHyperExecuteVirtualNetworkName": {
+        "type": "String",
+        "metadata": {
+          "description": "Set the HyperExecute VNet name"      }
+      },
+      "existingHyperExecuteVirtualNetworkResourceGroupName": {
+        "type": "String",
+        "metadata": {
+          "description": "Sets the HyperExecute VNet Resource group"      }
+      },
+      "existingRemoteVirtualNetworkName": {
+        "type": "String",
+        "metadata": {
+          "description": "Set the remote VNet name"      }
+      },
+      "existingRemoteVirtualNetworkResourceGroupName": {
+        "type": "String",
+        "metadata": {
+          "description": "Sets the remote VNet Resource group"      }
+      },
+      "blobPrivateDnsZoneName": {
+        "type": "String",
+        "defaultValue": "privatelink.blob.core.windows.net",
+        "metadata": {
+          "description": "Sets the Private DNS zone created for Storage account's privatelink"      }
+      },
+      "redisPrivateDnsZoneName": {
+        "type": "String",
+        "defaultValue": "privatelink.redis.cache.windows.net",
+        "metadata": {
+          "description": "SSets the Private DNS zone created for Redis privatelink"      }
+      }
+    },
+    "resources": [
+      {
+        "type": "Microsoft.Resources/deployments",
+        "resourceGroup": "[parameters('existingHyperExecuteVirtualNetworkResourceGroupName')]",
+        "apiVersion": "2020-10-01",
+        "name": "[guid(parameters('existingHyperExecuteVirtualNetworkName'), parameters('existingHyperExecuteVirtualNetworkResourceGroupName'), 'peering')]",
+        "properties": {
+          "mode": "Incremental",
+          "template": {
+            "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+            "contentVersion": "1.0.0.0",
+            "parameters": {},
+            "resources": [
+              {
+                "type": "Microsoft.Network/virtualNetworks/virtualNetworkPeerings",
+                "apiVersion": "2021-02-01",
+                "name": "[format('{0}/local-to-remote-vnet', parameters('existingHyperExecuteVirtualNetworkName'))]",
+                "properties": {
+                  "allowVirtualNetworkAccess": true,
+                  "allowForwardedTraffic": false,
+                  "allowGatewayTransit": false,
+                  "useRemoteGateways": false,
+                  "remoteVirtualNetwork": {
+                    "id": "[resourceId(parameters('existingRemoteVirtualNetworkResourceGroupName'), 'Microsoft.Network/virtualNetworks', parameters('existingRemoteVirtualNetworkName'))]"                }
+                }
+              },
+              {
+                "type": "Microsoft.Network/privateDnsZones/virtualNetworkLinks",
+                "apiVersion": "2020-06-01",
+                "name": "[format('{0}/{1}', parameters('blobPrivateDnsZoneName'), format('{0}-link', parameters('existingRemoteVirtualNetworkName')))]",
+                "location": "global",
+                "properties": {
+                  "registrationEnabled": false,
+                  "virtualNetwork": {
+                    "id": "[resourceId(parameters('existingRemoteVirtualNetworkResourceGroupName'), 'Microsoft.Network/virtualNetworks', parameters('existingRemoteVirtualNetworkName'))]"
+                  }
+                }
+              },
+              {
+                "type": "Microsoft.Network/privateDnsZones/virtualNetworkLinks",
+                "apiVersion": "2020-06-01",
+                "name": "[format('{0}/{1}', parameters('redisPrivateDnsZoneName'), format('{0}-link', parameters('existingRemoteVirtualNetworkName')))]",
+                "location": "global",
+                "properties": {
+                  "registrationEnabled": false,
+                  "virtualNetwork": {
+                    "id": "[resourceId(parameters('existingRemoteVirtualNetworkResourceGroupName'), 'Microsoft.Network/virtualNetworks', parameters('existingRemoteVirtualNetworkName'))]"
+                  }
+                }
+              }
+            ]
+          }
+        }
+      },
+      {
+        "type": "Microsoft.Resources/deployments",
+        "resourceGroup": "[parameters('existingRemoteVirtualNetworkResourceGroupName')]",
+        "apiVersion": "2020-10-01",
+        "name": "[guid(parameters('existingRemoteVirtualNetworkName'), parameters('existingRemoteVirtualNetworkResourceGroupName'), 'peering')]",
+        "properties": {
+          "mode": "Incremental",
+          "template": {
+            "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+            "contentVersion": "1.0.0.0",
+            "parameters": {},
+            "resources": [
+              {
+                "type": "Microsoft.Network/virtualNetworks/virtualNetworkPeerings",
+                "apiVersion": "2021-02-01",
+                "name": "[format('{0}/remote-to-local-vnet', parameters('existingRemoteVirtualNetworkName'))]",
+                "properties": {
+                  "allowVirtualNetworkAccess": true,
+                  "allowForwardedTraffic": false,
+                  "allowGatewayTransit": false,
+                  "useRemoteGateways": false,
+                  "remoteVirtualNetwork": {
+                    "id": "[resourceId(parameters('existingHyperExecuteVirtualNetworkResourceGroupName'), 'Microsoft.Network/virtualNetworks', parameters('existingHyperExecuteVirtualNetworkName'))]"                }
+                }
+              }
+            ]
+          }
+        }
+      }
+    ]
+  }
 
 ```
 

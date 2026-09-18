@@ -24,14 +24,14 @@ Pass `ignoreColors` in the snapshot options. All selector types are supported, a
 
 ```javascript
 await smartuiSnapshot(driver, "Home Page", {
-ignoreColors: {
-id:            ["price-banner"],
-class:         ["seasonal-theme"],
-cssSelector:   ["#hero .cta"],
-xpath:         ["//div[@data-testid='promo']"],
-coordinates:   ["200,350,100,400"],   // top,bottom,left,right
-entireScreenshot: true                // ignore colors across the whole image
-}
+  ignoreColors: {
+    id:            ["price-banner"],
+    class:         ["seasonal-theme"],
+    cssSelector:   ["#hero .cta"],
+    xpath:         ["//div[@data-testid='promo']"],
+    coordinates:   ["200,350,100,400"],   // top,bottom,left,right
+    entireScreenshot: true                // ignore colors across the whole image
+  }
 });
 ```
 
@@ -45,16 +45,16 @@ The hooks path additionally accepts a located `webElement` (or an array of them)
 const el = await driver.findElement(By.id("price-banner"));
 
 await driver.executeScript("smartui.takeScreenshot", {
-screenshotName: "checkout-page",
-ignoreColors: {
-id:            ["price-banner"],
-class:         ["seasonal-theme"],
-cssSelector:   ["#nav .logo"],
-xpath:         ["//div[@data-testid='promo']"],
-coordinates:   ["100,200,400,350"],   // left,top,right,bottom
-webElement:    el,                    // a located element, or an array of them
-entireScreenshot: true                // ignore colors across the whole image
-}
+  screenshotName: "checkout-page",
+  ignoreColors: {
+    id:            ["price-banner"],
+    class:         ["seasonal-theme"],
+    cssSelector:   ["#nav .logo"],
+    xpath:         ["//div[@data-testid='promo']"],
+    coordinates:   ["100,200,400,350"],   // left,top,right,bottom
+    webElement:    el,                    // a located element, or an array of them
+    entireScreenshot: true                // ignore colors across the whole image
+  }
 });
 ```
 
@@ -62,17 +62,17 @@ entireScreenshot: true                // ignore colors across the whole image
 
 ```javascript
 await page.evaluate(`lambdatest_action: ${JSON.stringify({
-action: "smartui.takeScreenshot",
-arguments: {
-screenshotName: "checkout-page",
-ignoreColors: {
-id:          ["price-banner"],
-class:       ["seasonal-theme"],
-cssSelector: ["#nav .logo"],
-xpath:       ["//div[@data-testid='promo']"],
-entireScreenshot: true              // ignore colors across the whole image
-}
-}
+  action: "smartui.takeScreenshot",
+  arguments: {
+    screenshotName: "checkout-page",
+    ignoreColors: {
+      id:          ["price-banner"],
+      class:       ["seasonal-theme"],
+      cssSelector: ["#nav .logo"],
+      xpath:       ["//div[@data-testid='promo']"],
+      entireScreenshot: true              // ignore colors across the whole image
+    }
+  }
 })}`);
 ```
 

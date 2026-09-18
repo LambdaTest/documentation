@@ -133,7 +133,7 @@ And, if you have created a project and set your **Baseline** branch name to `mas
 // Your current branch name
 $ git branch
 * <Your Current Active branch>
-<--Other branches-->
+  <--Other branches-->
 
 // Adds a new commit to your current active branch
 $ git commit -m "Your commit message"
@@ -216,7 +216,7 @@ $ git branch
 // Non-Baseline branch
 $ git checkout -b develop
 * develop
-master
+  master
 
 // Executing SmartUI Build with Non-Baseline Git branch
 $ smartui storybook http://localhost:6006 --config .smartui.json

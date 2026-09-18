@@ -105,17 +105,17 @@ Any SCIM 2.0-compliant IDP works. Use these settings:
 
 ```json
 {
-"schemas": [
-"urn:ietf:params:scim:schemas:core:2.0:User",
-"urn:ietf:params:scim:schemas:extension:LambdaTest:2.0:User"
-],
-"userName": "jane@company.com",
-"active": true,
-"name": { "givenName": "Jane", "familyName": "Doe", "formatted": "Jane Doe" },
-"urn:ietf:params:scim:schemas:extension:LambdaTest:2.0:User": {
-"OrganizationRole": "User",
-"LambdatestGroup": "Engineering"
-}
+  "schemas": [
+    "urn:ietf:params:scim:schemas:core:2.0:User",
+    "urn:ietf:params:scim:schemas:extension:LambdaTest:2.0:User"
+  ],
+  "userName": "jane@company.com",
+  "active": true,
+  "name": { "givenName": "Jane", "familyName": "Doe", "formatted": "Jane Doe" },
+  "urn:ietf:params:scim:schemas:extension:LambdaTest:2.0:User": {
+    "OrganizationRole": "User",
+    "LambdatestGroup": "Engineering"
+  }
 }
 ```
 
@@ -148,17 +148,17 @@ For PATCH operations, use the fully qualified SCIM path:
 
 ```json
 {
-"schemas": [
-"urn:ietf:params:scim:schemas:core:2.0:User",
-"urn:ietf:params:scim:schemas:extension:LambdaTest:2.0:User"
-],
-"userName": "jane@company.com",
-"active": true,
-"name": { "givenName": "Jane", "familyName": "Doe", "formatted": "Jane Doe" },
-"urn:ietf:params:scim:schemas:extension:LambdaTest:2.0:User": {
-"OrganizationRole": "User",
-"LambdatestGroup": "Engineering"
-}
+  "schemas": [
+    "urn:ietf:params:scim:schemas:core:2.0:User",
+    "urn:ietf:params:scim:schemas:extension:LambdaTest:2.0:User"
+  ],
+  "userName": "jane@company.com",
+  "active": true,
+  "name": { "givenName": "Jane", "familyName": "Doe", "formatted": "Jane Doe" },
+  "urn:ietf:params:scim:schemas:extension:LambdaTest:2.0:User": {
+    "OrganizationRole": "User",
+    "LambdatestGroup": "Engineering"
+  }
 }
 ```
 
@@ -166,18 +166,18 @@ For PATCH operations, use the fully qualified SCIM path:
 
 ```json
 {
-"schemas": [
-"urn:ietf:params:scim:schemas:core:2.0:User",
-"urn:ietf:params:scim:schemas:extension:LambdaTest:2.0:User"
-],
-"id": "23123",
-"userName": "jane@company.com",
-"active": true,
-"name": { "givenName": "Jane", "familyName": "Doe", "formatted": "Jane Doe" },
-"urn:ietf:params:scim:schemas:extension:LambdaTest:2.0:User": {
-"OrganizationRole": "User",
-"LambdatestGroup": "Engineering"
-}
+  "schemas": [
+    "urn:ietf:params:scim:schemas:core:2.0:User",
+    "urn:ietf:params:scim:schemas:extension:LambdaTest:2.0:User"
+  ],
+  "id": "23123",
+  "userName": "jane@company.com",
+  "active": true,
+  "name": { "givenName": "Jane", "familyName": "Doe", "formatted": "Jane Doe" },
+  "urn:ietf:params:scim:schemas:extension:LambdaTest:2.0:User": {
+    "OrganizationRole": "User",
+    "LambdatestGroup": "Engineering"
+  }
 }
 ```
 
@@ -187,17 +187,17 @@ For PATCH operations, use the fully qualified SCIM path:
 
 ```json
 {
-"schemas": [
-"urn:ietf:params:scim:schemas:core:2.0:User",
-"urn:ietf:params:scim:schemas:extension:LambdaTest:2.0:User"
-],
-"id": "23123",
-"userName": "jane@company.com",
-"active": true,
-"name": { "givenName": "Jane", "familyName": "Doe", "formatted": "Jane Doe" },
-"urn:ietf:params:scim:schemas:extension:LambdaTest:2.0:User": {
-"OrganizationRole": "User"
-}
+  "schemas": [
+    "urn:ietf:params:scim:schemas:core:2.0:User",
+    "urn:ietf:params:scim:schemas:extension:LambdaTest:2.0:User"
+  ],
+  "id": "23123",
+  "userName": "jane@company.com",
+  "active": true,
+  "name": { "givenName": "Jane", "familyName": "Doe", "formatted": "Jane Doe" },
+  "urn:ietf:params:scim:schemas:extension:LambdaTest:2.0:User": {
+    "OrganizationRole": "User"
+  }
 }
 ```
 
@@ -211,25 +211,25 @@ Filter by email: `?filter=userName eq "jane@company.com"`
 
 ```json
 {
-"schemas": ["urn:ietf:params:scim:api:messages:2.0:ListResponse"],
-"totalResults": 1,
-"startIndex": 1,
-"itemsPerPage": 20,
-"Resources": [
-{
-"schemas": [
-"urn:ietf:params:scim:schemas:core:2.0:User",
-"urn:ietf:params:scim:schemas:extension:LambdaTest:2.0:User"
-],
-"id": "23123",
-"userName": "jane@company.com",
-"active": true,
-"name": { "givenName": "Jane", "familyName": "Doe", "formatted": "Jane Doe" },
-"urn:ietf:params:scim:schemas:extension:LambdaTest:2.0:User": {
-"OrganizationRole": "User"
-}
-}
-]
+  "schemas": ["urn:ietf:params:scim:api:messages:2.0:ListResponse"],
+  "totalResults": 1,
+  "startIndex": 1,
+  "itemsPerPage": 20,
+  "Resources": [
+    {
+      "schemas": [
+        "urn:ietf:params:scim:schemas:core:2.0:User",
+        "urn:ietf:params:scim:schemas:extension:LambdaTest:2.0:User"
+      ],
+      "id": "23123",
+      "userName": "jane@company.com",
+      "active": true,
+      "name": { "givenName": "Jane", "familyName": "Doe", "formatted": "Jane Doe" },
+      "urn:ietf:params:scim:schemas:extension:LambdaTest:2.0:User": {
+        "OrganizationRole": "User"
+      }
+    }
+  ]
 }
 ```
 
@@ -241,11 +241,11 @@ Filter by email: `?filter=userName eq "jane@company.com"`
 
 ```json
 {
-"schemas": ["urn:ietf:params:scim:schemas:core:2.0:User"],
-"urn:ietf:params:scim:schemas:extension:LambdaTest:2.0:User": {
-"OrganizationRole": "Admin"
-},
-"active": true
+  "schemas": ["urn:ietf:params:scim:schemas:core:2.0:User"],
+  "urn:ietf:params:scim:schemas:extension:LambdaTest:2.0:User": {
+    "OrganizationRole": "Admin"
+  },
+  "active": true
 }
 ```
 
@@ -257,12 +257,12 @@ Filter by email: `?filter=userName eq "jane@company.com"`
 
 ```json
 {
-"schemas": ["urn:ietf:params:scim:api:messages:2.0:PatchOp"],
-"Operations": [
-{ "op": "Replace", "path": "active", "value": false },
-{ "op": "Replace", "path": "urn:ietf:params:scim:schemas:extension:LambdaTest:2.0:User:OrganizationRole", "value": "Guest" },
-{ "op": "Replace", "path": "urn:ietf:params:scim:schemas:extension:LambdaTest:2.0:User:LambdatestGroup", "value": "QA-Team" }
-]
+  "schemas": ["urn:ietf:params:scim:api:messages:2.0:PatchOp"],
+  "Operations": [
+    { "op": "Replace", "path": "active", "value": false },
+    { "op": "Replace", "path": "urn:ietf:params:scim:schemas:extension:LambdaTest:2.0:User:OrganizationRole", "value": "Guest" },
+    { "op": "Replace", "path": "urn:ietf:params:scim:schemas:extension:LambdaTest:2.0:User:LambdatestGroup", "value": "QA-Team" }
+  ]
 }
 ```
 
@@ -282,10 +282,10 @@ Filter by email: `?filter=userName eq "jane@company.com"`
 
 ```json
 {
-"schemas": ["urn:ietf:params:scim:api:messages:2.0:PatchOp"],
-"Operations": [
-{ "op": "Replace", "path": "active", "value": false }
-]
+  "schemas": ["urn:ietf:params:scim:api:messages:2.0:PatchOp"],
+  "Operations": [
+    { "op": "Replace", "path": "active", "value": false }
+  ]
 }
 ```
 
@@ -352,15 +352,15 @@ Once activated, you can control it from **Settings** > **Organization Settings**
 
 ```json
 {
-"schemas": [
-"urn:ietf:params:scim:schemas:core:2.0:Group",
-"urn:ietf:params:scim:schemas:extension:LambdaTest:2.0:Group"
-],
-"displayName": "eng-backend",
-"members": [{ "value": "12345" }, { "value": "67890" }],
-"urn:ietf:params:scim:schemas:extension:LambdaTest:2.0:Group": {
-"LambdatestRoles": ["User"]
-}
+  "schemas": [
+    "urn:ietf:params:scim:schemas:core:2.0:Group",
+    "urn:ietf:params:scim:schemas:extension:LambdaTest:2.0:Group"
+  ],
+  "displayName": "eng-backend",
+  "members": [{ "value": "12345" }, { "value": "67890" }],
+  "urn:ietf:params:scim:schemas:extension:LambdaTest:2.0:Group": {
+    "LambdatestRoles": ["User"]
+  }
 }
 ```
 
@@ -534,18 +534,18 @@ When a target is deleted, the mapping **will not auto-create a replacement**, ev
 
 ```json
 {
-"schemas": [
-"urn:ietf:params:scim:schemas:core:2.0:Group",
-"urn:ietf:params:scim:schemas:extension:LambdaTest:2.0:Group"
-],
-"displayName": "eng-backend",
-"members": [
-{ "value": "23123" },
-{ "value": "23456" }
-],
-"urn:ietf:params:scim:schemas:extension:LambdaTest:2.0:Group": {
-"LambdatestRoles": ["User"]
-}
+  "schemas": [
+    "urn:ietf:params:scim:schemas:core:2.0:Group",
+    "urn:ietf:params:scim:schemas:extension:LambdaTest:2.0:Group"
+  ],
+  "displayName": "eng-backend",
+  "members": [
+    { "value": "23123" },
+    { "value": "23456" }
+  ],
+  "urn:ietf:params:scim:schemas:extension:LambdaTest:2.0:Group": {
+    "LambdatestRoles": ["User"]
+  }
 }
 ```
 
@@ -553,24 +553,24 @@ When a target is deleted, the mapping **will not auto-create a replacement**, ev
 
 ```json
 {
-"schemas": [
-"urn:ietf:params:scim:schemas:core:2.0:Group",
-"urn:ietf:params:scim:schemas:extension:LambdaTest:2.0:Group"
-],
-"id": "50001",
-"displayName": "eng-backend",
-"members": [
-{ "value": "23123", "display": "jane@company.com" },
-{ "value": "23456", "display": "bob@company.com" }
-],
-"urn:ietf:params:scim:schemas:extension:LambdaTest:2.0:Group": {
-"LambdatestRoles": ["User"]
-},
-"meta": {
-"resourceType": "Group",
-"created": "2025-01-15T10:30:00Z",
-"lastModified": "2025-01-15T10:30:00Z"
-}
+  "schemas": [
+    "urn:ietf:params:scim:schemas:core:2.0:Group",
+    "urn:ietf:params:scim:schemas:extension:LambdaTest:2.0:Group"
+  ],
+  "id": "50001",
+  "displayName": "eng-backend",
+  "members": [
+    { "value": "23123", "display": "jane@company.com" },
+    { "value": "23456", "display": "bob@company.com" }
+  ],
+  "urn:ietf:params:scim:schemas:extension:LambdaTest:2.0:Group": {
+    "LambdatestRoles": ["User"]
+  },
+  "meta": {
+    "resourceType": "Group",
+    "created": "2025-01-15T10:30:00Z",
+    "lastModified": "2025-01-15T10:30:00Z"
+  }
 }
 ```
 
@@ -582,32 +582,32 @@ Filter by name: `?filter=displayName eq "eng-backend"` | Paginate: `?startIndex=
 
 ```json
 {
-"schemas": ["urn:ietf:params:scim:api:messages:2.0:ListResponse"],
-"totalResults": 1,
-"startIndex": 1,
-"itemsPerPage": 20,
-"Resources": [
-{
-"schemas": [
-"urn:ietf:params:scim:schemas:core:2.0:Group",
-"urn:ietf:params:scim:schemas:extension:LambdaTest:2.0:Group"
-],
-"id": "50001",
-"displayName": "eng-backend",
-"members": [
-{ "value": "23123", "display": "jane@company.com" },
-{ "value": "23456", "display": "bob@company.com" }
-],
-"urn:ietf:params:scim:schemas:extension:LambdaTest:2.0:Group": {
-"LambdatestRoles": ["User"]
-},
-"meta": {
-"resourceType": "Group",
-"created": "2025-01-15T10:30:00Z",
-"lastModified": "2025-01-15T10:30:00Z"
-}
-}
-]
+  "schemas": ["urn:ietf:params:scim:api:messages:2.0:ListResponse"],
+  "totalResults": 1,
+  "startIndex": 1,
+  "itemsPerPage": 20,
+  "Resources": [
+    {
+      "schemas": [
+        "urn:ietf:params:scim:schemas:core:2.0:Group",
+        "urn:ietf:params:scim:schemas:extension:LambdaTest:2.0:Group"
+      ],
+      "id": "50001",
+      "displayName": "eng-backend",
+      "members": [
+        { "value": "23123", "display": "jane@company.com" },
+        { "value": "23456", "display": "bob@company.com" }
+      ],
+      "urn:ietf:params:scim:schemas:extension:LambdaTest:2.0:Group": {
+        "LambdatestRoles": ["User"]
+      },
+      "meta": {
+        "resourceType": "Group",
+        "created": "2025-01-15T10:30:00Z",
+        "lastModified": "2025-01-15T10:30:00Z"
+      }
+    }
+  ]
 }
 ```
 
@@ -619,53 +619,53 @@ Filter by name: `?filter=displayName eq "eng-backend"` | Paginate: `?startIndex=
 
 ```json
 {
-"schemas": ["urn:ietf:params:scim:api:messages:2.0:PatchOp"],
-"Operations": [
-{
-"op": "Add",
-"path": "members",
-"value": [{ "value": "99999" }]
-}
-]
-}
-```
-
-```json
-{
-"schemas": ["urn:ietf:params:scim:api:messages:2.0:PatchOp"],
-"Operations": [
-{
-"op": "Remove",
-"path": "members",
-"value": [{ "value": "12345" }]
-}
-]
+  "schemas": ["urn:ietf:params:scim:api:messages:2.0:PatchOp"],
+  "Operations": [
+    {
+      "op": "Add",
+      "path": "members",
+      "value": [{ "value": "99999" }]
+    }
+  ]
 }
 ```
 
 ```json
 {
-"schemas": ["urn:ietf:params:scim:api:messages:2.0:PatchOp"],
-"Operations": [
-{
-"op": "Replace",
-"path": "displayName",
-"value": "eng-platform"
-}
-]
+  "schemas": ["urn:ietf:params:scim:api:messages:2.0:PatchOp"],
+  "Operations": [
+    {
+      "op": "Remove",
+      "path": "members",
+      "value": [{ "value": "12345" }]
+    }
+  ]
 }
 ```
 
 ```json
 {
-"schemas": ["urn:ietf:params:scim:api:messages:2.0:PatchOp"],
-"Operations": [
-{
-"op": "Replace",
-"path": "urn:ietf:params:scim:schemas:extension:LambdaTest:2.0:Group:LambdatestRoles",
-"value": ["Admin"]
+  "schemas": ["urn:ietf:params:scim:api:messages:2.0:PatchOp"],
+  "Operations": [
+    {
+      "op": "Replace",
+      "path": "displayName",
+      "value": "eng-platform"
+    }
+  ]
 }
-]
+```
+
+```json
+{
+  "schemas": ["urn:ietf:params:scim:api:messages:2.0:PatchOp"],
+  "Operations": [
+    {
+      "op": "Replace",
+      "path": "urn:ietf:params:scim:schemas:extension:LambdaTest:2.0:Group:LambdatestRoles",
+      "value": ["Admin"]
+    }
+  ]
 }
 ```
 

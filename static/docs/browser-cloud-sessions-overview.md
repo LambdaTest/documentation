@@ -30,19 +30,19 @@ If you have not set up your account and installed the SDK yet, [launch your firs
 
 ```
 Your Agent                          TestMu AI Cloud
-│                                      │
-├── client.sessions.create() ────────→ │  Spins up a real Chrome browser
-│                                      │  Returns session ID + WebSocket URL
-│                                      │
-├── client.puppeteer.connect() ──────→ │  Your agent drives the browser
-│   page.goto(...)                     │  via WebSocket (CDP)
-│   page.click(...)                    │
-│   page.type(...)                     │
-│                                      │
-├── browser.close() ─────────────────→ │  Browser disconnects
-│                                      │
-└── client.sessions.release() ───────→ │  Session cleaned up
-│  Resources freed
+    │                                      │
+    ├── client.sessions.create() ────────→ │  Spins up a real Chrome browser
+    │                                      │  Returns session ID + WebSocket URL
+    │                                      │
+    ├── client.puppeteer.connect() ──────→ │  Your agent drives the browser
+    │   page.goto(...)                     │  via WebSocket (CDP)
+    │   page.click(...)                    │
+    │   page.type(...)                     │
+    │                                      │
+    ├── browser.close() ─────────────────→ │  Browser disconnects
+    │                                      │
+    └── client.sessions.release() ───────→ │  Session cleaned up
+                                           │  Resources freed
 ```
 
 Your agent creates a session, connects to it using its preferred automation

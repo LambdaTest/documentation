@@ -40,18 +40,18 @@ import time
 from appium import webdriver
 
 desired_cap = {
-'w3c': True,
-'platformName': 'iOS',
-'platformVersion': '13',
-'deviceName':"iPhone 11",
-'nativeWebScreenshot':True,
-'build': 'Demo',
-'isRealMobile' : True,// real mobile device capability
-'console': True,
-'visual': True,
-'network': True,
-'tunnel' : False,
-"newCommandTimeout": 300
+  'w3c': True,
+  'platformName': 'iOS',
+  'platformVersion': '13',
+  'deviceName':"iPhone 11",
+  'nativeWebScreenshot':True,
+  'build': 'Demo',
+  'isRealMobile' : True,// real mobile device capability
+  'console': True,
+  'visual': True,
+  'network': True,
+  'tunnel' : False,
+  "newCommandTimeout": 300
 }
 
 url = "https://LT_USERNAME:LT_ACCESS_KEY@mobile-hub.lambdatest.com/wd/hub"

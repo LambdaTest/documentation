@@ -6,19 +6,19 @@ TestMu AI supports the below listed browsers, browser versions and Operating Sys
 
 ```json
 {
-"lambdatest_auth": {
-"username": "<Your LambdaTest username>",
-"access_key": "<Your LambdaTest access key>"
-},
-"browsers": [
-{
-"browser": "Chrome",
-"platform": "Windows 10",
-"versions": [
-"latest","latest-1"
-]
-}
-],
+   "lambdatest_auth": {
+      "username": "<Your LambdaTest username>",
+      "access_key": "<Your LambdaTest access key>"
+   },
+   "browsers": [
+      {
+         "browser": "Chrome",
+         "platform": "Windows 10",
+         "versions": [
+            "latest","latest-1"
+         ]
+      }
+   ],
 ```
 
 | OPERATING SYSTEM | CHROME                   | FIREFOX      | EDGE                     |
@@ -50,15 +50,15 @@ To run Cypress tests on multiple browser and OS configurations, add the *browser
 Below is the syntax for configuring the browser and platform keys in the `lambdatest-config.json` file.
 
 ```js
-"browsers": [
-{
-"browser": "Chrome",
-"platform": "Windows 10",
-"versions": [
-"latest-1"
-]
-},
-],
+   "browsers": [
+      {
+         "browser": "Chrome",
+         "platform": "Windows 10",
+         "versions": [
+            "latest-1"
+         ]
+      },
+   ],
 ```
 
 ## Using The Cypress CLI Command
@@ -81,10 +81,10 @@ WebKit is Safari's browser engine, so running your Cypress tests on WebKit shows
 
 ```js
 "browsers": [
-{ "browser": "Webkit", "platform": "Windows 11",     "versions": ["latest"] },
-{ "browser": "Webkit", "platform": "Windows 10",     "versions": ["latest"] },
-{ "browser": "Webkit", "platform": "MacOS Monterey", "versions": ["latest"] },
-{ "browser": "Webkit", "platform": "MacOS Big Sur",  "versions": ["latest"] }
+   { "browser": "Webkit", "platform": "Windows 11",     "versions": ["latest"] },
+   { "browser": "Webkit", "platform": "Windows 10",     "versions": ["latest"] },
+   { "browser": "Webkit", "platform": "MacOS Monterey", "versions": ["latest"] },
+   { "browser": "Webkit", "platform": "MacOS Big Sur",  "versions": ["latest"] }
 ]
 ```
 
@@ -92,8 +92,8 @@ WebKit runs on **Cypress v10.8.0 only**, so pin these under `run_settings.npm_de
 
 ```js
 "npm_dependencies": {
-"cypress": "10.8.0",
-"playwright-webkit": "^1.28.1"
+   "cypress": "10.8.0",
+   "playwright-webkit": "^1.28.1"
 }
 ```
 

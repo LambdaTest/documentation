@@ -189,13 +189,13 @@ runson: win
 concurrency: 1
 
 pre:
-- move agent.properties C:\Users\ltuser.ghtestVM\Downloads\acc_installer_win\ACCELQAgent\AgentInstances\agent\agent.properties #move your agent file to hyperex machines agent folder
-- acc start # start accelq agent on hyperexecute machines
+  - move agent.properties C:\Users\ltuser.ghtestVM\Downloads\acc_installer_win\ACCELQAgent\AgentInstances\agent\agent.properties #move your agent file to hyperex machines agent folder
+  - acc start # start accelq agent on hyperexecute machines
 
 testDiscovery:
-type: raw
-mode: remote
-command: echo test
+  type: raw
+  mode: remote
+  command: echo test
 
 testRunnerCommand: node $env:ACCELQ --url "https://poc.accelq.io" --userID "<Accelq UserID>" --apiKey "<Accelq API Key>" --tenantCode "poc" --jobID "<Accelq jobID>"; C:\Users\ltuser.ghtestVM\Downloads\acc_installer_win\ACCELQAgent\Dashboard\AQAgentControllerShutdown.exe;
 ```
@@ -211,19 +211,19 @@ testSuiteStep: 150
 runson: win
 
 matrix:
-jobID: ["<jobID 1>","<jobID 2>"]
-agent: [hyper1\agent.properties,hyper2\agent.properties]
+  jobID: ["<jobID 1>","<jobID 2>"]
+  agent: [hyper1\agent.properties,hyper2\agent.properties]
 
 exclusionMatrix:
-- jobID: ['<jobID 1>']
-agent: [hyper2\agent.properties]
-- jobID: ['<jobID 2>']
-agent: [hyper1\agent.properties]
+  - jobID: ['<jobID 1>']
+    agent: [hyper2\agent.properties]
+  - jobID: ['<jobID 2>']
+    agent: [hyper1\agent.properties]
 
 pre:
-- move agent.properties C:\Users\ltuser.ghtestVM\Downloads\acc_installer_win\ACCELQAgent\AgentInstances\agent\agent.properties #move your agent file to hyperex machines agent folder
-- acc start # start accelq agent on hyperexecute machines
+  - move agent.properties C:\Users\ltuser.ghtestVM\Downloads\acc_installer_win\ACCELQAgent\AgentInstances\agent\agent.properties #move your agent file to hyperex machines agent folder
+  - acc start # start accelq agent on hyperexecute machines
 
 testSuites:
-- node $env:ACCELQ --url "" --userID "" --apiKey "" --tenantCode "poc" --jobID $jobID;
+  - node $env:ACCELQ --url "" --userID "" --apiKey "" --tenantCode "poc" --jobID $jobID;
 ```

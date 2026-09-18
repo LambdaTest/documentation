@@ -34,14 +34,14 @@ If you are using SmartUI Hooks (for example Selenium `executeScript("smartui.tak
 
 ```javascript
 const capabilities = {
-browserName: 'Chrome',
-'LT:Options': {
-user: process.env.LT_USERNAME,
-accessKey: process.env.LT_ACCESS_KEY,
-visual: true,
-'smartUI.project': 'My-Project',
-ignoreType: ['smartignore']
-}
+  browserName: 'Chrome',
+  'LT:Options': {
+    user: process.env.LT_USERNAME,
+    accessKey: process.env.LT_ACCESS_KEY,
+    visual: true,
+    'smartUI.project': 'My-Project',
+    ignoreType: ['smartignore']
+  }
 };
 ```
 

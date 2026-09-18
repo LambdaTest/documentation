@@ -82,7 +82,7 @@ React components use synthetic events. Use the native input setter:
 ```javascript
 const dateInput = document.querySelector('input[name="date"]');
 const nativeInputValueSetter = Object.getOwnPropertyDescriptor(
-window.HTMLInputElement.prototype, 'value'
+  window.HTMLInputElement.prototype, 'value'
 ).set;
 nativeInputValueSetter.call(dateInput, '2026-03-15');
 dateInput.dispatchEvent(new Event('input', { bubbles: true }));
@@ -96,7 +96,7 @@ const startDate = document.querySelector('input[name="start"]');
 const endDate = document.querySelector('input[name="end"]');
 
 const setter = Object.getOwnPropertyDescriptor(
-window.HTMLInputElement.prototype, 'value'
+  window.HTMLInputElement.prototype, 'value'
 ).set;
 
 setter.call(startDate, '2026-02-01');
@@ -118,9 +118,9 @@ return 'Date range set: Feb 1 - Feb 28, 2026';
 const title = document.querySelector('h1.page-title').textContent;
 const lowercase = title.toLowerCase();
 if (lowercase === 'welcome to dashboard') {
-return 'PASS: Title in lowercase matches expected value';
+  return 'PASS: Title in lowercase matches expected value';
 } else {
-throw new Error('FAIL: Got "' + lowercase + '"');
+  throw new Error('FAIL: Got "' + lowercase + '"');
 }
 ```
 
@@ -131,9 +131,9 @@ const orderText = document.querySelector('.order-id').textContent;
 // Text is "Order #12345", extract just the number
 const orderId = orderText.replace('Order #', '');
 if (orderId.length === 5 && !isNaN(orderId)) {
-return 'PASS: Order ID is valid: ' + orderId;
+  return 'PASS: Order ID is valid: ' + orderId;
 } else {
-throw new Error('FAIL: Invalid order ID format: ' + orderId);
+  throw new Error('FAIL: Invalid order ID format: ' + orderId);
 }
 ```
 
@@ -143,9 +143,9 @@ throw new Error('FAIL: Invalid order ID format: ' + orderId);
 const actual = document.querySelector('.username').textContent.trim();
 const expected = 'john_doe';
 if (actual === expected) {
-return 'PASS: Username matches';
+  return 'PASS: Username matches';
 } else {
-throw new Error('FAIL: Expected "' + expected + '", got "' + actual + '"');
+  throw new Error('FAIL: Expected "' + expected + '", got "' + actual + '"');
 }
 ```
 
@@ -159,9 +159,9 @@ throw new Error('FAIL: Expected "' + expected + '", got "' + actual + '"');
 const rows = document.querySelectorAll('table.users-table tbody tr');
 const thirdRowFifthCol = rows[2].querySelectorAll('td')[4].textContent.trim();
 if (thirdRowFifthCol === 'Active') {
-return 'PASS: 3rd row, 5th column is "Active"';
+  return 'PASS: 3rd row, 5th column is "Active"';
 } else {
-throw new Error('FAIL: Got "' + thirdRowFifthCol + '"');
+  throw new Error('FAIL: Got "' + thirdRowFifthCol + '"');
 }
 ```
 
@@ -170,9 +170,9 @@ throw new Error('FAIL: Got "' + thirdRowFifthCol + '"');
 ```javascript
 const rowCount = document.querySelectorAll('table tbody tr').length;
 if (rowCount === 10) {
-return 'PASS: Table has 10 rows';
+  return 'PASS: Table has 10 rows';
 } else {
-throw new Error('FAIL: Table has ' + rowCount + ' rows, expected 10');
+  throw new Error('FAIL: Table has ' + rowCount + ' rows, expected 10');
 }
 ```
 
@@ -184,9 +184,9 @@ const values = cells.map(cell => cell.textContent.trim());
 const sorted = [...values].sort((a, b) => a.localeCompare(b));
 const isSorted = JSON.stringify(values) === JSON.stringify(sorted);
 if (isSorted) {
-return 'PASS: Table is sorted alphabetically by first column';
+  return 'PASS: Table is sorted alphabetically by first column';
 } else {
-throw new Error('FAIL: Table is not sorted. Got: ' + values.join(', '));
+  throw new Error('FAIL: Table is not sorted. Got: ' + values.join(', '));
 }
 ```
 
@@ -218,9 +218,9 @@ return 'Clipboard contains: ' + clipText;
 ```javascript
 const token = localStorage.getItem('authToken');
 if (token) {
-return 'Auth token exists: ' + token.substring(0, 20) + '...';
+  return 'Auth token exists: ' + token.substring(0, 20) + '...';
 } else {
-throw new Error('FAIL: No auth token in localStorage');
+  throw new Error('FAIL: No auth token in localStorage');
 }
 ```
 

@@ -40,8 +40,8 @@ Go to your `lambdatest_run.json` file and copy the `session_id`.
 
 ```json title=lambdatest_run.json
 {
-"build_id": "7724863",
-"session_id": "6c899177-047e-4432-a9a7-17776e23aae3"
+   "build_id": "7724863",
+   "session_id": "6c899177-047e-4432-a9a7-17776e23aae3"
 }
 ```
 

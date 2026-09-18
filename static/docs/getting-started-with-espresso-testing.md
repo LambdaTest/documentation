@@ -60,15 +60,15 @@ curl --location --request POST 'https://mobile-api.lambdatest.com/framework/v1/e
 --header 'Authorization: Basic BASIC_AUTH_TOKEN' \
 --header 'Content-Type: application/json' \
 --data-raw '{
-"app": "APP_ID",
-"testSuite": "TEST_SUITE_ID",
-"device": ["Galaxy S21 5G-12"],
-"queueTimeout": 10800,
-"IdleTimeout": 150,
-"deviceLog": true,
-"network": false,
-"build": "Proverbial-Espresso",
-"geoLocation": "FR"
+    "app": "APP_ID",
+    "testSuite": "TEST_SUITE_ID",
+    "device": ["Galaxy S21 5G-12"],
+    "queueTimeout": 10800,
+    "IdleTimeout": 150,
+    "deviceLog": true,
+    "network": false,
+    "build": "Proverbial-Espresso",
+    "geoLocation": "FR"
 }'
 ```
 
@@ -84,16 +84,16 @@ curl --location --request POST 'https://mobile-api.lambdatest.com/framework/v1/e
 --header 'Authorization: Basic BASIC_AUTH_TOKEN' \
 --header 'Content-Type: application/json' \
 --data-raw '{
-"app": "APP_ID",
-"testSuite": "TEST_SUITE_ID",
-"device": ["Galaxy S21 5G-12.0"],
-"isVirtualDevice": true,
-"queueTimeout": 10800,
-"IdleTimeout": 150,
-"deviceLog": true,
-"network": false,
-"build": "Proverbial-Espresso",
-"geoLocation": "FR"
+    "app": "APP_ID",
+    "testSuite": "TEST_SUITE_ID",
+    "device": ["Galaxy S21 5G-12.0"],
+    "isVirtualDevice": true,
+    "queueTimeout": 10800,
+    "IdleTimeout": 150,
+    "deviceLog": true,
+    "network": false,
+    "build": "Proverbial-Espresso",
+    "geoLocation": "FR"
 }'
 ```
 
@@ -120,15 +120,15 @@ curl --location --request POST 'https://mobile-api.lambdatest.com/framework/v1/e
 --header 'Authorization: Basic BASIC_AUTH_TOKEN' \
 --header 'Content-Type: application/json' \
 --data-raw '{
-"app": "APP_ID",
-"testSuite": "TEST_SUITE_ID",
-"device": ["Galaxy S20-10","Galaxy S20-10","Redmi Note 9-10","Galaxy S10+-10","Galaxy S7 edge-8","Galaxy S9+-8"],
-"queueTimeout": 10800,
-"IdleTimeout": 150,
-"deviceLog": true,
-"network": false,
-"build": "Proverbial-Espresso",
-"geoLocation": "FR"
+    "app": "APP_ID",
+    "testSuite": "TEST_SUITE_ID",
+    "device": ["Galaxy S20-10","Galaxy S20-10","Redmi Note 9-10","Galaxy S10+-10","Galaxy S7 edge-8","Galaxy S9+-8"],
+    "queueTimeout": 10800,
+    "IdleTimeout": 150,
+    "deviceLog": true,
+    "network": false,
+    "build": "Proverbial-Espresso",
+    "geoLocation": "FR"
 }'
 ```
 
@@ -144,16 +144,16 @@ curl --location --request POST 'https://mobile-api.lambdatest.com/framework/v1/e
 --header 'Authorization: Basic BASIC_AUTH_TOKEN' \
 --header 'Content-Type: application/json' \
 --data-raw '{
-"app": "APP_ID",
-"testSuite": "TEST_SUITE_ID",
-"device": ["Galaxy S20-10.0","Galaxy S20-10.0","Redmi Note 9-10.0","Galaxy S10+-10.0","Galaxy S7 edge-8.0","Galaxy S9+-8.0"],
-"isVirtualDevice": true,
-"queueTimeout": 10800,
-"IdleTimeout": 150,
-"deviceLog": true,
-"network": false,
-"build": "Proverbial-Espresso",
-"geoLocation": "FR"
+    "app": "APP_ID",
+    "testSuite": "TEST_SUITE_ID",
+    "device": ["Galaxy S20-10.0","Galaxy S20-10.0","Redmi Note 9-10.0","Galaxy S10+-10.0","Galaxy S7 edge-8.0","Galaxy S9+-8.0"],
+    "isVirtualDevice": true,
+    "queueTimeout": 10800,
+    "IdleTimeout": 150,
+    "deviceLog": true,
+    "network": false,
+    "build": "Proverbial-Espresso",
+    "geoLocation": "FR"
 }'
 ```
 
@@ -174,8 +174,8 @@ The espresso-skill package includes:
 espresso-skill/
 ├── SKILL.md
 └── reference/
-├── playbook.md
-└── advanced-patterns.md
+    ├── playbook.md
+    └── advanced-patterns.md
 ```
 
 It provides structured guidance for:

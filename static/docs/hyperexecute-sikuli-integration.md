@@ -32,25 +32,25 @@ maxRetries: 1
 concurrency: 1
 
 env:
-CACHE_DIR: m2_cache_dir
+  CACHE_DIR: m2_cache_dir
 
 cacheKey: '{{ checksum "pom.xml" }}'
 cacheDirectories:
-- $CACHE_DIR
+  - $CACHE_DIR
 
 runtime:
-language: java
-version: 17
+    language: java
+    version: 17
 
 pre:
-# Create the Cache directory
-- mvn -Dmaven.repo.local=./.m2 -Dmaven.test.skip=true clean install
+  # Create the Cache directory
+  - mvn -Dmaven.repo.local=./.m2 -Dmaven.test.skip=true clean install
 
 testDiscovery:
-type: raw
-mode: remote
-shell: bash
-command: grep 'Test_1' testng.xml | awk '{print$4}' | sed 's/name=//g' | sed 's/\x3e//g' | sed 's/"//' | sed 's/"//'
+  type: raw
+  mode: remote
+  shell: bash
+  command: grep 'Test_1' testng.xml | awk '{print$4}' | sed 's/name=//g' | sed 's/\x3e//g' | sed 's/"//' | sed 's/"//'
 
 testRunnerCommand: mvn test `-Dtests=$test
 ```

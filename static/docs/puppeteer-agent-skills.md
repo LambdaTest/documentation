@@ -82,8 +82,8 @@ The Agent Skill automatically handles:
 puppeteer-skill/
 ├── SKILL.md
 └── reference/
-├── playbook.md
-└── advanced-patterns.md
+    ├── playbook.md
+    └── advanced-patterns.md
 ```
 
 | Section | Details |

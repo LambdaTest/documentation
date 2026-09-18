@@ -224,11 +224,11 @@ Variables can be set in three places inside a `_test.md` file, in order of incre
 ````markdown
 ---
 variables:
-tester_email:
-value: "alice@example.com"
-tester_password:
-value: "s3cret-pa55"
-secret: true
+  tester_email:
+    value: "alice@example.com"
+  tester_password:
+    value: "s3cret-pa55"
+    secret: true
 ---
 
 ## Switch to the staging tenant
@@ -253,9 +253,9 @@ Secrets are variables with `secret: true`. They are masked in displayed output, 
 
 ```yaml
 variables:
-api_key:
-value: "sk-live-abc123"
-secret: true
+  api_key:
+    value: "sk-live-abc123"
+    secret: true
 ```
 
 ## Context
@@ -319,9 +319,9 @@ After a run, Kane CLI creates an output directory next to the test file:
 ```
 amazon_test.md
 output-amazon/
-Result.md                      # Human-readable run report
-.internal/                     # Cached recordings, do not edit
-playwright-python-code/        # Only if code_export is enabled
+  Result.md                      # Human-readable run report
+  .internal/                     # Cached recordings, do not edit
+  playwright-python-code/        # Only if code_export is enabled
 ```
 
 `output-/` is **commit-safe**. Commit it to git so teammates and CI replay the same recordings.
@@ -344,10 +344,10 @@ To check whether a test passed or where it failed, read `Result.md` instead of r
 
 ```bash
 kane-cli testmd run ./tests/checkout_test.md \
---agent \
---headless \
---on-lock-conflict wait \
---retry
+  --agent \
+  --headless \
+  --on-lock-conflict wait \
+  --retry
 ```
 
 | Flag | Purpose |
@@ -397,11 +397,11 @@ Parse errors abort **before** any browser launch with exit code `2`:
 mode: testing
 headless: true
 variables:
-username:
-value: "testuser@example.com"
-password:
-value: "s3cret!"
-secret: true
+  username:
+    value: "testuser@example.com"
+  password:
+    value: "s3cret!"
+    secret: true
 ---
 
 # Checkout flow

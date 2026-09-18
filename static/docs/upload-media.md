@@ -55,10 +55,10 @@ Below is a sample response demonstrating the return of the `media_url` parameter
 
 ```bash
 {
-"media_url": "lt://MEDIAb48ab11c599944ee9dcd26b3e2978d3c",
-"name": "sample.csv",
-"status": "success",
-"custom_id": "Sample"
+    "media_url": "lt://MEDIAb48ab11c599944ee9dcd26b3e2978d3c",
+    "name": "sample.csv",
+    "status": "success",
+    "custom_id": "Sample"
 }
 ```
 #### Using App Automation Interface

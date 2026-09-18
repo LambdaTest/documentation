@@ -100,7 +100,7 @@ The matrix runs tests concurrently on Mac, Windows, and Linux, detecting OS-spec
 
 ```yaml title="hyperexecute.yaml"
 matrix:
-os: [mac, win, linux]
+  os: [mac, win, linux]
 
 runson: ${matrix.os}
 ```
@@ -119,9 +119,9 @@ Predefining NuGet paths ensures controlled caching, reliable builds across OSes,
 
 ```yaml title="hyperexecute.yaml"
 env:
-NUGET_PACKAGES: '/home/ltuser/.nuget/packages/'
-NUGET_HTTP_CACHE_PATH: '/home/ltuser/.local/share/NuGet/v3-cache'
-NUGET_PLUGINS_CACHE_PATH: '/home/ltuser/.local/share/NuGet/plugins-cache'
+  NUGET_PACKAGES: '/home/ltuser/.nuget/packages/'
+  NUGET_HTTP_CACHE_PATH: '/home/ltuser/.local/share/NuGet/v3-cache'
+  NUGET_PLUGINS_CACHE_PATH: '/home/ltuser/.local/share/NuGet/plugins-cache'
 ```
 
 ### What Happens If We Don’t Use It
@@ -139,11 +139,11 @@ Dependencies may not be restored or projects may not build correctly if pre-step
 
 ```yaml title="hyperexecute.yaml"
 pre:
-- dotnet restore
-- dotnet list OnlySpecTest.csproj package > packages.txt
+ - dotnet restore
+ - dotnet list OnlySpecTest.csproj package > packages.txt
 #  - chmod 777 /tmp/NuGetScratch
 #  - nuget locals all -clear
-- dotnet build -c Release
+ - dotnet build -c Release
 ```
 
 - **dotnet restore** -> Restores NuGet packages
@@ -165,12 +165,12 @@ Artifacts centralize outputs like HTML reports and screenshots, enabling debug, 
 
 ```yaml title="hyperexecute.yaml"
 uploadArtefacts:
-- name: Execution_Report
-path:
-- Report/**
-- name: Execution_Screenshots
-path:
-- Screenshots/**/**
+ - name: Execution_Report
+   path:
+    - Report/**
+ - name: Execution_Screenshots
+   path:
+    - Screenshots/**/**
 ```
 
 ### What Happens If We Don’t Use It
@@ -188,9 +188,9 @@ Generates human-readable HTML reports showing pass/fail, steps, screenshots, and
 ```yaml title="hyperexecute.yaml"
 report: true
 partialReports:
-location: Report/
-type: html
-frameworkName: specflow
+  location: Report/
+  type: html
+  frameworkName: specflow
 ```
 
 ### What Happens If We Don’t Use It
@@ -207,9 +207,9 @@ Remote discovery automatically detects new @tags or features, enabling paralleli
 
 ```yaml title="hyperexecute.yaml"
 testDiscovery:
-type: raw
-mode: remote
-command: grep -rni 'Features' -e '@' --include=*.feature | sed 's/.*@//'
+  type: raw
+  mode: remote
+  command: grep -rni 'Features' -e '@' --include=*.feature | sed 's/.*@//'
 ```
 
 ### What Happens If We Don’t Use It
@@ -241,10 +241,10 @@ Projects may have diverse tagging strategies, making standard discovery unreliab
 
 ```yaml title="hyperexecute.yaml"
 testDiscovery:
-type: raw
-mode: remote
-shell: bash
-command: grep -E -w -R -A10 --include='*.feature.cs' ${tagname} AllInOneProject/features | grep 'public void' | cut -d' ' -f2- | awk '{print $3}' | sed 's/()$//'  | sed 's/TestTearDown//g'
+  type: raw
+  mode: remote
+  shell: bash
+  command: grep -E -w -R -A10 --include='*.feature.cs' ${tagname} AllInOneProject/features | grep 'public void' | cut -d' ' -f2- | awk '{print $3}' | sed 's/()$//'  | sed 's/TestTearDown//g'
 ```
 
 - Dynamically extracts test names based on tags
@@ -285,16 +285,16 @@ Configures private feeds securely to ensure reliable dependency resolution acros
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <configuration>
-<packageSources>
-<add key="nuget.org" value="https://api.nuget.org/v3/index.json" protocolVersion="3" />
-<add key="Testplayer" value="http://testplayer.jfrog.io/tcgplayer/api/nuget/nuget" />
-</packageSources>
-<packageSourceCredentials>
-<Testplayer>
-<add key="Username" value="readonlyuser" />
-<add key="ClearTextPassword" value="R3dD3ckW1ns" />
-</Testplayer>
-</packageSourceCredentials>
+  <packageSources>
+    <add key="nuget.org" value="https://api.nuget.org/v3/index.json" protocolVersion="3" />
+    <add key="Testplayer" value="http://testplayer.jfrog.io/tcgplayer/api/nuget/nuget" />
+  </packageSources>
+  <packageSourceCredentials>
+    <Testplayer>
+        <add key="Username" value="readonlyuser" />
+        <add key="ClearTextPassword" value="R3dD3ckW1ns" />
+    </Testplayer>
+  </packageSourceCredentials>
 </configuration>
 ```
 
@@ -343,8 +343,8 @@ Uploads only changed files, reducing upload time and network usage.
 
 ```yaml title="hyperexecute.yaml"
 differentialUpload:
-enabled: true
-ttlHours: 300
+  enabled: true
+  ttlHours: 300
 ```
 
 ### What Happens If We Don’t Use It
@@ -377,14 +377,14 @@ Custom function reports statuses for tracking and dashboards.
 ```java title="test.java"
 public void CleanUp(string[] tagName, ScenarioExecutionStatus scenarioStatus, string scenarioName)
 {
-string STATUS = scenarioStatus.ToString() switch
-{
-"OK" => "passed",
-"UndefinedStep" => "skipped",
-"TestError" => "failed",
-_ => "others"
-};
-((IJavaScriptExecutor)Properties.driver).ExecuteScript($"lambda-status={STATUS}");
+    string STATUS = scenarioStatus.ToString() switch
+    {
+        "OK" => "passed",
+        "UndefinedStep" => "skipped",
+        "TestError" => "failed",
+        _ => "others"
+    };
+    ((IJavaScriptExecutor)Properties.driver).ExecuteScript($"lambda-status={STATUS}");
 }
 ```
 
@@ -402,11 +402,11 @@ Generates custom reports with metadata and email notifications.
 ```yaml title="hyperexecute.yaml"
 report: true
 partialReports:
-location: GlobalPolaris/Reports
-type: html
-frameworkName: specflow-custom
+  location: GlobalPolaris/Reports
+  type: html
+  frameworkName: specflow-custom
 email:
-to: ["example@lambdatest.com"]
+  to: ["example@lambdatest.com"]
 metaInfo: ["project-name:Global Polaris Regression","project-env:QA"]
 ```
 
@@ -426,13 +426,13 @@ Ensures correct DLL is built and executed on the proper runner.
 runson: win
 
 pre:
-commands:
-- dotnet restore
-- dotnet build YourSolution.sln -c Release
+  commands:
+    - dotnet restore
+    - dotnet build YourSolution.sln -c Release
 
 test:
-commands:
-- nunit3-console.exe "bin/Release/net6.0/YourProject.dll"
+  commands:
+    - nunit3-console.exe "bin/Release/net6.0/YourProject.dll"
 ```
 
 ### What Happens If We Don’t Use It
@@ -449,14 +449,14 @@ Run each feature individually to enable parallel execution and selective reruns.
 
 ```yaml title="hyperexecute.yaml"
 matrix:
-featurefile:
-- "Features/Login.feature"
-- "Features/Search.feature"
-- "Features/Checkout.feature"
+  featurefile:
+    - "Features/Login.feature"
+    - "Features/Search.feature"
+    - "Features/Checkout.feature"
 
 test:
-commands:
-- nunit3-console.exe "bin/Release/net6.0/YourProject.dll" --where "cat == '$featurefile'"
+  commands:
+    - nunit3-console.exe "bin/Release/net6.0/YourProject.dll" --where "cat == '$featurefile'"
 ```
 
 ### What Happens If We Don’t Use It
@@ -473,8 +473,8 @@ Properly passing arguments ensures selective execution and saves results for art
 
 ```yaml title="hyperexecute.yaml"
 test:
-commands:
-- nunit3-console.exe "bin/Release/net6.0/YourProject.dll" --where "cat == 'Regression'" --result="regression-result.xml"
+  commands:
+    - nunit3-console.exe "bin/Release/net6.0/YourProject.dll" --where "cat == 'Regression'" --result="regression-result.xml"
 ```
 
 ### What Happens If We Don’t Use It

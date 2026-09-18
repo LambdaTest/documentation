@@ -33,9 +33,9 @@ To receive the Artifacts and Reports via mail, you will have to add the `email` 
 
 ```yaml
 email:
-to:
-- <your_email_id@example.com>
-- <another_email_id@example.com>
+  to:
+    - <your_email_id@example.com>
+    - <another_email_id@example.com>
 ```
 
 You can also use the `currentUser` tag to send the reports to the email ID of your choice.
@@ -44,8 +44,8 @@ You can also use the `currentUser` tag to send the reports to the email ID of yo
 
 ```yaml
 email:
-to:
-- currentUser
+  to:
+    - currentUser
 ```
 
 ## How to receive your Artifacts via Email?
@@ -58,22 +58,22 @@ Follow the below mentioned steps to receive your Artifacts via email:
 
 ```yaml
 uploadArtifacts:
-- name: Reports 1
-path:
-- ProtractorTestReport.html
-- xmlresults.xml
-email:
-to:
-- <your_email_id@example.com>
-- <another_email_id@example.com>
+  - name: Reports 1
+    path:
+      - ProtractorTestReport.html
+      - xmlresults.xml
+    email:
+      to:
+        - <your_email_id@example.com>
+        - <another_email_id@example.com>
 
-- name: Reports 2
-path:
-- ProtractorTestReport.html
-- xmlresults.xml
-email:
-to:
-- currentUser
+  - name: Reports 2
+    path:
+      - ProtractorTestReport.html
+      - xmlresults.xml
+    email:
+      to:
+        - currentUser
 ```
 
 ## How to receive your Job Report via Email?
@@ -89,13 +89,13 @@ Follow the below mentioned steps to receive your Job Reports via email:
 ```yaml
 report: true
 partialReports:
-frameworkName: testng
-location: target/surefire-reports/html
-type: html
-email:
-to:
-- <your_email_id@example.com>
-- <another_email_id@example.com>
+  frameworkName: testng
+  location: target/surefire-reports/html
+  type: html
+  email:
+    to:
+      - <your_email_id@example.com>
+      - <another_email_id@example.com>
 ```
 
 ## Correct format of entering the Email IDs
@@ -127,25 +127,25 @@ In this example, the `${email}` and `${email1}` variables are used to specify th
 ```yaml title="hyperexecute.yaml"
 report: true
 partialReports:
-location: target/surefire-reports/html
-type: html
-frameworkName: extent
+  location: target/surefire-reports/html
+  type: html
+  frameworkName: extent
 # highlight-start
-email:
-to:
-- "${email}"
-- "${email1}"
+  email:
+      to:
+        - "${email}"
+        - "${email1}"
 # highlight-end
 
 uploadArtifacts:
-- name: Reports 1
-path:
-- ProtractorTestReport.html
+  - name: Reports 1
+    path:
+      - ProtractorTestReport.html
 # highlight-start
-email:
-to:
-- "${email}"
-- "${email1}"
+    email:
+      to:
+        - "${email}"
+        - "${email1}"
 # highlight-end
 ```
 
@@ -160,23 +160,23 @@ If you have a pipeline that requires multiple email values, consider consolidati
 ```yaml title="hyperexecute.yaml"
 report: true
 partialReports:
-location: target/surefire-reports/html
-type: html
-frameworkName: extent
+  location: target/surefire-reports/html
+  type: html
+  frameworkName: extent
 # highlight-start
-email:
-to:
-- "${email}"
+  email:
+      to:
+        - "${email}"
 # highlight-end
 
 uploadArtifacts:
-- name: Reports 1
-path:
-- ProtractorTestReport.html
+  - name: Reports 1
+    path:
+      - ProtractorTestReport.html
 # highlight-start
-email:
-to:
-- "${email}"
+    email:
+      to:
+        - "${email}"
 # highlight-end
 ```
 

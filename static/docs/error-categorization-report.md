@@ -12,7 +12,7 @@ This report is generated when your job includes multiple error categories. To en
 
 ```yaml title="hyperexecute.yaml"
 errorCategorizedReport:
-enabled: true
+  enabled: true
 ```
 
 This report does not depend on the [`report: true`](/support/docs/deep-dive-into-hyperexecute-yaml/#report) flag. It will generate the error report even if you do not pass the `report: true` flag in your YAML file.

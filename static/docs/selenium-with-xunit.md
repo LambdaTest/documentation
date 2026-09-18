@@ -47,34 +47,34 @@ Update the `config.json` file with your desired capabilities:
 
 ```csharp
 {
-"server": "hub.lambdatest.com",
-"user": "LT_USERNAME",
-"key": "LT_ACCESS_KEY",
+  "server": "hub.lambdatest.com",
+  "user": "LT_USERNAME",
+  "key": "LT_ACCESS_KEY",
 
-"capabilities": {
-"lt:options": {
-"buildName": "xunit build",
-"sessionName": "lambdatest xunit sample test",
-"visual": "true",
-"plugin": "xunit:sample"
-}
-},
+  "capabilities": {
+    "lt:options": {
+      "buildName": "xunit build",
+      "sessionName": "lambdatest xunit sample test",
+      "visual": "true",
+      "plugin": "xunit:sample"
+    }
+  },
 
-"environments": [
-{
-"browserName": "chrome"
-},
-{
-"browserName": "firefox"
-},
-{
-"browserName": "safari"
-}
-],
+  "environments": [
+    {
+      "browserName": "chrome"
+    },
+    {
+      "browserName": "firefox"
+    },
+    {
+      "browserName": "safari"
+    }
+  ],
 
-"TunnelOptions": {
-"tunnel": false
-}
+  "TunnelOptions": {
+    "tunnel": false
+  }
 }
 ```
 

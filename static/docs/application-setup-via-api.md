@@ -43,20 +43,20 @@ Shown below is the response to the above cURL request.
 
 ```javascript
 {
-"metaData": {
-"type": "ios",
-"total": 1
-},
-"data": [
-{
-"app_id": "APP100245789181570497850",
-"name": "proverbial_ios.ipa",
-"type": "ios",
-"updated_at": "2022-05-10T11:19:30.000Z",
-"shared": false,
-"source": "web-client"
-}
-]
+  "metaData": {
+    "type": "ios",
+    "total": 1
+  },
+  "data": [
+    {
+      "app_id": "APP100245789181570497850",
+      "name": "proverbial_ios.ipa",
+      "type": "ios",
+      "updated_at": "2022-05-10T11:19:30.000Z",
+      "shared": false,
+      "source": "web-client"
+    }
+  ]
 }
 ```
 
@@ -86,7 +86,7 @@ Shown below is the response to the above cURL request.
 
 ```javascript
 {
-"message": "Deleted successfully."
+  "message": "Deleted successfully."
 }
 ```
 
@@ -116,12 +116,12 @@ The payload allows you to check the processing status for specific features. If 
 
 ```javascript
 {
-"data": {
-"imageinjection_ready": false, //current processing status
-"patched_url": "",
-"screenshotunblock_ready": false, //current processing status
-"status": "success"
-},
-"status": "success"
+    "data": {
+        "imageinjection_ready": false, //current processing status
+        "patched_url": "",
+        "screenshotunblock_ready": false, //current processing status
+        "status": "success"
+    },
+    "status": "success"
 }
 ```

@@ -51,13 +51,13 @@ Define the browser, version, and OS for your test run.
 
 ```java
 ChromeOptions browserOptions = new ChromeOptions();
-browserOptions.setPlatformName(platform);
-browserOptions.setBrowserVersion("latest");
+            browserOptions.setPlatformName(platform);
+            browserOptions.setBrowserVersion("latest");
 
-HashMap<String, Object> ltOptions = new HashMap<String, Object>();
-ltOptions.put("build", "Your Build Name");
-ltOptions.put("w3c", true);
-browserOptions.setCapability("LT:Options", ltOptions);
+            HashMap<String, Object> ltOptions = new HashMap<String, Object>();
+            ltOptions.put("build", "Your Build Name");
+            ltOptions.put("w3c", true);
+            browserOptions.setCapability("LT:Options", ltOptions);
 ```
 
 Use the [Capabilities Generator](https://www.testmuai.com/capabilities-generator/) to auto-generate capabilities for any browser, version, and OS combination.
@@ -99,63 +99,63 @@ import cucumber.api.testng.CucumberFeatureWrapper;
 import cucumber.api.testng.TestNGCucumberRunner;
 
 @CucumberOptions(
-features = "src/main/java/Features",
-glue = {"stepDefinitions"},
-tags = {"~@Ignore"},
-format = {
-"pretty",
-"html:target/cucumber-reports/cucumber-pretty",
-"json:target/cucumber-reports/CucumberTestReport.json",
-"rerun:target/cucumber-reports/rerun.txt"
-},plugin = "json:target/cucumber-reports/CucumberTestReport.json")
+        features = "src/main/java/Features",
+        glue = {"stepDefinitions"},
+        tags = {"~@Ignore"},
+        format = {
+                "pretty",
+                "html:target/cucumber-reports/cucumber-pretty",
+                "json:target/cucumber-reports/CucumberTestReport.json",
+                "rerun:target/cucumber-reports/rerun.txt"
+        },plugin = "json:target/cucumber-reports/CucumberTestReport.json")
 
 public class TestRunner {
 
-private TestNGCucumberRunner testNGCucumberRunner;
+    private TestNGCucumberRunner testNGCucumberRunner;
 
-public static RemoteWebDriver connection;
+    public static RemoteWebDriver connection;
 
-@BeforeClass(alwaysRun = true)
-public void setUpCucumber() {
-testNGCucumberRunner = new TestNGCucumberRunner(this.getClass());
+    @BeforeClass(alwaysRun = true)
+    public void setUpCucumber() {
+         testNGCucumberRunner = new TestNGCucumberRunner(this.getClass());
+    }
+
+    @BeforeMethod(alwaysRun = true)
+    @Parameters({ "browser", "version", "platform" })
+    public void setUpClass(String browser, String version, String platform) throws Exception {
+
+            String username = System.getenv("LT_USERNAME") == null ? "YOUR LT_USERNAME" : System.getenv("LT_USERNAME");
+            String accesskey = System.getenv("LT_ACCESS_KEY") == null ? "YOUR LT_ACCESS_KEY" : System.getenv("LT_ACCESS_KEY");
+
+            ChromeOptions browserOptions = new ChromeOptions();
+            browserOptions.setPlatformName(platform);
+            browserOptions.setBrowserVersion("latest");
+
+            HashMap<String, Object> ltOptions = new HashMap<String, Object>();
+            ltOptions.put("build", "Your Build Name");
+            ltOptions.put("w3c", true);
+            browserOptions.setCapability("LT:Options", ltOptions);
+            String gridURL = "https://" + username + ":" + accesskey + "@hub.lambdatest.com/wd/hub";
+            System.out.println(gridURL);
+            connection = new RemoteWebDriver(new URL(gridURL), browserOptions);
+            System.out.println(browserOptions);
+            System.out.println(connection);
 }
 
-@BeforeMethod(alwaysRun = true)
-@Parameters({ "browser", "version", "platform" })
-public void setUpClass(String browser, String version, String platform) throws Exception {
+    @Test(groups = "cucumber", description = "Runs Cucumber Feature", dataProvider = "features")
+    public void feature(CucumberFeatureWrapper cucumberFeature) {
+        testNGCucumberRunner.runCucumber(cucumberFeature.getCucumberFeature());
+    }
 
-String username = System.getenv("LT_USERNAME") == null ? "YOUR LT_USERNAME" : System.getenv("LT_USERNAME");
-String accesskey = System.getenv("LT_ACCESS_KEY") == null ? "YOUR LT_ACCESS_KEY" : System.getenv("LT_ACCESS_KEY");
+    @DataProvider
+    public Object[][] features() {
+        return testNGCucumberRunner.provideFeatures();
+    }
 
-ChromeOptions browserOptions = new ChromeOptions();
-browserOptions.setPlatformName(platform);
-browserOptions.setBrowserVersion("latest");
-
-HashMap<String, Object> ltOptions = new HashMap<String, Object>();
-ltOptions.put("build", "Your Build Name");
-ltOptions.put("w3c", true);
-browserOptions.setCapability("LT:Options", ltOptions);
-String gridURL = "https://" + username + ":" + accesskey + "@hub.lambdatest.com/wd/hub";
-System.out.println(gridURL);
-connection = new RemoteWebDriver(new URL(gridURL), browserOptions);
-System.out.println(browserOptions);
-System.out.println(connection);
-}
-
-@Test(groups = "cucumber", description = "Runs Cucumber Feature", dataProvider = "features")
-public void feature(CucumberFeatureWrapper cucumberFeature) {
-testNGCucumberRunner.runCucumber(cucumberFeature.getCucumberFeature());
-}
-
-@DataProvider
-public Object[][] features() {
-return testNGCucumberRunner.provideFeatures();
-}
-
-@AfterClass(alwaysRun = true)
-public void tearDownClass() throws Exception {
-testNGCucumberRunner.finish();
-}
+    @AfterClass(alwaysRun = true)
+    public void tearDownClass() throws Exception {
+        testNGCucumberRunner.finish();
+    }
 }
 ```
 
@@ -178,48 +178,48 @@ import MyRunner.*;
 
 public class ToDoStepDefinition extends TestRunner {
 
-public RemoteWebDriver driver = this.connection;
+    public RemoteWebDriver driver = this.connection;
 
-@Before
-public void updateName(Scenario scenario) {
-driver.executeScript("lambda-name="+scenario.getName());
-}
+    @Before
+    public void updateName(Scenario scenario) {
+        driver.executeScript("lambda-name="+scenario.getName());
+    }
 
-@Given("^user is on home Page$")
-public void user_already_on_home_page() {
-System.out.println(driver.getCapabilities());
-driver.get("https://lambdatest.github.io/sample-todo-app/");
+    @Given("^user is on home Page$")
+    public void user_already_on_home_page() {
+        System.out.println(driver.getCapabilities());
+        driver.get("https://lambdatest.github.io/sample-todo-app/");
 
-}
+    }
 
-@When("^select First Item$")
-public void select_first_item() {
-driver.findElement(By.name("li1")).click();
-}
+    @When("^select First Item$")
+    public void select_first_item() {
+        driver.findElement(By.name("li1")).click();
+    }
 
-@Then("^select second item$")
-public void select_second_item() {
-driver.findElement(By.name("li2")).click();
-}
+    @Then("^select second item$")
+    public void select_second_item() {
+        driver.findElement(By.name("li2")).click();
+    }
 
-@Then("^add new item$")
-public void add_new_item() {
-driver.findElement(By.id("sampletodotext")).clear();
-driver.findElement(By.id("sampletodotext")).sendKeys("Yey, Let's add it to list");
-driver.findElement(By.id("addbutton")).click();
-}
+    @Then("^add new item$")
+    public void add_new_item() {
+        driver.findElement(By.id("sampletodotext")).clear();
+        driver.findElement(By.id("sampletodotext")).sendKeys("Yey, Let's add it to list");
+        driver.findElement(By.id("addbutton")).click();
+    }
 
-@Then("^verify added item$")
-public void verify_added_item() {
-String item = driver.findElement(By.xpath("/html/body/div/div/div/ul/li[6]/span")).getText();
-Assert.assertTrue(item.contains("Yey, Let's add it to list"));
-}
+    @Then("^verify added item$")
+    public void verify_added_item() {
+        String item = driver.findElement(By.xpath("/html/body/div/div/div/ul/li[6]/span")).getText();
+        Assert.assertTrue(item.contains("Yey, Let's add it to list"));
+    }
 
-@After
-public void close_the_browser(Scenario scenario) {
-driver.executeScript("lambda-status=" + (scenario.isFailed() ? "failed" : "passed"));
-driver.quit();
-}
+    @After
+    public void close_the_browser(Scenario scenario) {
+        driver.executeScript("lambda-status=" + (scenario.isFailed() ? "failed" : "passed"));
+        driver.quit();
+    }
 
 }
 ```

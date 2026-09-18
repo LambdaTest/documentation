@@ -12,11 +12,11 @@ The customDnsMap capability uses the following format:
 
 ```bash
 "customDnsMap": {
-"google.com": "<IP>",
-"stackoverflow.com": "<IP>",
-"<domain1>": "<IP1>",
-"<domain2>": "<IP2>",
-...
+    "google.com": "<IP>",
+    "stackoverflow.com": "<IP>",
+    "<domain1>": "<IP1>",
+    "<domain2>": "<IP2>",
+    ...
 }
 ```
 
@@ -40,7 +40,7 @@ The following example shows how to redirect traffic to a staging server for the 
 
 ```bash
 "customDnsMap": {
-"example.com": "192.168.1.100"
+  "example.com": "192.168.1.100"
 }
 ```
 

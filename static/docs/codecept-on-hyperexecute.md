@@ -99,16 +99,16 @@ maxRetries: 1
 concurrency: 2
 
 pre:
-- npm install
+  - npm install
 
 cacheKey: '{{ checksum "package.json" }}'
 cacheDirectories:
-- node_modules
+  - node_modules
 
 testDiscovery:
-type: raw
-mode: remote
-command: grep -lr 'Scenario' *test.js
+  type: raw
+  mode: remote
+  command: grep -lr 'Scenario' *test.js
 
 testRunnerCommand: npx codeceptjs run $test --steps
 

@@ -103,34 +103,34 @@ An automation script file `first_steps.rb` for the sample application given abov
 ```ruby title="first_steps.rb"
 When /^I click on buttons app$/ do
 
-$driver.find_element(:id, "color").click
-#Click on Color Button
-$driver.find_element(:id, "color").click
-#Click on Geolocation Button
-$driver.find_element(:id, "geoLocation").click
-#wait of 5 seconds
-sleep(5)
-#Click on back Button
-$driver.back
-#Click on text Button to enter value
-$driver.find_element(:id, "Text").click
-#Click on Notification Button
-$driver.find_element(:id, "notification").click
-#Click on toast Button
-$driver.find_element(:id, "toast").click
-#Click on speedtest Button
-$driver.find_element(:id, "speedTest").click
-#Wait for 10 seconds
-sleep(10)
-$driver.back
-$driver.find_element(:id, "Browser").click
-sleep(5)
-$driver.find_element(:id, "url").click
-$driver.find_element(:id, "url").send_keys "https://www.testmuai.com/"
-$driver.find_element(:id, "find").click
-sleep(5)
-$driver.back
-$driver.execute_script("lambda-status=passed")
+  $driver.find_element(:id, "color").click
+  #Click on Color Button
+  $driver.find_element(:id, "color").click
+  #Click on Geolocation Button
+  $driver.find_element(:id, "geoLocation").click
+  #wait of 5 seconds
+  sleep(5)
+  #Click on back Button
+  $driver.back
+  #Click on text Button to enter value
+  $driver.find_element(:id, "Text").click
+  #Click on Notification Button
+  $driver.find_element(:id, "notification").click
+  #Click on toast Button
+  $driver.find_element(:id, "toast").click
+  #Click on speedtest Button
+  $driver.find_element(:id, "speedTest").click
+  #Wait for 10 seconds
+  sleep(10)
+  $driver.back
+  $driver.find_element(:id, "Browser").click
+  sleep(5)
+  $driver.find_element(:id, "url").click
+  $driver.find_element(:id, "url").send_keys "https://www.testmuai.com/"
+  $driver.find_element(:id, "find").click
+  sleep(5)
+  $driver.back
+  $driver.execute_script("lambda-status=passed")
 
 end
 
@@ -139,27 +139,27 @@ end
 ```ruby title="first_steps.rb"
 When /^I click on buttons app$/ do
 
-$driver.find_element(:id, "com.lambdatest.proverbial:id/color").click
-#Click on Color Button
-$driver.find_element(:id, "com.lambdatest.proverbial:id/color").click
-#Click on Geolocation Button
-$driver.find_element(:id, "com.lambdatest.proverbial:id/geoLocation").click
-#wait of 5 seconds
-sleep(5)
-#Click on back Button
-$driver.back
-#Click on text Button to enter value
-$driver.find_element(:id, "com.lambdatest.proverbial:id/Text").click
-#Click on Notification Button
-$driver.find_element(:id, "com.lambdatest.proverbial:id/notification").click
-#Click on toast Button
-$driver.find_element(:id, "com.lambdatest.proverbial:id/toast").click
-#Click on speedtest Button
-$driver.find_element(:id, "com.lambdatest.proverbial:id/speedTest").click
-#Wait for 10 seconds
-sleep(10)
-$driver.back
-$driver.execute_script("lambda-status=passed")
+  $driver.find_element(:id, "com.lambdatest.proverbial:id/color").click
+  #Click on Color Button
+  $driver.find_element(:id, "com.lambdatest.proverbial:id/color").click
+  #Click on Geolocation Button
+  $driver.find_element(:id, "com.lambdatest.proverbial:id/geoLocation").click
+  #wait of 5 seconds
+  sleep(5)
+  #Click on back Button
+  $driver.back
+  #Click on text Button to enter value
+  $driver.find_element(:id, "com.lambdatest.proverbial:id/Text").click
+  #Click on Notification Button
+  $driver.find_element(:id, "com.lambdatest.proverbial:id/notification").click
+  #Click on toast Button
+  $driver.find_element(:id, "com.lambdatest.proverbial:id/toast").click
+  #Click on speedtest Button
+  $driver.find_element(:id, "com.lambdatest.proverbial:id/speedTest").click
+  #Wait for 10 seconds
+  sleep(10)
+  $driver.back
+  $driver.execute_script("lambda-status=passed")
 
 end
 ```
@@ -177,15 +177,15 @@ key: "LT_ACCESS_KEY"   # Add Lambdtest accessKey here
 
 common_caps:
 
-"build": "br-2"
+  "build": "br-2"
 
 browser_caps:
--
-"isRealMobile": "true"
-"platform": "ios"
-"deviceName": "iPad (2017)"
-"platformVersion": "13"
-"app": "APP_URL"      # Add your app url here
+  -
+    "isRealMobile": "true"
+    "platform": "ios"
+    "deviceName": "iPad (2017)"
+    "platformVersion": "13"
+    "app": "APP_URL"      # Add your app url here
 ```
 
 ```ruby title="first.config.yml Android"
@@ -195,15 +195,15 @@ key: "LT_ACCESS_KEY"   # Add Lambdtest accessKey here
 
 common_caps:
 
-"build": "br-1"
+  "build": "br-1"
 
 browser_caps:
--
-"isRealMobile": "true"
-"platform": "android"
-"deviceName": "Galaxy S21 5G"
-"platformVersion": "11"
-"app": "APP_URL"      # Add your app url here
+  -
+    "isRealMobile": "true"
+    "platform": "android"
+    "deviceName": "Galaxy S21 5G"
+    "platformVersion": "11"
+    "app": "APP_URL"      # Add your app url here
 ```
 
 - You must add the generated **APP_URL** to the `app` capability in the config file.
@@ -234,8 +234,8 @@ The cucumber-skill package includes:
 cucumber-skill/
 ├── SKILL.md
 └── reference/
-├── playbook.md
-└── advanced-patterns.md
+    ├── playbook.md
+    └── advanced-patterns.md
 ```
 
 It provides structured guidance for:

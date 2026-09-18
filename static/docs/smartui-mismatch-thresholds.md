@@ -98,15 +98,15 @@ Set thresholds for an entire build by adding them to your test capabilities. Thi
 
 ```javascript title="Add thresholds to your LT:Options capabilities"
 let capabilities = {
-browserName: "chrome",
-"LT:Options": {
-user: process.env.LT_USERNAME,
-accessKey: process.env.LT_ACCESS_KEY,
-// highlight-next-line
-"smartUI.approvalThreshold": 2,
-// highlight-next-line
-"smartUI.rejectionThreshold": 5
-}
+    browserName: "chrome",
+    "LT:Options": {
+        user: process.env.LT_USERNAME,
+        accessKey: process.env.LT_ACCESS_KEY,
+        // highlight-next-line
+        "smartUI.approvalThreshold": 2,
+        // highlight-next-line
+        "smartUI.rejectionThreshold": 5
+    }
 };
 ```
 
@@ -124,12 +124,12 @@ capabilities.setCapability("LT:Options", ltOptions);
 
 ```python title="Add thresholds to your LT:Options capabilities"
 lt_options = {
-"user": os.environ["LT_USERNAME"],
-"accessKey": os.environ["LT_ACCESS_KEY"],
-# highlight-next-line
-"smartUI.approvalThreshold": 2,
-# highlight-next-line
-"smartUI.rejectionThreshold": 5
+    "user": os.environ["LT_USERNAME"],
+    "accessKey": os.environ["LT_ACCESS_KEY"],
+    # highlight-next-line
+    "smartUI.approvalThreshold": 2,
+    # highlight-next-line
+    "smartUI.rejectionThreshold": 5
 }
 capabilities["LT:Options"] = lt_options
 ```
@@ -137,24 +137,24 @@ capabilities["LT:Options"] = lt_options
 ```csharp title="Add thresholds to your LT:Options capabilities"
 var ltOptions = new Dictionary<string, object>
 {
-{ "user", Environment.GetEnvironmentVariable("LT_USERNAME") },
-{ "accessKey", Environment.GetEnvironmentVariable("LT_ACCESS_KEY") },
-// highlight-next-line
-{ "smartUI.approvalThreshold", 2 },
-// highlight-next-line
-{ "smartUI.rejectionThreshold", 5 }
+    { "user", Environment.GetEnvironmentVariable("LT_USERNAME") },
+    { "accessKey", Environment.GetEnvironmentVariable("LT_ACCESS_KEY") },
+    // highlight-next-line
+    { "smartUI.approvalThreshold", 2 },
+    // highlight-next-line
+    { "smartUI.rejectionThreshold", 5 }
 };
 capabilities.AddAdditionalOption("LT:Options", ltOptions);
 ```
 
 ```ruby title="Add thresholds to your LT:Options capabilities"
 lt_options = {
-user: ENV['LT_USERNAME'],
-accessKey: ENV['LT_ACCESS_KEY'],
-# highlight-next-line
-'smartUI.approvalThreshold': 2,
-# highlight-next-line
-'smartUI.rejectionThreshold': 5
+  user: ENV['LT_USERNAME'],
+  accessKey: ENV['LT_ACCESS_KEY'],
+  # highlight-next-line
+  'smartUI.approvalThreshold': 2,
+  # highlight-next-line
+  'smartUI.rejectionThreshold': 5
 }
 capabilities['LT:Options'] = lt_options
 ```
@@ -181,8 +181,8 @@ await smartuiSnapshot(driver, "Homepage");
 // Screenshot with a custom threshold for a dynamic page
 // highlight-start
 await smartuiSnapshot(driver, "Live Dashboard", {
-approvalThreshold: 5,
-rejectionThreshold: 10
+    approvalThreshold: 5,
+    rejectionThreshold: 10
 });
 // highlight-end
 ```
@@ -207,9 +207,9 @@ driver.execute_script("smartui.takeScreenshot", {"screenshotName": "Homepage"})
 # Screenshot with a custom threshold for a dynamic page
 # highlight-start
 options = {
-"screenshotName": "Live Dashboard",
-"approvalThreshold": 5,
-"rejectionThreshold": 10
+    "screenshotName": "Live Dashboard",
+    "approvalThreshold": 5,
+    "rejectionThreshold": 10
 }
 driver.execute_script("smartui.takeScreenshot", options)
 # highlight-end
@@ -223,8 +223,8 @@ SmartUISnapshot.smartuiSnapshot(driver, "Homepage");
 // highlight-start
 var options = new Dictionary<string, object>
 {
-{ "approvalThreshold", 5 },
-{ "rejectionThreshold", 10 }
+    { "approvalThreshold", 5 },
+    { "rejectionThreshold", 10 }
 };
 SmartUISnapshot.smartuiSnapshot(driver, "Live Dashboard", options);
 // highlight-end
@@ -237,8 +237,8 @@ smartui_snapshot(driver, "Homepage")
 # Screenshot with a custom threshold for a dynamic page
 # highlight-start
 smartui_snapshot(driver, "Live Dashboard", {
-approvalThreshold: 5,
-rejectionThreshold: 10
+  approvalThreshold: 5,
+  rejectionThreshold: 10
 })
 # highlight-end
 ```
@@ -250,17 +250,17 @@ You can set a strict default at the build level and relax it only for specific s
 ```javascript title="Build-level strict + screenshot-level relaxed"
 // Build-level: strict 1% approval, 3% rejection for most pages
 let capabilities = {
-browserName: "chrome",
-"LT:Options": {
-"smartUI.approvalThreshold": 1,
-"smartUI.rejectionThreshold": 3
-}
+    browserName: "chrome",
+    "LT:Options": {
+        "smartUI.approvalThreshold": 1,
+        "smartUI.rejectionThreshold": 3
+    }
 };
 
 let driver = new webdriver.Builder()
-.usingServer("https://hub.lambdatest.com/wd/hub")
-.withCapabilities(capabilities)
-.build();
+    .usingServer("https://hub.lambdatest.com/wd/hub")
+    .withCapabilities(capabilities)
+    .build();
 
 // This screenshot uses the strict build-level thresholds (1% / 3%)
 await driver.get("https://example.com/checkout");
@@ -269,10 +269,16 @@ await smartuiSnapshot(driver, "Checkout Page");
 // This screenshot overrides with relaxed thresholds for a page with ads
 await driver.get("https://example.com/homepage");
 await smartuiSnapshot(driver, "Homepage with Ads", {
-approvalThreshold: 5,
-rejectionThreshold: 15
+    approvalThreshold: 5,
+    rejectionThreshold: 15
 });
 ```
+
+## PDF Uploads
+
+PDFs uploaded with the SmartUI CLI have their own threshold options. You can set approval and rejection thresholds for a whole `smartui upload-pdf` command with `--approvalThreshold` and `--rejectionThreshold`, or for individual PDFs with a `pdf.thresholds` block in the config file. The value for a single PDF wins over the command, and the command wins over the project settings.
+
+See [Per-PDF Approval and Rejection Thresholds](/support/docs/smartui-pdf-cli-upload/#per-pdf-approval-and-rejection-thresholds) for the config format, precedence and validation rules.
 
 ## Common Use Cases
 

@@ -101,42 +101,42 @@ concurrency: 2
 
 env:
 #  PAT: ${{ .secrets.testKey }}
-TARGET_OS: LINUX
+ TARGET_OS: LINUX
 
 # Dependency caching for Windows
 cacheKey: '{{ checksum "requirements.txt" }}'
 cacheDirectories:
-- pip_cache
-- poetry_cache
+  - pip_cache
+  - poetry_cache
 pre:
-# Robot Framework and Robot Selenium Library need to be installed globally
-# Rest of the packages can be installed in venv
-- pip3 install -r requirements.txt --cache-dir pip_cache
-- poetry config virtualenvs.path poetry_cache
-- poetry install
+  # Robot Framework and Robot Selenium Library need to be installed globally
+  # Rest of the packages can be installed in venv
+  - pip3 install -r requirements.txt --cache-dir pip_cache
+  - poetry config virtualenvs.path poetry_cache
+  - poetry install
 post:
-- cat yaml/linux/robot_hyperexecute_autosplit_sample.yaml
+  - cat yaml/linux/robot_hyperexecute_autosplit_sample.yaml
 
 mergeArtifacts: true
 
 uploadArtefacts:
-- name: HTML_Reports
-path:
-- /*.html
-- name: XML_Reports
-path:
-- /*.xml
+ - name: HTML_Reports
+   path:
+    - /*.html
+ - name: XML_Reports
+   path:
+    - /*.xml
 
 report: true
 partialReports:
-type: json
-location: /
-frameworkName: extent
+    type: json
+    location: /
+    frameworkName: extent
 
 testDiscovery:
-type: raw
-mode: remote
-command: grep 'test_linux' Makefile | sed 's/\(.*\):/\1 /'
+  type: raw
+  mode: remote
+  command: grep 'test_linux' Makefile | sed 's/\(.*\):/\1 /'
 
 testRunnerCommand: make $test
 
@@ -204,8 +204,8 @@ The robot-framework-skill package includes:
 robot-framework-skill/
 ├── SKILL.md
 └── reference/
-├── playbook.md
-└── advanced-patterns.md
+    ├── playbook.md
+    └── advanced-patterns.md
 ```
 
 It provides structured guidance for:

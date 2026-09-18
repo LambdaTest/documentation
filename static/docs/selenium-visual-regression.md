@@ -418,32 +418,32 @@ git clone https://github.com/LambdaTest/smartui-node-sample
 
 ```javascript title="Please replace your capabilities in your Remote Webdriver DesiredCapabilities configuration"
 let capabilities = {
-platform: "Windows 10", // Configure your OS for Selenium test
-browserName: "chrome", // Configure your Browser for Selenium test
-version: "latest", // Configure your Browser Version for Selenium test
-visual: true, // Configure your Capture screenshot  for Selenium test
-name: "test session", // name of the test for Selenium
-build: "Automation Build", // name of the build for Selenium
-//highlight-start
-"smartUI.project": "<Your Project Name>", // Replace the name of project with the new project name
-"smartUI.build": "<Your Build Name>", // Replace the name of Build with the new Build name
-"smartUI.baseline": false, // Enable if you want to update to a new baseline build
-//highlight-end
+  platform: "Windows 10", // Configure your OS for Selenium test
+  browserName: "chrome", // Configure your Browser for Selenium test
+  version: "latest", // Configure your Browser Version for Selenium test
+  visual: true, // Configure your Capture screenshot  for Selenium test
+  name: "test session", // name of the test for Selenium
+  build: "Automation Build", // name of the build for Selenium
+  //highlight-start
+  "smartUI.project": "<Your Project Name>", // Replace the name of project with the new project name
+  "smartUI.build": "<Your Build Name>", // Replace the name of Build with the new Build name
+  "smartUI.baseline": false, // Enable if you want to update to a new baseline build
+  //highlight-end
 };
 
 // Connecting to the Lambdatest Selenium Cloud Grid with SmartUI
 let gridUrl =
-"https://" +
-"<Your Username>" +
-":" +
-"<Your Access Key>" +
-`hub.lambdatest.com/wd/hub`;
+  "https://" +
+  "<Your Username>" +
+  ":" +
+  "<Your Access Key>" +
+  `hub.lambdatest.com/wd/hub`;
 
 // Here is your Remote WebDrive Connection
 let driver = await new webdriver.Builder()
-.usingServer(gridUrl)
-.withCapabilities(capabilities)
-.build();
+  .usingServer(gridUrl)
+  .withCapabilities(capabilities)
+  .build();
 ```
 
 ```python title="Please replace your capabilities in your Remote Webdriver DesiredCapabilities configuration"
@@ -565,28 +565,28 @@ This part of the code needs to be attached below the required segment of seleniu
 
 ```javascript
 let config = {
-screenshotName: '<Name of your screenshot>'
+  screenshotName: '<Name of your screenshot>'
 };
 await driver.executeScript("smartui.takeScreenshot", config);
 ```
 
 ```python
 config = {
-'screenshotName': '<Your Screenshot Name>'
+  'screenshotName': '<Your Screenshot Name>'
 }
 driver.execute_script("smartui.takeScreenshot", config)
 ```
 
 ```ruby
 config = {
-'screenshotName' => '<Your Screenshot Name>'
+  'screenshotName' => '<Your Screenshot Name>'
 }
 driver.execute_script("smartui.takeScreenshot", config)
 ```
 
 ```csharp
 var config = new Dictionary<string, string> {
-{"screenshotName", "<Your Screenshot Name>"}
+  {"screenshotName", "<Your Screenshot Name>"}
 };
 driver.ExecuteScript("smartui.takeScreenshot", config);
 ```
@@ -663,36 +663,36 @@ Add the following **Webhook** to your test cases where you need to capture the s
 
 ```javascript
 let config = {
-screenshotName: '<Screenshot Name>',
-elementType: 'xpath',   //Choose one of: xpath, css_selector, id, class
-element: '<Required Element>'
+      screenshotName: '<Screenshot Name>',
+      elementType: 'xpath',   //Choose one of: xpath, css_selector, id, class
+      element: '<Required Element>'
 };
 await driver.executeScript("smartui.takeScreenshot", config);
 ```
 
 ```python
 config = {
-'screenshotName': '<Your Screenshot Name>',
-'elementType': 'xpath'/'css_selector'/'id'/'class', #Choose one from the following options - xpath, css_selector, id or class
-'element': '<Required Element>'                    #Add your required element here
+  'screenshotName': '<Your Screenshot Name>',
+   'elementType': 'xpath'/'css_selector'/'id'/'class', #Choose one from the following options - xpath, css_selector, id or class
+    'element': '<Required Element>'                    #Add your required element here
 }
 driver.execute_script("smartui.takeScreenshot", config)
 ```
 
 ```ruby
 config = {
-'screenshotName' => '<Your Screenshot Name>',
-'elementType'=> 'xpath'/'css_selector'/'id'/'class', #Choose one from the following options - xpath, css_selector, id or class
-'element'=> '<Required Element>'                     #Add your required element here
+  'screenshotName' => '<Your Screenshot Name>',
+    'elementType'=> 'xpath'/'css_selector'/'id'/'class', #Choose one from the following options - xpath, css_selector, id or class
+    'element'=> '<Required Element>'                     #Add your required element here
 }
 driver.execute_script("smartui.takeScreenshot", config)
 ```
 
 ```csharp
 var config = new Dictionary<string, string> {
-{"screenshotName", "<Your Screenshot Name>"},
-{"elementType","xpath"/"css_selector"/"id"/"class"},       //Choose one from the following options - xpath, css_selector, id or class
-{"element", "<Required Element>"}                        //Add your required element here
+  {"screenshotName", "<Your Screenshot Name>"},
+  {"elementType","xpath"/"css_selector"/"id"/"class"},       //Choose one from the following options - xpath, css_selector, id or class
+    {"element", "<Required Element>"}                        //Add your required element here
 };
 driver.ExecuteScript("smartui.takeScreenshot", config);
 ```
@@ -761,22 +761,22 @@ The following webhook will return the status of the screenshot captured. The sta
 
 ```json
 {
-screenshotsData: [
-{
-screenshotName: '<Your Screenshot Name>',
-screenshotURL: '<Link to the screenshot captured>',
-screenshotStatus: 'Changes found', // Status of the screenshot
-misMatchPercentage: 10.04, // Percentage of mismatch in the screenshot
-threshold: 100,            // Threshold set for the screenshot
-browserName: 'chrome',     // Browser used for capturing the screenshot
-resolution: '1920x1080'    // Resolution of the screenshot
-}
+  screenshotsData: [
+    {
+      screenshotName: '<Your Screenshot Name>',
+      screenshotURL: '<Link to the screenshot captured>',
+      screenshotStatus: 'Changes found', // Status of the screenshot
+      misMatchPercentage: 10.04, // Percentage of mismatch in the screenshot
+      threshold: 100,            // Threshold set for the screenshot
+      browserName: 'chrome',     // Browser used for capturing the screenshot
+      resolution: '1920x1080'    // Resolution of the screenshot
+    }
 
-../Other Screenshots
-],
-buildId: '<Your Build ID>',
-buildName: '<Your Build Name>',
-projectName: '<Name of the Project>'
+    ../Other Screenshots
+  ],
+  buildId: '<Your Build ID>',
+  buildName: '<Your Build Name>',
+  projectName: '<Name of the Project>'
 }
 ```
 
@@ -820,11 +820,11 @@ This may take a few seconds to process the screenshot. Please ensure that you ha
 **Example:**
 ```javascript
 let capabilities = {
-visual: true,
-name: "Homepage Visual Test",
-build: "Release 1.0",
-"smartUI.project": "MyProject",
-"smartUI.build": "Build-1.0"
+  visual: true,
+  name: "Homepage Visual Test",
+  build: "Release 1.0",
+  "smartUI.project": "MyProject",
+  "smartUI.build": "Build-1.0"
 };
 ```
 
@@ -874,8 +874,8 @@ build: "Release 1.0",
 1. Verify `visual: true` is set in capabilities:
 ```javascript
 let capabilities = {
-visual: true, // Must be set
-// ... other capabilities
+  visual: true, // Must be set
+  // ... other capabilities
 };
 ```
 
@@ -989,9 +989,9 @@ await new Promise(resolve => setTimeout(resolve, 10000)); // Wait 10 seconds
 2. Use `ignoreDOM` for dynamic content:
 ```javascript
 "smartUI.options": {
-"ignoreDOM": {
-"id": ["timestamp", "user-id"]
-}
+  "ignoreDOM": {
+    "id": ["timestamp", "user-id"]
+  }
 }
 ```
 

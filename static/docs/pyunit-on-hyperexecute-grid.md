@@ -110,33 +110,33 @@ concurrency: 2
 
 env:
 #  PAT: ${{ .secrets.testKey }}
-TARGET_OS: LINUX
+ TARGET_OS: LINUX
 
 cacheKey: '{{ checksum "requirements.txt" }}'
 cacheDirectories:
-- CacheDir
+  - CacheDir
 pre:
-- pip3 install -r requirements.txt --cache-dir CacheDir
+  - pip3 install -r requirements.txt --cache-dir CacheDir
 post:
-- cat yaml/linux/pyunit_hyperexecute_autosplit_sample.yaml
+  - cat yaml/linux/pyunit_hyperexecute_autosplit_sample.yaml
 
 mergeArtifacts: true
 
 uploadArtefacts:
-- name: TestReport
-path:
-- example_*/**
+  - name: TestReport
+    path:
+     - example_*/**
 
 report: true
 partialReports:
-type: json
-location: /
-frameworkName: extent
+    type: json
+    location: /
+    frameworkName: extent
 
 testDiscovery:
-type: raw
-mode: remote
-command: grep -nri 'HyperTestPyUnit' tests -ir --include=\*.py | sed 's/:.*//'
+  type: raw
+  mode: remote
+  command: grep -nri 'HyperTestPyUnit' tests -ir --include=\*.py | sed 's/:.*//'
 
 testRunnerCommand: python3 $test
 

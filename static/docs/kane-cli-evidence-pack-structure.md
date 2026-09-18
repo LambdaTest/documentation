@@ -11,29 +11,29 @@ A `.evidence` file is a standard zip. `unzip -l ` lists it, and `unzip -p  ` pri
 ├── run.yaml                          # Run manifest: title, status, started/ended, totals
 ├── failure.yaml                      # Run-level failure rollup
 └── tests/
-└── <test-id>/                    # One directory per test in the run
-├── test.md                   # The test definition
-├── result.yaml               # Verdict, per-step outcomes, tags, executed-by,
-│                             #   share identifiers, environment (browser/OS/resolution)
-├── logs/
-│   ├── meta.yaml             # Declares every log file below
-│   ├── tui.log               # Session narrative
-│   ├── <n>-run.log           # Runner log, one set per run index n (0, 1, …)
-│   ├── <n>-actions.ndjson    # Step-by-step actions the agent performed
-│   ├── <n>-console.ndjson    # Browser console output, attributed per step
-│   └── <n>-network.har       # Network traffic (HAR), attributed per step
-├── steps/
-│   └── <ordinal>-<step-id>/  # One directory per executed step
-│       ├── screenshot.png    # The page as the agent saw it
-│       ├── annotated.png     # Same shot with the acted-on element highlighted
-│       ├── step.json         # Step metadata: kind, status, duration, url,
-│       │                     #   action id, click coordinates, element rect
-│       └── failure.yaml      # Failed/broken steps only: error, page state,
-│                             #   console/network references, triage
-├── auteur/
-│   └── execution.json        # Full execution trajectory (step.json's action id
-│                             #   joins to operations in this tree)
-└── v16-trajectory/           # Per-run planning summaries and diagrams
+    └── <test-id>/                    # One directory per test in the run
+        ├── test.md                   # The test definition
+        ├── result.yaml               # Verdict, per-step outcomes, tags, executed-by,
+        │                             #   share identifiers, environment (browser/OS/resolution)
+        ├── logs/
+        │   ├── meta.yaml             # Declares every log file below
+        │   ├── tui.log               # Session narrative
+        │   ├── <n>-run.log           # Runner log, one set per run index n (0, 1, …)
+        │   ├── <n>-actions.ndjson    # Step-by-step actions the agent performed
+        │   ├── <n>-console.ndjson    # Browser console output, attributed per step
+        │   └── <n>-network.har       # Network traffic (HAR), attributed per step
+        ├── steps/
+        │   └── <ordinal>-<step-id>/  # One directory per executed step
+        │       ├── screenshot.png    # The page as the agent saw it
+        │       ├── annotated.png     # Same shot with the acted-on element highlighted
+        │       ├── step.json         # Step metadata: kind, status, duration, url,
+        │       │                     #   action id, click coordinates, element rect
+        │       └── failure.yaml      # Failed/broken steps only: error, page state,
+        │                             #   console/network references, triage
+        ├── auteur/
+        │   └── execution.json        # Full execution trajectory (step.json's action id
+        │                             #   joins to operations in this tree)
+        └── v16-trajectory/           # Per-run planning summaries and diagrams
 ```
 
 A `testrun` pack has one `tests//` directory per member, all under the same root.

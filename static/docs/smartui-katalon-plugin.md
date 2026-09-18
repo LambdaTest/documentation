@@ -111,15 +111,15 @@ You can pass additional configuration via a JSON file or inline parameters.
 
 ```json
 {
-"deviceName": "Chrome Desktop",
-"platform": "Windows",
-"fullPage": true,
-"ignoreBoxes": {
-"xpath": [
-"//*[@class='dynamic-ad']",
-"//*[@id='timestamp']"
-]
-}
+  "deviceName": "Chrome Desktop",
+  "platform": "Windows",
+  "fullPage": true,
+  "ignoreBoxes": {
+    "xpath": [
+      "//*[@class='dynamic-ad']",
+      "//*[@id='timestamp']"
+    ]
+  }
 }
 ```
 

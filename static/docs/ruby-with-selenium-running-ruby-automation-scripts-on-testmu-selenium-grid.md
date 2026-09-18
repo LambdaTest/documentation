@@ -93,12 +93,12 @@ Every framework below connects to the grid and passes your browser and OS choice
 
 ```ruby
 caps = {
-:browserName => "chrome",
-:version     => "latest",
-:platform    => "Windows 10",
-:name        => "Ruby Selenium Test",
-:build       => "Ruby Selenium Build",
-:video       => true
+  :browserName => "chrome",
+  :version     => "latest",
+  :platform    => "Windows 10",
+  :name        => "Ruby Selenium Test",
+  :build       => "Ruby Selenium Build",
+  :video       => true
 }
 ```
 
@@ -123,11 +123,11 @@ cd Capybara-Cucumber-Ruby
 
 ```ruby
 @caps = {
-"browserName" => "chrome",
-"browserVersion" => "latest",
-"platformName" => "Windows 10",
-"build" => "capybara-lambdatest",
-"name" => "single-Test"
+  "browserName" => "chrome",
+  "browserVersion" => "latest",
+  "platformName" => "Windows 10",
+  "build" => "capybara-lambdatest",
+  "name" => "single-Test"
 }
 ```
 
@@ -168,11 +168,11 @@ cd Ruby-UnitTest-Selenium
 
 ```ruby
 caps = {
-:browserName => "chrome",
-:browser_version => "latest",
-:platform_name => "Windows 10",
-:name => "UnitTest Sample Test",
-:build => "UnitTest Selenium Build"
+  :browserName => "chrome",
+  :browser_version => "latest",
+  :platform_name => "Windows 10",
+  :name => "UnitTest Sample Test",
+  :build => "UnitTest Selenium Build"
 }
 ```
 

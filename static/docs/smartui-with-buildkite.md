@@ -123,22 +123,22 @@ Go to Pipeline Settings > Variables. Add the following variables:
 
 ```yaml title="pipeline.yml"
 steps:
-- label: "SmartUI Tests"
-agents:
-queue: "default"
-env:
-LT_USERNAME: "${LT_USERNAME}"
-LT_ACCESS_KEY: "${LT_ACCESS_KEY}"
-commands:
-- echo "Checking out code"
-- git clone <REPO_URL>
-- cd <PROJECT_DIRECTORY>
-- echo "Installing SmartUI CLI"
-- npm install @lambdatest/smartui-cli
-- echo "Running SmartUI tests"
-- npx smartui --version
-- npx smartui config:create smartui-web.json
-- npx smartui --config smartui-web.json exec -- mvn --quiet test -D suite=sdk-cloud.xml
+  - label: "SmartUI Tests"
+    agents:
+      queue: "default"
+    env:
+      LT_USERNAME: "${LT_USERNAME}"
+      LT_ACCESS_KEY: "${LT_ACCESS_KEY}"
+    commands:
+      - echo "Checking out code"
+      - git clone <REPO_URL>
+      - cd <PROJECT_DIRECTORY>
+      - echo "Installing SmartUI CLI"
+      - npm install @lambdatest/smartui-cli
+      - echo "Running SmartUI tests"
+      - npx smartui --version
+      - npx smartui config:create smartui-web.json
+      - npx smartui --config smartui-web.json exec -- mvn --quiet test -D suite=sdk-cloud.xml
 ```
 
 ### Step 5: Check the output
@@ -176,7 +176,7 @@ branches: main develop
 **Example:**
 ```yaml
 env:
-BUILD_NAME: "${BUILDKITE_BRANCH}-${BUILDKITE_COMMIT:0:7}"
+  BUILD_NAME: "${BUILDKITE_BRANCH}-${BUILDKITE_COMMIT:0:7}"
 ```
 
 **Error Handling**
@@ -238,7 +238,7 @@ BUILD_NAME: "${BUILDKITE_BRANCH}-${BUILDKITE_COMMIT:0:7}"
 2. Pass variable to step:
 ```yaml
 env:
-PROJECT_TOKEN: "${PROJECT_TOKEN}"
+  PROJECT_TOKEN: "${PROJECT_TOKEN}"
 ```
 
 3. Check variable is accessible to the pipeline
@@ -263,9 +263,9 @@ PROJECT_TOKEN: "${PROJECT_TOKEN}"
 2. Check pipeline logs for errors:
 ```yaml
 - label: "Check Logs"
-if: "build.state == 'failed'"
-commands:
-- cat /tmp/*.log || true
+  if: "build.state == 'failed'"
+  commands:
+    - cat /tmp/*.log || true
 ```
 
 3. Verify network connectivity in pipeline
@@ -289,12 +289,12 @@ commands:
 ```yaml
 - wait
 - parallel:
-- label: Test Group 1"
-commands:
-- npx smartui exec -- <command>
-- label: "Test Group 2"
-commands:
-- npx smartui exec -- <command>
+    - label: Test Group 1"
+      commands:
+        - npx smartui exec -- <command>
+    - label: "Test Group 2"
+      commands:
+        - npx smartui exec -- <command>
 ```
 
 3. Optimize test execution
@@ -314,14 +314,14 @@ commands:
 1. Use specific Node version:
 ```yaml
 commands:
-- nvm use 18
+  - nvm use 18
 ```
 
 2. Clear npm cache:
 ```yaml
 commands:
-- npm cache clean --force
-- npm install
+  - npm cache clean --force
+  - npm install
 ```
 
 3. Use package-lock.json for consistent installs
@@ -341,19 +341,19 @@ commands:
 1. Ensure Node.js is available:
 ```yaml
 commands:
-- nvm use 18
+  - nvm use 18
 ```
 
 2. Verify npm is available:
 ```yaml
 commands:
-- npm --version
+  - npm --version
 ```
 
 3. Install SmartUI CLI explicitly:
 ```yaml
 commands:
-- npm install -g @lambdatest/smartui-cli
+  - npm install -g @lambdatest/smartui-cli
 ```
 
 **Getting Help**

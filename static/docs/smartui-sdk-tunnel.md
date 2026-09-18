@@ -27,19 +27,19 @@ For automatic tunnel setup, add the following configuration to your `.smartui.js
 
 ```json
 {
-"tunnel": {
-"type": "auto",
-"user": "<lambdatest-user>",  // Optional: Overrides LT_USERNAME if present in env
-"key": "<lambdatest-accesskey>",  // Optional: Overrides LT_ACCESS_KEY if present in env
-"port": "<port>",  // Optional: Default port if not specified
-"proxyHost": "127.0.0.1",  // Optional
-"proxyPort": "8000",  // Optional
-"proxyUser": "user",  // Optional: Proxy authentication
-"proxyPass": "password",  // Optional: Proxy authentication
-"dir": "<path-to-local-folder>",  // Optional: Directory to test
-"v": true,  // Optional: Enable verbose logging
-"logFile": "/path/to/logs.txt"  // Optional: Custom log file location
-}
+  "tunnel": {
+    "type": "auto",
+    "user": "<lambdatest-user>",  // Optional: Overrides LT_USERNAME if present in env
+    "key": "<lambdatest-accesskey>",  // Optional: Overrides LT_ACCESS_KEY if present in env
+    "port": "<port>",  // Optional: Default port if not specified
+    "proxyHost": "127.0.0.1",  // Optional
+    "proxyPort": "8000",  // Optional
+    "proxyUser": "user",  // Optional: Proxy authentication
+    "proxyPass": "password",  // Optional: Proxy authentication
+    "dir": "<path-to-local-folder>",  // Optional: Directory to test
+    "v": true,  // Optional: Enable verbose logging
+    "logFile": "/path/to/logs.txt"  // Optional: Custom log file location
+  }
 }
 ```
 
@@ -49,11 +49,11 @@ For manual tunnel setup, add the following configuration:
 
 ```json
 {
-"tunnel": {
-"type": "manual",
-"tunnelName": "my-tunnel-name"  // Required for manual mode
-//Add user and key in case LT_USERNAME and LT_ACCESSKEY not provided in env variables
-}
+  "tunnel": {
+    "type": "manual",
+    "tunnelName": "my-tunnel-name"  // Required for manual mode
+    //Add user and key in case LT_USERNAME and LT_ACCESSKEY not provided in env variables
+  }
 }
 ```
 
@@ -72,15 +72,15 @@ The tunnel configuration automatically uses the following environment variables 
 
 ```json
 {
-"web": {
-"browsers": ["chrome", "firefox"],
-"viewports": [[1920, 1080], [1366, 768]]
-},
-"tunnel": {
-"type": "auto"
-//Add user and key in case LT_USERNAME and LT_ACCESSKEY not provided in env variables
+  "web": {
+    "browsers": ["chrome", "firefox"],
+    "viewports": [[1920, 1080], [1366, 768]]
+  },
+  "tunnel": {
+    "type": "auto"
+      //Add user and key in case LT_USERNAME and LT_ACCESSKEY not provided in env variables
 
-}
+  }
 }
 ```
 
@@ -88,19 +88,19 @@ The tunnel configuration automatically uses the following environment variables 
 
 ```json
 {
-"web": {
-"browsers": ["chrome", "firefox"],
-"viewports": [[1920, 1080], [1366, 768]]
-},
-"tunnel": {
-"type": "auto",
-"user": "<lambdatest-user>",  // Optional: Overrides LT_USERNAME if present in env
-"key": "<lambdatest-accesskey>",  // Optional: Overrides LT_ACCESS_KEY if present in env
-"proxyHost": "127.0.0.1",
-"proxyPort": "8000",
-"dir": "./src",
-"v": true
-}
+  "web": {
+    "browsers": ["chrome", "firefox"],
+    "viewports": [[1920, 1080], [1366, 768]]
+  },
+  "tunnel": {
+    "type": "auto",
+    "user": "<lambdatest-user>",  // Optional: Overrides LT_USERNAME if present in env
+    "key": "<lambdatest-accesskey>",  // Optional: Overrides LT_ACCESS_KEY if present in env
+    "proxyHost": "127.0.0.1",
+    "proxyPort": "8000",
+    "dir": "./src",
+    "v": true
+  }
 }
 ```
 
@@ -108,16 +108,16 @@ The tunnel configuration automatically uses the following environment variables 
 
 ```json
 {
-"web": {
-"browsers": ["chrome", "firefox"],
-"viewports": [[1920, 1080], [1366, 768]]
-},
-"tunnel": {
-"type": "manual",
-"tunnelName": "my-tunnel",
-"user": "<lambdatest-user>",  // Optional: Overrides LT_USERNAME if present in env
-"key": "<lambdatest-accesskey>",  // Optional: Overrides LT_ACCESS_KEY if present in env
-}
+  "web": {
+    "browsers": ["chrome", "firefox"],
+    "viewports": [[1920, 1080], [1366, 768]]
+  },
+  "tunnel": {
+    "type": "manual",
+    "tunnelName": "my-tunnel",
+    "user": "<lambdatest-user>",  // Optional: Overrides LT_USERNAME if present in env
+    "key": "<lambdatest-accesskey>",  // Optional: Overrides LT_ACCESS_KEY if present in env
+  }
 }
 ```
 

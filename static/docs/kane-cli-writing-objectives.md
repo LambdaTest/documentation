@@ -77,11 +77,11 @@ Chain all three patterns in one objective:
 
 ```
 "go to {{app_url}}/dashboard,
-store the welcome message as 'welcome_text',
-store the user role in the sidebar as 'role',
-assert the role is 'Admin',
-click the Settings button,
-assert the page contains 'Account Settings'"
+ store the welcome message as 'welcome_text',
+ store the user role in the sidebar as 'role',
+ assert the role is 'Admin',
+ click the Settings button,
+ assert the page contains 'Account Settings'"
 ```
 
 This objective: navigates → extracts two values → validates a condition → performs an action → validates the result.
@@ -92,55 +92,55 @@ This objective: navigates → extracts two values → validates a condition → 
 
 ```bash
 kane-cli run \
---url https://app.example.com \
---variables-file ./creds.json \
-"fill the email field with '{{email}}',
-fill the password field with '{{password}}',
-click the Login button,
-assert the page contains 'Dashboard',
-store the logged-in username as 'username'"
+  --url https://app.example.com \
+  --variables-file ./creds.json \
+  "fill the email field with '{{email}}',
+   fill the password field with '{{password}}',
+   click the Login button,
+   assert the page contains 'Dashboard',
+   store the logged-in username as 'username'"
 ```
 
 ### Search with filters
 
 ```bash
 kane-cli run \
---url https://shop.example.com/products \
-"click the Category filter,
-select 'Electronics',
-click the Sort dropdown,
-select 'Price: Low to High',
-store the count of products as 'result_count',
-assert the result_count is greater than 0"
+  --url https://shop.example.com/products \
+  "click the Category filter,
+   select 'Electronics',
+   click the Sort dropdown,
+   select 'Price: Low to High',
+   store the count of products as 'result_count',
+   assert the result_count is greater than 0"
 ```
 
 ### Settings change
 
 ```bash
 kane-cli run \
---url https://app.example.com/account \
-"click the Settings tab,
-scroll down to the Notification section,
-check the 'Email Notifications' checkbox,
-click Save,
-assert the page shows 'Settings saved successfully'"
+  --url https://app.example.com/account \
+  "click the Settings tab,
+   scroll down to the Notification section,
+   check the 'Email Notifications' checkbox,
+   click Save,
+   assert the page shows 'Settings saved successfully'"
 ```
 
 ### Checkout
 
 ```bash
 kane-cli run \
---url https://shop.example.com/cart \
---variables-file ./payment.json \
-"store the cart total as 'total',
-assert the total is greater than 0,
-click Checkout,
-fill the card number field with '{{card_number}}',
-fill the expiry field with '{{card_expiry}}',
-fill the CVC field with '{{card_cvc}}',
-click Place Order,
-assert the page contains 'Order Confirmed',
-store the order number as 'order_id'"
+  --url https://shop.example.com/cart \
+  --variables-file ./payment.json \
+  "store the cart total as 'total',
+   assert the total is greater than 0,
+   click Checkout,
+   fill the card number field with '{{card_number}}',
+   fill the expiry field with '{{card_expiry}}',
+   fill the CVC field with '{{card_cvc}}',
+   click Place Order,
+   assert the page contains 'Order Confirmed',
+   store the order number as 'order_id'"
 ```
 
 ## Assertion Types
@@ -183,13 +183,13 @@ In **Interactive TUI**, the browser stays open between runs: state carries over 
 
 ```
 > go to https://myapp.com and log in as admin
-✓ PASSED
+  ✓ PASSED
 
 > navigate to User Management and create a new user "qa@example.com"
-✓ PASSED
+  ✓ PASSED
 
 > verify the new user appears in the users table
-✓ PASSED
+  ✓ PASSED
 ```
 
 In **Headless CLI**, use `--max-steps` to cap each run:

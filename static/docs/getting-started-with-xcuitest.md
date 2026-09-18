@@ -58,15 +58,15 @@ curl --location --request POST 'https://mobile-api.lambdatest.com/framework/v1/x
 --header 'Authorization: Basic BASIC_AUTH_TOKEN' \
 --header 'Content-Type: application/json' \
 --data-raw '{
-"app": "APP_ID",
-"testSuite": "TEST_SUITE_ID",
-"device":  ["iPhone 11-14"],
-"video": true,
-"queueTimeout": 10800,
-"idleTimeout": 150,
-"devicelog": true,
-"network": false,
-"build": "Proverbial-XCUITest"
+  "app": "APP_ID",
+  "testSuite": "TEST_SUITE_ID",
+  "device":  ["iPhone 11-14"],
+  "video": true,
+  "queueTimeout": 10800,
+  "idleTimeout": 150,
+  "devicelog": true,
+  "network": false,
+  "build": "Proverbial-XCUITest"
 }'
 ```
 
@@ -82,16 +82,16 @@ curl --location --request POST 'https://mobile-api.lambdatest.com/framework/v1/x
 --header 'Authorization: Basic BASIC_AUTH_TOKEN' \
 --header 'Content-Type: application/json' \
 --data-raw '{
-"app": "APP_ID",
-"testSuite": "TEST_SUITE_ID",
-"device":  ["iPhone 11-14.0"],
-"isVirtualDevice": true,
-"video": true,
-"queueTimeout": 10800,
-"idleTimeout": 150,
-"devicelog": true,
-"network": false,
-"build": "Proverbial-XCUITest"
+  "app": "APP_ID",
+  "testSuite": "TEST_SUITE_ID",
+  "device":  ["iPhone 11-14.0"],
+  "isVirtualDevice": true,
+  "video": true,
+  "queueTimeout": 10800,
+  "idleTimeout": 150,
+  "devicelog": true,
+  "network": false,
+  "build": "Proverbial-XCUITest"
 }'
 ```
 
@@ -118,15 +118,15 @@ curl --location --request POST 'https://mobile-api.lambdatest.com/framework/v1/x
 --header 'Authorization: Basic BASIC_AUTH_TOKEN' \
 --header 'Content-Type: application/json' \
 --data-raw '{
-"app": "APP_ID",
-"testSuite": "TEST_SUITE_ID",
-"device": ["iPhone 11-14","iPhone 12 Pro-15","iPhone X-13"],
-"video": true,
-"queueTimeout": 10800,
-"idleTimeout": 150,
-"devicelog": true,
-"network": false,
-"build": "Proverbial-XCUITest"
+  "app": "APP_ID",
+  "testSuite": "TEST_SUITE_ID",
+  "device": ["iPhone 11-14","iPhone 12 Pro-15","iPhone X-13"],
+  "video": true,
+  "queueTimeout": 10800,
+  "idleTimeout": 150,
+  "devicelog": true,
+  "network": false,
+  "build": "Proverbial-XCUITest"
 }'
 ```
 
@@ -142,16 +142,16 @@ curl --location --request POST 'https://mobile-api.lambdatest.com/framework/v1/x
 --header 'Authorization: Basic BASIC_AUTH_TOKEN' \
 --header 'Content-Type: application/json' \
 --data-raw '{
-"app": "APP_ID",
-"testSuite": "TEST_SUITE_ID",
-"device":  ["iPhone 11-14.0","iPhone 12 Pro-15.0","iPhone X-13.0"],
-"isVirtualDevice": true,
-"video": true,
-"queueTimeout": 10800,
-"idleTimeout": 150,
-"devicelog": true,
-"network": false,
-"build": "Proverbial-XCUITest"
+  "app": "APP_ID",
+  "testSuite": "TEST_SUITE_ID",
+  "device":  ["iPhone 11-14.0","iPhone 12 Pro-15.0","iPhone X-13.0"],
+  "isVirtualDevice": true,
+  "video": true,
+  "queueTimeout": 10800,
+  "idleTimeout": 150,
+  "devicelog": true,
+  "network": false,
+  "build": "Proverbial-XCUITest"
 }'
 ```
 
@@ -172,8 +172,8 @@ The xcuitest-skill package includes:
 xcuitest-skill/
 ├── SKILL.md
 └── reference/
-├── playbook.md
-└── advanced-patterns.md
+    ├── playbook.md
+    └── advanced-patterns.md
 ```
 
 It provides structured guidance for:

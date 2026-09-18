@@ -170,10 +170,10 @@ In your Maestro test YAML files (e.g., `maestro-test/test.yaml`), add the `takeS
 ```yaml
 - launchApp
 - takeScreenshot:
-path: ./screenshots/home-screen
+    path: ./screenshots/home-screen
 - tapOn: "Login"
 - takeScreenshot:
-path: ./screenshots/login-page
+    path: ./screenshots/login-page
 ```
 
 #### 4.3. Set Up Environment Variables

@@ -34,31 +34,31 @@ Import-Certificate -FilePath "C:\Users\ltuser\Downloads\{NAME-OF-THE-CERTIFICATE
 
 ```bash
 curl --request POST \
---url <https://api.lambdatest.com/automation/api/v1/files> \
---header 'Authorization: Basic {TOKEN}' \
---header 'Content-Type: multipart/form-data' \
---header 'cache-control: no-cache,no-cache,no-cache' \
---header 'content-type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW' \
---form pre_run_file=@{PATH-TO-CERTIFIFICATE-INSTALLATION-SCRIPT} \
---form post_run_file=@{PATH-TO-CERTIFICATE-DELETION-SCRIPT} \
---form 'name={NAME-OF-YOUR-PRERUN}'
-```
+  --url <https://api.lambdatest.com/automation/api/v1/files> \
+  --header 'Authorization: Basic {TOKEN}' \
+  --header 'Content-Type: multipart/form-data' \
+  --header 'cache-control: no-cache,no-cache,no-cache' \
+  --header 'content-type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW' \
+  --form pre_run_file=@{PATH-TO-CERTIFIFICATE-INSTALLATION-SCRIPT} \
+  --form post_run_file=@{PATH-TO-CERTIFICATE-DELETION-SCRIPT} \
+  --form 'name={NAME-OF-YOUR-PRERUN}'
+  ```
 
 5. Run the below capabilities to use the certificate, pre, and post run files in a test.
 
 ```bash
 "lambda:userFiles": ["certificate.p12"],
 "prerun": {
-"accessKey": "****",
-"background": False,
-"filePath": "<organization-id>/uploads/install_certificate.ps1",
-"postAction": {
-"filePath": "xyz/post/delete_certificate.ps1",
-"url": "<https://api.lambdatest.com/automation/api/v1/files/download>"
-},
-"url": "<https://api.lambdatest.com/automation/api/v1/files/download>",
-"user": "****"
-},
+        "accessKey": "****",
+        "background": False,
+        "filePath": "<organization-id>/uploads/install_certificate.ps1",
+        "postAction": {
+            "filePath": "xyz/post/delete_certificate.ps1",
+            "url": "<https://api.lambdatest.com/automation/api/v1/files/download>"
+        },
+        "url": "<https://api.lambdatest.com/automation/api/v1/files/download>",
+        "user": "****"
+    },
 ```
 
 > **Note:** Replace `{TOKEN}`, `{PATH-TO-CERTIFICATE-FILE}`, `{PATH-TO-CERTIFICATE-INSTALLATION-SCRIPT}`, `{PATH-TO-CERTIFICATE-DELETION-SCRIPT}`, `{NAME-OF-YOUR-PRERUN}` with the appropriate values.
@@ -69,8 +69,8 @@ curl --request POST \
 
 ```bash
 "prerun": {
-"url": "{NAME-OF-YOUR-PRERUN}/pre/{NAME-OF-YOUR-CERTIFICATE-INSTALLATION-SCRIPT}",
-},
+    "url": "{NAME-OF-YOUR-PRERUN}/pre/{NAME-OF-YOUR-CERTIFICATE-INSTALLATION-SCRIPT}",
+ },
 ```
 > **Note:** Replace `{NAME-OF-YOUR-PRERUN}` as provided in **Step 1** and `{NAME-OF-YOUR-CERTIFICATE-INSTALLATION-FILE-NAME}` with the name of the certificate installation script that you uploaded in **Step 1**.
 

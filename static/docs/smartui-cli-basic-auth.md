@@ -17,10 +17,10 @@ Add the following configuration to your `.smartui.json` file to enable basic aut
 
 ```json
 {
-"basicAuthorization": {
-"username": "username",
-"password": "password"
-}
+  "basicAuthorization": {
+    "username": "username",
+    "password": "password"
+  }
 }
 ```
 
@@ -35,18 +35,18 @@ Here's a complete example of a SmartUI configuration file with basic authenticat
 
 ```json
 {
-"web": {
-"browsers": ["chrome", "firefox"],
-"viewports": [
-[1920, 1080],
-[1366, 768]
-]
-},
-"basicAuthorization": {
-"username": "your-username",
-"password": "your-password"
-},
-"waitForTimeout": 1000
+  "web": {
+    "browsers": ["chrome", "firefox"],
+    "viewports": [
+      [1920, 1080],
+      [1366, 768]
+    ]
+  },
+  "basicAuthorization": {
+    "username": "your-username",
+    "password": "your-password"
+  },
+  "waitForTimeout": 1000
 }
 ```
 
@@ -56,10 +56,10 @@ For better security, you can use environment variables for your authentication c
 
 ```json
 {
-"basicAuthorization": {
-"username": "${AUTH_USERNAME}",
-"password": "${AUTH_PASSWORD}"
-}
+  "basicAuthorization": {
+    "username": "${AUTH_USERNAME}",
+    "password": "${AUTH_PASSWORD}"
+  }
 }
 ```
 

@@ -103,77 +103,77 @@ from selenium.webdriver.common.by import By
 import time
 
 def startingTest():
-print(f"Starting test")
-desiredCap = caps[0].copy()
+    print(f"Starting test")
+    desiredCap = caps[0].copy()
 
-print(
-f"deviceName {desiredCap['lt:options'].get('deviceName')}, platformVersion {desiredCap['lt:options'].get('platformVersion')}"
-)
+    print(
+        f"deviceName {desiredCap['lt:options'].get('deviceName')}, platformVersion {desiredCap['lt:options'].get('platformVersion')}"
+    )
 
-try:
-driver = webdriver.Remote(command_executor=url, desired_capabilities=desiredCap)
-except Exception as e:
-print("err", e)
-return
+    try:
+        driver = webdriver.Remote(command_executor=url, desired_capabilities=desiredCap)
+    except Exception as e:
+        print("err", e)
+        return
 
-try:
-print(f"driver created")
-time.sleep(10)
+    try:
+        print(f"driver created")
+        time.sleep(10)
 
-ctx = driver.current_context
-print("ctx", ctx)
-sessionId = driver.session_id
-print("sessionId", sessionId)
-isKeyBoardShown = driver.is_keyboard_shown()
-print(f"isKeyboardShown {isKeyBoardShown}")
-isLocked = driver.is_locked()
-print("isLocked", isLocked)
-isInstalled = driver.is_app_installed("com.example.QAapp")
-print("isInstalled", isInstalled)
+        ctx = driver.current_context
+        print("ctx", ctx)
+        sessionId = driver.session_id
+        print("sessionId", sessionId)
+        isKeyBoardShown = driver.is_keyboard_shown()
+        print(f"isKeyboardShown {isKeyBoardShown}")
+        isLocked = driver.is_locked()
+        print("isLocked", isLocked)
+        isInstalled = driver.is_app_installed("com.example.QAapp")
+        print("isInstalled", isInstalled)
 
-print(driver.page_source)
-elem = driver.find_element(By.ID, "com.example.QAapp:id/webpage").click()
-print("element", elem)
-time.sleep(2)
+        print(driver.page_source)
+        elem = driver.find_element(By.ID, "com.example.QAapp:id/webpage").click()
+        print("element", elem)
+        time.sleep(2)
 
-driver.find_element(By.ID, "com.example.QAapp:id/websiteName").send_keys(
-"ThisIsDemoText"
-)
-driver.find_element(By.ID, "websiteName").clear()
-elem = driver.find_element(By.ID, "com.example.QAapp:id/findButton")
-print("element", elem)
+        driver.find_element(By.ID, "com.example.QAapp:id/websiteName").send_keys(
+            "ThisIsDemoText"
+        )
+        driver.find_element(By.ID, "websiteName").clear()
+        elem = driver.find_element(By.ID, "com.example.QAapp:id/findButton")
+        print("element", elem)
 
-driver.find_element(By.ID, "com.example.QAapp:id/websiteName").click()
-params = {"command": "input-text", "text": "thisIsMyText"}
-result = driver.execute_script("lambda-adb", params)
-print("result", result)
-time.sleep(2)
+        driver.find_element(By.ID, "com.example.QAapp:id/websiteName").click()
+        params = {"command": "input-text", "text": "thisIsMyText"}
+        result = driver.execute_script("lambda-adb", params)
+        print("result", result)
+        time.sleep(2)
 
-driver.find_element(By.ID, "com.example.QAapp:id/websiteName").send_keys(
-"https://www.ifconfig.me"
-)
-driver.find_element(By.ID, "findButton").click()
-time.sleep(2)
-driver.find_element(By.ID, "com.example.QAapp:id/websiteName").send_keys(
-"https://google.com"
-)
-driver.find_element(By.ID, "findButton").click()
-time.sleep(2)
+        driver.find_element(By.ID, "com.example.QAapp:id/websiteName").send_keys(
+            "https://www.ifconfig.me"
+        )
+        driver.find_element(By.ID, "findButton").click()
+        time.sleep(2)
+        driver.find_element(By.ID, "com.example.QAapp:id/websiteName").send_keys(
+            "https://google.com"
+        )
+        driver.find_element(By.ID, "findButton").click()
+        time.sleep(2)
 
-if desiredCap["lt:options"].get("tunnel"):
-driver.find_element(By.ID, "com.example.QAapp:id/websiteName").send_keys(
-"http://localhost.lambdatest.com:8001"
-)
-driver.find_element(By.ID, "findButton").click()
-time.sleep(5)
+        if desiredCap["lt:options"].get("tunnel"):
+            driver.find_element(By.ID, "com.example.QAapp:id/websiteName").send_keys(
+                "http://localhost.lambdatest.com:8001"
+            )
+            driver.find_element(By.ID, "findButton").click()
+            time.sleep(5)
 
-driver.orientation = "LANDSCAPE"
+        driver.orientation = "LANDSCAPE"
 
-print("Quitting test")
-driver.quit()
-except Exception as e:
-print(e)
-driver.quit()
+        print("Quitting test")
+        driver.quit()
+    except Exception as e:
+        print(e)
+        driver.quit()
 
 USERNAME = "YOUR_USERNAME"
 ACCESS_KEY = "YOUR_ACCESS_KEY"
@@ -183,23 +183,23 @@ buildName = "Testing build"
 numTests = 1
 
 caps = [
-{
-"lt:options": {
-"w3c": True,
-"platformName": "Android",
-"allowInvisibleElements": True,
-"deviceName": "Galaxy A33 5G",
-"platformVersion": "13",
-"app": "YOUR_APP_URL",
-"devicelog": True,
-"build": buildName,
-"visual": True,
-"network": True,
-"tunnel": False,
-"video": True,
-"isRealMobile": false,
-},
-}
+    {
+        "lt:options": {
+            "w3c": True,
+            "platformName": "Android",
+            "allowInvisibleElements": True,
+            "deviceName": "Galaxy A33 5G",
+            "platformVersion": "13",
+            "app": "YOUR_APP_URL",
+            "devicelog": True,
+            "build": buildName,
+            "visual": True,
+            "network": True,
+            "tunnel": False,
+            "video": True,
+            "isRealMobile": false,
+        },
+    }
 ]
 startingTest()
 ```
@@ -210,54 +210,54 @@ from selenium.webdriver.common.by import By
 import time
 
 def simulatorTest():
-print(f"Starting test")
-try:
-driver = webdriver.Remote(command_executor=url, desired_capabilities=caps)
-except Exception as e:
-print(f"Error creating driver", e)
-return
+    print(f"Starting test")
+    try:
+        driver = webdriver.Remote(command_executor=url, desired_capabilities=caps)
+    except Exception as e:
+        print(f"Error creating driver", e)
+        return
 
-try:
-print(f"driver created")
-time.sleep(10)
-for i in range(0, 1):
-ctx = driver.current_context
-print("ctx", ctx)
+    try:
+        print(f"driver created")
+        time.sleep(10)
+        for i in range(0, 1):
+            ctx = driver.current_context
+            print("ctx", ctx)
 
-sshot = driver.get_screenshot_as_base64()
-print("sshot", sshot[:100])
+            sshot = driver.get_screenshot_as_base64()
+            print("sshot", sshot[:100])
 
-print("Getting page source")
-print("page_src1", driver.page_source)
+            print("Getting page source")
+            print("page_src1", driver.page_source)
 
-sessionId = driver.session_id
-print("sessionId", sessionId)
-driver.is_keyboard_shown()
-isLocked = driver.is_locked()
-print("isLocked", isLocked)
-element = driver.switch_to.active_element
-print(f"element", element)
-element.send_keys("https://google.com\n")
-time.sleep(5)
+            sessionId = driver.session_id
+            print("sessionId", sessionId)
+            driver.is_keyboard_shown()
+            isLocked = driver.is_locked()
+            print("isLocked", isLocked)
+            element = driver.switch_to.active_element
+            print(f"element", element)
+            element.send_keys("https://google.com\n")
+            time.sleep(5)
 
-if caps["lt:options"].get("tunnel"):
-driver.find_element(By.NAME, "url").send_keys(
-"http://localhost.lambdatest.com:8001\n"
-)
-time.sleep(5)
+            if caps["lt:options"].get("tunnel"):
+                driver.find_element(By.NAME, "url").send_keys(
+                    "http://localhost.lambdatest.com:8001\n"
+                )
+                time.sleep(5)
 
-driver.find_element(By.NAME, "url").send_keys("https://mylocationnow.io/\n")
-time.sleep(5)
+            driver.find_element(By.NAME, "url").send_keys("https://mylocationnow.io/\n")
+            time.sleep(5)
 
-driver.find_element(By.NAME, "url").send_keys("http://www.fast.com\n")
-time.sleep(2)
+            driver.find_element(By.NAME, "url").send_keys("http://www.fast.com\n")
+            time.sleep(2)
 
-print(f"Quitting")
-driver.quit()
-except Exception as e:
-print(f', error platformVersion {caps["lt:options"]["platformVersion"]} :: {e}')
-driver.execute_script("lambda-status=failed")
-driver.quit()
+        print(f"Quitting")
+        driver.quit()
+    except Exception as e:
+        print(f', error platformVersion {caps["lt:options"]["platformVersion"]} :: {e}')
+        driver.execute_script("lambda-status=failed")
+        driver.quit()
 
 # prod
 url = "https://{USERNAME}:{ACCESS_KEY}@mobile-hub.lambdatest.com/wd/hub"
@@ -266,19 +266,19 @@ buildName = "Testing build"
 numTests = 1
 
 caps = {
-"lt:options": {
-"w3c": True,
-"platformName": "ios",
-"deviceName": "iPhone 12",
-"platformVersion": "14.5",
-"app": "YOUR_APP_URL",
-"devicelog": True,
-"build": buildName,
-"visual": True,
-"network": True,
-"video": True,
-"isRealMobile": false,
-},
+    "lt:options": {
+        "w3c": True,
+        "platformName": "ios",
+        "deviceName": "iPhone 12",
+        "platformVersion": "14.5",
+        "app": "YOUR_APP_URL",
+        "devicelog": True,
+        "build": buildName,
+        "visual": True,
+        "network": True,
+        "video": True,
+        "isRealMobile": false,
+    },
 }
 
 simulatorTest()
@@ -291,23 +291,23 @@ simulatorTest()
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite thread-count="100" name="Mobile" parallel="tests">
 
-<test name="AppTest 1">
-<parameter name="version" value="11"/>
-<parameter name="platform" value="Android"/>
-<parameter name="device" value="Galaxy S21 Ultra 5G"/>
-<classes>
-<class name="AndroidApp"/>
-</classes>
-</test>
+    <test name="AppTest 1">
+        <parameter name="version" value="11"/>
+        <parameter name="platform" value="Android"/>
+        <parameter name="device" value="Galaxy S21 Ultra 5G"/>
+        <classes>
+            <class name="AndroidApp"/>
+        </classes>
+    </test>
 
-<test name="AppTest 2">
-<parameter name="version" value="11"/>
-<parameter name="platform" value="Android"/>
-<parameter name="device" value="Galaxy S21"/>
-<classes>
-<class name="AndroidApp"/>
-</classes>
-</test>
+    <test name="AppTest 2">
+        <parameter name="version" value="11"/>
+        <parameter name="platform" value="Android"/>
+        <parameter name="device" value="Galaxy S21"/>
+        <classes>
+            <class name="AndroidApp"/>
+        </classes>
+    </test>
 </suite>
 ```
 
@@ -316,23 +316,23 @@ simulatorTest()
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite thread-count="100" name="Mobile" parallel="tests">
 
-<test name="iOSApp 1">
-<parameter name="version" value="14"/>
-<parameter name="platform" value="iOS"/>
-<parameter name="device" value="iPhone 11"/>
-<classes>
-<class name="iOSApp"/>
-</classes>
-</test>
+    <test name="iOSApp 1">
+        <parameter name="version" value="14"/>
+        <parameter name="platform" value="iOS"/>
+        <parameter name="device" value="iPhone 11"/>
+        <classes>
+            <class name="iOSApp"/>
+        </classes>
+    </test>
 
-<test name="iOSApp 2">
-<parameter name="version" value="14"/>
-<parameter name="platform" value="iOS"/>
-<parameter name="device" value="iPhone 12 Pro"/>
-<classes>
-<class name="iOSApp"/>
-</classes>
-</test>
+    <test name="iOSApp 2">
+        <parameter name="version" value="14"/>
+        <parameter name="platform" value="iOS"/>
+        <parameter name="device" value="iPhone 12 Pro"/>
+        <classes>
+            <class name="iOSApp"/>
+        </classes>
+    </test>
 </suite>
 ```
 
@@ -350,28 +350,28 @@ Sample Capabilities for both Android and iOS are mentioned below -
 
 ```java
 {
-"deviceName": "Galaxy Tab S4",
-"platformName": "android",
-"platformVersion": "10",
-"app": "App_url",
-"visual": true,
-"console": true,
-"deviceOrientation": "PORTRAIT",
-"build": "new-12",
-"isRealMobile": false,
+    "deviceName": "Galaxy Tab S4",
+    "platformName": "android",
+    "platformVersion": "10",
+    "app": "App_url",
+    "visual": true,
+    "console": true,
+    "deviceOrientation": "PORTRAIT",
+    "build": "new-12",
+    "isRealMobile": false,
 }
 ```
 
 ```java
 {
-"deviceName": "iPhone 12 Mini",
-"platformName": "ios",
-"platformVersion": "14",
-"app": "App_url",
-"isRealMobile": false,
-"visual": true,
-"console": true,
-"build": "lt-web-4",
-"network": false,
+    "deviceName": "iPhone 12 Mini",
+    "platformName": "ios",
+    "platformVersion": "14",
+    "app": "App_url",
+    "isRealMobile": false,
+    "visual": true,
+    "console": true,
+    "build": "lt-web-4",
+    "network": false,
 }
 ```

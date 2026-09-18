@@ -32,10 +32,10 @@ Call the SmartUI hook through your driver's script executor, passing `"smartui.t
 
 ```js
 const config = {
-screenshotName: "Checkout_Summary_Block",
-elementType: "css_selector",
-element: "section.checkout-summary",
-fullPage: false
+  screenshotName: "Checkout_Summary_Block",
+  elementType: "css_selector",
+  element: "section.checkout-summary",
+  fullPage: false
 };
 
 await driver.executeScript("smartui.takeScreenshot", config);
@@ -72,9 +72,9 @@ First resolve the element in your test, then pass it to the hook:
 const el = await driver.findElement(By.className('hero-heading'));
 
 const config = {
-screenshotName: 'region-screenshot',
-elementType: 'webElement',
-element: el
+  screenshotName: 'region-screenshot',
+  elementType: 'webElement',
+  element: el
 };
 
 await driver.executeScript('smartui.takeScreenshot', config);
@@ -114,46 +114,46 @@ The following example collects visible elements, builds XPath locators, and retu
 
 ```javascript
 const elements = await driver.executeScript(`
-function getPath(el) {
-if (!el || el.nodeType !== 1) return '';
-if (el.id) return '//*[@id="' + el.id.replace(/"/g, '\\\\"') + '"]';
-if (el === document.body) return '/html/body';
-let ix = 0;
-const siblings = el.parentNode ? el.parentNode.children : [];
-for (let i = 0; i < siblings.length; i++) {
-if (siblings[i] === el) {
-return getPath(el.parentNode) + '/' + el.tagName.toLowerCase() + '[' + (ix + 1) + ']';
-}
-if (siblings[i].tagName === el.tagName) ix++;
-}
-return '';
-}
+  function getPath(el) {
+    if (!el || el.nodeType !== 1) return '';
+    if (el.id) return '//*[@id="' + el.id.replace(/"/g, '\\\\"') + '"]';
+    if (el === document.body) return '/html/body';
+    let ix = 0;
+    const siblings = el.parentNode ? el.parentNode.children : [];
+    for (let i = 0; i < siblings.length; i++) {
+      if (siblings[i] === el) {
+        return getPath(el.parentNode) + '/' + el.tagName.toLowerCase() + '[' + (ix + 1) + ']';
+      }
+      if (siblings[i].tagName === el.tagName) ix++;
+    }
+    return '';
+  }
 
-const out = [];
-const nodes = Array.from(document.querySelectorAll('body *'));
-const max = arguments[0];
+  const out = [];
+  const nodes = Array.from(document.querySelectorAll('body *'));
+  const max = arguments[0];
 
-for (let i = 0; i < nodes.length && out.length < max; i++) {
-const n = nodes[i];
-const r = n.getBoundingClientRect();
-const st = window.getComputedStyle(n);
+  for (let i = 0; i < nodes.length && out.length < max; i++) {
+    const n = nodes[i];
+    const r = n.getBoundingClientRect();
+    const st = window.getComputedStyle(n);
 
-if (r.width < 8 || r.height < 8) continue;
-if (st.display === 'none' || st.visibility === 'hidden' || st.opacity === '0') continue;
+    if (r.width < 8 || r.height < 8) continue;
+    if (st.display === 'none' || st.visibility === 'hidden' || st.opacity === '0') continue;
 
-const xp = getPath(n);
-if (!xp) continue;
+    const xp = getPath(n);
+    if (!xp) continue;
 
-out.push({
-xpath: xp,
-tag: n.tagName.toLowerCase(),
-id: n.id || '',
-cls: (n.className && String(n.className).split) ? String(n.className).split(/\\s+/)[0] : '',
-idx: i
-});
-}
+    out.push({
+      xpath: xp,
+      tag: n.tagName.toLowerCase(),
+      id: n.id || '',
+      cls: (n.className && String(n.className).split) ? String(n.className).split(/\\s+/)[0] : '',
+      idx: i
+    });
+  }
 
-return out;
+  return out;
 `, 25);
 ```
 
@@ -161,20 +161,20 @@ Then loop through the collected elements and upload one SmartUI element screensh
 
 ```javascript
 for (const item of elements) {
-const label = item.id
-? `${item.tag}_id_${item.id}`
-: item.cls
-? `${item.tag}_class_${item.cls}`
-: `${item.tag}_idx_${item.idx}`;
+  const label = item.id
+    ? `${item.tag}_id_${item.id}`
+    : item.cls
+      ? `${item.tag}_class_${item.cls}`
+      : `${item.tag}_idx_${item.idx}`;
 
-const screenshotName = `element_${label}`.replace(/[^a-zA-Z0-9_-]+/g, '_').slice(0, 80);
+  const screenshotName = `element_${label}`.replace(/[^a-zA-Z0-9_-]+/g, '_').slice(0, 80);
 
-await driver.executeScript("smartui.takeScreenshot", {
-screenshotName,
-elementType: 'xpath',
-element: item.xpath,
-fullPage: false
-});
+  await driver.executeScript("smartui.takeScreenshot", {
+    screenshotName,
+    elementType: 'xpath',
+    element: item.xpath,
+    fullPage: false
+  });
 }
 ```
 

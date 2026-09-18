@@ -61,8 +61,8 @@ ltOptions.put("w3c", true);
 browserOptions.setCapability("LT:Options", ltOptions);
 
 driver = new RemoteWebDriver(
-new URL("https://" + username + ":" + accesskey + "@hub.lambdatest.com/wd/hub"),
-browserOptions);
+    new URL("https://" + username + ":" + accesskey + "@hub.lambdatest.com/wd/hub"),
+    browserOptions);
 ```
 
 Use the [Capabilities Generator](https://www.testmuai.com/capabilities-generator/) to build an `LT:Options` block for any browser, version, and OS combination.
@@ -86,16 +86,16 @@ cd Java-TestNG-Selenium
 
 ```xml title="testng.xml"
 <suite thread-count="3" name="LambdaTestSuite" parallel="tests">
-<test name="WIN10-Chrome">
-<parameter name="browser" value="chrome"/>
-<parameter name="platform" value="Windows 10"/>
-<classes><class name="LambdaTest.TestNGToDo"/></classes>
-</test>
-<test name="MAC-Safari">
-<parameter name="browser" value="safari"/>
-<parameter name="platform" value="macOS Catalina"/>
-<classes><class name="LambdaTest.TestNGToDo"/></classes>
-</test>
+  <test name="WIN10-Chrome">
+    <parameter name="browser" value="chrome"/>
+    <parameter name="platform" value="Windows 10"/>
+    <classes><class name="LambdaTest.TestNGToDo"/></classes>
+  </test>
+  <test name="MAC-Safari">
+    <parameter name="browser" value="safari"/>
+    <parameter name="platform" value="macOS Catalina"/>
+    <classes><class name="LambdaTest.TestNGToDo"/></classes>
+  </test>
 </suite>
 ```
 
@@ -151,12 +151,12 @@ cd cucumber-testng-sample
 
 ```gherkin title="todo.feature"
 Feature: Add new item to ToDo list
-Scenario: Add an item to the list
-Given user is on home Page
-When select First Item
-Then select second item
-Then add new item
-Then verify added item
+  Scenario: Add an item to the list
+    Given user is on home Page
+    When select First Item
+    Then select second item
+    Then add new item
+    Then verify added item
 ```
 
 Each step maps to a WebDriver action in the step definitions, and the runner (`TestRunner.java`, annotated with `@CucumberOptions`) creates the `RemoteWebDriver` against the grid.
@@ -196,15 +196,15 @@ mvn compile
 
 ```json title="parallel.conf.json"
 {
-"server": "hub.lambdatest.com",
-"user": "YOUR_USERNAME",
-"key": "YOUR_ACCESS_KEY",
-"capabilities": { "build": "Java Selenide Parallel" },
-"environments": {
-"chrome":  { "platformName": "Windows 10",  "browserName": "chrome",  "browserVersion": "latest" },
-"firefox": { "platformName": "Windows 10",  "browserName": "firefox", "browserVersion": "latest" },
-"safari":  { "platformName": "macOS Mojave", "browserName": "safari",  "browserVersion": "latest" }
-}
+  "server": "hub.lambdatest.com",
+  "user": "YOUR_USERNAME",
+  "key": "YOUR_ACCESS_KEY",
+  "capabilities": { "build": "Java Selenide Parallel" },
+  "environments": {
+    "chrome":  { "platformName": "Windows 10",  "browserName": "chrome",  "browserVersion": "latest" },
+    "firefox": { "platformName": "Windows 10",  "browserName": "firefox", "browserVersion": "latest" },
+    "safari":  { "platformName": "macOS Mojave", "browserName": "safari",  "browserVersion": "latest" }
+  }
 }
 ```
 
@@ -234,14 +234,14 @@ mvn compile
 ```java title="StepImplementation_ToDo.java (excerpt)"
 @Step("Open the todo app")
 public void gotoApp() {
-driver.get("https://lambdatest.github.io/sample-todo-app/");
-assertEquals(driver.getTitle(), "Sample page - lambdatest.com");
+    driver.get("https://lambdatest.github.io/sample-todo-app/");
+    assertEquals(driver.getTitle(), "Sample page - lambdatest.com");
 }
 
 @Step("Add new item <itemName>")
 public void addNewItem(String itemName) {
-driver.findElement(By.id("sampletodotext")).sendKeys(itemName);
-driver.findElement(By.id("addbutton")).click();
+    driver.findElement(By.id("sampletodotext")).sendKeys(itemName);
+    driver.findElement(By.id("addbutton")).click();
 }
 ```
 
@@ -281,10 +281,10 @@ mvn compile
 
 ```json title="capabilities.json"
 {
-"build": "GebFirstTest",
-"platformName": "Windows 10",
-"browserName": "firefox",
-"browserVersion": "latest"
+  "build": "GebFirstTest",
+  "platformName": "Windows 10",
+  "browserName": "firefox",
+  "browserVersion": "latest"
 }
 ```
 
@@ -327,20 +327,20 @@ cd LamdaTest_Tesbo_Demo
 
 ```json title="config.json"
 {
-"run": {
-"seleniumAddress": "https://{userName}:{ApiKey}@hub.lambdatest.com/wd/hub",
-"browser": { "name": ["chrome"] },
-"capabilities": {
-"chrome": {
-"build": "Tesbo_With_TestMuAI",
-"name": "Tesbo",
-"platformName": "Windows 10",
-"browserName": "Chrome",
-"browserVersion": "latest"
-}
-},
-"IsGrid": true
-}
+  "run": {
+    "seleniumAddress": "https://{userName}:{ApiKey}@hub.lambdatest.com/wd/hub",
+    "browser": { "name": ["chrome"] },
+    "capabilities": {
+      "chrome": {
+        "build": "Tesbo_With_TestMuAI",
+        "name": "Tesbo",
+        "platformName": "Windows 10",
+        "browserName": "Chrome",
+        "browserVersion": "latest"
+      }
+    },
+    "IsGrid": true
+  }
 }
 ```
 
@@ -352,12 +352,12 @@ The **Java SDK** is the zero-code option: it runs your **existing** TestNG tests
 
 ```xml title="pom.xml (key additions)"
 <dependency>
-<groupId>io.github.lambdatest</groupId>
-<artifactId>lambdatest-selenium-java-sdk</artifactId>
-<version>1.0.1</version>
+    <groupId>io.github.lambdatest</groupId>
+    <artifactId>lambdatest-selenium-java-sdk</artifactId>
+    <version>1.0.1</version>
 </dependency>
 <!-- plus the maven-dependency-plugin (copies lambdatest-agent.jar) and
-maven-surefire-plugin with -javaagent:.../lambdatest-agent.jar -->
+     maven-surefire-plugin with -javaagent:.../lambdatest-agent.jar -->
 ```
 
 2. Create `lambdatest.yml` with your credentials, platforms, and features. The SDK loads it automatically:
@@ -367,9 +367,9 @@ username: YOUR_LAMBDATEST_USERNAME
 accesskey: YOUR_LAMBDATEST_ACCESS_KEY
 
 platforms:
-- browserName: Chrome
-browserVersion: latest
-platformName: Windows 10
+  - browserName: Chrome
+    browserVersion: latest
+    platformName: Windows 10
 
 build: SDK Build v1
 name: SDK Test

@@ -54,8 +54,8 @@ The Tunnel Service solves this by creating an encrypted connection between your 
 
 ```
 Cloud Browser --(encrypted tunnel)--> Your Machine --> localhost:3000
---> staging.internal.company.com
---> 192.168.1.50:8080
+                                                   --> staging.internal.company.com
+                                                   --> 192.168.1.50:8080
 ```
 
 ## Automatic Tunnel (Recommended)
@@ -65,10 +65,10 @@ TestMu AI Browser SDK handles starting and routing the tunnel automatically:
 
 ```typescript
 const session = await client.sessions.create({
-adapter: 'puppeteer',
-tunnel: true,
-tunnelName: 'my-tunnel',   // Optional: name for identification
-lambdatestOptions: { ... }
+    adapter: 'puppeteer',
+    tunnel: true,
+    tunnelName: 'my-tunnel',   // Optional: name for identification
+    lambdatestOptions: { ... }
 });
 
 const browser = await client.puppeteer.connect(session);
@@ -88,19 +88,19 @@ multiple sessions:
 ```typescript
 // Start the tunnel
 await client.tunnel.start({
-user: process.env.LT_USERNAME!,
-key: process.env.LT_ACCESS_KEY!,
-tunnelName: 'my-tunnel',
+    user: process.env.LT_USERNAME!,
+    key: process.env.LT_ACCESS_KEY!,
+    tunnelName: 'my-tunnel',
 });
 
 console.log('Tunnel running:', client.tunnel.getStatus()); // true
 
 // Create sessions that use it
 const session = await client.sessions.create({
-adapter: 'puppeteer',
-tunnel: true,
-tunnelName: 'my-tunnel',
-lambdatestOptions: { ... }
+    adapter: 'puppeteer',
+    tunnel: true,
+    tunnelName: 'my-tunnel',
+    lambdatestOptions: { ... }
 });
 
 // ... agent work ...
@@ -113,14 +113,14 @@ await client.tunnel.stop();
 
 ```typescript
 interface TunnelConfig {
-user: string;           // TestMu AI username
-key: string;            // TestMu AI access key
-tunnelName?: string;    // Named tunnel for identification
-proxyHost?: string;     // Corporate proxy host
-proxyPort?: string;     // Corporate proxy port
-proxyUser?: string;     // Proxy auth user
-proxyPass?: string;     // Proxy auth password
-logFile?: string;       // Log file path
+    user: string;           // TestMu AI username
+    key: string;            // TestMu AI access key
+    tunnelName?: string;    // Named tunnel for identification
+    proxyHost?: string;     // Corporate proxy host
+    proxyPort?: string;     // Corporate proxy port
+    proxyUser?: string;     // Proxy auth user
+    proxyPass?: string;     // Proxy auth password
+    logFile?: string;       // Log file path
 }
 ```
 

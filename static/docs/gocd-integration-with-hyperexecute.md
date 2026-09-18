@@ -114,22 +114,22 @@ After the build is successful, go to your HyperExecute Dashboard and check the o
 
 ```xml
 <pipeline name="Download-and-Run-Hyperexecute">
-<stage name="Download">
-<job name="Download-Hyperexecute">
-<run on="ubuntu" />  # Adjust for macOS if needed
-<tasks>
-<exec command="wget https://downloads.lambdatest.com/hyperexecute/darwin/hyperexecute" />
-<exec command="chmod u+x hyperexecute" />
-</tasks>
-</job>
-</stage>
-<stage name="Run-Tests">
-<job name="Run-Hyperexecute-Tests">
-<run on="ubuntu" />  # Adjust for macOS if needed
-<tasks>
-<exec command="./hyperexecute --user <your_username> --key <your_access_key> --config <RELATIVE_PATH_OF_YOUR_YAML_FILE_path>" />
-</tasks>
-</job>
-</stage>
+  <stage name="Download">
+    <job name="Download-Hyperexecute">
+      <run on="ubuntu" />  # Adjust for macOS if needed
+      <tasks>
+        <exec command="wget https://downloads.lambdatest.com/hyperexecute/darwin/hyperexecute" />
+        <exec command="chmod u+x hyperexecute" />
+      </tasks>
+    </job>
+  </stage>
+  <stage name="Run-Tests">
+    <job name="Run-Hyperexecute-Tests">
+      <run on="ubuntu" />  # Adjust for macOS if needed
+      <tasks>
+        <exec command="./hyperexecute --user <your_username> --key <your_access_key> --config <RELATIVE_PATH_OF_YOUR_YAML_FILE_path>" />
+      </tasks>
+    </job>
+  </stage>
 </pipeline>
 ```

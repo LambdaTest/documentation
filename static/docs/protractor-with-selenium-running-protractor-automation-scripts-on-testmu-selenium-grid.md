@@ -52,10 +52,10 @@ Update the capabilities object to define the browser and platform settings.
 
 ```js
 capabilities = {
-build: 'protractor-LambdaTest-Single',
-browserName: 'chrome',
-browserVersion: 'latest',
-platformName: 'Windows 10',
+    build: 'protractor-LambdaTest-Single',
+    browserName: 'chrome',
+    browserVersion: 'latest',
+    platformName: 'Windows 10',
 },
 ```
 

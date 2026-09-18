@@ -82,18 +82,18 @@ Using the above variables you will receive an output in the below format.
 ```javascript
 sample Output $LT_BROWSERS:
 [
-{
-"operatingSystem": "win10", //OS you wish to test your website with.
-"browserName": "Chrome",    //Name of the browser on which you wish to test.
-"browserVersion": "71.0",   //Particular browser version on which you wish to test.
-"resolution": "1024x768"    //Specify the screen resolution.
-},
-{
-"operatingSystem": "win8",   //OS you wish to test your website with.
-"browserName": "Firefox",    //Name of the browser on which you wish to test.
-"browserVersion": "63.0",    //Particular browser version on which you wish to test.
-"resolution": "1024x768"     //Specify the screen resolution.
-}
+   {
+       "operatingSystem": "win10", //OS you wish to test your website with.
+       "browserName": "Chrome",    //Name of the browser on which you wish to test.
+       "browserVersion": "71.0",   //Particular browser version on which you wish to test.
+       "resolution": "1024x768"    //Specify the screen resolution.
+   },
+   {
+       "operatingSystem": "win8",   //OS you wish to test your website with.
+       "browserName": "Firefox",    //Name of the browser on which you wish to test.
+       "browserVersion": "63.0",    //Particular browser version on which you wish to test.
+       "resolution": "1024x768"     //Specify the screen resolution.
+   }
 ```
 
 ## Running Your First Test

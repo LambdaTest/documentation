@@ -256,26 +256,26 @@ The fields appear at **two levels**: the **test level** (aggregate across all pa
 
 ```json
 {
-"test_info": { "test_id": "AUT_abc123", "status": "completed" },
-"accessibility_score": 72,
-"score_label": "Good",
-"scored_element_count": 1627,
-"scan_info": [
-{
-"page_url": "https://example.com/login",
-"issue_count": 5,
-"accessibility_score": 43,
-"score_label": "Poor",
-"scan_id": "AUT_abc123_1"
-},
-{
-"page_url": "https://example.com/dashboard",
-"issue_count": 8,
-"accessibility_score": 88,
-"score_label": "Good",
-"scan_id": "AUT_abc123_2"
-}
-]
+  "test_info": { "test_id": "AUT_abc123", "status": "completed" },
+  "accessibility_score": 72,
+  "score_label": "Good",
+  "scored_element_count": 1627,
+  "scan_info": [
+    {
+      "page_url": "https://example.com/login",
+      "issue_count": 5,
+      "accessibility_score": 43,
+      "score_label": "Poor",
+      "scan_id": "AUT_abc123_1"
+    },
+    {
+      "page_url": "https://example.com/dashboard",
+      "issue_count": 8,
+      "accessibility_score": 88,
+      "score_label": "Good",
+      "scan_id": "AUT_abc123_2"
+    }
+  ]
 }
 ```
 

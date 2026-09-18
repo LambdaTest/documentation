@@ -245,9 +245,9 @@ git clone https://github.com/LambdaTest/smartui-java-testng-sample
 
 ```xml
 <dependency>
-<groupId>io.github.lambdatest</groupId>
-<artifactId>lambdatest-java-sdk</artifactId>
-<version>1.0.23</version>
+    <groupId>io.github.lambdatest</groupId>
+    <artifactId>lambdatest-java-sdk</artifactId>
+    <version>1.0.23</version>
 </dependency>
 ```
 
@@ -295,37 +295,37 @@ Once, the configuration file will be created, you will be seeing the default con
 
 ```json title="/smartui-sdk-project/.smartui.json"
 {
-"web": {
-"browsers": [
-"chrome",
-"firefox",
-"safari",
-"edge"
-],
-"viewports": [
-[
-1920
-],
-[
-1366
-],
-[
-1028
-]
-] // Full Page screenshots are captured by default for web viewports
-},
-"mobile": {
-"devices": [
-"iPhone 14",  //iPhone 14 viewport
-"Galaxy S24"  //Galaxy S24 viewport
-],
-"fullPage": true, //Full Page is true by default for mobile viewports
-"orientation": "portrait" //Change to "landscape" for landscape snapshot
-},
-"waitForTimeout": 1000, //Optional (Should only be used in case lazy-loading/async components are present)
-"waitForPageRender": 50000, //Optional (Should only be used in case of websites which take more than 30s to load)
-"enableJavaScript": false, //Enable javascript for all the screenshots of the project
-"allowedHostnames": [] //Additional hostnames to capture assets from
+  "web": {
+    "browsers": [
+      "chrome",
+      "firefox",
+      "safari",
+      "edge"
+    ],
+    "viewports": [
+      [
+        1920
+      ],
+      [
+        1366
+      ],
+      [
+        1028
+      ]
+    ] // Full Page screenshots are captured by default for web viewports
+  },
+  "mobile": {
+    "devices": [
+      "iPhone 14",  //iPhone 14 viewport
+      "Galaxy S24"  //Galaxy S24 viewport
+    ],
+    "fullPage": true, //Full Page is true by default for mobile viewports
+    "orientation": "portrait" //Change to "landscape" for landscape snapshot
+  },
+  "waitForTimeout": 1000, //Optional (Should only be used in case lazy-loading/async components are present)
+  "waitForPageRender": 50000, //Optional (Should only be used in case of websites which take more than 30s to load)
+  "enableJavaScript": false, //Enable javascript for all the screenshots of the project
+  "allowedHostnames": [] //Additional hostnames to capture assets from
 }
 ```
 **Advanced options in SmartUI configuration**
@@ -338,24 +338,24 @@ Once, the configuration file will be created, you will be seeing the default con
 - You can incorporate SmartUI into your custom `Selenium` automation test (any platform) script by adding the `smartuiSnapshot` function in the required segment of selenium script of which we would like to take the screenshot, as shown below:
 
 ```java
-//Importing the lambdatest-java SDK
+ //Importing the lambdatest-java SDK
 
 //Rest of your code here
 
 @Test
-public void basicTest() throws Exception {
-String spanText;
-System.out.println("Loading URL");
+    public void basicTest() throws Exception {
+        String spanText;
+        System.out.println("Loading URL");
 
-driver.get("<Required URL>");
+        driver.get("<Required URL>");
 
-SmartUISnapshot.smartuiSnapshot(driver, "<Screenshot Name>");
+        SmartUISnapshot.smartuiSnapshot(driver, "<Screenshot Name>");
 
-Thread.sleep(5000);
-Thread.sleep(1000);
-System.out.println("TestFinished");
+        Thread.sleep(5000);
+        Thread.sleep(1000);
+        System.out.println("TestFinished");
 
-}
+    }
 
 ```
 
@@ -536,36 +536,36 @@ If you encounter difficulties loading interactive elements that appear on scroll
 
 @Test
 public void basicTest() throws Exception {
-System.out.println("Loading Url");
-driver.get("Required URL");
-quickScrollToBottom();
+    System.out.println("Loading Url");
+    driver.get("Required URL");
+    quickScrollToBottom();
 
-SmartUISnapshot.smartuiSnapshot(driver, "Screenshot Name");
-Thread.sleep(5000); // wait for 5 seconds
-System.out.println("Test Finished");
+    SmartUISnapshot.smartuiSnapshot(driver, "Screenshot Name");
+    Thread.sleep(5000); // wait for 5 seconds
+    System.out.println("Test Finished");
 }
 
 public void quickScrollToBottom() throws InterruptedException {
-long lastHeight = ((Number) ((JavascriptExecutor) driver).executeScript("return document.body.scrollHeight")).longValue();
-while (true) {
-((JavascriptExecutor) driver).executeScript("window.scrollTo(0, document.body.scrollHeight);");
-Thread.sleep(2000);
+    long lastHeight = ((Number) ((JavascriptExecutor) driver).executeScript("return document.body.scrollHeight")).longValue();
+    while (true) {
+        ((JavascriptExecutor) driver).executeScript("window.scrollTo(0, document.body.scrollHeight);");
+        Thread.sleep(2000);
 
-long newHeight = ((Number) ((JavascriptExecutor) driver).executeScript("return document.body.scrollHeight")).longValue();
-if (newHeight == lastHeight) {
-break;
-}
-lastHeight = newHeight;
-}
-((JavascriptExecutor) driver).executeScript("window.scrollTo(0, 0);");
-Thread.sleep(1000); // wait for 1 second
+        long newHeight = ((Number) ((JavascriptExecutor) driver).executeScript("return document.body.scrollHeight")).longValue();
+        if (newHeight == lastHeight) {
+            break;
+        }
+        lastHeight = newHeight;
+    }
+    ((JavascriptExecutor) driver).executeScript("window.scrollTo(0, 0);");
+    Thread.sleep(1000); // wait for 1 second
 }
 
 @AfterMethod
 public void tearDown() {
-if (driver != null) {
-driver.quit();
-}
+    if (driver != null) {
+        driver.quit();
+    }
 }
 }
 ```
@@ -681,7 +681,7 @@ wait.until(ExpectedConditions.presenceOfElementLocated(By.id("content")));
 2. Enable JavaScript in configuration:
 ```json
 {
-"enableJavaScript": true
+  "enableJavaScript": true
 }
 ```
 

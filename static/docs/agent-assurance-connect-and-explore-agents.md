@@ -61,7 +61,7 @@ In headless mode:
 
 ```bash
 rook explore . \
--- "focus on the refund approval threshold and identity checks"
+  -- "focus on the refund approval threshold and identity checks"
 ```
 
 The instruction guides the discovery model, but it does not widen the filesystem scope.
@@ -80,10 +80,10 @@ Create a clean directory containing the material you are authorized to share:
 
 ```text
 travel-agent-spec/
-PRD.md
-policies.md
-api-examples.md
-fixtures/
+  PRD.md
+  policies.md
+  api-examples.md
+  fixtures/
 ```
 
 Start Rook inside that directory:

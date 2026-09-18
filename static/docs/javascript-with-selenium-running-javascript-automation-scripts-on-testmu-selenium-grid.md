@@ -27,15 +27,15 @@ Every framework below connects to the grid at `hub.lambdatest.com/wd/hub` and pa
 
 ```js
 const capabilities = {
-build: 'NodeJS build',
-name: 'Test 1',
-platformName: 'Windows 10',
-browserName: 'chrome',
-browserVersion: 'latest',
-network: true,
-visual: true,
-console: true,
-video: true
+  build: 'NodeJS build',
+  name: 'Test 1',
+  platformName: 'Windows 10',
+  browserName: 'chrome',
+  browserVersion: 'latest',
+  network: true,
+  visual: true,
+  console: true,
+  video: true
 }
 ```
 
@@ -60,15 +60,15 @@ cd mocha-selenium-sample
 
 ```js title="conf/single.conf.js"
 exports.capabilities = {
-'build': 'Mocha-Selenium-Sample',
-'name': 'Your Test Name',
-'platformName':'Windows 10',
-'browserName': 'chrome',
-'browserVersion': 'latest',
-'visual': false,
-'network':false,
-'console':false,
-'tunnel': false
+  'build': 'Mocha-Selenium-Sample',
+  'name': 'Your Test Name',
+  'platformName':'Windows 10',
+  'browserName': 'chrome',
+  'browserVersion': 'latest',
+  'visual': false,
+  'network':false,
+  'console':false,
+  'tunnel': false
 };
 ```
 
@@ -107,21 +107,21 @@ cd webdriverio-selenium
 
 ```js title="conf/single.conf.js"
 exports.config = {
-user: process.env.LT_USERNAME || "<your username>",
-key: process.env.LT_ACCESS_KEY || "<your accessKey>",
-specs: ['./tests/specs/single_test.js'],
-capabilities: [{
-browserName: 'chrome',
-browserVersion: 'latest',
-platformName: 'Windows 10',
-name: "Test webdriverio",
-build: "build 1",
-}],
-path: '/wd/hub',
-hostname: 'hub.lambdatest.com',
-port: 80,
-framework: 'mocha',
-mochaOpts: { ui: 'bdd' }
+  user: process.env.LT_USERNAME || "<your username>",
+  key: process.env.LT_ACCESS_KEY || "<your accessKey>",
+  specs: ['./tests/specs/single_test.js'],
+  capabilities: [{
+    browserName: 'chrome',
+    browserVersion: 'latest',
+    platformName: 'Windows 10',
+    name: "Test webdriverio",
+    build: "build 1",
+  }],
+  path: '/wd/hub',
+  hostname: 'hub.lambdatest.com',
+  port: 80,
+  framework: 'mocha',
+  mochaOpts: { ui: 'bdd' }
 }
 ```
 
@@ -144,10 +144,10 @@ cd jest-selenium-webdriver-sample
 
 ```js
 const capabilities = {
-build: 'jest-LambdaTest-Single',
-browserName: 'chrome',
-browserVersion: 'latest',
-platformName: 'Windows 10',
+  build: 'jest-LambdaTest-Single',
+  browserName: 'chrome',
+  browserVersion: 'latest',
+  platformName: 'Windows 10',
 };
 ```
 
@@ -170,11 +170,11 @@ cd NodeJs-Cucumber-Selenium
 
 ```js title="conf/single.conf.js"
 capabilities: [{
-browserName: 'chrome',
-platformName: 'Windows 10',
-browserVersion: 'latest',
-name: "cucumber-js-single-test",
-build: "cucumber-js-LambdaTest-single"
+  browserName: 'chrome',
+  platformName: 'Windows 10',
+  browserVersion: 'latest',
+  name: "cucumber-js-single-test",
+  build: "cucumber-js-LambdaTest-single"
 }]
 ```
 
@@ -197,17 +197,17 @@ cd karma-jasmine-sample
 
 ```js title="karma.conf.js"
 customLaunchers: {
-chrome: {
-base: 'WebDriver',
-config: webdriverConfig,
-browserName: 'chrome',
-platform: 'windows 10',
-version: '71.0',
-name: 'Karma With Heartbeat',
-user: process.env.LT_USERNAME,
-accessKey: process.env.LT_ACCESS_KEY,
-pseudoActivityInterval: 15000
-}
+  chrome: {
+    base: 'WebDriver',
+    config: webdriverConfig,
+    browserName: 'chrome',
+    platform: 'windows 10',
+    version: '71.0',
+    name: 'Karma With Heartbeat',
+    user: process.env.LT_USERNAME,
+    accessKey: process.env.LT_ACCESS_KEY,
+    pseudoActivityInterval: 15000
+  }
 }
 ```
 
@@ -230,17 +230,17 @@ cd angular-karma-sample
 
 ```js title="karma.conf.js"
 customLaunchers: {
-chrome: {
-base: 'WebDriver',
-config: webdriverConfig,
-browserName: 'chrome',
-platform: 'windows 10',
-version: '71.0',
-name: 'Karma With Heartbeat',
-user: process.env.LT_USERNAME,
-accessKey: process.env.LT_ACCESS_KEY,
-pseudoActivityInterval: 5000
-}
+  chrome: {
+    base: 'WebDriver',
+    config: webdriverConfig,
+    browserName: 'chrome',
+    platform: 'windows 10',
+    version: '71.0',
+    name: 'Karma With Heartbeat',
+    user: process.env.LT_USERNAME,
+    accessKey: process.env.LT_ACCESS_KEY,
+    pseudoActivityInterval: 5000
+  }
 }
 ```
 
@@ -277,13 +277,13 @@ cd Nemo-Lambdatest-sample
 
 ```js title="nemo.config.js"
 "withCapabilities": [{
-"build": "LT Nemo Sample Tests",
-"name": "LT Nemo sample test",
-"platformName": "Windows 10",
-"browserName": "Chrome",
-"browserVersion": "latest",
-"user": "env:LT_USERNAME",
-"accessKey": "env:LT_ACCESS_KEY"
+  "build": "LT Nemo Sample Tests",
+  "name": "LT Nemo sample test",
+  "platformName": "Windows 10",
+  "browserName": "Chrome",
+  "browserVersion": "latest",
+  "user": "env:LT_USERNAME",
+  "accessKey": "env:LT_ACCESS_KEY"
 }]
 ```
 
@@ -306,21 +306,21 @@ cd lambdatest-codeceptjs-sample
 
 ```js title="codecept.conf.js"
 helpers: {
-WebDriver: {
-url: 'http://google.com/ncr',
-browser: 'chrome',
-host: 'hub.lambdatest.com',
-port: 80,
-user: process.env.LT_USERNAME,
-key: process.env.LT_ACCESS_KEY,
-desiredCapabilities: {
-name: '[CodeceptJS] Automation Sample',
-build: '[CodeceptJS] Automation Sample',
-platformName: 'Windows 11',
-browserName: 'Chrome',
-browserVersion: 'dev'
-}
-}
+  WebDriver: {
+    url: 'http://google.com/ncr',
+    browser: 'chrome',
+    host: 'hub.lambdatest.com',
+    port: 80,
+    user: process.env.LT_USERNAME,
+    key: process.env.LT_ACCESS_KEY,
+    desiredCapabilities: {
+      name: '[CodeceptJS] Automation Sample',
+      build: '[CodeceptJS] Automation Sample',
+      platformName: 'Windows 11',
+      browserName: 'Chrome',
+      browserVersion: 'dev'
+    }
+  }
 }
 ```
 

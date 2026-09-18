@@ -101,19 +101,19 @@ config.put("ignoreDOM", ignoreByCoord);
 
 ```javascript
 await driver.executeScript('smartui.takeScreenshot', {
-screenshotName: 'home',
-ignoreDOM: {
-coordinates: ['847,185,1571,734'], // left, top, right, bottom
-},
+  screenshotName: 'home',
+  ignoreDOM: {
+    coordinates: ['847,185,1571,734'], // left, top, right, bottom
+  },
 });
 ```
 
 ```python
 driver.execute_script("smartui.takeScreenshot", {
-"screenshotName": "home",
-"ignoreDOM": {
-"coordinates": ["847,185,1571,734"],  # left, top, right, bottom
-},
+    "screenshotName": "home",
+    "ignoreDOM": {
+        "coordinates": ["847,185,1571,734"],  # left, top, right, bottom
+    },
 })
 ```
 
@@ -178,8 +178,8 @@ config.put("ignoreDOM", ignore);
 
 ```javascript
 config.ignoreDOM = {
-cssSelector: ['.promo'],         // selector
-coordinates: ['847,185,1571,734'], // coordinates
+  cssSelector: ['.promo'],         // selector
+  coordinates: ['847,185,1571,734'], // coordinates
 };
 await driver.executeScript('smartui.takeScreenshot', config);
 // both regions are ignored
@@ -187,8 +187,8 @@ await driver.executeScript('smartui.takeScreenshot', config);
 
 ```python
 config["ignoreDOM"] = {
-"cssSelector": [".promo"],          # selector
-"coordinates": ["847,185,1571,734"],  # coordinates
+    "cssSelector": [".promo"],          # selector
+    "coordinates": ["847,185,1571,734"],  # coordinates
 }
 driver.execute_script("smartui.takeScreenshot", config)
 # both regions are ignored

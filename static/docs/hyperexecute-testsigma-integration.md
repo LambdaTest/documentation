@@ -66,49 +66,49 @@ runson: win
 concurrency: 2
 
 env:
-CACHE_DIR: m2_cache_dir
+  CACHE_DIR: m2_cache_dir
 
 cacheKey: '{{ checksum "pom.xml" }}'
 cacheDirectories:
-- ${CACHE_DIR}
+  - ${CACHE_DIR}
 
 matrix:
-tests: ["48","70"]
-activationKeys: ["agent1_activationkey","agent2_activationkey"]
+  tests: ["48","70"]
+  activationKeys: ["agent1_activationkey","agent2_activationkey"]
 exclusionMatrix:
-- tests: ["48"]
-activationKeys: ["agent1_activationkey"]
-- tests: ["70"]
-activationKeys: ["agent2_activationkey"]
+  - tests: ["48"]
+    activationKeys: ["agent1_activationkey"]
+  - tests: ["70"]
+    activationKeys: ["agent2_activationkey"]
 
 pre:
-- npm install -g npm@10.4.0
-- npm i axios
+  - npm install -g npm@10.4.0
+  - npm i axios
 
 mergeArtifacts: true
 
 uploadArtefacts:
-- name: ExecutionSnapshots
-path:
-- target/surefire-reports/html/**
+ - name: ExecutionSnapshots
+   path:
+    - target/surefire-reports/html/**
 
 report: true
 partialReports:
-location: target/surefire-reports/html
-type: html
-frameworkName: extent
+  location: target/surefire-reports/html
+  type: html
+  frameworkName: extent
 
 testSuites:
-- Sleep 100
-- node script.js $tests; Sleep 45
+  - Sleep 100
+  - node script.js $tests; Sleep 45
 
 post:
-- stop-agent.bat
+  - stop-agent.bat
 
 captureScreenRecordingForScenarios: true
 
 background:
-- start-agent.bat $activationKeys
+  - start-agent.bat $activationKeys
 
 jobLabel: [testsigma]
 ```
@@ -158,27 +158,27 @@ const testPlanId = process.argv[2];
 
 const numid1 = parseInt(testPlanId);
 let data = JSON.stringify({
-"executionId": numid1
+  "executionId": numid1
 });
 
 let config = {
-method: 'post',
-maxBodyLength: Infinity,
-url: 'https://app.testsigma.com/api/v1/execution_results',
-headers: {
-'Content-Type': 'application/json',
-'Authorization': 'Bearer <YOUR_AUTH_KEY>'
-},
-data: data
+  method: 'post',
+  maxBodyLength: Infinity,
+  url: 'https://app.testsigma.com/api/v1/execution_results',
+  headers: {
+    'Content-Type': 'application/json',
+    'Authorization': 'Bearer <YOUR_AUTH_KEY>'
+  },
+  data: data
 };
 
 axios.request(config)
-.then((response) => {
-console.log(JSON.stringify(response.data));
-})
-.catch((error) => {
-console.log(error);
-});
+  .then((response) => {
+    console.log(JSON.stringify(response.data));
+  })
+  .catch((error) => {
+    console.log(error);
+  });
 
 ```
 

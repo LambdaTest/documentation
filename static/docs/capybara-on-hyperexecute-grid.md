@@ -79,16 +79,16 @@ Configure the desired capabilities based on your test requirements. For example:
 
 ```bash
 @caps = {
-"browserName"=>lt_browser,
-"version"=>lt_browser_version,
-"platform"=>lt_os,
-"resolution"=>lt_res,
-"build"=>"capybara-lambdatest",
-"name"=>"single-Test-Jenkins",
-"video"=>true,
-"network"=>true,
-"console"=>true,
-"visual"=>true
+  "browserName"=>lt_browser,
+  "version"=>lt_browser_version,
+  "platform"=>lt_os,
+  "resolution"=>lt_res,
+  "build"=>"capybara-lambdatest",
+  "name"=>"single-Test-Jenkins",
+  "video"=>true,
+  "network"=>true,
+  "console"=>true,
+  "visual"=>true
 }
 ```
 
@@ -153,29 +153,29 @@ maxRetries: 5
 concurrency: 2
 
 pre:
-- bundle install --deployment
+  - bundle install --deployment
 
 env:
-CONFIG_NAME: "linux"
+   CONFIG_NAME: "linux"
 
 cacheKey: '{{ checksum "Gemfile.lock" }}'
 cacheDirectories:
-- ./vendor/bundle
+  - ./vendor/bundle
 
 uploadArtefacts:
-- name: report
-path:
-- cucumber_results.html
+ - name: report
+   path:
+     - cucumber_results.html
 
 report: true
 partialReports:
-location: cucumber_results.html
-type: html
+ location: cucumber_results.html
+ type: html
 
 testDiscovery:
-type: raw
-mode: remote
-command: snooper --featureFilePaths=features/ --frameWork=java
+  type: raw
+  mode: remote
+  command: snooper --featureFilePaths=features/ --frameWork=java
 
 testRunnerCommand: bundle exec cucumber "$test" --format html --out cucumber_results.html
 
@@ -243,8 +243,8 @@ The capybara-skill package includes:
 capybara-skill/
 ├── SKILL.md
 └── reference/
-├── playbook.md
-└── advanced-patterns.md
+    ├── playbook.md
+    └── advanced-patterns.md
 ```
 
 It provides structured guidance for:

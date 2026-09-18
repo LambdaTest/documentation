@@ -80,9 +80,9 @@ Create or update your SmartUI configuration file (`.smartui.json`):
 
 ```json title=".smartui.json"
 {
-"projectName": "your-smartui-project-name",
-"buildName": "smartui-build-${CI_PIPELINE_ID}",
-"baseline": false
+  "projectName": "your-smartui-project-name",
+  "buildName": "smartui-build-${CI_PIPELINE_ID}",
+  "baseline": false
 }
 ```
 
@@ -98,204 +98,204 @@ Create or update your `.gitlab-ci.yml` file. The key difference with the Exec me
 
 ```yaml title=".gitlab-ci.yml - TypeScript/JavaScript Example"
 stages:
-- test
+  - test
 
 variables:
-NODE_VERSION: "18"
-LT_USERNAME: $LT_USERNAME
-LT_ACCESS_KEY: $LT_ACCESS_KEY
-PROJECT_TOKEN: $PROJECT_TOKEN
+  NODE_VERSION: "18"
+  LT_USERNAME: $LT_USERNAME
+  LT_ACCESS_KEY: $LT_ACCESS_KEY
+  PROJECT_TOKEN: $PROJECT_TOKEN
 
 visual_regression_tests:
-stage: test
-image: node:${NODE_VERSION}
+  stage: test
+  image: node:${NODE_VERSION}
 
-before_script:
-- npm ci
-- npm install -g @lambdatest/smartui-cli
+  before_script:
+    - npm ci
+    - npm install -g @lambdatest/smartui-cli
 
-script:
-# Get GitLab project ID and commit SHA
-- |
-PROJECT_ID=${CI_PROJECT_ID}
-COMMIT_SHA=${CI_COMMIT_SHA}
+  script:
+    # Get GitLab project ID and commit SHA
+    - |
+      PROJECT_ID=${CI_PROJECT_ID}
+      COMMIT_SHA=${CI_COMMIT_SHA}
 
-# For merge requests, use the merge request commit SHA
-if [ -n "$CI_MERGE_REQUEST_IID" ]; then
-COMMIT_SHA=${CI_MERGE_REQUEST_SHA:-${CI_COMMIT_SHA}}
-fi
+      # For merge requests, use the merge request commit SHA
+      if [ -n "$CI_MERGE_REQUEST_IID" ]; then
+        COMMIT_SHA=${CI_MERGE_REQUEST_SHA:-${CI_COMMIT_SHA}}
+      fi
 
-# Construct GitLab API URL for status updates
-GIT_URL="https://gitlab.com/api/v4/projects/${PROJECT_ID}/statuses/${COMMIT_SHA}"
+      # Construct GitLab API URL for status updates
+      GIT_URL="https://gitlab.com/api/v4/projects/${PROJECT_ID}/statuses/${COMMIT_SHA}"
 
-echo "GitLab Project ID: ${PROJECT_ID}"
-echo "Commit SHA: ${COMMIT_SHA}"
-echo "GitLab Status URL: ${GIT_URL}"
+      echo "GitLab Project ID: ${PROJECT_ID}"
+      echo "Commit SHA: ${COMMIT_SHA}"
+      echo "GitLab Status URL: ${GIT_URL}"
 
-# Run tests with SmartUI Exec and GitLab integration
-npx smartui exec --gitURL "${GIT_URL}" -- npm test
-# Or: npx smartui exec --gitURL "${GIT_URL}" -- npx wdio run wdio.conf.ts
-# Or: npx smartui exec --gitURL "${GIT_URL}" -- npm run test:mobile
+      # Run tests with SmartUI Exec and GitLab integration
+      npx smartui exec --gitURL "${GIT_URL}" -- npm test
+      # Or: npx smartui exec --gitURL "${GIT_URL}" -- npx wdio run wdio.conf.ts
+      # Or: npx smartui exec --gitURL "${GIT_URL}" -- npm run test:mobile
 
-only:
-- merge_requests
-- main
-- develop
+  only:
+    - merge_requests
+    - main
+    - develop
 
-environment:
-name: visual-regression/$CI_COMMIT_REF_NAME
+  environment:
+    name: visual-regression/$CI_COMMIT_REF_NAME
 ```
 
 ```yaml title=".gitlab-ci.yml - Java Example"
 stages:
-- test
+  - test
 
 variables:
-MAVEN_OPTS: "-Dmaven.repo.local=.m2/repository"
-LT_USERNAME: $LT_USERNAME
-LT_ACCESS_KEY: $LT_ACCESS_KEY
-PROJECT_TOKEN: $PROJECT_TOKEN
+  MAVEN_OPTS: "-Dmaven.repo.local=.m2/repository"
+  LT_USERNAME: $LT_USERNAME
+  LT_ACCESS_KEY: $LT_ACCESS_KEY
+  PROJECT_TOKEN: $PROJECT_TOKEN
 
 visual_regression_tests:
-stage: test
-image: maven:3.8-openjdk-11
+  stage: test
+  image: maven:3.8-openjdk-11
 
-cache:
-paths:
-- .m2/repository/
+  cache:
+    paths:
+      - .m2/repository/
 
-before_script:
-- mvn clean install -DskipTests
-- npm install -g @lambdatest/smartui-cli
+  before_script:
+    - mvn clean install -DskipTests
+    - npm install -g @lambdatest/smartui-cli
 
-script:
-# Get GitLab project ID and commit SHA
-- |
-PROJECT_ID=${CI_PROJECT_ID}
-COMMIT_SHA=${CI_COMMIT_SHA}
+  script:
+    # Get GitLab project ID and commit SHA
+    - |
+      PROJECT_ID=${CI_PROJECT_ID}
+      COMMIT_SHA=${CI_COMMIT_SHA}
 
-# For merge requests, use the merge request commit SHA
-if [ -n "$CI_MERGE_REQUEST_IID" ]; then
-COMMIT_SHA=${CI_MERGE_REQUEST_SHA:-${CI_COMMIT_SHA}}
-fi
+      # For merge requests, use the merge request commit SHA
+      if [ -n "$CI_MERGE_REQUEST_IID" ]; then
+        COMMIT_SHA=${CI_MERGE_REQUEST_SHA:-${CI_COMMIT_SHA}}
+      fi
 
-# Construct GitLab API URL for status updates
-GIT_URL="https://gitlab.com/api/v4/projects/${PROJECT_ID}/statuses/${COMMIT_SHA}"
+      # Construct GitLab API URL for status updates
+      GIT_URL="https://gitlab.com/api/v4/projects/${PROJECT_ID}/statuses/${COMMIT_SHA}"
 
-echo "GitLab Project ID: ${PROJECT_ID}"
-echo "Commit SHA: ${COMMIT_SHA}"
-echo "GitLab Status URL: ${GIT_URL}"
+      echo "GitLab Project ID: ${PROJECT_ID}"
+      echo "Commit SHA: ${COMMIT_SHA}"
+      echo "GitLab Status URL: ${GIT_URL}"
 
-# Run tests with SmartUI Exec and GitLab integration
-npx smartui exec --gitURL "${GIT_URL}" -- mvn test
-# Or: npx smartui exec --gitURL "${GIT_URL}" -- ./gradlew test (for Gradle)
+      # Run tests with SmartUI Exec and GitLab integration
+      npx smartui exec --gitURL "${GIT_URL}" -- mvn test
+      # Or: npx smartui exec --gitURL "${GIT_URL}" -- ./gradlew test (for Gradle)
 
-only:
-- merge_requests
-- main
-- develop
+  only:
+    - merge_requests
+    - main
+    - develop
 
-environment:
-name: visual-regression/$CI_COMMIT_REF_NAME
+  environment:
+    name: visual-regression/$CI_COMMIT_REF_NAME
 ```
 
 ```yaml title=".gitlab-ci.yml - Python Example"
 stages:
-- test
+  - test
 
 variables:
-PYTHON_VERSION: "3.9"
-LT_USERNAME: $LT_USERNAME
-LT_ACCESS_KEY: $LT_ACCESS_KEY
-PROJECT_TOKEN: $PROJECT_TOKEN
+  PYTHON_VERSION: "3.9"
+  LT_USERNAME: $LT_USERNAME
+  LT_ACCESS_KEY: $LT_ACCESS_KEY
+  PROJECT_TOKEN: $PROJECT_TOKEN
 
 visual_regression_tests:
-stage: test
-image: python:${PYTHON_VERSION}
+  stage: test
+  image: python:${PYTHON_VERSION}
 
-before_script:
-- pip install -r requirements.txt
-- npm install -g @lambdatest/smartui-cli
+  before_script:
+    - pip install -r requirements.txt
+    - npm install -g @lambdatest/smartui-cli
 
-script:
-# Get GitLab project ID and commit SHA
-- |
-PROJECT_ID=${CI_PROJECT_ID}
-COMMIT_SHA=${CI_COMMIT_SHA}
+  script:
+    # Get GitLab project ID and commit SHA
+    - |
+      PROJECT_ID=${CI_PROJECT_ID}
+      COMMIT_SHA=${CI_COMMIT_SHA}
 
-# For merge requests, use the merge request commit SHA
-if [ -n "$CI_MERGE_REQUEST_IID" ]; then
-COMMIT_SHA=${CI_MERGE_REQUEST_SHA:-${CI_COMMIT_SHA}}
-fi
+      # For merge requests, use the merge request commit SHA
+      if [ -n "$CI_MERGE_REQUEST_IID" ]; then
+        COMMIT_SHA=${CI_MERGE_REQUEST_SHA:-${CI_COMMIT_SHA}}
+      fi
 
-# Construct GitLab API URL for status updates
-GIT_URL="https://gitlab.com/api/v4/projects/${PROJECT_ID}/statuses/${COMMIT_SHA}"
+      # Construct GitLab API URL for status updates
+      GIT_URL="https://gitlab.com/api/v4/projects/${PROJECT_ID}/statuses/${COMMIT_SHA}"
 
-echo "GitLab Project ID: ${PROJECT_ID}"
-echo "Commit SHA: ${COMMIT_SHA}"
-echo "GitLab Status URL: ${GIT_URL}"
+      echo "GitLab Project ID: ${PROJECT_ID}"
+      echo "Commit SHA: ${COMMIT_SHA}"
+      echo "GitLab Status URL: ${GIT_URL}"
 
-# Run tests with SmartUI Exec and GitLab integration
-npx smartui exec --gitURL "${GIT_URL}" -- pytest
-# Or: npx smartui exec --gitURL "${GIT_URL}" -- python -m unittest discover
-# Or: npx smartui exec --gitURL "${GIT_URL}" -- behave
+      # Run tests with SmartUI Exec and GitLab integration
+      npx smartui exec --gitURL "${GIT_URL}" -- pytest
+      # Or: npx smartui exec --gitURL "${GIT_URL}" -- python -m unittest discover
+      # Or: npx smartui exec --gitURL "${GIT_URL}" -- behave
 
-only:
-- merge_requests
-- main
-- develop
+  only:
+    - merge_requests
+    - main
+    - develop
 
-environment:
-name: visual-regression/$CI_COMMIT_REF_NAME
+  environment:
+    name: visual-regression/$CI_COMMIT_REF_NAME
 ```
 
 ```yaml title=".gitlab-ci.yml - Ruby Example"
 stages:
-- test
+  - test
 
 variables:
-RUBY_VERSION: "3.1"
-LT_USERNAME: $LT_USERNAME
-LT_ACCESS_KEY: $LT_ACCESS_KEY
-PROJECT_TOKEN: $PROJECT_TOKEN
+  RUBY_VERSION: "3.1"
+  LT_USERNAME: $LT_USERNAME
+  LT_ACCESS_KEY: $LT_ACCESS_KEY
+  PROJECT_TOKEN: $PROJECT_TOKEN
 
 visual_regression_tests:
-stage: test
-image: ruby:${RUBY_VERSION}
+  stage: test
+  image: ruby:${RUBY_VERSION}
 
-before_script:
-- bundle install
-- npm install -g @lambdatest/smartui-cli
+  before_script:
+    - bundle install
+    - npm install -g @lambdatest/smartui-cli
 
-script:
-# Get GitLab project ID and commit SHA
-- |
-PROJECT_ID=${CI_PROJECT_ID}
-COMMIT_SHA=${CI_COMMIT_SHA}
+  script:
+    # Get GitLab project ID and commit SHA
+    - |
+      PROJECT_ID=${CI_PROJECT_ID}
+      COMMIT_SHA=${CI_COMMIT_SHA}
 
-# For merge requests, use the merge request commit SHA
-if [ -n "$CI_MERGE_REQUEST_IID" ]; then
-COMMIT_SHA=${CI_MERGE_REQUEST_SHA:-${CI_COMMIT_SHA}}
-fi
+      # For merge requests, use the merge request commit SHA
+      if [ -n "$CI_MERGE_REQUEST_IID" ]; then
+        COMMIT_SHA=${CI_MERGE_REQUEST_SHA:-${CI_COMMIT_SHA}}
+      fi
 
-# Construct GitLab API URL for status updates
-GIT_URL="https://gitlab.com/api/v4/projects/${PROJECT_ID}/statuses/${COMMIT_SHA}"
+      # Construct GitLab API URL for status updates
+      GIT_URL="https://gitlab.com/api/v4/projects/${PROJECT_ID}/statuses/${COMMIT_SHA}"
 
-echo "GitLab Project ID: ${PROJECT_ID}"
-echo "Commit SHA: ${COMMIT_SHA}"
-echo "GitLab Status URL: ${GIT_URL}"
+      echo "GitLab Project ID: ${PROJECT_ID}"
+      echo "Commit SHA: ${COMMIT_SHA}"
+      echo "GitLab Status URL: ${GIT_URL}"
 
-# Run tests with SmartUI Exec and GitLab integration
-npx smartui exec --gitURL "${GIT_URL}" -- bundle exec rspec
-# Or: npx smartui exec --gitURL "${GIT_URL}" -- bundle exec cucumber
+      # Run tests with SmartUI Exec and GitLab integration
+      npx smartui exec --gitURL "${GIT_URL}" -- bundle exec rspec
+      # Or: npx smartui exec --gitURL "${GIT_URL}" -- bundle exec cucumber
 
-only:
-- merge_requests
-- main
-- develop
+  only:
+    - merge_requests
+    - main
+    - develop
 
-environment:
-name: visual-regression/$CI_COMMIT_REF_NAME
+  environment:
+    name: visual-regression/$CI_COMMIT_REF_NAME
 ```
 
 ### Key Configuration Points
@@ -366,167 +366,167 @@ When visual differences are detected:
 
 ```yaml title=".gitlab-ci.yml - Complete Web Testing Example"
 stages:
-- test
+  - test
 
 variables:
-NODE_VERSION: "18"
-LT_USERNAME: $LT_USERNAME
-LT_ACCESS_KEY: $LT_ACCESS_KEY
-PROJECT_TOKEN: $PROJECT_TOKEN
+  NODE_VERSION: "18"
+  LT_USERNAME: $LT_USERNAME
+  LT_ACCESS_KEY: $LT_ACCESS_KEY
+  PROJECT_TOKEN: $PROJECT_TOKEN
 
 visual_regression_tests:
-stage: test
-image: node:${NODE_VERSION}
+  stage: test
+  image: node:${NODE_VERSION}
 
-before_script:
-- npm ci
-- npm install -g @lambdatest/smartui-cli
+  before_script:
+    - npm ci
+    - npm install -g @lambdatest/smartui-cli
 
-script:
-- |
-PROJECT_ID=${CI_PROJECT_ID}
-COMMIT_SHA=${CI_COMMIT_SHA}
+  script:
+    - |
+      PROJECT_ID=${CI_PROJECT_ID}
+      COMMIT_SHA=${CI_COMMIT_SHA}
 
-if [ -n "$CI_MERGE_REQUEST_IID" ]; then
-COMMIT_SHA=${CI_MERGE_REQUEST_SHA:-${CI_COMMIT_SHA}}
-fi
+      if [ -n "$CI_MERGE_REQUEST_IID" ]; then
+        COMMIT_SHA=${CI_MERGE_REQUEST_SHA:-${CI_COMMIT_SHA}}
+      fi
 
-GIT_URL="https://gitlab.com/api/v4/projects/${PROJECT_ID}/statuses/${COMMIT_SHA}"
+      GIT_URL="https://gitlab.com/api/v4/projects/${PROJECT_ID}/statuses/${COMMIT_SHA}"
 
-echo "GitLab Status URL: ${GIT_URL}"
+      echo "GitLab Status URL: ${GIT_URL}"
 
-# Run web tests with SmartUI Exec
-npx smartui exec --gitURL "${GIT_URL}" -- npm test
+      # Run web tests with SmartUI Exec
+      npx smartui exec --gitURL "${GIT_URL}" -- npm test
 
-only:
-- merge_requests
-- main
+  only:
+    - merge_requests
+    - main
 ```
 
 ```yaml title=".gitlab-ci.yml - Complete Java Web Testing Example"
 stages:
-- test
+  - test
 
 variables:
-MAVEN_OPTS: "-Dmaven.repo.local=.m2/repository"
-LT_USERNAME: $LT_USERNAME
-LT_ACCESS_KEY: $LT_ACCESS_KEY
-PROJECT_TOKEN: $PROJECT_TOKEN
+  MAVEN_OPTS: "-Dmaven.repo.local=.m2/repository"
+  LT_USERNAME: $LT_USERNAME
+  LT_ACCESS_KEY: $LT_ACCESS_KEY
+  PROJECT_TOKEN: $PROJECT_TOKEN
 
 visual_regression_tests:
-stage: test
-image: maven:3.8-openjdk-11
+  stage: test
+  image: maven:3.8-openjdk-11
 
-cache:
-paths:
-- .m2/repository/
+  cache:
+    paths:
+      - .m2/repository/
 
-before_script:
-- mvn clean install -DskipTests
-- npm install -g @lambdatest/smartui-cli
+  before_script:
+    - mvn clean install -DskipTests
+    - npm install -g @lambdatest/smartui-cli
 
-script:
-- |
-PROJECT_ID=${CI_PROJECT_ID}
-COMMIT_SHA=${CI_COMMIT_SHA}
+  script:
+    - |
+      PROJECT_ID=${CI_PROJECT_ID}
+      COMMIT_SHA=${CI_COMMIT_SHA}
 
-if [ -n "$CI_MERGE_REQUEST_IID" ]; then
-COMMIT_SHA=${CI_MERGE_REQUEST_SHA:-${CI_COMMIT_SHA}}
-fi
+      if [ -n "$CI_MERGE_REQUEST_IID" ]; then
+        COMMIT_SHA=${CI_MERGE_REQUEST_SHA:-${CI_COMMIT_SHA}}
+      fi
 
-GIT_URL="https://gitlab.com/api/v4/projects/${PROJECT_ID}/statuses/${COMMIT_SHA}"
+      GIT_URL="https://gitlab.com/api/v4/projects/${PROJECT_ID}/statuses/${COMMIT_SHA}"
 
-echo "GitLab Status URL: ${GIT_URL}"
+      echo "GitLab Status URL: ${GIT_URL}"
 
-# Run Java tests with SmartUI Exec
-npx smartui exec --gitURL "${GIT_URL}" -- mvn test
+      # Run Java tests with SmartUI Exec
+      npx smartui exec --gitURL "${GIT_URL}" -- mvn test
 
-only:
-- merge_requests
-- main
+  only:
+    - merge_requests
+    - main
 ```
 
 ```yaml title=".gitlab-ci.yml - Complete Mobile Testing Example"
 stages:
-- test
+  - test
 
 variables:
-NODE_VERSION: "18"
-LT_USERNAME: $LT_USERNAME
-LT_ACCESS_KEY: $LT_ACCESS_KEY
-PROJECT_TOKEN: $PROJECT_TOKEN
+  NODE_VERSION: "18"
+  LT_USERNAME: $LT_USERNAME
+  LT_ACCESS_KEY: $LT_ACCESS_KEY
+  PROJECT_TOKEN: $PROJECT_TOKEN
 
 visual_regression_tests:
-stage: test
-image: node:${NODE_VERSION}
+  stage: test
+  image: node:${NODE_VERSION}
 
-before_script:
-- npm ci
-- npm install -g @lambdatest/smartui-cli
+  before_script:
+    - npm ci
+    - npm install -g @lambdatest/smartui-cli
 
-script:
-- |
-PROJECT_ID=${CI_PROJECT_ID}
-COMMIT_SHA=${CI_COMMIT_SHA}
+  script:
+    - |
+      PROJECT_ID=${CI_PROJECT_ID}
+      COMMIT_SHA=${CI_COMMIT_SHA}
 
-if [ -n "$CI_MERGE_REQUEST_IID" ]; then
-COMMIT_SHA=${CI_MERGE_REQUEST_SHA:-${CI_COMMIT_SHA}}
-fi
+      if [ -n "$CI_MERGE_REQUEST_IID" ]; then
+        COMMIT_SHA=${CI_MERGE_REQUEST_SHA:-${CI_COMMIT_SHA}}
+      fi
 
-GIT_URL="https://gitlab.com/api/v4/projects/${PROJECT_ID}/statuses/${COMMIT_SHA}"
+      GIT_URL="https://gitlab.com/api/v4/projects/${PROJECT_ID}/statuses/${COMMIT_SHA}"
 
-echo "GitLab Status URL: ${GIT_URL}"
+      echo "GitLab Status URL: ${GIT_URL}"
 
-# Run mobile tests with SmartUI Exec
-npx smartui exec --gitURL "${GIT_URL}" -- npm run test:mobile
-# Or: npx smartui exec --gitURL "${GIT_URL}" -- npx wdio run wdio.conf.ts
+      # Run mobile tests with SmartUI Exec
+      npx smartui exec --gitURL "${GIT_URL}" -- npm run test:mobile
+      # Or: npx smartui exec --gitURL "${GIT_URL}" -- npx wdio run wdio.conf.ts
 
-only:
-- merge_requests
-- main
+  only:
+    - merge_requests
+    - main
 ```
 
 ```yaml title=".gitlab-ci.yml - Complete Java Mobile Testing Example"
 stages:
-- test
+  - test
 
 variables:
-MAVEN_OPTS: "-Dmaven.repo.local=.m2/repository"
-LT_USERNAME: $LT_USERNAME
-LT_ACCESS_KEY: $LT_ACCESS_KEY
-PROJECT_TOKEN: $PROJECT_TOKEN
+  MAVEN_OPTS: "-Dmaven.repo.local=.m2/repository"
+  LT_USERNAME: $LT_USERNAME
+  LT_ACCESS_KEY: $LT_ACCESS_KEY
+  PROJECT_TOKEN: $PROJECT_TOKEN
 
 visual_regression_tests:
-stage: test
-image: maven:3.8-openjdk-11
+  stage: test
+  image: maven:3.8-openjdk-11
 
-cache:
-paths:
-- .m2/repository/
+  cache:
+    paths:
+      - .m2/repository/
 
-before_script:
-- mvn clean install -DskipTests
-- npm install -g @lambdatest/smartui-cli
+  before_script:
+    - mvn clean install -DskipTests
+    - npm install -g @lambdatest/smartui-cli
 
-script:
-- |
-PROJECT_ID=${CI_PROJECT_ID}
-COMMIT_SHA=${CI_COMMIT_SHA}
+  script:
+    - |
+      PROJECT_ID=${CI_PROJECT_ID}
+      COMMIT_SHA=${CI_COMMIT_SHA}
 
-if [ -n "$CI_MERGE_REQUEST_IID" ]; then
-COMMIT_SHA=${CI_MERGE_REQUEST_SHA:-${CI_COMMIT_SHA}}
-fi
+      if [ -n "$CI_MERGE_REQUEST_IID" ]; then
+        COMMIT_SHA=${CI_MERGE_REQUEST_SHA:-${CI_COMMIT_SHA}}
+      fi
 
-GIT_URL="https://gitlab.com/api/v4/projects/${PROJECT_ID}/statuses/${COMMIT_SHA}"
+      GIT_URL="https://gitlab.com/api/v4/projects/${PROJECT_ID}/statuses/${COMMIT_SHA}"
 
-echo "GitLab Status URL: ${GIT_URL}"
+      echo "GitLab Status URL: ${GIT_URL}"
 
-# Run Java mobile tests with SmartUI Exec
-npx smartui exec --gitURL "${GIT_URL}" -- mvn test -D suite=mobile-tests.xml
+      # Run Java mobile tests with SmartUI Exec
+      npx smartui exec --gitURL "${GIT_URL}" -- mvn test -D suite=mobile-tests.xml
 
-only:
-- merge_requests
-- main
+  only:
+    - merge_requests
+    - main
 ```
 
 ## Troubleshooting

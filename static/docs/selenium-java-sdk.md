@@ -78,76 +78,76 @@ Add the TestMu AI Selenium Java SDK dependency to your `pom.xml`. Configure the 
 
 ```xml
 <dependencies>
-....
-<dependency>
-<groupId>io.github.lambdatest</groupId>
-<artifactId>lambdatest-selenium-java-sdk</artifactId>
-<version>1.0.1</version>
-</dependency>
+  ....
+    <dependency>
+        <groupId>io.github.lambdatest</groupId>
+        <artifactId>lambdatest-selenium-java-sdk</artifactId>
+        <version>1.0.1</version>
+    </dependency>
 </dependencies>
 
 <build>
-....
-<plugins>
-<plugin>
-<artifactId>maven-compiler-plugin</artifactId>
-<version>3.7.0</version>
-<configuration>
-<release>10</release>
-</configuration>
-</plugin>
+   ....
+    <plugins>
+        <plugin>
+            <artifactId>maven-compiler-plugin</artifactId>
+            <version>3.7.0</version>
+            <configuration>
+                <release>10</release>
+            </configuration>
+        </plugin>
 
-<plugin>
-<artifactId>maven-dependency-plugin</artifactId>
-<executions>
-<execution>
-<id>getClasspathFilenames</id>
-<goals>
-<goal>properties</goal>
-</goals>
-</execution>
-<execution>
-<id>copy-lambdatest-agent</id>
-<phase>generate-test-resources</phase>
-<goals>
-<goal>copy</goal>
-</goals>
-<configuration>
-<artifactItems>
-<artifactItem>
-<groupId>io.github.lambdatest</groupId>
-<artifactId>lambdatest-selenium-java-sdk</artifactId>
-<version>1.0.1</version>
-<destFileName>lambdatest-agent.jar</destFileName>
-<outputDirectory>${project.build.directory}/agents</outputDirectory>
-</artifactItem>
-</artifactItems>
-</configuration>
-</execution>
-</executions>
-</plugin>
+        <plugin>
+            <artifactId>maven-dependency-plugin</artifactId>
+            <executions>
+                <execution>
+                    <id>getClasspathFilenames</id>
+                    <goals>
+                        <goal>properties</goal>
+                    </goals>
+                </execution>
+                <execution>
+                    <id>copy-lambdatest-agent</id>
+                    <phase>generate-test-resources</phase>
+                    <goals>
+                        <goal>copy</goal>
+                    </goals>
+                    <configuration>
+                        <artifactItems>
+                            <artifactItem>
+                                <groupId>io.github.lambdatest</groupId>
+                                <artifactId>lambdatest-selenium-java-sdk</artifactId>
+                                <version>1.0.1</version>
+                                <destFileName>lambdatest-agent.jar</destFileName>
+                                <outputDirectory>${project.build.directory}/agents</outputDirectory>
+                            </artifactItem>
+                        </artifactItems>
+                    </configuration>
+                </execution>
+            </executions>
+        </plugin>
 
-<plugin>
-<groupId>org.apache.maven.plugins</groupId>
-<artifactId>maven-surefire-plugin</artifactId>
-<version>2.19.1</version>
-<executions>
-<execution>
-<goals>
-<goal>test</goal>
-</goals>
-</execution>
-</executions>
-<configuration>
-<suiteXmlFiles>
-<suiteXmlFile>${suite}</suiteXmlFile>
-</suiteXmlFiles>
-<argLine>
--javaagent:${project.build.directory}/agents/lambdatest-agent.jar
-</argLine>
-</configuration>
-</plugin>
-</plugins>
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-surefire-plugin</artifactId>
+            <version>2.19.1</version>
+            <executions>
+                <execution>
+                    <goals>
+                        <goal>test</goal>
+                    </goals>
+                </execution>
+            </executions>
+            <configuration>
+                <suiteXmlFiles>
+                    <suiteXmlFile>${suite}</suiteXmlFile>
+                </suiteXmlFiles>
+                <argLine>
+                    -javaagent:${project.build.directory}/agents/lambdatest-agent.jar
+                </argLine>
+            </configuration>
+        </plugin>
+    </plugins>
 </build>
 
 ```
@@ -166,9 +166,9 @@ username: YOUR_LAMBDATEST_USERNAME
 accesskey: YOUR_LAMBDATEST_ACCESS_KEY
 
 platforms:
-- browserName: Chrome
-browserVersion: latest
-platformName: Windows 10
+  - browserName: Chrome
+    browserVersion: latest
+    platformName: Windows 10
 
 # Test metadata
 build: SDK Build Classes Methods v1
@@ -207,15 +207,15 @@ Add the TestMu AI status listener to your TestNG configuration:
 
 ```xml
 <suite name="LambdaTest Suite">
-<listeners>
-<listener class-name="com.lambdatest.selenium.testng.TestNgTestListener"/>
-</listeners>
+    <listeners>
+         <listener class-name="com.lambdatest.selenium.testng.TestNgTestListener"/>
+    </listeners>
 
-<test name="My Tests">
-<classes>
-<class name="com.example.MyTest"/>
-</classes>
-</test>
+    <test name="My Tests">
+        <classes>
+            <class name="com.example.MyTest"/>
+        </classes>
+    </test>
 </suite>
 ```
 
@@ -233,18 +233,18 @@ The SDK fully supports parallel test execution with TestNG:
 
 ```xml
 <suite name="Parallel Suite" parallel="tests" thread-count="5">
-<test name="Chrome Test">
-<parameter name="browser" value="chrome"/>
-<classes>
-<class name="com.example.Test1"/>
-</classes>
-</test>
-<test name="Firefox Test">
-<parameter name="browser" value="firefox"/>
-<classes>
-<class name="com.example.Test1"/>
-</classes>
-</test>
+    <test name="Chrome Test">
+        <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name="com.example.Test1"/>
+        </classes>
+    </test>
+    <test name="Firefox Test">
+        <parameter name="browser" value="firefox"/>
+        <classes>
+            <class name="com.example.Test1"/>
+        </classes>
+    </test>
 </suite>
 ```
 
@@ -263,35 +263,35 @@ import org.testng.annotations.Test;
 import java.net.URL;
 
 public class BasicTest {
-WebDriver driver;
+    WebDriver driver;
 
-@BeforeMethod
-public void setup() throws Exception {
-ChromeOptions options = new ChromeOptions();
-options.setCapability("platformName", "Windows 10");
-options.setCapability("browserVersion", "latest");
+    @BeforeMethod
+    public void setup() throws Exception {
+        ChromeOptions options = new ChromeOptions();
+        options.setCapability("platformName", "Windows 10");
+        options.setCapability("browserVersion", "latest");
 
-// SDK automatically injects TestMu AI capabilities from lambdatest.yml
-driver = new RemoteWebDriver(
-new URL("https://hub.lambdatest.com/wd/hub"),
-options
-);
-}
+        // SDK automatically injects TestMu AI capabilities from lambdatest.yml
+        driver = new RemoteWebDriver(
+            new URL("https://hub.lambdatest.com/wd/hub"),
+            options
+        );
+    }
 
-@Test
-public void testExample() {
-driver.get("https://www.lambdatest.com");
-String title = driver.getTitle();
-System.out.println("Page title: " + title);
-assert title.contains("LambdaTest");
-}
+    @Test
+    public void testExample() {
+        driver.get("https://www.lambdatest.com");
+        String title = driver.getTitle();
+        System.out.println("Page title: " + title);
+        assert title.contains("LambdaTest");
+    }
 
-@AfterMethod
-public void teardown() {
-if (driver != null) {
-driver.quit();
-}
-}
+    @AfterMethod
+    public void teardown() {
+        if (driver != null) {
+            driver.quit();
+        }
+    }
 }
 ```
 

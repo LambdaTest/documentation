@@ -104,8 +104,8 @@ If you are using the SmartUI SDK (`smartui exec`), you need to set the `ignoreTy
 ```javascript
 // Set options to focus only on layout structure
 let options = {
-ignoreType: ["layout"]
-}
+        ignoreType: ["layout"]
+      }
 
 // Take a screenshot with layout comparison enabled
 await smartuiSnapshot(driver, "ScreenshotName", options);
@@ -123,7 +123,7 @@ smartuiSnapshot(driver, "ScreenshotName", options);
 ```python
 # Set options to focus only on layout structure
 options = {
-"ignoreType": ["layout"]
+    "ignoreType": ["layout"]
 }
 
 # Take a screenshot with layout comparison enabled
@@ -134,7 +134,7 @@ smartui_snapshot(driver, "ScreenshotName", options)
 // Set options to focus only on layout structure
 var options = new Dictionary<string, object>
 {
-{ "ignoreType", new List<string> { "layout" } }
+    { "ignoreType", new List<string> { "layout" } }
 };
 
 // Take a screenshot with layout comparison enabled
@@ -144,7 +144,7 @@ await SmartUI.Snapshot(driver, "ScreenshotName", options);
 ```ruby
 # Set options to focus only on layout structure
 options = {
-ignoreType: ["layout"]
+  ignoreType: ["layout"]
 }
 
 # Take a screenshot with layout comparison enabled
@@ -187,21 +187,21 @@ Here's a complete example showing how to implement layout comparison in a test:
 
 ```javascript
 describe('Layout Structure Test', () => {
-it('should verify layout structure while ignoring content and style changes', async () => {
-// Navigate to the page
-await driver.get('https://example.com');
+  it('should verify layout structure while ignoring content and style changes', async () => {
+    // Navigate to the page
+    await driver.get('https://example.com');
 
-// Wait for layout to stabilize (important for dynamic content)
-await driver.wait(until.elementLocated(By.cssSelector('.main-content')), 5000);
+    // Wait for layout to stabilize (important for dynamic content)
+    await driver.wait(until.elementLocated(By.cssSelector('.main-content')), 5000);
 
-// Configure options to focus only on layout structure
-let options = {
-ignoreType: ["layout"]
-};
+    // Configure options to focus only on layout structure
+    let options = {
+      ignoreType: ["layout"]
+    };
 
-// Take screenshot with layout comparison
-await smartuiSnapshot(driver, "HomePageLayout", options);
-});
+    // Take screenshot with layout comparison
+    await smartuiSnapshot(driver, "HomePageLayout", options);
+  });
 });
 ```
 

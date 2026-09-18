@@ -88,8 +88,8 @@ In your `package.json` or `lambdatest-config.json` file, add the appropriate ver
 
 ```javascript
 "run_settings": {
-"detailed_command_logs": true,
-"downloads": "./cypress/results"
+  "detailed_command_logs": true,
+  "downloads": "./cypress/results"
 }
 ```
 
@@ -103,16 +103,16 @@ In your `package.json` or `lambdatest-config.json` file, add the appropriate ver
 const installLogsPrinter = require('cypress-terminal-report/src/installLogsPrinter')
 
 module.exports = (on, config) => {
-// `on` is used to hook into various events Cypress emits
-// `config` is the resolved Cypress config
+  // `on` is used to hook into various events Cypress emits
+  // `config` is the resolved Cypress config
 
-installLogsPrinter(on, {
-printLogsToFile: 'always',
-outputRoot: 'cypress/results/detailCommandLogs',
-outputTarget: {
-'detailCommandLogs.json': 'json',
-},
-})
+  installLogsPrinter(on, {
+    printLogsToFile: 'always',
+    outputRoot: 'cypress/results/detailCommandLogs',
+    outputTarget: {
+      'detailCommandLogs.json': 'json',
+    },
+  })
 }
 ```
 
@@ -121,14 +121,14 @@ To display detailed logs in the terminal, update the `installLogsPrinter` with t
 
 ```javascript
 module.exports = (on, config) => {
-installLogsPrinter(on, {
-printLogsToConsole: 'always', // Enables logs in the terminal
-printLogsToFile: 'always',
-outputRoot: 'cypress/results/detailCommandLogs',
-outputTarget: {
-'detailCommandLogs.json': 'json',
-},
-});
+  installLogsPrinter(on, {
+    printLogsToConsole: 'always', // Enables logs in the terminal
+    printLogsToFile: 'always',
+    outputRoot: 'cypress/results/detailCommandLogs',
+    outputTarget: {
+      'detailCommandLogs.json': 'json',
+    },
+  });
 };
 ```
 
@@ -152,18 +152,18 @@ installLogsCollector()
 const { defineConfig } = require("cypress");
 const  installLogsPrinter = require("cypress-terminal-report/src/installLogsPrinter");
 module.exports = defineConfig({
-e2e: {
-setupNodeEvents(on, config) {
-// implement node event listeners here
-installLogsPrinter(on, {
-printLogsToFile:"always",
-outputRoot: 'cypress/results/detailCommandLogs',
-outputTarget: {
-'detailCommandLogs.json': 'json',
-}
-});
-},
-},
+  e2e: {
+    setupNodeEvents(on, config) {
+      // implement node event listeners here
+      installLogsPrinter(on, {
+        printLogsToFile:"always",
+      outputRoot: 'cypress/results/detailCommandLogs',
+      outputTarget: {
+        'detailCommandLogs.json': 'json',
+      }
+      });
+    },
+  },
 });
 ```
 
@@ -174,19 +174,19 @@ If you need logs in the terminal, update the code like this:
 const { defineConfig } = require("cypress");
 const  installLogsPrinter = require("cypress-terminal-report/src/installLogsPrinter");
 module.exports = defineConfig({
-e2e: {
-setupNodeEvents(on, config) {
-// implement node event listeners here
-installLogsPrinter(on, {
-printLogsToConsole: 'always'
-printLogsToFile:"always",
-outputRoot: 'cypress/results/detailCommandLogs',
-outputTarget: {
-'detailCommandLogs.json': 'json',
-}
-});
-},
-},
+  e2e: {
+    setupNodeEvents(on, config) {
+      // implement node event listeners here
+      installLogsPrinter(on, {
+      printLogsToConsole: 'always'
+        printLogsToFile:"always",
+      outputRoot: 'cypress/results/detailCommandLogs',
+      outputTarget: {
+        'detailCommandLogs.json': 'json',
+      }
+      });
+    },
+  },
 });
 ```
 

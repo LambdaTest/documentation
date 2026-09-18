@@ -38,23 +38,23 @@ import java.net.URL;
 import java.util.HashMap;
 
 public class ResolutionTest {
-public static void main(String[] args) throws Exception {
-ChromeOptions browserOptions = new ChromeOptions();
-browserOptions.setPlatformName("Windows 11");
-browserOptions.setBrowserVersion("latest");
+    public static void main(String[] args) throws Exception {
+        ChromeOptions browserOptions = new ChromeOptions();
+        browserOptions.setPlatformName("Windows 11");
+        browserOptions.setBrowserVersion("latest");
 
-HashMap<String, Object> ltOptions = new HashMap<>();
-ltOptions.put("username", System.getenv("LT_USERNAME"));
-ltOptions.put("accessKey", System.getenv("LT_ACCESS_KEY"));
-ltOptions.put("resolution", "1920x1080");
-ltOptions.put("project", "Resolution Test");
-browserOptions.setCapability("LT:Options", ltOptions);
+        HashMap<String, Object> ltOptions = new HashMap<>();
+        ltOptions.put("username", System.getenv("LT_USERNAME"));
+        ltOptions.put("accessKey", System.getenv("LT_ACCESS_KEY"));
+        ltOptions.put("resolution", "1920x1080");
+        ltOptions.put("project", "Resolution Test");
+        browserOptions.setCapability("LT:Options", ltOptions);
 
-RemoteWebDriver driver = new RemoteWebDriver(
-new URL("https://hub.lambdatest.com/wd/hub"), browserOptions);
-driver.get("https://example.com");
-driver.quit();
-}
+        RemoteWebDriver driver = new RemoteWebDriver(
+            new URL("https://hub.lambdatest.com/wd/hub"), browserOptions);
+        driver.get("https://example.com");
+        driver.quit();
+    }
 }
 ```
 
@@ -63,24 +63,24 @@ const { Builder } = require("selenium-webdriver");
 const chrome = require("selenium-webdriver/chrome");
 
 (async function resolutionTest() {
-let options = new chrome.Options();
-options.setPlatform("Windows 11");
-options.setBrowserVersion("latest");
+  let options = new chrome.Options();
+  options.setPlatform("Windows 11");
+  options.setBrowserVersion("latest");
 
-let ltOptions = {
-username: process.env.LT_USERNAME,
-accessKey: process.env.LT_ACCESS_KEY,
-resolution: "1920x1080",
-project: "Resolution Test",
-};
+  let ltOptions = {
+    username: process.env.LT_USERNAME,
+    accessKey: process.env.LT_ACCESS_KEY,
+    resolution: "1920x1080",
+    project: "Resolution Test",
+  };
 
-const driver = await new Builder()
-.usingServer("https://hub.lambdatest.com/wd/hub")
-.withCapabilities({ ...options.toJSON(), "LT:Options": ltOptions })
-.build();
+  const driver = await new Builder()
+    .usingServer("https://hub.lambdatest.com/wd/hub")
+    .withCapabilities({ ...options.toJSON(), "LT:Options": ltOptions })
+    .build();
 
-await driver.get("https://example.com");
-await driver.quit();
+  await driver.get("https://example.com");
+  await driver.quit();
 })();
 ```
 
@@ -94,16 +94,16 @@ options.platform_name = "Windows 11"
 options.browser_version = "latest"
 
 lt_options = {
-"username": os.environ["LT_USERNAME"],
-"accessKey": os.environ["LT_ACCESS_KEY"],
-"resolution": "1920x1080",
-"project": "Resolution Test",
+    "username": os.environ["LT_USERNAME"],
+    "accessKey": os.environ["LT_ACCESS_KEY"],
+    "resolution": "1920x1080",
+    "project": "Resolution Test",
 }
 options.set_capability("LT:Options", lt_options)
 
 driver = webdriver.Remote(
-command_executor="https://hub.lambdatest.com/wd/hub",
-options=options,
+    command_executor="https://hub.lambdatest.com/wd/hub",
+    options=options,
 )
 driver.get("https://example.com")
 driver.quit()
@@ -126,7 +126,7 @@ ltOptions.Add("project", "Resolution Test");
 browserOptions.AddAdditionalOption("LT:Options", ltOptions);
 
 IWebDriver driver = new RemoteWebDriver(
-new Uri("https://hub.lambdatest.com/wd/hub"), browserOptions);
+    new Uri("https://hub.lambdatest.com/wd/hub"), browserOptions);
 driver.Navigate().GoToUrl("https://example.com");
 driver.Quit();
 ```
@@ -141,15 +141,15 @@ $capabilities->setPlatform("Windows 11");
 $capabilities->setCapability("browserVersion", "latest");
 
 $ltOptions = [
-"username" => getenv("LT_USERNAME"),
-"accessKey" => getenv("LT_ACCESS_KEY"),
-"resolution" => "1920x1080",
-"project" => "Resolution Test",
+    "username" => getenv("LT_USERNAME"),
+    "accessKey" => getenv("LT_ACCESS_KEY"),
+    "resolution" => "1920x1080",
+    "project" => "Resolution Test",
 ];
 $capabilities->setCapability("LT:Options", $ltOptions);
 
 $driver = RemoteWebDriver::create(
-"https://hub.lambdatest.com/wd/hub", $capabilities);
+    "https://hub.lambdatest.com/wd/hub", $capabilities);
 $driver->get("https://example.com");
 $driver->quit();
 ```
@@ -158,20 +158,20 @@ $driver->quit();
 require "selenium-webdriver"
 
 options = Selenium::WebDriver::Options.chrome(
-platform_name: "Windows 11",
-browser_version: "latest",
-"LT:Options" => {
-username: ENV["LT_USERNAME"],
-accessKey: ENV["LT_ACCESS_KEY"],
-resolution: "1920x1080",
-project: "Resolution Test",
-}
+  platform_name: "Windows 11",
+  browser_version: "latest",
+  "LT:Options" => {
+    username: ENV["LT_USERNAME"],
+    accessKey: ENV["LT_ACCESS_KEY"],
+    resolution: "1920x1080",
+    project: "Resolution Test",
+  }
 )
 
 driver = Selenium::WebDriver.for(
-:remote,
-url: "https://hub.lambdatest.com/wd/hub",
-capabilities: options,
+  :remote,
+  url: "https://hub.lambdatest.com/wd/hub",
+  capabilities: options,
 )
 driver.navigate.to("https://example.com")
 driver.quit

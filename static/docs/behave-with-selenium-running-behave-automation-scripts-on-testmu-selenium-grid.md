@@ -64,14 +64,14 @@ In `config/config.json`, update your test capabilities. This code passes browser
 
 ```python
 [
-{
-"platformName": "Windows 10",
-"browserName": "chrome",
-"browserVersion": "latest",
-"build": "Behave Selenium Sample",
-"name": "Behave Sample Test"
-}
-]
+    {
+      "platformName": "Windows 10",
+      "browserName": "chrome",
+      "browserVersion": "latest",
+      "build": "Behave Selenium Sample",
+      "name": "Behave Sample Test"
+    }
+  ]
 ```
 
 **Capabilities Generator**

@@ -61,15 +61,15 @@ Pass the `autoHeal: true` capability in your WebDriver configuration to enable t
 
 ```js
 const capability = {
-"browserName": "Chrome",
-"browserVersion": "114.0",
-"LT:Options": {
-"platformName": "Windows 10",
-"project": "Untitled",
-"w3c": true,
-"plugin": "node_js-node_js",
-"autoHeal": true
-}
+    "browserName": "Chrome",
+    "browserVersion": "114.0",
+    "LT:Options": {
+        "platformName": "Windows 10",
+        "project": "Untitled",
+        "w3c": true,
+        "plugin": "node_js-node_js",
+        "autoHeal": true
+    }
 }
 ```
 > **Warning:** The `autoHeal` capability only works when `smartWait` is **disabled**. Both features cannot be enabled together in the same test session.
@@ -98,17 +98,17 @@ For **NodeJS**, use the following code:
 
 ```javascript
 const capability = {
-"browserName": "Chrome",
-"browserVersion": "118.0",
-"LT:Options": {
-"username": "YOUR_LAMBDATEST_USERNAME",
-"accessKey": "YOUR_LAMBDATEST_ACCESS_KEY",
-"project": "Untitled",
-"w3c": true,
-"plugin": "node_js-node_js",
-// highlight-next-line
-"autoHeal": true
-}
+	"browserName": "Chrome",
+	"browserVersion": "118.0",
+	"LT:Options": {
+		"username": "YOUR_LAMBDATEST_USERNAME",
+		"accessKey": "YOUR_LAMBDATEST_ACCESS_KEY",
+		"project": "Untitled",
+		"w3c": true,
+		"plugin": "node_js-node_js",
+		// highlight-next-line
+		"autoHeal": true
+	}
 }
 ```
 
@@ -132,17 +132,17 @@ For **PHP**, use the following code:
 
 ```php
 $capability = array(
-"browserName" => "Chrome",
-"browserVersion" => "118.0",
-"LT:Options" => array(
-"username" => "YOUR_LAMBDATEST_USERNAME",
-"accessKey" => "YOUR_LAMBDATEST_ACCESS_KEY",
-"project" => "Untitled",
-"w3c" => true,
-"plugin" => "php-php",
-// highlight-next-line
-"autoHeal" => true
-)
+	"browserName" => "Chrome",
+	"browserVersion" => "118.0",
+	"LT:Options" => array(
+		"username" => "YOUR_LAMBDATEST_USERNAME",
+		"accessKey" => "YOUR_LAMBDATEST_ACCESS_KEY",
+		"project" => "Untitled",
+		"w3c" => true,
+		"plugin" => "php-php",
+		// highlight-next-line
+		"autoHeal" => true
+	)
 );
 ```
 
@@ -195,42 +195,42 @@ import assert from 'assert';
 import { Builder, By, until, Capabilities } from 'selenium-webdriver';
 
 describe('Amazon Search Box Test', function () {
-this.timeout(30000);
-let driver;
-let vars;
+    this.timeout(30000);
+    let driver;
+    let vars;
 
-const capability = {
-"browserName": "Chrome",
-"browserVersion": "114.0",
-"LT:Options": {
-"platformName": "Windows 10",
-"project": "Untitled",
-"w3c": true,
-"plugin": "node_js-node_js",
-"autoHeal": true
-}
-}
+    const capability = {
+        "browserName": "Chrome",
+        "browserVersion": "114.0",
+        "LT:Options": {
+            "platformName": "Windows 10",
+            "project": "Untitled",
+            "w3c": true,
+            "plugin": "node_js-node_js",
+            "autoHeal": true
+        }
+    }
 
-beforeEach(async function () {
-driver = await new Builder()
-.usingServer('https://YOUR_LAMBDATEST_USERNAME:YOUR_LAMBDATEST_ACCESS_KEY@hub.lambdatest.com/wd/hub')
-.withCapabilities(capability)
-.build();
-vars = {};
-});
+    beforeEach(async function () {
+        driver = await new Builder()
+            .usingServer('https://YOUR_LAMBDATEST_USERNAME:YOUR_LAMBDATEST_ACCESS_KEY@hub.lambdatest.com/wd/hub')
+            .withCapabilities(capability)
+            .build();
+        vars = {};
+    });
 
-afterEach(async function () {
-await driver.quit();
-});
+    afterEach(async function () {
+        await driver.quit();
+    });
 
-it('should change id of search box and find element', async function () {
-await driver.get('https://www.amazon.com');
-const searchBoxActual = await driver.findElement(By.id('nav-search-submit-button'));
-await driver.executeScript("document.getElementById('nav-search-submit-button').id='amazonsearchbox'");
-// const searchBox = await driver.findElement(By.id('amazonsearchbox'));
-const searchBoxHeal = await driver.findElement(By.id('nav-search-submit-button'));
-assert(searchBoxHeal, 'Element not found');
-});
+    it('should change id of search box and find element', async function () {
+        await driver.get('https://www.amazon.com');
+        const searchBoxActual = await driver.findElement(By.id('nav-search-submit-button'));
+        await driver.executeScript("document.getElementById('nav-search-submit-button').id='amazonsearchbox'");
+        // const searchBox = await driver.findElement(By.id('amazonsearchbox'));
+        const searchBoxHeal = await driver.findElement(By.id('nav-search-submit-button'));
+        assert(searchBoxHeal, 'Element not found');
+    });
 });
 
 ```
@@ -279,11 +279,11 @@ from selenium.webdriver.chrome.options import Options
 options = Options()
 options.browser_version = "latest"
 lt_options = {
-"build": "Autoheal Hooks Build",
-"name": "Autoheal Test via Hooks",
-"platformName": "Windows 10",
-"w3c": True,
-"autoHeal": True
+    "build": "Autoheal Hooks Build",
+    "name": "Autoheal Test via Hooks",
+    "platformName": "Windows 10",
+    "w3c": True,
+    "autoHeal": True
 }
 options.set_capability("LT:Options", lt_options)
 

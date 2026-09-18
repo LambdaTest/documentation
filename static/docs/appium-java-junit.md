@@ -61,86 +61,86 @@ import java.net.MalformedURLException;
 import java.net.URL;
 
 public class android {
-String username = System.getenv("LT_USERNAME") == null ? "LT_USERNAME" //Enter the Username here
-: System.getenv("LT_USERNAME");
-String accessKey = System.getenv("LT_ACCESS_KEY") == null ? "LT_ACCESS_KEY"  //Enter the accessKey here
-: System.getenv("LT_ACCESS_KEY");
-public static RemoteWebDriver driver = null;
-public String gridURL = "@mobile-hub.lambdatest.com/wd/hub";
-public String status = "passed";
-@Before
-public void setUp() throws Exception {
-DesiredCapabilities capabilities = new DesiredCapabilities();
+    String username = System.getenv("LT_USERNAME") == null ? "LT_USERNAME" //Enter the Username here
+            : System.getenv("LT_USERNAME");
+    String accessKey = System.getenv("LT_ACCESS_KEY") == null ? "LT_ACCESS_KEY"  //Enter the accessKey here
+            : System.getenv("LT_ACCESS_KEY");
+    public static RemoteWebDriver driver = null;
+    public String gridURL = "@mobile-hub.lambdatest.com/wd/hub";
+    public String status = "passed";
+    @Before
+    public void setUp() throws Exception {
+        DesiredCapabilities capabilities = new DesiredCapabilities();
 
-capabilities.setCapability("build", "JUNIT Native App automation");
-capabilities.setCapability("name", "Java JUnit Android Pixel 6");
-capabilities.setCapability("platformName", "android");
-capabilities.setCapability("deviceName", "Pixel 6");
-capabilities.setCapability("isRealMobile", true);
-capabilities.setCapability("platformVersion","12");
-// highlight-next-line
-capabilities.setCapability("app","APP_URL"); //Enter your app (.apk) url
-capabilities.setCapability("deviceOrientation", "PORTRAIT");
-capabilities.setCapability("console",true);
-capabilities.setCapability("network",false);
-capabilities.setCapability("visual",true);
-try
-{
-driver = new RemoteWebDriver(new URL("https://" + username + ":" + accessKey + gridURL), capabilities);
-}
-catch (MalformedURLException e)
-{
-System.out.println("Invalid grid URL");
-} catch (Exception e)
-{
-System.out.println(e.getMessage());
-}
-}
+        capabilities.setCapability("build", "JUNIT Native App automation");
+        capabilities.setCapability("name", "Java JUnit Android Pixel 6");
+        capabilities.setCapability("platformName", "android");
+        capabilities.setCapability("deviceName", "Pixel 6");
+        capabilities.setCapability("isRealMobile", true);
+        capabilities.setCapability("platformVersion","12");
+        // highlight-next-line
+        capabilities.setCapability("app","APP_URL"); //Enter your app (.apk) url
+        capabilities.setCapability("deviceOrientation", "PORTRAIT");
+        capabilities.setCapability("console",true);
+        capabilities.setCapability("network",false);
+        capabilities.setCapability("visual",true);
+        try
+        {
+            driver = new RemoteWebDriver(new URL("https://" + username + ":" + accessKey + gridURL), capabilities);
+        }
+        catch (MalformedURLException e)
+        {
+            System.out.println("Invalid grid URL");
+        } catch (Exception e)
+        {
+            System.out.println(e.getMessage());
+        }
+    }
 
-@Test
-public void testSimple() throws Exception
-{
-try
-{
-WebDriverWait wait = new WebDriverWait(driver, 30);
-wait.until(ExpectedConditions.elementToBeClickable(MobileBy.id("color"))).click();
+    @Test
+    public void testSimple() throws Exception
+    {
+        try
+        {
+            WebDriverWait wait = new WebDriverWait(driver, 30);
+            wait.until(ExpectedConditions.elementToBeClickable(MobileBy.id("color"))).click();
 
-wait.until(ExpectedConditions.elementToBeClickable(MobileBy.id("geoLocation"))).click();;
-Thread.sleep(5000);
-driver.navigate().back();
+            wait.until(ExpectedConditions.elementToBeClickable(MobileBy.id("geoLocation"))).click();;
+            Thread.sleep(5000);
+            driver.navigate().back();
 
-wait.until(ExpectedConditions.elementToBeClickable(MobileBy.id("Text"))).click();
+            wait.until(ExpectedConditions.elementToBeClickable(MobileBy.id("Text"))).click();
 
-wait.until(ExpectedConditions.elementToBeClickable(MobileBy.id("notification"))).click();;
+            wait.until(ExpectedConditions.elementToBeClickable(MobileBy.id("notification"))).click();;
 
-wait.until(ExpectedConditions.elementToBeClickable(MobileBy.id("toast"))).click();
+            wait.until(ExpectedConditions.elementToBeClickable(MobileBy.id("toast"))).click();
 
-wait.until(ExpectedConditions.elementToBeClickable(By.id("Browser"))).click();;
-Thread.sleep(10000);
+            wait.until(ExpectedConditions.elementToBeClickable(By.id("Browser"))).click();;
+            Thread.sleep(10000);
 
-wait.until(ExpectedConditions.elementToBeClickable(MobileBy.id("url"))).sendKeys("https://www.testmuai.com/");
+            wait.until(ExpectedConditions.elementToBeClickable(MobileBy.id("url"))).sendKeys("https://www.testmuai.com/");
 
-wait.until(ExpectedConditions.elementToBeClickable(MobileBy.id("find"))).click();
-Thread.sleep(5000);
-driver.navigate().back();
+            wait.until(ExpectedConditions.elementToBeClickable(MobileBy.id("find"))).click();
+            Thread.sleep(5000);
+            driver.navigate().back();
 
-status="passed";
-}
-catch (Exception e)
-{
-System.out.println(e.getMessage());
-status="failed";
-}
-}
-@After
-public void tearDown() throws Exception
-{
-if (driver != null)
-{
-driver.executeScript("lambda-status=" + status);
-driver.quit();
-}
-}
+            status="passed";
+        }
+            catch (Exception e)
+             {
+                System.out.println(e.getMessage());
+                status="failed";
+             }
+    }
+    @After
+    public void tearDown() throws Exception
+    {
+        if (driver != null)
+        {
+            driver.executeScript("lambda-status=" + status);
+            driver.quit();
+        }
+    }
 }
 ```
 
@@ -162,86 +162,86 @@ import java.net.MalformedURLException;
 import java.net.URL;
 
 public class ios {
-String username = System.getenv("LT_USERNAME") == null ? "LT_USERNAME"   //Add username here
-: System.getenv("LT_USERNAME");
-String accessKey = System.getenv("LT_ACCESS_KEY") == null ? "LT_ACCESS_KEY"   //Add accessKey here
-: System.getenv("LT_ACCESS_KEY");
-public static RemoteWebDriver driver = null;
-public String gridURL = "@mobile-hub.lambdatest.com/wd/hub";
-public String status = "passed";
-@Before
-public void setUp() throws Exception {
-DesiredCapabilities capabilities = new DesiredCapabilities();
+    String username = System.getenv("LT_USERNAME") == null ? "LT_USERNAME"   //Add username here
+            : System.getenv("LT_USERNAME");
+    String accessKey = System.getenv("LT_ACCESS_KEY") == null ? "LT_ACCESS_KEY"   //Add accessKey here
+            : System.getenv("LT_ACCESS_KEY");
+    public static RemoteWebDriver driver = null;
+    public String gridURL = "@mobile-hub.lambdatest.com/wd/hub";
+    public String status = "passed";
+    @Before
+    public void setUp() throws Exception {
+        DesiredCapabilities capabilities = new DesiredCapabilities();
 
-capabilities.setCapability("build", "JUNIT Native App automation");
-capabilities.setCapability("name", "Java JUnit iOS iPhone 12");
-capabilities.setCapability("platformName", "ios");
-capabilities.setCapability("deviceName", "iPhone 12");
-capabilities.setCapability("isRealMobile", true);
-capabilities.setCapability("platformVersion","15");
-// highlight-next-line
-capabilities.setCapability("app","APP_URL"); //Enter your app (.ipa) url
-capabilities.setCapability("deviceOrientation", "PORTRAIT");
-capabilities.setCapability("console",true);
-capabilities.setCapability("network",false);
-capabilities.setCapability("visual",true);
-try
-{
-driver = new RemoteWebDriver(new URL("https://" + username + ":" + accessKey + gridURL), capabilities);
-}
-catch (MalformedURLException e)
-{
-System.out.println("Invalid grid URL");
-} catch (Exception e)
-{
-System.out.println(e.getMessage());
-}
-}
+        capabilities.setCapability("build", "JUNIT Native App automation");
+        capabilities.setCapability("name", "Java JUnit iOS iPhone 12");
+        capabilities.setCapability("platformName", "ios");
+        capabilities.setCapability("deviceName", "iPhone 12");
+        capabilities.setCapability("isRealMobile", true);
+        capabilities.setCapability("platformVersion","15");
+        // highlight-next-line
+        capabilities.setCapability("app","APP_URL"); //Enter your app (.ipa) url
+        capabilities.setCapability("deviceOrientation", "PORTRAIT");
+        capabilities.setCapability("console",true);
+        capabilities.setCapability("network",false);
+        capabilities.setCapability("visual",true);
+        try
+        {
+            driver = new RemoteWebDriver(new URL("https://" + username + ":" + accessKey + gridURL), capabilities);
+        }
+        catch (MalformedURLException e)
+        {
+            System.out.println("Invalid grid URL");
+        } catch (Exception e)
+        {
+            System.out.println(e.getMessage());
+        }
+    }
 
-@Test
-public void testSimple() throws Exception
-{
-try
-{
-WebDriverWait wait = new WebDriverWait(driver, 30);
-wait.until(ExpectedConditions.elementToBeClickable(MobileBy.id("color"))).click();
+    @Test
+    public void testSimple() throws Exception
+    {
+        try
+        {
+            WebDriverWait wait = new WebDriverWait(driver, 30);
+            wait.until(ExpectedConditions.elementToBeClickable(MobileBy.id("color"))).click();
 
-wait.until(ExpectedConditions.elementToBeClickable(MobileBy.id("geoLocation"))).click();
-Thread.sleep(5000);
-driver.navigate().back();
+            wait.until(ExpectedConditions.elementToBeClickable(MobileBy.id("geoLocation"))).click();
+            Thread.sleep(5000);
+            driver.navigate().back();
 
-wait.until(ExpectedConditions.elementToBeClickable(MobileBy.id("Text"))).click();
+            wait.until(ExpectedConditions.elementToBeClickable(MobileBy.id("Text"))).click();
 
-wait.until(ExpectedConditions.elementToBeClickable(MobileBy.id("notification"))).click();
+            wait.until(ExpectedConditions.elementToBeClickable(MobileBy.id("notification"))).click();
 
-wait.until(ExpectedConditions.elementToBeClickable(MobileBy.id("toast"))).click();
+            wait.until(ExpectedConditions.elementToBeClickable(MobileBy.id("toast"))).click();
 
-wait.until(ExpectedConditions.elementToBeClickable(By.id("Browser"))).click();
-Thread.sleep(10000);
+            wait.until(ExpectedConditions.elementToBeClickable(By.id("Browser"))).click();
+            Thread.sleep(10000);
 
-wait.until(ExpectedConditions.elementToBeClickable(MobileBy.id("url"))).sendKeys("https://www.testmuai.com/");;
+            wait.until(ExpectedConditions.elementToBeClickable(MobileBy.id("url"))).sendKeys("https://www.testmuai.com/");;
 
-wait.until(ExpectedConditions.elementToBeClickable(MobileBy.id("find"))).click();
-Thread.sleep(5000);
-driver.navigate().back();
+            wait.until(ExpectedConditions.elementToBeClickable(MobileBy.id("find"))).click();
+            Thread.sleep(5000);
+            driver.navigate().back();
 
-status="passed";
-}
-catch (Exception e)
-{
-System.out.println(e.getMessage());
-status="failed";
-}
-}
-@After
-public void tearDown() throws Exception
-{
-if (driver != null)
-{
-driver.executeScript("lambda-status=" + status);
-driver.quit();
-}
-}
+            status="passed";
+        }
+            catch (Exception e)
+             {
+                System.out.println(e.getMessage());
+                status="failed";
+             }
+    }
+    @After
+    public void tearDown() throws Exception
+    {
+        if (driver != null)
+        {
+            driver.executeScript("lambda-status=" + status);
+            driver.quit();
+        }
+    }
 }
 ```
 
@@ -255,34 +255,34 @@ The capabilities object in the sample code are defined as:
 
 ```java
 DesiredCapabilities capabilities = new DesiredCapabilities();
-capabilities.setCapability("build", "JUNIT Native App automation");
-capabilities.setCapability("name", "Java JUnit Android Pixel 6");
-capabilities.setCapability("platformName", "android");
-capabilities.setCapability("deviceName", "Pixel 6");
-capabilities.setCapability("isRealMobile", true);
-capabilities.setCapability("platformVersion","12");
-// highlight-next-line
-capabilities.setCapability("app","YOUR_APP_URL");  //Enter your app (.apk) url
-capabilities.setCapability("deviceOrientation", "PORTRAIT");
-capabilities.setCapability("console",true);
-capabilities.setCapability("network",false);
-capabilities.setCapability("visual",true);
+        capabilities.setCapability("build", "JUNIT Native App automation");
+        capabilities.setCapability("name", "Java JUnit Android Pixel 6");
+        capabilities.setCapability("platformName", "android");
+        capabilities.setCapability("deviceName", "Pixel 6");
+        capabilities.setCapability("isRealMobile", true);
+        capabilities.setCapability("platformVersion","12");
+        // highlight-next-line
+        capabilities.setCapability("app","YOUR_APP_URL");  //Enter your app (.apk) url
+        capabilities.setCapability("deviceOrientation", "PORTRAIT");
+        capabilities.setCapability("console",true);
+        capabilities.setCapability("network",false);
+        capabilities.setCapability("visual",true);
 ```
 
 ```java
 DesiredCapabilities capabilities = new DesiredCapabilities();
-capabilities.setCapability("build", "JUNIT Native App automation");
-capabilities.setCapability("name", "Java JUnit iOS iPhone 12");
-capabilities.setCapability("platformName", "ios");
-capabilities.setCapability("deviceName", "iPhone 12");
-capabilities.setCapability("isRealMobile", true);
-capabilities.setCapability("platformVersion","15");
-// highlight-next-line
-capabilities.setCapability("app","YOUR_APP_URL");  //Enter your app (.ipa) url
-capabilities.setCapability("deviceOrientation", "PORTRAIT");
-capabilities.setCapability("console",true);
-capabilities.setCapability("network",false);
-capabilities.setCapability("visual",true);
+        capabilities.setCapability("build", "JUNIT Native App automation");
+        capabilities.setCapability("name", "Java JUnit iOS iPhone 12");
+        capabilities.setCapability("platformName", "ios");
+        capabilities.setCapability("deviceName", "iPhone 12");
+        capabilities.setCapability("isRealMobile", true);
+        capabilities.setCapability("platformVersion","15");
+        // highlight-next-line
+        capabilities.setCapability("app","YOUR_APP_URL");  //Enter your app (.ipa) url
+        capabilities.setCapability("deviceOrientation", "PORTRAIT");
+        capabilities.setCapability("console",true);
+        capabilities.setCapability("network",false);
+        capabilities.setCapability("visual",true);
 ```
 
 - You must set **isRealMobile** capability to `False` in the config file to run on **Virtual Devices**
@@ -320,8 +320,8 @@ The junit-5-skill package includes:
 junit-5-skill/
 ├── SKILL.md
 └── reference/
-├── playbook.md
-└── advanced-patterns.md
+    ├── playbook.md
+    └── advanced-patterns.md
 ```
 
 It provides structured guidance for:

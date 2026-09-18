@@ -75,23 +75,23 @@ The file must have a `.json` extension, and the command refuses to overwrite a f
 
 ```json title="designs.json"
 {
-"mobile": [
-{
-"name": "Pixel 8",
-"platform": ["android 14"],
-"orientation": "portrait"
-}
-],
-"figma": {
-"depth": 1,
-"configs": [
-{
-"figma_file_token": "abc12345",
-"figma_ids": ["2417-58969"],
-"screenshot_names": ["homepage"]
-}
-]
-}
+  "mobile": [
+    {
+      "name": "Pixel 8",
+      "platform": ["android 14"],
+      "orientation": "portrait"
+    }
+  ],
+  "figma": {
+    "depth": 1,
+    "configs": [
+      {
+        "figma_file_token": "abc12345",
+        "figma_ids": ["2417-58969"],
+        "screenshot_names": ["homepage"]
+      }
+    ]
+  }
 }
 ```
 
@@ -176,33 +176,33 @@ This is the half that produces the app screenshots. Use the same device here as 
 
 ```javascript title="NodeJS example"
 let capabilities = {
-deviceName: "Pixel 8",          // must match mobile[].name in designs.json
-platformName: "android",
-platformVersion: "14",          // must match mobile[].platform
-isRealMobile: true,             // Mandatory
-app: "lt://APP_ID",             // Mandatory
-//highlight-next-line
-visual: true,                   // Mandatory
-name: "Figma app comparison",
-build: "Real Device App Build",
-//highlight-start
-"smartUI.project": "<Your Project Name>", // Mandatory, the project NAME not the project token
-"smartUI.build": "<Your Build Name>",     // Optional
-"smartUI.baseline": false,                // Leave false, your Figma build is the baseline
-//highlight-end
+  deviceName: "Pixel 8",          // must match mobile[].name in designs.json
+  platformName: "android",
+  platformVersion: "14",          // must match mobile[].platform
+  isRealMobile: true,             // Mandatory
+  app: "lt://APP_ID",             // Mandatory
+  //highlight-next-line
+  visual: true,                   // Mandatory
+  name: "Figma app comparison",
+  build: "Real Device App Build",
+  //highlight-start
+  "smartUI.project": "<Your Project Name>", // Mandatory, the project NAME not the project token
+  "smartUI.build": "<Your Build Name>",     // Optional
+  "smartUI.baseline": false,                // Leave false, your Figma build is the baseline
+  //highlight-end
 };
 
 let gridUrl =
-"https://" +
-"<Your Username>" +
-":" +
-"<Your Access Key>" +
-`@mobile-hub.lambdatest.com/wd/hub`;
+  "https://" +
+  "<Your Username>" +
+  ":" +
+  "<Your Access Key>" +
+  `@mobile-hub.lambdatest.com/wd/hub`;
 
 let driver = await new webdriver.Builder()
-.usingServer(gridUrl)
-.withCapabilities(capabilities)
-.build();
+  .usingServer(gridUrl)
+  .withCapabilities(capabilities)
+  .build();
 ```
 
 The app side is identified by `smartUI.project`, which takes the project **name**. The `PROJECT_TOKEN` you exported in Step 4 authenticates the CLI upload only. It is not used by the Appium capabilities.

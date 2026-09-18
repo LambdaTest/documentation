@@ -81,41 +81,41 @@ const { setWorldConstructor, World, Before, After} = require("@cucumber/cucumber
 const { chromium } = require('playwright')
 
 class CustomWorld extends World{
-async setTestStatus(status, remark) {
-await page.evaluate(_ => {}, `lambdatest_action: ${JSON.stringify({ action: 'setTestStatus', arguments: { status, remark } })}`)
-}
+  async setTestStatus(status, remark) {
+    await page.evaluate(_ => {}, `lambdatest_action: ${JSON.stringify({ action: 'setTestStatus', arguments: { status, remark } })}`)
+  }
 }
 
 Before(async (scenario) => {
-const capabilities = {
-'browserName': 'Chrome', // Browsers allowed: `Chrome`, `MicrosoftEdge`, `pw-chromium`, `pw-firefox` and `pw-webkit`
-'browserVersion': 'latest',
-'LT:Options': {
-'platform': 'Windows 10',
-'build': 'Playwright Sample Build with Cucumber Runner',
-'name': scenario.pickle.name,
-'user': process.env.LT_USERNAME,
-'accessKey': process.env.LT_ACCESS_KEY,
-'network': true,
-'video': true,
-'console': true,
-'tunnel': false, // Add tunnel configuration if testing locally hosted webpage
-'tunnelName': '' // Optional
-}
-}
+  const capabilities = {
+    'browserName': 'Chrome', // Browsers allowed: `Chrome`, `MicrosoftEdge`, `pw-chromium`, `pw-firefox` and `pw-webkit`
+    'browserVersion': 'latest',
+    'LT:Options': {
+      'platform': 'Windows 10',
+      'build': 'Playwright Sample Build with Cucumber Runner',
+      'name': scenario.pickle.name,
+      'user': process.env.LT_USERNAME,
+      'accessKey': process.env.LT_ACCESS_KEY,
+      'network': true,
+      'video': true,
+      'console': true,
+      'tunnel': false, // Add tunnel configuration if testing locally hosted webpage
+      'tunnelName': '' // Optional
+    }
+  }
 
-// Create page and browser globals to be used in the scenarios
-global.browser = await chromium.connect({
-wsEndpoint: `wss://cdp.lambdatest.com/playwright?capabilities=${encodeURIComponent(JSON.stringify(capabilities))}`
-})
+  // Create page and browser globals to be used in the scenarios
+  global.browser = await chromium.connect({
+    wsEndpoint: `wss://cdp.lambdatest.com/playwright?capabilities=${encodeURIComponent(JSON.stringify(capabilities))}`
+  })
 
-const context = await global.browser.newContext();
+  const context = await global.browser.newContext();
 
-global.page = await context.newPage();
+  global.page = await context.newPage();
 })
 
 After(async () => {
-await global.browser.close()
+  await global.browser.close()
 })
 
 setWorldConstructor(CustomWorld);
@@ -134,35 +134,35 @@ Visit the TestMu AI Automation dashboard to view the results of your executed te
 
 ```js
 Before(async (scenario) => {
-const capabilities = {
-'browserName': 'Chrome', // Browsers allowed: `Chrome`, `MicrosoftEdge`, `pw-chromium`, `pw-firefox` and `pw-webkit`
-'browserVersion': 'latest',
-'LT:Options': {
-'platform': 'Windows 10',
-'build': 'Playwright Sample Build with Cucumber Runner',
-'name': scenario.pickle.name,
-'user': process.env.LT_USERNAME,
-'accessKey': process.env.LT_ACCESS_KEY,
-'network': true,
-'video': true,
-'console': true,
-'tunnel': false, // Add tunnel configuration if testing locally hosted webpage
-'tunnelName': '' // Optional
-}
-}
+  const capabilities = {
+    'browserName': 'Chrome', // Browsers allowed: `Chrome`, `MicrosoftEdge`, `pw-chromium`, `pw-firefox` and `pw-webkit`
+    'browserVersion': 'latest',
+    'LT:Options': {
+      'platform': 'Windows 10',
+      'build': 'Playwright Sample Build with Cucumber Runner',
+      'name': scenario.pickle.name,
+      'user': process.env.LT_USERNAME,
+      'accessKey': process.env.LT_ACCESS_KEY,
+      'network': true,
+      'video': true,
+      'console': true,
+      'tunnel': false, // Add tunnel configuration if testing locally hosted webpage
+      'tunnelName': '' // Optional
+    }
+  }
 
-// Create page and browser globals to be used in the scenarios
-global.browser = await chromium.connect({
-wsEndpoint: `wss://cdp.lambdatest.com/playwright?capabilities=${encodeURIComponent(JSON.stringify(capabilities))}`
-})
+  // Create page and browser globals to be used in the scenarios
+  global.browser = await chromium.connect({
+    wsEndpoint: `wss://cdp.lambdatest.com/playwright?capabilities=${encodeURIComponent(JSON.stringify(capabilities))}`
+  })
 
-const context = await global.browser.newContext();
+  const context = await global.browser.newContext();
 
-global.page = await context.newPage();
+  global.page = await context.newPage();
 })
 
 After(async () => {
-await global.browser.close()
+  await global.browser.close()
 })
 
 setWorldConstructor(CustomWorld);
@@ -172,9 +172,9 @@ setWorldConstructor(CustomWorld);
 
 ```js
 class CustomWorld extends World{
-async setTestStatus(status, remark) {
-await page.evaluate(_ => {}, `lambdatest_action: ${JSON.stringify({ action: 'setTestStatus', arguments: { status, remark } })}`)
-}
+  async setTestStatus(status, remark) {
+    await page.evaluate(_ => {}, `lambdatest_action: ${JSON.stringify({ action: 'setTestStatus', arguments: { status, remark } })}`)
+  }
 }
 ```
 
@@ -182,15 +182,15 @@ await page.evaluate(_ => {}, `lambdatest_action: ${JSON.stringify({ action: 'set
 
 ```js
 try {
-assert.equal(title,
-"How to use HyperExecute for scalable and reliable web automation testing | TestMu AI",
-"Page title does not match");
+    assert.equal(title,
+        "How to use HyperExecute for scalable and reliable web automation testing | TestMu AI",
+        "Page title does not match");
 
-await this.setTestStatus("passed", "Title matched");
-} catch (e) {
-await this.setTestStatus("failed", e);
-throw(e);
-}
+    await this.setTestStatus("passed", "Title matched");
+  } catch (e) {
+    await this.setTestStatus("failed", e);
+    throw(e);
+  }
 ```
 
 4. After that, you can run your test.

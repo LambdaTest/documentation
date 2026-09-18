@@ -71,9 +71,9 @@ entirely in every future session.
 
 ```typescript
 interface SessionContext {
-cookies?: Cookie[];
-localStorage?: Record<string, Record<string, string>>;
-sessionStorage?: Record<string, Record<string, string>>;
+    cookies?: Cookie[];
+    localStorage?: Record<string, Record<string, string>>;
+    sessionStorage?: Record<string, Record<string, string>>;
 }
 ```
 
@@ -115,12 +115,12 @@ Set browser state on a new page:
 
 ```typescript
 await client.context.setContext(page, {
-cookies: [
-{ name: 'session_id', value: 'abc123', domain: '.example.com', path: '/' }
-],
-localStorage: {
-'https://example.com': { theme: 'dark', lang: 'en' }
-},
+    cookies: [
+        { name: 'session_id', value: 'abc123', domain: '.example.com', path: '/' }
+    ],
+    localStorage: {
+        'https://example.com': { theme: 'dark', lang: 'en' }
+    },
 });
 ```
 

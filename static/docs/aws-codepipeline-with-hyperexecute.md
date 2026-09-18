@@ -45,19 +45,19 @@ Download or Clone the code sample from the TestMu AI GitHub repository to run th
 version: 0.2
 
 phases:
-install:
-commands:
-# Download Hyperexecute CLI for macOS (adjust for other OS)
-- name: Download Hyperexecute CLI
-command: wget https://downloads.lambdatest.com/hyperexecute/darwin/hyperexecute
-# Grant execute permission to the downloaded binary
-- name: Make HyperExecute executable
-command: chmod u+x hyperexecute
-build:
-commands:
-# Run Hyperexecute with user credentials and configuration file
-- name: Trigger HyperExecute tests
-command: ./hyperexecute --user <your_user_name> --key <your_access_key> --config <your_yaml_file>
+  install:
+    commands:
+      # Download Hyperexecute CLI for macOS (adjust for other OS)
+      - name: Download Hyperexecute CLI
+        command: wget https://downloads.lambdatest.com/hyperexecute/darwin/hyperexecute
+      # Grant execute permission to the downloaded binary
+      - name: Make HyperExecute executable
+        command: chmod u+x hyperexecute
+  build:
+    commands:
+      # Run Hyperexecute with user credentials and configuration file
+      - name: Trigger HyperExecute tests
+        command: ./hyperexecute --user <your_user_name> --key <your_access_key> --config <your_yaml_file>
 ```
 
 - In the **buildspec** specification, choose the first option - **"Use a buildspec file"**.

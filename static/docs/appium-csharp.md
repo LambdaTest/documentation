@@ -85,97 +85,97 @@ using System.Threading;
 namespace csharp_appium_first
 
 {
-class Program
-{
-static void Main(string[] args)
-{
-AppiumOptions caps = new AppiumOptions();
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            AppiumOptions caps = new AppiumOptions();
 
-// Set your LambdaTest access credentials
-//highlight-next-line
-caps.AddAdditionalCapability("LT_USERNAME", "username"); //Enter the Username here
-//highlight-next-line
-caps.AddAdditionalCapability("LT_ACCESSKEY", "accessKey");  //Enter the Access key here
+            // Set your LambdaTest access credentials
+            //highlight-next-line
+            caps.AddAdditionalCapability("LT_USERNAME", "username"); //Enter the Username here
+            //highlight-next-line
+            caps.AddAdditionalCapability("LT_ACCESSKEY", "accessKey");  //Enter the Access key here
 
-// Set URL of the application under test
-//highlight-next-line
-caps.AddAdditionalCapability("app", "APP_URL"); //Enter the App URL here.
+            // Set URL of the application under test
+            //highlight-next-line
+            caps.AddAdditionalCapability("app", "APP_URL"); //Enter the App URL here.
 
-// Specify device and os_version
-caps.AddAdditionalCapability("deviceName", "iPhone 12"); //Change the device name here
-caps.AddAdditionalCapability("platformVersion", "15");
-caps.AddAdditionalCapability("platformName", "iOS");
-caps.AddAdditionalCapability("isRealMobile", true);
-caps.AddAdditionalCapability("network", false);
+            // Specify device and os_version
+            caps.AddAdditionalCapability("deviceName", "iPhone 12"); //Change the device name here
+            caps.AddAdditionalCapability("platformVersion", "15");
+            caps.AddAdditionalCapability("platformName", "iOS");
+            caps.AddAdditionalCapability("isRealMobile", true);
+            caps.AddAdditionalCapability("network", false);
 
-// Specify the platformName
-//caps.PlatformName = "iOS";
+            // Specify the platformName
+            //caps.PlatformName = "iOS";
 
-// Set other LambdaTest capabilities
-caps.AddAdditionalCapability("project", "First CSharp project");
-caps.AddAdditionalCapability("build", "CSharp iOS");
-caps.AddAdditionalCapability("name", "first_test");
+            // Set other LambdaTest capabilities
+            caps.AddAdditionalCapability("project", "First CSharp project");
+            caps.AddAdditionalCapability("build", "CSharp iOS");
+            caps.AddAdditionalCapability("name", "first_test");
 
-// Initialize the remote Webdriver using LambdaTest remote URL
-// and desired capabilities defined above
-IOSDriver<IOSElement> driver = new IOSDriver<IOSElement>(
-new Uri("https://mobile-hub.lambdatest.com/wd/hub"), caps);
+            // Initialize the remote Webdriver using LambdaTest remote URL
+            // and desired capabilities defined above
+            IOSDriver<IOSElement> driver = new IOSDriver<IOSElement>(
+                new Uri("https://mobile-hub.lambdatest.com/wd/hub"), caps);
 
-// Test case for the sample iOS app.
-// If you have uploaded your app, update the test case here.
-IOSElement color = (IOSElement)new WebDriverWait(driver, TimeSpan.FromSeconds(30)).Until(
-SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(MobileBy.Id("color"))
-);
-color.Click();
-color.Click();
+            // Test case for the sample iOS app.
+            // If you have uploaded your app, update the test case here.
+            IOSElement color = (IOSElement)new WebDriverWait(driver, TimeSpan.FromSeconds(30)).Until(
+                SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(MobileBy.Id("color"))
+            );
+            color.Click();
+            color.Click();
 
-IOSElement text = (IOSElement)new WebDriverWait(driver, TimeSpan.FromSeconds(30)).Until(
-SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(MobileBy.Id("Text"))
-);
-text.Click();
+            IOSElement text = (IOSElement)new WebDriverWait(driver, TimeSpan.FromSeconds(30)).Until(
+                SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(MobileBy.Id("Text"))
+            );
+            text.Click();
 
-IOSElement toast = (IOSElement)new WebDriverWait(driver, TimeSpan.FromSeconds(30)).Until(
-SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(MobileBy.Id("toast"))
-);
-toast.Click();
+            IOSElement toast = (IOSElement)new WebDriverWait(driver, TimeSpan.FromSeconds(30)).Until(
+                SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(MobileBy.Id("toast"))
+            );
+            toast.Click();
 
-IOSElement nf = (IOSElement)new WebDriverWait(driver, TimeSpan.FromSeconds(30)).Until(
-SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(MobileBy.Id("notification"))
-);
-nf.Click();
+            IOSElement nf = (IOSElement)new WebDriverWait(driver, TimeSpan.FromSeconds(30)).Until(
+                SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(MobileBy.Id("notification"))
+            );
+            nf.Click();
 
-IOSElement gl = (IOSElement)new WebDriverWait(driver, TimeSpan.FromSeconds(30)).Until(
-SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(MobileBy.Id("geoLocation"))
-);
-gl.Click();
+            IOSElement gl = (IOSElement)new WebDriverWait(driver, TimeSpan.FromSeconds(30)).Until(
+                SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(MobileBy.Id("geoLocation"))
+            );
+            gl.Click();
 
-Thread.Sleep(5000);
+            Thread.Sleep(5000);
 
-driver.Navigate().Back();
+            driver.Navigate().Back();
 
-IOSElement st = (IOSElement)new WebDriverWait(driver, TimeSpan.FromSeconds(30)).Until(
-SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(MobileBy.Id("speedTest"))
-);
-st.Click();
+            IOSElement st = (IOSElement)new WebDriverWait(driver, TimeSpan.FromSeconds(30)).Until(
+                SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(MobileBy.Id("speedTest"))
+            );
+            st.Click();
 
-Thread.Sleep(5000);
+            Thread.Sleep(5000);
 
-driver.Navigate().Back();
+            driver.Navigate().Back();
 
-IOSElement browser = (IOSElement)new WebDriverWait(driver, TimeSpan.FromSeconds(30)).Until(
-SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(MobileBy.AccessibilityId("Browser"))
-);
-browser.Click();
+            IOSElement browser = (IOSElement)new WebDriverWait(driver, TimeSpan.FromSeconds(30)).Until(
+                SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(MobileBy.AccessibilityId("Browser"))
+            );
+            browser.Click();
 
-IOSElement inputBox = (IOSElement)new WebDriverWait(driver, TimeSpan.FromSeconds(30)).Until(
-SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(MobileBy.Id("url"))
-);
-inputBox.Click();
+            IOSElement inputBox = (IOSElement)new WebDriverWait(driver, TimeSpan.FromSeconds(30)).Until(
+                SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(MobileBy.Id("url"))
+            );
+            inputBox.Click();
 
-driver.Quit();
+            driver.Quit();
 
-}
-}
+        }
+    }
 }
 ```
 
@@ -189,74 +189,74 @@ using OpenQA.Selenium.Appium.Android;
 using System.Threading;
 
 namespace csharp_appium {
-class Program {
-static void Main(string[] args) {
-AppiumOptions caps = new AppiumOptions();
+  class Program {
+    static void Main(string[] args) {
+        AppiumOptions caps = new AppiumOptions();
 
-caps.AddAdditionalCapability("user", "########"); //Add the LT Username
-caps.AddAdditionalCapability("accessKey", "########"); //Add the LT Access key
+        caps.AddAdditionalCapability("user", "########"); //Add the LT Username
+        caps.AddAdditionalCapability("accessKey", "########"); //Add the LT Access key
 
-// Set URL of the application under test
-caps.AddAdditionalCapability("app", "###########"); //Add the App ID
+        // Set URL of the application under test
+        caps.AddAdditionalCapability("app", "###########"); //Add the App ID
 
-// Specify device and os_version
-caps.AddAdditionalCapability("deviceName", "Galaxy S21 Ultra 5G"); //Add the Device Details
-caps.AddAdditionalCapability("platformVersion", "11");
-caps.AddAdditionalCapability("platformName", "Android");
-caps.AddAdditionalCapability("isRealMobile", true);
-caps.AddAdditionalCapability("network", false);
-caps.AddAdditionalCapability("w3c", true);
-caps.AddAdditionalCapability("visual", true);
-caps.AddAdditionalCapability("video", true);
-caps.AddAdditionalCapability("project", "CSharp Sample Android");
-caps.AddAdditionalCapability("build", "CSharp Sample Android");
-caps.AddAdditionalCapability("name", "CSharp Sample Android");
+        // Specify device and os_version
+        caps.AddAdditionalCapability("deviceName", "Galaxy S21 Ultra 5G"); //Add the Device Details
+        caps.AddAdditionalCapability("platformVersion", "11");
+        caps.AddAdditionalCapability("platformName", "Android");
+        caps.AddAdditionalCapability("isRealMobile", true);
+        caps.AddAdditionalCapability("network", false);
+        caps.AddAdditionalCapability("w3c", true);
+        caps.AddAdditionalCapability("visual", true);
+        caps.AddAdditionalCapability("video", true);
+        caps.AddAdditionalCapability("project", "CSharp Sample Android");
+        caps.AddAdditionalCapability("build", "CSharp Sample Android");
+        caps.AddAdditionalCapability("name", "CSharp Sample Android");
 
-// Initialize the remote Webdriver using LambdaTest remote URL
-// and desired capabilities defined above
-AndroidDriver < AndroidElement > driver = new AndroidDriver < AndroidElement > (
-new Uri("https://mobile-hub.lambdatest.com/wd/hub"), caps);
+        // Initialize the remote Webdriver using LambdaTest remote URL
+        // and desired capabilities defined above
+        AndroidDriver < AndroidElement > driver = new AndroidDriver < AndroidElement > (
+          new Uri("https://mobile-hub.lambdatest.com/wd/hub"), caps);
 
-// Test case for the sample Android app.
-// If you have uploaded your app, update the test case here.
-AndroidElement color = (AndroidElement) new WebDriverWait(driver, TimeSpan.FromSeconds(30)).Until(
-SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(MobileBy.Id("color"))
-);
-color.Click();
-color.Click();
+        // Test case for the sample Android app.
+        // If you have uploaded your app, update the test case here.
+        AndroidElement color = (AndroidElement) new WebDriverWait(driver, TimeSpan.FromSeconds(30)).Until(
+          SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(MobileBy.Id("color"))
+        );
+        color.Click();
+        color.Click();
 
-AndroidElement text = (AndroidElement) new WebDriverWait(driver, TimeSpan.FromSeconds(30)).Until(
-SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(MobileBy.Id("Text"))
-);
-text.Click();
+        AndroidElement text = (AndroidElement) new WebDriverWait(driver, TimeSpan.FromSeconds(30)).Until(
+          SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(MobileBy.Id("Text"))
+        );
+        text.Click();
 
-AndroidElement toast = (AndroidElement) new WebDriverWait(driver, TimeSpan.FromSeconds(30)).Until(
-SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(MobileBy.Id("toast"))
-);
-toast.Click();
+        AndroidElement toast = (AndroidElement) new WebDriverWait(driver, TimeSpan.FromSeconds(30)).Until(
+          SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(MobileBy.Id("toast"))
+        );
+        toast.Click();
 
-AndroidElement nf = (AndroidElement) new WebDriverWait(driver, TimeSpan.FromSeconds(30)).Until(
-SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(MobileBy.Id("notification"))
-);
-nf.Click();
+        AndroidElement nf = (AndroidElement) new WebDriverWait(driver, TimeSpan.FromSeconds(30)).Until(
+          SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(MobileBy.Id("notification"))
+        );
+        nf.Click();
 
-AndroidElement gl = (AndroidElement) new WebDriverWait(driver, TimeSpan.FromSeconds(30)).Until(
-SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(MobileBy.Id("geoLocation"))
-);
-gl.Click();
+        AndroidElement gl = (AndroidElement) new WebDriverWait(driver, TimeSpan.FromSeconds(30)).Until(
+          SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(MobileBy.Id("geoLocation"))
+        );
+        gl.Click();
 
-Thread.Sleep(5000);
+        Thread.Sleep(5000);
 
-driver.Navigate().Back();
+        driver.Navigate().Back();
 
-AndroidElement st = (AndroidElement) new WebDriverWait(driver, TimeSpan.FromSeconds(30)).Until(
-SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(MobileBy.Id("speedTest"))
-);
-st.Click();
+        AndroidElement st = (AndroidElement) new WebDriverWait(driver, TimeSpan.FromSeconds(30)).Until(
+          SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(MobileBy.Id("speedTest"))
+        );
+        st.Click();
 
-Thread.Sleep(5000);
+        Thread.Sleep(5000);
 
-driver.Navigate().Back();
+        driver.Navigate().Back();
 ```
 
 ### Step 5: Configure the Test Capabilities
@@ -266,30 +266,30 @@ You can update your custom capabilities in test scripts. In this sample project,
 The capabilities object in the sample code are defined as:
 
 ```csharp title="iOS(.ipa)"
-AppiumOptions caps = new AppiumOptions();
-caps.AddAdditionalCapability("LT_USERNAME", "username");
-caps.AddAdditionalCapability("LT_ACCESSKEY", "accessKey");
-caps.setCapability("platformName", "iOS");
-caps.setCapability("deviceName", "iPhone 13 Pro");
-caps.setCapability("isRealMobile", true);
-caps.setCapability("platformVersion","15.0");
-caps.setCapability("Visual", true);
-caps.setCapability("Console", true);
-caps.setCapability("Network", false);
+  AppiumOptions caps = new AppiumOptions();
+  caps.AddAdditionalCapability("LT_USERNAME", "username");
+  caps.AddAdditionalCapability("LT_ACCESSKEY", "accessKey");
+	caps.setCapability("platformName", "iOS");
+	caps.setCapability("deviceName", "iPhone 13 Pro");
+	caps.setCapability("isRealMobile", true);
+	caps.setCapability("platformVersion","15.0");
+	caps.setCapability("Visual", true);
+	caps.setCapability("Console", true);
+	caps.setCapability("Network", false);
 
 ```
 
 ```csharp title="Android(.apk)"
-AppiumOptions caps = new AppiumOptions();
-caps.AddAdditionalCapability("LT_USERNAME", "username");
-caps.AddAdditionalCapability("LT_ACCESSKEY", "accessKey");
-caps.setCapability("platformName", "Android");
-caps.setCapability("deviceName", "Galaxy S20");
-caps.setCapability("isRealMobile", true);
-caps.setCapability("platformVersion","11");
-caps.setCapability("Visual", true);
-caps.setCapability("Console", true);
-caps.setCapability("Network", false);
+  AppiumOptions caps = new AppiumOptions();
+  caps.AddAdditionalCapability("LT_USERNAME", "username");
+  caps.AddAdditionalCapability("LT_ACCESSKEY", "accessKey");
+	caps.setCapability("platformName", "Android");
+	caps.setCapability("deviceName", "Galaxy S20");
+	caps.setCapability("isRealMobile", true);
+	caps.setCapability("platformVersion","11");
+	caps.setCapability("Visual", true);
+	caps.setCapability("Console", true);
+	caps.setCapability("Network", false);
 
 ```
 
@@ -315,8 +315,8 @@ The appium-skill package includes:
 appium-skill/
 ├── SKILL.md
 └── reference/
-├── playbook.md
-└── advanced-patterns.md
+    ├── playbook.md
+    └── advanced-patterns.md
 ```
 
 It provides structured guidance for:

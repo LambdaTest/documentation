@@ -51,29 +51,29 @@ To enable Smart Heal, add `"smartHeal": true` to your desired capabilities in yo
 
 ```python
 desired_caps = {
-"deviceName": "iPhone 16",
-"platformName": "iOS",
-"platformVersion": "18",
-"isRealMobile": True,
-"app": "YOUR_APP_URL",
-"build": "Smart Heal iOS",
-"name": "Sample Smart Heal Test",
-# highlight-next-line
-"smartHeal": True
+    "deviceName": "iPhone 16",
+    "platformName": "iOS",
+    "platformVersion": "18",
+    "isRealMobile": True,
+    "app": "YOUR_APP_URL",
+    "build": "Smart Heal iOS",
+    "name": "Sample Smart Heal Test",
+    # highlight-next-line
+    "smartHeal": True
 }
 ```
 
 ```python
 desired_caps = {
-"deviceName": "Galaxy S25",
-"platformName": "Android",
-"platformVersion": "16",
-"isRealMobile": True,
-"app": "YOUR_APP_URL",
-"build": "Smart Heal Android",
-"name": "Sample Smart Heal Test",
-# highlight-next-line
-"smartHeal": True
+    "deviceName": "Galaxy S25",
+    "platformName": "Android",
+    "platformVersion": "16",
+    "isRealMobile": True,
+    "app": "YOUR_APP_URL",
+    "build": "Smart Heal Android",
+    "name": "Sample Smart Heal Test",
+    # highlight-next-line
+    "smartHeal": True
 }
 ```
 

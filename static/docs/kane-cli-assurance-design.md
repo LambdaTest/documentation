@@ -78,8 +78,8 @@ A design run commits to the graph **and writes files**. Each kept test lands as 
 ```markdown
 ---
 assurance:
-id: t-add-one-in-stock-product-and-verify-minimum-valid-cart
-base: sha256:00f8…
+  id: t-add-one-in-stock-product-and-verify-minimum-valid-cart
+  base: sha256:00f8…
 ---
 # Add one in-stock product and verify minimum valid cart pricing
 

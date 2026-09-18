@@ -15,12 +15,12 @@ Follow the below mentioned steps to generate the Artifacts for your desired fram
 
 ```yaml
 uploadArtifacts:
-- name: Executed-Job-Artifacts #user defined name of the artifact
-path:
-- src/test/index.html #path of the generated artifact
-- name: My-Job-Artifacts
-path:
-- src/collect/info.html
+    - name: Executed-Job-Artifacts #user defined name of the artifact
+      path:
+        - src/test/index.html #path of the generated artifact
+    - name: My-Job-Artifacts
+      path:
+        - src/collect/info.html
 ```
 
 - If you are generating multiple artifacts, then it is recommended to use this parameter, [`mergeArtifacts`](/support/docs/deep-dive-into-hyperexecute-yaml/#mergeartifacts) in your YAML, as it will zip all your Artifacts files while downloading from the dashboard.
@@ -29,14 +29,14 @@ path:
 
 ```yaml
 matrix:
-os: [win]
-browser: ["chrome-latest-1", "firefox-latest-2"]
+   os: [win]
+   browser: ["chrome-latest-1", "firefox-latest-2"]
 
 mergeArtifacts: true
 uploadArtefacts:
-- name: $browser
-path:
-- allure-results/
+  - name: $browser
+    path:
+      - allure-results/
 ```
 
 As shown in the above code, the artifacts folder generated will be named **chrome-latest-1** and **firefox-latest-2**

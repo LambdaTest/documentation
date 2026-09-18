@@ -57,7 +57,7 @@ You can use your own project to configure and test it. For demo purposes, we are
 
 ```cs
 <ItemGroup>
-<PackageReference Include="LambdaTest.Selenium.Driver" Version="1.0.1" />
+    <PackageReference Include="LambdaTest.Selenium.Driver" Version="1.0.1" />
 </ItemGroup>
 ```
 
@@ -68,18 +68,18 @@ You can configure your project meta information from here, like build name, proj
 
 ```javascript title="LTCloudTest.cs"
 var capabilities = new JObject {
-["browserName"] = "Chrome",
-["browserVersion"] = "latest",
-["platformName"] = "Windows 10",
-// highlight-next-line
-["name"] = "<YOUR_PROJECT_NAME>",
-// highlight-next-line
-["build"] = "<YOUR_BUILD_NAME>",
-["user"] = username,
-["accessKey"] = accessKey,
-["network"] = true,
-["video"] = true,
-["console"] = true
+    ["browserName"] = "Chrome",
+    ["browserVersion"] = "latest",
+    ["platformName"] = "Windows 10",
+    // highlight-next-line
+    ["name"] = "<YOUR_PROJECT_NAME>",
+    // highlight-next-line
+    ["build"] = "<YOUR_BUILD_NAME>",
+    ["user"] = username,
+    ["accessKey"] = accessKey,
+    ["network"] = true,
+    ["video"] = true,
+    ["console"] = true
 };
 ```
 
@@ -96,21 +96,21 @@ using LambdaTest.Selenium.Driver;
 
 namespace LambdaTest.Selenium.TestProject
 {
-public static class LocalTest{
-public static async Task Run(){
-using IWebDriver driver = new ChromeDriver();
-try {
-Console.WriteLine("Driver started");
-driver.Navigate().GoToUrl("Required URL");
-// highlight-next-line
-await SmartUISnapshot.CaptureSnapshot(driver, "Screenshot Name"); //utilize this function to take the dom snapshot of your test
-}catch (Exception ex) {
-Console.WriteLine(ex);
-}finally {
-driver.Quit();
-}
-}
-}
+  public static class LocalTest{
+    public static async Task Run(){
+      using IWebDriver driver = new ChromeDriver();
+      try {
+        Console.WriteLine("Driver started");
+        driver.Navigate().GoToUrl("Required URL");
+        // highlight-next-line
+        await SmartUISnapshot.CaptureSnapshot(driver, "Screenshot Name"); //utilize this function to take the dom snapshot of your test
+      }catch (Exception ex) {
+        Console.WriteLine(ex);
+      }finally {
+          driver.Quit();
+      }
+    }
+  }
 }
 ```
 
@@ -155,28 +155,28 @@ autosplit: true
 concurrency: 1
 
 runtime:
-language: dotnet
-version: "8.0"
+  language: dotnet
+  version: "8.0"
 
 env:
 #  PAT: ${{ .secrets.testKey }}
-PROJECT_TOKEN: <YOUR_PROJECT_TOKEN>
+ PROJECT_TOKEN: <YOUR_PROJECT_TOKEN>
 
 cacheKey: '{{ checksum "package-lock.json" }}'
 cacheDirectories:
-- node_modules
+  - node_modules
 
 pre:
-- dotnet clean
-- dotnet build
-- npm install @lambdatest/smartui-cli
-- dotnet restore
-- npx smartui config:create .smartui.json
+  - dotnet clean
+  - dotnet build
+  - npm install @lambdatest/smartui-cli
+  - dotnet restore
+  - npx smartui config:create .smartui.json
 
 testDiscovery:
-type: raw
-mode: remote
-command: echo cloud
+  type: raw
+  mode: remote
+  command: echo cloud
 
 testRunnerCommand: npx smartui --config .smartui.json exec -- dotnet run $test
 

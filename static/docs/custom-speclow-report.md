@@ -18,12 +18,12 @@ Add the following settings in your YAML file to enable reporting and configure p
 ```yaml
 report: true
 partialReports:
-location: YOUR_REPORTS_LOCATION
-type: xml
-frameworkName: specflow-custom
-email:
-to: [YOUR_EMAIL_ID]
-metaInfo: [ "project-name:YOUR_CUSTOM_PROJECT_NAME", "project-env: YOUR_CUSTOM_PROJECT_ENV" ]
+  location: YOUR_REPORTS_LOCATION
+  type: xml
+  frameworkName: specflow-custom
+  email:
+    to: [YOUR_EMAIL_ID]
+    metaInfo: [ "project-name:YOUR_CUSTOM_PROJECT_NAME", "project-env: YOUR_CUSTOM_PROJECT_ENV" ]
 ```
 
 Explanation:

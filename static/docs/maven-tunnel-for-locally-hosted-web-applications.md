@@ -77,9 +77,9 @@ Ensure that you have the Maven Tunnel dependency configured in your `pom.xml`.
 
 ```js
 <dependency>
-<groupId>com.github.lambdatest</groupId>
-<artifactId>lambdatest-tunnel-binary</artifactId>
-<version>4.0.2</version>
+	<groupId>com.github.lambdatest</groupId>
+	<artifactId>lambdatest-tunnel-binary</artifactId>
+	<version>4.0.2</version>
 </dependency>
 ```
 
@@ -102,55 +102,55 @@ import org.testng.annotations.Test;
 import com.lambdatest.tunnel.Tunnel;
 
 public class MavenSingle {
-Tunnel t;
+    Tunnel t;
 
-WebDriver driver = null;
-public static String status = "passed";
+    WebDriver driver = null;
+    public static String status = "passed";
 
-String username = System.getenv("LT_USERNAME");
-String access_key = System.getenv("LT_ACCESS_KEY");
+    String username = System.getenv("LT_USERNAME");
+    String access_key = System.getenv("LT_ACCESS_KEY");
 
-@BeforeTest
-public void setUp() throws Exception {
+    @BeforeTest
+    public void setUp() throws Exception {
 
-DesiredCapabilities capabilities = new DesiredCapabilities();
-capabilities.setCapability("build", "Single Maven Tunnel");
-capabilities.setCapability("name", "Maven Tunnel");
-capabilities.setCapability("platform", "Windows 10");
-capabilities.setCapability("browserName", "Chrome");
-capabilities.setCapability("version","latest");
-capabilities.setCapability("tunnel",true);
-capabilities.setCapability("network",true);
-capabilities.setCapability("console",true);
-capabilities.setCapability("visual",true);
+        DesiredCapabilities capabilities = new DesiredCapabilities();
+        capabilities.setCapability("build", "Single Maven Tunnel");
+        capabilities.setCapability("name", "Maven Tunnel");
+        capabilities.setCapability("platform", "Windows 10");
+        capabilities.setCapability("browserName", "Chrome");
+        capabilities.setCapability("version","latest");
+        capabilities.setCapability("tunnel",true);
+        capabilities.setCapability("network",true);
+        capabilities.setCapability("console",true);
+        capabilities.setCapability("visual",true);
 
-//create tunnel instance
-t = new Tunnel();
-HashMap<String, String> options = new HashMap<String, String>();
-options.put("user", username);
-options.put("key", access_key);
+        //create tunnel instance
+        t = new Tunnel();
+        HashMap<String, String> options = new HashMap<String, String>();
+        options.put("user", username);
+        options.put("key", access_key);
 
-//start tunnel
-t.start(options);
-driver = new RemoteWebDriver(new URL("http://" + username + ":" + access_key + "@hub.lambdatest.com/wd/hub"), capabilities);
-System.out.println("Started session");
-}
+        //start tunnel
+        t.start(options);
+        driver = new RemoteWebDriver(new URL("http://" + username + ":" + access_key + "@hub.lambdatest.com/wd/hub"), capabilities);
+        System.out.println("Started session");
+    }
 
-@Test()
-public void testTunnel() throws Exception {
-//Check LocalHost on XAMPP
-driver.get("http://localhost.lambdatest.com");
-// Let's check that the item we added is added in the list.
-driver.get("https://google.com");
-}
+    @Test()
+    public void testTunnel() throws Exception {
+            //Check LocalHost on XAMPP
+            driver.get("http://localhost.lambdatest.com");
+            // Let's check that the item we added is added in the list.
+            driver.get("https://google.com");
+    }
 
-@AfterTest
-public void tearDown() throws Exception {
-((JavascriptExecutor) driver).executeScript("lambda-status=" + status);
-driver.quit();
-//close tunnel
-t.stop();
-}
+    @AfterTest
+    public void tearDown() throws Exception {
+        ((JavascriptExecutor) driver).executeScript("lambda-status=" + status);
+        driver.quit();
+        //close tunnel
+        t.stop();
+    }
 }
 ```
 
@@ -163,50 +163,50 @@ In order to trigger parallel test execution you will need to specify the paramet
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite thread-count="40" name="LambaTestSuite" parallel="tests">
 
-<listeners>
-<listener class-name="com.lambdatest.tunnel.MavenParallel"/>
-</listeners>
+	<listeners>
+		<listener class-name="com.lambdatest.tunnel.MavenParallel"/>
+	</listeners>
 
-<test name="1 Chrome 12">
-<parameter name="browser" value="Chrome"/>
-<parameter name="version" value="latest"/>
-<parameter name="platform" value="Windows 10"/>
-<parameter name="resolution" value="1600x1200"/>
-<classes>
-<class name="com.lambdatest.tunnel.MavenParallel"/>
-</classes>
-</test>
+   <test name="1 Chrome 12">
+   <parameter name="browser" value="Chrome"/>
+      <parameter name="version" value="latest"/>
+        <parameter name="platform" value="Windows 10"/>
+        <parameter name="resolution" value="1600x1200"/>
+        <classes>
+            <class name="com.lambdatest.tunnel.MavenParallel"/>
+        </classes>
+    </test>
 
-<test name="2 Chrome 12">
-<parameter name="browser" value="Chrome"/>
-<parameter name="version" value="latest-1"/>
-<parameter name="platform" value="Windows 8.1"/>
-<parameter name="resolution" value="1920x1080"/>
-<classes>
-<class name="com.lambdatest.tunnel.MavenParallel"/>
-</classes>
-</test>
+   <test name="2 Chrome 12">
+   <parameter name="browser" value="Chrome"/>
+      <parameter name="version" value="latest-1"/>
+        <parameter name="platform" value="Windows 8.1"/>
+        <parameter name="resolution" value="1920x1080"/>
+        <classes>
+            <class name="com.lambdatest.tunnel.MavenParallel"/>
+        </classes>
+    </test>
 
-<test name="3 Chrome 12">
-<parameter name="browser" value="Chrome"/>
-<parameter name="version" value="latest-2"/>
-<parameter name="platform" value="Windows 8"/>
-<parameter name="resolution" value="2048x1536"/>
-<classes>
-<class name="com.lambdatest.tunnel.MavenParallel"/>
-</classes>
-</test>
+   <test name="3 Chrome 12">
+   <parameter name="browser" value="Chrome"/>
+      <parameter name="version" value="latest-2"/>
+        <parameter name="platform" value="Windows 8"/>
+        <parameter name="resolution" value="2048x1536"/>
+        <classes>
+            <class name="com.lambdatest.tunnel.MavenParallel"/>
+        </classes>
+    </test>
 
-<test name="4 Chrome 12">
-<parameter name="browser" value="Chrome"/>
-<parameter name="version" value="latest-3"/>
-<parameter name="platform" value="Windows 7"/>
-<parameter name="resolution" value="2560x1440"/>
-<classes>
-<class name="com.lambdatest.tunnel.MavenParallel"/>
-</classes>
-</test>
-</suite>
+   <test name="4 Chrome 12">
+   <parameter name="browser" value="Chrome"/>
+      <parameter name="version" value="latest-3"/>
+        <parameter name="platform" value="Windows 7"/>
+        <parameter name="resolution" value="2560x1440"/>
+        <classes>
+            <class name="com.lambdatest.tunnel.MavenParallel"/>
+        </classes>
+    </test>
+    </suite>
 ```
 
 Here is the final code to execute parallel testing with Maven tunnel.
@@ -228,73 +228,73 @@ import com.lambdatest.tunnel.Tunnel;
 
 public class MavenParallel implements IExecutionListener{
 
-public RemoteWebDriver driver = null;
-String status = "passed";
-String username = System.getenv("LT_USERNAME");
-String accessKey = System.getenv("LT_ACCESS_KEY");
-Tunnel t;
+    public RemoteWebDriver driver = null;
+    String status = "passed";
+    String username = System.getenv("LT_USERNAME");
+    String accessKey = System.getenv("LT_ACCESS_KEY");
+    Tunnel t;
 
-@Override
-public void onExecutionStart() {
-try {
-//start the tunnel
-t = new Tunnel();
-HashMap<String, String> options = new HashMap<String, String>();
-options.put("user", username);
-options.put("key", accessKey);
-t.start(options);
-} catch (Exception e) {
-e.printStackTrace();
-}
-}
+    @Override
+    public void onExecutionStart() {
+	try {
+	      //start the tunnel
+	      t = new Tunnel();
+	      HashMap<String, String> options = new HashMap<String, String>();
+	      options.put("user", username);
+	      options.put("key", accessKey);
+	      t.start(options);
+	} catch (Exception e) {
+	      e.printStackTrace();
+	}
+    }
 
-@BeforeTest
-@org.testng.annotations.Parameters(value={"browser","version","platform", "resolution"})
-public void setUp(String browser, String version, String platform, String resolution) throws Exception {
-DesiredCapabilities capabilities = new DesiredCapabilities();
+    @BeforeTest
+    @org.testng.annotations.Parameters(value={"browser","version","platform", "resolution"})
+    public void setUp(String browser, String version, String platform, String resolution) throws Exception {
+        DesiredCapabilities capabilities = new DesiredCapabilities();
 
-capabilities.setCapability("build", "Parallel Maven Tunnel");
-capabilities.setCapability("name", "Maven Tunnel");
-capabilities.setCapability("browserName", browser);
-capabilities.setCapability("version", version);
-capabilities.setCapability("platform", platform);
-capabilities.setCapability("tunnel",true);
-capabilities.setCapability("network",true);
-capabilities.setCapability("console",true);
-capabilities.setCapability("visual",true);
+        capabilities.setCapability("build", "Parallel Maven Tunnel");
+        capabilities.setCapability("name", "Maven Tunnel");
+        capabilities.setCapability("browserName", browser);
+        capabilities.setCapability("version", version);
+        capabilities.setCapability("platform", platform);
+        capabilities.setCapability("tunnel",true);
+        capabilities.setCapability("network",true);
+        capabilities.setCapability("console",true);
+        capabilities.setCapability("visual",true);
 
-try {
-driver= new RemoteWebDriver(new URL("https://"+username+":"+accessKey+"@hub.lambdatest.com/wd/hub"), capabilities);
-} catch (MalformedURLException e) {
-System.out.println("Invalid grid URL");
-}
-}
+        try {
+            driver= new RemoteWebDriver(new URL("https://"+username+":"+accessKey+"@hub.lambdatest.com/wd/hub"), capabilities);
+        } catch (MalformedURLException e) {
+            System.out.println("Invalid grid URL");
+        }
+    }
 
-@Test()
-public void testTunnel() throws Exception {
-//Check LocalHost on XAMPP
-driver.get("http://localhost.lambdatest.com");
-// Let's check that the item we added is added in the list.
-driver.get("https://google.com");
-}
+    @Test()
+    public void testTunnel() throws Exception {
+            //Check LocalHost on XAMPP
+            driver.get("http://localhost.lambdatest.com");
+            // Let's check that the item we added is added in the list.
+            driver.get("https://google.com");
+    }
 
-@AfterTest
-public void tearDown() throws Exception {
-if (driver != null) {
-((JavascriptExecutor) driver).executeScript("lambda-status=" + status);
-driver.quit();
-}
-}
+    @AfterTest
+    public void tearDown() throws Exception {
+        if (driver != null) {
+            ((JavascriptExecutor) driver).executeScript("lambda-status=" + status);
+            driver.quit();
+        }
+    }
 
-@Override
-public void onExecutionFinish() {
-try {
-//stop the Tunnel;
-t.stop();
-} catch (Exception e) {
-e.printStackTrace();
-}
-}
+    @Override
+    public void onExecutionFinish() {
+	try {
+	      //stop the Tunnel;
+	      t.stop();
+	    } catch (Exception e) {
+		e.printStackTrace();
+	    }
+	}
 }
 ```
 ## Enable Parallel Testing With Maven Tunnel using Serentiy BDD
@@ -303,15 +303,15 @@ In order to trigger parallel test execution with Maven Tunnel using Serenity BDD
 
 ```js
 <dependency>
-<groupId>com.github.lambdatest</groupId>
-<artifactId>lambdatest-tunnel-binary</artifactId>
-<version>4.0.2</version>
-<exclusions>
-<exclusion>
-<groupId>org.testng</groupId>
-<artifactId>testng</artifactId>
-</exclusion>
-</exclusions>
+   <groupId>com.github.lambdatest</groupId>
+   <artifactId>lambdatest-tunnel-binary</artifactId>
+   <version>4.0.2</version>
+   <exclusions>
+      <exclusion>
+         <groupId>org.testng</groupId>
+         <artifactId>testng</artifactId>
+      </exclusion>
+   </exclusions>
 </dependency>
 ```
 

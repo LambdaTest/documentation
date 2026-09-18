@@ -31,19 +31,19 @@ Use this guide when you want **Accessibility Automation** (Selenium capabilities
 name: accessibility-smoke
 on: [pull_request]
 jobs:
-a11y:
-runs-on: ubuntu-latest
-steps:
-- uses: actions/checkout@v4
-- uses: actions/setup-java@v4
-with:
-distribution: temurin
-java-version: "17"
-- name: Run Selenium + Accessibility smoke
-env:
-LT_USERNAME: ${{ secrets.LT_USERNAME }}
-LT_ACCESS_KEY: ${{ secrets.LT_ACCESS_KEY }}
-run: mvn -q -Dgroups=a11y test
+  a11y:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
+      - name: Run Selenium + Accessibility smoke
+        env:
+          LT_USERNAME: ${{ secrets.LT_USERNAME }}
+          LT_ACCESS_KEY: ${{ secrets.LT_ACCESS_KEY }}
+        run: mvn -q -Dgroups=a11y test
 ```
 
 Adapt `run` to your build tool; the important part is that the invoked tests set Accessibility capabilities per [Selenium](/support/docs/accessibility-automation-test/) and [settings](/support/docs/accessibility-automation-settings/).

@@ -67,10 +67,10 @@ In the `config.json` file, update your test capabilities. This code passes brows
 
 ```python
 capabilities = {
-"build": "Sample lettuce Build",
-"platformName": "Windows 11",
-"browserName": "Chrome",
-"browserVersion": "latest",
+        "build": "Sample lettuce Build",
+        "platformName": "Windows 11",
+        "browserName": "Chrome",
+        "browserVersion": "latest",
 }
 ```
 

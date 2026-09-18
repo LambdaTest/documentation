@@ -228,37 +228,37 @@ Once, the configuration file will be created, you will be seeing the default con
 
 ```json title="/smartui-sdk-project/.smartui.json"
 {
-"web": {
-"browsers": [
-"chrome",
-"firefox",
-"safari",
-"edge"
-],
-"viewports": [
-[
-1920
-],
-[
-1366
-],
-[
-1028
-]
-] // Full Page screenshots are captured by default for web viewports
-},
-"mobile": {
-"devices": [
-"iPhone 14",  //iPhone 14 viewport
-"Galaxy S24"  //Galaxy S24 viewport
-],
-"fullPage": true, //Full Page is true by default for mobile viewports
-"orientation": "portrait" //Change to "landscape" for landscape snapshot
-},
-"waitForTimeout": 1000, //Optional (Should only be used in case lazy-loading/async components are present)
-"waitForPageRender": 50000, //Optional (Should only be used in case of websites which take more than 30s to load)
-"enableJavaScript": false, //Enable javascript for all the screenshots of the project
-"allowedHostnames": [] //Additional hostnames to capture assets from
+  "web": {
+    "browsers": [
+      "chrome",
+      "firefox",
+      "safari",
+      "edge"
+    ],
+    "viewports": [
+      [
+        1920
+      ],
+      [
+        1366
+      ],
+      [
+        1028
+      ]
+    ] // Full Page screenshots are captured by default for web viewports
+  },
+  "mobile": {
+    "devices": [
+      "iPhone 14",  //iPhone 14 viewport
+      "Galaxy S24"  //Galaxy S24 viewport
+    ],
+    "fullPage": true, //Full Page is true by default for mobile viewports
+    "orientation": "portrait" //Change to "landscape" for landscape snapshot
+  },
+  "waitForTimeout": 1000, //Optional (Should only be used in case lazy-loading/async components are present)
+  "waitForPageRender": 50000, //Optional (Should only be used in case of websites which take more than 30s to load)
+  "enableJavaScript": false, //Enable javascript for all the screenshots of the project
+  "allowedHostnames": [] //Additional hostnames to capture assets from
 }
 ```
 **Advanced options in SmartUI configuration**
@@ -275,22 +275,22 @@ const puppeteer = require("puppeteer");
 const { smartuiSnapshot } = require('@lambdatest/puppeteer-driver'); // Assuming you still want to use smartuiSnapshot locally
 
 (async () => {
-// Launch a browser instance locally
-const browser = await puppeteer.launch({
-headless: false, // Set to false to see the UI
-args: ['--start-maximized'], // Start browser maximized, remove if not needed
-});
-const page = await browser.newPage();
-await page.setViewport({ width: 1280, height: 720 }); // Set viewport size as needed
+  // Launch a browser instance locally
+  const browser = await puppeteer.launch({
+    headless: false, // Set to false to see the UI
+    args: ['--start-maximized'], // Start browser maximized, remove if not needed
+  });
+  const page = await browser.newPage();
+  await page.setViewport({ width: 1280, height: 720 }); // Set viewport size as needed
 
-// Navigate to the desired URL
-await page.goto('https://www.lambdatest.com');
+  // Navigate to the desired URL
+  await page.goto('https://www.lambdatest.com');
 
-// Take a screenshot with SmartUI. Replace "LT-Home" with a relevant name for your use case
-await smartuiSnapshot(page, "LT-Home");
+  // Take a screenshot with SmartUI. Replace "LT-Home" with a relevant name for your use case
+  await smartuiSnapshot(page, "LT-Home");
 
-// Close the browser
-await browser.close();
+  // Close the browser
+  await browser.close();
 })();
 ```
 
@@ -326,82 +326,82 @@ When conducting visual tests, you may encounter scenarios where certain elements
 
 ```js title="This is a sample for your configuration for Puppeteer to ignore by ID"
 let options = {
-ignoreDOM: {
-id: ["ID-1", "ID-2"],
-}
-}
-await page.goto('Required URL');
-await smartuiSnapshot.smartuiSnapshot(page, "Screenshot Name", options);
+            ignoreDOM: {
+                id: ["ID-1", "ID-2"],
+            }
+        }
+        await page.goto('Required URL');
+        await smartuiSnapshot.smartuiSnapshot(page, "Screenshot Name", options);
 ```
 
 ```js title="This is a sample for your configuration for Puppeteer to ignore by Class"
 let options = {
-ignoreDOM: {
-class: ["Class-1", "Class-2"],
-}
-}
-await page.goto('Required URL');
-await smartuiSnapshot.smartuiSnapshot(page, "Screenshot Name", options);
+            ignoreDOM: {
+                class: ["Class-1", "Class-2"],
+            }
+        }
+        await page.goto('Required URL');
+        await smartuiSnapshot.smartuiSnapshot(page, "Screenshot Name", options);
 ```
 
 ```js title="This is a sample for your configuration for Puppeteer to ignore by XPath"
 let options = {
-ignoreDOM: {
-xpath: ["Xpath-1", "Xpath-2"],
-}
-}
-await page.goto('Required URL');
-await smartuiSnapshot.smartuiSnapshot(page, "Screenshot Name", options);
+            ignoreDOM: {
+                xpath: ["Xpath-1", "Xpath-2"],
+            }
+        }
+        await page.goto('Required URL');
+        await smartuiSnapshot.smartuiSnapshot(page, "Screenshot Name", options);
 ```
 
 ```js title="This is a sample for your configuration for Puppeteer to ignore by CSS Selector"
 let options = {
-ignoreDOM: {
-cssSelector: ["CSS-Selector-1", "CSS-Selector-2"],
-}
-}
-await page.goto('Required URL');
-await smartuiSnapshot.smartuiSnapshot(page, "Screenshot Name", options);
+            ignoreDOM: {
+                cssSelector: ["CSS-Selector-1", "CSS-Selector-2"],
+            }
+        }
+        await page.goto('Required URL');
+        await smartuiSnapshot.smartuiSnapshot(page, "Screenshot Name", options);
 ```
 
 ```js title="This is a sample for your configuration for Puppeteer to select by" ID."
 let options = {
-selectDOM: {
-id: ["ID-1", "ID-2"],
-}
-}
-await page.goto('Required URL');
-await smartuiSnapshot.smartuiSnapshot(page, "Screenshot Name", options);
+            selectDOM: {
+                id: ["ID-1", "ID-2"],
+            }
+        }
+        await page.goto('Required URL');
+        await smartuiSnapshot.smartuiSnapshot(page, "Screenshot Name", options);
 ```
 
 ```js title="This is a sample for your configuration for Puppeteer to select by Class"
 let options = {
-selectDOM: {
-class: ["Class-1", "Class-2"],
-}
-}
-await page.goto('Required URL');
-await smartuiSnapshot.smartuiSnapshot(page, "Screenshot Name", options);
+            selectDOM: {
+                class: ["Class-1", "Class-2"],
+            }
+        }
+        await page.goto('Required URL');
+        await smartuiSnapshot.smartuiSnapshot(page, "Screenshot Name", options);
 ```
 
 ```js title="This is a sample for your configuration for Puppeteer to select by XPath"
 let options = {
-selectDOM: {
-xpath: ["Xpath-1", "Xpath-2"],
-}
-}
-await page.goto('Required URL');
-await smartuiSnapshot.smartuiSnapshot(page, "Screenshot Name", options);
+            selectDOM: {
+                xpath: ["Xpath-1", "Xpath-2"],
+            }
+        }
+        await page.goto('Required URL');
+        await smartuiSnapshot.smartuiSnapshot(page, "Screenshot Name", options);
 ```
 
 ```js title="This is a sample for your webhook configuration for Puppeteer to select by CSS Selector"
 let options = {
-selectDOM: {
-cssSelector: ["CSS-Selector-1", "CSS-Selector-2"],
-}
-}
-await page.goto('Required URL');
-await smartuiSnapshot.smartuiSnapshot(page, "Screenshot Name", options);
+            selectDOM: {
+                cssSelector: ["CSS-Selector-1", "CSS-Selector-2"],
+            }
+        }
+        await page.goto('Required URL');
+        await smartuiSnapshot.smartuiSnapshot(page, "Screenshot Name", options);
 ```
 
 ## For capturing the screenshot of a specific element
@@ -410,42 +410,42 @@ You can capture screenshots of targeted elements by leveraging various locator m
 
 ```js title="This is a sample for your configuration for Puppeteer to capture an element by" ID."
 let options = {
-element: {
-id: 'Required ID',
-}
-};
-await page.goto('Required URL');
-await smartuiSnapshot.smartuiSnapshot(page, "Screenshot Name", options);
+      element: {
+          id: 'Required ID',
+      }
+  };
+        await page.goto('Required URL');
+        await smartuiSnapshot.smartuiSnapshot(page, "Screenshot Name", options);
 ```
 
 ```js title="This is a sample for your configuration for Puppeteer to capture an element by Class"
 let options = {
-element: {
-class: 'Required Class',
-}
-};
-await page.goto('Required URL');
-await smartuiSnapshot.smartuiSnapshot(page, "Screenshot Name", options);
+      element: {
+          class: 'Required Class',
+      }
+  };
+        await page.goto('Required URL');
+        await smartuiSnapshot.smartuiSnapshot(page, "Screenshot Name", options);
 ```
 
 ```js title="This is a sample for your configuration for Puppeteer to capture an element by XPath"
 let options = {
-element: {
-xpath: 'Required Xpath',
-}
-};
-await page.goto('Required URL');
-await smartuiSnapshot.smartuiSnapshot(page, "Screenshot Name", options);
+      element: {
+          xpath: 'Required Xpath',
+      }
+  };
+        await page.goto('Required URL');
+        await smartuiSnapshot.smartuiSnapshot(page, "Screenshot Name", options);
 ```
 
 ```js title="This is a sample for your webhook configuration for Puppeteer to capture an element by CSS Selector"
 let options = {
-element: {
-cssSelector: 'Required CSS Selector',
-}
-};
-await page.goto('Required URL');
-await smartuiSnapshot.smartuiSnapshot(page, "Screenshot Name", options);
+      element: {
+          cssSelector: 'Required CSS Selector',
+      }
+  };
+        await page.goto('Required URL');
+        await smartuiSnapshot.smartuiSnapshot(page, "Screenshot Name", options);
 ```
 
 ## For capturing interactive lazy loading elements
@@ -457,47 +457,47 @@ const puppeteer = require('puppeteer');
 const { smartuiSnapshot } = require('@lambdatest/puppeteer-driver');
 
 (async () => {
-const browser = await puppeteer.launch({ headless: false }); // Launches a browser
-const page = await browser.newPage(); // Opens a new page
+  const browser = await puppeteer.launch({ headless: false }); // Launches a browser
+  const page = await browser.newPage(); // Opens a new page
 
-try {
-await page.goto('Required URL'); // Navigate to the required URL
+  try {
+    await page.goto('Required URL'); // Navigate to the required URL
 
-// Function to scroll to the bottom of the page
-async function quickScrollToBottom(lastPageWait) {
-await page.evaluate(async (lastPageWait) => {
-const scrollToBottom = async (lastPageWait) => {
-const getScrollHeight = () => document.body.scrollHeight;
-let lastHeight = await getScrollHeight();
-let currentHeight = 0;
+    // Function to scroll to the bottom of the page
+    async function quickScrollToBottom(lastPageWait) {
+      await page.evaluate(async (lastPageWait) => {
+        const scrollToBottom = async (lastPageWait) => {
+          const getScrollHeight = () => document.body.scrollHeight;
+          let lastHeight = await getScrollHeight();
+          let currentHeight = 0;
 
-while (currentHeight < lastHeight) {
-window.scrollTo(0, lastHeight);
-await new Promise(resolve => setTimeout(resolve, 1000)); // Wait for the page to load more content
-currentHeight = lastHeight;
-lastHeight = await getScrollHeight();
-}
+          while (currentHeight < lastHeight) {
+            window.scrollTo(0, lastHeight);
+            await new Promise(resolve => setTimeout(resolve, 1000)); // Wait for the page to load more content
+            currentHeight = lastHeight;
+            lastHeight = await getScrollHeight();
+          }
 
-if (lastPageWait) {
-await new Promise(resolve => setTimeout(resolve, lastPageWait)); // Additional wait at the bottom
-}
+          if (lastPageWait) {
+            await new Promise(resolve => setTimeout(resolve, lastPageWait)); // Additional wait at the bottom
+          }
 
-// Scroll back to the top after reaching the bottom
-window.scrollTo(0, 0);
-await new Promise(resolve => setTimeout(resolve, 1000)); // Wait for scroll to top
-};
-await scrollToBottom(lastPageWait);
-}, lastPageWait);
-}
+          // Scroll back to the top after reaching the bottom
+          window.scrollTo(0, 0);
+          await new Promise(resolve => setTimeout(resolve, 1000)); // Wait for scroll to top
+        };
+        await scrollToBottom(lastPageWait);
+      }, lastPageWait);
+    }
 
-await quickScrollToBottom(100); // Adjust the wait time as needed
+    await quickScrollToBottom(100); // Adjust the wait time as needed
 
-// Taking a screenshot with SmartUI
-await smartuiSnapshot(page, "Screenshot Name");
+    // Taking a screenshot with SmartUI
+    await smartuiSnapshot(page, "Screenshot Name");
 
-} finally {
-await browser.close(); // Close the browser
-}
+  } finally {
+    await browser.close(); // Close the browser
+  }
 })();
 ```
 
@@ -613,7 +613,7 @@ await page.waitForLoadState('networkidle');
 2. Enable JavaScript in configuration:
 ```json
 {
-"enableJavaScript": true
+  "enableJavaScript": true
 }
 ```
 

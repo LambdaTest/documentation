@@ -112,44 +112,44 @@ maxRetries: 1
 concurrency: 3
 
 env:
-# PAT: ${{ .secrets.testKey }}
-CACHE_DIR: m2_cache_dir
-TARGET_OS: linux
+  # PAT: ${{ .secrets.testKey }}
+  CACHE_DIR: m2_cache_dir
+  TARGET_OS: linux
 
 cacheKey: '{{ checksum "pom.xml" }}'
 cacheDirectories:
-- ${CACHE_DIR}
+  - ${CACHE_DIR}
 
 shell: bash
 
 pre:
-# Download and install packages in the CACHE_DIR.
-# Skip execution of the tests in the pre step
-- mvn -Dmaven.repo.local=${CACHE_DIR} -Dmaven.test.skip=true clean install
+  # Download and install packages in the CACHE_DIR.
+  # Skip execution of the tests in the pre step
+  - mvn -Dmaven.repo.local=${CACHE_DIR} -Dmaven.test.skip=true clean install
 
 post:
-- cat yaml/linux/junit_hyperexecute_autosplit_sample.yaml
+  - cat yaml/linux/junit_hyperexecute_autosplit_sample.yaml
 
 mergeArtifacts: true
 
 uploadArtefacts:
-- name: Final-Report
-path:
-- target/site/**
-- name: Surefire-Report
-path:
-- target/surefire-reports/**
+ - name: Final-Report
+   path:
+    - target/site/**
+ - name: Surefire-Report
+   path:
+    - target/surefire-reports/**
 
 report: true
 partialReports:
-location: target/surefire-reports/html
-type: html
-frameworkName: extent
+  location: target/surefire-reports/html
+  type: html
+  frameworkName: extent
 
 testDiscovery:
-type: raw
-mode: remote
-command: grep 'public class' src/test/java/hyperexecute/*.java | awk '{print$3}'
+  type: raw
+  mode: remote
+  command: grep 'public class' src/test/java/hyperexecute/*.java | awk '{print$3}'
 
 testRunnerCommand: mvn -Dplatname=linux -Dmaven.repo.local=m2_cache_dir -Dtest=$test test site surefire-report:report
 
@@ -218,8 +218,8 @@ The junit-5-skill package includes:
 junit-5-skill/
 ├── SKILL.md
 └── reference/
-├── playbook.md
-└── advanced-patterns.md
+    ├── playbook.md
+    └── advanced-patterns.md
 ```
 
 It provides structured guidance for:

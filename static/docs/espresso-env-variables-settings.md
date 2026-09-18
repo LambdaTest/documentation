@@ -60,20 +60,20 @@ curl --location --request POST 'https://mobile-api.lambdatest.com/framework/v1/e
 --header 'Authorization: Basic BASIC_AUTH_TOKEN' \
 --header 'Content-Type: application/json' \
 --data-raw '{
-"app" : "APP_ID",
-"testSuite": "TEST_SUITE_ID",
-"device" :  ["Galaxy S21 5G-12"],
-"queueTimeout": 10800,
-"IdleTimeout": 150,
-"deviceLog": true,
-"network": false,
-"build" : "Proverbial-Espresso"
-# highlight-start
-"envVariables":{                     //setting up environment variables
-"STAGE":"stg1",
-"PROD":"prod1"
-}
-# highlight-end
+    "app" : "APP_ID",
+    "testSuite": "TEST_SUITE_ID",
+    "device" :  ["Galaxy S21 5G-12"],
+    "queueTimeout": 10800,
+    "IdleTimeout": 150,
+    "deviceLog": true,
+    "network": false,
+   "build" : "Proverbial-Espresso"
+   # highlight-start
+   "envVariables":{                     //setting up environment variables
+      "STAGE":"stg1",
+      "PROD":"prod1"
+    }
+    # highlight-end
 }'
 ```
 
@@ -89,24 +89,24 @@ autosplit: true
 maxRetries: 2
 # highlight-start
 env:
-STAGE: stg1
-PROD: prod1
+  STAGE: stg1
+  PROD: prod1
 # highlight-end
 framework:
-name: "android/espresso"
-args:
-reservation: false
-buildName: "Test Espresso Sharding"
-appId: <TARGET_SUITE>
-testSuiteAppId: <TEST_SUITE>
-deviceSelectionStrategy: any
-devices: [".*"]
-shards:
-mappings:
-- name: shard1
-strategy: "only-testing/skip-testing"
-values: ["<className>/<className/testName>"]
-- name: shard2
-strategy: "only-testing/skip-testing"
-values: ["<className>/<className/testName>", "<className>/<className/testName>"]
+  name: "android/espresso"
+  args:
+    reservation: false
+    buildName: "Test Espresso Sharding"
+    appId: <TARGET_SUITE>
+    testSuiteAppId: <TEST_SUITE>
+    deviceSelectionStrategy: any
+    devices: [".*"]
+    shards:
+      mappings:
+      - name: shard1
+        strategy: "only-testing/skip-testing"
+        values: ["<className>/<className/testName>"]
+     - name: shard2
+       strategy: "only-testing/skip-testing"
+       values: ["<className>/<className/testName>", "<className>/<className/testName>"]
 ```

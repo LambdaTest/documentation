@@ -17,17 +17,17 @@ In *lambdatest-config.json* file, you can set the Cypress version as shown in th
 // lambdatest-config.json
 
 "run_settings":{
-"cypress_config_file":"cypress.config.js",
-"reporter_config_file":"base_reporter_config.json",
-"build_name":"build-name",
-"parallels":1,
-"specs":"./*.cy.js",
-"ignore_files":"",
-"network":false,
-"headless":false,
-"npm_dependencies":{
-"cypress":"10.0.0"
-}
+   "cypress_config_file":"cypress.config.js",
+   "reporter_config_file":"base_reporter_config.json",
+   "build_name":"build-name",
+   "parallels":1,
+   "specs":"./*.cy.js",
+   "ignore_files":"",
+   "network":false,
+   "headless":false,
+   "npm_dependencies":{
+      "cypress":"10.0.0"
+   }
 },
 
 ```
@@ -36,16 +36,16 @@ In *lambdatest-config.json* file, you can set the Cypress version as shown in th
 // lambdatest-config.json
 
 "run_settings":{
-"cypress_config_file": "cypress.json",
-"reporter_config_file": "base_reporter_config.json",
-"build_name": "build-name",
-"parallels": 1,
-"specs": "./*.spec.js",
-"ignore_files": "",
-"network": false,
-"headless": false,
-"npm_dependencies": {
-"cypress": "9.0.0"
+   "cypress_config_file": "cypress.json",
+     "reporter_config_file": "base_reporter_config.json",
+     "build_name": "build-name",
+     "parallels": 1,
+     "specs": "./*.spec.js",
+     "ignore_files": "",
+     "network": false,
+     "headless": false,
+     "npm_dependencies": {
+        "cypress": "9.0.0"
 }
 
 ```
@@ -60,11 +60,11 @@ Example:
 
 ```json
 "devDependencies": {
-"@bahmutov/print-env": "1.2.0",
-"@cypress/eslint-plugin-dev": "5.0.0",
-"colon-names": "1.0.0",
-"cypress": "9.2.1",
-"eslint": "7.0.0",
+    "@bahmutov/print-env": "1.2.0",
+    "@cypress/eslint-plugin-dev": "5.0.0",
+    "colon-names": "1.0.0",
+    "cypress": "9.2.1",
+    "eslint": "7.0.0",
 ```
 
 2. Using `npm_dependencies`: If you are passing `npm_dependencies`, TestMu AI will pick the Cypress version from `npm_dependencies` in `lambdatest-config.json`.
@@ -73,19 +73,19 @@ Example:
 
 ```json
 "run_settings": {
-"cypress_config_file": "cypress.json",
-"build_name": "Cypress v9 Demo",
-"parallels": 2,
-"specs": "./cypress/integration/examples/actions.spec.js",
-"downloads": "./cypress/results/",
-"ignore_files": "",
-"network": false,
-"headless": false,
-"reporter_config_file": "",
-"npm_dependencies": {
-"cypress": "10.0.0"
-},
-},
+    "cypress_config_file": "cypress.json",
+    "build_name": "Cypress v9 Demo",
+    "parallels": 2,
+    "specs": "./cypress/integration/examples/actions.spec.js",
+    "downloads": "./cypress/results/",
+    "ignore_files": "",
+    "network": false,
+    "headless": false,
+    "reporter_config_file": "",
+    "npm_dependencies": {
+      "cypress": "10.0.0"
+    },
+  },
 ```
 
 3. Using `cypress_version`: You can pass `cypress_version` in `lambdatest-config.json` and it will override the `cypress_version` present in `npm_dependencies` or `package.json`.
@@ -94,18 +94,18 @@ Example:
 
 ```json
 "run_settings": {
-"cypress_config_file": "cypress.json",
-"build_name": "Cypress v9 Demo",
-"parallels": 2,
-"specs": "./cypress/integration/examples/actions.spec.js",
-"downloads": "./cypress/results/",
-"ignore_files": "",
-"network": false,
-"headless": false,
-"reporter_config_file": "",
-"npm_dependencies": {
-"typescript": "3.7.4"
-},
-"cypress_version": "10.0.0"
-},
+    "cypress_config_file": "cypress.json",
+    "build_name": "Cypress v9 Demo",
+    "parallels": 2,
+    "specs": "./cypress/integration/examples/actions.spec.js",
+    "downloads": "./cypress/results/",
+    "ignore_files": "",
+    "network": false,
+    "headless": false,
+    "reporter_config_file": "",
+    "npm_dependencies": {
+      "typescript": "3.7.4"
+    },
+    "cypress_version": "10.0.0"
+  },
 ```

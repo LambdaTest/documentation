@@ -16,11 +16,11 @@ For a complete step-by-step guide on building your iOS app for Simulator testing
 
 ```bash
 xcodebuild -project YourProject.xcodeproj \
--scheme YourScheme \
--configuration Debug \
--sdk iphonesimulator \
--arch arm64 \
-build
+           -scheme YourScheme \
+           -configuration Debug \
+           -sdk iphonesimulator \
+           -arch arm64 \
+           build
 ```
 
 You can verify the platform using:

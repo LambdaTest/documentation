@@ -69,9 +69,9 @@ browserOptions.BrowserVersion = "latest";
 
 var ltOptions = new Dictionary<string, object>
 {
-{ "build", "NUnit Build" },
-{ "name", "NUnit Test" },
-{ "w3c", true }
+    { "build", "NUnit Build" },
+    { "name", "NUnit Test" },
+    { "w3c", true }
 };
 browserOptions.AddAdditionalOption("LT:Options", ltOptions);
 ```

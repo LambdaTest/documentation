@@ -71,31 +71,31 @@ Region and carrier values are case-sensitive. Make sure to enter them exactly as
 To enable SIM & eSIM support, include the following capability in your automation session as highlighted in the Capabilities:
 
 ```python title="iOS(.ipa)"
-desired_caps = {
-'platformName': 'iOS',
-'platformVersion': '16.0',
-'deviceName': 'iPhone 14',
-'app': 'YOUR_APP_ID',
-'enableSim': True,
-'simOptions': {
-'region': 'IND',
-'carrier': ['airtel', 'vodafone'],
-'esim': True
-}
+ desired_caps = {
+    'platformName': 'iOS',
+    'platformVersion': '16.0',
+    'deviceName': 'iPhone 14',
+    'app': 'YOUR_APP_ID',
+    'enableSim': True,
+    'simOptions': {
+        'region': 'IND',
+        'carrier': ['airtel', 'vodafone'],
+        'esim': True
+    }
 }
 ```
 
 ```python title="Android(.apk)"
 desired_caps = {
-'platformName': 'Android',
-'platformVersion': '16',
-'deviceName': 'Galaxy S25',
-'app': 'YOUR_APP_ID',
-'enableSim': True,
-'simOptions': {
-'region': 'IND',
-'carrier': ['airtel', 'vodafone']
-}
+    'platformName': 'Android',
+    'platformVersion': '16',
+    'deviceName': 'Galaxy S25',
+    'app': 'YOUR_APP_ID',
+    'enableSim': True,
+    'simOptions': {
+        'region': 'IND',
+        'carrier': ['airtel', 'vodafone']
+    }
 }
 ```
 
@@ -103,19 +103,19 @@ desired_caps = {
 
 ```python
 driver.execute_script(
-"lambda_executor: { \"action\": \"deviceInfo\", \"arguments\": { \"deviceProperties\": [\"simOptions\"] } }"
+  "lambda_executor: { \"action\": \"deviceInfo\", \"arguments\": { \"deviceProperties\": [\"simOptions\"] } }"
 )
 ```
 Sample Response:
 
 ``` JSON
 {
-"simOptions": {
-"phoneNumber": "+15555551234",
-"region": "USA",
-"esim": true,
-"carrier": "TMobile"
-}
+  "simOptions": {
+    "phoneNumber": "+15555551234",
+    "region": "USA",
+    "esim": true,
+    "carrier": "TMobile"
+  }
 }
 ```
 ### Step 3: Validate SMS Workflows

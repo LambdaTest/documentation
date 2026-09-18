@@ -32,8 +32,8 @@ await client.files.uploadToSession(session.id, fileBuffer, 'document.pdf');
 
 ```typescript
 const result = await client.files.downloadFromSession(
-session.id,
-'https://example.com/report.csv'
+    session.id,
+    'https://example.com/report.csv'
 );
 fs.writeFileSync('report.csv', result);
 ```
@@ -66,11 +66,11 @@ await client.sessions.files.deleteAll(session.id);
 
 ```typescript
 interface FileInfo {
-path: string;
-name: string;
-size: number;
-createdAt: string;
-mimeType?: string;
+    path: string;
+    name: string;
+    size: number;
+    createdAt: string;
+    mimeType?: string;
 }
 ```
 

@@ -29,39 +29,39 @@ Resize your viewport according to your framework and take the screenshot. For ex
 
 ```js
 
-let options =
-{
-"web": {
-"browsers": [
-"chrome",
-"firefox",
-"safari"
-],
-"viewports": [[768]], //required resized dom viewport
-},
-ignoreDOM: {
-class: ["required-class"],
-}
-};
-await driver.manage().window().setSize(768, 1024);
-await smartuiSnapshot(driver, 'Screenshot Name', options);
+        let options =
+        {
+            "web": {
+                "browsers": [
+                    "chrome",
+                    "firefox",
+                    "safari"
+                ],
+                "viewports": [[768]], //required resized dom viewport
+            },
+            ignoreDOM: {
+                class: ["required-class"],
+              }
+        };
+  await driver.manage().window().setSize(768, 1024);
+  await smartuiSnapshot(driver, 'Screenshot Name', options);
 
-let mobileOptions=
-{
-"mobile": {
-"devices": [
-"iPhone 14",
-"Galaxy S23"
-],
-"fullPage": true,
-"orientation": "portrait"
-},
-ignoreDOM: {
-class: ["nextAvailDate"],
-}
-};
-await driver.manage().window().setSize(360, 1024);
-await smartuiSnapshot(driver, 'Screenshot Name', mobileOptions);
+  let mobileOptions=
+        {
+            "mobile": {
+                "devices": [
+                    "iPhone 14",
+                    "Galaxy S23"
+                ],
+                "fullPage": true,
+                "orientation": "portrait"
+            },
+            ignoreDOM: {
+                class: ["nextAvailDate"],
+              }
+        };
+    await driver.manage().window().setSize(360, 1024);
+    await smartuiSnapshot(driver, 'Screenshot Name', mobileOptions);
 ```
 
 >Note :: Any existing screenshots with same screenshot name,browser and resolution will get over-written.

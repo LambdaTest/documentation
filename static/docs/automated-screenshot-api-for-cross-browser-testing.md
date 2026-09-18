@@ -55,34 +55,34 @@ As you execute, you will find the Server response presented below.
 
 ```javascript
 {
-"windows 10": {
-"chrome": [
-"74",
-"73"
-],
-"firefox": [
-"66",
-"65"
-],
-"opera": [
-"55",
-"54"
-]
-},
-"macos mojave": {
-"chrome": [
-"74",
-"73"
-],
-"firefox": [
-"66",
-"65"
-],
-"opera": [
-"55",
-"54"
-]
-}
+  "windows 10": {
+    "chrome": [
+      "74",
+      "73"
+    ],
+    "firefox": [
+      "66",
+      "65"
+    ],
+    "opera": [
+      "55",
+      "54"
+    ]
+  },
+  "macos mojave": {
+    "chrome": [
+      "74",
+      "73"
+    ],
+    "firefox": [
+      "66",
+      "65"
+    ],
+    "opera": [
+      "55",
+      "54"
+    ]
+  }
 }
 ```
 
@@ -105,14 +105,14 @@ As you execute, you will find the Server response presented below.
 
 ```javascript
 {
-"mac_res": [
-"1024x768",
-"1280x1024"
-],
-"win_res": [
-"1024x768",
-"1280x1024"
-]
+  "mac_res": [
+    "1024x768",
+    "1280x1024"
+  ],
+  "win_res": [
+    "1024x768",
+    "1280x1024"
+  ]
 }
 ```
 ## Fetch Details Of An Executed Test Session
@@ -153,24 +153,24 @@ curl -X GET "https://api.lambdatest.com/screenshots/v1/TES1111111111111111111111
 Example Value:
 
 ```javascript
-{
-"test_id": "TES11111111111111111111111111",
-"defer_time": 5,
-"test_status": "completed",
-"url": "https://www.testmuai.com",
-"callback_url": "https://www.example.com",
-"screenshots": [
-{
-"os": "windows 10",
-"browser": "chrome",
-"browser_version": "74",
-"status": "completed",
-"screenshot_url": "https://s3.amazonaws.com/s3-screenshots/prod/ACT100968331562237283340194/screenshot/win-cr-74.0.png",
-"thumbnail_url": "https://s3.amazonaws.com/s3-screenshots/prod/ACT100968331562237283340194/screenshot/win-cr-74.0.png",
-"activity_id": "ACT100968331562237283340194",
-"resolution": "1024x768"
-}
-]
+  {
+  "test_id": "TES11111111111111111111111111",
+  "defer_time": 5,
+  "test_status": "completed",
+  "url": "https://www.testmuai.com",
+  "callback_url": "https://www.example.com",
+  "screenshots": [
+    {
+      "os": "windows 10",
+      "browser": "chrome",
+      "browser_version": "74",
+      "status": "completed",
+      "screenshot_url": "https://s3.amazonaws.com/s3-screenshots/prod/ACT100968331562237283340194/screenshot/win-cr-74.0.png",
+      "thumbnail_url": "https://s3.amazonaws.com/s3-screenshots/prod/ACT100968331562237283340194/screenshot/win-cr-74.0.png",
+      "activity_id": "ACT100968331562237283340194",
+      "resolution": "1024x768"
+    }
+  ]
 }
 ```
 
@@ -195,32 +195,32 @@ Example value:
 
 ```javascript
 {
-"url": "https://www.testmuai.com",
-"defer_time": 5,
-"email": true,
-"mac_res": "1024x768",
-"win_res": "1366X768",
-"configs": {
-"windows 10": {
-"chrome": [
-"74"
-],
-"firefox": [
-"66"
-],
-"opera": [
-"58"
-],
-"ie": [
-"11"
-]
-},
-"macos mojave": {
-"chrome": [
-"74"
-]
-}
-}
+  "url": "https://www.testmuai.com",
+  "defer_time": 5,
+  "email": true,
+  "mac_res": "1024x768",
+  "win_res": "1366X768",
+  "configs": {
+    "windows 10": {
+      "chrome": [
+        "74"
+      ],
+      "firefox": [
+        "66"
+      ],
+      "opera": [
+        "58"
+      ],
+      "ie": [
+        "11"
+      ]
+    },
+    "macos mojave": {
+      "chrome": [
+        "74"
+      ]
+    }
+  }
 }
 ```
 
@@ -234,19 +234,19 @@ Example Value:
 
 ```javascript
 {
-"url": "https://www.testmuai.com",
-"defer_time": 5,
-"email": true,
-"tunnel": true,
-"mac_res": "1024x768",
-"win_res": "1366X768",
-"configs": {
-"windows 10": {
-"chrome": [
-"74",
-"73"
-]
-}
+  "url": "https://www.testmuai.com",
+  "defer_time": 5,
+  "email": true,
+  "tunnel": true,
+  "mac_res": "1024x768",
+  "win_res": "1366X768",
+  "configs": {
+    "windows 10": {
+      "chrome": [
+        "74",
+        "73"
+      ]
+  }
 }
 }
 ```
@@ -257,28 +257,28 @@ Similarly, to perform a screenshot test on a web application with basic authenti
 ```javascript
 "url": "https://www.basic-auth.com",
 "username": "username",
-"password": "password",
+  "password": "password",
 ```
 
 Example:
 
 ```javascript
 {
-"url": "https://www.basic-auth.com",
-"defer_time": 5,
-"email": true,
-"mac_res": "1024x768",
-"win_res": "1366X768",
-"username": "username",
-"password": "password",
-"configs": {
-"windows 10": {
-"chrome": [
-"74",
-"73"
-]
+  "url": "https://www.basic-auth.com",
+  "defer_time": 5,
+  "email": true,
+  "mac_res": "1024x768",
+  "win_res": "1366X768",
+  "username": "username",
+  "password": "password",
+  "configs": {
+    "windows 10": {
+      "chrome": [
+        "74",
+        "73"
+      ]
 
-}
+  }
 }
 }
 ```
@@ -295,19 +295,19 @@ Example Value:
 
 ```javascript
 {
-"url": "https://www.testmuai.com",
-"defer_time": 5,
-"email": true,
-"mac_res": "1024x768",
-"win_res": "1366X768",
+  "url": "https://www.testmuai.com",
+  "defer_time": 5,
+  "email": true,
+  "mac_res": "1024x768",
+  "win_res": "1366X768",
 "callbackurl": "https://www.example.com",
-"configs": {
-"windows 10": {
-"chrome": [
-"74",
-"73"
-]
-}
+  "configs": {
+    "windows 10": {
+      "chrome": [
+        "74",
+        "73"
+      ]
+  }
 }
 }
 ```

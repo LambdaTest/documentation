@@ -127,80 +127,80 @@ set LT_ACCESS_KEY=your_access_key
 import puppeteer from 'puppeteer-core';
 
 const capabilities = {
-browserName: 'Chrome',
-browserVersion: 'latest',
-'LT:Options': {
-platformName: 'Windows 10',
-build: 'CDP Web Automation',
-name: 'Product Listing',
-username: process.env.LT_USERNAME,
-accessKey: process.env.LT_ACCESS_KEY,
-},
+  browserName: 'Chrome',
+  browserVersion: 'latest',
+  'LT:Options': {
+    platformName: 'Windows 10',
+    build: 'CDP Web Automation',
+    name: 'Product Listing',
+    username: process.env.LT_USERNAME,
+    accessKey: process.env.LT_ACCESS_KEY,
+  },
 };
 
 const endpoint =
-`wss://${process.env.LT_USERNAME}:${process.env.LT_ACCESS_KEY}` +
-`@cdp.lambdatest.com/puppeteer?capabilities=${encodeURIComponent(JSON.stringify(capabilities))}`;
+  `wss://${process.env.LT_USERNAME}:${process.env.LT_ACCESS_KEY}` +
+  `@cdp.lambdatest.com/puppeteer?capabilities=${encodeURIComponent(JSON.stringify(capabilities))}`;
 
 const BASE =
-'https://ecommerce-playground.lambdatest.io/index.php?route=product/category&path=25';
+  'https://ecommerce-playground.lambdatest.io/index.php?route=product/category&path=25';
 
 async function run() {
-const browser = await puppeteer.connect({ browserWSEndpoint: endpoint });
-const products: Array<Record<string, string | null>> = [];
-const page = (await browser.pages())[0];
-try {
-for (let pageNo = 1; pageNo <= 5; pageNo++) {
-await page.goto(`${BASE}&page=${pageNo}`, { waitUntil: 'domcontentloaded' });
-await page.waitForSelector('.product-thumb');
+  const browser = await puppeteer.connect({ browserWSEndpoint: endpoint });
+  const products: Array<Record<string, string | null>> = [];
+  const page = (await browser.pages())[0];
+  try {
+    for (let pageNo = 1; pageNo <= 5; pageNo++) {
+      await page.goto(`${BASE}&page=${pageNo}`, { waitUntil: 'domcontentloaded' });
+      await page.waitForSelector('.product-thumb');
 
-const pageProducts = await page.evaluate(() =>
-Array.from(document.querySelectorAll('.product-thumb')).map((card) => {
-const link = card.querySelector<HTMLAnchorElement>('.caption .title a');
-const priceEl =
-card.querySelector<HTMLElement>('.price-new') ??
-card.querySelector<HTMLElement>('.price');
-return {
-name: link?.textContent?.trim() ?? null,
-price: priceEl?.textContent?.trim() ?? null,
-url: link?.href ?? null,
-};
-})
-);
+      const pageProducts = await page.evaluate(() =>
+        Array.from(document.querySelectorAll('.product-thumb')).map((card) => {
+          const link = card.querySelector<HTMLAnchorElement>('.caption .title a');
+          const priceEl =
+            card.querySelector<HTMLElement>('.price-new') ??
+            card.querySelector<HTMLElement>('.price');
+          return {
+            name: link?.textContent?.trim() ?? null,
+            price: priceEl?.textContent?.trim() ?? null,
+            url: link?.href ?? null,
+          };
+        })
+      );
 
-console.log(`Page ${pageNo}: ${pageProducts.length} products`);
-products.push(...pageProducts);
-}
+      console.log(`Page ${pageNo}: ${pageProducts.length} products`);
+      products.push(...pageProducts);
+    }
 
-// Mark the test as passed on the TestMu AI dashboard
-await page.evaluate(
-(_) => {},
-`lambdatest_action: ${JSON.stringify({
-action: 'setTestStatus',
-arguments: { status: 'passed', remark: `Collected ${products.length} products` },
-})}`
-);
-} catch (e) {
-// Mark the test as failed so the dashboard reflects the real outcome
-await page.evaluate(
-(_) => {},
-`lambdatest_action: ${JSON.stringify({
-action: 'setTestStatus',
-arguments: { status: 'failed', remark: (e as Error).message },
-})}`
-);
-throw e;
-} finally {
-await browser.close();
-}
+    // Mark the test as passed on the TestMu AI dashboard
+    await page.evaluate(
+      (_) => {},
+      `lambdatest_action: ${JSON.stringify({
+        action: 'setTestStatus',
+        arguments: { status: 'passed', remark: `Collected ${products.length} products` },
+      })}`
+    );
+  } catch (e) {
+    // Mark the test as failed so the dashboard reflects the real outcome
+    await page.evaluate(
+      (_) => {},
+      `lambdatest_action: ${JSON.stringify({
+        action: 'setTestStatus',
+        arguments: { status: 'failed', remark: (e as Error).message },
+      })}`
+    );
+    throw e;
+  } finally {
+    await browser.close();
+  }
 
-console.log(`Collected ${products.length} products total`);
-console.table(products.slice(0, 5));
+  console.log(`Collected ${products.length} products total`);
+  console.table(products.slice(0, 5));
 }
 
 run().catch((e) => {
-console.error('Run failed:', e.message);
-process.exit(1);
+  console.error('Run failed:', e.message);
+  process.exit(1);
 });
 ```
 
@@ -249,75 +249,75 @@ npm install @testmuai/browser-cloud
 import { Browser } from '@testmuai/browser-cloud';
 
 const BASE =
-'https://ecommerce-playground.lambdatest.io/index.php?route=product/category&path=25';
+  'https://ecommerce-playground.lambdatest.io/index.php?route=product/category&path=25';
 
 const client = new Browser();
 
 async function run() {
-let session;
-const products: Array<Record<string, string | null>> = [];
-try {
-session = await client.sessions.create({
-adapter: 'puppeteer',
-stealthConfig: { humanizeInteractions: true, randomizeUserAgent: true },
-lambdatestOptions: {
-build: 'CDP Web Automation',
-name: 'Agent Product Listing',
-'LT:Options': {
-username: process.env.LT_USERNAME,
-accessKey: process.env.LT_ACCESS_KEY,
-},
-},
-});
+  let session;
+  const products: Array<Record<string, string | null>> = [];
+  try {
+    session = await client.sessions.create({
+      adapter: 'puppeteer',
+      stealthConfig: { humanizeInteractions: true, randomizeUserAgent: true },
+      lambdatestOptions: {
+        build: 'CDP Web Automation',
+        name: 'Agent Product Listing',
+        'LT:Options': {
+          username: process.env.LT_USERNAME,
+          accessKey: process.env.LT_ACCESS_KEY,
+        },
+      },
+    });
 
-console.log('Session created:', session.id);
-console.log('View live session at:', session.sessionViewerUrl);
+    console.log('Session created:', session.id);
+    console.log('View live session at:', session.sessionViewerUrl);
 
-const browser = await client.puppeteer.connect(session);
-const page = (await browser.pages())[0];
+    const browser = await client.puppeteer.connect(session);
+    const page = (await browser.pages())[0];
 
-for (let pageNo = 1; pageNo <= 5; pageNo++) {
-await page.goto(`${BASE}&page=${pageNo}`, { waitUntil: 'domcontentloaded' });
-await page.waitForSelector('.product-thumb');
+    for (let pageNo = 1; pageNo <= 5; pageNo++) {
+      await page.goto(`${BASE}&page=${pageNo}`, { waitUntil: 'domcontentloaded' });
+      await page.waitForSelector('.product-thumb');
 
-const pageProducts = await page.evaluate(() =>
-Array.from(document.querySelectorAll('.product-thumb')).map((card) => {
-const link = card.querySelector<HTMLAnchorElement>('.caption .title a');
-const priceEl =
-card.querySelector<HTMLElement>('.price-new') ??
-card.querySelector<HTMLElement>('.price');
-return {
-name: link?.textContent?.trim() ?? null,
-price: priceEl?.textContent?.trim() ?? null,
-url: link?.href ?? null,
-};
-})
-);
+      const pageProducts = await page.evaluate(() =>
+        Array.from(document.querySelectorAll('.product-thumb')).map((card) => {
+          const link = card.querySelector<HTMLAnchorElement>('.caption .title a');
+          const priceEl =
+            card.querySelector<HTMLElement>('.price-new') ??
+            card.querySelector<HTMLElement>('.price');
+          return {
+            name: link?.textContent?.trim() ?? null,
+            price: priceEl?.textContent?.trim() ?? null,
+            url: link?.href ?? null,
+          };
+        })
+      );
 
-console.log(`Page ${pageNo}: ${pageProducts.length} products`);
-products.push(...pageProducts);
-}
+      console.log(`Page ${pageNo}: ${pageProducts.length} products`);
+      products.push(...pageProducts);
+    }
 
-// Mark the test as passed on the TestMu AI dashboard
-await page.evaluate(
-(_) => {},
-`lambdatest_action: ${JSON.stringify({
-action: 'setTestStatus',
-arguments: { status: 'passed', remark: `Collected ${products.length} products` },
-})}`
-);
+    // Mark the test as passed on the TestMu AI dashboard
+    await page.evaluate(
+      (_) => {},
+      `lambdatest_action: ${JSON.stringify({
+        action: 'setTestStatus',
+        arguments: { status: 'passed', remark: `Collected ${products.length} products` },
+      })}`
+    );
 
-await browser.close();
-} finally {
-if (session) await client.sessions.release(session.id);
-}
+    await browser.close();
+  } finally {
+    if (session) await client.sessions.release(session.id);
+  }
 
-console.log(`Collected ${products.length} products total`);
+  console.log(`Collected ${products.length} products total`);
 }
 
 run().catch((e) => {
-console.error('Run failed:', e.message);
-process.exit(1);
+  console.error('Run failed:', e.message);
+  process.exit(1);
 });
 ```
 
@@ -356,70 +356,70 @@ import { Browser } from '@testmuai/browser-cloud';
 import { mkdir, writeFile } from 'node:fs/promises';
 
 const BASE =
-'https://ecommerce-playground.lambdatest.io/index.php?route=product/category&path=25';
+  'https://ecommerce-playground.lambdatest.io/index.php?route=product/category&path=25';
 
 const client = new Browser();
 
 async function run() {
-let session;
-try {
-session = await client.sessions.create({
-adapter: 'puppeteer',
-stealthConfig: { humanizeInteractions: true, randomizeUserAgent: true },
-lambdatestOptions: {
-build: 'CDP Web Automation',
-name: 'Agent Image Scrape',
-'LT:Options': {
-username: process.env.LT_USERNAME,
-accessKey: process.env.LT_ACCESS_KEY,
-},
-},
-});
+  let session;
+  try {
+    session = await client.sessions.create({
+      adapter: 'puppeteer',
+      stealthConfig: { humanizeInteractions: true, randomizeUserAgent: true },
+      lambdatestOptions: {
+        build: 'CDP Web Automation',
+        name: 'Agent Image Scrape',
+        'LT:Options': {
+          username: process.env.LT_USERNAME,
+          accessKey: process.env.LT_ACCESS_KEY,
+        },
+      },
+    });
 
-const browser = await client.puppeteer.connect(session);
-const page = (await browser.pages())[0];
+    const browser = await client.puppeteer.connect(session);
+    const page = (await browser.pages())[0];
 
-await page.goto(BASE, { waitUntil: 'domcontentloaded' });
-await page.waitForSelector('.product-thumb');
+    await page.goto(BASE, { waitUntil: 'domcontentloaded' });
+    await page.waitForSelector('.product-thumb');
 
-// Collect the primary product image from each card on the listing
-const images = await page.evaluate(() =>
-Array.from(document.querySelectorAll('.product-thumb')).map((card) => {
-const img = card.querySelector<HTMLImageElement>('.image img');
-return { alt: img?.alt?.trim() ?? null, src: img?.src ?? null };
-})
-);
+    // Collect the primary product image from each card on the listing
+    const images = await page.evaluate(() =>
+      Array.from(document.querySelectorAll('.product-thumb')).map((card) => {
+        const img = card.querySelector<HTMLImageElement>('.image img');
+        return { alt: img?.alt?.trim() ?? null, src: img?.src ?? null };
+      })
+    );
 
-console.log(`Found ${images.length} product images`);
+    console.log(`Found ${images.length} product images`);
 
-// Download the first five images to ./images
-await mkdir('./images', { recursive: true });
-const toDownload = images.filter((i) => i.src).slice(0, 5);
-for (const [i, img] of toDownload.entries()) {
-const res = await fetch(img.src as string);
-const buf = Buffer.from(await res.arrayBuffer());
-await writeFile(`./images/product-${i + 1}.jpg`, buf);
-console.log(`Saved product-${i + 1}.jpg (${img.alt ?? 'no alt'})`);
-}
+    // Download the first five images to ./images
+    await mkdir('./images', { recursive: true });
+    const toDownload = images.filter((i) => i.src).slice(0, 5);
+    for (const [i, img] of toDownload.entries()) {
+      const res = await fetch(img.src as string);
+      const buf = Buffer.from(await res.arrayBuffer());
+      await writeFile(`./images/product-${i + 1}.jpg`, buf);
+      console.log(`Saved product-${i + 1}.jpg (${img.alt ?? 'no alt'})`);
+    }
 
-// Mark the test as passed on the TestMu AI dashboard
-await page.evaluate(
-(_) => {},
-`lambdatest_action: ${JSON.stringify({
-action: 'setTestStatus',
-arguments: { status: 'passed', remark: `Scraped ${toDownload.length} images` },
-})}`
-);
+    // Mark the test as passed on the TestMu AI dashboard
+    await page.evaluate(
+      (_) => {},
+      `lambdatest_action: ${JSON.stringify({
+        action: 'setTestStatus',
+        arguments: { status: 'passed', remark: `Scraped ${toDownload.length} images` },
+      })}`
+    );
 
-await browser.close();
-} finally {
-if (session) await client.sessions.release(session.id);
-}
+    await browser.close();
+  } finally {
+    if (session) await client.sessions.release(session.id);
+  }
 }
 
 run().catch((e) => {
-console.error('Run failed:', e.message);
-process.exit(1);
+  console.error('Run failed:', e.message);
+  process.exit(1);
 });
 ```
 

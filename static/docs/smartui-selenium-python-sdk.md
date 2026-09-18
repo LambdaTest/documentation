@@ -249,37 +249,37 @@ Once, the configuration file will be created, you will be seeing the default con
 
 ```json title="/smartui-sdk-project/.smartui.json"
 {
-"web": {
-"browsers": [
-"chrome",
-"firefox",
-"safari",
-"edge"
-],
-"viewports": [
-[
-1920
-],
-[
-1366
-],
-[
-1028
-]
-] // Full Page screenshots are captured by default for web viewports
-},
-"mobile": {
-"devices": [
-"iPhone 14",  //iPhone 14 viewport
-"Galaxy S24"  //Galaxy S24 viewport
-],
-"fullPage": true, //Full Page is true by default for mobile viewports
-"orientation": "portrait" //Change to "landscape" for landscape snapshot
-},
-"waitForTimeout": 1000, //Optional (Should only be used in case lazy-loading/async components are present)
-"waitForPageRender": 50000, //Optional (Should only be used in case of websites which take more than 30s to load)
-"enableJavaScript": false, //Enable javascript for all the screenshots of the project
-"allowedHostnames": [] //Additional hostnames to capture assets from
+  "web": {
+    "browsers": [
+      "chrome",
+      "firefox",
+      "safari",
+      "edge"
+    ],
+    "viewports": [
+      [
+        1920
+      ],
+      [
+        1366
+      ],
+      [
+        1028
+      ]
+    ] // Full Page screenshots are captured by default for web viewports
+  },
+  "mobile": {
+    "devices": [
+      "iPhone 14",  //iPhone 14 viewport
+      "Galaxy S24"  //Galaxy S24 viewport
+    ],
+    "fullPage": true, //Full Page is true by default for mobile viewports
+    "orientation": "portrait" //Change to "landscape" for landscape snapshot
+  },
+  "waitForTimeout": 1000, //Optional (Should only be used in case lazy-loading/async components are present)
+  "waitForPageRender": 50000, //Optional (Should only be used in case of websites which take more than 30s to load)
+  "enableJavaScript": false, //Enable javascript for all the screenshots of the project
+  "allowedHostnames": [] //Additional hostnames to capture assets from
 }
 ```
 **Advanced options in SmartUI configuration**
@@ -297,12 +297,12 @@ from selenium import webdriver
 
 driver = webdriver.Chrome()
 try:
-driver.get('<Required URL>')
-smartui_snapshot(driver,"<Screenshot Name>")
+    driver.get('<Required URL>')
+    smartui_snapshot(driver,"<Screenshot Name>")
 except Exception as err:
-print(err)
+    print(err)
 finally:
-driver.close()
+    driver.close()
 ```
 
 ### **Step 6:** Execute the Tests on SmartUI Cloud
@@ -337,19 +337,19 @@ When conducting visual tests, you may encounter scenarios where certain elements
 
 ```python title="This is a sample for your configuration for Python to ignore by ID"
 options = {
-"ignoreDOM": {
-"id": ["ID-1", "ID-2"],
-}
-}
+            "ignoreDOM": {
+                "id": ["ID-1", "ID-2"],
+            }
+        }
 driver.get('<Required URL>')
 smartui_snapshot(driver,"<Screenshot Name>", options)
 ```
 
 ```python title="This is a sample for your configuration for Python to ignore by Class"
 options = {
-"ignoreDOM": {
-"class": ["Class-1", "Class-2"],
-}
+    "ignoreDOM": {
+        "class": ["Class-1", "Class-2"],
+    }
 }
 driver.get('<Required URL>')
 smartui_snapshot(driver,"<Screenshot Name>", options)
@@ -357,39 +357,39 @@ smartui_snapshot(driver,"<Screenshot Name>", options)
 
 ```python title="This is a sample for your configuration for Python to ignore by XPath"
 options = {
-"ignoreDOM": {
-"xpath": ["Xpath-1", "Xpath-2"],
-}
-}
+            "ignoreDOM": {
+                "xpath": ["Xpath-1", "Xpath-2"],
+            }
+        }
 driver.get('<Required URL>')
 smartui_snapshot(driver,"<Screenshot Name>", options)
 ```
 
 ```python title="This is a sample for your configuration for Python to ignore by CSS Selector"
 options = {
-"ignoreDOM": {
-"cssSelector": ["CSS-Selector-1", "CSS-Selector-2"],
-}
-}
+            "ignoreDOM": {
+                "cssSelector": ["CSS-Selector-1", "CSS-Selector-2"],
+            }
+        }
 driver.get('<Required URL>')
 smartui_snapshot(driver,"<Screenshot Name>", options)
 ```
 
 ```python title="This is a sample for your configuration for Python to select by ID."
 options = {
-"selectDOM": {
-"id": ["ID-1", "ID-2"],
-}
-}
+            "selectDOM": {
+                "id": ["ID-1", "ID-2"],
+            }
+        }
 driver.get('<Required URL>')
 smartui_snapshot(driver,"<Screenshot Name>", options)
 ```
 
 ```python title="This is a sample for your configuration for Python to select by Class"
 options = {
-"selectDOM": {
-"class": ["Class-1", "Class-2"],
-}
+    "selectDOM": {
+        "class": ["Class-1", "Class-2"],
+    }
 }
 driver.get('<Required URL>')
 smartui_snapshot(driver,"<Screenshot Name>", options)
@@ -397,20 +397,20 @@ smartui_snapshot(driver,"<Screenshot Name>", options)
 
 ```python title="This is a sample for your configuration for Python to select by XPath"
 options = {
-"selectDOM": {
-"xpath": ["Xpath-1", "Xpath-2"],
-}
-}
+            "selectDOM": {
+                "xpath": ["Xpath-1", "Xpath-2"],
+            }
+        }
 driver.get('<Required URL>')
 smartui_snapshot(driver,"<Screenshot Name>", options)
 ```
 
 ```python title="This is a sample for your webhook configuration for Python to select by CSS Selector"
 options = {
-"selectDOM": {
-"cssSelector": ["CSS-Selector-1", "CSS-Selector-2"],
-}
-}
+            "selectDOM": {
+                "cssSelector": ["CSS-Selector-1", "CSS-Selector-2"],
+            }
+        }
 driver.get('<Required URL>')
 smartui_snapshot(driver,"<Screenshot Name>", options)
 ```
@@ -421,19 +421,19 @@ You can capture screenshots of targeted elements by leveraging various locator m
 
 ```python title="This is a sample for your configuration for Python to capture an element by ID."
 options = {
-"element": {
-"id": "Required ID",
-}
-}
+      "element": {
+          "id": "Required ID",
+      }
+  }
 driver.get('<Required URL>')
 smartui_snapshot(driver,"<Screenshot Name>", options)
 ```
 
 ```python title="This is a sample for your configuration for Python to capture an element by Class"
 options = {
-"element": {
-"class": "Required Class",
-}
+    "element": {
+        "class": "Required Class",
+    }
 }
 driver.get('<Required URL>')
 smartui_snapshot(driver,"<Screenshot Name>", options)
@@ -441,20 +441,20 @@ smartui_snapshot(driver,"<Screenshot Name>", options)
 
 ```python title="This is a sample for your configuration for Python to capture an element by XPath"
 options = {
-"element": {
-"xpath": "Required Xpath",
-}
-}
+      "element": {
+          "xpath": "Required Xpath",
+      }
+  }
 driver.get('<Required URL>')
 smartui_snapshot(driver,"<Screenshot Name>", options)
 ```
 
 ```python title="This is a sample for your webhook configuration for Python to capture an element by CSS Selector"
 options = {
-"element": {
-"cssSelector": "Required CSS Selector",
-}
-}
+      "element": {
+          "cssSelector": "Required CSS Selector",
+      }
+  }
 driver.get('<Required URL>')
 smartui_snapshot(driver,"<Screenshot Name>", options)
 ```
@@ -468,35 +468,35 @@ from selenium import webdriver
 from lambdatest_selenium_driver import smartui_snapshot
 
 def quick_scroll_to_bottom(driver, last_page_wait):
-try:
-height = driver.execute_script("return document.body.scrollHeight")
-height_of_page = int(height)
-size = 200
-no_of_loop = height_of_page // size
+    try:
+        height = driver.execute_script("return document.body.scrollHeight")
+        height_of_page = int(height)
+        size = 200
+        no_of_loop = height_of_page // size
 
-for i in range(1, no_of_loop + 1):
-driver.execute_script(f"window.scrollTo({(i - 1) * size}, {i * size})")
-driver.implicitly_wait(1)
-if i == no_of_loop:
-driver.execute_script(f"window.scrollTo({i * size}, {height_of_page})")
-driver.implicitly_wait(last_page_wait / 1000.0)
+        for i in range(1, no_of_loop + 1):
+            driver.execute_script(f"window.scrollTo({(i - 1) * size}, {i * size})")
+            driver.implicitly_wait(1)
+            if i == no_of_loop:
+                driver.execute_script(f"window.scrollTo({i * size}, {height_of_page})")
+                driver.implicitly_wait(last_page_wait / 1000.0)
 
-# Now scroll to the top
-driver.execute_script("window.scrollTo(0,0)")
-driver.implicitly_wait(10)  # Wait for 10 seconds
-print("Scroll Completed")
-except Exception as e:
-print(f"Got some errors: {e}")
+        # Now scroll to the top
+        driver.execute_script("window.scrollTo(0,0)")
+        driver.implicitly_wait(10)  # Wait for 10 seconds
+        print("Scroll Completed")
+    except Exception as e:
+        print(f"Got some errors: {e}")
 
 # Example usage
 if __name__ == "__main__":
-driver = webdriver.Chrome()  # Initialize the WebDriver instance
-try:
-driver.get("Required URL")  # Change "Required URL" to the actual URL you want to test
-quick_scroll_to_bottom(driver, 100)  # Use wait time accordingly
-smartui_snapshot(driver, "Screenshot Name")
-finally:
-driver.quit()
+    driver = webdriver.Chrome()  # Initialize the WebDriver instance
+    try:
+        driver.get("Required URL")  # Change "Required URL" to the actual URL you want to test
+        quick_scroll_to_bottom(driver, 100)  # Use wait time accordingly
+        smartui_snapshot(driver, "Screenshot Name")
+    finally:
+        driver.quit()
 ```
 
 ## Best Practices
@@ -619,7 +619,7 @@ wait.until(EC.visibility_of_element_located((By.CSS_SELECTOR, '.main-content')))
 2. Enable JavaScript in configuration:
 ```json
 {
-"enableJavaScript": true
+  "enableJavaScript": true
 }
 ```
 

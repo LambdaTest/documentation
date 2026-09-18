@@ -136,51 +136,51 @@ import java.util.HashMap;
 
 public class TextValidationTest {
 
-public static void main(String[] args) throws Exception {
+    public static void main(String[] args) throws Exception {
 
-String username = System.getenv("LT_USERNAME") == null ?
-"Your LT Username" : System.getenv("LT_USERNAME");
+        String username = System.getenv("LT_USERNAME") == null ?
+        "Your LT Username" : System.getenv("LT_USERNAME");
 
-String authkey = System.getenv("LT_ACCESS_KEY") == null ?
-"Your LT AccessKey\n"  : System.getenv("LT_ACCESS_KEY");
+        String authkey = System.getenv("LT_ACCESS_KEY") == null ?
+        "Your LT AccessKey\n"  : System.getenv("LT_ACCESS_KEY");
 
-String GRID_URL = "https://" + username + ":" + authkey + "@hub.lambdatest.com/wd/hub";
+        String GRID_URL = "https://" + username + ":" + authkey + "@hub.lambdatest.com/wd/hub";
 
-SafariOptions browserOptions = new SafariOptions();
-browserOptions.setPlatformName("MacOS Tahoe");
-browserOptions.setBrowserVersion("26");
-HashMap<String, Object> ltOptions = new HashMap<String, Object>();
-ltOptions.put("username", "<your_username>");
-ltOptions.put("accessKey", "<your_access_key>");
-ltOptions.put("project", "Text Validation Test");
-ltOptions.put("build", "Text Validation Test Build");
-ltOptions.put("w3c", true);
-browserOptions.setCapability("LT:Options", ltOptions);
+        SafariOptions browserOptions = new SafariOptions();
+        browserOptions.setPlatformName("MacOS Tahoe");
+        browserOptions.setBrowserVersion("26");
+        HashMap<String, Object> ltOptions = new HashMap<String, Object>();
+        ltOptions.put("username", "<your_username>");
+        ltOptions.put("accessKey", "<your_access_key>");
+        ltOptions.put("project", "Text Validation Test");
+        ltOptions.put("build", "Text Validation Test Build");
+        ltOptions.put("w3c", true);
+        browserOptions.setCapability("LT:Options", ltOptions);
 
-WebDriver driver = new RemoteWebDriver(new URL(GRID_URL), browserOptions);
+        WebDriver driver = new RemoteWebDriver(new URL(GRID_URL), browserOptions);
 
-try {
+        try {
 
-driver.get("https://ecommerce-playground.lambdatest.io/");
+            driver.get("https://ecommerce-playground.lambdatest.io/");
 
-String expectedText = "This is a dummy website for Web Automation Testing";
-boolean isTextPresent = driver.getPageSource().contains(expectedText);
+            String expectedText = "This is a dummy website for Web Automation Testing";
+            boolean isTextPresent = driver.getPageSource().contains(expectedText);
 
-if (isTextPresent) {
-((JavascriptExecutor) driver).executeScript("lambda-status=passed");
-System.out.println("✔ Text validation PASSED");
-} else {
-((JavascriptExecutor) driver).executeScript("lambda-status=failed");
-System.out.println("✘ Text validation FAILED");
-}
+            if (isTextPresent) {
+                ((JavascriptExecutor) driver).executeScript("lambda-status=passed");
+                System.out.println("✔ Text validation PASSED");
+            } else {
+                ((JavascriptExecutor) driver).executeScript("lambda-status=failed");
+                System.out.println("✘ Text validation FAILED");
+            }
 
-} catch (Exception e) {
-((JavascriptExecutor) driver).executeScript("lambda-status=pass");
-e.printStackTrace();
-} finally {
-driver.quit();   // 🔹 Correctly placed – runs even if test fails
-}
-}
+        } catch (Exception e) {
+            ((JavascriptExecutor) driver).executeScript("lambda-status=pass");
+            e.printStackTrace();
+        } finally {
+            driver.quit();   // 🔹 Correctly placed – runs even if test fails
+        }
+    }
 }
 
 ```
@@ -197,51 +197,51 @@ import java.util.HashMap;
 
 public class TextValidationTest {
 
-public static void main(String[] args) throws Exception {
+    public static void main(String[] args) throws Exception {
 
-String username = System.getenv("LT_USERNAME") == null ?
-"Your LT Username" : System.getenv("LT_USERNAME");
+        String username = System.getenv("LT_USERNAME") == null ?
+        "Your LT Username" : System.getenv("LT_USERNAME");
 
-String authkey = System.getenv("LT_ACCESS_KEY") == null ?
-"Your LT AccessKey" : System.getenv("LT_ACCESS_KEY");
+        String authkey = System.getenv("LT_ACCESS_KEY") == null ?
+        "Your LT AccessKey" : System.getenv("LT_ACCESS_KEY");
 
-String GRID_URL = "https://" + username + ":" + authkey + "@hub.lambdatest.com/wd/hub";
+        String GRID_URL = "https://" + username + ":" + authkey + "@hub.lambdatest.com/wd/hub";
 
-DesiredCapabilities capabilities = new DesiredCapabilities();
-capabilities.setCapability("browserName", "Safari");
-capabilities.setCapability("browserVersion", "26");
-HashMap<String, Object> ltOptions = new HashMap<String, Object>();
-ltOptions.put("username", "<your_username>");
-ltOptions.put("accessKey", "<your_access_key>");
-ltOptions.put("platformName", "MacOS Tahoe");
-ltOptions.put("visual", true);
-ltOptions.put("video", true);
-capabilities.setCapability("LT:Options", ltOptions);
+        DesiredCapabilities capabilities = new DesiredCapabilities();
+        capabilities.setCapability("browserName", "Safari");
+        capabilities.setCapability("browserVersion", "26");
+        HashMap<String, Object> ltOptions = new HashMap<String, Object>();
+        ltOptions.put("username", "<your_username>");
+        ltOptions.put("accessKey", "<your_access_key>");
+        ltOptions.put("platformName", "MacOS Tahoe");
+        ltOptions.put("visual", true);
+        ltOptions.put("video", true);
+        capabilities.setCapability("LT:Options", ltOptions);
 
-WebDriver driver = new RemoteWebDriver(new URL(GRID_URL), capabilities);
+        WebDriver driver = new RemoteWebDriver(new URL(GRID_URL), capabilities);
 
-try {
+        try {
 
-driver.get("https://ecommerce-playground.lambdatest.io/");
+            driver.get("https://ecommerce-playground.lambdatest.io/");
 
-String expectedText = "This is a dummy website for Web Automation Testing";
-boolean isTextPresent = driver.getPageSource().contains(expectedText);
+            String expectedText = "This is a dummy website for Web Automation Testing";
+            boolean isTextPresent = driver.getPageSource().contains(expectedText);
 
-if (isTextPresent) {
-((JavascriptExecutor) driver).executeScript("lambda-status=passed");
-System.out.println("✔ Text validation PASSED");
-} else {
-((JavascriptExecutor) driver).executeScript("lambda-status=failed");
-System.out.println("✘ Text validation FAILED");
-}
+            if (isTextPresent) {
+                ((JavascriptExecutor) driver).executeScript("lambda-status=passed");
+                System.out.println("✔ Text validation PASSED");
+            } else {
+                ((JavascriptExecutor) driver).executeScript("lambda-status=failed");
+                System.out.println("✘ Text validation FAILED");
+            }
 
-} catch (Exception e) {
-((JavascriptExecutor) driver).executeScript("lambda-status=pass");
-e.printStackTrace();
-} finally {
-driver.quit();   // 🔹 Correctly placed – runs even if test fails
-}
-}
+        } catch (Exception e) {
+            ((JavascriptExecutor) driver).executeScript("lambda-status=pass");
+            e.printStackTrace();
+        } finally {
+            driver.quit();   // 🔹 Correctly placed – runs even if test fails
+        }
+    }
 }
 ```
 

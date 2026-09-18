@@ -105,18 +105,18 @@ The 0.1.3 smoke test wrote:
 
 ```text
 .testmuai/rook/projects/<project-id>/agents/<agent-id>/runs/<run-id>/
-run.yaml
-agent.yaml
-features.yaml
-profile.yaml
-report.yaml
-scenarios/<scenario-id>/
-snapshot.yaml
-request.json
-response.json
-hooks.json
-verdict.yaml
-evidence/
+  run.yaml
+  agent.yaml
+  features.yaml
+  profile.yaml
+  report.yaml
+  scenarios/<scenario-id>/
+    snapshot.yaml
+    request.json
+    response.json
+    hooks.json
+    verdict.yaml
+    evidence/
 ```
 
 run.yaml preserves the plan, selected phases, pinned versions, included/skipped scenarios, and upstream IDs. report.yaml stores the summary and totals. Each scenario's snapshot.yaml preserves its definition; hooks.json preserves phase records. Additional artifacts and RCA files depend on the run.

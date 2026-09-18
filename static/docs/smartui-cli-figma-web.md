@@ -299,41 +299,41 @@ Once, the `designs` file will be created, you will be seeing the sample pre-fill
 
 ```json title="/smartui-cli-figma-project/designs.json"
 {
-"web": {
-"browsers": [
-"chrome",
-"firefox",
-"safari",
-"edge"
-]
-},
-"figma": {
-"depth": 2, //Figma Tree depth - (Optional), change the value according to the your file structure
-"configs": [
-{
-"figma_file_token": "<token>",
-"figma_ids": [
-"id-1",
-"id-2"
-],
-"screenshot_names": [
-"homepage",
-"about"
-]
-},
-{
-"figma_file_token": "<token>",
-"figma_ids": [
-"id-3",
-"id-4"
-],
-"screenshot_names": [
-"xyz",
-"abc"
-]
-}
-]
-}
+  "web": {
+    "browsers": [
+      "chrome",
+      "firefox",
+      "safari",
+      "edge"
+    ]
+  },
+  "figma": {
+    "depth": 2, //Figma Tree depth - (Optional), change the value according to the your file structure
+    "configs": [
+      {
+        "figma_file_token": "<token>",
+        "figma_ids": [
+          "id-1",
+          "id-2"
+        ],
+        "screenshot_names": [
+          "homepage",
+          "about"
+        ]
+      },
+      {
+        "figma_file_token": "<token>",
+        "figma_ids": [
+          "id-3",
+          "id-4"
+        ],
+        "screenshot_names": [
+          "xyz",
+          "abc"
+        ]
+      }
+    ]
+  }
 }
 ```
 >Note:  Unlike vanilla Figma CLI, designs.json includes browser parameters and auto-fetches viewports of Figma frames for efficient comparison.
@@ -462,8 +462,8 @@ npx smartui --config web-config.json exec --buildName=web-build -- node figma-we
 **Build Names**
 
 ```bash
-npx smartui upload-figma-web designs.json --buildName "v1.0.0"
-```
+   npx smartui upload-figma-web designs.json --buildName "v1.0.0"
+   ```
 
 **Screenshot Names**
 
@@ -509,15 +509,15 @@ cy.smartuiSnapshot("homepage.png");
 **Configuration Example:**
 ```json
 {
-"figma": {
-"configs": [
-{
-"figma_file_token": "abc12345",
-"figma_ids": ["id-1", "id-2"],
-"screenshot_names": ["homepage.png", "about.png"]  // Include .png extension
-}
-]
-}
+  "figma": {
+    "configs": [
+      {
+        "figma_file_token": "abc12345",
+        "figma_ids": ["id-1", "id-2"],
+        "screenshot_names": ["homepage.png", "about.png"]  // Include .png extension
+      }
+    ]
+  }
 }
 ```
 
@@ -560,15 +560,15 @@ cy.smartuiSnapshot("homepage.png");
 **Configuration Example:**
 ```json
 {
-"figma": {
-"configs": [
-{
-"figma_file_token": "abc12345",
-"figma_ids": ["id-1", "id-2"],
-"screenshot_names": ["homepage.png", "about.png"]  // Include .png extension
-}
-]
-}
+  "figma": {
+    "configs": [
+      {
+        "figma_file_token": "abc12345",
+        "figma_ids": ["id-1", "id-2"],
+        "screenshot_names": ["homepage.png", "about.png"]  // Include .png extension
+      }
+    ]
+  }
 }
 ```
 
@@ -579,8 +579,8 @@ This ensures that Figma screenshots (e.g., `homepage.png`) match SDK screenshots
 Verify Figma Token
 
 ```bash
-echo $FIGMA_TOKEN
-```
+   echo $FIGMA_TOKEN
+   ```
    Ensure the token is valid and has not expired. Generate a new token from [Figma Settings](https://www.figma.com/settings).
 
 Check File Token
@@ -627,8 +627,8 @@ Browser-Specific Issues
 Verify Project Token
 
 ```bash
-echo $PROJECT_TOKEN
-```
+   echo $PROJECT_TOKEN
+   ```
    Ensure the token is set correctly and matches your SmartUI project.
 
 Check Project Type

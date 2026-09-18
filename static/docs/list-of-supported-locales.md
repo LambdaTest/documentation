@@ -212,11 +212,11 @@ To **dynamically change** the language and locale of a device during test execut
 
 ```python
 driver.execute_script('lambda_executor: {
-"action": "updateLanguageLocale",
-"arguments": {
-"language" : "<language-code>" ,
-"locale" : "<locale-code>"
-}
+      "action": "updateLanguageLocale",
+      "arguments": {
+        "language" : "<language-code>" ,
+        "locale" : "<locale-code>"
+        }
 }')
 ```
 

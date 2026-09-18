@@ -115,37 +115,37 @@ Configure your test suite with SmartUI capabilities. Since you're using the **Ho
 import { Builder, Capabilities } from 'selenium-webdriver';
 
 const capabilities = {
-browserName: 'Chrome',
-browserVersion: 'latest',
-platformName: 'Windows 10',
-'LT:Options': {
-username: process.env.LT_USERNAME,
-accessKey: process.env.LT_ACCESS_KEY,
-project: 'Your Project Name',
-w3c: true,
-name: 'Web Test Session',
-build: process.env.CI
-? `${process.env.CI_PROJECT_NAME}-${process.env.CI_PIPELINE_ID}`
-: `smartui-local-build-${new Date().toISOString().split('T')[0]}`,
+  browserName: 'Chrome',
+  browserVersion: 'latest',
+  platformName: 'Windows 10',
+  'LT:Options': {
+    username: process.env.LT_USERNAME,
+    accessKey: process.env.LT_ACCESS_KEY,
+    project: 'Your Project Name',
+    w3c: true,
+    name: 'Web Test Session',
+    build: process.env.CI
+      ? `${process.env.CI_PROJECT_NAME}-${process.env.CI_PIPELINE_ID}`
+      : `smartui-local-build-${new Date().toISOString().split('T')[0]}`,
 
-// SmartUI Hooks Configuration
-"smartUI.project": `${process.env.SMARTUI_PROJECT_NAME}-visual`,
-"smartUI.build": process.env.CI
-? `${process.env.CI_PROJECT_NAME}-${process.env.CI_PIPELINE_ID}`
-: `smartui-local-build-${new Date().toISOString().split('T')[0]}`,
-"smartUI.baseline": false,
+    // SmartUI Hooks Configuration
+    "smartUI.project": `${process.env.SMARTUI_PROJECT_NAME}-visual`,
+    "smartUI.build": process.env.CI
+      ? `${process.env.CI_PROJECT_NAME}-${process.env.CI_PIPELINE_ID}`
+      : `smartui-local-build-${new Date().toISOString().split('T')[0]}`,
+    "smartUI.baseline": false,
 
-// GitLab Integration Capability
-github: {
-url: process.env.GIT_URL // GitLab API URL for status updates
-}
-}
+    // GitLab Integration Capability
+    github: {
+      url: process.env.GIT_URL // GitLab API URL for status updates
+    }
+  }
 };
 
 const driver = await new Builder()
-.usingServer(`https://${process.env.LT_USERNAME}:${process.env.LT_ACCESS_KEY}@hub.lambdatest.com/wd/hub`)
-.withCapabilities(capabilities)
-.build();
+  .usingServer(`https://${process.env.LT_USERNAME}:${process.env.LT_ACCESS_KEY}@hub.lambdatest.com/wd/hub`)
+  .withCapabilities(capabilities)
+  .build();
 ```
 
 ```java title="Example: Java Selenium Configuration with SmartUI Hooks and GitLab"
@@ -162,55 +162,55 @@ import java.util.Map;
 
 public class BaseClassWebhook {
 
-public RemoteWebDriver driver;
-public String githubURL = System.getenv("GITHUB_URL"); // GitLab URL from CI/CD
+    public RemoteWebDriver driver;
+    public String githubURL = System.getenv("GITHUB_URL"); // GitLab URL from CI/CD
 
-@BeforeClass
-public void setup() throws MalformedURLException {
-String username = System.getenv("LT_USERNAME") == null
-? "Your LT Username"
-: System.getenv("LT_USERNAME");
-String authkey = System.getenv("LT_ACCESS_KEY") == null
-? "Your LT AccessKey"
-: System.getenv("LT_ACCESS_KEY");
+    @BeforeClass
+    public void setup() throws MalformedURLException {
+        String username = System.getenv("LT_USERNAME") == null
+            ? "Your LT Username"
+            : System.getenv("LT_USERNAME");
+        String authkey = System.getenv("LT_ACCESS_KEY") == null
+            ? "Your LT AccessKey"
+            : System.getenv("LT_ACCESS_KEY");
 
-ChromeOptions browserOptions = new ChromeOptions();
-HashMap<String, Object> ltOptions = new HashMap<String, Object>();
+        ChromeOptions browserOptions = new ChromeOptions();
+        HashMap<String, Object> ltOptions = new HashMap<String, Object>();
 
-// LambdaTest Options
-ltOptions.put("username", username);
-ltOptions.put("accessKey", authkey);
-ltOptions.put("project", "Your Project Name");
-ltOptions.put("w3c", true);
-ltOptions.put("browserName", "Chrome");
-ltOptions.put("browserVersion", "latest");
-ltOptions.put("platformName", "Windows 10");
+        // LambdaTest Options
+        ltOptions.put("username", username);
+        ltOptions.put("accessKey", authkey);
+        ltOptions.put("project", "Your Project Name");
+        ltOptions.put("w3c", true);
+        ltOptions.put("browserName", "Chrome");
+        ltOptions.put("browserVersion", "latest");
+        ltOptions.put("platformName", "Windows 10");
 
-// SmartUI Hooks Configuration
-String projectName = System.getenv("SMARTUI_PROJECT_NAME") != null
-? System.getenv("SMARTUI_PROJECT_NAME") + "-visual"
-: "Your SmartUI Project Name";
-ltOptions.put("smartUI.project", projectName);
+        // SmartUI Hooks Configuration
+        String projectName = System.getenv("SMARTUI_PROJECT_NAME") != null
+            ? System.getenv("SMARTUI_PROJECT_NAME") + "-visual"
+            : "Your SmartUI Project Name";
+        ltOptions.put("smartUI.project", projectName);
 
-String buildName = System.getenv("CI") != null
-? System.getenv("CI_PROJECT_NAME") + "-" + System.getenv("CI_PIPELINE_ID")
-: "smartui-local-build";
-ltOptions.put("smartUI.build", buildName);
-ltOptions.put("smartUI.baseline", false);
+        String buildName = System.getenv("CI") != null
+            ? System.getenv("CI_PROJECT_NAME") + "-" + System.getenv("CI_PIPELINE_ID")
+            : "smartui-local-build";
+        ltOptions.put("smartUI.build", buildName);
+        ltOptions.put("smartUI.baseline", false);
 
-browserOptions.setCapability("LT:Options", ltOptions);
+        browserOptions.setCapability("LT:Options", ltOptions);
 
-// GitLab Integration Capability
-if (githubURL != null) {
-Map<String, String> github = new HashMap<String, String>();
-github.put("url", githubURL);
-browserOptions.setCapability("github", github);
-System.out.println("GitLab URL received successfully: " + githubURL);
-}
+        // GitLab Integration Capability
+        if (githubURL != null) {
+            Map<String, String> github = new HashMap<String, String>();
+            github.put("url", githubURL);
+            browserOptions.setCapability("github", github);
+            System.out.println("GitLab URL received successfully: " + githubURL);
+        }
 
-String remoteUrl = "https://" + username + ":" + authkey + "@hub.lambdatest.com/wd/hub";
-driver = new RemoteWebDriver(new URL(remoteUrl), browserOptions);
-}
+        String remoteUrl = "https://" + username + ":" + authkey + "@hub.lambdatest.com/wd/hub";
+        driver = new RemoteWebDriver(new URL(remoteUrl), browserOptions);
+    }
 }
 ```
 
@@ -223,32 +223,32 @@ import os
 github_url = os.getenv("GITHUB_URL")
 
 capabilities = {
-"browserName": "Chrome",
-"browserVersion": "latest",
-"platformName": "Windows 10",
-"LT:Options": {
-"username": os.getenv("LT_USERNAME"),
-"accessKey": os.getenv("LT_ACCESS_KEY"),
-"project": "Your Project Name",
-"w3c": True,
-"name": "Web Test Session",
-"build": f"{os.getenv('CI_PROJECT_NAME')}-{os.getenv('CI_PIPELINE_ID')}" if os.getenv("CI") else "smartui-local-build",
+    "browserName": "Chrome",
+    "browserVersion": "latest",
+    "platformName": "Windows 10",
+    "LT:Options": {
+        "username": os.getenv("LT_USERNAME"),
+        "accessKey": os.getenv("LT_ACCESS_KEY"),
+        "project": "Your Project Name",
+        "w3c": True,
+        "name": "Web Test Session",
+        "build": f"{os.getenv('CI_PROJECT_NAME')}-{os.getenv('CI_PIPELINE_ID')}" if os.getenv("CI") else "smartui-local-build",
 
-# SmartUI Hooks Configuration
-"smartUI.project": f"{os.getenv('SMARTUI_PROJECT_NAME')}-visual",
-"smartUI.build": f"{os.getenv('CI_PROJECT_NAME')}-{os.getenv('CI_PIPELINE_ID')}" if os.getenv("CI") else "smartui-local-build",
-"smartUI.baseline": False,
+        # SmartUI Hooks Configuration
+        "smartUI.project": f"{os.getenv('SMARTUI_PROJECT_NAME')}-visual",
+        "smartUI.build": f"{os.getenv('CI_PROJECT_NAME')}-{os.getenv('CI_PIPELINE_ID')}" if os.getenv("CI") else "smartui-local-build",
+        "smartUI.baseline": False,
 
-# GitLab Integration Capability
-"github": {
-"url": github_url
-}
-}
+        # GitLab Integration Capability
+        "github": {
+            "url": github_url
+        }
+    }
 }
 
 driver = webdriver.Remote(
-command_executor=f"https://{os.getenv('LT_USERNAME')}:{os.getenv('LT_ACCESS_KEY')}@hub.lambdatest.com/wd/hub",
-desired_capabilities=capabilities
+    command_executor=f"https://{os.getenv('LT_USERNAME')}:{os.getenv('LT_ACCESS_KEY')}@hub.lambdatest.com/wd/hub",
+    desired_capabilities=capabilities
 )
 ```
 
@@ -256,41 +256,41 @@ desired_capabilities=capabilities
 import { remote, RemoteOptions } from 'webdriverio';
 
 const capabilities: RemoteOptions['capabilities'] = {
-deviceName: "iPhone 12",
-platformName: "ios",
-platformVersion: "14",
-isRealMobile: true,
-app: "APP_URL", // Your uploaded app URL
-visual: true, // Mandatory for SmartUI
-name: "Mobile App Test Session",
-build: process.env.CI
-? `${process.env.CI_PROJECT_NAME}-${process.env.CI_PIPELINE_ID}`
-: `smartui-local-build-${new Date().toISOString().split('T')[0]}`,
+  deviceName: "iPhone 12",
+  platformName: "ios",
+  platformVersion: "14",
+  isRealMobile: true,
+  app: "APP_URL", // Your uploaded app URL
+  visual: true, // Mandatory for SmartUI
+  name: "Mobile App Test Session",
+  build: process.env.CI
+    ? `${process.env.CI_PROJECT_NAME}-${process.env.CI_PIPELINE_ID}`
+    : `smartui-local-build-${new Date().toISOString().split('T')[0]}`,
 
-// SmartUI Hooks Configuration
-"smartUI.project": `${process.env.SMARTUI_PROJECT_NAME}-visual`,
-"smartUI.build": process.env.CI
-? `${process.env.CI_PROJECT_NAME}-${process.env.CI_PIPELINE_ID}`
-: `smartui-local-build-${new Date().toISOString().split('T')[0]}`,
-"smartUI.baseline": false,
-"smartUI.cropStatusBar": true,
-"smartUI.cropFooter": true,
+  // SmartUI Hooks Configuration
+  "smartUI.project": `${process.env.SMARTUI_PROJECT_NAME}-visual`,
+  "smartUI.build": process.env.CI
+    ? `${process.env.CI_PROJECT_NAME}-${process.env.CI_PIPELINE_ID}`
+    : `smartui-local-build-${new Date().toISOString().split('T')[0]}`,
+  "smartUI.baseline": false,
+  "smartUI.cropStatusBar": true,
+  "smartUI.cropFooter": true,
 
-// GitLab Integration Capability
-github: {
-url: process.env.GITHUB_URL // GitLab API URL for status updates
-// GitLab URL format: https://gitlab.com/api/v4/projects/{projectId}/statuses/{commitId}
-}
+  // GitLab Integration Capability
+  github: {
+    url: process.env.GITHUB_URL // GitLab API URL for status updates
+    // GitLab URL format: https://gitlab.com/api/v4/projects/{projectId}/statuses/{commitId}
+  }
 };
 
 const driver = await remote({
-hostname: 'mobile-hub.lambdatest.com',
-port: 443,
-path: '/wd/hub',
-protocol: 'https',
-user: process.env.LT_USERNAME,
-key: process.env.LT_ACCESS_KEY,
-capabilities: capabilities as any,
+  hostname: 'mobile-hub.lambdatest.com',
+  port: 443,
+  path: '/wd/hub',
+  protocol: 'https',
+  user: process.env.LT_USERNAME,
+  key: process.env.LT_ACCESS_KEY,
+  capabilities: capabilities as any,
 });
 ```
 
@@ -308,59 +308,59 @@ import java.util.Map;
 
 public class BaseClassWebhook {
 
-public RemoteWebDriver driver;
-public String githubURL = System.getenv("GITHUB_URL"); // GitLab URL from CI/CD
+    public RemoteWebDriver driver;
+    public String githubURL = System.getenv("GITHUB_URL"); // GitLab URL from CI/CD
 
-@BeforeClass
-public void setup() throws MalformedURLException {
-String username = System.getenv("LT_USERNAME") == null
-? "Your LT Username"
-: System.getenv("LT_USERNAME");
-String authkey = System.getenv("LT_ACCESS_KEY") == null
-? "Your LT AccessKey"
-: System.getenv("LT_ACCESS_KEY");
+    @BeforeClass
+    public void setup() throws MalformedURLException {
+        String username = System.getenv("LT_USERNAME") == null
+            ? "Your LT Username"
+            : System.getenv("LT_USERNAME");
+        String authkey = System.getenv("LT_ACCESS_KEY") == null
+            ? "Your LT AccessKey"
+            : System.getenv("LT_ACCESS_KEY");
 
-ChromeOptions browserOptions = new ChromeOptions();
-HashMap<String, Object> ltOptions = new HashMap<String, Object>();
+        ChromeOptions browserOptions = new ChromeOptions();
+        HashMap<String, Object> ltOptions = new HashMap<String, Object>();
 
-// LambdaTest Options
-ltOptions.put("username", username);
-ltOptions.put("accessKey", authkey);
-ltOptions.put("project", "Your Project Name");
-ltOptions.put("w3c", true);
-ltOptions.put("deviceName", "iPhone 12");
-ltOptions.put("platformName", "ios");
-ltOptions.put("platformVersion", "14");
-ltOptions.put("isRealMobile", true);
-ltOptions.put("app", "APP_URL");
-ltOptions.put("visual", true); // Mandatory for SmartUI
+        // LambdaTest Options
+        ltOptions.put("username", username);
+        ltOptions.put("accessKey", authkey);
+        ltOptions.put("project", "Your Project Name");
+        ltOptions.put("w3c", true);
+        ltOptions.put("deviceName", "iPhone 12");
+        ltOptions.put("platformName", "ios");
+        ltOptions.put("platformVersion", "14");
+        ltOptions.put("isRealMobile", true);
+        ltOptions.put("app", "APP_URL");
+        ltOptions.put("visual", true); // Mandatory for SmartUI
 
-// SmartUI Hooks Configuration
-String projectName = System.getenv("SMARTUI_PROJECT_NAME") != null
-? System.getenv("SMARTUI_PROJECT_NAME") + "-visual"
-: "Your SmartUI Project Name";
-ltOptions.put("smartUI.project", projectName);
+        // SmartUI Hooks Configuration
+        String projectName = System.getenv("SMARTUI_PROJECT_NAME") != null
+            ? System.getenv("SMARTUI_PROJECT_NAME") + "-visual"
+            : "Your SmartUI Project Name";
+        ltOptions.put("smartUI.project", projectName);
 
-String buildName = System.getenv("CI") != null
-? System.getenv("CI_PROJECT_NAME") + "-" + System.getenv("CI_PIPELINE_ID")
-: "smartui-local-build";
-ltOptions.put("smartUI.build", buildName);
-ltOptions.put("smartUI.baseline", false);
-ltOptions.put("smartUI.cropStatusBar", true);
+        String buildName = System.getenv("CI") != null
+            ? System.getenv("CI_PROJECT_NAME") + "-" + System.getenv("CI_PIPELINE_ID")
+            : "smartui-local-build";
+        ltOptions.put("smartUI.build", buildName);
+        ltOptions.put("smartUI.baseline", false);
+        ltOptions.put("smartUI.cropStatusBar", true);
 
-browserOptions.setCapability("LT:Options", ltOptions);
+        browserOptions.setCapability("LT:Options", ltOptions);
 
-// GitLab Integration Capability
-if (githubURL != null) {
-Map<String, String> github = new HashMap<String, String>();
-github.put("url", githubURL);
-browserOptions.setCapability("github", github);
-System.out.println("GitLab URL received successfully: " + githubURL);
-}
+        // GitLab Integration Capability
+        if (githubURL != null) {
+            Map<String, String> github = new HashMap<String, String>();
+            github.put("url", githubURL);
+            browserOptions.setCapability("github", github);
+            System.out.println("GitLab URL received successfully: " + githubURL);
+        }
 
-String remoteUrl = "https://" + username + ":" + authkey + "@mobile-hub.lambdatest.com/wd/hub";
-driver = new RemoteWebDriver(new URL(remoteUrl), browserOptions);
-}
+        String remoteUrl = "https://" + username + ":" + authkey + "@mobile-hub.lambdatest.com/wd/hub";
+        driver = new RemoteWebDriver(new URL(remoteUrl), browserOptions);
+    }
 }
 ```
 
@@ -372,30 +372,30 @@ import os
 github_url = os.getenv("GITHUB_URL")
 
 capabilities = {
-"deviceName": "iPhone 12",
-"platformName": "ios",
-"platformVersion": "14",
-"isRealMobile": True,
-"app": "APP_URL",  # Your uploaded app URL
-"visual": True,  # Mandatory for SmartUI
-"name": "Mobile App Test Session",
-"build": f"{os.getenv('CI_PROJECT_NAME')}-{os.getenv('CI_PIPELINE_ID')}" if os.getenv("CI") else "smartui-local-build",
+    "deviceName": "iPhone 12",
+    "platformName": "ios",
+    "platformVersion": "14",
+    "isRealMobile": True,
+    "app": "APP_URL",  # Your uploaded app URL
+    "visual": True,  # Mandatory for SmartUI
+    "name": "Mobile App Test Session",
+    "build": f"{os.getenv('CI_PROJECT_NAME')}-{os.getenv('CI_PIPELINE_ID')}" if os.getenv("CI") else "smartui-local-build",
 
-# SmartUI Hooks Configuration
-"smartUI.project": f"{os.getenv('SMARTUI_PROJECT_NAME')}-visual",
-"smartUI.build": f"{os.getenv('CI_PROJECT_NAME')}-{os.getenv('CI_PIPELINE_ID')}" if os.getenv("CI") else "smartui-local-build",
-"smartUI.baseline": False,
-"smartUI.cropStatusBar": True,
+    # SmartUI Hooks Configuration
+    "smartUI.project": f"{os.getenv('SMARTUI_PROJECT_NAME')}-visual",
+    "smartUI.build": f"{os.getenv('CI_PROJECT_NAME')}-{os.getenv('CI_PIPELINE_ID')}" if os.getenv("CI") else "smartui-local-build",
+    "smartUI.baseline": False,
+    "smartUI.cropStatusBar": True,
 
-# GitLab Integration Capability
-"github": {
-"url": github_url  # GitLab API URL for status updates
-}
+    # GitLab Integration Capability
+    "github": {
+        "url": github_url  # GitLab API URL for status updates
+    }
 }
 
 driver = webdriver.Remote(
-command_executor=f"https://{os.getenv('LT_USERNAME')}:{os.getenv('LT_ACCESS_KEY')}@mobile-hub.lambdatest.com/wd/hub",
-desired_capabilities=capabilities
+    command_executor=f"https://{os.getenv('LT_USERNAME')}:{os.getenv('LT_ACCESS_KEY')}@mobile-hub.lambdatest.com/wd/hub",
+    desired_capabilities=capabilities
 )
 ```
 
@@ -413,9 +413,9 @@ await driver.execute("smartui.takeScreenshot=Homepage");
 
 // Full page screenshot (if supported)
 const config = {
-screenshotName: 'Homepage',
-fullPage: true,
-pageCount: 15  // Minimum 1, Maximum 20
+  screenshotName: 'Homepage',
+  fullPage: true,
+  pageCount: 15  // Minimum 1, Maximum 20
 };
 await driver.execute("smartui.takeScreenshot", config);
 ```
@@ -442,9 +442,9 @@ driver.execute_script("smartui.takeScreenshot=Homepage")
 
 # Full page screenshot (if supported)
 config = {
-"screenshotName": "Homepage",
-"fullPage": True,
-"pageCount": 15  # Minimum 1, Maximum 20
+    "screenshotName": "Homepage",
+    "fullPage": True,
+    "pageCount": 15  # Minimum 1, Maximum 20
 }
 driver.execute_script("smartui.takeScreenshot", config)
 ```
@@ -455,9 +455,9 @@ driver.execute_script("smartui.takeScreenshot=Homepage")
 
 # Full page screenshot (if supported)
 config = {
-'screenshotName' => 'Homepage',
-'fullPage' => true,
-'pageCount' => 15  # Minimum 1, Maximum 20
+  'screenshotName' => 'Homepage',
+  'fullPage' => true,
+  'pageCount' => 15  # Minimum 1, Maximum 20
 }
 driver.execute_script("smartui.takeScreenshot", config)
 ```
@@ -471,9 +471,9 @@ using OpenQA.Selenium;
 // Full page screenshot (if supported)
 var config = new Dictionary<string, object>
 {
-{ "screenshotName", "Homepage" },
-{ "fullPage", true },
-{ "pageCount", 15 }  // Minimum 1, Maximum 20
+    { "screenshotName", "Homepage" },
+    { "fullPage", true },
+    { "pageCount", 15 }  // Minimum 1, Maximum 20
 };
 ((IJavaScriptExecutor)driver).ExecuteScript("smartui.takeScreenshot", config);
 ```
@@ -490,212 +490,212 @@ Create or update your `.gitlab-ci.yml` file. Since you're using **Hooks**, you j
 
 ```yaml title=".gitlab-ci.yml - TypeScript/JavaScript Example"
 stages:
-- test
+  - test
 
 variables:
-NODE_VERSION: "18"
-LT_USERNAME: $LT_USERNAME
-LT_ACCESS_KEY: $LT_ACCESS_KEY
-SMARTUI_PROJECT_NAME: $SMARTUI_PROJECT_NAME
+  NODE_VERSION: "18"
+  LT_USERNAME: $LT_USERNAME
+  LT_ACCESS_KEY: $LT_ACCESS_KEY
+  SMARTUI_PROJECT_NAME: $SMARTUI_PROJECT_NAME
 
 visual_regression_tests:
-stage: test
-image: node:${NODE_VERSION}
+  stage: test
+  image: node:${NODE_VERSION}
 
-before_script:
-- npm ci
+  before_script:
+    - npm ci
 
-script:
-# Get GitLab project ID and commit SHA
-- |
-PROJECT_ID=${CI_PROJECT_ID}
-COMMIT_SHA=${CI_COMMIT_SHA}
+  script:
+    # Get GitLab project ID and commit SHA
+    - |
+      PROJECT_ID=${CI_PROJECT_ID}
+      COMMIT_SHA=${CI_COMMIT_SHA}
 
-# For merge requests, use the merge request commit SHA
-if [ -n "$CI_MERGE_REQUEST_IID" ]; then
-COMMIT_SHA=${CI_MERGE_REQUEST_SHA:-${CI_COMMIT_SHA}}
-fi
+      # For merge requests, use the merge request commit SHA
+      if [ -n "$CI_MERGE_REQUEST_IID" ]; then
+        COMMIT_SHA=${CI_MERGE_REQUEST_SHA:-${CI_COMMIT_SHA}}
+      fi
 
-# Construct GitLab API URL for status updates
-GITHUB_URL="https://gitlab.com/api/v4/projects/${PROJECT_ID}/statuses/${COMMIT_SHA}"
+      # Construct GitLab API URL for status updates
+      GITHUB_URL="https://gitlab.com/api/v4/projects/${PROJECT_ID}/statuses/${COMMIT_SHA}"
 
-echo "GitLab Project ID: ${PROJECT_ID}"
-echo "Commit SHA: ${COMMIT_SHA}"
-echo "GitLab Status URL: ${GITHUB_URL}"
+      echo "GitLab Project ID: ${PROJECT_ID}"
+      echo "Commit SHA: ${COMMIT_SHA}"
+      echo "GitLab Status URL: ${GITHUB_URL}"
 
-# Export GITHUB_URL as environment variable for use in test capabilities
-export GITHUB_URL="${GITHUB_URL}"
+      # Export GITHUB_URL as environment variable for use in test capabilities
+      export GITHUB_URL="${GITHUB_URL}"
 
-# Run your tests normally - SmartUI Hooks work automatically through capabilities
-npm test
-# Or: npx wdio run wdio.conf.ts
-# Or: npm run test:mobile
+      # Run your tests normally - SmartUI Hooks work automatically through capabilities
+      npm test
+      # Or: npx wdio run wdio.conf.ts
+      # Or: npm run test:mobile
 
-only:
-- merge_requests
-- main
-- develop
+  only:
+    - merge_requests
+    - main
+    - develop
 
-environment:
-name: visual-regression/$CI_COMMIT_REF_NAME
+  environment:
+    name: visual-regression/$CI_COMMIT_REF_NAME
 ```
 
 ```yaml title=".gitlab-ci.yml - Java Example"
 stages:
-- test
+  - test
 
 variables:
-MAVEN_OPTS: "-Dmaven.repo.local=.m2/repository"
-LT_USERNAME: $LT_USERNAME
-LT_ACCESS_KEY: $LT_ACCESS_KEY
-SMARTUI_PROJECT_NAME: $SMARTUI_PROJECT_NAME
+  MAVEN_OPTS: "-Dmaven.repo.local=.m2/repository"
+  LT_USERNAME: $LT_USERNAME
+  LT_ACCESS_KEY: $LT_ACCESS_KEY
+  SMARTUI_PROJECT_NAME: $SMARTUI_PROJECT_NAME
 
 visual_regression_tests:
-stage: test
-image: maven:3.8-openjdk-11
+  stage: test
+  image: maven:3.8-openjdk-11
 
-cache:
-paths:
-- .m2/repository/
+  cache:
+    paths:
+      - .m2/repository/
 
-before_script:
-- mvn clean install -DskipTests
+  before_script:
+    - mvn clean install -DskipTests
 
-script:
-# Get GitLab project ID and commit SHA
-- |
-PROJECT_ID=${CI_PROJECT_ID}
-COMMIT_SHA=${CI_COMMIT_SHA}
+  script:
+    # Get GitLab project ID and commit SHA
+    - |
+      PROJECT_ID=${CI_PROJECT_ID}
+      COMMIT_SHA=${CI_COMMIT_SHA}
 
-# For merge requests, use the merge request commit SHA
-if [ -n "$CI_MERGE_REQUEST_IID" ]; then
-COMMIT_SHA=${CI_MERGE_REQUEST_SHA:-${CI_COMMIT_SHA}}
-fi
+      # For merge requests, use the merge request commit SHA
+      if [ -n "$CI_MERGE_REQUEST_IID" ]; then
+        COMMIT_SHA=${CI_MERGE_REQUEST_SHA:-${CI_COMMIT_SHA}}
+      fi
 
-# Construct GitLab API URL for status updates
-GITHUB_URL="https://gitlab.com/api/v4/projects/${PROJECT_ID}/statuses/${COMMIT_SHA}"
+      # Construct GitLab API URL for status updates
+      GITHUB_URL="https://gitlab.com/api/v4/projects/${PROJECT_ID}/statuses/${COMMIT_SHA}"
 
-echo "GitLab Project ID: ${PROJECT_ID}"
-echo "Commit SHA: ${COMMIT_SHA}"
-echo "GitLab Status URL: ${GITHUB_URL}"
+      echo "GitLab Project ID: ${PROJECT_ID}"
+      echo "Commit SHA: ${COMMIT_SHA}"
+      echo "GitLab Status URL: ${GITHUB_URL}"
 
-# Export GITHUB_URL as environment variable for use in test capabilities
-export GITHUB_URL="${GITHUB_URL}"
+      # Export GITHUB_URL as environment variable for use in test capabilities
+      export GITHUB_URL="${GITHUB_URL}"
 
-# Run your tests normally - SmartUI Hooks work automatically through capabilities
-mvn test
-# Or: ./gradlew test (for Gradle)
+      # Run your tests normally - SmartUI Hooks work automatically through capabilities
+      mvn test
+      # Or: ./gradlew test (for Gradle)
 
-only:
-- merge_requests
-- main
-- develop
+  only:
+    - merge_requests
+    - main
+    - develop
 
-environment:
-name: visual-regression/$CI_COMMIT_REF_NAME
+  environment:
+    name: visual-regression/$CI_COMMIT_REF_NAME
 ```
 
 ```yaml title=".gitlab-ci.yml - Python Example"
 stages:
-- test
+  - test
 
 variables:
-PYTHON_VERSION: "3.9"
-LT_USERNAME: $LT_USERNAME
-LT_ACCESS_KEY: $LT_ACCESS_KEY
-SMARTUI_PROJECT_NAME: $SMARTUI_PROJECT_NAME
+  PYTHON_VERSION: "3.9"
+  LT_USERNAME: $LT_USERNAME
+  LT_ACCESS_KEY: $LT_ACCESS_KEY
+  SMARTUI_PROJECT_NAME: $SMARTUI_PROJECT_NAME
 
 visual_regression_tests:
-stage: test
-image: python:${PYTHON_VERSION}
+  stage: test
+  image: python:${PYTHON_VERSION}
 
-before_script:
-- pip install -r requirements.txt
+  before_script:
+    - pip install -r requirements.txt
 
-script:
-# Get GitLab project ID and commit SHA
-- |
-PROJECT_ID=${CI_PROJECT_ID}
-COMMIT_SHA=${CI_COMMIT_SHA}
+  script:
+    # Get GitLab project ID and commit SHA
+    - |
+      PROJECT_ID=${CI_PROJECT_ID}
+      COMMIT_SHA=${CI_COMMIT_SHA}
 
-# For merge requests, use the merge request commit SHA
-if [ -n "$CI_MERGE_REQUEST_IID" ]; then
-COMMIT_SHA=${CI_MERGE_REQUEST_SHA:-${CI_COMMIT_SHA}}
-fi
+      # For merge requests, use the merge request commit SHA
+      if [ -n "$CI_MERGE_REQUEST_IID" ]; then
+        COMMIT_SHA=${CI_MERGE_REQUEST_SHA:-${CI_COMMIT_SHA}}
+      fi
 
-# Construct GitLab API URL for status updates
-GITHUB_URL="https://gitlab.com/api/v4/projects/${PROJECT_ID}/statuses/${COMMIT_SHA}"
+      # Construct GitLab API URL for status updates
+      GITHUB_URL="https://gitlab.com/api/v4/projects/${PROJECT_ID}/statuses/${COMMIT_SHA}"
 
-echo "GitLab Project ID: ${PROJECT_ID}"
-echo "Commit SHA: ${COMMIT_SHA}"
-echo "GitLab Status URL: ${GITHUB_URL}"
+      echo "GitLab Project ID: ${PROJECT_ID}"
+      echo "Commit SHA: ${COMMIT_SHA}"
+      echo "GitLab Status URL: ${GITHUB_URL}"
 
-# Export GITHUB_URL as environment variable for use in test capabilities
-export GITHUB_URL="${GITHUB_URL}"
+      # Export GITHUB_URL as environment variable for use in test capabilities
+      export GITHUB_URL="${GITHUB_URL}"
 
-# Run your tests normally - SmartUI Hooks work automatically through capabilities
-pytest
-# Or: python -m unittest discover
-# Or: behave
+      # Run your tests normally - SmartUI Hooks work automatically through capabilities
+      pytest
+      # Or: python -m unittest discover
+      # Or: behave
 
-only:
-- merge_requests
-- main
-- develop
+  only:
+    - merge_requests
+    - main
+    - develop
 
-environment:
-name: visual-regression/$CI_COMMIT_REF_NAME
+  environment:
+    name: visual-regression/$CI_COMMIT_REF_NAME
 ```
 
 ```yaml title=".gitlab-ci.yml - Ruby Example"
 stages:
-- test
+  - test
 
 variables:
-RUBY_VERSION: "3.1"
-LT_USERNAME: $LT_USERNAME
-LT_ACCESS_KEY: $LT_ACCESS_KEY
-SMARTUI_PROJECT_NAME: $SMARTUI_PROJECT_NAME
+  RUBY_VERSION: "3.1"
+  LT_USERNAME: $LT_USERNAME
+  LT_ACCESS_KEY: $LT_ACCESS_KEY
+  SMARTUI_PROJECT_NAME: $SMARTUI_PROJECT_NAME
 
 visual_regression_tests:
-stage: test
-image: ruby:${RUBY_VERSION}
+  stage: test
+  image: ruby:${RUBY_VERSION}
 
-before_script:
-- bundle install
+  before_script:
+    - bundle install
 
-script:
-# Get GitLab project ID and commit SHA
-- |
-PROJECT_ID=${CI_PROJECT_ID}
-COMMIT_SHA=${CI_COMMIT_SHA}
+  script:
+    # Get GitLab project ID and commit SHA
+    - |
+      PROJECT_ID=${CI_PROJECT_ID}
+      COMMIT_SHA=${CI_COMMIT_SHA}
 
-# For merge requests, use the merge request commit SHA
-if [ -n "$CI_MERGE_REQUEST_IID" ]; then
-COMMIT_SHA=${CI_MERGE_REQUEST_SHA:-${CI_COMMIT_SHA}}
-fi
+      # For merge requests, use the merge request commit SHA
+      if [ -n "$CI_MERGE_REQUEST_IID" ]; then
+        COMMIT_SHA=${CI_MERGE_REQUEST_SHA:-${CI_COMMIT_SHA}}
+      fi
 
-# Construct GitLab API URL for status updates
-GITHUB_URL="https://gitlab.com/api/v4/projects/${PROJECT_ID}/statuses/${COMMIT_SHA}"
+      # Construct GitLab API URL for status updates
+      GITHUB_URL="https://gitlab.com/api/v4/projects/${PROJECT_ID}/statuses/${COMMIT_SHA}"
 
-echo "GitLab Project ID: ${PROJECT_ID}"
-echo "Commit SHA: ${COMMIT_SHA}"
-echo "GitLab Status URL: ${GITHUB_URL}"
+      echo "GitLab Project ID: ${PROJECT_ID}"
+      echo "Commit SHA: ${COMMIT_SHA}"
+      echo "GitLab Status URL: ${GITHUB_URL}"
 
-# Export GITHUB_URL as environment variable for use in test capabilities
-export GITHUB_URL="${GITHUB_URL}"
+      # Export GITHUB_URL as environment variable for use in test capabilities
+      export GITHUB_URL="${GITHUB_URL}"
 
-# Run your tests normally - SmartUI Hooks work automatically through capabilities
-bundle exec rspec
-# Or: bundle exec cucumber
+      # Run your tests normally - SmartUI Hooks work automatically through capabilities
+      bundle exec rspec
+      # Or: bundle exec cucumber
 
-only:
-- merge_requests
-- main
-- develop
+  only:
+    - merge_requests
+    - main
+    - develop
 
-environment:
-name: visual-regression/$CI_COMMIT_REF_NAME
+  environment:
+    name: visual-regression/$CI_COMMIT_REF_NAME
 ```
 
 ### Key Configuration Points
@@ -760,59 +760,59 @@ When visual differences are detected:
 import { Builder, Capabilities } from 'selenium-webdriver';
 
 describe('Web Visual Regression Tests', () => {
-let driver;
+  let driver;
 
-before(async () => {
-// Construct GitLab URL (in CI/CD, this would come from environment variable)
-const gitUrl = process.env.GIT_URL ||
-`https://gitlab.com/api/v4/projects/${process.env.CI_PROJECT_ID}/statuses/${process.env.CI_COMMIT_SHA}`;
+  before(async () => {
+    // Construct GitLab URL (in CI/CD, this would come from environment variable)
+    const gitUrl = process.env.GIT_URL ||
+      `https://gitlab.com/api/v4/projects/${process.env.CI_PROJECT_ID}/statuses/${process.env.CI_COMMIT_SHA}`;
 
-const capabilities = {
-browserName: 'Chrome',
-browserVersion: 'latest',
-platformName: 'Windows 10',
-'LT:Options': {
-username: process.env.LT_USERNAME,
-accessKey: process.env.LT_ACCESS_KEY,
-project: 'Your Project Name',
-w3c: true,
-name: 'Web Visual Tests',
-build: process.env.CI
-? `${process.env.CI_PROJECT_NAME}-${process.env.CI_PIPELINE_ID}`
-: `local-build-${Date.now()}`,
-"smartUI.project": `${process.env.SMARTUI_PROJECT_NAME}-visual`,
-"smartUI.build": process.env.CI
-? `${process.env.CI_PROJECT_NAME}-${process.env.CI_PIPELINE_ID}`
-: `local-build-${Date.now()}`,
-"smartUI.baseline": false,
-// GitLab integration capability
-github: {
-url: gitUrl
-}
-}
-};
+    const capabilities = {
+      browserName: 'Chrome',
+      browserVersion: 'latest',
+      platformName: 'Windows 10',
+      'LT:Options': {
+        username: process.env.LT_USERNAME,
+        accessKey: process.env.LT_ACCESS_KEY,
+        project: 'Your Project Name',
+        w3c: true,
+        name: 'Web Visual Tests',
+      build: process.env.CI
+        ? `${process.env.CI_PROJECT_NAME}-${process.env.CI_PIPELINE_ID}`
+        : `local-build-${Date.now()}`,
+      "smartUI.project": `${process.env.SMARTUI_PROJECT_NAME}-visual`,
+      "smartUI.build": process.env.CI
+        ? `${process.env.CI_PROJECT_NAME}-${process.env.CI_PIPELINE_ID}`
+        : `local-build-${Date.now()}`,
+      "smartUI.baseline": false,
+      // GitLab integration capability
+      github: {
+          url: gitUrl
+        }
+      }
+    };
 
-driver = await new Builder()
-.usingServer(`https://${process.env.LT_USERNAME}:${process.env.LT_ACCESS_KEY}@hub.lambdatest.com/wd/hub`)
-.withCapabilities(capabilities)
-.build();
-});
+    driver = await new Builder()
+      .usingServer(`https://${process.env.LT_USERNAME}:${process.env.LT_ACCESS_KEY}@hub.lambdatest.com/wd/hub`)
+      .withCapabilities(capabilities)
+      .build();
+  });
 
-after(async () => {
-if (driver) {
-await driver.quit();
-}
-});
+  after(async () => {
+    if (driver) {
+      await driver.quit();
+    }
+  });
 
-it('should capture homepage screenshot', async () => {
-await driver.get('https://example.com');
-await driver.executeScript("smartui.takeScreenshot=Homepage");
-});
+  it('should capture homepage screenshot', async () => {
+    await driver.get('https://example.com');
+    await driver.executeScript("smartui.takeScreenshot=Homepage");
+  });
 
-it('should capture login page screenshot', async () => {
-await driver.get('https://example.com/login');
-await driver.executeScript("smartui.takeScreenshot=LoginPage");
-});
+  it('should capture login page screenshot', async () => {
+    await driver.get('https://example.com/login');
+    await driver.executeScript("smartui.takeScreenshot=LoginPage");
+  });
 });
 ```
 
@@ -833,74 +833,74 @@ import java.util.Map;
 
 public class BaseClassWebhook {
 
-public RemoteWebDriver driver;
-public String githubURL = System.getenv("GITHUB_URL"); // GitLab URL from CI/CD
+    public RemoteWebDriver driver;
+    public String githubURL = System.getenv("GITHUB_URL"); // GitLab URL from CI/CD
 
-@BeforeClass
-public void setup() throws MalformedURLException {
-String username = System.getenv("LT_USERNAME") == null
-? "Your LT Username"
-: System.getenv("LT_USERNAME");
-String authkey = System.getenv("LT_ACCESS_KEY") == null
-? "Your LT AccessKey"
-: System.getenv("LT_ACCESS_KEY");
+    @BeforeClass
+    public void setup() throws MalformedURLException {
+        String username = System.getenv("LT_USERNAME") == null
+            ? "Your LT Username"
+            : System.getenv("LT_USERNAME");
+        String authkey = System.getenv("LT_ACCESS_KEY") == null
+            ? "Your LT AccessKey"
+            : System.getenv("LT_ACCESS_KEY");
 
-ChromeOptions browserOptions = new ChromeOptions();
-HashMap<String, Object> ltOptions = new HashMap<String, Object>();
+        ChromeOptions browserOptions = new ChromeOptions();
+        HashMap<String, Object> ltOptions = new HashMap<String, Object>();
 
-// LambdaTest Options
-ltOptions.put("username", username);
-ltOptions.put("accessKey", authkey);
-ltOptions.put("project", "Your Project Name");
-ltOptions.put("w3c", true);
-ltOptions.put("browserName", "Chrome");
-ltOptions.put("browserVersion", "latest");
-ltOptions.put("platformName", "Windows 10");
+        // LambdaTest Options
+        ltOptions.put("username", username);
+        ltOptions.put("accessKey", authkey);
+        ltOptions.put("project", "Your Project Name");
+        ltOptions.put("w3c", true);
+        ltOptions.put("browserName", "Chrome");
+        ltOptions.put("browserVersion", "latest");
+        ltOptions.put("platformName", "Windows 10");
 
-// SmartUI Hooks Configuration
-String projectName = System.getenv("SMARTUI_PROJECT_NAME") != null
-? System.getenv("SMARTUI_PROJECT_NAME") + "-visual"
-: "Your SmartUI Project Name";
-ltOptions.put("smartUI.project", projectName);
+        // SmartUI Hooks Configuration
+        String projectName = System.getenv("SMARTUI_PROJECT_NAME") != null
+            ? System.getenv("SMARTUI_PROJECT_NAME") + "-visual"
+            : "Your SmartUI Project Name";
+        ltOptions.put("smartUI.project", projectName);
 
-String buildName = System.getenv("CI") != null
-? System.getenv("CI_PROJECT_NAME") + "-" + System.getenv("CI_PIPELINE_ID")
-: "smartui-local-build";
-ltOptions.put("smartUI.build", buildName);
-ltOptions.put("smartUI.baseline", false);
+        String buildName = System.getenv("CI") != null
+            ? System.getenv("CI_PROJECT_NAME") + "-" + System.getenv("CI_PIPELINE_ID")
+            : "smartui-local-build";
+        ltOptions.put("smartUI.build", buildName);
+        ltOptions.put("smartUI.baseline", false);
 
-browserOptions.setCapability("LT:Options", ltOptions);
+        browserOptions.setCapability("LT:Options", ltOptions);
 
-// GitLab Integration Capability
-if (githubURL != null) {
-Map<String, String> github = new HashMap<String, String>();
-github.put("url", githubURL);
-browserOptions.setCapability("github", github);
-System.out.println("GitLab URL received successfully: " + githubURL);
-}
+        // GitLab Integration Capability
+        if (githubURL != null) {
+            Map<String, String> github = new HashMap<String, String>();
+            github.put("url", githubURL);
+            browserOptions.setCapability("github", github);
+            System.out.println("GitLab URL received successfully: " + githubURL);
+        }
 
-String remoteUrl = "https://" + username + ":" + authkey + "@hub.lambdatest.com/wd/hub";
-driver = new RemoteWebDriver(new URL(remoteUrl), browserOptions);
-}
+        String remoteUrl = "https://" + username + ":" + authkey + "@hub.lambdatest.com/wd/hub";
+        driver = new RemoteWebDriver(new URL(remoteUrl), browserOptions);
+    }
 
-@Test
-public void testHomepageScreenshot() {
-driver.get("https://example.com");
-((JavascriptExecutor) driver).executeScript("smartui.takeScreenshot=Homepage");
-}
+    @Test
+    public void testHomepageScreenshot() {
+        driver.get("https://example.com");
+        ((JavascriptExecutor) driver).executeScript("smartui.takeScreenshot=Homepage");
+    }
 
-@Test
-public void testLoginPageScreenshot() {
-driver.get("https://example.com/login");
-((JavascriptExecutor) driver).executeScript("smartui.takeScreenshot=LoginPage");
-}
+    @Test
+    public void testLoginPageScreenshot() {
+        driver.get("https://example.com/login");
+        ((JavascriptExecutor) driver).executeScript("smartui.takeScreenshot=LoginPage");
+    }
 
-@AfterClass
-public void tearDown() {
-if (driver != null) {
-driver.quit();
-}
-}
+    @AfterClass
+    public void tearDown() {
+        if (driver != null) {
+            driver.quit();
+        }
+    }
 }
 ```
 
@@ -908,62 +908,62 @@ driver.quit();
 import { remote, RemoteOptions } from 'webdriverio';
 
 describe('Mobile App Visual Regression Tests', () => {
-let driver: WebdriverIO.Browser;
+  let driver: WebdriverIO.Browser;
 
-before(async () => {
-// Construct GitLab URL (in CI/CD, this would come from environment variable)
-const gitUrl = process.env.GIT_URL ||
-`https://gitlab.com/api/v4/projects/${process.env.CI_PROJECT_ID}/statuses/${process.env.CI_COMMIT_SHA}`;
+  before(async () => {
+    // Construct GitLab URL (in CI/CD, this would come from environment variable)
+    const gitUrl = process.env.GIT_URL ||
+      `https://gitlab.com/api/v4/projects/${process.env.CI_PROJECT_ID}/statuses/${process.env.CI_COMMIT_SHA}`;
 
-const capabilities: RemoteOptions['capabilities'] = {
-deviceName: "iPhone 12",
-platformName: "ios",
-platformVersion: "14",
-isRealMobile: true,
-app: process.env.APP_URL || "YOUR_APP_URL",
-visual: true, // Mandatory for SmartUI
-name: "Mobile App Visual Tests",
-build: process.env.CI
-? `${process.env.CI_PROJECT_NAME}-${process.env.CI_PIPELINE_ID}`
-: `local-build-${Date.now()}`,
-"smartUI.project": `${process.env.SMARTUI_PROJECT_NAME}-visual`,
-"smartUI.build": process.env.CI
-? `${process.env.CI_PROJECT_NAME}-${process.env.CI_PIPELINE_ID}`
-: `local-build-${Date.now()}`,
-"smartUI.baseline": false,
-"smartUI.cropStatusBar": true,
-// GitLab integration capability
-github: {
-url: gitlabUrl
-}
-};
+    const capabilities: RemoteOptions['capabilities'] = {
+      deviceName: "iPhone 12",
+      platformName: "ios",
+      platformVersion: "14",
+      isRealMobile: true,
+      app: process.env.APP_URL || "YOUR_APP_URL",
+      visual: true, // Mandatory for SmartUI
+      name: "Mobile App Visual Tests",
+      build: process.env.CI
+        ? `${process.env.CI_PROJECT_NAME}-${process.env.CI_PIPELINE_ID}`
+        : `local-build-${Date.now()}`,
+      "smartUI.project": `${process.env.SMARTUI_PROJECT_NAME}-visual`,
+      "smartUI.build": process.env.CI
+        ? `${process.env.CI_PROJECT_NAME}-${process.env.CI_PIPELINE_ID}`
+        : `local-build-${Date.now()}`,
+      "smartUI.baseline": false,
+      "smartUI.cropStatusBar": true,
+      // GitLab integration capability
+      github: {
+        url: gitlabUrl
+      }
+    };
 
-driver = await remote({
-hostname: 'mobile-hub.lambdatest.com',
-port: 443,
-path: '/wd/hub',
-protocol: 'https',
-user: process.env.LT_USERNAME,
-key: process.env.LT_ACCESS_KEY,
-capabilities: capabilities as any,
-});
-});
+    driver = await remote({
+      hostname: 'mobile-hub.lambdatest.com',
+      port: 443,
+      path: '/wd/hub',
+      protocol: 'https',
+      user: process.env.LT_USERNAME,
+      key: process.env.LT_ACCESS_KEY,
+      capabilities: capabilities as any,
+    });
+  });
 
-after(async () => {
-if (driver) {
-await driver.deleteSession();
-}
-});
+  after(async () => {
+    if (driver) {
+      await driver.deleteSession();
+    }
+  });
 
-it('should capture homepage screenshot', async () => {
-// Navigate or perform actions
-await driver.execute("smartui.takeScreenshot=Homepage");
-});
+  it('should capture homepage screenshot', async () => {
+    // Navigate or perform actions
+    await driver.execute("smartui.takeScreenshot=Homepage");
+  });
 
-it('should capture login screen screenshot', async () => {
-// Navigate to login screen
-await driver.execute("smartui.takeScreenshot=LoginScreen");
-});
+  it('should capture login screen screenshot', async () => {
+    // Navigate to login screen
+    await driver.execute("smartui.takeScreenshot=LoginScreen");
+  });
 });
 ```
 
@@ -984,78 +984,78 @@ import java.util.Map;
 
 public class BaseClassWebhook {
 
-public RemoteWebDriver driver;
-public String githubURL = System.getenv("GITHUB_URL"); // GitLab URL from CI/CD
+    public RemoteWebDriver driver;
+    public String githubURL = System.getenv("GITHUB_URL"); // GitLab URL from CI/CD
 
-@BeforeClass
-public void setup() throws MalformedURLException {
-String username = System.getenv("LT_USERNAME") == null
-? "Your LT Username"
-: System.getenv("LT_USERNAME");
-String authkey = System.getenv("LT_ACCESS_KEY") == null
-? "Your LT AccessKey"
-: System.getenv("LT_ACCESS_KEY");
+    @BeforeClass
+    public void setup() throws MalformedURLException {
+        String username = System.getenv("LT_USERNAME") == null
+            ? "Your LT Username"
+            : System.getenv("LT_USERNAME");
+        String authkey = System.getenv("LT_ACCESS_KEY") == null
+            ? "Your LT AccessKey"
+            : System.getenv("LT_ACCESS_KEY");
 
-ChromeOptions browserOptions = new ChromeOptions();
-HashMap<String, Object> ltOptions = new HashMap<String, Object>();
+        ChromeOptions browserOptions = new ChromeOptions();
+        HashMap<String, Object> ltOptions = new HashMap<String, Object>();
 
-// LambdaTest Options
-ltOptions.put("username", username);
-ltOptions.put("accessKey", authkey);
-ltOptions.put("project", "Your Project Name");
-ltOptions.put("w3c", true);
-ltOptions.put("deviceName", "iPhone 12");
-ltOptions.put("platformName", "ios");
-ltOptions.put("platformVersion", "14");
-ltOptions.put("isRealMobile", true);
-ltOptions.put("app", "APP_URL");
-ltOptions.put("visual", true); // Mandatory for SmartUI
+        // LambdaTest Options
+        ltOptions.put("username", username);
+        ltOptions.put("accessKey", authkey);
+        ltOptions.put("project", "Your Project Name");
+        ltOptions.put("w3c", true);
+        ltOptions.put("deviceName", "iPhone 12");
+        ltOptions.put("platformName", "ios");
+        ltOptions.put("platformVersion", "14");
+        ltOptions.put("isRealMobile", true);
+        ltOptions.put("app", "APP_URL");
+        ltOptions.put("visual", true); // Mandatory for SmartUI
 
-// SmartUI Hooks Configuration
-String projectName = System.getenv("SMARTUI_PROJECT_NAME") != null
-? System.getenv("SMARTUI_PROJECT_NAME") + "-visual"
-: "Your SmartUI Project Name";
-ltOptions.put("smartUI.project", projectName);
+        // SmartUI Hooks Configuration
+        String projectName = System.getenv("SMARTUI_PROJECT_NAME") != null
+            ? System.getenv("SMARTUI_PROJECT_NAME") + "-visual"
+            : "Your SmartUI Project Name";
+        ltOptions.put("smartUI.project", projectName);
 
-String buildName = System.getenv("CI") != null
-? System.getenv("CI_PROJECT_NAME") + "-" + System.getenv("CI_PIPELINE_ID")
-: "smartui-local-build";
-ltOptions.put("smartUI.build", buildName);
-ltOptions.put("smartUI.baseline", false);
-ltOptions.put("smartUI.cropStatusBar", true);
+        String buildName = System.getenv("CI") != null
+            ? System.getenv("CI_PROJECT_NAME") + "-" + System.getenv("CI_PIPELINE_ID")
+            : "smartui-local-build";
+        ltOptions.put("smartUI.build", buildName);
+        ltOptions.put("smartUI.baseline", false);
+        ltOptions.put("smartUI.cropStatusBar", true);
 
-browserOptions.setCapability("LT:Options", ltOptions);
+        browserOptions.setCapability("LT:Options", ltOptions);
 
-// GitLab Integration Capability
-if (githubURL != null) {
-Map<String, String> github = new HashMap<String, String>();
-github.put("url", githubURL);
-browserOptions.setCapability("github", github);
-System.out.println("GitLab URL received successfully: " + githubURL);
-}
+        // GitLab Integration Capability
+        if (githubURL != null) {
+            Map<String, String> github = new HashMap<String, String>();
+            github.put("url", githubURL);
+            browserOptions.setCapability("github", github);
+            System.out.println("GitLab URL received successfully: " + githubURL);
+        }
 
-String remoteUrl = "https://" + username + ":" + authkey + "@mobile-hub.lambdatest.com/wd/hub";
-driver = new RemoteWebDriver(new URL(remoteUrl), browserOptions);
-}
+        String remoteUrl = "https://" + username + ":" + authkey + "@mobile-hub.lambdatest.com/wd/hub";
+        driver = new RemoteWebDriver(new URL(remoteUrl), browserOptions);
+    }
 
-@Test
-public void testHomepageScreenshot() {
-// Navigate or perform actions
-((JavascriptExecutor) driver).executeScript("smartui.takeScreenshot=Homepage");
-}
+    @Test
+    public void testHomepageScreenshot() {
+        // Navigate or perform actions
+        ((JavascriptExecutor) driver).executeScript("smartui.takeScreenshot=Homepage");
+    }
 
-@Test
-public void testLoginScreenScreenshot() {
-// Navigate to login screen
-((JavascriptExecutor) driver).executeScript("smartui.takeScreenshot=LoginScreen");
-}
+    @Test
+    public void testLoginScreenScreenshot() {
+        // Navigate to login screen
+        ((JavascriptExecutor) driver).executeScript("smartui.takeScreenshot=LoginScreen");
+    }
 
-@AfterClass
-public void tearDown() {
-if (driver != null) {
-driver.quit();
-}
-}
+    @AfterClass
+    public void tearDown() {
+        if (driver != null) {
+            driver.quit();
+        }
+    }
 }
 ```
 

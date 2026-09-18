@@ -61,14 +61,14 @@ Consider these secret key names: `secretKey1` and `secretKey2`.
 ```yaml
 version: 0.1
 env:
-MyKey1: ${{.secrets.token}}
+  MyKey1: ${{.secrets.token}}
 
 runson: win
 testDiscovery:
-type: raw
-mode: remote
-args:
-featureFilePath: ${Path}
+  type: raw
+  mode: remote
+  args:
+    featureFilePath: ${Path}
 
 testRunnerCommand: npm run --username abc --password ${{.secrets.SecretKey2}}
 ```
@@ -130,12 +130,12 @@ autosplit: true
 concurrency: 2
 
 project:
-name: 'demo-project'
-id: '1abc2345-56de-7890-f1cg-h2ij34k56789'
+  name: 'demo-project'
+  id: '1abc2345-56de-7890-f1cg-h2ij34k56789'
 
 # highlight-start
 env:
-LT_SECRET_KEY: ${{.secrets.token}}
+  LT_SECRET_KEY: ${{.secrets.token}}
 # highlight-end
 ```
 

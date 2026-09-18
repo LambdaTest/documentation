@@ -83,8 +83,8 @@ If you already have a working curl command from Postman, documentation, or a tea
 
 ```bash
 curl -X POST https://your-app.com/api/telecom/recharge \
--H 'Content-Type: application/json' \
--d '{"mobile":"9876543210","amount":299,"type":"prepaid"}'
+  -H 'Content-Type: application/json' \
+  -d '{"mobile":"9876543210","amount":299,"type":"prepaid"}'
 ```
 
 3. Append your assertions in plain English right after the curl command, for example `confirm the response status is 201, the status field is 'success', and the amount is 299`.

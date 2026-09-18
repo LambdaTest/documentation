@@ -114,85 +114,85 @@ import java.net.MalformedURLException;
 import java.net.URL;
 
 public class vanilla_android {
-//highlight-next-line
-public static String userName = System.getenv("LT_USERNAME") == null ? "LT_USERNAME"  //Add LambdaTest username here
-: System.getenv("LT_USERNAME");
-//highlight-next-line
-public static String accessKey = System.getenv("LT_ACCESS_KEY") == null ? "LT_ACCESS_KEY" //Add LambdaTest accessKey here
-: System.getenv("LT_ACCESS_KEY");
+    //highlight-next-line
+    public static String userName = System.getenv("LT_USERNAME") == null ? "LT_USERNAME"  //Add LambdaTest username here
+            : System.getenv("LT_USERNAME");
+    //highlight-next-line
+    public static String accessKey = System.getenv("LT_ACCESS_KEY") == null ? "LT_ACCESS_KEY" //Add LambdaTest accessKey here
+            : System.getenv("LT_ACCESS_KEY");
 
-private static AppiumDriver driver;
+    private static AppiumDriver driver;
 
-public static void main(String args[]) throws MalformedURLException, InterruptedException {
+    public static void main(String args[]) throws MalformedURLException, InterruptedException {
 
-try {
-DesiredCapabilities capabilities = new DesiredCapabilities();
-capabilities.setCapability("deviceName", "Galaxy S20");
-capabilities.setCapability("platformVersion", "11");
-capabilities.setCapability("platformName", "Android");
-capabilities.setCapability("isRealMobile", true);
-//highlight-next-line
-capabilities.setCapability("app", "APP_URL");     //Enter your app url
-capabilities.setCapability("deviceOrientation", "PORTRAIT");
-capabilities.setCapability("build", "Java Vanilla - Android");
-capabilities.setCapability("name", "Sample Test Java");
-capabilities.setCapability("console", true);
-capabilities.setCapability("network", false);
-capabilities.setCapability("visual", true);
-capabilities.setCapability("devicelog", true);
+        try {
+            DesiredCapabilities capabilities = new DesiredCapabilities();
+            capabilities.setCapability("deviceName", "Galaxy S20");
+            capabilities.setCapability("platformVersion", "11");
+            capabilities.setCapability("platformName", "Android");
+            capabilities.setCapability("isRealMobile", true);
+            //highlight-next-line
+            capabilities.setCapability("app", "APP_URL");     //Enter your app url
+            capabilities.setCapability("deviceOrientation", "PORTRAIT");
+            capabilities.setCapability("build", "Java Vanilla - Android");
+            capabilities.setCapability("name", "Sample Test Java");
+            capabilities.setCapability("console", true);
+            capabilities.setCapability("network", false);
+            capabilities.setCapability("visual", true);
+            capabilities.setCapability("devicelog", true);
 
-driver = new AppiumDriver(new URL("https://" +userName + ":" + accessKey + "@mobile-hub.lambdatest.com/wd/hub"), capabilities);
+            driver = new AppiumDriver(new URL("https://" +userName + ":" + accessKey + "@mobile-hub.lambdatest.com/wd/hub"), capabilities);
 
-MobileElement color = (MobileElement) driver.findElement(MobileBy.id("com.lambdatest.proverbial:id/color"));
-color.click();
+            MobileElement color = (MobileElement) driver.findElement(MobileBy.id("com.lambdatest.proverbial:id/color"));
+            color.click();
 
-MobileElement text = (MobileElement) driver.findElement(MobileBy.id("com.lambdatest.proverbial:id/Text"));
-//Changes the text to proverbial
-text.click();
+            MobileElement text = (MobileElement) driver.findElement(MobileBy.id("com.lambdatest.proverbial:id/Text"));
+            //Changes the text to proverbial
+            text.click();
 
-//toast is visible
-MobileElement toast = (MobileElement) driver.findElement(MobileBy.id("com.lambdatest.proverbial:id/toast"));
-toast.click();
+            //toast is visible
+            MobileElement toast = (MobileElement) driver.findElement(MobileBy.id("com.lambdatest.proverbial:id/toast"));
+            toast.click();
 
-//notification is visible
-MobileElement notification = (MobileElement) driver.findElement(MobileBy.id("com.lambdatest.proverbial:id/notification"));
-notification.click();
+            //notification is visible
+            MobileElement notification = (MobileElement) driver.findElement(MobileBy.id("com.lambdatest.proverbial:id/notification"));
+            notification.click();
 
-//Open the geolocation page
-MobileElement geo = (MobileElement) driver.findElement(MobileBy.id("com.lambdatest.proverbial:id/geoLocation"));
-geo.click();
-Thread.sleep(5000);
+            //Open the geolocation page
+            MobileElement geo = (MobileElement) driver.findElement(MobileBy.id("com.lambdatest.proverbial:id/geoLocation"));
+            geo.click();
+            Thread.sleep(5000);
 
-//takes back to home page
-MobileElement el3 = (MobileElement) driver.findElementByAccessibilityId("Home");
+            //takes back to home page
+            MobileElement el3 = (MobileElement) driver.findElementByAccessibilityId("Home");
 
-driver.navigate().back();
-Thread.sleep(2000);
+            driver.navigate().back();
+            Thread.sleep(2000);
 
-//Takes to speed test page
-MobileElement speedtest = (MobileElement) driver.findElement(MobileBy.id("com.lambdatest.proverbial:id/speedTest"));
-speedtest.click();
-Thread.sleep(5000);
+            //Takes to speed test page
+            MobileElement speedtest = (MobileElement) driver.findElement(MobileBy.id("com.lambdatest.proverbial:id/speedTest"));
+            speedtest.click();
+            Thread.sleep(5000);
 
-driver.navigate().back();
+            driver.navigate().back();
 
-//Opens the browser
-MobileElement browser = (MobileElement) driver.findElement(MobileBy.AccessibilityId("Browser"));
-browser.click();
+            //Opens the browser
+            MobileElement browser = (MobileElement) driver.findElement(MobileBy.AccessibilityId("Browser"));
+            browser.click();
 
-MobileElement url = (MobileElement) driver.findElement(MobileBy.id("com.lambdatest.proverbial:id/url"));
-url.sendKeys("https://www.testmuai.com");
-MobileElement find = (MobileElement) driver.findElement(MobileBy.id("com.lambdatest.proverbial:id/find"));
-find.click();
+            MobileElement url = (MobileElement) driver.findElement(MobileBy.id("com.lambdatest.proverbial:id/url"));
+            url.sendKeys("https://www.testmuai.com");
+            MobileElement find = (MobileElement) driver.findElement(MobileBy.id("com.lambdatest.proverbial:id/find"));
+            find.click();
 
-} catch (AssertionError a) {
-((JavascriptExecutor) driver).executeScript("lambda-status=failed");
-a.printStackTrace();
-}
+        } catch (AssertionError a) {
+            ((JavascriptExecutor) driver).executeScript("lambda-status=failed");
+            a.printStackTrace();
+        }
 // The driver.quit statement is required, otherwise the test continues to execute, leading to a timeout.
-driver.quit();
-}
-}
+        driver.quit();
+    }
+    }
 ```
 
 ```java title="vanilla_ios.java"
@@ -208,94 +208,94 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.net.URL;
 
 public class vanilla_ios {
-//highlight-next-line
-public static String userName = System.getenv("LT_USERNAME") == null ? "LT_USERNAME"  //Add LambdaTest username here
-: System.getenv("LT_USERNAME");
-//highlight-next-line
-public static String accessKey = System.getenv("LT_ACCESS_KEY") == null ? "LT_ACCESS_KEY" //Add LambdaTest accessKey here
-: System.getenv("LT_ACCESS_KEY");
+    //highlight-next-line
+    public static String userName = System.getenv("LT_USERNAME") == null ? "LT_USERNAME"  //Add LambdaTest username here
+            : System.getenv("LT_USERNAME");
+    //highlight-next-line
+    public static String accessKey = System.getenv("LT_ACCESS_KEY") == null ? "LT_ACCESS_KEY" //Add LambdaTest accessKey here
+            : System.getenv("LT_ACCESS_KEY");
 
-public static final String URL = "https://" + userName + ":" + accessKey + "@mobile-hub.lambdatest.com/wd/hub";
-public static IOSDriver driver = null;
+    public static final String URL = "https://" + userName + ":" + accessKey + "@mobile-hub.lambdatest.com/wd/hub";
+    public static IOSDriver driver = null;
 
-public static void main(String[] args) throws Exception {
+    public static void main(String[] args) throws Exception {
 
-try {
-DesiredCapabilities caps = new DesiredCapabilities();
-caps.setCapability("platformVersion", "15");
-caps.setCapability("deviceName", "iPhone 12");
-caps.setCapability("isRealMobile", true);
-//highlight-next-line
-caps.setCapability("app", "APP_URL"); //Enter your app url
-caps.setCapability("platformName", "iOS");
-caps.setCapability("build", "Java Vanilla - iOS");
-caps.setCapability("name", "Sample Test Java");
-caps.setCapability("devicelog", true);
-caps.setCapability("network", false);
+       try {
+            DesiredCapabilities caps = new DesiredCapabilities();
+            caps.setCapability("platformVersion", "15");
+            caps.setCapability("deviceName", "iPhone 12");
+            caps.setCapability("isRealMobile", true);
+            //highlight-next-line
+            caps.setCapability("app", "APP_URL"); //Enter your app url
+            caps.setCapability("platformName", "iOS");
+            caps.setCapability("build", "Java Vanilla - iOS");
+            caps.setCapability("name", "Sample Test Java");
+            caps.setCapability("devicelog", true);
+            caps.setCapability("network", false);
 
-driver = new IOSDriver(new URL("https://" + userName + ":" + accessKey + "@beta-hub.lambdatest.com/wd/hub"), caps);
+        driver = new IOSDriver(new URL("https://" + userName + ":" + accessKey + "@beta-hub.lambdatest.com/wd/hub"), caps);
 
-Thread.sleep(2000);
+            Thread.sleep(2000);
 
-//Changes color
+            //Changes color
 
-driver.findElement(MobileBy.id("color")).click();
-Thread.sleep(1000);
+            driver.findElement(MobileBy.id("color")).click();
+            Thread.sleep(1000);
 
-//Back to black color
-driver.navigate().back();
+            //Back to black color
+            driver.navigate().back();
 
-Thread.sleep(1000);
+            Thread.sleep(1000);
 
-//Changes the text to proverbial
-driver.findElement(MobileBy.id("Text")).click();
-Thread.sleep(1000);
+            //Changes the text to proverbial
+            driver.findElement(MobileBy.id("Text")).click();
+            Thread.sleep(1000);
 
-//toast is visible
-driver.findElement(MobileBy.id("toast")).click();
-Thread.sleep(1000);
+            //toast is visible
+            driver.findElement(MobileBy.id("toast")).click();
+            Thread.sleep(1000);
 
-//notification is visible
-driver.findElement(MobileBy.id("notification")).click();
-Thread.sleep(2000);
+            //notification is visible
+            driver.findElement(MobileBy.id("notification")).click();
+            Thread.sleep(2000);
 
-//Open the geolocation page
-driver.findElement(MobileBy.id("geoLocation")).click();
-Thread.sleep(4000);
-driver.navigate().back();
-Thread.sleep(1000);
+            //Open the geolocation page
+            driver.findElement(MobileBy.id("geoLocation")).click();
+            Thread.sleep(4000);
+            driver.navigate().back();
+            Thread.sleep(1000);
 
-//Takes to speed test page
-driver.findElement(MobileBy.id("speedTest")).click();
-Thread.sleep(5000);
-driver.navigate().back();
-Thread.sleep(1000);
+            //Takes to speed test page
+            driver.findElement(MobileBy.id("speedTest")).click();
+            Thread.sleep(5000);
+            driver.navigate().back();
+            Thread.sleep(1000);
 
-//Opens the browser
-MobileElement browser = (MobileElement) driver.findElementByAccessibilityId("Browser");
-browser.click();
-Thread.sleep(3000);
+            //Opens the browser
+            MobileElement browser = (MobileElement) driver.findElementByAccessibilityId("Browser");
+            browser.click();
+            Thread.sleep(3000);
 
-WebDriverWait el7 =  new WebDriverWait(driver, 30);
-el7.until(ExpectedConditions.elementToBeClickable(MobileBy.id("url")));
-driver.findElementById("url").sendKeys("https://www.testmuai.com/");
+           WebDriverWait el7 =  new WebDriverWait(driver, 30);
+           el7.until(ExpectedConditions.elementToBeClickable(MobileBy.id("url")));
+           driver.findElementById("url").sendKeys("https://www.testmuai.com/");
 
-//Clicks on the text box
-WebDriverWait el = new WebDriverWait(driver,90);
-MobileElement el4 = (MobileElement) driver.findElementByAccessibilityId("find");
-el.until(ExpectedConditions.elementToBeClickable(el4));
-el4.click();
-el4.sendKeys("Lambdatest");
+            //Clicks on the text box
+            WebDriverWait el = new WebDriverWait(driver,90);
+            MobileElement el4 = (MobileElement) driver.findElementByAccessibilityId("find");
+            el.until(ExpectedConditions.elementToBeClickable(el4));
+            el4.click();
+            el4.sendKeys("Lambdatest");
 
-//((JavascriptExecutor) driver).executeScript("lambda-status=passed");
-driver.quit();
+            //((JavascriptExecutor) driver).executeScript("lambda-status=passed");
+            driver.quit();
 
-} catch (Exception t) {
-System.out.println(t);
-driver.quit();
+        } catch (Exception t) {
+           System.out.println(t);
+           driver.quit();
 
-}
-}
+       }
+    }
 }
 ```
 
@@ -309,35 +309,35 @@ The capabilities object in the sample code are defined as:
 
 ```java
 DesiredCapabilities capabilities = new DesiredCapabilities();
-capabilities.setCapability("deviceName", "Galaxy S20");
-capabilities.setCapability("platformVersion", "11");
-capabilities.setCapability("platformName", "Android");
-capabilities.setCapability("isRealMobile", true);
-//highlight-next-line
-capabilities.setCapability("app", "YOUR_APP_URL"); //Enter your app url
-capabilities.setCapability("deviceOrientation", "PORTRAIT");
-capabilities.setCapability("build", "Java Vanilla - Android");
-capabilities.setCapability("name", "Sample Test Java");
-capabilities.setCapability("console", true);
-capabilities.setCapability("network", false);
-capabilities.setCapability("visual", true);
-capabilities.setCapability("devicelog", true);
+            capabilities.setCapability("deviceName", "Galaxy S20");
+            capabilities.setCapability("platformVersion", "11");
+            capabilities.setCapability("platformName", "Android");
+            capabilities.setCapability("isRealMobile", true);
+            //highlight-next-line
+            capabilities.setCapability("app", "YOUR_APP_URL"); //Enter your app url
+            capabilities.setCapability("deviceOrientation", "PORTRAIT");
+            capabilities.setCapability("build", "Java Vanilla - Android");
+            capabilities.setCapability("name", "Sample Test Java");
+            capabilities.setCapability("console", true);
+            capabilities.setCapability("network", false);
+            capabilities.setCapability("visual", true);
+            capabilities.setCapability("devicelog", true);
 ```
 
 - You must set **isRealMobile** capability to `False` in the config file to run on **Virtual Devices**
 
 ```java
 DesiredCapabilities caps = new DesiredCapabilities();
-caps.setCapability("platformVersion", "15");
-caps.setCapability("deviceName", "iPhone 12");
-caps.setCapability("isRealMobile", true);
-//highlight-next-line
-caps.setCapability("app", "YOUR_APP_URL"); //Enter your app url
-caps.setCapability("platformName", "iOS");
-caps.setCapability("build", "Java Vanilla - iOS");
-caps.setCapability("name", "Sample Test Java");
-caps.setCapability("devicelog", true);
-caps.setCapability("network", false);
+            caps.setCapability("platformVersion", "15");
+            caps.setCapability("deviceName", "iPhone 12");
+            caps.setCapability("isRealMobile", true);
+            //highlight-next-line
+            caps.setCapability("app", "YOUR_APP_URL"); //Enter your app url
+            caps.setCapability("platformName", "iOS");
+            caps.setCapability("build", "Java Vanilla - iOS");
+            caps.setCapability("name", "Sample Test Java");
+            caps.setCapability("devicelog", true);
+            caps.setCapability("network", false);
 ```
 
 - You must add the generated **APP_URL** to the `app` capability in the config file.
@@ -374,8 +374,8 @@ The appium-skill package includes:
 appium-skill/
 ├── SKILL.md
 └── reference/
-├── playbook.md
-└── advanced-patterns.md
+    ├── playbook.md
+    └── advanced-patterns.md
 ```
 
 It provides structured guidance for:

@@ -35,66 +35,66 @@ The response will be in JSON format, containing an array of objects representing
 
 ```bash
 {
-"message": "",
-"platforms": {
-"desktop": [
-{
-"platform": "ubuntu 20",
-"browsers": [
-{
-"name": "Chrome",
-"version": "99.0"
-},
+    "message": "",
+    "platforms": {
+        "desktop": [
+            {
+                "platform": "ubuntu 20",
+                "browsers": [
+                    {
+                        "name": "Chrome",
+                        "version": "99.0"
+                    },
 
-{
-"name": "Firefox",
-"version": "99.0"
-},
+                    {
+                        "name": "Firefox",
+                        "version": "99.0"
+                    },
 
-{
-"name": "MicrosoftEdge",
-"version": "canary"
-},
+                    {
+                        "name": "MicrosoftEdge",
+                        "version": "canary"
+                    },
 
-{
-"name": "Opera",
-"version": "85.0"
-},
-{
-"name": "Chrome",
-"version": "latest"
-},
-{
-"name": "Firefox",
-"version": "latest"
-},
-{
-"name": "MicrosoftEdge",
-"version": "latest"
-},
-{
-"name": "Opera",
-"version": "latest"
-}
-],
-"resolutions": [
-"1024x768",
-"1280x800",
-"1280x1024",
-"1366x768",
-"1440x900",
-"1680x1050",
-"1600x1200",
-"1920x1200",
-"1920x1080",
-"2048x1536",
-"2560x1440",
-"1280x960"
-]
-},
-]
-},
-"status": 200
+                    {
+                        "name": "Opera",
+                        "version": "85.0"
+                    },
+                    {
+                        "name": "Chrome",
+                        "version": "latest"
+                    },
+                    {
+                        "name": "Firefox",
+                        "version": "latest"
+                    },
+                    {
+                        "name": "MicrosoftEdge",
+                        "version": "latest"
+                    },
+                    {
+                        "name": "Opera",
+                        "version": "latest"
+                    }
+                ],
+                "resolutions": [
+                    "1024x768",
+                    "1280x800",
+                    "1280x1024",
+                    "1366x768",
+                    "1440x900",
+                    "1680x1050",
+                    "1600x1200",
+                    "1920x1200",
+                    "1920x1080",
+                    "2048x1536",
+                    "2560x1440",
+                    "1280x960"
+                ]
+            },
+        ]
+    },
+    "status": 200
 }
 ```
 
@@ -102,8 +102,8 @@ The response will be in JSON format, containing an array of objects representing
 
 ```bash
 {
-"platform": "windows 10" #optional
-"stable":  true  #if passed we will return only stable version of browsers
+ "platform": "windows 10" #optional
+ "stable":  true  #if passed we will return only stable version of browsers
 }
 ```
 
@@ -113,42 +113,42 @@ The response will be in JSON format, containing an array of objects representing
 
 ```bash
 {
-"message": "",
-"platforms": {
-"desktop": [
-{
-"platform": "Windows 10",
-"browsers": [
-{
-"name": "Firefox",
-"version": "99.0"
-},
-{
-"name": "Firefox",
-"version": "100.0"
-},
-{
-"name": "Firefox",
-"version": "latest"
-}
-],
-"resolutions": [
-"1024x768",
-"1280x800",
-"1280x1024",
-"1366x768",
-"1440x900",
-"1680x1050",
-"1600x1200",
-"1920x1200",
-"1920x1080",
-"2048x1536",
-"2560x1440"
-]
-}
-]
-},
-"status": 200
+   "message": "",
+   "platforms": {
+       "desktop": [
+           {
+               "platform": "Windows 10",
+               "browsers": [
+                    {
+                       "name": "Firefox",
+                       "version": "99.0"
+                    },
+                    {
+                       "name": "Firefox",
+                       "version": "100.0"
+                    },
+                    {
+                       "name": "Firefox",
+                       "version": "latest"
+                    }
+                ],
+                "resolutions": [
+                    "1024x768",
+                    "1280x800",
+                    "1280x1024",
+                    "1366x768",
+                    "1440x900",
+                    "1680x1050",
+                    "1600x1200",
+                    "1920x1200",
+                    "1920x1080",
+                    "2048x1536",
+                    "2560x1440"
+                ]
+            }
+        ]
+    },
+   "status": 200
 }
 ```
 

@@ -97,23 +97,23 @@ Once, you have setup the `reporter` then the following code snippet should be ad
 
 ```js title=lambdatest-
 try {
-const response = JSON.parse(await ltPage.evaluate(
-(_, data) => {
-return window.eval(data)
-},
-`lambdatest_action: ${JSON.stringify({ action: 'getTestDetails' })}`
-))
+        const response = JSON.parse(await ltPage.evaluate(
+          (_, data) => {
+            return window.eval(data)
+          },
+          `lambdatest_action: ${JSON.stringify({ action: 'getTestDetails' })}`
+        ))
 
-if (response?.data?.test_id) {
-testInfo.annotations.push({
-type: 'lt_test_id',
-description: response.data.test_id,
-})
-console.log('LambdaTest Test ID:', response.data.test_id)
-}
-} catch (err) {
-console.warn('Could not fetch LambdaTest test details:', err.message)
-}
+        if (response?.data?.test_id) {
+          testInfo.annotations.push({
+            type: 'lt_test_id',
+            description: response.data.test_id,
+          })
+          console.log('LambdaTest Test ID:', response.data.test_id)
+        }
+      } catch (err) {
+        console.warn('Could not fetch LambdaTest test details:', err.message)
+      }
 ```
 
 #### Step 3 - Execute the tests using HyperExecute
@@ -134,12 +134,12 @@ Now, once the package has been installed, you need to add the following code in 
 
 ```javascript
 exports.config = {
-// ...
-services: [
-["lambdatest-test-case-analytics", {}], // Add the service
-// ... other services
-],
-// ...
+  // ...
+  services: [
+    ["lambdatest-test-case-analytics", {}], // Add the service
+    // ... other services
+  ],
+  // ...
 };
 ```
 

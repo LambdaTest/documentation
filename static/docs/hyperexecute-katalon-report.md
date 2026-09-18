@@ -22,9 +22,9 @@ Add the following configurations in your YAML file:
 ```yaml
 report: true
 partialReports:
-type: html
-location: Reports/
-frameworkName: katalon
+  type: html
+  location: Reports/
+  frameworkName: katalon
 ```
 
 **Step 3:** Now execute your job by triggering the HyperExecute CLI. You can visit the HyperExecute dashboard to download the report after job completion.
