@@ -166,10 +166,6 @@ Sharing uses the existing Test Manager permissions. There is no separate permiss
 
 If you don't have create test case permission in a selected receiving project, that project is skipped and the share completes for the others. For details on roles, see [RBAC Roles and Permissions](/support/docs/rbac-roles-and-permissions/).
 
-### Restricted and isolated projects
-
-Restricted and isolated projects can't share test cases and can't receive them. Their sharing settings stay off and can't be turned on.
-
 ---
 
 ## Turn on sharing in project settings
@@ -381,7 +377,6 @@ Deleting a shared test case removes it from every project it is shared with, alo
 - **Same organization only.** Test cases can be shared only with projects in the same organization.
 - **Up to 10 projects and 500 test case and project pairs per share action.** Larger selections need to be split into batches.
 - **No sharing onward.** A test case shared into a project can't be shared from that project to another.
-- **Restricted and isolated projects** can't share or receive test cases.
 - **Test Run Insights** includes only test cases the project owns.
 - **Unsharing and deleting remove results permanently** in receiving projects.
 
