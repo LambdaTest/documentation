@@ -75,8 +75,12 @@ function toPlainMarkdown(body) {
   // 1. Shield fenced code blocks (with any leading indent) so later transforms
   //    never touch their content.
   const codeBlocks = [];
-  body = body.replace(/^[ \t]*```[\s\S]*?```/gm, (block) => {
-    codeBlocks.push(block.replace(/^[ \t]+/gm, '')); // de-indent nested fences
+  body = body.replace(/^([ \t]*)```[\s\S]*?```/gm, (block, fenceIndent) => {
+    // De-indent nested fences the CommonMark way: remove at most the fence's
+    // own indentation from each line, so indentation inside the code (YAML,
+    // Python) is kept.
+    const outdent = new RegExp(`^[ \\t]{0,${fenceIndent.length}}`, 'gm');
+    codeBlocks.push(block.replace(outdent, ''));
     return `\u0000CODE${codeBlocks.length - 1}\u0000`;
   });
 
