@@ -21,7 +21,6 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
-import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -64,17 +63,11 @@ The code sample for generating Lighthouse performance metrics in a Playwright te
 Before you write the test, install the library and enable Lighthouse in your project environment.
 
 - Ensure that you have the Playwright Lighthouse Library installed in your web project.
-
-  <VerifiedTag value="Verified" />
-
   ```bash
   npm install playwright-lighthouse
   ```
 
 - Export the *LIGHTHOUSE_LAMBDATEST* environment variable to your project environment.
-
-  <VerifiedTag value="Verified" />
-
   ```bash
   export LIGHTHOUSE_LAMBDATEST='true'
   ```
@@ -89,9 +82,6 @@ Generating a Lighthouse report within the test can increase the test duration. G
 :::
 
 The JavaScript snippet below runs the `lighthouseReport` action against a URL from inside the test.
-
-<VerifiedTag value="Verified" />
-
 ```js title="playwright-lighthouse-report.js"
 await page.evaluate(_ => {}, `lambdatest_action: ${JSON.stringify({
   action: 'lighthouseReport',
@@ -109,8 +99,6 @@ Use this approach to audit pages that require a login by passing an authenticati
 <Tabs className="docs__val">
 <TabItem value="win" label="Windows" default>
 
-<VerifiedTag value="Verified" />
-
 ```javascript
 await page.evaluate(() => {}, `lambdatest_action: ${JSON.stringify({ 
   action: 'lighthouseReport', 
@@ -122,8 +110,6 @@ await page.evaluate(() => {}, `lambdatest_action: ${JSON.stringify({
 </TabItem>
 
 <TabItem value="mac" label="macOS" default>
-
-<VerifiedTag value="Verified" />
 
 ```javascript
 await page.evaluate(() => {}, `lambdatest_action: ${JSON.stringify({ 
@@ -140,8 +126,6 @@ await page.evaluate(() => {}, `lambdatest_action: ${JSON.stringify({
 ***
 
 The script below runs Playwright automation with the Lighthouse library on TestMu AI. It navigates to the DuckDuckGo search engine, searches for the term "Playwright", then runs a Lighthouse audit on `https://duckduckgo.com` with defined performance thresholds and report formats.
-
-<VerifiedTag value="Verified" />
 
 ```javascript reference title="playwright-lighthouse-report.js"
 https://github.com/LambdaTest/playwright-sample/blob/main/playwright-lighthouse-report.js
@@ -161,9 +145,6 @@ You need your TestMu AI credentials to run automation scripts on TestMu AI. To o
 
 <TabItem value="bash" label="Linux / MacOS" default>
   <div className="lambdatest__codeblock">
-
-  <VerifiedTag value="Verified" />
-
   <CodeBlock className="language-bash">
   {`export LT_USERNAME=${ YOUR_LAMBDATEST_USERNAME()}
 export LT_ACCESS_KEY=${ YOUR_LAMBDATEST_ACCESS_KEY()}`}
@@ -175,9 +156,6 @@ export LT_ACCESS_KEY=${ YOUR_LAMBDATEST_ACCESS_KEY()}`}
 <TabItem value="powershell" label="Windows" default>
 
   <div className="lambdatest__codeblock">
-
-  <VerifiedTag value="Verified" />
-
   <CodeBlock className="language-powershell">
   {`set LT_USERNAME=${ YOUR_LAMBDATEST_USERNAME()}
 set LT_ACCESS_KEY=${ YOUR_LAMBDATEST_ACCESS_KEY()}`}
@@ -191,8 +169,6 @@ set LT_ACCESS_KEY=${ YOUR_LAMBDATEST_ACCESS_KEY()}`}
 ***
 
 Run the following command in the terminal, replacing the placeholder with the path to your test file.
-
-<VerifiedTag value="Verified" />
 
 ```bash
 node RELATIVE_PATH_OF_YOUR_TEST_FILE
@@ -213,3 +189,4 @@ Continue with the guides below to build out your Playwright test coverage on Tes
 - [Get started with Playwright testing on TestMu AI](/support/docs/playwright-testing/) covers the base setup for cloud runs.
 - [Set up Playwright test execution on TestMu AI](/support/docs/playwright-test-execution-setup/) walks through configuring a cloud run.
 - [Configure Playwright capabilities](/support/docs/capabilities-for-playwright/) lists every capability you can set for a test.
+

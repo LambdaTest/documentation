@@ -10,8 +10,6 @@
     "generate-static-md": "node scripts/generate-static-md.js",
     "generate-llms-txt": "node scripts/generate-llms-txt.js",
     "generate-skill-index": "node scripts/generate-skill-index.js",
-    "sitemap-exclusions": "node scripts/sitemap-exclusions.js",
-    "sitemap-live-check": "node scripts/check-sitemap-live.js",
     "build": "docusaurus build",
     "swizzle": "docusaurus swizzle",
     "deploy": "docusaurus deploy",

@@ -17,8 +17,6 @@ canonical: https://www.testmuai.com/support/docs/cypress-cli-commands/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
-import VerifiedTag from '@site/src/component/verifiedTag';
-
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
        "@context": "https://schema.org",
@@ -43,102 +41,6 @@ import VerifiedTag from '@site/src/component/verifiedTag';
     }}
 ></script>
 
-<script type="application/ld+json"
-  dangerouslySetInnerHTML={{ __html: JSON.stringify({
-    "@context": "https://schema.org",
-    "@type": [
-      "Article",
-      "TechArticle"
-    ],
-    "mainEntityOfPage": {
-      "@type": "WebPage",
-      "@id": "https://www.testmuai.com/support/docs/cypress-cli-commands/"
-    },
-    "headline": "List of TestMu AI Cypress CLI Commands",
-    "description": "List of all the commands and arguments supported by TestMu AI-Cypress CLI.",
-    "url": "https://www.testmuai.com/support/docs/cypress-cli-commands/",
-    "image": {
-      "@type": "ImageObject",
-      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
-      "width": 1200,
-      "height": 630
-    },
-    "inLanguage": "en",
-    "articleSection": "Web Automation",
-    "keywords": [
-      "cypress cli commands",
-      "testmu ai cypress cli commands",
-      "testmu ai cypress cli flags"
-    ],
-    "proficiencyLevel": "Beginner",
-    "author": {
-      "@type": "Organization",
-      "@id": "https://www.testmuai.com/#organization",
-      "name": "TestMu AI",
-      "url": "https://www.testmuai.com/"
-    },
-    "publisher": {
-      "@type": "Organization",
-      "@id": "https://www.testmuai.com/#organization",
-      "name": "TestMu AI",
-      "alternateName": [
-        "TestMuAI",
-        "TestMu",
-        "LambdaTest"
-      ],
-      "url": "https://www.testmuai.com/",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://www.testmuai.com/logo.png"
-      },
-      "sameAs": [
-        "https://www.linkedin.com/company/testmu-ai/",
-        "https://x.com/testmuai",
-        "https://www.youtube.com/@TestMuAI"
-      ]
-    },
-    "hasPart": [
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "To use any command in the TestMu AI-Cypress CLI, follow this basic syntax",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "Shell",
-        "text": "lambdatest-cypress <command> [options]"
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "init command",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "text",
-        "text": "lambdatest-cypress init"
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "run command",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "Shell",
-        "text": "lambdatest-cypress run"
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "build-info command",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "Shell",
-        "text": "lambdatest-cypress build-info"
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "build-stop command",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "Shell",
-        "text": "lambdatest-cypress build-stop"
-      }
-    ],
-    "dateModified": "2026-09-09T19:13:32+05:30"
-  }) }}
-/>
-
-
 # Cypress CLI Commands Supported on TestMu AI
 ***
 
@@ -148,8 +50,6 @@ When you run Cypress tests on TestMu AI, the `lambdatest-cypress` CLI is how you
 ***
 
 Every TestMu AI Cypress CLI command follows the same pattern: the CLI name, a command, then optional flags. Use this basic syntax as the template for the commands documented below.
-
-<VerifiedTag value="Verified" />
 
 ```bash
 lambdatest-cypress <command> [options]
@@ -173,8 +73,6 @@ The table below lists the top-level commands and Visual UI arguments available a
 ***
 
 Run the `init` command to generate an initial TestMu AI configuration file for your project. It scaffolds the config and reporter files the CLI needs before its first run.
-
-<VerifiedTag value="Verified" />
 
 ```bash
 lambdatest-cypress init
@@ -200,8 +98,6 @@ For detailed examples of each Cypress flag, see [how to configure Cypress run se
 :::
 
 To start running the test build, use the command below.
-
-<VerifiedTag value="Verified" />
 
 ```bash
 lambdatest-cypress run
@@ -266,8 +162,6 @@ The table below lists the additional flags available with the `run` command, alo
 
 Use the `build-info` command to fetch details about a specific build, such as its status and session breakdown, from the terminal.
 
-<VerifiedTag value="Verified" />
-
 ```bash
 lambdatest-cypress build-info
 ```
@@ -286,8 +180,6 @@ The table below lists the additional arguments available with the `build-info` c
 ***
 
 Use the `build-stop` command to stop all the tests in a build, either by session id or by targeting the last test session.
-
-<VerifiedTag value="Verified" />
 
 ```bash
 lambdatest-cypress build-stop

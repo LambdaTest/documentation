@@ -30,8 +30,6 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 
-import VerifiedTag from '@site/src/component/verifiedTag';
-
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
        "@context": "https://schema.org",
@@ -55,75 +53,6 @@ import VerifiedTag from '@site/src/component/verifiedTag';
       })
     }}
 ></script>
-
-<script type="application/ld+json"
-  dangerouslySetInnerHTML={{ __html: JSON.stringify({
-    "@context": "https://schema.org",
-    "@type": [
-      "Article",
-      "TechArticle"
-    ],
-    "mainEntityOfPage": {
-      "@type": "WebPage",
-      "@id": "https://www.testmuai.com/support/docs/smartui-pdf-comparison/"
-    },
-    "headline": "SmartUI Visual Regression Testing for PDF Files",
-    "description": "In this documentation, learn how to perform Visual Regression testing of PDFs using SmartUI.",
-    "url": "https://www.testmuai.com/support/docs/smartui-pdf-comparison/",
-    "image": {
-      "@type": "ImageObject",
-      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
-      "width": 1200,
-      "height": 630
-    },
-    "inLanguage": "en",
-    "articleSection": "Documentation",
-    "keywords": [
-      "Visual Regression",
-      "Visual Regression Testing Guide",
-      "Visual Regression Test Automation"
-    ],
-    "proficiencyLevel": "Beginner",
-    "dependencies": "Familiarity with HTTP APIs is essential.; Visit the TestMu AI SmartUI page and log in with your credentials.; Obtain your LT_USERNAME and LT_ACCESS_KEY by clicking on the Access Key button, located at the top right corner of your dashboard..",
-    "author": {
-      "@type": "Organization",
-      "@id": "https://www.testmuai.com/#organization",
-      "name": "TestMu AI",
-      "url": "https://www.testmuai.com/"
-    },
-    "publisher": {
-      "@type": "Organization",
-      "@id": "https://www.testmuai.com/#organization",
-      "name": "TestMu AI",
-      "alternateName": [
-        "TestMuAI",
-        "TestMu",
-        "LambdaTest"
-      ],
-      "url": "https://www.testmuai.com/",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://www.testmuai.com/logo.png"
-      },
-      "sameAs": [
-        "https://www.linkedin.com/company/testmu-ai/",
-        "https://x.com/testmuai",
-        "https://www.youtube.com/@TestMuAI"
-      ]
-    },
-    "hasPart": [
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "Here's an example of a project token",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "Shell",
-        "text": "projectToken = \"123456#1234abcd-****-****-****-************\""
-      }
-    ],
-    "dateModified": "2026-09-09T19:10:37+05:30"
-  }) }}
-/>
-
 
 # SmartUI PDF Testing
 
@@ -170,8 +99,6 @@ To initiate a SmartUI PDF Comparison Project, adhere to the following instructio
 
 Once your project is active, retrieve your `Project Token` from the application. Here's an example of a project token:
 
-<VerifiedTag value="Verified" />
-
 ```bash
 projectToken = "123456#1234abcd-****-****-****-************"
 ```
@@ -203,8 +130,6 @@ Only files in `.pdf` format are compatible with this feature.
 ### API Request Example
 
 Here's a sample API request using cURL:
-
-<VerifiedTag value="Verified" />
 
 ```bash
 curl -X POST "YOUR_API_ENDPOINT" \
@@ -265,9 +190,6 @@ The API will return a JSON response containing:
 - Use consistent naming conventions
 
 **Example:**
-
-<VerifiedTag value="Verified" />
-
 ```bash
 buildName="PDF-Comparison-v1.0-$(date +%Y%m%d)"
 ```
@@ -405,8 +327,6 @@ For the Java SDK you will also need:
 
 First, clone the sample project to get started:
 
-<VerifiedTag value="Verified" />
-
 ```bash
 git clone https://github.com/LambdaTest/junit-selenium-sample.git
 cd junit-selenium-sample
@@ -415,8 +335,6 @@ cd junit-selenium-sample
 ### Install the SmartUI Java SDK
 
 Add the SmartUI Java SDK to your `pom.xml`:
-
-<VerifiedTag value="Verified" />
 
 ```xml
 <dependency>
@@ -428,8 +346,6 @@ Add the SmartUI Java SDK to your `pom.xml`:
 
 Then compile your project:
 
-<VerifiedTag value="Verified" />
-
 ```bash
 mvn clean compile
 ```
@@ -438,8 +354,6 @@ mvn clean compile
 
 <Tabs className='docs__val' groupId='language'>
 <TabItem value='MacOS/Linux' label='MacOS/Linux' default>
-
-<VerifiedTag value="Verified" />
 
 ```bash
 export LT_USERNAME="${YOUR_LAMBDATEST_USERNAME}"
@@ -450,8 +364,6 @@ export PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
 </TabItem>
 <TabItem value='Windows' label='Windows - CMD'>
 
-<VerifiedTag value="Verified" />
-
 ```bash
 set LT_USERNAME="${YOUR_LAMBDATEST_USERNAME}"
 set LT_ACCESS_KEY="${YOUR_LAMBDATEST_ACCESS_KEY}"
@@ -460,8 +372,6 @@ set PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
 
 </TabItem>
 <TabItem value='PowerShell' label='PowerShell'>
-
-<VerifiedTag value="Verified" />
 
 ```powershell
 $env:LT_USERNAME="${YOUR_LAMBDATEST_USERNAME}"
@@ -483,8 +393,6 @@ You can upload PDFs in two modes:
 Upload pre-existing PDFs from your local machine:
 
 "> 📁 **Sample File**: [`SmartuiPdfLocalTest.java`](https://github.com/LambdaTest/junit-selenium-sample/blob/master/src/test/java/com/smartuiPdf/SmartuiPdfLocalTest.java)
-
-<VerifiedTag value="Verified" />
 
 ```java
 
@@ -514,8 +422,6 @@ public class SmartuiPdfLocalTest {
 Upload PDFs downloaded during <BrandName /> cloud test execution:
 
 "> 📁 **Sample File**: [`SmartuiPdfCloudTest.java`](https://github.com/LambdaTest/junit-selenium-sample/blob/master/src/test/java/com/smartuiPdf/SmartuiPdfCloudTest.java)
-
-<VerifiedTag value="Verified" />
 
 ```java
 
@@ -561,8 +467,6 @@ public class SmartuiPdfCloudTest {
 
 ### Run your tests
 
-<VerifiedTag value="Verified" />
-
 ```bash
 mvn test
 ```
@@ -570,8 +474,6 @@ mvn test
 ### Advanced Java SDK Usage
 
 #### Batch Upload Example
-
-<VerifiedTag value="Verified" />
 
 ```java
 public class SmartuiPdfBatchTest {
@@ -600,8 +502,6 @@ public class SmartuiPdfBatchTest {
 ```
 
 #### Error Handling
-
-<VerifiedTag value="Verified" />
 
 ```java
 public class SmartuiPdfErrorHandling {
@@ -646,9 +546,6 @@ public class SmartuiPdfErrorHandling {
 - Document PDF sources and purposes
 
 **Example:**
-
-<VerifiedTag value="Verified" />
-
 ```java
 String[] pdfPaths = {
     "documents/reports/report-v1.0.pdf",
@@ -676,9 +573,6 @@ String[] pdfPaths = {
 - Use consistent naming conventions
 
 **Example:**
-
-<VerifiedTag value="Verified" />
-
 ```java
 config.withBuildName("PDF-Comparison-v1.0-" + LocalDate.now());
 ```
@@ -734,17 +628,11 @@ config.withBuildName("PDF-Comparison-v1.0-" + LocalDate.now());
 
 **Solutions**:
 1. Verify PDF file is valid and not corrupted:
-
-   <VerifiedTag value="Verified" />
-
    ```bash
    file document.pdf
    ```
 
 2. Check file path is correct:
-
-   <VerifiedTag value="Verified" />
-
    ```java
    File pdfFile = new File("path/to/document.pdf");
    if (!pdfFile.exists()) {
@@ -757,9 +645,6 @@ config.withBuildName("PDF-Comparison-v1.0-" + LocalDate.now());
 4. Check network connectivity to <BrandName /> servers
 
 5. Verify PROJECT_TOKEN is set correctly:
-
-   <VerifiedTag value="Verified" />
-
    ```bash
    echo $PROJECT_TOKEN
    ```
@@ -796,17 +681,11 @@ config.withBuildName("PDF-Comparison-v1.0-" + LocalDate.now());
 
 **Solutions**:
 1. Enable result fetching:
-
-   <VerifiedTag value="Verified" />
-
    ```java
    config.withFetchResult(true);
    ```
 
 2. Check upload response:
-
-   <VerifiedTag value="Verified" />
-
    ```java
    FormattedResults result = pdfUploader.uploadPDF(pdfPath);
    if (result == null) {
@@ -833,9 +712,6 @@ config.withBuildName("PDF-Comparison-v1.0-" + LocalDate.now());
 **Solutions**:
 1. Check latest version on [Maven Central](https://mvnrepository.com/artifact/io.github.lambdatest/lambdatest-java-sdk)
 2. Clear Maven cache:
-
-   <VerifiedTag value="Verified" />
-
    ```bash
    mvn clean
    ```
@@ -857,9 +733,6 @@ config.withBuildName("PDF-Comparison-v1.0-" + LocalDate.now());
 
 **Solutions**:
 1. Implement individual error handling:
-
-   <VerifiedTag value="Verified" />
-
    ```java
    for (String pdfPath : pdfPaths) {
        try {
@@ -916,8 +789,6 @@ For the CLI, familiarity with command-line tools is essential.
 
 Install the CLI globally using npm:
 
-<VerifiedTag value="Verified" />
-
 ```bash
 npm install -g @lambdatest/smartui-cli
 ```
@@ -926,8 +797,6 @@ npm install -g @lambdatest/smartui-cli
 
 <Tabs className='docs__val' groupId='language'>
 <TabItem value='MacOS/Linux' label='MacOS/Linux' default>
-
-<VerifiedTag value="Verified" />
 
 ```bash
 export LT_USERNAME="${YOUR_LAMBDATEST_USERNAME}"
@@ -938,8 +807,6 @@ export PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
 </TabItem>
 <TabItem value='Windows' label='Windows - CMD'>
 
-<VerifiedTag value="Verified" />
-
 ```bash
 set LT_USERNAME="${YOUR_LAMBDATEST_USERNAME}"
 set LT_ACCESS_KEY="${YOUR_LAMBDATEST_ACCESS_KEY}"
@@ -948,8 +815,6 @@ set PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
 
 </TabItem>
 <TabItem value='PowerShell' label='PowerShell'>
-
-<VerifiedTag value="Verified" />
 
 ```powershell
 $env:LT_USERNAME="${YOUR_LAMBDATEST_USERNAME}"
@@ -965,8 +830,6 @@ $env:PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
 ### Upload PDFs Using CLI
 
 Use the `upload-pdf` command to upload one or multiple PDF files from a directory:
-
-<VerifiedTag value="Verified" />
 
 ```bash
 smartui upload-pdf <directory_or_filename> [options]
@@ -985,15 +848,11 @@ smartui upload-pdf <directory_or_filename> [options]
 
 Upload all PDFs from a folder and name the build:
 
-<VerifiedTag value="Verified" />
-
 ```bash
 smartui upload-pdf ./pdfs/ --buildName "Release-v2.1"
 ```
 
 Upload a single PDF file:
-
-<VerifiedTag value="Verified" />
 
 ```bash
 smartui upload-pdf ./document.pdf --buildName "Single-PDF-Test"
@@ -1001,15 +860,11 @@ smartui upload-pdf ./document.pdf --buildName "Single-PDF-Test"
 
 Fetch results and save to a file:
 
-<VerifiedTag value="Verified" />
-
 ```bash
 smartui upload-pdf ./spec.pdf --fetch-results results.json
 ```
 
 Upload with custom project token:
-
-<VerifiedTag value="Verified" />
 
 ```bash
 smartui upload-pdf ./pdfs/ --projectToken "123456#1234abcd-****-****-****-************" --buildName "Custom-Build"
@@ -1021,8 +876,6 @@ smartui upload-pdf ./pdfs/ --projectToken "123456#1234abcd-****-****-****-******
 
 Process multiple directories:
 
-<VerifiedTag value="Verified" />
-
 ```bash
 smartui upload-pdf ./documents/ --buildName "Batch-1"
 smartui upload-pdf ./reports/ --buildName "Batch-2"
@@ -1031,8 +884,6 @@ smartui upload-pdf ./reports/ --buildName "Batch-2"
 #### CI/CD Integration
 
 Example for GitHub Actions:
-
-<VerifiedTag value="Verified" />
 
 ```yaml
 - name: Upload PDFs to SmartUI
@@ -1081,9 +932,6 @@ Example for GitHub Actions:
 - Use consistent naming conventions
 
 **Example:**
-
-<VerifiedTag value="Verified" />
-
 ```bash
 smartui upload-pdf ./pdfs/ --buildName "Release-v1.0-$(date +%Y%m%d)"
 ```
@@ -1132,17 +980,11 @@ smartui upload-pdf ./pdfs/ --buildName "Release-v1.0-$(date +%Y%m%d)"
 
 **Solutions**:
 1. Verify PDF file is valid and not corrupted:
-
-   <VerifiedTag value="Verified" />
-
    ```bash
    file document.pdf
    ```
 
 2. Check file path is correct:
-
-   <VerifiedTag value="Verified" />
-
    ```bash
    ls -la ./pdfs/
    ```
@@ -1152,17 +994,11 @@ smartui upload-pdf ./pdfs/ --buildName "Release-v1.0-$(date +%Y%m%d)"
 4. Check network connectivity to <BrandName /> servers
 
 5. Verify PROJECT_TOKEN is set correctly:
-
-   <VerifiedTag value="Verified" />
-
    ```bash
    echo $PROJECT_TOKEN
    ```
 
 6. Verify SmartUI CLI is installed:
-
-   <VerifiedTag value="Verified" />
-
    ```bash
    smartui --version
    ```
@@ -1199,17 +1035,11 @@ smartui upload-pdf ./pdfs/ --buildName "Release-v1.0-$(date +%Y%m%d)"
 
 **Solutions**:
 1. Install SmartUI CLI:
-
-   <VerifiedTag value="Verified" />
-
    ```bash
    npm install -g @lambdatest/smartui-cli
    ```
 
 2. Verify npm is available:
-
-   <VerifiedTag value="Verified" />
-
    ```bash
    npm --version
    ```

@@ -28,8 +28,6 @@ import NewTag from '../src/component/newTag';
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 
-import VerifiedTag from '@site/src/component/verifiedTag';
-
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
@@ -57,286 +55,6 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       })
     }}
 ></script>
-
-<script type="application/ld+json"
-  dangerouslySetInnerHTML={{ __html: JSON.stringify({
-    "@context": "https://schema.org",
-    "@type": [
-      "Article",
-      "TechArticle"
-    ],
-    "mainEntityOfPage": {
-      "@type": "WebPage",
-      "@id": "https://www.testmuai.com/support/docs/smartui-selenium-js-sdk/"
-    },
-    "headline": "Integrate SmartUI SDK with Selenium-JavaScript",
-    "description": "In this documentation, learn how integrate your Selenium JavaScript automated tests with TestMu AI's SmartUI.",
-    "url": "https://www.testmuai.com/support/docs/smartui-selenium-js-sdk/",
-    "image": {
-      "@type": "ImageObject",
-      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
-      "width": 1200,
-      "height": 630
-    },
-    "inLanguage": "en",
-    "articleSection": "SmartUI",
-    "keywords": [
-      "Visual Regression",
-      "Visual Regression Testing Guide",
-      "Visual Regression Test Automation"
-    ],
-    "proficiencyLevel": "Beginner",
-    "dependencies": "Basic understanding of Command Line Interface and Selenium is required.; Login to TestMu AI SmartUI with your credentials..",
-    "author": {
-      "@type": "Organization",
-      "@id": "https://www.testmuai.com/#organization",
-      "name": "TestMu AI",
-      "url": "https://www.testmuai.com/"
-    },
-    "publisher": {
-      "@type": "Organization",
-      "@id": "https://www.testmuai.com/#organization",
-      "name": "TestMu AI",
-      "alternateName": [
-        "TestMuAI",
-        "TestMu",
-        "LambdaTest"
-      ],
-      "url": "https://www.testmuai.com/",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://www.testmuai.com/logo.png"
-      },
-      "sameAs": [
-        "https://www.linkedin.com/company/testmu-ai/",
-        "https://x.com/testmuai",
-        "https://www.youtube.com/@TestMuAI"
-      ]
-    },
-    "hasPart": [
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "Step 1: Create/Update your test",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "Shell",
-        "codeRepository": "https://github.com/LambdaTest/smartui-node-sample",
-        "text": "git clone https://github.com/LambdaTest/smartui-node-sample\ncd smartui-node-sample/sdk"
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "Step 2: Install the Dependencies",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "Shell",
-        "text": "npm install @lambdatest/smartui-cli @lambdatest/selenium-driver selenium-webdriver"
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "Step 3: Configure your Project Token",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "Shell",
-        "text": "export PROJECT_TOKEN=123456#1234abcd-****-****-****-************\""
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "Step 3: Configure your Project Token",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "Shell",
-        "text": "set PROJECT_TOKEN=123456#1234abcd-****-****-****-************\""
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "Step 3: Configure your Project Token",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "PowerShell",
-        "text": "$env:PROJECT_TOKEN=123456#1234abcd-****-****-****-************\""
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "To generate the configuration file, please execute the following command",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "Shell",
-        "text": "npx smartui config:create .smartui.json"
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "Code sample 7",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "text",
-        "text": ":::info Advanced options in SmartUI configuration\n- For capturing fullpage or viewport screenshots, please refer to this [documentation](/docs/smartui-sdk-config-options/#12-viewports)\n- For the list of available mobile viewports, please refer to this [documentation](/docs/smartui-sdk-config-options/#list-of-supported-device-viewports)\n- For more information about SmartUI config global options, please refer to this [documentation](/docs/smartui-sdk-config-options/#3-global-options-optional).\n:::\n\n### **Step 5:** Adding SmartUI function to take screenshot\n\n- You can incorporate SmartUI into your custom `Selenium` automation test (any platform) script by adding the `smartuiSnapshot` function in the required segment of selenium script of which we would like to take the screenshot, as shown below:\n\n```js\nconst { Builder, By, Key, until } = require('selenium-webdriver');\nconst { smartuiSnapshot } = require('@lambdatest/selenium-driver');\n\n(async function example() {\n  let driver = await new Builder().forBrowser(\"chrome\").build();\n\n  try {\n    await driver.get(\"https://www.lambdatest.com\");\n    await smartuiSnapshot(driver, \"LambdaTest\");\n    await driver.get(\"https://www.pinterest.com/pin/112801165652823604/\");\n    await smartuiSnapshot(driver, \"NYC\");\n  } finally {\n    await driver.quit();\n  }\n})();"
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "Step 6: Execute the Tests on SmartUI Cloud",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "Shell",
-        "text": "npx smartui exec node sdkCloud.js --config .smartui.json"
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "Handling Dynamic Data in SmartUI SDK ****",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "text",
-        "text": "\n<\/TabItem>\n<TabItem value='IgoreClass' label='Ignore Class'>\n\n```js title=\"This is a sample for your configuration for JavaScript to ignore by Class\"\nlet options = {\n            ignoreDOM: {\n                class: [\"Class-1\", \"Class-2\"],\n            }\n        }\n        await driver.get('Required URL');\n        await smartuiSnapshot(driver, 'Screenshot Name', options);"
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "Code sample 10",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "text",
-        "text": "\n<\/TabItem>\n\n<TabItem value='IgnoreSelector' label='Ignore CSS Selector'>\n\n```js title=\"This is a sample for your configuration for JavaScript to ignore by CSS Selector\"\nlet options = {\n            ignoreDOM: {\n                cssSelector: [\"CSS-Selector-1\", \"CSS-Selector-2\"],\n            }\n        }\n        await driver.get('Required URL');\n        await smartuiSnapshot(driver, 'Screenshot Name', options);"
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "Code sample 11",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "text",
-        "text": "\n<\/TabItem>\n<TabItem value='SelectClass' label='Select Class'>\n\n```js title=\"This is a sample for your configuration for JavaScript to select by Class\"\nlet options = {\n            selectDOM: {\n                class: [\"Class-1\", \"Class-2\"],\n            }\n        }\n        await driver.get('Required URL');\n        await smartuiSnapshot(driver, 'Screenshot Name', options);"
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "Code sample 12",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "text",
-        "text": "\n<\/TabItem>\n\n<TabItem value='SelectSelector' label='Select CSS Selector'>\n\n```js title=\"This is a sample for your webhook configuration for JavaScript to select by CSS Selector\"\nlet options = {\n            selectDOM: {\n                cssSelector: [\"CSS-Selector-1\", \"CSS-Selector-2\"],\n            }\n        }\n        await driver.get('Required URL');\n        await smartuiSnapshot(driver, 'Screenshot Name', options);"
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "For capturing the screenshot of a specific element",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "text",
-        "text": "\n<\/TabItem>\n<TabItem value='ElementClass' label='Capture Element by Class'>\n\n```js title=\"This is a sample for your configuration for JavaScript to capture an element by Class\"\nlet options = {\n      element: {\n          class: 'Required Class',\n      }\n  };\n        await driver.get('Required URL');\n        await smartuiSnapshot(driver, 'Screenshot Name', options);"
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "Code sample 14",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "text",
-        "text": "\n<\/TabItem>\n\n<TabItem value='ElementSelector' label='Capture Element by Selector'>\n\n```js title=\"This is a sample for your webhook configuration for JavaScript to capture an element by CSS Selector\"\nlet options = {\n      element: {\n          cssSelector: 'Required CSS Selector',\n      }\n  };\n        await driver.get('Required URL');\n        await smartuiSnapshot(driver, 'Screenshot Name', options);"
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "Code sample 15",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "text",
-        "text": "\n## Best Practices\n\n<Tabs className='docs__val' groupId='best-practices'>\n<TabItem value='screenshot-naming' label='Screenshot Naming' default>\n\n**Screenshot Naming**\n\n- Use descriptive, consistent names for screenshots\n- Include page/component name in screenshot names\n- Avoid special characters that might cause issues\n- Use consistent naming conventions across your test suite\n\n**Example:**\n```javascript\nawait smartuiSnapshot(driver, \"HomePage-Header\");\nawait smartuiSnapshot(driver, \"ProductPage-MainContent\");"
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "Best Practices",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "JavaScript",
-        "text": "const { until, By } = require('selenium-webdriver');\nawait driver.get('https://example.com');\nawait driver.wait(until.elementLocated(By.id('main-content')), 10000);\nawait smartuiSnapshot(driver, \"Page Loaded\");"
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "Verify PROJECT_TOKEN is set correctly",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "Shell",
-        "text": "   echo $PROJECT_TOKEN"
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "Verify SmartUI CLI is installed",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "Shell",
-        "text": "   npx smartui --version"
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "Add explicit waits before screenshots",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "JavaScript",
-        "text": "   const { until, By } = require('selenium-webdriver');\n   await driver.wait(until.elementLocated(By.id('content')), 10000);\n   await driver.wait(until.elementIsVisible(By.css('.main-content')), 10000);"
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "Enable JavaScript in configuration",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "JSON",
-        "text": "   {\n     \"enableJavaScript\": true\n   }"
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "Try different port if default is in use",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "Shell",
-        "text": "   npx smartui exec -P 5000 -- <command\">"
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "Check latest versions on npm",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "Shell",
-        "text": "   npm view @lambdatest/selenium-driver version\n   npm view @lambdatest/smartui-cli version"
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "Clear npm cache",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "Shell",
-        "text": "   npm cache clean --force"
-      }
-    ],
-    "dateModified": "2026-09-09T19:10:37+05:30"
-  }) }}
-/>
-
-<script type="application/ld+json"
-  dangerouslySetInnerHTML={{ __html: JSON.stringify([
-    {
-      "@context": "https://schema.org",
-      "@type": "HowTo",
-      "name": "Steps to run your first test",
-      "description": "Once you have created a SmartUI Project, you can generate screenshots by running automation scripts. Follow the below steps to successfully generate screenshots",
-      "step": [
-        {
-          "@type": "HowToStep",
-          "position": 1,
-          "name": "Step 1: Create/Update your test",
-          "text": "You can clone the sample repository to run LambdaTest automation tests with SmartUI and use the sdk.js file present in the sdk folder.",
-          "url": "https://www.testmuai.com/support/docs/smartui-selenium-js-sdk/#step-1-createupdate-your-test"
-        },
-        {
-          "@type": "HowToStep",
-          "position": 2,
-          "name": "Step 2: Install the Dependencies",
-          "text": "Install required NPM modules for TestMu AI SmartUI Selenium SDK in your Frontend project. If you face any problems executing tests with SmartUI-CLI versions >= v4.x.x, upgrade your Node.js version to v20.3 or above.",
-          "url": "https://www.testmuai.com/support/docs/smartui-selenium-js-sdk/#step-2-install-the-dependencies"
-        },
-        {
-          "@type": "HowToStep",
-          "position": 3,
-          "name": "Step 3: Configure your Project Token",
-          "text": "Setup your project token shown in the SmartUI app after creating your project.",
-          "url": "https://www.testmuai.com/support/docs/smartui-selenium-js-sdk/#step-3-configure-your-project-token"
-        },
-        {
-          "@type": "HowToStep",
-          "position": 4,
-          "name": "Step 4: Create and Configure SmartUI Config",
-          "text": "You can now configure your project configurations on using various available options to run your tests with the SmartUI integration. To generate the configuration file, please execute the following command: Once, the configuration file will be created, you will be seeing the default configuration pre-filled in the configuration file: For capturing fullpage or viewport screenshots, please refer to this documentation For the list of available mobile viewports, please refer to this documentation For more information about SmartUI config global options, please refer to this documentation.",
-          "url": "https://www.testmuai.com/support/docs/smartui-selenium-js-sdk/#step-4-create-and-configure-smartui-config"
-        },
-        {
-          "@type": "HowToStep",
-          "position": 5,
-          "name": "Step 5: Adding SmartUI function to take screenshot",
-          "text": "You can incorporate SmartUI into your custom Selenium automation test (any platform) script by adding the smartuiSnapshot function in the required segment of selenium script of which we would like to take the screenshot, as shown below:",
-          "url": "https://www.testmuai.com/support/docs/smartui-selenium-js-sdk/#step-5-adding-smartui-function-to-take-screenshot"
-        },
-        {
-          "@type": "HowToStep",
-          "position": 6,
-          "name": "Step 6: Execute the Tests on SmartUI Cloud",
-          "text": "Execute visual regression tests on SmartUI using the following commands You may use the npx smartui --help command in case you are facing issues during the execution of SmartUI commands in the CLI.",
-          "url": "https://www.testmuai.com/support/docs/smartui-selenium-js-sdk/#step-6-execute-the-tests-on-smartui-cloud"
-        }
-      ]
-    }
-  ]) }}
-/>
-
-
 
 # SmartUI Selenium SDK
 
@@ -368,8 +86,6 @@ Setup your project token shown in the **SmartUI** app after creating your projec
 <Tabs className='docs__val' groupId='os'>
 <TabItem value='MacOS/Linux' label='MacOS/Linux' default>
 
-<VerifiedTag value="Verified" />
-
 ```bash
 export PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
 ```
@@ -377,16 +93,12 @@ export PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
 </TabItem>
 <TabItem value='Windows' label='Windows - CMD'>
 
-<VerifiedTag value="Verified" />
-
 ```bash
 set PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
 ```
 
 </TabItem>
 <TabItem value='PowerShell' label='PowerShell'>
-
-<VerifiedTag value="Verified" />
 
 ```powershell
 $env:PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
@@ -401,15 +113,11 @@ $env:PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
 
 You can now configure your project configurations on using various available options to run your tests with the SmartUI integration. To generate the configuration file, please execute the following command:
 
-<VerifiedTag value="Verified" />
-
 ```bash
 npx smartui config:create .smartui.json
 ```
 
 Once, the configuration file will be created, you will be seeing the default configuration pre-filled in the configuration file:
-
-<VerifiedTag value="Verified" />
 
 ```json title="/smartui-sdk-project/.smartui.json"
 {
@@ -463,8 +171,6 @@ Once you have created a SmartUI Project, you can generate screenshots by running
 
 You can clone the sample repository to run `LambdaTest` automation tests with `SmartUI` and use the `sdk.js` file present in the `sdk` folder.
 
-<VerifiedTag value="Verified" />
-
 ```bash
 git clone https://github.com/LambdaTest/smartui-node-sample
 cd smartui-node-sample/sdk
@@ -473,8 +179,6 @@ cd smartui-node-sample/sdk
 ### Step 2: Install the Dependencies
 
 Install required NPM modules for `TestMu AI SmartUI Selenium SDK` in your **Frontend** project.
-
-<VerifiedTag value="Verified" />
 
 ```bash
 npm install @lambdatest/smartui-cli @lambdatest/selenium-driver selenium-webdriver
@@ -487,8 +191,6 @@ If you face any problems executing tests with SmartUI-CLI `versions >= v4.x.x`, 
 ### Step 3: Adding SmartUI function to take screenshot
 
 - You can incorporate SmartUI into your custom `Selenium` automation test (any platform) script by adding the `smartuiSnapshot` function in the required segment of selenium script of which we would like to take the screenshot, as shown below:
-
-<VerifiedTag value="Verified" />
 
 ```js
 const { Builder, By, Key, until } = require('selenium-webdriver');
@@ -512,8 +214,6 @@ const { smartuiSnapshot } = require('@lambdatest/selenium-driver');
 
 Execute `visual regression tests` on SmartUI using the following commands
 
-<VerifiedTag value="Verified" />
-
 ```bash
 npx smartui exec node sdkCloud.js --config .smartui.json
 ```
@@ -529,8 +229,6 @@ You may use the `npx smartui --help` command in case you are facing issues durin
 
 You can clone the sample repository to run `LambdaTest` automation tests with `SmartUI` and use `SmartUISDKCloud.java` file located in the `src/test/java/com/lambdatest/sdk` directory.
 
-<VerifiedTag value="Verified" />
-
 ```bash
 git clone https://github.com/LambdaTest/smartui-java-testng-sample
 ```
@@ -538,8 +236,6 @@ git clone https://github.com/LambdaTest/smartui-java-testng-sample
 ### Step 2: Update the Dependencies
 
 - Add the following dependencies in your `pom.xml` file
-
-<VerifiedTag value="Verified" />
 
 ```xml
 <dependency>
@@ -557,8 +253,6 @@ You can check the latest version of [lambdatest-java-sdk]( https://mvnrepository
 
 Install required NPM modules for `TestMu AI SmartUI Selenium SDK` in your **Frontend** project.
 
-<VerifiedTag value="Verified" />
-
 ```bash
 npm install @lambdatest/smartui-cli
 ```
@@ -567,8 +261,6 @@ npm install @lambdatest/smartui-cli
 If you face any problems executing tests with SmartUI-CLI `versions >= v4.x.x`, upgrade your Node.js version to `v20.3` or above.
 :::
 
-<VerifiedTag value="Verified" />
-
 ```bash
 mvn clean compile
 ```
@@ -576,8 +268,6 @@ mvn clean compile
 ### Step 4: Adding SmartUI function to take screenshot
 
 - You can incorporate SmartUI into your custom `Selenium` automation test (any platform) script by adding the `smartuiSnapshot` function in the required segment of selenium script of which we would like to take the screenshot, as shown below:
-
-<VerifiedTag value="Verified" />
 
 ```java
  //Importing the lambdatest-java SDK
@@ -605,8 +295,6 @@ mvn clean compile
 
 Execute `visual regression tests` on SmartUI using the following commands
 
-<VerifiedTag value="Verified" />
-
 ```bash
 npx smartui --config .smartui.json exec -- mvn test -D suite="sdk-cloud.xml"
 ```
@@ -621,8 +309,6 @@ You may use the `npx smartui --help` command in case you are facing issues durin
 
 You can clone the sample repository to run `LambdaTest` automation tests with `SmartUI` and use `LTCloudTest.cs` file located in the `LambdaTest.Selenium.Driver.Test` folder.
 
-<VerifiedTag value="Verified" />
-
 ```bash
 git clone https://github.com/LambdaTest/smartui-csharp-sample
 cd smartui-csharp-sample/LambdaTest.Selenium.Driver.Test
@@ -631,8 +317,6 @@ cd smartui-csharp-sample/LambdaTest.Selenium.Driver.Test
 ### Step 2: Update the Dependencies
 
 - Add the following dependencies in your `.csproj` file
-
-<VerifiedTag value="Verified" />
 
 ```cs
 <ItemGroup>
@@ -648,8 +332,6 @@ You can check the latest version of [<BrandName />.Selenium.Driver]( https://www
 
 Install required NPM modules for `TestMu AI SmartUI Selenium SDK` in your **Frontend** project.
 
-<VerifiedTag value="Verified" />
-
 ```bash
 npm install @lambdatest/smartui-cli
 ```
@@ -658,8 +340,6 @@ npm install @lambdatest/smartui-cli
 If you face any problems executing tests with SmartUI-CLI `versions >= v4.x.x`, upgrade your Node.js version to `v20.3` or above.
 :::
 
-<VerifiedTag value="Verified" />
-
 ```bash
 dotnet restore
 ```
@@ -667,8 +347,6 @@ dotnet restore
 ### Step 4: Adding SmartUI function to take screenshot
 
 - You can incorporate SmartUI into your custom `Selenium` automation test (any platform) script by adding the `smartuiSnapshot` function in the required segment of selenium script of which we would like to take the screenshot, as shown below:
-
-<VerifiedTag value="Verified" />
 
 ```csharp
 using System;
@@ -730,9 +408,6 @@ You can enable synchronous snapshot status response by setting the `sync` option
 
 
 **Sample response:**
-
-<VerifiedTag value="Verified" />
-
 ```json
 {
     "snapshotName": "Sync-True",
@@ -763,8 +438,6 @@ You can enable synchronous snapshot status response by setting the `sync` option
 
 Execute `visual regression tests` on SmartUI using the following commands
 
-<VerifiedTag value="Verified" />
-
 ```bash
 npx smartui --config .smartui.json exec -- dotnet run cloud 
 ```
@@ -778,8 +451,6 @@ You may use the `npx smartui --help` command in case you are facing issues durin
 :::note
 Install **virtualenv**, which is the recommended way to run your tests. It will isolate the build from other setups you may have running and ensure that the tests run with the specified versions of the modules.
 
-<VerifiedTag value="Verified" />
-
 ```bash
 pip install virtualenv
 ```
@@ -789,8 +460,6 @@ pip install virtualenv
 
 - You can clone the sample repository to run `LambdaTest` automation tests with `SmartUI` and use the `SmartUI_SDK_LT_hub.py` file.
 
-<VerifiedTag value="Verified" />
-
 ```bash
 git clone https://github.com/LambdaTest/smartui-python-sample
 cd smartui-python-sample
@@ -798,15 +467,11 @@ cd smartui-python-sample
 
 - Create a virtual environment in your project folder (the environment name is arbitrary).
 
-<VerifiedTag value="Verified" />
-
 ```bash
 virtualenv venv
 ```
 
 - Activate the environment.
-
-<VerifiedTag value="Verified" />
 
 ```bash
 source venv/bin/activate
@@ -816,8 +481,6 @@ source venv/bin/activate
 
 Install required NPM modules for `TestMu AI SmartUI Selenium SDK` in your **Frontend** project.
 
-<VerifiedTag value="Verified" />
-
 ```bash
 npm install @lambdatest/smartui-cli
 ```
@@ -826,8 +489,6 @@ npm install @lambdatest/smartui-cli
 If you face any problems executing tests with SmartUI-CLI `versions >= v4.x.x`, upgrade your Node.js version to `v20.3` or above.
 :::
 
-<VerifiedTag value="Verified" />
-
 ```bash
 pip install lambdatest-selenium-driver
 ```
@@ -835,8 +496,6 @@ pip install lambdatest-selenium-driver
 ### Step 3: Adding SmartUI function to take screenshot
 
 - You can incorporate SmartUI into your custom `Selenium` automation test (any platform) script by adding the `smartuiSnapshot` function in the required segment of selenium script of which we would like to take the screenshot, as shown below:
-
-<VerifiedTag value="Verified" />
 
 ```python
 from lambdatest_selenium_driver import smartui_snapshot
@@ -856,8 +515,6 @@ finally:
 
 Execute `visual regression tests` on SmartUI using the following commands
 
-<VerifiedTag value="Verified" />
-
 ```bash
 npx smartui exec python SmartUI_SDK_LT_hub.py --config .smartui.json
 ```
@@ -873,8 +530,6 @@ You may use the `npx smartui --help` command in case you are facing issues durin
 
 You can clone the sample repository to run `LambdaTest` automation tests with `SmartUI` and use the `sdkCloud.rb` file present in the `sdk` folder.
 
-<VerifiedTag value="Verified" />
-
 ```bash
 git clone https://github.com/LambdaTest/smartui-ruby-selenium-sample
 cd smartui-ruby-selenium-sample/sdk
@@ -883,8 +538,6 @@ cd smartui-ruby-selenium-sample/sdk
 ### Step 2: Install the Dependencies
 
 Install required NPM modules for `TestMu AI SmartUI Selenium SDK` in your **Frontend** project.
-
-<VerifiedTag value="Verified" />
 
 ```bash
 npm install @lambdatest/smartui-cli
@@ -902,8 +555,6 @@ gem install lambdatest-selenium-driver selenium-webdriver
 
 - You can incorporate SmartUI into your custom `Selenium` automation test (any platform) script by adding the `smartuiSnapshot` function in the required segment of selenium script of which we would like to take the screenshot, as shown below:
 
-<VerifiedTag value="Verified" />
-
 ```ruby
 require "selenium-webdriver"
 require "lambdatest/selenium/driver"
@@ -920,8 +571,6 @@ driver.quit
 ### Step 4: Execute the Tests on SmartUI Cloud
 
 Execute `visual regression tests` on SmartUI using the following commands
-
-<VerifiedTag value="Verified" />
 
 ```bash
 npx smartui exec ruby sdkCloud.rb --config .smartui.json
@@ -962,8 +611,6 @@ When conducting visual tests, you may encounter scenarios where certain elements
 <Tabs className='docs__val' groupId='framework'>
 <TabItem value='IgnoreID' label='Ignore ID' default>
 
-<VerifiedTag value="Verified" />
-
 ```js title="This is a sample for your configuration for JavaScript to ignore by ID"
 let options = {
             ignoreDOM: {
@@ -976,8 +623,6 @@ let options = {
 
 </TabItem>
 <TabItem value='IgoreClass' label='Ignore Class'>
-
-<VerifiedTag value="Verified" />
 
 ```js title="This is a sample for your configuration for JavaScript to ignore by Class"
 let options = {
@@ -992,8 +637,6 @@ let options = {
 </TabItem>
 <TabItem value='IgnoreXPath' label='Ignore XPath'>
 
-<VerifiedTag value="Verified" />
-
 ```js title="This is a sample for your configuration for JavaScript to ignore by XPath"
 let options = {
             ignoreDOM: {
@@ -1007,8 +650,6 @@ let options = {
 </TabItem>
 
 <TabItem value='IgnoreSelector' label='Ignore CSS Selector'>
-
-<VerifiedTag value="Verified" />
 
 ```js title="This is a sample for your configuration for JavaScript to ignore by CSS Selector"
 let options = {
@@ -1026,8 +667,6 @@ let options = {
 <Tabs className='docs__val' groupId='framework'>
 <TabItem value='SelectID' label='Select ID' default>
 
-<VerifiedTag value="Verified" />
-
 ```js title="This is a sample for your configuration for JavaScript to select by ID"
 let options = {
             selectDOM: {
@@ -1040,8 +679,6 @@ let options = {
 
 </TabItem>
 <TabItem value='SelectClass' label='Select Class'>
-
-<VerifiedTag value="Verified" />
 
 ```js title="This is a sample for your configuration for JavaScript to select by Class"
 let options = {
@@ -1056,8 +693,6 @@ let options = {
 </TabItem>
 <TabItem value='SelectXPath' label='Select XPath'>
 
-<VerifiedTag value="Verified" />
-
 ```js title="This is a sample for your configuration for JavaScript to select by XPath"
 let options = {
             selectDOM: {
@@ -1071,8 +706,6 @@ let options = {
 </TabItem>
 
 <TabItem value='SelectSelector' label='Select CSS Selector'>
-
-<VerifiedTag value="Verified" />
 
 ```js title="This is a sample for your webhook configuration for JavaScript to select by CSS Selector"
 let options = {
@@ -1093,8 +726,6 @@ let options = {
 <Tabs className='docs__val' groupId='framework'>
 <TabItem value='IgnoreID' label='Ignore ID' default>
 
-<VerifiedTag value="Verified" />
-
 ```java title="This is a sample for your configuration for Java to ignore by ID"
 List<String> cssID = Arrays.asList("<required ID>");
 Map<String, Object> options = new HashMap<>();
@@ -1108,8 +739,6 @@ SmartUISnapshot.smartuiSnapshot(driver, "Screenshot Name", options);
 
 </TabItem>
 <TabItem value='IgoreClass' label='Ignore Class'>
-
-<VerifiedTag value="Verified" />
 
 ```java title="This is a sample for your configuration for Java to ignore by Class"
 List<String> cssclass = Arrays.asList("<required class>");
@@ -1125,8 +754,6 @@ SmartUISnapshot.smartuiSnapshot(driver, "Screenshot Name", options);
 </TabItem>
 <TabItem value='IgnoreXPath' label='Ignore XPath'>
 
-<VerifiedTag value="Verified" />
-
 ```java title="This is a sample for your configuration for Java to ignore by XPath"
 List<String> path = Arrays.asList("<required xpath>");
 Map<String, Object> options = new HashMap<>();
@@ -1141,8 +768,6 @@ SmartUISnapshot.smartuiSnapshot(driver, "Screenshot Name", options);
 </TabItem>
 
 <TabItem value='IgnoreSelector' label='Ignore CSS Selector'>
-
-<VerifiedTag value="Verified" />
 
 ```java title="This is a sample for your configuration for Java to ignore by CSS Selector"
 List<String> selector = Arrays.asList("<required selector>");
@@ -1161,8 +786,6 @@ SmartUISnapshot.smartuiSnapshot(driver, "Screenshot Name", options);
 <Tabs className='docs__val' groupId='framework'>
 <TabItem value='SelectID' label='Select ID' default>
 
-<VerifiedTag value="Verified" />
-
 ```java title="This is a sample for your configuration for Java to select by ID"
 List<String> cssID = Arrays.asList("<required ID>");
 Map<String, Object> options = new HashMap<>();
@@ -1176,8 +799,6 @@ SmartUISnapshot.smartuiSnapshot(driver, "Screenshot Name", options);
 
 </TabItem>
 <TabItem value='SelectClass' label='Select Class'>
-
-<VerifiedTag value="Verified" />
 
 ```java title="This is a sample for your configuration for Java to select by Class"
 List<String> cssclass = Arrays.asList("<required class>");
@@ -1193,8 +814,6 @@ SmartUISnapshot.smartuiSnapshot(driver, "Screenshot Name", options);
 </TabItem>
 <TabItem value='SelectXPath' label='Select XPath'>
 
-<VerifiedTag value="Verified" />
-
 ```java title="This is a sample for your configuration for Java to select by XPath"
 List<String> path = Arrays.asList("<required xpath>");
 Map<String, Object> options = new HashMap<>();
@@ -1209,8 +828,6 @@ SmartUISnapshot.smartuiSnapshot(driver, "Screenshot Name", options);
 </TabItem>
 
 <TabItem value='SelectSelector' label='Select CSS Selector'>
-
-<VerifiedTag value="Verified" />
 
 ```java title="This is a sample for your webhook configuration for Java to select by CSS Selector"
 List<String> selector = Arrays.asList("<required selector>");
@@ -1232,8 +849,6 @@ SmartUISnapshot.smartuiSnapshot(driver, "Screenshot Name", options);
 <Tabs className='docs__val' groupId='framework'>
 <TabItem value='IgnoreID' label='Ignore ID' default>
 
-<VerifiedTag value="Verified" />
-
 ```cs title="This is a sample for your configuration for C# to ignore by ID"
 driver.Navigate().GoToUrl("Required URL");
 
@@ -1250,8 +865,6 @@ await SmartUISnapshot.CaptureSnapshot(driver, "Screenshot Name",options);
 
 </TabItem>
 <TabItem value='IgoreClass' label='Ignore Class'>
-
-<VerifiedTag value="Verified" />
 
 ```cs title="This is a sample for your configuration for C# to ignore by Class"
 driver.Navigate().GoToUrl("Required URL");
@@ -1270,8 +883,6 @@ await SmartUISnapshot.CaptureSnapshot(driver, "Screenshot Name",options);
 </TabItem>
 <TabItem value='IgnoreXPath' label='Ignore XPath'>
 
-<VerifiedTag value="Verified" />
-
 ```cs title="This is a sample for your configuration for C# to ignore by XPath"
 driver.Navigate().GoToUrl("Required URL");
 
@@ -1289,8 +900,6 @@ await SmartUISnapshot.CaptureSnapshot(driver, "Screenshot Name",options);
 </TabItem>
 
 <TabItem value='IgnoreSelector' label='Ignore CSS Selector'>
-
-<VerifiedTag value="Verified" />
 
 ```cs title="This is a sample for your configuration for C# to ignore by CSS Selector"
 driver.Navigate().GoToUrl("Required URL");
@@ -1312,8 +921,6 @@ await SmartUISnapshot.CaptureSnapshot(driver, "Screenshot Name",options);
 <Tabs className='docs__val' groupId='framework'>
 <TabItem value='SelectID' label='Select ID' default>
 
-<VerifiedTag value="Verified" />
-
 ```cs title="This is a sample for your configuration for C# to select by ID"
 driver.Navigate().GoToUrl("Required URL");
 
@@ -1330,8 +937,6 @@ await SmartUISnapshot.CaptureSnapshot(driver, "Screenshot Name",options);
 
 </TabItem>
 <TabItem value='SelectClass' label='Select Class'>
-
-<VerifiedTag value="Verified" />
 
 ```cs title="This is a sample for your configuration for C# to select by Class"
 driver.Navigate().GoToUrl("Required URL");
@@ -1350,8 +955,6 @@ await SmartUISnapshot.CaptureSnapshot(driver, "Screenshot Name",options);
 </TabItem>
 <TabItem value='SelectXPath' label='Select XPath'>
 
-<VerifiedTag value="Verified" />
-
 ```cs title="This is a sample for your configuration for C# to select by XPath"
 driver.Navigate().GoToUrl("Required URL");
 
@@ -1369,8 +972,6 @@ await SmartUISnapshot.CaptureSnapshot(driver, "Screenshot Name",options);
 </TabItem>
 
 <TabItem value='SelectSelector' label='Select CSS Selector'>
-
-<VerifiedTag value="Verified" />
 
 ```cs title="This is a sample for your configuration for C# to select by CSS Selector"
 driver.Navigate().GoToUrl("Required URL");
@@ -1395,8 +996,6 @@ await SmartUISnapshot.CaptureSnapshot(driver, "Screenshot Name",options);
 <Tabs className='docs__val' groupId='framework'>
 <TabItem value='IgnoreID' label='Ignore ID' default>
 
-<VerifiedTag value="Verified" />
-
 ```python title="This is a sample for your configuration for Python to ignore by ID"
 options = {
             "ignoreDOM": {
@@ -1409,8 +1008,6 @@ smartui_snapshot(driver,"<Screenshot Name>", options)
 
 </TabItem>
 <TabItem value='IgoreClass' label='Ignore Class'>
-
-<VerifiedTag value="Verified" />
 
 ```python title="This is a sample for your configuration for Python to ignore by Class"
 options = {
@@ -1425,8 +1022,6 @@ smartui_snapshot(driver,"<Screenshot Name>", options)
 </TabItem>
 <TabItem value='IgnoreXPath' label='Ignore XPath'>
 
-<VerifiedTag value="Verified" />
-
 ```python title="This is a sample for your configuration for Python to ignore by XPath"
 options = {
             "ignoreDOM": {
@@ -1440,8 +1035,6 @@ smartui_snapshot(driver,"<Screenshot Name>", options)
 </TabItem>
 
 <TabItem value='IgnoreSelector' label='Ignore CSS Selector'>
-
-<VerifiedTag value="Verified" />
 
 ```python title="This is a sample for your configuration for Python to ignore by CSS Selector"
 options = {
@@ -1459,8 +1052,6 @@ smartui_snapshot(driver,"<Screenshot Name>", options)
 <Tabs className='docs__val' groupId='framework'>
 <TabItem value='SelectID' label='Select ID' default>
 
-<VerifiedTag value="Verified" />
-
 ```python title="This is a sample for your configuration for Python to select by ID."
 options = {
             "selectDOM": {
@@ -1473,8 +1064,6 @@ smartui_snapshot(driver,"<Screenshot Name>", options)
 
 </TabItem>
 <TabItem value='SelectClass' label='Select Class'>
-
-<VerifiedTag value="Verified" />
 
 ```python title="This is a sample for your configuration for Python to select by Class"
 options = {
@@ -1489,8 +1078,6 @@ smartui_snapshot(driver,"<Screenshot Name>", options)
 </TabItem>
 <TabItem value='SelectXPath' label='Select XPath'>
 
-<VerifiedTag value="Verified" />
-
 ```python title="This is a sample for your configuration for Python to select by XPath"
 options = {
             "selectDOM": {
@@ -1504,8 +1091,6 @@ smartui_snapshot(driver,"<Screenshot Name>", options)
 </TabItem>
 
 <TabItem value='SelectSelector' label='Select CSS Selector'>
-
-<VerifiedTag value="Verified" />
 
 ```python title="This is a sample for your webhook configuration for Python to select by CSS Selector"
 options = {
@@ -1526,8 +1111,6 @@ smartui_snapshot(driver,"<Screenshot Name>", options)
 <Tabs className='docs__val' groupId='framework'>
 <TabItem value='IgnoreID' label='Ignore ID' default>
 
-<VerifiedTag value="Verified" />
-
 ```rb title="This is a sample for your configuration for Ruby to ignore by ID"
 options = {
             ignoreDOM: {
@@ -1540,8 +1123,6 @@ LambdaTest::Selenium::Driver.smartui_snapshot(driver, "Screenshot Name", options
 
 </TabItem>
 <TabItem value='IgoreClass' label='Ignore Class'>
-
-<VerifiedTag value="Verified" />
 
 ```rb title="This is a sample for your configuration for Ruby to ignore by Class"
 options = {
@@ -1556,8 +1137,6 @@ LambdaTest::Selenium::Driver.smartui_snapshot(driver, "Screenshot Name", options
 </TabItem>
 <TabItem value='IgnoreXPath' label='Ignore XPath'>
 
-<VerifiedTag value="Verified" />
-
 ```rb title="This is a sample for your configuration for Ruby to ignore by XPath"
 options = {
             ignoreDOM: {
@@ -1571,8 +1150,6 @@ LambdaTest::Selenium::Driver.smartui_snapshot(driver, "Screenshot Name", options
 </TabItem>
 
 <TabItem value='IgnoreSelector' label='Ignore CSS Selector'>
-
-<VerifiedTag value="Verified" />
 
 ```rb title="This is a sample for your configuration for Ruby to ignore by CSS Selector"
 options = {
@@ -1590,8 +1167,6 @@ LambdaTest::Selenium::Driver.smartui_snapshot(driver, "Screenshot Name", options
 <Tabs className='docs__val' groupId='framework'>
 <TabItem value='SelectID' label='Select ID' default>
 
-<VerifiedTag value="Verified" />
-
 ```rb title="This is a sample for your configuration for Ruby to select by ID"
 options = {
             selectDOM: {
@@ -1604,8 +1179,6 @@ LambdaTest::Selenium::Driver.smartui_snapshot(driver, "Screenshot Name", options
 
 </TabItem>
 <TabItem value='SelectClass' label='Select Class'>
-
-<VerifiedTag value="Verified" />
 
 ```rb title="This is a sample for your configuration for Ruby to select by Class"
 options = {
@@ -1620,8 +1193,6 @@ LambdaTest::Selenium::Driver.smartui_snapshot(driver, "Screenshot Name", options
 </TabItem>
 <TabItem value='SelectXPath' label='Select XPath'>
 
-<VerifiedTag value="Verified" />
-
 ```rb title="This is a sample for your configuration for Ruby to select by XPath"
 options = {
             selectDOM: {
@@ -1635,8 +1206,6 @@ LambdaTest::Selenium::Driver.smartui_snapshot(driver, "Screenshot Name", options
 </TabItem>
 
 <TabItem value='SelectSelector' label='Select CSS Selector'>
-
-<VerifiedTag value="Verified" />
 
 ```rb title="This is a sample for your webhook configuration for Ruby to select by CSS Selector"
 options = {
@@ -1664,8 +1233,6 @@ You can capture screenshots of targeted elements by leveraging various locator m
 <Tabs className='docs__val' groupId='framework'>
 <TabItem value='ElementID' label='Capture Element by ID' default>
 
-<VerifiedTag value="Verified" />
-
 ```js title="This is a sample for your configuration for JavaScript to capture an element by ID"
 let options = {
       element: {
@@ -1678,8 +1245,6 @@ let options = {
 
 </TabItem>
 <TabItem value='ElementClass' label='Capture Element by Class'>
-
-<VerifiedTag value="Verified" />
 
 ```js title="This is a sample for your configuration for JavaScript to capture an element by Class"
 let options = {
@@ -1694,8 +1259,6 @@ let options = {
 </TabItem>
 <TabItem value='ElementXPath' label='Capture Element by XPath'>
 
-<VerifiedTag value="Verified" />
-
 ```js title="This is a sample for your configuration for JavaScript to capture an element by XPath"
 let options = {
       element: {
@@ -1709,8 +1272,6 @@ let options = {
 </TabItem>
 
 <TabItem value='ElementSelector' label='Capture Element by Selector'>
-
-<VerifiedTag value="Verified" />
 
 ```js title="This is a sample for your webhook configuration for JavaScript to capture an element by CSS Selector"
 let options = {
@@ -1733,8 +1294,6 @@ You can also pass a resolved `WebElement` object directly to the `smartuiSnapsho
 <Tabs className='docs__val' groupId='framework'>
 <TabItem value='ElementID' label='Capture Element by ID' default>
 
-<VerifiedTag value="Verified" />
-
 ```java title="This is a sample for your configuration for Java to capture an element by ID"
 HashMap<String, Object> options = new HashMap<>();
 HashMap<String, String> locator = new HashMap<>();
@@ -1747,8 +1306,6 @@ SmartUISnapshot.smartuiSnapshot(driver, "Screenshot Name", options);
 </TabItem>
 <TabItem value='ElementClass' label='Capture Element by Class'>
 
-<VerifiedTag value="Verified" />
-
 ```java title="This is a sample for your configuration for Java to capture an element by Class"
 HashMap<String, Object> options = new HashMap<>();
 HashMap<String, String> locator = new HashMap<>();
@@ -1760,8 +1317,6 @@ SmartUISnapshot.smartuiSnapshot(driver, "Screenshot Name", options);
 
 </TabItem>
 <TabItem value='ElementXPath' label='Capture Element by XPath'>
-
-<VerifiedTag value="Verified" />
 
 ```java title="This is a sample for your configuration for Java to capture an element by XPath"
 HashMap<String, Object> options = new HashMap<>();
@@ -1776,8 +1331,6 @@ SmartUISnapshot.smartuiSnapshot(driver, "Screenshot Name", options);
 
 <TabItem value='ElementSelector' label='Capture Element by Selector'>
 
-<VerifiedTag value="Verified" />
-
 ```java title="This is a sample for your configuration for Java to capture an element by CSS Selector"
 HashMap<String, Object> options = new HashMap<>();
 HashMap<String, String> locator = new HashMap<>();
@@ -1789,8 +1342,6 @@ SmartUISnapshot.smartuiSnapshot(driver, "Screenshot Name", options);
 </TabItem>
 
 <TabItem value='ElementWebElement' label='Capture Element by WebElement'>
-
-<VerifiedTag value="Verified" />
 
 ```java title="This is a sample for your configuration for Java to capture an element by passing a WebElement object."
 WebElement element = driver.findElement(By.id("Required ID")); // locate using any strategy
@@ -1809,8 +1360,6 @@ SmartUISnapshot.smartuiSnapshot(driver, "Screenshot Name", options);
 <Tabs className='docs__val' groupId='framework'>
 <TabItem value='ElementID' label='Capture Element by ID' default>
 
-<VerifiedTag value="Verified" />
-
 ```cs title="This is a sample for your configuration for C# to capture an element by ID"
 driver.Navigate().GoToUrl("Required URL");
 
@@ -1827,8 +1376,6 @@ await SmartUISnapshot.CaptureSnapshot(driver, "Screenshot Name",options);
 
 </TabItem>
 <TabItem value='ElementClass' label='Capture Element by Class'>
-
-<VerifiedTag value="Verified" />
 
 ```cs title="This is a sample for your configuration for C# to capture an element by Class"
 driver.Navigate().GoToUrl("Required URL");
@@ -1847,8 +1394,6 @@ await SmartUISnapshot.CaptureSnapshot(driver, "Screenshot Name",options);
 </TabItem>
 <TabItem value='ElementXPath' label='Capture Element by XPath'>
 
-<VerifiedTag value="Verified" />
-
 ```cs title="This is a sample for your configuration for C# to capture an element by XPath"
 driver.Navigate().GoToUrl("Required URL");
 
@@ -1866,8 +1411,6 @@ await SmartUISnapshot.CaptureSnapshot(driver, "Screenshot Name",options);
 </TabItem>
 
 <TabItem value='ElementSelector' label='Element CSS Selector'>
-
-<VerifiedTag value="Verified" />
 
 ```cs title="This is a sample for your configuration for C# to capture an element by CSS Selector"
 driver.Navigate().GoToUrl("Required URL");
@@ -1892,8 +1435,6 @@ await SmartUISnapshot.CaptureSnapshot(driver, "Screenshot Name",options);
 <Tabs className='docs__val' groupId='framework'>
 <TabItem value='ElementID' label='Capture Element by ID' default>
 
-<VerifiedTag value="Verified" />
-
 ```python title="This is a sample for your configuration for Python to capture an element by ID."
 options = {
       "element": {
@@ -1906,8 +1447,6 @@ smartui_snapshot(driver,"<Screenshot Name>", options)
 
 </TabItem>
 <TabItem value='ElementClass' label='Capture Element by Class'>
-
-<VerifiedTag value="Verified" />
 
 ```python title="This is a sample for your configuration for Python to capture an element by Class"
 options = {
@@ -1922,8 +1461,6 @@ smartui_snapshot(driver,"<Screenshot Name>", options)
 </TabItem>
 <TabItem value='ElementXPath' label='Capture Element by XPath'>
 
-<VerifiedTag value="Verified" />
-
 ```python title="This is a sample for your configuration for Python to capture an element by XPath"
 options = {
       "element": {
@@ -1937,8 +1474,6 @@ smartui_snapshot(driver,"<Screenshot Name>", options)
 </TabItem>
 
 <TabItem value='ElementSelector' label='Capture Element by Selector'>
-
-<VerifiedTag value="Verified" />
 
 ```python title="This is a sample for your webhook configuration for Python to capture an element by CSS Selector"
 options = {
@@ -1959,8 +1494,6 @@ smartui_snapshot(driver,"<Screenshot Name>", options)
 <Tabs className='docs__val' groupId='framework'>
 <TabItem value='ElementID' label='Capture Element by ID' default>
 
-<VerifiedTag value="Verified" />
-
 ```rb title="This is a sample for your configuration for Ruby to capture an element by ID"
 options = {
       element: {
@@ -1973,8 +1506,6 @@ LambdaTest::Selenium::Driver.smartui_snapshot(driver, "Screenshot Name", options
 
 </TabItem>
 <TabItem value='ElementClass' label='Capture Element by Class'>
-
-<VerifiedTag value="Verified" />
 
 ```rb title="This is a sample for your configuration for Ruby to capture an element by Class"
 options = {
@@ -1989,8 +1520,6 @@ LambdaTest::Selenium::Driver.smartui_snapshot(driver, "Screenshot Name", options
 </TabItem>
 <TabItem value='ElementXPath' label='Capture Element by XPath'>
 
-<VerifiedTag value="Verified" />
-
 ```rb title="This is a sample for your configuration for Ruby to capture an element by XPath"
 options = {
       element: {
@@ -2004,8 +1533,6 @@ LambdaTest::Selenium::Driver.smartui_snapshot(driver, "Screenshot Name", options
 </TabItem>
 
 <TabItem value='ElementSelector' label='Capture Element by Selector'>
-
-<VerifiedTag value="Verified" />
 
 ```rb title="This is a sample for your webhook configuration for Ruby to capture an element by CSS Selector"
 options = {
@@ -2029,8 +1556,6 @@ If you encounter difficulties loading interactive elements that appear on scroll
 
 <Tabs className='docs__val' groupId='language'>
 <TabItem value='javascript' label='JavaScript' default>
-
-<VerifiedTag value="Verified" />
 
 ```js Example for scrolling to bottom for lazy elements
 const { Builder, By, Key, until } = require('selenium-webdriver');
@@ -2078,8 +1603,6 @@ const { smartuiSnapshot } = require('@lambdatest/selenium-driver');
 </TabItem>
 <TabItem value='java' label='Java'>
 
-<VerifiedTag value="Verified" />
-
 ```java Example for scrolling to bottom for lazy elements
 //Rest of your code here
 
@@ -2122,8 +1645,6 @@ public void tearDown() {
 </TabItem>
 <TabItem value='python' label='Python'>
 
-<VerifiedTag value="Verified" />
-
 ```python Example for scrolling to bottom for lazy elements
 from selenium import webdriver
 from lambdatest_selenium_driver import smartui_snapshot
@@ -2162,8 +1683,6 @@ if __name__ == "__main__":
 
 </TabItem>
 <TabItem value='ruby' label='Ruby'>
-
-<VerifiedTag value="Verified" />
 
 ```rb Example for scrolling to bottom for lazy elements
 require 'selenium-webdriver'
@@ -2222,9 +1741,6 @@ end
 - Use consistent naming conventions across your test suite
 
 **Example:**
-
-<VerifiedTag value="Verified" />
-
 ```javascript
 await smartuiSnapshot(driver, "HomePage-Header");
 await smartuiSnapshot(driver, "ProductPage-MainContent");
@@ -2241,9 +1757,6 @@ await smartuiSnapshot(driver, "ProductPage-MainContent");
 - Consider using `waitForTimeout` in configuration for lazy-loaded content
 
 **Example:**
-
-<VerifiedTag value="Verified" />
-
 ```javascript
 const { until, By } = require('selenium-webdriver');
 await driver.get('https://example.com');
@@ -2298,9 +1811,6 @@ await smartuiSnapshot(driver, "Page Loaded");
 - Use consistent naming conventions across your test suite
 
 **Example:**
-
-<VerifiedTag value="Verified" />
-
 ```java
 SmartUISnapshot.smartuiSnapshot(driver, "HomePage-Header");
 SmartUISnapshot.smartuiSnapshot(driver, "ProductPage-MainContent");
@@ -2317,9 +1827,6 @@ SmartUISnapshot.smartuiSnapshot(driver, "ProductPage-MainContent");
 - Consider using `waitForTimeout` in configuration for lazy-loaded content
 
 **Example:**
-
-<VerifiedTag value="Verified" />
-
 ```java
 driver.get("https://example.com");
 WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
@@ -2374,9 +1881,6 @@ SmartUISnapshot.smartuiSnapshot(driver, "Page Loaded");
 - Use consistent naming conventions across your test suite
 
 **Example:**
-
-<VerifiedTag value="Verified" />
-
 ```csharp
 await SmartUISnapshot.CaptureSnapshot(driver, "HomePage-Header");
 await SmartUISnapshot.CaptureSnapshot(driver, "ProductPage-MainContent");
@@ -2392,9 +1896,6 @@ await SmartUISnapshot.CaptureSnapshot(driver, "ProductPage-MainContent");
 - Consider using `waitForTimeout` in configuration for lazy-loaded content
 
 **Example:**
-
-<VerifiedTag value="Verified" />
-
 ```csharp
 using OpenQA.Selenium.Support.UI;
 using OpenQA.Selenium;
@@ -2449,9 +1950,6 @@ await SmartUISnapshot.CaptureSnapshot(driver, "Page Loaded");
 - Use consistent naming conventions across your test suite
 
 **Example:**
-
-<VerifiedTag value="Verified" />
-
 ```python
 smartui_snapshot(driver, "HomePage-Header")
 smartui_snapshot(driver, "ProductPage-MainContent")
@@ -2468,9 +1966,6 @@ smartui_snapshot(driver, "ProductPage-MainContent")
 - Consider using `waitForTimeout` in configuration for lazy-loaded content
 
 **Example:**
-
-<VerifiedTag value="Verified" />
-
 ```python
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
@@ -2529,9 +2024,6 @@ smartui_snapshot(driver, "Page Loaded")
 - Use consistent naming conventions across your test suite
 
 **Example:**
-
-<VerifiedTag value="Verified" />
-
 ```ruby
 LambdaTest::Selenium::Driver.smartui_snapshot(driver, "HomePage-Header")
 LambdaTest::Selenium::Driver.smartui_snapshot(driver, "ProductPage-MainContent")
@@ -2547,9 +2039,6 @@ LambdaTest::Selenium::Driver.smartui_snapshot(driver, "ProductPage-MainContent")
 - Consider using `waitForTimeout` in configuration for lazy-loaded content
 
 **Example:**
-
-<VerifiedTag value="Verified" />
-
 ```ruby
 require 'selenium-webdriver'
 
@@ -2612,9 +2101,6 @@ LambdaTest::Selenium::Driver.smartui_snapshot(driver, "Page Loaded")
 
 **Solutions**:
 1. Verify `PROJECT_TOKEN` is set correctly:
-
-   <VerifiedTag value="Verified" />
-
    ```bash
    echo $PROJECT_TOKEN
    ```
@@ -2622,9 +2108,6 @@ LambdaTest::Selenium::Driver.smartui_snapshot(driver, "Page Loaded")
 2. Check project name matches exactly (case-sensitive)
 
 3. Verify SmartUI CLI is installed:
-
-   <VerifiedTag value="Verified" />
-
    ```bash
    npx smartui --version
    ```
@@ -2666,9 +2149,6 @@ LambdaTest::Selenium::Driver.smartui_snapshot(driver, "Page Loaded")
 
 **Solutions**:
 1. Add explicit waits before screenshots:
-
-   <VerifiedTag value="Verified" />
-
    ```javascript
    const { until, By } = require('selenium-webdriver');
    await driver.wait(until.elementLocated(By.id('content')), 10000);
@@ -2676,9 +2156,6 @@ LambdaTest::Selenium::Driver.smartui_snapshot(driver, "Page Loaded")
    ```
 
 2. Enable JavaScript in configuration:
-
-   <VerifiedTag value="Verified" />
-
    ```json
    {
      "enableJavaScript": true
@@ -2706,9 +2183,6 @@ LambdaTest::Selenium::Driver.smartui_snapshot(driver, "Page Loaded")
 1. Verify `.smartui.json` exists and is valid JSON
 2. Check configuration file syntax
 3. Try different port if default is in use:
-
-   <VerifiedTag value="Verified" />
-
    ```bash
    npx smartui exec -P 5000 -- <command">
    ```
@@ -2728,18 +2202,12 @@ LambdaTest::Selenium::Driver.smartui_snapshot(driver, "Page Loaded")
 
 **Solutions**:
 1. Check latest versions on npm:
-
-   <VerifiedTag value="Verified" />
-
    ```bash
    npm view @lambdatest/selenium-driver version
    npm view @lambdatest/smartui-cli version
    ```
 
 2. Clear npm cache:
-
-   <VerifiedTag value="Verified" />
-
    ```bash
    npm cache clean --force
    ```
@@ -2797,9 +2265,6 @@ If you encounter issues not covered here:
 
 **Solutions**:
 1. Verify `PROJECT_TOKEN` is set correctly:
-
-   <VerifiedTag value="Verified" />
-
    ```bash
    echo $PROJECT_TOKEN
    ```
@@ -2807,9 +2272,6 @@ If you encounter issues not covered here:
 2. Check project name matches exactly (case-sensitive)
 
 3. Verify SmartUI CLI is installed:
-
-   <VerifiedTag value="Verified" />
-
    ```bash
    npx smartui --version
    ```
@@ -2851,18 +2313,12 @@ If you encounter issues not covered here:
 
 **Solutions**:
 1. Add explicit waits before screenshots:
-
-   <VerifiedTag value="Verified" />
-
    ```java
    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
    wait.until(ExpectedConditions.presenceOfElementLocated(By.id("content")));
    ```
 
 2. Enable JavaScript in configuration:
-
-   <VerifiedTag value="Verified" />
-
    ```json
    {
      "enableJavaScript": true
@@ -2890,9 +2346,6 @@ If you encounter issues not covered here:
 1. Verify `.smartui.json` exists and is valid JSON
 2. Check configuration file syntax
 3. Try different port if default is in use:
-
-   <VerifiedTag value="Verified" />
-
    ```bash
    npx smartui exec -P 5000 -- <command">
    ```
@@ -2914,9 +2367,6 @@ If you encounter issues not covered here:
 1. Check latest version on [Maven Central](https://mvnrepository.com/artifact/io.github.lambdatest/lambdatest-java-sdk)
 2. Update `pom.xml` with correct version
 3. Clear Maven cache:
-
-   <VerifiedTag value="Verified" />
-
    ```bash
    mvn clean
    ```
@@ -2971,9 +2421,6 @@ If you encounter issues not covered here:
 
 **Solutions**:
 1. Verify `PROJECT_TOKEN` is set correctly:
-
-   <VerifiedTag value="Verified" />
-
    ```powershell
    echo $env:PROJECT_TOKEN
    ```
@@ -2981,9 +2428,6 @@ If you encounter issues not covered here:
 2. Check project name matches exactly (case-sensitive)
 
 3. Verify SmartUI CLI is installed:
-
-   <VerifiedTag value="Verified" />
-
    ```bash
    npx smartui --version
    ```
@@ -3025,9 +2469,6 @@ If you encounter issues not covered here:
 
 **Solutions**:
 1. Add explicit waits before screenshots:
-
-   <VerifiedTag value="Verified" />
-
    ```csharp
    WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
    wait.Until(ExpectedConditions.ElementExists(By.Id("content")));
@@ -3035,9 +2476,6 @@ If you encounter issues not covered here:
    ```
 
 2. Enable JavaScript in configuration:
-
-   <VerifiedTag value="Verified" />
-
    ```json
    {
      "enableJavaScript": true
@@ -3065,9 +2503,6 @@ If you encounter issues not covered here:
 1. Verify `.smartui.json` exists and is valid JSON
 2. Check configuration file syntax
 3. Try different port if default is in use:
-
-   <VerifiedTag value="Verified" />
-
    ```bash
    npx smartui exec -P 5000 -- <command>
    ```
@@ -3088,9 +2523,6 @@ If you encounter issues not covered here:
 **Solutions**:
 1. Check latest version on [NuGet.org](https://www.nuget.org/packages/LambdaTest.Selenium.Driver)
 2. Clear NuGet cache:
-
-   <VerifiedTag value="Verified" />
-
    ```bash
    dotnet nuget locals all --clear
    ```
@@ -3146,9 +2578,6 @@ If you encounter issues not covered here:
 
 **Solutions**:
 1. Verify `PROJECT_TOKEN` is set correctly:
-
-   <VerifiedTag value="Verified" />
-
    ```bash
    echo $PROJECT_TOKEN
    ```
@@ -3156,9 +2585,6 @@ If you encounter issues not covered here:
 2. Check project name matches exactly (case-sensitive)
 
 3. Verify SmartUI CLI is installed:
-
-   <VerifiedTag value="Verified" />
-
    ```bash
    npx smartui --version
    ```
@@ -3200,9 +2626,6 @@ If you encounter issues not covered here:
 
 **Solutions**:
 1. Add explicit waits before screenshots:
-
-   <VerifiedTag value="Verified" />
-
    ```python
    from selenium.webdriver.support.ui import WebDriverWait
    from selenium.webdriver.support import expected_conditions as EC
@@ -3214,9 +2637,6 @@ If you encounter issues not covered here:
    ```
 
 2. Enable JavaScript in configuration:
-
-   <VerifiedTag value="Verified" />
-
    ```json
    {
      "enableJavaScript": true
@@ -3244,9 +2664,6 @@ If you encounter issues not covered here:
 1. Verify `.smartui.json` exists and is valid JSON
 2. Check configuration file syntax
 3. Try different port if default is in use:
-
-   <VerifiedTag value="Verified" />
-
    ```bash
    npx smartui exec -P 5000 -- <command>
    ```
@@ -3267,17 +2684,11 @@ If you encounter issues not covered here:
 
 **Solutions**:
 1. Check latest version:
-
-   <VerifiedTag value="Verified" />
-
    ```bash
    pip index versions lambdatest-selenium-driver
    ```
 
 2. Clear pip cache:
-
-   <VerifiedTag value="Verified" />
-
    ```bash
    pip cache purge
    ```
@@ -3285,17 +2696,11 @@ If you encounter issues not covered here:
 3. Verify internet connectivity for PyPI access
 
 4. Check Python version compatibility:
-
-   <VerifiedTag value="Verified" />
-
    ```bash
    python --version
    ```
 
 5. Use virtual environment:
-
-   <VerifiedTag value="Verified" />
-
    ```bash
    python -m venv venv
    source venv/bin/activate  # On Windows: venv\Scripts\activate
@@ -3351,9 +2756,6 @@ If you encounter issues not covered here:
 
 **Solutions**:
 1. Verify `PROJECT_TOKEN` is set correctly:
-
-   <VerifiedTag value="Verified" />
-
    ```bash
    echo $PROJECT_TOKEN
    ```
@@ -3361,9 +2763,6 @@ If you encounter issues not covered here:
 2. Check project name matches exactly (case-sensitive)
 
 3. Verify SmartUI CLI is installed:
-
-   <VerifiedTag value="Verified" />
-
    ```bash
    npx smartui --version
    ```
@@ -3405,9 +2804,6 @@ If you encounter issues not covered here:
 
 **Solutions**:
 1. Add explicit waits before screenshots:
-
-   <VerifiedTag value="Verified" />
-
    ```ruby
    wait = Selenium::WebDriver::Wait.new(timeout: 10)
    wait.until { driver.find_element(id: 'content') }
@@ -3415,9 +2811,6 @@ If you encounter issues not covered here:
    ```
 
 2. Enable JavaScript in configuration:
-
-   <VerifiedTag value="Verified" />
-
    ```json
    {
      "enableJavaScript": true
@@ -3445,9 +2838,6 @@ If you encounter issues not covered here:
 1. Verify `.smartui.json` exists and is valid JSON
 2. Check configuration file syntax
 3. Try different port if default is in use:
-
-   <VerifiedTag value="Verified" />
-
    ```bash
    npx smartui exec -P 5000 -- <command">
    ```
@@ -3469,24 +2859,15 @@ If you encounter issues not covered here:
 **Solutions**:
 1. Check latest version on [RubyGems.org](https://rubygems.org/gems/lambdatest-selenium-driver)
 2. Clear gem cache:
-
-   <VerifiedTag value="Verified" />
-
    ```bash
    gem cleanup
    ```
 3. Verify internet connectivity for RubyGems access
 4. Check Ruby version compatibility:
-
-   <VerifiedTag value="Verified" />
-
    ```bash
    ruby --version
    ```
 5. Update Gemfile with specific version:
-
-   <VerifiedTag value="Verified" />
-
    ```ruby
    gem 'lambdatest-selenium-driver', '~> 1.0'
    ```

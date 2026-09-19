@@ -27,8 +27,6 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
-import VerifiedTag from '@site/src/component/verifiedTag';
-
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
        "@context": "https://schema.org",
@@ -52,148 +50,6 @@ import VerifiedTag from '@site/src/component/verifiedTag';
       })
     }}
 ></script>
-
-<script type="application/ld+json"
-  dangerouslySetInnerHTML={{ __html: JSON.stringify({
-    "@context": "https://schema.org",
-    "@type": [
-      "Article",
-      "TechArticle"
-    ],
-    "mainEntityOfPage": {
-      "@type": "WebPage",
-      "@id": "https://www.testmuai.com/support/docs/php-with-selenium-running-php-automation-scripts-on-testmu-selenium-grid/"
-    },
-    "headline": "Selenium With PHP",
-    "description": "Run PHP Selenium tests on the TestMu AI cloud grid across 10,000+ browser/device combinations. Covers Behat, Laravel Dusk, Codeception, and PHPUnit.",
-    "url": "https://www.testmuai.com/support/docs/php-with-selenium-running-php-automation-scripts-on-testmu-selenium-grid/",
-    "image": {
-      "@type": "ImageObject",
-      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
-      "width": 1200,
-      "height": 630
-    },
-    "inLanguage": "en",
-    "articleSection": "Web Automation",
-    "keywords": [
-      "php selenium grid setup",
-      "run php tests on cloud",
-      "php selenium webdriver tutorial"
-    ],
-    "proficiencyLevel": "Beginner",
-    "author": {
-      "@type": "Organization",
-      "@id": "https://www.testmuai.com/#organization",
-      "name": "TestMu AI",
-      "url": "https://www.testmuai.com/"
-    },
-    "publisher": {
-      "@type": "Organization",
-      "@id": "https://www.testmuai.com/#organization",
-      "name": "TestMu AI",
-      "alternateName": [
-        "TestMuAI",
-        "TestMu",
-        "LambdaTest"
-      ],
-      "url": "https://www.testmuai.com/",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://www.testmuai.com/logo.png"
-      },
-      "sameAs": [
-        "https://www.linkedin.com/company/testmu-ai/",
-        "https://x.com/testmuai",
-        "https://www.youtube.com/@TestMuAI"
-      ]
-    },
-    "hasPart": [
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "Every framework below connects to the grid and passes your browser and OS choices through a capabilities array",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "PHP",
-        "text": "$capabilities = array(\n    \"build\" => \"your build name\",\n    \"name\" => \"your test name\",\n    \"platform\" => \"Windows 10\",\n    \"browserName\" => \"Chrome\",\n    \"version\" => \"latest\"\n);"
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "Clone the sample GitHub project",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "Shell",
-        "codeRepository": "https://github.com/LambdaTest/behat-selenium-sample",
-        "text": "git clone https://github.com/LambdaTest/behat-selenium-sample\ncd behat-selenium-sample"
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "environments",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "text",
-        "text": "\n3. Run a single test, or in parallel:\n\n```bash\ncomposer single\ncomposer parallel"
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "Clone the sample GitHub project",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "Shell",
-        "codeRepository": "https://github.com/LambdaTest/php-laravel-dusk-todo",
-        "text": "git clone https://github.com/LambdaTest/php-laravel-dusk-todo\ncd php-laravel-dusk-todo"
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "Set your browser and OS in the $capabilities array",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "PHP",
-        "text": "$capabilities = array(\n    \"build\" => \"LaravelDusk Build\",\n    \"name\" => \"LaravelDusk Build\",\n    \"platform\" => \"Windows 10\",\n    \"browserName\" => \"Chrome\",\n    \"version\" => \"latest\"\n);"
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "Run the test",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "Shell",
-        "text": "php artisan dusk"
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "Clone the sample GitHub project",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "Shell",
-        "codeRepository": "https://github.com/LambdaTest/codeception-selenium-sample",
-        "text": "git clone https://github.com/LambdaTest/codeception-selenium-sample\ncd codeception-selenium-sample"
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "capabilities",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "text",
-        "text": "\n3. Run the test:\n\n```bash\n./vendor/bin/codecept run --steps"
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "Clone the sample GitHub project",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "Shell",
-        "codeRepository": "https://github.com/LambdaTest/Php-PhpUnit-Selenium",
-        "text": "git clone https://github.com/LambdaTest/Php-PhpUnit-Selenium\ncd Php-PhpUnit-Selenium"
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "Set your browser and OS in the $capabilities array (LambdaTestSetup.php)",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "PHP",
-        "text": "$capabilities = array(\n    \"build\" => \"Sample PHPUnit Build\",\n    \"name\" => \"Sample PHPUnit Test\",\n    \"platform\" => \"Windows 10\",\n    \"browserName\" => \"Chrome\",\n    \"version\" => \"latest\"\n);"
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "Run a single test, in parallel, or both",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "Shell",
-        "text": "composer single\ncomposer parallel\ncomposer test"
-      }
-    ],
-    "dateModified": "2026-09-09T19:13:32+05:30"
-  }) }}
-/>
-
 
 # How to Run Selenium Tests With PHP on TestMu AI
 ---
@@ -220,8 +76,6 @@ Every framework authenticates the same way: your Username and Access Key are rea
 
 <TabItem value="macos" label="macOS / Linux" default>
 
-<VerifiedTag value="Verified" />
-
 <div className="lambdatest__codeblock">
     <CodeBlock className="language-bash">
   {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
@@ -232,8 +86,6 @@ export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 </TabItem>
 
 <TabItem value="win-cmd" label="Windows (CMD)">
-
-<VerifiedTag value="Verified" />
 
 <div className="lambdatest__codeblock">
     <CodeBlock className="language-batch">
@@ -250,8 +102,6 @@ set LT_ACCESS_KEY=${ YOUR_LAMBDATEST_ACCESS_KEY()}`}
 ---
 
 Every framework below connects to the grid and passes your browser and OS choices through a capabilities array:
-
-<VerifiedTag value="Verified" />
 
 ```php
 $capabilities = array(
@@ -282,16 +132,12 @@ Behat is BDD for PHP: feature files plus step definitions, with the grid config 
 
 1. Clone the [sample GitHub project](https://github.com/LambdaTest/behat-selenium-sample):
 
-<VerifiedTag value="Verified" />
-
 ```bash
 git clone https://github.com/LambdaTest/behat-selenium-sample
 cd behat-selenium-sample
 ```
 
 2. Set your browser and OS in the Behat config:
-
-<VerifiedTag value="Verified" />
 
 ```yaml title="behat.yml"
 default:
@@ -314,15 +160,11 @@ The `user` and `key` values are read from the `LT_USERNAME` and `LT_ACCESS_KEY` 
 
 3. Install the dependencies:
 
-<VerifiedTag value="Verified" />
-
 ```bash
 composer install
 ```
 
 4. Run a single test, or in parallel:
-
-<VerifiedTag value="Verified" />
 
 ```bash
 composer single
@@ -339,16 +181,12 @@ Laravel Dusk provides a fluent browser-automation API. Credentials and the grid 
 
 1. Clone the [sample GitHub project](https://github.com/LambdaTest/php-laravel-dusk-todo):
 
-<VerifiedTag value="Verified" />
-
 ```bash
 git clone https://github.com/LambdaTest/php-laravel-dusk-todo
 cd php-laravel-dusk-todo
 ```
 
 2. Set your browser and OS in the `$capabilities` array:
-
-<VerifiedTag value="Verified" />
 
 ```php
 $capabilities = array(
@@ -362,15 +200,11 @@ $capabilities = array(
 
 3. Install the dependencies:
 
-<VerifiedTag value="Verified" />
-
 ```bash
 composer install
 ```
 
 4. Run the test:
-
-<VerifiedTag value="Verified" />
 
 ```bash
 php artisan dusk
@@ -386,16 +220,12 @@ Codeception configures the grid in its acceptance suite's WebDriver module, with
 
 1. Clone the [sample GitHub project](https://github.com/LambdaTest/codeception-selenium-sample):
 
-<VerifiedTag value="Verified" />
-
 ```bash
 git clone https://github.com/LambdaTest/codeception-selenium-sample
 cd codeception-selenium-sample
 ```
 
 2. Set your browser and OS in the acceptance suite config:
-
-<VerifiedTag value="Verified" />
 
 ```yaml title="acceptance.suite.yml"
 modules:
@@ -417,15 +247,11 @@ In the `host` value, `{username}` and `{token}` are your `LT_USERNAME` and `LT_A
 
 3. Install the dependencies:
 
-<VerifiedTag value="Verified" />
-
 ```bash
 composer install
 ```
 
 4. Run the test:
-
-<VerifiedTag value="Verified" />
 
 ```bash
 ./vendor/bin/codecept run --steps
@@ -441,16 +267,12 @@ PHPUnit keeps capabilities inline in `LambdaTestSetup.php`, with Composer script
 
 1. Clone the [sample GitHub project](https://github.com/LambdaTest/Php-PhpUnit-Selenium):
 
-<VerifiedTag value="Verified" />
-
 ```bash
 git clone https://github.com/LambdaTest/Php-PhpUnit-Selenium
 cd Php-PhpUnit-Selenium
 ```
 
 2. Set your browser and OS in the `$capabilities` array (`LambdaTestSetup.php`):
-
-<VerifiedTag value="Verified" />
 
 ```php
 $capabilities = array(
@@ -464,15 +286,11 @@ $capabilities = array(
 
 3. Install the dependencies:
 
-<VerifiedTag value="Verified" />
-
 ```bash
 composer install
 ```
 
 4. Run a single test, in parallel, or both:
-
-<VerifiedTag value="Verified" />
 
 ```bash
 composer single

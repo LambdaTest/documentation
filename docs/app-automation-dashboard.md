@@ -14,7 +14,6 @@ slug: app-automation-dashboard/
 canonical: https://www.testmuai.com/support/docs/app-automation-dashboard/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
-import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -40,94 +39,6 @@ import VerifiedTag from '@site/src/component/verifiedTag';
     }}
 ></script>
 
-<script type="application/ld+json"
-  dangerouslySetInnerHTML={{ __html: JSON.stringify({
-    "@context": "https://schema.org",
-    "@type": [
-      "Article",
-      "TechArticle"
-    ],
-    "mainEntityOfPage": {
-      "@type": "WebPage",
-      "@id": "https://www.testmuai.com/support/docs/app-automation-dashboard/"
-    },
-    "headline": "Accessing Test Results From App Automation Dashboard",
-    "description": "TestMu AI App Automation dashboard allows you to access test results, debug and fix failed test cases. This documentation guides you how to configure the desired capability for debugging test cases.",
-    "url": "https://www.testmuai.com/support/docs/app-automation-dashboard/",
-    "image": {
-      "@type": "ImageObject",
-      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
-      "width": 1200,
-      "height": 630
-    },
-    "inLanguage": "en",
-    "articleSection": "Documentation",
-    "keywords": [
-      "desired capability for app automation",
-      "app automation dashboard testmu ai",
-      "mobile app automation testing using appium"
-    ],
-    "proficiencyLevel": "Beginner",
-    "author": {
-      "@type": "Organization",
-      "@id": "https://www.testmuai.com/#organization",
-      "name": "TestMu AI",
-      "url": "https://www.testmuai.com/"
-    },
-    "publisher": {
-      "@type": "Organization",
-      "@id": "https://www.testmuai.com/#organization",
-      "name": "TestMu AI",
-      "alternateName": [
-        "TestMuAI",
-        "TestMu",
-        "LambdaTest"
-      ],
-      "url": "https://www.testmuai.com/",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://www.testmuai.com/logo.png"
-      },
-      "sameAs": [
-        "https://www.linkedin.com/company/testmu-ai/",
-        "https://x.com/testmuai",
-        "https://www.youtube.com/@TestMuAI"
-      ]
-    },
-    "hasPart": [
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "Debugging Tests",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "Java",
-        "text": "capabilities.setCapability(\"devicelog\", \"true\")"
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "Debugging Tests",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "Java",
-        "text": "capabilities.setCapability(\"network\", \"true\")"
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "Code sample 3",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "Java",
-        "text": "capabilities.setCapability(\"visual\", \"true\")"
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "Code sample 4",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "Java",
-        "text": "capabilities.setCapability(\"video\", \"true\")"
-      }
-    ],
-    "dateModified": "2026-08-25T02:41:52+05:30"
-  }) }}
-/>
-
 # Inside <BrandName /> App Automation Dashboard
 ***
 
@@ -143,8 +54,6 @@ Device logs allows you to capture system logs for Android and iOS apps. It allow
 
 Use the `devicelog` capability to enable the Device logs.
 
-<VerifiedTag value="Verified" />
-
 ```java
 capabilities.setCapability("devicelog", "true")
 ```
@@ -154,8 +63,6 @@ capabilities.setCapability("devicelog", "true")
 Network logs enables you to take screenshots of multiple network requests during testing and to monitor the performance of network requests and responses.
 
 Use the `network` capability to enable the Network logs.
-
-<VerifiedTag value="Verified" />
 
 ```java
 capabilities.setCapability("network", "true")
@@ -173,8 +80,6 @@ With Visual logs, you can capture the screenshots of the entire test session.
 
 Use the `visual` capability to enable the Visual logs.
 
-<VerifiedTag value="Verified" />
-
 ```java
 capabilities.setCapability("visual", "true")
 ```
@@ -184,8 +89,6 @@ capabilities.setCapability("visual", "true")
 Visual logs enables you to record the video of the complete test session.
 
 Use the `video` capability to enable the Video logs.
-
-<VerifiedTag value="Verified" />
 
 ```java
 capabilities.setCapability("video", "true")

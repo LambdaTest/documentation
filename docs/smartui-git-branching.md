@@ -28,8 +28,6 @@ import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
-import VerifiedTag from '@site/src/component/verifiedTag';
-
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
        "@context": "https://schema.org",
@@ -53,159 +51,6 @@ import VerifiedTag from '@site/src/component/verifiedTag';
       })
     }}
 ></script>
-
-<script type="application/ld+json"
-  dangerouslySetInnerHTML={{ __html: JSON.stringify({
-    "@context": "https://schema.org",
-    "@type": [
-      "Article",
-      "TechArticle"
-    ],
-    "mainEntityOfPage": {
-      "@type": "WebPage",
-      "@id": "https://www.testmuai.com/support/docs/smartui-git-branching-strategy/"
-    },
-    "headline": "Git Branching Strategy in SmartUI Storybook Integration",
-    "description": "In this documentation, learn how the Git Branching Strategy is implemented in Visual Regression testing on the TestMu AI Automation Cloud across 40+ browser versions.",
-    "url": "https://www.testmuai.com/support/docs/smartui-git-branching-strategy/",
-    "image": {
-      "@type": "ImageObject",
-      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
-      "width": 1200,
-      "height": 630
-    },
-    "inLanguage": "en",
-    "articleSection": "Documentation",
-    "keywords": [
-      "Visual Regression",
-      "Visual Regression Testing Guide",
-      "Visual Regression Test Automation"
-    ],
-    "proficiencyLevel": "Beginner",
-    "dependencies": "You have an account with TestMu AI.; You must have an active subscription plan with valid screenshots limit.; You must have created an Project on the SmartUI web app..",
-    "author": {
-      "@type": "Organization",
-      "@id": "https://www.testmuai.com/#organization",
-      "name": "TestMu AI",
-      "url": "https://www.testmuai.com/"
-    },
-    "publisher": {
-      "@type": "Organization",
-      "@id": "https://www.testmuai.com/#organization",
-      "name": "TestMu AI",
-      "alternateName": [
-        "TestMuAI",
-        "TestMu",
-        "LambdaTest"
-      ],
-      "url": "https://www.testmuai.com/",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://www.testmuai.com/logo.png"
-      },
-      "sameAs": [
-        "https://www.linkedin.com/company/testmu-ai/",
-        "https://x.com/testmuai",
-        "https://www.youtube.com/@TestMuAI"
-      ]
-    },
-    "hasPart": [
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "Go to your current StoryBook repository and run the following command",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "Shell",
-        "text": "git init --y"
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "Now, make your changes in your .stories files and then commit the changes to your Git",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "Shell",
-        "text": "git commit -m \"Your commit message\""
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "Execute your SmartUI StoryBook CLI command to execute the Visual Regression tests for your .stories files",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "Shell",
-        "text": "npm run storybook                                                 // Starts your local StoryBook server\nsmartui storybook http://localhost:6006 --config .smartui.json    // Captures all the stories running on local server"
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "Code sample 4",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "Shell",
-        "text": "npm run build-storybook                                           // Creates a Static Build Folder of StoryBook Stories\nsmartui storybook ./storybook-static --config .smartui.json       // Captures all the stories added in the static build folder"
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "And, if you have created a project and set your Baseline branch name to master then executed the following commands",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "Shell",
-        "text": "// Your current branch name\n$ git branch\n* <Your Current Active branch>\n  <--Other branches-->\n\n// Adds a new commit to your current active branch\n$ git commit -m \"Your commit message\"\n\n// Executing the SmartUI StoryBook tests\n$ smartui storybook <Your localhost URL or Static Build folder path> --config .smartui.json"
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "Here is an example of the above workflow",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "Shell",
-        "text": "$ git branch\n* master\n\n$ git commit -m \"Second Build Changes\"\n\n$ smartui storybook http://localhost:6006 --config .smartui.json"
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "Here is an example of the above workflow",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "Shell",
-        "text": "// Step 1 - Commit changes to Git\n$ git commit -am \"Changes in login stories\"\n(git) Changes added to your branch\n\n// Step 2 - Execute SmartUI CLI to trigger Build in the SmartUI project\n$ smartui storybook http://localhost:6006 --config .smatui.json"
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "Here is an example of the above workflow",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "Shell",
-        "text": "// Baseline Branch\n$ git branch\n* master\n\n// Non-Baseline branch\n$ git checkout -b develop\n* develop\n  master\n\n// Executing SmartUI Build with Non-Baseline Git branch\n$ smartui storybook http://localhost:6006 --config .smartui.json"
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "Running Force Builds",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "Shell",
-        "text": "$ smartui storybook <Your localhost URL or Static Build folder path> --config .smartui.json --force-rebuild"
-      }
-    ],
-    "dateModified": "2026-09-09T19:10:37+05:30"
-  }) }}
-/>
-
-<script type="application/ld+json"
-  dangerouslySetInnerHTML={{ __html: JSON.stringify([
-    {
-      "@context": "https://schema.org",
-      "@type": "HowTo",
-      "name": "Git Branching Strategy in SmartUI Storybook Integration",
-      "description": "In this documentation, learn how the Git Branching Strategy is implemented in Visual Regression testing on the TestMu AI Automation Cloud across 40+ browser versions.",
-      "step": [
-        {
-          "@type": "HowToStep",
-          "position": 1,
-          "name": "Step 1: Setup your Git Baseline branch in the Project Settings",
-          "text": "The following are the steps to add Baseline branch to your StoryBook projects with Git commits: Go to Project Settings page for the created project. Search for Git Settings and add your required Baseline branch in the input box. Click on Update Settings button to update the project settings and set your Baseline Git branch. Now, after the successful setup of your Baseline branch of your project.",
-          "url": "https://www.testmuai.com/support/docs/smartui-git-branching-strategy/#step-1-setup-your-git-baseline-branch-in-the-project-settings"
-        },
-        {
-          "@type": "HowToStep",
-          "position": 2,
-          "name": "Step 2: Execute your SmartUI CLI with Git commits",
-          "text": "The following are the steps to execute your SmartUI CLI with Git commits on StoryBook projects: Go to your current StoryBook repository and run the following command: You can ignore the above step if you already have a repository with Git initialized Now, make your changes in your .stories files and then commit the changes to your Git: Execute your SmartUI StoryBook CLI command to execute the Visual Regression tests for your .stories files:",
-          "url": "https://www.testmuai.com/support/docs/smartui-git-branching-strategy/#step-2-execute-your-smartui-cli-with-git-commits"
-        }
-      ]
-    }
-  ]) }}
-/>
-
-
 
 :::info
 This is the guide to understand Git Branching with SmartUI projects, which can detect your commit history and execute the appropriate actions for your visual regression testing. It works across every CLI-based project type — SmartUI SDK, Static CLI, and Storybook.
@@ -252,8 +97,6 @@ The following are the steps to execute your SmartUI CLI with Git commits:
 
 1. Go to your project repository and initialize Git if you have not already:
 
-<VerifiedTag value="Verified" />
-
 ```bash
 git init --y
 ```
@@ -264,8 +107,6 @@ You can ignore the above step if you already have a repository with `Git` initia
 
 2. Make your changes and commit them to your `Git`:
 
-<VerifiedTag value="Verified" />
-
 ```bash
 git commit -m "Your commit message"
 ```
@@ -275,16 +116,12 @@ git commit -m "Your commit message"
 <Tabs className='docs__val' groupId='project_type'>
 <TabItem value='sdk' label='SmartUI SDK' default>
 
-<VerifiedTag value="Verified" />
-
 ```bash
 npx smartui --config .smartui.json exec -- <Your execution command>
 ```
 
 </TabItem>
 <TabItem value='cli' label='Static CLI'>
-
-<VerifiedTag value="Verified" />
 
 ```bash
 smartui capture urls.json --config .smartui.json
@@ -295,16 +132,12 @@ smartui capture urls.json --config .smartui.json
 
 For a locally hosted Storybook server:
 
-<VerifiedTag value="Verified" />
-
 ```bash
 npm run storybook                                                 // Starts your local StoryBook server
 smartui storybook http://localhost:6006 --config .smartui.json    // Captures all the stories running on local server
 ```
 
 For a static Storybook build:
-
-<VerifiedTag value="Verified" />
 
 ```bash
 npm run build-storybook                                           // Creates a Static Build Folder of StoryBook Stories
@@ -333,8 +166,6 @@ You can also set the Baseline branch name through your terminal by setting the f
 <Tabs className='docs__val' groupId='language'>
 <TabItem value='MacOS/Linux' label='MacOS/Linux' default>
 
-<VerifiedTag value="Verified" />
-
 ```bash
 export BASELINE_BRANCH="Required baseline branch"
 ```
@@ -342,16 +173,12 @@ export BASELINE_BRANCH="Required baseline branch"
 </TabItem>
 <TabItem value='Windows' label='Windows - CMD'>
 
-<VerifiedTag value="Verified" />
-
 ```bash
 set BASELINE_BRANCH="Required baseline branch"
 ```
 
 </TabItem>
 <TabItem value='PowerShell' label='PowerShell'>
-
-<VerifiedTag value="Verified" />
 
 ```powershell
 $env:BASELINE_BRANCH="Required baseline branch"
@@ -394,8 +221,6 @@ And, if you have created a project and set your **Baseline** branch name to `mas
 <Tabs className='docs__val' groupId='project_type'>
 <TabItem value='sdk' label='SmartUI SDK' default>
 
-<VerifiedTag value="Verified" />
-
 ```bash
 // Your current branch name
 $ git branch
@@ -411,8 +236,6 @@ $ npx smartui --config .smartui.json exec -- <Execution command>
 
 </TabItem>
 <TabItem value='storybook' label='SmartUI Storybook'>
-
-<VerifiedTag value="Verified" />
 
 ```bash
 // Your current branch name
@@ -439,8 +262,6 @@ Here is an example of the above workflow:
 <Tabs className='docs__val' groupId='project_type'>
 <TabItem value='sdk' label='SmartUI SDK' default>
 
-<VerifiedTag value="Verified" />
-
 ```bash
 $ git branch
 * master
@@ -452,8 +273,6 @@ $ npx smartui --config .smartui.json exec -- <Execution command>
 
 </TabItem>
 <TabItem value='storybook' label='SmartUI Storybook'>
-
-<VerifiedTag value="Verified" />
 
 ```bash
 $ git branch
@@ -474,8 +293,6 @@ You can streamline your workflow by setting the current branch name directly thr
 <Tabs className='docs__val' groupId='language'>
 <TabItem value='MacOS/Linux-1' label='MacOS/Linux' default>
 
-<VerifiedTag value="Verified" />
-
 ```bash
 export CURRENT_BRANCH="Required branch"
 ```
@@ -483,16 +300,12 @@ export CURRENT_BRANCH="Required branch"
 </TabItem>
 <TabItem value="Windows-1" label='Windows - CMD'>
 
-<VerifiedTag value="Verified" />
-
 ```bash
 set CURRENT_BRANCH="Required branch"
 ```
 
 </TabItem>
 <TabItem value="PowerShell-1" label='PowerShell'>
-
-<VerifiedTag value="Verified" />
 
 ```powershell
 $env:CURRENT_BRANCH="Required branch"
@@ -543,8 +356,6 @@ Here is an example of the above workflow:
 <Tabs className='docs__val' groupId='project_type'>
 <TabItem value='sdk' label='SmartUI SDK' default>
 
-<VerifiedTag value="Verified" />
-
 ```bash
 // Step 1 - Commit changes to Git
 $ git commit -am "Changes in login Flow"
@@ -556,8 +367,6 @@ $ npx smartui --config .smartui.json exec -- <Execution command>
 
 </TabItem>
 <TabItem value='storybook' label='SmartUI Storybook'>
-
-<VerifiedTag value="Verified" />
 
 ```bash
 // Step 1 - Commit changes to Git
@@ -584,8 +393,6 @@ Here is an example of the above workflow:
 <Tabs className='docs__val' groupId='project_type'>
 <TabItem value='sdk' label='SmartUI SDK' default>
 
-<VerifiedTag value="Verified" />
-
 ```bash
 // Baseline Branch
 $ git branch
@@ -602,8 +409,6 @@ $ npx smartui --config .smartui.json exec -- <Execution command>
 
 </TabItem>
 <TabItem value='storybook' label='SmartUI Storybook'>
-
-<VerifiedTag value="Verified" />
 
 ```bash
 // Baseline Branch
@@ -652,16 +457,12 @@ In this workflow, if you have not added any commit to your current `Git` in the 
 <Tabs className='docs__val' groupId='project_type'>
 <TabItem value='sdk' label='SmartUI SDK' default>
 
-<VerifiedTag value="Verified" />
-
 ```bash
 $ npx smartui --config .smartui.json exec -- <Execution command> --force-rebuild
 ```
 
 </TabItem>
 <TabItem value='storybook' label='SmartUI Storybook'>
-
-<VerifiedTag value="Verified" />
 
 ```bash
 $ smartui storybook <Your localhost URL or Static Build folder path> --config .smartui.json --force-rebuild
@@ -698,8 +499,6 @@ Smart Git can be enabled using an environment variable:
 <Tabs className='docs__val' groupId='language'>
 <TabItem value='MacOS/Linux' label='MacOS/Linux' default>
 
-<VerifiedTag value="Verified" />
-
 ```bash
 export SMART_GIT=true
 ```
@@ -707,16 +506,12 @@ export SMART_GIT=true
 </TabItem>
 <TabItem value='Windows' label='Windows' default>
 
-<VerifiedTag value="Verified" />
-
 ```bash
 set SMART_GIT=true
 ```
 
 </TabItem>
 <TabItem value='PowerShell' label='PowerShell'>
-
-<VerifiedTag value="Verified" />
 
 ```powershell
 $env:SMART_GIT="true"
@@ -743,9 +538,6 @@ $env:SMART_GIT="true"
 #### Comparison Flow
 
 1. **Build Execution**:
-
-   <VerifiedTag value="Verified" />
-
    ```bash
    # Enable Smart Git
    export SMART_GIT=true
@@ -765,8 +557,6 @@ $env:SMART_GIT="true"
 #### Use Case 1: Feature Branch Development
 
 **Scenario**: You're developing a new feature in a feature branch and want to track visual changes independently.
-
-<VerifiedTag value="Verified" />
 
 ```bash
 # Create and switch to feature branch
@@ -791,8 +581,6 @@ npx smartui capture urls.json --buildName "feature-login-capture"
 
 **Scenario**: Multiple teams working on different features in separate branches.
 
-<VerifiedTag value="Verified" />
-
 ```bash
 # Team A: Feature branch
 git checkout -b feature/team-a
@@ -813,8 +601,6 @@ npx smartui --config .smartui.json exec -- <Team B tests>
 #### Use Case 3: Hotfix Development
 
 **Scenario**: Need to make urgent fixes in a hotfix branch.
-
-<VerifiedTag value="Verified" />
 
 ```bash
 # Create hotfix branch
@@ -922,8 +708,6 @@ Branch-level merging allows you to merge visual regression test results from one
 
 #### Merge Command
 
-<VerifiedTag value="Verified" />
-
 ```bash
 npx smartui merge branch --source <source-branch> --target <target-branch>
 ```
@@ -939,8 +723,6 @@ npx smartui merge branch --source <source-branch> --target <target-branch>
    - For build merges: `merged-build/<sourcebuildname>-<targetbuildname>`
 
 #### Example Workflow
-
-<VerifiedTag value="Verified" />
 
 ```bash
 # Merge feature branch into main
@@ -968,8 +750,6 @@ npx smartui merge branch --source hotfix/security-patch --target staging
 
 **Scenario**: Merging a feature branch into main after approval
 
-<VerifiedTag value="Verified" />
-
 ```bash
 # 1. Ensure feature branch is approved
 npx smartui merge branch --source feature/new-login --target main
@@ -978,8 +758,6 @@ npx smartui merge branch --source feature/new-login --target main
 #### 2. Hotfix Strategy
 
 **Scenario**: Merging a hotfix into multiple branches
-
-<VerifiedTag value="Verified" />
 
 ```bash
 # 1. Merge to staging
@@ -992,8 +770,6 @@ npx smartui merge branch --source hotfix/security-patch --target production
 #### 3. Release Branch Strategy
 
 **Scenario**: Managing release branches
-
-<VerifiedTag value="Verified" />
 
 ```bash
 # 1. Create release branch
@@ -1068,8 +844,6 @@ If you encounter any issues with branch merging in SmartUI, please contact our s
 
 Let's walk through a complete workflow where a team is developing a new feature with multiple iterations and PRs.
 
-<VerifiedTag value="Verified" />
-
 ```bash
 # Initial feature development
 git checkout -b feature/new-dashboard
@@ -1100,8 +874,6 @@ npx smartui --config .smartui.json exec -- <Your execution command> --buildName 
 #### CI/CD Integration with Branch Merging
 
 Here's a GitHub Actions workflow that automates the branch merging process in your CI/CD pipeline:
-
-<VerifiedTag value="Verified" />
 
 ```yaml
 name: Visual Regression Tests with Branch Merging
@@ -1194,8 +966,6 @@ Build-level merging provides granular control over specific builds, allowing you
 
 #### Merge Command
 
-<VerifiedTag value="Verified" />
-
 ```bash
 npx smartui merge build --source <source-build> --target <target-build>
 ```
@@ -1208,8 +978,6 @@ npx smartui merge build --source <source-build> --target <target-build>
 4. **Confirmation**: Provides merge confirmation
 
 #### Example Workflow
-
-<VerifiedTag value="Verified" />
 
 ```bash
 # Merge specific builds
@@ -1235,8 +1003,6 @@ npx smartui merge build --source build-123 --target build-456
 
 **Scenario**: Promoting specific builds across environments
 
-<VerifiedTag value="Verified" />
-
 ```bash
 # 1. Merge staging build to production
 npx smartui merge build --source staging-build-123 --target prod-build-456
@@ -1246,8 +1012,6 @@ npx smartui merge build --source staging-build-123 --target prod-build-456
 
 **Scenario**: Managing feature-specific builds
 
-<VerifiedTag value="Verified" />
-
 ```bash
 # 1. Merge feature build into main build
 npx smartui merge build --source feature-build-789 --target main-build-101
@@ -1256,8 +1020,6 @@ npx smartui merge build --source feature-build-789 --target main-build-101
 #### 3. Hotfix Build Strategy
 
 **Scenario**: Managing hotfix builds
-
-<VerifiedTag value="Verified" />
 
 ```bash
 # 1. Create hotfix build

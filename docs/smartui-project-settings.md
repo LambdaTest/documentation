@@ -31,8 +31,6 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 
-import VerifiedTag from '@site/src/component/verifiedTag';
-
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
        "@context": "https://schema.org",
@@ -56,95 +54,6 @@ import VerifiedTag from '@site/src/component/verifiedTag';
       })
     }}
 ></script>
-
-<script type="application/ld+json"
-  dangerouslySetInnerHTML={{ __html: JSON.stringify({
-    "@context": "https://schema.org",
-    "@type": [
-      "Article",
-      "TechArticle"
-    ],
-    "mainEntityOfPage": {
-      "@type": "WebPage",
-      "@id": "https://www.testmuai.com/support/docs/smartui-project-settings/"
-    },
-    "headline": "Project Settings",
-    "description": "In this documentation, learn about the project settings available for SmartUI Projects in order to customize your project, manage approvals, configure comparison parameters, and more.",
-    "url": "https://www.testmuai.com/support/docs/smartui-project-settings/",
-    "image": {
-      "@type": "ImageObject",
-      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
-      "width": 1200,
-      "height": 630
-    },
-    "inLanguage": "en",
-    "articleSection": "SmartUI",
-    "keywords": [
-      "Visual Regression",
-      "Visual Regression Testing Guide",
-      "Visual Regression Test Automation"
-    ],
-    "proficiencyLevel": "Beginner",
-    "author": {
-      "@type": "Organization",
-      "@id": "https://www.testmuai.com/#organization",
-      "name": "TestMu AI",
-      "url": "https://www.testmuai.com/"
-    },
-    "publisher": {
-      "@type": "Organization",
-      "@id": "https://www.testmuai.com/#organization",
-      "name": "TestMu AI",
-      "alternateName": [
-        "TestMuAI",
-        "TestMu",
-        "LambdaTest"
-      ],
-      "url": "https://www.testmuai.com/",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://www.testmuai.com/logo.png"
-      },
-      "sameAs": [
-        "https://www.linkedin.com/company/testmu-ai/",
-        "https://x.com/testmuai",
-        "https://www.youtube.com/@TestMuAI"
-      ]
-    },
-    "hasPart": [
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "Project Settings",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "Shell",
-        "text": "export PROJECT_TOKEN='project#token'"
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "Project Settings",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "Shell",
-        "text": "set PROJECT_TOKEN='project#token'"
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "Project Settings",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "PowerShell",
-        "text": "$env:PROJECT_TOKEN='project#token'"
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "Code sample 4",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "Markdown",
-        "text": "[![This project is using Lambda test for visual regression testing.](https://smartui.lambdatest.com/static/media/LTBadge.64a05e73.svg)](https://lambdatest.com)"
-      }
-    ],
-    "dateModified": "2026-09-09T19:10:37+05:30"
-  }) }}
-/>
-
 
 # SmartUI Project Configuration
 
@@ -215,8 +124,6 @@ Use this key to authenticate your SmartUI project for executing locally with CLI
 <Tabs className='docs__val' groupId='platform'>
 <TabItem value='macos-linux' label='MacOS/Linux' default>
 
-<VerifiedTag value="Verified" />
-
 ```bash
 export PROJECT_TOKEN='project#token'
 ```
@@ -224,16 +131,12 @@ export PROJECT_TOKEN='project#token'
 </TabItem>
 <TabItem value='windows-cmd' label='Windows - CMD'>
 
-<VerifiedTag value="Verified" />
-
 ```bash
 set PROJECT_TOKEN='project#token'
 ```
 
 </TabItem>
 <TabItem value='powershell' label='PowerShell'>
-
-<VerifiedTag value="Verified" />
 
 ```powershell
 $env:PROJECT_TOKEN='project#token'
@@ -497,9 +400,6 @@ We are continually adding more notification channels for SmartUI.
 Show the world that you are using <BrandName /> for your visual regression testing.
 
 **Badge Code:**
-
-<VerifiedTag value="Verified" />
-
 ```markdown
 [![This project is using Lambda test for visual regression testing.](https://smartui.lambdatest.com/static/media/LTBadge.64a05e73.svg)](https://lambdatest.com)
 ```
@@ -548,8 +448,6 @@ You can specify the following `capability` in the following format:
 
 <TabItem value="selenium" label="Selenium" default>
 
-<VerifiedTag value="Verified" />
-
 ```js title="Make changes in your  your test configuration file"
 let capabilities = {
 
@@ -566,8 +464,6 @@ let capabilities = {
 </TabItem>
 
 <TabItem value="cypress" label="Cypress" default>
-
-<VerifiedTag value="Verified" />
 
 ```json title="Add the following in your /project/lambdatest-config.json"
 "smart_ui": {
@@ -599,8 +495,6 @@ You can specify the following `capability` in the following format:
 
 <TabItem value="selenium" label="Selenium" default>
 
-<VerifiedTag value="Verified" />
-
 ```js title="Make changes in your  your test configuration file"
 let capabilities = {
 
@@ -617,8 +511,6 @@ let capabilities = {
 </TabItem>
 
 <TabItem value="cypress" label="Cypress">
-
-<VerifiedTag value="Verified" />
 
 ```json title="Make changes in your /project/lambdatest-config.json"
 "smart_ui": {
@@ -653,8 +545,6 @@ You can specify the following `capability` in the following format:
 
 <TabItem value="selenium" label="Selenium" default>
 
-<VerifiedTag value="Verified" />
-
 ```js title="Make changes in your  your test configuration file"
 let capabilities = {
 
@@ -671,8 +561,6 @@ let capabilities = {
 </TabItem>
 
 <TabItem value="cypress" label="Cypress">
-
-<VerifiedTag value="Verified" />
 
 ```json title="Make changes in your /project/lambdatest-config.json"
 "smart_ui": {
@@ -700,8 +588,6 @@ You can specify the following `capability` in the following format:
 
 <TabItem value="selenium" label="Selenium" default>
 
-<VerifiedTag value="Verified" />
-
 ```js title="Make changes in your  your test configuration file"
 let capabilities = {
 
@@ -718,8 +604,6 @@ let capabilities = {
 </TabItem>
 
 <TabItem value="cypress" label="Cypress">
-
-<VerifiedTag value="Verified" />
 
 ```json title="Make changes in your /project/lambdatest-config.json"
 "smart_ui": {
@@ -753,8 +637,6 @@ You can specify the following `capability` in the following format:
 
 <TabItem value="selenium" label="Selenium" default>
 
-<VerifiedTag value="Verified" />
-
 ```js title="Make changes in your  your test configuration file"
 // Bounding box sample settings
 const box1 = {
@@ -787,8 +669,6 @@ let capabilities = {
 </TabItem>
 
 <TabItem value="cypress" label="Cypress">
-
-<VerifiedTag value="Verified" />
 
 ```json title="Make changes in your /project/lambdatest-config.json"
 "smart_ui": {
@@ -832,8 +712,6 @@ You can specify the following `capability` in the following format:
 
 <TabItem value="selenium" label="Selenium" default>
 
-<VerifiedTag value="Verified" />
-
 ```js title="Make changes in your  your test configuration file"
 // Bounding box sample settings
 const box1 = {
@@ -866,8 +744,6 @@ let capabilities = {
 </TabItem>
 
 <TabItem value="cypress" label="Cypress">
-
-<VerifiedTag value="Verified" />
 
 ```json title="Make changes in your /project/lambdatest-config.json"
 "smart_ui": {
@@ -909,8 +785,6 @@ You can specify the following `capability` in the following format:
 
 <TabItem value="selenium" label="Selenium" default>
 
-<VerifiedTag value="Verified" />
-
 ```js title="Make changes in your  your test configuration file"
 // Bounding box sample settings
 const color = {
@@ -936,8 +810,6 @@ let capabilities = {
 </TabItem>
 
 <TabItem value="cypress" label="Cypress">
-
-<VerifiedTag value="Verified" />
 
 ```json title="Make changes in your /project/lambdatest-config.json"
 "smart_ui": {
@@ -984,8 +856,6 @@ The following are the different options which are currently supported:
 <Tabs className="docs__val" groupId="framework">
 <TabItem value="IgnoreID" label="Ignore ID" default>
 
-<VerifiedTag value="Verified" />
-
 ```js title="This is a sample for your webhook configuration for JavaScript to ignore by ID"
 let config = {
   screenshotName: "Ignore-ID",
@@ -999,8 +869,6 @@ await driver.executeScript("smartui.takeScreenshot", config);
 
 </TabItem>
 <TabItem value="IgoreClass" label="Ignore Class">
-
-<VerifiedTag value="Verified" />
 
 ```js title="This is a sample for your webhook configuration for JavaScript to ignore by Class"
 let config = {
@@ -1016,8 +884,6 @@ await driver.executeScript("smartui.takeScreenshot", config);
 </TabItem>
 <TabItem value="IgnoreXPath" label="Ignore XPath">
 
-<VerifiedTag value="Verified" />
-
 ```js title="This is a sample for your webhook configuration for JavaScript to ignore by XPath"
 let config = {
   screenshotName: "Ignore-XPath",
@@ -1032,8 +898,6 @@ await driver.executeScript("smartui.takeScreenshot", config);
 </TabItem>
 
 <TabItem value="IgnoreSelector" label="Ignore CSS Selector">
-
-<VerifiedTag value="Verified" />
 
 ```js title="This is a sample for your webhook configuration for JavaScript to ignore by CSS Selector"
 let config = {
@@ -1052,8 +916,6 @@ await driver.executeScript("smartui.takeScreenshot", config);
 <Tabs className="docs__val" groupId="framework">
 <TabItem value="SelectID" label="Select ID" default>
 
-<VerifiedTag value="Verified" />
-
 ```js title="This is a sample for your webhook configuration for JavaScript to select by ID."
 let config = {
   screenshotName: "Select-ID",
@@ -1067,8 +929,6 @@ await driver.executeScript("smartui.takeScreenshot", config);
 
 </TabItem>
 <TabItem value="SelectClass" label="Select Class">
-
-<VerifiedTag value="Verified" />
 
 ```js title="This is a sample for your webhook configuration for JavaScript to select by Class"
 let config = {
@@ -1084,8 +944,6 @@ await driver.executeScript("smartui.takeScreenshot", config);
 </TabItem>
 <TabItem value="SelectXPath" label="Select XPath">
 
-<VerifiedTag value="Verified" />
-
 ```js title="This is a sample for your webhook configuration for JavaScript to select by XPath"
 let config = {
   screenshotName: "Select-XPath",
@@ -1100,8 +958,6 @@ await driver.executeScript("smartui.takeScreenshot", config);
 </TabItem>
 
 <TabItem value="SelectSelector" label="Select CSS Selector">
-
-<VerifiedTag value="Verified" />
 
 ```js title="This is a sample for your webhook configuration for JavaScript to select by CSS Selector"
 let config = {
@@ -1133,8 +989,6 @@ The following are the different options which are currently supported:
 <Tabs className="docs__val" groupId="framework">
 <TabItem value="IgnoreID" label="Ignore ID" default>
 
-<VerifiedTag value="Verified" />
-
 ```js title="This is a sample for your webhook configuration for Puppeteer"
 await page.evaluate((_) => {},
     `lambdatest_action: ${JSON.stringify({ action: 'smartui.takeScreenshot', arguments: { fullPage: false, screenshotName: 'dom-screenshot', ignoreDOM : {id:["HTML DOM Id"]} }})}`)
@@ -1142,8 +996,6 @@ await page.evaluate((_) => {},
 
 </TabItem>
 <TabItem value="IgoreClass" label="Ignore Class">
-
-<VerifiedTag value="Verified" />
 
 ```js title="This is a sample for your webhook configuration for Puppeteer"
 await page.evaluate((_) => {},
@@ -1153,8 +1005,6 @@ await page.evaluate((_) => {},
 </TabItem>
 <TabItem value="IgnoreXPath" label="Ignore XPath">
 
-<VerifiedTag value="Verified" />
-
 ```js title="This is a sample for your webhook configuration for Puppeteer"
 await page.evaluate((_) => {},
     `lambdatest_action: ${JSON.stringify({ action: 'smartui.takeScreenshot', arguments: { fullPage: false, screenshotName: 'dom-screenshot',  ignoreXPath: ['Xpath-1', 'Xpath-2']} })}`)
@@ -1162,8 +1012,6 @@ await page.evaluate((_) => {},
 </TabItem>
 
 <TabItem value="IgnoreSelector" label="Ignore CSS Selector">
-
-<VerifiedTag value="Verified" />
 
 ```js title="This is a sample for your webhook configuration for Puppeteer"
 await page.evaluate((_) => {},
@@ -1176,8 +1024,6 @@ await page.evaluate((_) => {},
 <Tabs className="docs__val" groupId="framework">
 <TabItem value="SelectID" label="Select ID" default>
 
-<VerifiedTag value="Verified" />
-
 ```js title="This is a sample for your webhook configuration for Puppeteer"
 await page.evaluate((_) => {},
     `lambdatest_action: ${JSON.stringify({ action: 'smartui.takeScreenshot', arguments: { fullPage: false, screenshotName: 'dom-screenshot', selectDOM : {id:["HTML DOM Id"]} }})}`)
@@ -1185,8 +1031,6 @@ await page.evaluate((_) => {},
 
 </TabItem>
 <TabItem value="SelectClass" label="Select Class">
-
-<VerifiedTag value="Verified" />
 
 ```js title="This is a sample for your webhook configuration for Puppeteer"
 await page.evaluate((_) => {},
@@ -1196,8 +1040,6 @@ await page.evaluate((_) => {},
 </TabItem>
 <TabItem value="SelectXPath" label="Select XPath">
 
-<VerifiedTag value="Verified" />
-
 ```js title="This is a sample for your webhook configuration for Puppeteer"
 await page.evaluate((_) => {},
     `lambdatest_action: ${JSON.stringify({ action: 'smartui.takeScreenshot', arguments: { fullPage: false, screenshotName: 'dom-screenshot',  selectXPath: ['Xpath-1', 'Xpath-2']} })}`)
@@ -1206,8 +1048,6 @@ await page.evaluate((_) => {},
 </TabItem>
 
 <TabItem value="SelectSelector" label="Select CSS Selector">
-
-<VerifiedTag value="Verified" />
 
 ```js title="This is a sample for your webhook configuration for Puppeteer"
 await page.evaluate((_) => {},
@@ -1233,8 +1073,6 @@ The following are the different options which are currently supported:
 <Tabs className="docs__val" groupId="framework">
 <TabItem value="IgnoreID" label="Ignore ID" default>
 
-<VerifiedTag value="Verified" />
-
 ```js title="This is a sample for your webhook configuration for Playwright"
 await page.evaluate((_) => {},
     `lambdatest_action: ${JSON.stringify({ action: 'smartui.takeScreenshot', arguments: { fullPage: false, screenshotName: 'dom-screenshot', ignoreDOM : {id:["HTML DOM Id"]} }})}`)
@@ -1242,8 +1080,6 @@ await page.evaluate((_) => {},
 
 </TabItem>
 <TabItem value="IgoreClass" label="Ignore Class">
-
-<VerifiedTag value="Verified" />
 
 ```js title="This is a sample for your webhook configuration for Playwright"
 await page.evaluate((_) => {},
@@ -1253,8 +1089,6 @@ await page.evaluate((_) => {},
 </TabItem>
 <TabItem value="IgnoreXPath" label="Ignore XPath">
 
-<VerifiedTag value="Verified" />
-
 ```js title="This is a sample for your webhook configuration for Playwright"
 await page.evaluate((_) => {},
     `lambdatest_action: ${JSON.stringify({ action: 'smartui.takeScreenshot', arguments: { fullPage: false, screenshotName: 'dom-screenshot',  ignoreXPath: ['Xpath-1', 'Xpath-2']} })}`)
@@ -1262,8 +1096,6 @@ await page.evaluate((_) => {},
 </TabItem>
 
 <TabItem value="IgnoreSelector" label="Ignore CSS Selector">
-
-<VerifiedTag value="Verified" />
 
 ```js title="This is a sample for your webhook configuration for Playwright"
 await page.evaluate((_) => {},
@@ -1276,8 +1108,6 @@ await page.evaluate((_) => {},
 <Tabs className="docs__val" groupId="framework">
 <TabItem value="SelectID" label="Select ID" default>
 
-<VerifiedTag value="Verified" />
-
 ```js title="This is a sample for your webhook configuration for Playwright"
 await page.evaluate((_) => {},
     `lambdatest_action: ${JSON.stringify({ action: 'smartui.takeScreenshot', arguments: { fullPage: false, screenshotName: 'dom-screenshot', selectDOM : {id:["HTML DOM Id"]} }})}`)
@@ -1285,8 +1115,6 @@ await page.evaluate((_) => {},
 
 </TabItem>
 <TabItem value="SelectClass" label="Select Class">
-
-<VerifiedTag value="Verified" />
 
 ```js title="This is a sample for your webhook configuration for Playwright"
 await page.evaluate((_) => {},
@@ -1296,8 +1124,6 @@ await page.evaluate((_) => {},
 </TabItem>
 <TabItem value="SelectXPath" label="Select XPath">
 
-<VerifiedTag value="Verified" />
-
 ```js title="This is a sample for your webhook configuration for Playwright"
 await page.evaluate((_) => {},
     `lambdatest_action: ${JSON.stringify({ action: 'smartui.takeScreenshot', arguments: { fullPage: false, screenshotName: 'dom-screenshot',  selectXPath: ['Xpath-1', 'Xpath-2']} })}`)
@@ -1306,8 +1132,6 @@ await page.evaluate((_) => {},
 </TabItem>
 
 <TabItem value="SelectSelector" label="Select CSS Selector">
-
-<VerifiedTag value="Verified" />
 
 ```js title="This is a sample for your webhook configuration for Playwright"
 await page.evaluate((_) => {},
@@ -1328,8 +1152,6 @@ If you have multiple screenshots running the same test suite and want to run the
 <Tabs className="docs__val" groupId="framework">
 <TabItem value="selenium" label="Selenium" default>
 
-<VerifiedTag value="Verified" />
-
 ```js title="Please add the following to your capabilities configuration"
 let capabilities = {
     // highlight-next-line
@@ -1340,8 +1162,6 @@ let capabilities = {
 </TabItem>
 <TabItem value="cypress" label="Cypress" default>
 
-<VerifiedTag value="Verified" />
-
 ```json title="Please make the changes in lambdatest-config.json"
 "smart_ui": {
     // highlight-next-line
@@ -1351,8 +1171,6 @@ let capabilities = {
 
 </TabItem>
 <TabItem value="playwright" label="Playwright" default>
-
-<VerifiedTag value="Verified" />
 
 ```js title="Please add the following in <LT:Options> in your capabilities configuration "
 
@@ -1366,8 +1184,6 @@ const capabilities = {
 </TabItem>
 <TabItem value="puppeteer" label="Puppeteer" default>
 
-<VerifiedTag value="Verified" />
-
 ```js title="Please add the following in <LT:Options> in your capabilities configuration "
 
 const capabilities = {
@@ -1379,8 +1195,6 @@ const capabilities = {
 ```
 </TabItem>
 <TabItem value="k6" label="K6" default>
-
-<VerifiedTag value="Verified" />
 
 ```js title="Please add the following in <LT:Options> in your capabilities configuration "
 
@@ -1401,8 +1215,6 @@ If you want to mark your build as a baseline from your test suite while executin
 <Tabs className="docs__val" groupId="framework">
 <TabItem value="selenium" label="Selenium" default>
 
-<VerifiedTag value="Verified" />
-
 ```js title="Please add the following to your capabilities configuration"
 let capabilities = {
   // highlight-next-line
@@ -1413,8 +1225,6 @@ let capabilities = {
 </TabItem>
 <TabItem value="cypress" label="Cypress" default>
 
-<VerifiedTag value="Verified" />
-
 ```json title="Please make the changes in lambdatest-config.json"
 "smart_ui": {
     // highlight-next-line
@@ -1424,8 +1234,6 @@ let capabilities = {
 
 </TabItem>
 <TabItem value="playwright" label="Playwright" default>
-
-<VerifiedTag value="Verified" />
 
 ```js title="Please add the following in <LT:Options> in your capabilities configuration "
 
@@ -1439,8 +1247,6 @@ const capabilities = {
 </TabItem>
 <TabItem value="puppeteer" label="Puppeteer" default>
 
-<VerifiedTag value="Verified" />
-
 ```js title="Please add the following in <LT:Options> in your capabilities configuration "
 
 const capabilities = {
@@ -1452,8 +1258,6 @@ const capabilities = {
 ```
 </TabItem>
 <TabItem value="k6" label="K6" default>
-
-<VerifiedTag value="Verified" />
 
 ```js title="Please add the following in <LT:Options> in your capabilities configuration "
 
@@ -1513,8 +1317,6 @@ Download or Clone the code sample from the <BrandName /> GitHub repository to ru
 - Navigate to the main page of the repository.
 - Under your repository name, click **Actions**.
 - In the left sidebar, click the **New workflow** button.
-
-<VerifiedTag value="Verified" />
 
 ```yaml reference
 https://github.com/LambdaTest/smartui-monorepo-sample/blob/main/.github/workflows/main.yml
@@ -1591,8 +1393,6 @@ Native mobile app screenshots captured through the app automation SDKs (Appium, 
 
 Designs pulled straight from Figma with the CLI, so the intended design can sit in the same project as the implementation that is meant to match it.
 
-<VerifiedTag value="Verified" />
-
 ```bash
 smartui upload-figma <designs.json>
 ```
@@ -1603,8 +1403,6 @@ smartui upload-figma <designs.json>
 
 Component-library validation by crawling a running Storybook instance.
 
-<VerifiedTag value="Verified" />
-
 ```bash
 npx smartui storybook <storybook-url>
 ```
@@ -1614,8 +1412,6 @@ npx smartui storybook <storybook-url>
 <TabItem value='pdf' label='PDF'>
 
 Multi-page document verification. Each page of the PDF becomes its own comparison.
-
-<VerifiedTag value="Verified" />
 
 ```bash
 smartui upload-pdf <path-to-pdfs>
@@ -1628,8 +1424,6 @@ PDFs can also be uploaded through the SmartUI PDF API.
 <TabItem value='image' label='Image'>
 
 Raw image assets uploaded directly, for cases where the screenshot is produced outside SmartUI.
-
-<VerifiedTag value="Verified" />
 
 ```bash
 smartui upload <path-to-images>
