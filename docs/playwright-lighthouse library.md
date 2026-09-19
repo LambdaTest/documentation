@@ -273,7 +273,6 @@ node RELATIVE_PATH_OF_YOUR_TEST_FILE
 ### View Your Test Results
 To view your test runs that uses Playwright Lighthouse Library, go to the <BrandName /> [Web Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/).
 
-<img loading="lazy" src={require('../assets/images/playwright-testing/lighthouse-report.png').default} alt="Image" className="doc_img"/>
 
 
 

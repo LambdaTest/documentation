@@ -121,79 +121,39 @@ import VerifiedTag from '@site/src/component/verifiedTag';
 
 * * *
 
-TestMu AI allows you to group your automation tests using custom tags. This document shows how to create custom tags and use them. For demonstration purposes, we use a [sample TestNG script](https://github.com/LambdaTest/Java-TestNG-Selenium) to run on the TestMu AI platform.
+TestMu AI lets you group automation tests with custom tags. Add a `tags` capability with your tag names to a test, run it, then view and filter tests by those tags from the Builds list on the dashboard. The examples below use a [sample TestNG script](https://github.com/LambdaTest/Java-TestNG-Selenium).
 
 ## How to Create Custom Tags on the Selenium Grid
 ---
-Add a tags capability with a String array to your desired capabilities.
+Pass a `tags` capability with a String array of tag names inside `LT:Options`.
 
-You can create a custom tag while writing your Selenium automation tests. When you create the [Desired Capabilities](/docs/selenium-automation-capabilities/) via code, add the below lines of code.
-
-*   Create a String array that contains the names of your custom tags, separated by a comma.
+Add custom tags while writing your Selenium test. When you build your [Selenium capabilities](/support/docs/selenium-automation-capabilities/), set the `tags` capability to a String array of the tag names you want on the test:
 
 <VerifiedTag value="Verified" />
 
-```javascript
-        // In case for just 1 tag, just add 1 element in the array
-        String[] customTags = {"Custom Tag"};
+```java
+// The tags you want to apply to this test
+String[] customTags = { "Tag 1", "Tag 2", "Tag 3" };
 
-        // In case for multiple tags, add them in the array separated by comma
-        String[] customTags = {"Tag 1", "Tag 2", "Tag 3", ...};
-```       
+// Add the tags capability inside LT:Options
+MutableCapabilities ltOptions = new MutableCapabilities();
+ltOptions.setCapability("tags", customTags);
 
-*   Now add this custom tag in your Desired Capabilities instance:
+ChromeOptions browserOptions = new ChromeOptions();
+browserOptions.setCapability("LT:Options", ltOptions);
+```
 
-<VerifiedTag value="Verified" />
+Run the test with these capabilities. Once it runs on the grid, view and filter your tests by these tags on the dashboard.
 
-```javascript
-        DesiredCapabilities caps = new DesiredCapabilities();
-        .
-        .
-
-        // To create custom tags
-        caps.setCapability("tags", customTags); 
-  ```
-*For example:*
-
-<img loading="lazy" src={require('../assets/images/uploads/custom-tags-5-1.webp').default} alt="custom tags" width="1089" height="708" className="doc_img"/>
-
-You have successfully created the custom tags. Let us now see how to view and group tests based on custom tags.
-
-## How to View Custom Tags on the Platform
+## How to View and Filter Tests by Custom Tags
 ---
-View your custom tags in the Timeline or Automation Logs views on the dashboard.
+Filter the Builds list by your custom tags from the Sort & Filters panel.
 
-There are multiple ways to view custom tags in the automation dashboard, such as Timeline view and Automation logs view.
+On the [Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build), open **Configure > Sort & Filters** and select **Test Tags**. Choose one or more of your tags to show only the tests that carry them; selecting several combines them.
 
-### How to View Custom Tags on Your Timeline
+<img loading="lazy" src={require('../assets/images/uploads/builds-filter-test-tags.webp').default} alt="Test Tags filter on the Builds list showing custom tag values to filter tests by" width="1601" height="702" className="doc_img"/>
 
-Navigate to [Timeline](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/timeline/) view of your automation dashboard, and toggle the **Build View** to **Test View**:
-
-<img loading="lazy" src={require('../assets/images/uploads/build-view.webp').default} alt="Automation build" width="1024" height="414" className="doc_img"/>
-
-You can see the applied custom tags below the tests in this Test View. <img loading="lazy" src={require('../assets/images/uploads/test-view.webp').default} alt="Test View" width="1024" height="461" className="doc_img"/>
-
-### How to View Custom Tags on Your Automation Logs
-
-* * *
-
-Navigate to [Automation Logs](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/logs) of your automation dashboard, and you can see the applied custom tags below the tests in the left panel. <img loading="lazy" src={require('../assets/images/uploads/tags-1.webp').default} alt="Automation logs" width="1024" height="407" className="doc_img"/>
-
-## How to Filter Tests Using Custom Tags on the Platform
----
-Select one or more custom tags in the filter toolbar to narrow down your test results.
-
-You can filter tests on your automation dashboard with these custom tags.
-
-Navigate to [Automation Logs](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/logs) of your automation dashboard, and you can see a filter by name **Tags** in the filter toolbar. <img loading="lazy" src={require('../assets/images/uploads/tags-2.webp').default} alt="Automation tags" width="1024" height="399" className="doc_img"/>
-
-Click on it and select the Tag by which you want to filter the tests on your dashboard. For example, we have filtered the test using _Tag2_ custom tag:
-
-<img loading="lazy" src={require('../assets/images/uploads/tags-3.webp').default} alt="automation log tags" width="1838" height="790" className="doc_img"/>
-
-You can filter tests by selecting multiple custom tags at once from the filter toolbar:
-
-<img loading="lazy" src={require('../assets/images/uploads/custom-tags-13.webp').default} alt="custom automation tags" width="1024" height="429" className="doc_img"/>
+To filter by tags applied to the build rather than the test, use the **Build Tags** filter. See [Group and Filter Builds Using Build Tags](/support/docs/group-and-filter-your-test-builds-using-build-tags/) and [Organize Tests & Builds](/support/docs/filter-your-selenium-tests/).
 
 * * *
 

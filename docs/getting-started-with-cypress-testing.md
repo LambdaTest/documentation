@@ -271,7 +271,6 @@ cd Cypress-Cloud
 
 2. To run Cypress tests, you will need to set your <BrandName /> username and access key in the environment variables. You can get them from the <BrandName /> Automation Dashboard.
 
-<img loading="lazy" src={require('../assets/images/playwright-testing/key.webp').default} alt="Image" width="1444" height="703"  className="doc_img"/>
 
 **Windows**
 
@@ -524,7 +523,7 @@ lambdatest-cypress run
 
 6. Visit <BrandName /> Automation dashboard to view your test results. The CLI also has a link to view the Cypress test build.
 
-<img loading="lazy" src={require('../assets/images/cypressten/cypress_results.png').default} alt="Image" width="1444" height="703"  className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/cypressten/cypress-test-results.webp').default} alt="TestMu AI Automation Dashboard showing a passed Cypress test with command logs and a video of the run" width="1450" height="776" className="doc_img"/>
 
 
 ## Testing Locally Hosted or Privately Hosted Projects 

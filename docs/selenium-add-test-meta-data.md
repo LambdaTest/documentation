@@ -1,7 +1,7 @@
 ---
 id: selenium-add-test-meta-data
 title: Add Test Metadata Using the customData Capability
-sidebar_label: Annotate Test Commands
+sidebar_label: Add Custom Metadata
 description: Attach metadata like Jira tickets, GitHub PRs, and build info to your test runs using the customData capability.
 keywords:
   - selenium custom data capability

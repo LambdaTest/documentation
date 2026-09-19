@@ -186,8 +186,6 @@ npm install
 
 3. In order to run your Playwright tests with Playwright test runner, you will need to set your <BrandName /> username and access key in the environment variables. Click the **Access Key** button at the top-right of the Automation Dashboard to access it.
 
-<img loading="lazy" src={require('../assets/images/playwright-testing/key.webp').default} alt="Image" width="1444" height="703"  className="doc_img"/>
-
 
 **Windows**
 

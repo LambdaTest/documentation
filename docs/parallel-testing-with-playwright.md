@@ -246,18 +246,10 @@ capabilities.forEach(async (capability) => {
 node playwright-parallel.js
 ```
 
-## View your Playwright test results
-***
 
 The <BrandName /> Automation Dashboard is where you can see the results of your Playwright tests after running them on the <BrandName /> platform. 
 
-The below screenshot of <BrandName /> Automation Dashboard shows the Playwright build on the left and the build sessions associated with the selected build on the right.
 
-<img loading="lazy" src={require('../assets/images/playwright-testing/dashboard.webp').default} alt="Image" width="1444" height="703"  className="doc_img"/>
-
-On clicking the session name of the respective test, you can view the details of Playwright test session that you just executed. For example, the below screenshot shows a test execution details of Playwright test like Test Name, Test ID, selected configurations, test logs, basic info, input config, and test session video. 
-
-<img loading="lazy" src={require('../assets/images/playwright-testing/pw-build.webp').default} alt="Image" width="1347" height="616"  className="doc_img"/>
 
 
 <nav aria-label="breadcrumbs">
