@@ -2,7 +2,7 @@
 id: command-annotations
 title: Logging Contextual Information Using Command Annotations
 hide_title: true
-sidebar_label: Add Test Metadata
+sidebar_label: Command Annotations
 description: Send custom logs from your test scripts to the TestMu AI dashboard using command annotations.
 keywords:
   - command annotations selenium logging
@@ -132,7 +132,7 @@ JavascriptExecutor jse = (JavascriptExecutor)driver;
 jse.executeScript("lambdatest_executor: {\"action\": \"stepcontext\", \"arguments\": {\"data\": \"<any string>\", \"level\": \"<info/warn/debug/error>\"}}");
 ```
 
-The arguments passed in the JavaScript method for setting the status and the corresponding reason for the test are `data` and `level`.
+The annotation call takes two arguments, `data` and `level`:
 
 * **data**: Accepts a value in string data type.
 
@@ -144,7 +144,7 @@ Locate and filter your annotated logs in the All Commands tab on the Automation 
 
 Once your test script has sent command annotations to TestMu AI, you can locate all the annotations pushed to the logs in the **All Commands** tab on the TestMu AI Automation Dashboard. This search feature is especially useful for long-duration test sessions. Additionally, you can filter these annotated logs based on severity levels and customize the selection according to your logging patterns.
 
-<img loading="lazy" src={require('../assets/images/command-annotations/com_ano_db.png').default} alt="command annotations" width="2560" height="976" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/command-annotations/command-annotations.webp').default} alt="All Commands tab showing stepcontext annotations grouped as Loading the To-Do app and Marking checkboxes, with the Test Context filter" width="1445" height="773" className="doc_img"/>
 
 ---
 

@@ -154,7 +154,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
         "name": "If you need logs in the terminal, update the code like this",
         "codeSampleType": "code snippet",
         "programmingLanguage": "JavaScript",
-        "text": "const { defineConfig } = require(\"cypress\");\nconst  installLogsPrinter = require(\"cypress-terminal-report/src/installLogsPrinter\");\nmodule.exports = defineConfig({\n  e2e: {\n    setupNodeEvents(on, config) {\n      // implement node event listeners here\n      installLogsPrinter(on, {\n      printLogsToConsole: 'always'\n        printLogsToFile:\"always\",\n      outputRoot: 'cypress/results/detailCommandLogs',\n      outputTarget: {\n        'detailCommandLogs.json': 'json',\n      }\n      });\n    },\n  },\n});"
+        "text": "const { defineConfig } = require(\"cypress\");\nconst  installLogsPrinter = require(\"cypress-terminal-report/src/installLogsPrinter\");\nmodule.exports = defineConfig({\n  e2e: {\n    setupNodeEvents(on, config) {\n      // implement node event listeners here\n      installLogsPrinter(on, {\n        printLogsToConsole: 'always', // Enables logs in the terminal\n        printLogsToFile:\"always\",\n      outputRoot: 'cypress/results/detailCommandLogs',\n      outputTarget: {\n        'detailCommandLogs.json': 'json',\n      }\n      });\n    },\n  },\n});"
       },
       {
         "@type": "SoftwareSourceCode",
@@ -364,7 +364,7 @@ module.exports = defineConfig({
     setupNodeEvents(on, config) {
       // implement node event listeners here
       installLogsPrinter(on, {
-      printLogsToConsole: 'always'
+        printLogsToConsole: 'always', // Enables logs in the terminal
         printLogsToFile:"always",
       outputRoot: 'cypress/results/detailCommandLogs',
       outputTarget: {
@@ -389,8 +389,8 @@ installLogsCollector()
 ```
 
 ## View Generated Logs
-Once the Cypress tests are executed, you can view the detailed command logs in the **"Detailed Command Logs"** tab on the test details page.
+Once your Cypress tests finish, open the test's detail page on the TestMu AI Automation Dashboard, click the **More** dropdown, and select **Detailed Cypress Logs** to view the captured command logs.
 
-For more information, visit [Artefacts For A Cypress Project](/support/docs/download-artefacts-cypress/)
+For more on downloading run artefacts, see [Artefacts for a Cypress Project](/support/docs/download-artefacts-cypress/).
 
-<img loading="lazy" src={require('../assets/images/cypress/detailed-cypress-logs.png').default} alt="Image" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/cypress/detailed-command-logs.webp').default} alt="TestMu AI Automation Dashboard More menu showing the Detailed Cypress Logs option on a passed Cypress test" width="1449" height="780" className="doc_img"/>

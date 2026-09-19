@@ -19,6 +19,7 @@ slug: playwright-tests-in-ci-cd/
 canonical: https://www.testmuai.com/support/docs/playwright-tests-in-ci-cd/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -128,7 +129,6 @@ Running Playwright tests through CI/CD pipeline involves three stages:
 
 
 
-To generate Playwright tests with AI coding assistants, see [Run Tests With Agent Skills](/support/docs/playwright-agent-skills/).
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">

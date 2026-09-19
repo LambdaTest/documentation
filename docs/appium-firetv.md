@@ -201,8 +201,6 @@ Upload your **Fire TV** application (.apk file) to the <BrandName /> servers usi
 
 <!-- **Using App URL:**
 
-<VerifiedTag value="Verified" />
-
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">
 {`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" -X POST "https://manual-api.lambdatest.com/app/upload/realDevice" -F "url=:https://prod-mobile-artefacts.lambdatest.com/assets/docs/fireos-sample-app.apk" -F "name=fireos-sample-apk"

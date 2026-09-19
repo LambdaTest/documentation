@@ -110,7 +110,7 @@ Enable HAR logging by passing `network.full.har = true` in your test capabilitie
 
 Once the test runs, open the Web Automation Dashboard and navigate to the **Network** tab to see the waterfall chart.
 
-<img loading="lazy" src={require('../assets/images/har_waterfall.png').default} alt="HAR Log Viewer waterfall chart showing resource load times" width="1342" height="643" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/har_waterfall.webp').default} alt="HAR Log Viewer waterfall chart showing resource load times" width="1444" height="778" className="doc_img"/>
 
 Each resource (HTML, CSS, JavaScript, images) appears as a horizontal bar. The bar length shows load time, and the sequence reflects the order the browser requested them.
 

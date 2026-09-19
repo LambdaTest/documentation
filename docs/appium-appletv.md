@@ -211,8 +211,6 @@ Upload your **Apple TV** application (.ipa file) to the <BrandName /> servers us
 
 <!-- **Using App URL:**
 
-<VerifiedTag value="Verified" />
-
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">
 {`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" -X POST "https://manual-api.lambdatest.com/app/upload/realDevice" -F "url=:https://prod-mobile-artefacts.lambdatest.com/assets/docs/apple-tv-sample-app.ipa" -F "name=apple-tv-sample-app"

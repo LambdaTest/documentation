@@ -104,7 +104,6 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 The [TestMu AI Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build) is where you view results, debug failures, and track every test you run on the grid. This page walks you through each section of the dashboard.
 
-<img loading="lazy" src={require('../assets/images/selenium/guided-walkthrough/homepage-guide.gif').default} alt="TestMu AI Automation Dashboard overview" className="doc_img" style={{ width: '100%' }}/>
 
 ## Build and Test Views
 ---
@@ -176,6 +175,7 @@ Now that you know how to read the dashboard, explore more ways to manage and deb
 - [Filter your tests](/support/docs/filter-your-selenium-tests/) - narrow down results by browser, OS, status, or tags
 - [Share test results](/support/docs/sharing-test-results/) - send results to teammates
 - [Mark as bug](/support/docs/mark-as-bug-in-automation-testing/) - file a bug directly from a test session
+- [Mute test scenarios](/support/docs/mute-test-scenarios/) - stop a known-broken test from failing the build
 - [Debug your tests](/support/docs/debugging-options/) - enable extended logging for deeper analysis
 - [Group tests with tags](/support/docs/group-tests-using-custom-tags/) - organize tests using custom tags
 
