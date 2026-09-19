@@ -296,7 +296,7 @@ Browser browser = playwright.chromium().connect("wss://cdp.lambdatest.com/playwr
 
 ---
 
-<img loading="lazy" src={require('../assets/images/selenium/auto-heal.png').default} alt="Auto Healing workflow diagram showing how broken locators are detected and recovered" width="1346" height="647" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/playwright-testing/auto-heal.webp').default} alt="TestMu AI Automation dashboard showing an auto-healed locator during a Playwright test run, with the Healed Selector and Original Selector in the command log" width="1605" height="787" className="doc_img"/>
 
 Auto-healing adjusts broken locators by merging attributes and context. During runtime, it monitors the web page to identify DOM (Document Object Model) changes.
 

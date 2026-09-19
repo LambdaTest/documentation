@@ -159,6 +159,8 @@ Download or clone the code sample for the Playwright Java from the <BrandName />
 <a href="https://github.com/LambdaTest/playwright-sample/tree/main/playwright-java" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className="doc_img"/> View on GitHub</a>
 :::
 
+<VerifiedTag value="Verified" />
+
 ```js
 git clone https://github.com/LambdaTest/playwright-sample.git
 cd playwright-sample
@@ -166,6 +168,8 @@ cd playwright-java
 ```
 
 2. Install the npm dependencies.
+
+<VerifiedTag value="Verified" />
 
 ```
 npm install
@@ -182,6 +186,8 @@ npm install
 ---
 
 Navigate to the `PlaywrightTestSingle.java` file.
+
+<VerifiedTag value="Verified" />
 
 ```java
 package com.lambdatest;
@@ -248,6 +254,8 @@ public class PlaywrightTestSingle {
 
 Pass the below command in the terminal to run the test.
 
+<VerifiedTag value="Verified" />
+
 ```java
 mvn -Dexec.mainClass="com.lambdatest.PlaywrightTestSingle" -Dexec.classpathScope=test test-compile exec:java
 ```
@@ -268,6 +276,8 @@ Go to the [<BrandName /> Web Automation Dashboard](https://www.testmuai.com/logi
 The [playwright-skill](https://github.com/LambdaTest/agent-skills/tree/main/playwright-skill) is a part of [TestMu AI Skills](https://github.com/LambdaTest/agent-skills/) that guide AI coding assistants in generating production-ready test automation.
 
 The playwright-skill package includes:
+
+<VerifiedTag value="Verified" />
 
 ```
 playwright-skill/
@@ -291,6 +301,8 @@ It provides structured guidance for:
 ***
 
 Install a Playwright Agent Skill using the command below:
+
+<VerifiedTag value="Verified" />
 
 ```
 # Clone the repo and copy the skill you need

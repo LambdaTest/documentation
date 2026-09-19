@@ -146,7 +146,6 @@ Execute the hook multiple times with different URLs to generate reports for each
   
 - Lighthouse reports for all hooks executed are visible on the TestMu AI Web Automation Dashboard under the **Performance** tab.
 
-<img loading="lazy" src={require('../assets/images/uploads/lreports_se.png').default} alt="Image" width="1347" height="565" className="doc_img"/>
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">

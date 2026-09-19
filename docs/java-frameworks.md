@@ -296,6 +296,9 @@ Navigate to **Dependencies** in module settings, click **+**, and add the downlo
 
 Create a new Java file and add the following sample test. It opens a to-do app, marks two items as done, adds a new item, and verifies it.
 
+            driver.findElement(By.id("sampletodotext")).sendKeys("Yey, Let's add it to list");
+            driver.findElement(By.id("addbutton")).click();
+
 ```java title="JavaToDo.java"
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -366,6 +369,22 @@ public class JavaTodo {
 
 Replace the placeholder values with your actual credentials from the [TestMu AI Dashboard](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/dashboard).
 
+<VerifiedTag value="Verified" />
+
+<div className="lambdatest__codeblock">
+    <CodeBlock className="language-java">
+  {`String username= "${ YOUR_LAMBDATEST_USERNAME()}"; 
+String accesskey= "${ YOUR_LAMBDATEST_ACCESS_KEY()}";`}
+  </CodeBlock>
+</div>
+
+## Step 3: Configure Capabilities
+---
+
+Define the browser, version, and OS for your test run.
+
+Replace the placeholder values with your actual credentials from the [TestMu AI Dashboard](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/dashboard).
+
 <div className="lambdatest__codeblock">
     <CodeBlock className="language-java">
   {`String username= "${ YOUR_LAMBDATEST_USERNAME()}"; 
@@ -402,6 +421,8 @@ Execute your Java test from your IDE or terminal.
 **From your IDE:** Build and run the Java file directly.
 
 **From the terminal:**
+
+**From your IDE:** Build and run the Java file directly.
 
 ```bash
 cd to/file/location

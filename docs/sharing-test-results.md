@@ -247,7 +247,19 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 * * *
 
-TestMu AI lets you share individual test results with team members. Retrieve the Session ID from your test script, then build a shareable URL for automation logs or execution videos.
+TestMu AI lets you share individual test results with team members. Share directly from the Automation Dashboard, or build a shareable URL programmatically from the Session ID.
+
+## Share from the Dashboard
+---
+Send a test's results to teammates directly from the Automation Dashboard.
+
+1. Open the test's detail page, click the **…** (options) menu in the top-right of the test summary, and select **Share**.
+
+2. In the **Share** dialog, set the **Expiry Duration**, enter one or more recipient **email IDs**, and add an optional message. Click **Invite** to email the link, or **Copy Link** to share it yourself.
+
+<img loading="lazy" src={require('../assets/images/uploads/share-test-modal.webp').default} alt="Share dialog with expiry duration, email recipients, message field, and Copy Link and Invite buttons" width="1920" height="924" className="doc_img"/>
+
+To generate a shareable URL programmatically instead, use the Session ID method below.
 
 ## Get the Session ID
 ---
@@ -333,13 +345,9 @@ https://automation.lambdatest.com/public/video?testID={testid/sessionid}&auth=AU
 
 ### Step 1 - Get Your TestID or SessionID
 
-Go to the **Automation Dashboard** and click on the test whose ID you need. Click the **"i"** button on the status bar to access the test metadata.
+Open the test on the **Automation Dashboard**. In the test summary, click the **Test ID** button to copy the test's ID, then use it as the `testID` in the URL above.
 
-<img loading="lazy" src={require('../assets/images/uploads/sharing-test-results-2.webp').default} alt="Automation dashboard showing test details" width="768" height="373" className="doc_img"/>
-
-After clicking the **"i"** button, you will see the test metadata including the SessionID.
-
-<img loading="lazy" src={require('../assets/images/uploads/sharing-test-results-1.webp').default} alt="Test metadata with SessionID" width="768" height="373" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/uploads/get-test-id.webp').default} alt="Test detail page with the Test ID button highlighted in the test summary" width="1597" height="892" className="doc_img"/>
 
 For example, if your SessionID is `HJKXM-RHZL1-SVPWY-AB8X6`, the URL becomes:
 

@@ -207,6 +207,8 @@ Complete the following steps before running C# Selenium tests.
 ---
 Clone the repository and navigate to the project directory.
 
+<Tabs className="docs__val">
+
 ```bash
 git clone https://github.com/LambdaTest/CSharp-Selenium-Sample
 cd CSharp-Selenium-Sample
@@ -222,6 +224,8 @@ Set TestMu AI Username and Access Key in environment variables.
 
 <TabItem value="bash" label="macOS / Linux" default>
 
+  <VerifiedTag value="Verified" />
+
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-bash">
   {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
@@ -232,6 +236,8 @@ export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 </TabItem>
 
 <TabItem value="powershell" label="Windows" default>
+
+  <VerifiedTag value="Verified" />
 
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-powershell">
@@ -248,6 +254,8 @@ set LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 Define browser, version, and OS settings for your test run.
 
 In the test script, update your test capabilities. This code passes browser, browser version, and operating system information, along with TestMu AI Selenium grid capabilities via the capabilities object.
+
+<VerifiedTag value="Verified" />
 
 ```csharp
 var browserOptions = new ChromeOptions();
@@ -277,11 +285,15 @@ Use the following commands to run your single and parallel tests.
 
 **Single test**
 
+The [selenium-skill](https://github.com/LambdaTest/agent-skills/tree/main/selenium-skill) is part of [TestMu AI Agent Skills](https://github.com/LambdaTest/agent-skills/) - structured packages that teach AI coding assistants how to write production-grade test automation.
+
 ```csharp
 dotnet run single
 ```
 
 **Parallel test**
+
+<VerifiedTag value="Verified" />
 
 ```csharp
 dotnet run parallel
@@ -305,6 +317,8 @@ Use AI coding assistants to generate and run C# Selenium tests with the TestMu A
 The [selenium-skill](https://github.com/LambdaTest/agent-skills/tree/main/selenium-skill) is part of [TestMu AI Agent Skills](https://github.com/LambdaTest/agent-skills/) - structured packages that teach AI coding assistants how to write production-grade test automation.
 
 Install the skill:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 git clone https://github.com/LambdaTest/agent-skills.git

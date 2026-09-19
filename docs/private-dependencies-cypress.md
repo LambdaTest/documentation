@@ -20,6 +20,7 @@ site_name: TestMu AI
 slug: private-dependencies-cypress/
 canonical: https://www.testmu.ai/support/docs/private-dependencies-cypress/
 ---
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({

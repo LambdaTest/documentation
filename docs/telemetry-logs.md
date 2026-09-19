@@ -159,9 +159,9 @@ Here are the steps to integrate Jaeger with your test suites:
 
 2. Extract the compressed (*.tar.gz* or *.zip*) Jaeger file to the directory where your test script resides. You will now have several Jaeger files like `jaeger-query`, `jaeger-collector`, etc., in your test script directory.
 
-3. Download Telemetry logs of your test session from the **Telemetry Logs** tab of your TestMu AI Automation Dashboard.
+3. On your TestMu AI Automation Dashboard, open the test's **Logs** tab, select the **Telemetry** sub-tab, and download the telemetry logs.
 
-<img loading="lazy" src={require('../assets/images/telemetry-logs/download.png').default} alt="cmd" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/telemetry-logs/download.webp').default} alt="TestMu AI dashboard Logs tab with the Telemetry sub-tab selected and the Download Telemetry Logs option" className="doc_img" width="1609" height="869"/>
 
 
 4. Start the Jaeger UI to visualize the Telemetry logs by running the below command.

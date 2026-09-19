@@ -277,6 +277,8 @@ Playwright tests run with a `1920x1080` resolution by default for desktop browse
 
 The default viewport size for Playwright tests is 1280x720. If you wish to maximize the browser window during your Playwright test, you can do it as shown in the code below.
 
+<VerifiedTag value="Verified" />
+
 ```js
 // Create context with given viewport
 const context = await browser.newContext({

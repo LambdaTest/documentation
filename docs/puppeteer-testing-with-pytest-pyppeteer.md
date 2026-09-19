@@ -233,8 +233,6 @@ pip install - r requirements.txt
 
 5. In order to run your pyppeteer tests, you will need to set your <BrandName /> username and access key in the environment variables. Click the **Access Key** button at the top-right of the Automation Dashboard to access it.
 
-<img loading="lazy" src={require('../assets/images/playwright-testing/key.webp').default} alt="Image" width="1444" height="703"  className="doc_img"/>
-
 
 ##### Windows
 
@@ -267,70 +265,3 @@ pytest --verbose --capture=no -s -n 2 tests/test_pytest_pyppeteer_1.py \
 
 The [<BrandName /> Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build) is where you can see the results of your Pyppeteer tests after running them on the <BrandName /> platform.
 
-The below screenshot of <BrandName /> Automation Dashboard shows the pyppeteer build on the left and the build sessions associated with the selected build on the right.
-
-<img loading="lazy" src={require('../assets/images/puppeteer-testing/pyppeteer-dashboard.webp').default} alt="Pyppeteer <BrandName /> Dashboard" className="doc_img"/>
-
-On clicking the session name of the respective test, you can view the details of pyppeteer test session that you just executed. For example, the below screenshot shows a test execution details of pyppeteer test like Test Name, Test ID, selected configurations, test logs, basic info, input config, and test session video.
-
-<img loading="lazy" src={require('../assets/images/puppeteer-testing/pyppeteer-test-view.webp').default} alt="Pyppeteer <BrandName /> Test View" className="doc_img"/>
-
-## Run Pyppeteer Tests In Gitpod
-
-Select the button below to try this demo in [Gitpod](https://www.gitpod.io/)
-
-[<img alt="Run in Gitpod" width="200px" align="center" src="https://user-images.githubusercontent.com/70570645/169987363-1408c494-4e2a-4f12-8828-c931eac716b0.png" />](https://gitpod.io/#https://github.com/LambdaTest/pyppeteer-sample)
-
-* After the Gitpod session launches, navigate to the terminal and run the following commands to save your [<BrandName /> Credentials](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/details/profile) to Gitpod as environment variables:
-
-```
-eval $(gp env -e LT_USERNAME=******)
-eval $(gp env -e LT_ACCESS_KEY=******)
-  ```
-
-* Click the following link if you're unsure how to [access your <BrandName /> credentials.](/support/docs/using-environment-variables-for-authentication-credentials/). Also, if you start a new terminal in Gitpod, you have to run the following command to reset environment variables:
-```
- eval $(gp env -e)
-```
-
-
-## Using the Pytest Agent Skill with TestMu AI
-***
-
-The [pytest-skill](https://github.com/LambdaTest/agent-skills/tree/main/pytest-skill) is a part of [TestMu AI Skills](https://github.com/LambdaTest/agent-skills/) that guide AI coding assistants in generating production-ready test automation.
-
-The pytest-skill package includes:
-
-```
-pytest-skill/
-├── SKILL.md
-└── reference/
-    ├── playbook.md
-    └── advanced-patterns.md
-```
-
-It provides structured guidance for:
-
-* Project structure and setup
-* Dependency configuration
-* Local execution
-* TestMu AI cloud execution
-* Debugging patterns
-* CI/CD integration
-
-
-### Installing Pytest Agent Skill
-***
-
-Install a Pytest Agent Skill using the command below:
-
-```
-# Clone the repo and copy the skill you need
-git clone https://github.com/LambdaTest/agent-skills.git
-cp -r agent-skills/pytest-skill .claude/skills/
-
-# Or for Cursor / Copilot
-cp -r agent-skills/pytest-skill .cursor/skills/
-```
-
-**Note**: If you prefer installing all available framework skills instead of only pytest-skill, clone the repository directly into your tool's skills directory (for example, .claude/skills/, .cursor/skills/, .gemini/skills/, or .agent/skills/).

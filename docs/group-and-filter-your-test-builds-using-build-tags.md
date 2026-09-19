@@ -98,17 +98,10 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     "hasPart": [
       {
         "@type": "SoftwareSourceCode",
-        "name": "Follow the below steps",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "Java",
-        "text": "    // For example, when you have only 1 tag\n    String[] buildTagList = {\"Build Tag\"};\n\n    // For example, when you have multiple tags\n    String[] buildTagList = {\"Tag 1\", \"Tag 2\", \"Tag 3\", ...};"
-      },
-      {
-        "@type": "SoftwareSourceCode",
         "name": "How to Create Build Tags",
         "codeSampleType": "code snippet",
         "programmingLanguage": "Java",
-        "text": "    // Creating the Build Tags\n    String[] buildTagList = {\"Tag1\", \"Tag2\", \"Tag3\", \"BuildTagRishabh\"};\n\n    DesiredCapabilities caps = new DesiredCapabilities();\n    caps.setCapability(\"browser\", \"Safari\");\n    caps.setCapability(\"version\", \"13\");\n    caps.setCapability(\"platform\", \"macos Catalina\");\n    caps.setCapability(\"build\", \"Build Tags Demo\");\n    caps.setCapability(\"name\", \"Sample Test\");\n\n    // To create custom tags\n    caps.setCapability(\"buildTags\", buildTagList); \n\n    System.out.println(\"Desired Caps: \" + caps);\n    driver = new RemoteWebDriver(new URL(\"https://\" + username + \":\" + authkey + hub), caps);"
+        "text": "String[] buildTagList = { \"Regression\", \"Sanity\" };\n\nMutableCapabilities ltOptions = new MutableCapabilities();\nltOptions.setCapability(\"build\", \"Build Tags Demo\");\nltOptions.setCapability(\"buildTags\", buildTagList);\n\nChromeOptions browserOptions = new ChromeOptions();\nbrowserOptions.setCapability(\"browserVersion\", \"latest\");\nbrowserOptions.setCapability(\"LT:Options\", ltOptions);"
       }
     ],
     "dateModified": "2026-09-09T19:13:32+05:30"
@@ -117,48 +110,31 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 * * *
 
-With TestMu AI, you can group your test builds with Build tags. This document shows how to create Build tags and use them to group or filter your test builds on the TestMu AI Automation Dashboard.
+With TestMu AI, you can group test builds with build tags. Add a `buildTags` capability with your tag names to a test, run it, then group and filter builds by those tags on the Automation Dashboard.
 
 ## How to Create Build Tags
 ---
-Add a buildTags capability with a String array to your desired capabilities.
+Pass a `buildTags` capability with a String array of tag names inside `LT:Options`.
 
-While writing your automation tests, add another capability when you create the [Desired Capabilities](/docs/selenium-automation-capabilities/) via code. Follow the below steps:
+While building your [Selenium capabilities](/support/docs/selenium-automation-capabilities/), set the `buildTags` capability to a String array of the tag names you want on the build:
 
-*   Create an array of Strings that contains your Build tags, each separated by a comma.
+<VerifiedTag value="Verified" />
 
-    ```java
-    // For example, when you have only 1 tag
-    String[] buildTagList = {"Build Tag"};
+```java
+// The build tags you want to apply (max 5 per build)
+String[] buildTagList = { "Regression", "Sanity" };
 
-    // For example, when you have multiple tags
-    String[] buildTagList = {"Tag 1", "Tag 2", "Tag 3", ...};
-    ```
-    
+// Add the buildTags capability inside LT:Options
+MutableCapabilities ltOptions = new MutableCapabilities();
+ltOptions.setCapability("build", "Build Tags Demo");
+ltOptions.setCapability("buildTags", buildTagList);
 
-*   Now add this Build tag array in your Desired Capabilities instance: **For example:** While creating a sample Desired Capabilities instance in Java, the code will be:
+ChromeOptions browserOptions = new ChromeOptions();
+browserOptions.setCapability("browserVersion", "latest");
+browserOptions.setCapability("LT:Options", ltOptions);
+```
 
-    ```java
-    // Creating the Build Tags
-    String[] buildTagList = {"Tag1", "Tag2", "Tag3", "BuildTagRishabh"};
-
-    DesiredCapabilities caps = new DesiredCapabilities();
-    caps.setCapability("browser", "Safari");
-    caps.setCapability("version", "13");
-    caps.setCapability("platform", "macos Catalina");
-    caps.setCapability("build", "Build Tags Demo");
-    caps.setCapability("name", "Sample Test");
-
-    // To create custom tags
-    caps.setCapability("buildTags", buildTagList); 
-
-    System.out.println("Desired Caps: " + caps);
-    driver = new RemoteWebDriver(new URL("https://" + username + ":" + authkey + hub), caps);
-    ```
-
-You have successfully created the Build tags. Run your test and navigate to [TestMu AI Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/timeline/) to see the tags in that build:
-
-<img loading="lazy" src={require('../assets/images/group-and-filter-your-test-builds-using-build-tags/build-tags.webp').default} alt="Group/filter" width="1281" height="721" className="doc_img"/>
+Run the test with these capabilities. The build then appears on the [Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build) tagged with your build tags.
 
 ## Guidelines for Creating Build Tags
 ---
@@ -170,22 +146,15 @@ While creating Build Tags, follow the below guidelines:
 *   You can update the existing build by specifying different tags.
 *   If you change a tag name or number of tags, no new build is created. The existing build is updated with the new tag to avoid unnecessary build creation.
 
-## How to Filter Tests Using Build Tags
+## How to Filter Builds Using Build Tags
 ---
-Select one or more build tags in the filter toolbar to narrow down your test builds.
+Filter the Builds list by your build tags from the Sort & Filters panel.
 
-To group or filter the tests on your automation dashboard with Build tags:
+On the [Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build), open **Configure > Sort & Filters** and select **Build Tags**. Choose one or more of your build tags to show only the builds that carry them; selecting several combines them.
 
-Navigate to [TestMu AI Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/timeline/), and you can see a filter by name **Build Tags** on the right corner of the filter toolbar. 
-<img loading="lazy" src={require('../assets/images/group-and-filter-your-test-builds-using-build-tags/build-tags-2.webp').default} alt="Group/filter" width="1281" height="722" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/uploads/builds-filter-build-tags.webp').default} alt="Build Tags filter on the Builds list showing build tag values to filter builds by" width="1601" height="890" className="doc_img"/>
 
-Select the Build tag by which you want to filter your test. For example, if we choose _Tag1_, only the test builds with the tag "Tag1" appear:
-
-<img loading="lazy" src={require('../assets/images/group-and-filter-your-test-builds-using-build-tags/build-tags-3.webp').default} alt="group/filter" width="930" height="524" className="doc_img"/>
-
-You can choose multiple Build tags to filter your tests, as shown in the image below:
-
-<img loading="lazy" src={require('../assets/images/group-and-filter-your-test-builds-using-build-tags/build-tags-4.webp').default} alt="group/filter" width="1282" height="722" className="doc_img"/>
+To filter by tags set on individual tests instead, use the **Test Tags** filter. See [Group Tests Using Custom Tags](/support/docs/group-tests-using-custom-tags/) and [Organize Tests & Builds](/support/docs/filter-your-selenium-tests/).
 
 * * *
 

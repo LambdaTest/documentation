@@ -197,12 +197,17 @@ Complete these steps before running your first Python Selenium test.
 ---
 Clone the repository and install dependencies.
 
+Set TestMu AI `Username` and `Access Key` in environment variables.
+
 ```bash
 git clone https://github.com/LambdaTest/python-selenium-sample
 cd python-selenium-sample
 ```
 
 Install the Selenium driver using pip:
+
+<VerifiedTag value="Verified" />
+
 ```bash
 pip install selenium
 export PYTHONWARNINGS="ignore:Unverified HTTPS request"   //Disable ssl warning
@@ -218,6 +223,8 @@ Set TestMu AI `Username` and `Access Key` in environment variables.
 
 <TabItem value="bash" label="macOS / Linux" default>
 
+  <VerifiedTag value="Verified" />
+
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-bash">
   {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
@@ -228,6 +235,8 @@ export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 </TabItem>
 
 <TabItem value="powershell" label="Windows" default>
+
+  <VerifiedTag value="Verified" />
 
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-powershell">
@@ -244,6 +253,8 @@ set LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 Define browser, version, and OS settings for your test run.
 
 In the Python script, update your test capabilities. This code passes browser, browser version, and operating system information, along with TestMu AI Selenium grid capabilities via the capabilities object.
+
+<VerifiedTag value="Verified" />
 
 ```python
 capabilities = {
@@ -262,6 +273,8 @@ Use the TestMu AI [Capabilities Generator](https://www.testmuai.com/capabilities
 ## Step 4: Run the Test
 ---
 Execute the Python Selenium test from the command line.
+
+The [selenium-skill](https://github.com/LambdaTest/agent-skills/tree/main/selenium-skill) is part of [TestMu AI Agent Skills](https://github.com/LambdaTest/agent-skills/) - structured packages that teach AI coding assistants how to write production-grade test automation.
 
 ```bash
 python google-search-lambdatest.py
@@ -285,6 +298,8 @@ Use AI coding assistants to generate and run Python Selenium tests with the Test
 The [selenium-skill](https://github.com/LambdaTest/agent-skills/tree/main/selenium-skill) is part of [TestMu AI Agent Skills](https://github.com/LambdaTest/agent-skills/) - structured packages that teach AI coding assistants how to write production-grade test automation.
 
 Install the skill:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 git clone https://github.com/LambdaTest/agent-skills.git

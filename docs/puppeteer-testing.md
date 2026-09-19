@@ -181,8 +181,6 @@ npm install
 
 4. In order to run your Puppeteer tests, you will need to set your <BrandName /> username and access key in the environment variables. Click the **Access Key** button at the top-right of the Automation Dashboard to access it.
 
-<img loading="lazy" src={require('../assets/images/playwright-testing/key.webp').default} alt="Image" width="1444" height="703"  className="doc_img"/>
-
 
 **Windows**
 
@@ -275,15 +273,9 @@ node navigation.js
 ## View your Puppeteer test results
 ***
 
-The <BrandName /> Automation Dashboard is where you can see the results of your Puppeteer tests after running them on the <BrandName /> platform. 
+The <BrandName /> Automation Dashboard is where you can see the results of your Puppeteer tests after running them on the <BrandName /> platform. On clicking the session name of the respective test, you can view the test execution details such as Test Name, Test ID, selected configurations, test logs, basic info, input config, and test session video. 
 
-The below screenshot of <BrandName /> Automation Dashboard shows the Puppeteer build on the left and the build sessions associated with the selected build on the right.
-
-<img loading="lazy" src={require('../assets/images/puppeteer-testing/dashboard.png').default} alt="Image" width="1444" height="703"  className="doc_img"/>
-
-On clicking the session name of the respective test, you can view the details of Puppeteer test session that you just executed. For example, the below screenshot shows a test execution details of Puppeteer test like Test Name, Test ID, selected configurations, test logs, basic info, input config, and test session video. 
-
-<img loading="lazy" src={require('../assets/images/puppeteer-testing/logs.png').default} alt="Image" width="1347" height="616"  className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/puppeteer-testing/logs.png').default} alt="TestMu AI Automation dashboard showing a passed Puppeteer test session with command logs and session video" width="1449" height="779"  className="doc_img"/>
 
 
 

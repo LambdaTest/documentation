@@ -167,8 +167,6 @@ For headless browser testing on TestMu AI, enable the desired capability for hea
 ---
 Visit the [Desired Capabilities Generator](https://www.testmuai.com/capabilities-generator/). Under the **Browser Specific Capabilities**, find the toggle button to enable **Headless** browsing. Switch the button to true.
 
-<img loading="eager" src={require('../assets/images/headless-browser-testing/selenium-desired-capabilities-generator.webp').default} alt="Image"  className="doc_img" width="604" height="270"/>
-
 ### Enable Headless Browser Testing via Code
 ---
 Add the headless capability directly in your test script code.
@@ -356,7 +354,7 @@ public class HeadlessAutomation {
 
 After you execute the above code, the test runs on TestMu AI successfully. View the status of the test on your [Automation dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/timeline).
 
-<img loading="lazy" src={require('../assets/images/headless-browser-testing/headless-automation-testing.webp').default} alt="Image"  className="doc_img" width="768" height="348"/>
+<img loading="lazy" src={require('../assets/images/headless-browser-testing/headless-automation-testing.png').default} alt="TestMu AI Automation dashboard showing a passed headless test, with video not captured in headless mode" className="doc_img" width="1595" height="895"/>
 
 * * *
 
