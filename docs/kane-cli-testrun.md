@@ -175,6 +175,7 @@ A member can fail preflight for these reasons:
 |---|---|---|
 | `org_mismatch` | Belongs to a different organisation than the rest | Check with `kane-cli testmd status <path>` |
 | `project_mismatch` | Belongs to a different project than the rest | Check with `kane-cli testmd status <path>`; run project-by-project |
+| `unresolved_variables` | An authored step references a `{{name}}` that has no value in any variable file or in the member's own `variables:` frontmatter | Fill the value in `.testmuai/variables/*.json` (the receipt names the file) or remove the reference. `testrun run` has no `--variables` flag |
 
 If any member fails preflight, the plan is invalid and **nothing runs** (exit `2`). The offenders print to stderr:
 
@@ -186,7 +187,36 @@ error: plan invalid — 2 offending test(s):
   tests/other_project_test.md: project_mismatch
 ```
 
-> **Mobile is not supported in a batch run.** A `_test.md` with a mobile [`target:`](/support/docs/kane-cli-testmd/#mobile-target) (`emulator` / `simulator`) is rejected up front, before the suite runs. Run mobile tests one at a time with `kane-cli testmd run <path>`.
+Variable offenders get the full receipt instead of a one-line code: every unresolved name across the members, each with the test files and steps that use it.
+
+```
+✗ 2 variables have no value — nothing was dispatched
+
+  Not in any variables file
+    other_key   b_test.md step 1
+    shared_url  a_test.md step 1 · b_test.md step 1
+
+    Add them to .testmuai/variables/variables.json
+
+  If {{name}} is literal page text, write \{{name}} to keep it as-is.
+  Fill the values and run again.
+```
+
+In agent mode (stdin is not a TTY) the same information arrives as one `error` event with `code: "unresolved_variables"` right after `testrun_plan`. See [Modes of Operation](/support/docs/kane-cli-modes/#unresolved-variables) for the shape.
+
+## Mobile members
+
+A `_test.md` with a mobile [`target:`](/support/docs/kane-cli-testmd/#mobile-target) (`emulator` or `simulator`) is a normal member:
+
+- **On this machine**, the suite drives the emulators and simulators installed here, so the host must be macOS Apple Silicon with the [mobile setup](/support/docs/kane-cli-mobile/#setup) done. Pick the device with `--device-name` and `--os-version` as `kane-cli devices list --target emulator|simulator` prints it, or set `device_name:` and `os_version:` in the file.
+- **On the cloud grid** (`--remote`), the suite runs on a virtual device on a HyperExecute macOS host, so it works from any machine: Linux, Windows, or a Mac with no Xcode or Android Studio. Pick the device from `kane-cli devices list --target emulator|simulator --remote`. One grid job runs one platform, emulator members on one Android version and simulator members on one HyperExecute pool, and a member's local build is uploaded from your machine before dispatch and handed to the grid as an `APP…` id. Everything else is in [Remote Runs](/support/docs/kane-cli-remote-execution/).
+
+<VerifiedTag value="Verified" />
+
+```bash
+kane-cli testrun run tests/app/ --device-name "Pixel 7 API 35" --os-version 15    # devices on this machine
+kane-cli testrun run tests/app/ --remote --device-name "Pixel 7" --os-version 14   # the cloud grid
+```
 
 ## Running
 
@@ -202,7 +232,9 @@ error: plan invalid — 2 offending test(s):
 | `--retry-count <n>` | Max replay restart attempts before a full re-author | `3` |
 | `--bug-detection <mode>` | `off` \| `stop` \| `continue` — see [Configuration](/support/docs/kane-cli-configuration/#bug-detection) | config value |
 | `--headless` | Run Chrome without a visible window | off |
-| `--env <name>` | Environment (`prod` or `stage`) | active env |
+| `--remote [backend]` | Dispatch the suite to the cloud grid instead of Chrome or devices on this machine (default backend: `hyper`). Needs `kane-cli plugin install remote-execution`. See [Remote Runs](/support/docs/kane-cli-remote-execution/) | off |
+| `--device-name <name>` | Device for the suite's mobile members: as `kane-cli devices list --target <kind>` prints it locally, or a grid catalog device with `--remote` | member's `device_name:` |
+| `--os-version <version>` | OS version for the mobile members (`14`, `17.5`). On its own, it matches any device running it | member's `os_version:` |
 | `--username <user>` / `--access-key <key>` | Basic auth (skips OAuth) | — |
 
 Each worker gets its **own isolated Chrome** with a fresh temporary profile, so parallel members never share cookies, logins, or tabs — and never fight over your real browser profile.
