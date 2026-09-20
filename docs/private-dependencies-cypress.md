@@ -20,6 +20,7 @@ site_name: TestMu AI
 slug: private-dependencies-cypress/
 canonical: https://www.testmuai.com/support/docs/private-dependencies-cypress/
 ---
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -130,7 +131,6 @@ Earlier if your project includes any private dependency, the tests will error ou
 
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
-import VerifiedTag from '@site/src/component/verifiedTag';
 
 Assuming that you have run a Cypress test on TestMu AI platform ( if not, this article [here](/support/docs/getting-started-with-cypress-testing/) will guide you in running your first Cypress test on <BrandName />), you need to follow these steps below:
 

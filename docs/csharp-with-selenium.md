@@ -2,14 +2,13 @@
 id: csharp-with-selenium
 title: Selenium With C#
 sidebar_label: C#
-description: Run C# Selenium tests on TestMu AI cloud grid with 3000+ browsers. Covers NUnit, MSTest, SpecFlow, and xUnit.
+description: Run C# Selenium tests on TestMu AI cloud grid with 3000+ browsers. Set up, configure capabilities, and execute tests.
 keywords:
   - run C# Selenium tests cloud
   - C# Selenium grid setup
   - C# Selenium WebDriver tutorial
   - Selenium C# cross browser testing
   - C# automation testing online
-  - nunit mstest specflow xunit selenium
 image: /assets/images/og-images/automation-testing-og.png
 url: https://www.testmuai.com/support/docs/c-with-selenium-running-c-automation-scripts-on-testmu-selenium-grid/
 site_name: TestMu AI
@@ -195,24 +194,40 @@ Run your C# Selenium tests on the TestMu AI cloud grid across 10,000+ browser/de
 
 ## Prerequisites
 ---
+Complete the following steps before running C# Selenium tests.
 
-1. [Create a TestMu AI account](https://www.testmuai.com/register/) if you don't have one.
-2. Get your **Username** and **Access Key** from the [TestMu AI Dashboard](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/dashboard).
-3. Install the [.NET Core SDK](https://dotnet.microsoft.com/download) 2.1 or later (MSTest needs 3.0.0).
-4. Install the [Selenium WebDriver C# bindings](https://www.selenium.dev/downloads/).
+1. Download and install **Selenium WebDriver** from its [official website](https://www.selenium.dev/downloads/).
+2. Install the latest version of C#.
+3. Install the **.Net** framework for developing applications using C#.
+4. Download [Selenium WebDriver Language Binding](https://www.selenium.dev/downloads/) for C# and extract them to the appropriate folder.
+5. Install a [.NET Core SDK](https://dotnet.microsoft.com/en-us/download) of 2.1 or greater version.
+6. [Install .NET Runtime](https://dot.net/v1/dotnet-install.sh) to execute tests on Linux or macOS.
+7. Get your TestMu AI Username and Access Key from the [TestMu AI Dashboard](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/dashboard).
 
-## Set your credentials
+## Step 1: Clone the Sample Project
 ---
-
-Every framework authenticates the same way: your Username and Access Key are read from environment variables. Set them once. Pick your operating system:
-
-<Tabs className="docs__val" groupId="os">
-
-<TabItem value="macos" label="macOS / Linux" default>
+Clone the repository and navigate to the project directory.
 
 <VerifiedTag value="Verified" />
 
-<div className="lambdatest__codeblock">
+```bash
+git clone https://github.com/LambdaTest/CSharp-Selenium-Sample
+cd CSharp-Selenium-Sample
+```
+
+## Step 2: Set Your Credentials
+---
+Configure your credentials to connect to the TestMu AI Selenium Grid.
+
+Set TestMu AI Username and Access Key in environment variables.
+
+<Tabs className="docs__val">
+
+<TabItem value="bash" label="macOS / Linux" default>
+
+  <VerifiedTag value="Verified" />
+
+  <div className="lambdatest__codeblock">
     <CodeBlock className="language-bash">
   {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
 export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
@@ -221,25 +236,25 @@ export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 
 </TabItem>
 
-<TabItem value="win-cmd" label="Windows (CMD)">
+<TabItem value="powershell" label="Windows" default>
 
-<VerifiedTag value="Verified" />
+  <VerifiedTag value="Verified" />
 
-<div className="lambdatest__codeblock">
-    <CodeBlock className="language-batch">
-  {`set LT_USERNAME=${ YOUR_LAMBDATEST_USERNAME()}
-set LT_ACCESS_KEY=${ YOUR_LAMBDATEST_ACCESS_KEY()}`}
+  <div className="lambdatest__codeblock">
+    <CodeBlock className="language-powershell">
+  {`set LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
+set LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
   </CodeBlock>
 </div>
 
 </TabItem>
-
 </Tabs>
 
-## How the sample test works
+## Step 3: Configure Your Test Capabilities
 ---
+Define browser, version, and OS settings for your test run.
 
-Every framework below connects to the grid and passes your browser and OS choices through an `LT:Options` object:
+In the test script, update your test capabilities. This code passes browser, browser version, and operating system information, along with TestMu AI Selenium grid capabilities via the capabilities object.
 
 <VerifiedTag value="Verified" />
 
@@ -253,178 +268,70 @@ var ltOptions = new Dictionary<string, object>
     { "username", LT_USERNAME },
     { "accessKey", LT_ACCESS_KEY },
     { "project", "Demo LT" },
-    { "w3c", true }
+    { "w3c", true },
+    { "plugin", "c#-c#" }
 };
 browserOptions.AddAdditionalOption("LT:Options", ltOptions);
 ```
 
-What changes between frameworks is only the test runner and how you launch it. That is what each tab covers.
-
-:::tip
-Use the [Capabilities Generator](https://www.testmuai.com/capabilities-generator/) to build an `LT:Options` block for any browser, version, and OS combination.
+:::tip Capabilities Generator
+Use the TestMu AI [Capabilities Generator](https://www.testmuai.com/capabilities-generator/) to auto-generate the capabilities class for your test requirements.
 :::
 
-## Run a test in your framework
+## Step 4: Run the Test
 ---
+Execute a sample C# Selenium test against the TestMu AI cloud grid.
 
-Each tab lists the framework-specific pieces. Clone the matching repo (it contains the full, ready-to-run project), then build and run.
+Use the following commands to run your single and parallel tests.
+
+**Single test**
 
 <VerifiedTag value="Verified" />
 
-<Tabs className="docs__val" groupId="csharp-framework" queryString="framework">
-
-<TabItem value="nunit" label="NUnit" default>
-
-NUnit runs from the Visual Studio Test Explorer, or from the CLI on Linux/macOS.
-
-1. Clone the [sample GitHub project](https://github.com/LambdaTest/CSharp-NUnit-Selenium):
-
-```bash
-git clone https://github.com/LambdaTest/CSharp-NUnit-Selenium
-cd CSharp-NUnit-Selenium
+```csharp
+dotnet run single
 ```
 
-2. Set your browser and OS in the `LT:Options` object:
+**Parallel test**
+
+<VerifiedTag value="Verified" />
 
 ```csharp
-var browserOptions = new ChromeOptions();
-browserOptions.PlatformName = "Windows 10";
-browserOptions.BrowserVersion = "latest";
-
-var ltOptions = new Dictionary<string, object>
-{
-    { "build", "NUnit Build" },
-    { "name", "NUnit Test" },
-    { "w3c", true }
-};
-browserOptions.AddAdditionalOption("LT:Options", ltOptions);
+dotnet run parallel
 ```
 
-3. Build the solution, then run in the Test Explorer, or on Linux/macOS:
+## Step 5: View Your Results
+---
+Check the test output on the console and the TestMu AI dashboard.
 
-```bash
-nmake clean build
-```
+Visit the [TestMu AI Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/) to view your test results. The dashboard provides:
 
-</TabItem>
+- Text logs for each test step
+- Screenshots captured during execution
+- Video recordings of the full test session
 
-<TabItem value="mstest" label="MSTest">
-
-MSTest requires .NET Core SDK 3.0.0 and runs via `dotnet test` or the Test Explorer.
-
-1. Clone the [sample GitHub project](https://github.com/LambdaTest/MSTest-Selenium-Sample):
-
-```bash
-git clone https://github.com/LambdaTest/MSTest-Selenium-Sample
-cd MSTest-Selenium-Sample
-```
-
-2. Set your browser and OS in the `LT:Options` object:
-
-```csharp
-var browserOptions = new ChromeOptions();
-browserOptions.PlatformName = "Windows 10";
-browserOptions.BrowserVersion = "latest";
-
-var ltOptions = new Dictionary<string, object>
-{
-    { "build", "MSTest Build" },
-    { "name", "MSTest Test" },
-    { "w3c", true }
-};
-browserOptions.AddAdditionalOption("LT:Options", ltOptions);
-```
-
-3. Run the test:
-
-```bash
-dotnet test MS-Test-Cross-Browser.csproj
-```
-
-</TabItem>
-
-<TabItem value="specflow" label="SpecFlow">
-
-SpecFlow is BDD for .NET: you write Gherkin feature files, and step definitions drive WebDriver. Requires SpecFlow installed.
-
-1. Clone the [sample GitHub project](https://github.com/LambdaTest/SpecFlow-Selenium-Sample):
-
-```bash
-git clone https://github.com/LambdaTest/SpecFlow-Selenium-Sample
-cd SpecFlow-Selenium-Sample
-```
-
-2. Set your browser and OS in the `LT:Options` object:
-
-```csharp
-var browserOptions = new ChromeOptions();
-browserOptions.PlatformName = "Windows 10";
-browserOptions.BrowserVersion = "latest";
-
-var ltOptions = new Dictionary<string, object>
-{
-    { "build", "SpecFlow Build" },
-    { "name", "SpecFlow Test" },
-    { "w3c", true }
-};
-browserOptions.AddAdditionalOption("LT:Options", ltOptions);
-```
-
-3. Build the solution, then run in the Test Explorer (use **Run All** for parallel tests).
-
-</TabItem>
-
-<TabItem value="xunit" label="xUnit">
-
-xUnit reads its capabilities and environments from a `config.json`, filtered by profile.
-
-1. Clone the [sample GitHub project](https://github.com/LambdaTest/CSharp-xUnit-Selenium):
-
-```bash
-git clone https://github.com/LambdaTest/CSharp-xUnit-Selenium
-cd CSharp-xUnit-Selenium
-```
-
-2. Set your browsers in `config.json`:
-
-```json title="config.json"
-{
-  "server": "hub.lambdatest.com",
-  "user": "LT_USERNAME",
-  "key": "LT_ACCESS_KEY",
-  "capabilities": {
-    "lt:options": {
-      "buildName": "xunit build",
-      "sessionName": "lambdatest xunit sample test",
-      "visual": "true",
-      "plugin": "xunit:sample"
-    }
-  },
-  "environments": [
-    { "browserName": "chrome" },
-    { "browserName": "firefox" },
-    { "browserName": "safari" }
-  ],
-  "TunnelOptions": { "tunnel": false }
-}
-```
-
-3. Run a single test, or the parallel profile:
-
-```bash
-dotnet clean
-dotnet test --filter "profile=single"
-dotnet test --filter "profile=parallel"
-```
-
-</TabItem>
-
-</Tabs>
-
-## View your results
+## Run C# Selenium Tests Using Agent Skills
 ---
 
-Your test results, including video, network logs, and command-by-command execution, appear on the [TestMu AI Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build).
+Use AI coding assistants to generate and run C# Selenium tests with the TestMu AI Agent Skill.
+
+The [selenium-skill](https://github.com/LambdaTest/agent-skills/tree/main/selenium-skill) is part of [TestMu AI Agent Skills](https://github.com/LambdaTest/agent-skills/) - structured packages that teach AI coding assistants how to write production-grade test automation.
+
+Install the skill:
+
+<VerifiedTag value="Verified" />
+
+```bash
+git clone https://github.com/LambdaTest/agent-skills.git
+cp -r agent-skills/selenium-skill .claude/skills/
+
+# For Cursor / Copilot
+cp -r agent-skills/selenium-skill .cursor/skills/
+```
+
+:::tip
+Install all available framework skills at once by cloning the repository directly into your tool's skills directory (e.g., `.claude/skills/`, `.cursor/skills/`).
+:::
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">

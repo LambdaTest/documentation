@@ -227,7 +227,6 @@ cd Cypress-Cloud
 
 2. To run Cypress tests in WebKit, set your <BrandName /> username and access key in the environment variables. You can get them from the <BrandName /> Automation Dashboard.
 
-<img loading="lazy" src={require('../assets/images/playwright-testing/key.webp').default} alt="Image" width="1444" height="703"  className="doc_img"/>
 
 **Windows**
 

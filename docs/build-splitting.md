@@ -98,45 +98,42 @@ import { CookieTrackingSignup } from '@site/src/component/CookieTracking';
   }) }}
 />
 
-# Setting Up the Build Inactivity Time [Build Splitting]
+# Setting Up Build Active Duration [Build Splitting]
 ---
 
-Build Splitting (Build Inactivity Time) lets you organize tests more efficiently. Track your progress by identifying tests that run at specific intervals. Set a time interval after which the system waits for the defined time and marks the build as completed. Any new builds you run after this time period are created as a new build.
+Build Splitting lets you organize tests by controlling how they group into builds. The **Build Active Duration** setting (previously **Build Inactivity Time**) defines how long a build stays active. Tests that share the same build name and run while the build is active are grouped into the same build. A test with that build name that runs after the active duration starts a new build.
 
 
 ## How It Works
 ---
 
-Build Splitting separates tests into distinct builds based on inactivity time.
+Build Active Duration separates tests into distinct builds based on how long a build stays active.
 
-Previously, when you ran a build on TestMu AI, all tests merged into the same build, making it difficult to identify tests that ran at specific intervals. Build Splitting logic helps you organize your tests better.
+Previously, tests that shared the same build name kept merging into a single build, making it difficult to separate runs from different sessions. Setting a Build Active Duration keeps each session's tests in its own build.
 
-Build Splitting requires you to set Build Inactivity Time. For instance, if the Build Inactivity Time is set to 5 minutes, the system waits 5 minutes after the last test completes before marking the build as complete. If you run a test before the inactivity time, it runs in the existing build. If you run a test (even with the same name) after the specified inactivity time (i.e., 5 minutes), it appears under a new build.
+For example, if the Build Active Duration is set to 6 hours, tests with the same build name that run within that active window are grouped into the same build. Once the 6-hour window passes, the next test with that build name appears under a new build.
 
-## How to Set the Build Inactivity Time
+## How to Set the Build Active Duration
 ---
 
-Follow these steps to configure Build Inactivity Time for your account.
+Follow these steps to configure Build Active Duration for your account.
 
 :::info Note
-1. By default, the build inactivity time is six hours.
-2. Every user within the organization can set their own build inactivity time.
+1. By default, the Build Active Duration is six hours.
+2. Every user within the organization can set their own Build Active Duration.
 :::
 
 1. Log in to your TestMu AI account. Don't have an account, <a href="https://www.testmuai.com/register/" onClick={CookieTrackingSignup}>sign up for free</a>.
 
 
-2. From the top-right corner, click on the Profile avatar, and navigate to **Profile > Product Preferences**.
+2. Open **Account Settings > Product Preferences** and select **Automation**.
 
-3. Under the **Automation Build Preference**, select the **Build Inactivity Time** to choose
-your preferences.
+3. Under **Builds**, set the **Build Active Duration** to your preferred interval.
 
-<img loading="lazy" src={require('../assets/images/build-split/inactivity.png').default} alt="image"  className="doc_img" width="1341" height="498"/><br/><br/>
+<img loading="lazy" src={require('../assets/images/build-split/build-active-duration.webp').default} alt="TestMu AI Account Settings Product Preferences showing the Build Active Duration dropdown under Automation" className="doc_img" width="1920" height="927"/><br/><br/>
 
 
-Once you set the build inactivity time, a confirmation notification appears: *Build Time updated successfully.*
-
-<img loading="lazy" src={require('../assets/images/build-split/popup.png').default} alt="image"  className="doc_img" width="1341" height="498"/><br/><br/>
+Once you save your preference, a confirmation notification appears: *Build Time updated successfully.*
 
 
 ---

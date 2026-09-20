@@ -37,7 +37,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
           "@type": "ListItem",
           "position": 3,
           "name": "Playwright SDK",
-          "item": `${BRAND_URL}/support/docs//playwright-sdk/`
+          "item": `${BRAND_URL}/support/docs/playwright-sdk/`
         }]
       })
     }}
@@ -382,4 +382,3 @@ You can pass any standard Playwright CLI options directly to this command. For i
 
 ```bash
 npx playwright-node-sdk playwright test tests/my-test.spec.js
-```

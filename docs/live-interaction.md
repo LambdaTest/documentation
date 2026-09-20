@@ -103,48 +103,42 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 ---
 
-## What Is Live Interaction?
----
-Live Interaction lets you take manual control of an active automation session.
-
-**Live Interaction** is a feature within automation testing that allows you to take control of the session **manually**. This helps abort the automated test session, **debug** any exception in **real time**, and report the test session.
+Live Interaction lets you take manual control of a running automation session. Pause the automation and drive the browser yourself to debug an exception in real time, abort a test, or report the session.
 
 ## Why Use Live Interaction?
 ---
-Debug exceptions, interact with OS-level prompts, and track who paused the test.
+Debug exceptions, respond to OS-level prompts, and track who paused a test.
 
-- It allows you to partially interact by clicking a button or filling OS-specific credentials without breaking the currently running automated tests.
-- It helps find the root cause of exceptions raised during automated tests and allows you to debug the exception during the session.
-- It works smartly by letting stakeholders know who has stopped or paused the test, which helps report the issue.
+- Interact with the page (for example, click a button or enter OS-specific credentials) without breaking the running automated test.
+- Find the root cause of an exception by debugging it live during the session.
+- Let stakeholders see who paused or stopped a test, which makes the issue easier to report.
 
 ## Prerequisites and Limitations
 ---
-Review the supported platforms, browsers, and session time limits before using Live Interaction.
+Check the supported platforms, browsers, and time limit before using Live Interaction.
 
-- Live interaction is available on: 
-   - **Windows**: 11, 10, 8, and 8.1
-   - **macOS**: Big Sur, Monterey, Ventura
-   - All browsers except **Safari**.
-- You can only interact with the browser for **15 minutes**.
+- Live Interaction is supported on:
+  - **Windows**: 11, 10, 8, and 8.1
+  - **macOS**: Big Sur, Monterey, and Ventura
+  - All browsers except **Safari**.
+- You can control the browser for up to **15 minutes**.
 
-:::info note
-Safari browser will be added in upcoming releases.
+:::note
+Support for Safari is coming in an upcoming release.
 :::
 
-## How to Use the Live Interaction Feature
+## How to Use Live Interaction
 ---
-Open the test summary page and click "Click to view live test" to take manual control.
+Open the test detail page and click the **Live Interaction** button on the video panel to take manual control.
 
-<img loading="lazy" src={require('../assets/images/selenium/live-interaction1.png').default} alt="cmd" width="768" height="373" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/selenium/live-interaction.webp').default} alt="Test detail page with the Live Interaction button on the video panel" width="1127" height="668" className="doc_img"/>
 
-<img loading="lazy" src={require('../assets/images/selenium/live-interaction2.png').default} alt="cmd" width="768" height="373" className="doc_img"/>
+To take control during a running test:
 
-Follow the below steps to interact with the browser manually in an automation test:
-
-1. Open the test summary page in the **TestMu AI dashboard**.
-2. Click on the **"Click to view live test"** button.
-3. The status of the test changes to **idle_timeout** while using the Live Interaction feature.
-4. Take control of the browser.
+1. Open the test detail page in the **TestMu AI dashboard**.
+2. Click the **Live Interaction** button on the video panel.
+3. The test status changes to `idle_timeout` while you use Live Interaction.
+4. Take control of the browser and interact with it directly.
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">

@@ -132,7 +132,7 @@ Re-Run is not generally available yet and may not be enabled for your account. I
 3. Click the dropdown arrow on the **Re-Run** button, in the top-right of the test summary.
 4. Choose **Replay** or **Reproduce**.
 
-The **Re-runs** field in the test summary shows how many times the test has been re-run.
+<img loading="lazy" src={require('../assets/images/uploads/rerun-dropdown.webp').default} alt="Re-Run button dropdown on the test detail page showing the Replay and Reproduce options" width="1920" height="382" className="doc_img"/>
 
 ## Replay
 ---
@@ -144,6 +144,8 @@ Use Replay to:
 - **Confirm a fix** - re-run a previously failing test after deploying a change.
 - **Identify flaky tests** - run the same test repeatedly to see whether failures are intermittent. For a broader view, see [Flaky Test Detection](/support/docs/test-intelligence-flakiness-test-detection/).
 - **Re-test after an environment change** - verify a test once a dependency or test environment issue is resolved.
+
+<img loading="lazy" src={require('../assets/images/uploads/replay-test.webp').default} alt="Test to Replay screen showing the test events, video playback, and the Replay Test button" width="1920" height="942" className="doc_img"/>
 
 ## Reproduce
 ---
@@ -189,6 +191,13 @@ In this case, add the capability and run the test again. The new run is then eli
 | Best for | Confirming fixes, detecting flakes | Investigating intermittent failures that will not recur |
 
 If you are not sure which to use, start with **Replay**. Reach for **Reproduce** when a failure will not recur on a live run and you need the original conditions back.
+
+## View Run History
+---
+
+The **Re-runs** field in the test summary shows how many times a test has been re-run. Open the run history from the summary to see every previous run with its status, configuration, and duration.
+
+<img loading="lazy" src={require('../assets/images/uploads/test-history.webp').default} alt="Test History panel listing previous runs of a test with timestamp, status, configuration, duration, and flaky percentage" width="1920" height="922" className="doc_img"/>
 
 ## Next Steps
 ---

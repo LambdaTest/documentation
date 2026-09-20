@@ -21,6 +21,7 @@ site_name: TestMu AI
 slug: run-your-cypress-tests-in-parallel/
 canonical: https://www.testmuai.com/support/docs/run-your-cypress-tests-in-parallel/
 ---
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -154,7 +155,6 @@ canonical: https://www.testmuai.com/support/docs/run-your-cypress-tests-in-paral
 
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
-import VerifiedTag from '@site/src/component/verifiedTag';
 
 If you want to run your tests parallelly on the <BrandName /> platform, you can do that using either of the following two ways:
 

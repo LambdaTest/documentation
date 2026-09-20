@@ -1,7 +1,7 @@
 ---
 id: playwright-android-guide
 title: How To Run Playwright Tests On TestMu AI Android Devices
-sidebar_label: Test on Android
+sidebar_label: Getting Started
 description: Here you can learn how to run Playwright tests on the TestMu AI android devices.
 keywords:
   - playwright testing
