@@ -157,6 +157,9 @@ You can also share that bug, save the image to the gallery or download that scre
 The IP Geolocation feature enables you to simulate website and mobile experiences from over 45 countries by using local IP addresses. This allows you to test localized features such as pricing, languages, and product offerings. With IP Geolocation enabled, you can verify that your app's traffic is coming from a specific country, allowing for comprehensive global testing.
  
 <img loading="lazy" src={require('../assets/videos/real-time/chromeos/ip.png').default} style={{ height: '350px' }} className="doc_img"/>
+
+## Files and Media
+The [Upload and Download Files](/support/docs/real-time-upload-and-download-files/) feature allows to manage files directly within remote testing environments. This functionality streamlines the testing process by allowing seamless file transfers between local and remote environments across desktop and mobile platforms.
  
 ## Network Throttling
 <BrandName />'s network throttling feature empowers you to simulate real-world network conditions (Offline, Slow 3G, Fast 3G, 4G, 5G and Custom) during testing. This allows you to assess your application performance under varying internet speeds, ensuring a seamless user experience across different network environments. You can leverage predefined network profiles or craft custom settings for comprehensive testing.
