@@ -115,6 +115,8 @@ The Device Controls feature allows you to simulate various actions on your test 
 - **Shake Device:** Simulate a device shake to test functionalities that rely on shake gestures, such as undo actions or triggering specific in-app events.
 - **Rotate Device:** Rotate the device's orientation between portrait and landscape modes to test the responsiveness and adaptability of your web application. This feature helps you ensure your application layout adjusts properly and remains user-friendly across different orientations.
 
+**Note:** For iOS, the Clear Cache option is also available.
+
 <img loading="lazy" src={require('../assets/images/real-time-testing/mobile-browser/device-control.png').default} alt="Image" className="doc_img"/>
 
 ## Screenshot
