@@ -1,0 +1,76 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: rook-assurance
+  annotations:
+    argocd.argoproj.io/hook: PostSync
+    argocd.argoproj.io/hook-delete-policy: BeforeHookCreation
+spec:
+  backoffLimit: 0
+  activeDeadlineSeconds: 1800
+  template:
+    spec:
+      restartPolicy: Never
+      automountServiceAccountToken: false
+      securityContext:
+        runAsNonRoot: true
+        runAsUser: 10001
+        runAsGroup: 10001
+        fsGroup: 10001
+      containers:
+        - name: rook
+          # Build this image from the reviewed suite; replace with your registry and digest.
+          image: registry.example.com/team/rook-assurance@sha256:REPLACE_IMAGE_DIGEST
+          imagePullPolicy: IfNotPresent
+          securityContext:
+            allowPrivilegeEscalation: false
+            capabilities:
+              drop: [ALL]
+          resources:
+            requests:
+              cpu: 250m
+              memory: 256Mi
+            limits:
+              cpu: '1'
+              memory: 1Gi
+          env:
+            - name: POD_UID
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.uid
+            - name: ROOK_RESULTS_DIR
+              value: /evidence/$(POD_UID)
+            - name: ROOK_RUN_NAME
+              value: argocd-$(POD_UID)
+            - name: ROOK_PROJECT_ID
+              value: REPLACE_PROJECT_ID
+            - name: ROOK_AGENT_ID
+              value: REPLACE_AGENT_ID
+            - name: ROOK_PROFILE
+              value: staging
+            - name: ROOK_SCENARIO_IDS
+              value: SC-001,SC-004,SC-014
+            - name: ROOK_ALLOW_RULES
+              value: ''
+            - name: LT_USERNAME
+              valueFrom:
+                secretKeyRef:
+                  name: rook-ci-credentials
+                  key: LT_USERNAME
+            - name: LT_ACCESS_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: rook-ci-credentials
+                  key: LT_ACCESS_KEY
+            - name: AGENT_TOKEN
+              valueFrom:
+                secretKeyRef:
+                  name: rook-ci-credentials
+                  key: AGENT_TOKEN
+          volumeMounts:
+            - name: evidence
+              mountPath: /evidence
+      volumes:
+        - name: evidence
+          persistentVolumeClaim:
+            claimName: rook-evidence

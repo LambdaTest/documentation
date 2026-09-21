@@ -136,6 +136,10 @@ function toPlainMarkdown(body) {
   body = body.replace(/^[ \t]*[-*+][ \t]*$/gm, '');
   body = body.replace(/^[ \t]*\d+[.)][ \t]*$/gm, '');
 
+  // Static downloads use Docusaurus' pathname:// escape to avoid route rewriting.
+  // Plain Markdown readers need an ordinary path, not that framework protocol.
+  body = body.replace(/\]\(pathname:\/\/(\/[^)]+)\)/g, ']($1)');
+
   // 9. Remove standalone thematic-break lines (redundant under ATX headings).
   body = body.replace(/^[ \t]*([-*_])(?:[ \t]*\1){2,}[ \t]*$/gm, '');
 

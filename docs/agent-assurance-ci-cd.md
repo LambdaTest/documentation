@@ -158,7 +158,23 @@ Rook's headless commands use the same discovery, generation, profile, permission
 
 ## Prepare the Project Interactively
 
-Before enabling a pipeline:
+## Choose Your CI/CD Platform
+
+| Platform | What the dedicated guide provides |
+| --- | --- |
+| [GitHub Actions](/support/docs/rook-github-actions/) | A protected-environment workflow, secret configuration, and evidence upload after success or failure. |
+| [Jenkins](/support/docs/rook-jenkins/) | A declarative Jenkinsfile with scoped credentials, isolated Rook state, and archived results. |
+| [Argo CD](/support/docs/rook-argocd/) | A PostSync Kubernetes Job, a reviewed-suite image, secret references, and persistent evidence. |
+
+These guides share a downloadable [reviewed-suite gate script](pathname:///support/resources/rook/rook-ci.sh), which you review and commit as `ci/rook-ci.sh` in your agent repository. It calls the CLI directly; a coding-agent skill is not required on the runner. For interactive authoring, use the [coding-agent setup guides](/support/docs/rook-coding-agents/).
+
+### Choose a Verdict Policy Deliberately
+
+The dedicated platform examples use a **strict release gate**: every explicitly selected scenario must pass, and missing evidence, Unable to Verify, incomplete work, or compromised results block the job. Blocking the job does not relabel an Unable to Verify verdict as Fail.
+
+The [public skill's general CI recipe](https://github.com/LambdaTest/rook/blob/main/skill-installer/skills/references/ci.md) is more permissive: it reports Unable to Verify and unrunnable gaps without failing on those outcomes alone. Choose and review the policy for your application; do not silently switch policies to get a green build. All versions must check completion, use the current run ID, preserve evidence, and reject malformed or missing result fields.
+
+## Prepare a Reviewed Suite
 
 1. Run `/explore`, `/generate`, `/profile add`, and a one-scenario `/run` locally.
 2. Review the generated `.testmuai/rook/` agent records, scenarios, and profile.

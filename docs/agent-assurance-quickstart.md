@@ -416,9 +416,9 @@ Agent Assurance cannot roll back a refund, message, ticket, or other action take
 
 After the first scenario behaves correctly:
 
-~~~text
-/run --concurrency 1
-~~~
+To repeat this workflow through your coding assistant, [choose a client-specific Rook skill guide](/support/docs/rook-coding-agents/). To automate the reviewed suite, use [GitHub Actions](/support/docs/rook-github-actions/), [Jenkins](/support/docs/rook-jenkins/), or [Argo CD](/support/docs/rook-argocd/).
+
+Use `rook status` at any point to check the selected project, active agent, and local/upstream state. In the TUI, bare `/project`, `/agent`, and `/profile` open pickers; select with the arrow keys and Enter. In a shell, their bare forms list the available records.
 
 Use concurrency 1 while scenarios share accounts, order records, or mutable state. Increase it only after the target and fixtures are isolated.
 
