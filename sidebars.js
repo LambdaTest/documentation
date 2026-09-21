@@ -1095,8 +1095,10 @@ module.exports = {
               { type: "doc", label: "GitHub Copilot CLI", id: "rook-copilot-cli" },
               { type: "doc", label: "OpenCode", id: "rook-opencode" },
               { type: "doc", label: "Cursor CLI", id: "rook-cursor-cli" },
+              { type: "doc", label: "Antigravity CLI", id: "rook-antigravity-cli" },
               { type: "doc", label: "VS Code", id: "rook-vscode" },
               { type: "doc", label: "Windsurf", id: "rook-windsurf" },
+              { type: "doc", label: "Antigravity IDE", id: "rook-antigravity-ide" },
             ],
           },
           {
