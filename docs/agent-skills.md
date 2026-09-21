@@ -131,6 +131,8 @@ Skills work with Claude Code, GitHub Copilot, Cursor, Gemini CLI, and any assist
 
 ## How to Install a Skill
 
+Testing an AI agent with **Rook**? Its skill is distributed from the [public Rook repository](https://github.com/LambdaTest/rook/tree/main/skill-installer/skills), separately from the framework skills below. Follow the [Rook coding-agent setup guides](/support/docs/rook-coding-agents/) for Claude Code, Codex, Gemini CLI, GitHub Copilot CLI, OpenCode, Cursor CLI, VS Code, or Windsurf. The Rook skill installer is `npx @testmuai/rook-skill@latest`; install Rook CLI separately.
+
 Use the `agentskillsforall` installer to add a skill straight from the repository. No manual cloning is required.
 
 <VerifiedTag value="Verified" />
