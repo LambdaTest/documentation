@@ -287,8 +287,6 @@ Complete these steps before running JavaScript Selenium tests on TestMu AI.
 ---
 Clone the TestMu AI JavaScript Selenium sample repository to your local machine.
 
-<Tabs className="docs__val">
-
 ```bash
 git clone https://github.com/LambdaTest/nodejs-selenium-sample
 cd nodejs-selenium-sample

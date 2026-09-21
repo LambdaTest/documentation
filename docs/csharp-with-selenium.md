@@ -207,8 +207,6 @@ Complete the following steps before running C# Selenium tests.
 ---
 Clone the repository and navigate to the project directory.
 
-<Tabs className="docs__val">
-
 ```bash
 git clone https://github.com/LambdaTest/CSharp-Selenium-Sample
 cd CSharp-Selenium-Sample
