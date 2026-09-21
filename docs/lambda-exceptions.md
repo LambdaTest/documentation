@@ -16,6 +16,7 @@ slug: lambda-exceptions/
 canonical: https://www.testmuai.com/support/docs/lambda-exceptions/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"

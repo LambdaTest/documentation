@@ -16,6 +16,7 @@ slug: group-tests-using-custom-tags/
 canonical: https://www.testmuai.com/support/docs/group-tests-using-custom-tags/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
