@@ -270,7 +270,11 @@ To enable Apple Pay automation, include the following capability in your automat
 
 ### Step 3: Update Shipping, Billing, and Contact Details (Optional)
 
-Before confirming the Apple Pay payment, you can optionally update the shipping details, billing details, and contact information using the `lambda-applepay-details` hook. This allows you to customize the payment information dynamically during your automation test.
+Before confirming the Apple Pay payment, you can optionally update the shipping details, billing details, and contact information using the `applePayDetails` hook. This allows you to customize the payment information dynamically during your automation test.
+
+:::note
+**Note:** The `applePayDetails` hook is not currently supported on iOS 26 devices. Support is under active development and will be available in a future release.
+:::
 
 <Tabs>
   <TabItem value="python" label="Python">
@@ -278,7 +282,7 @@ Before confirming the Apple Pay payment, you can optionally update the shipping 
     <VerifiedTag value="Verified" />
 
     <CodeBlock className="language-python">
-{`driver.execute_script("lambda-applepay-details", {
+{`driver.execute_script("applePayDetails", {
     "shippingDetails": {
         "firstName": "John",
         "lastName": "Doe",
@@ -336,7 +340,7 @@ applePayDetails.put("shippingDetails", shippingDetails);
 applePayDetails.put("billingDetails", billingDetails);
 applePayDetails.put("contact", contact);
 
-driver.executeScript("lambda-applepay-details", applePayDetails);`}
+driver.executeScript("applePayDetails", applePayDetails);`}
     </CodeBlock>
   </TabItem>
   <TabItem value="javascript" label="JavaScript">
@@ -344,7 +348,7 @@ driver.executeScript("lambda-applepay-details", applePayDetails);`}
     <VerifiedTag value="Verified" />
 
     <CodeBlock className="language-javascript">
-{`await driver.executeScript("lambda-applepay-details", {
+{`await driver.executeScript("applePayDetails", {
     shippingDetails: {
         firstName: "John",
         lastName: "Doe",
