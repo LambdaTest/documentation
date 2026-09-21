@@ -17,6 +17,7 @@ url: https://www.testmuai.com/support/docs/speedup-espresso/
 site_name: TestMu AI
 slug: speedup-espresso/
 canonical: https://www.testmuai.com/support/docs/speedup-espresso/
+toc_max_heading_level: 2
 ---
 
 import CodeBlock from '@theme/CodeBlock';

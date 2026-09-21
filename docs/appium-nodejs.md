@@ -24,6 +24,8 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import RealDeviceTag from '@site/src/component/realDevice';
+import VirtualDeviceTag from '@site/src/component/virtualDevice';
 
 
 
@@ -51,14 +53,15 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<RealDeviceTag value="Real Device" /> <VirtualDeviceTag value="Virtual Device" />
+
 # How to Run Appium JavaScript Tests on TestMu AI
 ---
 
+
 Running Appium JavaScript tests on TestMu AI executes native and hybrid mobile app automation across real Android and iOS devices. Set credentials, upload your app, configure desired capabilities, then run with Vanilla JavaScript, WebDriverIO, or Mocha and view dashboard results.
 
-**Supported on:** Real &amp; Virtual devices
-
-Prefer another language? See [all supported Appium languages and frameworks](/support/docs/appium-agent-skills/#supported-languages-and-frameworks).
+Prefer another language? See [all supported Appium languages and frameworks](/support/docs/appium-languages-and-frameworks/).
 
 ## Prerequisites
 ---
@@ -131,9 +134,9 @@ Make sure to add the path of the **appFile** in the cURL request. Below is an ex
 ## Run a Test With Your Framework
 ---
 
-Pick your framework below. Each tab contains the complete flow for that framework: automation script, capabilities, execution commands, and its agent skill. The credentials and app upload from the sections above are shared across all three.
+Pick your framework below. Each tab contains the complete flow for that framework: automation script, capabilities, and execution commands. The credentials and app upload from the sections above are shared across all three.
 
-<Tabs groupId="framework" queryString="framework">
+<Tabs queryString="framework">
 
 <TabItem value="vanilla" label="Vanilla JavaScript" default>
 
@@ -969,7 +972,7 @@ Continue with these related guides:
 - [Advanced Configuration for Capabilities](/support/docs/desired-capabilities-in-appium/)
 - [How to test locally hosted apps](/support/docs/testing-locally-hosted-pages/)
 - [How to integrate <BrandName /> with CI/CD](/support/docs/integrations-with-ci-cd-tools/)
-- [Appium languages and frameworks](/support/docs/appium-agent-skills/#supported-languages-and-frameworks)
+- [Appium languages and frameworks](/support/docs/appium-languages-and-frameworks/)
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">

@@ -62,7 +62,7 @@ All the code is in the TestMu AI sample repository. Clone it to follow along wit
 </div>
 :::
 
-Prefer another language? See [all supported Appium languages and frameworks](/support/docs/appium-agent-skills/#supported-languages-and-frameworks).
+Prefer another language? See [all supported Appium languages and frameworks](/support/docs/appium-languages-and-frameworks/).
 
 ## Prerequisites
 ---
@@ -358,7 +358,7 @@ You can also add the `tunnel` capability from the [Capabilities Generator](https
 Continue with these related guides:
 
 - [Appium automation capabilities](/support/docs/desired-capabilities-in-appium/)
-- [Appium languages and frameworks](/support/docs/appium-agent-skills/#supported-languages-and-frameworks)
+- [Appium languages and frameworks](/support/docs/appium-languages-and-frameworks/)
 - [Upload apps to the real device cloud](/support/docs/application-setup-via-api/)
 - [App Automation Dashboard](/support/docs/app-automation-dashboard/)
 

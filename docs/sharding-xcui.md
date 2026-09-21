@@ -17,6 +17,7 @@ url: https://www.testmuai.com/support/docs/sharding-rd-hyperexec/
 site_name: TestMu AI
 slug: sharding-rd-hyperexec/
 canonical: https://www.testmuai.com/support/docs/sharding-rd-hyperexec/
+toc_max_heading_level: 2
 ---
 
 import CodeBlock from '@theme/CodeBlock';
@@ -25,6 +26,8 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import { CookieTrackingSignup } from '@site/src/component/CookieTracking';
+import RealDeviceTag from '@site/src/component/realDevice';
+import VirtualDeviceTag from '@site/src/component/virtualDevice';
 
 
 <script type="application/ld+json"
@@ -51,9 +54,9 @@ import { CookieTrackingSignup } from '@site/src/component/CookieTracking';
     }}
 ></script>
 
-Sharding XCUI tests on TestMu AI splits a sequential suite into shards that run in parallel across real devices, cutting execution time. HyperExecute, configured through a YAML file, orchestrates the shards so your end-to-end iOS tests finish much faster overall.
+<RealDeviceTag value="Real Device" /> <VirtualDeviceTag value="Virtual Device" />
 
-**Supported on:** Real &amp; Virtual devices
+Sharding XCUI tests on TestMu AI splits a sequential suite into shards that run in parallel across real devices, cutting execution time. HyperExecute, configured through a YAML file, orchestrates the shards so your end-to-end iOS tests finish much faster overall.
 
 **HyperExecute** is a smart test orchestration platform that runs XCUI end-to-end tests on real devices at the fastest speed possible, configured using a YAML file.
 

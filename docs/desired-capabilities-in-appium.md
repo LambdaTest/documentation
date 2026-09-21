@@ -1,6 +1,7 @@
 ﻿---
 id: desired-capabilities-in-appium
-title: How to Set Appium Desired Capabilities on TestMu AI
+title: Supported Appium Desired Capabilities on TestMu AI
+hide_title: true
 sidebar_label: "Automation Capabilities"
 description: Learn how to declare Appium desired capabilities on TestMu AI using the capabilities generator to run your App Automation with Appium Desktop.
 keywords:
@@ -19,6 +20,7 @@ url: https://www.testmuai.com/support/docs/desired-capabilities-in-appium/
 site_name: TestMu AI
 slug: desired-capabilities-in-appium/
 canonical: https://www.testmuai.com/support/docs/desired-capabilities-in-appium/
+toc_max_heading_level: 2
 ---
 
 import CodeBlock from '@theme/CodeBlock';
@@ -26,6 +28,8 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import RealDeviceTag from '@site/src/component/realDevice';
+import VirtualDeviceTag from '@site/src/component/virtualDevice';
 
 
 
@@ -46,15 +50,18 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "How to Set Appium Desired Capabilities on TestMu AI",
+          "name": "Supported Appium Desired Capabilities on TestMu AI",
           "item": `${BRAND_URL}/support/docs/desired-capabilities-in-appium/`
         }]
       })
     }}
 ></script>
-Desired capabilities in Appium on TestMu AI are key-value pairs telling the Appium server which mobile platform and configuration to target for each test session. Use the TestMu AI capabilities generator to declare mandatory and optional capabilities running App Automation.
 
-**Supported on:** Real &amp; Virtual devices
+<RealDeviceTag value="Real Device" /> <VirtualDeviceTag value="Virtual Device" />
+
+# Supported Appium Desired Capabilities on TestMu AI
+
+Desired capabilities in Appium on TestMu AI are key-value pairs telling the Appium server which mobile platform and configuration to target for each test session. Use the TestMu AI capabilities generator to declare mandatory and optional capabilities running App Automation.
 
 > **Note:** With <BrandName /> [capabilities generator](https://www.testmuai.com/capabilities-generator/) run your App Automation leveraging Appium Desktop.
 
@@ -163,7 +170,7 @@ Desired capabilities in Appium on TestMu AI are key-value pairs telling the Appi
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
       <span className="breadcrumbs__link">
-        How to Set Appium Desired Capabilities on TestMu AI
+        Supported Appium Desired Capabilities on TestMu AI
       </span>
     </li>
   </ul>

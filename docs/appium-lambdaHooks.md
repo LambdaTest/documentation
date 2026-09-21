@@ -1,10 +1,10 @@
 ---
 id: appium-lambdatest-hooks
-title: How to Use LambdaHooks for Appium on TestMu AI
+title: How to Use Lambda Hooks for Appium on TestMu AI
 hide_title: true
 toc_max_heading_level: 2
 sidebar_label: "Appium Hooks"
-description: Use LambdaHooks in Appium scripts on TestMu AI to set custom status and remarks, rename tests, differentiate cases, annotate commands, and install apps.
+description: Use Lambda Hooks in Appium scripts on TestMu AI to set custom status and remarks, rename tests, differentiate cases, annotate commands, and install apps.
 keywords:
   - appium
   - testmu ai hooks
@@ -40,7 +40,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "How to Use LambdaHooks for Appium on TestMu AI",
+          "name": "How to Use Lambda Hooks for Appium on TestMu AI",
           "item": `${BRAND_URL}/support/docs/appium-testmu-hooks/`
         }]
       })
@@ -52,14 +52,17 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import RealDeviceTag from '@site/src/component/realDevice';
+import VirtualDeviceTag from '@site/src/component/virtualDevice';
 
-# How to Use LambdaHooks for Appium on TestMu AI
+<RealDeviceTag value="Real Device" /> <VirtualDeviceTag value="Virtual Device" />
+
+# How to Use Lambda Hooks for Appium on TestMu AI
 ---
 
 
-LambdaHooks on <BrandName /> are JavaScript-executor snippets you drop into Appium scripts to control and annotate a test run without leaving your own code. Set a status and remarks, rename tests, differentiate cases per session, annotate commands, and install apps.
 
-**Supported on:** Real &amp; Virtual devices
+Lambda Hooks on <BrandName /> are JavaScript-executor snippets you drop into Appium scripts to control and annotate a test run without leaving your own code. Set a status and remarks, rename tests, differentiate cases per session, annotate commands, and install apps.
 
 ## Adding custom status & remark
 ---
@@ -141,9 +144,9 @@ Arguments | Example
 
 <BrandName /> has introduced a LambdaHook to help automation engineers differentiate between multiple test cases within a single Appium session. This feature aims to improve debugging capabilities, making it easier to identify which test cases may be causing errors or taking longer to execute.
 
-### Adding LambdaHooks
+### Adding Lambda Hooks
 
-You can use LambdaHooks to start and end a test case within a single Appium session. 
+You can use Lambda Hooks to start and end a test case within a single Appium session. 
 
 #### Test Case Start
 
@@ -195,7 +198,7 @@ The **Last 5 runs** trend lets you tell a genuinely broken test case from a flak
 ## Command Annotations 
 ---
 
-Command Annotations allow you to add metadata and debugging information to your test scripts. They work similarly to LambdaHooks by providing structured logs on the **<BrandName /> Automation Dashboard**, making it easier to track test execution, debug failures, and navigate specific test sections.
+Command Annotations allow you to add metadata and debugging information to your test scripts. They work similarly to Lambda Hooks by providing structured logs on the **<BrandName /> Automation Dashboard**, making it easier to track test execution, debug failures, and navigate specific test sections.
 
 ![Command Annotation](../assets/images/real-device-app-testing/command-annotation.png)
 
@@ -372,7 +375,7 @@ Continue with these related guides:
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
       <span className="breadcrumbs__link">
-        How to Use LambdaHooks for Appium on TestMu AI
+        How to Use Lambda Hooks for Appium on TestMu AI
       </span>
     </li>
   </ul>

@@ -1,6 +1,7 @@
 ---
 id: getting-started-with-espresso-testing
 title: How to Run Espresso Tests on TestMu AI
+hide_title: true
 sidebar_label: Run First Test
 description: Now you can run your automation scripts using Espresso framework on TestMu AI online grid of 3000+ real desktop browsers and real operating systems.
 keywords:
@@ -15,6 +16,7 @@ url: https://www.testmuai.com/support/docs/getting-started-with-espresso-testing
 site_name: TestMu AI
 slug: getting-started-with-espresso-testing/
 canonical: https://www.testmuai.com/support/docs/getting-started-with-espresso-testing/
+toc_max_heading_level: 2
 ---
 
 import CodeBlock from '@theme/CodeBlock';
@@ -47,9 +49,13 @@ import CookieTrackingLogin from '@site/src/component/CookieTracking';
     }}
 ></script>
 
+<RealDeviceTag value="Real Device" /> <VirtualDeviceTag value="Virtual Device" />
+
+# How to Run Espresso Tests on TestMu AI
+
+
 Running Espresso tests on TestMu AI executes Android UI automation on real and virtual devices. Upload your app and Espresso test APKs, set the desired capabilities, trigger the build, and review results on the dashboard without a local device lab.
 
-**Supported on:** Real &amp; Virtual devices
 
 Espresso is a widely-used testing framework for Android, designed to simplify the process of writing reliable and efficient UI tests. It allows developers to create automated tests that simulate user interactions within an app, ensuring that the app's UI behaves as expected. With its straightforward API and synchronization capabilities, Espresso provides a robust solution for validating the functionality and performance of Android applications.
 
@@ -73,6 +79,8 @@ To begin testing, upload your Android application (.apk file) to <BrandName />'s
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import RealDeviceTag from '@site/src/component/realDevice';
+import VirtualDeviceTag from '@site/src/component/virtualDevice';
 
 <Tabs className="docs__val">
 

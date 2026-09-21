@@ -16,6 +16,7 @@ url: https://www.testmuai.com/support/docs/appium-inspector-integration/
 site_name: TestMu AI
 slug: appium-inspector-integration/
 canonical: https://www.testmuai.com/support/docs/appium-inspector-integration/
+toc_max_heading_level: 2
 ---
 
 import CodeBlock from '@theme/CodeBlock';

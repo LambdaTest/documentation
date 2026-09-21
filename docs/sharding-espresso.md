@@ -1,6 +1,7 @@
 ---
 id: sharding-espresso
 title: How to Shard Espresso Tests on TestMu AI
+hide_title: true
 sidebar_label: Sharding
 description: Shard Espresso tests to run in parallel on real devices with HyperExecute on TestMu AI, cutting execution time using a simple YAML configuration.
 keywords:
@@ -17,6 +18,7 @@ url: https://www.testmuai.com/support/docs/sharding-espresso-rd-hyperexecute/
 site_name: TestMu AI
 slug: sharding-espresso-rd-hyperexecute/
 canonical: https://www.testmuai.com/support/docs/sharding-espresso-rd-hyperexecute/
+toc_max_heading_level: 2
 ---
 
 import CodeBlock from '@theme/CodeBlock';
@@ -25,6 +27,8 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import { CookieTrackingSignup } from '@site/src/component/CookieTracking';
+import RealDeviceTag from '@site/src/component/realDevice';
+import VirtualDeviceTag from '@site/src/component/virtualDevice';
 
 
 <script type="application/ld+json"
@@ -51,9 +55,13 @@ import { CookieTrackingSignup } from '@site/src/component/CookieTracking';
     }}
 ></script>
 
+<RealDeviceTag value="Real Device" /> <VirtualDeviceTag value="Virtual Device" />
+
+# How to Shard Espresso Tests on TestMu AI
+
+
 Sharding Espresso tests on TestMu AI splits your suite into shards that run in parallel across real devices with HyperExecute, cutting total execution time. Configure a simple YAML file to distribute tests, orchestrate runs, and review results on the dashboard.
 
-**Supported on:** Real &amp; Virtual devices
 
 Running **Espresso** tests sequentially can be laborious and time-intensive. This guide offers an efficient solution by introducing the concept of **sharding**. By breaking down tests into shards, they can be executed in parallel, significantly trimming down the total testing duration.
 

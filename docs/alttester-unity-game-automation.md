@@ -13,6 +13,7 @@ url: https://www.testmuai.com/support/docs/alttester-unity-game-automation/
 site_name: TestMu AI
 slug: alttester-unity-game-automation/
 canonical: https://www.testmuai.com/support/docs/alttester-unity-game-automation/
+toc_max_heading_level: 2
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

@@ -1,6 +1,7 @@
 ---
 id: ios-keychain-cleanup
-title: How to Clean Up iOS Keychain on TestMu AI
+title: Support for iOS keychain cleanup and access groups
+hide_title: true
 sidebar_label: iOS Keychain Cleanup
 description: Secure and clean iOS testing with TestMu AI's iOS Keychain cleanup and seamless access group handling support.
 keywords:
@@ -15,11 +16,13 @@ url: https://www.testmuai.com/support/docs/ios-keychain-cleanup/
 site_name: TestMu AI
 slug: ios-keychain-cleanup/
 canonical: https://www.testmuai.com/support/docs/ios-keychain-cleanup/
+toc_max_heading_level: 2
 ---
 
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import RealDeviceTag from '@site/src/component/realDevice';
 
 
 <script type="application/ld+json"
@@ -39,16 +42,19 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "How to Clean Up iOS Keychain on TestMu AI",
+          "name": "Support for iOS keychain cleanup and access groups",
           "item": `${BRAND_URL}/support/docs/ios-keychain-cleanup/`
         }]
       })
     }}
 ></script>
 
-iOS Keychain cleanup on TestMu AI automatically clears all Keychain entries after each real-device session, preventing login details and tokens from carrying over between runs. It also preserves keychain-access-groups entitlements during app resigning, keeping secure-storage flows working correctly after resigning.
+<RealDeviceTag value="Real Device" />
 
-**Supported on:** Real devices
+# Support for iOS keychain cleanup and access groups
+
+
+iOS Keychain cleanup on TestMu AI automatically clears all Keychain entries after each real-device session, preventing login details and tokens from carrying over between runs. It also preserves keychain-access-groups entitlements during app resigning, keeping secure-storage flows working correctly after resigning.
 
 ## Keychain Cleanup After Sessions
 
@@ -130,7 +136,7 @@ This approach ensures your app remains functional even if the Team ID changes af
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
       <span className="breadcrumbs__link">
-        How to Clean Up iOS Keychain on TestMu AI
+        Support for iOS keychain cleanup and access groups
       </span>
     </li>
   </ul>

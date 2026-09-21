@@ -23,6 +23,8 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import RealDeviceTag from '@site/src/component/realDevice';
+import VirtualDeviceTag from '@site/src/component/virtualDevice';
 
 
 
@@ -50,14 +52,15 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<RealDeviceTag value="Real Device" /> <VirtualDeviceTag value="Virtual Device" />
+
 # How to Run Appium C# Tests on TestMu AI
 ---
 
+
 Running Appium C# tests on TestMu AI automates native and hybrid mobile apps on real Android and iOS devices. Set your credentials, upload the app, configure desired capabilities, then execute tests with Vanilla C# or NUnit and review detailed results.
 
-**Supported on:** Real &amp; Virtual devices
-
-Prefer another language? See [all supported Appium languages and frameworks](/support/docs/appium-agent-skills/#supported-languages-and-frameworks).
+Prefer another language? See [all supported Appium languages and frameworks](/support/docs/appium-languages-and-frameworks/).
 
 ## Prerequisites
 ---
@@ -136,7 +139,7 @@ Make sure to add the path of the **appFile** in the cURL request. Below is an ex
 
 Pick your framework below. Each tab is a complete, self-contained flow: get the sample project, update the automation script, configure capabilities, and execute your tests.
 
-<Tabs groupId="framework" queryString="framework">
+<Tabs queryString="framework">
 
 <TabItem value="vanilla" label="Vanilla C#" default>
 
@@ -720,7 +723,7 @@ Continue with these related guides:
 - [Advanced Configuration for Capabilities](/support/docs/desired-capabilities-in-appium/)
 - [How to test locally hosted apps](/support/docs/testing-locally-hosted-pages/)
 - [How to integrate <BrandName /> with CI/CD](/support/docs/integrations-with-ci-cd-tools/)
-- [Appium languages and frameworks](/support/docs/appium-agent-skills/#supported-languages-and-frameworks)
+- [Appium languages and frameworks](/support/docs/appium-languages-and-frameworks/)
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">

@@ -1,6 +1,6 @@
 ---
 id: login-google-android
-title: How to Log in to Google on Android on TestMu AI
+title: Login to Google account on Android
 # hide_title: true
 sidebar_label: Login To Google Account (Android)
 description: Sign in to a Google account on Android real devices during App Automation on TestMu AI to test features and services tied to that account.
@@ -12,6 +12,7 @@ url: https://www.testmuai.com/support/docs/login-to-google-account-on-android/
 site_name: TestMu AI
 slug: login-to-google-account-on-android/
 canonical: https://www.testmuai.com/support/docs/login-to-google-account-on-android/
+toc_max_heading_level: 2
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
@@ -33,7 +34,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "How to Log in to Google on Android on TestMu AI",
+          "name": "Login to Google account on Android",
           "item": `${BRAND_URL}/support/docs/login-to-google-account-on-android/`
         }]
       })
@@ -165,7 +166,7 @@ Since we clean the Device after each session, ensure you are logging in to the a
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
       <span className="breadcrumbs__link">
-        How to Log in to Google on Android on TestMu AI
+        Login to Google account on Android
       </span>
     </li>
   </ul>

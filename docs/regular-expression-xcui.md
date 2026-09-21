@@ -11,9 +11,11 @@ url: https://www.testmuai.com/support/docs/regular-expression-xcui/
 site_name: TestMu AI
 slug: regular-expression-xcui/
 canonical: https://www.testmuai.com/support/docs/regular-expression-xcui/
+toc_max_heading_level: 2
 ---
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import RealDeviceTag from '@site/src/component/realDevice';
 
 
 <script type="application/ld+json"
@@ -40,9 +42,9 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
-Using regular expressions for XCUI device selection on TestMu AI lets you match any available device with a pattern instead of one exact model, so tests still run when your chosen iPhone or iPad is busy, widening the device search.
+<RealDeviceTag value="Real Device" />
 
-**Supported on:** Real devices
+Using regular expressions for XCUI device selection on TestMu AI lets you match any available device with a pattern instead of one exact model, so tests still run when your chosen iPhone or iPad is busy, widening the device search.
 
 Regular Expression or REGEX is widely used to make searching/find characters in a string.
 

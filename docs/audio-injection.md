@@ -1,6 +1,6 @@
 ---
 id: audio-injection
-title: How to Inject Audio Into Real Devices on TestMu AI
+title: Audio Injection/Input on Real Devices
 sidebar_label: Audio Injection
 description: Test audio-driven and microphone-dependent features on real Android and iOS devices by injecting pre-recorded audio files directly into the device microphone.
 
@@ -21,6 +21,7 @@ url: https://www.testmuai.com/support/docs/audio-injection/
 site_name: TestMu AI
 slug: audio-injection/
 canonical: https://www.testmuai.com/support/docs/audio-injection/
+toc_max_heading_level: 2
 ---
 
 import CodeBlock from '@theme/CodeBlock';
@@ -29,6 +30,7 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import RealDeviceTag from '@site/src/component/realDevice';
 
 
 <script type="application/ld+json"
@@ -48,18 +50,19 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "How to Inject Audio Into Real Devices on TestMu AI",
+          "name": "Audio Injection/Input on Real Devices",
           "item": `${BRAND_URL}/support/docs/audio-injection/`
         }]
       })
     }}
 ></script>
 
-# How to Inject Audio Into Real Devices on TestMu AI
+<RealDeviceTag value="Real Device" />
+
+# Audio Injection/Input on Real Devices
+
 
 Audio injection on TestMu AI feeds pre-recorded audio files straight into a real device microphone during Appium or Selenium tests, letting you validate voice commands, speech recognition, and microphone-dependent features across real Android and iOS devices without physical microphone input.
-
-**Supported on:** Real devices
 
 :::note Plus Plan Feature
 This feature is available exclusively with the **Real Device Plus Automation Cloud** Plan.

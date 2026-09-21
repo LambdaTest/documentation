@@ -1,6 +1,6 @@
 ---
 id: appium-ip-geolocation
-title: How to Set IP Geolocation on TestMu AI
+title: IP Geolocation
 hide_title: true
 sidebar_label: IP Geolocation 
 description: Configure IP Geolocation on TestMu AI to test websites and mobile apps from different countries, using the geoLocation capability on real and virtual devices.
@@ -15,6 +15,7 @@ url: https://www.testmuai.com/support/docs/appium-ip-geolocation/
 site_name: TestMu AI
 slug: appium-ip-geolocation/
 canonical: https://www.testmuai.com/support/docs/appium-ip-geolocation/
+toc_max_heading_level: 2
 ---
 
 
@@ -24,6 +25,8 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import RealDeviceTag from '@site/src/component/realDevice';
+import VirtualDeviceTag from '@site/src/component/virtualDevice';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -42,18 +45,19 @@ import TabItem from '@theme/TabItem';
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "How to Set IP Geolocation on TestMu AI",
+          "name": "IP Geolocation",
           "item": `${BRAND_URL}/support/docs/appium-ip-geolocation/`
         }]
       })
     }}
 ></script>
 
-# How to Set IP Geolocation on TestMu AI
+<RealDeviceTag value="Real Device" /> <VirtualDeviceTag value="Virtual Device" />
+
+# IP Geolocation
+
 
 Setting IP Geolocation on TestMu AI lets you test websites and mobile apps as if traffic originates from countries and regions worldwide. Pass the geoLocation capability with a two-letter code to simulate a device's location in automated and manual tests.
-
-**Supported on:** Real &amp; Virtual devices
 
 <BrandName />'s IP Geolocation feature empowers users to test their websites and mobile applications from various geographical locations worldwide. This feature enables users to simulate traffic originating from different countries and regions, allowing for comprehensive testing of platform functionalities across diverse global markets.
 
@@ -275,7 +279,7 @@ Below is the list of supported countries along with their respective country cod
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
       <span className="breadcrumbs__link">
-        How to Set IP Geolocation on TestMu AI
+        IP Geolocation
       </span>
     </li>
   </ul>

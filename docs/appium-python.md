@@ -29,6 +29,8 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import RealDeviceTag from '@site/src/component/realDevice';
+import VirtualDeviceTag from '@site/src/component/virtualDevice';
 
 
 
@@ -56,12 +58,13 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<RealDeviceTag value="Real Device" /> <VirtualDeviceTag value="Virtual Device" />
+
 # How to Run Appium Python Tests on TestMu AI
 ---
 
-Running Appium Python tests on TestMu AI executes native and hybrid mobile automation on real Android and iOS devices. Set desired capabilities, upload your app, and run tests across Vanilla Python, Behave, Robot, Gauge, or PyTest, then view dashboard results.
 
-**Supported on:** Real &amp; Virtual devices
+Running Appium Python tests on TestMu AI executes native and hybrid mobile automation on real Android and iOS devices. Set desired capabilities, upload your app, and run tests across Vanilla Python, Behave, Robot, Gauge, or PyTest, then view dashboard results.
 
 ## Prerequisites
 ---
@@ -139,7 +142,7 @@ Make sure to add the path of the **appFile** in the cURL request. Below is an ex
 
 Pick your framework below. Each tab contains the complete flow for that framework: the sample repository, the automation script, the test capabilities, and the command to execute your tests. The credentials and app upload you set above are shared across all of them.
 
-<Tabs groupId="framework" queryString="framework">
+<Tabs queryString="framework">
 
 <TabItem value="vanilla" label="Vanilla Python" default>
 
@@ -1234,7 +1237,7 @@ Continue with these related guides:
 - [Advanced Configuration for Capabilities](/support/docs/desired-capabilities-in-appium/)
 - [How to test locally hosted apps](/support/docs/testing-locally-hosted-pages/)
 - [How to integrate <BrandName /> with CI/CD](/support/docs/integrations-with-ci-cd-tools/)
-- [Appium languages and frameworks](/support/docs/appium-agent-skills/#supported-languages-and-frameworks)
+- [Appium languages and frameworks](/support/docs/appium-languages-and-frameworks/)
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">

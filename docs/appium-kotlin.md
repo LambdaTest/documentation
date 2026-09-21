@@ -1,6 +1,7 @@
 ﻿---
 id: appium-kotlin
 title: How to Run Appium Kotlin Tests on TestMu AI
+hide_title: true
 sidebar_label: Kotlin
 description: Now you can run your Appium automation scripts using Kotlin on TestMu AI Real Device Cloud Platform of 3000+ real mobile devices.
 keywords:
@@ -15,6 +16,7 @@ url: https://www.testmuai.com/support/docs/appium-kotlin/
 site_name: TestMu AI
 slug: appium-kotlin/
 canonical: https://www.testmuai.com/support/docs/appium-kotlin/
+toc_max_heading_level: 2
 ---
 
 import CodeBlock from '@theme/CodeBlock';
@@ -22,6 +24,8 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import RealDeviceTag from '@site/src/component/realDevice';
+import VirtualDeviceTag from '@site/src/component/virtualDevice';
 
 
 
@@ -49,9 +53,12 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
-Running Appium tests with Kotlin on TestMu AI automates native and hybrid mobile apps across a real device cloud of 3000+ Android and iOS devices. Configure your project, set desired capabilities, upload your app, and run scripts to view results.
+<RealDeviceTag value="Real Device" /> <VirtualDeviceTag value="Virtual Device" />
 
-**Supported on:** Real &amp; Virtual devices
+# How to Run Appium Kotlin Tests on TestMu AI
+
+
+Running Appium tests with Kotlin on TestMu AI automates native and hybrid mobile apps across a real device cloud of 3000+ Android and iOS devices. Configure your project, set desired capabilities, upload your app, and run scripts to view results.
 
 ## Prerequisites
 

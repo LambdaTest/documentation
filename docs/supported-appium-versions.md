@@ -29,6 +29,8 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import NewTag from '../src/component/newTag';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import RealDeviceTag from '@site/src/component/realDevice';
+import VirtualDeviceTag from '@site/src/component/virtualDevice';
 
 
 <script type="application/ld+json"
@@ -55,13 +57,14 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<RealDeviceTag value="Real Device" /> <VirtualDeviceTag value="Virtual Device" />
+
 # Supported Appium Versions and Plugins on TestMu AI
 ---
 
 
-Supported Appium versions and plugins on TestMu AI let you pick the exact Appium version for tests on real and virtual devices and extend Appium with optional plugins. Listed here are supported versions per platform, driver versions, and supported plugins.
 
-**Supported on:** Real &amp; Virtual devices
+Supported Appium versions and plugins on TestMu AI let you pick the exact Appium version for tests on real and virtual devices and extend Appium with optional plugins. Listed here are supported versions per platform, driver versions, and supported plugins.
 
 :::info
 - We also provide Support for Appium 3.0.2 on following versions
@@ -84,7 +87,7 @@ To configure the Appium version for your tests on <BrandName />, use the `appium
 
 **Java Example:** 
 ```java
-// Java code for configuring Appium version in tests on LambdaTest
+// Java code for configuring Appium version in tests on TestMu AI
 DesiredCapabilities capabilities = new DesiredCapabilities();
 capabilities.setCapability("appiumVersion", "2.2.1");
 capabilities.setCapability("platformName", "ios");
@@ -171,7 +174,7 @@ Continue with these related guides:
 
 - [Run your first Appium test](/support/docs/getting-started-with-appium-testing/)
 - [Appium automation capabilities](/support/docs/desired-capabilities-in-appium/)
-- [Appium languages and frameworks](/support/docs/appium-agent-skills/#supported-languages-and-frameworks)
+- [Appium languages and frameworks](/support/docs/appium-languages-and-frameworks/)
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">

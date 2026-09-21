@@ -1,6 +1,7 @@
 ---
 id: appium-ios-app-settings
-title: How to Change iOS App Settings on TestMu AI
+title: iOS App Settings
+hide_title: true
 sidebar_label: iOS App Settings
 description: Use the lambda-ios-settings hook to toggle iOS app permissions and preferences during App Automation on TestMu AI real iOS devices.
 keywords:
@@ -16,8 +17,10 @@ url: https://www.testmuai.com/support/docs/appium-ios-app-settings/
 site_name: TestMu AI
 slug: appium-ios-app-settings/
 canonical: https://www.testmuai.com/support/docs/appium-ios-app-settings/
+toc_max_heading_level: 2
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import RealDeviceTag from '@site/src/component/realDevice';
 
 
 <script type="application/ld+json"
@@ -37,15 +40,18 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "How to Change iOS App Settings on TestMu AI",
+          "name": "iOS App Settings",
           "item": `${BRAND_URL}/support/docs/appium-ios-app-settings/`
         }]
       })
     }}
 ></script>
-Changing iOS app settings on TestMu AI lets you toggle permissions and preferences like camera, location, and app resets during App Automation on real iOS devices, using the lambda-ios-settings hook to manipulate settings the public cloud otherwise blocks for security.
 
-**Supported on:** Real devices
+<RealDeviceTag value="Real Device" />
+
+# iOS App Settings
+
+Changing iOS app settings on TestMu AI lets you toggle permissions and preferences like camera, location, and app resets during App Automation on real iOS devices, using the lambda-ios-settings hook to manipulate settings the public cloud otherwise blocks for security.
 
 **iOS App Settings** are the permissions or preferences that can be enabled/disabled for an app through iOS settings. Accessing the device settings is restricted on the iOS public cloud devices of <BrandName /> due to security constraints. However, in multiple cases, the native app must be tested for various permissions which can only be enabled and disabled with the settings app.
 
@@ -234,7 +240,7 @@ The keys and values follow the same rules as the hook: setting **titles must mat
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
       <span className="breadcrumbs__link">
-        How to Change iOS App Settings on TestMu AI
+        iOS App Settings
       </span>
     </li>
   </ul>

@@ -15,12 +15,15 @@ url: https://www.testmuai.com/support/docs/getting-started-with-xcuitest/
 site_name: TestMu AI
 slug: getting-started-with-xcuitest/
 canonical: https://www.testmuai.com/support/docs/getting-started-with-xcuitest/
+toc_max_heading_level: 2
 ---
 
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import CookieTrackingLogin from '@site/src/component/CookieTracking';
+import RealDeviceTag from '@site/src/component/realDevice';
+import VirtualDeviceTag from '@site/src/component/virtualDevice';
 
 
 <script type="application/ld+json"
@@ -46,9 +49,10 @@ import CookieTrackingLogin from '@site/src/component/CookieTracking';
       })
     }}
 ></script>
-Running XCUITest on TestMu AI executes Apple's XCTest-based UI automation for your iOS apps across 5000+ real devices and OS combinations. Upload your app and test bundle, configure capabilities, trigger the run, and review results on the TestMu AI dashboard.
 
-**Supported on:** Real &amp; Virtual devices
+<RealDeviceTag value="Real Device" /> <VirtualDeviceTag value="Virtual Device" />
+
+Running XCUITest on TestMu AI executes Apple's XCTest-based UI automation for your iOS apps across 5000+ real devices and OS combinations. Upload your app and test bundle, configure capabilities, trigger the run, and review results on the TestMu AI dashboard.
 
 Developed by Apple, XCUITest is a framework for user-interface (UI) testing for iOS applications. It is built on top of XCTest, an integrated test framework in Apple's Xcode IDE. <BrandName /> lets you perform automated app testing of your iOS apps using XCUITest across 5000+ real devices and OS combinations.
 

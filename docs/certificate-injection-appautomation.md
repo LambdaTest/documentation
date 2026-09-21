@@ -1,6 +1,7 @@
 ---
 id: certificate-injection-appautomation
 title: Certificate Injection in App Automation on Real Devices
+hide_title: true
 sidebar_label: Certificate Injection
 description: Install custom CA certificates and client identities on TestMu AI real devices during Appium app automation sessions to test certificate-based authentication, SSL pinning, and mutual TLS.
 keywords:
@@ -22,6 +23,7 @@ url: https://www.testmuai.com/support/docs/certificate-injection-appautomation/
 site_name: TestMu AI
 slug: certificate-injection-appautomation/
 canonical: https://www.testmuai.com/support/docs/certificate-injection-appautomation/
+toc_max_heading_level: 2
 ---
 
 import CodeBlock from '@theme/CodeBlock';
@@ -58,6 +60,8 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 ></script>
 
 <RealDeviceTag value="Real Device" />
+
+# Certificate Injection in App Automation on Real Devices
 
 Many apps connect to servers that use certificates issued by a private or corporate certificate authority. Some apps also pin a **self-signed certificate**, or present a **client certificate** to authenticate themselves before a server will respond. On a standard device, these connections fail because the device does not trust your organization's certificates.
 

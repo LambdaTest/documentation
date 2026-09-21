@@ -14,6 +14,7 @@ url: https://www.testmuai.com/support/docs/appium-flutter-integration/
 site_name: TestMu AI
 slug: appium-flutter-integration/
 canonical: https://www.testmuai.com/support/docs/appium-flutter-integration/
+toc_max_heading_level: 2
 ---
 
 import CodeBlock from '@theme/CodeBlock';
@@ -22,11 +23,13 @@ import TabItem from '@theme/TabItem';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import RealDeviceTag from '@site/src/component/realDevice';
+import VirtualDeviceTag from '@site/src/component/virtualDevice';
 
 
 Testing Flutter apps on TestMu AI with Appium Flutter Integration Driver automates Flutter UI validation on real Android and iOS devices in the cloud, letting you write tests in multiple languages, switch contexts seamlessly, and drive gestures beyond native limits.
 
-**Supported on:** Real &amp; Virtual devices
+<RealDeviceTag value="Real Device" /> <VirtualDeviceTag value="Virtual Device" />
 
 <BrandName /> supports testing Flutter applications on real Android and iOS devices using the [**Appium Flutter Integration Driver**](https://github.com/AppiumTestDistribution/appium-flutter-integration-driver/). This driver enables you to automate Flutter app testing in multiple programming languages, providing a powerful and flexible way to validate your Flutter apps on real devices in the cloud.
 

@@ -1,6 +1,7 @@
 ---
 id: device-passcode-appautomation
-title: How to Test iOS Passcode Apps on TestMu AI
+title: Device Passcode in App Automation on Real Devices
+hide_title: true
 sidebar_label: Device Passcode
 description: Run automated tests on iOS apps that require a device passcode during execution on real devices.
 keywords:
@@ -17,6 +18,7 @@ url: https://www.testmuai.com/support/docs/device-passcode-appautomation/
 site_name: TestMu AI
 slug: device-passcode-appautomation/
 canonical: https://www.testmuai.com/support/docs/device-passcode-appautomation/
+toc_max_heading_level: 2
 ---
 
 import CodeBlock from '@theme/CodeBlock';
@@ -25,6 +27,7 @@ import { YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY } from "@site/src/
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import RealDeviceTag from '@site/src/component/realDevice';
 
 
 <script type="application/ld+json"
@@ -44,16 +47,19 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "How to Test iOS Passcode Apps on TestMu AI",
+          "name": "Device Passcode in App Automation on Real Devices",
           "item": `${BRAND_URL}/support/docs/device-passcode-appautomation/`
         }]
       })
     }}
 ></script>
 
-Device Passcode in App Automation on TestMu AI runs tests on passcode-protected real iOS devices. Apps enforcing a passcode, such as banking, enterprise, or MDM apps, unlock during execution so your Appium scripts complete secure login and sensitive workflows automatically.
+<RealDeviceTag value="Real Device" />
 
-**Supported on:** Real devices
+# Device Passcode in App Automation on Real Devices
+
+
+Device Passcode in App Automation on TestMu AI runs tests on passcode-protected real iOS devices. Apps enforcing a passcode, such as banking, enterprise, or MDM apps, unlock during execution so your Appium scripts complete secure login and sensitive workflows automatically.
 
 For certain use cases, you may need to perform tests on devices that are **passcode-protected**. Apps handling sensitive data (for example, **banking apps**, **enterprise apps**, or apps distributed through **MDM**) often enforce device passcodes for enhanced security.  
 

@@ -15,6 +15,7 @@ url: https://www.testmuai.com/support/docs/flutter-supported-capabilities/
 site_name: TestMu AI
 slug: flutter-supported-capabilities/
 canonical: https://www.testmuai.com/support/docs/flutter-supported-capabilities/
+toc_max_heading_level: 2
 ---
 
 import CodeBlock from '@theme/CodeBlock';

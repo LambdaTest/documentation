@@ -16,6 +16,7 @@ url: https://www.testmuai.com/support/docs/xcui-report/
 site_name: TestMu AI
 slug: xcui-report/
 canonical: https://www.testmuai.com/support/docs/xcui-report/
+toc_max_heading_level: 2
 ---
 
 import CodeBlock from '@theme/CodeBlock';
@@ -23,6 +24,8 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import RealDeviceTag from '@site/src/component/realDevice';
+import VirtualDeviceTag from '@site/src/component/virtualDevice';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -48,9 +51,9 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
-XML reports on TestMu AI give a summary of XCUI test execution so you can understand your outcomes. Use the REST APIs below to retrieve reports for non-shard builds and shard builds, either as individual shards or all shards collectively.
+<RealDeviceTag value="Real Device" /> <VirtualDeviceTag value="Virtual Device" />
 
-**Supported on:** Real &amp; Virtual devices
+XML reports on TestMu AI give a summary of XCUI test execution so you can understand your outcomes. Use the REST APIs below to retrieve reports for non-shard builds and shard builds, either as individual shards or all shards collectively.
 
 ## Objective
 ---

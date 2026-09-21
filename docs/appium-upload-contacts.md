@@ -1,6 +1,6 @@
 ---
 id: appium-upload-contacts
-title: How to Upload Contacts to Devices on TestMu AI
+title: Upload Contacts on Real Devices
 hide_title: true
 sidebar_label: Upload Contacts
 description: Upload custom .vcf contact files to real Android and iOS devices and inject them into the native Contacts app before your test session begins.
@@ -17,6 +17,7 @@ url: https://www.testmuai.com/support/docs/upload-contacts/
 site_name: TestMu AI
 slug: upload-contacts/
 canonical: https://www.testmuai.com/support/docs/upload-contacts/
+toc_max_heading_level: 2
 ---
 
 import CodeBlock from '@theme/CodeBlock';
@@ -25,6 +26,7 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import RealDeviceTag from '@site/src/component/realDevice';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -43,18 +45,19 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "How to Upload Contacts to Devices on TestMu AI",
+          "name": "Upload Contacts on Real Devices",
           "item": `${BRAND_URL}/support/docs/upload-contacts/`
         }]
       })
     }}
 ></script>
 
-# How to Upload Contacts to Devices on TestMu AI
+<RealDeviceTag value="Real Device" />
+
+# Upload Contacts on Real Devices
+
 
 Uploading contacts on TestMu AI preloads .vcf vCard files onto real Android and iOS devices, automatically injecting them into the native Contacts app before your session starts. This lets you test messaging, dialer, CRM, and contact-picker flows on real devices.
-
-**Supported on:** Real devices
 
 This is useful for testing:
 - Messaging and dialer apps
@@ -139,7 +142,7 @@ desired_capabilities = {
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
       <span className="breadcrumbs__link">
-        How to Upload Contacts to Devices on TestMu AI
+        Upload Contacts on Real Devices
       </span>
     </li>
   </ul>

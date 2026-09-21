@@ -26,6 +26,8 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import RealDeviceTag from '@site/src/component/realDevice';
+import VirtualDeviceTag from '@site/src/component/virtualDevice';
 
 
 <script type="application/ld+json"
@@ -52,16 +54,17 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<RealDeviceTag value="Real Device" /> <VirtualDeviceTag value="Virtual Device" />
+
 # How to Run Appium Java Tests on TestMu AI
 ---
 
-Running Appium Java tests on TestMu AI automates native and hybrid mobile apps across real Android and iOS devices. Set credentials, upload the app, configure desired capabilities, then execute with Vanilla Java, JUnit, JBehave, Cucumber, or TestNG and view results.
 
-**Supported on:** Real &amp; Virtual devices
+Running Appium Java tests on TestMu AI automates native and hybrid mobile apps across real Android and iOS devices. Set credentials, upload the app, configure desired capabilities, then execute with Vanilla Java, JUnit, JBehave, Cucumber, or TestNG and view results.
 
 Appium lets you automate native and hybrid mobile apps in **Java**, and TestMu AI runs those tests across a cloud of real Android and iOS devices. Along the way you'll set the [**desired capabilities**](/support/docs/desired-capabilities-in-appium/) for Appium testing and explore other advanced features of TestMu AI.
 
-The account setup, environment variables, and app upload are the same for every framework, so those are covered first. Pick your framework in the [Run a Test With Your Framework](#run-a-test-with-your-framework) section, where each tab carries the complete, framework-specific flow, code, capabilities, run commands, and all.
+The account setup, environment variables, and app upload are the same for every framework, so those are covered first. Pick your framework in the **Run a Test With Your Framework** section below, where each tab carries the complete, framework-specific flow, code, capabilities, run commands, and all.
 
 ## Prerequisites
 ---
@@ -137,7 +140,7 @@ Make sure to add the path of the **appFile** in the cURL request. Below is an ex
 
 Choose your Java test framework below. Each tab contains the complete flow for that framework, get the sample project, update the automation script, configure the capabilities, and execute your tests. Ensure you have already set your credentials and uploaded your app as described above.
 
-<Tabs groupId="framework" queryString="framework">
+<Tabs queryString="framework">
 
 <TabItem value="vanilla" label="Vanilla Java" default>
 
@@ -1528,6 +1531,7 @@ DesiredCapabilities capabilities = new DesiredCapabilities();
 - You must add the generated **APP_URL** to the `app` capability in the config file.
 - You must set **isRealMobile** capability to `False` in the config file to run on **Virtual Devices**
 - You can generate capabilities for your test requirements with the help of our inbuilt [**Capabilities Generator tool**](https://www.testmuai.com/capabilities-generator/).For more details, please refer to our guide on [**Desired Capabilities in Appium**](/support/docs/desired-capabilities-in-appium/).
+- TestMu AI follows the Appium and Selenium session model, where each device or browser instance can have only one active automation session at a time. For parallel execution, each test must create an independent WebDriver/AppiumDriver session and use a separate browser or device instance.
 
 :::
 

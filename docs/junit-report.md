@@ -17,6 +17,7 @@ url: https://www.testmuai.com/support/docs/espresso-junit-report/
 site_name: TestMu AI
 slug: espresso-junit-report/
 canonical: https://www.testmuai.com/support/docs/espresso-junit-report/
+toc_max_heading_level: 2
 ---
 
 import CodeBlock from '@theme/CodeBlock';
@@ -50,14 +51,12 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 ---
 
-## Introduction
----
-
 Espresso JUnit XML reports on TestMu AI give a detailed summary of your test execution outcomes. Using the report APIs, you can fetch JUnit reports for non-shard Espresso builds and for shard builds, retrieving results per individual shard or collectively.
 
 ## Objective
 ---
-### By the end of this document, you should be able to:
+
+By the end of this document, you should be able to:
 
 1. Fetch JUnit reports for non-shard Espresso builds.
 

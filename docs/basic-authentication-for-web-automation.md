@@ -1,6 +1,6 @@
 ---
 id: basic-authentication-for-web-automation
-title: How to Set Up Basic Authentication on TestMu AI
+title: Basic Authentication for Safari Web Automation
 sidebar_label: Basic Authentication for Safari Web Automation
 description: Handle HTTP Basic Authentication in Safari web automation sessions on iOS real devices using a lambda hook on TestMu AI Real Device Cloud.
 keywords:
@@ -14,6 +14,7 @@ url: https://www.testmuai.com/support/docs/basic-authentication-for-web-automati
 site_name: TestMu AI
 slug: basic-authentication-for-web-automation/
 canonical: https://www.testmuai.com/support/docs/basic-authentication-for-web-automation/
+toc_max_heading_level: 2
 ---
 
 import CodeBlock from '@theme/CodeBlock';
@@ -41,7 +42,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "How to Set Up Basic Authentication on TestMu AI",
+          "name": "Basic Authentication for Safari Web Automation",
           "item": `${BRAND_URL}/support/docs/basic-authentication-for-web-automation/`
         }]
       })
@@ -98,7 +99,7 @@ Please note, this hook is designed to be used exclusively with Safari on iOS Rea
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
       <span className="breadcrumbs__link">
-        How to Set Up Basic Authentication on TestMu AI
+        Basic Authentication for Safari Web Automation
       </span>
     </li>
   </ul>

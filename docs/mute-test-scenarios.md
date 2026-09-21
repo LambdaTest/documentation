@@ -1,6 +1,6 @@
 ---
 id: mute-test-scenarios
-title: How to Mute Test Scenarios on TestMu AI
+title: Mute Test Scenarios
 sidebar_label: Mute Test Scenarios
 description: Mute flaky or known-broken tests on TestMu AI so they stop failing your build. A muted test still runs and reports its result but is excluded from the verdict.
 keywords:
@@ -15,6 +15,7 @@ url: https://www.testmuai.com/support/docs/mute-test-scenarios/
 site_name: TestMu AI
 slug: mute-test-scenarios/
 canonical: https://www.testmuai.com/support/docs/mute-test-scenarios/
+toc_max_heading_level: 2
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
@@ -35,7 +36,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "How to Mute Test Scenarios on TestMu AI",
+          "name": "Mute Test Scenarios",
           "item": `${BRAND_URL}/support/docs/mute-test-scenarios/`
         }]
       })

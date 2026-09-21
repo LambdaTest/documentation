@@ -1,7 +1,7 @@
 ---
 id: app-testing-apis
 title: How to Use App Testing APIs on TestMu AI
-# hide_title: true
+hide_title: true
 sidebar_label: "App Testing APIs"
 description: Quick guide on commonly used APIs for Mobile App testing.
 keywords:
@@ -12,6 +12,7 @@ url: https://www.testmuai.com/support/docs/app-testing-apis/
 site_name: TestMu AI
 slug: app-testing-apis/
 canonical: https://www.testmuai.com/support/docs/app-testing-apis/
+toc_max_heading_level: 2
 ---
 
 import CodeBlock from '@theme/CodeBlock';
@@ -19,6 +20,8 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import RealDeviceTag from '@site/src/component/realDevice';
+import VirtualDeviceTag from '@site/src/component/virtualDevice';
 
 
 <script type="application/ld+json"
@@ -44,9 +47,12 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       })
     }}
 ></script>
-App testing APIs on TestMu AI let you automate mobile workflows programmatically, fetching devices, uploading applications, managing builds, and controlling live or automated sessions from your scripts, so you optimize testing across real Android and iOS devices without manual work.
 
-**Supported on:** Real &amp; Virtual devices
+<RealDeviceTag value="Real Device" /> <VirtualDeviceTag value="Virtual Device" />
+
+# How to Use App Testing APIs on TestMu AI
+
+App testing APIs on TestMu AI let you automate mobile workflows programmatically, fetching devices, uploading applications, managing builds, and controlling live or automated sessions from your scripts, so you optimize testing across real Android and iOS devices without manual work.
 
 ## Fetching The Devices Available for Testing
 

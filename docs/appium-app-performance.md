@@ -1,7 +1,7 @@
 ---
 id: appium-app-performance
-title: How to Analyze App Performance on TestMu AI
-# hide_title: true
+title: Application Performance Analytics
+hide_title: true
 sidebar_label: App Performance Analytics
 description: Track CPU, memory, network, and startup metrics with App Profiling during Appium tests on TestMu AI real Android and iOS devices.
 keywords:
@@ -12,11 +12,13 @@ url: https://www.testmuai.com/support/docs/appium-app-performance-analytics/
 site_name: TestMu AI
 slug: appium-app-performance-analytics/
 canonical: https://www.testmuai.com/support/docs/appium-app-performance-analytics/
+toc_max_heading_level: 2
 ---
 
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import RealDeviceTag from '@site/src/component/realDevice';
 
 
 <script type="application/ld+json"
@@ -36,15 +38,18 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "How to Analyze App Performance on TestMu AI",
+          "name": "Application Performance Analytics",
           "item": `${BRAND_URL}/support/docs/appium-app-performance-analytics/`
         }]
       })
     }}
 ></script>
-App performance analytics on TestMu AI surface CPU, memory, network, and frame-rate metrics captured during Appium runs on real Android and iOS devices, helping you detect bottlenecks, startup delays, and resource leaks early so you can optimize apps before release.
 
-**Supported on:** Real devices
+<RealDeviceTag value="Real Device" />
+
+# Application Performance Analytics
+
+App performance analytics on TestMu AI surface CPU, memory, network, and frame-rate metrics captured during Appium runs on real Android and iOS devices, helping you detect bottlenecks, startup delays, and resource leaks early so you can optimize apps before release.
 
 App performance is critical factor for user satisfaction and adoption. Identifying and resolving bottlenecks early is essential for delivering a high-quality experience but it requires constant monitoring and optimization across various device metrics. <BrandName />’s App Profiling feature helps you to detect and optimize performance issues before release by providing real-time insights into key metrics like CPU usage, memory consumption, and network activity on real devices.
 
@@ -208,7 +213,7 @@ To retrieve profiling details, simply make a request to the <BrandName /> API us
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
       <span className="breadcrumbs__link">
-        How to Analyze App Performance on TestMu AI
+        Application Performance Analytics
       </span>
     </li>
   </ul>

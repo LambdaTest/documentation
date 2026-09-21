@@ -13,6 +13,7 @@ url: https://www.testmuai.com/support/docs/supported-locales-espresso/
 site_name: TestMu AI
 slug: supported-locales-espresso/
 canonical: https://www.testmuai.com/support/docs/supported-locales-espresso/
+toc_max_heading_level: 2
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

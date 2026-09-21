@@ -1,6 +1,6 @@
 ---
 id: appium-custom-header
-title: How to Use CustomHeaders Capability on TestMu AI
+title: How to Use CustomHeaders Capability
 hide_title: true
 sidebar_label: CustomHeaders
 description: Use the TestMu AI CustomHeaders capability to add custom headers to your tests and bypass firewall restrictions during app automation testing.
@@ -12,10 +12,11 @@ url: https://www.testmuai.com/support/docs/appium-custom-headers/
 site_name: TestMu AI
 slug: appium-custom-headers/
 canonical: https://www.testmuai.com/support/docs/appium-custom-headers/
+toc_max_heading_level: 2
 ---
 
 
-#  How to Use CustomHeaders Capability on TestMu AI
+#  How to Use CustomHeaders Capability
 
 The customHeaders capability on TestMu AI adds custom HTTP headers to your automation requests, letting tests bypass firewall restrictions and control request or response metadata like the method, URL, and body. Configure it through the DesiredCapabilities class during automated testing.
 
@@ -145,7 +146,7 @@ X-Session-ID: 1234567890 //custom header X-Session-ID to track user sessions.
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
       <span className="breadcrumbs__link">
-        How to Use CustomHeaders Capability on TestMu AI
+        How to Use CustomHeaders Capability
       </span>
     </li>
   </ul>

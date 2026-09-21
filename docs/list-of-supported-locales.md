@@ -23,6 +23,8 @@ canonical: https://www.testmuai.com/support/docs/list-of-supported-locales/
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import RealDeviceTag from '@site/src/component/realDevice';
+import VirtualDeviceTag from '@site/src/component/virtualDevice';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -48,12 +50,13 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<RealDeviceTag value="Real Device" /> <VirtualDeviceTag value="Virtual Device" />
+
 # Supported Appium Locales & Timezones on TestMu AI
 ---
 
-TestMu AI supports locales, language codes, and timezones for Appium testing on real and virtual devices. Use the tables to find the correct code, set Appium's language, locale, and timezone capabilities, and validate correct formatting of strings, dates, and calendars.
 
-**Supported on:** Real &amp; Virtual devices
+TestMu AI supports locales, language codes, and timezones for Appium testing on real and virtual devices. Use the tables to find the correct code, set Appium's language, locale, and timezone capabilities, and validate correct formatting of strings, dates, and calendars.
 
 ## Android Locales and Language Codes
 ---
@@ -338,7 +341,7 @@ Here's an example of how to set the timezone in your Appium test script:
 
 **Java Example:**
 ```java
-// Java code example for configuring timezone in Appium tests on LambdaTest
+// Java code example for configuring timezone in Appium tests on TestMu AI
 
 DesiredCapabilities capabilities = new DesiredCapabilities();
 capabilities.setCapability("timezone", "Tonga");
@@ -395,7 +398,7 @@ Continue with these related guides:
 
 - [Run your first Appium test](/support/docs/getting-started-with-appium-testing/)
 - [Appium automation capabilities](/support/docs/desired-capabilities-in-appium/)
-- [Appium languages and frameworks](/support/docs/appium-agent-skills/#supported-languages-and-frameworks)
+- [Appium languages and frameworks](/support/docs/appium-languages-and-frameworks/)
 
 > That's all! In case you come across any doubts or have any questions for us, feel free to drop them at our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24x7 Chat Support**</span> or you could also mail us directly at **[support@testmuai.com](mailto:support@testmuai.com)**.
 

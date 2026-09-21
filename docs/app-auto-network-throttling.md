@@ -1,7 +1,7 @@
 ---
 id: app-auto-network-throttling
-title: How to Throttle Network for Appium on TestMu AI
-hide_title: false
+title: Network Throttling for Appium tests
+hide_title: true
 sidebar_label: Network Throttling
 description: Simulate 2G, 3G, LTE, and offline network conditions for Appium tests on TestMu AI, validating app behavior under varying upload and download speeds.
 keywords:
@@ -21,6 +21,7 @@ url: https://www.testmuai.com/support/docs/app-auto-network-throttling/
 site_name: TestMu AI
 slug: app-auto-network-throttling/
 canonical: https://www.testmuai.com/support/docs/app-auto-network-throttling/
+toc_max_heading_level: 2
 ---
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
@@ -28,6 +29,8 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import RealDeviceTag from '@site/src/component/realDevice';
+import VirtualDeviceTag from '@site/src/component/virtualDevice';
 
 
 <script type="application/ld+json"
@@ -47,17 +50,20 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "How to Throttle Network for Appium on TestMu AI",
+          "name": "Network Throttling for Appium tests",
           "item": `${BRAND_URL}/support/docs/app-auto-network-throttling/`
         }]
       })
     }}
 ></script>
 
+<RealDeviceTag value="Real Device" /> <VirtualDeviceTag value="Virtual Device" />
+
+# Network Throttling for Appium tests
+
+
 
 Network throttling on TestMu AI simulates 2G, 3G, LTE, and offline conditions during Appium tests, letting you validate how your mobile app behaves under varying upload and download speeds while the device keeps uninterrupted connectivity, replicating real-world usage across devices.
-
-**Supported on:** Real &amp; Virtual devices
 
 ## Workflow
 ### Initialization
@@ -162,7 +168,7 @@ To utilize the **networkProfile** capability, ensure that you include `network: 
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
       <span className="breadcrumbs__link">
-        How to Throttle Network for Appium on TestMu AI
+        Network Throttling for Appium tests
       </span>
     </li>
   </ul>

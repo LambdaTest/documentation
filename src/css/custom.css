@@ -83,13 +83,12 @@
 .bugFixTagColor{color: #ffffff; background-color: var(--bugFix-tag-color); font-weight:bold; margin: -2px 3px; font-size: 12px; padding: 5px 10px; border-radius: 20px; border:1px solid var(--bugFix-tag-color)}
 .newReleaseColor{color: #ffffff; background-color: var(--newReleaseColor-tag-color); font-weight:bold; font-size: 12px; padding: 2px 6px; border-radius: 20px; border:1px solid var(--newReleaseColor-tag-color)}
 .featureColor{color: #ffffff; background-color: var(--featureColor-tag-color); font-weight:bold; font-size: 12px; padding: 2px 6px; border-radius: 20px; border:1px solid var(--featureColor-tag-color)}
-.realDeviceColor{color: #ffffff; background-color: var(--realDevice-tag-color); font-weight:600; font-size: 11px; padding: 1px 10px; border-radius: 20px; border:1px solid var(--realDevice-tag-color);width: fit-content;text-align: center;display: block;}
-.virtualDeviceColor{color: #ffffff; background-color: var(--virtualDevice-tag-color); font-weight:600; font-size: 11px; padding: 1px 10px; border-radius: 20px; border:1px solid var(--virtualDevice-tag-color);width: fit-content;text-align: center;display: block;}
+/* Subtle, theme-aware device labels (adapt to light & dark mode via Docusaurus emphasis vars). */
+.realDeviceColor,
+.virtualDeviceColor{color: var(--ifm-color-emphasis-800); background-color: var(--ifm-color-emphasis-100); font-weight:600; font-size: 12px; padding: 2px 10px; border-radius: 6px; border:1px solid var(--ifm-color-emphasis-300); width: fit-content; text-align: center; display: inline-block; margin-right: 6px; margin-bottom: 12px; vertical-align: middle;}
 .androidDeviceColor{color: #ffffff; background-color: var(--androidDevice-tag-color); font-weight:bold; font-size: 12px; padding: 2px 6px; border-radius: 20px; border:1px solid var(--androidDevice-tag-color)}
 .iosDeviceColor{color: #ffffff; background-color: var(--iosDevice-tag-color); font-weight:bold; font-size: 12px; padding: 2px 6px; border-radius: 20px; border:1px solid var(--iosDevice-tag-color)}
-.virtualDeviceColor + span.realDeviceColor{margin-top: 5px;}
-.virtualDeviceColor + span.virtualDeviceColor{margin-top: 5px;}
-.realDeviceColor + span.virtualDeviceColor{margin-top: 5px;}
+/* Device tags render side by side inline; horizontal spacing via margin-right above. */
 
 /* Inside tables (e.g. "Supported On" column) render the device tags as compact inline chips, side by side, no wrapping — overrides the stacked block style used at the top of a page. */
 .markdown table .realDeviceColor,

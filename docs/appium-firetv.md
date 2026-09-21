@@ -1,7 +1,8 @@
 ---
 id: appium-firetv
-title: How to Run Fire TV Appium Tests on TestMu AI
-sidebar_label: Fire TV Stick
+title: How to Automate Fire TV Apps on TestMu AI
+hide_title: true
+sidebar_label: Fire TV
 description: Complete guide to running your first FireTV Appium automated test script on TestMu AI Real Device Cloud Platform. Test on 5000+ Real Devices.
 keywords:
   - python appium
@@ -17,6 +18,7 @@ url: https://www.testmuai.com/support/docs/appium-firetv/
 site_name: TestMu AI
 slug: appium-firetv/
 canonical: https://www.testmuai.com/support/docs/appium-firetv/
+toc_max_heading_level: 2
 ---
 
 import CodeBlock from '@theme/CodeBlock';
@@ -26,6 +28,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import { CookieTrackingSignup } from '@site/src/component/CookieTracking';
+import RealDeviceTag from '@site/src/component/realDevice';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -44,18 +47,19 @@ import { CookieTrackingSignup } from '@site/src/component/CookieTracking';
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "How to Run Fire TV Appium Tests on TestMu AI",
+          "name": "How to Automate Fire TV Apps on TestMu AI",
           "item": `${BRAND_URL}/support/docs/appium-firetv/`
         }]
       })
     }}
 ></script>
 
+<RealDeviceTag value="Real Device" />
+
+# How to Automate Fire TV Apps on TestMu AI
+
+
 Running Fire TV tests on TestMu AI executes Appium automation for Amazon Fire TV apps on the real device cloud. Configure the required desired capabilities, connect to the hub, and run scripts to validate Fire TV app behaviour without hardware.
-
-**Supported on:** Real devices
-
-## Tutorial To Run Your First Test On <BrandName />
 
 ---
 
@@ -317,7 +321,7 @@ Your test results would be displayed on the test console (or command-line interf
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
       <span className="breadcrumbs__link">
-        How to Run Fire TV Appium Tests on TestMu AI
+        How to Automate Fire TV Apps on TestMu AI
       </span>
     </li>
   </ul>

@@ -1,6 +1,6 @@
 ---
 id: network-configurations
-title: How to Configure Network Logs on TestMu AI
+title: Network Configurations in Automation Tests
 sidebar_label: Network Configurations
 description: Configure and capture HTTP/S traffic in HAR format during automation on TestMu AI Real Devices, with content capture and domain-based filtering.
 keywords:
@@ -15,17 +15,20 @@ url: https://www.testmuai.com/support/docs/network-configurations/
 site_name: TestMu AI
 slug: network-configurations/
 canonical: https://www.testmuai.com/support/docs/network-configurations/
+toc_max_heading_level: 2
 ---
 
 import CodeBlock from '@theme/CodeBlock';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import RealDeviceTag from '@site/src/component/realDevice';
 
-# How to Configure Network Logs on TestMu AI
+<RealDeviceTag value="Real Device" />
+
+# Network Configurations in Automation Tests
+
 Network configurations on <BrandName /> capture and analyze HTTP/S traffic in real time on real devices during automation. Logs stored in HAR format record API calls, requests, responses, and load times, while content capture and domain filtering help reduce noise.
-
-**Supported on:** Real devices
 
 On <BrandName />, you can enable **network configurations** to capture and analyze this traffic in real time on real devices. With flexible options such as content capture and domain-based filtering, you can focus on the most relevant network interactions while reducing noise from unrelated requests. This helps ensure faster debugging, clearer insights, and more efficient test runs.
 

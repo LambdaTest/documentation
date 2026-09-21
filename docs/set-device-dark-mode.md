@@ -1,6 +1,7 @@
 ﻿---
 id: set-device-dark-mode
-title: How to Set Device Dark Mode on TestMu AI
+title: Set Device Dark Mode
+hide_title: true
 sidebar_label: Set Dark Mode
 description: Enable or disable device-level dark and light mode for automation testing on TestMu AI real and virtual mobile devices.
 keywords:
@@ -16,6 +17,7 @@ url: https://www.testmuai.com/support/docs/set-device-dark-mode/
 site_name: TestMu AI
 slug: set-device-dark-mode/
 canonical: https://www.testmuai.com/support/docs/set-device-dark-mode/
+toc_max_heading_level: 2
 ---
 
 import CodeBlock from '@theme/CodeBlock';
@@ -23,6 +25,8 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import RealDeviceTag from '@site/src/component/realDevice';
+import VirtualDeviceTag from '@site/src/component/virtualDevice';
 
 
 <script type="application/ld+json"
@@ -42,15 +46,18 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "How to Set Device Dark Mode on TestMu AI",
+          "name": "Set Device Dark Mode",
           "item": `${BRAND_URL}/support/docs/set-device-dark-mode/`
         }]
       })
     }}
 ></script>
-Setting device dark mode on TestMu AI lets you enable or disable dark and light themes during automation testing on real and virtual devices, so you can validate UI rendering, text contrast, and theme switching across mobile and web apps.
 
-**Supported on:** Real &amp; Virtual devices
+<RealDeviceTag value="Real Device" /> <VirtualDeviceTag value="Virtual Device" />
+
+# Set Device Dark Mode
+
+Setting device dark mode on TestMu AI lets you enable or disable dark and light themes during automation testing on real and virtual devices, so you can validate UI rendering, text contrast, and theme switching across mobile and web apps.
 
 <BrandName /> now allows you to **enable or disable dark mode** for automation testing as well. This helps developers and testers validate UI behavior across light and dark themes, theme switching without manual intervention, and visual consistency for mobile apps and web applications.
 

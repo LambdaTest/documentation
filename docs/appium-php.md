@@ -24,6 +24,8 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import RealDeviceTag from '@site/src/component/realDevice';
+import VirtualDeviceTag from '@site/src/component/virtualDevice';
 
 
 <script type="application/ld+json"
@@ -50,12 +52,13 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<RealDeviceTag value="Real Device" /> <VirtualDeviceTag value="Virtual Device" />
+
 # How to Run Appium PHP Tests on TestMu AI
 ---
 
-Running Appium PHP tests on TestMu AI automates native and hybrid mobile apps on real Android and iOS devices. Set your credentials, upload the app, configure desired capabilities, and execute test suites with Vanilla PHP or Behat without local infrastructure.
 
-**Supported on:** Real &amp; Virtual devices
+Running Appium PHP tests on TestMu AI automates native and hybrid mobile apps on real Android and iOS devices. Set your credentials, upload the app, configure desired capabilities, and execute test suites with Vanilla PHP or Behat without local infrastructure.
 
 ## Prerequisites
 ---
@@ -196,7 +199,7 @@ Make sure to add the path of the **appFile** in the cURL request. Below is an ex
 
 Pick your framework below. Each tab contains the complete flow for that framework, from getting the sample project through executing and monitoring your tests.
 
-<Tabs groupId="framework" queryString="framework">
+<Tabs queryString="framework">
 
 <TabItem value="vanilla" label="Vanilla PHP" default>
 
@@ -204,7 +207,7 @@ Pick your framework below. Each tab contains the complete flow for that framewor
 You can use your own project to configure and test it. For demo purposes, we are using the sample repository.
 
 :::tip Sample repo
-All the code samples in this documentation can be found on **<BrandName />'s Github Repository**. You can either download or clone the repository to quickly run your tests. <a href="https://github.com/lambdatest/LT-appium-php" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className="doc_img"/> View on GitHub</a>
+All the code samples in this documentation can be found on **<BrandName />'s Github Repository**. You can either download or clone the repository to quickly run your tests. <a href="https://github.com/LambdaTest/LT-appium-php" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className="doc_img"/> View on GitHub</a>
 :::
 
 ### Step 2: Update your Automation Script

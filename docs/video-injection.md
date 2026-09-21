@@ -1,6 +1,7 @@
 ---
 id: video-injection
-title: How to Inject Video on TestMu AI
+title: Video Injection
+hide_title: true
 sidebar_label: Video Injection
 description: Inject video content in your tests with TestMu AI to simulate video inputs for automated testing, enhancing your app's multimedia capabilities.
 keywords:
@@ -18,6 +19,7 @@ url: https://www.testmuai.com/support/docs/video-injection/
 site_name: TestMu AI
 slug: video-injection/
 canonical: https://www.testmuai.com/support/docs/video-injection/
+toc_max_heading_level: 2
 ---
 
 import CodeBlock from '@theme/CodeBlock';
@@ -26,6 +28,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import RealDeviceTag from '@site/src/component/realDevice';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -44,15 +47,18 @@ import TabItem from '@theme/TabItem';
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "How to Inject Video on TestMu AI",
+          "name": "Video Injection",
           "item": `${BRAND_URL}/support/docs/video-injection/`
         }]
       })
     }}
 ></script>
-Video Injection on TestMu AI feeds custom video into an app's camera during automated tests, letting you validate live streaming, real-time capture, identity verification, and video upload workflows across 5000+ real Android and iOS devices without any physical hardware setup.
 
-**Supported on:** Real devices
+<RealDeviceTag value="Real Device" />
+
+# Video Injection
+
+Video Injection on TestMu AI feeds custom video into an app's camera during automated tests, letting you validate live streaming, real-time capture, identity verification, and video upload workflows across 5000+ real Android and iOS devices without any physical hardware setup.
 
 This tool is ideal for testing features such as:
 
@@ -168,7 +174,7 @@ You need to first add a logic to inject the uploaded video in the script. Therea
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
       <span className="breadcrumbs__link">
-        How to Inject Video on TestMu AI
+        Video Injection
       </span>
     </li>
   </ul>

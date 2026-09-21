@@ -1,6 +1,7 @@
 ---
 id: espresso-supported-capabilities
-title: What Are Espresso Supported Capabilities on TestMu AI
+title: Supported Espresso Capabilities on TestMu AI
+hide_title: true
 sidebar_label: Supported Capabilities
 description: Now you can run your Espresso framework on TestMu AI online grid of 3000+ real desktop browsers and real operating systems with its supported capabilities.
 keywords:
@@ -15,11 +16,13 @@ url: https://www.testmuai.com/support/docs/espresso-supported-capabilities/
 site_name: TestMu AI
 slug: espresso-supported-capabilities/
 canonical: https://www.testmuai.com/support/docs/espresso-supported-capabilities/
+toc_max_heading_level: 2
 ---
 
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import RealDeviceTag from '@site/src/component/realDevice';
 
 
 
@@ -46,6 +49,11 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       })
     }}
 ></script>
+
+<RealDeviceTag value="Real Device" />
+
+# Supported Espresso Capabilities on TestMu AI
+
 
 Espresso supported capabilities on TestMu AI configure Android instrumentation test runs on the cloud, controlling device selection, video, device and network logs, timeouts, geolocation, GPS coordinates, Bluetooth, and build naming. These capabilities also apply to virtual devices for full control.
 

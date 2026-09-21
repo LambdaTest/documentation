@@ -1,6 +1,6 @@
 ---
 id: adb-commands-support
-title: How to Run ADB Commands on TestMu AI
+title: ADB Commands Support
 sidebar_label: ADB Commands Support
 description: Execute supported ADB commands inside app automation scripts via JavaScript executors on TestMu AI real and virtual Android devices.
 keywords:
@@ -16,6 +16,7 @@ url: https://www.testmuai.com/support/docs/adb-commands-support/
 site_name: TestMu AI
 slug: adb-commands-support/
 canonical: https://www.testmuai.com/support/docs/adb-commands-support/
+toc_max_heading_level: 2
 ---
 
 import CodeBlock from '@theme/CodeBlock';
@@ -40,7 +41,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "How to Run ADB Commands on TestMu AI",
+          "name": "ADB Commands Support",
           "item": `${BRAND_URL}/support/docs/adb-commands-support/`
         }]
       })
@@ -393,7 +394,7 @@ This approach is particularly useful when testing applications that rely on corr
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
       <span className="breadcrumbs__link">
-        How to Run ADB Commands on TestMu AI
+        ADB Commands Support
       </span>
     </li>
   </ul>

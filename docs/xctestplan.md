@@ -17,11 +17,13 @@ url: https://www.testmuai.com/support/docs/xctestplan/
 site_name: TestMu AI
 slug: xctestplan/
 canonical: https://www.testmuai.com/support/docs/xctestplan/
+toc_max_heading_level: 2
 ---
 
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import RealDeviceTag from '@site/src/component/realDevice';
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
@@ -51,9 +53,10 @@ import CookieTrackingLogin from '@site/src/component/CookieTracking';
       })
     }}
 ></script>
-XCTestPlan on <BrandName /> manages how you run automated XCTest suites across iOS, iPadOS, macOS, watchOS, and tvOS apps. Create targeted test runs, upload your app and XCUI test IPA files, configure scenarios, and view execution logs for efficient testing.
 
-**Supported on:** Real devices
+<RealDeviceTag value="Real Device" />
+
+XCTestPlan on <BrandName /> manages how you run automated XCTest suites across iOS, iPadOS, macOS, watchOS, and tvOS apps. Create targeted test runs, upload your app and XCUI test IPA files, configure scenarios, and view execution logs for efficient testing.
 
 XCTestPlan is a feature within Xcode used for building iOS, iPadOS, macOS, watchOS, tvOS, and audioOS applications. XCTestPlan helps manage how you run automated tests written with the XCTest framework.
 

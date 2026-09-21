@@ -1,6 +1,7 @@
 ---
 id: biometric-authentication
-title: How to Test Biometric Authentication on TestMu AI
+title: Biometric Authentication
+hide_title: true
 sidebar_label: Biometric Authentication
 description: Test fingerprint and face recognition in your app on TestMu AI's Real Device Cloud, across real iOS and Android devices using supported biometric APIs.
 keywords:
@@ -20,6 +21,7 @@ url: https://www.testmuai.com/support/docs/biometric-authentication/
 site_name: TestMu AI
 slug: biometric-authentication/
 canonical: https://www.testmuai.com/support/docs/biometric-authentication/
+toc_max_heading_level: 2
 ---
 
 import CodeBlock from '@theme/CodeBlock';
@@ -28,6 +30,7 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import RealDeviceTag from '@site/src/component/realDevice';
 
 
 <script type="application/ld+json"
@@ -47,16 +50,19 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "How to Test Biometric Authentication on TestMu AI",
+          "name": "Biometric Authentication",
           "item": `${BRAND_URL}/support/docs/biometric-authentication/`
         }]
       })
     }}
 ></script>
 
-Testing biometric authentication on TestMu AI lets you validate fingerprint and face recognition flows in native apps on real iOS and Android devices. Simulate both successful and failed biometric prompts through supported APIs to confirm your app handles authentication securely.
+<RealDeviceTag value="Real Device" />
 
-**Supported on:** Real devices
+# Biometric Authentication
+
+
+Testing biometric authentication on TestMu AI lets you validate fingerprint and face recognition flows in native apps on real iOS and Android devices. Simulate both successful and failed biometric prompts through supported APIs to confirm your app handles authentication securely.
 
 Biometric Authentication is a security process that leverages the unique biological characteristics of individuals to verify their identities. In native applications, it is often used to provide a seamless, secure, and efficient user experience.
 

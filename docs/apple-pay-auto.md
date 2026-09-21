@@ -1,6 +1,6 @@
 ﻿---
 id: apple-pay-auto
-title: How to Automate Apple Pay on TestMu AI
+title: Apple Pay Automation on Real Devices
 sidebar_label: Apple Pay
 description: Learn how to automate Apple Pay flows on iOS public devices, including capabilities, payment injection, passcode entry, and limitations.
 keywords:
@@ -13,17 +13,20 @@ slug: apple-pay-auto/
 canonical: https://www.testmuai.com/support/docs/apple-pay-auto/
 site_name: TestMu AI
 url: https://www.testmuai.com/support/docs/apple-pay-auto/
+toc_max_heading_level: 2
 ---
 import CodeBlock from '@theme/CodeBlock';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import RealDeviceTag from '@site/src/component/realDevice';
 
-# How to Automate Apple Pay on TestMu AI
+<RealDeviceTag value="Real Device" />
+
+# Apple Pay Automation on Real Devices
+
 
 Automating Apple Pay on TestMu AI validates end-to-end payment flows on real iOS devices. Provision Wallet with sandboxed test cards, inject payment details, confirm the payment sheet, and enter the device passcode to verify checkout without relying on production cards.
-
-**Supported on:** Real devices
 
 **Apple Pay** is Apple’s secure digital wallet and payment system that enables purchases, one-click checkouts, and adds an extra layer of protection for financial transactions. In real-world apps and websites, Apple Pay is widely used for simplifying checkout experiences, reducing friction, and improving user trust.
 

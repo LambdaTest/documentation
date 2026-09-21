@@ -14,6 +14,7 @@ url: https://www.testmuai.com/support/docs/virtual-device-flutter-apps/
 site_name: TestMu AI
 slug: virtual-device-flutter-apps/
 canonical: https://www.testmuai.com/support/docs/virtual-device-flutter-apps/
+toc_max_heading_level: 2
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

@@ -1,6 +1,7 @@
 ---
 id: appium-appletv
-title: How to Run Apple TV Appium Tests on TestMu AI
+title: How to Automate Apple TV Apps on TestMu AI
+hide_title: true
 sidebar_label: Apple TV
 description: Complete guide to running your first AppleTV Appium automated test script on TestMu AI Real Device Cloud Platform. Test on 5000+ Real Devices.
 keywords:
@@ -17,6 +18,7 @@ url: https://www.testmuai.com/support/docs/appium-appletv/
 site_name: TestMu AI
 slug: appium-appletv/
 canonical: https://www.testmuai.com/support/docs/appium-appletv/
+toc_max_heading_level: 2
 ---
 
 import CodeBlock from '@theme/CodeBlock';
@@ -26,6 +28,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import { CookieTrackingSignup } from '@site/src/component/CookieTracking';
+import RealDeviceTag from '@site/src/component/realDevice';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -44,19 +47,18 @@ import { CookieTrackingSignup } from '@site/src/component/CookieTracking';
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "How to Run Apple TV Appium Tests on TestMu AI",
+          "name": "How to Automate Apple TV Apps on TestMu AI",
           "item": `${BRAND_URL}/support/docs/appium-appletv/`
         }]
       })
     }}
 ></script>
-## Tutorial To Run Your First Test On <BrandName />
 
----
+<RealDeviceTag value="Real Device" />
+
+# How to Automate Apple TV Apps on TestMu AI
 
 Running Apple TV Appium tests on TestMu AI lets you automate tvOS apps and validate remote-based navigation across real Apple TV models in the cloud. Configure desired capabilities, run Python Appium scripts, and get broad device coverage without physical hardware.
-
-**Supported on:** Real devices
 
 As smart TVs continue to grow in popularity, relying solely on manual testing is no longer sufficient. Automating Apple TV testing provides broader device coverage, enhances user experience by validating remote-based navigation, and eliminates repetitive manual tasks. It also helps uncover issues earlier in the development cycle, ensuring a smooth and consistent experience across different Apple TV models. 
 In this guide, you will learn how to set up and run your **Apple TV** automation testing scripts with **Appium** on the **<BrandName /> Real Device Cloud platform**.
@@ -349,7 +351,7 @@ Your test results would be displayed on the test console (or command-line interf
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
       <span className="breadcrumbs__link">
-        How to Run Apple TV Appium Tests on TestMu AI
+        How to Automate Apple TV Apps on TestMu AI
       </span>
     </li>
   </ul>

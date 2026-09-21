@@ -15,11 +15,14 @@ url: https://www.testmuai.com/support/docs/xcui-supported-capabilities/
 site_name: TestMu AI
 slug: xcui-supported-capabilities/
 canonical: https://www.testmuai.com/support/docs/xcui-supported-capabilities/
+toc_max_heading_level: 2
 ---
 
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import RealDeviceTag from '@site/src/component/realDevice';
+import VirtualDeviceTag from '@site/src/component/virtualDevice';
 
 
 <script type="application/ld+json"
@@ -45,9 +48,10 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       })
     }}
 ></script>
-XCUI supported capabilities on TestMu AI let you configure iOS XCUITest automation on real and virtual devices, controlling the app, test suite, device, video, timeouts, device and network logs, build name, geolocation, GPS coordinates, tunnel, Bluetooth, and app re-signing behavior.
 
-**Supported on:** Real &amp; Virtual devices
+<RealDeviceTag value="Real Device" /> <VirtualDeviceTag value="Virtual Device" />
+
+XCUI supported capabilities on TestMu AI let you configure iOS XCUITest automation on real and virtual devices, controlling the app, test suite, device, video, timeouts, device and network logs, build name, geolocation, GPS coordinates, tunnel, Bluetooth, and app re-signing behavior.
 
 > These capabilities are also supported for [Virtual Devices](/support/docs/app-automation-on-emulators-simulators/)
 

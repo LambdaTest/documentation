@@ -1,6 +1,6 @@
 ﻿---
 id: smart-heal-appium
-title: How to Enable Smart Heal on TestMu AI
+title: Smart Heal in Automation
 sidebar_label: Smart Heal
 description: Enable Smart Heal on TestMu AI to auto-recover from locator failures during real device automation tests, reducing flakiness and script maintenance.
 keywords:
@@ -24,6 +24,7 @@ url: https://www.testmuai.com/support/docs/smart-heal-appium/
 site_name: TestMu AI
 slug: smart-heal-appium/
 canonical: https://www.testmuai.com/support/docs/smart-heal-appium/
+toc_max_heading_level: 2
 ---
 
 
@@ -33,12 +34,14 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import RealDeviceTag from '@site/src/component/realDevice';
 
-# How to Enable Smart Heal on TestMu AI
+<RealDeviceTag value="Real Device" />
+
+# Smart Heal in Automation
+
 
 Smart Heal on TestMu AI uses AI-powered algorithms to automatically detect and recover from locator failures during real device automation tests. It analyzes the UI in real time, applies the closest valid match, and logs both original and recovered locators.
-
-**Supported on:** Real devices
 
 :::note Plus Plan Feature
 This feature is available exclusively with the **Real Device Plus Automation Cloud** Plan.

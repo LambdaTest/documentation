@@ -1,6 +1,7 @@
 ---
 id: disable-screenshot-block
-title: How to Disable Screenshot Block on TestMu AI
+title: Disable Screenshot Block for Android
+hide_title: true
 sidebar_label: Disable Screenshot Block
 description: Disable screenshot blocking on TestMu AI Real Device Cloud and test biometric and secure-screen features without limits on real Android and iOS devices.
 keywords:
@@ -18,6 +19,7 @@ url: https://www.testmuai.com/support/docs/disable-screenshot-block/
 site_name: TestMu AI
 slug: disable-screenshot-block/
 canonical: https://www.testmuai.com/support/docs/disable-screenshot-block/
+toc_max_heading_level: 2
 ---
 
 import CodeBlock from '@theme/CodeBlock';
@@ -26,6 +28,8 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import RealDeviceTag from '@site/src/component/realDevice';
+import VirtualDeviceTag from '@site/src/component/virtualDevice';
 
 
 <script type="application/ld+json"
@@ -45,17 +49,20 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "How to Disable Screenshot Block on TestMu AI",
+          "name": "Disable Screenshot Block for Android",
           "item": `${BRAND_URL}/support/docs/disable-screenshot-block/`
         }]
       })
     }}
 ></script>
 
+<RealDeviceTag value="Real Device" /> <VirtualDeviceTag value="Virtual Device" />
+
+# Disable Screenshot Block for Android
+
+
 
 Disabling screenshot block on TestMu AI lets you capture screenshots and video of apps that normally block them, so you can run App Live and app automation tests on real Android and iOS devices without black frames or missing captures.
-
-**Supported on:** Real &amp; Virtual devices
 
 ## Introduction
 ---
@@ -132,7 +139,7 @@ You can use the appium capability to turn the **Disable Screenshot Block** on in
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
       <span className="breadcrumbs__link">
-        How to Disable Screenshot Block on TestMu AI
+        Disable Screenshot Block for Android
       </span>
     </li>
   </ul>

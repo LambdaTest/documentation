@@ -1,6 +1,6 @@
 ---
 id: ios-shake-gesture-appautomation
-title: How to Trigger iOS Shake Gesture on TestMu AI
+title: Trigger iOS Shake Gesture on Mobile Devices Using Appium
 hide_title: true
 sidebar_label: Shake Gesture (iOS)
 description: Simulate a shake gesture on iOS real devices and simulators during Appium automation tests on TestMu AI using the lambda_executor hook.
@@ -16,6 +16,7 @@ url: https://www.testmuai.com/support/docs/ios-shake-gesture-appautomation/
 site_name: TestMu AI
 slug: ios-shake-gesture-appautomation/
 canonical: https://www.testmuai.com/support/docs/ios-shake-gesture-appautomation/
+toc_max_heading_level: 2
 ---
 
 
@@ -25,6 +26,8 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import RealDeviceTag from '@site/src/component/realDevice';
+import VirtualDeviceTag from '@site/src/component/virtualDevice';
 
 
 <script type="application/ld+json"
@@ -44,18 +47,19 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "How to Trigger iOS Shake Gesture on TestMu AI",
+          "name": "Trigger iOS Shake Gesture on Mobile Devices Using Appium",
           "item": `${BRAND_URL}/support/docs/ios-shake-gesture-appautomation/`
         }]
       })
     }}
 ></script>
 
-# How to Trigger iOS Shake Gesture on TestMu AI
+<RealDeviceTag value="Real Device" /> <VirtualDeviceTag value="Virtual Device" />
+
+# Trigger iOS Shake Gesture on Mobile Devices Using Appium
+
 
 <BrandName /> supports simulating a shake gesture on iOS real devices and simulators during Appium automation sessions using the lambda_executor hook. Apps often bind shake to switching between build environments, opening debug menus, surfacing feedback prompts, or undoing the action.
-
-**Supported on:** Real &amp; Virtual devices
 
 By the end of this document, you will be able to:
 - Trigger a shake gesture on iOS Real Devices and Simulators
@@ -151,7 +155,7 @@ String response = (String) ((JavascriptExecutor) driver).executeScript(
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
       <span className="breadcrumbs__link">
-        How to Trigger iOS Shake Gesture on TestMu AI
+        Trigger iOS Shake Gesture on Mobile Devices Using Appium
       </span>
     </li>
   </ul>

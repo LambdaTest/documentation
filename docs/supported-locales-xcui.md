@@ -12,6 +12,7 @@ url: https://www.testmuai.com/support/docs/supported-locales-xcui/
 site_name: TestMu AI
 slug: supported-locales-xcui/
 canonical: https://www.testmuai.com/support/docs/supported-locales-xcui/
+toc_max_heading_level: 2
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

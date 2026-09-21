@@ -11,6 +11,7 @@ url: https://www.testmuai.com/support/docs/regular-expression-espresso/
 site_name: TestMu AI
 slug: regular-expression-espresso/
 canonical: https://www.testmuai.com/support/docs/regular-expression-espresso/
+toc_max_heading_level: 2
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

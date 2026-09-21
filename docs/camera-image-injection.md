@@ -1,6 +1,7 @@
 ---
 id: camera-image-injection
-title: How to Inject Camera Images on TestMu AI
+title: Camera Image Injection
+hide_title: true
 sidebar_label: Camera Image Injection
 description: Simulate camera input to test camera-based features like QR scanning and document capture without needing physical devices.
 keywords:
@@ -18,6 +19,7 @@ url: https://www.testmuai.com/support/docs/camera-image-injection/
 site_name: TestMu AI
 slug: camera-image-injection/
 canonical: https://www.testmuai.com/support/docs/camera-image-injection/
+toc_max_heading_level: 2
 ---
 
 import CodeBlock from '@theme/CodeBlock';
@@ -26,6 +28,8 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import RealDeviceTag from '@site/src/component/realDevice';
+import VirtualDeviceTag from '@site/src/component/virtualDevice';
 
 
 <script type="application/ld+json"
@@ -45,15 +49,18 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "How to Inject Camera Images on TestMu AI",
+          "name": "Camera Image Injection",
           "item": `${BRAND_URL}/support/docs/camera-image-injection/`
         }]
       })
     }}
 ></script>
-Camera image injection on TestMu AI feeds custom images into an app's camera during automated tests, letting you validate QR scanning, barcode reading, and document capture across real Android and iOS devices without physical hardware or any manual scanning setup.
 
-**Supported on:** Real &amp; Virtual devices
+<RealDeviceTag value="Real Device" /> <VirtualDeviceTag value="Virtual Device" />
+
+# Camera Image Injection
+
+Camera image injection on TestMu AI feeds custom images into an app's camera during automated tests, letting you validate QR scanning, barcode reading, and document capture across real Android and iOS devices without physical hardware or any manual scanning setup.
 
 This tool is ideal for testing features such as:
 
@@ -213,7 +220,7 @@ You need to first add a logic to inject the uploaded image in the script. Therea
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
       <span className="breadcrumbs__link">
-        How to Inject Camera Images on TestMu AI
+        Camera Image Injection
       </span>
     </li>
   </ul>

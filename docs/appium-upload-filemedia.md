@@ -1,6 +1,6 @@
 ---
 id: appium-upload-media
-title: How to Upload Files and Media on TestMu AI
+title: Upload File and Media
 hide_title: true
 sidebar_label: Upload Files and Media
 description: Upload media and non-media files to Real Devices during app and browser automation on TestMu AI to enrich test scenarios and validate your application.
@@ -19,6 +19,7 @@ url: https://www.testmuai.com/support/docs/upload-media/
 site_name: TestMu AI
 slug: upload-media/
 canonical: https://www.testmuai.com/support/docs/upload-media/
+toc_max_heading_level: 2
 ---
 
 import CodeBlock from '@theme/CodeBlock';
@@ -27,6 +28,7 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import RealDeviceTag from '@site/src/component/realDevice';
 
 
 
@@ -47,17 +49,18 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "How to Upload Files and Media on TestMu AI",
+          "name": "Upload File and Media",
           "item": `${BRAND_URL}/support/docs/upload-media/`
         }]
       })
     }}
 ></script>
 
-# How to Upload Files and Media on TestMu AI
-Uploading files and media on <BrandName /> pushes media and non-media files to cloud real devices during testing. The uploadMedia capability works across App and Browser automation, enriching test scenarios and letting you validate your application's functionality with realistic files.
+<RealDeviceTag value="Real Device" />
 
-**Supported on:** Real devices
+# Upload File and Media
+
+Uploading files and media on <BrandName /> pushes media and non-media files to cloud real devices during testing. The uploadMedia capability works across App and Browser automation, enriching test scenarios and letting you validate your application's functionality with realistic files.
 
 ## Objectives
 By the end of this topic, you will be able to:
@@ -192,7 +195,7 @@ desiredCapabilities.setCapability("uploadMedia", ["lt://MEDIAfcdb39b9602d474f825
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
       <span className="breadcrumbs__link">
-        How to Upload Files and Media on TestMu AI
+        Upload File and Media
       </span>
     </li>
   </ul>

@@ -19,6 +19,7 @@ url: https://www.testmuai.com/support/docs/xcui-visual-regression/
 site_name: TestMu AI
 slug: xcui-visual-regression/
 canonical: https://www.testmuai.com/support/docs/xcui-visual-regression/
+toc_max_heading_level: 2
 ---
 
 import Tabs from '@theme/Tabs';

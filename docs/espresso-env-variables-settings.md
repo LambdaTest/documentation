@@ -16,6 +16,7 @@ url: https://www.testmuai.com/support/docs/espresso-env-variables-settings/
 site_name: TestMu AI
 slug: espresso-env-variables-settings/
 canonical: https://www.testmuai.com/support/docs/espresso-env-variables-settings/
+toc_max_heading_level: 2
 ---
 
 import CodeBlock from '@theme/CodeBlock';

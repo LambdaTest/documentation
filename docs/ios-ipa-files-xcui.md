@@ -18,6 +18,7 @@ url: https://www.testmuai.com/support/docs/ios-ipa-files-xcui/
 site_name: TestMu AI
 slug: ios-ipa-files-xcui/
 canonical: https://www.testmuai.com/support/docs/ios-ipa-files-xcui/
+toc_max_heading_level: 2
 ---
 
 import CodeBlock from '@theme/CodeBlock';

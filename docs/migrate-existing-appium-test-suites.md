@@ -1,6 +1,6 @@
 ---
 id: migrate-existing-appium-test-suites
-title:  How to Migrate Appium Tests to TestMu AI
+title:  How to Migrate Existing Appium Test Suites to TestMu AI
 hide_title: true
 sidebar_label: "Migrate Appium Tests"
 description: Migrate your existing Appium test suites from a local grid or another cloud to run on TestMu AI's real device automation cloud.
@@ -35,14 +35,14 @@ import { CookieTrackingSignup } from '@site/src/component/CookieTracking';
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "How to Migrate Appium Tests to TestMu AI",
+          "name": "How to Migrate Existing Appium Test Suites to TestMu AI",
           "item": `${BRAND_URL}/support/docs/migrate-existing-appium-test-suites/`
         }]
       })
     }}
 ></script>
 
-# How to Migrate Appium Tests to TestMu AI
+# How to Migrate Existing Appium Test Suites to TestMu AI
 ***
  
 Migrating Appium tests to TestMu AI moves your existing suites from a local grid or another cloud onto its real device automation cloud. Update authentication with your credentials, swap in TestMu AI desired capabilities, and execute the same scripts remotely.
@@ -61,7 +61,6 @@ To run tests on <BrandName />, you will need <BrandName /> authentication creden
 
 You can get the <BrandName /> Username and <BrandName /> Access Key from your <BrandName /> Profile.
 
-<img loading="lazy" src={require('../assets/images/getting-started-app-automation/lt-creds.webp').default} alt="Image"  width="1366" height="625" className="doc_img"/>
 
 ## Desired Capabilities In Appium
 ***
@@ -168,11 +167,6 @@ for cap in caps:
 
 ```
 
-## Testing Locally Hosted Apps
-***
-
-## Supported Languages And Frameworks
-***
 
 >That’s all! In case you have any questions or need any additional information, you could reach out at our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24X7 Chat Support**</span> or mail us directly at support@testmuai.com.
 
@@ -191,7 +185,7 @@ for cap in caps:
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
       <span className="breadcrumbs__link">
-        How to Migrate Appium Tests to TestMu AI
+        How to Migrate Existing Appium Test Suites to TestMu AI
       </span>
     </li>
   </ul>

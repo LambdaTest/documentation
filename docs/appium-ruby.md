@@ -27,6 +27,8 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import RealDeviceTag from '@site/src/component/realDevice';
+import VirtualDeviceTag from '@site/src/component/virtualDevice';
 
 
 <script type="application/ld+json"
@@ -53,12 +55,13 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<RealDeviceTag value="Real Device" /> <VirtualDeviceTag value="Virtual Device" />
+
 # How to Run Appium Ruby Tests on TestMu AI
 ---
 
-Running Appium Ruby tests on TestMu AI executes native and hybrid mobile app automation across real Android and iOS devices. Set your credentials, upload your app, configure desired capabilities, and run the suite with Vanilla Ruby, Cucumber, or RSpec framework.
 
-**Supported on:** Real &amp; Virtual devices
+Running Appium Ruby tests on TestMu AI executes native and hybrid mobile app automation across real Android and iOS devices. Set your credentials, upload your app, configure desired capabilities, and run the suite with Vanilla Ruby, Cucumber, or RSpec framework.
 
 Set the [**desired capabilities**](/support/docs/desired-capabilities-in-appium/) for Appium testing and explore other advanced features of <BrandName />.
 
@@ -166,7 +169,7 @@ Make sure to add the path of the **appFile** in the cURL request. Below is an ex
 
 Pick the Ruby framework you want to use. Each tab contains the complete flow: get the sample project, update the automation script, configure the capabilities, and execute your tests on <BrandName />.
 
-<Tabs groupId="framework" queryString="framework">
+<Tabs queryString="framework">
 
 <TabItem value="vanilla" label="Vanilla Ruby" default>
 
