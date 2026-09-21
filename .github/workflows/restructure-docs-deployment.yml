@@ -1,12 +1,12 @@
 name: 'Deployment (restructure-docs preview)'
 
-  on:
+on:
     push:
       branches:
         - restructure-docs
     workflow_dispatch:
 
-  jobs:
+jobs:
     Docusaurus:
       name: 'Deployment'
       runs-on: ubuntu-latest
