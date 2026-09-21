@@ -335,12 +335,12 @@ Map<String, Object> contact = new HashMap<>();
 contact.put("email", "john.doe@example.com");
 contact.put("phone", "+441234567890");
 
-Map<String, Object> applePayDetails = new HashMap<>();
-applePayDetails.put("shippingDetails", shippingDetails);
-applePayDetails.put("billingDetails", billingDetails);
-applePayDetails.put("contact", contact);
+Map<String, Object> applePayDetailsUpdate = new HashMap<>();
+applePayDetailsUpdate.put("shippingDetails", shippingDetails);
+applePayDetailsUpdate.put("billingDetails", billingDetails);
+applePayDetailsUpdate.put("contact", contact);
 
-driver.executeScript("applePayDetails", applePayDetails);`}
+driver.executeScript("applePayDetails", applePayDetailsUpdate);`}
     </CodeBlock>
   </TabItem>
   <TabItem value="javascript" label="JavaScript">
