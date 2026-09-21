@@ -1,0 +1,51 @@
+name: Rook assurance
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: rook-assurance
+  cancel-in-progress: false
+jobs:
+  assurance:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    environment: rook-assurance
+    env:
+      ROOK_ENV: prod
+      ROOK_HOME: ${{ runner.temp }}/rook-home
+      ROOK_PROJECT_ID: ${{ vars.ROOK_PROJECT_ID }}
+      ROOK_AGENT_ID: ${{ vars.ROOK_AGENT_ID }}
+      ROOK_PROFILE: ${{ vars.ROOK_PROFILE }}
+      ROOK_SCENARIO_IDS: ${{ vars.ROOK_SCENARIO_IDS }}
+      ROOK_ALLOW_RULES: ${{ vars.ROOK_ALLOW_RULES }}
+      ROOK_RUN_NAME: github-${{ github.run_id }}-${{ github.run_attempt }}
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - name: Install pinned public Rook CLI
+        shell: bash
+        run: |
+          set -euo pipefail
+          curl -fsSL https://raw.githubusercontent.com/LambdaTest/rook/main/install.sh \
+            -o "$RUNNER_TEMP/install-rook.sh"
+          bash "$RUNNER_TEMP/install-rook.sh" --version 0.1.3 --dir "$RUNNER_TEMP/rook-bin"
+          echo "$RUNNER_TEMP/rook-bin" >> "$GITHUB_PATH"
+          command -v jq
+      - name: Run the reviewed suite
+        shell: bash
+        env:
+          LT_USERNAME: ${{ secrets.LT_USERNAME }}
+          LT_ACCESS_KEY: ${{ secrets.LT_ACCESS_KEY }}
+          AGENT_TOKEN: ${{ secrets.AGENT_TOKEN }}
+        run: bash ci/rook-ci.sh
+      - name: Preserve results even on failure
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: rook-${{ github.run_id }}-${{ github.run_attempt }}
+          path: rook-results/
+          if-no-files-found: warn
+          retention-days: 7

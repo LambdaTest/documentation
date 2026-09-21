@@ -270,6 +270,8 @@ If a public install path still fails, [open a Rook issue](https://github.com/Lam
 
 ## Next Step
 
+If you use a coding assistant, [choose its Rook skill setup guide](/support/docs/rook-coding-agents/) after installing the CLI. Claude Code, Codex, Gemini CLI, Copilot CLI, OpenCode, Cursor CLI, VS Code, and Windsurf each have their own instructions. Installing the skill does not install or authenticate the CLI.
+
 Continue with [How to Get Started With Agent Assurance](/support/docs/agent-assurance-quickstart/).
 
 
