@@ -1,0 +1,51 @@
+pipeline {
+  agent { label 'rook-linux' }
+  options {
+    skipDefaultCheckout(true)
+    disableConcurrentBuilds()
+    timeout(time: 30, unit: 'MINUTES')
+  }
+  environment {
+    ROOK_ENV = 'prod'
+    ROOK_PROJECT_ID = 'REPLACE_PROJECT_ID'
+    ROOK_AGENT_ID = 'REPLACE_AGENT_ID'
+    ROOK_PROFILE = 'staging'
+    ROOK_SCENARIO_IDS = 'SC-001,SC-004,SC-014'
+    ROOK_ALLOW_RULES = ''
+  }
+  stages {
+    stage('Reviewed checkout and assurance') {
+      steps {
+        // A new directory per build avoids stale result files in reused workspaces.
+        dir("rook-job-${env.BUILD_NUMBER}") {
+          checkout scm
+          withCredentials([
+            string(credentialsId: 'rook-lt-username', variable: 'LT_USERNAME'),
+            string(credentialsId: 'rook-lt-access-key', variable: 'LT_ACCESS_KEY'),
+            string(credentialsId: 'rook-agent-token', variable: 'AGENT_TOKEN')
+          ]) {
+            sh '''#!/usr/bin/env bash
+set -euo pipefail
+set +x
+job_temp=$(mktemp -d "${TMPDIR:-/tmp}/rook-jenkins.XXXXXX")
+export ROOK_HOME="$job_temp/home"
+export ROOK_RUN_NAME="jenkins-$BUILD_NUMBER"
+curl -fsSL https://raw.githubusercontent.com/LambdaTest/rook/main/install.sh \
+  -o "$job_temp/install-rook.sh"
+bash "$job_temp/install-rook.sh" --version 0.1.3 --dir "$job_temp/bin"
+export PATH="$job_temp/bin:$PATH"
+bash ci/rook-ci.sh
+'''
+          }
+        }
+      }
+    }
+  }
+  post {
+    always {
+      dir("rook-job-${env.BUILD_NUMBER}") {
+        archiveArtifacts artifacts: 'rook-results/**', allowEmptyArchive: true
+      }
+    }
+  }
+}
