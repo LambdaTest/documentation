@@ -116,13 +116,17 @@ paths:
                   type: string
                   maxLength: 1100
                   description: >-
-                    Release notes for this build, included in the App Distribution email sent to testers.
+                    Release notes for this build, included in the App Distribution email when the build
+                    is distributed to testers.
                     Two limits apply, and neither one fails the upload:
                     a note longer than **1100 characters** is stored up to that limit and the remainder is dropped;
-                    and characters outside the Latin-1 set — **emoji and non-Latin scripts such as CJK** — are stored as `?`.
-                    Accented letters, em dashes and curly quotes are stored exactly as sent.
-                    Re-uploading an identical binary with no other attribute change reuses the existing
-                    app record, so a new `release_notes` value is not applied.
+                    and characters the column cannot hold — **emoji and non-Latin scripts such as CJK** —
+                    are stored as `?`.
+                    The column is **Windows-1252**, so precomposed accented letters, em dashes and curly
+                    quotes are stored exactly as sent, while a decomposed accent loses its combining mark.
+                    A re-upload that reuses an existing app record does not apply a new note: only a
+                    different `custom_id` forces a new record, so changing `name` or `visibility` alone
+                    will not.
                     The response echoes `release_notes` as stored, which is the reliable way to confirm what was kept.
               required:
                 - appFile
@@ -150,8 +154,9 @@ paths:
                   release_notes:
                     type: string
                     description: >-
-                      The release notes as stored, after the 1100-character cap and the
-                      character-set substitution are applied. Omitted when no note was sent.
+                      The release notes as stored, after the 1100-character cap and the character-set
+                      substitution are applied. Omitted when the stored value is empty. On a cache hit
+                      this is the existing record's note, which can differ from the one sent.
               example:
                 app_id: "APP10160502401693989036908244"
                 name: "Appname"
