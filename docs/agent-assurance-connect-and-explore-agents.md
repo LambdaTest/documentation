@@ -1,5 +1,6 @@
 ---
 id: agent-assurance-connect-and-explore-agents
+toc_max_heading_level: 2
 title: Connect and Explore AI Agents
 hide_title: false
 sidebar_label: Connect and Explore Agents
@@ -27,6 +28,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     ]
   }) }}
 />
+
 
 # Connect and Explore AI Agents
 

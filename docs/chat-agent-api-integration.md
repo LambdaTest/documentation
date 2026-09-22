@@ -1,5 +1,6 @@
 ---
 id: chat-agent-api-integration
+toc_max_heading_level: 2
 title: How to Integrate a Chat Agent API
 hide_title: false
 sidebar_label: Quickstart (API)
@@ -44,7 +45,8 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
-The Agent Assurance Platform connects to your chat agent over standard HTTP. It sends multi-turn test conversations to your API endpoint and scores the replies, with no code changes to your agent.
+
+The TestMu AI Agent Testing Platform connects to your chat agent over standard HTTP. It sends multi-turn test conversations to your API endpoint and scores the replies, with no code changes to your agent.
 
 It works with any chatbot provider or framework. You provide the endpoint URL, the authentication, and the request and response shape, and the platform matches whatever structure your API uses.
 

@@ -152,7 +152,7 @@ Secrets are:
 ## Multi-factor Authentication (TOTP)
 ***
 
-For MFA-protected logins, KaneAI generates time-based one-time passwords (TOTP) natively from the shared secret key, with no external scripts or servers. The whole login journey stays inside KaneAI, with identical behavior in Replay, generated code, and CI. TOTP variables are **global by default**: create one once and reuse it across all test cases and modules in your organization.
+For MFA-protected logins, KaneAI generates time-based one-time passwords (TOTP) natively from the shared secret key, with no external scripts or servers. The whole login journey stays inside KaneAI, with identical behavior in the authoring session, generated code, and CI. TOTP variables are **global by default**: create one once and reuse it across all test cases and modules in your organization.
 
 ### How TOTP Works
 ***

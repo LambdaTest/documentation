@@ -1,5 +1,6 @@
 ---
 id: agent-assurance-troubleshooting
+toc_max_heading_level: 2
 title: Troubleshoot Agent Assurance
 hide_title: false
 sidebar_label: Troubleshooting
@@ -27,6 +28,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     ]
   }) }}
 />
+
 
 # Troubleshoot Agent Assurance
 

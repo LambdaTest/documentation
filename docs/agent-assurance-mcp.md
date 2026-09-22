@@ -1,5 +1,6 @@
 ---
 id: agent-assurance-mcp
+toc_max_heading_level: 2
 title: Configure MCP Servers in Agent Assurance
 hide_title: false
 sidebar_label: MCP Servers
@@ -27,6 +28,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     ]
   }) }}
 />
+
 
 # Configure MCP Servers in Agent Assurance
 

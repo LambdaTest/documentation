@@ -1,4 +1,4 @@
-# How to Mute Test Scenarios on TestMu AI
+# Mute Test Scenarios
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 

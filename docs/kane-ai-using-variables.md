@@ -113,7 +113,7 @@ On the [variables page](https://www.testmuai.com/login/?redirectTo=https://kanea
 ### From a Manual Interaction Step
 ***
 
-While reviewing a Manual Interaction step, replace any hard-coded value in the step's instruction with a Parameter, Variable, or Secret, without deleting or re-recording the step. This flow works on both **Desktop** and **Mobile App** Manual Interaction sessions.
+While reviewing a Manual Interaction step, replace any hard-coded value in the step's instruction with a Parameter, Variable, or Secret, without deleting or re-recording the step. This flow works on both **Desktop** and **Mobile App** sessions, and while the session is **Paused**, where step editing is available.
 
 #### Convert a Value in a Step
 

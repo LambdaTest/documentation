@@ -45,6 +45,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+
 Agent Mode outputs structured NDJSON instead of the interactive terminal UI. It's how AI coding agents (Claude Code, Codex CLI, Gemini CLI) consume Kane CLI results: parse events programmatically, extract the final result, and present it to the user.
 
 ## Enable Agent Mode

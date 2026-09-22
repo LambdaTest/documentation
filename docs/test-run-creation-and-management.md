@@ -70,6 +70,10 @@ Use descriptive names to easily identify test runs later.
 - Add test case configurations individually or in bulk.
 > Note: Configurations allow you to define environment settings, such as browser and device combinations.
 
+:::tip
+Test cases shared into your project from other projects can be added to a test run too. Select them from **Shared Incoming**. See [Share Test Cases Across Projects](/support/docs/share-test-cases-across-projects/#add-shared-test-cases-to-test-runs).
+:::
+
 <img loading="lazy" src={require('../assets/images/test-run/4.png').default} alt="Real "  className="doc_img"/>
 
 ### Add Configurations
@@ -174,9 +178,17 @@ You can manage your test runs using the options available in the **three-dot men
 | **Archive** | Move completed test runs to the archive to keep your workspace clean and organized. |
 | **Delete** | Permanently remove a test run that is no longer needed. |
 
+:::note
+Archiving a test run is not the same as archiving a test case. An archived test case stays in any run it was already part of and keeps its executions as history, but it is not offered when you create a new test run and is not carried across when you duplicate one. See [Archive and Restore Test Cases](/support/docs/test-case-archive/).
+:::
+
 <img loading="lazy" src={require('../assets/images/test-run/13.png').default} alt="Real "  className="doc_img"/>
 
 <img loading="lazy" src={require('../assets/images/test-run/12.png').default} alt="Editing an existing test run"  className="doc_img"/>
+
+:::tip Act on many test runs at once
+Select several test runs in the list to move them to another folder, copy them into fresh runs for the next cycle, or delete them in one action. You can also drag selected runs onto a folder to move or copy them. A moved run keeps its ID and execution history, and a copied run starts with every test instance at Not Started. See [Bulk Move, Copy, and Delete Test Runs](/support/docs/test-run-bulk-actions/).
+:::
 
 ## Track Bugs and Issues in Test Runs
 
@@ -186,16 +198,17 @@ Test Manager connects the bugs found during testing to the test instances that e
 
 There are two ways to put a bug on a test instance:
 
-- **Link an existing issue**: connect a Jira or Azure DevOps ticket that already exists.
+- **Link an existing issue**: connect a Jira, Azure DevOps, or Linear issue that already exists.
 - **Raise a new bug with Mark as Bug**: create a new ticket in your bug tracker while you execute the test.
 
 This works in Manual, KaneAI, and Automation Test Runs.
 
 ### Before you begin
 
-- To link or raise bugs that are visible inside Test Manager, integrate **Jira** or **Azure DevOps** with your <BrandName /> account:
+- To link or raise bugs that are visible inside Test Manager, integrate **Jira**, **Azure DevOps**, or **Linear** with your <BrandName /> account:
   - [Link Jira Issues with Test Manager](/support/docs/link-jira-issues-with-test-manager/)
   - [Link Azure DevOps Issues with Test Manager](/support/docs/link-ado-issues-with-test-manager/)
+  - [Link Linear Issues with Test Manager](/support/docs/link-linear-issues-with-test-manager/)
 - Mark as Bug can also create tickets in other [bug tracking tools](/support/docs/bug-tracking-tools/). See [Supported trackers and visibility](#supported-trackers-and-visibility) for what that means inside Test Manager.
 
 ### How bug tracking works in a Test Run
@@ -210,14 +223,14 @@ You can add a bug from any of these points: from the run's instance list, from i
 
 ### Link an existing issue to a test instance
 
-Use this when the defect is already tracked in Jira or Azure DevOps and you want to connect it to the test that found it.
+Use this when the defect is already tracked in Jira, Azure DevOps, or Linear and you want to connect it to the test that found it.
 
 1. Open the Test Run and stay on the **Test Instances** tab.
 2. On the test instance you want, open the bug menu on its row and select **Link Issue**.
 
 <img loading="lazy" src={require('../assets/images/test-run-issues/test-instance-issue-menu.png').default} alt="Bug menu on a test instance row with Link Issue and View Issues options" className="doc_img"/>
 
-3. In the **Link Issues** dialog, choose the tracker: **Jira** or **Azure DevOps**. Only trackers you have integrated are available.
+3. In the **Link Issues** dialog, choose the tracker: **Jira**, **Azure DevOps**, or **Linear**. Only trackers you have integrated are available.
 4. Enter the issue key or paste its URL.
 5. Click **Link Issue**.
 
@@ -272,13 +285,15 @@ The Test Run's **Issues** tab is the consolidated view of every bug raised or li
 
 ### Unlink an issue
 
-If a bug no longer belongs on a test instance, open the instance's **Issues** tab (or the **View Issues** panel), find the issue, and use its unlink action. Unlinking removes the association in Test Manager only. The ticket itself stays in Jira or Azure DevOps.
+If a bug no longer belongs on a test instance, open the instance's **Issues** tab (or the **View Issues** panel), find the issue, and use its unlink action. Unlinking removes the association in Test Manager only. The ticket itself stays in Jira, Azure DevOps, or Linear.
 
 ### Supported trackers and visibility
 
-Linking an existing issue is available for **Jira** and **Azure DevOps**.
+The two ways of putting a bug on a test instance do not cover the same set of trackers.
 
-Mark as Bug can create tickets in several bug tracking tools, but only **Jira** and **Azure DevOps** tickets are associated with, and visible in, Test Runs, Test Cases, and test instances. A bug raised in any other tracker is created successfully but does not appear in these views.
+Linking an existing issue is available for **Jira**, **Azure DevOps**, and **Linear**.
+
+Mark as Bug can create tickets in several bug tracking tools, but only **Jira** and **Azure DevOps** tickets are associated with, and visible in, Test Runs, Test Cases, and test instances. A bug raised in any other tracker, Linear included, is created successfully but does not appear in these views. To track a Linear issue against a test, link it instead.
 
 ## Test Instance Audit Logs
 

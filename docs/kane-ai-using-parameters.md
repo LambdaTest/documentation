@@ -94,7 +94,7 @@ Reference a parameter using **dollar-curly braces syntax** (e.g.,`${phone_number
 ## Parameterize a Manual Interaction Step
 ***
 
-Convert a hard-coded value in a Manual Interaction step into a parameter directly, without deleting or re-recording the step. This flow works on both **Desktop** and **Mobile App** Manual Interaction sessions.
+Convert a hard-coded value in a Manual Interaction step into a parameter directly, without deleting or re-recording the step. This flow works on both **Desktop** and **Mobile App** sessions, and while the session is **Paused**, where step editing is available.
 
 1. Open the recorded Manual Interaction step.
 2. **Select the portion** of the instruction text you want to parameterize (for example, highlight `test.com`).

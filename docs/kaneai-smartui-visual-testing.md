@@ -119,7 +119,7 @@ The first test run captures an initial screenshot and sets it as the **Baseline*
 ### Step 5: Rerun and Review the Comparison
 ***
 
-When you replay or re-run the test during authoring, KaneAI captures a new screenshot and compares it against the baseline. Click **Show Comparison** to open the SmartUI view, which highlights the visual differences between the two images.
+When you run the test again during authoring, KaneAI captures a new screenshot and compares it against the baseline. Click **Show Comparison** to open the SmartUI view, which highlights the visual differences between the two images.
 
 <img loading="lazy" src={require('../assets/images/kane-ai/smartui/analyze-comparison.png').default} alt="Analyze the visual comparison between baseline and new screenshot" className="doc_img"/>
 
@@ -147,7 +147,7 @@ Save the completed test case, then run it once or on a schedule.
 ### Step 7: Save the Test Case
 ***
 
-When your test flow is complete, click **Finish test**. In the save prompt, set the **Project**, **Folder**, **Test Name**, and **Description**.
+When your test flow is complete, click **Save** in the top-right header. In the save prompt, set the **Project**, **Folder**, **Test Name**, and **Description**.
 
 <img loading="lazy" src={require('../assets/images/kane-ai/smartui/save-test-case.png').default} alt="Save the test case session" className="doc_img"/>
 

@@ -59,6 +59,10 @@ Creating projects within Test Manager is the foundational step in organizing and
 
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/create-project-two.webp').default} alt="New project form with name, description, and tags"  className="doc_img" width="1366" height="629"/>
 
+:::tip
+Projects can share test cases with each other, so one project can act as a central repository for others. To control whether a project can share or receive test cases, see [Share Test Cases Across Projects](/support/docs/share-test-cases-across-projects/#turn-on-sharing-in-project-settings).
+:::
+
 
 
 
@@ -186,17 +190,16 @@ For the full code generation guide, see [KaneAI Code Generation](/support/docs/k
 
 ### Alternative Path: Record User Interactions
 
-Instead of providing written requirements, you can use KaneAI's **Manual Interaction Mode** to record real user actions and convert them into automated tests.
+Instead of providing written requirements, you can use KaneAI's **Manual Interaction** to record real user actions and convert them into automated tests.
 
-1. Start a new test in KaneAI.
-2. Switch to **Manual Interaction** mode.
-3. Perform actions on your application,clicks, form fills, navigation.
-4. KaneAI captures each action and converts it into test steps.
-5. Generate automation code from the recorded steps.
+1. Start a new test in KaneAI. The session begins in the **Authoring Steps** state, where capture is already active.
+2. Perform actions on your application, clicks, form fills, navigation.
+3. KaneAI captures each action and converts it into test steps.
+4. Generate automation code from the recorded steps.
 
 This is useful when requirements are easier to demonstrate than describe, or when you want to capture existing user workflows as automated tests.
 
-For the full guide, see [KaneAI Manual Interaction Mode](/support/docs/kaneai-manual-interaction/).
+For the full guide, see [Manual Interaction in KaneAI](/support/docs/kaneai-manual-interaction/).
 
 ---
 

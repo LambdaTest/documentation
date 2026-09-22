@@ -60,7 +60,7 @@ Record your entire test session for detailed analysis and playback. Click on the
 <img loading="lazy" src={require('../assets/images/real-time-testing/web-browser/recording.png').default} alt="Image" className="doc_img"/>
 
 ## Gallery
-The Gallery stores all screenshots and video recordings from your test sessions in one place, allowing you to easily review, download, or manage your media files. To access, select Gallery from the left toolbar and you'll find the saved screenshots and videos. To download the screenshots or videos to your local machine, click on the Download icon. You can also mark them as bug by clicking on the Bug icon.
+The Gallery stores all screenshots and video recordings from your test sessions in one place, allowing you to easily review, download, or manage your media files. To access, select Gallery from the left toolbar and you'll find the saved screenshots and videos. To download the screenshots or videos to your local machine, click on the Download icon. You can also mark them as bug by clicking on the Bug icon. To mark multiple screenshots as bugs, select the screenshots using the checkbox option, then click "Mark as Bug." 
 
 <img loading="lazy" src={require('../assets/images/real-time-testing/web-browser/gallery.png').default} alt="Image" className="doc_img"/>
 
@@ -90,6 +90,11 @@ Simulate website and mobile experiences from over 45 countries using local IP ad
 The [Upload and Download Files](/support/docs/real-time-upload-and-download-files/) feature allows to manage files directly within remote testing environments. This functionality streamlines the testing process by allowing seamless file transfers between local and remote environments across desktop and mobile platforms.
 
 <img loading="lazy" src={require('../assets/images/real-time-testing/web-browser/upload.png').default} alt="Image" className="doc_img"/>
+
+## Network Throttling
+<BrandName />'s network throttling feature empowers you to simulate real-world network conditions (Offline, Slow 3G, Fast 3G, 4G, 5G and Custom) during testing. This allows you to assess your application performance under varying internet speeds, ensuring a seamless user experience across different network environments. You can leverage predefined network profiles or craft custom settings for comprehensive testing.
+
+<img loading="lazy" src={require('../assets/images/real-time-testing/web-browser/network-throttling.png').default} alt="Image" className="doc_img"/>
 
 ## Chrome Extension
 Enhance your testing capabilities with <BrandName /> by leveraging various Chrome extensions that provide additional functionalities and streamline your testing process. These extensions can help automate repetitive tasks, assist in accessibility checks, and integrate AI tools into your workflow.

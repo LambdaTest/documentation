@@ -1,5 +1,6 @@
 ---
 id: agent-assurance-run-tests
+toc_max_heading_level: 2
 title: Run Deep Functional Tests With Agent Assurance
 hide_title: false
 sidebar_label: Run Tests
@@ -27,6 +28,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     ]
   }) }}
 />
+
 
 # Run Deep Functional Tests With Agent Assurance
 

@@ -3843,6 +3843,88 @@ paths:
                             message: Test Run updated successfully
                             type: Success
 
+  /api/v1/test-run/status/{test_run_id}:
+    put:
+        tags:
+            - Test Runs
+        summary: Update Test Run Status
+        description: >-
+            Updates the overall execution status of a test run.
+            This sets the status on the test run itself - it does not change the status of the individual test run instances inside it.
+            To update the status of a single instance use the "Update Test Run Instance" API, and to update several at once use the "Bulk Update Test Run Instances" API.
+            Retrieve the `test_run_id` from GET /api/v1/projects/{project_id}/test-runs.
+        security:
+            - basicAuth: []
+        parameters:
+            - name: test_run_id
+              in: path
+              schema:
+                  type: string
+              required: true
+              description: ID of the test run whose status you want to update.
+              example: '01M0W9Y5HGY3VY11GJKXJZHPBT'
+        requestBody:
+            required: true
+            content:
+                application/json:
+                    schema:
+                        type: object
+                        required:
+                            - status
+                        properties:
+                            status:
+                                type: string
+                                description: Status to set on the test run.
+                                enum: [Passed, Failed, Skipped, "In Progress", "Not Started"]
+                                example: Passed
+                        example:
+                            status: Passed
+        responses:
+            '200':
+                description: OK
+                headers:
+                    Content-Type:
+                        schema:
+                            type: string
+                            example: application/json; charset=utf-8
+                    Date:
+                        schema:
+                            type: string
+                            example: Wed, 28 Feb 2024 08:00:25
+                    Content-Length:
+                        schema:
+                            type: integer
+                            example: '63'
+                content:
+                    application/json:
+                        schema:
+                            type: object
+                        example:
+                            message: Test Run updated successfully
+                            type: Success
+            '422':
+                description: Unprocessable Entity
+                headers:
+                    Date:
+                        schema:
+                            type: string
+                            example: Wed, 28 Feb 2024 08:00:25
+                    Content-Type:
+                        schema:
+                            type: string
+                            example: application/json; charset=utf-8
+                    Content-Length:
+                        schema:
+                            type: integer
+                            example: '63'
+                content:
+                    application/json:
+                        schema:
+                            type: object
+                        example:
+                            message: Invalid test run ID
+                            type: Error
+
   /api/v1/test-run/duplicate/{test_run_id}:
       post:
           tags:

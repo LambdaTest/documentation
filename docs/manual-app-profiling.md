@@ -56,7 +56,7 @@ You can enable App Profiling from the App Live session toolbar before starting y
 > This feature is available for **App Live** sessions on **iOS and Android** real devices. It must be enabled **before** starting the session and cannot be toggled mid-session.
 
 :::note Beta Feature
-Manual App Profiling is currently in **Beta**. To use this feature, get it enabled for your organization by reaching out to our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24x7 Chat Support**</span> or mailing us at [support@testmuai.com](https://support.lambdatest.com/).
+Manual App Profiling is currently in **Beta**. To use this feature, get it enabled for your organization by reaching out to our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24x7 Chat Support**</span> or mailing us at [support@testmuai.com](mailto:support@testmuai.com).
 :::
 
 ## Getting Started
@@ -225,7 +225,7 @@ For more details on navigating the dashboard, see the [Manual Tests Sessions Das
 
 
 > Got any questions?<br/>
-> Please reach out at our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24x7 Chat Support**</span> or you could also mail us at [support@testmuai.com](https://support.lambdatest.com/).
+> Please reach out at our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24x7 Chat Support**</span> or you could also mail us at [support@testmuai.com](mailto:support@testmuai.com).
 
 
 <nav aria-label="breadcrumbs">

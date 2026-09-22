@@ -57,7 +57,7 @@ Set up the following before you run the test so Playwright can authenticate and 
 
 :::tip Sample repo
 
-Clone the TestMu AI Playwright sample repository used in this document to follow along with the same files shown here. <a href="https://github.com/LambdaTest/playwright-sample/" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="TestMu AI Playwright sample repository on GitHub" className="doc_img"/> View on GitHub</a>
+Clone the TestMu AI Playwright sample repository used in this document to follow along with the same files shown here. <a href="https://github.com/LambdaTest/playwright-sample/tree/main/playwright-test-js" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="TestMu AI Playwright sample repository on GitHub" className="doc_img"/> View on GitHub</a>
 
 :::
 
@@ -122,7 +122,7 @@ This section builds a single Playwright script that connects to the TestMu AI gr
   })
 ```
 
-After the connection is in place, you can run your first Playwright test on TestMu AI. The full test script below searches the term `LambdaTest` on Bing and marks the session as passed or failed based on the page title.
+After the connection is in place, you can run your first Playwright test on TestMu AI. The full test script below searches the term `TestMu AI` on DuckDuckGo and marks the session as passed or failed based on the page title.
 
 ```js
 const { chromium } = require('playwright')
@@ -150,16 +150,16 @@ const { expect } = require('@playwright/test');
 
   const page = await browser.newPage()
 
-  await page.goto('https://www.bing.com')
+  await page.goto('https://duckduckgo.com')
 
-  const element = await page.$('[aria-label="Enter your search term"]')
+  const element = await page.$('[name="q"]')
   await element.click()
-  await element.type('LambdaTest')
+  await element.type('TestMu AI')
   await element.press('Enter')
   const title = await page.title()
 
   try {
-    expect(title).toEqual('LambdaTest - Search')
+    expect(title).toEqual('TestMu AI at DuckDuckGo')
     // Mark the test as completed or failed
     await page.evaluate(_ => {}, `lambdatest_action: ${JSON.stringify({ action: 'setTestStatus', arguments: { status: 'passed', remark: 'Title matched' } })}`)
   } catch {
@@ -182,7 +182,7 @@ node playwright-single.js
 
 Once your first test runs, you can execute the same test across multiple browser and OS configurations at once. Define a `capabilities` array with one entry per configuration, then run each through a shared function.
 
-The example below runs the Bing search test on three configurations: Chrome on Windows 10, Microsoft Edge on Windows 8, and Chrome on macOS Big Sur.
+The example below runs the DuckDuckGo search test on three configurations: Chrome on Windows 10, Microsoft Edge on Windows 11, and Chrome on macOS Sonoma.
 
 ```js title="playwright-parallel.js"
 const { chromium } = require('playwright')
@@ -197,16 +197,16 @@ const parallelTests = async (capability) => {
 
   const page = await browser.newPage()
 
-  await page.goto('https://www.bing.com')
+  await page.goto('https://duckduckgo.com')
 
-  const element = await page.$('[aria-label="Enter your search term"]')
+  const element = await page.$('[name="q"]')
   await element.click()
-  await element.type('LambdaTest')
+  await element.type('TestMu AI')
   await element.press('Enter')
   const title = await page.title()
 
   try {
-    expect(title).toEqual('LambdaTest - Search')
+    expect(title).toEqual('TestMu AI at DuckDuckGo')
     // Mark the test as completed or failed
     await page.evaluate(_ => {}, `lambdatest_action: ${JSON.stringify({ action: 'setTestStatus', arguments: { status: 'passed', remark: 'Title matched' } })}`)
   } catch {
@@ -236,9 +236,9 @@ const capabilities = [
     'browserName': 'MicrosoftEdge',
     'browserVersion': 'latest',
     'LT:Options': {
-      'platform': 'Windows 8',
+      'platform': 'Windows 11',
       'build': 'Playwright Sample Build',
-      'name': 'Playwright Sample Test on Windows 8 - MicrosoftEdge',
+      'name': 'Playwright Sample Test on Windows 11 - MicrosoftEdge',
       'user': process.env.LT_USERNAME,
       'accessKey': process.env.LT_ACCESS_KEY,
       'network': true,
@@ -250,9 +250,9 @@ const capabilities = [
     'browserName': 'Chrome',
     'browserVersion': 'latest',
     'LT:Options': {
-      'platform': 'MacOS Big sur',
+      'platform': 'MacOS Sonoma',
       'build': 'Playwright Sample Build',
-      'name': 'Playwright Sample Test on MacOS Big sur - Chrome',
+      'name': 'Playwright Sample Test on MacOS Sonoma - Chrome',
       'user': process.env.LT_USERNAME,
       'accessKey': process.env.LT_ACCESS_KEY,
       'network': true,
@@ -339,7 +339,7 @@ tunnel_settings:
 playwrightConfigOptions:
   testDir: "tests"
 
-# Refer to the capability generator for detailed configurations: https://www.lambdatest.com/capabilities-generator/
+# Refer to the capability generator for detailed configurations: https://www.testmuai.com/capabilities-generator/
 platforms:
   - platform: "macOS Sequoia" # Or "Windows 11", "android", "ios"
     browserName: "chrome" # Or pw-firefox, pw-webkit

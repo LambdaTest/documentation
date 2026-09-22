@@ -56,7 +56,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 # AI Test Case Generator
 
 ## What is the AI Test Case Generator?
-The **AI Test Case Generator** is an intelligent feature within <BrandName /> Test Manager and KaneAI that allows users to convert various requirement formats (like text, PDFs, audio, videos, images, Jira tickets and more) into structured, contextual software test cases. It significantly accelerates the test case creation process while improving coverage and quality.
+The **AI Test Case Generator** is an intelligent feature within <BrandName /> Test Manager and KaneAI that allows users to convert various requirement formats (like text, PDFs, audio, videos, images, issues from Jira, Azure DevOps, and Linear, and more) into structured, contextual software test cases. It significantly accelerates the test case creation process while improving coverage and quality.
 
 This feature is designed to save time, improve test coverage, and streamline the test design process for both manual and automated testing workflows.
 
@@ -153,6 +153,8 @@ When you initiate a test case generation session, the following process occurs a
 
 The Memory Layer prevents duplicates from being created. To find and remove duplicates that already exist in your repository, see [Find and Remove Duplicate Test Cases](/support/docs/test-case-deduplication/).
 
+Archived test cases are excluded from the Memory Layer, so they neither inform generation nor count as existing coverage. See [Archive and Restore Test Cases](/support/docs/test-case-archive/).
+
 :::note
 The Memory Layer operates automatically in the background, you can choose to enable or disable Memory enhancement feature before triggering a session.
 :::
@@ -181,7 +183,7 @@ Start by entering your product or feature requirements in the input box.
 
 We support multiple input formats, including:
 - **Textual requirements**
-- **Jira/Azure DevOps links** (e.g., epics, stories, tasks)
+- **Jira/Azure DevOps/Linear links** (e.g., epics, stories, tasks)
 - **PDFs**
 - **Images**
 - **Audio** (recordings or uploads)
@@ -233,18 +235,18 @@ Currently, the AI Test Case Generator can only access **publicly available URLs*
 
 
 ##### Add Issue Links
-- Integrate your <BrandName /> account with Jira/Azure DevOps. Follow the steps described in the following link to integrate Jira/Azure DevOps:
-[<BrandName /> Jira Integration](/support/docs/jira-integration/#how-to-establish-integration-with-jira-from-your-lambdatest-account) / [<BrandName /> Azure DevOps Integration](/support/docs/link-ado-issues-with-test-manager/)
+- Integrate your <BrandName /> account with Jira/Azure DevOps/Linear. Follow the steps described in the following link to integrate Jira/Azure DevOps/Linear:
+[<BrandName /> Jira Integration](/support/docs/jira-integration/#how-to-establish-integration-with-jira-from-your-lambdatest-account) / [<BrandName /> Azure DevOps Integration](/support/docs/link-ado-issues-with-test-manager/) / [<BrandName /> Linear Integration](/support/docs/linear-app-integration/)
 
-- After integration is completed, select `Link Jira Issues` / `Link Azure DevOps Issues`.
+- After integration is completed, select `Link Jira Issues` / `Link Azure DevOps Issues` / `Link Linear Issues`.
 
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/link_jira_test_cases_generation.png').default} alt="link_jira_test_cases_generation" width="1347" height="616"  className="doc_img"/>
 
 
-- Enter your Jira/Azure DevOps issue ID or link and press Enter.
+- Enter your Jira/Azure DevOps/Linear issue ID or link and press Enter.
 
 :::note
- Only issues from the connected Jira/Azure DevOps project can be linked here.
+ Only issues from the connected Jira/Azure DevOps/Linear project can be linked here.
 :::
 
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/jira_id_test_cases_generation.png').default} alt="jira_id_test_cases_generation" width="1347" height="616"  className="doc_img"/>
@@ -255,7 +257,7 @@ Currently, the AI Test Case Generator can only access **publicly available URLs*
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/linked_jira_view_test_cases_generation.png').default} alt="linked_jira_view_test_cases_generation" width="1347" height="616"  className="doc_img"/>
 
 :::note
-For linked Jira issues, attachments such as images and other files are also fetched and used as context for test case generation, in addition to the textual content. The same limits that apply to direct file uploads apply here: a maximum of 10 files with a file size limit of 50 MB per file. Azure DevOps integration fetches textual content only.
+For linked Jira issues, attachments such as images and other files are also fetched and used as context for test case generation, in addition to the textual content. The same limits that apply to direct file uploads apply here: a maximum of 10 files with a file size limit of 50 MB per file. Azure DevOps and Linear integrations fetch textual content only. For a linked Linear issue, that context is the issue's summary, description, and comments.
 :::
 
 ##### Configure Generation Settings
@@ -356,7 +358,7 @@ To review the context used for your current generation session, click the **penc
 - **Attached Files**: All files uploaded during the session.
 - **Organization Instructions**: Organization-level custom instructions applied to the session.
 - **Project Instructions**: Project-level custom instructions applied to the session.
-- **Linked Issues**: Jira or Azure DevOps issues linked to the session.
+- **Linked Issues**: Jira, Azure DevOps, or Linear issues linked to the session.
 
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/session_context_drawer.png').default} alt="session-context-drawer" width="1347" height="616" className="doc_img"/>
 

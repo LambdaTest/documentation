@@ -1,5 +1,6 @@
 ---
 id: agent-assurance-profiles
+toc_max_heading_level: 2
 title: Configure Agent Assurance Invocation Profiles
 hide_title: false
 sidebar_label: Invocation Profiles
@@ -27,6 +28,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     ]
   }) }}
 />
+
 
 # Configure Agent Assurance Invocation Profiles
 

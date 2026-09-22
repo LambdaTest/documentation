@@ -57,21 +57,20 @@ This document explains how to upload a file on the TestMu AI platform and access
 
 Upload files to the cloud-based Selenium Grid using the [API for uploading user-files](/api-doc/).
 
-1. Open [TestMu AI's API for uploading user-files](/api-doc/). <img loading="lazy" src={require('../assets/images/uploads/upload-files.webp').default} alt="Upload file" width="1281" height="721" className="doc_img"/>
-2. Click on the Lock icon to authorize your account. <img loading="lazy" src={require('../assets/images/uploads/upload-files-1.webp').default} alt="lock icon" width="1281" height="721" className="doc_img"/>]
-3. Enter your TestMu AI username and access key to validate your credentials. Click the "Authorise" button to verify the credentials, and click Close to close the window. <img loading="lazy" src={require('../assets/images/uploads/upload-files-2.webp').default} alt="authorize button" width="1281" height="722" className="doc_img"/>
+1. Open the **user-files** API reference and select the **POST /user-files** endpoint ("Upload files to our lambda storage").
 
+<img loading="lazy" src={require('../assets/images/uploads/upload-files-endpoint.webp').default} alt="TestMu AI API reference for the POST user-files endpoint, showing authorization, body, and 200 response for uploading files to lambda storage" width="1447" height="794" className="doc_img"/>
 
-> Get your TestMu AI Username and Access Key from your [TestMu AI automation dashboard](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/dashboard). Click on the "key" icon in the top right corner.
-<img loading="lazy" src={require('../assets/images/uploads/access-key.webp').default} alt="automation key" width="1281" height="721" className="doc_img"/>
+2. Click **Try it** to open the request panel.
+3. Under **Authorization**, enter your TestMu AI **username** and **access key** (Basic auth).
+4. Under **Body**, add the file(s) to upload in the **files** field.
+5. Click **Send**. On success, the response returns a **200** status with the message `File have been uploaded successfully to our lambda storage`.
 
-4. Click on the "Try it out" button. <img loading="lazy" src={require('../assets/images/uploads/upload-files-3.webp').default} alt="choose file" width="1281" height="721" className="doc_img"/>
-5. Select the file using the "Choose File" button and click Execute to upload it on the TestMu AI platform. <img loading="lazy" src={require('../assets/images/uploads/upload-files-4.webp').default} alt="200 status code" width="1281" height="721" className="doc_img"/>
-   
+<img loading="lazy" src={require('../assets/images/uploads/upload-files-request.webp').default} alt="TestMu AI user-files request panel with username and access key authorization, a file added to the body, and a 200 upload-success response" width="1110" height="798" className="doc_img"/>
+
+> Get your TestMu AI **Username** and **Access Key** from your [TestMu AI dashboard](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/dashboard).
 
 > **Note**: You can upload multiple files to lambda storage. A maximum of 150 files can be uploaded per organization. The file size limit is 20 MB per API call. If your total file sizes reach the limit, upload your files in multiple API calls.
-
-Once the file uploads successfully, you will see a response body with 200 response code, as shown in the image below: <img loading="lazy" src={require('../assets/images/uploads/upload-files-5.webp').default} alt="upload file" width="1281" height="721" className="doc_img"/>
 
 ## Test the Uploaded File on the TestMu AI Platform
 ---

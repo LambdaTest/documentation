@@ -50,6 +50,7 @@ import VideoEmbed from '@site/src/component/videoEmbed';
       }) }}
 ></script>
 
+
 An AI coding agent can write the change, but without a browser it cannot tell you whether the change actually works. It can read the source, trace the wiring, and tell you the code looks correct, and it will still be guessing about the running app.
 
 Kane CLI closes that gap. Install one skill file and your agent gains a real Chrome session it can drive in plain English, plus a structured result it can read, reason about, and act on without a human interpreting the terminal. The walkthroughs below show the same idea across seven different builders, followed by the patterns that work in any of them.

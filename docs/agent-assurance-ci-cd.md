@@ -1,5 +1,6 @@
 ---
 id: agent-assurance-ci-cd
+toc_max_heading_level: 2
 title: Run Agent Assurance in CI/CD
 hide_title: false
 sidebar_label: CI/CD and Automation
@@ -27,6 +28,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     ]
   }) }}
 />
+
 
 # Run Agent Assurance in CI/CD
 

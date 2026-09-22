@@ -1,6 +1,7 @@
 ---
 id: testing-your-first-ai-agent
-title: How to Test Your First AI Agent With TestMu AI Agent Assurance Platform
+toc_max_heading_level: 2
+title: How to Test Your First AI Agent With TestMu AI Agent Testing Platform
 hide_title: false
 sidebar_label: Quickstart (UI)
 description: "Step-by-step guide to setting up and running your first AI agent test on TestMu AI: configure inputs, run validations, and review results."
@@ -44,11 +45,12 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+
 You can test an AI agent on TestMu AI entirely from the dashboard, without writing code. You create an agent, upload documents that describe it, generate test scenarios, run an evaluation against your agent's API, and read the scored results.
 
 The whole flow takes a few minutes and works for chat and voice agents.
 
-## Prerequisites
+## What You Need Before You Start
 
 ---
 
@@ -58,7 +60,7 @@ Before you start, make sure you have the following in place.
 - Your agent's API endpoint URL. For a chat agent, this is the URL that receives messages.
 - Documents that describe your agent's requirements, such as a PDF or DOCX. The platform uses them to generate relevant scenarios.
 
-## Run Your First Evaluation
+## How to Run Your First Evaluation
 
 ---
 

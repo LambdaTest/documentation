@@ -48,6 +48,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+
 SmartUI catches visual bugs by comparing screenshots of your UI against an approved baseline. Wiring it into a test suite means installing the CLI, adding snapshot calls, and tuning a config. You can hand that off to your AI coding agent instead.
 
 The [`smartui-skill`](https://github.com/LambdaTest/agent-skills/tree/main/smartui-skill) is part of [<BrandName /> Agent Skills](https://github.com/LambdaTest/agent-skills), a library of instruction packs that give AI coding agents the know-how to build working test automation on <BrandName />. Describe the pages you want covered, and it wires SmartUI into your existing framework and runs the comparison on the <BrandName /> cloud.

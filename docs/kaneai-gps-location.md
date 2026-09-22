@@ -130,7 +130,7 @@ Enter latitude and longitude values within the following ranges.
 Keep these limitations in mind:
 
 - GPS override is applied during session initialization and can be changed mid-session.
-- Replay and Edit sessions reuse the GPS values from the original session.
+- Reopened or edited sessions reuse the GPS values from the original session.
 
 ## Troubleshooting
 ***

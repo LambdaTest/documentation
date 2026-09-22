@@ -62,6 +62,7 @@ Apart from these features, <BrandName /> also offers you the
 ## Device Controls
 The Device Control feature allows you tp perform certain actions with your device  within your current test session:
 
+- **Home:** Use this option to navigate to the device's home screen during a manual session.
 - **Volume:** Adjust the device volume directly within your testing session, ensuring optimal audio levels for your tests.
 - **Lock Device :** Lock or unlock your device seamlessly during testing sessions without interrupting your workflow.
 
@@ -82,7 +83,7 @@ Record your entire test session for detailed playback. A timer keeps track of re
 </video> 
 
 ## Gallery
-All screenshots and video recordings from test sessions are stored in the Gallery. To access, select Gallery from the left toolbar and you'll find the saved screenshots and videos. To download the screenshots or videos to your local machine, click on the Download icon. You can also mark them as bug by clicking on the Bug icon.
+All screenshots and video recordings from test sessions are stored in the Gallery. To access, select Gallery from the left toolbar and you'll find the saved screenshots and videos. To download the screenshots or videos to your local machine, click on the Download icon. You can also mark them as bug by clicking on the Bug icon. To mark multiple screenshots as bugs, select the screenshots using the checkbox option, then click "Mark as Bug."
 
 <img loading="lazy" src={require('../assets/videos/real-time/chromeos/gallery.png').default} style={{ height: '350px' }} className="doc_img"/> 
 
@@ -101,7 +102,7 @@ The IP Geolocation feature enables you to simulate website and mobile experience
 <img loading="lazy" src={require('../assets/videos/real-time/chromeos/ip.png').default} style={{ height: '350px' }} className="doc_img"/>
  
 ## Network Throttling
-<BrandName />'s network throttling feature empowers you to simulate real-world network conditions (2G, 3G, LTE) during testing. This allows you to assess your application performance under varying internet speeds, ensuring a seamless user experience across different network environments. You can leverage predefined network profiles or craft custom settings for comprehensive testing.
+<BrandName />'s network throttling feature empowers you to simulate real-world network conditions (Offline, Slow 3G, Fast 3G, 4G, 5G and Custom) during testing. This allows you to assess your application performance under varying internet speeds, ensuring a seamless user experience across different network environments. You can leverage predefined network profiles or craft custom settings for comprehensive testing.
 
 <img loading="lazy" src={require('../assets/videos/real-time/chromeos/network.png').default} style={{ height: '350px' }}className="doc_img"/>
  

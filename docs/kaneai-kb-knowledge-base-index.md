@@ -63,6 +63,13 @@ The KaneAI Knowledge Base is your go-to resource for writing effective test case
 Start here to learn how to write reliable test instructions for any scenario, from finding elements on the page to handling complex form interactions.
 
 <div className="support_main">
+  <a href="/support/docs/kaneai-authoring-session/">
+    <div className="support_inners">
+      <h3>Authoring Session</h3>
+      <p>Session states, the cursor that decides where new steps land, the four run actions, step statuses, and what happens when you save.</p>
+    </div>
+  </a>
+
   <a href="/support/docs/kaneai-kb-finding-and-interacting-with-elements/">
     <div className="support_inners">
       <h3>Element Interactions</h3>
@@ -210,10 +217,11 @@ New to KaneAI? Here's the recommended reading order:
 1. **[Author Your First Desktop Browser Test](/support/docs/author-your-first-desktop-browser-test/)**: Get started by authoring your first desktop browser test
 2. **[Author Your First Mobile Browser Test](/support/docs/author-your-first-mobile-browser-test/)**: Learn to author mobile browser tests with device selection and configuration
 3. **[Author Your First Mobile App Test](/support/docs/author-your-first-mobile-app-test/)**: Build your first mobile app test with app upload and device configuration
-4. **[KaneAI Finding and Interacting With Elements](/support/docs/kaneai-kb-finding-and-interacting-with-elements/)**: Learn how to describe elements so KaneAI can find them reliably
-5. **[KaneAI Forms Inputs and Data Entry](/support/docs/kaneai-kb-forms-inputs-and-data-entry/)**: Handle every type of form element
-6. **[KaneAI Assertions and Validation](/support/docs/kaneai-kb-assertions-and-validation/)**: Verify your app works correctly
-7. **[KaneAI Dynamic Content Waits and Page State](/support/docs/kaneai-kb-dynamic-content-waits-and-page-state/)**: Handle async behavior and timing
-8. **[KaneAI JavaScript Execution](/support/docs/kane-ai-javascript-execution/)**: When natural language isn't enough
-9. **[KaneAI Scroll in Feature](/support/docs/kane-ai-scroll-in-feature/)**: Scroll until a target element is visible when authoring mobile tests
-10. **[KaneAI Create PR](/support/docs/kaneai-create-pr/)**: Turn KaneAI test cases into pull requests in your repository
+4. **[Authoring Session](/support/docs/kaneai-authoring-session/)**: Understand session states, the cursor, and how to run and verify steps
+5. **[KaneAI Finding and Interacting With Elements](/support/docs/kaneai-kb-finding-and-interacting-with-elements/)**: Learn how to describe elements so KaneAI can find them reliably
+6. **[KaneAI Forms Inputs and Data Entry](/support/docs/kaneai-kb-forms-inputs-and-data-entry/)**: Handle every type of form element
+7. **[KaneAI Assertions and Validation](/support/docs/kaneai-kb-assertions-and-validation/)**: Verify your app works correctly
+8. **[KaneAI Dynamic Content Waits and Page State](/support/docs/kaneai-kb-dynamic-content-waits-and-page-state/)**: Handle async behavior and timing
+9. **[KaneAI JavaScript Execution](/support/docs/kane-ai-javascript-execution/)**: When natural language isn't enough
+10. **[KaneAI Scroll in Feature](/support/docs/kane-ai-scroll-in-feature/)**: Scroll until a target element is visible when authoring mobile tests
+11. **[KaneAI Create PR](/support/docs/kaneai-create-pr/)**: Turn KaneAI test cases into pull requests in your repository

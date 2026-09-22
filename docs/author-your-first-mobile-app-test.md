@@ -114,7 +114,9 @@ Click **Start Testing**.
 ### Step 6: Describe Your Test in Natural Language
 ***
 
-Tell KaneAI what you want to test in plain English. KaneAI translates each instruction into an executable test step automatically. As you add instructions, KaneAI queues them in real time without waiting for completion, so you can build the full flow without pausing. When you finish, click **Finish Test** to finalize the test case.
+Tell KaneAI what you want to test in plain English. KaneAI translates each instruction into an executable test step automatically. As you add instructions, KaneAI queues them in real time without waiting for completion, so you can build the full flow without pausing. When you finish, click **Save** in the top-right header to finalize the test case.
+
+Your test is saved as **Ready** when every step has run and passed, which is also when automation code is generated. If some steps were never run, or a step errored, it saves as Unverified or Faulty instead and you can finish it later. See [Save states](/support/docs/kaneai-authoring-session/#save-states).
 
 <img loading="lazy" src={require('../assets/images/kane-ai/kaneai-author-app-test/kaneai-app-test-authoring.png').default} alt="Describe Your Test in Natural Language" width="1347" height="616"  className="doc_img"/> 
 
@@ -123,7 +125,7 @@ Tell KaneAI what you want to test in plain English. KaneAI translates each instr
 ### Step 7: Capture Steps With Manual Interaction
 ***
 
-To capture an action that is hard to describe, use **Manual Interaction Mode**. Perform the step directly in the instance window, and KaneAI records it and creates the matching automation step. For the full gesture and platform matrix, see the [KaneAI Manual Interaction](/support/docs/kaneai-manual-interaction/) guide.
+To capture an action that is hard to describe, perform the step directly in the instance window. While your session is in the **Authoring Steps** state, KaneAI captures the action and creates the matching automation step — there is nothing to switch on. For the full gesture and platform matrix, see the [KaneAI Manual Interaction](/support/docs/kaneai-manual-interaction/) guide.
 
 <img loading="lazy" src={require('../assets/images/kane-ai/kaneai-author-app-test/mobile-app-manual-interaction.png').default} alt="Capture Steps With Manual Interaction" width="1347" height="616"  className="doc_img"/>
 

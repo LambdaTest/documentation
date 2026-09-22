@@ -103,21 +103,6 @@ appium-skill/
 | **Debugging Guide** | Common exceptions mapped to solutions |
 | **Best Practices** | Actionable recommendations for production mobile test code |
 
-## Supported Languages and Frameworks
-
-The Appium Agent Skill supports every language TestMu AI runs Appium tests on. Each language guide below covers its frameworks as tabs.
-
-| Language | Frameworks | Guide |
-|----------|-----------|-------|
-| Java | JUnit, JBehave, Cucumber, TestNG | [Appium with Java](/docs/appium-java/) |
-| JavaScript | WebDriverIO, Mocha | [Appium with JavaScript](/docs/appium-nodejs/) |
-| Python | Behave, Robot, Gauge, PyTest | [Appium with Python](/docs/appium-python/) |
-| Ruby | Cucumber, RSpec | [Appium with Ruby](/docs/appium-ruby/) |
-| PHP | Behat | [Appium with PHP](/docs/appium-php/) |
-| C# | NUnit | [Appium with C#](/docs/appium-csharp/) |
-| Kotlin | N/A | [Appium with Kotlin](/docs/appium-kotlin/) |
-| Flutter | N/A | [Testing Flutter Apps](/docs/testing-flutter-apps/) |
-
 ## Supported AI Tools
 
 Pick the tool you use and install the skill to the corresponding path.

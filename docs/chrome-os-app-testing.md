@@ -58,7 +58,11 @@ This document outlines how you can leverage the features like mark as bug, chang
 </video>
 
 ## Device Controls
-This transcend basic volume adjustments and lock/unlock functionalities. It empowers you to interact with the emulated ChromeOS device programmatically, automating tasks and integrating them within your testing scripts. This gives you fine-grained control over the device's state, tailoring the testing environment to your specific needs.
+The Device Control feature allows you tp perform certain actions with your device  within your current test session:
+
+- **Home:** Use this option to navigate to the device's home screen during a manual session.
+- **Volume:** Adjust the device volume directly within your testing session, ensuring optimal audio levels for your tests.
+- **Lock Device :** Lock or unlock your device seamlessly during testing sessions without interrupting your workflow.
 
 <video class="right-side" width="80%" controls id="vid">
 <source src= {require('../assets/videos/real-time/chromeos-app/device-control.mp4').default} style={{ height: '300px' }} type="video/mp4" />
@@ -84,7 +88,7 @@ This allows you to record a video of your testing session, providing a detailed 
 </video>
  
 ## Gallery
-Serves as your central hub for all captured screenshots and recorded sessions from your ChromeOS testing endeavors. This eliminates the need to search for these assets across different locations. The Gallery provides easy access, allowing you to review, download, and organize your testing assets effortlessly.
+All screenshots and video recordings from test sessions are stored in the Gallery. To access, select Gallery from the left toolbar and you'll find the saved screenshots and videos. To download the screenshots or videos to your local machine, click on the Download icon. You can also mark them as bug by clicking on the Bug icon. To mark multiple screenshots as bugs, select the screenshots using the checkbox option, then click "Mark as Bug."
  
 <video class="right-side" width="80%" controls id="vid">
 <source src= {require('../assets/videos/real-time/chromeos-app/gallery.mp4').default} style={{ height: '300px' }} type="video/mp4" />
@@ -104,7 +108,7 @@ This transcends basic location selection. It allows you to spoof the IP address 
 <img loading="lazy" src={require('../assets/videos/real-time/chromeos-app/ip-location.png').default} style={{ height: '350px' }} className="doc_img"/>
  
 ## Network Throttling
-It goes beyond simply simulating different network speeds (3G, 4G). It empowers you to create custom network setups, allowing you to test your app's behavior under a wide range of bandwidth limitations and network configurations. This is crucial for optimizing app performance and ensuring a seamless user experience even in areas with limited or unreliable internet connectivity.
+<BrandName />'s network throttling feature empowers you to simulate real-world network conditions (Offline, Slow 3G, Fast 3G, 4G, 5G and Custom) during testing. This allows you to assess your application performance under varying internet speeds, ensuring a seamless user experience across different network environments. You can leverage predefined network profiles or craft custom settings for comprehensive testing.
   
 <img loading="lazy" src={require('../assets/videos/real-time/chromeos-app/network.png').default} style={{ height: '350px' }} className="doc_img"/>
  

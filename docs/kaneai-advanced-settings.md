@@ -196,7 +196,7 @@ Choose one of the following actions to save your settings changes.
 | Action | What it does | When to use |
 |---|---|---|
 | **Apply Settings** | Saves the settings and generates a new version with regenerated code. The test case stays on the Test Summary page. | The setting changes do not affect the test steps. |
-| **Edit Test Steps** | Saves the settings and opens the playground so you can adjust the test steps. | The updated settings may require changes to the test flow. |
+| **Edit Test Steps** | Saves the settings and opens the playground so you can adjust the test steps. The session opens in the **Paused** state with the cursor at the bottom-most step, so step editing is available right away. See [Authoring Session](/support/docs/kaneai-authoring-session/). | The updated settings may require changes to the test flow. |
 
 ## Version History
 ***

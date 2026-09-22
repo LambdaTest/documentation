@@ -179,6 +179,13 @@ export default function Home() {
             </div>
           </div>
           <div className="product_section">
+            <h2 className="product_section_label"><Icon light="analytics-light-icon.svg" dark="analytics-dark-icon.svg" alt="" />Performance Testing &nbsp;<NewTag value="NEW" /></h2>
+            <div className="product_grid">
+              <a href="/support/docs/hyperexecute-run-jmeter-tests/"><span className="ps_title">JMeter Testing</span><span className="ps_desc">Run JMeter performance tests</span></a>
+              <a href="/support/docs/hyperexecute-gattling-testing/"><span className="ps_title">Gatling Testing</span><span className="ps_desc">Run Gatling performance tests</span></a>
+            </div>
+          </div>
+          <div className="product_section">
             <h2 className="product_section_label"><Icon light="visual-light-icon.svg" dark="visual-dark-icon.svg" alt="" />SmartUI</h2>
             <div className="product_grid">
               <a href="/support/docs/smart-visual-regression-testing/"><span className="ps_title">Getting Started</span><span className="ps_desc">Run your first visual test</span></a>

@@ -1,5 +1,6 @@
 ---
 id: agent-assurance-scenarios
+toc_max_heading_level: 2
 title: Generate and Manage Agent Assurance Test Scenarios
 hide_title: false
 sidebar_label: Scenarios
@@ -27,6 +28,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     ]
   }) }}
 />
+
 
 # Generate and Manage Agent Assurance Test Scenarios
 

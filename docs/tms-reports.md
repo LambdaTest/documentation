@@ -122,6 +122,10 @@ The report data can be filtered using Test, Issue, and Run metadata.
 
 The insights section provides a comprehensive project level data overview of key Test Manager features, including Projects, Test Plans, Builds, and Test Cases, available at both the project and organizational levels.
 
+:::note
+Archived test cases are excluded from every count and coverage metric on this dashboard. The exclusion applies to historical data as well, so archiving a test case changes the numbers for past periods. Reports you have already generated are not affected. See [Archive and Restore Test Cases](/support/docs/test-case-archive/).
+:::
+
 1. The insights is segregated on various parameters such as
 
 - **Total Test Cases:** Provides a count of all test cases created.

@@ -76,8 +76,6 @@ k6 browser module aims to provide rough compatibility with the Playwright API, s
 2. In order to run your k6 tests, you will need to set your <BrandName /> username and access key in the environment
    variables. Click the **Access Key** button at the top-right of the Automation Dashboard to access it.
 
-<img loading="lazy" src={require('../assets/images/playwright-testing/key.webp').default} alt="Image" width="1444"
-height="703"  className="doc_img"/>
 
 **Windows**
 
@@ -180,13 +178,9 @@ K6_BROWSER_ENABLED=true k6 run k6_sample.js
 
 ***
 
-The <BrandName /> Automation Dashboard is where you can see the results of your k6 tests after running them on the <BrandName /> platform.
+The <BrandName /> Automation Dashboard is where you can see the results of your k6 tests after running them on the <BrandName /> platform. On clicking the session name of the respective test, you can view the test execution details such as Test Name, Test ID, selected configurations, test logs, basic info, input config, and test session video.
 
-The below screenshot of <BrandName /> Automation Dashboard shows the k6 build on the left and the build sessions associated with the selected build on the right.
-
-<img loading="lazy" src={require('../assets/images/k6-testing/k6-dashboard.png').default} alt="Image" width="1444"
-height="703"  className="doc_img"/>
-
-On clicking the session name of the respective test, you can view the details of k6 test session that you just executed. For example, the below screenshot shows a test execution details of k6 test like Test Name, Test ID, selected configurations, test logs, basic info, input config, and test session video.
+<img loading="lazy" src={require('../assets/images/k6-testing/k6-dashboard.png').default} alt="TestMu AI Automation dashboard showing a passed k6 test session with command logs and session video" width="1444"
+height="780"  className="doc_img"/>
 
 ----

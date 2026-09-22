@@ -848,7 +848,7 @@ preDirectives:
 
                 <details>
                 <summary>Can I integrate my reporting tool with HyperExecute?</summary>
-                <p>Yes. You can integrate HyperExecute with your reporting tool by calling its APIs in the post-steps using the YAML. HyperExecute is also adding more integrations with popular reporting tools. You can request new integrations by emailing us at hyperexecute@lambdatest.com.</p>
+                <p>Yes. You can integrate HyperExecute with your reporting tool by calling its APIs in the post-steps using the YAML. HyperExecute is also adding more integrations with popular reporting tools. You can request new integrations by emailing us at hyperexecute@testmuai.com.</p>
                 </details>
 
                 <details>

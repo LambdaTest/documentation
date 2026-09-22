@@ -2,7 +2,7 @@
  * Swizzled from @docusaurus/theme-classic DocRoot/Layout/Sidebar.
  *
  * The Skills doc (/support/docs/agent-skills/) is given the SAME dedicated
- * sidebar as the FAQ page: the SharedSidebar (Status / Community / Blog) with a
+ * sidebar as the FAQ page: the SharedSidebar (Status / Blog) with a
  * highlighted "Skills" link in place of FAQ's "FAQ" link. Every other doc keeps
  * the default Docusaurus sidebar untouched.
  */

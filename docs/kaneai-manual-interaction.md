@@ -46,7 +46,7 @@ canonical: https://www.testmuai.com/support/docs/kaneai-manual-interaction/
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "KaneAI Manual Interaction Mode",
+          "name": "Manual Interaction in KaneAI",
           "item": "https://www.testmuai.com/support/docs/kaneai-manual-interaction/"
         }]
       })
@@ -74,41 +74,42 @@ Manual Interaction is available for:
 ## How Manual Interaction Works
 ***
 
-While you are in Authoring mode, you can enable Manual Interaction by clicking the Manual Interaction button. Once enabled, you can directly interact with the application under test.
+Manual Interaction is **always active while your session is in the Authoring Steps state**. There is nothing to switch on. Every action you perform such as clicking, typing, scrolling, or navigating through screens is automatically captured by the agent and converted into natural language test steps. You do not need to describe these actions in words.
 
-Every action you perform such as clicking, typing, scrolling, or navigating through screens is automatically captured by the agent and converted into natural language test steps. You do not need to describe these actions in natural language while Manual Interaction is active.
+Captured steps append to the end of the step list, exactly like instructions you type, because the cursor is pinned to the bottom in the Authoring Steps state.
 
-When you want to switch back to writing instructions in plain language, simply click Turn off Manual Interaction. From that point onward, the agent will again follow natural language commands.
+You can freely mix the two ways of authoring in a single session: type an instruction when typing is easier, interact with the application when interacting is easier, and use slash commands for structured inputs. This needs no mode switching — the cursor controls where each new step lands regardless of how you created it.
+
+When you want to interact with the application *without* those actions becoming steps, use [Pause Recording](#pause-recording). For the full session model — the states, the cursor, and the run actions — see [Authoring Session](/support/docs/kaneai-authoring-session/).
 
 ### Pause Recording
 ***
 
-While you are in a Manual Interaction session, you can temporarily pause recording so that your actions are not captured as test steps. This is useful when you need to log in, navigate to a specific screen, dismiss unrelated dialogs, or explore the app without cluttering the step list. The session enters a draft state where the application remains fully interactable, but no steps are added to the step list.
+Pausing the session is how you stop capture. Use it when you need to log in, navigate to a specific screen, dismiss an unrelated dialog, or explore the application without cluttering the step list. The application stays fully interactive, but no steps are added to the step list.
 
-**How to use Pause Recording**
+**How to pause and resume**
 
-1. Open an active Authoring or playground session.
+1. Open an active authoring session. It starts in **Authoring Steps**, where the application view shows a *Recording steps* indicator.
 
-2. With Manual Interaction enabled, click **Pause Recording** in the Manual Interaction toolbar.
+2. Click **Pause**, which sits above the step list. The session moves into the **Paused** state, and the application view confirms it with a *Step recording paused* indicator.
 
-<img loading="lazy" src={require('../assets/images/kane-ai/features/manual-interaction/pause-recording-toolbar.png').default} alt="Manual Interaction toolbar showing the Pause Recording control" className="doc_img img_center"/>
+<img loading="lazy" src={require('../assets/images/kane-ai/features/manual-interaction/pause-recording-toolbar.png').default} alt="The Pause control in an authoring session" className="doc_img img_center"/>
 
 3. If a confirmation dialog appears, confirm to proceed. The dialog is shown by default and is suppressed once you select **Don't show again** on it.
 
 <img loading="lazy" src={require('../assets/images/kane-ai/features/manual-interaction/pause-recording-confirmation.png').default} alt="Pause Recording confirmation dialog" className="doc_img img_center"/>
 
-4. Interact with the application freely. Pages load, forms accept input, and navigation works as expected, but the step list stops growing. The session transitions to Draft state.
+4. Interact with the application freely. Pages load, forms accept input, and navigation works as expected, but the step list stops growing.
 
-<img loading="lazy" src={require('../assets/images/kane-ai/features/manual-interaction/pause-recording-draft-state.png').default} alt="Manual Interaction session in the draft state with the paused indicator and Start recording control" className="doc_img img_center"/>
+<img loading="lazy" src={require('../assets/images/kane-ai/features/manual-interaction/pause-recording-draft-state.png').default} alt="Authoring session in the Paused state" className="doc_img img_center"/>
 
-5. Click **Start recording** when you are ready to capture steps again.
+5. Click **Resume** when you are ready to capture steps again. Resume does not restart your device — the application stays exactly where it is, and the cursor returns to the bottom-most step.
 
-<img loading="lazy" src={require('../assets/images/kane-ai/features/manual-interaction/start-recording-toolbar.png').default} alt="Manual Interaction toolbar showing the Start recording control while the session is paused" className="doc_img img_center"/>
+<img loading="lazy" src={require('../assets/images/kane-ai/features/manual-interaction/start-recording-toolbar.png').default} alt="The Resume control while the session is paused" className="doc_img img_center"/>
 
-**What to expect while paused**
+**What you can do while paused**
 
-- The application is fully interactable. Only the recorder is paused.
-- The step list stays exactly as it was at the moment you paused.
+Paused is more than a capture switch — it is where you restructure a test. Alongside interacting with the application without being recorded, you can edit, duplicate, and delete steps; select several steps at once to group them into a module or delete them together; place the cursor anywhere and insert steps at that point; and run the whole test, a range of steps, or a single step. The step list stays exactly as it was at the moment you paused, apart from changes you make deliberately. See the [state capability table](/support/docs/kaneai-authoring-session/#what-each-state-allows).
 
 
 ### Instruction Types You Cannot Record
@@ -132,9 +133,13 @@ Each recorded step clearly shows how it was created - via natural language or ma
 ### Editing Manual Interaction Steps
 ***
 
+Editing steps is available while the session is **Paused**.
+
 Once a step is recorded using Manual Interaction, editing options are intentionally limited to preserve the accuracy of the recorded action. Currently, only the locator name can be edited for manual interaction steps.
 
 You cannot modify the action type, element behavior, or interaction flow after recording. If the recorded step does not match the intended behavior, it is recommended to delete the step and record it again using Manual Interaction, or recreate it using a natural language instruction.
+
+Editing a step that had already run and passed returns it to the **Queued** status and marks it as edited, which means it needs to run again before the test can be saved as Ready. See [Step Statuses](/support/docs/kaneai-authoring-session/#step-statuses).
 
 This ensures that recorded steps remain consistent with the actual UI interaction performed during the session.
 
@@ -198,7 +203,7 @@ This is useful when you already know the exact flow and want KaneAI to capture i
 
 <img loading="lazy" src={require('../assets/images/kane-ai/features/manual-interaction/kaneai-records-each-action-automatically-as-test-steps.webp').default} alt="Record Full Workflow" className="doc_img img_center"/>
 
-5. Once the workflow is complete, click Turn off Manual Interaction.
+5. Once the workflow is complete, pause the session to stop capturing further actions.
 
 6. Review the generated steps and add assertions using natural language where needed by pausing the test.
 <img loading="lazy" src={require('../assets/images/kane-ai/features/manual-interaction/assertions-using-natural-language.webp').default} alt="Record Full Workflow" className="doc_img img_center"/>
@@ -212,7 +217,7 @@ Ideal for infinite scroll lists or carousels that load items on demand.
 
 **Steps:**
 
-1. Start Authoring mode and enable Manual Interaction.
+1. Start an authoring session. Capture is active while the session is in the Authoring Steps state.
 
 2. Scroll through the list or carousel until the desired element becomes visible.
 
@@ -220,7 +225,7 @@ Ideal for infinite scroll lists or carousels that load items on demand.
 
 3. Click or interact with the loaded element.
 
-4. Turn off Manual Interaction after the interaction is captured.
+4. Pause the session after the interaction is captured, so you can add assertions without recording.
 
 5. Add assertions to verify the correct item or state using natural language.
 <img loading="lazy" src={require('../assets/images/kane-ai/features/manual-interaction/assertions-to-verify-the-correct-item-or-state-using-natural-language.webp').default} alt="Lazy-Loaded Elements" className="doc_img img_center"/>
@@ -268,9 +273,7 @@ This use case applies when you need to move or adjust an element using a click a
 
 5. KaneAI records the click and drag action as a test step.
 
-6. Turn off Manual Interaction.
-
-7. Add an assertion in natural language to verify the final state. 
+6. Add an assertion in natural language to verify the final state. 
 
 <img loading="lazy" src={require('../assets/images/kane-ai/features/manual-interaction/assertion-in-natural-language-to-verify-the-final-state.webp').default} alt="Click and Drag" className="doc_img img_center"/>
 
@@ -295,9 +298,7 @@ Sliders are often easier to handle using Manual Interaction rather than describi
 
 5. KaneAI records the slider movement as a test step.
 
-6. Turn off Manual Interaction.
-
-7. Add an assertion in natural language to verify the final value or state. For example, verify that the selected range or value is displayed correctly.
+6. Add an assertion in natural language to verify the final value or state. For example, verify that the selected range or value is displayed correctly.
 
 <img loading="lazy" src={require('../assets/images/kane-ai/features/manual-interaction/assertion-in-natural-language-to-verify-the-final-value.webp').default} alt="Adjust Sliders (Web)" className="doc_img img_center"/>
 
@@ -402,11 +403,11 @@ Renaming changes a step's display name without changing how it works.
 ### How to Rename a Step
 ***
 
-1. Ensure the authoring session is running and the relevant step is visible.
-2. Pause the session. Renaming works only in the Draft session state, after the session is paused.
+1. Ensure the authoring session is open and the relevant step is visible.
+2. Pause the session. Renaming is available only while the session is **Paused**, along with the other step editing actions. See [Session states](/support/docs/kaneai-authoring-session/#session-states).
 3. Click the step name to make it editable.
 4. Enter the new name and press **Enter** or click outside to save.
-5. Resume the session.
+5. Click **Resume**. Your device is not restarted and no steps are re-run — the session simply returns to Authoring Steps, with the cursor back at the bottom-most step.
 
 **Result:** The step displays its new name in the step list and in the execution command logs; the instruction logic and behavior remain unchanged.
 

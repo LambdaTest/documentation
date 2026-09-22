@@ -191,7 +191,7 @@ Selenium Locator auto-healing adjusts locators by merging attributes and context
 
 When an element is successfully located on the page, its DOM path is recorded for later use. If that same element is later referenced on the same page and is missing, the system evaluates the current page and generates new locators for altered elements based on previous benchmarks.
 
-<img loading="lazy" src={require('../assets/images/selenium/auto-heal.png').default} alt="Auto Healing workflow diagram showing how broken locators are detected and recovered" width="1346" height="647" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/selenium/auto-heal.webp').default} alt="TestMu AI Automation dashboard showing an auto-healed locator during a test run, with the Healed Selector and Original Selector in the command log" width="1605" height="787" className="doc_img"/>
 
 
 ## Auto Detection of New Locator

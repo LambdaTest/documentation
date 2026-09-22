@@ -133,7 +133,7 @@ const capabilities = {
 ```
 
 :::tip
-Use the [Playwright capability generator](https://www.lambdatest.com/capabilities-generator/) to select from a range of options for customizing your tests.
+Use the [Playwright capability generator](https://www.testmuai.com/capabilities-generator/) to select from a range of options for customizing your tests.
 :::
 
 ## Step 4: Execute Your Test
