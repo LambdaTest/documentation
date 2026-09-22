@@ -120,13 +120,13 @@ The Upload and Download Files feature allows you to manage files directly within
 <Tabs className="docs__val">
 <TabItem value="web-browser" label="Web Browser" default>
 
-**Step 1 :** Log in to the [Web Browser Testing](https://www.testmuai.com/login/?redirectTo=https://app.lambdatest.com/console/realtime/browser/desktop) dashboard.
+**Step 1 :** Log in to the [Web Browser Testing](https://app.lambdatest.com/console/realtime/browser/desktop) dashboard from the **Real Time → Web Browser Testing** section.
 
 **Step 2 :** Select your required OS and relevant browser, and device from the listing to launch your test session.
 
 **Step 3 :** Click on Files and Media from the toolbar.
 
-**Step 4 :** Click **Uploads / Downloads** button Upload or Download the file.
+**Step 4 :** Click **Uploads / Downloads** button to upload or download the file.
 
 <img loading="lazy" src={require('../assets/images/real-time-testing/key-features/upload-download-web-browser.png').default} alt="zebrunner integration" width="1281" height="722" className="doc_img"/>
 
@@ -134,13 +134,13 @@ The Upload and Download Files feature allows you to manage files directly within
 
 <TabItem value="mobile-browser" label="Mobile Browser" default>
 
-**Step 1 :** Log in to the [Virtual Mobile](https://www.testmuai.com/login/?redirectTo=https://app.lambdatest.com/console/realtime/browser/mobile) dashboard from the **Web Browser Testing** section.
+**Step 1 :** Log in to the [Virtual Mobile](https://app.lambdatest.com/console/realtime/browser/mobile) dashboard from the **Real Time → Web Browser Testing** section.
 
 **Step 2 :** Select your required OS and relevant browser, and device from the listing to launch your test session.
 
 **Step 3 :** Click on Files and Media from the toolbar.
 
-**Step 4 :** Click **Uploads / Downloads** button Upload or Download the file.
+**Step 4 :** Click **Uploads / Downloads** button to upload or download the file.
 
 <img loading="lazy" src={require('../assets/images/real-time-testing/key-features/upload-download-mobile-browser.png').default} alt="zebrunner integration" width="1281" height="722" className="doc_img"/>
 
@@ -148,13 +148,13 @@ The Upload and Download Files feature allows you to manage files directly within
 
 <TabItem value="mobile-app" label="Mobile App" default>
 
-**Step 1 :** Log in to the [Virtual Mobile](https://www.testmuai.com/login/?redirectTo=https://app.lambdatest.com/console/realtime/app) dashboard from the **App Testing** section.
+**Step 1 :** Log in to the [Virtual Mobile](https://app.lambdatest.com/console/realtime/app) dashboard from the **Real Time → App Testing** section.
 
 **Step 2 :** Select your OS and the required device, upload your app and then launch your test session.
 
 **Step 3 :** Click on Files and Media from the toolbar.
 
-**Step 4 :** Click **Uploads / Downloads** button Upload or Download the file.
+**Step 4 :** Click **Uploads / Downloads** button to upload or download the file.
 
 <img loading="lazy" src={require('../assets/images/real-time-testing/key-features/upload-download-app.png').default} alt="zebrunner integration" width="1281" height="722" className="doc_img"/>
 
@@ -162,13 +162,13 @@ The Upload and Download Files feature allows you to manage files directly within
 
 <TabItem value="chrome-os" label="ChromeOS" default>
 
-**Step 1 :** Log in to the [Virtual Mobile](https://www.testmuai.com/login/?redirectTo=https://app.lambdatest.com/console/realtime/browser/mobile) dashboard from the **Web Browser Testing** section.
+**Step 1 :** Log in to the [Virtual Mobile](https://app.lambdatest.com/console/realtime/browser/mobile) dashboard from the **Real Time → Web Browser Testing** section.
 
 **Step 2 :** Select your required ChromeOS and relevant browser, and device from the listing to launch your test session.
 
 **Step 3 :** Click on Files and Media from the toolbar.
 
-**Step 4 :** Click **Uploads / Downloads** button Upload or Download the file.
+**Step 4 :** Click **Uploads / Downloads** button to upload or download the file.
 
 <img loading="lazy" src={require('../assets/images/real-time-testing/key-features/upload-download-chromeos.png').default} alt="zebrunner integration" width="1281" height="722" className="doc_img"/>
 
@@ -176,13 +176,13 @@ The Upload and Download Files feature allows you to manage files directly within
 
 <TabItem value="chrome-os-app" label="ChromeOS App" default>
 
-**Step 1 :** Log in to the [Virtual Mobile](https://www.testmuai.com/login/?redirectTo=https://app.lambdatest.com/console/realtime/app) dashboard from the **App Testing** section.
+**Step 1 :** Log in to the [Virtual Mobile](https://app.lambdatest.com/console/realtime/app) dashboard from the **Real Time → App Testing** section.
 
 **Step 2 :** Select your ChromeOS and the required device, upload your app and then launch your test session.
 
 **Step 3 :** Click on Files and Media from the toolbar.
 
-**Step 4 :** Click **Uploads / Downloads** button Upload or Download the file.
+**Step 4 :** Click **Uploads / Downloads** button to upload or download the file.
 
 <img loading="lazy" src={require('../assets/images/real-time-testing/key-features/upload-download-chromeos-app.png').default} alt="zebrunner integration" width="1281" height="722" className="doc_img"/>
 
