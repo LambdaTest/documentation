@@ -118,6 +118,7 @@ The Device Controls feature allows you to simulate various actions on your test 
 **Note:** For iOS, the Clear Cache option is also available.
 
 <img loading="lazy" src={require('../assets/images/real-time-testing/mobile-browser/device-control.png').default} alt="Image" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/real-time-testing/mobile-browser/ios-device-control.png').default} alt="Image" className="doc_img"/>
 
 ## Screenshot
 Capture high-quality screenshots of the current screen on your test device instantly. Screenshots are essential for documenting bugs, UI issues, and other anomalies during testing. Click on the Screenshot icon in the sidebar to take a snapshot of the current screen and will automatically start downloading in your local machine and it will be saved in the [gallery](/support/docs/real-time-mobile-browser-testing-tools/#gallery) as well.
