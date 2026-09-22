@@ -72,7 +72,13 @@
                       "docs/kane-cli-testmd-running"
                     ]
                   },
-                  "docs/kane-cli-testrun"
+                  {
+                    "group": "Batch Runs (testrun)",
+                    "pages": [
+                      "docs/kane-cli-testrun",
+                      "docs/kane-cli-remote-execution"
+                    ]
+                  }
                 ]
               },
               "docs/kane-cli-mobile",
@@ -100,6 +106,7 @@
                   "docs/kane-cli-assurance-design",
                   "docs/kane-cli-assurance-coverage",
                   "docs/kane-cli-assurance-maintain",
+                  "docs/kane-cli-assurance-sharing",
                   "docs/kane-cli-assurance-automation"
                 ]
               },
