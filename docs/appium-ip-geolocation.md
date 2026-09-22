@@ -329,6 +329,11 @@ Below is the list of supported countries along with their respective country cod
 | Wilmington, Delaware (US)         | US/WILM  |
 
 
+:::note
+IP geolocation is provided by third-party geo vendors, and the availability of geolocation country code/IP may vary based on IP database updates, coverage, and other vendor-specific factors. For geolocation IP verification, you can use a trusted third-party service such as [MaxMind](https://www.maxmind.com/en/locate-my-ip-address).
+:::
+
+
 
 
 <nav aria-label="breadcrumbs">

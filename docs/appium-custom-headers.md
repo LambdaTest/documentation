@@ -316,6 +316,10 @@ X-Session-ID: 1234567890 //custom header X-Session-ID to track user sessions.
 X-Session-ID: 1234567890 //custom header X-Session-ID to track user sessions.
 ```
 
+:::note
+Custom header injection is not provided for Real Device Manual Sessions, as custom headers must be configured before the session is launched.
+:::
+
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
