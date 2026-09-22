@@ -142,7 +142,7 @@ By setting these parameters, QAs can ensure that the Appium server accurately ta
 ## Test configuration
 | KEY | VALUES | CAPABILITY DESCRIPTION | SUPPORTED ON |
 |-----|--------| -----------------------|--------------|
-| build | TYPE: STRING <br/> DEFAULT: Untitled <br/> `build=iOS Small Run` | You can group your tests like a job containing multiple tests. | <VirtualDeviceTag value="Virtual Device" />  <RealDeviceTag value="Real Device" /> |
+| build | TYPE: STRING <br/> DEFAULT: Untitled <br/> `build=iOS Small Run` | You can group your tests like a job containing multiple tests. Build grouping follows the UTC date. Once the date changes to the next day at 00:00 UTC, a new build is created even if the same build name is used. | <VirtualDeviceTag value="Virtual Device" />  <RealDeviceTag value="Real Device" /> |
 | name | TYPE: STRING <br/> DEFAULT: TestID of the Test. In case the Name is not passed. <br/> `name=iphone 6 Small Run` | Name of your test. | <VirtualDeviceTag value="Virtual Device" />  <RealDeviceTag value="Real Device" /> |
 | project | Will remain blank in case 'project' is not passed in capability. <br/> `project=Small Run` | You can group your builds like a project containing multiple jobs. | <VirtualDeviceTag value="Virtual Device" />  <RealDeviceTag value="Real Device" /> |
 | queueTimeout | TYPE: Integer <br/> DEFAULT: 600 <br/> `queueTimeout=300` | This capability can be used to modify the Queue timeout value within a range. queueTimeout Range : 300-900. | <VirtualDeviceTag value="Virtual Device" />  <RealDeviceTag value="Real Device" /> |
