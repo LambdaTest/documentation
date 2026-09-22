@@ -1,8 +1,9 @@
 ---
 id: hyperexecute-maestro-testing
-title: Execute Maestro Framework Tests on HyperExecute
+title: How to Run Maestro Tests on HyperExecute
 sidebar_label: Maestro
-description: Follow the instructions in this documentation, so that you can seamlessly execute Maestro tests on HyperExecute via TestMu AI.
+toc_max_heading_level: 2
+description: Learn to run Maestro mobile app tests on HyperExecute, as plain Maestro flows or with Cucumber BDD, covering setup, YAML config, execution, and JUnit reporting.
 keywords:
   - maestro
   - raw
@@ -25,7 +26,6 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
-
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
        "@context": "https://schema.org",
@@ -43,7 +43,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "Getting Started With Maestro Testing on TestMu AI",
+          "name": "How to Run Maestro Tests on HyperExecute",
           "item": `${BRAND_URL}/support/docs/hyperexecute-maestro-testing/`
         }]
       })
@@ -61,8 +61,8 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       "@type": "WebPage",
       "@id": "https://www.testmuai.com/support/docs/hyperexecute-maestro-testing/"
     },
-    "headline": "Execute Maestro Framework Tests on HyperExecute",
-    "description": "Follow the instructions in this documentation, so that you can seamlessly execute Maestro tests on HyperExecute via TestMu AI.",
+    "headline": "How to Run Maestro Tests on HyperExecute",
+    "description": "Learn to run Maestro mobile app tests on HyperExecute, as plain Maestro flows or with Cucumber BDD, covering setup, YAML config, execution, and JUnit reporting.",
     "url": "https://www.testmuai.com/support/docs/hyperexecute-maestro-testing/",
     "image": {
       "@type": "ImageObject",
@@ -161,8 +161,8 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     {
       "@context": "https://schema.org",
       "@type": "HowTo",
-      "name": "Execute Maestro Framework Tests on HyperExecute",
-      "description": "Follow the instructions in this documentation, so that you can seamlessly execute Maestro tests on HyperExecute via TestMu AI.",
+      "name": "How to Run Maestro Tests on HyperExecute",
+      "description": "Learn to run Maestro mobile app tests on HyperExecute, as plain Maestro flows or with Cucumber BDD, covering setup, YAML config, execution, and JUnit reporting.",
       "step": [
         {
           "@type": "HowToStep",
@@ -218,7 +218,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     {
       "@context": "https://schema.org",
       "@type": "HowTo",
-      "name": "Additional Information: Launching Pre-Installed Apps with Maestro",
+      "name": "Launching Pre-Installed Apps with Maestro",
       "description": "In some cases, you may want to test against a pre-installed application on the device (instead of uploading and installing a new APK/IPA). Maestro supports this by allowing you to specify the app\u2019s package identifier (Android) or bundle identifier (iOS) in your test configuration.",
       "step": [
         {
@@ -247,7 +247,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
   ]) }}
 />
 
-This page outlines how to execute your Maestro tests on HyperExecute with [YAML 0.2](/support/docs/hyperexecute-yaml-version0.2/)
+This page outlines how to execute your Maestro tests on HyperExecute with [YAML 0.2](/support/docs/hyperexecute-yaml-version0.2/). You can run your tests as standard **Maestro** flows or with **Cucumber (BDD)**. The **Prerequisites**, **CLI setup**, and **app upload** are common to both. Then follow the section for your approach, **Maestro** or **Maestro with Cucumber (BDD)**, and finish with the shared reporting step.
 
 ## Prerequisites
 To run the Tests on HyperExecute from your Local System, you are required:
@@ -257,21 +257,10 @@ To run the Tests on HyperExecute from your Local System, you are required:
 - Setup the [Environmental Variable](/support/docs/hyperexecute-environment-variable-setup/)
 - [HyperExecute YAML](/support/docs/hyperexecute-yaml-version0.2/) file which contains all the necessary instructions.
 
-## Step 1: Setup Your Test Suite
-You can use your own project to configure and test it. For demo purposes, we are using the sample repository.
+## Setting Up HyperExecute CLI for Maestro
+The CLI triggers your tests on HyperExecute. Download the binary on the host system and keep it in the root directory of your test suite.
 
-:::tip Sample repo
-Download or Clone the code sample for the Maestro framework from the <BrandName /> GitHub repository to run the tests on the HyperExecute.
-<a href="https://github.com/LambdaTest/hyperexecute-maestro-sample-test" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className="doc_img"/> View on GitHub</a>
-:::
-
-## Step 2: Setup the CLI in your Test Suite
-After cloning / downloading the sample repo, you need to setup the CLI and the environment variables.
-
-### Download the HyperExecute CLI
-The CLI is used for triggering the tests on HyperExecute. It is recommend to download the CLI binary on the host system and keep it in the root directory of the suite to perform the tests on HyperExecute.
-
-You can download the CLI for your desired platform from the below mentioned links:
+You can download the CLI for your desired platform from the links below:
 
 | Platform | HyperExecute CLI |
 | ---------| ---------------- |
@@ -279,7 +268,7 @@ You can download the CLI for your desired platform from the below mentioned link
 | MacOS | https://downloads.lambdatest.com/hyperexecute/darwin/hyperexecute |
 | Linux | https://downloads.lambdatest.com/hyperexecute/linux/hyperexecute |
 
-## Step 3: Upload your Application
+## Uploading Your App for Maestro
 Upload your <b>_android_</b> application (.apk file) or <b>iOS</b> application (.ipa file) to the <BrandName /> servers using our <b>REST API</b>. You need to provide your <b>Username</b> and <b>AccessKey</b> in the format `Username:AccessKey` in the <b>cURL</b> command for authentication.
 
 :::info
@@ -295,8 +284,19 @@ Enter your local path of the code repository instead of `<YOUR_LOCAL_APP_PATH>` 
 
 > Response of above cURL will be a **JSON** object containing the `App ID` of the format - `<APP123456789012345678901234567>` and will be used in the next step.
 
-## Step 4: Configure YAML in your Test Suite
-Enter your `APP_ID` in the YAML file that you have fetched in the above step.
+## Running Maestro Tests
+Your tests are plain **Maestro flow files** that run directly on the grid, with no BDD layer on top.
+
+### Setting Up Your Test Suite
+You can use your own project to configure and test it. For demo purposes, we use the sample repository.
+
+:::tip Sample repo
+Download or Clone the code sample for the Maestro framework from the <BrandName /> GitHub repository to run the tests on the HyperExecute.
+<a href="https://github.com/LambdaTest/hyperexecute-maestro-sample-test" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className="doc_img"/> View on GitHub</a>
+:::
+
+### Configuring the HyperExecute YAML
+Enter your `APP_ID` in the YAML file that you fetched when uploading your application. Choose your target device below.
 
 <Tabs className="docs__val">
 <TabItem value="android-emu" label="Android-Emulator" default>
@@ -327,7 +327,7 @@ https://github.com/LambdaTest/hyperexecute-maestro-sample-test/blob/main/yaml/io
 </Tabs>
 > HyperExecute now supports [tunnel capabilities](/support/docs/hyperexecute-how-to-configure-tunnel/) for Maestro tests running on both virtual devices and real devices using the Raw Framework configuration.
 
-### Run Tests on iOS Virtual Devices
+**Running Tests on iOS Virtual Devices**
 To run tests on iOS Virtual Devices, make the following changes in your `hyperexecute.yaml` file:
 
 - Change the `runson` key to `ios26`.
@@ -421,7 +421,115 @@ jobLabel: ['HYP', 'Maestro', 'iOS', Simulator]
 Ensure that the app is built for ARM or Universal (Dual-Architecture) and not as an x86-only binary. As shown in the `appId` field above, use the ARM build for iOS 26.0 and above.
 :::
 
-## Step 5: Generate JUnit XML Report
+### Executing Your Test Suite
+> **NOTE :** In case of MacOS, if you get a permission denied warning while executing CLI, simply run **`chmod u+x ./hyperexecute`** to allow permission. In case you get a security popup, allow it from your **System Preferences** → **Security & Privacy** → **General tab**.
+
+<VerifiedTag value="Verified" />
+
+<div className="lambdatest__codeblock">
+  <CodeBlock className="language-bash">
+    {`./hyperexecute --user ${ YOUR_LAMBDATEST_USERNAME()} --key ${ YOUR_LAMBDATEST_ACCESS_KEY()} --config RELATIVE_PATH_OF_YOUR_YAML_FILE `}
+  </CodeBlock>
+</div>
+
+When the job completes, the [HyperExecute dashboard](https://www.testmuai.com/login/?redirectTo=https://hyperexecute.lambdatest.com/hyperexecute) shows your Maestro run and its status:
+
+<img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/maestro/maestro-run-dashboard.webp').default} alt="HyperExecute automation dashboard showing a completed Maestro run" className="doc_img"/>
+
+## Running Maestro Tests with Cucumber BDD
+Your tests are **Gherkin `.feature` files**, and Cucumber runs the same Maestro flows underneath. Compared to the Maestro path above, only the test suite layout and a couple of YAML keys change.
+
+### Setting Up Your Test Suite
+You can use your own project. For demo purposes, we use the Maestro + Cucumber sample repository.
+
+:::tip Sample repo
+Download or clone the Maestro + Cucumber sample from the <BrandName /> GitHub repository to run the tests on HyperExecute.
+<a href="https://github.com/LambdaTest/hyperexecute-maestro-cucumber-sample" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className="doc_img"/> View on GitHub</a>
+:::
+
+The suite is organized so that Cucumber sits on top of Maestro:
+
+| Path | Purpose |
+| ---- | ------- |
+| `features/` | Gherkin `.feature` files, one scenario per behavior |
+| `step_definitions/` | Glue code that maps each Gherkin step to a Maestro flow |
+| `flows/` | The underlying Maestro flow files |
+| `cucumber.js` | Cucumber profiles (`android`, `ios`) |
+
+A feature file reads as plain behavior:
+
+```gherkin
+@android @navigation
+Feature: Navigation
+
+  @regression
+  Scenario: User opens search from the home screen
+    Given the Wikipedia app is installed
+    When I launch the app
+    And I skip onboarding if shown
+    And I tap the search icon
+    Then the search input should be visible
+```
+
+### Configuring the HyperExecute YAML
+The Cucumber YAML uses the same `raw` framework as the Maestro flow, with a few additions so `cucumber-js` can drive Maestro:
+
+- A `runtime` block (Java + Node) is added so `cucumber-js` can run.
+- Tests are discovered dynamically: `testDiscovery.command` runs `./discover/<platform>.sh`, which lists the `.feature` files to execute.
+- `testRunnerCommand` runs each feature through Cucumber via `./support/run-<target>.sh $test`.
+- `partialReports` reads the JUnit XML that Cucumber writes to the `reports/` folder.
+
+<VerifiedTag value="Verified" />
+
+<Tabs className="docs__val">
+<TabItem value="android-emu" label="Android-Emulator" default>
+
+```yaml reference title="hyperexecute.yaml"
+https://github.com/LambdaTest/hyperexecute-maestro-cucumber-sample/blob/main/yaml/android/android-emulator.yaml
+```
+</TabItem>
+
+<TabItem value="android-rd" label="Android-Real Device">
+
+```yaml reference title="hyperexecute.yaml"
+https://github.com/LambdaTest/hyperexecute-maestro-cucumber-sample/blob/main/yaml/android/android-realdevice.yaml
+```
+</TabItem>
+
+<TabItem value="ios-simu" label="iOS-Simulator">
+
+```yaml reference title="hyperexecute.yaml"
+https://github.com/LambdaTest/hyperexecute-maestro-cucumber-sample/blob/main/yaml/ios/ios-simulator.yaml
+```
+</TabItem>
+
+</Tabs>
+
+:::note
+The Cucumber sample installs the app with `appPath` (drop your build into the `apps/` folder). To run against a build you already uploaded, replace `appPath` with `appId: lt://<APP_ID>`.
+:::
+
+### Executing Your Test Suite
+Run the CLI exactly as in the Maestro section, pointing `--config` at your Cucumber `hyperexecute.yaml`:
+
+<VerifiedTag value="Verified" />
+
+<div className="lambdatest__codeblock">
+  <CodeBlock className="language-bash">
+    {`./hyperexecute --user ${ YOUR_LAMBDATEST_USERNAME()} --key ${ YOUR_LAMBDATEST_ACCESS_KEY()} --config RELATIVE_PATH_OF_YOUR_YAML_FILE `}
+  </CodeBlock>
+</div>
+
+When the job completes, the HyperExecute dashboard shows your Cucumber run with each feature scenario and its status:
+
+<img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/maestro/cucumber-1.webp').default} alt="HyperExecute dashboard showing a completed Maestro with Cucumber run with passed feature scenarios" className="doc_img"/>
+
+## Generating the JUnit XML Report for Maestro
+Both approaches feed HyperExecute a **JUnit XML** report through `partialReports`, with a small difference in setup:
+
+- **Maestro**: add the `--format junit` flag to `runTest.sh` (steps below).
+- **Maestro + Cucumber**: reporting is already wired. `./support/run-<target>.sh` runs `cucumber-js` with `--format junit:reports/<feature>.xml`, and the YAML's `partialReports` (pointing at `reports/`) picks it up. You can skip step 1 below.
+
 1. Update the `runTest.sh` file to include the `--format junit` flag in the maestro test command:
 
 ```yaml
@@ -462,27 +570,10 @@ testRunnerCommand: ./maestro-test/runTest.sh $test && mv report.xml $test.xml
 
 This ensures that each test result is saved with a unique name like test1.xml, test2.xml, etc.
 
-## Step 6: Execute your Test Suite
-> **NOTE :** In case of MacOS, if you get a permission denied warning while executing CLI, simply run **`chmod u+x ./hyperexecute`** to allow permission. In case you get a security popup, allow it from your **System Preferences** → **Security & Privacy** → **General tab**.
-
-<div className="lambdatest__codeblock">
-  <CodeBlock className="language-bash">
-    {`./hyperexecute --user ${ YOUR_LAMBDATEST_USERNAME()} --key ${ YOUR_LAMBDATEST_ACCESS_KEY()} --config RELATIVE_PATH_OF_YOUR_YAML_FILE `}
-  </CodeBlock>
-</div>
-
-<img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/maestro/1.png').default} alt="JUnit HyperExecute Terminal Logs"  width="1920" height="868" className="doc_img"/>
-
-## Step 7: Monitor the Test Execution
-Visit the [HyperExecute Dashboard](https://www.testmuai.com/login/?redirectTo=https://hyperexecute.lambdatest.com/hyperexecute) and check your Job status. 
-
-<img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/maestro/2.png').default} alt="automation-dashboard"  width="1920" height="1034" className="doc_img"/>
-
-
-## Additional Information: Launching Pre-Installed Apps with Maestro
+## Launching Pre-Installed Apps with Maestro
 In some cases, you may want to test against a pre-installed application on the device (instead of uploading and installing a new APK/IPA). Maestro supports this by allowing you to specify the app’s package identifier (Android) or bundle identifier (iOS) in your test configuration.
 
-### Step 1: Identify the App ID (Package Name / Bundle ID)
+### Identifying the App ID (Package Name / Bundle ID)
 #### For Android:
   - Visit the app’s page on the Google Play Store.
   - The id parameter in the URL is the package name.
@@ -491,7 +582,7 @@ In some cases, you may want to test against a pre-installed application on the d
 #### For iOS:
   - Identify the bundle identifier (e.g., com.apple.Preferences for Settings).
 
-### Step 2: Update Your HyperExecute Configuration
+### Updating Your HyperExecute Configuration
 You can configure your YAML files to launch the pre-installed app instead of uploading a new one.
 
 ```yaml title="hyperexecute.yaml"
@@ -509,7 +600,7 @@ and the launcher yaml file to tells maestro to use the pre-installed Wikipedia a
 https://github.com/LambdaTest/hyperexecute-maestro-sample-test/blob/main/yaml/android/android-launch.yaml
 ```
 
-### Step 3: Execute your Test Suite
+### Executing Your Test Suite
 > **NOTE :** In case of MacOS, if you get a permission denied warning while executing CLI, simply run **`chmod u+x ./hyperexecute`** to allow permission. In case you get a security popup, allow it from your **System Preferences** → **Security & Privacy** → **General tab**.
 
 <div className="lambdatest__codeblock">
