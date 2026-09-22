@@ -554,6 +554,49 @@ set SMARTUI_API_PROXY=http://172.17.0.1:3128
 
 > **Note**: Replace the IP address and port with the appropriate values for your environment.
 
+### **Step 3.2:** Configure your <BrandName /> Credentials (Storybook URL only)
+
+When you pass a Storybook URL to the CLI (a local dev server or a hosted Storybook), the CLI starts a <BrandName /> tunnel so that SmartUI can load your stories. The tunnel needs your <BrandName /> username and access key. You can skip this step if you only run tests on a `storybook-static` directory.
+
+<Tabs className='docs__val' groupId='language'>
+<TabItem value='MacOS/Linux' label='MacOS/Linux' default>
+
+<div className="lambdatest__codeblock">
+  <CodeBlock className="language-bash">
+  {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
+export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
+  </CodeBlock>
+</div>
+
+</TabItem>
+<TabItem value='Windows' label='Windows (CMD)'>
+
+<div className="lambdatest__codeblock">
+  <CodeBlock className="language-bash">
+  {`set LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
+set LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
+  </CodeBlock>
+</div>
+
+</TabItem>
+<TabItem value='PowerShell' label='PowerShell'>
+
+<div className="lambdatest__codeblock">
+  <CodeBlock className="language-powershell">
+  {`$env:LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
+$env:LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
+  </CodeBlock>
+</div>
+
+</TabItem>
+</Tabs>
+
+You can also pass them on the command line with `--userName` and `--accessKey`. Command-line values take precedence over the environment variables.
+
+:::note
+Tunnel-based rendering of Storybook URLs is available from `@lambdatest/smartui-storybook` version `1.2.0`. Run `npm install @lambdatest/smartui-storybook@latest -g` to upgrade.
+:::
+
 ### **Step 4:** Create and Configure SmartUI Config
 
 You can now configure your project settings on using various available options to run your tests with the SmartUI integration. To generate the configuration file, please execute the following command:
@@ -601,6 +644,7 @@ Please read the following table for more information about the configuration fil
 | exclude        | Don't compare the stories which should be excluded in SmartUI tests <br/> Ex: `"/login/","/marketing/"`                            | Optional  |
 | backgroundTheme | Theme for capturing stories. Options: `"light"`, `"dark"`, or `"both"` (captures both themes) <br/> Ex: `"light"` | Optional (default: `"light"`) |
 | useGlobals     | Enable Storybook global decorators and parameters (required for theme switching) <br/> Ex: `true` | Optional (default: `false`) |
+| chunkSize      | Number of stories SmartUI renders together in one batch. For a Storybook URL, values below `25` are raised to `25` and values above `100` are lowered to `100`. Lower it if you configure many browsers and viewports, because each batch renders every browser and viewport combination. <br/> Ex: `50` | Optional (default: `50` for a Storybook URL, `100` for a static build) |
 
 :::note
 SmartUI Storybook testing now supports `Edge` browser.
@@ -715,11 +759,20 @@ smartui storybook ./storybook-static --config .smartui.json       // Captures al
 <TabItem value='public-hosted' label='For Public Hosted URL'>
 
 ```bash
-smartui storybook https://<your_public_hosted_url> --config .smartui.json    // Captures all the stories running on local server
+smartui storybook https://<your_public_hosted_url> --config .smartui.json    // Captures all the stories running on the hosted URL
 ```
 
 </TabItem>
 </Tabs>
+
+:::info How a Storybook URL is rendered
+From CLI version `1.2.0`, when you pass a Storybook URL the CLI reads the story list from the URL, then starts a <BrandName /> tunnel and SmartUI renders the stories through it. This means:
+
+- The URL can be on `localhost` or on your internal network. It can be a dev server started with `npm run storybook` (webpack or Vite builder) or a hosted Storybook.
+- The CLI needs your `LT_USERNAME` and `LT_ACCESS_KEY`, as described in Step 3.2 above. The `tunnel` block in `.smartui.json` is ignored for a Storybook URL, because the CLI starts its own tunnel.
+- Keep the CLI running until it reports the build result. The tunnel stays open until the build finishes or fails. If the build is still running after two hours, the CLI closes the tunnel and exits with a non-zero code.
+- If your dev server is still compiling, open the Storybook once in a browser before you run the command, so that the first render does not time out.
+:::
 
 :::note For Continuous Integration (CI)
 
@@ -750,6 +803,10 @@ steps:
       npm i
       npm install @lambdatest/smartui-storybook -g
       smartui storybook https://<replace_with_your_url> --config .smartui.json
+    env:
+      PROJECT_TOKEN: ${{ secrets.PROJECT_TOKEN }}
+      LT_USERNAME: ${{ secrets.LT_USERNAME }}
+      LT_ACCESS_KEY: ${{ secrets.LT_ACCESS_KEY }}
 ```
 
 </TabItem>
@@ -765,6 +822,10 @@ The following are supported `CLI (Command Line Interface)` options for Visual Re
 | ------------ | ----------------------------------------------------------------------------------- | -------- |
 | --config     | This is the reference configuration file containing the SmartUI Cloud Configuration | Optional |
 | --help       | This will print all help information for the SmartUI CLI options                    | Optional |
+| --buildName  | Name of the SmartUI build, for example your pipeline or branch name                 | Optional |
+| --force-rebuild | Rebuild a build that already exists with the same name                           | Optional |
+| --userName   | Your <BrandName /> username, used to start the tunnel for a Storybook URL. Defaults to `LT_USERNAME` | Required for a Storybook URL, unless `LT_USERNAME` is set |
+| --accessKey  | Your <BrandName /> access key, used to start the tunnel for a Storybook URL. Defaults to `LT_ACCESS_KEY` | Required for a Storybook URL, unless `LT_ACCESS_KEY` is set |
 
 ### **Step 6:** View SmartUI Results
 
@@ -786,6 +847,21 @@ Verify Storybook Server
 
 
 >**Note**: `buildStoriesJson` is available for Storybook versions below v9.
+
+</TabItem>
+<TabItem value='storybook-url-builds' label='Storybook URL Builds' >
+
+Storybook URL Builds
+
+These apply to CLI version `1.2.0` and later, when you pass a Storybook URL.
+
+| Message | What to do |
+| ------- | ---------- |
+| `MISSING_LT_CREDENTIALS` | Set `LT_USERNAME` and `LT_ACCESS_KEY`, or pass `--userName` and `--accessKey`. |
+| `LambdaTest tunnel did not start` | Check that the username and access key are correct, and that the machine running the CLI can reach `*.lambdatest.com`. |
+| `Storybook did not serve index.json or stories.json` | Make sure the Storybook is running at that URL. For Storybook 6.x, enable `buildStoriesJson` in `.storybook/main.js`. |
+| `gave up waiting for the build after ... minutes` | The build ran for more than two hours. Lower `chunkSize` or reduce the number of browsers and viewports, then run again. |
+| Stories time out on the first render | Your dev server may still be compiling. Open the Storybook once in a browser, then run the command again. |
 
 </TabItem>
 <TabItem value='check-story-inclusion-exclusion' label='Check Story Inclusion/Exclusion' >
