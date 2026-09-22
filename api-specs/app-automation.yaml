@@ -112,6 +112,18 @@ paths:
                   enum: ['individual', 'team']
                   default: 'individual'
                   description: Visibility scope of the uploaded application.
+                release_notes:
+                  type: string
+                  maxLength: 1100
+                  description: >-
+                    Release notes for this build, included in the App Distribution email sent to testers.
+                    Two limits apply, and neither one fails the upload:
+                    a note longer than **1100 characters** is stored up to that limit and the remainder is dropped;
+                    and characters outside the Latin-1 set — **emoji and non-Latin scripts such as CJK** — are stored as `?`.
+                    Accented letters, em dashes and curly quotes are stored exactly as sent.
+                    Re-uploading an identical binary with no other attribute change reuses the existing
+                    app record, so a new `release_notes` value is not applied.
+                    The response echoes `release_notes` as stored, which is the reliable way to confirm what was kept.
               required:
                 - appFile
                 - name
@@ -135,6 +147,11 @@ paths:
                     type: string
                   custom_id:
                     type: string
+                  release_notes:
+                    type: string
+                    description: >-
+                      The release notes as stored, after the 1100-character cap and the
+                      character-set substitution are applied. Omitted when no note was sent.
               example:
                 app_id: "APP10160502401693989036908244"
                 name: "Appname"
@@ -142,6 +159,7 @@ paths:
                 app_url: "lt://APPID"
                 url: "APP_URL"
                 custom_id: "Custom"
+                release_notes: "Fixed login crash on Android 14; improved upload speed"
         '401':
           description: Unauthorized access. Authentication required.
         '415':
