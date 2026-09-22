@@ -137,22 +137,21 @@ This widget gives you a quick snapshot of your test case inventory and the balan
 
 ## Test Cases Trend
 
-The Test Cases Trend widget tracks the number of test cases created over a period of time, split by automation status, helping you visualize how your test suite is growing and how much of it is automated.
+The Test Cases Trend widget tracks the number of test cases created over a period of time, split by **Automation Status**, helping you visualize how your test suite is growing and how much of it is automated.
 
 <img loading="lazy" src={require('../assets/images/analytics/tms-test-cases-trend-stacked-bar.webp').default} alt="Test Cases Trend widget in Stacked Bar view" width="899" height="315" className="doc_img"/>
 
 ### How it works?
 
-* Test cases created in the selected period are grouped into time buckets and stacked by automation status: **Automated** and **Manual**.
-* Use the **View** option in **Configure Widget** to switch between three presentations:
-  * **Stacked Bar** (default) - one bar per interval, segmented by automation status.
+* Test cases created in the selected period are grouped into time buckets and stacked into **Automated** and **Manual**, using the same **Automation Status** classification as the Test Cases Summary widget above.
+* Click the **three-dot menu** on the widget and select **Configure Widget**, then use the **View** group to switch between three presentations:
+  * **Stacked Bar** (default) - one bar per interval, segmented by Automation Status.
   * **Stacked Area** - the same series drawn as areas, to emphasise the overall shape.
   * **Table** - a per-project breakdown, with the counts sortable by column.
-* A dashed line plots the equivalent total for the preceding period of the same length, so you can compare the current window against the one before it. The legend shows the dates that period covers.
-* Click a bar, a point, or a table cell to drill down into the underlying test cases.
-* Change the **Interval** (Daily, Weekly, Monthly) to re-bucket the trend.
+* A dashed line plots the equivalent total for the preceding period of the same length, so you can compare the current window against the one before it. The legend shows the dates that period covers. The line appears only when the preceding period contains at least two complete intervals, so a short date range viewed at a coarse interval - for example a single month of data viewed monthly - may not have enough history to draw it.
+* Change the interval (Daily, Weekly, Monthly) to re-bucket the trend.
 
-In the **Table** view, each row is a project, with **Automated**, **Manual** and **All** counts. Sort by any of the count columns to rank projects, and select a count to drill down into the test cases behind it.
+In the **Table** view, each row is a project, with **Automated**, **Manual** and **All** counts. Sort by any of the count columns to rank projects, and select a count to drill down into the test cases behind it. The table lists up to 50 projects, ordered by the number of test cases created - if your organization has more, the widget states how many of the total are being shown.
 
 <img loading="lazy" src={require('../assets/images/analytics/tms-test-cases-trend-table-view.webp').default} alt="Test Cases Trend widget in Table view, broken down per project" width="898" height="626" className="doc_img"/>
 
