@@ -1,0 +1,353 @@
+---
+id: rook-architecture
+toc_max_heading_level: 2
+title: Rook Architecture and Data Flow
+hide_title: false
+sidebar_label: Architecture
+description: Understand local execution and evidence review, controller model work, API synchronization, and the hosted Rook Web UI.
+keywords:
+  - rook architecture
+  - rook controller
+  - rook api
+  - autonomous agent testing architecture
+url: https://www.testmuai.com/support/docs/rook-architecture/
+site_name: TestMu AI
+slug: rook-architecture/
+canonical: https://www.testmuai.com/support/docs/rook-architecture/
+---
+import VerifiedTag from '@site/src/component/verifiedTag';
+import { BRAND_URL } from '@site/src/component/BrandName';
+
+<script type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify({
+       "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": BRAND_URL
+        },{
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Support",
+          "item": `${BRAND_URL}/support/docs/`
+        },{
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Rook Architecture and Data Flow",
+          "item": `${BRAND_URL}/support/docs/rook-architecture/`
+        }]
+      })
+    }}
+></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/rook-architecture/"
+    },
+    "headline": "Rook Architecture and Data Flow",
+    "description": "Understand local execution and evidence review, controller model work, API synchronization, and the hosted Rook Web UI.",
+    "url": "https://www.testmuai.com/support/docs/rook-architecture/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Agent Assurance Platform",
+    "keywords": [
+      "rook architecture",
+      "rook controller",
+      "rook api"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "dateModified": "2026-09-11"
+  }) }}
+/>
+
+# Rook Architecture and Data Flow
+
+Rook has four application components: the CLI (including its local UI), controller, API, and hosted Web UI. The agent under test is your connected target. The local UI reads workspace files; the hosted Web UI reads synchronized API records. Neither review interface executes tests. Model orchestration happens through the controller.
+
+<figure className="rookArchitecture" aria-labelledby="rook-architecture-caption">
+  <figcaption id="rook-architecture-caption" className="rookArchitecture__caption">
+    Execution happens from your machine; evidence is recorded locally first. Model context and synchronized evidence cross separate cloud boundaries.
+  </figcaption>
+
+  <section className="rookArchitecture__zone rookArchitecture__zone--local" aria-labelledby="rook-local-zone">
+    <p id="rook-local-zone" className="rookArchitecture__zoneLabel">Your Machine</p>
+
+    <div className="rookArchitecture__node rookArchitecture__node--orange">
+      <div className="rookArchitecture__nodeHeader">
+        <strong>Rook CLI</strong>
+        <span className="rookArchitecture__badge">Local</span>
+      </div>
+      <p>Reads and writes the workspace. Contains no managed prompts or model keys.</p>
+    </div>
+
+    <div className="rookArchitecture__connector">
+      <span aria-hidden="true">↓</span>
+      <strong>Execute hook</strong>
+      <small>Scenario goal on stdin</small>
+    </div>
+
+    <div className="rookArchitecture__node rookArchitecture__node--blue">
+      <div className="rookArchitecture__nodeHeader">
+        <strong>Your Agent</strong>
+        <span className="rookArchitecture__badge rookArchitecture__badge--blue">Real Target</span>
+      </div>
+      <p>Runs in your environment. Its tool calls and writes have real effects.</p>
+    </div>
+
+    <div className="rookArchitecture__connector">
+      <span aria-hidden="true">↓</span>
+      <strong>Hook result</strong>
+      <small>agent_reply, conversation, usage, calls, and evidence</small>
+    </div>
+
+    <div className="rookArchitecture__node">
+      <div className="rookArchitecture__nodeHeader">
+        <strong>Authoritative Local Record</strong>
+      </div>
+      <p>Agents, features, scenarios, profiles, hooks, runs, and verdict evidence under <code>.testmuai/rook/</code>.</p>
+    </div>
+
+    <div className="rookArchitecture__connector">
+      <span aria-hidden="true">↓</span>
+      <strong>Read from disk; no upload</strong>
+    </div>
+
+    <div className="rookArchitecture__node">
+      <div className="rookArchitecture__nodeHeader">
+        <strong>Local UI</strong>
+        <span className="rookArchitecture__badge">Read-only</span>
+      </div>
+      <p><code>rook ui --local</code> serves workspace evidence on loopback, including unsynchronized and test-mode runs. Built into the CLI; no hosted login.</p>
+    </div>
+  </section>
+
+  <section className="rookArchitecture__boundary" aria-labelledby="rook-boundary-label">
+    <p id="rook-boundary-label" className="rookArchitecture__zoneLabel">Explicit Boundary Crossings</p>
+    <div className="rookArchitecture__boundaryRow">
+      <strong>Model work</strong>
+      <span>Rook CLI ⇄ Controller</span>
+      <small>Role and scoped context out; managed prompt result back</small>
+    </div>
+    <div className="rookArchitecture__boundaryRow">
+      <strong>Synchronization</strong>
+      <span>Local record → Rook API</span>
+      <small>Reviewed project tree and completed run results</small>
+    </div>
+  </section>
+
+  <section className="rookArchitecture__zone rookArchitecture__zone--cloud" aria-labelledby="rook-cloud-zone">
+    <p id="rook-cloud-zone" className="rookArchitecture__zoneLabel">TestMu AI</p>
+
+    <div className="rookArchitecture__services">
+      <div className="rookArchitecture__node rookArchitecture__node--orange">
+        <div className="rookArchitecture__nodeHeader">
+          <strong>Rook Controller</strong>
+          <span className="rookArchitecture__badge">Stateless</span>
+        </div>
+        <p>Supplies managed prompts, model access, authentication, and credit accounting.</p>
+      </div>
+
+      <div className="rookArchitecture__node rookArchitecture__node--blue">
+        <div className="rookArchitecture__nodeHeader">
+          <strong>Rook API</strong>
+          <span className="rookArchitecture__badge rookArchitecture__badge--blue">Stateful</span>
+        </div>
+        <p>Stores synchronized versions, runs, verdicts, and artifacts in PostgreSQL and object storage.</p>
+      </div>
+    </div>
+
+    <div className="rookArchitecture__connector">
+      <span aria-hidden="true">↓</span>
+      <strong>Rook API supplies synchronized records</strong>
+    </div>
+
+    <div className="rookArchitecture__node">
+      <div className="rookArchitecture__nodeHeader">
+        <strong>Hosted Web UI</strong>
+      </div>
+      <p><code>rook ui</code> opens shared, synchronized evidence and comparisons. Browser sign-in and project access are required. It does not read your current local files.</p>
+    </div>
+  </section>
+</figure>
+
+## Components
+
+<div className="rookArchitectureCards">
+  <article>
+    <h3>Rook CLI</h3>
+    <p><strong>Location:</strong> Your machine</p>
+    <p>Reads the workspace, writes scenarios and profiles, runs hooks, records evidence, and coordinates synchronization.</p>
+    <p><strong>State:</strong> Local files under <code>.testmuai/rook/</code></p>
+    <p><strong>Local UI:</strong> Built-in loopback viewer over these files, opened with <code>rook ui --local</code>.</p>
+  </article>
+  <article>
+    <h3>Agent Under Test</h3>
+    <p><strong>Location:</strong> Your environment</p>
+    <p>Receives real goals through the profile's <code>execute</code> hook and may produce real external effects.</p>
+    <p><strong>State:</strong> Owned by the target system</p>
+  </article>
+  <article>
+    <h3>Rook Controller</h3>
+    <p><strong>Location:</strong> TestMu AI</p>
+    <p>Supplies role-specific prompts, model access, credit accounting, and authenticated model-backed operations.</p>
+    <p><strong>State:</strong> Stateless</p>
+  </article>
+  <article>
+    <h3>Rook API</h3>
+    <p><strong>Location:</strong> TestMu AI</p>
+    <p>Stores synchronized versions, runs, verdicts, and artifacts.</p>
+    <p><strong>State:</strong> PostgreSQL and object storage</p>
+  </article>
+  <article>
+    <h3>Hosted Web UI</h3>
+    <p><strong>Location:</strong> TestMu AI</p>
+    <p>Presents synchronized projects and run evidence through records supplied by the Rook API.</p>
+  </article>
+</div>
+
+## Model Boundary
+
+The CLI ships with no model prompt and no model API key. For a model-backed task, it sends a role name and scoped task context to the controller. The controller supplies the corresponding system prompt and returns the model response.
+
+This keeps model credentials and centrally managed prompts out of the distributed binary while allowing discovery, scenario generation, profile authoring, judging, and RCA to use specialized roles.
+
+## Local Invocation Path
+
+<VerifiedTag value="Verified" />
+
+```text
+scenario goal
+    ↓ standard input
+profile execute hook
+    ↓ real invocation
+agent under test
+    ↓ JSON on standard output
+reply · conversation · usage · calls · custom evidence
+    ↓
+local run directory
+```
+
+The hook contains the transport-specific code. It can call HTTP, a command, a subprocess, a socket, or an adapter. Rook owns the lifecycle order; the script owns how each phase reaches the target.
+
+:::warning Real effects
+The agent runs in its actual environment. Rook does not virtualize or roll back target writes. Use staging systems and disposable fixtures.
+:::
+
+## Controller Flow
+
+Model-backed operations follow a role-based request:
+
+1. The CLI identifies the operation and role, such as agent discovery, scenario generation, hook authoring, judging, or RCA.
+2. It sends only the context needed for that role to the controller.
+3. The controller supplies its managed prompt and model credentials.
+4. The result returns to the CLI, which validates it and writes the resulting project or run files locally.
+
+Commands that only inspect existing state—such as `status`, `scenarios`, `env`, and most `mcp` operations—do not need a model call.
+
+## Local State Is the Record
+
+`.testmuai/rook/` is authoritative for the workspace. `rook sync` copies the current project tree to the Rook API. Run results are also recorded locally as they happen and can be reconciled upstream later.
+
+<VerifiedTag value="Verified" />
+
+```text
+local project tree ── rook sync ──▶ Rook API ──▶ cloud UI
+local run evidence ── runs sync ───▶ Rook API ──▶ reports and comparison
+local workspace ── rook ui --local ──▶ loopback viewer (no upload)
+```
+
+Cloud state does not silently overwrite the local workspace. Ahead, behind, and diverged states are reported for deliberate reconciliation.
+
+## Trust and Secret Boundaries
+
+- Profile files store `${VARIABLE}` references; values remain in the local Rook home.
+- Hook scripts execute locally and receive short-lived Rook context through `ROOK_*` variables.
+- Repository-declared or discovered MCP servers require explicit approval before Rook starts them.
+- Permission grants are scoped to operations and phases so approval during exploration does not automatically authorize judging or CI.
+- A judge should verify through read-only evidence sources. Calling a write operation to check whether a write occurred would create new state rather than verify existing state.
+
+## What Leaves the Machine
+
+Rook uses different outbound paths for model work and persistence:
+
+- **Model-backed commands:** the CLI sends the selected role and scoped task context to the controller. Depending on the operation, that context can include relevant source excerpts, agent definitions, scenario material, or recorded evidence needed to produce the result.
+- **Project synchronization:** `rook sync` sends the reviewed project tree to the Rook API. It is an explicit action rather than a background upload.
+- **Run records:** completed run results are written locally first and recorded through the Rook API as the run progresses or during later reconciliation.
+- **Secret values:** profile environment values, the local credential store, and controller model keys are not included in project synchronization.
+- **Local results UI:** `rook ui --local` serves the on-disk evidence without requiring an account or network connection.
+
+Review source material and result evidence for sensitive target data before model-backed operations, synchronization, or artifact upload in CI.
+
+## Evidence Boundary
+
+Rook distinguishes the target's statement from independently observable evidence. A reply can be graded for content, but a claimed ticket, refund, deployment, or file change should be checked through tool-call evidence, filesystem observation, a read endpoint, a trace, or an approved read-only MCP tool.
+
+If the required observation is unavailable, the result is **Unable to Verify**. It is never converted into a pass or failure merely to produce a complete-looking score.
+
+## Related Documentation
+
+- [Profiles and hooks](/support/docs/rook-profiles-and-hooks/)
+- [Permissions and safety](/support/docs/rook-permissions-and-safety/)
+- [Environment and secrets](/support/docs/rook-environment-and-secrets/)
+- [What lands on disk](/support/docs/rook-workspace-files/)
+
+
+## Open the Local or Hosted UI {#open-the-hosted-web-ui}
+
+For local evidence, run `rook ui --local` from the intended workspace and project. Open agent → runs → run → scenario. Keep the process running; its loopback URL is not a team-sharing link. It can display local `--test` runs that never appear in the hosted timeline.
+
+For shared review, open [rook.lambdatest.com/projects](https://rook.lambdatest.com/projects). Public packages default to <code>ROOK_ENV=prod</code>; use the same service, account, and project when authenticating and synchronizing.
+
+The hosted browser app reads records and artifacts through the API. Neither UI executes your hook scripts or starts the target agent. See the [combined UI guide](/support/docs/rook-web-ui/#choose-your-ui) for both review paths and screenshots.
+
+### Local UI: The Workspace Read Path {#local-ui-example}
+
+The local agent page reads the description, profile, findings, and feature list from the selected workspace. Its **upstream** panel reports recorded synchronization context; displaying a local file does not publish it or prove today's files match the hosted version.
+
+<img loading="lazy" src={require('../assets/images/rook/rook-local-agent.png').default} alt="Local agent page showing workspace records and its upstream synchronization context" width="1440" height="900" className="doc_img"/>
+
+### Hosted Web UI: The API Read Path {#hosted-ui-example}
+
+Open **project → agent → Versions** to inspect definitions already recorded upstream. The version row offers its specification and call graph. The local UI has no separate Versions tab; current local files and a pinned hosted version can legitimately differ.
+
+<img loading="lazy" src={require('../assets/images/rook/rook-web-versions.png').default} alt="Hosted Versions page showing the recorded agent version, feature and scenario counts, and specification links" width="1440" height="900" className="doc_img"/>

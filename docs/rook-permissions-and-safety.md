@@ -1,0 +1,248 @@
+---
+id: rook-permissions-and-safety
+toc_max_heading_level: 2
+title: Rook Permissions and Safety
+hide_title: false
+sidebar_label: Permissions & Safety
+description: Control Rook tool calls with phase-scoped rules, understand unattended execution, and test autonomous agents against safe targets.
+keywords:
+  - rook permissions
+  - rook allow rules
+  - autonomous agent testing safety
+url: https://www.testmuai.com/support/docs/rook-permissions-and-safety/
+site_name: TestMu AI
+slug: rook-permissions-and-safety/
+canonical: https://www.testmuai.com/support/docs/rook-permissions-and-safety/
+---
+import VerifiedTag from '@site/src/component/verifiedTag';
+import { BRAND_URL } from '@site/src/component/BrandName';
+
+<script type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify({
+       "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": BRAND_URL
+        },{
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Support",
+          "item": `${BRAND_URL}/support/docs/`
+        },{
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Rook Permissions and Safety",
+          "item": `${BRAND_URL}/support/docs/rook-permissions-and-safety/`
+        }]
+      })
+    }}
+></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/rook-permissions-and-safety/"
+    },
+    "headline": "Rook Permissions and Safety",
+    "description": "Control Rook tool calls with phase-scoped rules, understand unattended execution, and test autonomous agents against safe targets.",
+    "url": "https://www.testmuai.com/support/docs/rook-permissions-and-safety/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Agent Testing",
+    "keywords": [
+      "rook permissions",
+      "rook allow rules",
+      "autonomous agent testing safety"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Rules identify the tool and the allowed subject",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "bash(npm test)              exact command\nbash(git *)                 glob over the command\nread_file(.)                any file below the current path\nmcp_start(payments)         one named MCP server\nmcp_call(billing.lookup)    one server tool"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Add @phase to limit a grant to one phase",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "bash(git *)@explore\nread_file(.)@generate"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "These flags solve different problems",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "rook explore . \\\n  --allow 'bash(npm test)' \\\n  --allow 'bash(git *)@explore'\n\nrook run --yes"
+      }
+    ],
+    "dateModified": "2026-09-04T12:50:18+05:30"
+  }) }}
+/>
+
+# Rook Permissions and Safety
+
+Rook's internal roles can call tools while discovering, generating, invoking, and verifying. Every call must be covered by a rule or approved through an interactive prompt.
+
+## Rule Grammar
+
+Rules identify the tool and the allowed subject:
+
+<VerifiedTag value="Verified" />
+
+```text
+bash(npm test)              exact command
+bash(git *)                 glob over the command
+read_file(.)                any file below the current path
+mcp_start(payments)         one named MCP server
+mcp_call(billing.lookup)    one server tool
+```
+
+Add `@phase` to limit a grant to one phase:
+
+<VerifiedTag value="Verified" />
+
+```text
+bash(git *)@explore
+read_file(.)@generate
+```
+
+## Why Rules Are Phase-Scoped
+
+Approving `bash(git *)` while Rook explores a repository does not imply that the same operation should be allowed while judging an adversarial target. The operator is authorizing work in the context they can see—exploration, generation, execution, or judging—not an internal role name that may be difficult to reason about.
+
+Use the narrowest subject and phase that covers the intended operation.
+
+## Permission Lists
+
+| List | Applies to | How it is written |
+|---|---|---|
+| `allow` | Actions explicitly requested or approved by a person | Selecting a persistent “always” choice at an interactive prompt |
+| `deny` | Human-requested and model-selected actions, always | Edited by the user or administrator |
+| `autonomous` | Model-selected actions during unattended work | Only by deliberate file editing or a reviewed launch grant |
+
+Rook does not promote an interactive “always” response into unattended authority. A choice made during a terminal session should not silently become the permission model for the next CI run.
+
+## `--yes` and `--allow`
+
+These flags solve different problems:
+
+| Flag | Scope | Persistence |
+|---|---|---|
+| `--yes` | Approves tool calls for the current command | Writes nothing to settings |
+| `--allow <rule>` | Supplies one explicit rule to the current process; repeatable | Visible in the launch command or pipeline definition |
+
+<VerifiedTag value="Verified" />
+
+```bash
+rook explore . \
+  --allow 'bash(npm test)' \
+  --allow 'bash(git *)@explore'
+
+rook run --yes
+```
+
+For CI, prefer reviewed `--allow` rules so authority is visible beside the job definition. Use `--yes` only when blanket approval for that command is intentional.
+
+## The Target Agent Is Real
+
+:::danger Agent actions are not rolled back
+Rook invokes the target exactly as a user would. Files, refunds, tickets, messages, database changes, deployments, and other writes can be real.
+:::
+
+Before a run, Rook reports declared write tools and asks for approval. Approval is per target so a decision for one agent is not inherited by another.
+
+Use:
+
+- staging or isolated targets;
+- disposable accounts and fixtures;
+- read-only credentials where possible;
+- `--concurrency 1` until shared-state behavior is understood;
+- explicit cleanup hooks for resources the scenario creates;
+- narrow permissions for verification tools.
+
+## Verification Should Not Create State
+
+A judge is instructed to verify without changing the system. For example, calling `issue_refund` to see whether a refund exists would create the refund and invalidate the check. Provide a read endpoint, trace, filesystem observation, or read-only MCP tool instead.
+
+Every verification tool call still passes through the same permission gate. Enabling an MCP server does not automatically authorize every tool it exposes.
+
+## Headless Mode
+
+Rook enters headless mode when any of these are true:
+
+- `--yes` is present;
+- standard input is not a TTY;
+- a recognized runner variable is present: `CI`, `GITHUB_ACTIONS`, `GITLAB_CI`, `BUILDKITE`, or `JENKINS_URL`.
+
+In headless mode, an operation not covered by an existing rule is refused with a reason instead of waiting for a prompt no one can answer.
+
+## Future Mediated Execution
+
+The current model directly invokes your agent. A mediated mode in which Rook hosts agent tools and can virtualize writes is planned; do not assume that protection exists in current runs.
+
+## Review Without Re-Executing
+
+Both the **local UI** (`rook ui --local`) and **hosted Web UI** (`rook ui`) are read-only review surfaces. Opening a result does not run the target, grant hook permissions, or approve a verifier. Local review reads workspace files; hosted review reads uploaded records and requires project access.
+
+Read-only viewing does not make captured data safe to share. Inspect requests, responses, and artifacts for secrets and customer data, and treat agent-produced files as untrusted. Use authorized hosted links or approved evidence bundles, never a publicly exposed loopback server. See the [combined UI guide](/support/docs/rook-web-ui/#choose-your-ui).
+
+### Local UI: Review Observed Effects {#local-ui-example}
+
+Open **agent → run → scenario** to inspect what the evidence says happened. The sample criterion quotes an observed set_severity call. This is evidence from a completed test, not a UI for granting permission or undoing the target's write.
+
+<img loading="lazy" src={require('../assets/images/rook/rook-local-result.png').default} alt="Local result evidence quoting a set_severity call and its arguments for the sample ticket" width="1440" height="900" className="doc_img"/>
+
+### Hosted Web UI: Identify Write-Capable Tools {#hosted-ui-example}
+
+Open **Versions → View call graph**. The graph marks declared read-only and write-capable tools. These relationships describe capability, not actual execution or permission grants. Neither UI edits permission rules; review and approve operations through the CLI.
+
+<img loading="lazy" src={require('../assets/images/rook/rook-web-call-graph.png').default} alt="Hosted call graph distinguishing read-only tools from the write-capable severity, assignment, and reply tools" width="1440" height="900" className="doc_img"/>
+
+## Related Documentation
+
+- [Architecture and trust boundaries](/support/docs/rook-architecture/)
+- [CI and automation](/support/docs/agent-assurance-ci-cd/)
+- [MCP servers](/support/docs/agent-assurance-mcp/)
