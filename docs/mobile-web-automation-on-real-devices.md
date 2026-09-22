@@ -150,7 +150,7 @@ Install Python and the Appium client library before running mobile web tests.
 pip install Appium-Python-Client
 ```
 :::info
-The above code installs the latest Python client library for Appium which only supports `w3c : True` capability.
+The above code installs the latest Python client library for Appium which only supports `w3c : True` capability. Currently, we provide support for Chrome on Android and Safari on iOS for real device browser automation.
 :::
 
 
