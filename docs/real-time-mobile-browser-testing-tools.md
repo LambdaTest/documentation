@@ -113,12 +113,16 @@ The Device Controls feature allows you to simulate various actions on your test 
 - **Volume Control:** Adjust the device volume directly within your test session to test audio-related features, such as media playback or notifications, ensuring they function correctly at different volume levels.
 - **Lock Device:** Seamlessly lock or unlock the device during your testing session without interrupting your workflow. This is useful for verifying app behavior upon device unlocking or handling lock-screen notifications.
 - **Shake Device:** Simulate a device shake to test functionalities that rely on shake gestures, such as undo actions or triggering specific in-app events.
+- **On-Screen Keyboard (for iOS):** Display the device's virtual keyboard to enter text into input fields during the session.
 - **Rotate Device:** Rotate the device's orientation between portrait and landscape modes to test the responsiveness and adaptability of your web application. This feature helps you ensure your application layout adjusts properly and remains user-friendly across different orientations.
-
-**Note:** For iOS, the Clear Cache option is also available.
 
 <img loading="lazy" src={require('../assets/images/real-time-testing/mobile-browser/device-control.png').default} alt="Image" className="doc_img"/>
 <img loading="lazy" src={require('../assets/images/real-time-testing/mobile-browser/ios-device-control.png').default} alt="Image" className="doc_img"/>
+
+## Clear Cache (for iOS)
+Clear cached data from the device to test the application or website in a fresh cache state or troubleshoot cache-related issues. The Clear Cache option is available only in iOS real-time manual sessions, for both browser and app sessions.
+
+<img loading="lazy" src={require('../assets/images/real-time-testing/mobile-browser/clear-cache-ios.png').default} alt="Image" className="doc_img"/>
 
 ## Screenshot
 Capture high-quality screenshots of the current screen on your test device instantly. Screenshots are essential for documenting bugs, UI issues, and other anomalies during testing. Click on the Screenshot icon in the sidebar to take a snapshot of the current screen and will automatically start downloading in your local machine and it will be saved in the [gallery](/support/docs/real-time-mobile-browser-testing-tools/#gallery) as well.
