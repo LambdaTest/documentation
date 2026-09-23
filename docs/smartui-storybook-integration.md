@@ -644,7 +644,7 @@ Please read the following table for more information about the configuration fil
 | exclude        | Don't compare the stories which should be excluded in SmartUI tests <br/> Ex: `"/login/","/marketing/"`                            | Optional  |
 | backgroundTheme | Theme for capturing stories. Options: `"light"`, `"dark"`, or `"both"` (captures both themes) <br/> Ex: `"light"` | Optional (default: `"light"`) |
 | useGlobals     | Enable Storybook global decorators and parameters (required for theme switching) <br/> Ex: `true` | Optional (default: `false`) |
-| chunkSize      | Number of stories SmartUI renders together in one batch. For a Storybook URL, values below `25` are raised to `25` and values above `100` are lowered to `100`. Lower it if you configure many browsers and viewports, because each batch renders every browser and viewport combination. <br/> Ex: `50` | Optional (default: `50` for a Storybook URL, `100` for a static build) |
+| chunkSize      | Number of stories SmartUI renders together in one batch. For a Storybook URL, values below `25` are raised to `25` and values above `100` are lowered to `100`. Lower it if you configure many browsers and viewports, because each batch renders every browser and viewport combination. If the stories left over at the end are no more than half of `chunkSize`, they join the last batch, so that batch can be up to 1.5 times `chunkSize`. <br/> Ex: `50` | Optional (default: `50` for a Storybook URL, `100` for a static build) |
 
 :::note
 SmartUI Storybook testing now supports `Edge` browser.
@@ -731,6 +731,14 @@ To configure custom viewports for your stories, you can update the `.smartui.jso
 The `waitForTimeout` setting at the story level takes precedence over the global `waitForTimeout` configuration and only applies to the specific stories to which it is assigned.
 
 For instance, if `Story-1` has a story-level `waitForTimeout` value (T1) set within custom viewport settings, and there exists a global `waitForTimeout` value (T2) defined in the configuration, all browser and viewport combinations of `Story-1` will render with T1. Conversely, all other stories will be rendered with T2 across all combinations.
+:::
+
+:::caution Storybook URL builds
+When you pass a Storybook URL (CLI version `1.2.0` and later), a custom viewport's `waitForTimeout` works differently:
+
+- It applies only to entries that also set `styles`, and it applies to every story captured at that viewport size.
+- An entry with only `stories` and `waitForTimeout` (no `styles`) is ignored. Use the global `waitForTimeout` instead.
+- If two entries use the same width and height, the longer wait is used.
 :::
 
 ### **Step 5:** Execute the Tests on SmartUI Cloud using CLI
@@ -858,10 +866,11 @@ These apply to CLI version `1.2.0` and later, when you pass a Storybook URL.
 | Message | What to do |
 | ------- | ---------- |
 | `MISSING_LT_CREDENTIALS` | Set `LT_USERNAME` and `LT_ACCESS_KEY`, or pass `--userName` and `--accessKey`. |
+| `tunnel not found; the storybook URL cannot be reached without a running tunnel` | SmartUI could not find the tunnel the CLI started. The CLI tries 3 times before it fails. Check that nothing on your network stops the tunnel, then run again. |
 | `LambdaTest tunnel did not start` | Check that the username and access key are correct, and that the machine running the CLI can reach `*.lambdatest.com`. |
 | `Storybook did not serve index.json or stories.json` | Make sure the Storybook is running at that URL. For Storybook 6.x, enable `buildStoriesJson` in `.storybook/main.js`. |
 | `gave up waiting for the build after ... minutes` | The build ran for more than two hours. Lower `chunkSize` or reduce the number of browsers and viewports, then run again. |
-| Stories time out on the first render | Your dev server may still be compiling. Open the Storybook once in a browser, then run the command again. |
+| Stories time out on the first render | SmartUI waits up to 60 seconds for each story page through the tunnel and retries once. Your dev server may still be compiling: open the Storybook once in a browser, then run the command again. |
 
 </TabItem>
 <TabItem value='check-story-inclusion-exclusion' label='Check Story Inclusion/Exclusion' >
