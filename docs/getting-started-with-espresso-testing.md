@@ -49,6 +49,179 @@ import CookieTrackingLogin from '@site/src/component/CookieTracking';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/getting-started-with-espresso-testing/"
+    },
+    "headline": "Espresso Testing On TestMu AI",
+    "description": "Now you can run your automation scripts using Espresso framework on TestMu AI online grid of 3000+ real desktop browsers and real operating systems.",
+    "url": "https://www.testmuai.com/support/docs/getting-started-with-espresso-testing/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "App Automation",
+    "keywords": [
+      "espresso",
+      "java",
+      "testmu ai java"
+    ],
+    "proficiencyLevel": "Beginner",
+    "dependencies": "Your TestMu AI Username and Access key.; Access to an Android app (.apk) and an Espresso Test app (.apk file)..",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 3: Executing The Test (Linux / MacOS)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "curl --location --request POST 'https://mobile-api.lambdatest.com/framework/v1/espresso/build' \\\n--header 'Authorization: Basic BASIC_AUTH_TOKEN' \\\n--header 'Content-Type: application/json' \\\n--data-raw '{\n    \"app\": \"APP_ID\",\n    \"testSuite\": \"TEST_SUITE_ID\",\n    \"device\": [\"Galaxy S21 5G-12\"],\n    \"queueTimeout\": 10800,\n    \"IdleTimeout\": 150,\n    \"deviceLog\": true,\n    \"network\": false,\n    \"build\": \"Proverbial-Espresso\",\n    \"geoLocation\": \"FR\"\n}'"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Windows",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "curl --location --request POST \"https://mobile-api.lambdatest.com/framework/v1/espresso/build\" ^\n--header \"Authorization: Basic BASIC_AUTH_TOKEN\" ^\n--header \"Content-Type: application/json\" ^\n--data \"{\\\"app\\\":\\\"APP_ID\\\",\\\"testSuite\\\":\\\"TEST_SUITE_ID\\\",\\\"device\\\":[\\\"Pixel 6-12\\\"],\\\"queueTimeout\\\":10800,\\\"IdleTimeout\\\":150,\\\"deviceLog\\\":true,\\\"network\\\":false,\\\"build\\\":\\\"Proverbial-Espresso\\\",\\\"geoLocation\\\":\\\"FR\\\"}\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Linux / MacOS",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "curl --location --request POST 'https://mobile-api.lambdatest.com/framework/v1/espresso/build' \\\n--header 'Authorization: Basic BASIC_AUTH_TOKEN' \\\n--header 'Content-Type: application/json' \\\n--data-raw '{\n    \"app\": \"APP_ID\",\n    \"testSuite\": \"TEST_SUITE_ID\",\n    \"device\": [\"Galaxy S21 5G-12.0\"],\n    \"isVirtualDevice\": true,\n    \"queueTimeout\": 10800,\n    \"IdleTimeout\": 150,\n    \"deviceLog\": true,\n    \"network\": false,\n    \"build\": \"Proverbial-Espresso\",\n    \"geoLocation\": \"FR\"\n}'"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Windows",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "curl --location --request POST \"https://mobile-api.lambdatest.com/framework/v1/espresso/build\" ^\n--header \"Authorization: Basic BASIC_AUTH_TOKEN\" ^\n--header \"Content-Type: application/json\" ^\n--data \"{\\\"app\\\":\\\"APP_ID\\\",\\\"testSuite\\\":\\\"TEST_SUITE_ID\\\",\\\"device\\\":[\\\"Pixel 6-12.0\\\"],\\\"isVirtualDevice\\\":true,\\\"queueTimeout\\\":10800,\\\"IdleTimeout\\\":150,\\\"deviceLog\\\":true,\\\"network\\\":false,\\\"build\\\":\\\"Proverbial-Espresso\\\",\\\"geoLocation\\\":\\\"FR\\\"}\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Running Tests in Parallel (Linux / MacOS)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "curl --location --request POST 'https://mobile-api.lambdatest.com/framework/v1/espresso/build' \\\n--header 'Authorization: Basic BASIC_AUTH_TOKEN' \\\n--header 'Content-Type: application/json' \\\n--data-raw '{\n    \"app\": \"APP_ID\",\n    \"testSuite\": \"TEST_SUITE_ID\",\n    \"device\": [\"Galaxy S20-10\",\"Galaxy S20-10\",\"Redmi Note 9-10\",\"Galaxy S10+-10\",\"Galaxy S7 edge-8\",\"Galaxy S9+-8\"],\n    \"queueTimeout\": 10800,\n    \"IdleTimeout\": 150,\n    \"deviceLog\": true,\n    \"network\": false,\n    \"build\": \"Proverbial-Espresso\",\n    \"geoLocation\": \"FR\"\n}'"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Windows",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "curl --location --request POST \"https://mobile-api.lambdatest.com/framework/v1/espresso/build\" ^\n--header \"Authorization: Basic BASIC_AUTH_TOKEN\" ^\n--header \"Content-Type: application/json\" ^\n--data \"{\\\"app\\\":\\\"APP_ID\\\",\\\"testSuite\\\":\\\"TEST_SUITE_ID\\\",\\\"device\\\":[\\\"Galaxy S20-10\\\",\\\"Galaxy S20-10\\\",\\\"Redmi Note 9-10\\\",\\\"Galaxy S10+-10\\\",\\\"Galaxy S7 edge-8\\\",\\\"Galaxy S9+-8\\\"],\\\"queueTimeout\\\":10800,\\\"IdleTimeout\\\":150,\\\"deviceLog\\\":true,\\\"network\\\":false,\\\"build\\\":\\\"Proverbial-Espresso\\\",\\\"geoLocation\\\":\\\"FR\\\"}\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Linux / MacOS",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "curl --location --request POST 'https://mobile-api.lambdatest.com/framework/v1/espresso/build' \\\n--header 'Authorization: Basic BASIC_AUTH_TOKEN' \\\n--header 'Content-Type: application/json' \\\n--data-raw '{\n    \"app\": \"APP_ID\",\n    \"testSuite\": \"TEST_SUITE_ID\",\n    \"device\": [\"Galaxy S20-10.0\",\"Galaxy S20-10.0\",\"Redmi Note 9-10.0\",\"Galaxy S10+-10.0\",\"Galaxy S7 edge-8.0\",\"Galaxy S9+-8.0\"],\n    \"isVirtualDevice\": true,\n    \"queueTimeout\": 10800,\n    \"IdleTimeout\": 150,\n    \"deviceLog\": true,\n    \"network\": false,\n    \"build\": \"Proverbial-Espresso\",\n    \"geoLocation\": \"FR\"\n}'"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Windows",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "curl --location --request POST \"https://mobile-api.lambdatest.com/framework/v1/espresso/build\" ^\n--header \"Authorization: Basic BASIC_AUTH_TOKEN\" ^\n--header \"Content-Type: application/json\" ^\n--data \"{\\\"app\\\":\\\"APP_ID\\\",\\\"testSuite\\\":\\\"TEST_SUITE_ID\\\",\\\"device\\\":[\\\"Galaxy S20-10.0\\\",\\\"Galaxy S20-10.0\\\",\\\"Redmi Note 9-10.0\\\",\\\"Galaxy S10+-10.0\\\",\\\"Galaxy S7 edge-8.0\\\",\\\"Galaxy S9+-8.0\\\"],\\\"isVirtualDevice\\\":true,\\\"queueTimeout\\\":10800,\\\"IdleTimeout\\\":150,\\\"deviceLog\\\":true,\\\"network\\\":false,\\\"build\\\":\\\"Proverbial-Espresso\\\",\\\"geoLocation\\\":\\\"FR\\\"}\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "The espresso-skill package includes",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "espresso-skill/\n\u251c\u2500\u2500 SKILL.md\n\u2514\u2500\u2500 reference/\n    \u251c\u2500\u2500 playbook.md\n    \u2514\u2500\u2500 advanced-patterns.md"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Install a Espresso Agent Skill using the command below",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "codeRepository": "https://github.com/LambdaTest/agent-skills",
+        "text": "# Clone the repo and copy the skill you need\ngit clone https://github.com/LambdaTest/agent-skills.git\ncp -r agent-skills/espresso-skill .claude/skills/\n\n# Or for Cursor / Copilot\ncp -r agent-skills/espresso-skill .cursor/skills/"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Running Your First Test: A Step-by-Step Guide",
+      "description": "Now you can run your automation scripts using Espresso framework on TestMu AI online grid of 3000+ real desktop browsers and real operating systems.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Upload Your Application",
+          "text": "To begin testing, upload your Android application (.apk file) to TestMu AI's servers. You'll use our REST API for this process. Authentication : You'll need your TestMu AI Username and AccessKey. Combine them in the format Username:AccessKey. Uploading the App : Use cURL command to send a request to our API. The request should include the path to your application file (appFile). import Tabs from '@theme/Tabs'; import TabItem from '@theme/TabItem'; {curl -u \"${ YOURLAMBDATESTUSERNAME()}:${ YOURLAMBDATESTACCESS_KEY()}\" --location --request POST 'https://manual-api.lambdatest.com/app/uploadFramework' --form 'appFile=@\"\"' --form 'type=\"espresso-android\"'} {curl -u \"${ YOURLAMBDATESTUSERNAME()}:${ YOURLAMBDATESTACCESS_KEY()}\" --location --request POST \"https://manual-api.lambdatest.com/app/uploadFramework\" --form \"appFile=@\"\"\" --form \"type=\\\"espresso-android\\\"\"} Provide the path of your android application in the above URL in place of `` Response of above cURL will be a JSON object containing the App URL of the format - lt://APP123456789123456789 and will be used in the last step.",
+          "url": "https://www.testmuai.com/support/docs/getting-started-with-espresso-testing/#step-1-upload-your-application"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Upload Your Test Suite",
+          "text": "Upload your Espresso test suite (.apk) file to TestMu AI servers using our REST API. The following sample cURL command shows how to upload a test suite: {curl -u \"${ YOURLAMBDATESTUSERNAME()}:${ YOURLAMBDATESTACCESS_KEY()}\" --location --request POST 'https://manual-api.lambdatest.com/app/uploadFramework' --form 'appFile=@\"\"' --form 'type=\"espresso-android\"'} {curl -u \"${ YOURLAMBDATESTUSERNAME()}:${ YOURLAMBDATESTACCESS_KEY()}\" --location --request POST \"https://manual-api.lambdatest.com/app/uploadFramework\" --form \"appFile=@\"\"\" --form \"type=\\\"espresso-android\\\"\"} Provide the path of your android application in the above URL in place of `` Response of above cURL will be a JSON object containing the App URL of the format - lt://APP123456789123456789 and will be used in the last step.",
+          "url": "https://www.testmuai.com/support/docs/getting-started-with-espresso-testing/#step-2-upload-your-test-suite"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Executing The Test",
+          "text": "You will need base64 encoded authentication in order to execute your Espresso automation test suite. Enter your username:accesskey in Basic Authentication Header Generator to generate your auth token. Take note of the base64 encoded authentication which needs to be added in the next step. {${ YOURLAMBDATESTUSERNAME()}:${ YOURLAMBDATESTACCESS_KEY()}} Once you have uploaded your app and test suite, you can execute your test by running the following command: On Windows, run the following curl command from Command Prompt (cmd.exe). The command is formatted for the Windows CMD terminal and may require different syntax if executed from PowerShell or another shell. Before running the command, replace BASICAUTHTOKEN, APPID, and TESTSUITE_ID with your actual LambdaTest credentials and resource IDs obtained from the above curl commands.",
+          "url": "https://www.testmuai.com/support/docs/getting-started-with-espresso-testing/#step-3-executing-the-test"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Step 4: View Test Execution",
+          "text": "Once you have run your tests, you can view the test execution along with logs. You will be able to see the test cases passing or failing. You can view the same at TestMu AI Automation.",
+          "url": "https://www.testmuai.com/support/docs/getting-started-with-espresso-testing/#step-4-view-test-execution"
+        }
+      ]
+    }
+  ]) }}
+/>
+
 <RealDeviceTag value="Real Device" /> <VirtualDeviceTag value="Virtual Device" />
 
 # How to Run Espresso Tests on TestMu AI

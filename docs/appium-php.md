@@ -52,6 +52,193 @@ import VirtualDeviceTag from '@site/src/component/virtualDevice';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/appium-php/"
+    },
+    "headline": "Appium with PHP",
+    "description": "Now you can run your automation scripts using Appium with PHP on TestMu AI online grid of 3000+ real desktop browsers and real operating systems.",
+    "url": "https://www.testmuai.com/support/docs/appium-php/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Documentation",
+    "keywords": [
+      "appium",
+      "java",
+      "testmu ai java"
+    ],
+    "proficiencyLevel": "Beginner",
+    "dependencies": "Your TestMu AI Username and Access key.; Download and install the latest version of PHP in your system.; Download composer in the project directory of (Linux/MacOS, Windows).; Install the composer dependencies in the current project directory using the command below:.",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "But for the latest MacOS versions starting with Monterey, PHP has to be downloaded and installed manually by using below commands",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "/bin/bash -c \"$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)\"\nbrew install php"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Prerequisites (Linux)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "sudo apt-get install curl libcurl3 libcurl3-dev php"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "So, copy the 'composer.phar' to the project directory using copy command",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "copy C:\\ProgramData\\ComposerSetup\\bin\\composer.phar"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Windows",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "PHP",
+        "text": "composer update\nphp composer.phar require phpwhois/phpwhois\nphp composer.phar install\nphp composer.phar require php-webdriver/webdriver"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 5",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n<\/TabItem>\n\n<TabItem value=\"android-test\" label=\"Android\" default>\n\n```php title=\"AndroidApp.php\"\n<?php\n    require 'vendor/autoload.php';\n    use Facebook\\WebDriver\\Remote\\DesiredCapabilities;\n    use Facebook\\WebDriver\\WebDriverBy;\n    use Facebook\\WebDriver\\Remote;\n    use Facebook\\WebDriver\\Chrome\\ChromeOptions;\n    use Facebook\\WebDriver\\WebDriverExpectedCondition;\n    use Facebook\\WebDriver\\Remote\\RemoteWebDriver;\n\n    $caps = array(\n        \"app\"=> \"APP_URL\", //Enter app_url here\n        \"deviceName\" => \"Galaxy S20\",\n        \"platformName\" => \"Android\",\n        \"platformVersion\" => \"10\",\n        \"isRealMobile\" => TRUE,\n        \"visual\" => TRUE,\n        \"video\" => TRUE,\n        \"name\" => \"Php - Android test\",\n        \"build\" => \"Php Vanilla - Android\"\n    );\n\n    //highlight-next-line\n    $username = getenv(\"LT_USERNAME\") ? getenv(\"LT_USERNAME\") : \"USERNAME\"; //Enter username here\n    //highlight-next-line\n    $accesskey = getenv(\"LT_ACCESS_KEY\") ? getenv(\"LT_ACCESS_KEY\") : \"ACCESS_KEY\"; //Enter accesskey here\n\n    $driver = RemoteWebDriver::create(\"http://$username:$accesskey@mobile-hub.lambdatest.com/wd/hub\",$caps);\n\n try{\n    $color_element = $driver->findElement(WebDriverBy::id('color'));\n    $color_element->click();\n\n    $text_element = $driver->findElement(WebDriverBy::id('Text'));\n    $text_element->click();\n\n    $toast_element = $driver->findElement(WebDriverBy::id('toast'));\n    $toast_element->click();\n\n    $notification_element = $driver->findElement(WebDriverBy::id('notification'));\n    $notification_element->click();\n\n    $geoLocation_element = $driver->findElement(WebDriverBy::id('geoLocation'));\n    $geoLocation_element->click();\n    sleep(5);\n    \n    $url_element = $driver->findElement(WebDriverBy::id('url'));\n    $url_element->sendkeys(\"https://www.testmuai.com\");\n\n    $find_element = $driver->findElement(WebDriverBy::id('find'));\n    $find_element->click();\n    sleep(2);\n\n    $driver->quit();\n } finally {\n    $driver->quit();\n }\n\n?>"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 5: Configure the Test Capabilities (iOS)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n<\/TabItem>\n<TabItem value=\"android-config\" label=\"Android\" default>\n\n```php title=\"Android(.apk)\"\n  $caps = array(\n        //highlight-next-line\n        \"app\"=> \"APP_URL\", //Enter app_url here\n        \"deviceName\" => \"Galaxy S20\",\n        \"platformName\" => \"Android\",\n        \"platformVersion\" => \"10\",\n        \"isRealMobile\" => TRUE,\n        \"visual\" => TRUE,\n        \"video\" => TRUE,\n        \"name\" => \"Php - Android test\",\n        \"build\" => \"Php Vanilla - Android\"\n    );"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 6: Execute and Monitor your Tests (iOS)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "php IOSApp.php"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 6: Execute and Monitor your Tests (Android)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "php AndroidApp.php"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "The appium-skill package includes",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "appium-skill/\n\u251c\u2500\u2500 SKILL.md\n\u2514\u2500\u2500 reference/\n    \u251c\u2500\u2500 playbook.md\n    \u2514\u2500\u2500 advanced-patterns.md"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Install a Appium Agent Skill using the command below",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "codeRepository": "https://github.com/LambdaTest/agent-skills",
+        "text": "# Clone the repo and copy the skill you need\ngit clone https://github.com/LambdaTest/agent-skills.git\ncp -r agent-skills/appium-skill .claude/skills/\n\n# Or for Cursor / Copilot\ncp -r agent-skills/appium-skill .cursor/skills/"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Try our Sample Repository",
+      "description": "Now you can run your automation scripts using Appium with PHP on TestMu AI online grid of 3000+ real desktop browsers and real operating systems.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Get a Sample Project",
+          "text": "You can use your own project to configure and test it. For demo purposes, we are using the sample repository. All the code samples in this documentation can be found on TestMu AI's Github Repository. You can either download or clone the repository to quickly run your tests. View on GitHub",
+          "url": "https://www.testmuai.com/support/docs/appium-php/#step-1-get-a-sample-project"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Setup the Environment Variables",
+          "text": "You need to export your environment variables LTUSERNAME and LTACCESSKEY* that are available in your TestMu AI Profile page. Run the below mentioned commands in your terminal to setup the environment variables. {`export LTUSERNAME=\"${ YOURLAMBDATEST_USERNAME()}\" export LTACCESSKEY=\"${ YOURLAMBDATESTACCESS_KEY()}\"`} {`set LTUSERNAME=\"${ YOURLAMBDATEST_USERNAME()}\" set LTACCESSKEY=\"${ YOURLAMBDATESTACCESS_KEY()}\"`}",
+          "url": "https://www.testmuai.com/support/docs/appium-php/#step-2-setup-the-environment-variables"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Upload your Application",
+          "text": "Upload your iOS application (.ipa file) or android application (.apk or .aab file) to the TestMu AI servers using our REST API. You need to provide your Username and AccessKey in the format Username:AccessKey in the cURL command for authentication. Make sure to add the path of the appFile in the cURL request. Below is an example cURL request to upload your app using our REST API: {curl -u \"${ YOURLAMBDATESTUSERNAME()}:${ YOURLAMBDATESTACCESSKEY()}\" -X POST \"https://manual-api.lambdatest.com/app/upload/realDevice\" -F \"appFile=@\"/Users/macuser/Downloads/proverbialandroid.apk\"\" -F \"name=\"proverbial_app\"\"} {curl -u \"${ YOURLAMBDATESTUSERNAME()}:${ YOURLAMBDATESTACCESSKEY()}\" -X POST \"https://manual-api.lambdatest.com/app/upload/realDevice\" -F \"url=:https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbialandroid.apk\" -F \"name=Proverbial_App\"} If you do not have any .apk or .ipa file, you can run your sample tests on TestMu AI by using our sample apps, :link: Android app or :link: iOS app. Response of above cURL will be a JSON object containing the APP_URL of the format - lt://APP123456789123456789 and will be used in the next step",
+          "url": "https://www.testmuai.com/support/docs/appium-php/#step-3-upload-your-application"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Step 4: Update your Automation Script",
+          "text": "An automation script for the sample application given above has been provided here. Ensure to update the APP_URL, username and accessKey in the code scripts before running the tests.",
+          "url": "https://www.testmuai.com/support/docs/appium-php/#step-4-update-your-automation-script"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 5,
+          "name": "Step 5: Configure the Test Capabilities",
+          "text": "You can update your custom capabilities in test scripts. In this sample project, we are passing platform name, platform version, device name and app url (generated earlier) along with other capabilities like build name and test name via capabilities object. The capabilities object in the sample code are defined as: You must add the generated APPURL** to the app capability in the config file. You must set isRealMobile capability to False in the config file to run on Virtual Devices You can generate capabilities for your test requirements with the help of our inbuilt Capabilities Generator tool.For more details, please refer to our guide on Desired Capabilities in Appium.",
+          "url": "https://www.testmuai.com/support/docs/appium-php/#step-5-configure-the-test-capabilities"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 6,
+          "name": "Step 6: Execute and Monitor your Tests",
+          "text": "Execute the following command to run your test on TestMu AI platform: Your test results would be displayed on the test console (or CLI if you are using terminal/cmd) and on the TestMu AI App Automation Dashboard.",
+          "url": "https://www.testmuai.com/support/docs/appium-php/#step-6-execute-and-monitor-your-tests"
+        }
+      ]
+    }
+  ]) }}
+/>
+
 <RealDeviceTag value="Real Device" /> <VirtualDeviceTag value="Virtual Device" />
 
 # How to Run Appium PHP Tests on TestMu AI

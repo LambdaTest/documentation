@@ -54,6 +54,129 @@ import VirtualDeviceTag from '@site/src/component/virtualDevice';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/sharding-rd-hyperexec/"
+    },
+    "headline": "Sharding for XCUI",
+    "description": "This document will cover how to execute XCUI Tests on real devices with HyperExecute. Before starting, please make sure you have App Automation and HyperExecute Cloud plans on your account.",
+    "url": "https://www.testmuai.com/support/docs/sharding-rd-hyperexec/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "App Automation",
+    "keywords": [
+      "sharding",
+      "XCUIT",
+      "appium"
+    ],
+    "proficiencyLevel": "Beginner",
+    "dependencies": "You have access to TestMu AI username and accessKey. If you have not registered yet, you can do the same by visiting our website. You will be able to access the credentials at the TestMu AI Profile; Make sure you have App Automation and HyperExecute Cloud plans on your account..",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "depending on the strategy value configured.",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n<\/CodeBlock>\n<\/div>\n<\/TabItem>\n\n<TabItem value=\"virtual-device\" label=\"Virtual Device\">\n<div className=\"lambdatest__codeblock\">\n<CodeBlock className=\"language-yaml\">\n\n```yaml title=\"SampleYamlFile.yaml\"\nversion: \"0.2\"\nconcurrency: 2\nrunson: ios\n\n# Set autosplit to true to enable auto sharding.\n# The system will automatically split and distribute tests across the selected devices.\n#highlight-next-line\nautosplit: false\n\nmaxRetries: 2\nretryOnFailure: true\nglobalTimeout: 180 #MAXQUEUETIMEOUT\n\nframework:\n  name: \"ios/xcui\"\n  args:\n    buildName: \"XCUIT\"\n    video: true\n    networkLog: true\n    deviceLog: true\n\n    # You can use either the appId (lt://APP1234567) or provide the path of the application using appPath.\n    # Both examples are given below.\n\n    appPath: ProverbialTest.ipa\n    testSuitePath: LambdaUiKitIOS.ipa\n    # We have used the appPath and testSuitePath here.\n\n    appId: lt://APP1010461471690377432133206\n    testSuiteAppId: lt://APP10104592261690377454846669\n    # We have used the appId and testSuiteAppID here.\n\n    deviceSelectionStrategy: all\n    devices: [\"iPhone 12 Pro-14\", \"iPad Air (2019)-16\"]\n\n    #highlight-next-line\n    isVirtualDevice: true\n\n    shards:\n      mappings:\n        - name: shard1\n          strategy: \"only-testing/skip-testing\"\n          values:\n            - \"<className>/<className/testName>\"\n        # The strategy for this shard is based on \"only-testing/skip-testing\".\n        # This shard will either execute only the specified test(s) or skip the specified test(s),\n        # depending on the strategy value configured.\n\n        - name: shard2\n          strategy: \"only-testing/skip-testing\"\n          values:\n            - \"<className>/<className/testName>\"\n            - \"<className>/<className/testName>\"\n        # The strategy for this shard is based on \"only-testing/skip-testing\".\n        # This shard will either execute only the specified test(s) or skip the specified test(s),\n        # depending on the strategy value configured."
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 2",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "chmod u+x <cliFileNAme>\n./<cliFileNAme> --u <userName> --k <accessKey> --verbose -i <yamlFileName>.yaml"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "You can refer to this example and screenshot below",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "./hyperexecute --u my_user_name --k xyx123abc --verbose -i hyperexecute.yaml"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Filters in Sharding",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "filters:\n      attributes:\n      - type: className\n        values: [\"LambdaUiKitIOSUITests\",\"LambdaUiKitIOSUITestsLaunchTests\"]\n      - type: testName\n        values: [\"LambdaUiKitIOSUITests/testverifyAppLaunch\"]"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "To implement the XCTestPlan in Sharding, add the xctestplan flag along with app and testSuite in the framework flag as shown below",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "framework:\n  name: \"ios/xcui\"\n  args:\n    \"app\" : \"lt://APP_ID\",\n    \"testSuite\": \"lt://TEST_SUITE_ID\",\n    \"xctestplan\" : \"lt://YOUR_XC_TEST_PLAN_ID\" #only when you want to use XCTestPlan"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Uploading your App & Test suite",
+      "description": "This document will cover how to execute XCUI Tests on real devices with HyperExecute. Before starting, please make sure you have App Automation and HyperExecute Cloud plans on your account.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Upload Your Application",
+          "text": "Upload your iOS application (.ipa file) to the TestMu AI servers using our REST API. You need to provide your Username and AccessKey in the format ``Username:AccessKey`` in the cURL command for authentication. Make sure to add the path of the appFile in the cURL request. Here is an example cURL request to upload your app using our REST API: Using App File: {`curl -u \"${ YOURLAMBDATESTUSERNAME()}:${ YOURLAMBDATESTACCESS_KEY()}\" \\\\ --location --request POST 'https://manual-api.lambdatest.com/app/uploadFramework' \\\\ --form 'appFile=@\"/Users/macuser/Downloads/proverbial.ipa\"' \\\\ --form 'type=\"xcuit-ios\"'`} {curl -u \"${ YOURLAMBDATESTUSERNAME()}:${ YOURLAMBDATESTACCESS_KEY()}\" -X POST \"https://manual-api.lambdatest.com/app/uploadFramework\" -F \"appFile=@\"/Users/macuser/Downloads/proverbial.ipa\"\" -F \"type=\"xcuit-ios\"\"} Response of above cURL will be a JSON object containing the App URL of the format - APP123456789123456789 and will be used in the last step as appId.",
+          "url": "https://www.testmuai.com/support/docs/sharding-rd-hyperexec/#step-1-upload-your-application"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Uploading Test Suite",
+          "text": "Upload your test suite (.ipa file) to the TestMu AI servers using our REST API. You need to provide your Username and AccessKey in the format Username:AccessKey in the cURL command for authentication. Make sure to add the path of the appFile in the cURL request. Here is an example cURL request to upload your app using our REST API: Using App File: {`curl -u \"${ YOURLAMBDATESTUSERNAME()}:${ YOURLAMBDATESTACCESS_KEY()}\" \\\\ --location --request POST 'https://manual-api.lambdatest.com/app/uploadFramework' \\ --form 'appFile=@\"/Users/macuser/Downloads/proverbialiosxcuitest.ipa\"' \\ --form 'type=\"xcuit-ios\"'`} {curl -u \"${ YOURLAMBDATESTUSERNAME()}:${ YOURLAMBDATESTACCESSKEY()}\" --location --request POST \"https://manual-api.lambdatest.com/app/uploadFramework\" --form \"appFile=@\"C:/Users/varunkumarb/Downloads/proverbialios_xcuitest.ipa\"\" --form \"type=\\\"xcuit-ios\\\"\"} Response of above cURL will be a JSON object containing the App URL of the format - APP123456789123456789 and will be used in the next step as `testSuiteAppId`",
+          "url": "https://www.testmuai.com/support/docs/sharding-rd-hyperexec/#step-2-uploading-test-suite"
+        }
+      ]
+    }
+  ]) }}
+/>
+
 <RealDeviceTag value="Real Device" /> <VirtualDeviceTag value="Virtual Device" />
 
 Sharding XCUI tests on TestMu AI splits a sequential suite into shards that run in parallel across real devices, cutting execution time. HyperExecute, configured through a YAML file, orchestrates the shards so your end-to-end iOS tests finish much faster overall.

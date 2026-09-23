@@ -55,6 +55,143 @@ import VirtualDeviceTag from '@site/src/component/virtualDevice';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/sharding-espresso-rd-hyperexecute/"
+    },
+    "headline": "Sharding for Espresso",
+    "description": "This document will cover how to execute Espresso Tests on real devices with HyperExecute. Before starting, please make sure you have App Automation plans on your account.",
+    "url": "https://www.testmuai.com/support/docs/sharding-espresso-rd-hyperexecute/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "App Automation",
+    "keywords": [
+      "sharding",
+      "Espresso",
+      "appium"
+    ],
+    "proficiencyLevel": "Beginner",
+    "dependencies": "You have access to TestMu AI username and accessKey. If you have not registered yet, you can do the same by visiting our website. You will be able to access the credentials at the TestMu AI Profile; Make sure you have App Automation Cloud plans on your account..",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "This shard will avoid running tests from the class com.lambdatest.proverbial.BrowserTest.",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n<\/CodeBlock>\n<\/div>\n<\/TabItem>\n\n<TabItem value=\"virtual-device\" label=\"Virtual Device\">\n<div className=\"lambdatest__codeblock\">\n<CodeBlock className=\"language-yaml\">\n\n```yaml title=\"SampleYamlFile.yaml\"\nversion: \"0.2\"\nconcurrency: 2\nrunson: android\n\n# Set autosplit to true to enable auto sharding.\n# The system will automatically split and distribute tests across the selected devices.\n#highlight-next-line\nautosplit: false\n\nglobalTimeout: 180 #MAXQUEUETIMEOUT\n\nframework:\n  name: \"android/espresso\"\n  args:\n    buildName: \"Espresso\"\n    video: true\n    deviceLog: true\n\n    # You can use either the appId (lt://APP1234567) or provide the path of the application using appPath.\n    # Both examples are given below.\n\n    appPath: Proverbial.apk\n    testSuitePath: ProverbialExpressoTest.apk\n    # We have used the appPath and testSuitePath here.\n\n    appId: lt://APP1016025651781520733656681\n    testSuiteAppId: lt://APP10160332171784881008900412\n    # We have used the appId and testSuiteAppID here.\n\n    deviceSelectionStrategy: all\n    devices: [\"Galaxy.*\", \"Pixel.*\"]\n\n    #highlight-next-line\n    isVirtualDevice: true\n\n    shards:\n      mappings:\n        - name: shard1\n          strategy: \"class\"\n          values:\n            - \"com.lambdatest.proverbial.BrowserTest\"\n        # The strategy for this shard is based on \"class\".\n        # This shard will run all tests from the class com.lambdatest.proverbial.BrowserTest.\n\n        - name: shard2\n          strategy: \"package\"\n          values:\n            - \"com.lambdatest.proverbial\"\n        # The strategy for this shard is based on \"package\".\n        # This shard will run all tests that belong to the package com.lambdatest.proverbial.\n\n        - name: shard3\n          strategy: \"skipClass\"\n          values:\n            - \"com.lambdatest.proverbial.BrowserTest\"\n        # The strategy for this shard is to skip a specific class.\n        # This shard will avoid running tests from the class com.lambdatest.proverbial.BrowserTest."
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "We have used the appId and testSuiteAppID here.",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n<\/CodeBlock>\n<\/div>\n<\/TabItem>\n\n<TabItem value=\"virtual-device\" label=\"Virtual Device\">\n<div className=\"lambdatest__codeblock\">\n<CodeBlock className=\"language-yaml\">\n\n```yaml title=\"SampleYamlFile.yaml\"\nversion: \"0.2\"\nconcurrency: 2\nrunson: android\n\n# Set autosplit to true to enable auto sharding.\n# The system will automatically split and distribute tests across the selected devices.\n#highlight-next-line\nautosplit: true\n\nglobalTimeout: 180 #MAXQUEUETIMEOUT\n\nframework:\n  name: \"android/espresso\"\n  args:\n    buildName: \"Espresso\"\n    video: true\n    deviceLog: true\n\n    # You can use either the appId (lt://APP1234567) or provide the path of the application using appPath.\n    # Both examples are given below.\n\n    appPath: Proverbial.apk\n    testSuitePath: ProverbialExpressoTest.apk\n    # We have used the appPath and testSuitePath here.\n\n    appId: lt://APP1016025651781520733656681\n    testSuiteAppId: lt://APP10160332171784881008900412\n    # We have used the appId and testSuiteAppID here.\n\n    #highlight-next-line\n    isVirtualDevice: true\n\n    deviceSelectionStrategy: all\n    devices: [\"Galaxy.*\", \"Pixel.*\"]"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "We have used the appId and testSuiteAppID here.",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "chmod u+x <cliFileNAme>\n./<cliFileNAme> -user <userName> -key <accessKey> --verbose -i <yamlFileName>.yaml"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "You can refer to this example and screenshot below",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "./hyperexecute -user my_user_name -key xyx123abc --verbose -i hyperexecute.yaml"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Filters in Sharding",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "filters:\n      attributes:\n      - type: class\n        values: [\"com.lambdatest.proverbial.BrowserTest\",\"com.lambdatest.proverbial.MainActivityTest\"]\n      - type: package\n        values: [\"com.lambdatest.proverbial\"]"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Annotations in Sharding",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "filters:\n      attributes:\n      - type: annotation\n        values: [\"com.lambdatest.proverbial.demo1\", \"com.lambdatest.proverbial.demo2\"]"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "To generate artifacts for your Espresso tests, add the artifacts: true, and report: true flag in your YAML file",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "report: true\nframework:\n  name: \"android/espresso\"\n  args:\n    artifacts: true\n    ...//"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Uploading your App & Test suite",
+      "description": "This document will cover how to execute Espresso Tests on real devices with HyperExecute. Before starting, please make sure you have App Automation plans on your account.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Upload Your Application",
+          "text": "Upload your android application (.apk file) to the TestMu AI servers using our REST API. You need to provide your Username and AccessKey in the format ``Username:AccessKey`` in the cURL command for authentication. Make sure to add the path of the appFile in the cURL request. Here is an example cURL request to upload your app using our REST API: Using App File: {`curl -u \"${ YOURLAMBDATESTUSERNAME()}:${ YOURLAMBDATESTACCESS_KEY()}\" \\\\ --location --request POST 'https://manual-api.lambdatest.com/app/uploadFramework' \\\\ --form 'appFile=@\"/Users/macuser/Downloads/proverbial.apk\"' \\\\ --form 'type=\"espresso-android\"'`} {curl -u \"${ YOURLAMBDATESTUSERNAME()}:${ YOURLAMBDATESTACCESS_KEY()}\" -X POST \"https://manual-api.lambdatest.com/app/uploadFramework\" -F \"appFile=@\"/Users/macuser/Downloads/proverbial.apk\"\" -F \"type=\"espresso-android\"\"} Response of above cURL will be a JSON object containing the App URL of the format - lt://APP123456789123456789 and will be used in the last step as appId.",
+          "url": "https://www.testmuai.com/support/docs/sharding-espresso-rd-hyperexecute/#step-1-upload-your-application"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Uploading Test Suite",
+          "text": "Upload your test suite (.apk file) to the TestMu AI servers using our REST API. You need to provide your Username and AccessKey in the format Username:AccessKey in the cURL command for authentication. Make sure to add the path of the appFile in the cURL request. Here is an example cURL request to upload your app using our REST API: Using App File: {`curl -u \"${ YOURLAMBDATESTUSERNAME()}:${ YOURLAMBDATESTACCESS_KEY()}\" \\\\ --location --request POST 'https://manual-api.lambdatest.com/app/uploadFramework' \\ --form 'appFile=@\"/Users/macuser/Downloads/ProverbialEspressoTest.apk\"' \\ --form 'type=\"espresso-android\"'`} {curl -u \"${ YOURLAMBDATESTUSERNAME()}:${ YOURLAMBDATESTACCESS_KEY()}\" --location --request POST \"https://manual-api.lambdatest.com/app/uploadFramework\" --form \"appFile=@\"C:/Users/varunkumarb/Downloads/ProverbialEspressoTest.apk\"\" --form \"type=\\\"espresso-android\\\"\"} Response of above cURL will be a JSON object containing the App URL of the format - lt://APP123456789123456789 and will be used in the next step as `testSuiteAppId`",
+          "url": "https://www.testmuai.com/support/docs/sharding-espresso-rd-hyperexecute/#step-2-uploading-test-suite"
+        }
+      ]
+    }
+  ]) }}
+/>
+
 <RealDeviceTag value="Real Device" /> <VirtualDeviceTag value="Virtual Device" />
 
 # How to Shard Espresso Tests on TestMu AI

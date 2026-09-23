@@ -56,6 +56,114 @@ import VirtualDeviceTag from '@site/src/component/virtualDevice';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/camera-image-injection/"
+    },
+    "headline": "Camera Image Injection",
+    "description": "Simulate camera input to test camera-based features like QR scanning and document capture without needing physical devices.",
+    "url": "https://www.testmuai.com/support/docs/camera-image-injection/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "App Automation",
+    "keywords": [
+      "image injection",
+      "app test automation",
+      "camera image"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 1: Upload image to TestMu AI",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "{\n\"media_url\":\"lt://MEDIA123456789123456789\",\n\"name\":\"IMG_123.jpg\",\n\"status\":\"success\",\n\"custom_id\":\"SampleImage\"\n}"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Image Injection in App Automation",
+      "description": "This section explains how to use Image Injection with App automation. This section will also teach you how to use image injection for all the possible test cases for your app along with other useful information.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Upload image to TestMu AI",
+          "text": "You can use the following curl command to upload any image of your choice to the TestMu AI cloud. Please note that we support only JPG, JPEG, and PNG formats which can be 10 MB or less. {curl -u \"${ YOURLAMBDATESTUSERNAME()}:${ YOURLAMBDATESTACCESSKEY()}\" -X POST \"https://mobile-mgm.lambdatest.com/mfs/v1.0/media/upload\" -F \"mediafile=@\"/Users/macuser/Downloads/image.jpeg\"\" -F \"type=\"image\"\" -F \"custom_id=\"SampleImage\"\"} Response of above cURL will be a JSON object containing the media_url of the format - lt://MEDIA123456789123456789 as shown below.",
+          "url": "https://www.testmuai.com/support/docs/camera-image-injection/#step-1-upload-image-to-testmu-ai"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Enable Image injection in the Appium Session",
+          "text": "You can use the appium capability to turn the image injection on in your application. Just add \"enableImageInjection\": True in the desired capabilities while writing the automation script. By adding this capability the app undergoes Sensor Instrumentation, which was described earlier in the documentation. Also adding media url \"media\": \"lt://MEDIA123456789123456789\" in the capabilities to inject the image is now optional and can be passed in LambdaHook as mentioned in step 3. {`desired_capabilities = { \"enableImageInjection\": True, \"media\": \"lt://MEDIAf446d4170cd946aa9ec307d10cb679b9\", #Add media_url here (optional) }`} {`DesiredCapabilities desiredCapabilities = new DesiredCapabilities(); desiredCapabilities.setCapability(\"enableImageInjection\", \"true\");`}",
+          "url": "https://www.testmuai.com/support/docs/camera-image-injection/#step-2-enable-image-injection-in-the-appium-session"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Inject the image",
+          "text": "Refer to the code snippets given below to upload the image with the action ImageInjection. Please make sure that the image needs to be injected before the camera is triggered in your application. This is due to the fact that the camera only captures the image injected at the last. {driver.executescript(\"lambda-image-injection=mediaurl\") #Add media_url here} {driver.executescript(\"lambda-image-injection=mediaurl\") //Add media_url here} Use Case: This feature can be used when you want to test injecting more than one images in single test at different instances. The image injected through above process will replace the image which you put in previous steps.",
+          "url": "https://www.testmuai.com/support/docs/camera-image-injection/#step-3-inject-the-image"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Step 4: Capture the desired image through camera",
+          "text": "You need to first add a logic to inject the uploaded image in the script. Thereafter add the logic to click the camera button in the mobile app. This will show you the last injected image on your mobile app screen. \ud83d\udcd5 Check the documentation for Camera Image Injection feature in Manual App Testing on Real devices Home Support Camera Image Injection",
+          "url": "https://www.testmuai.com/support/docs/camera-image-injection/#step-4-capture-the-desired-image-through-camera"
+        }
+      ]
+    }
+  ]) }}
+/>
+
 <RealDeviceTag value="Real Device" /> <VirtualDeviceTag value="Virtual Device" />
 
 # Camera Image Injection

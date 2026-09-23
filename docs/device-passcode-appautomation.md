@@ -54,6 +54,80 @@ import RealDeviceTag from '@site/src/component/realDevice';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/device-passcode-appautomation/"
+    },
+    "headline": "Device Passcode in App Automation on Real Devices",
+    "description": "Run automated tests on iOS apps that require a device passcode during execution on real devices.",
+    "url": "https://www.testmuai.com/support/docs/device-passcode-appautomation/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "App Automation",
+    "keywords": [
+      "device passcode automation",
+      "ios passcode",
+      "appium automation"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Capability to Enable Passcode (iOS)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Python",
+        "text": "{\n    \"platformName\": \"ios\",\n    \"deviceName\": \"iPhone 16\",\n    \"platformVersion\": \"18\",\n    \"isRealMobile\": True,\n    #highlight-next-line\n    \"enablePasscode\": True\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Capability to Enable Passcode (Android)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Python",
+        "text": "{\n    \"platformName\": \"android\",\n    \"deviceName\": \"Samsung Galaxy S25\",\n    \"platformVersion\": \"15\",\n    \"isRealMobile\": True,\n    #highlight-next-line\n    \"enablePasscode\": True\n}"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 <RealDeviceTag value="Real Device" />
 
 # Device Passcode in App Automation on Real Devices

@@ -48,6 +48,136 @@ import RealDeviceTag from '@site/src/component/realDevice';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/getting-started-with-flutter-dart-ios-automation/"
+    },
+    "headline": "Flutter Dart Testing On TestMu AI - iOS",
+    "description": "This guide details running your first Flutter Dart test on real iPhones using TestMu AI's Real Device Cloud.",
+    "url": "https://www.testmuai.com/support/docs/getting-started-with-flutter-dart-ios-automation/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "App Automation",
+    "keywords": [
+      "flutter",
+      "testmu ai",
+      "framework on testmu ai"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Once you have uploaded your test suite, you can execute your test by running the following command (Linux / MacOS)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "curl --location --request POST 'https://mobile-api.lambdatest.com/framework/v1/flutter/ios/build' \\\n--header 'Authorization: Basic <Enter_Basic_Auth>' \\\n--header 'Content-Type: application/json' \\\n--data-raw '{\n    \"testSuite\": \"lt://App_id\",\n    \"device\": [\"iPhone.*-16\"],\n    \"video\": true,\n    \"deviceLog\": true,\n    \"queueTimeout\": 9000,\n    \"network\": true,\n    \"build\": \"Flutter iOS\"\n}'"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Windows",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "PowerShell",
+        "text": "curl --location --request POST \"https://mobile-api.lambdatest.com/framework/v1/flutter/ios/build\" --header \"Content-Type: application/json\" --header \"Authorization: Basic <Enter the Auth here>\" --data-raw \"{\\\"testSuite\\\": \\\"lt://APP_ID\\\",\\\"device\\\" :  [\\\"Pixel 6-12\\\"], \\\"video\\\": true, \\\"deviceLog\\\": true, \\\"queueTimeout\\\" : \\\"9000\\\",\\\"idleTimeout\\\" : \\\"600\\\"\\\"network\\\": true,\\\"build\\\" : \\\"Flutter iOS\\\"}\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Running Tests in Parallel",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "curl --location --request POST 'https://mobile-api.lambdatest.com/framework/v1/flutter/build' \\\n--header 'Authorization: Basic <Enter_Basic_Auth>' \\\n--header 'Content-Type: application/json' \\\n--data-raw '{\n    \"testSuite\": \"lt://App_id\",\n    \"device\": [\"iPhone.*-16\",\"iPhone 14-16\",\"iPhone 15-17\"],\n    \"video\": true,\n    \"deviceLog\": true,\n    \"queueTimeout\": 9000,\n    \"network\": true,\n    \"build\": \"Flutter iOS - Parallel\"\n}'"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "The flutter-testing-skill package includes",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "flutter-testing-skill/\n\u251c\u2500\u2500 SKILL.md\n\u2514\u2500\u2500 reference/\n    \u251c\u2500\u2500 playbook.md\n    \u2514\u2500\u2500 advanced-patterns.md"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Install a Flutter Testing Agent Skill using the command below",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "codeRepository": "https://github.com/LambdaTest/agent-skills",
+        "text": "# Clone the repo and copy the skill you need\ngit clone https://github.com/LambdaTest/agent-skills.git\ncp -r agent-skills/flutter-testing-skill .claude/skills/\n\n# Or for Cursor / Copilot\ncp -r agent-skills/flutter-testing-skill .cursor/skills/"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Run Your First Test",
+      "description": "This guide details running your first Flutter Dart test on real iPhones using TestMu AI's Real Device Cloud.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Upload Your Test Suite",
+          "text": "Upload your iOS test suite (.zip file) to the TestMu AI servers using our REST API. You need to provide your Username and AccessKey in the format Username:AccessKey in the cURL command for authentication. Make sure to add the path of the appFile in the cURL request. Here is an example cURL request to upload your app using our REST API: Using App File: {`curl -u \"${ YOURLAMBDATESTUSERNAME()}:${ YOURLAMBDATESTACCESS_KEY()}\" \\\\ --location --request POST 'https://manual-api.lambdatest.com/app/uploadFramework' \\ --form 'appFile=@\"/Users/macuser/Downloads/flutter-ios.zip\"' \\ --form 'type=\"flutter-ios\"' --form 'name=\"Sample App\"' --form 'custom_id=\"Sample\"'`} {curl -u \"${ YOURLAMBDATESTUSERNAME()}:${ YOURLAMBDATESTACCESSKEY()}\" --location --request POST \"https://manual-api.lambdatest.com/app/uploadFramework\" --form \"appFile=@\"C:/Users/winuser/Downloads/flutter-ios.zip\"\" --form \"type=\\\"flutter-ios\\\"\" --form \"name=\\\"Sample App\\\"\" --form \"customid=\\\"Sample\\\"\"} Response of above cURL will be a JSON object containing the App id of the format - `lt://APP123456789123456789123456789` and will be used in the last step.",
+          "url": "https://www.testmuai.com/support/docs/getting-started-with-flutter-dart-ios-automation/#step-1-upload-your-test-suite"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Executing The Test",
+          "text": "You will need base64 encoded authentication in order to execute your Espresso automation test suite. You need to enter your username:accesskey here in order and click on encode to generate the base64 authentication. Take note of the base64 encoded authentication which needs to be added in the next step. {${ YOURLAMBDATESTUSERNAME()}:${ YOURLAMBDATESTACCESS_KEY()}} Once you have uploaded your test suite, you can execute your test by running the following command: Make sure to enter your basic authentication and app id (generated in the first step) in the below command.",
+          "url": "https://www.testmuai.com/support/docs/getting-started-with-flutter-dart-ios-automation/#step-2-executing-the-test"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: View Test Execution",
+          "text": "Once you have run your tests, you can view the test execution along with logs. You will be able to see the test cases passing or failing. You can view the same at TestMu AI Automation.",
+          "url": "https://www.testmuai.com/support/docs/getting-started-with-flutter-dart-ios-automation/#step-3-view-test-execution"
+        }
+      ]
+    }
+  ]) }}
+/>
+
 <RealDeviceTag value="Real Device" />
 
 Running your first Flutter Dart test on TestMu AI automates Flutter apps on real iOS devices in the cloud. Install the Flutter SDK, set credentials, upload the sample app and test suite, then execute and review results on the dashboard.
