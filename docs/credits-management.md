@@ -414,7 +414,7 @@ The **duplicate scan** in Test Manager finds test cases that already exist in yo
 
 | What draws credits | Rate |
 |--------------------|------|
-| **Step authoring / editing** (natural‑language step generated or edited) | **\~1.5–2.5 credits / step** |
+| **Step authoring / editing** (steps created or edited using natural language or manual interaction) | **\~1.5–2.5 credits / step** |
 | **KaneAI Web Cloud** (remote browser time) | **0.17 credits / min** |
 | **KaneAI Mobile Cloud** (real‑device time) | **10 / 8 / 6 / 4 credits / min**, depending on the **device category** |
 | **Vision validation during execution** | **\~1.5–2.5 credits / step** |
