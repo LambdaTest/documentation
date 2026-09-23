@@ -195,7 +195,7 @@ Documented for tunnel binary **v3.2.34**. For every flag mentioned below, see [T
 |-------|-------|
 | **Message** | `Invalid Credentials, Please try again!` |
 | **What happened** | The tunnel could not authenticate with the username and access key it was given. |
-| **What to do** | Check the values passed to `--user` and `--key`. See [how to find your username and access key](/support/docs/hyperexecute-how-to-get-my-username-and-access-key/). |
+| **What to do** | Check the values passed to `--user` and `--key`. You can copy both from your TestMu AI account. |
 | **Also seen as** | `Invalid Credentials` |
 
 #### Username not specified {#username-not-specified}
