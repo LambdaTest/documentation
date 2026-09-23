@@ -3,7 +3,7 @@ id: ai-agent-testing-platform-overview
 title: Quality Dimensions and Go-Live Readiness for AI Agents
 hide_title: false
 sidebar_label: Quality Dimensions
-description: How the Agent Testing Platform scores AI agent conversations across quality dimensions, applies pass/fail thresholds, and produces a Green, Yellow, or Red go-live verdict.
+description: How TestMu AI Agent Testing scores AI agent conversations across quality dimensions, applies pass/fail thresholds, and produces a Green, Yellow, or Red go-live verdict.
 keywords:
  - quality dimensions
  - ai agent evaluation metrics
@@ -56,7 +56,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       "@id": "https://www.testmuai.com/support/docs/ai-agent-testing-platform-overview/"
     },
     "headline": "Quality Dimensions and Go-Live Readiness for AI Agents",
-    "description": "How the Agent Assurance Platform scores AI agent conversations across quality dimensions, applies pass/fail thresholds, and produces a Green, Yellow, or Red go-live verdict.",
+    "description": "How TestMu AI Agent Testing scores AI agent conversations across quality dimensions, applies pass/fail thresholds, and produces a Green, Yellow, or Red go-live verdict.",
     "url": "https://www.testmuai.com/support/docs/ai-agent-testing-platform-overview/",
     "image": {
       "@type": "ImageObject",
@@ -101,7 +101,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
   }) }}
 />
 
-The Agent Assurance Platform scores every agent conversation across a set of quality dimensions, applies the pass/fail thresholds you configure, and rolls the results into a Green, Yellow, or Red go-live verdict. This page explains what the platform measures, how thresholds work, and how the production readiness verdict is decided.
+TestMu AI Agent Testing scores every agent conversation across a set of quality dimensions, applies the pass/fail thresholds you configure, and rolls the results into a Green, Yellow, or Red go-live verdict. This page explains what the platform measures, how thresholds work, and how the production readiness verdict is decided.
 
 ## How the Platform Scores Conversations
 

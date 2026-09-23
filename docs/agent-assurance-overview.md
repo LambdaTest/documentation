@@ -12,7 +12,8 @@ keywords:
   - test ai agents
   - rook use cases
   - test agent from prd
-  - black box agent testing
+  - white box agent testing
+  - agent assurance
   - multimodal agent testing
 url: https://www.testmuai.com/support/docs/agent-assurance-overview/
 site_name: TestMu AI
@@ -41,7 +42,7 @@ canonical: https://www.testmuai.com/support/docs/agent-assurance-overview/
       "height": 630
     },
     "inLanguage": "en",
-    "articleSection": "Agent Testing",
+    "articleSection": "Agent Assurance",
     "keywords": [
       "rook cli",
       "autonomous agent testing",
@@ -73,13 +74,15 @@ canonical: https://www.testmuai.com/support/docs/agent-assurance-overview/
         "https://www.youtube.com/@TestMuAI"
       ]
     },
-    "dateModified": "2026-09-04T12:50:18+05:30"
+    "dateModified": "2026-09-22"
   }) }}
 />
 
 # What is TestMu AI Agent Assurance
 
-TestMu AI Agent Assurance is the product for proving an AI agent you own is safe to ship. This page covers its **Autonomous Agent** category, for agents that *act*: they call tools, write files, hit APIs, and change external state.
+TestMu AI Agent Assurance helps teams gather evidence about whether an AI agent they own is ready to ship. It is white-box testing for agents that *act*: they call tools, write files, hit APIs, and change external state.
+
+Agent Assurance does not grade the agent on what it says it did. An agent's own reply is the weakest available signal, because an agent can produce a confident, well-written summary of work it never completed. Agent Assurance goes inside the system and verifies the actual effects: the recorded tool calls, the command output and exit status, the files that changed, the artifacts that were produced, and read-only checks against the target's real state. How much it can observe depends on the access and the profile you give it; where no stronger evidence is available, a criterion is reported as **Unable to Verify** rather than passed on the agent's word.
 
 Agent Assurance runs from your terminal as <code>rook</code>. Give it the materials that describe the agent and connect a live test target. It can then:
 
@@ -95,18 +98,18 @@ You install only the <code>rook</code> CLI. You do not need the source repositor
 Commands and stored file formats can change. Test against a disposable or staging target and review the target and write warning before every run.
 :::
 
-<img loading="lazy" src={require('../assets/images/rook/rook-terminal-home.png').default} alt="Rook terminal home showing the autonomous agent testing workflow" width="1111" height="911" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/rook/rook-terminal-home.png').default} alt="Rook terminal home showing the Agent Assurance workflow" width="1111" height="911" className="doc_img"/>
 
-## Conversation Testing and Autonomous Testing
+## Agent Assurance and Agent Testing {#conversation-testing-and-autonomous-testing}
 
-Agent Assurance covers both forms of agent testing, but they solve different problems.
+TestMu AI has two agent product lines. They test different things, and they trust different evidence.
 
-| Choose | When it fits |
-|---|---|
-| **Conversation-based agent testing** | You want to test chat, voice, or phone conversations through configured turns, intents, assertions, and conversation quality. |
-| **Autonomous agent testing with Agent Assurance** | Your agent plans, calls tools, changes external state, creates files, asks for missing information, delegates to subagents, or returns mixed outputs that require evidence beyond the final message. |
+| Product line | What it tests | What it treats as evidence |
+|---|---|---|
+| **[Agent Testing](/support/docs/getting-started-with-agent-testing-platform/)** | Black-box testing of conversational agents — chat, voice, video, and phone — through configured turns, intents, assertions, and conversation quality. | The agent's responses in the conversation. |
+| **Agent Assurance** (this section) | White-box testing of agents that plan, call tools, change external state, create files, ask for missing information, or delegate to subagents. | Observed effects: recorded tool calls, command output and exit status, file changes, artifacts, and read-only verification — not the agent's own account of its work. |
 
-For example, a refund assistant may ask for an order ID, verify eligibility, issue a refund through a tool, and return both an explanation and a PDF receipt. Rook tests the whole behavior it can observe, not only whether the final sentence sounds correct.
+For example, a refund assistant may ask for an order ID, verify eligibility, issue a refund through a tool, and return both an explanation and a PDF receipt. Agent Assurance checks whether the refund actually happened, what the recorded calls show, and whether the receipt exists. It does not accept the closing sentence as proof.
 
 ## What You Can Give Rook
 
@@ -117,7 +120,7 @@ Rook works with different levels of access:
 | A PRD only | Run <code>/explore path/to/PRD.md</code> | Intended behavior, rules, constraints, examples, and open questions |
 | PRD plus knowledge-base files | Run <code>/explore docs -- focus on the PRD and knowledge base</code> | Intended answers, policies, domain facts, and boundaries |
 | Agent source code | Run <code>/explore .</code> in your checked-out repository | Prompts, tools, subagents, feature paths, and implementation evidence |
-| A live remote API but no source | Explore a local PRD or specification, then add an HTTP profile | Black-box execution of the live target |
+| A live remote API but no source | Explore a local PRD or specification, then add an HTTP profile | Live execution of the deployed target, verified through the response plus whatever effects the profile is configured to observe |
 | A local agent CLI | Add a command profile | stdout, stderr, exit status, files, and resumable sessions when configured |
 
 Rook does not natively explore a GitHub URL. If you want source-aware testing, check out your own repository locally and run Rook inside it. You never need to clone the Rook repository.
@@ -142,9 +145,39 @@ Rook stores project results as plain files below:
 
 Credentials, variables, and session settings are stored separately below <code>~/.testmuai/rook/</code>. Stored variables are partitioned by the workspace's absolute path.
 
+## Drive Agent Assurance From Your Coding Agent
+
+You do not have to type the sequence above by hand. A public Rook skill teaches a coding assistant to run the same Rook CLI workflow from your agent repository: it checks the installed CLI and workspace state, identifies the target agent, its authentication needs, its invocation profile, hooks, and possible writes, waits for you to approve a scoped test, then reports the run ID with Pass, Fail, and Unable to Verify evidence rather than a successful shell exit.
+
+Setup is one command, once per machine. With Node.js 22 or newer:
+
+```bash
+npx @testmuai/rook-skill@latest
+```
+
+That installs the skill for Claude Code (`~/.claude/skills/rook/`), Codex CLI (`~/.agents/skills/rook/`), and Gemini CLI (`~/.gemini/skills/rook/`). Use the installer's <code>--agent</code> flag to set up a single client instead of all three. For GitHub Copilot CLI, OpenCode, Cursor CLI, Antigravity, VS Code, or Windsurf, copy the public skill bundle into the project directory that client reads; each [coding-agent guide](/support/docs/rook-coding-agents/) gives the exact path and its discovery check.
+
+After that, describe the outcome instead of the commands. In Claude Code, type <code>/</code> and select `rook`; in Codex CLI, run <code>/skills</code> or prefix the prompt with <code>$rook</code>.
+
+```text
+Use Rook to test the refund agent in this repository against its refund policy.
+Use the staging profile and test fixtures only. Propose up to three scenarios.
+Before invoking the target, show me the selected scenario, hooks, possible writes,
+and expected credit spending, then ask for confirmation.
+After approval, run one selected scenario and report its run ID, Pass, Fail,
+Unable to Verify, and criterion-level evidence. Do not run paid RCA or retry
+automatically.
+```
+
+The skill is an interface to Rook, not a replacement for it. Install and authenticate the [Rook CLI](/support/docs/rook-installation/) first: the skill is not the Rook executable, an editor extension, or an MCP server, and installing it alone does not configure a profile for your target. Your client's own approval settings still apply — loading the skill does not authorize shell commands, network access, target writes, or credit spending, and a prompt is not a spending cap. Ask for the run ID and the saved verdict before believing a result; a natural-language "it passed" is not evidence.
+
+See [Use Rook with Coding Agents](/support/docs/rook-coding-agents/) to choose a client and follow its setup, discovery check, and troubleshooting.
+
 ## Evidence and Verdicts
 
-Rook can use the raw response, extracted JSON or text, command output, exit status, observed file changes, downloadable artifacts, and read-only MCP verification. The available evidence depends on the profile you configure.
+Rook ranks its evidence. Observed effects carry the verdict: recorded tool calls, command output, exit status, changed files, downloadable artifacts, and read-only MCP verification. The agent's own reply is kept and shown, but it is the weakest signal and is never treated as proof that an action succeeded.
+
+The available evidence therefore depends on the profile you configure. A profile whose hook returns only an answer string leaves most criteria **Unable to Verify** — a JSON-path check cannot inspect a field your hook never returned.
 
 | Verdict | Meaning |
 |---|---|
@@ -185,7 +218,7 @@ Use the following journeys to choose the setup that matches the access you have.
 |---|---|---|---|
 | PRD only | The PRD file | A live HTTP or command profile is still required | Conformance of observable behavior to intended requirements |
 | PRD and knowledge base | The containing folder | HTTP or command profile | Policy answers, boundaries, workflows, and observable effects |
-| Remote API, no code | A local PRD/API specification | HTTP profile | Black-box behavior exposed by the response and configured observations |
+| Remote API, no code | A local PRD/API specification | HTTP profile | Behavior exposed by the response plus every effect the profile can observe; with no source, verification depth is bounded by what the API exposes |
 | Source workspace | The repository or agent directory | HTTP or command profile | Source-aware scenarios plus live behavior |
 | GitHub repository | A local checkout of your repository | HTTP or command profile | Same as source workspace; raw GitHub URLs are not explored |
 | Local CLI agent | Its docs or code | Command profile | stdout, stderr, exit status, sessions, and configured file changes |
@@ -395,7 +428,7 @@ Rook can collect the result text and common files such as PDF, image, CSV, JSON,
 
 Repeat <code>/agent use</code>, generation, and profile setup for each independently invokable agent. If a subagent is only reachable through the router, test it through the router, and make that boundary explicit in the profile and scenarios.
 
-Project data is stored under each registered agent. Removing an agent with <code>/agent rm</code> also removes Rook's stored project data for that agent, so review the ID carefully.
+Project data is stored separately under each registered agent. The command lists or selects agents. Agent removal is intentionally not a command — project data is stored as readable files, so remove or edit it through your reviewed repository workflow when that is genuinely required.
 
 ### Use Case 9: Several Profiles for One Agent
 
@@ -438,6 +471,9 @@ Exit code 0 means no defect was recorded in the verdicts that were produced. Als
 ## Next Steps
 
 - [Get started with Agent Assurance](/support/docs/agent-assurance-quickstart/)
+- [Follow the complete Rook sequence](/support/docs/agent-assurance-quickstart/#continue-after-your-first-test)
+- [Drive Rook from Claude Code, Codex CLI, or another coding assistant](/support/docs/rook-coding-agents/)
+- [Understand the local and cloud architecture](/support/docs/rook-architecture/)
 - [Connect and explore agents](/support/docs/agent-assurance-connect-and-explore-agents/)
 - [Configure invocation profiles](/support/docs/agent-assurance-profiles/)
 - [Generate and curate scenarios](/support/docs/agent-assurance-scenarios/)

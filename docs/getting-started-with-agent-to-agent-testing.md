@@ -1,12 +1,13 @@
 ---
 id: getting-started-with-agent-testing-platform
-title: Getting Started With the Agent Testing Platform
+title: Getting Started With TestMu AI Agent Testing
 hide_title: false
 sidebar_label: What is Agent Testing
-description: Get started with the Agent Testing Platform to validate chat, voice, phone, and image AI agents against standardized quality metrics before you ship.
+description: Get started with TestMu AI Agent Testing to validate chat, voice, phone, and image AI agents against standardized quality metrics before you ship.
 keywords:
  - ai agent testing platform
  - agent testing
+ - black box agent testing
  - chat voice phone agent testing
  - getting started with agent testing
  - ai agent evaluation
@@ -38,7 +39,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "Getting Started with Agent Testing Platform",
+          "name": "Getting Started with Agent Testing",
           "item": `${BRAND_URL}/support/docs/getting-started-with-agent-testing-platform`
         }]
       })
@@ -56,8 +57,8 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       "@type": "WebPage",
       "@id": "https://www.testmuai.com/support/docs/getting-started-with-agent-testing-platform/"
     },
-    "headline": "Getting Started With the Agent Assurance Platform",
-    "description": "Get started with the Agent Assurance Platform to validate chat, voice, phone, and image AI agents against standardized quality metrics before you ship.",
+    "headline": "Getting Started With TestMu AI Agent Testing",
+    "description": "Get started with TestMu AI Agent Testing to validate chat, voice, phone, and image AI agents against standardized quality metrics before you ship.",
     "url": "https://www.testmuai.com/support/docs/getting-started-with-agent-testing-platform/",
     "image": {
       "@type": "ImageObject",
@@ -102,7 +103,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
   }) }}
 />
 
-# Getting Started With the Agent Assurance Platform
+# Getting Started With TestMu AI Agent Testing
 
 ***
 

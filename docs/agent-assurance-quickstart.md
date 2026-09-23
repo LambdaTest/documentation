@@ -39,7 +39,7 @@ canonical: https://www.testmuai.com/support/docs/agent-assurance-quickstart/
       "height": 630
     },
     "inLanguage": "en",
-    "articleSection": "Agent Testing",
+    "articleSection": "Agent Assurance",
     "keywords": [
       "agent assurance getting started",
       "install rook cli",

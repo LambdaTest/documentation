@@ -1,6 +1,6 @@
 ---
 id: agent-testing-platform-faqs
-title: "Agent Testing Platform FAQs: Setup, Security, Pricing"
+title: "Agent Testing FAQs: Setup, Security, Pricing"
 hide_title: false
 sidebar_label: FAQs
 description: Answers to common Agent Testing questions on the free tier, connecting an agent, firewall testing, HIPAA, phone testing, and evaluation accuracy.
@@ -35,7 +35,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "Agent Testing Platform FAQs",
+          "name": "Agent Testing FAQs",
           "item": `${BRAND_URL}/support/docs/agent-testing-platform-faqs/`
         }]
       })
@@ -53,7 +53,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       "@type": "WebPage",
       "@id": "https://www.testmuai.com/support/docs/agent-testing-platform-faqs/"
     },
-    "headline": "Agent Assurance Platform FAQs: Setup, Security, Pricing",
+    "headline": "Agent Testing FAQs: Setup, Security, Pricing",
     "description": "Answers to common Agent Testing questions on the free tier, connecting an agent, firewall testing, HIPAA, phone testing, and evaluation accuracy.",
     "url": "https://www.testmuai.com/support/docs/agent-testing-platform-faqs/",
     "image": {
@@ -99,7 +99,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
   }) }}
 />
 
-Common questions about TestMu AI's Agent Assurance Platform, grouped by plans, setup, security, and evaluation quality.
+Common questions about TestMu AI Agent Testing, grouped by plans, setup, security, and evaluation quality.
 
 ## Plans and Pricing
 

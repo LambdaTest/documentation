@@ -967,7 +967,94 @@ module.exports = {
     ],
   ],
 
-  AgentToAgentSidebar: [
+  AgentAssuranceSidebar: [
+    {
+      type: "link",
+      label: "Back",
+      href: "/docs/",
+      customProps: {
+        className: "back-to-main-menu",
+      },
+    },
+    [
+      {
+        type: "category",
+        label: "Start",
+        collapsed: true,
+        items: [
+          { type: "doc", label: "Overview", id: "agent-assurance-overview" },
+          { type: "doc", label: "Install Rook", id: "rook-installation" },
+          { type: "doc", label: "Quickstart", id: "agent-assurance-quickstart" },
+        ],
+      },
+      {
+        type: "category",
+        label: "Guides",
+        collapsed: true,
+        items: [
+          { type: "doc", label: "Connect & Explore Agents", id: "agent-assurance-connect-and-explore-agents" },
+          { type: "doc", label: "Profiles, Hooks & Phases", id: "rook-profiles-and-hooks" },
+          { type: "doc", label: "Generate & Manage Scenarios", id: "agent-assurance-scenarios" },
+          { type: "doc", label: "Run Tests", id: "agent-assurance-run-tests" },
+          { type: "doc", label: "Local & Hosted UIs", id: "rook-web-ui" },
+          { type: "doc", label: "Verdicts & Reports", id: "agent-assurance-results-and-evidence" },
+        ],
+      },
+      {
+        type: "category",
+        label: "Coding Agents & Skills",
+        collapsed: true,
+        link: { type: "doc", id: "rook-coding-agents" },
+        items: [
+          { type: "doc", label: "Claude Code", id: "rook-claude-code" },
+          { type: "doc", label: "Codex CLI", id: "rook-codex" },
+          { type: "doc", label: "Gemini CLI", id: "rook-gemini-cli" },
+          { type: "doc", label: "GitHub Copilot CLI", id: "rook-copilot-cli" },
+          { type: "doc", label: "OpenCode", id: "rook-opencode" },
+          { type: "doc", label: "Cursor CLI", id: "rook-cursor-cli" },
+          { type: "doc", label: "Antigravity CLI", id: "rook-antigravity-cli" },
+          { type: "doc", label: "VS Code", id: "rook-vscode" },
+          { type: "doc", label: "Windsurf", id: "rook-windsurf" },
+          { type: "doc", label: "Antigravity IDE", id: "rook-antigravity-ide" },
+        ],
+      },
+      {
+        type: "category",
+        label: "CI/CD Integrations",
+        collapsed: true,
+        link: { type: "doc", id: "agent-assurance-ci-cd" },
+        items: [
+          { type: "doc", label: "GitHub Actions", id: "rook-github-actions" },
+          { type: "doc", label: "Jenkins", id: "rook-jenkins" },
+          { type: "doc", label: "Argo CD", id: "rook-argocd" },
+        ],
+      },
+      {
+        type: "category",
+        label: "Concepts & Configuration",
+        collapsed: true,
+        items: [
+          { type: "doc", label: "Feature Map", id: "rook-features" },
+          { type: "doc", label: "Concepts", id: "rook-concepts" },
+          { type: "doc", label: "Architecture", id: "rook-architecture" },
+          { type: "doc", label: "Permissions & Safety", id: "rook-permissions-and-safety" },
+          { type: "doc", label: "Environment & Secrets", id: "rook-environment-and-secrets" },
+          { type: "doc", label: "MCP Servers", id: "agent-assurance-mcp" },
+          { type: "doc", label: "Workspace Files", id: "rook-workspace-files" },
+        ],
+      },
+      {
+        type: "category",
+        label: "Reference",
+        collapsed: true,
+        items: [
+          { type: "doc", label: "CLI Reference", id: "agent-assurance-command-reference" },
+          { type: "doc", label: "Troubleshooting", id: "agent-assurance-troubleshooting" },
+        ],
+      },
+    ],
+  ],
+  AgentTestingSidebar: [
     {
       type: "link",
       label: "Back",
@@ -980,7 +1067,7 @@ module.exports = {
       {
         type: "category",
         label: "Overview",
-        collapsed: false,
+        collapsed: true,
         items: [
           {
             type: "doc",
@@ -994,74 +1081,30 @@ module.exports = {
           },
         ],
       },
-
-       {
+      {
         type: "category",
         label: "Supported Agent Types",
-        collapsed: false,
+        collapsed: true,
         items: [
-          {
-            type: "doc",
-            label: "Chat Agent Testing",
-            id: "chat-agent",
-          },
-          {
-            type: "doc",
-            label: "Voice Agent Testing",
-            id: "voice-agent",
-          },
-          {
-            type: "doc",
-            label: "Video Agent Testing",
-            id: "video-agent",
-          },
-          {
-            type: "doc",
-            label: "Phone Agent Testing",
-            id: "phone-agent",
-          },
-          {
-            type: "doc",
-            label: "Inbound Phone Agent Testing",
-            id: "inbound-phone-agent",
-          },
-          {
-            type: "doc",
-            label: "Outbound Phone Agent Testing",
-            id: "outbound-phone-agent",
-          },
-          {
-            type: "doc",
-            label: "Image Analyzer Testing",
-            id: "image-analyzer",
-          },
+          { type: "doc", label: "Chat Agent Testing", id: "chat-agent" },
+          { type: "doc", label: "Voice Agent Testing", id: "voice-agent" },
+          { type: "doc", label: "Video Agent Testing", id: "video-agent" },
+          { type: "doc", label: "Phone Agent Testing", id: "phone-agent" },
+          { type: "doc", label: "Inbound Phone Agent Testing", id: "inbound-phone-agent" },
+          { type: "doc", label: "Outbound Phone Agent Testing", id: "outbound-phone-agent" },
+          { type: "doc", label: "Image Analyzer Testing", id: "image-analyzer" },
         ],
       },
-
       {
         type: "category",
         label: "Getting Started",
-        collapsed: false,
+        collapsed: true,
         items: [
-          {
-            type: "doc",
-            label: "Quickstart (UI)",
-            id: "testing-your-first-ai-agent",
-          },
-          {
-            type: "doc",
-            label: "Quickstart (CLI)",
-            id: "agent-testing-cli",
-          },
-          {
-            type: "doc",
-            label: "Quickstart (API)",
-            id: "chat-agent-api-integration",
-          },
-
+          { type: "doc", label: "Quickstart (UI)", id: "testing-your-first-ai-agent" },
+          { type: "doc", label: "Quickstart (CLI)", id: "agent-testing-cli" },
+          { type: "doc", label: "Quickstart (API)", id: "chat-agent-api-integration" },
         ],
       },
-
       {
         type: "category",
         label: "Guides",
@@ -1084,80 +1127,12 @@ module.exports = {
           { type: "doc", label: "Test watsonx Assistant Bots", id: "test-watsonx-assistant-bots" },
         ],
       },
-
       {
         type: "category",
         label: "Frequently Asked Questions",
-        collapsed: false,
+        collapsed: true,
         items: [
-          {
-            type: "doc",
-            label: "FAQs",
-            id: "agent-testing-platform-faqs",
-          },
-        ],
-      },
-      {
-        type: "category",
-        label: "Agent Assurance",
-        collapsed: false,
-        items: [
-          { type: "doc", label: "Overview", id: "agent-assurance-overview" },
-          { type: "doc", label: "Install Rook", id: "rook-installation" },
-          { type: "doc", label: "Getting Started", id: "agent-assurance-quickstart" },
-           { type: "doc", label: "Command Reference", id: "agent-assurance-command-reference" },
-          {
-            type: "category",
-            label: "Configure",
-            collapsed: true,
-            items: [
-              { type: "doc", label: "Connect and Explore Agents", id: "agent-assurance-connect-and-explore-agents" },
-              { type: "doc", label: "Invocation Profiles", id: "agent-assurance-profiles" },
-              { type: "doc", label: "Scenarios", id: "agent-assurance-scenarios" },
-              { type: "doc", label: "MCP Servers", id: "agent-assurance-mcp" },
-            ],
-          },
-          {
-            type: "category",
-            label: "Run & Review",
-            collapsed: true,
-            items: [
-              { type: "doc", label: "Run Tests", id: "agent-assurance-run-tests" },
-              { type: "doc", label: "Local & Hosted UIs", id: "rook-web-ui" },
-              { type: "doc", label: "Verdicts & Reports", id: "agent-assurance-results-and-evidence" },
-            ],
-          },
-          {
-            type: "category",
-            label: "Coding Agents & Skills",
-            collapsed: true,
-            link: { type: "doc", id: "rook-coding-agents" },
-            items: [
-              { type: "doc", label: "Claude Code", id: "rook-claude-code" },
-              { type: "doc", label: "Codex CLI", id: "rook-codex" },
-              { type: "doc", label: "Gemini CLI", id: "rook-gemini-cli" },
-              { type: "doc", label: "GitHub Copilot CLI", id: "rook-copilot-cli" },
-              { type: "doc", label: "OpenCode", id: "rook-opencode" },
-              { type: "doc", label: "Cursor CLI", id: "rook-cursor-cli" },
-              { type: "doc", label: "VS Code", id: "rook-vscode" },
-              { type: "doc", label: "Windsurf", id: "rook-windsurf" },
-            ],
-          },
-          {
-            type: "category",
-            label: "CI/CD Integrations",
-            collapsed: true,
-            link: { type: "doc", id: "agent-assurance-ci-cd" },
-            items: [
-              { type: "doc", label: "GitHub Actions", id: "rook-github-actions" },
-              { type: "doc", label: "Jenkins", id: "rook-jenkins" },
-              { type: "doc", label: "Argo CD", id: "rook-argocd" },
-            ],
-          },
-
-           { type: "doc", label: "Troubleshooting", id: "agent-assurance-troubleshooting" },
-         
-        
+          { type: "doc", label: "FAQs", id: "agent-testing-platform-faqs" },
         ],
       },
     ],

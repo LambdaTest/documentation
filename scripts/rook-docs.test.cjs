@@ -24,7 +24,7 @@ test.before(() => {
 });
 
 test('all integration pages have valid frontmatter, navigation, images, and local links', () => {
-  const sidebar = JSON.stringify(require('../sidebars.js').AgentToAgentSidebar);
+  const sidebar = JSON.stringify(require('../sidebars.js').AgentAssuranceSidebar);
   for (const slug of pages) {
     const doc = fs.readFileSync(path.join(root, 'docs', `${slug}.md`), 'utf8');
     const fm = yaml.load(doc.match(/^---\n([\s\S]*?)\n---/)[1]);

@@ -62,7 +62,7 @@ import { BRAND_URL } from '@site/src/component/BrandName';
       "height": 630
     },
     "inLanguage": "en",
-    "articleSection": "Agent Testing",
+    "articleSection": "Agent Assurance",
     "keywords": [
       "rook workspace",
       "testmuai rook files",

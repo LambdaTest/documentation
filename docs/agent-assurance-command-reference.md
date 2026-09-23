@@ -37,7 +37,7 @@ canonical: https://www.testmuai.com/support/docs/agent-assurance-command-referen
       "height": 630
     },
     "inLanguage": "en",
-    "articleSection": "Agent Testing",
+    "articleSection": "Agent Assurance",
     "keywords": [
       "rook commands",
       "rook cli reference",
