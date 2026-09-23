@@ -51,7 +51,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
       "height": 630
     },
     "inLanguage": "en",
-    "articleSection": "Agent Testing",
+    "articleSection": "Agent Assurance",
     "keywords": [
       "rook mcp",
       "mcp agent testing",

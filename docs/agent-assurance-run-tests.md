@@ -51,7 +51,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
       "height": 630
     },
     "inLanguage": "en",
-    "articleSection": "Agent Assurance Platform",
+    "articleSection": "Agent Assurance",
     "keywords": [
       "rook run tests",
       "functional ai agent testing",
