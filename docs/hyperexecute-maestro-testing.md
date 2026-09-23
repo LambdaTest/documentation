@@ -248,7 +248,9 @@ import VerifiedTag from '@site/src/component/verifiedTag';
   ]) }}
 />
 
-This page outlines how to execute your Maestro tests on HyperExecute with [YAML 0.2](/support/docs/hyperexecute-yaml-version0.2/). You can run your tests as standard **Maestro** flows or with **Cucumber (BDD)**. The **Prerequisites**, **CLI setup**, and **app upload** are common to both. Then follow the section for your approach, **Maestro** or **Maestro with Cucumber (BDD)**, and finish with the shared reporting step.
+## Overview
+
+Run your Maestro tests on HyperExecute with [YAML 0.2](/support/docs/hyperexecute-yaml-version0.2/). The [Prerequisites](#prerequisites), [CLI setup](#setting-up-hyperexecute-cli-for-maestro), and [app upload](#uploading-your-app-for-maestro) apply to every run. From there, execute your suite as standard [Maestro flows](#running-maestro-tests), or with [Maestro and Cucumber (BDD)](#running-maestro-tests-with-cucumber-bdd) if your tests are written in Gherkin. Both approaches conclude with the shared reporting step.
 
 ## Prerequisites
 To run the Tests on HyperExecute from your Local System, you are required:
