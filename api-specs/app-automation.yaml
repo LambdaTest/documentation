@@ -116,9 +116,10 @@ paths:
                   type: string
                   maxLength: 1100
                   description: >-
-                    Release notes for this build, shown in the App Distribution email.
+                    Release notes for this build.
                     Neither limit fails the upload: a note longer than 1100 characters is stored up to
-                    that limit and the rest is dropped; emoji and non-Latin scripts are stored as `?`.
+                    that limit and the rest is dropped; emoji and non-Latin scripts are not supported
+                    as of now.
               required:
                 - appFile
                 - name
