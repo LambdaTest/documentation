@@ -311,7 +311,7 @@ See [RBAC Roles and Permissions](/support/docs/rbac-roles-and-permissions/) for 
 | Topic | Doc |
 |---|---|
 | Creating, editing, and archiving a single test run | [Test Run Creation and Management](/support/docs/test-run-creation-and-management/) |
-| Linking bugs and issues to test runs | [Track Bugs and Issues in Test Runs](/support/docs/test-run-creation-and-management/#track-bugs-and-issues-in-test-runs) |
+| Linking bugs and issues to test runs | [Track Bugs and Issues in Test Runs](/support/docs/track-issues-in-test-runs/) |
 | Moving and copying test cases | [Copy and Move Test Cases](/support/docs/copy-and-move-support-for-test-cases/) |
 | Retiring test cases without deleting them | [Archive and Restore Test Cases](/support/docs/test-case-archive/) |
 | Assigning permissions | [RBAC Roles and Permissions](/support/docs/rbac-roles-and-permissions/) |

@@ -1054,7 +1054,6 @@ module.exports = {
           "test-case-archive",
           "export-test-cases",
           { type: "doc", id: "automated-test-cases-with-ai", label: "Link Automated Test Cases" },
-          "sync-test-instance",
         ],
       },
       { type: "doc", id: "system-and-custom-fields", className: "menu-bold" },
@@ -1067,6 +1066,9 @@ module.exports = {
         items: [
           "test-run-creation-and-management",
           "test-run-bulk-actions",
+          "sync-test-instance",
+          "test-instance-audit-logs",
+          "track-issues-in-test-runs",
         ],
       },
       { type: "doc", id: "milestone-creation-and-management", className: "menu-bold" },

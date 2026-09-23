@@ -41,6 +41,63 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/sync-test-instance/"
+    },
+    "headline": "Sync Test Instances in Manual Test Runs",
+    "description": "Learn how to sync test instances in manual test runs with the latest master test case version in TestMu AI Test Manager.",
+    "url": "https://www.testmuai.com/support/docs/sync-test-instance/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Test Manager",
+    "keywords": [
+      "sync test instance",
+      "test instance version",
+      "test run sync"
+    ],
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 When a master test case is updated (e.g., steps are added, descriptions are modified, or modules are restructured), the test instances in your existing manual test runs do not automatically reflect these changes. The **Sync Test Instance** feature lets you manually update a test instance to the latest version of its master test case, ensuring your test runs always reflect the most current requirements.
 
 Each test instance tracks the **version** of the master test case it was created from (e.g., v1). When the master test case is updated to a newer version (e.g., v2), <BrandName /> Test Manager detects this version mismatch and makes the **sync action** available.

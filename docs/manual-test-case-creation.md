@@ -41,6 +41,63 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/manual-test-case-creation/"
+    },
+    "headline": "Create & Manage Test Cases",
+    "description": "Learn efficient manual test case creation with TestMu AI's Test Manager, streamlining testing processes and enhancing test execution.",
+    "url": "https://www.testmuai.com/support/docs/manual-test-case-creation/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Test Manager",
+    "keywords": [
+      "test case creation",
+      "test case",
+      "test cases"
+    ],
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "dateModified": "2026-09-09T21:31:00+05:30"
+  }) }}
+/>
+
 Test Manager streamlines the process of creating, managing, and editing test cases. It enables users to develop manual test cases, allowing efficient management of all testing activities from a single platform.
 
 ## Creating a Test Case
@@ -130,6 +187,23 @@ To save the changes made in the Test Case click on the `Save Changes` button OR 
 
 :::note
  Any change in the Test Case, on **saving** will create a new version for that Test Case. You can add a commit message to note the reason for changes. To know more about how versioning works checkout the [Versioning doc](/support/docs/test-case-versioning/). 
+:::
+
+***
+
+### Automate with KaneAI
+
+A saved test case can be handed to **KaneAI** for automated authoring. Open the test case and click **Automate with KaneAI** in the **Automate** section of the test case detail. This opens a KaneAI session pre-filled with the test case's steps, where you author the automated test and then execute it.
+
+This works for both test case templates:
+
+| Template | What KaneAI receives |
+|----------|----------------------|
+| **Manual Test Steps** | The ordered steps and their expected results |
+| **Behaviour Driven Development** | The `Given` / `When` / `Then` scenarios, read directly — no conversion is needed |
+
+:::note
+The action requires KaneAI access, and the test case must have content — a test case with no steps or no scenarios cannot be automated.
 :::
 
 ***

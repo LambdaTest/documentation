@@ -40,6 +40,63 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/testmu-azure-devops-app/"
+    },
+    "headline": "TestMu AI Azure DevOps App",
+    "description": "Efficiently manage your tests with TestMu AI Azure DevOps App, seamlessly integrating Test Manager capabilities into your Azure DevOps environment to enhance collaboration.",
+    "url": "https://www.testmuai.com/support/docs/testmu-azure-devops-app/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Test Manager",
+    "keywords": [
+      "Azure DevOps app",
+      "TestMu AI Azure DevOps App",
+      "Azure DevOps marketplace"
+    ],
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 # <BrandName /> Azure DevOps App
 
 <BrandName /> Test Manager integrates directly with Azure DevOps through the Azure DevOps Marketplace App, allowing you to manage tests seamlessly within the Azure DevOps interface. It provides Test Manager functionalities in your Azure DevOps environment, boosting workflow efficiency and facilitating improved collaboration among teams.

@@ -43,6 +43,63 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/test-case-archive/"
+    },
+    "headline": "Archive and Restore Test Cases in Test Manager",
+    "description": "Archive test cases in Test Manager to retire them from your active repository without deleting them, review them in the read-only Archived view, and restore them unchanged.",
+    "url": "https://www.testmuai.com/support/docs/test-case-archive/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Test Manager",
+    "keywords": [
+      "archive test cases",
+      "unarchive test cases",
+      "archived test cases"
+    ],
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "dateModified": "2026-09-09T20:28:09+05:30"
+  }) }}
+/>
+
 # Archive and Restore Test Cases
 
 Test repositories collect test cases that are no longer worth running: features that were retired, flows that were replaced, cases written for a release that has shipped. Keeping them clutters every list, inflates your counts, and pulls noise into search and AI generation. Deleting them is permanent and takes their history with them, which is unacceptable when you need an audit trail.
