@@ -28,6 +28,7 @@ import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import RealDeviceTag from '@site/src/component/realDevice';
 import VirtualDeviceTag from '@site/src/component/virtualDevice';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -177,6 +178,8 @@ To trigger a shake gesture, use the `lambda_executor` Appium hook with the `gest
 <Tabs className="docs__val">
   <TabItem value="python" label="Python" default>
 
+<VerifiedTag value="Verified" />
+
 ```python
 response = driver.execute_script(
   'lambda_executor: {"action": "gestures", "arguments": {"shake": true}}'
@@ -186,6 +189,8 @@ response = driver.execute_script(
 
   </TabItem>
   <TabItem value="java" label="Java">
+
+<VerifiedTag value="Verified" />
 
 ```java
 String response = (String) ((JavascriptExecutor) driver).executeScript(

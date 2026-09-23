@@ -29,6 +29,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import { CookieTrackingSignup } from '@site/src/component/CookieTracking';
 import RealDeviceTag from '@site/src/component/realDevice';
 import VirtualDeviceTag from '@site/src/component/virtualDevice';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -242,6 +243,8 @@ Here is an example cURL request to upload your app using our REST API:
 
 <TabItem value="bash" label="Linux / MacOS" default>
 
+  <VerifiedTag value="Verified" />
+
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-bash">
   {`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" \\
@@ -254,6 +257,8 @@ Here is an example cURL request to upload your app using our REST API:
 </TabItem>
 
 <TabItem value="powershell" label="Windows" default>
+
+  <VerifiedTag value="Verified" />
 
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-powershell">
@@ -280,6 +285,8 @@ Upload your **test suite** (.apk file) to the <BrandName /> servers using our **
 
 <TabItem value="bash" label="Linux / MacOS" default>
 
+  <VerifiedTag value="Verified" />
+
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-bash">
   {`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" \\
@@ -292,6 +299,8 @@ Upload your **test suite** (.apk file) to the <BrandName /> servers using our **
 </TabItem>
 
 <TabItem value="powershell" label="Windows" default>
+
+  <VerifiedTag value="Verified" />
 
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-powershell">
@@ -331,6 +340,8 @@ Refer to the sample `.yaml` file here
 <Tabs className="docs__val">
 
 <TabItem value="real-device" label="Real Device" default>
+<VerifiedTag value="Verified" />
+
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-yaml">
 
@@ -396,6 +407,8 @@ framework:
 </TabItem>
 
 <TabItem value="virtual-device" label="Virtual Device">
+<VerifiedTag value="Verified" />
+
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-yaml">
 
@@ -486,6 +499,8 @@ Refer to the sample `.yaml` file here
 <Tabs className="docs__val">
 
 <TabItem value="real-device" label="Real Device" default>
+<VerifiedTag value="Verified" />
+
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-yaml">
 
@@ -528,6 +543,8 @@ framework:
 </TabItem>
 
 <TabItem value="virtual-device" label="Virtual Device">
+<VerifiedTag value="Verified" />
+
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-yaml">
 
@@ -589,12 +606,16 @@ If you are using the `deviceSelectionStrategy: any`, then in that case all the s
 
 4. Go to the location of the folder on the terminal and run the below commands. After the second command, you may need to give permission on **System Settings/Privacy & Security**. 
 
+<VerifiedTag value="Verified" />
+
 ```bash
 chmod u+x <cliFileNAme>
 ./<cliFileNAme> -user <userName> -key <accessKey> --verbose -i <yamlFileName>.yaml
 ```
 
 You can refer to this example and screenshot below:
+<VerifiedTag value="Verified" />
+
 ```
 ./hyperexecute -user my_user_name -key xyx123abc --verbose -i hyperexecute.yaml
 ```
@@ -615,6 +636,8 @@ You can refer to this example and screenshot below:
 
 You can filter the Classes / Tests that you'd like to execute using filters. Here's an example of the same.
 
+<VerifiedTag value="Verified" />
+
 ```java
 filters:
       attributes:
@@ -631,6 +654,8 @@ This example will fetch all the test cases from 2 classes and 1 package as defin
 
 You can also filter your Espresso tests based on annotations while using sharding. This helps you execute only the test cases marked with specific annotations.
 
+<VerifiedTag value="Verified" />
+
 ```yaml
 filters:
       attributes:
@@ -644,6 +669,8 @@ This configuration will run tests annotated with multiple annotations, i.e., onl
 
 ## Generate Reports and Artifacts
 To generate artifacts for your Espresso tests, add the `artifacts: true`, and `report: true` flag in your YAML file:
+
+<VerifiedTag value="Verified" />
 
 ```yaml
 report: true

@@ -21,6 +21,7 @@ slug: appium-testmu-hooks/
 canonical: https://www.testmuai.com/support/docs/appium-testmu-hooks/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -184,6 +185,8 @@ Arguments | Example
 
 Here is a sample automation script in Java for the sample status & remark. Ensure to update the ```app_url```, ```username``` & ```accesskey``` in the below code.
 
+<VerifiedTag value="Verified" />
+
 ```java title="android.java"
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileBy;
@@ -254,6 +257,8 @@ You can use Lambda Hooks to start and end a test case within a single Appium ses
 
 To start a test case, use the `lambda-testCase-start` hook:
 
+<VerifiedTag value="Verified" />
+
 ```java
 // To start a test case
 ((JavascriptExecutor) driver).executeScript("lambda-testCase-start=find Name");
@@ -262,6 +267,8 @@ To start a test case, use the `lambda-testCase-start` hook:
 #### Test Case End
 
 To end a test case, use the `lambda-testCase-end` hook:
+
+<VerifiedTag value="Verified" />
 
 ```java
 // To end a test case
@@ -307,6 +314,8 @@ Command Annotations allow you to add metadata and debugging information to your 
 ### Using Command Annotations
 
 #### Annotation Start
+<VerifiedTag value="Verified" />
+
 ```java
 driver.execute_script("lambdatest_executor: {\"action\": \"stepcontext\", \"arguments\": {\"data\": \"youtube\", \"level\": \"debug\"}}");
 ```
@@ -320,6 +329,8 @@ driver.execute_script("lambdatest_executor: {\"action\": \"stepcontext\", \"argu
 
 #### Annotation End
 To close the executor at the end of your script, pass `data` as an empty string:
+
+<VerifiedTag value="Verified" />
 
 ```java
 driver.execute_script("lambdatest_executor: {\"action\": \"stepcontext\", \"arguments\": {\"data\": \"\"}}");
@@ -340,12 +351,16 @@ driver.execute_script("lambdatest_executor: {\"action\": \"stepcontext\", \"argu
 You can install apps uploaded to the <BrandName /> platform directly within your automation scripts using the `lambda-install-app` command followed by the app’s ID. This ID can be either the <BrandName />-generated ID or a custom ID assigned during upload.
 
 **Python example:**
+<VerifiedTag value="Verified" />
+
 ```python
 driver.execute_script("lambda-install-app=myApp")
 driver.execute_script("lambda-install-app=lt://APP100000000123456789123456789")
 ```
 
 **JavaScript example:**
+<VerifiedTag value="Verified" />
+
 ```javascript
 await browser.execute("lambda-install-app", {
   /* Change the App URL */
@@ -360,12 +375,16 @@ await browser.execute("lambda-install-app", {
 You can uninstall apps during the execution of an automation test using the command `lambda-uninstall-app` followed by the app's package name (for Android apps) or bundle ID (for iOS apps).
 
 **Python example:**
+<VerifiedTag value="Verified" />
+
 ```python
 driver.execute_script("lambda-uninstall-app=com.myApp.beta")
 driver.execute_script("lambda-uninstall-app=com.apple.myApp")
 ```
 
 **JavaScript example:**
+<VerifiedTag value="Verified" />
+
 ```javascript
 /* Change the App ID */
 const APP_ID = "com.lambdatest.proverbial";
@@ -380,6 +399,8 @@ Testing app upgrades is important because users often update to the latest versi
 
 <Tabs className="docs__val">
 <TabItem value="macos-file" label="Android" default>
+
+<VerifiedTag value="Verified" />
 
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">
@@ -406,6 +427,8 @@ driver.execute_script("lambda-install-app", data)
 </TabItem>
 
 <TabItem value="windows-file" label="iOS" default>
+<VerifiedTag value="Verified" />
+
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-powershell">
 

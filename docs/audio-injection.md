@@ -31,6 +31,7 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import RealDeviceTag from '@site/src/component/realDevice';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -273,11 +274,15 @@ The audio file must be uploaded to <BrandName /> before it can be injected.
 
 Use the **Upload Media API** to upload an audio file to your <BrandName /> account.
 
+<VerifiedTag value="Verified" />
+
 ```bash
 curl -u "LT_USERNAME:LT_ACCESS_KEY"   -X POST "https://api.lambdatest.com/mfs/v1.0/media/upload"   -F "media_file=@/path/to/test.wav"   -F "type=audio"   -F "custom_id=SampleAudio"
 ```
 
 **Response**
+
+<VerifiedTag value="Verified" />
 
 ```json
 {
@@ -298,6 +303,8 @@ Set the `enableAudioInjection` capability when creating your driver session.
 
 <TabItem value="java" label="Java" default>
 
+<VerifiedTag value="Verified" />
+
 ```java
 DesiredCapabilities caps = new DesiredCapabilities();
 caps.setCapability("enableAudioInjection", true);
@@ -307,6 +314,8 @@ caps.setCapability("media", "lt://MEDIA1234567890abcdef"); // optional: pre-set 
 </TabItem>
 
 <TabItem value="python" label="Python">
+
+<VerifiedTag value="Verified" />
 
 ```python
 desired_caps = {
@@ -319,6 +328,8 @@ desired_caps = {
 </TabItem>
 
 <TabItem value="nodejs" label="Node.js">
+
+<VerifiedTag value="Verified" />
 
 ```javascript
 const capabilities = {
@@ -352,6 +363,8 @@ Use the following hooks via `driver.executeScript`:
 
 <TabItem value="java" label="Java" default>
 
+<VerifiedTag value="Verified" />
+
 ```java
 // 1. Set the audio file
 driver.executeScript("lambda-audio-injection=lt://MEDIA1234567890abcdef");
@@ -372,6 +385,8 @@ driver.executeScript("lambda-audio-stop");
 
 <TabItem value="python" label="Python">
 
+<VerifiedTag value="Verified" />
+
 ```python
 driver.execute_script("lambda-audio-injection=lt://MEDIA1234567890abcdef")
 driver.find_element(AppiumBy.ID, "recordButton").click()
@@ -383,6 +398,8 @@ driver.execute_script("lambda-audio-stop")
 </TabItem>
 
 <TabItem value="nodejs" label="Node.js">
+
+<VerifiedTag value="Verified" />
 
 ```javascript
 await driver.executeScript("lambda-audio-injection=lt://MEDIA1234567890abcdef");

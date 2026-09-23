@@ -16,6 +16,7 @@ canonical: https://www.testmuai.com/support/docs/supported-locales-espresso/
 toc_max_heading_level: 2
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -245,6 +246,8 @@ To test a localized version of your app on <BrandName />, use the `locale` param
 | locale    | Set locale for the app under test | Example: IN (Country name abbreviation) |
 
 **For Example:** 
+
+<VerifiedTag value="Verified" />
 
 ```bash
 curl --location --request POST 'https://mobile-api.lambdatest.com/espresso/v1/build' \

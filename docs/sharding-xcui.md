@@ -28,6 +28,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import { CookieTrackingSignup } from '@site/src/component/CookieTracking';
 import RealDeviceTag from '@site/src/component/realDevice';
 import VirtualDeviceTag from '@site/src/component/virtualDevice';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -220,6 +221,8 @@ Here is an example cURL request to upload your app using our REST API:
 
 <TabItem value="bash" label="Linux / MacOS" default>
 
+  <VerifiedTag value="Verified" />
+
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-bash">
   {`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" \\
@@ -232,6 +235,8 @@ Here is an example cURL request to upload your app using our REST API:
 </TabItem>
 
 <TabItem value="powershell" label="Windows" default>
+
+  <VerifiedTag value="Verified" />
 
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-powershell">
@@ -258,6 +263,8 @@ Upload your **test suite** (.ipa file) to the <BrandName /> servers using our **
 
 <TabItem value="bash" label="Linux / MacOS" default>
 
+  <VerifiedTag value="Verified" />
+
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-bash">
   {`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" \\
@@ -270,6 +277,8 @@ Upload your **test suite** (.ipa file) to the <BrandName /> servers using our **
 </TabItem>
 
 <TabItem value="powershell" label="Windows" default>
+
+  <VerifiedTag value="Verified" />
 
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-powershell">
@@ -302,6 +311,8 @@ Refer to the sample `.yaml` file here
 <Tabs className="docs__val">
 
 <TabItem value="real-device" label="Real Device" default>
+<VerifiedTag value="Verified" />
+
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-yaml">
 
@@ -366,6 +377,8 @@ framework:
 </TabItem>
 
 <TabItem value="virtual-device" label="Virtual Device">
+<VerifiedTag value="Verified" />
+
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-yaml">
 
@@ -458,12 +471,16 @@ If you are using the `deviceSelectionStrategy: any`, then in that case all the m
 
 4. Go to the location of the folder on the terminal and run the below commands. After the second command, you may need to give permission on **System Settings/Privacy & Security**. 
 
+<VerifiedTag value="Verified" />
+
 ```bash
 chmod u+x <cliFileNAme>
 ./<cliFileNAme> --u <userName> --k <accessKey> --verbose -i <yamlFileName>.yaml
 ```
 
 You can refer to this example and screenshot below:
+<VerifiedTag value="Verified" />
+
 ```
 ./hyperexecute --u my_user_name --k xyx123abc --verbose -i hyperexecute.yaml
 ```
@@ -484,6 +501,8 @@ You can refer to this example and screenshot below:
 You can filter the Classes / Tests that you'd like to execute using filters.
 Here's an example of the same.
 
+<VerifiedTag value="Verified" />
+
 ```yaml
 filters:
       attributes:
@@ -496,6 +515,8 @@ This example will run only the 2 classes & one test as mentioned from the TestSu
 
 ## XCTestPlan in Sharding
 To implement the XCTestPlan in Sharding, add the `xctestplan` flag along with `app` and `testSuite` in the [framework](/support/docs/deep-dive-into-hyperexecute-yaml/#hyperexecute-yaml-v02-framework-flags-and-discovery-config) flag as shown below:
+
+<VerifiedTag value="Verified" />
 
 ```yaml
 framework:
@@ -515,6 +536,8 @@ Usually, all the test cases of your XCUI test suite are executed, but there is a
 To filter the test cases, you just need to pass the suitable parameters in <BrandName />’s REST API request. Refer to the table below to understand how to use various filters provided by <BrandName />.
 
 Given below is the REST API endpoint:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 curl --location --request POST 'https://mobile-api.lambdatest.com/framework/v1/xcui/build' \

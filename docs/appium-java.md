@@ -28,6 +28,7 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import RealDeviceTag from '@site/src/component/realDevice';
 import VirtualDeviceTag from '@site/src/component/virtualDevice';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -256,6 +257,8 @@ You need to export your environment variables *LT_USERNAME* and *LT_ACCESS_KEY* 
 
 <Tabs className="docs__val">
 <TabItem value="bash" label="Linux / MacOS" default>
+  <VerifiedTag value="Verified" />
+
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-bash">
   {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
@@ -264,6 +267,8 @@ export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 </div>
 </TabItem>
 <TabItem value="powershell" label="Windows" default>
+  <VerifiedTag value="Verified" />
+
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-powershell">
   {`set LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
@@ -283,6 +288,8 @@ Make sure to add the path of the **appFile** in the cURL request. Below is an ex
 <Tabs className="docs__val">
 
 <TabItem value="bash" label="App File" default>
+  <VerifiedTag value="Verified" />
+
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-bash">
       {`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" -X POST "https://manual-api.lambdatest.com/app/upload/realDevice" -F "appFile=@"/Users/macuser/Downloads/proverbial_android.apk"" -F "name="proverbial_app""`}
@@ -291,6 +298,8 @@ Make sure to add the path of the **appFile** in the cURL request. Below is an ex
 </TabItem>
 
 <TabItem value="powershell" label="App URL" default>
+  <VerifiedTag value="Verified" />
+
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-bash">
       {`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" -X POST "https://manual-api.lambdatest.com/app/upload/realDevice" -F "url=:https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_android.apk" -F "name=Proverbial_App"`}
@@ -333,6 +342,8 @@ An automation script for the sample application given above has been provided he
 
 <Tabs className="docs__val">
 <TabItem value="android" label="Android" default>
+
+<VerifiedTag value="Verified" />
 
 ```java title="vanilla_android.java"
 
@@ -430,6 +441,8 @@ public class vanilla_android {
 </TabItem>
 
 <TabItem value="ios" label="iOS" default>
+
+<VerifiedTag value="Verified" />
 
 ```java title="vanilla_ios.java"
 import io.appium.java_client.AppiumDriver;
@@ -554,6 +567,8 @@ The capabilities object in the sample code are defined as:
 <Tabs className="docs__val">
 <TabItem value="android-config" label="Android" default>
 
+<VerifiedTag value="Verified" />
+
 ```java
 DesiredCapabilities capabilities = new DesiredCapabilities();
             capabilities.setCapability("deviceName", "Galaxy S20");
@@ -578,6 +593,8 @@ DesiredCapabilities capabilities = new DesiredCapabilities();
 </TabItem>
 
 <TabItem value="ios-config" label="iOS" default>
+
+<VerifiedTag value="Verified" />
 
 ```java
 DesiredCapabilities caps = new DesiredCapabilities();
@@ -608,6 +625,8 @@ DesiredCapabilities caps = new DesiredCapabilities();
 
 - Run the following commands to install the required dependencies:
 
+  <VerifiedTag value="Verified" />
+
   ```bash
   mvn clean install
   ```
@@ -617,12 +636,16 @@ DesiredCapabilities caps = new DesiredCapabilities();
   <Tabs className="docs__val">
   <TabItem value="android-exec" label="Android" default>
 
+  <VerifiedTag value="Verified" />
+
   ```bash
   mvn test -P android
   ```
   </TabItem>
 
   <TabItem value="ios-exec" label="iOS" default>
+
+  <VerifiedTag value="Verified" />
 
   ```bash
   mvn test -P ios
@@ -653,6 +676,8 @@ An automation script for the sample application given above has been provided he
 
 <Tabs className="docs__val">
 <TabItem value="android" label="Android" default>
+
+<VerifiedTag value="Verified" />
 
 ```java
 package com.lambdatest;
@@ -761,6 +786,8 @@ public class android {
 </TabItem>
 
 <TabItem value="ios" label="iOS" default>
+
+<VerifiedTag value="Verified" />
 
 ```java
 package com.lambdatest;
@@ -879,6 +906,8 @@ The capabilities object in the sample code are defined as:
 <Tabs className="docs__val">
 <TabItem value="android-config" label="Android" default>
 
+<VerifiedTag value="Verified" />
+
 ```java
 DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("build", "JUNIT Native App automation");
@@ -898,6 +927,8 @@ DesiredCapabilities capabilities = new DesiredCapabilities();
 </TabItem>
 
 <TabItem value="ios-config" label="iOS" default>
+
+<VerifiedTag value="Verified" />
 
 ```java
 DesiredCapabilities capabilities = new DesiredCapabilities();
@@ -931,6 +962,8 @@ DesiredCapabilities capabilities = new DesiredCapabilities();
 ### Step 4: Execute and Monitor your Tests
 
 - Run the following commands to install the required dependencies:
+
+  <VerifiedTag value="Verified" />
 
   ```bash
   mvn clean
@@ -974,6 +1007,8 @@ All the code samples in this documentation can be found on **<BrandName />'s Git
 ### Step 2: Update your Automation Script
 
 An automation script for the sample application given above has been provided here. Ensure to update the `APP_URL`, `username` and `accessKey` in the code scripts before running the tests.
+
+<VerifiedTag value="Verified" />
 
 ```java
 
@@ -1096,6 +1131,8 @@ The capabilities object in the sample code are defined as:
 <Tabs className="docs__val">
 <TabItem value="single-config" label="Single" default>
 
+<VerifiedTag value="Verified" />
+
 ```java
 //Single Tests
 {
@@ -1119,6 +1156,8 @@ The capabilities object in the sample code are defined as:
 </TabItem>
 
 <TabItem value="parallel-config" label="Parallel" default>
+
+<VerifiedTag value="Verified" />
 
 ```java
 //Parallel Tests
@@ -1168,6 +1207,8 @@ The capabilities object in the sample code are defined as:
 
 - Run the following commands to install the required dependencies:
 
+  <VerifiedTag value="Verified" />
+
   ```bash
   mvn clean install
   ```
@@ -1177,12 +1218,16 @@ The capabilities object in the sample code are defined as:
   <Tabs className="docs__val">
   <TabItem value="single-exec" label="Single" default>
 
+  <VerifiedTag value="Verified" />
+
   ```bash
   mvn test -P single
   ```
   </TabItem>
 
   <TabItem value="parallel-exec" label="Parallel" default>
+
+  <VerifiedTag value="Verified" />
 
   ```bash
   mvn test -P parallel
@@ -1214,6 +1259,8 @@ All the code samples in this documentation can be found on **<BrandName />'s Git
 ### Step 2: Update your Automation Script
 
 An automation script for the sample application given above has been provided here. Ensure to update the `APP_URL`, `username` and `accessKey` in the code scripts before running the tests.
+
+<VerifiedTag value="Verified" />
 
 ```java
 package MyRunner;
@@ -1308,6 +1355,8 @@ The capabilities object in the sample code are defined as:
 <Tabs className="docs__val">
 <TabItem value="single-config" label="Single" default>
 
+<VerifiedTag value="Verified" />
+
 ```java
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
@@ -1328,6 +1377,8 @@ The capabilities object in the sample code are defined as:
 </TabItem>
 
 <TabItem value="parallel-config" label="Parallel" default>
+
+<VerifiedTag value="Verified" />
 
 ```java
 <?xml version="1.0" encoding="UTF-8"?>
@@ -1374,6 +1425,8 @@ The capabilities object in the sample code are defined as:
 
 - Run the following commands to install the required dependencies:
 
+  <VerifiedTag value="Verified" />
+
   ```bash
   mvn clean install
   ```
@@ -1383,12 +1436,16 @@ The capabilities object in the sample code are defined as:
   <Tabs className="docs__val">
   <TabItem value="single-exec" label="Single" default>
 
+  <VerifiedTag value="Verified" />
+
   ```bash
   mvn test -D suite=single.xml
   ```
   </TabItem>
 
   <TabItem value="parallel-exec" label="Parallel" default>
+
+  <VerifiedTag value="Verified" />
 
   ```bash
   mvn test -D suite=parallel.xml
@@ -1419,6 +1476,8 @@ An automation script for the sample application given above has been provided he
 
 <Tabs className="docs__val">
 <TabItem value="android" label="Android" default>
+
+<VerifiedTag value="Verified" />
 
 ```java title="AndroidApp.java"
 import io.appium.java_client.AppiumDriver;
@@ -1530,6 +1589,8 @@ public class AndroidApp {
 </TabItem>
 
 <TabItem value="ios" label="iOS" default>
+
+<VerifiedTag value="Verified" />
 
 ```java title="iOSApp.java"
 import io.appium.java_client.AppiumDriver;
@@ -1655,6 +1716,8 @@ The capabilities object in the sample code are defined as:
 <Tabs className="docs__val">
 <TabItem value="android-config" label="Android" default>
 
+<VerifiedTag value="Verified" />
+
 ```java
 DesiredCapabilities capabilities = new DesiredCapabilities();
             capabilities.setCapability("build","Java TestNG Android");
@@ -1675,6 +1738,8 @@ DesiredCapabilities capabilities = new DesiredCapabilities();
 </TabItem>
 
 <TabItem value="ios-config" label="iOS" default>
+
+<VerifiedTag value="Verified" />
 
 ```java
 DesiredCapabilities capabilities = new DesiredCapabilities();
@@ -1712,6 +1777,8 @@ DesiredCapabilities capabilities = new DesiredCapabilities();
 
 - Run the following commands to install the required dependencies:
 
+  <VerifiedTag value="Verified" />
+
   ```bash
   mvn clean install
   ```
@@ -1721,12 +1788,16 @@ DesiredCapabilities capabilities = new DesiredCapabilities();
   <Tabs className="docs__val">
   <TabItem value="android-exec" label="Android" default>
 
+  <VerifiedTag value="Verified" />
+
   ```bash
   mvn test -P android-single
   ```
   </TabItem>
 
   <TabItem value="ios-exec" label="iOS" default>
+
+  <VerifiedTag value="Verified" />
 
   ```bash
   mvn test -P ios-single

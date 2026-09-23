@@ -23,6 +23,7 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import RealDeviceTag from '@site/src/component/realDevice';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -213,6 +214,8 @@ Before enabling network configurations, ensure your app is uploaded to <BrandNam
 
 <Tabs>
   <TabItem value="android" label="Android" default>
+    <VerifiedTag value="Verified" />
+
     <CodeBlock className="language-java">
 {`desired_caps = {
     "deviceName": "Galaxy S20",
@@ -234,6 +237,8 @@ Before enabling network configurations, ensure your app is uploaded to <BrandNam
   </TabItem>
 
   <TabItem value="ios" label="iOS">
+    <VerifiedTag value="Verified" />
+
     <CodeBlock className="language-java">
 {`desired_caps = {
     "deviceName": "iPhone 16",

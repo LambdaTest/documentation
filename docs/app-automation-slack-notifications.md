@@ -22,6 +22,7 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -155,6 +156,8 @@ To enable Slack notifications for your App Automation tests, add the `slackChann
 <Tabs className="docs__val">
 <TabItem value="java" label="Java" default>
 
+<VerifiedTag value="Verified" />
+
 ```java
 DesiredCapabilities capabilities = new DesiredCapabilities();
 capabilities.setCapability("platformName", "Android");
@@ -169,6 +172,8 @@ capabilities.setCapability("slackChannel", "mobile-test-results");
 
 </TabItem>
 <TabItem value="python" label="Python">
+
+<VerifiedTag value="Verified" />
 
 ```python
 desired_caps = {
@@ -185,6 +190,8 @@ desired_caps = {
 
 </TabItem>
 <TabItem value="javascript" label="JavaScript">
+
+<VerifiedTag value="Verified" />
 
 ```javascript
 const capabilities = {

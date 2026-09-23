@@ -33,6 +33,9 @@
    --ifm-tabs-color:#333333;
    --realDevice-tag-color: #28A745;
    --virtualDevice-tag-color: #007BFF;
+   --verified-tag-color: #1A7F37;
+   --verified-tag-bg-color: #DAFBE1;
+   --verified-tag-border-color: #4AC26B66;
 
    /* TE-11137: UI Revamp Variables */
    --right-rail-width: 220px;
@@ -49,10 +52,18 @@
    --method-patch: #6F42C1;
 }
 
+/* Verified tag (replicated from testmuCom) */
+.verifiedTagColor{color: var(--verified-tag-color); background-color: var(--verified-tag-bg-color); font-weight:600; font-size: 12px; padding: 2px 8px; border-radius: 20px; border:1px solid var(--verified-tag-border-color); display: inline-flex; align-items: center; gap: 4px; line-height: 1.5;}
+.verifiedTagColor + div[class*='codeBlockContainer'], .verifiedTagColor + div[class*='language-']{margin-top: 6px;}
+.verifiedTagIcon{flex-shrink: 0;}
+
 [data-theme=dark] {
   --ifm-footer-link-color: #C9D1D9;
   --ifm-color-primary: #CAD1D9;
   --ifm-link-color-primary: #2F81F7;
+   --verified-tag-color: #3FB950;
+   --verified-tag-bg-color: #2EA04326;
+   --verified-tag-border-color: #2EA04366;
    --alert-tip-background-color:#2EA04326;
    --alert-tip-border-color: #2EA04366;
    --alert-info-background-color:#388BFD1A;

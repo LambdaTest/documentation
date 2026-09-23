@@ -25,6 +25,7 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import RealDeviceTag from '@site/src/component/realDevice';
 import VirtualDeviceTag from '@site/src/component/virtualDevice';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -174,6 +175,8 @@ After preparing your Flutter app with this integration (refer to the setup docum
 
 In your Flutter app’s `pubspec.yaml`, add:
 
+<VerifiedTag value="Verified" />
+
 ```yaml
 dev_dependencies:
   appium_flutter_server: 0.0.28
@@ -182,6 +185,8 @@ dev_dependencies:
 ### 2. Create integration test files 
 
 Create an `integration_test` folder at the root of your Flutter project. Inside it, create `appium_test.dart` with:
+
+<VerifiedTag value="Verified" />
 
 ```dart
 import 'package:appium_flutter_server/appium_flutter_server.dart';
@@ -193,6 +198,8 @@ void main() {
 ```
 
 Or with setup callback:
+
+<VerifiedTag value="Verified" />
 
 ```dart
 import 'package:your_app_package/main.dart' as app;
@@ -211,18 +218,24 @@ void main() {
 
 <Tabs>
   <TabItem value="android" label="Android" default>
+    <VerifiedTag value="Verified" />
+
     <CodeBlock className="language-bash">
 {`./gradlew app:assembleDebug -Ptarget=$(pwd)/../integration_test/appium_test.dart`}
     </CodeBlock>
   </TabItem>
 
   <TabItem value="ios-simulator" label="iOS Simulator">
+    <VerifiedTag value="Verified" />
+
     <CodeBlock className="language-bash">
 {`flutter build ios integration_test/appium_test.dart --simulator`}
     </CodeBlock>
   </TabItem>
 
   <TabItem value="ios-device" label="iOS Real Device">
+    <VerifiedTag value="Verified" />
+
     <CodeBlock className="language-bash">
 {`flutter build ipa --release integration_test/appium_test.dart`}
     </CodeBlock>
@@ -247,6 +260,8 @@ void main() {
 
 <Tabs>
   <TabItem value="android" label="Android" default>
+    <VerifiedTag value="Verified" />
+
     <CodeBlock className="language-java">
 {`desired_caps = {
     "deviceName":"Galaxy S20",
@@ -264,6 +279,8 @@ void main() {
   </TabItem>
 
   <TabItem value="ios" label="iOS">
+    <VerifiedTag value="Verified" />
+
     <CodeBlock className="language-java">
 {`desired_caps = {
     "deviceName":"iPhone 16",

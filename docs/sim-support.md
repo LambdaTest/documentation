@@ -21,6 +21,7 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import RealDeviceTag from '@site/src/component/realDevice';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -226,6 +227,8 @@ To enable SIM & eSIM support, include the following capability in your automatio
 
 <TabItem value="ios-config" label="iOS" default>
 
+<VerifiedTag value="Verified" />
+
 ```python title="iOS(.ipa)"
  desired_caps = {
     'platformName': 'iOS',
@@ -243,6 +246,8 @@ To enable SIM & eSIM support, include the following capability in your automatio
 
 </TabItem>
 <TabItem value="android-config" label="Android" default>
+
+<VerifiedTag value="Verified" />
 
 ```python title="Android(.apk)"
 desired_caps = {
@@ -265,12 +270,16 @@ desired_caps = {
 
 ### Step 2: Retrieve SIM Properties at Runtime
 
+<VerifiedTag value="Verified" />
+
 ```python
 driver.execute_script(
   "lambda_executor: { \"action\": \"deviceInfo\", \"arguments\": { \"deviceProperties\": [\"simOptions\"] } }"
 )
 ```
 Sample Response:
+<VerifiedTag value="Verified" />
+
 ``` JSON
 {
   "simOptions": {

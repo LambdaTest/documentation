@@ -31,6 +31,7 @@ import NewTag from '../src/component/newTag';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import RealDeviceTag from '@site/src/component/realDevice';
 import VirtualDeviceTag from '@site/src/component/virtualDevice';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -153,6 +154,8 @@ To configure the Appium version for your tests on <BrandName />, use the `appium
 | tvos | 1.22.3, 2.2.1 | 1.22.3 | 1.22.3 |
 
 **Java Example:** 
+<VerifiedTag value="Verified" />
+
 ```java
 // Java code for configuring Appium version in tests on TestMu AI
 DesiredCapabilities capabilities = new DesiredCapabilities();
@@ -218,6 +221,8 @@ Below is a list of the supported Appium plugins on <BrandName />:
 | `gestures`        | Adds support for gesture-based interactions, enabling tests to perform complex gestures like swipe, pinch, and zoom. For further details, please check [this documentation](https://github.com/AppiumTestDistribution/appium-gestures-plugin). | "appiumPlugins": ["gestures"] |
 
 **Python Example:**
+
+<VerifiedTag value="Verified" />
 
 ```python
 capabilities = {

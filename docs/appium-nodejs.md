@@ -26,6 +26,7 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import RealDeviceTag from '@site/src/component/realDevice';
 import VirtualDeviceTag from '@site/src/component/virtualDevice';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 
@@ -253,6 +254,8 @@ You need to export your environment variables *LT_USERNAME* and *LT_ACCESS_KEY* 
 
 <Tabs className="docs__val">
 <TabItem value="bash" label="Linux / MacOS" default>
+  <VerifiedTag value="Verified" />
+
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-bash">
   {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
@@ -261,6 +264,8 @@ export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 </div>
 </TabItem>
 <TabItem value="powershell" label="Windows" default>
+  <VerifiedTag value="Verified" />
+
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-powershell">
   {`set LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
@@ -280,6 +285,8 @@ Make sure to add the path of the **appFile** in the cURL request. Below is an ex
 <Tabs className="docs__val">
 
 <TabItem value="bash" label="App File" default>
+  <VerifiedTag value="Verified" />
+
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-bash">
       {`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" -X POST "https://manual-api.lambdatest.com/app/upload/realDevice" -F "appFile=@"/Users/macuser/Downloads/proverbial_android.apk"" -F "name="proverbial_app""`}
@@ -288,6 +295,8 @@ Make sure to add the path of the **appFile** in the cURL request. Below is an ex
 </TabItem>
 
 <TabItem value="powershell" label="App URL" default>
+  <VerifiedTag value="Verified" />
+
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-bash">
       {`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" -X POST "https://manual-api.lambdatest.com/app/upload/realDevice" -F "url=:https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_android.apk" -F "name=Proverbial_App"`}
@@ -328,6 +337,8 @@ An automation script for the sample application available above has been provide
 <Tabs className="docs__val">
 
 <TabItem value="ios" label="iOS" default>
+
+<VerifiedTag value="Verified" />
 
 ```javascript title="iOS.js"
 var wd = require("wd");
@@ -427,6 +438,8 @@ iOStest();
 </TabItem>
 
 <TabItem value="android" label="Android" default>
+
+<VerifiedTag value="Verified" />
 
 ```javascript title="Android.js"
 const wd = require("wd");
@@ -528,6 +541,8 @@ The capabilities object in the sample code are defined as:
 
 <TabItem value="ios-config" label="iOS.js" default>
 
+<VerifiedTag value="Verified" />
+
 ```javascript
 desired_capabilities = {
   deviceName: "iPhone 12",
@@ -545,6 +560,8 @@ desired_capabilities = {
 
 </TabItem>
 <TabItem value="android-config" label="Android.js" default>
+
+<VerifiedTag value="Verified" />
 
 ```javascript
 desired_capabilities = {
@@ -580,6 +597,8 @@ desired_capabilities = {
 
 - Run the following commands to install the required dependencies:
 
+  <VerifiedTag value="Verified" />
+
   ```bash
   npm i wd
   ```
@@ -589,6 +608,8 @@ desired_capabilities = {
   <Tabs className="docs__val">
   <TabItem value="ios-exec" label="iOS" default>
 
+  <VerifiedTag value="Verified" />
+
   ```bash
   node IOS.js
   ```
@@ -596,6 +617,8 @@ desired_capabilities = {
   </TabItem>
   <TabItem value="android-exec" label="Android" default>
   
+  <VerifiedTag value="Verified" />
+
   ```bash
   node Android.js
   ```
@@ -624,6 +647,8 @@ An automation script for the sample application available above has been provide
 <Tabs className="docs__val">
 
 <TabItem value="ios" label="iOS" default>
+
+<VerifiedTag value="Verified" />
 
 ```javascript title="specs/ios-test.js"
 describe("Proverbial APK", () => {
@@ -685,6 +710,8 @@ describe("Proverbial APK", () => {
 </TabItem>
 
 <TabItem value="android" label="Android" default>
+
+<VerifiedTag value="Verified" />
 
 ```javascript title="specs/android-test.js"
 describe("Proverbial APK", () => {
@@ -755,6 +782,8 @@ We are passing platform name, platform version, device name and app url (generat
 
 <TabItem value="ios-config" label="ios-single.conf.js" default>
 
+<VerifiedTag value="Verified" />
+
 ```javascript title="ios-sample/ios-single.conf.js"
 exports.config = {
   //highlight-next-line
@@ -806,6 +835,8 @@ exports.config = {
 
 </TabItem>
 <TabItem value="android-config" label="android-single.conf.js" default>
+
+<VerifiedTag value="Verified" />
 
 ```javascript title="android-sample/android-single.conf.js"
 exports.config = {
@@ -870,15 +901,21 @@ exports.config = {
 
 - Navigate to the corresponding directory based on your app.
 
+<VerifiedTag value="Verified" />
+
 ```bash
 cd ios
 ```
 - Install the required dependencies using the following command:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 npm i
 ```
 - Execute the following command to run your test on <BrandName /> platform:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 npm run single
@@ -905,6 +942,8 @@ An automation script for the sample application available above has been provide
 <Tabs className="docs__val">
 
 <TabItem value="ios" label="iOS" default>
+
+<VerifiedTag value="Verified" />
 
 ```javascript title="ios_test.js"
 const driver= require("appium-base-driver")
@@ -961,6 +1000,8 @@ describe("Mocha Appium iOS Test " + caps.browserName, function() {
 </TabItem>
 
 <TabItem value="android" label="Android" default>
+
+<VerifiedTag value="Verified" />
 
 ```javascript title="android_test.js"
 const { default: driver } = require("appium-android-driver/build/lib/driver");
@@ -1034,6 +1075,8 @@ Ensure to update the `APP_URL`, `username` and `accessKey` in the code scripts b
 
 <TabItem value="android-config" label="Android" default>
 
+<VerifiedTag value="Verified" />
+
 ```javascript title="android.conf.js"
 LT_USERNAME = process.env.LT_USERNAME || "<your username>";      //Enter your LambdaTest username here
 LT_ACCESS_KEY = process.env.LT_ACCESS_KEY || "<your accessKey>";  //Enter your LambdaTest accessKey here
@@ -1060,6 +1103,8 @@ exports.capabilities = {
 
 </TabItem>
 <TabItem value="ios-config" label="iOS" default>
+
+<VerifiedTag value="Verified" />
 
 ```javascript title="ios.conf.js"
 LT_USERNAME = process.env.LT_USERNAME || "<your username>";        //Enter your LambdaTest username here
@@ -1096,6 +1141,8 @@ exports.capabilities = {
 
 - Execute the following commands to install the required dependencies:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 npm i
 npm install
@@ -1109,6 +1156,8 @@ npm install --save
 <Tabs className="docs__val">
 <TabItem value="android-exec" label="Android" default>
 
+<VerifiedTag value="Verified" />
+
 ```js
 npm run android    //to run single test
 npm run parallel_android    //to run parallel tests
@@ -1117,6 +1166,8 @@ npm run parallel_android    //to run parallel tests
 </TabItem>
 
 <TabItem value="ios-exec" label="iOS" default>
+
+<VerifiedTag value="Verified" />
 
 ```js
 npm run ios    //to run single test

@@ -23,6 +23,7 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -131,6 +132,8 @@ Make sure you have the following set up before you start.
 
 Pull the sample repo to your machine, move into it, and install its dependencies.
 
+<VerifiedTag value="Verified" />
+
 ```bash
 git clone https://github.com/LambdaTest/LT-appium-python
 cd LT-appium-python
@@ -146,6 +149,8 @@ Export your TestMu AI **Username** and **Access Key** as environment variables s
 
 <TabItem value="bash" label="macOS / Linux" default>
 
+  <VerifiedTag value="Verified" />
+
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-bash">
   {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
@@ -156,6 +161,8 @@ export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 </TabItem>
 
 <TabItem value="powershell" label="Windows" default>
+
+  <VerifiedTag value="Verified" />
 
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-powershell">
@@ -175,6 +182,8 @@ Upload your Android (`.apk`/`.aab`) or iOS (`.ipa`) app to TestMu AI with the RE
 <Tabs className="docs__val">
 
 <TabItem value="appfile" label="Upload a local file" default>
+  <VerifiedTag value="Verified" />
+
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-bash">
       {`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" -X POST "https://manual-api.lambdatest.com/app/upload/realDevice" -F "appFile=@/Users/macuser/Downloads/proverbial_android.apk" -F "name=proverbial_app"`}
@@ -183,6 +192,8 @@ Upload your Android (`.apk`/`.aab`) or iOS (`.ipa`) app to TestMu AI with the RE
 </TabItem>
 
 <TabItem value="appurl" label="Upload from a URL">
+  <VerifiedTag value="Verified" />
+
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-bash">
       {`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" -X POST "https://manual-api.lambdatest.com/app/upload/realDevice" -F "url=:https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_android.apk" -F "name=Proverbial_App"`}
@@ -205,6 +216,8 @@ The sample test builds a `desired_caps` object with the device, platform, and ap
 <Tabs className="docs__val">
 
 <TabItem value="android" label="Android" default>
+
+<VerifiedTag value="Verified" />
 
 ```python title="android.py"
 from appium import webdriver
@@ -270,6 +283,8 @@ startingTest()
 </TabItem>
 
 <TabItem value="ios" label="iOS">
+
+<VerifiedTag value="Verified" />
 
 ```python title="ios.py"
 from appium import webdriver
@@ -344,6 +359,8 @@ Run the script for your platform from the project directory.
 
 <TabItem value="android" label="Android" default>
 
+  <VerifiedTag value="Verified" />
+
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-bash">
   {`python3 android.py`}
@@ -353,6 +370,8 @@ Run the script for your platform from the project directory.
 </TabItem>
 
 <TabItem value="ios" label="iOS">
+
+  <VerifiedTag value="Verified" />
 
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-bash">
@@ -389,6 +408,8 @@ Download and start the tunnel binary before you run the test.
    - Linux: **[64 Bit](https://downloads.lambdatest.com/tunnel/v3/linux/64bit/LT_Linux.zip) | [32 Bit](https://downloads.lambdatest.com/tunnel/v3/linux/32bit/LT_Linux.zip)**
 2. Extract the downloaded file.
 3. Open a terminal in the folder where you extracted the binary and start the tunnel:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 ./LT --user {your login email} --key {your access key} --tunnelName {your tunnel name}

@@ -29,6 +29,7 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import RealDeviceTag from '@site/src/component/realDevice';
 import VirtualDeviceTag from '@site/src/component/virtualDevice';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -316,6 +317,8 @@ For **Windows**, you can download from the [official website](https://rubyinstal
 
 - Ensure you have Dependency manager bundler installed (required for the **Cucumber** and **RSpec** frameworks). If not installed, you can install with the following command:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 gem install bundler
 ```
@@ -327,6 +330,8 @@ You need to export your environment variables *LT_USERNAME* and *LT_ACCESS_KEY* 
 
 <Tabs className="docs__val">
 <TabItem value="bash" label="Linux / MacOS" default>
+  <VerifiedTag value="Verified" />
+
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-bash">
   {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
@@ -335,6 +340,8 @@ export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 </div>
 </TabItem>
 <TabItem value="powershell" label="Windows" default>
+  <VerifiedTag value="Verified" />
+
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-powershell">
   {`set LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
@@ -354,6 +361,8 @@ Make sure to add the path of the **appFile** in the cURL request. Below is an ex
 <Tabs className="docs__val">
 
 <TabItem value="bash" label="App File" default>
+  <VerifiedTag value="Verified" />
+
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-bash">
       {`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" -X POST "https://manual-api.lambdatest.com/app/upload/realDevice" -F "appFile=@"/Users/macuser/Downloads/proverbial_android.apk"" -F "name="proverbial_app""`}
@@ -362,6 +371,8 @@ Make sure to add the path of the **appFile** in the cURL request. Below is an ex
 </TabItem>
 
 <TabItem value="powershell" label="App URL" default>
+  <VerifiedTag value="Verified" />
+
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-bash">
       {`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" -X POST "https://manual-api.lambdatest.com/app/upload/realDevice" -F "url=:https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_android.apk" -F "name=Proverbial_App"`}
@@ -402,6 +413,8 @@ An automation script for the sample application given above has been provided he
 <Tabs className="docs__val">
 
 <TabItem value="ios" label="iOS" default>
+
+<VerifiedTag value="Verified" />
 
 ```ruby title="ios.rb"
 require 'rubygems'
@@ -466,6 +479,8 @@ require 'appium_lib'
 </TabItem>
 
 <TabItem value="android" label="Android" default>
+
+<VerifiedTag value="Verified" />
 
 ```ruby title="android.rb"
 require 'rubygems'
@@ -532,6 +547,8 @@ The capabilities object in the sample code are defined as:
 
 <TabItem value="ios-config" label="iOS" default>
 
+<VerifiedTag value="Verified" />
+
 ```ruby title="iOS(.ipa)"
  caps = {
             "LT:Options" => {
@@ -549,6 +566,8 @@ The capabilities object in the sample code are defined as:
 
 </TabItem>
 <TabItem value="android-config" label="Android" default>
+
+<VerifiedTag value="Verified" />
 
 ```ruby title="Android(.apk)"
 caps = {
@@ -588,11 +607,15 @@ If you are using an **iOS** app, the cURL command will generate an app URL for t
 
 - Navigate to the corresponding directory based on your app.
 
+<VerifiedTag value="Verified" />
+
 ```bash
 cd ios
 ```
 
 - Execute the following command to run your test on <BrandName /> platform:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 ruby ios-sample.rb
@@ -606,11 +629,15 @@ If you are using an **android** app, the cURL command will generate an app URL f
 
 - Navigate to the corresponding directory based on your app.
 
+<VerifiedTag value="Verified" />
+
 ```bash
 cd android
 ```
 
 - Execute the following command to run your test on <BrandName /> platform:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 ruby android-sample.rb
@@ -628,16 +655,22 @@ In case of Windows, if you get any error message. Please try this method:
 
 - Navigate to the corresponding directory based on your app.
 
+<VerifiedTag value="Verified" />
+
 ```bash
 cd android
 ```
 
 - Refresh the gem bundles through given command
+<VerifiedTag value="Verified" />
+
 ```bash
 gem uninstall -aIx
 ```
 
 - Re-install the gems required
+
+<VerifiedTag value="Verified" />
 
 ```bash
 gem install appium_lib -v 10.6.0
@@ -645,6 +678,8 @@ gem install ffi
 
 ```
 - Now try running the corresponding automation script for your app.
+
+<VerifiedTag value="Verified" />
 
 ```bash
 ruby android-sample.rb
@@ -671,6 +706,8 @@ An automation script file `first_steps.rb` for the sample application given abov
 <Tabs className="docs__val">
 
 <TabItem value="ios" label="iOS" default>
+
+<VerifiedTag value="Verified" />
 
 ```ruby title="first_steps.rb"
 When /^I click on buttons app$/ do 
@@ -711,6 +748,8 @@ end
 </TabItem>
 
 <TabItem value="android" label="Android" default>
+
+<VerifiedTag value="Verified" />
 
 ```ruby title="first_steps.rb"
 When /^I click on buttons app$/ do 
@@ -753,6 +792,8 @@ Ensure to update the `APP_URL`, `username` and `accesKey` in the code scripts be
 
 <TabItem value="ios-config" label="iOS" default>
 
+<VerifiedTag value="Verified" />
+
 ```ruby title="first.config.yml iOS"
 server: "mobile-hub.lambdatest.com"
 user: "LT_USERNAME"    # Add Lambdatest username here
@@ -774,6 +815,8 @@ browser_caps:
 
 </TabItem>
 <TabItem value="android-config" label="Android" default>
+
+<VerifiedTag value="Verified" />
 
 ```ruby title="first.config.yml Android"
 server: "mobile-hub.lambdatest.com"
@@ -815,6 +858,8 @@ browser_caps:
 
 - Run the following commands to run your tests
 
+<VerifiedTag value="Verified" />
+
 ```ruby
 bundle install
 bundle exec rake first
@@ -839,6 +884,8 @@ An automation script for the sample application given above has been provided he
 <Tabs className="docs__val">
 <TabItem value="Single" label="Single Test" default>
 
+<VerifiedTag value="Verified" />
+
 ```ruby title="single.config.yml"
 server: "mobile-hub.lambdatest.com"
 user: "LT_USERNAME"         #Add your LambdaTest username here
@@ -859,6 +906,8 @@ browser_caps:
 </TabItem>
 
 <TabItem value="ios" label="Parallel test" default>
+
+<VerifiedTag value="Verified" />
 
 ```ruby title="parallel.config.yml"
 server: "mobile-hub.lambdatest.com"
@@ -907,6 +956,8 @@ You can update your custom capabilities in test scripts `lambdatest.rb`. In this
 
 The capabilities object in the sample code are defined as:
 
+<VerifiedTag value="Verified" />
+
 ```ruby
     caps={
       "LT:Options" => {
@@ -932,11 +983,15 @@ The capabilities object in the sample code are defined as:
 ### Step 4: Execute and Monitor your Tests
 
 1. Run the following command to make sure that all the dependencies required for the test are installed.
+<VerifiedTag value="Verified" />
+
 ```bash
 bundle install
 ```
 
 2. Execute the following command to run single test on <BrandName /> platform:
+<VerifiedTag value="Verified" />
+
 ```bash
 bundle exec rake single
 ```

@@ -30,6 +30,7 @@ import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import RealDeviceTag from '@site/src/component/realDevice';
 import VirtualDeviceTag from '@site/src/component/virtualDevice';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -166,6 +167,8 @@ For app automation also, **disable screenshot block** is enabled as soon as the 
 ### Using desired Capabilities 
 
 You can use the appium capability to turn the **Disable Screenshot Block** on in your application. Just add `"enableScreenshotUnblock": true` in the desired capabilities while writing the automation script.
+
+  <VerifiedTag value="Verified" />
 
   ```java
     DesiredCapabilities capabilities = new DesiredCapabilities();

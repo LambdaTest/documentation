@@ -27,6 +27,7 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import RealDeviceTag from '@site/src/component/realDevice';
 import VirtualDeviceTag from '@site/src/component/virtualDevice';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -135,6 +136,8 @@ You'll learn to use this feature in both manual and automation tests, plus the f
 To harness the **IP Geolocation** feature in your automated tests, employ the `geoLocation` capability along with a two-letter country code from the list of supported countries provided below. This capability enables you to modify the device's geolocation to the specified location. If this capability is not added, the device will automatically update its geolocation based on its physical location.
 
 **Java Example:** 
+<VerifiedTag value="Verified" />
+
 ```java
 // Java code for configuring IP Geolcation in tests on TestMu AI
 DesiredCapabilities capabilities = new DesiredCapabilities();

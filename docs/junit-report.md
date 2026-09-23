@@ -23,6 +23,7 @@ toc_max_heading_level: 2
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -128,6 +129,8 @@ By the end of this document, you should be able to:
 To fetch the JUnit report for a `non-shard` build, you can use the following cURL command:
 
 
+<VerifiedTag value="Verified" />
+
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">
 {`curl --location "https://mobile-api.lambdatest.com/mobile-automation/api/v1/framework/builds/<build_id>/report/?encoder=false" \
@@ -139,6 +142,8 @@ To fetch the JUnit report for a `non-shard` build, you can use the following cUR
 **Shard build (For single shard):**
 To fetch the JUnit report for a `single shard` in a shard build,use:
 
+<VerifiedTag value="Verified" />
+
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">
 {`curl --location 'https://mobile-api.lambdatest.com/mobile-automation/api/v1/framework/jobs/<job_id>/report/?shard=<shard_id>&encoder=false' \
@@ -149,6 +154,8 @@ To fetch the JUnit report for a `single shard` in a shard build,use:
 
 **Shard build (For all the shards):**
 To fetch the JUnit reports for `all shards` in a shard build, use:
+
+<VerifiedTag value="Verified" />
 
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">

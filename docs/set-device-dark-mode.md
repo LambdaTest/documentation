@@ -27,6 +27,7 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import RealDeviceTag from '@site/src/component/realDevice';
 import VirtualDeviceTag from '@site/src/component/virtualDevice';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -192,6 +193,8 @@ You can enable the dark mode setting through `darkMode` capability before the se
 <Tabs>
 <TabItem value="ios" label="iOS" default>
 
+<VerifiedTag value="Verified" />
+
 ```json
 {
     "deviceName":"iPhone 16",
@@ -206,6 +209,8 @@ You can enable the dark mode setting through `darkMode` capability before the se
 
 </TabItem>
 <TabItem value="android" label="Android">
+
+<VerifiedTag value="Verified" />
 
 ```json
 {
@@ -238,6 +243,8 @@ To change dark mode settings during test execution, use the hook with the `updat
 <Tabs>
 <TabItem value="real-devices" label="Real Devices" default>
 
+<VerifiedTag value="Verified" />
+
 ```python
 driver.execute_script('lambda_executor: { 
       "action": "updateDeviceSettings", 
@@ -249,6 +256,8 @@ driver.execute_script('lambda_executor: {
 
 </TabItem>
 <TabItem value="virtual-devices" label="Virtual Devices">
+
+<VerifiedTag value="Verified" />
 
 ```python
 driver.execute_script('lambdatest_executor: {

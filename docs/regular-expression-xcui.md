@@ -16,6 +16,7 @@ toc_max_heading_level: 2
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import RealDeviceTag from '@site/src/component/realDevice';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -129,11 +130,15 @@ Platform version is not mandatory only if `deviceName` is passed using regex. If
 
 Usual way to pass the `deviceName` and `platformVersion` looks like this: <br/>
 
+<VerifiedTag value="Verified" />
+
 ```java
 "device" : ["Pixel 6 Pro-12"]
 ```
 
 Passing `deviceName` using REGEX:<br/>
+<VerifiedTag value="Verified" />
+
 ```java
 "device" : ["Pixel.*-12"]
 ```

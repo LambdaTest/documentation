@@ -28,6 +28,7 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import RealDeviceTag from '@site/src/component/realDevice';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -181,6 +182,8 @@ Use the `enablePasscode` capability to configure passcode-protected devices duri
   <TabItem value="ios" label="iOS">
 
 
+<VerifiedTag value="Verified" />
+
 ```python
 {
     "platformName": "ios",
@@ -196,6 +199,8 @@ Use the `enablePasscode` capability to configure passcode-protected devices duri
   <TabItem value="android" label="Android">
 
 
+
+<VerifiedTag value="Verified" />
 
 ```python
 {

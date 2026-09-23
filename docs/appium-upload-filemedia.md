@@ -29,6 +29,7 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import RealDeviceTag from '@site/src/component/realDevice';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 
@@ -197,6 +198,8 @@ This section provides a comprehensive guide on leveraging this feature within au
 
 You can use the following curl command to upload any file `media` and `non-media` from your system to the <BrandName /> cloud.
 
+<VerifiedTag value="Verified" />
+
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">
 {`curl --user "${YOUR_LAMBDATEST_USERNAME()}:${YOUR_LAMBDATEST_ACCESS_KEY()}" -X POST "https://api.lambdatest.com/mfs/v1.0/media/upload" -F "media_file=@"/Users/macuser/Downloads/image.jpeg"" -F "type=image" -F "custom_id=SampleImage"`
@@ -210,6 +213,8 @@ You can use the following curl command to upload any file `media` and `non-media
 - `custom_id`: This parameter specifies a custom identifier for the media file.
 
 Below is a sample response demonstrating the return of the `media_url` parameter value:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 {
@@ -231,6 +236,8 @@ Once the files are uploaded to <BrandName />'s cloud, seamlessly integrate files
 
 <Tabs className="docs__val">
   <TabItem value="Java" label="Java">
+    <VerifiedTag value="Verified" />
+
     <div className="lambdatest__codeblock">
       <CodeBlock className="language-java">
         {`DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
@@ -240,6 +247,8 @@ desiredCapabilities.setCapability("uploadMedia", Arrays.asList("lt://MEDIAfcdb39
   </TabItem>
 
   <TabItem value="JavaScript" label="JavaScript">
+    <VerifiedTag value="Verified" />
+
     <div className="lambdatest__codeblock">
       <CodeBlock className="language-javascript">
         {`DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
@@ -249,6 +258,8 @@ desiredCapabilities.setCapability("uploadMedia", ["lt://MEDIAfcdb39b9602d474f825
   </TabItem>
   
   <TabItem value="python" label="Python" default>
+    <VerifiedTag value="Verified" />
+
     <div className="lambdatest__codeblock">
       <CodeBlock className="language-python">
         {`desired_capabilities = {

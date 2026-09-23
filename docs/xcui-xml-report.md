@@ -26,6 +26,7 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import RealDeviceTag from '@site/src/component/realDevice';
 import VirtualDeviceTag from '@site/src/component/virtualDevice';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -129,6 +130,8 @@ XML reports on TestMu AI give a summary of XCUI test execution so you can unders
 To fetch the XML report for a `non-shard` build, you can use the following cURL command:
 
 
+<VerifiedTag value="Verified" />
+
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">
 {`curl --location "https://mobile-api.lambdatest.com/mobile-automation/api/v1/framework/builds/<build_id>/report/?encoder=false" \
@@ -140,6 +143,8 @@ To fetch the XML report for a `non-shard` build, you can use the following cURL 
 **Shard build (For single shard):**
 To fetch the XML report for a `single shard` in a shard build,use:
 
+<VerifiedTag value="Verified" />
+
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">
 {`curl --location 'https://mobile-api.lambdatest.com/mobile-automation/api/v1/framework/jobs/<job_id>/report/?shard=<shard_id>&encoder=false' \
@@ -150,6 +155,8 @@ To fetch the XML report for a `single shard` in a shard build,use:
 
 **Shard build (For all the shards):**
 To fetch the XML reports for `all shards` in a shard build, use:
+
+<VerifiedTag value="Verified" />
 
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">
@@ -194,6 +201,8 @@ Detailed upload steps are available here: [Getting Started with XCUI Testing - R
 
 To generate `.xcresult` bundles for your XCUI test executions, you must pass `"enableResultBundle": true` in your build request and use the new build endpoint:
 
+<VerifiedTag value="Verified" />
+
 ```
 POST https://mobile-api.lambdatest.com/mobile-automation/api/v1/xcuitest/builds
 ```
@@ -209,6 +218,8 @@ Below is an example cURL command to execute your test with result bundles enable
 <Tabs className="docs__val">
 
 <TabItem value="bash" label="Linux / MacOS" default>
+
+  <VerifiedTag value="Verified" />
 
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-bash">
@@ -237,6 +248,8 @@ curl --location --request POST 'https://mobile-api.lambdatest.com/framework/v1/x
 </TabItem>
 
 <TabItem value="powershell" label="Windows" default>
+
+  <VerifiedTag value="Verified" />
 
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-powershell">
@@ -273,6 +286,8 @@ Result bundles are generated at the Build level. To download the `.xcresult` bun
 - To view the `.xcresult` for a specific shard, you must pass the `shard:shardId` as a query parameter in your request.
 :::
 
+<VerifiedTag value="Verified" />
+
 ```
 GET https://mobile-api.lambdatest.com/mobile-automation/api/v1/framework/builds/{build-id}/xcresult
 ```
@@ -280,6 +295,8 @@ GET https://mobile-api.lambdatest.com/mobile-automation/api/v1/framework/builds/
 Replace `{build-id}` with the actual build ID.
 
 Example cURL command to download the result bundle:
+
+<VerifiedTag value="Verified" />
 
 <div className="lambdatest__codeblock">
   <CodeBlock className="language-bash">

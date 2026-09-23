@@ -26,6 +26,7 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -135,6 +136,8 @@ To modify the date and time settings programmatically, use the `lambda_executor`
 
 ---
 ### Appium Hook Example
+
+<VerifiedTag value="Verified" />
 
 <CodeBlock language="js">
 {`driver.execute_script('lambda_executor: { 

@@ -31,6 +31,7 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import RealDeviceTag from '@site/src/component/realDevice';
 import VirtualDeviceTag from '@site/src/component/virtualDevice';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 
@@ -240,6 +241,8 @@ Running Appium Python tests on TestMu AI executes native and hybrid mobile autom
 - Download and install [**pip**](https://pip.pypa.io/en/stable/installation/).
 - For the **PyTest** framework, also install pytest on your system with the following pip command:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 pip install pytest
 ```
@@ -251,6 +254,8 @@ You need to export your environment variables *LT_USERNAME* and *LT_ACCESS_KEY* 
 
 <Tabs className="docs__val">
 <TabItem value="bash" label="Linux / MacOS" default>
+  <VerifiedTag value="Verified" />
+
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-bash">
   {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
@@ -259,6 +264,8 @@ export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 </div>
 </TabItem>
 <TabItem value="powershell" label="Windows" default>
+  <VerifiedTag value="Verified" />
+
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-powershell">
   {`set LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
@@ -278,6 +285,8 @@ Make sure to add the path of the **appFile** in the cURL request. Below is an ex
 <Tabs className="docs__val">
 
 <TabItem value="bash" label="App File" default>
+  <VerifiedTag value="Verified" />
+
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-bash">
       {`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" -X POST "https://manual-api.lambdatest.com/app/upload/realDevice" -F "appFile=@"/Users/macuser/Downloads/proverbial_android.apk"" -F "name="proverbial_app""`}
@@ -286,6 +295,8 @@ Make sure to add the path of the **appFile** in the cURL request. Below is an ex
 </TabItem>
 
 <TabItem value="powershell" label="App URL" default>
+  <VerifiedTag value="Verified" />
+
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-bash">
       {`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" -X POST "https://manual-api.lambdatest.com/app/upload/realDevice" -F "url=:https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_android.apk" -F "name=Proverbial_App"`}
@@ -327,6 +338,8 @@ An automation script for the sample application given above has been provided he
 <Tabs className="docs__val">
 
 <TabItem value="ios" label="iOS" default>
+
+<VerifiedTag value="Verified" />
 
 ```python title="ios.py"
 from appium import webdriver
@@ -411,6 +424,8 @@ startingTest()
 </TabItem>
 
 <TabItem value="android" label="Android" default>
+
+<VerifiedTag value="Verified" />
 
 ```python title="android.py"
 from appium import webdriver
@@ -520,6 +535,8 @@ The capabilities object in the sample code are defined as:
 
 <TabItem value="ios-config" label="iOS" default>
 
+<VerifiedTag value="Verified" />
+
 ```python title="iOS(.ipa)"
  desired_caps = {
     "deviceName":"iPhone 12",
@@ -538,6 +555,8 @@ The capabilities object in the sample code are defined as:
 
 </TabItem>
 <TabItem value="android-config" label="Android" default>
+
+<VerifiedTag value="Verified" />
 
 ```python title="Android(.apk)"
 desired_caps = {
@@ -571,6 +590,8 @@ desired_caps = {
 
 - Install the required packages from the cloned project directory:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 pip install -r requirements.txt
 ```
@@ -581,6 +602,8 @@ pip install -r requirements.txt
 
 <TabItem value="ios" label="iOS" default>
 
+<VerifiedTag value="Verified" />
+
 ```bash
 python3 ios.py
 ```
@@ -588,6 +611,8 @@ python3 ios.py
 </TabItem>
 
 <TabItem value="android" label="Android" default>
+
+<VerifiedTag value="Verified" />
 
 ```bash
 python3 android.py
@@ -620,6 +645,8 @@ An automation script for the sample application given above has been provided he
 <Tabs className="docs__val">
 
 <TabItem value="android-stepdef" label="Android" default>
+
+<VerifiedTag value="Verified" />
 
 ```python title="AndroidStepDef.py"
 import sys
@@ -692,6 +719,8 @@ def startAndroidAppAutomationTest(self):
 
 </TabItem>
 <TabItem value="ios-stepdef" label="iOS" default>
+
+<VerifiedTag value="Verified" />
 
 ```python title="iOSStepDef.py"
 import sys
@@ -781,6 +810,8 @@ The capabilities for running tests on both **Android** and **iOS** apps are:
 
 <TabItem value="ios-config" label="iOS" default>
 
+<VerifiedTag value="Verified" />
+
 ```python title="appConfig.py"
 app_ios_desired_caps = {
   "lt:options": {
@@ -807,6 +838,8 @@ app_ios_desired_caps = {
 
 </TabItem>
 <TabItem value="android-config" label="Android" default>
+
+<VerifiedTag value="Verified" />
 
 ```python title="appConfig.py"
 app_android_desired_caps = {
@@ -847,6 +880,8 @@ app_android_desired_caps = {
 
 - Install the required packages from the cloned project directory:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 pip install -r requirements.txt
 ```
@@ -857,6 +892,8 @@ pip install -r requirements.txt
 
 <TabItem value="ios" label="iOS" default>
 
+<VerifiedTag value="Verified" />
+
 ```bash
 behave --tags @iosApp
 ```
@@ -864,6 +901,8 @@ behave --tags @iosApp
 </TabItem>
 
 <TabItem value="android" label="Android" default>
+
+<VerifiedTag value="Verified" />
 
 ```bash
 behave --tags @androidApp
@@ -889,11 +928,15 @@ All the code samples in this documentation can be found on **<BrandName />'s Git
 
 Create your Virtual Environment:
 
+<VerifiedTag value="Verified" />
+
 ```python
 python3 -m virtualenv venv
 ```
 
 Activate your Virtual Environment:
+
+<VerifiedTag value="Verified" />
 
 ```python
 source venv/bin/activate
@@ -904,6 +947,8 @@ These commands will create a new virtual environment name `venv` and activate it
 #### Setup Your Authentication
 
 Replace <BrandName /> `username` and `accesskey` in the `common.robot` file as mentioned below:
+
+<VerifiedTag value="Verified" />
 
 ```js title="common.robot"
 *** Settings ***
@@ -968,6 +1013,8 @@ An automation script file `*StepDef.py` for the sample application given above h
 
 <TabItem value="ios-script" label="iOS" default>
 
+<VerifiedTag value="Verified" />
+
 ```python title="IOS.robot"
 *** Settings ***
 
@@ -993,6 +1040,8 @@ Example of connecting to Lambdatest via Robot Framework
 </TabItem>
 
 <TabItem value="android-script" label="Android" default>
+
+<VerifiedTag value="Verified" />
 
 ```python title="Android.robot"
 *** Settings ***
@@ -1035,6 +1084,8 @@ Example of connecting to Lambdatest via Robot Framework
 
 You can update your custom capabilities in test scripts `Makefile` file. In this sample project, we are passing platform name, platform version, device name and app url _(generated earlier)_ along with other capabilities like build name and test name via capabilities object.
 
+<VerifiedTag value="Verified" />
+
 ```python title="Makefile"
 test_Web_ios:
 	robot --variable version:15 --variable platformName:ios --variable deviceName:"iPhone.*" --variable isRealMobile:true --variable visual:true --variable network:true --variable console:true --variable devicelog:true Tests/AndroidIosWeb.robot
@@ -1054,6 +1105,8 @@ test_Web_Android:
 
 - Install the required packages from the cloned project directory:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 pip install -r requirements.txt
 ```
@@ -1064,6 +1117,8 @@ pip install -r requirements.txt
 
 <TabItem value="ios" label="iOS" default>
 
+<VerifiedTag value="Verified" />
+
 ```bash
 make test_iOS1
 ```
@@ -1071,6 +1126,8 @@ make test_iOS1
 </TabItem>
 
 <TabItem value="android" label="Android" default>
+
+<VerifiedTag value="Verified" />
 
 ```bash
 make test_Android1
@@ -1095,6 +1152,8 @@ All the code samples in this documentation can be found on **<BrandName />'s Git
 ### Step 2: Update your Automation Script
 
 An automation script for the sample application given above has been provided here.
+
+<VerifiedTag value="Verified" />
 
 ```python title="get_started.py"
 from sqlite3 import Time
@@ -1147,6 +1206,8 @@ You can update your custom capabilities in test scripts. In this sample project,
 
 Ensure to update the `APP_URL`, `username` and `accessKey` in the code scripts before running the tests. The capabilities object in the sample code are defined as:
 
+<VerifiedTag value="Verified" />
+
 ```python title="driver.py"
 caps['name'] = 'Gauge Sample Test'
 caps['build'] = 'Python_Gauge_LambdaTest'
@@ -1171,6 +1232,8 @@ caps['app'] = 'APP_URL'   #add app url here
 
 - Install the required packages from the cloned project directory:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 pip install -r requirements.txt
 npm install -g @getgauge/cli
@@ -1179,6 +1242,8 @@ export PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION=python  #for MacOS/Linux
 ```
 
 - Run the following command in the directory where your project has been saved to execute your build.
+
+<VerifiedTag value="Verified" />
 
 ```bash
 gauge run specs
@@ -1203,6 +1268,8 @@ An automation script for the sample application given above has been provided he
 <Tabs className="docs__val">
 
 <TabItem value="ios" label="iOS" default>
+
+<VerifiedTag value="Verified" />
 
 ```python title="ios.py"
 from os import environ
@@ -1251,6 +1318,8 @@ def pytest_runtest_makereport(item, call):
 </TabItem>
 
 <TabItem value="android" label="Android" default>
+
+<VerifiedTag value="Verified" />
 
 ```python title="conftest.py"
 from os import environ
@@ -1310,6 +1379,8 @@ The capabilities object in the sample code are defined as:
 
 <TabItem value="ios-config" label="iOS" default>
 
+<VerifiedTag value="Verified" />
+
 ```python title="iOS(.ipa)"
    caps = {
       "deviceName": "iPhone 11",
@@ -1325,6 +1396,8 @@ The capabilities object in the sample code are defined as:
 
 </TabItem>
 <TabItem value="android-config" label="Android" default>
+
+<VerifiedTag value="Verified" />
 
 ```python title="Android(.apk)"
    caps = {
@@ -1356,6 +1429,8 @@ The capabilities object in the sample code are defined as:
 
 - Install the required packages from the cloned project directory:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 pip install -r requirements.txt
 ```
@@ -1366,6 +1441,8 @@ pip install -r requirements.txt
 
 <TabItem value="ios" label="iOS" default>
 
+<VerifiedTag value="Verified" />
+
 ```bash
 pytest test_ios.py
 ```
@@ -1373,6 +1450,8 @@ pytest test_ios.py
 </TabItem>
 
 <TabItem value="android" label="Android" default>
+
+<VerifiedTag value="Verified" />
 
 ```bash
 pytest test.py

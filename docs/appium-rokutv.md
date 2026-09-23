@@ -28,6 +28,7 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import { CookieTrackingSignup } from '@site/src/component/CookieTracking';
 import RealDeviceTag from '@site/src/component/realDevice';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -198,6 +199,8 @@ Before you can start performing App automation testing with Appium, you would ne
 Upload your **Roku TV** application (.zip file) to the <BrandName /> servers using our **REST API**. You need to provide your **Username** and **AccessKey** in the format `Username:AccessKey` in the **cURL** command for authentication. Make sure to add the path of the **appFile** in the cURL request. Here is an example cURL request to upload your app using our REST API:
 
  **Using App File from System:**
+ <VerifiedTag value="Verified" />
+
  <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">
 {`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" -X POST "https://manual-api.lambdatest.com/app/upload/realDevice" -F "appFile=@"/Users/macuser/Downloads/roku-sample-app.zip"" -F "name="roku_app""
@@ -225,6 +228,8 @@ Upload your **Roku TV** application (.zip file) to the <BrandName /> servers usi
 
 1. Clone the <BrandName />’s [LT-appium-rokutv](https://github.com/LambdaTest/LT-appium-rokutv) and navigate to the code directory as shown below:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 git clone https://github.com/LambdaTest/LT-appium-rokutv
 cd LT-appium-rokutv
@@ -237,6 +242,8 @@ Make sure you have your <BrandName /> credentials with you to run test automatio
 <Tabs className="docs__val">
 
 <TabItem value="bash" label="Linux / MacOS" default>
+  <VerifiedTag value="Verified" />
+
   <div className="lambdatest__codeblock">
   <CodeBlock className="language-bash">
   {`export LT_USERNAME=${ YOUR_LAMBDATEST_USERNAME()} \\
@@ -247,6 +254,8 @@ export LT_ACCESS_KEY=${ YOUR_LAMBDATEST_ACCESS_KEY()}`}
 </TabItem>
 
 <TabItem value="powershell" label="Windows" default>
+
+  <VerifiedTag value="Verified" />
 
   <div className="lambdatest__codeblock">
   <CodeBlock className="language-powershell">
@@ -264,6 +273,8 @@ An automation script for the sample application available above has been provide
 
 **Info:**
 Before running the script, please make sure that the file webDriver.py from Step 2, is in the same directory as this file.
+
+<VerifiedTag value="Verified" />
 
 ```python title="main.py"
 from appium import webdriver
@@ -347,6 +358,8 @@ Please check at the end of the doc.
 **Platform:**
 `"roku"`
 
+<VerifiedTag value="Verified" />
+
 ```python title="main.py"
     caps = {
        "automationName": "Roku",
@@ -373,11 +386,15 @@ Please check at the end of the doc.
 
 1. Install the required packages from the cloned project directory:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 pip install -r requirements.txt
 ```
 
 2. Run the following command in the directory where your project has been saved to execute your build.
+
+<VerifiedTag value="Verified" />
 
 ```python
 python main.py

@@ -33,6 +33,7 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import RealDeviceTag from '../src/component/realDevice';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -266,6 +267,8 @@ Upload the file to the media upload endpoint with `type=cert`, using your <Brand
 
 Upload a `.crt`, `.cer`, or `.mobileconfig` file. No password is involved.
 
+<VerifiedTag value="Verified" />
+
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">
 {`curl -u "${YOUR_LAMBDATEST_USERNAME()}:${YOUR_LAMBDATEST_ACCESS_KEY()}" \\
@@ -279,6 +282,8 @@ Upload a `.crt`, `.cer`, or `.mobileconfig` file. No password is involved.
   <TabItem value="pfx" label="PKCS#12 Identity (.pfx)">
 
 For a PKCS#12 bundle, send the password along with the upload. The password is stored securely against the certificate and applied automatically in every session that uses it.
+
+<VerifiedTag value="Verified" />
 
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">
@@ -343,6 +348,8 @@ If you are testing a native app against a private certificate authority, `custom
 <Tabs className="docs__val">
   <TabItem value="json" label="JSON" default>
 
+<VerifiedTag value="Verified" />
+
 ```json
 {
   "LT:Options": {
@@ -367,6 +374,8 @@ If you are testing a native app against a private certificate authority, `custom
   </TabItem>
   <TabItem value="java" label="Java">
 
+<VerifiedTag value="Verified" />
+
 ```java
 Map<String, Object> caCert = new HashMap<>();
 caCert.put("certificateId", "MEDIA9f2c4b18a7d54e3ba0c6f19d2e8b7c05");
@@ -384,6 +393,8 @@ capabilities.setCapability("LT:Options", ltOptions);
 
   </TabItem>
   <TabItem value="python" label="Python">
+
+<VerifiedTag value="Verified" />
 
 ```python
 lt_options = {
@@ -404,6 +415,8 @@ lt_options = {
 
   </TabItem>
   <TabItem value="javascript" label="JavaScript">
+
+<VerifiedTag value="Verified" />
 
 ```js
 const capabilities = {
@@ -426,6 +439,8 @@ const capabilities = {
 
   </TabItem>
   <TabItem value="yaml" label="YAML">
+
+<VerifiedTag value="Verified" />
 
 ```yaml
 customCertificates:

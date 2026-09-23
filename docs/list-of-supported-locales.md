@@ -25,6 +25,7 @@ import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import RealDeviceTag from '@site/src/component/realDevice';
 import VirtualDeviceTag from '@site/src/component/virtualDevice';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -372,6 +373,8 @@ The table below lists every supported iOS locale and its locale code.
 
 To **dynamically change** the language and locale of a device during test execution use the `updateLanguageLocale` action inside `lambda_executor`. The example below demonstrates how to use the following.
 
+<VerifiedTag value="Verified" />
+
 ```python
 driver.execute_script('lambda_executor: { 
       "action": "updateLanguageLocale", 
@@ -407,6 +410,8 @@ To specify the timezone for automated tests in Appium on <BrandName />, the **ti
 Here's an example of how to set the timezone in your Appium test script:
 
 **Java Example:**
+<VerifiedTag value="Verified" />
+
 ```java
 // Java code example for configuring timezone in Appium tests on TestMu AI
 

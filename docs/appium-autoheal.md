@@ -35,6 +35,7 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import RealDeviceTag from '@site/src/component/realDevice';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -205,6 +206,8 @@ To enable Smart Heal, add `"smartHeal": true` to your desired capabilities in yo
 <Tabs className="docs__val">
 <TabItem value="ios" label="iOS" default>
 
+<VerifiedTag value="Verified" />
+
 ```python
 desired_caps = {
     "deviceName": "iPhone 16",
@@ -222,6 +225,8 @@ desired_caps = {
 </TabItem>
 
 <TabItem value="android" label="Android" default>
+
+<VerifiedTag value="Verified" />
 
 ```python
 desired_caps = {
@@ -247,6 +252,8 @@ You can generate capabilities for your test requirements with the help of our in
 ### 3. Enable Smart Heal with Runtime Hooks
 
 You can also control Smart Heal dynamically during test execution using runtime hooks. This is useful when you want healing active in specific phases or after major UI changes.
+
+<VerifiedTag value="Verified" />
 
 ```java
 // Stop Smart Heal

@@ -26,6 +26,7 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import RealDeviceTag from '@site/src/component/realDevice';
 import VirtualDeviceTag from '@site/src/component/virtualDevice';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -286,6 +287,8 @@ Please add PHP to Windows System Variables Path.
 
 To use the **composer** command directly, it should have been downloaded in the project directory. In windows the composer gets installed in different directory. So, copy the 'composer.phar' to the project directory using copy command:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 copy C:\ProgramData\ComposerSetup\bin\composer.phar
 ```
@@ -298,6 +301,8 @@ copy C:\ProgramData\ComposerSetup\bin\composer.phar
 
 <TabItem value="vanilla-deps" label="Vanilla PHP" default>
 
+<VerifiedTag value="Verified" />
+
 ```bash
 composer update
 php composer.phar require phpwhois/phpwhois
@@ -308,6 +313,8 @@ php composer.phar require php-webdriver/webdriver
 </TabItem>
 
 <TabItem value="behat-deps" label="Behat">
+
+<VerifiedTag value="Verified" />
 
 ```bash
 composer update
@@ -329,6 +336,8 @@ You need to export your environment variables *LT_USERNAME* and *LT_ACCESS_KEY* 
 
 <Tabs className="docs__val">
 <TabItem value="bash" label="Linux / MacOS" default>
+  <VerifiedTag value="Verified" />
+
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-bash">
   {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
@@ -337,6 +346,8 @@ export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 </div>
 </TabItem>
 <TabItem value="powershell" label="Windows">
+  <VerifiedTag value="Verified" />
+
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-powershell">
   {`set LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
@@ -356,6 +367,8 @@ Make sure to add the path of the **appFile** in the cURL request. Below is an ex
 <Tabs className="docs__val">
 
 <TabItem value="bash" label="App File" default>
+  <VerifiedTag value="Verified" />
+
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-bash">
       {`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" -X POST "https://manual-api.lambdatest.com/app/upload/realDevice" -F "appFile=@"/Users/macuser/Downloads/proverbial_android.apk"" -F "name="proverbial_app""`}
@@ -364,6 +377,8 @@ Make sure to add the path of the **appFile** in the cURL request. Below is an ex
 </TabItem>
 
 <TabItem value="powershell" label="App URL">
+  <VerifiedTag value="Verified" />
+
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-bash">
       {`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" -X POST "https://manual-api.lambdatest.com/app/upload/realDevice" -F "url=:https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_android.apk" -F "name=Proverbial_App"`}
@@ -404,6 +419,8 @@ An automation script for the sample application given above has been provided he
 <Tabs className="docs__val">
 
 <TabItem value="ios-test" label="iOS" default>
+
+<VerifiedTag value="Verified" />
 
 ```php title="iOSApp.php"
 <?php
@@ -473,6 +490,8 @@ try{
 </TabItem>
 
 <TabItem value="android-test" label="Android">
+
+<VerifiedTag value="Verified" />
 
 ```php title="AndroidApp.php"
 <?php
@@ -549,6 +568,8 @@ The capabilities object in the sample code are defined as:
 
 <TabItem value="ios-config" label="iOS" default>
 
+<VerifiedTag value="Verified" />
+
 ```php title="iOS(.ipa)"
   $caps = array(
     //highlight-next-line
@@ -566,6 +587,8 @@ The capabilities object in the sample code are defined as:
 
 </TabItem>
 <TabItem value="android-config" label="Android">
+
+<VerifiedTag value="Verified" />
 
 ```php title="Android(.apk)"
   $caps = array(
@@ -601,6 +624,8 @@ The capabilities object in the sample code are defined as:
 
 <TabItem value="ios" label="iOS" default>
 
+<VerifiedTag value="Verified" />
+
 ```bash
 php IOSApp.php
 ```
@@ -608,6 +633,8 @@ php IOSApp.php
 </TabItem>
 
 <TabItem value="android" label="Android">
+
+<VerifiedTag value="Verified" />
 
 ```bash
 php AndroidApp.php
@@ -632,6 +659,8 @@ All the code samples in this documentation can be found on **<BrandName />'s Git
 ### Step 2: Update your Automation Script
 
 An automation script for the sample application given above has been provided here.
+
+<VerifiedTag value="Verified" />
 
 ```php title="FeatureContext.php"
 <?php
@@ -695,6 +724,8 @@ Ensure to update the `APP_URL`, `username` and `accessKey` in the code scripts b
 <Tabs className="docs__val">
 <TabItem value="ios-config" label="iOS" default>
 
+<VerifiedTag value="Verified" />
+
 ```yaml title="iossingle.conf.yml"
 user: "YOUR USERNAME HERE"       #Add LambdaTest username here 
 key: "YOUR ACCESS KEY HERE"      #Add LambdaTest accessKey here
@@ -712,6 +743,8 @@ key: "YOUR ACCESS KEY HERE"      #Add LambdaTest accessKey here
 
 </TabItem>
 <TabItem value="android-config" label="Android">
+
+<VerifiedTag value="Verified" />
 
 ```yaml title="androidsingle.conf.yml"
 user: "YOUR USERNAME HERE"       #Add LambdaTest username here 
@@ -747,6 +780,8 @@ key: "YOUR ACCESS KEY HERE"      #Add LambdaTest accessKey here
 
 <TabItem value="ios" label="iOS" default>
 
+<VerifiedTag value="Verified" />
+
 ```bash
 composer iossingle   #for single tests
 composer iosparallel  #for parallel tests
@@ -755,6 +790,8 @@ composer iosparallel  #for parallel tests
 </TabItem>
 
 <TabItem value="android" label="Android">
+
+<VerifiedTag value="Verified" />
 
 ```bash
 composer androidsingle   #for single tests

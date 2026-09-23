@@ -22,6 +22,7 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import RealDeviceTag from '@site/src/component/realDevice';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -247,6 +248,8 @@ For testing, you need to build a Flutter app and test suite. You can create Flut
 
 - Create an instrumentation test file in your application's directory `android/app/src/androidTest/java/com/example/lambdatestSampleApp/`. Replace **com**, **example**, and **lambdatestSampleApp** values with those from your app's package name. 
 
+  <VerifiedTag value="Verified" />
+
   ```java title="SampleTest.java"
   package com.example.lambdatestSampleApp;
       import androidx.test.rule.SampleTestRule;
@@ -262,6 +265,8 @@ For testing, you need to build a Flutter app and test suite. You can create Flut
   ```
 
 - Update your application's `lambdatestSampleApp/android/app/build.gradle` file to use androidx's version of `AndroidJUnitRunner` and include the `androidx` libraries as dependencies.
+
+  <VerifiedTag value="Verified" />
 
   ```java title="build.gradle"
   android {
@@ -279,6 +284,8 @@ For testing, you need to build a Flutter app and test suite. You can create Flut
    ```
 
 - Use the following `Gradle` commands to build an instrumentation `test.apk` file(test suite) using the `Sample.java` created in the `androidTest` directory as mentioned in step 1.
+
+  <VerifiedTag value="Verified" />
 
   ```java title="Terminal"
   //Go to the android folder which contains the "gradlew" script used for building Android apps from the terminal
@@ -299,11 +306,15 @@ To create APKs with optional Flutter parameters, first run the Flutter tests in 
 
 For example, to use `--no-sound-null-safety` in your tests, run the following command.
 
+<VerifiedTag value="Verified" />
+
 ```bash
 flutter run -v --no-sound-null-safety
 ```
 
 Next, look for gradlew execution in the logs. The above command generates a gradlew command in the logs that looks something like the following. To build your apk files, replace the parameter `YOUR_APP_PATH` with your actual path of the application in the following command:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 gradlew --full-stacktrace --info -Pverbose=true -Ptarget-platform=android-arm64 -Ptarget=YOUR_APP_PATH/lib/main.dart -Pbase-application-name=android.app.Application -Pdart-obfuscation=false -Pextra-front-end-options=--no-sound-null-safety -Ptrack-widget-creation=true -Ptree-shake-icons=false -Pfilesystem-scheme=org-dartlang-root assembleDebug  
@@ -319,6 +330,8 @@ Upload your **android** application (.apk file) to the <BrandName /> servers usi
 
 <TabItem value="bash" label="Linux / MacOS" default>
 
+  <VerifiedTag value="Verified" />
+
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-bash">
   {`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" \\
@@ -331,6 +344,8 @@ Upload your **android** application (.apk file) to the <BrandName /> servers usi
 </TabItem>
 
 <TabItem value="powershell" label="Windows" default>
+
+  <VerifiedTag value="Verified" />
 
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-powershell">
@@ -357,6 +372,8 @@ Upload your **test suite** (.apk file) to the <BrandName /> servers using our **
 
 <TabItem value="bash" label="Linux / MacOS" default>
 
+  <VerifiedTag value="Verified" />
+
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-bash">
   {`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" \\
@@ -369,6 +386,8 @@ Upload your **test suite** (.apk file) to the <BrandName /> servers using our **
 </TabItem>
 
 <TabItem value="powershell" label="Windows" default>
+
+  <VerifiedTag value="Verified" />
 
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-powershell">
@@ -393,6 +412,8 @@ Response of above cURL will be a **JSON** object containing the `App URL` of the
 You will need base64 encoded authentication in order to execute your Flutter automation test suite. You need to enter your username:accesskey **[here](https://mixedanalytics.com/knowledge-base/api-connector-encode-credentials-to-base-64/)** in order and click on encode to generate the base64 authentication. Take note of the **base64** encoded authentication which needs to be added in the next step.
 :::
 
+<VerifiedTag value="Verified" />
+
 <div className="lambdatest__codeblock">
     <CodeBlock className="language-powershell">
 {`${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}`}
@@ -410,6 +431,8 @@ Make sure to enter your **basic authentication**, **app url** (generated in the 
 <Tabs className="docs__val">
 
 <TabItem value="bash" label="Linux / MacOS" default>
+
+  <VerifiedTag value="Verified" />
 
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-bash">
@@ -435,6 +458,8 @@ curl --location --request POST 'https://mobile-api.lambdatest.com/framework/v1/f
 
 <TabItem value="powershell" label="Windows" default>
 
+  <VerifiedTag value="Verified" />
+
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-powershell">
 
@@ -456,6 +481,8 @@ Once you have run your tests, you can view the test execution along with logs. Y
 ### Running Tests in Parallel
 
 You can run tests in parallel on multiple devices by passing the device name in comma separated format in the execute command as show below:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 curl --location --request POST 'https://mobile-api.lambdatest.com/framework/v1/flutter/android/build' \
@@ -482,6 +509,8 @@ Do note that Flutter builds when run in parallel, result in separate builds bein
 While testing Android apps, user might need to handle various pop-ups or dialogs asking for permissions like contacts, notifications, photos, etc.
 
 To simplify this process, set Flutter's `autoGrantPermissions` parameter to automatically grant the required permissions based on the [Android manifest](https://developer.android.com/guide/topics/manifest/manifest-intro) in the app’s **.APK** file.Please find a example `cURL` request to enable `autoGrantPermissions`:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 curl --location --request POST 'https://mobile-api.lambdatest.com/framework/v1/flutter/android/build' \

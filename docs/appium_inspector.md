@@ -22,6 +22,7 @@ toc_max_heading_level: 2
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -226,6 +227,8 @@ import TabItem from '@theme/TabItem';
 <Tabs className="docs__val" groupId="os">
 <TabItem value="macos" label="Linux / MacOS" default>
 
+<VerifiedTag value="Verified" />
+
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">
 {`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" \\
@@ -239,6 +242,8 @@ import TabItem from '@theme/TabItem';
 </TabItem>
 
 <TabItem value="windows" label="Windows" default>
+<VerifiedTag value="Verified" />
+
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-powershell">
 {`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" -X POST "https://manual-api.lambdatest.com/app/upload/realDevice" -F "appFile=@"/Users/macuser/Downloads/proverbial_android.apk""`}
@@ -252,6 +257,8 @@ import TabItem from '@theme/TabItem';
 <Tabs className="docs__val" groupId="os">
 <TabItem value="macos" label="Linux / MacOS" default>
 
+<VerifiedTag value="Verified" />
+
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">
 {`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" --location --request POST "https://manual-api.lambdatest.com/app/upload/realDevice" --header "Content-Type: application/x-www-form-urlencoded" --data-urlencode "url=:https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_android.apk" --data-urlencode "name=Proverbial_App"`}
@@ -261,6 +268,8 @@ import TabItem from '@theme/TabItem';
 </TabItem>
 
 <TabItem value="windows" label="Windows" default>
+<VerifiedTag value="Verified" />
+
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-powershell">
 {`curl --location --request POST "https://manual-api.lambdatest.com/app/upload/realDevice" -u "${YOUR_LAMBDATEST_USERNAME()}:${YOUR_LAMBDATEST_ACCESS_KEY()}" --header "Content-Type: application/x-www-form-urlencoded" --data-urlencode "url=https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_android.apk" --data-urlencode "name=test" --data-urlencode "custom_id=my_app"`}

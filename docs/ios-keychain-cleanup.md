@@ -23,6 +23,7 @@ import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import RealDeviceTag from '@site/src/component/realDevice';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -147,6 +148,8 @@ By enabling Keychain support, <BrandName /> takes care of these changes, allowin
 To activate Keychain cleanup and access group handling, simply pass the `ios_keychain_enabled` parameter during app upload.
 
 Example using **cURL**:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 curl -u "USERNAME:ACCESS_KEY" \
