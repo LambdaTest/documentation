@@ -70,8 +70,12 @@ const docsSidebar = [
     items: items(s.RealTimeBrowserTestingSiebar),
   },
   {
-    type: 'category', label: 'Agent Assurance Platform', collapsible: true, collapsed: true,
-    items: items(s.AgentToAgentSidebar),
+    type: 'category', label: 'Agent Assurance', collapsible: true, collapsed: true,
+    items: items(s.AgentAssuranceSidebar),
+  },
+  {
+    type: 'category', label: 'Agent Testing', collapsible: true, collapsed: true,
+    items: items(s.AgentTestingSidebar),
   },
   {
     type: 'category', label: 'Real Device', collapsible: true, collapsed: true,
