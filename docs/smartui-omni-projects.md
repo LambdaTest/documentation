@@ -23,7 +23,7 @@ canonical: https://www.testmuai.com/support/docs/smartui-omni-projects/
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import NewTag from '../src/component/newTag';
-import { BRAND_URL } from '@site/src/component/BrandName';
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
