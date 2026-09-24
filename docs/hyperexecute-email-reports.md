@@ -282,7 +282,6 @@ The following job statuses are accepted as keys:
 | Key | Mail is sent when the job ends as |
 |-----|-----------------------------------|
 | `completed` | Completed |
-| `passed` | Passed |
 | `failed` | Failed |
 | `aborted` | Aborted |
 | `skipped` | Partially Completed. `partially_completed` also works |
@@ -295,7 +294,6 @@ Keep the following in mind:
 
 - **`to` is always mailed.** The status lists add recipients on top of `to`, they do not replace it. You can also leave out `to` and use only status keys.
 - **Each email ID gets one mail.** If an email ID is in `to` and also in the list for the status the job ended in, it receives the mail only once.
-- **`completed` and `passed` are separate keys.** A list under `completed` is not mailed when the job ends as Passed, and the other way round.
 - **Keys are case-insensitive.** `Failed`, `FAILED` and `failed` are the same key, and a space or dash works like an underscore.
 - **Unsupported keys are ignored.** Statuses that are not in the table above, such as `running`, `initiated`, `blocked` or `stopped`, and misspelt keys, are ignored with a warning in the CLI output. The job still runs.
 - **`currentUser`** can be used in the status lists the same way as in `to`.
