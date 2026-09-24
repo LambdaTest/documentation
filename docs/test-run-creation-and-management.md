@@ -166,10 +166,6 @@ Test instances are organized using a **Folders** sidebar on the left, reflecting
 
 A manual test instance opens on three tabs: **Test steps**, **Test case details**, and **Issues**.
 
-<!-- screenshot: the three tabs on a manual test instance, with the version badge in the header
-<img loading="lazy" src={require('../assets/images/test-manager/test-case-details-in-run/instance-tabs.png').default} alt="Test steps, Test case details and Issues tabs on a manual test instance" className="doc_img"/>
--->
-
 The **Test case details** tab shows the content of the test case you are executing, so you do not have to leave the run to read it:
 
 - **Description**, **Pre-conditions**, and **Attachments**, which you can preview or download.
@@ -177,9 +173,7 @@ The **Test case details** tab shows the content of the test case you are executi
 
 Fields that have no value are left out. The tab is read only: you cannot edit the test case or add attachments from here. To change any of it, open the test case from its ID in the instance header and edit it on the [Test Case Details](/support/docs/manual-test-case-creation/#test-case-details) page.
 
-<!-- screenshot: test instance with the Test case details tab open
-<img loading="lazy" src={require('../assets/images/test-manager/test-case-details-in-run/test-case-details-tab.png').default} alt="Test case details tab on a manual test instance" className="doc_img"/>
--->
+<img loading="lazy" src={require('../assets/images/test-run/test-case-details-tab.png').default} alt="Test case details tab on a manual test instance" className="doc_img"/>
 
 The tab shows the test case **as of the version this instance is linked to**, the version badge next to the test case ID, which is not always the latest version of the test case. When you update the instance to a newer version, the tab reflects the new version along with the steps. See [Sync Test Instances](/support/docs/sync-test-instance/).
 
