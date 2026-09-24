@@ -206,10 +206,8 @@ You can export your organization's data as a downloadable file:
 
 Use the **per page** dropdown above the user table to control how many users are shown at once: **6**, **15**, **30**, or **50 per page**.
 
-<img loading="lazy" src={require('../assets/images/user-management/users-per-page.webp').default} alt="Image" width="404" height="206"  className="doc_img img_center"/><br/>
+<img loading="lazy" src={require('../assets/images/user-management/users-per-page.webp').default} alt="Users per page dropdown" width="404" height="206"  className="doc_img img_center"/><br/>
 
 When the list is longer than the selected page size, use the **Previous** and **Next** controls at the bottom of the table to move between pages.
-
-<img loading="lazy" src={require('../assets/images/user-management/users-pagination.webp').default} alt="Image" width="404" height="206"  className="doc_img img_center"/><br/>
 
 
