@@ -2,9 +2,16 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
-Kane CLI can run tests against local mobile virtual devices: Apple's **iOS Simulator** and Google's **Android Emulator**. You author and run mobile tests the same way you already do for the browser. The differences are that a mobile test runs against an **app you provide**, and that the target device is a simulator or emulator on your machine.
+Kane CLI can run tests against mobile virtual devices: Apple's **iOS Simulator** and Google's **Android Emulator**. You author and run mobile tests the same way you already do for the browser. The differences are that a mobile test runs against an **app you provide**, and that the target device is a simulator or emulator instead of a browser.
 
-This release supports **macOS on Apple Silicon (arm64) only**. Mobile testing is not yet available on Intel Macs, Linux, or Windows. Everything below assumes a mac-arm64 host.
+There are two places that device can live:
+
+| | Where the device runs | What the machine needs | How to run |
+|---|---|---|---|
+| **Local** | A simulator or emulator on your machine | **macOS on Apple Silicon (arm64)** with Xcode, Android Studio, or both | `kane-cli run … --target emulator\|simulator`, `kane-cli testmd run`, `kane-cli testrun run` |
+| **Cloud grid** | A virtual device on a HyperExecute macOS host | **Any machine**: Linux, Windows, or an Intel or Apple Silicon Mac, with no mobile tooling. Your TestMu AI plan must include HyperExecute with macOS runners | `kane-cli testrun run … --remote`, see [Remote Runs](/support/docs/kane-cli-remote-execution/) |
+
+Local mobile runs require **macOS on Apple Silicon (arm64)**. Intel Macs, Linux, and Windows cannot boot the simulator or emulator locally. On those machines, run mobile suites on the cloud grid with `--remote`. The setup steps below cover the local path.
 
 ## What Mobile Means Here
 
@@ -14,11 +21,11 @@ Pointing a mobile run at a website is not supported yet. Mobile runs target a na
 
 **Two targets.** `emulator` is a virtual Android device and `simulator` is a virtual iOS device. The default target stays **desktop**, the browser, so nothing changes for your existing web runs.
 
-## Why a Single Architecture
+## Why a Single Architecture for Local Runs
 
 Apple Silicon runs both mobile stacks natively. The iOS Simulator is a first-class Apple target, and Android ships `arm64-v8a` emulator images that run on the Mac's built-in hypervisor with hardware acceleration.
 
-Standardising on one host architecture for the first release keeps setup predictable and runs fast, with no cross-architecture translation in the path. Support for other hosts will follow in a later release.
+Standardising on one host architecture keeps local setup predictable and runs fast, with no cross-architecture translation in the path. Other machines reach the same devices through the cloud grid, where the grid's macOS runners do the booting.
 
 ## How Setup Works
 
@@ -26,9 +33,9 @@ There are two halves, and Kane CLI owns the second.
 
 **1. You provide the virtual device.** Apple's and Google's own tooling, Xcode or Android Studio, supplies the simulator or emulator. These are the same tools Apple and Google already ship for building simulators and emulators. Kane CLI does not ship an iOS runtime, an Android SDK, an emulator, or a system image.
 
-**2. Kane CLI installs its own test tooling and drives the device.** After a one-time `kane-cli doctor --install`, covered in [Setup](#setup) below, Kane CLI discovers the device, boots it, installs your app, and runs the test. You do not boot the simulator or emulator by hand.
+**2. Kane CLI installs its own test tooling and drives the device.** After a one-time `kane-cli doctor --target emulator|simulator --install`, covered in [Setup](#setup) below, Kane CLI discovers the device, boots it, installs your app, and runs the test. You do not boot the simulator or emulator by hand.
 
-Run `kane-cli doctor` at any time to check what is ready and what is missing. It prints one line per required check, each with a fix.
+Run `kane-cli doctor --target emulator|simulator` at any time to check what is ready and what is missing. It prints one line per required check, each with a fix. `kane-cli devices list --target emulator|simulator` lists the devices Kane CLI can run against.
 
 ## Prerequisites
 
@@ -39,9 +46,11 @@ Run `kane-cli doctor` at any time to check what is ready and what is missing. It
 
 An uploaded app id is `APP` followed by six or more digits.
 
-Both targets require macOS on Apple Silicon and a one-time `kane-cli doctor --install`.
+Both targets require macOS on Apple Silicon and a one-time `kane-cli doctor --target emulator|simulator --install`. Set up only the platform you intend to test, or both if you test on both. None of this is needed for `--remote` runs.
 
 ## Setup
+
+Prefer not to set up a device on your machine? `kane-cli testrun run … --remote` runs the same mobile tests on a virtual device on a HyperExecute macOS host, from any machine and with none of the steps below. See [Remote Runs](/support/docs/kane-cli-remote-execution/).
 
 ### Step 1: Prepare the Virtual Device
 
@@ -105,11 +114,11 @@ If your SDK is at the default path, skip this step.
 
 ### Step 2: Install the Kane CLI Test Tooling
 
-Sign in and let Kane CLI install the tooling it manages. This is the same for both platforms:
+Sign in and let Kane CLI install the tooling it manages for the target you set up:
 
 ```bash
 kane-cli login
-kane-cli doctor --install
+kane-cli doctor --target simulator --install    # or --target emulator
 ```
 
 You do not need to boot a simulator, boot an emulator, or run `adb` yourself. Kane CLI discovers the device, boots it, installs your app, and runs the test.
@@ -119,11 +128,11 @@ You do not need to boot a simulator, boot an emulator, or run `adb` yourself. Ka
 Confirm Kane CLI sees a ready toolchain and, optionally, the devices on your machine:
 
 ```bash
-kane-cli doctor              # required checks, each with a fix if it fails
-kane-cli doctor --targets    # also list the simulators and emulators Kane CLI can run against
+kane-cli doctor --target simulator          # or --target emulator
+kane-cli devices list --target simulator    # the devices Kane CLI can run against
 ```
 
-When the checks for your platform pass, setup is complete. On Android, confirm your AVD is listed by `--targets`.
+When the checks for your platform pass, setup is complete. On Android, confirm your AVD is listed by `kane-cli devices list --target emulator`. Address a device on a run with `--device-name "" --os-version `, as the list prints them.
 
 ## Running a Mobile Test
 
@@ -132,20 +141,42 @@ Once a target is set up, point a run at it:
 ```bash
 # one-off, from the command line
 kane-cli run "Sign in and open the account tab" --target simulator --app ./builds/MyApp.zip
-kane-cli run "Add the first item to the cart" --target emulator --app ./builds/app-debug.apk
 
 # or set a default target once, then just run
 kane-cli config set-target emulator
 kane-cli run "Add the first item to the cart" --app ./builds/app-debug.apk
+
+# a saved test, or a whole folder of them
+kane-cli testmd run tests/checkout_test.md
+kane-cli testrun run tests/app/ --device-name "Pixel 7 API 35" --os-version 15
 ```
 
-`--app` is required for every mobile run. The simulator target accepts a `.zip` build, the emulator target accepts an `.apk` build, and both accept an uploaded app id, `APP` followed by six or more digits.
+`--app` is required for every mobile run. The simulator target accepts a `.zip` build, the emulator target accepts an `.apk` build, and both accept an uploaded app id, `APP` followed by six or more digits. `kane-cli apps list --target emulator|simulator` lists the uploaded builds your account can use.
 
-You also need a device. In the interactive TUI, leaving `--device` off opens a one-time picker and saves your choice. A non-interactive run, such as one in CI, needs a device already set with `--device` or `kane-cli config set-device`, or the run exits and prints the fix. On the `desktop` target, `--device` and `--app` are ignored.
+You also need a device. Pick it with `--device-name` and `--os-version`, as `kane-cli devices list --target emulator|simulator` prints them: a name needs a version, and a version on its own matches any device running it. In the TUI or an interactive terminal, leaving the device flags off opens a one-time picker and saves your choice. A non-interactive run, such as one in CI, needs a device already set with the flags or with `kane-cli config set-device-name` and `kane-cli config set-os-version`, or the run exits and prints the fix. On the `desktop` target, the device flags and `--app` are ignored.
 
 In the interactive TUI, switch targets with `/mobile` and `/desktop`, and run `/doctor` to check mobile tooling and devices.
 
-For the full flag list and the app formats each target accepts, see the [CLI Reference](/support/docs/kane-cli-cli-reference/#kane-cli-run). To save a default target, device, and app instead of passing flags every time, see [Configuration](/support/docs/kane-cli-configuration/#mobile-target). To run a mobile test from a file, see [Test.md](/support/docs/kane-cli-testmd/#mobile-target).
+For the full flag list and the app formats each target accepts, see the [CLI Reference](/support/docs/kane-cli-cli-reference/#kane-cli-run). To save a default target, device, and app instead of passing flags every time, see [Configuration](/support/docs/kane-cli-configuration/#mobile-target). To run a mobile test from a file, see [Test.md](/support/docs/kane-cli-testmd/#mobile-target), and to run a folder of them, see [Batch Runs](/support/docs/kane-cli-testrun/#mobile-members).
+
+## Running a Mobile Suite on the Cloud Grid
+
+`kane-cli testrun run --remote` sends your mobile `_test.md` files to TestMu AI HyperExecute, which boots a virtual device on a macOS host, installs the app, runs the suite, and returns the recordings and evidence pack to your project. Anyone on the team can author and run mobile tests this way, from any operating system, with none of the local setup above.
+
+```bash
+kane-cli plugin install remote-execution                              # once
+kane-cli devices list --target emulator --remote                      # what the grid can provision
+kane-cli testrun run tests/app/ --remote --device-name "Pixel 7" --os-version 14 --dry-run
+kane-cli testrun run tests/app/ --remote --device-name "Pixel 7" --os-version 14
+```
+
+Three things differ from a run on your own machine:
+
+- **The device comes from the grid catalog.** List it with `kane-cli devices list --target emulator|simulator --remote`, not from the AVDs or simulators on your machine.
+- **One job runs one platform.** Emulator members run on one Android version, and simulator members run on one HyperExecute pool.
+- **A local build is uploaded** from your machine before dispatch and handed to the grid as an `APP…` id.
+
+The prerequisites, the app rules, and what one job can hold are in [Remote Runs](/support/docs/kane-cli-remote-execution/).
 
 ## Evidence for a Mobile Run
 
@@ -165,6 +196,8 @@ The result summary records the **device** in the run environment, for example th
 
 ## Next Steps
 
+- [Remote Runs](/support/docs/kane-cli-remote-execution/) to run mobile suites from any machine
+- [Batch Runs](/support/docs/kane-cli-testrun/) to run a folder of mobile tests as one execution
 - [CLI Reference](/support/docs/kane-cli-cli-reference/) for the full flag and command list
 - [Configuration](/support/docs/kane-cli-configuration/) to save a default target, device, and app
 - [Troubleshooting](/support/docs/kane-cli-troubleshooting/) for wider setup and run problems

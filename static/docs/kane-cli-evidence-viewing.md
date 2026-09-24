@@ -42,7 +42,6 @@ Open the `viewer` URL in your browser.
 |---|---|---|
 | `--port ` | Pin the local port | ephemeral |
 | `--viewer-url ` | Override the hosted viewer base URL | environment's viewer |
-| `--env ` | Environment (`prod` or `stage`) | active profile's env |
 
 `serve` accepts sealed `.evidence` files only. A live, unsealed pack directory is rejected.
 

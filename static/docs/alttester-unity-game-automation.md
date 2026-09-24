@@ -2,7 +2,7 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
-If you build Unity mobile games and need to test them on real hardware, you can automate them with AltTester on TestMu AI Real Device Cloud.
+If you build Unity mobile games and need to test them on real hardware, you can automate them with AltTester on TestMu AI public and private real device cloud.
 
 AltTester reads the live Unity scene graph, so your tests assert on game objects, components, and `PlayerPrefs` instead of raw screen coordinates.
 

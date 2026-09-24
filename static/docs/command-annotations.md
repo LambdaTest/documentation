@@ -19,7 +19,7 @@ JavascriptExecutor jse = (JavascriptExecutor)driver;
 jse.executeScript("lambdatest_executor: {\"action\": \"stepcontext\", \"arguments\": {\"data\": \"<any string>\", \"level\": \"<info/warn/debug/error>\"}}");
 ```
 
-The arguments passed in the JavaScript method for setting the status and the corresponding reason for the test are `data` and `level`.
+The annotation call takes two arguments, `data` and `level`:
 
 * **data**: Accepts a value in string data type.
 

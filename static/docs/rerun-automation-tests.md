@@ -19,8 +19,6 @@ Re-Run is not generally available yet and may not be enabled for your account. I
 3. Click the dropdown arrow on the **Re-Run** button, in the top-right of the test summary.
 4. Choose **Replay** or **Reproduce**.
 
-The **Re-runs** field in the test summary shows how many times the test has been re-run.
-
 ## Replay
 
 **Replay** runs the test again on the grid, against your application as it exists now. Unlike Reproduce, it does not use the captured data from the original run, so the result reflects the current state of your application and environment.
@@ -68,6 +66,10 @@ In this case, add the capability and run the test again. The new run is then eli
 | Best for | Confirming fixes, detecting flakes | Investigating intermittent failures that will not recur |
 
 If you are not sure which to use, start with **Replay**. Reach for **Reproduce** when a failure will not recur on a live run and you need the original conditions back.
+
+## View Run History
+
+The **Re-runs** field in the test summary shows how many times a test has been re-run. Open the run history from the summary to see every previous run with its status, configuration, and duration.
 
 ## Next Steps
 

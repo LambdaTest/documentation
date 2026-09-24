@@ -97,12 +97,13 @@ Give every test instance a configuration that uses Chrome, either by picking an 
 
 ### Run with Evidence Report
 
-When both conditions are met, the saved run shows a note confirming that an Evidence Report is available, and the **Run with HyperExecute** panel offers it as the primary action.
+When both conditions are met, the saved run shows a note confirming that an Evidence Report is available, and the **Run with HyperExecute** panel defaults to Evidence Reporting.
 
-- Click **Run with Evidence Report** to execute the run and generate the Evidence Report.
-- To run the same test run with the standard report instead, open the dropdown next to the button and choose **Run with Classic Report**.
+- Under **Build Parameters**, the **Mode** setting chooses how the run executes. **Evidence Reporting** is selected by default and produces the Evidence Report.
+- To run the same test run with the standard report instead, select **Classic Reporting**.
+- Click **Execute** to start the run.
 
-If the run contains a Classic test case, or any instance is on a browser other than Chrome, the saved run flags which instances are blocking Evidence Reporting and the panel offers only **Run with Classic Report**. Adjust the test cases or the browser configuration, then reopen the panel.
+If the run contains a Classic test case, or any instance is on a browser other than Chrome, the saved run flags which instances are blocking Evidence Reporting and the run produces the Classic report. Adjust the test cases or the browser configuration, then reopen the panel.
 
 [Learn More](https://www.testmuai.com/docs/kane-cli-agent-mode#the-evidence-proof-pack)
 
