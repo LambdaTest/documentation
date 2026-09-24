@@ -153,7 +153,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
         "text": "\n```bash\n./hyperexecute --config RELATIVE_PATH_OF_YOUR_YAML_FILE --vars \"email=xyz@abc.com,abc@xyz.com,def@wxy.com\""
       }
     ],
-    "dateModified": "2026-09-09T19:10:37+05:30"
+    "dateModified": "2026-09-24T12:00:00+05:30"
   }) }}
 />
 
@@ -239,6 +239,71 @@ partialReports:
       - <your_email_id@example.com>
       - <another_email_id@example.com>
 ```
+
+## How to send emails based on the job status?
+
+You can send the report or artifacts to different people depending on how the job ended. Add a job status as a key under `email`, next to `to`, and list the email IDs that should receive the mail when the job ends in that status.
+
+<VerifiedTag value="Verified" />
+
+```yaml
+report: true
+partialReports:
+  frameworkName: testng
+  location: target/surefire-reports/html
+  type: html
+  email:
+    to:
+      - qa-lead@example.com
+    failed:
+      - oncall@example.com
+      - dev-team@example.com
+    aborted:
+      - currentUser
+
+uploadArtifacts:
+  - name: Reports
+    path:
+      - reports/
+    email:
+      failed:
+        - oncall@example.com
+```
+
+With the configuration above:
+
+- `qa-lead@example.com` receives the report for every job, whatever the status.
+- `oncall@example.com` and `dev-team@example.com` also receive the report when the job fails.
+- The user who ran the job also receives the report when the job is aborted.
+- The `Reports` artifacts are mailed to `oncall@example.com` only when the job fails. For any other status, no one receives them, because this block has no `to`.
+
+The following job statuses are accepted as keys:
+
+| Key | Mail is sent when the job ends as |
+|-----|-----------------------------------|
+| `completed` | Completed |
+| `passed` | Passed |
+| `failed` | Failed |
+| `aborted` | Aborted |
+| `skipped` | Partially Completed. `partially_completed` also works |
+| `ignored` | Ignored |
+| `timeout` | Timeout |
+| `lambda_error` | Lambda Error |
+| `error` | Error |
+
+Keep the following in mind:
+
+- **`to` is always mailed.** The status lists add recipients on top of `to`, they do not replace it. You can also leave out `to` and use only status keys.
+- **Each email ID gets one mail.** If an email ID is in `to` and also in the list for the status the job ended in, it receives the mail only once.
+- **`completed` and `passed` are separate keys.** A list under `completed` is not mailed when the job ends as Passed, and the other way round.
+- **Keys are case-insensitive.** `Failed`, `FAILED` and `failed` are the same key, and a space or dash works like an underscore.
+- **Unsupported keys are ignored.** Statuses that are not in the table above, such as `running`, `initiated`, `blocked` or `stopped`, and misspelt keys, are ignored with a warning in the CLI output. The job still runs.
+- **`currentUser`** can be used in the status lists the same way as in `to`.
+- **Email IDs in the status lists** follow the same format rules as `to`. See [Correct format of entering the Email IDs](#correct-format-of-entering-the-email-ids).
+
+:::note
+Job status keys are supported under `partialReports.email` and `uploadArtifacts[].email` (or `uploadArtefacts[].email`). They are not supported under `globalPost.email`, which always mails the `to` list.
+:::
 
 ## Correct format of entering the Email IDs
 
