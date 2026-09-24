@@ -80,12 +80,16 @@ jobs:
             # attempt because the service rejects a ts more than 5 minutes old.
             printf '{"sha":"%s","ts":%s,"trigger":"deploy"}' "${SHA}" "$(date +%s)" > body.json
             sig=$(openssl dgst -sha256 -hmac "${HMAC_SECRET}" -r body.json | cut -d' ' -f1)
+            # On a connection failure curl exits non-zero and has already
+            # printed 000 for %{http_code}. Take 000 from the exit status
+            # instead of appending it, so the failure is retried like a 5xx.
+            rm -f response.json
             status=$(curl -sS -o response.json -w '%{http_code}' \
               --max-time 30 \
               -X POST "${BASE_URL}/v1/index" \
               -H 'Content-Type: application/json' \
               -H "X-Signature-256: sha256=${sig}" \
-              --data-binary @body.json || echo 000)
+              --data-binary @body.json) || status=000
             echo "attempt ${attempt}: HTTP ${status}"
             cat response.json 2>/dev/null || true
             echo
