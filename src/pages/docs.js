@@ -208,7 +208,7 @@ export default function Home() {
             </div>
           </div>
           <div className="home_inners_box">
-            <h2 className="homeMain_h2"><Icon light="Realtime-light-icon.svg" dark="Realtime-dark-icon.svg" alt="" />Agent Testing Platform </h2>
+            <h2 className="homeMain_h2"><Icon light="Realtime-light-icon.svg" dark="Realtime-dark-icon.svg" alt="" />Agent Testing</h2>
             <div className="home_inners">
               <a href="/support/docs/getting-started-with-agent-testing-platform/"><p className="p_home_inners">Overview</p></a>
               <a href="/support/docs/chat-agent/"><p className="p_home_inners">Supported Agent Types</p></a>

@@ -59,7 +59,7 @@ import { BRAND_URL } from '@site/src/component/BrandName';
       "height": 630
     },
     "inLanguage": "en",
-    "articleSection": "Agent Assurance Platform",
+    "articleSection": "Agent Assurance",
     "keywords": [
       "rook features",
       "ai agent assurance",
