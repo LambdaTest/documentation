@@ -101,9 +101,11 @@ To enable Apple Pay automation, include the following capability in your automat
 
 ### Step 3: Update Shipping, Billing, and Contact Details (Optional)
 
-Before confirming the Apple Pay payment, you can optionally update the shipping details, billing details, and contact information using the `lambda-applepay-details` hook. This allows you to customize the payment information dynamically during your automation test.
+Before confirming the Apple Pay payment, you can optionally update the shipping details, billing details, and contact information using the `applePayDetails` hook. This allows you to customize the payment information dynamically during your automation test.
 
-{`driver.execute_script("lambda-applepay-details", {
+**Note:** The `applePayDetails` hook is not currently supported on iOS 26 devices. Support is under active development and will be available in a future release.
+
+{`driver.execute_script("applePayDetails", {
     "shippingDetails": {
         "firstName": "John",
         "lastName": "Doe",
@@ -150,14 +152,14 @@ Map contact = new HashMap<>();
 contact.put("email", "john.doe@example.com");
 contact.put("phone", "+441234567890");
 
-Map applePayDetails = new HashMap<>();
-applePayDetails.put("shippingDetails", shippingDetails);
-applePayDetails.put("billingDetails", billingDetails);
-applePayDetails.put("contact", contact);
+Map applePayDetailsUpdate = new HashMap<>();
+applePayDetailsUpdate.put("shippingDetails", shippingDetails);
+applePayDetailsUpdate.put("billingDetails", billingDetails);
+applePayDetailsUpdate.put("contact", contact);
 
-driver.executeScript("lambda-applepay-details", applePayDetails);`}
+driver.executeScript("applePayDetails", applePayDetailsUpdate);`}
 
-{`await driver.executeScript("lambda-applepay-details", {
+{`await driver.executeScript("applePayDetails", {
     shippingDetails: {
         firstName: "John",
         lastName: "Doe",

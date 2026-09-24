@@ -29,32 +29,25 @@ You can add Lighthouse performance metrics for the website you want to test usin
 
 For example, if you are using **TestNG** for Selenium Automation on TestMu AI, include the **Lighthouse** performance feature with the below code snippet:
 
-```java
-DesiredCapabilities caps = new DesiredCapabilities();
-.
-.
-
-// To view performance metrics
-caps.setCapability("performance", true);
-```
-Below is the code snippet to trigger **Lighthouse** performance metrics on TestMu AI in **macOS Catalina** with **Google Chrome** browser version **86.0**.
+Set the `performance` capability to `true` inside `LT:Options`:
 
 ```java
-DesiredCapabilities caps = new DesiredCapabilities();
-caps.setCapability("browser", "Chrome");
-caps.setCapability("version", "86");
-caps.setCapability("platform", "macOS Catalina");
-caps.setCapability("build", "Lighthouse Performance Demo");
-caps.setCapability("name", "TestNG Test 3");
-caps.setCapability("network", true);
-caps.setCapability("visual", true);
-caps.setCapability("video", true);
-caps.setCapability("console", true);
-caps.setCapability("selenium_version", "4");
+ChromeOptions browserOptions = new ChromeOptions();
+browserOptions.setBrowserVersion("latest");
 
-// To view performance metrics
-caps.setCapability("performance", true);
+HashMap<String, Object> ltOptions = new HashMap<String, Object>();
+ltOptions.put("platformName", "Windows 10");
+ltOptions.put("build", "Lighthouse Performance Demo");
+ltOptions.put("name", "Lighthouse Test");
+ltOptions.put("w3c", true);
+// Enable Lighthouse performance metrics
+ltOptions.put("performance", true);
+
+browserOptions.setCapability("LT:Options", ltOptions);
 ```
+
+Lighthouse performance metrics must be enabled for your account. If the **Performance** tab stays empty after your test runs (even though the test passes), confirm the feature is available on your plan.
+
 ## How to View Lighthouse Performance Metrics on TestMu AI
 
 Access the Lighthouse performance report from the Automation Dashboard after running your tests.
@@ -65,16 +58,18 @@ Once you have run your Selenium automation tests on TestMu AI, you can view the 
 
 Follow the below steps to view the **Lighthouse performance metrics** on TestMu AI:
 
-**1.**  Go to the [Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com). Here you can see your recently executed Selenium automation tests. For this demo, we used a sample **TestNG** script from this [GitHub repository](https://github.com/LambdaTest/Java-TestNG-Selenium).
+**1.** Go to the [Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com), open your build, and select the test in which you enabled the `performance` capability. Open the **Performance** tab and choose **LightHouse Report** from the **View URLs** dropdown. You will see the five Lighthouse category scores for the page under test — **Performance**, **Accessibility**, **Best Practices**, **SEO**, and **PWA**. For this demo we ran a **TestNG** script (from this [sample repository](https://github.com/LambdaTest/Java-TestNG-Selenium)) against `https://www.testmuai.com/selenium-playground/`:
 
-**2.**  Click on the test in which you activated the **Lighthouse performance** feature, as shown above.
+If your test URL redirects (for example, `www.lambdatest.com` &rarr; `www.testmuai.com`), Lighthouse shows a warning and audits the final URL. Point your test at the final URL directly for the cleanest report.
 
-**3.**  Click on the **Performance** tab.
+**2.** Scroll down the report to view the **Performance** section and its Core Web Vitals metrics — First Contentful Paint, Largest Contentful Paint, Total Blocking Time, Cumulative Layout Shift, and Speed Index:
 
-**4.**  You can see the Lighthouse performance metrics on your screen for the website under test. For example, in the below image, the website under test is [https://lambdatest.github.io/sample-todo-app/](https://lambdatest.github.io/sample-todo-app/), which we used for our demo.
+**3.** Continue scrolling to the **Accessibility** section to view its score and the audited checks:
 
-**5.**  Click on any of the metrics to view it in detail, along with the individual factor scores. For example, clicking on _Accessibility_ opens its details.
+**4.** Scroll further to the **SEO** section to view its score along with the crawling and indexing checks:
 
-Similarly, you can click on any of the performance metrics to view it in detail. Performance reports can also be downloaded in various formats. TestMu AI also helps you view the Passed Audits, individual metrics, detailed diagnosis, and improvement opportunities for that particular Lighthouse Audit.
+**5.** Keep scrolling to the **PWA** (Progressive Web App) section to view its installability and PWA-optimized checks:
+
+Scroll through the report to view the detailed audits, individual factor scores, passed audits, diagnostics, and improvement opportunities for each category. Reports can also be downloaded from the **Performance** tab.
 
 That's it folks! That's all about the Lighthouse Performance Metrics with TestMu AI. You can read more about the Lighthouse Audits and Performance Metrics from [web.dev](https://web.dev/lighthouse-performance/)page. If you have any doubt or questions, feel free to contact our experts at **24/7 chat support** or mail us at [support@testmuai.com](mailto:support@testmuai.com). Happy testing! :)

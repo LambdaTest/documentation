@@ -2,64 +2,34 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
-TestMu AI allows you to group your automation tests using custom tags. This document shows how to create custom tags and use them. For demonstration purposes, we use a [sample TestNG script](https://github.com/LambdaTest/Java-TestNG-Selenium) to run on the TestMu AI platform.
+TestMu AI lets you group automation tests with custom tags. Add a `tags` capability with your tag names to a test, run it, then view and filter tests by those tags from the Builds list on the dashboard. The examples below use a [sample TestNG script](https://github.com/LambdaTest/Java-TestNG-Selenium).
 
 ## How to Create Custom Tags on the Selenium Grid
 
-Add a tags capability with a String array to your desired capabilities.
+Pass a `tags` capability with a String array of tag names inside `LT:Options`.
 
-You can create a custom tag while writing your Selenium automation tests. When you create the [Desired Capabilities](/docs/selenium-automation-capabilities/) via code, add the below lines of code.
+Add custom tags while writing your Selenium test. When you build your [Selenium capabilities](/support/docs/selenium-automation-capabilities/), set the `tags` capability to a String array of the tag names you want on the test:
 
-*   Create a String array that contains the names of your custom tags, separated by a comma.
+```java
+// The tags you want to apply to this test
+String[] customTags = { "Tag 1", "Tag 2", "Tag 3" };
 
-```javascript
-// In case for just 1 tag, just add 1 element in the array
-String[] customTags = {"Custom Tag"};
+// Add the tags capability inside LT:Options
+MutableCapabilities ltOptions = new MutableCapabilities();
+ltOptions.setCapability("tags", customTags);
 
-// In case for multiple tags, add them in the array separated by comma
-String[] customTags = {"Tag 1", "Tag 2", "Tag 3", ...};
+ChromeOptions browserOptions = new ChromeOptions();
+browserOptions.setCapability("LT:Options", ltOptions);
 ```
 
-*   Now add this custom tag in your Desired Capabilities instance:
+Run the test with these capabilities. Once it runs on the grid, view and filter your tests by these tags on the dashboard.
 
-```javascript
-DesiredCapabilities caps = new DesiredCapabilities();
-.
-.
+## How to View and Filter Tests by Custom Tags
 
-// To create custom tags
-caps.setCapability("tags", customTags);
-```
-*For example:*
+Filter the Builds list by your custom tags from the Sort & Filters panel.
 
-You have successfully created the custom tags. Let us now see how to view and group tests based on custom tags.
+On the [Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build), open **Configure > Sort & Filters** and select **Test Tags**. Choose one or more of your tags to show only the tests that carry them; selecting several combines them.
 
-## How to View Custom Tags on the Platform
-
-View your custom tags in the Timeline or Automation Logs views on the dashboard.
-
-There are multiple ways to view custom tags in the automation dashboard, such as Timeline view and Automation logs view.
-
-### How to View Custom Tags on Your Timeline
-
-Navigate to [Timeline](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/timeline/) view of your automation dashboard, and toggle the **Build View** to **Test View**:
-
-You can see the applied custom tags below the tests in this Test View.
-
-### How to View Custom Tags on Your Automation Logs
-
-Navigate to [Automation Logs](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/logs) of your automation dashboard, and you can see the applied custom tags below the tests in the left panel.
-
-## How to Filter Tests Using Custom Tags on the Platform
-
-Select one or more custom tags in the filter toolbar to narrow down your test results.
-
-You can filter tests on your automation dashboard with these custom tags.
-
-Navigate to [Automation Logs](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/logs) of your automation dashboard, and you can see a filter by name **Tags** in the filter toolbar.
-
-Click on it and select the Tag by which you want to filter the tests on your dashboard. For example, we have filtered the test using _Tag2_ custom tag:
-
-You can filter tests by selecting multiple custom tags at once from the filter toolbar:
+To filter by tags applied to the build rather than the test, use the **Build Tags** filter. See [Group and Filter Builds Using Build Tags](/support/docs/group-and-filter-your-test-builds-using-build-tags/) and [Organize Tests & Builds](/support/docs/filter-your-selenium-tests/).
 
 > You have successfully created a custom tag and grouped your tests based on the custom tag. If you have questions, share them with us through our **24/7 chat support** or by mailing us at [support@testmuai.com](mailto:support@testmuai.com).
