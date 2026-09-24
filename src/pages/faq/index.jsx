@@ -464,11 +464,12 @@ export default function FaqPage() {
               <p>Yes. App profiling data is available via Advanced App Profiling on {BRAND_NAME} real devices. See <a href={`${BRAND_URL}/support/docs/insights-app-profiling/`}>how to enable Advanced App Profiling</a> for details.</p>
               </details>
 
-              {/* Limitations */}
               <details>
               <summary>Do you support Performance testing frameworks for app automation?</summary>
-              <p>Performance testing frameworks are not currently supported on the {BRAND_NAME} real device cloud.</p>
+              <p>Yes. {BRAND_NAME} supports performance testing in two ways. To measure how your app performs during Appium tests, add the <code>"appProfiling": true</code> capability to capture CPU, memory, frame rate, network, and other metrics on real iOS and Android (9+) devices. See <a href={`${BRAND_URL}/support/docs/appium-app-performance-analytics/`}>App Performance Analytics</a>. For load testing, run JMeter, k6, or Gatling tests on HyperExecute. See <a href={`${BRAND_URL}/support/docs/hyperexecute-performance-testing/`}>Performance Testing with HyperExecute</a>.</p>
               </details>
+
+              {/* Limitations */}
 
               <details>
               <summary>Do you support mobile app automation on emulators and simulators?</summary>
