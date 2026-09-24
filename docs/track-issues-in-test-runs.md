@@ -96,7 +96,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         "https://www.youtube.com/@TestMuAI"
       ]
     },
-    "dateModified": "2026-09-09T21:31:00+05:30"
+    "dateModified": "2026-09-24T12:00:00+05:30"
   }) }}
 />
 
@@ -170,7 +170,7 @@ Mark as Bug can file tickets in several bug trackers, but only Jira and Azure De
 You can review the bugs on a test instance in two ways:
 
 - **From the run list**: open the bug menu on the instance row and select **View Issues**. A side panel lists every issue associated with that instance.
-- **From the instance**: open the test instance and go to its **Issues** tab. The tab header shows how many issues the instance carries. This is only possible in Manual Test Runs.
+- **From the instance**: open the test instance and go to its **Issues** tab, the last of its three tabs, after **Test steps** and **Test case details**. The tab header shows how many issues the instance carries. This is only possible in Manual Test Runs.
 
 Each issue entry shows its title, key, type, status, priority, the project it belongs to, and who created it, enough to triage without opening the tracker. Use the search box and the **Status** and **Issue Type** filters to narrow a long list.
 
@@ -181,7 +181,7 @@ Each issue entry shows its title, key, type, status, priority, the project it be
 You do not have to act from the run list. Inside a test instance you can link an existing issue or raise a new bug at two levels:
 
 - **At the instance**: for a defect that affects the test case as a whole.
-- **At a step**: open the **Test Steps** tab and use the bug action on the step where the failure occurred, so the defect is recorded against the exact point of failure.
+- **At a step**: open the **Test steps** tab and use the bug action on the step where the failure occurred, so the defect is recorded against the exact point of failure.
 
 A bug added at a step is listed on the instance's **Issues** tab along with every other issue for that instance, so the instance always reflects the full set of defects found.
 
