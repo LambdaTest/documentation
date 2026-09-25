@@ -358,16 +358,16 @@ Run `rook scenarios list` after editing to surface schema and capability problem
 
 You can review definitions in either UI:
 
-- **Local:** run `rook ui --local`, open the agent, scroll to **scenarios**, and click a scenario ID. Read its goal, criteria, and history directly from the workspace. The local list has no hosted filter bar.
+- **Local:** run `rook ui --local`, open the agent's **Scenarios** tab, and filter by feature, class, category, or result. Click a scenario ID to read its goal, criteria, and history directly from the workspace. See the [earlier layout](/support/docs/rook-web-ui/#earlier-local-ui) if your CLI predates the tabbed viewer.
 - **Hosted:** after `rook sync`, run `rook ui`, open the agent's **Scenarios** tab, and filter by feature, class, result, or category. This shows uploaded definitions, not unsaved local changes.
 
 In either interface, open a scenario from the specific **run** for historical evidence; the current catalog definition may have changed since that run. Follow the [local definitions](/support/docs/rook-web-ui/#local-definitions) or [hosted scenarios](/support/docs/rook-web-ui/#scenarios) section of the same UI guide.
 
 ### Local UI: Review the Test Definition {#local-ui-example}
 
-From the agent's **scenarios** list, open a scenario ID. This local SC-002 definition shows the goal, class, category, four acceptance criteria, and execution history. Review the criteria themselves, not just the scenario title.
+From the agent's **Scenarios** tab, open a scenario ID. This local CommerceCare SC-006 definition tests refund-verification behavior and shows its goal, class, category, three acceptance criteria, and execution history. Review the criteria themselves, not just the scenario title.
 
-<img loading="lazy" src={require('../assets/images/rook/rook-local-scenario.png').default} alt="Local SC-002 scenario definition with the goal, functional classification, acceptance criteria, and history" width="1440" height="900" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/rook/rook-local-scenario.png').default} alt="Local CommerceCare SC-006 definition with its refund-verification goal, classification, three criteria, and history" width="1440" height="900" className="doc_img"/>
 
 ### Hosted Web UI: Find the Scenario to Review {#hosted-ui-example}
 

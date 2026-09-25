@@ -547,15 +547,15 @@ The [combined UI walkthrough](/support/docs/rook-web-ui/#choose-your-ui) shows b
 
 ### Local UI: Start With Your Workspace {#local-ui-example}
 
-The local landing page lists agents from the selected project on this machine. Click an agent to review its definitions and results. This populated triage workspace has five features, two scenarios, and one run; a new workspace starts without these records.
+The local landing page lists agents from the selected project on this machine. Click an agent to review its definitions and results. This saved CommerceCare demo has nine features, twelve scenarios, and three runs; a new workspace starts without these records. See the [local UI rollout note](/support/docs/rook-web-ui/#earlier-local-ui) if your public CLI still has the earlier viewer.
 
-<img loading="lazy" src={require('../assets/images/rook/rook-local-agents.png').default} alt="Local Rook landing page listing the triage-service agent and its feature, scenario, and run counts" width="1440" height="400" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/rook/rook-local-agents.png').default} alt="Local Rook Agents page listing CommerceCare and its feature, scenario, and run counts" width="1440" height="900" className="doc_img"/>
 
 ### Hosted Web UI: Start With Your Team's Project {#hosted-ui-example}
 
-The hosted landing page starts with shared **Projects**. Open a project, then an agent, to reach Summary, Versions, Features, Scenarios, Runs, and Insights. The screenshot shows the documentation test project, not a project created automatically at installation.
+The hosted landing page starts with shared **Projects**. Open a project, then an agent, to reach Summary, Versions, Profiles, Features, Scenarios, and Runs. Insights is not currently available. The screenshot shows the documentation test project, not a project created automatically at installation.
 
-<img loading="lazy" src={require('../assets/images/rook/rook-web-projects.png').default} alt="Hosted Projects page showing the documentation test project's agent and run counts" width="1440" height="224" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/rook/rook-web-projects.png').default} alt="Hosted project entry showing the documentation test project's agent and run counts" width="1158" height="75" className="doc_img"/>
 
 ## Next Steps
 
