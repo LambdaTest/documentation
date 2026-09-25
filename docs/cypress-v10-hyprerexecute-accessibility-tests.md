@@ -74,7 +74,7 @@ Download or Clone the code sample from the <BrandName /> GitHub repository to ru
 <a href="https://github.com/LambdaTest/hyperexecute-cypress-v10-sample" target="_blank" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className="doc_img"/> View on GitHub</a>
 :::
 
-#### Download HyperExecute CLI
+### Download HyperExecute CLI
 
 The *HyperExecute CLI* is used for triggering tests on HyperExecute. It is recommend to download the HyperExecute CLI binary on the host system to perform the tests on HyperExecute. The CLI download site for various platforms is displayed below:
 
@@ -84,7 +84,7 @@ The *HyperExecute CLI* is used for triggering tests on HyperExecute. It is recom
 | macOS | https://downloads.lambdatest.com/hyperexecute/darwin/hyperexecute |
 | Linux | https://downloads.lambdatest.com/hyperexecute/linux/hyperexecute |
 
-#### Setup Environment Variable
+### Setup Environment Variable
 Export your environment variables *LT_USERNAME* and *LT_ACCESS_KEY* that are available in the [<BrandName /> Profile page](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/details/profile).
 
 Run the below mentioned commands in your terminal to setup the CLI and the environment variables.
@@ -116,7 +116,7 @@ set LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 
 ### Step 2: Update the Necessary Capabilities and Configurations in your project
 
-#### 1. Install the Cypress CLI
+### 1. Install the Cypress CLI
 You will have to pass the `npm i lambdatest-cypress-cli` command in your [pre steps](/support/docs/deep-dive-into-hyperexecute-yaml/#pre) to install the <BrandName /> Cypress CLI which will be used to execute your Cypress tests.
 
 ```yaml title="hyperexecute.yaml"
@@ -127,7 +127,7 @@ pre:
   - npm i lambdatest-cypress-cli
 ```
 
-#### 2. Add the capabilities in the YAML file
+### 2. Add the capabilities in the YAML file
 
 To enable the accessibility testing within your automated test suite, set the `accessibility: true` in the [cypressOps](/support/docs/deep-dive-into-hyperexecute-yaml/#cypressops) flag of your YAML file. You can also define other settings capabilities as described below.
 
@@ -139,7 +139,7 @@ cypressOps:
   accessibilityNeedsReview: true      #Include issues that need review
 ```
 
-#### 3. In the `e2e.js` file
+### 3. In the `e2e.js` file
 
 Add this import statement in your `e2e.js` file to import the acceessibility scanner dependency
 
@@ -147,7 +147,7 @@ Add this import statement in your `e2e.js` file to import the acceessibility sca
 import 'lambdatest-cypress-cli/accessibility/scanner'
 ```
 
-#### 4. In the `cypress.config.js` file
+### 4. In the `cypress.config.js` file
 
 Add this code snippet in your `cypress.config.js` file.
 

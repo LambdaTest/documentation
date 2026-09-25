@@ -15,6 +15,83 @@ import TabItem from '@theme/TabItem';
 import NewTag from '../src/component/newTag';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
+<script type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify({
+       "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": BRAND_URL
+        },{
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Support",
+          "item": `${BRAND_URL}/support/docs/`
+        },{
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Test Scheduling - Sitemap (Overview)",
+          "item": `${BRAND_URL}/support/docs/accessibility-test-scheduling/`
+        }]
+      })
+    }}
+></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/accessibility-test-scheduling/"
+    },
+    "headline": "Test Scheduling - Sitemap (Overview)",
+    "description": "Overview of scheduled accessibility scans for websites, including sitemap-based and crawler-based workflows.",
+    "url": "https://www.testmuai.com/support/docs/accessibility-test-scheduling/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Documentation",
+    "keywords": [],
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 # Test Scheduling - Sitemap (Overview)
 
 ---
@@ -88,7 +165,7 @@ Treat credentials as sensitive: prefer dedicated QA or read-only accounts, rotat
 
 ### Open the login modal
 
-#### From the scheduler (create or edit)
+### From the scheduler (create or edit)
 
 1. In **Create scan** or **Edit scan**, go to the step where you **add URLs** (manual URLs, CSV, sitemap, or crawler, depending on your setup).
 2. Expand **Advanced options**.
@@ -98,7 +175,7 @@ Treat credentials as sensitive: prefer dedicated QA or read-only accounts, rotat
 
 <img loading="lazy" src={require('../assets/images/accessibility-testing/features/login/login-configs.png').default} className="doc_img" alt="Advanced options in the schedule wizard with Add login configurations" />
 
-#### From the dashboard
+### From the dashboard
 
 1. Open **Login configurations** from the Accessibility (or Web Scanner scheduling) area of the dashboard, as labeled in your product.
 2. The **login modal** opens, where you can review existing profiles or add a new one.
@@ -128,7 +205,7 @@ Confirm every CSS selector in Chrome (or Edge) DevTools on the real login page: 
 
 ### Field reference
 
-#### Basic authentication
+### Basic authentication
 
 Use when the server responds with **HTTP Basic** authentication (browser-style username/password challenge), not when you only have a custom HTML login page. In that case use **Form** or **Multi-page**.
 
@@ -140,7 +217,7 @@ Use when the server responds with **HTTP Basic** authentication (browser-style u
 
 <img loading="lazy" src={require('../assets/images/accessibility-testing/features/login/basic_auth.png').default} className="doc_img" alt="Basic authentication fields: login URL, username, and password" />
 
-#### Form authentication
+### Form authentication
 
 Use when, after opening the **Login Page URL**, the username field, password field, and submit control are all on the **same** document.
 
@@ -156,11 +233,11 @@ Use when, after opening the **Login Page URL**, the username field, password fie
 
 <img loading="lazy" src={require('../assets/images/accessibility-testing/features/login/form_auth.png').default} className="doc_img" alt="Form authentication with selectors and optional post-login URL" />
 
-#### Multi-page authentication
+### Multi-page authentication
 
 Use for **sequential** flows: enter the username, click **Next** (or equivalent), then enter the password, common with many enterprise identity providers.
 
-##### Step 1: Login or username page
+### Step 1: Login or username page
 
 | Field | Required | Description |
 |--------|----------|-------------|
@@ -171,7 +248,7 @@ Use for **sequential** flows: enter the username, click **Next** (or equivalent)
 
 <img loading="lazy" src={require('../assets/images/accessibility-testing/features/login/multi-page-username.png').default} className="doc_img" alt="Multi-page login step one: username page fields" />
 
-##### Step 2: Password page
+### Step 2: Password page
 
 | Field | Required | Description |
 |--------|----------|-------------|
@@ -182,7 +259,7 @@ Use for **sequential** flows: enter the username, click **Next** (or equivalent)
 
 <img loading="lazy" src={require('../assets/images/accessibility-testing/features/login/multi-page-password.png').default} className="doc_img" alt="Multi-page login step two: password page fields" />
 
-##### Step 3: After login
+### Step 3: After login
 
 | Field | Required | Description |
 |--------|----------|-------------|
@@ -277,7 +354,7 @@ Choose one of the input methods below to build the scan's page list.
 
 </Tabs>
 
-#### Advanced options
+### Advanced options
 - **Local Testing Setup (Tunnel):** If scanning locally hosted URLs, add a Local Testing Setup/Tunnel to access non-public environments. <NewTag value="Upcoming" />
 - **Login Configuration:** For pages behind authentication, use **Add login configurations** to open the login modal, pick a saved profile, or create one (**Basic**, **Form**, or **Multi-page**). You can also manage profiles from the dashboard **Login configurations** entry. See the [Login and Authentication](#login-and-authentication) section for field references.
 - **Review Issues:** Enable Needs Review for areas requiring manual inspection.
@@ -337,11 +414,11 @@ Modify the name, recurrence days, and run time of an existing scheduled scan wit
 
 The edit dialog exposes the following options:
 
-#### 1. Scan Name
+### 1. Scan Name
 - Update the name of the scan to better reflect its purpose.
 - **Example:** Change the name from `Monday, Tuesday, Friday Report for YT Platform` to a more descriptive title if needed.
 
-#### 2. Recurring Details
+### 2. Recurring Details
 - **Modify the days** on which the scan will run: Select the days from the dropdown (for example, Monday, Tuesday, Friday).
 - **Update the time** for the recurring scan: Specify the time (for example, 12:00 PM) and time zone (for example, GMT +05:30 Asia/Calcutta).
 

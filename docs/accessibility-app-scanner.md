@@ -12,6 +12,83 @@ toc_max_heading_level: 2
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
+<script type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify({
+       "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": BRAND_URL
+        },{
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Support",
+          "item": `${BRAND_URL}/support/docs/`
+        },{
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Accessibility App Scanner (Overview)",
+          "item": `${BRAND_URL}/support/docs/accessibility-app-scanner/`
+        }]
+      })
+    }}
+></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/accessibility-app-scanner/"
+    },
+    "headline": "Accessibility App Scanner (Overview)",
+    "description": "Manual mobile app accessibility testing on real devices: upload, session, scan screens, review issues, and export reports.",
+    "url": "https://www.testmuai.com/support/docs/accessibility-app-scanner/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Accessibility Testing",
+    "keywords": [],
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 # Accessibility App Scanner (Overview)
 
 ---
@@ -99,19 +176,11 @@ Configure the rule set from the scan configuration panel, then run.
 
 **Expected result:** the scan runs only the enabled rules, and the report lists violations for exactly that rule set.
 
-{/* IMAGE PLACEHOLDER: App Scanner home screen with the Scan Settings summary (original screenshot, compressed to under 100 KB). Save the file at the path below, then uncomment.
-<img loading="lazy" src={require('./assets/images/accessibility-testing/features/scan-settings-home.png').default} alt="App Accessibility Scanner home screen showing the Scan Settings summary (WCAG 2.1 AA, Best Practices On, Beta Rules On, AI Detection Off, Rules 15/15) and the gear icon that opens scan configuration" className="doc_img" />
-*/}
-
 ### Configuration options details
 
 Each configuration option controls a different slice of the rule set, described below.
 
-{/* IMAGE PLACEHOLDER: scan configuration panel (original screenshot). Save the file at the path below, then uncomment.
-<img loading="lazy" src={require('./assets/images/accessibility-testing/features/scan-settings-panel.png').default} alt="Scan configuration panel showing WCAG version and level, rule group toggles (Best Practice, Beta, AI-powered), and individual rules grouped by category" className="doc_img" />
-*/}
-
-#### WCAG version and level (with inheritance)
+### WCAG version and level (with inheritance)
 
 Select a single WCAG target such as `wcag2a`, `wcag21aa`, or `wcag22aaa`. The selection is **cumulative**, so higher versions and levels include the lower ones:
 
@@ -120,7 +189,7 @@ Select a single WCAG target such as `wcag2a`, `wcag21aa`, or `wcag22aaa`. The se
 
 > **Example:** Selecting **WCAG 2.1 AA** runs every rule whose success criterion is in WCAG **2.0 or 2.1** at level **A or AA**. WCAG 2.2 rules and AAA-only rules are **not** included until the version or level is raised.
 
-#### Rule groups
+### Rule groups
 
 Some rules carry a special tag in addition to their WCAG criterion. Each tag has its own toggle, and a rule runs only if **both** its WCAG criterion is in range **and** any tag it carries is switched on.
 
@@ -134,7 +203,7 @@ Some rules carry a special tag in addition to their WCAG criterion. Each tag has
 A rule tagged "Best Practice" will **not** run if the Best Practice toggle is off, even if its WCAG criterion is in range. The same applies to Beta and AI-powered rules. If an expected rule does not run, check its group toggle.
 :::
 
-#### Individual rules and categories
+### Individual rules and categories
 
 The catalog is grouped into categories so that coverage can be reasoned about at a glance:
 

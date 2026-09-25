@@ -892,6 +892,7 @@ module.exports = {
           { type: "doc", label: "Automate First Accessibility Test", id: "accessibility-automation-test" },
           { type: "doc", label: "Run Tests With Agent Skills", id: "accessibility-agent-skills" },
           { type: "doc", label: "Supported Automation Capabilities", id: "accessibility-automation-scan-configurations" },
+          { type: "doc", label: "Automation Settings", id: "accessibility-automation-settings" },
           { type: "doc", label: "Test With Assistive Technologies", id: "screen-reader-on-accessibility" },
           { type: "doc", label: "View Reports", id: "accessibility-testing-navigating-dashboard" },
           { type: "doc", label: "Test Scheduling", id: "accessibility-test-scheduling" },
@@ -923,16 +924,26 @@ module.exports = {
         ],
       },
       {
-        type: "doc",
+        type: "category",
+        collapsed: true,
         label: "Checklist",
-        id: "accessibility-web-what-we-cover",
         className: "menu-bold",
+        items: [
+          { type: "doc", label: "Web", id: "accessibility-web-what-we-cover" },
+          { type: "doc", label: "Android", id: "accessibility-android-what-we-cover" },
+          { type: "doc", label: "iOS", id: "accessibility-ios-what-we-cover" },
+        ],
       },
       {
-        type: "doc",
+        type: "category",
+        collapsed: true,
         label: "Rule Repository",
-        id: "accessibility-rule-repository",
         className: "menu-bold",
+        items: [
+          { type: "doc", label: "Web Rules", id: "accessibility-web-rules" },
+          { type: "doc", label: "Android Rules", id: "accessibility-android-rules" },
+          { type: "doc", label: "iOS Rules", id: "accessibility-ios-rules" },
+        ],
       },
       {
         type: "category",
@@ -952,6 +963,7 @@ module.exports = {
         label: "Integrations",
         items: [
           { type: "doc", label: "CI/CD", id: "accessibility-cicd-integration-guide" },
+          { type: "doc", label: "HyperExecute (Selenium)", id: "selenium-hyperexecute-accessibility-tests" },
           { type: "doc", label: "JIRA / Slack", id: "accessibility-report-integrations" },
         ],
       },

@@ -70,7 +70,7 @@ Both Real Devices App and Browser testing now support these features to enable a
 - Now, you can enable or disable the required display settings by clicking on the checkboxes, and use the slider to adjust the text size.
 - Click on the Update button. A prompt will appear on the dashboard stating "**Accessibility Settings updated successfully**".
 
-#### Key Features:
+### Key Features:
 - **Increase Contrast :** Enabling this option enhances the contrast of UI elements against the background, making text and interface components easier to see.
 - **Smart Invert :** This option reverses colors on the display, except for media and images. It's designed for users who prefer darker backgrounds without inverting every color on the screen.
 - **Larger Accessibility Settings :** When enabled, this option adjusts interface elements to be larger and more accessible without affecting the core layout of the device’s UI.
@@ -85,7 +85,7 @@ Both Real Devices App and Browser testing now support these features to enable a
 - Toggle the button to minimize dynamic animations and motion effect.
 - Click on the Update button. A prompt will appear on the dashboard stating "**Accessibility Settings updated successfully**".
 
-#### Key Features:
+### Key Features:
 - **Reduce Motion of User Interface :** This toggle reduces animations throughout the system, including the parallax effect of icons on the Home Screen and in-app transitions.
 - **Parallax Effect Adjustment :** Disabling parallax can create a more stable and comfortable experience, particularly for users prone to motion sickness.
 

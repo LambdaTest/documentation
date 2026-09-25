@@ -6,9 +6,131 @@ description: Run accessibility automation tests with Selenium on TestMu AI acros
 slug: accessibility-testng-test/
 toc_max_heading_level: 2
 ---
+import { BRAND_URL } from '@site/src/component/BrandName';
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import VerifiedTag from '@site/src/component/verifiedTag';
+
+<script type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify({
+       "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": BRAND_URL
+        },{
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Support",
+          "item": `${BRAND_URL}/support/docs/`
+        },{
+          "@type": "ListItem",
+          "position": 3,
+          "name": "TestNG",
+          "item": `${BRAND_URL}/support/docs/accessibility-testng-test/`
+        }]
+      })
+    }}
+></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/accessibility-testng-test/"
+    },
+    "headline": "TestNG",
+    "description": "Run Accessibility Automation with Selenium and TestNG: capabilities, hooks, TestNG suite layout, and how to review reports in the dashboard.",
+    "url": "https://www.testmuai.com/support/docs/accessibility-testng-test/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Accessibility Testing",
+    "keywords": [
+      "TestMu AI",
+      "Accessibility",
+      "TestNG"
+    ],
+    "proficiencyLevel": "Beginner",
+    "dependencies": "TestMu AI username and access key (environment variables); A Selenium + TestNG project already hitting the TestMu AI grid (hub URL and capabilities); Accessibility entitlement for your organization; Access to the Automation dashboard and the Accessibility tab for the session build.",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "2. Add Accessibility capabilities",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "capabilities.setCapability(\"accessibility\", true);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "2. Add Accessibility capabilities",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "capabilities.setCapability(\"accessibility\", true);\ncapabilities.setCapability(\"accessibility.wcagVersion\", \"wcag21aa\");\ncapabilities.setCapability(\"accessibility.bestPractice\", false);\ncapabilities.setCapability(\"accessibility.needsReview\", true);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "After navigation and when the page is stable, call",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "driver.executeScript(\"lambda-accessibility-scan\");"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Scan on every navigation without hooks",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "capabilities.setCapability(\"accessibility\", true);\ncapabilities.setCapability(\"accessibility.autoscan\", true);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "5. Execute and open the report",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "mvn test"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
 
 # Selenium Accessibility Testing
 
@@ -44,11 +166,11 @@ Optional flags such as `accessibility.wcagVersion`, `accessibility.bestPractice`
 
 After a run, open the [Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/dashboard), select the session, and open the **Accessibility** tab. For a walkthrough of each panel and filter, see [navigating the Accessibility dashboard](/support/docs/accessibility-testing-navigating-dashboard/).
 
-## Framework setup
+## Run Accessibility Tests With Your Framework
 
 Pick your framework below. Each tab is self-contained: enable Accessibility on the session, trigger a scan, then run. On success, the session and its accessibility report appear in the Automation dashboard.
 
-<Tabs className="docs__val" groupId="framework">
+<Tabs queryString="framework">
 
 <TabItem value="testng" label="TestNG">
 
@@ -64,11 +186,15 @@ Most teams initialize the driver in a **base test class** (`@BeforeMethod` / `@B
 
 **Minimal enable:**
 
+<VerifiedTag value="Verified" />
+
 ```java
 capabilities.setCapability("accessibility", true);
 ```
 
 **Optional tuning:**
+
+<VerifiedTag value="Verified" />
 
 ```java
 capabilities.setCapability("accessibility", true);
@@ -81,11 +207,15 @@ capabilities.setCapability("accessibility.needsReview", true);
 
 **A. On-demand.** After navigation and when the page is stable, call:
 
+<VerifiedTag value="Verified" />
+
 ```java
 driver.executeScript("lambda-accessibility-scan");
 ```
 
 **B. Auto-scan.** Scan on every navigation without hooks:
+
+<VerifiedTag value="Verified" />
 
 ```java
 capabilities.setCapability("accessibility", true);
@@ -97,6 +227,8 @@ capabilities.setCapability("accessibility.autoscan", true);
 Point your `testng.xml` (or Gradle/Maven TestNG config) at the packages or classes that use the shared base class so every included test inherits the same driver setup. Run a **single** `@Test` first to validate capabilities before scaling the suite.
 
 ### 5. Execute
+
+<VerifiedTag value="Verified" />
 
 ```bash
 mvn test
@@ -118,24 +250,40 @@ The session and its accessibility report appear in the Automation dashboard.
 
 <TabItem value="junit5" label="JUnit 5">
 
-Uses **JUnit 5 (Jupiter)** lifecycle annotations; only the lifecycle wiring differs from TestNG, while the capabilities and hook are identical.
+Use this guide when your **Selenium** tests use **JUnit 5 (Jupiter)**. Accessibility is still driven entirely by **grid capabilities** and the **`lambda-accessibility-scan`** hook (or **auto-scan**), identical to the [Selenium Accessibility Automation](/support/docs/accessibility-automation-test/) flow. Only the test lifecycle annotations differ.
 
-**JUnit 5 prerequisites:** JUnit 5 on the classpath (`junit-jupiter-api`, etc.) driving Selenium.
+> **Browsers:** Use **Chrome or Edge** with supported versions for Accessibility Automation.
 
-### 1. Centralize driver creation
+### Prerequisites
 
-Use `@BeforeEach` or `@BeforeAll` (with a static `WebDriver` if you share one per class) to build `MutableCapabilities` / `ChromeOptions` once. Every test method should inherit the same Accessibility flags.
+- TestMu AI credentials as **environment variables** ([guide](/support/docs/using-environment-variables-for-authentication-credentials/))
+- JUnit 5 on the classpath (`junit-jupiter-api`, etc.) driving Selenium
+- Accessibility enabled for your account
 
-### 2. Enable Accessibility on the session
+### Onboarding path
+
+Set Accessibility up once in your JUnit 5 lifecycle, then trigger a scan at each stable checkpoint. The steps below walk through it:
+
+**1. Centralize driver creation**
+
+Use `@BeforeEach` or `@BeforeAll` (with a static WebDriver if you share one per class) to build `MutableCapabilities` / `ChromeOptions` once. Every test method should inherit the same Accessibility flags.
+
+**2. Enable Accessibility on the session**
+
+<VerifiedTag value="Verified" />
 
 ```java
 capabilities.setCapability("accessibility", true);
 capabilities.setCapability("accessibility.wcagVersion", "wcag21aa"); // optional
 ```
 
-### 3. Trigger scans
+See [Configure Accessibility Automation](/support/docs/accessibility-automation-settings/) for all flags.
+
+**3. Trigger scans**
 
 **Hook after stable UI:**
+
+<VerifiedTag value="Verified" />
 
 ```java
 driver.executeScript("lambda-accessibility-scan");
@@ -143,19 +291,23 @@ driver.executeScript("lambda-accessibility-scan");
 
 **Or auto-scan every navigation:**
 
+<VerifiedTag value="Verified" />
+
 ```java
 capabilities.setCapability("accessibility.autoscan", true);
 ```
 
-### 4. Run
+**4. Run and verify**
+
+<VerifiedTag value="Verified" />
 
 ```bash
 mvn test
 ```
 
-The session and its accessibility report appear in the Automation dashboard.
+Open the [Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/dashboard) → session → **Accessibility** tab.
 
-### 5. Scale to the full suite
+**5. Scale to the full suite**
 
 Add `@Tag("a11y")` or parallel config if you want selective Accessibility runs in CI; keep capability setup shared so behavior stays consistent.
 
@@ -170,13 +322,25 @@ Add `@Tag("a11y")` or parallel config if you want selective Accessibility runs i
 
 <TabItem value="nunit" label="NUnit (C#)">
 
-For **Selenium C#** tests run with **NUnit**: Accessibility is enabled on the `RemoteWebDriver` session with the same capability keys as Java, and NUnit only controls how and when tests run.
+Use this guide for **Selenium C#** tests executed with **NUnit**. Accessibility is enabled on the **RemoteWebDriver** session using the same capability keys as Java ([reference](/support/docs/accessibility-automation-settings/)); NUnit only controls **how and when** tests run.
 
-**NUnit prerequisites:** Selenium 4 `RemoteWebDriver` pointing at the TestMu AI hub, and a NUnit 3+ test project.
+> **Browsers:** Use **Chrome or Edge** with supported versions.
 
-### 1. Set capabilities in your driver factory
+### Prerequisites
+
+- `LT_USERNAME` / `LT_ACCESS_KEY` (or your chosen secret injection in CI)
+- Selenium 4 `RemoteWebDriver` pointing at the TestMu AI hub
+- NUnit 3+ test project
+
+### Onboarding path
+
+Configure Accessibility once in your NUnit setup, then scan at stable checkpoints. Follow these steps:
+
+**1. Set capabilities in your driver factory**
 
 Typical pattern in `[SetUp]` or a one-time fixture:
+
+<VerifiedTag value="Verified" />
 
 ```csharp
 var options = new ChromeOptions();
@@ -187,11 +351,13 @@ options.AddAdditionalOption("accessibility.wcagVersion", "wcag21aa"); // optiona
 var driver = new RemoteWebDriver(new Uri("https://hub.lambdatest.com/wd/hub"), options.ToCapabilities());
 ```
 
-The exact hub URL and capability names should match your existing grid configuration; only the **`accessibility*`** keys are specific to this feature.
+Exact hub URL and capability names should match your existing grid configuration; only the **`accessibility*`** keys are specific to this feature.
 
-### 2. Invoke the scan hook (if not using auto-scan)
+**2. Invoke the scan hook (if not using auto-scan)**
 
 After navigation and waits:
+
+<VerifiedTag value="Verified" />
 
 ```csharp
 ((IJavaScriptExecutor)driver).ExecuteScript("lambda-accessibility-scan");
@@ -199,15 +365,19 @@ After navigation and waits:
 
 Without **either** the hook **or** `accessibility.autoscan`, you will not get Accessibility reports.
 
-### 3. Run NUnit
+**3. Run NUnit**
+
+<VerifiedTag value="Verified" />
 
 ```bash
 dotnet test
 ```
 
-(or Visual Studio Test Explorer.)
+or Visual Studio Test Explorer.
 
-The session and its accessibility report appear in the Automation dashboard.
+**4. Open the Accessibility report**
+
+Automation Dashboard → build → **Accessibility** tab (same as [Selenium guide](/support/docs/accessibility-automation-test/)).
 
 ### Troubleshooting
 
@@ -220,13 +390,25 @@ The session and its accessibility report appear in the Automation dashboard.
 
 <TabItem value="robot" label="Robot Framework">
 
-Robot Framework sits **above** Selenium, so Accessibility is still configured on the underlying browser session (desired capabilities passed into `Open Browser` or your library's remote configuration).
+Robot Framework sits **above** Selenium: Accessibility is still configured on the **underlying browser session** (desired capabilities passed into `Open Browser` or your library’s remote configuration). This page is the onboarding path for teams using **SeleniumLibrary** (or equivalent) against the TestMu AI grid.
 
-**Robot Framework prerequisites:** Robot Framework with SeleniumLibrary (or a compatible library) installed.
+> **Browsers:** Use **Chrome or Edge** with supported versions for Accessibility Automation.
 
-### 1. Encode capabilities as variables
+### Prerequisites
+
+- Robot Framework + SeleniumLibrary (or compatible library) installed
+- Remote URL and credentials for TestMu AI
+- Accessibility enabled for your workspace
+
+### Onboarding path
+
+Enable Accessibility on the browser Robot Framework drives, then scan at stable points. The steps below cover it:
+
+**1. Encode capabilities as variables**
 
 Define suite or global variables so every test uses the same grid options:
+
+<VerifiedTag value="Verified" />
 
 ```robot
 *** Variables ***
@@ -235,13 +417,15 @@ ${LT_OPTIONS}    {"accessibility": true, "accessibility.wcagVersion": "wcag21aa"
 
 Exact syntax depends on how you merge JSON into capabilities for your `Open Browser` keyword. Some teams use a **custom keyword** that builds the options dict in Python and passes it to `Create Dictionary` / `Evaluate`.
 
-### 2. Open Browser with Accessibility on
+**2. Open Browser with Accessibility on**
 
 Pass the merged capabilities into `Open Browser` (or your wrapper) so the remote session includes `"accessibility": true`. Match the pattern you already use for `browserName`, `platformName`, and auth.
 
-### 3. On-demand scan with Execute Javascript
+**3. On-demand scan with Execute Javascript**
 
 After the page is ready:
+
+<VerifiedTag value="Verified" />
 
 ```robot
 Execute Javascript    return document.readyState
@@ -250,22 +434,26 @@ Execute Javascript    lambda-accessibility-scan
 
 Use the second line only when you are **not** using `accessibility.autoscan`.
 
-### 4. Auto-scan alternative
+**4. Auto-scan alternative**
 
 If you prefer scans on every navigation without Robot keywords:
+
+<VerifiedTag value="Verified" />
 
 ```robot
 # In capabilities JSON / dict
 accessibility.autoscan    ${True}
 ```
 
-### 5. Run the suite
+**5. Run the suite and review reports**
+
+<VerifiedTag value="Verified" />
 
 ```bash
 robot --outputdir results tests/
 ```
 
-The session and its accessibility report appear in the Automation dashboard.
+Then open the [Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/dashboard) for the session and the **Accessibility** tab.
 
 ### Troubleshooting
 
@@ -278,11 +466,23 @@ The session and its accessibility report appear in the Automation dashboard.
 
 <TabItem value="cucumber" label="Cucumber (Java)">
 
-Cucumber scenarios execute ordinary Selenium code under the hood: enable Accessibility once on the shared `WebDriver` (usually in a `@Before` hook), then call `lambda-accessibility-scan` from step definitions when a screen is stable.
+Cucumber scenarios still execute **ordinary Selenium** code under the hood. Enable Accessibility once on the **shared WebDriver** (usually in a **@Before** hook), then call **`lambda-accessibility-scan`** from step definitions or a small helper when a screen is stable. Behavior matches [Selenium Accessibility Automation](/support/docs/accessibility-automation-test/).
 
-**Cucumber prerequisites:** Cucumber JVM with a DI or PicoContainer (or Spring) setup that exposes a singleton `WebDriver`.
+> **Browsers:** Chrome or Edge, supported versions only.
 
-### 1. Create the driver with Accessibility in `@Before`
+### Prerequisites
+
+- Cucumber JVM + a DI or PicoContainer (or Spring) setup that exposes a singleton `WebDriver`
+- TestMu AI grid URL and credentials
+- Accessibility entitlement
+
+### Onboarding path
+
+Wire Accessibility into the WebDriver your Cucumber steps share, then scan at key checkpoints. Follow these steps:
+
+**1. Create the driver with Accessibility in `@Before`**
+
+<VerifiedTag value="Verified" />
 
 ```java
 @Before(order = 0)
@@ -296,9 +496,11 @@ public void setUp() {
 }
 ```
 
-### 2. Scan after key navigations
+**2. Scan after key navigations**
 
-In a step that represents "user is on dashboard" (or after a `Given` / `When` that loads a URL):
+In a step that represents “user is on dashboard” (or after `Given/When` that loads a URL):
+
+<VerifiedTag value="Verified" />
 
 ```java
 driver.executeScript("lambda-accessibility-scan");
@@ -306,19 +508,21 @@ driver.executeScript("lambda-accessibility-scan");
 
 Avoid calling the hook on every tiny interaction; align it with **logical pages** or states.
 
-### 3. Optional: auto-scan for exploratory flows
+**3. Optional: auto-scan for exploratory flows**
 
 If scenarios bounce across many URLs and you want full coverage without per-step hooks, enable `accessibility.autoscan` in `@Before` instead.
 
-### 4. Run Cucumber
+**4. Run Cucumber and open reports**
+
+<VerifiedTag value="Verified" />
 
 ```bash
 mvn test -Dcucumber.filter.tags="@smoke"
 ```
 
-The session and its accessibility report appear in the Automation dashboard.
+Dashboard → session → **Accessibility** tab.
 
-### 5. CI alignment
+**5. CI alignment**
 
 Tag scenarios that should run Accessibility (`@a11y`) so pipelines stay fast; keep capability setup in the shared hook so tagged and untagged runs behave predictably.
 

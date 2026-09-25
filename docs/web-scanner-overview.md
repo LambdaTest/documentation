@@ -71,7 +71,7 @@ Visual scans detect pixel-based layout changes, design mismatches, missing eleme
 
 <img loading="lazy" src={require('../assets/images/kane-ai/smartui/smartui_dashboard.png').default} alt="smartui dashboard" className="doc_img"/>
 
-#### Key Capabilities
+### Key Capabilities
 
 - **Cross-Browser Validation**: Test UI across Chrome, Firefox, Edge, and Safari.
 - **Responsive Testing**: Check layouts on 8 desktop sizes and 200+ mobile viewports (Android & iOS).

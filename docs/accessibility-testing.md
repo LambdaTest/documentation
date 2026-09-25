@@ -6,6 +6,85 @@ description: Overview of TestMu AI Accessibility Testing across web, mobile apps
 slug: accessibility-testing/
 toc_max_heading_level: 2
 ---
+import { BRAND_URL } from '@site/src/component/BrandName';
+import Link from '@docusaurus/Link';
+
+<script type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify({
+       "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": BRAND_URL
+        },{
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Support",
+          "item": `${BRAND_URL}/support/docs/`
+        },{
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Getting Started with Accessibility Testing",
+          "item": `${BRAND_URL}/support/docs/accessibility-testing/`
+        }]
+      })
+    }}
+></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/accessibility-testing/"
+    },
+    "headline": "Getting Started with Accessibility Testing",
+    "description": "Overview of TestMu AI Accessibility Testing across web, mobile apps, reports, checklists, and integrated product surfaces. Includes quick setup to get your first report.",
+    "url": "https://www.testmuai.com/support/docs/accessibility-testing/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Documentation",
+    "keywords": [],
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
 
 # Getting Started with Accessibility Testing
 
@@ -17,14 +96,40 @@ TestMu AI Accessibility Testing is a suite for finding, understanding, and fixin
 
 The documentation is organized so you can move from a first scan to automation, reporting, and compliance without leaving the Accessibility product.
 
-- **Getting Started**: onboarding paths, including [Test With Browser DevTools](/support/docs/accessibility-devtools/), [Test With Native App Scanner](/support/docs/accessibility-app-scanner/), [Automate Your First Accessibility Test](/support/docs/accessibility-automation-test/), [Run Tests With Agent Skills](/support/docs/accessibility-agent-skills/), [Supported Automation Capabilities](/support/docs/accessibility-automation-scan-configurations/), [Test With Assistive Technologies](/support/docs/screen-reader-on-accessibility/), [View Reports](/support/docs/accessibility-testing-navigating-dashboard/), and [Test Scheduling](/support/docs/accessibility-test-scheduling/).
-- **Supported Languages & Frameworks**: framework-native accessibility checks for [Selenium](/support/docs/accessibility-testng-test/), [Cypress](/support/docs/cypress-v10-accessibility-test/), [Playwright](/support/docs/playwright-accessibility-test/), and [Appium](/support/docs/accessibility-native-app-automation-test/).
-- **Features**: product options that extend scans and reports, such as issue detection, screenshots, tags, remediation guidance, and analytics widgets.
-- **Checklist**: what automation covers per platform, plus the manual test checklist, in the [accessibility checklist](/support/docs/accessibility-web-what-we-cover/).
-- **Rule Repository**: rule-level definitions and remediation text in the [accessibility rule repository](/support/docs/accessibility-rule-repository/).
-- **Web Scanner**: URL-based accessibility scanning from the separate [Web Scanner](/support/docs/web-scanner-getting-started/) product.
-- **Integrations**: how Accessibility connects to your toolchain through the [CI/CD integration guide](/support/docs/accessibility-cicd-integration-guide/) and [JIRA and Slack report integrations](/support/docs/accessibility-report-integrations/).
-- **References**: supporting material, including [accessibility FAQs](/support/docs/accessibility-faq/), [supported WCAG standards and browsers](/support/docs/accessibility-supported-wcag-browsers/), the [accessibility compliance guide](/support/docs/accessibility-compliance-guide/), and [VPAT report generation](/support/docs/accessibility-vpat-report-generation/).
+<div className="docNavCards">
+<Link className="docNavCards__card" to="/support/docs/accessibility-devtools/">
+<h3>Getting Started</h3>
+<p>Onboarding paths — DevTools, App Scanner, automation, assistive tech, reports, and scheduling.</p>
+</Link>
+<Link className="docNavCards__card" to="/support/docs/accessibility-testng-test/">
+<h3>Languages and Frameworks</h3>
+<p>Framework-native accessibility checks for Selenium, Cypress, Playwright, and Appium.</p>
+</Link>
+<Link className="docNavCards__card" to="/support/docs/accessibility-hide-restore-issues/">
+<h3>Features</h3>
+<p>Issue detection, screenshots, tags, remediation guidance, and analytics widgets.</p>
+</Link>
+<Link className="docNavCards__card" to="/support/docs/accessibility-web-what-we-cover/">
+<h3>Checklist</h3>
+<p>What automation covers per platform, plus the manual test checklist.</p>
+</Link>
+<Link className="docNavCards__card" to="/support/docs/accessibility-rule-repository/">
+<h3>Rule Repository</h3>
+<p>Rule-level definitions and remediation text for every rule.</p>
+</Link>
+<Link className="docNavCards__card" to="/support/docs/web-scanner-getting-started/">
+<h3>Web Scanner</h3>
+<p>URL-based accessibility scanning from the separate Web Scanner product.</p>
+</Link>
+<Link className="docNavCards__card" to="/support/docs/accessibility-cicd-integration-guide/">
+<h3>Integrations</h3>
+<p>Connect Accessibility to your toolchain — CI/CD, JIRA, and Slack.</p>
+</Link>
+<Link className="docNavCards__card" to="/support/docs/accessibility-faq/">
+<h3>References</h3>
+<p>FAQs, supported WCAG standards and browsers, compliance, and VPAT reports.</p>
+</Link>
+</div>
 
 ## Choose your path
 

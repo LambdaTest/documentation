@@ -9,6 +9,84 @@ site_name: TestMu AI
 canonical: https://www.testmuai.com/support/docs/accessibility-testing-navigating-dashboard/
 toc_max_heading_level: 2
 ---
+import { BRAND_URL } from '@site/src/component/BrandName';
+
+<script type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify({
+       "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": BRAND_URL
+        },{
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Support",
+          "item": `${BRAND_URL}/support/docs/`
+        },{
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Navigating the Dashboard",
+          "item": `${BRAND_URL}/support/docs/accessibility-testing-navigating-dashboard/`
+        }]
+      })
+    }}
+></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/accessibility-testing-navigating-dashboard/"
+    },
+    "headline": "Navigating the Dashboard",
+    "description": "Learn how to open, filter, review, and act on Accessibility reports in the dashboard.",
+    "url": "https://www.testmuai.com/support/docs/accessibility-testing-navigating-dashboard/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Documentation",
+    "keywords": [],
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
 
 # Navigating the Dashboard
 
@@ -89,7 +167,7 @@ In the report, **Severity** (the accessibility level, Critical, Serious, Moderat
 
 The Accessibility Score reflects **both** how many issues were found and **how severe** they are, adjusted for the **size** of the page or screen. It is a **density-adjusted deduction model**: it starts at a perfect **100** and deducts points based on the number, severity, and concentration of confirmed issues. The methodology is a **proprietary TestMu AI metric** designed for **trend and prioritization**, it is not a public WCAG scoring rubric. The same four steps run for every product.
 
-#### Step 1: Filter
+### Step 1: Filter
 
 Not all issues count toward the score. The following are **excluded**:
 
@@ -101,15 +179,15 @@ Not all issues count toward the score. The following are **excluded**:
 
 Only issues with a confirmed severity, **Critical**, **Serious**, **Moderate**, or **Minor**, contribute.
 
-#### Step 2: Deduplicate
+### Step 2: Deduplicate
 
 Issues are grouped by their **signature**: the rule that failed, the type of element it failed on, and the page or screen where it occurred. If 50 buttons on the same page fail the same contrast rule, they count as **one signature with 50 instances**, not 50 separate issues, so a single CSS bug can't disproportionately tank the score.
 
-#### Step 3: Calculate deductions
+### Step 3: Calculate deductions
 
 Issues are weighted by severity: **Critical** issues have the largest impact, followed by **Serious**, **Moderate**, and **Minor**. When the same issue appears on multiple elements, each additional occurrence adds to the penalty, but with **diminishing returns** so one repeated pattern can't dominate the score.
 
-#### Step 4: Apply density adjustment
+### Step 4: Apply density adjustment
 
 This is what makes the score **page-size aware**. The same 2 critical issues have very different impact on a 12-element login form versus a 2000-element dashboard. Using the [scored element count](#scored-element-count) as the denominator:
 
@@ -119,7 +197,7 @@ Density = Total issue instances / Scored elements on the page
 
 Higher density means issues are more concentrated, and deductions are multiplied accordingly, so small critical flows (login, checkout, payment) are correctly flagged as high priority while large pages with a few scattered issues are not over-penalized.
 
-#### Final score
+### Final score
 
 The deductions are combined into the final score:
 
@@ -129,7 +207,7 @@ Score = max(1, floor(100 × e^(−AdjustedDeductions / 133)))
 
 The minimum graded score is **1**. A score of **0** is reserved exclusively for **keyboard-only scans**.
 
-#### Scored element count
+### Scored element count
 
 Density depends on the **scored element count**: the number of elements on a page or screen that are meaningful from an accessibility perspective (buttons, inputs, links, headings, images, and so on). Decorative, structural, and hidden elements are **excluded** so they don't inflate the score.
 
@@ -184,7 +262,7 @@ Elements are evaluated from `XCUIElement`. Not counted:
 
 </details>
 
-#### Always counted (overrides)
+### Always counted (overrides)
 
 Regardless of platform, an element is **always scored**, even if it would otherwise be excluded, when it is genuinely interactive or explicitly exposed to assistive tech:
 

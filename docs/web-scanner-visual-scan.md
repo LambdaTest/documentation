@@ -77,7 +77,7 @@ Once **Visual UI** is selected in Step 1 of the scheduling wizard, the following
 
 Click the "Advanced” Tab to unlock additional configuration tabs.
 
-#### SmartUI Config Upload
+### SmartUI Config Upload
 You can create your own `.smartui.json` file for full control over:
 * Browser selection
 * Resolutions
@@ -86,7 +86,7 @@ You can create your own `.smartui.json` file for full control over:
 
 <img loading="lazy" src={require('../assets/images/web-scanner/visual-scan-advanced-options.png').default} alt="Visual Scan Advanced Options" className="doc_img"/>
 
-#### Default SmartUI Config
+### Default SmartUI Config
 
 <CodeBlock language="json">
 {`
@@ -128,7 +128,7 @@ You can create your own `.smartui.json` file for full control over:
 > **Note:** Using a SmartUI config bypasses manual browser, resolution, and delay selections, even in the "Edit Config" mode.
 
 
-#### Navigating Results for your Visual Scan
+### Navigating Results for your Visual Scan
 
 
 ## Dashboard Overview

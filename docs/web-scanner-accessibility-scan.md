@@ -41,6 +41,59 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/web-scanner-accessibility-scan/"
+    },
+    "headline": "Starting an Accessibility Scan with Web Scanner",
+    "description": "Configure an Accessibility scan in Web Scanner, including WCAG version, review issues, best-practice checks, local testing, and login settings.",
+    "url": "https://www.testmuai.com/support/docs/web-scanner-accessibility-scan/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Web Scanner",
+    "keywords": [],
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "dateModified": "2026-07-03T19:09:57+05:30"
+  }) }}
+/>
+
 # Starting an Accessibility Scan with Web Scanner
 
 Web Scanner exposes Accessibility scanning as an integrated workflow for site-wide URL-based scans. It is separate from Accessibility DevTools and from Accessibility Test Scheduling, even though the configuration concepts can overlap.

@@ -11,6 +11,83 @@ import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
+<script type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify({
+       "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": BRAND_URL
+        },{
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Support",
+          "item": `${BRAND_URL}/support/docs/`
+        },{
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Accessibility DevTools (Overview)",
+          "item": `${BRAND_URL}/support/docs/accessibility-devtools/`
+        }]
+      })
+    }}
+></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/accessibility-devtools/"
+    },
+    "headline": "Accessibility DevTools (Overview)",
+    "description": "Overview of TestMu AI Accessibility DevTools for manual and assisted web accessibility testing.",
+    "url": "https://www.testmuai.com/support/docs/accessibility-devtools/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Documentation",
+    "keywords": [],
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 # Accessibility DevTools (Overview)
 
 ---
@@ -83,7 +160,7 @@ Match the scan type to the task, from a single page to a full user journey.
 
 Full Page Scan analyzes the accessibility of an entire web page at once, going beyond individual element checks to surface issues across all page content.
 
-#### Functionalities of Full Page Scanner
+### Functionalities of Full Page Scanner
 
 - **Scans Multiple elements :** It analyzes various aspects of your webpage, including HTML/CSS code, images, forms, multimedia, and interactive elements.
 - **WCAG Compliance Checks :** It identifies potential violations against relevant WCAG guidelines (e.g., missing alt text, insufficient color contrast, keyboard navigation issues).
@@ -91,20 +168,20 @@ Full Page Scan analyzes the accessibility of an entire web page at once, going b
 - **Prioritization Options:** It prioritizes issues based on severity and potential impact, helping you focus on the most critical ones first.
 - **Report Integration:** Results from a Full Page Scan are saved to the Accessibility dashboard for review, export, and integration with issue trackers.
 
-#### Execute the Full Page Scanner for Your Website
+### Execute the Full Page Scanner for Your Website
 
-##### Prerequisite
+### Prerequisite
 
 - You have to set up the Accessibility DevTools in your browser. See [Install the Toolkit](#install-the-toolkit).
 
-##### Trigger the Accessibility DevTool
+### Trigger the Accessibility DevTool
 
 - Go to the **Inspect** panel >> **<BrandName /> Accessibility DevTools** of your required website.
 - Click on the **Full Page Scan** button to start the scanning for **Accessibility Issue** for that particular page.
 
 <img loading="lazy" src={require('../assets/images/accessibility-testing/full-page-scanner/1.png').default} alt="automation-dashboard" className="doc_img" />
 
-##### Review Your Issues
+### Review Your Issues
 
 - This will list down all of the issues after scanning your complete webpage.
 - You can click on those issues to check with which particular element it is causing issue.
@@ -121,27 +198,27 @@ It analyzes specific regions or elements within a webpage instead of the entire 
 - Investigating reported accessibility issues on particular sections of a webpage.
 - Evaluating accessibility changes made to a specific area.
 
-#### Functionalities of Partial Page Scanner
+### Functionalities of Partial Page Scanner
 
 - **Manual Selection :** Choose the specific area you want to scan by highlighting it on the webpage.
 - **Targeted Analysis :** Focuses on the selected area and identifies potential accessibility issues within that region.
 - **WCAG Compliance Checks :** Similar to the Full Page Scanner, it checks for violations against relevant WCAG guidelines within the chosen area.
 - **Detailed Reporting :** Provides a report highlighting identified issues, descriptions, and WCAG references, specific to the scanned region.
 
-#### Execute the Partial Page Scanner for Your Website
+### Execute the Partial Page Scanner for Your Website
 
-##### Prerequisite
+### Prerequisite
 
 - You have to set up the Accessibility DevTools in your browser. See [Install the Toolkit](#install-the-toolkit).
 
-##### Trigger the Accessibility DevTool
+### Trigger the Accessibility DevTool
 
 - Go to the **Inspect** panel >> **<BrandName /> Accessibility DevTools** of your required website.
 - Click on the **Partial Page Scan** button to start the scanning for **Accessibility Issue** for that particular section of the webpage.
 
 <img loading="lazy" src={require('../assets/images/accessibility-testing/partial-page-scanner/1.png').default} alt="automation-dashboard" className="doc_img" />
 
-##### Select Your Desired Section of the Webpage
+### Select Your Desired Section of the Webpage
 
 - To start the scan, you will have to select a particular section of your webpage for which you want the analysis report.
 - You can select any particular section for scanning via two ways:
@@ -166,33 +243,33 @@ You can use Multi Page Scanner for:
 - Identifying common accessibility patterns and prioritizing fixes that impact the entire user experience.
 - Combining with Full Page and Partial Page scans for targeted analysis of specific sections or pages.
 
-#### Functionalities of Multi Page Scanner
+### Functionalities of Multi Page Scanner
 
 - Crawls your website based on user-defined settings like starting URL, crawl depth, and exclusion patterns.
 - Performs accessibility checks on each scanned page using the same principles as the Full Page Scanner.
 - Generates a consolidated report highlighting issues across all scanned pages, prioritizing them based on severity and impact.
 
-#### Execute the Multi Page Scanner
+### Execute the Multi Page Scanner
 
-##### Prerequisite
+### Prerequisite
 
 - You have to set up the Accessibility DevTools in your browser. See [Install the Toolkit](#install-the-toolkit).
 
-##### Trigger the Accessibility DevTool
+### Trigger the Accessibility DevTool
 
 - Go to the **Inspect** panel >> **<BrandName /> Accessibility DevTools** of your required website.
 - Click on the **Multi Page Scan** button to start the scanning for **Accessibility Issue** for that particular page.
 
 <img loading="lazy" src={require('../assets/images/accessibility-testing/multi-page-scanner/1.png').default} alt="automation-dashboard" className="doc_img" />
 
-##### Scan the Multiple Webpages
+### Scan the Multiple Webpages
 
 - Simply add all the URLs of the webpages that you want to scan.
 - Click on the **Start Scan** button.
 
 <img loading="lazy" src={require('../assets/images/accessibility-testing/multi-page-scanner/2.png').default} alt="automation-dashboard" className="doc_img" />
 
-##### Review Your Issues
+### Review Your Issues
 
 - This will list down all of the issues after scanning all the listed webpages.
 
@@ -206,27 +283,27 @@ You can use Multi Page Scanner for:
 
 Workflow Scan records real-time interactions and page loads within a user journey, then analyzes them for accessibility issues so people with disabilities can navigate every scenario.
 
-#### Functionalities of Workflow Scan
+### Functionalities of Workflow Scan
 
 - **Identify real-world accessibility issues :** Goes beyond static page analysis and identifies problems users might encounter during interaction.
 - **Test complex user flows :** Ensures accessibility throughout navigation, forms, and interactive elements.
 - **Save time and effort :** Tests multiple pages at once without needing individual scans.
 - **Prioritize issues based on usage :** Focuses on problems encountered in typical user journeys.
 
-#### Execute the Workflow Scanner
+### Execute the Workflow Scanner
 
-##### Prerequisite
+### Prerequisite
 
 - You have to set up the Accessibility DevTools in your browser. See [Install the Toolkit](#install-the-toolkit).
 
-##### Trigger the Accessibility DevTool
+### Trigger the Accessibility DevTool
 
 - Go to the **Inspect** panel >> **<BrandName /> Accessibility DevTools** of your required website.
 - Click on the **Workflow Scan** button to start the scanning for **Accessibility Issue** for that particular page.
 
 <img loading="lazy" src={require('../assets/images/accessibility-testing/workflow-scanner/1.png').default} alt="automation-dashboard" className="doc_img" />
 
-##### Review Your Issues
+### Review Your Issues
 
 - This will list down all of the issues after scanning all of your webpages that you have searched for.
 

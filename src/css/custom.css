@@ -3027,3 +3027,41 @@ h6[id]::before {
     grid-template-columns: 1fr;
   }
 }
+
+/* ===== Doc navigation cards (clickable section cards) ===== */
+.docNavCards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  margin: 18px 0 32px;
+}
+.docNavCards__card {
+  display: block;
+  padding: 16px 18px;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 12px;
+  background: var(--ifm-background-surface-color);
+  color: var(--ifm-font-color-base);
+  text-decoration: none;
+  transition: border-color .15s ease, box-shadow .15s ease, transform .15s ease;
+}
+.docNavCards__card:hover {
+  text-decoration: none;
+  border-color: var(--ifm-color-primary);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, .08);
+  transform: translateY(-2px);
+}
+.docNavCards__card h3 {
+  margin: 0 0 6px;
+  font-size: 1.02rem;
+  color: var(--ifm-color-primary);
+}
+.docNavCards__card p {
+  margin: 0;
+  color: var(--ifm-color-emphasis-800);
+  font-size: 0.88rem;
+  line-height: 1.5;
+}
+@media (max-width: 700px) {
+  .docNavCards { grid-template-columns: 1fr; }
+}

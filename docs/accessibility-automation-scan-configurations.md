@@ -1,7 +1,7 @@
 ---
 id: accessibility-automation-scan-configurations
 title: Scan Configurations via Capabilities (Automation)
-sidebar_label: Supported Automation Capabilities
+sidebar_label: Scan Configurations for Automation
 description: "Configure mobile app accessibility scans in automation through Appium capabilities: master toggle, WCAG version, and Best Practice, Beta, and AI rule groups."
 keywords:
   - mobile accessibility automation
@@ -19,6 +19,7 @@ toc_max_heading_level: 2
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -48,6 +49,102 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       })
     }}
 ></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/accessibility-automation-scan-configurations/"
+    },
+    "headline": "Scan Configurations via Capabilities (Automation)",
+    "description": "Configure mobile app accessibility scans in automation through Appium capabilities: master toggle, WCAG version, and Best Practice, Beta, and AI rule groups.",
+    "url": "https://www.testmuai.com/support/docs/accessibility-automation-scan-configurations/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Accessibility Testing",
+    "keywords": [
+      "mobile accessibility automation",
+      "accessibility capabilities",
+      "wcagVersion capability"
+    ],
+    "proficiencyLevel": "Beginner",
+    "dependencies": "An Appium test project targeting TestMu AI real devices (Android or iOS).; LT_USERNAME / LT_ACCESS_KEY available to the process.; Accessibility enabled on the session via the accessibility master capability..",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Example: setting capabilities (Capabilities (JSON))",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JSON",
+        "text": "{\n  \"accessibility\": true,\n  \"accessibility.wcagVersion\": \"wcag21aa\",\n  \"accessibility.bestPractice\": true,\n  \"accessibility.betaRules\": true,\n  \"accessibility.aiEnabled\": false\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Example: setting capabilities (Java)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "MutableCapabilities caps = new MutableCapabilities();\ncaps.setCapability(\"accessibility\", true);\ncaps.setCapability(\"accessibility.wcagVersion\", \"wcag21aa\");\ncaps.setCapability(\"accessibility.bestPractice\", true);\ncaps.setCapability(\"accessibility.betaRules\", true);\ncaps.setCapability(\"accessibility.aiEnabled\", false);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Python",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Python",
+        "text": "caps = {\n    \"accessibility\": True,\n    \"accessibility.wcagVersion\": \"wcag21aa\",\n    \"accessibility.bestPractice\": True,\n    \"accessibility.betaRules\": True,\n    \"accessibility.aiEnabled\": False,\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "JavaScript",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "const capabilities = {\n  \"accessibility\": true,\n  \"accessibility.wcagVersion\": \"wcag21aa\",\n  \"accessibility.bestPractice\": true,\n  \"accessibility.betaRules\": true,\n  \"accessibility.aiEnabled\": false,\n};"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "With these capabilities in place, the scan is triggered at each stable screen",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "driver.executeScript(\"lambda-accessibility-scan\");"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
 
 # Scan Configurations via Capabilities (Automation)
 
@@ -109,6 +206,8 @@ The rule set for a test is derived from the WCAG version and the group toggles, 
 
 Enable accessibility, target WCAG 2.1 AA, keep Best Practice and Beta rules on, and leave AI rules off. Select your language below and copy the capability block into your Appium session setup.
 
+<VerifiedTag value="Verified" />
+
 <Tabs className="hidden">
 <TabItem value="json" label="Capabilities (JSON)" default>
 
@@ -165,6 +264,8 @@ const capabilities = {
 
 With these capabilities in place, trigger the scan at each stable screen with the `lambda-accessibility-scan` hook.
 
+<VerifiedTag value="Verified" />
+
 ```java
 driver.executeScript("lambda-accessibility-scan");
 ```
@@ -181,65 +282,6 @@ Each scan returns violations only for the rules in the test's effective set, alo
 
 The report shows the applied WCAG target and group tags, and the **Applied Settings** panel lists the selected rules by category. To open a build and read these results, see how to [review accessibility reports in the dashboard](/support/docs/accessibility-testing-navigating-dashboard/).
 
-{/* IMAGE PLACEHOLDER: report Applied Settings panel showing the rules evaluated for the scan. Save the screenshot at the path below, then uncomment.
-<img loading="lazy" src={require('../assets/images/accessibility-testing/features/scan-configurations/applied-settings-report.png').default} alt="Accessibility report header with WCAG 2.1 AA, Best Practices and Beta Rules tags, and the Applied Settings panel listing evaluated rules grouped by category such as Accessibility Labels" className="doc_img"/>
-*/}
-
-## Automation Settings
-
-This section details the configuration options available for your automated accessibility tests, ensuring comprehensive and efficient assessments.
-
-To enable the accessibility testing within your automated test suite, set the `accessibility: true` in your configuration file. You can also define other settings capabilities as described below.
-
-```java
-"accessibility" : true,                 // Enable accessibility testing
-"accessibility.wcagVersion": "wcag21a", // Specify WCAG version (e.g., WCAG 2.1 Level A)
-"accessibility.bestPractice": false,    // Exclude best practice issues from results
-"accessibility.needsReview": true       // Include issues that need review
-```
-
-### Key Configurations Options
-
-By configuring these options effectively, you can tailor your accessibility tests to achieve a balance between thoroughness and efficiency, ensuring your web applications are inclusive for all users.
-
-#### 1. Enable Accessibility Checks
-
-- **Purpose:** Activate accessibility testing within your automated test suite. This allows you to identify and address accessibility violations that might hinder usability for users with disabilities.
-- **Implementation:** Set the `accessibility` property to `true` within your configuration file.
-
-```bash
-accessibility : true
-```
-
-#### 2. WCAG Version
-
-- **Purpose:** Define the specific Web Content Accessibility Guidelines (WCAG) version your tests should evaluate against. WCAG defines internationally recognized standards for web accessibility.
-- **Options:** Common options include WCAG 2.0, WCAG 2.1 Level A, or WCAG 2.1 Level AAA. Each level represents increasing accessibility requirements.
-- **Implementation:** Specify the desired WCAG version using the wcagVersion property within your configuration file.
-
-```bash
-accessibility.wcagVersion: 'wcag21a'
-```
-
-#### 3. Best Practices Checks
-
-- **Purpose:** Include or exclude checks that go beyond the defined WCAG standards but are considered good practices for optimal usability.
-- **Default Value:** The default setting is false, focusing strictly on WCAG violations.
-- **Implementation:** Enable best practice checks by setting bestPractice to true in your configuration file.
-
-```bash
-accessibility.bestPractice: false
-```
-
-#### 4. Needs Review
-
-- **Purpose:** Flag potential accessibility issues that might require human evaluation for definitive assessment.
-- **Implementation:** Enable needs review checks by setting needsReview to true in your configuration file. This ensures potentially ambiguous issues get flagged for manual review.
-
-```bash
-accessibility.needsReview: true
-```
-
 ## Automation Versus Manual Scan Configuration
 
 This page covers configuring scans through **capabilities in automation**. For hand-picking individual rules and reusing last-used settings in the **manual** App Scanner flow, see how to [pick rules in the manual App Scanner](/support/docs/accessibility-app-scanner/).
@@ -250,4 +292,5 @@ Continue with the surrounding setup and the pages that read the scans these capa
 
 - [Appium Accessibility Testing (Native App Automation)](/support/docs/accessibility-native-app-automation-test/) covers the shared Appium setup, the `lambda-accessibility-scan` hook, and the TestNG and WebdriverIO runner guides.
 - [Accessibility App Scanner (Manual Scan Configurations)](/support/docs/accessibility-app-scanner/) covers per-rule picking in the manual flow.
+- [Automation Settings](/support/docs/accessibility-automation-settings/) details each accessibility capability option (enable, WCAG version, best practices, needs review).
 - [Tag Support for Accessibility Scans](/support/docs/accessibility-tag-support/) covers tagging scans for filtering in reports.
