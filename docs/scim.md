@@ -16,6 +16,8 @@ keywords:
     - JumpCloud SCIM
     - Team Mapping
     - Role Mapping
+    - SCIM RBAC
+    - Custom Roles
     - Concurrency Groups
 url: https://www.testmuai.com/support/docs/scim/
 site_name: TestMu AI
@@ -257,6 +259,7 @@ SCIM (System for Cross-domain Identity Management) lets your Identity Provider (
 | **User Provisioning** | Auto-create, update, and deactivate user accounts |
 | **Group Provisioning** | Sync IDP groups and map them to <BrandName /> teams, concurrency groups, or sub-orgs |
 | **Role Assignment** | Set organization roles (Admin / User / Guest) from your IDP |
+| **Custom Roles (RBAC)** | Grant custom roles automatically: to every team a mapping rule creates, and to every new SCIM user. See [Custom Roles with SCIM](#custom-roles) |
 
 > **SSO is required.** If you haven't set up SSO yet, see [Getting Started with SSO](/support/docs/single-sign-on/) first.
 
@@ -795,6 +798,12 @@ Matches **every group**. Use as a low-priority catch-all fallback.
 - **ON** → finds (or creates) the target entity by name → mapping approved → members synced immediately.
 - **OFF** → creates a Pending mapping → admin approves manually.
 
+| Target | Auto-approve ON |
+|---|---|
+| Team | Creates a new team named after the group (or reuses its existing team) and maps it without admin review |
+| Concurrency Group | Creates a new concurrency group named after the group (or reuses it) and maps it without admin review |
+| Sub-Organization | Maps the group to an **existing** sub-org without admin review. Sub-orgs are never created automatically |
+
 **Rules are evaluated by priority** (highest first). First match wins. If **no rule matches**, the group stays Pending until an admin maps it manually.
 
 | Priority | Rule | Target | Auto-Approve | Example match |
@@ -805,13 +814,19 @@ Matches **every group**. Use as a low-priority catch-all fallback.
 
 **To create a rule:**
 
-1. Go to **SCIM Group Provisioning** dashboard
-2. Click **Add Mapping Rule**
-3. Select a **rule type** (Prefix, Regex, or Match All)
-4. Enter the **pattern** to match group names against
-5. Choose the **target type** (Team, Concurrency Group, or Sub-Organization)
-6. Toggle **auto-approve** ON if you want matched groups to be approved automatically
-7. Click **Save**
+1. Go to **Settings > Organization Settings > Security > SCIM Provisioning** and open the **Mapping Rules** tab
+2. Click **Add Rule**
+3. Enter the **Pattern** and select the rule **Type** (Prefix, Regex, or Match All)
+4. Choose the **Target Entity Type** (Team, Concurrency Group, or Sub-Organization)
+5. *(Optional, Team only)* Pick one or more **Mapped roles**. Every team this rule provisions gets these custom roles. See [Custom Roles with SCIM](#custom-roles)
+6. Toggle **Auto Approve** ON if you want matched groups to be approved automatically
+7. Click **Add Rule**
+
+<img loading="lazy" src={require('../assets/images/lambdatest-scim/rbac/mapping-rule-mapped-roles.webp').default} alt="Mapping rule with Pattern, Type Prefix, Target Entity Type Team, a mapped role, and Auto Approve on" width="480" height="494" className="doc_img img_center"/><br/>
+
+Use **Reorder** on the Mapping Rules tab to change rule priority. Editing a rule's pattern, target, or mapped roles only affects groups provisioned **after** the change. Teams and mappings that already exist are left as they are.
+
+<img loading="lazy" src={require('../assets/images/lambdatest-scim/rbac/mapping-rules-table.webp').default} alt="Mapping Rules tab listing two Prefix rules that target Team, each with its own mapped role and Auto Approve set to Yes" width="1000" height="252" className="doc_img img_center"/><br/>
 
 
 ### Role Assignment {#roles}
@@ -834,6 +849,97 @@ When a user is in **multiple groups with different roles**, the highest-priority
 | User removed from the `Admin` group | Role recomputed, drops to next highest (e.g., User) if no other group gives Admin |
 | All groups removed, or no roles set | Role defaults to **User** |
 | Group's `LambdatestRoles` changed from `Admin` to `Guest` | All members' roles recomputed, may downgrade |
+
+### Custom Roles with SCIM {#custom-roles}
+
+The roles above are **organization roles** (Admin / User / Guest). If your organization uses **Custom Roles & Permissions** (RBAC), SCIM can also grant **custom roles** automatically, so users land with the right access the moment they are provisioned.
+
+:::info Prerequisites
+Custom roles through SCIM need **Custom Roles & Permissions** enabled for your organization, and **SCIM Group Provisioning** enabled for team-based roles. Create the custom roles first under **Settings > Organization Settings > Members > Custom Roles & Permissions**. Reach out to our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 chat support**</span> if you don't see these options.
+:::
+
+There are three ways to grant custom roles with SCIM. Use any one of them, or combine them:
+
+| Method | Configured in | Who gets the role | Best for |
+|---|---|---|---|
+| **Mapped roles on a mapping rule** | <BrandName /> (Mapping Rules tab) | Every team the rule provisions, and so every member of those teams | Groups that follow a naming convention, with no role setup in your IDP |
+| **Custom role names in `LambdatestRoles`** | Your IDP (group extension attribute) | The team the group is mapped to | Keeping all role assignment in your IDP |
+| **Auto-assign roles to new SCIM users** | <BrandName /> (SCIM Provisioning page) | Each user provisioned after you turn it on | A baseline role every new user should start with |
+
+<img loading="lazy" src={require('../assets/images/lambdatest-scim/rbac/scim-provisioning-settings.webp').default} alt="SCIM Provisioning page with the Base URL, Bearer Token, Enable SCIM Group Provisioning toggle, Auto-assign roles to new SCIM users toggle, and the SCIM Groups and Mapping Rules tabs" width="1000" height="437" className="doc_img img_center"/><br/>
+
+<Tabs className="docs__val" groupId="custom-role-source" queryString="custom-role">
+<TabItem value="rule" label="Mapped roles on a rule" default>
+
+Add **Mapped roles** to a mapping rule whose target is **Team**. When a group matches the rule, <BrandName /> creates (or reuses) the team, attaches the mapped roles to it, and adds the group's members. Everyone in the team inherits the roles.
+
+**Example:** your IDP groups follow the convention `acme-qe-web-<squad>` and `acme-qe-mobile-<squad>`.
+
+| Priority | Pattern | Type | Target | Mapped roles | Auto Approve |
+|---|---|---|---|---|---|
+| 2 | `acme-qe-web-` | Prefix | Team | `QE-Web-Tester` | ON |
+| 1 | `acme-qe-mobile-` | Prefix | Team | `QE-Mobile-Tester` | ON |
+
+When your IDP pushes `acme-qe-web-payments`, the team **acme-qe-web-payments** is created with the `QE-Web-Tester` role and its members are added. No one assigns roles by hand. The **Custom Roles** column under **Members > Teams** shows the result.
+
+<img loading="lazy" src={require('../assets/images/lambdatest-scim/rbac/mapped-roles-picker.webp').default} alt="Mapped roles picker listing the default Admin, User and Guest roles and the organization's custom roles, with one custom role selected" width="480" height="655" className="doc_img img_center"/><br/>
+
+<img loading="lazy" src={require('../assets/images/lambdatest-scim/rbac/teams-with-custom-roles.webp').default} alt="Teams list showing two SCIM-provisioned teams, each with its custom role in the Custom Roles column" width="1000" height="277" className="doc_img img_center"/><br/>
+
+- The **Mapped roles** field appears only when the target is **Team** and Custom Roles & Permissions is enabled.
+- You can select more than one role. Default roles (Admin, User, Guest) and your custom roles appear in one searchable list.
+- With **Auto Approve OFF**, the group waits as **Pending**. The mapped roles are attached when an admin approves it.
+- If a mapped role is deleted later, the rule shows a warning. Edit the rule and reselect a role.
+
+</TabItem>
+<TabItem value="idp" label="Roles from your IDP">
+
+The group extension attribute `LambdatestRoles` accepts **custom role names** as well as Admin / User / Guest. Custom role names are matched against the custom roles in your organization and granted to the team the group is mapped to.
+
+```json
+"urn:ietf:params:scim:schemas:extension:LambdaTest:2.0:Group": {
+  "LambdatestRoles": ["User", "QE-Web-Tester"]
+}
+```
+
+- `User` sets the members' organization role (highest wins, as described in [Role Assignment](#roles)).
+- `QE-Web-Tester` is granted to the group's mapped **team**. The group must be mapped to a team and approved.
+- Role names must match the custom role name in <BrandName /> exactly. Names that don't match any role are ignored.
+- When your IDP changes the list, <BrandName /> removes only the roles your IDP sent before and adds the new ones.
+
+</TabItem>
+<TabItem value="default" label="Default role for new users">
+
+Turn on **Auto-assign roles to new SCIM users** on the **SCIM Provisioning** page and select one or more roles. Every user your IDP provisions from then on gets these roles directly, on top of their organization role.
+
+- Applies to users provisioned **after** you turn it on. Existing users are not changed.
+- Works independently of groups and mapping rules.
+- When your IDP **deactivates** a user, their default roles are removed. If the user is **reactivated**, the roles currently configured are granted again.
+- Changing or turning off the setting doesn't remove roles from users who already received them.
+- If a selected role is deleted later, the setting shows a warning. Reselect a role to fix it.
+
+</TabItem>
+</Tabs>
+
+**How the sources work together**
+
+- **All sources add up.** A team can hold roles from a mapping rule and from your IDP at the same time. A user gets the roles of every team they belong to, plus any default roles.
+- **Each source removes only what it granted.** Removing a role from a rule's team never strips the same role your IDP granted, and the other way round.
+- **Rules are forward-only.** Editing or deleting a rule doesn't change roles on teams it already created. To change access for existing teams, edit the custom role itself under **Custom Roles & Permissions**. That change applies to everyone who holds the role.
+
+**What happens to rule roles when things change**
+
+| Change | Result |
+|---|---|
+| User added to the IDP group | Joins the team and inherits its roles |
+| User removed from the IDP group | Leaves the team and loses the roles that came from it |
+| Group renamed, still matches the same rule | Team renamed to match. Roles kept |
+| Group renamed to match a different rule | Old rule's roles removed. Mapping returns to **Pending** under the new rule |
+| Group renamed so no rule matches | Rule's roles removed from the team. Mapping returns to **Pending** |
+| Group deleted in your IDP | Rule's roles removed from the team |
+| Admin moves the mapping to another team | Roles removed from the old team and granted to the new one |
+| Admin deletes the mapping | Rule's roles removed from the team |
+| Rule edited or deleted | No change to existing teams. Applies to new groups only |
 
 ### One Group per Entity
 
@@ -1102,7 +1208,9 @@ Quick reference for common scenarios. Everything below is handled automatically,
 | **Add a member to a group** | Added to all mapped entities. Role recomputed. | Only if a [conflict](#conflicts) is created |
 | **Remove a member from a group** | Unassigned from mapped entities (only if no other group maps them there). Role recomputed. | No |
 | **Re-push a previously deleted group** | Group restored. Members must be re-pushed. Mapping rules re-evaluated. | Depends on rules |
-| **Change roles on a group** | All members' roles recomputed immediately. | No |
+| **Change roles on a group** | All members' roles recomputed immediately. Custom role names are updated on the group's mapped team. | No |
+| **Deactivate a user** | Account deactivated. [Default SCIM roles](#custom-roles) removed. | No |
+| **Reactivate a user** | Account reactivated. Default SCIM roles granted again. | No |
 
 </TabItem>
 <TabItem value="admin-changes" label="LambdaTest Admin changes">
@@ -1114,6 +1222,8 @@ Quick reference for common scenarios. Everything below is handled automatically,
 | **Manually remove a member from a team** | Removal is immediate but **temporary**. Next IDP sync re-adds them. | Remove **in your IDP** instead |
 | **Manually assign user to concurrency group / sub-org** | SCIM overrides non-SCIM assignments on next sync. | Use SCIM groups for exclusive assignments |
 | **Manually change a SCIM-managed user's role** | May be overwritten on next IDP sync. | Manage roles **in your IDP** |
+| **Edit or delete a mapping rule** | Applies to groups provisioned afterwards. Existing teams keep their roles. | Edit the custom role to change access for existing teams |
+| **Delete a custom role used by a rule or the default-role setting** | The rule or setting shows a warning. No new grants for that role. | Reselect a role |
 
 </TabItem>
 </Tabs>
@@ -1145,6 +1255,10 @@ Quick reference for common scenarios. Everything below is handled automatically,
 | Group mapping reverted to Pending | The group was renamed (rules re-evaluated) or the target entity was deleted (`target_deleted`). If renamed, rules may auto-approve. If deleted, [manual re-mapping](#target-deleted) is required. |
 | Auto-approve didn't create my sub-organization | Sub-orgs are never auto-created (billing/setup required). Create the sub-org first, then approve manually. |
 | Can't map two SCIM groups to the same team | Each entity can only be mapped from one SCIM group. Use a single group, or merge in your IDP. |
+| **Mapped roles** field is missing on a rule | Set the target to **Team**, and make sure Custom Roles & Permissions is enabled for your organization. |
+| A SCIM team has no custom role | Check that the mapping is **Approved** or **Auto-Approved**. Rules are forward-only, so a team created before the rule got its mapped roles keeps its previous roles. |
+| A custom role from `LambdatestRoles` isn't applied | The name must match a custom role exactly, and the group must be mapped to an approved **team**. |
+| New users don't get the default role | Check that **Auto-assign roles to new SCIM users** is ON with a role selected. Users provisioned before it was turned on are not updated. |
 
 ### FAQ
 
@@ -1158,6 +1272,10 @@ Quick reference for common scenarios. Everything below is handled automatically,
 | What happens to a conflict when one group is deleted? | The conflict is **auto-resolved** in favor of the remaining group. No admin action needed. |
 | What's the difference between Approved and Auto-Approved? | Both sync members identically. **Auto-Approved** = mapping rule matched automatically. **Approved** = admin approved manually. |
 | Do mapping rules overwrite existing mappings? | No. Rules only apply when a group is first created or renamed. Existing mappings (manual or auto) are not overwritten. |
+| Does changing a rule's mapped roles update existing teams? | No. Rule changes are forward-only. To change access for existing teams, edit the custom role itself. |
+| Do rule roles replace roles sent by my IDP? | No. Both apply to the team, and removing one never removes the same role granted by the other. |
+| Can I give every new user a starting role without group rules? | Yes. Turn on **Auto-assign roles to new SCIM users** and select the roles. |
+| Can mapped roles be used with Concurrency Group or Sub-Organization targets? | No. Mapped roles apply to **Team** targets only. |
 
 ---
 
