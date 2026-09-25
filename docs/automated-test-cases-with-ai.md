@@ -142,7 +142,7 @@ You can link an automation run to a test case in three ways: **automatically** w
 
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/issue-logged.webp').default} alt="Logged issue shown in the test case Issues section"  className="doc_img" width="1600" height="730"/>
 
-## Linking via Capabilities (tms.tc_id) {#capability-linking}
+## Linking via Capabilities {#capability-linking}
 
 Test Manager supports linking automated test runs directly to specific test cases using Test Case IDs. This feature enables better traceability and management of your automated testing workflow.
 

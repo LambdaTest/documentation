@@ -2,7 +2,7 @@
 id: generate-test-cases-with-ai
 title: Generate Test Cases with AI
 hide_title: true
-sidebar_label: Create Test Cases with AI
+sidebar_label: AI Test Case Generator
 description: Learn efficient test case generation with in TestMu AI's Test Manager using AI.
 keywords:
   - test case creation
@@ -185,7 +185,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
 
 # AI Test Case Generator
 
-## What is the AI Test Case Generator?
+
 The **AI Test Case Generator** is an intelligent feature within <BrandName /> Test Manager and KaneAI that allows users to convert various requirement formats (like text, PDFs, audio, videos, images, issues from Jira, Azure DevOps, and Linear, and more) into structured, contextual software test cases. It significantly accelerates the test case creation process while improving coverage and quality.
 
 This feature is designed to save time, improve test coverage, and streamline the test design process for both manual and automated testing workflows.

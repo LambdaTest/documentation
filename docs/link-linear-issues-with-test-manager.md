@@ -2,7 +2,7 @@
 id: link-linear-issues-with-test-manager
 title: Link Linear Issues with Test Manager
 hide_title: true
-sidebar_label: Link Linear Issues
+sidebar_label: Linear Integration
 description: Link Linear issues to test cases, test runs, test run instances, and steps in Test Manager, view live issue details, and unlink them when the defect no longer applies.
 keywords:
   - link linear issues

@@ -299,7 +299,7 @@ To include an archived test case in a new run, unarchive it first.
 | Reorganizing test cases across folders and projects | [Copy and Move Test Cases](/support/docs/copy-and-move-support-for-test-cases/) |
 | Using one test case in several projects | [Share Test Cases Across Projects](/support/docs/share-test-cases-across-projects/) |
 | Building and running test runs | [Test Run Creation and Management](/support/docs/test-run-creation-and-management/) |
-| Coverage and execution metrics | [Insights Dashboard](/support/docs/tms-reports/#insights-dashboard) |
+| Coverage and execution metrics | [Insights Dashboard](/support/docs/insights-dashboard/) |
 
 
 <nav aria-label="breadcrumbs">

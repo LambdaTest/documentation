@@ -2,7 +2,7 @@
 id: link-ado-issues-with-test-manager
 title: Link Azure DevOps Issues with Test Manager
 hide_title: true
-sidebar_label: Azure DevOps
+sidebar_label: Azure DevOps Integration
 description: Effortlessly link Azure DevOps issues with Test Manager using TestMu AI to streamline workflows and enhance project management efficiency.
 keywords:
   - link Azure DevOps issues

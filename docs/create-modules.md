@@ -2,7 +2,7 @@
 id: create-modules
 title: Create Modules
 hide_title: true
-sidebar_label: Create Modules
+sidebar_label: Create & Import Modules
 description: Guide for creating & editing Modules in Test Manager through Modules page.
 keywords:
   - module creation

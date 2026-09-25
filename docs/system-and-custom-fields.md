@@ -2,7 +2,7 @@
 id: system-and-custom-fields
 title: System and Custom Fields
 hide_title: true
-sidebar_label: System & Custom Fields
+sidebar_label: Settings (System & Custom Fields)
 description: Learn about TestMu AI's system and custom Fields feature for test project organization. Explore System Fields and create Custom Fields to enhance your testing workflows.
 keywords:
   - test manager
@@ -144,30 +144,6 @@ Enter the name, placeholder, mark the field, apply it to all future projects if 
 You can also link a single or multiple projects of your choice to the custom fields and click on **Save changes**.
 
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/link-projects.webp').default} alt="Linking projects to a custom field"  className="doc_img" width="1366" height="629"/>
-
-
-
-## Bulk Update Fields
-
-Utilize the bulk action feature that streamlines the process of updating system & custom fields across multiple test cases, enhancing efficiency and organization of Test Cases. With this feature, users can seamlessly modify key system fields such as Priority, Status, Automation Status, Type and all available custom fields for numerous test cases simultaneously, eliminating the need for time-consuming individual updates.
-
-### Steps to Bulk Update Fields
-
-1. Bulk select the test cases whose fields you want to update.
-
-2. Click on the `Update Fields` option.
-
-<img loading="lazy" src={require('../assets/images/mobile-app-testing/bulk_update_fields.jpeg').default} alt="Update Fields option for bulk-selected test cases" className="doc_img" width="1366" height="629"/>
-
-3. Select the fields you want to update the values for.
-
-4. Update the values of the fields & click on `Update Fields` to apply the updates.
-
-<img loading="lazy" src={require('../assets/images/mobile-app-testing/edit_fields_bulk_action.jpeg').default} alt="Editing field values in the bulk update dialog" className="doc_img" width="1366" height="629"/>
-
-A notification will appear at the top right confirming the fields have been updated.
-
-<img loading="lazy" src={require('../assets/images/mobile-app-testing/bulk_field_update_res.jpeg').default} alt="Confirmation that the fields were updated" className="doc_img" width="1366" height="629"/>
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">

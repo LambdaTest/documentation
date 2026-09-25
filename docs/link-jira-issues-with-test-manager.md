@@ -2,7 +2,7 @@
 id: link-jira-issues-with-test-manager
 title: Link Jira Issues with Test Manager
 hide_title: true
-sidebar_label: Jira
+sidebar_label: Jira Integration
 description: Effortlessly link Jira issues with Test Manager using TestMu AI to streamline workflows and enhance project management efficiency.
 keywords:
   - link jira issues
