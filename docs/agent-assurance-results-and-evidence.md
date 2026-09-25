@@ -84,7 +84,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
         "https://www.youtube.com/@TestMuAI"
       ]
     },
-    "dateModified": "2026-09-11"
+    "dateModified": "2026-09-25"
   }) }}
 />
 
@@ -164,17 +164,19 @@ Hooks must return actual observations. Invented usage or calls turn missing evid
 
 ### In the Local UI
 
-On a run's scenario result, **criteria** shows the expected and achieved outcomes and supporting evidence. Scroll to **sent to the agent**, **what came back**, and **files** for the request, response, and raw records. These are sections of one page, not tabs. Click a file to inspect it and use Back to return.
+On a run's scenario result, filter **Acceptance criteria** by **All**, **Pass**, **Fail**, or **Unable to Verify**. Expand a card or use **Expand all** to compare expected and achieved outcomes with supporting evidence. Choose **Request**, **Response**, **Verdict**, or **Artefacts** in the **Evidence** panel to open its drawer. Close the drawer to return to the criteria. See the [earlier layout](/support/docs/rook-web-ui/#earlier-local-ui) if your public CLI still uses scrolling sections.
 
-<img loading="lazy" src={require('../assets/images/rook/rook-local-result.png').default} alt="Local Rook scenario result with passing status and criterion-by-criterion evidence" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/rook/rook-local-result.png').default} alt="Local CommerceCare result with one failed response criterion and two unverifiable tool or state criteria" width="1440" height="900" className="doc_img"/>
 
-This view can show evidence before upload, including a local `--test` run. Refresh after files change. An absent verdict or file means it was not recorded or is unavailable; do not turn that absence into a pass. See [local navigation and files](/support/docs/rook-web-ui/#local-results).
+This view can show evidence before upload, including a local `--test` run. The redesigned viewer refreshes when workspace records change. The CommerceCare example separates an unmet response requirement from missing tool/state evidence; the hosted triage example below is a different run. An absent verdict or file means it was not recorded or is unavailable; do not turn that absence into a pass. See [local navigation and files](/support/docs/rook-web-ui/#local-results).
 
 ### In the Hosted Web UI
 
-Open the scenario **from its run**, then use **Request**, **Response**, **Verdict**, and **Artefacts**. The criterion cards show expected, achieved, evidence, and confidence where available. The scenario catalog instead shows the current definition and history.
+Open the scenario **from its run**. Read the criterion cards and filter by outcome, then select **Request**, **Response**, **Verdict**, or **Artefacts** in the **Evidence** panel to open its drawer. Close the drawer to return to the criteria. Cards show expected, achieved, evidence, and confidence where available. The scenario catalog instead shows the current definition and history.
 
-<img loading="lazy" src={require('../assets/images/rook/rook-web-result-verdict.png').default} alt="Hosted Rook Verdict tab with verdict.yaml and acceptance-criterion evidence" className="doc_img"/>
+Passing criterion cards start collapsed. Click a card or **Expand all** to read its assessment. The screenshot shows the saved verdict in the evidence drawer; close the drawer to return to the cards.
+
+<img loading="lazy" src={require('../assets/images/rook/rook-web-result-verdict.png').default} alt="Hosted Rook Verdict tab with verdict.yaml and acceptance-criterion evidence" width="1440" height="900" className="doc_img"/>
 
 Only uploaded evidence is available here. Check the recorded run version and profile, not just today's agent summary. If aggregate percentages disagree with the run's counts, inspect the criterion records and local report; see the documented [screenshot display notes](/support/docs/rook-web-ui/#screenshot-display-notes).
 

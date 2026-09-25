@@ -96,7 +96,7 @@ import { BRAND_URL } from '@site/src/component/BrandName';
         "https://www.youtube.com/@TestMuAI"
       ]
     },
-    "dateModified": "2026-09-11"
+    "dateModified": "2026-09-25"
   }) }}
 />
 
@@ -412,20 +412,24 @@ Scripts belong to the agent. One script can switch on the phase argument, or sep
 
 Use either interface to check the profile context without invoking it:
 
-- **Local:** run `rook ui --local`, open the agent, and read its **profiles** panel. Use `rook profile show <name>` for the complete local profile and phase mapping; the local panel is not the hosted specification dialog.
-- **Hosted:** after `rook sync`, run `rook ui` and open the agent's **Summary** page. Use **View Full Spec** on a profile to inspect its recorded hook mapping. A run's profile link identifies the revision used for that run—not necessarily today's local file.
+- **Local:** run `rook ui --local`, open the agent's **Profiles** tab, and expand a profile to read its YAML inline. The execute-script link opens its source in a dialog. You can also use `rook profile show <name>` in the CLI. See the [earlier layout](/support/docs/rook-web-ui/#earlier-local-ui) if your CLI predates this viewer.
+- **Hosted:** after `rook sync`, run `rook ui` and open the agent's **Profiles** tab. Expand the intended profile to see its hook phases, then click **profile.yaml** for the saved specification. On a run, the profile name opens the revision used for that run; the adjacent link opens the current profile instead.
 
 Neither UI creates, repairs, or tests hooks. Continue authoring and phase execution in the CLI. The [combined walkthrough](/support/docs/rook-web-ui/#choose-your-ui) shows both layouts.
 
 ### Local UI: Check the Profile and Script {#local-ui-example}
 
-Open the agent and read **profiles**. The sample maps the local-triage profile's execute phase to scripts/local-triage.mjs. This panel is a summary; inspect the complete file with the CLI before changing phases or credentials.
+Open **CommerceCare → Profiles** in the saved local demo. The `commerce-hooks` profile maps **prepare**, **open**, **execute**, **close**, and **collect** to `scripts/commerce-hooks.mjs`. Read each phase's timeout, required environment-variable names, and capabilities in the YAML. Configured phases are not proof that those hooks executed. The local YAML view differs from the hosted phase timeline below.
 
-<img loading="lazy" src={require('../assets/images/rook/rook-local-agent.png').default} alt="Local agent page showing local-triage with its execute phase and scripts/local-triage.mjs hook" width="1440" height="900" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/rook/rook-local-profiles.png').default} alt="Local Profiles tab with commerce-hooks YAML configuring all five hook phases and required environment names" width="1440" height="900" className="doc_img"/>
 
 ### Hosted Web UI: Inspect the Recorded Profile {#hosted-ui-example}
 
-On **Summary → Profiles**, choose **View Full Spec**. The dialog shows the synchronized YAML, including the execute mapping and observed calls capability. The example needs only execute; other hooks are optional, not missing setup.
+Open **Profiles** and expand the intended profile. The phase timeline shows **prepare**, **open**, **execute**, **close**, and **collect**. The example needs only execute; **1 of 5 phases** counts configured hooks, not completed work. Optional phases marked **not defined** are not failures. Timeout and delay badges describe configured limits, not observed timings. Rook owns the judge phase; it is not a profile hook.
+
+<img loading="lazy" src={require('../assets/images/rook/rook-web-profiles.png').default} alt="Hosted Profiles phase timeline showing local-triage with only execute configured and a five-minute timeout" width="1440" height="900" className="doc_img"/>
+
+Click **profile.yaml** to inspect the recorded hook mappings, environment requirements, and capabilities. A **README.md** link appears when authoring instructions were saved. Linked hook-script paths open their recorded files; a plain-text path means no artifact is available. Older synchronized profiles may lack some supporting files.
 
 <img loading="lazy" src={require('../assets/images/rook/rook-web-profile-spec.png').default} alt="Hosted profile specification dialog showing the execute hook, empty environment requirements, and calls capability" width="1440" height="900" className="doc_img"/>
 

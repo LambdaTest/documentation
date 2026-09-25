@@ -342,9 +342,9 @@ The hosted browser app reads records and artifacts through the API. Neither UI e
 
 ### Local UI: The Workspace Read Path {#local-ui-example}
 
-The local agent page reads the description, profile, findings, and feature list from the selected workspace. Its **upstream** panel reports recorded synchronization context; displaying a local file does not publish it or prove today's files match the hosted version.
+The local **Summary** reads the description and source context from the selected workspace, with links to the specification and findings. Separate tabs show profiles, features, scenarios, and runs. A recorded version badge does not prove today's working files match the hosted version; displaying a local file does not publish it. See the [local UI rollout note](/support/docs/rook-web-ui/#earlier-local-ui) for older CLI layouts.
 
-<img loading="lazy" src={require('../assets/images/rook/rook-local-agent.png').default} alt="Local agent page showing workspace records and its upstream synchronization context" width="1440" height="900" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/rook/rook-local-agent.png').default} alt="Local CommerceCare Summary showing workspace discovery records and source context" width="1440" height="900" className="doc_img"/>
 
 ### Hosted Web UI: The API Read Path {#hosted-ui-example}
 

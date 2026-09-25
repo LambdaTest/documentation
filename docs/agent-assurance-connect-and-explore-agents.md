@@ -84,7 +84,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
         "https://www.youtube.com/@TestMuAI"
       ]
     },
-    "dateModified": "2026-09-11"
+    "dateModified": "2026-09-25"
   }) }}
 />
 
@@ -324,20 +324,20 @@ After exploration, run `/generate` to refresh scenarios. Rook shows a plan and n
 
 ## Review Discovered Agents Locally or Online
 
-Run `rook ui --local` to see the current workspace's **agents** list. Open an agent and scroll through its findings, features, profiles, scenarios, and runs. This does not require publishing the discovery result.
+Run `rook ui --local` to see the current workspace's **Agents** list. Open an agent and use **Summary**, **Profiles**, **Features**, **Scenarios**, and **Runs**. This does not require publishing the discovery result. See the [rollout note for earlier CLI layouts](/support/docs/rook-web-ui/#earlier-local-ui) if your screen differs.
 
 For team review, sync the reviewed definitions and run `rook ui`. In the hosted Web UI, open project → agent → **Summary**, **Versions**, or **Features**. Those screens show uploaded records, not your latest unsynchronized exploration. Neither UI performs discovery or edits the definition. See [local agents](/support/docs/rook-web-ui/#local-agent) and [hosted agent configuration](/support/docs/rook-web-ui/#agent-configuration) in the same walkthrough.
 
 ### Local UI: Discovery Findings {#local-ui-example}
 
-Open **agents → triage-service**. The local agent page shows the discovered description, findings, profile, and feature list. In this sample, findings identify the unknown-ticket error path and an unreachable search tool; review these before generating more tests.
+Open **Agents → CommerceCare → Summary** in this saved demo workspace. Read the discovered description and source **Context**, then scroll to **View Full Spec** and **View findings** to inspect the saved discovery records. Use the separate **Features** and **Profiles** tabs before generating more tests. Your workspace will show your own discovered agent.
 
-<img loading="lazy" src={require('../assets/images/rook/rook-local-agent.png').default} alt="Local triage-service discovery page showing its description, profile, findings, and the start of its feature list" width="1440" height="900" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/rook/rook-local-agent.png').default} alt="Local CommerceCare Summary showing its description, discovery counts, source context, and five agent tabs" width="1440" height="900" className="doc_img"/>
 
 ### Hosted Web UI: Synchronized Discovery {#hosted-ui-example}
 
-Open **project → agent → Summary**. **Context** identifies the source files used for discovery; **View Full Spec** and **View findings** open uploaded artifacts when available. Changes from a new exploration are not visible here until synchronized.
+Open **project → agent → Summary**. **Context** identifies the source files used for discovery; **View Full Spec** and **View findings** open uploaded artifacts when available. Changes from a new exploration are not visible here until synchronized. Use the separate **Profiles** tab to inspect invocation hooks and phase configuration.
 
-<img loading="lazy" src={require('../assets/images/rook/rook-web-agent-summary.png').default} alt="Hosted agent Summary showing discovery source context, specification and findings links, and the recorded profile" width="1440" height="900" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/rook/rook-web-agent-summary.png').default} alt="Hosted agent Summary showing discovery source context, specification and findings links, and tool counts" width="1440" height="900" className="doc_img"/>
 
-The capture's **1%** and empty tool detail list are [known display issues](/support/docs/rook-web-ui/#screenshot-display-notes), not evidence that discovery or the smoke run failed.
+The capture's empty tool detail list conflicts with its five-tool counter. Inspect the saved specification and Versions call graph; see [screenshot display notes](/support/docs/rook-web-ui/#screenshot-display-notes). This is not evidence that discovery or the smoke run failed.
