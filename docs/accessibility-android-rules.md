@@ -592,7 +592,7 @@ Android rules map to the closest WCAG criterion and cover TalkBack behavior. 34 
 
 **What it checks:** Examines whether layout containers that hold text use flexible sizing (`match_parent`, `wrap_content`, or `0dp` with `layout_weight`) rather than fixed pixel dimensions. Containers without any text content are not checked — fixed dimensions are legitimate for icons and decorative elements. :::note The required device data is available on Android 11+ only; on older devices the rule reports **Incomplete**. :::
 
-**Why it matters:** This rule is the counterpart to [Dynamic Type Support](/support/docs/accessibility-android-rule-dynamic-type-support/): even when text is correctly sized in `sp`, a hard-sized parent container cannot grow with it. When the user enlarges their font scale, the text expands but the container does not — the result is clipped, truncated, or overlapping text, and content can become unreadable or actions unreachable. WCAG 1.4.10 requires content to reflow without loss of information or functionality.
+**Why it matters:** This rule is the counterpart to [Dynamic Type Support](#dynamic-type-support): even when text is correctly sized in `sp`, a hard-sized parent container cannot grow with it. When the user enlarges their font scale, the text expands but the container does not — the result is clipped, truncated, or overlapping text, and content can become unreadable or actions unreachable. WCAG 1.4.10 requires content to reflow without loss of information or functionality.
 
 **Common failures:**
 
