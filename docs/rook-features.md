@@ -91,7 +91,7 @@ import { BRAND_URL } from '@site/src/component/BrandName';
         "https://www.youtube.com/@TestMuAI"
       ]
     },
-    "dateModified": "2026-09-11"
+    "dateModified": "2026-09-25"
   }) }}
 />
 
@@ -201,18 +201,18 @@ Long-running commands emit structured progress. In the TUI, Rook renders active 
 
 ## Local and Hosted UIs {#hosted-web-ui}
 
-Use `rook ui --local` for the current workspace's agents, profiles, features, scenarios, runs, and evidence, including unsynchronized work and `--test` runs. Its agent page groups the lists together; it has no separate hosted Versions or Insights tabs.
+Use `rook ui --local` for the current workspace's agents, profiles, features, scenarios, runs, and evidence, including unsynchronized work and `--test` runs. The redesigned viewer has five agent tabs and refreshes when workspace records change; hosted version history remains separate. Check the [rollout note](/support/docs/rook-web-ui/#earlier-local-ui) if your public CLI still has the earlier layout.
 
-Use `rook ui` for synchronized projects, versions, profile specifications, scenario filters, shared runs, and Insights in the hosted Web UI. Browser sign-in and project access are required. Create and execute tests in the CLI in both cases; see the [local and hosted screenshot walkthrough](/support/docs/rook-web-ui/#choose-your-ui).
+Use `rook ui` for synchronized projects, versions, a dedicated Profiles tab, scenario filters, and shared runs in the hosted Web UI. Insights is not currently available. Browser sign-in and project access are required. Create and execute tests in the CLI in both cases; see the [local and hosted screenshot walkthrough](/support/docs/rook-web-ui/#choose-your-ui).
 
 ### Local UI: Inspect a Discovered Behavior {#local-ui-example}
 
-Open **agent → features → feature ID**. The local F-002 page shows the user story, expected behavior, validation rules, and edge cases extracted for outage triage. Use these requirements to decide which scenarios are still needed.
+Open **agent → Features → feature ID**. In this CommerceCare demo, the F-002 dialog describes eligible refunds, including the user story, expected behavior, validation rules, and edge cases. Use these requirements and the catalog's scenario counts to decide which tests are still needed.
 
-<img loading="lazy" src={require('../assets/images/rook/rook-local-feature.png').default} alt="Local F-002 feature showing the outage-triage user story, expected behavior, validation rules, and edge cases" width="1440" height="900" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/rook/rook-local-feature.png').default} alt="Local CommerceCare F-002 refund feature dialog showing its user story, behavior, validation rules, and source files" width="1440" height="900" className="doc_img"/>
 
-### Hosted Web UI: Review the Same Feature With Your Team {#hosted-ui-example}
+### Hosted Web UI: Review Features With Your Team {#hosted-ui-example}
 
-After synchronization, open **project → agent → Features** and click the feature ID. The dialog shows the recorded behavior and source materials. A feature definition describes intended behavior; it is not proof that a test has passed.
+After synchronization, open **project → agent → Features** and click the feature ID. The dialog shows the recorded behavior and source materials. This hosted capture uses the separate triage example. A feature definition describes intended behavior; it is not proof that a test has passed.
 
 <img loading="lazy" src={require('../assets/images/rook/rook-web-feature-details.png').default} alt="Hosted F-002 feature dialog showing expected behavior, validation rules, edge cases, and source files" width="1440" height="900" className="doc_img"/>

@@ -19,7 +19,13 @@ Rook has two browser-based review interfaces: a **local UI** served by the CLI a
 
 Open the hosted Web UI at [rook.lambdatest.com/projects](https://rook.lambdatest.com/projects). Use the same account and organization as your Rook CLI workspace.
 
-This walkthrough covers the local viewer and the hosted Web UI using a Rook 0.1.3 sample run. Screenshots show only the visible webpage, without browser controls or desktop content. Click or tap a screenshot to enlarge it. Both walkthroughs use the public triage sample from the [quickstart](/support/docs/agent-assurance-quickstart/).
+Both interfaces were checked on September 25, 2026. The local screenshots use saved CommerceCare demo results with synthetic orders and customers. The hosted screenshots use the Rook 0.1.3 triage run from the [quickstart](/support/docs/agent-assurance-quickstart/), recorded on September 11. They are different examples, not two views of the same execution. Screenshot dates and agent versions identify those saved records, not the installed CLI version.
+
+Screenshots show only the visible webpage, without browser controls or desktop content; the Projects image is limited to the sample project's entry. Click or tap a screenshot to enlarge it.
+
+:::note Local UI rollout
+The redesigned local UI below was verified in CLI build `f8ab6fc6` on September 25. The public npm release was still **0.1.5**, which has the earlier single-page viewer. If your screen differs, check `rook --version` and [available public updates](/support/docs/rook-installation/). Do not expect reinstalling 0.1.5 to enable the redesign. See [the earlier layout](#earlier-local-ui) below while rollout is pending.
+:::
 
 ## Choose Your UI {#choose-your-ui}
 
@@ -29,7 +35,7 @@ This walkthrough covers the local viewer and the hosted Web UI using a Rook 0.1.
 | Data | Files in the current workspace and selected project | Records uploaded to the selected Rook environment |
 | Best for | Local debugging, offline evidence, unsynchronized work, and `--test` runs | Shared history, recorded versions, trends, and team review |
 | Access | No browser sign-in; keep the local serving process running | Browser sign-in and access to the same organization and project |
-| Navigation | Agents → agent → run → scenario result | Projects → project → agent → Runs → run → scenario result |
+| Navigation | Agents → agent → Runs → run → scenario result | Projects → project → agent → Runs → run → scenario result |
 | Sharing | Loopback URLs work only on your machine | Authorized teammates can open the run or result URL |
 
 Neither viewer downloads missing records into your workspace, uploads local changes, or turns a partial run into a completed result. Their layouts differ; use the [local walkthrough](#local-ui) or [hosted walkthrough](#open-the-right-environment) below.
@@ -46,51 +52,91 @@ rook ui --local --no-open
 
 Open the exact loopback URL printed by Rook. It starts looking for a free port at `7757`; do not assume the port is always the same. The viewer reads files without requiring a hosted login or a network request for workspace data. It does not upload them. In a shell, leave the command running and use `Ctrl+C` when finished; in the TUI, it lives with that session.
 
-Select the intended project in the CLI before opening the viewer. It starts at **agents**, not the hosted Projects screen. Refresh after local changes to read the current files. If the expected agent is absent, check the workspace and selected project before exploring again.
+Select the intended project in the CLI before opening the viewer. It starts at **Agents**, not the hosted Projects screen. The redesigned viewer detects changes to workspace records and reloads the displayed data. It pauses polling in a hidden browser tab and checks again when you return. If the expected agent is absent, check the workspace and selected project before exploring again.
+
+The five local agent tabs are **Summary**, **Profiles**, **Features**, **Scenarios**, and **Runs**. There is no local Versions tab. Similar styling does not mean shared data: this viewer reads your files, not the hosted API.
 
 ### Local Agents {#local-agents}
 
-<img loading="lazy" src={require('../assets/images/rook/rook-local-agents.png').default} alt="Local Rook agents page with triage-service, five features, two scenarios, one run, and a 100 percent pass rate" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/rook/rook-local-agents.png').default} alt="Redesigned local Agents page with search and a CommerceCare card showing nine features, twelve scenarios, and three runs" width="1440" height="900" className="doc_img"/>
 
-Each row shows an agent, feature/scenario/run counts, and available pass-rate context. Readiness hints name missing scenarios, a profile, synchronization, or a first run. Click the agent name. The sample's **100%** describes its one passing run, not complete behavior coverage.
+Search by agent name or ID, then click the agent card. It shows feature/scenario/run counts and available last-result context. Clear a search before concluding that the workspace has no agents. These counts describe the saved workspace, not coverage of every possible behavior.
+
+:::note Coming soon
+Searching local agents by description is coming soon. For now, use the agent's name or ID.
+:::
 
 ### Local Agent Workspace {#local-agent}
 
-<img loading="lazy" src={require('../assets/images/rook/rook-local-agent.png').default} alt="Local triage-service page with summary counts, upstream recording information, and the profile panel" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/rook/rook-local-agent.png').default} alt="Local CommerceCare Summary with five navigation tabs, discovery counts, description, and source context" width="1440" height="900" className="doc_img"/>
 
-The agent page keeps **upstream**, **profiles**, **findings**, **features**, **scenarios**, and **runs** together. Scroll down to their lists. The upstream panel reports recorded synchronization context; local visibility does not prove that today's files have been uploaded. The profile panel is a local summary, not the hosted **View Full Spec** dialog or a profile editor. Use `rook profile show` for the complete profile and hook mapping.
+**Summary** shows the description, discovery counts, source **Context**, and tools. Scroll past long context lists for **View Full Spec** and **View findings**. Those links open the on-disk definition and findings; opening them does not publish changes. A recorded version badge does not prove that today's working files match the uploaded version.
+
+### Local Profiles and Hooks {#local-profiles}
+
+Open **Profiles** and expand the profile. Its header lists configured phases; the YAML below records hook mappings, timeouts, required environment-variable names, and capabilities. Click the execute-script path to inspect its source in a dialog.
+
+<img loading="lazy" src={require('../assets/images/rook/rook-local-profiles.png').default} alt="Local Profiles tab with inline commerce-hooks YAML defining prepare, open, execute, close, and collect without secret values" width="1440" height="900" className="doc_img"/>
+
+The CommerceCare example maps all five hook phases to one script and enables multi-turn calls. These are configuration values, not evidence that each phase ran. Unlike the hosted [phase timeline](#agent-summary-inspect-profiles-and-hook-phases), this local build displays the profile YAML inline. It does not edit hooks or expose the secret store. Use the CLI to author, test, or repair a profile.
 
 ### Local Features and Scenario Definitions {#local-definitions}
 
-Click a feature ID on the agent page to inspect its user story, expected behavior, validation rules, edge cases, sources, and associated scenarios where recorded.
+Open **Features** to see discovered behaviors and their associated scenario counts. Click a nonzero count to filter the scenario catalog to that feature. **none** means no test definition is associated with that behavior, not that the behavior passed.
 
-<img loading="lazy" src={require('../assets/images/rook/rook-local-feature.png').default} alt="Local F-002 feature page showing the outage-triage user story, expected behavior, and validation rules" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/rook/rook-local-features.png').default} alt="Local Features tab with CommerceCare behaviors and scenario counts, including untested behaviors" width="1440" height="900" className="doc_img"/>
 
-Click a scenario ID to read its goal, classification, acceptance criteria, and history. This is the **current test definition**, not proof that the scenario ran. Follow its history to inspect an execution; use the agent breadcrumb to return to the catalog.
+Click a feature ID to open its definition in a dialog: user story, expected behavior, validation rules, edge cases, and source files where recorded. **View the file rook wrote** opens the raw feature YAML.
 
-<img loading="lazy" src={require('../assets/images/rook/rook-local-scenario.png').default} alt="Local SC-002 scenario definition showing the triage goal and acceptance criteria" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/rook/rook-local-feature.png').default} alt="Local F-002 feature dialog describing eligible refunds, validation rules, and source files" width="1440" height="900" className="doc_img"/>
 
-The local viewer does not have the hosted Scenarios filter bar or separate Versions and Insights tabs. Use the lists and linked records here, or open the hosted UI after synchronization for those views.
+Open **Scenarios** to filter by **Feature**, **Class**, **Category**, or **Result**. Combine filters to narrow the catalog; **Clear filters** restores it. A latest result is not the outcome of every historical run, and a scenario that has never run is neither a pass nor a failure.
+
+<img loading="lazy" src={require('../assets/images/rook/rook-local-scenarios.png').default} alt="Local Scenarios tab with feature, class, category, and result filters and recorded Pass, Fail, and Unable to Verify outcomes" width="1440" height="900" className="doc_img"/>
+
+Click a scenario ID to read its goal, classification, acceptance criteria, and **History**. This is the **current test definition**, not proof that the scenario ran. Follow a history entry to its run, then select the scenario to inspect that attempt.
+
+<img loading="lazy" src={require('../assets/images/rook/rook-local-scenario.png').default} alt="Local SC-006 definition for refund verification with three acceptance criteria and two runs in history" width="1440" height="900" className="doc_img"/>
+
+For the definition and evidence used by an older run, follow **Runs**, rather than assuming the current scenario is unchanged. For shared version history, synchronize and use the hosted **Versions** tab.
 
 ### Local Runs {#local-runs}
 
-Open a run from the agent's **runs** section. Compare its counts, narrative, quality analysis, plan, and scenario outcomes where present. Some sections appear only when the run wrote that analysis.
+Open **Runs** to compare recorded executions by version, result distribution, pass percentage, credits, and duration. This local list shows the latest 20 runs and reports when older runs are omitted; that is not proof that the older files were deleted.
 
-<img loading="lazy" src={require('../assets/images/rook/rook-local-run.png').default} alt="Local run review showing one passed scenario, run context, and the recorded narrative" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/rook/rook-local-runs.png').default} alt="Local Runs tab showing three CommerceCare executions with failed and unverifiable outcomes" width="1440" height="900" className="doc_img"/>
 
-This view includes runs available on disk, including local test-mode results. It is not the hosted timeline. **No verdicts were written** means the run has no recorded verdicts, not that it passed. Check unfinished phases and `rook report <run-id> --json` before treating a result as complete.
+Click a run to inspect its narrative, outcome counts, scenario rows, and metadata. **View plan** opens the recorded selection plan. In the **Profile** row, the profile name opens the run's saved configuration; the adjacent link opens the current profile under **Profiles**. These can differ.
+
+<img loading="lazy" src={require('../assets/images/rook/rook-local-run.png').default} alt="Local CommerceCare run details with narrative, mixed scenario outcomes, View plan, and profile metadata" width="1440" height="900" className="doc_img"/>
+
+This view includes runs available on disk, including local test-mode results. **completed** describes execution state, not a passing suite. Missing graded results are not a pass: check unfinished phases and `rook report <run-id> --json` before treating a result as complete.
 
 ### Local Results and Evidence Files {#local-results}
 
-Click a scenario under the run. Read **criteria** for each expected outcome, achieved result, supporting evidence, and confidence where recorded. The request and response are further down the same page under **sent to the agent** and **what came back**; there are no hosted-style Request/Response/Verdict tabs here.
+Click a scenario under the run. Read **Acceptance criteria**, filtering by **All**, **Pass**, **Fail**, or **Unable to Verify**. Expand individual cards or use **Expand all** for expected outcomes, achieved results, supporting evidence, and confidence. Passing cards start collapsed; failures and unverifiable criteria start expanded.
 
-<img loading="lazy" src={require('../assets/images/rook/rook-local-result.png').default} alt="Local SC-002 result with passing status, compliance and latency, and criterion evidence" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/rook/rook-local-result.png').default} alt="Local SC-006 result distinguishing one failed response criterion from two criteria that could not be verified" width="1440" height="900" className="doc_img"/>
 
-Scroll to **files** for the records and evidence saved for that scenario. Open a file link to inspect its raw contents; use your browser's Back action to return. Available files depend on what the run actually recorded.
+The sample distinguishes a response that failed an expectation from two tool/state assertions the judge could not verify. Do not treat either an unobserved action or an absent file as a pass.
 
-<img loading="lazy" src={require('../assets/images/rook/rook-local-evidence.png').default} alt="Local result evidence file list with the scenario records and judge artifact available for inspection" className="doc_img"/>
+Choose **Request**, **Response**, **Verdict**, or **Artefacts** in the **Evidence** panel to open its drawer. Request identifies what was sent; Response shows the exchange and invocation record; Verdict shows the saved evaluation. Close the drawer to return to the criterion cards.
 
-A missing file or unknown value is not a successful observation. Keep the original run directory when investigating incomplete evidence, and review file contents for secrets before sharing them. To share with teammates, use an uploaded normal run's hosted URL or an approved, sanitized evidence bundle—not the loopback URL.
+<img loading="lazy" src={require('../assets/images/rook/rook-local-response.png').default} alt="Local Response drawer showing the CommerceCare transcript and recorded response.json" width="1440" height="900" className="doc_img"/>
+
+**Artefacts** lists attached outputs and supporting evidence, not every file in the run directory. Click **View** to inspect a file and the list's return control to go back. In this example, `collect.json` and `judge-working.json` are present. `hooks.json`, `snapshot.yaml`, and nested internal files remain available on disk but are not listed here. See [Workspace Files](/support/docs/rook-workspace-files/) for their locations.
+
+<img loading="lazy" src={require('../assets/images/rook/rook-local-evidence.png').default} alt="Local Artefacts drawer listing collect.json and judge-working.json with View buttons" width="1440" height="900" className="doc_img"/>
+
+Large or unsupported files may offer a download instead of an inline preview. HTML and SVG are not rendered as active pages. Keep the original run directory when investigating incomplete evidence, and review file contents for secrets before sharing them. To share with teammates, use an uploaded normal run's hosted URL or an approved, sanitized evidence bundle—not the loopback URL.
+
+### If You Still Have the Earlier Local UI {#earlier-local-ui}
+
+Public CLI 0.1.5 uses a dark, single-page agent view: scroll through profiles, features, scenarios, and runs; result pages have criteria, request/response sections, and a files list. That is an older viewer, not a missing hosted login. The redesigned viewer uses the same `rook ui --local` command; no separate frontend install is needed in a packaged release.
+
+After upgrading, open the URL printed by the command and navigate from **Agents**. Old `/agent/…` or preview `/next/…` bookmarks do not preserve the previous detail route. If the page says viewer assets are missing, reinstall the appropriate complete CLI package; signing in or syncing cannot add the missing UI files.
+
+If the page stops updating or shows a connection warning, check that the serving command or TUI is still running. Restart `rook ui --local` from the same workspace if it exited, and use the newly printed URL. Previously displayed data may remain on screen after a connection failure; it does not prove the latest workspace changes were loaded. Do not rerun the target just to restore the viewer.
 
 ## Open the Right Environment
 
@@ -145,10 +191,10 @@ The hosted review workflow stays on this documentation page. Follow **Projects �
 | Which version, profile, and hooks are recorded? | [Agent Configuration](#agent-configuration) |
 | What can the agent do, and what tests exist? | [Features and Scenarios](#features-and-scenarios) |
 | What happened in a test, and why did it pass or fail? | [Runs and Evidence](#runs-and-results) |
-| What should we test next? | [Insights](#insights) |
+| What should we test next? | [Find coverage gaps](#insights) |
 | Why is data missing or inconsistent? | [Troubleshooting](#troubleshooting) |
 
-The six agent tabs are **Summary**, **Versions**, **Features**, **Scenarios**, **Runs**, and **Insights**. Scenario definitions, run details, and individual results open as separate application pages; their explanations remain together here.
+The six agent tabs are **Summary**, **Versions**, **Profiles**, **Features**, **Scenarios**, and **Runs**. Insights is not currently available; an old Insights bookmark does not open that page. Scenario definitions, run details, and individual results open as separate application pages; their explanations remain together here.
 
 The sample has five features, two generated scenarios, and one executed scenario. A passing smoke test does not establish complete coverage. Some aggregate values in the screenshots have known [screenshot display notes](#screenshot-display-notes); use the actual run counts and criterion evidence.
 
@@ -162,9 +208,9 @@ For environment selection and authentication, start with [Web UI setup](#open-th
 
 #### Choose a Project {#projects-choose-a-project}
 
-<img loading="lazy" src={require('../assets/images/rook/rook-web-projects.png').default} alt="Top of the Rook Projects page showing the documentation test project and its agent, run, user, and last-accessed information" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/rook/rook-web-projects.png').default} alt="Rook documentation project entry showing one agent, one run, one user, and its last-accessed date" width="1158" height="75" className="doc_img"/>
 
-The screenshot shows the documentation project's entry; other projects are below it.
+The screenshot is limited to the documentation project's entry to avoid publishing unrelated project names.
 
 Each project entry shows its name, agent count, run count, user count, and last-accessed date when available. **Last Accessed** is not the time of the latest test result. Click the project name to open its [Agents page](#agents). Use pagination when the list spans multiple pages.
 
@@ -192,11 +238,13 @@ A loading indicator means the request is still pending. An error with **Retry** 
 
 Open **Projects → your project** to see its agent inventory. Use this page to choose the agent you want to review and identify missing setup before attempting a run.
 
-<img loading="lazy" src={require('../assets/images/rook/rook-web-agents.png').default} alt="Rook Agents table showing support-triage-agent version 1, five tools including three writes, five features, two scenarios, and its last run" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/rook/rook-web-agents.png').default} alt="Rook Agents inventory with search and a support-triage-agent card showing version 1, five tools including three writes, five features, two scenarios, and its last run" width="1440" height="900" className="doc_img"/>
 
 #### Read the Inventory {#agents-read-the-inventory}
 
-| Column | What it tells you |
+Use **Search agents** to find an agent by name or description. Clear the search before concluding that the project is empty. Each agent card shows:
+
+| Field | What it tells you |
 |---|---|
 | **Agent** | Local agent ID, recorded version, description, and readiness or run-count labels. Click the ID to open Summary. |
 | **Tools** | Discovered tool count and how many can write. A write count describes capability, not operations performed by the last run. |
@@ -205,7 +253,7 @@ Open **Projects → your project** to see its agent inventory. Use this page to 
 | **Pass rate** | Recent aggregate result context; verify the underlying run before making a release decision. |
 | **Last run** | Most recent recorded execution, or a readiness state such as **never run** or **discovered only**. |
 
-The example has five features and two scenarios, but only one run. Open **support-triage-agent** to see the agent's six tabs. Its Summary heading uses the display name **triage-service**; the table and breadcrumb use the local ID. Those labels refer to the same agent.
+The example has five features and two scenarios, but only one run. Open **support-triage-agent** to see the agent's six tabs. Its Summary heading uses the display name **triage-service**; the card and breadcrumb use the local ID. Those labels refer to the same agent.
 
 #### Resolve Missing Setup {#agents-resolve-missing-setup}
 
@@ -215,40 +263,43 @@ If the agent is missing entirely, confirm the selected CLI project and agent wit
 
 ## Understand the Agent Configuration {#agent-configuration}
 
-### Summary, Profiles, and Hooks {#agent-summary}
+### Summary and Source Context {#agent-summary}
 
-Open **Projects → your project → your agent → Summary**. This page answers: “What did Rook discover, and how is this agent configured to run?” It shows synchronized records, not unsaved changes in your local repository.
+Open **Projects → your project → your agent → Summary**. This page answers: “What did Rook discover?” It shows synchronized records, not unsaved changes in your local repository. Invocation configuration has its own **Profiles** tab.
 
-<img loading="lazy" src={require('../assets/images/rook/rook-web-agent-summary.png').default} alt="Rook Summary with description, discovery context, specification and findings links, and the local-triage profile with its execute script" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/rook/rook-web-agent-summary.png').default} alt="Rook Summary with description, discovery counts, source context, specification and findings links, and the Tools panel" width="1440" height="900" className="doc_img"/>
 
 #### Check the Agent and Source Context {#agent-summary-check-the-agent-and-source-context}
 
-The heading identifies the agent and current version. **Description** summarizes its purpose; the counters show features, scenarios, tools, runs, last pass rate, and coverage when available.
+The heading identifies the agent and current version. **Description** summarizes its purpose; the counters show features, scenarios, tools, runs, and last pass rate when available.
 
 **Context** lists the source materials used for discovery. A checkpoint digest identifies the recorded context; it does not prove that the target currently deployed matches that source. Use **View Full Spec** beneath Context to read the agent definition and **View findings** to inspect recorded discovery findings. If no findings artifact exists, the page says **No findings recorded**—that is not a clean bill of health.
 
-#### Inspect Profiles and Hook Phases {#agent-summary-inspect-profiles-and-hook-phases}
+### Profiles and Hook Phases {#agent-summary-inspect-profiles-and-hook-phases}
 
-Each **Profiles** row shows the profile ID, declared hook phases, and the available script path. There are two different file actions:
+Open **Projects → your project → your agent → Profiles**. Expand a profile to inspect its declared hook phases. A single profile opens automatically; when several exist, choose the one you need. Opening one closes the other, and clicking an open header collapses it. The tab does not identify which profile is active in your local CLI.
 
-- **View Full Spec** on the profile row opens its YAML declaration: hook mappings, environment requirements, and capabilities.
-- A linked **script path** opens the recorded script, rather than the profile YAML. A plain-text path has no available script artifact to open.
+<img loading="lazy" src={require('../assets/images/rook/rook-web-profiles.png').default} alt="Rook Profiles tab with local-triage expanded, one of five phases configured, an execute script, and its five-minute timeout" width="1440" height="900" className="doc_img"/>
 
-<img loading="lazy" src={require('../assets/images/rook/rook-web-profile-spec.png').default} alt="Profile YAML dialog showing local-triage, its execute hook at scripts/local-triage.mjs, and the calls capability" className="doc_img"/>
+The timeline lists **prepare → open → execute → close → collect**. **1 of 5 phases** means one hook is configured, not that one phase has finished. **Not defined** marks an omitted optional hook. Timeout and delay badges describe configuration, not measured execution time. Environment badges name required variables; they do not display secret values.
+
+Click **profile.yaml** to open the synchronized specification. A **README.md** link appears when profile instructions were recorded. Linked hook-script paths open their saved files in a dialog; a plain-text path has no available script artifact. These records may differ from your working files until you run `rook sync`. Older profiles may not have every supporting file uploaded.
+
+<img loading="lazy" src={require('../assets/images/rook/rook-web-profile-spec.png').default} alt="Profile YAML dialog showing local-triage, its execute hook at scripts/local-triage.mjs, and the calls capability" width="1440" height="900" className="doc_img"/>
 
 In this example, <code>local-triage</code> defines only <code>execute</code>. That is sufficient for this single-turn fixture; it does not imply that the other lifecycle phases are broken. Profiles can supply <code>prepare</code>, <code>open</code>, <code>execute</code>, <code>close</code>, and <code>collect</code> hooks. Rook performs <code>judge</code> itself. See [Lifecycle Phases](/support/docs/rook-profiles-and-hooks/#lifecycle) for ordering and phase-specific inputs and outputs.
 
 The Web UI does not generate or edit profiles. To connect a new target, use [Prompt-Based Profile Authoring](/support/docs/rook-profiles-and-hooks/#add-a-profile-interactively) in the CLI, review the resulting scripts and permissions, test the profile, then run <code>rook sync</code>. A visible profile is not proof of successful verification on your current machine.
 
-#### Interpret Tools and Missing Values {#agent-summary-interpret-tools-and-missing-values}
+### Interpret Tools and Missing Values {#agent-summary-interpret-tools-and-missing-values}
 
-The **Tools** section lists recorded tools with read, write, or unknown access information when available. Unknown access is not equivalent to read-only. A dash for coverage means no measurement is available, not zero coverage.
+The **Tools** section lists recorded tools with read, write, or unknown access information when available. Unknown access is not equivalent to read-only. In this sample, the detail list is empty despite a five-tool counter; check the specification and call graph instead of treating that display as evidence that no tools exist.
 
 ### Versions and Call Graph {#versions}
 
 Open **Projects → your project → your agent → Versions** to inspect the definitions Rook has synchronized. Use this page when you need to establish which agent definition a result refers to.
 
-<img loading="lazy" src={require('../assets/images/rook/rook-web-versions.png').default} alt="Rook Versions tab with the current version, feature and scenario counts, timestamp, View call graph, and View Full Spec" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/rook/rook-web-versions.png').default} alt="Rook Versions tab with the current version, feature and scenario counts, timestamp, View call graph, and View Full Spec" width="1440" height="900" className="doc_img"/>
 
 #### Read a Version {#versions-read-a-version}
 
@@ -262,7 +313,7 @@ To investigate an old execution, first check **Agent version** on its [run detai
 
 Click **View call graph** on the relevant version.
 
-<img loading="lazy" src={require('../assets/images/rook/rook-web-call-graph.png').default} alt="Rook call graph for triage-service with two read-only tool edges and three write-capable tool edges" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/rook/rook-web-call-graph.png').default} alt="Rook call graph for triage-service with two read-only tool edges and three write-capable tool edges" width="1440" height="900" className="doc_img"/>
 
 The graph shows declared relationships to tools, subagents, and MCP servers where discovery recorded them. In the triage sample, <code>get_ticket</code> and <code>search_tickets</code> are read-only; <code>set_severity</code>, <code>assign_team</code>, and <code>reply_to_customer</code> can write. Dashed edges indicate unknown mutation status, not a safe operation.
 
@@ -280,7 +331,7 @@ A file or graph loading error is different from an empty definition. Retry and c
 
 Open **Projects → your project → your agent → Features**. This page lists the behaviors Rook identified during discovery and helps you find behaviors that still need tests.
 
-<img loading="lazy" src={require('../assets/images/rook/rook-web-features.png').default} alt="Rook Features table with five triage behaviors; two have one scenario each and three show none" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/rook/rook-web-features.png').default} alt="Rook Features table with five triage behaviors; two have one scenario each and three show none" width="1440" height="900" className="doc_img"/>
 
 #### Connect Behaviors to Tests {#features-connect-behaviors-to-tests}
 
@@ -290,7 +341,7 @@ Each row contains the feature ID, its name and user story, and the number of ass
 
 #### Read Feature Details {#features-read-feature-details}
 
-<img loading="lazy" src={require('../assets/images/rook/rook-web-feature-details.png').default} alt="Feature details for outage triage, including user story, expected behavior, validation rules, edge cases, and source files" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/rook/rook-web-feature-details.png').default} alt="Feature details for outage triage, including user story, expected behavior, validation rules, edge cases, and source files" width="1440" height="900" className="doc_img"/>
 
 The feature dialog presents the sections recorded in its definition:
 
@@ -314,7 +365,7 @@ Discovery and scenario authoring happen in the CLI. If a behavior is wrong or in
 
 Open **Projects → your project → your agent → Scenarios**. This is the scenario catalog, not the result list for a particular run. Use it to review what can be tested and find scenarios with no recorded execution.
 
-<img loading="lazy" src={require('../assets/images/rook/rook-web-scenarios.png').default} alt="Rook Scenarios catalog with four filters, one unrun billing scenario, and one passing outage scenario" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/rook/rook-web-scenarios.png').default} alt="Rook Scenarios catalog with four filters, one unrun billing scenario, and one passing outage scenario" width="1440" height="900" className="doc_img"/>
 
 #### Read a Scenario Row {#scenarios-read-a-scenario-row}
 
@@ -335,7 +386,7 @@ For a result from a specific execution, use [Runs → run → scenario](#run-det
 
 The menus reflect values present in the catalog. Multiple filters narrow the result together. The count on the right shows matching scenarios against the catalog total; changing filters returns to the first results page. Use **Clear filters** to restore the complete list.
 
-<img loading="lazy" src={require('../assets/images/rook/rook-web-scenarios-filter.png').default} alt="Rook Result filter set to never run, leaving SC-001 as one of two scenarios and exposing Clear filters" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/rook/rook-web-scenarios-filter.png').default} alt="Rook Result filter set to never run, leaving SC-001 as one of two scenarios and exposing Clear filters" width="1440" height="900" className="doc_img"/>
 
 For a first coverage check, select **Result → never run**. Open each matching scenario, review its goal and side effects, then run the selected cases from the CLI against an approved target. This page has no Run button.
 
@@ -349,7 +400,7 @@ Filters are retained in the URL. You can share that URL with a teammate who has 
 
 Open **Projects → your project → your agent → Scenarios → scenario ID**. This page explains the test definition: what Rook asks the agent to do and how it intends to judge the outcome. It is different from the [result of one attempt](#results).
 
-<img loading="lazy" src={require('../assets/images/rook/rook-web-scenario-details.png').default} alt="SC-002 definition with its outage-triage goal, four acceptance criteria, definition metadata, and one run in history" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/rook/rook-web-scenario-details.png').default} alt="SC-002 definition with its outage-triage goal, four acceptance criteria, definition metadata, and one run in history" width="1440" height="900" className="doc_img"/>
 
 #### Review Before Running {#scenario-details-review-before-running}
 
@@ -386,7 +437,7 @@ Next: [Run Details and Plan](#run-details) → [Results and Artefacts](#results)
 
 Open **Projects → your project → your agent → Runs**. This is the shared execution history for that agent. Use it to find a named run and establish which recorded version it tested.
 
-<img loading="lazy" src={require('../assets/images/rook/rook-web-runs.png').default} alt="Rook Runs table with the docs-smoke-0.1.3 execution, version 1, result bar, pass percentage, coverage, credits, plan, and duration" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/rook/rook-web-runs.png').default} alt="Rook Runs table with the docs-smoke-0.1.3 execution, version 1, one passed result, 100 percent pass, credits, and duration" width="1440" height="900" className="doc_img"/>
 
 #### Choose an Execution {#runs-choose-an-execution}
 
@@ -396,12 +447,10 @@ Open **Projects → your project → your agent → Runs**. This is the shared e
 | **Agent version** | Identifies the version this execution used, which may differ from the current version. |
 | **Result** | Outcome distribution across passed, partial, failed, errored/unverifiable, and skipped results where recorded. Hover or focus the bar for its count summary. |
 | **Pass** | Aggregate pass percentage; cross-check the actual run counts if it disagrees with the result bar. |
-| **Coverage** | Recorded coverage, or a dash when unavailable. |
 | **Credits** | Recorded consumption, not an estimate for your next execution. |
-| **Plan** | **View plan** opens the saved selection plan without leaving the list. |
 | **Duration** | Recorded run duration, not just the target agent's response latency. |
 
-The sample run took about 18 seconds overall, while its scenario result reports 87 ms of agent latency. Those values describe different parts of the workflow and should not be treated as interchangeable.
+Open the run to use **View plan**; the list does not have a Plan or Coverage column. The sample run took about 18 seconds overall, while its scenario result reports 87 ms of agent latency. Those values describe different parts of the workflow and should not be treated as interchangeable.
 
 Use pagination when more runs are available. To compare two executions, open each run and check its version, profile revision, and scenario selection before interpreting a change in results. This page does not provide a side-by-side diff or a browser Run button.
 
@@ -420,21 +469,21 @@ Use <code>rook ui --local</code> for on-disk evidence. See [Web UI setup and tro
 
 ### Run Details and Plan {#run-details}
 
-Open **Projects → your project → your agent → Runs → run name**. This page summarizes one recorded execution. You can also reach it from a scenario's History or a result's **Open full run** link.
+Open **Projects → your project → your agent → Runs → run name**. This page summarizes one recorded execution. You can also reach it from a scenario's History or the run breadcrumb on a result page.
 
-<img loading="lazy" src={require('../assets/images/rook/rook-web-run.png').default} alt="Completed docs-smoke-0.1.3 run with one passed scenario, unavailable coverage, the local-triage profile, and its result row" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/rook/rook-web-run.png').default} alt="Completed docs-smoke-0.1.3 run with a narrow-coverage warning, one passed scenario, metadata including local-triage, and a View plan link" width="1440" height="900" className="doc_img"/>
 
 #### Establish the Run Context {#run-details-establish-the-run-context}
 
 Read the run name and completion state, then the hosted run ID, agent version, concurrency, duration, and credits where supplied. Use the hosted ID when discussing the browser record with your team; it may differ from the local run directory ID.
 
-**completed** describes the run's execution state, not whether every test passed. Read the outcome tiles and scenario rows. The example executed one scenario and passed it, but **Coverage —** means coverage is unavailable. It does not establish full coverage of the five discovered features.
+**completed** describes the run's execution state, not whether every test passed. Read the narrative, outcome tiles, and scenario rows. The example executed one scenario and passed it; the narrative explicitly warns that the test set is narrow. This does not establish full coverage of the five discovered features.
 
 #### Inspect the Plan {#run-details-inspect-the-plan}
 
 Click **View plan** to read the recorded <code>run.yaml</code>.
 
-<img loading="lazy" src={require('../assets/images/rook/rook-web-run-plan.png').default} alt="Recorded Rook run plan with version and profile pins, SC-002 included, and SC-001 excluded by the only flag" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/rook/rook-web-run-plan.png').default} alt="Recorded Rook run plan with version and profile pins, SC-002 included, and SC-001 excluded by the only flag" width="1440" height="900" className="doc_img"/>
 
 Check the included scenario IDs and reasons, exclusions, concurrency, test mode, and pinned agent and profile revisions. This answers “What was selected?” before you inspect “What happened?” The plan is not a live phase-progress view.
 
@@ -442,13 +491,13 @@ In this smoke test, SC-002 was included and SC-001 was excluded by <code>--only<
 
 #### Check the Invocation Profile {#run-details-check-the-invocation-profile}
 
-**Invoke profile** identifies the profile used by this run and its available script path. **View Full Spec** opens the recorded profile revision. Use it to investigate a changed target, hook mapping, or environment requirement; the current profile on Summary may have changed since this run.
+The run's **Profile** row identifies the profile it used. Click the profile name to inspect the specification pinned to this run, when available. The adjacent link opens that profile in the agent's **Profiles** tab, which shows its current revision. These are different destinations: today's profile may have changed since the run. Use the pinned specification when investigating a changed target, hook mapping, or environment requirement.
 
 The browser does not edit hooks or resume phases. If you intentionally stopped a run before judging, use the CLI's [phase controls](/support/docs/rook-profiles-and-hooks/#run-only-part-of-the-lifecycle) to complete the remaining work and synchronize it.
 
 #### Open a Scenario Result {#run-details-open-a-scenario-result}
 
-The table shows scenario ID and title, criterion indicators, compliance, latency, and status. Click the **scenario ID** to open that run's [result and evidence](#results). Compliance and latency describe that recorded result, not the entire feature catalog.
+The table shows scenario ID, title, and status. Click the **scenario ID** to open that run's [result and evidence](#results), including criterion decisions, compliance, and latency. These describe the recorded result, not the entire feature catalog.
 
 When available, additional panels show gaps, latency summaries, failures by tool, and adversarial analysis. A skipped-results section gives recorded skip reasons. Missing panels mean that analysis was not supplied; they are not proof that no problems exist. If an **Errored** outcome appears, inspect the result to distinguish execution problems from an inability to verify the response.
 
@@ -458,11 +507,15 @@ For **No graded results in this run**, inspect the plan, run state, completed ph
 
 Open **Projects → your project → your agent → Runs → run → scenario ID**. This page is the evidence for a scenario attempt in that run, not the current scenario definition. Use it to decide whether a failure belongs to the target, the invocation, the test expectation, or missing verification evidence.
 
-The header shows the scenario outcome and available criterion counts, compliance, latency, and turns. The **RUN** banner identifies the execution; **Open full run** returns to its details.
+Start with the scenario outcome and any judge summary, then read the **Acceptance criteria**. Filter criteria by **All**, **Pass**, **Fail**, or **Unable to Verify**, with additional statuses when recorded. Passing cards start collapsed; click a criterion or **Expand all** to read its evidence. The **Result** panel shows available compliance, latency, and turns. Use the run breadcrumb to return to the execution; expand the breadcrumb's ellipsis if that link is hidden.
+
+<img loading="lazy" src={require('../assets/images/rook/rook-web-result-criteria.png').default} alt="Rook scenario result with criterion filters, four collapsed passing cards, Expand all, and buttons to open evidence" width="1440" height="900" className="doc_img"/>
+
+The **Evidence** panel opens a right-hand drawer for **Request**, **Response**, **Verdict**, and **Artefacts**. No file drawer opens by default. Choose the record you need, switch its tabs inside the drawer, and close it to return to the criteria.
 
 #### Request: What Was Sent? {#results-request-what-was-sent}
 
-<img loading="lazy" src={require('../assets/images/rook/rook-web-result.png').default} alt="Rook Request tab showing request.json beside the four acceptance criteria and their expected, achieved, and evidence fields" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/rook/rook-web-result.png').default} alt="Rook evidence drawer with Request selected and request.json showing the scenario goal and invocation profile" width="1440" height="900" className="doc_img"/>
 
 Read <code>request.json</code> to confirm the scenario ID, attempt number, goal, setup messages, selected profile, and invoked script. In the example, SC-002 sent <code>please look at T-1043</code> through <code>local-triage</code>.
 
@@ -470,7 +523,7 @@ If the goal or profile is wrong, investigate the scenario and run plan before bl
 
 #### Response: What Came Back? {#results-response-what-came-back}
 
-<img loading="lazy" src={require('../assets/images/rook/rook-web-result-response.png').default} alt="Rook Response tab with a user-agent transcript and response.json containing the output and recorded invocation data" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/rook/rook-web-result-response.png').default} alt="Rook Response tab with a user-agent transcript and response.json containing the output and recorded invocation data" width="1440" height="900" className="doc_img"/>
 
 When available, the transcript presents the user/agent exchange above <code>response.json</code>. Read the output, raw response, reported tool calls, latency, turns, artifacts, and observation notes that this invocation recorded. Scroll the file viewer to read long lines and records; the screenshot shows only the current viewport.
 
@@ -478,11 +531,11 @@ The sample reply says the ticket was triaged, and the hook also recorded tool-ca
 
 #### Verdict: How Was It Judged? {#results-verdict-how-was-it-judged}
 
-<img loading="lazy" src={require('../assets/images/rook/rook-web-result-verdict.png').default} alt="Rook Verdict tab showing the recorded verdict.yaml next to the readable acceptance-criteria cards" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/rook/rook-web-result-verdict.png').default} alt="Rook evidence drawer with Verdict selected and the recorded verdict.yaml" width="1440" height="900" className="doc_img"/>
 
 **Verdict** displays the saved <code>verdict.yaml</code>. Use it when you need the recorded evaluation details behind the rendered cards, rather than just the overall badge. The file viewer's copy button copies its content; inspect it for sensitive data before sharing.
 
-The **Acceptance criteria** cards remain beside the tabs. For every criterion, read:
+The **Acceptance criteria** cards are on the main result page. Close the evidence drawer as needed to read them. For every criterion, read:
 
 - **Expected:** the requirement being checked.
 - **Achieved:** the recorded assessment of the actual outcome.
@@ -495,46 +548,32 @@ Use [Verdicts and Reports](/support/docs/agent-assurance-results-and-evidence/) 
 
 #### Artefacts: What Files Support the Result? {#results-artefacts-what-files-support-the-result}
 
-<img loading="lazy" src={require('../assets/images/rook/rook-web-result-artefacts.png').default} alt="Rook Artefacts tab listing judge-working.json with a View button while criterion evidence remains visible" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/rook/rook-web-result-artefacts.png').default} alt="Rook evidence drawer with Artefacts selected and judge-working.json available through View" width="1440" height="900" className="doc_img"/>
 
 Click **View** beside a file to open it. The sample has an evidence file, <code>judge-working.json</code>. Where both kinds are recorded, **Output artefacts** and **Evidence artefacts** let you switch between agent-produced files and supporting evaluation evidence. The chooser is unnecessary when only one kind is present.
 
-**No artefacts recorded for this attempt** means no such files were attached. It does not erase the Request, Response, or Verdict records on the other tabs. If you expected a screenshot, trace, or generated file, check that the profile returned or collected it and that uploads completed. See [Profiles and Hooks](/support/docs/rook-profiles-and-hooks/).
+**No artefacts recorded for this attempt** means no such files were attached. It does not erase the Request, Response, or Verdict records in the drawer's other tabs. If you expected a screenshot, trace, or generated file, check that the profile returned or collected it and that uploads completed. See [Profiles and Hooks](/support/docs/rook-profiles-and-hooks/).
 
 #### Share the Right Context {#results-share-the-right-context}
 
 The selected result tab is reflected in the URL, so copying the browser URL preserves that tab on reload. Recipients still need access to the same environment and project. Do not substitute a local run-directory ID into a hosted URL or share a loopback viewer link as though it were public.
 
-For a useful bug report, include the run URL, scenario ID, criterion that disagrees with the observed behavior, and a sanitized evidence excerpt. Then return to [Run Details](#run-details) or use [Insights](#insights) to look for a broader pattern.
+For a useful bug report, include the run URL, scenario ID, criterion that disagrees with the observed behavior, and a sanitized evidence excerpt. Then return to [Run Details](#run-details) or [review coverage gaps](#insights).
 
-## Insights {#insights}
+## Find Coverage Gaps {#insights}
 
-Open **Projects → your project → your agent → Insights**. This page summarizes recorded run data to help you decide what to investigate or test next. It is not a substitute for reading a particular run's evidence.
+<span id="insights-read-each-panel" />
+<span id="insights-turn-a-summary-into-an-action" />
+<span id="insights-when-there-is-no-trend" />
 
-<img loading="lazy" src={require('../assets/images/rook/rook-web-insights.png').default} alt="Rook Insights with a single-run chart and panels for tool failures, category coverage, unverifiable expectations, and adversarial pressure" className="doc_img"/>
+The former Insights tab is not currently available. Use these existing views instead:
 
-### Read Each Panel {#insights-read-each-panel}
+1. Open [Features](#features) to find behaviors without scenarios.
+2. Use [Scenarios → Result → never run](#scenarios) to find generated tests without execution.
+3. Open a run and filter its result criteria to **Fail** or **Unable to Verify**. Read the evidence before changing the agent, hooks, or test expectations.
+4. Compare runs only after checking their scenario selection, agent version, profile revision, and target conditions. A changed pass percentage alone does not explain a regression.
 
-| Panel | What it helps you investigate |
-|---|---|
-| **Pass rate across versions** | Reported run pass rates. When supplied, a comparison summary shows the rate change and newly failing or fixed scenarios. One run is explicitly not a trend. |
-| **Failures by tool** | Tools associated with recorded failures. Open the affected runs to inspect calls, arguments, and evidence before attributing the cause. |
-| **Coverage gaps by category** | Categories with gaps in recorded passing coverage. This does not enumerate features for which no scenarios were generated. |
-| **Unverifiable expectations** | Recorded expectations that could not be checked, with scenario links when supplied. Investigate evidence collection and verifier access. |
-| **Adversarial pressure** | Recorded adversarial attempts and compromises. No attempts means adversarial resilience has not been established. |
-
-For the verified sample, **No adversarial scenarios have run** is accurate: the smoke test exercised one functional happy-path case. Likewise, **No tool failures recorded** does not prove every tool works in every situation.
-
-### Turn a Summary into an Action {#insights-turn-a-summary-into-an-action}
-
-Start with [Features](#features) to find behaviors that lack scenarios. Then use [Scenarios → Result → never run](#scenarios) to find generated tests without an execution. If Insights identifies unverifiable expectations, open those scenarios and follow their History to the specific result before changing hooks or expectations.
-
-To investigate a regression, compare the underlying runs' scenario selection, agent version, profile revision, and target conditions. A changed pass percentage alone cannot tell you which of those changed.
-
-
-### When There Is No Trend {#insights-when-there-is-no-trend}
-
-**Nothing to trend yet** means no trend data is available. Check the page's readiness hint, complete the necessary profile/scenario setup, and upload a reviewed normal run. Test-mode local runs do not populate this shared view. With one run, use its results as a baseline; multiple comparable executions are needed to assess change.
+The sample has one functional smoke test; it establishes neither a trend nor adversarial resilience. Local `--test` runs do not populate shared history.
 
 ## Share a Result
 
@@ -557,14 +596,12 @@ Review artifacts for secrets and customer information before downloading or shar
 
 ### Screenshot Display Notes {#screenshot-display-notes}
 
-These captures preserve the interface observed on September 11, 2026. The values below are display inconsistencies in the captured build, not failures of the sample agent or an assertion that the current release still has them. Cross-check the underlying run evidence when a summary disagrees.
+These captures preserve the interface observed on September 25, 2026. Two inconsistencies remain for this historical sample. They are not failures of the sample agent; cross-check the underlying records when a summary disagrees.
 
 | Display | What to verify instead |
 |---|---|
-| Agents, Summary, Runs, and Insights show **1%** for **1 of 1 passed**. | Open the run and its criterion evidence; do not use the aggregate percentage as a release gate. |
 | Summary shows no tools despite a five-tool count. | Inspect the recorded specification and the version call graph. |
 | Scenario History shows **0 pass** despite four passing criteria. | Follow its run link and inspect the actual result. |
-| Insights shows **v1 · v1** and **No category gaps** despite untested behaviors. | Read each run's recorded agent version. Check Features for missing scenarios and Scenarios for tests that never ran. |
 
 If values disagree, cross-check `rook report <run-id> --json` and the recorded specification before making a release decision.
 

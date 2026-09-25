@@ -349,9 +349,9 @@ See [both UI walkthroughs](/support/docs/rook-web-ui/#choose-your-ui) and [crite
 
 #### Local UI: Check the Completed Run {#local-ui-example}
 
-Open the agent's **runs** list and select the execution. The local sample shows one passed scenario, its narrative, and the start of the selection plan. Click the scenario row for criterion evidence; a 100% rate from one scenario is not full coverage.
+Open the agent's **Runs** tab and select the execution. The saved CommerceCare demo has mixed passing, failed, and unverifiable results; **completed** does not mean every scenario passed. Read the narrative, open **View plan**, and click a scenario for criterion evidence. The profile name opens the run's saved configuration; the adjacent link opens the current profile. See the [local walkthrough and rollout note](/support/docs/rook-web-ui/#local-runs) for layout differences.
 
-<img loading="lazy" src={require('../assets/images/rook/rook-local-run.png').default} alt="Local run page showing one passed scenario, run narrative, and recorded selection plan" width="1440" height="900" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/rook/rook-local-run.png').default} alt="Local CommerceCare run showing mixed scenario outcomes, narrative, View plan, and profile metadata" width="1440" height="900" className="doc_img"/>
 
 #### Hosted Web UI: Review the Shared Execution {#hosted-ui-example}
 
