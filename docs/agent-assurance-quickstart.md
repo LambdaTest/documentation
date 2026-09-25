@@ -98,7 +98,7 @@ import { BRAND_URL } from '@site/src/component/BrandName';
         "https://www.youtube.com/@TestMuAI"
       ]
     },
-    "dateModified": "2026-09-11"
+    "dateModified": "2026-09-25"
   }) }}
 />
 
@@ -112,11 +112,10 @@ Already have a live agent? Follow the same sequence with your own [source or req
 
 ## Install and Authenticate the CLI
 
-Choose one public install method:
+Choose one public install method. On Windows, first follow [native PowerShell setup](/support/docs/rook-installation/#windows), then use the PowerShell alternatives below. Use `rook.cmd` in PowerShell and the same slash commands inside Rook's terminal.
 
 ```bash
 # Homebrew
-brew tap LambdaTest/rook https://github.com/LambdaTest/rook.git
 brew install lambdatest/rook/rook
 ```
 
@@ -130,6 +129,12 @@ curl -fsSL https://raw.githubusercontent.com/LambdaTest/rook/main/install.sh | b
 npm install -g @testmuai/rook
 ```
 
+PowerShell on Windows x64:
+
+```powershell
+npm.cmd install -g @testmuai/rook@0.1.5
+```
+
 Then check your installation:
 
 ```bash
@@ -137,7 +142,7 @@ rook --version
 rook doctor
 ```
 
-See [Install Rook](/support/docs/rook-installation/) for PATH, upgrade, and checksum help. The packaged CLI includes its runtime. The sample below also needs a separate Node.js installation and Git.
+See [Install Rook](/support/docs/rook-installation/) for PATH, upgrade, and checksum help, including migration from the old Homebrew tap. The packaged CLI includes its runtime. The sample below also needs a separate Node.js installation and Git available in the same terminal.
 
 <span id="choose-production-or-stage-before-signing-in" />
 
@@ -152,10 +157,19 @@ rook whoami
 rook plan
 ```
 
+In PowerShell, use:
+
+```powershell
+$env:ROOK_ENV = 'prod'
+rook.cmd login
+rook.cmd whoami
+rook.cmd plan
+```
+
 Public packages default to <code>ROOK_ENV=prod</code>. This setting selects Rook's service; it does **not** change your target agent's endpoint. Keep the target on a disposable or non-production environment while testing.
 
 :::note Existing credentials
-If <code>LT_USERNAME</code> and <code>LT_ACCESS_KEY</code> are exported, they take precedence over stored browser login. Use credentials for the selected environment, or unset both in this terminal before using browser login. Never paste credentials into documentation, prompts, or screenshots.
+If <code>LT_USERNAME</code> and <code>LT_ACCESS_KEY</code> are exported, they take precedence over stored browser login. Use credentials for the selected environment, or unset both in this terminal before using browser login. In PowerShell, use `Remove-Item Env:LT_USERNAME, Env:LT_ACCESS_KEY -ErrorAction SilentlyContinue` to remove them from this session only. Never paste credentials into documentation, prompts, or screenshots.
 :::
 
 ## Test Your First Agent
@@ -171,7 +185,19 @@ git clone --depth 1 --filter=blob:none --sparse https://github.com/LambdaTest/ro
 cd rook-samples
 git sparse-checkout set samples/triage-service
 cd samples/triage-service
+```
+
+Start the sample in that terminal. On macOS/Linux:
+
+```bash
 PORT=19110 node src/server.mjs
+```
+
+On Windows PowerShell:
+
+```powershell
+$env:PORT = '19110'
+node src/server.mjs
 ```
 
 Leave it running. It keeps fixture changes in memory; restarting it resets them. From another terminal, verify the target:
@@ -181,6 +207,14 @@ curl -fsS http://127.0.0.1:19110/healthz
 curl -fsS http://127.0.0.1:19110/v1/triage \
   -H 'content-type: application/json' \
   -d '{"input":"please look at T-1043"}'
+```
+
+In PowerShell, use `Invoke-RestMethod` instead of the Bash cURL example:
+
+```powershell
+Invoke-RestMethod -Uri 'http://127.0.0.1:19110/healthz'
+$rookProbe = @{ input = 'please look at T-1043' } | ConvertTo-Json
+Invoke-RestMethod -Uri 'http://127.0.0.1:19110/v1/triage' -Method Post -ContentType 'application/json' -Body $rookProbe
 ```
 
 The response should say <code>T-1043 triaged as S1 and assigned to platform.</code> and include the recorded tool steps.
@@ -193,6 +227,14 @@ Open the sample folder in your Rook terminal:
 cd rook-samples/samples/triage-service
 export ROOK_ENV=prod
 rook
+```
+
+Or, in PowerShell:
+
+```powershell
+Set-Location 'rook-samples/samples/triage-service'
+$env:ROOK_ENV = 'prod'
+rook.cmd
 ```
 
 The remaining slash commands belong inside the TUI. From a shell, replace the leading slash with <code>rook </code>.
@@ -273,24 +315,24 @@ First read the report, then choose either UI:
 |---|---|
 | Run `/ui --local`. | Run `/ui`. |
 | Open **triage-service → runs → your run → scenario**. | Open **project → triage agent → Runs → first-triage-run → scenario** in the Web UI. |
-| Read **criteria**, then scroll to **sent to the agent**, **what came back**, and **files**. | Read **Request**, **Response**, **Verdict**, and **Artefacts**. |
+| In the redesigned viewer, read **Acceptance criteria**, then choose **Request**, **Response**, **Verdict**, or **Artefacts** from **Evidence**. For older CLI layouts, see the note below. | Read the criteria, then open **Request**, **Response**, **Verdict**, or **Artefacts** from **Evidence**. |
 | Works with on-disk evidence, including `--test` runs; keep the TUI open while reviewing. | Requires browser sign-in and uploaded results; teammates need project access. |
 
 Both routes inspect the recorded evidence without running the agent again. The [local and hosted UI walkthrough](/support/docs/rook-web-ui/#choose-your-ui) shows the different screens and explains missing results.
 
 In the verified smoke test, the selected scenario passed with four observed tool calls and no unverifiable criteria. That proves this one fixture path worked—not that the whole agent is reliable. Review the four other discovered features before expanding the suite.
 
-#### Local UI: Your First Result {#local-ui-example}
+#### Local UI: Review a Result {#local-ui-example}
 
-The local result shows **criteria** with expected outcomes, achieved results, and supporting evidence. Scroll down for the request, response, and files. This is SC-002 from the verified sample; your generated scenario ID can differ.
+The redesigned local result has **Acceptance criteria** filters and an **Evidence** drawer for request, response, verdict, and artifacts. This screenshot uses a separate saved CommerceCare demo (SC-006), not the triage execution above. It illustrates one failed requirement and two unverifiable criteria; your scenario IDs and outcomes will differ. Public CLI 0.1.5 still uses the earlier scrolling layout—see the [rollout and navigation note](/support/docs/rook-web-ui/#earlier-local-ui).
 
-<img loading="lazy" src={require('../assets/images/rook/rook-local-result.png').default} alt="Local quickstart result showing SC-002 passing and the evidence supporting its acceptance criteria" width="1440" height="900" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/rook/rook-local-result.png').default} alt="Redesigned local result for the separate CommerceCare SC-006 demo, with failed and unverifiable criteria" width="1440" height="900" className="doc_img"/>
 
 #### Hosted Web UI: The Uploaded Result {#hosted-ui-example}
 
-The same sample result appears in the hosted UI after upload. Open **Verdict** to read the saved evaluation beside the criterion cards. These are two presentations of the recorded test, not two additional agent executions.
+The uploaded triage quickstart result appears below. Open **Evidence → Verdict** to read the saved evaluation in the drawer, then close it to return to the criterion cards. Use **Expand all** to read passing criteria, which start collapsed. Opening either UI reviews existing evidence; it does not execute the agent again.
 
-<img loading="lazy" src={require('../assets/images/rook/rook-web-result-verdict.png').default} alt="Hosted quickstart result with verdict.yaml and the four passing criterion cards" width="1440" height="900" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/rook/rook-web-result-verdict.png').default} alt="Hosted quickstart result with verdict.yaml open in the evidence drawer" width="1440" height="900" className="doc_img"/>
 
 ### 7. Stop the sample when finished
 

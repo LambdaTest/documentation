@@ -394,18 +394,18 @@ Malformed scope files and duplicate discovered names are reported with their sou
 
 ## Review MCP Evidence in Either UI
 
-Use `rook ui --local` for the current workspace's run → scenario → **criteria**, response, and **files**. Use `rook ui` for the hosted Web UI's uploaded run → scenario → **Response**, **Verdict**, and **Artefacts**. Both can show MCP-related evidence only when it was actually recorded; declaring a tool or verifier does not prove it was called.
+Use `rook ui --local` for workspace records or `rook ui` for uploaded results. In either redesigned interface, open **run → scenario**, inspect the acceptance criteria, then choose **Response**, **Verdict**, or **Artefacts** in **Evidence** to open the drawer. Both can show MCP-related evidence only when it was actually recorded; declaring a tool or verifier does not prove it was called. See the [earlier local layout](/support/docs/rook-web-ui/#earlier-local-ui) if your CLI still has scrolling sections.
 
 Neither UI starts, approves, or edits an MCP server. Resolve missing verification access with the CLI commands above, then inspect the resulting evidence. The [local and hosted walkthrough](/support/docs/rook-web-ui/#choose-your-ui) shows both review layouts.
 
 ### Local UI: Where to Inspect Verification Evidence {#local-ui-example}
 
-Open **agent → run → scenario** and read **criteria**, the response, and **files**. The screenshot locates the criterion evidence panel using the HTTP triage sample; it does not show an MCP invocation. For an MCP-backed test, inspect the actual recorded calls and verification gaps here.
+Open **agent → Runs → run → scenario** and read **Acceptance criteria**, then inspect **Evidence → Response** and **Verdict**. This saved CommerceCare demo locates the review controls; it does not demonstrate an MCP invocation or configuration. For an MCP-backed test, inspect that run's actual calls and verification gaps here.
 
-<img loading="lazy" src={require('../assets/images/rook/rook-local-result.png').default} alt="Local HTTP triage result illustrating the criterion evidence panel, not an MCP server configuration screen" width="1440" height="900" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/rook/rook-local-result.png').default} alt="Local CommerceCare result illustrating failed and unverifiable criteria, not an MCP configuration or invocation" width="1440" height="900" className="doc_img"/>
 
 ### Hosted Web UI: Where to Inspect Uploaded Calls {#hosted-ui-example}
 
-Open **run → scenario → Response** for the recorded exchange and observed calls, then check **Verdict** and **Artefacts**. This is the same HTTP sample, not MCP-specific evidence. An MCP tool declaration or connection status alone cannot establish what the tested agent actually did.
+Open **run → scenario → Evidence → Response** for the recorded exchange and observed calls, then check **Verdict** and **Artefacts** in the drawer. This separate hosted HTTP triage sample is not MCP-specific evidence. An MCP tool declaration or connection status alone cannot establish what the tested agent actually did.
 
 <img loading="lazy" src={require('../assets/images/rook/rook-web-result-response.png').default} alt="Hosted Response tab for the HTTP sample, illustrating where recorded invocation evidence is reviewed" width="1440" height="900" className="doc_img"/>
