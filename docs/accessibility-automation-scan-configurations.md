@@ -150,13 +150,11 @@ import VerifiedTag from '@site/src/component/verifiedTag';
 In automation there is no scan-configuration panel. The scan scope is supplied through each test's **capabilities**, so every test carries its own configuration and the effective rule set is derived from these values. This is the automation counterpart to the manual [Scan Configurations](/support/docs/accessibility-app-scanner-scan-configurations/) panel.
 
 :::note
-Per-rule enable/disable picking is a **Manual-only** feature and is not used in automation. In automation, the rule set is computed from the WCAG version plus the group toggles.
+Individual rules and whole rule categories can be removed from an automation scan with the `accessibility.excludeRules` and `accessibility.excludeRuleCategories` capabilities. See [Rule and Category Exclusion for Mobile App Accessibility](/support/docs/accessibility-mobile-rule-exclusion/).
 :::
 
-:::warning
-**autoScan is not supported on real devices.** The `accessibility.autoscan` capability is a **web automation** capability only. It cannot be used to scan a whole app flow on a real device the way it scans a whole web flow on desktop.
-
-On real devices, every scan must be triggered explicitly with the `lambda-accessibility-scan` hook at each stable screen. A screen that is never followed by a hook call is never scanned. See [Automating Accessibility Testing with Selenium](/support/docs/accessibility-automation-test/) for autoScan on web.
+:::note
+The capabilities on this page scope **what** a scan checks. **When** a scan runs is a separate choice: the `lambda-accessibility-scan` hook at each stable screen, or `accessibility.autoScan` to scan every screen the test reaches. See [AutoScan for Mobile App Accessibility](/support/docs/accessibility-mobile-autoscan/).
 :::
 
 ## When to use this
@@ -178,13 +176,19 @@ Use these capabilities when users **already run Appium** against <BrandName /> r
 | `accessibility.bestPractice` | boolean | `true` / `false` | `true` |
 | `accessibility.betaRules` | boolean | `true` / `false` | `true` |
 | `accessibility.aiEnabled` | boolean | `true` / `false` | `false` |
+| `accessibility.excludeRules` | array of strings, or a comma-separated string | Rule IDs from the mobile rules catalog | none |
+| `accessibility.excludeRuleCategories` | array of strings, or a comma-separated string | Category slugs, for example `color-contrast` | none |
+| `accessibility.autoScan` | boolean | `true` / `false` | `false` |
+| `accessibility.intelligentScan` | boolean | `true` / `false` | `true` (only when `autoScan` is `true`) |
+| `accessibility.intelligentScanThreshold` | integer | `0` to `99` | `95` (only when `autoScan` is `true`) |
 
 Notes:
 
 - Defaults apply only when `accessibility` is `true` and the specific capability is omitted.
-- `accessibility.autoscan` is deliberately absent from this table. It is a web automation capability and is **not supported for app automation on real devices**. Use the `lambda-accessibility-scan` hook instead.
+- `accessibility.autoScan` and its two child capabilities control **when** scans are triggered rather than what they check. They are summarised here for completeness and documented in full, with the trigger list, pause and resume, and the Android and iOS timing difference, in [AutoScan for Mobile App Accessibility](/support/docs/accessibility-mobile-autoscan/). The child capabilities are ignored when `accessibility.autoScan` is `false`.
 - `accessibility.aiEnabled` is the same AI toggle used elsewhere in accessibility; it is reused here.
 - A backend capability `accessibility.needsReview` also exists but is not part of the standard automation scan config (defaults off).
+- `accessibility.excludeRules` and `accessibility.excludeRuleCategories` are optional and mobile-only. Accepted values, precedence and error handling are described in [Rule and Category Exclusion for Mobile App Accessibility](/support/docs/accessibility-mobile-rule-exclusion/).
 
 ## How the effective rule set is computed
 
@@ -192,6 +196,7 @@ The rule set for a test is derived from the WCAG version and the group toggles, 
 
 - **WCAG inheritance.** A higher version or level includes the lower ones. Selecting `wcag21aa` runs every rule whose success criterion is in WCAG **2.0 or 2.1** at level **A or AA**. WCAG 2.2 rules and AAA-only rules are not included until the version or level is raised.
 - **Group combination.** Some rules carry a Best Practice, Beta, or AI tag. A rule runs only if **both** its WCAG criterion is in range **and** every tag it carries is switched on. For example, a Best Practice rule is skipped when `accessibility.bestPractice` is `false`, even if its WCAG criterion is in range.
+- **Exclusions.** Rules named in `accessibility.excludeRules`, and every rule in a category named in `accessibility.excludeRuleCategories`, are removed after the WCAG and group filters. Exclusion only ever removes rules; it never adds a rule back. See [Rule and Category Exclusion](/support/docs/accessibility-mobile-rule-exclusion/#how-the-effective-rule-set-is-resolved).
 
 ## Example: setting capabilities
 
@@ -267,7 +272,7 @@ Only the rules in the effective set are evaluated, and the report for that build
 
 - **Scoped results.** Each scan reports violations only for the rules in the test's effective set. Rules outside the WCAG range or behind an off group toggle do not appear and do not affect the accessibility score for that scan.
 - **Configuration recorded with the test.** The WCAG version and group toggles are stored alongside the scan, so the team can always see how a given result was produced.
-- **Applied rules are visible in the report.** The report header shows the applied configuration as tags (for example, **WCAG 2.1 AA**, **Best Practices**, **Beta Rules**), and the **Applied Settings** panel lists every rule that was evaluated, grouped by category and searchable, so the exact selected rules can be confirmed for any scan.
+- **Applied rules are visible in the report.** The report header shows the applied configuration as tags (for example, **WCAG 2.1 AA**, **Best Practices**, **Beta Rules**), and the **Applied Settings** panel lists every rule that was evaluated, grouped by category and searchable, so the exact selected rules can be confirmed for any scan. Rules removed by an exclusion are listed under **Excluded by category** and **Excluded by rule**.
 
 The report shows the applied WCAG target and group tags, and the **Applied Settings** panel lists the selected rules by category:
 
@@ -286,3 +291,5 @@ This page covers configuring scans through **capabilities in automation**. For h
 - [Appium TestNG](/support/docs/accessibility-appium-testng/)
 - [Appium WebdriverIO](/support/docs/accessibility-appium-webdriverio/)
 - [Tag Support for Accessibility Scans](/support/docs/accessibility-tag-support/)
+- [Rule and Category Exclusion for Mobile App Accessibility](/support/docs/accessibility-mobile-rule-exclusion/)
+- [AutoScan for Mobile App Accessibility](/support/docs/accessibility-mobile-autoscan/)

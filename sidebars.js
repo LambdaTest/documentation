@@ -1365,6 +1365,11 @@ module.exports = {
             items: [
               {
                 type: "doc",
+                label: "AutoScan",
+                id: "accessibility-mobile-autoscan",
+              },
+              {
+                type: "doc",
                 label: "Scan Configurations",
                 id: "accessibility-automation-scan-configurations",
               },
@@ -1377,6 +1382,27 @@ module.exports = {
                 type: "doc",
                 label: "Appium WebdriverIO",
                 id: "accessibility-appium-webdriverio",
+              },
+            ],
+          },
+          {
+            type: "category",
+            collapsed: true,
+            label: "Screen Reader Automation",
+            link: {
+              type: "doc",
+              id: "accessibility-screen-reader-automation",
+            },
+            items: [
+              {
+                type: "doc",
+                label: "Auto Report",
+                id: "accessibility-screen-reader-automation-auto-report",
+              },
+              {
+                type: "doc",
+                label: "Executor Hooks",
+                id: "accessibility-screen-reader-automation-hooks",
               },
             ],
           },
@@ -1453,6 +1479,16 @@ module.exports = {
               },
               {
                 type: "doc",
+                label: "Rule & Category Exclusion (Automation)",
+                id: "accessibility-web-automation-rule-exclusion",
+              },
+              {
+                type: "doc",
+                label: "Rule & Category Exclusion (DevTools & Scheduling)",
+                id: "accessibility-devtools-rule-exclusion",
+              },
+              {
+                type: "doc",
                 label: "AI Issue Detection Agent",
                 id: "accessibility-ai-issue-detection-agent",
               },
@@ -1486,6 +1522,11 @@ module.exports = {
                 type: "doc",
                 label: "Tag Support",
                 id: "accessibility-tag-support",
+              },
+              {
+                type: "doc",
+                label: "Rule & Category Exclusion",
+                id: "accessibility-mobile-rule-exclusion",
               },
             ],
           },
