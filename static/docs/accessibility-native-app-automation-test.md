@@ -4,6 +4,8 @@
 
 Native App Automation uses **Appium** with the **`lambda-accessibility-scan`** hook to generate accessibility results during **Android** or **iOS** test runs on the TestMu AI grid.
 
+There are two ways to trigger scans on a real device. Call `lambda-accessibility-scan` at each screen you want covered, as described below, or set `accessibility.autoScan` to `true` and have every screen your test reaches scanned automatically. See [AutoScan for Mobile App Accessibility](/support/docs/accessibility-mobile-autoscan/) and [Scan Configurations via Capabilities](/support/docs/accessibility-automation-scan-configurations/).
+
 ## When to use this
 
 Use this page when your team **already runs Appium** for functional tests and wants accessibility checks in the **same execution path** with deterministic checkpoints.
@@ -32,7 +34,7 @@ driver.executeScript("lambda-accessibility-scan");
 
 1. Upload the app and configure the Appium session.
 2. Enable Accessibility in the session capabilities.
-3. Trigger `lambda-accessibility-scan` at important checkpoints.
+3. Trigger `lambda-accessibility-scan` at important checkpoints, or enable [AutoScan](/support/docs/accessibility-mobile-autoscan/) to scan every screen the test reaches.
 4. Review the report in the dashboard.
 
 ## Product boundary
@@ -41,8 +43,11 @@ This page is for direct Appium-based automation. If you are authoring the flow i
 
 ## Related docs
 
+- [AutoScan for Mobile App Accessibility](/support/docs/accessibility-mobile-autoscan/)
 - [Scan Configurations via Capabilities (Automation)](/support/docs/accessibility-automation-scan-configurations/)
+- [Rule and Category Exclusion for Mobile App Accessibility](/support/docs/accessibility-mobile-rule-exclusion/)
 - [Appium TestNG](/support/docs/accessibility-appium-testng/)
 - [Appium WebdriverIO](/support/docs/accessibility-appium-webdriverio/)
 - [Accessibility App Scanner (Overview)](/support/docs/accessibility-app-scanner/)
 - [Tag Support for Accessibility Scans](/support/docs/accessibility-tag-support/)
+- [Screen Reader Automation (Overview)](/support/docs/accessibility-screen-reader-automation/)
