@@ -112,7 +112,11 @@ options.setCapability("accessibility", true);
 AppiumDriver driver = new AndroidDriver(new URL("https://mobile-hub.lambdatest.com/wd/hub"), options);
 ```
 
-Use the **official capability set** your account documentation lists for the current Appium version; the critical addition is `"accessibility": true`.
+Use the **official capability set** your account documentation lists for the current Appium version. The critical addition is `"accessibility": true`.
+
+:::note
+To scan every screen your test reaches without a hook call at each one, set `accessibility.autoScan` to `true` on the session. See [AutoScan for Mobile App Accessibility](/support/docs/accessibility-mobile-autoscan/). Keep the hook where you need a scan at an exact moment.
+:::
 
 ### 2. Call the scan hook after navigation
 
@@ -137,7 +141,7 @@ Open **[Navigating the Dashboard](/support/docs/accessibility-testing-navigating
 | Symptom | What to check |
 |--------|----------------|
 | Hook throws | Driver must be a session where accessibility capability was set; verify spelling `lambda-accessibility-scan`. |
-| Empty report | Hook never called and autoscan off; or page never reached stable state. |
+| Empty report | Hook never called, or the screen never reached a stable state. To cover every screen without per-screen hooks, enable [AutoScan](/support/docs/accessibility-mobile-autoscan/). |
 
 ## Related docs
 

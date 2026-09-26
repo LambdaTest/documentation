@@ -46,11 +46,66 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/accessibility-app-scanner-scan-configurations/"
+    },
+    "headline": "Scan Configurations for Mobile App Accessibility (Manual)",
+    "description": "Configure which accessibility rules run on a manual mobile app scan: pick a WCAG level, toggle rule groups, enable individual rules, and reuse last-used settings.",
+    "url": "https://www.testmuai.com/support/docs/accessibility-app-scanner-scan-configurations/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Accessibility Testing",
+    "keywords": [
+      "mobile accessibility scan configuration",
+      "wcag conformance level",
+      "accessibility rule groups"
+    ],
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 # Scan Configurations for Mobile App Accessibility (Manual)
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
-
-Scan Configurations let users decide exactly which accessibility rules run on a **manual** mobile app scan before it starts. Instead of always running the full built-in rule set, users choose a WCAG conformance target, turn rule groups on or off, and hand-pick individual rules. TestMu AI remembers each user's choices and pre-fills them on the next scan.
+Scan Configurations let users decide exactly which accessibility rules run on a **manual** mobile app scan before it starts. Instead of always running the full built-in rule set, users choose a WCAG conformance target, turn rule groups on or off, and hand-pick individual rules. <BrandName /> remembers each user's choices and pre-fills them on the next scan.
 
 This brings mobile app accessibility to **parity with web accessibility**, where configurable scans already existed.
 
@@ -58,12 +113,13 @@ This brings mobile app accessibility to **parity with web accessibility**, where
 
 Use Scan Configurations when users want to scope a manual scan to only the relevant checks - for example, running a focused **WCAG 2.1 AA** pass, excluding AI-powered rules, or disabling individual rules that do not apply to a screen. Because rules outside the selection are skipped **before** they run on the device, narrower configurations also make scans faster.
 
+
 ## How to configure a scan
 
 1. **Start a mobile app accessibility scan** through the Manual flow.
 2. **Open the scan configuration panel.** It loads the **rules catalog** for the selected platform, grouped by category. The first time it is opened, it shows the **system defaults**. After that, it shows the user's **last-used settings**.
 3. **Choose the WCAG version and level** (for example, WCAG 2.1 AA). The rule list automatically narrows to the rules included by that selection.
-4. **Toggle the required rule groups** Best Practice, Beta, AI Detection
+4. **Toggle the required rule groups** Best Practice, Beta, AI Detection 
 5. **Fine-tune individual rules.** Within each category, switch specific rules on or off. Anything left on is **Enabled**; anything switched off is **Disabled**. To switch a whole category off or on in one click, use the checkbox on the category header (see [Rule and Category Exclusion](/support/docs/accessibility-mobile-rule-exclusion/#manual-app-scanner)).
 6. **Run the scan.** Only the selected rules are evaluated on the device, and the report contains results for exactly those rules.
 
@@ -85,6 +141,7 @@ Users select a single WCAG target such as `wcag2a`, `wcag21aa`, or `wcag22aaa`. 
 - A higher **level** includes the lower ones: choosing **AA** also brings in all **A** rules; choosing **AAA** brings in **A + AA + AAA**.
 
 > **Example:** Selecting **WCAG 2.1 AA** runs every rule whose success criterion is in WCAG **2.0 or 2.1** at level **A or AA**. WCAG 2.2 rules and AAA-only rules are **not** included until the version or level is raised.
+
 
 ### Rule groups
 
@@ -161,6 +218,7 @@ No. Settings are saved per user and per platform.
 
 **Why are AI-powered rules off by default?**
 They are opt-in by design: AI rules invoke AI evaluation and surface items for manual verification rather than automatic pass/fail. Users enable them when that depth is required.
+
 
 ## Related docs
 

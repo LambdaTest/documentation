@@ -116,6 +116,10 @@ export const config = {
 
 Match keys to your Appium server version (`appium:` prefix for W3C caps).
 
+:::note
+To scan every screen your test reaches without a hook call at each one, set `accessibility.autoScan` to `true` on the session. See [AutoScan for Mobile App Accessibility](/support/docs/accessibility-mobile-autoscan/). Keep the hook where you need a scan at an exact moment.
+:::
+
 ### 2. Call the hook after screens load
 
 ```ts
