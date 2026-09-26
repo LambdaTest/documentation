@@ -284,4 +284,7 @@ Accessibility scanning supports **native** Android and iOS apps only. **Hybrid a
 
 ## Related docs
 
+- [AutoScan for Mobile App Accessibility](/support/docs/accessibility-mobile-autoscan/)
+- [Rule and Category Exclusion for Mobile App Accessibility](/support/docs/accessibility-mobile-rule-exclusion/)
+- [Screen Reader Automation (Overview)](/support/docs/accessibility-screen-reader-automation/)
 - [Tag support for accessibility scans](/support/docs/accessibility-tag-support/)

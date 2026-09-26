@@ -907,6 +907,17 @@ module.exports = {
           { type: "doc", label: "Cypress", id: "cypress-v10-accessibility-test" },
           { type: "doc", label: "Playwright", id: "playwright-accessibility-test" },
           { type: "doc", label: "Appium", id: "accessibility-native-app-automation-test" },
+          { type: "doc", label: "Mobile AutoScan", id: "accessibility-mobile-autoscan" },
+          {
+            type: "category",
+            collapsed: true,
+            label: "Screen Reader Automation",
+            link: { type: "doc", id: "accessibility-screen-reader-automation" },
+            items: [
+              { type: "doc", label: "Auto Report", id: "accessibility-screen-reader-automation-auto-report" },
+              { type: "doc", label: "Executor Hooks", id: "accessibility-screen-reader-automation-hooks" },
+            ],
+          },
         ],
       },
       {
@@ -921,6 +932,9 @@ module.exports = {
           { type: "doc", label: "PDF Accessibility Scanning", id: "accessibility-pdf-accessibility-scanning" },
           { type: "doc", label: "Tag Support", id: "accessibility-tag-support" },
           { type: "doc", label: "Issue Remediation", id: "accessibility-issue-remediation-guide" },
+          { type: "doc", label: "Rule & Category Exclusion (Web Automation)", id: "accessibility-web-automation-rule-exclusion" },
+          { type: "doc", label: "Rule & Category Exclusion (DevTools & Scheduling)", id: "accessibility-devtools-rule-exclusion" },
+          { type: "doc", label: "Rule & Category Exclusion (Mobile)", id: "accessibility-mobile-rule-exclusion" },
         ],
       },
       {

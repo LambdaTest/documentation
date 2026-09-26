@@ -205,6 +205,7 @@ Extend your coverage with complementary tooling and assistive-technology testing
 
 - [Accessibility Testing with Deque's axe](/support/docs/deque-integration/): run automated accessibility checks using Deque's axe across 3000+ browsers.
 - [Screen Reader and VoiceOver on Real Devices](/support/docs/screen-reader-voiceover-real-devices-browser/): perform manual screen reader and VoiceOver testing on real devices.
+- [Screen Reader Automation](/support/docs/accessibility-screen-reader-automation/): run TalkBack and VoiceOver inside Appium tests on real devices, auto-generate a Screen Reader Report, and assert on spoken output with executor hooks.
 - [Accessibility NUnit C# Test](/support/docs/accessibility-testng-test/): run automated accessibility checks from an NUnit (C#) test.
 
 ## Choose the Right Tool

@@ -119,6 +119,7 @@ TestMu AI supports the following screen readers during Accessibility Testing, so
 | Windows desktop web | [NVDA on Windows](#nvda-on-windows) (free, common) or [JAWS on Windows](#jaws-on-windows) (enterprise) |
 | macOS desktop web | [VoiceOver on macOS](#voiceover-on-macos) |
 | Android app or web | [TalkBack on Android](#talkback-on-android) (often paired with [App Scanner](/support/docs/accessibility-app-scanner/)) |
+| Android or iOS app, inside Appium tests | [Screen Reader Automation](/support/docs/accessibility-screen-reader-automation/) (TalkBack and VoiceOver on real devices, with an auto-generated Screen Reader Report and executor hooks for assertions) |
 
 For the best coverage, run an automated or DevTools scan first (start with a [DevTools Keyboard Scan](/support/docs/accessibility-devtools/#keyboard-scan/) to catch focus-order gaps), export the top issues, then walk the same URLs with a screen reader to confirm real-world impact before filing engineering bugs. The sections below walk each screen reader end to end in that order.
 
@@ -241,3 +242,4 @@ For structured coverage, pair this short manual matrix with App Scanner:
 - [Accessibility Testing overview](/support/docs/accessibility-testing/)
 - [Accessibility DevTools guide](/support/docs/accessibility-devtools/)
 - [Accessibility issue remediation guide](/support/docs/accessibility-issue-remediation-guide/)
+- [Screen Reader Automation (Overview)](/support/docs/accessibility-screen-reader-automation/)
