@@ -403,6 +403,7 @@ Aggregated scheduled reporting preserves historical audit consistency. Updates a
 ## Related docs
 
 - [Navigating the Dashboard](/support/docs/accessibility-testing-navigating-dashboard/)
+- [Rule and Category Exclusion for Web Accessibility Automation](/support/docs/accessibility-web-automation-rule-exclusion/) (skip a rule before the scan instead of hiding it afterwards)
 - [All Issues](/support/docs/accessibility-testing-dashboard-all-issues/)
 - [Exporting & Sharing Reports](/support/docs/accessibility-exporting-sharing-reports/)
 - [Starting an Accessibility Scan with Web Scanner](/support/docs/web-scanner-accessibility-scan/)
