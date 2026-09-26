@@ -112,6 +112,13 @@ paths:
                   enum: ['individual', 'team']
                   default: 'individual'
                   description: Visibility scope of the uploaded application.
+                release_notes:
+                  type: string
+                  maxLength: 1100
+                  description: >-
+                    Release notes for this build. Maximum 1100 characters; anything longer is
+                    truncated. Emoji and non-Latin scripts are not supported as of now.
+                    Neither case fails the upload.
               required:
                 - appFile
                 - name
@@ -135,6 +142,11 @@ paths:
                     type: string
                   custom_id:
                     type: string
+                  release_notes:
+                    type: string
+                    description: >-
+                      The release notes as stored, after the 1100-character cap and character-set
+                      substitution. Omitted when the stored value is empty.
               example:
                 app_id: "APP10160502401693989036908244"
                 name: "Appname"
@@ -142,6 +154,7 @@ paths:
                 app_url: "lt://APPID"
                 url: "APP_URL"
                 custom_id: "Custom"
+                release_notes: "Fixed login crash on Android 14; improved upload speed"
         '401':
           description: Unauthorized access. Authentication required.
         '415':
