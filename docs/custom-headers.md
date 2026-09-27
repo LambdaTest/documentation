@@ -17,6 +17,175 @@ canonical: https://www.testmuai.com/support/docs/custom-headers/
 ---
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": BRAND_URL
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Support",
+      "item": `${BRAND_URL}/support/docs/`
+    },{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Custom HTTP Headers",
+      "item": `${BRAND_URL}/support/docs/custom-headers/`
+    }]
+  })
+}}
+></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/custom-headers/"
+    },
+    "headline": "How to Set Custom HTTP Headers in Selenium on TestMu AI",
+    "description": "Add custom HTTP headers to Selenium tests on TestMu AI using the customHeaders capability to bypass firewalls and control requests.",
+    "url": "https://www.testmuai.com/support/docs/custom-headers/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Documentation",
+    "keywords": [
+      "custom headers bypass firewall selenium",
+      "customUrlFilters selective header injection",
+      "add custom HTTP headers selenium tests"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "How to Use CustomHeaders Capability on TestMu AI",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "DesiredCapabilities capabilities = new DesiredCapabilities();\ncapabilities.setCapability(\"customHeaders\", new HashMap<String, String>() {{\n    put(\"headerName\", \"headerValue\");\n}});"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Implementation Example",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "DesiredCapabilities capabilities = new DesiredCapabilities();\n\nMap<String, String> headers = new HashMap<>();\nheaders.put(\"WebView\", \"Enable\");\nheaders.put(\"X-Custom-Token\", \"secure-token-123\");\n\nList<String> urlFilters = Arrays.asList(\n    \"https://www.xhaus.com/headers\",\n    \"https://.*\\\\.example\\\\.com/.*\"\n);\n\ncapabilities.setCapability(\"customHeaders\", headers);\ncapabilities.setCapability(\"customUrlFilters\", urlFilters);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "User Identification and Session Management",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "HTTP",
+        "text": "X-Session-ID: 1234567890"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Content Negotiation",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "HTTP",
+        "text": "Accept: application/json"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Rate Limiting",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "HTTP",
+        "text": "X-RateLimit-Remaining: 10"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Debugging and Performance Tracking",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "HTTP",
+        "text": "X-Execution-Time: 150ms"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "CORS (Cross-Origin Resource Sharing)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "HTTP",
+        "text": "Access-Control-Allow-Origin: *"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Custom Application Logic",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "HTTP",
+        "text": "X-App-Version: v2.3.1"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Bypassing Firewalls/Proxies",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "HTTP",
+        "text": "User-Agent: Mozilla/5.0 (Windows NT 10.0...)"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Server Health",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "HTTP",
+        "text": "X-Server-Status: All systems operational"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "SEO Optimization",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "HTTP",
+        "text": "Link: <https://example.com/page>; rel=\"canonical\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "A/B Testing",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "HTTP",
+        "text": "X-Experiment-ID: variant_b"
+      }
+    ],
+    "dateModified": "2026-09-09T19:13:32+05:30"
+  }) }}
+/>
 
 # How to Set Custom HTTP Headers in Selenium on TestMu AI
 ---
@@ -39,6 +208,8 @@ Add custom headers using the Capabilities class.
 
 2. Use the customHeaders capability to add your custom headers.
 
+<VerifiedTag value="Verified" />
+
 ```java
 DesiredCapabilities capabilities = new DesiredCapabilities();
 capabilities.setCapability("customHeaders", new HashMap<String, String>() {{
@@ -47,6 +218,114 @@ capabilities.setCapability("customHeaders", new HashMap<String, String>() {{
 ```
 
 In the above code snippet, replace "headerName" and "headerValue" with the actual name and value of the header. You can add multiple headers based on your requirements.
+
+## CustomHeaders: Use Cases and Examples
+---
+
+Custom headers serve different purposes for web development and network communications.
+
+
+1. **User Identification and Session Management**: Send tokens and session IDs to authenticate and identify users. This helps manage user sessions and implement stateless authentication.
+
+**Example**: The Custom header `X-Session-ID` tracks user sessions.
+
+<VerifiedTag value="Verified" />
+
+```java
+X-Session-ID: 1234567890 
+```
+
+2. **Content Negotiation**: Determine how the client and server decide on the data format to exchange. The "Accept" header specifies the format (like JSON or XML) that the client prefers.
+
+**Example**: `Accept` header specifies the client-preferred format of the response data.
+
+<VerifiedTag value="Verified" />
+
+```java
+Accept: application/json 
+```
+
+3. **Rate Limiting**: APIs use custom headers to provide information about rate limits, including how many requests a client can make in a given time period and when they can make new requests.
+
+**Example**
+
+<VerifiedTag value="Verified" />
+
+```java
+X-RateLimit-Limit: 60
+X-RateLimit-Remaining: 56
+X-RateLimit-Reset: 1372700873
+```
+
+4. **Debugging and Performance Tracking**: Some services include custom headers in their responses to provide additional information for debugging or performance tracking, such as server version numbers and execution times.
+
+**Example**
+
+<VerifiedTag value="Verified" />
+
+```java
+X-Session-ID: 1234567890 //custom header X-Session-ID to track user sessions.
+```
+
+5. **CORS (Cross-Origin Resource Sharing)**: The CORS standard uses custom headers to allow browsers and servers to interact securely with resources from different origins, including headers like "Access-Control-Allow-Origin" and "Access-Control-Allow-Methods".
+
+**Example**
+
+<VerifiedTag value="Verified" />
+
+```java
+X-Session-ID: 1234567890 //custom header X-Session-ID to track user sessions.
+```
+
+6. **Custom Application Logic**: Use custom headers to implement specific application-level logic, such as determining the response language, enabling or disabling features, or specifying API version numbers.
+
+**Example**
+
+<VerifiedTag value="Verified" />
+
+```java
+X-Session-ID: 1234567890 //custom header X-Session-ID to track user sessions.
+```
+
+7. **Bypassing Firewalls or Proxies**: In some cases, use custom headers to bypass certain network restrictions, such as firewalls or proxy servers. Always do this responsibly and in accordance with security policies.
+
+**Example**
+
+<VerifiedTag value="Verified" />
+
+```java
+X-Session-ID: 1234567890 //custom header X-Session-ID to track user sessions.
+```
+
+8. **Server Health and Status Information**: Some applications use custom headers to provide health and status information about the server or application for monitoring purposes.
+
+**Example**
+
+<VerifiedTag value="Verified" />
+
+```java
+X-Session-ID: 1234567890 //custom header X-Session-ID to track user sessions.
+```
+
+9. **SEO Optimization**: Custom headers like canonical and pagination headers guide search engines and optimize SEO.
+
+**Example**
+
+<VerifiedTag value="Verified" />
+
+```java
+X-Session-ID: 1234567890 //custom header X-Session-ID to track user sessions.
+```
+
+10. **A/B Testing**: Use custom headers to control or track A/B testing, where different versions of a service are tested against each other.
+
+**Example**
+
+<VerifiedTag value="Verified" />
+
+```java
+X-Session-ID: 1234567890 //custom header X-Session-ID to track user sessions.
+```
 
 ## CustomHeader Capability: Your Key to Bypass Firewalls
 ---
@@ -69,6 +348,8 @@ The customUrlFilters capability, used together with customHeaders, lets you spec
 
 ### Implementation Example
 ---
+
+<VerifiedTag value="Verified" />
 
 ```java
 DesiredCapabilities capabilities = new DesiredCapabilities();
@@ -110,6 +391,8 @@ The following examples show common use cases for custom headers.
 
 Send tokens or session IDs with headers like:
 
+<VerifiedTag value="Verified" />
+
 ```http
 X-Session-ID: 1234567890
 ```
@@ -117,6 +400,8 @@ X-Session-ID: 1234567890
 **Content Negotiation**
 
 Specify expected response formats:
+
+<VerifiedTag value="Verified" />
 
 ```http
 Accept: application/json
@@ -126,6 +411,8 @@ Accept: application/json
 
 Get limits and usage from APIs:
 
+<VerifiedTag value="Verified" />
+
 ```http
 X-RateLimit-Remaining: 10
 ```
@@ -133,6 +420,8 @@ X-RateLimit-Remaining: 10
 **Debugging and Performance Tracking**
 
 Include trace info or timing metrics:
+
+<VerifiedTag value="Verified" />
 
 ```http
 X-Execution-Time: 150ms
@@ -142,6 +431,8 @@ X-Execution-Time: 150ms
 
 Enable cross-origin requests:
 
+<VerifiedTag value="Verified" />
+
 ```http
 Access-Control-Allow-Origin: *
 ```
@@ -149,6 +440,8 @@ Access-Control-Allow-Origin: *
 **Custom Application Logic**
 
 Pass app-level config:
+
+<VerifiedTag value="Verified" />
 
 ```http
 X-App-Version: v2.3.1
@@ -158,6 +451,8 @@ X-App-Version: v2.3.1
 
 Mask the request with common headers:
 
+<VerifiedTag value="Verified" />
+
 ```http
 User-Agent: Mozilla/5.0 (Windows NT 10.0...)
 ```
@@ -165,6 +460,8 @@ User-Agent: Mozilla/5.0 (Windows NT 10.0...)
 **Server Health**
 
 Return backend state:
+
+<VerifiedTag value="Verified" />
 
 ```http
 X-Server-Status: All systems operational
@@ -174,6 +471,8 @@ X-Server-Status: All systems operational
 
 Guide search engines:
 
+<VerifiedTag value="Verified" />
+
 ```http
 Link: <https://example.com/page>; rel="canonical"
 ```
@@ -181,6 +480,8 @@ Link: <https://example.com/page>; rel="canonical"
 **A/B Testing**
 
 Track experimental groups:
+
+<VerifiedTag value="Verified" />
 
 ```http
 X-Experiment-ID: variant_b

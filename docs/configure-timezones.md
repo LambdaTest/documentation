@@ -21,6 +21,7 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import CodeBlock from '@theme/CodeBlock';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -46,6 +47,82 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/configure-timezones/"
+    },
+    "headline": "How to Test Across Timezones in Selenium on TestMu AI",
+    "description": "Configure custom timezones in Selenium tests on TestMu AI to validate time-sensitive features across different regions.",
+    "url": "https://www.testmuai.com/support/docs/configure-timezones/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Documentation",
+    "keywords": [
+      "selenium timezone capability",
+      "configure timezone selenium",
+      "timezone testing automation",
+      "IANA timezone selenium",
+      "set timezone test vm"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Set the Timezone Using the timezone Capability (Java)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "HashMap<String, Object> ltOptions = new HashMap<>();\nltOptions.put(\"username\", System.getenv(\"LT_USERNAME\"));\nltOptions.put(\"accessKey\", System.getenv(\"LT_ACCESS_KEY\"));\nltOptions.put(\"timezone\", \"UTC-05:00\");\nltOptions.put(\"project\", \"Timezone Test\");\nbrowserOptions.setCapability(\"LT:Options\", ltOptions);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Set the Timezone Using the timezone Capability (Python)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Python",
+        "text": "lt_options = {\n    \"username\": os.environ[\"LT_USERNAME\"],\n    \"accessKey\": os.environ[\"LT_ACCESS_KEY\"],\n    \"timezone\": \"UTC-05:00\",\n    \"project\": \"Timezone Test\",\n}\noptions.set_capability(\"LT:Options\", lt_options)"
+      }
+    ],
+    "dateModified": "2026-09-27T00:00:00+05:30"
+  }) }}
+/>
+
 # How to Test Across Timezones in Selenium on TestMu AI
 ---
 
@@ -56,6 +133,8 @@ Many applications display dates, schedule events, or trigger time-sensitive logi
 Pass a UTC offset string in `LT:Options` to configure the test VM's system timezone. The `timezone` capability works alongside the other [Selenium automation capabilities](/support/docs/selenium-automation-capabilities/) you set in `LT:Options`.
 
 Add the `timezone` capability to your `LT:Options` configuration. The value is a UTC offset string in the format `UTC+HH:MM` or `UTC-HH:MM` (e.g., `UTC+05:30`). The default is `UTC+00:00`.
+
+<VerifiedTag value="Verified" />
 
 <Tabs className="docs__val">
 

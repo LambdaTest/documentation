@@ -20,6 +20,7 @@ canonical: https://www.testmuai.com/support/docs/playwright-android/
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -45,6 +46,101 @@ import TabItem from '@theme/TabItem';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/playwright-android/"
+    },
+    "headline": "How to Run Playwright Android Tests on TestMu AI",
+    "description": "Run Playwright tests on real Android devices with TestMu AI across Node.js, Java, C#, and Python using a CDP endpoint and LT:Options.",
+    "url": "https://www.testmuai.com/support/docs/playwright-android/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Web Automation",
+    "keywords": [
+      "playwright android testing testmu ai",
+      "playwright mobile testing",
+      "run playwright tests on android devices"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Set credentials on Windows",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "set LT_USERNAME=\"YOUR_LAMBDATEST_USERNAME\"\nset LT_ACCESS_KEY=\"YOUR_LAMBDATEST_ACCESS_KEY\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Set credentials on macOS/Linux",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "export LT_USERNAME=\"YOUR_LAMBDATEST_USERNAME\"\nexport LT_ACCESS_KEY=\"YOUR_LAMBDATEST_ACCESS_KEY\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Install the Playwright package (Node.js)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "npm install playwright"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Run Your First Test (Node.js chromium.connect)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "const { chromium } = require(\"playwright\");\n\n(async () => {\n  const capabilities = {\n    \"LT:Options\": {\n      platformName: \"android\",\n      deviceName: \".*\",\n      platformVersion: \".*\",\n      isRealMobile: true,\n      build: \"Playwright Android Build\",\n      name: \"Playwright Android Test\",\n      user: process.env.LT_USERNAME,\n      accessKey: process.env.LT_ACCESS_KEY,\n      network: true,\n      video: true,\n      console: true,\n      playwrightClientVersion: \"1.61.0\",\n    },\n  };\n\n  const cdpUrl = `wss://cdp.lambdatest.com/playwright?capabilities=${encodeURIComponent(\n    JSON.stringify(capabilities)\n  )}`;\n\n  const browser = await chromium.connect(cdpUrl);\n  const context = browser.contexts()[0] || (await browser.newContext());\n  const page = context.pages()[0] || (await context.newPage());\n\n  await page.goto(\"https://duckduckgo.com\", { timeout: 30000 });\n  await page.locator('[name=\"q\"]').fill(\"LambdaTest\");\n  await page.locator('[name=\"q\"]').press(\"Enter\");\n  await page.waitForTimeout(3000);\n\n  const title = await page.title();\n  console.log(\"Page title:\", title);\n\n  await page.close();\n  await browser.close();\n})();"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Run the Node.js test",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "node playwright-android-test.js"
+      }
+    ],
+    "dateModified": "2026-09-27T00:00:00+05:30"
+  }) }}
+/>
+
 # How to Run Playwright Android Tests on TestMu AI
 ***
 
@@ -65,6 +161,8 @@ Before you run a test, set your TestMu AI username and access key as environment
 
 **Windows**
 
+<VerifiedTag value="Verified" />
+
 ```bash
 set LT_USERNAME="YOUR_LAMBDATEST_USERNAME"
 set LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
@@ -72,10 +170,14 @@ set LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
 
 **macOS/Linux**
 
+<VerifiedTag value="Verified" />
+
 ```bash
 export LT_USERNAME="YOUR_LAMBDATEST_USERNAME"
 export LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
 ```
+
+<VerifiedTag value="Verified" />
 
 <Tabs className="docs__val">
 
@@ -129,6 +231,8 @@ dotnet add package Microsoft.Playwright
 ***
 
 Pick your language below, then use the sample script to connect to TestMu AI and run a search test on a real Android device.
+
+<VerifiedTag value="Verified" />
 
 <Tabs className="docs__val">
 
@@ -270,6 +374,8 @@ const { _android } = require("playwright");
 
 :::tip
 The timeout value specified in the Playwright configuration may default to 30 seconds on real devices. To set a custom timeout, add:
+
+<VerifiedTag value="Verified" />
 
 ```javascript
 context.setDefaultTimeout(120000);  // Set your desired timeout value.

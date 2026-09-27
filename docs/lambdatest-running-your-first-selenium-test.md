@@ -25,6 +25,7 @@ import TabItem from '@theme/TabItem';
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -50,6 +51,137 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       })
     }}
 ></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/testmu-running-your-first-selenium-test/"
+    },
+    "headline": "Run Your First Selenium Test",
+    "description": "Run your first Selenium test on the TestMu AI cloud grid using Python and pytest. Clone a sample project, set credentials, configure capabilities, and view results.",
+    "url": "https://www.testmuai.com/support/docs/testmu-running-your-first-selenium-test/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Web Automation",
+    "keywords": [
+      "selenium first test",
+      "run selenium test online",
+      "selenium cloud testing",
+      "selenium python pytest"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 1: Clone the Sample Project",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "codeRepository": "https://github.com/LambdaTest/pytest-selenium-sample",
+        "text": "git clone https://github.com/LambdaTest/pytest-selenium-sample\ncd pytest-selenium-sample"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 4: Configure Your Test Capabilities",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Python",
+        "text": "chrome_options = webdriver.ChromeOptions()\noption = {\n    \"platform\": \"Windows 10\",\n    \"version\": \"latest\",\n    \"name\": test_name,\n    \"Build\": build,\n    \"video\": True,\n    \"visual\": True,\n    \"network\": True,\n    \"console\": True\n}\nchrome_options.set_capability(\"LT:Options\", option)\nbrowser = webdriver.Remote(\n    command_executor=selenium_endpoint,\n    options=chrome_options\n)"
+      }
+    ],
+    "dateModified": "2026-09-27T00:00:00+05:30"
+  }) }}
+/>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Run Your First Selenium Test",
+      "description": "Run your first Selenium test on the TestMu AI cloud grid using Python and pytest. Clone a sample project, set credentials, configure capabilities, and view results.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Clone the Sample Project",
+          "text": "Pull the sample repo to your local machine and navigate into the project directory.",
+          "url": "https://www.testmuai.com/support/docs/testmu-running-your-first-selenium-test/#step-1-clone-the-sample-project"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Install Dependencies",
+          "text": "Install the project's Python dependencies, including Selenium, pytest, and pytest-xdist for parallel runs, from requirements.txt.",
+          "url": "https://www.testmuai.com/support/docs/testmu-running-your-first-selenium-test/#step-2-install-dependencies"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Set Your Credentials",
+          "text": "Add your TestMu AI credentials as environment variables so the test can authenticate with the grid. Copy your Username and Access Key from the dashboard Credentials page and export them as LT_USERNAME and LT_ACCESS_KEY.",
+          "url": "https://www.testmuai.com/support/docs/testmu-running-your-first-selenium-test/#step-3-set-your-credentials"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Step 4: Configure Your Test Capabilities",
+          "text": "Define which browser, version, and OS your test runs on. The sample keeps its capabilities in conftest.py inside the driver fixture. Use the Capabilities Generator to auto-generate the configuration for your target browser and OS.",
+          "url": "https://www.testmuai.com/support/docs/testmu-running-your-first-selenium-test/#step-4-configure-your-test-capabilities"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 5,
+          "name": "Step 5: Run the Test",
+          "text": "Trigger the test from your terminal. Run a single test with pytest -s, or run in parallel with pytest-xdist using pytest -s -n=2.",
+          "url": "https://www.testmuai.com/support/docs/testmu-running-your-first-selenium-test/#step-5-run-the-test"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 6,
+          "name": "Step 6: View Your Results",
+          "text": "Check the Automation Dashboard to see the video recording, screenshots, console logs, network logs, and Selenium command logs for each session.",
+          "url": "https://www.testmuai.com/support/docs/testmu-running-your-first-selenium-test/#step-6-view-your-results"
+        }
+      ]
+    }
+  ]) }}
+/>
 
 # How to Run Your First Selenium Test on TestMu AI
 ---
@@ -79,6 +211,8 @@ Make sure you have the following set up before you start.
 
 Pull the sample repo to your local machine and navigate into the project directory.
 
+<VerifiedTag value="Verified" />
+
 ```bash
 git clone https://github.com/LambdaTest/pytest-selenium-sample
 cd pytest-selenium-sample
@@ -88,6 +222,8 @@ cd pytest-selenium-sample
 ---
 
 Install the project's Python dependencies, including Selenium, pytest, and pytest-xdist (for parallel runs), from `requirements.txt`.
+
+<VerifiedTag value="Verified" />
 
 ```bash
 pip install -r requirements.txt
@@ -104,6 +240,8 @@ Visit the [TestMu AI Dashboard](https://www.testmuai.com/login/?redirectTo=https
 
 <TabItem value="bash" label="macOS / Linux" default>
 
+  <VerifiedTag value="Verified" />
+
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-bash">
   {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
@@ -114,6 +252,8 @@ export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 </TabItem>
 
 <TabItem value="powershell" label="Windows" default>
+
+  <VerifiedTag value="Verified" />
 
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-powershell">
@@ -131,6 +271,8 @@ $env:LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 Define which browser, version, and OS your test runs on.
 
 The sample keeps its capabilities in `conftest.py`, inside the `driver` fixture that starts the browser session. Here is the configuration from the sample:
+
+<VerifiedTag value="Verified" />
 
 ```python title="conftest.py"
 chrome_options = webdriver.ChromeOptions()
@@ -168,6 +310,8 @@ Trigger the test from your terminal. Run a single test, or run in parallel with 
 
 <TabItem value="single" label="Single Test" default>
 
+  <VerifiedTag value="Verified" />
+
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-bash">
   {`pytest -s tests/lt_sample_todo.py`}
@@ -177,6 +321,8 @@ Trigger the test from your terminal. Run a single test, or run in parallel with 
 </TabItem>
 
 <TabItem value="parallel" label="Parallel Test" default>
+
+  <VerifiedTag value="Verified" />
 
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-bash">

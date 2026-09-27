@@ -1316,6 +1316,7 @@ module.exports = {
         collapsed: true,
         label: "Reference",
         items: [
+          { type: "doc", id: "supported-browsers-and-operating-systems-for-the-web-interface" },
           { type: "doc", id: "lighthouse-reports-hooks" },
           { type: "doc", id: "performance-tips" },
           { type: "doc", id: "lambda-hooks" },
@@ -1350,10 +1351,11 @@ module.exports = {
         collapsed: true,
         label: "Test Capabilities",
         items: [
-          { type: "doc", id: "supported-browsers-and-os" },
+        
           { type: "doc", id: "run-settings" },
           { type: "doc", id: "private-dependencies-cypress" },
           { type: "doc", id: "download-artefacts-cypress" },
+            { type: "doc", id: "cypress-testing-using-webkit" },
         ],
       },
       {
@@ -1363,8 +1365,17 @@ module.exports = {
         items: [
           { type: "doc", id: "integrate-lambdatest-with-cypress" },
           { type: "doc", id: "applitools-integration-cypress" },
-          { type: "doc", id: "cypress-mochaawesome-report" },
+          { type: "doc", id: "report-portal-cypress" },
           { type: "doc", id: "cypress-detailed-command-logs" },
+        ],
+      },
+      {
+        type: "category",
+        collapsed: true,
+        label: "References",
+        items: [
+          { type: "doc", id: "supported-browsers-and-os" },
+          { type: "doc", id: "supported-cypress-versions" },
         ],
       },
     ],
@@ -1387,6 +1398,7 @@ module.exports = {
           { type: "doc", id: "playwright-agent-skills" },
           { type: "doc", id: "migrate-playwright-tests" },
           { type: "doc", id: "playwright-test-execution-setup" },
+          { type: "doc", id: "playwright-bundled-browser-support" },
           { type: "doc", id: "playwright-caps" },
         ],
       },
@@ -1395,9 +1407,10 @@ module.exports = {
         collapsed: true,
         label: "Languages & Frameworks",
         items: [
-          { type: "doc", id: "java-with-playwright" },
           { type: "doc", id: "javascript-with-playwright" },
+          { type: "doc", id: "typescript-with-playwright" },
           { type: "doc", id: "python-with-playwright" },
+          { type: "doc", id: "java-with-playwright" },
           { type: "doc", id: "csharp-with-playwright" },
         ],
       },
@@ -1410,6 +1423,7 @@ module.exports = {
           { type: "doc", id: "playwright-android-guide" },
           { type: "doc", id: "playwright-webview-test" },
           { type: "doc", id: "playwright-ios-guide" },
+          { type: "doc", id: "local-testing-playwright" },
           { type: "doc", id: "mute-test-scenarios" },
         ],
       },

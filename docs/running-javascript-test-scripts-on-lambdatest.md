@@ -24,6 +24,7 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 import CookieTrackingLogin from '@site/src/component/CookieTracking';
 
 <script type="application/ld+json"
@@ -49,6 +50,96 @@ import CookieTrackingLogin from '@site/src/component/CookieTracking';
       })
     }}
 ></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/javascript-with-selenium-running-javascript-automation-scripts-on-testmu-selenium-grid/"
+    },
+    "headline": "How to Run Selenium Tests With JavaScript on TestMu AI",
+    "description": "Run JavaScript Selenium tests on TestMu AI across 10,000+ browsers. Covers Mocha, Nightwatch, WebdriverIO, Jest, CucumberJS, Jasmine, and more.",
+    "url": "https://www.testmuai.com/support/docs/javascript-with-selenium-running-javascript-automation-scripts-on-testmu-selenium-grid/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Web Automation",
+    "keywords": [
+      "javascript selenium grid testing",
+      "run javascript selenium tests cloud",
+      "selenium webdriver javascript setup",
+      "javascript selenium cloud execution"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "A minimal capabilities object passing your browser and OS choices to the grid",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "const capabilities = {\n  build: 'NodeJS build',\n  name: 'Test 1',\n  platformName: 'Windows 10',\n  browserName: 'chrome',\n  browserVersion: 'latest',\n  network: true,\n  visual: true,\n  console: true,\n  video: true\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Clone the Mocha sample GitHub project",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "codeRepository": "https://github.com/LambdaTest/mocha-selenium-sample",
+        "text": "git clone https://github.com/LambdaTest/mocha-selenium-sample\ncd mocha-selenium-sample"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Set your browser and OS in conf/single.conf.js",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "exports.capabilities = {\n  'build': 'Mocha-Selenium-Sample',\n  'name': 'Your Test Name',\n  'platformName':'Windows 10',\n  'browserName': 'chrome',\n  'browserVersion': 'latest',\n  'visual': false,\n  'network':false,\n  'console':false,\n  'tunnel': false\n};"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Install dependencies and run the test",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "npm install\nnpm run single"
+      }
+    ],
+    "dateModified": "2026-09-09T19:13:32+05:30"
+  }) }}
+/>
 
 # How to Run Selenium Tests With JavaScript on TestMu AI
 ---
@@ -102,6 +193,8 @@ set LT_ACCESS_KEY=${ YOUR_LAMBDATEST_ACCESS_KEY()}`}
 
 Every framework below connects to the grid at `hub.lambdatest.com/wd/hub` and passes your browser and OS choices through a capabilities object. A minimal one looks like this:
 
+<VerifiedTag value="Verified" />
+
 ```js
 const capabilities = {
   build: 'NodeJS build',
@@ -142,6 +235,8 @@ cd mocha-selenium-sample
 
 2. Set your browser and OS in `conf/single.conf.js`:
 
+<VerifiedTag value="Verified" />
+
 ```js title="conf/single.conf.js"
 exports.capabilities = {
   'build': 'Mocha-Selenium-Sample',
@@ -178,6 +273,8 @@ Nightwatch reads its grid setup from `nightwatch.conf.js` in the cloned project.
 
 1. Clone the [sample GitHub project](https://github.com/LambdaTest/nightwatch-selenium-sample):
 
+<VerifiedTag value="Verified" />
+
 ```bash
 git clone https://github.com/LambdaTest/nightwatch-selenium-sample
 cd nightwatch-selenium-sample
@@ -212,6 +309,8 @@ cd webdriverio-selenium
 ```
 
 2. Set your browser and OS in `conf/single.conf.js`:
+
+<VerifiedTag value="Verified" />
 
 ```js title="conf/single.conf.js"
 exports.config = {
@@ -262,6 +361,8 @@ cd jest-selenium-webdriver-sample
 
 2. Set your browser and OS in the capabilities object:
 
+<VerifiedTag value="Verified" />
+
 ```js
 const capabilities = {
   build: 'jest-LambdaTest-Single',
@@ -299,6 +400,8 @@ cd NodeJs-Cucumber-Selenium
 ```
 
 2. Set your browser and OS in `conf/single.conf.js`:
+
+<VerifiedTag value="Verified" />
 
 ```js title="conf/single.conf.js"
 capabilities: [{
@@ -338,6 +441,8 @@ cd karma-jasmine-sample
 ```
 
 2. Set your browser and OS in `karma.conf.js`:
+
+<VerifiedTag value="Verified" />
 
 ```js title="karma.conf.js"
 customLaunchers: {
@@ -383,6 +488,8 @@ cd angular-karma-sample
 ```
 
 2. Set your browser and OS in `karma.conf.js`:
+
+<VerifiedTag value="Verified" />
 
 ```js title="karma.conf.js"
 customLaunchers: {

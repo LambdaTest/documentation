@@ -3,7 +3,7 @@ id: run-settings
 title: How to Configure Cypress Test Execution on TestMu AI
 hide_title: true
 toc_max_heading_level: 2
-sidebar_label: "Test Configuration"
+sidebar_label: "Configure Test Suites"
 description: Configure Cypress run settings on TestMu AI, including config file, spec paths, geolocation, resolution, timeouts, dependencies, and environment variables.
 keywords:
   - cypress run settings testmu ai
@@ -23,6 +23,7 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -47,6 +48,125 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       })
     }}
 ></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/run-settings/"
+    },
+    "headline": "How to Configure Cypress Test Execution on TestMu AI",
+    "description": "Configure Cypress run settings on TestMu AI, including config file, spec paths, geolocation, resolution, timeouts, dependencies, and environment variables.",
+    "url": "https://www.testmuai.com/support/docs/run-settings/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Web Automation",
+    "keywords": [
+      "cypress run settings testmu ai",
+      "cypress lambdatest-config.json run_settings",
+      "cypress config file capability",
+      "cypress geolocation and resolution settings",
+      "cypress npm_dependencies build time",
+      "cypress environment variables testmu ai"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Set the Cypress Config File (Cypress v9)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JSON",
+        "text": "{\n  \"run_settings\": {\n    \"cypress_config_file\": \"cypress.json\",\n    \"video\": true\n  }\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Specify the Spec Files to Run",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JSON",
+        "text": "{\n  \"run_settings\": {\n    \"specs\": \"**/*.cy.js\",\n  }\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Set the Test Geolocation",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JSON",
+        "text": "{\n  \"run_settings\": {\n    \"geo_location\": \"<country_code>\",\n  }\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Set the Screen Resolution",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JSON",
+        "text": "{\n  \"run_settings\": {\n    \"resolution\": \"1024x768\",\n  }\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Test in Full-Screen Mode (Cypress v10 and above)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "const { defineConfig } = require('cypress')\n\nmodule.exports = defineConfig({\n  \n  e2e: {\n    setupNodeEvents(on, config) {\n      on('before:browser:launch', (browser = {}, launchOptions) => {\n        if (browser.family === 'chromium' && browser.name !== 'electron') {\n          launchOptions.args.push('--start-fullscreen')\n      \n          return launchOptions\n        }\n      \n        if (browser.name === 'electron') {\n          launchOptions.preferences.fullscreen = true\n      \n          return launchOptions\n        }\n      })\n    }\n  }\n})"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Install NPM Package Dependencies",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JSON",
+        "text": "\"run_settings\": {\n  \"npm_dependencies\": {\n    \"cypress\": \"9.0.0\",\n  },\n},"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Set a Specific Node Version",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JSON",
+        "text": "\"run_settings\": {\n  \"useNodeVersion\":\"20\"\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Set Environment Variables via the Cypress CLI",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "lambdatest-cypress run --envs \"CYPRESS_BASE_URL=https://example.cypress.io/,ACTIONS_URL=commands/actions,WINDOW_URL=commands/window\""
+      }
+    ],
+    "dateModified": "2026-09-27T00:00:00+05:30"
+  }) }}
+/>
 
 # How to Configure Cypress Test Execution on TestMu AI
 ***
@@ -75,6 +195,8 @@ Use the `cypress_config_file` key in the `run_settings` option to specify the Cy
 :::note
 Cypress 10 and above automatically identify the `cypress.config.js` file in the project, so you do not need to specify the `cypress_config.js` capability.
 :::
+
+<VerifiedTag value="Verified" />
 
 <Tabs className="docs__val">
   <TabItem value="android" label="Cypress v9" default>
@@ -115,6 +237,8 @@ Choose which spec files a build executes so you run only the tests you need. Set
 
 Use the `specs` key in the `run_settings` option to specify the spec files.
 
+<VerifiedTag value="Verified" />
+
 <Tabs className="docs__val">
   <TabItem value="ios" label="Cypress v10" default>
 
@@ -153,6 +277,8 @@ Specify the spec files using the CLI flag below with the `run` command.
 
 Skip specific spec files without deleting them from your project. Use the `exclude_specs` key in the `run_settings` option to list the spec files you want to leave out of the test execution.
 
+<VerifiedTag value="Verified" />
+
 <Tabs className="docs__val">
   <TabItem value="ios" label="Cypress v10" default>
 
@@ -185,6 +311,8 @@ Run your tests from a specific country to check geo-targeted behavior. Set the l
 **Using `lambdatest-config.json`**
 
 Use the `geo_location` key in the `run_settings` option to specify the country to run from.
+
+<VerifiedTag value="Verified" />
 
 <Tabs className="docs__val">
   <TabItem value="ios" label="Cypress v10" default>
@@ -226,6 +354,8 @@ Control the screen resolution of the machine your tests run on. Set it in `lambd
 **Using `lambdatest-config.json`**
 
 Use the `resolution` key in the `run_settings` option to specify the resolution.
+
+<VerifiedTag value="Verified" />
 
 <Tabs className="docs__val">
   <TabItem value="ios" label="Cypress v10" default>
@@ -340,6 +470,8 @@ Keep files out of the project archive that gets uploaded to TestMu AI, which tri
 
 Use the `ignore_files` key in the `run_settings` option to exclude particular files while uploading your tests.
 
+<VerifiedTag value="Verified" />
+
 <Tabs className="docs__val">
   <TabItem value="ios" label="Cypress v10" default>
 
@@ -382,6 +514,8 @@ The valid input for `max_duration` must be an integer within the range of 2 to 2
 **Using `lambdatest-config.json`**
 
 Use the `max_duration` key in the `run_settings` option to specify the session timeout.
+
+<VerifiedTag value="Verified" />
 
 <Tabs className="docs__val">
   <TabItem value="ios" label="Cypress v10" default>
@@ -428,6 +562,8 @@ Name your test cases and categorize your Cypress builds by build name, project n
 
 **Example**:
 
+<VerifiedTag value="Verified" />
+
 ```javascript title="lambdatest-config.json"
 {
   "run_settings": {
@@ -449,6 +585,8 @@ Run your Cypress tests without a visible browser UI to speed up execution. Set t
 
 **Example**:
 
+<VerifiedTag value="Verified" />
+
 ```javascript title="lambdatest-config.json"
 {
   "run_settings": {
@@ -467,6 +605,8 @@ Record the network packets exchanged during a run so you can debug requests and 
 | headless   | Record network packets while the test is running | Boolean |
 
 **Example**:
+
+<VerifiedTag value="Verified" />
 
 ```javascript title="lambdatest-config.json"
 {
@@ -487,6 +627,8 @@ TestMu AI detects the dependencies to install before running the test in the fol
 
 Inside `run_settings` of `lambdatest-config.json`, provide the list of NPM dependencies:
 
+<VerifiedTag value="Verified" />
+
 ```javascript title="lambdatest-config.json"
 "run_settings": {
   "npm_dependencies": {
@@ -498,6 +640,8 @@ Inside `run_settings` of `lambdatest-config.json`, provide the list of NPM depen
 **Using `package.json`**
 
 TestMu AI automatically detects the dependencies to install from `package.json`.
+
+<VerifiedTag value="Verified" />
 
 ```javascript title="package.json"
 "devDependencies": {
@@ -512,7 +656,8 @@ TestMu AI automatically detects the dependencies to install from `package.json`.
 It's recommended to use `npm_dependencies` instead of `package.json` because `package.json` may contain the dependencies which are not actually used while running the Cypress tests and also, installing these unwanted dependencies will increase the build time.
 :::
 
-**Install npm packages via a tunnel**
+### Install npm packages via a tunnel
+***
 
 Use the `npm_via_tunnel` flag to route npm install traffic through a tunnel. This helps when installing packages from a private registry, or in a restricted environment where the public npm registry is not directly reachable. Add it to `run_settings`:
 
@@ -520,7 +665,19 @@ Use the `npm_via_tunnel` flag to route npm install traffic through a tunnel. Thi
 "npm_via_tunnel": true
 ```
 
+Once enabled, npm automatically routes all of its traffic through the tunnel.
+
+**Why use `npm_via_tunnel`?**
+
+- **Security:** When installing from a private registry, the tunnel protects your traffic from being intercepted.
+- **Reliability:** In a restricted environment, the tunnel helps ensure npm can still reach the registry and download the packages you need.
+- **Flexibility:** You can access npm packages from any source, including public registries, private registries, and local repositories.
+
 You must already have a tunnel configured and running. To download private dependencies, see [how to use private dependencies in Cypress](/support/docs/private-dependencies-cypress/).
+
+**Troubleshooting**
+
+If `npm_via_tunnel` is not working, ensure the tunnel is properly configured and running, verify that the npm registry is reachable from within the tunnel, and disable any proxy servers or firewalls that may interfere with the tunnel connection.
 
 ## Set a Specific Node Version
 ***
@@ -530,6 +687,8 @@ Pin the Node.js version your tests run on to match your project's dependencies a
 :::note
 Supported versions are 18, 20, and 22. The exact versions used are `18.17.1`, `20.18.0`, and `22.11.0` respectively.
 :::
+
+<VerifiedTag value="Verified" />
 
 ```javascript title="lambdatest-config.json"
 "run_settings": {

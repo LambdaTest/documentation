@@ -16,6 +16,7 @@ slug: network-throttling/
 canonical: https://www.testmuai.com/support/docs/network-throttling/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -41,6 +42,94 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/network-throttling/"
+    },
+    "headline": "How to Simulate Network Conditions in Selenium on TestMu AI",
+    "description": "Simulate different network conditions in Selenium tests on TestMu AI to check website behavior on slow or unstable connections.",
+    "url": "https://www.testmuai.com/support/docs/network-throttling/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Web Automation",
+    "keywords": [
+      "network throttling selenium capability",
+      "simulate 2G 3G 4G selenium tests",
+      "custom network profile selenium automation"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Set the networkThrottling capability",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "capabilities.setCapability(\"networkThrottling\", \"Regular 4G\");"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Configuring Network Profile",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "// Using executeScript to apply custom network throttling\nMap<String, Object> throttleParams = Map.of(\n    \"download\", 500,  // Maximum download speed in kbps\n    \"upload\", 100,    // Maximum upload speed in kbps\n    \"latency\", 30     // Latency in ms\n);\n\ndriver.executeScript(\"lambda-throttle-network\", throttleParams);\n"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Configuring Capabilities for Pre-Defined Network Settings",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "DesiredCapabilities caps = new DesiredCapabilities();\ncaps.setCapability(\"browserName\", \"Chrome\");\ncaps.setCapability(\"build\", \"Demo-TestNG\");\ncaps.setCapability(\"name\", \"TestNG-Todo-Script-1\");\ncaps.setCapability(\"networkThrottling\", \"Regular 4G\");  //Set Network Speed to Regular 4G "
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Configuring Custom Network Settings",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "package com.lambdatest;\n\nimport java.net.MalformedURLException;\nimport java.net.URL;\nimport java.util.HashMap;\nimport java.util.Map;\n\nimport org.openqa.selenium.By;\nimport org.openqa.selenium.remote.DesiredCapabilities;\nimport org.openqa.selenium.remote.RemoteWebDriver;\nimport org.testng.Assert;\nimport org.testng.annotations.AfterSuite;\nimport org.testng.annotations.BeforeSuite;\nimport org.testng.annotations.Test;\n\npublic class TestNGTodo1 {\n\n\tprivate RemoteWebDriver driver;\n\tprivate String Status=\"failed\";\n\n\t@BeforeSuite\n\tpublic void setup() throws MalformedURLException {\n\t\tString username = System.getenv(\"LT_USERNAME\");\n\t\tString authkey = System.getenv(\"LT_ACCESS_KEY\");\n\t\tString hub = \"@hub.lambdatest.com/wd/hub\";\n\n\t\tDesiredCapabilities caps = new DesiredCapabilities();\n\t\tcaps.setCapability(\"browserName\", \"Chrome\");\n\t\tcaps.setCapability(\"build\", \"Demo-TestNG\");\n\t\tcaps.setCapability(\"name\", \"TestNG-Todo-Script-1\");\n\t\tcaps.setCapability(\"networkThrottling\", true);  //To enable network throttling\n\t\n\tdriver = new RemoteWebDriver(new URL(\"https://\" + username + \":\" + authkey + hub), caps);\n\n\t// Custom network throttling using executeScript\n        Map<String, Object> throttleParams = new HashMap<>();\n        throttleParams.put(\"download\", 500); // Maximum download speed in kbps\n        throttleParams.put(\"upload\", 100);   // Maximum upload speed in kbps\n        throttleParams.put(\"latency\", 30);   // Latency in ms\n        \n        // Use executeScript with the provided payload\n        driver.executeScript(\"lambda-throttle-network\", throttleParams);\n\t\n\t}\n}"
+      }
+    ],
+    "dateModified": "2026-09-27T00:00:00+05:30"
+  }) }}
+/>
+
 # How to Simulate Network Conditions in Selenium on TestMu AI
 
 ---
@@ -52,6 +141,8 @@ To validate your website on such network profiles, simulate these network condit
 | KEY | VALUES |CAPABILITY |
 |-----|--------|-----------|
 | networkThrottling | Regular 4G, Regular 3G, Regular 2G, Good 3G, Good 2G, Offline, Reset, GPRS, DSL | Based on the user-provided input, this capability starts the test suite with the specified default network. For example, if the user selects **Regular 4G**, the capability looks like this: |
+
+<VerifiedTag value="Verified" />
 
 ```java
 capabilities.setCapability("networkThrottling", "Regular 4G");
@@ -81,6 +172,8 @@ The following table lists all available preset network profiles with their speed
 
 Use the Selenium JavaScript Executor to apply custom network throttling during tests.
 
+<VerifiedTag value="Verified" />
+
 ```java
 // Using executeScript to apply custom network throttling
 Map<String, Object> throttleParams = Map.of(
@@ -109,6 +202,8 @@ To configure network throttling in automation, use the [TestMu AI TestNG GitHub 
 
 ---
 
+<VerifiedTag value="Verified" />
+
 ```java
 DesiredCapabilities caps = new DesiredCapabilities();
 caps.setCapability("browserName", "Chrome");
@@ -122,6 +217,8 @@ The following TestNG code validates your TestMu AI credentials for authenticatio
 ### Configuring Custom Network Settings
 
 ---
+
+<VerifiedTag value="Verified" />
 
 ```java
 package com.lambdatest;

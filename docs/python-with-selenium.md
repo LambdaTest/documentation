@@ -25,6 +25,7 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -49,6 +50,96 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       })
     }}
 ></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/python-with-selenium-running-python-automation-scripts-on-testmu-selenium-grid/"
+    },
+    "headline": "How to Run Selenium Tests With Python on TestMu AI",
+    "description": "Run Python Selenium tests on the TestMu AI cloud grid across 10,000+ browsers. Covers unittest, pytest, Robot Framework, and Behave.",
+    "url": "https://www.testmuai.com/support/docs/python-with-selenium-running-python-automation-scripts-on-testmu-selenium-grid/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Web Automation",
+    "keywords": [
+      "python selenium cloud testing",
+      "run python selenium tests online",
+      "selenium webdriver python tutorial",
+      "pytest robot behave unittest selenium"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "A capabilities dictionary passing your browser and OS choices to the grid",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Python",
+        "text": "capabilities = {\n    \"build\": \"your build name\",\n    \"name\": \"your test name\",\n    \"platformName\": \"Windows 10\",\n    \"browserName\": \"Chrome\",\n    \"browserVersion\": \"latest\",\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Clone the unittest sample GitHub project",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "codeRepository": "https://github.com/LambdaTest/Python-UnitTest-Selenium",
+        "text": "git clone https://github.com/LambdaTest/Python-UnitTest-Selenium\ncd Python-UnitTest-Selenium"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Set your browser and OS in the pytest conftest.py capabilities",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Python",
+        "text": "capabilities = {\n    \"build\": \"Sample PY Build\",\n    \"platformName\": \"Windows 11\",\n    \"browserName\": \"Chrome\",\n    \"browserVersion\": \"latest\",\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Install dependencies and run the pytest test in parallel",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "pip install -r requirements.txt\npytest -s -n=2 tests/lt_sample_todo.py"
+      }
+    ],
+    "dateModified": "2026-09-09T19:13:32+05:30"
+  }) }}
+/>
 
 # How to Run Selenium Tests With Python on TestMu AI
 ---
@@ -102,6 +193,8 @@ set LT_ACCESS_KEY=${ YOUR_LAMBDATEST_ACCESS_KEY()}`}
 
 Every framework below connects to the grid at `hub.lambdatest.com/wd/hub` and passes your browser and OS choices through a capabilities dictionary:
 
+<VerifiedTag value="Verified" />
+
 ```python
 capabilities = {
     "build": "your build name",
@@ -131,12 +224,16 @@ The standard-library `unittest` framework connects a remote WebDriver to the gri
 
 1. Clone the [sample GitHub project](https://github.com/LambdaTest/Python-UnitTest-Selenium):
 
+<VerifiedTag value="Verified" />
+
 ```bash
 git clone https://github.com/LambdaTest/Python-UnitTest-Selenium
 cd Python-UnitTest-Selenium
 ```
 
 2. Set your browser and OS in the capabilities dictionary:
+
+<VerifiedTag value="Verified" />
 
 ```python
 capabilities = {
@@ -177,6 +274,8 @@ cd pytest-selenium-sample
 
 2. Set your browser and OS in `conftest.py`:
 
+<VerifiedTag value="Verified" />
+
 ```python title="conftest.py"
 capabilities = {
     "build": "Sample PY Build",
@@ -215,6 +314,8 @@ cd Robot-Selenium-Sample
 ```
 
 2. Set your browser and OS in the variables block of `common.robot`:
+
+<VerifiedTag value="Verified" />
 
 ```robotframework title="common.robot"
 *** Settings ***
@@ -261,6 +362,8 @@ cd Python-Behave-Selenium
 
 2. Set your browser and OS in `config/config.json`:
 
+<VerifiedTag value="Verified" />
+
 ```json title="config/config.json"
 [
   {
@@ -298,6 +401,8 @@ Lettuce is unmaintained (since 2016, Python 2 only). For new projects, use the a
 Lettuce is a BDD framework for Python: feature files plus step definitions, with capabilities in a JSON config.
 
 1. Clone the [sample GitHub project](https://github.com/LambdaTest/sample-lettuce):
+
+<VerifiedTag value="Verified" />
 
 ```bash
 git clone https://github.com/LambdaTest/sample-lettuce

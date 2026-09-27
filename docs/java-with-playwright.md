@@ -23,6 +23,7 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 import { CookieTrackingSignup } from '@site/src/component/CookieTracking';
 
 
@@ -50,6 +51,88 @@ import { CookieTrackingSignup } from '@site/src/component/CookieTracking';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/java-with-playwright/"
+    },
+    "headline": "How to Run Playwright Tests With JUnit on TestMu AI",
+    "description": "Run Java Playwright tests with JUnit on the TestMu AI cloud grid across 50+ real desktop browsers and operating systems.",
+    "url": "https://www.testmuai.com/support/docs/java-with-playwright/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Web Automation",
+    "keywords": [
+      "java playwright junit testing",
+      "java playwright tests cloud",
+      "playwright junit framework"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Clone the sample repository",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "codeRepository": "https://github.com/LambdaTest/playwright-sample",
+        "text": "git clone https://github.com/LambdaTest/playwright-sample.git\ncd playwright-sample"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Provide capabilities through a DataProvider in LTCapability.java",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "import com.google.gson.JsonObject;\nimport com.tngtech.java.junit.dataprovider.DataProvider;\n\npublic class LTCapability {\n  @DataProvider\n  public static Object[] getDefaultTestCapability() {\n    JsonObject capabilities1 = new JsonObject();\n    JsonObject ltOptions1 = new JsonObject();\n\n    String user = System.getenv(\"LT_USERNAME\");\n    String accessKey = System.getenv(\"LT_ACCESS_KEY\");\n\n    capabilities1.addProperty(\"browserName\", \"Chrome\");\n    capabilities1.addProperty(\"browserVersion\", \"latest\");\n    ltOptions1.addProperty(\"platform\", \"Windows 10\");\n    ltOptions1.addProperty(\"name\", \"Playwright Test\");\n    ltOptions1.addProperty(\"build\", \"Playwright Testing using Junit\");\n    ltOptions1.addProperty(\"user\", user);\n    ltOptions1.addProperty(\"accessKey\", accessKey);\n    capabilities1.add(\"LT:Options\", ltOptions1);\n    return new Object[]{ capabilities1 };\n  }\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Run the test with JUnit",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "mvn clean test"
+      }
+    ],
+    "dateModified": "2026-09-09T19:13:32+05:30"
+  }) }}
+/>
+
 # How to Run Playwright Tests With JUnit on TestMu AI
 ***
 
@@ -71,6 +154,8 @@ Complete these before running the test below.
 <a href="https://github.com/LambdaTest/playwright-sample" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="GitHub icon linking to the Playwright sample repository" className="doc_img"/> View on GitHub</a>
 :::
 
+<VerifiedTag value="Verified" />
+
 ```bash
 git clone https://github.com/LambdaTest/playwright-sample.git
 cd playwright-sample
@@ -85,6 +170,8 @@ Your Username and Access Key are read from environment variables. Set them once.
 
 <TabItem value="macos" label="macOS / Linux" default>
 
+<VerifiedTag value="Verified" />
+
 <div className="lambdatest__codeblock">
     <CodeBlock className="language-bash">
   {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
@@ -95,6 +182,8 @@ export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 </TabItem>
 
 <TabItem value="win-cmd" label="Windows (CMD)">
+
+<VerifiedTag value="Verified" />
 
 <div className="lambdatest__codeblock">
     <CodeBlock className="language-batch">
@@ -148,11 +237,15 @@ cd playwright-java-junit
 
 2. Install the npm dependencies:
 
+<VerifiedTag value="Verified" />
+
 ```
 npm install
 ```
 
 3. Open the `LTCapability.java` file and provide your TestMu AI Username and Access Key. It supplies the parameterized capabilities through a `@DataProvider`:
+
+<VerifiedTag value="Verified" />
 
 ```java title="LTCapability.java"
 import com.google.gson.JsonObject;
@@ -195,6 +288,8 @@ public class LTCapability {
 ```
 
 4. Run the test from the terminal:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 mvn clean test

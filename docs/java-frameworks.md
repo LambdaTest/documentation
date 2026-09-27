@@ -24,6 +24,7 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 import CookieTrackingLogin from '@site/src/component/CookieTracking';
 
 <script type="application/ld+json"
@@ -50,11 +51,101 @@ import CookieTrackingLogin from '@site/src/component/CookieTracking';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/java-with-selenium-running-java-automation-scripts-on-testmu-selenium-grid/"
+    },
+    "headline": "How to Run Selenium Tests With Java on TestMu AI",
+    "description": "Run Java Selenium tests on the TestMu AI cloud grid across 10,000+ browsers. Covers TestNG, JUnit, Cucumber, Selenide, Gauge, Geb, Serenity, and the SDK.",
+    "url": "https://www.testmuai.com/support/docs/java-with-selenium-running-java-automation-scripts-on-testmu-selenium-grid/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Web Automation",
+    "keywords": [
+      "java selenium cloud testing",
+      "run java tests on selenium grid",
+      "java webdriver remote execution",
+      "selenium java cloud grid setup"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "The shared sample test opens the to-do app, marks the first two items done, adds a new item, and verifies it appears",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "driver.get(\"https://lambdatest.github.io/sample-todo-app/\");\ndriver.findElement(By.name(\"li1\")).click();\ndriver.findElement(By.name(\"li2\")).click();\ndriver.findElement(By.id(\"sampletodotext\")).sendKeys(\"Yey, Let's add it to list\");\ndriver.findElement(By.id(\"addbutton\")).click();"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "The driver is a RemoteWebDriver pointed at the grid, with your browser/OS choices passed through LT:Options",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "ChromeOptions browserOptions = new ChromeOptions();\nbrowserOptions.setPlatformName(\"Windows 10\");\nbrowserOptions.setBrowserVersion(\"latest\");\n\nHashMap<String, Object> ltOptions = new HashMap<String, Object>();\nltOptions.put(\"build\", \"Java Selenium Build\");\nltOptions.put(\"name\", \"Java Selenium Test\");\nltOptions.put(\"w3c\", true);\nbrowserOptions.setCapability(\"LT:Options\", ltOptions);\n\ndriver = new RemoteWebDriver(\n    new URL(\"https://\" + username + \":\" + accesskey + \"@hub.lambdatest.com/wd/hub\"),\n    browserOptions);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Clone the TestNG sample GitHub project",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "codeRepository": "https://github.com/LambdaTest/Java-TestNG-Selenium",
+        "text": "git clone https://github.com/LambdaTest/Java-TestNG-Selenium\ncd Java-TestNG-Selenium"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Run a single TestNG test, or the parallel suite",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "mvn test -D suite=single.xml\nmvn test -D suite=parallel.xml"
+      }
+    ],
+    "dateModified": "2026-09-09T19:13:32+05:30"
+  }) }}
+/>
+
 # How to Run Selenium Tests With Java on TestMu AI
 ---
 
 
-Run your Java Selenium tests on the TestMu AI cloud grid across 10,000+ browser/device combinations. The setup is the same for every framework: you connect to the grid, pass your capabilities, and run. This guide walks through that shared flow once, then gives you a per-framework quickstart for **TestNG, JUnit, Cucumber, Selenide, Gauge, Geb, Serenity**, and the **Java SDK**.
+Run your Java Selenium tests on the TestMu AI cloud grid across 10,000+ browser/device combinations. The setup is the same for every framework: you connect to the grid, pass your capabilities, and run. This guide walks through that shared flow once, then gives you a per-framework quickstart for **TestNG, JUnit, Cucumber, Selenide, Gauge, Geb, and Serenity**, plus a zero-code **Java SDK** option.
 
 ## Prerequisites
 ---
@@ -65,6 +156,29 @@ Before running any framework below, set up a TestMu AI account, your credentials
 2. Get your **Username** and **Access Key** from the [TestMu AI Dashboard](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/dashboard).
 3. Install the [Java Development Kit (JDK)](https://www.oracle.com/java/technologies/downloads/) 11 or later.
 4. Install [Apache Maven](https://maven.apache.org/). The framework sample projects below all build with Maven.
+
+### Set Up Manually Without Maven (Optional)
+
+If you prefer to run raw Selenium Java without a build tool, add the Selenium JARs to your IDE instead of using Maven.
+
+1. Download the latest [Selenium Java Client](https://www.selenium.dev/downloads/) and extract the ZIP file to your project directory.
+2. Add the Selenium JARs to your project dependencies in your IDE.
+
+<img loading="lazy" src={require('../assets/images/selenium/java1.png').default} alt="IntelliJ project settings" width="1260" height="1071" className="doc_img"/>
+
+Navigate to **Dependencies** in module settings, click **+**, and add the downloaded Selenium JARs.
+
+<img loading="lazy" src={require('../assets/images/selenium/java2.png').default} alt="Selenium JARs added to project dependencies" width="1150" height="740" className="doc_img"/>
+
+With the JARs added, compile and run the test directly from the terminal:
+
+<VerifiedTag value="Verified" />
+
+```bash
+cd to/file/location
+javac -classpath ".:/path/to/selenium/jarfile:" JavaTodo.java
+java -classpath ".:/path/to/selenium/jarfile:" JavaTodo
+```
 
 ## Set Your Credentials
 ---
@@ -102,6 +216,8 @@ set LT_ACCESS_KEY=${ YOUR_LAMBDATEST_ACCESS_KEY()}`}
 
 All the framework repos below run the **same** sample test, so you only need to understand it once. The test opens the [to-do app](https://lambdatest.github.io/sample-todo-app/), marks the first two items done, adds a new item, and verifies it appears:
 
+<VerifiedTag value="Verified" />
+
 ```java
 driver.get("https://lambdatest.github.io/sample-todo-app/");
 driver.findElement(By.name("li1")).click();
@@ -111,6 +227,8 @@ driver.findElement(By.id("addbutton")).click();
 ```
 
 The driver is a `RemoteWebDriver` pointed at the grid, with your browser/OS choices passed through `LT:Options`:
+
+<VerifiedTag value="Verified" />
 
 ```java
 ChromeOptions browserOptions = new ChromeOptions();
@@ -134,6 +252,48 @@ Use the [Capabilities Generator](https://www.testmuai.com/capabilities-generator
 
 **What changes between frameworks is only how that test is *structured and run***: the runner, its setup/teardown hooks, and any config files. That's what each tab below covers.
 
+## Run Selenium Tests With Java SDK
+---
+
+The **Java SDK** is the zero-code option: it runs your **existing** TestNG tests on the grid unchanged, injecting credentials and capabilities from a YAML file via a Java agent. Use this when you already have a local suite and don't want to edit test code. See the [SDK reference project on GitHub](https://github.com/Lambdatest/lambdatest-java-selenium-sdk).
+
+1. Add the SDK dependency and agent to your `pom.xml` (the agent is attached to Surefire via `-javaagent`):
+
+```xml title="pom.xml (key additions)"
+<dependency>
+    <groupId>io.github.lambdatest</groupId>
+    <artifactId>lambdatest-selenium-java-sdk</artifactId>
+    <version>1.0.1</version>
+</dependency>
+<!-- plus the maven-dependency-plugin (copies lambdatest-agent.jar) and
+     maven-surefire-plugin with -javaagent:.../lambdatest-agent.jar -->
+```
+
+2. Create `lambdatest.yml` with your credentials, platforms, and features. The SDK loads it automatically:
+
+```yaml title="lambdatest.yml"
+username: YOUR_LAMBDATEST_USERNAME
+accesskey: YOUR_LAMBDATEST_ACCESS_KEY
+
+platforms:
+  - browserName: Chrome
+    browserVersion: latest
+    platformName: Windows 10
+
+build: SDK Build v1
+name: SDK Test
+video: true
+tunnel: true
+```
+
+3. Register the SDK's TestNG listener in `testng.xml`, then run. Your existing test classes execute as-is:
+
+```bash
+mvn test -D suite=testng.xml
+```
+
+The test then appears on the [Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build). A green status confirms it passed.
+
 ## Run a Test in Your Framework
 ---
 
@@ -146,6 +306,8 @@ Each tab lists just the framework-specific pieces. Clone the matching repo (it c
 TestNG is the most common choice. It wraps the shared test with `@BeforeClass` (create the driver) and `@AfterClass` (report status and quit), and drives cross-browser runs from a `testng.xml` suite.
 
 1. Clone the [sample GitHub project](https://github.com/LambdaTest/Java-TestNG-Selenium):
+
+<VerifiedTag value="Verified" />
 
 ```bash
 git clone https://github.com/LambdaTest/Java-TestNG-Selenium
@@ -185,6 +347,8 @@ The test then appears on the [Automation Dashboard](https://www.testmuai.com/log
 JUnit runs the same test as TestNG. The only difference is the lifecycle annotations: it uses `@Before` / `@After` instead of `@BeforeClass` / `@AfterClass`.
 
 1. Clone the [sample GitHub project](https://github.com/LambdaTest/junit-selenium-sample):
+
+<VerifiedTag value="Verified" />
 
 ```bash
 git clone https://github.com/LambdaTest/junit-selenium-sample
@@ -465,49 +629,6 @@ cd LamdaTest_Tesbo_Demo
 ```
 
 3. Run the test from your IDE. Hit the run button, and your scripts execute on the grid.
-
-The test then appears on the [Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build). A green status confirms it passed.
-
-</TabItem>
-
-<TabItem value="sdk" label="Java SDK">
-
-The **Java SDK** is the zero-code option: it runs your **existing** TestNG tests on the grid unchanged, injecting credentials and capabilities from a YAML file via a Java agent. Use this when you already have a local suite and don't want to edit test code. See the [SDK reference project on GitHub](https://github.com/Lambdatest/lambdatest-java-selenium-sdk).
-
-1. Add the SDK dependency and agent to your `pom.xml` (the agent is attached to Surefire via `-javaagent`):
-
-```xml title="pom.xml (key additions)"
-<dependency>
-    <groupId>io.github.lambdatest</groupId>
-    <artifactId>lambdatest-selenium-java-sdk</artifactId>
-    <version>1.0.1</version>
-</dependency>
-<!-- plus the maven-dependency-plugin (copies lambdatest-agent.jar) and
-     maven-surefire-plugin with -javaagent:.../lambdatest-agent.jar -->
-```
-
-2. Create `lambdatest.yml` with your credentials, platforms, and features. The SDK loads it automatically:
-
-```yaml title="lambdatest.yml"
-username: YOUR_LAMBDATEST_USERNAME
-accesskey: YOUR_LAMBDATEST_ACCESS_KEY
-
-platforms:
-  - browserName: Chrome
-    browserVersion: latest
-    platformName: Windows 10
-
-build: SDK Build v1
-name: SDK Test
-video: true
-tunnel: true
-```
-
-3. Register the SDK's TestNG listener in `testng.xml`, then run. Your existing test classes execute as-is:
-
-```bash
-mvn test -D suite=testng.xml
-```
 
 The test then appears on the [Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build). A green status confirms it passed.
 

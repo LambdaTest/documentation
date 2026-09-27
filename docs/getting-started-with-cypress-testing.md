@@ -23,6 +23,111 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/getting-started-with-cypress-testing/"
+    },
+    "headline": "How to Run Your First Cypress Test on TestMu AI",
+    "description": "Run your first Cypress test on the TestMu AI cloud grid: clone the sample project, set credentials, configure capabilities, and view your results.",
+    "url": "https://www.testmuai.com/support/docs/getting-started-with-cypress-testing/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Web Automation",
+    "keywords": [
+      "run cypress test on testmu ai",
+      "cypress testing guide",
+      "cypress cloud testing",
+      "run cypress tests in parallel"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Clone the sample project",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "codeRepository": "https://github.com/LambdaTest/Cypress-Cloud",
+        "text": "git clone https://github.com/LambdaTest/Cypress-Cloud.git\ncd Cypress-Cloud"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Install the TestMu AI Cypress CLI",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "npm install -g lambdatest-cypress-cli"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Generate the lambdatest-config.json file (Cypress v10)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "lambdatest-cypress init --cv=10"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "lambdatest-config.json (Cypress v10)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JSON",
+        "text": "{\n  \"lambdatest_auth\": {\n     \"username\": \"<your TestMu AI username>\",\n     \"access_key\": \"<your TestMu AI access key>\"\n  },\n  \"browsers\": [\n     {\n        \"browser\": \"Chrome\",\n        \"platform\": \"Windows 10\",\n        \"versions\": [\n           \"latest-1\"\n        ]\n     },\n     {\n        \"browser\": \"Firefox\",\n        \"platform\": \"Windows 10\",\n        \"versions\": [\n           \"latest-1\"\n        ]\n     }\n  ],\n  \"run_settings\": {\n     \"cypress_config_file\": \"cypress.config.js\",\n     \"reporter_config_file\": \"base_reporter_config.json\",\n     \"build_name\": \"build-name\",\n     \"parallels\": 1,\n     \"specs\": \"./*.cy.js\",\n     \"ignore_files\": \"\",\n     \"network\": false,\n     \"headless\": false,\n     \"npm_dependencies\": {\n        \"cypress\": \"10.0.0\"\n     }\n  },\n  \"tunnel_settings\": {\n     \"tunnel\": false,\n     \"tunnel_name\": null\n  }\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Run the test",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "lambdatest-cypress run"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Run your tests in parallel using the CLI",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "lambdatest-cypress run --parallels 5"
+      }
+    ],
+    "dateModified": "2026-09-27T00:00:00+05:30"
+  }) }}
+/>
 
 # How to Run Your First Cypress Test on TestMu AI
 ***
@@ -44,6 +149,8 @@ Complete these three steps to prepare your environment for the first run.
 
 1. Clone the TestMu AI Cypress-Cloud GitHub repo and navigate to the cloned directory.
 
+<VerifiedTag value="Verified" />
+
 ```bash
 git clone https://github.com/LambdaTest/Cypress-Cloud.git
 cd Cypress-Cloud
@@ -51,9 +158,9 @@ cd Cypress-Cloud
 
 2. To run Cypress tests, set your TestMu AI username and access key in the environment variables. You can get them from the TestMu AI Automation Dashboard.
 
-<img loading="lazy" src={require('../assets/images/playwright-testing/key.webp').default} alt="TestMu AI username and access key shown in the Automation Dashboard profile settings" width="1444" height="703"  className="doc_img"/>
-
 **Windows**
+
+<VerifiedTag value="Verified" />
 
 ```js
 set LT_USERNAME="YOUR_LAMBDATEST_USERNAME"
@@ -61,6 +168,8 @@ set LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
 ```
 
 **macOS/Linux**
+
+<VerifiedTag value="Verified" />
 
 ```js
 export LT_USERNAME="YOUR_LAMBDATEST_USERNAME"
@@ -74,6 +183,11 @@ export LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
 TestMu AI reads your credentials in one of three ways. When more than one is set, this order of precedence applies: **CLI arguments > `lambdatest-config.json` > environment variables**.
 
 **Environment variables:** set `LT_USERNAME` and `LT_ACCESS_KEY` as shown in [Prerequisites](#prerequisites).
+
+| Env variable | Accepted value |
+| --- | --- |
+| `LT_USERNAME` | Your TestMu AI username |
+| `LT_ACCESS_KEY` | Your TestMu AI access key |
 
 **`lambdatest-config.json`:** set them under the `lambdatest_auth` block:
 
@@ -102,11 +216,15 @@ Follow these steps to run your first Cypress test on the TestMu AI platform. The
 
 1. Install the TestMu AI Cypress CLI using the below command.
 
+<VerifiedTag value="Verified" />
+
 ```bash
 npm install -g lambdatest-cypress-cli
 ```
 
 2. Clone the Cypress kitchen sink repo using the following command.
+
+<VerifiedTag value="Verified" />
 
 <Tabs className="docs__val">
 
@@ -140,6 +258,8 @@ git checkout ab10094ef7b199ae7febafec413a0626414bcd3c
 </Tabs>
 
 Once you clone the kitchen sink repo, below will be the structure of your Cypress project.
+
+<VerifiedTag value="Verified" />
 
 <Tabs className="docs__val">
 
@@ -176,6 +296,8 @@ cypress.json
 
 3. Install the npm dependencies by passing the below command.
 
+<VerifiedTag value="Verified" />
+
 ```bash
 npm install
 ```
@@ -183,6 +305,8 @@ npm install
 4. Create the `lambdatest-config.json` file that contains configurations like auth, capabilities, and test settings needed to run successfully on TestMu AI.
 
 Use `init` command to generate the sample configuration files.
+
+<VerifiedTag value="Verified" />
 
 <Tabs className="docs__val">
 
@@ -205,6 +329,8 @@ lambdatest-cypress init
 </Tabs>
 
 Once you run the above command, below is the project structure for the `lambdatest-config.json` file.
+
+<VerifiedTag value="Verified" />
 
 <Tabs className="docs__val">
 
@@ -305,13 +431,15 @@ app
 
 5. Pass the below command to run the test.
 
+<VerifiedTag value="Verified" />
+
 ```bash
 lambdatest-cypress run
 ```
 
 6. Visit the TestMu AI Automation dashboard to view your test results. The CLI also prints a link to view the Cypress test build.
 
-<img loading="lazy" src={require('../assets/images/cypressten/cypress_results.png').default} alt="Cypress test results shown on the TestMu AI Automation dashboard" width="1444" height="703"  className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/cypressten/cypress-test-results.webp').default} alt="TestMu AI Automation Dashboard showing a passed Cypress test with command logs and a video of the run" width="1450" height="776" className="doc_img"/>
 
 ## Run Your Tests in Parallel
 ***
@@ -319,6 +447,12 @@ lambdatest-cypress run
 Once your first test runs, you can execute multiple Cypress tests at once to cut total run time. Configure parallel execution in either of two ways.
 
 **Using the CLI:** pass the `--parallels` flag with the number of sessions:
+
+```bash
+--parallels <number of parallel sessions>
+```
+
+For example, to run your Cypress tests on 5 parallel sessions:
 
 ```bash
 lambdatest-cypress run --parallels 5
@@ -344,6 +478,8 @@ The number of parallel tests running at a time depends on the concurrency plan o
 To test locally hosted websites on the TestMu AI platform, set up the [TestMu AI tunnel](/docs/testing-locally-hosted-pages/) and run commands using the CLI, or use [UnderPass](/docs/underpass-tunnel-application/), the TestMu AI GUI-based desktop app. Once the TestMu AI tunnel or UnderPass is set up and started, you can use Cypress to test locally hosted websites.
 
 Next, activate the tunnel capability in the `lambdatest-config.json` file under the `tunnel_settings` section as shown below.
+
+<VerifiedTag value="Verified" />
 
 ```json 
   "tunnel_settings": {

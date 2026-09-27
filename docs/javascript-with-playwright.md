@@ -1,12 +1,11 @@
 ---
 id: javascript-with-playwright
-title: JavaScript, TypeScript, Jest, and Cucumber.js With Playwright on TestMu AI
+title: JavaScript, Jest, and Cucumber.js With Playwright on TestMu AI
 hide_title: true
 sidebar_label: JavaScript
-description: Run Playwright tests in JavaScript, TypeScript, Jest, or Cucumber.js on TestMu AI across 50+ real desktop browsers and operating systems.
+description: Run Playwright tests in JavaScript, Jest, or Cucumber.js on TestMu AI across 50+ real desktop browsers and operating systems.
 keywords:
   - javascript playwright testing
-  - typescript playwright testing
   - jest playwright testing
   - cucumberjs playwright testing
   - playwright javascript framework
@@ -23,6 +22,7 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 import { CookieTrackingSignup } from '@site/src/component/CookieTracking';
 
 
@@ -50,6 +50,109 @@ import { CookieTrackingSignup } from '@site/src/component/CookieTracking';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/javascript-with-playwright/"
+    },
+    "headline": "How to Run Playwright Tests With JavaScript on TestMu AI",
+    "description": "Run Playwright tests in JavaScript, Jest, or Cucumber.js on TestMu AI across 50+ real desktop browsers and operating systems.",
+    "url": "https://www.testmuai.com/support/docs/javascript-with-playwright/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Web Automation",
+    "keywords": [
+      "javascript playwright testing",
+      "jest playwright testing",
+      "cucumberjs playwright testing"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Clone the sample repository (each framework lives in its own subdirectory)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "codeRepository": "https://github.com/LambdaTest/playwright-sample",
+        "text": "git clone https://github.com/LambdaTest/playwright-sample.git\ncd playwright-sample"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "How the test connects to the grid",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "wsEndpoint: `wss://cdp.lambdatest.com/playwright?capabilities=${encodeURIComponent(JSON.stringify(capabilities))}`"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "JavaScript: go to the sample directory and install dependencies",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "cd playwright-test-js\nnpm install"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Jest: go to the sample directory and install dependencies",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "cd playwright-jest-js\nnpm install"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Cucumber.js: go to the sample directory and install dependencies",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "cd playwright-cucumber-js\nnpm install"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Run the test",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "npm run test"
+      }
+    ],
+    "dateModified": "2026-09-09T19:13:32+05:30"
+  }) }}
+/>
+
 # How to Run Playwright Tests With JavaScript on TestMu AI
 ***
 
@@ -67,6 +170,8 @@ Before running any framework below, you need a TestMu AI account, your credentia
 :::tip Sample repo
 <a href="https://github.com/LambdaTest/playwright-sample" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="TestMu AI Playwright sample repository on GitHub" className="doc_img"/> View on GitHub</a>
 :::
+
+<VerifiedTag value="Verified" />
 
 ```bash
 git clone https://github.com/LambdaTest/playwright-sample.git
@@ -86,6 +191,8 @@ Every framework authenticates the same way: your Username and Access Key are rea
 
 <TabItem value="macos" label="macOS / Linux" default>
 
+<VerifiedTag value="Verified" />
+
 <div className="lambdatest__codeblock">
     <CodeBlock className="language-bash">
   {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
@@ -96,6 +203,8 @@ export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 </TabItem>
 
 <TabItem value="win-cmd" label="Windows (CMD)">
+
+<VerifiedTag value="Verified" />
 
 <div className="lambdatest__codeblock">
     <CodeBlock className="language-batch">
@@ -120,7 +229,7 @@ wsEndpoint: `wss://cdp.lambdatest.com/playwright?capabilities=${encodeURICompone
 What changes between them is only the setup file that holds this connection: a Playwright test fixture, a runner config, or a Cucumber.js world. That is what each tab covers.
 
 :::tip
-Use the [Capabilities Generator](https://www.testmuai.com/capabilities-generator/) to build a capabilities block for any browser, version, and OS combination.
+Use the [Capabilities Generator](https://www.testmuai.com/capabilities-generator/) to build a capabilities block for any [supported browser, version, and OS combination](/support/docs/playwright-bundled-browser-support/).
 :::
 
 ## Run a Test in Your Framework
@@ -136,12 +245,16 @@ The JavaScript path connects to the grid through a Playwright Test fixture in `l
 
 1. Go to the sample directory and install dependencies:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 cd playwright-test-js
 npm install
 ```
 
 2. The grid connection lives in `lambdatest-setup.js`, a Playwright test fixture that patches the capabilities per project and reports test status:
+
+<VerifiedTag value="Verified" />
 
 ```js title="lambdatest-setup.js"
 /**
@@ -221,117 +334,7 @@ exports.test = base.test.extend({
 
 3. Run the test:
 
-```bash
-npm run test
-```
-
-</TabItem>
-
-<TabItem value="typescript" label="TypeScript">
-
-TypeScript uses the same fixture pattern, written in `lambdatest-setup.ts`, which builds the capabilities object and connects Playwright to the grid.
-
-1. Go to the sample directory and install dependencies:
-
-```bash
-cd playwright-test-ts
-npm install
-```
-
-2. The grid connection lives in `lambdatest-setup.ts` (the TypeScript version of the fixture). Edit the capabilities to set your browser, version, and platform:
-
-```ts title="lambdatest-setup.ts"
-/**
- * Add the file in your test suite to run tests on LambdaTest.
- * Import `test` object from this file in the tests.
- */
-
-import * as base from "@playwright/test";
-import path from "path";
-import { chromium } from "playwright";
-
-// LambdaTest capabilities
-const capabilities = {
-  browserName: "Chrome", // Browsers allowed: `Chrome`, `MicrosoftEdge`, `pw-chromium`, `pw-firefox` and `pw-webkit`
-  browserVersion: "latest",
-  "LT:Options": {
-    platform: "Windows 10",
-    build: "Playwright TypeScript Build",
-    name: "Playwright TypeScript Test",
-    user: process.env.LT_USERNAME,
-    accessKey: process.env.LT_ACCESS_KEY,
-    network: true,
-    video: true,
-    console: true,
-    tunnel: false, // Add tunnel configuration if testing locally hosted webpage
-    tunnelName: "", // Optional
-    geoLocation: '', // country code can be fetched from https://www.lambdatest.com/capabilities-generator/
-  },
-};
-
-// Patching the capabilities dynamically according to the project name.
-const modifyCapabilities = (configName, testName) => {
-  let config = configName.split("@lambdatest")[0];
-  let [browserName, browserVersion, platform] = config.split(":");
-  capabilities.browserName = browserName
-    ? browserName
-    : capabilities.browserName;
-  capabilities.browserVersion = browserVersion
-    ? browserVersion
-    : capabilities.browserVersion;
-  capabilities["LT:Options"]["platform"] = platform
-    ? platform
-    : capabilities["LT:Options"]["platform"];
-  capabilities["LT:Options"]["name"] = testName;
-};
-
-const getErrorMessage = (obj, keys) =>
-  keys.reduce(
-    (obj, key) => (typeof obj == "object" ? obj[key] : undefined),
-    obj
-  );
-
-const test = base.test.extend({
-  page: async ({ page, playwright }, use, testInfo) => {
-    // Configure LambdaTest platform for cross-browser testing
-    let fileName = testInfo.file.split(path.sep).pop();
-    if (testInfo.project.name.match(/lambdatest/)) {
-      modifyCapabilities(
-        testInfo.project.name,
-        `${testInfo.title} - ${fileName}`
-      );
-
-      const browser = await chromium.connect({
-        wsEndpoint: `wss://cdp.lambdatest.com/playwright?capabilities=${encodeURIComponent(
-          JSON.stringify(capabilities)
-        )}`,
-      });
-
-      const ltPage = await browser.newPage(testInfo.project.use);
-      await use(ltPage);
-
-      const testStatus = {
-        action: "setTestStatus",
-        arguments: {
-          status: testInfo.status,
-          remark: getErrorMessage(testInfo, ["error", "message"]),
-        },
-      };
-      await ltPage.evaluate(() => {},
-      `lambdatest_action: ${JSON.stringify(testStatus)}`);
-      await ltPage.close();
-      await browser.close();
-    } else {
-      // Run tests in local in case of local config provided
-      await use(page);
-    }
-  },
-});
-
-export default test;
-```
-
-3. Run the test:
+<VerifiedTag value="Verified" />
 
 ```bash
 npm run test

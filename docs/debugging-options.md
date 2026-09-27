@@ -20,6 +20,87 @@ canonical: https://www.testmuai.com/support/docs/debugging-options/
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": BRAND_URL
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Support",
+      "item": `${BRAND_URL}/support/docs/`
+    },{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Debugging Options",
+      "item": `${BRAND_URL}/support/docs/debugging-options/`
+    }]
+  })
+}}
+></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/debugging-options/"
+    },
+    "headline": "How to Debug Selenium Tests on TestMu AI",
+    "description": "Debug failed Selenium tests on TestMu AI using command, visual, video, network, console, and telemetry logs, plus timeout and error resolutions.",
+    "url": "https://www.testmuai.com/support/docs/debugging-options/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Web Automation",
+    "keywords": [
+      "selenium debugging options testmu ai",
+      "debug failed automation tests",
+      "selenium command logs debugging"
+    ],
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "dateModified": "2026-09-09T19:13:32+05:30"
+  }) }}
+/>
+
 # How to Debug Selenium Tests on TestMu AI
 ---
 
@@ -139,9 +220,9 @@ Here are the steps to integrate Jaeger with your test suites:
 
 2. Extract the compressed (*.tar.gz* or *.zip*) Jaeger file to the directory where your test script resides. You will now have several Jaeger files like `jaeger-query`, `jaeger-collector`, etc., in your test script directory.
 
-3. Download Telemetry logs of your test session from the **Telemetry Logs** tab of your TestMu AI Automation Dashboard.
+3. On your TestMu AI Automation Dashboard, open the test's **Logs** tab, select the **Telemetry** sub-tab, and download the telemetry logs.
 
-<img loading="lazy" src={require('../assets/images/telemetry-logs/download.png').default} alt="cmd" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/telemetry-logs/download.webp').default} alt="TestMu AI dashboard Logs tab with the Telemetry sub-tab selected and the Download Telemetry Logs option" className="doc_img" width="1609" height="869"/>
 
 4. Start the Jaeger UI to visualize the Telemetry logs by running the below command.
 
@@ -628,7 +709,7 @@ Enable HAR logging by passing `network.full.har = true` in your test capabilitie
 
 Once the test runs, open the Web Automation Dashboard and navigate to the **Network** tab to see the waterfall chart.
 
-<img loading="lazy" src={require('../assets/images/har_waterfall.png').default} alt="HAR Log Viewer waterfall chart showing resource load times" width="1342" height="643" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/har_waterfall.webp').default} alt="HAR Log Viewer waterfall chart showing resource load times" width="1444" height="778" className="doc_img"/>
 
 Each resource (HTML, CSS, JavaScript, images) appears as a horizontal bar. The bar length shows load time, and the sequence reflects the order the browser requested them.
 
@@ -681,18 +762,16 @@ Safari browser will be added in upcoming releases.
 
 ### How to Use the Live Interaction Feature
 ---
-Open the test summary page and click "Click to view live test" to take manual control.
+Open the test detail page and click the **Live Interaction** button on the video panel to take manual control.
 
-<img loading="lazy" src={require('../assets/images/selenium/live-interaction1.png').default} alt="cmd" width="768" height="373" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/selenium/live-interaction.webp').default} alt="Test detail page with the Live Interaction button on the video panel" width="1127" height="668" className="doc_img"/>
 
-<img loading="lazy" src={require('../assets/images/selenium/live-interaction2.png').default} alt="cmd" width="768" height="373" className="doc_img"/>
+To take control during a running test:
 
-Follow the below steps to interact with the browser manually in an automation test:
-
-1. Open the test summary page in the **TestMu AI dashboard**.
-2. Click on the **"Click to view live test"** button.
-3. The status of the test changes to **idle_timeout** while using the Live Interaction feature.
-4. Take control of the browser.
+1. Open the test detail page in the **TestMu AI dashboard**.
+2. Click the **Live Interaction** button on the video panel.
+3. The test status changes to `idle_timeout` while you use Live Interaction.
+4. Take control of the browser and interact with it directly.
 
 ## Re-Run Automation Tests
 ---
@@ -717,7 +796,11 @@ Re-Run is not generally available yet and may not be enabled for your account. I
 3. Click the dropdown arrow on the **Re-Run** button, in the top-right of the test summary.
 4. Choose **Replay** or **Reproduce**.
 
-The **Re-runs** field in the test summary shows how many times the test has been re-run.
+<img loading="lazy" src={require('../assets/images/uploads/rerun-dropdown.webp').default} alt="Re-Run button dropdown on the test detail page showing the Replay and Reproduce options" width="1920" height="382" className="doc_img"/>
+
+The **Re-runs** field in the test summary shows how many times a test has been re-run. Open the run history from the summary to see every previous run with its status, configuration, and duration.
+
+<img loading="lazy" src={require('../assets/images/uploads/test-history.webp').default} alt="Test History panel listing previous runs of a test with timestamp, status, configuration, duration, and flaky percentage" width="1920" height="922" className="doc_img"/>
 
 ### Replay
 ---
@@ -729,6 +812,8 @@ Use Replay to:
 - **Confirm a fix** - re-run a previously failing test after deploying a change.
 - **Identify flaky tests** - run the same test repeatedly to see whether failures are intermittent. For a broader view, see [Flaky Test Detection](/support/docs/test-intelligence-flakiness-test-detection/).
 - **Re-test after an environment change** - verify a test once a dependency or test environment issue is resolved.
+
+<img loading="lazy" src={require('../assets/images/uploads/replay-test.webp').default} alt="Test to Replay screen showing the test events, video playback, and the Replay Test button" width="1920" height="942" className="doc_img"/>
 
 ### Reproduce
 ---
@@ -791,9 +876,9 @@ Lambda Exceptions let you manage and display GET request errors like AssertionEr
 
 Lambda Exception is a feature of TestMu AI that lets you manage and handle GET request errors, like AssertionError. The error gets displayed as an exception in the Exception tab of your test.
 
-For example:
+For example, when a test pushes an `AssertionError` using the `lambda-exceptions` command, it appears in the test's command log on the dashboard (and the test is marked `failed` via `lambda-status`):
 
-<img loading="lazy" src={require('../assets/images/lambda-exceptions/lambda-exception.webp').default} alt="Image"  className="doc_img" width="768" height="335"/>
+<img loading="lazy" src={require('../assets/images/lambda-exceptions/lambda-exception.webp').default} alt="TestMu AI command log showing the lambda-exceptions and lambda-status=failed commands executed during a test" className="doc_img" width="704" height="595"/>
 
 ### How to Use Lambda Exception
 ---
@@ -801,7 +886,7 @@ Catch assertion errors in GET requests and push them to the dashboard using Java
 
 While performing assertions on GET requests, if the assertion fails, an AssertionError exception is thrown. Refer to the below Java syntax to catch this error and push it to TestMu AI using Lambda Exceptions.
 
-```javascript
+```java
 try {
     // some GET request
     Assert.assertEquals(ActualValue, ExpectedValue);
@@ -834,11 +919,10 @@ package com.lambdatest;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.HashMap;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.NoSuchElementException;
-import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterSuite;
@@ -847,76 +931,82 @@ import org.testng.annotations.Test;
 
 public class LambdaException {
 
-	private static RemoteWebDriver driver;
-	private static String Status="failed";
+    private static RemoteWebDriver driver;
+    private static String Status = "failed";
 
-	@BeforeSuite
-	public void setup() throws MalformedURLException {
+    @BeforeSuite
+    public void setup() throws MalformedURLException {
 
-		try {
-		String username = System.getenv("LT_USERNAME");
-		String authkey = System.getenv("LT_ACCESS_KEY");
-		String hub = "@hub.lambdatest.com/wd/hub";
+        try {
+            String username = System.getenv("LT_USERNAME");
+            String authkey = System.getenv("LT_ACCESS_KEY");
+            String hub = "https://hub.lambdatest.com/wd/hub";
 
-		DesiredCapabilities caps = new DesiredCapabilities();
-		caps.setCapability("browser", "Chrome");
-		caps.setCapability("version", "86");
-		caps.setCapability("platform", "MacOS Catalina");
-		caps.setCapability("build", "LambdaException Demo");
-		caps.setCapability("name", "Test 2");
-		caps.setCapability("network", true);
-		caps.setCapability("visual", true); 
-		caps.setCapability("video", true);
-		caps.setCapability("console", true);
+            // W3C-compliant capabilities using LT:Options (required by Selenium 4)
+            ChromeOptions browserOptions = new ChromeOptions();
+            browserOptions.setBrowserVersion("latest");
+            browserOptions.setPlatformName("Windows 11");
 
-		System.out.println("Desired Caps: " + caps);
-		driver = new RemoteWebDriver(new URL("https://" + username + ":" + authkey + hub), caps);
-		}
-		catch(Exception e)
-		{
-			System.out.println(e);
-		}
-	}
+            HashMap<String, Object> ltOptions = new HashMap<>();
+            ltOptions.put("username", username);
+            ltOptions.put("accessKey", authkey);
+            ltOptions.put("build", "LambdaException Demo");
+            ltOptions.put("name", "Test 2");
+            ltOptions.put("network", true);
+            ltOptions.put("visual", true);
+            ltOptions.put("video", true);
+            ltOptions.put("console", true);
+            ltOptions.put("w3c", true);
+            browserOptions.setCapability("LT:Options", ltOptions);
 
-	@Test
-	public static void testAssertionError() {
+            System.out.println("Desired Caps: " + browserOptions);
+            driver = new RemoteWebDriver(new URL(hub), browserOptions);
+        } catch (Exception e) {
+            System.out.println("Session creation failed: " + e);
+        }
+    }
 
-	        ArrayList<String> exceptionCapture = new ArrayList<>();
-	        try {
-	            driver.get("https://www.lambdatest.com");
 
-	            String ExpectedTitle = "Most Powerful Cross Browser Testing Tool Online | LambdaT";
-	            String TitleValue = driver.getTitle();
-	            if (TitleValue.equals(ExpectedTitle)) {
-	            	Status = "passed";
-	            }
+    @Test
+    public static void testAssertionError() {
 
-	            Assert.assertEquals(TitleValue, ExpectedTitle);
-	        } catch (AssertionError e) {
-	        	Status = "failed";
-	            exceptionCapture.add(e.getMessage());
-	            ((JavascriptExecutor) driver).executeScript("lambda-exceptions", exceptionCapture);
-	        }
-	}
+        ArrayList<String> exceptionCapture = new ArrayList<>();
+        try {
+            driver.get("https://www.testmuai.com");
 
-	@AfterSuite
-	public void tearDown() {
-		driver.executeScript("lambda-status=" + Status);
-		driver.quit();
-	}
+            // Intentionally wrong (truncated) title so the assertion fails - demo purpose
+            String ExpectedTitle = "Most Powerful Cross Browser Testing Tool Online | LambdaT";
+            String TitleValue = driver.getTitle();
+            if (TitleValue.equals(ExpectedTitle)) {
+                Status = "passed";
+            }
+
+            Assert.assertEquals(TitleValue, ExpectedTitle);
+        } catch (AssertionError e) {
+            Status = "failed";
+            exceptionCapture.add(e.getMessage());
+            ((JavascriptExecutor) driver).executeScript("lambda-exceptions", exceptionCapture);
+        }
+    }
+
+    @AfterSuite
+    public void tearDown() {
+        if (driver != null) {
+            driver.executeScript("lambda-status=" + Status);
+            driver.quit();
+        }
+    }
 
 }
 ```
 
-When you execute the above test as a TestNG script, the test will fail. This is because we provided an incorrect value in the ExpectedTitle variable for demo purposes. When you open the test view and navigate to the Exception tab, you will find a message displaying this error:
-
-<img loading="lazy" src={require('../assets/images/lambda-exceptions/lambda-exception-error.webp').default} alt="lambdatest exceptions"  className="doc_img" width="768" height="346"/>
+When you run this test, the assertion fails because the `ExpectedTitle` is intentionally incorrect for this demo. The failure is captured and the session is marked `failed` on the dashboard. Open the test view and navigate to the Exception tab to see the message describing this error.
 
 #### View StackTrace on the Dashboard Using Lambda Exception
 ---
 You can also view the full StackTrace on the dashboard using Lambda Exceptions.
 
-You can view the full StackTrace on the TestMu AI platform using the Lambda Exceptions feature. Convert the StackTrace to String and print it as an array of Strings. Below is the full script to print the StackTrace using TestNG framework in Java:
+You can also push the full StackTrace to the dashboard using Lambda Exceptions. Convert the StackTrace to a String and add it as an array of Strings. Below is the full script to print the StackTrace using the TestNG framework in Java:
 
 ```java
 package com.lambdatest;
@@ -926,94 +1016,95 @@ import java.io.StringWriter;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.HashMap;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.NoSuchElementException;
-import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
 
-# Debugging Options for Automation Testing on TestMu AI
----
-
 public class LambdaException {
 
-	private static RemoteWebDriver driver;
-	private static String Status="failed";
+    private static RemoteWebDriver driver;
+    private static String Status = "failed";
 
-	@BeforeSuite
-	public void setup() throws MalformedURLException {
+    @BeforeSuite
+    public void setup() throws MalformedURLException {
 
-		try {
-		String username = System.getenv("LT_USERNAME");
-		String authkey = System.getenv("LT_ACCESS_KEY");
-		String hub = "@hub.lambdatest.com/wd/hub";
+        try {
+            String username = System.getenv("LT_USERNAME");
+            String authkey = System.getenv("LT_ACCESS_KEY");
+            String hub = "https://hub.lambdatest.com/wd/hub";
 
-		DesiredCapabilities caps = new DesiredCapabilities();
-		caps.setCapability("browser", "Chrome");
-		caps.setCapability("version", "86");
-		caps.setCapability("platform", "MacOS Catalina");
-		caps.setCapability("build", "LambdaException Demo");
-		caps.setCapability("name", "Print StackTrace");
-		caps.setCapability("network", true);
-		caps.setCapability("visual", true); 
-		caps.setCapability("video", true);
-		caps.setCapability("console", true);
+            // W3C-compliant capabilities using LT:Options (required by Selenium 4)
+            ChromeOptions browserOptions = new ChromeOptions();
+            browserOptions.setBrowserVersion("latest");
+            browserOptions.setPlatformName("Windows 11");
 
-		System.out.println("Desired Caps: " + caps);
-		driver = new RemoteWebDriver(new URL("https://" + username + ":" + authkey + hub), caps);
-		}
-		catch(Exception e)
-		{
-			System.out.println(e);
-		}
-	}
+            HashMap<String, Object> ltOptions = new HashMap<>();
+            ltOptions.put("username", username);
+            ltOptions.put("accessKey", authkey);
+            ltOptions.put("build", "LambdaException Demo");
+            ltOptions.put("name", "Print StackTrace");
+            ltOptions.put("network", true);
+            ltOptions.put("visual", true);
+            ltOptions.put("video", true);
+            ltOptions.put("console", true);
+            ltOptions.put("w3c", true);
+            browserOptions.setCapability("LT:Options", ltOptions);
 
-	@Test
-	public static void testAssertionError() {
+            System.out.println("Desired Caps: " + browserOptions);
+            driver = new RemoteWebDriver(new URL(hub), browserOptions);
+        } catch (Exception e) {
+            System.out.println("Session creation failed: " + e);
+        }
+    }
 
-	        ArrayList<String> exceptionCapture = new ArrayList<>();
-	        try {
-	            driver.get("https://www.lambdatest.com");
-	            String TitleValue = driver.getTitle();
-	            String ExpectedTitle = "Most Powerful Cross Browser Testing Tool Online | LambdaT";
-	            if (TitleValue.equals(ExpectedTitle)) {
-	            	Status = "passed";
-	            }
-	            Assert.assertEquals(TitleValue, ExpectedTitle);
-	        } catch (AssertionError e) {
-	        	Status = "failed";
-	            StringWriter sw = new StringWriter();
-	            PrintWriter printWriter = new PrintWriter(sw);
-	            PrintWriter pw = printWriter;
-	            e.printStackTrace(pw);
-	            String sStackTrace = sw.toString();
-	            exceptionCapture.add(sStackTrace);
-	            ((JavascriptExecutor) driver).executeScript("lambda-exceptions", exceptionCapture);
-	        }
-	}
 
-	@AfterSuite
-	public void tearDown() {
-		driver.executeScript("lambda-status=" + Status);
-		driver.quit();
-	}
+    @Test
+    public static void testAssertionError() {
+
+        ArrayList<String> exceptionCapture = new ArrayList<>();
+        try {
+            driver.get("https://www.testmuai.com");
+            String TitleValue = driver.getTitle();
+            // Intentionally wrong (truncated) title so the assertion fails - demo purpose
+            String ExpectedTitle = "Most Powerful Cross Browser Testing Tool Online | LambdaT";
+            if (TitleValue.equals(ExpectedTitle)) {
+                Status = "passed";
+            }
+            Assert.assertEquals(TitleValue, ExpectedTitle);
+        } catch (AssertionError e) {
+            Status = "failed";
+            StringWriter sw = new StringWriter();
+            PrintWriter pw = new PrintWriter(sw);
+            e.printStackTrace(pw);
+            String sStackTrace = sw.toString();
+            exceptionCapture.add(sStackTrace);
+            ((JavascriptExecutor) driver).executeScript("lambda-exceptions", exceptionCapture);
+        }
+    }
+
+    @AfterSuite
+    public void tearDown() {
+        if (driver != null) {
+            driver.executeScript("lambda-status=" + Status);
+            driver.quit();
+        }
+    }
 
 }
 ```
 
-When you execute the above test as a TestNG script, it produces the same result as the view exception section because of the incorrect ExpectedTitle value. Open the test view and navigate to the Exception tab to find the full StackTrace:
-
-<img loading="lazy" src={require('../assets/images/lambda-exceptions/lambda-StackTrace.webp').default} alt="Image"  className="doc_img" width="604" height="270"/>
+When you execute the above test as a TestNG script, it produces the same result as the view exception section because of the incorrect ExpectedTitle value. Open the test view and navigate to the Exception tab to find the full StackTrace.
 
 Below is the full StackTrace printed on the TestMu AI platform from the above script.
 
-```javascript
-java.lang.AssertionError: expected [Most Powerful Cross Browser Testing Tool Online | LambdaT] but found [Most Powerful Cross Browser Testing Tool Online | Lambdatest] at
+```text
+java.lang.AssertionError: expected [Most Powerful Cross Browser Testing Tool Online | LambdaT] but found [TestMu AI (formerly LambdaTest) | Agentic AI Testing Cloud] at
  org.testng.Assert.fail(Assert.java:99) at
  org.testng.Assert.failNotEquals(Assert.java:1037) at
  org.testng.Assert.assertEqualsImpl(Assert.java:140) at

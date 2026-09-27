@@ -22,6 +22,7 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 import { CookieTrackingSignup } from '@site/src/component/CookieTracking';
 
 
@@ -49,6 +50,95 @@ import { CookieTrackingSignup } from '@site/src/component/CookieTracking';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/python-with-playwright/"
+    },
+    "headline": "How to Run Playwright Tests With Python on TestMu AI",
+    "description": "Run your Python automation scripts with Playwright on TestMu AI scalable cloud grid of 50+ real desktop browsers and operating systems.",
+    "url": "https://www.testmuai.com/support/docs/python-with-playwright/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Web Automation",
+    "keywords": [
+      "python playwright",
+      "python automation testing",
+      "playwright python"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Clone the sample repository",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "codeRepository": "https://github.com/LambdaTest/playwright-sample",
+        "text": "git clone https://github.com/LambdaTest/playwright-sample.git\ncd playwright-sample\ncd playwright-python"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Install the Python dependencies",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "pip install -r requirements.txt"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Run the test with Python (playwright_sample.py)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Python",
+        "text": "import json\nimport os\nimport urllib\nimport subprocess\n\nfrom playwright.sync_api import sync_playwright\n\ncapabilities = {\n    'browserName': 'Chrome',\n    'browserVersion': 'latest',\n    'LT:Options': {\n        'platform': 'Windows 10',\n        'build': 'Playwright Python Build',\n        'name': 'Playwright Python Test',\n        'user': os.getenv('LT_USERNAME'),\n        'accessKey': os.getenv('LT_ACCESS_KEY'),\n        'network': True,\n        'video': True,\n        'console': True,\n        'tunnel': False,\n        'tunnelName': '',\n        'geoLocation': '',\n    }\n}\n\n\ndef run(playwright):\n    playwrightVersion = str(subprocess.getoutput('playwright --version')).strip().split(\" \")[1]\n    capabilities['LT:Options']['playwrightClientVersion'] = playwrightVersion\n\n    lt_cdp_url = 'wss://cdp.lambdatest.com/playwright?capabilities=' + urllib.parse.quote(\n        json.dumps(capabilities))\n    browser = playwright.chromium.connect(lt_cdp_url)\n    page = browser.new_page()\n    try:\n        page.goto(\"https://www.bing.com/\")\n        page.fill(\"[aria-label='Enter your search term'] > input\", 'LambdaTest')\n        page.keyboard.press(\"Enter\")\n        page.wait_for_timeout(1000)\n        title = page.title()\n        if \"LambdaTest\" in title:\n            set_test_status(page, \"passed\", \"Title matched\")\n        else:\n            set_test_status(page, \"failed\", \"Title did not match\")\n    except Exception as err:\n        set_test_status(page, \"failed\", str(err))\n    browser.close()\n\n\nwith sync_playwright() as playwright:\n    run(playwright)"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Run the test from the terminal",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "python playwright_sample.py"
+      }
+    ],
+    "dateModified": "2026-09-09T19:13:32+05:30"
+  }) }}
+/>
+
 # How to Run Playwright Tests With Python on TestMu AI
 ***
 
@@ -70,6 +160,8 @@ Complete these before running the test below.
 <a href="https://github.com/LambdaTest/playwright-sample/tree/main/playwright-python" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="GitHub icon linking to the Playwright Python sample subdirectory" className="doc_img"/> View on GitHub</a>
 :::
 
+<VerifiedTag value="Verified" />
+
 ```bash
 git clone https://github.com/LambdaTest/playwright-sample.git
 cd playwright-sample
@@ -77,6 +169,8 @@ cd playwright-python
 ```
 
 4. Install the Python dependencies from the sample directory:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 pip install -r requirements.txt
@@ -91,6 +185,8 @@ Your Username and Access Key are read from environment variables. Set them once.
 
 <TabItem value="macos" label="macOS / Linux" default>
 
+<VerifiedTag value="Verified" />
+
 <div className="lambdatest__codeblock">
     <CodeBlock className="language-bash">
   {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
@@ -101,6 +197,8 @@ export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 </TabItem>
 
 <TabItem value="win-cmd" label="Windows (CMD)">
+
+<VerifiedTag value="Verified" />
 
 <div className="lambdatest__codeblock">
     <CodeBlock className="language-batch">
@@ -138,6 +236,8 @@ The sample script wraps this connection, runs a search, then calls `set_test_sta
 The sample script connects Playwright to the grid, opens a page, runs a search, and reports the test status back to TestMu AI. You can use your own project, or the sample below.
 
 1. Open the `playwright_sample.py` file in the `playwright-python` directory. It builds the capabilities, connects to the grid, and sets the test status:
+
+<VerifiedTag value="Verified" />
 
 ```py title="playwright_sample.py"
 import json
@@ -206,6 +306,8 @@ with sync_playwright() as playwright:
 ```
 
 2. Run the test from the terminal:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 python playwright_sample.py

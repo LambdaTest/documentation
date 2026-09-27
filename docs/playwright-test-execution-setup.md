@@ -3,7 +3,7 @@ id: playwright-test-execution-setup
 title: How to Set Up the Playwright Test Environment on TestMu AI
 hide_title: true
 toc_max_heading_level: 2
-sidebar_label: "Set Up Test Environment"
+sidebar_label: "Test Setup and Capabilities"
 description: Configure Playwright capabilities on TestMu AI to select browsers and OS, organize test builds, set desktop resolution, and debug failed sessions with logs.
 keywords:
   - playwright test execution setup testmu ai
@@ -18,6 +18,7 @@ slug: playwright-test-execution-setup/
 canonical: https://www.testmuai.com/support/docs/playwright-test-execution-setup/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -42,6 +43,109 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       })
     }}
 ></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/playwright-test-execution-setup/"
+    },
+    "headline": "How to Set Up the Playwright Test Environment on TestMu AI",
+    "description": "Configure Playwright capabilities on TestMu AI to select browsers and OS, organize test builds, set desktop resolution, and debug failed sessions with logs.",
+    "url": "https://www.testmuai.com/support/docs/playwright-test-execution-setup/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Web Automation",
+    "keywords": [
+      "playwright test execution setup testmu ai",
+      "playwright capabilities testmu ai",
+      "playwright browser and os selection",
+      "debug playwright tests testmu ai"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Changing Browser Window Size",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "// Create context with given viewport\nconst context = await browser.newContext({\n  viewport: { width: 1280, height: 1024 }\n});"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Changing Browser Window Size",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "await page.setViewportSize({ width: 1600, height: 1200 });"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Setting Browser Options",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "const { chromium } = require('playwright');\n\nconst capabilities = {\n    'browserName': 'Chrome', // Browsers allowed: `Chrome`, `MicrosoftEdge`, `pw-chromium`, `pw-firefox` and `pw-webkit`\n    'browserVersion': 'latest',\n    'LT:Options': {\n      'platform': 'Windows 10',\n      'build': 'Playwright Sample Build',\n      'name': 'Playwright Sample Test',\n      'user': process.env.LT_USERNAME,\n      'accessKey': process.env.LT_ACCESS_KEY,\n      'goog:chromeOptions':[\n         '--user-agent=<Any custom user agent>',\n       ],\n\n    }\n  }\n\n  const browser = await chromium.connect({\n    wsEndpoint: `wss://cdp.lambdatest.com/playwright?capabilities=${encodeURIComponent(JSON.stringify(capabilities))}`\n  })"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Getting Session Details",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "let response = JSON.parse(await page.evaluate(_ => {}, `lambdatest_action: ${JSON.stringify({ action: 'getTestDetails' })}`))\nconsole.log(response); "
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Marking Tests as Passed or Failed",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "await page.evaluate(_ => {}, `lambdatest_action: ${JSON.stringify({ action: 'setTestStatus', arguments: { status:'passed', remark: 'Title matched' } })}`)"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Marking Tests as Passed or Failed",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "await page.evaluate(_ => {}, `lambdatest_action: ${JSON.stringify({ action: 'setTestStatus', arguments: { status:'failed', remark: 'Title not matched' } })}`)"
+      }
+    ],
+    "dateModified": "2026-09-27T00:00:00+05:30"
+  }) }}
+/>
 
 # How to Set Up the Playwright Test Environment on TestMu AI
 ***
@@ -105,46 +209,7 @@ Each Playwright version ships with its own bundled browser builds. The table bel
 ### Bundled Browser Versions
 ***
 
-Use this table when you want TestMu AI to match the bundled browser version to your local Playwright version. When you set the `useSpecificBundleVersion: true` capability, TestMu AI selects the Chromium, Firefox, or WebKit version that matches your local machine's Playwright version.
-
-```yaml
-const capabilities = { "LT:Options": {"useSpecificBundleVersion": true,}}
-```
-
-<details>
-<summary>View available bundled browser versions for each Playwright version</summary>
-
-| Playwright Versions | Chromium | Firefox | Webkit |
-|---------------------|----------|---------|--------|
-|1.50| 130-133 except - 132, 126, 122 | 130-134, except - 131,133,126,122,120 | 18.0, 18.2 |
-|1.49| 130-133 except - 132, 126, 122 | 130-134, except - 131,133,126,122,120 | 18.0, 18.2 |
-|1.48| 130-133 except - 132, 126, 122 | 130-134, except - 131,133,126,122,120 | 18.0, 18.2 |
-|1.47| 129 except - 132, 126, 122 | 130, except - 131,133,126,122,120 | 18.0 |
-|1.46| 119-133, except - 132, 126, 122 | 118-134, except - 131,133, 126,122,120 | 17.4, 18.2 |
-|1.45| 119-127, except - 126,122 | 119-127, except - 126,122,120 | 17.4 |
-|1.44| 119-127, except - 126,122 | 119-127, except - 126,122,120 | 17.4 |
-|1.43| 119-127, except - 126,122 | 119-127, except - 126,122,120 | 17.4 |
-|1.42| 119-127, except - 126,122 | 119-127, except - 126,122,120 | 17.4 |
-|1.41| 119-127, except - 126,122 | 119-127, except - 126,122,120 | 17.4 |
-|1.40| 119-127, except - 126,122 | 119-127, except - 126,122,120 | 17.4 |
-|1.39| 119-127, except - 126,122 | 119-127, except - 126,122,120 | 17.4 |
-|1.38| 114-117 | 113-117 | 17 |
-|1.37| 114-117 | 113-117 | 17 |
-|1.36| 114-117 | 113-117 | 17 |
-|1.35| 114-117 | 113-117 | 16.4 |
-|1.34| 114-117 | 113-117 | 16.4 |
-|1.33| 104-113 | 103-112 | 16.4 |
-|1.32| 104-113 | 103-112 | 16.4 |
-|1.31| 104-113 | 103-112 | 16.4 |
-|1.30| 104-113 | 103-112 | 16.4 |
-|1.29| 104-113 | 103-112 | 16.4 |
-|1.28| 104-113 | 103-112 | 16.4 |
-|1.27| 104-113 | 103-112 | 16.4 |
-|1.26| 104-113 | 103-112 | 16 |
-|1.25| 104-113 | 103-112 | 16 |
-|1.24| 103-104 | 100-102 | 16 |
-
-</details>
+For running tests on Playwright's bundled browsers, see [Playwright Bundled Browser Support](/support/docs/playwright-bundled-browser-support/).
 
 ## Organizing Tests
 ***
@@ -160,6 +225,8 @@ Naming and tagging your runs makes them easier to find and filter in the TestMu 
 | buildTags   |  ["build1", "build2", "build3"] |  Group your Playwright builds |`const capability = {"LT:Options": { "buildTags": ["build1", "build2", "build3"] }}` |
 
 <!-- Shown below is the script that configure the `build` and `name` capabilities. 
+
+<VerifiedTag value="Verified" />
 
 ```js
 const { chromium } = require('playwright');
@@ -198,6 +265,8 @@ Playwright tests run at `1920x1080` by default for desktop browsers. Set the `re
 
 The viewport controls the drawable area inside the browser, separate from the desktop resolution. The default viewport for Playwright tests is 1280x720. To set a different viewport, create the browser context with the size you want, as shown below.
 
+<VerifiedTag value="Verified" />
+
 ```js
 // Create context with given viewport
 const context = await browser.newContext({
@@ -207,6 +276,8 @@ const context = await browser.newContext({
 The above Playwright test runs on a default viewport of 1280x1024. However, you can also select any other viewport when creating a `new context`.
 
 If you resize viewport for individual page then run the below command.
+
+<VerifiedTag value="Verified" />
 
 ```js
 await page.setViewportSize({ width: 1600, height: 1200 });
@@ -218,6 +289,8 @@ await page.setViewportSize({ width: 1600, height: 1200 });
 Playwright lets you pass browser arguments to Chromium based browsers. For Chrome and Edge, set browser options through the `'goog:chromeOptions'` and `'ms:edgeOptions'` capabilities, as shown below.
 
 **For Chrome**
+
+<VerifiedTag value="Verified" />
 
 ```js
 const { chromium } = require('playwright');
@@ -244,6 +317,8 @@ const capabilities = {
   ```
 
   **For Edge**
+
+  <VerifiedTag value="Verified" />
 
   ```js
   const { chromium } = require('playwright');
@@ -276,12 +351,16 @@ const capabilities = {
 
 Each Playwright test on TestMu AI generates logs and metadata tied to its session. To retrieve details such as the test ID, status, and log URLs for the current session, add the snippet below to your Playwright test scripts.
 
+<VerifiedTag value="Verified" />
+
 ```js
 let response = JSON.parse(await page.evaluate(_ => {}, `lambdatest_action: ${JSON.stringify({ action: 'getTestDetails' })}`))
 console.log(response); 
 ```
 
 Upon executing the script, you will get the details for the particular test session as a JSON response as shown below.
+
+<VerifiedTag value="Verified" />
 
 ```js
 {
@@ -343,11 +422,15 @@ Shown below is syntax how to mark Playwright tests as **Passed** or **Failed**.
 
 1. To mark test status as **passed**.
 
+<VerifiedTag value="Verified" />
+
 ```js
 await page.evaluate(_ => {}, `lambdatest_action: ${JSON.stringify({ action: 'setTestStatus', arguments: { status:'passed', remark: 'Title matched' } })}`)
 ```
 
 2. To mark test status as **failed**.
+
+<VerifiedTag value="Verified" />
 
 ```js
 await page.evaluate(_ => {}, `lambdatest_action: ${JSON.stringify({ action: 'setTestStatus', arguments: { status:'failed', remark: 'Title not matched' } })}`)

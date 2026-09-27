@@ -19,6 +19,97 @@ canonical: https://www.testmuai.com/support/docs/download-artefacts-cypress/
 ---
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/download-artefacts-cypress/"
+    },
+    "headline": "How to Download Artefacts for Cypress Tests on TestMu AI",
+    "description": "Download the screenshots, videos, logs, and files your Cypress tests generate on the TestMu AI cloud machine using the downloads capability.",
+    "url": "https://www.testmuai.com/support/docs/download-artefacts-cypress/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Web Automation",
+    "keywords": [
+      "download cypress artefacts testmu ai",
+      "cypress test artefacts",
+      "download cypress screenshots and videos",
+      "lambdatest-artifacts folder",
+      "cypress downloads capability"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Update the TestMu AI Cypress CLI",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "npm install -g lambdatest-cypress-cli"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Add the --sync Flag",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "lambdatest-cypress run --sync=true"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Get the session_id from lambdatest_run.json",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JSON",
+        "text": "{\n   \"build_id\": \"7724863\",\n   \"session_id\": \"6c899177-047e-4432-a9a7-17776e23aae3\"\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Generate the Report to Download Artefacts",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "lambdatest-cypress generate-report --session_id 6c899177-047e-4432-a9a7-17776e23aae3"
+      }
+    ],
+    "dateModified": "2026-09-27T00:00:00+05:30"
+  }) }}
+/>
 
 # How to Download Artefacts for Cypress Tests on TestMu AI
 ***
@@ -27,6 +118,8 @@ When your Cypress tests run on the TestMu AI cloud machine, the screenshots, vid
 
 :::tip Sample repo
 This guide uses the TestMu AI [sample Cypress Cloud repository](https://github.com/LambdaTest/Cypress-Cloud). Clone it to follow along with the same files shown here.
+
+<a href="https://github.com/LambdaTest/Cypress-Cloud" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="TestMu AI Cypress sample repository on GitHub" className="doc_img"/> View on GitHub</a>
 :::
 
 ## Download Artefacts From the TestMu AI Cloud Machine
@@ -38,6 +131,8 @@ These steps assume you have already run a Cypress test on TestMu AI. If you have
 ***
 
 Update the CLI first so the `--sync` and `generate-report` commands are available. Install the latest version:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 npm install -g lambdatest-cypress-cli
@@ -55,6 +150,8 @@ Tell TestMu AI which files to bring back by adding a `downloads` capability to `
 
 Run the test with the `--sync` flag so the CLI waits for execution to finish before it fetches the artefacts:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 lambdatest-cypress run --sync=true
 ```
@@ -68,6 +165,8 @@ Once the run completes, the console prints a `build_id` for the executed test.
 
 Open `lambdatest_run.json` in your project and copy the `session_id`:
 
+<VerifiedTag value="Verified" />
+
 ```json title="lambdatest_run.json"
 {
    "build_id": "7724863",
@@ -76,6 +175,8 @@ Open `lambdatest_run.json` in your project and copy the `session_id`:
 ```
 
 Pass that `session_id` to the `generate-report` command to pull the artefacts:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 lambdatest-cypress generate-report --session_id 6c899177-047e-4432-a9a7-17776e23aae3

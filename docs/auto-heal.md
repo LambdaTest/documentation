@@ -29,6 +29,142 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+import VerifiedTag from '@site/src/component/verifiedTag';
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": BRAND_URL
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Support",
+      "item": `${BRAND_URL}/support/docs/`
+    },{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Auto-Healing",
+      "item": `${BRAND_URL}/support/docs/auto-healing/`
+    }]
+  })
+}}
+></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/auto-healing/"
+    },
+    "headline": "How to Auto-Heal Selenium Tests on TestMu AI",
+    "description": "Auto-heal broken Selenium locators on TestMu AI so your tests keep passing when the application UI changes.",
+    "url": "https://www.testmuai.com/support/docs/auto-healing/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Web Automation",
+    "keywords": [
+      "selenium auto heal capability",
+      "auto healing flaky tests selenium",
+      "self-healing test automation",
+      "selenium self-healing locators",
+      "auto-heal broken locators selenium"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Enabling Auto Healing",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "const capability = {\n    \"browserName\": \"Chrome\",\n    \"browserVersion\": \"114.0\",\n    \"LT:Options\": {\n        \"platformName\": \"Windows 10\",\n        \"project\": \"Untitled\",\n        \"w3c\": true,\n        \"plugin\": \"node_js-node_js\",\n        \"autoHeal\": true\n    }\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Language Preferences (Java)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "ChromeOptions browserOptions = new ChromeOptions();\nbrowserOptions.setBrowserVersion(\"118.0\");\nHashMap<String, Object> ltOptions = new HashMap<String, Object>();\nltOptions.put(\"username\", \"YOUR_LAMBDATEST_USERNAME\");\nltOptions.put(\"accessKey\", \"YOUR_LAMBDATEST_ACCESS_KEY\");\nltOptions.put(\"project\", \"Untitled\");\nltOptions.put(\"selenium_version\", \"4.0.0\");\nltOptions.put(\"w3c\", true);\n// highlight-next-line\nltOptions.put(\"autoHeal\", true);\nbrowserOptions.setCapability(\"LT:Options\", ltOptions);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Language Preferences (Python)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Python",
+        "text": "options = ChromeOptions()\noptions.browser_version = \"118.0\"\nlt_options = {}\nlt_options[\"username\"] = \"YOUR_LAMBDATEST_USERNAME\"\nlt_options[\"accessKey\"] = \"YOUR_LAMBDATEST_ACCESS_KEY\"\nlt_options[\"project\"] = \"Untitled\"\nlt_options[\"w3c\"] = True\nlt_options[\"plugin\"] = \"python-python\"\n# highlight-next-line\nlt_options[\"autoHeal\"] = True\noptions.set_capability('LT:Options', lt_options)"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Auto Detection of New Locator",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "import assert from 'assert';\nimport { Builder, By, until, Capabilities } from 'selenium-webdriver';\n\ndescribe('Amazon Search Box Test', function () {\n    this.timeout(30000);\n    let driver;\n    let vars;\n\n    const capability = {\n        \"browserName\": \"Chrome\",\n        \"browserVersion\": \"114.0\",\n        \"LT:Options\": {\n            \"platformName\": \"Windows 10\",\n            \"project\": \"Untitled\",\n            \"w3c\": true,\n            \"plugin\": \"node_js-node_js\",\n            \"autoHeal\": true\n        }\n    }\n\n    beforeEach(async function () {\n        driver = await new Builder()\n            .usingServer('https://YOUR_LAMBDATEST_USERNAME:YOUR_LAMBDATEST_ACCESS_KEY@hub.lambdatest.com/wd/hub')\n            .withCapabilities(capability)\n            .build();\n        vars = {};\n    });\n\n    afterEach(async function () {\n        await driver.quit();\n    });\n\n    it('should change id of search box and find element', async function () {\n        await driver.get('https://www.amazon.com');\n        const searchBoxActual = await driver.findElement(By.id('nav-search-submit-button'));\n        await driver.executeScript(\"document.getElementById('nav-search-submit-button').id='amazonsearchbox'\");\n        // const searchBox = await driver.findElement(By.id('amazonsearchbox'));\n        const searchBoxHeal = await driver.findElement(By.id('nav-search-submit-button'));\n        assert(searchBoxHeal, 'Element not found');\n    });\n});"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "To run the test, execute the below command",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "./node_modules/.bin/mocha autohealingTest.js "
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Enable Auto Heal",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "driver.execute_script('lambdatest_executor:{\"action\":\"lambda-heal-start\"}')"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Disable Auto Heal",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "driver.execute_script('lambdatest_executor:{\"action\":\"lambda-heal-stop\"}')"
+      }
+    ],
+    "dateModified": "2026-09-27T00:00:00+05:30"
+  }) }}
+/>
 
 # How to Auto-Heal Selenium Tests on TestMu AI
 ---
@@ -39,6 +175,8 @@ The TestMu AI Auto Healing feature for Selenium testing automatically recovers f
 ---
 
 Pass the `autoHeal: true` capability in your WebDriver configuration to enable this feature. For the full set of options you can combine with it, see the [Selenium automation capabilities](/support/docs/selenium-automation-capabilities/).
+
+<VerifiedTag value="Verified" />
 
 ```js
 const capability = {
@@ -61,6 +199,8 @@ No prerequisites are required. Enable auto-healing directly via capabilities.
 
 ### Language Preferences
 ---
+
+<VerifiedTag value="Verified" />
 
 <Tabs className="docs__val">
 
@@ -202,6 +342,8 @@ Web elements might change their locators due to updates in the web application. 
 Here is an example test case demonstrating this:
 
 
+<VerifiedTag value="Verified" />
+
 ```js
 import assert from 'assert';
 import { Builder, By, until, Capabilities } from 'selenium-webdriver';
@@ -251,6 +393,8 @@ In the above test case, the script changes the *id* of the search box on Amazon'
 
 To run the test, execute the below command:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 ./node_modules/.bin/mocha autohealingTest.js 
 ```
@@ -265,6 +409,8 @@ You can start or stop Auto Heal at any point in your test script using hooks. Th
 
 Use the following hook to **start** Auto Heal at any point in your test script.
 
+<VerifiedTag value="Verified" />
+
 ```javascript
 driver.execute_script('lambdatest_executor:{"action":"lambda-heal-start"}')
 ```
@@ -276,6 +422,8 @@ driver.execute_script('lambdatest_executor:{"action":"lambda-heal-start"}')
 
 Use the following hook to **stop** Auto Heal at any point in your test script.
 
+<VerifiedTag value="Verified" />
+
 ```javascript
 driver.execute_script('lambdatest_executor:{"action":"lambda-heal-stop"}')
 ```
@@ -285,12 +433,11 @@ driver.execute_script('lambdatest_executor:{"action":"lambda-heal-stop"}')
 ### Sample Script
 ---
 
+<VerifiedTag value="Verified" />
+
 ```python title="Test.py"
 import os
 import time
-
-# How to Use Auto Healing for Selenium Test Suites
----
 
 from selenium import webdriver
 from selenium.webdriver.common.by import By

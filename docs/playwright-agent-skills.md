@@ -18,6 +18,7 @@ canonical: https://www.testmuai.com/support/docs/playwright-agent-skills/
 ---
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 # How to Run Playwright Tests With Agent Skills on TestMu AI
 ***
@@ -45,6 +46,109 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     })
   }}
 ></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/playwright-agent-skills/"
+    },
+    "headline": "How to Run Playwright Tests With Agent Skills on TestMu AI",
+    "description": "Install TestMu AI Agent Skills to have AI coding assistants like Claude Code and Cursor generate and run Playwright test automation for you.",
+    "url": "https://www.testmuai.com/support/docs/playwright-agent-skills/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Web Automation",
+    "keywords": [
+      "playwright agent skills",
+      "ai test automation",
+      "playwright ai coding"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Installing the Playwright Agent Skill",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "codeRepository": "https://github.com/LambdaTest/agent-skills",
+        "text": "git clone https://github.com/LambdaTest/agent-skills.git\n\n# For Claude Code\ncp -r agent-skills/playwright-skill .claude/skills/\n\n# For Cursor\ncp -r agent-skills/playwright-skill .cursor/skills/\n\n# For GitHub Copilot\ncp -r agent-skills/playwright-skill .github/skills/\n\n# For Gemini CLI\ncp -r agent-skills/playwright-skill .gemini/skills/"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Set Up Your Authentication",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "export LT_USERNAME=\"YOUR_LAMBDATEST_USERNAME\"\nexport LT_ACCESS_KEY=\"YOUR_LAMBDATEST_ACCESS_KEY\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Running Your First Test Using Agent Skills",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\"Write Playwright tests for the login page and run them on TestMu AI cloud using Chrome and Firefox\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Running Your First Test Using Agent Skills",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\"Set up a Playwright TypeScript project with Page Object Model and run tests on TestMu AI\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Running Your First Test Using Agent Skills",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\"Run Playwright tests on real mobile devices on TestMu AI cloud\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "What's Included in the Playwright Skill",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "playwright-skill/\n├── SKILL.md\n└── reference/\n    ├── playbook.md\n    └── advanced-patterns.md"
+      }
+    ],
+    "dateModified": "2026-09-27T00:00:00+05:30"
+  }) }}
+/>
 
 If you use an AI coding assistant, you can skip the manual Playwright project setup and let Agent Skills generate the test automation for you. Agent Skills give the assistant the project structure, dependency versions, and cloud execution patterns it needs to write working Playwright tests on the first pass. You install the skill into your tool's skills directory, set your credentials, then describe the tests you want in natural language.
 
@@ -75,6 +179,8 @@ Make sure you have an account, your credentials, and a supported assistant befor
 
 Clone the Agent Skills repository, then copy the Playwright skill into your AI tool's skills directory.
 
+<VerifiedTag value="Verified" />
+
 ```bash
 git clone https://github.com/LambdaTest/agent-skills.git
 
@@ -100,6 +206,8 @@ If you prefer installing **all available framework skills**, clone the repositor
 
 Configure your TestMu AI credentials as environment variables so the skill can connect to the grid.
 
+<VerifiedTag value="Verified" />
+
 ```bash
 export LT_USERNAME="YOUR_LAMBDATEST_USERNAME"
 export LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
@@ -110,13 +218,19 @@ export LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
 
 Once the skill is installed, describe the tests you want in natural language and let the assistant generate and run them. Any of the prompts below is enough to get started.
 
+<VerifiedTag value="Verified" />
+
 ```text
 "Write Playwright tests for the login page and run them on TestMu AI cloud using Chrome and Firefox"
 ```
 
+<VerifiedTag value="Verified" />
+
 ```text
 "Set up a Playwright TypeScript project with Page Object Model and run tests on TestMu AI"
 ```
+
+<VerifiedTag value="Verified" />
 
 ```text
 "Run Playwright tests on real mobile devices on TestMu AI cloud"
@@ -133,6 +247,8 @@ The Agent Skill automatically handles:
 ***
 
 The skill ships as a small set of Markdown files that the assistant reads to build your project. The tree below shows the layout, and the table maps each area of coverage.
+
+<VerifiedTag value="Verified" />
 
 ```text
 playwright-skill/
@@ -163,7 +279,7 @@ Pick your language to see which skill applies and where its dedicated doc lives.
 
 | Language | Agent Skill | Documentation |
 |----------|------------|---------------|
-| TypeScript (default) | [playwright-skill](https://github.com/LambdaTest/agent-skills/tree/main/playwright-skill) | [TypeScript with Playwright](/docs/javascript-with-playwright/?framework=typescript) |
+| TypeScript (default) | [playwright-skill](https://github.com/LambdaTest/agent-skills/tree/main/playwright-skill) | [TypeScript with Playwright](/support/docs/typescript-with-playwright/) |
 | JavaScript | [playwright-skill](https://github.com/LambdaTest/agent-skills/tree/main/playwright-skill) | [JavaScript with Playwright](/docs/javascript-with-playwright/) |
 | Java | [playwright-skill](https://github.com/LambdaTest/agent-skills/tree/main/playwright-skill) | [Java with Playwright](/docs/java-with-playwright/) |
 | Python | [playwright-skill](https://github.com/LambdaTest/agent-skills/tree/main/playwright-skill) | [Python with Playwright](/docs/python-with-playwright/) |

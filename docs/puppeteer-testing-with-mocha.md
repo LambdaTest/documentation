@@ -18,6 +18,7 @@ slug: puppeteer-testing-with-mocha/
 canonical: https://www.testmuai.com/support/docs/puppeteer-testing-with-mocha/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -43,6 +44,103 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/puppeteer-testing-with-mocha/"
+    },
+    "headline": "How to Run Puppeteer Tests With Mocha on TestMu AI",
+    "description": "Run Puppeteer tests with Mocha on real browsers and operating systems on the TestMu AI cloud grid, including setup, capabilities, and execution.",
+    "url": "https://www.testmuai.com/support/docs/puppeteer-testing-with-mocha/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Web Automation",
+    "keywords": [
+      "puppeteer testing with mocha",
+      "puppeteer mocha test runner",
+      "run puppeteer tests on testmu ai",
+      "automation testing with puppeteer",
+      "puppeteer mocha capabilities"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Install the npm dependencies",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "npm install"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Set credentials on Windows",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "set LT_USERNAME=\"YOUR_LAMBDATEST_USERNAME\"\nset LT_ACCESS_KEY=\"YOUR_LAMBDATEST_ACCESS_KEY\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Set credentials on macOS/Linux",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "export LT_USERNAME=\"YOUR_LAMBDATEST_USERNAME\"\nexport LT_ACCESS_KEY=\"YOUR_LAMBDATEST_ACCESS_KEY\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Run Puppeteer Mocha Tests on TestMu AI",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "const puppeteer = require('puppeteer');\nconst expect = require('chai').expect;\nconst caps_chrome = {\n\tbrowserName    : 'Chrome',\n\tbrowserVersion : 'latest',\n\t'LT:Options'   : {\n\t\tplatform   : 'Windows 10',\n\t\tbuild      : 'Sample Puppeteer-Mocha',\n\t\tname       : 'Puppeteer-mocha test on Chrome',\n\t\tresolution : '1366x768',\n\t\tuser       : process.env.LT_USERNAME,\n\t\taccessKey  : process.env.LT_ACCESS_KEY,\n\t\tnetwork    : true\n\t}\n};\nconst caps_edge = {\n\tbrowserName    : 'MicrosoftEdge',\n\tbrowserVersion : 'latest',\n\t'LT:Options'   : {\n\t\tplatform   : 'Windows 10',\n\t\tbuild      : 'Sample Puppeteer-Mocha',\n\t\tname       : 'Puppeteer-mocha test on Edge',\n\t\tresolution : '1366x768',\n\t\tuser       : process.env.LT_USERNAME,\n\t\taccessKey  : process.env.LT_ACCESS_KEY,\n\t\tnetwork    : true\n\t}\n};\n\nlet browser = null;\nlet page = null;\ndescribe('Search Text', () => {\n\tbeforeEach(async () => {\n\t\tbrowser = await puppeteer.connect({\n\t\t\tbrowserWSEndpoint : `wss://cdp.lambdatest.com/puppeteer?capabilities=${encodeURIComponent(\n\t\t\t\tJSON.stringify(caps_chrome)\n\t\t\t)}`\n\t\t});\n\t\tpage = await browser.newPage();\n\t});\n\n\tit('should be titled \"Google\"', async () => {\n\t\tlet text = 'Google';\n\t\tawait page.goto('https://www.duckduckgo.com');\n\t\tvar element = await page.$('[name=\"q\"]');\n\t\tawait element.click();\n\t\tawait element.type(text);\n\t\tawait Promise.all([\n\t\t\tpage.keyboard.press('Enter'),\n\t\t\tpage.waitForNavigation()\n\t\t]);\n\t\tvar title = await page.title();\n\t\ttry {\n\t\t\texpect(title).equal(text + ' at DuckDuckGo', 'Expected page title is incorrect!');\n\t\t\tawait page.evaluate(\n\t\t\t\t(_) => {},\n\t\t\t\t`lambdatest_action: ${JSON.stringify({\n\t\t\t\t\taction    : 'setTestStatus',\n\t\t\t\t\targuments : { status: 'passed', remark: 'assertion passed' }\n\t\t\t\t})}`\n\t\t\t);\n\t\t} catch (e) {\n\t\t\tawait page.evaluate(\n\t\t\t\t(_) => {},\n\t\t\t\t`lambdatest_action: ${JSON.stringify({\n\t\t\t\t\taction    : 'setTestStatus',\n\t\t\t\t\targuments : { status: 'failed', remark: e.name }\n\t\t\t\t})}`\n\t\t\t);\n\t\t}\n\t});\n\n\tafterEach(async () => {\n\t\tawait page.close();\n\t\tawait browser.close();\n\t});\n});"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Run the test",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "npm run test"
+      }
+    ],
+    "dateModified": "2026-09-09T19:13:32+05:30"
+  }) }}
+/>
+
 # How to Run Puppeteer Tests With Mocha on TestMu AI
 ***
 
@@ -53,15 +151,15 @@ If you write Puppeteer tests with Mocha, you can run the same specs across real 
 
 Before you run your first suite, clone the sample repository and set the credentials TestMu AI uses to authenticate your session.
 
-:::note
-All the code samples in this documentation are available in the TestMu AI repository on GitHub. Download or clone the repository to run your tests quickly.
+:::tip Sample repo
+<a href="https://github.com/LambdaTest/puppeteer-sample/tree/main/puppeteer-mocha" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="TestMu AI Puppeteer Mocha sample on GitHub"  className="doc_img"/> View on GitHub</a>
 :::
-
-<a href="https://github.com/LambdaTest/puppeteer-sample" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="TestMu AI Puppeteer sample repository on GitHub"  className="doc_img"/> View on GitHub</a>
 
 1. Clone the TestMu AI Puppeteer repository on your system.
 
 2. Install the npm dependencies.
+
+<VerifiedTag value="Verified" />
 
 ```
 npm install
@@ -69,9 +167,9 @@ npm install
 
 3. Set your TestMu AI username and access key in the environment variables. Click the **Access Key** button at the top-right of the Automation Dashboard to find them.
 
-<img loading="lazy" src={require('../assets/images/playwright-testing/key.webp').default} alt="Access Key button at the top-right of the TestMu AI Automation Dashboard" width="1444" height="703"  className="doc_img"/>
-
 **Windows**
+
+<VerifiedTag value="Verified" />
 
 ```js
 set LT_USERNAME="YOUR_LAMBDATEST_USERNAME"
@@ -79,6 +177,8 @@ set LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
 ```
 
 **macOS/Linux**
+
+<VerifiedTag value="Verified" />
 
 ```js
 export LT_USERNAME="YOUR_LAMBDATEST_USERNAME"
@@ -91,6 +191,8 @@ export LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
 The sample test script searches for TestMu AI on DuckDuckGo and verifies the page title. Configure the capabilities, then run the suite with a single command.
 
 1. To run the Puppeteer Mocha tests on TestMu AI, make the required changes to the `google.spec.js` file.
+
+<VerifiedTag value="Verified" />
 
 ```js
 const puppeteer = require('puppeteer');
@@ -173,6 +275,8 @@ describe('Search Text', () => {
 ```
 
 2. Run the following command to execute your test.
+
+<VerifiedTag value="Verified" />
 
 ```bash
 npm run test

@@ -18,6 +18,83 @@ canonical: https://www.testmuai.com/support/docs/private-dependencies-cypress/
 ---
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/private-dependencies-cypress/"
+    },
+    "headline": "How to Use Private Dependencies in Cypress on TestMu AI",
+    "description": "Run Cypress tests that use private dependencies on TestMu AI, including package.json and lambdatest-config.json setup, .npmrc, and dep_token.",
+    "url": "https://www.testmuai.com/support/docs/private-dependencies-cypress/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Web Automation",
+    "keywords": [
+      "cypress private dependencies testmu ai",
+      "cypress npmrc private registry",
+      "cypress dep_token capability",
+      "run cypress tests private packages",
+      "cypress private npm dependencies"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Update the TestMu AI Cypress CLI",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "npm install -g lambdatest-cypress-cli"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Check the Installed CLI Version",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "lambdatest-cypress --version"
+      }
+    ],
+    "dateModified": "2026-09-27T00:00:00+05:30"
+  }) }}
+/>
 
 # How to Use Private Dependencies in Cypress on TestMu AI
 ***
@@ -38,11 +115,15 @@ These steps assume you have already run a Cypress test on TestMu AI. If you have
 
 Update the CLI first so it supports private dependency installation. Install the latest version:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 npm install -g lambdatest-cypress-cli
 ```
 
 The CLI version should be the latest, which is 2.3.0. Check the installed version:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 lambdatest-cypress --version
@@ -83,7 +164,7 @@ You can declare a private dependency in either the `package.json` file or the `l
 
 After completing this setup, run your tests on the TestMu AI platform. The tests now execute with the private dependencies installed.
 
-To download packages over a tunnel, set environment variables, or change screen resolution, see [how to configure Cypress run settings](/support/docs/run-settings/).
+To download packages over a tunnel, see [how to install npm packages via a tunnel](/support/docs/run-settings/#install-npm-packages-via-a-tunnel). To set environment variables or change screen resolution, see [how to configure Cypress run settings](/support/docs/run-settings/).
 
 ## Related Cypress Guides
 ***

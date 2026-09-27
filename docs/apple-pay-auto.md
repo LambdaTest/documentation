@@ -139,7 +139,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
           "@type": "HowToStep",
           "position": 2,
           "name": "Step 2: Add Desired Capabilities",
-          "text": "To enable Apple Pay automation, include the following capability in your automation session as highlighted in the Capabilities: {`desired_caps = { \"deviceName\": \"iPhone 16\", \"platformName\": \"iOS\", \"platformVersion\": \"18\", \"isRealMobile\": True, \"app\": \"YOURAPPID\", \"build\": \"Sample Build\", \"name\": \"Sample Test\", // highlight-next-line \"applePay\": true, // highlight-next-line \"applePayCardType\": [\"visa\", \"master\"] }`} You must add the generated APPURL** to the app capability in the config file. You can generate capabilities for your test requirements with the help of our inbuilt Capabilities Generator tool. For more details, please refer to our guide on Desired Capabilities in Appium.",
+          "text": "To enable Apple Pay automation, include the following capability in your automation session as highlighted in the Capabilities: {`desired_caps = { \"deviceName\": \"iPhone 16\", \"platformName\": \"iOS\", \"platformVersion\": \"18\", \"isRealMobile\": True, \"app\": \"YOURAPPID\", \"build\": \"Sample Build\", \"name\": \"Sample Test\", // highlight-next-line \"applePay\": true, // highlight-next-line \"applePayCardType\": [\"amex\", \"visa\", \"master\", \"discover\"] }`} You must add the generated APPURL** to the app capability in the config file. You can generate capabilities for your test requirements with the help of our inbuilt Capabilities Generator tool. For more details, please refer to our guide on Desired Capabilities in Appium.",
           "url": "https://www.testmuai.com/support/docs/apple-pay-auto/#step-2-add-desired-capabilities"
         },
         {
@@ -258,7 +258,7 @@ To enable Apple Pay automation, include the following capability in your automat
     // highlight-next-line
     "applePay": true,
     // highlight-next-line
-    "applePayCardType": ["visa", "master"]
+    "applePayCardType": ["amex", "visa", "master", "discover"]
 }`}
     </CodeBlock>
   </TabItem>

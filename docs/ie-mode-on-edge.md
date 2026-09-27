@@ -21,6 +21,7 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import CodeBlock from '@theme/CodeBlock';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -47,6 +48,82 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/ie-mode-on-edge/"
+    },
+    "headline": "How to Test in IE Mode on Edge With TestMu AI",
+    "description": "Test legacy applications in Internet Explorer mode on Microsoft Edge with Selenium on TestMu AI.",
+    "url": "https://www.testmuai.com/support/docs/ie-mode-on-edge/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Documentation",
+    "keywords": [
+      "ie mode microsoft edge",
+      "internet explorer mode selenium",
+      "ie11 edge compatibility",
+      "legacy browser testing selenium",
+      "ie mode automation"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Set Up IE Mode Capabilities (Java)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "import org.openqa.selenium.ie.InternetExplorerOptions;\nimport org.openqa.selenium.remote.RemoteWebDriver;\nimport java.net.URL;\nimport java.util.HashMap;\n\npublic class IEModeTest {\n    public static void main(String[] args) throws Exception {\n        InternetExplorerOptions browserOptions = new InternetExplorerOptions();\n        browserOptions.setPlatformName(\"Windows 11\");\n        browserOptions.setBrowserVersion(\"11.0\");\n\n        HashMap<String, Object> ltOptions = new HashMap<>();\n        ltOptions.put(\"username\", System.getenv(\"LT_USERNAME\"));\n        ltOptions.put(\"accessKey\", System.getenv(\"LT_ACCESS_KEY\"));\n        ltOptions.put(\"project\", \"IE Mode Test\");\n        ltOptions.put(\"w3c\", true);\n        browserOptions.setCapability(\"LT:Options\", ltOptions);\n\n        RemoteWebDriver driver = new RemoteWebDriver(\n            new URL(\"https://hub.lambdatest.com/wd/hub\"), browserOptions);\n        driver.get(\"https://example.com\");\n\n        System.out.println(\"Page title: \" + driver.getTitle());\n        driver.quit();\n    }\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Set Up IE Mode Capabilities (C#)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "C#",
+        "text": "using OpenQA.Selenium;\nusing OpenQA.Selenium.IE;\nusing OpenQA.Selenium.Remote;\n\nInternetExplorerOptions browserOptions = new InternetExplorerOptions();\nbrowserOptions.PlatformName = \"Windows 11\";\nbrowserOptions.BrowserVersion = \"11.0\";\n\nDictionary<string, object> ltOptions = new Dictionary<string, object>();\nltOptions.Add(\"username\", Environment.GetEnvironmentVariable(\"LT_USERNAME\"));\nltOptions.Add(\"accessKey\", Environment.GetEnvironmentVariable(\"LT_ACCESS_KEY\"));\nltOptions.Add(\"project\", \"IE Mode Test\");\nltOptions.Add(\"w3c\", true);\nbrowserOptions.AddAdditionalOption(\"LT:Options\", ltOptions);\n\nIWebDriver driver = new RemoteWebDriver(\n    new Uri(\"https://hub.lambdatest.com/wd/hub\"), browserOptions);\ndriver.Navigate().GoToUrl(\"https://example.com\");\n\nConsole.WriteLine(\"Page title: \" + driver.Title);\ndriver.Quit();"
+      }
+    ],
+    "dateModified": "2026-09-09T19:13:32+05:30"
+  }) }}
+/>
+
 # How to Test in IE Mode on Edge With TestMu AI
 ---
 
@@ -71,6 +148,8 @@ IE Mode is available only on Windows. The Edge browser version must support IE M
 Configure `InternetExplorerOptions` with Edge attachment to run tests in IE Mode on TestMu AI.
 
 To run tests in IE Mode, use the `InternetExplorerOptions` class with `platformName` set to `Windows 11` and `browserVersion` set to `11.0`. TestMu AI handles the Edge attachment server-side. Pass your credentials in `LT:Options` as usual. For the complete set of options you can combine with these settings, see the supported [Selenium automation capabilities](/support/docs/selenium-automation-capabilities/).
+
+<VerifiedTag value="Verified" />
 
 <Tabs className="docs__val">
 

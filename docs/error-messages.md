@@ -21,6 +21,7 @@ canonical: https://www.testmuai.com/support/docs/error-messages/
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -46,6 +47,66 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       })
     }}
 ></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/error-messages/"
+    },
+    "headline": "How to Fix Common Selenium Errors on TestMu AI",
+    "description": "Identify and fix common Selenium error messages on TestMu AI, from authentication and timeout errors to element and session failures.",
+    "url": "https://www.testmuai.com/support/docs/error-messages/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Web Automation",
+    "keywords": [
+      "selenium test execution errors",
+      "authentication error fix",
+      "max duration exceeded",
+      "element click intercepted",
+      "stale element reference fix",
+      "session not created error"
+    ],
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "dateModified": "2026-09-09T19:13:32+05:30"
+  }) }}
+/>
 
 # How to Fix Common Selenium Errors on TestMu AI
 ---
@@ -212,6 +273,8 @@ Another element is obscuring the element you want to click.
 
 The Element Click command could not complete because another element is obscuring the target element.
 
+<VerifiedTag value="Verified" />
+
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">
 {`org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <label _ngcontent-yrc-c26="" formcontrolname="reportingDealPermission" nz-checkbox="" class="ant-checkbox-wrapper ng-untouched ng-pristine ng-valid" ng-reflect-name="reportingDealPermission">...</label> is not clickable at point (161, 562). Other element would receive the click: <div _ngcontent-yrc-c26="" class="footer">...</div>
@@ -250,6 +313,9 @@ A command could not complete because the element is not pointer- or keyboard int
 
 For 1. -> Use implicit or explicit wait:
   - Implicit wait:
+
+    <VerifiedTag value="Verified" />
+
     <div className="lambdatest__codeblock">
     <CodeBlock className="language-bash">
     {`driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);`}
@@ -258,6 +324,9 @@ For 1. -> Use implicit or explicit wait:
       
 
   - Explicit wait:
+
+    <VerifiedTag value="Verified" />
+
     <div className="lambdatest__codeblock">
     <CodeBlock className="language-bash">
     {`WebDriverWait wait=new WebDriverWait(driver, 20); element1 = wait.until(ExpectedConditions.elementToBeClickable(By.className("fa-stack-1x")));`}
@@ -299,6 +368,8 @@ Example:
 
 You cannot set a window size to a negative value:
 
+<VerifiedTag value="Verified" />
+
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">
 {`from selenium import webdriver from selenium.common import exceptions session = webdriver.Firefox()
@@ -310,6 +381,8 @@ You cannot set a window size to a negative value:
 </div>
 
 Output:
+
+<VerifiedTag value="Verified" />
 
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">
@@ -343,6 +416,8 @@ An illegal attempt was made to set a cookie under a different domain than the cu
 Example:
 If the current domain is 'example.com', you cannot add a cookie for 'example.org':
 
+<VerifiedTag value="Verified" />
+
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">
 {`from selenium import webdriver
@@ -360,6 +435,9 @@ If the current domain is 'example.com', you cannot add a cookie for 'example.org
 </div>
 
 Output: 
+
+<VerifiedTag value="Verified" />
+
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">
 {`InvalidCookieDomainException: https://example.org/
@@ -398,6 +476,8 @@ The provided selector strategy is unknown or incorrect.
 
 Argument was an invalid selector.
 
+<VerifiedTag value="Verified" />
+
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">
 {`org.openqa.selenium.InvalidSelectorException: invalid selector
@@ -427,6 +507,8 @@ The session either does not exist, is not active, or could not be created.
 ---
 Occurs if the given session ID is not in the list of active sessions, meaning the session either does not exist or is not active.
 
+<VerifiedTag value="Verified" />
+
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">
 {`ERROR webdriver: Request failed with status 404 due to invalid session id: invalid session
@@ -444,6 +526,8 @@ Occurs if the given session ID is not in the list of active sessions, meaning th
 ### Session Not Created - 500
 ---
 A new session could not be created.
+
+<VerifiedTag value="Verified" />
 
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">
@@ -471,6 +555,8 @@ The JavaScript error occurs when a script supplied by the user fails to execute.
 
 Example: 
 
+<VerifiedTag value="Verified" />
+
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">
 {`from selenium import webdriver
@@ -485,6 +571,9 @@ Example:
 </div>
 
 Output:
+
+<VerifiedTag value="Verified" />
+
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">
 {`JavascriptException: ReferenceError: foo is not defined
@@ -509,6 +598,9 @@ The target for mouse interaction is outside the browser viewport.
 The target for mouse interaction is not in the browser's viewport and cannot be brought into view.
 
 Example:
+
+<VerifiedTag value="Verified" />
+
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">
 {`MoveTargetOutOfBoundsException: Element cannot be scrolled into view
@@ -533,6 +625,8 @@ You attempted to operate on a modal dialog when none was open.
 
 An attempt was made to operate on a modal dialog when one was not open.
 
+<VerifiedTag value="Verified" />
+
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">
 {`Exception in thread "main" org.openqa.selenium.UnhandledAlertException: Unexpected modal dialog (text: You need to use IE 6.0 for viewing this application. Else some features may not work): You need to use IE 6.0 for viewing this application. Else some features may not work
@@ -555,6 +649,9 @@ No cookie matching the given path name was found in the current browsing context
 No cookie matching the given path name was found among the associated cookies of the current browsing context's active document.
 
 Example:
+
+<VerifiedTag value="Verified" />
+
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">
 {`org.openqa.selenium.UnableToSetCookieException: Unable to set cookie (WARNING: The server did not provide any stacktrace information)
@@ -581,6 +678,9 @@ The element could not be located on the page using the given search parameters.
 An element could not be located on the page using the given search parameters.
 
 Example:
+
+<VerifiedTag value="Verified" />
+
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">
 {`exception selenium.common.exceptions.NoSuchElementException(msg=None, screen=None, stacktrace=None)
@@ -611,6 +711,9 @@ The command to switch to a frame could not find the specified frame.
 A command to switch to a frame could not be satisfied because the frame could not be found.
 
 Example:
+
+<VerifiedTag value="Verified" />
+
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">
 {`selenium.common.exceptions.NoSuchFrameException: Message: no such frame
@@ -637,6 +740,9 @@ The command to switch to a window could not find the specified window.
 A command to switch to a window could not be satisfied because the window could not be found.
 
 Example:
+
+<VerifiedTag value="Verified" />
+
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">
 {`webdriver: Request failed with status 404 due to no such window: Currently focused window has been closed.
@@ -675,6 +781,9 @@ The referenced element is no longer attached to the DOM.
 
 A command failed because the referenced element is no longer attached to the DOM.
 Example:
+
+<VerifiedTag value="Verified" />
+
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">
 {`StaleElementReferenceException: The element reference of e75a1764-ff73-40fa-93c1-08cb90394b65 is stale either the element is no longer attached to the DOM, it is not in the current frame context, or the document has been refreshed
@@ -700,6 +809,9 @@ Common solutions include:
  driver.findElement(By.xpath("xpath here")).click();`
 
 * Using 'try-catch' block within 'for loop':
+
+<VerifiedTag value="Verified" />
+
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">
 {`for(int i=0; i<=2;i++){
@@ -735,6 +847,9 @@ The requested operation is not supported for the given class or data structure.
 A command that should execute properly cannot be supported for some reason.
 
 Example:
+
+<VerifiedTag value="Verified" />
+
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">
 {`import java.util.Arrays;
@@ -778,6 +893,9 @@ The request matched a known URL but used an unsupported HTTP method.
 The requested command matched a known URL but did not match any method for that URL.
 
 Example:
+
+<VerifiedTag value="Verified" />
+
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">
 {`exception selenium.common.exceptions.NoSuchElementException(msg=None, screen=None, stacktrace=None)
@@ -811,6 +929,8 @@ The unknown command error occurs when the driver does not recognize the command 
 Example:
 The /session/&lbrace;session id&rbrace;/foo endpoint does not exist, and returns an unknown command error with a 404 Not Found HTTP status code.
 
+<VerifiedTag value="Verified" />
+
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">
 {`% curl -i -d '{}' http://localhost:4444/session/foo
@@ -838,6 +958,9 @@ The script timeout duration is a configurable capability. You can change how lon
 If you set the session script timeout duration to indefinite by using a `null` value, you risk putting the session into a non-recoverable state. Use this with caution.
 
 Example:
+
+<VerifiedTag value="Verified" />
+
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">
 {`from selenium import webdriver
@@ -855,6 +978,9 @@ except exceptions.ScriptTimeoutException as e:
 </div>
 
 Output:
+
+<VerifiedTag value="Verified" />
+
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">
 
@@ -872,6 +998,9 @@ A command to set a cookie's value could not be satisfied.
 `org.openqa.selenium.UnableToSetCookieException: Unable to set cookie (WARNING: The server did not provide any stacktrace information)`
 
 Example:
+
+<VerifiedTag value="Verified" />
+
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">
 {`System.setProperty("webdriver.edge.driver","C:\\Program Files\\Latest Webdriver\\MicrosoftWebDrive.exe" );
@@ -906,6 +1035,9 @@ A command could not execute because the remote end encountered an unexpected ale
 `org.openqa.selenium.UnhandledAlertException: unexpected alert open`
 
 Example:
+
+<VerifiedTag value="Verified" />
+
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">
 {`org.openqa.selenium.UnhandledAlertException: unexpected alert open

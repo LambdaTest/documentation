@@ -26,6 +26,7 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -50,6 +51,96 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       })
     }}
 ></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/php-with-selenium-running-php-automation-scripts-on-testmu-selenium-grid/"
+    },
+    "headline": "How to Run Selenium Tests With PHP on TestMu AI",
+    "description": "Run PHP Selenium tests on the TestMu AI cloud grid across 10,000+ browsers. Covers Behat, Laravel Dusk, Codeception, and PHPUnit.",
+    "url": "https://www.testmuai.com/support/docs/php-with-selenium-running-php-automation-scripts-on-testmu-selenium-grid/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Web Automation",
+    "keywords": [
+      "php selenium grid setup",
+      "run php tests on cloud",
+      "php selenium webdriver tutorial",
+      "behat laravel codeception phpunit selenium"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "A capabilities array passing your browser and OS choices to the grid",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "PHP",
+        "text": "$capabilities = array(\n    \"build\" => \"your build name\",\n    \"name\" => \"your test name\",\n    \"platform\" => \"Windows 10\",\n    \"browserName\" => \"Chrome\",\n    \"version\" => \"latest\"\n);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Clone the Behat sample GitHub project",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "codeRepository": "https://github.com/LambdaTest/behat-selenium-sample",
+        "text": "git clone https://github.com/LambdaTest/behat-selenium-sample\ncd behat-selenium-sample"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Set your browser and OS in the Behat config",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "default:\n  context:\n    parameters:\n      lambdatest:\n        server: \"hub.lambdatest.com\"\n        user: \"YOUR_LAMBDATEST_USERNAME\"\n        key: \"YOUR_LAMBDATEST_ACCESS_KEY\"\n        capabilities:\n          build: \"behat-selenium-sample\"\n          name: \"single-behat-test\"\n        environments:\n          - browserName: chrome\n            version: 71.0\n            platform: Win10"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Install dependencies and run a single test, or in parallel",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "composer install\ncomposer single\ncomposer parallel"
+      }
+    ],
+    "dateModified": "2026-09-09T19:13:32+05:30"
+  }) }}
+/>
 
 # How to Run Selenium Tests With PHP on TestMu AI
 ---
@@ -103,6 +194,8 @@ set LT_ACCESS_KEY=${ YOUR_LAMBDATEST_ACCESS_KEY()}`}
 
 Every framework below connects to the grid and passes your browser and OS choices through a capabilities array:
 
+<VerifiedTag value="Verified" />
+
 ```php
 $capabilities = array(
     "build" => "your build name",
@@ -132,12 +225,16 @@ Behat is BDD for PHP: feature files plus step definitions, with the grid config 
 
 1. Clone the [sample GitHub project](https://github.com/LambdaTest/behat-selenium-sample):
 
+<VerifiedTag value="Verified" />
+
 ```bash
 git clone https://github.com/LambdaTest/behat-selenium-sample
 cd behat-selenium-sample
 ```
 
 2. Set your browser and OS in the Behat config:
+
+<VerifiedTag value="Verified" />
 
 ```yaml title="behat.yml"
 default:
@@ -159,6 +256,8 @@ default:
 The `user` and `key` values are read from the `LT_USERNAME` and `LT_ACCESS_KEY` environment variables you set in the [Set Your Credentials](#set-your-credentials) section.
 
 3. Install the dependencies:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 composer install
@@ -188,6 +287,8 @@ cd php-laravel-dusk-todo
 
 2. Set your browser and OS in the `$capabilities` array:
 
+<VerifiedTag value="Verified" />
+
 ```php
 $capabilities = array(
     "build" => "LaravelDusk Build",
@@ -199,6 +300,8 @@ $capabilities = array(
 ```
 
 3. Install the dependencies:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 composer install
@@ -227,6 +330,8 @@ cd codeception-selenium-sample
 
 2. Set your browser and OS in the acceptance suite config:
 
+<VerifiedTag value="Verified" />
+
 ```yaml title="acceptance.suite.yml"
 modules:
   enabled:
@@ -246,6 +351,8 @@ modules:
 In the `host` value, `{username}` and `{token}` are your `LT_USERNAME` and `LT_ACCESS_KEY` environment variables set in the [Set Your Credentials](#set-your-credentials) section.
 
 3. Install the dependencies:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 composer install
@@ -273,6 +380,8 @@ cd Php-PhpUnit-Selenium
 ```
 
 2. Set your browser and OS in the `$capabilities` array (`LambdaTestSetup.php`):
+
+<VerifiedTag value="Verified" />
 
 ```php
 $capabilities = array(

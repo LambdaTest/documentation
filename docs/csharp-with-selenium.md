@@ -23,6 +23,7 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -48,6 +49,96 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       })
     }}
 ></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/c-with-selenium-running-c-automation-scripts-on-testmu-selenium-grid/"
+    },
+    "headline": "How to Run Selenium Tests With C# on TestMu AI",
+    "description": "Run C# Selenium tests on the TestMu AI cloud grid across 10,000+ browsers. Covers NUnit, MSTest, xUnit, and Reqnroll (the maintained SpecFlow successor).",
+    "url": "https://www.testmuai.com/support/docs/c-with-selenium-running-c-automation-scripts-on-testmu-selenium-grid/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Web Automation",
+    "keywords": [
+      "run C# Selenium tests cloud",
+      "C# Selenium grid setup",
+      "C# Selenium WebDriver tutorial",
+      "nunit mstest specflow xunit selenium"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "An LT:Options object passing your browser and OS choices to the grid",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "C#",
+        "text": "var browserOptions = new ChromeOptions();\nbrowserOptions.PlatformName = \"Windows 10\";\nbrowserOptions.BrowserVersion = \"latest\";\n\nvar ltOptions = new Dictionary<string, object>\n{\n    { \"username\", LT_USERNAME },\n    { \"accessKey\", LT_ACCESS_KEY },\n    { \"project\", \"Demo LT\" },\n    { \"w3c\", true }\n};\nbrowserOptions.AddAdditionalOption(\"LT:Options\", ltOptions);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Clone the NUnit sample GitHub project",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "codeRepository": "https://github.com/LambdaTest/CSharp-NUnit-Selenium",
+        "text": "git clone https://github.com/LambdaTest/CSharp-NUnit-Selenium\ncd CSharp-NUnit-Selenium"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Set your browser and OS in the NUnit LT:Options object",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "C#",
+        "text": "var browserOptions = new ChromeOptions();\nbrowserOptions.PlatformName = \"Windows 10\";\nbrowserOptions.BrowserVersion = \"latest\";\n\nvar ltOptions = new Dictionary<string, object>\n{\n    { \"build\", \"NUnit Build\" },\n    { \"name\", \"NUnit Test\" },\n    { \"w3c\", true }\n};\nbrowserOptions.AddAdditionalOption(\"LT:Options\", ltOptions);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Build the solution and run the test",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "dotnet test"
+      }
+    ],
+    "dateModified": "2026-09-09T19:13:32+05:30"
+  }) }}
+/>
 
 # How to Run Selenium Tests With C# on TestMu AI
 ---
@@ -101,6 +192,8 @@ set LT_ACCESS_KEY=${ YOUR_LAMBDATEST_ACCESS_KEY()}`}
 
 Every framework below connects to the grid and passes your browser and OS choices through an `LT:Options` object:
 
+<VerifiedTag value="Verified" />
+
 ```csharp
 var browserOptions = new ChromeOptions();
 browserOptions.PlatformName = "Windows 10";
@@ -135,12 +228,16 @@ NUnit runs from the Visual Studio Test Explorer, or from the CLI on Linux/macOS.
 
 1. Clone the [sample GitHub project](https://github.com/LambdaTest/CSharp-NUnit-Selenium):
 
+<VerifiedTag value="Verified" />
+
 ```bash
 git clone https://github.com/LambdaTest/CSharp-NUnit-Selenium
 cd CSharp-NUnit-Selenium
 ```
 
 2. Set your browser and OS in the `LT:Options` object:
+
+<VerifiedTag value="Verified" />
 
 ```csharp
 var browserOptions = new ChromeOptions();
@@ -179,6 +276,8 @@ cd MSTest-Selenium-Sample
 
 2. Set your browser and OS in the `LT:Options` object:
 
+<VerifiedTag value="Verified" />
+
 ```csharp
 var browserOptions = new ChromeOptions();
 browserOptions.PlatformName = "Windows 10";
@@ -194,6 +293,8 @@ browserOptions.AddAdditionalOption("LT:Options", ltOptions);
 ```
 
 3. Run the test:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 dotnet test MS-Test-Cross-Browser.csproj
@@ -253,6 +354,8 @@ cd CSharp-xUnit-Selenium
 
 2. Set your browsers in `config.json`. Replace the `user` and `key` values with your actual credentials, or have them read from the `LT_USERNAME` and `LT_ACCESS_KEY` environment variables you set earlier:
 
+<VerifiedTag value="Verified" />
+
 ```json title="config.json"
 {
   "server": "hub.lambdatest.com",
@@ -300,6 +403,8 @@ cd reqnroll-automation-sample
 
 2. Set your browser and OS, and your credentials, in the Makefile, or export them as the `LT_USERNAME` and `LT_ACCESS_KEY` environment variables you set earlier.
 3. Build and run the tests using the project Makefile:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 make clean

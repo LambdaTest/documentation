@@ -18,6 +18,7 @@ canonical: https://www.testmuai.com/support/docs/cypress-agent-skills/
 ---
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -42,6 +43,95 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     })
   }}
 ></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/cypress-agent-skills/"
+    },
+    "headline": "How to Run Cypress Tests With Agent Skills on TestMu AI",
+    "description": "Use TestMu AI Agent Skills to generate production-ready Cypress test automation with AI coding assistants like Claude Code, GitHub Copilot, and Cursor.",
+    "url": "https://www.testmuai.com/support/docs/cypress-agent-skills/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Web Automation",
+    "keywords": [
+      "cypress agent skills",
+      "ai test automation",
+      "cypress ai coding"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Clone the repository and copy the Cypress skill into your AI tool's skills directory",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "codeRepository": "https://github.com/LambdaTest/agent-skills",
+        "text": "git clone https://github.com/LambdaTest/agent-skills.git\n\n# For Claude Code\ncp -r agent-skills/cypress-skill .claude/skills/\n\n# For Cursor\ncp -r agent-skills/cypress-skill .cursor/skills/\n\n# For GitHub Copilot\ncp -r agent-skills/cypress-skill .github/skills/\n\n# For Gemini CLI\ncp -r agent-skills/cypress-skill .gemini/skills/"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Configure your TestMu AI credentials as environment variables",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "export LT_USERNAME=\"YOUR_LAMBDATEST_USERNAME\"\nexport LT_ACCESS_KEY=\"YOUR_LAMBDATEST_ACCESS_KEY\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Describe the tests you want in natural language",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\"Write Cypress E2E tests for the login page and run them on TestMu AI cloud using Chrome and Firefox\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Cypress skill package structure",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "cypress-skill/\n├── SKILL.md\n└── reference/\n    ├── playbook.md\n    └── advanced-patterns.md"
+      }
+    ],
+    "dateModified": "2026-09-27T00:00:00+05:30"
+  }) }}
+/>
 
 # How to Run Cypress Tests With Agent Skills on TestMu AI
 ***
@@ -75,6 +165,8 @@ Before you install the skill, make sure you have an account, your credentials, a
 
 Clone the repository and copy the Cypress skill into your AI tool's skills directory. Each tool reads skills from its own folder, so use the command that matches your assistant.
 
+<VerifiedTag value="Verified" />
+
 ```bash
 git clone https://github.com/LambdaTest/agent-skills.git
 
@@ -100,6 +192,8 @@ If you prefer installing **all available framework skills**, clone the repositor
 
 The skill runs your tests on the TestMu AI cloud, so it needs your credentials at runtime. Configure your TestMu AI **Username** and **Access Key** as environment variables:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 export LT_USERNAME="YOUR_LAMBDATEST_USERNAME"
 export LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
@@ -110,13 +204,19 @@ export LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
 
 Once installed, describe the tests you want in natural language and the AI assistant generates and runs them. Any of the prompts below is a valid starting point:
 
+<VerifiedTag value="Verified" />
+
 ```
 "Write Cypress E2E tests for the login page and run them on TestMu AI cloud using Chrome and Firefox"
 ```
 
+<VerifiedTag value="Verified" />
+
 ```
 "Set up Cypress component tests for the React dashboard and upload screenshots on failure"
 ```
+
+<VerifiedTag value="Verified" />
 
 ```
 "Run Cypress tests across multiple browsers in parallel on TestMu AI"
@@ -133,6 +233,8 @@ The Agent Skill automatically handles:
 ***
 
 The skill ships as a small package of instruction files that your AI assistant reads to learn the framework. Its structure and the topics each part covers are shown below.
+
+<VerifiedTag value="Verified" />
 
 ```
 cypress-skill/
