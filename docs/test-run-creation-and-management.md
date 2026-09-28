@@ -91,7 +91,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         "https://www.youtube.com/@TestMuAI"
       ]
     },
-    "dateModified": "2026-09-24T12:00:00+05:30"
+    "dateModified": "2026-09-28T12:00:00+05:30"
   }) }}
 />
 This guide outlines the steps required to create, configure, and manage test runs within <BrandName />'s Test Manager. It provides developers and testers with a clear understanding of the process, enabling efficient test execution and organization.
@@ -160,11 +160,100 @@ Test instances are organized using a **Folders** sidebar on the left, reflecting
 
 <img loading="lazy" src={require('../assets/images/test-run/7.png').default} alt="Real "  className="doc_img"/>
 
+Setting statuses here counts as setting them by hand, so those test instances are no longer marked as derived until their steps change again. See [Setting the Test Instance Status Yourself](#setting-the-test-instance-status-yourself).
+
 ### Update Test Step Status
 - Within any test instance, individually update the status of each test step.
 - Add remarks or actual outcomes for manual test steps.
+- Move a step back to **Not Started** if it has to be executed again.
+
+On a manual test instance, marking a step also updates the status of the test instance itself. See [How the Test Instance Status Is Derived](#how-the-test-instance-status-is-derived).
 
 <img loading="lazy" src={require('../assets/images/test-run/8.png').default} alt="Real "  className="doc_img"/>
+
+### How the Test Instance Status Is Derived
+
+On a manual test instance, changing the status of a step recalculates the status of the instance from **all** of its steps, not only the one you changed. You record the verdict once, on the step, and the instance follows.
+
+The instance status is written only when the recalculated value differs from the one already stored, so nothing else about the instance changes.
+
+The rules below are checked in order, and the first one that matches decides the status. Where a rule could match more than one step, the lowest-numbered step wins.
+
+| Order | If | The test instance becomes |
+|---|---|---|
+| 1 | Any step is **Failed** | **Failed**, driven by the lowest-numbered failing step |
+| 2 | Any step has not been executed yet — **Not Started**, **In Progress**, or not marked at all | **Not Started** |
+| 3 | Every step is executed and at least one is on a **custom status** | That custom status, from the lowest-numbered step holding one |
+| 4 | Every step is executed and at least one is **Passed** | **Passed** |
+| 5 | Every step is executed and none of the above applies | **Skipped** |
+
+#### Examples
+
+`Blocked` and `Deferred` below are examples of custom statuses your project may have added to the Test Run **Status** field.
+
+| Step statuses, in order | Test instance status | Why |
+|---|---|---|
+| Passed, Passed, Passed | Passed | Every step was executed and passed. |
+| Passed, Failed, Passed | Failed | Step 2 failed. |
+| Failed, Failed, Skipped | Failed | Step 1 is the lowest-numbered failing step. |
+| Blocked, Failed, Passed | Failed | A failure outranks a custom status. |
+| Passed, Not Started, Not Started | Not Started | Steps are still unexecuted. |
+| Passed, Blocked, Not Started | Not Started | An unexecuted step outranks the custom status. |
+| Not Started, Not Started, Not Started | Not Started | Nothing has been executed yet. |
+| Not marked, Passed, Skipped | Not Started | A step with no status counts as unexecuted. |
+| Passed, Blocked, Skipped | Blocked | Every step is executed, so the custom status decides. |
+| Blocked, Passed, Skipped | Blocked | A custom status is never resolved into Passed. |
+| Blocked, Deferred, Passed | Blocked | With two custom statuses, the lowest-numbered step wins. |
+| Skipped, Skipped, Blocked | Blocked | A custom status outranks Skipped. |
+| Passed, Skipped, Passed | Passed | A skipped step does not block a pass. |
+| Skipped, Skipped, Skipped | Skipped | Everything was executed, and nothing passed or failed. |
+
+<!-- screenshot: manual test instance whose status followed from its step results -->
+
+#### Custom Statuses in a Derived Status
+
+Custom statuses are the extra values your project adds to the Test Run **Status** system field. See [System and Custom Fields](/support/docs/system-and-custom-fields/#system-fields).
+
+- A custom status is an end state. It is never resolved into **Passed** by a later rule, and the execution end time is stamped on the instance when it is derived.
+- Renaming a custom status applies the new name on the instance and on its steps, and the instance stays marked as derived.
+- Deleting a custom status, or unlinking a project from it, resets every instance holding it to **Not Started** and leaves the steps that carried it unmarked.
+
+#### Setting the Test Instance Status Yourself
+
+- You can still set the test instance status by hand at any time, and it is kept exactly as you set it.
+- A status you set by hand is no longer marked as derived. The next real step status change derives over it.
+- Re-selecting the status a step already has is not a change, so it triggers no recalculation and leaves a hand-set instance status alone.
+- Setting statuses in bulk from the test instance list counts as setting them by hand. See [Bulk Update Options](#bulk-update-options).
+- Updating several steps in one bulk action produces a single recalculation, not one per step.
+- Moving a step back to **Not Started** pulls the instance out of an end state such as **Passed**, **Failed** or a custom status, and clears its execution end time.
+
+#### Where Derivation Does Not Apply
+
+- Automation and KaneAI test instances, whose status is reported by the runner.
+- Test instances in an archived test run.
+- Test instances that have no steps. Their status stays manually settable.
+- Test instances already on **Timed Out**, **Aborted**, **Lambda Error** or **Muted**. These are never overwritten.
+
+:::note
+A derived status change is recorded on the test instance audit log against the person who changed the step, naming the step that drove it. See [Test Instance Audit Logs](/support/docs/test-instance-audit-logs/). Syncing an instance to a newer test case version resets it and stops it being marked as derived, until its next step status change. See [Sync Test Instances](/support/docs/sync-test-instance/).
+:::
+
+A derived status rolls up to the test run in the same way a hand-set one does, so the test run status and its status counts stay in step with what was executed.
+
+#### Turn Status Derivation On or Off
+
+Deriving the test instance status from step results is enabled by default for every organization and applies to all of its projects.
+
+This behaviour is configured at the Organization level within the **Org Product Preferences** section of **Organization settings**, under **Test Manager** > **Manual Test Status**, [here](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/org-settings/test-manager/manual-test-status).
+
+<!-- screenshot: Manual Test Status setting in Org Product Preferences -->
+
+- Turn it off and no test instance status is derived any more. Statuses that were already derived are left as they are.
+- Turn it on and it applies from each instance's next step status change. Nothing is recalculated or rewritten for executions that already happened.
+
+:::note
+Only **Admins** of the Organization can change this setting.
+:::
 
 ### Read the Test Case Details During Execution
 
@@ -250,7 +339,7 @@ You can manage your test runs using the options available in the **three-dot men
 |---|---|
 | **Edit** | Modify the test run by adding or removing test cases. KaneAI test runs can only be edited if they have not been executed. |
 | **Duplicate** | Create a copy of the test run for re-execution or variation testing. |
-| **Archive** | Move completed test runs to the archive to keep your workspace clean and organized. |
+| **Archive** | Move completed test runs to the archive to keep your workspace clean and organized. Test instances in an archived test run do not have their status derived from step results. |
 | **Delete** | Permanently remove a test run that is no longer needed. |
 
 :::note

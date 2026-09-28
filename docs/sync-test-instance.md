@@ -94,7 +94,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         "https://www.youtube.com/@TestMuAI"
       ]
     },
-    "dateModified": "2026-09-24T12:00:00+05:30"
+    "dateModified": "2026-09-28T12:00:00+05:30"
   }) }}
 />
 
@@ -146,7 +146,7 @@ Click **Update to Version** to confirm, or **Cancel** to keep the current versio
 
 ### After Syncing
 
-Once synced, the test instance is updated with the latest master test case content, including any changes to the title, step descriptions, expected outcomes, and step structure (added, removed, or reordered steps). The **Test case details** tab is updated to the new version at the same time, so the description, pre-conditions, attachments and fields match the steps. The instance and all step statuses are reset to **Not Started**, and a success notification confirms the update.
+Once synced, the test instance is updated with the latest master test case content, including any changes to the title, step descriptions, expected outcomes, and step structure (added, removed, or reordered steps). The **Test case details** tab is updated to the new version at the same time, so the description, pre-conditions, attachments and fields match the steps. The instance and all step statuses are reset to **Not Started**, and a success notification confirms the update. The instance is also no longer marked as derived from its step results, and is derived again from its next step status change. See [How the Test Instance Status Is Derived](/support/docs/test-run-creation-and-management/#how-the-test-instance-status-is-derived).
 
 <img loading="lazy" src={require('../assets/images/test-manager/sync-test-instance/instance-detail-updated.png').default} alt="Test instance updated to latest version with Not Started status" className="doc_img"/>
 
