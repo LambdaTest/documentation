@@ -183,6 +183,9 @@ Custom headers provide you the ability to keep crucial information about the req
 
 In this documentation, we will look at LambdaTest CustomHeaders, a `capability` that allows you to add custom headers to your tests and bypass firewall restrictions while performing automated browser testing.
 
+:::note
+Custom header injection is not provided for Real Device Manual Sessions, as custom headers must be configured before the session is launched.
+:::
 
 ## How to use CustomHeaders Capability on <BrandName />?
 
@@ -316,9 +319,6 @@ X-Session-ID: 1234567890 //custom header X-Session-ID to track user sessions.
 X-Session-ID: 1234567890 //custom header X-Session-ID to track user sessions.
 ```
 
-:::note
-Custom header injection is not provided for Real Device Manual Sessions, as custom headers must be configured before the session is launched.
-:::
 
 
 <nav aria-label="breadcrumbs">
