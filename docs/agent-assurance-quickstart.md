@@ -4,7 +4,7 @@ toc_max_heading_level: 2
 title: How to Get Started With Agent Assurance
 hide_title: false
 sidebar_label: Quickstart
-description: Install Rook, test a public local sample with prompt-generated hooks, sync a project, and review evidence in the hosted Web UI.
+description: Follow Rook's interactive TUI from sign-in and exploration through prompt-generated profiles, scenarios, a reviewed run, and local or hosted evidence.
 keywords:
   - agent assurance getting started
   - install rook cli
@@ -56,7 +56,7 @@ import { BRAND_URL } from '@site/src/component/BrandName';
       "@id": "https://www.testmuai.com/support/docs/agent-assurance-quickstart/"
     },
     "headline": "How to Get Started With Agent Assurance",
-    "description": "Install Rook, test a public local sample with prompt-generated hooks, sync a project, and review evidence in the hosted Web UI.",
+    "description": "Follow Rook's interactive TUI from sign-in and exploration through prompt-generated profiles, scenarios, a reviewed run, and local or hosted evidence.",
     "url": "https://www.testmuai.com/support/docs/agent-assurance-quickstart/",
     "image": {
       "@type": "ImageObject",
@@ -97,7 +97,7 @@ import { BRAND_URL } from '@site/src/component/BrandName';
         "https://www.youtube.com/@TestMuAI"
       ]
     },
-    "dateModified": "2026-09-25"
+    "dateModified": "2026-09-28"
   }) }}
 />
 
@@ -105,11 +105,19 @@ import { BRAND_URL } from '@site/src/component/BrandName';
 
 Run one small test before connecting a business-critical agent. This walkthrough uses Rook's public support-triage sample: a local HTTP service with in-memory tickets, no model key, and no external customer actions.
 
-The workflow was tested with **Rook 0.1.3** on September 11, 2026. Discovery, profile generation, scenario generation, and judging use TestMu AI credits; even a small suite can involve several model calls. Review the proposed work and credit balance before approving it.
+This is an **interactive TUI walkthrough**, not a CI pipeline. Use your normal shell only to install Rook and start the sample. Then launch `rook` without a subcommand and enter the slash commands below inside its prompt, one step at a time.
+
+```text
+Install → launch Rook → sign in → select a project
+  → explore → select the agent → create and verify a profile
+  → generate and review scenarios → sync → approve one run → inspect evidence
+```
+
+The interactive workflow and terminal screenshots were tested with **Rook 0.1.5** on September 28, 2026. Discovery, profile generation, scenario generation, and judging use TestMu AI credits; even a small suite can involve several model calls. Review the proposed work and credit balance before approving it. The browser examples below are separately identified saved runs.
 
 Already have a live agent? Follow the same sequence with your own [source or requirements](/support/docs/agent-assurance-connect-and-explore-agents/) and [invocation profile](/support/docs/rook-profiles-and-hooks/#add-a-profile-interactively).
 
-## Install and Authenticate the CLI
+## Install Rook {#install-and-authenticate-the-cli}
 
 Choose one public install method. On Windows, first follow [native PowerShell setup](/support/docs/rook-installation/#windows), then use the PowerShell alternatives below. Use `rook.cmd` in PowerShell and the same slash commands inside Rook's terminal.
 
@@ -138,34 +146,15 @@ Then check your installation:
 
 ```bash
 rook --version
-rook doctor
 ```
 
 See [Install Rook](/support/docs/rook-installation/) for PATH, upgrade, and checksum help, including migration from the old Homebrew tap. The packaged CLI includes its runtime. The sample below also needs a separate Node.js installation and Git available in the same terminal.
 
 <span id="choose-production-or-stage-before-signing-in" />
 
-### Sign In to the Public Service
+### Use the Public Service {#sign-in-to-the-public-service}
 
-Use the public Rook service and [hosted Web UI](https://rook.lambdatest.com/projects). Set the service environment before authentication in each terminal where you run Rook:
-
-```bash
-export ROOK_ENV=prod
-rook login
-rook whoami
-rook plan
-```
-
-In PowerShell, use:
-
-```powershell
-$env:ROOK_ENV = 'prod'
-rook.cmd login
-rook.cmd whoami
-rook.cmd plan
-```
-
-Public packages default to <code>ROOK_ENV=prod</code>. This setting selects Rook's service; it does **not** change your target agent's endpoint. Keep the target on a disposable or non-production environment while testing.
+Public packages default to `ROOK_ENV=prod`, the service behind [Rook Projects](https://rook.lambdatest.com/projects). The launch commands in step 2 set it explicitly. Sign in inside the TUI with `/login`; there is no separate headless login step. This environment selects Rook's service, not your target agent's endpoint. Keep the target on a disposable or non-production environment while testing.
 
 :::note Existing credentials
 If <code>LT_USERNAME</code> and <code>LT_ACCESS_KEY</code> are exported, they take precedence over stored browser login. Use credentials for the selected environment, or unset both in this terminal before using browser login. In PowerShell, use `Remove-Item Env:LT_USERNAME, Env:LT_ACCESS_KEY -ErrorAction SilentlyContinue` to remove them from this session only. Never paste credentials into documentation, prompts, or screenshots.
@@ -218,7 +207,7 @@ Invoke-RestMethod -Uri 'http://127.0.0.1:19110/v1/triage' -Method Post -ContentT
 
 The response should say <code>T-1043 triaged as S1 and assigned to platform.</code> and include the recorded tool steps.
 
-### 2. Select a project and discover the agent
+### 2. Open the TUI, Sign In, and Explore {#open-the-tui-and-explore}
 
 Open the sample folder in your Rook terminal:
 
@@ -236,7 +225,11 @@ $env:ROOK_ENV = 'prod'
 rook.cmd
 ```
 
-The remaining slash commands belong inside the TUI. From a shell, replace the leading slash with <code>rook </code>.
+The Rook banner, command prompt, and footer confirm that you are in interactive mode. If you are already signed in, Rook can open the project chooser automatically:
+
+<img loading="lazy" src={require('../assets/images/rook/guides/rook-tui-get-started.png').default} alt="Fresh Rook interactive session showing the Explore, Generate, Run, and Report journey and project chooser before discovery" width="2200" height="1320" className="doc_img"/>
+
+If not signed in, enter `/login`, complete the browser flow, and return to this terminal. Use `/doctor` to check readiness and `/plan` to check credits. At a chooser, use arrow keys and Enter; Esc goes back. At the prompt, Tab completes commands. The remaining commands belong **inside this TUI**, not in your shell.
 
 ```text
 /project
@@ -246,7 +239,21 @@ Select an existing test project, or create one:
 
 ```text
 /project create "Rook quickstart"
+```
+
+Run exploration only after the intended test project is selected:
+
+```text
 /explore .
+```
+
+Rook reads the sample and shows discovery progress. When it proposes an agent, review the name, source path, and purpose before choosing **yes** to register it. This is an actual exploration of the public sample:
+
+<img loading="lazy" src={require('../assets/images/rook/guides/rook-tui-explore-confirm.png').default} alt="Rook exploration finding the support triage agent and asking whether to register it, with yes and no choices and a live progress footer" width="2200" height="840" className="doc_img"/>
+
+Wait for exploration to finish, then open the agent picker:
+
+```text
 /agent
 ```
 
@@ -254,7 +261,7 @@ Select the discovered triage agent. Generated IDs can differ: use the actual ID/
 
 ### 3. Generate and verify the profile from a prompt
 
-Create a text file named <code>triage-profile.txt</code> in the sample folder with this material:
+Enter `/profile add local-triage` in the TUI. When Rook asks how to reach the agent, paste this description:
 
 ```text
 Reach the running service at http://127.0.0.1:19110/v1/triage.
@@ -268,15 +275,27 @@ Do not report the fixture's zero usage values as measured model usage.
 Use concurrency 1.
 ```
 
-Then run:
+Rook generates the hook and verifies it against the running sample. Approve only the intended local HTTP call and script work; do not approve server startup, dependency installation, or unrelated commands. Wait for the result before continuing.
+
+<img loading="lazy" src={require('../assets/images/rook/guides/rook-tui-profile-authoring.png').default} alt="Actual TUI profile-generation conversation with the triage HTTP request description and an approval prompt for the generated hook script" width="2200" height="1680" className="doc_img"/>
+
+This checkpoint shows authoring in progress. Read the exact requested file or command, then approve once with **yes** if it matches the sample setup; the prompt is not evidence that verification has passed.
+
+To use a saved description instead, put the same text in `triage-profile.txt` in the sample folder and use `/profile add local-triage --from triage-profile.txt`. These are alternatives—do not create the same profile twice.
+
+Inspect and test the generated result inside the TUI:
 
 ```text
-/profile add local-triage --from triage-profile.txt
 /profile show local-triage
 /profile test local-triage --goal "please look at T-1043"
+/profile use local-triage
 ```
 
-Approve only the intended local HTTP call and script work. Review the generated <code>profiles/local-triage.yaml</code> and <code>scripts/</code> files below the active agent directory. A successful probe should return the real answer and four tool calls.
+Review the generated <code>profiles/local-triage.yaml</code> and <code>scripts/</code> files below the active agent directory. A successful probe should return the real answer and four tool calls. Stop here if the probe fails; generation and testing will not repair a broken connection automatically.
+
+<img loading="lazy" src={require('../assets/images/rook/guides/rook-tui-profile-verified.png').default} alt="Rook completing profile authoring after a successful triage probe, reporting four mapped tool calls and selecting local-triage as the active profile" width="2200" height="920" className="doc_img"/>
+
+This is the successful connection checkpoint: the hook answered, the generated profile was saved, and the footer now includes `local-triage`. Profile verification is not a scenario verdict.
 
 The sample needs only an <code>execute</code> hook. Use [additional lifecycle hooks](/support/docs/rook-profiles-and-hooks/#lifecycle) for login, session setup, teardown, or delayed trace collection.
 
@@ -284,10 +303,21 @@ The sample needs only an <code>execute</code> hook. Use [additional lifecycle ho
 
 ```text
 /generate --total 2 --class functional --category happy_path -- Create two single-turn cases for existing tickets only: T-1043 must be S1/platform and T-1041 must be S2/billing. Check the answer and recorded calls. Do not require external verification or repeated samples.
+```
+
+Before writing scenarios, Rook shows the plan and offers **proceed**, **discard**, or **change**. Check both the included cases and the features it intentionally leaves uncovered:
+
+<img loading="lazy" src={require('../assets/images/rook/guides/rook-tui-generate-plan.png').default} alt="Rook's actual generation plan for two triage scenarios, with included and excluded features and proceed, discard, or change choices" width="2200" height="1120" className="doc_img"/>
+
+Choose **proceed** only if the scope matches the two requested tickets. Wait for writing to finish, then inspect the saved suite:
+
+```text
 /scenarios list
 ```
 
-The count is a generation target, not a guarantee. Review the resulting files before running them. Check that every criterion can be evaluated from the answer or the calls your hook actually returns. For example, a JSON-path check against <code>$.steps</code> cannot inspect that field if your hook returned only an answer string.
+<img loading="lazy" src={require('../assets/images/rook/guides/rook-tui-generated-scenarios.png').default} alt="Rook listing the two generated triage scenarios, their functional happy-path classification, four criteria each, and runnability against local-triage" width="2200" height="720" className="doc_img"/>
+
+The count is a generation target, not a guarantee. In this capture, two scenarios were written and both are runnable against `local-triage`; neither has passed yet. Review the resulting files before running them. Check that every criterion can be evaluated from the answer or the calls your hook actually returns. For example, a JSON-path check against <code>$.steps</code> cannot inspect that field if your hook returned only an answer string.
 
 Choose the scenario for **T-1043**. Do not assume it will always be <code>SC-002</code>.
 
@@ -295,10 +325,27 @@ Choose the scenario for **T-1043**. Do not assume it will always be <code>SC-002
 
 ```text
 /sync
+```
+
+Wait for the agent to be recorded upstream before starting the run:
+
+<img loading="lazy" src={require('../assets/images/rook/guides/rook-tui-sync.png').default} alt="Rook synchronizing the triage agent and confirming one agent recorded upstream" width="2200" height="600" className="doc_img"/>
+
+```text
 /run --only <your-T-1043-scenario-id> --profile local-triage --concurrency 1 --name first-triage-run
 ```
 
-Replace the placeholder with the generated scenario ID. Review the selected scenario, profile, permissions, and proposed cost before proceeding.
+Replace the placeholder with the generated scenario ID. Review the selected scenario and active profile before proceeding. This plan selects only `SC-002` and explicitly skips `SC-001`:
+
+<img loading="lazy" src={require('../assets/images/rook/guides/rook-tui-run-plan.png').default} alt="Interactive run plan selecting one triage scenario, skipping the other, and waiting for proceed, discard, or change" width="2200" height="920" className="doc_img"/>
+
+Choose **proceed** to execute this reviewed scope, **discard** to run nothing, or **change** to revise it. Read any additional permission prompts before approving. The plan is not a fixed credit quote; check `/plan` before starting.
+
+While Rook runs, the scenario row shows its current phase. This capture is in **judging**, with `0/1` completed; it is not a final verdict:
+
+<img loading="lazy" src={require('../assets/images/rook/guides/rook-tui-run-progress.png').default} alt="Live Rook test run showing SC-002 in the judging phase with evidence reads and zero of one scenarios completed" width="2200" height="1160" className="doc_img"/>
+
+Wait for completion before opening the report. Press Esc only if you intend to interrupt; stopping Rook does not undo actions already performed by the target.
 
 A normal run needs a synchronized agent version. <code>--test</code> is for an intentionally local, unsynchronized experiment; it does not add a run to the shared timeline.
 
@@ -309,6 +356,10 @@ First read the report, then choose either UI:
 ```text
 /report
 ```
+
+<img loading="lazy" src={require('../assets/images/rook/guides/rook-tui-report.png').default} alt="Completed interactive report for first-triage-run showing one executed scenario, one pass, zero failures, and a warning about narrow feature coverage" width="2200" height="1520" className="doc_img"/>
+
+The report names the saved run and its evidence directory. Check the counts, not just the percentage: this run executed one scenario and left four discovered feature areas untested. Reading `/report` does not rerun the target; do not add `--rca` unless you intend to request additional paid analysis.
 
 | Review on this machine | Review with your team |
 |---|---|
@@ -329,7 +380,7 @@ The redesigned local result has **Acceptance criteria** filters and an **Evidenc
 
 #### Hosted Web UI: The Uploaded Result {#hosted-ui-example}
 
-The uploaded triage quickstart result appears below. Open **Evidence → Verdict** to read the saved evaluation in the drawer, then close it to return to the criterion cards. Use **Expand all** to read passing criteria, which start collapsed. Opening either UI reviews existing evidence; it does not execute the agent again.
+The browser capture below shows the earlier September 11 triage smoke test, not the September 28 TUI run above. Open **Evidence → Verdict** to read a saved evaluation in the drawer, then close it to return to the criterion cards. Use **Expand all** to read passing criteria, which start collapsed. Opening either UI reviews existing evidence; it does not execute the agent again.
 
 <img loading="lazy" src={require('../assets/images/rook/rook-web-result-verdict.png').default} alt="Hosted quickstart result with verdict.yaml open in the evidence drawer" width="1440" height="900" className="doc_img"/>
 
@@ -345,16 +396,16 @@ Enter <code>/exit</code> to leave Rook. Stop the sample server with <code>Ctrl+C
 
 To repeat this workflow through your coding assistant, [choose a client-specific Rook skill guide](/support/docs/rook-coding-agents/). To automate the reviewed suite, use [GitHub Actions](/support/docs/rook-github-actions/), [Jenkins](/support/docs/rook-jenkins/), or [Argo CD](/support/docs/rook-argocd/).
 
-Use `rook status` at any point to check the selected project, active agent, and local/upstream state. In the TUI, bare `/project`, `/agent`, and `/profile` open pickers; select with the arrow keys and Enter. In a shell, their bare forms list the available records.
+Use `/status` inside the TUI to check the selected project, active agent, and local/upstream state. Bare `/project`, `/agent`, and `/profile` open pickers; select with the arrow keys and Enter. Shell equivalents are covered in the [command reference](/support/docs/agent-assurance-command-reference/); you do not need to leave the TUI to continue this walkthrough.
 
 ### Ask in Plain Language
 
-Use `rook ask` when you know the outcome but not the command:
+Use `/ask` in the TUI when you know the outcome but not the command:
 
 <VerifiedTag value="Verified" />
 
-```bash
-rook ask "generate adversarial tests for refund-policy bypasses"
+```text
+/ask generate adversarial tests for refund-policy bypasses
 ```
 
 Rook resolves the request to the appropriate operation. Any operation that spends credits or needs permission still shows its plan and asks first.
@@ -363,7 +414,7 @@ Rook resolves the request to the appropriate operation. Any operation that spend
 
 Exploration, generation, profile authoring, and curation write plain files under `.testmuai/rook/`. They do not silently publish workspace state.
 
-`rook sync` records the current project tree upstream. Profile files contain environment-variable references, never their secret values. Run results are saved locally as they happen and can be reconciled upstream after connectivity returns.
+`/sync` records the current project tree upstream. Profile files contain environment-variable references, never their secret values. Run results are saved locally as they happen and can be reconciled upstream after connectivity returns.
 
 ### When to Repeat a Step
 

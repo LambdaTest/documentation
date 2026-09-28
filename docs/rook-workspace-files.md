@@ -111,7 +111,7 @@ import { BRAND_URL } from '@site/src/component/BrandName';
         "text": "*.log\n.env\ncache/\nprojects/*/jobs/\nprojects/*/agents/*/state.json"
       }
     ],
-    "dateModified": "2026-09-25"
+    "dateModified": "2026-09-28"
   }) }}
 />
 
@@ -160,6 +160,8 @@ Rook uses plain files rather than a hidden workspace database. That makes agents
 
 ## Why Runs Copy Their Inputs
 
+Directory names can include a readable project slug and its ID, such as `<project-name>--<project-id>`. Use the evidence path printed by your run or `/report`; do not construct it from the hosted URL. Local run directory names can also differ from hosted run IDs.
+
 Every run directory is self-contained. It snapshots:
 
 - the agent definition as it was;
@@ -205,6 +207,10 @@ Credentials, actual environment values, history, logs, and installed versions ar
 ## Synchronization
 
 `rook sync` copies a reviewed project tree upstream as one write. Run results are stored locally first; `rook runs sync` reconciles finished runs that still owe remote records. Neither operation changes the historical input snapshots inside an existing run.
+
+Inside the interactive TUI, enter `/sync` after reviewing the files. This actual quickstart capture confirms that the triage agent was recorded upstream; it does not say that a test has run or passed:
+
+<img loading="lazy" src={require('../assets/images/rook/guides/rook-tui-sync.png').default} alt="Rook's interactive sync confirming that one local agent was recorded upstream" width="2200" height="600" className="doc_img"/>
 
 ## Review Files in Either UI
 

@@ -177,7 +177,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
         "text": "mcp_call(billing.get_refund_status)"
       }
     ],
-    "dateModified": "2026-08-25T16:54:35+05:30"
+    "dateModified": "2026-09-28"
   }) }}
 />
 
@@ -189,7 +189,7 @@ Exploration also records MCP servers declared by the target agent. These declara
 
 ## List Servers
 
-Interactive:
+Launch `rook` in the workspace and enter these commands in its interactive TUI:
 
 <VerifiedTag value="Verified" />
 
@@ -208,6 +208,10 @@ rook mcp list --json
 ```
 
 Each row reports the server name, origin, transport, state, source, and connection or tool status when available.
+
+<img loading="lazy" src={require('../assets/images/rook/guides/rook-tui-mcp-list.png').default} alt="Rook interactive MCP listing reporting no configured or discovered servers for the HTTP-only triage sample" width="2200" height="520" className="doc_img"/>
+
+This actual first-use capture has no MCP servers: the triage sample is reached by HTTP, not MCP. It is an empty configuration, not a failed connection. After adding a server, repeat `/mcp list` and inspect it with `/mcp get <name>` before approving or using it. Declaring a server alone does not prove its tools work.
 
 ## MCP Origins and Precedence
 

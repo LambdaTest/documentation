@@ -97,13 +97,15 @@ import { BRAND_URL } from '@site/src/component/BrandName';
         "https://www.youtube.com/@TestMuAI"
       ]
     },
-    "dateModified": "2026-09-25"
+    "dateModified": "2026-09-28"
   }) }}
 />
 
 # Install Rook
 
 Rook is publicly available from the [LambdaTest/rook repository](https://github.com/LambdaTest/rook). Install it with Homebrew, the shell installer, or npm. Use one method per machine so an older executable from another method does not take precedence on `PATH`.
+
+Installation commands run in your normal terminal. After installation, launch `rook` (or `rook.cmd` in PowerShell) **without a subcommand** to open the interactive terminal UI (TUI). Stay in that session for sign-in, project selection, exploration, generation, and testing; you do not need CI/headless mode for the walkthrough.
 
 The latest public release checked on September 25, 2026 is [v0.1.5](https://github.com/LambdaTest/rook/releases/tag/v0.1.5). The public npm package and Homebrew formula also publish 0.1.5. Historical walkthroughs and CI examples can name an older, tested version; do not change a pipeline pin without checking its commands and result handling.
 
@@ -241,7 +243,6 @@ npm.cmd --version
 npm.cmd install -g @testmuai/rook@0.1.5
 Get-Command rook.cmd
 rook.cmd --version
-rook.cmd doctor
 ```
 
 The platform check should print `win32 x64`, and the pinned install should report `0.1.5`. Use `rook.cmd` in PowerShell throughout this guide. Calling the `.cmd` shim also avoids the “running scripts is disabled” error that can affect npm's `.ps1` shim; you do not need to weaken PowerShell's execution policy.
@@ -252,12 +253,10 @@ The platform check should print `win32 x64`, and the pinned install should repor
 # Replace this with the repository containing your target agent.
 Set-Location 'C:\work\my-agent'
 $env:ROOK_ENV = 'prod'
-rook.cmd login
-rook.cmd whoami
 rook.cmd
 ```
 
-Inside Rook's terminal, use the same slash commands as on macOS and Linux, starting with `/project` and `/explore .`. Follow the [quickstart](/support/docs/agent-assurance-quickstart/) for a small, reviewable first test. Discovery, profile authoring, generation, and runs can spend credits or invoke your target; installation alone does neither.
+Inside Rook's TUI, use the same slash commands as on macOS and Linux: `/login`, `/doctor`, then `/project`. The [interactive startup walkthrough](#start-the-interactive-tui) below explains the screen and keyboard controls. Follow the [quickstart](/support/docs/agent-assurance-quickstart/) for exploration through results. Discovery, profile authoring, generation, and runs can spend credits or invoke your target; installation alone does neither.
 
 If sign-in does not open a browser, open the URL printed by Rook on the same machine and keep the command running. To review saved evidence from another terminal in the same workspace:
 
@@ -307,19 +306,42 @@ WSL is optional for the native npm setup. Windows and WSL installations have sep
 ```bash
 command -v rook
 rook --version
-rook doctor
 ```
 
-Then enter an agent repository and start the TUI:
+On Windows, use `Get-Command rook.cmd` and `rook.cmd --version` instead. These shell checks confirm that the installed executable is on your path; they do not start a test.
+
+## Start the Interactive TUI {#start-the-interactive-tui}
+
+Enter an agent repository and start Rook without a subcommand. Replace `your-project` with your actual folder:
 
 <VerifiedTag value="Verified" />
 
 ```bash
 cd your-project
+export ROOK_ENV=prod
 rook
 ```
 
-`rook doctor` checks the CLI version, workspace, production service reachability, identity, authentication, project selection, TTY mode, and local state.
+On Windows PowerShell:
+
+```powershell
+Set-Location 'C:\work\my-agent'
+$env:ROOK_ENV = 'prod'
+rook.cmd
+```
+
+You should see the Rook banner and an interactive prompt or a project chooser, not a command that prints output and exits. This capture shows a signed-in session before an agent has been explored:
+
+<img loading="lazy" src={require('../assets/images/rook/guides/rook-tui-get-started.png').default} alt="Rook interactive startup in color with Explore, Generate, Run and Report, a Projects chooser, keyboard controls, and no agent selected" width="2200" height="1320" className="doc_img"/>
+
+1. If prompted to sign in, enter `/login` and complete the browser flow. Return to this same terminal when Rook reports that you are signed in. Browser UI sign-in and CLI sign-in are separate.
+2. At **Projects**, use the arrow keys and Enter to list existing projects or create a new test project. Esc goes back; you can reopen the chooser with `/project`.
+3. Enter `/doctor` to check this interactive session's authentication, services, workspace, and TTY state. Enter `/plan` to check credits before paid work.
+4. Continue with the [first-agent walkthrough](/support/docs/agent-assurance-quickstart/#test-your-first-agent): explore the sample, select its agent, create a profile, generate a small suite, and run one reviewed scenario.
+
+Type `/` to see commands, use Tab for completion, and use `/exit` when finished. Do not paste `rook explore` at the TUI prompt; enter `/explore` there. Shell commands remain useful for scripts, but this first-use workflow stays interactive.
+
+If the TUI looks monochrome, check whether your terminal has `NO_COLOR` set or `FORCE_COLOR=0`. Those settings intentionally disable colors. For this session only, launch with `env -u NO_COLOR -u FORCE_COLOR rook` on macOS/Linux; in PowerShell, remove those two environment variables from the current session before starting `rook.cmd`. Rook's normal theme uses amber and muted text; not every output line is colored.
 
 ## Public Releases and Checksums
 
@@ -360,9 +382,9 @@ Continue with [How to Get Started With Agent Assurance](/support/docs/agent-assu
 
 ## Open the Local or Hosted UI {#select-the-web-ui-environment}
 
-The public CLI includes the local viewer: from an agent workspace, run `rook ui --local`. No separate frontend installation or browser login is needed. Open the printed loopback URL and keep the serving process running. It reads existing workspace files; follow the quickstart first if you have not created any test data.
+The public CLI includes the local viewer: inside the TUI, enter `/ui --local`. No separate frontend installation or browser login is needed. Open the printed loopback URL and keep the TUI session running. It reads existing workspace files; follow the quickstart first if you have not created any test data. From a separate shell, the equivalent command is `rook ui --local`.
 
-For shared review, open [rook.lambdatest.com/projects](https://rook.lambdatest.com/projects), or use <code>rook ui</code>. Public packages default to <code>ROOK_ENV=prod</code>. You do not need a private package or a source-repository installation. If an older CLI opens a different address, use the Projects link above and update to the current public release.
+For shared review, open [rook.lambdatest.com/projects](https://rook.lambdatest.com/projects), or enter `/ui` in the TUI. Public packages default to <code>ROOK_ENV=prod</code>. You do not need a private package or a source-repository installation. If an older CLI opens a different address, use the Projects link above and update to the current public release.
 
 See [local versus hosted review](/support/docs/rook-web-ui/#choose-your-ui) for the data, sign-in, and sharing differences.
 
