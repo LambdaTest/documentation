@@ -232,14 +232,10 @@ What changes between them is only the setup file that holds this connection: a P
 Use the [Capabilities Generator](https://www.testmuai.com/capabilities-generator/) to build a capabilities block for any [supported browser, version, and OS combination](/support/docs/playwright-bundled-browser-support/).
 :::
 
-## Run a Test in Your Framework
+## Run a Test with Playwright Using JavaScript
 ***
 
-Each tab lists the framework-specific pieces. Move into the matching subdirectory of the cloned repo, edit the setup file that holds the grid connection, install dependencies, then run.
-
-<Tabs className="docs__val" groupId="js-framework" queryString="framework">
-
-<TabItem value="playwright-test" label="JavaScript" default>
+By default this page uses Playwright's own test runner (`@playwright/test`). Move into the matching subdirectory of the cloned repo, edit the setup file that holds the grid connection, install dependencies, then run. Prefer Jest or Cucumber.js? See [Run a Test with Jest or Cucumber.js](#run-a-test-with-jest-or-cucumberjs).
 
 The JavaScript path connects to the grid through a Playwright Test fixture in `lambdatest-setup.js`, which patches the capabilities per project and reports test status.
 
@@ -340,7 +336,12 @@ exports.test = base.test.extend({
 npm run test
 ```
 
-</TabItem>
+## Run a Test with Jest or Cucumber.js
+***
+
+Prefer Jest or Cucumber.js as your test runner? Pick your framework below.
+
+<Tabs className="docs__val" groupId="js-framework" queryString="framework">
 
 <TabItem value="jest" label="Jest">
 
