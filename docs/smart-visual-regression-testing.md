@@ -114,49 +114,49 @@ You can perform following Visual Regression tests using SmartUI:
 <div className="support_main">  
       <a href="/support/docs/smartui-selenium-java-sdk/">
     <div className="support_inners">
-      <h3>SDK</h3>
+      <h2>SDK</h2>
       <p>Perform Visual UI Testing using CLI.</p>
     </div>
   </a>
   <a href="/support/docs/selenium-visual-regression/">
     <div className="support_inners">
-      <h3>Lambda Hooks</h3>
+      <h2>Lambda Hooks</h2>
       <p>Perform Visual UI Testing using Hooks.</p>
     </div>
   </a>
     <a href="/support/docs/smartui-cli-figma/">
     <div className="support_inners">
-      <h3>Figma Designs</h3>
+      <h2>Figma Designs</h2>
       <p>Perform Visual UI testing of Figma Designs using SmartUI</p>
     </div>
   </a>
     <a href="/support/docs/smartui-pdf-comparison/">
     <div className="support_inners">
-      <h3>PDFs</h3>
+      <h2>PDFs</h2>
       <p>Perform Visual UI testing of PDFs using SmartUI.</p>
     </div>
   </a>
   <a href="/support/docs/smartui-upload-api-v2/">
     <div className="support_inners">
-      <h3>Upload through API</h3>
+      <h2>Upload through API</h2>
       <p>Upload Screenshots through API for Visual UI Testing</p>
     </div>
   </a>
   <a href="/support/docs/smartui-cli-upload/">
     <div className="support_inners">
-      <h3>Upload through CLI</h3>
+      <h2>Upload through CLI</h2>
       <p>Upload Screenshots through CLI for Visual UI Testing</p>
     </div>
   </a>
   <a href="/support/docs/smart-ui-storybook/">
     <div className="support_inners">
-      <h3>Storybook</h3>
+      <h2>Storybook</h2>
       <p>Perform Visual UI Testing using Storybook on SmartUI.</p>
     </div>
   </a>
     <a href="/support/docs/smartui-git-branching-strategy/">
     <div className="support_inners">
-      <h3>Git Baseline Branching</h3>
+      <h2>Git Baseline Branching</h2>
       <p>Learn how to execute SmartUI CLI with Git Commits.</p>
     </div>
   </a>

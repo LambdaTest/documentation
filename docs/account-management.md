@@ -112,67 +112,67 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 <div className="support_main">  
   <a href="/support/docs/manage-subscriptions/">
     <div className="support_inners">
-      <h3>Manage Subscriptions</h3>
+      <h2>Manage Subscriptions</h2>
       <p>Learn how to manage your account subscription for the <BrandName />.</p>
     </div>
   </a>
   <a href="/support/docs/service-accounts/">
     <div className="support_inners">
-      <h3>Service Accounts</h3>
+      <h2>Service Accounts</h2>
       <p>Learn how to Monitor and Report Test Execution at the user level.</p>
     </div>
   </a>
   <a href="/support/docs/sub-organizations/">
     <div className="support_inners">
-      <h3>Sub Organizations</h3>
+      <h2>Sub Organizations</h2>
       <p>Learn how to distribute concurrency to different sub-organizations .</p>
     </div>
   </a>
   <a href="/support/docs/support-access/">
     <div className="support_inners">
-      <h3>Support Access</h3>
+      <h2>Support Access</h2>
       <p>Learn how to take access to your <BrandName /> account and log in on your behalf from the backend.</p>
     </div>
   </a>
   <a href="/support/docs/team-management/">
     <div className="support_inners">
-      <h3>Team Management</h3>
+      <h2>Team Management</h2>
       <p>Learn how to invite your team members to your organizational <BrandName /> Account.</p>
     </div>
   </a>
   <a href="/support/docs/multi-factor-authentication/">
     <div className="support_inners">
-      <h3>Multi Factor Authentication</h3>
+      <h2>Multi Factor Authentication</h2>
       <p>Learn how to increase the account security by enabling Multi Factor Authentication.</p>
     </div>
   </a>
   <a href="/support/docs/delete-testmu-account/">
     <div className="support_inners">
-      <h3>Deleting <BrandName /> Account</h3>
+      <h2>Deleting <BrandName /> Account</h2>
       <p>This documentation will guide you through the steps to delete your <BrandName /> account</p>
     </div>
   </a>
   <a href="/support/docs/group-management/">
     <div className="support_inners">
-      <h3>Group Management</h3>
+      <h2>Group Management</h2>
       <p>Learn how to perform the test automation by dividing the concurrency among the groups.</p>
     </div>
   </a>
   <a href="/support/docs/audit-logs/">
     <div className="support_inners">
-      <h3>Audit Logs</h3>
+      <h2>Audit Logs</h2>
       <p>Learn how to Audit your Logs as well as of your Organization Team Members.</p>
     </div>
   </a>
   <a href="/support/docs/password-and-access-key-expiration-policy/">
     <div className="support_inners">
-      <h3>Password and Access Key Expiration Policy</h3>
+      <h2>Password and Access Key Expiration Policy</h2>
       <p>Learn how to manage your and yours organization member Password and Access Key Expiration Policy.</p>
     </div>
   </a>
   <a href="/support/docs/tunnel-security/">
     <div className="support_inners">
-      <h3>Tunnel Security</h3>
+      <h2>Tunnel Security</h2>
       <p>Learn how to manage your Tunnel Setup and Securities.</p>
     </div>
   </a>

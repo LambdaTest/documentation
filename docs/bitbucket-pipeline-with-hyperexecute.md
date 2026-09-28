@@ -120,7 +120,7 @@ This document will show you how to integrate Bitbucket Pipelines with HyperExecu
 
 ***
 
-### Prerequisites:
+## Prerequisites:
 -	You need to have a Bitbucket Cloud account.
 -	Your workspace must have at least one repository.
  

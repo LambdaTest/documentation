@@ -103,13 +103,13 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 ***
 
-#### 1. **Can HyperExecute CLI download test artifacts generated during execution?**
+## 1. **Can HyperExecute CLI download test artifacts generated during execution?**
 
   Yes, HyperExecute can download the artifacts generated during the test execution. In addition, HyperExecute has APIs to download artifacts for a particular job.
 
 ***
 
-#### 2. **I am not able to open HyperExecute on MacOS because the developer is not verified. What do I do?**
+## 2. **I am not able to open HyperExecute on MacOS because the developer is not verified. What do I do?**
 
   <img loading="lazy" src={require('../assets/images/hyperexecute/faq/he-faq-1.png').default} alt="Image"  className="doc_img"/>
 
@@ -118,7 +118,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 ***
 
-#### 3. **Is there a way where I can follow all of the steps in my test run on HyperExecute?**
+## 3. **Is there a way where I can follow all of the steps in my test run on HyperExecute?**
 
   Every time you run a test via the [HyperExecute CLI](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/), a `hyperexecute-cli.log` file is generated. It is present in the parent directory of your test and contains the details of your entire test run. 
 

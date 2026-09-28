@@ -112,7 +112,7 @@ ServiceNow is a cloud-based platform for IT service management and automating bu
 
 > ServiceNow Integration with <BrandName /> is available for both freemium and premium plans.
 
-### Create an OAuth Application for <BrandName /> in ServiceNow
+## Create an OAuth Application for <BrandName /> in ServiceNow
 
 > Only an administrator of your ServiceNow instance can create the OAuth application required for integration.
 

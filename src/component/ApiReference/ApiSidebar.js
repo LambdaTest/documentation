@@ -123,8 +123,12 @@ export default function ApiSidebar({ apis, activeApiSlug, activeGroupSlug, activ
     <div className="text-sm relative">
       {apis.map((api, apiIdx) => (
         <div key={api.name} className={apiIdx === 0 ? '' : 'mt-6 lg:mt-8'}>
+          {/* Nav label, not document structure: rendered as <span> (not a
+              heading) so the ~26 sidebar labels don't open the page outline
+              above the endpoint's <h1>. text-sm/font-bold/leading-tight pin the
+              exact size, weight and line-height Infima's h5 rules gave it. */}
           <div className="sidebar-group-header flex items-center gap-2.5 pl-4 mb-2 font-semibold text-gray-700 dark:text-gray-300 text-xs">
-            <h5 className="tracking-wide normal-case m-0">{api.name}</h5>
+            <span className="tracking-wide normal-case m-0 text-sm font-bold leading-tight">{api.name}</span>
           </div>
 
           <ul className="sidebar-group space-y-px list-none pl-0 m-0">
