@@ -531,7 +531,7 @@ $env:LT_ACCESS_KEY="YOUR ACCESS KEY"
 
 The following steps will guide you in running your first Visual Regression test on <BrandName /> platform -
 
-### Step 1: Create a SmartUI Project
+## Step 1: Create a SmartUI Project
 
 The first step is to create a project with the application in which we will combine all your **builds** run on the project.
 To create a SmartUI Project, follow these steps:
@@ -544,7 +544,7 @@ To create a SmartUI Project, follow these steps:
 
 <!-- <img loading="lazy" src={require('../assets/images/uploads/smart-ui-1.webp').default} alt="cmd" width="768" height="373" className="doc_img"/> -->
 
-### Step 2: Configure your test with Selenium Desired Capabilities
+## Step 2: Configure your test with Selenium Desired Capabilities
 
 Once you have created a SmartUI Project, you can generate screenshots by running automation scripts. Follow the below steps to successfully generate screenshots -
 

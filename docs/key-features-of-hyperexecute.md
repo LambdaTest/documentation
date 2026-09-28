@@ -110,85 +110,99 @@ HyperExecute provides you with the tools that you need to run your tests at the 
   
   <a href = "/support/docs/hyperexecute-test-splitting-and-multiplexing/">
   <div className="support_inners">
-    <h3>Test Splitting and Multiplexing</h3>
+    <h2>Test Splitting and Multiplexing</h2>
     <p>Use Smart Auto Split Strategy, Matrix Strategy or Hybrid Strategy modes to split and execute tests as per your requirements.</p>
   </div>
   </a>
 
   <a href = "/support/docs/hyperexecute-reports/">
   <div className="support_inners">
-    <h3>Detailed Test Reports and Logs</h3>
+    <h2>Detailed Test Reports and Logs</h2>
     <p>Get a detailed test report for every job and stream the terminal logs in real time to understand everything that happened with your test.</p>
   </div>
   </a>
 
   <a href="/support/docs/hyperexecute-failfast/">
   <div className="support_inners">
-    <h3>FailFast</h3>
+    <h2>FailFast</h2>
     <p>Run your jobs faster or fail them quickly to receive instant feedback and save your test time.</p>
   </div>
   </a>
 
   <a href="/support/docs/hyperexecute-prioritize-tests/">
   <div className="support_inners">
-    <h3>Jobs Prioritization</h3>
+    <h2>Jobs Prioritization</h2>
     <p>Label the jobs that you want to run first on HyperExecute by giving them a higher priority.</p>
   </div>
   </a>
 
   <a href="/support/docs/hyperexecute-artifacts-url/">
   <div className="support_inners">
-    <h3>Test Artifact Management</h3>
+    <h2>Test Artifact Management</h2>
     <p>HyperExecute also manages all of your test artifacts and provides you with the option to implement smart workflows on your test code without modifying it.</p>
   </div>
   </a>
 
   <a href="/support/docs/ai-powered-test-failure-analysis/">
   <div className="support_inners">
-    <h3>AI Native Root Cause Analysis</h3>
+    <h2>AI Native Root Cause Analysis</h2>
     <p>Root Cause Analysis and Error Classification features in HyperExecute to view different kinds of errors and directly land on corrective measures or fixes.</p>
   </div>
   </a>
 
   <a href="/support/docs/hyperexecute-background-services/">
   <div className="support_inners">
-    <h3>Background Services</h3>
+    <h2>Background Services</h2>
     <p>Triggers long-running Application Servers tasks like running WebApps or Databases and generates the logs report in the Dashboard.</p>
   </div>
   </a>
 
   <a href="/support/docs/hyperexecute-auto-healing/">
   <div className="support_inners">
-    <h3>Auto Healing</h3>
+    <h2>Auto Healing</h2>
     <p>Auto Healing Feature allows you to automatically rеcovеr from cеrtain typеs of failurеs during thе еxеcution of your tеst scripts.</p>
   </div>
   </a>
 
   <a href="/support/docs/hyperexecute-projects/">
   <div className="support_inners">
-    <h3>Projects</h3>
+    <h2>Projects</h2>
     <p>Setup your custom projects using HyperExecute GUI itself and initiate the tests execution from the platform only.</p>
   </div>
   </a>
 
   <a href="/support/docs/hyperexecute-jobs-archiving/">
   <div className="support_inners">
-    <h3>Jobs Archiving</h3>
+    <h2>Jobs Archiving</h2>
     <p>Jobs Archiving allows you to archive the non important jobs so that you and your team can focus only on required ones.</p>
   </div>
   </a>
 
   <a href="/support/docs/hyperexecute-test-muting/">
   <div className="support_inners">
-    <h3>Test Muting</h3>
+    <h2>Test Muting</h2>
     <p>Mute scenarios that have been continuously failing for a pre-defined number of times, ignore expected failures, achieve better runtimes and faster feedback on the executed Jobs.</p>
   </div>
   </a>  
 
   <a href="/support/docs/hyperexecute-task-metrics/">
   <div className="support_inners">
-    <h3>Task Metrics</h3>
+    <h2>Task Metrics</h2>
     <p>Track your CPU, and Memory utilization of the virtual machines for a seamless user experience.</p>
+  </div>
+  </a>  
+
+  <a href="/support/docs/hyperexecute-workflows/">
+  <div className="support_inners">
+    <h2>Workflows</h2>
+    <p>Schedule and chain your HyperExecute jobs to automate recurring test runs and orchestrate multi-job pipelines.</p>
+  </div>
+  </a>
+
+  <a href="/support/docs/hyperexecute-rerun-failed-tests/">
+  <div className="support_inners">
+    <h2>Rerun Failed Tests</h2>
+    <p>Re-execute only the failed tests from a previous job to quickly validate fixes without rerunning the entire suite.</p>
   </div>
   </a>  
 </div>

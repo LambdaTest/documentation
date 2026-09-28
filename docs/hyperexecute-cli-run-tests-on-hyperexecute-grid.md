@@ -791,7 +791,7 @@ To enable the **Quiet Mode**, you need to paas these commands in your terminal a
 </TabItem>
 </Tabs>
 
-#### Output
+### Output
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/cli/cli-execute.png').default} alt="Image" width="1350" height="619" className="doc_img"/>
 <br /><br />

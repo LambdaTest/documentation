@@ -111,25 +111,25 @@ You can learn more about the HyperExecute Private Cloud by going through our doc
 <div className="support_main">  
   <a href="/support/docs/hyperexecute-private-cloud-benefits/">
     <div className="support_inners">
-      <h3>Benefits of HyperExecute Private Cloud</h3>
+      <h2>Benefits of HyperExecute Private Cloud</h2>
       <p>Learn why HyperExecute Private Cloud is a must-have for your organization.</p>
     </div>
   </a>
   <a href="/support/docs/hyperexecute-private-cloud-setup-with-azure/">
     <div className="support_inners">
-      <h3>Setup with Azure</h3>
+      <h2>Setup with Azure</h2>
       <p>Learn how to distribute concurrency to different sub-organizations .</p>
     </div>
   </a>
   <a href="/support/docs/hyperexecute-private-cloud-setup-with-aws/">
     <div className="support_inners">
-      <h3>Setup with AWS</h3>
+      <h2>Setup with AWS</h2>
       <p>Learn how to take access to your <BrandName /> account and log in on your behalf from the backend.</p>
     </div>
   </a>
   <a href="/support/docs/hyperexecute-guided-walkthrough/">
     <div className="support_inners">
-      <h3>Guided Walkthrough of the HyperExecute Portal</h3>
+      <h2>Guided Walkthrough of the HyperExecute Portal</h2>
       <p>Learn how to take access to your <BrandName /> account and log in on your behalf from the backend.</p>
     </div>
   </a>

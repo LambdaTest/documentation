@@ -108,7 +108,7 @@ As the word responsive suggests, this type of testing is used to check the appea
 </div>
 </div>
 
-### How To Do Responsive Testing?
+## How To Do Responsive Testing?
 
 **Step 1:** Click ‘**Responsive**’ sub menu under [Visual UI Testing](https://www.testmuai.com/smart-visual-ui-testing) menu in menu box.
 
@@ -122,7 +122,7 @@ As the word responsive suggests, this type of testing is used to check the appea
 
 <img loading="lazy" src={require('../assets/images/responsive-testing/responsive-3.webp').default} alt="test responsiveness of website" width="1353" height="627" className="doc_img"/>
 
-### How to record issues?
+## How to record issues?
 
 **Step 1:** On the ‘**Responsive**’ page, under the menu ‘**Visual UI Testing**’, you will find a camera icon; click that icon.
 

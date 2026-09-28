@@ -108,13 +108,13 @@ ChromeOS is a lightweight, Linux-kernel-based operating system designed for Chro
 <div className="support_main">
   <a href="/support/docs/hyperexecute-running-your-first-job/">
     <div className="support_inners">
-      <h3>ChromeOS Web Browser Testing</h3>
+      <h2>ChromeOS Web Browser Testing</h2>
       <p>Guidebook about the features offered for testing your webapps in ChromeOS</p>
     </div>
   </a>
    <a href="/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/">
     <div className="support_inners"> 
-      <h3>ChromeOS App Testing</h3>
+      <h2>ChromeOS App Testing</h2>
       <p>Guidebook about the features offered for testing your apps in ChromeOS</p>
     </div>
   </a>

@@ -168,10 +168,10 @@ This migration supports **Zephyr Scale (Jira Cloud)** only. Zephyr Enterprise an
 
 Before starting the migration, ensure you have the following ready.
 
-#### <BrandName /> Account
+### <BrandName /> Account
 - An active <BrandName /> account with access to **Test Manager**.
 
-#### Zephyr Scale Cloud Credentials
+### Zephyr Scale Cloud Credentials
 
 You need your Zephyr Scale Cloud API access token. Refer to the [Zephyr Scale API Access Tokens Management](https://support.smartbear.com/zephyr/docs/en/rest-api/api-access-tokens-management.html) documentation for detailed instructions. To obtain this:
 
@@ -184,7 +184,7 @@ You need your Zephyr Scale Cloud API access token. Refer to the [Zephyr Scale AP
 The Access Token may be shown only once. Store it securely before proceeding.
 :::
 
-#### Jira Cloud Credentials
+### Jira Cloud Credentials
 
 You also need Jira Cloud credentials to access project metadata:
 
@@ -194,11 +194,11 @@ You also need Jira Cloud credentials to access project metadata:
 | **Email Address** | The email associated with your Atlassian account |
 | **Jira API Token** | Generate from [Atlassian API Tokens](https://id.atlassian.com/manage-profile/security/api-tokens) |
 
-#### Jira Integration in <BrandName />
+### Jira Integration in <BrandName />
 
 To migrate linked Jira issues and requirements, you must have the corresponding Jira instance integrated with <BrandName />. Without this integration, linked issues will not be carried over during migration. Refer to the [Link Jira Issues with Test Manager](https://www.testmuai.com/support/docs/link-jira-issues-with-test-manager/) guide to set up the integration before starting the migration.
 
-#### Permissions
+### Permissions
 - Your Jira account must have **read access** to the project you are migrating.
 - Your Zephyr Scale API token must have permission to access test cases and folders in the target project.
 

@@ -256,7 +256,7 @@ To debug the discovery of the snooper, configure the following command as per th
 
 > **Note:** .hyperexecute and snooper binary are created only after first execution of the yaml file.
 
-#### How to effectively utilize tags incorporating various custom parameters for enhanced functionality?
+### How to effectively utilize tags incorporating various custom parameters for enhanced functionality?
 
 - Snooper discovery can be customized where you can use set of tags that you want to discover the tests.
 

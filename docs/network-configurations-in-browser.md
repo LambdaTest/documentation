@@ -122,7 +122,7 @@ On <BrandName />, you can enable **network configurations** to capture and analy
 
 --- 
 
-### Use cases
+## Use cases
 
 - **Debug API calls** by viewing HTTP/S request and response data directly from real device sessions.
 - **Verify backend integration** by checking if calls are made to the correct endpoints.

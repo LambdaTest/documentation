@@ -518,7 +518,7 @@ After generating your initial test scenarios and cases, you can use the **Conver
 
 <!-- <img loading="lazy" src={require('../assets/images/mobile-app-testing/conversation_layer_overview.png').default} alt="conversation-layer-overview" width="1347" height="616" className="doc_img"/> -->
 
-#### Conversational Workspace
+### Conversational Workspace
 
 When the Conversation Layer is active, the workspace is divided into two primary panels:
 
@@ -561,7 +561,7 @@ To review the context used for your current generation session, click the **penc
 
 Use the context drawer to verify that the AI is working with the correct inputs. You can review linked issues, attached files, and the custom instructions being applied before sending refinement messages.
 
-#### Conversational Refinement
+### Conversational Refinement
 
 **How It Works:**
 
@@ -570,7 +570,7 @@ Use the context drawer to verify that the AI is working with the correct inputs.
 3. **Changes stream in real time** to the live output view on the right.
 4. **You review and iterate**: send follow-up messages to fine-tune further.
 
-#### @ Referencing System
+### @ Referencing System
 
 The `@` referencing system allows you to precisely target specific scenarios or test cases in your messages.
 
@@ -594,7 +594,7 @@ The `@` referencing system allows you to precisely target specific scenarios or 
 
 The Conversation Layer transforms how you refine test scenarios. Instead of manually editing each test case, describe what you need in natural language, and watch your test suite reshape itself in real time.
 
-#### Reorganize Test Scenarios
+### Reorganize Test Scenarios
 
 Restructure how your test cases are grouped and organized.
 
@@ -606,7 +606,7 @@ Restructure how your test cases are grouped and organized.
 | Create user journey scenarios | Create end-to-end user journey scenarios. Combine login, product search, add to cart, and checkout into a complete "Customer Purchase Journey" scenario |
 
 
-#### Expand Test Coverage
+### Expand Test Coverage
 
 Add new test cases or scenarios to improve coverage.
 
@@ -619,7 +619,7 @@ Add new test cases or scenarios to improve coverage.
 | Add new scenarios | Create a new scenario for the password reset flow with test cases covering successful reset, expired reset links, invalid tokens, rate limiting, and already-used tokens |
 
 
-#### Remove Unnecessary Tests
+### Remove Unnecessary Tests
 
 Clean up your test suite by removing low-value or out-of-scope test cases.
 
@@ -631,7 +631,7 @@ Clean up your test suite by removing low-value or out-of-scope test cases.
 | Remove by user role | Our next sprint focuses only on logged-in users. Remove all guest user and anonymous browsing test cases, keep authenticated user workflows |
 
 
-#### Combine and Merge Tests
+### Combine and Merge Tests
 
 Reduce redundancy by merging overlapping test cases.
 
@@ -642,7 +642,7 @@ Reduce redundancy by merging overlapping test cases.
 | Consolidate compatibility tests | We have separate test cases for Chrome, Firefox, Safari, and Edge. Merge these into a single cross-browser compatibility test with browser-specific validation steps |
 
 
-#### Standardize Naming and Formatting
+### Standardize Naming and Formatting
 
 Apply consistent naming conventions and formatting across test cases.
 
@@ -654,7 +654,7 @@ Apply consistent naming conventions and formatting across test cases.
 | Add tags | Tag all critical user journey test cases with "smoke-suite" so we can easily filter them for our smoke testing runs |
 
 
-#### Enhance Test Case Details
+### Enhance Test Case Details
 
 Add preconditions, cleanup steps, or additional context to test cases.
 
@@ -667,7 +667,7 @@ Add preconditions, cleanup steps, or additional context to test cases.
 | Add steps at specific position | In @S2.C2, add a step between step 3 and step 4 to take a screenshot of the shopping cart and verify the item quantity matches what was added |
 
 
-#### Make Targeted Modifications
+### Make Targeted Modifications
 
 Precisely modify specific scenarios or test cases using `@` references.
 
@@ -685,7 +685,7 @@ Precisely modify specific scenarios or test cases using `@` references.
 - **Start broad, then refine**: First organize scenarios at a high level, then drill down to individual test cases
 :::
 
-#### Re-Generation Settings
+### Re-Generation Settings
 
 The Test Case Generator provides several controls that work alongside the Conversation Layer:
 
@@ -701,7 +701,7 @@ Regeneration replaces all current scenarios. To keep specific scenarios intact a
 :::
 
 
-#### Credit Usage
+### Credit Usage
 
 The Conversation Layer consumes AI credits based on the scope of each refinement.
 
@@ -715,7 +715,7 @@ The Conversation Layer consumes AI credits based on the scope of each refinement
 - If your message affects multiple scenarios, credits are deducted for each scenario impacted.
 - Your remaining credit balance is visible in your account dashboard.
 
-#### Current Limitations
+### Current Limitations
 
 The following capabilities are planned for future releases:
 
@@ -732,7 +732,7 @@ Once you have generated and refined your test scenarios and test cases, it's tim
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/create_automate_test_cases.png').default} alt="create-test-cases" width="1347" height="616" className="doc_img"/>
 
 
-#### Option 1: Create Test Cases
+### Option 1: Create Test Cases
 Select the desired test cases and click **Create** to save them directly to your **Test Case Repository** in <BrandName /> Test Manager. These saved test cases can then be assigned to test runs, shared with teams, or used in manual test planning. Any files attached during the generation session will also be saved as attachments on the created test cases.
 
 Test cases generated in **BDD Scenarios** format are saved with the **Behaviour Driven Development** template, and their scenarios appear under the **Test steps** tab. Test cases generated in **Manual Test Steps** format are saved with the **Manual Test Steps** template. The format is carried over from the generation session — you do not need to select a template when saving.
@@ -740,7 +740,7 @@ Test cases generated in **BDD Scenarios** format are saved with the **Behaviour 
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/bdd_saved_test_case_test_manager.png').default} alt="bdd-saved-test-case-test-manager" width="1347" height="616" className="doc_img"/>
 <!-- <img loading="lazy" src={require('../assets/images/mobile-app-testing/create_test_cases.png').default} alt="create-test-cases" width="1347" height="616" className="doc_img"/> -->
 
-#### Option 2: Create and Automate with KaneAI
+### Option 2: Create and Automate with KaneAI
 Select the desired test cases and click **Create and Automate** to save the test cases to your repository and submit them to KaneAI for automated authoring. Clicking this button opens the **Create and Automate Test Cases** dialog, where you configure automation settings before KaneAI begins authoring. The dialog displays the number of distinct test cases selected and how many are automation-ready.
 
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/create_automate_dialog_desktop.png').default} alt=" " className="doc_img"/>

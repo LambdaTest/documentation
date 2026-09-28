@@ -103,7 +103,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 The **Network Logs Assertions** feature in KaneAI enables you to test and validate the behavior of your application at the **network layer**.  
 This is useful when you need to ensure that API calls, response codes, payloads, or request timings meet expected conditions during your test executions.  
 
-# Let's see how to add Network Logs Assertions in a Test
+## Let's see how to add Network Logs Assertions in a Test
 
 - **Start a test session** (Desktop Web, Mobile Web, or Mobile App).
 
@@ -131,7 +131,7 @@ This is useful when you need to ensure that API calls, response codes, payloads,
 
 <img loading="lazy" src={require('../assets/images/kane-ai/features/network-assertions/network-assertion-block.png').default} alt="Image" className="doc_img img_center"/>
 
-#### How to validate a specific object in request or response of an API?
+### How to validate a specific object in request or response of an API?
 
 - You can reuse the request later in your test using the familiar `{{variable}}` syntax.  
 

@@ -78,13 +78,13 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
   }) }}
 />
 
-# iOS Gestures on Real Devices
+## iOS Gestures on Real Devices
 When testing iOS apps on **<BrandName /> Real Devices**, certain native gestures like double‑tap, triple‑tap, or multi‑finger interactions may be required to complete test flows.
 
 To make this easier, <BrandName /> provides keyboard shortcuts that simulate these **gestures** without needing physical multi‑touch input. These shortcuts work on both **macOS** and **Windows**, allowing you to trigger gestures instantly during manual sessions.
 
 ---
-# Supported Gestures & Shortcuts
+## Supported Gestures & Shortcuts
 
 <Tabs className="docs__val">
   <TabItem value="macos" label="macOS" default>

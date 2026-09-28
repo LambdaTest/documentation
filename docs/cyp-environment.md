@@ -126,7 +126,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 You can specify the environment variables that you want to use for your Cypress tests via the configuration file, via the `cypress.env.json` file, or via the <BrandName /> Cypress CLI. However, if we set environment variables via both <BrandName /> CLI and `cypress.env.json`, the `cypress.env.json` file will be ignored and only the variables set via CLI will be set into environment variables. If you want to understand these methods, go through the document below. 
 
-### 1. Via the Configuration File
+## 1. Via the Configuration File
 
 a. **Cypress 9**
 
@@ -171,7 +171,7 @@ describe('Sample test', () => {
     })
 })
 ```
-### 2. Via the `cypress.env.json` File
+## 2. Via the `cypress.env.json` File
 
 
 ```bash
@@ -182,7 +182,7 @@ describe('Sample test', () => {
 }
 ```
 
-### 3. Via the <BrandName /> Cypress CLI
+## 3. Via the <BrandName /> Cypress CLI
 
 You can also add your environment variables via the parameter `--envs` in the <BrandName /> Cypress CLI. 
 

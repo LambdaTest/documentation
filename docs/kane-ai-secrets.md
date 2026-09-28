@@ -169,7 +169,7 @@ use the value of {{secrets.user.email}} in the email text field
 
 <img loading="lazy" src= {require('../assets/images/kane-ai/features/secrets/delete-secret.png').default} alt="Image"  className="doc_img"/>
 
-# Data Masking & Anonymization
+## Data Masking & Anonymization
 
 TestMu AI protects sensitive data in tests through synthetic substitution and capture-time masking.
 

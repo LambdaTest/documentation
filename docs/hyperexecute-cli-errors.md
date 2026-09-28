@@ -203,7 +203,7 @@ Running Network Scanner:
 Network Scan Passed!
 ```
 
-#### IPs to be Whitelisted
+### IPs to be Whitelisted
 
 | FQDN | Protocol:Port | Reason |
 |------|---------------|--------|

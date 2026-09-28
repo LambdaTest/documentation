@@ -164,25 +164,25 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 ## Prerequisites
 
-#### <BrandName /> Account
+### <BrandName /> Account
 An active <BrandName /> account with access to Test Manager.
 
-#### qTest Account
+### qTest Account
 An active qTest account with read access to the projects you want to migrate.
 
-#### qTest Instance URL
+### qTest Instance URL
 Your qTest instance URL (e.g., `https://yourorg.qtestnet.com`).
 
-#### qTest API Token
+### qTest API Token
 To obtain your API token:
 1. Log in to your qTest instance.
 2. Navigate to your profile or account settings.
 3. Generate a new API Bearer token, or copy an existing one.
 
-#### Jira Integration in <BrandName /> (Optional)
+### Jira Integration in <BrandName /> (Optional)
 To migrate linked Jira requirements, the corresponding Jira instance must be integrated with <BrandName />. Without this, Jira links will not be carried over. See [<BrandName /> Jira Integration](/support/docs/jira-integration/#how-to-establish-integration-with-jira-from-your-lambdatest-account) for setup steps.
 
-#### Permissions
+### Permissions
 - Your qTest account must have read access to the projects being migrated.
 - The API token must have permission to access test cases, modules, and attachments.
 

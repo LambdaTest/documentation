@@ -434,7 +434,7 @@ $env:CURRENT_BRANCH="Required branch"
 
 In case you are accessing your network using corporate proxies, set the proxies in the environment variables as follows
 
-#### HTTP_PROXY:
+### HTTP_PROXY:
 
 <Tabs className='docs__val' groupId='language'>
 <TabItem value='MacOS/Linux-4' label='MacOS/Linux' default>
@@ -457,7 +457,7 @@ $env:HTTP_PROXY="http://<username>:<password>@<domain.com>:<port>/"
 </TabItem>
 </Tabs>
 
-#### HTTPS_PROXY:
+### HTTPS_PROXY:
 
 <Tabs className='docs__val' groupId='language'>
 <TabItem value='MacOS/Linux-5' label='MacOS/Linux' default>

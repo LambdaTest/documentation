@@ -397,11 +397,11 @@ Here is the output in the [HyperExecute Dashboard](https://www.testmuai.com/logi
 
 If you are having trouble migrating your tests from Sauce Labs to HyperExecute, here are some possible solutions:
 
-- #### You may not have updated your Test Scripts.
+- ### You may not have updated your Test Scripts.
 
   To fix this, you will need to replace the Sauce Labs specific code with the equivalent HyperExecute code. You can use the [HyperExecute Capabilities Generator](https://www.testmuai.com/capabilities-generator/) to help you generate the correct desired capabilities for your tests.
 
-- #### Your Job is executed, but you are getting an error in the HyperExecute Dashboard.
+- ### Your Job is executed, but you are getting an error in the HyperExecute Dashboard.
 
   To fix this, you can check the [documentation](/support/docs/hyperexecute-how-to-debug-job/) explaining how you can debug a failed job on your own.
 

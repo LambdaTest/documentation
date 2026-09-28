@@ -303,7 +303,7 @@ Upload your **test suite** (.apk file) to the <BrandName /> servers using our **
 
 1. Firstly, create a folder on your local.
 2. Download the **HyperExecute CLI** file and put it under this folder based on your platform.
-#### Download HyperExecute CLI
+### Download HyperExecute CLI
 
 | Platform | HyperExecute CLI download location |
 | ---------| --------------------------- |

@@ -178,7 +178,7 @@ In a few seconds, after you execute the command, a TCP with TLS 1.2 secure conne
 
 In this way, you can run any HTML, PHP, Python or similar web files present in any folder of your system, directly in <BrandName /> browser.
 
-#### Testing Locally Hosted Web Pages On Android
+### Testing Locally Hosted Web Pages On Android
 * * *
 **Step 1:** Go to "**Real Time Test**" from the left navigation menu and click on the **mobile** icon. This will guide you to a screen where you can perform cross browser testing for your website on mobile OS. Select the icon for Android and choose from a variety of **Android** mobile devices to start testing.
 
@@ -188,7 +188,7 @@ In this way, you can run any HTML, PHP, Python or similar web files present in a
 
 <img loading="lazy" src={require('../assets/images/local-testing-for-windows/start-localhost-testing-ios.webp').default} alt="Image"  className="doc_img"/>
 
-#### Testing Locally Hosted Web Pages On iOS
+### Testing Locally Hosted Web Pages On iOS
 * * *
 
 **Step 1:** Go to **"Real Time Test"** from the left navigation menu and click on the mobile icon. This will guide you to a screen where you can perform cross browser testing for your website on mobile OS. Select the icon for Apple and choose from a variety of iOS devices to start testing.
@@ -203,7 +203,7 @@ In this way, you can run any HTML, PHP, Python or similar web files present in a
 
 _Notice how the font changed from Android to iOS or rather from Google Chrome to Mozilla Firefox, in the above images of local testing on Android & iOS. That right there is a cross browser compatibility issue!_
 
-#### Terminating the TCP with TLS 1.2 secure connection
+### Terminating the TCP with TLS 1.2 secure connection
 * * *
 A secure tunnel connection is maintained unless you explicitly disconnect it. You can disconnect the tunnel in following ways:
 
@@ -216,7 +216,7 @@ You will receive the below highlighted messages indicating the termination on TC
 
 <img loading="lazy" src={require('../assets/images/local-testing-for-windows/For-windows-16.webp').default} alt="Image"  className="doc_img"/>
 
-#### Geolocation Testing through VPN with <BrandName /> Tunnel
+### Geolocation Testing through VPN with <BrandName /> Tunnel
 * * *
 Test the performance of your web-app through different **geographic locations** using VPN in <BrandName /> Tunnel. Make sure your website delivers well to your targeted audience from all around the globe.
 
@@ -258,7 +258,7 @@ Example of full command:
 
 `<b>LT --user example@lambdatest.com --key 123asd123 --proxy-host abc.wonderproxy.com --proxy-user abcdefg --proxy-pass hijklmnop --proxy-port 12345</b>`
 
-#### Command References
+### Command References
 Following is the list of command arguments which can be used as modifiers while executing the binary file:
 
 | Command | Description |

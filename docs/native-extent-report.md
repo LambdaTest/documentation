@@ -124,7 +124,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 />
 The Extent Native Reports offer a standardized and easily accessible summary of information extracted from raw Extent reports per Virtual Machine (VM) at the end of a HyperExecute job.
 
-### Prerequisites
+## Prerequisites
 
 Before implementing Extent Native Reports, ensure the following prerequisites are met:
 

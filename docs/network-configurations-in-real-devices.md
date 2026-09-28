@@ -123,7 +123,7 @@ To unlock this feature, purchase or upgrade to the required [plan](https://www.t
 
 --- 
 
-### Use cases
+## Use cases
 
 - **Debug API calls** by viewing HTTP/S request and response data directly from real device sessions.
 - **Verify backend integration** by checking if calls are made to the correct endpoints.

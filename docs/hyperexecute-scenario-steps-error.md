@@ -176,13 +176,13 @@ To rectify this issue, you need to cross-check your HUB URL. You can also visit 
 
 ## Tunnel Error
 
-#### When Tunnel is Disconnected or Not Running
+### When Tunnel is Disconnected or Not Running
 
 - If you have mentioned the Tunnel URL in both capabilities and the YAML file, then it is likely that your Tunnel may get disconnected or will not run. To resolve this, you need to simply remove the Tunnel URL from either of the files.
 
 - If you are running Tunnel using Binary, then you need to ensure that your credentials for binary and capability are the same.
 
-#### When you try to access a Private Endpoint
+### When you try to access a Private Endpoint
 
 If you are trying to access an internal website or any other private endpoint which is behind any firewall using tunnel and you are getting the below mentioned error:
 

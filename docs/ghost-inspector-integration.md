@@ -174,7 +174,7 @@ This integration between <BrandName /> and Ghost Inspector enables you to automa
 
 As a result, you’ll be able to expand your test coverage, analyze and extract insightful test reports, and enhance your team collaboration.
 
-# How To Integrate <BrandName /> With Ghost Inspector?
+## How To Integrate <BrandName /> With Ghost Inspector?
 * * *
 * All the test suites will be reflected in the Ghost Inspector dashboard.
 

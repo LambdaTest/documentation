@@ -205,7 +205,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 Custom CSS injection is a specialized feature in SmartUI that allows you to apply test-only styles during snapshot capture without modifying your application code. This feature enables you to stabilize visual tests by normalizing dynamic content, enforcing consistent styling across environments, and masking sensitive information—all while keeping your visual testing logic centralized and maintainable.
 
-### Why Custom CSS Matters
+## Why Custom CSS Matters
 
 1. **Stabilize Visual Diffs**: Hide or normalize volatile UI elements (ads, rotating banners, dynamic counters, time-based content) to reduce false positives in your visual regression tests.
 
@@ -225,7 +225,7 @@ Before using the Custom CSS feature, ensure you meet the following requirements:
 
 ---
 
-# Custom CSS Configuration in SmartUI
+## Custom CSS Configuration in SmartUI
 
 SmartUI supports two methods for providing custom CSS: file path (recommended for maintainability) and embedded string (quick and portable). Choose the method that best fits your workflow.
 
