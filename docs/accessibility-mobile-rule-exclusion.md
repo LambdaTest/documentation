@@ -64,7 +64,7 @@ Use exclusion when your team has a **known, accepted deviation** that should not
 Exclusion is part of the **scan configuration**, so it is enforceable in CI and applies consistently to every scan in the session. To suppress a single finding after a scan has run, use [Hide and Restore Issues](/support/docs/accessibility-hide-restore-issues/) instead.
 
 :::note
-The capabilities on this page are **mobile-only** (Android and iOS). For web, see [Rule and Category Exclusion for Web Accessibility Automation](/support/docs/accessibility-web-automation-rule-exclusion/) and [Rule and Category Exclusion in DevTools and Scheduled Scans](/support/docs/accessibility-devtools-rule-exclusion/).
+This page covers native Android and iOS apps. For web, see [Rule and Category Exclusion for Web Accessibility Automation](/support/docs/accessibility-web-automation-rule-exclusion/) and [Rule and Category Exclusion in DevTools and Scheduled Scans](/support/docs/accessibility-devtools-rule-exclusion/).
 :::
 
 ## Appium automation
@@ -198,7 +198,7 @@ Exclusions are validated when the session is created, before a device is allocat
 | Wrong type (a number, for example) | The capability is ignored with a warning; the session proceeds |
 | Every entry invalid | The scan runs with the full configured rule set |
 | Exclusions remove every in-scope rule | **Session creation is rejected.** No test is created and no device is allocated |
-| Platform is not Android or iOS | Rejected. The capabilities are mobile-only |
+| Session is a real-device mobile browser | Rejected. The capabilities support native Android and iOS apps and desktop web only |
 
 A misspelled rule ID or category never fails your Appium session. The scan runs with whatever exclusions were valid, and the session log records which entries were dropped and why.
 

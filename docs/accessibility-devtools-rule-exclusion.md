@@ -161,7 +161,7 @@ Rule IDs and category slugs are listed in [Rule and Category Exclusion for Web A
 
 - **Filtered before execution.** A rule switched off in the panel is switched off in axe before the scan runs. It is absent from the findings and from the score by construction, not filtered out of the results afterwards.
 - **Score reflects the evaluated set.** The accessibility score is computed only over the rules that ran.
-- **Applied Settings on every web report.** The **Applied Settings** popover groups the rules that ran and the rules that did not by category, with a reason on each disabled rule: excluded by rule, excluded by category, switched off by a group toggle, or AI disabled.
+- **Applied Settings on every web report.** The **Applied Settings** popover groups the rules by category. A category switched off in the panel is greyed out, and an individually switched-off rule is shown as **Off**.
 - **Reproducible.** Both lists are stored with the test and returned by the test-detail API. Merged reports fold in the lists of their source reports.
 
 ## Exclusion versus hiding an issue
