@@ -182,7 +182,7 @@ The rules below are checked in order, and the first one that matches decides the
 | Order | If | The test instance becomes |
 |---|---|---|
 | 1 | Any step is **Failed** | **Failed**, driven by the lowest-numbered failing step |
-| 2 | Any step has not been executed yet — **Not Started**, **In Progress**, or not marked at all | **Not Started** |
+| 2 | Any step has not been executed yet — **Not Started**, or not marked at all | **Not Started** |
 | 3 | Every step is executed and at least one is on a **custom status** | That custom status, from the lowest-numbered step holding one |
 | 4 | Every step is executed and at least one is **Passed** | **Passed** |
 | 5 | Every step is executed and none of the above applies | **Skipped** |
