@@ -95,7 +95,7 @@ import { BRAND_URL } from '@site/src/component/BrandName';
         "https://www.youtube.com/@TestMuAI"
       ]
     },
-    "dateModified": "2026-09-25"
+    "dateModified": "2026-09-28"
   }) }}
 />
 
@@ -104,6 +104,22 @@ import { BRAND_URL } from '@site/src/component/BrandName';
 Profiles contain references and operational descriptions. Secret values remain on the machine running Rook and are never included in project synchronization.
 
 ## Manage Local Values
+
+Launch `rook` in your agent workspace. In the interactive TUI, start with `/env list` to inspect configured names and masked values. The following capture sets and lists a **non-secret demonstration value**, not a credential:
+
+<img loading="lazy" src={require('../assets/images/rook/guides/rook-tui-env-values.png').default} alt="Rook interactive environment commands storing the non-secret DEMO_LABEL value and listing it with its middle masked" width="2200" height="680" className="doc_img"/>
+
+For a harmless first check, enter these commands one at a time:
+
+```text
+/env set '{"DEMO_LABEL":"documentation-only"}'
+/env list
+/env rm DEMO_LABEL
+```
+
+Keep the outer single quotes around the JSON object, including in the TUI. `env list` masks the middle of each value but can reveal a prefix and suffix; inspect the screen before sharing it. Never capture real secrets or `/env show` output.
+
+For an actual profile, use the variable names it declares. Shell equivalents are:
 
 <VerifiedTag value="Verified" />
 

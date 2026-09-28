@@ -84,7 +84,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
         "https://www.youtube.com/@TestMuAI"
       ]
     },
-    "dateModified": "2026-09-25"
+    "dateModified": "2026-09-28"
   }) }}
 />
 
@@ -219,12 +219,27 @@ Editing today's scenario or profile does not rewrite the saved input snapshots o
 
 ## Print or Export a Report
 
-Select the correct project and agent first:
+Launch `rook` in the workspace containing your saved run. In the interactive TUI, select the correct project and agent, then open the report:
+
+```text
+/project
+/agent
+/report <run-id>
+```
+
+Replace `<run-id>` with the saved run's ID. `/report` without an ID reads the latest local run. If Rook asks you to sign in, use `/login` and retry the report command. Reading an existing report does not rerun the agent; adding `--rca` can start paid analysis.
+
+This is the completed report from the Rook 0.1.5 [interactive quickstart](/support/docs/agent-assurance-quickstart/), not a help screen:
+
+<img loading="lazy" src={require('../assets/images/rook/guides/rook-tui-report.png').default} alt="Rook's saved first-triage-run report showing one executed and passed scenario, no unverifiable results, and four untested feature areas" width="2200" height="1520" className="doc_img"/>
+
+Read the run ID and name, execution counts, verdicts, and coverage warning together. `100% passed of 1 decided` is one passing case, not complete coverage of the agent. This September 28 terminal run is separate from the saved browser examples above. Use `/help report` for additional output and RCA options.
+
+For shell-based output or automation:
 
 ```bash
 rook project use <project-id>
 rook agent use <agent-id>
-rook runs
 rook report <run-id>
 rook report <run-id> --json
 ```
