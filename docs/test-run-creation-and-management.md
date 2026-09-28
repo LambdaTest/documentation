@@ -242,7 +242,7 @@ A derived status rolls up to the test run in the same way a hand-set one does, s
 
 Deriving the test instance status from step results is enabled by default for every organization and applies to all of its projects.
 
-This behaviour is configured at the Organization level within the **Org Product Preferences** section of **Organization settings**, under **Test Manager** > **Manual Test Status**, [here](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/org-settings/test-manager/manual-test-status).
+This behaviour is configured at the Organization level within the **Org Product Preferences** section of **Organization settings**, under **Test Manager** > **Manual Test Status**, [here](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/org-settings/test-manager/manual-test-status). Use the **Set test instance status from step results** toggle, then save your changes.
 
 <img loading="lazy" src={require('../assets/images/test-run/manual-test-status-setting.png').default} alt="Manual Test Status setting under Test Manager in Org Product Preferences" className="doc_img"/>
 
