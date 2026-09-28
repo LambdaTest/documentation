@@ -208,8 +208,6 @@ The rules below are checked in order, and the first one that matches decides the
 | Passed, Skipped, Passed | Passed | A skipped step does not block a pass. |
 | Skipped, Skipped, Skipped | Skipped | Everything was executed, and nothing passed or failed. |
 
-<!-- screenshot: manual test instance whose status followed from its step results -->
-
 #### Custom Statuses in a Derived Status
 
 Custom statuses are the extra values your project adds to the Test Run **Status** system field. See [System and Custom Fields](/support/docs/system-and-custom-fields/#system-fields).
@@ -246,7 +244,7 @@ Deriving the test instance status from step results is enabled by default for ev
 
 This behaviour is configured at the Organization level within the **Org Product Preferences** section of **Organization settings**, under **Test Manager** > **Manual Test Status**, [here](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/org-settings/test-manager/manual-test-status).
 
-<!-- screenshot: Manual Test Status setting in Org Product Preferences -->
+<img loading="lazy" src={require('../assets/images/test-run/manual-test-status-setting.png').default} alt="Manual Test Status setting under Test Manager in Org Product Preferences" className="doc_img"/>
 
 - Turn it off and no test instance status is derived any more. Statuses that were already derived are left as they are.
 - Turn it on and it applies from each instance's next step status change. Nothing is recalculated or rewritten for executions that already happened.
