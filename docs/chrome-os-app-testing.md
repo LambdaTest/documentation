@@ -119,7 +119,7 @@ The Device Control feature allows you tp perform certain actions with your devic
 
 - **Home:** Use this option to navigate to the device's home screen during a manual session.
 - **Volume:** Adjust the device volume directly within your testing session, ensuring optimal audio levels for your tests.
-- **Lock Device :** Lock or unlock your device seamlessly during testing sessions without interrupting your workflow.
+- **Lock Device:** Lock or unlock your device seamlessly during testing sessions without interrupting your workflow.
 
 <video class="right-side" width="80%" controls id="vid">
 <source src= {require('../assets/videos/real-time/chromeos-app/device-control.mp4').default} style={{ height: '300px' }} type="video/mp4" />
@@ -183,7 +183,7 @@ Organizes your testing sessions within the <BrandName /> platform by grouping th
 The settings section offer the following features:
 - **Idle Timeout :** This feature allows you to set the idle timeout for your test session. The default Idle Timeout is 5 minutes and the maximum limit is 60 minutes.
 - **Time Zone :** With this feature, you can select the time zone of your preferred region that align with your testing needs.
-- **Keyboard Input** With this feature, you can change the language in your test session for a more localized testing experience.
+- **Keyboard Input :** With this feature, you can change the language in your test session for a more localized testing experience.
 
 <img loading="lazy" src={require('../assets/videos/real-time/chromeos-app/setting.png').default} style={{ height: '350px' }} className="doc_img"/>
  
