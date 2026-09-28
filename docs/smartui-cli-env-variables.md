@@ -443,7 +443,7 @@ $env:CURRENT_BRANCH="Required branch"
 
 In case you are accessing your network using corporate proxies, set the proxies in the environment variables as follows
 
-#### HTTP_PROXY:
+### HTTP_PROXY:
 
 <VerifiedTag value="Verified" />
 
@@ -468,7 +468,7 @@ $env:HTTP_PROXY="http://<username>:<password>@<domain.com>:<port>/"
 </TabItem>
 </Tabs>
 
-#### HTTPS_PROXY:
+### HTTPS_PROXY:
 
 <VerifiedTag value="Verified" />
 

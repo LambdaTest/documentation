@@ -163,7 +163,7 @@ To enable <BrandName /> SSO through Okta integration:
 * Sign In URL (Enter the sign-in URL of your Identity Provider.)
 * X509 Certificate (Upload the base64 encoded X509 certificate of your Identity Provider.)
 
-<h4>Create Connection with Metadata URL </h4>
+<h3>Create Connection with Metadata URL </h3>
 <img loading="lazy" src={require('../assets/images/sso-self-serve/finalize-sso-metadata.png').default} alt="sso-self serve" width="945" height="542" className="doc_img"/>
 
 > That's all you need to know for Configuring <BrandName /> SSO Integration with Okta. In case you have any questions please feel free to reach out to us via the <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 chat support**</span> or email us over [support@testmuai.com](mailto:support@testmuai.com).

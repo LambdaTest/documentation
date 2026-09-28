@@ -133,7 +133,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
 This is the guide to setup the **version 2** of the SmartUI upload API.
 :::
 
-### Prerequisites for running SmartUI
+## Prerequisites for running SmartUI
 
 - Basic understanding of HTTP APIs is required.
 - Go to [`LambdaTest SmartUI`](https://www.testmuai.com/login/?redirectTo=https://smartui.lambdatest.com/) and login along with your credentials.
@@ -141,7 +141,7 @@ This is the guide to setup the **version 2** of the SmartUI upload API.
 
 The following steps will guide you in running your first Visual Regression test on <BrandName /> SmartUI platform -
 
-### Create a SmartUI Project
+## Create a SmartUI Project
 
 To create a SmartUI Project, follow these steps:
 
@@ -158,7 +158,7 @@ Once, the project is created then you copy the `Project Token` from the applicat
 projectToken = "123456#1234abcd-****-****-****-************"
 ```
 
-### Upload screenshots via API
+## Upload screenshots via API
 
 Once you have created a SmartUI Project, you can upload your local screenshots to the projects which will create a build.
 

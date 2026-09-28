@@ -1,7 +1,7 @@
 ---
 id: robot-on-hyperexecute-grid
 title: Running Robot Framework Tests on HyperExecute
-hide_title: true
+hide_title: false
 sidebar_label: Robot
 description: Now you can run your automation scripts using Selenium with Robot on TestMu AI online grid of 2000+ real desktop browsers and real operating systems.
 keywords:

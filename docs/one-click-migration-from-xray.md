@@ -168,10 +168,10 @@ This migration supports **X-Ray Cloud (Jira Cloud)** only. X-Ray Server and Data
 
 Before starting the migration, ensure you have the following ready.
 
-#### <BrandName /> Account
+### <BrandName /> Account
 - An active <BrandName /> account with access to **Test Manager**.
 
-#### X-Ray Cloud Credentials
+### X-Ray Cloud Credentials
 
 You need your X-Ray Cloud API credentials (Client ID and Client Secret). Refer to the [X-Ray Global Settings - API Keys](https://docs.getxray.app/space/XRAYCLOUD/44568019/Global+Settings+-+API+Keys) documentation for detailed instructions. To obtain these:
 
@@ -184,7 +184,7 @@ You need your X-Ray Cloud API credentials (Client ID and Client Secret). Refer t
 The Client Secret is shown only once. Store it securely before proceeding.
 :::
 
-#### Jira Cloud Credentials
+### Jira Cloud Credentials
 
 You also need Jira Cloud credentials to access project metadata and attachments:
 
@@ -194,11 +194,11 @@ You also need Jira Cloud credentials to access project metadata and attachments:
 | **Email Address** | The email associated with your Atlassian account |
 | **Jira API Token** | Generate from [Atlassian API Tokens](https://id.atlassian.com/manage-profile/security/api-tokens) |
 
-#### Jira Integration in <BrandName />
+### Jira Integration in <BrandName />
 
 To migrate linked Jira issues and requirements, you must have the corresponding Jira instance integrated with <BrandName />. Without this integration, linked issues will not be carried over during migration. Refer to the [Link Jira Issues with Test Manager](https://www.testmuai.com/support/docs/link-jira-issues-with-test-manager/) guide to set up the integration before starting the migration.
 
-#### Permissions
+### Permissions
 - Your Jira account must have **read access** to the project you are migrating.
 - Your X-Ray API key must have permission to access test cases and test sets in the target project.
 

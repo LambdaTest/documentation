@@ -109,91 +109,91 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
   <a href = "/support/docs/hyperexecute-accelq-integration/">
   <div className="support_inners">
-    <h3>ACCELQ</h3>
+    <h2>ACCELQ</h2>
     <p>Perform codeless automated functional and API testing using Acceelq.</p>
   </div>
   </a>
 
   <a href = "/support/docs/hyperexecute-algoqa-integration/">
   <div className="support_inners">
-    <h3>algoQA</h3>
+    <h2>algoQA</h2>
     <p>Perform software testing through automated test case generation and execution for various applications.</p>
   </div>
   </a>
 
   <a href = "/support/docs/hyperexecute-azure-test-plan/">
   <div className="support_inners">
-    <h3>Azure Test Plan</h3>
+    <h2>Azure Test Plan</h2>
     <p>Manage test plans, test suites, and test cases for your web and desktop applications.</p>
   </div>
   </a>
 
   <a href = "/support/docs/katalon-integration-with-hyperexecute/">
   <div className="support_inners">
-    <h3>Katalon</h3>
+    <h2>Katalon</h2>
     <p>Perform Cross Platform Testing ranging from web, API, mobile, and desktop applications.</p>
   </div>
   </a>
 
   <a href = "/support/docs/hyperexecute-provar-integration/">
   <div className="support_inners">
-    <h3>Provar</h3>
+    <h2>Provar</h2>
     <p>Enable efficient creation and execution of UI and API tests.</p>
   </div>
   </a>
 
   <a href = "/support/docs/hyperexecute-qtest-integration/">
   <div className="support_inners">
-    <h3>qTest</h3>
+    <h2>qTest</h2>
     <p>Perform Cross Platform Testing, and get a centralized test management tool.</p>
   </div>
   </a>
 
   <a href = "/support/docs/hyperexecute-sikuli-integration/">
   <div className="support_inners">
-    <h3>Sikuli</h3>
+    <h2>Sikuli</h2>
     <p>Automate the visual testing of any software by integrating Sikuli with HyperExecute.</p>
   </div>
   </a>
 
   <a href = "/support/docs/hyperexecute-slack-integration/">
   <div className="support_inners">
-    <h3>Slack</h3>
+    <h2>Slack</h2>
     <p>Receive real-time notifications and crucial job details directly within your Slack workspace.</p>
   </div>
   </a>
 
   <a href = "/support/docs/hyperexecute-testim-integration/">
   <div className="support_inners">
-    <h3>Testim</h3>
+    <h2>Testim</h2>
     <p>Automate your software testing by creating stable automated tests.</p>
   </div>
   </a>
 
   <a href = "/support/docs/hyperexecute-testsigma-integration/">
   <div className="support_inners">
-    <h3>Testsigma</h3>
+    <h2>Testsigma</h2>
     <p>Perform codeless test automation to easily create and maintain tests.</p>
   </div>
   </a>
 
   <a href = "/support/docs/tosca-integration-with-hyperexecute/">
   <div className="support_inners">
-    <h3>Tosca</h3>
+    <h2>Tosca</h2>
     <p>Optimize and accelerate end-to-end testing for your entire digital landscape.</p>
   </div>
   </a>
 
   <a href = "/support/docs/hyperexecute-winapp-integration/">
   <div className="support_inners">
-    <h3>WinAppDriver</h3>
+    <h2>WinAppDriver</h2>
     <p>Perform the testing for the tests that are based on Microsoft Office Suite for TestNG Framework.</p>
   </div>
   </a>
 
   <a href = "/support/docs/hyperexecute-zephyr-scale-integration/">
   <div className="support_inners">
-    <h3>Zephyr</h3>
+    <h2>Zephyr</h2>
     <p>Zephyr is a test case management tool allows you to centrally manage your test suite cases.</p>
   </div>
   </a>

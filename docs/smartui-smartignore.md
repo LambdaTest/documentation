@@ -126,18 +126,18 @@ SmartUI's `Smart Ignore` engine is specifically designed to address the challeng
   </div>
 </div>
 
-### Key Features of Smart Ignore
+## Key Features of Smart Ignore
 
-#### 1. Displacement-Aware Comparison:
+### 1. Displacement-Aware Comparison:
 Smart Ignore distinguishes between content changes and mere content displacement. It hides differences arising from elements that have shifted position but have not otherwise changed, reducing visual noise and making it easier to spot true content differences.
 
-#### 2. Clutter Reduction:
+### 2. Clutter Reduction:
 
 In scenarios where large areas of the page are impacted by content displacement, traditional pixel to pixel comparison would highlight these areas in a blurred and cluttered manner making it difficult to identify the actual content changes. Smart Ignore minimizes this clutter, highlighting only those areas where content has genuinely changed. In the image below you can see confusing comparison due to the `pixel to pixel` approach, which is unable to highlight the actual reasons behind the mismatch.
 
 <img loading="lazy" src={require('../assets/images/smart-visual-testing/smart-ignore/p2p.webp').default} alt="cmd" width="768" height="373" className='doc_img'/>
 
-#### 3. Targeted Visual Testing:
+### 3. Targeted Visual Testing:
 
 By focusing only on the significant changes, **Smart Ignore** enhances the precision of your visual testing. This feature is particularly useful when testing pages where frequent updates or dynamic content are expected, ensuring that only the most relevant differences are brought to your attention. In the image below you can see the actual changes being highlighted as Smart Ignore understands the images and yields out the best results.
 
@@ -145,7 +145,7 @@ By focusing only on the significant changes, **Smart Ignore** enhances the preci
 
 ## How to Use Smart Ignore?
 
-#### 1. Applying Smart Ignore via Project Settings
+### 1. Applying Smart Ignore via Project Settings
 
 In your SmartUI dashboard, navigate to your project settings.
 Under "Comparison Options," switch on the `Smart Ignore` toggle across all visual tests in the project.This ensures Smart Ignore will be applied throughout the project with option to see other comparison modes as well on screenshot level according to the usecase.
@@ -159,7 +159,7 @@ Under "Comparison Options," switch on the `Smart Ignore` toggle across all visua
   className='doc_img'
 />
 
-#### 2. Using Smart Ignore per Screenshot
+### 2. Using Smart Ignore per Screenshot
 
 After running your visual test, go to the comparison page.
 For each screenshot, choose the "Smart Ignore" mode from the "Diff Options" dropdown.
@@ -174,7 +174,7 @@ This allows you to selectively apply Smart Ignore to specific screenshots, makin
   className='doc_img'
 />
 
-#### 3. Using Smart Ignore in Hooks Flow (Automation Capabilities)
+### 3. Using Smart Ignore in Hooks Flow (Automation Capabilities)
 
 If you are using SmartUI Hooks for web automation (for example Selenium `executeScript("smartui.takeScreenshot=...")` style), enable Smart Ignore using the `smartUI.smartIgnore` capability.
 
@@ -208,19 +208,19 @@ For full Hooks examples with Layout, Full Page, and Smart Ignore, see:
 
 ## Use Cases of Smart Ignore
 
-#### Content Management Systems
+### Content Management Systems
 
 **Scenario:** A page frequently updated with new articles or images causes other elements to shift position.
 
 **Solution:** Smart Ignore hides the displacement-related differences, allowing you to focus solely on the content that has been added or modified.
 
-#### E-commerce Platforms
+### E-commerce Platforms
 
 **Scenario:** Adding or removing products from a page often displaces other items, leading to a large number of false positives.
 
 **Solution:** Use Smart Ignore to ignore these shifts and concentrate on detecting actual changes in product listings, descriptions, or images.
 
-#### Large-Scale UI Changes
+### Large-Scale UI Changes
 
 **Scenario:** A major UI overhaul causes a significant portion of the page layout to change, making it difficult to identify specific content changes.
 
