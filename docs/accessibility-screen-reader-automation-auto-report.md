@@ -2,7 +2,7 @@
 id: accessibility-screen-reader-automation-auto-report
 title: "Screen Reader Automation: Auto Report"
 sidebar_label: Auto Report
-description: "Auto-generate a Screen Reader Report from your Appium tests on TestMu AI real devices: the screenReader capabilities, Standard and Linear coverage modes, the eight screen reader checks, and where to find the report."
+description: "Auto-generate a Screen Reader Report from your Appium tests on TestMu AI real devices: the screenReader capabilities, Standard and Linear coverage modes, the seven screen reader checks, and where to find the report."
 keywords:
   - screen reader report
   - autoReport capability
@@ -56,7 +56,7 @@ import RealDeviceTag from '../src/component/realDevice';
 
 <RealDeviceTag value="Real Device" />
 
-Auto Report generates a **Screen Reader Report** for an Appium session with no change to your test code. You add a `screenReader` block to your capabilities, <BrandName /> turns on TalkBack or VoiceOver on the allocated real device, and as your test moves through the app every stable screen is traversed with the screen reader. The report records the focus order, the text spoken for each element, and the result of eight screen reader checks.
+Auto Report generates a **Screen Reader Report** for an Appium session with no change to your test code. You add a `screenReader` block to your capabilities, <BrandName /> turns on TalkBack or VoiceOver on the allocated real device, and as your test moves through the app every stable screen is traversed with the screen reader. The report records the focus order, the text spoken for each element, and the result of seven screen reader checks.
 
 ## When to use this
 
@@ -204,7 +204,7 @@ The same key paths work across every <BrandName /> configuration surface: W3C ca
 1. The session is allocated a real device that supports the screen reader, and TalkBack or VoiceOver is turned on before your first Appium command.
 2. Each time your test performs a command that can change the screen, such as a tap, a back navigation or an `executeScript` call, the platform checks whether the screen has actually changed. Screens that look the same as one already captured are skipped, so a test that taps around a single screen does not produce duplicate entries.
 3. For every new screen, the screen reader traverses the content. In Standard mode that is the initial viewport. In Linear mode the traversal continues through scrollable containers and carousels until the content is exhausted or the timeout is reached.
-4. Each focus step is recorded with a screenshot, the focused element's accessibility metadata, and the exact spoken output, and the eight checks are evaluated.
+4. Each focus step is recorded with a screenshot, the focused element's accessibility metadata, and the exact spoken output, and the seven checks are evaluated.
 5. When the session ends the screen reader is turned off, the device's accessibility settings are restored, and the report is attached to the session.
 
 ## Coverage modes
@@ -214,7 +214,6 @@ The same key paths work across every <BrandName /> configuration surface: W3C ca
 | **Capability** | `linearNavigation: false`, or omit the key | `linearNavigation: true` |
 | **What is captured** | Elements visible in the initial viewport. One snapshot per screen. | The complete traversal path, including scrollable containers, carousels and off-screen content. Multiple snapshots per screen. |
 | **Time per screen** | Shortest | Longer, and bounded by `linearNavigationTimeout` |
-| **Reading order check** | Evaluated | Not applicable. The report marks it *Not applicable — linear navigation enabled* rather than as a pass. |
 | **Best for** | Quick checks on every build, screens with little scrolling | Long lists, feeds, product grids, carousels, full-coverage audits |
 
 Linear mode detects repeating traversal loops, for example infinite scroll or a cyclic carousel, and stops early instead of consuming the whole timeout.
@@ -229,19 +228,19 @@ Linear mode detects repeating traversal loops, for example infinite scroll or a 
 | **Minimum** | 300000 ms (5 minutes) |
 | **Maximum** | 480000 ms (8 minutes) |
 
+- The timeout is distributed linearly across the scroll views on a screen: **Timeout per scroll view = `linearNavigationTimeout` / (number of scroll views × 2)**. For example, with the default 300000 ms and three scroll views, each scroll view gets 50000 ms. A long scroll view can reach its share before its content is exhausted, which is why a screen can be only partly traversed.
 - A value below the minimum is raised to the minimum, and a value above the maximum is lowered to the maximum. A warning is written to the session logs in both cases. The session does **not** fail on an out-of-range value.
 - The timeout covers traversal only. Snapshot capture, element analysis and report assembly can extend the total session time beyond it.
 - If a screen hits the timeout, the report is still generated from what was captured. It is marked **partial**, shows the screen and element index where traversal stopped, and carries a banner explaining how to extend coverage.
 
 ## Checks in the report
 
-Every focus step is evaluated against the eight checks below. Each check maps to an entry in the <BrandName /> rule repository with the same ID, description and severity used elsewhere in App Accessibility, so failures look and behave like any other accessibility issue in the dashboard.
+Every focus step is evaluated against the seven checks below. Each check maps to an entry in the <BrandName /> rule repository with the same ID, description and severity used elsewhere in App Accessibility, so failures look and behave like any other accessibility issue in the dashboard.
 
 | Check | What it verifies | WCAG |
 |---|---|---|
 | Focus order for interactive elements | Every interactive element receives screen reader focus. | 2.4.3 |
 | Focus order for non-interactive elements | Meaningful non-interactive content receives screen reader focus. | 2.4.3 |
-| Meaningful reading order | The traversal sequence follows a logical visual order. Standard mode only. | 1.3.2 |
 | Meaningful spoken output | The spoken text for a focused element is descriptive, not empty or generic. | 4.1.2 |
 | Meaningful spoken output for images | Images announce meaningful alternative text. | 1.1.1 |
 | Duplicate state info | State is not repeated in the spoken output, for example "checked, checked". | 4.1.2 |
@@ -277,11 +276,7 @@ Reports can be shared with a link and exported. The shared view includes the **S
 
 ## Auto Report and rule scans together
 
-Auto Report is independent of the rule-based accessibility scan.
-
-- Enabling `screenReader` alone does **not** run the App Accessibility rule scan. Call `lambda-accessibility-scan` at each screen you want rule-checked, as described in [Native App Automation](/support/docs/accessibility-native-app-automation-test/).
-- Calling `lambda-accessibility-scan` does **not** generate a Screen Reader Report. Set `autoReport: true` for that.
-- Both can be enabled in the same session. You get a rule scan report and a Screen Reader Report for the same build.
+Screen Reader Automation and the App Accessibility rule scan (the `lambda-accessibility-scan` hook described in [Native App Automation](/support/docs/accessibility-native-app-automation-test/)) are **not supported together** in the same session. Only one of them runs. If you need both a Screen Reader Report and a rule scan report, run them as two separate tests.
 
 ## Troubleshooting
 
@@ -291,7 +286,6 @@ Auto Report is independent of the rule-based accessibility scan.
 | Session fails with *"Screen Reader Automation is supported on Android and iOS real devices only."* | The capabilities requested an emulator or simulator. Set `isRealMobile: true` and choose a real device. |
 | Session fails with *"Screen Reader Automation requires Android 11+ / iOS 15+."* | Pick a device on a supported OS version. The message names the OS and version that was selected. |
 | Report is marked partial | A screen hit `linearNavigationTimeout`. Raise the timeout, up to 480000 ms, or split a very long screen across test steps. |
-| Meaningful reading order shows *Not applicable* | Linear mode was enabled. Run the same test in Standard mode if you need that check. |
 | Fewer screens in the report than the test visits | Screens that look identical to one already captured are skipped. Check the test actually reaches a visually different screen, and that waits let the screen settle before the next command. |
 | Same screen appears twice with different content | The screen changed between captures, for example a spinner resolved late. Add an explicit wait before the command that leaves the screen. |
 

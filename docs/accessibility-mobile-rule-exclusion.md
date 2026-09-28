@@ -223,7 +223,7 @@ Remove at least one entry, or set `accessibility` to `false` if that session sho
   ```
 
   A scan with nothing to report returns the same value as before, so existing callers see no change.
-- **In the report.** The **Applied Settings** panel groups removed rules under **Excluded by category** and **Excluded by rule**, and greys out a category that was excluded as a whole.
+- **In the report.** The **Applied Settings** panel greys out a category that was excluded as a whole, and shows an individually excluded rule as **Off**.
 - **In the data.** The resolved exclusion set, with the reason each rule was removed, is stored with the test and returned by the test-detail API, so a historical result can be reproduced.
 
 {/* IMAGE PLACEHOLDER: report Applied Settings panel showing the "Excluded by category" and "Excluded by rule" sections for an automation scan. Save the screenshot at the path below, then uncomment.
@@ -264,7 +264,7 @@ No. Exclusions apply to every scan in the session. To suppress a single finding 
 No. Exclusion only removes rules. To run a narrower set, lower the WCAG target or switch off group toggles, then exclude what remains.
 
 **What if I pass a web rule ID or category on a mobile session?**
-It is logged and dropped as not applicable to the platform, and the session proceeds.
+It is logged as an unknown rule ID and dropped, and the session proceeds. *Not applicable to the platform* is reserved for mobile rules that do not apply to the session's platform, Android or iOS.
 
 **Why does my exclusion not appear in the report?**
 Check the session log for a dropped entry (a misspelled ID or slug), and check whether the rule was already removed by the WCAG range or a group toggle. A rule removed earlier in the resolution order is attributed to that step, not to the exclusion.

@@ -197,7 +197,7 @@ To cover a mobile app, use one of the mobile surfaces instead:
 ## Can I exclude specific rules or rule categories from a scan?
 Yes, on every surface, and the exclusion is applied **before** the scan runs, so an excluded rule never appears in the findings or the score.
 
-- **Web automation (Selenium, Playwright, HyperExecute):** pass `accessibility.excludeRules` and `accessibility.excludeRuleCategories` as capabilities. See [Rule and Category Exclusion for Web Accessibility Automation](/support/docs/accessibility-web-automation-rule-exclusion/).
+- **Web automation (Selenium, Playwright):** pass `accessibility.excludeRules` and `accessibility.excludeRuleCategories` as capabilities. See [Rule and Category Exclusion for Web Accessibility Automation](/support/docs/accessibility-web-automation-rule-exclusion/).
 - **DevTools and scheduled scans:** use the **Evaluation Rules** panel. See [Rule and Category Exclusion in DevTools and Scheduled Scans](/support/docs/accessibility-devtools-rule-exclusion/).
 - **Mobile apps (Appium and the manual App Scanner):** pass the same two capabilities, or use the category checkbox in the App Scanner. See [Rule and Category Exclusion for Mobile App Accessibility](/support/docs/accessibility-mobile-rule-exclusion/).
 
