@@ -207,7 +207,7 @@ accessibility.needsReview: true
 ### 5. Exclude Rules
 
 - **Purpose:** Skip specific accessibility rules that your team has reviewed and accepted, so they do not fail every build. Excluded rules are switched off before the scan runs and do not count towards the score.
-- **Options:** An array of axe-core rule IDs, or a comma-separated string. Unknown IDs are logged and ignored; the session still runs.
+- **Options:** An array of axe-core rule IDs, or a comma-separated string. Unknown IDs are ignored and logged in the hook responses; the session still runs.
 - **Implementation:** Set `accessibility.excludeRules` in your capabilities. Supported on Selenium and Playwright sessions, on the cloud grid and on HyperExecute.
 
 ```bash

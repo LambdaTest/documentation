@@ -31,9 +31,9 @@ Enable this setting to include issues that go beyond WCAG requirements but impro
 
 ## Evaluation Rules
 
-The **Evaluation Rules** panel in the **Scan Settings** tab lists every rule the scan will evaluate, grouped by category. Switch off individual rules with their On/Off toggle, or a whole category with the checkbox on its header, then click **Save**. A rule that is switched off never runs and does not count towards the score. Saved selections apply to full-page, multi-page, workflow and keyboard scans, and follow you across reinstalls as your last-used configuration.
+The **Evaluation Rules** panel in the **Scan Settings** tab lists every rule the scan will evaluate, grouped by category. Switch off individual rules with their On/Off toggle, or a whole category with the checkbox on its header, then click **Save**. A rule that is switched off never runs and does not count towards the score. Saved selections apply to full-page, multi-page, workflow and assisted scans, and follow you across reinstalls as your last-used configuration.
 
-Rules outside the selected WCAG version, or Best Practice rules while Best Practices is off, are greyed out with a tooltip explaining why. A selection that leaves no rule to run cannot be saved.
+Rules outside the selected WCAG version are silently dropped: they are not listed in the panel and do not appear in the report. Best Practice rules while Best Practices is off are greyed out with a tooltip explaining why. A selection that leaves no rule to run cannot be saved.
 
 See [Rule and Category Exclusion in DevTools and Scheduled Scans](/support/docs/accessibility-devtools-rule-exclusion/) for details.
 

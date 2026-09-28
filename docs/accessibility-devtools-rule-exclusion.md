@@ -80,9 +80,18 @@ Each category shows how many of its rules are in scope for the current settings.
 | **Search** | Dims the categories with no matching rules |
 | **Select All / Clear All** | Switches every listed rule on or off in one action |
 
-Rules that the current settings already leave out of scope, such as a rule outside the selected WCAG version and level, or a Best Practice rule while Best Practices is off, are shown greyed out with a tooltip saying why. The panel never offers a switch that would do nothing. Raise the WCAG target or turn Best Practices on to bring those rules into scope.
+Rules outside the selected WCAG version and level are not listed in the panel at all, and do not appear in the report's Applied Settings. A Best Practice rule while Best Practices is off is shown greyed out with a tooltip saying why. The panel never offers a switch that would do nothing. Raise the WCAG target or turn Best Practices on to bring those rules into scope.
 
-The AI-powered rules (`alt-descriptive`, `alt-decorative-hidden`, `image-in-text`, `html-title-descriptive` and `html-lang-matches-visible-language`) are listed with the rest and can be switched off like any other rule. Rules that axe-core marks as deprecated are not listed, because they never run.
+The AI-powered rules below are supported in both DevTools and scheduled scans. They are listed with the rest and can be switched off like any other rule.
+
+| Rule ID | WCAG | What it evaluates |
+|---|---|---|
+| `alt-descriptive` | 1.1.1 | Whether an image's alt text is meaningful for its context |
+| `alt-decorative-hidden` | 1.1.1 | Whether an element is truly decorative and correctly hidden from assistive technology |
+| `image-in-text` | 1.4.5 | Whether an image contains embedded text |
+| `html-title-descriptive` | 2.4.2 | Whether the page `<title>` describes the page content |
+| `html-lang-matches-visible-language` | 3.1.1 | Whether the `lang` attribute matches the visible language on the page |
+ Rules that axe-core marks as deprecated are not listed, because they never run.
 
 {/* IMAGE PLACEHOLDER: Evaluation Rules panel showing categories with the tri-state checkbox, per-rule toggles, the search box and Select All / Clear All. Save the screenshot at the path below, then uncomment.
 <img loading="lazy" src={require('../assets/images/accessibility-testing/features/rule-exclusion/evaluation-rules-panel.png').default} alt="Evaluation Rules panel with the Color Contrast category checkbox switched off, per-rule On/Off toggles in the other categories, a search box, and Select All and Clear All actions" className="doc_img"/>
@@ -97,7 +106,7 @@ The AI-powered rules (`alt-descriptive`, `alt-decorative-hidden`, `image-in-text
 What to expect:
 
 - Saved selections persist in the browser and are also stored as your **last-used configuration** on the server, so they follow you across reinstalls.
-- They apply to **full-page, multi-page, workflow and keyboard** scans run from the extension.
+- They apply to **full-page, multi-page, workflow and assisted** scans run from the extension.
 - A selection that leaves no rule to run **cannot be saved**. Turn at least one rule back on.
 - The **AI-Enhanced Rules** toggle now persists across sessions as a user setting.
 
@@ -144,7 +153,7 @@ A selection made in the panel produces the same effective rule set as the corres
 |---|---|
 | Switch off a rule | Name its ID in `accessibility.excludeRules` |
 | Switch off a category with the header checkbox | Name its slug in `accessibility.excludeRuleCategories` |
-| Greyed-out rule (out of WCAG range or Best Practices off) | Not needed: the WCAG version and `accessibility.bestPractice` already remove it |
+| Rule not listed (out of WCAG range) or greyed out (Best Practices off) | Not needed: the WCAG version and `accessibility.bestPractice` already remove it |
 
 Rule IDs and category slugs are listed in [Rule and Category Exclusion for Web Accessibility Automation](/support/docs/accessibility-web-automation-rule-exclusion/).
 
@@ -170,7 +179,7 @@ Rule IDs and category slugs are listed in [Rule and Category Exclusion for Web A
 No. The selection applies to every scan run with that configuration. To suppress a single finding, use Hide and Restore Issues.
 
 **Why is a rule greyed out in the panel?**
-It is outside the selected WCAG version and level, or it is a Best Practice rule and Best Practices is off. Hover over it for the reason. Change that setting to bring the rule into scope.
+It is a Best Practice rule and Best Practices is off. Hover over it for the reason, and turn Best Practices on to bring the rule into scope. Rules outside the selected WCAG version and level are not listed at all; raise the WCAG target to bring them in.
 
 **Why can I not save an empty selection?**
 A scan with no rules would produce nothing, so the panel refuses to save it in DevTools and disables Next in the scheduler wizard. Turn at least one rule back on.
