@@ -119,13 +119,23 @@ import { BRAND_URL } from '@site/src/component/BrandName';
         "text": "rook explore . \\\n  --allow 'bash(npm test)' \\\n  --allow 'bash(git *)@explore'\n\nrook run --yes"
       }
     ],
-    "dateModified": "2026-09-04T12:50:18+05:30"
+    "dateModified": "2026-09-28"
   }) }}
 />
 
 # Rook Permissions and Safety
 
 Rook's internal roles can call tools while discovering, generating, invoking, and verifying. Every call must be covered by a rule or approved through an interactive prompt.
+
+## Read an Interactive Permission Prompt
+
+In the TUI, inspect the tool, exact file or target, and requested operation before approving. This real prompt occurs while Rook authors the quickstart's `local-triage` profile; it asks to write that profile's hook script, not to run a test suite:
+
+<img loading="lazy" src={require('../assets/images/rook/guides/rook-tui-profile-authoring.png').default} alt="Rook profile authoring paused at a write_file permission prompt, with yes once, always for this run, no, and never choices" width="2200" height="1680" className="doc_img"/>
+
+Use the arrow keys to select and Enter to answer. **yes** approves that action once; **no** declines it. Read the hint beside **always**: for a model-chosen action such as the one pictured, it allows the matching operation for this run without writing a disk grant. A persistent choice on a human-requested action has a different scope. **never** can save a denial. Do not choose a broad option merely to clear the prompt.
+
+After approval, watch the next operation and its result. A permission prompt or a generated file is not proof that the target was reached or that a scenario passed.
 
 ## Rule Grammar
 

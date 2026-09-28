@@ -177,10 +177,11 @@ test('local UI guide covers the tabbed viewer without promising it in public CLI
   assert.doesNotMatch(local, /scroll to \*\*files\*\*|no hosted filter bar|\*\*upstream\*\* panel/i);
 });
 
-test('local and hosted UI screenshot references exist and dimensions match the PNG files', () => {
+test('all Rook screenshot references exist and dimensions match the PNG files', () => {
   for (const file of fs.readdirSync(path.join(root, 'docs')).filter(name => /^(rook-|agent-assurance-).*\.md$/.test(name))) {
     const doc = fs.readFileSync(path.join(root, 'docs', file), 'utf8');
-    for (const [tag, relative] of doc.matchAll(/<img\b[^>]*src=\{require\('([^']*images\/rook\/rook-(?:local|web)-[^']+\.png)'\)[^>]*>/g)) {
+    assert.doesNotMatch(doc, /images\/rook\/rook-(?:terminal|browser)-[^'"\s]+/, `${file}: no retired terminal or browser captures`);
+    for (const [tag, relative] of doc.matchAll(/<img\b[^>]*src=\{require\('([^']*images\/rook\/[^']+\.png)'\)[^>]*>/g)) {
       const png = fs.readFileSync(path.resolve(root, 'docs', relative));
       assert.equal(png.subarray(0, 8).toString('hex'), '89504e470d0a1a0a', `${file}: valid PNG`);
       const width = png.readUInt32BE(16);
@@ -191,6 +192,86 @@ test('local and hosted UI screenshot references exist and dimensions match the P
       if (relative.includes('/rook-local-')) assert.deepEqual([width, height], [1440, 900], `${relative}: viewport capture`);
     }
   }
+});
+
+test('overview and every workflow guide show inline TUI captures alongside both browser UIs', () => {
+  const captures = {
+    'agent-assurance-overview': 'guides/rook-tui-get-started.png',
+    'agent-assurance-connect-and-explore-agents': 'guides/rook-tui-agent-picker.png',
+    'rook-profiles-and-hooks': 'guides/rook-tui-profile-picker.png',
+    'agent-assurance-scenarios': 'guides/rook-tui-scenarios.png',
+    'agent-assurance-run-tests': 'guides/rook-tui-run-progress.png',
+    'agent-assurance-results-and-evidence': 'guides/rook-tui-report.png',
+    'rook-web-ui': 'guides/rook-tui-local-ui.png',
+  };
+  for (const [slug, capture] of Object.entries(captures)) {
+    const doc = fs.readFileSync(path.join(root, 'docs', `${slug}.md`), 'utf8');
+    assert.ok(doc.includes(`images/rook/${capture}`), `${slug}: current TUI capture`);
+    assert.match(doc, /Launch `rook`/, `${slug}: explains how to enter the TUI`);
+    assert.match(doc, /rook-local-/);
+    assert.match(doc, /rook-web-/);
+    assert.doesNotMatch(doc, /<details>|View (?:the )?TUI/, `${slug}: no screenshot view selector`);
+  }
+  const run = fs.readFileSync(path.join(root, 'docs/agent-assurance-run-tests.md'), 'utf8');
+  const report = fs.readFileSync(path.join(root, 'docs/agent-assurance-results-and-evidence.md'), 'utf8');
+  assert.match(run, /rook-tui-run-plan\.png/);
+  assert.match(run, /not a fixed credit quote/);
+  assert.match(report, /not a help screen/);
+  assert.match(report, /not complete coverage/);
+});
+
+test('installation and quickstart lead into the interactive TUI with actual workflow checkpoints', () => {
+  const install = fs.readFileSync(path.join(root, 'docs/rook-installation.md'), 'utf8');
+  const quickstart = fs.readFileSync(path.join(root, 'docs/agent-assurance-quickstart.md'), 'utf8');
+  assert.match(install, /\{#start-the-interactive-tui\}/);
+  assert.match(install, /rook-tui-get-started\.png/);
+  assert.match(install, /NO_COLOR/);
+  assert.match(install, /arrow keys and Enter/);
+  assert.match(quickstart, /\*\*Rook 0\.1\.5\*\*/);
+  assert.match(quickstart, /one step at a time/);
+  assert.match(quickstart, /not a fixed credit quote/);
+  assert.match(quickstart, /not complete|left four discovered feature areas untested/);
+  const stages = [
+    ['2. Open the TUI', ['get-started', 'explore-confirm']],
+    ['3. Generate and verify the profile', ['profile-authoring', 'profile-verified']],
+    ['4. Generate a small suite', ['generate-plan', 'generated-scenarios']],
+    ['5. Sync, then run', ['sync', 'run-plan', 'run-progress']],
+    ['6. Open the results', ['report']],
+  ];
+  for (const [heading, images] of stages) {
+    const start = quickstart.indexOf(`### ${heading}`);
+    assert.ok(start >= 0, `${heading}: heading exists`);
+    const end = quickstart.indexOf('\n### ', start + 1);
+    const section = quickstart.slice(start, end < 0 ? undefined : end);
+    for (const image of images) {
+      assert.ok(section.includes(`rook-tui-${image}.png`), `${heading}: ${image} alongside the step`);
+    }
+  }
+  const setupCode = [install, quickstart].flatMap(doc => [...doc.matchAll(/```(?:bash|powershell)\n([\s\S]*?)\n```/g)].map(m => m[1])).join('\n');
+  assert.doesNotMatch(setupCode, /\brook(?:\.cmd)? (?:login|explore|generate|run|report|profile)\b/, 'first-use workflow is not a headless sequence');
+  assert.doesNotMatch(quickstart, /<details>|View (?:the )?TUI/);
+});
+
+test('supporting workflow pages show real checkpoints with honest scope and permission explanations', () => {
+  const captures = {
+    'agent-assurance-connect-and-explore-agents': 'explore-confirm',
+    'rook-profiles-and-hooks': 'profile-verified',
+    'agent-assurance-scenarios': 'generate-plan',
+    'rook-features': 'profile-authoring',
+    'agent-assurance-mcp': 'mcp-list',
+    'rook-environment-and-secrets': 'env-values',
+    'rook-permissions-and-safety': 'profile-authoring',
+    'rook-workspace-files': 'sync',
+  };
+  for (const [slug, image] of Object.entries(captures)) {
+    const doc = fs.readFileSync(path.join(root, 'docs', `${slug}.md`), 'utf8');
+    assert.ok(doc.includes(`rook-tui-${image}.png`), `${slug}: actual checkpoint`);
+  }
+  const permissions = fs.readFileSync(path.join(root, 'docs/rook-permissions-and-safety.md'), 'utf8');
+  assert.match(permissions, /for this run without writing a disk grant/);
+  const env = fs.readFileSync(path.join(root, 'docs/rook-environment-and-secrets.md'), 'utf8');
+  assert.match(env, /DEMO_LABEL/);
+  assert.match(env, /prefix and suffix/);
 });
 
 test('CLI Reference documents the public baseline, interactive screenshots, and approved saved-run RCA', () => {

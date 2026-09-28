@@ -84,7 +84,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
         "https://www.youtube.com/@TestMuAI"
       ]
     },
-    "dateModified": "2026-09-11"
+    "dateModified": "2026-09-28"
   }) }}
 />
 
@@ -117,6 +117,12 @@ Rook first shows a plan:
 - Run `/explore --force` first when you need scenarios based on the current source.
 
 Review the steps and estimated credits before proceeding.
+
+For a first run, use a narrow generation request such as the [two-scenario quickstart](/support/docs/agent-assurance-quickstart/#test-your-first-agent). This actual TUI plan includes two features and explains why the other three are excluded:
+
+<img loading="lazy" src={require('../assets/images/rook/guides/rook-tui-generate-plan.png').default} alt="Interactive Rook generation plan showing two included triage cases, three excluded features, and proceed, discard, or change controls" width="2200" height="1120" className="doc_img"/>
+
+Use the arrow keys and Enter to **proceed** with writing, **discard** the plan without writing scenarios, or **change** the request. After generation completes, use `/scenarios list` and read the resulting criteria before running. A plan is not yet a saved suite or a test result.
 
 ## Scenario Taxonomy
 
@@ -193,7 +199,7 @@ Select the intended project and agent with <code>rook project use &lt;id&gt;</co
 
 ## Review Scenario Runnability
 
-List scenarios:
+Launch `rook` in your workspace, then list scenarios inside its interactive TUI:
 
 <VerifiedTag value="Verified" />
 
@@ -201,7 +207,11 @@ List scenarios:
 /scenarios list
 ```
 
-Or:
+<img loading="lazy" src={require('../assets/images/rook/guides/rook-tui-scenarios.png').default} alt="Rook interactive scenario listing with twelve CommerceCare scenarios, runnability, classes, categories, feature IDs, criteria counts, and the TUI input" width="2200" height="1520" className="doc_img"/>
+
+The first line summarizes runnability against the active profile. Each scenario shows its ID, class, category, feature, and criteria count; repeated scenarios also show their repeat count. This saved demo has twelve runnable scenarios. Runnable means they can be attempted, not that they have passed.
+
+From a regular shell instead:
 
 <VerifiedTag value="Verified" />
 
