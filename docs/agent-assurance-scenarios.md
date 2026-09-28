@@ -84,7 +84,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
         "https://www.youtube.com/@TestMuAI"
       ]
     },
-    "dateModified": "2026-09-11"
+    "dateModified": "2026-09-28"
   }) }}
 />
 
@@ -193,7 +193,7 @@ Select the intended project and agent with <code>rook project use &lt;id&gt;</co
 
 ## Review Scenario Runnability
 
-List scenarios:
+Launch `rook` in your workspace, then list scenarios inside its interactive TUI:
 
 <VerifiedTag value="Verified" />
 
@@ -201,7 +201,11 @@ List scenarios:
 /scenarios list
 ```
 
-Or:
+<img loading="lazy" src={require('../assets/images/rook/guides/rook-tui-scenarios.png').default} alt="Rook interactive scenario listing with twelve CommerceCare scenarios, runnability, classes, categories, feature IDs, criteria counts, and the TUI input" width="2200" height="1520" className="doc_img"/>
+
+The first line summarizes runnability against the active profile. Each scenario shows its ID, class, category, feature, and criteria count; repeated scenarios also show their repeat count. This saved demo has twelve runnable scenarios. Runnable means they can be attempted, not that they have passed.
+
+From a regular shell instead:
 
 <VerifiedTag value="Verified" />
 

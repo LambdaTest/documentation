@@ -84,7 +84,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
         "https://www.youtube.com/@TestMuAI"
       ]
     },
-    "dateModified": "2026-09-25"
+    "dateModified": "2026-09-28"
   }) }}
 />
 
@@ -219,12 +219,27 @@ Editing today's scenario or profile does not rewrite the saved input snapshots o
 
 ## Print or Export a Report
 
-Select the correct project and agent first:
+Launch `rook` in the workspace containing your saved run. In the interactive TUI, select the correct project and agent, then open the report:
+
+```text
+/project
+/agent
+/report <run-id>
+```
+
+Replace `<run-id>` with the saved run's ID. `/report` without an ID reads the latest local run. If Rook asks you to sign in, use `/login` and retry the report command. Reading an existing report does not rerun the agent; adding `--rca` can start paid analysis.
+
+Use `/help report` to inspect the options before requesting that analysis:
+
+<img loading="lazy" src={require('../assets/images/rook/commands/rook-command-report.png').default} alt="Rook 0.1.5 interactive report help with run ID, RCA, JSON, and permission options above the TUI input and project footer" width="2200" height="1160" className="doc_img"/>
+
+This screenshot shows interactive help, not a completed report. The local and hosted screenshots above show saved verdicts and evidence.
+
+For shell-based output or automation:
 
 ```bash
 rook project use <project-id>
 rook agent use <agent-id>
-rook runs
 rook report <run-id>
 rook report <run-id> --json
 ```

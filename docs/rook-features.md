@@ -91,7 +91,7 @@ import { BRAND_URL } from '@site/src/component/BrandName';
         "https://www.youtube.com/@TestMuAI"
       ]
     },
-    "dateModified": "2026-09-25"
+    "dateModified": "2026-09-28"
   }) }}
 />
 
@@ -129,7 +129,7 @@ Start <code>/profile add</code> and describe how you reach the agent. You can pa
 
 Rook reads the material, asks only for information it cannot determine, writes reviewable <code>.mjs</code> hook scripts, invokes the target, and corrects the scripts from the actual response. If an existing profile stops working, <code>/profile fix</code> runs it, reads the failure, and repairs it. <code>/profile test</code> performs the cheaper verification call without rewriting anything.
 
-<img loading="lazy" src={require('../assets/images/rook/commands/rook-command-profile.png').default} alt="Rook profile help showing prompt-based add, repair, verification, inspection, and selection commands" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/rook/commands/rook-command-profile.png').default} alt="Rook interactive profile help showing prompt-based add, repair, verification, inspection, and selection commands" width="2200" height="1680" className="doc_img"/>
 
 Profiles store script paths, required environment-variable names, and observed capabilities—not credential values. The generated files remain on disk for review and editing.
 

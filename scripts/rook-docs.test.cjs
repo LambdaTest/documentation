@@ -177,10 +177,11 @@ test('local UI guide covers the tabbed viewer without promising it in public CLI
   assert.doesNotMatch(local, /scroll to \*\*files\*\*|no hosted filter bar|\*\*upstream\*\* panel/i);
 });
 
-test('local and hosted UI screenshot references exist and dimensions match the PNG files', () => {
+test('all Rook screenshot references exist and dimensions match the PNG files', () => {
   for (const file of fs.readdirSync(path.join(root, 'docs')).filter(name => /^(rook-|agent-assurance-).*\.md$/.test(name))) {
     const doc = fs.readFileSync(path.join(root, 'docs', file), 'utf8');
-    for (const [tag, relative] of doc.matchAll(/<img\b[^>]*src=\{require\('([^']*images\/rook\/rook-(?:local|web)-[^']+\.png)'\)[^>]*>/g)) {
+    assert.doesNotMatch(doc, /images\/rook\/rook-(?:terminal|browser)-[^'"\s]+/, `${file}: no retired terminal or browser captures`);
+    for (const [tag, relative] of doc.matchAll(/<img\b[^>]*src=\{require\('([^']*images\/rook\/[^']+\.png)'\)[^>]*>/g)) {
       const png = fs.readFileSync(path.resolve(root, 'docs', relative));
       assert.equal(png.subarray(0, 8).toString('hex'), '89504e470d0a1a0a', `${file}: valid PNG`);
       const width = png.readUInt32BE(16);
@@ -191,6 +192,30 @@ test('local and hosted UI screenshot references exist and dimensions match the P
       if (relative.includes('/rook-local-')) assert.deepEqual([width, height], [1440, 900], `${relative}: viewport capture`);
     }
   }
+});
+
+test('overview and every workflow guide show inline TUI captures alongside both browser UIs', () => {
+  const captures = {
+    'agent-assurance-overview': 'commands/rook-reference-home.png',
+    'agent-assurance-connect-and-explore-agents': 'guides/rook-tui-agent-picker.png',
+    'rook-profiles-and-hooks': 'guides/rook-tui-profile-picker.png',
+    'agent-assurance-scenarios': 'guides/rook-tui-scenarios.png',
+    'agent-assurance-run-tests': 'commands/rook-command-run.png',
+    'agent-assurance-results-and-evidence': 'commands/rook-command-report.png',
+    'rook-web-ui': 'commands/rook-command-ui.png',
+  };
+  for (const [slug, capture] of Object.entries(captures)) {
+    const doc = fs.readFileSync(path.join(root, 'docs', `${slug}.md`), 'utf8');
+    assert.ok(doc.includes(`images/rook/${capture}`), `${slug}: current TUI capture`);
+    assert.match(doc, /Launch `rook`/, `${slug}: explains how to enter the TUI`);
+    assert.match(doc, /rook-local-/);
+    assert.match(doc, /rook-web-/);
+    assert.doesNotMatch(doc, /<details>|View (?:the )?TUI/, `${slug}: no screenshot view selector`);
+  }
+  const run = fs.readFileSync(path.join(root, 'docs/agent-assurance-run-tests.md'), 'utf8');
+  const report = fs.readFileSync(path.join(root, 'docs/agent-assurance-results-and-evidence.md'), 'utf8');
+  assert.match(run, /not an in-progress run or a permission prompt/);
+  assert.match(report, /interactive help, not a completed report/);
 });
 
 test('CLI Reference documents the public baseline, interactive screenshots, and approved saved-run RCA', () => {

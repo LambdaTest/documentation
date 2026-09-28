@@ -101,7 +101,7 @@ import { BRAND_URL } from '@site/src/component/BrandName';
         "https://www.youtube.com/@TestMuAI"
       ]
     },
-    "dateModified": "2026-09-22"
+    "dateModified": "2026-09-28"
   }) }}
 />
 
@@ -125,7 +125,11 @@ You install only the <code>rook</code> CLI. You do not need the source repositor
 Commands and stored file formats can change. Test against a disposable or staging target and review the target and write warning before every run.
 :::
 
-<img loading="lazy" src={require('../assets/images/rook/rook-terminal-home.png').default} alt="Rook terminal home showing the Agent Assurance workflow" width="1111" height="911" className="doc_img"/>
+Launch `rook` from your agent workspace to open the interactive terminal UI (TUI). Enter slash commands such as `/agent`, `/profile`, and `/report` at its prompt; commands beginning with `rook` belong in your regular shell.
+
+<img loading="lazy" src={require('../assets/images/rook/commands/rook-reference-home.png').default} alt="Rook 0.1.5 interactive home with the saved CommerceCare demo, slash-command input, and active project, agent, and profile" width="2200" height="1360" className="doc_img"/>
+
+This TUI capture shows an existing demo workspace, not a first-launch empty state. The footer identifies the active project, agent, and profile; sign in with `/login` when prompted before starting authenticated work.
 
 ## Agent Assurance and Agent Testing {#conversation-testing-and-autonomous-testing}
 

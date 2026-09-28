@@ -84,7 +84,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
         "https://www.youtube.com/@TestMuAI"
       ]
     },
-    "dateModified": "2026-09-25"
+    "dateModified": "2026-09-28"
   }) }}
 />
 
@@ -271,11 +271,11 @@ Rook also refuses two paths to keep read scope tight:
 
 ## Manage Multiple Agents
 
-The browser inventory shows all registered agents and their scenario and run history.
+Launch `rook` in your workspace, then enter `/agent` in the interactive TUI. The picker lists agents in the selected project. Type to filter, use the arrow keys to move, and press Enter to select an agent or Esc to go back. Check the active agent in the footer before exploring or running tests.
 
-<img loading="lazy" src={require('../assets/images/rook/rook-browser-agents.png').default} alt="Rook agent inventory for a workspace containing multiple agents" width="1440" height="900" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/rook/guides/rook-tui-agent-picker.png').default} alt="Rook interactive agent picker with CommerceCare selected, search, keyboard controls, and the active-project footer" width="2200" height="440" className="doc_img"/>
 
-Interactive commands:
+This saved demo has one agent. Projects containing several agents show more choices in the same picker. You can also select a known agent ID directly:
 
 <VerifiedTag value="Verified" />
 
@@ -289,7 +289,6 @@ Headless commands:
 <VerifiedTag value="Verified" />
 
 ```bash
-rook agent
 rook agent
 rook agent use <id>
 ```

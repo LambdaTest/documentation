@@ -21,7 +21,7 @@ Open the hosted Web UI at [rook.lambdatest.com/projects](https://rook.lambdatest
 
 Both interfaces were checked on September 25, 2026. The local screenshots use saved CommerceCare demo results with synthetic orders and customers. The hosted screenshots use the Rook 0.1.3 triage run from the [quickstart](/support/docs/agent-assurance-quickstart/), recorded on September 11. They are different examples, not two views of the same execution. Screenshot dates and agent versions identify those saved records, not the installed CLI version.
 
-Screenshots show only the visible webpage, without browser controls or desktop content; the Projects image is limited to the sample project's entry. Click or tap a screenshot to enlarge it.
+Browser screenshots show only the visible webpage, without browser controls or desktop content; the Projects image is limited to the sample project's entry. The TUI capture shows only terminal content. Click or tap a screenshot to enlarge it.
 
 :::note Local UI rollout
 The redesigned local UI below was verified in CLI build `f8ab6fc6` on September 25. The public npm release was still **0.1.5**, which has the earlier single-page viewer. If your screen differs, check `rook --version` and [available public updates](/support/docs/rook-installation/). Do not expect reinstalling 0.1.5 to enable the redesign. See [the earlier layout](#earlier-local-ui) below while rollout is pending.
@@ -39,6 +39,14 @@ The redesigned local UI below was verified in CLI build `f8ab6fc6` on September 
 | Sharing | Loopback URLs work only on your machine | Authorized teammates can open the run or result URL |
 
 Neither viewer downloads missing records into your workspace, uploads local changes, or turns a partial run into a completed result. Their layouts differ; use the [local walkthrough](#local-ui) or [hosted walkthrough](#open-the-right-environment) below.
+
+### Open a Viewer From the Interactive TUI
+
+Launch `rook` from your agent workspace, then enter `/ui --local` for on-disk evidence or `/ui` for hosted review. These are alternatives: choose the viewer for the records you want to inspect. `/help ui` explains the options without opening a browser:
+
+<img loading="lazy" src={require('../assets/images/rook/commands/rook-command-ui.png').default} alt="Rook 0.1.5 interactive UI help showing local and no-open options with the TUI input and active-project footer" width="2200" height="800" className="doc_img"/>
+
+Keep the TUI session running while using its local viewer. The `rook ui` examples below are the equivalent commands for a regular shell.
 
 ## Review On-Disk Evidence in the Local UI {#local-ui}
 

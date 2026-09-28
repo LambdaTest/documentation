@@ -84,7 +84,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
         "https://www.youtube.com/@TestMuAI"
       ]
     },
-    "dateModified": "2026-09-11"
+    "dateModified": "2026-09-28"
   }) }}
 />
 
@@ -97,6 +97,12 @@ import VerifiedTag from '@site/src/component/verifiedTag';
 > Point every run at a test or staging environment.
 
 ## Preflight Checklist
+
+Launch `rook` from your agent workspace and enter the slash commands below inside the interactive TUI. Run `/help run` to inspect the available selectors and phases without starting a test:
+
+<img loading="lazy" src={require('../assets/images/rook/commands/rook-command-run.png').default} alt="Rook 0.1.5 interactive run help showing scenario selectors, lifecycle phases, resume, test mode, and RCA options above the TUI input" width="2200" height="1720" className="doc_img"/>
+
+This is the TUI's command-help view, not an in-progress run or a permission prompt. `/run` invokes the live target after its preflight and permission checks.
 
 Before running a suite, confirm:
 
@@ -202,8 +208,6 @@ Use higher concurrency only when the target isolates sessions and fixtures. Conc
 ## Review the Permission Gate
 
 Rook shows the exact target and whether discovery found write-capable tools.
-
-<img loading="lazy" src={require('../assets/images/rook/rook-terminal-run-permission.png').default} alt="Rook run permission gate showing the target scenario count and real-write warning" width="1225" height="676" className="doc_img"/>
 
 The answers mean:
 
