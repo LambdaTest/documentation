@@ -177,11 +177,11 @@ On a manual test instance, changing the status of a step recalculates the status
 
 The instance status is written only when the recalculated value differs from the one already stored, so nothing else about the instance changes.
 
-The rules below are checked in order, and the first one that matches decides the status. Where a rule could match more than one step, the lowest-numbered step wins.
+The rules below are checked in order, and the first one that matches decides the status.
 
 | Order | If | The test instance becomes |
 |---|---|---|
-| 1 | Any step is **Failed** | **Failed**, driven by the lowest-numbered failing step |
+| 1 | Any step is **Failed** | **Failed** |
 | 2 | Any step has not been executed yet — **Not Started**, or not marked at all | **Not Started** |
 | 3 | Every step is executed and at least one is on a **custom status** | That custom status, from the lowest-numbered step holding one |
 | 4 | Every step is executed and at least one is **Passed** | **Passed** |
@@ -194,8 +194,8 @@ The rules below are checked in order, and the first one that matches decides the
 | Step statuses, in order | Test instance status | Why |
 |---|---|---|
 | Passed, Passed, Passed | Passed | Every step was executed and passed. |
-| Passed, Failed, Passed | Failed | Step 2 failed. |
-| Failed, Failed, Skipped | Failed | Step 1 is the lowest-numbered failing step. |
+| Passed, Failed, Passed | Failed | One failed step is enough, wherever it is. |
+| Failed, Failed, Skipped | Failed | More than one failure makes no difference. |
 | Blocked, Failed, Passed | Failed | A failure outranks a custom status. |
 | Passed, Not Started, Not Started | Not Started | Steps are still unexecuted. |
 | Passed, Blocked, Not Started | Not Started | An unexecuted step outranks the custom status. |
