@@ -246,7 +246,7 @@ Remove at least one entry, or set `accessibility` to `false` if that session sho
 
 - **Filtered before execution.** An excluded rule is switched off in axe before the scan runs. It is absent from the findings and from the score by construction, not filtered out of the results afterwards.
 - **Score reflects the evaluated set.** The accessibility score is computed only over the rules that ran.
-- **Applied Settings on every web report.** The **Applied Settings** popover, previously available only on mobile app reports, now appears on every web report. It groups the rules that ran and the rules that did not by category, with a reason on each disabled rule: excluded by rule, excluded by category, or switched off by a group toggle.
+- **Applied Settings on every web report.** The **Applied Settings** popover, previously available only on mobile app reports, now appears on every web report. It groups the rules by category. An excluded category is greyed out, and an individually excluded rule is shown as **Off**.
 - **Reproducible.** Both lists are stored with the test and returned by the test-detail API, so any historical result can be reproduced. Merged reports fold in the lists of their source reports.
 
 {/* IMAGE PLACEHOLDER: web automation report Applied Settings popover showing rules that ran and rules that did not, with "Excluded by rule" and "Excluded by category" reasons. Save the screenshot at the path below, then uncomment.
