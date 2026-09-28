@@ -57,7 +57,7 @@ import RealDeviceTag from '../src/component/realDevice';
 
 AutoScan runs an accessibility scan **automatically** after every Appium command that changes the screen, so an app flow is covered end to end without a `lambda-accessibility-scan` call at each step. You turn it on with a single capability, and <BrandName /> scans as your existing test drives the app.
 
-Because a test usually taps several times on the same screen, AutoScan also ships with **intelligent scan**: before each scan the current screen is compared with the last one that was scanned, and a screen that has not visibly changed is skipped. Intelligent scan is **on by default**, so the common case is one scan per distinct screen rather than one scan per tap.
+Because a test usually taps several times on the same screen, AutoScan also ships with **intelligent scan**: before each scan the current screen is compared with every screen scanned so far in the test, and a screen that matches one of them is skipped. Intelligent scan is **on by default**, so the common case is one scan per distinct screen rather than one scan per tap.
 
 AutoScan is the mobile counterpart of the web `accessibility.autoscan` capability described in [Automating Accessibility Testing with Selenium](/support/docs/accessibility-automation-test/). Both platforms are supported on real devices: **Android** and **iOS**.
 
@@ -256,7 +256,7 @@ A command that changes the screen only after an asynchronous load, for example a
 
 Intelligent scan is what keeps an interaction-heavy test from producing dozens of near-identical reports.
 
-Before each triggered scan, <BrandName /> compares the current screen with the last screen that was scanned and produces a **visual similarity percentage**. If that percentage is at or above `accessibility.intelligentScanThreshold`, the screen is treated as unchanged and the scan is skipped.
+Before each triggered scan, <BrandName /> compares the current screen with every screen scanned so far in the session and produces a **visual similarity percentage**. If that percentage is at or above `accessibility.intelligentScanThreshold`, the screen is treated as unchanged and the scan is skipped.
 
 | Threshold | Effect |
 |---|---|
@@ -265,7 +265,7 @@ Before each triggered scan, <BrandName /> compares the current screen with the l
 | Lower, for example `50` | Aggressive. Only clearly different screens are scanned, which is useful on flows with a lot of animation or changing content. |
 | `intelligentScan: false` | No comparison at all. Every triggering command produces a scan. Expect roughly twice the scans of a default AutoScan run on an interaction-heavy flow. |
 
-Comparison is always against the **last screen that was actually scanned**, so a flow that moves A → A → B scans A once and B once.
+Comparison is against **every screen scanned so far in the session**, not just the last one, so a flow that moves A → B → A scans A once and B once.
 
 ## Pausing and resuming AutoScan
 
@@ -362,7 +362,7 @@ AutoScan scans land in exactly the same place as hook-driven scans, in the Acces
 
 - **Per screen.** Each scan that ran is a screen entry in the report, with its screenshot, issues and score, in the order your test reached them.
 - **Skipped screens.** A screen skipped by intelligent scan does not produce an entry. If your report has fewer screens than you expected, that is usually why.
-- **Session level.** The test record notes whether the session's scans were produced by AutoScan or by hooks, so an AutoScan run can be told apart from a hook-driven one in the dashboard and in the test-detail API.
+- **AutoScan pill.** A test that ran with the AutoScan capability shows an **AutoScan** pill in the report, so an AutoScan run can be told apart from a hook-driven one.
 - **Configuration recorded.** The WCAG target, group toggles and any exclusions are stored with the test, as they are for hook-driven scans.
 
 Individual scans within a session are not currently labelled with the trigger that produced them, so a session that mixes AutoScan with explicit hook calls shows both kinds of scan in one list.

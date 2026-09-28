@@ -188,7 +188,7 @@ Notes:
 - `accessibility.autoScan` and its two child capabilities control **when** scans are triggered rather than what they check. They are summarised here for completeness and documented in full, with the trigger list, pause and resume, and the Android and iOS timing difference, in [AutoScan for Mobile App Accessibility](/support/docs/accessibility-mobile-autoscan/). The child capabilities are ignored when `accessibility.autoScan` is `false`.
 - `accessibility.aiEnabled` is the same AI toggle used elsewhere in accessibility; it is reused here.
 - A backend capability `accessibility.needsReview` also exists but is not part of the standard automation scan config (defaults off).
-- `accessibility.excludeRules` and `accessibility.excludeRuleCategories` are optional and mobile-only. Accepted values, precedence and error handling are described in [Rule and Category Exclusion for Mobile App Accessibility](/support/docs/accessibility-mobile-rule-exclusion/).
+- `accessibility.excludeRules` and `accessibility.excludeRuleCategories` are optional. Accepted values, precedence and error handling are described in [Rule and Category Exclusion for Mobile App Accessibility](/support/docs/accessibility-mobile-rule-exclusion/).
 
 ## How the effective rule set is computed
 
@@ -272,7 +272,7 @@ Only the rules in the effective set are evaluated, and the report for that build
 
 - **Scoped results.** Each scan reports violations only for the rules in the test's effective set. Rules outside the WCAG range or behind an off group toggle do not appear and do not affect the accessibility score for that scan.
 - **Configuration recorded with the test.** The WCAG version and group toggles are stored alongside the scan, so the team can always see how a given result was produced.
-- **Applied rules are visible in the report.** The report header shows the applied configuration as tags (for example, **WCAG 2.1 AA**, **Best Practices**, **Beta Rules**), and the **Applied Settings** panel lists every rule that was evaluated, grouped by category and searchable, so the exact selected rules can be confirmed for any scan. Rules removed by an exclusion are listed under **Excluded by category** and **Excluded by rule**.
+- **Applied rules are visible in the report.** The report header shows the applied configuration as tags (for example, **WCAG 2.1 AA**, **Best Practices**, **Beta Rules**), and the **Applied Settings** panel lists every rule that was evaluated, grouped by category and searchable, so the exact selected rules can be confirmed for any scan. Rules removed by an exclusion are shown in the same panel: an excluded category is greyed out, and an individually excluded rule is shown as **Off**.
 
 The report shows the applied WCAG target and group tags, and the **Applied Settings** panel lists the selected rules by category:
 

@@ -62,7 +62,7 @@ import RealDeviceTag from '../src/component/realDevice';
 
 | | Auto Report | Executor Hooks |
 |---|---|---|
-| **What it does** | Turns the screen reader on for the session, traverses every screen your test reaches, and generates a **Screen Reader Report** with focus order, spoken output and eight screen reader checks. | Lets your test script **control the screen reader**: turn it on or off, perform navigation gestures, and read back the focused element and its spoken output. |
+| **What it does** | Turns the screen reader on for the session, traverses every screen your test reaches, and generates a **Screen Reader Report** with focus order, spoken output and seven screen reader checks. | Lets your test script **control the screen reader**: turn it on or off, perform navigation gestures, and read back the focused element and its spoken output. |
 | **What you change in the test** | Capabilities only. No test code changes. | Capabilities, plus `lambda_executor` calls at the points you want to check. |
 | **What you get** | A report per session in the Accessibility dashboard, shareable and exportable. | Return values inside your script, so you can **assert** on spoken text, focusability and traversal order and fail the build. |
 | **Best for** | Broad coverage on every build, audit evidence for VPATs and ACRs. | Deterministic checks on critical flows, regression gates in CI. |
@@ -124,7 +124,6 @@ To unlock this feature, please contact your <BrandName /> support representative
 
 - **Not the live screen reader.** For hands-on TalkBack or VoiceOver sessions with a real handset on screen, use [Screen Reader (TalkBack) on Android](/support/docs/screen-reader-on-real-devices-app/) and [Screen Reader (VoiceOver) on iOS](/support/docs/screen-reader-voiceover-real-devices-app/).
 - **Not desktop screen readers.** NVDA, JAWS and macOS VoiceOver for web testing are covered under [Screen Reader](/support/docs/screen-reader-on-accessibility/).
-- **Not the rule scan.** Screen Reader Automation is independent of the `lambda-accessibility-scan` rule scan described in [Native App Automation](/support/docs/accessibility-native-app-automation-test/). Enabling one does not run the other, and both can be enabled in the same session.
 
 ## Related docs
 
