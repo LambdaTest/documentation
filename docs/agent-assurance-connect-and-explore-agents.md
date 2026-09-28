@@ -125,6 +125,12 @@ Rook scans deterministically first, then gives its discovery subagent read tools
 - **One candidate:** Rook asks whether to register it.
 - **Several candidates:** Choose the candidates you want.
 
+This real TUI capture shows `/explore .` finding the public triage sample and pausing for registration. Read the discovery summary before choosing **yes**; arrow keys change the choice, Enter submits it, and Esc declines. The progress line shows the current task and credit use while the footer keeps the selected project visible.
+
+<img loading="lazy" src={require('../assets/images/rook/guides/rook-tui-explore-confirm.png').default} alt="Interactive exploration finding the public support triage agent and asking whether to register it before continuing analysis" width="2200" height="840" className="doc_img"/>
+
+After approval, wait for agent and feature analysis to finish. Review the findings, then select the resulting agent with `/agent`. Discovery writes local records; it does not mean a profile has been verified, scenarios have been generated, or a run has passed.
+
 ## What Rook Looks For
 
 Rook can identify agents from evidence including:

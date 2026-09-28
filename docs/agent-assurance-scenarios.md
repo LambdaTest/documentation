@@ -118,6 +118,12 @@ Rook first shows a plan:
 
 Review the steps and estimated credits before proceeding.
 
+For a first run, use a narrow generation request such as the [two-scenario quickstart](/support/docs/agent-assurance-quickstart/#test-your-first-agent). This actual TUI plan includes two features and explains why the other three are excluded:
+
+<img loading="lazy" src={require('../assets/images/rook/guides/rook-tui-generate-plan.png').default} alt="Interactive Rook generation plan showing two included triage cases, three excluded features, and proceed, discard, or change controls" width="2200" height="1120" className="doc_img"/>
+
+Use the arrow keys and Enter to **proceed** with writing, **discard** the plan without writing scenarios, or **change** the request. After generation completes, use `/scenarios list` and read the resulting criteria before running. A plan is not yet a saved suite or a test result.
+
 ## Scenario Taxonomy
 
 Rook has three classes and 18 categories.

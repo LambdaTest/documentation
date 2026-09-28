@@ -90,7 +90,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
 
 # Run Deep Functional Tests With Agent Assurance
 
-`/run` selects runnable scenarios, displays the target and estimated cost, asks for permission, invokes the live agent, and records evidence for every completed scenario.
+`/run` selects runnable scenarios, shows a plan for review, asks for approval, invokes the live agent, and records evidence for every completed scenario. Check your credits with `/plan` first; the run plan is not a fixed spending limit.
 
 > **Use a test target:** Rook does not undo the target agent's actions. Refunds, messages, tickets, deployments, database updates, and file writes are real.
 >
@@ -98,11 +98,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
 
 ## Preflight Checklist
 
-Launch `rook` from your agent workspace and enter the slash commands below inside the interactive TUI. Run `/help run` to inspect the available selectors and phases without starting a test:
-
-<img loading="lazy" src={require('../assets/images/rook/commands/rook-command-run.png').default} alt="Rook 0.1.5 interactive run help showing scenario selectors, lifecycle phases, resume, test mode, and RCA options above the TUI input" width="2200" height="1720" className="doc_img"/>
-
-This is the TUI's command-help view, not an in-progress run or a permission prompt. `/run` invokes the live target after its preflight and permission checks.
+Launch `rook` from your agent workspace and enter the slash commands below inside the interactive TUI. `/help run` lists selectors and phases without starting a test; `/run` invokes the live target after its preflight and permission checks.
 
 Before running a suite, confirm:
 
@@ -207,18 +203,32 @@ Use higher concurrency only when the target isolates sessions and fixtures. Conc
 
 ## Review the Permission Gate
 
-Rook shows the exact target and whether discovery found write-capable tools.
+First review the run plan. This actual [quickstart](/support/docs/agent-assurance-quickstart/) capture selects one scenario, excludes the other, and waits for a decision:
+
+<img loading="lazy" src={require('../assets/images/rook/guides/rook-tui-run-plan.png').default} alt="Rook waiting for approval of a one-scenario run plan, with the excluded scenario and proceed, discard, and change choices" width="2200" height="920" className="doc_img"/>
+
+Use the arrow keys and Enter to choose **proceed**, **discard**, or **change**. Check the active project, agent, and profile in the footer. A selected plan does not prove that the endpoint is safe: inspect the profile and its scripts first. The plan is not a fixed credit quote.
+
+Rook may also ask to approve individual tools or target invocations. Read the exact operation and target in each permission prompt.
 
 The answers mean:
 
 | Answer | Effect |
 |---|---|
 | `yes` | Allow this exact operation once. |
-| `always` | Store a grant for this tool and target in this project. |
+| `always` | Read its scope hint. For a model-chosen operation it lasts for this run without a disk grant; a persistent choice for a human-requested action can store a project grant. |
 | `never` | Store a denial for this tool and target in this project. |
 | `no` | Decline without storing a decision. |
 
 Deny rules override allow rules, and more specific rules win. Permission state is stored globally under a per-project section, so a repository cannot grant itself permission.
+
+## Follow Run Progress
+
+After approval, each active scenario shows its current phase. This is an actual `SC-002` execution against the public triage fixture, captured while Rook was judging the response and recorded hook evidence:
+
+<img loading="lazy" src={require('../assets/images/rook/guides/rook-tui-run-progress.png').default} alt="Rook's interactive run progress with SC-002 in judging, evidence reads, a completion counter, and active project and profile" width="2200" height="1160" className="doc_img"/>
+
+`0/1` means the scenario has not finished; it does not mean it failed. Wait for completion, then enter `/report` to inspect pass, fail, unverifiable, and unjudged counts. See [results and evidence](/support/docs/agent-assurance-results-and-evidence/#print-or-export-a-report) for the completed report from this demo.
 
 ## Run Selected Phases
 

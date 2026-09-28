@@ -144,6 +144,12 @@ Do not issue refunds or change the test order during verification.
 
 This is a template; replace the endpoint, fields, and fixture with a request you have verified.
 
+The screenshot below shows that interaction in the public triage sample: Rook receives a plain-language endpoint and response mapping, starts `author_profile`, and pauses before writing its hook script. The profile is called `local-triage` in this example, rather than `staging`.
+
+<img loading="lazy" src={require('../assets/images/rook/guides/rook-tui-profile-authoring.png').default} alt="Rook interactive profile authoring with the user's HTTP integration description, author_profile progress, and permission to write the local-triage hook script" width="2200" height="1680" className="doc_img"/>
+
+Read each requested action and approve only work needed for the integration. Use **yes** for that action once; **no** declines it. Wait for verification to finish before treating the profile as ready. The screenshot is a permission checkpoint, not a successful probe.
+
 ## Generate From a File or Command
 
 Put the integration material in <code>call.txt</code>, then run from a shell:
@@ -183,6 +189,10 @@ rook profile use staging
 ```
 
 The bare command lists profiles in a shell or opens a picker in the TUI. <code>profile test</code> invokes the target through the existing hooks without asking a model to rewrite them. Check that the returned value is an agent answer, not a job ID or success status.
+
+<img loading="lazy" src={require('../assets/images/rook/guides/rook-tui-profile-verified.png').default} alt="Completed Rook profile verification returning the triage answer and four tool calls, with the saved local-triage profile active in the TUI footer" width="2200" height="920" className="doc_img"/>
+
+The sample's verified profile reports `calls` but not session state or measured usage. Check the capabilities your own target actually returned; do not infer them from a successful HTTP response alone.
 
 Generated files live below:
 

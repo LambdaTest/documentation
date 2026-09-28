@@ -129,7 +129,9 @@ Start <code>/profile add</code> and describe how you reach the agent. You can pa
 
 Rook reads the material, asks only for information it cannot determine, writes reviewable <code>.mjs</code> hook scripts, invokes the target, and corrects the scripts from the actual response. If an existing profile stops working, <code>/profile fix</code> runs it, reads the failure, and repairs it. <code>/profile test</code> performs the cheaper verification call without rewriting anything.
 
-<img loading="lazy" src={require('../assets/images/rook/commands/rook-command-profile.png').default} alt="Rook interactive profile help showing prompt-based add, repair, verification, inspection, and selection commands" width="2200" height="1680" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/rook/guides/rook-tui-profile-authoring.png').default} alt="Actual Rook prompt-based profile authoring with an HTTP request description, generated-hook progress, and a scoped write approval" width="2200" height="1680" className="doc_img"/>
+
+This is the public triage sample being connected in the interactive TUI, not command help. Rook asks how to reach the agent, writes a hook, and pauses for approval before executing sensitive work. Follow [profile authoring and verification](/support/docs/rook-profiles-and-hooks/#add-a-profile-interactively) to inspect the result before a test run.
 
 Profiles store script paths, required environment-variable names, and observed capabilities—not credential values. The generated files remain on disk for review and editing.
 

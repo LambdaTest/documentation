@@ -42,11 +42,11 @@ Neither viewer downloads missing records into your workspace, uploads local chan
 
 ### Open a Viewer From the Interactive TUI
 
-Launch `rook` from your agent workspace, then enter `/ui --local` for on-disk evidence or `/ui` for hosted review. These are alternatives: choose the viewer for the records you want to inspect. `/help ui` explains the options without opening a browser:
+Launch `rook` from your agent workspace, then enter `/ui --local` for on-disk evidence or `/ui` for hosted review. These are alternatives: choose the viewer for the records you want to inspect. This actual TUI capture uses `/ui --local --no-open` to start the local server and print its address without opening a browser:
 
-<img loading="lazy" src={require('../assets/images/rook/commands/rook-command-ui.png').default} alt="Rook 0.1.5 interactive UI help showing local and no-open options with the TUI input and active-project footer" width="2200" height="800" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/rook/guides/rook-tui-local-ui.png').default} alt="Rook's interactive local viewer command printing its loopback URL and confirming that the read-only server is serving" width="2200" height="600" className="doc_img"/>
 
-Keep the TUI session running while using its local viewer. The `rook ui` examples below are the equivalent commands for a regular shell.
+Open the exact URL printed in your session; this capture used port `7758` because the default was already occupied. Keep the TUI session running while using its local viewer. `/help ui` lists options without starting a viewer. The `rook ui` examples below are the equivalent commands for a regular shell.
 
 ## Review On-Disk Evidence in the Local UI {#local-ui}
 

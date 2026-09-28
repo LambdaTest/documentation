@@ -127,9 +127,9 @@ Commands and stored file formats can change. Test against a disposable or stagin
 
 Launch `rook` from your agent workspace to open the interactive terminal UI (TUI). Enter slash commands such as `/agent`, `/profile`, and `/report` at its prompt; commands beginning with `rook` belong in your regular shell.
 
-<img loading="lazy" src={require('../assets/images/rook/commands/rook-reference-home.png').default} alt="Rook 0.1.5 interactive home with the saved CommerceCare demo, slash-command input, and active project, agent, and profile" width="2200" height="1360" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/rook/guides/rook-tui-get-started.png').default} alt="Rook 0.1.5 interactive startup showing Explore, Generate, Run, and Report, with a Projects chooser and keyboard controls" width="2200" height="1320" className="doc_img"/>
 
-This TUI capture shows an existing demo workspace, not a first-launch empty state. The footer identifies the active project, agent, and profile; sign in with `/login` when prompted before starting authenticated work.
+This TUI capture shows a signed-in session before an agent has been explored. Select a project with the arrow keys and Enter; sign in with `/login` first if prompted. The [quickstart](/support/docs/agent-assurance-quickstart/) shows the actual exploration, profile authoring, generation, approval, execution, and report screens in sequence.
 
 ## Agent Assurance and Agent Testing {#conversation-testing-and-autonomous-testing}
 
