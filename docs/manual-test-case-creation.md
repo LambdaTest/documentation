@@ -94,7 +94,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         "https://www.youtube.com/@TestMuAI"
       ]
     },
-    "dateModified": "2026-09-09T21:31:00+05:30"
+    "dateModified": "2026-09-24T12:00:00+05:30"
   }) }}
 />
 
@@ -139,6 +139,10 @@ When you select a test case, you’ll be redirected to the Test Case Details pag
 
 
 <img loading="lazy" src={require('../assets/images/test-manager/test-cases/test-case-summary.png').default} alt=" " className="doc_img"/>
+
+:::tip Reading these details during execution
+Testers can read the same details from a test instance without leaving the test run, on its **Test case details** tab. See [Read the Test Case Details During Execution](/support/docs/test-run-creation-and-management/#read-the-test-case-details-during-execution).
+:::
 
 ***
 

@@ -94,7 +94,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         "https://www.youtube.com/@TestMuAI"
       ]
     },
-    "dateModified": "2026-09-09T19:10:37+05:30"
+    "dateModified": "2026-09-24T12:00:00+05:30"
   }) }}
 />
 
@@ -122,6 +122,8 @@ Each test instance card displays its current version (e.g., **v1**). A **grey** 
 
 When you open a stale test instance, a banner appears at the top indicating how many versions behind the instance is. From here, you can click **View comparison** to review the changes or **Update to vN** to sync.
 
+The instance's **Test case details** tab shows the description, pre-conditions, attachments and fields of the version the instance is still on, so you can read exactly what is being executed before deciding to sync.
+
 <img loading="lazy" src={require('../assets/images/test-manager/sync-test-instance/instance-detail-stale.png').default} alt="Test instance detail showing version behind banner" className="doc_img"/>
 
 ## Comparing Versions
@@ -144,7 +146,7 @@ Click **Update to Version** to confirm, or **Cancel** to keep the current versio
 
 ### After Syncing
 
-Once synced, the test instance is updated with the latest master test case content, including any changes to the title, step descriptions, expected outcomes, and step structure (added, removed, or reordered steps). The instance and all step statuses are reset to **Not Started**, and a success notification confirms the update.
+Once synced, the test instance is updated with the latest master test case content, including any changes to the title, step descriptions, expected outcomes, and step structure (added, removed, or reordered steps). The **Test case details** tab is updated to the new version at the same time, so the description, pre-conditions, attachments and fields match the steps. The instance and all step statuses are reset to **Not Started**, and a success notification confirms the update.
 
 <img loading="lazy" src={require('../assets/images/test-manager/sync-test-instance/instance-detail-updated.png').default} alt="Test instance updated to latest version with Not Started status" className="doc_img"/>
 
