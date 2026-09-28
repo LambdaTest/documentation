@@ -612,7 +612,8 @@ function UrlBar({ endpoint, onTryIt }) {
           >
             {effectiveServers.map((s) => {
               const cleanUrl = s.url.replace(/\/+$/, '');
-              return <option key={cleanUrl} value={cleanUrl}>{cleanUrl}</option>;
+              const label = s.description ? `${cleanUrl} - ${s.description}` : cleanUrl;
+              return <option key={cleanUrl} value={cleanUrl}>{label}</option>;
             })}
           </select>
 
