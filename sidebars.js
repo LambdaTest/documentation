@@ -1456,6 +1456,7 @@ module.exports = {
           { type: "doc", id: "puppeteer-agent-skills" },
           { type: "doc", id: "puppeteer-test-execution" },
           { type: "doc", id: "puppeteer-capabilities" },
+          { type: "doc", id: "local-testing-puppeteer" },
         ],
       },
       {
