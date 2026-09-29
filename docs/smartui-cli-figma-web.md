@@ -365,7 +365,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         "text": "   echo $PROJECT_TOKEN"
       }
     ],
-    "dateModified": "2026-09-09T19:10:37+05:30"
+    "dateModified": "2026-09-29T12:00:00+05:30"
   }) }}
 />
 
@@ -503,7 +503,7 @@ Once, the `designs` file will be created, you will be seeing the sample pre-fill
     ]
   },
   "figma": {
-    "depth": 2, //Figma Tree depth - (Optional), change the value according to the your file structure
+    "depth": 2, //Optional. Remove it to capture only figma_ids; each extra level adds more screenshots and Figma API calls
     "configs": [
       {
         "figma_file_token": "<token>",
@@ -629,7 +629,7 @@ Please read the following table for more information about the configuration fil
 | -------------- | ---------------------------------------------------------------------------------------------------------------------------------- | --------- |
 | figma_file_token       | File token for your required Figma file. You can use multiple figma files in the same configuration.| Mandatory |
 | figma_ids  | Comma separated list of nodes that you care about in the document. If specified, only a subset of the document will be returned corresponding to the nodes listed, their children, and everything between the root node and the listed nodes. | Optional |
-| depth (int)    | Positive integer (>1) representing how deep into the document tree to traverse. For example, setting it to 2 returns Pages and all top level objects on each page. Not setting this parameter returns all nodes | Optional |
+| depth (int)    | Optional. Leave it out to capture only the frames listed in `figma_ids`. If you set it above 1, every node down to that depth in the fetched tree also becomes a screenshot: `2` adds the top-level frames, and each extra level adds every child layer inside them. More screenshots means more Figma API requests; see [Figma API usage and rate limits](#figma-api-usage-and-rate-limits). | Optional |
 
 ### **Step 5:** Uploading the Figma files on SmartUI Cloud using CLI
 
@@ -916,6 +916,36 @@ This ensures that Figma screenshots (e.g., `homepage.png`) match SDK screenshots
 </TabItem>
 </Tabs>
 
+## Figma API usage and rate limits
+
+Every upload calls the Figma REST API with your `FIGMA_TOKEN`, and Figma limits how many calls a token can make. When the limit is reached, Figma answers with HTTP 429 and SmartUI cannot fetch your frames.
+
+### Requests one upload makes
+
+For each entry in `figma.configs`, `upload-figma-web` makes:
+
+| Figma API call | How many |
+|----------------|----------|
+| `GET /v1/files/<file>` | 2 (one to check the token and file before the build is created, one to read the frames) |
+| `GET /v1/images/<file>` | 1 for every 10 frames it renders |
+
+For example, a configuration with two files and 25 frames in each makes 2 x (2 + 3) = 10 Figma API calls. The number of frames rendered is the `figma_ids` you list, plus every node that `depth` adds, so a large `depth` value on a big file multiplies the image calls.
+
+### What happens when Figma returns 429
+
+SmartUI does not wait and retry a rate-limited call, so the upload stops at the first 429. What you see depends on which call hit the limit:
+
+- **While checking the token and file**: the command fails with Figma's reason, for example `Figma API rate limit reached for your token. Your file is on the 'starter' plan tier ... and your token's rate-limit bucket is 'low'`.
+- **While reading frames or rendering images**: the build has already been created, so the task title still reads `Web Figma images uploaded successfully to SmartUI`, but the printed result is `{"error": "Failed to process Web Figma Screenshots"}` and the build has no Figma screenshots. Treat that output as a failed upload.
+
+### How to stay under the limit
+
+- Leave `depth` out, and list only the frames you compare in `figma_ids`.
+- Wait before retrying. Figma's limits reset over minutes, not seconds, so an immediate re-run usually fails again.
+- Avoid re-running the Figma upload in every pipeline run when the designs have not changed.
+- Use a token that belongs to an Editor seat on a paid Figma plan. Figma puts tokens of View or Collab seats, and files on the free Starter plan, in its lowest rate-limit bucket.
+- Check Figma's own [rate limit documentation](https://developers.figma.com/docs/rest-api/rate-limits/) for the current limits of your plan.
+
 ## Troubleshooting
 
 <VerifiedTag value="Verified" />
@@ -949,6 +979,14 @@ Validate Node IDs
 - Figma screenshots don't match web screenshots
 - Comparison shows mismatches even when designs are identical
 **Solutions**:
+
+</TabItem>
+<TabItem value='figma-rate-limit' label='Figma Rate Limit (429)' >
+
+Figma Rate Limit (429)
+
+- The command fails with `Figma API rate limit reached for your token`, or it reports success but prints `{"error": "Failed to process Web Figma Screenshots"}`
+   - Both mean Figma refused a request from your token. See [Figma API usage and rate limits](#figma-api-usage-and-rate-limits) for how many requests an upload makes and how to reduce them
 
 </TabItem>
 <TabItem value='check-screenshot-names' label='Check Screenshot Names' >
