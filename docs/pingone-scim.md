@@ -199,7 +199,7 @@ Sign in to your <BrandName /> account. Don't have an account, [register for free
 
 Head to **Settings** > **Organization Settings** > **Security** > **SCIM Provisioning** tab. Copy the **SCIM Base URL** and **Bearer Token**.
 
-<img loading="lazy" src={require('../assets/images/lambdatest-scim/pingone/10.png').default} alt="Copy SCIM Base URL and Bearer Token from LambdaTest" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/lambdatest-scim/pingone/10.png').default} alt="Copy SCIM Base URL and Bearer Token from TestMu AI" className="doc_img"/>
 
 ### Step 2: Create a SAML Application in PingOne (if not already done)
 
@@ -337,7 +337,7 @@ In <BrandName />, go to **Settings** > **Organization Settings** > **SCIM Group 
 
 Click **Add Mapping Rule** to create a rule that determines how incoming groups are mapped.
 
-<img loading="lazy" src={require('../assets/images/lambdatest-scim/pingone/1.png').default} alt="Mapping rules tab in LambdaTest" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/lambdatest-scim/pingone/1.png').default} alt="Mapping rules tab in TestMu AI" className="doc_img"/>
 
 Configure the rule:
 - **Pattern**: match group names by prefix, regex, or match all
