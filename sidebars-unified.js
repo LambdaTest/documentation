@@ -81,10 +81,7 @@ const docsSidebar = [
     type: 'category', label: 'Real Device', collapsible: true, collapsed: true,
     items: s.RealDeviceSidebar.slice(1).flat(),
   },
-  {
-    type: 'category', label: 'Test Manager', collapsible: true, collapsed: true,
-    items: items(s.TestManagerSidebar),
-  },
+  { type: 'link', label: 'Test Manager', href: '/docs/test-manager/' },
   {
     type: 'category', label: 'TestMu AI MCP Server', collapsible: true, collapsed: true,
     items: items(s.LTMCPServerSidebar),
@@ -122,6 +119,18 @@ const docsSidebar = [
   },
 ];
 
+// Dedicated sidebar for Test Manager. Because the Test Manager entry in
+// docsSidebar is now a link (above), these docs live ONLY here — so Docusaurus
+// displays this dedicated sidebar whenever a reader is inside Test Manager.
+const backToDocs = {
+  type: 'link',
+  label: '← All Docs',
+  href: '/docs/',
+  customProps: { className: 'back-to-main-menu' },
+};
+const TestManagerSidebar = [backToDocs, ...items(s.TestManagerSidebar)];
+
 module.exports = {
   docsSidebar,
+  TestManagerSidebar,
 };
