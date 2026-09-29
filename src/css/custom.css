@@ -218,6 +218,15 @@ body {
   position: relative;
 }
 
+/* Bold sidebar items — scoped to Test Manager only via the `menu-bold` class,
+   which is applied exclusively to TestManagerSidebar items (see sidebars.js).
+   Covers standalone docs AND collapsible category labels, so no global
+   sidebar rule is needed and other product sidebars are unaffected. */
+.menu-bold > .menu__link,
+.menu-bold > .menu__list-item-collapsible > .menu__link {
+  font-weight: 600;
+}
+
 .ltf_demo {
   background-color: #a0d468;
   padding: 10px 10px 5px;

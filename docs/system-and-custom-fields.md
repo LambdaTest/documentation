@@ -2,7 +2,7 @@
 id: system-and-custom-fields
 title: System and Custom Fields
 hide_title: true
-sidebar_label: System and Custom Fields
+sidebar_label: Settings (System & Custom Fields)
 description: Learn about TestMu AI's system and custom Fields feature for test project organization. Explore System Fields and create Custom Fields to enhance your testing workflows.
 keywords:
   - test manager
@@ -96,7 +96,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         "https://www.youtube.com/@TestMuAI"
       ]
     },
-    "dateModified": "2026-09-09T19:10:37+05:30"
+    "dateModified": "2026-09-28T12:00:00+05:30"
   }) }}
 />
 
@@ -106,11 +106,11 @@ Explore the structured organization of your test projects through the use of Fie
 
 To access the System & Custom Fields settings, click on **Settings** in the top right hand side in the Project's dashboard.
 
-<img loading="lazy" src={require('../assets/images/mobile-app-testing/system-and-customs-step-one.webp').default} alt="Real "  className="doc_img" width="1366" height="629"/>
+<img loading="lazy" src={require('../assets/images/mobile-app-testing/system-and-customs-step-one.webp').default} alt="Settings entry point on the Project dashboard"  className="doc_img" width="1366" height="629"/>
 
 You can manage your **System** and **Custom Fields** in this Fields page.
 
-## System Fields
+### System Fields
 Are default fields present in the Test Manager. These fields help organize and track your test cases, test runs or instances. They can be seamlessly integrated into your test management process and customized by adding values. Test Cases & Test Runs have their separate System Fields. 
 
 - Test Cases have these pre defined fields: **Priority**, **Status**, and **Type**. 
@@ -118,34 +118,38 @@ Are default fields present in the Test Manager. These fields help organize and t
 
 To manage these fields, navigate to the System Fields tab, where you'll see dedicated sections for both Test Case and Test Runs fields.
 
-<img loading="lazy" src={require('../assets/images/mobile-app-testing/system-fields.png').default} alt="Real "  className="doc_img" width="1366" height="629"/>
+<img loading="lazy" src={require('../assets/images/mobile-app-testing/system-fields.png').default} alt="System Fields tab with Test Case and Test Run sections"  className="doc_img" width="1366" height="629"/>
 
 These System Fields can have Custom Values which can be added by simply selecting any field and clicking on **Add Value**.
 
-<img loading="lazy" src={require('../assets/images/mobile-app-testing/edit-system-fields.png').default} alt="Real "  className="doc_img" width="1366" height="629"/>
+<img loading="lazy" src={require('../assets/images/mobile-app-testing/edit-system-fields.png').default} alt="Adding a custom value to a system field"  className="doc_img" width="1366" height="629"/>
 
 :::tip
  Every new Status value of Test Runs will have a unique random color defined to it on creation. 
 :::
 
-## Custom Fields 
+Custom Status values of Test Runs also take part in deriving the status of a manual test instance from its step results. Once every step of an instance is executed, a step carrying a custom status makes that the status of the instance, and it is never resolved into **Passed**. See [How the Test Instance Status Is Derived](/support/docs/test-run-creation-and-management/#how-the-test-instance-status-is-derived).
+
+:::warning Deleting a Status value changes recorded results
+Deleting a Status value of Test Runs, or unlinking a project from it, resets every test instance holding that status to **Not Started** and leaves the steps that carried it unmarked. This runs in the background and lands shortly after the delete completes, so refresh the test run if you do not see it straight away. Renaming a value instead applies the new name wherever it is in use, on instances and on steps, and resets nothing.
+:::
+
+### Custom Fields 
 Allow you to store additional information beyond what System Fields offer. To create a new field, enter the required details and choose the appropriate data type from the **Type** function. Available types include String, Textarea, Number, Dropdown (Single Select), Dropdown (Multi Select), Boolean (Checkbox), Date, User, and URL.
 
-<img loading="lazy" src={require('../assets/images/mobile-app-testing/create-new-fields.webp').default} alt="Real "  className="doc_img" width="1366" height="629"/>
+<img loading="lazy" src={require('../assets/images/mobile-app-testing/create-new-fields.webp').default} alt="Creating a new custom field and choosing its type"  className="doc_img" width="1366" height="629"/>
 
 For Dropdown types (Single Select and Multi Select), you also have the option to add values.
 
-<img loading="lazy" src={require('../assets/images/mobile-app-testing/dropdown-types.webp').default} alt="Real "  className="doc_img" width="1366" height="629"/>
+<img loading="lazy" src={require('../assets/images/mobile-app-testing/dropdown-types.webp').default} alt="Adding values to a dropdown custom field"  className="doc_img" width="1366" height="629"/>
 
 Enter the name, placeholder, mark the field, apply it to all future projects if required and click create.
 
-<img loading="lazy" src={require('../assets/images/mobile-app-testing/custom-fields.webp').default} alt="Real "  className="doc_img" width="1366" height="629"/>
+<img loading="lazy" src={require('../assets/images/mobile-app-testing/custom-fields.webp').default} alt="Custom field name, placeholder, and options"  className="doc_img" width="1366" height="629"/>
 
 You can also link a single or multiple projects of your choice to the custom fields and click on **Save changes**.
 
-<img loading="lazy" src={require('../assets/images/mobile-app-testing/link-projects.webp').default} alt="Real "  className="doc_img" width="1366" height="629"/>
-
-
+<img loading="lazy" src={require('../assets/images/mobile-app-testing/link-projects.webp').default} alt="Linking projects to a custom field"  className="doc_img" width="1366" height="629"/>
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">

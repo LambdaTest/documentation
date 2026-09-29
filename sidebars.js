@@ -2476,99 +2476,94 @@ module.exports = {
       label: 'Back',
       href: '/docs/',
       customProps: {
-        className: 'back-to-main-menu'
+        className: "back-to-main-menu",
       },
     },
     [
       {
-        type: "doc",
-        label: "Introduction to Test Manager",
-        id: "test-manager",
-      },
-      "manual-to-automated-test-conversion",
-      {
         type: "category",
-        collapsed: true,
-        label: "Projects",
-        items: ["create-projects", "system-and-custom-fields"],
-      },
-      {
-        type: "category",
-        collapsed: true,
-        label: "Test Cases",
+        collapsed: false,
+        label: "Get Started",
+        className: "menu-bold",
         items: [
-          {
-            type: "category",
-            collapsed: true,
-            label: "Import Test Cases",
-            items: ["csv-import", "one-click-migration-from-testrail", "one-click-migration-from-xray", "one-click-migration-from-zephyr-scale", "migrate-from-zephyr-enterprise", "one-click-migration-from-qtest", "one-click-migration-from-katalon"],
-          },
-          "generate-test-cases-with-ai",
-          // "create-manage-test-cases",
-          "manual-test-case-creation",
-          "test-case-versioning",
-          "create-modules",
-          "modules-in-manual-testcases",
-          "copy-and-move-support-for-test-cases",
-          "share-test-cases-across-projects",
-          "test-case-deduplication",
-          "test-case-archive",
-          "update-fields",
-          "export-test-cases",
-          {
-            type: "category",
-            collapsed: true,
-            label: "Linking Automated Test Cases",
-            link: {
-              type: "doc",
-              id: "automated-test-cases-with-ai",
-            },
-            items: [
-              "automated-test-cases-linked-using-dashboard",
-              "automated-test-cases-linked-using-capability",
-            ],
-          },
+          { type: "doc", id: "test-manager" },
+          { type: "doc", id: "create-projects", label: "Create Test Cases" },
         ],
       },
       {
         type: "category",
         collapsed: true,
+        label: "Import Test Cases",
+        className: "menu-bold",
+        items: [
+          "csv-import",
+          "one-click-migration-from-testrail",
+          "one-click-migration-from-xray",
+          "one-click-migration-from-zephyr-scale",
+          "migrate-from-zephyr-enterprise",
+          "one-click-migration-from-qtest",
+        ],
+      },
+      {
+        type: "category",
+        collapsed: true,
+        label: "Manage Test Cases",
+        className: "menu-bold",
+        items: [
+          { type: "doc", id: "manual-test-case-creation", label: "Create Test Cases Manually" },
+          "test-case-versioning",
+          "copy-and-move-support-for-test-cases",
+          "share-test-cases-across-projects",
+          "test-case-archive",
+          { type: "doc", id: "update-fields", label: "Bulk Update Test Case Fields" },
+          "export-test-cases",
+          { type: "doc", id: "automated-test-cases-with-ai", label: "Link Automated Test Cases" },
+        ],
+      },
+      {
+        type: "category",
+        collapsed: true,
+        label: "AI Agents",
+        className: "menu-bold",
+        customProps: { icon: 'ai' },
+        items: [
+          { type: "doc", id: "generate-test-cases-with-ai", label: "Create Test Cases with AI" },
+          "test-case-deduplication",
+        ],
+      },
+      { type: "doc", id: "system-and-custom-fields", className: "menu-bold" },
+      { type: "doc", id: "create-modules", className: "menu-bold" },
+      {
+        type: "category",
+        collapsed: true,
         label: "Test Runs",
+        className: "menu-bold",
         items: [
           "test-run-creation-and-management",
           "test-run-bulk-actions",
           "sync-test-instance",
           "test-instance-audit-logs",
-          "track-issues-in-test-runs"
+          "track-issues-in-test-runs",
         ],
       },
-      {
-        type: "doc",
-        label: "Milestones",
-        id: "milestone-creation-and-management",
-      },
+      { type: "doc", id: "milestone-creation-and-management", className: "menu-bold" },
+      { type: "doc", id: "insights-dashboard", className: "menu-bold" },
       {
         type: "category",
         collapsed: true,
-        label: "Insights & Reports",
-        items: [
-          "insights-dashboard",
-          "tms-reports"
-        ],
-      },
-      {
-        type: "category",
-        collapsed: true,
-        label: "Issue Tracker Integration",
+        label: "Integrations",
+        className: "menu-bold",
         items: [
           "link-jira-issues-with-test-manager",
           "lambdatest-jira-app",
           "link-ado-issues-with-test-manager",
           "lambdatest-azure-devops-app",
           "link-linear-issues-with-test-manager",
+         
+          
         ],
       },
-    ]
+    ],
   ],
 
   RealDeviceSidebar: [
