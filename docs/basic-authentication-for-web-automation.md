@@ -118,7 +118,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
 
 ## Introduction
 ---
-Basic Authentication is a method for an HTTP user agent to provide a user name and password when making a request. In basic HTTP authentication, a request contains a header field in the form of `Authorization: Basic <credentials>`, where credentials is the **Base64** encoding of ID and password joined by a single colon `:`.
+Basic Authentication is a method for an HTTP user agent to provide a username and password when making a request. In basic HTTP authentication, a request contains a header field in the form of `Authorization: Basic <credentials>`, where credentials is the **Base64** encoding of ID and password joined by a single colon `:`.
 
 To provide support for Basic Authentication in Safari during Web Automation, we have introduced a new lambda hook in our `iOS` Real Device (RD) web sessions.
 
@@ -130,7 +130,15 @@ To provide support for Basic Authentication in Safari during Web Automation, we 
 
 ## How to Use
 ---
+
+### With Hooks (for Selenium)
+
 Here is an example of how to use the Basic Authentication hook in Python:
+
+:::note
+* It is important to note that all three parameters (username, password, URL) are mandatory and must be passed to the script.
+* The HTTP Basic Auth hook is not supported for Playwright iOS. To handle Basic Authentication in Playwright, follow these [steps](https://www.testmuai.com/support/docs/basic-authentication-for-web-automation/#for playwright).
+:::
 
 <VerifiedTag value="Verified" />
 
@@ -155,7 +163,7 @@ echo -n 'username:password' | base64
 
 For example, `username:password` becomes `dXNlcm5hbWU...`
 
-**Step 2:** To enable Basic authentication, add a customHeaders capability to your Playwright capabilities and set the Authorization header to `Basic <encoded-value>`.
+**Step 2:** To enable Basic authentication, add a customHeaders capability to your Playwright capabilities and set the Authorization header to Basic <encoded-value>.
 
 ```json
 "customHeaders": {
