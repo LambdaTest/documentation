@@ -6,7 +6,7 @@ Bitbucket Pipelines is a CI/CD service that is built into Bitbucket. It enables 
 
 This document will show you how to integrate Bitbucket Pipelines with HyperExecute to greatly shorten your test cycles
 
-### Prerequisites:
+## Prerequisites:
 -	You need to have a Bitbucket Cloud account.
 -	Your workspace must have at least one repository.
 

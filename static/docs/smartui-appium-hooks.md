@@ -406,7 +406,7 @@ echo $LT_USERNAME
 echo $LT_ACCESS_KEY
 ```
 
-4. Check network connectivity to LambdaTest
+4. Check network connectivity to TestMu AI
 
 **Issue: "Project Not Found" Error**
 

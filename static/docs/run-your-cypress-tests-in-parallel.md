@@ -4,7 +4,7 @@
 
 If you want to run your tests parallelly on the TestMu AI platform, you can do that using either of the following two ways:
 
-### 1. Run your Cypress tests Parallelly using the CLI
+## 1. Run your Cypress tests Parallelly using the CLI
 
 To perform Cypress testing parallelly using the CLI, you need to use the "`--parallels`" option while running your tests.
 
@@ -20,7 +20,7 @@ For example, if you want to run your Cypress tests on 5 parallel sessions, you c
 lambdatest-cypress run --parallels 5
 ```
 
-### 2. Run your Cypress tests Parallelly using the lambdatest-configuration.json file
+## 2. Run your Cypress tests Parallelly using the lambdatest-configuration.json file
 
 To run your Cypress testing parallelly, you can also use the **lambdatest-configuration.json** file, using the '**parallels**' key.
 

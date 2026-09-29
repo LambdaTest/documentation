@@ -4,20 +4,20 @@
 
 Before proceeding you need to navigate to SSO Section in the **Security** tab of **Organization Settings**.
 
-### Reconfigure SSO Connection
+## Reconfigure SSO Connection
 1. For Updating the SSO connection, click on **Reconfigure**.
 
 2. Update the  fields you need to change  and click on **Update Connection**.
 
-### Enforce SSO Login (Forcing Users to Log in with SSO Only)
+## Enforce SSO Login (Forcing Users to Log in with SSO Only)
 1. For Enforcing SSO login, click on **Enforce SSO Login** Toggle.
 
-### Exempt Users From SSO Login
+## Exempt Users From SSO Login
 1. For Exempting users from SSO login (Allows Users to Log in with TestMu AI Credentials and Social Auth), click on **SSO User Settings**.
 
 2. Check the toggle for the users you want to exempt from SSO login
 
-### Assign a Group to SSO-Provisioned Users
+## Assign a Group to SSO-Provisioned Users
 By default, users signing in through SSO for the first time (Just-in-Time provisioning) are added to your organization's **Default group**. If your organization uses **Groups**, you can assign these users to a specific group instead — for example, to apply that group's concurrency limits to everyone who signs in through SSO. The group currently used for SSO provisioning is marked with an **SSO group** badge on the **Groups** page.
 
 You can set it from either place:

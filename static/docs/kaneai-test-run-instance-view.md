@@ -7,6 +7,11 @@ This feature is currently being rolled out in phases and may not be available on
 
 The Test Run Instance view provides a step-level execution replay that maps each executed action back to the original steps authored in KaneAI. Instead of reviewing raw automation logs, you can walk through the exact sequence of steps - with screenshots, command details, and failure context - in a single unified interface.
 
+A test run is reported in one of two ways, depending on the **Mode** it runs with on HyperExecute:
+
+- **Classic Reporting** - The view described in the sections from [Test Run Summary Dashboard](#test-run-summary-dashboard) to [Share a Test Run Instance](#share-a-test-run-instance).
+- **Evidence Reporting** - A sealed evidence pack for the run, with a report, a step-by-step replay of each instance, issues with root cause analysis, and coverage. See [Evidence Reporting](#evidence-reporting).
+
 ## Test Run Summary Dashboard
 
 When you open a test run, the summary dashboard gives you an at-a-glance view of the entire run.
@@ -131,14 +136,106 @@ The share dialog provides the following options:
 
 Anyone with an active shared link can view the test run instance (including the steps, screenshots, and execution details) until the link expires.
 
+## Evidence Reporting
+
+When a test run executes with the **Evidence Reporting** mode, the run is sealed into an evidence pack: the steps, screenshots, logs, verdict, and AI failure analysis for every test instance. Opening the run shows the Evidence Report instead of the Classic view.
+
+**Which runs use Evidence Reporting**
+Evidence Reporting is available when every test case in the run is authored with **New Experience** and the run executes on **Chrome**. See [Evidence Reporting](/support/docs/kaneai-hyperexecute-test-run-execution/#evidence-reporting) to set up and start such a run.
+
+### Open a Run's Evidence
+
+Go to **Test Manager**, select your project, and open **Test Runs**. Click a run that was executed with Evidence Reporting.
+
+The run's evidence pack opens in your browser. The loading screen shows each stage as it completes: opening the evidence pack, preparing your evidence, and reading the failure analysis. Click **Abort** to stop loading.
+
+The evidence pack is sealed when the run ends, and it opens in your browser without being uploaded. To keep a copy, click **.evidence** in the top bar to download the pack. Anyone with the file can open it.
+
+The Evidence Report has four tabs: **Report**, **Test Instances**, **Issues**, and **Coverage**.
+
+### Report
+
+The **Report** tab summarizes the whole run.
+
+- **Run header** - The run name with its execution time, the run status (for example, **Passed**), and when the run was recorded.
+- **Summary** - The pass rate, the total duration, and the number of tests that passed, failed, or ended with another status.
+- **Flaky**, **Always Failing**, **New Failures**, and **Anomalies** - Counts of tests that need a closer look.
+- **History** and **Stability** - Results and stability across runs of this test run.
+- **Failure Categories** - Failures grouped by category.
+- **Total Retries** and **Tests Auto Healed** - How many retries ran, and how many tests [Auto-Heal](/support/docs/kaneai-auto-heal/) recovered.
+
+Scroll down for **Visual Differences**, **Accessibility Issues**, and the **Browsers** and **OS** the run covered.
+
+### Test Instances
+
+The **Test Instances** tab lists every instance in the run with its status, test case ID, operating system, browser version, duration, and retries. Use **Search by name or ID** to find an instance, then click it to open its detail view.
+
+### Test Instance Detail
+
+The instance view replays the execution step by step.
+
+The header shows the status, **Duration**, **Configurations** (browser, OS, and resolution), **Test Case ID**, **Version**, **Executed by**, **Labels**, and **Retries**. On the right, you can:
+
+- **Attempt** - Choose an attempt to review when the instance was retried, for example **Attempt 2 : Passed**.
+- **View on HyperExecute** - Open the job on HyperExecute.
+- Copy a link to the instance, switch to full screen, or open the execution logs.
+
+The **Steps** panel lists the steps you authored. Expand a step to see each action KaneAI performed to complete it, with its duration. Click **Autoplay** to walk through the steps in order while the screenshot updates.
+
+The center panel shows the page at the selected step, with its URL. The bar below the screenshot marks each action, so you can jump to any point in the run. Click **Hide Cursor** to hide the cursor in the screenshots.
+
+#### Test Execution Logs
+
+Click the logs icon in the header to open **Test Execution Logs**.
+
+- **Logs** - Switch between **Console** output from the browser and **Terminal** output from the test run.
+- **Network** - Every request the page made, with its status, method, domain, type, size, time, and a waterfall. Filter by **All**, **JS**, **CSS**, **Img**, **Media**, or **Doc**, search by URL, turn on **Errors Only**, or download the log.
+
+### Coverage
+
+The **Coverage** tab shows the business use cases, acceptance criteria, and verification rollup that an evidence pack carries.
+
+Coverage is not yet available for KaneAI test runs. For these runs, the **Coverage** tab shows **No coverage in this evidence pack**.
+
+### Debug an Unsuccessful Run
+
+When a test in the run does not pass, the Evidence Report points you to the cause.
+
+#### Need Your Attention
+
+The **Report** tab of an unsuccessful run shows a **Need your attention** panel. It lists each failure with its priority and a one-line cause, along with counts of failed, triaged, and untriaged failures. Click **View RCA** to open the root cause analysis.
+
+In this example, the run shows **Broken**. The test could not click a control it had recorded, so the failure was triaged as an automation bug rather than a failed check. It counts under **Others** in the summary.
+
+#### Issues
+
+The **Issues** tab lists every issue found in the evidence pack. Each issue shows its summary, the test and step where it happened, who triaged it, and a category such as **Automation bug**. Use **Search issue** to find an issue, and click it to open its root cause analysis.
+
+#### Root Cause Analysis
+
+The **RCA** panel explains the failure.
+
+- **Category** and **Confidence** - The type of failure, for example **Automation bug**, and how confident the analysis is.
+- **Steps to Reproduce** - The steps that led to the failure. The failing step is marked **Root Cause** with an explanation, and the steps affected by it are marked **Effect**. Open the **Console**, **Network**, **Trajectory**, or **Media** tabs on a step, where available, to see what was captured at that point. Click **View all steps** to open the full instance.
+- **How to fix it** - A suggested fix. Click **Copy fix prompt** to copy it.
+- Click **Copy RCA** to copy the whole analysis, and use **Was this helpful?** to rate it.
+
+#### Go to the Failed Step
+
+Open the failed instance from the **Test Instances** tab.
+
+A banner at the top of the instance explains the failure. Click **View failed step** to jump to the step that failed, or **View RCA** to open the root cause analysis. The failed action is marked in red, and actions after it that did not run show a gray marker.
+
 ## Limitations
 
 - **Mobile Browser not supported**: The enhanced Test Run Instance view is currently not supported for Mobile Browser test executions.
+- **Coverage in Evidence Reporting**: Coverage is not yet available for KaneAI test runs executed with Evidence Reporting.
 - **Applies to newly generated code only**: This view is available only for test cases whose code was generated after the feature was enabled. For older test cases, the previous automation details page will continue to be shown.
 
 ## Related Guides
 
 - [Execute Test Runs on HyperExecute](/support/docs/kaneai-hyperexecute-test-run-execution/) - Create and execute test runs
+- [Evidence Reporting](/support/docs/kaneai-hyperexecute-test-run-execution/#evidence-reporting) - Run a test run with Evidence Reporting
 - [Sequential Test Runs](/support/docs/kaneai-sequential-test-runs/) - Run dependent test cases in order
 - [Test Run Configurations](/support/docs/test-runs-configurations/) - Manage browser and device configurations
 - [Scheduled Test Runs](/support/docs/kaneai-scheduled-test-runs/) - Automate test run scheduling

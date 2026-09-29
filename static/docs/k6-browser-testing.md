@@ -134,8 +134,4 @@ K6_BROWSER_ENABLED=true k6 run k6_sample.js
 
 ## View your k6 test results
 
-The TestMu AI Automation Dashboard is where you can see the results of your k6 tests after running them on the TestMu AI platform.
-
-The below screenshot of TestMu AI Automation Dashboard shows the k6 build on the left and the build sessions associated with the selected build on the right.
-
-On clicking the session name of the respective test, you can view the details of k6 test session that you just executed. For example, the below screenshot shows a test execution details of k6 test like Test Name, Test ID, selected configurations, test logs, basic info, input config, and test session video.
+The TestMu AI Automation Dashboard is where you can see the results of your k6 tests after running them on the TestMu AI platform. On clicking the session name of the respective test, you can view the test execution details such as Test Name, Test ID, selected configurations, test logs, basic info, input config, and test session video.

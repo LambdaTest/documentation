@@ -4,6 +4,14 @@
 
 Rook's internal roles can call tools while discovering, generating, invoking, and verifying. Every call must be covered by a rule or approved through an interactive prompt.
 
+## Read an Interactive Permission Prompt
+
+In the TUI, inspect the tool, exact file or target, and requested operation before approving. This real prompt occurs while Rook authors the quickstart's `local-triage` profile; it asks to write that profile's hook script, not to run a test suite:
+
+Use the arrow keys to select and Enter to answer. **yes** approves that action once; **no** declines it. Read the hint beside **always**: for a model-chosen action such as the one pictured, it allows the matching operation for this run without writing a disk grant. A persistent choice on a human-requested action has a different scope. **never** can save a denial. Do not choose a broad option merely to clear the prompt.
+
+After approval, watch the next operation and its result. A permission prompt or a generated file is not proof that the target was reached or that a scenario passed.
+
 ## Rule Grammar
 
 Rules identify the tool and the allowed subject:
@@ -102,7 +110,7 @@ Read-only viewing does not make captured data safe to share. Inspect requests, r
 
 ### Local UI: Review Observed Effects {#local-ui-example}
 
-Open **agent → run → scenario** to inspect what the evidence says happened. The sample criterion quotes an observed set_severity call. This is evidence from a completed test, not a UI for granting permission or undoing the target's write.
+Open **agent → Runs → run → scenario** to inspect what the evidence says happened. This CommerceCare result distinguishes a failed response requirement from two unverifiable tool/state assertions. Missing evidence does not prove that an action was blocked or never happened. Neither viewer grants permission or undoes the target's writes. See the [local UI rollout note](/support/docs/rook-web-ui/#earlier-local-ui) if your screen differs.
 
 ### Hosted Web UI: Identify Write-Capable Tools {#hosted-ui-example}
 

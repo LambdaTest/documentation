@@ -72,7 +72,7 @@ Unlike the standard Concurrency Trends widgets, Custom Concurrency Trends allows
 
 ### How to Create a Dashboard with Custom Concurrency Trends
 
-**Step 1:** Log in to your LambdaTest account and navigate to **Insights** from the left sidebar.
+**Step 1:** Log in to your TestMu AI account and navigate to **Insights** from the left sidebar.
 
 **Step 2:** Click on the **+ Create New** button and select **Pre-built Widgets**.
 

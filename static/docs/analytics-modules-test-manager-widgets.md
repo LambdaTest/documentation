@@ -27,16 +27,23 @@ This widget gives you a quick snapshot of your test case inventory and the balan
 
 ## Test Cases Trend
 
-The Test Cases Trend widget tracks the number of test cases created over a period of time, helping you visualize how your test suite is growing.
+The Test Cases Trend widget tracks the number of test cases created over a period of time, split by **Automation Status**, helping you visualize how your test suite is growing and how much of it is automated.
 
 ### How it works?
 
-* Displays a trend line of test cases created over the selected time period.
-* Use this to monitor the pace of test case creation across your team.
+* Test cases created in the selected period are grouped into time buckets and stacked into **Automated** and **Manual**, using the same **Automation Status** classification as the Test Cases Summary widget above.
+* Click the **three-dot menu** on the widget and select **Configure Widget**, then use the **View** group to switch between three presentations:
+  * **Stacked Bar** (default) - one bar per interval, segmented by Automation Status.
+  * **Stacked Area** - the same series drawn as areas, to emphasise the overall shape.
+  * **Table** - a per-project breakdown, with the counts sortable by column.
+* A dashed line plots the equivalent total for the preceding period of the same length, so you can compare the current window against the one before it. The legend shows the dates that period covers. The line appears only when the preceding period contains at least two complete intervals, so a short date range viewed at a coarse interval - for example a single month of data viewed monthly - may not have enough history to draw it.
+* Change the interval (Daily, Weekly, Monthly) to re-bucket the trend.
+
+In the **Table** view, each row is a project, with **Automated**, **Manual** and **All** counts. Sort by any of the count columns to rank projects, and select a count to drill down into the test cases behind it. The table lists up to 50 projects, ordered by the number of test cases created - if your organization has more, the widget states how many of the total are being shown.
 
 ### Value Proposition
 
-This widget helps you track how your test suite evolves over time, identify periods of high or low activity, and ensure consistent test coverage as your product grows.
+This widget helps you track how your test suite evolves over time, identify periods of high or low activity, and see how much of your growth is automated versus manual. The table view turns the same data into a per-project comparison, so you can see which projects are contributing coverage and which are lagging.
 
 ## Test Runs Summary
 
@@ -165,7 +172,7 @@ The Tester Assignment widget displays a horizontal stacked bar chart with one ba
 
 ### How it works?
 
-* Each bar represents a tester, and its length reflects the total number of test run instances assigned to them.
+* Each bar represents a tester, identified by their **Display Name**, and its length reflects the total number of test run instances assigned to them.
 * Each bar is broken down into stacked segments by test instance status: **Not Started**, **Passed**, **Failed**, **Skipped**, as well as any **custom statuses** created for your manual test runs.
 * Click any segment to drill down into the underlying list of test run instances for that tester and status.
 * Apply filters from the three-dot menu to scope the widget to a specific test run, phase, or stage.

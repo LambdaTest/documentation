@@ -53,7 +53,8 @@ Empty fields are shown as `(none)`. The `chrome` path is empty by default, in wh
 | `folder_name` | string \| null | `null` | Display name of the selected folder | Set by `kane-cli config folder` |
 | `mode` | `"action"` \| `"testing"` | `"testing"` | Agent behaviour on auth walls, blocked pages, or error pages. | `kane-cli config set-mode ` |
 | `target` | `"desktop"` \| `"emulator"` \| `"simulator"` | `"desktop"` | Default run target. `desktop` runs the Chrome browser; `emulator` and `simulator` run against a virtual Android or iOS device (macOS Apple Silicon only). See [Mobile Target](#mobile-target). | `kane-cli config set-target ` |
-| `device` | string \| null | `null` | Default mobile device, by name, serial, `ip:port`, or udid. When empty, a TTY run prompts once and saves the choice; a non-interactive run needs `--device` or this key set. Ignored on the `desktop` target. | `kane-cli config set-device ` |
+| `device_name` | string \| null | `null` | Default mobile device, by the name `kane-cli devices list --target ` prints. Pairs with `os_version`. When empty, a TTY run prompts once and saves the choice; a non-interactive run needs `--device-name` or this key set. Ignored on the `desktop` target. | `kane-cli config set-device-name ` |
+| `os_version` | string \| null | `null` | OS version of the default mobile device (`14`, `17.5`). Required alongside `device_name`. | `kane-cli config set-os-version ` |
 | `app` | string \| null | `null` | Default app under test for mobile runs: a build path (`.apk` or `.zip`) or an uploaded app id. Ignored on the `desktop` target. | `kane-cli config set-app ` |
 | `bug_detection` | `"off"` \| `"stop"` \| `"continue"` | `"off"` | Whether the agent flags suspected product bugs while authoring. See [Bug detection](#bug-detection). | `kane-cli config set-bug-detection `, or per-run `--bug-detection` |
 | `code_export.enabled` | boolean | `false` | Generate code export after upload completes. | TUI menu, or `--code-export` flag |
@@ -150,19 +151,20 @@ You can override the saved mode for a single run with `--mode ` on `kane-cli run
 
 ### Mobile Target
 
-On macOS Apple Silicon, Kane CLI can run against a virtual mobile device instead of the desktop browser. Three settings persist the default target and how to reach it. They are a **separate axis** from `mode` above: `mode` tunes agent behaviour, while these choose *what device* a run drives.
+On macOS Apple Silicon, Kane CLI can run against a virtual mobile device on this machine instead of the desktop browser. Four settings persist the default target and how to reach it. They are a **separate axis** from `mode` above: `mode` tunes agent behaviour, while these choose *what device* a run drives.
 
 ```bash
-kane-cli config set-target emulator          # desktop | emulator | simulator
-kane-cli config set-device pixel-7           # name, serial, ip:port, or udid
+kane-cli config set-target emulator                # desktop | emulator | simulator
+kane-cli config set-device-name "Pixel 7 API 35"   # as `kane-cli devices list --target emulator` prints it
+kane-cli config set-os-version 15
 kane-cli config set-app ./builds/app-debug.apk
 ```
 
 - **`target`**: `desktop`, the default, runs Chrome. `emulator` runs a virtual Android device and `simulator` a virtual iOS device. Existing web runs are unaffected.
-- **`device`**: the device a mobile run selects, by name, serial, `ip:port`, or udid. When unset, a TTY run prompts once and saves the choice. Non-interactive runs need it set, either here or with `--device`.
+- **`device_name`** and **`os_version`**: the device a mobile run selects, in the vocabulary of `kane-cli devices list --target `. A name needs a version, and a version on its own matches any device running it. When unset, a TTY run prompts once and saves the choice. Non-interactive runs need them set, either here or with `--device-name` and `--os-version`.
 - **`app`**: the app under test for a mobile run, a build path (emulator `.apk`, simulator `.zip`) or an uploaded app id, `APP` followed by six or more digits. Required for every mobile run. On the `desktop` target, `device` and `app` are ignored.
 
-A run reads these as its defaults. Override any of them for a single run with `--target`, `--device`, and `--app`. Setup and the full list of accepted app formats are in [Mobile Testing](/support/docs/kane-cli-mobile/).
+A run reads these as its defaults. Override any of them for a single run with `--target`, `--device-name`, `--os-version`, and `--app`. Setup and the full list of accepted app formats are in [Mobile Testing](/support/docs/kane-cli-mobile/). These defaults describe devices on this machine. A [`testrun run --remote`](/support/docs/kane-cli-remote-execution/) run names its device from the grid catalog with the same two flags.
 
 ### Bug detection
 
@@ -240,6 +242,26 @@ A handful of environment variables control how kane-cli locates and launches Chr
 | `KANE_CLI_CDP_RETRIES` | Extra Chrome launch attempts after the first when CDP readiness fails. Default `2` (so up to three attempts total); set `0` for a single attempt. Each retry uses a short backoff. |
 
 The CDP timeout and retry settings only affect transient launch failures (Chrome started but did not become reachable in time) — a missing or invalid binary fails immediately without retrying. See [Chrome failed to launch](/support/docs/kane-cli-troubleshooting/#chrome-failed-to-launch) for the matching troubleshooting steps.
+
+### Context sync environment variables
+
+[Sharing the context graph](/support/docs/kane-cli-assurance-sharing/) reads a few environment variables, never `tui-config.json`.
+
+| Variable | Effect |
+|----------|--------|
+| `KANE_SYNC_GIT_TOKEN` | A token for a GitHub location over HTTPS in CI: a repository-scoped personal access token with **Contents read and write**, or a GitHub App installation token. Read at use time, never written to disk or put on a command line. A workflow's own `GITHUB_TOKEN` reaches only that workflow's repository, so a separate context repository needs its own token or an SSH deploy key. |
+| `KANE_SYNC_S3_ACCESS_KEY_ID` and `KANE_SYNC_S3_SECRET_ACCESS_KEY` | The access key pair for an S3-compatible location, read at use time. Both must be set, and together they win over the saved credential file. Never written to disk, which is the CI form. |
+| `KANE_SYNC_GUARD` | `0` turns off the advisory line a write command prints when a teammate has pushed past this machine (`origin has moved past this machine — run kane-cli context pull origin`, or `this store and origin have diverged — run kane-cli context pull origin --rebase`). The check writes nothing, refuses nothing, and gives up silently after 1.5 seconds. |
+| `KANE_SYNC_GIT_TRANSFER_TIMEOUT_SECONDS` | How long one Git transfer (fetch, push) may take, `60` to `3600`. Default 15 minutes. Raise it for a slow link or a very large first fetch. |
+| `KANE_SYNC_GIT_HTTP_POST_BUFFER` | Git's HTTP upload buffer in bytes for that command (1 MiB to 512 MiB), for an HTTPS proxy that rejects chunked uploads, where `33554432` is 32 MiB. Larger values cost memory, and the default is unchanged. |
+| `KANE_CONTEXT_GITIGNORE` | `0` stops Kane CLI from adding `.context/` to your `.gitignore` when it creates the store inside a git repository. |
+
+Two places on disk belong to sharing and are not touched by a settings reset:
+
+| Path | Holds |
+|------|-------|
+| `~/.testmuai/kaneai/context-sync/.json` | the saved S3 key pair for the location named ``, readable by you only (mode `0600`). `kane-cli context sync remove ` deletes it. The file belongs to the name, not to one store: every store on this machine whose location is called `` reads it, and binding another bucket under that name from any store replaces it, so give each bucket its own name. |
+| `~/.testmuai/kaneai/context-sync/mirrors/` | Kane CLI's own cache of each GitHub location (bare Git objects, no checkout). Safe to delete, and the next command fetches again. |
 
 ## Resetting Settings
 

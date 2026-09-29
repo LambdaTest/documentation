@@ -23,6 +23,8 @@ TestMu AI utilizes **Sensor Instrumentation** to integrate with various mobile s
 **note**
 - For iOS apps signed with Enterprise Certificates, app resigning (a prerequisite for using the Image Injection tool) is not available.
 - For virtual devices this feature is available on Android App Automation Testing.
+- The app must be uploaded to TestMu AI as an .apk (android) or .ipa (iOS) file. TestMu AI process the uploaded app to enable Image Injection and other supported features.
+- Image Injection is not enabled for apps installed directly from the Google Play Store or App Store because TestMu AI does not receive the APK/IPA for processing, the app is installed directly on the device during the live Manual or Automation Session.
 
 ## Supported Camera APIs
 

@@ -2,7 +2,7 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
-Start with diagnostics:
+Start with read-only diagnostics before retrying a run. These CLI checks were reviewed against **public Rook 0.1.5** on September 25, 2026. In PowerShell, use `rook.cmd` if the npm PowerShell shim is blocked.
 
 ```bash
 rook --version
@@ -10,19 +10,24 @@ rook doctor
 rook auth status
 ```
 
-In the TUI, run `/doctor`. It reports:
+In the TUI, run `/doctor`. It reports the Rook and Node.js versions, workspace, environment, controller/API reachability, authentication, active project, and interaction mode. It does **not** invoke your agent or prove that its profile works. Use `rook status --json` to inspect the selected agent's local state separately.
 
-- The active environment
-- The controller
-- The authentication state
-- The project storage directory
-- Registered agents
+If you use a coding assistant with the [Rook skill](/support/docs/rook-coding-agents/), send this prompt instead of manually running the diagnostic sequence:
+
+```text
+Use the rook skill to diagnose this error from read-only CLI diagnostics and saved
+evidence. Confirm the workspace, project, agent, CLI version, and relevant run ID.
+Explain the first blocker and the smallest proposed fix. Do not change credentials,
+update Rook, invoke the agent, rerun tests, or run paid RCA without my approval.
+```
+
+This interactive /doctor capture uses a saved demo workspace with no credentials. Both services are reachable, but authentication is missing: signing in is the next step, not changing the target profile or rerunning scenarios.
 
 ## Installation Problems
 
 ### `rook: command not found`
 
-Open a new terminal after installation and check:
+Open a new terminal after installation. On macOS or Linux, check:
 
 ```bash
 command -v rook
@@ -35,6 +40,18 @@ For a shell installation, rerun the public installer with a writable directory t
 curl -fsSL https://raw.githubusercontent.com/LambdaTest/rook/main/install.sh \
   | bash -s -- --dir "$HOME/bin"
 ```
+
+On native Windows, check the npm shim and global prefix:
+
+```powershell
+Get-Command rook.cmd -ErrorAction SilentlyContinue
+npm.cmd prefix -g
+rook.cmd --version
+```
+
+If the shim exists but is not found, add the printed npm prefix to your **user PATH**, then reopen PowerShell. If installation is missing, follow [Windows setup](/support/docs/rook-installation/#windows). A `rook.ps1 cannot be loaded` error does not require weakening the machine's execution policy: use `rook.cmd`. Do not run the Bash installer in native PowerShell; there is no public `install.ps1`.
+
+Keep Rook, Node.js, the checkout, and local target processes in the same environment. A Windows installation and a WSL installation are separate; see [WSL setup](/support/docs/rook-installation/#windows-wsl).
 
 ### npm reports a Node.js engine error
 
@@ -90,8 +107,10 @@ The current CLI has no /budget command. Read the account balance and operation c
 
 - Start from the repository or agent directory rather than a parent folder.
 - Put the PRD, prompts, tool definitions, README, and examples inside the authorized workspace.
-- Run `/explore . --force` after adding material.
+- After reviewing the discovery scope and credit use, run `/explore . --force` to analyze added material.
 - If you know the directory is an agent, accept the explicit registration prompt.
+
+An “up to date” message or zero newly analyzed files is not proof that an agent is ready to run. Check the selected agent and its discovered features with `/status` before generating scenarios.
 
 ### A GitHub URL is rejected
 
@@ -103,24 +122,26 @@ The current release can read an explicitly selected external directory but canno
 
 ### Re-exploration says the agent is up to date
 
-Use:
+Confirm that the right agent is selected with `/agent` and `/agent use `. If its source changed and you want to pay for fresh analysis, use:
 
 ```text
 /explore --force
 ```
 
-If the wrong agent is active, run `/agent` and `/agent use ` first.
-
 ## Profile and Invocation Problems
 
 ### `rook does not know how to invoke this agent`
 
-Create and verify a profile:
+Create and verify a profile after reviewing its target endpoint, hooks, required secrets, and test goal:
 
 ```text
 /profile add
 /profile test <name>
 ```
+
+Profile authoring or repair can spend credits and use approved tools. A profile test invokes the target and can change its state. Prefer a disposable target and an explicit **reply-only goal** for a connection check; approve the test separately from drafting the profile. See [profiles and lifecycle hooks](/support/docs/rook-profiles-and-hooks/).
+
+Use /help profile to check the available operations before approving a repair or connection test:
 
 ### The profile invokes successfully but extracts the wrong value
 
@@ -133,7 +154,7 @@ Run /profile show &lt;name&gt; and inspect its script. The execute hook must ret
 /env set {"VARIABLE_NAME":"value"}
 ```
 
-The profile should record the variable name; its script reads process.env.VARIABLE_NAME. Prefer your shell or secret manager for sensitive values because command arguments can remain in history.
+The profile should record the variable name; its script reads process.env.VARIABLE_NAME. Prefer your shell or secret manager for sensitive values because command arguments can remain in history. Rook also supports rook env set --from /path/to/private.env or a JSON file. Keep that file outside version control and restrict access. Do not put real secret values in screenshots, assistant prompts, or support tickets.
 
 ### HTTP agent returns 401 or 403
 
@@ -174,14 +195,14 @@ Run `/scenarios list`. Rook also prints the available classes, categories, and t
 Read the grouped skip reasons, then fix the first execution blocker:
 
 - Verified profile
-- Supported text or URL input
+- A recognized input kind and a hook that can deliver it
 - Readable response type
 - Conversation mapping
 - Required MCP verifier
 
-Native attachment, PR-reference, and image-input delivery are not implemented in the current pre-alpha release.
+Public 0.1.5 recognizes text, text+file, url, pr_ref, image, and structured input kinds. Recognition alone does not prove your hook uploads an attachment or sends an image correctly: inspect the saved request and profile capabilities. Unknown input kinds and unsupported conversation setup can still block execution.
 
-Usage reporting, tool-call observation, and filesystem observation normally do not prevent invocation. Their affected criteria become **Unable to Verify**, so improve those evidence sources before treating the result as a complete gate.
+A token_economy scenario is blocked if the profile does not report usage. Other missing observations, such as tool-call or filesystem evidence, can leave affected criteria **Unable to Verify**. Read the exact skip reason and criterion evidence rather than assuming every observation gap is harmless.
 
 ### Run needs permission in headless mode
 
@@ -199,7 +220,7 @@ Concurrent scenarios can write the same observed path, so attribution would othe
 
 ### Run stopped midway
 
-Inspect the CLI outcome, run.yaml plan and phases, report.yaml totals, and each scenario’s saved records. Do not assume a status field exists in the 0.1.3 plan file. An interrupt can cancel an in-flight call after the target already changed state. Check target state before retrying.
+Inspect the CLI outcome, run.yaml plan and phases, report.yaml totals, and each scenario’s saved records. Do not assume every CLI version writes a top-level status field in the plan file. An interrupt can cancel an in-flight call after the target already changed state. Check target state before approving a retry or resume.
 
 ## Result and Evidence Problems
 
@@ -218,6 +239,17 @@ Rook records file existence, byte size, kind, and supported image dimensions. It
 ### Old run changed after scenario edits
 
 Current runs snapshot scenario definitions. If an older pre-alpha run lacks a snapshot, Rook does not fall back to the live store because that would present mutable data as historical evidence.
+
+### Where is the root-cause analysis? {#rca-troubleshooting}
+
+A normal rook report &lt;run-id&gt; reads saved results; it does not automatically investigate their causes. First review the failed criteria and evidence for the exact run. Then, with separate approval for credit use and tool access, request rook report &lt;run-id&gt; --rca. Follow the [RCA walkthrough](/support/docs/agent-assurance-command-reference/#root-cause-analysis) for the full sequence and report fields.
+
+- **No cause or remedy is present:** analysis may not have run or may not have enough evidence. Missing fields mean unknown, not “no problem.”
+- **A previous explanation is not reused:** reuse depends on a known, matching agent version. Changed or unknown versions can need fresh paid analysis. Do not keep retrying RCA as a diagnostic probe.
+- **RCA output does not parse as JSON:** let the approved analysis finish, then use rook report &lt;run-id&gt; --json as a separate saved-report read. Do not request another paid analysis just to obtain JSON.
+- **The verdict did not change:** RCA proposes causes and remedies; it does not fix your agent or convert **Unable to Verify** to **Pass**. Validate an approved fix in a new, explicitly scoped run.
+
+Saved-report RCA is different from adding --rca to rook run: the latter also invokes the target for the selected scenarios.
 
 ### Browser viewer does not open
 
@@ -246,11 +278,11 @@ For a missing hosted run, check `ROOK_ENV`, browser identity, and outstanding no
 
 #### Local UI: Check What Was Written {#local-ui-example}
 
-On a run's scenario result, scroll to **files**. The sample lists the request, response, hooks, snapshot, verdict, and judge artifact. Inspect these records before retrying; a missing upload does not mean the target was never invoked.
+On a run's scenario result, open **Evidence** and choose **Request**, **Response**, **Verdict**, or **Artefacts**. This saved CommerceCare demo has collect and judge artifacts. The drawer does not list the full workspace: inspect `hooks.json`, `snapshot.yaml`, and nested records in the [original run directory](/support/docs/rook-workspace-files/) when needed. A missing upload does not mean the target was never invoked. For older layouts, stale bookmarks, or missing viewer assets, see [local UI troubleshooting](/support/docs/rook-web-ui/#earlier-local-ui).
 
 #### Hosted Web UI: Check What Was Uploaded {#hosted-ui-example}
 
-Open **run → scenario → Artefacts** for additional uploaded files; use the other tabs for request, response, and verdict. This sample has judge-working.json. Local files and this tab are not one-to-one lists: the main records have their own hosted tabs.
+Open **run → scenario → Evidence → Artefacts** for additional uploaded files; use the drawer's other tabs for request, response, and verdict. This sample has judge-working.json. Local files and this tab are not one-to-one lists: the main records have their own hosted tabs.
 
 ## MCP Problems
 
@@ -269,6 +301,19 @@ Registry enablement and call permission are separate gates. The registry makes t
 ### Server disappeared behind another definition
 
 Run `rook mcp list` and inspect origins. A local, project, or user definition may shadow a discovered server with the same name. The discovered row remains visible and is not overwritten.
+
+## Share a Useful Support Report {#support-report}
+
+Include the CLI version, operating system, installation method, exact command with secrets removed, first error, and whether you are reviewing the local or hosted UI. Include the selected project/agent and run ID only in an authorized support channel.
+
+Use a **session ID**, not a scenario run ID, when locating diagnostic session files:
+
+```bash
+rook doctor --session <session-id>
+rook export logs --out ./rook-diagnostics.zip --session <session-id>
+```
+
+If you do not have a session ID, start with rook export logs --out ./rook-diagnostics.zip. Export creates a local bundle; it does not upload it. Avoid --all-sessions unless support needs the broader scope. Review the archive for credentials, prompts, target data, paths, and transcripts before sharing. See [diagnostic export options](/support/docs/agent-assurance-command-reference/#export).
 
 ## Running Rook in tmux
 

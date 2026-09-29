@@ -1,4 +1,4 @@
-# Getting Started With the Agent Assurance Platform
+# Getting Started With TestMu AI Agent Testing
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 

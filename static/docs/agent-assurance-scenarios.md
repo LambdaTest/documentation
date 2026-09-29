@@ -26,6 +26,10 @@ Rook first shows a plan:
 
 Review the steps and estimated credits before proceeding.
 
+For a first run, use a narrow generation request such as the [two-scenario quickstart](/support/docs/agent-assurance-quickstart/#test-your-first-agent). This actual TUI plan includes two features and explains why the other three are excluded:
+
+Use the arrow keys and Enter to **proceed** with writing, **discard** the plan without writing scenarios, or **change** the request. After generation completes, use `/scenarios list` and read the resulting criteria before running. A plan is not yet a saved suite or a test result.
+
 ## Scenario Taxonomy
 
 Rook has three classes and 18 categories.
@@ -89,13 +93,15 @@ Select the intended project and agent with rook project use &lt;id&gt; and rook 
 
 ## Review Scenario Runnability
 
-List scenarios:
+Launch `rook` in your workspace, then list scenarios inside its interactive TUI:
 
 ```text
 /scenarios list
 ```
 
-Or:
+The first line summarizes runnability against the active profile. Each scenario shows its ID, class, category, feature, and criteria count; repeated scenarios also show their repeat count. This saved demo has twelve runnable scenarios. Runnable means they can be attempted, not that they have passed.
+
+From a regular shell instead:
 
 ```bash
 rook scenarios list
@@ -239,14 +245,14 @@ Run `rook scenarios list` after editing to surface schema and capability problem
 
 You can review definitions in either UI:
 
-- **Local:** run `rook ui --local`, open the agent, scroll to **scenarios**, and click a scenario ID. Read its goal, criteria, and history directly from the workspace. The local list has no hosted filter bar.
+- **Local:** run `rook ui --local`, open the agent's **Scenarios** tab, and filter by feature, class, category, or result. Click a scenario ID to read its goal, criteria, and history directly from the workspace. See the [earlier layout](/support/docs/rook-web-ui/#earlier-local-ui) if your CLI predates the tabbed viewer.
 - **Hosted:** after `rook sync`, run `rook ui`, open the agent's **Scenarios** tab, and filter by feature, class, result, or category. This shows uploaded definitions, not unsaved local changes.
 
 In either interface, open a scenario from the specific **run** for historical evidence; the current catalog definition may have changed since that run. Follow the [local definitions](/support/docs/rook-web-ui/#local-definitions) or [hosted scenarios](/support/docs/rook-web-ui/#scenarios) section of the same UI guide.
 
 ### Local UI: Review the Test Definition {#local-ui-example}
 
-From the agent's **scenarios** list, open a scenario ID. This local SC-002 definition shows the goal, class, category, four acceptance criteria, and execution history. Review the criteria themselves, not just the scenario title.
+From the agent's **Scenarios** tab, open a scenario ID. This local CommerceCare SC-006 definition tests refund-verification behavior and shows its goal, class, category, three acceptance criteria, and execution history. Review the criteria themselves, not just the scenario title.
 
 ### Hosted Web UI: Find the Scenario to Review {#hosted-ui-example}
 

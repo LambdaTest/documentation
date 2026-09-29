@@ -8,7 +8,7 @@ To access the System & Custom Fields settings, click on **Settings** in the top 
 
 You can manage your **System** and **Custom Fields** in this Fields page.
 
-### System Fields
+## System Fields
 Are default fields present in the Test Manager. These fields help organize and track your test cases, test runs or instances. They can be seamlessly integrated into your test management process and customized by adding values. Test Cases & Test Runs have their separate System Fields.
 
 - Test Cases have these pre defined fields: **Priority**, **Status**, and **Type**.
@@ -20,7 +20,7 @@ These System Fields can have Custom Values which can be added by simply selectin
 
  Every new Status value of Test Runs will have a unique random color defined to it on creation.
 
-### Custom Fields
+## Custom Fields
 Allow you to store additional information beyond what System Fields offer. To create a new field, enter the required details and choose the appropriate data type from the **Type** function. Available types include String, Textarea, Number, Dropdown (Single Select), Dropdown (Multi Select), Boolean (Checkbox), Date, User, and URL.
 
 For Dropdown types (Single Select and Multi Select), you also have the option to add values.

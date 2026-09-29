@@ -2,16 +2,16 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
-#### 1. **Can HyperExecute CLI download test artifacts generated during execution?**
+## 1. **Can HyperExecute CLI download test artifacts generated during execution?**
 
   Yes, HyperExecute can download the artifacts generated during the test execution. In addition, HyperExecute has APIs to download artifacts for a particular job.
 
-#### 2. **I am not able to open HyperExecute on MacOS because the developer is not verified. What do I do?**
+## 2. **I am not able to open HyperExecute on MacOS because the developer is not verified. What do I do?**
 
   The binary for Mac is unsigned. You might get a permission denied warning while executing HyperExecute on macOS and linux machines. To allow permissions you can use the following command: `chmod u+x ./hyperexecute`.
   Thus, you might see a security popup on whether to allow the execution of the tool or not. You can allow it from your **System Preferences** → **Security & Privacy** → **General** tab.
 
-#### 3. **Is there a way where I can follow all of the steps in my test run on HyperExecute?**
+## 3. **Is there a way where I can follow all of the steps in my test run on HyperExecute?**
 
   Every time you run a test via the [HyperExecute CLI](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/), a `hyperexecute-cli.log` file is generated. It is present in the parent directory of your test and contains the details of your entire test run.
 

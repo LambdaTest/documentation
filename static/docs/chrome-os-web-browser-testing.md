@@ -18,7 +18,7 @@ The Device Control feature allows you tp perform certain actions with your devic
 
 - **Home:** Use this option to navigate to the device's home screen during a manual session.
 - **Volume:** Adjust the device volume directly within your testing session, ensuring optimal audio levels for your tests.
-- **Lock Device :** Lock or unlock your device seamlessly during testing sessions without interrupting your workflow.
+- **Lock Device:** Lock or unlock your device seamlessly during testing sessions without interrupting your workflow.
 
 ## Screenshot
 Capture clear screenshots of the current screen on your test device. Easily access and download these screenshots for future reference or bug reporting.
@@ -37,6 +37,9 @@ You can also share that bug, save the image to the gallery or download that scre
 ## IP Geolocation
 The IP Geolocation feature enables you to simulate website and mobile experiences from over 45 countries by using local IP addresses. This allows you to test localized features such as pricing, languages, and product offerings. With IP Geolocation enabled, you can verify that your app's traffic is coming from a specific country, allowing for comprehensive global testing.
 
+## Files and Media
+The [Upload and Download Files](/support/docs/real-time-upload-and-download-files/) feature allows to manage files directly within remote testing environments. This functionality streamlines the testing process by allowing seamless file transfers between local and remote environments across desktop and mobile platforms.
+
 ## Network Throttling
 TestMu AI's network throttling feature empowers you to simulate real-world network conditions (Offline, Slow 3G, Fast 3G, 4G, 5G and Custom) during testing. This allows you to assess your application performance under varying internet speeds, ensuring a seamless user experience across different network environments. You can leverage predefined network profiles or craft custom settings for comprehensive testing.
 
@@ -44,7 +47,7 @@ TestMu AI's network throttling feature empowers you to simulate real-world netwo
 The settings section offer the following features:
 - **Idle Timeout :** This feature allows you to set the idle timeout for your test session. The default Idle Timeout is 5 minutes and the maximum limit is 60 minutes.
 - **Time Zone :** With this feature, you can select the time zone of your preferred region that align with your testing needs.
-- **Keyboard Input** With this feature, you can change the language in your test session for a more localized testing experience.
+- **Keyboard Input :** With this feature, you can change the language in your test session for a more localized testing experience.
 
 ## Switch
 This feature allows you to switch between devices, browser and their OS versions without exiting your current test session.

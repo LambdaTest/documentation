@@ -168,5 +168,3 @@ test.describe('Browse LambdaTest in different search engines', () => {
   })
 })
 ```
-
-To generate Playwright tests with AI coding assistants, see [Run Tests With Agent Skills](/support/docs/playwright-agent-skills/).

@@ -6,7 +6,7 @@
 
 As the word responsive suggests, this type of testing is used to check the appearance of a website with RWD(Responsive Web Design). This design helps a website render the content in a flexible yet appropriate manner based on the devices & OS on which it gets summoned. At TestMu AI, you can [check RWD](https://www.testmuai.com/responsive-test-online/) through 50+ different devices in a single go!
 
-### How To Do Responsive Testing?
+## How To Do Responsive Testing?
 
 **Step 1:** Click ‘**Responsive**’ sub menu under [Visual UI Testing](https://www.testmuai.com/smart-visual-ui-testing/) menu in menu box.
 
@@ -14,7 +14,7 @@ As the word responsive suggests, this type of testing is used to check the appea
 
 **Step 3:** On the right side of the page, you will find various mobile and desktop combinations. On clicking them, you can test the responsiveness for those particular devices.
 
-### How to record issues?
+## How to record issues?
 
 **Step 1:** On the ‘**Responsive**’ page, under the menu ‘**Visual UI Testing**’, you will find a camera icon; click that icon.
 
