@@ -10,6 +10,8 @@ keywords:
  - Test Cases trends
  - Test Case Run Status
  - Milestone Trends
+ - Milestone drill down
+ - Test run folder hierarchy
  - Execution Progress
  - Test Execution Burndown
  - Defects by Severity
@@ -102,7 +104,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         "https://www.youtube.com/@TestMuAI"
       ]
     },
-    "dateModified": "2026-08-07T15:21:02+05:30"
+    "dateModified": "2026-09-29T12:00:00+05:30"
   }) }}
 />
 <BrandName /> Test Manager Dashboard widgets provide comprehensive insights into your test automation or manual efforts. These widgets help you optimize your testing efforts by providing detailed insights into your test execution, test case insights, and more.
@@ -174,17 +176,53 @@ This widget gives you a high-level view of test run health across your project, 
 
 ## Milestone Trends
 
-The Milestone Trends widget displays a stacked bar chart of milestones, with each bar broken down by test instance statuses from the associated test runs.
+The Milestone Trends widget displays a stacked bar chart of milestones, with each bar broken down by test instance statuses from the associated test runs. You can drill into a milestone to see the results of individual test instances, or step down through your test run folders to find exactly which area of your suite is failing.
 
 ### How it works?
 
 * Each bar represents a milestone, with stacked segments showing the count of test instances by status.
 * Supported statuses include **Not Started**, **Passed**, **Failed**, **Skipped**, as well as any **custom statuses** created for your manual test runs.
 * Filter the data by date range to analyze milestone performance over specific time periods.
+* Click a milestone bar to drill in. What opens depends on the **Milestone Drill Down** setting described below.
+
+:::note
+A test run that belongs to more than one milestone is counted in each of those milestones, so the milestone bars are not expected to add up to a single project total.
+:::
+
+### Choosing what a milestone opens
+
+Open the **three-dot menu** on the widget, select **Configure Widget**, and use **Display Options** to set **Milestone Drill Down**. The choice is saved per widget, so two Milestone Trends widgets on the same dashboard can behave differently.
+
+* **Instance List** (default) - clicking a milestone opens the list of test instances for that milestone.
+* **Test Run Folder Hierarchy** - clicking a milestone opens its top-level test run folders as bars, which you can keep drilling into.
+
+### Drilling through test run folders
+
+With **Test Run Folder Hierarchy** selected, each click takes you one level deeper into your folder structure:
+
+* Every bar is a folder, and its value counts the test instances in that folder **and in all of its subfolders**.
+* A folder that has no subfolders is the end of the trail. Clicking it opens the test instance list for that folder.
+* The breadcrumb above the chart shows where you are, for example **All milestones › Regression › Checkout**. Select any entry in the trail to jump straight back to that level.
+* The level indicator on the right of the breadcrumb shows how deep you are and how much further the deepest branch goes, for example **Level 2 of 4 · folders**.
+
+Individual test runs are not shown as bars. Drilling stops at the deepest folder, and the instance list opens from there.
+
+:::tip
+Prefer to see instance results straight away? Switch **Milestone Drill Down** back to **Instance List**. This is also how you reach test runs that sit directly inside a folder that has subfolders of its own.
+:::
+
+### Filtering by test run folder
+
+The **Test Run Folder Name** filter narrows the widget to one part of your folder structure. It is available in **Configure Widget**, and in the dashboard **Filters** drawer on any dashboard that contains a Milestone Trends widget.
+
+* Selecting a folder matches that folder **and everything beneath it**, so you can scope the whole widget to a single area of your suite.
+* If the same folder name is used in more than one place, all of them are matched. This lets you select a name such as `login` once and review every folder that uses it together.
+
+This mirrors the **Test Case Folder Name** filter used elsewhere in Test Manager widgets.
 
 ### Value Proposition
 
-This widget helps you quickly assess milestone health, identify milestones with high failure rates, and monitor release readiness. By tracking status trends across milestones, you can spot regressions early and make data-driven decisions about testing effort.
+This widget helps you quickly assess milestone health, identify milestones with high failure rates, and monitor release readiness. By tracking status trends across milestones, you can spot regressions early and make data-driven decisions about testing effort. Drilling through your test run folders narrows a failing milestone down to the specific area of your suite responsible, without leaving the dashboard.
 
 ## Issue Summary
 
