@@ -163,7 +163,7 @@ echo -n 'username:password' | base64
 
 For example, `username:password` becomes `dXNlcm5hbWU...`
 
-**Step 2:** To enable Basic authentication, add a customHeaders capability to your Playwright capabilities and set the Authorization header to Basic <encoded-value>.
+**Step 2:** To enable Basic authentication, add a customHeaders capability to your Playwright capabilities and set the Authorization header to `Basic <encoded-value>`.
 
 ```json
 "customHeaders": {
