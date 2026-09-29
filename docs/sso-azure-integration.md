@@ -129,23 +129,23 @@ To enable <BrandName /> SSO through Azure AD integration, you will need:
 
 **Step 2:** Navigate to **Manage Azure Active Directory**.
 
-<img loading="lazy" src={require('../assets/images/sso-azure-integration/manage-azure-active-1.webp').default} alt="azure integration with lambdatest"  className="doc_img" width="1511" height="843"/>
+<img loading="lazy" src={require('../assets/images/sso-azure-integration/manage-azure-active-1.webp').default} alt="azure integration with TestMu AI"  className="doc_img" width="1511" height="843"/>
 
 **Step 3:** Select the **Enterprise Application** from the left sidebar.
 
-<img loading="lazy" src={require('../assets/images/sso-azure-integration/enterprise-application-1.webp').default} alt="azure integration with lambdatest"  className="doc_img" width="1667" height="629"/>
+<img loading="lazy" src={require('../assets/images/sso-azure-integration/enterprise-application-1.webp').default} alt="azure integration with TestMu AI"  className="doc_img" width="1667" height="629"/>
 
 **Step 4:** Click on **New Application**.
 
-<img loading="lazy" src={require('../assets/images/sso-azure-integration/new-application-2.webp').default} alt="azure integration with lambdatest"  className="doc_img" width="1173" height="635"/>
+<img loading="lazy" src={require('../assets/images/sso-azure-integration/new-application-2.webp').default} alt="azure integration with TestMu AI"  className="doc_img" width="1173" height="635"/>
 
 **Step 5:** Then click on **Create your own application**.
 
-<img loading="lazy" src={require('../assets/images/sso-azure-integration/create-app-1.webp').default} alt="azure integration with lambdatest"  className="doc_img" width="1174" height="655"/>
+<img loading="lazy" src={require('../assets/images/sso-azure-integration/create-app-1.webp').default} alt="azure integration with TestMu AI"  className="doc_img" width="1174" height="655"/>
 
 **Step 6:** Now navigate back to the Enterprise applications category. Select the application that you just created and then click on **Set up single sign on**.
 
-<img loading="lazy" src={require('../assets/images/sso-azure-integration/set-up-sso-1.webp').default} alt="azure integration with lambdatest"  className="doc_img" width="1173" height="643"/>
+<img loading="lazy" src={require('../assets/images/sso-azure-integration/set-up-sso-1.webp').default} alt="azure integration with TestMu AI"  className="doc_img" width="1173" height="643"/>
 
 **Step 7:** Go to <BrandName /> <a href="https://accounts.lambdatest.com/auth/sso">Authentication & SSO settings</a> and click on **Setup SSO**.
    <img loading="lazy" src={require('../assets/images/sso-self-serve/setup-sso.png').default} alt="setup sso button" width="944" height="409" className="doc_img"/>
@@ -161,11 +161,11 @@ To enable <BrandName /> SSO through Azure AD integration, you will need:
 
 **Step 11:** Click on **Basic SAML Configuration**. Enter your SSO identifier ID and Reply URL information that you copied from <BrandName /> SSO setup page and click on **Save**.
 
-<img loading="lazy" src={require('../assets/images/sso-azure-integration/basic-saml-1-1.webp').default} alt="azure integration with lambdatest"  className="doc_img" width="1173" height="644"/>
+<img loading="lazy" src={require('../assets/images/sso-azure-integration/basic-saml-1-1.webp').default} alt="azure integration with TestMu AI"  className="doc_img" width="1173" height="644"/>
 
 **Step 12:** Copy the App Federation Metadata URL and paste it in the **Metadata URL** field in the <BrandName /> SSO setup page.
 
-<img loading="lazy" src={require('../assets/images/uploads/azure-metadata-url.png').default} alt="azure integration with lambdatest"  className="doc_img" width="1173" height="644"/>
+<img loading="lazy" src={require('../assets/images/uploads/azure-metadata-url.png').default} alt="azure integration with TestMu AI"  className="doc_img" width="1173" height="644"/>
 
 **Step 13:** Fill the required fields  and click on **Create Connection**:
 

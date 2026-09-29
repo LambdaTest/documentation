@@ -157,11 +157,11 @@ For demo purpose, we have used this sample Github repository. Below are the step
 
 3. In the drop down box that appears, choose the **<BrandName />** feature.
 
-<img loading="lazy" src={require('../assets/images/teamcity-plugin/lambdatest-features.webp').default} alt="lambdatest feature" width="768" height="302" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/teamcity-plugin/lambdatest-features.webp').default} alt="TestMu AI feature" width="768" height="302" className="doc_img"/>
 
 4. Now a window will appear where you can configure the <BrandName /> feature. Insert your <BrandName /> username and access key into it and save the feature. You can fetch your username and access key from your <BrandName /> [profile](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/details/profile).
 
-<img loading="lazy" src={require('../assets/images/teamcity-plugin/configure-lambdatest-feature.webp').default} alt="lambdatest profile" width="768" height="345" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/teamcity-plugin/configure-lambdatest-feature.webp').default} alt="TestMu AI profile" width="768" height="345" className="doc_img"/>
 
 5. Upon saving, you can see that the <BrandName /> build feature has been added in your project.
 

@@ -130,7 +130,7 @@ Looking up a specific message the tunnel printed? See [Error Messages](/docs/tro
 
 After configuring the tunnel, you might get into the error similar to the below screenshot:
 
-<img loading="lazy" src={require('../assets/images/troubleshooting-lambda-tunnel/localhost-refused-to-connect.webp').default} alt="troubleshoot lambdatest tunnel" width="1600" height="750" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/troubleshooting-lambda-tunnel/localhost-refused-to-connect.webp').default} alt="troubleshoot TestMu AI tunnel" width="1600" height="750" className="doc_img"/>
 
 The error "localhost refused to connect" occurs because of using the URL as localhost which is unfortunately not compatible with various browsers and browser versions. We are deliberately eliminating the URL localhost and recovering it with localhost.lambdatest.com or your local system IP.
 
@@ -146,7 +146,7 @@ While testing an application hosted on your local machine, you may receive an "I
 
 Since, web applications are now built with various different kinds of frameworks like angular, react etc; In order to test it using tunnel the command used to run your web app needs to modified in your project manifest file i.e. "package.json"
 
-<img loading="lazy" src={require('../assets/images/troubleshooting-lambda-tunnel/invalid-host-header.webp').default} alt="troubleshoot lambdatest tunnel" width="1600" height="754" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/troubleshooting-lambda-tunnel/invalid-host-header.webp').default} alt="troubleshoot TestMu AI tunnel" width="1600" height="754" className="doc_img"/>
 
 - **Angular Framework Project**: For Angular framework based web app, ideally you might be using "ng serve" or "npm start" to run your web application or your package.json file configuration would be set as "ng serve" in order to start your web app and as usual, it would be working fine on local browser. However, this might throw an "Invalid Host Header"error or error something related to the invalid host in a Real Time Test.
 
@@ -164,15 +164,15 @@ This would help you avoiding "Invalid Host Header" error.
 
 While testing your local web app built through WordPress, you may find issue with the rendering of CSS, similar to the below screenshot:
 
-<img loading="lazy" src={require('../assets/images/troubleshooting-lambda-tunnel/WordPress-CSS-Not-Loading.webp').default} alt="troubleshoot lambdatest tunnel" width="1600" height="753" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/troubleshooting-lambda-tunnel/WordPress-CSS-Not-Loading.webp').default} alt="troubleshoot TestMu AI tunnel" width="1600" height="753" className="doc_img"/>
 
 The general solution for this is to update the WordPress Address and Site Address on the General Settings tab in the WordPress dashboard with your system IP address rather than the default of localhost, then everything will be emitted relative to that. Here is a screenshot for your further reference:
 
-<img loading="lazy" src={require('../assets/images/troubleshooting-lambda-tunnel/general-settings-for-troubleshooting-lambda-tunnel.webp').default} alt="troubleshoot lambdatest tunnel" width="1600" height="751" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/troubleshooting-lambda-tunnel/general-settings-for-troubleshooting-lambda-tunnel.webp').default} alt="troubleshoot TestMu AI tunnel" width="1600" height="751" className="doc_img"/>
 
 By applying the above changes, you would find the CSS loading issue as resolved. Below is a screenshot after the mentioned changed:
 
-<img loading="lazy" src={require('../assets/images/troubleshooting-lambda-tunnel/hello-world.webp').default} alt="troubleshoot lambdatest tunnel" width="1600" height="758" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/troubleshooting-lambda-tunnel/hello-world.webp').default} alt="troubleshoot TestMu AI tunnel" width="1600" height="758" className="doc_img"/>
 
 ## 4. IP Whitelisting
 
@@ -217,7 +217,7 @@ The `- v`  flag enables Verbose logging on the console. You can use this to log 
 
 The requests are also logged into a log file `lt.log` which is created in the same working directory as the <BrandName /> Tunnel binary. You can also specify the tunnel log file name using the `--logFile` flag.
 
-<img loading="lazy" src={require('../assets/images/troubleshooting-lambda-tunnel/verbose.webp').default} alt="troubleshoot lambdatest tunnel" width="981" height="508" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/troubleshooting-lambda-tunnel/verbose.webp').default} alt="troubleshoot TestMu AI tunnel" width="981" height="508" className="doc_img"/>
 
 
 ## 7. LT Can’t Be Opened Because Apple Cannot Check It For Malicious Software
