@@ -290,7 +290,7 @@ For example, to upload a file on a web page via test script, use the following J
 
 * * *
 
-# Download Files from TestMu AI Storage During Test Execution
+## Download Files from TestMu AI Storage During Test Execution
 ---
 
 Retrieve files from TestMu AI cloud storage directly to the machine running your test during Selenium automation testing.

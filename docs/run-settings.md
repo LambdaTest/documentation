@@ -249,7 +249,7 @@ If a glob pattern path is passed in the specs flag using CLI, you must enclose i
 :::
 
 ## Cypress Config File
-#### Using `lambdatest-config.json`
+### Using `lambdatest-config.json`
 You can use the `cypress_config_file` key in `run_settings` option to specify the Cypress configuration file.
 
 > **NOTE :** Cypress 10 and above versions automatically identify the `cypress.config.js` file in the project. Therefore, you don't need to specify the `cypress_config.js` capability.
@@ -278,7 +278,7 @@ You can use the `cypress_config_file` key in `run_settings` option to specify th
   </TabItem>
 </Tabs>
 
-#### Using CLI
+### Using CLI
 You can specify the Cypress configuration file using the below CLI flag with `run` command.
 
 | Flag                         | Purpose                 | Type   |
@@ -286,7 +286,7 @@ You can specify the Cypress configuration file using the below CLI flag with `ru
 | --ccf, --cypress-config-file | Path of the config file | String |
 
 ## Specifying Spec Files
-#### Using `lambdatest-config.json`
+### Using `lambdatest-config.json`
 You can use the *specs* key in *run_settings* option to specify the Spec files.
 
 <VerifiedTag value="Verified" />
@@ -316,7 +316,7 @@ You can use the *specs* key in *run_settings* option to specify the Spec files.
   </TabItem>
 </Tabs>
 
-#### Using CLI
+### Using CLI
 You can specify the Spec files using the below CLI flag with `run` command.
 
 | Flag        | Purpose                                       | Type   |
@@ -353,7 +353,7 @@ You can use the *exclude_specs* key in *run_settings* option to specify the spec
 </Tabs>
 
 ## Geolocation
-#### Using `lambdatest-config.json`
+### Using `lambdatest-config.json`
 You can use the *geo_location* key in *run_settings* option to specify the Spec files.
 
 <VerifiedTag value="Verified" />
@@ -382,7 +382,7 @@ You can use the *geo_location* key in *run_settings* option to specify the Spec 
   </TabItem>
 </Tabs>
 
-#### Using CLI
+### Using CLI
 You can specify the geolocation files using the below CLI flag with `run` command.
 
 | Flag                  | Purpose                   | Type   |
@@ -390,7 +390,7 @@ You can specify the geolocation files using the below CLI flag with `run` comman
 | --geo, --geo_location | Pass the Geo country code | String |
 
 ## Resolution
-#### Using `lambdatest-config.json`
+### Using `lambdatest-config.json`
 Use the *resolution* key in *run_settings* option to specify the resolution.
 
 <VerifiedTag value="Verified" />
@@ -419,7 +419,7 @@ Use the *resolution* key in *run_settings* option to specify the resolution.
   </TabItem>
 </Tabs>
 
-#### Using CLI
+### Using CLI
 You can specify the system's resolution using the below CLI flag with `run` command.
 
 | Flag   | Purpose             | Type   |
@@ -431,7 +431,7 @@ You can specify the system's resolution using the below CLI flag with `run` comm
 **Supported resolutions**: `1024x768`, `1280x960`, `1280x1024`, `1600x1200`, `1920x1080`, `2048x1536`, `2560x1440`
 
 ## Excluding Files From Test Uploads
-#### Using `lambdatest-config.json`
+### Using `lambdatest-config.json`
 You can use the *ignore_files* key in *run_settings* option to ignore or exclude any particular files while uploading your tests.
 
 <VerifiedTag value="Verified" />
@@ -460,7 +460,7 @@ You can use the *ignore_files* key in *run_settings* option to ignore or exclude
   </TabItem>
 </Tabs>
 
-#### Using CLI
+### Using CLI
 Specify the files that you want to exclude using the below CLI flag with `run` command.
 
 | Flag                | Purpose                            | Type   |
@@ -471,7 +471,7 @@ Specify the files that you want to exclude using the below CLI flag with `run` c
 When running tests, if you encounter a situation where a particular test is running for an extended period and causing other parallel tests to be blocked, in this case, you can use the *max duration* flag to mitigate the issue. This flag allows you to specify a maximum time limit for the test to run before it is automatically stopped, thus freeing up resources for other tests to execute.
 
 The valid input for `max_duration` must be an integer, and it can only be within the range of 2 to 240 minutes.
-#### Using `lambdatest-config.json`
+### Using `lambdatest-config.json`
 You can use the `max_duration` key in *run_settings* option to specify the session timeout.
 
 <VerifiedTag value="Verified" />
@@ -500,7 +500,7 @@ You can use the `max_duration` key in *run_settings* option to specify the sessi
   </TabItem>
 </Tabs>
 
-#### Using CLI
+### Using CLI
  You can specify the timeout using the below CLI flag with `run` command.
 
 | Flag           | Purpose                        | Type    |
@@ -573,7 +573,7 @@ In order to run your tests on <BrandName />, we refer to your `package.json` and
 
 Below are the ways through which <BrandName /> detects the dependencies which has to be installed before running the test on <BrandName />.
 
-#### Using `npm_dependencies`
+### Using `npm_dependencies`
 Inside `run_settings` of `lambdatest-config.json`, you can provide the list of NPM dependencies:
 
 <VerifiedTag value="Verified" />
@@ -586,7 +586,7 @@ Inside `run_settings` of `lambdatest-config.json`, you can provide the list of N
 },
 ```
 
-#### Using `package.json`
+### Using `package.json`
 <BrandName /> will automatically detects the dependencies that has to be installed from `package.json`.
 
 <VerifiedTag value="Verified" />

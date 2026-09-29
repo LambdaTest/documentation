@@ -3,7 +3,7 @@ id: rbac-roles-and-permissions
 title: Roles and Permissions (RBAC)
 hide_title: false
 sidebar_label: Roles and Permissions (RBAC)
-description: Learn how to use Custom Roles and Permissions (RBAC) on LambdaTest to control product-level access and granular permissions across your organization.
+description: Learn how to use Custom Roles and Permissions (RBAC) on TestMu AI to control product-level access and granular permissions across your organization.
 keywords:
   - rbac
   - roles and permissions
@@ -13,7 +13,7 @@ keywords:
   - product access
   - granular permissions
 url: https://www.testmuai.com/support/docs/rbac-roles-and-permissions/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: rbac-roles-and-permissions/
 ---
 
@@ -55,7 +55,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       "@id": "https://www.testmuai.com/support/docs/rbac-roles-and-permissions/"
     },
     "headline": "Roles and Permissions (RBAC)",
-    "description": "Learn how to use Custom Roles and Permissions (RBAC) on LambdaTest to control product-level access and granular permissions across your organization.",
+    "description": "Learn how to use Custom Roles and Permissions (RBAC) on TestMu AI to control product-level access and granular permissions across your organization.",
     "url": "https://www.testmuai.com/support/docs/rbac-roles-and-permissions/",
     "image": {
       "@type": "ImageObject",

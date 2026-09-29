@@ -298,7 +298,7 @@ You can analyze the number of requests sent on that particular time.
 
 
 <details>
-  <summary><h4>Scenario 1: Overriding Values via Projects portal</h4></summary>
+  <summary><h3>Scenario 1: Overriding Values via Projects portal</h3></summary>
 
   When executing performance tests using HyperExecute, you have the option to override default parameters directly in the Projects portal. Let’s explore a sample scenario to understand how HyperExecute handles these overrides.
 
@@ -327,7 +327,7 @@ You can analyze the number of requests sent on that particular time.
 </details>
 
 <details>
-  <summary><h4>Scenario 2: Default Parameters</h4></summary>
+  <summary><h3>Scenario 2: Default Parameters</h3></summary>
   
   In this scenario, you proceed without overriding the default values in the HyperExecute Projects portal. The configuration parameters from your JMeter file and project setup are applied as-is.
 

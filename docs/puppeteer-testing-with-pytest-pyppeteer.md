@@ -246,7 +246,7 @@ pip install - r requirements.txt
 5. In order to run your pyppeteer tests, you will need to set your <BrandName /> username and access key in the environment variables. Click the **Access Key** button at the top-right of the Automation Dashboard to access it.
 
 
-##### Windows
+### Windows
 
 <VerifiedTag value="Verified" />
 
@@ -255,7 +255,7 @@ set LT_USERNAME="YOUR_LAMBDATEST_USERNAME"
 set LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
 ```
 
-##### macOS/Linux
+### macOS/Linux
 
 <VerifiedTag value="Verified" />
 

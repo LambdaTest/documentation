@@ -172,7 +172,7 @@ To enable <BrandName /> SSO through Azure AD integration, you will need:
 * SSO Domains (Comma-separated list of the domains that can be authenticated in the Identity Provider.)
 * Have Metadata URL (Select this option if you have metadata file URL of your Identity Provider.)
 * Metadata URL (Enter the metadata file URL of your Identity Provider.)
-<h4>Create Connection with Metadata URL </h4>
+<h3>Create Connection with Metadata URL </h3>
 <img loading="lazy" src={require('../assets/images/sso-self-serve/finalize-sso-metadata.png').default} alt="sso-self serve" width="945" height="542" className="doc_img"/>
 
 **Step 14:** Once the connection is created, you will be redirected to the SSO settings page. From here you can <a href="/support/docs/testmu-sso-manage-connection/">Manage SSO Connection</a>.

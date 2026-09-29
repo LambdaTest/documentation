@@ -144,7 +144,7 @@ import { BRAND_URL } from '@site/src/component/BrandName';
 
 ---
 
-# Mismatch Thresholds <NewTag value='New' color='#000' bgColor='#ffec02' />
+## Mismatch Thresholds <NewTag value='New' color='#000' bgColor='#ffec02' />
 
 When running visual regression tests, not every pixel-level difference is a real bug. Minor rendering variations such as font anti-aliasing, date/time stamps, or animated content can cause screenshots to fail even when the page looks correct to the human eye.
 

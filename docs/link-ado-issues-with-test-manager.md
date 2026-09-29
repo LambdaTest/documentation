@@ -98,15 +98,15 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
   }) }}
 />
 
-## Link Azure DevOps Issues with Test Manager
+# Link Azure DevOps Issues with Test Manager
 
 Test Manager enhances its functionality by seamlessly linking test cases with Azure DevOps Work Items. This integration ensures a reliable connection between your testing activities and Azure DevOps Work Items, optimizing project management and collaboration across teams.
 
-### Prerequisites
+## Prerequisites
 - Active Microsoft Azure DevOps account
 - Appropriate permissions to access Azure DevOps projects
 
-### Initial Setup and Configuration
+## Initial Setup and Configuration
 
 > **Note:** If you have already integrated Azure DevOps with your <BrandName /> account, you can skip this section and proceed directly to [Linking Azure DevOps Work Items](#linking-azure-devops-work-items)
 
@@ -122,7 +122,7 @@ Test Manager enhances its functionality by seamlessly linking test cases with Az
 
 <img loading="lazy" src={require('../assets/images/ado-linking-test-manager/3.png').default} alt="Azure DevOps Organization Selection" className="doc_img" width="1366" height="629"/>
 
-### Linking Azure DevOps Work Items
+## Linking Azure DevOps Work Items
 
 Once the integration is complete, follow these steps to link work items with your test cases or test runs:
 

@@ -112,35 +112,35 @@ All variables and parameters in KaneAI can be accessed from https://kaneai.lambd
   
   <a href = "/support/docs/kane-ai-using-variables/">
   <div className="support_inners">
-    <h3>Variables</h3>
+    <h2>Variables</h2>
     <p>Placeholders that store dynamic values, enabling reuse and reducing redundancy in test cases.</p>
   </div>
   </a>
 
   <a href="/support/docs/kane-ai-secrets/">
   <div className="support_inners">
-    <h3>Secrets</h3>
+    <h2>Secrets</h2>
     <p>Securely stored sensitive data (e.g., passwords) that are used in tests without exposing them in the code.</p>
   </div>
   </a>
 
   <a href="/support/docs/hyperexecute-artifacts-url/">
   <div className="support_inners">
-    <h3>Smart Variables</h3>
+    <h2>Smart Variables</h2>
     <p>Context-aware variables that automatically pull data in real-time during test execution.</p>
   </div>
   </a>
 
   <a href = "/support/docs/kane-ai-using-parameters/">
   <div className="support_inners">
-    <h3>Parameters</h3>
+    <h2>Parameters</h2>
     <p>Values passed into test cases at runtime to customize test execution for different configurations or environments.</p>
   </div>
   </a>
 
   <a href="/support/docs/kane-ai-using-datasets/">
   <div className="support_inners">
-    <h3>Datasets</h3>
+    <h2>Datasets</h2>
     <p>Collections of test data used in a test, allowing for data-driven testing by running the same test with different inputs.</p>
   </div>
   </a>
