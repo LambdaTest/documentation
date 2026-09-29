@@ -2539,6 +2539,7 @@ module.exports = {
         label: "Introduction to Test Manager",
         id: "test-manager",
       },
+      "create-projects",
       "manual-to-automated-test-conversion",
       {
         type: "category",
@@ -2634,6 +2635,7 @@ module.exports = {
         collapsed: true,
         label: "Insights & Reports",
         items: [
+          { type: "doc", id: "insights-dashboard", label: "Insights Dashboard" },
           { type: "doc", id: "test-run-creation-and-management", label: "Create and Manage Test Runs" },
           { type: "doc", id: "test-run-bulk-actions", label: "Bulk Move, Copy, and Delete Test Runs" },
           { type: "doc", id: "sync-test-instance", label: "Sync Test Instances" },
