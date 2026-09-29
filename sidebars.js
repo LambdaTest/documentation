@@ -3250,6 +3250,7 @@ module.exports = {
           "puppeteer-mocha",
           "puppeteer-jest",
           "puppeteer-pytest-pyppeteer",
+          "puppeteer-codecept",
         ],
       },
       {
@@ -3471,7 +3472,7 @@ module.exports = {
             type: "category",
             collapsed: true,
             label: "Smart TV Automation",
-            items: ["appium-appletv", "appium-firetv", "appium-androidtv"],
+            items: ["appium-appletv", "appium-firetv", "appium-androidtv", "appium-rokutv"],
           },
           {
             type: "category",

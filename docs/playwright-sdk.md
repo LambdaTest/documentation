@@ -364,3 +364,4 @@ You can pass any standard Playwright CLI options directly to this command. For i
 
 ```bash
 npx playwright-node-sdk playwright test tests/my-test.spec.js
+```
