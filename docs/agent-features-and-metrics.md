@@ -13,7 +13,7 @@ keywords:
  - image analyzer agent
  - agent testing
 url: https://www.testmuai.com/support/docs/agent-features-and-metrics/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: agent-features-and-metrics/
 canonical: https://www.testmuai.com/support/docs/agent-features-and-metrics/
 ---
@@ -205,7 +205,7 @@ Run evaluations at scale with real-time feedback on your agent's quality.
 
 - **Metric Selection**: Choose which quality metrics to evaluate (or run all)
 - **Endpoint Profile Selection**: Pick which endpoint profile to evaluate against
-- **HyperExecute Integration**: Run evaluations at scale using LambdaTest's HyperExecute infrastructure with optional tunnel configuration for testing agents behind firewalls or private networks
+- **HyperExecute Integration**: Run evaluations at scale using TestMu AI's HyperExecute infrastructure with optional tunnel configuration for testing agents behind firewalls or private networks
 - **Real-Time Streaming**: Live progress updates during evaluation via Server-Sent Events
 
 <br />

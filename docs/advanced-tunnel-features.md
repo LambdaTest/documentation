@@ -169,7 +169,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 **<BrandName /> Tunnel** feature allows you to test your **private server URLs** or **locally hosted web-apps** or **websites** on **3000+** real browsers through <BrandName />. However, sometimes corporate firewalls and proxy settings may have restricted you to leverage the <BrandName /> Tunnel binary. Not anymore though, as we’ve come up with a new binary for <BrandName /> Tunnel. <BrandName /> Tunnel follows various protocols such as **Web Socket, TCP** etc. to help you establish a secure and unique tunnel connection between your system and <BrandName /> cloud servers.
 
-You can download the **<BrandName /> Tunnel binary** that will help you establish a secure connection through corporate firewalls between your computer and [LambdaTest](https://www.testmuai.com/) cloud servers for a testing locally hosted website or web-applications. You can test plain **HTML, CSS, PHP, Python** or other similar web files saved on your local system, over combinations of operating systems, browsers, and screen resolutions that are available on <BrandName />.
+You can download the **<BrandName /> Tunnel binary** that will help you establish a secure connection through corporate firewalls between your computer and [TestMu AI](https://www.testmuai.com/) cloud servers for a testing locally hosted website or web-applications. You can test plain **HTML, CSS, PHP, Python** or other similar web files saved on your local system, over combinations of operating systems, browsers, and screen resolutions that are available on <BrandName />.
 
 | Download Links                                                                     |
 | ---------------------------------------------------------------------------------- |
@@ -309,7 +309,7 @@ LT  --user <username> --key <accessKey> –allowHosts google.com,apple.com,amazo
 ```
 
 **Explanation:**
-When this flag is used only requests for provided domains will be routed via tunnel and resolved from the user's network. Requests for domains other than mentioned will be resolved from LambdaTest’s network.
+When this flag is used only requests for provided domains will be routed via tunnel and resolved from the user's network. Requests for domains other than mentioned will be resolved from TestMu AI’s network.
 
 ## Tunnel Arguments
 You can find all the arguments for <BrandName /> Tunnel by running the below command in your command line:

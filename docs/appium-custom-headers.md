@@ -156,7 +156,7 @@ canonical: https://www.testmuai.com/support/docs/appium-custom-headers/
 
 Custom headers provide you the ability to keep crucial information about the request or response, such as the method, URL, and body content. You can modify the parameters of the HTTP requests delivered by your tests by manipulating with these headers, thereby around firewall restrictions.
 
-In this documentation, we will look at LambdaTest CustomHeaders, a `capability` that allows you to add custom headers to your tests and bypass firewall restrictions while performing automated browser testing.
+In this documentation, we will look at TestMu AI CustomHeaders, a `capability` that allows you to add custom headers to your tests and bypass firewall restrictions while performing automated browser testing.
 
 
 ## How to use CustomHeaders Capability on <BrandName />?
