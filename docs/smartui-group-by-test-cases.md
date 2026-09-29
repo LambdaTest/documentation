@@ -16,7 +16,7 @@ keywords:
   - bulk approve
   - smartui tab
 url: https://www.testmuai.com/support/docs/smartui-group-by-test-cases/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: smartui-group-by-test-cases/
 canonical: https://www.testmuai.com/support/docs/smartui-group-by-test-cases/
 ---
@@ -162,8 +162,8 @@ It also covers how to get **one Automation / SmartUI build** with **multiple cap
 ## Audience & Prerequisites
 
 - **Audience:** QA Engineers and Developers running automated visual tests on <BrandName />.
-- **Prerequisites (recommended — Hooks):** 
-  - **LambdaTest** username and access key: `LT_USERNAME`, `LT_ACCESS_KEY`.
+- **Prerequisites (recommended: Hooks):** 
+  - **TestMu AI** username and access key: `LT_USERNAME`, `LT_ACCESS_KEY`.
   - SmartUI project wired through **`smartUI.project`** in Java `LT:Options` (same string as **Smart UI Project Name** in the dashboard, e.g. `sample` or `new`).
   - **`smartui.takeScreenshot`** with a **`screenshotName`** per capture when you want multiple named screenshots in one run.
   - For **SmartUI CLI** static or exec workflows, a **`PROJECT_TOKEN`** from that project (often ends with `#<projectSlug>` matching the project name).
@@ -422,4 +422,4 @@ Empty test groups will automatically hide if none of their screenshots match the
 - <a href={`${BRAND_URL}/support/docs/smartui-running-your-first-project/`}>SmartUI SDK Documentation</a>
 - <a href={`${BRAND_URL}/support/docs/smartui-selenium-java-sdk/`}>SmartUI Selenium Java SDK</a>
 - <a href={`${BRAND_URL}/support/docs/smartui-cli/`}>SmartUI CLI (`capture` / `exec`)</a>
-- [LambdaTest Java Selenium sample (GitHub)](https://github.com/LambdaTest/java-selenium-sample)
+- [TestMu AI Java Selenium sample (GitHub)](https://github.com/LambdaTest/java-selenium-sample)

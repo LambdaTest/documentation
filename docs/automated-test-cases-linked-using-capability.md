@@ -136,12 +136,12 @@ const capabilities = {
 ```
 
 - `lt:Options` : A JSON object containing additional options for <BrandName /> configurations.
-- `project` : The name of the project in Test Manager where the test run should be created. If not specified, the test run will be created under **LambdaTest Default Project**.
+- `project` : The name of the project in Test Manager where the test run should be created. If not specified, the test run will be created under **TestMu AI Default Project**.
 - `tms.tc_id` : The key used to link a test case in Test Manager. Replace "TC-1470" with your desired Test Case ID.
 
 ## Specifying Target Project
 
-When you link a test case using `tms.tc_id`, a test run is automatically created with your build name. By default, this test run is created under **LambdaTest Default Project**.
+When you link a test case using `tms.tc_id`, a test run is automatically created with your build name. By default, this test run is created under **TestMu AI Default Project**.
 
 To ensure the test run is created in the correct project, use the `project` capability along with `tms.tc_id`:
 
@@ -162,7 +162,7 @@ const capabilities = {
 ```
 
 :::warning
-The `project` name must match exactly as it appears in Test Manager. If the project name is incorrect or doesn't exist, the test run will be created under **LambdaTest Default Project**.
+The `project` name must match exactly as it appears in Test Manager. If the project name is incorrect or doesn't exist, the test run will be created under **TestMu AI Default Project**.
 :::
 
 :::info NOTE
