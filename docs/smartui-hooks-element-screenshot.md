@@ -2,7 +2,7 @@
 id: smartui-hooks-element-screenshot
 title: Take a Screenshot of a Specific Element on a Webpage (SmartUI Hooks)
 sidebar_label: Element Screenshot
-description: Capture a visual baseline for a specific element on a webpage using SmartUI Hooks on LambdaTest.
+description: Capture a visual baseline for a specific element on a webpage using SmartUI Hooks on TestMu AI.
 keywords:
   - smartui hooks
   - element screenshot

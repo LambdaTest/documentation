@@ -11,7 +11,7 @@ keywords:
   - import data
   - test migration
 url: https://www.testmuai.com/support/docs/one-click-migration-from-qtest/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: one-click-migration-from-qtest/
 canonical: https://www.testmuai.com/support/docs/one-click-migration-from-qtest/
 ---
@@ -157,7 +157,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 - **Zero manual effort** — Projects, test cases, steps, and folder structures are automatically migrated.
 - **Folder hierarchy preserved** — qTest module and folder ordering is carried over into Test Manager.
 - **Custom fields carried over** — Custom fields are detected and created automatically, including dropdowns, multi-selects, user fields, checkboxes, and more.
-- **Attachments migrated** — File attachments at the test case and step level are downloaded from qTest and stored in LambdaTest. Inline base64 images in step content are uploaded and served with auto-refreshed links.
+- **Attachments migrated** — File attachments at the test case and step level are downloaded from qTest and stored in TestMu AI. Inline base64 images in step content are uploaded and served with auto-refreshed links.
 - **Jira requirement links preserved** — Linked Jira issues on test cases are migrated (requires Jira integration to be configured in <BrandName />).
 
 ---
@@ -234,7 +234,7 @@ A progress bar shows real-time migration status. You can navigate away at any ti
 | Called / shared test cases | Expanded inline into the calling test case's steps |
 | qTest ID (e.g. `TC-15`) | Stored as the test case's external ID and added as a tag |
 | Custom fields | Org-level custom fields, created automatically if absent (see field type mapping below) |
-| Attachments (test case and step level) | Downloaded from qTest and stored in LambdaTest |
+| Attachments (test case and step level) | Downloaded from qTest and stored in TestMu AI |
 | Jira requirement links | Linked issues on migrated test cases (requires Jira integration in <BrandName />) |
 | Required-field flags | Preserved on created custom fields |
 
