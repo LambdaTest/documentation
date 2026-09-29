@@ -1467,6 +1467,7 @@ module.exports = {
           { type: "doc", id: "puppeteer-mocha" },
           { type: "doc", id: "puppeteer-jest" },
           { type: "doc", id: "puppeteer-pytest-pyppeteer" },
+          { type: "doc", id: "puppeteer-codecept" },
         ],
       },
     ],
