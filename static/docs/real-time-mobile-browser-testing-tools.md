@@ -42,7 +42,7 @@ TestMu AI's network throttling feature empowers you to simulate real-world netwo
 The settings section offer the following features:
 - **Idle Timeout :** This feature allows you to set the idle timeout for your test session. The default Idle Timeout is 5 minutes and the maximum limit is 60 minutes.
 - **Time Zone :** With this feature, you can select the time zone of your preferred region that align with your testing needs.
-- **Keyboard Input** With this feature, you can change the language in your test session for a more localized testing experience.
+- **Dark Mode :** This feature allows you to test your website in dark mode and validate contrast and accessibility.
 
 ## Switch
 This feature allows you to switch between devices, browser and their OS versions without exiting your current test session.
