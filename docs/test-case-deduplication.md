@@ -1,8 +1,8 @@
 ---
 id: test-case-deduplication
-title: Find and Remove Duplicate Test Cases in Test Manager
+title: Find and Remove Duplicate Test Cases With AI Test Case Deduplication
 hide_title: true
-sidebar_label: Find & Remove Duplicates
+sidebar_label: AI Test Deduplication
 description: Scan a Test Manager project for duplicate test cases with AI, review each match side by side, and delete the duplicates you no longer need.
 keywords:
   - test case deduplication
@@ -36,7 +36,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "Find and Remove Duplicate Test Cases in Test Manager",
+          "name": "Find and Remove Duplicate Test Cases With AI Test Case Deduplication",
           "item": `${BRAND_URL}/support/docs/test-case-deduplication/`
         }]
       })
@@ -54,7 +54,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       "@type": "WebPage",
       "@id": "https://www.testmuai.com/support/docs/test-case-deduplication/"
     },
-    "headline": "Find and Remove Duplicate Test Cases in Test Manager",
+    "headline": "Find and Remove Duplicate Test Cases With AI Test Case Deduplication",
     "description": "Scan a Test Manager project for duplicate test cases with AI, review each match side by side, and delete the duplicates you no longer need.",
     "url": "https://www.testmuai.com/support/docs/test-case-deduplication/",
     "image": {
@@ -100,7 +100,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
   }) }}
 />
 
-# Find and Remove Duplicate Test Cases
+# Find and Remove Duplicate Test Cases With AI Test Case Deduplication
 
 Large test repositories accumulate duplicates over time, exact copies created by different people, and near-duplicates that describe the same behaviour in slightly different words. Once a project holds a few thousand test cases, finding them by hand stops being practical.
 

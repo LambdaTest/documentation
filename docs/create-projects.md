@@ -104,17 +104,17 @@ Test cases play a pivotal role in ensuring the systematic execution of testing a
 
 Creating projects within Test Manager is the foundational step in organizing and managing your testing activities. Projects serve as containers for your test cases, allowing you to categorize and structure your testing efforts effectively.
 
-**Steps to Create a Project**
+## How to to Create a Project
 
 1. Log in to the Test Manager and navigate to the dashboard - [http://test-manager.lambdatest.com/](https://www.testmuai.com/login/?redirectTo=http://test-manager.lambdatest.com/)
 
 2. Click on the **Create Project** button.
 
-<img loading="lazy" src={require('../assets/images/mobile-app-testing/create-project-one.webp').default} alt="Real "  className="doc_img" width="1366" height="629"/>
+<img loading="lazy" src={require('../assets/images/mobile-app-testing/create-project-one.webp').default} alt="Create Project button on the Test Manager dashboard"  className="doc_img" width="1366" height="629"/>
 
 3. Enter the **Project name**, **Description**, and **Tag(s)**. Be descriptive to ensure clarity for all team members. Click on **Create** to complete the project creation.
 
-<img loading="lazy" src={require('../assets/images/mobile-app-testing/create-project-two.webp').default} alt="Real "  className="doc_img" width="1366" height="629"/>
+<img loading="lazy" src={require('../assets/images/mobile-app-testing/create-project-two.webp').default} alt="New project form with name, description, and tags"  className="doc_img" width="1366" height="629"/>
 
 :::tip
 Projects can share test cases with each other, so one project can act as a central repository for others. To control whether a project can share or receive test cases, see [Share Test Cases Across Projects](/support/docs/share-test-cases-across-projects/#turn-on-sharing-in-project-settings).
