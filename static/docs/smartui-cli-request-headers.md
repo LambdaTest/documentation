@@ -6,7 +6,7 @@ The SmartUI CLI includes a `requestHeaders` configuration option, allowing you t
 
 By including these headers in the SmartUI CLI configuration, you can seamlessly access protected resources, enhancing the flexibility and security of your automated visual testing process.
 
-### Steps to Implement
+## Steps to Implement
 
 1.  **Locate Your Configuration File**: Open your `smartui.json` file, which should be in the root directory of your project.
 2.  **Add the `requestHeaders` Array**: If the array does not already exist, add it to the JSON structure.

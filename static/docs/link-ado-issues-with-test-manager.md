@@ -2,15 +2,13 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
-## Link Azure DevOps Issues with Test Manager
-
 Test Manager enhances its functionality by seamlessly linking test cases with Azure DevOps Work Items. This integration ensures a reliable connection between your testing activities and Azure DevOps Work Items, optimizing project management and collaboration across teams.
 
-### Prerequisites
+## Prerequisites
 - Active Microsoft Azure DevOps account
 - Appropriate permissions to access Azure DevOps projects
 
-### Initial Setup and Configuration
+## Initial Setup and Configuration
 
 > **Note:** If you have already integrated Azure DevOps with your TestMu AI account, you can skip this section and proceed directly to [Linking Azure DevOps Work Items](#linking-azure-devops-work-items)
 
@@ -20,7 +18,7 @@ Test Manager enhances its functionality by seamlessly linking test cases with Az
 
 3. Select your Azure DevOps Organization and click **Install**. Azure DevOps is now integrated with your TestMu AI account.
 
-### Linking Azure DevOps Work Items
+## Linking Azure DevOps Work Items
 
 Once the integration is complete, follow these steps to link work items with your test cases or test runs:
 

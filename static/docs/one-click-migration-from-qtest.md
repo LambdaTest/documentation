@@ -9,30 +9,30 @@ TestMu AI Test Manager supports one-click migration from qTest, allowing you to 
 - **Zero manual effort** — Projects, test cases, steps, and folder structures are automatically migrated.
 - **Folder hierarchy preserved** — qTest module and folder ordering is carried over into Test Manager.
 - **Custom fields carried over** — Custom fields are detected and created automatically, including dropdowns, multi-selects, user fields, checkboxes, and more.
-- **Attachments migrated** — File attachments at the test case and step level are downloaded from qTest and stored in LambdaTest. Inline base64 images in step content are uploaded and served with auto-refreshed links.
+- **Attachments migrated** — File attachments at the test case and step level are downloaded from qTest and stored in TestMu AI. Inline base64 images in step content are uploaded and served with auto-refreshed links.
 - **Jira requirement links preserved** — Linked Jira issues on test cases are migrated (requires Jira integration to be configured in TestMu AI).
 
 ## Prerequisites
 
-#### TestMu AI Account
+### TestMu AI Account
 An active TestMu AI account with access to Test Manager.
 
-#### qTest Account
+### qTest Account
 An active qTest account with read access to the projects you want to migrate.
 
-#### qTest Instance URL
+### qTest Instance URL
 Your qTest instance URL (e.g., `https://yourorg.qtestnet.com`).
 
-#### qTest API Token
+### qTest API Token
 To obtain your API token:
 1. Log in to your qTest instance.
 2. Navigate to your profile or account settings.
 3. Generate a new API Bearer token, or copy an existing one.
 
-#### Jira Integration in TestMu AI (Optional)
+### Jira Integration in TestMu AI (Optional)
 To migrate linked Jira requirements, the corresponding Jira instance must be integrated with TestMu AI. Without this, Jira links will not be carried over. See [TestMu AI Jira Integration](/support/docs/jira-integration/#how-to-establish-integration-with-jira-from-your-lambdatest-account) for setup steps.
 
-#### Permissions
+### Permissions
 - Your qTest account must have read access to the projects being migrated.
 - The API token must have permission to access test cases, modules, and attachments.
 
@@ -69,7 +69,7 @@ A progress bar shows real-time migration status. You can navigate away at any ti
 | Called / shared test cases | Expanded inline into the calling test case's steps |
 | qTest ID (e.g. `TC-15`) | Stored as the test case's external ID and added as a tag |
 | Custom fields | Org-level custom fields, created automatically if absent (see field type mapping below) |
-| Attachments (test case and step level) | Downloaded from qTest and stored in LambdaTest |
+| Attachments (test case and step level) | Downloaded from qTest and stored in TestMu AI |
 | Jira requirement links | Linked issues on migrated test cases (requires Jira integration in TestMu AI) |
 | Required-field flags | Preserved on created custom fields |
 

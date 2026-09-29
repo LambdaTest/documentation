@@ -18,8 +18,6 @@ caps = {
 }
 ```
 
-To utilize the **networkProfile** capability, ensure that you include `network: True` in the capabilities.
-
 ### During Test Execution
 
 - **LambdaHook:** Dynamically alter the network profile within the test session using the following LambdaHook:

@@ -451,7 +451,7 @@ await driver.execute("smartui.takeScreenshot=Screen Loaded");
    echo $LT_ACCESS_KEY
 ```
 
-4. Check network connectivity to LambdaTest
+4. Check network connectivity to TestMu AI
 
 </TabItem>
 <TabItem value='project-not-found-error' label='Project Not Found Error'>

@@ -52,6 +52,22 @@ Test instances are organized using a **Folders** sidebar on the left, reflecting
 - Within any test instance, individually update the status of each test step.
 - Add remarks or actual outcomes for manual test steps.
 
+### Read the Test Case Details During Execution
+
+A manual test instance opens on three tabs: **Test steps**, **Test case details**, and **Issues**.
+
+The **Test case details** tab shows the content of the test case you are executing, so you do not have to leave the run to read it:
+
+- **Description**, **Pre-conditions**, and **Attachments**, which you can preview or download.
+- **Status**, **Type**, **Priority**, **Automation Status**, **Tags**, and any **Custom Fields**.
+
+Fields that have no value are left out. The tab is read only: you cannot edit the test case or add attachments from here. To change any of it, open the test case from its ID in the instance header and edit it on the [Test Case Details](/support/docs/manual-test-case-creation/#test-case-details) page.
+
+The tab shows the test case **as of the version this instance is linked to**, the version badge next to the test case ID, which is not always the latest version of the test case. When you update the instance to a newer version, the tab reflects the new version along with the steps. See [Sync Test Instances](/support/docs/sync-test-instance/).
+
+**Applies to Manual Test Runs Only**
+The **Test case details** tab is available on manual test instances.
+
 ## 4. Filtering Test Instances
 
 A filter bar above the test instance list lets you narrow down a test run by:

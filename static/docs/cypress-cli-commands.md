@@ -56,17 +56,17 @@ Given below are the additional flags available with the `run` command.
 | `--version` | Show version number | Boolean |
 | `--help` | Show help | Boolean |
 | `--ccf, --cypress-config-file` | Path of the config file | String |
-| `--user, --username` | LambdaTest username | String |
-| `--ak, --access_key` | LambdaTest access key | String |
-| `--lcf, --lambdatest-config-file` | Path of the LambdaTest config file | String |
+| `--user, --username` | TestMu AI username | String |
+| `--ak, --access_key` | TestMu AI access key | String |
+| `--lcf, --lambdatest-config-file` | Path of the TestMu AI config file | String |
 | `-s, --specs` | Path of the spec file, directory, or pattern | String |
 | `--env, --environment` | Specify environment name | String |
 | `--bn, --build-name` | Set build name | String |
 | `-t, --tags` | Run tests with specific tags | String |
 | `-p, --parallels` | Number of parallel sessions | String |
 | `--envs, --env-variables` | Set environment variables before test execution | String |
-| `--tun, --tunnel` | Enable LambdaTest tunnel | String |
-| `--tname, --tunnel_name` | Set LambdaTest tunnel name | String |
+| `--tun, --tunnel` | Enable TestMu AI tunnel | String |
+| `--tname, --tunnel_name` | Set TestMu AI tunnel name | String |
 | `--brs, --browsers` | Run tests on specified browsers in format `platform:browser:version` | String |
 | `--bi, --build-identifier` | Set build identifier or build counter | String |
 | `--if, --ignore_files` | Files to ignore in project zip | String |

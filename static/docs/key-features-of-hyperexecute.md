@@ -42,6 +42,12 @@ HyperExecute provides you with the tools that you need to run your tests at the 
     Task Metrics
     Track your CPU, and Memory utilization of the virtual machines for a seamless user experience.
 
+    Workflows
+    Schedule and chain your HyperExecute jobs to automate recurring test runs and orchestrate multi-job pipelines.
+
+    Rerun Failed Tests
+    Re-execute only the failed tests from a previous job to quickly validate fixes without rerunning the entire suite.
+
 ## Availability
 
 HyperExecute is available on Windows, Linux and Mac. You can use HyperExecute in more than 60 regions that are supported by Microsoft Azure.
@@ -61,7 +67,7 @@ To ensure that your testing environment can be optimised, HyperExecute provides 
 ## Security
 HyperExecute prioritises the safety and security of your data above everything else. The entirety of your data is encrypted for the entire duration of your testing lifecycle. HyperExecute is compliant with the industry leading security standards offering you:
 
-- **Data Encryption and Compliance :** HyperExecute prioritizes data safety through full encryption, adhering to industry standards like ([SOC2, GDPR, and CCPA](https://www.testmuai.com/security)).
+- **Data Encryption and Compliance :** HyperExecute prioritizes data safety through full encryption, adhering to industry standards like ([SOC2, GDPR, and CCPA](https://www.testmuai.com/security/)).
 - **Dedicated Proxy Server Option :** Ensure secure connections by utilizing dedicated proxy servers for your testing activities.
 - **Automatic Tunnel Management :** Maintain data security for private websites with automatic tunnel management through Network Address Translation (NAT) instances.
 

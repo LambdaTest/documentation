@@ -24,6 +24,9 @@ To retire a test case without deleting it, use **Archive** in the test case's th
 
 When you select a test case, you’ll be redirected to the Test Case Details page, where you can view Test Case details such as: **Test Case Title**, **Description**, **Precondition** , **Attachments**, **System Fields**: **Type**, **Status**, **Priority**, **Tag(s)** & **Custom Fields**
 
+**Reading these details during execution**
+Testers can read the same details from a test instance without leaving the test run, on its **Test case details** tab. See [Read the Test Case Details During Execution](/support/docs/test-run-creation-and-management/#read-the-test-case-details-during-execution).
+
 ### Test Case Steps
 
 Test Steps can be accessed from the `Test Steps` section, present in the Summary Page of a Test Case.

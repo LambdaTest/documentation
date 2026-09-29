@@ -2,11 +2,11 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
-### Introduction to AI Native Command Logs Analytics
+## Introduction to AI Native Command Logs Analytics
 
 TestMu AI Analytics help you intelligently analyze your test execution steps on the platform. It provides you with the insights on the errors that are causing your test runs to fail.
 
-### Prerequisites for using Command Logs Analytics
+## Prerequisites for using Command Logs Analytics
 The following are the steps to use Command Logs Analytics:
 1. You should have a TestMu AI account. If you don't have one, you can sign up here.
 2. You should have access to the `Test Intelligence` subscription plan. You can join the waitlist [here](https://www.testmuai.com/test-intelligence).
@@ -16,7 +16,7 @@ The following are the steps to use Command Logs Analytics:
 6. Click on `Add` for the widgets required to your dashboard.
 7. Input your `Dashboard Name` and click on `Create Dashboard` to create your dashboard.
 
-### **Command Status Summary Widget**
+## **Command Status Summary Widget**
 
    **About the Widget**
 
@@ -33,7 +33,7 @@ The following are the steps to use Command Logs Analytics:
    4. Analyzing command logs status distribution
    5. Filtering and focusing on specific response codes for further investigation
 
-### **Command Error Status Trends Widget**
+## **Command Error Status Trends Widget**
 
    **About the Widget**
 
@@ -50,7 +50,7 @@ The following are the steps to use Command Logs Analytics:
    4. Comparing system performance over different periods
    5. Analyzing the frequency of retries or error status codes over time
 
-### **Command Type Trends Widget**
+## **Command Type Trends Widget**
 
    **About the Widget**
 
@@ -67,7 +67,7 @@ The following are the steps to use Command Logs Analytics:
    4. Tracking changes in command type usage over time
    5. Correlating command type usage with system performance
 
-### **Command Error Messages Categorization Widget**
+## **Command Error Messages Categorization Widget**
 
    **About the Widget**
 

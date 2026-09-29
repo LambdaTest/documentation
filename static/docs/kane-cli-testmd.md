@@ -79,7 +79,7 @@ headless: true
 | `os_version` | root | Mobile only. The device's OS version (`14`, `17.5`). Overridden by `--os-version`. Required alongside `device_name`. |
 | `chrome_profile` | root only | Named Chrome profile under `~/.testmuai/kaneai/chrome-profiles/`. |
 | `cdp_endpoint` | root only | Reuse an external Chrome over CDP. |
-| `ws_endpoint` | root only | LambdaTest / Playwright WebSocket endpoint. |
+| `ws_endpoint` | root only | TestMu AI / Playwright WebSocket endpoint. |
 | `on_lock_conflict` | root only | Policy when another user holds the lock on this test in Test Manager. See [Lock conflicts](/support/docs/kane-cli-testmd-running/#lock-conflicts). |
 
 ### Mobile Target

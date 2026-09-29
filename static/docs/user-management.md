@@ -6,7 +6,7 @@ With Organization Settings in TestMu AI, you have the ability to effortlessly in
 
 At present, TestMu AI supports the following roles:
 
-**Admin:** This role grants full access to all the features and functionalities of TestMu AI, enabling the user to administer the account effectively.
+**Admin:** This role grants full access to all the features and functionalities of TestMu AI, enabling the user to administer the account effectively. Allows organization admins to stop running tests under any user account.
 
 **User:** Users with this role have access to all the subscribed products and are able to execute and stop their own tests. However, certain Organization Settings, such as Team Management, Subscriptions & Invoices, Authentication & SSO, remain inaccessible.
 

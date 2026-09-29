@@ -26,7 +26,7 @@
 
 This documentation will act as your step-by-step guide in to perform Puppteer test with SmartUI.
 
-### Prerequisites for running SmartUI with Puppeteer
+## Prerequisites for running SmartUI with Puppeteer
 
 - Basic understanding of Puppeteer is required.
 - Go to [SmartUI](https://www.testmuai.com/login/?redirectTo=https://smartui.lambdatest.com/) and login along with your credentials.
@@ -46,7 +46,7 @@ $env:LT_USERNAME="YOUR_USERNAME"
 
 The following steps will guide you in running your first Visual Regression test on TestMu AI platform -
 
-### **Step 1:** Create a SmartUI Project
+## **Step 1:** Create a SmartUI Project
 
 The first step is to create a project with the application in which we will combine all your **builds** run on the project.
 To create a SmartUI Project, follow these steps:
@@ -57,7 +57,7 @@ To create a SmartUI Project, follow these steps:
 4. Add name of the project, approvers for the changes found, tags for any filter or easy navigation.
 5. Click on the **Submit**.
 
-### **Step 2:** Configure your test with Puppeteer Desired Capabilities
+## **Step 2:** Configure your test with Puppeteer Desired Capabilities
 
 Once you have created a SmartUI Project, you can generate screenshots by running automation scripts. Follow the below steps to successfully generate screenshots -
 
@@ -134,7 +134,7 @@ console.log("Error - ", e);
 })();
 ```
 
-### **Step 3:** Executing the SmartUI Test Suite on Cloud
+## **Step 3:** Executing the SmartUI Test Suite on Cloud
 
 Execute the test using the following command to run the test suite using `puppeteer`
 

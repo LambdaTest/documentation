@@ -97,7 +97,7 @@ KaneAI has native TOTP support, which means you can test applications protected 
 1. Start a web authoring session
 2. Type `/` and select **Add TOTP Authentication Key**
 3. Enter the Base32 secret key (the one you'd normally scan as a QR code in an authenticator app)
-4. You can also use a LambdaTest secret: `{{secret.totp_key}}`
+4. You can also use a TestMu AI secret: `{{secret.totp_key}}`
 5. Click **Save**
 6. A smart variable (e.g., `{{totp}}`) is generated
 

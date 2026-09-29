@@ -4,6 +4,8 @@
 
 This article will guide you on how does TestMu AI cloud access network restricted resources using a dedicated proxy server.
 
+Dedicated Proxy is available under a separate paid plan. Once the plan is enabled and the Dedicated Proxy is whitelisted, you can use the `dedicatedProxy: true` capability for Automation Sessions. Dedicated Proxy is enabled by default for Manual App Live Testing.
+
 ## Prerequisites
 
 - Client network resources are publicly discoverable (clientapplication.private.com) but access is restricted to the dedicated proxy.
@@ -23,5 +25,7 @@ TestMu AI provides a dedicated proxy server solution that can be whitelisted to 
 2. TestMu AI cloud then allocates a device to the user with the specified capabilities to run the user’s test on the TestMu AI cloud.
 3. This allocated device makes all the network requests via the dedicated Proxy allocated to the client. The dedicated proxy checks whether resources can be attained through the public internet or need to be fetched from the client’s network.
 4. The dedicated proxy accesses the network restricted resources by reaching out to the client’s network via the whitelisted IP.
+
+Dedicated Proxy is available under a separate paid plan. Once the plan is enabled and the Dedicated Proxy is whitelisted, you can use the `dedicatedProxy: true` capability for Automation Sessions. Dedicated Proxy is enabled by default for Manual App Live Testing.
 
 > That’s all! In case you have any questions or need any additional information, you could reach out at our **[24X7 Chat Support]** or mail us directly at support@testmuai.com.

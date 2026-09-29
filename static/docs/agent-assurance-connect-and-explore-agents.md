@@ -31,6 +31,10 @@ Rook scans deterministically first, then gives its discovery subagent read tools
 - **One candidate:** Rook asks whether to register it.
 - **Several candidates:** Choose the candidates you want.
 
+This real TUI capture shows `/explore .` finding the public triage sample and pausing for registration. Read the discovery summary before choosing **yes**; arrow keys change the choice, Enter submits it, and Esc declines. The progress line shows the current task and credit use while the footer keeps the selected project visible.
+
+After approval, wait for agent and feature analysis to finish. Review the findings, then select the resulting agent with `/agent`. Discovery writes local records; it does not mean a profile has been verified, scenarios have been generated, or a run has passed.
+
 ## What Rook Looks For
 
 Rook can identify agents from evidence including:
@@ -154,9 +158,9 @@ Rook also refuses two paths to keep read scope tight:
 
 ## Manage Multiple Agents
 
-The browser inventory shows all registered agents and their scenario and run history.
+Launch `rook` in your workspace, then enter `/agent` in the interactive TUI. The picker lists agents in the selected project. Type to filter, use the arrow keys to move, and press Enter to select an agent or Esc to go back. Check the active agent in the footer before exploring or running tests.
 
-Interactive commands:
+This saved demo has one agent. Projects containing several agents show more choices in the same picker. You can also select a known agent ID directly:
 
 ```text
 /agent
@@ -166,7 +170,6 @@ Interactive commands:
 Headless commands:
 
 ```bash
-rook agent
 rook agent
 rook agent use <id>
 ```
@@ -197,16 +200,16 @@ After exploration, run `/generate` to refresh scenarios. Rook shows a plan and n
 
 ## Review Discovered Agents Locally or Online
 
-Run `rook ui --local` to see the current workspace's **agents** list. Open an agent and scroll through its findings, features, profiles, scenarios, and runs. This does not require publishing the discovery result.
+Run `rook ui --local` to see the current workspace's **Agents** list. Open an agent and use **Summary**, **Profiles**, **Features**, **Scenarios**, and **Runs**. This does not require publishing the discovery result. See the [rollout note for earlier CLI layouts](/support/docs/rook-web-ui/#earlier-local-ui) if your screen differs.
 
 For team review, sync the reviewed definitions and run `rook ui`. In the hosted Web UI, open project → agent → **Summary**, **Versions**, or **Features**. Those screens show uploaded records, not your latest unsynchronized exploration. Neither UI performs discovery or edits the definition. See [local agents](/support/docs/rook-web-ui/#local-agent) and [hosted agent configuration](/support/docs/rook-web-ui/#agent-configuration) in the same walkthrough.
 
 ### Local UI: Discovery Findings {#local-ui-example}
 
-Open **agents → triage-service**. The local agent page shows the discovered description, findings, profile, and feature list. In this sample, findings identify the unknown-ticket error path and an unreachable search tool; review these before generating more tests.
+Open **Agents → CommerceCare → Summary** in this saved demo workspace. Read the discovered description and source **Context**, then scroll to **View Full Spec** and **View findings** to inspect the saved discovery records. Use the separate **Features** and **Profiles** tabs before generating more tests. Your workspace will show your own discovered agent.
 
 ### Hosted Web UI: Synchronized Discovery {#hosted-ui-example}
 
-Open **project → agent → Summary**. **Context** identifies the source files used for discovery; **View Full Spec** and **View findings** open uploaded artifacts when available. Changes from a new exploration are not visible here until synchronized.
+Open **project → agent → Summary**. **Context** identifies the source files used for discovery; **View Full Spec** and **View findings** open uploaded artifacts when available. Changes from a new exploration are not visible here until synchronized. Use the separate **Profiles** tab to inspect invocation hooks and phase configuration.
 
-The capture's **1%** and empty tool detail list are [known display issues](/support/docs/rook-web-ui/#screenshot-display-notes), not evidence that discovery or the smoke run failed.
+The capture's empty tool detail list conflicts with its five-tool counter. Inspect the saved specification and Versions call graph; see [screenshot display notes](/support/docs/rook-web-ui/#screenshot-display-notes). This is not evidence that discovery or the smoke run failed.

@@ -4,13 +4,13 @@
 
 Test Manager connects your testing work to the issues your team already tracks in Linear. Link a Linear issue to a test case, a test run, a test run instance, or an individual step, and the issue's current details travel with the test artifact, so you can trace a failing test back to the work item behind it without leaving Test Manager.
 
-### Before you begin
+## Before you begin
 
 - Integrate Linear with your TestMu AI account. Follow the steps in [Linear App Integration](/support/docs/linear-app-integration/).
 - Until Linear is connected, it cannot be selected as a source in the **Link Issue** dialog. The dialog shows the connection state of each tracker.
 - Searching and linking are limited to the Linear projects you selected during setup. Issues from any other project are not returned.
 
-### Linking Linear Issues in Test Manager
+## Linking Linear Issues in Test Manager
 
 Once the integration is complete, follow these steps to link issues with your test cases or test runs:
 
@@ -21,7 +21,7 @@ Once the integration is complete, follow these steps to link issues with your te
 
 3. The Linear issue from your integrated Linear project is successfully linked and listed.
 
-### What a linked Linear issue shows
+## What a linked Linear issue shows
 
 A linked issue lists its title, identifier, issue type, status, priority, creation date, and creator. Click the linked issue to open it directly in Linear.
 
@@ -34,13 +34,13 @@ Linking is repeatable and many-to-many:
 - Linking the same issue to the same test artifact again does not create a duplicate.
 - One Linear issue can be linked to any number of test cases, test runs, and instances, and one test artifact can carry any number of Linear issues.
 
-### Unlinking a Linear issue
+## Unlinking a Linear issue
 
 To **unlink an issue**, click on the unlink button located on the right side of the Linear issue.
 
 Unlinking removes the association in Test Manager only. The issue itself stays in Linear.
 
-### Behaviour in specific situations
+## Behaviour in specific situations
 
 | Situation | What happens |
 |---|---|

@@ -479,6 +479,6 @@ env | grep CI # Used to check if the CI variable is set to true or not
 set CI=true # If it's not set to true, then use this command to set as true
 ```
 
-#### Output
+### Output
 
 > 📕 Use the HyperExecute CLI's [Frequently Asked Questions](/support/docs/hyperexecute-cli-faqs/) to gain more knowledge about it.

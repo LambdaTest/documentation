@@ -25,7 +25,7 @@
 
 You can specify the environment variables that you want to use for your Cypress tests via the configuration file, via the `cypress.env.json` file, or via the TestMu AI Cypress CLI. However, if we set environment variables via both TestMu AI CLI and `cypress.env.json`, the `cypress.env.json` file will be ignored and only the variables set via CLI will be set into environment variables. If you want to understand these methods, go through the document below.
 
-### 1. Via the Configuration File
+## 1. Via the Configuration File
 
 a. **Cypress 9**
 
@@ -70,7 +70,7 @@ cy.wait(3000)
 })
 })
 ```
-### 2. Via the `cypress.env.json` File
+## 2. Via the `cypress.env.json` File
 
 ```bash
 {
@@ -80,7 +80,7 @@ cy.wait(3000)
 }
 ```
 
-### 3. Via the TestMu AI Cypress CLI
+## 3. Via the TestMu AI Cypress CLI
 
 You can also add your environment variables via the parameter `--envs` in the TestMu AI Cypress CLI.
 

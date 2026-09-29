@@ -76,13 +76,15 @@ Hooks must return actual observations. Invented usage or calls turn missing evid
 
 ### In the Local UI
 
-On a run's scenario result, **criteria** shows the expected and achieved outcomes and supporting evidence. Scroll to **sent to the agent**, **what came back**, and **files** for the request, response, and raw records. These are sections of one page, not tabs. Click a file to inspect it and use Back to return.
+On a run's scenario result, filter **Acceptance criteria** by **All**, **Pass**, **Fail**, or **Unable to Verify**. Expand a card or use **Expand all** to compare expected and achieved outcomes with supporting evidence. Choose **Request**, **Response**, **Verdict**, or **Artefacts** in the **Evidence** panel to open its drawer. Close the drawer to return to the criteria. See the [earlier layout](/support/docs/rook-web-ui/#earlier-local-ui) if your public CLI still uses scrolling sections.
 
-This view can show evidence before upload, including a local `--test` run. Refresh after files change. An absent verdict or file means it was not recorded or is unavailable; do not turn that absence into a pass. See [local navigation and files](/support/docs/rook-web-ui/#local-results).
+This view can show evidence before upload, including a local `--test` run. The redesigned viewer refreshes when workspace records change. The CommerceCare example separates an unmet response requirement from missing tool/state evidence; the hosted triage example below is a different run. An absent verdict or file means it was not recorded or is unavailable; do not turn that absence into a pass. See [local navigation and files](/support/docs/rook-web-ui/#local-results).
 
 ### In the Hosted Web UI
 
-Open the scenario **from its run**, then use **Request**, **Response**, **Verdict**, and **Artefacts**. The criterion cards show expected, achieved, evidence, and confidence where available. The scenario catalog instead shows the current definition and history.
+Open the scenario **from its run**. Read the criterion cards and filter by outcome, then select **Request**, **Response**, **Verdict**, or **Artefacts** in the **Evidence** panel to open its drawer. Close the drawer to return to the criteria. Cards show expected, achieved, evidence, and confidence where available. The scenario catalog instead shows the current definition and history.
+
+Passing criterion cards start collapsed. Click a card or **Expand all** to read its assessment. The screenshot shows the saved verdict in the evidence drawer; close the drawer to return to the cards.
 
 Only uploaded evidence is available here. Check the recorded run version and profile, not just today's agent summary. If aggregate percentages disagree with the run's counts, inspect the criterion records and local report; see the documented [screenshot display notes](/support/docs/rook-web-ui/#screenshot-display-notes).
 
@@ -125,12 +127,25 @@ Editing today's scenario or profile does not rewrite the saved input snapshots o
 
 ## Print or Export a Report
 
-Select the correct project and agent first:
+Launch `rook` in the workspace containing your saved run. In the interactive TUI, select the correct project and agent, then open the report:
+
+```text
+/project
+/agent
+/report <run-id>
+```
+
+Replace `` with the saved run's ID. `/report` without an ID reads the latest local run. If Rook asks you to sign in, use `/login` and retry the report command. Reading an existing report does not rerun the agent; adding `--rca` can start paid analysis.
+
+This is the completed report from the Rook 0.1.5 [interactive quickstart](/support/docs/agent-assurance-quickstart/), not a help screen:
+
+Read the run ID and name, execution counts, verdicts, and coverage warning together. `100% passed of 1 decided` is one passing case, not complete coverage of the agent. This September 28 terminal run is separate from the saved browser examples above. Use `/help report` for additional output and RCA options.
+
+For shell-based output or automation:
 
 ```bash
 rook project use <project-id>
 rook agent use <agent-id>
-rook runs
 rook report <run-id>
 rook report <run-id> --json
 ```

@@ -98,7 +98,7 @@ The following options are available only for KaneAI-generated test runs:
 **Device Type: Private Cloud vs Public Cloud**
 
 For organizations with a private cloud real device plan, you can choose between:
-- **Public Cloud** - Shared pool of devices available to all LambdaTest users
+- **Public Cloud** - Shared pool of devices available to all TestMu AI users
 - **Private Cloud** - Dedicated device pool exclusive to your organization
 
 **Multi-Select Support**
