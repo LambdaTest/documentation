@@ -1,6 +1,8 @@
-# TestMu AI products usage insights
+# Usage Report
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
+## TestMu AI products usage insights
 
 TestMu AI Usage Report provides comprehensive insights into your product usage. These insights help you optimize your testing efforts by providing detailed insights into your product usage, test count, and more.
 

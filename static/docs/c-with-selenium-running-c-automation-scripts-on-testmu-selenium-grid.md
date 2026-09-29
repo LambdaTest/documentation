@@ -70,6 +70,8 @@ Use the following commands to run your single and parallel tests.
 
 **Single test**
 
+The [selenium-skill](https://github.com/LambdaTest/agent-skills/tree/main/selenium-skill) is part of [TestMu AI Agent Skills](https://github.com/LambdaTest/agent-skills/) - structured packages that teach AI coding assistants how to write production-grade test automation.
+
 ```csharp
 dotnet run single
 ```

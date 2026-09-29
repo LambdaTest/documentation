@@ -97,12 +97,13 @@ Give every test instance a configuration that uses Chrome, either by picking an 
 
 ### Run with Evidence Report
 
-When both conditions are met, the saved run shows a note confirming that an Evidence Report is available, and the **Run with HyperExecute** panel offers it as the primary action.
+When both conditions are met, the saved run shows a note confirming that an Evidence Report is available, and the **Run with HyperExecute** panel defaults to Evidence Reporting.
 
-- Click **Run with Evidence Report** to execute the run and generate the Evidence Report.
-- To run the same test run with the standard report instead, open the dropdown next to the button and choose **Run with Classic Report**.
+- Under **Build Parameters**, the **Mode** setting chooses how the run executes. **Evidence Reporting** is selected by default and produces the Evidence Report.
+- To run the same test run with the standard report instead, select **Classic Reporting**.
+- Click **Execute** to start the run.
 
-If the run contains a Classic test case, or any instance is on a browser other than Chrome, the saved run flags which instances are blocking Evidence Reporting and the panel offers only **Run with Classic Report**. Adjust the test cases or the browser configuration, then reopen the panel.
+If the run contains a Classic test case, or any instance is on a browser other than Chrome, the saved run flags which instances are blocking Evidence Reporting and the run produces the Classic report. Adjust the test cases or the browser configuration, then reopen the panel.
 
 [Learn More](https://www.testmuai.com/docs/kane-cli-agent-mode#the-evidence-proof-pack)
 
@@ -146,27 +147,7 @@ A run using **Evidence Reporting** shows a different Advanced Configurations pan
 
 | Setting | Description |
 |---|---|
-| **Self-maintenance** | Turn on to have KaneAI re-author the test when a step fails, then pick one strategy. Off by default. With it off nothing is re-authored, Auto-Heal still runs, and only a step Auto-Heal cannot recover ends the run. |
-| **Adaptive Heal** | Re-author the objective that fails to replay, and every objective after it, so the run continues instead of stopping at the failure. The re-authored content is saved as a new version of the test case. |
-| **Dynamic Test** | Author the test from its objective instead of replaying the recorded steps. Every run consumes authoring credits. |
-| **Retry on Failure** | Run the whole test again from the start after it fails. Nothing about the test is changed. |
-| **Maximum Retries** | Appears under Retry on Failure. Sets how many further attempts to make, up to 5. |
-| **Auto-approve changes** | Appears under Adaptive Heal and Dynamic Test. Makes the new version current immediately instead of holding it in Version History for approval. |
-
-Only one of Adaptive Heal, Dynamic Test and Retry on Failure can be active at a time. Selecting one clears the others.
-
-**Which panel a run shows**
-A run made of **Classic** test cases shows the full panel described above. A run whose test cases are all **New Experience** on **Chrome** can choose between the Classic report and Evidence Reporting, and choosing Evidence Reporting shows the Test Configurations panel instead.
-
-See [Adaptive Heal and Dynamic Test](/support/docs/kaneai-healing-and-dynamic-test/) for what each strategy does, how it is set at the organization and project level, and how re-authored versions are reviewed.
-
-### Reports
-
-A run using **Evidence Reporting** shows a different Advanced Configurations panel. Instead of the full set of sections above, it shows **Test Configurations** only, holding the settings that decide what the run does when a step fails.
-
-| Setting | Description |
-|---|---|
-| **Self-maintenance** | Turn on to have KaneAI re-author the test when a step fails, then pick one strategy. Off by default. With it off nothing is re-authored, Auto-Heal still runs, and only a step Auto-Heal cannot recover ends the run. |
+| **Self-maintenance** | Turn on, then pick one strategy to keep the run going: **Adaptive Heal**, **Dynamic Test**, or **Retry on Failure**. Off by default. With it off, nothing is re-authored or retried, Auto-Heal still runs, and only a step Auto-Heal cannot recover ends the run. |
 | **Adaptive Heal** | Re-author the objective that fails to replay, and every objective after it, so the run continues instead of stopping at the failure. The re-authored content is saved as a new version of the test case. |
 | **Dynamic Test** | Author the test from its objective instead of replaying the recorded steps. Every run consumes authoring credits. |
 | **Retry on Failure** | Run the whole test again from the start after it fails. Nothing about the test is changed. |

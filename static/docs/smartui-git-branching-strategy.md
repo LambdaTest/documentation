@@ -39,7 +39,7 @@
 
 This is the guide to understand our Git Branching with SmartUI projects which can detect the commit history and execute the appropriate actions for your visual regression testing.
 
-### Prerequisites for running Git with SmartUI
+## Prerequisites for running Git with SmartUI
 
 - You have an account with [TestMu AI](https://www.testmuai.com/login/).
 - You must have an active [subscription](https://www.testmuai.com/pricing) plan with valid screenshots limit.
@@ -54,7 +54,7 @@ The following steps will guide you in running your Git branching Visual Regressi
 
 **Non-Baseline Branches**: A non-baseline branch(s) build is a set of screenshots which are captured using SmartUI where all the screenshots are compared against with the **Baseline** build which are matched with the screenshot names.
 
-### **Step 1**: Setup your Git Baseline branch in the Project Settings
+## **Step 1**: Setup your Git Baseline branch in the Project Settings
 
 The following are the steps to add **Baseline** branch to your `StoryBook projects` with Git commits:
 
@@ -64,7 +64,7 @@ The following are the steps to add **Baseline** branch to your `StoryBook projec
 
 Now, after the successful setup of your **Baseline** branch of your project.
 
-### **Step 2**: Execute your SmartUI CLI with Git commits
+## **Step 2**: Execute your SmartUI CLI with Git commits
 
 The following are the steps to execute your SmartUI CLI with Git commits on StoryBook projects:
 
@@ -168,11 +168,11 @@ In this workflow, if you have created a SmartUI project on the Web App and have 
 
 The following are the cases that SmartUI will update the **Baseline** build for the branch set in your SmartUI project settings:
 
-##### **Case 1**: If a build with development branch exists in build history
+#### **Case 1**: If a build with development branch exists in build history
 
 In this case, the latest build run on the SmartUI project build history will be updated as a **New Baseline Build** in which the new **Non-Baseline** builds will be compared against.
 
-##### **Case 2**: If a build with development branch does not exist in build history
+#### **Case 2**: If a build with development branch does not exist in build history
 
 In this case, the new build run with the `development` git branch name will be set to the current **Baseline** build for the SmartUI project.
 

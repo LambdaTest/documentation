@@ -1,12 +1,13 @@
-# iOS Gestures on Real Devices
+# Gesture Supported for iOS Devices
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
+## iOS Gestures on Real Devices
 When testing iOS apps on **TestMu AI Real Devices**, certain native gestures like double‑tap, triple‑tap, or multi‑finger interactions may be required to complete test flows.
 
 To make this easier, TestMu AI provides keyboard shortcuts that simulate these **gestures** without needing physical multi‑touch input. These shortcuts work on both **macOS** and **Windows**, allowing you to trigger gestures instantly during manual sessions.
 
-# Supported Gestures & Shortcuts
+## Supported Gestures & Shortcuts
 
             iOS Gesture
             Shortcut

@@ -77,10 +77,12 @@ Complete the following steps before you start Ruby automation testing with Selen
 1. Install **Ruby** and **gem** on your local system. Follow these instructions to install on different operating systems.
    * For **Windows**, download from the [Ruby Installer for Windows](https://rubyinstaller.org/downloads/).
    * For **Linux** or **Ubuntu**, run a simple apt command like below:
+
 ```bash
 sudo apt-get install ruby-full
 ```
    * For **macOS**, run a [Homebrew](https://brew.sh/) command like this:
+
 ```bash
 brew install ruby
 ```
@@ -91,12 +93,15 @@ brew install ruby
 
 Clone the repository and install dependencies.
 
+Set TestMu AI Username and Access Key in environment variables.
+
 ```bash
 git clone https://github.com/LambdaTest/ruby-selenium-sample.git
 cd ruby-selenium-sample
 ```
 
 Install selenium dependencies:
+
 ```bash
 sudo gem install selenium-webdriver
 ```
@@ -140,6 +145,8 @@ Use the TestMu AI [Capabilities Generator](https://www.testmuai.com/capabilities
 ## Step 4: Run the Test
 
 Execute the Ruby Selenium test from the command line.
+
+The [selenium-skill](https://github.com/LambdaTest/agent-skills/tree/main/selenium-skill) is part of [TestMu AI Agent Skills](https://github.com/LambdaTest/agent-skills/) - structured packages that teach AI coding assistants how to write production-grade test automation.
 
 ```bash
 ruby todo-click-test.rb

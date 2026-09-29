@@ -22,6 +22,8 @@ Each test instance card displays its current version (e.g., **v1**). A **grey** 
 
 When you open a stale test instance, a banner appears at the top indicating how many versions behind the instance is. From here, you can click **View comparison** to review the changes or **Update to vN** to sync.
 
+The instance's **Test case details** tab shows the description, pre-conditions, attachments and fields of the version the instance is still on, so you can read exactly what is being executed before deciding to sync.
+
 ## Comparing Versions
 
 Before syncing, you can review exactly what changed. Click **View comparison** from the version banner to open a side-by-side diff view. This highlights all differences between the test case version currently linked to the test instance and the latest version of the same test case, including changes to descriptions, preconditions, and individual steps.
@@ -38,7 +40,7 @@ Click **Update to Version** to confirm, or **Cancel** to keep the current versio
 
 ### After Syncing
 
-Once synced, the test instance is updated with the latest master test case content, including any changes to the title, step descriptions, expected outcomes, and step structure (added, removed, or reordered steps). The instance and all step statuses are reset to **Not Started**, and a success notification confirms the update.
+Once synced, the test instance is updated with the latest master test case content, including any changes to the title, step descriptions, expected outcomes, and step structure (added, removed, or reordered steps). The **Test case details** tab is updated to the new version at the same time, so the description, pre-conditions, attachments and fields match the steps. The instance and all step statuses are reset to **Not Started**, and a success notification confirms the update.
 
 ## Audit Log
 

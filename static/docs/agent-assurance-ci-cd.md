@@ -32,6 +32,10 @@ rook-events.ndjson"
 
 # Run Agent Assurance in CI/CD
 
+Rook's headless commands use the same discovery, generation, profile, permission, execution, judging, and evidence paths as the interactive TUI. Use them to build a release gate after you have proved the workflow interactively against the same agent and profile.
+
+## Prepare the Project Interactively
+
 ## Choose Your CI/CD Platform
 
 | Platform | What the dedicated guide provides |
@@ -49,10 +53,6 @@ The dedicated platform examples use a **strict release gate**: every explicitly 
 The [public skill's general CI recipe](https://github.com/LambdaTest/rook/blob/main/skill-installer/skills/references/ci.md) is more permissive: it reports Unable to Verify and unrunnable gaps without failing on those outcomes alone. Choose and review the policy for your application; do not silently switch policies to get a green build. All versions must check completion, use the current run ID, preserve evidence, and reject malformed or missing result fields.
 
 ## Prepare a Reviewed Suite
-
-## Prepare the Project Interactively
-
-Before enabling a pipeline:
 
 1. Run `/explore`, `/generate`, `/profile add`, and a one-scenario `/run` locally.
 2. Review the generated `.testmuai/rook/` agent records, scenarios, and profile.

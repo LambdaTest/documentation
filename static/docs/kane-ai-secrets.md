@@ -47,7 +47,7 @@ use the value of {{secrets.user.email}} in the email text field
 **Step 3:** Click on the **delete** icon to update that respective secret value.
 **Step 4:** Provide the secret value and click on the confirmation button.
 
-# Data Masking & Anonymization
+## Data Masking & Anonymization
 
 TestMu AI protects sensitive data in tests through synthetic substitution and capture-time masking.
 

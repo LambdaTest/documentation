@@ -123,7 +123,7 @@ $env:LT_ACCESS_KEY="YOUR ACCESS KEY"
 
 The following steps will guide you in running your first Visual Regression test on TestMu AI platform -
 
-### Step 1: Create a SmartUI Project
+## Step 1: Create a SmartUI Project
 
 The first step is to create a project with the application in which we will combine all your **builds** run on the project.
 To create a SmartUI Project, follow these steps:
@@ -134,7 +134,7 @@ To create a SmartUI Project, follow these steps:
 4. Add name of the project, approvers for the changes found, tags for any filter or easy navigation.
 5. Click on the **Submit**.
 
-### Step 2: Configure your test with Playwright Desired Capabilities
+## Step 2: Configure your test with Playwright Desired Capabilities
 
 Once you have created a SmartUI Project, you can generate screenshots by running automation scripts. Follow the below steps to successfully generate screenshots -
 

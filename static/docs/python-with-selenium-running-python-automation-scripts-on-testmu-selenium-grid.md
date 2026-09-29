@@ -16,12 +16,15 @@ Complete these steps before running your first Python Selenium test.
 
 Clone the repository and install dependencies.
 
+Set TestMu AI `Username` and `Access Key` in environment variables.
+
 ```bash
 git clone https://github.com/LambdaTest/python-selenium-sample
 cd python-selenium-sample
 ```
 
 Install the Selenium driver using pip:
+
 ```bash
 pip install selenium
 export PYTHONWARNINGS="ignore:Unverified HTTPS request"   //Disable ssl warning
@@ -61,6 +64,8 @@ Use the TestMu AI [Capabilities Generator](https://www.testmuai.com/capabilities
 ## Step 4: Run the Test
 
 Execute the Python Selenium test from the command line.
+
+The [selenium-skill](https://github.com/LambdaTest/agent-skills/tree/main/selenium-skill) is part of [TestMu AI Agent Skills](https://github.com/LambdaTest/agent-skills/) - structured packages that teach AI coding assistants how to write production-grade test automation.
 
 ```bash
 python google-search-lambdatest.py

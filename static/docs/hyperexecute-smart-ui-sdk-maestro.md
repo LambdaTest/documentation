@@ -153,7 +153,7 @@ From the JSON response, copy the value of `app_url`. It will be in the format `l
 
 Now, let's set up the test suite to integrate with SmartUI.
 
-#### 4.1. Install SmartUI CLI
+### 4.1. Install SmartUI CLI
 
 The SmartUI CLI is required to capture and upload screenshots. Install it in your project directory:
 
@@ -163,7 +163,7 @@ npm install @lambdatest/smartui-cli
 
 If you face any problems executing tests with SmartUI-CLI `versions >= v4.x.x`, upgrade your Node.js version to `v20.3` or above.
 
-#### 4.2. Add SmartUI Screenshots to Your Maestro Flow
+### 4.2. Add SmartUI Screenshots to Your Maestro Flow
 
 In your Maestro test YAML files (e.g., `maestro-test/test.yaml`), add the `takeScreenshot` command wherever you want to capture a visual checkpoint. The `path` specified will be used to name the screenshot in the SmartUI dashboard.
 
@@ -176,7 +176,7 @@ path: ./screenshots/home-screen
 path: ./screenshots/login-page
 ```
 
-#### 4.3. Set Up Environment Variables
+### 4.3. Set Up Environment Variables
 
 Now, you need to export your environment variables *LT_USERNAME* and *LT_ACCESS_KEY* that are available in the [TestMu AI Username and Access Key Page](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/security/username-accesskey).
 
