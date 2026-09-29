@@ -96,7 +96,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         "https://www.youtube.com/@TestMuAI"
       ]
     },
-    "dateModified": "2026-09-09T19:10:37+05:30"
+    "dateModified": "2026-09-28T12:00:00+05:30"
   }) }}
 />
 
@@ -126,6 +126,12 @@ These System Fields can have Custom Values which can be added by simply selectin
 
 :::tip
  Every new Status value of Test Runs will have a unique random color defined to it on creation. 
+:::
+
+Custom Status values of Test Runs also take part in deriving the status of a manual test instance from its step results. Once every step of an instance is executed, a step carrying a custom status makes that the status of the instance, and it is never resolved into **Passed**. See [How the Test Instance Status Is Derived](/support/docs/test-run-creation-and-management/#how-the-test-instance-status-is-derived).
+
+:::warning Deleting a Status value changes recorded results
+Deleting a Status value of Test Runs, or unlinking a project from it, resets every test instance holding that status to **Not Started** and leaves the steps that carried it unmarked. This runs in the background and lands shortly after the delete completes, so refresh the test run if you do not see it straight away. Renaming a value instead applies the new name wherever it is in use, on instances and on steps, and resets nothing.
 :::
 
 ### Custom Fields 
