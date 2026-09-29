@@ -1159,6 +1159,29 @@ module.exports = {
             ],
           },
           {
+            type: "category",
+            collapsed: true,
+            label: "Guided Tests",
+            link: { type: "doc", id: "accessibility-guided-tests" },
+            items: [
+              {
+                type: "doc",
+                label: "Keyboard",
+                id: "accessibility-guided-test-keyboard",
+              },
+              {
+                type: "doc",
+                label: "Interactive Elements",
+                id: "accessibility-guided-test-interactive-elements",
+              },
+              {
+                type: "doc",
+                label: "Images",
+                id: "accessibility-guided-test-images",
+              },
+            ],
+          },
+          {
             type: "doc",
             label: "DevTools Settings",
             id: "accessibility-devtools-settings",
