@@ -3510,6 +3510,11 @@ module.exports = {
           },
           {
             type: "doc",
+            label: "Iframes and Embeds",
+            id: "smartui-iframes-and-embedded-content",
+          },
+          {
+            type: "doc",
             label: "CustomScroll Screenshots",
             id: "smartui-customscroll",
           },
