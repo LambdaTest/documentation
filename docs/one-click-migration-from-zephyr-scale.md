@@ -12,7 +12,7 @@ keywords:
   - jira zephyr scale
   - test migration
 url: https://www.testmuai.com/support/docs/one-click-migration-from-zephyr-scale/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: one-click-migration-from-zephyr-scale/
 canonical: https://www.testmuai.com/support/docs/one-click-migration-from-zephyr-scale/
 ---
