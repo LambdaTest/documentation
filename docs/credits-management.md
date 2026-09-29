@@ -2,6 +2,7 @@
 id: credits-management
 title: Credits Usage & Management in TestMu AI
 hide_title: false
+toc_max_heading_level: 2
 sidebar_label: Credits Management
 description: Guide for usage of credits for AI features in TestMu AI
 keywords:
@@ -423,7 +424,7 @@ Users with the **Admin** role in your <BrandName /> organization.
 
 **Q: Do unused credits expire?**
 
-For free users, complimentary credits are provided for one-time usage and do not expire. While for users subscribed to <BrandName /> products, the complimentary credits get reset at the beginning of each month. Any credits explicitly purchased, do not expire.
+Each batch of credits expires on its own expiry date, shown against the batch under **Credits by Type**. Subscription (plan) credits renew every month, so they expire at the end of the period they cover and do not roll over, and a fresh grant arrives for the next month. Purchased and complimentary credits both expire after one year, measured from the date of purchase and the date of the grant. A batch issued without an expiry date never expires.
 
 **Q: Why were credits refunded after generation?**
 
