@@ -938,7 +938,12 @@ module.exports = {
               },
             ],
           },
-
+          {
+            type: "category",
+            collapsed: true,
+            label: "2026 Releases",
+            items: ["hyperexecute-release-notes-2026"],
+          },
           // 2025 releases
           {
             type: "category",
