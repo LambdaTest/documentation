@@ -109,7 +109,7 @@ Apart from these features, <BrandName /> also offers you the
 
 **Step 1:** Click on the Real Time option from your <BrandName /> dashboard. <br />
 **Step 2:** Click on the **Virtual Mobile** option in **Web Browser Testing** section. <br />
-**Step 3:** Select the **ChromeOS** option, and enter your URL in the space provided. (We are using the <BrandName /> website for the demo purpose)
+**Step 3:** Select the **ChromeOS** option, and enter your URL in the space provided. (We are using the <BrandName /> website for the demo purpose) <br />
 **Step 4:** Select your screen resolution and click on **Start** button.
 
 <video class="right-side" width="80%" controls id="vid">
@@ -188,8 +188,12 @@ The settings section offer the following features:
 ## Switch
 This feature allows you to switch between devices, browser and their OS versions without exiting your current test session.
 
+<img loading="lazy" src={require('../assets/videos/real-time/chromeos/switch.png').default} style={{ height: '350px' }}className="doc_img"/>
+
 ## End Session
 By clicking on the end session button, you can close your current test session.
+
+<img loading="lazy" src={require('../assets/videos/real-time/chromeos/end-session.png').default} style={{ height: '350px' }}className="doc_img"/>
 
 ## Advance Tools
 
@@ -201,3 +205,5 @@ Chrome DevTools offer a comprehensive suite of features to inspect and debug web
 - **DOM Breakpoints:**  Pause script execution when specific changes occur in the DOM tree for efficient debugging of dynamic content.
 - **Inspect & Modify Element Properties:**  View detailed information about each element, including type, class names, IDs, attributes, and JavaScript variable values. Modify properties for testing or temporary adjustments.
 - **Accessibility Tools:**  Identify and address potential accessibility issues with the built-in audit tool, color contrast checker, and vision deficiency simulator.
+
+<img loading="lazy" src={require('../assets/videos/real-time/chromeos/dev-tools.png').default} style={{ height: '350px' }}className="doc_img"/>
