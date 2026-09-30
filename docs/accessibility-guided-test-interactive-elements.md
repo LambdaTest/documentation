@@ -46,7 +46,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 # Interactive Elements Guided Test
 
-Screen reader users need to know what each control is and what it does. For this, each button, link, and form field must expose three things:
+Screen reader users need to know what each control is and what it does. For this, each control must expose three things. Controls include buttons, links, checkboxes, radio buttons, switches, tabs, menu items, options, combo boxes, list boxes, text boxes, search boxes, sliders, spin buttons, tree items, scroll bars, and progress bars.
 
 - **Name**: what the control is called, for example "Search".
 - **Role**: what type of control it is, for example a button or a checkbox.
@@ -68,14 +68,14 @@ All rules map to WCAG 4.1.2 (A).
 
 | Rule | Severity |
 |---|---|
-| Element Behaves Like A Control But Has No Role | Critical |
-| Interactive Element Has No Accessible Name | Critical |
-| Exposed Role Does Not Match Behaviour | Critical |
+| Element behaves like a control but has no role | Critical |
+| Interactive element has no accessible name | Critical |
+| Exposed role does not match behaviour | Critical |
 | Role attribute is not a valid ARIA role | Serious |
 | Control does not expose its required state | Serious |
 | ARIA state attribute has an invalid value | Serious |
-| Accessible Name Does Not Describe The Control | Serious |
-| Exposed State Does Not Match The Control | Serious |
+| Accessible name does not describe the control | Serious |
+| Exposed state does not match the control | Serious |
 
 ## Run the test
 
@@ -111,8 +111,13 @@ When you have answered the questions, finish the test to generate the report. Yo
 
 With **Verify with AI** on, AI reads the name of each control and decides whether it describes what the control does. You can change the answer before you finish.
 
+:::note AI credits
+**Verify with AI** will require AI credits. See [Credits Management](/support/docs/credits-management/).
+:::
+
 ## Related docs
 
 - [Guided Tests](/support/docs/accessibility-guided-tests/)
 - [Keyboard Guided Test](/support/docs/accessibility-guided-test-keyboard/)
 - [Images Guided Test](/support/docs/accessibility-guided-test-images/)
+- [Hover and Tooltips Guided Test](/support/docs/accessibility-guided-test-hover-tooltips/)

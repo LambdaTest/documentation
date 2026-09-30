@@ -1179,6 +1179,11 @@ module.exports = {
                 label: "Images",
                 id: "accessibility-guided-test-images",
               },
+              {
+                type: "doc",
+                label: "Hover and Tooltips",
+                id: "accessibility-guided-test-hover-tooltips",
+              },
             ],
           },
           {

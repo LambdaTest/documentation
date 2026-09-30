@@ -99,7 +99,11 @@ Mark images that contain text, such as banners with headings or text rendered as
 
 ### Review complex images
 
-Mark charts, graphs, and diagrams. The test checks whether each one has a long description and asks you whether the description covers the essential information.
+Mark charts, graphs, and diagrams. The test checks whether each one has a long description. For each complex image that has one, confirm that the long description conveys the essential information in the image, such as the trend in a chart or the steps in a diagram. Mark the ones that do not.
+
+### Review the text alternatives
+
+For each image you are testing, confirm that its text alternative describes what the image shows and carries the same information a sighted user gets, not just any text present. Mark the ones that do not. With **Verify with AI** on, AI gives the first answer for each image.
 
 ### Check the summary and finish
 
@@ -116,8 +120,13 @@ With **Verify with AI** on, AI looks at each image and gives the first answer to
 
 You can change any answer on the summary screen.
 
+:::note AI credits
+**Verify with AI** will require AI credits. See [Credits Management](/support/docs/credits-management/).
+:::
+
 ## Related docs
 
 - [Guided Tests](/support/docs/accessibility-guided-tests/)
 - [Keyboard Guided Test](/support/docs/accessibility-guided-test-keyboard/)
 - [Interactive Elements Guided Test](/support/docs/accessibility-guided-test-interactive-elements/)
+- [Hover and Tooltips Guided Test](/support/docs/accessibility-guided-test-hover-tooltips/)

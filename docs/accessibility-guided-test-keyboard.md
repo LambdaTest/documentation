@@ -62,14 +62,14 @@ The <BrandName /> Accessibility Toolkit is installed. See [Install Toolkit](/sup
 
 | Rule | WCAG | Severity |
 |---|---|---|
-| Keyboard Focus Is Trapped | 2.1.2 (A) | Critical |
-| Element Not Keyboard Reachable | 2.1.1 (A) | Critical |
-| Hidden Element Receives Focus | 2.4.3 (A) | Serious |
-| Focus Indicator Is Missing | 2.4.7 (AA) | Critical |
-| Form Submitted On Focus | 3.2.1 (A) | Serious |
-| New Window Launched On Focus | 3.2.1 (A) | Serious |
-| Focused Element Is Entirely Hidden By Other Content | 2.4.11 (AA) | Serious |
-| Focused Element Is Partly Hidden By Other Content | 2.4.12 (AAA) | Moderate |
+| Keyboard focus is trapped | 2.1.2 (A) | Critical |
+| Element not keyboard reachable | 2.1.1 (A) | Critical |
+| Hidden element receives focus | 2.4.3 (A) | Serious |
+| Focus indicator is missing | 2.4.7 (AA) | Critical |
+| Form submitted on focus | 3.2.1 (A) | Serious |
+| New window launched on focus | 3.2.1 (A) | Serious |
+| Focused element is entirely hidden by other content | 2.4.11 (AA) | Serious |
+| Focused element is partly hidden by other content | 2.4.12 (AAA) | Moderate |
 
 The report includes only the rules that fall within the WCAG version and level you set in [DevTools Settings](/support/docs/accessibility-devtools-settings/#wcag-version).
 
@@ -116,14 +116,14 @@ With **Verify with AI** on:
 
 You can change any AI answer on the review screen.
 
-## FAQ
+:::note AI credits
+**Verify with AI** will require AI credits. See [Credits Management](/support/docs/credits-management/).
+:::
 
-**Q: How is this different from the Keyboard Scan?**
-
-A: The [Keyboard Scan](/support/docs/accessibility-keyboard-scan/) lists tab stops and asks you to mark missed elements. The Keyboard guided test also checks keyboard traps, focus visibility, focus hidden by other content, and changes of context on focus.
 ## Related docs
 
 - [Guided Tests](/support/docs/accessibility-guided-tests/)
 - [Interactive Elements Guided Test](/support/docs/accessibility-guided-test-interactive-elements/)
 - [Images Guided Test](/support/docs/accessibility-guided-test-images/)
+- [Hover and Tooltips Guided Test](/support/docs/accessibility-guided-test-hover-tooltips/)
 - [DevTools Settings](/support/docs/accessibility-devtools-settings/)
