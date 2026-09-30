@@ -100,7 +100,14 @@ function buildCurl(endpoint, username, password, params, baseUrl) {
   let bodyLine = '';
   if (bodyProps.length > 0 || flattenedBody) {
     if (isMultipart) {
-      const bodyEntries = bodyProps.map((p) => [p.name, coerceBodyValue(params[`__body__${p.name}`] || '', p.type)]);
+      const bodyEntries = bodyProps.map((p) => {
+        const raw = params[`__body__${p.name}`];
+        if (p.format === 'binary') {
+          const isFile = typeof File !== 'undefined' && raw instanceof File;
+          return [p.name, isFile ? `@/path/to/${raw.name}` : ''];
+        }
+        return [p.name, coerceBodyValue(raw || '', p.type)];
+      });
       bodyLine = bodyEntries
         .filter(([, v]) => v)
         .map(([k, v]) => ` \\\n  --form '${k}=${v}'`)
@@ -176,7 +183,7 @@ function InlineCode({ children }) {
   );
 }
 
-function ParamField({ label, sublabel, type, required, description, value, onChange, placeholder, inputType = 'text', enumValues }) {
+function ParamField({ label, sublabel, type, format, required, description, value, onChange, placeholder, inputType = 'text', enumValues }) {
   const inputStyle = {
     width: '100%', boxSizing: 'border-box', padding: '10px 14px',
     border: '1px solid var(--ifm-color-emphasis-200)', borderRadius: '8px', fontSize: '13px',
@@ -190,8 +197,19 @@ function ParamField({ label, sublabel, type, required, description, value, onCha
   const normalizedType = (type || '').toLowerCase();
   const isBoolean = normalizedType === 'boolean';
   const isInteger = normalizedType === 'integer' || normalizedType === 'number';
+  const isFile = format === 'binary';
 
   function renderInput() {
+    if (isFile) {
+      return (
+        <input
+          type="file"
+          onChange={(e) => onChange(e.target.files && e.target.files[0] ? e.target.files[0] : null)}
+          style={{ ...inputStyle, cursor: 'pointer', padding: '8px 14px' }}
+          {...focusHandlers}
+        />
+      );
+    }
     if (enumValues && enumValues.length > 0) {
       return (
         <select
@@ -683,7 +701,7 @@ export default function TryItModal({ endpoint, onClose, selectedLang: selectedLa
                   bodyProps.map((p) => (
                     <ParamField
                       key={p.name} label={p.name}
-                      type={p.type} required={p.required}
+                      type={p.type} format={p.format} required={p.required}
                       description={p.description}
                       enumValues={p.enum}
                       value={params[`__body__${p.name}`] || ''} onChange={(v) => updateParam(`__body__${p.name}`, v)}
