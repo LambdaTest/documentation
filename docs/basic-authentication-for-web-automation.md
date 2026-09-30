@@ -137,7 +137,7 @@ Here is an example of how to use the Basic Authentication hook in Python:
 
 :::note
 * It is important to note that all three parameters (username, password, URL) are mandatory and must be passed to the script.
-* The HTTP Basic Auth hook is not supported for Playwright iOS. To handle Basic Authentication in Playwright, follow these [steps](https://stage.testmuinternal.ai/support/docs/basic-authentication-for-web-automation/#for-playwright).
+* The HTTP Basic Auth hook is not supported for Playwright iOS. To handle Basic Authentication in Playwright, follow these [steps](/support/docs/basic-authentication-for-web-automation/#for-playwright).
 :::
 
 <VerifiedTag value="Verified" />
@@ -177,7 +177,7 @@ For example, `username:password` becomes `dXNlcm5hbWU...`
 
 Basic Authentication is natively supported on Google Chrome. For manual testing on Safari, use the following workaround with the TestMu AI Tunnel.
 
-**Step 1:** Download the tunnel binary from the TestMu AI dashboard. For detailed instructions, refer to the [TestMu AI Tunnel](https://www.testmuai.com/support/docs/testmu-tunnel/) documentation.
+**Step 1:** Download the tunnel binary from the TestMu AI dashboard. For detailed instructions, refer to the [TestMu AI Tunnel](/support/docs/testmu-tunnel/) documentation.
 
 **Step 2:** After installing the tunnel binary, start the tunnel using the following command:
 
