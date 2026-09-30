@@ -137,7 +137,7 @@ Here is an example of how to use the Basic Authentication hook in Python:
 
 :::note
 * It is important to note that all three parameters (username, password, URL) are mandatory and must be passed to the script.
-* The HTTP Basic Auth hook is not supported for Playwright iOS. To handle Basic Authentication in Playwright, follow these [steps](https://www.testmuai.com/support/docs/basic-authentication-for-web-automation/#for playwright).
+* The HTTP Basic Auth hook is not supported for Playwright iOS. To handle Basic Authentication in Playwright, follow these [steps](https://stage.testmuinternal.ai/support/docs/basic-authentication-for-web-automation/#for-playwright).
 :::
 
 <VerifiedTag value="Verified" />
