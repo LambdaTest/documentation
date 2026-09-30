@@ -77,7 +77,7 @@ More guided tests will be added soon. This page will list them as they become av
 1. Open the page you want to test in Chrome.
 2. Open the **Inspect** panel and switch to the **Accessibility DevTools** tab.
 3. Open **Assisted Tests** and select the test you want to run.
-4. To get AI answers, turn on **Verify with AI** before you start.
+4. To get AI answers in the Keyboard, Interactive Elements, or Images test, turn on **Verify with AI** before you start.
 
 {/* IMAGE PLACEHOLDER: Assisted Tests list in Accessibility DevTools with Keyboard, Interactive Elements, Images, and Hover and Tooltips
 <img loading="lazy" src={require('/assets/images/accessibility-testing/guided-tests/assisted-tests-list.png').default} alt="Assisted Tests list in Accessibility DevTools" className="doc_img" width="1360" height="768" />
@@ -85,7 +85,7 @@ More guided tests will be added soon. This page will list them as they become av
 
 ## Features common to all tests
 
-- **Verify with AI.** When this switch is on, AI gives the first answer to each question. You can change any answer before you finish. Verify with AI will require AI credits. See [Credits Management](/support/docs/credits-management/).
+- **Verify with AI.** In the Keyboard, Interactive Elements, and Images tests, AI gives the first answer to each question when this switch is on. You can change any answer before you finish. Verify with AI will require AI credits. See [Credits Management](/support/docs/credits-management/). The Hover and Tooltips test checks each tooltip automatically and does not use AI.
 - **Locate elements.** Highlight one element or all elements on the page, or open an element in the DevTools **Elements** panel.
 - **Add missed elements.** If the test did not find an element, click it on the page to add it to the test.
 - **Report.** Results go into the usual accessibility report, and each issue has a **How to fix** section.

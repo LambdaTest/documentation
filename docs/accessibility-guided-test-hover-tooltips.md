@@ -56,6 +56,8 @@ The Hover and Tooltips test finds the elements on the page that open this kind o
 
 Automatic scans do not check these behaviours, because the tooltip must be opened and used to test them.
 
+The test hovers, presses keys, and checks each tooltip itself, so it does not use **Verify with AI** and does not use AI credits.
+
 ## When to use this
 
 Use this test on pages with tooltips on icons and form fields, help popovers, hover cards on user names or links, and icon-only buttons that show a label on hover.
