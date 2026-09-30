@@ -217,7 +217,7 @@ function extractRequestBody(requestBody, spec, ctx = {}) {
     const type = resolved.type || 'string';
     const format = resolved.format || null;
     const displayType = hasEnum ? `enum<${type}>` : (format ? `${type}<${format}>` : type);
-    return { name, type: displayType, required: required.includes(name), description: resolved.description || '', ...(hasEnum && { enum: resolved.enum }) };
+    return { name, type: displayType, format, required: required.includes(name), description: resolved.description || '', ...(hasEnum && { enum: resolved.enum }) };
   });
 
   // Fallback for specs that declare `type: object` without `properties` —
