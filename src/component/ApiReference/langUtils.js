@@ -75,29 +75,67 @@ export function generateCodeExample(endpoint, language, { username, password, pa
   const bodyProps = endpoint.requestBody?.properties || [];
   const contentType = endpoint.requestBody?.contentType || 'application/json';
   const isMultipart = contentType === 'multipart/form-data';
-  const bodyExample = bodyProps.length > 0
-    ? Object.fromEntries(bodyProps.map((p) => {
-        const raw = params && params[`__body__${p.name}`];
-        let val;
-        if (raw) {
-          val = coerceBodyValue(raw, p.type);
-        } else {
-          val = p.type.includes('integer') || p.type.includes('number') ? 0 :
-                p.type.includes('boolean') ? true :
-                p.type.includes('array') ? [] :
-                `<${p.name}>`;
-        }
-        return [p.name, val];
-      }))
-    : null;
+  const rawExample = endpoint.requestBody?.example;
+  const flattenedBody = !isMultipart ? detectFlattenedArrayBody(endpoint) : null;
+  const userFilledBody = flattenedBody
+    ? flattenedBody.innerFields.some((f) => params && params[`__body__${f.name}`])
+    : bodyProps.some((p) => params && params[`__body__${p.name}`]);
+  // Use the spec's example block as the body when the user hasn't typed
+  // anything — keeps nested arrays/objects that property-based synthesis
+  // would flatten to `[]` (e.g. Test Manager Create Folder's `folders[]`).
+  const useRawExample = !isMultipart && !flattenedBody && !userFilledBody
+    && rawExample != null && typeof rawExample === 'object';
+  let bodyExample;
+  if (flattenedBody) {
+    // Assemble the inner object from per-field inputs (with example fallback),
+    // wrap under the spec's array key so the snippet matches the spec shape.
+    const inner = {};
+    for (const f of flattenedBody.innerFields) {
+      const raw = params && params[`__body__${f.name}`];
+      const fromEx = flattenedBody.innerExample[f.name];
+      const val = (raw !== undefined && raw !== '')
+        ? coerceBodyValue(raw, f.type)
+        : fromEx;
+      if (val !== undefined && val !== '') inner[f.name] = val;
+    }
+    bodyExample = { [flattenedBody.wrapperKey]: [inner] };
+  } else if (useRawExample) {
+    bodyExample = rawExample;
+  } else if (bodyProps.length > 0) {
+    bodyExample = Object.fromEntries(bodyProps.map((p) => {
+      const raw = params && params[`__body__${p.name}`];
+      const fromExample = rawExample && typeof rawExample === 'object' ? rawExample[p.name] : undefined;
+      let val;
+      if (p.format === 'binary') {
+        const isFile = typeof File !== 'undefined' && raw instanceof File;
+        val = isFile ? `/path/to/${raw.name}` : `/path/to/${p.name}`;
+      } else if (raw) {
+        val = coerceBodyValue(raw, p.type);
+      } else if (fromExample !== undefined) {
+        val = fromExample;
+      } else {
+        val = p.type.includes('integer') || p.type.includes('number') ? 0 :
+              p.type.includes('boolean') ? true :
+              p.type.includes('array') ? [] :
+              `<${p.name}>`;
+      }
+      return [p.name, val];
+    }));
+  } else {
+    bodyExample = null;
+  }
 
   switch (language) {
     case 'cURL': {
       let curlBody = '';
       if (bodyExample) {
         if (isMultipart) {
-          curlBody = bodyProps.map((p) => ` \\\n  --form '${p.name}=${bodyExample[p.name]}'`).join('');
-          curlBody = ` \\\n  --header "Content-Type: multipart/form-data"` + curlBody;
+          // curl sets its own multipart boundary from --form; a manual
+          // Content-Type header here would omit it and break the request.
+          curlBody = bodyProps.map((p) => {
+            const v = p.format === 'binary' ? `@${bodyExample[p.name]}` : bodyExample[p.name];
+            return ` \\\n  --form '${p.name}=${v}'`;
+          }).join('');
         } else {
           curlBody = ` \\\n  --header "Content-Type: application/json" \\\n  --data '${JSON.stringify(bodyExample, null, 2).replace(/\n/g, '\n  ')}'`;
         }

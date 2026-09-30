@@ -96,9 +96,16 @@ function buildCurl(endpoint, username, password, params, baseUrl) {
   const bodyProps = endpoint.requestBody?.properties || [];
   const contentType = endpoint.requestBody?.contentType || 'application/json';
   let bodyLine = '';
-  if (bodyProps.length > 0) {
-    const bodyEntries = bodyProps.map((p) => [p.name, coerceBodyValue(params[`__body__${p.name}`] || '', p.type)]);
-    if (contentType === 'multipart/form-data') {
+  if (bodyProps.length > 0 || flattenedBody) {
+    if (isMultipart) {
+      const bodyEntries = bodyProps.map((p) => {
+        const raw = params[`__body__${p.name}`];
+        if (p.format === 'binary') {
+          const isFile = typeof File !== 'undefined' && raw instanceof File;
+          return [p.name, isFile ? `@/path/to/${raw.name}` : ''];
+        }
+        return [p.name, coerceBodyValue(raw || '', p.type)];
+      });
       bodyLine = bodyEntries
         .filter(([, v]) => v)
         .map(([k, v]) => ` \\\n  --form '${k}=${v}'`)
@@ -157,7 +164,7 @@ function InlineCode({ children }) {
   );
 }
 
-function ParamField({ label, sublabel, type, required, description, value, onChange, placeholder, inputType = 'text', enumValues }) {
+function ParamField({ label, sublabel, type, format, required, description, value, onChange, placeholder, inputType = 'text', enumValues }) {
   const inputStyle = {
     width: '100%', boxSizing: 'border-box', padding: '10px 14px',
     border: '1px solid var(--ifm-color-emphasis-200)', borderRadius: '8px', fontSize: '13px',
@@ -171,8 +178,19 @@ function ParamField({ label, sublabel, type, required, description, value, onCha
   const normalizedType = (type || '').toLowerCase();
   const isBoolean = normalizedType === 'boolean';
   const isInteger = normalizedType === 'integer' || normalizedType === 'number';
+  const isFile = format === 'binary';
 
   function renderInput() {
+    if (isFile) {
+      return (
+        <input
+          type="file"
+          onChange={(e) => onChange(e.target.files && e.target.files[0] ? e.target.files[0] : null)}
+          style={{ ...inputStyle, cursor: 'pointer', padding: '8px 14px' }}
+          {...focusHandlers}
+        />
+      );
+    }
     if (enumValues && enumValues.length > 0) {
       return (
         <select
@@ -551,16 +569,54 @@ export default function TryItModal({ endpoint, onClose, selectedLang: selectedLa
                 title="Body"
                 description={endpoint.requestBody.description || null}
               >
-                {bodyProps.map((p) => (
-                  <ParamField
-                    key={p.name} label={p.name}
-                    type={p.type} required={p.required}
-                    description={p.description}
-                    enumValues={p.enum}
-                    value={params[`__body__${p.name}`] || ''} onChange={(v) => updateParam(`__body__${p.name}`, v)}
-                    placeholder={(p.type || '').toLowerCase().includes('array') ? 'e.g. ["val1", "val2"] or val1, val2' : undefined}
-                  />
-                ))}
+                {variants && (
+                  <div style={{
+                    display: 'flex', gap: '6px', padding: '8px 20px 0', borderBottom: '1px solid var(--ifm-color-emphasis-200)',
+                  }}>
+                    {variants.map((v, idx) => {
+                      const active = idx === selectedVariantIdx;
+                      return (
+                        <button
+                          key={v.name}
+                          onClick={() => setSelectedVariantIdx(idx)}
+                          style={{
+                            padding: '8px 14px', fontSize: '13px', fontWeight: active ? 600 : 500,
+                            border: 'none', borderBottom: `2px solid ${active ? '#ED5F00' : 'transparent'}`,
+                            background: 'transparent', cursor: 'pointer',
+                            color: active ? '#ED5F00' : 'var(--ifm-color-emphasis-700)',
+                            fontFamily: 'inherit', marginBottom: '-1px',
+                          }}
+                        >
+                          {v.name}
+                        </button>
+                      );
+                    })}
+                  </div>
+                )}
+                {flattenedBody ? (
+                  flattenedBody.innerFields.map((f) => (
+                    <ParamField
+                      key={f.name}
+                      label={f.name}
+                      type={f.type}
+                      required={f.required}
+                      description={f.description}
+                      value={params[`__body__${f.name}`] || ''}
+                      onChange={(v) => updateParam(`__body__${f.name}`, v)}
+                    />
+                  ))
+                ) : (
+                  bodyProps.map((p) => (
+                    <ParamField
+                      key={p.name} label={p.name}
+                      type={p.type} format={p.format} required={p.required}
+                      description={p.description}
+                      enumValues={p.enum}
+                      value={params[`__body__${p.name}`] || ''} onChange={(v) => updateParam(`__body__${p.name}`, v)}
+                      placeholder={(p.type || '').toLowerCase().includes('array') ? 'e.g. ["val1", "val2"] or val1, val2' : undefined}
+                    />
+                  ))
+                )}
               </CollapsibleSection>
             )}
           </div>
