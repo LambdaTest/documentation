@@ -92,7 +92,7 @@ canonical: https://www.testmuai.com/support/docs/hyperexecute-release-notes/
         "https://www.youtube.com/@TestMuAI"
       ]
     },
-    "dateModified": "2026-09-09T19:10:37+05:30"
+    "dateModified": "2026-09-29T19:10:37+05:30"
   }) }}
 />
 HyperExecute is an AI Native Test Orchestration Cloud Platform, enabling test automation teams worldwide to achieve an accelerated time to market by providing JIT (Just-in-time) testing infrastructure that offers enhanced test execution speeds, smart test orchestration, detailed execution logs and much more.
@@ -112,6 +112,80 @@ HyperExecute is an AI Native Test Orchestration Cloud Platform, enabling test au
 | Release Number | Release Date |
 |----------------|--------------|
 | [Version 0.2.249](/support/docs/hyperexecute-cli-release-notes-0-2-249) | January 13, 2025|
+
+### 2026 releases
+#### September, 2026
+| Release Number | Release Date |
+|----------------|--------------|
+| [Version 3.5.7](/support/docs/hyperexecute-release-notes-2026/#version-357) | September 21, 2026|
+| [Version 3.5.6](/support/docs/hyperexecute-release-notes-2026/#version-356) | September 14, 2026|
+| [Version 3.5.5](/support/docs/hyperexecute-release-notes-2026/#version-355) | September 07, 2026|
+
+#### August, 2026
+| Release Number | Release Date |
+|----------------|--------------|
+| [Version 3.5.4](/support/docs/hyperexecute-release-notes-2026/#version-354) | August 31, 2026|
+| [Version 3.5.3](/support/docs/hyperexecute-release-notes-2026/#version-353) | August 24, 2026|
+| [Version 3.5.2](/support/docs/hyperexecute-release-notes-2026/#version-352) | August 17, 2026|
+| [Version 3.5.1](/support/docs/hyperexecute-release-notes-2026/#version-351) | August 10, 2026|
+| [Version 3.5.0](/support/docs/hyperexecute-release-notes-2026/#version-350) | August 03, 2026|
+
+#### July, 2026
+| Release Number | Release Date |
+|----------------|--------------|
+| [Version 3.4.9](/support/docs/hyperexecute-release-notes-2026/#version-349) | July 27, 2026|
+| [Version 3.4.8](/support/docs/hyperexecute-release-notes-2026/#version-348) | July 20, 2026|
+| [Version 3.4.7](/support/docs/hyperexecute-release-notes-2026/#version-347) | July 13, 2026|
+| [Version 3.4.6](/support/docs/hyperexecute-release-notes-2026/#version-346) | July 06, 2026|
+
+#### June, 2026
+| Release Number | Release Date |
+|----------------|--------------|
+| [Version 3.4.5](/support/docs/hyperexecute-release-notes-2026/#version-345) | June 29, 2026|
+| [Version 3.4.4](/support/docs/hyperexecute-release-notes-2026/#version-344) | June 22, 2026|
+| [Version 3.4.3](/support/docs/hyperexecute-release-notes-2026/#version-343) | June 15, 2026|
+| [Version 3.4.2](/support/docs/hyperexecute-release-notes-2026/#version-342) | June 08, 2026|
+| [Version 3.4.1](/support/docs/hyperexecute-release-notes-2026/#version-341) | June 01, 2026|
+
+#### May, 2026
+| Release Number | Release Date |
+|----------------|--------------|
+| [Version 3.4.0](/support/docs/hyperexecute-release-notes-2026/#version-340) | May 25, 2026|
+| [Version 3.3.9](/support/docs/hyperexecute-release-notes-2026/#version-339) | May 18, 2026|
+| [Version 3.3.8](/support/docs/hyperexecute-release-notes-2026/#version-338) | May 11, 2026|
+| [Version 3.3.7](/support/docs/hyperexecute-release-notes-2026/#version-337) | May 04, 2026|
+
+#### April, 2026
+| Release Number | Release Date |
+|----------------|--------------|
+| [Version 3.3.6](/support/docs/hyperexecute-release-notes-2026/#version-336) | April 27, 2026|
+| [Version 3.3.5](/support/docs/hyperexecute-release-notes-2026/#version-335) | April 20, 2026|
+| [Version 3.3.4](/support/docs/hyperexecute-release-notes-2026/#version-334) | April 13, 2026|
+| [Version 3.3.3](/support/docs/hyperexecute-release-notes-2026/#version-333) | April 06, 2026|
+
+#### March, 2026
+| Release Number | Release Date |
+|----------------|--------------|
+| [Version 3.3.2](/support/docs/hyperexecute-release-notes-2026/#version-332) | March 30, 2026|
+| [Version 3.3.1](/support/docs/hyperexecute-release-notes-2026/#version-331) | March 23, 2026|
+| [Version 3.3.0](/support/docs/hyperexecute-release-notes-2026/#version-330) | March 16, 2026|
+| [Version 3.2.9](/support/docs/hyperexecute-release-notes-2026/#version-329) | March 09, 2026|
+| [Version 3.2.8](/support/docs/hyperexecute-release-notes-2026/#version-328) | March 02, 2026|
+
+#### February, 2026
+| Release Number | Release Date |
+|----------------|--------------|
+| [Version 3.2.7](/support/docs/hyperexecute-release-notes-2026/#version-327) | February 23, 2026|
+| [Version 3.2.6](/support/docs/hyperexecute-release-notes-2026/#version-326) | February 16, 2026|
+| [Version 3.2.5](/support/docs/hyperexecute-release-notes-2026/#version-325) | February 09, 2026|
+| [Version 3.2.4](/support/docs/hyperexecute-release-notes-2026/#version-324) | February 02, 2026|
+
+#### January, 2026
+| Release Number | Release Date |
+|----------------|--------------|
+| [Version 3.2.3](/support/docs/hyperexecute-release-notes-2026/#version-323) | January 26, 2026|
+| [Version 3.2.2](/support/docs/hyperexecute-release-notes-2026/#version-322) | January 19, 2026|
+| [Version 3.2.1](/support/docs/hyperexecute-release-notes-2026/#version-321) | January 12, 2026|
 
 ### 2025 releases
 #### December, 2025

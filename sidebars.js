@@ -326,6 +326,7 @@ module.exports = {
         label: "Release Notes",
         items: [
           "hyperexecute-release-notes",
+          "hyperexecute-release-notes-2026",
           "hyperexecute-release-notes-2025",
           "hyperexecute-release-notes-2024",
           "hyperexecute-release-notes-2023",
