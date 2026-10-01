@@ -97,7 +97,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         "https://www.youtube.com/@TestMuAI"
       ]
     },
-    "dateModified": "2026-07-24T18:03:55+05:30"
+    "dateModified": "2026-09-30T19:28:43+05:30"
   }) }}
 />
 
@@ -125,6 +125,12 @@ A single Vapi assistant ships across surfaces. Generate scenarios from the syste
 - **Phone** covers inbound and outbound callers over the phone network: DTMF entry, transfers, voicemail handling, and carrier latency. Setup: [phone agent testing](/support/docs/phone-agent/).
 - **Voice** reaches the assistant over a direct audio stream rather than a phone number, with the endpoint profile created using REST API or WebSocket. It isolates the speech pipeline, so STT and TTS accuracy, turn-taking, and interruption handling get tested without telephony noise. Setup: [voice agent testing](/support/docs/voice-agent/).
 - **Chat** runs text conversations through Vapi's Chat API, catching reasoning, tool call, and grounding failures, and can run on every commit. Setup: [chat agent testing](/support/docs/chat-agent/).
+
+## How do you check which tools a Vapi assistant actually called?
+
+---
+
+A call transcript shows what the assistant said, not which tools it ran. Connect your Vapi assistant in the **Integrations** tab of a Phone Caller agent with your **Vapi Auth API Key** and **Vapi Agent ID** (plus the optional **Vapi Public Key** for WebRTC connections), and TestMu AI imports the prompt and tool catalog, then marks each tool a scenario expects as **Called** or **Not Called** after every test call. For Vapi, the integration can also keep the imported prompt in sync with the live assistant (**Auto-sync Prompts**) and pull real production calls into the same analysis view (**Auto-fetch Production Calls**). See [voice agent integrations](/support/docs/voice-agent-integrations/) for the setup.
 
 ## Where do Vapi test runs go wrong?
 
