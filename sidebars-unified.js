@@ -130,7 +130,12 @@ const backToDocs = {
 };
 const TestManagerSidebar = [backToDocs, ...items(s.TestManagerSidebar)];
 
+// Some shared docs (e.g. mute-test-scenarios) set `displayed_sidebar: SeleniumTestingSidebar`
+// in frontmatter, so that name must resolve to a real sidebar here.
+const SeleniumTestingSidebar = [backToDocs, ...items(s.SeleniumTestingSidebar)];
+
 module.exports = {
   docsSidebar,
   TestManagerSidebar,
+  SeleniumTestingSidebar,
 };
