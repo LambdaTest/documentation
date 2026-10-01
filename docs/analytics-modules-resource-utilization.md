@@ -96,7 +96,7 @@ import CookieTrackingLogin from '@site/src/component/CookieTracking';
         "https://www.youtube.com/@TestMuAI"
       ]
     },
-    "dateModified": "2026-05-29T18:18:43+05:30"
+    "dateModified": "2026-10-01T12:00:00+05:30"
   }) }}
 />
 
@@ -158,7 +158,7 @@ The SubOrg Concurrency Trends widget provides concurrency utilization data at th
 
 ## Custom Concurrency Trends
 
-The Custom Concurrency Trends widget visualizes queued and running test concurrency over time for custom KPIs. It highlights peak usage trends with clear visibility into maximum concurrency levels and their corresponding timestamps for the selected KPI.
+The Custom Concurrency Trends widget visualizes queued and running concurrency over time, for your whole organization or broken down by a KPI such as project, browser, or OS. Each point shows the peak number of queued and running items in that interval, and you can click any bar to see exactly which tasks or tests were behind it.
 
 <img loading="lazy" src={require('../assets/images/analytics/custom-concurrency-trends.webp').default} alt="Custom Concurrency Trends Widget" width="768" height="373" className="doc_img"/>
 
@@ -166,19 +166,42 @@ Unlike the standard Concurrency Trends widgets, Custom Concurrency Trends allows
 
 ### Key Features
 
-- **Stacked Visualization**: View concurrency data as stacked bar charts or stacked area charts
-- **KPI-based Segmentation**: Analyze concurrency trends grouped by custom dimensions
-- **Queued vs In-Use Metrics**: Track both queued and running sessions separately
-- **Peak Usage Identification**: Easily identify periods of maximum resource utilization
-- **Flexible Time Range**: Analyze trends across daily, weekly, or custom time periods
+- **Stacked Visualization**: View concurrency data as stacked bar charts or stacked area charts. In-Use is stacked at the bottom and Queued on top, the same as the Concurrency Trends widget.
+- **Whole-organization or KPI view**: See one combined series for the whole organization, or break it down by project, browser, or OS.
+- **Queued vs In-Use Metrics**: Track queued and running concurrency separately.
+- **Peak Usage Identification**: Each point is the peak of its interval, so spikes are never averaged away.
+- **Drilldown**: Click a bar to list the tasks or tests that were queued or running at that peak, or at any time in that interval.
+- **Flexible Time Range**: Analyze trends across daily, weekly, or custom time periods.
+
+### How Concurrency Is Counted
+
+The widget counts differently depending on the product, so that the numbers match how each product queues work:
+
+| Product | What is counted | Queued | In Use (running) |
+|---------|-----------------|--------|------------------|
+| HyperExecute | **Tasks** | From when the task is created until it starts running (or until it ends, for a task that never started) | From when the task starts running until it ends |
+| Web Automation, App Automation | **Tests** | From when the test is created until it starts | From when the test starts until it ends |
+
+HyperExecute counts tasks because concurrency in HyperExecute is reserved per task: a task's tests do not exist until the task starts running, so counting tests would hide the time your work spent waiting in the queue. A task created up to 2 days before your selected time range that is still queued or running inside it is included.
+
+For Web and App Automation, tests that ended as **Lambda Error**, **Cancelled**, **Queue Timeout**, or **Error** are not counted. HyperExecute counts every task, including cancelled and queue-timeout tasks, because those are often the ones that waited longest.
+
+:::note Reading stacked bars
+Each bar stacks that interval's **peak** In-Use value and its **peak** Queued value. The two peaks can occur at different moments within the interval, so the total height of a bar is not the load at a single instant. To see the queue peak, read the Queued segment on its own, or hover over it.
+:::
 
 ### Supported KPIs
 
-| KPI | Status |
-|-----|--------|
-| Project Name | Available |
-| Browser | Coming Soon |
-| OS | Coming Soon |
+| KPI | Web Automation | App Automation | HyperExecute |
+|-----|----------------|----------------|--------------|
+| Project Name | Yes | Yes | Yes |
+| Browser | Yes | No | No |
+| OS | Yes | Yes | Yes |
+| None (whole org) | Yes | Yes | Yes |
+
+**None (whole org)** shows one Queued series and one In-Use series for your entire organization, which is the best view for spotting overall queue build-ups. Its legend reads **Tasks - Queued** and **Tasks - In-Use** on HyperExecute, and **Tests - Queued** and **Tests - In-Use** on Web and App Automation. When grouped by a KPI, each value gets its own pair of series, named after the value (for example, **Checkout - Queued** and **Checkout - In-Use**).
+
+HyperExecute does not offer Browser, because a single task can run tests on several browsers. A HyperExecute widget that was previously saved with Browser shows the whole organization instead.
 
 ### How to Create a Dashboard with Custom Concurrency Trends
 
@@ -186,7 +209,7 @@ Unlike the standard Concurrency Trends widgets, Custom Concurrency Trends allows
 
 **Step 2:** Click on the **+ Create New** button and select **Pre-built Widgets**.
 
-**Step 3:** Select your product (Web Automation, App Automation, HyperExecute, Real Time, Real Device, Smart UI, Accessibility, or Test Manager).
+**Step 3:** Select your product: **Web Automation**, **App Automation**, or **HyperExecute**.
 
 **Step 4:** From the widget list, select **Custom Concurrency Trends**, enter a Dashboard Name, and click **Create Dashboard**.
 
@@ -202,7 +225,7 @@ Click on the three-dot menu (⋯) on the widget and select **Configure** to cust
 | Filter Category | Filter Options |
 |-----------------|----------------|
 | General | Project Names, Build Names, Test Names |
-| Status | Test execution status |
+| Status | Test execution status. On HyperExecute, this is the **task** status. |
 | Browser & OS | Browser, Operating System |
 | Users | Users, Groups, Teams |
 | SubOrgs | Sub-organizations |
@@ -211,14 +234,14 @@ Click on the three-dot menu (⋯) on the widget and select **Configure** to cust
 #### Display Options
 
 - **Graph Type**: Stacked Area or Stacked Bar (default)
-- **Concurrency KPI**: Project Name
+- **Concurrency KPI**: Project Name (default), Browser, OS, or None (whole org). See [Supported KPIs](#supported-kpis).
 - **Select legends to show**: In Use, Queued (both selected by default)
 
 ### Recommended Usage
 
 #### Viewing Multiple Dimensions (All Projects)
 
-When visualizing concurrency trends across all dimensions (e.g., all projects at once), display **either In-Use or Queued**, not both simultaneously. This provides a cleaner view for comparing usage patterns across different projects.
+When visualizing concurrency trends across all dimensions (e.g., all projects at once), display **either In-Use or Queued**, not both simultaneously. This provides a cleaner view for comparing usage patterns across different projects. To see the organization's total queue instead, set **Concurrency KPI** to **None (whole org)**.
 
 **How to configure:**
 1. Open **Configure Widget** > **Display Options**
@@ -237,8 +260,48 @@ When focusing on a single dimension (e.g., one specific project), keep **both In
 3. Under **Display Options**, ensure both "In Use" and "Queued" are selected in **Select legends to show**
 4. Click **Apply Filters**
 
-:::info Coming Soon
-Drilldown functionality for Custom Concurrency Trends widget is coming soon. This will allow you to click through to individual test details from the aggregated concurrency view.
+### Drilldown
+
+In the **Stacked Bar** view, click the **Queued** or **In-Use** segment of any bar to open the drilldown. It lists the HyperExecute tasks, or the Web and App Automation tests, behind that segment.
+
+#### Choose the time window
+
+Use the **Show** dropdown at the top of the drilldown:
+
+- **At peak** (default): the tasks or tests that were queued (or running) at the bar's peak moment. The count matches the bar's value.
+- **Whole bucket**: every task or test that was queued (or running) at any time during that interval.
+- **Selected range**: shown after you pick a range in the date picker. It lists everything queued (or running) during that range. A range longer than 93 days is shortened to its last 93 days.
+
+Hover over the info icon next to the count to see exactly which window is shown, for example *"Tasks queued at 2026-09-10 16:09:59, the peak of this bucket."*
+
+#### HyperExecute: task rows
+
+Each row shows:
+
+- **Task**: the task number as HyperExecute shows it (for example, **Task #6**), or **Global Pre Task**, **Discovery Task**, or **Global Post Task**. Click it to open the task in HyperExecute.
+- **Job #**: click to open the job in HyperExecute.
+- **Project**, and the browser, OS, resolution, and device of the task's tests.
+- **Queued** time: hover over it to see when the task entered the queue and when it left (**Queue started … · Queue ended …**).
+- **Ran** time: hover over it to see when the task started and ended.
+- The time the task was created, and the job labels.
+
+Filters: **Status** (task status), **Project**, **Users**, and **Job Labels**.
+
+#### Web and App Automation: test rows
+
+Each row matches the Test Summary drilldown: test status and name, build, browser or device, OS, resolution, duration, smart tags, user tags, and remarks. Failed tests have **Choose Test Failure Type** and **Generate RCA**. A **Queued** item shows how long the test waited; hover over it to see when it was created and when it started.
+
+The header shows **Avg Run Time** and **Max. Run Time**. Filters: **Status**, **Test Name**, **Builds**, **Browsers**, **OS**, and **Project**.
+
+#### Filters, sorting, and export
+
+- When you click a series grouped by Project (or by Browser or OS on Web and App Automation), that value is pre-selected in the matching filter. The filter still lists every value in the widget's date range, so you can widen or change the selection, or reset it.
+- On HyperExecute, a series grouped by OS has no OS filter in the drilldown; the rows are limited to the clicked OS automatically.
+- Sort by **Date Ascending** or **Date Descending**.
+- Use **Export As > CSV** to download up to 1,000 rows of the current view.
+
+:::note
+The drilldown lists up to the first 10,000 rows of a window. Drilldown is not available on shared dashboards.
 :::
 
 ---
