@@ -103,7 +103,6 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 />
 This document outlines how to leverage features like mark as bug, changing IP geolocation, in-depth device logs and network logs, etc for your Real Time Web Browser testing.
 
-Apart from these features, <BrandName /> also offers you the 
 
 ## Steps to start your ChromeOS Web Browser Testing
 
