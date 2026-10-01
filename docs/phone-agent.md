@@ -97,7 +97,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         "https://www.youtube.com/@TestMuAI"
       ]
     },
-    "dateModified": "2026-09-04T12:50:18+05:30"
+    "dateModified": "2026-09-30T19:28:43+05:30"
   }) }}
 />
 
@@ -123,6 +123,12 @@ Phone testing runs in two modes, both scored with the same 30+ metrics.
 
 **Shared capabilities.** Phone agents also support test suites, agent profiles, a Green, Yellow, or Red go-live assessment, and cron-based scheduled runs. See the [inbound](/support/docs/inbound-phone-agent/) and [outbound](/support/docs/outbound-phone-agent/) guides for the direction-specific workflow.
 
+**Custom metrics.** Define plain-language checks for your own business rules, such as whether the agent asked for a PIN before changing an address. Each check is graded on every call of the scenarios you attach it to. See [custom metrics for phone agents](/support/docs/phone-agent-custom-metrics/).
+
+**Voice platform integrations.** If your agent runs on ElevenLabs, Retell, or Vapi, connect it in the **Integrations** tab to import its prompt and tool catalog and to see which tools it actually called on each test call. See [voice agent integrations](/support/docs/voice-agent-integrations/).
+
+**Performance testing.** Hold a target number of concurrent calls to your agent for a set period and measure load delivery, reliability, and response latency under load. See [phone agent performance testing](/support/docs/phone-agent-performance-testing/).
+
 ## Metrics
 
 ---
@@ -147,3 +153,6 @@ Phone tests run from the dashboard or the CLI, driven by scenarios grouped into 
 
 - See how to [test an inbound phone agent](/support/docs/inbound-phone-agent/) step by step.
 - See how to [test an outbound phone agent](/support/docs/outbound-phone-agent/) step by step.
+- See how to [grade your own business rules with custom metrics](/support/docs/phone-agent-custom-metrics/).
+- See how to [connect ElevenLabs, Retell, or Vapi agents](/support/docs/voice-agent-integrations/) for tool call validation.
+- See how to [load test a phone agent](/support/docs/phone-agent-performance-testing/) with concurrent calls.

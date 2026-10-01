@@ -97,7 +97,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         "https://www.youtube.com/@TestMuAI"
       ]
     },
-    "dateModified": "2026-07-24T18:03:55+05:30"
+    "dateModified": "2026-09-30T19:28:43+05:30"
   }) }}
 />
 
@@ -124,6 +124,12 @@ ElevenLabs deploys one agent configuration across surfaces. Generate scenarios f
 - **Phone** covers inbound and outbound callers over native telephony, Twilio, or a SIP trunk: DTMF entry, transfers, voicemail handling, and carrier latency. Setup: [phone agent testing](/support/docs/phone-agent/).
 - **Voice** reaches the agent over a direct audio stream rather than a phone number, using WebRTC or WebSocket. It isolates the speech pipeline, so STT and TTS accuracy, turn-taking, and interruption handling get tested without telephony noise. Setup: [voice agent testing](/support/docs/voice-agent/).
 - **Chat** runs text-only conversations, either configured that way or forced with a runtime override, over WebSocket. It skips every audio metric and scores logic, tool calls, grounding, and safety, and can run on every commit. Setup: [chat agent testing](/support/docs/chat-agent/).
+
+## How do you check which tools an ElevenLabs agent actually called?
+
+---
+
+A call transcript shows what the agent said, not which tools it ran. Connect your ElevenLabs agent in the **Integrations** tab of a Phone Caller agent with your **ElevenLabs API Key** and **ElevenLabs Agent ID**, and TestMu AI imports the agent's prompt and tool catalog, then marks each tool a scenario expects as **Called** or **Not Called** after every test call. See [voice agent integrations](/support/docs/voice-agent-integrations/) for the setup.
 
 ## What goes wrong in an ElevenLabs test?
 
