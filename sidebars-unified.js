@@ -162,6 +162,10 @@ const SettingsAndSecuritySidebar = [
   },
 ];
 
+// Some shared docs (e.g. mute-test-scenarios) set `displayed_sidebar: SeleniumTestingSidebar`
+// in frontmatter, so that name must resolve to a real sidebar here.
+const SeleniumTestingSidebar = [backToDocs, ...items(s.SeleniumTestingSidebar)];
+
 module.exports = {
   docsSidebar,
 
@@ -194,19 +198,5 @@ module.exports = {
   AgentTestingSidebar,
   RealDeviceSidebar,
   TestManagerSidebar,
-  MCPServerSidebar,
-  IntegrationsSidebar,
-  AccessibilityTestingSidebar,
-  LocalhostTestingSidebar,
-  SettingsAndSecuritySidebar,
-
-  // Insights
-  InsightsSidebar,
-
-  // Other Docs
-  VisualUITestingSidebar,
-  LTBrowserSidebar,
-  MigrationGuideSidebar,
-  ConcurrencyWidgetSidebar,
-  TestLogsSidebar,
+  SeleniumTestingSidebar,
 };
