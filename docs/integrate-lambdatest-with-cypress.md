@@ -178,6 +178,8 @@ You can find the record command for any project later from the **Projects** page
 
 When you create the project, Cypress Cloud also generates a unique `projectId`. Add it to the `cypress.config.js` file of your project so each recorded run is linked to the correct project:
 
+<VerifiedTag value="Verified" />
+
 ```javascript
 const { defineConfig } = require('cypress')
 
@@ -241,6 +243,8 @@ It provides structured guidance for:
 ***
 
 Clone the agent-skills repository and copy the cypress-skill into your tool's skills directory:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 # Clone the repo and copy the skill you need

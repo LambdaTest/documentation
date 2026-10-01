@@ -264,12 +264,16 @@ You can run this demo in a browser-based workspace without setting up Python loc
 
 * After the Gitpod session launches, navigate to the terminal and run the following commands to save your [TestMu AI credentials](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/details/profile) to Gitpod as environment variables.
 
+<VerifiedTag value="Verified" />
+
 ```bash
 eval $(gp env -e LT_USERNAME=******)
 eval $(gp env -e LT_ACCESS_KEY=******)
 ```
 
 * If you are unsure where to find them, see [how to access your TestMu AI credentials](/support/docs/using-environment-variables-for-authentication-credentials/). If you start a new terminal in Gitpod, run the following command to reset the environment variables.
+
+<VerifiedTag value="Verified" />
 
 ```bash
 eval $(gp env -e)
@@ -303,6 +307,8 @@ It provides structured guidance for the following areas:
 ***
 
 Clone the agent skills repository and copy the Pytest Agent Skill into your tool's skills directory.
+
+<VerifiedTag value="Verified" />
 
 ```bash
 # Clone the repo and copy the skill you need

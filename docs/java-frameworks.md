@@ -185,6 +185,8 @@ java -classpath ".:/path/to/selenium/jarfile:" JavaTodo
 
 Every framework authenticates the same way: your Username and Access Key are passed in the grid URL. Set them as environment variables so you don't hard-code them. Pick your operating system:
 
+<VerifiedTag value="Verified" />
+
 <Tabs className="docs__val" groupId="os">
 
 <TabItem value="macos" label="macOS / Linux" default>
@@ -259,6 +261,8 @@ The **Java SDK** is the zero-code option: it runs your **existing** TestNG tests
 
 1. Add the SDK dependency and agent to your `pom.xml` (the agent is attached to Surefire via `-javaagent`):
 
+<VerifiedTag value="Verified" />
+
 ```xml title="pom.xml (key additions)"
 <dependency>
     <groupId>io.github.lambdatest</groupId>
@@ -270,6 +274,8 @@ The **Java SDK** is the zero-code option: it runs your **existing** TestNG tests
 ```
 
 2. Create `lambdatest.yml` with your credentials, platforms, and features. The SDK loads it automatically:
+
+<VerifiedTag value="Verified" />
 
 ```yaml title="lambdatest.yml"
 username: YOUR_LAMBDATEST_USERNAME
@@ -287,6 +293,8 @@ tunnel: true
 ```
 
 3. Register the SDK's TestNG listener in `testng.xml`, then run. Your existing test classes execute as-is:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 mvn test -D suite=testng.xml
@@ -316,6 +324,8 @@ cd Java-TestNG-Selenium
 
 2. Set your browser and OS in the `testng.xml` suite. Listing several environments with `parallel="tests"` and a `thread-count` runs them concurrently:
 
+<VerifiedTag value="Verified" />
+
 ```xml title="testng.xml"
 <suite thread-count="3" name="LambdaTestSuite" parallel="tests">
   <test name="WIN10-Chrome">
@@ -332,6 +342,8 @@ cd Java-TestNG-Selenium
 ```
 
 3. Run a single test, or the parallel suite:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 mvn test -D suite=single.xml
@@ -357,6 +369,8 @@ cd junit-selenium-sample
 
 2. Set your browser and OS in the `LT:Options` block:
 
+<VerifiedTag value="Verified" />
+
 ```java
 ChromeOptions browserOptions = new ChromeOptions();
 browserOptions.setPlatformName("Windows 10");
@@ -370,6 +384,8 @@ browserOptions.setCapability("LT:Options", ltOptions);
 ```
 
 3. Run a single test or the parallel profile:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 mvn test -P single
@@ -390,12 +406,16 @@ Cucumber is BDD on top of TestNG: you write scenarios in plain-language **featur
 
 1. Clone the [sample GitHub project](https://github.com/LambdaTest/cucumber-testng-sample):
 
+<VerifiedTag value="Verified" />
+
 ```bash
 git clone https://github.com/LambdaTest/cucumber-testng-sample
 cd cucumber-testng-sample
 ```
 
 2. Write your scenario in Gherkin:
+
+<VerifiedTag value="Verified" />
 
 ```gherkin title="todo.feature"
 Feature: Add new item to ToDo list
@@ -411,6 +431,8 @@ Each step maps to a WebDriver action in the step definitions, and the runner (`T
 
 3. Set your browser and OS in the runner (`TestRunner.java`):
 
+<VerifiedTag value="Verified" />
+
 ```java
 ChromeOptions browserOptions = new ChromeOptions();
 browserOptions.setPlatformName(platform);
@@ -423,6 +445,8 @@ browserOptions.setCapability("LT:Options", ltOptions);
 ```
 
 4. Run the test:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 mvn test
@@ -442,6 +466,8 @@ Selenide wraps WebDriver with a concise API (`$()`, `open()`) and reads browser/
 
 1. Clone and compile the [sample GitHub project](https://github.com/LambdaTest/selenide-testng-sample):
 
+<VerifiedTag value="Verified" />
+
 ```bash
 git clone https://github.com/LambdaTest/selenide-testng-sample
 cd selenide-testng-sample
@@ -449,6 +475,8 @@ mvn compile
 ```
 
 2. Set your browser and OS. Environments are declared in a config file, one block per browser:
+
+<VerifiedTag value="Verified" />
 
 ```json title="parallel.conf.json"
 {
@@ -468,6 +496,8 @@ The test reads that config in `@BeforeMethod`, calls `WebDriverRunner.setWebDriv
 
 3. Run a single test or the parallel profile:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 mvn test -P single
 mvn test -P parallel
@@ -485,6 +515,8 @@ Gauge is a BDD runner where steps are Java methods annotated with `@Step`, and t
 
 1. Clone and compile the [sample GitHub project](https://github.com/LambdaTest/gauge-selenium-sample):
 
+<VerifiedTag value="Verified" />
+
 ```bash
 git clone https://github.com/LambdaTest/gauge-selenium-sample
 cd gauge-selenium-sample
@@ -492,6 +524,8 @@ mvn compile
 ```
 
 2. Define your steps. Steps map plain-language names to WebDriver actions:
+
+<VerifiedTag value="Verified" />
 
 ```java title="StepImplementation_ToDo.java (excerpt)"
 @Step("Open the todo app")
@@ -509,6 +543,8 @@ public void addNewItem(String itemName) {
 
 3. Set your browser and OS in the `DriverFactory` capabilities:
 
+<VerifiedTag value="Verified" />
+
 ```java
 ChromeOptions browserOptions = new ChromeOptions();
 browserOptions.setPlatformName("Windows 10");
@@ -522,6 +558,8 @@ browserOptions.setCapability("LT:Options", ltOptions);
 ```
 
 4. Run the test:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 mvn test
@@ -541,6 +579,8 @@ Geb is a Groovy wrapper around WebDriver. Its distinguishing trait is that capab
 
 1. Clone and compile the [sample GitHub project](https://github.com/LambdaTest/geb-parallel-sample-code):
 
+<VerifiedTag value="Verified" />
+
 ```bash
 git clone https://github.com/LambdaTest/geb-parallel-sample-code
 cd geb-parallel-sample-code
@@ -548,6 +588,8 @@ mvn compile
 ```
 
 2. Set your browser and OS in the capabilities file:
+
+<VerifiedTag value="Verified" />
 
 ```json title="capabilities.json"
 {
@@ -559,6 +601,8 @@ mvn compile
 ```
 
 3. Run the test, passing that file via the `lambdageb.capabilities` property:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 mvn -Dlambdageb.capabilities=capabilities clean test
@@ -574,6 +618,8 @@ Serenity is BDD on top of Cucumber with rich reporting. You connect to the grid 
 
 1. Clone the [sample GitHub project](https://github.com/LambdaTest/Serenity-Selenium-Sample):
 
+<VerifiedTag value="Verified" />
+
 ```bash
 git clone https://github.com/LambdaTest/Serenity-Selenium-Sample
 cd Serenity-Selenium-Sample
@@ -582,6 +628,8 @@ cd Serenity-Selenium-Sample
 Scenarios are written in Gherkin and the grid connection lives in a `DriverSource` implementation (`LambdaTestSerenityDriver`) that builds `LT:Options` from Serenity's environment variables.
 
 2. Run a single scenario or the parallel profile:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 mvn verify -P single
@@ -602,12 +650,16 @@ Tesbo is a keyword-driven hybrid framework on Selenium: you write scripts in pla
 
 1. Clone the [sample GitHub project](https://github.com/LambdaTest/LamdaTest_Tesbo_Demo):
 
+<VerifiedTag value="Verified" />
+
 ```bash
 git clone https://github.com/LambdaTest/LamdaTest_Tesbo_Demo
 cd LamdaTest_Tesbo_Demo
 ```
 
 2. Set your browser and OS in `config.json` (set `IsGrid` to `true` and point `seleniumAddress` at the grid):
+
+<VerifiedTag value="Verified" />
 
 ```json title="config.json"
 {

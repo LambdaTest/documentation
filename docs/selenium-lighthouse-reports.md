@@ -141,6 +141,8 @@ Execute the hook multiple times with different URLs to generate reports for each
 - If you generate Lighthouse reports using Lambda hook, turn off the `performance:true` capability.
 - Successful generation of the report returns a *200* status and a response body containing:
 
+<VerifiedTag value="Verified" />
+
 ``` java
   {
     "message": "Lighthouse report generated successfully",
@@ -181,6 +183,9 @@ Add the `performance` capability to your capabilities to enable Lighthouse metri
 You can add Lighthouse performance metrics for the website you want to test using the [Selenium automation capabilities](/support/docs/selenium-automation-capabilities/). Use the **`Performance`** feature of the **Capabilities Generator**.
 
 For example, if you are using **TestNG** for Selenium Automation on TestMu AI, include the **Lighthouse** performance feature with the below code snippet:
+
+<VerifiedTag value="Verified" />
+
 ```java
 DesiredCapabilities caps = new DesiredCapabilities();
 .
@@ -190,6 +195,9 @@ DesiredCapabilities caps = new DesiredCapabilities();
 caps.setCapability("performance", true);
 ```
 Below is the code snippet to trigger **Lighthouse** performance metrics on TestMu AI in **macOS Catalina** with **Google Chrome** browser version **86.0**.
+
+<VerifiedTag value="Verified" />
+
 ```java
 DesiredCapabilities caps = new DesiredCapabilities();
                     caps.setCapability("browser", "Chrome");

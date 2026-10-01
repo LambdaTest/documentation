@@ -399,6 +399,8 @@ The `resolution` capability above sets the VM's screen resolution. To control th
 
 When you define a viewport, Cypress uses the browser's scaling to size the app: a large viewport scales the app down, a small one scales it up. Set the viewport globally with `viewportWidth` and `viewportHeight` in the Cypress config, or per test:
 
+<VerifiedTag value="Verified" />
+
 ```js
 cy.viewport(550, 750) // Set viewport to 550px x 750px
 cy.viewport('iphone-6') // Set viewport to 375px x 667px
@@ -415,6 +417,8 @@ Full-screen mode together with viewports gives the best results for screen-resol
 Use the `before:browser:launch` event to change the browser options.
 
 For **Cypress v9 and below**, use the following script in the `plugin/index.js` file:
+
+<VerifiedTag value="Verified" />
 
 ```js
 module.exports = (on, config) => {
@@ -435,6 +439,8 @@ module.exports = (on, config) => {
 ```
 
 For **Cypress v10 and above**, add the below code in the `cypress.config.js` file:
+
+<VerifiedTag value="Verified" />
 
 ```js
 const { defineConfig } = require('cypress')
@@ -661,6 +667,8 @@ It's recommended to use `npm_dependencies` instead of `package.json` because `pa
 
 Use the `npm_via_tunnel` flag to route npm install traffic through a tunnel. This helps when installing packages from a private registry, or in a restricted environment where the public npm registry is not directly reachable. Add it to `run_settings`:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 "npm_via_tunnel": true
 ```
@@ -705,6 +713,8 @@ Pass environment variables to your Cypress tests so specs can read runtime value
 
 For Cypress 9, use a sample `cypress.json`:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 {
 ......
@@ -719,6 +729,8 @@ For Cypress 9, use a sample `cypress.json`:
 
 For Cypress 10, use a sample `cypress.config.js`:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 module.exports = defineConfig({
   env: {
@@ -729,6 +741,8 @@ module.exports = defineConfig({
 ```
 
 Use them in your test spec:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 describe('Sample test', () => {
@@ -747,6 +761,8 @@ describe('Sample test', () => {
 
 Define the variables in a `cypress.env.json` file in your project root:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 {
     "CYPRESS_BASE_URL":"https://example.cypress.io/",
@@ -758,6 +774,8 @@ Define the variables in a `cypress.env.json` file in your project root:
 **Via the Cypress CLI**
 
 Add variables with the `--envs` parameter:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 lambdatest-cypress run --envs "CYPRESS_BASE_URL=https://example.cypress.io/,ACTIONS_URL=commands/actions,WINDOW_URL=commands/window"

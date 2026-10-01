@@ -298,18 +298,29 @@ TestMu AI Selenium Grid provides an encoded string of base64 that you can use to
 
 - Check whether the downloaded file exists in the test machine.
 
+<VerifiedTag value="Verified" />
+
 ```javascript
 ((JavascriptExecutor) driver).executeScript("lambda-file-exists=file-name.file_format");
 ```
 - Retrieve file metadata such as md5 code, modified time, name, and size.
+
+<VerifiedTag value="Verified" />
+
 ```javascript
 ((JavascriptExecutor) driver).executeScript("lambda-file-stats=file-name.file_format");
 ```
 - Download file content using base64 encoding.
+
+<VerifiedTag value="Verified" />
+
 ```javascript
 ((JavascriptExecutor) driver).executeScript("lambda-file-content=file-name.file_format");
 ```
 - Lambda File List Custom Executor
+
+<VerifiedTag value="Verified" />
+
 ```javascript
 print driver.execute_script("lambda-file-list={match string with filename}");
 ie:. 

@@ -233,6 +233,8 @@ curl -X POST \
 ### Response
 ---
 
+<VerifiedTag value="Verified" />
+
 ```json
 {
   "status": "success",

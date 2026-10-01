@@ -162,6 +162,8 @@ Have these in place before you run any of the frameworks below.
 
 Every framework authenticates the same way: your Username and Access Key are read from environment variables. Set them once. Pick your operating system:
 
+<VerifiedTag value="Verified" />
+
 <Tabs className="docs__val" groupId="os">
 
 <TabItem value="macos" label="macOS / Linux" default>
@@ -247,11 +249,15 @@ capabilities = {
 
 3. Install the dependencies:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 pip install -r requirements.txt
 ```
 
 4. Run the test:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 python lambdatest_test.py
@@ -266,6 +272,8 @@ The test then appears on the [Automation Dashboard](https://www.testmuai.com/log
 pytest keeps capabilities in `conftest.py` and runs in parallel via `pytest-xdist`.
 
 1. Clone the [sample GitHub project](https://github.com/LambdaTest/pytest-selenium-sample):
+
+<VerifiedTag value="Verified" />
 
 ```bash
 git clone https://github.com/LambdaTest/pytest-selenium-sample
@@ -287,11 +295,15 @@ capabilities = {
 
 3. Install the dependencies:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 pip install -r requirements.txt
 ```
 
 4. Run the test. The actual pytest run is the `pytest` command (which also enables parallel execution); the plain `python` invocation runs the script directly:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 python tests/lt_sample_todo.py
@@ -307,6 +319,8 @@ The test then appears on the [Automation Dashboard](https://www.testmuai.com/log
 Robot Framework uses Selenium2Library, with capabilities and the grid URL declared as variables in a `.robot` file, run through a Makefile.
 
 1. Clone the [sample GitHub project](https://github.com/LambdaTest/Robot-Selenium-Sample):
+
+<VerifiedTag value="Verified" />
 
 ```bash
 git clone https://github.com/LambdaTest/Robot-Selenium-Sample
@@ -334,11 +348,15 @@ ${REMOTE_URL}       https://${KEY}@hub.lambdatest.com/wd/hub
 
 3. Install the dependencies:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 pip install -r requirements.txt
 ```
 
 4. Run a single test, or all in parallel:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 make test_Windows_10_chrome_latest
@@ -354,6 +372,8 @@ The test then appears on the [Automation Dashboard](https://www.testmuai.com/log
 Behave is BDD for Python: feature files plus step definitions, with capabilities in a JSON config.
 
 1. Clone the [sample GitHub project](https://github.com/LambdaTest/Python-Behave-Selenium):
+
+<VerifiedTag value="Verified" />
 
 ```bash
 git clone https://github.com/LambdaTest/Python-Behave-Selenium
@@ -378,11 +398,15 @@ cd Python-Behave-Selenium
 
 3. Install the dependencies:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 pip install -r requirements.txt
 ```
 
 4. Run the test:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 behave features/test.feature
@@ -413,11 +437,15 @@ cd sample-lettuce
 
 3. Install the dependencies:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 pip install -r requirements.txt
 ```
 
 4. Run the test:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 python tests/lt_sample_todo.py

@@ -20,6 +20,7 @@ canonical: https://www.testmuai.com/support/docs/filter-your-selenium-tests/
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -217,6 +218,8 @@ Pass a `tags` capability with a String array of tag names inside `LT:Options`.
 
 Add custom tags while writing your Selenium test. When you build your [Selenium capabilities](/support/docs/selenium-automation-capabilities/), set the `tags` capability to a String array of the tag names you want on the test:
 
+<VerifiedTag value="Verified" />
+
 ```java
 // The tags you want to apply to this test
 String[] customTags = { "Tag 1", "Tag 2", "Tag 3" };
@@ -256,6 +259,8 @@ With TestMu AI, you can group test builds with build tags. Add a `buildTags` cap
 Pass a `buildTags` capability with a String array of tag names inside `LT:Options`.
 
 While building your [Selenium capabilities](/support/docs/selenium-automation-capabilities/), set the `buildTags` capability to a String array of the tag names you want on the build:
+
+<VerifiedTag value="Verified" />
 
 ```java
 // The build tags you want to apply (max 5 per build)
@@ -364,6 +369,8 @@ When you run Selenium tests on the TestMu AI grid, a test that your local assert
 
 You can set these status values: `passed`, `failed`, `skipped`, `ignored`, `unknown`, `error`.
 
+<VerifiedTag value="Verified" />
+
 <Tabs className="docs__val">
 
 <TabItem value="java" label="Java" default>
@@ -452,6 +459,8 @@ Pass a new name through `lambda-name` in JavascriptExecutor to rename a running 
 
 You can rename a running test to reflect dynamic data such as iteration count or data-driven parameters. Pass the new name through JavascriptExecutor:
 
+<VerifiedTag value="Verified" />
+
 <Tabs className="docs__val">
 
 <TabItem value="java" label="Java" default>
@@ -531,6 +540,8 @@ To generate a shareable URL programmatically instead, use the Session ID method 
 Retrieve the unique Session ID from your test script in your preferred language.
 
 Every test session on TestMu AI has a unique Session ID. Use the code below to retrieve it in your preferred language:
+
+<VerifiedTag value="Verified" />
 
 <Tabs className="docs__val">
 
@@ -630,6 +641,8 @@ https://automation.lambdatest.com/public/video?testID=HJKXM-RHZL1-SVPWY-AB8X6&au
 
 Create the AUTH_TOKEN by computing an MD5 hash of your `username:access_key` string.
 
+<VerifiedTag value="Verified" />
+
 <Tabs className="docs__val">
 
 <TabItem value="java" label="Java" default>
@@ -727,6 +740,8 @@ You can send annotations to TestMu AI directly from your test script using the a
 
 Here is an example written in Java:
 
+<VerifiedTag value="Verified" />
+
 ```java
 JavascriptExecutor jse = (JavascriptExecutor)driver;
 jse.executeScript("lambdatest_executor: {\"action\": \"stepcontext\", \"arguments\": {\"data\": \"<any string>\", \"level\": \"<info/warn/debug/error>\"}}");
@@ -757,6 +772,8 @@ Where command annotations log messages during a run, the `customData` capability
 Add the `customData` capability to your test script with the metadata fields you need.
 
 To add custom metadata in your automation tests, add the capability `customData` in your test script with all the metadata information that we support:
+
+<VerifiedTag value="Verified" />
 
 <Tabs className="docs__val">
 
@@ -860,6 +877,8 @@ See how teams use the customData capability in different testing workflows.
 
 **Scenario:** A QA team wants to include direct links to GitHub pull requests or Jira issues related to a test. This helps developers and testers quickly access related code changes or tasks when a test fails.
 
+<VerifiedTag value="Verified" />
+
 ```javascript title="Test.js"
 'customData': { 	
   "jiraTicket": "JIRA-12345",
@@ -877,6 +896,8 @@ See how teams use the customData capability in different testing workflows.
 ---
 
 **Scenario:** The team uses a test management tool (e.g., TestRail, Zephyr) to manage test cases. Adding the test case ID ensures results link back to the test plan.
+
+<VerifiedTag value="Verified" />
 
 ```javascript title="Test.js"
 'customData': { 	
@@ -898,6 +919,8 @@ See how teams use the customData capability in different testing workflows.
 
 **Scenario:** When debugging test failures, include information about the environment or build being tested.
 
+<VerifiedTag value="Verified" />
+
 ```javascript title="Test.js"
 'customData': { 	
   "buildNumber": "1234",
@@ -918,6 +941,8 @@ See how teams use the customData capability in different testing workflows.
 
 **Scenario:** A product manager wants test results linked to specific user stories or features for tracking progress on new functionality.
 
+<VerifiedTag value="Verified" />
+
 ```javascript title="Test.js"
 'customData': { 	
   "featureID": "FEAT-9876",
@@ -936,6 +961,8 @@ See how teams use the customData capability in different testing workflows.
 
 **Scenario:** A test depends on third-party APIs or integrations, and tracking the versions or configurations of these dependencies is critical.
 
+<VerifiedTag value="Verified" />
+
 ```javascript title="Test.js"
 'customData': { 	
   "thirdPartyAPI": "Stripe",
@@ -953,6 +980,8 @@ See how teams use the customData capability in different testing workflows.
 ---
 
 **Scenario:** A DevOps team wants to include pipeline-specific metadata in the test report to track CI/CD execution details.
+
+<VerifiedTag value="Verified" />
 
 ```javascript title="Test.js"
 'customData': { 	

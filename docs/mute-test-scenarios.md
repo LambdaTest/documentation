@@ -2,6 +2,7 @@
 id: mute-test-scenarios
 title: Mute Test Scenarios
 sidebar_label: Mute Test Scenarios
+displayed_sidebar: SeleniumTestingSidebar
 description: Mute flaky or known-broken tests on TestMu AI so they stop failing your build. A muted test still runs and reports its result but is excluded from the verdict.
 keywords:
   - mute test scenarios

@@ -16,6 +16,7 @@ slug: selenium-mask-your-data/
 canonical: https://www.testmuai.com/support/docs/selenium-mask-your-data/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -200,6 +201,8 @@ Set the `network.mask` capability to `true` to enable network data masking.
 #### Java Implementation
 ---
 
+<VerifiedTag value="Verified" />
+
 ```java
 // Java code for configuring Network Masking in tests on LambdaTest
 DesiredCapabilities capabilities = new DesiredCapabilities();
@@ -212,6 +215,8 @@ capabilities.setCapability("network.mask", "true");
 
 **Python:**
 
+<VerifiedTag value="Verified" />
+
 ```python
 capabilities = {
     "network.mask": "true"
@@ -220,6 +225,8 @@ capabilities = {
 ```
 
 **Node.js:**
+
+<VerifiedTag value="Verified" />
 
 ```javascript
 const capabilities = {

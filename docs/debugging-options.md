@@ -19,6 +19,7 @@ canonical: https://www.testmuai.com/support/docs/debugging-options/
 ---
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -198,11 +199,15 @@ By default, Telemetry logs are disabled for Selenium automation on TestMu AI. To
 
 1. Pass the `seTelemetryLogs` capability in your test scripts and set it to true.
 
+<VerifiedTag value="Verified" />
+
 ```java
 caps.setCapability("seTelemetryLogs", true);
 ```
 
 2. Pass the `selenium_version` capability in your test scripts and set it to `4.2.0`.
+
+<VerifiedTag value="Verified" />
 
 ```java
 caps.setCapability("selenium_version", "4.2.0");
@@ -225,6 +230,8 @@ Here are the steps to integrate Jaeger with your test suites:
 <img loading="lazy" src={require('../assets/images/telemetry-logs/download.webp').default} alt="TestMu AI dashboard Logs tab with the Telemetry sub-tab selected and the Download Telemetry Logs option" className="doc_img" width="1609" height="869"/>
 
 4. Start the Jaeger UI to visualize the Telemetry logs by running the below command.
+
+<VerifiedTag value="Verified" />
 
 ```bash
 jaeger-all-in-one
@@ -350,6 +357,9 @@ Redirect outgoing requests to a different URL using the `lt:intercept:redirect` 
 ---
 
 **Python:**
+
+<VerifiedTag value="Verified" />
+
 ```python
 driver.execute_script("lt:intercept:redirect", {
     "url": "https://www.google.com",
@@ -359,6 +369,9 @@ driver.get("https://www.google.com")
 ```
 
 **Node.js:**
+
+<VerifiedTag value="Verified" />
+
 ```javascript
 await driver.executeScript("lt:intercept:redirect", {
     url: "https://www.google.com",
@@ -368,6 +381,9 @@ await driver.get("https://www.google.com");
 ```
 
 **Response:**
+
+<VerifiedTag value="Verified" />
+
 ```json
 {
     "status": "success",
@@ -397,6 +413,9 @@ Mock a custom response for the intercepted URL using the `lt:intercept:response`
 ---
 
 **Python:**
+
+<VerifiedTag value="Verified" />
+
 ```python
 driver.execute_script("lt:intercept:response", {
     "url": "https://www.amazon.com",
@@ -413,6 +432,9 @@ driver.get("https://www.amazon.com")
 ```
 
 **Node.js:**
+
+<VerifiedTag value="Verified" />
+
 ```javascript
 await driver.executeScript("lt:intercept:response", {
     url: "https://jsonplaceholder.typicode.com/todos/1",
@@ -432,6 +454,9 @@ await driver.get("https://jsonplaceholder.typicode.com/todos/1");
 ```
 
 **Response:**
+
+<VerifiedTag value="Verified" />
+
 ```json
 {
     "status": "success",
@@ -458,6 +483,9 @@ Inject error responses to test how your application handles failures using the `
 ---
 
 **Python:**
+
+<VerifiedTag value="Verified" />
+
 ```python
 driver.execute_script("lt:intercept:error", {
     "url": "https://www.testmuai.com",
@@ -467,6 +495,9 @@ driver.get("https://www.lambdatest.com")
 ```
 
 **Node.js:**
+
+<VerifiedTag value="Verified" />
+
 ```javascript
 await driver.executeScript("lt:intercept:error", {
     url: "https://example.com/images/*",
@@ -476,6 +507,9 @@ await driver.get("https://example.com/images/photo.jpg");
 ```
 
 **Response:**
+
+<VerifiedTag value="Verified" />
+
 ```json
 {
     "status": "success",
@@ -520,18 +554,27 @@ The `lt:throttle:cpu` method simulates lower or higher CPU usage on the testing 
 ---
 
 **Python:**
+
+<VerifiedTag value="Verified" />
+
 ```python
 driver.execute_script("lt:throttle:cpu", {"rate": 4})
 driver.get("https://lambdatest.com")
 ```
 
 **Node.js:**
+
+<VerifiedTag value="Verified" />
+
 ```javascript
 await driver.executeScript("lt:throttle:cpu", { rate: 4 });
 await driver.get("https://www.wikipedia.org");
 ```
 
 **Response:**
+
+<VerifiedTag value="Verified" />
+
 ```json
 {
     "status": "success",
@@ -569,6 +612,9 @@ Alternatively, you can pass a predefined network profile name as a string (e.g.,
 ---
 
 **Python:**
+
+<VerifiedTag value="Verified" />
+
 ```python
 driver.execute_script("lambda-throttle-network", {
     "download": 1000,
@@ -579,6 +625,9 @@ driver.get("https://lambdatest.com")
 ```
 
 **Node.js:**
+
+<VerifiedTag value="Verified" />
+
 ```javascript
 await driver.executeScript("lambda-throttle-network", {
     download: 1000,
@@ -589,6 +638,9 @@ await driver.get("https://www.cnn.com");
 ```
 
 **Response:**
+
+<VerifiedTag value="Verified" />
+
 ```json
 {
     "status": "success",
@@ -600,12 +652,18 @@ await driver.get("https://www.cnn.com");
 ---
 
 **Python:**
+
+<VerifiedTag value="Verified" />
+
 ```python
 driver.execute_script("lambda-throttle-network", "Offline")
 driver.get("https://lambdatest.com")
 ```
 
 **Node.js:**
+
+<VerifiedTag value="Verified" />
+
 ```javascript
 await driver.executeScript("lambda-throttle-network", "Regular 3G");
 await driver.get("https://www.nytimes.com");
@@ -649,6 +707,9 @@ The `lt:downloadHAR` method downloads network activity data in HAR (HTTP Archive
 ---
 
 **Python:**
+
+<VerifiedTag value="Verified" />
+
 ```python
 driver.execute_script("lt:downloadHAR", {
     "job_id": "123456",
@@ -657,6 +718,9 @@ driver.execute_script("lt:downloadHAR", {
 ```
 
 **Node.js:**
+
+<VerifiedTag value="Verified" />
+
 ```javascript
 await driver.executeScript("lt:downloadHAR", {
     job_id: "123456",
@@ -665,6 +729,9 @@ await driver.executeScript("lt:downloadHAR", {
 ```
 
 **Response:**
+
+<VerifiedTag value="Verified" />
+
 ```json
 {
     "status": "success",
@@ -832,6 +899,8 @@ A test is eligible for Reproduce only if both of the following are true:
 
 Reproduce requires HAR logging on the original run. Pass the following capability in your test:
 
+<VerifiedTag value="Verified" />
+
 ```javascript
 "network.full.har" : true
 ```
@@ -886,6 +955,8 @@ Catch assertion errors in GET requests and push them to the dashboard using Java
 
 While performing assertions on GET requests, if the assertion fails, an AssertionError exception is thrown. Refer to the below Java syntax to catch this error and push it to TestMu AI using Lambda Exceptions.
 
+<VerifiedTag value="Verified" />
+
 ```java
 try {
     // some GET request
@@ -912,6 +983,8 @@ For demo purposes, this script will:
 #### View Exception on the Dashboard Using Lambda Exception
 ---
 Below is the full code for this script, using TestNG framework in Java.
+
+<VerifiedTag value="Verified" />
 
 ```java
 package com.lambdatest;
@@ -1007,6 +1080,8 @@ When you run this test, the assertion fails because the `ExpectedTitle` is inten
 You can also view the full StackTrace on the dashboard using Lambda Exceptions.
 
 You can also push the full StackTrace to the dashboard using Lambda Exceptions. Convert the StackTrace to a String and add it as an array of Strings. Below is the full script to print the StackTrace using the TestNG framework in Java:
+
+<VerifiedTag value="Verified" />
 
 ```java
 package com.lambdatest;

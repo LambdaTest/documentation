@@ -191,6 +191,8 @@ TestMu AI reads your credentials in one of three ways. When more than one is set
 
 **`lambdatest-config.json`:** set them under the `lambdatest_auth` block:
 
+<VerifiedTag value="Verified" />
+
 ```json title="lambdatest-config.json"
 "lambdatest_auth": {
    "username": "<your username>",
@@ -204,6 +206,8 @@ TestMu AI reads your credentials in one of three ways. When more than one is set
 | --- | --- | --- |
 | `--username` | `--user` | Your TestMu AI username |
 | `--access_key` | `--ak` | Your TestMu AI access key |
+
+<VerifiedTag value="Verified" />
 
 ```bash
 lambdatest-cypress run --username=<your username> --ak=<your access key>
@@ -448,17 +452,23 @@ Once your first test runs, you can execute multiple Cypress tests at once to cut
 
 **Using the CLI:** pass the `--parallels` flag with the number of sessions:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 --parallels <number of parallel sessions>
 ```
 
 For example, to run your Cypress tests on 5 parallel sessions:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 lambdatest-cypress run --parallels 5
 ```
 
 **Using `lambdatest-config.json`:** set the `parallels` key under `run_settings`:
+
+<VerifiedTag value="Verified" />
 
 ```json
 {

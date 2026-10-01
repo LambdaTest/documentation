@@ -325,6 +325,9 @@ Here is what the change looks like in each language:
 <TabItem value="java" label="Java" default>
 
 **Before (local):**
+
+<VerifiedTag value="Verified" />
+
 ```java
 WebDriver driver = new ChromeDriver();
 ```
@@ -356,11 +359,17 @@ WebDriver driver = new RemoteWebDriver(new URL(hubURL), browserOptions);
 <TabItem value="javascript" label="JavaScript">
 
 **Before (local):**
+
+<VerifiedTag value="Verified" />
+
 ```javascript
 const driver = new Builder().forBrowser('chrome').build();
 ```
 
 **After (cloud):**
+
+<VerifiedTag value="Verified" />
+
 ```javascript
 const username = process.env.LT_USERNAME;
 const accessKey = process.env.LT_ACCESS_KEY;
@@ -388,11 +397,17 @@ const driver = new Builder()
 <TabItem value="python" label="Python">
 
 **Before (local):**
+
+<VerifiedTag value="Verified" />
+
 ```python
 driver = webdriver.Chrome()
 ```
 
 **After (cloud):**
+
+<VerifiedTag value="Verified" />
+
 ```python
 import os
 from selenium import webdriver
@@ -420,11 +435,17 @@ driver = webdriver.Remote(command_executor=hub_url, options=options)
 <TabItem value="csharp" label="C#">
 
 **Before (local):**
+
+<VerifiedTag value="Verified" />
+
 ```csharp
 IWebDriver driver = new ChromeDriver();
 ```
 
 **After (cloud):**
+
+<VerifiedTag value="Verified" />
+
 ```csharp
 string username = Environment.GetEnvironmentVariable("LT_USERNAME");
 string accessKey = Environment.GetEnvironmentVariable("LT_ACCESS_KEY");
@@ -450,11 +471,17 @@ IWebDriver driver = new RemoteWebDriver(new Uri(hubURL), options);
 <TabItem value="php" label="PHP">
 
 **Before (local):**
+
+<VerifiedTag value="Verified" />
+
 ```php
 $driver = ChromeDriver::start();
 ```
 
 **After (cloud):**
+
+<VerifiedTag value="Verified" />
+
 ```php
 $username = getenv("LT_USERNAME");
 $accessKey = getenv("LT_ACCESS_KEY");
@@ -479,11 +506,17 @@ $driver = RemoteWebDriver::create($hubURL, $capabilities);
 <TabItem value="ruby" label="Ruby">
 
 **Before (local):**
+
+<VerifiedTag value="Verified" />
+
 ```ruby
 driver = Selenium::WebDriver.for :chrome
 ```
 
 **After (cloud):**
+
+<VerifiedTag value="Verified" />
+
 ```ruby
 username = ENV["LT_USERNAME"]
 access_key = ENV["LT_ACCESS_KEY"]

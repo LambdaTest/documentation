@@ -396,11 +396,15 @@ If you would rather not edit your scripts to connect to the grid, run your exist
 
 **1. Install the SDK** as a dev dependency in your project:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 npm install @lambdatest/playwright-node-sdk
 ```
 
 **2. Generate the config file,** then set your credentials, platforms, and run settings in it:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 npx playwright-node-sdk --init
@@ -408,6 +412,8 @@ npx playwright-node-sdk --init
 
 <details>
 <summary>Example lambdatest.yml</summary>
+
+<VerifiedTag value="Verified" />
 
 ```yaml
 # Access your LambdaTest credentials from https://accounts.lambdatest.com/security/username-accesskey
@@ -466,6 +472,8 @@ platforms:
 </details>
 
 **3. Run your tests** through the SDK wrapper (you can pass any standard Playwright CLI option):
+
+<VerifiedTag value="Verified" />
 
 ```bash
 npx playwright-node-sdk playwright test

@@ -163,6 +163,8 @@ Before you start, you need a TestMu AI account with your credentials, plus PHP, 
 
 Every framework authenticates the same way: your Username and Access Key are read from environment variables. Set them once. Pick your operating system:
 
+<VerifiedTag value="Verified" />
+
 <Tabs className="docs__val" groupId="os">
 
 <TabItem value="macos" label="macOS / Linux" default>
@@ -265,6 +267,8 @@ composer install
 
 4. Run a single test, or in parallel:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 composer single
 composer parallel
@@ -279,6 +283,8 @@ The test then appears on the [Automation Dashboard](https://www.testmuai.com/log
 Laravel Dusk provides a fluent browser-automation API. Credentials and the grid live in the project's `.env` and `tests/DuskTestCase.php`.
 
 1. Clone the [sample GitHub project](https://github.com/LambdaTest/php-laravel-dusk-todo):
+
+<VerifiedTag value="Verified" />
 
 ```bash
 git clone https://github.com/LambdaTest/php-laravel-dusk-todo
@@ -309,6 +315,8 @@ composer install
 
 4. Run the test:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 php artisan dusk
 ```
@@ -322,6 +330,8 @@ The test then appears on the [Automation Dashboard](https://www.testmuai.com/log
 Codeception configures the grid in its acceptance suite's WebDriver module, with credentials in the host URL.
 
 1. Clone the [sample GitHub project](https://github.com/LambdaTest/codeception-selenium-sample):
+
+<VerifiedTag value="Verified" />
 
 ```bash
 git clone https://github.com/LambdaTest/codeception-selenium-sample
@@ -360,6 +370,8 @@ composer install
 
 4. Run the test:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 ./vendor/bin/codecept run --steps
 ```
@@ -373,6 +385,8 @@ The test then appears on the [Automation Dashboard](https://www.testmuai.com/log
 PHPUnit keeps capabilities inline in `LambdaTestSetup.php`, with Composer scripts for single and parallel runs.
 
 1. Clone the [sample GitHub project](https://github.com/LambdaTest/Php-PhpUnit-Selenium):
+
+<VerifiedTag value="Verified" />
 
 ```bash
 git clone https://github.com/LambdaTest/Php-PhpUnit-Selenium
@@ -395,11 +409,15 @@ $capabilities = array(
 
 3. Install the dependencies:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 composer install
 ```
 
 4. Run a single test, in parallel, or both:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 composer single

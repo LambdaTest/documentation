@@ -161,6 +161,8 @@ Complete these before running any framework below.
 
 Every framework authenticates the same way: your Username and Access Key are read from environment variables. Set them once. Pick your operating system:
 
+<VerifiedTag value="Verified" />
+
 <Tabs className="docs__val" groupId="os">
 
 <TabItem value="macos" label="macOS / Linux" default>
@@ -255,6 +257,8 @@ browserOptions.AddAdditionalOption("LT:Options", ltOptions);
 
 3. Build the solution, then run in the Test Explorer, or on Linux/macOS:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 dotnet test
 ```
@@ -268,6 +272,8 @@ The test then appears on the [Automation Dashboard](https://www.testmuai.com/log
 MSTest requires .NET Core SDK 3.0.0 and runs via `dotnet test` or the Test Explorer.
 
 1. Clone the [sample GitHub project](https://github.com/LambdaTest/MSTest-Selenium-Sample):
+
+<VerifiedTag value="Verified" />
 
 ```bash
 git clone https://github.com/LambdaTest/MSTest-Selenium-Sample
@@ -314,12 +320,16 @@ SpecFlow is BDD for .NET: you write Gherkin feature files, and step definitions 
 
 1. Clone the [sample GitHub project](https://github.com/LambdaTest/SpecFlow-Selenium-Sample):
 
+<VerifiedTag value="Verified" />
+
 ```bash
 git clone https://github.com/LambdaTest/SpecFlow-Selenium-Sample
 cd SpecFlow-Selenium-Sample
 ```
 
 2. Set your browser and OS in the `LT:Options` object:
+
+<VerifiedTag value="Verified" />
 
 ```csharp
 var browserOptions = new ChromeOptions();
@@ -346,6 +356,8 @@ The test then appears on the [Automation Dashboard](https://www.testmuai.com/log
 xUnit reads its capabilities and environments from a `config.json`, filtered by profile.
 
 1. Clone the [sample GitHub project](https://github.com/LambdaTest/CSharp-xUnit-Selenium):
+
+<VerifiedTag value="Verified" />
 
 ```bash
 git clone https://github.com/LambdaTest/CSharp-xUnit-Selenium
@@ -380,6 +392,8 @@ cd CSharp-xUnit-Selenium
 
 3. Run a single test, or the parallel profile:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 dotnet clean
 dotnet test --filter "profile=single"
@@ -395,6 +409,8 @@ The test then appears on the [Automation Dashboard](https://www.testmuai.com/log
 Reqnroll is the actively-maintained, open-source successor to SpecFlow. It is a BDD framework for .NET: you write Gherkin feature files, and step definitions drive WebDriver. Requires Reqnroll and a .NET Core SDK 2.1 or greater installed.
 
 1. Clone the [sample GitHub project](https://github.com/LambdaTest/reqnroll-automation-sample):
+
+<VerifiedTag value="Verified" />
 
 ```bash
 git clone https://github.com/LambdaTest/reqnroll-automation-sample

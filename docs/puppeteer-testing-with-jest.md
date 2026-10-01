@@ -271,6 +271,8 @@ It provides structured guidance for the following areas:
 
 Clone the agent skills repository and copy the Jest Agent Skill into your tool's skills directory.
 
+<VerifiedTag value="Verified" />
+
 ```bash
 # Clone the repo and copy the skill you need
 git clone https://github.com/LambdaTest/agent-skills.git

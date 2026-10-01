@@ -162,6 +162,8 @@ Your Username and Access Key are read from environment variables, set once per o
 
 Every framework authenticates the same way: your Username and Access Key are read from environment variables. Set them once. Pick your operating system:
 
+<VerifiedTag value="Verified" />
+
 <Tabs className="docs__val" groupId="os">
 
 <TabItem value="macos" label="macOS / Linux" default>
@@ -256,6 +258,8 @@ bundle install
 
 4. Run a single test, or in parallel:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 bundle exec rake single
 bundle exec rake parallel
@@ -288,6 +292,8 @@ bundle install
 ```
 
 4. Run a single test, or in parallel:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 bundle exec rake single
@@ -334,6 +340,8 @@ bundle install
 ```
 
 4. Run the test:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 ruby LambdaTest.rb

@@ -222,6 +222,8 @@ set LT_ACCESS_KEY=${ YOUR_LAMBDATEST_ACCESS_KEY()}`}
 
 Every framework below builds a `capabilities` object (browser, version, platform, and your `LT:Options`) and connects Playwright to the grid at `wss://cdp.lambdatest.com/playwright`:
 
+<VerifiedTag value="Verified" />
+
 ```js
 wsEndpoint: `wss://cdp.lambdatest.com/playwright?capabilities=${encodeURIComponent(JSON.stringify(capabilities))}`
 ```
@@ -340,6 +342,8 @@ npm run test
 ***
 
 Prefer Jest or Cucumber.js as your test runner? Pick your framework below.
+
+<VerifiedTag value="Verified" />
 
 <Tabs className="docs__val" groupId="js-framework" queryString="framework">
 

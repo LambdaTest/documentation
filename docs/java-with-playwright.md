@@ -201,6 +201,8 @@ set LT_ACCESS_KEY=${ YOUR_LAMBDATEST_ACCESS_KEY()}`}
 
 The test builds a `capabilities` object that carries the browser, version, platform, and your `LT:Options`, then connects Playwright to the grid at `wss://cdp.lambdatest.com/playwright`. The credentials come from the `LT_USERNAME` and `LT_ACCESS_KEY` environment variables you set above:
 
+<VerifiedTag value="Verified" />
+
 ```java
 JsonObject capabilities = new JsonObject();
 JsonObject ltOptions = new JsonObject();
@@ -228,6 +230,8 @@ JUnit runs the connection through a `@DataProvider`, so a single test runs acros
 :::tip Sample repo
 <a href="https://github.com/LambdaTest/playwright-sample/tree/main/playwright-java-junit" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="GitHub icon linking to the Playwright JUnit sample subdirectory" className="doc_img"/> View on GitHub</a>
 :::
+
+<VerifiedTag value="Verified" />
 
 ```bash
 git clone https://github.com/LambdaTest/playwright-sample.git
