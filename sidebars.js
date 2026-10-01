@@ -2319,128 +2319,55 @@ module.exports = {
 
   CypressTestingSidebar: [
     {
-      type: 'link',
-      label: 'Back',
-      href: '/docs/',
-      customProps: {
-        className: "back-to-main-menu",
-      },
+      type: "link",
+      label: "Back",
+      href: "/docs/",
+      customProps: { className: "back-to-main-menu" },
     },
     [
       {
         type: "category",
         collapsed: false,
         label: "Getting Started",
+        className: "menu-bold",
         items: [
-          {
-            type: "doc",
-            label: "Cypress Testing",
-            id: "getting-started-with-cypress-testing",
-          },
-          {
-            type: "doc",
-            label: "Run Your Test With Agent Skills",
-            id: "cypress-agent-skills",
-          },
-          {
-            type: "doc",
-            label: "Authentication",
-            id: "authentication",
-          },
+          { type: "doc", id: "getting-started-with-cypress-testing" },
+          { type: "doc", id: "cypress-agent-skills" },
+          { type: "doc", id: "cypress-cli-commands" },
         ],
       },
       {
         type: "category",
         collapsed: true,
         label: "Test Capabilities",
+        className: "menu-bold",
         items: [
-          {
-            type: "doc",
-            label: "Parallel Testing",
-            id: "run-your-cypress-tests-in-parallel",
-          },
-          {
-            type: "doc",
-            label: "Specify Browsers and OS",
-            id: "supported-browsers-and-os",
-          },
-          {
-            type: "doc",
-            label: "Supported Cypress Versions",
-            id: "supported-cypress-versions",
-          },
-          {
-            type: "doc",
-            label: "Cypress Testing Using WebKit",
-            id: "cypress-webkit",
-          },
-          {
-            type: "doc",
-            label: "Cypress CLI Commands",
-            id: "cypress-cli-commands",
-          },
-          {
-            type: "doc",
-            label: "Configure Cypress Test Execution",
-            id: "run-settings",
-          },
-          {
-            type: "doc",
-            label: "Test On Different Screen Resolutions",
-            id: "screen-resolution-cypress",
-          },
-          {
-            type: "doc",
-            label: "Environment Variables Support for Cypress Tests",
-            id: "cyp-environment",
-          },
-          {
-            type: "doc",
-            label: "Execute Including Private Dependencies",
-            id: "private-dependencies-cypress",
-          },
-          {
-            type: "doc",
-            label: "Install NPM via Tunnel",
-            id: "npm-via-tunnel",
-          },
-          {
-            type: "doc",
-            label: "Download Artefacts For Cypress Project",
-            id: "download-artefacts-cypress",
-          },
+          { type: "doc", id: "run-settings" },
+          { type: "doc", id: "private-dependencies-cypress" },
+          { type: "doc", id: "download-artefacts-cypress" },
+          { type: "doc", id: "cypress-testing-using-webkit" },
         ],
       },
       {
         type: "category",
         collapsed: true,
         label: "Integrations",
+        className: "menu-bold",
         items: [
-          {
-            type: "doc",
-            label: "Integrate TestMu AI with Cypress Dashboard",
-            id: "integrate-lambdatest-with-cypress",
-          },
-          {
-            type: "doc",
-            label: "Applitools Integration For Cypress",
-            id: "applitools-integration-cypress",
-          },
-          {
-            type: "doc",
-            label: "Report Portal IO Integration For Cypress",
-            id: "report-portal-cypress",
-          },
-          {
-            type: "doc",
-            label: "Multi Reporters Support",
-            id: "cyp-multi-reporters",
-          },
-          {
-            type: "doc",
-            label: "Cypress Terminal Reports",
-            id: "cypress-detailed-command-logs",
-          },
+          { type: "doc", id: "integrate-lambdatest-with-cypress" },
+          { type: "doc", id: "applitools-integration-cypress" },
+          { type: "doc", id: "report-portal-cypress" },
+          { type: "doc", id: "cypress-detailed-command-logs" },
+        ],
+      },
+      {
+        type: "category",
+        collapsed: true,
+        label: "References",
+        className: "menu-bold",
+        items: [
+          { type: "doc", id: "supported-browsers-and-os" },
+          { type: "doc", id: "supported-cypress-versions" },
         ],
       },
     ],

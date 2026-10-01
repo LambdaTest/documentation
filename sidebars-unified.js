@@ -130,7 +130,13 @@ const backToDocs = {
 };
 const TestManagerSidebar = [backToDocs, ...items(s.TestManagerSidebar)];
 
+// Expose the Cypress Testing sidebar as a named sidebar so any doc that sets
+// `displayed_sidebar: CypressTestingSidebar` in frontmatter resolves to a real
+// sidebar here (keeps the dev server from crashing on an unknown sidebar id).
+const CypressTestingSidebar = [backToDocs, ...items(s.CypressTestingSidebar)];
+
 module.exports = {
   docsSidebar,
   TestManagerSidebar,
+  CypressTestingSidebar,
 };
