@@ -168,7 +168,7 @@ See when your work waited for a free slot, how much of it waited, and exactly wh
 - **See the whole organization at a glance**: set the KPI to **None (whole org)** for one Queued and one In-Use series across all your work.
 - **Find who is waiting**: break the chart down by **Project Name**, **Browser**, or **OS** to see which teams or environments queue the most.
 - **Go from a spike to the exact work behind it**: click a bar to list the tasks or tests that were queued or running at that moment.
-- **Read it like Concurrency Trends**: in the **Stacked Bar** view, **In Use** sits at the bottom and **Queued** on top. Switch to **Stacked Area** in the display options if you prefer, and look across daily, weekly, or custom time ranges.
+- **Read it like Concurrency Trends**: in the **Stacked Bar** view, **In Use** sits at the bottom and **Queued** on top. Switch to **Line** in the display options if you prefer, and look across daily, weekly, or custom time ranges.
 
 ### How Concurrency Is Counted
 
@@ -221,7 +221,7 @@ With **None (whole org)** on HyperExecute, the chart shows one **Tasks - Queued*
 
 Click on the three-dot menu (⋯) on the widget and select **Configure** to customize the widget.
 
-<img loading="lazy" src={require('../assets/images/analytics/custom-concurrency-trends-configure-widget.webp').default} alt="Configure Custom Concurrency Trends Widget" width="768" height="373" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/analytics/custom-concurrency-trends-configure-widget.webp').default} alt="Configure Custom Concurrency Trends Widget" width="768" height="475" className="doc_img"/>
 
 #### Supported Filters
 
@@ -236,15 +236,15 @@ Click on the three-dot menu (⋯) on the widget and select **Configure** to cust
 
 #### Display Options
 
-- **Graph Type**: Stacked Area or Stacked Bar (default)
-- **Concurrency KPI**: Project Name (default), Browser, OS, or None (whole org). See [Supported KPIs](#supported-kpis).
 - **Select legends to show**: In Use, Queued (both selected by default)
+- **Select graph type**: Line or Stacked Bar (default)
+- **Select concurrency KPI**: Project Name (default), Browser, OS, or None (whole org). See [Supported KPIs](#supported-kpis).
 
 ### Recommended Usage
 
 #### Viewing Multiple Dimensions (All Projects)
 
-When visualizing concurrency trends across all dimensions (e.g., all projects at once), display **either In-Use or Queued**, not both simultaneously. This provides a cleaner view for comparing usage patterns across different projects. To see the organization's total queue instead, set **Concurrency KPI** to **None (whole org)**.
+When visualizing concurrency trends across all dimensions (e.g., all projects at once), display **either In-Use or Queued**, not both simultaneously. This provides a cleaner view for comparing usage patterns across different projects. To see the organization's total queue instead, set **Select concurrency KPI** to **None (whole org)**.
 
 **How to configure:**
 1. Open **Configure Widget** > **Display Options**
