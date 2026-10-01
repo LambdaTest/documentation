@@ -97,7 +97,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         "https://www.youtube.com/@TestMuAI"
       ]
     },
-    "dateModified": "2026-09-04T12:50:18+05:30"
+    "dateModified": "2026-09-30T19:28:43+05:30"
   }) }}
 />
 
@@ -166,6 +166,8 @@ The chat agent workflow includes the following features.
 
 **Test Profiles.** Reusable key-value test data with typed fields, default profiles, and JSON import/export, injected at runtime for data-driven testing.
 
+**Data Validation.** Check the facts your agent states during a conversation, such as a price, an order status, or a delivery date, against your own system of record through read-only API lookups, with a Pass, Fail, or Cannot verify verdict per fact. See [data validation for chat agents](/support/docs/chat-agent-data-validation/).
+
 **Playground.** Interactively test your agent before a full run, with multi-turn chat, cURL connection testing, and request/response schema analysis.
 
 **Evaluation Execution.** Run evaluations at scale with metric selection, endpoint profile selection, HyperExecute integration with tunnel support for private agents, and real-time streaming over server-sent events.
@@ -201,3 +203,4 @@ Every evaluation result includes the overall score, per-metric scores with pass 
 ---
 
 - See how to [connect a chat agent over its API](/support/docs/chat-agent-api-integration/).
+- See how to [validate the facts your chat agent states](/support/docs/chat-agent-data-validation/) against your own API.
