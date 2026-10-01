@@ -183,7 +183,7 @@ Good to know:
 
 - HyperExecute reserves concurrency per task, which is why tasks are counted rather than tests.
 - A HyperExecute task created up to 2 days before your selected time range is included if it is still queued or running within the range.
-- HyperExecute counts every task, including cancelled and queue-timeout tasks, since those are often the ones that waited longest. On Web and App Automation, tests that ended as **Lambda Error**, **Cancelled**, **Queue Timeout**, or **Error** are not counted.
+- HyperExecute counts every task, including cancelled and queue-timeout tasks, since those are often the ones that waited longest.
 
 :::note Reading stacked bars
 Each bar stacks the interval's **peak** In Use value and its **peak** Queued value. The two peaks can happen at different moments, so the full height of a bar is not the load at one instant. To see how many items were queued at the busiest moment, look at the Queued segment on its own, or hover over it.
