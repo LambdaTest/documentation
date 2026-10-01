@@ -93,7 +93,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         "https://www.youtube.com/@TestMuAI"
       ]
     },
-    "dateModified": "2026-10-01T15:30:00+05:30"
+    "dateModified": "2026-10-01T17:00:00+05:30"
   }) }}
 />
 
@@ -104,6 +104,8 @@ import NewTag from '../src/component/newTag';
 ## TestMu AI products usage insights
 
 <BrandName /> Usage Report gives you a single view of how your organization uses each <BrandName /> product: how many tests ran, how long they took, who ran them, and which devices and applications they used. You can read every widget as a table or as a chart, narrow the data with filters, and export or share the report.
+
+To open it, go to **Insights** > **Reports** > **Usage** in the left navigation. The report is titled **Usage** in the app.
 
 :::note
 The Usage Report is currently in <NewTag value="BETA" bgColor="#ffec02" color="#000" />. If you have any feedback or suggestions, please feel free to reach out to us at [support@testmuai.com](mailto:support@testmuai.com).
@@ -120,6 +122,13 @@ The header of the report has these controls:
 | **Date range** | Sets the time frame for all widgets. |
 | **Export As** | **Export As Excel** downloads the table data. **Export As PDF** downloads the report in the view you have selected (Table or Chart); it is available only when the dashboard link is public. |
 | **Share** (share icon) | Creates a link to the report. The shared report opens in the view you had selected and is read-only: viewers cannot change filters, the view, or the chart options. |
+| **Settings** (gear icon) | Opens the report settings, including **Share Settings**. Only Admins see this icon. |
+
+Each widget also has a refresh icon that reloads that widget's data.
+
+:::tip Make the share link public
+To enable **Export As PDF**, an Admin opens **Settings** (gear icon) > **Share Settings** and selects **Allow anyone with the link to access the dashboard**. If the link is protected with a custom password instead, exporting is disabled.
+:::
 
 ## Filter the report
 
@@ -127,7 +136,7 @@ Click **Filters** to open the Filters panel. Filters are grouped into categories
 
 | Category | Filters |
 |----------|---------|
-| **General** | Product, Project Name, Type |
+| **General** | Product, Project Name, Type (Automation or Manual) |
 | **Status** | Test status, for example passed, failed, or error |
 | **Device & OS** | OS, Device Name |
 | **Users** | Users, Team Name, Group Name |
@@ -164,14 +173,16 @@ In **Chart** view:
 
 ## Usage Frequency per Product
 
-This widget shows how much each product was used in the selected time frame: total users, total tests, total duration, and frequency.
+This widget shows how much each product was used in the selected time frame: total users, total tests, total duration, and frequency. **Frequency** is the average number of tests per user, rounded up (Total Tests ÷ Total Users).
+
+Smart UI usage is counted in screenshots, not tests, and has no duration. In Table view, its screenshots are included in **Total Tests** and in the **Total** row. In Chart view, it is shown as its own line in the legend and is not part of the donut or its total, so the two totals can differ.
 
 - **Table view:** one row per product, with a **Total** row at the end.
-- **Chart view:** a donut chart of tests or duration per product, following the **Tests / Duration** switch, with the total in the centre. Smart UI is counted in screenshots, so it is shown as its own line in the legend and not as a slice.
+- **Chart view:** a donut chart of tests or duration per product, following the **Tests / Duration** switch, with the total in the centre.
 
 ### Group by month
 
-Turn on **Group by month** to split usage by calendar month. In Chart view, this shows a stacked column for each month, with one colour per product. With **Group by month** on, the chart shows tests only and the **Tests / Duration** switch is hidden. Months that are not complete are marked: **(MTD)** for the current month, and **(partial)** for a month that the date range cuts off.
+Turn on **Group by month** to split usage by calendar month. In Table view, this adds a test count column for each month, and for every month after the first, its change from the previous month as a number (**Δ vs** month) and a percentage (**% vs** month). In Chart view, this shows a stacked column for each month, with one colour per product. With **Group by month** on, the chart shows tests only and the **Tests / Duration** switch is hidden. Months that are not complete are marked: **(MTD)** for the current month, and **(partial)** for a month that the date range cuts off.
 
 <img loading="lazy" src={require('../assets/images/analytics/usage-report-group-by-month.png').default} alt="Usage Frequency grouped by month" width="1498" height="312" className="doc_img"/>
 
