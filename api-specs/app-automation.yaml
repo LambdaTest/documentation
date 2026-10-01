@@ -100,7 +100,7 @@ paths:
                 appFile:
                   type: string
                   format: binary
-                  description: Path to the application file on your local system.
+                  description: The application file (.ipa, .apk, .aab) to be uploaded.
                 name:
                   type: string
                   description: Name of the application.
