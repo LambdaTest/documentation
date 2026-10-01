@@ -160,7 +160,7 @@ The SubOrg Concurrency Trends widget provides concurrency utilization data at th
 
 See when your work waited for a free slot, how much of it waited, and exactly which tasks or tests were stuck in the queue. The Custom Concurrency Trends widget shows queued and running concurrency over time for your whole organization, or broken down by project, browser, or OS, and lets you click any bar to see the work behind it.
 
-<img loading="lazy" src={require('../assets/images/analytics/custom-concurrency-trends.webp').default} alt="Custom Concurrency Trends Widget" width="768" height="346" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/analytics/custom-concurrency-trends.webp').default} alt="Custom Concurrency Trends Widget" width="768" height="373" className="doc_img"/>
 
 ### What You Can Do
 
@@ -201,6 +201,10 @@ Each bar stacks the interval's **peak** In Use value and its **peak** Queued val
 - **None (whole org)** gives you one Queued and one In-Use series for your entire organization: the quickest way to see whether you are hitting your concurrency limit. The legend reads **Tasks - Queued** and **Tasks - In-Use** on HyperExecute, and **Tests - Queued** and **Tests - In-Use** on Web and App Automation.
 - With a KPI, each value gets its own pair of series, named after the value (for example, **Checkout - Queued** and **Checkout - In-Use**).
 - HyperExecute does not offer Browser, because a single task can run tests on several browsers. A HyperExecute widget saved earlier with Browser shows the whole organization instead.
+
+With **None (whole org)** on HyperExecute, the chart shows one **Tasks - Queued** and one **Tasks - In-Use** series:
+
+<img loading="lazy" src={require('../assets/images/analytics/custom-concurrency-trends-whole-org.webp').default} alt="Custom Concurrency Trends with KPI set to None (whole org) on HyperExecute" width="768" height="346" className="doc_img"/>
 
 ### How to Create a Dashboard with Custom Concurrency Trends
 
