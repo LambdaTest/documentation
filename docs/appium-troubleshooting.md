@@ -394,6 +394,21 @@ public static void changeLocation(double lat, double lon) {
 }
 ```
 
+### Handle location permission popups on Android and iOS
+
+**Why it's needed:** The `autoGrantPermissions` (Android) and `autoAcceptAlerts` (iOS) capabilities handle system level alerts, such as notification popups. They do not handle location permission popups or any other alert that offers multiple options (for example, *Allow While Using App*, *Allow Once*, and *Don't Allow*). The same applies to gallery or media access permission popups that show more than two options.
+
+**Fix:** Handle these popups in your test script by locating and tapping the required button. On iOS devices, set the `settings[respectSystemAlerts]` capability to `true` to ensure that system permission popups are detected and can be interacted with during the test.
+
+**Using the `mobile: alert` command (iOS only):**
+
+```java
+driver.executeScript("mobile: alert", Map.of(
+    "action", "accept",
+    "buttonLabel", "Allow While Using App"
+));
+```
+
 ---
 
 That's all! If you are still blocked, reach out to our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24x7 Chat Support**</span> or mail us at [support@testmuai.com](mailto:support@testmuai.com).
