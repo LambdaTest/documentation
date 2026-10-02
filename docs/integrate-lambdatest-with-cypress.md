@@ -215,49 +215,6 @@ The integration is complete. Your tests run on the TestMu AI grid, and the recor
 
 <img loading="lazy" src={require('../assets/images/cypress/cypress-integration/cypress-testmu-dashboard.webp').default} alt="TestMu AI Automation Dashboard showing a passed Cypress test with command logs and video" width="1442" height="773" className="doc_img"/>
 
-## How to Use the Cypress Agent Skill With TestMu AI
-***
-
-The [cypress-skill](https://github.com/LambdaTest/agent-skills/tree/main/cypress-skill) is part of [TestMu AI Skills](https://github.com/LambdaTest/agent-skills/) that guide AI coding assistants in generating production-ready test automation.
-
-The cypress-skill package includes:
-
-```text
-cypress-skill/
-├── SKILL.md
-└── reference/
-    ├── playbook.md
-    └── advanced-patterns.md
-```
-
-It provides structured guidance for:
-
-* Project structure and setup
-* Dependency configuration
-* Local execution
-* TestMu AI cloud execution
-* Debugging patterns
-* CI/CD integration
-
-### Install the Cypress Agent Skill
-***
-
-Clone the agent-skills repository and copy the cypress-skill into your tool's skills directory:
-
-<VerifiedTag value="Verified" />
-
-```bash
-# Clone the repo and copy the skill you need
-git clone https://github.com/LambdaTest/agent-skills.git
-cp -r agent-skills/cypress-skill .claude/skills/
-
-# Or for Cursor / Copilot
-cp -r agent-skills/cypress-skill .cursor/skills/
-```
-
-:::note
-To install all available framework skills instead of only cypress-skill, clone the repository directly into your tool's skills directory (for example, `.claude/skills/`, `.cursor/skills/`, `.gemini/skills/`, or `.agent/skills/`).
-:::
 
 ## Related Cypress Guides
 ***

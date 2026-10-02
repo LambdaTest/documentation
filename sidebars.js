@@ -2357,6 +2357,7 @@ module.exports = {
           { type: "doc", id: "integrate-lambdatest-with-cypress" },
           { type: "doc", id: "applitools-integration-cypress" },
           { type: "doc", id: "report-portal-cypress" },
+          { type: "doc", id: "cyp-multi-reporters" },
           { type: "doc", id: "cypress-detailed-command-logs" },
         ],
       },
@@ -2372,7 +2373,6 @@ module.exports = {
       },
     ],
   ],
-
   PlaywrightTestingSidebar: [
     {
       type: 'link',
