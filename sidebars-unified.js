@@ -130,7 +130,13 @@ const backToDocs = {
 };
 const TestManagerSidebar = [backToDocs, ...items(s.TestManagerSidebar)];
 
+// Expose the Playwright Testing sidebar as a named sidebar so any doc that sets
+// `displayed_sidebar: PlaywrightTestingSidebar` in frontmatter resolves to a real
+// sidebar here (keeps the dev server from crashing on an unknown sidebar id).
+const PlaywrightTestingSidebar = [backToDocs, ...items(s.PlaywrightTestingSidebar)];
+
 module.exports = {
   docsSidebar,
   TestManagerSidebar,
+  PlaywrightTestingSidebar,
 };
