@@ -27,7 +27,7 @@ const docsSidebar = [
   {
     type: 'category', label: 'App Automation', collapsible: true, collapsed: true,
     items: [
-      { type: 'category', label: 'Appium Testing', collapsible: true, collapsed: true, items: items(s.AppiumTestingSidebar) },
+      { type: 'link', label: 'Appium Testing', href: '/docs/getting-started-with-appium-testing/' },
       { type: 'category', label: 'Espresso Testing', collapsible: true, collapsed: true, items: items(s.EspressoTestingSidebar) },
       { type: 'category', label: 'XCUI Testing', collapsible: true, collapsed: true, items: items(s.XCUITestingSidebar) },
       { type: 'category', label: 'Flutter Testing', collapsible: true, collapsed: true, items: items(s.FlutterTestingSidebar) },
@@ -130,7 +130,21 @@ const backToDocs = {
 };
 const TestManagerSidebar = [backToDocs, ...items(s.TestManagerSidebar)];
 
+// Appium Testing is a link in docsSidebar (above), so its docs live ONLY in this
+// dedicated sidebar — Docusaurus displays it (with the back-to-docs link)
+// whenever a reader is inside an Appium Testing page.
+const AppiumTestingSidebar = [
+  backToDocs,
+  // Bold the top-level category labels (styled via .appium-sidebar-category in custom.css).
+  ...items(s.AppiumTestingSidebar).map((item) =>
+    item && item.type === 'category'
+      ? { ...item, className: 'appium-sidebar-category' }
+      : item
+  ),
+];
+
 module.exports = {
   docsSidebar,
   TestManagerSidebar,
+  AppiumTestingSidebar,
 };

@@ -1,7 +1,7 @@
 ---
 id: regular-expression-appium
 title: Regular Expression - Appium
-# hide_title: true
+hide_title: true
 sidebar_label: Regular Expression
 description: If your chosen device for testing on TestMu AI is unavailable, use REGEX to broaden the search request for alternative devices to run the test.
 keywords:
@@ -11,15 +11,15 @@ url: https://www.testmuai.com/support/docs/regular-expression-appium/
 site_name: TestMu AI
 slug: regular-expression-appium/
 canonical: https://www.testmuai.com/support/docs/regular-expression-appium/
+toc_max_heading_level: 2
 ---
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
-import RealDeviceTag from '../src/component/realDevice';
-import VirtualDeviceTag from '../src/component/virtualDevice';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import RealDeviceTag from '@site/src/component/realDevice';
 
 
 
@@ -40,7 +40,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "App Automation: Regular Expression",
+          "name": "Regular Expression - Appium",
           "item": `${BRAND_URL}/support/docs/regular-expression-appium/`
         }]
       })
@@ -103,9 +103,12 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
   }) }}
 />
 
-<RealDeviceTag value="Real Device" /> 
+<RealDeviceTag value="Real Device" />
 
-Regular Expressions (RegEx) are powerful tools for searching and manipulating strings. When running tests on <BrandName /> with a specific device, there may be times when the exact device you selected isn't available. In such cases, RegEx will help you widen your search criteria to find any available device that matches your requirements.
+# Regular Expression - Appium
+
+
+Regular expressions in Appium on TestMu AI widen your device search when an exact device is unavailable, matching any suitable real device by pattern. TestMu AI supports RegEx for both deviceName and platformVersion, improving the chance of allocating a device.
 
 
 <BrandName /> provides RegEx support for both **deviceName** and **platformVersion**, making it easier to find the right devices for your tests.
@@ -163,7 +166,7 @@ You can pass both `deviceName` and `platformVersion` regex patterns together or 
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
       <span className="breadcrumbs__link">
-       Regular Expression
+        Regular Expression - Appium
       </span>
     </li>
   </ul>

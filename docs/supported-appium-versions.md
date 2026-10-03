@@ -1,9 +1,10 @@
 ---
 id: supported-appium-versions
-title: Supported Appium Versions - Real Devices
-hide_title: false
-sidebar_label: Supported Appium Versions
-description: This document provides information about configuring Appium versions for tests on the TestMu AI platform and also provides list of supported versions.
+title: Supported Appium Versions and Plugins on TestMu AI
+hide_title: true
+toc_max_heading_level: 2
+sidebar_label: "Supported Versions & Plugins"
+description: Configure Appium versions and plugins for real and virtual device tests on TestMu AI, with supported versions, driver versions, and plugin examples.
 keywords:
  - appium
  - appium languages
@@ -15,6 +16,9 @@ keywords:
  - app testing
  - testmu ai 
  - appium version selection
+ - appium plugins
+ - images plugin
+ - appium driver versions
 url: https://www.testmuai.com/support/docs/supported-appium-versions/
 site_name: TestMu AI
 slug: supported-appium-versions/
@@ -24,9 +28,9 @@ canonical: https://www.testmuai.com/support/docs/supported-appium-versions/
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import NewTag from '../src/component/newTag';
-import RealDeviceTag from '../src/component/realDevice';
-import VirtualDeviceTag from '../src/component/virtualDevice';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import RealDeviceTag from '@site/src/component/realDevice';
+import VirtualDeviceTag from '@site/src/component/virtualDevice';
 import VerifiedTag from '@site/src/component/verifiedTag';
 
 
@@ -47,7 +51,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "Appium Testing ",
+          "name": "Supported Appium Versions and Plugins on TestMu AI",
           "item": `${BRAND_URL}/support/docs/supported-appium-versions/`
         }]
       })
@@ -120,11 +124,15 @@ import VerifiedTag from '@site/src/component/verifiedTag';
     "dateModified": "2026-09-09T19:10:37+05:30"
   }) }}
 />
-# Supported Appium Versions
-<RealDeviceTag value="Real Device" /> 
-<VirtualDeviceTag value="Virtual Device" />
 
-Customize your testing experience on <BrandName /> by selecting the appropriate Appium version for your tests on real devices. <BrandName /> offers flexibility in choosing the Appium version to meet your testing requirements. By default, the suitable Appium version is selected based on the operating system (OS) when running tests. However, you can explicitly specify the  version using the `appiumVersion` capability in your test scripts.
+<RealDeviceTag value="Real Device" /> <VirtualDeviceTag value="Virtual Device" />
+
+# Supported Appium Versions and Plugins on TestMu AI
+---
+
+
+
+Supported Appium versions and plugins on TestMu AI let you pick the exact Appium version for tests on real and virtual devices and extend Appium with optional plugins. Listed here are supported versions per platform, driver versions, and supported plugins.
 
 :::info
 - We also provide Support for Appium 3.0.2 on following versions
@@ -132,8 +140,9 @@ Customize your testing experience on <BrandName /> by selecting the appropriate 
   - **iOS Devices:** 16, 17, 18, 26
 :::
 
-
 ## Appium Version Configuration for Real Devices
+---
+
 To configure the Appium version for your tests on <BrandName />, use the `appiumVersion` capability in your test scripts. Below is a table of supported Appium versions for different platforms:
 
 | Platform Versions | Supported Versions | Default Version | Latest Version |
@@ -145,11 +154,10 @@ To configure the Appium version for your tests on <BrandName />, use the `appium
 | tvos | 1.22.3, 2.2.1 | 1.22.3 | 1.22.3 |
 
 **Java Example:** 
-
 <VerifiedTag value="Verified" />
 
 ```java
-// Java code for configuring Appium version in tests on LambdaTest
+// Java code for configuring Appium version in tests on TestMu AI
 DesiredCapabilities capabilities = new DesiredCapabilities();
 capabilities.setCapability("appiumVersion", "2.2.1");
 capabilities.setCapability("platformName", "ios");
@@ -160,8 +168,10 @@ capabilities.setCapability("platformName", "ios");
 
 **Default Version**: A new `default` version is supported when the user does not explicitly specify a appium version or pass `default` in **appiumVersion** capability.
 
-
 ## Supported Driver Versions 
+---
+
+Each Appium version maps to specific iOS and Android driver versions. Use the table below to confirm the driver versions bundled with your chosen Appium version:
 
 | Appium Version | iOS Driver                     | Android Driver                        |
 |----------------|--------------------------------|---------------------------------------|
@@ -185,12 +195,75 @@ capabilities.setCapability("platformName", "ios");
 - For devices running iOS 17 and newer, it is recommended to use Appium versions `2.2.1` and `above` to ensure the best compatibility and performance.
 :::
 
-
 ## Appium Version Configuration for Virtual Devices
+---
+
+For virtual devices, the following Appium versions are supported per platform:
 
 | Platform Versions | Supported Versions | 
 |-------------------|--------------------|
 | Android | 1.21.0, 1.22.3, 2.0.0, 2.1.3, 2.16.2 |
 | iOS |1.22.3, 2.0.0, 2.1.3, 2.16.2 |
 
+## Supported Appium Plugins
+---
 
+
+Enhance your testing experience on <BrandName /> by leveraging a variety of Appium plugins. Plugins offer various ways to extend or modify Appium's behavior. They are completely optional and are not needed for standard automation functionality, but you may find them useful for more specialized automation workflows.
+By using these plugins, you can tailor your testing environment to better suit your project's specific needs, leading to more efficient and effective test automation.
+
+Below is a list of the supported Appium plugins on <BrandName />:
+
+| Plugin Name       |  Description                                                                                  | Example                    |
+|-------------------|-------------------------------------------------------------------------------------------------------|---------------------------------------------------|
+| `images`          | Enables image comparison features in tests. Allows for verification of visual elements through images. | "appiumPlugins": ["images"] |
+| `element-wait`    | Provides enhanced wait capabilities for elements, allowing tests to wait for elements to be in a certain state.For further details, please check [this documentation](https://github.com/AppiumTestDistribution/appium-wait-plugin). | "appiumPlugins": ["element-wait"] |
+| `gestures`        | Adds support for gesture-based interactions, enabling tests to perform complex gestures like swipe, pinch, and zoom. For further details, please check [this documentation](https://github.com/AppiumTestDistribution/appium-gestures-plugin). | "appiumPlugins": ["gestures"] |
+
+**Python Example:**
+
+<VerifiedTag value="Verified" />
+
+```python
+capabilities = {
+    "appiumVersion": "2.2.1",
+    "platformName": "iOS",
+    "appiumPlugins": ["images", "element-wait", "gestures"],
+    # Add other capabilities as needed
+}
+```
+
+:::note 
+
+- Appium plugins are only supported with version 2.0.0 and above appium versions. Please ensure that the `appiumVersion` capability is set correctly to utilize these plugins.
+
+:::
+
+## Next Steps
+---
+
+Continue with these related guides:
+
+- [Run your first Appium test](/support/docs/getting-started-with-appium-testing/)
+- [Appium automation capabilities](/support/docs/desired-capabilities-in-appium/)
+- [Appium languages and frameworks](/support/docs/appium-languages-and-frameworks/)
+
+<nav aria-label="breadcrumbs">
+  <ul className="breadcrumbs">
+    <li className="breadcrumbs__item">
+      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
+        Home
+      </a>
+    </li>
+    <li className="breadcrumbs__item">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
+        Support
+      </a>
+    </li>
+    <li className="breadcrumbs__item breadcrumbs__item--active">
+      <span className="breadcrumbs__link">
+        Supported Appium Versions and Plugins on TestMu AI
+      </span>
+    </li>
+  </ul>
+</nav>

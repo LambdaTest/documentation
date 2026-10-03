@@ -2,7 +2,7 @@
 id: app-automation-slack-notifications
 title: Slack Notifications for App Automation
 sidebar_label: Slack Notifications
-description: Get real-time Slack notifications for your test sessions and build summaries on TestMu AI.
+description: Get real-time Slack notifications for your App Automation test sessions and build summaries directly in your Slack channels using TestMu AI.
 keywords:
   - slack notifications
   - app automation slack
@@ -14,6 +14,7 @@ url: https://www.testmuai.com/support/docs/app-automation-slack-notifications/
 site_name: TestMu AI
 slug: app-automation-slack-notifications/
 canonical: https://www.testmuai.com/support/docs/app-automation-slack-notifications/
+toc_max_heading_level: 2
 ---
 
 import CodeBlock from '@theme/CodeBlock';
@@ -129,7 +130,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
   }) }}
 />
 
-With Slack Notifications for App Automation, you can receive real-time updates about your test sessions and build summaries directly in your Slack channels. This eliminates the need to manually monitor the dashboard and keeps your entire team informed about test execution results.
+Slack notifications on TestMu AI deliver real-time updates about each of your App Automation test sessions and build summaries directly in your Slack channels, eliminating manual dashboard monitoring and keeping your entire team instantly informed about mobile test execution results.
 
 ## Prerequisites
 
@@ -152,10 +153,10 @@ To enable Slack notifications for your App Automation tests, add the `slackChann
 
 ### Configuration Examples
 
-<VerifiedTag value="Verified" />
-
 <Tabs className="docs__val">
 <TabItem value="java" label="Java" default>
+
+<VerifiedTag value="Verified" />
 
 ```java
 DesiredCapabilities capabilities = new DesiredCapabilities();
@@ -172,6 +173,8 @@ capabilities.setCapability("slackChannel", "mobile-test-results");
 </TabItem>
 <TabItem value="python" label="Python">
 
+<VerifiedTag value="Verified" />
+
 ```python
 desired_caps = {
     "platformName": "Android",
@@ -187,6 +190,8 @@ desired_caps = {
 
 </TabItem>
 <TabItem value="javascript" label="JavaScript">
+
+<VerifiedTag value="Verified" />
 
 ```javascript
 const capabilities = {
