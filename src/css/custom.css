@@ -219,7 +219,7 @@ body {
 }
 
 /* Bold sidebar items via the `menu-bold` class, applied to specific sidebar
-   entries (Test Manager items and the Playwright Testing category labels — see
+   entries (Test Manager items and the Puppeteer Testing category labels — see
    sidebars.js). Covers standalone docs AND collapsible category labels, so no
    global sidebar rule is needed and other product sidebars are unaffected. */
 .menu-bold > .menu__link,

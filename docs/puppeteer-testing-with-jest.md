@@ -1,18 +1,16 @@
 ---
 id: puppeteer-jest
-title: Run Puppeteer Tests With Jest
+title: How to Run Puppeteer Tests With Jest on TestMu AI
 hide_title: true
-sidebar_label: Integrate With Jest
-description: Learn how to integrate and run your Puppeteer tests with Jest across multiple browser versions on the TestMu AI platform.
+toc_max_heading_level: 2
+sidebar_label: "Jest"
+description: Run Puppeteer tests with Jest across real browsers and operating systems on TestMu AI, including setup, capabilities, and test execution.
 keywords:
   - puppeteer testing with jest
+  - puppeteer jest test runner
+  - run puppeteer tests on testmu ai
   - automation testing with puppeteer
-  - how to use puppeteer for testing
-  - test puppeteer
-  - puppeteer testing tutorial
-  - puppeteer testing testmu ai
-
-  
+  - puppeteer jest capabilities
 url: https://www.testmuai.com/support/docs/puppeteer-testing-with-jest/
 site_name: TestMu AI
 slug: puppeteer-testing-with-jest/
@@ -56,8 +54,8 @@ import VerifiedTag from '@site/src/component/verifiedTag';
       "@type": "WebPage",
       "@id": "https://www.testmuai.com/support/docs/puppeteer-testing-with-jest/"
     },
-    "headline": "Run Puppeteer Tests With Jest",
-    "description": "Learn how to integrate and run your Puppeteer tests with Jest across multiple browser versions on the TestMu AI platform.",
+    "headline": "How to Run Puppeteer Tests With Jest on TestMu AI",
+    "description": "Run Puppeteer tests with Jest across real browsers and operating systems on TestMu AI, including setup, capabilities, and test execution.",
     "url": "https://www.testmuai.com/support/docs/puppeteer-testing-with-jest/",
     "image": {
       "@type": "ImageObject",
@@ -69,8 +67,10 @@ import VerifiedTag from '@site/src/component/verifiedTag';
     "articleSection": "Web Automation",
     "keywords": [
       "puppeteer testing with jest",
+      "puppeteer jest test runner",
+      "run puppeteer tests on testmu ai",
       "automation testing with puppeteer",
-      "how to use puppeteer for testing"
+      "puppeteer jest capabilities"
     ],
     "proficiencyLevel": "Beginner",
     "author": {
@@ -102,75 +102,59 @@ import VerifiedTag from '@site/src/component/verifiedTag';
     "hasPart": [
       {
         "@type": "SoftwareSourceCode",
-        "name": "Prerequisites",
+        "name": "Install the npm dependencies",
         "codeSampleType": "code snippet",
         "programmingLanguage": "text",
         "text": "npm install"
       },
       {
         "@type": "SoftwareSourceCode",
-        "name": "Prerequisites",
+        "name": "Set credentials on Windows",
         "codeSampleType": "code snippet",
         "programmingLanguage": "JavaScript",
         "text": "set LT_USERNAME=\"YOUR_LAMBDATEST_USERNAME\"\nset LT_ACCESS_KEY=\"YOUR_LAMBDATEST_ACCESS_KEY\""
       },
       {
         "@type": "SoftwareSourceCode",
-        "name": "Prerequisites",
+        "name": "Set credentials on macOS/Linux",
         "codeSampleType": "code snippet",
         "programmingLanguage": "JavaScript",
         "text": "export LT_USERNAME=\"YOUR_LAMBDATEST_USERNAME\"\nexport LT_ACCESS_KEY=\"YOUR_LAMBDATEST_ACCESS_KEY\""
       },
       {
         "@type": "SoftwareSourceCode",
-        "name": "Running Tests Using Jest",
+        "name": "Run Puppeteer Jest Tests on TestMu AI",
         "codeSampleType": "code snippet",
         "programmingLanguage": "JavaScript",
         "text": "const caps_chrome = {\n\tbrowserName    : 'Chrome',\n\tbrowserVersion : 'latest',\n\t'LT:Options'   : {\n\t\tplatform   : 'Windows 10',\n\t\tbuild      : 'Sample Puppeteer-Jest',\n\t\tname       : 'Puppeteer-jest test on Chrome',\n\t\tresolution : '1366x768',\n\t\tuser       : process.env.LT_USERNAME,\n\t\taccessKey  : process.env.LT_USER_KEY,\n\t\tnetwork    : true\n\t}\n};\n\nconst caps_edge = {\n\tbrowserName    : 'MicrosoftEdge',\n\tbrowserVersion : 'latest',\n\t'LT:Options'   : {\n\t\tplatform   : 'Windows 10',\n\t\tbuild      : 'Sample Puppeteer-Jest',\n\t\tname       : 'Puppeteer-jest test on Edge',\n\t\tresolution : '1366x768',\n\t\tuser       : process.env.LT_USERNAME,\n\t\taccessKey  : process.env.LT_USER_KEY,\n\t\tnetwork    : true\n\t}\n};\n\nmodule.exports = {\n\tconnect : {\n\t\tbrowserWSEndpoint : `wss://cdp.lambdatest.com/puppeteer?capabilities=${encodeURIComponent(\n\t\t\tJSON.stringify(caps_chrome)\n\t\t)}`\n\t}\n};\n"
       },
       {
         "@type": "SoftwareSourceCode",
-        "name": "Code sample 5",
+        "name": "Run the test",
         "codeSampleType": "code snippet",
         "programmingLanguage": "text",
         "text": "npm run test"
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "The jest-skill package includes",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "text",
-        "text": "jest-skill/\n\u251c\u2500\u2500 SKILL.md\n\u2514\u2500\u2500 reference/\n    \u251c\u2500\u2500 playbook.md\n    \u2514\u2500\u2500 advanced-patterns.md"
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "Install a Jest Agent Skill using the command below",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "text",
-        "codeRepository": "https://github.com/LambdaTest/agent-skills",
-        "text": "# Clone the repo and copy the skill you need\ngit clone https://github.com/LambdaTest/agent-skills.git\ncp -r agent-skills/jest-skill .claude/skills/\n\n# Or for Cursor / Copilot\ncp -r agent-skills/jest-skill .cursor/skills/"
       }
     ],
     "dateModified": "2026-09-09T19:13:32+05:30"
   }) }}
 />
 
-# Puppeteer Testing With Jest
-* * *
+# How to Run Puppeteer Tests With Jest on TestMu AI
+***
 
-Jest is a Facebook-maintained framework for developing frontend and backend unit tests in JavaScript and executing end-to-end testing using Playwright. It provides you with the flexibility to target a single test, delivering structured output, or an entire suite for common assertions.
-
-<BrandName /> allows you to run Puppeteer tests with Jest on a browser farm of real browsers and operating system combinations. 
-
-This guide will cover the basics of getting started with Puppeteer testing with Jest on the <BrandName /> platform.
+If you write Puppeteer tests with Jest, you can run the same specs across real browsers and operating systems on TestMu AI instead of a single local machine. This gives you Jest's structured output and assertions on a browser farm, whether you target a single test or an entire suite. You connect Puppeteer to the TestMu AI cloud grid through a `browserWSEndpoint` in your Jest configuration, then run the suite with the standard `npm run test` command.
 
 ## Prerequisites
 ***
 
->Note: All the code samples in this documentation can be found in the <BrandName />'s Repository on GitHub. You can either download or clone the repository to quickly run your tests.
-<a href="https://github.com/LambdaTest/puppeteer-sample" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image"  className="doc_img"/> View on GitHub</a>
+Before you run your first suite, clone the sample repository and set the credentials TestMu AI uses to authenticate your session.
 
-1. Clone the <BrandName />-Puppeteer repository on your system.
+:::tip Sample repo
+<a href="https://github.com/LambdaTest/puppeteer-sample/tree/main/puppeteer-jest" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="TestMu AI Puppeteer Jest sample on GitHub"  className="doc_img"/> View on GitHub</a>
+:::
+
+1. Clone the TestMu AI Puppeteer repository on your system.
 
 2. Install the npm dependencies.
 
@@ -180,8 +164,7 @@ This guide will cover the basics of getting started with Puppeteer testing with 
 npm install
 ```
 
-3. In order to run your Puppeteer tests with Jest, you will need to set your <BrandName /> username and access key in the environment variables. Click the **Access Key** button at the top-right of the Automation Dashboard to access it.
-
+3. Set your TestMu AI username and access key in the environment variables. Click the **Access Key** button at the top-right of the Automation Dashboard to find them.
 
 **Windows**
 
@@ -201,12 +184,12 @@ export LT_USERNAME="YOUR_LAMBDATEST_USERNAME"
 export LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
 ```
 
-## Running Tests Using Jest
----
+## Run Puppeteer Jest Tests on TestMu AI
+***
 
->**Test Scenario**: The below test script searches <BrandName /> on DuckDuckGo and verifies the website title.
+The sample test script searches for TestMu AI on DuckDuckGo and verifies the page title. Configure the capabilities, then run the suite with a single command.
 
-1. To run the Puppeteer tests using Jest on <BrandName />, you need make some tweaks to the `jest-puppeteer.config.js` file.
+1. To run the Puppeteer tests using Jest on TestMu AI, make the required changes to the `jest-puppeteer.config.js` file.
 
 <VerifiedTag value="Verified" />
 
@@ -249,15 +232,25 @@ module.exports = {
 
 ```
 
-2. Pass the below command to run the test.
+2. Run the following command to execute your test.
 
 <VerifiedTag value="Verified" />
 
-```
+```bash
 npm run test
 ```
 
-3. Visit the <BrandName /> Automation Dashboard to see the results of your Puppeteer Jest tests.
+3. Visit the TestMu AI Automation Dashboard to see the results of your Puppeteer Jest tests.
+
+
+## Related Puppeteer Guides
+***
+
+Continue with the guides below to configure and scale your Puppeteer runs on TestMu AI.
+
+* [Run your first Puppeteer test on TestMu AI](/support/docs/puppeteer-testing/)
+* [Run Puppeteer tests with Mocha](/support/docs/puppeteer-testing-with-mocha/)
+* [Configure Puppeteer capabilities](/support/docs/capabilities-for-puppeteer/)
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
