@@ -28,7 +28,7 @@ const docsSidebar = [
     type: 'category', label: 'App Automation', collapsible: true, collapsed: true,
     items: [
       { type: 'category', label: 'Appium Testing', collapsible: true, collapsed: true, items: items(s.AppiumTestingSidebar) },
-      { type: 'category', label: 'Espresso Testing', collapsible: true, collapsed: true, items: items(s.EspressoTestingSidebar) },
+      { type: 'link', label: 'Espresso Testing', href: '/docs/getting-started-with-espresso-testing/' },
       { type: 'category', label: 'XCUI Testing', collapsible: true, collapsed: true, items: items(s.XCUITestingSidebar) },
       { type: 'category', label: 'Flutter Testing', collapsible: true, collapsed: true, items: items(s.FlutterTestingSidebar) },
       { type: 'category', label: 'Virtual Devices', collapsible: true, collapsed: true, items: items(s.EmuSimuSidebar) },
@@ -130,7 +130,13 @@ const backToDocs = {
 };
 const TestManagerSidebar = [backToDocs, ...items(s.TestManagerSidebar)];
 
+// Espresso Testing is a link in docsSidebar (above), so its docs live ONLY in
+// this dedicated sidebar — Docusaurus displays it (with the back-to-docs link)
+// whenever a reader is inside an Espresso Testing page.
+const EspressoTestingSidebar = [backToDocs, ...items(s.EspressoTestingSidebar)];
+
 module.exports = {
   docsSidebar,
   TestManagerSidebar,
+  EspressoTestingSidebar,
 };

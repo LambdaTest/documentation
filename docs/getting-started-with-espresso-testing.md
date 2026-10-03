@@ -1,7 +1,8 @@
 ---
 id: getting-started-with-espresso-testing
-title: Espresso Testing On TestMu AI
-sidebar_label: Espresso Testing
+title: How to Run Espresso Tests on TestMu AI
+hide_title: true
+sidebar_label: Run First Test
 description: Now you can run your automation scripts using Espresso framework on TestMu AI online grid of 3000+ real desktop browsers and real operating systems.
 keywords:
   - espresso
@@ -15,12 +16,11 @@ url: https://www.testmuai.com/support/docs/getting-started-with-espresso-testing
 site_name: TestMu AI
 slug: getting-started-with-espresso-testing/
 canonical: https://www.testmuai.com/support/docs/getting-started-with-espresso-testing/
+toc_max_heading_level: 2
 ---
 
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
-import RealDeviceTag from '../src/component/realDevice';
-import VirtualDeviceTag from '../src/component/virtualDevice';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import CookieTrackingLogin from '@site/src/component/CookieTracking';
 import VerifiedTag from '@site/src/component/verifiedTag';
@@ -43,7 +43,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "Getting Started With Espresso Testing on TestMu AI",
+          "name": "How to Run Espresso Tests on TestMu AI",
           "item": `${BRAND_URL}/support/docs/getting-started-with-espresso-testing/`
         }]
       })
@@ -222,10 +222,16 @@ import VerifiedTag from '@site/src/component/verifiedTag';
     }
   ]) }}
 />
-<RealDeviceTag value="Real Device" /> <VirtualDeviceTag value="Virtual Device" />
-Espresso is a widely-used testing framework for Android, designed to simplify the process of writing reliable and efficient UI tests. It allows developers to create automated tests that simulate user interactions within an app, ensuring that the app's UI behaves as expected. With its straightforward API and synchronization capabilities, Espresso provides a robust solution for validating the functionality and performance of Android applications.
 
-In this documentation, you will learn how to trigger a automation script of Java for application testing with Appium on <BrandName />, set the desired capabilities for appium testing, and other advanced features of <BrandName />.
+<RealDeviceTag value="Real Device" /> <VirtualDeviceTag value="Virtual Device" />
+
+# How to Run Espresso Tests on TestMu AI
+
+
+Running Espresso tests on TestMu AI executes Android UI automation on real and virtual devices. Upload your app and Espresso test APKs, set the desired capabilities, trigger the build, and review results on the dashboard without a local device lab.
+
+
+Espresso is a widely-used testing framework for Android, designed to simplify the process of writing reliable and efficient UI tests. It allows developers to create automated tests that simulate user interactions within an app, ensuring that the app's UI behaves as expected. With its straightforward API and synchronization capabilities, Espresso provides a robust solution for validating the functionality and performance of Android applications.
 
 ## Prerequisites
 
@@ -247,6 +253,8 @@ To begin testing, upload your Android application (.apk file) to <BrandName />'s
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import RealDeviceTag from '@site/src/component/realDevice';
+import VirtualDeviceTag from '@site/src/component/virtualDevice';
 
 <Tabs className="docs__val">
 
@@ -339,8 +347,6 @@ Take note of the base64 encoded authentication which needs to be added in the 
 * Before running the command, replace `BASIC_AUTH_TOKEN`, `APP_ID`, and `TEST_SUITE_ID` with your actual LambdaTest credentials and resource IDs obtained from the above curl commands.
   :::
 
-<VerifiedTag value="Verified" />
-
 <Tabs className="docs__val">
 
 <TabItem value="real-device" label="Real Device" default>
@@ -348,6 +354,8 @@ Take note of the base64 encoded authentication which needs to be added in the 
 <Tabs className="docs__val">
 
 <TabItem value="bash" label="Linux / MacOS" default>
+<VerifiedTag value="Verified" />
+
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">
 
@@ -373,8 +381,10 @@ curl --location --request POST 'https://mobile-api.lambdatest.com/framework/v1/e
 </TabItem>
 
 <TabItem value="powershell" label="Windows" default>
+<VerifiedTag value="Verified" />
+
 <div className="lambdatest__codeblock">
-<CodeBlock className="lamguage-powershell">
+<CodeBlock className="language-powershell">
 
 ```bash
 curl --location --request POST "https://mobile-api.lambdatest.com/framework/v1/espresso/build" ^
@@ -421,7 +431,7 @@ curl --location --request POST 'https://mobile-api.lambdatest.com/framework/v1/e
 
 <TabItem value="powershell" label="Windows" default>
 <div className="lambdatest__codeblock">
-<CodeBlock className="lamguage-powershell">
+<CodeBlock className="language-powershell">
 
 ```bash
 curl --location --request POST "https://mobile-api.lambdatest.com/framework/v1/espresso/build" ^
@@ -453,8 +463,6 @@ You can run tests in parallel on multiple devices by passing the device name in 
 * Before running the command, replace `BASIC_AUTH_TOKEN`, `APP_ID`, and `TEST_SUITE_ID` with your actual LambdaTest credentials and resource IDs obtained from the above curl commands.
 :::
 
-<VerifiedTag value="Verified" />
-
 <Tabs className="docs__val">
 
 <TabItem value="real-device" label="Real Device" default>
@@ -462,6 +470,8 @@ You can run tests in parallel on multiple devices by passing the device name in 
 <Tabs className="docs__val">
 
 <TabItem value="bash" label="Linux / MacOS" default>
+<VerifiedTag value="Verified" />
+
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">
 
@@ -487,8 +497,10 @@ curl --location --request POST 'https://mobile-api.lambdatest.com/framework/v1/e
 </TabItem>
 
 <TabItem value="powershell" label="Windows" default>
+<VerifiedTag value="Verified" />
+
 <div className="lambdatest__codeblock">
-<CodeBlock className="lamguage-powershell">
+<CodeBlock className="language-powershell">
 
 ```bash
 curl --location --request POST "https://mobile-api.lambdatest.com/framework/v1/espresso/build" ^
@@ -535,7 +547,7 @@ curl --location --request POST 'https://mobile-api.lambdatest.com/framework/v1/e
 
 <TabItem value="powershell" label="Windows" default>
 <div className="lambdatest__codeblock">
-<CodeBlock className="lamguage-powershell">
+<CodeBlock className="language-powershell">
 
 ```bash
 curl --location --request POST "https://mobile-api.lambdatest.com/framework/v1/espresso/build" ^
@@ -552,52 +564,6 @@ curl --location --request POST "https://mobile-api.lambdatest.com/framework/v1/e
 </TabItem>
 </Tabs>
 
-
-## Using the Espresso Agent Skill with TestMu AI
-***
-
-The [espresso-skill](https://github.com/LambdaTest/agent-skills/tree/main/espresso-skill) is a part of [TestMu AI Skills](https://github.com/LambdaTest/agent-skills/) that guide AI coding assistants in generating production-ready test automation.
-
-The espresso-skill package includes:
-
-<VerifiedTag value="Verified" />
-
-```
-espresso-skill/
-├── SKILL.md
-└── reference/
-    ├── playbook.md
-    └── advanced-patterns.md
-```
-
-It provides structured guidance for:
-
-* Project structure and setup
-* Dependency configuration
-* Local execution
-* TestMu AI cloud execution
-* Debugging patterns
-* CI/CD integration
-
-
-### Installing Espresso Agent Skill
-***
-
-Install a Espresso Agent Skill using the command below:
-
-<VerifiedTag value="Verified" />
-
-```
-# Clone the repo and copy the skill you need
-git clone https://github.com/LambdaTest/agent-skills.git
-cp -r agent-skills/espresso-skill .claude/skills/
-
-# Or for Cursor / Copilot
-cp -r agent-skills/espresso-skill .cursor/skills/
-```
-
-**Note**: If you prefer installing all available framework skills instead of only espresso-skill, clone the repository directly into your tool's skills directory (for example, .claude/skills/, .cursor/skills/, .gemini/skills/, or .agent/skills/).
-
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
@@ -612,7 +578,7 @@ cp -r agent-skills/espresso-skill .cursor/skills/
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
       <span className="breadcrumbs__link">
-      Espresso Testing 
+        How to Run Espresso Tests on TestMu AI
       </span>
     </li>
   </ul>

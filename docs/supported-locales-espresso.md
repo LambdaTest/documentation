@@ -1,6 +1,6 @@
 ---
 id: supported-locales-espresso
-title: Supported Locales And Languages - Espresso
+title: Supported Espresso Locales & Languages on TestMu AI
 hide_title: false
 sidebar_label: Supported Locales And Languages
 description: Checkout the list of all supported locales for espresso.
@@ -13,6 +13,7 @@ url: https://www.testmuai.com/support/docs/supported-locales-espresso/
 site_name: TestMu AI
 slug: supported-locales-espresso/
 canonical: https://www.testmuai.com/support/docs/supported-locales-espresso/
+toc_max_heading_level: 2
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import VerifiedTag from '@site/src/component/verifiedTag';
@@ -35,7 +36,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "List of Supported Locales",
+          "name": "Supported Espresso Locales & Languages on TestMu AI",
           "item": `${BRAND_URL}/support/docs/supported-locales-espresso/`
         }]
       })
@@ -109,7 +110,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
   }) }}
 />
 
-Use the given below list of supported locale and language codes for app testing.
+Espresso testing on TestMu AI supports a wide range of Android and iOS locales and language codes. Use the tables to find the correct code, then configure Appium's language capability to test how your app renders localized strings across regions.
 
 ## Android Locales and Language Codes
 
