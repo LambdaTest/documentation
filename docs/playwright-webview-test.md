@@ -298,7 +298,7 @@ node playwrightwebview.js
 
 Open the [TestMu AI Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build) to check the status of your test execution.
 
-<img loading="lazy" src={require('../assets/images/playwright-testing/webview-test.png').default} alt="Playwright WebView test session status on the TestMu AI Automation Dashboard" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/playwright-testing/playwright-webview-test-results.webp').default} alt="Playwright WebView test session status on the TestMu AI Automation Dashboard" className="doc_img"/>
 
 ## Related Playwright Guides
 ***

@@ -2,7 +2,6 @@
 id: csharp-with-playwright
 title: How to Run Playwright Tests With C# on TestMu AI
 hide_title: true
-toc_max_heading_level: 2
 sidebar_label: C#
 description: Run your C# automation scripts with Playwright on TestMu AI scalable cloud grid of 50+ real desktop browsers and operating systems.
 keywords:
@@ -158,8 +157,6 @@ Run your C# Playwright tests on the TestMu AI cloud grid to reach 50+ real deskt
 Complete these before running the test below.
 
 1. A TestMu AI **Username** and **Access Key**. Get them from your TestMu AI Profile. Don't have an account? <a href="https://www.testmuai.com/register/" onClick={CookieTrackingSignup}>Sign up for free</a>.
-
-<img loading="lazy" src={require('../assets/images/auth_lt.png').default} alt="TestMu AI Profile page showing the Username and Access Key credentials" width="1444" height="703"  className="doc_img"/>
 
 2. The [.NET SDK](https://dotnet.microsoft.com/en-us/download) installed. The sample project uses the built-in Playwright tooling for .NET, so `dotnet restore` resolves the dependencies when you build.
 3. Clone the sample repository and move into the C# subdirectory.

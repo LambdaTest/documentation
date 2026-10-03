@@ -2,7 +2,6 @@
 id: java-with-playwright
 title: How to Run Playwright Tests With JUnit on TestMu AI
 hide_title: true
-toc_max_heading_level: 2
 sidebar_label: Java
 description: Run Java Playwright tests with JUnit on the TestMu AI cloud grid across 50+ real desktop browsers and operating systems.
 keywords:
@@ -145,8 +144,6 @@ Run your Java Playwright tests on the TestMu AI cloud grid to reach 50+ real des
 Complete these before running the test below.
 
 1. A TestMu AI **Username** and **Access Key**. Get them from your TestMu AI Profile. Don't have an account? <a href="https://www.testmuai.com/register/" onClick={CookieTrackingSignup}>Sign up for free</a>.
-
-<img loading="lazy" src={require('../assets/images/auth_lt.png').default} alt="TestMu AI Profile page showing the Username and Access Key credentials" width="1444" height="703"  className="doc_img"/>
 
 2. [JDK](https://www.oracle.com/java/technologies/downloads/) 8 or later and [Apache Maven](https://maven.apache.org/) installed. The sample projects are Maven projects, so Maven resolves the dependencies when you build.
 3. Clone the sample repository. Each framework lives in its own subdirectory.
