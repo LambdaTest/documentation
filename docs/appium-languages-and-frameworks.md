@@ -1,7 +1,7 @@
 ﻿---
 id: appium-languages-and-frameworks
 title: Appium Supported Languages and Frameworks
-sidebar_label: Languages and Frameworks
+sidebar_label: Supported Languages and Frameworks
 description: Here is a list of languages and frameworks that are supported by the TestMu AI to run Appium automation tests on TestMu AI Real Device Cloud Platform.
 keywords:
   - supported languages
@@ -15,12 +15,10 @@ url: https://www.testmuai.com/support/docs/appium-languages-and-frameworks/
 site_name: TestMu AI
 slug: appium-languages-and-frameworks/
 canonical: https://www.testmuai.com/support/docs/appium-languages-and-frameworks/
+toc_max_heading_level: 2
 ---
 
-import CodeBlock from '@theme/CodeBlock';
-import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
-import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -101,28 +99,11 @@ import VerifiedTag from '@site/src/component/verifiedTag';
         "https://www.youtube.com/@TestMuAI"
       ]
     },
-    "hasPart": [
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "The appium-skill package includes",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "text",
-        "text": "appium-skill/\n\u251c\u2500\u2500 SKILL.md\n\u2514\u2500\u2500 reference/\n    \u251c\u2500\u2500 playbook.md\n    \u2514\u2500\u2500 advanced-patterns.md"
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "Install a Appium Agent Skill using the command below",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "text",
-        "codeRepository": "https://github.com/LambdaTest/agent-skills",
-        "text": "# Clone the repo and copy the skill you need\ngit clone https://github.com/LambdaTest/agent-skills.git\ncp -r agent-skills/appium-skill .claude/skills/\n\n# Or for Cursor / Copilot\ncp -r agent-skills/appium-skill .cursor/skills/"
-      }
-    ],
     "dateModified": "2026-09-09T19:10:37+05:30"
   }) }}
 />
 
-Here is a list of languages and frameworks that are supported by the <BrandName /> to run Appium automation tests on [<BrandName /> Real Device Cloud Platform](https://www.testmuai.com/real-device-cloud/).
+Here is a list of languages and frameworks that are supported by the <BrandName /> to run Appium automation tests on TestMu AI [real device cloud](https://www.testmuai.com/real-device-cloud/).
 
 <div className="lt_row lt_framework_list_row">
     <div className="lt_col lt_framework_wrapper"> 
@@ -132,16 +113,16 @@ Here is a list of languages and frameworks that are supported by the <BrandName 
           <a className="lt_primary" href="/support/docs/appium-java/">Java</a>
         </li>
         <li>
-          <a href="/support/docs/appium-java-junit/">JUnit</a>
+          <a href="/support/docs/appium-java/?framework=junit">JUnit</a>
         </li>
         <li>
-          <a href="/support/docs/appium-java-jbehave/">JBehave</a>
+          <a href="/support/docs/appium-java/?framework=jbehave">JBehave</a>
         </li>
         <li>
-          <a href="/support/docs/appium-java-cucumber/">Cucumber</a>
+          <a href="/support/docs/appium-java/?framework=cucumber">Cucumber</a>
         </li>
         <li>
-          <a href="/support/docs/appium-java-testng/">TestNG</a>
+          <a href="/support/docs/appium-java/?framework=testng">TestNG</a>
         </li>
       </ul>
     </div>
@@ -152,10 +133,10 @@ Here is a list of languages and frameworks that are supported by the <BrandName 
           <a className="lt_primary" href="/support/docs/appium-nodejs/">JavaScript</a>
         </li>
         <li>
-          <a href="/support/docs/appium-nodejs-webdriverio/">WebDriverIO</a>
+          <a href="/support/docs/appium-nodejs/?framework=webdriverio">WebDriverIO</a>
         </li>
         <li>
-          <a href="/support/docs/appium-nodejs-mocha/">Mocha</a>
+          <a href="/support/docs/appium-nodejs/?framework=mocha">Mocha</a>
         </li>
       </ul>
     </div>
@@ -166,16 +147,16 @@ Here is a list of languages and frameworks that are supported by the <BrandName 
           <a className="lt_primary" href="/support/docs/appium-python/">Python</a>
         </li>
         <li>
-          <a href="/support/docs/appium-python-behave/">Behave</a>
+          <a href="/support/docs/appium-python/?framework=behave">Behave</a>
         </li>
         <li>
-          <a href="/support/docs/appium-python-robot/">Robot</a>
+          <a href="/support/docs/appium-python/?framework=robot">Robot</a>
         </li>
         <li>
-          <a href="/support/docs/appium-python-gauge/">Gauge</a>
+          <a href="/support/docs/appium-python/?framework=gauge">Gauge</a>
         </li>
         <li>
-          <a href="/support/docs/appium-python-pytest/">PyTest</a>
+          <a href="/support/docs/appium-python/?framework=pytest">PyTest</a>
         </li>
       </ul>
     </div>
@@ -186,10 +167,10 @@ Here is a list of languages and frameworks that are supported by the <BrandName 
           <a className="lt_primary" href="/support/docs/appium-ruby/">Ruby</a>
         </li>
         <li>
-          <a href="/support/docs/appium-ruby-cucumber/">Cucumber</a>
+          <a href="/support/docs/appium-ruby/?framework=cucumber">Cucumber</a>
         </li>
         <li>
-          <a href="/support/docs/appium-ruby-rspec/">RSpec</a>
+          <a href="/support/docs/appium-ruby/?framework=rspec">RSpec</a>
         </li>
       </ul>
     </div>
@@ -200,7 +181,7 @@ Here is a list of languages and frameworks that are supported by the <BrandName 
           <a className="lt_primary" href="/support/docs/appium-php/">PHP</a>
         </li>
         <li>
-          <a href="/support/docs/appium-php-behat/">Behat</a>
+          <a href="/support/docs/appium-php/?framework=behat">Behat</a>
         </li>
         </ul>
     </div>
@@ -211,7 +192,7 @@ Here is a list of languages and frameworks that are supported by the <BrandName 
           <a className="lt_primary" href="/support/docs/appium-csharp/">C#</a>
         </li>
         <li>
-          <a href="/support/docs/appium-csharp-nunit/">NUnit</a>
+          <a href="/support/docs/appium-csharp/?framework=nunit">NUnit</a>
         </li>
       </ul>
     </div>
@@ -225,53 +206,6 @@ Here is a list of languages and frameworks that are supported by the <BrandName 
 We are preparing documentation for more frameworks. If you want us to prioritize documentation of your preferred framework then feel free to give us a <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**shout**</span>.
 
 :::
-
-
-
-## Using the Appium Agent Skill with TestMu AI
-***
-
-The [appium-skill](https://github.com/LambdaTest/agent-skills/tree/main/appium-skill) is a part of [TestMu AI Skills](https://github.com/LambdaTest/agent-skills/) that guide AI coding assistants in generating production-ready test automation.
-
-The appium-skill package includes:
-
-<VerifiedTag value="Verified" />
-
-```
-appium-skill/
-├── SKILL.md
-└── reference/
-    ├── playbook.md
-    └── advanced-patterns.md
-```
-
-It provides structured guidance for:
-
-* Project structure and setup
-* Dependency configuration
-* Local execution
-* TestMu AI cloud execution
-* Debugging patterns
-* CI/CD integration
-
-
-### Installing Appium Agent Skill
-***
-
-Install a Appium Agent Skill using the command below:
-
-<VerifiedTag value="Verified" />
-
-```
-# Clone the repo and copy the skill you need
-git clone https://github.com/LambdaTest/agent-skills.git
-cp -r agent-skills/appium-skill .claude/skills/
-
-# Or for Cursor / Copilot
-cp -r agent-skills/appium-skill .cursor/skills/
-```
-
-**Note**: If you prefer installing all available framework skills instead of only appium-skill, clone the repository directly into your tool's skills directory (for example, .claude/skills/, .cursor/skills/, .gemini/skills/, or .agent/skills/).
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">

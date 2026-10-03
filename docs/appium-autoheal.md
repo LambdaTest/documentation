@@ -2,7 +2,7 @@
 id: smart-heal-appium
 title: Smart Heal in Automation
 sidebar_label: Smart Heal
-description: Learn how to enable Smart Heal, TestMu AI’s Auto-Heal capability, for real device automation tests to reduce flakiness by automatically recovering from locator failures during execution.
+description: Enable Smart Heal on TestMu AI to auto-recover from locator failures during real device automation tests, reducing flakiness and script maintenance.
 keywords:
   - appium smart-heal
   - self-healing tests
@@ -24,6 +24,7 @@ url: https://www.testmuai.com/support/docs/smart-heal-appium/
 site_name: TestMu AI
 slug: smart-heal-appium/
 canonical: https://www.testmuai.com/support/docs/smart-heal-appium/
+toc_max_heading_level: 2
 ---
 
 
@@ -32,8 +33,8 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
-import RealDeviceTag from '../src/component/realDevice';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import RealDeviceTag from '@site/src/component/realDevice';
 import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
@@ -141,10 +142,12 @@ import VerifiedTag from '@site/src/component/verifiedTag';
   }) }}
 />
 
-# AI-Powered Smart Heal for Automation Tests
-<RealDeviceTag value="Real Device" /> 
+<RealDeviceTag value="Real Device" />
 
-<BrandName />’s **Smart Heal** uses **AI-powered algorithms** to automatically detect and recover from locator failures during test execution. It intelligently detects missing elements, analyzes the UI in real time, and applies the closest valid match, keeping tests running smoothly despite UI changes. Both the **original and recovered locators** are logged for full visibility through the <BrandName /> dashboard.
+# Smart Heal in Automation
+
+
+Smart Heal on TestMu AI uses AI-powered algorithms to automatically detect and recover from locator failures during real device automation tests. It analyzes the UI in real time, applies the closest valid match, and logs both original and recovered locators.
 
 :::note Plus Plan Feature
 This feature is available exclusively with the **Real Device Plus Automation Cloud** Plan.
@@ -190,7 +193,7 @@ To unlock this feature, purchase or upgrade to the required [plan](https://www.t
 
 Before enabling Smart Heal, ensure your app is uploaded to <BrandName />.
 
-1. Follow the [Upload Your Application](/support/docs/upload-apps-on-real-device-cloud/) guide.
+1. Follow the [Upload Your Application](/support/docs/application-setup-via-api/) guide.
 2. Once uploaded, **note the App ID** returned by the API or dashboard.
 3. Use this **App ID** in the `"app"` capability in your automation script.
 
@@ -200,10 +203,10 @@ Before enabling Smart Heal, ensure your app is uploaded to <BrandName />.
 
 To enable Smart Heal, add `"smartHeal": true` to your desired capabilities in your Appium test script.
 
-<VerifiedTag value="Verified" />
-
 <Tabs className="docs__val">
 <TabItem value="ios" label="iOS" default>
+
+<VerifiedTag value="Verified" />
 
 ```python
 desired_caps = {
@@ -222,6 +225,8 @@ desired_caps = {
 </TabItem>
 
 <TabItem value="android" label="Android" default>
+
+<VerifiedTag value="Verified" />
 
 ```python
 desired_caps = {

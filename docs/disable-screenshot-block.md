@@ -1,8 +1,9 @@
 ---
 id: disable-screenshot-block
 title: Disable Screenshot Block for Android
+hide_title: true
 sidebar_label: Disable Screenshot Block
-description: Discover how to disable screenshot blocking on TestMu AI Real Device Cloud Platform. Test biometric authentication functionalities without limitations on 3000+ real mobile devices.
+description: Disable screenshot blocking on TestMu AI Real Device Cloud and test biometric and secure-screen features without limits on real Android and iOS devices.
 keywords:
   - screenshot unblock
   - disable screenshot block
@@ -18,6 +19,7 @@ url: https://www.testmuai.com/support/docs/disable-screenshot-block/
 site_name: TestMu AI
 slug: disable-screenshot-block/
 canonical: https://www.testmuai.com/support/docs/disable-screenshot-block/
+toc_max_heading_level: 2
 ---
 
 import CodeBlock from '@theme/CodeBlock';
@@ -25,9 +27,9 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
-import RealDeviceTag from '../src/component/realDevice';
-import VirtualDeviceTag from '../src/component/virtualDevice';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import RealDeviceTag from '@site/src/component/realDevice';
+import VirtualDeviceTag from '@site/src/component/virtualDevice';
 import VerifiedTag from '@site/src/component/verifiedTag';
 
 
@@ -48,7 +50,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "Biometric Authentication",
+          "name": "Disable Screenshot Block for Android",
           "item": `${BRAND_URL}/support/docs/disable-screenshot-block/`
         }]
       })
@@ -124,11 +126,16 @@ import VerifiedTag from '@site/src/component/verifiedTag';
 
 <RealDeviceTag value="Real Device" /> <VirtualDeviceTag value="Virtual Device" />
 
+# Disable Screenshot Block for Android
+
+
+
+Disabling screenshot block on TestMu AI lets you capture screenshots and video of apps that normally block them, so you can run App Live and app automation tests on real Android and iOS devices without black frames or missing captures.
+
 ## Introduction
 ---
 
 If your app doesn't allow screenshot to be taken of the app and you want to test your app's performance without any hindrance, you can use this tool. You can test your apps with this tool in our app-live tests and app automation tests.
-This document details all you need to know about the tool.
 
 <BrandName /> now supports disable screenshot block for Android real devices. This new feature allows you to test your application on our platform without any issue of video coming black in between or screenshots of the app not getting captured(due to app's properties)
 
@@ -202,7 +209,7 @@ You can use the appium capability to turn the **Disable Screenshot Block** on in
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
       <span className="breadcrumbs__link">
-      Disable Screenshot Block
+        Disable Screenshot Block for Android
       </span>
     </li>
   </ul>

@@ -1,6 +1,7 @@
 ---
 id: ios-keychain-cleanup
 title: Support for iOS keychain cleanup and access groups
+hide_title: true
 sidebar_label: iOS Keychain Cleanup
 description: Secure and clean iOS testing with TestMu AI's iOS Keychain cleanup and seamless access group handling support.
 keywords:
@@ -15,13 +16,13 @@ url: https://www.testmuai.com/support/docs/ios-keychain-cleanup/
 site_name: TestMu AI
 slug: ios-keychain-cleanup/
 canonical: https://www.testmuai.com/support/docs/ios-keychain-cleanup/
+toc_max_heading_level: 2
 ---
 
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
-import RealDeviceTag from '../src/component/realDevice';
-import VirtualDeviceTag from '../src/component/virtualDevice';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import RealDeviceTag from '@site/src/component/realDevice';
 import VerifiedTag from '@site/src/component/verifiedTag';
 
 
@@ -42,7 +43,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "iOS Keychain Cleanup",
+          "name": "Support for iOS keychain cleanup and access groups",
           "item": `${BRAND_URL}/support/docs/ios-keychain-cleanup/`
         }]
       })
@@ -116,9 +117,12 @@ import VerifiedTag from '@site/src/component/verifiedTag';
   }) }}
 />
 
-<RealDeviceTag value="Real Device" /> 
-Apple’s [Keychain](https://developer.apple.com/documentation/security/keychain_services) offers a secure system for apps to store sensitive information like passwords, certificates, authentication tokens, and other small data pieces.  
-<BrandName /> now offers enhanced Keychain management on real iOS devices, enabling you to test app flows that rely on secure storage and Keychain-specific use cases more effectively.
+<RealDeviceTag value="Real Device" />
+
+# Support for iOS keychain cleanup and access groups
+
+
+iOS Keychain cleanup on TestMu AI automatically clears all Keychain entries after each real-device session, preventing login details and tokens from carrying over between runs. It also preserves keychain-access-groups entitlements during app resigning, keeping secure-storage flows working correctly after resigning.
 
 ## Keychain Cleanup After Sessions
 
@@ -202,7 +206,7 @@ This approach ensures your app remains functional even if the Team ID changes af
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
       <span className="breadcrumbs__link">
-      iOS Keychain Cleanup
+        Support for iOS keychain cleanup and access groups
       </span>
     </li>
   </ul>

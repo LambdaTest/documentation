@@ -1,9 +1,9 @@
 ---
 id: app-auto-network-throttling
 title: Network Throttling for Appium tests
-hide_title: false
+hide_title: true
 sidebar_label: Network Throttling
-description: Now validate your mobile applications over low latency networks (2G/3G/LTE) or in offline mode with varying upload and download speeds. TestMu AI empowers you to simulate these mobile network conditions through its desired capabilities, ensuring comprehensive testing of your mobile applications.
+description: Simulate 2G, 3G, LTE, and offline network conditions for Appium tests on TestMu AI, validating app behavior under varying upload and download speeds.
 keywords:
     - cross platform testing
     - network throttling
@@ -21,15 +21,16 @@ url: https://www.testmuai.com/support/docs/app-auto-network-throttling/
 site_name: TestMu AI
 slug: app-auto-network-throttling/
 canonical: https://www.testmuai.com/support/docs/app-auto-network-throttling/
+toc_max_heading_level: 2
 ---
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
-import RealDeviceTag from '../src/component/realDevice';
-import VirtualDeviceTag from '../src/component/virtualDevice';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import RealDeviceTag from '@site/src/component/realDevice';
+import VirtualDeviceTag from '@site/src/component/virtualDevice';
 import VerifiedTag from '@site/src/component/verifiedTag';
 
 
@@ -50,7 +51,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "Network Throttling",
+          "name": "Network Throttling for Appium tests",
           "item": `${BRAND_URL}/support/docs/app-auto-network-throttling/`
         }]
       })
@@ -168,15 +169,16 @@ import VerifiedTag from '@site/src/component/verifiedTag';
 
 <RealDeviceTag value="Real Device" /> <VirtualDeviceTag value="Virtual Device" />
 
-In Appium testing, assessing your app's performance under diverse network conditions (2G/3G/LTE) and offline scenarios, is crucial. Fluctuating upload and download speeds can significantly impact your app's behavior across different devices.
+# Network Throttling for Appium tests
 
-<BrandName /> simplifies testing by enabling simulation of diverse network conditions. Whether starting with defaults or custom profiles, these features replicate real-world scenarios, proving invaluable for Appium tests. The device maintains uninterrupted internet connectivity throughout, ensuring a reliable testing experience for your mobile applications.
+
+
+Network throttling on TestMu AI simulates 2G, 3G, LTE, and offline conditions during Appium tests, letting you validate how your mobile app behaves under varying upload and download speeds while the device keeps uninterrupted connectivity, replicating real-world usage across devices.
 
 ## Workflow
 ### Initialization
 
 - **Capability:** Initiate a test session with predefined network profiles using the `networkProfile` capability. Example:
-
      <VerifiedTag value="Verified" />
 
      ```python
@@ -186,10 +188,13 @@ In Appium testing, assessing your app's performance under diverse network condit
     }
     ```
 
+:::note
+To utilize the **networkProfile** capability, ensure that you include `network: True` in the capabilities.
+:::  
+
 ### During Test Execution
 
 - **LambdaHook:** Dynamically alter the network profile within the test session using the following LambdaHook:
-
     <VerifiedTag value="Verified" />
 
     ```python
@@ -213,7 +218,6 @@ In Appium testing, assessing your app's performance under diverse network condit
 ### Custom Profiles
 
 - **LambdaHook:** Define and implement custom network profiles with LambdaHook by specifying the maximum download speed (kbps), maximum upload speed (kbps), and latency (ms) for the custom condition, as illustrated in the example.
-
     <VerifiedTag value="Verified" />
 
     ```python
@@ -223,7 +227,6 @@ In Appium testing, assessing your app's performance under diverse network condit
 ### Default/Reset Network Configuration
 
 - **LambdaHook:** Employ this webhook to seamlessly restore the device's network profile to its default state. Invocation of this LambdaHook removes any predefined or custom network settings, ensuring the device is reset to its original configuration.
-
     <VerifiedTag value="Verified" />
 
     ```python
@@ -233,7 +236,6 @@ In Appium testing, assessing your app's performance under diverse network condit
 ### Offline Mode
 
 - To initialize tests in **offline mode**, set the `networkProfile` capability to `offline` during session initiation:
-
     <VerifiedTag value="Verified" />
 
     ```python
@@ -244,7 +246,6 @@ In Appium testing, assessing your app's performance under diverse network condit
     ```
 
 - **LambdaHook:** You can also switch to offline mode during the test execution with the following command:
-
     <VerifiedTag value="Verified" />
 
     ```python
@@ -291,7 +292,7 @@ In Appium testing, assessing your app's performance under diverse network condit
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
       <span className="breadcrumbs__link">
-        Network Throttling
+        Network Throttling for Appium tests
       </span>
     </li>
   </ul>
