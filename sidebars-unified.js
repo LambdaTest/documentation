@@ -16,7 +16,7 @@ const docsSidebar = [
     type: 'category', label: 'Web Automation', collapsible: true, collapsed: true,
     items: [
       { type: 'category', label: 'Selenium Testing', collapsible: true, collapsed: true, items: items(s.SeleniumTestingSidebar) },
-      { type: 'category', label: 'Cypress Testing', collapsible: true, collapsed: true, items: items(s.CypressTestingSidebar) },
+      { type: 'link', label: 'Cypress Testing', href: '/docs/getting-started-with-cypress-testing/' },
       { type: 'category', label: 'Playwright Testing', collapsible: true, collapsed: true, items: items(s.PlaywrightTestingSidebar) },
       { type: 'category', label: 'Puppeteer Testing', collapsible: true, collapsed: true, items: items(s.PuppeteerTestingSidebar) },
       { type: 'category', label: 'K6 Testing', collapsible: true, collapsed: true, items: items(s.K6BrowserTestingSidebar) },
@@ -130,7 +130,13 @@ const backToDocs = {
 };
 const TestManagerSidebar = [backToDocs, ...items(s.TestManagerSidebar)];
 
+// Cypress Testing is a link in docsSidebar (above), so its docs live ONLY in
+// this dedicated sidebar — Docusaurus displays it (with the back-to-docs link)
+// whenever a reader is inside a Cypress Testing page.
+const CypressTestingSidebar = [backToDocs, ...items(s.CypressTestingSidebar)];
+
 module.exports = {
   docsSidebar,
   TestManagerSidebar,
+  CypressTestingSidebar,
 };
