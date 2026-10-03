@@ -11,7 +11,117 @@ function items(sidebar) {
   return Array.isArray(rest[0]) ? rest[0] : rest;
 }
 
-// Back link shown at the top of every dedicated product sidebar.
+const docsSidebar = [
+  {
+    type: 'category', label: 'Web Automation', collapsible: true, collapsed: true,
+    items: [
+      { type: 'link', label: 'Selenium Testing', href: '/docs/testmu-running-your-first-selenium-test/' },
+      { type: 'category', label: 'Cypress Testing', collapsible: true, collapsed: true, items: items(s.CypressTestingSidebar) },
+      { type: 'category', label: 'Playwright Testing', collapsible: true, collapsed: true, items: items(s.PlaywrightTestingSidebar) },
+      { type: 'category', label: 'Puppeteer Testing', collapsible: true, collapsed: true, items: items(s.PuppeteerTestingSidebar) },
+      { type: 'category', label: 'K6 Testing', collapsible: true, collapsed: true, items: items(s.K6BrowserTestingSidebar) },
+      { type: 'doc', id: 'run-tests-with-chrome-devtools-protocol', label: 'CDP Testing' },
+      { type: 'doc', id: 'run-tests-with-webdriver-bidi', label: 'BiDi Testing' },
+    ],
+  },
+  {
+    type: 'category', label: 'App Automation', collapsible: true, collapsed: true,
+    items: [
+      { type: 'category', label: 'Appium Testing', collapsible: true, collapsed: true, items: items(s.AppiumTestingSidebar) },
+      { type: 'category', label: 'Espresso Testing', collapsible: true, collapsed: true, items: items(s.EspressoTestingSidebar) },
+      { type: 'category', label: 'XCUI Testing', collapsible: true, collapsed: true, items: items(s.XCUITestingSidebar) },
+      { type: 'category', label: 'Flutter Testing', collapsible: true, collapsed: true, items: items(s.FlutterTestingSidebar) },
+      { type: 'category', label: 'Virtual Devices', collapsible: true, collapsed: true, items: items(s.EmuSimuSidebar) },
+    ],
+  },
+  {
+    type: 'category', label: 'HyperExecute', collapsible: true, collapsed: true,
+    items: items(s.HyperExecuteSidebar),
+  },
+  {
+    type: 'category', label: 'Browser Cloud', collapsible: true, collapsed: true,
+    items: items(s.BrowserCloudSidebar),
+  },
+  {
+    type: 'category', label: 'SmartUI', collapsible: true, collapsed: true,
+    items: items(s.VisualRegressionTestingSidebar),
+  },
+  {
+    type: 'category', label: 'KaneAI', collapsible: true, collapsed: true,
+    items: items(s.KaneAISidebar),
+  },
+  {
+    type: 'category', label: 'Kane CLI', collapsible: true, collapsed: true,
+    items: items(s.KaneCLISidebar),
+  },
+  {
+    type: 'category', label: 'Web Scanner', collapsible: true, collapsed: true,
+    items: items(s.WebScannerSidebar),
+  },
+  {
+    type: 'category', label: 'Insights', collapsible: true, collapsed: true,
+    items: [
+      ...items(s.Analytics),
+      ...items(s.TestIntelligence),
+    ],
+  },
+  {
+    type: 'category', label: 'Real Time', collapsible: true, collapsed: true,
+    items: items(s.RealTimeBrowserTestingSiebar),
+  },
+  {
+    type: 'category', label: 'Agent Assurance', collapsible: true, collapsed: true,
+    items: items(s.AgentAssuranceSidebar),
+  },
+  {
+    type: 'category', label: 'Agent Testing', collapsible: true, collapsed: true,
+    items: items(s.AgentTestingSidebar),
+  },
+  {
+    type: 'category', label: 'Real Device', collapsible: true, collapsed: true,
+    items: s.RealDeviceSidebar.slice(1).flat(),
+  },
+  { type: 'link', label: 'Test Manager', href: '/docs/test-manager/' },
+  {
+    type: 'category', label: 'TestMu AI MCP Server', collapsible: true, collapsed: true,
+    items: items(s.LTMCPServerSidebar),
+  },
+  {
+    type: 'category', label: 'Integration', collapsible: true, collapsed: true,
+    items: items(s.IntegrationsSidebar),
+  },
+  {
+    type: 'category', label: 'Accessibility Testing', collapsible: true, collapsed: true,
+    items: items(s.AccessibilityTestingSidebar),
+  },
+  {
+    type: 'category', label: 'Testing Locally', collapsible: true, collapsed: true,
+    items: items(s.TestingLocalPagesSidebar),
+  },
+  {
+    type: 'category', label: 'Setting and Security', collapsible: true, collapsed: true,
+    items: [
+      ...items(s.SettingsAndSecuritySidebar),
+      ...items(s.AccountManagementSidebar),
+      ...items(s.ScimSidebar),
+      ...items(s.SingleSignOnSidebar),
+    ],
+  },
+  {
+    type: 'category', label: 'Other Docs', collapsible: true, collapsed: true,
+    items: [
+      ...items(s.VisualUITestingSidebar),
+      ...items(s.LTBrowserSidebar),
+      ...items(s.LambdaTestMigrationGuideSidebar),
+      ...items(s.ConcurrencyWidgetSidebar),
+      ...items(s.TestManagementSidebar),
+    ],
+  },
+];
+
+// Dedicated sidebar for Test Manager. Because the Test Manager entry in
+// docsSidebar is now a link (above), these docs live ONLY here — so Docusaurus
+// displays this dedicated sidebar whenever a reader is inside Test Manager.
 const backToDocs = {
   type: 'link',
   label: '← All Docs',
@@ -162,8 +272,10 @@ const SettingsAndSecuritySidebar = [
   },
 ];
 
-// Some shared docs (e.g. mute-test-scenarios) set `displayed_sidebar: SeleniumTestingSidebar`
-// in frontmatter, so that name must resolve to a real sidebar here.
+// Selenium Testing is a link in docsSidebar (above), so its docs live ONLY in
+// this dedicated sidebar — Docusaurus displays it (with the back-to-docs link)
+// whenever a reader is inside a Selenium Testing page. Shared docs such as
+// mute-test-scenarios also set `displayed_sidebar: SeleniumTestingSidebar`.
 const SeleniumTestingSidebar = [backToDocs, ...items(s.SeleniumTestingSidebar)];
 
 module.exports = {
