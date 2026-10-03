@@ -2,7 +2,6 @@
 id: typescript-with-playwright
 title: How to Run TypeScript Tests With Playwright on TestMu AI
 hide_title: true
-toc_max_heading_level: 2
 sidebar_label: TypeScript
 description: Run your TypeScript automation scripts with Playwright on TestMu AI across 50+ real desktop browsers and operating systems.
 keywords:
@@ -187,8 +186,6 @@ npm install
 ```
 
 3. A <BrandName /> Username and Access key. You can get it from your <BrandName /> Profile section. Don't have an account, <a href="https://www.testmuai.com/register/" onClick={CookieTrackingSignup}>sign up for free</a>.
-
-<img loading="lazy" src={require('../assets/images/auth_lt.png').default} alt="Username and Access Key shown in the TestMu AI Profile section" width="1444" height="703"  className="doc_img"/>
 
 4. To run Playwright tests, set your <BrandName /> Username and Access key in the Environment Variables.
 

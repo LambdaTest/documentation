@@ -282,6 +282,11 @@ const CypressTestingSidebar = [backToDocs, ...items(s.CypressTestingSidebar)];
 // sidebar here (keeps the dev server from crashing on an unknown sidebar id).
 const PlaywrightTestingSidebar = [backToDocs, ...items(s.PlaywrightTestingSidebar)];
 
+// The shared mute-test-scenarios doc (part of the Playwright Features category)
+// sets `displayed_sidebar: SeleniumTestingSidebar` in its frontmatter, so that
+// name must resolve to a real sidebar here too.
+const SeleniumTestingSidebar = [backToDocs, ...items(s.SeleniumTestingSidebar)];
+
 module.exports = {
   docsSidebar,
 
@@ -315,4 +320,5 @@ module.exports = {
   RealDeviceSidebar,
   TestManagerSidebar,
   PlaywrightTestingSidebar,
+  SeleniumTestingSidebar,
 };

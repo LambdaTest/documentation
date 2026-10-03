@@ -2,7 +2,6 @@
 id: javascript-with-playwright
 title: JavaScript, Jest, and Cucumber.js With Playwright on TestMu AI
 hide_title: true
-toc_max_heading_level: 2
 sidebar_label: JavaScript
 description: Run Playwright tests in JavaScript, Jest, or Cucumber.js on TestMu AI across 50+ real desktop browsers and operating systems.
 keywords:
@@ -181,7 +180,6 @@ cd playwright-sample
 
 You can find your Username and Access Key on the TestMu AI Automation Dashboard by clicking the **Access Key** button at the top-right.
 
-<img loading="lazy" src={require('../assets/images/auth_lt.png').default} alt="Username and Access Key shown in the TestMu AI Profile section" width="1444" height="703"  className="doc_img"/>
 
 ## Set Your Credentials
 ***

@@ -157,8 +157,6 @@ When you need to validate your web app on Chrome for Android, you can run Playwr
 
 Before you run a test, set your TestMu AI username and access key as environment variables. You can find both under your TestMu AI **Profile > Account Settings > Password & Security**.
 
-<img loading="lazy" src={require('../assets/images/auth_lt.png').default} alt="Access Key on TestMu AI Automation Dashboard" width="1444" height="703" className="doc_img"/>
-
 **Windows**
 
 <VerifiedTag value="Verified" />

@@ -2,7 +2,6 @@
 id: python-with-playwright
 title: How to Run Playwright Tests With Python on TestMu AI
 hide_title: true
-toc_max_heading_level: 2
 sidebar_label: Python
 description: Run your Python automation scripts with Playwright on TestMu AI scalable cloud grid of 50+ real desktop browsers and operating systems.
 keywords:
@@ -151,8 +150,6 @@ Run your Python Playwright tests on the TestMu AI cloud grid to reach 50+ real d
 Complete these before running the test below.
 
 1. A TestMu AI **Username** and **Access Key**. Get them from your TestMu AI Profile section. Don't have an account? <a href="https://www.testmuai.com/register/" onClick={CookieTrackingSignup}>Sign up for free</a>.
-
-<img loading="lazy" src={require('../assets/images/auth_lt.png').default} alt="TestMu AI Profile page showing the Username and Access Key credentials" width="1444" height="703"  className="doc_img"/>
 
 2. [Python](https://www.python.org/downloads/) installed, along with the Playwright Python package.
 3. Clone the sample repository. The Python sample lives in its own subdirectory.

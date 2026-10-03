@@ -184,8 +184,6 @@ Playwright testing on real iOS devices is currently in **Beta**. To enable this 
 
 Before you run a test, set your TestMu AI username and access key in your environment variables. Find both values under your TestMu AI **Profile > Account Settings > Password & Security**.
 
-<img loading="lazy" src={require('../assets/images/auth_lt.png').default} alt="Access Key on TestMu AI Automation Dashboard" width="1444" height="703" className="doc_img"/>
-
 **Windows**
 
 <VerifiedTag value="Verified" />
