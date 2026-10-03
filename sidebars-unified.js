@@ -15,7 +15,7 @@ const docsSidebar = [
   {
     type: 'category', label: 'Web Automation', collapsible: true, collapsed: true,
     items: [
-      { type: 'category', label: 'Selenium Testing', collapsible: true, collapsed: true, items: items(s.SeleniumTestingSidebar) },
+      { type: 'link', label: 'Selenium Testing', href: '/docs/testmu-running-your-first-selenium-test/' },
       { type: 'category', label: 'Cypress Testing', collapsible: true, collapsed: true, items: items(s.CypressTestingSidebar) },
       { type: 'category', label: 'Playwright Testing', collapsible: true, collapsed: true, items: items(s.PlaywrightTestingSidebar) },
       { type: 'category', label: 'Puppeteer Testing', collapsible: true, collapsed: true, items: items(s.PuppeteerTestingSidebar) },
@@ -130,8 +130,10 @@ const backToDocs = {
 };
 const TestManagerSidebar = [backToDocs, ...items(s.TestManagerSidebar)];
 
-// Some shared docs (e.g. mute-test-scenarios) set `displayed_sidebar: SeleniumTestingSidebar`
-// in frontmatter, so that name must resolve to a real sidebar here.
+// Selenium Testing is a link in docsSidebar (above), so its docs live ONLY in
+// this dedicated sidebar — Docusaurus displays it (with the back-to-docs link)
+// whenever a reader is inside a Selenium Testing page. Shared docs such as
+// mute-test-scenarios also set `displayed_sidebar: SeleniumTestingSidebar`.
 const SeleniumTestingSidebar = [backToDocs, ...items(s.SeleniumTestingSidebar)];
 
 module.exports = {
