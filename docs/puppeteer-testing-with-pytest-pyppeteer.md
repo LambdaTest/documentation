@@ -1,21 +1,16 @@
 ---
 id: puppeteer-pytest-pyppeteer
-title: Run Puppeteer Tests Using Pytest-Pyppeteer
+title: How to Run Pyppeteer Tests With pytest on TestMu AI
 hide_title: true
-sidebar_label: Integrate With Pytest-Pyppeteer
-description: Learn how to integrate and run your Puppeteer tests using Pytest-Pyppeteer across multiple browser versions on the TestMu AI platform.
+toc_max_heading_level: 2
+sidebar_label: "Pyppeteer"
+description: Run Pyppeteer tests with pytest across real browsers and operating systems on TestMu AI, including setup, parallel execution, and results.
 keywords:
   - puppeteer testing with pyppeteer
-  - pyppeteer
-  - pytest
-  - python
-  - puppeteer pytest
-  - puppeteer mocha
-  - automation testing with puppeteer
-  - how to use puppeteer for testing
-  - test puppeteer
-  - puppeteer testing tutorial
-  - puppeteer testing testmu ai
+  - pyppeteer pytest testing
+  - run pyppeteer tests on testmu ai
+  - pyppeteer python automation
+  - pyppeteer parallel execution
 
 url: https://www.testmuai.com/support/docs/puppeteer-testing-with-pytest-pyppeteer/
 site_name: TestMu AI
@@ -60,8 +55,8 @@ import VerifiedTag from '@site/src/component/verifiedTag';
       "@type": "WebPage",
       "@id": "https://www.testmuai.com/support/docs/puppeteer-testing-with-pytest-pyppeteer/"
     },
-    "headline": "Run Puppeteer Tests Using Pytest-Pyppeteer",
-    "description": "Learn how to integrate and run your Puppeteer tests using Pytest-Pyppeteer across multiple browser versions on the TestMu AI platform.",
+    "headline": "How to Run Pyppeteer Tests With pytest on TestMu AI",
+    "description": "Run Pyppeteer tests with pytest across real browsers and operating systems on TestMu AI, including setup, parallel execution, and results.",
     "url": "https://www.testmuai.com/support/docs/puppeteer-testing-with-pytest-pyppeteer/",
     "image": {
       "@type": "ImageObject",
@@ -73,8 +68,10 @@ import VerifiedTag from '@site/src/component/verifiedTag';
     "articleSection": "Web Automation",
     "keywords": [
       "puppeteer testing with pyppeteer",
-      "pyppeteer",
-      "pytest"
+      "pyppeteer pytest testing",
+      "run pyppeteer tests on testmu ai",
+      "pyppeteer python automation",
+      "pyppeteer parallel execution"
     ],
     "proficiencyLevel": "Beginner",
     "author": {
@@ -106,49 +103,49 @@ import VerifiedTag from '@site/src/component/verifiedTag';
     "hasPart": [
       {
         "@type": "SoftwareSourceCode",
-        "name": "Prerequisites",
+        "name": "Navigate to the pytest-pyppeteer directory",
         "codeSampleType": "code snippet",
-        "programmingLanguage": "text",
+        "programmingLanguage": "Shell",
         "text": "cd pytest-pyppeteer"
       },
       {
         "@type": "SoftwareSourceCode",
-        "name": "Create a virtual environment using the following commands",
+        "name": "Create a virtual environment",
         "codeSampleType": "code snippet",
-        "programmingLanguage": "text",
+        "programmingLanguage": "Shell",
         "text": "virtualenv venv"
       },
       {
         "@type": "SoftwareSourceCode",
-        "name": "Prerequisites",
+        "name": "Activate the virtual environment",
         "codeSampleType": "code snippet",
-        "programmingLanguage": "text",
+        "programmingLanguage": "Shell",
         "text": "source venv/bin/activate"
       },
       {
         "@type": "SoftwareSourceCode",
-        "name": "Prerequisites",
+        "name": "Install the necessary configurations",
         "codeSampleType": "code snippet",
-        "programmingLanguage": "text",
+        "programmingLanguage": "Shell",
         "text": "poetry install"
       },
       {
         "@type": "SoftwareSourceCode",
-        "name": "Prerequisites",
+        "name": "Install the necessary dependencies",
         "codeSampleType": "code snippet",
-        "programmingLanguage": "text",
-        "text": "pip install - r requirements.txt"
+        "programmingLanguage": "Shell",
+        "text": "pip install -r requirements.txt"
       },
       {
         "@type": "SoftwareSourceCode",
-        "name": "Windows",
+        "name": "Set credentials on Windows",
         "codeSampleType": "code snippet",
         "programmingLanguage": "Shell",
         "text": "set LT_USERNAME=\"YOUR_LAMBDATEST_USERNAME\"\nset LT_ACCESS_KEY=\"YOUR_LAMBDATEST_ACCESS_KEY\""
       },
       {
         "@type": "SoftwareSourceCode",
-        "name": "macOS/Linux",
+        "name": "Set credentials on macOS/Linux",
         "codeSampleType": "code snippet",
         "programmingLanguage": "Shell",
         "text": "export LT_USERNAME=\"YOUR_LAMBDATEST_USERNAME\"\nexport LT_ACCESS_KEY=\"YOUR_LAMBDATEST_ACCESS_KEY\""
@@ -157,73 +154,47 @@ import VerifiedTag from '@site/src/component/verifiedTag';
         "@type": "SoftwareSourceCode",
         "name": "Running Your First Pyppeteer Test",
         "codeSampleType": "code snippet",
-        "programmingLanguage": "text",
+        "programmingLanguage": "Shell",
         "text": "pytest --verbose --capture=no -s -n 2 tests/test_pytest_pyppeteer_1.py \\\n    tests/test_pytest_pyppeteer_2.py"
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "Run Pyppeteer Tests In Gitpod",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "text",
-        "text": "eval $(gp env -e LT_USERNAME=******)\neval $(gp env -e LT_ACCESS_KEY=******)"
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "Run Pyppeteer Tests In Gitpod",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "text",
-        "text": " eval $(gp env -e)"
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "The pytest-skill package includes",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "text",
-        "text": "pytest-skill/\n\u251c\u2500\u2500 SKILL.md\n\u2514\u2500\u2500 reference/\n    \u251c\u2500\u2500 playbook.md\n    \u2514\u2500\u2500 advanced-patterns.md"
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "Install a Pytest Agent Skill using the command below",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "text",
-        "codeRepository": "https://github.com/LambdaTest/agent-skills",
-        "text": "# Clone the repo and copy the skill you need\ngit clone https://github.com/LambdaTest/agent-skills.git\ncp -r agent-skills/pytest-skill .claude/skills/\n\n# Or for Cursor / Copilot\ncp -r agent-skills/pytest-skill .cursor/skills/"
       }
     ],
     "dateModified": "2026-09-09T19:13:32+05:30"
   }) }}
 />
 
-# Puppeteer Testing With CodeceptJS
-* * *
+# How to Run Pyppeteer Tests With pytest on TestMu AI
+***
 
-Learn how to run your Puppeteer tests with CodeceptJS across real browsers and operating systems on the <BrandName /> platform. 
+If you write browser automation in Python with Pyppeteer, you can run those tests with pytest across real browsers and operating systems on TestMu AI instead of a single local machine. This gives you pytest's fixtures and parallel execution on a browser farm without maintaining local browser binaries. You clone the sample project, set your TestMu AI credentials as environment variables, then run the pytest suite in parallel with the `pytest -n` option.
 
 ## Prerequisites
 ***
 
->Note: All the code samples in this documentation can be found in the <BrandName />'s Repository on GitHub. You can either download or clone the repository to quickly run your tests.
-<a href="https://github.com/LambdaTest/puppeteer-sample/tree/main/pytest-pyppeteer" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image"  className="doc_img"/> View on GitHub</a>
+Before you run your first test, clone the sample project, set up a Python environment, and configure the credentials TestMu AI uses to authenticate your session.
+
+:::tip Sample repo
+<a href="https://github.com/LambdaTest/puppeteer-sample/tree/main/pytest-pyppeteer" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="TestMu AI pytest-pyppeteer sample project on GitHub"  className="doc_img"/> View on GitHub</a>
+:::
 
 1. Clone the puppeteer-sample repository on your system and navigate to the `pytest-pyppeteer` directory.
 
 <VerifiedTag value="Verified" />
 
-```
+```bash
 cd pytest-pyppeteer
 ```
 
-2. Create a virtual environment using the following commands:
+2. Create a virtual environment using the following commands.
 
 <VerifiedTag value="Verified" />
 
-```
+```bash
 virtualenv venv
 ```
 
 <VerifiedTag value="Verified" />
 
-```
+```bash
 source venv/bin/activate
 ```
 
@@ -231,22 +202,23 @@ source venv/bin/activate
 
 <VerifiedTag value="Verified" />
 
-```
+```bash
 poetry install
 ```
 
-4. Install the necessary dependencies
+4. Install the necessary dependencies.
 
 <VerifiedTag value="Verified" />
 
+```bash
+pip install -r requirements.txt
 ```
-pip install - r requirements.txt
-```
 
-5. In order to run your pyppeteer tests, you will need to set your <BrandName /> username and access key in the environment variables. Click the **Access Key** button at the top-right of the Automation Dashboard to access it.
+5. Set your TestMu AI username and access key in the environment variables. Click the **Access Key** button at the top-right of the Automation Dashboard to find them.
 
+Set the credentials for your operating system.
 
-### Windows
+**Windows**
 
 <VerifiedTag value="Verified" />
 
@@ -255,7 +227,7 @@ set LT_USERNAME="YOUR_LAMBDATEST_USERNAME"
 set LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
 ```
 
-### macOS/Linux
+**macOS/Linux**
 
 <VerifiedTag value="Verified" />
 
@@ -265,21 +237,30 @@ export LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
 ```
 
 ## Running Your First Pyppeteer Test
+***
 
-The first test script navigates to DuckduckGo and searches for <BrandName />. The second test script navigates to Brave search and searches for <BrandName />. Both the tests are executed using Chrome (latest) on Windows 11.
+After you finish the prerequisite steps, you can run your first Pyppeteer test on TestMu AI. The first test script navigates to DuckDuckGo and searches for TestMu AI. The second test script navigates to Brave Search and searches for TestMu AI. Both tests run on Chrome (latest) on Windows 11.
 
-Once you are done with the steps 1 thru' 5, you can initiate your first Pyppeteer test on <BrandName />. 
-
-Run the following command on the terminal to run the Pyppeteer tests in parallel.
+Run the following command in the terminal to run the Pyppeteer tests in parallel.
 
 <VerifiedTag value="Verified" />
 
-```
+```bash
 pytest --verbose --capture=no -s -n 2 tests/test_pytest_pyppeteer_1.py \
     tests/test_pytest_pyppeteer_2.py
 ```
 
-## View your Pyppeteer test results
+## View Your Pyppeteer Test Results
+***
 
-The [<BrandName /> Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build) is where you can see the results of your Pyppeteer tests after running them on the <BrandName /> platform.
+Open the [TestMu AI Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build) to see the results of your Pyppeteer tests.
 
+
+## Related Puppeteer Guides
+***
+
+Continue with the guides below to configure and scale your Puppeteer runs on TestMu AI.
+
+* [Run your first Puppeteer test on TestMu AI](/support/docs/puppeteer-testing/)
+* [Explore the Puppeteer agent skills](/support/docs/puppeteer-agent-skills/)
+* [Set up Puppeteer test execution](/support/docs/puppeteer-test-execution-setup/)
