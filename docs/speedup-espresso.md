@@ -1,8 +1,8 @@
 ---
 id: speedup-espresso
-title: Filters for Espresso Tests
-sidebar_label: Filters for Espresso Tests
-description: This document helps you learn how to speed up your Espresso Tests.
+title: How to Filter Espresso Tests on TestMu AI
+sidebar_label: Test Filters
+description: Filter Espresso test cases on TestMu AI using package, class, annotation, and size parameters passed to the REST API to run only the tests you need.
 keywords:
   - espresso test filters
   - app test automation
@@ -17,6 +17,7 @@ url: https://www.testmuai.com/support/docs/speedup-espresso/
 site_name: TestMu AI
 slug: speedup-espresso/
 canonical: https://www.testmuai.com/support/docs/speedup-espresso/
+toc_max_heading_level: 2
 ---
 
 import CodeBlock from '@theme/CodeBlock';
@@ -45,7 +46,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "Filters for Espresso Test",
+          "name": "How to Filter Espresso Tests on TestMu AI",
           "item": `${BRAND_URL}/support/docs/speedup-espresso/`
         }]
       })
@@ -141,6 +142,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
 />
 ---
 
+Filtering Espresso tests on <BrandName /> lets you run only selected test cases instead of running the entire suite, speeding up execution. Pass parameters like package, class, annotation, and size to the REST API request through your AndroidJUnitRunner test runner.
 
 Usually, all the test cases of your Espresso test suite are executed, but there is a way to filter these. You can use Espresso test runner (typically `AndroidJUnitRunner`), which provides you with multiple options to filter the test cases which you want to execute.
 
@@ -184,11 +186,11 @@ Please refer to the example `cURL` requests given below for your reference.
 
 ### 1. To run specifically defined packages
 
-<VerifiedTag value="Verified" />
-
 <Tabs className="docs__val">
 
 <TabItem value="bash" label="MacOS/Linux" default>
+  <VerifiedTag value="Verified" />
+
   <div className="lambdatest__codeblock">
   <CodeBlock className="language-bash">
     {`curl --location --request POST 'https://mobile-api.lambdatest.com/framework/v1/espresso/build' \\
@@ -210,6 +212,8 @@ Please refer to the example `cURL` requests given below for your reference.
 
 
 <TabItem value="powershell" label="Windows" default>
+  <VerifiedTag value="Verified" />
+
   <div className="lambdatest__codeblock">
   <CodeBlock className="language-powershell">
 
@@ -224,11 +228,11 @@ Please refer to the example `cURL` requests given below for your reference.
 
 ### 2. To run specifically defined classes
 
-<VerifiedTag value="Verified" />
-
 <Tabs className="docs__val">
 
 <TabItem value="bash" label="MacOS/Linux" default>
+  <VerifiedTag value="Verified" />
+
   <div className="lambdatest__codeblock">
   <CodeBlock className="language-bash">
     {`curl --location --request POST 'https://mobile-api.lambdatest.com/framework/v1/espresso/build' \\
@@ -250,6 +254,8 @@ Please refer to the example `cURL` requests given below for your reference.
 
 
 <TabItem value="powershell" label="Windows" default>
+  <VerifiedTag value="Verified" />
+
   <div className="lambdatest__codeblock">
   <CodeBlock className="language-powershell">
 
@@ -264,11 +270,11 @@ Please refer to the example `cURL` requests given below for your reference.
 
 ### 3. To run specifically defined annotations
 
-<VerifiedTag value="Verified" />
-
 <Tabs className="docs__val">
 
 <TabItem value="bash" label="MacOS/Linux" default>
+  <VerifiedTag value="Verified" />
+
   <div className="lambdatest__codeblock">
   <CodeBlock className="language-bash">
     {`curl --location --request POST 'https://mobile-api.lambdatest.com/framework/v1/espresso/build' \\
@@ -294,6 +300,8 @@ Please refer to the example `cURL` requests given below for your reference.
 
 
 <TabItem value="powershell" label="Windows" default>
+  <VerifiedTag value="Verified" />
+
   <div className="lambdatest__codeblock">
   <CodeBlock className="language-powershell">
 
@@ -324,7 +332,9 @@ This configuration will run tests annotated with multiple annotations, i.e., onl
       </a>
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
-      <span className="breadcrumbs__link"> Speeding up Espresso Tests</span>
+      <span className="breadcrumbs__link">
+        How to Filter Espresso Tests on TestMu AI
+      </span>
     </li>
   </ul>
 </nav>

@@ -1,6 +1,6 @@
 ---
 id: espresso-mockwebserver-localhost
-title: Testing with MockWebServer & Localhost
+title: How to Run Espresso Test with MockWebServer on TestMu AI
 sidebar_label: MockWebServer & Localhost
 description: Test applications using MockWebServer or localhost-based mock servers with Espresso on TestMu AI real devices.
 keywords:
@@ -14,6 +14,7 @@ url: https://www.testmuai.com/support/docs/espresso-mockwebserver-localhost/
 site_name: TestMu AI
 slug: espresso-mockwebserver-localhost/
 canonical: https://www.testmuai.com/support/docs/espresso-mockwebserver-localhost/
+toc_max_heading_level: 2
 ---
 
 import CodeBlock from '@theme/CodeBlock';
@@ -38,7 +39,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "MockWebServer & Localhost",
+          "name": "How to Run Espresso Test with MockWebServer on TestMu AI",
           "item": `${BRAND_URL}/support/docs/espresso-mockwebserver-localhost/`
         }]
       })
@@ -119,7 +120,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
   }) }}
 />
 
-<BrandName /> supports testing apps that use MockWebServer or similar localhost-based mock servers in Android Espresso tests.
+Testing with MockWebServer on TestMu AI lets Espresso apps reach localhost-based mock servers on real Android devices. When network capture routes traffic through a proxy, use Localhost Bypass or Port Forwarding so your device resolves mock endpoints and requests succeed.
 
 ## Why Special Configuration is Needed
 
@@ -184,12 +185,12 @@ Best when localhost network logs need to be captured and there are no port confl
 | Capability | Data Type | Description |
 |------------|-----------|-------------|
 | `portForwarding` | Object | Configure port forwarding for localhost services on the device |
-| `portForwarding.ports` | Array | Ports to forward (max 5 unique ports, must be 1024–65535) |
+| `portForwarding.ports` | Array | Ports to forward (max 5 unique ports, must be 1024-65535) |
 
 Port forwarding works at the network level, so **all HTTP libraries are supported**.
 
 :::note
-- Ports must be in the range 1024–65535. Privileged ports (1–1023) are blocked.
+- Ports must be in the range 1024-65535. Privileged ports (1-1023) are blocked.
 - Maximum 5 unique ports. No duplicate ports allowed.
 - Invalid port formats (e.g., strings like `"abc"`) are rejected.
 - Cannot be used together with `localhost`.
@@ -201,7 +202,7 @@ Port forwarding works at the network level, so **all HTTP libraries are supporte
 
 - **Connection errors**: Ensure `network: true` is set when using `localhost: true`. For `portForwarding`, `network: true` is optional.
 - **Cannot use localhost and portForwarding together**: These are mutually exclusive. Pick one.
-- **Port validation errors**: Ports must be 1024–65535, max 5 unique ports, no duplicates allowed.
+- **Port validation errors**: Ports must be 1024-65535, max 5 unique ports, no duplicates allowed.
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
@@ -217,7 +218,7 @@ Port forwarding works at the network level, so **all HTTP libraries are supporte
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
       <span className="breadcrumbs__link">
-        MockWebServer & Localhost
+        How to Run Espresso Test with MockWebServer on TestMu AI
       </span>
     </li>
   </ul>
