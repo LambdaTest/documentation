@@ -218,10 +218,10 @@ body {
   position: relative;
 }
 
-/* Bold sidebar items — scoped to Test Manager only via the `menu-bold` class,
-   which is applied exclusively to TestManagerSidebar items (see sidebars.js).
-   Covers standalone docs AND collapsible category labels, so no global
-   sidebar rule is needed and other product sidebars are unaffected. */
+/* Bold sidebar items via the `menu-bold` class, applied to specific sidebar
+   entries (Test Manager items and the Puppeteer Testing category labels — see
+   sidebars.js). Covers standalone docs AND collapsible category labels, so no
+   global sidebar rule is needed and other product sidebars are unaffected. */
 .menu-bold > .menu__link,
 .menu-bold > .menu__list-item-collapsible > .menu__link {
   font-weight: 600;

@@ -2553,50 +2553,35 @@ module.exports = {
 
   PuppeteerTestingSidebar: [
     {
-      type: 'link',
-      label: 'Back',
-      href: '/docs/',
-      customProps: {
-        className: "back-to-main-menu",
-      },
+      type: "link",
+      label: "Back",
+      href: "/docs/",
+      customProps: { className: "back-to-main-menu" },
     },
     [
       {
         type: "category",
         collapsed: false,
-        label: "Getting Started",
+        label: "Get Started",
+        className: "menu-bold",
         items: [
-          "puppeteer-testing-guide",
-          "puppeteer-agent-skills",
+          { type: "doc", id: "puppeteer-testing-guide" },
+          { type: "doc", id: "puppeteer-agent-skills" },
+          { type: "doc", id: "puppeteer-test-execution" },
+          { type: "doc", id: "puppeteer-capabilities" },
+          { type: "doc", id: "local-testing-puppeteer" },
         ],
       },
       {
         type: "category",
         collapsed: true,
-        label: "Test Capabilities",
+        label: "Integrations",
+        className: "menu-bold",
         items: [
-          "puppeteer-test-execution",
-          "puppeteer-capabilities",
-          "local-testing-puppeteer",
-        ],
-      },
-      {
-        type: "category",
-        collapsed: true,
-        label: "Frameworks",
-        items: [
-          "puppeteer-mocha",
-          "puppeteer-jest",
-          "puppeteer-pytest-pyppeteer",
-          "puppeteer-codecept",
-        ],
-      },
-      {
-        type: "category",
-        collapsed: true,
-        label: "CI/CD",
-        items: [
-          "puppeteer-cicd",
+          { type: "doc", id: "puppeteer-mocha" },
+          { type: "doc", id: "puppeteer-jest" },
+          { type: "doc", id: "puppeteer-pytest-pyppeteer" },
+          { type: "doc", id: "puppeteer-codecept" },
         ],
       },
     ],
