@@ -1,8 +1,8 @@
-# Building Your iOS App for Simulator Testing
+# How to Build iOS Apps for Simulators on TestMu AI
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
-To test your iOS application on TestMu AI iOS Simulators, your app must be built specifically for the **iOS Simulator** platform. A build intended for a physical iPhone will not work on the Simulator, even if the CPU architecture matches. This guide walks you through creating a Simulator-compatible build and verifying it before uploading.
+Building an iOS app for Simulator testing on TestMu AI requires compiling against the iphonesimulator SDK, not a physical-device build. This produces a .app targeting Mach-O platform 7, which the Simulator accepts, so your uploads run without any immediate crash.
 
 ## Why Simulator Builds Are Different
 
@@ -57,11 +57,11 @@ If you use a CI/CD pipeline or prefer the terminal, use `xcodebuild` with the `-
 
 ```bash
 xcodebuild -project YourProject.xcodeproj \
-           -scheme YourScheme \
-           -configuration Debug \
-           -sdk iphonesimulator \
-           -arch arm64 \
-           build
+-scheme YourScheme \
+-configuration Debug \
+-sdk iphonesimulator \
+-arch arm64 \
+build
 ```
 
 If your project uses a **workspace** (e.g., with CocoaPods), replace `-project YourProject.xcodeproj` with `-workspace YourProject.xcworkspace`.
@@ -78,11 +78,11 @@ If your project uses a **workspace** (e.g., with CocoaPods), replace `-project Y
 
 ```bash
 xcodebuild -project YourProject.xcodeproj \
-           -scheme YourScheme \
-           -configuration Debug \
-           -sdk iphonesimulator \
-           -arch arm64 \
-           -showBuildSettings | grep "BUILT_PRODUCTS_DIR"
+-scheme YourScheme \
+-configuration Debug \
+-sdk iphonesimulator \
+-arch arm64 \
+-showBuildSettings | grep "BUILT_PRODUCTS_DIR"
 ```
 
 **Step 4:** Compress the `.app` into a `.zip` file:
@@ -109,14 +109,12 @@ Replace the second `YourApp` with the actual binary name inside the `.app` bundl
 **Step 2:** Check the output:
 
 - **Correct (Simulator build):**
-
 ```
 platform: IOSSIMULATOR
 ```
   or `platform 7`
 
 - **Incorrect (Device build):**
-
 ```
 platform: IOS
 ```
@@ -126,7 +124,6 @@ If the platform shows `IOS` or `platform 2`, the build is for physical devices a
 
 **Alternative Verification**
 You can also use `otool` to check the architecture:
-
 ```bash
 lipo -info YourApp.app/YourApp
 ```

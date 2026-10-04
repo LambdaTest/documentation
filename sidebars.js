@@ -2630,9 +2630,17 @@ module.exports = {
       },
     },
     [
-      "app-automation-app-sim",
-      "build-ios-app-for-simulator-testing",
-      "virtual-device-flutter-apps",
+      {
+        type: "category",
+        collapsed: false,
+        label: "Getting Started",
+        className: "menu-bold",
+        items: [
+          "app-automation-app-sim",
+          "build-ios-app-for-simulator-testing",
+          "virtual-device-flutter-apps",
+        ],
+      },
     ],
   ],
 
