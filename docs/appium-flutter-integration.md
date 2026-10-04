@@ -1,6 +1,7 @@
 ﻿---
 id: appium-flutter-integration
 title: How to Test Flutter Apps With Appium on TestMu AI
+hide_title: true
 sidebar_label: "Appium Flutter Integration Driver Testing"
 description: Test Flutter apps using the Appium Flutter Integration Driver on TestMu AI real device cloud, across Android and iOS.
 keywords:
@@ -133,15 +134,17 @@ import VerifiedTag from '@site/src/component/verifiedTag';
 />
 
 
-Testing Flutter apps on TestMu AI with Appium Flutter Integration Driver automates Flutter UI validation on real Android and iOS devices in the cloud, letting you write tests in multiple languages, switch contexts seamlessly, and drive gestures beyond native limits.
-
 <RealDeviceTag value="Real Device" /> <VirtualDeviceTag value="Virtual Device" />
+
+# How to Test Flutter Apps With Appium on TestMu AI
+
+Testing Flutter apps on TestMu AI with Appium Flutter Integration Driver automates Flutter UI validation on real Android and iOS devices in the cloud, letting you write tests in multiple languages, switch contexts seamlessly, and drive gestures beyond native limits.
 
 <BrandName /> supports testing Flutter applications on real Android and iOS devices using the [**Appium Flutter Integration Driver**](https://github.com/AppiumTestDistribution/appium-flutter-integration-driver/). This driver enables you to automate Flutter app testing in multiple programming languages, providing a powerful and flexible way to validate your Flutter apps on real devices in the cloud.
 
 Testing Flutter apps requires embedding the **Flutter Integration Server** inside your app to enable communication between Appium and Flutter UI elements.
 
-After preparing your Flutter app with this integration (refer to the setup documentation below), you can build, upload, and execute your tests on <BrandName /> real devices using the Appium Flutter Integration Driver.
+After preparing your Flutter app with this integration, you can build, upload, and execute your tests on <BrandName /> real devices using the Appium Flutter Integration Driver.
 
 ---
 
