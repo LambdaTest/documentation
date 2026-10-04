@@ -30,7 +30,7 @@ const docsSidebar = [
       { type: 'category', label: 'Appium Testing', collapsible: true, collapsed: true, items: items(s.AppiumTestingSidebar) },
       { type: 'category', label: 'Espresso Testing', collapsible: true, collapsed: true, items: items(s.EspressoTestingSidebar) },
       { type: 'category', label: 'XCUI Testing', collapsible: true, collapsed: true, items: items(s.XCUITestingSidebar) },
-      { type: 'category', label: 'Flutter Testing', collapsible: true, collapsed: true, items: items(s.FlutterTestingSidebar) },
+      { type: 'link', label: 'Flutter Testing', href: '/docs/getting-started-with-flutter-dart-android-automation/' },
       { type: 'category', label: 'Virtual Devices', collapsible: true, collapsed: true, items: items(s.EmuSimuSidebar) },
     ],
   },
@@ -130,7 +130,13 @@ const backToDocs = {
 };
 const TestManagerSidebar = [backToDocs, ...items(s.TestManagerSidebar)];
 
+// Dedicated sidebar for Flutter Testing. The Flutter Testing entry in docsSidebar is a
+// link (above), so these docs live ONLY here — Docusaurus displays this dedicated
+// sidebar whenever a reader is inside Flutter Testing.
+const FlutterTestingSidebar = [backToDocs, ...items(s.FlutterTestingSidebar)];
+
 module.exports = {
   docsSidebar,
   TestManagerSidebar,
+  FlutterTestingSidebar,
 };
