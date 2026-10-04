@@ -122,9 +122,9 @@ class HelpFulArticleClass extends React.Component {
             <div className="feedback__box">
                 <div className="support_container">
                     <div>
-                    <h3 className="feedback__box__title feedback__box__title_helpful">
+                    <div className="feedback__box__title feedback__box__title_helpful">
                         Do you find this helpful?
-                    </h3>
+                    </div>
                     {!feedbackSubmitted && !isContactFormSubmitted ? (
                         <div className="feedback__box__icons">
                             <button onClick={this.handleThumbsUp} title="Thumbs Up" type="button">
@@ -155,7 +155,7 @@ class HelpFulArticleClass extends React.Component {
                     )}
                 </div>
                                <div className="social_button">
-                        <h3 className='feedback__box__title feedback__box__title_helpful'>Still need help?</h3>
+                        <div className='feedback__box__title feedback__box__title_helpful'>Still need help?</div>
                         <span onClick={() => window.openLTChatWidget()} className="chat_btn"><img loading="lazy" src="/support/img/Chat.svg" alt=" " role="presentation" title='Chat with Us' className='' width="16" height="16" />Chat with Us</span>
                         {/* <a href="https://testmuai.com/register/" target="_blank"  className="btnlink">Start Free Testing</a> */}
                     </div>

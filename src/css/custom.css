@@ -2426,6 +2426,46 @@ h6[id]::before {
   .testmuconf-cta-img{width:100%;border-radius:0;}
 }
 
+/* ── Docs landing: product catalog cards ── */
+.prodCatalog{margin-top:24px;}
+.prodSection{margin:0 0 40px;}
+.prodSection_h2{display:flex;align-items:center;font-weight:600;color:var(--ifm-color-primary);font-size:20px;margin:0 0 6px;}
+.prodSection_h2 .home_icons{width:22px;height:22px;margin-right:8px;}
+.prodSection_desc{margin:0 0 16px;font-size:14.5px;line-height:1.5;color:var(--ifm-color-emphasis-700,#5c5c6a);max-width:780px;}
+.prodSection_hr{border:0;height:1px;margin:0 0 20px;background-color:var(--ifm-toc-border-color,#e3e3e3);}
+[data-theme='dark'] .prodSection_desc{color:#9aa0ab;}
+.prodCards{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:18px;}
+.prodCard{
+  display:flex;flex-direction:column;align-items:flex-start;justify-content:center;
+  height:200px;
+  padding:22px;border-radius:14px;
+  border:1px solid var(--ifm-toc-border-color,#e6e6e9);
+  background:var(--ifm-background-surface-color,#fff);
+  color:var(--ifm-color-primary);
+  text-decoration:none;overflow:hidden;
+  transition:border-color .18s ease,box-shadow .18s ease,transform .18s ease;
+}
+/* Hover: light mode -> orange (brand amber) accent, dark mode -> white accent */
+.prodCard:hover{
+  background:#DDDDDD33;
+  border-color:var(--brand-amber);
+  box-shadow:0 10px 26px rgba(17,17,26,.08);
+  transform:translateY(-3px);
+  text-decoration:none;
+}
+.prodCard:hover .prodCard_title{color:var(--brand-amber);}
+.prodCard_title{font-size:17px;font-weight:600;line-height:1.3;color:var(--ifm-color-primary);}
+.prodCard_desc{margin-top:8px;font-size:14px;font-weight:400;line-height:1.5;color:var(--ifm-color-emphasis-700,#5c5c6a);}
+[data-theme='dark'] .prodSection_hr{background-color:#2a2f3a;}
+[data-theme='dark'] .prodCard{background:#15181e;border-color:#2a2f3a;}
+[data-theme='dark'] .prodCard:hover{background:#22252A;border-color:#fff;box-shadow:0 10px 26px rgba(0,0,0,.4);}
+[data-theme='dark'] .prodCard:hover .prodCard_title{color:#fff;}
+[data-theme='dark'] .prodCard .prodCard_desc{color:#9aa0ab;}
+@media(max-width:767px){
+  .prodCards{grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:12px;}
+  .prodCard{height:auto;min-height:170px;padding:18px;}
+}
+
 /* ── Docs sidebar: match ApiSidebar active style ── */
 
 /* Remove the orange left-bar ::before pseudo-element on the active leaf only */
