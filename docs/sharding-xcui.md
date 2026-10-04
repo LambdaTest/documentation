@@ -1,8 +1,8 @@
 ---
 id: sharding-xcui
-title: Sharding for XCUI
-sidebar_label: Sharding for XCUI
-description: This document will cover how to execute XCUI Tests on real devices with HyperExecute. Before starting, please make sure you have App Automation and HyperExecute Cloud plans on your account.
+title: How to Shard XCUI Tests on TestMu AI
+sidebar_label: "Sharding"
+description: Speed up XCUI tests on TestMu AI by splitting them into shards that run in parallel on real devices with HyperExecute orchestration.
 keywords:
   - sharding
   - XCUIT
@@ -17,16 +17,17 @@ url: https://www.testmuai.com/support/docs/sharding-rd-hyperexec/
 site_name: TestMu AI
 slug: sharding-rd-hyperexec/
 canonical: https://www.testmuai.com/support/docs/sharding-rd-hyperexec/
+toc_max_heading_level: 2
 ---
 
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
-import RealDeviceTag from '../src/component/realDevice';
-import VirtualDeviceTag from '../src/component/virtualDevice';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import { CookieTrackingSignup } from '@site/src/component/CookieTracking';
+import RealDeviceTag from '@site/src/component/realDevice';
+import VirtualDeviceTag from '@site/src/component/virtualDevice';
 import VerifiedTag from '@site/src/component/verifiedTag';
 
 
@@ -47,7 +48,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "Sharding in XCUIT",
+          "name": "How to Shard XCUI Tests on TestMu AI",
           "item": `${BRAND_URL}/support/docs/sharding-rd-hyperexec/`
         }]
       })
@@ -178,9 +179,10 @@ import VerifiedTag from '@site/src/component/verifiedTag';
 />
 
 <RealDeviceTag value="Real Device" /> <VirtualDeviceTag value="Virtual Device" />
-Generally the XCUI tests are run in sequence which is a time taking process. This document explains how you can speed up this process by splitting the tests into **shards**. We can divide the various tests into shards which can run parallelly and save time while running various XCUI tests. 
 
-This document will cover how to execute **XCUI Tests** on real devices with **HyperExecute**. HyperExecute is a smart test orchestration platform to run end-to-end tests at the fastest speed possible. HyperExecute is configured using a YAML file.
+Sharding XCUI tests on TestMu AI splits a sequential suite into shards that run in parallel across real devices, cutting execution time. HyperExecute, configured through a YAML file, orchestrates the shards so your end-to-end iOS tests finish much faster overall.
+
+**HyperExecute** is a smart test orchestration platform that runs XCUI end-to-end tests on real devices at the fastest speed possible, configured using a YAML file.
 
 :::tip Note
 You can learn more about the HyperExecute portal and UI by going through our [Guided Walkthrough](/support/docs/hyperexecute-guided-walkthrough/) page. It contains all the relevant information that you need to optimise your testing process with HyperExecute. 
@@ -306,11 +308,11 @@ Response of above cURL will be a **JSON** object containing the `App URL` of the
 
 Refer to the sample `.yaml` file here
 
-<VerifiedTag value="Verified" />
-
 <Tabs className="docs__val">
 
 <TabItem value="real-device" label="Real Device" default>
+<VerifiedTag value="Verified" />
+
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-yaml">
 
@@ -375,6 +377,8 @@ framework:
 </TabItem>
 
 <TabItem value="virtual-device" label="Virtual Device">
+<VerifiedTag value="Verified" />
+
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-yaml">
 
@@ -475,7 +479,6 @@ chmod u+x <cliFileNAme>
 ```
 
 You can refer to this example and screenshot below:
-
 <VerifiedTag value="Verified" />
 
 ```
@@ -500,7 +503,7 @@ Here's an example of the same.
 
 <VerifiedTag value="Verified" />
 
-```java
+```yaml
 filters:
       attributes:
       - type: className
@@ -511,7 +514,7 @@ filters:
 This example will run only the 2 classes & one test as mentioned from the TestSuite.
 
 ## XCTestPlan in Sharding
-To implement the XCTestPlan in Sharding, add the `xctestplan` flag along with `app` and `testSuite` in the [framework](/support/docs/hyperexecute-yaml-version0.2/#framework) flag as shown below:
+To implement the XCTestPlan in Sharding, add the `xctestplan` flag along with `app` and `testSuite` in the [framework](/support/docs/deep-dive-into-hyperexecute-yaml/#hyperexecute-yaml-v02-framework-flags-and-discovery-config) flag as shown below:
 
 <VerifiedTag value="Verified" />
 
@@ -525,6 +528,45 @@ framework:
 ```
 
 > Refer the documentation to learn how to use [XCTestPlan feature](/support/docs/xctestplan/).
+
+## Filters for XCUI Tests
+
+Usually, all the test cases of your XCUI test suite are executed, but there is a way to filter these. You can specify some selected classes or tests, which provides you with options to filter the test cases which you want to execute.
+
+To filter the test cases, you just need to pass the suitable parameters in <BrandName />’s REST API request. Refer to the table below to understand how to use various filters provided by <BrandName />.
+
+Given below is the REST API endpoint:
+
+<VerifiedTag value="Verified" />
+
+```bash
+curl --location --request POST 'https://mobile-api.lambdatest.com/framework/v1/xcui/build' \
+--header 'Authorization: Basic BASIC_AUTH_TOKEN' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+  "app" : "APP_ID",
+  "testSuite": "TEST_SUITE_ID",
+  "device" :  ["iPhone 11-14"],
+  "video" : true,
+  "queueTimeout": 10800,
+  "idleTimeout": 150,
+  "devicelog": true,
+  "network": false,
+  "build" : "Proverbial-XCUITest"
+}'
+```
+
+| Parameters | Description | Values | Datatype | 
+|----------- | ----------- | ------ | -------- |
+| `only-testing` Real &amp; Virtual| Allows the user to run only those tests/classes provided in the list | Values can be of the following format: className or className/testName. E.g. `["Class1/Test1", "Class2"]` | Array |
+| `skip-testing`Real &amp; Virtual| Allows the user to run all the tests/classes except the ones provided in the list | Values can be of the following format: className or className/testName. E.g. `["Class1/Test1", "Class2"]` | Array |
+
+:::info Note
+You can not use the following filters simultaneously. 
+- `only-testing` and `skip-testing`
+- `xctestplan` and `only-testing`/`skip-testing`
+:::
+
 
 ## Additional Links
 - [Advanced Configuration for Capabilities](/support/docs/desired-capabilities-in-appium/)
