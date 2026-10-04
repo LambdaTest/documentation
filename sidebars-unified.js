@@ -29,7 +29,7 @@ const docsSidebar = [
     items: [
       { type: 'category', label: 'Appium Testing', collapsible: true, collapsed: true, items: items(s.AppiumTestingSidebar) },
       { type: 'category', label: 'Espresso Testing', collapsible: true, collapsed: true, items: items(s.EspressoTestingSidebar) },
-      { type: 'category', label: 'XCUI Testing', collapsible: true, collapsed: true, items: items(s.XCUITestingSidebar) },
+      { type: 'link', label: 'XCUI Testing', href: '/docs/getting-started-with-xcuitest/' },
       { type: 'category', label: 'Flutter Testing', collapsible: true, collapsed: true, items: items(s.FlutterTestingSidebar) },
       { type: 'category', label: 'Virtual Devices', collapsible: true, collapsed: true, items: items(s.EmuSimuSidebar) },
     ],
@@ -130,7 +130,13 @@ const backToDocs = {
 };
 const TestManagerSidebar = [backToDocs, ...items(s.TestManagerSidebar)];
 
+// Dedicated sidebar for XCUI Testing. The XCUI Testing entry in docsSidebar is a
+// link (above), so these docs live ONLY here — Docusaurus displays this dedicated
+// sidebar whenever a reader is inside XCUI Testing.
+const XCUITestingSidebar = [backToDocs, ...items(s.XCUITestingSidebar)];
+
 module.exports = {
   docsSidebar,
   TestManagerSidebar,
+  XCUITestingSidebar,
 };
