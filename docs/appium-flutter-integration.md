@@ -1,8 +1,8 @@
 ﻿---
 id: appium-flutter-integration
-title: Appium Flutter Integration Driver Testing
-sidebar_label: Flutter Integration Driver
-description: Guide to testing Flutter apps using Appium Flutter Integration Driver on TestMu AI real device cloud.
+title: How to Test Flutter Apps With Appium on TestMu AI
+sidebar_label: "Appium Flutter Integration Driver Testing"
+description: Test Flutter apps using the Appium Flutter Integration Driver on TestMu AI real device cloud, across Android and iOS.
 keywords:
   - flutter app testing
   - appium flutter integration
@@ -14,16 +14,17 @@ url: https://www.testmuai.com/support/docs/appium-flutter-integration/
 site_name: TestMu AI
 slug: appium-flutter-integration/
 canonical: https://www.testmuai.com/support/docs/appium-flutter-integration/
+toc_max_heading_level: 2
 ---
 
 import CodeBlock from '@theme/CodeBlock';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
-import RealDeviceTag from '../src/component/realDevice';
-import VirtualDeviceTag from '../src/component/virtualDevice';
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import RealDeviceTag from '@site/src/component/realDevice';
+import VirtualDeviceTag from '@site/src/component/virtualDevice';
 import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
@@ -131,7 +132,11 @@ import VerifiedTag from '@site/src/component/verifiedTag';
   }) }}
 />
 
+
+Testing Flutter apps on TestMu AI with Appium Flutter Integration Driver automates Flutter UI validation on real Android and iOS devices in the cloud, letting you write tests in multiple languages, switch contexts seamlessly, and drive gestures beyond native limits.
+
 <RealDeviceTag value="Real Device" /> <VirtualDeviceTag value="Virtual Device" />
+
 <BrandName /> supports testing Flutter applications on real Android and iOS devices using the [**Appium Flutter Integration Driver**](https://github.com/AppiumTestDistribution/appium-flutter-integration-driver/). This driver enables you to automate Flutter app testing in multiple programming languages, providing a powerful and flexible way to validate your Flutter apps on real devices in the cloud.
 
 Testing Flutter apps requires embedding the **Flutter Integration Server** inside your app to enable communication between Appium and Flutter UI elements.
@@ -213,7 +218,6 @@ void main() {
 
 <Tabs>
   <TabItem value="android" label="Android" default>
-
     <VerifiedTag value="Verified" />
 
     <CodeBlock className="language-bash">
@@ -222,7 +226,6 @@ void main() {
   </TabItem>
 
   <TabItem value="ios-simulator" label="iOS Simulator">
-
     <VerifiedTag value="Verified" />
 
     <CodeBlock className="language-bash">
@@ -231,7 +234,6 @@ void main() {
   </TabItem>
 
   <TabItem value="ios-device" label="iOS Real Device">
-
     <VerifiedTag value="Verified" />
 
     <CodeBlock className="language-bash">
@@ -247,18 +249,17 @@ void main() {
 
 
 - For detailed instructions on how to upload your application to <BrandName />, please refer to our comprehensive guide.
-- Visit the [**Upload your Application**](/support/docs/application-setup-via-api/#upload-your-application) documentation to learn more.
+- Visit the [**Upload your Application**](/support/docs/application-setup-via-api/#upload-via-the-rest-api) documentation to learn more.
 - Use the returned **App ID** from above step in your automation scripts.
 
 
 
 ---
 
-## Sample Desired Capabilities <RealDeviceTag value="Real Device" /> <VirtualDeviceTag value="Virtual Device" />
+## Sample Desired Capabilities Real &amp; Virtual
 
 <Tabs>
   <TabItem value="android" label="Android" default>
-
     <VerifiedTag value="Verified" />
 
     <CodeBlock className="language-java">
@@ -278,7 +279,6 @@ void main() {
   </TabItem>
 
   <TabItem value="ios" label="iOS">
-
     <VerifiedTag value="Verified" />
 
     <CodeBlock className="language-java">

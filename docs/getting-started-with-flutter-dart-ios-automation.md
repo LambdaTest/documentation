@@ -1,8 +1,8 @@
 ---
 id: getting-started-with-flutter-dart-ios-automation
-title: Flutter Dart Testing On TestMu AI - iOS
-sidebar_label: Flutter Dart iOS
-description: This guide details running your first Flutter Dart test on real iPhones using TestMu AI's Real Device Cloud.
+title: How to Run Flutter Dart Tests on TestMu AI - iOS
+sidebar_label: "Flutter Dart Testing - iOS"
+description: This guide shows you how to run your first Flutter Dart test on 5000+ real iOS devices using TestMu AI's Real Device Cloud.
 keywords:
 - flutter
 - testmu ai
@@ -13,15 +13,15 @@ url: https://www.testmuai.com/support/docs/getting-started-with-flutter-dart-ios
 site_name: TestMu AI
 slug: getting-started-with-flutter-dart-ios-automation/
 canonical: https://www.testmuai.com/support/docs/getting-started-with-flutter-dart-ios-automation/
+toc_max_heading_level: 2
 ---
 
 import CodeBlock from '@theme/CodeBlock';
+import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
-import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
-import RealDeviceTag from '../src/component/realDevice';
-import VirtualDeviceTag from '../src/component/virtualDevice';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import RealDeviceTag from '@site/src/component/realDevice';
 import VerifiedTag from '@site/src/component/verifiedTag';
 
 
@@ -42,8 +42,8 @@ import VerifiedTag from '@site/src/component/verifiedTag';
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "Getting Started With Flutter Tests on TestMu AI",
-          "item": `${BRAND_URL}/support/docs/getting-started-with-flutter-dart-android-automation/`
+          "name": "How to Run Flutter Dart Tests on TestMu AI - iOS",
+          "item": `${BRAND_URL}/support/docs/getting-started-with-flutter-dart-ios-automation/`
         }]
       })
     }}
@@ -179,12 +179,15 @@ import VerifiedTag from '@site/src/component/verifiedTag';
   ]) }}
 />
 
-<RealDeviceTag value="Real Device" /> 
-Flutter, an open-source UI toolkit created by Google, is a popular choice among developers to build natively compiled applications for mobile, web, and desktop from a single codebase. With Dart as its programming language, Flutter enables fast development of beautiful apps with a highly productive, extensible and open-source set of features.
+<RealDeviceTag value="Real Device" />
 
-In this guide, we will explore how to run your first Flutter Dart test on an iOS device using the <BrandName /> Real Device Cloud. By combining the capabilities of Flutter Dart and <BrandName />, you can ensure the proper functioning of your app across different devices and make your app more reliable and robust.
+Running your first Flutter Dart test on TestMu AI automates Flutter apps on real iOS devices in the cloud. Install the Flutter SDK, set credentials, upload the sample app and test suite, then execute and review results on the dashboard.
 
-## Prerequisites for Getting Started
+## Flutter Dart Testing on iOS
+
+In this section, we will explore how to run your first Flutter Dart test on an iOS device using the <BrandName /> Real Device Cloud. By combining the capabilities of Flutter Dart and <BrandName />, you can ensure the proper functioning of your app across different devices and make your app more reliable and robust.
+
+### Prerequisites for Getting Started
 
 1. Flutter SDK installed on your system
 2. You will need a <BrandName /> username and access key. To obtain your access credentials, [purchase a plan](https://billing.lambdatest.com/billing/plans) or access the [automation dashboard](https://www.testmuai.com/login/?redirectTo=https://appautomation.lambdatest.com/).
@@ -196,9 +199,9 @@ If you do not have any **Flutter iOS** test suite (.zip), you can run your sampl
 
 :::
 
-## Run Your First Test
+### Run Your First Test
 
-### Step 1: Upload Your Test Suite
+#### Step 1: Upload Your Test Suite
 
 Upload your **iOS** test suite (.zip file) to the <BrandName /> servers using our **REST API**. You need to provide your **Username** and **AccessKey** in the format `Username:AccessKey` in the **cURL** command for authentication. Make sure to add the path of the **appFile** in the cURL request. Here is an example cURL request to upload your app using our REST API:
 
@@ -242,12 +245,12 @@ Response of above cURL will be a **JSON** object containing the `App id` of the 
 
 :::
 
-### Step 2: Executing The Test
+#### Step 2: Executing The Test
 
-#### Basic Authentication
+##### Basic Authentication
 
 :::info
-You will need base64 encoded authentication in order to execute your Espresso automation test suite. You need to enter your username:accesskey **[here](https://mixedanalytics.com/knowledge-base/api-connector-encode-credentials-to-base-64/)** in order and click on encode to generate the base64 authentication. Take note of the **base64** encoded authentication which needs to be added in the next step.
+You will need base64 encoded authentication in order to execute your Flutter automation test suite. You need to enter your username:accesskey **[here](https://mixedanalytics.com/knowledge-base/api-connector-encode-credentials-to-base-64/)** in order and click on encode to generate the base64 authentication. Take note of the **base64** encoded authentication which needs to be added in the next step.
 :::
 
 <VerifiedTag value="Verified" />
@@ -258,7 +261,7 @@ You will need base64 encoded authentication in order to execute your Espresso au
   </CodeBlock>
 </div>
 
-#### Execute Command
+##### Execute Command
 
 Once you have uploaded your test suite, you can execute your test by running the following command:
 
@@ -266,11 +269,11 @@ Once you have uploaded your test suite, you can execute your test by running the
 Make sure to enter your **basic authentication** and **app id** (generated in the first step) in the below command.
 :::
 
-<VerifiedTag value="Verified" />
-
 <Tabs className="docs__val">
 
 <TabItem value="bash" label="Linux / MacOS" default>
+
+  <VerifiedTag value="Verified" />
 
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-bash">
@@ -297,11 +300,13 @@ curl --location --request POST 'https://mobile-api.lambdatest.com/framework/v1/f
 
 <TabItem value="powershell" label="Windows" default>
 
+  <VerifiedTag value="Verified" />
+
   <div className="lambdatest__codeblock">
-    <CodeBlock className="lamguage-powershell">
+    <CodeBlock className="language-powershell">
 
 ```powershell
-curl --location --request POST "https://mobile-api.lambdatest.com/framework/v1/flutter/ios/build" --header "Content-Type: application/json" --header "Authorization: Basic <Enter the Auth here>" --data-raw "{\"testSuite\": \"lt://APP_ID\",\"device\" :  [\"Pixel 6-12\"], \"video\": true, \"deviceLog\": true, \"queueTimeout\" : \"9000\",\"idleTimeout\" : \"600\"\"network\": true,\"build\" : \"Flutter iOS\"}"
+curl --location --request POST "https://mobile-api.lambdatest.com/framework/v1/flutter/ios/build" --header "Content-Type: application/json" --header "Authorization: Basic <Enter the Auth here>" --data-raw "{\"testSuite\": \"lt://APP_ID\",\"device\" :  [\"iPhone 14-16\"], \"video\": true, \"deviceLog\": true, \"queueTimeout\" : \"9000\",\"idleTimeout\" : \"600\",\"network\": true,\"build\" : \"Flutter iOS\"}"
 ```
 
   </CodeBlock>
@@ -310,11 +315,11 @@ curl --location --request POST "https://mobile-api.lambdatest.com/framework/v1/f
 </TabItem>
 </Tabs>
 
-### Step 3: View Test Execution
+#### Step 3: View Test Execution
 
 Once you have run your tests, you can view the test execution along with logs. You will be able to see the test cases passing or failing. You can view the same at [<BrandName /> Automation](https://www.testmuai.com/login/?redirectTo=https://appautomation.lambdatest.com/builds).
 
-## Capabilities Supported
+### Capabilities Supported
 
 The following capabilities are supported:
 
@@ -336,14 +341,14 @@ Ensure that the latitude is between -90 and 90, and the longitude is between -18
 :::
 
 
-## Running Tests in Parallel
+### Running Tests in Parallel on iOS
 
 You can run tests in parallel on multiple devices by passing the device name in comma separated format in the execute command as show below:
 
 <VerifiedTag value="Verified" />
 
 ```bash
-curl --location --request POST 'https://mobile-api.lambdatest.com/framework/v1/flutter/build' \
+curl --location --request POST 'https://mobile-api.lambdatest.com/framework/v1/flutter/ios/build' \
 --header 'Authorization: Basic <Enter_Basic_Auth>' \
 --header 'Content-Type: application/json' \
 --data-raw '{
@@ -363,54 +368,6 @@ Do note that Flutter builds when run in parallel, result in separate builds bein
 
 :::
 
-
-
-
-## Using the Flutter Testing Agent Skill with TestMu AI
-***
-
-The [flutter-testing-skill](https://github.com/LambdaTest/agent-skills/tree/main/flutter-testing-skill) is a part of [TestMu AI Skills](https://github.com/LambdaTest/agent-skills/) that guide AI coding assistants in generating production-ready test automation.
-
-The flutter-testing-skill package includes:
-
-<VerifiedTag value="Verified" />
-
-```
-flutter-testing-skill/
-├── SKILL.md
-└── reference/
-    ├── playbook.md
-    └── advanced-patterns.md
-```
-
-It provides structured guidance for:
-
-* Project structure and setup
-* Dependency configuration
-* Local execution
-* TestMu AI cloud execution
-* Debugging patterns
-* CI/CD integration
-
-
-### Installing Flutter Testing Agent Skill
-***
-
-Install a Flutter Testing Agent Skill using the command below:
-
-<VerifiedTag value="Verified" />
-
-```
-# Clone the repo and copy the skill you need
-git clone https://github.com/LambdaTest/agent-skills.git
-cp -r agent-skills/flutter-testing-skill .claude/skills/
-
-# Or for Cursor / Copilot
-cp -r agent-skills/flutter-testing-skill .cursor/skills/
-```
-
-**Note**: If you prefer installing all available framework skills instead of only flutter-testing-skill, clone the repository directly into your tool's skills directory (for example, .claude/skills/, .cursor/skills/, .gemini/skills/, or .agent/skills/).
-
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
@@ -425,7 +382,7 @@ cp -r agent-skills/flutter-testing-skill .cursor/skills/
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
       <span className="breadcrumbs__link">
-      Flutter Testing 
+        How to Run Flutter Dart Tests on TestMu AI - iOS
       </span>
     </li>
   </ul>

@@ -1,6 +1,6 @@
 ---
 id: flutter-supported-capabilities
-title: Flutter Supported Capabilities
+title: Flutter Supported Capabilities on TestMu AI
 sidebar_label: Supported Capabilities
 description: Now you can run your Flutter framework on TestMu AI online grid of 3000+ real desktop browsers and real operating systems with its supported capabilities.
 keywords:
@@ -15,6 +15,7 @@ url: https://www.testmuai.com/support/docs/flutter-supported-capabilities/
 site_name: TestMu AI
 slug: flutter-supported-capabilities/
 canonical: https://www.testmuai.com/support/docs/flutter-supported-capabilities/
+toc_max_heading_level: 2
 ---
 
 import CodeBlock from '@theme/CodeBlock';
@@ -39,7 +40,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "Espresso Supported Capabilities",
+          "name": "Flutter Supported Capabilities on TestMu AI",
           "item": `${BRAND_URL}/support/docs/flutter-supported-capabilities/`
         }]
       })
@@ -103,7 +104,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
   }) }}
 />
 
-This document provide details about the features and capabilities supported for Espresso Framework on <BrandName />.
+Flutter supported capabilities on TestMu AI let you configure Flutter mobile app tests on real Android devices, controlling the app, test suite, device, video, timeouts, device logs, build name, permissions, geolocation, GPS coordinates, and Bluetooth for reliable end-to-end automation runs.
 
 | Capability Name | Data Type | Description |
 |------|-----------|-------------|
