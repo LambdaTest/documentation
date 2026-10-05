@@ -196,6 +196,12 @@ In Appium testing, assessing your app's performance under diverse network condit
     driver.execute_script("updateNetworkProfile=3g-umts-good")
     ```
 
+:::note
+- To use the updateNetworkProfile hook, you must enable the networkProfile capability when creating the session. Without this capability, calls to updateNetworkProfile are not available.
+
+- If you do not want to apply network throttling at session start, set `networkProfile: default` in capabilities. You can then use updateNetworkProfile hook later in the session to apply or change the network profile.
+:::
+
 ### Supported Network Profiles
 
 | Profile Name             | Download Speed | Upload Speed | Latency |
