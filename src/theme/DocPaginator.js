@@ -86,7 +86,7 @@ export default function DocPaginator(props) {
       </div>}
 
       {/* The CTA supplies the gap above this heading, so restore it when hidden. */}
-      <div className='main_heading_support' style={showKaneCta ? undefined : {marginTop:"40px"}}>Help and Support</div>
+      <p className='main_heading_support' style={showKaneCta ? undefined : {marginTop:"40px"}}>Help and Support</p>
       
       
           <HelpFulArticle />
