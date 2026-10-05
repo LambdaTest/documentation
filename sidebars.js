@@ -1112,17 +1112,6 @@ module.exports = {
       },
       {
         type: "category",
-        label: "Features",
-        collapsed: true,
-        items: [
-          { type: "doc", label: "Custom Metrics", id: "phone-agent-custom-metrics" },
-          { type: "doc", label: "Data Validation", id: "chat-agent-data-validation" },
-          { type: "doc", label: "Voice Agent Integrations", id: "voice-agent-integrations" },
-          { type: "doc", label: "Performance Testing", id: "phone-agent-performance-testing" },
-        ],
-      },
-      {
-        type: "category",
         label: "Guides",
         collapsed: true,
         items: [
