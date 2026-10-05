@@ -1,6 +1,6 @@
 ---
 id: chat-agent
-toc_max_heading_level: 3
+toc_max_heading_level: 2
 title: Chat Agent Testing With TestMu AI
 hide_title: false
 sidebar_label: Chat Agents
