@@ -196,6 +196,7 @@ In Appium testing, assessing your app's performance under diverse network condit
     driver.execute_script("updateNetworkProfile=3g-umts-good")
     ```
 
+
 :::note
 - To use the **updateNetworkProfile** hook, you must enable the **networkProfile** capability when creating the session. Without this capability, calls to **updateNetworkProfile** are not available.
 
