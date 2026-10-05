@@ -800,5 +800,79 @@ The below screenshot of <BrandName /> Automation Dashboard shows the Playwright 
 :::
 
 
+## Handle Pop-ups During Test Execution
+
+Some websites show a pop-up, such as a notification prompt, after the page loads. The pop-up blocks clicks on the elements behind it. Add a notification handler that clicks the pop-up's dismiss button when it appears and continues when it does not. This lets the same test pass whether or not the pop-up is shown.
+
+<Tabs className="docs__val">
+
+<TabItem value="nodejs" label="Node.js" default>
+
+```bash
+const { errors } = require("playwright");
+
+async function dismissNotificationPrompt(page) {
+  const noThanks = page.getByText("No thanks");
+  try {
+    await noThanks.waitFor({ state: "visible", timeout: 4000 });
+    await noThanks.click();
+  } catch (e) {
+    if (!(e instanceof errors.TimeoutError)) throw e; // prompt did not appear
+  }
+}
+
+// Call after page load
+await page.goto("https://your-website.com");
+await dismissNotificationPrompt(page);
+```
+
+</TabItem>
+
+<TabItem value="python" label="Python" default>
+
+```bash
+from playwright.sync_api import TimeoutError as PlaywrightTimeoutError
+
+def dismiss_notification_prompt(page):
+    no_thanks = page.get_by_text("No thanks")
+    try:
+        no_thanks.wait_for(state="visible", timeout=4000)
+        no_thanks.click()
+    except PlaywrightTimeoutError:
+        pass  # prompt did not appear
+
+# Call after page load
+page.goto("https://your-website.com")
+dismiss_notification_prompt(page)
+```
+</TabItem>
+
+<TabItem value="java" label="Java" default>
+
+```bash
+static void dismissChromeNotificationPrompt(Page page) {
+    Locator noThanks = page.getByText("No thanks");
+    try {
+        noThanks.waitFor(new Locator.WaitForOptions()
+            .setState(WaitForSelectorState.VISIBLE)
+            .setTimeout(4000));
+        noThanks.click();
+    } catch (Exception e) {
+        // prompt did not appear
+    }
+}
+
+// Call after page load
+page.navigate("https://your-website.com");
+dismissChromeNotificationPrompt(page);
+```
+
+</TabItem> 
+</Tabs>
+
+For more details, refer to this [GitHub repository](https://github.com/harsh43580/stage-playwright-test/tree/main/src/test/java/com/lambdatest).
+
+
+
 
 
