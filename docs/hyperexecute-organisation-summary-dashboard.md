@@ -3,7 +3,7 @@ id: hyperexecute-organisation-summary-dashboard
 title: "Organisation Summary Dashboard in HyperExecute"
 hide_title: false
 sidebar_label: Organisation Summary
-description: Organisation Summary Dashboard in HyperExecute — KPI tiles, job status donut, failure reasons and PDF export. Enterprise plan, organisation admins only.
+description: Organisation Summary Dashboard in HyperExecute: KPI tiles, job status donut, failure reasons and PDF export. Enterprise plan, organisation admins only.
 keywords:
   - TestMu AI HyperExecute
   - TestMu AI HyperExecute help
@@ -62,7 +62,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       "@id": "https://www.testmuai.com/support/docs/hyperexecute-organisation-summary-dashboard/"
     },
     "headline": "Organisation Summary Dashboard in HyperExecute",
-    "description": "Organisation Summary Dashboard in HyperExecute — KPI tiles, job status donut, failure reasons and PDF export. Enterprise plan, organisation admins only.",
+    "description": "Organisation Summary Dashboard in HyperExecute: KPI tiles, job status donut, failure reasons and PDF export. Enterprise plan, organisation admins only.",
     "url": "https://www.testmuai.com/support/docs/hyperexecute-organisation-summary-dashboard/",
     "image": {
       "@type": "ImageObject",
@@ -158,7 +158,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
   }) }}
 ></script>
 
-The **Organisation Summary Dashboard** gives you a single view of how your whole organisation uses HyperExecute — how many App-IDs and projects exist, how many jobs and tests ran in a chosen time window, how those jobs ended, and why the failed ones failed. It replaces opening jobs one by one with a scannable health check across every team and project, and lets you share the result as a PDF.
+The **Organisation Summary Dashboard** gives you a single view of how your whole organisation uses HyperExecute. It covers how many App-IDs and projects exist, how many jobs and tests ran in a chosen time window, how those jobs ended, and why the failed ones failed. Instead of opening jobs one by one, you get a health check across every team and project, which you can export as a PDF.
 
 | At a glance | |
 | :---- | :---- |
@@ -174,7 +174,7 @@ The Organisation Summary Dashboard is an **enterprise-only** feature. Contact yo
 
 :::note Organisation admin only
 Within an enterprise org, only **organisation admins** can open the dashboard. The **View Summary** button sits at the top of the HyperExecute [Projects](/support/docs/hyperexecute-projects/) list.
-<!-- TODO: confirm with product — whether View Summary is hidden or disabled for non-admins, and what a non-admin sees if they open the dashboard URL directly. -->
+<!-- TODO: confirm with product: whether View Summary is hidden or disabled for non-admins, and what a non-admin sees if they open the dashboard URL directly. -->
 :::
 
 To open it, go to **HyperExecute → [Projects](/support/docs/hyperexecute-projects/)** and click **View Summary** at the top of the project list. The dashboard opens in a **Summary** dialog.
@@ -185,7 +185,7 @@ To open it, go to **HyperExecute → [Projects](/support/docs/hyperexecute-proje
 
 The dashboard splits into three sections, with filters that apply only to the ones that are time-sensitive.
 
-### Organization — point-in-time totals
+### Organization totals (point-in-time)
 
 Not affected by the time window.
 
@@ -194,7 +194,7 @@ Not affected by the time window.
 | **Total App-IDs (Git Orgs)** | Git organisations connected to your HyperExecute organisation |
 | **Total Projects** | HyperExecute projects in your organisation |
 
-### Job Activity — filtered by App-ID, project, and time window
+### Job Activity (filtered by App-ID, project, and time window)
 
 Change any filter above the tiles and these values recompute.
 
@@ -204,7 +204,7 @@ Change any filter above the tiles and these values recompute.
 | **Total Tests** | Tests run across those jobs |
 | **Average Execution Time** | Average time a job took to run in the selected window |
 
-<!-- TODO: confirm with product — how Average Execution Time is measured (submission-to-finish, or test execution only). The Total Jobs = terminal-jobs semantics is observed from the overview screenshot. -->
+<!-- TODO: confirm with product: how Average Execution Time is measured (submission-to-finish, or test execution only). The Total Jobs = terminal-jobs semantics is observed from the overview screenshot. -->
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/features/org-summary/org-summary-kpi-tiles.png').default} alt="Organisation and Job Activity tiles showing Total App-IDs, Total Projects, Total Jobs, Total Tests and Average Execution Time, with App-ID, project and time window filters" className="doc_img"/>
 
@@ -216,12 +216,12 @@ The **Job Status** card shows how jobs in the selected window ended. The number 
 | :---- | :---- |
 | **Completed** | The job finished running. For test-level outcomes inside a Completed job, see [HyperExecute Status](/support/docs/hyperexecute-status/). |
 | **Failed** | The job did not finish successfully. Broken down further in the [Failure reasons](#failure-reasons) card. |
-| **Aborted** | The job was stopped before it finished — by a user action or a stop-on-failure rule like [`failFast`](/support/docs/deep-dive-into-hyperexecute-yaml/#failfast). |
+| **Aborted** | The job was stopped before it finished, either by a user action or by a stop-on-failure rule like [`failFast`](/support/docs/deep-dive-into-hyperexecute-yaml/#failfast). |
 | **Timed Out** | The job did not complete within its allowed execution window. |
 | **Skipped** | The job was not executed. The [test-level definition](/support/docs/hyperexecute-status/#user-defined-status) is "not relevant or cannot be executed due to some issues like environment setup, data, or configuration". |
 | **Platform Error** | The job failed because of a HyperExecute platform-side issue, not something in the user's test or configuration. |
 
-<!-- TODO: confirm with product — the distinction between Aborted vs Timed Out at the job level, and what qualifies as Platform Error vs Failed. -->
+<!-- TODO: confirm with product: the distinction between Aborted vs Timed Out at the job level, and what qualifies as Platform Error vs Failed. -->
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/features/org-summary/org-summary-job-status.png').default} alt="Job Status donut chart with legend for Completed, Failed, Aborted, Timed Out, Skipped and Platform Error jobs, with counts and percentages" className="doc_img"/>
 
@@ -233,18 +233,18 @@ The header shows the total number of failed jobs. Each category below has its ow
 
 | Category | What it typically covers |
 | :---- | :---- |
-| **Test-level** | Failures inside the user's own tests — assertions, uncaught exceptions, application bugs |
+| **Test-level** | Failures inside the user's own tests: assertions, uncaught exceptions, application bugs |
 | **Config** | Mis-configured YAML, bad task definitions, missing env vars, invalid caching setup |
-| **Infra** | Platform infrastructure the job depends on — browser/device grid, network, storage |
+| **Infra** | Platform infrastructure the job depends on: browser/device grid, network, storage |
 | **Access & Licensing** | Missing permissions, expired licenses, seat or concurrency limits |
 | **Unclassified** | Failures that didn't fit any of the above buckets |
 
-<!-- TODO: confirm with product — the exact classification criteria for each category. The descriptions above are reasonable groupings but have not been verified with the team that owns the taxonomy. -->
+<!-- TODO: confirm with product: the exact classification criteria for each category. The descriptions above are reasonable groupings but have not been verified with the team that owns the taxonomy. -->
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/features/org-summary/org-summary-failure-reasons.png').default} alt="Failure reasons bar chart showing failed jobs split into Test-level, Config, Infra, Access and Licensing, and Unclassified" className="doc_img"/>
 
 :::tip Act on the biggest bar first
-If **Test-level** dominates, your developers own the fix. If **Config**, **Infra** or **Access & Licensing** dominate, the fix is almost always a platform or policy change — raise it with the owning team rather than asking every project to patch around it.
+If **Test-level** dominates, your developers own the fix. If **Config**, **Infra** or **Access & Licensing** dominate, the fix is almost always a platform or policy change. Raise it with the owning team rather than asking every project to patch around it.
 :::
 
 ## Choosing a time window
@@ -271,7 +271,7 @@ Click **Clear** to reset the selection. The window applies to **Job Activity** a
 
 Click **Download PDF** in the top-right corner of the Summary dialog to download the dashboard as a PDF.
 
-<!-- TODO: confirm with product — whether the PDF reflects the current App-ID, project and time window filters, which sections and charts are included or left out, and the file name format. -->
+<!-- TODO: confirm with product: whether the PDF reflects the current App-ID, project and time window filters, which sections and charts are included or left out, and the file name format. -->
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/features/org-summary/org-summary-pdf-export.png').default} alt="Download PDF button in the top-right corner of the HyperExecute Summary dialog" className="doc_img"/>
 
@@ -287,7 +287,7 @@ Go to **HyperExecute → [Projects](/support/docs/hyperexecute-projects/)** and 
 
 ### What time windows can I filter the dashboard by?
 
-**Today**, **Yesterday**, **Last 7 Days** (the default), **Last 14 Days**, **Last 30 Days**, **All Time**, or a **custom** start and end date. The window applies to the **Job Activity** and **Job Outcomes** sections only — **Organization** totals (App-IDs and Projects) are point-in-time values and do not change with the window.
+**Today**, **Yesterday**, **Last 7 Days** (the default), **Last 14 Days**, **Last 30 Days**, **All Time**, or a **custom** start and end date. The window applies to the **Job Activity** and **Job Outcomes** sections only. **Organization** totals (App-IDs and Projects) are point-in-time values and do not change with the window.
 
 ### Can I export the Organisation Summary Dashboard as a PDF?
 

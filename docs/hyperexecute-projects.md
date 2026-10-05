@@ -116,7 +116,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 Projects serve as a centralized platform for organizing and managing test executions. By grouping similar tests, controlling access, and tracking progress, Projects streamline the testing process. You can configure [custom project](/support/docs/hyperexecute-projects/#setup-your-project) and [workflow setups](/support/docs/hyperexecute-projects/#schedule-your-workflows), as well as [integrate Tosca, Tosca DEX, and JMeter tests](/support/docs/hyperexecute-projects/#setting-up-specialized-projects) for unified management. This enables efficient test script creation, automated execution scheduling, and valuable insights into test results.
 
 :::tip Org-wide health check
-Organisation admins on the enterprise plan can click **View Summary** at the top of the project list to open the [Organisation Summary Dashboard](/support/docs/hyperexecute-organisation-summary-dashboard/) — KPI tiles, a job status donut and a failure-reason breakdown across every project in your organisation, with a PDF export.
+Organisation admins on the enterprise plan can click **View Summary** at the top of the project list to open the [Organisation Summary Dashboard](/support/docs/hyperexecute-organisation-summary-dashboard/). It shows KPI tiles, a job status donut and a failure-reason breakdown across every project in your organisation, with a PDF export.
 :::
 
 ## Link Jobs to Projects Using YAML
