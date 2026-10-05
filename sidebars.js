@@ -185,6 +185,11 @@ module.exports = {
           },
           {
             type: "doc",
+            label: "Organisation Summary",
+            id: "hyperexecute-organisation-summary-dashboard",
+          },
+          {
+            type: "doc",
             label: "Workflows",
             id: "hyperexecute-workflows",
           },
@@ -221,189 +226,24 @@ module.exports = {
           id: "hyperexecute-supported-languages-and-frameworks",
         },
         items: [
-          {
-            type: "category",
-            collapsed: true,
-            label: "Selenium",
-            items: [
-              {
-                type: "category",
-                collapsed: true,
-                label: "Java",
-                items: [
-                  "testng-on-hyperexecute-grid",
-                  "junit-on-hyperexecute-grid",
-                  "cucumber-on-hyperexecute-grid",
-                ],
-              },
-              {
-                type: "category",
-                collapsed: true,
-                label: "JavaScript",
-                items: [
-                  "webdriverio-on-hyperexecute-grid",
-                  "protractor-on-hyperexecute-grid",
-                  "nightwatch-on-hyperexecute-grid",
-                  "hyperexecute-bidi-testing"
-                ],
-              },
-              {
-                type: "category",
-                collapsed: true,
-                label: "C#",
-                items: [
-                  "nunit-on-hyperexecute-grid",
-                  "specflow-on-hyperexecute-grid",
-                  "reqnroll-on-hyperexecute-grid",
-                ],
-              },
-              {
-                type: "category",
-                collapsed: true,
-                label: "Python",
-                items: [
-                  "pyunit-on-hyperexecute-grid",
-                  "pytest-on-hyperexecute-grid",
-                  "robot-on-hyperexecute-grid",
-                  "mainframe-testing-with-hyperexecute",
-                  "behave-on-hyperexecute-grid",
-                ],
-              },
-              {
-                type: "category",
-                collapsed: true,
-                label: "Ruby",
-                items: [
-                  "ruby-on-hyperexecute-grid",
-                  "capybara-on-hyperexecute-grid",
-                ],
-              },
-            ],
-          },
-          {
-            type: "category",
-            collapsed: true,
-            label: "Puppeteer",
-            items: [
-              "jest-on-hyperexecute",
-              "mocha-on-hyperexecute",
-              "codecept-on-hyperexecute",
-            ],
-          },
-          {
-            type: "category",
-            collapsed: true,
-            label: "Playwright",
-            link: {
-              type: "doc",
-              id: "playwright-integration-with-hyperexecute",
-            },
-            items: [
-              {
-                type: "category",
-                collapsed: true,
-                label: "Python",
-                items: [
-                  "pytest-on-hyperexecute",
-                  "playwright-python-on-hyperexecute",
-                ],
-              },
-              {
-                type: "category",
-                collapsed: true,
-                label: "Javascript",
-                items: [
-                  "playwright-vanillajs-on-hyperexecute",
-                  "playwright-codeceptjs-on-hyperexecute",
-                  "playwright-jest-on-hyperexecute",
-                ],
-              },
-              {
-                type: "doc",
-                label: "Java",
-                id: "playwright-junit-on-hyperexecute",
-              },
-              {
-                type: "doc",
-                label: "C#",
-                id: "playwright-dotnet-on-hyperexecute",
-              },
-              {
-                type: "doc",
-                label: "Real Device",
-                id: "playwright-real-device-on-hyperexecute",
-              },
-            ],
-          },
-          {
-            type: "category",
-            collapsed: true,
-            label: "Cypress",
-            link: {
-              type: "doc",
-              id: "cypress-integration-with-hyperexecute",
-            },
-            items: ["cypressv9-on-hyperexecute", "cypressv10-on-hyperexecute"],
-          },
-          {
-            type: "category",
-            collapsed: true,
-            label: "Appium",
-            items: [
-              "hyperexecute-appium-testing",
-              "hyperexecute-webapp-appium-testing",
-              "hyperexecute-appium-virtual-device",
-              "hyperexecute-emu-simu-devices-list",
-            ],
-          },
-          {
-            type: "doc",
-            label: "Espresso",
-            id: "hyperexecute-espresso-testing",
-          },
-          {
-            type: "doc",
-            label: "Maestro",
-            id: "hyperexecute-maestro-testing",
-          },
-          {
-            type: "doc",
-            label: "Detox",
-            id: "hyperexecute-detox-testing",
-          },
-          {
-            type: "doc",
-            label: "XCUI",
-            id: "hyperexecute-xcui-testing",
-          },
-          {
-            type: "doc",
-            label: "k6",
-            id: "hyperexecute-k6-testing",
-          },
-          {
-            type: "category",
-            collapsed: true,
-            label: "Performance Testing",
-            link: {
-              type: "doc",
-              id: "hyperexecute-performance-testing",
-            },
-            items: [
-              "hyperexecute-run-jmeter-tests",
-              "hyperexecute-gattling-testing",
-            ],
-          },
-          {
-            type: "doc",
-            label: "API Testing",
-            id: "hyperexecute-api-testing",
-          },
-          {
-            type: "doc",
-            label: "Karate",
-            id: "hyperexecute-karate-testing",
-          },
+          "hyperexecute-test-splitting-and-multiplexing",
+          "hyperexecute-auto-split-strategy",
+          "hyperexecute-matrix-multiplexing-strategy",
+          "hyperexecute-hybrid-strategy",
+          "hyperexecute-how-to-find-correct-concurrency",
+          "hyperexecute-prioritize-tests",
+          "hyperexecute-failfast",
+          "hyperexecute-test-muting",
+          "hyperexecute-rerun-failed-tests",
+          "hyperexecute-background-services",
+          "hyperexecute-auto-healing",
+          "hyperexecute-projects",
+          "hyperexecute-organisation-summary-dashboard",
+          "hyperexecute-workflows",
+          "hyperexecute-test-chains",
+          "hyperexecute-jobs-archiving",
+          "hyperexecute-how-smart-caching-boosts-tests-speed",
+          "hyperexecute-org-product-preferences",
         ],
       },
       {
