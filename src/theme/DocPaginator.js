@@ -86,14 +86,14 @@ export default function DocPaginator(props) {
       </div>}
 
       {/* The CTA supplies the gap above this heading, so restore it when hidden. */}
-      <h2 className='main_heading_support' style={showKaneCta ? undefined : {marginTop:"40px"}}>Help and Support</h2>
+      <div className='main_heading_support' style={showKaneCta ? undefined : {marginTop:"40px"}}>Help and Support</div>
       
       
           <HelpFulArticle />
       
       
       
-      <h2 className='main_heading_support' style={{marginTop:"40px"}}>Related Articles</h2> </>}
+      <div className='main_heading_support' style={{marginTop:"40px"}}>Related Articles</div> </>}
       <OriginalComp {...props} />
       <footer>
         <div className="doc_footer">
