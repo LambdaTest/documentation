@@ -151,6 +151,11 @@ module.exports = {
           },
           {
             type: "doc",
+            label: "Label Filter",
+            id: "hyperexecute-jobs-label-filter",
+          },
+          {
+            type: "doc",
             label: "Workflows",
             id: "hyperexecute-workflows",
           },
