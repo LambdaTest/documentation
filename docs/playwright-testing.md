@@ -2,6 +2,7 @@
 id: playwright-testing-guide
 title: How To Run Playwright Tests On TestMu AI Platform
 hide_title: true
+toc_max_heading_level: 2
 sidebar_label: Run Your First Test
 description: Here you can learn how to run Playwright tests on the TestMu AI test automation platform on real browsers and operating systems.
 keywords:
@@ -396,6 +397,50 @@ For example, the below screenshot shows a test execution details of Playwright t
 
 <img loading="lazy" src={require('../assets/images/playwright-testing/playwright-test-execution-cloud.png').default} alt="Playwright test execution results on cloud" width="1444" height="703"  className="doc_img"/>
 
+
+## Run Playwright BDD Tests
+---
+
+[playwright-bdd](https://github.com/vitalets/playwright-bdd) lets you run Gherkin `.feature` files on Playwright's test runner. On <BrandName />, the `@lambdatest/playwright-node-sdk` runs the generated specs across the browser and OS matrix defined in your `lambdatest.yml`.
+
+:::tip Sample repo
+<a href="https://github.com/LambdaTest/playwright-sample/tree/main/playwright-bdd" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="TestMu AI Playwright BDD sample repository on GitHub" className="doc_img"/> View on GitHub</a>
+:::
+
+### How Playwright BDD Works
+
+Playwright BDD converts your Gherkin into runnable Playwright specs, then the SDK runs them on the cloud:
+
+1. Write `.feature` files and map each step to a Playwright action in the `steps/` folder.
+2. `npx bddgen` generates Playwright spec files into the `.features-gen` folder.
+3. The Playwright Node SDK runs those specs on <BrandName /> using the configuration in `lambdatest.yml`.
+
+### Running Your BDD Tests
+
+Clone the sample repository, then install the dependencies, which include `playwright-bdd` and `@lambdatest/playwright-node-sdk`:
+
+```bash
+npm install
+```
+
+> Verified with `playwright-bdd@8.3.1`, `@playwright/test@1.53.0`, and `@lambdatest/playwright-node-sdk@1.0.2` (October 2026).
+
+Set your <BrandName /> **Username** and **Access Key** as environment variables (see [Prerequisites](#prerequisites)), then generate the specs and run them on the cloud grid in a single command:
+
+```bash
+npx bddgen && npx playwright-node-sdk playwright test
+```
+
+Define your target browsers and operating systems in `lambdatest.yml`. For the full configuration, refer to the [Playwright BDD sample repository](https://github.com/LambdaTest/playwright-sample/tree/main/playwright-bdd).
+
+### Viewing the BDD Results
+
+Each scenario appears on the <BrandName /> Automation Dashboard with its name, status, logs, and session video.
+
+{/* TODO (screenshot): Save the Playwright BDD run from the dashboard to
+    ../assets/images/playwright-testing/playwright-bdd-execution.webp
+    Then replace this comment with:
+    <img loading="lazy" src={require('../assets/images/playwright-testing/playwright-bdd-execution.webp').default} alt="TestMu AI Automation Dashboard showing a completed Playwright BDD run with each Gherkin scenario, its status, and session video" className="doc_img"/> */}
 
 ## Related Playwright guides
 
