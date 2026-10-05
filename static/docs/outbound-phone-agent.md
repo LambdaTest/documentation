@@ -26,6 +26,8 @@ Aside from the differences above, outbound testing is identical to inbound. Phon
 
 For the full detail on each, see [inbound phone agent testing](/support/docs/inbound-phone-agent/).
 
+[Custom metrics](/support/docs/phone-agent/#custom-metrics) work the same way for outbound agents. [Performance testing](/support/docs/phone-agent/#performance-testing) places calls to your agent, so it applies to agents that answer calls.
+
 ## Metrics
 
 Outbound agents are evaluated across the same 8 metric categories and 30+ individual metrics as inbound: conversation flow and interaction dynamics, accuracy and effectiveness, user experience and satisfaction, business operational metrics, audio voice quality, speech-to-text evaluation, validation results, and automated issue tags.
