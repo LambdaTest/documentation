@@ -146,6 +146,11 @@ module.exports = {
           },
           {
             type: "doc",
+            label: "Organisation Summary",
+            id: "hyperexecute-organisation-summary-dashboard",
+          },
+          {
+            type: "doc",
             label: "Workflows",
             id: "hyperexecute-workflows",
           },
@@ -190,6 +195,7 @@ module.exports = {
           "hyperexecute-background-services",
           "hyperexecute-auto-healing",
           "hyperexecute-projects",
+          "hyperexecute-organisation-summary-dashboard",
           "hyperexecute-workflows",
           "hyperexecute-test-chains",
           "hyperexecute-jobs-archiving",
