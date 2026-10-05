@@ -3,16 +3,21 @@ id: hyperexecute-organisation-summary-dashboard
 title: "Organisation Summary Dashboard in HyperExecute"
 hide_title: false
 sidebar_label: Organisation Summary
-description: Get an organisation-wide view of HyperExecute usage, job activity, job outcomes and failure reasons in one dashboard, with filters by App-ID, project and time window and a PDF export.
+description: Organisation Summary Dashboard in HyperExecute — KPI tiles, job status donut, failure reasons and PDF export. Enterprise plan, organisation admins only.
 keywords:
   - TestMu AI HyperExecute
   - TestMu AI HyperExecute help
   - TestMu AI HyperExecute documentation
   - HyperExecute Organisation Summary
+  - HyperExecute organization summary dashboard
   - HyperExecute org dashboard
+  - HyperExecute admin dashboard
+  - HyperExecute enterprise feature
+  - HyperExecute KPI tiles
   - HyperExecute job status
   - HyperExecute failure reasons
   - HyperExecute PDF report
+  - HyperExecute View Summary
 url: https://www.testmuai.com/support/docs/hyperexecute-organisation-summary-dashboard/
 site_name: TestMu AI
 slug: hyperexecute-organisation-summary-dashboard/
@@ -57,7 +62,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       "@id": "https://www.testmuai.com/support/docs/hyperexecute-organisation-summary-dashboard/"
     },
     "headline": "Organisation Summary Dashboard in HyperExecute",
-    "description": "Org-wide view of HyperExecute usage, job activity, job outcomes and failure reasons, with App-ID / project / time-window filters and a PDF export. Enterprise plan, organisation admins only.",
+    "description": "Organisation Summary Dashboard in HyperExecute — KPI tiles, job status donut, failure reasons and PDF export. Enterprise plan, organisation admins only.",
     "url": "https://www.testmuai.com/support/docs/hyperexecute-organisation-summary-dashboard/",
     "image": {
       "@type": "ImageObject",
@@ -101,6 +106,57 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }
   }) }}
 />
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "@id": `${BRAND_URL}/support/docs/hyperexecute-organisation-summary-dashboard/#faq`,
+    "mainEntity": [{
+      "@type": "Question",
+      "name": "Who can access the Organisation Summary Dashboard in HyperExecute?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The Organisation Summary Dashboard is available to organisation admins on the enterprise plan. Users on other plans or non-admin roles cannot open it."
+      }
+    },{
+      "@type": "Question",
+      "name": "Where do I open the Organisation Summary Dashboard?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Go to HyperExecute → Projects and click the View Summary button at the top of the project list. The dashboard opens in a Summary dialog on the same page."
+      }
+    },{
+      "@type": "Question",
+      "name": "What time windows can I filter the Organisation Summary Dashboard by?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You can filter by Today, Yesterday, Last 7 Days (the default), Last 14 Days, Last 30 Days, All Time, or a custom start and end date. The window applies to the Job Activity and Job Outcomes sections only; Organization totals are point-in-time values."
+      }
+    },{
+      "@type": "Question",
+      "name": "Can I export the Organisation Summary Dashboard as a PDF?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Click the Download PDF button in the top-right corner of the Summary dialog to download the dashboard as a PDF report you can share with stakeholders."
+      }
+    },{
+      "@type": "Question",
+      "name": "What job statuses does the Organisation Summary Dashboard show?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The Job Status donut groups terminal jobs into six statuses: Completed, Failed, Aborted, Timed Out, Skipped, and Platform Error. Each slice shows the job count and its share of the total."
+      }
+    },{
+      "@type": "Question",
+      "name": "What failure categories does the Organisation Summary Dashboard track?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Failed jobs are broken down into Test-level (failures inside the user's own tests), Config (YAML or task mis-configuration), Infra (platform infrastructure the job depends on), Access & Licensing (permissions, licenses, seat limits), and Unclassified."
+      }
+    }]
+  }) }}
+></script>
 
 The **Organisation Summary Dashboard** gives you a single view of how your whole organisation uses HyperExecute — how many App-IDs and projects exist, how many jobs and tests ran in a chosen time window, how those jobs ended, and why the failed ones failed. It replaces opening jobs one by one with a scannable health check across every team and project, and lets you share the result as a PDF.
 
@@ -218,6 +274,32 @@ Click **Download PDF** in the top-right corner of the Summary dialog to download
 <!-- TODO: confirm with product — whether the PDF reflects the current App-ID, project and time window filters, which sections and charts are included or left out, and the file name format. -->
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/features/org-summary/org-summary-pdf-export.png').default} alt="Download PDF button in the top-right corner of the HyperExecute Summary dialog" className="doc_img"/>
+
+## Frequently asked questions {#faq}
+
+### Who can access the Organisation Summary Dashboard in HyperExecute?
+
+The Organisation Summary Dashboard is available to **organisation admins on the enterprise plan**. Users on other plans or non-admin roles cannot open it. To enable the enterprise plan, contact your account team or <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24×7 chat support**</span>.
+
+### Where do I open the Organisation Summary Dashboard?
+
+Go to **HyperExecute → [Projects](/support/docs/hyperexecute-projects/)** and click the **View Summary** button at the top of the project list. The dashboard opens in a **Summary** dialog on the same page.
+
+### What time windows can I filter the dashboard by?
+
+**Today**, **Yesterday**, **Last 7 Days** (the default), **Last 14 Days**, **Last 30 Days**, **All Time**, or a **custom** start and end date. The window applies to the **Job Activity** and **Job Outcomes** sections only — **Organization** totals (App-IDs and Projects) are point-in-time values and do not change with the window.
+
+### Can I export the Organisation Summary Dashboard as a PDF?
+
+Yes. Click **Download PDF** in the top-right corner of the Summary dialog to download the dashboard as a PDF.
+
+### What job statuses does the dashboard show?
+
+The Job Status donut groups terminal jobs into six statuses: **Completed**, **Failed**, **Aborted**, **Timed Out**, **Skipped**, and **Platform Error**. Each slice shows the job count and its share of the total. See [Job status at a glance](#job-status-at-a-glance) for one-line definitions.
+
+### What failure categories does the dashboard track?
+
+Failed jobs are broken down into **Test-level** (failures inside the user's own tests), **Config** (YAML or task mis-configuration), **Infra** (platform infrastructure the job depends on), **Access & Licensing** (permissions, licenses, seat limits), and **Unclassified**. See [Failure reasons](#failure-reasons) for the typical contents of each category.
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
