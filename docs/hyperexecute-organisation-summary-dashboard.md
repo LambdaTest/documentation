@@ -3,7 +3,7 @@ id: hyperexecute-organisation-summary-dashboard
 title: "Organisation Summary Dashboard in HyperExecute"
 hide_title: false
 sidebar_label: Organisation Summary
-description: Organisation Summary Dashboard in HyperExecute: KPI tiles, job status donut, failure reasons and PDF export. Enterprise plan, organisation admins only.
+description: "Organisation Summary Dashboard in HyperExecute: KPI tiles, job status donut, failure reasons and PDF export. Enterprise plan, organisation admins only."
 keywords:
   - TestMu AI HyperExecute
   - TestMu AI HyperExecute help
