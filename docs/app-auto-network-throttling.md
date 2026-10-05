@@ -194,9 +194,9 @@ To utilize the **networkProfile** capability, ensure that you include `network: 
     ```
 
 :::note
-- To use the updateNetworkProfile hook, you must enable the networkProfile capability when creating the session. Without this capability, calls to updateNetworkProfile are not available.
+- To use the **updateNetworkProfile** hook, you must enable the **networkProfile** capability when creating the session. Without this capability, calls to **updateNetworkProfile** are not available.
 
-- If you do not want to apply network throttling at session start, set `networkProfile: default` in capabilities. You can then use updateNetworkProfile hook later in the session to apply or change the network profile.
+- If you do not want to apply network throttling at session start, set `networkProfile: default` in capabilities. You can then use **updateNetworkProfile** hook later in the session to apply or change the network profile.
 :::
 
 ### Supported Network Profiles
