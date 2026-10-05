@@ -193,6 +193,7 @@ To utilize the **networkProfile** capability, ensure that you include `network: 
     driver.execute_script("updateNetworkProfile=3g-umts-good")
     ```
 
+
 :::note
 - To use the **updateNetworkProfile** hook, you must enable the **networkProfile** capability when creating the session. Without this capability, calls to **updateNetworkProfile** are not available.
 
