@@ -36,8 +36,8 @@ const docsSidebar = [
       { type: 'link', label: 'Playwright Testing', href: '/docs/playwright-testing/' },
       { type: 'link', label: 'Puppeteer Testing', href: '/docs/puppeteer-testing/' },
       { type: 'link', label: 'K6 Testing', href: '/docs/k6-browser-testing/' },
-      { type: 'doc', id: 'run-tests-with-chrome-devtools-protocol', label: 'CDP Testing' },
-      { type: 'doc', id: 'run-tests-with-webdriver-bidi', label: 'BiDi Testing' },
+      { type: 'link', label: 'CDP Testing', href: '/docs/run-tests-with-chrome-devtools-protocol/' },
+      { type: 'link', label: 'BiDi Testing', href: '/docs/run-tests-with-webdriver-bidi/' },
     ],
   },
   {
@@ -91,6 +91,9 @@ const CypressTestingSidebar = dedicated(s.CypressTestingSidebar);
 const PlaywrightTestingSidebar = dedicated(s.PlaywrightTestingSidebar);
 const PuppeteerTestingSidebar = dedicated(s.PuppeteerTestingSidebar);
 const K6BrowserTestingSidebar = dedicated(s.K6BrowserTestingSidebar);
+// CDP and BiDi are single-page topics, so each is a one-item dedicated sidebar.
+const CDPTestingSidebar = [backToDocs, { type: 'doc', id: 'run-tests-with-chrome-devtools-protocol', label: 'CDP Testing' }];
+const BiDiTestingSidebar = [backToDocs, { type: 'doc', id: 'run-tests-with-webdriver-bidi', label: 'BiDi Testing' }];
 
 // App Automation
 const AppiumTestingSidebar = dedicated(s.AppiumTestingSidebar);
@@ -166,6 +169,8 @@ module.exports = {
   PlaywrightTestingSidebar,
   PuppeteerTestingSidebar,
   K6BrowserTestingSidebar,
+  CDPTestingSidebar,
+  BiDiTestingSidebar,
 
   // App Automation
   AppiumTestingSidebar,
