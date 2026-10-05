@@ -232,7 +232,7 @@ Phase 1 covers seven YAML parameters. The applicable mode follows from the param
 
 ## How severity works
 
-The four modes split into two families, and that split decides whether severity applies at all.
+The modes split into two families, and that split decides whether severity applies at all.
 
 | Mode | Family | What it does | Severity? |
 | :---- | :---- | :---- | :---- |
@@ -471,7 +471,7 @@ The response returns the created policy's generated `id`, which you use for ever
 ```
 
 :::note Per-OS commands
-`globalPost` and `afterEachScenario` commands can differ by operating system, because a bash command won't run on a Windows agent. Supported OS keys are `linux`, `win`, `win11`, and `mac`.
+`globalPost`, `post`, and `afterEachScenario` commands can differ by operating system, because a bash command won't run on a Windows agent. Supported OS keys are `linux`, `win`, `win11`, and `mac`.
 
 `default` is required. HyperExecute injects the command block matching the job's `runson` value, and falls back to the `default` block for any OS you didn't list. If you supply commands for a single OS only, they are treated as universal and run on every job in scope.
 :::
