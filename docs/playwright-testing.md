@@ -452,6 +452,22 @@ npx bddgen && npx playwright-node-sdk playwright test
 
 Define your target browsers and operating systems in `lambdatest.yml`. For the full configuration, refer to the [Playwright BDD sample repository](https://github.com/LambdaTest/playwright-sample/tree/main/playwright-bdd).
 
+### Testing Locally Hosted Pages With Playwright BDD
+
+To run your Playwright BDD tests against locally hosted or firewalled pages, enable the tunnel under a `tunnelSettings` block in your `lambdatest.yml`:
+
+```yaml title="lambdatest.yml"
+tunnelSettings:
+  tunnel: true
+  # autostart: true
+  tunnelName: "tunnel-name"
+  # localdirectory: "./log"
+  verbose: true
+  loglevel: "debug"
+```
+
+Set `tunnel: true` to route traffic through the tunnel, and `tunnelName` to reuse an already-running tunnel by name. The `verbose` and `loglevel` keys control the tunnel's logging output. See [how to test locally hosted pages](/support/docs/testing-locally-hosted-pages/).
+
 ### Viewing the BDD Results
 
 Each scenario appears on the <BrandName /> Automation Dashboard with its name, status, logs, and session video.
