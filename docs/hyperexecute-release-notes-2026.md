@@ -258,7 +258,7 @@ Welcome to the HyperExecute release notes for 2026. This page rounds up everythi
 ### New Features
 - Added an [organization-level summary dashboard](/support/docs/hyperexecute-organisation-summary-dashboard/) on the HyperExecute Projects page, with KPI tiles, a job status breakdown, and failure reasons.
 - Added summary widgets to the Workflows and Jobs tabs of a project, shown below the filter row.
-- Added a Match Any / Match All toggle inside multi-select filters on the Jobs tab.
+- Added Shift + click (and Shift + Space) inside multi-select filters on the Jobs tab to switch label selection between Match All (AND) and Match Any (OR).
 - Added a per-row Pause / Resume action on the project Workflows tab, and made it respect workflow-level permissions.
 
 ### Improvements
