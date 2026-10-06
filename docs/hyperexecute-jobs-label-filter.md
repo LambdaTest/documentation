@@ -13,8 +13,6 @@ keywords:
   - HyperExecute jobs label filter
   - HyperExecute AND filter
   - HyperExecute OR filter
-  - HyperExecute Match All
-  - HyperExecute Match Any
   - HyperExecute Shift click filter
   - HyperExecute View Query
   - HyperExecute job_label
@@ -157,14 +155,14 @@ The Jobs page in HyperExecute lets you narrow the list of jobs by **Label**. The
 - **AND (default):** show jobs that have every selected label.
 - **OR:** show jobs that have at least one of the selected labels.
 
-Both modes work from the same **Labels** dialog. The mode is picked by how you click the labels — a plain click adds a label with AND, and a Shift + click adds it with OR.
+Both modes work from the same **Labels** dialog. The mode is picked by how you click the labels: a plain click adds a label with AND, and a Shift + click adds it with OR.
 
 | At a glance | |
 | :---- | :---- |
-| **Where** | HyperExecute → [Jobs](/support/docs/hyperexecute-dashboard/) → **Label** filter |
+| **Where** | HyperExecute → Jobs → **Label** filter |
 | **AND (default)** | Plain click on each label |
 | **OR** | Shift + click (or Shift + Space) from the second label onward |
-| **How to check the mode** | Reopen the Labels dialog — **View Query** appears for OR filters |
+| **How to check the mode** | Reopen the Labels dialog: **View Query** appears for OR filters |
 | **Shared in the URL** | AND uses `job_label=...`, OR uses `label_groups=...` |
 
 ## Filter with AND (default)
@@ -240,9 +238,12 @@ For example, you can set **Label** to AND (`selenium-testng` + `linux`) and **St
 ## Notes
 
 - The hint `Shift + click/space for logical OR` at the bottom of the Labels dialog is the main cue for switching to OR.
+- Each selection in the dialog is one mode. A selection made with only plain clicks is AND. Any Shift + click flips the whole selection to OR.
+- Shift + click on the first label has nothing to combine, so it behaves the same as a plain click. Use Shift from the second label onward to switch the mode to OR.
+- Mixing plain and Shift + clicks (for example A plain, B plain, C Shift + click) does not build groups. Any Shift + click flips the whole selection to OR, so the example above is `A OR B OR C`, not `(A AND B) OR C`.
 - The chip on the filter bar shows the label count only, for example `Label 2`, for both AND and OR filters. Reopen the Labels dialog to confirm the mode (the **View Query** button appears for OR).
 - **View Query** appears only in OR mode.
-- The Jobs API also supports grouped conditions such as `(a AND b) OR c`. These travel in the `label_groups` URL parameter and are preserved when a link is opened — the groups are read from the URL and applied to the list.
+- Grouped conditions such as `(a AND b) OR c` are not built in the dialog. The Jobs API accepts them in the `label_groups` URL parameter and preserves them when a link is opened, so you can only reach them by opening a shared URL that already carries them.
 - On screens narrower than about 1100px, the filter chips collapse into a single **Filters** menu. The Label chip, and the counts it shows, work the same way inside that menu.
 
 ## Frequently asked questions {#faq}

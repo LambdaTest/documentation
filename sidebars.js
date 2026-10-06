@@ -201,6 +201,7 @@ module.exports = {
           "hyperexecute-auto-healing",
           "hyperexecute-projects",
           "hyperexecute-organisation-summary-dashboard",
+          "hyperexecute-jobs-label-filter",
           "hyperexecute-workflows",
           "hyperexecute-test-chains",
           "hyperexecute-jobs-archiving",
