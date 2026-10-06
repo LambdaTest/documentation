@@ -102,7 +102,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         "https://www.youtube.com/@TestMuAI"
       ]
     },
-    "dateModified": "2026-09-09T20:21:05+05:30"
+    "dateModified": "2026-09-30T12:00:00+05:30"
   }) }}
 />
 
@@ -125,6 +125,8 @@ This model is the same across Desktop Web, Mobile Web, and Mobile App authoring,
 ### Setting up
 
 The device or browser is being brought up and your application is being installed or loaded. This happens when you start a session and again after you use [Reset Session](#resume-and-reset-session). It is transient — nothing is interactive while it lasts, and the session moves on automatically once the environment is ready.
+
+If you selected a variable environment before starting the session, the session is locked to it from this point. Every `{{environment.X}}` variable resolves from that environment until the session ends. See [Select an Environment for an Authoring Session](/support/docs/kane-ai-using-variables/#select-an-environment-for-an-authoring-session).
 
 ### Authoring Steps
 
@@ -545,4 +547,5 @@ Reset Session reinstalls the application, so it comes up fresh. Steps that had a
 - [Code Generation](/support/docs/kane-ai-automation-code-generation/)
 - [Rename Steps](/support/docs/kaneai-rename-instructions/)
 - [Advanced Settings](/support/docs/kaneai-advanced-settings/)
+- [Variables and Environments](/support/docs/kane-ai-using-variables/)
 - [Error Handling](/support/docs/error-handling-kaneai/)
