@@ -345,6 +345,70 @@ Confirm the value is a boolean, not the string `"true"`, in clients that disting
 { "command": "driver.terminateApp(\"your.bundleid or appPackage\");" }
 ```
 
+### Changing GPS location at runtime during automation
+
+**Why it's needed:** GPS coordinates set through capabilities are applied only when the session starts. Tests that simulate movement or location changes need a way to update the device location while the session is still running.
+
+**Fix:** Use the `lambda-gps-location` executor to pass new coordinates at any point during the session. The device location updates immediately, and you can call the executor as many times as needed without restarting the session.
+
+```json
+public static void main(String[] args) throws Exception {
+
+    // Start LambdaTest session
+    driver = new IOSDriver(
+        new URL("https://" + userName + ":" + accessKey +
+                "@mobile-hub.lambdatest.com/wd/hub"),
+        caps
+    );
+
+    // Set initial GPS location
+    changeLocation(40.75860, -73.98626);
+
+    // Continue test execution
+    Thread.sleep(10000);
+
+    // Change GPS location during the same session
+    changeLocation(40.75835, -73.98650);
+
+    // Continue test execution
+    Thread.sleep(10000);
+
+    // Change GPS location again
+    changeLocation(40.75890, -73.98610);
+
+    // Continue test execution
+    Thread.sleep(10000);
+
+    // End the session
+    driver.quit();
+}
+
+public static void changeLocation(double lat, double lon) {
+
+    Map<String, Object> locationParams = new HashMap<>();
+
+    locationParams.put("latitude", lat);
+    locationParams.put("longitude", lon);
+
+    driver.executeScript("lambda-gps-location", locationParams);
+}
+```
+
+### Handle location permission popups on Android and iOS
+
+**Why it's needed:** The `autoGrantPermissions` (Android) and `autoAcceptAlerts` (iOS) capabilities handle system level alerts, such as notification popups. They do not handle location permission popups or any other alert that offers multiple options (for example, *Allow While Using App*, *Allow Once*, and *Don't Allow*). The same applies to gallery or media access permission popups that show more than two options.
+
+**Fix:** Handle these popups in your test script by locating and tapping the required button. On iOS devices, set the `settings[respectSystemAlerts]` capability to `true` to ensure that system permission popups are detected and can be interacted with during the test.
+
+**Using the `mobile: alert` command (iOS only):**
+
+```java
+driver.executeScript("mobile: alert", Map.of(
+    "action", "accept",
+    "buttonLabel", "Allow While Using App"
+));
+```
+
 ---
 
 That's all! If you are still blocked, reach out to our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24x7 Chat Support**</span> or mail us at [support@testmuai.com](mailto:support@testmuai.com).
