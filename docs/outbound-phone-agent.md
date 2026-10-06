@@ -97,7 +97,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         "https://www.youtube.com/@TestMuAI"
       ]
     },
-    "dateModified": "2026-09-04T12:50:18+05:30"
+    "dateModified": "2026-09-30T19:28:43+05:30"
   }) }}
 />
 
@@ -130,6 +130,8 @@ Outbound test calls originate against numbers reserved from a dedicated pool. Yo
 Aside from the differences above, outbound testing is identical to inbound. Phone number management, voice and background-noise configuration, agent profiles, test suites, call execution, post-evaluation recording analysis, the go-live assessment, and scheduling all work the same way.
 
 For the full detail on each, see [inbound phone agent testing](/support/docs/inbound-phone-agent/).
+
+[Custom metrics](/support/docs/phone-agent/#custom-metrics) work the same way for outbound agents. [Performance testing](/support/docs/phone-agent/#performance-testing) places calls to your agent, so it applies to agents that answer calls.
 
 ## Metrics
 
