@@ -133,7 +133,7 @@ Set the `app` capability to `filename=<file-name>`, where `<file-name>` is the *
 
 - The value works in both `lt:options.app` and `appium:app`.
 - It works on real devices and virtual devices (emulators and simulators), for Android and iOS app automation.
-- You can also pass `filename=<file-name>` to the [`lambda-install-app` hook](/support/docs/appium-install-uninstall-hook/) and to the Appium `installApp` command to install an app in the middle of a session. This is not available on iOS simulators, where you must set the app in the `app` capability at the start of the session.
+- You can also pass `filename=<file-name>` to the [`lambda-install-app` hook](/support/docs/appium-install-uninstall-testmu-hooks/) and to the Appium `installApp` command to install an app in the middle of a session. This is not available on iOS simulators, where you must set the app in the `app` capability at the start of the session.
 
 #### How the App Is Selected
 
