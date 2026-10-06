@@ -3320,6 +3320,11 @@ module.exports = {
           },
           {
             type: "doc",
+            label: "Screenshot Retention",
+            id: "smartui-screenshot-retention",
+          },
+          {
+            type: "doc",
             label: "A/B Testing & Variations",
             id: "smartui-ab-testing-variations",
           },
