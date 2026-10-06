@@ -123,11 +123,11 @@ In pre-evaluation, the platform simulates customers calling your voice agent, th
 
 **Call Execution and Monitoring.** Initiate live test calls, track status in real time, watch a live duration counter, and terminate a call in progress.
 
-**Custom Metrics.** Define plain-language checks for your own business rules. Each check is graded Yes / No or on a 0 to 100 rating from the call transcript and returns an explanation, a quote as evidence, and timestamps. See [custom metrics for phone agents](/support/docs/phone-agent-custom-metrics/).
+**Custom Metrics.** Define plain-language checks for your own business rules. Each check is graded Yes / No or on a 0 to 100 rating from the call transcript and returns an explanation, a quote as evidence, and timestamps. See [custom metrics for phone agents](/support/docs/phone-agent/#custom-metrics).
 
-**Voice Platform Integrations.** For agents on ElevenLabs, Retell, or Vapi, connect the platform in the **Integrations** tab to import the agent's prompt and tool catalog and to mark each expected tool **Called** or **Not Called** after every test call. See [voice agent integrations](/support/docs/voice-agent-integrations/).
+**Voice Platform Integrations.** For agents on ElevenLabs, Retell, or Vapi, connect the platform in the **Integrations** tab to import the agent's prompt and tool catalog and to mark each expected tool **Called** or **Not Called** after every test call. See the integration setup for [ElevenLabs](/support/docs/test-elevenlabs-agents/#elevenlabs-integration), [Retell](/support/docs/test-retell-agents/#retell-integration), or [Vapi](/support/docs/test-vapi-agents/#vapi-integration).
 
-**Performance Testing.** Hold a target number of concurrent calls to your agent and see where response latency and reliability degrade as load rises. See [phone agent performance testing](/support/docs/phone-agent-performance-testing/).
+**Performance Testing.** Hold a target number of concurrent calls to your agent and see where response latency and reliability degrade as load rises. See [phone agent performance testing](/support/docs/phone-agent/#performance-testing).
 
 ## Post-Evaluation: Recording Analysis
 
@@ -234,6 +234,6 @@ Phone agents are evaluated across 8 metric categories with 30+ individual metric
 - See the [phone agent testing overview](/support/docs/phone-agent/) for both testing modes.
 - See how to [test an outbound phone agent](/support/docs/outbound-phone-agent/).
 - See how to [run these tests from the terminal](/support/docs/agent-testing-cli/) with the A2A CLI.
-- See how to [grade your own business rules with custom metrics](/support/docs/phone-agent-custom-metrics/).
-- See how to [connect ElevenLabs, Retell, or Vapi agents](/support/docs/voice-agent-integrations/) for tool call validation.
-- See how to [load test a phone agent](/support/docs/phone-agent-performance-testing/) with concurrent calls.
+- See how to [grade your own business rules with custom metrics](/support/docs/phone-agent/#custom-metrics).
+- See how to connect [ElevenLabs](/support/docs/test-elevenlabs-agents/#elevenlabs-integration), [Retell](/support/docs/test-retell-agents/#retell-integration), or [Vapi](/support/docs/test-vapi-agents/#vapi-integration) agents for tool call validation.
+- See how to [load test a phone agent](/support/docs/phone-agent/#performance-testing) with concurrent calls.
