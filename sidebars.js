@@ -461,6 +461,16 @@ module.exports = {
             label: "Architecture & Working",
             id: "architecture-and-how-evaluation-works",
           },
+          {
+            type: "doc",
+            label: "Quality Dimensions",
+            id: "ai-agent-testing-platform-overview",
+          },
+          {
+            type: "doc",
+            label: "Features & Metrics",
+            id: "agent-features-and-metrics",
+          },
         ],
       },
       {
