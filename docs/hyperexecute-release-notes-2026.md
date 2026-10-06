@@ -24,6 +24,26 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import VerifiedTag from '@site/src/component/verifiedTag';
 
+export const ReleaseDate = ({children}) => (
+  <span
+    style={{
+      display: 'inline-block',
+      margin: '0.25rem 0 0.75rem',
+      padding: '0.2em 0.7em',
+      fontSize: '0.8em',
+      fontWeight: 600,
+      lineHeight: 1.6,
+      color: '#ffffff',
+      backgroundColor: '#000000',
+      border: '1px solid var(--ifm-color-emphasis-300)',
+      borderRadius: '999px',
+      whiteSpace: 'nowrap',
+    }}
+  >
+    {children}
+  </span>
+);
+
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
        "@context": "https://schema.org",
@@ -112,6 +132,8 @@ Welcome to the HyperExecute release notes for 2026. This page rounds up everythi
 
 ## Version 3.5.7
 
+<ReleaseDate>21 Sep to 27 Sep 2026</ReleaseDate>
+
 ### New Features
 - Job report emails can now go to different recipients depending on the job's final status (completed, failed, or aborted), configured through new per-status recipient keys in the YAML.
 - Rerun Failed Tests is now available for on-prem HyperExecute setups.
@@ -148,6 +170,8 @@ Welcome to the HyperExecute release notes for 2026. This page rounds up everythi
 
 ## Version 3.5.6
 
+<ReleaseDate>14 Sep to 20 Sep 2026</ReleaseDate>
+
 ### New Features
 - Global policies now support Post directives, and admin policies can wrap Global Post and Post steps and tasks.
 - The `globalPre` step now supports a Windows runtime OS for Windows Batch jobs.
@@ -171,6 +195,8 @@ Welcome to the HyperExecute release notes for 2026. This page rounds up everythi
 
 ## Version 3.5.5
 
+<ReleaseDate>07 Sep to 13 Sep 2026</ReleaseDate>
+
 ### New Features
 - Added remote test discovery for .NET projects on HyperExecute, with support for MSTest and NUnit.
 - Admins can now set governance rules on workflows, including rules that automatically stop a workflow.
@@ -192,6 +218,8 @@ Welcome to the HyperExecute release notes for 2026. This page rounds up everythi
 
 ## Version 3.5.4
 
+<ReleaseDate>31 Aug to 06 Sep 2026</ReleaseDate>
+
 ### Improvements
 - The Concurrency Distribution view now loads faster, with paginated groups.
 - HyperExecute Jobs now show total test counts and pass/fail metrics for non-grid API test cases.
@@ -209,6 +237,8 @@ Welcome to the HyperExecute release notes for 2026. This page rounds up everythi
 
 ## Version 3.5.3
 
+<ReleaseDate>24 Aug to 30 Aug 2026</ReleaseDate>
+
 ### New Features
 - Added team-based management for HyperExecute, so users see only the projects and jobs owned by their teams (plus untagged and default projects); new projects and jobs are automatically tagged to the creator's team.
 
@@ -223,8 +253,10 @@ Welcome to the HyperExecute release notes for 2026. This page rounds up everythi
 
 ## Version 3.5.2
 
+<ReleaseDate>17 Aug to 23 Aug 2026</ReleaseDate>
+
 ### New Features
-- Added an organization-level summary dashboard on the HyperExecute Projects page, with KPI tiles, a job status breakdown, and failure reasons.
+- Added an [organization-level summary dashboard](/support/docs/hyperexecute-organisation-summary-dashboard/) on the HyperExecute Projects page, with KPI tiles, a job status breakdown, and failure reasons.
 - Added summary widgets to the Workflows and Jobs tabs of a project, shown below the filter row.
 - Added a Match Any / Match All toggle inside multi-select filters on the Jobs tab.
 - Added a per-row Pause / Resume action on the project Workflows tab, and made it respect workflow-level permissions.
@@ -242,6 +274,8 @@ Welcome to the HyperExecute release notes for 2026. This page rounds up everythi
 ---
 
 ## Version 3.5.1
+
+<ReleaseDate>10 Aug to 16 Aug 2026</ReleaseDate>
 
 ### Improvements
 - HyperExecute email reports now use clearer test and scenario terminology, and the task count excludes Global Pre, Global Post, and discovery tasks.
@@ -263,6 +297,8 @@ Welcome to the HyperExecute release notes for 2026. This page rounds up everythi
 
 ## Version 3.5.0
 
+<ReleaseDate>03 Aug to 09 Aug 2026</ReleaseDate>
+
 ### New Features
 - Added support for the 0.2 YAML version with remote test discovery for Maven-based frameworks (TestNG, JUnit 4, and JUnit 5).
 
@@ -274,6 +310,8 @@ Welcome to the HyperExecute release notes for 2026. This page rounds up everythi
 ---
 
 ## Version 3.4.9
+
+<ReleaseDate>27 Jul to 02 Aug 2026</ReleaseDate>
 
 ### New Features
 - Increased the maximum JMX file upload size for HyperExecute JMeter tests from 50 MB to 200 MB.
@@ -297,6 +335,8 @@ Welcome to the HyperExecute release notes for 2026. This page rounds up everythi
 
 ## Version 3.4.8
 
+<ReleaseDate>20 Jul to 26 Jul 2026</ReleaseDate>
+
 ### Improvements
 - The HyperExecute Stage Summary widget now counts only the final attempt of each stage and shows retried stages in a separate tile, so status counts are accurate.
 
@@ -309,6 +349,8 @@ Welcome to the HyperExecute release notes for 2026. This page rounds up everythi
 ---
 
 ## Version 3.4.7
+
+<ReleaseDate>13 Jul to 19 Jul 2026</ReleaseDate>
 
 ### New Features
 - Added new remote-discovery test runners for Gradle (JUnit 4, JUnit 5, TestNG, Spock) and Maven Spock, along with support for full-command overrides via `framework.baseCommand` in YAML v0.2.
@@ -327,6 +369,8 @@ Welcome to the HyperExecute release notes for 2026. This page rounds up everythi
 
 ## Version 3.4.6
 
+<ReleaseDate>06 Jul to 12 Jul 2026</ReleaseDate>
+
 ### New Features
 - Added a `captureScreenshotOnError` capability to capture screenshots only on failed commands for Selenium, Playwright, and Appium tests, on both HyperExecute and the standard grid.
 
@@ -344,6 +388,8 @@ Welcome to the HyperExecute release notes for 2026. This page rounds up everythi
 ---
 
 ## Version 3.4.5
+
+<ReleaseDate>29 Jun to 05 Jul 2026</ReleaseDate>
 
 ### New Features
 - Added support for a dedicated proxy and tunnel when running Maestro tests on HyperExecute.
@@ -365,6 +411,8 @@ Welcome to the HyperExecute release notes for 2026. This page rounds up everythi
 
 ## Version 3.4.4
 
+<ReleaseDate>22 Jun to 28 Jun 2026</ReleaseDate>
+
 ### New Features
 - Introduced Global YAML Policies (Phase 1): admins can define and manage policies under Organization Settings, have them enforced at job submission, and see which policies were applied from the job details page.
 
@@ -379,6 +427,8 @@ Welcome to the HyperExecute release notes for 2026. This page rounds up everythi
 ---
 
 ## Version 3.4.3
+
+<ReleaseDate>15 Jun to 21 Jun 2026</ReleaseDate>
 
 ### Improvements
 - Updated the Lambda error job message so failure reasons are reported more accurately.
@@ -400,6 +450,8 @@ Welcome to the HyperExecute release notes for 2026. This page rounds up everythi
 
 ## Version 3.4.2
 
+<ReleaseDate>08 Jun to 14 Jun 2026</ReleaseDate>
+
 ### New Features
 - Added a Linux/Windows toggle on the Queue Mapping page in HyperExecute organization settings, so you can view and manage Windows queue mappings alongside Linux ones.
 
@@ -415,6 +467,8 @@ Welcome to the HyperExecute release notes for 2026. This page rounds up everythi
 ---
 
 ## Version 3.4.1
+
+<ReleaseDate>01 Jun to 07 Jun 2026</ReleaseDate>
 
 ### New Features
 - HyperExecute job reports now include a printable one-page view with OS and browser-level details, and support real-device and virtual-device tests.
@@ -436,6 +490,8 @@ Welcome to the HyperExecute release notes for 2026. This page rounds up everythi
 
 ## Version 3.4.0
 
+<ReleaseDate>25 May to 31 May 2026</ReleaseDate>
+
 ### Improvements
 - Extent report system variables now show a single consolidated total execution time for jobs that run across multiple parallel machines, instead of a comma-separated list of per-test times.
 
@@ -450,6 +506,8 @@ Welcome to the HyperExecute release notes for 2026. This page rounds up everythi
 
 ## Version 3.3.9
 
+<ReleaseDate>18 May to 24 May 2026</ReleaseDate>
+
 ### New Features
 - Added runtime and pre-step support for JMeter tests on HyperExecute.
 - Added support for running tests on macOS Tahoe and iOS 26 on HyperExecute.
@@ -461,6 +519,8 @@ Welcome to the HyperExecute release notes for 2026. This page rounds up everythi
 ---
 
 ## Version 3.3.8
+
+<ReleaseDate>11 May to 17 May 2026</ReleaseDate>
 
 ### Improvements
 - Added Chrome for Testing (CFT) support for HyperExecute sessions, including Selenium, Cypress, and CDP-based runs.
@@ -476,6 +536,8 @@ Welcome to the HyperExecute release notes for 2026. This page rounds up everythi
 ---
 
 ## Version 3.3.7
+
+<ReleaseDate>04 May to 10 May 2026</ReleaseDate>
 
 ### Improvements
 - Improved the reliability of HyperExecute job event delivery.
@@ -494,6 +556,8 @@ Welcome to the HyperExecute release notes for 2026. This page rounds up everythi
 
 ## Version 3.3.6
 
+<ReleaseDate>27 Apr to 03 May 2026</ReleaseDate>
+
 ### Improvements
 - On-prem HyperExecute deployments now perform RBAC permission and project checks within the on-prem environment, and no longer proceed when an RBAC check is aborted.
 
@@ -510,6 +574,8 @@ Welcome to the HyperExecute release notes for 2026. This page rounds up everythi
 
 ## Version 3.3.5
 
+<ReleaseDate>20 Apr to 26 Apr 2026</ReleaseDate>
+
 ### Improvements
 - Refined the HyperExecute organization preferences pages with consistent layout, headers, and loading behavior, and added search to the Queue Mapping, Environments, and Org Secrets tables.
 
@@ -522,6 +588,8 @@ Welcome to the HyperExecute release notes for 2026. This page rounds up everythi
 ---
 
 ## Version 3.3.4
+
+<ReleaseDate>13 Apr to 19 Apr 2026</ReleaseDate>
 
 ### Improvements
 - Public Git repositories can now be used for HyperExecute project onboarding and job triggers without providing a personal access token.
@@ -541,6 +609,8 @@ Welcome to the HyperExecute release notes for 2026. This page rounds up everythi
 ---
 
 ## Version 3.3.3
+
+<ReleaseDate>06 Apr to 12 Apr 2026</ReleaseDate>
 
 ### Improvements
 - Continued improvements to global post-run artifacts and email notifications, including handling of job abort emails.
@@ -563,6 +633,8 @@ Welcome to the HyperExecute release notes for 2026. This page rounds up everythi
 
 ## Version 3.3.2
 
+<ReleaseDate>30 Mar to 05 Apr 2026</ReleaseDate>
+
 ### New Features
 - HyperExecute now supports the new role-based access control (RBAC) experience, with a redesigned UI for managing roles and permissions.
 - Added an HTML report and a downloadable zip of artifacts for KaneAI test cases executed via HyperExecute.
@@ -581,6 +653,8 @@ Welcome to the HyperExecute release notes for 2026. This page rounds up everythi
 
 ## Version 3.3.1
 
+<ReleaseDate>23 Mar to 29 Mar 2026</ReleaseDate>
+
 ### New Features
 - Failure categorization now works for Playwright tests on HyperExecute, deriving the category from the last failing command log when no remark is set.
 
@@ -595,6 +669,8 @@ Welcome to the HyperExecute release notes for 2026. This page rounds up everythi
 ---
 
 ## Version 3.3.0
+
+<ReleaseDate>16 Mar to 22 Mar 2026</ReleaseDate>
 
 ### New Features
 - Added support for capturing full HAR network logs on HyperExecute.
@@ -615,6 +691,8 @@ Welcome to the HyperExecute release notes for 2026. This page rounds up everythi
 
 ## Version 3.2.9
 
+<ReleaseDate>09 Mar to 15 Mar 2026</ReleaseDate>
+
 ### Improvements
 - Improved HyperExecute reports and email notifications.
 - Updated the Workflows list view for better handling and display.
@@ -629,6 +707,8 @@ Welcome to the HyperExecute release notes for 2026. This page rounds up everythi
 
 ## Version 3.2.8
 
+<ReleaseDate>02 Mar to 08 Mar 2026</ReleaseDate>
+
 ### Improvements
 - The HyperExecute public API now returns the same test-level AI Root Cause Analysis (RCA) shown on the HyperExecute dashboard, keeping UI and API results consistent.
 
@@ -639,6 +719,8 @@ Welcome to the HyperExecute release notes for 2026. This page rounds up everythi
 ---
 
 ## Version 3.2.7
+
+<ReleaseDate>23 Feb to 01 Mar 2026</ReleaseDate>
 
 ### New Features
 - Expanded infrastructure capacity support for HyperExecute.
@@ -658,6 +740,8 @@ Welcome to the HyperExecute release notes for 2026. This page rounds up everythi
 ---
 
 ## Version 3.2.6
+
+<ReleaseDate>16 Feb to 22 Feb 2026</ReleaseDate>
 
 ### New Features
 - Added team-based role access control (RBAC) for HyperExecute, with permissions evaluated across projects, workflows, and tests.
@@ -679,6 +763,8 @@ Welcome to the HyperExecute release notes for 2026. This page rounds up everythi
 
 ## Version 3.2.5
 
+<ReleaseDate>09 Feb to 15 Feb 2026</ReleaseDate>
+
 ### New Features
 - Workflows now support YAML inheritance, so you can reuse and extend shared configuration across workflow definitions.
 - The dashboard's CLI download buttons now fetch the latest HyperExecute CLI version, and a copy-link option is available for sharing the download URL.
@@ -694,6 +780,8 @@ Welcome to the HyperExecute release notes for 2026. This page rounds up everythi
 
 ## Version 3.2.4
 
+<ReleaseDate>02 Feb to 08 Feb 2026</ReleaseDate>
+
 ### Improvements
 - Trial accounts running HyperExecute are now allocated more reliable infrastructure.
 - JMeter jobs on HyperExecute now refresh execution data more reliably while a job is running.
@@ -707,6 +795,8 @@ Welcome to the HyperExecute release notes for 2026. This page rounds up everythi
 
 ## Version 3.2.3
 
+<ReleaseDate>26 Jan to 01 Feb 2026</ReleaseDate>
+
 ### Bug Fixes
 - Fixed HyperExecute concurrency showing parallels as consumed by other sessions, or staying stuck, causing jobs to queue even when nothing was running.
 - Fixed slow loading of job details on the HyperExecute job dashboard for performance testing jobs.
@@ -716,6 +806,8 @@ Welcome to the HyperExecute release notes for 2026. This page rounds up everythi
 ---
 
 ## Version 3.2.2
+
+<ReleaseDate>19 Jan to 25 Jan 2026</ReleaseDate>
 
 ### New Features
 - Added the Git repository URL at the top of each job so Git details are easy to find.
@@ -739,6 +831,8 @@ Welcome to the HyperExecute release notes for 2026. This page rounds up everythi
 ---
 
 ## Version 3.2.1
+
+<ReleaseDate>12 Jan to 18 Jan 2026</ReleaseDate>
 
 ### New Features
 - Added support for downloading artifacts from the remote machine after a global post step and uploading them to the job's artifacts section.

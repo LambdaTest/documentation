@@ -99,7 +99,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         "https://www.youtube.com/@TestMuAI"
       ]
     },
-    "dateModified": "2026-09-09T20:20:47+05:30"
+    "dateModified": "2026-09-30T12:00:00+05:30"
   }) }}
 />
 
@@ -167,6 +167,7 @@ The available settings vary depending on the platform of your test case. Refer t
 | **Timezone** | Dropdown | Set the timezone where your tests will run |
 | **Chrome Options** | Toggle + multi-input | Add up to 10 Chrome browser command-line flags |
 | **Custom Headers** | Toggle + multi-input | Add up to 10 custom HTTP headers to inject in your test case |
+| **Environment** | Dropdown | Select the variable environment the test is authored against. See [Select an Environment for an Authoring Session](/support/docs/kane-ai-using-variables/#select-an-environment-for-an-authoring-session) |
 
 ### Android App
 
@@ -260,6 +261,7 @@ Update the settings as needed. For example, you can:
 - Update the **Timezone** to a different zone.
 - Toggle **Chrome Options** on or off and add command-line switches.
 - Enable **Custom Headers** and add HTTP headers for your test.
+- Change the **Environment** the test is authored against.
 
 Settings that have been modified will display an **Edited** badge next to them.
 
@@ -278,12 +280,12 @@ Choose one of the two actions at the bottom of the dialog:
 
 Every time you apply updated settings, a new version of the test case is created. You can view and compare changes between versions from the **Version History** tab.
 
-The version comparison view shows a diff of what changed, for example, updated network configuration or timezone values, so you can track exactly what was modified in each version.
+The version comparison view shows a diff of what changed, for example, updated network configuration or timezone values, so you can track exactly what was modified in each version. A change of environment is shown by the environment's name.
 
 <img loading="lazy" src={require('../assets/images/kane-ai/features/edit-advanced-settings/advanced-settings-version-history.png').default} alt="Advanced Settings Version History" className="doc_img"/>
 
 ## Limitations
 
-- **Advanced settings only**: Only advanced settings (network configuration, timezone, Chrome options, custom headers, and mobile session settings) can be edited from the test summary page. To change test steps, OS, browser, or device configurations, you need to open the playground.
+- **Advanced settings only**: Only advanced settings (network configuration, timezone, Chrome options, custom headers, environment, and mobile session settings) can be edited from the test summary page. To change test steps, OS, browser, or device configurations, you need to open the playground.
 - **New version generated on every apply**: Applying updated settings always creates a new version of the test case with regenerated code. There is no way to update settings in-place without generating a new version.
 - **Version history diff for pre-rollout versions**: If you compare a version created after this feature was rolled out with a version created before it, the diff will have no advanced settings changes to display since the older version never tracked them. Similarly, if you open a pre-rollout version and click on advanced settings, only the latest settings are shown as the original settings were not recorded for that version.
