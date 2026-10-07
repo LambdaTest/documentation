@@ -43,11 +43,11 @@ const docsSidebar = [
   {
     type: 'category', label: 'App Automation', collapsible: true, collapsed: true,
     items: [
-      { type: 'link', label: 'Appium Testing', href: '/docs/getting-started-with-appium-testing/' },
-      { type: 'link', label: 'Espresso Testing', href: '/docs/getting-started-with-espresso-testing/' },
+      { type: 'category', label: 'Appium Testing', collapsible: true, collapsed: true, items: items(s.AppiumTestingSidebar) },
+      { type: 'category', label: 'Espresso Testing', collapsible: true, collapsed: true, items: items(s.EspressoTestingSidebar) },
       { type: 'link', label: 'XCUI Testing', href: '/docs/getting-started-with-xcuitest/' },
-      { type: 'link', label: 'Flutter Testing', href: '/docs/appium-flutter-integration/' },
-      { type: 'link', label: 'Virtual Devices', href: '/docs/app-automation-on-emulators-simulators/' },
+      { type: 'category', label: 'Flutter Testing', collapsible: true, collapsed: true, items: items(s.FlutterTestingSidebar) },
+      { type: 'category', label: 'Virtual Devices', collapsible: true, collapsed: true, items: items(s.EmuSimuSidebar) },
     ],
   },
   { type: 'link', label: 'HyperExecute', href: '/docs/getting-started-with-hyperexecute/' },
@@ -160,6 +160,22 @@ const SettingsAndSecuritySidebar = [
   },
 ];
 
+// Dedicated sidebar for Test Manager. Because the Test Manager entry in
+// docsSidebar is now a link (above), these docs live ONLY here — so Docusaurus
+// displays this dedicated sidebar whenever a reader is inside Test Manager.
+const backToDocs = {
+  type: 'link',
+  label: '← All Docs',
+  href: '/docs/',
+  customProps: { className: 'back-to-main-menu' },
+};
+const TestManagerSidebar = [backToDocs, ...items(s.TestManagerSidebar)];
+
+// Dedicated sidebar for XCUI Testing. The XCUI Testing entry in docsSidebar is a
+// link (above), so these docs live ONLY here — Docusaurus displays this dedicated
+// sidebar whenever a reader is inside XCUI Testing.
+const XCUITestingSidebar = [backToDocs, ...items(s.XCUITestingSidebar)];
+
 module.exports = {
   docsSidebar,
 
@@ -191,19 +207,5 @@ module.exports = {
   AgentTestingSidebar,
   RealDeviceSidebar,
   TestManagerSidebar,
-  MCPServerSidebar,
-  IntegrationsSidebar,
-  AccessibilityTestingSidebar,
-  LocalhostTestingSidebar,
-  SettingsAndSecuritySidebar,
-
-  // Insights
-  InsightsSidebar,
-
-  // Other Docs
-  VisualUITestingSidebar,
-  LTBrowserSidebar,
-  MigrationGuideSidebar,
-  ConcurrencyWidgetSidebar,
-  TestLogsSidebar,
+  XCUITestingSidebar,
 };

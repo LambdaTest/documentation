@@ -2945,7 +2945,7 @@ module.exports = {
     ],
   ],
 
-  XCUITestingSidebar: [
+ XCUITestingSidebar: [
     {
       type: 'link',
       label: 'Back',
@@ -2956,59 +2956,25 @@ module.exports = {
     },
     [
       {
-        type: "doc",
-        label: "Getting Started with XCUI Testing",
-        id: "getting-started-with-xcui-testing",
-      },
-      {
-        type: "doc",
-        label: "Supported Capabilities",
-        id: "xcui-supported-capabilities",
-      },
-      {
-        type: "doc",
-        label: "RegEx in XCUI",
-        id: "regular-expression-xcui",
-      },
-      {
-        type: "doc",
-        label: "Supported Locales",
-        id: "supported-locales-xcui",
-      },
-      {
-        type: "doc",
-        label: "Creating iOS Applications",
-        id: "ios-ipa-files-xcui",
-      },
-      {
         type: "category",
-        collapsed: true,
-        label: "Speedup XCUI Tests",
-        items: ["sharding-xcui", "speedup-xcui"],
+        collapsed: false,
+        label: "Getting Started",
+        className: "menu-bold",
+        items: [
+          "getting-started-with-xcui-testing",
+          "xcuitest-agent-skills",
+          "xcui-supported-capabilities",
+          "xcui-xml-report",
+          "xctestplan",
+        ],
       },
-      {
-        type: "doc",
-        label: "XCTestPlan",
-        id: "xctestplan",
-      },
-      {
-        type: "doc",
-        label: "Xml Report",
-        id: "xcui-xml-report",
-      },
-      {
-        type: "doc",
-        label: "XCResult",
-        id: "xcresult",
-      },
-      {
-        type: "doc",
-        label: "SmartUI Visual Regression",
-        id: "xcui-visual-regression",
-      },
+      { type: "doc", id: "regular-expression-xcui", className: "menu-bold" },
+      { type: "doc", id: "supported-locales-xcui", className: "menu-bold" },
+      { type: "doc", id: "ios-ipa-files-xcui", className: "menu-bold" },
+      { type: "doc", id: "sharding-xcui", className: "menu-bold" },
     ],
   ],
-
+  
   FlutterTestingSidebar: [
     {
       type: "link",
