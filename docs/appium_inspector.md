@@ -1,8 +1,8 @@
 ﻿---
 id: appium-inspector
-title: Appium Inspector Integration on TestMu AI
+title: How to Use Appium Inspector on TestMu AI
 sidebar_label: Appium Inspector
-description: This documentation will help you integrate Appium Inspector with TestMu AI to interact with TestMu AI's Real Devices. With TestMu AI mobile testing cloud, you can test your mobile applications on wide range of real Android and iOS devices.
+description: Integrate Appium Inspector with TestMu AI to inspect app elements on real Android and iOS devices using a unique app URL and desired capabilities.
 keywords:
   - mobile app testing
   - realtime mobile testing on real devices
@@ -16,6 +16,7 @@ url: https://www.testmuai.com/support/docs/appium-inspector-integration/
 site_name: TestMu AI
 slug: appium-inspector-integration/
 canonical: https://www.testmuai.com/support/docs/appium-inspector-integration/
+toc_max_heading_level: 2
 ---
 
 import CodeBlock from '@theme/CodeBlock';
@@ -41,7 +42,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "Appium Inspector Integration on TestMu AI",
+          "name": "How to Use Appium Inspector on TestMu AI",
           "item": `${BRAND_URL}/support/docs/appium-inspector-integration/`
         }]
       })
@@ -191,7 +192,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
 
 ---
 
-This post will help you in integrating **Appium Inspector** to interact with **<BrandName />'s Real Devices**.
+Appium Inspector on TestMu AI is a GUI tool for inspecting mobile app elements on real Android and iOS devices. Upload your app to get a unique app URL, set desired capabilities, then interact with elements and run Appium commands.
 
 ## Introduction
 
@@ -241,7 +242,6 @@ import TabItem from '@theme/TabItem';
 </TabItem>
 
 <TabItem value="windows" label="Windows" default>
-
 <VerifiedTag value="Verified" />
 
 <div className="lambdatest__codeblock">
@@ -268,7 +268,6 @@ import TabItem from '@theme/TabItem';
 </TabItem>
 
 <TabItem value="windows" label="Windows" default>
-
 <VerifiedTag value="Verified" />
 
 <div className="lambdatest__codeblock">
@@ -355,7 +354,7 @@ We have now successfully attached to the session and can see & perform operation
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
       <span className="breadcrumbs__link">
-      Appium Inspector 
+        How to Use Appium Inspector on TestMu AI
       </span>
     </li>
   </ul>

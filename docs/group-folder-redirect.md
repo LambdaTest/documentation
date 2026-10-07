@@ -13,13 +13,14 @@ url: https://www.testmuai.com/support/docs/group-folder-redirects/
 site_name: TestMu AI
 slug: group-folder-redirects/
 canonical: https://www.testmuai.com/support/docs/group-folder-redirects/
+toc_max_heading_level: 2
 ---
 
 import CodeBlock from '@theme/CodeBlock';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
-import RealDeviceTag from '../src/component/realDevice';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import RealDeviceTag from '@site/src/component/realDevice';
 import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
@@ -103,8 +104,13 @@ import VerifiedTag from '@site/src/component/verifiedTag';
   }) }}
 />
 
-# Group Folder Redirect for iOS Apps
-<RealDeviceTag value="Real Device" /> 
+<RealDeviceTag value="Real Device" />
+
+# Group Folder Redirect for iOS Apps in Appium Tests
+
+
+Enabling Group Folder Redirect on TestMu AI forces your iOS app to use its private container instead of the shared group container, which becomes inaccessible after resigning on real devices. Set one capability to preserve file access during Appium tests.
+
 <BrandName /> now supports **Group Folder Redirect** for iOS apps during automation testing with Appium.  
 This feature ensures your app uses its **private container directory** instead of the **shared app group container**, which becomes inaccessible after **app resigning** on Real Devices.
 
@@ -126,7 +132,7 @@ This feature is being rolled out gradually. Please contact your <BrandName /> su
 
 ### 1. Upload Your Application
 - Upload your iOS app to <BrandName /> following standard procedures.  
-- Refer to the [**Upload your Application**](/support/docs/application-setup-via-api/#upload-your-application) documentation for detailed instructions.  
+- Refer to the [**Upload your Application**](/support/docs/application-setup-via-api/#upload-via-the-rest-api) documentation for detailed instructions.  
 - Note the **App ID** returned after uploading, you will use this in your automation scripts.
 
 ---
@@ -136,7 +142,6 @@ Include the `groupFolderRedirectEnabled` capability in your Appium desired capab
 
 <Tabs>
   <TabItem value="ios" label="iOS">
-
     <VerifiedTag value="Verified" />
 
     <CodeBlock className="language-java">

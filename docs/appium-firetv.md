@@ -1,7 +1,8 @@
 ---
 id: appium-firetv
-title: Fire TV With Appium
-sidebar_label: Fire TV Stick
+title: How to Automate Fire TV Apps on TestMu AI
+hide_title: true
+sidebar_label: Fire TV
 description: Complete guide to running your first FireTV Appium automated test script on TestMu AI Real Device Cloud Platform. Test on 5000+ Real Devices.
 keywords:
   - python appium
@@ -17,6 +18,7 @@ url: https://www.testmuai.com/support/docs/appium-firetv/
 site_name: TestMu AI
 slug: appium-firetv/
 canonical: https://www.testmuai.com/support/docs/appium-firetv/
+toc_max_heading_level: 2
 ---
 
 import CodeBlock from '@theme/CodeBlock';
@@ -25,8 +27,8 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
-import RealDeviceTag from '../src/component/realDevice';
 import { CookieTrackingSignup } from '@site/src/component/CookieTracking';
+import RealDeviceTag from '@site/src/component/realDevice';
 import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
@@ -46,7 +48,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "Fire TV With Appium",
+          "name": "How to Automate Fire TV Apps on TestMu AI",
           "item": `${BRAND_URL}/support/docs/appium-firetv/`
         }]
       })
@@ -142,12 +144,15 @@ import VerifiedTag from '@site/src/component/verifiedTag';
     "dateModified": "2026-09-09T19:10:37+05:30"
   }) }}
 />
-<RealDeviceTag value="Real Device" /> 
-## Tutorial To Run Your First Test On <BrandName />
+
+<RealDeviceTag value="Real Device" />
+
+# How to Automate Fire TV Apps on TestMu AI
+
+
+Running Fire TV tests on TestMu AI executes Appium automation for Amazon Fire TV apps on the real device cloud. Configure the required desired capabilities, connect to the hub, and run scripts to validate Fire TV app behaviour without hardware.
 
 ---
-
-In this topic, you will learn how to configure and run your **Fire TV** automation testing scripts with **Appium** on **<BrandName /> Real Device Cloud platform**.
 
 :::note Plus Plan Feature
 This feature is available exclusively with the **Real Device Plus Automation Cloud** Plan.
@@ -189,7 +194,6 @@ Before you can start performing App automation testing with Appium, you would ne
 Upload your **Fire TV** application (.apk file) to the <BrandName /> servers using our **REST API**. You need to provide your **Username** and **AccessKey** in the format `Username:AccessKey` in the **cURL** command for authentication. Make sure to add the path of the **appFile** in the cURL request. Here is an example cURL request to upload your app using our REST API:
 
  **Using App File from System:**
-
  <VerifiedTag value="Verified" />
 
  <div className="lambdatest__codeblock">
@@ -233,7 +237,6 @@ Make sure you have your <BrandName /> credentials with you to run test automatio
 <Tabs className="docs__val">
 
 <TabItem value="bash" label="Linux / MacOS" default>
-
   <VerifiedTag value="Verified" />
 
   <div className="lambdatest__codeblock">
@@ -425,7 +428,7 @@ Your test results would be displayed on the test console (or command-line interf
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
       <span className="breadcrumbs__link">
-      Fire TV With Appium
+        How to Automate Fire TV Apps on TestMu AI
       </span>
     </li>
   </ul>

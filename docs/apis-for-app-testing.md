@@ -1,8 +1,8 @@
 ---
 id: app-testing-apis
-title: Commonly Used APIs For Mobile App Testing
-# hide_title: true
-sidebar_label: APIs For App Testing
+title: How to Use App Testing APIs on TestMu AI
+hide_title: true
+sidebar_label: "App Testing APIs"
 description: Quick guide on commonly used APIs for Mobile App testing.
 keywords:
 - apis for manual app testing
@@ -12,15 +12,16 @@ url: https://www.testmuai.com/support/docs/app-testing-apis/
 site_name: TestMu AI
 slug: app-testing-apis/
 canonical: https://www.testmuai.com/support/docs/app-testing-apis/
+toc_max_heading_level: 2
 ---
 
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
-import RealDeviceTag from '../src/component/realDevice';
-import VirtualDeviceTag from '../src/component/virtualDevice';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import RealDeviceTag from '@site/src/component/realDevice';
+import VirtualDeviceTag from '@site/src/component/virtualDevice';
 import VerifiedTag from '@site/src/component/verifiedTag';
 
 
@@ -41,8 +42,8 @@ import VerifiedTag from '@site/src/component/verifiedTag';
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "Commonly Used APIs For Mobile App Testing",
-          "item": `${BRAND_URL}/support/docs/app-testing-apis`
+          "name": "How to Use App Testing APIs on TestMu AI",
+          "item": `${BRAND_URL}/support/docs/app-testing-apis/`
         }]
       })
     }}
@@ -104,11 +105,14 @@ import VerifiedTag from '@site/src/component/verifiedTag';
     "dateModified": "2026-09-09T19:10:37+05:30"
   }) }}
 />
+
 <RealDeviceTag value="Real Device" /> <VirtualDeviceTag value="Virtual Device" />
-In this documentation, we look at some APIs that will help you optimize your mobile app testing workflow. If you are performing live or automated app testing, you can use these APIs in your scripts to perform various actions.
+
+# How to Use App Testing APIs on TestMu AI
+
+App testing APIs on TestMu AI let you automate mobile workflows programmatically, fetching devices, uploading applications, managing builds, and controlling live or automated sessions from your scripts, so you optimize testing across real Android and iOS devices without manual work.
 
 ## Fetching The Devices Available for Testing
-<RealDeviceTag value="Real Device" />
 
 To fetch the Devices that are available for running Tests.
 
@@ -143,7 +147,6 @@ To fetch the Devices that are available for running Tests.
 <Tabs className="docs__val">
 
 <TabItem value="real" label="Real Device" default>
-
 <VerifiedTag value="Verified" />
 
 <div className="lambdatest__codeblock">
@@ -155,7 +158,6 @@ To fetch the Devices that are available for running Tests.
 </TabItem>
 
 <TabItem value="virtual" label="Virtual Device">
-
 <VerifiedTag value="Verified" />
 
 <div className="lambdatest__codeblock">
@@ -173,7 +175,6 @@ To fetch the Devices that are available for running Tests.
 <Tabs className="docs__val">
 
 <TabItem value="real" label="Real Device" default>
-
 <VerifiedTag value="Verified" />
 
 <div className="lambdatest__codeblock">
@@ -184,7 +185,6 @@ To fetch the Devices that are available for running Tests.
 </TabItem>
 
 <TabItem value="virtual" label="Virtual Device">
-
 <VerifiedTag value="Verified" />
 
 <div className="lambdatest__codeblock">
@@ -209,7 +209,6 @@ To fetch the Devices that are available for running Tests.
 <Tabs className="docs__val">
 
 <TabItem value="android" label="Android" default>
-
   <VerifiedTag value="Verified" />
 
   <div className="lambdatest__codeblock">
@@ -221,7 +220,6 @@ To fetch the Devices that are available for running Tests.
 </TabItem>
 
 <TabItem value="ios" label="iOS" default>
-
   <VerifiedTag value="Verified" />
 
   <div className="lambdatest__codeblock">
@@ -238,7 +236,6 @@ To fetch the Devices that are available for running Tests.
 <Tabs className="docs__val">
 
 <TabItem value="android" label="Android" default>
-
   <VerifiedTag value="Verified" />
 
   <div className="lambdatest__codeblock">
@@ -250,7 +247,6 @@ To fetch the Devices that are available for running Tests.
 </TabItem>
 
 <TabItem value="ios" label="iOS" default>
-
   <VerifiedTag value="Verified" />
 
   <div className="lambdatest__codeblock">
@@ -295,7 +291,6 @@ To delete your uploaded apps, run the below cURL command.
 <Tabs className="docs__val">
 
 <TabItem value="real" label="Real Device" default>
-
 <VerifiedTag value="Verified" />
 
 <div className="lambdatest__codeblock">
@@ -311,7 +306,6 @@ To delete your uploaded apps, run the below cURL command.
 </TabItem>
 
 <TabItem value="virtual" label="Virtual Device">
-
 <VerifiedTag value="Verified" />
 
 <div className="lambdatest__codeblock">
@@ -348,7 +342,6 @@ To unlock features such as network logs, image injection, and screenshotunblock 
 <Tabs className="docs__val">
 
 <TabItem value="real" label="Real Device" default>
-
 <VerifiedTag value="Verified" />
 
 <div className="lambdatest__codeblock">
@@ -366,7 +359,6 @@ To unlock features such as network logs, image injection, and screenshotunblock 
 </TabItem>
 
 <TabItem value="virtual" label="Virtual Device">
-
 <VerifiedTag value="Verified" />
 
 <div className="lambdatest__codeblock">
@@ -436,15 +428,12 @@ Shown below is the response to the above cURL request.
 </div>
 
 ## Generate publicly shareable build and test links
-<RealDeviceTag value="Real Device" />
-<VirtualDeviceTag value="Virtual Device" />
 
 To generate public shareable links, run the below cURL command.
 
 <Tabs className="docs__val">
 
 <TabItem value="build" label="Build Link" default>
-
 <VerifiedTag value="Verified" />
 
 <div className="lambdatest__codeblock">
@@ -458,7 +447,6 @@ To generate public shareable links, run the below cURL command.
 </TabItem>
 
 <TabItem value="test" label="Test Link">
-
 <VerifiedTag value="Verified" />
 
 <div className="lambdatest__codeblock">
@@ -502,7 +490,7 @@ The shareable links are valid for a period of 7, 15, or 30 days, after which the
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
       <span className="breadcrumbs__link">
-      Mobile App Testing APIs
+        How to Use App Testing APIs on TestMu AI
       </span>
     </li>
   </ul>

@@ -17,6 +17,7 @@ url: https://www.testmuai.com/support/docs/upload-contacts/
 site_name: TestMu AI
 slug: upload-contacts/
 canonical: https://www.testmuai.com/support/docs/upload-contacts/
+toc_max_heading_level: 2
 ---
 
 import CodeBlock from '@theme/CodeBlock';
@@ -24,8 +25,8 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
-import RealDeviceTag from '../src/component/realDevice';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import RealDeviceTag from '@site/src/component/realDevice';
 import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
@@ -153,10 +154,12 @@ import VerifiedTag from '@site/src/component/verifiedTag';
   ]) }}
 />
 
-# Upload Contacts (.vcf) on Real Devices
 <RealDeviceTag value="Real Device" />
 
-Preload contacts on real devices before your test session begins. Upload `.vcf` (vCard) contact files using the Upload Media API, and they are automatically injected into the device's native Contacts app when your session starts.
+# Upload Contacts on Real Devices
+
+
+Uploading contacts on TestMu AI preloads .vcf vCard files onto real Android and iOS devices, automatically injecting them into the native Contacts app before your session starts. This lets you test messaging, dialer, CRM, and contact-picker flows on real devices.
 
 This is useful for testing:
 - Messaging and dialer apps
@@ -247,7 +250,7 @@ desired_capabilities = {
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
       <span className="breadcrumbs__link">
-      Upload Contacts on Real Devices
+        Upload Contacts on Real Devices
       </span>
     </li>
   </ul>

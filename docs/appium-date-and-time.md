@@ -3,7 +3,7 @@ id: appium-date-and-time
 title: Configure Date, Time & Hour Format on Real Devices Using Appium
 hide_title: true
 sidebar_label: Set Date and Time 
-description: This document provides information about configuring date, time, and hour-format on Real Devices using Appium automation on TestMu AI.
+description: Configure date, time, and hour format on real devices using Appium automation on TestMu AI, including 12-hour and 24-hour formats and network time sync.
 keywords:
  - Appium
  - TestMu AI
@@ -16,6 +16,7 @@ url: https://www.testmuai.com/support/docs/appium-date-and-time/
 site_name: TestMu AI
 slug: appium-date-and-time/
 canonical: https://www.testmuai.com/support/docs/appium-date-and-time/
+toc_max_heading_level: 2
 ---
 
 
@@ -45,7 +46,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "Set Custom Date, Time & Hour Format on Real Devices",
+          "name": "Configure Date, Time & Hour Format on Real Devices Using Appium",
           "item": `${BRAND_URL}/support/docs/appium-date-and-time/`
         }]
       })
@@ -109,14 +110,9 @@ import VerifiedTag from '@site/src/component/verifiedTag';
   }) }}
 />
 
-# Set Device Date & Time
+# Configure Date, Time & Hour Format on Real Devices Using Appium
 
-<BrandName /> now supports configuring custom **date**, **time**, and **hour-format** on Real Devices via Appium during automation testing sessions. This allows developers and testers to simulate specific date/time conditions to validate use cases like scheduled events, alarms, chats, or localization for time formats.
-
-By the end of this document, you will be able to:
-- Set a specific date and time on the device
-- Toggle between 12-hour and 24-hour formats
-- Enable/disable automatic time syncing with network settings
+Setting device date and time on TestMu AI lets you configure custom date, time, and hour format on real devices during Appium automation, simulating scheduled events, alarms, chats, and time-format localization by using the lambda_executor hook with the updateDeviceSettings action.
 
 ---
 
@@ -201,7 +197,7 @@ If you encounter this error, retry your automation run on a different Android de
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
       <span className="breadcrumbs__link">
-       IP Geolocation
+        Configure Date, Time & Hour Format on Real Devices Using Appium
       </span>
     </li>
   </ul>

@@ -1,6 +1,7 @@
 ---
 id: video-injection
 title: Video Injection
+hide_title: true
 sidebar_label: Video Injection
 description: Inject video content in your tests with TestMu AI to simulate video inputs for automated testing, enhancing your app's multimedia capabilities.
 keywords:
@@ -18,6 +19,7 @@ url: https://www.testmuai.com/support/docs/video-injection/
 site_name: TestMu AI
 slug: video-injection/
 canonical: https://www.testmuai.com/support/docs/video-injection/
+toc_max_heading_level: 2
 ---
 
 import CodeBlock from '@theme/CodeBlock';
@@ -26,7 +28,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
-import RealDeviceTag from '../src/component/realDevice';
+import RealDeviceTag from '@site/src/component/realDevice';
 import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
@@ -46,8 +48,8 @@ import VerifiedTag from '@site/src/component/verifiedTag';
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "Camera Image Injection",
-          "item": `${BRAND_URL}/support/docs/camera-image-injection/`
+          "name": "Video Injection",
+          "item": `${BRAND_URL}/support/docs/video-injection/`
         }]
       })
     }}
@@ -160,8 +162,12 @@ import VerifiedTag from '@site/src/component/verifiedTag';
     }
   ]) }}
 />
-<RealDeviceTag value="Real Device" /> 
-Video Injection feature enables you to test video-based functionalities such as **live streaming, real-time video capture,** and **video processing** in your app across 5000+ real devices on the <BrandName /> Real Device Cloud platform.
+
+<RealDeviceTag value="Real Device" />
+
+# Video Injection
+
+Video Injection on TestMu AI feeds custom video into an app's camera during automated tests, letting you validate live streaming, real-time capture, identity verification, and video upload workflows across 5000+ real Android and iOS devices without any physical hardware setup.
 
 This tool is ideal for testing features such as:
 
@@ -209,7 +215,6 @@ You can use the appium capability to turn the video injection on in your applica
 <Tabs className="docs__val">
 
 <TabItem value="python" label="Python" default>
-
   <VerifiedTag value="Verified" />
 
   <div className="lambdatest__codeblock">
@@ -224,7 +229,6 @@ You can use the appium capability to turn the video injection on in your applica
 
 
 <TabItem value="JavaScript" label="JavaScript" default>
-
   <VerifiedTag value="Verified" />
 
   <div className="lambdatest__codeblock">
@@ -243,7 +247,6 @@ Refer to the code snippets given below to upload the video with the action `Vide
 <Tabs className="docs__val">
 
 <TabItem value="python" label="Python" default>
-
   <VerifiedTag value="Verified" />
 
   <div className="lambdatest__codeblock">
@@ -255,7 +258,6 @@ Refer to the code snippets given below to upload the video with the action `Vide
 
 
 <TabItem value="JavaScript" label="JavaScript" default>
-
   <VerifiedTag value="Verified" />
 
   <div className="lambdatest__codeblock">
@@ -293,7 +295,7 @@ You need to first add a logic to inject the uploaded video in the script. Therea
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
       <span className="breadcrumbs__link">
-      Camera Image Injection
+        Video Injection
       </span>
     </li>
   </ul>

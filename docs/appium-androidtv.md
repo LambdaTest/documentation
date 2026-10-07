@@ -1,8 +1,9 @@
 ---
 id: appium-androidtv
-title: Android TV Automation
+title: How to Automate Android TV Apps on TestMu AI
+hide_title: true
 sidebar_label: Android TV
-description: Learn how to automate Android TV apps using Appium with a step-by-step tutorial and sample Python code.
+description: Automate Android TV apps with Appium on TestMu AI Real Device Cloud, with a step-by-step tutorial and sample Python code.
 keywords:
   - android tv
   - appium
@@ -15,6 +16,7 @@ site_name: TestMu AI Docs
 slug: appium-androidtv/
 canonical: https://www.testmuai.com/support/docs/appium-androidtv/
 
+toc_max_heading_level: 2
 ---
 
 import CodeBlock from '@theme/CodeBlock';
@@ -22,9 +24,9 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
-import RealDeviceTag from '../src/component/realDevice';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import { CookieTrackingSignup } from '@site/src/component/CookieTracking';
+import RealDeviceTag from '@site/src/component/realDevice';
 import VerifiedTag from '@site/src/component/verifiedTag';
 
 
@@ -45,8 +47,8 @@ import VerifiedTag from '@site/src/component/verifiedTag';
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "Apple TV With Appium",
-          "item": `${BRAND_URL}/support/docs/appium-appletv/`
+          "name": "How to Automate Android TV Apps on TestMu AI",
+          "item": `${BRAND_URL}/support/docs/appium-androidtv/`
         }]
       })
     }}
@@ -119,11 +121,12 @@ import VerifiedTag from '@site/src/component/verifiedTag';
     "dateModified": "2026-09-09T19:10:37+05:30"
   }) }}
 />
-<RealDeviceTag value="Real Device" /> 
-## Tutorial To Run Your First Test On <BrandName />
----
-As smart TVs continue to grow in popularity, relying solely on manual testing is no longer sufficient. Automating Android TV testing provides broader device coverage, enhances user experience by validating remote-based navigation and voice commands, and eliminates repetitive manual tasks. It also helps uncover issues earlier in the development cycle, ensuring a smooth and consistent experience across different Android TV models. 
-In this guide, you will learn how to set up and run your **Android TV** automation testing scripts with **Appium** on the **<BrandName /> Real Device Cloud platform**.
+
+<RealDeviceTag value="Real Device" />
+
+# How to Automate Android TV Apps on TestMu AI
+
+Automating Android TV apps on TestMu AI runs Appium scripts against real smart TV devices in the cloud, validating remote-based navigation, voice commands, and app behavior across many Android TV models while removing repetitive manual checks and expanding device coverage.
 
 :::note Plus Plan Feature
 This feature is available exclusively with the **Private Cloud** Plan.
@@ -168,7 +171,6 @@ Make sure you have your <BrandName /> credentials with you to run test automatio
 <Tabs className="docs__val">
 
 <TabItem value="bash" label="Linux / MacOS" default>
-
   <VerifiedTag value="Verified" />
 
   <div className="lambdatest__codeblock">
@@ -198,7 +200,6 @@ set LT_ACCESS_KEY=${ YOUR_LAMBDATEST_ACCESS_KEY()}`}
 Upload your **Android TV** application (.ipa file) to the <BrandName /> servers using our **REST API**. You need to provide your **Username** and **AccessKey** in the format `Username:AccessKey` in the **cURL** command for authentication. Make sure to add the path of the **appFile** in the cURL request. Here is an example cURL request to upload your app using our REST API:
 
  **Using App File from System:**
-
  <VerifiedTag value="Verified" />
 
  <div className="lambdatest__codeblock">
@@ -222,10 +223,10 @@ Upload your **Android TV** application (.ipa file) to the <BrandName /> servers 
 
 In your automation script, set up the **platform capability** to specify that you are testing on an Android TV device.
 
-<VerifiedTag value="Verified" />
-
 <Tabs>
 <TabItem value="Java" label="Java" default>
+
+<VerifiedTag value="Verified" />
 
 ```java
   DesiredCapabilities capabilities = new DesiredCapabilities();
@@ -279,8 +280,8 @@ Shown below is an execution snapshot from TestMu AI Dashboard:
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
       <span className="breadcrumbs__link">
-      Roku TV With Appium
-</span>
+        How to Automate Android TV Apps on TestMu AI
+      </span>
     </li>
   </ul>
 </nav>

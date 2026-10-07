@@ -1,8 +1,9 @@
 ---
 id: button-text-click
 title: Button Click By Text (OCR)
+hide_title: true
 sidebar_label: Button Click By Text
-description: Click a button by its visible text or icon description using OCR on LambdaTest Real Device Cloud. Works across Android & iOS real and virtual devices when native locators are unavailable.
+description: Click a button by its visible text or icon description using OCR on TestMu AI when native locators are unavailable, across Android and iOS devices.
 keywords:
   - button click by text
   - OCR button click
@@ -16,9 +17,10 @@ keywords:
   - virtual devices
   - icon click
 url: https://www.testmuai.com/support/docs/button-text-click/
-site_name: TestMu AI
+site_name: LambdaTest
 slug: button-text-click/
 canonical: https://www.testmuai.com/support/docs/button-text-click/
+toc_max_heading_level: 2
 ---
 
 import CodeBlock from '@theme/CodeBlock';
@@ -26,9 +28,9 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
-import RealDeviceTag from '../src/component/realDevice';
-import VirtualDeviceTag from '../src/component/virtualDevice';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import RealDeviceTag from '@site/src/component/realDevice';
+import VirtualDeviceTag from '@site/src/component/virtualDevice';
 import VerifiedTag from '@site/src/component/verifiedTag';
 
 
@@ -49,7 +51,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "Button Click By Text",
+          "name": "Button Click By Text (OCR)",
           "item": `${BRAND_URL}/support/docs/button-text-click/`
         }]
       })
@@ -129,8 +131,12 @@ import VerifiedTag from '@site/src/component/verifiedTag';
     "dateModified": "2026-09-09T19:10:37+05:30"
   }) }}
 />
+
 <RealDeviceTag value="Real Device" /> <VirtualDeviceTag value="Virtual Device" />
-Button Click By Text is an OCR-powered feature that allows you to click UI elements using their visible text or icon description when traditional locator strategies are not feasible.
+
+# Button Click By Text (OCR)
+
+Button Click by Text on TestMu AI uses OCR to click UI elements by their visible text or icon description when native locators fail. Powered by an LLM, it accepts natural language labels and works across Android and iOS devices.
 
 Because the feature is powered by an LLM, you can also provide a natural language description of an icon (for example, "label": "search icon" or "label": "three-dot menu"), and the system will intelligently identify and click the matching element on the screen.
 

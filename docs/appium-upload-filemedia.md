@@ -3,7 +3,7 @@ id: appium-upload-media
 title: Upload File and Media
 hide_title: true
 sidebar_label: Upload Files and Media
-description: Seamlessly upload media and files on Real Devices during app and browser automation to enhance your testing scenarios and ensure comprehensive validation of your application's functionalities.
+description: Upload media and non-media files to Real Devices during app and browser automation on TestMu AI to enrich test scenarios and validate your application.
 keywords:
   - files upload
   - app test automation
@@ -15,10 +15,11 @@ keywords:
   - app testing
   - browser testing
   - real devices
-url: https://www.testmuai.com/support/docs/uploadMedia/
+url: https://www.testmuai.com/support/docs/upload-media/
 site_name: TestMu AI
 slug: upload-media/
 canonical: https://www.testmuai.com/support/docs/upload-media/
+toc_max_heading_level: 2
 ---
 
 import CodeBlock from '@theme/CodeBlock';
@@ -26,8 +27,8 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
-import RealDeviceTag from '../src/component/realDevice';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import RealDeviceTag from '@site/src/component/realDevice';
 import VerifiedTag from '@site/src/component/verifiedTag';
 
 
@@ -49,8 +50,8 @@ import VerifiedTag from '@site/src/component/verifiedTag';
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "Camera Image Injection",
-          "item": `${BRAND_URL}/support/docs/uploadFileMedia/`
+          "name": "Upload File and Media",
+          "item": `${BRAND_URL}/support/docs/upload-media/`
         }]
       })
     }}
@@ -150,9 +151,11 @@ import VerifiedTag from '@site/src/component/verifiedTag';
   ]) }}
 />
 
-# Uploading Files and Media on Real Devices
 <RealDeviceTag value="Real Device" />
-<BrandName />'s file upload feature provides a convenient way to enhance your testing scenarios by allowing you to upload various media and non-media files directly to <BrandName />'s cloud devices. In this section, we'll guide you through the process of uploading files, highlight the supported file types, and explain how to use the `uploadMedia` capability while running your test scripts. The same capability works for both **App** and **Browser** (web) automation — no separate capability to learn.
+
+# Upload File and Media
+
+Uploading files and media on <BrandName /> pushes media and non-media files to cloud real devices during testing. The uploadMedia capability works across App and Browser automation, enriching test scenarios and letting you validate your application's functionality with realistic files.
 
 ## Objectives
 By the end of this topic, you will be able to:
@@ -233,7 +236,6 @@ Once the files are uploaded to <BrandName />'s cloud, seamlessly integrate files
 
 <Tabs className="docs__val">
   <TabItem value="Java" label="Java">
-
     <VerifiedTag value="Verified" />
 
     <div className="lambdatest__codeblock">
@@ -245,7 +247,6 @@ desiredCapabilities.setCapability("uploadMedia", Arrays.asList("lt://MEDIAfcdb39
   </TabItem>
 
   <TabItem value="JavaScript" label="JavaScript">
-
     <VerifiedTag value="Verified" />
 
     <div className="lambdatest__codeblock">
@@ -257,7 +258,6 @@ desiredCapabilities.setCapability("uploadMedia", ["lt://MEDIAfcdb39b9602d474f825
   </TabItem>
   
   <TabItem value="python" label="Python" default>
-
     <VerifiedTag value="Verified" />
 
     <div className="lambdatest__codeblock">
@@ -279,7 +279,7 @@ desiredCapabilities.setCapability("uploadMedia", ["lt://MEDIAfcdb39b9602d474f825
 
 :::
 
-:::info Browser automation — differences to note
+:::info Browser automation: differences to note
 - **iOS documents** uploaded in a browser session appear under **Chrome** in the Files app, even when testing in Safari. This is by design, as only Chrome on iOS exposes a browsable file container. Pick the file via *Choose File → On My iPhone → Chrome*.
 - **iOS images and videos** appear in the **Photo Library** and are picked from the native *Photo Library* picker.
 - On Android, all uploaded files land in **Downloads**, reachable from the browser file picker. Inputs using `accept="image/*"` may open the photo picker instead; the default file input works across the board.
@@ -300,7 +300,7 @@ desiredCapabilities.setCapability("uploadMedia", ["lt://MEDIAfcdb39b9602d474f825
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
       <span className="breadcrumbs__link">
-      Camera Image Injection
+        Upload File and Media
       </span>
     </li>
   </ul>

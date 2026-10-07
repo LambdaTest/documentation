@@ -2678,7 +2678,7 @@ module.exports = {
     ],
   ],
 
-  AppiumTestingSidebar: [
+   AppiumTestingSidebar: [
     {
       type: 'link',
       label: 'Back',
@@ -2688,124 +2688,42 @@ module.exports = {
       },
     },
     [
-      {
-        type: "category",
-        collapsed: true,
-        label: "Appium Testing",
-        link: {
-          type: "doc",
-          id: "getting-started-with-appium-testing",
-        },
-        items: [
-
           {
             type: "category",
-            collapsed: true,
-            label: "Languages and Frameworks",
-            link: {
-              type: "doc",
-              id: "appium-languages-and-frameworks",
-            },
+            collapsed: false,
+            label: "Get Started",
             items: [
-              {
-                type: "category",
-                collapsed: true,
-                label: "Java",
-                link: {
-                  type: "doc",
-                  id: "appium-java",
-                },
-                items: [
-                  "appium-java-junit",
-                  "appium-java-jbehave",
-                  "appium-java-cucumber",
-                  "appium-java-testng",
-                ],
-              },
-              {
-                type: "category",
-                collapsed: true,
-                label: "JavaScript",
-                link: {
-                  type: "doc",
-                  id: "appium-nodejs",
-                },
-                items: ["appium-nodejs-webdriverio", "appium-nodejs-mocha"],
-              },
-              {
-                type: "category",
-                collapsed: true,
-                label: "Python",
-                link: {
-                  type: "doc",
-                  id: "appium-python",
-                },
-                items: [
-                  "appium-python-behave",
-                  "appium-python-robot",
-                  "appium-python-gauge",
-                  "appium-python-pytest",
-                ],
-              },
-              {
-                type: "category",
-                collapsed: true,
-                label: "Ruby",
-                link: {
-                  type: "doc",
-                  id: "appium-ruby",
-                },
-                items: ["appium-ruby-cucumber", "appium-ruby-rspec"],
-              },
-              {
-                type: "category",
-                collapsed: true,
-                label: "PHP",
-                link: {
-                  type: "doc",
-                  id: "appium-php",
-                },
-                items: ["appium-php-behat"],
-              },
-              {
-                type: "category",
-                collapsed: true,
-                label: "C#",
-                link: {
-                  type: "doc",
-                  id: "appium-csharp",
-                },
-                items: ["appium-csharp-nunit"],
-              },
-              "appium-kotlin",
-              "test-flutter-apps",
+              "getting-started-with-appium-testing",
+              "appium-agent-skills",
+              "migrate-existing-appium-test-suites",
+              "desired-capabilities-in-appium",
             ],
           },
           {
             type: "category",
             collapsed: true,
-            label: "Setup",
+            label: "Languages & Frameworks",
             items: [
-              {
-                type: "category",
-                collapsed: true,
-                label: "Application",
-                items: [
-                  "application-setup-via-api",
-                  "application-setup-via-gui",
-                ],
-              },
-              "desired-capabilities-in-appium",
+              "appium-java",
+              "appium-nodejs",
+              "appium-python",
+              "appium-ruby",
+              "appium-php",
+              "appium-csharp",
+              "appium-kotlin",
+            ],
+          },
+          {
+            type: "category",
+            collapsed: true,
+            label: "Configure Your Tests",
+            items: [
+              "application-setup-via-api",
+              "appium-uploading-retrieving-files",
               "supported-appium-versions",
-              "supported-appium-plugins",
               "list-of-supported-locales",
-              //"appium-ip-geolocation",
-              "supported-timezone",
               "app-testing-apis",
               "appium-lambdatest-hooks",
-              "appium-install-uninstall-lambdatest-hooks",
-              "appium-uploading-retrieving-files",
-              "appium-firebase-app-upload",
             ],
           },
           {
@@ -2833,7 +2751,6 @@ module.exports = {
               "login-google-android",
               "disable-screenshot-block",
               "appium-custom-header",
-              "appium-safari-settings",
               "basic-authentication-for-web-automation",
               "live-debug-in-app-automation",
               "appium-date-and-time",
@@ -2863,16 +2780,11 @@ module.exports = {
           {
             type: "category",
             collapsed: true,
-            label: "Local Testing",
-            items: ["testing-apps-locally"],
+            label: "References",
+            items: ["appium-languages-and-frameworks", "migrate-appium-tests-from-browserstack-and-saucelabs", "appium-troubleshooting"],
           },
-          "migrate-appium-tests-from-browserstack-and-saucelabs",
-          "appium-troubleshooting",
-        ],
-      },
     ],
   ],
-
   EspressoTestingSidebar: [
     {
       type: 'link',

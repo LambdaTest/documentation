@@ -1,6 +1,6 @@
 ---
 id: alttester-unity-game-automation
-title: Automate Unity Games With AltTester on TestMu AI Real Device Cloud
+title: How to Automate Unity Games With AltTester on TestMu AI
 hide_title: true
 sidebar_label: AltTester (Unity)
 description: Run AltTester-instrumented Unity game tests on real Android and iOS devices with TestMu AI, using AltDriver, Appium, the LT tunnel, and pytest.
@@ -13,6 +13,7 @@ url: https://www.testmuai.com/support/docs/alttester-unity-game-automation/
 site_name: TestMu AI
 slug: alttester-unity-game-automation/
 canonical: https://www.testmuai.com/support/docs/alttester-unity-game-automation/
+toc_max_heading_level: 2
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import VerifiedTag from '@site/src/component/verifiedTag';
@@ -34,7 +35,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "Automate Unity Games With AltTester on TestMu AI Real Device Cloud",
+          "name": "How to Automate Unity Games With AltTester on TestMu AI",
           "item": `${BRAND_URL}/support/docs/alttester-unity-game-automation/`
         }]
       })
@@ -177,7 +178,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
 
 ***
 
-If you build Unity mobile games and need to test them on real hardware, you can automate them with AltTester on TestMu AI public and private real device cloud. 
+Automating Unity games with AltTester on TestMu AI lets you assert on live game objects, components, and `PlayerPrefs` rather than screen coordinates. Upload an instrumented build once, then run your suite with pytest against real Android and iOS devices remotely.
 
 AltTester reads the live Unity scene graph, so your tests assert on game objects, components, and `PlayerPrefs` instead of raw screen coordinates. 
 
@@ -205,7 +206,7 @@ Before you run the suite, make sure the following are in place.
 - Your TestMu AI **Username** and **Access Key**, found under **Profile** in the dashboard.
 - The **`LT` tunnel binary** at `tunnel/LT`. The sample repo ships the macOS binary. Download the binary for your platform from the [TestMu AI tunnel downloads](https://www.testmuai.com/support/docs/testing-locally-hosted-pages/) if you are on Windows or Linux.
 
-To upload your build and get the `lt://` URL, see [how to upload apps to the Real Device Cloud](/support/docs/upload-apps-on-real-device-cloud/).
+To upload your build and get the `lt://` URL, see [how to upload apps to the Real Device Cloud](/support/docs/application-setup-via-api/).
 
 ***
 
@@ -446,6 +447,6 @@ When you switch platforms, change `LT_APP_URL` to the matching build. An Android
 
 ***
 
-- See [how to upload apps to the Real Device Cloud](/support/docs/upload-apps-on-real-device-cloud/) to get the `lt://` app URL this suite needs.
+- See [how to upload apps to the Real Device Cloud](/support/docs/application-setup-via-api/) to get the `lt://` app URL this suite needs.
 - See [how to get started with Real Device App Testing](/support/docs/app-testing-on-real-devices/) for manual testing on the same device pool.
 - See [how to set up the TestMu AI tunnel](/support/docs/testing-locally-hosted-pages/) for tunnel binaries on Windows and Linux.

@@ -1,6 +1,7 @@
 ﻿---
 id: appium-kotlin
-title: Appium With Kotlin
+title: How to Run Appium Kotlin Tests on TestMu AI
+hide_title: true
 sidebar_label: Kotlin
 description: Now you can run your Appium automation scripts using Kotlin on TestMu AI Real Device Cloud Platform of 3000+ real mobile devices.
 keywords:
@@ -15,19 +16,19 @@ url: https://www.testmuai.com/support/docs/appium-kotlin/
 site_name: TestMu AI
 slug: appium-kotlin/
 canonical: https://www.testmuai.com/support/docs/appium-kotlin/
+toc_max_heading_level: 2
 ---
 
 import CodeBlock from '@theme/CodeBlock';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
-import RealDeviceTag from '../src/component/realDevice';
-import VirtualDeviceTag from '../src/component/virtualDevice';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import RealDeviceTag from '@site/src/component/realDevice';
+import VirtualDeviceTag from '@site/src/component/virtualDevice';
 import VerifiedTag from '@site/src/component/verifiedTag';
 
 
-<RealDeviceTag value="Real Device" /> <VirtualDeviceTag value="Virtual Device" />
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -46,7 +47,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "Koltin With Appium",
+          "name": "How to Run Appium Kotlin Tests on TestMu AI",
           "item": `${BRAND_URL}/support/docs/appium-kotlin/`
         }]
       })
@@ -212,7 +213,12 @@ import VerifiedTag from '@site/src/component/verifiedTag';
   ]) }}
 />
 
-In this documentation, you will learn how to configure and run your **Kotlin** automation testing scripts with **Appium** on <BrandName />, set the desired capabilities for appium testing, and other advanced features of <BrandName />.
+<RealDeviceTag value="Real Device" /> <VirtualDeviceTag value="Virtual Device" />
+
+# How to Run Appium Kotlin Tests on TestMu AI
+
+
+Running Appium tests with Kotlin on TestMu AI automates native and hybrid mobile apps across a real device cloud of 3000+ Android and iOS devices. Configure your project, set desired capabilities, upload your app, and run scripts to view results.
 
 ## Prerequisites
 
@@ -236,7 +242,6 @@ You need to export your environment variables *LT_USERNAME* and *LT_ACCESS_KEY* 
 
 <Tabs className="docs__val">
 <TabItem value="bash" label="Linux / MacOS" default>
-
   <VerifiedTag value="Verified" />
 
   <div className="lambdatest__codeblock">
@@ -247,7 +252,6 @@ export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 </div>
 </TabItem>
 <TabItem value="powershell" label="Windows" default>
-
   <VerifiedTag value="Verified" />
 
   <div className="lambdatest__codeblock">
@@ -267,7 +271,6 @@ Make sure to add the path of the **appFile** in the cURL request. Below is an ex
 <Tabs className="docs__val">
 
 <TabItem value="bash" label="App File" default>
-
   <VerifiedTag value="Verified" />
 
   <div className="lambdatest__codeblock">
@@ -278,7 +281,6 @@ Make sure to add the path of the **appFile** in the cURL request. Below is an ex
 </TabItem>
 
 <TabItem value="powershell" label="App URL" default>
-
   <VerifiedTag value="Verified" />
 
   <div className="lambdatest__codeblock">
@@ -300,10 +302,10 @@ Make sure to add the path of the **appFile** in the cURL request. Below is an ex
 
 An automation script for the sample application available above has been provided here. Ensure to update the `APP_URL`, `username` and `accesKey` in the code scripts before running the tests.
 
-<VerifiedTag value="Verified" />
-
 <Tabs className="docs__val">
 <TabItem value="android" label="Android" default>
+
+<VerifiedTag value="Verified" />
 
 ```java title="android.kt"
 import io.appium.java_client.MobileBy
@@ -394,6 +396,8 @@ class android {
 </TabItem>
 
 <TabItem value="ios" label="iOS" default>
+
+<VerifiedTag value="Verified" />
 
 ```java title="iOS.kt"
 import io.appium.java_client.MobileBy
@@ -488,10 +492,10 @@ You can update your custom capabilities in test scripts. In this sample project,
 
 The capabilities object in the sample code are defined as:
 
-<VerifiedTag value="Verified" />
-
 <Tabs className="docs__val">
 <TabItem value="ios-config" label="iOS" default>
+
+<VerifiedTag value="Verified" />
 
 ```java
 val caps = DesiredCapabilities()
@@ -513,6 +517,8 @@ caps.setCapability("device log", true)
 </TabItem>
 
 <TabItem value="android-config" label="Android" default>
+
+<VerifiedTag value="Verified" />
 
 ```java
 val caps = DesiredCapabilities()
@@ -560,52 +566,6 @@ mvn clean install
 
   > Your test results would be displayed on the test console (or CLI if you are using terminal/cmd) and on the [<BrandName /> App Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://appautomation.lambdatest.com/build).
 
-## Using the Appium Agent Skill with TestMu AI
-***
-
-The [appium-skill](https://github.com/LambdaTest/agent-skills/tree/main/appium-skill) is a part of [TestMu AI Skills](https://github.com/LambdaTest/agent-skills/) that guide AI coding assistants in generating production-ready test automation.
-
-The appium-skill package includes:
-
-<VerifiedTag value="Verified" />
-
-```
-appium-skill/
-├── SKILL.md
-└── reference/
-    ├── playbook.md
-    └── advanced-patterns.md
-```
-
-It provides structured guidance for:
-
-* Project structure and setup
-* Dependency configuration
-* Local execution
-* TestMu AI cloud execution
-* Debugging patterns
-* CI/CD integration
-
-
-### Installing Appium Agent Skill
-***
-
-Install a Appium Agent Skill using the command below:
-
-<VerifiedTag value="Verified" />
-
-```
-# Clone the repo and copy the skill you need
-git clone https://github.com/LambdaTest/agent-skills.git
-cp -r agent-skills/appium-skill .claude/skills/
-
-# Or for Cursor / Copilot
-cp -r agent-skills/appium-skill .cursor/skills/
-```
-
-**Note**: If you prefer installing all available framework skills instead of only appium-skill, clone the repository directly into your tool's skills directory (for example, .claude/skills/, .cursor/skills/, .gemini/skills/, or .agent/skills/).
-
-
 ## Reference Guides
 
 - [Advanced Configuration for Capabilities](/support/docs/desired-capabilities-in-appium/)
@@ -627,8 +587,8 @@ cp -r agent-skills/appium-skill .cursor/skills/
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
       <span className="breadcrumbs__link">
-      Kotlin With Appium
-</span>
+        How to Run Appium Kotlin Tests on TestMu AI
+      </span>
     </li>
   </ul>
 </nav>

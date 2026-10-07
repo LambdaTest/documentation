@@ -21,6 +21,7 @@ url: https://www.testmuai.com/support/docs/audio-injection/
 site_name: TestMu AI
 slug: audio-injection/
 canonical: https://www.testmuai.com/support/docs/audio-injection/
+toc_max_heading_level: 2
 ---
 
 import CodeBlock from '@theme/CodeBlock';
@@ -28,8 +29,8 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
-import RealDeviceTag from '../src/component/realDevice';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import RealDeviceTag from '@site/src/component/realDevice';
 import VerifiedTag from '@site/src/component/verifiedTag';
 
 
@@ -50,7 +51,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "Audio Injection",
+          "name": "Audio Injection/Input on Real Devices",
           "item": `${BRAND_URL}/support/docs/audio-injection/`
         }]
       })
@@ -207,10 +208,12 @@ import VerifiedTag from '@site/src/component/verifiedTag';
   ]) }}
 />
 
-# Audio Injection on Real Devices
 <RealDeviceTag value="Real Device" />
 
-Test audio-driven and microphone-dependent features on real Android and iOS devices through Appium / Selenium automation. Inject pre-recorded audio files directly into the device microphone, no physical mic input required.
+# Audio Injection/Input on Real Devices
+
+
+Audio injection on TestMu AI feeds pre-recorded audio files straight into a real device microphone during Appium or Selenium tests, letting you validate voice commands, speech recognition, and microphone-dependent features across real Android and iOS devices without physical microphone input.
 
 :::note Plus Plan Feature
 This feature is available exclusively with the **Real Device Plus Automation Cloud** Plan.
@@ -296,11 +299,11 @@ Save the returned `media_url`. You will use it in subsequent steps.
 
 Set the `enableAudioInjection` capability when creating your driver session.
 
-<VerifiedTag value="Verified" />
-
 <Tabs className="docs__val">
 
 <TabItem value="java" label="Java" default>
+
+<VerifiedTag value="Verified" />
 
 ```java
 DesiredCapabilities caps = new DesiredCapabilities();
@@ -311,6 +314,8 @@ caps.setCapability("media", "lt://MEDIA1234567890abcdef"); // optional: pre-set 
 </TabItem>
 
 <TabItem value="python" label="Python">
+
+<VerifiedTag value="Verified" />
 
 ```python
 desired_caps = {
@@ -323,6 +328,8 @@ desired_caps = {
 </TabItem>
 
 <TabItem value="nodejs" label="Node.js">
+
+<VerifiedTag value="Verified" />
 
 ```javascript
 const capabilities = {
@@ -352,11 +359,11 @@ Use the following hooks via `driver.executeScript`:
 | `lambda-audio-start` | Start playing the injected audio into the device microphone |
 | `lambda-audio-stop` | Stop audio playback |
 
-<VerifiedTag value="Verified" />
-
 <Tabs className="docs__val">
 
 <TabItem value="java" label="Java" default>
+
+<VerifiedTag value="Verified" />
 
 ```java
 // 1. Set the audio file
@@ -378,6 +385,8 @@ driver.executeScript("lambda-audio-stop");
 
 <TabItem value="python" label="Python">
 
+<VerifiedTag value="Verified" />
+
 ```python
 driver.execute_script("lambda-audio-injection=lt://MEDIA1234567890abcdef")
 driver.find_element(AppiumBy.ID, "recordButton").click()
@@ -389,6 +398,8 @@ driver.execute_script("lambda-audio-stop")
 </TabItem>
 
 <TabItem value="nodejs" label="Node.js">
+
+<VerifiedTag value="Verified" />
 
 ```javascript
 await driver.executeScript("lambda-audio-injection=lt://MEDIA1234567890abcdef");
