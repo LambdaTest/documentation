@@ -9,22 +9,22 @@ keywords: ['kane cli remote', 'kane cli testrun remote', 'hyperexecute', 'cloud 
 import { KaneCliCta } from "/snippets/KaneCliCta.mdx";
 import { BrandName } from "/snippets/BrandName.mdx";
 
-`kane-cli testrun run --remote` dispatches a suite of `_test.md` files to <BrandName /> **HyperExecute** instead of running it on your machine. The grid provisions the runtime, runs every member, and streams the job back to your terminal: one job, one exit code, one sealed [evidence pack](/docs/kane-cli-evidence/), and the same recordings and evidence you get from a run on your own machine.
+`kane-cli testrun run --remote` sends a suite of `_test.md` files to <BrandName /> **HyperExecute** instead of running it on your machine. The grid sets up the runtime, runs every test in the suite (each one is a *member*), and streams the job back to your terminal. You get one job, one exit code, one sealed [evidence pack](/docs/kane-cli-evidence/), and the same recordings and evidence as a run on your own machine.
 
 Remote runs cover both kinds of test:
 
-- **Web suites** run on **Chrome on a HyperExecute macOS runner**, with no Chrome on your machine or CI runner, headless by construction, and `--parallel N` spreads the members across N grid runners.
+- **Web suites** run in **Chrome on a HyperExecute macOS runner**. Your machine or CI runner needs no Chrome, the run is always headless, and `--parallel N` spreads the members across N grid runners.
 - **Mobile suites** (`target: emulator` or `target: simulator`) run on a **virtual Android emulator or iOS simulator on a HyperExecute macOS host**, so you can author and run mobile tests **from any machine**: Linux, Windows, Intel Macs, or a Mac without Xcode or Android Studio. The [macOS Apple Silicon requirement](/docs/kane-cli-mobile/) applies only to mobile runs on your own machine.
 
 ```bash
 kane-cli plugin install remote-execution                                          # once
 kane-cli testrun run --tags smoke --remote --parallel 4                           # a web suite on 4 grid runners
-kane-cli testrun run tests/app/ --remote --device-name "Pixel 7" --os-version 14  # an Android suite
-kane-cli testrun run tests/ios/ --remote --device-name "iPhone 15" --os-version 17.5
+kane-cli testrun run --match '^tests/app/' --remote --device-name "Pixel 7" --os-version 14  # an Android suite
+kane-cli testrun run --match '^tests/ios/' --remote --device-name "iPhone 15" --os-version 17.5
 ```
 
 <Note>
-`--remote` is not the same as `--ws-endpoint` or `--cdp-endpoint`. Those attach a **remote browser** to a run that still executes on your machine (`kane-cli run`, `kane-cli testmd run`). `--remote` moves the **whole suite** to the grid: kane-cli itself runs there, and nothing but Node and the plugin is needed locally.
+`--remote` is different from `--ws-endpoint` and `--cdp-endpoint`. Those flags connect a **remote browser** to a run that still executes on your machine (`kane-cli run`, `kane-cli testmd run`). `--remote` moves the **whole suite** to the grid. Kane CLI itself runs there, and your machine needs only Node and the plugin.
 </Note>
 
 ## Prerequisites
@@ -37,16 +37,16 @@ kane-cli testrun run tests/ios/ --remote --device-name "iPhone 15" --os-version 
 | A project directory that **contains the tests** | The current directory is zipped and shipped as the job payload | Run from the repository root, or any parent of the tests |
 | Recordings **not gitignored** | The payload respects `.gitignore`, and an ignored `output-<stem>/` never reaches the grid. Builds are not payload, see [The app under test on the grid](#the-app-under-test-on-the-grid) | `--dry-run` reports `gitignored_inputs`; un-ignore with, for example, `!output-*/` |
 
-The project and folder the run uploads to are the ones configured on your profile (`kane-cli config project` and `kane-cli config folder`); they are passed to the grid's login.
+The run uploads to the project and folder configured on your profile (`kane-cli config project` and `kane-cli config folder`). Kane CLI passes them to the login on the grid.
 
 ## How a remote run works
 
-1. **Preflight, then remote preflight.** The normal `testrun` plan is built (one organisation, one project, see [Preflight](/docs/kane-cli-testrun/#preflight)); then kane-cli checks the selection can be **one grid job** ([What one job can hold](#what-one-job-can-hold)) and, for mobile, resolves the device against the grid catalog. Anything wrong stops here, nothing is dispatched, exit `2`.
-2. **Payload.** The current directory is zipped (respecting `.gitignore`) and uploaded with a generated job definition. The dispatch leaves `.hyperexecute/`, `hyperexecute-cli.log` and `.updatedhyperexecute.yaml` in that directory: add them to `.gitignore`, they are not inputs.
-3. **On the grid** (a macOS runner): a pre-step installs kane-cli and logs in with your credentials and project; for mobile it installs the device tooling and boots the device. Then **each member runs as its own `kane-cli testmd run`**, headless, exactly as it would on your machine. A member with recordings replays them, a member without authors on the grid.
-4. **Back to you.** The job streams progress and the dashboard link to your terminal. When it ends, the members' `output-<stem>/` recordings and the sealed evidence pack are downloaded into your project, the pack is published to Test Manager, and the suite summary and exit code are the same as a local `testrun`.
+1. **Preflight, then remote preflight.** Kane CLI builds the normal `testrun` plan (one organisation, one project, see [Preflight](/docs/kane-cli-testrun/#preflight)). It then checks that the selection fits in **one grid job** (see [What one job can hold](#what-one-job-can-hold)) and, for mobile, looks up the device in the grid catalog. If anything is wrong, the run stops here with exit `2` and nothing is dispatched.
+2. **Payload.** Kane CLI zips the current directory, respecting `.gitignore`, and uploads it with a generated job definition. Dispatching leaves `.hyperexecute/`, `hyperexecute-cli.log`, and `.updatedhyperexecute.yaml` in that directory. They are not inputs, so add them to `.gitignore`.
+3. **On the grid** (a macOS runner), a setup step installs Kane CLI and logs in with your credentials and project. For mobile, it also installs the device tooling and boots the device. Then **each member runs as its own `kane-cli testmd run`**, headless, exactly as it would on your machine. A member with recordings replays them. A member without recordings is authored on the grid.
+4. **Back to you.** The job streams its progress and the dashboard link to your terminal. When it ends, the members' `output-<stem>/` recordings and the sealed evidence pack are downloaded into your project, and the pack is published to Test Manager. The suite summary and exit code match a local `testrun`.
 
-Allow a few minutes on top of the tests' own time: in practice about 15 seconds of setup for a web job, and a minute or more for a mobile job (device boot, app install). A wall-clock timeout of 10 minutes is a safe starting point in CI.
+Allow some time beyond the tests themselves: about 15 seconds of setup for a web job, and a minute or more for a mobile job to boot the device and install the app. In CI, a wall-clock timeout of 10 minutes is a safe starting point.
 
 ## Dispatching a run
 
@@ -57,9 +57,9 @@ kane-cli testrun run --tags smoke --remote --dry-run          # both preflights,
 kane-cli testrun run --tags smoke --remote --parallel 4
 ```
 
-`--dry-run` runs both preflights and resolves any device **without creating a job**. Use it before every new selection; it costs nothing.
+`--dry-run` runs both preflights and resolves any device **without creating a job**. It costs nothing, so use it before every new selection.
 
-A real run prints the job id and dashboard link, then tracks the job until it completes:
+A real run prints the job id and dashboard link, then follows the job until it completes:
 
 ```
 job 24fc58b2-… dispatched → https://hyperexecute.lambdatest.com/hyperexecute/task?jobId=24fc58b2-…
@@ -67,27 +67,27 @@ job 24fc58b2-… dispatched → https://hyperexecute.lambdatest.com/hyperexecute
 
 | Flag | On the grid |
 |---|---|
-| `--parallel <n>` | Becomes the job's concurrency: the members are auto-split across `n` grid runners, each running its share one member at a time. Device suites parallelize the same way, and every task has its own VM and device |
-| `--headless` | Not needed, every member runs headless on the grid |
-| `--on-failure`, `--name`, `--bug-detection`, `--author`, `--no-adaptive-heal` | Forwarded to the members on the grid |
+| `--parallel <n>` | Sets the job's concurrency. The members are split automatically across `n` grid runners, and each runner works through its share one member at a time. Device suites run in parallel the same way, and every task has its own VM and device |
+| `--headless` | Not needed. Every member runs headless on the grid |
+| `--author`, `--no-adaptive-heal` | Forwarded to grid member runs |
 | `--username`, `--access-key` | Used for the grid login and the Test Manager upload |
 
 ## Web suites on the grid
 
-A web suite needs nothing beyond the prerequisites: the grid runner has Chrome, kane-cli finds it and runs each member headless. Use it when the runner cannot have Chrome, when you want the suite off your laptop, or when you want more parallelism than one machine gives you.
+A web suite needs nothing beyond the prerequisites. The grid runner has Chrome, and Kane CLI finds it and runs each member headless. Use the grid when your runner cannot have Chrome, when you want the suite off your laptop, or when you need more parallel capacity than one machine offers.
 
 ```bash
 kane-cli plugin install remote-execution
-kane-cli testrun run tests/web/ --remote --parallel 4 --on-failure fail-fast
+kane-cli testrun run --match '^tests/web/' --remote --parallel 4
 ```
 
-What you see back is a normal `testrun` summary; the only extra lines are the dispatch and the job link. A member that authors on the grid comes back with its `output-<stem>/` recordings, so the next run, on the grid or on your machine, replays them. Commit those recordings as you would after a local run.
+You get a normal `testrun` summary, plus two extra lines for the dispatch and the job link. A member that is authored on the grid returns its `output-<stem>/` recordings, so the next run, on the grid or on your machine, replays them. Commit those recordings as you would after a local run.
 
-A web selection cannot share a job with device members (`mobile_remote_mixed`). Run the two suites separately.
+Web tests and device tests cannot share a job (`mobile_remote_mixed`). Run them as two separate suites.
 
-## Choosing a grid device
+## Choosing a grid device (mobile)
 
-Remote devices come from the **grid catalog**, not from the AVDs or simulators on your machine. List what the grid can provision:
+Remote devices come from the **grid catalog**, not from the AVDs or simulators on your machine. To see what the grid can provide:
 
 ```bash
 kane-cli devices list --target emulator --remote                    # Android emulators
@@ -95,7 +95,7 @@ kane-cli devices list --target simulator --remote                   # iOS simula
 kane-cli devices list --target simulator --remote --os-version 17.5 # only that OS version
 ```
 
-Each row is a device **name** plus the **OS versions** it ships with. Address one with both:
+Each row shows a device **name** and the **OS versions** available for it. Select a device with both:
 
 | Flag or key | Purpose |
 |---|---|
@@ -103,29 +103,29 @@ Each row is a device **name** plus the **OS versions** it ships with. Address on
 | `--os-version <v>` | The OS version (`14`, `17.5`). On its own, it means any catalog device running that version |
 | `device_name:` or `os_version:` in a `_test.md` | Per-test defaults, used when the flags are absent. See [Mobile target](/docs/kane-cli-testmd/#mobile-target) |
 
-If you pass neither, kane-cli picks a catalog default for the platform and prints it on the device line. Read it before relying on it.
+If you pass neither, Kane CLI picks a default device from the catalog for the platform and prints it on the device line. Check that line before you rely on the choice.
 
-The two platforms bind the device differently:
+The two platforms assign devices differently:
 
-- **Emulator**: the job allocates **one device for all its members**, so they must agree on one Android version (`mobile_os_version_split` otherwise, or force one with `--os-version`). An AVD name from your own machine is ignored in a member (you get a `device_name_ignored` note), because a remote job's device is named by the catalog.
-- **Simulator**: each task boots a simulator inside its own VM, so **each member binds its own `device_name:` and `os_version:`** (validated against the catalog). `--device-name` and `--os-version`, when passed, apply to every member. Members may ask for different iOS versions as long as their iOS majors map to one HyperExecute pool, which the catalog decides (today 17 and 18 share one, 26 is another); otherwise `mobile_pool_split`.
+- **Emulator**: the job uses **one device for all its members**, so they must all ask for the same Android version. If they differ, the preflight refuses with `mobile_os_version_split`. To force one version, pass `--os-version`. If a member names an AVD from your own machine, Kane CLI ignores it and shows a `device_name_ignored` note, because a remote job's device name comes from the catalog.
+- **Simulator**: each task boots a simulator inside its own VM, so **each member uses its own `device_name:` and `os_version:`**, checked against the catalog. If you pass `--device-name` and `--os-version`, they apply to every member. Members can ask for different iOS versions as long as their major versions belong to the same HyperExecute pool. The catalog decides the pools: iOS 17 and 18 share one, and iOS 26 is in another. If members need different pools, the preflight refuses with `mobile_pool_split`.
 
 ## The app under test on the grid
 
-The grid machine has to *obtain* the app. A build never rides the payload, it reaches the grid by id:
+The grid machine has to *get* the app from somewhere. A build is never part of the payload. It reaches the grid by id:
 
 | `app:` in the test | What happens |
 |---|---|
-| A local build, `.apk` for `emulator` or a `.zip` of the `.app` for `simulator`, anywhere on disk | **Uploaded from your machine at preflight**, once per distinct file (a per-machine cache skips a build your account already has), and handed to the grid as `--app <id>`. It may be gitignored or outside the project. `--dry-run` uploads nothing |
+| A local build, `.apk` for `emulator` or a `.zip` of the `.app` for `simulator`, anywhere on disk | **Uploaded from your machine during preflight**, once per distinct file, and passed to the grid as `--app <id>`. A cache on each machine skips builds your account already has. The build may be gitignored or outside the project. `--dry-run` uploads nothing |
 | An uploaded `APP…` id | Used as is, and the grid downloads it |
 
-Each member gets its own id, so a run may hold members that name different builds. A `.ipa` is refused up front: it is a device build, and the emulator and simulator upload does not take it. Every upload is reported (`app: <file> → APP… (uploaded)`, or the `remote_app` event for agents).
+Each member gets its own id, so members in one run can use different builds. An `.ipa` is refused up front, because it is a build for physical devices and the emulator and simulator upload does not accept it. Every upload is reported, as `app: <file> → APP… (uploaded)` in the terminal or as the `remote_app` event for agents.
 
-`kane-cli apps list --target emulator|simulator` shows the uploaded builds your account can use, and the **APP ID** column is what `app:` takes. There is no upload subcommand: any run with a local build, on the grid or on your machine, uploads it and prints the `APP…` id. Uploads belong to an organisation, so `apps list` for the current profile is the authority on which ids a run can use.
+`kane-cli apps list --target emulator|simulator` shows the uploaded builds your account can use. Put a value from the **APP ID** column in `app:`. There is no separate upload command: any run with a local build, on the grid or on your machine, uploads it and prints the `APP…` id. Uploads belong to an organisation, so `apps list` for your current profile is the definitive list of ids a run can use.
 
 ## What one job can hold
 
-One remote run is one HyperExecute job, which allocates **one kind of runtime**. The remote preflight refuses a selection that needs more than one, and tells you how to split it (`--match` or `--tags`):
+Each remote run is one HyperExecute job, and a job provides **one kind of runtime**. The remote preflight refuses a selection that needs more than one, and tells you how to split it with `--match` or `--tags`:
 
 | Reason | Meaning | Fix |
 |---|---|---|
@@ -141,44 +141,44 @@ One remote run is one HyperExecute job, which allocates **one kind of runtime**.
 | `gitignored_inputs` | Required recordings are gitignored | Un-ignore them (for example `!output-*/`) or commit them |
 | `on_grid` | Already running on a HyperExecute grid | `--remote` cannot re-dispatch from inside a job |
 
-Every reason arrives with the offending paths, both in the terminal and as a `remote_error` event for agents.
+Each reason comes with the paths that caused it, both in the terminal and in a `remote_error` event for agents.
 
 ## What comes back
 
-- **Recordings**: authored members' `output-<stem>/` directories land in your project exactly as a run on your machine would leave them, so the next run replays from cache.
+- **Recordings**: the `output-<stem>/` directories of authored members land in your project exactly as a run on your machine would leave them, so the next run replays from cache.
 - **Evidence**: one sealed pack for the suite in `.testmuai/evidence/`, published to your project's execution history in Test Manager.
 - **Job logs**: the per-member session logs under `~/.testmuai/kaneai/sessions/remote/<job-id>/`, and the full stage logs on the HyperExecute dashboard at the printed job link.
 - **Exit code**: the same as a local `testrun`. `0` all passed, `1` a member failed or broke, `2` preflight, auth or usage (nothing dispatched), `3` cancelled.
 
 ## When a remote run fails
 
-- **A member failed or broke** (exit `1`): read it like any other failure. `output-<stem>/Result.md` names the failing step and reason, and the evidence pack has the screenshots and logs. See [Debugging with a pack](/docs/kane-cli-troubleshooting/#debugging-a-failed-run-with-its-evidence-pack).
-- **A member is `broken` with no steps** and nothing was published: the grid-side kane-cli refused before launching. Open the job link and read the scenario stage log. For mobile, the usual cause is an `APP…` id that belongs to a different organisation than the account running the job.
-- **Nothing was dispatched** (exit `2`): the printed reason is one of the preflight codes above, or `kane-cli plugin doctor remote-execution` shows what is missing (plugin, binary, login).
+- **A member failed or broke** (exit `1`): read it like any other failure. `output-<stem>/Result.md` names the failing step and reason, and the evidence pack has the screenshots and logs. See [Debugging from a Pack](/docs/kane-cli-evidence-debugging/).
+- **A member is `broken` with no steps** and nothing was published: Kane CLI on the grid refused to start. Open the job link and read the scenario stage log. For mobile, the usual cause is an `APP…` id that belongs to a different organisation than the account running the job.
+- **Nothing was dispatched** (exit `2`): the printed reason is one of the preflight codes above. Run `kane-cli plugin doctor remote-execution` to see whether the plugin, binary, or login is missing.
 
 ## In CI
 
-A remote run needs no Chrome, Xcode or Android Studio on the runner, only Node and the plugin:
+A remote run needs no Chrome, Xcode, or Android Studio on the CI runner, only Node and the plugin:
 
 ```bash
 npm install -g @testmuai/kane-cli
 kane-cli plugin install remote-execution
 
 # a web suite
-kane-cli testrun run tests/web/ --remote --parallel 4 \
-  --username "$LT_USERNAME" --access-key "$LT_ACCESS_KEY" --on-failure fail-fast
+kane-cli testrun run --match '^tests/web/' --remote --parallel 4 \
+  --username "$LT_USERNAME" --access-key "$LT_ACCESS_KEY"
 
 # a mobile suite
-kane-cli testrun run tests/app/ --remote \
+kane-cli testrun run --match '^tests/app/' --remote \
   --device-name "Pixel 7" --os-version 14 \
-  --username "$LT_USERNAME" --access-key "$LT_ACCESS_KEY" --on-failure fail-fast
+  --username "$LT_USERNAME" --access-key "$LT_ACCESS_KEY"
 ```
 
 Archive `.testmuai/evidence/*.evidence` as the build artifact. More pipeline shapes are in [CI/CD](/docs/kane-cli-cicd/).
 
 ## For agents: NDJSON events
 
-In agent or non-TTY mode a remote run adds typed events around the normal `testrun_*` stream (see [For agents](/docs/kane-cli-testrun/#for-agents-ndjson-events)):
+In agent or non-TTY mode, a remote run wraps the normal `testrun_*` stream in additional typed events (see [For agents](/docs/kane-cli-testrun/#for-agents-ndjson-events)):
 
 | `type` | Payload | Notes |
 |---|---|---|
@@ -192,6 +192,14 @@ In agent or non-TTY mode a remote run adds typed events around the normal `testr
 | `remote_done` | `status`, `exit`, `job_id`, `sessions_path` | Terminal for the remote wrapper, and follows `testrun_done` |
 
 `testrun_summary` also carries a `remote` object (`backend`, `jobId`, `jobUrl`, `sessionsPath`).
+
+When you parse the stream of a dispatched run, keep reading after `testrun_done` until `remote_done` and the process exit, and keep the remote status and the session-log path. A preflight refusal or a dry run can end without `remote_done`.
+
+## Known limitations
+
+- **`--bug-detection` is not forwarded.** Remote dispatch does not pass `--bug-detection` to the member commands, so do not rely on it for bug detection in a remote run.
+- **`--on-failure` is not applied.** Remote dispatch does not map `--on-failure` into the job template, so do not rely on it for fail-fast behavior in a remote run.
+- **`--name` names the suite only.** It is suite metadata and is not passed to member commands.
 
 ## Next Steps
 

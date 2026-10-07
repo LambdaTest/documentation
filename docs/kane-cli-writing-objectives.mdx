@@ -51,13 +51,13 @@ Extractions read a value from the page and store it in the run output's `final_s
 
 **Always use the explicit `store X as 'name'` syntax.** Vague phrasing like "tell me" or "read" does not reliably capture data.
 
-❌ Bad: agent may see it but won't persist it:
+❌ Bad: the agent may see the value but does not save it:
 ```
 "go to example.com and tell me the price"
 "read the page title"
 ```
 
-✅ Good: value is captured in `final_state`:
+✅ Good: the value is captured in `final_state`:
 ```
 "go to example.com, store the price of the first item as 'price'"
 "store the page title as 'page_title'"
@@ -79,6 +79,65 @@ Chain all three patterns in one objective:
 ```
 
 This objective: navigates → extracts two values → validates a condition → performs an action → validates the result.
+
+---
+
+## What Makes a Good Objective
+
+An objective is the natural-language instruction the agent follows. The clearer the objective, the more reliably the agent completes it.
+
+- **Specific.** Name the site, the action, and the field values where they matter.
+- **Action-oriented.** Lead with a verb: search, open, fill, click, verify.
+- **Ends in a check of the result.** State what "done" looks like as a claim about the page, so the agent knows when to stop and a replay has something to verify.
+
+Two habits make an objective reliable enough to save and replay.
+
+### End Every Flow in a Check of the Result
+
+Close with an assertion about the resulting page state (`verify the cart shows 1 item`), not a bare `submit` or `confirm the dialog`. Without a closing check, "done" only means the agent believed it had finished. With one, the run passes or fails based on the real end state. Check the outcome, not the control that triggered it: `verify the Submit button is visible` fails precisely when the action worked, because the button disappears on success. If an objective has several phases (log in, then search, then check out), each phase ends in its own check.
+
+Make the closing check something the agent can see on the screen the last action leaves it on, with no further click or navigation. If the proof lives on another page, get there with an explicit action first: `place the order, open Order History, then verify the newest order shows "Processing"`, not `verify the order succeeded by checking Order History`. A check that has to find its own way to the evidence is really an action hidden inside an assertion, and the route the agent picks can differ from run to run.
+
+### Say the Goal, Not the Clicks
+
+Phrase actions as goals (`Log in as {{tester}}`, `Complete checkout with the saved card`) so a run absorbs a reordered form or a new popup instead of breaking on it. Keep exact values such as credentials, prices, and URLs literal or in `{{variables}}`. For a step that only sometimes appears, such as a cookie banner, write it as a condition (`if a cookie banner appears, dismiss it`) rather than assuming it away.
+
+### Examples
+
+```text
+Search for "noise-cancelling headphones" on amazon.com and confirm at least
+one result appears with a price under $200.
+```
+
+```text
+Fill the registration form at example.com/signup with name "Test User",
+email "test@example.com", and a 12-character random password. Submit and
+verify the confirmation page loads.
+```
+
+```text
+Open https://app.example.com, log in with the credentials in {{tester}},
+navigate to Settings > Billing, and verify the current plan is "Pro".
+```
+
+```text
+Open https://app.example.com, set a cookie named session with value
+{{auth_token}}, reload, and verify the dashboard loads. Then click the
+"Copy invite link" button and verify the clipboard contains "/invite/".
+```
+
+Objectives can also set, delete, and clear cookies, localStorage, and the test clipboard directly. See [Browser State Actions](/docs/kane-cli-browser-state/).
+
+Objectives can also make API calls directly: POST/GET a URL or paste a `curl`, save the response, and assert on it. See [API Calls](/docs/kane-cli-api-calls/).
+
+### Bad to Better
+
+| | Objective |
+|---|---|
+| Bad | Test the login page. |
+| Better | Open https://app.example.com/login, log in as `{{tester}}`, and verify the dashboard URL contains `/home`. |
+
+The bad version leaves "test" undefined and gives the agent no end state. The better version names the URL, the credentials, and the assertion that closes the loop.
 
 ---
 
@@ -175,13 +234,13 @@ Objectives are written the same way for a native mobile app as for the browser. 
 kane-cli run "Sign in and open the account tab" --target simulator --app ./builds/MyApp.zip
 ```
 
-Pointing a mobile run at a website is not supported yet. WebViews inside the app under test are handled. See [Mobile Testing](/docs/kane-cli-mobile/).
+A mobile run cannot point at a website. WebViews inside the app under test are supported. See [Mobile Testing](/docs/kane-cli-mobile/).
 
 ## Splitting Long Objectives
 
 Objectives with more than 15 steps drift and become unreliable. Split them into multiple runs.
 
-In **Interactive TUI**, the browser stays open between runs: state carries over automatically:
+In the **Interactive TUI**, the browser stays open between runs, so state carries over automatically:
 
 ```
 > go to https://myapp.com and log in as admin
@@ -194,7 +253,7 @@ In **Interactive TUI**, the browser stays open between runs: state carries over 
   ✓ PASSED
 ```
 
-In **Headless CLI**, use `--max-steps` to cap each run:
+In the **Headless CLI**, use `--max-steps` to cap each run:
 
 ```bash
 kane-cli run "login flow" --url https://myapp.com --max-steps 10

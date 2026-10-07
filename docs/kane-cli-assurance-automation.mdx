@@ -8,107 +8,149 @@ keywords: ['kane cli assurance ci', 'headless test design', 'ndjson event stream
 
 import { KaneCliCta } from "/snippets/KaneCliCta.mdx";
 
-The conversational assurance commands — `context extract`, `design tests`, and `maintain reconcile` — are interactive by default. This page is the contract for running them **headless**: from CI, from a script, or from an AI agent driving kane-cli.
+The conversational assurance commands (`context ingest`/`context extract`, `design tests`, and `maintain reconcile`) are interactive by default. This page describes how to run them **headless**, that is, without a person at a terminal: from CI, from a script, or from an AI agent that drives kane-cli. The coverage reads (`cover`, `cover gaps`) use the same stream.
 
 ## The ask policy: `--mode`
 
-On a terminal, extract and design open a chat. Headless is an explicit opt-in — a bare non-TTY invocation **exits `2`** and mutates nothing:
+In a terminal, extract and design open a chat. Running headless is something you opt into explicitly. A bare run without a terminal (no TTY) **exits `2`** and changes nothing:
 
 ```
 extract: no TTY — pass an explicit --mode agent|ci|override to run headless
 ```
 
-`--mode` decides both what happens when the agent has a question, and what the command writes to stdout:
+`--mode` controls two things: what happens when the agent has a question, and what the command writes to stdout.
 
 | Mode | Questions | stdout |
 |---|---|---|
-| `interactive` | asked in the chat (TTY default) | the Ink chat UI |
-| `agent` | **every** question pauses the session — exit `3`, resumable; the agent that drives the run answers at resume or escalates to its person | **NDJSON events** (one JSON object per line); prose diagnostics go to stderr |
-| `ci` | any high-risk question **fails closed** — exit `1`, error code `HIGH_RISK_CI`; low- and medium-risk questions take their recommended default (each reported) | prose transcript |
-| `override` | every default is auto-taken, including high-risk (each flagged in the commit record) | prose transcript |
+| `interactive` | Asked in the chat (the default in a terminal). | The Ink chat UI. |
+| `agent` | **Every** question pauses the session with exit `3`, and the session can be resumed. The agent driving the run answers when it resumes, or passes the question to its person. | **NDJSON events** (one JSON object per line) and nothing else on either output: stderr stays silent. |
+| `ci` | Any high-risk question **fails closed**: the run stops instead of guessing, with exit `1` and error code `HIGH_RISK_CI`. Low- and medium-risk questions take their recommended default, and each one is reported. | A prose transcript. |
+| `override` | Every default is taken automatically, including high-risk ones. Each is flagged in the commit record. | A prose transcript. |
 
-Rule of thumb: `agent` when something can read the pause and answer (an AI agent, a human on the next shift); `ci` when a pipeline must fail rather than guess on anything high-risk; `override` when you accept the recommended defaults wholesale and want one unattended pass.
+How to choose:
 
-The same matrix drives `maintain reconcile`, with two reconcile-specific rules: no headless mode ever archives anything — ARCHIVE decisions wait for an interactive session — and a `ci`-mode run that hits a decision needing a human **stores the plan and exits `2`** (the work isn't lost; walk the stored plan interactively or apply it in `agent` mode).
+- Use `agent` when something can read the pause and answer it, such as an AI agent or a person on the next shift.
+- Use `ci` when a pipeline must fail rather than guess on anything high-risk.
+- Use `override` when you accept all the recommended defaults and want one unattended pass.
 
-`context ingest` follows the matrix with one extra rule *(0.7.1)*: it lands the files and then runs the extraction under the given mode — except `--mode ci`, or piped stdin without any `--mode`, which **lands only** (exit `0`, with a stderr guidance line naming the next command). Two extraction dials also matter headless: `--trust hold` holds everything new for review instead of committing it (headless-only; `ci` refuses the flag entirely with exit `2`), and `--trust auto` is the default everywhere.
+`maintain reconcile` follows the same table, with two rules of its own:
+
+- No headless mode ever archives anything. ARCHIVE decisions wait for an interactive session.
+- When a `ci` run reaches a decision that needs a person, it **stores the plan and exits `2`**. The work is not lost: walk the stored plan interactively, or apply it in `agent` mode.
+
+`context ingest` also follows the table, with one extra rule. It lands the files and then runs the extraction under the given mode. The exception is `--mode ci`, or piped stdin with no `--mode`: then it **only lands the files** (exit `0`) and prints a guidance line on stderr naming the next command.
+
+Two extraction settings also matter when you run headless:
+
+- `--trust hold` holds everything new for your review instead of committing it. It works only headless, and `ci` mode refuses the flag entirely with exit `2`.
+- `--trust auto` is the default everywhere.
 
 ## Exit codes
 
-Consistent across extract, design, and the maintain commands that embed them:
+Extract, design, and the maintain commands that run them all use the same exit codes:
 
 | Code | Meaning |
 |---|---|
 | `0` | Complete. |
-| `1` | Runtime failure. For extract and design, a `ci`-mode fail-close on a high-risk question also exits `1`; reconcile's `ci` fail-close stores the plan and exits `2` instead. |
-| `2` | Usage / auth / refusal — bad flags, failed input validation, no store, bare non-TTY without `--mode`, missing `--yes` on a destructive command. Nothing was mutated — with two durable exceptions: a merged ingest whose *extraction* refused keeps its landed sources (the run says they're safe), and reconcile's `ci` fail-close keeps its stored plan. |
-| `3` | **Paused and resumable** — the only meaning of 3. A session is saved; resume it within 24 hours. Since 0.7.1 sessions are durable from the first turn, so a crash that left a checkpoint also exits `3` and names the exact resume command (a crash before anything durable — or a failed pause save — still exits `1`). |
+| `1` | Runtime failure. For extract and design, a `ci`-mode stop on a high-risk question also exits `1`. Reconcile's `ci` stop stores the plan and exits `2` instead. |
+| `2` | Usage, auth, or refusal: bad flags, failed input validation, no store, a bare run without a TTY and without `--mode`, or a missing `--yes` on a destructive command. Nothing was changed, with two exceptions that keep their work: a merged ingest whose *extraction* refused keeps the sources it landed (the run says they are safe), and reconcile's `ci` stop keeps its stored plan. |
+| `3` | **Paused and resumable.** This is the only meaning of `3`. A session is saved; resume it within 24 hours. Sessions are saved from the first turn, so a crash that left a checkpoint also exits `3` and names the exact resume command. A crash before anything was saved, or a pause that failed to save, still exits `1`. |
+
+The sync commands use the same three meanings, and exit `3` also means **a person has to decide something**. That covers a `kane-cli context push` or `kane-cli context pull` refused because you are behind or diverged (the remedy names the command to run), and a rebase that stopped on open decisions (answer them with `--answer`, or in a terminal). For these commands, exit `2` means a precondition failed (a location that cannot be reached, a rebase still open, missing keys), and exit `1` means a record that cannot be used. A refusal tells you what stopped; it does not mean nothing happened. See [the sync verbs on the stream](#the-sync-verbs-on-the-stream).
 
 ## The NDJSON stream (`--mode agent`)
 
-With `--mode agent`, stdout speaks a versioned NDJSON vocabulary — envelope `{"type": "<name>", "v": 1, "verb": "extract"|"design", ...}`, one object per line. The vocabulary is open: new event types may appear, so **tolerate unknown types**.
+With `--mode agent`, stdout carries a versioned NDJSON vocabulary, one object per line, in the envelope `{"type": "<name>", "v": 1, "verb": "extract"|"design", ...}`. New event types can appear, so your consumer should **ignore types it does not recognise**.
 
-*(0.7.2)* The stream is **strict**: stdout carries only NDJSON — the first line is an event, `done` is the last — and stderr stays silent (crash traces excepted). No version banner, no receipts, no progress lines; everything user-relevant arrives as a typed event. On 0.7.1, prose diagnostics could ride stderr and a merged ingest printed receipt lines before the stream — a consumer that skips non-JSON prefix lines works on both releases.
+The stream is **strict**:
+
+- stdout carries only NDJSON. The first line is an event and `done` is the last.
+- stderr stays silent, except for crash traces.
+- There is no version banner, no receipt line, and no progress line. Everything you need arrives as a typed event.
 
 | type | payload highlights |
 |---|---|
-| `ingested` *(0.7.1)* | one per source landed by a merged `context ingest … --mode agent` run — `source_id`, `status` (`created`/`unchanged`/`versioned`), `cid`; arrives **before** the extraction's own events |
-| `run_start` | `mode`, `trace` (the per-run log path); design adds `use_case`; *(0.7.2)* `session` — a support id, present when telemetry is on |
-| `corpus` | extract: the `sources[]` this run covers + already-extracted `skipped[]` |
-| `source_start` / `source_skipped` | `source_id`, `index`/`total`, `resumed` / `reason` |
-| `plan` | the `--plan` transcription payload |
-| `assumed_default` | a question auto-answered with its recommended default: `id`, `selected_index`, `risk`. `ci` and `override` runs only, since an `agent` run pauses instead |
-| `variables_declared` | design: the stubs a phase commit wrote — `file` (the pool file) and `variables[]` (`name`, `description`, `secret`). Only names that existed in no variable file, and it fires after the `commit` that minted the tests |
-| `variables_summary` | design, at the end of the run: every name still needing a value, in the same shape as `variables_declared` |
-| `agent_activity` | progress: `kind` (`tool` / `decision` / `progress` / `thinking_done`) + a display `label` |
-| `agent_message` *(0.7.2)* | the agent's narrative `text` — the conversational lead-in before a question batch and the closing statement at the end of a run |
-| `warning` *(0.7.2)* | an actionable non-fatal condition: `code` (`ZERO_USE_CASES`, `SAVE_FAILED`) + `message` |
-| `lock_steal` *(0.7.2)* | a stale run lock was taken over: `key`, `stale_owner`, `by`, `ts` — observability only, no action needed |
-| `usage` | per agent turn: `credits` + running `total_credits` (*(0.7.2)* rounded to two decimals) |
-| `validate_failed` | a proposal failed kane-side validation: `codes[]`, `repairing` (the agent self-repairs) |
-| `degraded` *(0.7.1)* | duplicate detection fell back to a reduced mode this run (`reason`) — new items are held for review instead of auto-committed |
-| `held` / `update_held` *(0.7.1)* | items were **held** for your review instead of committed (`source_id`, `count`, `reason` / `count`, `targets[]`) — the `--trust hold` and degraded-detection paths |
-| `commit` | what landed: counts + `minted[]` (`cid` + `logical_id`); extract adds `proposal_id` |
-| `receipt` | design: per-phase commit receipt — `commit_n`, `phase`, `committed[]`, `warnings[]`, `parity`, and a human-readable `next` hint |
-| `message_sent` | your `--message` was delivered: `sid`, `chars` |
-| `panel_resolved` *(0.7.1)* | a pending question was answered by a `--answer` flag: `id`, `by`, `via` |
-| `ask_deferred` *(0.7.1)* | a pending question batch was set aside because `--with-source` landed a new source first: `source_id`, `cid`, `questions` (count) |
-| `session_paused` | `sid`, the verbatim `resume` command, `expires_at`, and **`pending_questions[]`** in full. Two additional shapes *(0.7.1)*, distinguished by their fields: a crash-paused session carries `crashed: true` and **no** `pending_questions` (resume re-enters the conversation); a held-for-review pause carries only `sid`, `resume`, and `held` (a count) — no `expires_at` |
-| `session_complete` | `sid` |
-| `gate_refused` | a design gate refused the run (may be the first event) |
-| `phase_entry_override` *(0.7.1)* | a design `--phase` entry point was applied: `phase`, `missing[]` |
-| `error` | `message` + a stable `code` where one exists (`NO_STORE`, `PREFLIGHT`, `SOURCE_MISSING`, `BLOB_MISSING`, `HIGH_RISK_CI`, `STALE_BASIS`, `EXTRACT_LOCKED`, `TRUST_USAGE`, `TRUST_UNDER_CI`, `HOLD_MULTI_SOURCE`, `UC_UNREVIEWED`, `UNKNOWN_PHASE`, `PHASE_ORDER`, `CITE_UNVERIFIED`, `WRONG_VERB`, `INGEST_UNAUTHORIZED_REF`, `STRUCTURED_FLAGS_USAGE` / `STRUCTURED_TARGET_UNKNOWN` (a misused `--answer`/structured verdict; the unknown-target refusal lists the addressable ids), `PAIR_MISMATCH` / `BINDING_MISMATCH` (see below)). *(0.7.2)* Three reconcile refusals carry a bracketed marker at the END of the message instead of a `code` — `[SOURCE_HELD]` (a head-move refused while a live review holds the source — finish the named session first), `[SESSIONS_UNREADABLE]` (the hold check could not run — unreadable session files fail closed; list/clean the sessions), and `[HELD_REVIEW]` (a headless `--apply` met a held review that needs a human); match the marker, not a `code` field. Many runtime failures are message-only |
-| `done` | **always the last event**: `status` (`complete`/`paused`/`error`/`refused`/`interrupted`/`aborted`) + `exit_code`; may carry `next[]` |
+| `ingested` | One per source landed by a merged `context ingest … --mode agent` run: `source_id`, `status` (`created`/`unchanged`/`versioned`), `cid`. Arrives **before** the extraction's own events. |
+| `run_start` | `mode`, `trace` (the log path for this run); design adds `use_case`; `session` is a support id, present when telemetry is on. |
+| `corpus` | Extract: the `sources[]` this run covers, plus the already-extracted `skipped[]`. |
+| `source_start` / `source_skipped` | `source_id`, `index`/`total`, `resumed` / `reason`. |
+| `plan` | The `--plan` transcription payload. |
+| `assumed_default` | A question answered automatically with its recommended default: `id`, `selected_index`, `risk`. Sent by `ci` and `override` runs only; an `agent` run pauses instead. |
+| `agent_activity` | Progress: `kind` (`tool` / `decision` / `progress` / `thinking_done`) and a display `label`. |
+| `agent_message` | The agent's narrative `text`: the lead-in before a batch of questions, and the closing statement at the end of a run. |
+| `warning` | A non-fatal condition you can act on: `message`, plus `code` when there is one (`ZERO_USE_CASES`, `SAVE_FAILED`). A `.gitignore` that could not be written, or a lifecycle note, carries `message` alone. Show it to the user either way. |
+| `lock_steal` | A stale run lock was taken over: `key`, `stale_owner`, `by`, `ts`. For observability only; no action needed. |
+| `usage` | One per agent turn: `credits` and the running `total_credits`, rounded to two decimals. |
+| `validate_failed` | A proposal failed kane-side validation: `codes[]`, `repairing` (the agent repairs it itself). |
+| `degraded` | Duplicate detection fell back to a reduced mode for this run (`reason`). New items are held for review instead of committed automatically. |
+| `held` / `update_held` | Items were **held** for your review instead of committed (`source_id`, `count`, `reason` / `count`, `targets[]`). These come from `--trust hold` and from reduced duplicate detection. |
+| `commit` | What landed: counts and `minted[]` (`cid` + `logical_id`); extract adds `proposal_id`. |
+| `receipt` | A commit receipt per phase (design; extract also sends one at its commits): `commit_n`, `phase`, `committed[]`, `warnings[]`, a human-readable `next` hint, and (design only) `parity`. |
+| `variables_declared` | Design: the variable stubs a phase commit wrote: `file` (the pool file) and `variables[]` (`name`, `description`, `secret`). Lists only names that existed in no variable file. Fires in the tests phase, just before its `commit` event. |
+| `variables_summary` | Design, after `session_complete` when the run completes cleanly: every name this run declared, in the same shape as `variables_declared`. A paused run does not send it. |
+| `message_sent` | Your `--message` was delivered: `sid`, `chars`. |
+| `panel_resolved` | A pending question was answered by an `--answer` flag: `id`, `by`, `via`. |
+| `ask_deferred` | A pending batch of questions was set aside because `--with-source` landed a new source first: `source_id`, `cid`, `questions` (a count). |
+| `session_paused` | `sid`, the exact `resume` command, `expires_at`, and the full **`pending_questions[]`**. Two other shapes exist, told apart by their fields: a session paused by a crash carries `crashed: true` and **no** `pending_questions` (resuming re-enters the conversation); a pause for held review items carries only `sid`, `resume`, and `held` (a count), with no `expires_at`. |
+| `session_complete` | `sid`. |
+| `gate_refused` | A design gate refused the run. It can be the first event. |
+| `phase_entry_override` | A design `--phase` entry point was applied: `phase`, `missing[]`. |
+| `error` | `message`, plus a stable `code` where one exists (`NO_STORE`, `PREFLIGHT`, `SOURCE_MISSING`, `BLOB_MISSING`, `HIGH_RISK_CI`, `STALE_BASIS`, `EXTRACT_LOCKED`, `TRUST_USAGE`, `TRUST_UNDER_CI`, `HOLD_MULTI_SOURCE`, `UC_UNREVIEWED`, `UNKNOWN_PHASE`, `PHASE_ORDER`, `CITE_UNVERIFIED`, `WRONG_VERB`, `INGEST_UNAUTHORIZED_REF`, `STRUCTURED_FLAGS_USAGE` / `STRUCTURED_TARGET_UNKNOWN` (a misused `--answer` or structured verdict; the unknown-target refusal lists the ids you can address), `PAIR_MISMATCH` / `BINDING_MISMATCH` (see below)). Three reconcile refusals put a bracketed marker at the END of the message instead of a `code`: `[SOURCE_HELD]` (a head move was refused because a live review holds the source; finish the named session first), `[SESSIONS_UNREADABLE]` (the hold check could not run because session files could not be read, so it failed closed; list or clean the sessions), and `[HELD_REVIEW]` (a headless `--apply` met a held review that needs a person). Match the marker, not a `code` field. Many runtime failures carry a message only. |
+| `done` | **Always the last event**: `status` (`complete`/`paused`/`error`/`refused`/`interrupted`/`aborted`) and `exit_code`; may carry `next[]`. |
 
-**The `done` guarantee:** every `--mode agent` invocation ends its stream with exactly one `done` event — including refusals and graceful interrupts. *(0.7.2)* The stream starts at the first line: a merged ingest's landing failures (a bad path, an unsupported or oversized file, a refused URL, a misused `--mode` or `--as`) also arrive as `error` + `done` — codes `MODE_USAGE`, `AS_SINGLE_SOURCE`, `UNSUPPORTED_URL`, `INGEST_FAILED` — and sources already landed stay safe, with the run saying so. (On 0.7.1 these landing failures ended with a prose error line and exit `1`/`2` *before any NDJSON began* — no stream, no `done`.) The one exception is operator force: a second Ctrl+C can hard-kill the process (exit `130`) without a `done`. Any other stream that ends without `done` should be treated as a crash. One more parsing note: the agent may also repair a draft mid-turn on its own — that surfaces only as `agent_activity` lines (labels like `validation failed`, `refining the draft`); treat activity labels as display text, never script against them.
+**The `done` guarantee.** Every `--mode agent` run that starts the stream ends it with exactly one `done` event, including refusals and graceful interrupts. The stream starts at the first line, so a merged ingest's landing failures (a bad path, an unsupported or oversized file, a refused URL, a misused `--mode` or `--as`) also arrive as `error` + `done` (codes `MODE_USAGE`, `AS_SINGLE_SOURCE`, `UNSUPPORTED_URL`, `INGEST_FAILED`). Sources that already landed stay safe, and the run says so. The one exception is operator force: a second Ctrl+C can kill the process (exit `130`) without a `done`.
+
+One command is shaped differently on purpose. `kane-cli context review --mode agent` keeps its `--json` output: its verdict and drift listings are one JSON object per line, with no `done` at the end (an empty listing prints nothing and exits `0`). Its early refusals (no store, an open rebase, or a verdict queue that needs a terminal: `TTY_REQUIRED`) are typed events followed by `done`; its later refusals exit without `done`, so read its exit code. Treat any other stream that ends without `done` as a crash.
+
+The agent can also repair a draft mid-turn on its own. That shows up only as `agent_activity` lines (with labels like `validation failed` or `refining the draft`). Activity labels are display text: never script against them.
 
 Two more parsing rules:
 
-- **Receipts and prefixes.** *(0.7.2)* Nothing precedes the stream — the landing receipts **are** the `ingested` events, and every stdout line parses as JSON. On 0.7.1, a merged ingest printed a few prose receipt lines per file before the NDJSON began, so strict per-line `JSON.parse` consumers had to skip non-JSON prefix lines. That skip is harmless on 0.7.2 — a version-tolerant consumer can keep it.
-- **`next[]` carries follow-up commands** *(0.7.1)*. Pauses, gate refusals, and `done` can carry a `next` list of ready-to-run follow-ups. The common shape is objects (`{cmd, why, title}`); a few refusal sites emit plain strings — handle both, and treat every entry as a command to offer, not to auto-run.
+- **Every line is JSON.** Nothing comes before the stream: the landing receipts **are** the `ingested` events, and every stdout line parses as JSON. A consumer that skips non-JSON lines still works.
+- **`next[]` carries follow-up commands.** Pauses, gate refusals, and `done` can carry a `next` list of follow-up commands that are ready to run. Most entries are objects (`{cmd, why, title}`), but a few refusals send plain strings, so handle both. Treat every entry as a command to offer, not one to run automatically.
 
 ### Reconcile's stream
 
-`maintain reconcile --mode agent` speaks the same envelope with `verb: "reconcile"` and its own event set. *(0.7.2)* The stream opens with a minimal `run_start` (it carries `session` only — no `trace`), and the re-extract child rides the **same stream**: its extract-vocabulary events (`source_start`, `agent_activity`, `plan`, `commit`, …) interleave between the `reconcile_*` events, all stamped `verb: "reconcile"` — one command, one stream. The engine itself is unchanged: ADD/MODIFY auto-apply, ARCHIVE pauses, `--apply` resumes.
+`maintain reconcile --mode agent` uses the same envelope with `verb: "reconcile"` and its own set of events. The stream opens with a minimal `run_start` that carries `session` only (no `trace`). The re-extract that reconcile runs shares **the same stream**: its extract events (`source_start`, `agent_activity`, `plan`, `commit`, …) appear between the `reconcile_*` events, all stamped `verb: "reconcile"`. One command gives one stream. ADD and MODIFY rows apply automatically, ARCHIVE rows pause, and `--apply` resumes.
 
 | type | payload highlights |
 |---|---|
-| `reconcile_plan` | the triage ahead: `source_id`, `plan_path`, `rows[]` (`kind`, `ref`, `why`), `archive[]` (proposed archivals with their evidence-decay reasons) |
-| `reconcile_row_start` | per row: `kind`, `ref`, plus the impact counts where they apply (`stale`, `direct`) |
-| `reconcile_row_end` | the row's `outcome` (`applied` \| `failed` \| `skipped` \| `plan-only` \| `paused`) + `exit_code`, and an additive `detail` carrying a failure's reason and hint (e.g. a `HELD_CITES_STALE` refusal with its re-stage hint). A row's embedded design run is folded in here, so the stream stays single-writer with exactly one `done` |
-| `reconcile_paused` | `plan_path` + `pending[]` (`ref`, `why`) — resume with the same reconcile command (or `--apply`) |
-| `reconcile_summary` | the honest totals, always the same field set: `applied`, `skipped`, `deferred`, `plan_only`, `failed`, `paused`, `stale_created` |
-| `done` | always last — same guarantee as above |
+| `reconcile_plan` | The triage ahead: `source_id`, `plan_path`, `rows[]` (`kind`, `ref`, `why`), and `archive[]` (proposed archivals with the reasons their evidence decayed). |
+| `reconcile_row_start` | One per row: `kind`, `ref`, and the impact counts where they apply (`stale`, `direct`). |
+| `reconcile_row_end` | The row's `outcome` (`applied` \| `failed` \| `skipped` \| `plan-only` \| `paused`) and `exit_code`, plus an additive `detail` with a failure's reason and hint (for example, a `HELD_CITES_STALE` refusal with its re-stage hint). A row's embedded design run is folded in here, so only one writer uses the stream and there is exactly one `done`. |
+| `reconcile_paused` | `plan_path` and `pending[]` (`ref`, `why`). Resume with the same reconcile command, or with `--apply`. |
+| `reconcile_summary` | The honest totals, always with the same fields: `applied`, `skipped`, `deferred`, `plan_only`, `failed`, `paused`, `stale_created`. |
+| `done` | Always last, with the same guarantee as above. |
 
-Validation failures (bad inputs, unknown source, the fork guard) ride the stream as `error` + `done` with exit `2` — never stderr alone.
+Validation failures (bad inputs, an unknown source, the fork guard) arrive on the stream as `error` + `done` with exit `2`, never on stderr alone.
+
+### Evolve's stream {#evolves-stream}
+
+`maintain evolve --mode agent` uses the same envelope with `verb: "evolve"`. Requires Kane CLI 0.8.21 or later.
+
+The first call states the blast radius (the scenario and test pairs the re-design would affect) and pauses on a question. The next call answers it with `--answer evolve:<use-case>=1` (proceed) or `--answer evolve:<use-case>=2` (decline); the words `proceed` and `decline` also work. See [Maintaining the suite](/docs/kane-cli-assurance-maintain/#evolve) for what evolve does.
+
+| type | payload highlights |
+|---|---|
+| `evolve_batch` | `--from-stale` only, sent first: `stale_nodes`, `use_cases`. |
+| `evolve_target` | Once per designed use-case, before any question: `ref?`, `use_case`, `pairs` (the blast radius), `because?`. |
+| `evolve_paused` | A question has no answer yet, so the run ends here with exit `3`: `pending_questions[]` (id `evolve:<use-case>`, options `proceed` / `decline`), `resume`, `next[]`. |
+| `evolve_skipped` | A use-case that was not evolved: `use_case`, `reason` (`declined` \| `no-design`). `no-design` appears in `--from-stale` batches only; an explicit target that was never designed refuses with exit `2`. |
+| `child_start` / `child_end` | Around the design run: `child: "design"`, `subject` / `ok`, `dur_s`, `exit_code?`. |
+| *(the design run's events)* | Between `child_start` and `child_end`, stamped `verb: "design"`: every event of `design tests --mode agent` except its `done`. A paused design session arrives as `session_paused`. |
+| `evolve_diff` | After a clean design run: `use_case`, `generation` (`before`, `after`), `superseded[]`, `minted[]`, `retained[]` (pairs as `scenario` + `test`), `moves[]` (`ac`, `before[]`, `after[]`). |
+| `error` | A refusal or failure: `message`, `code?` (`MODE_USAGE`, `ANSWER_USAGE`). |
+| `done` | Always last: `complete` (0), `refused` (2), `paused` (3, for evolve's question or for the design session), or `error` with the design run's own code. `next[]` carries the resume command of every paused session, whatever the status. |
+
+A `--from-stale` batch runs every use-case, whatever happened to the earlier ones. Its exit code is the first design-run code that is neither 0 nor 3; otherwise 3 if any run paused; otherwise 0.
 
 ## The pause → answer → resume loop
 
-This is the heart of driving assurance from an agent. A real exchange (events abridged, payloads shortened):
+This loop is the core of driving assurance from an agent. Here is a real exchange (events abridged, payloads shortened):
 
 ```bash
 $ kane-cli context extract --mode agent
-{"type":"run_start","v":1,"verb":"extract","mode":"agent","trace":".context/logs/extract-….log"}
+{"type":"run_start","v":1,"verb":"extract","mode":"agent","trace":"~/.testmuai/kaneai/assurance/…/logs/extract-….log"}
 {"type":"corpus","v":1,"verb":"extract","sources":[{"source_id":"prd-online-store","cid":"sha256:0661…"}],"skipped":[]}
 {"type":"agent_activity","v":1,"verb":"extract","kind":"decision","label":"asking to resolve an ambiguity"}
 {"type":"session_paused","v":1,"verb":"extract","sid":"ext-20260716T140742-prd-online-store",
@@ -123,7 +165,7 @@ $ kane-cli context extract --mode agent
 {"type":"done","v":1,"verb":"extract","status":"paused","exit_code":3}
 ```
 
-The pause event carries everything needed to decide: the question, why it matters, the options, and the recommendation. Answer **in plain words** — no question ids, no option indexes. After the resumed run's usual `run_start`, `corpus`, and `source_start` (with `"resumed": true`) events, the stream continues:
+The pause event carries everything you need to decide: the question, why it matters, the options, and the recommendation. Answer **in plain words**, with no question ids and no option numbers. The resumed run sends its usual `run_start`, `corpus`, and `source_start` (with `"resumed": true`) events, and then the stream continues:
 
 ```bash
 $ kane-cli context extract --resume ext-20260716T140742-prd-online-store --mode agent \
@@ -135,30 +177,30 @@ $ kane-cli context extract --resume ext-20260716T140742-prd-online-store --mode 
 {"type":"done","v":1,"verb":"extract","status":"complete","exit_code":0}
 ```
 
-The agent maps your statement to its own pending questions. A statement that answers nothing pending is treated as steering ("also cover the coupon path"); if it leaves a high-risk ambiguity standing, the run pauses again with refreshed questions.
+The agent matches your statement to its own pending questions. A statement that answers nothing pending is treated as steering (for example, "also cover the coupon path"). If questions are still unanswered, the run pauses again with refreshed questions.
 
-Two structured alternatives to `--message` *(0.7.1)*:
+There are two structured alternatives to `--message`:
 
-- **Answer by id** — `--answer <question-id>=<option number | free text>` (repeatable, `--resume --mode agent` only). Each landed answer echoes as a `panel_resolved` event before the run continues:
+- **Answer by id.** Use `--answer <question-id>=<option number | free text>`. You can repeat it, and it works with `--resume --mode agent` only. Each answer that lands is echoed as a `panel_resolved` event before the run continues:
 
   ```bash
   kane-cli context extract --resume <sid> --mode agent --answer q1=1 --answer q2="use the staging URL"
   ```
 
-- **Land a source instead of answering** — `--resume <sid> --with-source <path|url>` lands the file or URL first and sets the pending batch aside (`ask_deferred` on the stream); the agent reads the new source and re-asks only what it didn't settle. Only refs **you** provide can land — anything else refuses with `INGEST_UNAUTHORIZED_REF`.
+- **Land a source instead of answering.** `--resume <sid> --with-source <path|url>` lands the file or URL first and sets the pending batch aside (`ask_deferred` on the stream). The agent reads the new source and asks again only what it did not settle. Only refs that **you** provide can land; anything else refuses with `INGEST_UNAUTHORIZED_REF`.
 
-Between the pause and the resume, everything is inspectable without contending the session:
+Between the pause and the resume, you can inspect everything without interfering with the session:
 
 ```bash
 kane-cli context sessions --json                 # one row per resumable session, with its resume command
 kane-cli context sessions show <sid> --json      # the pending questions in wire shape + any assumed defaults
 ```
 
-Abandoned sessions expire after 24 hours; `kane-cli context sessions clean` garbage-collects them.
+Abandoned sessions expire after 24 hours. `kane-cli context sessions clean` removes them.
 
 ## Headless review
 
-Trust promotion deliberately has **no auto-approve** — but it does have a non-interactive path. Prepare verdicts as JSON and land them atomically:
+Promoting items to trusted has **no auto-approve** on purpose, but it does have a non-interactive path. Prepare your verdicts as JSON and land them in one atomic step:
 
 ```bash
 cat > verdicts.json <<'EOF'
@@ -170,61 +212,113 @@ EOF
 kane-cli context review --verdicts verdicts.json --json
 ```
 
-`resolution` is one of `approved | edited | rejected | skipped | supersede` (optional `reason`, `edit`, `supersede_target`). One unresolvable ref fails the whole file (exit `2`, nothing committed). With `--json`, each landed verdict echoes as one NDJSON row.
+`resolution` is one of `approved | edited | rejected | skipped | supersede` (with optional `reason`, `edit`, `supersede_target`). If one ref cannot be resolved, the whole file fails (exit `2`, nothing committed). With `--json`, each verdict that lands is echoed as one NDJSON row.
 
-Two 0.7.1 additions:
+Two more options:
 
-- **Structured verdict flags** — for scripted single decisions without a file: `--approve <refs...>` lands approvals; `--skip <refs...>` and `--defer <refs...>` record nothing and leave the items queued. Mutually exclusive with `--verdicts`.
-- **Archives require explicit consent.** A headless rejection no longer destroys anything: rejected entries are held as non-destructive `pending_archive` facts (exit `0`, loudly summarized). Destroying them takes `--allow-archive` **plus** `--because "<reason>"` — and under `--mode ci`, archives are refused under any flag (exit `2`).
+- **Structured verdict flags** for single scripted decisions without a file: `--approve <refs...>` lands approvals; `--skip <refs...>` and `--defer <refs...>` record nothing and leave the items in the queue. These flags cannot be combined with `--verdicts`.
+- **Archives need explicit consent.** A headless rejection destroys nothing: rejected entries are held as non-destructive `pending_archive` facts (exit `0`, clearly summarized). To destroy them, pass `--allow-archive` **and** `--because "<reason>"`. Under `--mode ci`, archives are refused whatever the flags (exit `2`).
 
-The rule stands: there is no auto-approve. These paths land **your** decisions faster; they never make them.
+There is no auto-approve. These paths land **your** decisions faster; they never make decisions for you.
 
 ## The sync verbs on the stream {#the-sync-verbs-on-the-stream}
 
-`kane-cli context sync`, `kane-cli context push`, `kane-cli context pull`, `kane-cli context clone` and the subcommands `kane-cli context sync add`, `kane-cli context sync list`, `kane-cli context sync remove`, `kane-cli context sync status` and `kane-cli context sync doctor` all take `--mode agent` and speak the same strict envelope with `verb: "sync"`: stdout is NDJSON only, stderr stays empty, and `done` is last. None of them calls the agent or spends credits. `kane-cli context sync setup` is the one command that needs a terminal, and under `--mode agent` it answers `error{code: TTY_REQUIRED}` naming `kane-cli context sync add` and `kane-cli context clone` as the alternatives. What these commands do is in [Sharing the context graph with your team](/docs/kane-cli-assurance-sharing/).
+`kane-cli context sync`, `kane-cli context push`, `kane-cli context pull`, `kane-cli context clone` and the subcommands `kane-cli context sync add`, `kane-cli context sync list`, `kane-cli context sync remove`, `kane-cli context sync status` and `kane-cli context sync doctor` all take `--mode agent` and use the same strict envelope with `verb: "sync"`: stdout is NDJSON only, stderr stays empty, and `done` is last. None of them calls the agent or spends credits.
+
+`kane-cli context sync setup` is the one command that needs a terminal. Under `--mode agent` it answers `error{code: TTY_REQUIRED}` and names `kane-cli context sync add` and `kane-cli context clone` as the alternatives. What these commands do is described in [Sharing the context graph with your team](/docs/kane-cli-assurance-sharing/).
 
 | type | payload highlights |
 |---|---|
-| `sync_probe_started` / `sync_probe` | `kane-cli context sync add` and `kane-cli context clone`, around the location check (the slow part on a first GitHub fetch): `name`, `kind`, then `tier` (`1` means the location can publish, `2` or `3` download only) and `detail` |
-| `sync_status` | `kane-cli context sync status`: `name`, `relation` — `kind` (`up-to-date`, `behind`, `ahead`, `diverged`, `empty-storage`, `empty-local`, `foreign-lineage`), `local` and `storage` (each `{seq, hash}` of that side's last record, or null when that side is empty) and, on `diverged`, `at` (the first record number where the two sides differ, so the last shared record is `at - 1`) — then `rebase_id` (the open rebase, or null) and `decisions[]` (each in the `sync_rebase_decision` shape). The event needs the location: when it cannot be reached the command refuses instead, and the decisions are not listed |
-| `sync_status` with `--show <n>` | needs no location: `record[]` (the saved record in full, one line each), `decision`, `rebase_id`, `decisions[]`, while `name` and `relation` are null |
-| `sync_locations` / `sync_removed` | `kane-cli context sync list` / `kane-cli context sync remove` |
-| `sync_pull_done` | `kane-cli context pull`, `kane-cli context sync`, `kane-cli context clone`: `name`, `imported`, `from`, `to`, `blobs`, `proposals`, and `clone` adds `dir` |
-| `sync_push_done` | `kane-cli context push`, `kane-cli context sync`: `name`, `from`, `to`, `pushed`, `blobs`, `proposals`, `already_there` |
-| `sync_rebase_started` | `kane-cli context pull --rebase --yes`: `rebase_id`, `from`, `backup_path`, `moved[]`, `quarantined_tests[]` |
-| `sync_rebase_item` | one per saved record: `seq`, `intent` (`extract`, `review`, `names`, `retire` and so on), `outcome` (`reapplied`, `already-present`, `not-reapplied`, `decision`), `reason?` |
-| `sync_rebase_decision` | one per open decision, in dependency order: `decision_id`, `kind`, `intent`, `seq`, `label`, `location`, `mine` and `theirs` (one line per side, the local change and the location's), `answers[]` (only the legal ones, each `{answer, consequence}`) |
-| `sync_rebase_done` | once per walk, and once when `kane-cli context sync doctor --abort` closes a readable rebase: the four counts, `decisions_open`, `status` (`complete`, `paused`, `aborted`) |
-| `sync_rebase_open` | `kane-cli context push` or `kane-cli context sync` while a rebase is still open, followed by `sync_error{SYNC_REBASE_PENDING}` |
-| `sync_doctor` / `sync_rebase_exported` | `kane-cli context sync doctor` / `kane-cli context sync doctor --export` |
-| `sync_behind` | the advisory from `kane-cli context extract`, `kane-cli design tests` and `kane-cli maintain reconcile` when a teammate has pushed since you pulled: `name`, `local_seq`, `storage_seq`, `text`. Nothing is refused |
-| `gitignore_updated` | `kane-cli context clone` and `kane-cli context sync doctor --export` (and `kane-cli context ingest` on its `extract` stream) when the new store's folder is inside a git repository and `.context/` was added to its `.gitignore`: `path`. When the line could not be written, the store is still created and a `warning{message}` says why |
+| `sync_probe_started` / `sync_probe` | `kane-cli context sync add` and `kane-cli context clone`, around the location check (the slow part on a first GitHub fetch): `name`, `kind`, then `tier` (`1` means the location can publish, `2` or `3` means download only) and `detail`. |
+| `sync_status` | `kane-cli context sync status`: `name`, then `relation`, made of `kind` (`up-to-date`, `behind`, `ahead`, `diverged`, `empty-storage`, `empty-local`, `foreign-lineage`), `local` and `storage` (each `{seq, hash}` of that side's last record, or null when that side is empty) and, on `diverged`, `at` (the first record number where the two sides differ, so the last shared record is `at - 1`). Then `rebase_id` (the open rebase, or null) and `decisions[]` (each in the `sync_rebase_decision` shape). This event needs the location: when it cannot be reached, the command refuses instead and the decisions are not listed. |
+| `sync_status` with `--show <n>` | `kane-cli context sync status --show <n>` needs no location: `record[]` (the saved record in full, one line each), `decision`, `rebase_id`, `decisions[]`, while `name` and `relation` are null. |
+| `sync_locations` / `sync_removed` | `kane-cli context sync list` / `kane-cli context sync remove`. |
+| `sync_pull_done` | `kane-cli context pull`, `kane-cli context sync`, `kane-cli context clone`: `name`, `imported`, `from`, `to`, `blobs`, `proposals`; `clone` adds `dir`. |
+| `sync_push_done` | `kane-cli context push`, `kane-cli context sync`: `name`, `from`, `to`, `pushed`, `blobs`, `proposals`, `already_there`. |
+| `sync_rebase_started` | `kane-cli context pull --rebase --yes`: `rebase_id`, `from`, `backup_path`, `moved[]`, `quarantined_tests[]`. |
+| `sync_rebase_item` | One per saved record: `seq`, `intent` (`extract`, `review`, `names`, `retire` and so on), `outcome` (`reapplied`, `already-present`, `not-reapplied`, `decision`), `reason?`. |
+| `sync_rebase_decision` | One per open decision, in dependency order: `decision_id`, `kind`, `intent`, `seq`, `label`, `location`, `mine` and `theirs` (one line per side: the local change and the location's), and `answers[]` (only the valid ones, each `{answer, consequence}`). |
+| `sync_rebase_done` | Once per walk, and once when `kane-cli context sync doctor --abort` closes a readable rebase: the four counts, `decisions_open`, and `status` (`complete`, `paused`, `aborted`). |
+| `sync_rebase_open` | `kane-cli context push` or `kane-cli context sync` while a rebase is still open, followed by `sync_error{SYNC_REBASE_PENDING}`. |
+| `sync_doctor` / `sync_rebase_exported` | `kane-cli context sync doctor` / `kane-cli context sync doctor --export`. |
+| `sync_behind` | The advisory from `kane-cli context extract`, `kane-cli design tests` and `kane-cli maintain reconcile` when a teammate has pushed since you pulled: `name`, `local_seq`, `storage_seq`, `text`. Nothing is refused. |
+| `gitignore_updated` | `kane-cli context clone` and `kane-cli context sync doctor --export` (and `kane-cli context ingest` on its `extract` stream), when the new store's folder is inside a git repository and `.context/` was added to its `.gitignore`: `path` (`.gitignore`). If the line could not be written, the store is still created and a `warning{message}` says why. |
+| `sync_error` | A sync refusal: always `code` (`SYNC_BEHIND`, `SYNC_DIVERGED`, `SYNC_REBASE_PENDING`, `SYNC_LOCATION_UNREACHABLE`, `SYNC_LOCATION_DENIED`, `SYNC_LOCATION_EMPTY`, `SYNC_READ_ONLY`, `SYNC_POSITION_TAKEN`, `SYNC_FOREIGN_LINEAGE`, `SYNC_GIT_REQUIRED`, `SYNC_PUBLICATION_UNKNOWN` and others), `detail`, and `remedy`: the exact next command, in plain words. |
+| `error` | A command-level refusal (a bad flag or an unknown decision id, `USAGE`; `MODE_USAGE`; `CREDENTIALS_MISSING`; `TTY_REQUIRED`) or a runtime failure: `message`, with optional `code` and `remedy`. An event with a message only can be either (a missing store is a refusal with `message` alone), so read `message`, pass on `remedy` when present, and tell the two apart by `done.exit_code` (`2` refused, `1` failed). |
+| `done` | Always last: `status`, which is `complete` (0), `refused` (2, or 3 when a person has to decide), `paused` (3), `error` (1) or `interrupted` (130), and `exit_code`. `paused` means decisions are waiting. After a rebase walk, the rebase stays open; after `kane-cli context sync doctor --abort`, the rebase is closed and the unanswered decisions stay in the backup. The `sync_rebase_done` event before it (`status` `paused` or `aborted`) tells the two apart. One more case: when a rebase's saved state cannot be read, `kane-cli context sync doctor --abort` sets it aside and sends `sync_doctor` alone (`aborted: true`, with a `detail` saying the next `kane-cli context sync` reapplies the backup) and no `sync_rebase_done`. Read `sync_doctor.detail`. |
 
-Exit codes keep their meanings, with one addition: exit `3` is also **a person has to decide something**, which covers a `kane-cli context push` or `kane-cli context pull` refused because you are behind or diverged (the remedy names the command), and a rebase that stopped on open decisions (answer them with `--answer`, or on a terminal). Exit `2` is a precondition (a location that cannot be reached, a rebase still open, missing keys), and exit `1` a record that cannot be used. A refusal says what stopped, not that nothing happened.
+The `done` guarantee holds here too: every one of these commands ends its stream with exactly one `done`, refusals included. Ignore event types you do not recognise. A refusal tells you what stopped; it does not mean nothing happened. `kane-cli context sync` finishes its pull before its push can be refused, and a push can land on the server before its confirmation is lost (`SYNC_PUBLICATION_UNKNOWN`). The events before the `sync_error` show what completed. The exit codes are in [Exit codes](#exit-codes).
 
-## Coverage on the stream *(0.7.1)*
+**Answering decisions from an agent.** When a rebase meets a disagreement, it sends every open `sync_rebase_decision` and then stops with `done{paused, 3}`.
 
-`cover --mode agent` and `cover gaps --mode agent` speak the same envelope (`verb: "cover"` / `"gaps"`): the full `--json` payload arrives as **one** `coverage` (or `gaps`) event — *(0.8.2)* `cover gaps <uc-id>` emits the document closed over that use-case — and `done` closes the stream carrying the worklist's ready-to-paste commands in `next[]`. `--mode ci` speaks the identical stream. Any refusal is an `error` event + `done` with exit `2`.
+- Answer a decision by id with `--answer <decision_id>=<answer>` on `kane-cli context sync` or `kane-cli context pull`. You can repeat the flag. Use only an `answer` that the event listed.
+- Each run applies the answers it was given and stops again while decisions remain. The last answer lets the rebase finish: `kane-cli context sync` then pulls and pushes in the same run, while `kane-cli context pull` only pulls.
+- The two sides are always `local` and the location's name. `mine` describes the local change and `theirs` describes the location's.
+- Never guess an answer. `keep-theirs` writes nothing and is always offered, but it is still a choice: the local change stays in the backup, and any later saved record built on it is looked at again.
+- An unknown id, or an answer the decision does not offer, returns `error{USAGE}` and writes nothing. If your answer was checked against decisions that have since moved, the command refuses with `SYNC_REBASE_PENDING`, so read the decisions again before answering.
+- Between runs, `kane-cli context sync status --json` lists the open decisions again when the location can be reached, and `--show <n>` prints one saved record in full without touching the location.
+
+A real exchange with one decision (the backup path is shortened):
+
+```bash
+$ kane-cli context pull origin --rebase --yes --mode agent
+{"type":"sync_rebase_started","v":1,"verb":"sync","name":"origin","rebase_id":"2026-09-14T10-47-54-074Z-reset","from":3,"backup_path":"…/.context/sync/backups/2026-09-14T10-47-54-074Z-reset","moved":["000003-3551914b01f9.json"],"quarantined_tests":[]}
+{"type":"sync_pull_done","v":1,"verb":"sync","name":"origin","imported":1,"from":2,"to":3,"blobs":0,"proposals":0}
+{"type":"sync_rebase_item","v":1,"verb":"sync","rebase_id":"2026-09-14T10-47-54-074Z-reset","seq":3,"intent":"names","outcome":"decision","reason":"slug: \"spec\" names brief on origin (by bob at 2026-09-14T10:47:47.857Z)"}
+{"type":"sync_rebase_decision","v":1,"verb":"sync","rebase_id":"2026-09-14T10-47-54-074Z-reset","decision_id":"h3","kind":"slug","intent":"names","seq":3,"label":"names spec","location":"origin","mine":"named prd \"spec\" at 2026-09-14T10:47:50.866Z","theirs":"\"spec\" names brief on origin (by bob at 2026-09-14T10:47:47.857Z)","answers":[{"answer":"keep-theirs","consequence":"the local change stays in the backup"},{"answer":"apply-mine","consequence":"the name moves to the local node; the node that holds it on origin is reached by its id again"}]}
+{"type":"sync_rebase_done","v":1,"verb":"sync","rebase_id":"2026-09-14T10-47-54-074Z-reset","reapplied":0,"already_present":0,"not_reapplied":0,"decisions_open":1,"status":"paused"}
+{"type":"done","v":1,"verb":"sync","status":"paused","exit_code":3}
+
+$ kane-cli context sync origin --answer h3=keep-theirs --mode agent
+{"type":"sync_rebase_item","v":1,"verb":"sync","rebase_id":"2026-09-14T10-47-54-074Z-reset","seq":3,"intent":"names","outcome":"not-reapplied","reason":"you kept origin's version"}
+{"type":"sync_rebase_done","v":1,"verb":"sync","rebase_id":"2026-09-14T10-47-54-074Z-reset","reapplied":0,"already_present":0,"not_reapplied":1,"decisions_open":0,"status":"complete"}
+{"type":"sync_pull_done","v":1,"verb":"sync","name":"origin","imported":0,"from":3,"to":3,"blobs":0,"proposals":0}
+{"type":"sync_push_done","v":1,"verb":"sync","name":"origin","from":3,"to":3,"pushed":0,"blobs":0,"proposals":0,"already_there":0}
+{"type":"done","v":1,"verb":"sync","status":"complete","exit_code":0}
+```
+
+**Writes are blocked while a rebase is open.** Every write command (`kane-cli context extract`, `kane-cli design tests`, `kane-cli maintain reconcile`, `kane-cli context ingest`, `kane-cli context review`, `kane-cli context name`, `kane-cli context retire`, `kane-cli context revert` and `kane-cli context push`) refuses with `sync_error{code: SYNC_REBASE_PENDING}` on its own stream and exit `2`. A test run is the exception: it does not refuse. The results it would record are set aside and land on the first run after the rebase closes, and the run logs a warning. To unblock the store, finish the rebase (`kane-cli context sync` or `kane-cli context pull`, with answers) or close it (`kane-cli context sync doctor --abort`). Never delete files under `.context/`.
+
+`kane-cli context name`, `kane-cli context retire` and `kane-cli context revert` also take `--mode agent`. On success the stream ends with `done`, preceded by a `warning{message}` event for each note the command has (`kane-cli context revert` sends one per note). Every refusal is typed.
+
+**In CI**: clone once, pull before the run, push after it, and stop the job on exit `3`. The maintained recipe is in [CI/CD recipes: A shared context store in CI](/docs/kane-cli-cicd/#a-shared-context-store-in-ci).
+
+## Coverage on the stream
+
+`cover --mode agent` and `cover gaps --mode agent` use the same envelope (`verb: "cover"` / `"gaps"`). The full `--json` payload arrives as **one** `coverage` (or `gaps`) event; `cover gaps <uc-id>` sends the document scoped to that one use-case. `done` closes the stream and carries the worklist's ready-to-paste commands in `next[]`. `--mode ci` produces the identical stream. Any refusal is an `error` event plus `done`, with exit `2`.
 
 ## When releases don't match
 
-Sessions bind to the kane-cli release that created them, and the refusals are loud with the remedy in the message: `PAIR_MISMATCH` at startup (exit `2` — reinstall so the installed pieces match), `BINDING_MISMATCH` on resume (exit `2` — the session belongs to another release: start fresh, committed work is kept, or resume on the release that created it), and a mid-run "this version of kane-cli is no longer supported — update kane-cli and retry" (a message-only runtime failure, exit `1`). Hitting `BINDING_MISMATCH` on a paused session right after upgrading is expected, not corruption.
+A session is tied to the kane-cli release that created it. Mismatches refuse loudly, with the remedy in the message:
+
+- `PAIR_MISMATCH` at startup (exit `2`): reinstall so the installed pieces match.
+- `BINDING_MISMATCH` on resume (exit `2`): the session belongs to another release. Start fresh (committed work is kept), or resume on the release that created it.
+- A mid-run "this version of kane-cli is no longer supported — update kane-cli and retry" (a runtime failure with a message only, exit `1`).
+
+Seeing `BINDING_MISMATCH` on a paused session right after you upgrade is expected. It does not mean anything is corrupted.
 
 ## Machine-readable reads
 
-These read commands have structured forms: `context list --json` and `context sessions --json` (one JSON object per line), `context explain --json`, `context view --json` (the full computed graph payload), `context view --no-open --out graph.html` (render without a browser), `cover --json`, and `cover gaps --json` (the nested coverage document — see [Coverage](/docs/kane-cli-assurance-coverage/)).
+These read commands have structured forms:
+
+- `context list --json` and `context sessions --json` (one JSON object per line)
+- `context explain --json`
+- `context view --json` (the full computed graph payload)
+- `context view --no-open --out graph.html` (renders without opening a browser)
+- `cover --json` and `cover gaps --json` (the nested coverage document; see [Coverage](/docs/kane-cli-assurance-coverage/))
+- `kane-cli context sync status --json` (the relation, the open rebase id and its decisions), `kane-cli context sync list --json` and `kane-cli context sync doctor --json`
 
 ## Headless maintain
 
-- `maintain reconcile --from <file> --source-id <id> --plan` — safe preview: records the source change, stages every proposed row into a stored plan, touches nothing else. Exit `0`; when the source actually changed, the plan path is the last stdout line (an unchanged source is a no-op that stores nothing).
-- `maintain reconcile … --mode override` (or `--mode ci`) — unattended application: ADD and MODIFY rows apply, archiving never happens headless, and `ci` fail-closes the moment human judgement is needed (the plan is stored; exit `2`).
-- Re-running the same reconcile command is idempotent — it resumes a pending plan, reports an applied one, and recomputes a superseded one ([details](/docs/kane-cli-assurance-maintain/#running-again)).
-- Bare headless runs without an explicit `--mode` refuse with exit `2` — by design.
+- `maintain reconcile --from <file> --source-id <id> --plan` is a safe preview. It records the source change, stages every proposed row into a stored plan, and touches nothing else. It exits `0`. When the source actually changed, the plan path is the last stdout line; an unchanged source stores nothing.
+- `maintain reconcile … --mode override` (or `--mode ci`) applies the plan unattended. ADD and MODIFY rows apply, archiving never happens headless, and `ci` stops the moment a person's judgement is needed (the plan is stored; exit `2`).
+- Re-running the same reconcile command is idempotent: it resumes a pending plan, reports an applied one, and recomputes a superseded one ([details](/docs/kane-cli-assurance-maintain/#running-again)).
+- A bare headless run without an explicit `--mode` refuses with exit `2`. This is by design.
 
 ## A CI shape that works
 
 ```bash
-# fail the pipeline on unresolved high-risk ambiguity, never guess:
+# fail the pipeline on a high-risk question; low- and medium-risk ones take their recommended default:
 kane-cli context extract --mode ci
 
 # or: let it pause, surface the questions as a build artifact, resume in a follow-up job:
@@ -240,11 +334,11 @@ kane-cli design tests --use-case uc-checkout --max 8 --mode ci
 kane-cli maintain reconcile --from ./docs/prd.md --source-id prd --plan
 ```
 
-Author and batch the resulting tests with the same CI patterns as any other test — see [testrun](/docs/kane-cli-testrun/) and the [CI/CD recipes](/docs/kane-cli-cicd/).
+Author and batch the resulting tests with the same CI patterns as any other test. See [testrun](/docs/kane-cli-testrun/) and the [CI/CD recipes](/docs/kane-cli-cicd/).
 
 ## Next steps
 
-- [The assurance overview](/docs/kane-cli-assurance/) — where each command sits.
+- [The assurance overview](/docs/kane-cli-assurance/): where each command fits.
 - [Building the context graph](/docs/kane-cli-assurance-context/) · [Designing tests](/docs/kane-cli-assurance-design/) · [Maintaining the suite](/docs/kane-cli-assurance-maintain/).
 
 <KaneCliCta />

@@ -8,21 +8,21 @@ keywords: ['kane cli ai coding agents', 'claude code browser testing', 'lovable 
 
 import { KaneCliCta } from "/snippets/KaneCliCta.mdx";
 
-An AI coding agent can write the change, but without a browser it cannot tell you whether the change actually works. It can read the source, trace the wiring, and tell you the code looks correct, and it will still be guessing about the running app.
+An AI coding agent can write a change, but without a browser it cannot tell you whether the change works. It can read the source, trace the wiring, and tell you the code looks correct, but it is still guessing about the running app.
 
-Kane CLI closes that gap. Install one skill file and your agent gains a real Chrome session it can drive in plain English, plus a structured result it can read, reason about, and act on without a human interpreting the terminal. The walkthroughs below show the same idea across seven different builders, followed by the patterns that work in any of them.
+Kane CLI closes that gap. Install one skill file, and your agent gets a real Chrome session it can drive in plain English. Each run returns a structured result the agent can read, reason about, and act on, so no one has to interpret the terminal output. The walkthroughs below show this across seven builders, followed by patterns that work in any agent.
 
 ## How AI Builders Work With Kane CLI
 
 <img loading="lazy" src="/assets/images/kane-cli/sketchnotes/ai-coding-agents-architecture.svg" alt="Architecture of AI coding agents working with Kane CLI: any builder such as Claude Code, Cursor, Gemini CLI, Codex CLI, Kiro, Lovable, Antigravity, or GLM reads one skill file, runs a single kane-cli command, drives a real Chrome session, and gets back an NDJSON stream and an evidence pack it can act on" width="1000" height="563" />
 
-The architecture is the same no matter which builder you use, and it has only three moving parts.
+The setup is the same in every builder, and it has three parts.
 
 **One skill file teaches the agent when and how to reach for a browser.** The skill is plain markdown. It tells the agent to use `kane-cli` rather than Playwright or Puppeteer directly, to always pass `--agent`, how to build the command, how to parse the output, and how to diagnose a failure. Install it once and the agent handles browser work automatically whenever you ask for it.
 
-**One command does the work.** `kane-cli run` for an ad-hoc objective, `kane-cli testmd run` for a committed replayable test, and `kane-cli generate` for authoring test cases from a description. Kane CLI manages Chrome, authentication, and the automation agent itself, so the coding agent only has to write a sentence.
+**One command does the work.** Use `kane-cli run` for a one-off objective, `kane-cli testmd run` for a committed test that replays, and `kane-cli generate` to write test cases from a description. Kane CLI manages Chrome, authentication, and its own automation agent, so the coding agent only has to write a sentence.
 
-**The result comes back in a form the agent can act on.** Every run streams NDJSON, ending with a `run_end` event that carries the status, summary, duration, extracted values, and paths to the logs. Alongside it sits the `.evidence` pack: step traces, screenshots, video, and command, network and console logs. When a run fails, the agent reads the same proof a human would, which is why it can diagnose the failure instead of just reporting it.
+**The result comes back in a form the agent can act on.** Every run streams NDJSON (one JSON event per line). The last event, `run_end`, carries the status, summary, duration, extracted values, and paths to the logs. The run also produces a `.evidence` pack with step traces, screenshots, video, and command, network, and console logs. When a run fails, the agent reads the same proof a person would, so it can diagnose the failure instead of only reporting it.
 
 ### Supported Agents
 
@@ -42,17 +42,19 @@ Install globally for Claude Code, Codex CLI, and Gemini CLI in one command:
 npx @testmuai/kane-cli-skill
 ```
 
-A global install applies to every project. A project-level install ships with the repo, so teammates and CI pick it up automatically. For any agent not on that list, give it the hosted skill URL and it will fetch the same instructions.
+A global install applies to every project. A project-level install lives in the repo, so teammates and CI get it automatically. For any other agent, give it the hosted skill URL and it fetches the same instructions.
+
+The installer also creates the folder that holds your agent preferences. On your first run, the agent shows a ready check, starts the run right away, and asks three quick choices after you see the result. See [Skills](/docs/kane-cli-skills/#what-happens-on-your-first-run) for the first run, your preferences, where results are saved, and the live status strip in Claude Code.
 
 ### Authenticate Without a Browser Window
 
-OAuth opens a browser window that an agent cannot complete on its own. Use Basic Auth instead:
+With the skill installed, the agent's ready check shows whether you are signed in and offers the fix if you are not. The agent can open the sign-in page for you, and it never asks you to paste an access key into the chat. If no browser window can open, for example in a sandboxed builder or on a CI runner, use Basic Auth instead:
 
 ```bash
 kane-cli login --username "<your-username>" --access-key "<your-access-key>"
 ```
 
-Confirm with `kane-cli whoami`. The skill runs this check itself before its first browser task. Sandboxed builders such as Lovable will ask you to complete the OAuth step in your own terminal and then hand them the username and access key.
+Confirm with `kane-cli whoami`. The skill runs this check itself before its first browser task. Sandboxed builders such as Lovable ask you to complete the OAuth step in your own terminal and then give them your username and access key.
 
 ---
 
@@ -265,7 +267,7 @@ An ad-hoc verification disappears when the conversation ends. This use case prom
 1. Ask your agent to keep the run, for example *"That checkout verification was good, save it as a test."*
 2. The agent re-runs the objective with the `--name` flag, for example `--name checkout-flow`, which writes a `_test.md` file to `.testmuai/tests/`.
 3. It moves the file into your repo, typically under `tests/`, and commits it alongside its `output-<stem>/` recording directory, which is commit-safe by design.
-4. From then on the test replays from cache: no AI agent, no LLM cost, and much faster execution, as long as the step prose and config are unchanged.
+4. From then on the test replays from its recording: no AI agent, no LLM cost, and much faster execution, as long as the step text and config stay the same.
 5. Ask the agent to run the suite whenever you need it, for example `kane-cli testmd run ./tests/checkout_test.md --agent --headless`.
 6. When a flow changes, ask the agent to edit only the affected step. Editing step N re-authors step N and every step after it, so a targeted edit keeps re-authoring cheap.
 
@@ -274,7 +276,7 @@ An ad-hoc verification disappears when the conversation ends. This use case prom
 The cheapest place to catch a broken flow is before the code leaves your machine. Your agent can gate its own work on a real browser run.
 
 1. Tell the agent the rule once, for example *"Before you open a PR, run the login and checkout tests against my local server and don't push if either fails."*
-2. The agent runs the committed tests rather than authoring new ones, for example `kane-cli testmd run ./tests/login_test.md --agent --headless --retry`.
+2. The agent runs the committed tests rather than authoring new ones, for example `kane-cli testmd run ./tests/login_test.md --agent --headless`.
 3. It reads the exit code to decide what to do next: `0` passed, `1` failed, `2` an auth, setup, or parse error, and `3` a timeout or cancellation.
 4. On a pass, it proceeds with the commit and PR as instructed.
 5. On a failure, it stops, reads `Result.md` to see which step failed, and brings you the specific broken step rather than a wall of output.
@@ -294,8 +296,8 @@ Sometimes the agent needs a real value from a running application, not a verific
 
 An agent run that stops to ask a question hangs forever, because nothing is there to answer it. A few habits keep every agent-driven run unattended and reliable.
 
-1. Always pair `--agent` with `--headless`. Without it, non-interactive environments hit display server errors.
-2. Write objectives that never need mid-run input. The `ask_user` event is auto-disabled when stdin is not a TTY, which is always the case in agent and CI contexts, so an objective that depends on a prompt simply fails.
+1. Always pair `--agent` with `--headless`. Without `--headless`, non-interactive environments hit display server errors.
+2. Write objectives that never need input during the run. Kane CLI turns off the `ask_user` event (a question to you mid-run) when stdin is not a terminal (TTY). That is always the case for agents and CI, so an objective that depends on a prompt fails.
 3. Set a `--timeout` on every run so a stuck page fails fast instead of blocking the agent's task.
 4. Keep objectives under roughly fifteen steps. Longer objectives drift; ask the agent to split them into separate runs instead.
 5. Pass credentials through a variables file rather than inline in the objective, so secrets never end up in the agent's transcript or your shell history.

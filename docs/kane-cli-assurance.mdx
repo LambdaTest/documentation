@@ -8,10 +8,10 @@ keywords: ['kane cli assurance', 'requirements to tests', 'test coverage lifecyc
 
 import { KaneCliCta } from "/snippets/KaneCliCta.mdx";
 
-kane-cli began as a way to author and replay browser tests. The **assurance** commands take on the step before and after: describe what your product must do, and kane-cli designs the tests that prove it — each one permanently linked to the requirement it verifies. Run them, and coverage stops being a guess: every run reports exactly what it proved and what it still owes. And as your product changes, the suite is reconciled instead of quietly rotting.
+Kane CLI authors and replays browser tests. The **assurance** commands handle the work around that. You describe what your product must do, and Kane CLI designs the tests that prove it, with each test permanently linked to the requirement it verifies. When you run those tests, every run reports what it proved and what is still missing, so coverage is measured rather than guessed. When your product changes, you reconcile the suite against the change instead of letting it drift out of date.
 
 <Note>
-Requires kane-cli **0.6.1 or later** (`kane-cli --version`). On 0.6.0 these commands fail after a fresh install — upgrade.
+Requires Kane CLI 0.6.1 or later. Check your version with `kane-cli --version`. On 0.6.0 these commands fail after a fresh install, so upgrade first.
 </Note>
 
 ## The loop
@@ -33,64 +33,65 @@ Requires kane-cli **0.6.1 or later** (`kane-cli --version`). On 0.6.0 these comm
    source)
 ```
 
-Every stage is a separate command, so you can stop, review, and resume at any point — nothing downstream happens without the upstream commit.
+Each stage is its own command. You can stop, review, and resume at any point, and no stage runs until the stage before it has committed its output.
 
 | Stage | Command | What it does |
 |---|---|---|
-| Capture | [`kane-cli context ingest`](/docs/kane-cli-assurance-context/#ingest) | Snapshot requirement documents into a local, content-addressed store (`.context/`) |
+| Capture | [`kane-cli context ingest`](/docs/kane-cli-assurance-context/#ingest) | Saves a snapshot of your requirement documents in a local store (`.context/`), where each snapshot is identified by a hash of its content |
 | Extract | [`kane-cli context extract`](/docs/kane-cli-assurance-context/#extract) | An agent reads the sources and proposes **use-cases**, citing the exact lines it read |
 | Review | [`kane-cli context review`](/docs/kane-cli-assurance-context/#review) | You promote proposals to **trusted**, edit them, or reject them |
-| Design | [`kane-cli design tests`](/docs/kane-cli-assurance-design/) | Turn one use-case into acceptance criteria, scenarios, and runnable tests — each test tagged with the criteria it verifies |
-| Review the design | [`kane-cli context review`](/docs/kane-cli-assurance-context/#review) | Design output is `derived` too — approve, edit, or reject the generated ACs, scenarios, and tests |
-| Execute | [`kane-cli testmd run`](/docs/kane-cli-testmd/), `kane-cli testrun run` | Author and replay the designed tests; every run seals an evidence pack |
-| Measure | [`kane-cli cover`](/docs/kane-cli-assurance-coverage/) | Two axes: what a pack **proved** vs what the design still **owes** |
-| Maintain | [`kane-cli maintain`](/docs/kane-cli-assurance-maintain/) | Reconcile the suite when a source document changes |
-| Share | [`kane-cli context sync`](/docs/kane-cli-assurance-sharing/) | Share the store with your team through a location, a GitHub repository, an S3-compatible bucket, or a folder, with `kane-cli context push`, `kane-cli context pull` and `kane-cli context clone` |
+| Design | [`kane-cli design tests`](/docs/kane-cli-assurance-design/) | Turns one use-case into acceptance criteria, scenarios, and runnable tests, and tags each test with the criteria it verifies |
+| Review the design | [`kane-cli context review`](/docs/kane-cli-assurance-context/#review) | Design output also starts as `derived`, so you approve, edit, or reject the generated ACs, scenarios, and tests |
+| Execute | [`kane-cli testmd run`](/docs/kane-cli-testmd-running/), [`kane-cli testrun run`](/docs/kane-cli-testrun/) | Authors and replays the designed tests. Every run seals an [evidence pack](/docs/kane-cli-evidence/) |
+| Measure | [`kane-cli cover`](/docs/kane-cli-assurance-coverage/) | Reports two things: what a pack **proved**, and what the design still **owes** |
+| Maintain | [`kane-cli maintain`](/docs/kane-cli-assurance-maintain/) | Brings the suite back in line when a source document changes |
+| Share | [`kane-cli context sync`](/docs/kane-cli-assurance-sharing/) | Shares the store with your team through a location (a GitHub repository, an S3-compatible bucket, or a folder), using `kane-cli context push`, `kane-cli context pull` and `kane-cli context clone` |
 
 ## The vocabulary
 
 | Term | Meaning |
 |---|---|
-| **Source** | A requirement document you ingested — a PRD, a spec, a policy page. Content-addressed: editing the file and re-ingesting creates a new version. |
-| **Use-case** | One thing a user needs to accomplish, extracted from sources with cited evidence. |
-| **Acceptance criterion (AC)** | A single verifiable promise ("the cart holds at most 10 items"), with a machine-checkable oracle. |
-| **Scenario** | One path through a use-case — happy, negative, boundary, edge. |
+| **Source** | A requirement document you ingested, such as a PRD, a spec, or a policy page. Each snapshot is identified by its content, so if you edit the file and ingest it again, Kane CLI records a new version. |
+| **Use-case** | One thing a user needs to accomplish, extracted from your sources with cited evidence. |
+| **Acceptance criterion (AC)** | A single promise you can verify ("the cart holds at most 10 items"), with an oracle: an expected result a machine can check. |
+| **Scenario** | One path through a use-case: happy, negative, boundary, or edge. |
 | **Test** | Exactly one runnable test per scenario (strict 1:1), written as a normal `*_test.md` file. |
-| **derived / trusted / archived** | Trust states. Everything an agent proposes starts `derived` (unreviewed); your review promotes it to `trusted` or rejects it to `archived`. Nothing is silently trusted. |
-| **fresh / stale / orphaned** | Freshness. When a source document changes, everything extracted from the old snapshot reads `stale` until re-verified; a node whose sources are all retired reads `orphaned`. |
-| **Gap** | A recorded, ranked piece of missing coverage — a criterion no test verifies, a question nobody answered, a scenario cut by budget. Gaps are first-class output, not silence. |
-| **Evidence pack** | The sealed `.evidence` file every run produces — the proof coverage is measured from. |
+| **derived / trusted / archived** | Trust states. Everything an agent proposes starts as `derived` (unreviewed). Your review promotes it to `trusted` or rejects it to `archived`. Nothing becomes trusted without your review. |
+| **fresh / stale / orphaned** | Freshness states. When a source document changes, everything extracted from the old snapshot reads `stale` until it is verified again. A node whose sources have all been retired reads `orphaned`. |
+| **Gap** | A recorded, ranked piece of missing coverage: a criterion no test verifies, a question nobody answered, or a scenario cut to stay within budget. Gaps are reported as output, never left out silently. |
+| **Evidence pack** | The sealed `.evidence` file every run produces. Coverage is measured from it. |
 
 ## Assurance vs `generate`
 
-kane-cli has two ways to author tests, for two different jobs:
+Kane CLI has two ways to author tests, each suited to a different job:
 
-- **[`kane-cli generate`](/docs/kane-cli-generate/)** — quick test cases from a plain-language description. One prompt in, scenarios and cases out. Great for exploring coverage of a feature you can describe in a sentence.
-- **The assurance lifecycle** — tests derived from your actual requirement documents, with every claim cited, every proposal reviewed, and a permanent, auditable link from each test back to the criteria it verifies. Use it when you need to answer "what exactly is covered, and how do we know?"
+- **[`kane-cli generate`](/docs/kane-cli-generate/)** creates quick test cases from a plain-language description. You give one prompt and get scenarios and cases back. Use it to explore coverage of a feature you can describe in a sentence.
+- **The assurance lifecycle** derives tests from your actual requirement documents. Every claim is cited, every proposal is reviewed, and each test keeps a permanent, auditable link back to the criteria it verifies. Use it when you need to answer "what exactly is covered, and how do we know?"
 
-If you have a PRD and care about coverage accounting, start with assurance. If you want ten good test ideas in a minute, start with `generate`.
+If you have a PRD and care about accounting for coverage, start with assurance. If you want ten good test ideas in a minute, start with `generate`.
 
 <a id="store" />
 ## The store: `.context/`
 
-The assurance commands work over a local store in your project directory, created on first `ingest`:
+The assurance commands work over a local store in your project directory. The first `ingest` creates it.
 
-- It is **append-only** in everyday use: no command that writes to it deletes or rewrites a record. Edits create new versions, and mistakes are reverted with compensation records. `kane-cli context explain` can replay the full history of any node. The one exception is a sync rebase, which replaces your records after the last shared one with the location's and reapplies your own on top, and every replaced record is kept in a backup.
-- It is **yours and local**: sources, use-cases, designs, and review verdicts live in your project. The extract and design agents run against the KaneAI service using your login and send it what they need to read, but the store they commit to is on your disk, and the store itself goes elsewhere only when you publish it to a location your team shares.
-- **Never merge `.context/` with git.** The store is single-writer, and two branches appending records will corrupt it on the next read. Kane CLI adds `.context/` to your `.gitignore` when it creates the store inside a git repository, and `KANE_CONTEXT_GITIGNORE=0` keeps it out.
-- **Share it through a location**: bind the store to a GitHub repository, an S3-compatible bucket, or a folder on a shared drive, then `kane-cli context push` publishes your records, `kane-cli context pull` takes your teammates', and `kane-cli context clone` gives a new teammate a store of their own. Nothing on a location is ever overwritten or deleted, and when two people change the same thing the disagreement is a decision you answer, never a silent overwrite. See [Sharing the context graph with your team](/docs/kane-cli-assurance-sharing/).
-- `kane-cli context fsck` verifies the whole store; `kane-cli context rebuild` regenerates the read caches from the verified records.
+- **It is append-only in everyday use.** No command that writes to the store deletes or rewrites a record. An edit creates a new version, and a mistake is undone by adding a compensation record. `kane-cli context explain` replays the full history of any node. The one exception is a sync rebase: it replaces your records after the last shared record with the location's records, then reapplies your own on top, and keeps every replaced record in a backup.
+- **It is yours and local.** Sources, use-cases, designs, and review verdicts live in your project. The extract and design agents run against the KaneAI service using your login and send it what they need to read, but they commit to the store on your disk. The store leaves your machine only when you publish it to a location your team shares.
+- **Never merge `.context/` with git.** The store has a single writer, and two branches appending records will corrupt it on the next read. When Kane CLI creates the store inside a git repository, it adds `.context/` to your `.gitignore`. Set `KANE_CONTEXT_GITIGNORE=0` to stop it.
+- **Share it through a location.** Bind the store to a GitHub repository, an S3-compatible bucket, or a folder on a shared drive. Then `kane-cli context push` publishes your records, `kane-cli context pull` takes your teammates' records, and `kane-cli context clone` gives a new teammate a store of their own. Nothing on a location is ever overwritten or deleted. When two people change the same thing, you answer the disagreement as a decision, so nothing is overwritten silently. See [Sharing the context graph with your team](/docs/kane-cli-assurance-sharing/).
+- `kane-cli context fsck` verifies the whole store, and `kane-cli context rebuild` regenerates the read caches from the verified records.
 
 ## What costs credits
 
-`context extract`, `design tests`, and `maintain reconcile` (which embeds them) call the KaneAI agent and consume credits (`kane-cli balance` to check; each agent turn's cost is reported as it happens). Everything else — list, view, review, explain, cover, fsck — is local and free.
+`context extract`, `design tests`, and `maintain reconcile` (which embeds both) call the KaneAI agent and consume credits. Run `kane-cli balance` to check your balance, and each agent turn reports its cost as it happens. Everything else, including list, view, review, explain, cover, and fsck, runs locally and is free. The sync commands (`kane-cli context push`, `kane-cli context pull`, `kane-cli context sync`, `kane-cli context clone`, and a rebase) talk only to your location, never to the KaneAI service, so they cost no credits either.
 
 ## Next steps
 
-- [Building the context graph](/docs/kane-cli-assurance-context/) — ingest, extract, review.
-- [Designing tests](/docs/kane-cli-assurance-design/) — from a use-case to runnable `*_test.md` files.
-- [Coverage](/docs/kane-cli-assurance-coverage/) — proven vs owed, and how designed tests join execution.
-- [Maintaining the suite](/docs/kane-cli-assurance-maintain/) — reconcile a changed source.
-- [Automation](/docs/kane-cli-assurance-automation/) — running all of this headless in CI or from an agent.
+- [Building the context graph](/docs/kane-cli-assurance-context/): ingest, extract, and review.
+- [Designing tests](/docs/kane-cli-assurance-design/): go from a use-case to runnable `*_test.md` files.
+- [Coverage](/docs/kane-cli-assurance-coverage/): proven vs owed, and how designed tests join execution.
+- [Maintaining the suite](/docs/kane-cli-assurance-maintain/): reconcile a changed source.
+- [Sharing the context graph with your team](/docs/kane-cli-assurance-sharing/): one shared location for publishing, taking your teammates' records, and cloning.
+- [Automation](/docs/kane-cli-assurance-automation/): run all of this headless in CI or from an agent.
 
 <KaneCliCta />

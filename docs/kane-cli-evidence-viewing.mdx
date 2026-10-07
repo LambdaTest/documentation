@@ -8,19 +8,19 @@ keywords: ['kane cli evidence serve', 'evidence viewer', 'view evidence pack', '
 
 import { KaneCliCta } from "/snippets/KaneCliCta.mdx";
 
-A sealed pack opens in the hosted viewer. When you serve a pack with `kane-cli evidence serve`, the server is local only and nothing is uploaded, because the viewer page reads the pack bytes from your machine.
+Sealed packs open in the hosted viewer. When you serve a pack with `kane-cli evidence serve`, the server runs only on your machine and nothing is uploaded: the viewer page reads the pack directly from your computer.
 
 ## After a run
 
-After a run in an interactive terminal, kane-cli offers to open the pack:
+When a run succeeds in an interactive terminal, Kane CLI asks whether to open the pack:
 
 ```text
 View evidence in browser? (y/N)
 ```
 
-Accepting starts a local server and opens the hosted viewer pointed at your pack.
+Answer `y` to start a local server and open the hosted viewer on your pack.
 
-In agent or non-interactive runs there is no prompt. kane-cli prints a hint line to stderr instead:
+Agent and non-interactive runs skip the prompt. Kane CLI prints this hint to stderr instead:
 
 ```text
 evidence: view locally with `kane-cli evidence serve <path-to-pack>`
@@ -28,7 +28,7 @@ evidence: view locally with `kane-cli evidence serve <path-to-pack>`
 
 ## `kane-cli evidence serve`
 
-Serves one or more sealed packs to the hosted viewer:
+This command serves one or more sealed packs to the hosted viewer:
 
 ```bash
 kane-cli evidence serve .testmuai/evidence/<execution_id>.evidence
@@ -49,27 +49,27 @@ Open the `viewer` URL in your browser.
 | `--port <n>` | Pin the local port | ephemeral |
 | `--viewer-url <base>` | Override the hosted viewer base URL | environment's viewer |
 
-`serve` accepts sealed `.evidence` files only. A live, unsealed pack directory is rejected.
+`serve` accepts only sealed `.evidence` files. It rejects a pack directory that is still live and unsealed.
 
-Exit codes: `0` after a clean Ctrl-C shutdown, `2` for any bad input or a port that cannot be bound.
+Exit codes: `0` when you stop the server cleanly with Ctrl-C, and `2` for any bad input or a port the server cannot bind.
 
 <Note>
-The server binds to `127.0.0.1` only and uses a random per-instance token in the URL path. Nothing is uploaded anywhere.
+The server listens only on `127.0.0.1` and puts a random token, unique to each server instance, in the URL path. Nothing is uploaded anywhere.
 </Note>
 
 ## The hosted viewer
 
-The viewer at `https://evidence.lambdatest.com` is a static page that opens packs three ways:
+The viewer at `https://evidence.lambdatest.com` is a static page. You can open a pack in three ways:
 
 - a `?pack=<url>` query parameter, which is what `evidence serve` and the post-run offer construct for you,
 - drag and drop of a `.evidence` file,
 - a file picker.
 
-It remembers your recently opened packs, and reads packs with ranged requests, so even a very large pack opens after fetching only a few kilobytes.
+The viewer remembers the packs you opened recently. It fetches only the parts of a pack it needs (using ranged requests), so even a very large pack opens after downloading a few kilobytes.
 
 ## Next steps
 
-- [Debugging a failed run](/docs/kane-cli-evidence-debugging/) — what to look at first.
-- [Validating packs](/docs/kane-cli-evidence-validate/) — if a pack will not open.
+- [Debugging a failed run](/docs/kane-cli-evidence-debugging/): what to look at first.
+- [Validating packs](/docs/kane-cli-evidence-validate/): if a pack will not open.
 
 <KaneCliCta />

@@ -11,6 +11,10 @@ import { KaneCliCta } from "/snippets/KaneCliCta.mdx";
 
 Every Kane CLI run ends with a `result_code` in the `run_end` event. This page lists every code, explains what triggered it, and tells you what to do next.
 
+<Note>
+`result_code` explains why a run stopped. The process exit code (`0` to `3`) is what gates CI. An early refusal can exit without a `run_end` event, so always check the process exit code too. See [Process Exit Codes](#process-exit-codes).
+</Note>
+
 ## How to Read Result Codes
 
 Result codes follow HTTP-style groupings:
@@ -39,7 +43,7 @@ The `run_end` event includes both `result_code` (numeric) and `reason_code` (des
 
 ---
 
-## 1xx — Success
+## 1xx: Success
 
 ### 100 COMPLETE
 
@@ -52,7 +56,7 @@ The `run_end` event includes both `result_code` (numeric) and `reason_code` (des
 
 ---
 
-## 2xx — Cancelled
+## 2xx: Cancelled
 
 ### 200 USER_CANCELLED
 
@@ -60,14 +64,14 @@ The `run_end` event includes both `result_code` (numeric) and `reason_code` (des
 |-------|-------|
 | **Reason code** | `cancelled.user` |
 | **Status** | `CANCELLED` |
-| **What happened** | The run was cancelled by the caller (e.g., Ctrl+C, `cancel` event, or API cancellation). |
+| **What happened** | The caller cancelled the run (for example, with Ctrl+C, a `cancel` event, or API cancellation). |
 | **Action** | No action required. Re-run the objective if needed. |
 
 ---
 
-## 3xx — Stuck
+## 3xx: Stuck
 
-The agent ran into a dead end. These are not crashes - the agent recognized it could not make further progress.
+The agent reached a dead end. These are not crashes: the agent recognized that it could not make further progress.
 
 ### 310 MAX_STEPS
 
@@ -85,7 +89,7 @@ The agent ran into a dead end. These are not crashes - the agent recognized it c
 | **Reason code** | `stuck.dag_cycle` |
 | **Status** | `STUCK` |
 | **What happened** | The agent detected 3 repeated page-state cycles (it keeps returning to the same state after each action). |
-| **Action** | Rephrase the objective with a different approach. The current path leads to a loop - try an alternative navigation route or add explicit intermediate steps. |
+| **Action** | Rephrase the objective with a different approach. The current path leads to a loop, so try an alternative navigation route or add explicit intermediate steps. |
 
 ### 330 AP_STUCK
 
@@ -98,7 +102,7 @@ The agent ran into a dead end. These are not crashes - the agent recognized it c
 
 ---
 
-## 4xx — Agent Error
+## 4xx: Agent Error
 
 An internal agent component failed. These typically indicate a transient issue or a problem with the session state.
 
@@ -118,7 +122,7 @@ An internal agent component failed. These typically indicate a transient issue o
 | **Reason code** | `agent_error.reasoning_failure` |
 | **Status** | `ERROR` |
 | **What happened** | An unhandled exception occurred in the reasoning engine. |
-| **Action** | Check `{session_id}/runs/{run_dir}/run.log` for the full stack trace. Retry the run - this is usually transient. If it persists, file a [bug report](https://github.com/LambdaTest/kane-cli/issues) with the log file. |
+| **Action** | Check `{session_id}/runs/{run_dir}/run.log` for the full stack trace. Retry the run, because this is usually transient. If it persists, file a [bug report](https://github.com/LambdaTest/kane-cli/issues) with the log file. |
 
 ### 430 CLEAN_START_INVALID
 
@@ -126,7 +130,7 @@ An internal agent component failed. These typically indicate a transient issue o
 |-------|-------|
 | **Reason code** | `agent_error.clean_start_invalid` |
 | **Status** | `ERROR` |
-| **What happened** | The `clean_start` validation failed - the agent could not establish a valid initial session state (e.g., the starting URL did not load, or the browser context is corrupted). |
+| **What happened** | The `clean_start` validation failed: the agent could not establish a valid initial session state (e.g., the starting URL did not load, or the browser context is corrupted). |
 | **Action** | Verify the `--url` is accessible and loads correctly. If using `--cdp-endpoint`, ensure the browser is in a clean state. |
 
 ### 440 CHILD_FAILED
@@ -140,7 +144,7 @@ An internal agent component failed. These typically indicate a transient issue o
 
 ---
 
-## 5xx — Infra Error
+## 5xx: Infra Error
 
 Platform or infrastructure failures. These are independent of the objective itself.
 
@@ -208,9 +212,9 @@ Verify with `kane-cli whoami`, then retry the run.
 
 ---
 
-## 6xx — Blocker
+## 6xx: Blocker
 
-An external obstacle on the target website prevented the agent from completing the objective. These are not agent bugs - they require changes to the environment or objective.
+An external obstacle on the target website prevented the agent from completing the objective. These are not agent bugs: they require changes to the environment or objective.
 
 ### 610 CAPTCHA
 
@@ -266,7 +270,7 @@ kane-cli run "Log in and navigate to dashboard" \
 
 ---
 
-## 7xx — Assertion Error
+## 7xx: Assertion Error
 
 The agent completed its actions but one or more assertions or checkpoints did not pass.
 
@@ -326,6 +330,23 @@ The agent completed its actions but one or more assertions or checkpoints did no
 | 710 | FINAL_VERIFICATION | `assertion_error.final_verification` | Objective not achieved |
 | 720 | CHECKPOINT_FAILED | `assertion_error.checkpoint_failed` | Check assertion condition |
 | 730 | NO_BRANCH_MATCHED | `assertion_error.no_branch_matched` | Update branch conditions |
+
+---
+
+## Process Exit Codes
+
+`kane-cli run` exits with one of these codes. Use them to gate downstream CI steps.
+
+| Code | Meaning |
+|------|---------|
+| `0` | Run passed |
+| `1` | Run failed (agent reached an unrecoverable failure, or the upload failed) |
+| `2` | Error (auth, TMS credential exchange, configuration, Chrome, unknown subcommand, or unhandled exception) |
+| `3` | Run was cancelled or hit the `--timeout` |
+
+- An unresolved-variable warning (`code: "unresolved_variables"`) does not change the exit code. A step that fails on the literal `{{name}}` text still fails the run.
+- Under `run --analyzer-only`, exit `0` means all conditions were judged, **not** that all are true. Exit `1` means a result was missing, and `3` means cancelled.
+- `testmd run`, `testrun run`, `generate` and the assurance commands have their own exit code tables. See [CLI Reference: Exit Codes](/docs/kane-cli-cli-reference/#exit-codes).
 
 ---
 

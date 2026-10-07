@@ -8,21 +8,21 @@ keywords: ['kane cli checkpoints', 'assertions', 'extractions', 'testmu ai', 'ka
 
 import { KaneCliCta } from "/snippets/KaneCliCta.mdx";
 
-Checkpoints are verification points that KaneAI evaluates during test execution. They let you assert conditions, branch on results, or extract values for later use.
+A checkpoint is a point in a test where KaneAI checks something while the test runs. Use checkpoints to assert conditions, branch on results, or extract values for later steps.
 
 ## Checkpoint Types
 
 | Type | What it does |
 |------|-------------|
-| **Assertion** | Verify a condition is true, fails the test if not |
-| **If/Else** | Branch execution based on a condition |
-| **Extraction** | Store a value for use in later steps |
+| **Assertion** | Verifies that a condition is true, and fails the test if it is not |
+| **If/Else** | Branches the test based on a condition |
+| **Extraction** | Stores a value for use in later steps |
 
-All three types work with every analyze method below.
+All three types work with every analyze method listed below.
 
 ## Analyze Methods
 
-Each checkpoint uses an analyze method to determine *where* to look for the data:
+Each checkpoint uses an analyze method, which decides *where* KaneAI looks for the data:
 
 | Method | Data Source | When to Use |
 |--------|-----------|-------------|
@@ -34,7 +34,7 @@ Each checkpoint uses an analyze method to determine *where* to look for the data
 
 ## How to Use
 
-Write your assertions naturally in the objective. KaneAI automatically picks the right analyze method:
+Write assertions in plain language in your objective. KaneAI picks the right analyze method for each one:
 
 ```
 Assert: the price is $29.99                    → Visual
@@ -46,7 +46,7 @@ Assert: no console errors                      → DevTools (Console)
 Assert: page LCP is under 2500ms               → DevTools (Performance)
 Assert: session cookie exists                  → DevTools (Cookies)
 Assert: auth_token exists in localStorage      → DevTools (localStorage)
-Assert: the clipboard has the copied link      → DevTools (Clipboard)
+Assert: clipboard contains the copied link     → DevTools (Clipboard)
 ```
 
 Extractions work the same way:

@@ -19,13 +19,13 @@ This page covers helper files, the `@import` syntax, the rules the resolver enfo
 A few common cases where splitting pays off:
 
 - **Login.** Almost every test starts logged in. Put the login flow in `helpers/login.md` and `@import` it from every test.
-- **Setup.** Visiting a dashboard, switching tenants, accepting a cookie banner — pull these out so a single update fixes every test that relies on them.
+- **Setup.** Visiting a dashboard, switching tenants, accepting a cookie banner: pull these out so a single update fixes every test that relies on them.
 - **Long regression flows.** A 30-step checkout test is hard to read and harder to debug. Split it into 4–5 helpers describing each phase (browse, add-to-cart, checkout, payment, confirmation).
 - **Negative test cases.** Share a setup helper between the happy-path test and the negative-path test, so the only thing each test owns is the assertion that distinguishes them.
 
 ## Helper files
 
-A helper file is any `.md` file whose name does **not** end in `_test.md`. There is no `kane-cli new-helper` command — just write the file:
+A helper file is any `.md` file whose name does **not** end in `_test.md`. There is no `kane-cli new-helper` command. Just write the file:
 
 ```markdown
 ---
@@ -48,7 +48,7 @@ Save this as `helpers/login.md`. It can be referenced from any test:
 @import ./helpers/login.md
 ```
 
-Helpers cannot be run directly — `kane-cli testmd run ./helpers/login.md` is rejected because the filename does not end in `_test.md`. Helpers are only reachable through `@import` from a test.
+Helpers cannot be run directly: `kane-cli testmd run ./helpers/login.md` is rejected because the filename does not end in `_test.md`. Helpers are only reachable through `@import` from a test.
 
 ## `@import` syntax
 
@@ -76,13 +76,13 @@ optional: true
 ```
 @import ./helpers/skip-tour.md
 
-## NOT OK — extra config
+## NOT OK: extra config
 ```yaml
 timeout: 60
 ```
 @import ./helpers/login.md
 
-## NOT OK — body mixes prose and import
+## NOT OK: body mixes prose and import
 Click somewhere first.
 @import ./helpers/login.md
 ````
@@ -112,7 +112,7 @@ You can also use absolute paths:
 
 ## What `@import` does at run time
 
-When the resolver hits an `@import` step, it inlines every step from the imported file into the run, in order, at that position. The imported file's frontmatter — except for variables and context — is **not** merged into the run. The result is a flat list of steps from the root file's perspective.
+When the resolver hits an `@import` step, it inlines every step from the imported file into the run, in order, at that position. The imported file's frontmatter, except for variables and context, is **not** merged into the run. The result is a flat list of steps from the root file's perspective.
 
 A test like this:
 
@@ -138,7 +138,7 @@ The resolver catches structural problems at parse time, before any browser launc
 | `optional` is allowed on `@import` only at the root file. | `intermediate-ref 'optional' is not supported in v1: <file>:<line>` |
 | `@import` steps may not carry config other than `optional`. | `step config on @import may only contain 'optional': got <key>` |
 
-There is no built-in depth limit — helpers can import helpers can import helpers. In practice keep nesting shallow; deeply chained helpers are hard to read and hard to debug.
+There is no built-in depth limit: a helper can import another helper, which can import another, and so on. Keep nesting shallow anyway, because deeply chained helpers are hard to read and debug.
 
 ## Optional imports
 
@@ -154,7 +154,7 @@ optional: true
 
 If the helper fails, the run continues to the next step. The `Result.md` entry is suffixed with `(optional)`.
 
-Optional is intentionally **not** allowed on nested `@import` steps — only the root test decides which imports may fail. Helpers cannot decide on their own that they may be skipped.
+Optional is intentionally **not** allowed on nested `@import` steps. Only the root test decides which imports may fail. Helpers cannot decide on their own that they may be skipped.
 
 ## What propagates through `@import`
 
@@ -162,8 +162,8 @@ Some settings travel with the import; others are run-wide and apply only at the 
 
 **Propagate to imported steps:**
 
-- `variables` — the root file's variables (and any added by `--variables-file` / `--variables`) are visible inside helpers. A helper can reference `{{tester_email}}` if the root test defines it.
-- `global_context` and `local_context` — context is shared across the whole run.
+- `variables`: the root file's variables (and any added by `--variables-file` / `--variables`) are visible inside helpers. A helper can reference `{{tester_email}}` if the root test defines it.
+- `global_context` and `local_context`: context is shared across the whole run.
 - Per-step settings on an objective inside a helper apply to that step.
 
 **Do not propagate (root-only):**
@@ -173,13 +173,13 @@ Some settings travel with the import; others are run-wide and apply only at the 
 - `on_lock_conflict`.
 - Authentication.
 
-These are decided once for the whole run from the root file (or its CLI flags). Setting them in a helper's frontmatter has no effect — the helper's chrome / mode / auth keys are silently ignored.
+These are set once for the whole run, from the root file or its CLI flags. Setting them in a helper's frontmatter has no effect: kane-cli silently ignores the helper's Chrome, mode, and auth keys.
 
 A practical consequence: there is only **one** browser per run, with **one** auth context. A helper cannot, for example, open a fresh Chrome with a different profile.
 
 ## Variables across imports
 
-Variables are namespaced flat across the whole run — a single map merged at the root. A helper sees whatever variables the root configuration produces.
+All variables in a run share one flat namespace: a single set of names and values, merged at the root. A helper sees every variable the root configuration produces.
 
 ```markdown
 ---
@@ -212,11 +212,11 @@ Type {{tester_email}} and {{tester_password}}, then submit.
 
 The helper uses `{{tester_email}}` and `{{tester_password}}` directly because the root test defined them. You can also define defaults in the helper's frontmatter; the root test's values override them.
 
-Variables set on an individual **step** in the root test are visible **only on that step** — they do not bleed into the helper that follows. If you need a value visible inside a helper, put it in the root frontmatter, not in a per-step `yaml` block.
+Variables set on an individual **step** in the root test are visible **only on that step**. They do not bleed into the helper that follows. If you need a value visible inside a helper, put it in the root frontmatter, not in a per-step `yaml` block.
 
 ## Helper outputs
 
-A helper imported at multiple call sites in the same root test records each call site independently. The same helper imported by step 2 and step 4 produces two separate recordings — one per call site — because the browser state on entry is different.
+A helper imported at multiple call sites in the same root test records each call site independently. The same helper imported by step 2 and step 4 produces two separate recordings, one per call site, because the browser state on entry is different.
 
 The recording for each call site lives next to the helper file:
 
@@ -242,7 +242,7 @@ When you import the same helper from two **different** root tests, the directory
 
 `Result.md` inside a `helper-output-...` directory has the same shape as a top-level `Result.md`. Open it in an editor or Markdown viewer to inspect what the helper did at that call site.
 
-Like the test's own `output-<stem>/`, `helper-output-...` directories are safe — and recommended — to commit to git.
+Like the test's own `output-<stem>/`, `helper-output-...` directories are safe (and recommended) to commit to git.
 
 ## Editing a helper
 
@@ -252,7 +252,7 @@ When you edit a step in a helper:
 - Subsequent steps in the same helper invocation also re-author (the same "rest of the file" rule from [Running test.md files](/docs/kane-cli-testmd-running/#edits-cascade-to-the-rest-of-the-file) applies inside helpers).
 - The root tests' steps that come **after** the `@import` also re-author, because the helper changed what the browser looks like when control returns to the root test.
 
-In practice: a one-line edit to a heavily-imported helper triggers a lot of re-authoring on the next run. That is by design — the alternative is to replay against state the helper no longer produces.
+As a result, a one-line edit to a widely imported helper causes a lot of re-authoring on the next run. This is intentional: otherwise, later steps would replay against page state the edited helper does not produce.
 
 ## Sharing helpers across projects
 
@@ -260,7 +260,7 @@ There is no built-in command to share a helper across two checkouts. Sharing is 
 
 ```bash
 cp /projA/common/login.md /projB/common/login.md
-# Optional — copy the cached recordings too, so projB doesn't have to re-author:
+# Optional: copy the cached recordings too, so projB doesn't have to re-author:
 cp -r /projA/common/helper-output-login-*  /projB/common/
 ```
 
@@ -365,7 +365,7 @@ Editing the login flow in `helpers/login.md` re-authors the login steps and ever
 
 ## Next steps
 
-- [Writing test.md files](/docs/kane-cli-testmd/) — frontmatter, step syntax, variables.
-- [Running a test.md](/docs/kane-cli-testmd-running/) — the run command, flags, replay model, output.
+- [Writing test.md files](/docs/kane-cli-testmd/): frontmatter, step syntax, variables.
+- [Running a test.md](/docs/kane-cli-testmd-running/): the run command, flags, replay model, output.
 
 <KaneCliCta />

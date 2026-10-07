@@ -8,13 +8,28 @@ keywords: ['kane cli parallel', 'parallel testing', 'kaneai', 'testmu ai', 'batc
 
 import { KaneCliCta } from "/snippets/KaneCliCta.mdx";
 
-Run multiple independent browser tests concurrently to reduce total execution time. Instead of running tests sequentially (sum of all durations), parallel execution runs them simultaneously: total time equals the longest single test.
+Run independent browser tests at the same time to cut total execution time. When tests run one after another, the total time is the sum of their durations. When they run in parallel, the total is only as long as the slowest test.
+
+## Parallel Suites with testrun
+
+If your repo has committed `_test.md` tests, use a single `testrun` command instead of a shell loop. `--parallel <n>` sets the number of workers (default `1`). The suite runs as one execution, with one exit code and one sealed [evidence pack](/docs/kane-cli-evidence/):
+
+```bash
+kane-cli testrun run --tags smoke --parallel 4                     # 4 local workers
+kane-cli testrun run --tags smoke --remote --parallel 4            # a web suite on 4 grid runners
+```
+
+- Each desktop worker gets its **own isolated Chrome** with a fresh temporary profile. Tests running in parallel never share cookies, logins, or tabs, and never compete for your real browser profile.
+- A local suite that contains any mobile test requires `--parallel 1`, and Kane CLI refuses larger values. Isolated Chrome workers apply to desktop tests only.
+- With `--remote`, `--parallel N` sets the job's concurrency. The tests are split automatically across N grid runners, and each runner works through its share one test at a time. Device suites run in parallel the same way, and every task has its own VM and device.
+
+See [Batch Runs (testrun)](/docs/kane-cli-testrun/) and [Remote Runs on the Cloud Grid](/docs/kane-cli-remote-execution/). The rest of this page covers independent `kane-cli run` objectives that are not saved as `_test.md` files.
 
 ## When to Run in Parallel
 
 Split objectives and run in parallel when:
 
-- An objective has **more than 15 steps**: long objectives drift; split them
+- An objective has **more than 15 steps**: long objectives tend to drift off course, so split them
 - Tasks are **independent**: no shared browser state or sequential dependencies
 - You're testing **different features**: login vs. checkout vs. settings
 - You're testing **different user roles**: admin flow vs. customer flow
@@ -107,7 +122,7 @@ After all tests complete, present results like this:
 
 ## AI Agent Sub-Task Pattern
 
-For AI coding agents (Claude Code, Codex CLI, Gemini CLI), use the agent's parallel task mechanism to spawn multiple sub-agents simultaneously. Each sub-agent runs one Kane CLI command and returns structured results.
+With an AI coding agent (Claude Code, Codex CLI, Gemini CLI), use the agent's own parallel-task feature to start several sub-agents at once. Each sub-agent runs one Kane CLI command and returns structured results.
 
 **Agent prompt template** (give this to each sub-agent):
 
@@ -128,17 +143,17 @@ After the command completes:
 ## Resource Limits
 
 <Warning>
-Each parallel Kane CLI instance opens its own Chrome browser. Monitor resources when running many parallel tests:
+Each parallel Kane CLI instance opens its own Chrome browser. Watch your machine's resources when you run many tests in parallel:
 
 - Each instance uses ~150–300 MB RAM
 - 4 concurrent tests = ~800 MB – 1.2 GB RAM
 - Each instance uses its own CDP port (9222–9230)
 
-Start with 4 parallel tests and scale up based on your environment.
+Start with 4 parallel tests and increase the number as your environment allows.
 </Warning>
 
 <Tip>
-Always use `--headless` for parallel runs: multiple visible browser windows cause confusion and unnecessary resource overhead.
+Always use `--headless` for parallel runs. Several visible browser windows are confusing and use resources for no benefit.
 </Tip>
 
 <KaneCliCta />

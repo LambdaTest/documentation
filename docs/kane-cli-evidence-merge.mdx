@@ -8,36 +8,47 @@ keywords: ['kane cli evidence merge', 'merge evidence packs', 'nightly evidence 
 
 import { KaneCliCta } from "/snippets/KaneCliCta.mdx";
 
-`kane-cli evidence merge` combines several packs into one, for example the packs from a set of related runs you want to hand over as a single file:
+`kane-cli evidence merge` combines several packs into one. Use it when you want to hand over a set of related runs as a single file:
 
 ```bash
 kane-cli evidence merge <targets...> --run-id nightly-2026-07-11
 ```
 
-Targets are execution ids or pack paths, and **order matters**. Earlier targets win where the policy has to choose.
+Each target is an execution id or a pack path. **Order matters**: when the policy has to choose between packs, the earlier target wins.
 
 | Flag | Description | Default |
 |---|---|---|
-| `--run-id <id>` | Run id for the merged pack, **required** | — |
+| `--run-id <id>` | Run id for the merged pack, **required** | None |
 | `-o, --out <path>` | Output path | `.testmuai/evidence/<run-id>.evidence` |
-| `--rules <path>` | Custom merge-rules file. Settings you omit keep their default value; the rule list itself is replaced | built-in defaults |
+| `--rules <path>` | Custom merge-rules file (replaces the defaults entirely) | built-in defaults |
 | `--on-collision <action>` | `error`, `prefer-first`, `prefer-latest`, or `discard` | `error` |
 | `--title <title>` | Title for the merged run | first eligible pack's |
 | `--no-finalize` | Keep the merged pack live instead of sealing it | seals by default |
 | `--json` | Machine-readable merge report | off |
 
-`--rules` and `--on-collision` are mutually exclusive.
+You cannot use `--rules` and `--on-collision` together.
 
 Exit codes: `0` merged, `1` policy abort, `2` usage error.
 
 ## The default policy
 
-Out of the box, merge is strict:
+By default, merge is strict:
 
 - inputs must be **sealed and valid**,
 - duplicate run ids are skipped,
 - packs from **different projects or organisations** are refused,
-- a test-id collision is an **error**, unless you choose another action with `--on-collision`.
+- two packs with the same test id cause an **error**, unless you choose another action with `--on-collision`.
+
+## Merge identity
+
+Merge decides whether two runs are the same test by their identity. For ordinary runs, the default identity is made of:
+
+- the test and commit: `external_id.test_id` and `external_id.commit_id`,
+- the environment: `environment.os`, `environment.os_version`, `environment.browser`, and `environment.browser_version`.
+
+Re-runs with the same identity are nested as attempts of one test. A run with a different environment becomes a separate sibling.
+
+An explicit collision policy can change this grouping, and a custom `--rules` file replaces the default rules instead of extending them. Check which identity rules apply before you treat two runs as retries of the same test.
 
 ## A nightly roll-up
 
@@ -48,13 +59,13 @@ kane-cli evidence merge \
   --title "Nightly regression"
 ```
 
-With no `-o`, the merged pack is written to `.testmuai/evidence/<run-id>.evidence`, which stays unique as long as the run id does.
+Without `-o`, the merged pack is written to `.testmuai/evidence/<run-id>.evidence`. The path stays unique as long as you use a unique run id.
 
-The result is one sealed pack holding the tests from every pack that passed the policy. Packs the policy skipped contribute nothing, and the merge report (`--json`) lists what was skipped and why.
+The result is one sealed pack with the tests from every pack that passed the policy. Skipped packs contribute nothing. The merge report (`--json`) lists what was skipped and why.
 
 ## Next steps
 
-- [Validating packs](/docs/kane-cli-evidence-validate/) — confirm the merged pack before handing it over.
-- [Viewing evidence](/docs/kane-cli-evidence-viewing/) — open the merged pack.
+- [Validating packs](/docs/kane-cli-evidence-validate/): confirm the merged pack before handing it over.
+- [Viewing evidence](/docs/kane-cli-evidence-viewing/): open the merged pack.
 
 <KaneCliCta />

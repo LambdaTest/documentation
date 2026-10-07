@@ -9,7 +9,9 @@ keywords: ['kane cli variables', 'kane cli context', 'kaneai', 'testmu ai', 'sec
 import { BrandName } from "/snippets/BrandName.mdx";
 import { KaneCliCta } from "/snippets/KaneCliCta.mdx";
 
-**Variables** keep credentials and test data out of your objectives. **Context files** give the agent persistent background information — guidance, conventions, and notes that apply across runs.
+**Variables** keep credentials and test data out of your objectives. You reference a reusable value or secret by name, so you can run the same test with different inputs without editing the objective text. **Context files** give the agent standing background information: guidance, conventions, and notes that apply to every run.
+
+This page covers how `kane-cli` finds and merges variables, how to mark a value as secret, and where to put context files for the agent to read.
 
 ---
 
@@ -17,9 +19,7 @@ import { KaneCliCta } from "/snippets/KaneCliCta.mdx";
 
 ### Format
 
-`{{variables}}` resolve anywhere a value is typed or set — form fills, cookie and localStorage values, and clipboard writes alike.
-
-Variables are JSON objects keyed by name. Each entry describes a single variable:
+Variables are defined in JSON, as an object keyed by variable name. Each entry describes one variable:
 
 ```json
 {
@@ -30,13 +30,13 @@ Variables are JSON objects keyed by name. Each entry describes a single variable
 
 | Field | Required | Type | Default | Description |
 |-------|----------|------|---------|-------------|
-| `value` | Yes | string | — | The variable's value. A number is accepted and loaded as its string (`8080` becomes `"8080"`), while a boolean, object or array is not a value. Entries without `value` are ignored. |
-| `secret` | No | boolean | `false` | When `true`, the value is masked in logs and routed to the <BrandName /> secrets store instead of being synced as plain Test Manager variables. |
-| `syntax` | no | string | `{{<name>}}` | Custom placeholder syntax. Defaults to the double-brace form using the variable name. |
+| `value` | Yes | string | None | The variable's value. A number is accepted and loaded as a string (`8080` becomes `"8080"`). A boolean, object, or array is not accepted as a value. Entries without `value` are ignored. |
+| `secret` | No | boolean | `false` | When `true`, the value is masked in logs and sent to the <BrandName /> secrets store instead of being synced as a plain Test Manager variable. |
+| `syntax` | No | string | `{{<name>}}` | Custom placeholder syntax. Defaults to the double-brace form with the variable name. |
 
 ### Usage in Objectives
 
-Reference variables with `{{key}}` syntax:
+Reference a variable in the objective with its `syntax`. With the default syntax, that is `{{<name>}}`. Variables resolve anywhere Kane CLI types or sets a value: form fields, cookie and localStorage values, and clipboard writes.
 
 ```bash
 kane-cli run \
@@ -48,22 +48,22 @@ kane-cli run \
    assert the Dashboard is visible"
 ```
 
-Before the objective is sent to the agent, `{{email}}` and `{{password}}` are rewritten to internal namespaced forms; the agent sees the resolved values at runtime.
+Before the objective reaches the agent, Kane CLI rewrites `{{email}}` and `{{password}}` into internal namespaced forms. The agent works with the resolved values when the run executes.
 
 ### Loading Order
 
-Variables are merged from four sources in this order. Later sources override earlier ones for the same key:
+Kane CLI merges variables from four sources in this order. When two sources define the same key, the later source wins:
 
-1. **Global directory** — `~/.testmuai/kaneai/variables/*.json`
-2. **Local project directory** — `.testmuai/variables/*.json` (relative to where you invoke `kane-cli`)
-3. **File flag** — `--variables-file <path>`
-4. **Inline flag** — `--variables '<json>'` (highest priority)
+1. **Global directory**: `~/.testmuai/kaneai/variables/*.json`
+2. **Local project directory**: `{cwd}/.testmuai/variables/*.json` (relative to where you invoke `kane-cli`)
+3. **File flag**: `--variables-file <path>`
+4. **Inline flag**: `--variables '<json>'` (highest priority)
 
-Within a directory, files are read in alphabetical order; later files override earlier files for duplicate keys. Files that fail to parse as JSON are skipped with a warning.
+Within a directory, files are read in alphabetical order, and a later file wins for a duplicate key. A file that is not valid JSON is skipped with a warning.
 
 ### Inline Variables
 
-Pass a JSON object directly on the command line:
+Pass a JSON object directly on the command line. Inline variables have the highest precedence.
 
 ```bash
 kane-cli run "Log in as {{username}}" \
@@ -72,7 +72,7 @@ kane-cli run "Log in as {{username}}" \
 
 ### Variables from a File
 
-Point at a single JSON file:
+Point at a single JSON file to load all of its variables at once.
 
 ```bash
 kane-cli run "Log in as {{username}}" \
@@ -106,7 +106,7 @@ For values you want available across every project on your machine, place `*.jso
 └── shared.json
 ```
 
-Global variables have the lowest precedence — anything else with the same key wins.
+Global variables have the lowest precedence: anything else with the same key wins.
 
 ### Example Variable File
 
@@ -135,9 +135,9 @@ Secret values are masked in displayed output and logs, and are routed to the <Br
 
 ### Variables declared by `kane-cli design tests`
 
-When a design session needs a value nobody has, such as a start URL or a test account, it references it as `{{name}}` and declares it. Before choosing a name, design reads every `*.json` in both variable directories and reuses a name you already have rather than inventing a new one. The agent sees only which names exist and whether each has a value, never the values themselves.
+When a design session needs a value nobody has provided yet, such as a start URL or a test account, it references the value as `{{name}}` and declares it as a variable. Before it picks a name, design reads every `*.json` file in both variable directories and reuses a name you already have instead of inventing a new one. The agent sees only which names exist and whether each one has a value. It never sees the values themselves.
 
-For each name it declares, Kane CLI writes an **empty stub** into `.testmuai/variables/assurance.json`, never a value, and tells you during the round (`⚒ declared 2 new variables — login_email · login_password (values needed)`) and again at the end (`2 variable(s) need values — see .testmuai/variables/assurance.json`):
+For each name it declares, Kane CLI writes an **empty stub** (the name with a blank value) into `.testmuai/variables/assurance.json`. It never writes a value. Kane CLI tells you about new stubs during the round (`⚒ declared 2 new variables — login_email · login_password (values needed)`) and again at the end (`2 variable(s) need values — see .testmuai/variables/assurance.json`):
 
 ```json
 {
@@ -145,14 +145,14 @@ For each name it declares, Kane CLI writes an **empty stub** into `.testmuai/var
 }
 ```
 
-Fill `value`. Kane CLI never overwrites a key that already exists in any of your variable files, so a stub cannot replace a value you set. A value you type in chat stays a literal in the step, and a variable is created only when the value is unknown.
+Fill in `value`. Kane CLI never overwrites a key that already exists in any of your variable files, so a stub cannot replace a value you set. A value you type in chat stays in the step as literal text. Design creates a variable only when the value is unknown.
 
 ### Before a run: unresolved variables {#before-a-run-unresolved-variables}
 
-`kane-cli run`, `kane-cli testmd run` and `kane-cli testrun run` check every `{{name}}` an authored step references **before anything starts**, with no browser and no session. A name with no value stops the run there, with exit code `2`, and the receipt says what each one needs:
+`kane-cli run`, `kane-cli testmd run`, and `kane-cli testrun run` check every `{{name}}` that an authored step references **before the run starts**. A name with no value produces a warning, not an error. The run goes ahead and types the name as written, unless an earlier step sets it:
 
 ```
-✗ 3 variables have no value — nothing was dispatched
+warning: 3 variables have no value
 
   Waiting for a value in .testmuai/variables/assurance.json
     storefront_sign_in_url     step 1
@@ -164,12 +164,26 @@ Fill `value`. Kane CLI never overwrites a key that already exists in any of your
     Add it to .testmuai/variables/assurance.json
 
   If {{name}} is literal page text, write \{{name}} to keep it as-is.
-  Fill the values and run again.
+  A step that sets a name first binds it; anything else is typed as written. Fill the values to bind them.
 ```
 
-The pool file is named once per group. A test filename appears only when it is not the file you named: an `@import`ed unit and a testrun member both keep theirs, and a `kane-cli run` objective shows no location at all. A name that is in no file gets `Add it to <file>` when a pool file exists, or the JSON to create when there is none yet.
+How to read the warning:
 
-There is no flag to bypass the check: fill the value or remove the reference. Never checked are `{{smart.*}}`, `{{environment.*}}`, `{{secrets.*}}` and `{{totp.*}}` (resolved at run time), a name an earlier step stored (`store the price as 'price'`), a test's own frontmatter `variables:`, and replayed steps, which resolve from their tape and from Test Manager, where a replay with a missing value gets a warning line and never a refusal. `${x}` is not a variable reference on this path. In agent mode the refusal is one typed `error` event with `code: "unresolved_variables"`, see [Modes of Operation](/docs/kane-cli-modes/#unresolved-variables).
+- **Grouping.** The warning groups names by the variables file they belong in (the pool file, such as `.testmuai/variables/assurance.json`) and names that file once per group.
+- **Test filenames.** A test filename appears only when it differs from the file you ran. An `@import`ed unit and a `testrun` member both show their own filename. A `kane-cli run` objective shows no location.
+- **Names in no file.** If the pool file exists, the warning says `Add it to <file>`. If there is no pool file yet, it shows the JSON to create.
+
+The check skips these references:
+
+- An explicit `{{global.*}}`. It resolves from Test Manager when the run executes. Only a bare `{{name}}` is looked up in your variables files.
+- `{{smart.*}}`, `{{environment.*}}`, `{{secrets.*}}`, and `{{totp.*}}`, which resolve when the run executes.
+- A name that an earlier step stores (`store the price as 'price'`).
+- A name that the test's own frontmatter `variables:` declares, even with an empty value.
+- Replayed steps, which resolve from their recording (tape) and from Test Manager. A `testrun run` preflight still lists a replayed step's names, because it checks the file before it knows which steps replay.
+
+`${x}` is a dataset column reference, not a variables-file reference. If `${x}` is not a column of the dataset row the run received, it gets its own warning.
+
+In agent mode, the same content arrives as one `warning` event with `code: "unresolved_variables"`. See [Modes of Operation](/docs/kane-cli-modes/#unresolved-variables).
 
 <Warning>
 Do not commit credential files to version control. Add `.testmuai/variables/` to your `.gitignore`, or use environment variable substitution in CI/CD.
@@ -179,7 +193,7 @@ Do not commit credential files to version control. Add `.testmuai/variables/` to
 
 ## Context Files
 
-Context files are plain Markdown files whose contents are passed to the agent alongside your objective. Use them for standing instructions — coding conventions, accounts to use, sites to avoid, or domain knowledge the agent should always have.
+Context files are plain Markdown files whose contents are passed to the agent alongside your objective. Use them for standing instructions: coding conventions, accounts to use, sites to avoid, or domain knowledge the agent should always have.
 
 ### Two Levels
 
@@ -187,6 +201,10 @@ Context files are plain Markdown files whose contents are passed to the agent al
 |-------|------|---------|
 | **Global** | `~/.testmuai/kaneai/global-memory.md` | Company-wide terminology, shared test accounts, universal patterns |
 | **Local** | `.testmuai/context.md` (in project directory) | App-specific navigation, known UI quirks, test environment details |
+
+**Global context** (default path `~/.testmuai/kaneai/global-memory.md`): put guidance that applies to every project and your whole account here. Kane CLI loads it for every run unless you override it.
+
+**Local context** (default path `.testmuai/context.md` in the current working directory): put guidance here that only makes sense for the project you are testing. Kane CLI loads it automatically when you run `kane-cli` from a directory that contains it.
 
 ### Example Local Context File
 
@@ -223,7 +241,7 @@ MyApp is a SaaS project management tool. Users create projects, invite members, 
 
 ### Override Per Run
 
-Override either context file for a single run:
+Use the run flags to point at a different file for a single invocation:
 
 ```bash
 kane-cli run "your objective" \
@@ -231,7 +249,7 @@ kane-cli run "your objective" \
   --local-context ./custom-local.md
 ```
 
-If a context file is missing or empty, it is silently ignored — no error is raised.
+If a context file is missing or empty, Kane CLI ignores it without raising an error.
 
 ### What to Put in Context
 
