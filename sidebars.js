@@ -2884,64 +2884,23 @@ module.exports = {
     },
     [
       {
-        type: "doc",
-        label: "Getting Started with Espresso Testing",
-        id: "getting-started-with-espresso-testing",
-      },
-
-      {
         type: "category",
-        collapsed: true,
-        label: "Supported Capabilities",
-        link: {
-          type: "doc",
-          id: "espresso-supported-capabilities",
-        },
-        items: ["espresso-env-variables-settings"],
-      },
-      {
-        type: "doc",
-        label: "RegEx in Espresso",
-        id: "regular-expression-espresso",
-      },
-      {
-        type: "doc",
-        label: "Supported Locales",
-        id: "supported-locales-espresso",
-      },
-      {
-        type: "doc",
-        label: "Debug Espresso Tests",
-        id: "debug-espresso-tests",
-      },
-      {
-        type: "doc",
-        label: "Troubleshoot Espresso Tests",
-        id: "troubleshoot-espresso-tests",
-      },
-      {
-        type: "category",
-        collapsed: true,
-        label: "Speedup Espresso Tests",
+        collapsed: false,
+        label: "Getting Started",
         items: [
-          {
-            type: "doc",
-            label: "Sharding for Espresso",
-            id: "sharding-espresso",
-          },
-          "speedup-espresso",
+          "getting-started-with-espresso-testing",
+          "espresso-agent-skills",
+          "espresso-supported-capabilities",
+          "debug-espresso-tests",
         ],
       },
-      {
-        type: "doc",
-        label: "JUnit Report",
-        id: "espresso-junit-report",
-      },
-      {
-        type: "doc",
-        label: "MockWebServer & Localhost",
-        id: "espresso-mockwebserver-localhost",
-      },
+      "espresso-env-variables-settings",
+      "regular-expression-espresso",
+      "supported-locales-espresso",
+      "sharding-espresso",
+      "speedup-espresso",
+      "espresso-junit-report",
+      "espresso-mockwebserver-localhost",
     ],
   ],
 

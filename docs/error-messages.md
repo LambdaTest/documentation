@@ -172,7 +172,7 @@ Find your error by what your test printed. The **W3C error code** is the string 
 | KaneAI | [KaneAI Errors](/support/docs/error-handling-kaneai/) |
 | Tunnel | [Tunnel Error Messages](/support/docs/troubleshooting-lambda-tunnel/#error-messages) |
 | SmartUI CLI | [SmartUI Error Message Reference](/support/docs/smartui-troubleshooting-guide/#error-message-reference) |
-| Espresso and iOS app tests | [Troubleshoot Espresso Tests](/support/docs/troubleshoot-espresso-tests/) · [Troubleshooting iOS App Testing](/support/docs/troubleshooting-ios-app-testing/) |
+| Espresso and iOS app tests | [Troubleshoot Espresso Tests](/support/docs/debugging-espresso-tests/#troubleshooting-espresso-tests) · [Troubleshooting iOS App Testing](/support/docs/troubleshooting-ios-app-testing/) |
 
 
 ## Authentication Error at the Time of Test Execution

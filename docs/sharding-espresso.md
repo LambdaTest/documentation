@@ -1,8 +1,9 @@
 ---
 id: sharding-espresso
-title: Sharding for Espresso 
-sidebar_label: Sharding for Espresso
-description: This document will cover how to execute Espresso Tests on real devices with HyperExecute. Before starting, please make sure you have App Automation plans on your account.
+title: How to Shard Espresso Tests on TestMu AI
+hide_title: true
+sidebar_label: Sharding
+description: Shard Espresso tests to run in parallel on real devices with HyperExecute on TestMu AI, cutting execution time using a simple YAML configuration.
 keywords:
   - sharding
   - Espresso
@@ -17,16 +18,17 @@ url: https://www.testmuai.com/support/docs/sharding-espresso-rd-hyperexecute/
 site_name: TestMu AI
 slug: sharding-espresso-rd-hyperexecute/
 canonical: https://www.testmuai.com/support/docs/sharding-espresso-rd-hyperexecute/
+toc_max_heading_level: 2
 ---
 
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
-import RealDeviceTag from '../src/component/realDevice';
-import VirtualDeviceTag from '../src/component/virtualDevice';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import { CookieTrackingSignup } from '@site/src/component/CookieTracking';
+import RealDeviceTag from '@site/src/component/realDevice';
+import VirtualDeviceTag from '@site/src/component/virtualDevice';
 import VerifiedTag from '@site/src/component/verifiedTag';
 
 
@@ -47,7 +49,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "Sharding in Espresso",
+          "name": "How to Shard Espresso Tests on TestMu AI",
           "item": `${BRAND_URL}/support/docs/sharding-espresso-rd-hyperexecute/`
         }]
       })
@@ -190,11 +192,18 @@ import VerifiedTag from '@site/src/component/verifiedTag';
     }
   ]) }}
 />
+
 <RealDeviceTag value="Real Device" /> <VirtualDeviceTag value="Virtual Device" />
+
+# How to Shard Espresso Tests on TestMu AI
+
+
+Sharding Espresso tests on TestMu AI splits your suite into shards that run in parallel across real devices with HyperExecute, cutting total execution time. Configure a simple YAML file to distribute tests, orchestrate runs, and review results on the dashboard.
+
 
 Running **Espresso** tests sequentially can be laborious and time-intensive. This guide offers an efficient solution by introducing the concept of **sharding**. By breaking down tests into shards, they can be executed in parallel, significantly trimming down the total testing duration.
 
-Furthermore, this document provides insights on executing Espresso Tests on real devices using the innovative **HyperExecute** platform. Designed with precision, HyperExecute stands out as a test orchestration solution, tailored to execute end-to-end tests at breakneck speed. To streamline its setup and configuration, a user-friendly `YAML` file is employed. Dive into this guide to make your testing process more agile and efficient.
+**HyperExecute** is a test orchestration platform that executes Espresso end-to-end tests on real devices at high speed, configured through a `YAML` file.
 
 :::tip Note
 You can learn more about the HyperExecute portal and UI by going through our [Guided Walkthrough](/support/docs/hyperexecute-guided-walkthrough/) page. It contains all the relevant information that you need to optimize your testing process with HyperExecute. 
@@ -312,7 +321,7 @@ Upload your **test suite** (.apk file) to the <BrandName /> servers using our **
 
 1. Firstly, create a folder on your local.
 2. Download the **HyperExecute CLI** file and put it under this folder based on your platform.
-### Download HyperExecute CLI
+#### Download HyperExecute CLI
 
 | Platform | HyperExecute CLI download location |
 | ---------| --------------------------- |
@@ -328,11 +337,11 @@ Sharding can be categorized into two types:
 
 Refer to the sample `.yaml` file here
 
-<VerifiedTag value="Verified" />
-
 <Tabs className="docs__val">
 
 <TabItem value="real-device" label="Real Device" default>
+<VerifiedTag value="Verified" />
+
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-yaml">
 
@@ -398,6 +407,8 @@ framework:
 </TabItem>
 
 <TabItem value="virtual-device" label="Virtual Device">
+<VerifiedTag value="Verified" />
+
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-yaml">
 
@@ -485,11 +496,11 @@ If you are using the `deviceSelectionStrategy: any`, then in that case all the m
 
 Refer to the sample `.yaml` file here
 
-<VerifiedTag value="Verified" />
-
 <Tabs className="docs__val">
 
 <TabItem value="real-device" label="Real Device" default>
+<VerifiedTag value="Verified" />
+
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-yaml">
 
@@ -532,6 +543,8 @@ framework:
 </TabItem>
 
 <TabItem value="virtual-device" label="Virtual Device">
+<VerifiedTag value="Verified" />
+
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-yaml">
 
@@ -601,7 +614,6 @@ chmod u+x <cliFileNAme>
 ```
 
 You can refer to this example and screenshot below:
-
 <VerifiedTag value="Verified" />
 
 ```
@@ -695,7 +707,9 @@ To download these artifacts in your local machine, you can pass the `--download-
       </a>
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
-      <span className="breadcrumbs__link">Sharding in XCUIT</span>
+      <span className="breadcrumbs__link">
+        How to Shard Espresso Tests on TestMu AI
+      </span>
     </li>
   </ul>
 </nav>

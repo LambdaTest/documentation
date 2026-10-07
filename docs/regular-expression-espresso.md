@@ -1,6 +1,6 @@
 ---
 id: regular-expression-espresso
-title: Regular Expression - Espresso
+title: How to Use REGEX for Espresso Devices on TestMu AI
 # hide_title: true
 sidebar_label: Regular Expression
 description: If your chosen device for testing on TestMu AI is unavailable, use REGEX to broaden the search for alternative devices to run espresso test.
@@ -11,6 +11,7 @@ url: https://www.testmuai.com/support/docs/regular-expression-espresso/
 site_name: TestMu AI
 slug: regular-expression-espresso/
 canonical: https://www.testmuai.com/support/docs/regular-expression-espresso/
+toc_max_heading_level: 2
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import VerifiedTag from '@site/src/component/verifiedTag';
@@ -33,7 +34,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "App Automation: Regular Expression",
+          "name": "How to Use REGEX for Espresso Devices on TestMu AI",
           "item": `${BRAND_URL}/support/docs/regular-expression-espresso/`
         }]
       })
@@ -113,6 +114,8 @@ import VerifiedTag from '@site/src/component/verifiedTag';
   }) }}
 />
 
+Using REGEX for Espresso device selection on TestMu AI lets you match any available device instead of a fixed one. When your chosen device is busy, pass a pattern in the `deviceName` capability so TestMu AI allots any match automatically.
+
 Regular Expression or REGEX is widely used to make searching/find characters in a string.
 
 When you run a test on <BrandName /> using a specific device, there may be scenarios, in which the particular device that you selected isn’t available. In these scenarios, REGEX will help you widen the search request for devices to run the test on.
@@ -130,7 +133,6 @@ Usual way to pass the `deviceName` and `platformVersion` looks like this: <br/>
 ```
 
 Passing `deviceName` using REGEX:<br/>
-
 <VerifiedTag value="Verified" />
 
 ```java
