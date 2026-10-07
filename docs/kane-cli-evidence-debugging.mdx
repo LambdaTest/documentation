@@ -12,7 +12,7 @@ The pack is the fastest way to understand a failure, because everything is in on
 
 ## The four steps
 
-1. **Open the pack.** Run `kane-cli evidence serve <pack>` and open the `viewer` URL.
+1. **Open the pack.** Accept the post-run offer, or run `kane-cli evidence serve <pack>` and open the `viewer` URL.
 2. **Go to the failed step.** The run overview marks it. The failure record shows the error message and the page state at the moment of failure.
 3. **Check the step's console and network activity.** Logs are sliced per step, so you see exactly what the browser logged and requested while that step ran. A 4xx or 5xx response, or a JS error here, usually explains the failure.
 4. **Look at the annotated screenshot.** It highlights the element the agent was acting on, which makes "clicked the wrong thing" and "element was not there" failures obvious.
@@ -59,7 +59,7 @@ If a pack will not open, run [`kane-cli evidence validate`](/docs/kane-cli-evide
 
 ## Next steps
 
-- [Pack structure](/docs/kane-cli-evidence-pack-structure/) — where each artifact lives.
-- [Validating packs](/docs/kane-cli-evidence-validate/) — check a suspect pack.
+- [Pack structure](/docs/kane-cli-evidence-pack-structure/): where each artifact lives.
+- [Validating packs](/docs/kane-cli-evidence-validate/): check a suspect pack.
 
 <KaneCliCta />

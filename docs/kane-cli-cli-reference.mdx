@@ -31,12 +31,13 @@ kane-cli run "<objective>" [options]
 
 | Flag | Description | Default |
 |------|-------------|---------|
-| `--url <url>` | Starting URL for the browser | Last used or configured URL |
+| `--url <url>` | Start URL for the run. Overrides the configured `default_url`; bare domains are normalized to `https://` | Config `default_url` |
+| `--allow-missing-url` | Non-TTY only: proceed from the browser's current page instead of failing when no start URL resolves (a provided `--url` is still used) | Off |
 | `--headless` | Run Chrome without a visible window | Off |
-| `--max-steps <n>` | Maximum agent reasoning steps | `30` |
+| `--max-steps <n>` | Maximum agent reasoning steps | `50` |
 | `--timeout <s>` | Abort after N seconds | No limit |
 | `--cdp-endpoint <url>` | Connect to an existing Chrome via CDP | Auto-launch Chrome |
-| `--ws-endpoint <url>` | Connect via WebSocket (e.g. <BrandName /> remote grid `wss://`) | Local Chrome |
+| `--ws-endpoint <url>` | Connect to a Playwright WebSocket endpoint (e.g. <BrandName /> `wss://`). The run still executes on this machine and drives that browser; to run a whole suite on the grid, use [`testrun run --remote`](/docs/kane-cli-remote-execution/) | Local Chrome |
 | `--variables <json>` | Inline variable JSON | None |
 | `--variables-file <path>` | Load variables from a JSON file | None |
 | `--global-context <file>` | Override global context markdown | `~/.testmuai/kaneai/global-memory.md` |
@@ -44,13 +45,21 @@ kane-cli run "<objective>" [options]
 | `--session-context <json>` | Prior runs context JSON | None |
 | `--agent` | Output structured NDJSON (for AI coding agents) | Off |
 | `--mode <name>` | Run mode: `action` (strict) or `testing` (lenient) | Config value, otherwise `testing` |
-| `--code-export` | Generate code export after run uploads | Off |
+| `--bug-detection <mode>` | Detect product bugs while authoring: `off`, `stop` (halt the run on a confirmed bug), or `continue` (record it and keep going). Overrides `config set-bug-detection` | Config value, otherwise `off` |
+| `--assertion-mode <mode>` | `dom` (DOM-based extraction and assertions, vision fallback) or `visual` (vision model only). Overrides `config set-assertion-mode` | `dom` |
+| `--final-validation <on\|off>` | Append the synthesized `cp_final` checkpoint that verifies the objective as a whole. Overrides `config set-final-validation` | Off |
+| `--analyzer-only` | Judge each `--condition` against the current desktop browser page and report verdicts in `condition_results` on `run_end`. No objective, no actions, nothing saved. Use `--agent` or non-TTY input | Off |
+| `--condition <text>` | A condition to judge under `--analyzer-only`. Repeatable; order is preserved in `condition_results` | None |
+| `--network-ws` | Capture WebSocket frames for assertions and extraction (experimental, `run` only) | Off |
+| `--network-sse` | Capture Server-Sent Events messages for assertions and extraction (experimental, Chromium-only, `run` only) | Off |
+| `--code-export` | Generate code export after run uploads | Config (`true` by default) |
 | `--code-language <lang>` | Code export language: `python` or `javascript` | `python` |
 | `--skip-code-validation` | Skip post-codegen worker-side validation | On |
 | `--no-skip-code-validation` | Force post-codegen worker-side validation | Off |
 | `--username <user>` | Basic auth username (overrides stored profile) | N/A |
 | `--access-key <key>` | Basic auth access key (overrides stored profile) | N/A |
-| `--env <name>` | Environment (`prod`) | Active profile's env |
+
+A `{{name}}` in the objective with no value is a warning, not a refusal: the run goes ahead and types the name as written unless a step sets it first. The warning does not change the exit code. See [Unresolved variables](/docs/kane-cli-modes/#unresolved-variables).
 
 **Mobile run flags** (macOS Apple Silicon only):
 
@@ -85,6 +94,7 @@ List the emulators or simulators Kane CLI can run against. `--target` is require
 ```bash
 kane-cli devices list --target emulator             # the emulators on this machine
 kane-cli devices list --target simulator --remote   # the simulators the cloud grid can provision
+kane-cli devices list --target simulator --remote --os-version 17.5   # only that OS version
 ```
 
 See [Remote Runs](/docs/kane-cli-remote-execution/) for the grid catalog.
@@ -97,6 +107,102 @@ List the uploaded builds your account can use for a target. The **APP ID** colum
 
 ```bash
 kane-cli apps list --target emulator
+```
+
+---
+
+### `kane-cli testmd run`
+
+Run a test from one `_test.md` file. For each step, Kane CLI either replays a cached recording or authors a fresh one.
+
+```bash
+kane-cli testmd run <path> [options]
+```
+
+`testmd run` accepts the shared run flags (`--url`, `--allow-missing-url`, `--headless`, `--max-steps`, `--timeout`, `--cdp-endpoint`, `--ws-endpoint`, the context and variable flags, `--username` / `--access-key`, `--mode`, `--bug-detection`, `--assertion-mode`, `--final-validation`, `--agent`, the code export flags, and the mobile flags). `--network-ws`, `--network-sse` and `--analyzer-only` are `run`-only. Flags only on `testmd run`:
+
+| Flag | Description | Default |
+|------|-------------|---------|
+| `--name <name>` | Persist a session name. Must match `[a-zA-Z0-9_-]+` | None |
+| `--on-lock-conflict <mode>` | Policy when another user holds the lock: `readonly`, `fail`, or `wait` | None |
+| `--push` | Always commit at the end of the run | Off |
+| `--no-adaptive-heal` | Disable adaptive healing after replay failure | Healing enabled |
+| `--author` | Re-author authorable steps in place on the test's existing identity and commit a new version; replay-only marked steps still replay | Off |
+
+Healing is enabled by default: after a replay failure the runner tries up to three shrinking replay windows, then full re-authoring of authorable steps. Retired `--retry` and `--retry-count` are accepted only to print a notice; they have no effect.
+
+Before any step runs, every `{{name}}` the authored steps reference is checked. A name with no value is a warning and the run goes ahead; replayed steps are not checked. Under `--agent`, wait for `test_md_done` and process exit.
+
+`kane-cli testmd export <path>` regenerates the code export from existing recordings and takes `--language` (`python` or `javascript`), not `--code-language`. See [Running test.md files](/docs/kane-cli-testmd-running/) for the full flag reference and the other `testmd` subcommands (`list`, `status`, `delete`, `export`, `sync`).
+
+---
+
+### `kane-cli testrun run`
+
+Run many authored `_test.md` files as one execution: one summary, one exit code, and one sealed evidence pack for the whole suite.
+
+```bash
+kane-cli testrun run                                              # every *_test.md under the cwd
+kane-cli testrun run tests/checkout_test.md tests/login_test.md   # explicit paths
+kane-cli testrun run --match 'tests/e2e/.*' --tags smoke          # select by project-relative path and tags
+```
+
+Positional paths must each be a `_test.md` file. To select a directory of tests, use `--match` on the project-relative path, not a positional directory.
+
+| Flag | Description | Default |
+|------|-------------|---------|
+| `--match <regex>` | Filter candidates by project-relative path regex. `--match` sees the path as the OS writes it: `tests/app/` on macOS and Linux, `tests\app\` on Windows. Quote the regex with double quotes in cmd.exe; single quotes are literal there | None |
+| `--tags <list>` | ANY-match on frontmatter tags (repeatable or comma-separated) | None |
+| `--parallel <n>` | Worker count | `1` |
+| `--on-failure <mode>` | `continue` or `fail-fast` | `continue` |
+| `--name <label>` | Run title | Derived from the selection |
+| `--dry-run` | Plan and validate only, execute nothing | Off |
+| `--agent` | *(0.8.21)* NDJSON on stdout even in a terminal: the same stream a non-TTY stdin selects | Off |
+| `--no-adaptive-heal` | Disable default adaptive healing after replay failure | Healing enabled |
+| `--bug-detection <mode>` | `off`, `stop`, or `continue`. See [Configuration](/docs/kane-cli-configuration/#bug-detection) | Config value |
+| `--headless` | Run Chrome without a visible window | Off |
+| `--remote [backend]` | Dispatch the suite to the cloud grid instead of local Chrome or local devices (default backend: `hyper`). Needs `kane-cli plugin install remote-execution`. See [Remote Runs](/docs/kane-cli-remote-execution/) | Off |
+| `--device-name <name>` | Device for the suite's mobile members: as `kane-cli devices list` prints it locally, or a grid catalog device with `--remote` | Member's `device_name:` |
+| `--os-version <version>` | OS version for the mobile members (`14`, `17.5`); alone, it matches any device on that version | Member's `os_version:` |
+| `--username <user>` / `--access-key <key>` | Basic auth (skips OAuth) | None |
+
+Healing is enabled by default; `--no-adaptive-heal` disables it. Retired `--retry` / `--retry-count` only print a notice and have no effect. Local suites containing any mobile member require `--parallel 1`.
+
+`testrun run` has no `--variables` flag: fill the pool file or the member's own `variables:` frontmatter. A member that references a `{{name}}` with no value passes preflight with a warning. See [Batch runs (testrun)](/docs/kane-cli-testrun/).
+
+---
+
+### `kane-cli maintain evolve`
+
+Re-design the parent use-case of a test, scenario, acceptance criterion, or use-case. The blast radius is always stated before anything runs.
+
+```bash
+kane-cli maintain evolve <ref> [--because "<reason>"]                 # any designed entity → its parent use-case
+kane-cli maintain evolve --from-stale                                 # every use-case with stale designed entities
+kane-cli maintain evolve <ref> --mode agent                           # headless (0.8.21): the blast-radius question pauses the run
+kane-cli maintain evolve <ref> --mode agent --answer evolve:<use-case>=1   # 1 = proceed, 2 = decline
+```
+
+| Flag | Description |
+|------|-------------|
+| `--from-stale` | Evolve every use-case with stale designed entities |
+| `--because <reason>` | Re-design a fresh target anyway; the reason becomes the change context, on the record |
+| `--mode <mode>` | `interactive` or `agent` (`MODE_USAGE` otherwise). *(0.8.21)* `agent` prints NDJSON on stdout; the blast-radius confirmation becomes a question and the run pauses with exit `3` |
+| `--answer <pairs...>` | With `--mode agent`: answer a paused run's question by id, `evolve:<use-case>=1` (proceed) or `=2` (decline). Repeatable. An answer to a question the run does not ask refuses `ANSWER_USAGE` |
+
+See [Maintaining the suite](/docs/kane-cli-assurance-maintain/) and [Assurance automation](/docs/kane-cli-assurance-automation/) for the event stream.
+
+---
+
+### `kane-cli plugin`
+
+Manage the plugins Kane CLI installs under `~/.testmuai/kaneai/plugins/`. The one you are most likely to need is `remote-execution`, which owns the HyperExecute binary behind `kane-cli testrun run --remote`.
+
+```bash
+kane-cli plugin install remote-execution      # install (add --version <v> to pin one)
+kane-cli plugin list                          # what is installed, with versions
+kane-cli plugin doctor remote-execution       # readiness: installed, binary present, logged in
+kane-cli plugin remove remote-execution
 ```
 
 ---
@@ -159,7 +265,7 @@ kane-cli profiles switch <name>  # Switch the active profile
 kane-cli profiles delete <name>  # Delete a profile
 ```
 
-See [Authentication — Profiles](/docs/kane-cli-authentication/#profiles) for details.
+See [Authentication: Profiles](/docs/kane-cli-authentication/#profiles) for details.
 
 ---
 
@@ -178,10 +284,16 @@ kane-cli config set-target <target>        # Set run target: desktop | emulator 
 kane-cli config set-device-name <name>     # Set default mobile device, as kane-cli devices list prints it
 kane-cli config set-os-version <version>   # Set the default mobile device's OS version
 kane-cli config set-app <path|APPid>       # Set default app under test for mobile runs
+kane-cli config set-url <url>              # Set the default start URL (bare domains are normalized to https://)
+kane-cli config set-bug-detection <off|stop|continue>  # Set bug detection while authoring
+kane-cli config set-assertion-mode <dom|visual>        # Set assertion mode (default dom, with vision fallback)
+kane-cli config set-final-validation <on|off>          # Set the synthesized cp_final checkpoint (default off)
+kane-cli config set-network-ws <on|off>                # Experimental WebSocket capture (default off)
+kane-cli config set-network-sse <on|off>               # Experimental SSE capture, Chromium-only (default off)
 ```
 
 <Note>
-Commands without arguments (`chrome-profile`, `project`, `folder`) launch an interactive picker UI. AI agents cannot run these — ask the user to run them directly.
+Commands without arguments (`chrome-profile`, `project`, `folder`) launch an interactive picker UI. AI agents cannot run these: ask the user to run them directly.
 </Note>
 
 See [Configuration](/docs/kane-cli-configuration/) for the full settings reference.
@@ -203,12 +315,42 @@ kane-cli feedback \
 
 ## Exit Codes
 
+### `kane-cli run`
+
 | Code | Meaning |
 |------|---------|
-| `0` | Test passed |
-| `1` | Test failed (assertion not met) |
-| `2` | Error (auth failure, Chrome crash, infra issue) |
-| `3` | Timeout or cancelled |
+| `0` | Run passed |
+| `1` | Run failed (agent reached an unrecoverable failure, or the upload failed) |
+| `2` | Error (auth, TMS credential exchange, configuration, Chrome, unknown subcommand, or unhandled exception) |
+| `3` | Run was cancelled or hit the `--timeout` |
+
+Under `--analyzer-only`, exit `0` means all conditions were judged, **not** that all are true. Exit `1` means a result was missing, and `3` means cancelled. An unresolved-variable warning does not change the exit code.
+
+### `kane-cli testmd run`
+
+| Code | Meaning |
+|------|---------|
+| `0` | Run passed (or the file had no steps) |
+| `1` | At least one non-optional step failed |
+| `2` | Error before or during the run: parse error, auth error, organisation mismatch, Chrome launch failure, invalid flag, lock conflict with `--on-lock-conflict fail` |
+| `3` | Cancelled (Ctrl+C confirmed) or timed out (including `--on-lock-conflict wait` timing out) |
+
+### `kane-cli testrun run`
+
+| Code | Meaning |
+|------|---------|
+| `0` | All members passed |
+| `1` | At least one member failed or broke |
+| `2` | Usage error, invalid plan (preflight failures), or auth error. Nothing ran |
+| `3` | Cancelled (Ctrl-C) |
+
+With `--dry-run`, exit `0` means the plan is valid and exit `2` reports planning refusals.
+
+### `kane-cli maintain evolve --mode agent`
+
+The final `done` event carries the status: `complete` (exit `0`), `refused` (exit `2`: a usage error, `MODE_USAGE`, `ANSWER_USAGE`, or an explicit target that was never designed), `paused` (exit `3`, evolve's question or the design session), or `error` with the design run's own code.
+
+For `generate` and the assurance commands, see [Generate workflow](/docs/kane-cli-generate-workflow/) and [Assurance automation](/docs/kane-cli-assurance-automation/). Always check the process exit code: an early refusal, an invalid plan, or a dry run can exit without the normal completion event.
 
 ---
 
@@ -222,11 +364,11 @@ kane-cli feedback \
 | `/whoami` | `[--profile name]` | Show profile info |
 | `/balance` | | Show credit balance |
 | `/profiles` | `list\|switch\|delete` | Manage profiles |
-| `/config` | `show\|set-window\|set-mode\|chrome-profile\|project\|folder` | Manage configuration |
+| `/config` | `show\|set-window\|set-url\|set-mode\|chrome-profile\|project\|folder` | Manage configuration |
 | `/mobile` | | Switch the session to an emulator or simulator |
 | `/desktop` | | Switch the session back to desktop (Chrome) |
 | `/doctor` | | Check mobile tooling and devices |
-| `/new` | | Start a fresh session (uploads current session first) |
+| `/new` | | Start a fresh session (uploads the current session and seals its evidence pack first) |
 | `/summary` | `[index]` | View detailed run summaries |
 | `/cancel` | | Abort the current run |
 | `/help` | | Show the command reference |
@@ -254,14 +396,18 @@ kane-cli feedback \
 | Setting | Default | Command |
 |---------|---------|---------|
 | `window_size` | `1920x1080` | `config set-window` |
-| `default_url` | `https://kaneai-playground.lambdatest.io` | Internal default |
+| `default_url` | `https://kaneai-playground.lambdatest.io` (treated as unset) | `config set-url` |
+| `target` | `desktop` | `config set-target` |
+| `device_name` / `os_version` | None | `config set-device-name` / `config set-os-version` |
+| `app` | None | `config set-app` |
+| `bug_detection` | `off` | `config set-bug-detection` or `--bug-detection` flag |
 | `model` | `v16-alpha` | Internal default |
 | `mode` | `testing` | `config set-mode` |
 | `chrome_profile_path` | Empty (temporary per run) | `config chrome-profile` |
 | `project_id` / `project_name` | None | `config project` |
 | `folder_id` / `folder_name` | None | `config folder` |
-| `code_export.enabled` | `false` | TUI menu or `--code-export` flag |
-| `code_export.language` | `python` | `--code-language` flag |
+| `code_export.enabled` | `true` | TUI menu or `--code-export` flag |
+| `code_export.language` | `python` (or `javascript`) | `--code-language` flag |
 | `code_export.skip_validation` | `true` | TUI menu or `--skip-code-validation` flag |
 
 Settings are stored at `~/.testmuai/kaneai/tui-config.json`. See [Configuration](/docs/kane-cli-configuration/) for details.

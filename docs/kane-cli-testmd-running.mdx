@@ -23,7 +23,7 @@ kane-cli testmd export <path>        # regenerate code export from existing reco
 kane-cli testmd sync <path>          # push the test bundle (test + imports + outputs) to the cloud
 ```
 
-To run **many** tests as one execution — selected by path or `tags:` — use [`kane-cli testrun run`](/docs/kane-cli-testrun/).
+To run **many** tests as one execution, selected by path or `tags:`, use [`kane-cli testrun run`](/docs/kane-cli-testrun/).
 
 In a TTY, `kane-cli testmd` with no subcommand opens an interactive picker that walks the current directory and lets you pick a `_test.md` to run.
 
@@ -49,7 +49,7 @@ Every flag accepted by `kane-cli testmd run`:
 | Flag | Type | Default | Description |
 |---|---|---|---|
 | `--headless` | flag | off | Launch Chrome without a visible window. Per-run; no persistent setting. Equivalent to `headless: true` in frontmatter. |
-| `--max-steps <n>` | integer | `30` | Maximum agent reasoning steps per test step. |
+| `--max-steps <n>` | integer | `50` | Maximum agent reasoning steps per test step. |
 | `--timeout <s>` | integer | none | Hard kill timer per step, in seconds. |
 | `--url <url>` | string | frontmatter `url:` / config `default_url` | Start URL for the first step. Overrides the frontmatter `url:` key and the configured `default_url`; bare domains are normalized to `https://`. |
 | `--allow-missing-url` | flag | off | Non-TTY only: proceed from the browser's current page instead of failing when the first step has no start URL (`url:` / `--url` are still used if present). |
@@ -64,38 +64,37 @@ Every flag accepted by `kane-cli testmd run`:
 | `--access-key <key>` | string | profile | Basic-auth access key. Skips OAuth for this run. |
 | `--mode <name>` | `action` \| `testing` | profile or `testing` | Agent behaviour on auth walls and error pages. See [Run mode](#run-mode). |
 | `--agent` | flag | auto when stdin not TTY | Plain NDJSON output; no TUI. Use this in CI. |
-| `--code-export` | flag | off | Generate Playwright code after the run. See [Code export](#code-export). |
+| `--code-export` | flag | config (`true` by default) | Generate Playwright code after the run. See [Code export](#code-export). |
 | `--code-language <lang>` | `python` \| `javascript` | `python` | Code-export target language. |
 | `--skip-code-validation` | flag | on | Skip the post-codegen validation pass. |
 | `--no-skip-code-validation` | flag | off | Force the post-codegen validation pass. |
 | `--name <name>` | string | none | Persist a session name. Must match `[a-zA-Z0-9_-]+`. |
 | `--on-lock-conflict <mode>` | `readonly` \| `fail` \| `wait` | none | Policy when another user holds the lock. See [Lock conflicts](#lock-conflicts). |
 | `--push` | flag | off | Always commit at the end of the run. |
-| `--retry` | flag | off | On replay failure, restart the run with a shrinking replay window. |
-| `--retry-count <n>` | integer | `3` | Maximum replay restart attempts before falling back to a full re-author. |
-| `--author` | flag | off | Skip the replay decision and author every step from scratch. |
-| `--bug-detection <mode>` | `off` \| `stop` \| `continue` | config value (`off`) | Detect product bugs while authoring: `stop` halts the run on a confirmed bug; `continue` records it and keeps going. Overrides `config set-bug-detection`. Authoring steps only — replay failures always investigate. See [Configuration](/docs/kane-cli-configuration/#bug-detection). |
+| `--no-adaptive-heal` | flag | healing enabled | Disable adaptive healing after replay failure. See [Replay policy and completion](#replay-policy-and-completion). |
+| `--author` | flag | off | Re-author authorable steps; replay-only marked steps still replay. |
+| `--bug-detection <mode>` | `off` \| `stop` \| `continue` | config value (`off`) | Detect product bugs while authoring: `stop` halts the run on a confirmed bug; `continue` records it and keeps going. Overrides `config set-bug-detection`. Authoring steps only; replay failures always investigate. See [Configuration](/docs/kane-cli-configuration/#bug-detection). |
 
-Most flags have a frontmatter counterpart with the same name (with underscores). Where both are set, the CLI flag wins — except for `variables`, which the file owns; see [Writing test.md files](/docs/kane-cli-testmd/#variables).
+Most flags have a frontmatter counterpart with the same name (with underscores). Where both are set, the CLI flag wins, except for `variables`, which the file owns; see [Writing test.md files](/docs/kane-cli-testmd/#variables).
 
-Before any step runs, every `{{name}}` the authored steps reference must have a value, from the file's own `variables:` frontmatter, a variable file, `--variables-file`, or `--variables`. A name with no value stops the run before the browser starts, with exit `2` and a receipt naming the variable, the file waiting for its value, and the step. Replayed steps are not checked. See [Before a run](/docs/kane-cli-variables-and-context/#before-a-run-unresolved-variables).
+Before any step runs, every `{{name}}` the authored steps reference is checked against the file's own `variables:` frontmatter, the variable files, `--variables-file` and `--variables`. A name with no value is a warning: the receipt names the variable, the file waiting for its value, and the step, and the run goes ahead, typing the name as written unless a step sets it first. Replayed steps are not checked. See [Before a run](/docs/kane-cli-variables-and-context/#before-a-run-unresolved-variables).
 
 ## How a run works
 
 A run proceeds in four phases:
 
-1. **Parse** — kane-cli reads the `_test.md` file (and any helper it imports) and validates frontmatter, step bodies, and the `@import` graph. Parse errors abort here with exit `2`; no browser is launched.
-2. **Decide replay vs author per step** — for each step, kane-cli decides whether to **replay** a cached recording or **author** a fresh one. See [Replay vs author](#replay-vs-author).
-3. **Execute** — kane-cli launches Chrome and works through every step in order. Each step either replays its cached recording or asks the agent to figure it out.
-4. **Finalize** — kane-cli writes `Result.md`, saves recordings, uploads the run to Test Manager, and (if enabled) generates code export.
+1. **Parse**: kane-cli reads the `_test.md` file (and any helper it imports) and validates frontmatter, step bodies, and the `@import` graph. Parse errors abort here with exit `2`; no browser is launched.
+2. **Decide replay vs author per step**: for each step, kane-cli decides whether to **replay** a cached recording or **author** a fresh one. See [Replay vs author](#replay-vs-author).
+3. **Execute**: kane-cli launches Chrome and works through every step in order. Each step either replays its cached recording or asks the agent to figure it out.
+4. **Finalize**: kane-cli writes `Result.md`, saves recordings, uploads the run to Test Manager, and (if enabled) generates code export.
 
 Each step launches its own runner subprocess. The browser is shared across steps; cookies, login state, and tabs carry over.
 
 ## Replay vs author
 
-The first time you run a `_test.md`, every step is **authored**: the agent works out how to satisfy the objective and a recording is saved next to the test. On every subsequent run, kane-cli tries to **replay** the saved recording for each step — no agent involved, no LLM cost, much faster.
+The first time you run a `_test.md`, every step is **authored**: the agent works out how to satisfy the objective and a recording is saved next to the test. On every subsequent run, kane-cli tries to **replay** the saved recording for each step, with no agent involved, no LLM cost, much faster.
 
-A step replays if and only if all of the following are true:
+For authorable steps, replay requires all of the following (replay-only marked steps are exempt from this authoring decision):
 
 - A recording exists for it on disk.
 - The step's objective text has not changed since the recording.
@@ -106,36 +105,35 @@ If any of those fail, the step authors again.
 
 ### Edits cascade to the rest of the file
 
-Editing one step does not just re-record that step — it re-records that step **and every step after it in the same file**. The reason: each step starts where the previous step left off (same browser, same URL, same logged-in state). When you change step 3, the state step 4 expected to find may no longer be there, so it is not safe to replay step 4 from cache.
+Editing one step does not just re-record that step. It re-records that step **and every authorable step after it in the same file**; replay-only marked steps still replay. The reason: each step starts where the previous step left off (same browser, same URL, same logged-in state). When you change step 3, the state step 4 expected to find may no longer be there, so it is not safe to replay step 4 from cache.
 
-In practice this means: an isolated text fix at the top of a test can re-author the whole file. If you are iterating on a test and want only the last step to re-record, edit that last step.
+In practice this means: an isolated text fix at the top of a test can re-author all authorable steps in the file. If you are iterating on a test and want only the last step to re-record, edit that last step.
 
 ### Forcing a fresh recording
 
 Two ways to author everything:
 
-- **`--author`** — bypasses the replay decision for one run. Every step authors.
-- **Delete the output directory** — `rm -rf output-<stem>/` resets the cache for the next run.
+- **`--author`**: bypasses the replay decision for one run. Every authorable step authors; replay-only marked steps still replay.
+- Preserve output recordings for replay-only marked steps; deleting them cannot force fresh authoring.
 
 ### Handling replay failures
 
-A replay can fail if the site changed under you — a button moved, the page is slower than expected, an extra modal appears. Two flags help:
+A replay can fail if the site changed under you: a button moved, the page is slower than expected, an extra modal appears. Recovery is controlled by the healing policy:
 
-- **`--retry`** — on replay failure, kane-cli restarts the run with a smaller replay window: it authors the failing step and replays fewer earlier steps. This often recovers transient issues without a full re-author.
-- **`--retry-count <n>`** — maximum restart attempts. Default `3`. After this many retries, kane-cli falls back to a full re-author.
+- **Adaptive healing** is enabled by default: three shrinking replay windows, then re-author authorable steps. Use `--no-adaptive-heal` to disable it. See [Replay policy and completion](#replay-policy-and-completion).
 
-Every failed replay is also **investigated automatically**: a failure record — the error, the page state at failure, and pointers into the step's console/network logs — is written into the run's [evidence pack](/docs/kane-cli-evidence-debugging/), so you can see *why* the replay broke, not just that it did.
+Every failed replay is also **investigated automatically**: a failure record (the error, the page state at failure, and pointers into the step's console/network logs) is written into the run's [evidence pack](/docs/kane-cli-evidence-debugging/), so you can see *why* the replay broke, not just that it did.
 
 ### Replays don't need a project or folder
 
-A pure replay of an already-authored test — every step replays from cache — no longer requires a Test Manager project/folder to be configured. There is no interactive picker, no auto-created project, and no setup dead end: the test already knows where it belongs, and the replay runs with that identity. Authoring runs (first runs, edited steps, `--author`) resolve a project and folder as before.
+A pure replay of an already-authored test, where every step replays from cache, no longer requires a Test Manager project/folder to be configured. There is no interactive picker, no auto-created project, and no setup dead end: the test already knows where it belongs, and the replay runs with that identity. Authoring runs (first runs, edited steps, `--author`) resolve a project and folder as before.
 
 ## Run mode
 
 The `--mode` flag controls how the agent handles authentication walls, blocked pages, and error pages. The same setting can be put in frontmatter as `mode:` (root-only).
 
-- **`testing`** (default) — the agent treats those pages as part of the run and continues. Negative-test cases (e.g., "verify the error message is shown") work because the run does not bail out on the first error page it sees.
-- **`action`** — the agent hard-stops on auth, blocked, and error pages so a human can intervene before the run continues.
+- **`testing`** (default): the agent treats those pages as part of the run and continues. Negative-test cases (e.g., "verify the error message is shown") work because the run does not bail out on the first error page it sees.
+- **`action`**: the agent hard-stops on auth, blocked, and error pages so a human can intervene before the run continues.
 
 `testing` is the right default for automated suites; `action` is for one-off authoring sessions where you want manual control.
 
@@ -147,21 +145,21 @@ A successful run writes everything it needs to replay next time into `output-<st
 amazon_test.md
 output-amazon/
   Result.md
-  .internal/                     # cached recordings — do not edit by hand
+  .internal/                     # cached recordings, do not edit by hand
   playwright-python-code/        # only if code export is enabled
 ```
 
-`Result.md` is the human-readable run report. `.internal/` holds the recordings kane-cli replays on the next run. The whole `output-<stem>/` directory is safe — and recommended — to commit to git: it makes your tests reproducibly replayable on any teammate's machine and on CI.
+`Result.md` is the human-readable run report. `.internal/` holds the recordings kane-cli replays on the next run. The whole `output-<stem>/` directory is safe (and recommended) to commit to git: it makes your tests reproducibly replayable on any teammate's machine and on CI.
 
 For tests that `@import` helpers, kane-cli also writes one `helper-output-...` directory per call site next to the helper file. See [Composing tests with @import](/docs/kane-cli-testmd-composition/#helper-outputs).
 
 ### The evidence pack
 
-Besides the output directory, every `testmd run` seals an [evidence pack](/docs/kane-cli-evidence/) — screenshots, per-step console/network logs, and failure records for the whole run — and copies it into `<cwd>/.testmuai/evidence/`. In a terminal you're offered to open it in the browser viewer at the end of the run; replayed runs also publish their pack to your project's execution history in Test Manager. Do **not** commit `.testmuai/evidence/` to git — packs are run artifacts, not test sources.
+Besides the output directory, every `testmd run` seals an [evidence pack](/docs/kane-cli-evidence/) (screenshots, per-step console/network logs, and failure records for the whole run) and copies it into `<cwd>/.testmuai/evidence/`. In a terminal you're offered to open it in the browser viewer at the end of the run; replayed runs also publish their pack to your project's execution history in Test Manager. Do **not** commit `.testmuai/evidence/` to git. Packs are run artifacts, not test sources.
 
 ## `Result.md`
 
-`Result.md` is generated on every run. It is intended to be read in a browser or editor — drop it into any Markdown viewer.
+`Result.md` is generated on every run. It is intended to be read in a browser or editor. Drop it into any Markdown viewer.
 
 The file begins with frontmatter:
 
@@ -249,18 +247,17 @@ A CI-friendly invocation:
 kane-cli testmd run ./tests/checkout_test.md \
   --agent \
   --headless \
-  --on-lock-conflict wait \
-  --retry
+  --on-lock-conflict wait
 ```
 
-- `--agent` — plain NDJSON to stdout, no TUI redraws. Auto-enabled when stdin is not a TTY, but pass it explicitly for clarity.
-- `--headless` — Chrome runs without a window.
-- `--on-lock-conflict wait` — block instead of failing if a teammate is editing the same test.
-- `--retry` — recover transient replay failures automatically.
+- `--agent`: plain NDJSON to stdout, no TUI redraws. Auto-enabled when stdin is not a TTY, but pass it explicitly for clarity.
+- `--headless`: Chrome runs without a window.
+- `--on-lock-conflict wait`: block instead of failing if a teammate is editing the same test.
+- Adaptive healing recovers replay failures by default; `--no-adaptive-heal` opts out.
 
 In a non-interactive run (stdin is not a TTY), there is no one to answer an interactive `ask_user` prompt, so kane-cli disables it: a step that would otherwise wait for input fails cleanly instead of blocking forever. Write test steps that do not depend on mid-run prompts when running in CI.
 
-If the runner cannot have Chrome at all, run the tests as a suite on the cloud grid instead. `kane-cli testrun run tests/ --remote` executes every `testmd run` on a HyperExecute macOS runner and returns the recordings and the evidence pack. See [Remote Runs](/docs/kane-cli-remote-execution/).
+If the runner cannot have Chrome at all, run the tests as a suite on the cloud grid instead. `kane-cli testrun run --match '^tests/' --remote` executes every `testmd run` on a HyperExecute macOS runner and returns the recordings and the evidence pack. See [Remote Runs](/docs/kane-cli-remote-execution/).
 
 Capture exit code in a shell script:
 
@@ -308,14 +305,14 @@ Removes the test source and its `output-<stem>/` directory:
 kane-cli testmd delete amazon_test.md
 ```
 
-This is a local-only delete — it does not remove the test from Test Manager. Use it when you have abandoned a test or want to start over from scratch.
+This is a local-only delete. It does not remove the test from Test Manager. Use it when you have abandoned a test or want to start over from scratch.
 
 ## `kane-cli testmd export <path>`
 
 Regenerates the code export from existing recordings without re-running the test:
 
 ```bash
-kane-cli testmd export amazon_test.md --code-language python
+kane-cli testmd export amazon_test.md --language python
 ```
 
 This is faster than a full run because the browser is not launched; it reuses what was recorded last time.
@@ -335,13 +332,23 @@ kane-cli testmd sync ./tests/checkout_test.md
 
 You rarely need to run this by hand: after every successful authored commit, kane-cli pushes the same bundle **automatically**. The manual command exists for re-syncing a test whose automatic push failed (for example, a network drop at the end of a run).
 
+## Replay policy and completion
+
+Adaptive healing is enabled by default: after a replay failure the runner tries up to three shrinking replay windows, then full re-authoring of authorable steps. `--no-adaptive-heal` disables this recovery. Retired `--retry` and `--retry-count` are accepted only to print a notice; they do not enable healing or change the fixed budget.
+
+Headings marked `@db`, `@api`, `@js`, `@smartui`, `@network_query`, or `@network_assertion` are replay-only. They still replay under `--author`, downstream divergence and adaptive healing. Missing recordings cannot be re-authored through these markers: restore the recording or recreate it through the originating workflow. Do not delete their tapes to force authoring; adding a marker does not create an operation.
+
+Structured control flow uses balanced heading markers: `@if`, `@elif`, `@else`, `@end-if`, `@while`, `@end-while`. An `@else` must be last in its conditional; end markers must match the opened block type. These are distinct from natural-language conditionals. Markers are excluded from the step body hash. Only one replay-only kind is allowed per step, and an import cannot also be marked replay-only.
+
+Under `--agent`, wait for `test_md_done` (file-level `overall_status`, `duration_s`, `session_id`, optional `share_url`) and process exit. Individual `run_end` events do not complete the file.
+
 ## Next steps
 
-- [Writing test.md files](/docs/kane-cli-testmd/) — file format, frontmatter, steps, variables.
-- [Batch runs with testrun](/docs/kane-cli-testrun/) — run many tests as one execution with one evidence pack.
-- [Evidence packs](/docs/kane-cli-evidence/) — what every run captures and how to view it.
-- [Composition with @import](/docs/kane-cli-testmd-composition/) — reusable helpers across tests.
-- [Configuration](/docs/kane-cli-configuration/) — persistent settings: Chrome profile, window size, code export defaults.
-- [Test Manager integration](/docs/kane-cli-tms-integration/) — what happens during the upload.
+- [Writing test.md files](/docs/kane-cli-testmd/): file format, frontmatter, steps, variables.
+- [Batch runs with testrun](/docs/kane-cli-testrun/): run many tests as one execution with one evidence pack.
+- [Evidence packs](/docs/kane-cli-evidence/): what every run captures and how to view it.
+- [Composition with @import](/docs/kane-cli-testmd-composition/): reusable helpers across tests.
+- [Configuration](/docs/kane-cli-configuration/): persistent settings: Chrome profile, window size, code export defaults.
+- [Test Manager integration](/docs/kane-cli-tms-integration/): what happens during the upload.
 
 <KaneCliCta />

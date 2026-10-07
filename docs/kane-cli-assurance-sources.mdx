@@ -60,17 +60,19 @@ Remote sources are passed as a URL instead of a file path. Each requires the mat
 kane-cli context ingest https://<your-site>/browse/PROJ-123
 ```
 
-Ingested: the summary, the description, custom fields, the attachment inventory with image attachments as citable parts, and all comments with author, timestamp and body, every line citable.
+Ingested: the summary, the description, custom fields, the attachment inventory with image attachments as citable parts, and *(0.7.2)* all comments with author, timestamp and body, every line citable.
 
 Comments are part of the issue's identity. If they cannot be read, the whole ingest refuses rather than recording the issue without them.
 
-Re-running the URL is `unchanged` or `versioned`, exactly like a re-ingested file. The default source id is the lowercased issue key, and `--as` overrides it.
+Re-running the URL is `unchanged` or `versioned`, exactly like a re-ingested file. An issue last ingested before 0.7.2 versions **once** on its next re-ingest (per source, only when you re-ingest it; nothing migrates on upgrade). The default source id is the lowercased issue key, and `--as` overrides it.
+
+Refusals name their remedy: an expired Atlassian connection asks you to resync it in the Integrations screen, a missing connection to create one there, and an issue outside the integration's selected projects to add that project there.
 
 <Note>
 The project must be one of the integration's selected projects. An issue outside that set refuses and names the Integrations screen so you can add the project.
 </Note>
 
-### Confluence pages
+### Confluence pages *(0.7.2)*
 
 ```bash
 kane-cli context ingest https://<site>/wiki/spaces/<KEY>/pages/<id>/...
@@ -84,7 +86,7 @@ Re-ingesting reads the latest page version, and identity follows content. An edi
 
 Short links such as `/wiki/x/...` are not supported. Open the page and use its full URL.
 
-### Linear issues
+### Linear issues *(0.8.6)*
 
 ```bash
 kane-cli context ingest https://linear.app/<workspace>/issue/KEY-123
@@ -98,7 +100,7 @@ As with Jira, comments are part of the issue's identity, so a failed or partial 
 
 Identity follows the issue itself. Renaming a team key continues the same source as a `versioned` update, while a recycled key, meaning the same key now pointing at a different issue, refuses with a retire or `--as` recovery path. The default source id is the lowercased key, for example `eng-42`, and `--as` overrides it.
 
-### Linear documents
+### Linear documents *(0.8.6)*
 
 ```bash
 kane-cli context ingest https://linear.app/<workspace>/document/<slug>
@@ -110,7 +112,7 @@ Ingested: the document body with every line citable, plus its inline images. The
 
 Workspace pages, meaning project, team or view URLs, are not ingestable and refuse loudly. Ingest their issues or documents individually.
 
-### Public web pages
+### Public web pages *(0.8.3)*
 
 ```bash
 kane-cli context ingest https://docs.example.com/guide
@@ -124,7 +126,7 @@ Re-ingesting an unchanged page is `unchanged`. A content change is `versioned`, 
 
 A web source is always the live page. There is no point-in-time read. Inaccessible pages, whether not found, behind a login or paywall, bot-blocked, non-HTML, too large or timing out, refuse with the reason in plain language. Private and internal addresses are refused.
 
-## Remote ids share one space
+## Remote ids share one space *(0.8.6)*
 
 A Jira `ENG-42` and a Linear `ENG-42` both mint the source id `eng-42`. A URL whose id is already backed by a different kind of source refuses and offers a recovery, either retiring the existing source or adopting the new one under `--as`. It is never a silent replace.
 

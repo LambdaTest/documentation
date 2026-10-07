@@ -15,10 +15,10 @@ A generation produces:
 - **Test Scenarios**: logical groupings of related checks (e.g. "Login", "Checkout").
 - **Test Cases**: the individual checks inside each scenario, each typed **Positive**, **Negative**, or **Edge**.
 
-You generate, review the result, **refine** it in plain language as many times as you like, and optionally **save** the functional cases as runnable `_test.md` files that [`kane-cli testmd`](/docs/kane-cli-testmd/) can execute and replay.
+You generate, review the result, **refine** it in plain language as many times as you like, and optionally **save** the functional cases as runnable `_test.md` files that [`kane-cli testmd`](/docs/kane-cli-testmd-running/) can execute and replay.
 
 <Note>
-For the full picture of AI test-case generation, including richer inputs (files, PDFs, issue links) and pushing cases into Test Manager or automation, see the [AI test-case generation guide](/docs/generate-test-cases-with-ai/). The **CLI here takes a text description** (optionally with local files attached via [`--files`](#attaching-files-for-context)) and writes local `_test.md` files. See [Limits and scope](#limits-and-scope).
+For the full picture of AI test-case generation, including issue-link inputs, dashboards, and pushing cases into Test Manager or automation, see the [AI test-case generation guide](/docs/generate-test-cases-with-ai/). The **CLI here takes a text description** (optionally with local files attached via [`--files`](#attaching-files-for-context)) and writes local `_test.md` files. See [Limits and scope](#limits-and-scope).
 </Note>
 
 ## Quick start
@@ -101,7 +101,7 @@ Unlike the one-turn command-line surface, the TUI is a **live session**: generat
 
 In the scenario browser: `↑↓` move · `↵` open · `◂ ▸` previous/next sibling · `x` remove a case · `←`/`esc` back. **Non-functional cases** (Security, Performance, …) show a **gray `✓`** with a "won't be saved" note. `/save` writes only functional cases (see [Saving is functional-only](#saving-is-functional-only)).
 
-If generation asks a **clarifying question**, just type your answer to continue. After `/save`, the files are ordinary `_test.md` tests under `.testmuai/tests/`, run them with [`kane-cli testmd run`](/docs/kane-cli-testmd/).
+If generation asks a **clarifying question**, just type your answer to continue. After `/save`, the files are ordinary `_test.md` tests under `.testmuai/tests/`, run them with [`kane-cli testmd run`](/docs/kane-cli-testmd-running/).
 
 ## How a result is shaped
 
@@ -131,7 +131,7 @@ This is the intended path: **generate authors test cases → testmd runs them.**
 ## Next steps
 
 - [The generate workflow](/docs/kane-cli-generate-workflow/): the new → refine → save → run loop, worked examples, and exit codes.
-- [Running tests with testmd](/docs/kane-cli-testmd/): run and replay the `_test.md` files `--save` produces.
+- [Running tests with testmd](/docs/kane-cli-testmd-running/): run and replay the `_test.md` files `--save` produces.
 - [Authentication](/docs/kane-cli-authentication/): logging in and choosing an environment.
 
 <KaneCliCta />

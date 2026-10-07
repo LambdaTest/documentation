@@ -46,6 +46,14 @@ kane-cli generate "checkout flow on a shopping site" --scenario-limit 4 --per-sc
 
 Add `--memory` to reuse relevant existing cases and avoid duplicating coverage you already have.
 
+Attach local files as context (a spec, a screenshot, a PDF or CSV) with `--files`, on a new generation or a refine:
+
+```bash
+kane-cli generate "cover the flows described in the attached spec" --files ./spec.pdf,./flows.csv
+```
+
+Up to 10 files, each 50 MB or smaller (documents, images, audio, video); all paths are validated before anything is sent. See [Attaching files for context](/docs/kane-cli-generate/#attaching-files-for-context).
+
 ## 2. Refine
 
 Refinement is a plain-language conversation. Each refine is a fresh command with `--refine --req <id>`:
@@ -104,7 +112,7 @@ The saved files are ordinary `_test.md` tests. Run any of them with `testmd`:
 kane-cli testmd run .testmuai/tests/checkout-23271/checkout/guest-checkout_test.md
 ```
 
-From here, everything in the [testmd docs](/docs/kane-cli-testmd/) applies: replay from cache, edit steps, compose with `@import`, and commit the output to git.
+From here, everything in the [testmd docs](/docs/kane-cli-testmd-running/) applies: replay from cache, edit steps, compose with `@import`, and commit the output to git.
 
 ## Automating it (agents / CI)
 
@@ -133,6 +141,6 @@ Invalid flag combinations exit `2` with a message explaining the fix, for exampl
 ## Next steps
 
 - [Generating test cases with AI](/docs/kane-cli-generate/): overview, modes, and the full option reference.
-- [Running tests with testmd](/docs/kane-cli-testmd/): run and replay the files `--save` produces.
+- [Running tests with testmd](/docs/kane-cli-testmd-running/): run and replay the files `--save` produces.
 
 <KaneCliCta />

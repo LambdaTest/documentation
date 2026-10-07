@@ -44,9 +44,11 @@ npx @testmuai/kane-cli-skill
 
 A global install applies to every project. A project-level install ships with the repo, so teammates and CI pick it up automatically. For any agent not on that list, give it the hosted skill URL and it will fetch the same instructions.
 
+The installer also creates the folder that holds your agent preferences. On your first run the agent shows a ready check, starts the run straight away, and asks three quick choices once you have seen a result. See [Skills](/docs/kane-cli-skills/#what-happens-on-your-first-run) for the first run, your preferences, where results are saved, and the live status strip in Claude Code.
+
 ### Authenticate Without a Browser Window
 
-OAuth opens a browser window that an agent cannot complete on its own. Use Basic Auth instead:
+With the skill installed, the agent's ready check shows whether you are signed in and offers the fix if you are not. The agent can open the sign-in page for you, and it never asks you to paste an access key into the chat. Where no browser window can open, such as a sandboxed builder or a CI runner, use Basic Auth instead:
 
 ```bash
 kane-cli login --username "<your-username>" --access-key "<your-access-key>"
@@ -274,7 +276,7 @@ An ad-hoc verification disappears when the conversation ends. This use case prom
 The cheapest place to catch a broken flow is before the code leaves your machine. Your agent can gate its own work on a real browser run.
 
 1. Tell the agent the rule once, for example *"Before you open a PR, run the login and checkout tests against my local server and don't push if either fails."*
-2. The agent runs the committed tests rather than authoring new ones, for example `kane-cli testmd run ./tests/login_test.md --agent --headless --retry`.
+2. The agent runs the committed tests rather than authoring new ones, for example `kane-cli testmd run ./tests/login_test.md --agent --headless`.
 3. It reads the exit code to decide what to do next: `0` passed, `1` failed, `2` an auth, setup, or parse error, and `3` a timeout or cancellation.
 4. On a pass, it proceeds with the commit and PR as instructed.
 5. On a failure, it stops, reads `Result.md` to see which step failed, and brings you the specific broken step rather than a wall of output.

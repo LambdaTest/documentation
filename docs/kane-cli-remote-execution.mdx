@@ -19,8 +19,8 @@ Remote runs cover both kinds of test:
 ```bash
 kane-cli plugin install remote-execution                                          # once
 kane-cli testrun run --tags smoke --remote --parallel 4                           # a web suite on 4 grid runners
-kane-cli testrun run tests/app/ --remote --device-name "Pixel 7" --os-version 14  # an Android suite
-kane-cli testrun run tests/ios/ --remote --device-name "iPhone 15" --os-version 17.5
+kane-cli testrun run --match '^tests/app/' --remote --device-name "Pixel 7" --os-version 14  # an Android suite
+kane-cli testrun run --match '^tests/ios/' --remote --device-name "iPhone 15" --os-version 17.5
 ```
 
 <Note>
@@ -69,7 +69,7 @@ job 24fc58b2-… dispatched → https://hyperexecute.lambdatest.com/hyperexecute
 |---|---|
 | `--parallel <n>` | Becomes the job's concurrency: the members are auto-split across `n` grid runners, each running its share one member at a time. Device suites parallelize the same way, and every task has its own VM and device |
 | `--headless` | Not needed, every member runs headless on the grid |
-| `--on-failure`, `--name`, `--bug-detection`, `--author`, `--no-adaptive-heal` | Forwarded to the members on the grid |
+| `--author`, `--no-adaptive-heal` | Forwarded to grid member runs |
 | `--username`, `--access-key` | Used for the grid login and the Test Manager upload |
 
 ## Web suites on the grid
@@ -78,14 +78,14 @@ A web suite needs nothing beyond the prerequisites: the grid runner has Chrome, 
 
 ```bash
 kane-cli plugin install remote-execution
-kane-cli testrun run tests/web/ --remote --parallel 4 --on-failure fail-fast
+kane-cli testrun run --match '^tests/web/' --remote --parallel 4
 ```
 
 What you see back is a normal `testrun` summary; the only extra lines are the dispatch and the job link. A member that authors on the grid comes back with its `output-<stem>/` recordings, so the next run, on the grid or on your machine, replays them. Commit those recordings as you would after a local run.
 
 A web selection cannot share a job with device members (`mobile_remote_mixed`). Run the two suites separately.
 
-## Choosing a grid device
+## Choosing a grid device (mobile)
 
 Remote devices come from the **grid catalog**, not from the AVDs or simulators on your machine. List what the grid can provision:
 
@@ -152,7 +152,7 @@ Every reason arrives with the offending paths, both in the terminal and as a `re
 
 ## When a remote run fails
 
-- **A member failed or broke** (exit `1`): read it like any other failure. `output-<stem>/Result.md` names the failing step and reason, and the evidence pack has the screenshots and logs. See [Debugging with a pack](/docs/kane-cli-troubleshooting/#debugging-a-failed-run-with-its-evidence-pack).
+- **A member failed or broke** (exit `1`): read it like any other failure. `output-<stem>/Result.md` names the failing step and reason, and the evidence pack has the screenshots and logs. See [Debugging from a Pack](/docs/kane-cli-evidence-debugging/).
 - **A member is `broken` with no steps** and nothing was published: the grid-side kane-cli refused before launching. Open the job link and read the scenario stage log. For mobile, the usual cause is an `APP…` id that belongs to a different organisation than the account running the job.
 - **Nothing was dispatched** (exit `2`): the printed reason is one of the preflight codes above, or `kane-cli plugin doctor remote-execution` shows what is missing (plugin, binary, login).
 
@@ -165,13 +165,13 @@ npm install -g @testmuai/kane-cli
 kane-cli plugin install remote-execution
 
 # a web suite
-kane-cli testrun run tests/web/ --remote --parallel 4 \
-  --username "$LT_USERNAME" --access-key "$LT_ACCESS_KEY" --on-failure fail-fast
+kane-cli testrun run --match '^tests/web/' --remote --parallel 4 \
+  --username "$LT_USERNAME" --access-key "$LT_ACCESS_KEY"
 
 # a mobile suite
-kane-cli testrun run tests/app/ --remote \
+kane-cli testrun run --match '^tests/app/' --remote \
   --device-name "Pixel 7" --os-version 14 \
-  --username "$LT_USERNAME" --access-key "$LT_ACCESS_KEY" --on-failure fail-fast
+  --username "$LT_USERNAME" --access-key "$LT_ACCESS_KEY"
 ```
 
 Archive `.testmuai/evidence/*.evidence` as the build artifact. More pipeline shapes are in [CI/CD](/docs/kane-cli-cicd/).
@@ -192,6 +192,12 @@ In agent or non-TTY mode a remote run adds typed events around the normal `testr
 | `remote_done` | `status`, `exit`, `job_id`, `sessions_path` | Terminal for the remote wrapper, and follows `testrun_done` |
 
 `testrun_summary` also carries a `remote` object (`backend`, `jobId`, `jobUrl`, `sessionsPath`).
+
+## Remote behavior still requiring verification
+
+The audited dispatch does not forward `--bug-detection` to member commands and does not map `--on-failure` into the job template. Do not rely on these flags for remote bug-detection or fail-fast behavior until implementation owners confirm or fix the mapping. `--name` is suite metadata, not a forwarded member flag.
+
+For dispatched runs, read through `remote_done` and process exit after `testrun_done`; retain the remote status and session-log path. Preflight refusal and dry-run may terminate without `remote_done`.
 
 ## Next Steps
 

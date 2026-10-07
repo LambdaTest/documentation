@@ -10,17 +10,22 @@ import { KaneCliCta } from "/snippets/KaneCliCta.mdx";
 
 `kane-cli cover` measures coverage on two independent axes over the same store:
 
-- **Depth** — what a real execution **proved**, read from an evidence pack's coverage records. Facts only: the pack was sealed with these verdicts inside it; `cover` never recomputes them.
+- **Depth** — what a real execution **proved**, read from an [evidence pack](/docs/kane-cli-evidence/)'s coverage records. Facts only: the pack was sealed with these verdicts inside it; `cover` never recomputes them.
 - **Completeness** — what the design still **owes**, computed live from the `.context/` graph. A perfect pack can still ship with an unverified criterion or a happy-path-only use-case; this axis never reads packs.
 
 A run can look green and still owe you coverage — that's exactly the situation the two axes make visible.
 
 ```bash
-kane-cli cover [--from <pack>] [--json]                     # the two-axis panel
-kane-cli cover gaps [--stage design|cover|all] [--top <n>] [--from <pack>]  # the ranked worklist
+kane-cli cover [--from <pack>] [--json] [--mode agent|ci]        # the pack audit panel
+kane-cli cover gaps [--stage design|cover|all] [--top <n>] [--rollup lenient|strict] [--json] [--mode agent|ci]
+kane-cli cover gaps <uc-id> [--json] [--mode agent|ci]           # the per-use-case dossier
 ```
 
-## The panel
+<Warning>
+**Breaking changes (0.8.2):** `cover gaps --flat` and `cover gaps --from` are removed, and `--aspect` is renamed `--rollup`. The default output is the **coverage ribbon** described below. The nested `--json` document is the machine surface (its shape is unchanged), and `kane-cli cover --from <pack>` remains the pack-world audit.
+</Warning>
+
+## `cover` — the pack panel
 
 ```
 coverage — 8f0e…f2.evidence
@@ -40,22 +45,6 @@ The panel always shows **both** axes: the pack's proven depth, then the live-gra
 - Depth is **risk-weighted and lenient**: a high-risk criterion weighs more, and a passed-but-stale criterion still counts as proven — staleness is surfaced (`· N stale`), never silently demoted. Per-use-case status is `covered` (every AC proved) · `blocked` (something couldn't run, nothing failed) · `partial` · `uncovered`.
 - Coverage reflects **this run**: sealed packs cover only what the run touched. Project-wide coverage lives in the graph axis, unaffected by any single pack.
 - `--json` emits the full panel as structured data.
-
-## `cover gaps` — the worklist
-
-One ranked list (risk first) of what to do next, each row with a ready-to-paste command:
-
-```
-gaps — stage design (5)
-   1. [high] create uc-checkout-while-signed-in — use-case has no scenarios
-      → kane-cli design tests --use-case uc-checkout-while-signed-in
-   2. [med] create ac-the-cart-displays-an-order-subtotal — no live test verifies this acceptance criterion
-      → kane-cli design tests --use-case uc-manage-the-cart
-```
-
-- `--stage design` (default, no pack needed) — criteria no test verifies, use-cases with no or only-happy scenarios, recorded gap nodes from design runs, stale designed entities.
-- `--stage cover` (needs a pack) — a covered criterion whose **execution** disappointed: `failed` → re-design that slice; `blocked` or never-run → the test exists, run it.
-- `--stage all` — both, one ranking. `--top <n>` trims the list.
 
 ## `cover gaps` — the coverage ribbon *(0.8.2)*
 
@@ -91,7 +80,7 @@ Both `cover` and `cover gaps` take `--mode agent|ci`: the run speaks the same ND
 
 ## The join: how a pack knows your graph
 
-Every per-test result in an evidence pack carries a `definition_id` — a hash of the resolved test definition, identical to the one design stamps on each test it emits. The pack↔graph join is this hash equality and nothing else: no ids to sync, no registry to maintain. A hand-edited test hashes differently and simply stops joining — honest, not broken (a redesign — [`design tests --force`](/docs/kane-cli-assurance-design/#re-runs) or [`maintain evolve`](/docs/kane-cli-assurance-maintain/#evolve) — re-stamps the link).
+Every per-test result in an evidence pack carries a `definition_id` — a hash of the resolved test definition, identical to the one design stamps on each test it emits. The pack↔graph join is this hash equality and nothing else: no ids to sync, no registry to maintain. A hand-edited test hashes differently, so it stops joining until the graph catches up at the test's next run, which records the edit as a superseding version and re-forms the link. A redesign ([`design tests --force`](/docs/kane-cli-assurance-design/#re-runs) or [`maintain evolve`](/docs/kane-cli-assurance-maintain/#evolve)) re-stamps it the same way.
 
 Coverage records land in packs automatically whenever the project has a `.context/` store — the inline `run`/`testmd` path and `testrun` both write them before sealing. A project without a store gets byte-identical packs to before; a coverage-write failure never costs the seal.
 
@@ -100,11 +89,13 @@ Coverage records land in packs automatically whenever the project has a `.contex
 A freshly designed test has never been executed, and the tooling is honest about that:
 
 1. `kane-cli design tests` writes `t-…_test.md` files — runnable, but with no recording yet.
-2. `kane-cli testrun` preflight refuses never-authored members (`missing_meta`).
-3. So the first run of each designed test is [`kane-cli testmd run <file>`](/docs/kane-cli-testmd/) — the agent authors it in a real browser and commits the recording.
-4. From then on the test replays like any other: batch it with `testrun`, and its verdicts join the pack via `definition_id`.
+2. *(0.8.4)* [`kane-cli testrun`](/docs/kane-cli-testrun/) takes them anyway: at preflight each member classifies as **replay** (authored before) or **author** (fresh). Author members run standalone (the agent authors each in a real browser), and after both passes a **best-effort consolidation** merges the evidence into one published execution, with coverage recomputed and the facts synced into the graph. When consolidation cannot complete (a cancelled run, a merge that degrades), the source evidence is kept split rather than lost.
+3. [`kane-cli testmd run <file>`](/docs/kane-cli-testmd-running/) remains the way to author one test by itself.
+4. Either way, an authored test replays like any other and its verdicts join the pack via `definition_id`. *(0.8.4)* `testrun --from-context` selects members by their assurance test ids and follows edit supersessions, so a superseded test stays connected; only tombstoned tests are excluded.
 
-Until step 3 happens, `cover` reads the test's criteria as *covered on paper, unproven in execution* (`covered_by` present, execution `not-run`). That is a deliberate reading, not a bug — a designed test is a claim until a run proves it.
+(Before 0.8.4 the bridge was manual: `testrun` refused never-authored members and each designed test had to run under `testmd run` once first.)
+
+Until a test's first authored run, `cover` reads its criteria as *covered on paper, unproven in execution* (`covered_by` present, execution `not-run`). That is a deliberate reading, not a bug — a designed test is a claim until a run proves it.
 
 ## Inside the pack: `coverage/usecases.yaml`
 
@@ -114,5 +105,6 @@ The pack's coverage record is one YAML file you can read, diff, and archive — 
 
 - [The authoring bridge in practice](/docs/kane-cli-assurance-design/#from-design-to-execution) — design → author → batch.
 - [Maintaining the suite](/docs/kane-cli-assurance-maintain/) — act on what the gaps list tells you.
+- [Evidence packs](/docs/kane-cli-evidence/): everything else inside a pack.
 
 <KaneCliCta />

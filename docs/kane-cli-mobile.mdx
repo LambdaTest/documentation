@@ -9,7 +9,14 @@ keywords: ['kane cli mobile', 'kane cli emulator', 'kane cli simulator', 'kane c
 import { KaneCliCta } from "/snippets/KaneCliCta.mdx";
 import { BrandName } from "/snippets/BrandName.mdx";
 
-Kane CLI can run tests against local mobile virtual devices: Apple's **iOS Simulator** and Google's **Android Emulator**. You author and run mobile tests the same way you already do for the browser. The differences are that a mobile test runs against an **app you provide**, and that the target device is a simulator or emulator on your machine.
+Kane CLI can run tests against mobile virtual devices: Apple's **iOS Simulator** and Google's **Android Emulator**. You author and run mobile tests the same way you already do for the browser. The differences are that a mobile test runs against an **app you provide**, and that the target device is a simulator or emulator instead of a browser.
+
+There are two places that device can live:
+
+| | Where the device runs | Host requirement | How |
+|---|---|---|---|
+| **Local** | A simulator or emulator on your machine | **macOS on Apple Silicon (arm64)** with Xcode and/or Android Studio | `kane-cli run … --target emulator\|simulator`, `kane-cli testmd run`, `kane-cli testrun run` |
+| **Cloud grid** | A virtual device on a **HyperExecute macOS host** | **Any machine**: Linux, Windows, Intel or Apple Silicon Mac, no mobile tooling needed. Your TestMu AI plan must include HyperExecute with macOS runners | `kane-cli testrun run … --remote`. See [Remote Runs](/docs/kane-cli-remote-execution/) |
 
 <Note>
 **Local mobile runs need macOS on Apple Silicon (arm64).** Intel Macs, Linux, and Windows cannot boot the simulator or emulator locally. On those hosts, run mobile suites on the cloud grid with `--remote`. The setup sections below are for the local path.
@@ -205,7 +212,7 @@ kane-cli run "Add the first item to the cart" --app ./builds/app-debug.apk
 
 # a saved test, or a whole suite of them
 kane-cli testmd run tests/checkout_test.md
-kane-cli testrun run tests/app/ --device-name "Pixel 7 API 35" --os-version 15
+kane-cli testrun run --match '^tests/app/' --device-name "Pixel 7 API 35" --os-version 15
 ```
 
 Pick a device with `--device-name` and `--os-version` as `kane-cli devices list --target emulator|simulator` prints them, or save defaults with `kane-cli config set-device-name` and `kane-cli config set-os-version`. A device name needs an OS version. An OS version alone matches any device on it.
@@ -214,7 +221,7 @@ In the TUI or an interactive terminal, leaving the device flags off opens a one-
 
 `--app` is required for every mobile run. The simulator target accepts a `.zip` build, the emulator target accepts an `.apk` build, and both accept an uploaded app id, `APP` followed by six or more digits. `kane-cli apps list --target emulator|simulator` lists the uploaded builds your account can use. On the `desktop` target, the device flags and `--app` are ignored.
 
-In the interactive TUI, a first run offers a Desktop, Emulator, or Simulator chooser. Switch targets at any time with `/mobile` and `/desktop`, and run `/doctor` to check mobile tooling and devices.
+In the interactive TUI, a first run offers a Desktop, Emulator, or Simulator chooser, and you can switch targets with `/mobile` and `/desktop` before the first dispatch; afterwards use `/new` before switching. Run `/doctor` to check mobile tooling and devices.
 
 For the full flag list, see the [CLI Reference](/docs/kane-cli-cli-reference/#kane-cli-run) and [Mobile Runs](/docs/kane-cli-modes/#mobile-runs). To save a default target, device, and app instead of passing flags every time, see [Configuration](/docs/kane-cli-configuration/#mobile-target). To set the target, app, and device inside a test file, see [Test.md](/docs/kane-cli-testmd/#mobile-target). To run a folder of mobile tests, see [Batch Runs](/docs/kane-cli-testrun/#mobile-members).
 
@@ -225,8 +232,8 @@ Skip the local setup entirely. `kane-cli testrun run --remote` sends your mobile
 ```bash
 kane-cli plugin install remote-execution                              # once
 kane-cli devices list --target emulator --remote                      # what the grid can provision
-kane-cli testrun run tests/app/ --remote --device-name "Pixel 7" --os-version 14 --dry-run
-kane-cli testrun run tests/app/ --remote --device-name "Pixel 7" --os-version 14
+kane-cli testrun run --match '^tests/app/' --remote --device-name "Pixel 7" --os-version 14 --dry-run
+kane-cli testrun run --match '^tests/app/' --remote --device-name "Pixel 7" --os-version 14
 ```
 
 Three things differ from a local run:

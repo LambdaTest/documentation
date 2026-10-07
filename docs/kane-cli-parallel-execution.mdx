@@ -10,6 +10,21 @@ import { KaneCliCta } from "/snippets/KaneCliCta.mdx";
 
 Run multiple independent browser tests concurrently to reduce total execution time. Instead of running tests sequentially (sum of all durations), parallel execution runs them simultaneously: total time equals the longest single test.
 
+## Parallel Suites with testrun
+
+If your repo has committed `_test.md` tests, prefer one `testrun` invocation over a shell loop. `--parallel <n>` sets the worker count (default `1`), and the suite becomes one execution with one exit code and one sealed [evidence pack](/docs/kane-cli-evidence/):
+
+```bash
+kane-cli testrun run --tags smoke --parallel 4                     # 4 local workers
+kane-cli testrun run --tags smoke --remote --parallel 4            # a web suite on 4 grid runners
+```
+
+- Each desktop worker gets its **own isolated Chrome** with a fresh temporary profile, so parallel members never share cookies, logins, or tabs, and never fight over your real browser profile.
+- Local suites containing any mobile member require `--parallel 1`; larger values are refused. Isolated Chrome workers apply to desktop members only.
+- With `--remote`, `--parallel N` becomes the job's concurrency: the members are auto-split across N grid runners, each running its share one member at a time. Device suites parallelize the same way, and every task has its own VM and device.
+
+See [Batch Runs (testrun)](/docs/kane-cli-testrun/) and [Remote Runs on the Cloud Grid](/docs/kane-cli-remote-execution/). The patterns below are for independent `kane-cli run` objectives that are not saved as `_test.md` files.
+
 ## When to Run in Parallel
 
 Split objectives and run in parallel when:

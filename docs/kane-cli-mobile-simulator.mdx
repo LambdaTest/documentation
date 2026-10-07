@@ -6,7 +6,11 @@ keywords: ['kane cli ios simulator', 'ios simulator setup', 'xcode simctl', 'kan
 "og:description": "Set up Apple's iOS Simulator so Kane CLI can run mobile tests on a virtual iOS device on macOS Apple Silicon: install Xcode 16+ and point the CLI tools at it."
 ---
 
-Set up Apple's iOS Simulator once, and Kane CLI can run mobile tests against it. This guide targets **macOS on Apple Silicon (arm64)**, the only supported host for this release. See [Mobile Testing](/docs/kane-cli-mobile/) for the full picture.
+Set up Apple's iOS Simulator once, and Kane CLI can run mobile tests against it locally. This guide targets **macOS on Apple Silicon (arm64)**, the only host that can run the simulator locally. See [Mobile Testing](/docs/kane-cli-mobile/) for the full picture.
+
+<Tip>
+**Prefer not to set up a local device?** `kane-cli testrun run … --remote` runs the same mobile tests on a virtual device on a HyperExecute macOS host, from any machine and with none of the steps below. See [Remote Runs on the Cloud Grid](/docs/kane-cli-remote-execution/).
+</Tip>
 
 <Note>
 The exact iOS runtime versions and simulator device models in the supported matrix are pinned by the product team. The versions shown below are current, working examples. Confirm the officially supported set before you rely on a specific one.
@@ -42,7 +46,7 @@ Sign in and let Kane CLI install the tooling it manages for the simulator:
 
 ```bash
 kane-cli login
-kane-cli doctor --install
+kane-cli doctor --target simulator --install
 ```
 
 You do not need to boot a simulator yourself. Kane CLI discovers the simulator, boots it, installs your app, and runs the test.
@@ -52,11 +56,11 @@ You do not need to boot a simulator yourself. Kane CLI discovers the simulator, 
 Confirm Kane CLI sees a ready iOS toolchain and, optionally, the simulators on your machine:
 
 ```bash
-kane-cli doctor              # required checks, each with a fix if it fails
-kane-cli doctor --targets    # also list the simulators Kane CLI can run against
+kane-cli doctor --target simulator          # required checks, each with a fix if it fails
+kane-cli devices list --target simulator    # the simulators Kane CLI can run against
 ```
 
-When the iOS checks pass, your simulator setup is complete.
+When the iOS checks pass, your simulator setup is complete. Address a simulator on a run with `--device-name "<name>" --os-version <v>` as the list prints them.
 
 ## Run a Test
 
@@ -79,3 +83,4 @@ The simulator target accepts a `.zip` build or an uploaded app id, `APP` followe
 
 - [Android Emulator setup](/docs/kane-cli-mobile-emulator/)
 - [Mobile Testing overview](/docs/kane-cli-mobile/)
+- [Remote Runs on the Cloud Grid](/docs/kane-cli-remote-execution/): run simulator suites from any machine

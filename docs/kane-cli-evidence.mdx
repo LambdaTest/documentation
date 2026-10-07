@@ -8,7 +8,7 @@ keywords: ['kane cli evidence', 'evidence pack', 'kane cli evidence pack', 'test
 
 import { KaneCliCta } from "/snippets/KaneCliCta.mdx";
 
-Every kane-cli run produces an **evidence pack**: a single sealed `.evidence` file containing everything about the run — the test definition, a result summary, per-step screenshots (plus annotated copies highlighting what the agent acted on), browser console and network logs attributed to each step, run logs, and on failures a per-step failure record with the error, page state, and pointers into the logs.
+Every kane-cli run produces an **evidence pack**, a single sealed `.evidence` file containing everything about the run: the test definition, a result summary, per-step screenshots (plus annotated copies highlighting what the agent acted on), browser console and network logs attributed to each step, run logs, and on failures a per-step failure record with the error, page state, and pointers into the logs.
 
 A pack is a self-contained zip. You can open it in the hosted viewer, share it with a teammate, archive it in CI, validate it, or merge several packs into one.
 
@@ -16,14 +16,14 @@ A pack is a self-contained zip. You can open it in the hosted viewer, share it w
 
 Opened in the viewer (or unzipped), a pack contains:
 
-- **The test definition** — what was asked of the agent.
-- **A result summary** — status, duration, per-step outcomes, tags, who ran it (user name/email), a share link, and the environment (browser resolution, OS version).
-- **Per-step screenshots** — the page as the agent saw it, plus an **annotated** copy highlighting the element the agent acted on.
-- **Browser console and network logs** — captured for the whole run and attributed to the step that produced them.
-- **Run logs** — the CLI and runner logs for the execution.
-- **Failure records** — on failed runs, a per-step record with the error message, the page state at failure, and references into the console/network logs.
+- **The test definition**: what was asked of the agent.
+- **A result summary**: status, duration, per-step outcomes, tags, who ran it (user name/email), a share link, and the environment (browser resolution, OS version).
+- **Per-step screenshots**: the page as the agent saw it, plus an **annotated** copy highlighting the element the agent acted on.
+- **Browser console and network logs**: captured for the whole run and attributed to the step that produced them.
+- **Run logs**: the CLI and runner logs for the execution.
+- **Failure records**: on failed runs, a per-step record with the error message, the page state at failure, and references into the console/network logs.
 
-For a mobile run, the result summary records the **device** in the run environment, for example the device model and OS version.
+For a mobile run, the result summary records the **device** in the run environment, for example the device model and OS version, and the per-step logs include **device logs** from the emulator or simulator alongside the usual browser logs.
 
 <Note>
 The pack is the **only** place run artifacts live. There is no separate per-run log directory on disk.
@@ -47,7 +47,7 @@ What lands in the project store depends on the surface:
 
 | Surface | Copied to `.testmuai/evidence/`? |
 |---|---|
-| `kane-cli run` / TUI session | Only when the session is **named** (`--name`, or the save prompt at exit) |
+| `kane-cli run` / TUI session | Only when the session is **named** (`--name`, `/name` in the TUI, or the save prompt at exit) |
 | `kane-cli testmd run` | Always |
 | `kane-cli testrun run` | Always (the pack is created directly in the store) |
 | `kane-cli testrun run --remote` | Always. The suite's pack is sealed on the grid and downloaded into the store when the job ends, alongside the members' `output-<stem>/` recordings. See [Remote Runs](/docs/kane-cli-remote-execution/) |
@@ -70,9 +70,12 @@ Runs that upload to Test Manager attach their sealed pack automatically. Replaye
 
 ## Next steps
 
-- [Pack structure](/docs/kane-cli-evidence-pack-structure/) — every file inside a pack and what it is for.
-- [Viewing evidence](/docs/kane-cli-evidence-viewing/) — open a pack in the viewer.
-- [Debugging a failed run](/docs/kane-cli-evidence-debugging/) — the fastest path from a red run to a cause.
-- [The .evidence format](/docs/kane-cli-evidence-format/) — the open format behind the pack.
+- [Pack structure](/docs/kane-cli-evidence-pack-structure/): every file inside a pack and what it is for.
+- [Viewing evidence](/docs/kane-cli-evidence-viewing/): open a pack in the viewer.
+- [Debugging a failed run](/docs/kane-cli-evidence-debugging/): the fastest path from a red run to a cause.
+- [The .evidence format](/docs/kane-cli-evidence-format/): the open format behind the pack.
+- [Batch runs with testrun](/docs/kane-cli-testrun/): many tests, one execution, one pack.
+- [Running test.md files](/docs/kane-cli-testmd-running/): the testmd command family.
+- [Troubleshooting](/docs/kane-cli-troubleshooting/): debugging flows and escape hatches.
 
 <KaneCliCta />

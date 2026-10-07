@@ -9,20 +9,21 @@ keywords: ['kane cli troubleshooting', 'kaneai errors', 'testmu ai', 'chrome fai
 import { BrandName } from "/snippets/BrandName.mdx";
 import { KaneCliCta } from "/snippets/KaneCliCta.mdx";
 
+This page lists common problems you may hit while using Kane CLI, what causes them, and how to resolve them. If you're new to the CLI, start with [Installation](/docs/kane-cli-installation/) and [Getting Started](/docs/kane-cli-getting-started/); for setup-level concerns see [Configuration](/docs/kane-cli-configuration/) and [Authentication](/docs/kane-cli-authentication/).
+
 ## Log Locations
 
 Before diagnosing, know where to look:
 
 | Log | Path |
 |-----|------|
-| Run text log | `{run_dir}/run.log` |
-| Step detail (JSON) | `{run_dir}/run-test/step_NNN.json` |
-| Step screenshot | `{run_dir}/run-test/screenshots/step_NNN.png` |
-| Run summary | `{run_dir}/run-test/run_summary.json` |
-| Session log | `{session_dir}/tui.log` |
+| Session log (session narrative) | `~/.testmuai/kaneai/sessions/<session-id>/tui.log` |
+| Evidence pack (step logs, screenshots, console and network logs, failure records) | `~/.testmuai/kaneai/sessions/<session-id>/evidence/<execution_id>.evidence` |
 | All sessions | `~/.testmuai/kaneai/sessions/` |
 
-The `run_end` event in Agent Mode provides `session_dir` and `run_dir` directly.
+The evidence pack is the only place run logs live. A `.evidence` file is a plain zip, so even without the viewer you can `unzip` it and read the logs directly. See [Inside the pack](/docs/kane-cli-evidence-pack-structure/) for its layout.
+
+The `run_end` event in Agent Mode provides `session_dir`, the directory containing the session log and the sealed evidence pack. `run_dir` is a legacy per-run path: step logs and screenshots now live inside the evidence pack.
 
 ---
 
@@ -30,22 +31,26 @@ The `run_end` event in Agent Mode provides `session_dir` and `run_dir` directly.
 
 ### "Chrome failed to launch"
 
-**Cause:** Chrome is not installed, all CDP ports in the 9222–9230 range are in use, or a profile lock from another running Chrome.
+Kane CLI manages a Chrome process for you and connects to it over the Chrome DevTools Protocol (CDP). If launch fails, the most likely causes are:
 
-Kane CLI manages a Chrome process and connects to it over the Chrome DevTools Protocol (CDP). On macOS it looks under `/Applications/Google Chrome.app`; on Linux it looks for `google-chrome`, `google-chrome-stable`, `chromium`, and similar binaries; on Windows it looks under `Program Files\Google\Chrome\Application\chrome.exe` and `AppData\Local`.
+- **Chrome is not installed** in any of the locations Kane CLI searches. On macOS it looks under `/Applications/Google Chrome.app` and equivalent user paths; on Linux it looks for `google-chrome`, `google-chrome-stable`, `chromium`, and similar binaries; on Windows it looks under `Program Files\Google\Chrome\Application\chrome.exe` and the user's `AppData\Local`.
+- **Chrome is installed in a non-standard location** Kane CLI does not search. Point it at the binary with `KANE_CLI_CHROME_PATH=/path/to/chrome`.
+- **All CDP ports in the 9222–9230 range are in use.** Kane CLI scans this nine-port range for an open port; if every port is busy you will see an error like `All CDP ports 9222-9230 are in use. Close other Chrome instances.`
+- **Profile lock from another running Chrome.** If a separate Chrome instance is already using the same user-data directory, the new instance can fail to start cleanly.
+- **Chrome is slow to become reachable.** On cold or resource-starved machines, often CI runners, Chrome can launch but not respond over the DevTools Protocol within the per-attempt timeout (default 30s). Kane CLI retries the launch automatically (twice by default), but persistent slowness needs a longer timeout or more retries.
 
 **Fix:**
-1. Install Google Chrome if not present
-2. Check for processes on CDP ports:
+1. Install Google Chrome (or Chromium / Chrome for Testing) from the official source for your platform. If it is installed but in an unusual path, set `KANE_CLI_CHROME_PATH` to the binary.
+2. Quit any extra Chrome processes that may be hoarding the 9222–9230 port range. On macOS / Linux you can list them with:
    ```bash
    lsof -i :9222-9230
    ```
-3. Quit any extra Chrome processes hoarding the 9222–9230 port range
-4. Pick a different Chrome user-data directory, or quit the Chrome instance using it. See [Chrome Management](/docs/kane-cli-configuration/#chrome-management)
-5. If you only need to connect to an already-running Chrome:
+3. Pick a different Chrome user-data directory, or quit the Chrome instance currently using it. See [Chrome Management](/docs/kane-cli-configuration/#chrome-management) for how Kane CLI chooses and configures the profile.
+4. If you only need to connect to your own already-running Chrome, start it with `--remote-debugging-port=9222` and pass `--cdp-endpoint` to `kane-cli run`:
    ```bash
-   kane-cli run "..." --cdp-endpoint http://localhost:9222
+   kane-cli run "..." --cdp-endpoint http://127.0.0.1:9222
    ```
+5. On a slow runner, raise the readiness timeout with `KANE_CLI_CDP_TIMEOUT_MS` (milliseconds, default `30000`) and/or the retry count with `KANE_CLI_CDP_RETRIES` (default `2`; `0` = a single attempt). A missing or invalid binary fails immediately and is *not* retried, so retries only help with transient startup slowness. See [Chrome environment variables](/docs/kane-cli-configuration/#chrome-environment-variables).
 
 ### "CDP endpoint not reachable"
 
@@ -76,6 +81,8 @@ Kill any existing processes, then retry.
 
 **Cause:** Expired tokens or incorrect credentials.
 
+This means Kane CLI could not produce a valid auth token for the configured environment.
+
 **Fix for interactive use:**
 1. Re-run the login flow:
    ```bash
@@ -89,7 +96,7 @@ Kill any existing processes, then retry.
 
 **Fix for CI / non-interactive use:**
 
-Verify both values against the credentials shown in your <BrandName /> dashboard, then pass them on the command line:
+Kane CLI can authenticate with username and access key instead of OAuth. Verify both values against the credentials shown in your <BrandName /> dashboard, then pass them on the command line:
 
 ```bash
 kane-cli run "<objective>" \
@@ -119,7 +126,7 @@ Get credentials from the <BrandName /> [dashboard](https://accounts.lambdatest.c
 
 ### "Login failed — fetch failed" / SSL certificate errors
 
-If `kane-cli login` exits immediately with `Login failed — fetch failed`, or a `NODE_DEBUG=undici` trace shows an OpenSSL error code like `UNABLE_TO_GET_ISSUER_CERT_LOCALLY`, kane-cli could not validate the TLS certificate of an auth or upload endpoint. Browsers and `curl` on the same machine will typically still work — this is specific to Node's default trust store.
+If `kane-cli login` exits immediately with `Login failed — fetch failed`, or a `NODE_DEBUG=undici` trace shows an OpenSSL error code like `UNABLE_TO_GET_ISSUER_CERT_LOCALLY`, kane-cli could not validate the TLS certificate of an auth or upload endpoint. Browsers and `curl` on the same machine will typically still work; this is specific to Node's default trust store.
 
 The cause is that Node ships with its own bundled Mozilla CA list and does not read the operating-system keychain by default. If corporate endpoint security software (EDR), a TLS-inspecting proxy (Zscaler, Netskope, GlobalProtect), or any similar tool signs traffic with a root certificate that lives only in the OS keychain, Node has no way to validate it. Browsers and `curl` succeed because they trust the keychain natively; Node does not.
 
@@ -129,7 +136,6 @@ Fixes, in order of preference:
 
    ```bash
    export NODE_USE_SYSTEM_CA=1
-
    kane-cli login
    ```
 
@@ -139,7 +145,6 @@ Fixes, in order of preference:
 
    ```bash
    export NODE_EXTRA_CA_CERTS=/path/to/corp-ca.pem
-
    kane-cli login
    ```
 
@@ -159,7 +164,7 @@ the failure is in the bundled `v16-runner`, not in Node. The runner is a standal
 
 On a corporate network with a TLS-inspecting proxy (Netskope, Zscaler, GlobalProtect, etc.), the proxy decrypts and re-encrypts HTTPS using its own self-signed root CA. That root is in your OS keychain but not in certifi's bundle, so the runner's TLS handshake fails. On a home network there is no MITM, so the chain validates against certifi and the same command works.
 
-Fix — give the runner a CA bundle that includes the corporate root:
+Fix: give the runner a CA bundle that includes the corporate root:
 
 1. **Get the corporate root CA from IT.** On Windows you can export it yourself: open `certmgr.msc` → **Trusted Root Certification Authorities** → **Certificates**, find the proxy's CA (often named after Netskope / Zscaler / your company), right-click → **All Tasks → Export**, choose **Base-64 encoded X.509 (.cer)**.
 
@@ -173,18 +178,17 @@ Fix — give the runner a CA bundle that includes the corporate root:
    setx SSL_CERT_FILE "C:\certs\corp-bundle.pem"
    ```
 
-   Restart the terminal after `setx` — the variable is only picked up by new shells.
+   Restart the terminal after `setx`; the variable is only picked up by new shells.
 
    macOS / Linux:
 
    ```bash
    export SSL_CERT_FILE=/path/to/corp-bundle.pem
-
    ```
 
    Add the `export` line to `~/.zshrc` / `~/.bashrc` to persist it.
 
-If your environment also breaks `kane-cli login`, apply the Node-side fix in the previous section as well — the two env vars cover two different processes and you may need both.
+If your environment also breaks `kane-cli login`, apply the Node-side fix in the previous section as well. The two env vars cover two different processes and you may need both.
 
 ---
 
@@ -192,11 +196,13 @@ If your environment also breaks `kane-cli login`, apply the Node-side fix in the
 
 ### "Run timed out" or "max steps exceeded"
 
+A run ends with a timeout when it hits the wall-clock limit, and with a max-steps error when the agent exhausts its allowed step budget before finishing.
+
 **Cause:** Objective is too complex, page is slow to load, or `--max-steps` is too low.
 
 **Fix:**
 - Increase `--timeout`: `--timeout 300`
-- Increase `--max-steps`: `--max-steps 60`
+- Increase `--max-steps`: `--max-steps 60`. The CLI default max-steps is `50`.
 - Break the work into smaller objectives. Run several sequential `kane-cli run` invocations, each focused on one logical sub-task. The session keeps the same browser between runs, so state carries over.
 - Tighten the objective. Vague objectives often cause the agent to wander; describe the target outcome and any required values up front.
 
@@ -211,11 +217,11 @@ If your environment also breaks `kane-cli login`, apply the Node-side fix in the
 
 ### "Variables not resolving": `{{key}}` appears literally
 
-A run **refuses to start** when an authored step references a `{{name}}` that has no value. You get a receipt naming each variable, the file that is waiting for its value (or `Not in any variables file`), and the step that uses it, with exit code `2` and nothing dispatched. Read the receipt first: it tells you whether to fill an existing key or add a new one, and which file. See [Before a run](/docs/kane-cli-variables-and-context/#before-a-run-unresolved-variables).
+A run **warns before it starts** when an authored step references a `{{name}}` that has no value: the receipt names each variable, the file that is waiting for its value (or `Not in any variables file`), and the step that uses it. The run then goes ahead and types the name as written. Read the warning first: it tells you whether to fill an existing key or add a new one, and which file. See [Before a run](/docs/kane-cli-variables-and-context/#before-a-run-unresolved-variables).
 
 If a `{{my_var}}` placeholder appears **literally** in a browser action, one of three things is true:
 
-- **The step is a replay.** Replayed steps resolve from their tape and from Test Manager, and a missing value there produces a warning line rather than a refusal. Fill the value and run again.
+- **The warning above named it and nothing set it.** Fill the value and run again (a **replay** step resolves from its tape and from Test Manager instead).
 - **The reference is escaped.** `\{{my_var}}` is typed as is on purpose, for pages where the braces are real text.
 - **The variable file is not being loaded at all.** Check the three points below.
 
@@ -223,8 +229,8 @@ If a `{{my_var}}` placeholder appears **literally** in a browser action, one of 
 
 **Fix:**
 1. **JSON syntax.** Variable files are JSON. A missing comma or unquoted key will cause the file to be skipped silently.
-2. **File location.** Confirm your file is in the right place — see [loading order](/docs/kane-cli-variables-and-context/#loading-order).
-3. **Inline test.** Bypass file loading by passing the variable on the command line:
+2. **File location.** Variable files have to live in one of the directories Kane CLI scans. Confirm yours is in the right place. See [loading order](/docs/kane-cli-variables-and-context/#loading-order) for the exact precedence.
+3. **Inline test.** Bypass file loading entirely by passing the variable on the command line:
    ```bash
    kane-cli run "log in as {{user}}" \
      --variables '{"user":{"value":"alice"}}'
@@ -236,7 +242,7 @@ If a `{{my_var}}` placeholder appears **literally** in a browser action, one of 
 **Cause:** The assertion phrasing doesn't match what's on the page, or there's a timing issue.
 
 **Fix:**
-1. Check the screenshot at `{run_dir}/run-test/screenshots/step_NNN.png`: see exactly what the agent saw
+1. Check the step's screenshot in the [evidence pack](#debugging-a-failed-run-with-its-evidence-pack): see exactly what the agent saw
 2. Refine the assertion: use `assert the page contains` (substring) instead of exact text
 3. Add a wait: `"wait for the confirmation message to appear, then assert..."`
 
@@ -245,7 +251,7 @@ If a `{{my_var}}` placeholder appears **literally** in a browser action, one of 
 If `kane-cli run` ends with exit status 2 and the run produces no stdout or stderr after the early startup lines, one of two things is usually happening:
 
 1. **Authentication or setup is missing.** This is the common case on a fresh machine. Run `kane-cli whoami`; if it reports "not configured", re-run `kane-cli login` (or pass `--username` / `--access-key` in non-interactive environments). See also ["Authentication failed"](#authentication-failed-exit-code-2) above.
-2. **kane-cli was installed via an unsupported package manager** — most commonly **pnpm**. pnpm stores packages under a nested `node_modules/.pnpm/` directory, and the resolver for the bundled `v16-runner` binary does not yet search that layout, so the CLI aborts before it can print a useful error. This limitation is tracked in [issue #24](https://github.com/LambdaTest/kane-cli/issues/24); switch to one of the supported install paths listed in [Install with pnpm or yarn](/docs/kane-cli-installation/) as a workaround.
+2. **kane-cli was installed via an unsupported package manager**, most commonly **pnpm**. pnpm stores packages under a nested `node_modules/.pnpm/` directory, and the resolver for the bundled `v16-runner` binary does not yet search that layout, so the CLI aborts before it can print a useful error. This limitation is tracked in [issue #24](https://github.com/LambdaTest/kane-cli/issues/24); switch to one of the supported install paths listed in [Install with pnpm or yarn](/docs/kane-cli-installation/#install-with-pnpm-or-yarn) as a workaround.
 
 To surface the underlying error instead of a silent exit, re-run the same command with `KANE_DEV_MODE=1`:
 
@@ -266,11 +272,7 @@ In dev mode, setup and resolver failures print an explanatory line before the pr
 **Fix:**
 1. **Authentication.** Re-check `kane-cli whoami` and re-login if needed. Test Manager upload requires a valid token (or basic auth) for the configured environment.
 2. **Network connectivity.** The upload talks to the <BrandName /> control plane and a cloud storage endpoint. Verify outbound HTTPS is not blocked by a proxy or firewall.
-3. **Project is set.** The pipeline will not commit a test case without a project. Confirm one is configured:
-   ```bash
-   kane-cli config show
-   ```
-   If `project_id` is empty, set it with `kane-cli config project` or pick one in the TUI.
+3. **Project and folder.** If `kane-cli config show` reports `project_id` empty, you don't need to do anything: Kane CLI auto-defaults a project on first run. If you want uploads in a specific project or folder, set it explicitly with `kane-cli config project <id>` / `kane-cli config folder <id>` (use `kane-cli projects list` / `kane-cli folders list` to discover IDs), or pick one in the TUI. A previously-configured project that has been deleted or renamed is detected automatically and replaced via auto-default; an invalid ID typed by mistake is handled the same way. See [Test Manager Integration](/docs/kane-cli-tms-integration/) for the full behavior.
 
 ---
 
@@ -357,6 +359,8 @@ echo 'export SHARP_IGNORE_GLOBAL_LIBVIPS=1' >> ~/.zshrc && source ~/.zshrc
 
 Two other triggers: npm configured to skip optional dependencies (`npm config get omit` should not contain `optional`, so clear it with `npm config delete omit` and reinstall), and a proxy or private registry that does not forward the `@img` scope (add an `@img:registry=https://registry.npmjs.org/` pass-through). If you are fine with PNG screenshots, no action is needed.
 
+For every cause, the step-by-step fixes, and how to verify, see [Install fails with "sharp: Please add node-addon-api"](/docs/kane-cli-troubleshooting-sharp/).
+
 ---
 
 ## Mobile Issues
@@ -385,9 +389,9 @@ The common setup failures for each platform, and their fixes, are listed on the 
 
 ## "Update available" Notice
 
-Kane CLI checks the public npm registry for a newer release once every 24 hours. The result is cached locally so the check itself is non-blocking and silent on failure. When a newer version exists, Kane CLI surfaces an "update available" notification with the current and latest versions and a severity label (`major`, `minor`, or `patch`).
+Kane CLI checks the public npm registry for a newer release of `@testmuai/kane-cli` once every 24 hours. The result is cached locally so the check itself is non-blocking and silent on failure. When a newer version exists, Kane CLI surfaces an "update available" notification with the current and latest versions and a severity label (`major`, `minor`, or `patch`).
 
-The notice is informational — your current version still works. To upgrade, follow the steps in [Updates](/docs/kane-cli-installation/#update).
+The notice is informational; your current version still works. To upgrade, follow the steps in [Updates](/docs/kane-cli-installation/#update).
 
 ---
 
@@ -395,14 +399,14 @@ The notice is informational — your current version still works. To upgrade, fo
 
 Every run seals an [evidence pack](/docs/kane-cli-evidence/) with everything needed to diagnose a failure in one place. The short version:
 
-1. Open the pack — accept the post-run "View evidence in browser?" offer, or run `kane-cli evidence serve <pack>` and open the printed `viewer` URL.
-2. Go to the failed step and read its **failure record** — the error and the page state at the moment of failure.
-3. Check the step's **console and network logs** — a 4xx/5xx response or a JS error there usually explains it.
+1. Open the pack: accept the post-run "View evidence in browser?" offer, or run `kane-cli evidence serve <pack>` and open the printed `viewer` URL.
+2. Go to the failed step and read its **failure record**: the error and the page state at the moment of failure.
+3. Check the step's **console and network logs**. A 4xx/5xx response or a JS error there usually explains it.
 4. Compare the **annotated screenshot** (what the agent acted on) against what you expected.
 
-The full walkthrough is in [Evidence packs → Debugging a failed run from its pack](/docs/kane-cli-evidence-debugging/), and the pack's file layout is in [Inside the pack](/docs/kane-cli-evidence-pack-structure/). The pack is the only place run logs live — a `.evidence` file is a plain zip, so even without the viewer you can `unzip` it and read the logs directly. If a pack won't open in the viewer, run `kane-cli evidence validate <pack>` — a truncated or unsealed pack reports invalid; the session directory's `tui.log` still has the session narrative.
+The full walkthrough is in [Evidence packs → Debugging a failed run from its pack](/docs/kane-cli-evidence-debugging/), and the pack's file layout is in [Inside the pack](/docs/kane-cli-evidence-pack-structure/). The pack is the only place run logs live. A `.evidence` file is a plain zip, so even without the viewer you can `unzip` it and read the logs directly. If a pack won't open in the viewer, run `kane-cli evidence validate <pack>`. A truncated or unsealed pack reports invalid; the session directory's `tui.log` still has the session narrative.
 
-One more debugging aid for batch runs: `testrun` members normally run silently — set `KANE_TESTRUN_MEMBER_DEBUG=1` to route their per-member output to stderr (prefixed `[member]`).
+One more debugging aid for batch runs: `testrun` members normally run silently; set `KANE_TESTRUN_MEMBER_DEBUG=1` to route their per-member output to stderr (prefixed `[member]`).
 
 ## A `--remote` run refused, failed, or came back empty
 
@@ -507,11 +511,11 @@ Include the following:
 |-------|---------------|
 | Kane CLI version | `kane-cli --version` |
 | OS | macOS (ARM/Intel), Linux (x64/ARM64), Windows (x64) |
+| Chrome version | Your installed Chrome version |
 | What happened | Describe the behavior |
 | Reproduction steps | The exact `kane-cli run` command and objective |
 | Expected behavior | What should have happened |
-| Logs | `run_summary.json` and `step_NNN.json` from `run_dir` |
-| Screenshot | `screenshots/step_NNN.png` from `run_dir` |
+| Logs | The relevant section of `~/.testmuai/kaneai/sessions/<session-id>/tui.log` (redact any secrets first) |
 
 Do NOT file bug reports for: auth issues, low timeouts, vague objectives, or site-side errors (CAPTCHAs, 500 errors).
 

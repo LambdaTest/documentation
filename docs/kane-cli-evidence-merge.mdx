@@ -18,9 +18,9 @@ Targets are execution ids or pack paths, and **order matters**. Earlier targets 
 
 | Flag | Description | Default |
 |---|---|---|
-| `--run-id <id>` | Run id for the merged pack, **required** | — |
+| `--run-id <id>` | Run id for the merged pack, **required** | None |
 | `-o, --out <path>` | Output path | `.testmuai/evidence/<run-id>.evidence` |
-| `--rules <path>` | Custom merge-rules file. Settings you omit keep their default value; the rule list itself is replaced | built-in defaults |
+| `--rules <path>` | Custom merge-rules file (replaces the defaults wholesale) | built-in defaults |
 | `--on-collision <action>` | `error`, `prefer-first`, `prefer-latest`, or `discard` | `error` |
 | `--title <title>` | Title for the merged run | first eligible pack's |
 | `--no-finalize` | Keep the merged pack live instead of sealing it | seals by default |
@@ -39,6 +39,12 @@ Out of the box, merge is strict:
 - packs from **different projects or organisations** are refused,
 - a test-id collision is an **error**, unless you choose another action with `--on-collision`.
 
+## Merge identity
+
+For ordinary runs, default merge identity distinguishes the test and commit (`external_id.test_id`, `external_id.commit_id`) and the environment (`environment.os`, `environment.os_version`, `environment.browser`, `environment.browser_version`). Re-runs with the same identity nest as attempts; a different environment produces a separate sibling.
+
+Explicit collision policies can change grouping; a custom `--rules` file replaces the default rules rather than extending them. Check the selected identity rules before interpreting two runs as retries of the same test.
+
 ## A nightly roll-up
 
 ```bash
@@ -54,7 +60,7 @@ The result is one sealed pack holding the tests from every pack that passed the 
 
 ## Next steps
 
-- [Validating packs](/docs/kane-cli-evidence-validate/) — confirm the merged pack before handing it over.
-- [Viewing evidence](/docs/kane-cli-evidence-viewing/) — open the merged pack.
+- [Validating packs](/docs/kane-cli-evidence-validate/): confirm the merged pack before handing it over.
+- [Viewing evidence](/docs/kane-cli-evidence-viewing/): open the merged pack.
 
 <KaneCliCta />

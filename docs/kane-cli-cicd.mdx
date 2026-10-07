@@ -11,39 +11,53 @@ import { KaneCliCta } from "/snippets/KaneCliCta.mdx";
 
 Kane CLI runs headlessly in CI/CD pipelines using credentials passed as environment variables or inline flags. Tests fail fast on assertion errors and return standard exit codes for pipeline control flow.
 
+Kane CLI works in any CI that can run a Node binary and reach Chrome. To make a run non-interactive, you authenticate with basic auth from CI secrets, force the browser into headless mode, set a wall-clock timeout, and check the exit code.
+
 ## Common Patterns
 
 These patterns apply to every CI system; the platform-specific recipes below differ only in how they wire up the secrets.
 
 - **Always pass `--headless`**. CI runners have no display.
 - **Always set `--timeout <seconds>`**. A hung run cannot be allowed to block the pipeline.
-- **Authenticate with `--username` and `--access-key`** from CI secrets. Do not call `kane-cli login` in CI — that flow opens a browser for OAuth and will not work on a runner.
-- **Load test data with `--variables-file <path>`**. Check the file into your repo (without secret values), or generate it before the step. A `{{name}}` with no value fails the job with exit `2` **before** any browser starts, with a receipt naming the variable, so fill values from CI secrets in that step, not later.
+- **Authenticate with `--username` and `--access-key`** from CI secrets. Do not call `kane-cli login` in CI: that flow opens a browser for OAuth and will not work on a runner.
+- **Provide a start URL**. A CI run has no interactive prompt, so if neither the objective names a site, the `--url` flag is passed, nor a `default_url` is configured, the run fails fast instead of waiting for input. The simplest options are to start the objective with the site ("Go to https://… and …") or pass `--url <url>`. To deliberately start from the browser's current page instead, add `--allow-missing-url`. See [Default start URL](/docs/kane-cli-configuration/#default-start-url).
+- **Load test data with `--variables-file <path>`**. Check the file into your repo (without secret values), or generate it before the step. A `{{name}}` with no value does not change the exit code by itself: Kane CLI warns before the browser starts and types the name as written, and a step that then fails on the literal text fails the job as usual. Fill values from CI secrets in that step. The warning is a `warning` line on stdout with `code: "unresolved_variables"`; fail the step on it if a missing value should block the pipeline.
+- **Project and folder are optional.** If you want uploads filed under a specific Test Manager project or folder, pre-configure with `kane-cli config project <id>` and `kane-cli config folder <id>` (use `kane-cli projects list` and `kane-cli folders list` to find the IDs). If you skip this, Kane CLI auto-defaults a project and folder on first run and reports which one it picked. See [Test Manager Integration](/docs/kane-cli-tms-integration/).
+- **Check the exit code**. The mapping is documented in [Exit Codes](/docs/kane-cli-modes/#exit-codes); the short form is `0` passed, `1` failed, `2` error, `3` timeout or cancellation.
+- **Run whole suites with one command.** If your repo has committed `_test.md` tests, prefer one `testrun` invocation over a shell loop:
+
+  ```bash
+  kane-cli testrun run --tags smoke --parallel 4 --headless --on-failure fail-fast
+  ```
+
+  The suite becomes one execution with one exit code (`0` all passed, `1` any failure, `2` invalid plan, `3` cancelled) and one sealed [evidence pack](/docs/kane-cli-evidence/). Archive `.testmuai/evidence/*.evidence` as a CI artifact and anyone can drop it into the viewer. See [Batch Runs (testrun)](/docs/kane-cli-testrun/).
+
 - **Run the suite on the cloud grid when the runner cannot run it.** `kane-cli testrun run … --remote` turns the suite into one HyperExecute job: the grid supplies Chrome on a macOS runner, or, for mobile `_test.md` members, a virtual Android emulator or iOS simulator, so the runner needs no Chrome, Xcode or Android Studio, and `--parallel N` spreads the members across N grid runners. The recordings and the evidence pack come back to the checkout as if the suite had run on your machine.
 
   ```bash
   kane-cli plugin install remote-execution
 
   # a web suite on 4 grid runners
-  kane-cli testrun run tests/web/ --remote --parallel 4 \
+  kane-cli testrun run --match '^tests/web/' --remote --parallel 4 \
     --username "$LT_USERNAME" --access-key "$LT_ACCESS_KEY" \
     --on-failure fail-fast
 
   # a mobile suite, from a Linux runner
-  kane-cli testrun run tests/app/ --remote \
+  kane-cli testrun run --match '^tests/app/' --remote \
     --device-name "Pixel 7" --os-version 14 \
     --username "$LT_USERNAME" --access-key "$LT_ACCESS_KEY" \
     --on-failure fail-fast
   ```
 
   It needs a <BrandName /> plan with HyperExecute macOS runners. Web and mobile members go in separate runs. Pick devices with `kane-cli devices list --target emulator|simulator --remote`, and allow a timeout of about 10 minutes. See [Remote Runs](/docs/kane-cli-remote-execution/).
-- **Check the exit code**. `0` passed, `1` failed, `2` error, `3` timeout or cancellation.
 
 <Warning>
 **Chrome Requirement**
 
 The runner spawns Chrome itself, so the CI image must have Chrome available on `PATH`. If your runner image cannot install Chrome, you have two options. For a single `kane-cli run` or `testmd run`, point Kane CLI at a remote browser with `--cdp-endpoint <url>` or `--ws-endpoint <url>` (for example, a <BrandName /> `wss://` endpoint), where Kane CLI still runs on the runner and drives that browser. For a whole suite, `kane-cli testrun run … --remote` moves the run itself to the grid, as above.
 </Warning>
+
+On slow or cold CI runners Chrome can be slow to come up over the DevTools Protocol. If you see intermittent "Chrome failed to launch" errors, raise `KANE_CLI_CDP_TIMEOUT_MS` (per-attempt readiness timeout, default `30000`) and/or `KANE_CLI_CDP_RETRIES` (launch retries after the first, default `2`). If Chrome lives at a non-standard path in the image, set `KANE_CLI_CHROME_PATH`. See [Chrome environment variables](/docs/kane-cli-configuration/#chrome-environment-variables).
 
 ## Authentication in CI/CD
 
@@ -254,7 +268,7 @@ kane-cli run "Open the pricing page and verify the Pro plan is listed" \
     --variables-file ./tests/variables.json
 ```
 
-If your CI image cannot install Chrome — for example, a minimal Node Alpine image — either run a whole suite on the grid with `kane-cli testrun run … --remote` (see [Remote Runs](/docs/kane-cli-remote-execution/)), or point a single run at a remote browser:
+If your CI image cannot install Chrome, for example a minimal Node Alpine image, either run a whole suite on the grid with `kane-cli testrun run … --remote` (see [Remote Runs](/docs/kane-cli-remote-execution/)), or point a single run at a remote browser:
 
 ```bash
 kane-cli run "Open the pricing page and verify the Pro plan is listed" \
@@ -274,6 +288,10 @@ kane-cli run "Open the pricing page and verify the Pro plan is listed" \
 ---
 
 ## Running Multiple Tests
+
+<Tip>
+If your repo has committed `_test.md` tests, prefer one `testrun` invocation over a shell loop. The suite becomes one execution with one exit code and one sealed evidence pack. See [Batch Runs (testrun)](/docs/kane-cli-testrun/#using-testrun-in-ci).
+</Tip>
 
 Run several tests and fail the pipeline if any fail:
 
@@ -338,7 +356,7 @@ kane-cli run "Log in as {{email}} with {{password}} and verify dashboard" \
   --headless --agent
 ```
 
-## A shared context store in CI {#a-shared-context-store-in-ci}
+## A shared context store in CI (0.8.14) {#a-shared-context-store-in-ci}
 
 When your team [shares the context graph](/docs/kane-cli-assurance-sharing/) through a location, a pipeline works on the same store: clone it once, pull before each run, and push the facts the run produced after. The sync commands never call the agent or spend credits, while the run between them, `kane-cli context extract` below, is an ordinary extraction and consumes credits like any other.
 
@@ -359,11 +377,11 @@ export KANE_SYNC_GIT_TOKEN="$CONTEXT_REPO_TOKEN"
 # before the run: take the team's new records, and stop the job if a person has to decide
 kane-cli context pull origin --mode agent > pull.ndjson || {
   code=$?
-  [ "$code" -eq 3 ] && kane-cli context sync status origin --json > sync-status.json
+  [ "$code" -eq 3 ] && kane-cli context sync status origin --json > sync-status.json   # the relation (behind or diverged) and any open decisions
   exit "$code"
 }
 
-# the run itself: it fails on a high-risk question and takes the recommended default for the rest
+# the run itself: it fails on a high-risk question and takes the recommended default for the rest; a failed or paused extraction (exit 1 or 3) ends the job here, before anything is pushed
 kane-cli context extract --mode ci
 
 # after the run: publish what landed

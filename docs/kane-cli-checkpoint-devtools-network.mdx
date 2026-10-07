@@ -10,6 +10,10 @@ import { KaneCliCta } from "/snippets/KaneCliCta.mdx";
 
 Network assertions let you verify HTTP traffic: API responses, status codes, headers, response bodies, and request timing.
 
+<Note>
+These network assertions also cover API calls **you** make directly in an objective, not just the requests the page makes on its own. The agent records its own calls and you query them with the same fields below. To *make* a call (seed data, hit a backend), see [API Calls](/docs/kane-cli-api-calls/).
+</Note>
+
 ## How Capture Works
 
 KaneAI captures all HTTP network traffic automatically during each test step:
@@ -71,5 +75,7 @@ Store all API request URLs
 ```
 If the /api/auth returned 200 then proceed to dashboard, else show error message
 ```
+
+Experimental WebSocket and SSE capture is available through `run --network-ws` and `run --network-sse`, both off by default; SSE is Chromium-only. Persist via `config set-network-ws on|off` or `config set-network-sse on|off`. These flags are not registered on `testmd run` or `testrun run`.
 
 <KaneCliCta />

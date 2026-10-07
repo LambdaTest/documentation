@@ -64,7 +64,7 @@ Typing `/` in chat mode opens an autocomplete palette. Continue typing to filter
 | `/mobile` | | Switch the session to an emulator or simulator |
 | `/desktop` | | Switch the session back to desktop (Chrome) |
 | `/doctor` | | Check mobile tooling and devices |
-| `/new` | | Start a fresh session (uploads the current session first) |
+| `/new` | | Start a fresh session (uploads the current session and seals its evidence pack first) |
 | `/summary` | `[index]` | View detailed run summaries |
 | `/cancel` | | Abort the current run |
 | `/help` | | Show the command reference |
@@ -91,7 +91,7 @@ A two-row status bar sits at the bottom of the TUI:
 | Profile | Active profile name (or `no profile`) |
 | Environment | `prod` (green) or a yellow `stage` warning |
 | Runs | Number of runs completed in this session |
-| Hint line | Context-aware shortcuts |
+| Hint line | Context-aware shortcuts (chat: `ctrl+c cancel/exit`; menu: `↑↓ navigate ↵ select esc back`) |
 
 ### Multi-Run Sessions
 
@@ -132,7 +132,7 @@ If the agent needs information mid-run (for example, a one-time code or a clarif
 | Exit the TUI | `/exit`, or **Ctrl+C** twice in quick succession |
 | Force exit during shutdown upload | **Ctrl+C** twice while exit is in progress |
 
-A graceful `/exit` runs the upload pipeline (if applicable) and prints any final links to your terminal scrollback before the process ends.
+A graceful `/exit` runs the upload pipeline (if applicable), seals the session's [evidence pack](/docs/kane-cli-evidence/), offers to open it in the browser viewer, and prints any final links to your terminal scrollback before the process ends.
 
 ---
 
@@ -144,7 +144,25 @@ kane-cli run "Search for 'automation testing' on Google" \
   --headless
 ```
 
-This mode is best for shell scripts, CI/CD pipelines, and any scenario where the interactive TUI is not needed.
+`kane-cli run` is the headless surface. It is the right choice for CI jobs, shell scripts, scripted invocations, and any environment that has no interactive TTY. Progress streams to stderr; the final JSON result is written to stdout.
+
+### Basic invocation
+
+A minimal run:
+
+```bash
+kane-cli run "Search for 'noise-cancelling headphones' on amazon.com"
+```
+
+A longer invocation with options:
+
+```bash
+kane-cli run "Log in as {{tester}} and verify the dashboard loads" \
+  --headless \
+  --max-steps 40 \
+  --timeout 300 \
+  --variables-file ./vars.json
+```
 
 ### Run options
 
@@ -153,12 +171,12 @@ The customer-facing flags accepted by `kane-cli run`:
 | Flag | Description | Default |
 |------|-------------|---------|
 | `--headless` | Run Chrome in headless mode. | Off |
-| `--max-steps <n>` | Maximum agent steps. | `30` |
+| `--max-steps <n>` | Maximum agent steps. | `50` |
 | `--timeout <seconds>` | Kill the run after N seconds. | None |
-| `--url <url>` | Start URL for the run. Overrides the configured `default_url`; bare domains are normalized to `https://`. See [Default start URL](/docs/kane-cli-configuration/). | Config `default_url` |
+| `--url <url>` | Start URL for the run. Overrides the configured `default_url`; bare domains are normalized to `https://`. See [Default start URL](/docs/kane-cli-configuration/#default-start-url). | Config `default_url` |
 | `--allow-missing-url` | Non-TTY only: proceed from the browser's current page instead of failing when no start URL resolves (a provided `--url` is still used). | Off |
 | `--cdp-endpoint <url>` | Connect to an existing Chrome via CDP. | None |
-| `--ws-endpoint <url>` | Connect to a Playwright WebSocket endpoint (e.g. TestmuAI `wss://`). | None |
+| `--ws-endpoint <url>` | Connect to a Playwright WebSocket endpoint (e.g. TestmuAI `wss://`). The run still executes on this machine and drives that browser; to run a whole suite on the grid instead, see [`testrun run --remote`](/docs/kane-cli-remote-execution/). | None |
 | `--global-context <file>` | Override the global context Markdown file. | `~/.testmuai/kaneai/global-memory.md` |
 | `--local-context <file>` | Override the local context Markdown file. | `<cwd>/.testmuai/context.md` |
 | `--variables <json>` | Inline variables JSON. | None |
@@ -167,22 +185,24 @@ The customer-facing flags accepted by `kane-cli run`:
 | `--username <user>` | Basic auth username (skip OAuth). | None |
 | `--access-key <key>` | Basic auth access key (skip OAuth). | None |
 | `--mode <name>` | Run mode: `action` (strict) or `testing` (lenient). | Config value, otherwise `testing` |
-| `--bug-detection <mode>` | Detect product bugs while authoring: `off`, `stop` (halt the run on a confirmed bug), or `continue` (record it and keep going). Overrides `config set-bug-detection`. See [Configuration](/docs/kane-cli-configuration/). | Config value, otherwise `off` |
+| `--bug-detection <mode>` | Detect product bugs while authoring: `off`, `stop` (halt the run on a confirmed bug), or `continue` (record it and keep going). Overrides `config set-bug-detection`. See [Configuration](/docs/kane-cli-configuration/#bug-detection). | Config value, otherwise `off` |
 | `--agent` | Plain NDJSON output, no colors or UI. | Off |
-| `--code-export` | Generate code export after upload. | Off |
-| `--code-language <lang>` | Code export language (currently `python`). | `python` |
+| `--code-export` | Generate code export after upload. | config (`true` by default) |
+| `--code-language <lang>` | Code export language: `python` or `javascript`. | `python` |
 | `--skip-code-validation` | Skip post-codegen worker-side validation. | On |
 | `--no-skip-code-validation` | Force post-codegen worker-side validation. | Off |
 
+Assertion, final-validation, current-page analysis and network-capture flags are covered in [Assertion controls and current-page analysis](#assertion-controls-and-current-page-analysis).
+
 ### Unresolved variables
 
-Every `{{name}}` in the objective must have a value before the run starts. A name with no value stops the run there, with no browser and no session, exit code `2`, and a receipt naming each variable and what it needs. There is no flag to bypass it: fill the value or remove the reference. With `--agent`, the refusal is a single typed event:
+Kane CLI checks every `{{name}}` in the objective before the run starts. A name with no value is a warning: the run goes ahead and types the name as written, unless a step sets it first. On a TTY the warning is the receipt shown in [Variables and context](/docs/kane-cli-variables-and-context/#before-a-run-unresolved-variables); with `--agent` it is a single typed event before the first progress frame:
 
 ```json
-{"type":"error","code":"unresolved_variables","message":"2 variable(s) have no value — nothing was dispatched","suggested_file":".testmuai/variables/variables.json","variables":[{"name":"checkout_url","reason":"not_declared","used_by":[{"file":"objective","step":1}]},{"name":"login_password","reason":"value_missing","file":".testmuai/variables/variables.json","used_by":[{"file":"objective","step":1}]}]}
+{"type":"warning","code":"unresolved_variables","message":"2 variable(s) have no value — typed as written unless a step sets them first","suggested_file":".testmuai/variables/variables.json","variables":[{"name":"checkout_url","reason":"not_declared","used_by":[{"file":"objective","step":1}]},{"name":"login_password","reason":"value_missing","file":".testmuai/variables/variables.json","used_by":[{"file":"objective","step":1}]}]}
 ```
 
-`reason` is `value_missing` (the key exists in `file`, with no value) or `not_declared` (the key is in no file, and `suggested_file` is where to add it). Names an earlier step stores, and the `{{smart.*}}`, `{{environment.*}}`, `{{secrets.*}}` and `{{totp.*}}` namespaces, are never checked.
+`reason` is `value_missing` (the key exists in `file`, with no value), `not_declared` (the key is in no file; `suggested_file` is where to add it), or `not_a_dataset_column` (a `${x}` that is no column of the dataset row the run was given). The warning does not change the exit code. An explicit `{{global.*}}` reference (resolved from Test Manager at run time), names an earlier step stores, and the `{{smart.*}}`, `{{environment.*}}`, `{{secrets.*}}` and `{{totp.*}}` namespaces are never checked.
 
 For variables and context file behavior, see [Variables and context](/docs/kane-cli-variables-and-context/). For code export and the run mode toggle, see [Configuration](/docs/kane-cli-configuration/).
 
@@ -207,7 +227,7 @@ The mobile run flags:
 - `--device-name <name>` and `--os-version <version>`: pick a device as `kane-cli devices list --target emulator|simulator` prints it. A name needs a version, and a version alone matches any device on it. In the TUI/TTY, omitting them opens a one-time picker and the choice is saved. In non-interactive runs a device must already be set, via the flags or `kane-cli config set-device-name` / `set-os-version`, or the run exits with the fix spelled out.
 - `--app <path|APPid>`: the app under test, required for every mobile run. Pass a build (emulator: `.apk`, simulator: `.zip`) or an uploaded app id (`APP` followed by six or more digits). `kane-cli apps list --target <kind>` lists yours. On the `desktop` target, the device flags and `--app` are ignored.
 
-In the interactive TUI, a first run offers a Desktop / Emulator / Simulator chooser, and you can switch targets at any time with `/mobile` and `/desktop`. Run `/doctor` to check mobile tooling and devices.
+In the interactive TUI, a first run offers a Desktop / Emulator / Simulator chooser, and you can switch targets with `/mobile` and `/desktop` before the first dispatch; afterwards use `/new` before switching. Run `/doctor` to check mobile tooling and devices.
 
 For setup (Xcode or Android Studio, `kane-cli login`, and `kane-cli doctor --target emulator|simulator --install`) and the app formats each target accepts, see [Mobile testing](/docs/kane-cli-mobile/).
 
@@ -224,7 +244,7 @@ This separation lets you capture each independently:
 kane-cli run "..." > result.json 2> progress.log
 ```
 
-In CI, redirect stdout to a file your job can parse and let stderr stream to the build log.
+In CI, redirect stdout to a file your job can parse and let stderr stream to the build log so engineers can read the run in real time.
 
 When stdin is not a TTY, Kane CLI automatically switches to plain NDJSON mode (the same as `--agent`). Each line on stdout is one JSON event terminated by a newline.
 
@@ -232,10 +252,10 @@ When stdin is not a TTY, Kane CLI automatically switches to plain NDJSON mode (t
 
 | Exit Code | Meaning |
 |-----------|---------|
-| `0` | Test passed |
-| `1` | Test failed (agent reached an unrecoverable failure, or the upload failed) |
-| `2` | Error (auth failure, Chrome crash) |
-| `3` | Timeout or cancelled |
+| `0` | Run passed |
+| `1` | Run failed (agent reached an unrecoverable failure, or the upload failed) |
+| `2` | Error (auth, TMS credential exchange, configuration, Chrome, unknown subcommand, or unhandled exception) |
+| `3` | Run was cancelled or hit the `--timeout` |
 
 Use these codes to gate downstream CI steps.
 
@@ -262,11 +282,21 @@ Below the summary, Kane CLI prints any of the following links:
 
 Modern terminals render these as clickable hyperlinks. For details on what each link leads to, see [Test Manager integration](/docs/kane-cli-tms-integration/).
 
-The run is also captured as a sealed [evidence pack](/docs/kane-cli-evidence/) — screenshots, per-step console/network logs, and failure records. In a terminal, kane-cli offers to open it in the browser viewer; in agent or non-interactive runs it prints a one-line `evidence: view locally with …` hint to stderr instead.
+The run is also captured as a sealed [evidence pack](/docs/kane-cli-evidence/): screenshots, per-step console/network logs, and failure records. In a terminal, Kane CLI offers to open it in the browser viewer; in agent or non-interactive runs it prints a one-line `evidence: view locally with …` hint to stderr instead.
+
+### Assertion controls and current-page analysis
+
+`run` and `testmd run` support `--assertion-mode dom|visual` (default `dom` with vision fallback) and `--final-validation on|off` (default off). Persist with `config set-assertion-mode` and `config set-final-validation`. Final validation controls the synthesized `cp_final` checkpoint independently of action/testing mode; keep explicit terminal assertions in objectives.
+
+`run --analyzer-only --condition "<condition>"` checks the current desktop browser page without an objective, action steps or saved test. Repeat `--condition` for multiple checks. Use `--agent` or non-TTY input. Results contain `condition_results: boolean[]`; exit `0` means all conditions were judged, **not** that all are true. Exit `1` means a result was missing, and `3` means cancelled. This mode rejects mobile target/app/device options and code-export/name options.
+
+Experimental `run --network-ws` and `run --network-sse` enable WebSocket and SSE capture; both default off. Persist with `config set-network-ws on|off` and `config set-network-sse on|off`. SSE capture is Chromium-only. Do not copy these run-only flags onto `testmd` or `testrun` commands.
+
+Code export defaults to enabled, subject to saved configuration, and supports `python` (default) or `javascript`. `run`/`testmd run` use `--code-language`; `testmd export` uses `--language`. Upload eligibility is independent of action/testing mode.
 
 ### Feedback Prompt
 
-After the result and links print, Kane CLI prompts you to rate the session with thumbs up or thumbs down. Use the left and right arrow keys to choose, Enter to submit, or Esc to skip. See [Test Manager Integration](/docs/kane-cli-tms-integration/) for details.
+After the result and links print, Kane CLI prompts you to rate the session with thumbs up or thumbs down. Use the left and right arrow keys to choose, Enter to submit, or Esc to skip. The rating is sent to <BrandName /> Test Manager for the active test case; see [Test Manager Integration](/docs/kane-cli-tms-integration/) for what is recorded.
 
 ---
 
@@ -284,7 +314,7 @@ With `--agent`:
 - Progress UI renders to **stderr** (clean separation)
 - Stdin is not used (no interactive prompts)
 
-This mode is how Claude Code, Codex CLI, and Gemini CLI consume Kane CLI results. The agent reads the NDJSON stream, parses the final `run_end` event, and presents results to you.
+This mode is how Claude Code, Codex CLI, and Gemini CLI consume Kane CLI results. The agent reads the NDJSON stream, parses the final `run_end` event, and presents results to you. The `run_end` strategy applies to one-shot `run` only; `testmd run`, `testrun run`, `generate` and the assurance commands end in their own completion events. See [Command-specific completion](/docs/kane-cli-agent-mode/#command-specific-completion).
 
 See [Agent Mode](/docs/kane-cli-agent-mode/) for the full event schema and parsing guide.
 

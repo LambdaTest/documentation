@@ -78,7 +78,19 @@ Run `kane-cli --tui`:
 kane-cli --tui
 ```
 
-A short boot animation renders, then the main view drops you at a chat prompt with a status bar at the bottom showing your model, session ID, environment, and run count. From there, anything you type is treated as a test objective. Lines that begin with `/` are slash commands such as `/help`, `/config`, `/cancel`, and `/exit`.
+You see a short boot animation: a small VR-helmet sprite renders on the left and the words `KANE CLI` build up next to it in block letters. A grey footer below confirms which profile you are logged in as. After the animation, the main view drops you at a chat prompt with a status bar at the bottom showing your model, session ID, environment, and run count.
+
+```text
+[ VR helmet ]   ███   ███   █████   █████   ████████
+              ████  ███   ███ ███   ███ ███   █
+              ...   ...     KANE CLI       ...
+
+  Welcome to KANE CLI · logged in as you@example.com
+
+> Type an objective, or /help for commands_
+```
+
+The exact glyphs are decorative; what matters is that you reach the chat prompt at the bottom. From there, anything you type is treated as a test objective. Lines that begin with `/` are slash commands such as `/help`, `/config`, `/cancel`, and `/exit`.
 
 ## Step 4: Run Your First Test
 
@@ -119,7 +131,7 @@ By default each run starts on the KaneAI playground site. The agent navigates fr
 
 ## What Happens at the End of a Run
 
-When the session ends, Kane CLI uploads the run to <BrandName /> Test Manager and prints a share link. For details on the upload, the share-link experience, and the run mode toggle, see [Test Manager Integration](/docs/kane-cli-tms-integration/). To change settings like window size, Chrome profile, or the active project and folder, see [Configuration](/docs/kane-cli-configuration/).
+When the session ends, Kane CLI uploads the run to <BrandName /> Test Manager and prints a share link. The run is also captured as a sealed [evidence pack](/docs/kane-cli-evidence/): screenshots, logs, and results in one file you can open in the browser viewer when Kane CLI offers it. For details on the upload, the share-link experience, and the run mode toggle, see [Test Manager Integration](/docs/kane-cli-tms-integration/). To change settings like window size, Chrome profile, or the active project and folder, see [Configuration](/docs/kane-cli-configuration/).
 
 <Tip>
 Run `kane-cli --tui` to open the interactive TUI: a full terminal UI where you can type objectives, see step-by-step progress, and chain multiple tests in one session with persistent browser state.
@@ -130,6 +142,8 @@ Run `kane-cli --tui` to open the interactive TUI: a full terminal UI where you c
 - [Writing Objectives](/docs/kane-cli-writing-objectives/): Learn the three patterns: actions, assertions, extractions
 - [Modes of Operation](/docs/kane-cli-modes/): Understand Interactive TUI, Headless CLI, and Agent Mode
 - [Authentication](/docs/kane-cli-authentication/): Manage profiles and credential methods
+- [Evidence Packs](/docs/kane-cli-evidence/): What every run captures and how to open it in the viewer
+- [Configuration](/docs/kane-cli-configuration/): Window size, Chrome profile, and the active project and folder
 - [Variables & Context](/docs/kane-cli-variables-and-context/): Parameterize tests with credentials and project-specific context
 - [Mobile Testing](/docs/kane-cli-mobile/): Point the same objective at an Android Emulator or iOS Simulator
 - [CI/CD Integration](/docs/kane-cli-cicd/): Add Kane CLI to your pipeline

@@ -9,7 +9,7 @@ keywords: ['kane cli tms', 'kane cli test manager', 'kane cli upload', 'kane cli
 import { BrandName } from "/snippets/BrandName.mdx";
 import { KaneCliCta } from "/snippets/KaneCliCta.mdx";
 
-By default, Kane CLI uploads each session to <BrandName /> Test Manager as a test case. This page covers what gets uploaded, where it ends up, and the related features: project and folder selection, code export, share links, the post-session feedback prompt, and the local session directory.
+By default, Kane CLI uploads each session to <BrandName /> Test Manager as a test case. This page covers what gets uploaded, where it ends up, and the related features that hang off the upload pipeline: project and folder selection, code export, share links, the post-session feedback prompt, and the local session directory.
 
 This is the default behaviour for every session in both the TUI and the CLI. You do not need to opt in.
 
@@ -19,14 +19,14 @@ This is the default behaviour for every session in both the TUI and the CLI. You
 
 When a session ends, Kane CLI runs an upload pipeline that finalises the test case in Test Manager. Two kinds of artefacts move from your machine to <BrandName />:
 
-- **Screenshots** — uploaded incrementally as the agent runs. By the time the session ends, most of them are already in place. PNG screenshots are converted to WebP before upload.
-- **Run artefacts and metadata** — packaged at session exit. This includes per-run action logs, an execution blob describing the run (objective, status, steps, durations, variables in scope), and the zipped contents of the session run directories.
+- **Screenshots**: uploaded incrementally as the agent runs. By the time the session ends, most of them are already in place. PNG screenshots are converted to WebP before upload.
+- **Run artefacts and metadata**: packaged at session exit. This includes the per-run action logs, an execution blob describing the run (objective, status, steps, durations, variables in scope), and the zipped contents of the session run directories.
 
-You see a short progress indicator at exit covering these stages: `convert` (preparing metadata), `zip` (packaging run directories), `presign` (requesting upload URLs), `upload` (sending the zip and metadata), and `finalize` (committing the test case in Test Manager). If code export is enabled, a `code_export` stage runs after `finalize`. If it is disabled, that stage is reported as skipped.
+You see a short progress indicator at exit covering these stages: `convert` (preparing the metadata), `zip` (packaging the run directories), `presign` (requesting upload URLs), `upload` (sending the zip and metadata), and `finalize` (committing the test case in Test Manager). If code export is enabled, a `code_export` stage runs after `finalize`. If it is disabled, that stage is reported as skipped.
 
 The run's sealed [evidence pack](/docs/kane-cli-evidence/) rides along with the upload, and the pack records who ran the test (user name/email) and the share link. **Replayed `testmd` runs publish evidence too**: a pure replay skips the authoring upload pipeline entirely, but its sealed pack is still published to the test's own project, so the dashboard shows execution history even for cache-replayed runs. The same applies to `testrun` executions.
 
-If the upload fails, Kane CLI prints the error and exits. The local session directory is preserved either way — see [Session History on Disk](#session-history-on-disk).
+If the upload fails, Kane CLI prints the error and exits. The local session directory is preserved either way. See [Session History on Disk](#session-history-on-disk).
 
 ---
 
@@ -60,7 +60,7 @@ Folders are optional. Once a project is set, you can pick a folder the same way:
 kane-cli config folder
 ```
 
-This opens a search-as-you-type folder picker. Type to filter, **Enter** to select, **Tab** to create a new folder. Each folder is shown with its current test case count.
+This opens a search-as-you-type folder picker. As with projects, type to filter, **Enter** to select, **Tab** to create a new folder. Each folder is shown with its current test case count.
 
 ```bash
 kane-cli config folder <folder-id>
@@ -80,7 +80,7 @@ kane-cli folders list  [--search <q>] [--limit <n>] [--offset <n>]
 kane-cli folders create "<name>" [--description "<text>"]
 ```
 
-In a TTY, list commands render a paginated table. When stdout is piped or redirected — or when `--agent` is passed — the output switches to NDJSON, one JSON object per line, terminated by a small pagination summary. Use `--search` to filter by name on the server, and `--limit` / `--offset` to page through results.
+In a TTY, list commands render a paginated table. When stdout is piped or redirected, or when `--agent` is passed, the output switches to NDJSON, one JSON object per line, terminated by a small pagination summary. Use `--search` to filter by name on the server, and `--limit` / `--offset` to page through results.
 
 `folders list` and `folders create` operate inside the currently configured project, so set a project before calling them.
 
@@ -88,7 +88,7 @@ After creating, persist the new id with `kane-cli config project <id>` or `kane-
 
 ### Auto-default on first run
 
-If you launch a run without ever configuring a project or folder, kane-cli auto-resolves a sensible default at run start — find-or-create against your account — and tells you which one it picked. The same fallback fires for `kane-cli testmd run` and `kane-cli generate`. You don't have to pre-configure anything for the first run to succeed.
+If you launch a run without ever configuring a project or folder, kane-cli auto-resolves a sensible default at run start (find-or-create against your account) and tells you which one it picked. The same fallback fires for `kane-cli testmd run` and `kane-cli generate`. You don't have to pre-configure anything for the first run to succeed.
 
 The same auto-default kicks in if a previously-configured project or folder has been deleted, renamed, or revoked, or if you set an invalid ID by hand (for example, a typo). kane-cli detects the bad ID, clears it, and resolves a working default rather than letting the run proceed and silently failing the upload at the end. To rebind explicitly, run `kane-cli config project` (or `kane-cli projects list` followed by `kane-cli config project <id>`).
 
@@ -104,11 +104,13 @@ Code export converts a completed test case into runnable Playwright code that yo
 
 ### What It Produces
 
-The supported languages are **Python with Playwright** and **JavaScript with Playwright**. Code export runs server-side after the test case is finalised. Kane CLI polls Test Manager until generation is complete, then downloads the resulting files.
+The supported languages are **Python with Playwright** and **JavaScript with Playwright**. Setting any other language is rejected.
+
+Code export runs server-side after the test case is finalised. Kane CLI polls Test Manager until generation is complete, then downloads the resulting files.
 
 ### Enabling Code Export
 
-Code export is **off by default**. Turn it on either in your stored config or per-run on the CLI.
+Code export is **enabled by default**; stored configuration can override it. `--code-export` enables it for a run.
 
 In `~/.testmuai/kaneai/tui-config.json`, set the `code_export` block:
 
@@ -124,7 +126,7 @@ In `~/.testmuai/kaneai/tui-config.json`, set the `code_export` block:
 
 `enabled` controls whether code export runs at all. `skip_validation` controls whether the worker-side validator is skipped after generation.
 
-For one-off CLI runs, use flags:
+For one-off CLI runs, you can override the config with flags:
 
 ```bash
 kane-cli run "Add an item to the cart" \
@@ -133,11 +135,11 @@ kane-cli run "Add an item to the cart" \
   --skip-code-validation
 ```
 
-`--no-skip-code-validation` forces validation on for that run. `--code-language` accepts `python` or `javascript`.
+`--no-skip-code-validation` forces validation on for that run. `--code-language` accepts `python` (default) or `javascript`.
 
 ### Where to Find the Output
 
-Generated code is downloaded into a local directory under your session, by default `~/.testmuai/kaneai/sessions/<session-id>/code-export/`. At session exit Kane CLI prints a `CodeExport` line in the links box pointing to that directory.
+Generated code is downloaded into a local directory under your session, by default `~/.testmuai/kaneai/sessions/<session-id>/code-export/`. At session exit Kane CLI prints a `CodeExport` line in the links box pointing to that directory; the link uses your terminal's hyperlink support to open it.
 
 The same code is also available alongside the test case in Test Manager.
 
@@ -147,19 +149,19 @@ The same code is also available alongside the test case in Test Manager.
 
 When the upload finishes successfully, Kane CLI prints a small links block to the terminal. You see up to three links, depending on what was generated:
 
-- **ShareLink** — a shareable session URL on <BrandName /> Test Manager. Anyone you send this link to can view the run summary without needing access to the project. Links are issued with a seven-day expiry.
-- **TestCase** — a direct URL to the test case dashboard inside your Test Manager project. Use this when you are signed in to <BrandName /> and want to drill into the run.
-- **CodeExport** — a `file://` link to the directory on your machine that holds the generated Playwright code. Only shown when code export is enabled and produced files.
+- **ShareLink**: a shareable session URL on <BrandName /> Test Manager that includes a short-lived share ID. Anyone you send this link to can view the run summary without needing access to the project. Links are issued with a seven-day expiry.
+- **TestCase**: a direct URL to the test case dashboard inside your Test Manager project. Use this when you are signed in to <BrandName /> and want to drill into the run.
+- **CodeExport**: a `file://` link to the directory on your machine that holds the generated Playwright code. Only shown when code export is enabled and produced files.
 
-The links survive the terminal exit and remain in your scrollback.
+The links survive the terminal exit and remain in your scrollback, so you can come back to them after Kane CLI has quit.
 
 ---
 
 ## Feedback Prompt
 
-After a session uploads successfully, Kane CLI shows a thumbs-up / thumbs-down prompt. Use the left and right arrow keys to switch between the two options, **Enter** to submit, or **Esc** to skip. Skipping sends nothing.
+After a session uploads successfully, Kane CLI shows a small thumbs-up / thumbs-down prompt at the bottom of the terminal. Use the left and right arrow keys to switch between the two options, **Enter** to submit, or **Esc** to skip. Skipping sends nothing.
 
-If you submit, Kane CLI posts your choice (positive or negative) for the test case that was just finalised. The prompt only appears when there is a test case to rate — sessions that had no successful upload skip it. Both the TUI and the CLI render the same prompt; in the CLI it appears on stderr after the links block.
+If you submit, Kane CLI posts your choice (positive or negative) for the test case that was just finalised. The prompt only appears when there is a test case to rate; sessions that had no successful upload skip it. Both the TUI and the CLI render the same prompt; in the CLI it appears on stderr after the links block.
 
 You can also submit feedback after the fact for a known test case:
 
@@ -172,21 +174,19 @@ kane-cli feedback --test-id <test-id> --feedback-type negative --details "..."
 
 ## Session History on Disk
 
-Every session, regardless of upload outcome, leaves a directory on your machine:
+Every session, regardless of upload outcome, leaves a directory on your machine you can inspect later:
 
 ```text
 ~/.testmuai/kaneai/sessions/<session-id>/
 ├── session.json         # Metadata: started_at, ended_at, model, profile,
 │                        # test_id, testcase_id, upload_status, run summaries
-├── tui.log              # Append-only event log for the TUI session
-├── runs/<n>/            # One directory per run in the session
-│   └── run-test/
-│       └── actions.ndjson  # Step-by-step record of what the agent did
+├── tui.log              # Append-only event log for the session
+├── evidence/            # The session's sealed evidence pack: <execution-id>.evidence
 └── code-export/         # (when code export is enabled) Generated code files
 ```
 
-`<session-id>` is a UUID generated when the session starts. The runner writes its step logs and screenshots into `runs/<n>/`, where `n` increments per run within the session.
+`<session-id>` is a UUID generated when the session starts. Step logs, screenshots, and per-run console/network captures all live **inside the evidence pack**. See [Evidence Packs](/docs/kane-cli-evidence/#whats-inside-a-pack) for its structure.
 
-This directory is useful when you want to look back at a past run without going to Test Manager, debug a session that failed to upload, or hand a teammate the raw artefacts.
+This directory is useful when you want to look back at a past run without going to Test Manager, debug a session that failed to upload, or hand a teammate the pack.
 
 <KaneCliCta />

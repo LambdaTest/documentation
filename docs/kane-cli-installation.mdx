@@ -21,7 +21,9 @@ Requires Node.js 18 or higher.
 npm install -g @testmuai/kane-cli
 ```
 
-Platform-specific native binaries are installed automatically for your OS. No additional configuration is needed.
+Platform-specific native binaries are installed automatically for your OS. No additional configuration is needed. npm installs work on every platform in the [Platform Support](#platform-support) table, including Linux arm64 (aarch64): the matching platform binary is selected automatically.
+
+If your global `npm` prefix is not on `PATH`, add it before running `kane-cli`. You can find the prefix with `npm config get prefix`; the `kane-cli` binary lives in `<prefix>/bin` on macOS and Linux, and `<prefix>` on Windows.
 
   </Tab>
 
@@ -44,7 +46,7 @@ Kane CLI requires **Google Chrome** installed on your system. Chrome is used as 
 
 ## Install with pnpm or yarn
 
-Installing kane-cli via **pnpm** is not currently supported. pnpm places packages inside a nested `node_modules/.pnpm/` store, so the project-root `node_modules/` ends up deeper on disk than it would with npm. kane-cli's resolver for the platform-specific `v16-runner` binary does not yet search that far up the directory tree, so the runner is never found and the CLI aborts. The symptom is a silent exit with status 2 shortly after startup — see [CLI exits with code 2 and no output](/docs/kane-cli-troubleshooting/#cli-exits-with-code-2-and-no-output) in the troubleshooting guide. This limitation is tracked in [issue #24](https://github.com/LambdaTest/kane-cli/issues/24).
+Installing kane-cli via **pnpm** is not currently supported. pnpm places packages inside a nested `node_modules/.pnpm/` store, so the project-root `node_modules/` ends up deeper on disk than it would with npm. kane-cli's resolver for the platform-specific `v16-runner` binary does not yet search that far up the directory tree, so the runner is never found and the CLI aborts. The symptom is a silent exit with status 2 shortly after startup. See [CLI exits with code 2 and no output](/docs/kane-cli-troubleshooting/#cli-exits-with-code-2-and-no-output) in the troubleshooting guide. This limitation is tracked in [issue #24](https://github.com/LambdaTest/kane-cli/issues/24).
 
 Until that is resolved, install kane-cli through one of the supported paths:
 
@@ -55,6 +57,8 @@ Until that is resolved, install kane-cli through one of the supported paths:
 yarn (classic and Berry) has not been verified end-to-end. If you use yarn, prefer the Homebrew or shell-installer path until it is explicitly supported.
 
 ## Verify
+
+Confirm the install by printing the version:
 
 ```bash
 kane-cli --version
@@ -70,6 +74,8 @@ If the command is not found, your shell is not seeing the npm global `bin` direc
 
 ## Platform Support
 
+Kane CLI ships native binaries for the following platforms. Installing the main package pulls in the matching platform binary automatically.
+
 | Platform | Architecture | Supported |
 |----------|-------------|-----------|
 | macOS | Apple Silicon (ARM) | ✅ |
@@ -84,7 +90,7 @@ If the command is not found, your shell is not seeing the npm global `bin` direc
 
 ## Update
 
-Kane CLI checks the npm registry once every 24 hours when you launch it. When a newer version is available, the CLI prints a one-line notification on startup with the current and latest versions. The check runs in the background and never blocks startup.
+Kane CLI checks the npm registry once every 24 hours when you launch it. When a newer version is available, the CLI prints a one-line notification on startup with the current and latest versions. The check runs in the background and never blocks startup; if the network is unavailable, Kane CLI silently skips it.
 
 Upgrade with:
 
@@ -96,6 +102,8 @@ After upgrading, run `kane-cli --version` to confirm the new version is active.
 
 ## Uninstall
 
+Remove the global package:
+
 ```bash
 npm uninstall -g @testmuai/kane-cli
 ```
@@ -106,7 +114,7 @@ This removes the `kane-cli` binary but leaves your local data in place. Kane CLI
 rm -rf ~/.testmuai/kaneai
 ```
 
-Only do this if you want a clean reset — it logs you out of all profiles and deletes saved configuration, session history, and command history.
+Only do this if you want a clean reset: it logs you out of all profiles and deletes saved configuration, session history, and command history.
 
 ## Troubleshooting Installation
 
