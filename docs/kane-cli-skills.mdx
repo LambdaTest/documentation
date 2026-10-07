@@ -9,11 +9,13 @@ keywords: ['kane cli skill', 'claude code skill', 'codex cli', 'gemini cli', 'ka
 import { BrandName } from "/snippets/BrandName.mdx";
 import { KaneCliCta } from "/snippets/KaneCliCta.mdx";
 
-A Kane CLI **skill** is a markdown instruction file that teaches an AI coding agent how to use `kane-cli`: when to invoke it, how to build commands, how to parse NDJSON output, how to present results, and how to handle failures. Install the skill once, and your agent handles browser automation tasks automatically whenever you ask.
+You can use Kane CLI by talking to your AI coding agent (Claude Code, Codex CLI, Gemini CLI, and others) instead of typing commands yourself. A Kane CLI **skill** makes this work. It is a markdown instruction file that teaches the agent how to use `kane-cli`: when to call it, how to build the command, how to read the NDJSON output (one JSON event per line), how to present the result, and what to do when a run fails.
 
-Skills work on top of [Agent Mode](/docs/kane-cli-agent-mode/) (`--agent` flag). The skill tells the agent to always use `--agent`, parse the NDJSON stream, and present structured results back to you.
+Install the skill once. From then on, whenever you ask for something that needs a browser, your agent checks that everything is ready, runs your request in a real browser, and shows you the result.
 
-You can drive kane-cli by talking to your coding agent (Claude Code, Codex CLI, Gemini CLI, and others) instead of typing commands. The kane-cli skill teaches the agent how to check that everything is ready, run your request in a real browser, and show you the result. This page also covers what to expect on your first run, what gets saved on your machine, and how to watch runs live.
+Skills build on [Agent Mode](/docs/kane-cli-agent-mode/) (the `--agent` flag). The skill tells the agent to always pass `--agent`, read the NDJSON stream, and report a structured result back to you.
+
+This page also covers what to expect on your first run, what gets saved on your machine, and how to watch runs live.
 
 <Note>
 Skills are plain markdown files. Review and customize them by editing the installed file after download.
@@ -23,21 +25,21 @@ Skills are plain markdown files. Review and customize them by editing the instal
 
 ## Install
 
-The quickest way to install the Kane CLI skill globally for all supported agents (Claude Code, Codex CLI, and Gemini CLI) in one command:
+The quickest way to get started is one command. It installs the skill globally for Claude Code, Codex CLI, and Gemini CLI:
 
 ```bash
 npx @testmuai/kane-cli-skill
 ```
 
-This installs the skill for Claude Code, Codex CLI and Gemini CLI in one go, and creates the folder that holds your agent preferences. You also need kane-cli itself ([Installation](/docs/kane-cli-installation/)).
+The installer also creates the folder that holds your agent preferences. You need Kane CLI itself installed too (see [Installation](/docs/kane-cli-installation/)).
 
-Then open your agent in a project and ask for something that needs a browser:
+Next, open your agent in a project and ask for something that needs a browser:
 
 ```text
 check that the home page loads on my app
 ```
 
-If you prefer to install manually for a specific agent, follow the instructions below.
+To install the skill by hand for a single agent, follow the steps below.
 
 ---
 
@@ -64,7 +66,7 @@ curl -o .claude/skills/kane-cli/SKILL.md \
   https://raw.githubusercontent.com/LambdaTest/kane-cli/main/skill-installer/skills/SKILL.md
 ```
 
-After installing, Claude Code automatically loads the skill. No restart required.
+Claude Code loads the skill automatically. You do not need to restart it.
 
 **What Claude can do with this skill:**
 
@@ -165,19 +167,19 @@ curl -o .gemini/skills/kane-cli/SKILL.md \
 
 ## What Happens on Your First Run
 
-1. **A ready check.** The agent runs one short script and shows a card: who is signed in, credits left, Chrome found, your app if it is already running locally, and where results will be saved. If something is missing, such as a sign-in, the card says so and offers the fix. The agent can open the sign-in page for you. It never asks you to paste an access key into the chat.
-2. **The run starts straight away.** Nothing is asked first. The browser opens visibly so you can watch, unless you are on a machine with no display.
-3. **A short tour while you wait.** A run takes from 30 seconds to a few minutes, so the agent uses that time to explain what kane-cli does: one-off runs, saved tests that replay in seconds, requirement-driven assurance, where runs land in Test Manager, and what an evidence pack is.
-4. **A result card.** Pass or fail, what happened, credits used, a link to your evidence pack, a link to the test case in Test Manager, and two things the agent can do next.
-5. **Three quick choices, asked once.** After you have seen a result, the agent asks whether to keep showing the browser, whether results are going to the right place, and whether you are doing one-off checks or building a saved suite. It never asks again.
+1. **A ready check.** The agent runs one short script and shows a card with who is signed in, credits left, whether Chrome was found, your app if it is already running locally, and where results will be saved. If something is missing, such as a sign-in, the card tells you and offers the fix. The agent can open the sign-in page for you. It never asks you to paste an access key into the chat.
+2. **The run starts right away.** The agent does not ask you anything first. The browser opens in a visible window so you can watch, unless your machine has no display.
+3. **A short tour while you wait.** A run takes from 30 seconds to a few minutes. The agent uses that time to explain what Kane CLI does: one-off runs, saved tests that replay in seconds, requirement-driven assurance, where runs land in Test Manager, and what an evidence pack is.
+4. **A result card.** You see pass or fail, what happened, credits used, a link to your evidence pack, a link to the test case in Test Manager, and two things the agent can do next.
+5. **Three quick choices, asked once.** After your first result, the agent asks whether to keep showing the browser, whether results are going to the right place, and whether you are doing one-off checks or building a saved suite. It does not ask again.
 
-From the second session on, the ready check shrinks to a single line and the tour is gone. Say "kane tour" any time to see it again.
+In later sessions, the ready check is a single line and the tour is skipped. Say "kane tour" at any time to see the tour again.
 
 ---
 
 ## Your Preferences
 
-Your answers are saved in one small file next to kane-cli's own settings:
+The agent saves your answers in one small file next to Kane CLI's own settings:
 
 ```text
 ~/.testmuai/kaneai/agent-config/config.json
@@ -188,25 +190,25 @@ Your answers are saved in one small file next to kane-cli's own settings:
 | Watch mode | `visible` · `quiet` · `results-only` | Show the browser window, run in the background, or run in the background and show only the result |
 | Purpose | `one-off` · `suite` · `ask` | Whether the agent offers to keep passing runs as saved tests |
 
-The file works across all your agents and projects. To change a preference, tell your agent ("kane preferences"), or set it yourself:
+The same file applies to all your agents and projects. To change a preference, tell your agent "kane preferences", or set it yourself:
 
 ```bash
 npx @testmuai/kane-cli-skill prefs --watch quiet --purpose suite
 ```
 
-Deleting the file is safe. The agent falls back to sensible defaults and treats the next session as a first run.
+You can safely delete the file. The agent then uses sensible defaults and treats your next session as a first run.
 
 ### Where Results Are Saved
 
-Every run is saved as a test case in a Test Manager project and folder ([Test Manager Integration](/docs/kane-cli-tms-integration/)). The ready check always shows which one. To move it, tell your agent "change project". The agent lists your projects, lets you pick or create one, and saves it.
+Every run is saved as a test case in a Test Manager project and folder (see [Test Manager Integration](/docs/kane-cli-tms-integration/)). The ready check always shows which project and folder. To use a different one, tell your agent "change project". The agent lists your projects, lets you pick one or create a new one, and saves your choice.
 
-This setting belongs to kane-cli, not to the agent, so a change applies to **every later kane-cli session for your sign-in**: every project folder, every agent, and the terminal. Tests you already ran stay in their original project.
+This setting belongs to Kane CLI, not to the agent. A change applies to **every later Kane CLI session for your sign-in**: every project folder, every agent, and the terminal. Tests you already ran stay in their original project.
 
 ---
 
 ## Watch Runs Live (Claude Code)
 
-In Claude Code you can turn on a live status strip. While a run works, one line in your status bar names the current step:
+In Claude Code you can turn on a live status strip. While a run is in progress, one line in your status bar shows the current step:
 
 ```text
 ◆ kane run ▸ step 7 · clicking "Add to cart"          0:42
@@ -215,7 +217,7 @@ In Claude Code you can turn on a live status strip. While a run works, one line 
 ◆ kane run ✓ passed · 12 steps · 1:54 · 58 credits
 ```
 
-It is off until you say yes. Claude Code asks once, after your first result in it, and recommends it. That holds even if you did your first kane-cli run in another agent. The installer asks the same question when you run it by hand in a terminal. You can also manage it yourself:
+The strip is off until you turn it on. Claude Code offers it once, with a recommendation to say yes, after your first result in Claude Code. It does this even if your first Kane CLI run happened in another agent. The installer asks the same question when you run it by hand in a terminal. You can also manage the strip yourself:
 
 ```bash
 npx @testmuai/kane-cli-skill strip enable      # turn it on
@@ -225,23 +227,23 @@ npx @testmuai/kane-cli-skill strip disable     # turn it off
 
 What to know:
 
-- **It keeps your existing status line.** Yours prints first, unchanged. The kane line appears under it only while a run is live and for five minutes afterwards.
-- **Only the session that started the run shows it.** If you have several Claude Code sessions open, even in the same project, the others stay as they are. (On Windows, every session open in the run's project shows it for now.)
-- **Turning it on edits `~/.claude/settings.json`.** A backup is kept next to it, and `strip disable` restores your original status line exactly.
-- **It needs kane-cli 0.8.17 or newer and Node 18 or newer.**
-- **It stays on your machine.** The strip reads two things kane-cli writes locally while it runs, a small pointer file for each live run and that run's event log. It makes no network calls.
+- **It keeps your existing status line.** Your status line prints first, unchanged. The kane line appears under it only while a run is live and for five minutes afterwards.
+- **Only the session that started the run shows it.** If you have several Claude Code sessions open, even in the same project, the others are unchanged. On Windows, every session open in the run's project shows the strip.
+- **Turning it on edits `~/.claude/settings.json`.** A backup is kept next to the file, and `strip disable` restores your original status line exactly.
+- **Requires Kane CLI 0.8.17 or later and Node 18 or later.**
+- **It stays on your machine.** The strip reads two things Kane CLI writes locally during a run: a small pointer file for each live run, and that run's event log. It makes no network calls.
 - **It never shows what was typed.** A typing step appears as "typing in" plus the field's name.
-- It picks up a run roughly 10 to 30 seconds after launch, once the browser is up and kane-cli has created the session. While a step is still working, the line shows the last finished action, marked `last:`.
+- **It appears shortly after launch.** The strip picks up a run roughly 10 to 30 seconds after it starts, once the browser is up and Kane CLI has created the session. While a step is still in progress, the line shows the last finished action, marked `last:`.
 
-Other agents have no scriptable status bar today, so the strip is not offered there. Everything else on this page works the same everywhere.
+Other agents do not have a scriptable status bar, so the strip is available only in Claude Code. Everything else on this page works the same in every agent.
 
 ---
 
 ## Signing In From an Agent
 
-If you are not signed in, the ready check says so and offers the fix. The agent can open the sign-in page for you. It never asks you to paste an access key into the chat.
+If you are not signed in, the ready check tells you and offers the fix. The agent can open the sign-in page for you, and it never asks you to paste an access key into the chat.
 
-Where no browser can open, such as CI runners, containers, or a sandboxed builder, use Basic Auth in your own terminal or pipeline instead:
+If no browser can open, for example on a CI runner, in a container, or in a sandboxed builder, sign in with Basic Auth from your own terminal or pipeline instead:
 
 ```bash
 kane-cli login \
@@ -257,24 +259,24 @@ Get credentials from the <BrandName /> [dashboard](https://accounts.lambdatest.c
 
 When you ask your AI agent to test something on the web, the skill:
 
-1. Runs the ready check: one short script that confirms `kane-cli` is installed and shows who is signed in, credits left, Chrome, and where results will be saved
-2. Builds a `kane-cli run --agent` command from your request. The browser opens visibly unless your watch mode preference says otherwise or there is no display, in which case the command adds `--headless`
-3. Parses the NDJSON stream, waits for `run_end`
-4. Presents structured results: status, steps, duration, extracted values, assertion results
-5. If failed: inspects `run_dir` logs and screenshots to diagnose the issue
-6. Rates the run and suggests a bug report for low-quality agent failures
+1. Runs the ready check: one short script that confirms `kane-cli` is installed and shows who is signed in, credits left, Chrome, and where results will be saved.
+2. Builds a `kane-cli run --agent` command from your request. The browser opens in a visible window unless your watch mode preference says otherwise or there is no display. In those cases the command adds `--headless`.
+3. Reads the NDJSON stream and waits for the `run_end` event, which carries the final result.
+4. Presents a structured result: status, steps, duration, extracted values, and assertion results.
+5. If the run failed, inspects the `run_dir` logs and screenshots to find the cause.
+6. Rates the run, and suggests a bug report when a failure looks like a low-quality agent run.
 
 ---
 
 ## What Leaves Your Machine
 
-Driving kane-cli through an agent changes nothing about what kane-cli uploads. By default each run is saved to your <BrandName /> account as a Test Manager test case, with its screenshots and run details ([Test Manager Integration](/docs/kane-cli-tms-integration/)). Evidence packs are sealed on your machine, and the evidence viewer reads them from your machine ([Evidence Packs](/docs/kane-cli-evidence/)). The agent preferences file and the status strip are local only.
+Kane CLI uploads the same data whether you run it yourself or through an agent. By default, each run is saved to your <BrandName /> account as a Test Manager test case, with its screenshots and run details (see [Test Manager Integration](/docs/kane-cli-tms-integration/)). Evidence packs are sealed on your machine, and the evidence viewer reads them from your machine (see [Evidence Packs](/docs/kane-cli-evidence/)). The agent preferences file and the status strip stay on your machine.
 
 ---
 
 ## Running With No Person Present
 
-In CI, or with a cloud agent that cannot ask you anything, the agent skips the tour and the questions, runs headless with default settings, and does not write the preferences file. It still stops and reports clearly if kane-cli is not installed, not signed in, or out of credits. For pipelines, calling kane-cli directly is usually simpler: see [CI/CD Integration](/docs/kane-cli-cicd/).
+In CI, or with a cloud agent that cannot ask you anything, the agent skips the tour and the questions, runs headless with default settings, and does not write the preferences file. It still stops and reports clearly if Kane CLI is not installed, you are not signed in, or you are out of credits. For pipelines, calling Kane CLI directly is usually simpler. See [CI/CD Integration](/docs/kane-cli-cicd/).
 
 ---
 

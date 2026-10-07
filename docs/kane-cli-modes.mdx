@@ -174,41 +174,47 @@ The customer-facing flags accepted by `kane-cli run`:
 | `--max-steps <n>` | Maximum agent steps. | `50` |
 | `--timeout <seconds>` | Kill the run after N seconds. | None |
 | `--url <url>` | Start URL for the run. Overrides the configured `default_url`; bare domains are normalized to `https://`. See [Default start URL](/docs/kane-cli-configuration/#default-start-url). | Config `default_url` |
-| `--allow-missing-url` | Non-TTY only: proceed from the browser's current page instead of failing when no start URL resolves (a provided `--url` is still used). | Off |
+| `--allow-missing-url` | Non-TTY only. If no start URL resolves, start from the browser's current page instead of failing. A provided `--url` is still used. | Off |
 | `--cdp-endpoint <url>` | Connect to an existing Chrome via CDP. | None |
-| `--ws-endpoint <url>` | Connect to a Playwright WebSocket endpoint (e.g. TestmuAI `wss://`). The run still executes on this machine and drives that browser; to run a whole suite on the grid instead, see [`testrun run --remote`](/docs/kane-cli-remote-execution/). | None |
+| `--ws-endpoint <url>` | Connect to a Playwright WebSocket endpoint (e.g. <BrandName /> `wss://`). The run still executes on this machine and drives that browser; to run a whole suite on the grid instead, see [`testrun run --remote`](/docs/kane-cli-remote-execution/). | None |
 | `--global-context <file>` | Override the global context Markdown file. | `~/.testmuai/kaneai/global-memory.md` |
 | `--local-context <file>` | Override the local context Markdown file. | `<cwd>/.testmuai/context.md` |
 | `--variables <json>` | Inline variables JSON. | None |
 | `--variables-file <path>` | Load variables from a JSON file. | None |
-| `--session-context <json>` | Prior runs context JSON. | None |
-| `--username <user>` | Basic auth username (skip OAuth). | None |
-| `--access-key <key>` | Basic auth access key (skip OAuth). | None |
+| `--session-context <json>` | JSON context from earlier runs, loaded for the agent. | None |
+| `--username <user>` | Basic auth username, used instead of OAuth. | None |
+| `--access-key <key>` | Basic auth access key, used instead of OAuth. | None |
 | `--mode <name>` | Run mode: `action` (strict) or `testing` (lenient). | Config value, otherwise `testing` |
 | `--bug-detection <mode>` | Detect product bugs while authoring: `off`, `stop` (halt the run on a confirmed bug), or `continue` (record it and keep going). Overrides `config set-bug-detection`. See [Configuration](/docs/kane-cli-configuration/#bug-detection). | Config value, otherwise `off` |
 | `--agent` | Plain NDJSON output, no colors or UI. | Off |
 | `--code-export` | Generate code export after upload. | config (`true` by default) |
 | `--code-language <lang>` | Code export language: `python` or `javascript`. | `python` |
-| `--skip-code-validation` | Skip post-codegen worker-side validation. | On |
-| `--no-skip-code-validation` | Force post-codegen worker-side validation. | Off |
+| `--skip-code-validation` | Skip the worker-side validation that runs after code is generated. | On |
+| `--no-skip-code-validation` | Run the worker-side validation after code is generated. | Off |
 
 Assertion, final-validation, current-page analysis and network-capture flags are covered in [Assertion controls and current-page analysis](#assertion-controls-and-current-page-analysis).
 
 ### Unresolved variables
 
-Kane CLI checks every `{{name}}` in the objective before the run starts. A name with no value is a warning: the run goes ahead and types the name as written, unless a step sets it first. On a TTY the warning is the receipt shown in [Variables and context](/docs/kane-cli-variables-and-context/#before-a-run-unresolved-variables); with `--agent` it is a single typed event before the first progress frame:
+Kane CLI checks every `{{name}}` in the objective before the run starts. If a name has no value, Kane CLI prints a warning and the run continues. The name is typed literally as written, unless a step sets its value first. In a terminal, the warning looks like the example in [Variables and context](/docs/kane-cli-variables-and-context/#before-a-run-unresolved-variables). With `--agent`, it is a single typed event, sent before the first progress event:
 
 ```json
 {"type":"warning","code":"unresolved_variables","message":"2 variable(s) have no value — typed as written unless a step sets them first","suggested_file":".testmuai/variables/variables.json","variables":[{"name":"checkout_url","reason":"not_declared","used_by":[{"file":"objective","step":1}]},{"name":"login_password","reason":"value_missing","file":".testmuai/variables/variables.json","used_by":[{"file":"objective","step":1}]}]}
 ```
 
-`reason` is `value_missing` (the key exists in `file`, with no value), `not_declared` (the key is in no file; `suggested_file` is where to add it), or `not_a_dataset_column` (a `${x}` that is no column of the dataset row the run was given). The warning does not change the exit code. An explicit `{{global.*}}` reference (resolved from Test Manager at run time), names an earlier step stores, and the `{{smart.*}}`, `{{environment.*}}`, `{{secrets.*}}` and `{{totp.*}}` namespaces are never checked.
+`reason` is one of:
+
+- `value_missing`: the key exists in `file`, but has no value.
+- `not_declared`: the key is not in any file. `suggested_file` is where to add it.
+- `not_a_dataset_column`: a `${x}` that does not match any column of the dataset row the run was given.
+
+The warning does not change the exit code. Some names are never checked: explicit `{{global.*}}` references (resolved from Test Manager at run time), names that an earlier step stores, and the `{{smart.*}}`, `{{environment.*}}`, `{{secrets.*}}`, and `{{totp.*}}` namespaces.
 
 For variables and context file behavior, see [Variables and context](/docs/kane-cli-variables-and-context/). For code export and the run mode toggle, see [Configuration](/docs/kane-cli-configuration/).
 
 ### Mobile runs
 
-By default a run targets the **desktop** browser (Chrome), so every example above is unchanged. On macOS Apple Silicon you can instead point a run at a virtual mobile device on this machine: an `emulator` (a virtual Android device) or a `simulator` (a virtual iOS device). Every mobile run needs an app under test. From any other machine, run a saved mobile suite on the cloud grid with [`testrun run --remote`](/docs/kane-cli-mobile/#running-a-mobile-suite-on-the-cloud-grid).
+By default, a run targets the **desktop** browser (Chrome), which is what every example above uses. On macOS Apple Silicon, you can instead point a run at a virtual mobile device on your machine: an `emulator` (a virtual Android device) or a `simulator` (a virtual iOS device). Every mobile run needs an app under test. From any other machine, you can run a saved mobile suite on the cloud grid with [`testrun run --remote`](/docs/kane-cli-mobile/#running-a-mobile-suite-on-the-cloud-grid).
 
 ```bash
 # desktop (default): nothing changes for web runs
@@ -224,10 +230,10 @@ kane-cli run "Sign in and open the account tab" --target simulator --app ./build
 The mobile run flags:
 
 - `--target desktop|emulator|simulator`: which target to run against. Defaults to the saved session target, otherwise `desktop`.
-- `--device-name <name>` and `--os-version <version>`: pick a device as `kane-cli devices list --target emulator|simulator` prints it. A name needs a version, and a version alone matches any device on it. In the TUI/TTY, omitting them opens a one-time picker and the choice is saved. In non-interactive runs a device must already be set, via the flags or `kane-cli config set-device-name` / `set-os-version`, or the run exits with the fix spelled out.
+- `--device-name <name>` and `--os-version <version>`: choose a device, using the values exactly as `kane-cli devices list --target emulator|simulator` prints them. If you pass a name, also pass a version. A version on its own matches any device on that version. In the TUI or a terminal, leaving them out opens a one-time picker and saves your choice. In non-interactive runs, a device must already be set, either with the flags or with `kane-cli config set-device-name` / `set-os-version`. Otherwise, the run exits and tells you how to fix it.
 - `--app <path|APPid>`: the app under test, required for every mobile run. Pass a build (emulator: `.apk`, simulator: `.zip`) or an uploaded app id (`APP` followed by six or more digits). `kane-cli apps list --target <kind>` lists yours. On the `desktop` target, the device flags and `--app` are ignored.
 
-In the interactive TUI, a first run offers a Desktop / Emulator / Simulator chooser, and you can switch targets with `/mobile` and `/desktop` before the first dispatch; afterwards use `/new` before switching. Run `/doctor` to check mobile tooling and devices.
+In the interactive TUI, the first run offers a Desktop / Emulator / Simulator chooser. You can switch targets with `/mobile` and `/desktop` until the first run starts. After that, use `/new` to start a fresh session before you switch. Run `/doctor` to check mobile tooling and devices.
 
 For setup (Xcode or Android Studio, `kane-cli login`, and `kane-cli doctor --target emulator|simulator --install`) and the app formats each target accepts, see [Mobile testing](/docs/kane-cli-mobile/).
 
@@ -286,13 +292,16 @@ The run is also captured as a sealed [evidence pack](/docs/kane-cli-evidence/): 
 
 ### Assertion controls and current-page analysis
 
-`run` and `testmd run` support `--assertion-mode dom|visual` (default `dom` with vision fallback) and `--final-validation on|off` (default off). Persist with `config set-assertion-mode` and `config set-final-validation`. Final validation controls the synthesized `cp_final` checkpoint independently of action/testing mode; keep explicit terminal assertions in objectives.
+`run` and `testmd run` support two assertion controls:
 
-`run --analyzer-only --condition "<condition>"` checks the current desktop browser page without an objective, action steps or saved test. Repeat `--condition` for multiple checks. Use `--agent` or non-TTY input. Results contain `condition_results: boolean[]`; exit `0` means all conditions were judged, **not** that all are true. Exit `1` means a result was missing, and `3` means cancelled. This mode rejects mobile target/app/device options and code-export/name options.
+- `--assertion-mode dom|visual`: `dom` (the default) checks the page's DOM and falls back to vision when needed; `visual` uses the vision model only. To save a default, use `config set-assertion-mode`.
+- `--final-validation on|off` (default off): adds a generated `cp_final` checkpoint that verifies the objective as a whole. To save a default, use `config set-final-validation`. This setting works the same way in action and testing mode. Keep explicit final assertions in your objectives either way.
 
-Experimental `run --network-ws` and `run --network-sse` enable WebSocket and SSE capture; both default off. Persist with `config set-network-ws on|off` and `config set-network-sse on|off`. SSE capture is Chromium-only. Do not copy these run-only flags onto `testmd` or `testrun` commands.
+`run --analyzer-only --condition "<condition>"` checks the current desktop browser page against one or more conditions, without an objective, action steps, or a saved test. Repeat `--condition` to check several conditions. Use `--agent` or non-TTY input. Results are returned in `condition_results: boolean[]`. Exit `0` means all conditions were judged, **not** that all are true. Exit `1` means a result was missing, and `3` means cancelled. This mode rejects the mobile target, app, and device options, and the code-export and name options.
 
-Code export defaults to enabled, subject to saved configuration, and supports `python` (default) or `javascript`. `run`/`testmd run` use `--code-language`; `testmd export` uses `--language`. Upload eligibility is independent of action/testing mode.
+The experimental `run --network-ws` and `run --network-sse` flags capture WebSocket and Server-Sent Events traffic. Both are off by default. To save a default, use `config set-network-ws on|off` and `config set-network-sse on|off`. SSE capture works in Chromium only. These flags work only with `run`, so do not add them to `testmd` or `testrun` commands.
+
+Code export is on by default, unless your saved configuration turns it off. It supports `python` (default) or `javascript`. `run` and `testmd run` use `--code-language`, while `testmd export` uses `--language`. Whether a run uploads does not depend on action or testing mode.
 
 ### Feedback Prompt
 

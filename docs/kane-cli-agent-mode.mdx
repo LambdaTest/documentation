@@ -70,14 +70,14 @@ Kane CLI outputs one JSON object per line (NDJSON) to stdout:
 | `bifurcation` | `flows[]`, `count` | Agent branched into sub-flows |
 | `child_agent_start` | `child_id`, `objective`, `parent_step` | Child agent spawned |
 | `child_agent_end` | `child_id`, `success`, `steps_taken`, `summary` | Child agent finished |
-| `ask_user` | `question`, `step_index`, `options`* | Agent needs input (auto-disabled when stdin is not TTY) |
-| `warning` | `code`, `message`, `suggested_file`, `variables[]` | A non-fatal warning before the first progress frame (for example `code: "unresolved_variables"`) |
+| `ask_user` | `question`, `step_index`, `options`* | Agent needs input (turned off automatically when stdin is not a TTY) |
+| `warning` | `code`, `message`, `suggested_file`, `variables[]` | A non-fatal warning, sent before the first progress event (for example `code: "unresolved_variables"`) |
 | `error` | `message` | Error occurred |
-| `run_end` | *(see below)* | Terminal event of a one-shot `run`: the last line |
+| `run_end` | *(see below)* | Final event of a one-shot `run`: always the last line |
 
 ### Unresolved-Variable Warning
 
-Kane CLI checks every `{{name}}` in the objective before the run starts. A name with no value is a warning: the run goes ahead and types the name as written, unless a step sets it first. With `--agent` it is a single typed event before the first progress frame:
+Kane CLI checks every `{{name}}` in the objective before the run starts. If a name has no value, Kane CLI prints a warning and the run continues. The name is typed literally as written, unless a step sets its value first. With `--agent`, the warning is a single typed event, sent before the first progress event:
 
 ```json
 {"type":"warning","code":"unresolved_variables","message":"2 variable(s) have no value — typed as written unless a step sets them first","suggested_file":".testmuai/variables/variables.json","variables":[{"name":"checkout_url","reason":"not_declared","used_by":[{"file":"objective","step":1}]},{"name":"login_password","reason":"value_missing","file":".testmuai/variables/variables.json","used_by":[{"file":"objective","step":1}]}]}
@@ -137,7 +137,7 @@ Kane CLI checks every `{{name}}` in the objective before the run starts. A name 
 
 ---
 
-# The .evidence proof pack
+## The .evidence proof pack
 
 Every Kane CLI run produces an `.evidence` pack stored natively in the results folder, so failure context travels with the run instead of living in a separate dashboard. Each pack contains the full execution proof for the run: step-by-step traces, screenshots, video, and command, network and console logs, plus the NDJSON event stream and result codes. Coding agents and humans read the same evidence to see exactly what happened, where it failed, and why.
 
@@ -163,11 +163,18 @@ kane-cli run "go to example.com, store the price as 'price'" --agent 2>/dev/null
 
 ## Command-Specific Completion
 
-The `run_end` parsing strategy applies to one-shot `run` only. For `testmd run`, collect `test_md_done.overall_status`, `duration_s`, `session_id`, and optional `share_url`; embedded `run_end` events can finish individual steps. Local suites emit `testrun_done`; dispatched remote suites then emit `remote_done` (retain `status`, `exit`, `sessions_path`). `generate` emits `generate_done`. Assurance conversational agent streams end in `done`; review/read verbs have their own contracts. Always check process exit too: early refusal, invalid plan or dry-run can exit without the normal completion event.
+Reading the last `run_end` event works for one-shot `run` only. Other commands end with their own completion event:
 
-Progress is for live display: count only `done`/`failed` completions, retaining child and execution context when step indices repeat.
+- **`testmd run`**: read `test_md_done` for `overall_status`, `duration_s`, `session_id`, and the optional `share_url`. The stream can also contain `run_end` events; these finish individual steps, not the file.
+- **Local `testrun run` suites**: end with `testrun_done`. Suites dispatched to the remote grid then also emit `remote_done`; keep its `status`, `exit`, and `sessions_path` fields.
+- **`generate`**: ends with `generate_done`.
+- **Assurance commands**: conversational agent streams end with `done`. The review and read commands have their own completion contracts.
 
-`testrun run` selects its NDJSON stream when stdin is not a TTY, or with `--agent` *(0.8.21)*. See [Batch runs (testrun)](/docs/kane-cli-testrun/#for-agents-ndjson-events).
+Always check the process exit code too: an early refusal, an invalid plan, or a dry run can exit without the normal completion event.
+
+Progress events are meant for live display. When you count completions, count only `done` and `failed`. Step indices can repeat, so keep track of which child agent and execution each event belongs to.
+
+`testrun run` prints its NDJSON stream when stdin is not a TTY, or when you pass `--agent`. See [Batch runs (testrun)](/docs/kane-cli-testrun/#for-agents-ndjson-events).
 
 ---
 
@@ -180,7 +187,7 @@ If an objective requires user input mid-run, Kane CLI fires `ask_user`:
 ```
 
 <Note>
-`ask_user` is **auto-disabled when stdin is not a TTY**. In CI/CD and AI agent contexts, stdin is never a TTY, so `ask_user` never fires. Write objectives that don't require interactive prompts.
+`ask_user` is **turned off automatically when stdin is not a TTY**. In CI/CD and AI agent contexts, stdin is never a TTY, so `ask_user` never fires. Write objectives that don't require interactive prompts.
 </Note>
 
 If stdin IS a TTY, respond by writing JSON to stdin:

@@ -119,14 +119,14 @@ headless: true
 | `mode` | `"action"` \| `"testing"` | root only | How the agent reacts to auth walls, blocked pages, and error pages. `testing` (default) pushes through so negative-test assertions can run; `action` halts so you can intervene. See [Run mode](/docs/kane-cli-testmd-running/#run-mode). |
 | `url` | string | root only | Start URL for the test's first step. Bare domains are normalized to `https://`. Overridden by the `--url` flag; falls back to the configured `default_url`. See [Default start URL](/docs/kane-cli-configuration/). |
 | `tags` | list or string | root only | Labels for selecting tests in batch runs. Accepts a YAML list, a bracketed inline list (`tags: [smoke, checkout]`), or a bare comma string (`tags: smoke, checkout`). Tags are trimmed, lowercased, and de-duplicated. Shown by `kane-cli testmd list` and the interactive picker; selected with [`testrun --tags`](/docs/kane-cli-testrun/#selecting-tests); recorded in the run's [evidence pack](/docs/kane-cli-evidence/). |
-| `max_steps` | integer | root + per-step | Maximum agent reasoning steps for the run or step. Engine fallback is `30` when neither step config nor CLI supplies a value; CLI default is `50`. |
-| `timeout` | integer (seconds) | root + per-step | Hard kill timer applied per step. No default. |
+| `max_steps` | integer | root + per-step | Maximum number of agent reasoning steps for the run or step. The CLI default is `50`. If neither the step config nor the CLI supplies a value, the engine uses `30`. |
+| `timeout` | integer (seconds) | root + per-step | Time limit for each step; the step is stopped when it runs out. No default. |
 | `global_context` | string (Markdown text) or file path | root + per-step | Standing instructions inlined into the agent's context. See [Variables & Context](/docs/kane-cli-variables-and-context/). |
 | `local_context` | string or file path | root + per-step | Project-scoped guidance. Same shape as `global_context`. |
 | `variables` | object | root + per-step | Named values usable as `{{name}}` in objectives. See [Variables](#variables). |
-| `session_context` | `{ prior_runs: [...] }` | root + per-step | Pre-loaded prior-run context for the agent. |
+| `session_context` | `{ prior_runs: [...] }` | root + per-step | Context from earlier runs, loaded for the agent before the run starts. |
 | `target` | `"chrome"` \| `"cdp"` \| `"ws"` \| `"emulator"` \| `"simulator"` | root only | Where the test runs: a browser transport (`chrome`, the default, `cdp`, or `ws`) or a mobile target (`emulator` or `simulator`, a virtual Android or iOS device, locally on macOS Apple Silicon or on the cloud grid with `testrun run --remote`). See [Mobile Target](#mobile-target). |
-| `app` | string | root only | Mobile only. The app under test: a build path (emulator `.apk`, simulator `.zip`) or an uploaded `APP…` id. Required with a mobile target, rejected with a browser target. On the grid, simulator `.zip` builds are uploaded from this machine during a real run; an existing `APP…` id is also accepted. Dry-run does not upload. |
+| `app` | string | root only | Mobile only. The app under test: a build path (emulator `.apk`, simulator `.zip`) or an uploaded `APP…` id. Required with a mobile target, rejected with a browser target. On the grid, a real run uploads simulator `.zip` builds from your machine; an existing `APP…` id also works. A dry run does not upload anything. |
 | `no_reset` | boolean | root only | Mobile only. Keep the app's existing state between runs instead of resetting it. |
 | `device_name` | string | root only | Mobile only. The default device for this test, as `kane-cli devices list --target <kind>` prints it (add `--remote` for the grid catalog). Overridden by `--device-name`. |
 | `os_version` | string | root only | Mobile only. The device's OS version (`14`, `17.5`). Overridden by `--os-version`. Required alongside `device_name`. |
@@ -154,16 +154,16 @@ no_reset: false              # optional
 ---
 ```
 
-- **`target`**: `emulator` runs on an Android emulator, `simulator` on an iOS simulator. The platform never appears separately, the target implies it.
-- **`app`**: the app under test, required with a mobile target and rejected with a browser one. A build path (emulator `.apk`, simulator `.zip`) or an uploaded app id, `APP` followed by six or more digits. On-device package ids are not accepted.
-- **`no_reset`**: optional. Keep the app's existing state between runs instead of resetting it.
-- **`device_name`** / **`os_version`**: optional per-test defaults for the device, in the vocabulary of `kane-cli devices list --target <kind>` (local) or `kane-cli devices list --target <kind> --remote` (grid catalog). The run flags `--device-name` / `--os-version` override them. A name needs a version.
+- **`target`**: `emulator` runs on an Android emulator, and `simulator` runs on an iOS simulator. You do not set the platform separately; the target determines it.
+- **`app`**: the app under test. It is required with a mobile target and rejected with a browser target. Use a build path (emulator `.apk`, simulator `.zip`) or an uploaded app id, which is `APP` followed by six or more digits. On-device package ids are not accepted.
+- **`no_reset`**: optional. Keeps the app's existing state between runs instead of resetting it.
+- **`device_name`** / **`os_version`**: optional default device for this test. Use the names exactly as `kane-cli devices list --target <kind>` prints them (local), or `kane-cli devices list --target <kind> --remote` (grid catalog). The run flags `--device-name` / `--os-version` override them. If you set a name, also set a version.
 
 <Warning>
-The nested form, `target: {platform, app}`, is not accepted. The parser refuses it and spells out the flat shape above.
+The nested form, `target: {platform, app}`, is not accepted. The parser rejects it and shows the flat form above in its error message.
 </Warning>
 
-Mobile tests run with `kane-cli testmd run` and in batch with [`testrun`](/docs/kane-cli-testrun/#mobile-members). Locally that needs macOS Apple Silicon, and setup is covered in [Mobile Testing](/docs/kane-cli-mobile/). With [`testrun run --remote`](/docs/kane-cli-remote-execution/), the suite runs on a grid emulator or simulator from any machine (simulator members accept a local `.zip` build or an `APP…` id in `app:`).
+Run mobile tests with `kane-cli testmd run`, or in batches with [`testrun`](/docs/kane-cli-testrun/#mobile-members). Running locally requires macOS on Apple Silicon; see [Mobile Testing](/docs/kane-cli-mobile/) for setup. With [`testrun run --remote`](/docs/kane-cli-remote-execution/), the suite runs on a grid emulator or simulator, and you can start it from any machine. Simulator members accept a local `.zip` build or an `APP…` id in `app:`.
 
 ### Root-only vs root-or-per-step
 
@@ -234,7 +234,7 @@ This is the most important concept in `testmd`.
 
 ### Replay
 
-After the first run, each step replays from its cached recording with no AI agent, no LLM cost, and much faster execution. For authorable steps, replay requires **all** of the following (replay-only marked steps are exempt from this authoring decision):
+After the first run, each step replays from its cached recording, with no AI agent, no LLM cost, and much faster execution. An authorable step replays only when **all** of the following are true. (Steps marked replay-only always replay, so these conditions do not apply to them.)
 
 - A recording for that step exists
 - The step's prose is unchanged since the recording
@@ -243,7 +243,7 @@ After the first run, each step replays from its cached recording with no AI agen
 
 ### Cascade
 
-Editing step N **re-authors step N and every authorable step after it**; replay-only marked steps still replay. Each step starts where the previous step left off (URL, login state, open tabs). When step 3 changes, step 4 cannot safely replay against state that no longer exists.
+Editing step N **re-authors step N and every authorable step after it**. Steps marked replay-only still replay. This is because each step starts where the previous step left off (URL, login state, open tabs). If step 3 changes, the state step 4 depends on may be different, so step 4 cannot safely replay from cache.
 
 <Warning>
 A one-line tweak at the top of a 20-step test re-authors all authorable steps on the next run. To minimize re-authoring, edit only the steps you need to change.
@@ -254,11 +254,11 @@ A one-line tweak at the top of a 20-step test re-authors all authorable steps on
 | Action | How |
 |--------|-----|
 | Re-record one step | Edit only that step (steps after it cascade automatically) |
-| Force full re-authoring | Use `--author` flag for one run. Every authorable step authors; replay-only marked steps still replay |
-| Recover from a replay failure | Adaptive healing is on by default; `--no-adaptive-heal` opts out |
+| Force full re-authoring | Pass `--author` for one run. Every authorable step is authored again; steps marked replay-only still replay |
+| Recover from a replay failure | Adaptive healing is on by default; pass `--no-adaptive-heal` to turn it off |
 
 <Warning>
-Preserve output recordings for replay-only marked steps; deleting them cannot force fresh authoring. See [Replay policy and completion](/docs/kane-cli-testmd-running/#replay-policy-and-completion).
+Keep the output recordings for steps marked replay-only. Deleting them does not make those steps author again. See [Replay policy and completion](/docs/kane-cli-testmd-running/#replay-policy-and-completion).
 </Warning>
 
 For replay-only heading markers and balanced structured control flow (`@if`/`@end-if`, `@while`/`@end-while`), see [Replay policy and completion](/docs/kane-cli-testmd-running/#replay-policy-and-completion).
@@ -407,9 +407,9 @@ All [`kane-cli run` flags](/docs/kane-cli-cli-reference/) apply (`--agent`, `--h
 | Flag | Default | Description |
 |------|---------|-------------|
 | `--name <name>` | none | Persist the run under this name. Must match `[a-zA-Z0-9_-]+` |
-| `--on-lock-conflict <mode>` | none | Behavior when another user holds the test's edit lock: `readonly` (replay-only, no upload), `fail` (exit 2), or `wait` (block until released) |
-| `--no-adaptive-heal` | healing enabled | Disable adaptive healing after replay failure |
-| `--author` | off | Re-author authorable steps; replay-only marked steps still replay |
+| `--on-lock-conflict <mode>` | none | What to do when another user holds the test's edit lock: `readonly` (replay only, no upload), `fail` (exit 2), or `wait` (wait until the lock is released) |
+| `--no-adaptive-heal` | healing enabled | Turn off adaptive healing after a replay failure |
+| `--author` | off | Re-author all authorable steps; steps marked replay-only still replay |
 | `--code-language <lang>` | `python` | Code export language: `python` or `javascript` |
 
 <Note>
@@ -467,7 +467,7 @@ kane-cli testmd run ./tests/checkout_test.md \
 | `--headless` | No browser window |
 | `--on-lock-conflict wait` | Block instead of failing if a teammate is editing the same test |
 
-Adaptive healing recovers replay failures by default; `--no-adaptive-heal` opts out.
+By default, adaptive healing recovers from replay failures. Pass `--no-adaptive-heal` to turn it off.
 
 ### Exit Codes
 
@@ -514,13 +514,13 @@ Click "Add to Cart" on the product page.
 Verify the cart icon shows a count of 1 or higher.
 ````
 
-Running this file on a fresh machine takes one author pass: the agent figures out the page and records each step. Re-running it later replays each passed step from cache, taking a fraction of the time. Edit any step's objective and that step (and the steps after it in the same file) author again on the next run; see [Replay vs author](/docs/kane-cli-testmd-running/#replay-vs-author) for the rules.
+The first run of this file authors every step: the agent works out the page and records each step. Later runs replay each passed step from cache in a fraction of the time. If you edit a step's objective, that step and the steps after it in the same file are authored again on the next run. See [Replay vs author](/docs/kane-cli-testmd-running/#replay-vs-author) for the rules.
 
 ---
 
 ## Common Parse Errors
 
-The parser catches these mistakes before any browser launches. Parse errors abort the run **before** any browser launch, auth call, or upload, with exit code `2`:
+The parser catches these mistakes early. A parse error stops the run with exit code `2` **before** any browser launch, auth call, or upload:
 
 | Error Message | Fix |
 |---------------|-----|

@@ -8,7 +8,7 @@ keywords: ['kane cli generate workflow', 'kane cli test case generation', 'gener
 
 import { KaneCliCta } from "/snippets/KaneCliCta.mdx";
 
-`kane-cli generate` is built around a simple loop: **generate → refine → save → run**. Each command is one turn that exits when done; you move between turns with the request id. This page walks the loop end to end. For the feature overview and option reference, see [Generating test cases with AI](/docs/kane-cli-generate/).
+`kane-cli generate` follows a simple loop: **generate → refine → save → run**. Each command is one turn that exits when it finishes, and the request id links the turns together. This page walks through the whole loop. For an overview of the feature and the option reference, see [Generating test cases with AI](/docs/kane-cli-generate/).
 
 ## 1. Generate
 
@@ -18,7 +18,7 @@ Start with a plain-language description of what you want covered:
 kane-cli generate "checkout flow on a shopping site"
 ```
 
-kane-cli generates scenarios and cases and prints the result, ending with a **request id** and the exact commands to refine or save it:
+Kane CLI generates scenarios and cases and prints them. The output ends with a **request id** and the exact commands to refine or save the result:
 
 ```
 ✓ Generated 3 scenarios · 11 cases  (request 23271)
@@ -36,9 +36,9 @@ kane-cli generates scenarios and cases and prints the result, ending with a **re
   Save:    kane-cli generate --save --req 23271
 ```
 
-Keep the request id, every later command uses it.
+Keep the request id. Every later command uses it.
 
-Bound the size with limits when you want a tighter or broader set:
+To get a smaller or larger set, set limits on its size:
 
 ```bash
 kane-cli generate "checkout flow on a shopping site" --scenario-limit 4 --per-scenario-limit 6
@@ -46,17 +46,17 @@ kane-cli generate "checkout flow on a shopping site" --scenario-limit 4 --per-sc
 
 Add `--memory` to reuse relevant existing cases and avoid duplicating coverage you already have.
 
-Attach local files as context (a spec, a screenshot, a PDF or CSV) with `--files`, on a new generation or a refine:
+To give the generator more context, attach local files such as a spec, a screenshot, a PDF, or a CSV with `--files`. This works on a new generation or a refine:
 
 ```bash
 kane-cli generate "cover the flows described in the attached spec" --files ./spec.pdf,./flows.csv
 ```
 
-Up to 10 files, each 50 MB or smaller (documents, images, audio, video); all paths are validated before anything is sent. See [Attaching files for context](/docs/kane-cli-generate/#attaching-files-for-context).
+You can attach up to 10 files, each 50 MB or smaller: documents, images, audio, or video. Kane CLI validates all paths before it sends anything. See [Attaching files for context](/docs/kane-cli-generate/#attaching-files-for-context).
 
 ## 2. Refine
 
-Refinement is a plain-language conversation. Each refine is a fresh command with `--refine --req <id>`:
+You refine a set by describing changes in plain language. Each refine is a separate command with `--refine --req <id>`:
 
 ```bash
 kane-cli generate "also cover an expired card and an out-of-stock item" --refine --req 23271
@@ -67,17 +67,17 @@ Each refine returns the updated result. Repeat until the set looks right.
 
 ### When generation asks a question
 
-Sometimes a turn ends by asking you something instead of finishing, for example, *"Which environment should these target, staging or production?"* This is a normal outcome, not a failure (the command exits `0`). Answer it by refining with your answer:
+Sometimes a turn ends with a question instead of a result, for example *"Which environment should these target, staging or production?"* This is a normal outcome, not a failure, and the command exits `0`. To answer, run a refine with your answer:
 
 ```bash
 kane-cli generate "target staging" --refine --req 23271
 ```
 
-(Driving this from a script or agent? Add `--agent` (or rely on it being auto-on when stdin is not a TTY) and read the answer-needed signal from the NDJSON, then re-invoke the same way.)
+If a script or agent drives the loop, add `--agent`, which also turns on automatically when stdin is not a TTY. Read the signal that an answer is needed from the NDJSON output, then answer with a refine in the same way.
 
 ## 3. Save
 
-When you are happy with the set, save it. `--save` writes the **functional** cases as `_test.md` files:
+When the set looks right, save it. `--save` writes the **functional** cases as `_test.md` files:
 
 ```bash
 kane-cli generate --save --req 23271
@@ -102,7 +102,7 @@ Choose a different location with `--out`, and name the suite with `--name`:
 kane-cli generate --save --req 23271 --out ./tests --name checkout-suite
 ```
 
-Only functional cases are written: non-functional cases (Security, Performance, …) are part of the generated result but are not saved as runnable tests. See [Saving is functional-only](/docs/kane-cli-generate/#saving-is-functional-only).
+Only functional cases are written. Non-functional cases (Security, Performance, and so on) appear in the generated result but are not saved as runnable tests. See [Saving is functional-only](/docs/kane-cli-generate/#saving-is-functional-only).
 
 ## 4. Run
 
@@ -112,11 +112,11 @@ The saved files are ordinary `_test.md` tests. Run any of them with `testmd`:
 kane-cli testmd run .testmuai/tests/checkout-23271/checkout/guest-checkout_test.md
 ```
 
-From here, everything in the [testmd docs](/docs/kane-cli-testmd-running/) applies: replay from cache, edit steps, compose with `@import`, and commit the output to git.
+Everything in the [testmd docs](/docs/kane-cli-testmd-running/) applies from here: replay from cache, edit steps, compose tests with `@import`, and commit the output to git.
 
 ## Automating it (agents / CI)
 
-Pass `--agent` (auto-on when stdin is not a TTY) to get structured NDJSON on stdout instead of the human display, so a script or coding agent can drive the loop:
+Pass `--agent` to get structured NDJSON on stdout instead of the human-readable display, so a script or coding agent can drive the loop. The flag turns on automatically when stdin is not a TTY:
 
 ```bash
 kane-cli generate "checkout flow on a shopping site" --agent
@@ -124,7 +124,7 @@ kane-cli generate "add an expired-card case" --refine --req 23271 --agent
 kane-cli generate --save --req 23271 --agent
 ```
 
-Each command prints one JSON object per line; the final line is the terminal event carrying the request id, the status, and the refine/save commands to run next.
+Each command prints one JSON object per line. The last line is the final event, with the request id, the status, and the refine and save commands to run next.
 
 ## Exit codes
 
@@ -132,11 +132,11 @@ Each command prints one JSON object per line; the final line is the terminal eve
 |---|---|
 | `0` | Turn completed, including a turn that ended with a clarification question |
 | `1` | Generation failed |
-| `2` | Error: authentication / setup / transport, or an invalid combination of flags |
+| `2` | Error: authentication, setup, or transport, or an invalid combination of flags |
 | `3` | Generation stopped or cancelled |
 | `130` | Interrupted (Ctrl-C) |
 
-Invalid flag combinations exit `2` with a message explaining the fix, for example using `--refine` without `--req`, passing a description with `--save`, using `--out` without `--save`, or `--req` without `--refine` or `--save`.
+An invalid flag combination exits `2` with a message that explains the fix. Examples: `--refine` without `--req`, a description with `--save`, `--out` without `--save`, or `--req` without `--refine` or `--save`.
 
 ## Next steps
 

@@ -21,27 +21,27 @@ Use `testrun` when you have a suite of committed tests to run together: nightly 
 
 ## Selecting tests
 
-Members come either from explicit paths (each must end in `_test.md`) or, when no paths are given, from a recursive walk of the current directory. Two filters then apply, in order:
+A suite is made of **members**, one per `_test.md` file. You either list the files as explicit paths (each must end in `_test.md`), or give no paths and kane-cli searches the current directory and its subdirectories. Two filters then narrow the list, in this order:
 
-- **`--match <regex>`**: keep tests whose project-relative path matches the regex. `--match` sees the path as the OS writes it: `tests/app/` on macOS and Linux, `tests\app\` on Windows. Quote the regex with double quotes in cmd.exe; single quotes are literal there.
-- **`--tags <list>`**: keep tests whose [`tags:` frontmatter](/docs/kane-cli-testmd/#yaml-frontmatter) matches **any** of the given tags (case-insensitive). Repeat the flag or pass a comma-separated list; `--tags smoke,checkout` and `--tags smoke --tags checkout` are equivalent.
+- **`--match <regex>`**: keeps tests whose path, relative to the project, matches the regex. The path uses your operating system's separators: `tests/app/` on macOS and Linux, `tests\app\` on Windows. In cmd.exe, wrap the regex in double quotes, because single quotes are treated as literal characters.
+- **`--tags <list>`**: keeps tests whose [`tags:` frontmatter](/docs/kane-cli-testmd/#yaml-frontmatter) contains **any** of the given tags. Matching ignores case. You can repeat the flag or pass a comma-separated list: `--tags smoke,checkout` and `--tags smoke --tags checkout` select the same tests.
 
-Duplicates are removed and the final list runs in a stable order.
+kane-cli removes duplicates and runs the final list in a stable, repeatable order.
 
 ```bash
 kane-cli testrun run --match 'tests/e2e/.*' --tags smoke
 ```
 
 <Note>
-A positional path must be a `_test.md` file. A directory such as `tests/app/` is refused (`not a *_test.md file`); to run every test in a directory, select it with `--match '^tests/app/'`.
+Each path you pass must be a `_test.md` file. A directory such as `tests/app/` is refused with `not a *_test.md file`. To run every test in a directory, select it with `--match '^tests/app/'` instead.
 </Note>
 
 ## Preflight
 
-Before anything runs, every member is checked:
+Before anything runs, kane-cli checks every member. This check is called **preflight**:
 
-- *(0.8.4)* **It need not be authored**: a member with no recording classifies as an **author** member. The agent authors it during the run, and afterwards the authored and replayed evidence consolidates into one published execution (best-effort: when consolidation can't complete, the evidence stays split rather than lost). Before 0.8.4, unauthored members failed preflight (`missing_meta` / `not_authored`).
-- **All members must belong to one org and one project**: a testrun is one execution in Test Manager, so it can't span projects.
+- **A member does not have to be authored yet.** A member with no recording runs as an **author** member: the agent authors it during the run. Afterwards, the authored and replayed evidence is combined into one published execution. Combining is best-effort: if it cannot complete, the evidence stays split into separate parts rather than being lost.
+- **All members must belong to one org and one project.** A testrun is a single execution in Test Manager, so it cannot span projects.
 
 A member can fail preflight for these reasons:
 
@@ -50,7 +50,7 @@ A member can fail preflight for these reasons:
 | `org_mismatch` | Belongs to a different organisation than the rest | Check with `kane-cli testmd status <path>` |
 | `project_mismatch` | Belongs to a different project than the rest | Check with `kane-cli testmd status <path>`; run project-by-project |
 
-If any member fails preflight, the plan is invalid and **nothing runs** (exit `2`). The offenders print to stderr:
+If any member fails preflight, the plan is invalid and **nothing runs** (exit `2`). The failing members are printed to stderr:
 
 ```
 error: plan invalid — 2 offending test(s):
@@ -58,7 +58,7 @@ error: plan invalid — 2 offending test(s):
   tests/other_project_test.md: project_mismatch
 ```
 
-A member whose authored steps reference a `{{name}}` with no value passes preflight. kane-cli prints a warning receipt (every such name across the members, each with the test files and steps that use it) and the run types the name as written unless a step sets it first:
+A member whose authored steps use a `{{name}}` that has no value still passes preflight. kane-cli prints a warning that lists every such name across the members, with the test files and steps that use it. During the run, the name is typed literally as written, unless an earlier step sets its value first:
 
 ```
 warning: 2 variables have no value
@@ -73,14 +73,14 @@ warning: 2 variables have no value
   A step that sets a name first binds it; anything else is typed as written. Fill the values to bind them.
 ```
 
-`testrun run` has no `--variables` flag: fill the pool file or the member's own `variables:` frontmatter. In agent mode (stdin not a TTY, or `--agent` on 0.8.21+) the same content arrives as one `warning` event with `code: "unresolved_variables"` right after `testrun_plan`, whose members carry their rows. See [Unresolved variables](/docs/kane-cli-modes/#unresolved-variables) for the shape.
+`testrun run` has no `--variables` flag. To supply values, fill the shared variables file or the member's own `variables:` frontmatter. In agent mode (stdin is not a TTY, or you pass `--agent`), the same information arrives as one `warning` event with `code: "unresolved_variables"`, right after the `testrun_plan` event. Each member listed in `testrun_plan` also carries its own rows. See [Unresolved variables](/docs/kane-cli-modes/#unresolved-variables) for the event shape.
 
 ## Mobile members
 
-A `_test.md` with a mobile [`target:`](/docs/kane-cli-testmd/#mobile-target) (`emulator` / `simulator`) is a normal member *(0.8.7)*:
+A `_test.md` with a mobile [`target:`](/docs/kane-cli-testmd/#mobile-target) (`emulator` / `simulator`) runs as a normal member:
 
-- **Locally**, the suite drives the emulators and simulators on this machine, so the host must be macOS Apple Silicon with the [mobile setup](/docs/kane-cli-mobile/#setup) done. Pick the device with `--device-name` / `--os-version` as `kane-cli devices list --target emulator|simulator` prints it, or set `device_name:` / `os_version:` in the file.
-- **On the cloud grid** (`--remote`), the suite runs on a virtual device on a HyperExecute macOS host, so it works **from any machine**: Linux, Windows, or a Mac with no Xcode or Android Studio. Pick the device from `kane-cli devices list --target emulator|simulator --remote`. One grid job runs one platform (emulator members on one Android version, simulator members on one HyperExecute pool), and a member's local build is uploaded from your machine before dispatch and handed to the grid as an `APP…` id. Everything else is in [Remote Runs on the Cloud Grid](/docs/kane-cli-remote-execution/).
+- **Locally**, the suite drives the emulators and simulators on your machine. The machine must be macOS on Apple Silicon, with the [mobile setup](/docs/kane-cli-mobile/#setup) complete. Choose the device with `--device-name` / `--os-version`, using the values exactly as `kane-cli devices list --target emulator|simulator` prints them, or set `device_name:` / `os_version:` in the file.
+- **On the cloud grid** (`--remote`), the suite runs on a virtual device on a HyperExecute macOS host, so you can start it **from any machine**: Linux, Windows, or a Mac without Xcode or Android Studio. Choose the device from `kane-cli devices list --target emulator|simulator --remote`. One grid job runs one platform: emulator members on one Android version, or simulator members on one HyperExecute pool. If a member uses a local app build, kane-cli uploads it from your machine before the job starts and passes it to the grid as an `APP…` id. For everything else, see [Remote Runs on the Cloud Grid](/docs/kane-cli-remote-execution/).
 
 ```bash
 kane-cli testrun run --match '^tests/app/' --device-name "Pixel 7 API 35" --os-version 15            # local emulators
@@ -92,46 +92,46 @@ kane-cli testrun run --match '^tests/app/' --remote --device-name "Pixel 7" --os
 | Flag | Description | Default |
 |---|---|---|
 | `--match <regex>` | Filter candidates by project-relative path regex | none |
-| `--tags <list>` | ANY-match on frontmatter tags (repeatable or comma-separated) | none |
+| `--tags <list>` | Keep tests whose frontmatter tags match any listed tag (repeatable or comma-separated) | none |
 | `--parallel <n>` | Worker count | `1` |
 | `--on-failure <mode>` | `continue` \| `fail-fast` | `continue` |
 | `--name <label>` | Run title | derived from the selection |
-| `--dry-run` | Plan + validate only, execute nothing | off |
-| `--agent` | *(0.8.21)* NDJSON on stdout even in a terminal: the same stream a non-TTY stdin selects | off |
-| `--no-adaptive-heal` | Disable default adaptive healing after replay failure | healing enabled |
+| `--dry-run` | Build and validate the plan only; run nothing | off |
+| `--agent` | Print NDJSON on stdout even in a terminal. This is the same stream you get when stdin is not a TTY | off |
+| `--no-adaptive-heal` | Turn off adaptive healing after a replay failure | healing enabled |
 | `--bug-detection <mode>` | `off` \| `stop` \| `continue`. See [Configuration](/docs/kane-cli-configuration/#bug-detection) | config value |
 | `--headless` | Run Chrome without a visible window | off |
 | `--remote [backend]` | Dispatch the suite to the cloud grid instead of local Chrome or local devices (default backend: `hyper`). Needs `kane-cli plugin install remote-execution`. See [Remote Runs on the Cloud Grid](/docs/kane-cli-remote-execution/) | off |
 | `--device-name <name>` | Device for the suite's mobile members: as `kane-cli devices list` prints it locally, or a grid catalog device with `--remote` | member's `device_name:` |
 | `--os-version <version>` | OS version for the mobile members (`14`, `17.5`). Alone, it matches any device on that version | member's `os_version:` |
-| `--username <user>` / `--access-key <key>` | Basic auth (skips OAuth) | none |
+| `--username <user>` / `--access-key <key>` | Basic auth instead of OAuth | none |
 
-Each desktop worker gets its **own isolated Chrome** with a fresh temporary profile, so parallel members never share cookies, logins, or tabs, and never fight over your real browser profile.
+Each desktop worker gets its **own isolated Chrome** with a fresh temporary profile. Parallel members never share cookies, logins, or tabs, and they never touch your own browser profile.
 
 `--on-failure` controls what a failed member does to the rest of the suite:
 
-- **`continue`** (default): every member runs; failures are collected in the summary.
-- **`fail-fast`**: a failure stops *new* members from starting; members already in flight finish normally.
+- **`continue`** (default): every member runs, and failures are collected in the summary.
+- **`fail-fast`**: after a failure, no *new* members start. Members that are already running finish normally.
 
-**Ctrl-C is graceful**: no new members start, in-flight members finish, the evidence pack still seals, and the run exits `3`. Members that never started are reported as skipped. The pack accounts for every planned member, including skipped and broken ones.
+**Ctrl-C stops the run gracefully.** No new members start, running members finish, the evidence pack is still sealed, and the run exits `3`. Members that never started are reported as skipped. The pack lists every planned member, including skipped and broken ones.
 
 ## Dry runs
 
-`--dry-run` prints exactly the plan the real run would execute (the selected members, any preflight failures, and the parallelism), then exits without launching anything:
+`--dry-run` prints the exact plan a real run would execute (the selected members, any preflight failures, and the parallelism), then exits without launching anything:
 
 ```bash
 kane-cli testrun run --tags smoke --parallel 4 --dry-run
 ```
 
-Exit `0` means the plan is valid; exit `2` reports planning refusals. This does not prove runtime readiness: local dry-run returns before runtime authentication and browser/device startup. Remote dry-run also validates the grid catalog but does not upload apps or dispatch a job. A real run can still fail after a valid plan. A dry run prints the variable warning too, so you can fill values before the real run.
+Exit `0` means the plan is valid. Exit `2` means the plan was refused. A valid plan does not guarantee the run will work: a local dry run stops before authentication and before any browser or device starts. A remote dry run also checks the grid catalog, but it does not upload apps or start a job. A real run can still fail after a valid plan. A dry run also prints the variable warning, so you can fill in missing values before the real run.
 
 ## Reading results
 
-At the end of a run you get a suite summary (totals for passed / failed / broken / skipped members and the overall duration) plus one sealed evidence pack covering every member, created directly in `.testmuai/evidence/`.
+At the end of a run, you get a suite summary (counts of passed, failed, broken, and skipped members, plus the total duration) and one sealed evidence pack covering every member. The pack is written to `.testmuai/evidence/`.
 
-In a terminal, kane-cli offers to open the pack in the [evidence viewer](/docs/kane-cli-evidence-viewing/); in CI it prints the `evidence serve` hint instead. The pack is also published to your project's execution history in Test Manager.
+In a terminal, kane-cli offers to open the pack in the [evidence viewer](/docs/kane-cli-evidence-viewing/). In CI, it prints the `evidence serve` hint instead. The pack is also published to your project's execution history in Test Manager.
 
-`--name` sets the run's title, useful for telling nightly runs apart in the dashboard.
+`--name` sets the run's title, which helps you tell nightly runs apart in the dashboard.
 
 ## Exit codes
 
@@ -144,7 +144,7 @@ In a terminal, kane-cli offers to open the pack in the [evidence viewer](/docs/k
 
 ## Remote runs
 
-Add `--remote` and the same selection runs as one **HyperExecute** job: Chrome on a grid macOS runner for web suites, a grid emulator or simulator for mobile suites. Each member runs as its own headless `testmd run` on the grid, `--parallel N` spreads the members across N grid runners, and the job link, the recordings, and the evidence pack come back to your project. Requires a <BrandName /> plan with HyperExecute (macOS runners) and the `remote-execution` plugin. Nothing else is needed locally, not even Chrome.
+With `--remote`, the same selection runs as one **HyperExecute** job. Web suites run in Chrome on a grid macOS runner, and mobile suites run on a grid emulator or simulator. Each member runs as its own headless `testmd run` on the grid, and `--parallel N` spreads the members across N grid runners. The job link, the recordings, and the evidence pack come back to your project. You need a <BrandName /> plan with HyperExecute (macOS runners) and the `remote-execution` plugin. Nothing else is needed on your machine, not even Chrome.
 
 ```bash
 kane-cli plugin install remote-execution
@@ -153,7 +153,7 @@ kane-cli testrun run --tags smoke --remote --parallel 4       # a web suite on 4
 kane-cli testrun run --match '^tests/ios/' --remote --device-name "iPhone 15" --os-version 17.5
 ```
 
-`--dry-run` runs the remote preflight too, so the selection is validated against the grid before any job exists. A web selection and a device selection cannot share one job, so run them as two suites. This is different from `--ws-endpoint`, which attaches a remote browser to a run that still executes on your machine. The full guide (prerequisites, how a job runs, web suites, device catalog, app rules, what one job can hold, and the events) is [Remote Runs on the Cloud Grid](/docs/kane-cli-remote-execution/).
+`--dry-run` also runs the remote preflight, so the selection is checked against the grid before any job is created. Web tests and device tests cannot share one job, so run them as two separate suites. `--remote` is different from `--ws-endpoint`, which connects a remote browser to a run that still executes on your machine. For the full guide (prerequisites, how a job runs, web suites, the device catalog, app rules, what one job can hold, and the events), see [Remote Runs on the Cloud Grid](/docs/kane-cli-remote-execution/).
 
 ## Using testrun in CI
 
@@ -161,19 +161,19 @@ kane-cli testrun run --match '^tests/ios/' --remote --device-name "iPhone 15" --
 kane-cli testrun run --tags smoke --parallel 4 --headless --on-failure fail-fast
 ```
 
-The exit code gates the pipeline, and `.testmuai/evidence/*.evidence` is a natural CI artifact: a single file per suite run that anyone can drop into the viewer. With `--remote`, the runner needs no Chrome or mobile tooling at all. Full recipes: [CI/CD](/docs/kane-cli-cicd/).
+The exit code passes or fails the pipeline. Save `.testmuai/evidence/*.evidence` as a CI artifact: it is a single file per suite run that anyone can open in the viewer. With `--remote`, the CI runner needs no Chrome or mobile tooling at all. For complete recipes, see [CI/CD](/docs/kane-cli-cicd/).
 
 ## For agents: NDJSON events
 
-In agent / non-TTY mode, `testrun run` emits its own typed NDJSON events on stdout: `testrun_plan`, `testrun_start`, `testrun_member_start`, `testrun_member_end`, `testrun_investigations_wait`, `testrun_evidence_ingest`, `testrun_summary`, and finally the terminal `testrun_done`. Stop parsing at `testrun_done`. A `--remote` run wraps that stream in `remote_*` events (`remote_start`, `remote_device`, `remote_dispatched`, `remote_error`, `remote_done`). See [Remote Runs](/docs/kane-cli-remote-execution/#for-agents-ndjson-events). The full event schema ships with the [kane-cli agent skill](https://testmuai.com/kane-cli/agents.md).
+In agent mode (or whenever stdin is not a TTY), `testrun run` writes its own typed NDJSON events to stdout: `testrun_plan`, `testrun_start`, `testrun_member_start`, `testrun_member_end`, `testrun_investigations_wait`, `testrun_evidence_ingest`, `testrun_summary`, and finally `testrun_done`, which ends the stream. Stop parsing at `testrun_done`. A `--remote` run wraps that stream in `remote_*` events (`remote_start`, `remote_device`, `remote_dispatched`, `remote_error`, `remote_done`). See [Remote Runs](/docs/kane-cli-remote-execution/#for-agents-ndjson-events). The full event schema ships with the [kane-cli agent skill](https://testmuai.com/kane-cli/agents.md).
 
 ## Execution constraints
 
-Local suites containing any mobile member require `--parallel 1`; larger values are refused. Isolated Chrome workers apply to desktop members only. Remote suites support grid concurrency via `--parallel N`.
+A local suite that contains any mobile member must use `--parallel 1`; larger values are refused. Isolated Chrome workers apply to desktop members only. Remote suites can run members in parallel on the grid with `--parallel N`.
 
-Healing is enabled by default (three shrinking replay windows, then re-authoring of authorable steps). `--no-adaptive-heal` disables it. Retired `--retry`/`--retry-count` only print a notice and have no effect. Replay-only recorded steps retain their recordings even during healing.
+Adaptive healing is on by default. When a replay fails, the runner retries smaller and smaller replay windows (up to three), then re-authors the authorable steps. `--no-adaptive-heal` turns this off. The `--retry` and `--retry-count` flags are accepted but have no effect: they only print a notice. Adaptive healing handles failed replays. Steps marked replay-only keep their recordings even during healing.
 
-NDJSON selection uses stdin, not stdout: run `kane-cli testrun run <paths> < /dev/null` for automation launched from a terminal. Dry-run validates a plan, not runtime authentication or browser/device readiness. Always observe process exit, including paths without a normal completion event.
+kane-cli decides whether to print NDJSON by looking at stdin, not stdout. For automation started from a terminal, run `kane-cli testrun run <paths> < /dev/null`. A dry run validates the plan only, not authentication or browser and device readiness. Always check the process exit code, because some failures end without a normal completion event.
 
 ## Next steps
 

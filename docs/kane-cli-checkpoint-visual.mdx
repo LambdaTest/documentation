@@ -8,7 +8,7 @@ keywords: ['visual assertion', 'screenshot assertion', 'kane cli', 'kaneai', 'te
 
 import { KaneCliCta } from "/snippets/KaneCliCta.mdx";
 
-Visual assertions verify what's visible on screen by analyzing the current screenshot. The default assertion mode is `dom`, with vision fallback. Set `--assertion-mode visual` to request visual assertions explicitly.
+Visual assertions check what is visible on screen by analyzing a screenshot of the current page. The default assertion mode is `dom`, which falls back to vision when needed. To request visual assertions explicitly, set `--assertion-mode visual`.
 
 ## When It's Used
 
@@ -46,7 +46,7 @@ If the login button is visible then click it, else click Sign Up
 
 1. KaneAI takes a screenshot of the current page
 2. The AI model analyzes the screenshot to find the requested information
-3. The extracted value is compared against the expected value using the specified operator
+3. KaneAI compares the extracted value with the expected value using the operator you specified
 
 ## Best Practices
 

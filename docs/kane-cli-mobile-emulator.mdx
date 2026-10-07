@@ -6,10 +6,10 @@ keywords: ['kane cli android emulator', 'android emulator setup', 'arm64-v8a sys
 "og:description": "Set up Google's Android Emulator so Kane CLI can run mobile tests on a virtual Android device on macOS Apple Silicon: install Android Studio and add an AVD."
 ---
 
-Set up Google's Android Emulator once, and Kane CLI can run mobile tests against it locally. This guide targets **macOS on Apple Silicon (arm64)**, the only host that can run the emulator locally. See [Mobile Testing](/docs/kane-cli-mobile/) for the full picture.
+After a one-time setup of Google's Android Emulator, Kane CLI can run mobile tests on it locally. This guide is for **macOS on Apple Silicon (arm64)**, the only host that can run the emulator locally. For an overview of mobile testing, see [Mobile Testing](/docs/kane-cli-mobile/).
 
 <Tip>
-**Prefer not to set up a local device?** `kane-cli testrun run … --remote` runs the same mobile tests on a virtual device on a HyperExecute macOS host, from any machine and with none of the steps below. See [Remote Runs on the Cloud Grid](/docs/kane-cli-remote-execution/).
+**Prefer not to set up a local device?** `kane-cli testrun run … --remote` runs the same mobile tests on a virtual device on a HyperExecute macOS host. It works from any machine and skips every step below. See [Remote Runs on the Cloud Grid](/docs/kane-cli-remote-execution/).
 </Tip>
 
 <Warning>
@@ -17,7 +17,7 @@ On Apple Silicon, always use an **`arm64-v8a`** system image. The x86 and x86_64
 </Warning>
 
 <Note>
-The exact Android API levels and device profiles in the supported matrix are pinned by the product team. The values shown below, API 35 and Pixel, are current, working examples. Confirm the officially supported set before you rely on a specific one.
+The values on this page, API 35 and the Pixel device profile, are working examples, not the full list of supported Android API levels and device profiles. Confirm that a specific one is officially supported before you depend on it.
 </Note>
 
 ## 1. Install Android Studio
@@ -36,7 +36,7 @@ sdkmanager "system-images;android-35;google_apis;arm64-v8a"
 
 ## 3. Create a Virtual Device
 
-Kane CLI runs against an existing AVD. It does not create one for you. Create an Android Virtual Device from that image. In Android Studio, use **Device Manager → Create Device** and pick the arm64 image. From the command line:
+Kane CLI runs against an Android Virtual Device (AVD) that already exists. It does not create one for you, so create an AVD from the image you installed. In Android Studio, use **Device Manager → Create Device** and pick the arm64 image. From the command line:
 
 ```bash
 avdmanager create avd -n kane_pixel \
@@ -46,9 +46,9 @@ avdmanager create avd -n kane_pixel \
 
 ## 4. Point Kane CLI at a Non-Default SDK Location
 
-This step is only needed if your SDK is not in the default location.
+You need this step only if your SDK is not in the default location.
 
-Kane CLI uses its own managed `adb`, so you do not need `platform-tools` or `adb` on your `PATH`. It only needs to find the **emulator binary and your AVDs**, which it looks for in the default SDK location `~/Library/Android/sdk`. If your SDK lives somewhere else, point Kane CLI at it:
+Kane CLI brings its own managed `adb`, so `platform-tools` and `adb` do not need to be on your `PATH`. Kane CLI only has to find the **emulator binary and your AVDs**. It looks for them in the default SDK location, `~/Library/Android/sdk`. If your SDK is somewhere else, point Kane CLI to it:
 
 ```bash
 export ANDROID_HOME="/path/to/your/Android/sdk"   # only if not the default location
@@ -65,7 +65,7 @@ kane-cli login
 kane-cli doctor --target emulator --install
 ```
 
-You do not need to boot the emulator or run `adb` yourself. Kane CLI discovers the AVD, boots it, installs your app, and runs the test.
+You never boot the emulator or run `adb` yourself. Kane CLI finds the AVD, boots it, installs your app, and runs the test.
 
 ## Ready Check
 
@@ -76,7 +76,7 @@ kane-cli doctor --target emulator          # required checks, each with a fix if
 kane-cli devices list --target emulator    # the emulators Kane CLI can run against
 ```
 
-When the Android checks pass and your AVD is listed, your emulator setup is complete. Address it on a run with `--device-name "<name>" --os-version <v>` as the list prints them.
+When the Android checks pass and your AVD appears in the list, setup is complete. To use the AVD in a run, pass `--device-name "<name>" --os-version <v>` with the values exactly as the list prints them.
 
 ## Run a Test
 

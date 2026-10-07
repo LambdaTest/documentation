@@ -8,47 +8,47 @@ keywords: ['evidence format', 'open test evidence format', 'evidence cli', 'L0 L
 
 import { KaneCliCta } from "/snippets/KaneCliCta.mdx";
 
-The `.evidence` pack is not a kane-cli-only file. It is an **open, framework-agnostic format** with its own specification, validator, and Apache-2.0 licensed tooling, published at [github.com/LambdaTest/evidence-cli](https://github.com/LambdaTest/evidence-cli).
+The `.evidence` pack is not specific to Kane CLI. It is an **open format that works with any test framework**, with its own specification, validator, and Apache-2.0 licensed tooling, published at [github.com/LambdaTest/evidence-cli](https://github.com/LambdaTest/evidence-cli).
 
-One shape, whatever made it: a browser agent, a Playwright suite, a Jest run, or an API check. A pack is readable by a CI dashboard, an auditor, or a human without knowing the framework that wrote it.
+A pack has the same shape whatever produced it: a browser agent, a Playwright suite, a Jest run, or an API check. A CI dashboard, an auditor, or a person can read it without knowing which framework wrote it.
 
 ## Who writes what
 
-This is the part worth understanding, because it explains what the format guarantees and what it does not.
+Knowing who writes each part explains what the format guarantees and what it does not.
 
 | Part of the pack | Written by |
 |---|---|
 | `run.yaml`, each `result.yaml`, the test definition, the per-step folders and screenshots, and the console, network and runner logs | kane-cli |
 | The derived totals, each definition hash, the run-level failure index, and the seal | `evidence finalize` |
 
-The tooling in `evidence-cli` **captures nothing**. It drives no browser and executes no tests. It validates a pack, derives what can be derived, and seals it. A screenshot is in your pack because kane-cli put it there.
+The `evidence-cli` tooling **captures nothing**. It does not drive a browser or run tests. It validates a pack, computes the values that can be derived from its contents, and seals it. A screenshot is in your pack because Kane CLI put it there.
 
-That is the point of the split: the container is open, so anything can produce a pack, and any tool can read one.
+This split is deliberate. Because the container is open, any tool can produce a pack and any tool can read one.
 
 ## Profiles
 
-A profile is a rung on one contract. `L1` adds requirements to `L0` and never rewrites it.
+Profiles are levels of a single contract. `L1` adds requirements on top of `L0` and never changes what `L0` requires.
 
 | Profile | Requires |
 |---|---|
 | **L0** | The minimal core: a top-level `run.yaml`, and per test a definition file plus a `result.yaml`. |
-| **L1** | All of L0, plus, once the run is finalized, the captured artifact layer: declared logs, the `steps/` layer, a `coverage/` directory, and the run-level failure index. Video is optional. Before finalize, L1 checks only the shape of what is already there. |
+| **L1** | All of L0, plus, once the run is finalized, the captured artifacts: declared logs, the `steps/` directories, a `coverage/` directory, and the run-level failure index. Video is optional. Before the run is finalized, L1 checks only the shape of what is already present. |
 
-The definition file is **opaque**. The format references and hashes it, and never parses it. It can be a `test.md` from kane-cli, a `login.spec.ts` from Playwright, or anything else.
+The format treats the definition file as **opaque**: it references and hashes the file but never parses it. The file can be a `test.md` from Kane CLI, a `login.spec.ts` from Playwright, or anything else.
 
 <Note>
-The contract version and the profile are different axes. The version, currently `0.1`, is the meaning of the fields. Adding a profile is additive and never changes it. Only a breaking change to an existing meaning bumps the version.
+The contract version and the profile are independent. The version, `0.1`, defines what the fields mean. Adding a profile only adds requirements and does not change the version. The version changes only when the meaning of an existing field changes in a breaking way.
 </Note>
 
 ## What sealing does and does not give you
 
-`finalize` rolls up the totals, writes each definition's content hash, sets the run to `finalized`, and seals the directory into the zip. The seal replaces the live directory in place, atomically, so a complete copy exists at every instant.
+`finalize` adds up the totals, writes the content hash of each definition, sets the run to `finalized`, and seals the directory into the zip. Sealing replaces the live directory in a single atomic step, so a complete copy exists at every moment.
 
-The recorded definition hash is an integrity check on the thing that was tested: `validate` fails a finalized pack whose definition no longer hashes to the value recorded at seal time. Packs are **not signed**, so this says nothing about who produced the pack.
+The recorded definition hash protects the integrity of what was tested: `validate` fails a finalized pack if its definition does not match the hash recorded when the pack was sealed. Packs are **not signed**, so the hash says nothing about who produced the pack.
 
 ## Using the format directly
 
-If you want to produce or read packs outside kane-cli, the tooling is on npm:
+To produce or read packs outside Kane CLI, install the tooling from npm:
 
 ```bash
 npm install -g @testmuai/evidence-cli
@@ -59,9 +59,14 @@ evidence validate my-run.evidence --profile L0
 evidence finalize my-run.evidence/
 ```
 
-The standalone CLI ships `validate`, `finalize`, and `merge`. Exit codes differ by command: `validate` returns `0` valid, `1` invalid, `2` usage error, and `merge` returns `0` merged, `1` policy abort, `2` usage error. It reads its config from `~/.testmuai/evidence/config.json` by default, overridable with `--config` or the `EVIDENCE_CONFIG` environment variable, and the active profile resolves from the `--profile` flag, then the config, then the built-in default of `L0`.
+The standalone CLI provides `validate`, `finalize`, and `merge`. Exit codes differ by command:
 
-It is also a library, so `validate` and `finalize` can be called in process:
+- `validate`: `0` valid, `1` invalid, `2` usage error.
+- `merge`: `0` merged, `1` policy abort, `2` usage error.
+
+By default it reads its config from `~/.testmuai/evidence/config.json`. Override the location with `--config` or the `EVIDENCE_CONFIG` environment variable. The active profile comes from the `--profile` flag first, then the config, then the built-in default of `L0`.
+
+The package is also a library, so you can call `validate` and `finalize` from your own code:
 
 ```ts
 import { validate, finalize } from "@testmuai/evidence-cli";

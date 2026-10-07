@@ -8,11 +8,11 @@ keywords: ['api calls', 'kane cli', 'http request', 'seed data', 'testmu ai']
 
 import { KaneCliCta } from "/snippets/KaneCliCta.mdx";
 
-Objectives can have the agent **make an API call directly**, not just observe the requests a page makes. This is useful for seeding data before a flow, hitting a backend to set up state, or checking a service, then asserting on or reusing the response.
+An objective can tell the agent to **make an API call itself**, in addition to observing the requests a page makes. Use this to seed data before a flow, call a backend to set up state, or check a service, and then assert on or reuse the response.
 
 ## Making a call
 
-Phrase an explicit HTTP request and name its response with "save the response as …":
+Write the HTTP request explicitly, and name its response with "save the response as …":
 
 ```
 Call POST https://api.example.com/orders with body {"item": "sku_42", "qty": 1}, save the response as order
@@ -20,7 +20,7 @@ Hit GET https://api.example.com/orders/123, save the response as fetched
 Call DELETE https://api.example.com/orders/123
 ```
 
-A pasted `curl` works too and is kept exactly as written: method, headers, body, and auth:
+You can also paste a `curl` command. The agent keeps it exactly as written, including method, headers, body, and auth:
 
 ```
 curl -X POST https://api.example.com/login -H 'Content-Type: application/json' -d '{"u":"a","p":"b"}', save the response as login
@@ -28,7 +28,7 @@ curl -X POST https://api.example.com/login -H 'Content-Type: application/json' -
 
 ## Using the response
 
-Use the response in plain English. The `{{name}}` form is reserved for global variables and secrets (see [Variables and Context](/docs/kane-cli-variables-and-context/)); a value the run produces is never written that way.
+Refer to the response in plain English. The `{{name}}` syntax is reserved for global variables and secrets (see [Variables and Context](/docs/kane-cli-variables-and-context/)). Never use it for a value the run produces.
 
 | To use | Say |
 |---|---|
@@ -37,9 +37,9 @@ Use the response in plain English. The `{{name}}` form is reserved for global va
 | the whole body | `store the response body as 'order_body'` |
 | a value later in the run | `the stored order_id value` |
 
-When one objective makes several calls, name each response (`save the response as order`) and say which one you mean: `assert the order response status is 201`.
+When one objective makes several calls, name each response (`save the response as order`) and say which one you mean, as in `assert the order response status is 201`.
 
-Assert on it, or feed it into later actions. API calls and browser actions mix freely in one objective:
+You can assert on a response or use it in later actions. API calls and browser actions can be mixed freely in one objective:
 
 ```
 Call POST https://api.example.com/login with body {"u": "{{user}}", "p": "{{password}}"}, save the response as login,
@@ -55,7 +55,7 @@ then open https://app.example.com/orders and verify an order for "sku_42" is vis
 
 ## Tokens and secrets
 
-Put any API token or credential in a variable marked `secret: true` (see [Variables and Context](/docs/kane-cli-variables-and-context/)) so it is masked in logs and never stored in plain text:
+Store every API token or credential in a variable marked `secret: true` (see [Variables and Context](/docs/kane-cli-variables-and-context/)). The value is then masked in logs and never stored in plain text:
 
 ```
 curl -X DELETE https://api.example.com/records/42 -H "Authorization: Bearer {{api_token}}"
@@ -63,11 +63,11 @@ curl -X DELETE https://api.example.com/records/42 -H "Authorization: Bearer {{ap
 
 ## Make a call vs. observe page traffic
 
-These are two different things:
+These are two different features:
 
-- **Make a call (this page)**: *you* tell the agent to send a request: seed a record, call a backend, set up state.
-- **[Network assertions](/docs/kane-cli-checkpoint-devtools-network/)**: *observe* the requests the page itself makes during a UI flow (status codes, bodies, timing).
+- **Make a call (this page)**: *you* tell the agent to send a request, for example to seed a record, call a backend, or set up state.
+- **[Network assertions](/docs/kane-cli-checkpoint-devtools-network/)**: *observe* the requests the page makes on its own during a UI flow, such as status codes, bodies, and timing.
 
-They compose: seed state with a direct call, drive the UI, then assert on the page's own network traffic.
+They work together: seed state with a direct call, drive the UI, then assert on the page's own network traffic.
 
 <KaneCliCta />

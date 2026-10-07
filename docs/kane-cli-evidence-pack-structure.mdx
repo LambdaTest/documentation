@@ -8,7 +8,7 @@ keywords: ['evidence pack structure', 'run.yaml', 'result.yaml', 'evidence pack 
 
 import { KaneCliCta } from "/snippets/KaneCliCta.mdx";
 
-A `.evidence` file is a standard zip. `unzip -l <pack>` lists it, and `unzip -p <pack> <entry>` prints one file without extracting the whole pack.
+A `.evidence` file is an ordinary zip file. Run `unzip -l <pack>` to list its contents, or `unzip -p <pack> <entry>` to print a single file without extracting the rest.
 
 ## The layout
 
@@ -42,48 +42,48 @@ A `.evidence` file is a standard zip. `unzip -l <pack>` lists it, and `unzip -p 
         └── v16-trajectory/           # Per-run planning summaries and diagrams
 ```
 
-A `testrun` pack has one `tests/<test-id>/` directory per member, all under the same root.
+In a `testrun` pack, each test in the suite (each member) gets its own `tests/<test-id>/` directory under the same root.
 
-## The load-bearing files
+## The required files
 
-Three files are load-bearing at **L0**, the minimal profile.
+A validation profile sets which files a pack must contain. **L0** is the minimal profile, and it requires three files.
 
 | File | Role |
 |---|---|
-| `run.yaml` | The manifest anchor. A directory or zip **is a pack** if and only if it has a top-level `run.yaml`. Holds run identity, lifecycle status, and the derived totals. Being a pack is not the same as passing validation, see [Validating packs](/docs/kane-cli-evidence-validate/). |
-| `tests/<id>/test.md` | The test definition, that is, what was asked of the agent. It is **opaque**: the format references and hashes it, and never parses it. |
-| `tests/<id>/result.yaml` | The structured per-step outcomes for that test. |
+| `run.yaml` | The run manifest, which anchors the pack. A directory or zip **is a pack** only if it has a `run.yaml` at the top level. It holds the run's identity, its lifecycle status, and the totals derived from the results. Being a pack does not mean the pack passes validation. See [Validating packs](/docs/kane-cli-evidence-validate/). |
+| `tests/<id>/test.md` | The test definition: what the agent was asked to do. The format treats it as **opaque**. It references and hashes the file but never parses it. |
+| `tests/<id>/result.yaml` | The structured outcome of each step in that test. |
 
-At **L1**, the profile a kane-cli pack validates against, four more artifacts are required once the run is finalized: each test's `logs/` (with its `meta.yaml`), each test's `steps/` directory, a global `coverage/` directory, and the pack-root `failure.yaml`.
+Kane CLI packs validate against **L1**. Once the run is finalized, L1 requires four more artifacts: each test's `logs/` directory (with its `meta.yaml`), each test's `steps/` directory, a global `coverage/` directory, and the `failure.yaml` at the pack root.
 
 ## Reading a pack without unzipping it
 
-The sealed zip is **flat**: its entries are exactly the contents of the pack directory, with `run.yaml` at the archive root and no wrapping folder. Because nothing is solid-compressed, a consumer can read the zip's central directory and then fetch only the entries it needs.
+The sealed zip is **flat**. Its entries are exactly the contents of the pack directory, with `run.yaml` at the root of the archive and no wrapping folder. Each entry is compressed on its own, so a tool can read the zip's index (its central directory) and then fetch only the entries it needs.
 
-That is why the hosted viewer opens a very large pack after fetching only a few kilobytes.
+This is how the hosted viewer opens a very large pack after downloading only a few kilobytes.
 
 ## Run status and test verdicts
 
-The format keeps two axes separate.
+The format tracks two separate things: where the run is in its lifecycle, and what each test concluded.
 
 **Run lifecycle**, in `run.yaml.status`:
 
 | Status | Meaning |
 |---|---|
-| `running` | The run is in flight. Totals, `ended`, and definition hashes are not yet authoritative. |
-| `finalized` | The pack is sealed. This is the only authoritative state. |
+| `running` | The run is in progress. Its totals, `ended`, and definition hashes are not final yet. |
+| `finalized` | The pack is sealed. Only this state is authoritative. |
 | `aborted` | The run ended without sealing. |
 
 **Test verdicts**, used at both test level and step level:
 
 | Verdict | Meaning |
 |---|---|
-| `passed` | The oracle was satisfied. |
-| `failed` | The oracle was evaluated and the product was wrong, that is, a real defect. |
-| `broken` | The oracle could not be evaluated, because of an environment, infrastructure, or test fault. |
+| `passed` | The test's check (its oracle) was satisfied. |
+| `failed` | The check ran and the product behaved incorrectly. This is a real defect. |
+| `broken` | The check could not run because of an environment, infrastructure, or test fault. |
 | `skipped` | Not executed. |
 
-The `failed` versus `broken` split is the heart of the model: it separates "the product is wrong" from "we could not tell". A run can be `finalized` and still contain `failed` tests. The lifecycle is not a verdict.
+The difference between `failed` and `broken` is central to the model. It separates "the product is wrong" from "we could not tell". The lifecycle status is not a verdict, so a `finalized` run can still contain `failed` tests.
 
 ## Next steps
 

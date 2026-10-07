@@ -9,7 +9,7 @@ keywords: ['kane cli troubleshooting', 'kaneai errors', 'testmu ai', 'chrome fai
 import { BrandName } from "/snippets/BrandName.mdx";
 import { KaneCliCta } from "/snippets/KaneCliCta.mdx";
 
-This page lists common problems you may hit while using Kane CLI, what causes them, and how to resolve them. If you're new to the CLI, start with [Installation](/docs/kane-cli-installation/) and [Getting Started](/docs/kane-cli-getting-started/); for setup-level concerns see [Configuration](/docs/kane-cli-configuration/) and [Authentication](/docs/kane-cli-authentication/).
+This page lists common problems with Kane CLI, what causes them, and how to fix them. If you are new to the CLI, start with [Installation](/docs/kane-cli-installation/) and [Getting Started](/docs/kane-cli-getting-started/). For setup questions, see [Configuration](/docs/kane-cli-configuration/) and [Authentication](/docs/kane-cli-authentication/).
 
 ## Log Locations
 
@@ -21,9 +21,9 @@ Before diagnosing, know where to look:
 | Evidence pack (step logs, screenshots, console and network logs, failure records) | `~/.testmuai/kaneai/sessions/<session-id>/evidence/<execution_id>.evidence` |
 | All sessions | `~/.testmuai/kaneai/sessions/` |
 
-The evidence pack is the only place run logs live. A `.evidence` file is a plain zip, so even without the viewer you can `unzip` it and read the logs directly. See [Inside the pack](/docs/kane-cli-evidence-pack-structure/) for its layout.
+Run logs are stored only in the evidence pack. A `.evidence` file is a plain zip, so you can `unzip` it and read the logs directly, even without the viewer. See [Inside the pack](/docs/kane-cli-evidence-pack-structure/) for its layout.
 
-The `run_end` event in Agent Mode provides `session_dir`, the directory containing the session log and the sealed evidence pack. `run_dir` is a legacy per-run path: step logs and screenshots now live inside the evidence pack.
+In Agent Mode, the `run_end` event includes `session_dir`, the directory that holds the session log and the sealed evidence pack. The event also includes `run_dir`, a legacy per-run path. Step logs and screenshots are inside the evidence pack.
 
 ---
 
@@ -35,13 +35,13 @@ Kane CLI manages a Chrome process for you and connects to it over the Chrome Dev
 
 - **Chrome is not installed** in any of the locations Kane CLI searches. On macOS it looks under `/Applications/Google Chrome.app` and equivalent user paths; on Linux it looks for `google-chrome`, `google-chrome-stable`, `chromium`, and similar binaries; on Windows it looks under `Program Files\Google\Chrome\Application\chrome.exe` and the user's `AppData\Local`.
 - **Chrome is installed in a non-standard location** Kane CLI does not search. Point it at the binary with `KANE_CLI_CHROME_PATH=/path/to/chrome`.
-- **All CDP ports in the 9222–9230 range are in use.** Kane CLI scans this nine-port range for an open port; if every port is busy you will see an error like `All CDP ports 9222-9230 are in use. Close other Chrome instances.`
-- **Profile lock from another running Chrome.** If a separate Chrome instance is already using the same user-data directory, the new instance can fail to start cleanly.
-- **Chrome is slow to become reachable.** On cold or resource-starved machines, often CI runners, Chrome can launch but not respond over the DevTools Protocol within the per-attempt timeout (default 30s). Kane CLI retries the launch automatically (twice by default), but persistent slowness needs a longer timeout or more retries.
+- **All CDP ports from 9222 to 9230 are in use.** Kane CLI looks for a free port in this nine-port range. If every port is busy, you see an error like `All CDP ports 9222-9230 are in use. Close other Chrome instances.`
+- **Another running Chrome holds the profile lock.** If a separate Chrome instance already uses the same user-data directory, the new instance can fail to start cleanly.
+- **Chrome is slow to become reachable.** On cold or overloaded machines, often CI runners, Chrome can launch but not respond over the DevTools Protocol within the timeout for each attempt (default 30s). Kane CLI retries the launch automatically (twice by default). If Chrome stays slow, raise the timeout or the number of retries.
 
 **Fix:**
 1. Install Google Chrome (or Chromium / Chrome for Testing) from the official source for your platform. If it is installed but in an unusual path, set `KANE_CLI_CHROME_PATH` to the binary.
-2. Quit any extra Chrome processes that may be hoarding the 9222–9230 port range. On macOS / Linux you can list them with:
+2. Quit any extra Chrome processes that may be using ports 9222 to 9230. On macOS or Linux, you can list them with:
    ```bash
    lsof -i :9222-9230
    ```
@@ -50,7 +50,7 @@ Kane CLI manages a Chrome process for you and connects to it over the Chrome Dev
    ```bash
    kane-cli run "..." --cdp-endpoint http://127.0.0.1:9222
    ```
-5. On a slow runner, raise the readiness timeout with `KANE_CLI_CDP_TIMEOUT_MS` (milliseconds, default `30000`) and/or the retry count with `KANE_CLI_CDP_RETRIES` (default `2`; `0` = a single attempt). A missing or invalid binary fails immediately and is *not* retried, so retries only help with transient startup slowness. See [Chrome environment variables](/docs/kane-cli-configuration/#chrome-environment-variables).
+5. On a slow runner, raise the readiness timeout with `KANE_CLI_CDP_TIMEOUT_MS` (milliseconds, default `30000`), the retry count with `KANE_CLI_CDP_RETRIES` (default `2`; `0` means a single attempt), or both. A missing or invalid binary fails immediately and is *not* retried, so retries help only when Chrome is temporarily slow to start. See [Chrome environment variables](/docs/kane-cli-configuration/#chrome-environment-variables).
 
 ### "CDP endpoint not reachable"
 
@@ -126,22 +126,22 @@ Get credentials from the <BrandName /> [dashboard](https://accounts.lambdatest.c
 
 ### "Login failed — fetch failed" / SSL certificate errors
 
-If `kane-cli login` exits immediately with `Login failed — fetch failed`, or a `NODE_DEBUG=undici` trace shows an OpenSSL error code like `UNABLE_TO_GET_ISSUER_CERT_LOCALLY`, kane-cli could not validate the TLS certificate of an auth or upload endpoint. Browsers and `curl` on the same machine will typically still work; this is specific to Node's default trust store.
+If `kane-cli login` exits immediately with `Login failed — fetch failed`, or a `NODE_DEBUG=undici` trace shows an OpenSSL error code like `UNABLE_TO_GET_ISSUER_CERT_LOCALLY`, Kane CLI could not validate the TLS certificate of an auth or upload endpoint. Browsers and `curl` on the same machine usually still work, because the problem is specific to Node's default trust store.
 
-The cause is that Node ships with its own bundled Mozilla CA list and does not read the operating-system keychain by default. If corporate endpoint security software (EDR), a TLS-inspecting proxy (Zscaler, Netskope, GlobalProtect), or any similar tool signs traffic with a root certificate that lives only in the OS keychain, Node has no way to validate it. Browsers and `curl` succeed because they trust the keychain natively; Node does not.
+Node ships with its own bundled Mozilla CA list and does not read the operating-system keychain by default. Corporate endpoint security software (EDR), a TLS-inspecting proxy (Zscaler, Netskope, GlobalProtect), or a similar tool may sign traffic with a root certificate that exists only in the OS keychain. Node cannot validate that certificate. Browsers and `curl` succeed because they trust the keychain directly.
 
-Fixes, in order of preference:
+Try these fixes in order:
 
-1. **Tell Node to trust the system keychain.** Built-in env var, available on Node 22.19+ / 24.6+:
+1. **Tell Node to trust the system keychain.** Use this built-in environment variable, available in Node 22.19+ and 24.6+:
 
    ```bash
    export NODE_USE_SYSTEM_CA=1
    kane-cli login
    ```
 
-   See the [Node docs](https://nodejs.org/api/cli.html#node_use_system_ca1). On macOS this reads the default and system keychains using the same trust policy your browser uses, so whatever root makes `curl` and your browser work will work for kane-cli too.
+   See the [Node docs](https://nodejs.org/api/cli.html#node_use_system_ca1). On macOS, this reads the default and system keychains with the same trust policy your browser uses, so any root certificate that works for `curl` and your browser also works for Kane CLI.
 
-2. **Point Node at a specific CA bundle.** If you are in a corporate setup and your IT or security team can provide the corporate CA file directly, use the standard Node env var:
+2. **Point Node at a specific CA bundle.** If your IT or security team can give you the corporate CA file, use the standard Node environment variable:
 
    ```bash
    export NODE_EXTRA_CA_CERTS=/path/to/corp-ca.pem
@@ -150,7 +150,7 @@ Fixes, in order of preference:
 
    This is also the fallback for Node versions older than 22.19, where `NODE_USE_SYSTEM_CA` is unavailable.
 
-3. **Persist the setting** by adding the `export` line to your shell profile (`~/.zshrc`, `~/.bashrc`, or equivalent) so every new terminal session inherits it. Otherwise the env var only applies to the shell where you ran `export`.
+3. **Make the setting permanent** by adding the `export` line to your shell profile (`~/.zshrc`, `~/.bashrc`, or equivalent) so every new terminal picks it up. Otherwise, the variable applies only to the shell where you ran `export`.
 
 ### Runner: "[SSL: CERTIFICATE_VERIFY_FAILED]" behind a TLS-inspecting proxy
 
@@ -160,11 +160,11 @@ If `kane-cli login` succeeds but a run fails mid-execution with an error like:
 [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain
 ```
 
-the failure is in the bundled `v16-runner`, not in Node. The runner is a standalone Python binary (built with Nuitka) and ships with [certifi](https://github.com/certifi/python-certifi)'s `cacert.pem` baked in. It does **not** consult the Windows / macOS / Linux system trust store, and the Node fixes above (`NODE_USE_SYSTEM_CA`, `NODE_EXTRA_CA_CERTS`) do not affect it.
+the failure is in the bundled `v16-runner`, not in Node. The runner is a standalone Python binary (built with Nuitka) with [certifi](https://github.com/certifi/python-certifi)'s `cacert.pem` built in. It does **not** use the Windows, macOS, or Linux system trust store, and the Node fixes above (`NODE_USE_SYSTEM_CA`, `NODE_EXTRA_CA_CERTS`) do not affect it.
 
-On a corporate network with a TLS-inspecting proxy (Netskope, Zscaler, GlobalProtect, etc.), the proxy decrypts and re-encrypts HTTPS using its own self-signed root CA. That root is in your OS keychain but not in certifi's bundle, so the runner's TLS handshake fails. On a home network there is no MITM, so the chain validates against certifi and the same command works.
+On a corporate network with a TLS-inspecting proxy (Netskope, Zscaler, GlobalProtect, and similar), the proxy decrypts and re-encrypts HTTPS with its own self-signed root CA. That root is in your OS keychain but not in certifi's bundle, so the runner's TLS handshake fails. On a home network, no proxy intercepts the traffic, so the chain validates against certifi and the same command works.
 
-Fix: give the runner a CA bundle that includes the corporate root:
+To fix it, give the runner a CA bundle that includes the corporate root:
 
 1. **Get the corporate root CA from IT.** On Windows you can export it yourself: open `certmgr.msc` → **Trusted Root Certification Authorities** → **Certificates**, find the proxy's CA (often named after Netskope / Zscaler / your company), right-click → **All Tasks → Export**, choose **Base-64 encoded X.509 (.cer)**.
 
@@ -178,7 +178,7 @@ Fix: give the runner a CA bundle that includes the corporate root:
    setx SSL_CERT_FILE "C:\certs\corp-bundle.pem"
    ```
 
-   Restart the terminal after `setx`; the variable is only picked up by new shells.
+   Restart the terminal after `setx`. Only new shells pick up the variable.
 
    macOS / Linux:
 
@@ -188,7 +188,7 @@ Fix: give the runner a CA bundle that includes the corporate root:
 
    Add the `export` line to `~/.zshrc` / `~/.bashrc` to persist it.
 
-If your environment also breaks `kane-cli login`, apply the Node-side fix in the previous section as well. The two env vars cover two different processes and you may need both.
+If `kane-cli login` also fails in your environment, apply the Node fix from the previous section as well. The two environment variables cover two different processes, so you may need both.
 
 ---
 
@@ -196,19 +196,19 @@ If your environment also breaks `kane-cli login`, apply the Node-side fix in the
 
 ### "Run timed out" or "max steps exceeded"
 
-A run ends with a timeout when it hits the wall-clock limit, and with a max-steps error when the agent exhausts its allowed step budget before finishing.
+A run times out when it reaches its time limit. It ends with a max-steps error when the agent uses up its allowed number of steps before finishing.
 
-**Cause:** Objective is too complex, page is slow to load, or `--max-steps` is too low.
+**Cause:** The objective is too complex, the page is slow to load, or `--max-steps` is too low.
 
 **Fix:**
 - Increase `--timeout`: `--timeout 300`
-- Increase `--max-steps`: `--max-steps 60`. The CLI default max-steps is `50`.
-- Break the work into smaller objectives. Run several sequential `kane-cli run` invocations, each focused on one logical sub-task. The session keeps the same browser between runs, so state carries over.
-- Tighten the objective. Vague objectives often cause the agent to wander; describe the target outcome and any required values up front.
+- Increase `--max-steps`: `--max-steps 60`. The CLI default is `50`.
+- Split the work into smaller objectives. Run several `kane-cli run` commands one after another, each focused on one task. The session keeps the same browser between runs, so state carries over.
+- Make the objective more specific. Vague objectives often make the agent wander, so state the outcome you want and any required values up front.
 
 ### Agent repeats the same action
 
-**Cause:** The agent is stuck in a loop: the page didn't change after the action.
+**Cause:** The agent is stuck in a loop because the page did not change after the action.
 
 **Fix:** Rephrase the objective to be more explicit. Add an assertion after the action to confirm state changed:
 ```
@@ -217,19 +217,19 @@ A run ends with a timeout when it hits the wall-clock limit, and with a max-step
 
 ### "Variables not resolving": `{{key}}` appears literally
 
-A run **warns before it starts** when an authored step references a `{{name}}` that has no value: the receipt names each variable, the file that is waiting for its value (or `Not in any variables file`), and the step that uses it. The run then goes ahead and types the name as written. Read the warning first: it tells you whether to fill an existing key or add a new one, and which file. See [Before a run](/docs/kane-cli-variables-and-context/#before-a-run-unresolved-variables).
+A run **warns before it starts** when an authored step references a `{{name}}` that has no value. The warning lists each variable, the file waiting for its value (or `Not in any variables file`), and the step that uses it. The run then goes ahead and types the name as written. Read the warning first. It tells you whether to fill an existing key or add a new one, and in which file. See [Before a run](/docs/kane-cli-variables-and-context/#before-a-run-unresolved-variables).
 
 If a `{{my_var}}` placeholder appears **literally** in a browser action, one of three things is true:
 
-- **The warning above named it and nothing set it.** Fill the value and run again (a **replay** step resolves from its tape and from Test Manager instead).
+- **The warning above named it and nothing set it.** Fill in the value and run again. (A **replay** step resolves from its recording and from Test Manager instead.)
 - **The reference is escaped.** `\{{my_var}}` is typed as is on purpose, for pages where the braces are real text.
-- **The variable file is not being loaded at all.** Check the three points below.
+- **The variable file is not loaded at all.** Check the three points below.
 
-**Cause:** Variable file not loaded, wrong JSON format, or wrong variable key name.
+**Cause:** The variable file is not loaded, the JSON format is wrong, or the variable key name is wrong.
 
 **Fix:**
-1. **JSON syntax.** Variable files are JSON. A missing comma or unquoted key will cause the file to be skipped silently.
-2. **File location.** Variable files have to live in one of the directories Kane CLI scans. Confirm yours is in the right place. See [loading order](/docs/kane-cli-variables-and-context/#loading-order) for the exact precedence.
+1. **JSON syntax.** Variable files are JSON. A missing comma or unquoted key causes the file to be skipped silently.
+2. **File location.** Variable files must be in one of the directories Kane CLI scans. Confirm yours is in the right place. See [loading order](/docs/kane-cli-variables-and-context/#loading-order) for the exact precedence.
 3. **Inline test.** Bypass file loading entirely by passing the variable on the command line:
    ```bash
    kane-cli run "log in as {{user}}" \
@@ -239,27 +239,27 @@ If a `{{my_var}}` placeholder appears **literally** in a browser action, one of 
 
 ### Assertions fail even though the page looks correct
 
-**Cause:** The assertion phrasing doesn't match what's on the page, or there's a timing issue.
+**Cause:** The assertion wording does not match what is on the page, or there is a timing issue.
 
 **Fix:**
-1. Check the step's screenshot in the [evidence pack](#debugging-a-failed-run-with-its-evidence-pack): see exactly what the agent saw
+1. Check the step's screenshot in the [evidence pack](#debugging-a-failed-run-with-its-evidence-pack) to see exactly what the agent saw
 2. Refine the assertion: use `assert the page contains` (substring) instead of exact text
 3. Add a wait: `"wait for the confirmation message to appear, then assert..."`
 
 ### CLI exits with code 2 and no output
 
-If `kane-cli run` ends with exit status 2 and the run produces no stdout or stderr after the early startup lines, one of two things is usually happening:
+If `kane-cli run` ends with exit status 2 and prints nothing to stdout or stderr after the first startup lines, one of two things is usually the cause:
 
-1. **Authentication or setup is missing.** This is the common case on a fresh machine. Run `kane-cli whoami`; if it reports "not configured", re-run `kane-cli login` (or pass `--username` / `--access-key` in non-interactive environments). See also ["Authentication failed"](#authentication-failed-exit-code-2) above.
-2. **kane-cli was installed via an unsupported package manager**, most commonly **pnpm**. pnpm stores packages under a nested `node_modules/.pnpm/` directory, and the resolver for the bundled `v16-runner` binary does not yet search that layout, so the CLI aborts before it can print a useful error. This limitation is tracked in [issue #24](https://github.com/LambdaTest/kane-cli/issues/24); switch to one of the supported install paths listed in [Install with pnpm or yarn](/docs/kane-cli-installation/#install-with-pnpm-or-yarn) as a workaround.
+1. **Authentication or setup is missing.** This is the common case on a new machine. Run `kane-cli whoami`. If it reports "not configured", run `kane-cli login` again (or pass `--username` / `--access-key` in non-interactive environments). See also ["Authentication failed"](#authentication-failed-exit-code-2) above.
+2. **Kane CLI was installed with an unsupported package manager**, most often **pnpm**. pnpm stores packages in a nested `node_modules/.pnpm/` directory, and Kane CLI does not search that layout for its bundled `v16-runner` binary. The CLI stops before it can print a useful error. [Issue #24](https://github.com/LambdaTest/kane-cli/issues/24) tracks this limitation. To work around it, reinstall with one of the supported methods listed in [Install with pnpm or yarn](/docs/kane-cli-installation/#install-with-pnpm-or-yarn).
 
-To surface the underlying error instead of a silent exit, re-run the same command with `KANE_DEV_MODE=1`:
+To see the underlying error instead of a silent exit, run the same command again with `KANE_DEV_MODE=1`:
 
 ```bash
 KANE_DEV_MODE=1 kane-cli run "<objective>" --agent --headless
 ```
 
-In dev mode, setup and resolver failures print an explanatory line before the process exits. Use that message to decide which of the two cases above applies; do not ship `KANE_DEV_MODE=1` in production scripts.
+In dev mode, setup failures and failures to find the runner print an explanation before the process exits. Use that message to tell which of the two cases applies. Do not leave `KANE_DEV_MODE=1` in production scripts.
 
 ---
 
@@ -267,12 +267,12 @@ In dev mode, setup and resolver failures print an explanatory line before the pr
 
 ### "Upload failed" or "Test Manager error"
 
-**Cause:** Kane CLI uploads run artifacts to <BrandName /> Test Manager at the end of the session. If the upload fails:
+**Cause:** Kane CLI uploads run artifacts to <BrandName /> Test Manager at the end of the session, and that upload failed.
 
 **Fix:**
-1. **Authentication.** Re-check `kane-cli whoami` and re-login if needed. Test Manager upload requires a valid token (or basic auth) for the configured environment.
-2. **Network connectivity.** The upload talks to the <BrandName /> control plane and a cloud storage endpoint. Verify outbound HTTPS is not blocked by a proxy or firewall.
-3. **Project and folder.** If `kane-cli config show` reports `project_id` empty, you don't need to do anything: Kane CLI auto-defaults a project on first run. If you want uploads in a specific project or folder, set it explicitly with `kane-cli config project <id>` / `kane-cli config folder <id>` (use `kane-cli projects list` / `kane-cli folders list` to discover IDs), or pick one in the TUI. A previously-configured project that has been deleted or renamed is detected automatically and replaced via auto-default; an invalid ID typed by mistake is handled the same way. See [Test Manager Integration](/docs/kane-cli-tms-integration/) for the full behavior.
+1. **Authentication.** Check `kane-cli whoami` and log in again if needed. The Test Manager upload needs a valid token (or basic auth) for the configured environment.
+2. **Network connectivity.** The upload connects to the <BrandName /> control plane and a cloud storage endpoint. Make sure a proxy or firewall is not blocking outbound HTTPS.
+3. **Project and folder.** If `kane-cli config show` reports an empty `project_id`, you do not need to do anything: Kane CLI picks a default project on the first run. To upload to a specific project or folder, set it with `kane-cli config project <id>` / `kane-cli config folder <id>` (use `kane-cli projects list` / `kane-cli folders list` to find IDs), or pick one in the TUI. If a configured project was deleted or renamed, Kane CLI detects it and picks a default instead. An invalid ID typed by mistake is handled the same way. See [Test Manager Integration](/docs/kane-cli-tms-integration/) for the full behavior.
 
 ---
 
@@ -289,16 +289,16 @@ kane-cli run "..." --agent --headless
 
 ### NDJSON parsing fails: `jq` errors or unexpected output
 
-**Cause:** Stderr is mixing with stdout, or you're trying to parse mid-stream events.
+**Cause:** Stderr is mixed into stdout, or you are parsing events from the middle of the stream.
 
-**Fix:** Redirect stderr and use `tail -1` to get only the `run_end` event:
+**Fix:** Redirect stderr and use `tail -1` to get only the final `run_end` event:
 ```bash
 kane-cli run "..." --agent 2>/dev/null | tail -1 | jq .
 ```
 
 ### `ask_user` event fires and blocks the run
 
-**Cause:** The objective requires human input in an agent context.
+**Cause:** The objective needs input from a person, but it is running through an agent.
 
 **Fix:** Rewrite the objective to avoid prompts. For example, instead of "navigate through the sign-up flow", be explicit:
 ```
@@ -311,7 +311,7 @@ kane-cli run "..." --agent 2>/dev/null | tail -1 | jq .
 
 ### `kane-cli: command not found` after install
 
-**Cause:** npm global bin directory is not in your PATH.
+**Cause:** The npm global bin directory is not in your PATH.
 
 **Fix:**
 ```bash
@@ -326,7 +326,7 @@ echo 'export PATH="$(npm config get prefix)/bin:$PATH"' >> ~/.zshrc
 
 ### Installation fails
 
-**Cause:** Node.js version is below 18.
+**Cause:** Your Node.js version is below 18.
 
 **Fix:** Check your version and upgrade:
 ```bash
@@ -338,10 +338,10 @@ node --version   # Must be 18 or higher
 **Symptom:** `npm install -g @testmuai/kane-cli` fails with `sharp: Please add node-addon-api to your dependencies` (any Node version, any platform).
 
 <Note>
-Kane CLI 0.3.4+ treats `sharp` as an optional dependency, so the install still succeeds even if sharp fails. Screenshots simply upload as PNG instead of WebP (about 30% larger, no functional impact). On an older version, upgrade first with `npm install -g @testmuai/kane-cli@latest`.
+`sharp` is an optional dependency of Kane CLI, so the install succeeds even if sharp fails. Screenshots then upload as PNG instead of WebP (about 30% larger, with no functional impact). Requires Kane CLI 0.3.4 or later. To upgrade, run `npm install -g @testmuai/kane-cli@latest`.
 </Note>
 
-**Cause:** `sharp` powers optional PNG to WebP screenshot compression. When it cannot load its prebuilt binary it tries to build from source, which fails. The most common trigger on macOS is a system-wide libvips (often pulled in by `brew install appium`, `imagemagick`, or `gdal`).
+**Cause:** `sharp` provides optional PNG to WebP screenshot compression. When it cannot load its prebuilt binary, it tries to build from source, and that build fails. On macOS, the most common trigger is a system-wide libvips install (often added by `brew install appium`, `imagemagick`, or `gdal`).
 
 **Fix (most common, macOS):**
 ```bash
@@ -357,7 +357,12 @@ SHARP_IGNORE_GLOBAL_LIBVIPS=1 npm install -g @testmuai/kane-cli
 echo 'export SHARP_IGNORE_GLOBAL_LIBVIPS=1' >> ~/.zshrc && source ~/.zshrc
 ```
 
-Two other triggers: npm configured to skip optional dependencies (`npm config get omit` should not contain `optional`, so clear it with `npm config delete omit` and reinstall), and a proxy or private registry that does not forward the `@img` scope (add an `@img:registry=https://registry.npmjs.org/` pass-through). If you are fine with PNG screenshots, no action is needed.
+There are two other triggers:
+
+- **npm skips optional dependencies.** `npm config get omit` should not contain `optional`. Clear it with `npm config delete omit` and reinstall.
+- **A proxy or private registry does not forward the `@img` scope.** Add an `@img:registry=https://registry.npmjs.org/` pass-through.
+
+If PNG screenshots are fine for you, no action is needed.
 
 For every cause, the step-by-step fixes, and how to verify, see [Install fails with "sharp: Please add node-addon-api"](/docs/kane-cli-troubleshooting-sharp/).
 
@@ -367,7 +372,7 @@ For every cause, the step-by-step fixes, and how to verify, see [Install fails w
 
 Local mobile runs are supported on **macOS Apple Silicon (arm64) only**. On other hosts, run mobile suites on the cloud grid with `kane-cli testrun run --remote`. See [Running a Mobile Suite on the Cloud Grid](/docs/kane-cli-mobile/#running-a-mobile-suite-on-the-cloud-grid).
 
-Start every local mobile problem with `doctor`, which prints one line per required check, each with a fix. `doctor` checks one target at a time, so pass `--target`:
+For any local mobile problem, start with `doctor`. It prints one line for each required check, with a fix for each one that fails. `doctor` checks one target at a time, so pass `--target`:
 
 ```bash
 # iOS Simulator
@@ -389,32 +394,32 @@ The common setup failures for each platform, and their fixes, are listed on the 
 
 ## "Update available" Notice
 
-Kane CLI checks the public npm registry for a newer release of `@testmuai/kane-cli` once every 24 hours. The result is cached locally so the check itself is non-blocking and silent on failure. When a newer version exists, Kane CLI surfaces an "update available" notification with the current and latest versions and a severity label (`major`, `minor`, or `patch`).
+Kane CLI checks the public npm registry for a newer release of `@testmuai/kane-cli` once every 24 hours. It caches the result locally, so the check never blocks you and fails silently. When a newer version exists, Kane CLI shows an "update available" notice with the current and latest versions and a severity label (`major`, `minor`, or `patch`).
 
-The notice is informational; your current version still works. To upgrade, follow the steps in [Updates](/docs/kane-cli-installation/#update).
+The notice is for your information only, and your current version keeps working. To upgrade, follow the steps in [Updates](/docs/kane-cli-installation/#update).
 
 ---
 
 ## Debugging a failed run with its evidence pack
 
-Every run seals an [evidence pack](/docs/kane-cli-evidence/) with everything needed to diagnose a failure in one place. The short version:
+Every run seals an [evidence pack](/docs/kane-cli-evidence/) that holds everything you need to diagnose a failure. In short:
 
 1. Open the pack: accept the post-run "View evidence in browser?" offer, or run `kane-cli evidence serve <pack>` and open the printed `viewer` URL.
 2. Go to the failed step and read its **failure record**: the error and the page state at the moment of failure.
 3. Check the step's **console and network logs**. A 4xx/5xx response or a JS error there usually explains it.
 4. Compare the **annotated screenshot** (what the agent acted on) against what you expected.
 
-The full walkthrough is in [Evidence packs → Debugging a failed run from its pack](/docs/kane-cli-evidence-debugging/), and the pack's file layout is in [Inside the pack](/docs/kane-cli-evidence-pack-structure/). The pack is the only place run logs live. A `.evidence` file is a plain zip, so even without the viewer you can `unzip` it and read the logs directly. If a pack won't open in the viewer, run `kane-cli evidence validate <pack>`. A truncated or unsealed pack reports invalid; the session directory's `tui.log` still has the session narrative.
+The full walkthrough is in [Evidence packs → Debugging a failed run from its pack](/docs/kane-cli-evidence-debugging/), and the pack's file layout is in [Inside the pack](/docs/kane-cli-evidence-pack-structure/). Run logs are stored only in the pack. A `.evidence` file is a plain zip, so you can `unzip` it and read the logs directly, even without the viewer. If a pack does not open in the viewer, run `kane-cli evidence validate <pack>`. A truncated or unsealed pack reports as invalid, but the session directory's `tui.log` still has the session narrative.
 
-One more debugging aid for batch runs: `testrun` members normally run silently; set `KANE_TESTRUN_MEMBER_DEBUG=1` to route their per-member output to stderr (prefixed `[member]`).
+For batch runs, `testrun` members run silently by default. Set `KANE_TESTRUN_MEMBER_DEBUG=1` to send each member's output to stderr, prefixed with `[member]`.
 
 ## A `--remote` run refused, failed, or came back empty
 
-Three different situations, told apart by the exit code and what came back:
+There are three different situations. Tell them apart by the exit code and by what came back:
 
-- **Exit `2` and no job link.** The remote preflight refused the selection before anything was dispatched. The reason is printed with the offending paths: the plugin is missing (`kane-cli plugin install remote-execution`, then `kane-cli plugin doctor remote-execution`), the selection mixes web and device tests or two mobile platforms (run them as two suites), a device test names a build that is not on this machine or that the cloud cannot take (`mobile_app_missing`, `mobile_app_not_uploadable`), the build's upload from your machine failed (`mobile_app_upload_failed`), or required recordings are gitignored (`gitignored_inputs`, un-ignore with `!output-*/`). `--dry-run` reproduces the check without creating a job.
+- **Exit `2` and no job link.** The remote preflight (the checks before a job is sent to the grid) refused the selection, so nothing was dispatched. The reason is printed with the paths that caused it: the plugin is missing (`kane-cli plugin install remote-execution`, then `kane-cli plugin doctor remote-execution`), the selection mixes web and device tests or two mobile platforms (run them as two suites), a device test names a build that is not on this machine or that the cloud cannot take (`mobile_app_missing`, `mobile_app_not_uploadable`), the build's upload from your machine failed (`mobile_app_upload_failed`), or required recordings are gitignored (`gitignored_inputs`, un-ignore with `!output-*/`). `--dry-run` reproduces the check without creating a job.
 - **Exit `1` with recordings and a pack.** The job ran and a member failed. Debug it like a failure on your own machine: `output-<stem>/Result.md` names the step and reason, and the pack has the screenshots and logs (next section).
-- **A member reported `broken` with no steps, nothing published.** The grid-side Kane CLI refused before launching. Open the printed job link and read the scenario stage's log. For mobile members the usual cause is an `APP…` id that belongs to a different organisation than the account running the job, and `kane-cli apps list --target <kind>` for the active profile is the authority. The members' session logs are also under `~/.testmuai/kaneai/sessions/remote/<job-id>/`.
+- **A member reported `broken` with no steps, and nothing was published.** Kane CLI on the grid refused before launching. Open the printed job link and read the scenario stage's log. For mobile members, the usual cause is an `APP…` id that belongs to a different organisation than the account running the job. Run `kane-cli apps list --target <kind>` for the active profile to see which app ids that account owns. The members' session logs are also under `~/.testmuai/kaneai/sessions/remote/<job-id>/`.
 
 Full reference: [Remote Runs](/docs/kane-cli-remote-execution/).
 
@@ -422,7 +427,7 @@ Full reference: [Remote Runs](/docs/kane-cli-remote-execution/).
 
 ## testrun says "plan invalid" or skips members
 
-`kane-cli testrun run` refuses to start unless every selected test passes preflight; the offenders are listed with a reason each:
+`kane-cli testrun run` starts only if every selected test passes preflight. Otherwise, it lists each failing test with a reason:
 
 | Reason | Meaning | Fix |
 |---|---|---|
@@ -431,7 +436,7 @@ Full reference: [Remote Runs](/docs/kane-cli-remote-execution/).
 | `org_mismatch` | The test belongs to a different organisation than the other members. | Check identities with `kane-cli testmd status <path>`. |
 | `project_mismatch` | The test belongs to a different project than the other members. | Same check; run project-by-project, or re-home the test. |
 
-Use `kane-cli testrun run --dry-run …` to see the full plan and every offender without executing anything. See [Batch runs with testrun](/docs/kane-cli-testrun/#preflight).
+Use `kane-cli testrun run --dry-run …` to see the full plan and every failing test without running anything. See [Batch runs with testrun](/docs/kane-cli-testrun/#preflight).
 
 ---
 
@@ -446,13 +451,13 @@ error: This location needs Git 2.31 or newer.
 next: Install or update Git, then run setup again: https://git-scm.com/downloads
 ```
 
-Install Git from the link, or update it (`brew install git`, `apt-get install git`, or the Windows installer), open a new terminal so `git --version` reports 2.31 or newer, and run the same command again. On a CI runner, add a Git install step before Kane CLI. Folder and S3-compatible locations do not need Git at all, see [Sharing the context graph](/docs/kane-cli-assurance-sharing/#locations).
+Install Git from the link, or update it (`brew install git`, `apt-get install git`, or the Windows installer). Open a new terminal, check that `git --version` reports 2.31 or newer, and run the same command again. On a CI runner, add a Git install step before Kane CLI. Folder and S3-compatible locations do not need Git at all. See [Sharing the context graph](/docs/kane-cli-assurance-sharing/#locations).
 
 ## Context sync: a location cannot be reached or refuses you
 
-Two different refusals, told apart by the message:
+Each case below prints its own message:
 
-- **Nothing answered.** The folder does not exist and cannot be created, the host is down, or no repository answered at that address, and a private repository you have not been invited to looks missing:
+- **Nothing answered.** The folder does not exist and cannot be created, the host is down, or no repository answered at that address. A private repository you have not been invited to also looks missing:
 
   ```
   error: nothing answered at /no/such/parent/team-context: that folder does not exist and cannot be created
@@ -461,20 +466,20 @@ Two different refusals, told apart by the message:
 
   Check the address (`kane-cli context sync list` shows what the store has), that the drive is mounted, and that the repository exists and is shared with your account.
 
-- **The location answered and refused you.** Keys, a key pair, or an account without read permission:
+- **The location answered and refused you.** The keys, key pair, or account you used does not have read permission:
 
   ```
   error: the bucket at https://team-context.s3.eu-west-1.amazonaws.com did not accept origin's access keys, even for reading
   next: ask the owner of the bucket for access, or bind it again with the right keys: kane-cli context sync add origin <descriptor> --credential-env <VAR>
   ```
 
-  `<descriptor>` in that line is the address of the location. Ask the owner for access, or bind the location again under the same name with the right keys: `kane-cli context sync add` on an existing name replaces its keys, and a pair the location refuses never replaces one that worked. For a GitHub location over HTTPS in CI, check that `KANE_SYNC_GIT_TOKEN` grants Contents read and write on *that* repository.
+  `<descriptor>` in that line is the address of the location. Ask the owner for access, or bind the location again under the same name with the right keys. Running `kane-cli context sync add` on an existing name replaces its keys, but a key pair the location refuses never replaces one that worked. For a GitHub location over HTTPS in CI, check that `KANE_SYNC_GIT_TOKEN` grants Contents read and write on *that* repository.
 
 - **Over SSH.** Kane CLI never answers an SSH prompt. A host key this computer has not accepted yet refuses with `this computer has not accepted github.com's SSH host key yet`: run `ssh -T git@github.com` once in a terminal and answer yes. A key that is not loaded, or not on the account, refuses with `github.com did not accept your SSH key`: load it with `ssh-add`, or ask the repository owner to grant your account access. Over HTTPS without a stored login the message is `sign in is needed, or your account has no access to this repository on github.com`: sign in through Git with `gh auth login --hostname github.com --git-protocol https --web`, then `gh auth setup-git --hostname github.com`, and run the command again.
 
-- **The connection check could not finish.** `The server did not complete the concurrent connection check. Its scratch-ref policy may differ from the storage branch.` (`SYNC_PROBE_INCONCLUSIVE`) means the concurrent connection check did not finish, and repository rules that block the scratch reference the check pushes under `refs/kane/probe/` are the usual cause. Nothing was bound: ask the repository owner to check that the reference is allowed, then run the command again.
+- **The connection check could not finish.** `The server did not complete the concurrent connection check. Its scratch-ref policy may differ from the storage branch.` (`SYNC_PROBE_INCONCLUSIVE`) means the concurrent connection check did not finish. The usual cause is a repository rule that blocks the scratch reference the check pushes under `refs/kane/probe/`. Nothing was bound. Ask the repository owner to allow that reference, then run the command again.
 
-A location you can read but not write is not a refusal: it binds as download-only (`read-only: this location can be cloned and pulled, never pushed`). `kane-cli context push` to it refuses with `SYNC_READ_ONLY`, and so does `kane-cli context sync`, after its pull has already landed, so its exit `2` does not mean nothing happened. Take records from such a location with `kane-cli context pull`. The two refusals above change nothing in your store.
+A location you can read but not write is not refused. It binds as download-only (`read-only: this location can be cloned and pulled, never pushed`). `kane-cli context push` to it refuses with `SYNC_READ_ONLY`. `kane-cli context sync` refuses with the same code, but only after its pull has landed, so its exit `2` does not mean nothing happened. Use `kane-cli context pull` to take records from such a location. The two refusals above change nothing in your store.
 
 ## Context sync: "a rebase is open" and every change is refused
 
@@ -483,11 +488,17 @@ error: a rebase (2026-09-14T10-13-45-679Z-reset) is open with 2 decisions unreso
 next: run kane-cli context sync or kane-cli context pull to continue, or kane-cli context sync doctor --abort to close it
 ```
 
-A `kane-cli context pull origin --rebase` stopped on decisions you have not answered yet, or was interrupted, and until it is finished the store takes writes from the rebase only, exactly like git mid-rebase. `kane-cli context extract`, `kane-cli design tests`, `kane-cli maintain reconcile`, `kane-cli context ingest`, `kane-cli context review`, `kane-cli context name`, `kane-cli context retire` and `kane-cli context revert` refuse with these two lines. `kane-cli context push` refuses with the same code (`SYNC_REBASE_PENDING`) and the same `next:` line, its reason naming the rebase and saying nothing was pushed. A test run does not refuse, and nothing is lost: its results wait to the side and land on the first run after the rebase closes.
+A `kane-cli context pull origin --rebase` stopped on decisions you have not answered yet, or it was interrupted. Until the rebase is finished, the store accepts changes from the rebase only, just like git in the middle of a rebase.
+
+- `kane-cli context extract`, `kane-cli design tests`, `kane-cli maintain reconcile`, `kane-cli context ingest`, `kane-cli context review`, `kane-cli context name`, `kane-cli context retire`, and `kane-cli context revert` refuse with the two lines above.
+- `kane-cli context push` refuses with the same code (`SYNC_REBASE_PENDING`) and the same `next:` line. Its reason names the rebase and says nothing was pushed.
+- A test run does not refuse, and nothing is lost. Its results are held aside and land on the first run after the rebase closes.
+
+To resolve it:
 
 1. See what is open: `kane-cli context sync status origin` lists each decision on one line, and `--show <n>` prints one saved record in full.
-2. Answer: `kane-cli context sync origin` walks the cards on a terminal. Headless, use `kane-cli context sync origin --answer <id>=keep-theirs` (or `apply-mine`), one flag per decision. `keep-theirs` writes nothing, but it is a choice, not a default: the local change stays in the backup unapplied, and a later record that was built on it is looked at again.
-3. Or close it: `kane-cli context sync doctor --abort` keeps what was already reapplied and leaves the unanswered records in the backup. A rebase interrupted before it imported origin's records is undone by the same command, and the store is put back as it was. Once the import has landed it can only be finished (`SYNC_RESET_IMPORTED`): run `kane-cli context sync` or `kane-cli context pull` to finish it, then close it if you still want to. `kane-cli context sync doctor --export <dir>` rebuilds the pre-rebase store beside, as its own store.
+2. Answer the decisions: in a terminal, `kane-cli context sync origin` walks you through each decision card. Without a terminal, use `kane-cli context sync origin --answer <id>=keep-theirs` (or `apply-mine`), one flag per decision. `keep-theirs` writes nothing, but it is an explicit choice, not a default: the local change stays unapplied in the backup, and any later record built on it is reviewed again.
+3. Or close the rebase: `kane-cli context sync doctor --abort` keeps what was already reapplied and leaves the unanswered records in the backup. If the rebase was interrupted before it imported origin's records, the same command undoes it and puts the store back as it was. Once the import has landed, the rebase can only be finished (`SYNC_RESET_IMPORTED`): run `kane-cli context sync` or `kane-cli context pull` to finish it, then close it if you still want to. `kane-cli context sync doctor --export <dir>` rebuilds the store as it was before the rebase, as a separate store in `<dir>`.
 
 <Warning>
 Never delete files under `.context/` to get past the refusal. See [When two people changed the same thing](/docs/kane-cli-assurance-sharing/#rebase).
@@ -495,7 +506,9 @@ Never delete files under `.context/` to get past the refusal. See [When two peop
 
 ## Context sync: publication could not be confirmed
 
-A `kane-cli context push` to a GitHub location can lose the server's answer after the upload, through a dropped connection or a proxy timeout. Kane CLI then refuses with `SYNC_PUBLICATION_UNKNOWN` (exit `2`) rather than guess, because the batch may have landed. Your store is unchanged and nothing needs to be redone. Check connectivity and run the **same** command again: it reads the location first and reconciles what actually landed, so a batch that arrived is recognised as already there and never published twice, and a batch that did not is published now. Only after that should anything else run. If a proxy rejects large uploads, `KANE_SYNC_GIT_HTTP_POST_BUFFER=33554432` raises Git's upload buffer for that command, and a very slow link gets more time with `KANE_SYNC_GIT_TRANSFER_TIMEOUT_SECONDS`. See [Context sync environment variables](/docs/kane-cli-configuration/#context-sync-environment-variables).
+A `kane-cli context push` to a GitHub location can lose the server's reply after the upload, for example through a dropped connection or a proxy timeout. Because the batch may have landed, Kane CLI does not guess. It refuses with `SYNC_PUBLICATION_UNKNOWN` (exit `2`). Your store is unchanged and nothing needs to be redone.
+
+Check connectivity and run the **same** command again. It reads the location first and reconciles what actually landed. A batch that arrived is recognised as already there and is never published twice, and a batch that did not arrive is published now. Do not run anything else until this command has finished. If a proxy rejects large uploads, `KANE_SYNC_GIT_HTTP_POST_BUFFER=33554432` raises Git's upload buffer for that command. For a very slow link, allow more time with `KANE_SYNC_GIT_TRANSFER_TIMEOUT_SECONDS`. See [Context sync environment variables](/docs/kane-cli-configuration/#context-sync-environment-variables).
 
 ---
 

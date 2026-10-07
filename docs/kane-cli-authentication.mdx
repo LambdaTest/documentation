@@ -22,9 +22,9 @@ Kane CLI authenticates against your <BrandName /> account before it can run test
 kane-cli login --oauth
 ```
 
-Kane CLI opens your default browser to the <BrandName /> consent page. Sign in and approve the request. When the browser hands control back, Kane CLI stores your tokens locally and you are signed in. You usually do not need to log in again on the same machine. Kane CLI reuses the stored session on subsequent runs.
+Kane CLI opens the <BrandName /> consent page in your default browser. Sign in and approve the request. When the browser hands control back, Kane CLI stores your tokens locally and you are signed in. You usually do not need to log in again on the same machine, because Kane CLI reuses the stored session on later runs.
 
-If you run `kane-cli login` interactively without flags, Kane CLI launches a guided login wizard that walks you through choosing a method, profile, and (for basic auth) entering credentials.
+If you run `kane-cli login` in an interactive terminal without flags, Kane CLI starts a guided login wizard. It walks you through choosing a method and a profile and, for basic auth, entering your credentials.
 
 ---
 
@@ -52,7 +52,7 @@ To save basic auth credentials for a profile so you do not have to pass them eve
 kane-cli login --username "YOUR_LT_USERNAME" --access-key "YOUR_LT_ACCESS_KEY"
 ```
 
-Saved basic auth is used automatically for subsequent commands run under that profile.
+Every later command you run under that profile uses the saved credentials automatically.
 
 ### Where to Find Your Access Key
 
@@ -89,7 +89,7 @@ Prints each saved profile with its environment, marking the active one.
 kane-cli profiles switch work
 ```
 
-Subsequent commands run under `work` until you switch again.
+Every later command runs under `work` until you switch again.
 
 ### Delete a Profile
 
@@ -101,7 +101,7 @@ Removes the stored credentials for that profile.
 
 ### Run Against a Specific Profile Without Switching
 
-A few commands accept `--profile <name>` so you can target a profile for a single invocation without changing the active one. This is supported on `kane-cli login`, `kane-cli whoami`, and `kane-cli balance`. For other commands, use `kane-cli profiles switch` first.
+Three commands accept `--profile <name>`, so you can use a profile for a single command without changing the active one: `kane-cli login`, `kane-cli whoami`, and `kane-cli balance`. For any other command, run `kane-cli profiles switch` first.
 
 ---
 
@@ -111,7 +111,7 @@ A few commands accept `--profile <name>` so you can target a profile for a singl
 kane-cli whoami
 ```
 
-`whoami` prints an identity card showing the active profile, environment, authentication method (OAuth or basic), the username (when known), and, for OAuth, whether the stored token is valid, expired, or missing, along with its expiry date.
+`whoami` prints an identity card with the active profile, environment, authentication method (OAuth or basic), and username (when known). For OAuth, it also shows whether the stored token is valid, expired, or missing, and when it expires.
 
 Pass `--profile <name>` to inspect a profile other than the active one.
 
@@ -123,7 +123,7 @@ Pass `--profile <name>` to inspect a profile other than the active one.
 kane-cli logout
 ```
 
-`logout` signs out of the active profile. For OAuth profiles, Kane CLI revokes the stored tokens with <BrandName /> before deleting them. The on-disk credentials for the profile are removed. If you have other profiles configured, Kane CLI automatically switches to one of them; otherwise you are left with no active profile.
+`logout` signs out of the active profile and removes its credentials from disk. For OAuth profiles, Kane CLI first revokes the stored tokens with <BrandName />. If you have other profiles, Kane CLI switches to one of them automatically. Otherwise, no profile is active.
 
 ---
 

@@ -138,7 +138,7 @@ The resolver catches structural problems at parse time, before any browser launc
 | `optional` is allowed on `@import` only at the root file. | `intermediate-ref 'optional' is not supported in v1: <file>:<line>` |
 | `@import` steps may not carry config other than `optional`. | `step config on @import may only contain 'optional': got <key>` |
 
-There is no built-in depth limit: helpers can import helpers can import helpers. In practice keep nesting shallow; deeply chained helpers are hard to read and hard to debug.
+There is no built-in depth limit: a helper can import another helper, which can import another, and so on. Keep nesting shallow anyway, because deeply chained helpers are hard to read and debug.
 
 ## Optional imports
 
@@ -173,13 +173,13 @@ Some settings travel with the import; others are run-wide and apply only at the 
 - `on_lock_conflict`.
 - Authentication.
 
-These are decided once for the whole run from the root file (or its CLI flags). Setting them in a helper's frontmatter has no effect; the helper's chrome / mode / auth keys are silently ignored.
+These are set once for the whole run, from the root file or its CLI flags. Setting them in a helper's frontmatter has no effect: kane-cli silently ignores the helper's Chrome, mode, and auth keys.
 
 A practical consequence: there is only **one** browser per run, with **one** auth context. A helper cannot, for example, open a fresh Chrome with a different profile.
 
 ## Variables across imports
 
-Variables are namespaced flat across the whole run: a single map merged at the root. A helper sees whatever variables the root configuration produces.
+All variables in a run share one flat namespace: a single set of names and values, merged at the root. A helper sees every variable the root configuration produces.
 
 ```markdown
 ---
@@ -252,7 +252,7 @@ When you edit a step in a helper:
 - Subsequent steps in the same helper invocation also re-author (the same "rest of the file" rule from [Running test.md files](/docs/kane-cli-testmd-running/#edits-cascade-to-the-rest-of-the-file) applies inside helpers).
 - The root tests' steps that come **after** the `@import` also re-author, because the helper changed what the browser looks like when control returns to the root test.
 
-In practice: a one-line edit to a heavily-imported helper triggers a lot of re-authoring on the next run. That is by design: the alternative is to replay against state the helper no longer produces.
+As a result, a one-line edit to a widely imported helper causes a lot of re-authoring on the next run. This is intentional: otherwise, later steps would replay against page state the edited helper does not produce.
 
 ## Sharing helpers across projects
 

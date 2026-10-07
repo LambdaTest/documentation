@@ -64,14 +64,14 @@ The `run_end` event includes both `result_code` (numeric) and `reason_code` (des
 |-------|-------|
 | **Reason code** | `cancelled.user` |
 | **Status** | `CANCELLED` |
-| **What happened** | The run was cancelled by the caller (e.g., Ctrl+C, `cancel` event, or API cancellation). |
+| **What happened** | The caller cancelled the run (for example, with Ctrl+C, a `cancel` event, or API cancellation). |
 | **Action** | No action required. Re-run the objective if needed. |
 
 ---
 
 ## 3xx: Stuck
 
-The agent ran into a dead end. These are not crashes - the agent recognized it could not make further progress.
+The agent reached a dead end. These are not crashes: the agent recognized that it could not make further progress.
 
 ### 310 MAX_STEPS
 
@@ -89,7 +89,7 @@ The agent ran into a dead end. These are not crashes - the agent recognized it c
 | **Reason code** | `stuck.dag_cycle` |
 | **Status** | `STUCK` |
 | **What happened** | The agent detected 3 repeated page-state cycles (it keeps returning to the same state after each action). |
-| **Action** | Rephrase the objective with a different approach. The current path leads to a loop - try an alternative navigation route or add explicit intermediate steps. |
+| **Action** | Rephrase the objective with a different approach. The current path leads to a loop, so try an alternative navigation route or add explicit intermediate steps. |
 
 ### 330 AP_STUCK
 
@@ -122,7 +122,7 @@ An internal agent component failed. These typically indicate a transient issue o
 | **Reason code** | `agent_error.reasoning_failure` |
 | **Status** | `ERROR` |
 | **What happened** | An unhandled exception occurred in the reasoning engine. |
-| **Action** | Check `{session_id}/runs/{run_dir}/run.log` for the full stack trace. Retry the run - this is usually transient. If it persists, file a [bug report](https://github.com/LambdaTest/kane-cli/issues) with the log file. |
+| **Action** | Check `{session_id}/runs/{run_dir}/run.log` for the full stack trace. Retry the run, because this is usually transient. If it persists, file a [bug report](https://github.com/LambdaTest/kane-cli/issues) with the log file. |
 
 ### 430 CLEAN_START_INVALID
 
@@ -130,7 +130,7 @@ An internal agent component failed. These typically indicate a transient issue o
 |-------|-------|
 | **Reason code** | `agent_error.clean_start_invalid` |
 | **Status** | `ERROR` |
-| **What happened** | The `clean_start` validation failed - the agent could not establish a valid initial session state (e.g., the starting URL did not load, or the browser context is corrupted). |
+| **What happened** | The `clean_start` validation failed: the agent could not establish a valid initial session state (e.g., the starting URL did not load, or the browser context is corrupted). |
 | **Action** | Verify the `--url` is accessible and loads correctly. If using `--cdp-endpoint`, ensure the browser is in a clean state. |
 
 ### 440 CHILD_FAILED
@@ -214,7 +214,7 @@ Verify with `kane-cli whoami`, then retry the run.
 
 ## 6xx: Blocker
 
-An external obstacle on the target website prevented the agent from completing the objective. These are not agent bugs - they require changes to the environment or objective.
+An external obstacle on the target website prevented the agent from completing the objective. These are not agent bugs: they require changes to the environment or objective.
 
 ### 610 CAPTCHA
 
