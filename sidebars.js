@@ -3020,27 +3020,21 @@ module.exports = {
     },
     [
       {
-        type: "doc",
-        label: "Getting Started with Flutter Integration Driver",
-        id: "appium-flutter-integration",
-      },
-      {
-        type: "doc",
-        label: "Getting Started with Flutter Android",
-        id: "getting-started-with-flutter-dart-android-automation",
-      },
-      {
-        type: "doc",
-        label: "Getting Started with Flutter iOS",
-        id: "getting-started-with-flutter-dart-ios-automation",
-      },
-      {
-        type: "doc",
-        label: "Flutter Supported Capabilities",
-        id: "flutter-supported-capabilities",
+        type: "category",
+        collapsed: false,
+        label: "Getting Started",
+        items: [
+          "test-flutter-apps",
+          "flutter-agent-skills",
+          "flutter-supported-capabilities",
+          "appium-flutter-integration",
+          "getting-started-with-flutter-dart-android-automation",
+          "getting-started-with-flutter-dart-ios-automation",
+        ],
       },
     ],
   ],
+
 
   VisualRegressionTestingSidebar: [
     {

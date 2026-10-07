@@ -1,7 +1,7 @@
 ---
 id: getting-started-with-flutter-dart-android-automation
-title: Flutter Dart Testing On TestMu AI - Android
-sidebar_label: Flutter Dart Android
+title: How to Run Flutter Dart Tests on TestMu AI - Android
+sidebar_label: "Flutter Dart Testing - Android"
 description: This guide shows you how to run your first Flutter Dart test on 5000+ real Android devices using TestMu AI's Real Device Cloud.
 keywords:
 - flutter
@@ -13,15 +13,15 @@ url: https://www.testmuai.com/support/docs/getting-started-with-flutter-dart-and
 site_name: TestMu AI
 slug: getting-started-with-flutter-dart-android-automation/
 canonical: https://www.testmuai.com/support/docs/getting-started-with-flutter-dart-android-automation//
+toc_max_heading_level: 2
 ---
 
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
-import RealDeviceTag from '../src/component/realDevice';
-import VirtualDeviceTag from '../src/component/virtualDevice';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import RealDeviceTag from '@site/src/component/realDevice';
 import VerifiedTag from '@site/src/component/verifiedTag';
 
 
@@ -42,7 +42,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "Getting Started With Flutter Tests on TestMu AI",
+          "name": "How to Run Flutter Dart Tests on TestMu AI - Android",
           "item": `${BRAND_URL}/support/docs/getting-started-with-flutter-dart-android-automation/`
         }]
       })
@@ -220,12 +220,16 @@ import VerifiedTag from '@site/src/component/verifiedTag';
     }
   ]) }}
 />
-<RealDeviceTag value="Real Device" /> 
-Flutter, an open-source UI toolkit created by Google, is a popular choice among developers to build natively compiled applications for mobile, web, and desktop from a single codebase. With Dart as its programming language, Flutter enables fast development of beautiful apps with a highly productive, extensible and open-source set of features.
 
-In this guide, we will explore how to run your first Flutter Dart test on an Android device using the <BrandName /> Real Device Cloud. By combining the capabilities of Flutter Dart and <BrandName />, you can ensure the proper functioning of your app across different devices and make your app more reliable and robust.
+<RealDeviceTag value="Real Device" />
 
-## Prerequisites for Getting Started
+Running your first Flutter Dart test on TestMu AI automates Flutter apps on real Android devices in the cloud. Install the Flutter SDK, set credentials, upload the sample app and test suite, then execute and review results on the dashboard.
+
+## Flutter Dart Testing on Android
+
+In this section, we will run your first Flutter Dart test on an **Android** device using the <BrandName /> Real Device Cloud.
+
+### Prerequisites for Getting Started
 
 1. Flutter SDK installed on your system
 2. You will need a <BrandName /> username and access key. To obtain your access credentials, [purchase a plan](https://billing.lambdatest.com/billing/plans) or access the [automation dashboard](https://www.testmuai.com/login/?redirectTo=https://appautomation.lambdatest.com/).
@@ -237,9 +241,9 @@ If you do not have any **Flutter Android** app (.apk) and an **Flutter Test Suit
 
 :::
 
-## Run Your First Test
+### Run Your First Test
 
-### Step 1: Create your Android Flutter app and test suite for testing
+#### Step 1: Create your Android Flutter app and test suite for testing
 For testing, you need to build a Flutter app and test suite. You can create Flutter applications and test suites using either Flutter cli or Gradlew. The steps below demonstrate how to create apks with Gradlew.
 
 - Create an instrumentation test file in your application's directory `android/app/src/androidTest/java/com/example/lambdatestSampleApp/`. Replace **com**, **example**, and **lambdatestSampleApp** values with those from your app's package name. 
@@ -316,7 +320,7 @@ Next, look for gradlew execution in the logs. The above command generates a grad
 gradlew --full-stacktrace --info -Pverbose=true -Ptarget-platform=android-arm64 -Ptarget=YOUR_APP_PATH/lib/main.dart -Pbase-application-name=android.app.Application -Pdart-obfuscation=false -Pextra-front-end-options=--no-sound-null-safety -Ptrack-widget-creation=true -Ptree-shake-icons=false -Pfilesystem-scheme=org-dartlang-root assembleDebug  
 ```
 
-### Step 2: Upload Your Application
+#### Step 2: Upload Your Application
 
 Upload your **android** application (.apk file) to the <BrandName /> servers using our **REST API**. You need to provide your **Username** and **AccessKey** in the format `Username:AccessKey` in the **cURL** command for authentication. Make sure to add the path of the **appFile** in the cURL request. Here is an example cURL request to upload your app using our REST API:
 
@@ -358,7 +362,7 @@ Response of above cURL will be a **JSON** object containing the `App URL` of the
 
 :::
 
-### Step 3: Uploading Test Suite
+#### Step 3: Uploading Test Suite
 
 Upload your **test suite** (.apk file) to the <BrandName /> servers using our **REST API**. You need to provide your **Username** and **AccessKey** in the format `Username:AccessKey` in the **cURL** command for authentication. Make sure to add the path of the **appFile** in the cURL request. Here is an example cURL request to upload your app using our REST API:
 
@@ -400,12 +404,12 @@ Response of above cURL will be a **JSON** object containing the `App URL` of the
 
 :::
 
-### Step 4: Executing The Test
+#### Step 4: Executing The Test
 
-#### Basic Authentication
+##### Basic Authentication
 
 :::info
-You will need base64 encoded authentication in order to execute your Espresso automation test suite. You need to enter your username:accesskey **[here](https://mixedanalytics.com/knowledge-base/api-connector-encode-credentials-to-base-64/)** in order and click on encode to generate the base64 authentication. Take note of the **base64** encoded authentication which needs to be added in the next step.
+You will need base64 encoded authentication in order to execute your Flutter automation test suite. You need to enter your username:accesskey **[here](https://mixedanalytics.com/knowledge-base/api-connector-encode-credentials-to-base-64/)** in order and click on encode to generate the base64 authentication. Take note of the **base64** encoded authentication which needs to be added in the next step.
 :::
 
 <VerifiedTag value="Verified" />
@@ -416,7 +420,7 @@ You will need base64 encoded authentication in order to execute your Espresso au
   </CodeBlock>
 </div>
 
-#### Execute Command
+##### Execute Command
 
 Once you have uploaded your app and test suite, you need to you can execute your test by running the following command:
 
@@ -424,11 +428,11 @@ Once you have uploaded your app and test suite, you need to you can execute your
 Make sure to enter your **basic authentication**, **app url** (generated in the first step) and **testSuite url** (generated in the second step) in the below command.
 :::
 
-<VerifiedTag value="Verified" />
-
 <Tabs className="docs__val">
 
 <TabItem value="bash" label="Linux / MacOS" default>
+
+  <VerifiedTag value="Verified" />
 
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-bash">
@@ -454,8 +458,10 @@ curl --location --request POST 'https://mobile-api.lambdatest.com/framework/v1/f
 
 <TabItem value="powershell" label="Windows" default>
 
+  <VerifiedTag value="Verified" />
+
   <div className="lambdatest__codeblock">
-    <CodeBlock className="lamguage-powershell">
+    <CodeBlock className="language-powershell">
 
 ```bash
 curl --location --request POST "https://mobile-api.lambdatest.com/framework/v1/flutter/android/build" --header "Content-Type: application/json" --header "Authorization: Basic <Enter the Auth here>" --data-raw "{\"app\" : \"lt://APP_ID\",\"testSuite\": \"lt://APP_ID\",\"device\" :  [\"Pixel 6-12\"], \"deviceLog\": true,\"network\": false,\"build\" : \"Sample-Flutter\"}"
@@ -467,12 +473,12 @@ curl --location --request POST "https://mobile-api.lambdatest.com/framework/v1/f
 </TabItem>
 </Tabs>
 
-### Step 5: View Test Execution
+#### Step 5: View Test Execution
 
 Once you have run your tests, you can view the test execution along with logs. You will be able to see the test cases passing or failing. You can view the same at [<BrandName /> Automation](https://www.testmuai.com/login/?redirectTo=https://appautomation.lambdatest.com/build).
 
 
-## Running Tests in Parallel
+### Running Tests in Parallel
 
 You can run tests in parallel on multiple devices by passing the device name in comma separated format in the execute command as show below:
 
@@ -498,7 +504,7 @@ Do note that Flutter builds when run in parallel, result in separate builds bein
 
 :::
 
-## Auto-Grant Permissions for Android Apps
+### Auto-Grant Permissions for Android Apps
 
 While testing Android apps, user might need to handle various pop-ups or dialogs asking for permissions like contacts, notifications, photos, etc.
 
@@ -522,54 +528,6 @@ curl --location --request POST 'https://mobile-api.lambdatest.com/framework/v1/f
 }'
 ```
 
-
-
-
-## Using the Flutter Testing Agent Skill with TestMu AI
-***
-
-The [flutter-testing-skill](https://github.com/LambdaTest/agent-skills/tree/main/flutter-testing-skill) is a part of [TestMu AI Skills](https://github.com/LambdaTest/agent-skills/) that guide AI coding assistants in generating production-ready test automation.
-
-The flutter-testing-skill package includes:
-
-<VerifiedTag value="Verified" />
-
-```
-flutter-testing-skill/
-├── SKILL.md
-└── reference/
-    ├── playbook.md
-    └── advanced-patterns.md
-```
-
-It provides structured guidance for:
-
-* Project structure and setup
-* Dependency configuration
-* Local execution
-* TestMu AI cloud execution
-* Debugging patterns
-* CI/CD integration
-
-
-### Installing Flutter Testing Agent Skill
-***
-
-Install a Flutter Testing Agent Skill using the command below:
-
-<VerifiedTag value="Verified" />
-
-```
-# Clone the repo and copy the skill you need
-git clone https://github.com/LambdaTest/agent-skills.git
-cp -r agent-skills/flutter-testing-skill .claude/skills/
-
-# Or for Cursor / Copilot
-cp -r agent-skills/flutter-testing-skill .cursor/skills/
-```
-
-**Note**: If you prefer installing all available framework skills instead of only flutter-testing-skill, clone the repository directly into your tool's skills directory (for example, .claude/skills/, .cursor/skills/, .gemini/skills/, or .agent/skills/).
-
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
@@ -584,7 +542,7 @@ cp -r agent-skills/flutter-testing-skill .cursor/skills/
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
       <span className="breadcrumbs__link">
-      Flutter Testing 
+        How to Run Flutter Dart Tests on TestMu AI - Android
       </span>
     </li>
   </ul>
