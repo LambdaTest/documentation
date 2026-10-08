@@ -243,7 +243,28 @@ If you installed a tarball manually, link `rook-<sha>/bin/rook` into a directory
 
 ### Node.js version error
 
-Rook requires Node.js 20 or newer:
+```bash
+curl -fsSL https://raw.githubusercontent.com/LambdaTest/rook/main/install.sh \
+  | bash -s -- --dir "$HOME/bin"
+```
+
+On native Windows, check the npm shim and global prefix:
+
+```powershell
+Get-Command rook.cmd -ErrorAction SilentlyContinue
+npm.cmd prefix -g
+rook.cmd --version
+```
+
+If the shim exists but is not found, add the printed npm prefix to your **user PATH**, then reopen PowerShell. If installation is missing, follow [Windows setup](/support/docs/rook-installation/#windows). A `rook.ps1 cannot be loaded` error does not require weakening the machine's execution policy: use `rook.cmd`. Do not run the Bash installer in native PowerShell; there is no public `install.ps1`.
+
+Keep Rook, Node.js, the checkout, and local target processes in the same environment. A Windows installation and a WSL installation are separate; see [WSL setup](/support/docs/rook-installation/#windows-wsl).
+
+### npm reports a Node.js engine error
+
+Homebrew and shell installations carry a matching Node.js runtime. The npm installation requires npm to run under Node.js 20 or newer (22 for Rook 0.1.6 and earlier):
+
+<VerifiedTag value="Verified" />
 
 ```bash
 node --version

@@ -179,8 +179,57 @@ TestMu AI Agent Assurance tests autonomous agents you own. These agents *act* by
 
 You install only the <code>rook</code> CLI. You do not need to clone the source repository, build any code, start a controller, or bring your own model API key.
 
-:::caution Pre-alpha
-Commands and stored file formats can change. Test against a disposable or staging target and review the target and write warning before every run.
+```text
+Install → launch Rook → sign in → select a project
+  → explore → select the agent → create and verify a profile
+  → generate and review scenarios → sync → approve one run → inspect evidence
+```
+
+The interactive workflow and terminal screenshots were tested with **Rook 0.1.5** on September 28, 2026. Discovery, profile generation, scenario generation, and judging use TestMu AI credits; even a small suite can involve several model calls. Review the proposed work and credit balance before approving it. The browser examples below are separately identified saved runs.
+
+Already have a live agent? Follow the same sequence with your own [source or requirements](/support/docs/agent-assurance-connect-and-explore-agents/) and [invocation profile](/support/docs/rook-profiles-and-hooks/#add-a-profile-interactively).
+
+## Install Rook {#install-and-authenticate-the-cli}
+
+Choose one public install method. On Windows, first follow [native PowerShell setup](/support/docs/rook-installation/#windows), then use the PowerShell alternatives below. Use `rook.cmd` in PowerShell and the same slash commands inside Rook's terminal.
+
+```bash
+# Homebrew
+brew install lambdatest/rook/rook
+```
+
+```bash
+# Shell installer
+curl -fsSL https://raw.githubusercontent.com/LambdaTest/rook/main/install.sh | bash
+```
+
+```bash
+# npm (use Node.js 20 or newer)
+npm install -g @testmuai/rook
+```
+
+PowerShell on Windows x64:
+
+```powershell
+npm.cmd install -g @testmuai/rook@0.1.7
+```
+
+Then check your installation:
+
+```bash
+rook --version
+```
+
+See [Install Rook](/support/docs/rook-installation/) for PATH, upgrade, and checksum help, including migration from the old Homebrew tap. The packaged CLI includes its runtime. The sample below also needs a separate Node.js installation and Git available in the same terminal.
+
+<span id="choose-production-or-stage-before-signing-in" />
+
+### Use the Public Service {#sign-in-to-the-public-service}
+
+Public packages default to `ROOK_ENV=prod`, the service behind [Rook Projects](https://rook.lambdatest.com/projects). The launch commands in step 2 set it explicitly. Sign in inside the TUI with `/login`; there is no separate headless login step. This environment selects Rook's service, not your target agent's endpoint. Keep the target on a disposable or non-production environment while testing.
+
+:::note Existing credentials
+If <code>LT_USERNAME</code> and <code>LT_ACCESS_KEY</code> are exported, they take precedence over stored browser login. Use credentials for the selected environment, or unset both in this terminal before using browser login. In PowerShell, use `Remove-Item Env:LT_USERNAME, Env:LT_ACCESS_KEY -ErrorAction SilentlyContinue` to remove them from this session only. Never paste credentials into documentation, prompts, or screenshots.
 :::
 
 ## Install and authenticate the CLI
@@ -289,7 +338,7 @@ This walkthrough tests a refund agent from its PRD and a staging API. It represe
 
 Replace the example filenames, URL, token, and JSON fields with values from your own agent.
 
-### What you need
+The redesigned local result has **Acceptance criteria** filters and an **Evidence** drawer for request, response, verdict, and artifacts. This screenshot uses a separate saved CommerceCare demo (SC-006), not the triage execution above. It illustrates one failed requirement and two unverifiable criteria; your scenario IDs and outcomes will differ. Public 0.1.6 and later include this viewer; 0.1.5 and earlier use the earlier scrolling layout—see the [rollout and navigation note](/support/docs/rook-web-ui/#earlier-local-ui).
 
 - The <code>rook</code> CLI installed and authenticated (complete [Install and authenticate the CLI](#install-and-authenticate-the-cli) above).
 - A local PRD or specification for the agent.

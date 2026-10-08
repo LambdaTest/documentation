@@ -299,9 +299,7 @@ The run-level narrative summarizes patterns after all scenario verdicts are avai
 
 The headless equivalent is:
 
-```bash
-rook run --no-narrative
-```
+See [phases and hooks](/support/docs/rook-profiles-and-hooks/#lifecycle) for prerequisites and state. The old <code>--no-narrative</code> option is not available in 0.1.7.
 
 ## Request Root-Cause Analysis
 

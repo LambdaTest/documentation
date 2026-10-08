@@ -1,5 +1,5 @@
 FROM debian:bookworm-slim
-ARG ROOK_VERSION=0.1.3
+ARG ROOK_VERSION=0.1.7
 RUN apt-get update && apt-get install -y --no-install-recommends \
     bash ca-certificates curl jq tar gzip git \
     && curl -fsSL https://raw.githubusercontent.com/LambdaTest/rook/main/install.sh \

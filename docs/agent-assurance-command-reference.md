@@ -663,12 +663,123 @@ rook mcp approve <name> [--origin project|discovered] [--json]
 
 **Notes**
 
-- For stdio servers, place the server command after <code>--</code> so its flags are not parsed as Rook flags.
-- Only <code>stdio</code> MCP servers are executable in the current release. <code>http</code>, <code>sse</code>, and <code>ws</code> definitions can be stored and listed but are marked <code>unsupported-transport</code> and are not enabled or called.
-- Project and discovered definitions require explicit approval before use. Review the server definition and every exposed tool first.
-- A verifier must not call a state-changing tool (for example <code>issue_refund</code>) to check whether state exists; that would create the state it claims to observe.
-- Use variable references for headers and environment values. <code>rook mcp get</code> leaves references unexpanded.
-- A direct MCP profile cannot currently invoke the agent under test. Use an HTTP or command adapter. Enabled stdio servers remain useful as Rook tools for discovery or independent read-only verification.
+#### Real-world verification example {#mcp-real-world-verification-example}
+
+A refund agent says it issued a refund. Configure a separate MCP server that has a read-only <code>get_refund_status</code> tool:
+
+~~~bash
+rook mcp add refund-reader --scope project -- refund-mcp-server --read-only
+rook mcp approve refund-reader --origin project
+rook mcp enable refund-reader
+~~~
+
+Review the server definition and every exposed tool before approval. A verifier must not call <code>issue_refund</code> to check whether a refund exists; that would create the state it claims to observe.
+
+#### Trust and state {#mcp-trust-and-state}
+
+Project and discovered MCP definitions require explicit approval. Enable/disable controls project usability; approval records trust in the reviewed definition. A changed definition may require review again.
+
+Use variable references for headers and environment values. <code>rook mcp get</code> leaves references unexpanded so inspection does not reveal the secret.
+
+#### MCP Targets and Profile Hooks {#mcp-mcp-targets-and-profile-hooks}
+
+Rook invocation profiles are script-based. To test an agent reached through MCP, describe its client flow to <code>/profile add</code>; Rook generates the <code>execute</code> hook that performs the call.
+
+Enabled MCP servers in this command remain Rook tools for discovery or independent read-only verification. That registry is separate from the profile hook used to invoke the agent under test.
+
+### /doctor {#doctor}
+
+Use <code>/doctor</code> as the first diagnostic when Rook cannot authenticate, select a project, reach a service, or start normal work.
+
+<img loading="lazy" src={require('../assets/images/rook/commands/rook-command-doctor.png').default} alt="Current Rook doctor command help" width="2200" height="760" className="doc_img"/>
+
+#### Syntax {#doctor-syntax}
+
+~~~text
+/doctor
+/doctor --session <session-id>
+~~~
+
+From a shell:
+
+~~~bash
+rook doctor
+rook doctor --session <session-id>
+~~~
+
+Doctor is intentionally ungated. It remains available when identity, project, connectivity, update, or budget state would block another command.
+
+#### Output {#doctor-output}
+
+Doctor reports:
+
+- Exact Rook and Node.js versions.
+- Workspace path and configured environment.
+- Controller and API URLs, each with an independent reachability probe.
+- Derived identity and authentication status.
+- Active project, interaction mode, and TTY state.
+- Overall connectivity state derived from identity and the two service probes.
+
+A service that returns an HTTP refusal is still reachable. Doctor distinguishes “the service answered” from “the current credential or project may use it.” It does not test the agent endpoint in an invocation profile; use <code>/profile test</code> for that.
+
+Doctor output can contain local paths, account state, and hostnames. Review it before attaching it to a public issue.
+
+Use <code>--session</code> with a recorded Rook session ID to locate its diagnostic files. This does not probe that session's server-side registration, and a session ID is not the same as a scenario run ID.
+
+### /update {#update}
+
+Use <code>/update</code> to check for a newer public Rook release. In 0.1.5 it can also perform an upgrade for a recognized global npm or recorded shell installation, so treat it as an installation-changing command, not a read-only version check.
+
+<img loading="lazy" src={require('../assets/images/rook/commands/rook-command-update.png').default} alt="Rook update command help showing auto and JSON forms" width="2200" height="920" className="doc_img"/>
+
+#### Syntax {#update-syntax}
+
+```text
+/update
+/update auto
+/update --json
+```
+
+The shell form is <code>rook update</code> with the same argument and option.
+
+Public releases use semantic versions such as <code>0.1.5</code>. A recognized npm installation is updated at its recorded prefix; a recognized shell installation uses its recorded directory. Homebrew installations print the appropriate <code>brew upgrade</code> command instead. Project-local npm copies, older shell installs without a usable record, and ambiguous installations can require manual instructions. Review the output and verify <code>rook --version</code> afterward.
+
+If you previously chose “never ask again” in the TUI update notice, run <code>/update auto</code> to re-enable automatic notices.
+
+
+
+The latest public release checked on October 8, 2026 is [0.1.7](https://github.com/LambdaTest/rook/releases/tag/v0.1.7). Use the installed command's help for version-specific options. If an npm 0.1.1 or 0.1.2 install cannot update, follow the [public-registry repair command](/support/docs/rook-installation/#repair-an-npm-011-or-012-installation). Windows users can follow [PowerShell setup and upgrades](/support/docs/rook-installation/#windows).
+
+## Export Diagnostic Logs {#export}
+
+Export a local diagnostic bundle when a support investigation needs more than the error message. The shell command is <code>rook export logs</code>; in the TUI use <code>/export logs</code>.
+
+<img loading="lazy" src={require('../assets/images/rook/commands/rook-command-export.png').default} alt="Rook 0.1.5 interactive export help with output path and session selection options" width="2200" height="1000" className="doc_img"/>
+
+```bash
+rook export logs --out ./rook-diagnostics.zip
+```
+
+| Option | Purpose |
+| --- | --- |
+| <code>--out &lt;path&gt;</code> | Destination directory, or an archive ending in <code>.zip</code> or <code>.tgz</code>. |
+| <code>--session &lt;id&gt;</code> | Also include the selected session transcript. |
+| <code>--all-sessions</code> | Include every recorded session for this project. |
+
+Use <code>rook doctor --session &lt;session-id&gt;</code> to identify relevant paths first. Start with the smallest useful bundle. Export does not upload the files, but the bundle can contain paths, session text, and sensitive target data. Review and redact before sharing; do not publish home credentials or raw transcripts.
+
+## Migration From Older Examples
+
+| Older syntax | Rook 0.1.5 |
+|---|---|
+| <code>--entity</code> | Select with <code>rook project use</code> and <code>rook agent use</code> before the command. |
+| <code>profile list</code>, <code>agent list</code> | Use bare <code>profile</code> or <code>agent</code>. |
+| <code>profile edit</code>, <code>profile curl</code>, <code>profile rm</code> | Use <code>profile fix</code>, <code>show</code>, or deliberately edit the plain files. These subcommands are absent. |
+| Fixed <code>kind/invoke/result</code> profile YAML | Generate reviewable <code>hooks</code> scripts with <code>profile add</code>. |
+| <code>explore --instruction</code>, <code>--all</code> | Supply guidance after <code>--</code>; use current help for unattended approvals. |
+| <code>generate --no-validate</code> | Removed. Review generated scenarios and current runnability. |
+| <code>run --no-narrative</code> | Removed. |
+| <code>ui</code> for a local server | Use <code>ui --local</code>; bare <code>ui</code> opens the hosted app. |
 
 ### /budget {#budget}
 

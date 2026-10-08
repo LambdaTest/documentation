@@ -19,7 +19,13 @@ Rook has two browser-based review interfaces: a **local UI** served by the CLI a
 
 Open the hosted Web UI at [rook.lambdatest.com/projects](https://rook.lambdatest.com/projects). Use the same account and organization as your Rook CLI workspace.
 
-This walkthrough covers the local viewer and the hosted Web UI using a Rook 0.1.3 sample run. Screenshots show only the visible webpage, without browser controls or desktop content. Click or tap a screenshot to enlarge it. Both walkthroughs use the public triage sample from the [quickstart](/support/docs/agent-assurance-quickstart/).
+Both interfaces were checked on September 25, 2026. The local screenshots use saved CommerceCare demo results with synthetic orders and customers. The hosted screenshots use the Rook 0.1.3 triage run from the [quickstart](/support/docs/agent-assurance-quickstart/), recorded on September 11. They are different examples, not two views of the same execution. Screenshot dates and agent versions identify those saved records, not the installed CLI version.
+
+Browser screenshots show only the visible webpage, without browser controls or desktop content; the Projects image is limited to the sample project's entry. The TUI capture shows only terminal content. Click or tap a screenshot to enlarge it.
+
+:::note Local UI rollout
+The redesigned local UI below ships in public releases from **0.1.6** and was checked again in **0.1.7**. Public 0.1.5 and earlier have the single-page viewer. If your screen differs, check `rook --version` and [available public updates](/support/docs/rook-installation/), or see [the earlier layout](#earlier-local-ui) below.
+:::
 
 ## Choose Your UI {#choose-your-ui}
 
@@ -90,7 +96,21 @@ Scroll to **files** for the records and evidence saved for that scenario. Open a
 
 <img loading="lazy" src={require('../assets/images/rook/rook-local-evidence.png').default} alt="Local result evidence file list with the scenario records and judge artifact available for inspection" className="doc_img"/>
 
-A missing file or unknown value is not a successful observation. Keep the original run directory when investigating incomplete evidence, and review file contents for secrets before sharing them. To share with teammates, use an uploaded normal run's hosted URL or an approved, sanitized evidence bundle—not the loopback URL.
+<img loading="lazy" src={require('../assets/images/rook/rook-local-response.png').default} alt="Local Response drawer showing the CommerceCare transcript and recorded response.json" width="1440" height="900" className="doc_img"/>
+
+**Artefacts** lists attached outputs and supporting evidence, not every file in the run directory. Click **View** to inspect a file and the list's return control to go back. In this example, `collect.json` and `judge-working.json` are present. `hooks.json`, `snapshot.yaml`, and nested internal files remain available on disk but are not listed here. See [Workspace Files](/support/docs/rook-workspace-files/) for their locations.
+
+<img loading="lazy" src={require('../assets/images/rook/rook-local-evidence.png').default} alt="Local Artefacts drawer listing collect.json and judge-working.json with View buttons" width="1440" height="900" className="doc_img"/>
+
+Large or unsupported files may offer a download instead of an inline preview. HTML and SVG are not rendered as active pages. Keep the original run directory when investigating incomplete evidence, and review file contents for secrets before sharing them. To share with teammates, use an uploaded normal run's hosted URL or an approved, sanitized evidence bundle—not the loopback URL.
+
+### If You Still Have the Earlier Local UI {#earlier-local-ui}
+
+Public CLI 0.1.5 and earlier use a dark, single-page agent view: scroll through profiles, features, scenarios, and runs; result pages have criteria, request/response sections, and a files list. That is an older viewer, not a missing hosted login. The redesigned viewer uses the same `rook ui --local` command; no separate frontend install is needed in a packaged release.
+
+After upgrading, open the URL printed by the command and navigate from **Agents**. Old `/agent/…` or preview `/next/…` bookmarks do not preserve the previous detail route. If the page says viewer assets are missing, reinstall the appropriate complete CLI package; signing in or syncing cannot add the missing UI files.
+
+If the page stops updating or shows a connection warning, check that the serving command or TUI is still running. Restart `rook ui --local` from the same workspace if it exited, and use the newly printed URL. Previously displayed data may remain on screen after a connection failure; it does not prove the latest workspace changes were loaded. Do not rerun the target just to restore the viewer.
 
 ## Open the Right Environment
 
@@ -357,7 +377,7 @@ Start with **Goal sent to the agent**. In this example it is <code>please look a
 
 Each criterion shows its ID, statement, and check type, such as <code>regex</code> or <code>llm_judge</code>. These are planned checks, not passing verdicts. Confirm that the target profile will expose enough evidence to judge them, especially criteria about tool calls or external state changes.
 
-The **Definition** panel contains the feature, class, category, criterion count, repeat count, timeout when recorded, multi-turn setting, and input/output types where specified. A missing timeout display does not promise unlimited execution; check the CLI and profile configuration.
+The **Definition** panel contains the feature, class, category, criterion count, timeout when recorded, multi-turn setting, and input/output types where specified. A missing timeout display does not promise unlimited execution; check the CLI and profile configuration.
 
 #### Optional Sections {#scenario-details-optional-sections}
 
