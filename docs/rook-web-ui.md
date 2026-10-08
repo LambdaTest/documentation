@@ -24,7 +24,7 @@ Both interfaces were checked on September 25, 2026. The local screenshots use sa
 Browser screenshots show only the visible webpage, without browser controls or desktop content; the Projects image is limited to the sample project's entry. The TUI capture shows only terminal content. Click or tap a screenshot to enlarge it.
 
 :::note Local UI rollout
-The redesigned local UI below was verified in CLI build `f8ab6fc6` on September 25. The public npm release was still **0.1.5**, which has the earlier single-page viewer. If your screen differs, check `rook --version` and [available public updates](/support/docs/rook-installation/). Do not expect reinstalling 0.1.5 to enable the redesign. See [the earlier layout](#earlier-local-ui) below while rollout is pending.
+The redesigned local UI below ships in public releases from **0.1.6** and was checked again in **0.1.7**. Public 0.1.5 and earlier have the single-page viewer. If your screen differs, check `rook --version` and [available public updates](/support/docs/rook-installation/), or see [the earlier layout](#earlier-local-ui) below.
 :::
 
 ## Choose Your UI {#choose-your-ui}
@@ -140,7 +140,7 @@ Large or unsupported files may offer a download instead of an inline preview. HT
 
 ### If You Still Have the Earlier Local UI {#earlier-local-ui}
 
-Public CLI 0.1.5 uses a dark, single-page agent view: scroll through profiles, features, scenarios, and runs; result pages have criteria, request/response sections, and a files list. That is an older viewer, not a missing hosted login. The redesigned viewer uses the same `rook ui --local` command; no separate frontend install is needed in a packaged release.
+Public CLI 0.1.5 and earlier use a dark, single-page agent view: scroll through profiles, features, scenarios, and runs; result pages have criteria, request/response sections, and a files list. That is an older viewer, not a missing hosted login. The redesigned viewer uses the same `rook ui --local` command; no separate frontend install is needed in a packaged release.
 
 After upgrading, open the URL printed by the command and navigate from **Agents**. Old `/agent/…` or preview `/next/…` bookmarks do not preserve the previous detail route. If the page says viewer assets are missing, reinstall the appropriate complete CLI package; signing in or syncing cannot add the missing UI files.
 
@@ -416,7 +416,7 @@ Start with **Goal sent to the agent**. In this example it is <code>please look a
 
 Each criterion shows its ID, statement, and check type, such as <code>regex</code> or <code>llm_judge</code>. These are planned checks, not passing verdicts. Confirm that the target profile will expose enough evidence to judge them, especially criteria about tool calls or external state changes.
 
-The **Definition** panel contains the feature, class, category, criterion count, repeat count, timeout when recorded, multi-turn setting, and input/output types where specified. A missing timeout display does not promise unlimited execution; check the CLI and profile configuration.
+The **Definition** panel contains the feature, class, category, criterion count, timeout when recorded, multi-turn setting, and input/output types where specified. A missing timeout display does not promise unlimited execution; check the CLI and profile configuration.
 
 #### Optional Sections {#scenario-details-optional-sections}
 

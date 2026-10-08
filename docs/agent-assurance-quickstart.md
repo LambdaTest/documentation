@@ -133,14 +133,14 @@ curl -fsSL https://raw.githubusercontent.com/LambdaTest/rook/main/install.sh | b
 ```
 
 ```bash
-# npm (use Node.js 22 or newer)
+# npm (use Node.js 20 or newer)
 npm install -g @testmuai/rook
 ```
 
 PowerShell on Windows x64:
 
 ```powershell
-npm.cmd install -g @testmuai/rook@0.1.5
+npm.cmd install -g @testmuai/rook@0.1.7
 ```
 
 Then check your installation:
@@ -375,7 +375,7 @@ In the verified smoke test, the selected scenario passed with four observed tool
 
 #### Local UI: Review a Result {#local-ui-example}
 
-The redesigned local result has **Acceptance criteria** filters and an **Evidence** drawer for request, response, verdict, and artifacts. This screenshot uses a separate saved CommerceCare demo (SC-006), not the triage execution above. It illustrates one failed requirement and two unverifiable criteria; your scenario IDs and outcomes will differ. Public CLI 0.1.5 still uses the earlier scrolling layout—see the [rollout and navigation note](/support/docs/rook-web-ui/#earlier-local-ui).
+The redesigned local result has **Acceptance criteria** filters and an **Evidence** drawer for request, response, verdict, and artifacts. This screenshot uses a separate saved CommerceCare demo (SC-006), not the triage execution above. It illustrates one failed requirement and two unverifiable criteria; your scenario IDs and outcomes will differ. Public 0.1.6 and later include this viewer; 0.1.5 and earlier use the earlier scrolling layout—see the [rollout and navigation note](/support/docs/rook-web-ui/#earlier-local-ui).
 
 <img loading="lazy" src={require('../assets/images/rook/rook-local-result.png').default} alt="Redesigned local result for the separate CommerceCare SC-006 demo, with failed and unverifiable criteria" width="1440" height="900" className="doc_img"/>
 

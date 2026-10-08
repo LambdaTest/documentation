@@ -151,7 +151,7 @@ Keep Rook, Node.js, the checkout, and local target processes in the same environ
 
 ### npm reports a Node.js engine error
 
-Homebrew and shell installations carry a matching Node.js runtime. The npm installation requires npm to run under Node.js 22 or newer:
+Homebrew and shell installations carry a matching Node.js runtime. The npm installation requires npm to run under Node.js 20 or newer (22 for Rook 0.1.6 and earlier):
 
 <VerifiedTag value="Verified" />
 

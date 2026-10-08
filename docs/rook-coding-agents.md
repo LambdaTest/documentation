@@ -41,7 +41,7 @@ With Node.js 22+ and npm:
 npx @testmuai/rook-skill@latest
 ```
 
-This installs for Claude Code, Codex, and Gemini CLI under your home directory. To avoid installing all three, follow the selected client's page and use its `--agent` flag. The currently published skill package is 0.1.0; its version is independent of the CLI, whose latest public release checked on September 25, 2026 is 0.1.5.
+This installs for Claude Code, Codex, and Gemini CLI under your home directory. To avoid installing all three, follow the selected client's page and use its `--agent` flag. `@latest` installs the current skill package. Its version is independent of the CLI's; on October 8, 2026 both are at 0.1.7.
 
 On Windows, complete [Rook's native setup](/support/docs/rook-installation/#windows) first and use `npx.cmd` for the installer in PowerShell. Each coding client has its own platform requirements. The manual-copy recipes and CI examples in these docs use Bash; run them in a supported Bash environment such as WSL, keeping the client and skill in that same environment.
 
@@ -147,7 +147,7 @@ Use these follow-ups in the same conversation after checking the project, agent,
 | When you need to… | Prompt to send | Check before continuing |
 | --- | --- | --- |
 | Refresh changed features | “Use Rook to inspect the changed refund implementation and current discovery. Propose focused rediscovery and refresh only stale scenario coverage after I approve the credit use. Show the definition diff; do not run tests.” | Existing scenarios remain reviewable; a forced regeneration is a separate deliberate choice. |
-| Broaden test coverage | “Use Rook to propose functional boundary and integration tests, non-functional reliability tests, and adversarial prompt-injection or PII-leakage tests for this agent. Explain what can be observed, then ask before paid generation.” | Class/category coverage and measurable criteria; unsupported observations remain gaps. |
+| Broaden test coverage | “Use Rook to propose functional boundary and integration tests, non-functional quality tests, and adversarial prompt-injection or PII-leakage tests for this agent. Explain what can be observed, then ask before paid generation.” | Class/category coverage and measurable criteria; unsupported observations remain gaps. |
 | Curate the suite | “Use Rook to list scenarios, exclude SC-004 from future runs, and re-include SC-009. Confirm which IDs changed. Keep both on disk; do not permanently delete anything.” | Exclusion is reversible. For permanent deletion, request it separately and confirm the exact IDs. |
 | Choose a filtered run | “Use Rook to preview runnable adversarial scenarios tagged refunds. Show their IDs and any exclusions or capability gaps. Wait for approval before running only that selection.” | Exact selected IDs and count, not just a filter description; no unrelated scenarios. |
 | Manage target credentials | “Use Rook to identify this profile's required environment-variable names and check masked configuration. Guide me through setting or rotating them securely; never reveal values in chat, logs, or committed files.” | Rook account credentials and target credentials are separate. Confirm scope before removing a stored variable. |

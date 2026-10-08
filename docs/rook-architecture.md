@@ -301,7 +301,7 @@ Cloud state does not silently overwrite the local workspace. Ahead, behind, and 
 
 ## Trust and Secret Boundaries
 
-- Profile files store `${VARIABLE}` references; values remain in the local Rook home.
+- Profile files name the environment variables their hooks read, under `env`; values set with `env set` stay in the global Rook home. `sync` uploads profiles and hook scripts as written, so neither should contain a literal secret.
 - Hook scripts execute locally and receive short-lived Rook context through `ROOK_*` variables.
 - Repository-declared or discovered MCP servers require explicit approval before Rook starts them.
 - Permission grants are scoped to operations and phases so approval during exploration does not automatically authorize judging or CI.

@@ -90,7 +90,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
 
 # Generate and Manage Agent Assurance Test Scenarios
 
-Rook generates scenarios from the active agent's discovered features, tools, policies, examples, and known data. A scenario is a plain YAML file containing the exact goal sent to the agent, acceptance criteria, forbidden behavior, observation requirements, timeout, repeat count, and tags.
+Rook generates scenarios from the active agent's discovered features, tools, policies, examples, and known data. A scenario is a plain YAML file containing the exact goal sent to the agent, acceptance criteria, forbidden behavior, observation requirements, timeout, and tags.
 
 ## Generate the Default Suite
 
@@ -126,15 +126,15 @@ Use the arrow keys and Enter to **proceed** with writing, **discard** the plan w
 
 ## Scenario Taxonomy
 
-Rook has three classes and 18 categories.
+Rook has three classes and 16 categories.
 
 | Class | Categories | Purpose |
 |---|---|---|
 | `functional` | `happy_path`, `negative`, `boundary`, `integration`, `state_context` | Main behavior, error handling, limits, dependencies, and conversation memory |
-| `non_functional` | `performance`, `token_economy`, `reliability`, `quality` | Latency, cost, repeatability, completeness, tone, and format |
+| `non_functional` | `token_economy`, `quality` | Cost, completeness, tone, and format |
 | `adversarial` | `prompt_injection`, `jailbreak`, `data_exfiltration`, `pii_leakage`, `harmful_content`, `hallucination`, `hijacking`, `policy_violation`, `technical_injection` | Attacks, unsafe behavior, leakage, invention, off-task behavior, and injection |
 
-Performance and reliability scenarios normally repeat because one sample does not establish latency or consistency.
+A plain `generate` covers the functional and adversarial classes. Ask for `non_functional` with `--class`; a `token_economy` scenario runs only when the profile reports usage. Since 0.1.7, Rook no longer generates the earlier `performance` and `reliability` categories.
 
 ## Control the Suite Size and Focus
 
@@ -193,7 +193,7 @@ Use `--force` to regenerate even when the active agent appears current:
 /generate --force --total 20
 ```
 
-Review the generated scenarios and their required evidence. The older `--no-validate` flag is not available in 0.1.3.
+Review the generated scenarios and their required evidence. The older `--no-validate` flag is not available in 0.1.7.
 
 Select the intended project and agent with <code>rook project use &lt;id&gt;</code> and <code>rook agent use &lt;id&gt;</code> before headless commands.
 
@@ -209,7 +209,7 @@ Launch `rook` in your workspace, then list scenarios inside its interactive TUI:
 
 <img loading="lazy" src={require('../assets/images/rook/guides/rook-tui-scenarios.png').default} alt="Rook interactive scenario listing with twelve CommerceCare scenarios, runnability, classes, categories, feature IDs, criteria counts, and the TUI input" width="2200" height="1520" className="doc_img"/>
 
-The first line summarizes runnability against the active profile. Each scenario shows its ID, class, category, feature, and criteria count; repeated scenarios also show their repeat count. This saved demo has twelve runnable scenarios. Runnable means they can be attempted, not that they have passed.
+The first line summarizes runnability against the active profile. Each scenario shows its ID, class, category, feature, and criteria count. This saved demo has twelve runnable scenarios. Runnable means they can be attempted, not that they have passed.
 
 From a regular shell instead:
 
@@ -272,7 +272,6 @@ verification_requires:
     op: issue_refund
 executable: true
 skip_reason: null
-repeat: 1
 timeout_seconds: 120
 multi_turn: true
 setup_messages: []
@@ -288,7 +287,6 @@ Important fields:
 - `output_kind` prevents text judging from pretending to assess a file or image.
 - `verification_requires` names evidence dependencies.
 - `preconditions` document fixtures Rook expects but does not create automatically.
-- `repeat` controls repeated samples.
 - `multi_turn`, `setup_messages`, and `max_turns` bound a conversation.
 - `excluded` records a user's durable decision not to run the scenario.
 
@@ -359,7 +357,6 @@ When editing manually:
 - Add `verification_requires` for effects that need an external read.
 - Set `output_kind` for generated files and images.
 - Keep secret values out of goals, fixtures, and expected output.
-- Increase `repeat` only when multiple samples answer a real reliability or performance question.
 
 Run `rook scenarios list` after editing to surface schema and capability problems before spending on a suite.
 
