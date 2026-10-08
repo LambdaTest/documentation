@@ -43,11 +43,11 @@ const docsSidebar = [
   {
     type: 'category', label: 'App Automation', collapsible: true, collapsed: true,
     items: [
+      { type: 'link', label: 'Mobilewright Testing', href: '/docs/mobilewright-overview/' },
       { type: 'link', label: 'Appium Testing', href: '/docs/getting-started-with-appium-testing/' },
       { type: 'link', label: 'Espresso Testing', href: '/docs/getting-started-with-espresso-testing/' },
       { type: 'link', label: 'XCUI Testing', href: '/docs/getting-started-with-xcuitest/' },
       { type: 'link', label: 'Flutter Testing', href: '/docs/appium-flutter-integration/' },
-      { type: 'link', label: 'Mobilewright Testing', href: '/docs/mobilewright-overview/' },
       { type: 'link', label: 'Virtual Devices', href: '/docs/app-automation-on-emulators-simulators/' },
     ],
   },
