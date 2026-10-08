@@ -3042,6 +3042,39 @@ module.exports = {
     ],
   ],
 
+  MobilewrightTestingSidebar: [
+    {
+      type: "link",
+      label: "Back",
+      href: "/docs/",
+      customProps: {
+        className: "back-to-main-menu",
+      },
+    },
+    [
+      {
+        type: "doc",
+        label: "Overview",
+        id: "mobilewright-overview",
+      },
+      {
+        type: "doc",
+        label: "Run Your First Test",
+        id: "getting-started-with-mobilewright-testing",
+      },
+      {
+        type: "doc",
+        label: "Set Up Test Environment",
+        id: "mobilewright-set-up-test-environment",
+      },
+      {
+        type: "doc",
+        label: "References",
+        id: "mobilewright-references",
+      },
+    ],
+  ],
+
   VisualRegressionTestingSidebar: [
     {
       type: 'link',

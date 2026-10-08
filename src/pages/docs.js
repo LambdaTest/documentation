@@ -138,6 +138,7 @@ export default function Home() {
             <Card href="/support/docs/getting-started-with-espresso-testing/" title="Espresso Testing" desc="Android UI testing with Espresso" />
             <Card href="/support/docs/getting-started-with-xcuitest/" title="XCUI Testing" desc="iOS UI testing with XCUITest" />
             <Card href="/support/docs/getting-started-with-flutter-dart-android-automation/" title="Flutter Testing" desc="Automate Flutter apps on devices" />
+            <Card href="/support/docs/mobilewright-overview/" title="Mobilewright Testing" desc="Playwright-style tests on real devices" />
             <Card href="/support/docs/app-automation-on-emulators-simulators/" title="Virtual Devices" desc="Test on emulators and simulators" />
           </Section>
 
