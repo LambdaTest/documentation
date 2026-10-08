@@ -244,7 +244,7 @@ rook report <run-id>
 rook report <run-id> --json
 ```
 
-Without a run ID, <code>report</code> reads the latest local run. In 0.1.3, the JSON record contains <code>run_id</code>, <code>name</code>, <code>dir</code>, and <code>report</code>, whose <code>totals</code> include planned, executed, passed, failed, unverifiable, unjudged, and not-run counts.
+Without a run ID, <code>report</code> reads the latest local run. In 0.1.7, the JSON record contains <code>run_id</code>, <code>name</code>, <code>dir</code>, and <code>report</code>, whose <code>totals</code> include planned, executed, passed, failed, unverifiable, unjudged, and not-run counts.
 
 A successful report command means the report was read; it does **not** mean the agent passed. See the [CI gate example](/support/docs/agent-assurance-ci-cd/) for explicit completion and result checks.
 

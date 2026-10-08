@@ -135,7 +135,7 @@ jobs:
           set -euo pipefail
           curl -fsSL https://raw.githubusercontent.com/LambdaTest/rook/main/install.sh \
             -o "$RUNNER_TEMP/install-rook.sh"
-          bash "$RUNNER_TEMP/install-rook.sh" --version 0.1.3 --dir "$RUNNER_TEMP/rook-bin"
+          bash "$RUNNER_TEMP/install-rook.sh" --version 0.1.7 --dir "$RUNNER_TEMP/rook-bin"
           echo "$RUNNER_TEMP/rook-bin" >> "$GITHUB_PATH"
           command -v jq
       - name: Run the reviewed suite
@@ -157,7 +157,7 @@ jobs:
 
 Change the `main` branch condition if your reviewed default branch has another name. The manual trigger avoids exposing credentials to untrusted pull-request code. Do not replace it with `pull_request_target` plus a checkout of an untrusted PR. Serialize jobs that share test fixtures.
 
-The workflow pins Rook CLI to the public 0.1.3 release and installs it only in the job's temporary directory. Action major versions are shown for readability; review and pin action commit SHAs for your organization's production policy. The hosted Ubuntu runner provides jq. A self-hosted runner needs the same tools and the minimum runtime requirements of the selected actions.
+The workflow pins Rook CLI to the public 0.1.7 release and installs it only in the job's temporary directory. Action major versions are shown for readability; review and pin action commit SHAs for your organization's production policy. The hosted Ubuntu runner provides jq. A self-hosted runner needs the same tools and the minimum runtime requirements of the selected actions.
 
 ## Run and Check the Workflow
 

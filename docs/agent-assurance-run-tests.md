@@ -239,7 +239,7 @@ After approval, each active scenario shows its current phase. This is an actual 
 
 The second command continues the same run after delayed evidence is ready. <code>--resume</code> instead creates a new run and carries compatible completed work forward. Rook owns judging; the other phases run your profile hooks.
 
-See [phases and hooks](/support/docs/rook-profiles-and-hooks/#lifecycle) for prerequisites and state. The old <code>--no-narrative</code> option is not available in 0.1.3.
+See [phases and hooks](/support/docs/rook-profiles-and-hooks/#lifecycle) for prerequisites and state. The old <code>--no-narrative</code> option is not available in 0.1.7.
 
 ## Request Root-Cause Analysis
 

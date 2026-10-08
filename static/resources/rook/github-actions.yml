@@ -31,7 +31,7 @@ jobs:
           set -euo pipefail
           curl -fsSL https://raw.githubusercontent.com/LambdaTest/rook/main/install.sh \
             -o "$RUNNER_TEMP/install-rook.sh"
-          bash "$RUNNER_TEMP/install-rook.sh" --version 0.1.3 --dir "$RUNNER_TEMP/rook-bin"
+          bash "$RUNNER_TEMP/install-rook.sh" --version 0.1.7 --dir "$RUNNER_TEMP/rook-bin"
           echo "$RUNNER_TEMP/rook-bin" >> "$GITHUB_PATH"
           command -v jq
       - name: Run the reviewed suite
