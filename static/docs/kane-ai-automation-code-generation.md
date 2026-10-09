@@ -10,62 +10,49 @@ Click the `Generate New Code` button to go to code generation page where you can
 
 ## Supported Frameworks and Languages
 
-The table below shows the frameworks and languages KaneAI can generate code in, and the experience each is available under.
+The table below shows the frameworks and languages KaneAI can generate code in, and how each is available in Classic and New Experience.
 
       Framework
       Language
-      Availability
       Classic
       New Experience
 
       Selenium
       Python
-      Generally available (default)
-      &#10003;
-      &#10007;
+      Available (default)
+      Not available
 
       Java
       Available on request &#42;
-      &#10003;
-      &#10007;
+      Not available
 
       Playwright
       Python
       Available on request &#42;
-      &#10003;
-      &#10003;
+      Available
 
       C#
       Available on request &#42;
-      &#10003;
-      &#10007;
+      Not available
 
       JavaScript
       Available on request &#42;
-      &#10007;
-      &#10003;
+      Available
 
       Cypress
       JavaScript
       Coming soon
-      &#10007;
-      &#10007;
 
       WebdriverIO
       JavaScript
       Coming soon
-      &#10007;
-      &#10007;
 
       Appium
       Python
-      Generally available (default)
-      &#10003;
-      &#10007;
+      Available (default)
+      Coming soon
 
-**&#10003;** Supported &nbsp;&nbsp; **&#10007;** Not available. New Experience currently covers Desktop Web only. Mobile is supported in Classic.
-
-**Available on request.** Please reach out to Support to enable it. These features are partially rolled out and will soon be generally available for all users.
+**Available on request.** Please reach out to Support to enable it.
 
 ## Understanding the Code Tab
 

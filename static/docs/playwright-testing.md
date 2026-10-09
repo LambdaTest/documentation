@@ -258,6 +258,64 @@ You can view the details of Playwright test session that you just executed.
 
 For example, the below screenshot shows a test execution details of Playwright test like Test Name, Test ID, selected configurations, test logs, basic info, input config, and test session video.
 
+## Run Playwright BDD Tests
+
+[playwright-bdd](https://github.com/vitalets/playwright-bdd) lets you run Gherkin `.feature` files on Playwright's test runner. On TestMu AI, the `@lambdatest/playwright-node-sdk` runs the generated specs across the browser and OS matrix defined in your `lambdatest.yml`.
+
+**Sample repo**
+ View on GitHub
+
+### How Playwright BDD Works
+
+Playwright BDD converts your Gherkin into runnable Playwright specs, then the SDK runs them on the cloud:
+
+1. Write `.feature` files and map each step to a Playwright action in the `steps/` folder.
+2. `npx bddgen` generates Playwright spec files into the `.features-gen` folder.
+3. The Playwright Node SDK runs those specs on TestMu AI using the configuration in `lambdatest.yml`.
+
+### Running Your BDD Tests
+
+Clone the sample repository, then install the dependencies, which include `playwright-bdd` and `@lambdatest/playwright-node-sdk`:
+
+```bash
+npm install
+```
+
+> Verified with `playwright-bdd@8.3.1`, `@playwright/test@1.53.0`, and `@lambdatest/playwright-node-sdk@1.0.2` (October 2026).
+
+Set your TestMu AI **Username** and **Access Key** as environment variables (see [Prerequisites](#prerequisites)), then generate the specs and run them on the cloud grid in a single command:
+
+```bash
+npx bddgen && npx playwright-node-sdk playwright test
+```
+
+Define your target browsers and operating systems in `lambdatest.yml`. For the full configuration, refer to the [Playwright BDD sample repository](https://github.com/LambdaTest/playwright-sample/tree/main/playwright-bdd).
+
+### Testing Locally Hosted Pages With Playwright BDD
+
+To run your Playwright BDD tests against locally hosted or firewalled pages, enable the tunnel under a `tunnelSettings` block in your `lambdatest.yml`:
+
+```yaml title="lambdatest.yml"
+tunnelSettings:
+  tunnel: true
+  # autostart: true
+  tunnelName: "tunnel-name"
+  # localdirectory: "./log"
+  verbose: true
+  loglevel: "debug"
+```
+
+Set `tunnel: true` to route traffic through the tunnel, and `tunnelName` to reuse an already-running tunnel by name. The `verbose` and `loglevel` keys control the tunnel's logging output. See [how to test locally hosted pages](/support/docs/testing-locally-hosted-pages/).
+
+### Viewing the BDD Results
+
+Each scenario appears on the TestMu AI Automation Dashboard with its name, status, logs, and session video.
+
+{/* TODO (screenshot): Save the Playwright BDD run from the dashboard to
+    ../assets/images/playwright-testing/playwright-bdd-execution.webp
+    Then replace this comment with:
+     */}
+
 ## Related Playwright guides
 
 - [Playwright WebView Testing](/support/docs/playwright-webview-test/) - automate WebView components using Playwright on TestMu AI.

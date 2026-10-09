@@ -7,13 +7,14 @@ Every HyperExecute job is configured by a [YAML file](/support/docs/deep-dive-in
 **Global Policies** let an organization admin define a rule once and have it govern every HyperExecute job across the projects they choose. The rule is applied when a job is submitted, so no developer has to touch their YAML.
 
 **BETA**
-Global Policies is currently in BETA. Phase 1 supports five YAML parameters, listed in [Supported parameters and modes](#supported-parameters-and-modes). More parameters and policy modes will follow.
+Global Policies is currently in BETA. Phase 1 supports seven YAML parameters, listed in [Supported parameters and modes](#supported-parameters-and-modes). More parameters and policy modes will follow.
 
 Creating, editing, and deleting policies is **admin-only**. Developers can see which policies acted on their jobs, but cannot change them.
 
 | What you want to do | Policy mode | Example |
 | :---- | :---- | :---- |
-| **Inject** a command into every job | `append` | Post a job's results to an internal API |
+| **Append** a command to every job | `append` | Post a job's results to an internal API after the developer's own commands |
+| **Prepend** a command to every job | `prepend` | Install a certificate before the developer's own commands |
 | **Force** a setting org-wide | `set` | Turn `failFast` on everywhere |
 | **Mandate** a practice | `require` | Caching must be configured in every job |
 | **Bound** a value | `constrain` | Cap max retries at 3 |
@@ -28,29 +29,32 @@ A rule defined as a JSON object with a small, fixed set of fields (same fields o
 - **Parameter:** The YAML parameter it governs.
 - **Mode:** What the rule does, derived automatically from the YAML parameter.
 - **Value:** The commands to inject, the value to force, or the bounds to enforce.
-- **Scope:** The projects it applies to — a list of selected projects, or `*` (all) with an `exclude` list.
-- **Severity:** `warn` or `error` — applied in `require` / `constrain` modes only.
-- **Enabled:** `true` / `false` — turn a policy off without deleting it.
+- **Scope:** The projects it applies to: a list of selected projects, or `*` (all) with an `exclude` list.
+- **Severity:** `warn` or `error`. Applied in `require` / `constrain` modes only.
+- **Enabled:** `true` / `false`. Turn a policy off without deleting it.
 
 ## Supported parameters and modes
 
-Phase 1 covers five YAML parameters. Each parameter has exactly one applicable mode — the mode follows from the parameter, and is shown as read-only when you create the policy.
+Phase 1 covers seven YAML parameters. The applicable mode follows from the parameter. For the two per-task command parameters (`post` and `afterEachScenario`) you also choose between `append` and `prepend`; the rest have exactly one mode. The mode is shown as read-only or offered as a toggle when you create the policy.
 
 | Parameter | Mode | What a policy does |
 | :---- | :---- | :---- |
 | [`globalPost`](/support/docs/deep-dive-into-hyperexecute-yaml/#globalpost) | `append` | Adds your commands after the job's own global post-run steps. If the job has no `globalPost` block, one is created. |
-| [`failFast`](/support/docs/deep-dive-into-hyperexecute-yaml/#failfast) | `set` | Forces the fail-fast setting — a maximum failure count and a failure level (scenario or test). |
+| [`post`](/support/docs/deep-dive-into-hyperexecute-yaml/#post) | `append` or `prepend` | Injects your commands into every task's `post` step, the cleanup that runs after each task inside its own test environment. `append` runs them **after** the developer's commands; `prepend` runs them **before**. If the task has no `post` block, one is created. Pair with **Always Run Post Step** to force the step to run even when the task failed. |
+| [`afterEachScenario`](/support/docs/deep-dive-into-hyperexecute-yaml/#aftereachscenario) | `append` or `prepend` | Injects your commands into every job's `afterEachScenario` step, the teardown that runs after every scenario, useful for clearing cookies, resetting databases, or capturing logs. `append` runs them **after** the developer's commands; `prepend` runs them **before**. If the job has no `afterEachScenario` block, one is created. |
+| [`failFast`](/support/docs/deep-dive-into-hyperexecute-yaml/#failfast) | `set` | Forces the fail-fast setting: a maximum failure count and a failure level (scenario or test). |
 | [`report`](/support/docs/deep-dive-into-hyperexecute-yaml/#report) | `set` | Forces reporting on or off. |
 | [`cacheKey`](/support/docs/deep-dive-into-hyperexecute-yaml/#cachekey) and [`cacheDirectories`](/support/docs/deep-dive-into-hyperexecute-yaml/#cachedirectories) | `require` | Requires that [caching](/support/docs/hyperexecute-how-smart-caching-boosts-tests-speed/) is configured, by checking that both parameters are present in the YAML. |
 | [`maxRetries`](/support/docs/deep-dive-into-hyperexecute-yaml/#maxretries) | `constrain` | Bounds the retry count within a range, so a runaway retry setting can't choke your concurrency. |
 
 ## How severity works
 
-The four modes split into two families, and that split decides whether severity applies at all.
+The modes split into two families, and that split decides whether severity applies at all.
 
 | Mode | Family | What it does | Severity? |
 | :---- | :---- | :---- | :---- |
-| `append` | **Changing** | Adds your commands after the developer's, in `globalPost`. | No |
+| `append` | **Changing** | Adds your commands **after** the developer's, in `globalPost`, `post`, or `afterEachScenario`. | No |
+| `prepend` | **Changing** | Adds your commands **before** the developer's, in `post` or `afterEachScenario`. | No |
 | `set` | **Changing** | Forces a setting to your value, whatever the developer wrote. | No |
 | `require` | **Checking** | The parameter must be present in the YAML. | Yes |
 | `constrain` | **Checking** | A numeric value must fall within a min/max range. | Yes |
@@ -59,8 +63,8 @@ The four modes split into two families, and that split decides whether severity 
 
 **Checking** policies inspect the job without modifying it. Because they can find a violation, they carry a severity:
 
-- `warn` — the **job runs**. The violation is shown to the developer and recorded for you. Use this to see who a rule would hit before you enforce it.
-- `error` — the submission is **rejected**. No job is created, and the developer gets a message naming the policy, the offending value, and the fix.
+- `warn`: the **job runs**. The violation is shown to the developer and recorded for you. Use this to see who a rule would hit before you enforce it.
+- `error`: the submission is **rejected**. No job is created, and the developer gets a message naming the policy, the offending value, and the fix.
 
 You choose severity when you create the policy, and you can move a policy from `warn` to `error` at any time.
 
@@ -70,8 +74,8 @@ Roll out a checking policy at `warn` first. You get the full list of jobs that w
 
 You can manage policies two ways:
 
-- **API** (recommended for automation) — create, update, enable/disable, and delete policies straight from your pipeline or Git. See [Manage policies with the API](#manage-policies-with-the-api).
-- **UI dashboard** — a form to create and view policies.
+- **API** (recommended for automation). Create, update, enable/disable, and delete policies straight from your pipeline or Git. See [Manage policies with the API](#manage-policies-with-the-api).
+- **UI dashboard**: a form to create and view policies.
 
 The Global Policies dashboard lives at **Org Settings → Org Product Preferences → HyperExecute → Global Policies**. The landing page lists every policy with its **Name**, **Parameter**, **Mode**, **Severity**, and an **Enabled/Disabled** toggle, along with a name search and per-row edit and delete actions.
 
@@ -79,25 +83,59 @@ Click **+ Add Policy** to open the create drawer. It has two steps.
 
 ### Step 1: Parameter Settings
 
-Give the policy a **name**, decide whether it starts **Enabled** or **Disabled**, and choose the **Parameter**. The **Mode** fills in automatically and is read-only — Global Post is always Append, Max Retries is always Constrain, and so on.
+Give the policy a **name**, decide whether it starts **Enabled** or **Disabled**, and choose the **Parameter**. The **Mode** fills in automatically. Max Retries is always Constrain, Report is always Set, and so on. For **Post** and **After Each Scenario**, pick **Append** (your commands run after the developer's) or **Prepend** (your commands run before).
 
 The rest of the form changes to match the parameter you picked.
 
-- **Global Post (Append)** — you are writing commands that run at the end of every job in scope. Because a command written for bash won't run on a Windows agent, commands are organised into per-OS tabs, **Linux** (default), **Win**, **Mac** etc. Add commands with **+ Add command**, drag to reorder them, and use the **Default** toggle to mark the OS block to use for any runner you haven't written a block for.
+- **Global Post (Append)**: you are writing commands that run at the end of every job in scope, on the global post-run step. Because a command written for bash won't run on a Windows agent, commands are organised into per-OS tabs, **Linux** (default), **Win**, **Mac** etc. Add commands with **+ Add command**, drag to reorder them, and use the **Default** toggle to mark the OS block to use for any runner you haven't written a block for.
   > **A single OS list applies everywhere:** If you fill in commands for just one OS, they're treated as universal and run on every job in scope.
-- **Max Retries (Constrain)** — set a **Min** and **Max** value. The range is capped at **0–5**, which is the executor's own ceiling. Then choose a **Severity**: Warn or Error.
-- **Report (Set)** — a simple on/off.
-- **Fail Fast (Set)** — a maximum failure count and a failure level (scenario or test).
-- **Cache Key & Directories (Require)** — a presence check with a severity.
+
+- **Post (Append or Prepend)**: commands that run as part of every task's own `post` step, inside the task environment. Pick **Append** to run them after the developer's commands, or **Prepend** to run them first. Turn on **Always Run Post Step** to force the step to run even when the task failed; otherwise it is skipped on failure, matching HyperExecute's default behaviour. Same per-OS structure as Global Post.
+
+- **After Each Scenario (Append or Prepend)**: commands that run after every scenario in every job in scope. Same per-OS structure and Append/Prepend choice as Post, but the commands fire at the end of each scenario rather than at the end of each task. Use this for clearing cookies, resetting fixtures, or capturing per-scenario logs.
+
+- **Max Retries (Constrain)**: set a **Min** and **Max** value. The range is capped at **0 to 5**, which is the executor's own ceiling. Then choose a **Severity**: Warn or Error.
+- **Report (Set)**: a simple on/off.
+- **Fail Fast (Set)**: a maximum failure count and a failure level (scenario or test).
+- **Cache Key & Directories (Require)**: a presence check with a severity.
 
 ### Step 2: Project Scope
 
-The **Project Scope** tab decides where the rule applies. Set the scope to **All Projects**, or pick a specific list. If a few projects need to be left out, switch on **Exclude Specific Projects**.
+The **Project Scope** tab decides where the rule applies. It has two controls that work together:
 
-The exclude list is your exception mechanism. If a team has a legitimate reason to deviate, exempt that project here rather than weakening the policy for everyone.
+1. The **Scope** dropdown picks the base set of projects the rule covers. **All Projects** means every project in your org. The other option is a specific list you choose by name.
+2. The **Exclude Specific Projects** toggle lets you leave a few projects out of that base set.
+
+Between them, you can set up any pattern: from "every project, no exceptions" to "just these projects, minus one."
+
+#### Including: All Projects or a specific list
+
+Keep the Scope dropdown on **All Projects** when the rule should apply to the whole org. Any new project you create later is covered automatically; you don't need to come back and add it. Use this for rules you want every team to follow (caching required, retry caps, forced reports).
+
+Pick the specific-list option when the rule should only apply to a few projects you choose. For example, trying a `maxRetries` cap on one team first, or a `post` policy that only makes sense for the projects publishing to a shared dashboard. Only the projects you tick are covered, and new projects you create later are **not** added automatically.
+
+#### Excluding projects from the chosen set
+
+Switch **Exclude Specific Projects** to **Yes** when you want to leave a few projects out of the Scope you picked. The **Add Excluded Projects** search appears below. Type a project name, then tick the ones you want to leave out. You can tick as many as you need.
+
+Use the exclude list for genuine exceptions. If one team has a real reason to opt out, add their project here instead of changing the rule for everyone. Keep the list short, because every entry is an exception someone has to remove later.
+
+#### Which combination to use
+
+| You want to… | Scope | Exclude Specific Projects |
+| :---- | :---- | :---- |
+| Cover every project, now and in future | All Projects | Off |
+| Cover every project, except a few | All Projects | On, with the projects to skip added |
+| Try a rule on a small, known list | Specific list | Off |
+| Cover a known list, but drop one or two | Specific list | On, with the projects to skip added |
+
+**Names in the UI, IDs in the API**
+In the UI, you pick projects by name and the form saves their IDs for you. In the API, you must send **project IDs** in both `scope.projects` and `scope.exclude`; see the [`scope` field notes](#policy-object-fields). IDs don't change if you rename a project, so the policy keeps targeting the same project.
 
 **No overlapping policies**
-**Two enabled policies can't govern the same parameter for the same project.** If a new policy's scope overlaps an existing one on the same parameter, the policy is rejected and the conflicting policy is named in the response. Narrow the scope of one of them, or disable the other.
+**Two enabled policies can't apply to the same parameter for the same project.** If a new policy's scope overlaps an existing one on the same parameter, the new policy is rejected and the response names the policy it clashed with. Fix it by making one scope smaller, or by disabling the other policy.
+
+The check looks at the **final** project set: Scope minus Exclude. So "All Projects, exclude project A" and a specific-list policy that only covers project A do not overlap. But "All Projects" and a specific-list policy that includes project A do overlap.
 
 ## Manage existing policies
 
@@ -115,9 +153,9 @@ Global Policies is built so developers are never surprised and never stuck. A po
 
 On any job's detail page, the shield icon opens an **Applied Policies** panel listing the policies that acted on that job. It sits next to the **YAML** button in the job header, and again inside the YAML drawer.
 
-The panel header gives the count of policies that applied to the job. Each entry shows the policy name, its parameter and mode, an outcome badge — **applied**, **warned**, or **errored** — and a short message, for example "2 command(s) appended" or "caching is required org-wide: cacheKey is not set".
+The panel header gives the count of policies that applied to the job. Each entry shows the policy name, its parameter and mode, an outcome badge (**applied**, **warned**, or **errored**), and a short message, for example "2 command(s) appended" or "caching is required org-wide: cacheKey is not set".
 
-**Only policies that had an effect appear here.** A policy is listed when it appended something, warned, or errored. A check that passes is a no-op and is never shown — a Max Retries policy whose limit the job was already within passes silently.
+**Only policies that had an effect appear here.** A policy is listed when it appended something, warned, or errored. A check that passes is a no-op and is never shown. For example, a Max Retries policy whose limit the job was already within passes silently.
 
 ### Warnings
 
@@ -129,7 +167,7 @@ A checking policy at `error` severity rejects the submission, so no job is creat
 
 ```text
 Your job was rejected by org policy "cap-retries":
-maxRetries is 6 — the allowed maximum is 3. Fix: set maxRetries to 3 or lower.
+maxRetries is 6; the allowed maximum is 3. Fix: set maxRetries to 3 or lower.
 (error code: POLICY_REJECTED)
 ```
 
@@ -137,7 +175,7 @@ Rejections return HTTP **422** with the error code `POLICY_REJECTED`, so an auto
 
 ## Manage policies with the API
 
-Everything you can do in the UI, you can do over the API — which is usually what you want if your policies are reviewed and versioned alongside the rest of your pipeline configuration.
+Everything you can do in the UI, you can do over the API, which is usually what you want if your policies are reviewed and versioned alongside the rest of your pipeline configuration.
 
 ### Base URL
 
@@ -157,7 +195,7 @@ curl -u "<YOUR_USERNAME>:<YOUR_ACCESS_KEY>" \
   "https://api.hyperexecute.cloud/logistics/v1.0/policies?limit=5"
 ```
 
-Run that list call first to confirm your credentials work. A `200` with a list — possibly empty — means you are set.
+Run that list call first to confirm your credentials work. A `200` with a list (possibly empty) means you are set.
 
 ### Endpoints
 
@@ -179,10 +217,10 @@ Run that list call first to confirm your credentials work. A `200` with a list �
 | :---- | :---- | :---- |
 | `name` | string | Unique per organization. Cannot be changed after creation. |
 | `parameter` | string | One of the [supported parameters](#supported-parameters-and-modes). Cannot be changed after creation. |
-| `mode` | string | `append`, `set`, `require`, or `constrain`. Determined by the parameter. |
-| `value` | varies | Shape depends on the mode — see the table below. |
+| `mode` | string | `append`, `prepend`, `set`, `require`, or `constrain`. Determined by the parameter: `post` and `afterEachScenario` accept both `append` and `prepend`; `globalPost` only accepts `append`; every other parameter has a single fixed mode. |
+| `value` | varies | Shape depends on the mode; see the table below. |
 | `scope` | object | Specific projects: `{"projects": ["", ""]}`. All projects: `{"projects": ["*"]}`. All projects with exceptions: `{"projects": ["*"], "exclude": [""]}`. Use project IDs, not project names. |
-| `severity` | string | `warn` or `error`. Checking modes only — omit it for `append` and `set`. |
+| `severity` | string | `warn` or `error`. Checking modes only. Omit it for `append`, `prepend`, and `set`. |
 | `enabled` | boolean | Whether the policy governs jobs. |
 
 The `value` field takes a different shape for each parameter:
@@ -190,10 +228,12 @@ The `value` field takes a different shape for each parameter:
 | Parameter | Mode | `value` |
 | :---- | :---- | :---- |
 | `globalPost` | `append` | `{"commands": {"linux": ["..."], "win": ["..."]}, "default": "linux"}` |
-| `failFast` | `set` | `{"maxNumberOfTests": 5, "level": "scenario"}` — `level` is `scenario` or `test` |
+| `post` | `append` or `prepend` | `{"commands": {"linux": ["..."], "win": ["..."]}, "default": "linux"}`. The UI's **Always Run Post Step** toggle corresponds to the YAML [`alwaysRunPostSteps`](/support/docs/deep-dive-into-hyperexecute-yaml/#alwaysrunpoststeps) flag; check the toggle to force the post step to run even on task failure. |
+| `afterEachScenario` | `append` or `prepend` | `{"commands": {"linux": ["..."], "win": ["..."]}, "default": "linux"}` |
+| `failFast` | `set` | `{"maxNumberOfTests": 5, "level": "scenario"}`. `level` is `scenario` or `test` |
 | `report` | `set` | `true` or `false` |
-| `cacheKey` | `require` | `{}` — a presence check needs no value |
-| `maxRetries` | `constrain` | `{"min": 0, "max": 3}` — both bounds must fall within 0–5 |
+| `cacheKey` | `require` | `{}`. A presence check needs no value |
+| `maxRetries` | `constrain` | `{"min": 0, "max": 3}`. Both bounds must fall within 0 to 5 |
 
 ### Create a policy
 
@@ -231,9 +271,50 @@ The response returns the created policy's generated `id`, which you use for ever
 ```
 
 **Per-OS commands**
-`globalPost` commands can differ by operating system, because a bash command won't run on a Windows agent. Supported OS keys are `linux`, `win`, `win11`, and `mac`.
+`globalPost`, `post`, and `afterEachScenario` commands can differ by operating system, because a bash command won't run on a Windows agent. Supported OS keys are `linux`, `win`, `win11`, and `mac`.
 
-`default` is required. HyperExecute injects the command block matching the job's global post `runson` value, and falls back to the `default` block for any OS you didn't list. If you supply commands for a single OS only, they are treated as universal and run on every job in scope.
+`default` is required. HyperExecute injects the command block matching the job's `runson` value, and falls back to the `default` block for any OS you didn't list. If you supply commands for a single OS only, they are treated as universal and run on every job in scope.
+
+#### `prepend` mode
+
+`post` and `afterEachScenario` accept `prepend` as well as `append`. Use `prepend` when your commands have to run **before** anything the developer wrote, for example cleaning a workspace or warming a cache that their steps depend on. The `value` shape is identical to `append`; only the `mode` changes:
+
+```json
+{
+  "name": "clean-workspace-before-post",
+  "parameter": "post",
+  "mode": "prepend",
+  "value": {
+    "commands": {
+      "linux": ["rm -rf ./build-artifacts/tmp"]
+    },
+    "default": "linux"
+  },
+  "scope": { "projects": ["*"] },
+  "enabled": true
+}
+```
+
+#### `afterEachScenario`
+
+`afterEachScenario` policies share the per-OS `commands` shape used by `globalPost` and `post`, and support both `append` and `prepend`. They inject into the per-scenario teardown rather than a job- or task-level post step. Use this for anything that has to run after every scenario: clearing cookies, resetting fixtures, capturing per-scenario logs.
+
+```json
+{
+  "name": "capture-scenario-logs",
+  "parameter": "afterEachScenario",
+  "mode": "append",
+  "value": {
+    "commands": {
+      "linux": ["./scripts/upload-scenario-logs.sh"],
+      "win": ["powershell -File .\\scripts\\upload-scenario-logs.ps1"]
+    },
+    "default": "linux"
+  },
+  "scope": { "projects": ["*"] },
+  "enabled": true
+}
+```
 
 A checking policy adds a `severity` and drops the per-OS structure:
 
@@ -251,7 +332,7 @@ A checking policy adds a `severity` and drops the per-OS structure:
 
 ### Update, pause, or delete
 
-`PUT /v1.0/policies/{id}` updates a policy's **value**, **scope**, **severity**, or **enabled** state. Send the full object back, including `name` and `parameter` unchanged — neither can be modified. To change either one, create a new policy instead.
+`PUT /v1.0/policies/{id}` updates a policy's **value**, **scope**, **severity**, or **enabled** state. Send the full object back, including `name` and `parameter` unchanged; neither can be modified. To change either one, create a new policy instead.
 
 To pause enforcement without losing the policy, use the toggle endpoint. `updatedBy` is optional and records who made the change for the audit trail:
 
@@ -268,4 +349,4 @@ To pause enforcement without losing the policy, use the toggle endpoint. `update
 
 `GET /v1.0/job/{jobId}/policies` returns the policies that had an effect on a specific job, each with an outcome of `applied`, `warned`, or `errored`. This is the same data behind the **Applied Policies** panel, which makes it useful for a pipeline step that reports policy warnings back into a pull request.
 
-As in the UI, only policies that had an effect are returned. An empty result means no policy changed or flagged this job — not that no policies exist.
+As in the UI, only policies that had an effect are returned. An empty result means no policy changed or flagged this job, not that no policies exist.
