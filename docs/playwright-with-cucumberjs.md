@@ -2,7 +2,7 @@
 id: playwright-cucumberjs
 title: Running Playwright Tests With Cucumber.js
 hide_title: true
-sidebar_label: Integrate With Cucumber.js 
+sidebar_label: Cucumber.js 
 description: Learn how to perform Playwright testing using Cucumber.js across multiple browser versions on the TestMu AI platform.
 keywords:
  -  playwright testing with Playwright test runner

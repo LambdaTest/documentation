@@ -32,8 +32,8 @@ const docsSidebar = [
     type: 'category', label: 'Web Automation', collapsible: true, collapsed: true,
     items: [
       { type: 'category', label: 'Selenium Testing', collapsible: true, collapsed: true, items: items(s.SeleniumTestingSidebar) },
-      { type: 'link', label: 'Cypress Testing', href: '/docs/getting-started-with-cypress-testing/' },
-      { type: 'category', label: 'Playwright Testing', collapsible: true, collapsed: true, items: items(s.PlaywrightTestingSidebar) },
+      { type: 'category', label: 'Cypress Testing', collapsible: true, collapsed: true, items: items(s.CypressTestingSidebar) },
+      { type: 'link', label: 'Playwright Testing', href: '/docs/playwright-agent-skills/' },
       { type: 'category', label: 'Puppeteer Testing', collapsible: true, collapsed: true, items: items(s.PuppeteerTestingSidebar) },
       { type: 'category', label: 'K6 Testing', collapsible: true, collapsed: true, items: items(s.K6BrowserTestingSidebar) },
       { type: 'doc', id: 'run-tests-with-chrome-devtools-protocol', label: 'CDP Testing' },
@@ -171,10 +171,15 @@ const backToDocs = {
 };
 const TestManagerSidebar = [backToDocs, ...items(s.TestManagerSidebar)];
 
-// Cypress Testing is a link in docsSidebar (above), so its docs live ONLY in
+// Playwright Testing is a link in docsSidebar (above), so its docs live ONLY in
 // this dedicated sidebar — Docusaurus displays it (with the back-to-docs link)
-// whenever a reader is inside a Cypress Testing page.
-const CypressTestingSidebar = [backToDocs, ...items(s.CypressTestingSidebar)];
+// whenever a reader is inside a Playwright Testing page.
+const PlaywrightTestingSidebar = [backToDocs, ...items(s.PlaywrightTestingSidebar)];
+
+// The shared mute-test-scenarios doc (part of the Playwright Features category)
+// sets `displayed_sidebar: SeleniumTestingSidebar` in its frontmatter, so that
+// name must resolve to a real sidebar here too.
+const SeleniumTestingSidebar = [backToDocs, ...items(s.SeleniumTestingSidebar)];
 
 module.exports = {
   docsSidebar,
@@ -207,5 +212,6 @@ module.exports = {
   AgentTestingSidebar,
   RealDeviceSidebar,
   TestManagerSidebar,
-  CypressTestingSidebar,
+  PlaywrightTestingSidebar,
+  SeleniumTestingSidebar,
 };
