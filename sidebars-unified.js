@@ -163,18 +163,12 @@ const SettingsAndSecuritySidebar = [
 // Dedicated sidebar for Test Manager. Because the Test Manager entry in
 // docsSidebar is now a link (above), these docs live ONLY here — so Docusaurus
 // displays this dedicated sidebar whenever a reader is inside Test Manager.
-const backToDocs = {
-  type: 'link',
-  label: '← All Docs',
-  href: '/docs/',
-  customProps: { className: 'back-to-main-menu' },
-};
-const TestManagerSidebar = [backToDocs, ...items(s.TestManagerSidebar)];
+
 
 // K6 Testing is a link in docsSidebar (above), so its docs live ONLY in this
 // dedicated sidebar — Docusaurus displays it (with the back-to-docs link)
 // whenever a reader is inside a K6 Testing page.
-const K6BrowserTestingSidebar = [backToDocs, ...items(s.K6BrowserTestingSidebar)];
+
 
 module.exports = {
   docsSidebar,
@@ -207,5 +201,19 @@ module.exports = {
   AgentTestingSidebar,
   RealDeviceSidebar,
   TestManagerSidebar,
-  K6BrowserTestingSidebar,
+  MCPServerSidebar,
+  IntegrationsSidebar,
+  AccessibilityTestingSidebar,
+  LocalhostTestingSidebar,
+  SettingsAndSecuritySidebar,
+
+  // Insights
+  InsightsSidebar,
+
+  // Other Docs
+  VisualUITestingSidebar,
+  LTBrowserSidebar,
+  MigrationGuideSidebar,
+  ConcurrencyWidgetSidebar,
+  TestLogsSidebar,
 };
