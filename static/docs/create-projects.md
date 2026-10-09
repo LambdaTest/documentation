@@ -6,7 +6,7 @@ Test cases play a pivotal role in ensuring the systematic execution of testing a
 
 Creating projects within Test Manager is the foundational step in organizing and managing your testing activities. Projects serve as containers for your test cases, allowing you to categorize and structure your testing efforts effectively.
 
-**Steps to Create a Project**
+## How to to Create a Project
 
 1. Log in to the Test Manager and navigate to the dashboard - [http://test-manager.lambdatest.com/](https://www.testmuai.com/login/?redirectTo=http://test-manager.lambdatest.com/)
 

@@ -1,9 +1,10 @@
 ---
 id: custom-chrome
-title: How to Upload Custom Chrome Profile on TestMu AI
+title: How to Upload a Custom Chrome Profile on TestMu AI
+toc_max_heading_level: 2
 hide_title: true
-sidebar_label: Upload Custom Chrome Profile
-description: Upload and manage custom Chrome profiles to run automated tests on TestMu AI with specific browser settings.
+sidebar_label: "Upload Custom Chrome Profile"
+description: Upload and use a custom Chrome profile in Selenium tests on TestMu AI to run tests with specific extensions and settings.
 keywords:
   - upload custom chrome profile selenium
   - custom chrome profile automation testing
@@ -53,8 +54,8 @@ import VerifiedTag from '@site/src/component/verifiedTag';
       "@type": "WebPage",
       "@id": "https://www.testmuai.com/support/docs/upload-custom-chrome-profile/"
     },
-    "headline": "How to Upload Custom Chrome Profile on TestMu AI",
-    "description": "Upload and manage custom Chrome profiles to run automated tests on TestMu AI with specific browser settings.",
+    "headline": "How to Upload a Custom Chrome Profile on TestMu AI",
+    "description": "Upload and use a custom Chrome profile in Selenium tests on TestMu AI to run tests with specific extensions and settings.",
     "url": "https://www.testmuai.com/support/docs/upload-custom-chrome-profile/",
     "image": {
       "@type": "ImageObject",
@@ -67,7 +68,8 @@ import VerifiedTag from '@site/src/component/verifiedTag';
     "keywords": [
       "upload custom chrome profile selenium",
       "custom chrome profile automation testing",
-      "chrome browser profile testmu ai"
+      "chrome browser profile testmu ai",
+      "configure chrome profile selenium grid"
     ],
     "proficiencyLevel": "Beginner",
     "author": {
@@ -120,14 +122,14 @@ import VerifiedTag from '@site/src/component/verifiedTag';
       },
       {
         "@type": "SoftwareSourceCode",
-        "name": "Managing Your Custom Chrome Profiles",
+        "name": "To View the List of Uploaded Profiles",
         "codeSampleType": "code snippet",
         "programmingLanguage": "Shell",
         "text": "curl --location --request GET 'https://api.lambdatest.com/automation/api/v1/files/profile/chrome' \\\n--header 'Authorization: Basic your_auth_key'"
       },
       {
         "@type": "SoftwareSourceCode",
-        "name": "Managing Your Custom Chrome Profiles",
+        "name": "To Delete the List of Uploaded Profiles",
         "codeSampleType": "code snippet",
         "programmingLanguage": "Shell",
         "text": "curl --location --request DELETE 'https://api.lambdatest.com/automation/api/v1/files/profile/chrome' \\\n--header 'Authorization: Basic your_auth_key' \\\n--header 'Content-Type: application/json' \\\n--data-raw '{\"key\": \"zip.zip\"}'"
@@ -137,22 +139,21 @@ import VerifiedTag from '@site/src/component/verifiedTag';
   }) }}
 />
 
-# How to Upload Custom Chrome Profile?
+# How to Upload a Custom Chrome Profile on TestMu AI
 ***
-
 Custom Chrome profiles allow you to simulate a real-user environment with specific browser settings. Learn how to upload a custom Chrome profile to run your automated tests on TestMu AI. 
 
 ## Uploading Your Custom Chrome Profile
 ---
-Zip your Chrome profile folder and upload it to the TestMu AI cloud using the API.
+Zip your Chrome profile folder and upload it to the TestMu AI cloud using the API. The `browserProfile` capability used below is one of the many [Selenium automation capabilities](/support/docs/selenium-automation-capabilities/) you can pass to a test session.
 
 ### Before You Begin
-
+---
 1. Create or locate the Chrome profile folder you want to use.
 2. Get your API authorization credentials from your [TestMu AI dashboard](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/dashboard).
 
 ### Steps
-
+---
 1. Zip the custom Chrome profile folder and upload it to TestMu AI cloud servers using the API below:
 
 <VerifiedTag value="Verified" />
@@ -212,6 +213,17 @@ Review these constraints before uploading your custom Chrome profile.
 * The compressed zip file must not exceed 100 MB.
 
 * Ensure that you compress the exact profile folder. Compressing the parent folder or a subfolder causes the functionality to fail.
+
+Once your profile is in place, you can pair it with other run modes, such as when you run headless Selenium tests, to mirror a real-user environment without a visible browser.
+
+## Next Steps
+---
+
+Continue with these related guides:
+
+- [Perform Selenium Automation on Headless Browsers](/support/docs/perform-selenium-automation-on-headless-browsers/)
+- [IE Mode on Edge](/support/docs/ie-mode-on-edge/)
+- [Selenium Automation Capabilities](/support/docs/selenium-automation-capabilities/)
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">

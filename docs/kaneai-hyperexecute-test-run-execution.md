@@ -286,33 +286,61 @@ Before clicking **Execute**, you can optionally click **Advanced Configurations*
 
 The panel below is what a run shows when it uses the **Classic report**. A run using **Evidence Reporting** shows a different, shorter panel, described in [Test Configurations for Evidence Reporting runs](#test-configurations-for-evidence-reporting-runs).
 
-<img loading="lazy" src={require('../assets/images/kane-ai/test-manager/test-plan-execute-hyperexecute/advanced-configurations-panel.webp').default} alt="Advanced Configurations panel open on Test Configuration, showing console logs, network logs, timezone, and retry on failure" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/kane-ai/test-manager/test-plan-execute-hyperexecute/advanced-configurations-platform-all.webp').default} alt="Advanced Configurations panel for a run with a desktop browser, a mobile browser and a mobile app test, showing the All, Browser and App filter, platform icons next to settings, and the footer legend" className="doc_img"/>
 
-The following settings are available:
+### Settings by test type
 
-| Setting | Description |
-|---|---|
-| **Region** | Choose a region for web tests such as _eastus_ or _centralindia_ to select the region from where the VM is allocated. |
-| **Mobile Region** | Choose a region for mobile app tests such as _us_, _ap_, or _eu_ to select the region from where the device is allocated. |
-| **Tunnel** | Add the tunnel name if you want to run using <BrandName /> Tunnel for private applications. Either tunnel, dedicated proxy, or geolocation can be used in a single execution. See [Tunnel Support](/support/docs/kane-ai-geolocation-tunnel-proxy/#tunnel-support) for details. |
-| **Dedicated Proxy** | Add the region of the dedicated proxy such as _us_ or _eu_. Either tunnel, dedicated proxy, or geolocation can be used in a single execution. |
-| **Geolocation** | Set the geolocation from which you want to run your tests. See the list of supported geolocations [here](/support/docs/selenium-geolocation-capabilities/). Either tunnel, dedicated proxy, or geolocation can be used in a single execution. |
-| **Console Log** | Enable console log capture for web tests. Options: `false`, `error`, `warn`, `info`, `true`. |
-| **Network Logs** | Enable capture of network calls during the test. |
-| **Network Full HAR** | Capture complete network requests and responses during web tests. |
-| **Network Throttle** | Enable network throttling for mobile tests by defining download speed, upload speed, and latency. |
-| **Timezone** | Define the timezone for web test runs (e.g., UTC+01:00 format). |
-| **Retry on Failure** | Enable to retry on failure. When enabled, retries are triggered both on [testRunnerCommand](/support/docs/deep-dive-into-hyperexecute-yaml/#testrunnercommand) failure and individual test case failure. Defaults to true. See [Retry on Failure](/support/docs/deep-dive-into-hyperexecute-yaml/#retryonfailure) for details. |
-| **Max Retries** | Define the maximum number of retries when retry on failure is enabled. Max value 5, default 1. See [Max Retries](/support/docs/deep-dive-into-hyperexecute-yaml/#maxretries) for details. |
-| **Replace URL** | Dynamically replace any pattern URL in test cases with a replacement URL for the entire test run. See [Dynamic URL Replacement](/support/docs/kaneai-dynamic-url-replacement/) for details. |
-| **Performance** | Enable Lighthouse performance reports for web tests. Supported on limited OS browser combinations. May slow down execution time. See [Lighthouse Performance Metrics](/support/docs/view-lighthouse-performance-metrics/) for details. |
-| **App Profiling** | Enable app performance metrics tracking for native mobile app tests. See [App Performance Analytics](/support/docs/appium-app-performance-analytics/) for details. |
-| **Android App ID** | Specify an Android app ID (`lt://<APP_ID>`) to override the existing app in the test instance configuration. |
-| **iOS App ID** | Specify an iOS app ID (`lt://<APP_ID>`) to override the existing app in the test instance configuration. |
-| **Visual Regression** | Add visual testing configuration: select browsers, viewports, devices, and orientation. See [Visual Testing with SmartUI](/support/docs/kaneai-smartui-visual-testing/) for details. |
-| **Accessibility** | Enable accessibility checks (WCAG 2.1 AA) with best practices and needs review options. Available for web with Chrome and Edge browsers only. May slow down execution time. |
-| **Report Enabled** | Set to true to enable report generation for the test run. Select either HTML or Extent report format. Only one can be active at a time. Reports are accessible from the HyperExecute Job page after execution. See [below](#reports). |
-| **Report Email To** | An array of email addresses to receive the test run report via email after execution. Maximum 10 email addresses. Only works when report is enabled. |
+A test run can mix three types of test: **desktop browser**, **mobile browser** (Chrome or Safari on a real device) and **mobile app**. Some settings work for every type, and some work only for one or two. The panel works this out from the tests in your run:
+
+- **Icons show who a setting reaches.** A small icon next to a setting or tab marks the test types it applies to. A setting with no icon applies to every test in the run. The footer explains the icons and shows how many tests of each type the run has, for example **Desktop browser (1)**, **Mobile browser (1)**, **Mobile app (1)**, **No icon = applies to all tests**. In the panel above, Replace URL carries the desktop and mobile browser icons, Language carries the mobile browser and mobile app icons, and Console Logs carries only the desktop icon.
+- **Settings that cannot apply are hidden.** If no test in the run can use a setting, the panel does not show it. A run with only desktop browser tests, for example, does not show Mobile App Override or Language.
+- **Settings are sent only to tests that can use them.** In a mixed run, a desktop-only setting such as Console Logs is applied to the desktop browser tests and skipped for the others.
+
+### Filter the panel by All, Browser or App
+
+When a run includes both browser and app tests, the top of the panel shows **This run includes both browser and app tests** and a filter with three options:
+
+- **All**: shows every setting that applies to at least one test in the run. This is the default.
+- **Browser**: shows only the settings that reach browser tests.
+- **App**: shows only the settings that reach mobile app tests.
+
+Hover the info icon to see how many tests of each type the run has.
+
+<img loading="lazy" src={require('../assets/images/kane-ai/test-manager/test-plan-execute-hyperexecute/advanced-configurations-platform-counts.webp').default} alt="Info tooltip reading 1 desktop browser test, 1 mobile browser test and 1 app test, with the All, Browser and App filter beside it" className="doc_img"/>
+
+The filter only changes what you see. Every setting you choose is still applied when the run executes, to the tests it supports.
+
+<img loading="lazy" src={require('../assets/images/kane-ai/test-manager/test-plan-execute-hyperexecute/advanced-configurations-platform-browser.webp').default} alt="Browser filter selected: Test Configuration shows Console Logs, Network Logs, Network Full HAR, Timezone and Retry on Failure" className="doc_img"/>
+
+<img loading="lazy" src={require('../assets/images/kane-ai/test-manager/test-plan-execute-hyperexecute/advanced-configurations-platform-app.webp').default} alt="App filter selected: Test Configuration shows Mobile App Override, Network Logs, Timezone, Language and Retry on Failure, and the Replace URL and Accessibility Testing tabs are hidden" className="doc_img"/>
+
+### Available settings
+
+The **Applies to** column shows which test types each setting reaches.
+
+| Setting | Applies to | Description |
+|---|---|---|
+| **Region** | Desktop browser | Choose a region such as _eastus_ or _centralindia_ for the machine that runs desktop browser tests. |
+| **Mobile Region** | Mobile browser, mobile app | Choose a region such as _us_, _ap_, or _eu_ for the real device that runs mobile browser and app tests. |
+| **Tunnel** | All tests | Add the tunnel name if you want to run using <BrandName /> Tunnel for private applications. Either tunnel, dedicated proxy, or geolocation can be used in a single execution. See [Tunnel Support](/support/docs/kane-ai-geolocation-tunnel-proxy/#tunnel-support) for details. |
+| **Dedicated Proxy** | All tests | Add the region of the dedicated proxy such as _us_ or _eu_. Either tunnel, dedicated proxy, or geolocation can be used in a single execution. |
+| **Geolocation** | All tests | Set the geolocation from which you want to run your tests. See the list of supported geolocations [here](/support/docs/selenium-geolocation-capabilities/). Either tunnel, dedicated proxy, or geolocation can be used in a single execution. |
+| **Mobile App Override** | Mobile app | Pick an app to override the default app in the test instance configuration. One picker appears for each OS of the app tests in the run (Android, iOS). |
+| **Console Logs** | Desktop browser | Record browser console output, including errors and warnings. Options: `false`, `error`, `warn`, `info`, `true`. |
+| **Network Logs** | All tests | Capture the network requests made during the test. |
+| **Network Full HAR** | Desktop browser | Capture complete request and response bodies in HAR format. |
+| **Network Throttle** | Mobile browser, mobile app | Throttle the network by defining download speed, upload speed, and latency. |
+| **Timezone** | All tests | Select the timezone the test runs in (e.g., UTC+01:00 format). |
+| **Language** | Mobile browser, mobile app | Set the language for the test session. |
+| **Retry on Failure** | All tests | Enable to retry on failure. When enabled, retries are triggered both on [testRunnerCommand](/support/docs/deep-dive-into-hyperexecute-yaml/#testrunnercommand) failure and individual test case failure. Defaults to true. See [Retry on Failure](/support/docs/deep-dive-into-hyperexecute-yaml/#retryonfailure) for details. |
+| **Max Retries** | All tests | Define the maximum number of retries when retry on failure is enabled. Max value 5, default 1. See [Max Retries](/support/docs/deep-dive-into-hyperexecute-yaml/#maxretries) for details. |
+| **Replace URL** | Desktop browser, mobile browser | Dynamically replace any pattern URL in test cases with a replacement URL for the entire test run. See [Dynamic URL Replacement](/support/docs/kaneai-dynamic-url-replacement/) for details. |
+| **Performance (Lighthouse)** | Desktop browser | Generate Lighthouse performance reports. Supported on limited OS browser combinations. May slow down execution time. See [Lighthouse Performance Metrics](/support/docs/view-lighthouse-performance-metrics/) for details. |
+| **App Performance Profiling** | Mobile browser, mobile app | Track app performance metrics during the test. See [App Performance Analytics](/support/docs/appium-app-performance-analytics/) for details. |
+| **Visual Regression** | All tests | Add visual testing configuration: select browsers, viewports, devices, and orientation. See [Visual Testing with SmartUI](/support/docs/kaneai-smartui-visual-testing/) for details. |
+| **Accessibility Testing** | Desktop browser | Run accessibility checks (WCAG 2.1 AA). Turn on Accessibility Testing first to choose the WCAG version, Best Practices and Needs Review. Chrome and Edge only. May slow down execution time. |
+| **Reports** | All tests | Generate an HTML or Extent report for the run. Only one can be active at a time. Reports are accessible from the HyperExecute Job page after execution. See [below](#reports). |
+| **Email Addresses** | All tests | Send the report to up to 10 email addresses after execution. Available once a report is turned on. |
 
 :::note
 Test case failure retries are supported only for code exported from **May 10, 2026 onwards**. For previously exported code, retries are triggered only on test runner command failure. To use this capability, regenerate the code export for your test cases in Test Manager.
@@ -321,9 +349,13 @@ Test case failure retries are supported only for code exported from **May 10, 20
 ### Test Configurations for Evidence Reporting runs
 ***
 
-A run using **Evidence Reporting** shows a different Advanced Configurations panel. Instead of the full set of sections above, it shows **Test Configurations** only, holding the settings that decide what the run does when a step fails.
+A run using **Evidence Reporting** shows its own Advanced Configurations panel with three sections: **Test Configurations**, **Network Settings** and **Reports**. Console and network logs are not listed, because every Evidence Report captures them for each step.
 
-<img loading="lazy" src={require('../assets/images/kane-ai/test-manager/test-plan-execute-hyperexecute/advanced-configurations-evidence-panel.webp').default} alt="Advanced Configurations panel for an Evidence Reporting run, showing Test Configurations with Self-maintenance on, Adaptive Heal selected, and Auto-approve changes off" className="doc_img"/>
+**Test Configurations**
+
+These settings decide what the run does when a step fails, and whether the resulting changes need approval.
+
+<img loading="lazy" src={require('../assets/images/kane-ai/test-manager/test-plan-execute-hyperexecute/evidence-advanced-configurations-test.webp').default} alt="Advanced Configurations panel for an Evidence Reporting run, open on Test Configurations with Self-maintenance, Auto-approve changes and Timezone" className="doc_img"/>
 
 | Setting | Description |
 |---|---|
@@ -332,15 +364,36 @@ A run using **Evidence Reporting** shows a different Advanced Configurations pan
 | **Dynamic Test** | Author the test from its objective instead of replaying the recorded steps. Every run consumes authoring credits. |
 | **Retry on Failure** | Run the whole test again from the start after it fails. Nothing about the test is changed. |
 | **Maximum Retries** | Appears under Retry on Failure. Sets how many further attempts to make, up to 5. |
-| **Auto-approve changes** | Appears under Adaptive Heal and Dynamic Test. Makes the new version current immediately instead of holding it in Version History for approval. |
+| **Auto-approve changes** | Makes a repaired or re-authored version current immediately instead of holding it in Version History for approval. |
+| **Timezone** | Select the timezone the test runs in. |
 
 Only one of Adaptive Heal, Dynamic Test and Retry on Failure can be active at a time. Selecting one clears the others.
 
 :::info Which panel a run shows
-A run made of **Classic** test cases shows the full panel described above. A run whose test cases are all **New Experience** on **Chrome** can choose between the Classic report and Evidence Reporting, and choosing Evidence Reporting shows the Test Configurations panel instead.
+A run made of **Classic** test cases shows the full panel described above. A run whose test cases are all **New Experience** on **Chrome** can choose between the Classic report and Evidence Reporting, and choosing Evidence Reporting shows the Evidence panel described here.
 :::
 
 See [Adaptive Heal and Dynamic Test](/support/docs/kaneai-healing-and-dynamic-test/) for what each strategy does, how it is set at the organization and project level, and how re-authored versions are reviewed.
+
+**Network Settings**
+
+<img loading="lazy" src={require('../assets/images/kane-ai/test-manager/test-plan-execute-hyperexecute/evidence-advanced-configurations-network.webp').default} alt="Network Settings for an Evidence Reporting run showing Tunnel, Geolocation and Regions with a Desktop browsers row" className="doc_img"/>
+
+| Setting | Description |
+|---|---|
+| **Tunnel** | Run through a <BrandName /> Tunnel to test local or restricted environments. See [Tunnel Support](/support/docs/kane-ai-geolocation-tunnel-proxy/#tunnel-support) for details. |
+| **Geolocation** | Route test traffic from a specific region. See the list of supported geolocations [here](/support/docs/selenium-geolocation-capabilities/). |
+| **Regions** | Pick the region of the machines that run the tests. The **Desktop browsers** row shows how many tests it covers. A desktop region can't be chosen when the run includes macOS or Windows tests. |
+
+**Reports**
+
+<img loading="lazy" src={require('../assets/images/kane-ai/test-manager/test-plan-execute-hyperexecute/evidence-advanced-configurations-reports.webp').default} alt="Reports for an Evidence Reporting run with Generate HTML report off and Email Addresses showing Turn on a report above to send it by email" className="doc_img"/>
+
+| Setting | Description |
+|---|---|
+| **Generate HTML report** | Generate an HTML report for the run, available in the HyperExecute dashboard after execution. |
+| **Email Addresses** | Send the report to up to 10 email addresses after execution. Available once the HTML report is turned on. Until then the field reads **Turn on a report above to send it by email.** |
+
 
 ### Reports
 ***
@@ -349,7 +402,7 @@ Enable the **Reports** option in Advanced Configurations to generate reports for
 
 - **Generate HTML Report**: Toggle to **Yes** to generate an HTML report for the test run, available in the HyperExecute dashboard after execution.
 - **Generate Extent Report**: Toggle to **Yes** to generate an Extent report for the test run, available in the HyperExecute dashboard after execution.
-- **Email Addresses**: Add one or more email addresses (separated by space or enter) to receive the report via email after execution. You can add up to **10 email addresses**.
+- **Email Addresses**: Add one or more email addresses (separated by space or enter) to receive the report via email after execution. You can add up to **10 email addresses**. The field is available once a report is turned on. Until then it reads **Turn on a report above to send it by email.**
 
 <img loading="lazy" src={require('../assets/images/kane-ai/test-manager/test-plan-execute-hyperexecute/reports-advanced-config.webp').default} alt="Reports option in Advanced Configurations" className="doc_img"/>
 

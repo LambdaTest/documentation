@@ -104,8 +104,6 @@
   ]) }}
 />
 
-## Overview
-
 Run your Maestro tests on HyperExecute with [YAML 0.2](/support/docs/hyperexecute-yaml-version0.2/). The [Prerequisites](#prerequisites), [CLI setup](#setting-up-hyperexecute-cli-for-maestro), and [app upload](#uploading-your-app-for-maestro) apply to every run. From there, execute your suite as standard [Maestro flows](#running-maestro-tests), or with [Maestro and Cucumber (BDD)](#running-maestro-tests-with-cucumber-bdd) if your tests are written in Gherkin. Both approaches conclude with the shared reporting step.
 
 ## Prerequisites
@@ -193,6 +191,10 @@ runson: ios26
 # Enable dynamic allocation of resources
 dynamicAllocation: true
 
+# Route test traffic through a secure tunnel to reach locally hosted or firewalled apps.
+# Supported for Maestro on both virtual and real devices. Set to true to enable.
+tunnel: false
+
 # Test framework configuration
 framework:
   # Name of the test framework (raw in this case)
@@ -221,6 +223,9 @@ framework:
     reservation: false
     isRealMobile: false
     network: true
+    # Route device traffic through your whitelisted dedicated proxy IP.
+    # Requires the Dedicated Proxy paid plan. Set to true to enable.
+    dedicatedProxy: false
     platformName: ios
 
 env:
@@ -438,3 +443,99 @@ assertVisible: "Mobile UI testing"
 - Make sure the app is already installed on the device; otherwise, Maestro cannot launch it.
 - The same approach works for iOS using the bundle identifier.
 - You can also switch between multiple apps in a single flow by providing different appId values in separate steps.
+
+## Installing and Switching Between Multiple Apps With otherApps
+The `otherApps` key installs one or more secondary apps on the device alongside your main app, so a single Maestro flow can launch and interact with each of them during the same run. You declare it under `framework.args` in your `hyperexecute.yaml`, passing a list of already-uploaded app IDs. HyperExecute installs every listed app before the test starts.
+
+Use this when a test needs more than the app under test on the device. A common case is simulating real-world memory pressure. Install memory-heavy secondary apps, launch them mid-flow to consume device RAM, and verify how your app behaves under high-memory, background-activity conditions.
+
+### Uploading the Secondary Apps
+Each app you list in `otherApps` must already exist on the TestMu AI servers. Upload every secondary app the same way you uploaded your main app, using the App Upload REST API described in [Uploading Your App for Maestro](#uploading-your-app-for-maestro).
+
+Each upload returns an `App ID` in the `lt://APP...` format, which you pass to `otherApps` in the next step.
+
+### Adding otherApps to Your HyperExecute YAML
+Add the `otherApps` key to the `framework.args` block of the YAML you configured in Step 4. It sits alongside your main `appPath` or `appId` and takes a list of secondary app IDs.
+
+```yaml title="hyperexecute.yaml"
+framework:
+  name: raw
+  args:
+    # Main app under test (local build or an uploaded lt:// app ID)
+    appPath: maestro-test/sample.apk
+    #highlight-start
+    # Secondary apps installed on the device for this run
+    otherApps:
+      - lt://APP10160332171786554938778428
+    #highlight-end
+```
+
+You can list more than one app under `otherApps`. HyperExecute installs each one before the run begins. This matches the configuration used in the Android real-device sample (`android-realdevice.yaml`) in the TestMu AI [Maestro sample repository](https://github.com/LambdaTest/hyperexecute-maestro-sample-test).
+
+### Switching Between Apps in the Maestro Flow
+Once the apps are installed, your Maestro flow controls which one is in the foreground. The `appId` at the top of the flow file sets the default app, and each `launchApp` step can name a different app to switch to it.
+
+The app you launch must already be installed, through `appPath`, `appId`, `otherApps`, or as a pre-installed app on the device.
+
+The following flow launches Wikipedia, switches to the LambdaTest Proverbial app, then returns to Wikipedia:
+
+```yaml title="android-launch.yaml"
+appId: org.wikipedia
+---
+- launchApp
+
+# Launch LambdaTest Proverbial
+- launchApp:
+    appId: com.lambdatest.proverbial
+
+# Launch Wikipedia again
+- launchApp:
+    appId: org.wikipedia
+```
+
+**Explanation:**
+
+- **appId: org.wikipedia** sets Wikipedia as the flow's default app.
+- **launchApp** launches the default app, Wikipedia.
+- **launchApp** with **appId: com.lambdatest.proverbial** switches the foreground to the Proverbial app.
+- **launchApp** with **appId: org.wikipedia** returns to Wikipedia.
+
+Use the package name on Android (for example, `org.wikipedia`) or the bundle identifier on iOS as the `appId` for each app you switch to.
+
+### Best Practices for otherApps
+- Upload every secondary app before the run and reference it by its `lt://APP...` ID.
+- Make sure each app named in a `launchApp` step is installed through `appPath`, `appId`, `otherApps`, or is already present on the device. Maestro cannot launch an app that is not installed.
+- To reproduce memory-pressure scenarios, launch the secondary apps during the flow so they stay resident and consume device RAM while your app under test runs.
+
+## Route Maestro Traffic Through a Dedicated Proxy
+Dedicated Proxy routes the device's network traffic through a single whitelisted IP, so your Maestro tests can reach internal or network-restricted resources behind your firewall. You enable it by setting `dedicatedProxy: true` under `framework.args` in your `hyperexecute.yaml`. It requires a separate paid plan and a proxy IP that your network administrators have whitelisted.
+
+### How Dedicated Proxy Works
+When a dedicated proxy is active, the device routes its network requests through it instead of straight out to the public internet.
+
+1. The allocated device sends its network requests through your dedicated proxy.
+2. The proxy serves publicly available resources directly, and reaches your network-restricted resources through the whitelisted IP.
+3. Because only one IP is whitelisted, you avoid maintaining a list of cloud IP ranges.
+
+Dedicated Proxy is available under a separate paid plan. Once the plan is enabled and your proxy IP is whitelisted, set `dedicatedProxy: true` to route traffic through it.
+
+### Enabling Dedicated Proxy in Your YAML
+Add `dedicatedProxy: true` to the `framework.args` block, alongside your other device capabilities.
+
+```yaml title="hyperexecute.yaml"
+framework:
+  name: raw
+  args:
+    # ...your device capabilities
+    network: true
+    #highlight-next-line
+    dedicatedProxy: true
+    platformName: android
+```
+
+To let specific domains bypass the proxy and resolve locally, such as `localhost` or internal test endpoints, pair it with `bypassProxyDomains`. See [how to bypass domains on a dedicated proxy](/support/docs/bypass-proxy-domains/).
+
+### Verifying the Dedicated Proxy Egress IP
+After the run starts, confirm where traffic exits by opening the **Network** tab on the run and inspecting a request that returns the device's outbound IP. Without a dedicated proxy, traffic exits from a standard TestMu AI cloud address, AWS `us-east-1` (`44.214.175.17`) in this example. With `dedicatedProxy` enabled, it exits from your whitelisted proxy IP.
+
+For the full setup and IP whitelisting steps, see [how dedicated proxy IP whitelisting works](/support/docs/dedicated-proxy/).
