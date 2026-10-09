@@ -102,7 +102,10 @@ import { BRAND_URL } from '@site/src/component/BrandName';
 
 # Rook Environment and Secrets
 
-Profiles contain references and operational descriptions. Secret values remain on the machine running Rook and are never included in project synchronization.
+A profile names the environment variables its hooks read, and why; it does not hold their values. Values you set with `env set` are stored under the global Rook home, outside the repository. Two paths can still carry a secret off the machine:
+
+- `rook sync` uploads profiles and hook scripts as written. A token typed into a profile, `hook_env`, or a hook script is uploaded with it.
+- `profile add` and `profile fix` show the model what you paste and what the hook prints. A pasted curl with a live token, or a hook that echoes its credentials, sends that value with the rest.
 
 ## Manage Local Values
 
@@ -227,12 +230,19 @@ Variables such as `ROOK_HOOK`, `ROOK_RUN_ID`, `ROOK_SCENARIO_ID`, `ROOK_SESSION`
 
 ## Secret Handling Checklist
 
-- Keep values out of profile YAML and source control.
+- Keep values out of profile YAML, `hook_env`, hook scripts, and source control; `sync` uploads the profile and its scripts as written.
+- Paste requests into `profile add` with placeholders, not live tokens, and keep hooks from printing credentials.
 - Give profiles the least-privileged credentials needed for the scenarios.
 - Do not use `env show` in shared terminals or CI logs.
 - Keep `.testmuai/rook/.gitignore` entries intact for credentials and machine-only state.
 - Review MCP commands and headers before approval.
 - Use a dedicated `ROOK_HOME` for unattended automation.
+
+## Telemetry {#telemetry}
+
+Rook records operational events (no prompts, no code, no command arguments) and sends them to TestMu AI, attributed to your organization, to find failures. The first interactive session prints a one-time notice, and nothing is uploaded until that notice has been shown. Logged-out and local-mode sessions do not upload.
+
+Turn it off for one process with `ROOK_TELEMETRY=off`, or for every run with `"telemetry": false` in `config.json` under the Rook home (`~/.testmuai/rook/` unless `ROOK_HOME` is set).
 
 ## UI Access and Evidence Privacy
 

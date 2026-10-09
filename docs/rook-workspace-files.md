@@ -197,7 +197,7 @@ Project YAML, agent definitions, features, scenarios, profiles containing refere
 Before committing:
 
 1. Review hook scripts for accidental literal secrets.
-2. Confirm profile YAML contains only references such as `${API_KEY}`.
+2. Confirm profile YAML names variables under `env` (for example `API_KEY`) and holds no literal secret, including in `hook_env`.
 3. Inspect run evidence for target data that should not leave the test environment.
 4. Keep machine-only `.gitignore` entries intact.
 

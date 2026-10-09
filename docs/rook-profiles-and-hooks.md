@@ -105,7 +105,7 @@ import { BRAND_URL } from '@site/src/component/BrandName';
 
 A profile tells Rook **how to reach your live agent and capture its evidence**. This guide takes you from a working request, through prompt-based profile generation and verification, to hook contracts, lifecycle phases, delayed evidence, and repair—all on one page.
 
-Rook 0.1.3 uses reviewable Node.js hook scripts, not a fixed HTTP or command YAML recipe. Discovery describes what the agent should do; the profile selects the endpoint, command, environment, and session behavior you actually test.
+Rook uses reviewable Node.js hook scripts, not a fixed HTTP or command YAML recipe. Discovery describes what the agent should do; the profile selects the endpoint, command, environment, and session behavior you actually test.
 
 ## Before You Start
 
@@ -284,7 +284,7 @@ concurrency: 1
 | `hooks` | Phase-to-script mapping. Each entry can also define a timeout and delay. Relative paths resolve from the active agent directory. |
 | `env` | Required local environment references and their operational purpose. The structure has no secret-value field. |
 | `capabilities` | Observed evidence capabilities that determine scenario runnability. |
-| `hook_env` | Additional references supplied to every hook. Rook-owned `ROOK_*` values take precedence. |
+| `hook_env` | Fixed, non-secret values supplied to every hook, such as a region. They are stored and synced as written, so put credentials under `env` instead. Rook-owned `ROOK_*` values take precedence. |
 | `concurrency` | Default number of scenarios in flight. Use `1` when hooks touch shared state. |
 
 ## Hook Inputs
@@ -412,7 +412,7 @@ rook profile test staging --goal "show the status of test order ORD-1042"
 rook sync
 ```
 
-Repair can change scripts and spend credits. Inspect the diff and test it before syncing. Rook has no <code>profile edit</code>, <code>profile curl</code>, or <code>profile rm</code> subcommands in 0.1.3; edit the plain files deliberately when needed.
+Repair can change scripts and spend credits. Inspect the diff and test it before syncing. Rook has no <code>profile edit</code>, <code>profile curl</code>, or <code>profile rm</code> subcommands (checked in 0.1.7); edit the plain files deliberately when needed.
 
 ## Keep Credentials Out of the Profile
 

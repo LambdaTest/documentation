@@ -4,7 +4,7 @@ toc_max_heading_level: 2
 title: Run Agent Assurance in CI/CD
 hide_title: false
 sidebar_label: CI/CD and Automation
-description: Run Rook 0.1.3 in CI with environment credentials, pinned public installation, explicit permissions, completion checks, and preserved evidence.
+description: Run Rook 0.1.7 in CI with environment credentials, pinned public installation, explicit permissions, completion checks, and preserved evidence.
 keywords:
   - rook ci cd
   - ai agent testing github actions
@@ -42,7 +42,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
       "@id": "https://www.testmuai.com/support/docs/agent-assurance-ci-cd/"
     },
     "headline": "Run Agent Assurance in CI/CD",
-    "description": "Run Rook 0.1.3 in CI with environment credentials, pinned public installation, explicit permissions, completion checks, and preserved evidence.",
+    "description": "Run Rook 0.1.7 in CI with environment credentials, pinned public installation, explicit permissions, completion checks, and preserved evidence.",
     "url": "https://www.testmuai.com/support/docs/agent-assurance-ci-cd/",
     "image": {
       "@type": "ImageObject",
@@ -92,7 +92,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
 
 Use CI only after the same agent, profile, and scenarios work locally. Commit reviewed definitions and hook scripts; keep model-driven discovery and generation separate from the release gate.
 
-This recipe targets **Rook 0.1.3**. It runs an explicit suite, preserves evidence, and checks completion and verdict counts instead of interpreting a successful CLI process as a successful agent test.
+This recipe targets **Rook 0.1.7**. It runs an explicit suite, preserves evidence, and checks completion and verdict counts instead of interpreting a successful CLI process as a successful agent test.
 
 ## Set Up CI/CD Through Prompts {#prompt-led-setup}
 
@@ -187,18 +187,18 @@ Do not run untrusted pull-request hook scripts with repository secrets. Use a re
 
 ```bash
 curl -fsSL https://raw.githubusercontent.com/LambdaTest/rook/main/install.sh \
-  | bash -s -- --version 0.1.3 --dir "$RUNNER_TEMP/rook-bin"
+  | bash -s -- --version 0.1.7 --dir "$RUNNER_TEMP/rook-bin"
 export PATH="$RUNNER_TEMP/rook-bin:$PATH"
 rook --version
 ```
 
 <code>RUNNER_TEMP</code> is a GitHub Actions runner variable. On another CI platform, substitute its job-specific temporary directory. The installer uses public releases and verifies their SHA-256 checksums; no source-repository token is required.
 
-See [release notes](https://github.com/LambdaTest/rook/releases/tag/v0.1.3) before changing the pin.
+See [release notes](https://github.com/LambdaTest/rook/releases/tag/v0.1.7) before changing the pin.
 
 ## Authenticate Without a Browser
 
-Provide <code>LT_USERNAME</code> and <code>LT_ACCESS_KEY</code> from your CI secret manager. Rook 0.1.3 accepts this pair for unattended authentication; a copied personal OAuth credential directory is not required.
+Provide <code>LT_USERNAME</code> and <code>LT_ACCESS_KEY</code> from your CI secret manager. Rook 0.1.7 accepts this pair for unattended authentication; a copied personal OAuth credential directory is not required.
 
 ```bash
 export ROOK_ENV=prod
@@ -245,7 +245,7 @@ Use an explicit shell error policy, such as <code>set -euo pipefail</code> in Ba
 
 ## Gate on Completion and Verdicts
 
-In 0.1.3, <code>rook run --json</code> produces one JSON document on stdout, not NDJSON. The document includes <code>ok</code>, <code>run_id</code>, <code>halted</code>, and, when available, <code>report.totals</code>.
+In 0.1.7, <code>rook run --json</code> produces one JSON document on stdout, not NDJSON. The document includes <code>ok</code>, <code>run_id</code>, <code>halted</code>, and, when available, <code>report.totals</code>.
 
 A process exit code of zero is **not** an agent-quality gate. The current run/report paths do not implement the older documented 0/1/2/3/4 verdict mapping. A halted run or a run with failed verdicts can still produce an outcome document. Inspect its contents.
 

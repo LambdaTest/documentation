@@ -161,7 +161,7 @@ When several agents are found, Rook records their relationships and keeps a sepa
 Generation supports three classes:
 
 - <code>functional</code>: expected workflows, negative paths, boundaries, integrations, and state or context handling.
-- <code>non_functional</code>: performance, token economy, reliability, and output quality.
+- <code>non_functional</code>: token economy and output quality.
 - <code>adversarial</code>: prompt injection, jailbreak, data exfiltration, PII leakage, harmful content, hallucination, hijacking, policy violation, and technical injection.
 
 Use <code>--class</code>, <code>--category</code>, <code>--total</code>, and free-text instructions to shape a suite. Generated scenarios remain editable files; human-authored scenarios are not silently replaced by regeneration.

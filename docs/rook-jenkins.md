@@ -136,7 +136,7 @@ export ROOK_HOME="$job_temp/home"
 export ROOK_RUN_NAME="jenkins-$BUILD_NUMBER"
 curl -fsSL https://raw.githubusercontent.com/LambdaTest/rook/main/install.sh \
   -o "$job_temp/install-rook.sh"
-bash "$job_temp/install-rook.sh" --version 0.1.3 --dir "$job_temp/bin"
+bash "$job_temp/install-rook.sh" --version 0.1.7 --dir "$job_temp/bin"
 export PATH="$job_temp/bin:$PATH"
 bash ci/rook-ci.sh
 '''
