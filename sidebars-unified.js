@@ -31,13 +31,13 @@ const docsSidebar = [
   {
     type: 'category', label: 'Web Automation', collapsible: true, collapsed: true,
     items: [
-      { type: 'link', label: 'Selenium Testing', href: '/docs/getting-started-with-testmu-automation/' },
-      { type: 'link', label: 'Cypress Testing', href: '/docs/getting-started-with-cypress-testing/' },
-      { type: 'link', label: 'Playwright Testing', href: '/docs/playwright-testing/' },
-      { type: 'link', label: 'Puppeteer Testing', href: '/docs/puppeteer-testing/' },
-      { type: 'link', label: 'K6 Testing', href: '/docs/k6-browser-testing/' },
-      { type: 'link', label: 'CDP Testing', href: '/docs/run-tests-with-chrome-devtools-protocol/' },
-      { type: 'link', label: 'BiDi Testing', href: '/docs/run-tests-with-webdriver-bidi/' },
+      { type: 'link', label: 'Selenium Testing', href: '/docs/testmu-running-your-first-selenium-test/' },
+      { type: 'category', label: 'Cypress Testing', collapsible: true, collapsed: true, items: items(s.CypressTestingSidebar) },
+      { type: 'category', label: 'Playwright Testing', collapsible: true, collapsed: true, items: items(s.PlaywrightTestingSidebar) },
+      { type: 'category', label: 'Puppeteer Testing', collapsible: true, collapsed: true, items: items(s.PuppeteerTestingSidebar) },
+      { type: 'category', label: 'K6 Testing', collapsible: true, collapsed: true, items: items(s.K6BrowserTestingSidebar) },
+      { type: 'doc', id: 'run-tests-with-chrome-devtools-protocol', label: 'CDP Testing' },
+      { type: 'doc', id: 'run-tests-with-webdriver-bidi', label: 'BiDi Testing' },
     ],
   },
   {
@@ -160,6 +160,23 @@ const SettingsAndSecuritySidebar = [
   },
 ];
 
+// Dedicated sidebar for Test Manager. Because the Test Manager entry in
+// docsSidebar is now a link (above), these docs live ONLY here — so Docusaurus
+// displays this dedicated sidebar whenever a reader is inside Test Manager.
+const backToDocs = {
+  type: 'link',
+  label: '← All Docs',
+  href: '/docs/',
+  customProps: { className: 'back-to-main-menu' },
+};
+const TestManagerSidebar = [backToDocs, ...items(s.TestManagerSidebar)];
+
+// Selenium Testing is a link in docsSidebar (above), so its docs live ONLY in
+// this dedicated sidebar — Docusaurus displays it (with the back-to-docs link)
+// whenever a reader is inside a Selenium Testing page. Shared docs such as
+// mute-test-scenarios also set `displayed_sidebar: SeleniumTestingSidebar`.
+const SeleniumTestingSidebar = [backToDocs, ...items(s.SeleniumTestingSidebar)];
+
 module.exports = {
   docsSidebar,
 
@@ -191,19 +208,5 @@ module.exports = {
   AgentTestingSidebar,
   RealDeviceSidebar,
   TestManagerSidebar,
-  MCPServerSidebar,
-  IntegrationsSidebar,
-  AccessibilityTestingSidebar,
-  LocalhostTestingSidebar,
-  SettingsAndSecuritySidebar,
-
-  // Insights
-  InsightsSidebar,
-
-  // Other Docs
-  VisualUITestingSidebar,
-  LTBrowserSidebar,
-  MigrationGuideSidebar,
-  ConcurrencyWidgetSidebar,
-  TestLogsSidebar,
+  SeleniumTestingSidebar,
 };
