@@ -78,14 +78,7 @@ git clone https://github.com/rishirajs123/testmuai-mobilewright-sample && cd tes
 npm install
 ```
 
-The sample project already includes Mobilewright, its test fixtures, and the <BrandName /> driver (`@testmuai/mobilewright`). It contains:
-
-| File | Purpose |
-|------|---------|
-| `mobilewright.config.ts` | Runs the test on <BrandName /> when your credentials are set, and on a local device otherwise. |
-| `tests/proverbial.test.ts` | A smoke test for the Proverbial sample app. |
-| `src/proverbial.ts` | Locators for the Proverbial app on Android and iOS. |
-| `.env.example` | The environment variables the sample reads. |
+The sample project already includes Mobilewright, its test fixtures, and the <BrandName /> driver, [`@testmuai/mobilewright`](https://www.npmjs.com/package/@testmuai/mobilewright).
 
 ## Step 2: Set your credentials
 
@@ -116,10 +109,6 @@ set LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 </TabItem>
 
 </Tabs>
-
-:::note
-The driver also accepts `TESTMU_USERNAME` and `TESTMU_ACCESS_KEY`. When both sets are present, the `TESTMU_` variables take precedence. Both names are supported, so you can keep the `LT_` variables your pipelines already use.
-:::
 
 ## Step 3: Upload your app
 
@@ -283,7 +272,7 @@ For more about the dashboard, see [App Automation Dashboard](/support/docs/app-a
 
 ## Run your own project
 
-To run an existing Mobilewright project, on version **0.0.56** or later (below **0.1.0**), install the <BrandName /> driver:
+To run an existing Mobilewright project, on version **0.0.56** or later (below **0.1.0**), install the <BrandName /> driver from [npm](https://www.npmjs.com/package/@testmuai/mobilewright):
 
 ```bash
 npm i -D @testmuai/mobilewright
@@ -313,12 +302,7 @@ export default defineConfig({
 });
 ```
 
-:::note
-- `platform` is required. The driver cannot request a device without it.
-- `deviceType` must be `'real'` or left out. Emulators and simulators are not supported.
-- If you pass a local file path as `app`, the driver uploads it once per run and reuses it for every worker.
-- For device and OS version matching, see [Select devices](/support/docs/mobilewright-set-up-test-environment/#select-devices).
-:::
+For app options and device matching, see [Set up your test environment](/support/docs/mobilewright-set-up-test-environment/).
 
 ## Run tests in parallel
 
@@ -337,25 +321,6 @@ Set the number of workers to your plan's parallel session limit or lower. Worker
 ### Set the number of workers
 
 Set `workers` in your config, or pass `--workers` on the command line. The command-line flag overrides the config value.
-
-```ts title="mobilewright.config.ts"
-import { defineConfig } from 'mobilewright';
-import { testMuDriver } from '@testmuai/mobilewright';
-
-export default defineConfig({
-  testDir: './tests',
-  //highlight-start
-  workers: 4,
-  fullyParallel: true,
-  //highlight-end
-  driver: testMuDriver({ app: './build/app.apk', build: 'Parallel Run' }),
-  use: {
-    platform: 'android',
-    bundleId: 'com.example.app',
-    deviceType: 'real',
-  },
-});
-```
 
 ```bash
 npx mobilewright test --workers 4
@@ -421,19 +386,6 @@ Or run one project only:
 npx mobilewright test --project ios
 ```
 
-### Run on several devices of the same platform
-
-Add one project per device profile you want to cover. For example, to run the suite on a recent Pixel and a recent Galaxy:
-
-```ts
-projects: [
-  { name: 'pixel', use: { platform: 'android', bundleId: 'com.example.app', deviceType: 'real', deviceName: /Pixel 9/ } },
-  { name: 'galaxy', use: { platform: 'android', bundleId: 'com.example.app', deviceType: 'real', deviceName: /Galaxy S24/ } },
-],
-```
-
-Each project counts against your parallel session limit while its workers are running.
-
 ## Test status and reports
 
 The driver reports results to the App Automation dashboard without any extra code.
@@ -448,27 +400,9 @@ You do not need to add a reporter or call a status hook. When the run ends, the 
 
 To give every session the same fixed name instead, set the driver's `name` option. To stop the driver from pushing status, set `testResults: false`.
 
-### Name builds and sessions
+### Build names
 
-Use these driver options to organize your runs on the dashboard:
-
-| Option | Description |
-|--------|-------------|
-| `build` | Groups all sessions from a run under one build. |
-| `project` | Groups builds under a project. |
-| `name` | Sets a fixed name for every session, replacing the automatic test-based names. |
-| `tags` | Adds tags to every session, for filtering on the dashboard. |
-
-```ts
-driver: testMuDriver({
-  app: 'lt://APP123456789123456789',
-  build: 'Release 4.2 regression',
-  project: 'Checkout app',
-  tags: ['regression', 'android'],
-}),
-```
-
-The build name is chosen in this order:
+Use the driver options `build`, `project`, and `tags` to organize runs on the dashboard. The build name is chosen in this order:
 
 1. The `build` option.
 2. The `TESTMU_BUILD` or `LT_BUILD` environment variable.
@@ -488,22 +422,6 @@ When you run inside a supported CI system and do not set a build name, the drive
 | Azure Pipelines | `<repository> #<build number>` |
 | Jenkins | `<job name> #<build number>` |
 | TeamCity | `<build configuration name>` |
-
-### Local reports
-
-Mobilewright's own reporters work alongside the dashboard. For example, to generate an HTML report or a JUnit XML file for your CI system:
-
-```bash
-npx mobilewright test --reporter html
-npx mobilewright show-report
-```
-
-```ts title="mobilewright.config.ts"
-export default defineConfig({
-  reporter: [['list'], ['junit', { outputFile: 'results/junit.xml' }]],
-  // ...
-});
-```
 
 ## Run in CI/CD
 

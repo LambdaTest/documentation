@@ -54,22 +54,7 @@ Mobilewright testing on <BrandName /> is currently in **Beta**. To share feedbac
 
 ## Driver options
 
-These are the options you can pass to `testMuDriver()` from the `@testmuai/mobilewright` package. All options are optional, but every session needs an app, from either the options or an environment variable.
-
-```ts title="mobilewright.config.ts"
-import { defineConfig } from 'mobilewright';
-import { testMuDriver } from '@testmuai/mobilewright';
-
-export default defineConfig({
-  driver: testMuDriver({
-    app: 'lt://APP123456789123456789',
-    build: 'Nightly regression',
-    networkLog: true,
-    geoLocation: 'US',
-  }),
-  use: { platform: 'android', bundleId: 'com.example.app', deviceType: 'real' },
-});
-```
+These are the options you can pass to `testMuDriver()` from the [`@testmuai/mobilewright`](https://www.npmjs.com/package/@testmuai/mobilewright) package. All options are optional, but every session needs an app, from either the options or an environment variable.
 
 ### Credentials
 
@@ -134,16 +119,7 @@ See [Test features](/support/docs/mobilewright-set-up-test-environment/#test-fea
 | Option | Type | Default | Description |
 |--------|------|---------|-------------|
 | `visibility` | `'native' \| 'bounds'` | `'native'` | How iOS element visibility is judged. `'native'` uses the visibility reported by iOS. `'bounds'` treats any element with on-screen size as visible, which matches local Mobilewright runs. See [Known differences](/support/docs/mobilewright-references/#known-differences-from-local-runs). |
-| `snapshotTuning` | `object \| false` | `{ waitForIdleTimeout: 0, animationCoolOffTimeout: 0 }` | Speeds up reading the screen hierarchy. Pass `false` to keep the device's default settings. |
-
-`snapshotTuning` accepts these fields:
-
-| Field | Default | Description |
-|-------|---------|-------------|
-| `waitForIdleTimeout` | `0` | Time to wait for the app to go idle before each hierarchy read. Mobilewright already checks that elements are stable, so the driver turns this wait off. |
-| `animationCoolOffTimeout` | `0` | iOS only. Time to wait for animations to finish before each hierarchy read. |
-| `snapshotMaxDepth` | – | Maximum depth of the hierarchy to read. Useful for very deep SwiftUI or React Native screens. |
-| `customSnapshotTimeout` | – | Maximum time, in seconds, for one hierarchy read before it fails. |
+| `snapshotTuning` | `object \| false` | Tuned for speed | Controls how the screen hierarchy is read. The defaults are tuned for Mobilewright; pass `false` to use the device's default settings. |
 
 ### Capability overrides
 
@@ -151,17 +127,6 @@ See [Test features](/support/docs/mobilewright-set-up-test-environment/#test-fea
 |--------|------|-------------|
 | `capabilities` | `object` | Any <BrandName /> App Automation capability. Applied last, so it overrides the named options. |
 | `ltOptions` | `object` | Same as `capabilities`, merged before it. |
-
-### Advanced
-
-These options are for development and debugging. You do not need them for normal runs on <BrandName />.
-
-| Option | Type | Description |
-|--------|------|-------------|
-| `hubUrl` | `string` | Overrides the automation hub URL, for example to point at a local Appium server while developing. |
-| `apiBase` | `string` | Overrides the base URL of the App Automation REST API. |
-| `uploadUrl` | `string` | Overrides the app upload endpoint. |
-| `capabilityStyle` | `'testmu' \| 'w3c'` | Forces the capability format. By default it is inferred from `hubUrl`. |
 
 ## Mobilewright configurations
 
@@ -207,13 +172,10 @@ npx mobilewright test --config configs/testmu.config.ts
 
 ### `use` options
 
+The `use` block accepts the device fields from the table above (`platform`, `bundleId`, `deviceName`, `deviceType`, `osVersion`), plus:
+
 | Option | Type | Default | Description |
 |--------|------|---------|-------------|
-| `platform` | `'ios' \| 'android'` | – | Platform for the tests. |
-| `bundleId` | `string` | – | App bundle ID or package name. |
-| `deviceName` | `RegExp` | – | Pattern matched against device names. |
-| `deviceType` | `'real'` | – | Must be `'real'` or left out on <BrandName />. |
-| `osVersion` | `string` | – | Exact OS version or range. |
 | `actionTimeout` | `number` (ms) | `5000` | Timeout for each locator action, such as `tap()` or `fill()`. |
 | `appLaunchTimeout` | `number` (ms) | `20000` | Time to wait for the app to reach the foreground after launch. |
 | `installTimeout` | `number` (ms) | `60000` | Timeout for installing an app. |
@@ -228,45 +190,7 @@ npx mobilewright test --config configs/testmu.config.ts
 
 ### Projects
 
-Each project runs the matching tests with its own settings. A project accepts `name` (required), `use`, `timeout`, `testDir`, `testMatch`, `testIgnore`, `outputDir`, `retries`, `grep`, `grepInvert`, and `dependencies`.
-
-```ts title="mobilewright.config.ts"
-import { defineConfig } from 'mobilewright';
-import { testMuDriver } from '@testmuai/mobilewright';
-
-export default defineConfig({
-  testDir: './tests',
-  timeout: 60_000,
-  retries: 1,
-  workers: 4,
-  reporter: 'html',
-  use: { actionTimeout: 10_000 },
-  expect: { timeout: 10_000 },
-  driver: testMuDriver({
-    apps: { android: './build/app.apk', ios: './build/app.ipa' },
-  }),
-  projects: [
-    { name: 'android', use: { platform: 'android', bundleId: 'com.example.app', deviceType: 'real' } },
-    { name: 'ios', use: { platform: 'ios', bundleId: 'com.example.app', deviceType: 'real', osVersion: '>=17' } },
-  ],
-});
-```
-
-Run a single project with `--project`:
-
-```bash
-npx mobilewright test --project android
-```
-
-### Per-file settings
-
-Use `test.use()` in a test file to override settings for that file or for a `test.describe` block:
-
-```ts
-import { test, expect } from '@mobilewright/test';
-
-test.use({ bundleId: 'com.example.app', viewTree: 'on-failure' });
-```
+Each project runs the matching tests with its own settings. A project accepts `name` (required), `use`, `timeout`, `testDir`, `testMatch`, `testIgnore`, `outputDir`, `retries`, `grep`, `grepInvert`, and `dependencies`. For an Android and iOS example, see [Run tests in parallel](/support/docs/getting-started-with-mobilewright-testing/#run-tests-in-parallel).
 
 ## Troubleshooting
 
@@ -303,23 +227,15 @@ The driver runs your tests on the same automation stack that <BrandName /> uses 
 |------|---------------------------|------------|
 | **iOS visibility** | iOS reports an element as not visible when another element is drawn over it, even if it is on screen. For example, a SwiftUI `Stepper` drawn over its own label. `toBeVisible()` can fail on such elements where it passed locally. | Set the driver option `visibility: 'bounds'` to judge visibility by on-screen size, which matches local runs. |
 | **`getByType()`** | Matches the raw native type, such as `XCUIElementTypeSwitch` on iOS. Local runs strip the prefix. | Prefer `getByRole()`, for example `getByRole('switch')`, which works the same everywhere. |
-| **`toBeChecked()` on iOS** | Works on switches. | No action needed. |
-| **Element screenshots** | `locator.screenshot()` returns an image cropped to the element. | No action needed. |
 | **`screen.goBack()` on iOS** | iOS has no back button, so the driver performs the system back swipe from the left edge. | No action needed. Make sure the screen supports the back swipe. |
 | **Webviews** | Hybrid app webviews are only visible to the test if the app makes them inspectable: a debug build, or `isInspectable = true` on iOS 16.4 and later. In a release build, `getByWebView()` finds no webviews. | Test webviews with a debug build, or set the webview as inspectable. |
 | **`device.listApps()`** | Returns only the apps launched in the current session. | Do not rely on it to list every installed app. |
-| **Device animations** | Mobilewright's `animations` setting has no effect. | Use the driver option `disableAnimation: true`. |
 | **Rapid repeated taps** | Two taps in quick succession can be handled differently than on a local device. | Add an assertion between the taps. |
-
-### Current limitations
-
-- Only real devices are supported. Emulators and simulators are not available for Mobilewright on <BrandName />.
-- Mobilewright `0.0.56` or later, below `0.1.0`, is required.
-- Mobilewright testing on <BrandName /> is in Beta. Behavior may change as the integration matures.
 
 ## Related docs
 
 - [Mobilewright testing overview](/support/docs/mobilewright-overview/)
 - [Run your first test](/support/docs/getting-started-with-mobilewright-testing/)
 - [Set up your test environment](/support/docs/mobilewright-set-up-test-environment/)
+- [`@testmuai/mobilewright` on npm](https://www.npmjs.com/package/@testmuai/mobilewright)
 - [Mobilewright on GitHub](https://github.com/mobile-next/mobilewright)

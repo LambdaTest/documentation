@@ -56,6 +56,10 @@ With the <BrandName /> driver for Mobilewright, you can run your existing Mobile
 Mobilewright testing on <BrandName /> is currently in **Beta**. To share feedback or report an issue, contact our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>support team</span>.
 :::
 
+:::tip Driver package
+The <BrandName /> driver is published on npm as [`@testmuai/mobilewright`](https://www.npmjs.com/package/@testmuai/mobilewright). Add it to your Mobilewright project with `npm i -D @testmuai/mobilewright`.
+:::
+
 ## Why run Mobilewright tests on <BrandName />
 
 - **Real devices:** Run your tests on real Android and iOS phones and tablets instead of local simulators and emulators.
@@ -67,19 +71,19 @@ Mobilewright testing on <BrandName /> is currently in **Beta**. To share feedbac
 
 ## How it works
 
-The `@testmuai/mobilewright` package is a Mobilewright driver. When you run `npx mobilewright test`:
+The [`@testmuai/mobilewright`](https://www.npmjs.com/package/@testmuai/mobilewright) package is a Mobilewright driver. When you run `npx mobilewright test`:
 
 1. The driver uploads your app (if you pass a local file) and requests a real device for each Mobilewright worker.
 2. <BrandName /> allocates a device that matches the platform, device name, and OS version in your config, and starts an automation session on it.
 3. Every Mobilewright action, such as a tap, a swipe, or a hierarchy read, is sent to the device over that session. Nothing is installed on the device apart from your app.
-4. When the run ends, the driver names each session after the tests it ran and pushes the pass or fail status to the dashboard.
+4. When the run ends, the driver pushes the pass or fail status of each session to the dashboard.
 
 ## Supported configuration
 
 | Item | Support |
 |------|---------|
-| **Platforms** | Android and iOS real devices |
-| **Device types** | Real devices only. Emulators and simulators are not supported. |
+| **Driver package** | [`@testmuai/mobilewright`](https://www.npmjs.com/package/@testmuai/mobilewright) on npm |
+| **Devices** | Android and iOS real devices only. Emulators and simulators are not supported. |
 | **Mobilewright version** | `0.0.56` or later, below `0.1.0` |
 | **Node.js version** | `22.12` or later |
 | **Languages** | TypeScript and JavaScript |

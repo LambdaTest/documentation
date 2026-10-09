@@ -19,8 +19,6 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import RealDeviceTag from '../src/component/realDevice';
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -134,31 +132,13 @@ You can install up to **3** helper apps per session.
 
 To get an `lt://` app ID before the run, upload your app with the <BrandName /> REST API. This is useful in CI, where you can upload once and reuse the ID across several runs.
 
-<Tabs className="docs__val">
-
-<TabItem value="file" label="Upload a file" default>
-
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">
 {`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" -X POST "https://manual-api.lambdatest.com/app/upload/realDevice" -F "appFile=@"/path/to/app.apk"" -F "name="sample_app""`}
 </CodeBlock>
 </div>
 
-</TabItem>
-
-<TabItem value="url" label="Upload from a URL">
-
-<div className="lambdatest__codeblock">
-<CodeBlock className="language-bash">
-{`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" -X POST "https://manual-api.lambdatest.com/app/upload/realDevice" -F "url=https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_android.apk" -F "name=sample_app"`}
-</CodeBlock>
-</div>
-
-</TabItem>
-
-</Tabs>
-
-The response is a JSON object that contains an `app_url` of the form `lt://APP123456789123456789`. Pass this value to the `app` option. For more ways to upload and manage apps, see [Upload Apps on Real Device Cloud](/support/docs/upload-apps-on-real-device-cloud/).
+The response contains an `app_url` of the form `lt://APP123456789123456789`. Pass this value to the `app` option. To upload from a URL instead, see [Step 3 of Run your first test](/support/docs/getting-started-with-mobilewright-testing/#step-3-upload-your-app) or [Upload Apps on Real Device Cloud](/support/docs/upload-apps-on-real-device-cloud/).
 
 ## Select devices
 
@@ -299,12 +279,7 @@ Set `networkProfile` to `'offline'` to start the session with no network. For th
 
 ### Video and device logs
 
-Video recordings and device logs help you debug failures. Set these options to control whether they are captured:
-
-| Option | Description |
-|--------|-------------|
-| `video` | Records a video of the session. |
-| `deviceLog` | Captures the device logs for the session. |
+Video recordings and device logs help you debug failures. Set `video` and `deviceLog` to control whether they are captured:
 
 ```ts
 driver: testMuDriver({
@@ -344,10 +319,6 @@ driver: testMuDriver({
   disableAnimation: true,
 }),
 ```
-
-:::note
-Mobilewright's own `use.animations` setting has no effect on <BrandName /> devices. Use the driver's `disableAnimation` option instead.
-:::
 
 ### Pass other capabilities
 
