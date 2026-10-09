@@ -124,7 +124,7 @@ export default function Home() {
         <div className="prodCatalog">
 
           <Section icon={{ light: 'automation-light-icon.svg', dark: 'automation-dark-icon.svg' }} title="Web Automation" blurb="Run automated browser tests at scale with Selenium, Cypress, Playwright, and more.">
-            <Card href="/support/docs/getting-started-with-testmu-automation/" title="Selenium Testing" desc="Run Selenium tests on cloud grid" />
+            <Card href="/support/docs/testmu-running-your-first-selenium-test/" title="Selenium Testing" desc="Run Selenium tests on cloud grid" />
             <Card href="/support/docs/getting-started-with-cypress-testing/" title="Cypress Testing" desc="Run Cypress tests across browsers" />
             <Card href="/support/docs/playwright-testing/" title="Playwright Testing" desc="Scale Playwright tests in parallel" />
             <Card href="/support/docs/puppeteer-testing/" title="Puppeteer Testing" desc="Automate Chrome with Puppeteer online" />
