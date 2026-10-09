@@ -2,6 +2,7 @@
 id: timeouts-issues-and-resolutions
 title: Timeouts - Errors and Resolutions
 sidebar_label: Resolve Timeouts
+toc_max_heading_level: 2
 description: Resolve timeout errors in Selenium tests caused by idle sessions, network latency, queuing, and firewalls.
 keywords:
   - selenium idle timeout fix
@@ -68,7 +69,9 @@ import VerifiedTag from '@site/src/component/verifiedTag';
     "keywords": [
       "selenium idle timeout fix",
       "test queue timeout resolution",
-      "network latency timeout"
+      "network latency timeout",
+      "firewall blocked selenium test",
+      "idleTimeout capability setting"
     ],
     "proficiencyLevel": "Beginner",
     "author": {
