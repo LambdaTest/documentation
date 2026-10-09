@@ -1,4 +1,4 @@
-# How to Bypass Firewalls Using CustomHeaders Capability
+# How to Set Custom HTTP Headers in Selenium on TestMu AI
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
@@ -6,72 +6,72 @@
       },
       {
         "@type": "SoftwareSourceCode",
-        "name": "Send tokens or session IDs with headers like",
+        "name": "User Identification and Session Management",
         "codeSampleType": "code snippet",
-        "programmingLanguage": "Java",
+        "programmingLanguage": "HTTP",
         "text": "X-Session-ID: 1234567890"
       },
       {
         "@type": "SoftwareSourceCode",
-        "name": "Specify expected response formats",
+        "name": "Content Negotiation",
         "codeSampleType": "code snippet",
-        "programmingLanguage": "Java",
+        "programmingLanguage": "HTTP",
         "text": "Accept: application/json"
       },
       {
         "@type": "SoftwareSourceCode",
-        "name": "Get limits and usage from APIs",
+        "name": "Rate Limiting",
         "codeSampleType": "code snippet",
-        "programmingLanguage": "Java",
+        "programmingLanguage": "HTTP",
         "text": "X-RateLimit-Remaining: 10"
       },
       {
         "@type": "SoftwareSourceCode",
-        "name": "Include trace info or timing metrics",
+        "name": "Debugging and Performance Tracking",
         "codeSampleType": "code snippet",
-        "programmingLanguage": "Java",
+        "programmingLanguage": "HTTP",
         "text": "X-Execution-Time: 150ms"
       },
       {
         "@type": "SoftwareSourceCode",
-        "name": "Enable cross-origin requests",
+        "name": "CORS (Cross-Origin Resource Sharing)",
         "codeSampleType": "code snippet",
-        "programmingLanguage": "Java",
+        "programmingLanguage": "HTTP",
         "text": "Access-Control-Allow-Origin: *"
       },
       {
         "@type": "SoftwareSourceCode",
-        "name": "Pass app-level config",
+        "name": "Custom Application Logic",
         "codeSampleType": "code snippet",
-        "programmingLanguage": "Java",
+        "programmingLanguage": "HTTP",
         "text": "X-App-Version: v2.3.1"
       },
       {
         "@type": "SoftwareSourceCode",
-        "name": "Mask the request with common headers",
+        "name": "Bypassing Firewalls/Proxies",
         "codeSampleType": "code snippet",
-        "programmingLanguage": "Java",
+        "programmingLanguage": "HTTP",
         "text": "User-Agent: Mozilla/5.0 (Windows NT 10.0...)"
       },
       {
         "@type": "SoftwareSourceCode",
-        "name": "Return backend state",
+        "name": "Server Health",
         "codeSampleType": "code snippet",
-        "programmingLanguage": "Java",
+        "programmingLanguage": "HTTP",
         "text": "X-Server-Status: All systems operational"
       },
       {
         "@type": "SoftwareSourceCode",
-        "name": "Guide search engines",
+        "name": "SEO Optimization",
         "codeSampleType": "code snippet",
-        "programmingLanguage": "Java",
+        "programmingLanguage": "HTTP",
         "text": "Link: ; rel=\"canonical\""
       },
       {
         "@type": "SoftwareSourceCode",
-        "name": "Track experimental groups",
+        "name": "A/B Testing",
         "codeSampleType": "code snippet",
-        "programmingLanguage": "Java",
+        "programmingLanguage": "HTTP",
         "text": "X-Experiment-ID: variant_b"
       }
     ],
@@ -79,7 +79,7 @@
   }) }}
 />
 
-# Bypass Firewalls with customHeaders and customUrlFilters
+# How to Set Custom HTTP Headers in Selenium on TestMu AI
 
 Corporate firewalls keep networks secure but can occasionally interfere with your testing process. The customHeaders and customUrlFilters capabilities give developers precise control over network requests and firewall bypassing during testing.
 
@@ -87,13 +87,13 @@ This document covers the customHeaders capability, which lets you add custom hea
 
 ## About CustomHeaders
 
-Custom headers carry information about the request or response, such as the method, URL, and body content. You can modify the parameters of HTTP requests sent by your tests by manipulating these headers, thereby working around firewall restrictions.
+Custom headers carry information about the request or response, such as the method, URL, and body content. You can modify the parameters of HTTP requests sent by your tests by manipulating these headers, thereby working around firewall restrictions. `customHeaders` is one of many network controls available on the platform; see the full list of [Selenium automation capabilities](/support/docs/selenium-automation-capabilities/) for related options.
 
 ## How to Use CustomHeaders Capability on TestMu AI
 
-Add custom headers using the Desired Capabilities class.
+Add custom headers using the Capabilities class.
 
-1. Create an instance of the Desired Capabilities class.
+1. Create an instance of the Capabilities class.
 
 2. Use the customHeaders capability to add your custom headers.
 
@@ -237,7 +237,7 @@ A request to `https://lambdatest.github.io/sample-todo-app/` will not contain an
 
 ## A Responsible Approach to Bypassing Firewalls
 
-While the ability to add and control custom headers is useful, always follow your organization's security and compliance policies. These capabilities are designed to facilitate secure, realistic testing - not to bypass security controls inappropriately.
+While the ability to add and control custom headers is useful, always follow your organization's security and compliance policies. These capabilities are designed to facilitate secure, realistic testing - not to bypass security controls inappropriately. For related network configuration, you can also apply custom DNS mapping to redirect domains or run tests behind a proxy for restricted environments.
 
 ## Use Cases
 
@@ -247,7 +247,7 @@ The following examples show common use cases for custom headers.
 
 Send tokens or session IDs with headers like:
 
-```java
+```http
 X-Session-ID: 1234567890
 ```
 
@@ -255,7 +255,7 @@ X-Session-ID: 1234567890
 
 Specify expected response formats:
 
-```java
+```http
 Accept: application/json
 ```
 
@@ -263,7 +263,7 @@ Accept: application/json
 
 Get limits and usage from APIs:
 
-```java
+```http
 X-RateLimit-Remaining: 10
 ```
 
@@ -271,7 +271,7 @@ X-RateLimit-Remaining: 10
 
 Include trace info or timing metrics:
 
-```java
+```http
 X-Execution-Time: 150ms
 ```
 
@@ -279,7 +279,7 @@ X-Execution-Time: 150ms
 
 Enable cross-origin requests:
 
-```java
+```http
 Access-Control-Allow-Origin: *
 ```
 
@@ -287,7 +287,7 @@ Access-Control-Allow-Origin: *
 
 Pass app-level config:
 
-```java
+```http
 X-App-Version: v2.3.1
 ```
 
@@ -295,7 +295,7 @@ X-App-Version: v2.3.1
 
 Mask the request with common headers:
 
-```java
+```http
 User-Agent: Mozilla/5.0 (Windows NT 10.0...)
 ```
 
@@ -303,7 +303,7 @@ User-Agent: Mozilla/5.0 (Windows NT 10.0...)
 
 Return backend state:
 
-```java
+```http
 X-Server-Status: All systems operational
 ```
 
@@ -311,7 +311,7 @@ X-Server-Status: All systems operational
 
 Guide search engines:
 
-```java
+```http
 Link: <https://example.com/page>; rel="canonical"
 ```
 
@@ -319,7 +319,7 @@ Link: <https://example.com/page>; rel="canonical"
 
 Track experimental groups:
 
-```java
+```http
 X-Experiment-ID: variant_b
 ```
 
@@ -330,3 +330,11 @@ The customHeaders and customUrlFilters capabilities let you simulate request sce
 By turning obstacles like firewalls into controllable conditions, TestMu AI simplifies testing and enhances the realism and effectiveness of your QA process.
 
 Happy testing!
+
+## Next Steps
+
+Continue with these related guides:
+
+- [Custom DNS Map](/support/docs/custom-dns-map/)
+- [Run Selenium Tests Behind the Proxy](/support/docs/selenium-tests-behind-proxy/)
+- [Selenium Automation Capabilities](/support/docs/selenium-automation-capabilities/)

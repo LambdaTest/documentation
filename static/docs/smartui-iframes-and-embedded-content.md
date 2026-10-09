@@ -11,9 +11,9 @@ Pages often include **iframes**: embedded apps, chat widgets, consent managers, 
 
 | Question | Short answer |
 |----------|--------------|
-| Are iframes supported? | **Yes.** Hooks capture exactly what your session shows. The CLI and SDKs copy same-origin frames and reload cross-origin frames from their URL. |
+| Are iframes supported? | **Yes.** Hooks capture exactly what your session shows. The CLI and SDKs copy loaded same-origin frames and load cross-origin frames again from their URL. |
 | Will a cross-origin iframe show my logged-in state in a CLI or SDK snapshot? | **No.** SmartUI reloads it without your test's cookies, login or session, so it shows what a new visitor would see. Use Hooks, or ignore the frame. |
-| Will third-party embeds always match pixel-for-pixel? | **No.** Ads, consent prompts and regional content change between runs. That is expected. |
+| Will third-party embeds always look right? | **No.** Some public embeds, such as Google Maps, can render blank in CLI and SDK snapshots, and ads or consent prompts change between runs. Check the screenshot, and ignore or hide embeds that are out of scope. |
 | Can SmartUI read the DOM inside another site's iframe? | **No.** Browsers block that for cross-origin content. |
 | Does SmartUI warn me when a frame was reloaded instead of copied? | **No.** The CLI does not print a warning today, so check the screenshot. |
 
@@ -23,22 +23,23 @@ When you call `smartuiSnapshot` (or any SDK built on the SmartUI CLI), SmartUI c
 
 | Iframe | What SmartUI does | What you see in the screenshot |
 |--------|-------------------|--------------------------------|
-| Same-origin and fully loaded | Copies the frame's current content into the snapshot | The frame exactly as your test left it, including logged-in state and anything your test typed or clicked |
-| Same-origin but still loading when you took the snapshot | Keeps only the frame's URL, then loads it fresh in the cloud browser | The frame as a new visitor would see it |
-| Cross-origin (another site) | Keeps only the frame's URL, then loads it fresh in the cloud browser | Public embeds (maps, videos, widgets) usually look right. Anything that needs your login, cookies or test data looks wrong, for example a sign-in prompt instead of an account page |
-| Built by JavaScript with no `src` | With `enableJavaScript: true`, the page's scripts rebuild it in the cloud browser. Without it, SmartUI copies the frame if it can read it, and drops it if it cannot | The rebuilt or copied frame, or an empty area |
+| Same-origin and fully loaded | Copies the frame's current content, including its scripts, into the snapshot | The frame as your test left it, including logged-in state and anything your test typed. The frame's own scripts run again in SmartUI's browser, even with `enableJavaScript: false`, so anything they change on load (for example a style set from local storage) can differ |
+| Same-origin but still loading when you took the snapshot | Keeps only the frame's URL. The CLI fetches it again on your machine while uploading the snapshot | The frame as a new visitor would see it, not the state your test was about to reach |
+| Cross-origin (another site) | Keeps only the frame's URL. SmartUI's cloud browser loads it again | Anything that needs your login, cookies or test data looks wrong, for example a signed-out view instead of an account page. Some public embeds render correctly; others, such as Google Maps, can render blank |
+| Built by JavaScript with no `src`, readable by the page | With `enableJavaScript: true`, the page's scripts run again in SmartUI's browser and rebuild it. Otherwise SmartUI copies it | With JavaScript enabled, the frame as your scripts build it on a fresh load (random or time-based content changes). Otherwise the frame as your test saw it |
+| Built by JavaScript with no `src`, not readable by the page (for example a sandboxed frame) | Removed from the snapshot | Nothing, not even the frame's border or background |
 | Inside the page `` | Removed | Nothing (these frames do not draw anything visible) |
-| A YouTube embed | Replaced with the video's thumbnail image | A still frame instead of the player |
-| An iframe whose `src` is a video file (`.mp4`, `.webm`, `.ogg`) | Tries to capture the first video frame as a poster image | A still frame, if the video could be read |
+| A YouTube embed | Replaced with the video's thumbnail image | A still thumbnail instead of the player |
+| An iframe whose `src` is a video file (`.mp4`, `.webm`, `.ogg`) | Keeps the URL; the CLI does not upload the video | An empty, black video player with no frame of the video |
 
-Frames that SmartUI reloads come from SmartUI's cloud, not from your machine. If the frame URL is on a private network or `localhost`, it can only load through a [tunnel](/support/docs/smartui-sdk-tunnel/).
+Cross-origin frames are loaded by SmartUI's cloud browser, not from your machine. If a cross-origin frame's URL is on a private network or `localhost`, it renders blank unless you run the CLI with a [tunnel](/support/docs/smartui-sdk-tunnel/). Same-origin frames are fetched by the CLI on your machine, so they do not need one.
 
 ### When a cross-origin iframe looks wrong
 
 Pick the option that matches what the iframe is for in your test:
 
 1. **The iframe is part of what you are testing** (for example your own app embedded on another domain). Capture that page with [SmartUI Hooks](/support/docs/smartui-hooks-element-screenshot/), which photograph your real browser session, including the frame.
-2. **The iframe is out of scope** (chat widgets, ads, consent managers, third-party players). Exclude its container from comparison with `ignoreDOM`, as shown in [Handling Dynamic Data](/support/docs/smartui-handle-dynamic-data/). The frame still appears in the image but no longer fails the comparison.
+2. **The iframe is out of scope** (chat widgets, ads, consent managers, third-party players). Exclude the element that contains the iframe from comparison with `ignoreDOM`, as shown in [Handling Dynamic Data](/support/docs/smartui-handle-dynamic-data/). The frame still appears in the image but no longer fails the comparison. A selector that points inside a cross-origin frame has no effect, because SmartUI cannot see into it.
 3. **You want the iframe gone from the image entirely.** Hide it with [customCSS](/support/docs/smartui-custom-css/), for example `iframe[src*="chat-widget"] { display: none !important; }`. Unlike `ignoreDOM`, this removes it from the screenshot.
 4. **The iframe is still loading when you take the snapshot.** Wait for it to finish loading in your test before calling `smartuiSnapshot`, so SmartUI can copy it instead of reloading it.
 

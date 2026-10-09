@@ -1,15 +1,15 @@
-# Network Throttling for Selenium Tests
+# How to Simulate Network Conditions in Selenium on TestMu AI
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
-();\n        throttleParams.put(\"download\", 500); // Maximum download speed in kbps\n        throttleParams.put(\"upload\", 100);   // Maximum upload speed in kbps\n        throttleParams.put(\"latency\", 30);   // Latency in ms\n        \n        // Use executeScript with the provided payload\n        driver.executeScript(\"lambda-throttle-network\", throttleParams);\n\t\n\t}\n\n\n\t@Test\n\tpublic void basicTest() throws InterruptedException {\n\t\tString spanText;\n\t\tSystem.out.println(\"Loading Url\");\n\t\tThread.sleep(100);\n\t\tdriver.get(\"https://4dvanceboy.github.io/lambdatest/todo.html\");\n\t\tThread.sleep(100);\n\n\t\tSystem.out.println(\"Checking Box\");\n\t\tdriver.findElement(By.name(\"todo-1\")).click();\n\t\tThread.sleep(400);\n\n\t\tSystem.out.println(\"Checking Another Box\");\n\t\tdriver.findElement(By.name(\"todo-2\")).click();\n\t\tThread.sleep(400);\n\n\t\tSystem.out.println(\"Checking Box\");\n\t\tdriver.findElement(By.name(\"todo-3\")).click();\n\t\tThread.sleep(400);\n\n\t\tSystem.out.println(\"Checking Another Box\");\n\t\tdriver.findElement(By.name(\"todo-4\")).click();\n\t\tThread.sleep(400);\n\n\t\tdriver.findElement(By.id(\"todotext\")).sendKeys(\" List Item 6\");\n\t\tdriver.findElement(By.id(\"addbutton\")).click();\n\t\tThread.sleep(200);\n\n\t\tdriver.findElement(By.id(\"todotext\")).sendKeys(\" List Item 7\");\n\t\tdriver.findElement(By.id(\"addbutton\")).click();\n\t\tThread.sleep(200);\n\n\t\tdriver.findElement(By.id(\"todotext\")).sendKeys(\" List Item 8\");\n\t\tdriver.findElement(By.id(\"addbutton\")).click();\n\t\tThread.sleep(200);\n\n\t\tSystem.out.println(\"Checking Another Box\");\n\t\tdriver.findElement(By.name(\"todo-1\")).click();\n\t\tThread.sleep(300);\n\n\t\tSystem.out.println(\"Checking Another Box\");\n\t\tdriver.findElement(By.name(\"todo-3\")).click();\n\t\tThread.sleep(300);\n\n\t\tSystem.out.println(\"Checking Another Box\");\n\t\tdriver.findElement(By.name(\"todo-7\")).click();\n\t\tThread.sleep(300);\n\n\t\tSystem.out.println(\"Checking Another Box\");\n\t\tdriver.findElement(By.name(\"todo-8\")).click();\n\t\tThread.sleep(300);\n\n\t\tSystem.out.println(\"Entering Text\");\n\t\tdriver.findElement(By.id(\"todotext\")).sendKeys(\"Get Taste of Lambda and Stick to It\");\n\t\tThread.sleep(300);\n\n\t\tdriver.findElement(By.id(\"addbutton\")).click();\n\n\t\tSystem.out.println(\"Checking Another Box\");\n\t\tdriver.findElement(By.name(\"todo-9\")).click();\n\t\tThread.sleep(300);\n\t\t// Let's also assert that the todo we added is present in the list.\n\n\t\tspanText = driver.findElementByXPath(\"/html/body/div/div/div/ul/li[9]/span\").getText();\n\t\tAssert.assertEquals(\"Get Taste of Lambda and Stick to It\", spanText);\n\t\tStatus=\"passed\";\n\t\tThread.sleep(150);\n\n\t\tSystem.out.println(\"TestFinished\");\n\n\t}\n\n\t@AfterSuite\n\tpublic void tearDown() {\n\t\tdriver.executeScript(\"lambda-status=\" + Status);\n\t\tdriver.quit();\n\t}\n\n}"
+();\n        throttleParams.put(\"download\", 500); // Maximum download speed in kbps\n        throttleParams.put(\"upload\", 100);   // Maximum upload speed in kbps\n        throttleParams.put(\"latency\", 30);   // Latency in ms\n        \n        // Use executeScript with the provided payload\n        driver.executeScript(\"lambda-throttle-network\", throttleParams);\n\t\n\t}\n}"
       }
     ],
-    "dateModified": "2026-09-09T19:13:32+05:30"
+    "dateModified": "2026-09-27T00:00:00+05:30"
   }) }}
 />
 
-# Network Throttling
+# How to Simulate Network Conditions in Selenium on TestMu AI
 
 Test your website's functionality on low latency networks (2G/3G/LTE) or offline conditions. These networks have variable upload and download speeds that can alter how your website performs on different browsers.
 
@@ -17,15 +17,15 @@ To validate your website on such network profiles, simulate these network condit
 
 | KEY | VALUES |CAPABILITY |
 |-----|--------|-----------|
-| networkThrottling | Regular 4G, Regular 3G, Regular 2G, Good 3G, Good 2G, Offline, Reset, GPRS, DSL | Based on the user-provided input, this capability starts the test suite with the specified default network. For example, if the user selects **Regular 4G**, the capability looks like this:  ```capabilities.setCapability("networkThrottling", "Regular 4G");``` |
+| networkThrottling | Regular 4G, Regular 3G, Regular 2G, Good 3G, Good 2G, Offline, Reset, GPRS, DSL | Based on the user-provided input, this capability starts the test suite with the specified default network. For example, if the user selects **Regular 4G**, the capability looks like this: |
 
-```yaml
+```java
 capabilities.setCapability("networkThrottling", "Regular 4G");
 ```
 
 ## List of Network Profiles
 
-The following table lists all available preset network profiles with their speed and latency values.
+The following table lists all available preset network profiles with their speed and latency values. To mirror how users in a specific region experience your app, pair these profiles with Selenium geolocation testing, and use custom DNS mapping when the test must resolve a hostname to a particular IP.
 
 | CONDITION  | MAX DOWNLOAD SPEED (KBPS) | MAX UPLOAD SPEED (KBPS) | LATENCY (MS)     |
 | ------------ | --------------------------- | ------------------------- | ------------------ |
@@ -64,11 +64,11 @@ TestMu AI allows you to select a network profile before running automation tests
 
 ## Configuring Network Throttling in Test Automation
 
-Define network throttle capabilities in your automation scripts to configure network throttling.
+Define network throttle capabilities in your automation scripts to configure network throttling. You can set these together with the other [Selenium automation capabilities](/support/docs/selenium-automation-capabilities/) that control your test environment.
 
 To configure network throttling in automation, use the [TestMu AI TestNG GitHub repository](https://github.com/LambdaTest/Java-TestNG-Selenium) to run automation tests.
 
-### Configuring Capabilities for Pre-defined Network Settings
+### Configuring Capabilities for Pre-Defined Network Settings
 
 ```java
 DesiredCapabilities caps = new DesiredCapabilities();
@@ -87,6 +87,8 @@ package com.lambdatest;
 
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.HashMap;
+import java.util.Map;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.remote.DesiredCapabilities;
@@ -210,3 +212,11 @@ public class TestNGTodo1 {
  Find your defined network capabilities under the section 'Input Config' by navigating to the 'METADATA' section of your automation build-logs.
 
 > In case you have any questions, feel free to share them with us.Our experts are available on **24/7 Customer chat support**. You can also drop us a mail at support@testmuai.com. Happy testing! 🙂
+
+## Next Steps
+
+Continue with these related guides:
+
+- [Selenium Geolocation Capabilities](/support/docs/selenium-geolocation-capabilities/)
+- [Custom DNS Map](/support/docs/custom-dns-map/)
+- [Selenium Automation Capabilities](/support/docs/selenium-automation-capabilities/)

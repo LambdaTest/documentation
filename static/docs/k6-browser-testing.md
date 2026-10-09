@@ -6,7 +6,7 @@
       },
       {
         "@type": "SoftwareSourceCode",
-        "name": "Code sample 5",
+        "name": "Run the test",
         "codeSampleType": "code snippet",
         "programmingLanguage": "text",
         "text": "K6_BROWSER_ENABLED=true k6 run k6_sample.js"

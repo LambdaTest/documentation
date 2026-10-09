@@ -1,21 +1,19 @@
-# Supported Cypress Versions
+# Supported Cypress Versions on TestMu AI
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
-With the newer versions of Cypress releasing, to gain the most from recent improvements and bug fixes, it is recommended that your test scripts use the latest version.
+TestMu AI supports every major, minor, and patch release of Cypress across both release lines: Cypress 10 and above, and Cypress 9 and below. With newer versions of Cypress releasing regularly, use the latest version where possible to benefit from recent fixes and improvements.
 
-TestMu AI supports every major, minor and patch versions for:
+TestMu AI supports every major, minor, and patch version for:
 
 * Cypress 10 & above
 * Cypress 9 & below
 
 ## Cypress Versions Supported By TestMu AI
 
-In *lambdatest-config.json* file, you can set the Cypress version as shown in the below code snippet.
+In the `lambdatest-config.json` file, set the Cypress version in the `run_settings` block as shown below. The keys differ between Cypress v10 and above (`cypress.config.js` config file, `.cy.js` specs) and Cypress v9 and below (`cypress.json` config file, `.spec.js` specs).
 
-```javascript
-// lambdatest-config.json
-
+```javascript title="lambdatest-config.json"
 "run_settings":{
    "cypress_config_file":"cypress.config.js",
    "reporter_config_file":"base_reporter_config.json",
@@ -29,12 +27,9 @@ In *lambdatest-config.json* file, you can set the Cypress version as shown in th
       "cypress":"10.0.0"
    }
 },
-
 ```
 
-```javascript
-// lambdatest-config.json
-
+```javascript title="lambdatest-config.json"
 "run_settings":{
    "cypress_config_file": "cypress.json",
      "reporter_config_file": "base_reporter_config.json",
@@ -47,16 +42,13 @@ In *lambdatest-config.json* file, you can set the Cypress version as shown in th
      "npm_dependencies": {
         "cypress": "9.0.0"
 }
-
 ```
 
-## Setting Cypress Version
+## Setting the Cypress Version
 
-Following are the different ways to set the Cypress version.
+Set the version in any of three ways (each option overrides the ones before it):
 
-1. Using `package.json`: TestMu AI will pick the Cypress version from `package.json`.
-
-Example:
+1. **`package.json`:** TestMu AI picks the Cypress version from your project's `package.json` dev dependencies.
 
 ```json
 "devDependencies": {
@@ -67,9 +59,7 @@ Example:
     "eslint": "7.0.0",
 ```
 
-2. Using `npm_dependencies`: If you are passing `npm_dependencies`, TestMu AI will pick the Cypress version from `npm_dependencies` in `lambdatest-config.json`.
-
-Example:
+2. **`npm_dependencies`:** set `cypress` under `run_settings.npm_dependencies` in `lambdatest-config.json`; this takes priority over `package.json`.
 
 ```json
 "run_settings": {
@@ -88,9 +78,7 @@ Example:
   },
 ```
 
-3. Using `cypress_version`: You can pass `cypress_version` in `lambdatest-config.json` and it will override the `cypress_version` present in `npm_dependencies` or `package.json`.
-
-Example:
+3. **`cypress_version`:** set `cypress_version` in `lambdatest-config.json` to override the version from `npm_dependencies` or `package.json`.
 
 ```json
 "run_settings": {
