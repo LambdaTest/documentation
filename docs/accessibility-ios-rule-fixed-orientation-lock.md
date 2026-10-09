@@ -1,8 +1,8 @@
 ---
 id: accessibility-ios-rule-fixed-orientation-lock
-title: Fixed Orientation Lock
+title: Fixed Orientation Lock (iOS)
 sidebar_label: Fixed Orientation Lock
-description: Rule-level Accessibility guidance for Fixed Orientation Lock on iOS.
+description: "Flag iOS apps locked to a single orientation. Support both portrait and landscape unless one orientation is essential, for better accessibility."
 slug: accessibility-ios-rule-fixed-orientation-lock/
 ---
 
@@ -18,7 +18,7 @@ slug: accessibility-ios-rule-fixed-orientation-lock/
       "@id": "https://www.testmuai.com/support/docs/accessibility-ios-rule-fixed-orientation-lock/"
     },
     "headline": "Fixed Orientation Lock",
-    "description": "Rule-level Accessibility guidance for Fixed Orientation Lock on iOS.",
+    "description": "Flag iOS apps locked to a single orientation. Support both portrait and landscape unless one orientation is essential, for better accessibility.",
     "url": "https://www.testmuai.com/support/docs/accessibility-ios-rule-fixed-orientation-lock/",
     "image": {
       "@type": "ImageObject",

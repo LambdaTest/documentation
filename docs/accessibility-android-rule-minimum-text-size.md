@@ -1,8 +1,8 @@
 ---
 id: accessibility-android-rule-minimum-text-size
-title: Minimum Text Size
+title: Minimum Text Size (Android)
 sidebar_label: Minimum Text Size
-description: Rule-level Accessibility guidance for Minimum Text Size on Android.
+description: "Find Android text below the readable 16dp minimum that doesn't scale with font settings, making it hard to read for low-vision users."
 slug: accessibility-android-rule-minimum-text-size/
 ---
 
@@ -18,7 +18,7 @@ slug: accessibility-android-rule-minimum-text-size/
       "@id": "https://www.testmuai.com/support/docs/accessibility-android-rule-minimum-text-size/"
     },
     "headline": "Minimum Text Size",
-    "description": "Rule-level Accessibility guidance for Minimum Text Size on Android.",
+    "description": "Find Android text below the readable 16dp minimum that doesn't scale with font settings, making it hard to read for low-vision users.",
     "url": "https://www.testmuai.com/support/docs/accessibility-android-rule-minimum-text-size/",
     "image": {
       "@type": "ImageObject",

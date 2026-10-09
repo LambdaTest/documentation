@@ -1,8 +1,8 @@
 ---
 id: accessibility-android-rule-button-capitalization-check
-title: Button Element Capitalisation Check
+title: Button Element Capitalisation Check (Android)
 sidebar_label: Button Capitalisation Check
-description: Rule-level Accessibility guidance for Button Element Capitalisation Check on Android.
+description: "Check Android button labels for irregular capitalization like lowercase starts or mid-word caps, so TalkBack and text-to-speech read them correctly."
 slug: accessibility-android-rule-button-capitalization-check/
 ---
 
@@ -18,7 +18,7 @@ slug: accessibility-android-rule-button-capitalization-check/
       "@id": "https://www.testmuai.com/support/docs/accessibility-android-rule-button-capitalization-check/"
     },
     "headline": "Button Element Capitalisation Check",
-    "description": "Rule-level Accessibility guidance for Button Element Capitalisation Check on Android.",
+    "description": "Check Android button labels for irregular capitalization like lowercase starts or mid-word caps, so TalkBack and text-to-speech read them correctly.",
     "url": "https://www.testmuai.com/support/docs/accessibility-android-rule-button-capitalization-check/",
     "image": {
       "@type": "ImageObject",

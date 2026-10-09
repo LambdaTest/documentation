@@ -1,8 +1,8 @@
 ---
 id: accessibility-android-rule-traversal-order-mismatch
-title: Traversal Order Does Not Match Visual Layout
+title: Traversal Order Does Not Match Visual Layout (Android)
 sidebar_label: Traversal Order Mismatch
-description: Rule-level Accessibility guidance for Traversal Order Does Not Match Visual Layout on Android.
+description: "Detect misused Android traversal overrides that break TalkBack order, creating loops or a reading sequence that contradicts the visual layout."
 slug: accessibility-android-rule-traversal-order-mismatch/
 ---
 
@@ -18,7 +18,7 @@ slug: accessibility-android-rule-traversal-order-mismatch/
       "@id": "https://www.testmuai.com/support/docs/accessibility-android-rule-traversal-order-mismatch/"
     },
     "headline": "Traversal Order Does Not Match Visual Layout",
-    "description": "Rule-level Accessibility guidance for Traversal Order Does Not Match Visual Layout on Android.",
+    "description": "Detect misused Android traversal overrides that break TalkBack order, creating loops or a reading sequence that contradicts the visual layout.",
     "url": "https://www.testmuai.com/support/docs/accessibility-android-rule-traversal-order-mismatch/",
     "image": {
       "@type": "ImageObject",

@@ -1,8 +1,8 @@
 ---
 id: accessibility-ios-rule-non-descriptive-link-text
-title: Non-Descriptive Link Text
+title: Non-Descriptive Link Text (iOS)
 sidebar_label: Non-Descriptive Link Text
-description: Rule-level Accessibility guidance for Non-Descriptive Link Text on iOS.
+description: "Flag iOS links whose whole label is generic text like 'Click here' or 'Read more' that fails to describe the destination for VoiceOver users."
 slug: accessibility-ios-rule-non-descriptive-link-text/
 ---
 
@@ -18,7 +18,7 @@ slug: accessibility-ios-rule-non-descriptive-link-text/
       "@id": "https://www.testmuai.com/support/docs/accessibility-ios-rule-non-descriptive-link-text/"
     },
     "headline": "Non-Descriptive Link Text",
-    "description": "Rule-level Accessibility guidance for Non-Descriptive Link Text on iOS.",
+    "description": "Flag iOS links whose whole label is generic text like 'Click here' or 'Read more' that fails to describe the destination for VoiceOver users.",
     "url": "https://www.testmuai.com/support/docs/accessibility-ios-rule-non-descriptive-link-text/",
     "image": {
       "@type": "ImageObject",

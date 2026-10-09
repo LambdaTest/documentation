@@ -1,8 +1,8 @@
 ---
 id: accessibility-ios-rule-meaningful-sequence
-title: Meaningful Sequence
+title: Meaningful Sequence (iOS)
 sidebar_label: Meaningful Sequence
-description: Rule-level Accessibility guidance for Meaningful Sequence on iOS.
+description: "Check that iOS content is announced in an order matching its visual sequence, so VoiceOver users don't hear the screen in a confusing order."
 slug: accessibility-ios-rule-meaningful-sequence/
 ---
 
@@ -18,7 +18,7 @@ slug: accessibility-ios-rule-meaningful-sequence/
       "@id": "https://www.testmuai.com/support/docs/accessibility-ios-rule-meaningful-sequence/"
     },
     "headline": "Meaningful Sequence",
-    "description": "Rule-level Accessibility guidance for Meaningful Sequence on iOS.",
+    "description": "Check that iOS content is announced in an order matching its visual sequence, so VoiceOver users don't hear the screen in a confusing order.",
     "url": "https://www.testmuai.com/support/docs/accessibility-ios-rule-meaningful-sequence/",
     "image": {
       "@type": "ImageObject",

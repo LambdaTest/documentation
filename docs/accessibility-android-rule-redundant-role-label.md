@@ -1,8 +1,8 @@
 ---
 id: accessibility-android-rule-redundant-role-label
-title: Redundant Role Keyword in Accessibility Label
+title: Redundant Role Keyword in Accessibility Label (Android)
 sidebar_label: Redundant Role in Label
-description: Rule-level Accessibility guidance for Redundant Role Keyword in Accessibility Label on Android.
+description: "Flag Android accessibility labels that repeat a control's role, like 'button' or 'switch', since TalkBack already announces the role separately."
 slug: accessibility-android-rule-redundant-role-label/
 ---
 
@@ -18,7 +18,7 @@ slug: accessibility-android-rule-redundant-role-label/
       "@id": "https://www.testmuai.com/support/docs/accessibility-android-rule-redundant-role-label/"
     },
     "headline": "Redundant Role Keyword in Accessibility Label",
-    "description": "Rule-level Accessibility guidance for Redundant Role Keyword in Accessibility Label on Android.",
+    "description": "Flag Android accessibility labels that repeat a control's role, like 'button' or 'switch', since TalkBack already announces the role separately.",
     "url": "https://www.testmuai.com/support/docs/accessibility-android-rule-redundant-role-label/",
     "image": {
       "@type": "ImageObject",

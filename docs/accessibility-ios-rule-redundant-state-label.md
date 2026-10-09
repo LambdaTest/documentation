@@ -1,8 +1,8 @@
 ---
 id: accessibility-ios-rule-redundant-state-label
-title: Redundant State Keyword in Accessibility Label
+title: Redundant State Keyword in Accessibility Label (iOS)
 sidebar_label: Redundant State in Label
-description: Rule-level Accessibility guidance for Redundant State Keyword in Accessibility Label on iOS.
+description: "Flag iOS accessibility labels that bake in state words like 'on' or 'selected' that VoiceOver already announces from the control itself."
 slug: accessibility-ios-rule-redundant-state-label/
 ---
 
@@ -18,7 +18,7 @@ slug: accessibility-ios-rule-redundant-state-label/
       "@id": "https://www.testmuai.com/support/docs/accessibility-ios-rule-redundant-state-label/"
     },
     "headline": "Redundant State Keyword in Accessibility Label",
-    "description": "Rule-level Accessibility guidance for Redundant State Keyword in Accessibility Label on iOS.",
+    "description": "Flag iOS accessibility labels that bake in state words like 'on' or 'selected' that VoiceOver already announces from the control itself.",
     "url": "https://www.testmuai.com/support/docs/accessibility-ios-rule-redundant-state-label/",
     "image": {
       "@type": "ImageObject",

@@ -1,8 +1,8 @@
 ---
 id: accessibility-android-rule-images-with-text
-title: Images with Text
+title: Images with Text (Android)
 sidebar_label: Images with Text
-description: Rule-level Accessibility guidance for Images with Text on Android.
+description: "Detect meaningful text baked into images on Android that is invisible to TalkBack and must be provided as real text or an accessible description."
 slug: accessibility-android-rule-images-with-text/
 ---
 
@@ -18,7 +18,7 @@ slug: accessibility-android-rule-images-with-text/
       "@id": "https://www.testmuai.com/support/docs/accessibility-android-rule-images-with-text/"
     },
     "headline": "Images with Text",
-    "description": "Rule-level Accessibility guidance for Images with Text on Android.",
+    "description": "Detect meaningful text baked into images on Android that is invisible to TalkBack and must be provided as real text or an accessible description.",
     "url": "https://www.testmuai.com/support/docs/accessibility-android-rule-images-with-text/",
     "image": {
       "@type": "ImageObject",

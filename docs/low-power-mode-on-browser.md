@@ -1,8 +1,8 @@
 ---
 id: low-power-mode-on-browser
-title: Low Power/Battery Saver Mode on Real Devices
+title: Low Power/Battery Saver Mode for Browser Testing on Real Devices
 sidebar_label: Low Power Mode
-description: Toggle Low Power Mode (iOS) and Battery Saver Mode (Android) during manual browser testing sessions on real devices to validate site behavior under battery-saving conditions.
+description: "Toggle Low Power Mode (iOS) or Battery Saver Mode (Android) during manual browser testing on real devices to validate site behavior under low battery."
 keywords:
   - low power mode
   - battery saver mode
@@ -61,7 +61,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       "@id": "https://www.testmuai.com/support/docs/low-power-mode-on-browser/"
     },
     "headline": "Low Power/Battery Saver Mode on Real Devices",
-    "description": "Toggle Low Power Mode (iOS) and Battery Saver Mode (Android) during manual browser testing sessions on real devices to validate site behavior under battery-saving conditions.",
+    "description": "Toggle Low Power Mode (iOS) or Battery Saver Mode (Android) during manual browser testing on real devices to validate site behavior under low battery.",
     "url": "https://www.testmuai.com/support/docs/low-power-mode-on-browser/",
     "image": {
       "@type": "ImageObject",

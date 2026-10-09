@@ -1,8 +1,8 @@
 ---
 id: accessibility-ios-rule-unique-option-names
-title: Unique Option Names
+title: Unique Option Names (iOS)
 sidebar_label: Unique Option Names
-description: Rule-level Accessibility guidance for Unique Option Names on iOS.
+description: "Find options in an iOS group like a segmented control, tab bar, or picker that share an accessible name so VoiceOver users can tell them apart."
 slug: accessibility-ios-rule-unique-option-names/
 ---
 
@@ -18,7 +18,7 @@ slug: accessibility-ios-rule-unique-option-names/
       "@id": "https://www.testmuai.com/support/docs/accessibility-ios-rule-unique-option-names/"
     },
     "headline": "Unique Option Names",
-    "description": "Rule-level Accessibility guidance for Unique Option Names on iOS.",
+    "description": "Find options in an iOS group like a segmented control, tab bar, or picker that share an accessible name so VoiceOver users can tell them apart.",
     "url": "https://www.testmuai.com/support/docs/accessibility-ios-rule-unique-option-names/",
     "image": {
       "@type": "ImageObject",

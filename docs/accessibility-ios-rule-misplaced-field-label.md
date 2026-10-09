@@ -1,8 +1,8 @@
 ---
 id: accessibility-ios-rule-misplaced-field-label
-title: Misplaced Field Label
+title: Misplaced Field Label (iOS)
 sidebar_label: Misplaced Field Label
-description: Rule-level Accessibility guidance for Misplaced Field Label on iOS.
+description: "Ensure an iOS control's visible text leads its accessibility label, not trailing other context, so Voice Control matching stays reliable."
 slug: accessibility-ios-rule-misplaced-field-label/
 ---
 
@@ -18,7 +18,7 @@ slug: accessibility-ios-rule-misplaced-field-label/
       "@id": "https://www.testmuai.com/support/docs/accessibility-ios-rule-misplaced-field-label/"
     },
     "headline": "Misplaced Field Label",
-    "description": "Rule-level Accessibility guidance for Misplaced Field Label on iOS.",
+    "description": "Ensure an iOS control's visible text leads its accessibility label, not trailing other context, so Voice Control matching stays reliable.",
     "url": "https://www.testmuai.com/support/docs/accessibility-ios-rule-misplaced-field-label/",
     "image": {
       "@type": "ImageObject",

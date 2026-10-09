@@ -1,8 +1,8 @@
 ---
 id: accessibility-ios-rule-invalid-range-values
-title: Invalid Range Values
+title: Invalid Range Values (iOS)
 sidebar_label: Invalid Range Values
-description: Rule-level Accessibility guidance for Invalid Range Values on iOS.
+description: "Catch iOS sliders, steppers, and progress indicators reporting invalid or out-of-range values so VoiceOver announces their state correctly."
 slug: accessibility-ios-rule-invalid-range-values/
 ---
 
@@ -18,7 +18,7 @@ slug: accessibility-ios-rule-invalid-range-values/
       "@id": "https://www.testmuai.com/support/docs/accessibility-ios-rule-invalid-range-values/"
     },
     "headline": "Invalid Range Values",
-    "description": "Rule-level Accessibility guidance for Invalid Range Values on iOS.",
+    "description": "Catch iOS sliders, steppers, and progress indicators reporting invalid or out-of-range values so VoiceOver announces their state correctly.",
     "url": "https://www.testmuai.com/support/docs/accessibility-ios-rule-invalid-range-values/",
     "image": {
       "@type": "ImageObject",

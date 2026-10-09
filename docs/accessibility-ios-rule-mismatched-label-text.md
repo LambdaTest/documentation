@@ -1,8 +1,8 @@
 ---
 id: accessibility-ios-rule-mismatched-label-text
-title: Mismatched Label Text
+title: Mismatched Label Text (iOS)
 sidebar_label: Mismatched Label Text
-description: Rule-level Accessibility guidance for Mismatched Label Text on iOS.
+description: "Ensure an iOS control's accessibility label contains its visible text so Voice Control users can activate it by speaking what they see."
 slug: accessibility-ios-rule-mismatched-label-text/
 ---
 
@@ -18,7 +18,7 @@ slug: accessibility-ios-rule-mismatched-label-text/
       "@id": "https://www.testmuai.com/support/docs/accessibility-ios-rule-mismatched-label-text/"
     },
     "headline": "Mismatched Label Text",
-    "description": "Rule-level Accessibility guidance for Mismatched Label Text on iOS.",
+    "description": "Ensure an iOS control's accessibility label contains its visible text so Voice Control users can activate it by speaking what they see.",
     "url": "https://www.testmuai.com/support/docs/accessibility-ios-rule-mismatched-label-text/",
     "image": {
       "@type": "ImageObject",

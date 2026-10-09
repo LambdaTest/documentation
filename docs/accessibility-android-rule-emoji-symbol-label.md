@@ -1,8 +1,8 @@
 ---
 id: accessibility-android-rule-emoji-symbol-label
-title: Emoji or Symbol Used in Accessibility Label
+title: Emoji or Symbol Used in Accessibility Label (Android)
 sidebar_label: Emoji or Symbol in Label
-description: Rule-level Accessibility guidance for Emoji or Symbol Used in Accessibility Label on Android.
+description: "Flag Android accessibility labels made up mostly of emoji or symbols, which TalkBack announces inconsistently. Use clear descriptive text instead."
 slug: accessibility-android-rule-emoji-symbol-label/
 ---
 
@@ -18,7 +18,7 @@ slug: accessibility-android-rule-emoji-symbol-label/
       "@id": "https://www.testmuai.com/support/docs/accessibility-android-rule-emoji-symbol-label/"
     },
     "headline": "Emoji or Symbol Used in Accessibility Label",
-    "description": "Rule-level Accessibility guidance for Emoji or Symbol Used in Accessibility Label on Android.",
+    "description": "Flag Android accessibility labels made up mostly of emoji or symbols, which TalkBack announces inconsistently. Use clear descriptive text instead.",
     "url": "https://www.testmuai.com/support/docs/accessibility-android-rule-emoji-symbol-label/",
     "image": {
       "@type": "ImageObject",
