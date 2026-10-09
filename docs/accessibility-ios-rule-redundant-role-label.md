@@ -1,8 +1,8 @@
 ---
 id: accessibility-ios-rule-redundant-role-label
-title: Redundant Role Keyword in Accessibility Label
+title: Redundant Role Keyword in Accessibility Label (iOS)
 sidebar_label: Redundant Role in Label
-description: Rule-level Accessibility guidance for Redundant Role Keyword in Accessibility Label on iOS.
+description: "Flag iOS accessibility labels that repeat a control's role, like 'button' or 'link', since VoiceOver already announces the role separately."
 slug: accessibility-ios-rule-redundant-role-label/
 ---
 import { BRAND_URL } from '@site/src/component/BrandName';
@@ -43,7 +43,7 @@ import { BRAND_URL } from '@site/src/component/BrandName';
       "@id": "https://www.testmuai.com/support/docs/accessibility-ios-rule-redundant-role-label/"
     },
     "headline": "Redundant Role Keyword in Accessibility Label",
-    "description": "Rule-level Accessibility guidance for Redundant Role Keyword in Accessibility Label on iOS.",
+    "description": "Flag iOS accessibility labels that repeat a control's role, like 'button' or 'link', since VoiceOver already announces the role separately.",
     "url": "https://www.testmuai.com/support/docs/accessibility-ios-rule-redundant-role-label/",
     "image": {
       "@type": "ImageObject",
