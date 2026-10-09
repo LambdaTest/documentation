@@ -1,8 +1,8 @@
 ---
 id: accessibility-ios-rule-images-with-text
-title: Images with Text
+title: Images with Text (iOS)
 sidebar_label: Images with Text
-description: Rule-level Accessibility guidance for Images with Text on iOS.
+description: "Detect meaningful text baked into images on iOS that is invisible to VoiceOver and must be provided as real text or an accessible label."
 slug: accessibility-ios-rule-images-with-text/
 ---
 import { BRAND_URL } from '@site/src/component/BrandName';
@@ -43,7 +43,7 @@ import { BRAND_URL } from '@site/src/component/BrandName';
       "@id": "https://www.testmuai.com/support/docs/accessibility-ios-rule-images-with-text/"
     },
     "headline": "Images with Text",
-    "description": "Rule-level Accessibility guidance for Images with Text on iOS.",
+    "description": "Detect meaningful text baked into images on iOS that is invisible to VoiceOver and must be provided as real text or an accessible label.",
     "url": "https://www.testmuai.com/support/docs/accessibility-ios-rule-images-with-text/",
     "image": {
       "@type": "ImageObject",
