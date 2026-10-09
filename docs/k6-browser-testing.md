@@ -71,7 +71,9 @@ import VerifiedTag from '@site/src/component/verifiedTag';
     "keywords": [
       "k6 browser testing",
       "grafana browser testing",
-      "automation testing with k6"
+      "automation testing with k6",
+      "how to use k6 for testing",
+      "k6 testing tutorial"
     ],
     "proficiencyLevel": "Beginner",
     "author": {
@@ -103,21 +105,21 @@ import VerifiedTag from '@site/src/component/verifiedTag';
     "hasPart": [
       {
         "@type": "SoftwareSourceCode",
-        "name": "Prerequisites",
+        "name": "Set credentials on Windows",
         "codeSampleType": "code snippet",
         "programmingLanguage": "JavaScript",
         "text": "set LT_USERNAME = \"YOUR_LAMBDATEST_USERNAME\"\nset LT_ACCESS_KEY = \"YOUR_LAMBDATEST_ACCESS_KEY\""
       },
       {
         "@type": "SoftwareSourceCode",
-        "name": "Prerequisites",
+        "name": "Set credentials on macOS/Linux",
         "codeSampleType": "code snippet",
         "programmingLanguage": "JavaScript",
         "text": "export LT_USERNAME = \"YOUR_LAMBDATEST_USERNAME\"\nexport LT_ACCESS_KEY = \"YOUR_LAMBDATEST_ACCESS_KEY\""
       },
       {
         "@type": "SoftwareSourceCode",
-        "name": "Run Your First k6 Test",
+        "name": "Clone the k6 sample repository",
         "codeSampleType": "code snippet",
         "programmingLanguage": "Shell",
         "codeRepository": "https://github.com/LambdaTest/k6-browser-tests-sample",
@@ -132,7 +134,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
       },
       {
         "@type": "SoftwareSourceCode",
-        "name": "Code sample 5",
+        "name": "Run the test",
         "codeSampleType": "code snippet",
         "programmingLanguage": "text",
         "text": "K6_BROWSER_ENABLED=true k6 run k6_sample.js"
