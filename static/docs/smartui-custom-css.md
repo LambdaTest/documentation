@@ -19,7 +19,7 @@ Custom CSS injection is a specialized feature in SmartUI that allows you to appl
 Before using the Custom CSS feature, ensure you meet the following requirements:
 
 - Node.js v20.3+ (recommended)
-- SmartUI CLI v4.1.40+ (supports both `exec` and `capture` commands)
+- SmartUI CLI v4.1.40+. `customCSS` applies to snapshots taken with `smartui exec` and the SmartUI SDKs. The `smartui capture` command (static URL list) does not apply it; see [Hide elements with `smartui capture`](#hide-elements-with-smartui-capture)
 - Valid PROJECT_TOKEN configured in your environment
 
 ## Custom CSS Configuration in SmartUI
@@ -87,7 +87,7 @@ The embedded string method is useful for quick edits and single-use CSS rules. P
 
 - **Placement**: The `customCSS` property must be placed at the top level of your configuration file (not inside the `web` object). Placing it inside `web` will result in a "must NOT have additional properties" error.
 
-- **Path Resolution**: File paths are relative to your project root directory. Ensure the CSS file exists at the specified path. Files outside the project directory may not be accessible.
+- **Path Resolution**: A relative path in the configuration file is resolved from the folder that contains that configuration file, not from where you run the command. If the file is missing, the CLI stops with `customCSS file not found: `.
 
 - **CSS Specificity**: Your custom CSS will be injected at snapshot time. Use `!important` declarations if you need to override existing styles. If CSS is overridden by inline styles, increase selector specificity (e.g., `.target-class` → `#specific-id .target-class`).
 
@@ -119,6 +119,73 @@ The embedded string method is useful for quick edits and single-use CSS rules. P
 }
 ```
 
+## Hide Cookie Banners, Pop-ups and Overlays
+
+Cookie banners, consent managers, chat launchers and promo pop-ups are the most common reason a screenshot differs from its baseline. `customCSS` is the supported way to remove them from the screenshot.
+
+### Why the banner appears even though your test closed it
+
+With the SmartUI CLI and SDKs, SmartUI copies your page and renders the copy again in its cloud browsers. Your test's cookies and local storage are not carried over. A consent manager that decides whether to show itself when the page loads, for example with `enableJavaScript: true`, sees a new visitor and shows the banner again.
+
+### Use `customCSS`, not `ignoreDOM`, to remove an element
+
+`ignoreDOM` and `customCSS` solve different problems:
+
+| Option | What it does | The element in the screenshot |
+|--------|--------------|-------------------------------|
+| `ignoreDOM` | Tells the comparison to skip the element's area | **Still visible.** The banner stays in the image; only differences inside its box are ignored |
+| `customCSS` | Applies your CSS before the screenshot is taken | **Gone**, if your rule hides it, and the page reflows as if it were never there |
+
+Use `ignoreDOM` when the element should stay in the picture but its content changes every run, such as a timestamp. Use `customCSS` when the element should not be in the picture at all.
+
+### Example: hide a consent banner and a chat launcher
+
+Add the selectors to your CSS file (or the embedded string) referenced by `customCSS` in `.smartui.json`:
+
+```css
+/* Consent managers: use the selectors from your own page */
+#onetrust-banner-sdk, #onetrust-consent-sdk, #CybotCookiebotDialog, .cookie-banner { display: none !important; }
+
+/* Overlays some consent tools add behind the banner */
+.onetrust-pc-dark-filter, .modal-backdrop { display: none !important; }
+
+/* Page scroll locked while the banner was open */
+html, body { overflow: auto !important; }
+
+/* Chat launchers and promo pop-ups */
+#intercom-container, .drift-frame-controller, [data-testid="promo-modal"] { display: none !important; }
+```
+
+The selectors above are examples. Open your page in the browser's developer tools and copy the selector of the banner's outermost element. If a selector matches nothing when the snapshot is taken, the CLI reports `customCSS selector not found: ` for that snapshot, which usually means the selector is wrong or the element had not appeared yet.
+
+### Apply CSS to a single snapshot
+
+To hide an element in one snapshot only, pass `customCSS` in that snapshot's options. It replaces the configuration-level `customCSS` for that snapshot:
+
+```javascript
+await smartuiSnapshot(driver, 'Checkout', {
+  customCSS: '#onetrust-banner-sdk { display: none !important; }'
+});
+```
+
+The value can be CSS text or a path to a `.css` file, resolved from the folder you run the CLI in.
+
+### Hide elements with `smartui capture`
+
+The `smartui capture` command (static URL list) does not apply `customCSS`. Add a `beforeSnapshot` script to the URL entry instead, which adds the CSS to the page just before the screenshot:
+
+```json
+[
+  {
+    "name": "home",
+    "url": "https://www.example.com",
+    "execute": {
+      "beforeSnapshot": "const s = document.createElement('style'); s.textContent = '#onetrust-banner-sdk { display: none !important; }'; document.head.appendChild(s);"
+    }
+  }
+]
+```
+
 ## Known Limitations
 
 The Custom CSS feature has the following limitations:
@@ -127,7 +194,9 @@ The Custom CSS feature has the following limitations:
 
 - **Snapshot-Only Application**: CSS is only injected during snapshot capture and does not affect your application's runtime behavior.
 
-- **File Path Resolution**: Ensure CSS file paths are correctly specified relative to your project root. Files outside the project directory may not be accessible.
+- **File Path Resolution**: Paths in the configuration file are resolved from the configuration file's folder. Paths passed in a per-snapshot `customCSS` option are resolved from the folder you run the CLI in.
+- **Not applied by `smartui capture`**: The static URL list command takes screenshots without injecting `customCSS`. Use an `execute.beforeSnapshot` script instead, as shown in [Hide elements with `smartui capture`](#hide-elements-with-smartui-capture).
+- **Only `.css` files**: A file path must end in `.css`; any other extension is rejected.
 
 ## Use Cases for Custom CSS
 
