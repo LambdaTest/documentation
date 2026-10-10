@@ -68,13 +68,13 @@ Mobilewright testing on <BrandName /> is currently in **Beta**. To share feedbac
 You can use your own project to configure and test it. For demo purposes, we are using the sample repository.
 
 :::tip Sample repo
-All the code samples in this documentation can be found on **<BrandName />'s GitHub Repository**. You can either download or clone the repository to quickly run your tests. <a href="https://github.com/rishirajs123/testmuai-mobilewright-sample" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className="doc_img"/> View on GitHub</a>
+All the code samples in this documentation can be found on **<BrandName />'s GitHub Repository**. You can either download or clone the repository to quickly run your tests. <a href="https://github.com/LambdaTest/testmuai-mobilewright-sample" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className="doc_img"/> View on GitHub</a>
 :::
 
 Clone the repository and install its dependencies:
 
 ```bash
-git clone https://github.com/rishirajs123/testmuai-mobilewright-sample && cd testmuai-mobilewright-sample
+git clone https://github.com/LambdaTest/testmuai-mobilewright-sample && cd testmuai-mobilewright-sample
 npm install
 ```
 
@@ -399,6 +399,10 @@ You do not need to add a reporter or call a status hook. When the run ends, the 
 - **Name:** A session that ran one test is named after that test. A session that ran several tests is named after the first three, followed by a count of the rest, for example `sign in · sign out · add to cart (+2 more)`. Names are capped at 255 characters.
 
 To give every session the same fixed name instead, set the driver's `name` option. To stop the driver from pushing status, set `testResults: false`.
+
+Open a session to see its status, device configuration, and duration, along with every command the test sent, the logs, network traffic, and the video recording of the run:
+
+<img loading="lazy" src={require('../assets/images/mobilewright/mobilewright-session-report.png').default} alt="Mobilewright test session on the TestMu AI App Automation dashboard, showing the Passed status, device configuration, command log, and video recording" width="1600" height="945" className="doc_img"/>
 
 ### Build names
 
