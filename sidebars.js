@@ -2977,9 +2977,20 @@ module.exports = {
             ],
           },
           {
-            type: "doc",
+            type: "category",
+            collapsed: true,
             label: "Storybook Integration",
-            id: "smart-ui-storybook",
+            link: {
+              type: "doc",
+              id: "smart-ui-storybook",
+            },
+            items: [
+              {
+                type: "doc",
+                label: "CI Gating and Exit Codes",
+                id: "smartui-storybook-ci-gating",
+              },
+            ],
           },
           {
             type: "category",
