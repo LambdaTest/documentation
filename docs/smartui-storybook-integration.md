@@ -640,7 +640,7 @@ Please read the following table for more information about the configuration fil
 | browsers       | You can add all the supported browsers brands here to run your tests for SmartUI. <br/> Ex: `"chrome", "firefox", "safari", "edge", etc..` | Mandatory |
 | viewports    | You can add all the supported browser viewpoints here to run your tests for SmartUI <br/> Ex: `[1920, 1080],[width, height] etc..` <br/> | Mandatory |
 | waitForTimeout | You can add wait time for the page to load DOM of your StoryBook components. This can be added globally to your configuration and to individual stories as well. <br/> Ex: `3000`                                      | Optional  |
-| include        | Capture only the stories that match at least one pattern. A pattern can start with `title:`, `id:`, `path:` or `name:`. Without a prefix it matches the story name. See [Filter stories with include and exclude](#filter-stories-with-include-and-exclude). <br/> Ex: `"title:/^Components/", "Primary"` | Optional  |
+| include        | Capture only the stories that match at least one pattern. A pattern can start with `title:`, `id:`, `path:` or `name:`. Without a prefix it matches the story name. See [Filter Stories with Include and Exclude](/support/docs/smartui-storybook-include-exclude/). <br/> Ex: `"title:/^Components/", "Primary"` | Optional  |
 | exclude        | Skip the stories that match at least one pattern. Uses the same patterns as `include`, and is applied after it. <br/> Ex: `"title:/Deprecated/"`                            | Optional  |
 | failOn         | Policy that makes the CLI exit with code `4` when the build has visual changes: `none`, `unreviewed`, `changes` or `rejected`. The `--fail-on` flag and the `SMARTUI_FAIL_ON` variable override it. Needs CLI version `1.3.0` or later. See [CI Gating and Exit Codes](/support/docs/smartui-storybook-ci-gating/). <br/> Ex: `"changes"` | Optional (default: `"none"`) |
 | backgroundTheme | Theme for capturing stories. Options: `"light"`, `"dark"`, or `"both"` (captures both themes) <br/> Ex: `"light"` | Optional (default: `"light"`) |
@@ -676,39 +676,20 @@ For capturing the stories in **full page** without limiting the height to the vi
 
 #### Filter stories with include and exclude
 
-Use `include` and `exclude` in the `storybook` block to choose which stories SmartUI captures. Docs pages are always skipped.
-
-- If `include` has patterns, a story is captured only when it matches at least one of them.
-- A story that matches any `exclude` pattern is skipped, even if it matches `include`.
-
-From CLI version `1.3.0`, a pattern can start with a prefix that chooses what it is matched against:
-
-| Prefix | Matches against | Example story value |
-|---|---|---|
-| `title:` | The story title, the folder path shown in the Storybook sidebar. For Storybook 6, this is the story `kind`. | `Example/Button` |
-| `id:` | The story ID, as shown in the Storybook URL. | `example-button--primary` |
-| `path:` | The title and the story name joined with `/`. This is the sidebar path of the story, not the path of the story file. | `Example/Button/Primary` |
-| `name:` | The story name. | `Primary` |
-| No prefix | The story name, as in earlier versions. | `Primary` |
+Use `include` and `exclude` in the `storybook` block to choose which stories SmartUI captures. From CLI version `1.3.0`, a pattern can start with `title:`, `id:`, `path:` or `name:` to match the story title, ID, sidebar path or name. A pattern without a prefix matches the story name.
 
 ```json title=".smartui.json"
 {
   "storybook": {
     "browsers": ["chrome"],
     "viewports": [[1280, 720]],
-    "include": ["title:/^Example/", "id:/^forms-/"],
-    "exclude": ["title:/Deprecated/", "name:/^Playground$/"]
+    "include": ["title:/^Components/Button$/", "id:/^forms-/"],
+    "exclude": ["title:/Deprecated/"]
   }
 }
 ```
 
-How a pattern is read:
-
-- **Plain text is a regular expression that can match anywhere in the value.** `title:Example/Button` also matches `Example/ButtonGroup`. To match exactly, use `/` delimiters with anchors, such as `title:/^Example/Button$/`.
-- **Text between `/` delimiters is a regular expression with optional flags**, for example `name:/^default$/i`. A `/` inside the expression does not need a backslash.
-- **Characters with a special meaning in regular expressions**, such as `(`, `[`, `?`, `+` and `.`, need a backslash, and in JSON you write each backslash twice.
-- **The prefixes are lower case and must be one of the four above.** Any other text before a colon, such as `State: Active` or `Title:Example`, is matched against the story name as before. A pattern that starts with `/` is never read as a prefix.
-- If you have a story whose name starts with one of the four prefixes, add `name:` in front, for example `"name:title:Intro"`.
+For how patterns are matched, more examples and how filtered builds affect your baseline, see [Filter Stories with Include and Exclude](/support/docs/smartui-storybook-include-exclude/).
 
 #### Custom Viewport Configuration <NewTag value='New' color='#000' bgColor='#ffec02' />
 
@@ -917,7 +898,7 @@ These apply to CLI version `1.2.0` and later, when you pass a Storybook URL.
 Check Story Inclusion/Exclusion
 
 - Verify `include` and `exclude` patterns in the `storybook` block of `.smartui.json`.
-- A pattern without a prefix matches the story **name** only, not its title or folder. To filter by folder, use `title:`. See [Filter stories with include and exclude](#filter-stories-with-include-and-exclude).
+- A pattern without a prefix matches the story **name** only, not its title or folder. To filter by folder, use `title:`. See [Filter Stories with Include and Exclude](/support/docs/smartui-storybook-include-exclude/).
 - Plain text matches anywhere in the value, so `title:Button` also matches `ButtonGroup`. Use `/^...$/` to match exactly.
 - The CLI prints `Stories found:` with the number of stories left after filtering. If it prints `No stories found`, your patterns removed every story.
 

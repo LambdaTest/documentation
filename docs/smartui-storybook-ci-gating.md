@@ -281,7 +281,7 @@ When the CLI exits with a non-zero code, its last line is a short hint that star
 | `4` | Visual check failed | Only with `--fail-on`. The build broke the policy. | Review the changes in SmartUI from the build link, then approve or reject them. |
 | `5` | No verdict | Only with `--fail-on`, for a static build directory. The CLI stopped waiting while the build was still running, or could not read the build status. | Open the build in SmartUI to see the result once it finishes. |
 
-:::caution Changes in version 1.3.0
+:::warning Changes in version 1.3.0
 - Usage errors used to exit with code `1`. They now exit with code `2`. Errors in the content of the config file still exit with code `1`.
 - Codes `4` and `5` are used only when a policy other than `none` is set. Without `--fail-on`, `SMARTUI_FAIL_ON` or `failOn`, the exit codes are the same as before.
 :::
@@ -429,7 +429,7 @@ esac
 | `the file extension for --fetch-results must be .json` | The results file name does not end in `.json`. | Use a name such as `smartui-results.json`. |
 | The job passes although SmartUI found changes | No policy is set, or the policy is `rejected`. | Add `--fail-on changes` or `--fail-on unreviewed`. |
 | The job fails on every new story | The policy is `unreviewed`, which treats New screenshots as unreviewed. | Use `--fail-on changes`, or approve the new screenshots. |
-| Exit code `5` on large static builds | The build took longer than the 30 minutes the CLI waits. | Check the build in SmartUI. To shorten the build, reduce browsers, viewports or `waitForTimeout`, or split the stories across several builds with `include` and `exclude`. |
+| Exit code `5` on large static builds | The build took longer than the 30 minutes the CLI waits. | Check the build in SmartUI. To shorten the build, reduce browsers, viewports or `waitForTimeout`, or split the stories across several builds with `include` and `exclude`. Before you approve a filtered build, read [Filtered builds and your baseline](/support/docs/smartui-storybook-include-exclude/#filtered-builds-and-your-baseline). |
 | Exit code `3` when you re-run the job | A build already exists for this commit and branch. | Pass `--force-rebuild`. |
 
 ## Related pages

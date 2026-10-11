@@ -2987,6 +2987,11 @@ module.exports = {
             items: [
               {
                 type: "doc",
+                label: "Filter Stories",
+                id: "smartui-storybook-include-exclude",
+              },
+              {
+                type: "doc",
                 label: "CI Gating and Exit Codes",
                 id: "smartui-storybook-ci-gating",
               },
