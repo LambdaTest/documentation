@@ -402,7 +402,7 @@ To give every session the same fixed name instead, set the driver's `name` optio
 
 Open a session to see its status, device configuration, and duration, along with every command the test sent, the logs, network traffic, and the video recording of the run:
 
-<img loading="lazy" src={require('../assets/images/mobilewright/mobilewright-session-report.png').default} alt="Mobilewright test session on the TestMu AI App Automation dashboard, showing the Passed status, device configuration, command log, and video recording" width="1600" height="945" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/mobilewright/mobilewright-session-report.webp').default} alt="Mobilewright test session on the TestMu AI App Automation dashboard, showing the Passed status, device configuration, command log, and video recording" width="1600" height="945" className="doc_img"/>
 
 ### Build names
 
