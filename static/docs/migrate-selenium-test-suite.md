@@ -1,4 +1,4 @@
-# Migrate Your Selenium Test Suite
+# How to Migrate Your Selenium Suite to TestMu AI
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
@@ -6,14 +6,14 @@
       },
       {
         "@type": "SoftwareSourceCode",
-        "name": "Ruby",
+        "name": "Before (local) (Ruby)",
         "codeSampleType": "code snippet",
         "programmingLanguage": "Ruby",
         "text": "driver = Selenium::WebDriver.for :chrome"
       },
       {
         "@type": "SoftwareSourceCode",
-        "name": "Ruby",
+        "name": "After (cloud) (Ruby)",
         "codeSampleType": "code snippet",
         "programmingLanguage": "Ruby",
         "text": "username = ENV[\"LT_USERNAME\"]\naccess_key = ENV[\"LT_ACCESS_KEY\"]\nhub_url = \"https://#{username}:#{access_key}@hub.lambdatest.com/wd/hub\"\n\noptions = Selenium::WebDriver::Options.chrome(\n  platform_name: \"Windows 10\",\n  browser_version: \"latest\",\n  \"LT:Options\": {\n    build: \"My First Cloud Build\",\n    name: \"Sample Test\",\n    w3c: true,\n  }\n)\n\ndriver = Selenium::WebDriver.for :remote, url: hub_url, capabilities: options"
@@ -30,7 +30,9 @@
   }) }}
 />
 
-Already have Selenium tests running locally? You can run them on the TestMu AI cloud grid with three changes: swap the driver URL, add your credentials, and set the desired capabilities. Your test logic stays the same.
+# How to Migrate Your Selenium Suite to TestMu AI
+
+Already have Selenium tests running locally? You can run them on the TestMu AI cloud grid with three changes: swap the driver URL, add your credentials, and set the capabilities. Your test logic stays the same.
 
 If you are moving from BrowserStack or Sauce Labs, use these dedicated migration guides with capability mapping tables.
 
@@ -52,12 +54,12 @@ Add your TestMu AI credentials as environment variables so your tests can authen
   {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
 export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 
-  {`set LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
-set LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
+  {`$env:LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
+$env:LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 
 ## Step 2: Replace Your Local Driver With RemoteWebDriver
 
-Point your tests to the TestMu AI hub instead of launching a local browser.
+Point your tests to the TestMu AI hub instead of launching a local browser. The values you pass in `LT:Options` come from the full list of [Selenium automation capabilities](/support/docs/selenium-automation-capabilities/), so you can tune build name, platform, and logging to match your suite.
 
 Find where your test creates the WebDriver instance and replace it with a `RemoteWebDriver` pointing to the TestMu AI hub URL:
 
@@ -68,11 +70,13 @@ https://{YOUR_USERNAME}:{YOUR_ACCESS_KEY}@hub.lambdatest.com/wd/hub
 Here is what the change looks like in each language:
 
 **Before (local):**
+
 ```java
 WebDriver driver = new ChromeDriver();
 ```
 
 **After (cloud):**
+
 ```java
 String username = System.getenv("LT_USERNAME");
 String accessKey = System.getenv("LT_ACCESS_KEY");
@@ -92,11 +96,13 @@ WebDriver driver = new RemoteWebDriver(new URL(hubURL), browserOptions);
 ```
 
 **Before (local):**
+
 ```javascript
 const driver = new Builder().forBrowser('chrome').build();
 ```
 
 **After (cloud):**
+
 ```javascript
 const username = process.env.LT_USERNAME;
 const accessKey = process.env.LT_ACCESS_KEY;
@@ -120,11 +126,13 @@ const driver = new Builder()
 ```
 
 **Before (local):**
+
 ```python
 driver = webdriver.Chrome()
 ```
 
 **After (cloud):**
+
 ```python
 import os
 from selenium import webdriver
@@ -148,11 +156,13 @@ driver = webdriver.Remote(command_executor=hub_url, options=options)
 ```
 
 **Before (local):**
+
 ```csharp
 IWebDriver driver = new ChromeDriver();
 ```
 
 **After (cloud):**
+
 ```csharp
 string username = Environment.GetEnvironmentVariable("LT_USERNAME");
 string accessKey = Environment.GetEnvironmentVariable("LT_ACCESS_KEY");
@@ -174,11 +184,13 @@ IWebDriver driver = new RemoteWebDriver(new Uri(hubURL), options);
 ```
 
 **Before (local):**
+
 ```php
 $driver = ChromeDriver::start();
 ```
 
 **After (cloud):**
+
 ```php
 $username = getenv("LT_USERNAME");
 $accessKey = getenv("LT_ACCESS_KEY");
@@ -199,11 +211,13 @@ $driver = RemoteWebDriver::create($hubURL, $capabilities);
 ```
 
 **Before (local):**
+
 ```ruby
 driver = Selenium::WebDriver.for :chrome
 ```
 
 **After (cloud):**
+
 ```ruby
 username = ENV["LT_USERNAME"]
 access_key = ENV["LT_ACCESS_KEY"]
@@ -226,7 +240,7 @@ Use the [Capabilities Generator](https://www.testmuai.com/capabilities-generator
 
 ## Step 3: Run Your Tests
 
-Execute your tests the same way you normally would. The only difference is they now run on the cloud.
+Execute your tests the same way you normally would. The only difference is they now run on the cloud. If you are new to the grid, first walk through how to run your first Selenium test to confirm your setup before migrating a full suite.
 
 ```bash
 # Java (Maven)
@@ -252,7 +266,7 @@ bundle exec rspec
 
 Check the Automation Dashboard to see exactly what happened during your test.
 
-Visit the [TestMu AI Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build) to see your results. Each session captures video playback, screenshots, console logs, network logs, and Selenium command logs.
+Visit the [TestMu AI Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build) to see your results. Each session captures video playback, screenshots, console logs, network logs, and Selenium command logs. If a migrated test fails, use these artifacts to debug your Selenium tests and find the cause.
 
 ## What Stays the Same
 
@@ -266,3 +280,11 @@ Everything except the driver setup. Here is what does not change when you move t
 | CI/CD pipeline commands | No |
 | Driver setup (URL + capabilities) | **Yes** |
 | Local browser install requirement | **Removed** |
+
+## Next Steps
+
+Continue with these related guides:
+
+- [Running Your First Selenium Test](/support/docs/testmu-running-your-first-selenium-test/)
+- [Selenium Automation Capabilities](/support/docs/selenium-automation-capabilities/)
+- [Debugging Options](/support/docs/debugging-options/)

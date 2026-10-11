@@ -1,8 +1,10 @@
 ---
 id: run-selenium-test-behind-the-proxy
-title: Run Selenium Tests Behind the Proxy
-sidebar_label: Run Tests Behind a Proxy
-description: Define proxy settings in your Selenium C# scripts to run tests on the cloud grid behind a proxy server.
+title: How to Run Selenium Tests Behind a Proxy on TestMu AI
+toc_max_heading_level: 2
+hide_title: true
+sidebar_label: "Run Tests Behind a Proxy"
+description: Run Selenium tests behind a proxy or firewall on TestMu AI, including proxy configuration and domain whitelisting.
 keywords:
   - run selenium tests through proxy
   - selenium c# proxy configuration
@@ -54,8 +56,8 @@ import VerifiedTag from '@site/src/component/verifiedTag';
       "@type": "WebPage",
       "@id": "https://www.testmuai.com/support/docs/selenium-tests-behind-proxy/"
     },
-    "headline": "Run Selenium Tests Behind the Proxy",
-    "description": "Define proxy settings in your Selenium C# scripts to run tests on the cloud grid behind a proxy server.",
+    "headline": "How to Run Selenium Tests Behind a Proxy on TestMu AI",
+    "description": "Run Selenium tests behind a proxy or firewall on TestMu AI, including proxy configuration and domain whitelisting.",
     "url": "https://www.testmuai.com/support/docs/selenium-tests-behind-proxy/",
     "image": {
       "@type": "ImageObject",
@@ -68,7 +70,9 @@ import VerifiedTag from '@site/src/component/verifiedTag';
     "keywords": [
       "run selenium tests through proxy",
       "selenium c# proxy configuration",
-      "selenium tests behind firewall"
+      "selenium tests behind firewall",
+      "proxy settings selenium grid",
+      "HttpCommandExecutor proxy setup"
     ],
     "proficiencyLevel": "Beginner",
     "author": {
@@ -100,14 +104,14 @@ import VerifiedTag from '@site/src/component/verifiedTag';
     "hasPart": [
       {
         "@type": "SoftwareSourceCode",
-        "name": "How to Define Proxy Settings in Selenium C#",
+        "name": "Define proxy programmatically by adding the below snippet in your code",
         "codeSampleType": "code snippet",
         "programmingLanguage": "C#",
         "text": "HttpCommandExecutor commandExecutor = new HttpCommandExecutor(new Uri(\"https://username:accesskey@hub.lambdatest.com/\"), TimeSpan.FromSeconds(60));\nWebProxy myproxy = new WebProxy(\"proxy_host:proxy_port\", false);\nIWebDriver driver;"
       },
       {
         "@type": "SoftwareSourceCode",
-        "name": "How to Define Proxy Settings in Selenium C#",
+        "name": "NUnit code that shows the insertion of the above code snippet to define proxy settings",
         "codeSampleType": "code snippet",
         "programmingLanguage": "C#",
         "text": "using System;\nusing System.Drawing.Text;\nusing System.Threading;\nusing OpenQA.Selenium;\nusing OpenQA.Selenium.Chrome;\nusing OpenQA.Selenium.Remote;\nusing NUnit.Framework;\nusing System.Net;\nnamespace TestSelenium3\n{\n    public class Program\n    {\n        static void setProxy()\n        {\n            /* HttpWebRequest myWebRequest = (HttpWebRequest)WebRequest.Create(\"http://3.86.55.62:8888\");\n             // Obtain the 'Proxy' of the  Default browser.  \n             IWebProxy proxy = myWebRequest.Proxy;\n             // Print the Proxy Url to the console.\n             if (proxy != null)\n             {\n                 Console.WriteLine(\"Proxy: {0}\", proxy.GetProxy(myWebRequest.RequestUri));\n             }\n             else\n             {\n                 Console.WriteLine(\"Proxy is null; no proxy will be used\");\n             }\n             */\n        }\n        public static void Main(String[] args)\n        {\n            // Init\n            setProxy();\n            HttpCommandExecutor commandExecutor = new HttpCommandExecutor(new Uri(\"https://username:accesskey@hub.lambdatest.com/\"), TimeSpan.FromSeconds(60));\n            commandExecutor.Proxy = new WebProxy(\"proxy_host:proxy_port\", false);\n            IWebDriver driver;\n            DesiredCapabilities capabilities = new DesiredCapabilities();\n            capabilities.SetCapability(\"build\", \"your build name\");\n            capabilities.SetCapability(\"name\", \"your test name\");\n            capabilities.SetCapability(\"platform\", \"Windows 10\");\n            capabilities.SetCapability(\"browserName\", \"Chrome\");\n            capabilities.SetCapability(\"version\", \"89.0\");\n            driver = new RemoteWebDriver(commandExecutor, capabilities);\n            \n            Console.WriteLine(\"----------------------------\" + capabilities + \"#####################################\");\n            try\n            {\n                /*\n                                driver = new RemoteWebDriver(new Uri(\"https://username:accesskey@hub.lambdatest.com/\"), capability);\n                                    Console.WriteLine(\"----------------------------\" + driver + \"#####################################\");\n                */\n                driver.Navigate().GoToUrl(\"https://www.google.com\");\n            }\n            catch (Exception e)\n            {\n                Console.WriteLine(e);\n                Thread.Sleep(500000);\n            }\n        }\n    }\n}"
@@ -117,8 +121,8 @@ import VerifiedTag from '@site/src/component/verifiedTag';
   }) }}
 />
 
-# Run Selenium Tests Behind the Proxy
-* * *
+# How to Run Selenium Tests Behind a Proxy on TestMu AI
+---
 
 If your system is behind a proxy or protected by a firewall, you cannot run Selenium test scripts directly on the TestMu AI Selenium grid. You need to define your proxy settings so the connection goes through as usual.
 
@@ -205,9 +209,29 @@ namespace TestSelenium3
 }
 ```
 
-Execute the above NUnit test scripts, and you can run your Selenium tests directly on the TestMu AI Selenium grid behind the proxy server.
+Execute the above NUnit test scripts, and you can run your Selenium tests directly on the TestMu AI Selenium grid behind the proxy server. Proxy configuration is one of several network-level options; explore the full range of [Selenium automation capabilities](/support/docs/selenium-automation-capabilities/) to tune the rest of your session.
+
+## Whitelist the Proxy
+---
+
+Beyond configuring proxy settings, a firewall-protected network may still block the connection to TestMu AI, and you may encounter error messages. In such scenarios, you need to whitelist the TestMu AI domain. Whitelisting tells your firewall-protected network to allow access for a set of IP addresses, IP range, or an entire domain that you trust. It is a security procedure to help users access a website or web-app that their network security team considers non-malicious.
+
+Relay the below domain to your network security team and ask them to whitelist it so you can connect with TestMu AI from your firewall-protected network. If your setup also needs to route traffic to internal hosts, you can configure custom DNS mapping alongside your proxy. To inject authentication or routing values into every request, you can also set custom HTTP headers for the session.
+
+| PROTOCOL | PORTS       | SOURCE                 | DESTINATION      |
+|----------|-------------|------------------------|------------------|
+| TCP      | 80, 443, 22 | All TestMu AI Clients | *.lambdatest.com |
 
 If you have any questions or require an additional information, you can contact us at our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 chat support**</span>. You can also drop us a mail at support@testmuai.com.
+
+## Next Steps
+---
+
+Continue with these related guides:
+
+- [Custom DNS Map](/support/docs/custom-dns-map/)
+- [Custom Headers](/support/docs/custom-headers/)
+- [Selenium Automation Capabilities](/support/docs/selenium-automation-capabilities/)
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
