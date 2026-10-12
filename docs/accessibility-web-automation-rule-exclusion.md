@@ -37,7 +37,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
           "@type": "ListItem",
           "position": 3,
           "name": "Accessibility Automation",
-          "item": `${BRAND_URL}/support/docs/accessibility-automation/`
+          "item": `${BRAND_URL}/support/docs/accessibility-automation-test/`
         },{
           "@type": "ListItem",
           "position": 4,
@@ -87,7 +87,7 @@ Web rule IDs are the standard **axe-core rule IDs**, passed as they are. Matchin
 | Links must have discernible text | `link-name` |
 | Links must be distinguishable without relying on colour | `link-in-text-block` |
 
-You can copy a rule ID straight out of a report or from the [axe-core rule descriptions](https://github.com/dequelabs/axe-core/blob/develop/doc/rule-descriptions.md). Rules that axe-core marks as deprecated are not part of the catalog, because they never run. The [Web Rule Repository](/support/docs/accessibility-web-rule-repository/) maps rules to their WCAG success criteria.
+You can copy a rule ID straight out of a report or from the [axe-core rule descriptions](https://github.com/dequelabs/axe-core/blob/develop/doc/rule-descriptions.md). Rules that axe-core marks as deprecated are not part of the catalog, because they never run. The [Web Rule Repository](/support/docs/accessibility-web-rules/) maps rules to their WCAG success criteria.
 
 The five AI-powered rules that <BrandName /> adds on top of axe have their own IDs: `alt-descriptive`, `alt-decorative-hidden`, `image-in-text`, `html-title-descriptive` and `html-lang-matches-visible-language`. AI rules do not run on automation sessions, so these IDs are dropped at validation if they are passed in `accessibility.excludeRules`. They can be switched off in DevTools and in scheduled scans.
 
@@ -276,11 +276,11 @@ No. The capabilities are opt-in. A session that sets neither produces the same r
 ## Related docs
 
 - [Configure Accessibility Automation](/support/docs/accessibility-automation-settings/)
-- [Accessibility Automation (Overview)](/support/docs/accessibility-automation/)
+- [Accessibility Automation (Overview)](/support/docs/accessibility-automation-test/)
 - [Selenium: Accessibility Automation setup](/support/docs/accessibility-automation-test/)
 - [Playwright](/support/docs/playwright-accessibility-test/)
 - [HyperExecute: Selenium accessibility automation](/support/docs/selenium-hyperexecute-accessibility-tests/)
 - [Rule and Category Exclusion in DevTools and Scheduled Scans](/support/docs/accessibility-devtools-rule-exclusion/)
 - [Rule and Category Exclusion for Mobile App Accessibility](/support/docs/accessibility-mobile-rule-exclusion/)
 - [Hide and Restore Issues](/support/docs/accessibility-hide-restore-issues/)
-- [Web Rule Repository](/support/docs/accessibility-web-rule-repository/)
+- [Web Rule Repository](/support/docs/accessibility-web-rules/)

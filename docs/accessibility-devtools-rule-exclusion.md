@@ -110,7 +110,7 @@ What to expect:
 - A selection that leaves no rule to run **cannot be saved**. Turn at least one rule back on.
 - The **AI-Enhanced Rules** toggle now persists across sessions as a user setting.
 
-See [Configure Accessibility DevTools](/support/docs/accessibility-devtools-settings/) for the other DevTools settings.
+See [Configure Accessibility DevTools](/support/docs/accessibility-devtools/) for the other DevTools settings.
 
 {/* IMAGE PLACEHOLDER: DevTools Scan Settings tab with the Evaluation Rules panel and the Save button. Save the screenshot at the path below, then uncomment.
 <img loading="lazy" src={require('../assets/images/accessibility-testing/features/rule-exclusion/devtools-scan-settings-evaluation-rules.png').default} alt="Accessibility DevTools Scan Settings tab showing the Evaluation Rules panel above the Save button" className="doc_img"/>
@@ -118,7 +118,7 @@ See [Configure Accessibility DevTools](/support/docs/accessibility-devtools-sett
 
 ## In scheduled scans
 
-1. Start creating a scheduled scan. See [Steps to Schedule an Accessibility Scan](/support/docs/accessibility-test-scheduling-scan/).
+1. Start creating a scheduled scan. See [Steps to Schedule an Accessibility Scan](/support/docs/accessibility-test-scheduling/).
 2. In **Step 1** of the Create Scheduler wizard, beside the WCAG version selector, open **Evaluation Rules** and switch off the rules or categories you want to skip.
 3. Continue through the wizard and schedule the scan as usual.
 
@@ -192,10 +192,10 @@ It is shown with each finding in the report. The full axe-core list is in the [a
 
 ## Related docs
 
-- [Configure Accessibility DevTools](/support/docs/accessibility-devtools-settings/)
-- [Steps to Schedule an Accessibility Scan](/support/docs/accessibility-test-scheduling-scan/)
-- [Edit Scheduled Scan](/support/docs/accessibility-test-scheduling-edit/)
+- [Configure Accessibility DevTools](/support/docs/accessibility-devtools/)
+- [Steps to Schedule an Accessibility Scan](/support/docs/accessibility-test-scheduling/)
+- [Edit Scheduled Scan](/support/docs/accessibility-test-scheduling/)
 - [Rule and Category Exclusion for Web Accessibility Automation](/support/docs/accessibility-web-automation-rule-exclusion/)
 - [Rule and Category Exclusion for Mobile App Accessibility](/support/docs/accessibility-mobile-rule-exclusion/)
 - [Hide and Restore Issues](/support/docs/accessibility-hide-restore-issues/)
-- [Web Rule Repository](/support/docs/accessibility-web-rule-repository/)
+- [Web Rule Repository](/support/docs/accessibility-web-rules/)

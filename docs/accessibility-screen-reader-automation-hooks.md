@@ -597,7 +597,7 @@ Executor Hooks and [Auto Report](/support/docs/accessibility-screen-reader-autom
 | Hook returns an entitlement error | Screen Reader Automation is not enabled for your organization. Contact support. |
 | Hook returns *"Screen reader is not enabled for this session."* | Call `screenReader` or `voiceOverToggle` with `enable: "true"` before other commands, and make sure `accessibility: true` and the platform capability are in `LT:Options`. |
 | Gesture returns the same element every time | Focus is at the end of the list or inside a container that needs `scroll_down` first. Check `spokenOutput` to confirm where focus is. |
-| Spoken output is empty for an element that has a label | The element may not be focusable by the screen reader, so it is skipped. Check the `properties` in the response and the [rule repository](/support/docs/accessibility-android-rule-repository/) guidance for focusable containers. |
+| Spoken output is empty for an element that has a label | The element may not be focusable by the screen reader, so it is skipped. Check the `properties` in the response and the [rule repository](/support/docs/accessibility-android-rules/) guidance for focusable containers. |
 | iOS session cannot be allocated | The `voiceOver` capability requires a device that supports VoiceOver control. Widen the device or OS selection, or ask support which devices in your pool support it. |
 | Command fails with a platform mismatch error | The action name belongs to the other platform. Use `screenReader*` actions on Android and `voiceOver*` / `getVoiceOverElement` on iOS. |
 
@@ -606,6 +606,6 @@ Executor Hooks and [Auto Report](/support/docs/accessibility-screen-reader-autom
 - [Screen Reader Automation (Overview)](/support/docs/accessibility-screen-reader-automation/)
 - [Screen Reader Automation: Auto Report](/support/docs/accessibility-screen-reader-automation-auto-report/)
 - [Native App Automation Appium (Overview)](/support/docs/accessibility-native-app-automation-test/)
-- [Appium TestNG](/support/docs/accessibility-appium-testng/)
-- [Appium WebdriverIO](/support/docs/accessibility-appium-webdriverio/)
-- [Lambda Hooks for Appium](/support/docs/appium-testmu-hooks/)
+- [Appium TestNG](/support/docs/accessibility-native-app-automation-test/)
+- [Appium WebdriverIO](/support/docs/accessibility-native-app-automation-test/)
+- [Lambda Hooks for Appium](/support/docs/appium-lambdatest-hooks/)

@@ -247,7 +247,7 @@ Every focus step is evaluated against the seven checks below. Each check maps to
 | Duplicate type info | The element type is not repeated in the spoken output, for example "button, button". | 4.1.2 |
 | Missing visible label | The visible on-screen label is contained in the spoken output. | 2.5.3 |
 
-See the [iOS rule repository](/support/docs/accessibility-ios-rule-repository/) and the [Android rule repository](/support/docs/accessibility-android-rule-repository/) for the full rule catalogue.
+See the [iOS rule repository](/support/docs/accessibility-ios-rules/) and the [Android rule repository](/support/docs/accessibility-android-rules/) for the full rule catalogue.
 
 ## What the report contains
 
@@ -272,7 +272,7 @@ You can reach a Screen Reader Report from two places.
 <img loading="lazy" src={require('../assets/images/accessibility-testing/screen-reader-automation/screen-reader-list.png').default} alt="Accessibility dashboard with the Screen Reader entry selected in the left navigation and a filterable list of screen reader tests" className="doc_img"/>
 */}
 
-Reports can be shared with a link and exported. The shared view includes the **Screen Reader** tab, and the export contains the full traversal with the spoken output for every step. See [Exporting & Sharing Reports](/support/docs/accessibility-exporting-sharing-reports/).
+Reports can be shared with a link and exported. The shared view includes the **Screen Reader** tab, and the export contains the full traversal with the spoken output for every step. See [Exporting & Sharing Reports](/support/docs/accessibility-testing-navigating-dashboard/).
 
 ## Auto Report and rule scans together
 
@@ -294,6 +294,6 @@ Screen Reader Automation and the App Accessibility rule scan (the `lambda-access
 - [Screen Reader Automation (Overview)](/support/docs/accessibility-screen-reader-automation/)
 - [Screen Reader Automation: Executor Hooks](/support/docs/accessibility-screen-reader-automation-hooks/)
 - [Native App Automation Appium (Overview)](/support/docs/accessibility-native-app-automation-test/)
-- [Appium TestNG](/support/docs/accessibility-appium-testng/)
-- [Appium WebdriverIO](/support/docs/accessibility-appium-webdriverio/)
-- [Exporting & Sharing Reports](/support/docs/accessibility-exporting-sharing-reports/)
+- [Appium TestNG](/support/docs/accessibility-native-app-automation-test/)
+- [Appium WebdriverIO](/support/docs/accessibility-native-app-automation-test/)
+- [Exporting & Sharing Reports](/support/docs/accessibility-testing-navigating-dashboard/)

@@ -88,7 +88,7 @@ Both capabilities are optional and can be combined. They sit alongside the exist
 
 Rule IDs are the mobile rule catalog's own identifiers, passed exactly as the catalog publishes them. Matching is case-insensitive. Examples include `DuplicateAccessibilityCheck`, `TraversalOrderMismatch`, `UndersizedTouchTarget` and `image-in-text`.
 
-The catalog carries more than one naming style: most rules are PascalCase, AI-powered rules are kebab-case, and a few iOS-only rules are camelCase. Use the ID as published rather than inferring it from the display name. The full rule list for each platform is in the [Android Rule Repository](/support/docs/accessibility-android-rule-repository/) and the [iOS Rule Repository](/support/docs/accessibility-ios-rule-repository/).
+The catalog carries more than one naming style: most rules are PascalCase, AI-powered rules are kebab-case, and a few iOS-only rules are camelCase. Use the ID as published rather than inferring it from the display name. The full rule list for each platform is in the [Android Rule Repository](/support/docs/accessibility-android-rules/) and the [iOS Rule Repository](/support/docs/accessibility-ios-rules/).
 
 ### Category slugs
 
@@ -242,7 +242,7 @@ Category exclusion is also available in manual mobile tests, through the App Sca
 
 Excluding a category here produces the same effective rule set as passing its slug in `accessibility.excludeRuleCategories` on automation. The panel records **why** each rule is off, whether it was excluded as part of a category or switched off individually, and sends that with the scan. The report's Applied Settings panel uses it to grey out a category that was excluded whole, while rules turned off one by one are listed as before.
 
-Last-used selections, including category exclusions, are remembered per user and per platform and pre-fill the panel the next time it is opened. See [Scan Configurations (Manual)](/support/docs/accessibility-app-scanner-scan-configurations/) for the rest of the panel.
+Last-used selections, including category exclusions, are remembered per user and per platform and pre-fill the panel the next time it is opened. See [Scan Configurations (Manual)](/support/docs/accessibility-app-scanner/) for the rest of the panel.
 
 {/* IMAGE PLACEHOLDER: App Scanner scan configuration panel showing the tri-state checkbox on a category header. Save the screenshot at the path below, then uncomment.
 <img loading="lazy" src={require('../assets/images/accessibility-testing/features/rule-exclusion/app-scanner-category-checkbox.png').default} alt="App Scanner scan configuration panel with the Color Contrast category checkbox switched off and every rule in the category disabled" className="doc_img"/>
@@ -275,11 +275,11 @@ No. The capabilities are opt-in. A session that sets neither produces the same r
 ## Related docs
 
 - [Scan Configurations via Capabilities (Automation)](/support/docs/accessibility-automation-scan-configurations/)
-- [Scan Configurations (Manual)](/support/docs/accessibility-app-scanner-scan-configurations/)
+- [Scan Configurations (Manual)](/support/docs/accessibility-app-scanner/)
 - [Native App Automation (Overview)](/support/docs/accessibility-native-app-automation-test/)
 - [Accessibility App Scanner (Overview)](/support/docs/accessibility-app-scanner/)
 - [Rule and Category Exclusion for Web Accessibility Automation](/support/docs/accessibility-web-automation-rule-exclusion/)
 - [Rule and Category Exclusion in DevTools and Scheduled Scans](/support/docs/accessibility-devtools-rule-exclusion/)
 - [Hide and Restore Issues](/support/docs/accessibility-hide-restore-issues/)
-- [Android Rule Repository](/support/docs/accessibility-android-rule-repository/)
-- [iOS Rule Repository](/support/docs/accessibility-ios-rule-repository/)
+- [Android Rule Repository](/support/docs/accessibility-android-rules/)
+- [iOS Rule Repository](/support/docs/accessibility-ios-rules/)
