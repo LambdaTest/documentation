@@ -170,7 +170,7 @@ In case, you wish to test locally or privately hosted websites, you can select t
 
 2. Open the dropdown menu of the test case you want to re-run, and click **Re-test**. 
 
-> The below test case demonstrates <BrandName /> Selenium Automation's booking a demo functionality. First, it visits the <BrandName /> <a href={`${BRAND_URL}/selenium-automation`}>Selenium Automation</a> website, clicks on the "Book A Demo" button, enters the required fields and then presses the "Schedule Demo" button.
+> The below test case demonstrates <BrandName /> Selenium Automation's booking a demo functionality. First, it visits the <BrandName /> <a href={`${BRAND_URL}/selenium-automation/`}>Selenium Automation</a> website, clicks on the "Book A Demo" button, enters the required fields and then presses the "Schedule Demo" button.
 
  <img loading="lazy" src={require('../assets/images/testrigor-integration/expand_dd.png').default} alt="Integrating <BrandName /> With testRigor" width="1366" height="625" className="doc_img"/>
 
