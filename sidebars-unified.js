@@ -46,6 +46,7 @@ const docsSidebar = [
       { type: 'link', label: 'Appium Testing', href: '/docs/getting-started-with-appium-testing/' },
       { type: 'link', label: 'Espresso Testing', href: '/docs/getting-started-with-espresso-testing/' },
       { type: 'link', label: 'XCUI Testing', href: '/docs/getting-started-with-xcuitest/' },
+      { type: 'link', label: 'Mobilewright Testing', href: '/docs/mobilewright-overview/' },
       { type: 'link', label: 'Flutter Testing', href: '/docs/appium-flutter-integration/' },
       { type: 'link', label: 'Virtual Devices', href: '/docs/app-automation-on-emulators-simulators/' },
     ],
@@ -100,6 +101,7 @@ const AppiumTestingSidebar = dedicated(s.AppiumTestingSidebar);
 const EspressoTestingSidebar = dedicated(s.EspressoTestingSidebar);
 const XCUITestingSidebar = dedicated(s.XCUITestingSidebar);
 const FlutterTestingSidebar = dedicated(s.FlutterTestingSidebar);
+const MobilewrightTestingSidebar = dedicated(s.MobilewrightTestingSidebar);
 const VirtualDevicesSidebar = dedicated(s.EmuSimuSidebar);
 
 // Standalone products
@@ -177,6 +179,7 @@ module.exports = {
   EspressoTestingSidebar,
   XCUITestingSidebar,
   FlutterTestingSidebar,
+  MobilewrightTestingSidebar,
   VirtualDevicesSidebar,
 
   // Standalone products
