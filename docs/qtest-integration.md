@@ -131,7 +131,7 @@ qTest is a comprehensive test management tool designed for Project Management, B
   ```
   /path/to/agentctl-[version]$ ./agentctl start
   ```
-  Navigate to [http://localhost:6789](http://localhost:6789) and add your details.
+  Navigate to `http://localhost:6789` and add your details.
 
   <img loading="lazy" src={require('../assets/images/qtest-integration/qtest_img_2.png').default} alt="provide access to <BrandName /> account" width="1280" height="684" className="doc_img"/>
 
