@@ -150,7 +150,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
 # How to Set Up the Playwright Test Environment on TestMu AI
 ***
 
-When you run a Playwright test on TestMu AI, you set the operating system, browser, and session behavior through capabilities passed to the CDP endpoint. Configuring these capabilities lets you select browser-OS combinations, organize builds, change desktop resolution, and capture debug logs. The TestMu AI Capabilities Generator can auto-create the capabilities class for your Playwright automation scripts.
+When you run Playwright End-to-End (E2E) testing on TestMu AI, you set the operating system, browser, and session behavior through capabilities passed to the CDP endpoint. Configuring these capabilities lets you select browser-OS combinations, organize builds, change desktop resolution, and capture debug logs. The TestMu AI Capabilities Generator can auto-create the capabilities class for your Playwright automation scripts.
 
 ## Choosing the Browser and OS
 ***
