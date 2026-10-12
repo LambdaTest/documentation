@@ -1,8 +1,8 @@
 ---
 id: accessibility-android-rule-invalid-range-values
-title: Invalid Range Values
+title: Invalid Range Values (Android)
 sidebar_label: Invalid Range Values
-description: Rule-level Accessibility guidance for Invalid Range Values on Android.
+description: "Catch Android sliders, steppers, and progress bars reporting invalid or out-of-range values so TalkBack announces their state correctly."
 slug: accessibility-android-rule-invalid-range-values/
 ---
 import { BRAND_URL } from '@site/src/component/BrandName';
@@ -43,7 +43,7 @@ import { BRAND_URL } from '@site/src/component/BrandName';
       "@id": "https://www.testmuai.com/support/docs/accessibility-android-rule-invalid-range-values/"
     },
     "headline": "Invalid Range Values",
-    "description": "Rule-level Accessibility guidance for Invalid Range Values on Android.",
+    "description": "Catch Android sliders, steppers, and progress bars reporting invalid or out-of-range values so TalkBack announces their state correctly.",
     "url": "https://www.testmuai.com/support/docs/accessibility-android-rule-invalid-range-values/",
     "image": {
       "@type": "ImageObject",
