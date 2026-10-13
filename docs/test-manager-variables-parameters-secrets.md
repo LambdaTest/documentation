@@ -237,30 +237,39 @@ To edit datasets, see [Datasets](/support/docs/kane-ai-using-datasets/).
 
 ## Run Parameterized Manual Test Cases
 
-When you add a manual test case that uses parameters to a manual (non-KaneAI) test run, you choose a dataset for it, starting with its linked dataset. The run creates **one test instance per dataset row**. Each instance is labelled with its row number and the value in the dataset's first column, and can be assigned on its own. Test cases without parameters get a single instance.
+To run a manual test case that uses parameters in a manual (non-KaneAI) test run:
 
-Values are fixed when an instance is created. Later changes to the dataset, a parameter's default value, or a global variable do not change existing instances, while the test case itself keeps showing the latest values.
+1. Create a test run and add the test case. See [Test Run Creation and Management](/support/docs/test-run-creation-and-management/).
+2. In the **Set Configurations and Assignee** step, click **Set Dataset** on the test case's configuration.
+3. Select a dataset and click **Apply**. Only datasets that contain the parameters the test case uses are listed.
+4. Assign the test instances and save the test run.
 
-When a tester opens an instance, its test data lists:
+The run creates **one test instance per dataset row** for each configuration. Test cases without parameters get a single instance. From the test run, you can view the dataset values each instance uses.
 
-- Each parameter and global variable used, with the value for that instance.
-- Each secret used, masked. Secret values cannot be revealed or copied.
-- Environment, smart, and TOTP variables, marked as not filled in for manual runs.
-
-The steps show the references as written. Testers find the values to use in the instance's test data.
-
-<!-- screenshot: manual test run instance showing its dataset row and test data values
-<img loading="lazy" src={require('../assets/images/test-manager/variables/instance-test-data.png').default} alt="Manual test run instance showing its dataset row and the values to use" className="doc_img"/>
+<!-- screenshot: Set Dataset panel listing the datasets that match the test case's parameters
+<img loading="lazy" src={require('../assets/images/test-manager/variables/set-dataset.png').default} alt="Selecting a dataset for a manual test case while configuring a test run" className="doc_img"/>
 -->
 
 If you change the dataset for a test case that already has instances in the run, you're asked to confirm first. Confirming replaces its instances with one per row of the new dataset, and removes the results recorded on the old instances.
 
-For more on test runs, see [Test Run Creation and Management](/support/docs/test-run-creation-and-management/).
+### Execute a Test Instance
+
+When a tester opens a test instance, its steps show the values to use in place of the references:
+
+- Parameters show the value from the instance's dataset row.
+- Global variables show their value at the time the instance was created.
+- Secrets stay masked. Their values cannot be revealed or copied.
+- Environment, smart, and TOTP variables stay as references. They are filled in only when KaneAI runs the test.
+
+<!-- screenshot: manual test instance whose steps show parameter and variable values in place of references
+<img loading="lazy" src={require('../assets/images/test-manager/variables/instance-step-values.png').default} alt="Manual test instance steps showing the values to use in place of references" className="doc_img"/>
+-->
+
+Values are fixed when an instance is created. Later changes to the dataset, a parameter's default value, or a global variable do not change existing instances, while the test case itself keeps showing the latest values.
 
 ## Limitations
 
 - Modules with If-Else or While Loop blocks cannot be added to manual test cases.
-- Steps in a test run instance show references, not values. The values are listed in the instance's test data.
 - BDD test cases support references in scenario steps, but not datasets or one instance per data row.
 - Environment, smart, and TOTP variables are not filled in during manual runs.
 - Secret values cannot be revealed or copied during manual execution.
