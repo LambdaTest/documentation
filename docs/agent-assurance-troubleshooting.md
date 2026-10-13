@@ -361,7 +361,7 @@ Create and verify a profile:
 /profile test <name>
 ```
 
-<img loading="lazy" src={require('../assets/images/rook/rook-terminal-scenarios.png').default} alt="Rook scenario list explaining that scenarios are skipped because no profile exists" width="1100" height="999" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/rook/commands/rook-command-profile.png').default} alt="Rook scenario list explaining that scenarios are skipped because no profile exists" width="2200" height="1680" className="doc_img"/>
 
 ### The profile invokes successfully but extracts the wrong value
 

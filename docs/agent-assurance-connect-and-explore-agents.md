@@ -365,7 +365,7 @@ Rook also refuses two paths to keep read scope tight:
 
 The browser inventory shows all registered agents and their scenario and run history.
 
-<img loading="lazy" src={require('../assets/images/rook/rook-browser-agents.png').default} alt="Rook agent inventory for a workspace containing multiple agents" width="1440" height="900" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/rook/rook-web-agents.png').default} alt="Rook agent inventory for a workspace containing multiple agents" width="1440" height="900" className="doc_img"/>
 
 Interactive commands:
 

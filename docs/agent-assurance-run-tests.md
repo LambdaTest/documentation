@@ -278,7 +278,7 @@ Use higher concurrency only when the target isolates sessions and fixtures. Conc
 
 Rook shows the exact target and whether discovery found write-capable tools.
 
-<img loading="lazy" src={require('../assets/images/rook/rook-terminal-run-permission.png').default} alt="Rook run permission gate showing the target scenario count and real-write warning" width="1225" height="676" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/rook/guides/rook-tui-run-plan.png').default} alt="Rook run permission gate showing the target scenario count and real-write warning" width="2200" height="920" className="doc_img"/>
 
 The answers mean:
 

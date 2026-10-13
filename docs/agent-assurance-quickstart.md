@@ -459,7 +459,7 @@ Before confirming, check:
 
 Agent Assurance cannot roll back a refund, message, ticket, or other action taken by the agent.
 
-<img loading="lazy" src={require('../assets/images/rook/rook-terminal-run-permission.png').default} alt="Rook run confirmation showing the live target and write warning" width="1225" height="676" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/rook/guides/rook-tui-run-plan.png').default} alt="Rook run confirmation showing the live target and write warning" width="2200" height="920" className="doc_img"/>
 
 ### Step 6: Run the approved set
 
@@ -481,7 +481,7 @@ Open the local viewer:
 /ui
 ~~~
 
-<img loading="lazy" src={require('../assets/images/rook/rook-browser-run-detail.png').default} alt="Rook browser run detail with verdicts and verification coverage" width="1440" height="900" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/rook/rook-local-result.png').default} alt="Rook browser run detail with verdicts and verification coverage" width="1440" height="900" className="doc_img"/>
 
 Open each failure or **Unable to Verify** result. Check the request, response, criterion evidence, artifacts, and verification gaps.
 

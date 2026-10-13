@@ -531,8 +531,6 @@ For a useful bug report, include the run URL, scenario ID, criterion that disagr
 
 Open **Projects → your project → your agent → Insights**. This page summarizes recorded run data to help you decide what to investigate or test next. It is not a substitute for reading a particular run's evidence.
 
-<img loading="lazy" src={require('../assets/images/rook/rook-web-insights.png').default} alt="Rook Insights with a single-run chart and panels for tool failures, category coverage, unverifiable expectations, and adversarial pressure" className="doc_img"/>
-
 1. Open [Features](#features) to find behaviors without scenarios.
 2. Use [Scenarios → Result → never run](#scenarios) to find generated tests without execution.
 3. Open a run's **Coverage gaps** panel for attack patterns and categories with no runnable scenario.

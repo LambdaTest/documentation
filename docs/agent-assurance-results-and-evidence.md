@@ -192,11 +192,11 @@ The viewer is:
 
 The agent page summarizes features, scenarios, profiles, trends, and prior runs.
 
-<img loading="lazy" src={require('../assets/images/rook/rook-browser-agent-detail.png').default} alt="Rook agent detail view with features scenarios run history pass rate and coverage" width="1440" height="900" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/rook/rook-local-agent.png').default} alt="Rook agent detail view with features scenarios run history pass rate and coverage" width="1440" height="900" className="doc_img"/>
 
 The run page shows totals, changes from the previous run, tool-oriented analysis, grouped verification gaps, and every scenario result.
 
-<img loading="lazy" src={require('../assets/images/rook/rook-browser-run-detail.png').default} alt="Rook run page showing pass fail unable to verify and coverage" width="1440" height="900" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/rook/rook-local-run.png').default} alt="Rook run page showing pass fail unable to verify and coverage" width="1440" height="900" className="doc_img"/>
 
 ## Inspect Criterion Evidence
 
@@ -209,7 +209,7 @@ Open a scenario result to compare:
 - The request and full exchange.
 - Produced or downloaded artifacts.
 
-<img loading="lazy" src={require('../assets/images/rook/rook-browser-scenario-evidence.png').default} alt="Rook scenario result showing failed acceptance criteria and direct response evidence" width="1440" height="900" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/rook/rook-web-result-verdict.png').default} alt="Rook scenario result showing failed acceptance criteria and direct response evidence" width="1440" height="900" className="doc_img"/>
 
 Do not treat a fluent narrative as evidence by itself. Look for one of the following to support the criterion: a quote, a JSON value, an observed call, a filesystem fact, or a read-only external verification.
 
