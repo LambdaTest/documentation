@@ -107,7 +107,7 @@ Rook is publicly available from the [LambdaTest/rook repository](https://github.
 
 Installation commands run in your normal terminal. After installation, launch `rook` (or `rook.cmd` in PowerShell) **without a subcommand** to open the interactive terminal UI (TUI). Stay in that session for sign-in, project selection, exploration, generation, and testing; you do not need CI/headless mode for the walkthrough.
 
-The latest public release checked on October 8, 2026 is [v0.1.7](https://github.com/LambdaTest/rook/releases/tag/v0.1.7). The public npm package and Homebrew formula also publish 0.1.7. Historical walkthroughs and CI examples can name an older, tested version; do not change a pipeline pin without checking its commands and result handling.
+The latest public release checked on October 13, 2026 is [v0.1.11](https://github.com/LambdaTest/rook/releases/tag/v0.1.11). The public npm package and Homebrew formula also publish 0.1.11. Historical walkthroughs and CI examples can name an older, tested version; do not change a pipeline pin without checking its commands and result handling.
 
 | Your environment | Start here |
 |---|---|
@@ -180,7 +180,7 @@ Pass installer options after `bash -s --`:
 ```bash
 # Pin a specific public release.
 curl -fsSL https://raw.githubusercontent.com/LambdaTest/rook/main/install.sh \
-  | bash -s -- --version 0.1.7
+  | bash -s -- --version 0.1.11
 
 # Link the executable into another writable directory.
 curl -fsSL https://raw.githubusercontent.com/LambdaTest/rook/main/install.sh \
@@ -223,7 +223,7 @@ The npm package installs the `rook` executable and publishes platform runtime pa
 The 0.1.3 release fixes the npm update path. If an older install cannot update normally, use the public registry explicitly:
 
 ```bash
-npm install -g @testmuai/rook@0.1.7 \
+npm install -g @testmuai/rook@0.1.11 \
   --registry=https://registry.npmjs.org \
   --@testmuai:registry=https://registry.npmjs.org
 ```
@@ -240,12 +240,12 @@ Use **64-bit Windows and x64 Node.js 20 or newer**. Install Node.js with npm fro
 node --version
 node -p "process.platform + ' ' + process.arch"
 npm.cmd --version
-npm.cmd install -g @testmuai/rook@0.1.7
+npm.cmd install -g @testmuai/rook@0.1.11
 Get-Command rook.cmd
 rook.cmd --version
 ```
 
-The platform check should print `win32 x64`, and the pinned install should report `0.1.7`. Use `rook.cmd` in PowerShell throughout this guide. Calling the `.cmd` shim also avoids the “running scripts is disabled” error that can affect npm's `.ps1` shim; you do not need to weaken PowerShell's execution policy.
+The platform check should print `win32 x64`, and the pinned install should report `0.1.11`. Use `rook.cmd` in PowerShell throughout this guide. Calling the `.cmd` shim also avoids the “running scripts is disabled” error that can affect npm's `.ps1` shim; you do not need to weaken PowerShell's execution policy.
 
 ### Sign in and open your workspace
 
@@ -290,7 +290,7 @@ rook.cmd --version
 PowerShell uses `$env:NAME = 'value'`, not Bash's `export NAME=value`. Use `Get-Command rook.cmd -All` to identify conflicting installations. Native Windows stores Rook's home state under your user home at `.testmuai\rook`; workspace records remain inside the repository at `.testmuai\rook`. See [Environment and Secrets](/support/docs/rook-environment-and-secrets/#powershell) for scoped variables and credentials.
 
 :::note Windows archive is not a native installer
-The 0.1.7 release includes a `win-x64.tar.gz` archive, but its `bin/rook` launcher is a POSIX shell script, not `rook.exe` or `rook.cmd`. There is no public `install.ps1`. Use the npm installation above for native Windows instead of running `install.sh` in PowerShell or Git Bash.
+Each release includes a `win-x64.tar.gz` archive, but its `bin/rook` launcher is a POSIX shell script, not `rook.exe` or `rook.cmd`. There is no public `install.ps1`. Use the npm installation above for native Windows instead of running `install.sh` in PowerShell or Git Bash.
 :::
 
 ### Use WSL for a Linux-based agent {#windows-wsl}
@@ -354,6 +354,7 @@ rook-<version>-darwin-arm64.tar.gz
 rook-<version>-darwin-x64.tar.gz
 rook-<version>-linux-arm64.tar.gz
 rook-<version>-linux-x64.tar.gz
+rook-<version>-win-x64.tar.gz
 ```
 
 Each archive has a matching `.sha256` file. Do not bypass a checksum mismatch; delete both downloads and fetch them again from the public release.

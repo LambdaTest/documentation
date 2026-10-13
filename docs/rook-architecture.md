@@ -313,7 +313,10 @@ Rook uses different outbound paths for model work and persistence:
 - **Model-backed commands:** the CLI sends the selected role and scoped task context to the controller. Depending on the operation, that context can include relevant source excerpts, agent definitions, scenario material, or recorded evidence needed to produce the result.
 - **Project synchronization:** `rook sync` sends the reviewed project tree to the Rook API. It is an explicit action rather than a background upload.
 - **Run records:** completed run results are written locally first and recorded through the Rook API as the run progresses or during later reconciliation.
-- **Secret values:** profile environment values, the local credential store, and controller model keys are not included in project synchronization.
+- **Profiles and hook scripts:** `rook sync` uploads profiles and their hook scripts as written. Values stored with `rook env set`, the local credential store, and controller model keys are not part of the sync, so keep literal secrets out of profiles and scripts.
+- **Profile authoring:** `rook profile add` and `rook profile fix` show the model what you paste and what the hook prints. A token in either goes with it.
+- **Telemetry:** operational events (no prompts, no code, no command arguments) are sent by default. `ROOK_TELEMETRY=off` keeps them on the machine; see [Telemetry](/support/docs/rook-environment-and-secrets/#telemetry).
+- **Session transcripts:** each session writes `transcript.jsonl` under `~/.testmuai/rook/sessions/`. It stays on the machine unless you bundle it with `rook export logs --session` and share the bundle.
 - **Local results UI:** `rook ui --local` serves the on-disk evidence without requiring an account or network connection.
 
 Review source material and result evidence for sensitive target data before model-backed operations, synchronization, or artifact upload in CI.

@@ -136,6 +136,7 @@ Rook uses plain files rather than a hidden workspace database. That makes agents
         └── agents/
             └── <agent-id>/
                 ├── agent.yaml            derived agent definition
+                ├── coverage-gaps.yaml    attack patterns with no scenario
                 ├── state.json            machine-local server IDs
                 ├── features/
                 │   ├── F-001.yaml
@@ -154,6 +155,7 @@ Rook uses plain files rather than a hidden workspace database. That makes agents
                         ├── agent.yaml
                         ├── features.yaml
                         ├── profile.yaml
+                        ├── scenario-inventory.yaml
                         ├── scenarios/
                         └── report.yaml
 ```
@@ -203,6 +205,8 @@ Before committing:
 ## Global State Lives Elsewhere
 
 Credentials, actual environment values, history, logs, and installed versions are stored under `~/.testmuai/rook/` by default. Set `ROOK_HOME` to isolate that state for CI or another account.
+
+Each session keeps a transcript at `~/.testmuai/rook/sessions/<project>/<session>/transcript.jsonl`, readable only by your user. It records every prompt Rook sent, every tool result, and every answer, so treat it like a log that can contain target data and environment values.
 
 ## Synchronization
 
