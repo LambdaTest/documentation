@@ -22,6 +22,7 @@ canonical: https://www.testmuai.com/support/docs/agent-assurance-overview/
 ---
 import VerifiedTag from '@site/src/component/verifiedTag';
 import { BRAND_URL } from '@site/src/component/BrandName';
+import ThemedImage from '@theme/ThemedImage';
 
 
 <script type="application/ld+json"
@@ -107,7 +108,7 @@ import { BRAND_URL } from '@site/src/component/BrandName';
 
 # What is TestMu AI Agent Assurance
 
-<img src="/support/assets/images/rook/rook-mascot.svg" alt="Rook, the chess-piece mascot" width="96" height="122" className="no-zoom" style={{float: 'right', margin: '0 0 1rem 1.5rem'}} />
+<ThemedImage sources={{light: require('../assets/images/rook/rook-mascot-light.gif').default, dark: require('../assets/images/rook/rook-mascot-dark.gif').default}} alt="Rook, the chess-piece mascot" width="160" height="160" className="no-zoom" style={{float: 'right', margin: '0 0 1rem 1.5rem'}} />
 
 TestMu AI Agent Assurance helps teams gather evidence about whether an AI agent they own is ready to ship. It brings End-to-End (E2E) testing to agents that *act*—white-box testing that follows them as they call tools, write files, hit APIs, and change external state.
 
