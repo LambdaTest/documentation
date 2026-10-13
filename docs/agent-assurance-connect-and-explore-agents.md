@@ -17,6 +17,7 @@ canonical: https://www.testmuai.com/support/docs/agent-assurance-connect-and-exp
 ---
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -83,128 +84,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         "https://www.youtube.com/@TestMuAI"
       ]
     },
-    "hasPart": [
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "Start Rook from the repository root and run",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "text",
-        "text": "/explore ."
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "The headless equivalent is",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "Shell",
-        "text": "rook explore ."
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "Use a narrower path when a monorepo contains a specific agent package",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "text",
-        "text": "/explore packages/travel-agent"
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "Put free-form guidance after --",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "text",
-        "text": "/explore . -- focus on the refund approval threshold and identity checks"
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "In headless mode",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "Shell",
-        "text": "rook explore . \\\n  --instruction \"focus on the refund approval threshold and identity checks\""
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "Use --force after a substantial change or when you want to ignore the incremental freshness check",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "text",
-        "text": "/explore --force"
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "Create a clean directory containing the material you are authorized to share",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "text",
-        "text": "travel-agent-spec/\n  PRD.md\n  policies.md\n  api-examples.md\n  fixtures/"
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "Start Rook inside that directory",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "Shell",
-        "text": "cd travel-agent-spec\nrook"
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "Then run",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "text",
-        "text": "/explore . -- the deployed agent is a multi-turn travel planner"
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "Clone the repository, enter the checkout, and run Rook locally",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "Shell",
-        "text": "git clone https://github.com/<owner>/<repository>.git\ncd <repository>\nrook"
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "Then",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "text",
-        "text": "/explore ."
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "For a pull request, check out the exact head you want to test",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "Shell",
-        "text": "gh repo clone <owner>/<repository>\ncd <repository>\ngh pr checkout <number>\nrook"
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "You can explicitly point interactive Rook at a directory outside the current workspace",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "text",
-        "text": "/explore ../another-agent"
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "Interactive commands",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "text",
-        "text": "/agent\n/agent use <id>\n/agent rm <id>"
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "Headless commands",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "Shell",
-        "text": "rook agent list\nrook agent list --json\nrook agent use <id>"
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "For automation, use --all",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "Shell",
-        "text": "rook explore . --all --json"
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "Use --allow only for a narrowly reviewed tool call",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "Shell",
-        "text": "rook explore . --allow 'bash(npm test)'"
-      }
-    ],
-    "dateModified": "2026-08-25T16:54:35+05:30"
+    "dateModified": "2026-09-28"
   }) }}
 />
 
@@ -218,17 +98,23 @@ The target can be a complete application, one agent directory, or a documentatio
 
 Start Rook from the repository root and run:
 
+<VerifiedTag value="Verified" />
+
 ```text
 /explore .
 ```
 
 The headless equivalent is:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 rook explore .
 ```
 
 Use a narrower path when a monorepo contains a specific agent package:
+
+<VerifiedTag value="Verified" />
 
 ```text
 /explore packages/travel-agent
@@ -238,6 +124,12 @@ Rook scans deterministically first, then gives its discovery subagent read tools
 
 - **One candidate:** Rook asks whether to register it.
 - **Several candidates:** Choose the candidates you want.
+
+This real TUI capture shows `/explore .` finding the public triage sample and pausing for registration. Read the discovery summary before choosing **yes**; arrow keys change the choice, Enter submits it, and Esc declines. The progress line shows the current task and credit use while the footer keeps the selected project visible.
+
+<img loading="lazy" src={require('../assets/images/rook/guides/rook-tui-explore-confirm.png').default} alt="Interactive exploration finding the public support triage agent and asking whether to register it before continuing analysis" width="2200" height="840" className="doc_img"/>
+
+After approval, wait for agent and feature analysis to finish. Review the findings, then select the resulting agent with `/agent`. Discovery writes local records; it does not mean a profile has been verified, scenarios have been generated, or a run has passed.
 
 ## What Rook Looks For
 
@@ -255,9 +147,13 @@ Rook can identify agents from evidence including:
 
 Discovery does not invent missing facts. If a tool's write behavior cannot be established, Rook records it as unknown rather than guessing from its name.
 
+Before discovery, use the public service default <code>ROOK_ENV=prod</code> and select a project with <code>rook project</code>. Use the same account and project when opening the [hosted Web UI](https://rook.lambdatest.com/projects).
+
 ## Give Exploration Extra Context
 
 Put free-form guidance after `--`:
+
+<VerifiedTag value="Verified" />
 
 ```text
 /explore . -- focus on the refund approval threshold and identity checks
@@ -265,14 +161,18 @@ Put free-form guidance after `--`:
 
 In headless mode:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 rook explore . \
-  --instruction "focus on the refund approval threshold and identity checks"
+  -- "focus on the refund approval threshold and identity checks"
 ```
 
 The instruction guides the discovery model, but it does not widen the filesystem scope.
 
 Use `--force` after a substantial change or when you want to ignore the incremental freshness check:
+
+<VerifiedTag value="Verified" />
 
 ```text
 /explore --force
@@ -284,6 +184,8 @@ Normally Rook hashes the relevant files and re-reads only what changed.
 
 Create a clean directory containing the material you are authorized to share:
 
+<VerifiedTag value="Verified" />
+
 ```text
 travel-agent-spec/
   PRD.md
@@ -294,6 +196,8 @@ travel-agent-spec/
 
 Start Rook inside that directory:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 cd travel-agent-spec
 rook
@@ -301,17 +205,21 @@ rook
 
 Then run:
 
+<VerifiedTag value="Verified" />
+
 ```text
 /explore . -- the deployed agent is a multi-turn travel planner
 ```
 
 If no structural agent signal is found, Rook can ask whether to register the directory anyway. A documentation-only exploration generates requirement-grounded scenarios, but it has less evidence about implementation details, tool behavior, and side effects than a source-backed exploration.
 
-You still need an invocation profile that reaches the deployed agent. See [Configure Rook Profiles](/support/docs/agent-assurance-profiles/).
+You still need an invocation profile that reaches the deployed agent. See [Configure Rook Profiles](/support/docs/rook-profiles-and-hooks/#add-a-profile-interactively).
 
 ## Explore a GitHub Repository
 
 Rook does not read a GitHub URL directly. Clone the repository, enter the checkout, and run Rook locally:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 git clone https://github.com/<owner>/<repository>.git
@@ -321,6 +229,8 @@ rook
 
 Then:
 
+<VerifiedTag value="Verified" />
+
 ```text
 /explore .
 ```
@@ -328,6 +238,8 @@ Then:
 If you paste a GitHub URL into `/explore`, Rook refuses it before spending credits and prints the corresponding clone workflow.
 
 For a pull request, check out the exact head you want to test:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 gh repo clone <owner>/<repository>
@@ -346,6 +258,8 @@ Never clone or check out untrusted code and then run its setup scripts without r
 
 You can explicitly point interactive Rook at a directory outside the current workspace:
 
+<VerifiedTag value="Verified" />
+
 ```text
 /explore ../another-agent
 ```
@@ -363,37 +277,43 @@ Rook also refuses two paths to keep read scope tight:
 
 ## Manage Multiple Agents
 
-The browser inventory shows all registered agents and their scenario and run history.
+Launch `rook` in your workspace, then enter `/agent` in the interactive TUI. The picker lists agents in the selected project. Type to filter, use the arrow keys to move, and press Enter to select an agent or Esc to go back. Check the active agent in the footer before exploring or running tests.
 
-<img loading="lazy" src={require('../assets/images/rook/rook-web-agents.png').default} alt="Rook agent inventory for a workspace containing multiple agents" width="1440" height="900" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/rook/guides/rook-tui-agent-picker.png').default} alt="Rook interactive agent picker with CommerceCare selected, search, keyboard controls, and the active-project footer" width="2200" height="440" className="doc_img"/>
 
-Interactive commands:
+This saved demo has one agent. Projects containing several agents show more choices in the same picker. You can also select a known agent ID directly:
+
+<VerifiedTag value="Verified" />
 
 ```text
 /agent
 /agent use <id>
-/agent rm <id>
 ```
 
 Headless commands:
 
+<VerifiedTag value="Verified" />
+
 ```bash
-rook agent list
-rook agent list --json
+rook agent
 rook agent use <id>
 ```
 
-`/agent rm` forgets the agent and everything stored below its project record. Review the target ID carefully before using it.
+The current command lists or selects agents; it does not provide an `rm` subcommand.
 
 ## Explore All Discovered Agents in Headless Mode
 
-The interactive flow asks which candidates to register. For automation, use `--all`:
+Select a project before discovery. For automation, supply focused guidance and explicit, reviewed permissions; the older `--all` flag is not available:
+
+<VerifiedTag value="Verified" />
 
 ```bash
-rook explore . --all --json
+rook explore . --json -- "discover the agents in this reviewed workspace"
 ```
 
 Use `--allow` only for a narrowly reviewed tool call:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 rook explore . --allow 'bash(npm test)'
@@ -406,3 +326,23 @@ rook explore . --allow 'bash(npm test)'
 Run `/explore` again when prompts, tools, policies, skills, or agent source change. Rook compares the current files with the stored index and updates the existing record, so it keeps your scenario and run history.
 
 After exploration, run `/generate` to refresh scenarios. Rook shows a plan and names the stale prerequisite before it spends credits.
+
+## Review Discovered Agents Locally or Online
+
+Run `rook ui --local` to see the current workspace's **Agents** list. Open an agent and use **Summary**, **Profiles**, **Features**, **Scenarios**, and **Runs**. This does not require publishing the discovery result. See the [rollout note for earlier CLI layouts](/support/docs/rook-web-ui/#earlier-local-ui) if your screen differs.
+
+For team review, sync the reviewed definitions and run `rook ui`. In the hosted Web UI, open project → agent → **Summary**, **Versions**, or **Features**. Those screens show uploaded records, not your latest unsynchronized exploration. Neither UI performs discovery or edits the definition. See [local agents](/support/docs/rook-web-ui/#local-agent) and [hosted agent configuration](/support/docs/rook-web-ui/#agent-configuration) in the same walkthrough.
+
+### Local UI: Discovery Findings {#local-ui-example}
+
+Open **Agents → CommerceCare → Summary** in this saved demo workspace. Read the discovered description and source **Context**, then scroll to **View Full Spec** and **View findings** to inspect the saved discovery records. Use the separate **Features** and **Profiles** tabs before generating more tests. Your workspace will show your own discovered agent.
+
+<img loading="lazy" src={require('../assets/images/rook/rook-local-agent.png').default} alt="Local CommerceCare Summary showing its description, discovery counts, source context, and five agent tabs" width="1440" height="900" className="doc_img"/>
+
+### Hosted Web UI: Synchronized Discovery {#hosted-ui-example}
+
+Open **project → agent → Summary**. **Context** identifies the source files used for discovery; **View Full Spec** and **View findings** open uploaded artifacts when available. Changes from a new exploration are not visible here until synchronized. Use the separate **Profiles** tab to inspect invocation hooks and phase configuration.
+
+<img loading="lazy" src={require('../assets/images/rook/rook-web-agent-summary.png').default} alt="Hosted agent Summary showing discovery source context, specification and findings links, and tool counts" width="1440" height="900" className="doc_img"/>
+
+The capture's empty tool detail list conflicts with its five-tool counter. Inspect the saved specification and Versions call graph; see [screenshot display notes](/support/docs/rook-web-ui/#screenshot-display-notes). This is not evidence that discovery or the smoke run failed.

@@ -24,7 +24,6 @@ import VerifiedTag from '@site/src/component/verifiedTag';
 import { BRAND_URL } from '@site/src/component/BrandName';
 import ThemedImage from '@theme/ThemedImage';
 
-
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
        "@context": "https://schema.org",
@@ -102,7 +101,7 @@ import ThemedImage from '@theme/ThemedImage';
         "https://www.youtube.com/@TestMuAI"
       ]
     },
-    "dateModified": "2026-09-22"
+    "dateModified": "2026-09-28"
   }) }}
 />
 
@@ -114,7 +113,7 @@ TestMu AI Agent Assurance helps teams gather evidence about whether an AI agent 
 
 Agent Assurance does not grade the agent on what it says it did. An agent's own reply is the weakest available signal, because an agent can produce a confident, well-written summary of work it never completed. Agent Assurance goes inside the system and verifies the actual effects: the recorded tool calls, the command output and exit status, the files that changed, the artifacts that were produced, and read-only checks against the target's real state. How much it can observe depends on the access and the profile you give it; where no stronger evidence is available, a criterion is reported as **Unable to Verify** rather than passed on the agent's word.
 
-Agent Assurance runs from your terminal as <code>rook</code>. Give it the materials that describe the agent and connect a live test target. It can then:
+Agent Assurance uses the <code>rook</code> CLI for authoring and execution, with a [local UI and hosted Web UI](/support/docs/rook-web-ui/#choose-your-ui) for reviewing evidence on your machine or with your team. Give it the materials that describe the agent and connect a live test target. It can then:
 
 - Discover capabilities.
 - Generate scenarios.
@@ -157,25 +156,27 @@ Rook works with different levels of access:
 | A live remote API but no source | Explore a local PRD or specification, then add an HTTP profile | Live execution of the deployed target, verified through the response plus whatever effects the profile is configured to observe |
 | A local agent CLI | Add a command profile | stdout, stderr, exit status, files, and resumable sessions when configured |
 
-Rook does not natively explore a GitHub URL. If you want source-aware testing, check out your own repository locally and run Rook inside it. You never need to clone the Rook repository.
+Rook does not natively explore a GitHub URL. If you want source-aware testing, check out your own repository locally and run Rook inside it. You do not need to clone Rook to install it; the quickstart optionally clones its public sample agent.
 
 Documentation is specification evidence, not proof of implementation. A PRD tells Rook what should happen. A live invocation profile is still required to test what actually happens.
 
 ## The End-to-End Journey
 
-1. <code>/explore</code> reads the selected local material and identifies one or more agents.
-2. <code>/agent</code> lets you confirm or switch the active agent.
-3. <code>/generate</code> creates functional, non-functional, and adversarial scenarios.
-4. <code>/profile add</code> records a fixed HTTP or command invocation.
-5. <code>/scenarios list</code> shows which scenarios are runnable with that profile.
-6. <code>/run</code> invokes the live target and judges observable criteria.
-7. <code>/ui</code> opens the local evidence viewer.
+1. Sign in and select the project with <code>/project</code>.
+2. <code>/explore</code> reads local material; <code>/agent</code> selects the agent to test.
+3. <code>/profile add</code> generates and verifies invocation hooks from your prompt or integration material.
+4. <code>/generate</code> creates scenarios; <code>/scenarios list</code> helps you review them.
+5. <code>/sync</code> publishes the reviewed project before a timeline run.
+6. <code>/run</code> invokes the live target through its phases and judges the evidence.
+7. <code>/ui</code> opens the hosted Web UI; <code>/ui --local</code> opens on-disk evidence.
 
 Rook stores project results as plain files below:
 
-~~~text
+<VerifiedTag value="Verified" />
+
+```text
 <your-workspace>/.testmuai/rook/
-~~~
+```
 
 Credentials, variables, and session settings are stored separately below <code>~/.testmuai/rook/</code>. Stored variables are partitioned by the workspace's absolute path.
 
@@ -229,8 +230,7 @@ Current pre-alpha limits include:
 
 - Text and URL inputs can be passed in the scenario goal. Native file, image, and pull-request attachment delivery is not yet implemented.
 - Rook can record image dimensions and file evidence, but it cannot judge image pixels. Visual correctness may be **Unable to Verify**.
-- HTTP JSON and text responses are executable. SSE, NDJSON, and WebSocket transports can be recorded but are not executed.
-- Direct MCP profiles are not executable by <code>/profile test</code> or <code>/run</code>. Use an HTTP or command adapter for the target agent.
+- Hook scripts must implement the actual transport, session handling, and evidence collection. Merely declaring streaming, attachment, or MCP capabilities does not implement them.
 
 ## Safety
 
@@ -244,7 +244,7 @@ For the first run, use staging endpoints, disposable fixtures, and <code>--concu
 
 You do not need the Rook source code, and your workspace does not need the source code of the agent under test. Rook can start from a PRD, knowledge base, checked-out implementation, or another local specification, then invoke a live remote or local target through a profile.
 
-Use the following journeys to choose the setup that matches the access you have.
+Use the following journeys to choose the setup that matches the access you have. Complete login and project selection first. Before every normal run, review the profile and scenarios and run <code>/sync</code>. Scenario IDs below are examples; use those in your workspace.
 
 ### Access Matrix
 
@@ -265,34 +265,43 @@ Use the following journeys to choose the setup that matches the access you have.
 
 **Goal:** Verify eligibility rules, missing-input questions, duplicate refund protection, and receipt creation.
 
-~~~text
+<VerifiedTag value="Verified" />
+
+```text
 refund-validation/
 └── refund-agent-prd.md
-~~~
+```
 
 Start from the file:
 
-~~~bash
+<VerifiedTag value="Verified" />
+
+```bash
 cd refund-validation
 rook
-~~~
+```
 
-~~~text
+<VerifiedTag value="Verified" />
+
+```text
 /explore refund-agent-prd.md
 /generate --total 15 -- cover missing order ID, identity verification, duplicate requests, policy cutoff, and receipt output
 /profile add
 /scenarios list
+/sync
 /run --only SC-001 --concurrency 1
-~~~
+```
 
 Use an HTTP profile such as:
 
-~~~bash
+<VerifiedTag value="Verified" />
+
+```bash
 curl https://refund-agent.staging.example.com/v1/chat \
   -H 'authorization: Bearer replace-with-your-token' \
   -H 'content-type: application/json' \
   -d '{"message":"I need a refund for order ORD-1042","session_id":"test-session"}'
-~~~
+```
 
 **Interpretation:** The PRD supplies expected behavior. The API response and observations supply actual evidence. Rook should not infer implementation tools or mark a backend refund successful merely because the PRD says that tool exists.
 
@@ -300,21 +309,25 @@ curl https://refund-agent.staging.example.com/v1/chat \
 
 **Situation:** A support agent answers from product policies, warranty tables, and escalation instructions. The workspace contains documents but no executable agent.
 
-~~~text
+<VerifiedTag value="Verified" />
+
+```text
 support-agent-test/
 ├── PRD.md
 └── knowledge/
     ├── refunds.md
     ├── warranty.md
     └── escalation.md
-~~~
+```
 
 Explore the folder with focus:
 
-~~~text
+<VerifiedTag value="Verified" />
+
+```text
 /explore . -- treat PRD.md as requirements and knowledge/ as the approved answer source
 /generate --class functional,adversarial -- category boundaries, conflicting policies, unsupported claims, and escalation
-~~~
+```
 
 Connect the remote support endpoint with <code>/profile add</code>. Add read-only verification only when it can observe an effect without creating or changing it.
 
@@ -333,30 +346,36 @@ Connect the remote support endpoint with <code>/profile add</code>. Add read-onl
 
 Keep the specification in a small local test workspace:
 
-~~~text
+<VerifiedTag value="Verified" />
+
+```text
 travel-agent-contract/
 ├── PRD.md
 └── api-contract.md
-~~~
+```
 
-~~~text
+<VerifiedTag value="Verified" />
+
+```text
 /explore .
 /generate --total 20 -- test ambiguous dates, unavailable flights, budget limits, and confirmation before booking
 /profile add
-~~~
+```
 
 The profile might invoke:
 
-~~~bash
+<VerifiedTag value="Verified" />
+
+```bash
 curl https://travel-agent.staging.example.com/v2/trips \
   -H 'authorization: Bearer replace-with-your-token' \
   -H 'content-type: application/json' \
   -d '{"goal":"Find a refundable flight to Singapore next Friday","thread_id":"rook-demo"}'
-~~~
+```
 
 Use a conversation field when the agent returns a thread or session ID. Without that mapping, a scenario that requires follow-up questions cannot run as a real conversation.
 
-For both HTTP examples, <code>/profile add</code> replaces the Authorization value with <code>$&#123;ROOK_AGENT_TOKEN&#125;</code> and securely asks for the real token. Stored values are scoped to the current workspace.
+For both HTTP examples, supply target credentials through environment variables and tell the profile author their names. The generated script should read them from <code>process.env</code>, never embed the values. See [Environment and Secrets](/support/docs/rook-environment-and-secrets/).
 
 Rook cannot explore the remote URL itself. It explores local material and invokes the remote target through the profile.
 
@@ -366,27 +385,34 @@ Rook cannot explore the remote URL itself. It explores local material and invoke
 
 Check out your own repository and run Rook at the narrowest useful root:
 
-~~~bash
+<VerifiedTag value="Verified" />
+
+```bash
 git clone https://github.com/your-org/coding-agent.git
 cd coding-agent
 rook
-~~~
+```
 
-~~~text
+<VerifiedTag value="Verified" />
+
+```text
 /explore .
 /agent
 /generate --class functional,non_functional,adversarial
 /profile add
+/sync
 /run --concurrency 1
-~~~
+```
 
 Source access lets Rook derive scenarios from implemented tools and policies. The profile still invokes the agent externally; discovery alone is not a test run.
 
 If the repository is a monorepo, prefer:
 
-~~~text
+<VerifiedTag value="Verified" />
+
+```text
 /explore services/code-review-agent
-~~~
+```
 
 This narrows discovery and makes the proposed agent boundary easier to review. It is not a filesystem access boundary. Discovery tools remain rooted at the workspace where Rook was launched, so use an isolated checkout when sibling files must not be inspected.
 
@@ -394,11 +420,13 @@ This narrows discovery and makes the proposed agent boundary easier to review. I
 
 Rook does not clone or explore a GitHub URL directly. Clone the repository yourself so you control the branch, credentials, submodules, and files Rook may read:
 
-~~~bash
+<VerifiedTag value="Verified" />
+
+```bash
 git clone --branch feature/refund-v2 https://github.com/your-org/refund-agent.git
 cd refund-agent
 rook
-~~~
+```
 
 Then use <code>/explore .</code>. For a private repository, authenticate Git using your organization's normal process. This is your agent repository. It is unrelated to installing or cloning Rook.
 
@@ -408,9 +436,11 @@ Then use <code>/explore .</code>. For a private repository, authenticate Git usi
 
 Create a command profile through <code>/profile add</code>. Example invocation:
 
-~~~text
-research-agent --prompt "{{goal}}" --format json
-~~~
+<VerifiedTag value="Verified" />
+
+```text
+/profile add local-research --command 'research-agent --format json'
+```
 
 Configure:
 
@@ -436,10 +466,12 @@ Use an asynchronous HTTP profile with:
 
 Example test intent:
 
-~~~text
+<VerifiedTag value="Verified" />
+
+```text
 /generate -- create an executive risk summary, a PDF report, and a chart; verify required sections and artifact metadata
 /run --only SC-004 --concurrency 1
-~~~
+```
 
 Rook can collect the result text and common files such as PDF, image, CSV, JSON, Markdown, HTML, and archives. It can record image size and dimensions.
 
@@ -451,14 +483,17 @@ Rook can collect the result text and common files such as PDF, image, CSV, JSON,
 
 **Situation:** A customer-service system contains a router, refund agent, order agent, and escalation agent.
 
-~~~text
+<VerifiedTag value="Verified" />
+
+```text
 /explore .
 /agent
 /agent use refund-agent
 /generate --total 12
 /profile add
+/sync
 /run
-~~~
+```
 
 Repeat <code>/agent use</code>, generation, and profile setup for each independently invokable agent. If a subagent is only reachable through the router, test it through the router, and make that boundary explicit in the profile and scenarios.
 
@@ -476,12 +511,14 @@ Profiles represent ways to invoke the same discovered behavior:
 | <code>careful-model</code> | Higher-quality model configuration |
 | <code>regional-eu</code> | Region-specific policy and endpoint |
 
-~~~text
-/profile list
+<VerifiedTag value="Verified" />
+
+```text
+/profile
 /profile test refund-staging
 /profile use refund-staging
 /run --only SC-001,SC-002 --concurrency 1
-~~~
+```
 
 Switch to another verified profile and repeat the same scenario IDs. Runs retain the profile identity used at execution time.
 
@@ -491,16 +528,41 @@ Do not use a production profile for scenarios that can write. Rook does not prov
 
 After the interactive journey is verified, use headless commands:
 
-~~~bash
-rook explore . --all --json
-rook generate --total 20 --json
-rook run --only SC-001,SC-002 --no-narrative --json
+<VerifiedTag value="Verified" />
+
+```bash
+rook project use <project-id>
+rook agent use <agent-id>
+rook sync
+rook run --only SC-001,SC-002 --concurrency 1 --json
 rook report --json
-~~~
+```
 
 Pin the CLI version, use an isolated Rook home for CI, and provide explicit permission rules only for exact calls the job should make.
 
-Exit code 0 means no defect was recorded in the verdicts that were produced. Also inspect the run record to confirm the requested suite completed. Interruption or exhausted resources can leave a valid partial run.
+A successful process exit does not establish agent quality. Inspect completion and verdict totals using the [CI gate](/support/docs/agent-assurance-ci-cd/). Keep generation in a separately reviewed workflow.
+
+## Local and Hosted UIs {#hosted-web-ui}
+
+Use **`rook ui --local`** to review the current workspace's agents, definitions, runs, and evidence without a hosted login. Open agent → runs → run → scenario. This includes local `--test` results and evidence awaiting upload; keep the serving process running.
+
+Open the [hosted Web UI](https://rook.lambdatest.com/projects) for shared projects. Public packages default to <code>ROOK_ENV=prod</code>; use the same service, account, and project in the CLI and browser.
+
+Use **`rook ui`** to open the hosted app for uploaded project history, versions, and team review. Open project → agent → Runs → run → scenario. Teammates need access to the same environment and project.
+
+The [combined UI walkthrough](/support/docs/rook-web-ui/#choose-your-ui) shows both layouts and their evidence views. Neither UI creates or executes tests; those operations stay in the CLI.
+
+### Local UI: Start With Your Workspace {#local-ui-example}
+
+The local landing page lists agents from the selected project on this machine. Click an agent to review its definitions and results. This saved CommerceCare demo has nine features, twelve scenarios, and three runs; a new workspace starts without these records. See the [local UI rollout note](/support/docs/rook-web-ui/#earlier-local-ui) if your public CLI still has the earlier viewer.
+
+<img loading="lazy" src={require('../assets/images/rook/rook-local-agents.png').default} alt="Local Rook Agents page listing CommerceCare and its feature, scenario, and run counts" width="1440" height="900" className="doc_img"/>
+
+### Hosted Web UI: Start With Your Team's Project {#hosted-ui-example}
+
+The hosted landing page starts with shared **Projects**. Open a project, then an agent, to reach Summary, Versions, Profiles, Features, Scenarios, and Runs. Insights is not currently available. The screenshot shows the documentation test project, not a project created automatically at installation.
+
+<img loading="lazy" src={require('../assets/images/rook/rook-web-projects.png').default} alt="Hosted project entry showing the documentation test project's agent and run counts" width="1158" height="75" className="doc_img"/>
 
 ## Next Steps
 
@@ -509,7 +571,9 @@ Exit code 0 means no defect was recorded in the verdicts that were produced. Als
 - [Drive Rook from Claude Code, Codex CLI, or another coding assistant](/support/docs/rook-coding-agents/)
 - [Understand the local and cloud architecture](/support/docs/rook-architecture/)
 - [Connect and explore agents](/support/docs/agent-assurance-connect-and-explore-agents/)
-- [Configure invocation profiles](/support/docs/agent-assurance-profiles/)
+- [Configure invocation profiles](/support/docs/rook-profiles-and-hooks/#add-a-profile-interactively)
+- [Generate profiles and configure lifecycle hooks](/support/docs/rook-profiles-and-hooks/)
 - [Generate and curate scenarios](/support/docs/agent-assurance-scenarios/)
 - [Run tests safely](/support/docs/agent-assurance-run-tests/)
+- [Review permissions, secrets, and workspace files](/support/docs/rook-permissions-and-safety/)
 - [Browse every command](/support/docs/agent-assurance-command-reference/)

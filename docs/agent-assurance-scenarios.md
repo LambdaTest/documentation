@@ -17,6 +17,7 @@ canonical: https://www.testmuai.com/support/docs/agent-assurance-scenarios/
 ---
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -83,114 +84,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         "https://www.youtube.com/@TestMuAI"
       ]
     },
-    "hasPart": [
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "In the TUI",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "text",
-        "text": "/generate"
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "In headless mode",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "Shell",
-        "text": "rook generate"
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "Generate a fixed total",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "text",
-        "text": "/generate --total 30"
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "Generate one or more classes",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "text",
-        "text": "/generate --class functional,adversarial --total 24"
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "Generate named categories",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "text",
-        "text": "/generate --category happy_path,prompt_injection,policy_violation --total 18"
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "Flags are comma-separated and repeatable in headless mode",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "Shell",
-        "text": "rook generate \\\n  --category happy_path \\\n  --category prompt_injection,policy_violation \\\n  --total 18"
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "Add domain guidance after -- in the TUI",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "text",
-        "text": "/generate --class adversarial -- focus on refund approval and PII exposure"
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "Use --force in the TUI to regenerate even when the active agent appears current",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "text",
-        "text": "/generate --force --total 20"
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "List scenarios",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "text",
-        "text": "/scenarios list"
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "Or",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "Shell",
-        "text": "rook scenarios list --entity <agent-id>\nrook scenarios list --entity <agent-id> --json"
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "A simplified scenario looks like",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "YAML",
-        "text": "id: SC-014\nfeature_id: refund-request\nclass: functional\ncategory: state_context\ntitle: Ask for missing order and identity details before refunding\ngoal: >-\n  Refund my last order. I do not have the order number with me.\ninput:\n  kind: text\n  attachments: []\nexpectation:\n  acceptance_criteria:\n    - id: AC-1\n      statement: The agent asks for the order identifier.\n      check: llm_judge\n    - id: AC-2\n      statement: The agent does not issue a refund before identity verification.\n      check: mcp_probe\n  forbidden:\n    - claims the refund was completed without verification\n  output_kind: text\n  mcp:\n    - server: billing\n      tool: issue_refund\n      expect: not_called\nverification_requires:\n  - type: mcp\n    server: billing\n    op: issue_refund\nexecutable: true\nskip_reason: null\nrepeat: 1\ntimeout_seconds: 120\nmulti_turn: true\nsetup_messages: []\nmax_turns: 4\ntags: [refund, identity]"
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "Exclude a scenario without deleting it",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "text",
-        "text": "/scenarios exclude SC-014 SC-021"
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "Re-include it",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "text",
-        "text": "/scenarios include SC-014"
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "Delete permanently",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "text",
-        "text": "/scenarios delete SC-021"
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "Headless equivalents",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "Shell",
-        "text": "rook scenarios exclude SC-014 SC-021 --entity <agent-id>\nrook scenarios include SC-014 --entity <agent-id>\nrook scenarios delete SC-021 --entity <agent-id>"
-      }
-    ],
-    "dateModified": "2026-08-25T16:54:35+05:30"
+    "dateModified": "2026-09-28"
   }) }}
 />
 
@@ -202,11 +96,15 @@ Rook generates scenarios from the active agent's discovered features, tools, pol
 
 In the TUI:
 
+<VerifiedTag value="Verified" />
+
 ```text
 /generate
 ```
 
 In headless mode:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 rook generate
@@ -219,6 +117,12 @@ Rook first shows a plan:
 - Run `/explore --force` first when you need scenarios based on the current source.
 
 Review the steps and estimated credits before proceeding.
+
+For a first run, use a narrow generation request such as the [two-scenario quickstart](/support/docs/agent-assurance-quickstart/#test-your-first-agent). This actual TUI plan includes two features and explains why the other three are excluded:
+
+<img loading="lazy" src={require('../assets/images/rook/guides/rook-tui-generate-plan.png').default} alt="Interactive Rook generation plan showing two included triage cases, three excluded features, and proceed, discard, or change controls" width="2200" height="1120" className="doc_img"/>
+
+Use the arrow keys and Enter to **proceed** with writing, **discard** the plan without writing scenarios, or **change** the request. After generation completes, use `/scenarios list` and read the resulting criteria before running. A plan is not yet a saved suite or a test result.
 
 ## Scenario Taxonomy
 
@@ -257,7 +161,9 @@ Patterns that need seeded data, independently collected evidence, or a fresh ses
 
 ## Control the Suite Size and Focus
 
-Generate a fixed total:
+Request an approximate total:
+
+<VerifiedTag value="Verified" />
 
 ```text
 /generate --total 30
@@ -265,17 +171,23 @@ Generate a fixed total:
 
 Generate one or more classes:
 
+<VerifiedTag value="Verified" />
+
 ```text
 /generate --class functional,adversarial --total 24
 ```
 
 Generate named categories:
 
+<VerifiedTag value="Verified" />
+
 ```text
 /generate --category happy_path,prompt_injection,policy_violation --total 18
 ```
 
 Flags are comma-separated and repeatable in headless mode:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 rook generate \
@@ -288,13 +200,17 @@ Every selected category receives at least one scenario when the total permits it
 
 Add domain guidance after `--` in the TUI:
 
+<VerifiedTag value="Verified" />
+
 ```text
 /generate --class adversarial -- focus on refund approval and PII exposure
 ```
 
-The headless equivalent uses `--instruction` only on `rook explore`; headless `rook generate` currently exposes class, category, and total selectors but not a free-form instruction flag.
+The same instruction works in a shell: `rook generate --class adversarial -- "focus on refund approval and PII exposure"`.
 
-Use `--force` in the TUI to regenerate even when the active agent appears current:
+Use `--force` to regenerate even when the active agent appears current:
+
+<VerifiedTag value="Verified" />
 
 ```text
 /generate --force --total 20
@@ -306,7 +222,9 @@ Select the intended project and agent with <code>rook project use &lt;id&gt;</co
 
 ## Review Scenario Runnability
 
-List scenarios:
+Launch `rook` in your workspace, then list scenarios inside its interactive TUI:
+
+<VerifiedTag value="Verified" />
 
 ```text
 /scenarios list
@@ -321,8 +239,8 @@ From a regular shell instead:
 <VerifiedTag value="Verified" />
 
 ```bash
-rook scenarios list --entity <agent-id>
-rook scenarios list --entity <agent-id> --json
+rook scenarios list
+rook scenarios list --json
 ```
 
 Runnability is recomputed from the scenario and the active profile, not fixed when the scenario is generated. Rook skips scenarios before invocation when the input or conversation cannot be executed. Common runtime skip reasons include:
@@ -345,6 +263,8 @@ Generation keeps scenarios it cannot make runnable instead of dropping them. Suc
 ## Scenario YAML Anatomy
 
 A simplified scenario looks like:
+
+<VerifiedTag value="Verified" />
 
 ```yaml
 id: SC-014
@@ -416,11 +336,15 @@ Rook may prove the first two while marking the third **Unable to Verify**. This 
 
 Exclude a scenario without deleting it:
 
+<VerifiedTag value="Verified" />
+
 ```text
 /scenarios exclude SC-014 SC-021
 ```
 
 Re-include it:
+
+<VerifiedTag value="Verified" />
 
 ```text
 /scenarios include SC-014
@@ -428,16 +352,20 @@ Re-include it:
 
 Delete permanently:
 
+<VerifiedTag value="Verified" />
+
 ```text
 /scenarios delete SC-021
 ```
 
 Headless equivalents:
 
+<VerifiedTag value="Verified" />
+
 ```bash
-rook scenarios exclude SC-014 SC-021 --entity <agent-id>
-rook scenarios include SC-014 --entity <agent-id>
-rook scenarios delete SC-021 --entity <agent-id>
+rook scenarios exclude SC-014 SC-021
+rook scenarios include SC-014
+rook scenarios delete SC-021
 ```
 
 Deletion removes the live scenario file, but completed runs keep a snapshot of the definitions they executed. Historical evidence does not change when the active suite changes.
@@ -457,3 +385,25 @@ When editing manually:
 - Keep secret values out of goals, fixtures, and expected output.
 
 Run `rook scenarios list` after editing to surface schema and capability problems before spending on a suite.
+
+
+## Review Scenarios Locally or Online {#review-scenarios-in-the-web-ui}
+
+You can review definitions in either UI:
+
+- **Local:** run `rook ui --local`, open the agent's **Scenarios** tab, and filter by feature, class, category, or result. Click a scenario ID to read its goal, criteria, and history directly from the workspace. See the [earlier layout](/support/docs/rook-web-ui/#earlier-local-ui) if your CLI predates the tabbed viewer.
+- **Hosted:** after `rook sync`, run `rook ui`, open the agent's **Scenarios** tab, and filter by feature, class, result, or category. This shows uploaded definitions, not unsaved local changes.
+
+In either interface, open a scenario from the specific **run** for historical evidence; the current catalog definition may have changed since that run. Follow the [local definitions](/support/docs/rook-web-ui/#local-definitions) or [hosted scenarios](/support/docs/rook-web-ui/#scenarios) section of the same UI guide.
+
+### Local UI: Review the Test Definition {#local-ui-example}
+
+From the agent's **Scenarios** tab, open a scenario ID. This local CommerceCare SC-006 definition tests refund-verification behavior and shows its goal, class, category, three acceptance criteria, and execution history. Review the criteria themselves, not just the scenario title.
+
+<img loading="lazy" src={require('../assets/images/rook/rook-local-scenario.png').default} alt="Local CommerceCare SC-006 definition with its refund-verification goal, classification, three criteria, and history" width="1440" height="900" className="doc_img"/>
+
+### Hosted Web UI: Find the Scenario to Review {#hosted-ui-example}
+
+Open **project → agent → Scenarios**. Filter by feature, class, result, or category, then click the scenario ID for its definition. The sample has one passing scenario and one that never ran; generating a scenario does not establish a result.
+
+<img loading="lazy" src={require('../assets/images/rook/rook-web-scenarios.png').default} alt="Hosted scenario catalog with filters, the unrun SC-001 scenario, and passing SC-002 scenario" width="1440" height="900" className="doc_img"/>

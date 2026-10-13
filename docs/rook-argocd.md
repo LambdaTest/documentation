@@ -12,6 +12,54 @@ slug: rook-argocd/
 
 Run Rook as a Kubernetes Job after Argo CD has applied an application and its resources are healthy. This is a post-deployment assurance check, not a CI build job or an Argo Workflows template. A failed Rook gate marks the sync operation failed; it does not automatically undo the deployment.
 
+## Set This Up with a Coding Agent {#prompt-led-setup}
+
+You can ask Claude Code or another [configured coding assistant](/support/docs/rook-coding-agents/) to prepare this integration in plain language. Paste the prompts into the assistant's chat. **The assistant authors and reviews the pipeline; the runner executes Rook CLI commands.** No coding assistant or skill package is required on the runner.
+
+### 1. Inspect the Existing Setup
+
+```text
+Use the rook skill to inspect this repository for Argo CD integration.
+Identify the existing pipeline, selected Rook project and agent, tested profile,
+reviewed scenario IDs, hooks, possible target writes, and missing prerequisites.
+Ask me to confirm the target, exact suite, tool grants, and Rook credit use.
+Do not change files, invoke the target, generate scenarios, or trigger a job yet.
+```
+
+Provide the agent repository, test target, and your intended suite—not credential values. If no reviewed suite exists, first ask the assistant to help discover the agent, prepare its profile, generate scenarios, and rehearse a small approved test. Do not make CI generation the substitute for that review.
+
+### 2. Ask for the Integration Files
+
+```text
+Use the rook skill and the reference files on this page to prepare an Argo CD
+PostSync assurance check for the deployed test agent. Preserve existing manifests.
+Create or adapt ci/rook.Dockerfile, ci/rook-ci.sh, and the PostSync Job manifest
+in the application's rendered path. Use an immutable reviewed-suite image,
+secret references, isolated Rook home, and persistent evidence per pod attempt.
+Run only the reviewed scenario IDs and profile, with exact tool grants and the
+strict verdict policy. Keep automatic Job retries off; explain re-sync costs.
+List the required namespace, Secret keys, PVC access, runtime dependencies,
+and target URL. Explain that PostSync failure does not roll back the deployment.
+Do not build or push an image, apply manifests, sync Argo CD, or run paid tests.
+```
+
+Expect a Dockerfile and manifest diff, the existing shared gate script, and an infrastructure checklist. The skill supplies the Rook testing contract; your assistant also needs to follow Argo CD/Kubernetes documentation for deployment details. Do not invent a public prebuilt Rook image or a rollback guarantee.
+
+### 3. Validate Before Enabling
+
+```text
+Review the generated integration without contacting the target or starting CI.
+Validate syntax with available local tools and test the gate with synthetic
+Pass, Fail, Unable to Verify, incomplete, missing, and malformed results.
+Check exact scenario selection, current-run identity, secret handling, and
+evidence retention on failure. Do not weaken the gate to make checks pass.
+Report what was validated locally and what still needs platform verification.
+```
+
+Expect reviewed changes to ci/rook.Dockerfile, the PostSync Job manifest, and ci/rook-ci.sh, validation results, and a remaining setup checklist. Do not claim a live integration passed based only on generated code or mocked results.
+
+After review, build and publish the reviewed image through your trusted CI, record its digest, provision the namespace dependencies below, and approve a full application sync. Generating these files does not deploy the hook; selective sync skips hooks.
+
 ## Prepare the Reviewed Suite
 
 Use a safe target that is reachable from the runner. In a local rehearsal, select the project and agent, create and test the profile, review its hooks and possible writes, and prove the selected scenarios work. Commit the reviewed `.testmuai/rook/` definitions and required hook scripts without credentials or old run histories. Do not generate new scenarios inside the release gate.
@@ -203,17 +251,31 @@ See [Argo CD hook lifecycle](https://argo-cd.readthedocs.io/en/stable/user-guide
 
 ## Review Results Locally and on the Web
 
+Ask your coding assistant to investigate a downloaded/exported result without starting another test:
+
+```text
+Use the rook skill to inspect the saved artifacts from this Argo CD attempt.
+Match the job or deployment attempt to run.json, report.json, and saved verdicts.
+Explain whether the failure was setup, authorization, an incomplete run, a failed
+criterion, Unable to Verify, or a compromised result. Quote the available evidence.
+Suggest the smallest next step and help me open the local UI for restored evidence
+or locate the uploaded run online. Do not rerun, resync a deployment, change the
+gate, or start paid RCA without separate approval.
+```
+
+Use trusted artifacts in an isolated copy of the reviewed workspace; inspect archive paths before extraction and do not overwrite unrelated work. Reading evidence does not require invoking its hook scripts.
+
 The gate prints the run ID and saves `run.json`, `report.json`, and, when a run directory exists, `evidence.tar.gz`. Keep failure output too. The archive contains this agent's run folders, not `ROOK_HOME`; a clean checkout avoids including earlier runs. Set retention and access controls because target responses and evidence can contain sensitive data.
 
-To investigate locally, restore the reviewed checkout and extract the **trusted** evidence archive at its repository root, preserving the `.testmuai/rook/projects/…` hierarchy. Select the matching project and agent, then run `rook report <run-id> --json` or `rook ui --local`. Inspect a run's scenario → criteria → files.
+To investigate locally, restore the reviewed checkout and extract the **trusted** evidence archive at its repository root, preserving the `.testmuai/rook/projects/…` hierarchy. Select the matching project and agent, then run `rook report <run-id> --json` or `rook ui --local`. Open the run's scenario, read **Acceptance criteria**, and choose **Request**, **Response**, **Verdict**, or **Artefacts** in **Evidence**. Keep the full archive: hook records, snapshots, and nested files are not all listed in the drawer. See the [earlier local layout](/support/docs/rook-web-ui/#earlier-local-ui) if your CLI predates this viewer.
 
-<img loading="lazy" src={require('../assets/images/rook/rook-local-evidence.png').default} alt="Local Rook files panel illustrating retained request, response, hook, snapshot, and verdict evidence" width="1440" height="900" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/rook/rook-local-evidence.png').default} alt="Local Rook Artefacts drawer illustrating retained CommerceCare collect and judge evidence" width="1440" height="900" className="doc_img"/>
 
-For uploaded results, open [Rook projects](https://rook.lambdatest.com/projects) → project → agent → run. Match the run ID before reviewing **Response**, **Verdict**, and **Artefacts**. A hosted record is useful for sharing, but the pipeline's validated report determines the gate.
+For uploaded results, open [Rook projects](https://rook.lambdatest.com/projects) → project → agent → Runs → run → scenario. Match the run ID before choosing **Response**, **Verdict**, or **Artefacts** in the **Evidence** drawer. A hosted record is useful for sharing, but the pipeline's validated report determines the gate.
 
 <img loading="lazy" src={require('../assets/images/rook/rook-web-run.png').default} alt="Hosted Rook run review illustrating completion, profile, and scenario outcomes" width="1440" height="900" className="doc_img"/>
 
-These are existing smoke-test result captures, not screenshots of this CI integration executing. A local URL on a CI runner is not accessible to teammates; do not expose the local UI publicly. If a hosted upload is missing, retain the evidence and investigate [result synchronization](/support/docs/rook-web-ui/#troubleshooting) rather than rerunning paid tests blindly.
+These are saved demo results—CommerceCare locally and the separate triage example online—not screenshots of this CI integration executing. A local URL on a CI runner is not accessible to teammates; do not expose the local UI publicly. If a hosted upload is missing, retain the evidence and investigate [result synchronization](/support/docs/rook-web-ui/#troubleshooting) rather than rerunning paid tests blindly.
 
 ## Related Guides
 

@@ -17,6 +17,7 @@ canonical: https://www.testmuai.com/support/docs/agent-assurance-mcp/
 ---
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -176,7 +177,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         "text": "mcp_call(billing.get_refund_status)"
       }
     ],
-    "dateModified": "2026-08-25T16:54:35+05:30"
+    "dateModified": "2026-09-28"
   }) }}
 />
 
@@ -188,7 +189,9 @@ Exploration also records MCP servers declared by the target agent. These declara
 
 ## List Servers
 
-Interactive:
+Launch `rook` in the workspace and enter these commands in its interactive TUI:
+
+<VerifiedTag value="Verified" />
 
 ```text
 /mcp
@@ -197,12 +200,18 @@ Interactive:
 
 Headless:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 rook mcp list
 rook mcp list --json
 ```
 
 Each row reports the server name, origin, transport, state, source, and connection or tool status when available.
+
+<img loading="lazy" src={require('../assets/images/rook/guides/rook-tui-mcp-list.png').default} alt="Rook interactive MCP listing reporting no configured or discovered servers for the HTTP-only triage sample" width="2200" height="520" className="doc_img"/>
+
+This actual first-use capture has no MCP servers: the triage sample is reached by HTTP, not MCP. It is an empty configuration, not a failed connection. After adding a server, repeat `/mcp list` and inspect it with `/mcp get <name>` before approving or using it. Declaring a server alone does not prove its tools work.
 
 ## MCP Origins and Precedence
 
@@ -221,11 +230,15 @@ The repository-root `.mcp.json` belongs to the agent under test. Rook reads it a
 
 Local scope is the default:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 rook mcp add github -- npx -y @modelcontextprotocol/server-github
 ```
 
 Add a project or user definition:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 rook mcp add github --scope project \
@@ -243,6 +256,8 @@ Keep secret references in configuration. Rook expands `${VAR}` only when resolvi
 
 ## Record a Remote Server
 
+<VerifiedTag value="Verified" />
+
 ```bash
 rook mcp add notion \
   --transport http \
@@ -255,6 +270,8 @@ HTTP, SSE, and WebSocket definitions are accepted, stored, and listed for forwar
 :::
 
 ## Inspect a Definition
+
+<VerifiedTag value="Verified" />
 
 ```bash
 rook mcp get github
@@ -269,17 +286,23 @@ A project or discovered stdio definition can execute a command from a cloned rep
 
 Interactive:
 
+<VerifiedTag value="Verified" />
+
 ```text
 /mcp approve <name>
 ```
 
 Headless:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 rook mcp approve <name>
 ```
 
 When a project and discovered definition share the name, specify which one:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 rook mcp approve <name> --origin project
@@ -298,12 +321,16 @@ Approval is pinned to the raw definition, not only the server name. If the comma
 
 ## Enable, Disable, or Remove
 
+<VerifiedTag value="Verified" />
+
 ```text
 /mcp enable <name>
 /mcp disable <name>
 ```
 
 Headless:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 rook mcp enable <name>
@@ -328,6 +355,8 @@ Approval never guesses between two same-named definitions.
 
 A scenario can require a verifier:
 
+<VerifiedTag value="Verified" />
+
 ```yaml
 verification_requires:
   - type: mcp
@@ -345,6 +374,8 @@ Observing the tested agent's own MCP calls is a separate concern that you config
 ## Permission Prompts Still Apply
 
 An enabled registry entry does not grant every use. Starting a server, listing its tools, and calling a tool each still pass through Rook's permission gate with specific subjects such as:
+
+<VerifiedTag value="Verified" />
 
 ```text
 mcp_call(billing.get_refund_status)
@@ -364,3 +395,21 @@ Only approve a state-changing MCP call when the test explicitly requires that re
 | `malformed` | Required command data is absent or invalid | Fix the source configuration |
 
 Malformed scope files and duplicate discovered names are reported with their source rather than silently dropped.
+
+## Review MCP Evidence in Either UI
+
+Use `rook ui --local` for workspace records or `rook ui` for uploaded results. In either redesigned interface, open **run → scenario**, inspect the acceptance criteria, then choose **Response**, **Verdict**, or **Artefacts** in **Evidence** to open the drawer. Both can show MCP-related evidence only when it was actually recorded; declaring a tool or verifier does not prove it was called. See the [earlier local layout](/support/docs/rook-web-ui/#earlier-local-ui) if your CLI still has scrolling sections.
+
+Neither UI starts, approves, or edits an MCP server. Resolve missing verification access with the CLI commands above, then inspect the resulting evidence. The [local and hosted walkthrough](/support/docs/rook-web-ui/#choose-your-ui) shows both review layouts.
+
+### Local UI: Where to Inspect Verification Evidence {#local-ui-example}
+
+Open **agent → Runs → run → scenario** and read **Acceptance criteria**, then inspect **Evidence → Response** and **Verdict**. This saved CommerceCare demo locates the review controls; it does not demonstrate an MCP invocation or configuration. For an MCP-backed test, inspect that run's actual calls and verification gaps here.
+
+<img loading="lazy" src={require('../assets/images/rook/rook-local-result.png').default} alt="Local CommerceCare result illustrating failed and unverifiable criteria, not an MCP configuration or invocation" width="1440" height="900" className="doc_img"/>
+
+### Hosted Web UI: Where to Inspect Uploaded Calls {#hosted-ui-example}
+
+Open **run → scenario → Evidence → Response** for the recorded exchange and observed calls, then check **Verdict** and **Artefacts** in the drawer. This separate hosted HTTP triage sample is not MCP-specific evidence. An MCP tool declaration or connection status alone cannot establish what the tested agent actually did.
+
+<img loading="lazy" src={require('../assets/images/rook/rook-web-result-response.png').default} alt="Hosted Response tab for the HTTP sample, illustrating where recorded invocation evidence is reviewed" width="1440" height="900" className="doc_img"/>
