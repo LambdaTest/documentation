@@ -17,6 +17,7 @@ canonical: https://www.testmuai.com/support/docs/agent-assurance-run-tests/
 ---
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -83,106 +84,13 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         "https://www.youtube.com/@TestMuAI"
       ]
     },
-    "hasPart": [
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "Run the Runnable Suite",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "text",
-        "text": "/run"
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "Run by ID",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "text",
-        "text": "/run --only SC-004,SC-011"
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "Run by class",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "text",
-        "text": "/run --class adversarial"
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "Run by category",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "text",
-        "text": "/run --category happy_path,prompt_injection"
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "Run by tag",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "text",
-        "text": "/run --tag billing,refund"
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "This command first keeps adversarial scenarios, then keeps those tagged refund",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "text",
-        "text": "/run --class adversarial --tag refund"
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "You can also describe the desired subset after --",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "text",
-        "text": "/run --class adversarial -- the scenarios about refund approval"
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "Choose Concurrency",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "text",
-        "text": "/run --concurrency 1\n/run --concurrency 5"
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "Skip that model call when CI needs only the structured evidence and deterministic totals",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "text",
-        "text": "/run --no-narrative"
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "The headless equivalent is",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "Shell",
-        "text": "rook run --no-narrative"
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "Request Root-Cause Analysis",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "text",
-        "text": "/run --rca"
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "It writes remedies under",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "text",
-        "text": ".testmuai/rook/agents/<agent-id>/runs/<run-id>/remedies/"
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "Current headless syntax is",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "Shell",
-        "text": "rook run [--entity <id>] [--only <ids>] [--no-narrative] [--verbose] [--json]"
-      }
-    ],
-    "dateModified": "2026-08-25T16:54:35+05:30"
+    "dateModified": "2026-09-28"
   }) }}
 />
 
 # Run Deep Functional Tests With Agent Assurance
 
-`/run` selects runnable scenarios, displays the target and estimated cost, asks for permission, invokes the live agent, and records evidence for every completed scenario.
+`/run` selects runnable scenarios, shows a plan for review, asks for approval, invokes the live agent, and records evidence for every completed scenario. Check your credits with `/plan` first; the run plan is not a fixed spending limit.
 
 > **Use a test target:** Rook does not undo the target agent's actions. Refunds, messages, tickets, deployments, database updates, and file writes are real.
 >
@@ -190,18 +98,25 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 ## Preflight Checklist
 
+Launch `rook` from your agent workspace and enter the slash commands below inside the interactive TUI. `/help run` lists selectors and phases without starting a test; `/run` invokes the live target after its preflight and permission checks.
+
 Before running a suite, confirm:
 
-1. The intended agent is active: `/agent`.
-2. The intended verified profile is active: `/profile list`.
-3. The target URL or command points at test or staging. Direct MCP profiles cannot currently be invoked by `/profile test` or `/run`; use an HTTP or command adapter.
-4. Required fixtures and reset behavior are ready.
-5. Required MCP verification servers are enabled and approved: `/mcp`.
-6. Scenario runnability is understood: `/scenarios list`.
-7. The budget and credit balance are sufficient: `/budget` and `/plan`.
-8. Concurrency is safe for the target's state and rate limits.
+1. The intended project is active: `/project`.
+2. The intended agent is active: `/agent`.
+3. The intended verified profile is active: `/profile`.
+4. The target URL or command points at test or staging. Review the hook scripts that implement the actual transport.
+5. Required fixtures and reset behavior are ready.
+6. Required MCP verification servers are enabled and approved: `/mcp`.
+7. Scenario runnability is understood: `/scenarios list`.
+8. The credit balance is sufficient: `/plan`.
+9. Concurrency is safe for the target's state and rate limits.
+
+Sync the reviewed project with <code>/sync</code> before a normal timeline run. Use <code>--test</code> only when you intentionally want a local experiment that will not appear in the hosted history.
 
 ## Run the Runnable Suite
+
+<VerifiedTag value="Verified" />
 
 ```text
 /run
@@ -213,11 +128,13 @@ Without `--only`, a run selects at most two scenarios per attack pattern. The ot
 
 A partially observable scenario still runs when it can establish useful evidence. Individual criteria that cannot be checked become **Unable to Verify**.
 
-The default concurrency is `3`.
+The default concurrency is `1` unless the profile or plan selects another value. An explicit `--concurrency` accepts 1–8 and overrides that choice.
 
 ## Select Scenarios Precisely
 
 Run by ID:
+
+<VerifiedTag value="Verified" />
 
 ```text
 /run --only SC-004,SC-011
@@ -225,11 +142,15 @@ Run by ID:
 
 Run by class:
 
+<VerifiedTag value="Verified" />
+
 ```text
 /run --class adversarial
 ```
 
 Run by category:
+
+<VerifiedTag value="Verified" />
 
 ```text
 /run --category happy_path,prompt_injection
@@ -237,17 +158,23 @@ Run by category:
 
 Run by tag:
 
+<VerifiedTag value="Verified" />
+
 ```text
 /run --tag billing,refund
 ```
 
 Selectors combine by narrowing. This command first keeps adversarial scenarios, then keeps those tagged `refund`:
 
+<VerifiedTag value="Verified" />
+
 ```text
 /run --class adversarial --tag refund
 ```
 
 You can also describe the desired subset after `--`:
+
+<VerifiedTag value="Verified" />
 
 ```text
 /run --class adversarial -- the scenarios about refund approval
@@ -258,6 +185,8 @@ Natural-language selection uses a model to choose from the already filtered list
 If no scenario matches, Rook prints the classes, categories, and tags that actually exist instead of running the full suite.
 
 ## Choose Concurrency
+
+<VerifiedTag value="Verified" />
 
 ```text
 /run --concurrency 1
@@ -276,34 +205,47 @@ Use higher concurrency only when the target isolates sessions and fixtures. Conc
 
 ## Review the Permission Gate
 
-Rook shows the exact target and whether discovery found write-capable tools.
+First review the run plan. This actual [quickstart](/support/docs/agent-assurance-quickstart/) capture selects one scenario, excludes the other, and waits for a decision:
 
-<img loading="lazy" src={require('../assets/images/rook/guides/rook-tui-run-plan.png').default} alt="Rook run permission gate showing the target scenario count and real-write warning" width="2200" height="920" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/rook/guides/rook-tui-run-plan.png').default} alt="Rook waiting for approval of a one-scenario run plan, with the excluded scenario and proceed, discard, and change choices" width="2200" height="920" className="doc_img"/>
+
+Use the arrow keys and Enter to choose **proceed**, **discard**, or **change**. Check the active project, agent, and profile in the footer. A selected plan does not prove that the endpoint is safe: inspect the profile and its scripts first. The plan is not a fixed credit quote.
+
+Rook may also ask to approve individual tools or target invocations. Read the exact operation and target in each permission prompt.
 
 The answers mean:
 
 | Answer | Effect |
 |---|---|
 | `yes` | Allow this exact operation once. |
-| `always` | Store a grant for this tool and target in this project. |
+| `always` | Read its scope hint. For a model-chosen operation it lasts for this run without a disk grant; a persistent choice for a human-requested action can store a project grant. |
 | `never` | Store a denial for this tool and target in this project. |
 | `no` | Decline without storing a decision. |
 
 Deny rules override allow rules, and more specific rules win. Permission state is stored globally under a per-project section, so a repository cannot grant itself permission.
 
-## Run Without a Narrative
+## Follow Run Progress
 
-The run-level narrative summarizes patterns after all scenario verdicts are available. Skip that model call when CI needs only the structured evidence and deterministic totals:
+After approval, each active scenario shows its current phase. This is an actual `SC-002` execution against the public triage fixture, captured while Rook was judging the response and recorded hook evidence:
+
+<img loading="lazy" src={require('../assets/images/rook/guides/rook-tui-run-progress.png').default} alt="Rook's interactive run progress with SC-002 in judging, evidence reads, a completion counter, and active project and profile" width="2200" height="1160" className="doc_img"/>
+
+`0/1` means the scenario has not finished; it does not mean it failed. Wait for completion, then enter `/report` to inspect pass, fail, unverifiable, and unjudged counts. See [results and evidence](/support/docs/agent-assurance-results-and-evidence/#print-or-export-a-report) for the completed report from this demo.
+
+## Run Selected Phases
 
 ```text
-/run --no-narrative
+/run --phases prepare,open,execute,close
+/run --run <run-id> --phases collect,judge
 ```
 
-The headless equivalent is:
+The second command continues the same run after delayed evidence is ready. <code>--resume</code> instead creates a new run and carries compatible completed work forward. Rook owns judging; the other phases run your profile hooks.
 
 See [phases and hooks](/support/docs/rook-profiles-and-hooks/#lifecycle) for prerequisites and state. The old <code>--no-narrative</code> option is no longer available.
 
 ## Request Root-Cause Analysis
+
+<VerifiedTag value="Verified" />
 
 ```text
 /run --rca
@@ -311,8 +253,10 @@ See [phases and hooks](/support/docs/rook-profiles-and-hooks/#lifecycle) for pre
 
 Rook clusters related failures first, then investigates each cause using the verdicts, scenario definition, feature, and read-only access to source. It writes remedies under:
 
+<VerifiedTag value="Verified" />
+
 ```text
-.testmuai/rook/agents/<agent-id>/runs/<run-id>/remedies/
+.testmuai/rook/projects/<project-id>/agents/<agent-id>/runs/<run-id>/remedies/
 ```
 
 RCA is off by default. It consumes additional credits, and its cost depends on the number of distinct failure clusters. A remedy is an evidence-grounded hypothesis, not a verified patch.
@@ -397,14 +341,36 @@ Otherwise, keep these cases documented but exclude them from release-gating runs
 - Disable a required server and confirm the scenario names the missing capability.
 - Attempt a write when only read behavior is expected.
 
-## Headless Run Limitations
+## Headless Runs and Hosted Results
 
-Current headless syntax is:
+The same selectors and lifecycle controls are available in a shell:
 
 ```bash
-rook run [--entity <id>] [--only <ids>] [--no-narrative] [--verbose] [--json]
+rook run --only SC-001 --profile staging --concurrency 1 --name smoke --json
 ```
 
-Interactive-only run controls currently include class, category, tag, concurrency, free-form selection, and `--rca`.
+Select the project and agent before running; there is no <code>--entity</code> flag. Supply reviewed permissions when running unattended. See [CI/CD](/support/docs/agent-assurance-ci-cd/) for authentication, JSON, and completion checks.
 
-For deterministic CI selection, resolve IDs before invoking `rook run --only`.
+### Review the Run Locally or Online
+
+| Local UI | Hosted Web UI |
+|---|---|
+| `rook ui --local` | `rook ui` |
+| Open agent → runs → run → scenario. | Open project → agent → Runs → run → scenario. |
+| Inspect on-disk results, including local `--test` runs and evidence awaiting upload. | Inspect uploaded normal runs and share links with authorized teammates. |
+
+Neither command completes unfinished phases or retries the target. Keep the local serving process running. For the hosted UI, check the same account and `ROOK_ENV`; use `rook runs sync` for outstanding normal-run uploads. Do not expect a `--test` run to appear there.
+
+See [both UI walkthroughs](/support/docs/rook-web-ui/#choose-your-ui) and [criterion evidence in each interface](/support/docs/agent-assurance-results-and-evidence/#inspect-criterion-evidence).
+
+#### Local UI: Check the Completed Run {#local-ui-example}
+
+Open the agent's **Runs** tab and select the execution. The saved CommerceCare demo has mixed passing, failed, and unverifiable results; **completed** does not mean every scenario passed. Read the narrative, open **View plan**, and click a scenario for criterion evidence. The profile name opens the run's saved configuration; the adjacent link opens the current profile. See the [local walkthrough and rollout note](/support/docs/rook-web-ui/#local-runs) for layout differences.
+
+<img loading="lazy" src={require('../assets/images/rook/rook-local-run.png').default} alt="Local CommerceCare run showing mixed scenario outcomes, narrative, View plan, and profile metadata" width="1440" height="900" className="doc_img"/>
+
+#### Hosted Web UI: Review the Shared Execution {#hosted-ui-example}
+
+Open **project → agent → Runs → run**. Check completion, agent version, invocation profile, and the scenario row. **View plan** explains selection and exclusions; opening the scenario shows the evidence for this execution.
+
+<img loading="lazy" src={require('../assets/images/rook/rook-web-run.png').default} alt="Hosted completed run with one passed scenario, profile information, and a link to the scenario result" width="1440" height="900" className="doc_img"/>

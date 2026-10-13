@@ -17,6 +17,7 @@ canonical: https://www.testmuai.com/support/docs/agent-assurance-ci-cd/
 ---
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -83,78 +84,13 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         "https://www.youtube.com/@TestMuAI"
       ]
     },
-    "hasPart": [
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "Set ROOK_HOME to a protected runner directory",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "Shell",
-        "text": "export ROOK_HOME=\"$RUNNER_TEMP/rook-home\""
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "Project evidence continues to be written under",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "text",
-        "text": "$GITHUB_WORKSPACE/.testmuai/rook/"
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "Verify the Environment",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "Shell",
-        "text": "rook --version\nrook doctor\nrook auth status\nrook plan --json"
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "Use explicit agent and scenario IDs in CI",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "Shell",
-        "text": "rook agent list --json\nrook profile use staging --entity refund-desk\nrook run \\\n  --entity refund-desk \\\n  --only SC-001,SC-004,SC-014 \\\n  --no-narrative \\\n  --json"
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "Pass exact, temporary allowances that were reviewed with the workflow",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "Shell",
-        "text": "rook run \\\n  --entity refund-desk \\\n  --only SC-001,SC-004 \\\n  --allow 'run(https://refund-agent.staging.example.com/v1/chat)' \\\n  --json"
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "Process one object per line rather than parsing human prose",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "Shell",
-        "text": "rook run --entity refund-desk --only SC-001 --json > rook-events.ndjson"
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "Use --verbose when diagnostic tool activity and cost events are needed",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "Shell",
-        "text": "rook run --entity refund-desk --only SC-001 --verbose --json"
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "Example GitHub Actions Job",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "YAML",
-        "text": "name: Rook agent assurance\n\non:\n  pull_request:\n\njobs:\n  rook:\n    runs-on: self-hosted\n    permissions:\n      contents: read\n    env:\n      ROOK_HOME: /var/lib/rook-ci/home\n      ROOK_AGENT_TOKEN: ${{ secrets.ROOK_AGENT_TOKEN }}\n    steps:\n      - uses: actions/checkout@v4\n\n      - name: Install pinned public Rook release\n        run: |\n          curl -fsSL https://raw.githubusercontent.com/LambdaTest/rook/main/install.sh \\\n            | bash -s -- --version 0.1.1 --dir \"$RUNNER_TEMP/rook-bin\"\n          echo \"$RUNNER_TEMP/rook-bin\" >> \"$GITHUB_PATH\"\n\n      - name: Verify Rook environment\n        run: |\n          rook --version\n          rook doctor\n          rook auth status\n\n      - name: Run release-gate scenarios\n        run: |\n          rook profile use staging --entity refund-desk\n          rook run \\\n            --entity refund-desk \\\n            --only SC-001,SC-004,SC-014 \\\n            --no-narrative \\\n            --allow 'run(https://refund-agent.staging.example.com/v1/chat)' \\\n            --json | tee rook-events.ndjson\n\n      - name: Print report\n        if: always()\n        run: rook report --entity refund-desk\n\n      - name: Upload evidence\n        if: always()\n        uses: actions/upload-artifact@v4\n        with:\n          name: rook-evidence\n          path: .testmuai/rook/agents/refund-desk/runs/"
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "Move generation into a separate scheduled or manually approved workflow",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "Shell",
-        "text": "rook explore . --force --all --json\nrook generate --entity refund-desk --total 30 --json"
-      }
-    ],
-    "dateModified": "2026-09-07T12:29:55+05:30"
+    "dateModified": "2026-09-11"
   }) }}
 />
 
 # Run Agent Assurance in CI/CD
 
-Rook's headless commands use the same discovery, generation, profile, permission, execution, judging, and evidence paths as the interactive TUI. Use them to build a release gate after you have proved the workflow interactively against the same agent and profile.
+Use CI only after the same agent, profile, and scenarios work locally. Commit reviewed definitions and hook scripts; keep model-driven discovery and generation separate from the release gate.
 
 This recipe targets **Rook 0.1.11**. It runs an explicit suite, preserves evidence, and checks completion and verdict counts instead of interpreting a successful CLI process as a successful agent test.
 
@@ -238,18 +174,16 @@ The [public skill's general CI recipe](https://github.com/LambdaTest/rook/blob/m
 
 ## Prepare a Reviewed Suite
 
-1. Run `/explore`, `/generate`, `/profile add`, and a one-scenario `/run` locally.
-2. Review the generated `.testmuai/rook/` agent records, scenarios, and profile.
-3. Replace all literal credentials with `${VAR}` references.
-4. Commit the project Rook files that define the suite and profile.
-5. Keep global credentials, environment values, permission grants, and sessions out of the repository.
-6. Seed test fixtures and verify the profile reset command.
+1. Select the correct environment, project, and agent.
+2. Explore, author a profile, generate scenarios, and prove one safe run locally.
+3. Review the profile hooks and every selected scenario, including their live side effects.
+4. Commit the project definition, scenarios, profiles, and scripts without secrets.
+5. Provide isolated fixtures and a reachable staging target on the runner.
+6. Sync the reviewed tree before a normal timeline run.
 
-> **Authentication in unattended environments:** The current pre-alpha release uses the interactive LambdaTest login flow and exposes no dedicated service-token login flag. Use a protected persistent runner with a pre-authenticated `ROOK_HOME`, or follow your organization's approved secret provisioning process. Never commit or upload a personal Rook credential store as a repository artifact.
+Do not run untrusted pull-request hook scripts with repository secrets. Use a reviewed branch and a protected CI environment. Restrict access to self-hosted runners.
 
-## Isolate Global State
-
-Set `ROOK_HOME` to a protected runner directory:
+## Install a Pinned Public Release
 
 ```bash
 curl -fsSL https://raw.githubusercontent.com/LambdaTest/rook/main/install.sh \
@@ -269,9 +203,11 @@ Provide <code>LT_USERNAME</code> and <code>LT_ACCESS_KEY</code> from your CI sec
 ```bash
 export ROOK_ENV=prod
 export ROOK_HOME="$RUNNER_TEMP/rook-home"
+rook whoami
+rook doctor
 ```
 
-For a persistent self-hosted runner, choose a stable protected path so token renewal is retained. Ensure only the runner identity can read it.
+Use credentials valid for the selected environment. Public installations default to production unless <code>ROOK_ENV</code> is set. Target-agent credentials, such as <code>AGENT_TOKEN</code>, are separate from Rook account credentials.
 
 The LT environment pair takes precedence over stored browser login, even with a different <code>ROOK_HOME</code>. A missing half of the pair is an error. Never print either value or pass literal secrets in logged command arguments.
 
@@ -357,156 +293,43 @@ Do not apply this full-suite gate to a partial-phase run. Finish collection and 
 Always retain <code>rook-run.json</code> and the relevant run directory, including when the job fails:
 
 ```text
-$GITHUB_WORKSPACE/.testmuai/rook/
+.testmuai/rook/projects/<project-id>/agents/<agent-id>/runs/
 ```
 
-## Verify the Environment
+In GitHub Actions, put evidence upload in a step with <code>if: always()</code>; see the [workflow syntax reference](https://docs.github.com/en/actions/reference/workflows-and-actions/workflow-syntax). Do not upload <code>ROOK_HOME</code>, shell environments, or credential files.
+
+To retry outstanding result uploads and open the hosted view:
 
 ```bash
-rook --version
-rook doctor
-rook auth status
-rook plan --json
+rook runs sync
+rook ui --no-open
 ```
 
-An unreachable controller does not mean a token is invalid. When `rook auth status` cannot reach the controller, it can return success with a warning. The next real operation still fails if connectivity is unavailable.
+Share the run URL with authorized teammates. Open shared projects at [rook.lambdatest.com/projects](https://rook.lambdatest.com/projects). See [Web UI troubleshooting](/support/docs/rook-web-ui/#troubleshooting) if counts or results differ from the local report.
 
-## Run a Deterministic Suite
+For local investigation, restore the approved workspace evidence with its project/agent directory structure intact, select that project, and run `rook ui --local` on your workstation. Open agent → runs → run → scenario to inspect criteria and files. A loopback URL printed on a CI runner is not a report your teammates can open; do not expose that server publicly. Keep the serving process running only during review.
 
-Use explicit agent and scenario IDs in CI:
+The [local and hosted UI guide](/support/docs/rook-web-ui/#choose-your-ui) explains both paths. Neither interface replaces the JSON completion and verdict checks used by the CI gate.
 
-```bash
-rook agent list --json
-rook profile use staging --entity refund-desk
-rook run \
-  --entity refund-desk \
-  --only SC-001,SC-004,SC-014 \
-  --no-narrative \
-  --json
-```
+### Local UI: Investigate Retained Evidence {#local-ui-example}
 
-Headless `rook run` currently does not expose class, category, tag, concurrency, free-form selection, or RCA flags. Resolve and review the intended IDs in the committed suite.
+Open a restored run's scenario and choose **Request**, **Response**, **Verdict**, or **Artefacts** in **Evidence**. Keep the original run directory: hook records, snapshots, and nested files are not all listed in the drawer. This screenshot uses saved CommerceCare demo evidence, not a CI execution. See the [earlier local layout](/support/docs/rook-web-ui/#earlier-local-ui) if your CLI predates the redesigned viewer.
 
-## Authorize Required Operations
+<img loading="lazy" src={require('../assets/images/rook/rook-local-evidence.png').default} alt="Local Artefacts drawer illustrating review of retained collect.json and judge-working.json evidence" width="1440" height="900" className="doc_img"/>
 
-An unattended command cannot answer a permission prompt. Pass exact, temporary allowances that were reviewed with the workflow:
+### Hosted Web UI: Share the Recorded Outcome {#hosted-ui-example}
 
-```bash
-rook run \
-  --entity refund-desk \
-  --only SC-001,SC-004 \
-  --allow 'run(https://refund-agent.staging.example.com/v1/chat)' \
-  --json
-```
+Open an uploaded run to verify its completion state, profile, and scenario outcomes before sharing the link. This separate hosted example shows the triage smoke run. For CI-produced runs, use their own recorded IDs and pinned definitions; do not infer success from a job's exit code alone.
 
-The allowance applies only to that process. Repeat `--allow` for each exact rule.
-
-Avoid broad shell or MCP allowances. `--allow` adds authority; it does not remove a broader permission already stored in the selected `ROOK_HOME`.
-
-## Consume JSON Output
-
-`--json` emits newline-delimited JSON events. Process one object per line rather than parsing human prose:
-
-```bash
-rook run --entity refund-desk --only SC-001 --json > rook-events.ndjson
-```
-
-Use `--verbose` when diagnostic tool activity and cost events are needed:
-
-```bash
-rook run --entity refund-desk --only SC-001 --verbose --json
-```
-
-Do not assume every command returns one aggregate JSON object. Preserve the NDJSON stream as a job artifact for debugging.
-
-## Handle Exit Codes
-
-| Exit code | Meaning | Recommended pipeline action |
-|---|---|---|
-| `0` | No agent defect was recorded in the verdicts that were produced | Check run completion, coverage, and Unable-to-Verify output before continuing |
-| `1` | Rook could not test the agent or the requested state was not reached | Fail as infrastructure or harness error |
-| `2` | Agent failure or adversarial compromise was observed | Fail as an agent-quality finding |
-| `3` | Authentication is required or no longer valid | Stop and repair runner authentication |
-| `4` | Session budget or credits were exhausted | Stop, review scope, and adjust approved budget or credits |
-
-An observed agent failure outranks an invocation error if both occur in one run.
-
-> **Exit code `0` does not prove suite completion:** In the current pre-alpha release, `rook run` and `rook report` derive their exit status from recorded verdicts. An interrupted or partial run can therefore exit `0` when its completed scenarios contain no recorded defect. A release gate must also inspect the saved `run.yaml`: require a completed status, review the stop reason, and compare selected scenario counts against completed verdict counts. Fail closed when the requested suite did not finish.
-
-## Example GitHub Actions Job
-
-This example assumes a protected self-hosted runner already has an authenticated Rook home and can reach the staging agent and controller.
-
-```yaml
-name: Rook agent assurance
-
-on:
-  pull_request:
-
-jobs:
-  rook:
-    runs-on: self-hosted
-    permissions:
-      contents: read
-    env:
-      ROOK_HOME: /var/lib/rook-ci/home
-      ROOK_AGENT_TOKEN: ${{ secrets.ROOK_AGENT_TOKEN }}
-    steps:
-      - uses: actions/checkout@v4
-
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 20
-
-      - name: Install pinned Rook build
-        env:
-          ROOK_VERSION: <reviewed-commit-sha>
-        run: |
-          curl -fsSL https://raw.githubusercontent.com/LambdaTest/rook/main/install.sh | bash
-
-      - name: Verify Rook environment
-        run: |
-          rook --version
-          rook doctor
-          rook auth status
-
-      - name: Run release-gate scenarios
-        run: |
-          rook profile use staging --entity refund-desk
-          rook run \
-            --entity refund-desk \
-            --only SC-001,SC-004,SC-014 \
-            --no-narrative \
-            --allow 'run(https://refund-agent.staging.example.com/v1/chat)' \
-            --json | tee rook-events.ndjson
-
-      - name: Print report
-        if: always()
-        run: rook report --entity refund-desk
-
-      - name: Upload evidence
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: rook-evidence
-          path: .testmuai/rook/agents/refund-desk/runs/
-```
-
-**Pin Rook by commit SHA** and review updates before changing it. Scope the repository token to read access for the private release repository.
+<img loading="lazy" src={require('../assets/images/rook/rook-web-run.png').default} alt="Hosted smoke-run review showing completion, invocation profile, and its recorded scenario outcome" width="1440" height="900" className="doc_img"/>
 
 ## Separate Generation From the Gate
 
-Scenario generation uses models and can change the suite. A stable release gate should run reviewed, committed scenario IDs. Move generation into a separate scheduled or manually approved workflow:
+Run generation in a separately approved workflow:
 
 ```bash
-rook explore . --force --all --json
-rook generate --entity refund-desk --total 30 --json
+rook explore . --force -- "focus on changed refund approval rules"
+rook generate --total 10 --class functional,adversarial -- "cover the changed rules"
 ```
 
-Review the resulting scenario diff before it changes the required gate.
-
-## Preserve Evidence on Failure
-
-Upload the NDJSON stream and the run directory with `if: always()`. A failed invocation still records the request, and a budget or controller stop preserves completed scenarios.
-
-**Before granting broad access to CI logs or artifacts, review them for secrets and personal data.**
+Review the resulting diff, test the profile, and sync before changing the required gate. Generation is model-backed and can spend credits; it is not a deterministic assertion step.

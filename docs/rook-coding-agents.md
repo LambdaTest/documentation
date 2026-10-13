@@ -2,7 +2,7 @@
 id: rook-coding-agents
 title: Use Rook with Coding Agents
 sidebar_label: Choose a Coding Agent
-description: Choose a Rook skill setup guide for coding CLIs, VS Code, or Windsurf, using the public Rook skill bundle.
+description: Choose a Rook skill setup guide for coding CLIs, VS Code, Windsurf, or Antigravity IDE, using the public Rook skill bundle.
 toc_max_heading_level: 2
 hide_title: false
 slug: rook-coding-agents/
@@ -26,8 +26,10 @@ Each page includes its own installation, discovery check, first prompt, troubles
 | [GitHub Copilot CLI](/support/docs/rook-copilot-cli/) | Public skill in a project directory | `.github/skills/rook/` |
 | [OpenCode](/support/docs/rook-opencode/) | Public skill in a project directory | `.opencode/skills/rook/` |
 | [Cursor CLI](/support/docs/rook-cursor-cli/) | Public skill in a project directory | `.cursor/skills/rook/` |
+| [Antigravity CLI](/support/docs/rook-antigravity-cli/) | Public skill in a project directory | `.agents/skills/rook/` |
 | [VS Code with GitHub Copilot](/support/docs/rook-vscode/) | Public skill in a project directory | `.github/skills/rook/` |
 | [Windsurf Cascade](/support/docs/rook-windsurf/) | Public skill in a project directory | `.windsurf/skills/rook/` |
+| [Antigravity IDE](/support/docs/rook-antigravity-ide/) | Public skill in a project directory | `.agents/skills/rook/` |
 
 The first three are explicit targets of the [public Rook skill installer](https://github.com/LambdaTest/rook/tree/main/skill-installer). The other guides use the clients' documented Agent Skills compatibility; they do not add new installer flags or imply a live certification of every client/version. Their pages link the corresponding vendor documentation.
 
@@ -45,13 +47,9 @@ On Windows, complete [Rook's native setup](/support/docs/rook-installation/#wind
 
 For a team-scoped installation or another compatible client, copy the complete `skill-installer/skills` bundle from [LambdaTest/rook](https://github.com/LambdaTest/rook/tree/main/skill-installer/skills), including `references/`. The individual guides provide non-overwriting, revision-pinned examples. Do not substitute a similarly named skill from an unrelated repository.
 
-## What a Useful First Session Looks Like
+## Test Your Agent Through Prompts {#test-your-agent-through-a-prompt}
 
-1. The assistant loads the public skill and checks the installed CLI and workspace state.
-2. It identifies the target agent, authentication needs, invocation profile, hooks, and possible writes.
-3. You approve a small, explicitly scoped test and its expected cost.
-4. It records the run ID and presents Pass, Fail, and Unable to Verify with evidence—not just a successful shell exit.
-5. You inspect the same run in the [local or hosted UI](/support/docs/rook-web-ui/).
+After installing the skill in your chosen client, **type these requests in your coding assistant's chat, not in a terminal**. You describe the goal; the assistant uses the Rook skill to choose and execute the appropriate CLI operations. You do not need to translate each request into a Rook command.
 
 Work through the steps in the same conversation. Replace the example refund agent, policy, profile, and IDs with yours. If a step is already complete, ask the assistant to inspect and reuse it.
 
