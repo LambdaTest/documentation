@@ -36,7 +36,7 @@ Run this Bash block from your repository's root in the integrated terminal:
   fi
   rook_skill_checkout=$(mktemp -d)
   git clone --filter=blob:none https://github.com/LambdaTest/rook.git "$rook_skill_checkout/rook"
-  git -C "$rook_skill_checkout/rook" checkout --detach f199cb99c589b565e48a3a29781475daee907533
+  git -C "$rook_skill_checkout/rook" checkout --detach 439480f2ef3084fcbc0997a59a70f5f8adcd4ad8
   mkdir -p .agents/skills
   cp -R "$rook_skill_checkout/rook/skill-installer/skills" .agents/skills/rook
 )

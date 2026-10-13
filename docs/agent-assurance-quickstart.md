@@ -98,7 +98,7 @@ import { BRAND_URL } from '@site/src/component/BrandName';
         "https://www.youtube.com/@TestMuAI"
       ]
     },
-    "dateModified": "2026-09-28"
+    "dateModified": "2026-10-13"
   }) }}
 />
 
@@ -140,7 +140,7 @@ npm install -g @testmuai/rook
 PowerShell on Windows x64:
 
 ```powershell
-npm.cmd install -g @testmuai/rook@0.1.11
+npm.cmd install -g @testmuai/rook
 ```
 
 Then check your installation:
@@ -208,7 +208,7 @@ Invoke-RestMethod -Uri 'http://127.0.0.1:19110/v1/triage' -Method Post -ContentT
 
 The response should say <code>T-1043 triaged as S1 and assigned to platform.</code> and include the recorded tool steps.
 
-### 2. Open the TUI, Sign In, and Explore {#open-the-tui-and-explore}
+### 2. Open the TUI, sign in, and explore {#open-the-tui-and-explore}
 
 Open the sample folder in your Rook terminal:
 

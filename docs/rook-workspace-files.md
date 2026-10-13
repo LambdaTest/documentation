@@ -112,7 +112,7 @@ import { BRAND_URL } from '@site/src/component/BrandName';
         "text": "*.log\n.env\ncache/\nprojects/*/jobs/\nprojects/*/agents/*/state.json"
       }
     ],
-    "dateModified": "2026-09-28"
+    "dateModified": "2026-10-13"
   }) }}
 />
 

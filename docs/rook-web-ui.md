@@ -70,10 +70,6 @@ The five local agent tabs are **Summary**, **Profiles**, **Features**, **Scenari
 
 Search by agent name or ID, then click the agent card. It shows feature/scenario/run counts and available last-result context. Clear a search before concluding that the workspace has no agents. These counts describe the saved workspace, not coverage of every possible behavior.
 
-:::note Coming soon
-Searching local agents by description is coming soon. For now, use the agent's name or ID.
-:::
-
 ### Local Agent Workspace {#local-agent}
 
 <img loading="lazy" src={require('../assets/images/rook/rook-local-agent.png').default} alt="Local CommerceCare Summary with five navigation tabs, discovery counts, description, and source context" width="1440" height="900" className="doc_img"/>

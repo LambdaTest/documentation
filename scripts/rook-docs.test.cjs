@@ -34,8 +34,9 @@ test('public installation examples use the current Homebrew tap and include nati
     const bash = [...doc.matchAll(/```bash\n([\s\S]*?)\n```/g)].map(m => m[1]).join('\n');
     assert.match(bash, /brew install lambdatest\/rook\/rook/);
     assert.doesNotMatch(bash, /brew tap LambdaTest\/rook https:\/\/github\.com\/LambdaTest\/rook\.git/);
-    assert.match(doc, /npm\.cmd install -g @testmuai\/rook@0\.1\.11/);
+    assert.match(doc, /npm\.cmd install -g @testmuai\/rook\b/);
   }
+  assert.match(install, /npm\.cmd install -g @testmuai\/rook@0\.1\.11/);
   assert.match(install, /\{#windows\}/);
   assert.match(install, /\{#windows-wsl\}/);
   assert.match(install, /Get-Command rook\.cmd/);
@@ -424,7 +425,7 @@ case "$1" in
   -C)
     test "$3" = checkout
     test "$4" = --detach
-    test "$5" = f199cb99c589b565e48a3a29781475daee907533
+    test "$5" = 439480f2ef3084fcbc0997a59a70f5f8adcd4ad8
     ;;
   *) exit 99 ;;
 esac

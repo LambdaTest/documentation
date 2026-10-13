@@ -96,7 +96,7 @@ import { BRAND_URL } from '@site/src/component/BrandName';
         "https://www.youtube.com/@TestMuAI"
       ]
     },
-    "dateModified": "2026-09-25"
+    "dateModified": "2026-10-13"
   }) }}
 />
 
@@ -1288,7 +1288,7 @@ Active project and agent selections, profiles, scenarios, runs, credentials, and
 
 Only use a flag where `rook help <command>` lists it.
 
-The <code>plan</code>, <code>status</code>, <code>run</code>, and normal <code>report</code> commands have structured output. Commands such as <code>explore</code>, <code>generate</code>, <code>sync</code>, profile operations, paid <code>report --rca</code>, and <code>update</code> can emit text even when they accept <code>--json</code>. Check the actual stdout before parsing it, then inspect the relevant saved files or make a separate structured read.
+With <code>--json</code>, <code>plan</code>, <code>status</code>, <code>run</code>, a normal <code>report</code>, <code>scenarios list</code>, <code>project --workspace</code>, <code>mcp</code>, and <code>ask</code> write one JSON document to stdout. Commands such as <code>explore</code>, <code>generate</code>, <code>sync</code>, profile operations, paid <code>report --rca</code>, and <code>update</code> can emit text even when they accept <code>--json</code>. Check the actual stdout before parsing it, then inspect the relevant saved files or make a separate structured read.
 
 Keep stdout and stderr separate when saving JSON: do not use <code>2>&amp;1</code> for a machine-readable result file. Refusals and parser errors can leave stdout empty. A failure document may contain <code>error</code> or <code>reason</code>; <code>ok: true</code> can accompany a discarded run, so it is not sufficient to establish success. See the [public headless contract](https://github.com/LambdaTest/rook/blob/main/skill-installer/skills/references/headless-contract.md).
 
