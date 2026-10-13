@@ -144,7 +144,7 @@ To insert a reference:
 
 A few things to keep in mind:
 
-- References you paste or type in full are recognized the same way as the ones you pick from the list.
+- Add environment variables by typing `{{` and selecting them from the list. A pasted environment variable reference is not recognized.
 - A reference behaves as a single unit. Deleting it removes the whole reference.
 - References are not recognized in test case titles, descriptions, or preconditions, or inside inline code. There, the characters stay as ordinary text.
 - The secrets list shows your organization's secrets and your own user secrets. Other users' secrets are never listed, and secret values are never shown.
