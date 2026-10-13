@@ -19,6 +19,10 @@ You install only the rook CLI. You do not need the source repository, a dedicate
 **Pre-alpha**
 Commands and stored file formats can change. Test against a disposable or staging target and review the target and write warning before every run.
 
+Launch `rook` from your agent workspace to open the interactive terminal UI (TUI). Enter slash commands such as `/agent`, `/profile`, and `/report` at its prompt; commands beginning with `rook` belong in your regular shell.
+
+This TUI capture shows a new session before sign-in and before an agent has been explored. Sign in with `/login`, then select a project with the arrow keys and Enter. The [quickstart](/support/docs/agent-assurance-quickstart/) shows the actual exploration, profile authoring, generation, approval, execution, and report screens in sequence.
+
 ## Agent Assurance and Agent Testing {#conversation-testing-and-autonomous-testing}
 
 TestMu AI has two agent product lines. They test different things, and they trust different evidence.

@@ -12,7 +12,9 @@ Rook reports what the agent did separately from what the test harness could obse
 | **Fail** | One or more criteria were observed to fail. |
 | **Unable to Verify** | Rook could not establish the outcome. This is excluded from the pass-rate denominator and is not an agent defect. |
 
-The browser may present a partial-looking scenario summary when some criteria pass or fail while others remain unverifiable. Open the scenario to see the authoritative per-criterion statuses.
+For adversarial scenarios, a grounded partial compromise counts as **Fail**. Older runs that stored a **Partial** verdict display it as **Unable to Verify**.
+
+A skipped, unattempted, or unjudged scenario is not a pass. Partial-phase and interrupted runs need a completion check before their results can serve as a gate.
 
 ## Pass Rate Versus Coverage
 
@@ -84,42 +86,53 @@ Do not treat a fluent narrative as evidence by itself. Look for one of the follo
 ## Files Written for a Run
 
 ```text
-.testmuai/rook/agents/<agent-id>/
-history.jsonl
-history/<scenario-id>.jsonl
-runs/<run-id>/
+.testmuai/rook/projects/<project-id>/agents/<agent-id>/runs/<run-id>/
 run.yaml
-scenarios.yaml
-analysis.yaml
-report.evidence/
-remedies/
+agent.yaml
+features.yaml
+profile.yaml
+report.yaml
+scenario-inventory.yaml
 scenarios/<scenario-id>/
+snapshot.yaml
 request.json
 response.json
+hooks.json
 verdict.yaml
-artifacts/
+evidence/
 ```
 
-- `run.yaml` records the selected profile, concurrency, state, totals, skipped scenarios, and stop reason.
-- `scenarios.yaml` is the immutable snapshot used by that run.
-- `analysis.yaml` contains computed cross-scenario facts.
-- `report.evidence/` is the sealed evidence pack.
-- `request.json` and `response.json` preserve what was sent and received, including failed invocations.
-- `verdict.yaml` stores each criterion and gap.
-- `artifacts/` contains collected files.
-- `remedies/` exists only when RCA produced failure-cluster reports.
+run.yaml preserves the plan, selected phases, pinned versions, included/skipped scenarios, and upstream IDs. report.yaml stores the summary and totals. Since 0.1.11, scenario-inventory.yaml pins the definition of every scenario the run considered, including those it could not run, and run.yaml records the run's inventory and coverage_gaps. The run summary is computed from the recorded verdicts; writing it does not call a model. Each scenario's snapshot.yaml preserves its definition; hooks.json preserves phase records. Additional artifacts and RCA files depend on the run.
 
 Completed runs read their scenario snapshot, not the current scenario directory. Editing or deleting a live scenario does not rewrite historical evidence.
 
 ## Print a Report in Headless Mode
 
-Print the most recent run:
+Launch `rook` in the workspace containing your saved run. In the interactive TUI, select the correct project and agent, then open the report:
+
+```text
+/project
+/agent
+/report <run-id>
+```
+
+Replace `` with the saved run's ID. `/report` without an ID reads the latest local run. If Rook asks you to sign in, use `/login` and retry the report command. Reading an existing report does not rerun the agent; adding `--rca` can start paid analysis.
+
+This is the completed report from the Rook 0.1.5 [interactive quickstart](/support/docs/agent-assurance-quickstart/), not a help screen:
+
+Read the run ID and name, execution counts, verdicts, and coverage warning together. When the run includes adversarial scenarios, the report adds an **OWASP red-team coverage** table that maps the scenario inventory to OWASP LLM and Agentic entries, and a **Known coverage gaps (unverified)** list. A control with no mapped scenario remains unverified. `100% passed of 1 decided` is one passing case, not complete coverage of the agent. This September 28 terminal run is separate from the saved browser examples above. Use `/help report` for additional output and RCA options.
+
+For shell-based output or automation:
 
 ```bash
 rook report
 ```
 
-Print a specific run:
+Without a run ID, report reads the latest local run. The JSON record contains run_id, name, dir, and report, whose totals include planned, executed, passed, failed, unverifiable, unjudged, and not-run counts. The report can also carry summary_claims, coverage_gaps, and redteam_coverage.
+
+A successful report command means the report was read; it does **not** mean the agent passed. See the [CI gate example](/support/docs/agent-assurance-ci-cd/) for explicit completion and result checks.
+
+## Recover Missing Hosted Results
 
 ```bash
 rook report <run-id> --entity <agent-id>

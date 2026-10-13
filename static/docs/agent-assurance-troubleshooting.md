@@ -2,7 +2,7 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
-Start with diagnostics:
+Start with read-only diagnostics before retrying a run. These CLI checks were reviewed against **public Rook 0.1.11** on October 13, 2026. In PowerShell, use `rook.cmd` if the npm PowerShell shim is blocked.
 
 ```bash
 rook --version
@@ -33,7 +33,26 @@ If you installed a tarball manually, link `rook-/bin/rook` into a directory alre
 
 ### Node.js version error
 
-Rook requires Node.js 20 or newer:
+```bash
+curl -fsSL https://raw.githubusercontent.com/LambdaTest/rook/main/install.sh \
+| bash -s -- --dir "$HOME/bin"
+```
+
+On native Windows, check the npm shim and global prefix:
+
+```powershell
+Get-Command rook.cmd -ErrorAction SilentlyContinue
+npm.cmd prefix -g
+rook.cmd --version
+```
+
+If the shim exists but is not found, add the printed npm prefix to your **user PATH**, then reopen PowerShell. If installation is missing, follow [Windows setup](/support/docs/rook-installation/#windows). A `rook.ps1 cannot be loaded` error does not require weakening the machine's execution policy: use `rook.cmd`. Do not run the Bash installer in native PowerShell; there is no public `install.ps1`.
+
+Keep Rook, Node.js, the checkout, and local target processes in the same environment. A Windows installation and a WSL installation are separate; see [WSL setup](/support/docs/rook-installation/#windows-wsl).
+
+### npm reports a Node.js engine error
+
+Homebrew and shell installations carry a matching Node.js runtime. The npm installation requires npm to run under Node.js 20 or newer (22 for Rook 0.1.6 and earlier):
 
 ```bash
 node --version
@@ -70,6 +89,10 @@ Check `rook doctor`. A network failure is not evidence that the token is invalid
 - Controller availability
 
 If the controller remains unreachable, confirm the network, VPN, or proxy requirements with your Rook administrator.
+
+### `ROOK_ENV` is rejected
+
+An unrecognized ROOK_ENV value stops the command with an error instead of falling back to a default. Unset it, or set ROOK_ENV=prod for the public service.
 
 ### Credits or budget are exhausted
 
@@ -180,10 +203,27 @@ Read the grouped skip reasons, then fix the first execution blocker:
 - Readable response type
 - Conversation mapping
 - Required MCP verifier
+- For attack patterns: fixture seeding, a `collect` hook, or `open` and `close` hooks for a fresh session (see [hooks for red-team scenarios](/support/docs/rook-profiles-and-hooks/#red-team-hooks))
 
-Native attachment, PR-reference, and image-input delivery are not implemented in the current pre-alpha release.
+Rook recognizes text, text+file, url, pr_ref, image, and structured input kinds. Recognition alone does not prove your hook uploads an attachment or sends an image correctly: inspect the saved request and profile capabilities. Unknown input kinds and unsupported conversation setup can still block execution.
 
 Usage reporting, tool-call observation, and filesystem observation normally do not prevent invocation. Their affected criteria become **Unable to Verify**, so improve those evidence sources before treating the result as a complete gate.
+
+### Generated scenarios are marked not executable
+
+A scenario with executable: false was kept so you can see what generation attempted. Its skip_reason starts with coverage gap: (no runnable check was possible), invalid scenario:, or invalid red-team scenario: and names the problem. Fix the profile capability or edit the scenario, then regenerate or rerun.
+
+### Only two scenarios of an attack pattern ran
+
+A run selects at most two scenarios per attack pattern unless you name them with --only. The rest are listed as skipped with the reason pattern &lt;id&gt; already has 2 candidates in this run.
+
+### Sync stops before uploading
+
+rook sync refuses the whole upload when a scenario names a feature its agent does not have, and lists each scenario with its agent and the missing feature. Delete or fix the listed scenario file, or re-run generate, then sync again. Nothing was uploaded.
+
+### The session could not be registered
+
+A command that calls the model controller or opens an upstream job refuses before anything runs when its session could not be registered with the Rook API. Nothing ran and nothing was charged. Check rook doctor, the network, and your sign-in, then retry.
 
 ### Run needs permission in headless mode
 
@@ -250,6 +290,19 @@ Registry enablement and call permission are separate gates. The registry makes t
 ### Server disappeared behind another definition
 
 Run `rook mcp list` and inspect origins. A local, project, or user definition may shadow a discovered server with the same name. The discovered row remains visible and is not overwritten.
+
+## Share a Useful Support Report {#support-report}
+
+Include the CLI version, operating system, installation method, exact command with secrets removed, first error, and whether you are reviewing the local or hosted UI. Include the selected project/agent and run ID only in an authorized support channel.
+
+Use a **session ID**, not a scenario run ID, when locating diagnostic session files:
+
+```bash
+rook doctor --session <session-id>
+rook export logs --out ./rook-diagnostics.zip --session <session-id>
+```
+
+If you do not have a session ID, start with rook export logs --out ./rook-diagnostics.zip. Export creates a local bundle; it does not upload it. Avoid --all-sessions unless support needs the broader scope. A bundled session includes its full transcript: every prompt, tool result, and answer. Tool output can quote environment values. Review the archive for credentials, prompts, target data, paths, and transcripts before sharing. See [diagnostic export options](/support/docs/agent-assurance-command-reference/#export).
 
 ## Running Rook in tmux
 
@@ -318,4 +371,4 @@ No. It proves only what the selected scenarios and available evidence establishe
 
 ### Where is my data stored?
 
-Project evidence is under `/.testmuai/rook/`. Global credentials, settings, variables, and sessions are under `~/.testmuai/rook/`, or the directory selected by `ROOK_HOME`.
+Project evidence is under `/.testmuai/rook/`. Global credentials, settings, variables, and sessions (including each session's `transcript.jsonl`) are under `~/.testmuai/rook/`, or the directory selected by `ROOK_HOME`.

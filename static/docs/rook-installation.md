@@ -4,11 +4,21 @@
 
 Rook is publicly available from the [LambdaTest/rook repository](https://github.com/LambdaTest/rook). Install it with Homebrew, the shell installer, or npm. Use one method per machine so an older executable from another method does not take precedence on `PATH`.
 
+Installation commands run in your normal terminal. After installation, launch `rook` (or `rook.cmd` in PowerShell) **without a subcommand** to open the interactive terminal UI (TUI). Stay in that session for sign-in, project selection, exploration, generation, and testing; you do not need CI/headless mode for the walkthrough.
+
+The latest public release checked on October 13, 2026 is [v0.1.11](https://github.com/LambdaTest/rook/releases/tag/v0.1.11). The public npm package and Homebrew formula also publish 0.1.11. Historical walkthroughs and CI examples can name an older, tested version; do not change a pipeline pin without checking its commands and result handling.
+
+| Your environment | Start here |
+|---|---|
+| macOS or Linux, arm64 or x64 | [Homebrew](#install-with-homebrew), [shell installer](#install-with-the-shell-installer), or [npm](#install-with-npm) |
+| Windows x64 with PowerShell | [Native Windows setup](#windows) using npm |
+| Windows with a Linux-based toolchain | [WSL setup](#windows-wsl) using the Linux installer |
+
 ## Prerequisites
 
 | Requirement | Why |
 |---|---|
-| macOS or Linux on arm64 or x64 | These are the platforms supported by the public Homebrew and shell packages. |
+| A supported platform above | The shell installer supports macOS/Linux; the npm package also supplies a Windows x64 runtime. No Windows ARM64 runtime package is published for 0.1.7. |
 | TestMu AI account | Supplies authentication and credits. You can sign in after installation. |
 | Your agent's dependencies | Rook invokes the target agent as you would. A local command, service, or supporting tool must already be available. |
 
@@ -58,7 +68,7 @@ Pass installer options after `bash -s --`:
 ```bash
 # Install the current production release explicitly.
 curl -fsSL https://raw.githubusercontent.com/LambdaTest/rook/main/install.sh \
-| bash -s -- --version 0.1.1
+| bash -s -- --version 0.1.11
 
 # Link the executable into another writable directory.
 curl -fsSL https://raw.githubusercontent.com/LambdaTest/rook/main/install.sh \
@@ -88,7 +98,87 @@ To upgrade an npm installation:
 npm update -g @testmuai/rook
 ```
 
-The npm package installs the `rook` executable and publishes platform runtime packages with it. If npm reports an engine error, update the Node.js version used to run npm to Node.js 22 or newer.
+The npm package installs the `rook` executable and publishes platform runtime packages with it. If npm reports an engine error, update the Node.js version used to run npm to Node.js 20 or newer (Rook 0.1.7; 0.1.6 and earlier need 22).
+
+### Repair an npm 0.1.1 or 0.1.2 installation
+
+The 0.1.3 release fixes the npm update path. If an older install cannot update normally, use the public registry explicitly:
+
+```bash
+npm install -g @testmuai/rook@0.1.11 \
+--registry=https://registry.npmjs.org \
+--@testmuai:registry=https://registry.npmjs.org
+```
+
+Then run command -v rook and rook --version to make sure another installation is not shadowing it.
+
+## Install on Windows with PowerShell {#windows}
+
+Use **64-bit Windows and x64 Node.js 20 or newer**. Install Node.js with npm from the [official Node.js download page](https://nodejs.org/en/download), then open a new PowerShell terminal. The public Rook npm package includes a matching Windows x64 runtime; Node.js is still needed to run npm and start its command shim.
+
+### Install and verify
+
+```powershell
+node --version
+node -p "process.platform + ' ' + process.arch"
+npm.cmd --version
+npm.cmd install -g @testmuai/rook@0.1.11
+Get-Command rook.cmd
+rook.cmd --version
+```
+
+The platform check should print `win32 x64`, and the pinned install should report `0.1.11`. Use `rook.cmd` in PowerShell throughout this guide. Calling the `.cmd` shim also avoids the “running scripts is disabled” error that can affect npm's `.ps1` shim; you do not need to weaken PowerShell's execution policy.
+
+### Sign in and open your workspace
+
+```powershell
+# Replace this with the repository containing your target agent.
+Set-Location 'C:\work\my-agent'
+$env:ROOK_ENV = 'prod'
+rook.cmd
+```
+
+Inside Rook's TUI, use the same slash commands as on macOS and Linux: `/login`, `/doctor`, then `/project`. The [interactive startup walkthrough](#start-the-interactive-tui) below explains the screen and keyboard controls. Follow the [quickstart](/support/docs/agent-assurance-quickstart/) for exploration through results. Discovery, profile authoring, generation, and runs can spend credits or invoke your target; installation alone does neither.
+
+If sign-in does not open a browser, open the URL printed by Rook on the same machine and keep the command running. To review saved evidence from another terminal in the same workspace:
+
+```powershell
+rook.cmd ui --local --no-open
+```
+
+Open the printed loopback URL and leave that process running. For synchronized team results, use `rook.cmd ui` or [Rook Projects](https://rook.lambdatest.com/projects). Browser sign-in is separate from CLI sign-in.
+
+### PATH, upgrades, and shell differences
+
+If `rook.cmd` is not found, locate npm's global command directory:
+
+```powershell
+$rookNpmPrefix = (npm.cmd prefix -g).Trim()
+Test-Path (Join-Path $rookNpmPrefix 'rook.cmd')
+$env:Path = "$rookNpmPrefix;$env:Path"
+Get-Command rook.cmd
+rook.cmd --version
+```
+
+If `Test-Path` returns `False`, resolve the npm installation error first. The PATH change above applies only to this terminal. For future terminals, add that directory to your **user Path** through Windows Environment Variables and reopen PowerShell. npm places global executables directly in its prefix on Windows, not in a `bin` subdirectory; see [npm's executable locations](https://docs.npmjs.com/cli/v11/configuring-npm/folders/#executables).
+
+Upgrade an npm installation with:
+
+```powershell
+npm.cmd install -g @testmuai/rook@latest
+rook.cmd --version
+```
+
+PowerShell uses `$env:NAME = 'value'`, not Bash's `export NAME=value`. Use `Get-Command rook.cmd -All` to identify conflicting installations. Native Windows stores Rook's home state under your user home at `.testmuai\rook`; workspace records remain inside the repository at `.testmuai\rook`. See [Environment and Secrets](/support/docs/rook-environment-and-secrets/#powershell) for scoped variables and credentials.
+
+**Windows archive is not a native installer**
+Each release includes a `win-x64.tar.gz` archive, but its `bin/rook` launcher is a POSIX shell script, not `rook.exe` or `rook.cmd`. There is no public `install.ps1`. Use the npm installation above for native Windows instead of running `install.sh` in PowerShell or Git Bash.
+
+### Use WSL for a Linux-based agent {#windows-wsl}
+
+If your target depends on Bash, Linux commands, or Linux-only packages, use a Linux distribution in [Windows Subsystem for Linux](https://learn.microsoft.com/en-us/windows/wsl/install). In its Linux terminal, follow the [shell installer](#install-with-the-shell-installer) and run your agent, Rook, and profile hooks in that same environment.
+
+WSL is optional for the native npm setup. Windows and WSL installations have separate runtimes, home directories, credentials, and paths; do not assume signing in or installing dependencies in one configures the other. The CI examples in these docs use Bash/Linux, not native PowerShell.
 
 ## Verify the Installation
 
@@ -105,7 +195,24 @@ cd your-project
 rook
 ```
 
-`rook doctor` checks the CLI version, workspace, production service reachability, identity, authentication, project selection, TTY mode, and local state.
+On Windows PowerShell:
+
+```powershell
+Set-Location 'C:\work\my-agent'
+$env:ROOK_ENV = 'prod'
+rook.cmd
+```
+
+You should see the Rook banner and an interactive prompt or a project chooser, not a command that prints output and exits. This capture shows a new session before sign-in and before an agent has been explored:
+
+1. If prompted to sign in, enter `/login` and complete the browser flow. Return to this same terminal when Rook reports that you are signed in. Browser UI sign-in and CLI sign-in are separate.
+2. At **Projects**, use the arrow keys and Enter to list existing projects or create a new test project. Esc goes back; you can reopen the chooser with `/project`.
+3. Enter `/doctor` to check this interactive session's authentication, services, workspace, and TTY state. Enter `/plan` to check credits before paid work.
+4. Continue with the [first-agent walkthrough](/support/docs/agent-assurance-quickstart/#test-your-first-agent): explore the sample, select its agent, create a profile, generate a small suite, and run one reviewed scenario.
+
+Type `/` to see commands, use Tab for completion, and use `/exit` when finished. Do not paste `rook explore` at the TUI prompt; enter `/explore` there. Shell commands remain useful for scripts, but this first-use workflow stays interactive.
+
+If the TUI looks monochrome, check whether your terminal has `NO_COLOR` set or `FORCE_COLOR=0`. Those settings intentionally disable colors. For this session only, launch with `env -u NO_COLOR -u FORCE_COLOR rook` on macOS/Linux; in PowerShell, remove those two environment variables from the current session before starting `rook.cmd`. Rook's normal theme uses amber and muted text; not every output line is colored.
 
 ## Public Releases and Checksums
 
@@ -116,6 +223,7 @@ rook-<version>-darwin-arm64.tar.gz
 rook-<version>-darwin-x64.tar.gz
 rook-<version>-linux-arm64.tar.gz
 rook-<version>-linux-x64.tar.gz
+rook-<version>-win-x64.tar.gz
 ```
 
 Each archive has a matching `.sha256` file. Do not bypass a checksum mismatch; delete both downloads and fetch them again from the public release.
@@ -129,7 +237,7 @@ Each archive has a matching `.sha256` file. Do not bypass a checksum mismatch; d
 | Unsupported OS or architecture | Use macOS or Linux on arm64 or x64. On Windows, run Rook from WSL. |
 | Release download is reset | Allow GitHub and `release-assets.githubusercontent.com` through the VPN or proxy, then retry. |
 | Checksum verification fails | Delete the archive and checksum file. Download them again; never install an unverified archive. |
-| npm reports an engine mismatch | Run npm with Node.js 22 or newer, then retry the global install. |
+| npm reports an engine mismatch | Run npm with Node.js 20 or newer, then retry the global install. |
 
 If a public install path still fails, [open a Rook issue](https://github.com/LambdaTest/rook/issues/new/choose) with the OS, architecture, install method, and full error output.
 
