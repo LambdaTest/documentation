@@ -140,9 +140,7 @@ To insert a reference:
 2. Keep typing to filter the list by name. To narrow the list to one type, type a prefix such as `{{global.`, `{{secrets.org.`, `{{secrets.user.`, `{{environment.`, or `{{totp.`.
 3. Select a value. The full reference replaces what you typed.
 
-<!-- screenshot: suggestion list shown after typing double curly braces in a manual test case step
-<img loading="lazy" src={require('../assets/images/test-manager/variables/step-suggestions.png').default} alt="Suggestion list of variables and secrets in a manual test case step" className="doc_img"/>
--->
+<img loading="lazy" src={require('../assets/images/test-manager/variables/insert-variable-in-step.png').default} alt="Suggestion list of variables and secrets in a manual test case step" className="doc_img"/>
 
 A few things to keep in mind:
 
@@ -174,9 +172,7 @@ Environment variables can hold a different value in each environment, such as De
 
 When you click **Automate with KaneAI** on a manual test case, choose the environment in the **Environment** field before you start testing. The environment cannot be changed once the session starts. You can also choose the environment before automating from **Create and Automate** and Bulk Automate.
 
-<!-- screenshot: Automate with KaneAI panel with the Environment field set before starting the session
-<img loading="lazy" src={require('../assets/images/test-manager/variables/automate-with-kaneai-environment.png').default} alt="Automate with KaneAI panel with an environment selected before the session starts" className="doc_img"/>
--->
+<img loading="lazy" src={require('../assets/images/test-manager/variables/automate-with-kaneai-panel.png').default} alt="Automate with KaneAI panel with an environment selected before the session starts" className="doc_img"/>
 
 To learn how environment variables behave inside a KaneAI session, including importing modules that use them, see [Select an Environment for an Authoring Session](/support/docs/kane-ai-using-variables/#select-an-environment-for-an-authoring-session).
 
@@ -217,9 +213,7 @@ Open the **Test details** tab of a manual test case to see the values its steps 
 - **Parameters**: the parameters the test case uses. Click **View linked dataset** to open the dataset linked to the test case.
 - **Variables & Secrets**: the variables and secrets the test case uses. Secret values are never shown.
 
-<!-- screenshot: Test details tab of a manual test case listing its Parameters and Variables & Secrets
-<img loading="lazy" src={require('../assets/images/test-manager/variables/test-case-details.png').default} alt="Test details tab of a manual test case listing the parameters, variables, and secrets it uses" className="doc_img"/>
--->
+<img loading="lazy" src={require('../assets/images/test-manager/variables/parameters-and-variables-panel.png').default} alt="Test details tab of a manual test case listing the parameters, variables, and secrets it uses" className="doc_img"/>
 
 When you [compare versions](/support/docs/test-case-versioning/) of a test case, steps show the references only, without values.
 
@@ -244,9 +238,7 @@ To run a manual test case that uses parameters in a manual (non-KaneAI) test run
 
 The run creates **one test instance per dataset row** for each configuration. Test cases without parameters get a single instance. From the test run, you can view the dataset values each instance uses.
 
-<!-- screenshot: Set Dataset panel listing the datasets that match the test case's parameters
-<img loading="lazy" src={require('../assets/images/test-manager/variables/set-dataset.png').default} alt="Selecting a dataset for a manual test case while configuring a test run" className="doc_img"/>
--->
+<img loading="lazy" src={require('../assets/images/test-manager/variables/add-values-through-dataset.png').default} alt="Selecting a dataset for a manual test case while configuring a test run" className="doc_img"/>
 
 If you change the dataset for a test case that already has instances in the run, you're asked to confirm first. Confirming replaces its instances with one per row of the new dataset, and removes the results recorded on the old instances.
 
@@ -259,15 +251,7 @@ When a tester opens a test instance, its steps show the values to use in place o
 - Secrets stay masked. Their values cannot be revealed or copied.
 - Environment, smart, and TOTP variables stay as references. They are filled in only when KaneAI runs the test.
 
-<!-- screenshot: manual test instance whose steps show parameter and variable values in place of references
-<img loading="lazy" src={require('../assets/images/test-manager/variables/instance-step-values.png').default} alt="Manual test instance steps showing the values to use in place of references" className="doc_img"/>
--->
+<img loading="lazy" src={require('../assets/images/test-manager/variables/manual-run-with-variables.png').default} alt="Manual test instance steps showing the values to use in place of references" className="doc_img"/>
 
 Values are fixed when an instance is created. Later changes to the dataset, a parameter's default value, or a global variable do not change existing instances.
 
-## Limitations
-
-- Modules with If-Else or While Loop blocks cannot be added to manual test cases.
-- BDD test cases support references in scenario steps, but not datasets or one instance per data row.
-- Environment, smart, and TOTP variables are not filled in during manual runs.
-- Secret values cannot be revealed or copied during manual execution.
