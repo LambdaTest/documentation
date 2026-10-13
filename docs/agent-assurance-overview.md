@@ -101,7 +101,7 @@ import ThemedImage from '@theme/ThemedImage';
         "https://www.youtube.com/@TestMuAI"
       ]
     },
-    "dateModified": "2026-09-28"
+    "dateModified": "2026-10-13"
   }) }}
 />
 
@@ -129,9 +129,9 @@ Commands and stored file formats can change. Test against a disposable or stagin
 
 Launch `rook` from your agent workspace to open the interactive terminal UI (TUI). Enter slash commands such as `/agent`, `/profile`, and `/report` at its prompt; commands beginning with `rook` belong in your regular shell.
 
-<img loading="lazy" src={require('../assets/images/rook/guides/rook-tui-get-started.png').default} alt="Rook 0.1.11 interactive startup with the pixel rook mascot and ROOK banner, the Explore, Generate, Run, and Report journey, Get Started commands, and a sign-in prompt" width="2200" height="1366" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/rook/guides/rook-tui-get-started.png').default} alt="Rook 0.1.11 interactive startup with the pixel rook mascot and ROOK banner, the Explore, Generate, Run, and Report journey, Get Started commands, and the project chooser after sign-in" width="2200" height="1287" className="doc_img"/>
 
-This TUI capture shows a new session before sign-in and before an agent has been explored. Sign in with `/login`, then select a project with the arrow keys and Enter. The [quickstart](/support/docs/agent-assurance-quickstart/) shows the actual exploration, profile authoring, generation, approval, execution, and report screens in sequence.
+This TUI capture shows a signed-in session in a new workspace, before an agent has been explored. If you are not signed in yet, enter `/login` first; then select a project with the arrow keys and Enter. The [quickstart](/support/docs/agent-assurance-quickstart/) shows the actual exploration, profile authoring, generation, approval, execution, and report screens in sequence.
 
 ## Agent Assurance and Agent Testing {#conversation-testing-and-autonomous-testing}
 

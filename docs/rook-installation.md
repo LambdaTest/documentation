@@ -98,7 +98,7 @@ import ThemedImage from '@theme/ThemedImage';
         "https://www.youtube.com/@TestMuAI"
       ]
     },
-    "dateModified": "2026-09-28"
+    "dateModified": "2026-10-13"
   }) }}
 />
 
@@ -122,7 +122,7 @@ The latest public release checked on October 13, 2026 is [v0.1.11](https://githu
 
 | Requirement | Why |
 |---|---|
-| A supported platform above | The shell installer supports macOS/Linux; the npm package also supplies a Windows x64 runtime. No Windows ARM64 runtime package is published for 0.1.7. |
+| A supported platform above | The shell installer supports macOS/Linux; the npm package also supplies a Windows x64 runtime. No Windows ARM64 runtime package is published. |
 | TestMu AI account | Supplies authentication and credits. You can sign in after installation. |
 | Your agent's dependencies | Rook invokes the target agent as you would. A local command, service, or supporting tool must already be available. |
 
@@ -216,10 +216,10 @@ To upgrade an npm installation:
 <VerifiedTag value="Verified" />
 
 ```bash
-npm update -g @testmuai/rook
+npm install -g @testmuai/rook@latest
 ```
 
-The npm package installs the `rook` executable and publishes platform runtime packages with it. If npm reports an engine error, update the Node.js version used to run npm to Node.js 20 or newer (Rook 0.1.7; 0.1.6 and earlier need 22).
+The npm package installs the `rook` executable and publishes platform runtime packages with it. If npm reports an engine error, update the Node.js version used to run npm to Node.js 20 or newer (since Rook 0.1.7; 0.1.6 and earlier need 22).
 
 ### Repair an npm 0.1.1 or 0.1.2 installation
 
@@ -333,9 +333,9 @@ $env:ROOK_ENV = 'prod'
 rook.cmd
 ```
 
-You should see the Rook banner and an interactive prompt or a project chooser, not a command that prints output and exits. This capture shows a new session before sign-in and before an agent has been explored:
+You should see the Rook banner and an interactive prompt or a project chooser, not a command that prints output and exits. This capture shows a signed-in session in a new workspace, before an agent has been explored:
 
-<img loading="lazy" src={require('../assets/images/rook/guides/rook-tui-get-started.png').default} alt="Rook 0.1.11 interactive startup in color with the mascot banner, Explore, Generate, Run and Report, Get Started commands, a sign-in prompt, and no agent selected" width="2200" height="1366" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/rook/guides/rook-tui-get-started.png').default} alt="Rook 0.1.11 interactive startup in color with the mascot banner, Explore, Generate, Run and Report, Get Started commands, the project chooser, and no agent selected" width="2200" height="1287" className="doc_img"/>
 
 1. If prompted to sign in, enter `/login` and complete the browser flow. Return to this same terminal when Rook reports that you are signed in. Browser UI sign-in and CLI sign-in are separate.
 2. At **Projects**, use the arrow keys and Enter to list existing projects or create a new test project. Esc goes back; you can reopen the chooser with `/project`.
@@ -377,13 +377,6 @@ Each archive has a matching `.sha256` file. Do not bypass a checksum mismatch; d
 
 If a public install path still fails, [open a Rook issue](https://github.com/LambdaTest/rook/issues/new/choose) with the OS, architecture, install method, and full error output.
 
-## Next Step
-
-If you use a coding assistant, [choose its Rook skill setup guide](/support/docs/rook-coding-agents/) after installing the CLI. Claude Code, Codex, Gemini CLI, Copilot CLI, OpenCode, Cursor CLI, Antigravity CLI, VS Code, Windsurf, and Antigravity IDE each have their own instructions. Installing the skill does not install or authenticate the CLI.
-
-Continue with [How to Get Started With Agent Assurance](/support/docs/agent-assurance-quickstart/).
-
-
 ## Open the Local or Hosted UI {#select-the-web-ui-environment}
 
 The public CLI includes the local viewer: inside the TUI, enter `/ui --local`. No separate frontend installation or browser login is needed. Open the printed loopback URL and keep the TUI session running. It reads existing workspace files; follow the quickstart first if you have not created any test data. From a separate shell, the equivalent command is `rook ui --local`.
@@ -403,3 +396,9 @@ The local viewer starts at **Agents**. This screenshot shows saved CommerceCare 
 The hosted UI opens at **Projects** after browser sign-in. The example project already contains synchronized test data. An empty organization shows onboarding instead; no separate Web UI package needs to be installed.
 
 <img loading="lazy" src={require('../assets/images/rook/rook-web-projects.png').default} alt="Hosted Projects entry for an existing synchronized documentation project" width="1158" height="75" className="doc_img"/>
+
+## Next Step
+
+If you use a coding assistant, [choose its Rook skill setup guide](/support/docs/rook-coding-agents/) after installing the CLI. Claude Code, Codex, Gemini CLI, Copilot CLI, OpenCode, Cursor CLI, Antigravity CLI, VS Code, Windsurf, and Antigravity IDE each have their own instructions. Installing the skill does not install or authenticate the CLI.
+
+Continue with [How to Get Started With Agent Assurance](/support/docs/agent-assurance-quickstart/).
