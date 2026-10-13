@@ -209,6 +209,8 @@ Before running a suite, confirm:
 
 Rook skips scenarios that cannot be attempted and groups the reasons.
 
+Without `--only`, a run selects at most two scenarios per attack pattern. The others are skipped with the reason `pattern <id> already has 2 candidates in this run`. Name scenarios with `--only` to run more of one pattern.
+
 A partially observable scenario still runs when it can establish useful evidence. Individual criteria that cannot be checked become **Unable to Verify**.
 
 The default concurrency is `3`.
@@ -299,7 +301,7 @@ The run-level narrative summarizes patterns after all scenario verdicts are avai
 
 The headless equivalent is:
 
-See [phases and hooks](/support/docs/rook-profiles-and-hooks/#lifecycle) for prerequisites and state. The old <code>--no-narrative</code> option is not available in 0.1.7.
+See [phases and hooks](/support/docs/rook-profiles-and-hooks/#lifecycle) for prerequisites and state. The old <code>--no-narrative</code> option is no longer available.
 
 ## Request Root-Cause Analysis
 

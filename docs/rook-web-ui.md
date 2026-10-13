@@ -24,7 +24,7 @@ Both interfaces were checked on September 25, 2026. The local screenshots use sa
 Browser screenshots show only the visible webpage, without browser controls or desktop content; the Projects image is limited to the sample project's entry. The TUI capture shows only terminal content. Click or tap a screenshot to enlarge it.
 
 :::note Local UI rollout
-The redesigned local UI below ships in public releases from **0.1.6** and was checked again in **0.1.7**. Public 0.1.5 and earlier have the single-page viewer. If your screen differs, check `rook --version` and [available public updates](/support/docs/rook-installation/), or see [the earlier layout](#earlier-local-ui) below.
+The redesigned local UI below ships in public releases from **0.1.6** and was checked again in **0.1.7**. Since 0.1.11 both viewers add the **Attack intent** and **Coverage gaps** panels described below. Public 0.1.5 and earlier have the single-page viewer. If your screen differs, check `rook --version` and [available public updates](/support/docs/rook-installation/), or see [the earlier layout](#earlier-local-ui) below.
 :::
 
 ## Choose Your UI {#choose-your-ui}
@@ -381,7 +381,7 @@ The **Definition** panel contains the feature, class, category, criterion count,
 
 #### Optional Sections {#scenario-details-optional-sections}
 
-A scenario can also record **Preconditions**, **Forbidden** behavior, **MCP expectations**, and **Exercises tools**. Excluded scenarios show their exclusion reason. These sections appear only when present in the definition; their absence in the screenshot is expected for this fixture.
+A scenario can also record **Preconditions**, **Forbidden** behavior, **MCP expectations**, and **Exercises tools**. Excluded scenarios show their exclusion reason. Adversarial scenarios show **Attack intent**: the attack, its delivery, the attacker's objective, the target control, and the OWASP and MITRE ATLAS references. These sections appear only when present in the definition; their absence in the screenshot is expected for this fixture.
 
 MCP expectations describe what should happen. If the invocation cannot observe the actual MCP calls, that expectation is not automatically verified. See [MCP Servers](/support/docs/agent-assurance-mcp/) and [Results and Evidence](/support/docs/agent-assurance-results-and-evidence/) for handling verification gaps.
 
@@ -456,7 +456,7 @@ Click **View plan** to read the recorded <code>run.yaml</code>.
 
 <img loading="lazy" src={require('../assets/images/rook/rook-web-run-plan.png').default} alt="Recorded Rook run plan with version and profile pins, SC-002 included, and SC-001 excluded by the only flag" className="doc_img"/>
 
-Check the included scenario IDs and reasons, exclusions, concurrency, test mode, and pinned agent and profile revisions. This answers “What was selected?” before you inspect “What happened?” The plan is not a live phase-progress view.
+Check the included scenario IDs and reasons, exclusions, concurrency, test mode, and pinned agent and profile revisions. A run with coverage gaps also shows a **Coverage gaps** panel: attack patterns, scenarios, or categories that have no runnable scenario, with the reason. A gap is unverified, not passed. This answers “What was selected?” before you inspect “What happened?” The plan is not a live phase-progress view.
 
 In this smoke test, SC-002 was included and SC-001 was excluded by <code>--only</code>. A selection-time exclusion in the plan is not necessarily counted as an execution-time **Skipped** result. That is why the plan can list SC-001 under <code>skipped</code> while the run's Skipped tile is zero.
 
@@ -511,7 +511,7 @@ The **Acceptance criteria** cards remain beside the tabs. For every criterion, r
 
 Scroll down to review every card. In this example, all four criteria passed; a screenshot of the first cards alone is not the whole verdict. If the verdict artifact cannot be loaded, Rook reports the unavailable criteria rather than proving that zero criteria existed.
 
-Use [Verdicts and Reports](/support/docs/agent-assurance-results-and-evidence/) to interpret **Pass**, **Fail**, **Partial**, and **Unable to Verify**. An inability to verify is not a pass and may require better collection or access rather than a change to the agent's reasoning.
+Use [Verdicts and Reports](/support/docs/agent-assurance-results-and-evidence/) to interpret **Pass**, **Fail**, and **Unable to Verify**; a **Partial** verdict stored by an older run displays as **Unable to Verify**. An inability to verify is not a pass and may require better collection or access rather than a change to the agent's reasoning.
 
 #### Artefacts: What Files Support the Result? {#results-artefacts-what-files-support-the-result}
 
@@ -533,7 +533,11 @@ Open **Projects → your project → your agent → Insights**. This page summar
 
 <img loading="lazy" src={require('../assets/images/rook/rook-web-insights.png').default} alt="Rook Insights with a single-run chart and panels for tool failures, category coverage, unverifiable expectations, and adversarial pressure" className="doc_img"/>
 
-### Read Each Panel {#insights-read-each-panel}
+1. Open [Features](#features) to find behaviors without scenarios.
+2. Use [Scenarios → Result → never run](#scenarios) to find generated tests without execution.
+3. Open a run's **Coverage gaps** panel for attack patterns and categories with no runnable scenario.
+4. Open a run and filter its result criteria to **Fail** or **Unable to Verify**. Read the evidence before changing the agent, hooks, or test expectations.
+5. Compare runs only after checking their scenario selection, agent version, profile revision, and target conditions. A changed pass percentage alone does not explain a regression.
 
 | Panel | What it helps you investigate |
 |---|---|
