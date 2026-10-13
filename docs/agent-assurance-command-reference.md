@@ -146,7 +146,7 @@ The screenshots below were captured inside the **Rook 0.1.5 interactive TUI**, u
 
 Use <code>rook</code> to start the interactive terminal in the workspace whose agent material and testing state you want to use.
 
-<img loading="lazy" src={require('../assets/images/rook/commands/rook-reference-home.png').default} alt="Rook 0.1.5 interactive home with the saved CommerceCare demo and slash-command input" width="2200" height="1360" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/rook/commands/rook-reference-home.png').default} alt="Rook 0.1.11 interactive home with the mascot banner, the Returns and Refunds Assistant sample agent, its workflow checklist, and slash-command input" width="2200" height="1684" className="doc_img"/>
 
 #### Syntax {#rook-syntax}
 
