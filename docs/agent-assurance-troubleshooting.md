@@ -84,7 +84,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
         "https://www.youtube.com/@TestMuAI"
       ]
     },
-    "dateModified": "2026-09-25"
+    "dateModified": "2026-10-13"
   }) }}
 />
 
@@ -111,9 +111,9 @@ Explain the first blocker and the smallest proposed fix. Do not change credentia
 update Rook, invoke the agent, rerun tests, or run paid RCA without my approval.
 ```
 
-This interactive <code>/doctor</code> capture uses a saved demo workspace with no credentials. Both services are reachable, but authentication is missing: signing in is the next step, not changing the target profile or rerunning scenarios.
+This interactive <code>/doctor</code> capture is from the signed-in quickstart workspace: both services are reachable and the identity is authenticated. If <code>identity</code> or <code>auth</code> shows that you are signed out, enter <code>/login</code> first; that is the next step, not changing the target profile or rerunning scenarios.
 
-<img loading="lazy" src={require('../assets/images/rook/commands/rook-reference-doctor.png').default} alt="Rook 0.1.5 interactive doctor output showing reachable production services and a signed-out demo session" width="2200" height="1520" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/rook/commands/rook-reference-doctor.png').default} alt="Rook 0.1.11 interactive doctor output showing version, log and session paths, reachable production services, and a signed-in session" width="2200" height="1644" className="doc_img"/>
 
 ## Installation Problems
 
@@ -255,7 +255,7 @@ Profile authoring or repair can spend credits and use approved tools. A profile 
 
 Use <code>/help profile</code> to check the available operations before approving a repair or connection test:
 
-<img loading="lazy" src={require('../assets/images/rook/commands/rook-command-profile.png').default} alt="Rook 0.1.5 interactive profile help showing add, fix, test, and test goal options" width="2200" height="1680" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/rook/commands/rook-command-profile.png').default} alt="Rook 0.1.11 interactive profile help showing use, show, add, fix, test, and test goal options" width="2200" height="1723" className="doc_img"/>
 
 ### The profile invokes successfully but extracts the wrong value
 
@@ -323,7 +323,7 @@ A <code>token_economy</code> scenario is blocked if the profile does not report 
 
 ### Generated scenarios are marked not executable
 
-A scenario with <code>executable: false</code> was kept so you can see what generation attempted. Its <code>skip_reason</code> starts with <code>coverage gap:</code> (no runnable check was possible), <code>invalid scenario:</code>, or <code>invalid red-team scenario:</code> and names the problem. Fix the profile capability or edit the scenario, then regenerate or rerun.
+A scenario with <code>executable: false</code> was kept so you can see what generation attempted. Its <code>skip_reason</code> names the problem. Reasons from Rook's own validation start with <code>coverage gap:</code> (no runnable check was possible), <code>invalid scenario:</code>, or <code>invalid red-team scenario:</code>; the scenario checker writes plain sentences, often a precondition the profile cannot establish, such as a ticket that must already exist. Fix the profile capability or edit the scenario, then regenerate or rerun.
 
 ### Only two scenarios of an attack pattern ran
 
