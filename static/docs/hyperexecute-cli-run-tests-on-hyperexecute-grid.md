@@ -113,7 +113,7 @@
     "dateModified": "2026-09-09T19:10:37+05:30"
   }) }}
 />
-`HyperExecute CLI` is a command line interface that is required to run tests on HyperExecute. This page outlines all you need to know about the CLI and also explains about the different flags & functionalities supported by the HyperExecute CLI.
+`HyperExecute CLI` is a command line interface that is required to run your End-to-End (E2E) testing on HyperExecute. This page outlines all you need to know about the CLI and also explains about the different flags & functionalities supported by the HyperExecute CLI.
 
 > HyperExecute CLI credentials (access keys, API tokens, etc.) are private and confidential. A system compromise may result in their unauthorized disclosure; therefore, you must secure the machine running the TestMu AI-HyperExecute CLI. Do not share or expose credentials in public code, repositories, or environments. In the event of a compromise, you are solely responsible for immediately revoking and regenerating the credentials. TestMu AI assumes no liability for any losses arising from failure to comply.
 

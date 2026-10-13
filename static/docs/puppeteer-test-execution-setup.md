@@ -52,7 +52,13 @@ In this guide, learn how to configure the desired capability for selecting brows
 
 ## Choosing Browser And OS
 
-To perform Puppeteer testing on TestMu AI, you need to define the `browserName`, `browserVersion`, and `platform` capabilities in your automation scripts.
+When you run Puppeteer End-to-End (E2E) testing on TestMu AI, you must tell the cloud machine which operating system and browser to use. Setting the right capabilities gives your scripts access to the browser, OS, resolution, and debugging logs each run needs. You do it by defining a capabilities object in your Puppeteer script and passing it to the CDP endpoint, so every test targets the exact environment you want.
+
+The TestMu AI Capability Generator can auto-create the capabilities class for your Puppeteer scripts. The sections below cover selecting browsers and OS, organizing tests, changing desktop resolution, and enabling debugging logs.
+
+## Choosing the Browser and OS
+
+To run a Puppeteer test on TestMu AI, define the browser, browser version, and platform in your automation script. The three capabilities below set the exact environment the test targets.
 
 | Key | Expected Values | Description | Example |
 | -------- | -----| ------- | ----------------- |

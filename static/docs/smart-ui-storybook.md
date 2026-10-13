@@ -250,8 +250,9 @@ Please read the following table for more information about the configuration fil
 | browsers       | You can add all the supported browsers brands here to run your tests for SmartUI.  Ex: `"chrome", "firefox", "safari", "edge", etc..` | Mandatory |
 | viewports    | You can add all the supported browser viewpoints here to run your tests for SmartUI  Ex: `[1920, 1080],[width, height] etc..`  | Mandatory |
 | waitForTimeout | You can add wait time for the page to load DOM of your StoryBook components. This can be added globally to your configuration and to individual stories as well.  Ex: `3000`                                      | Optional  |
-| include        | Add the stories which should only be included in SmartUI tests  Ex: `"/dashboard/","/features/"`                              | Optional  |
-| exclude        | Don't compare the stories which should be excluded in SmartUI tests  Ex: `"/login/","/marketing/"`                            | Optional  |
+| include        | Capture only the stories that match at least one pattern. A pattern can start with `title:`, `id:`, `path:` or `name:`. Without a prefix it matches the story name. See [Filter Stories with Include and Exclude](/support/docs/smartui-storybook-include-exclude/).  Ex: `"title:/^Components/", "Primary"` | Optional  |
+| exclude        | Skip the stories that match at least one pattern. Uses the same patterns as `include`, and is applied after it.  Ex: `"title:/Deprecated/"`                            | Optional  |
+| failOn         | Policy that makes the CLI exit with code `4` when the build has visual changes: `none`, `unreviewed`, `changes` or `rejected`. The `--fail-on` flag and the `SMARTUI_FAIL_ON` variable override it. Needs CLI version `1.3.0` or later. See [CI Gating and Exit Codes](/support/docs/smartui-storybook-ci-gating/).  Ex: `"changes"` | Optional (default: `"none"`) |
 | backgroundTheme | Theme for capturing stories. Options: `"light"`, `"dark"`, or `"both"` (captures both themes)  Ex: `"light"` | Optional (default: `"light"`) |
 | useGlobals     | Enable Storybook global decorators and parameters (required for theme switching)  Ex: `true` | Optional (default: `false`) |
 | chunkSize      | Number of stories SmartUI renders together in one batch. For a Storybook URL, values below `25` are raised to `25` and values above `100` are lowered to `100`. Lower it if you configure many browsers and viewports, because each batch renders every browser and viewport combination. If the stories left over at the end are no more than half of `chunkSize`, they join the last batch, so that batch can be up to 1.5 times `chunkSize`.  Ex: `50` | Optional (default: `50` for a Storybook URL, `100` for a static build) |
@@ -273,6 +274,23 @@ For capturing the stories in **full page** without limiting the height to the vi
 [1440]
 ]
 ```
+
+#### Filter stories with include and exclude
+
+Use `include` and `exclude` in the `storybook` block to choose which stories SmartUI captures. From CLI version `1.3.0`, a pattern can start with `title:`, `id:`, `path:` or `name:` to match the story title, ID, sidebar path or name. A pattern without a prefix matches the story name.
+
+```json title=".smartui.json"
+{
+"storybook": {
+"browsers": ["chrome"],
+"viewports": [[1280, 720]],
+"include": ["title:/^Components/Button$/", "id:/^forms-/"],
+"exclude": ["title:/Deprecated/"]
+}
+}
+```
+
+For how patterns are matched, more examples and how filtered builds affect your baseline, see [Filter Stories with Include and Exclude](/support/docs/smartui-storybook-include-exclude/).
 
 #### Custom Viewport Configuration
 
@@ -365,7 +383,7 @@ From CLI version `1.2.0`, when you pass a Storybook URL the CLI reads the story 
 
 **For Continuous Integration (CI)**
 
-If you are using the Continuous Integration (CI) pipeline for your application and want to integrate `SmartUI StoryBook` execution then the following are the steps needs to be added to your `.yaml` file:
+If you are using the Continuous Integration (CI) pipeline for your application and want to integrate `SmartUI StoryBook` execution then the following are the steps needs to be added to your `.yaml` file. To fail the job when SmartUI finds visual changes, and to handle each exit code, see [CI Gating and Exit Codes](/support/docs/smartui-storybook-ci-gating/).
 
 ```yaml
 steps:
@@ -392,14 +410,16 @@ LT_ACCESS_KEY: ${{ secrets.LT_ACCESS_KEY }}
 
 #### CLI Options and Keys
 
-The following are supported `CLI (Command Line Interface)` options for Visual Regression Testing with SmartUI:
+The following are supported `CLI (Command Line Interface)` options for Visual Regression Testing with SmartUI. Put the Storybook URL or directory straight after `storybook` and the options after it, because `--fail-on` and `--fetch-results` read the next word as their value.
 
 | CLI Flag Key | Description                                                                         | Usage    |
 | ------------ | ----------------------------------------------------------------------------------- | -------- |
 | --config     | This is the reference configuration file containing the SmartUI Cloud Configuration | Optional |
 | --help       | This will print all help information for the SmartUI CLI options                    | Optional |
 | --buildName  | Name of the SmartUI build, for example your pipeline or branch name                 | Optional |
-| --force-rebuild | Rebuild a build that already exists with the same name                           | Optional |
+| --force-rebuild | Create a new build even if a build already exists for the same commit and branch. Without it, the CLI exits with code `3` in that case | Optional |
+| --fail-on    | Exit with code `4` when the build breaks a policy: `none`, `unreviewed`, `changes` or `rejected`. With no value it means `unreviewed`. CLI version `1.3.0` or later. See [CI Gating and Exit Codes](/support/docs/smartui-storybook-ci-gating/) | Optional |
+| --fetch-results | Write the build results to a JSON file when the CLI stops waiting for the build. The default file is `results.json`. CLI version `1.3.0` or later | Optional |
 | --userName   | Your TestMu AI username, used to start the tunnel for a Storybook URL. Defaults to `LT_USERNAME` | Required for a Storybook URL, unless `LT_USERNAME` is set |
 | --accessKey  | Your TestMu AI access key, used to start the tunnel for a Storybook URL. Defaults to `LT_ACCESS_KEY` | Required for a Storybook URL, unless `LT_ACCESS_KEY` is set |
 
@@ -431,8 +451,10 @@ These apply to CLI version `1.2.0` and later, when you pass a Storybook URL.
 
 Check Story Inclusion/Exclusion
 
-- Verify `include` and `exclude` patterns in `.smartui.json`
-   - Ensure story paths match your Storybook structure
+- Verify `include` and `exclude` patterns in the `storybook` block of `.smartui.json`.
+- A pattern without a prefix matches the story **name** only, not its title or folder. To filter by folder, use `title:`. See [Filter Stories with Include and Exclude](/support/docs/smartui-storybook-include-exclude/).
+- Plain text matches anywhere in the value, so `title:Button` also matches `ButtonGroup`. Use `/^...$/` to match exactly.
+- The CLI prints `Stories found:` with the number of stories left after filtering. If it prints `No stories found`, your patterns removed every story.
 
 Validate Configuration
 

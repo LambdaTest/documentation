@@ -444,9 +444,14 @@ smartui storybook [options] <url|directory>
 | `--force-rebuild` | | Force rebuild of existing build | `false` |
 | `--buildName ` | | Build name for pipeline | Random |
 | `--env ` | | Runtime environment | `prod` |
+| `--fail-on [policy]` | | Exit with code `4` when the build breaks a policy: `none`, `unreviewed`, `changes` or `rejected`. No value means `unreviewed`. Also set by `SMARTUI_FAIL_ON` or `failOn` in the config. Version `1.3.0` or later. See [CI Gating and Exit Codes](/support/docs/smartui-storybook-ci-gating/) | `none` |
+| `--fetch-results [filename]` | | Write the build results to a JSON file. Version `1.3.0` or later | `results.json` |
 
 **Examples:**
 ```bash
+# Fail the job on visual changes and save the results (version 1.3.0 or later)
+smartui storybook ./storybook-static --config .smartui.json --fail-on changes --fetch-results smartui-results.json
+
 # Local Storybook server
 smartui storybook http://localhost:6006 --config .smartui.json
 
