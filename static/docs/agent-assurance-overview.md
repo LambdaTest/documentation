@@ -21,7 +21,7 @@ Commands and stored file formats can change. Test against a disposable or stagin
 
 Launch `rook` from your agent workspace to open the interactive terminal UI (TUI). Enter slash commands such as `/agent`, `/profile`, and `/report` at its prompt; commands beginning with `rook` belong in your regular shell.
 
-This TUI capture shows a signed-in session before an agent has been explored. Select a project with the arrow keys and Enter; sign in with `/login` first if prompted. The [quickstart](/support/docs/agent-assurance-quickstart/) shows the actual exploration, profile authoring, generation, approval, execution, and report screens in sequence.
+This TUI capture shows a new session before sign-in and before an agent has been explored. Sign in with `/login`, then select a project with the arrow keys and Enter. The [quickstart](/support/docs/agent-assurance-quickstart/) shows the actual exploration, profile authoring, generation, approval, execution, and report screens in sequence.
 
 ## Agent Assurance and Agent Testing {#conversation-testing-and-autonomous-testing}
 
