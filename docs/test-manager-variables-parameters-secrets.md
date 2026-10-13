@@ -212,28 +212,26 @@ Modules that contain If-Else or While Loop blocks still cannot be added to manua
 
 ## See What a Test Case Uses
 
-The summary of a manual test case lists the values its steps and modules use:
+Open the **Test details** tab of a manual test case to see the values its steps use:
 
-- **Parameters Used**: each parameter, its default value, and the steps that use it.
-- **Variables and Secrets Used**: each variable and secret, and the steps that use it. Secret values are never shown. Environment, smart, and TOTP variables are marked as available only in KaneAI runs.
-- References that come from added modules, grouped by module.
-- The linked dataset, with options to change it, view it, or create a new one.
+- **Parameters**: the parameters the test case uses. Click **View linked dataset** to open the dataset linked to the test case.
+- **Variables & Secrets**: the variables and secrets the test case uses. Secret values are never shown.
 
-<!-- screenshot: manual test case summary showing Parameters Used, Variables and Secrets Used, and the linked dataset
-<img loading="lazy" src={require('../assets/images/test-manager/variables/test-case-summary.png').default} alt="Manual test case summary listing the parameters, variables, and secrets it uses and its linked dataset" className="doc_img"/>
+<!-- screenshot: Test details tab of a manual test case listing its Parameters and Variables & Secrets
+<img loading="lazy" src={require('../assets/images/test-manager/variables/test-case-details.png').default} alt="Test details tab of a manual test case listing the parameters, variables, and secrets it uses" className="doc_img"/>
 -->
 
-The test case always shows the latest values. When you [compare versions](/support/docs/test-case-versioning/) of a test case, steps show the references only, without values.
+When you [compare versions](/support/docs/test-case-versioning/) of a test case, steps show the references only, without values.
 
 ## Use Datasets With Manual Test Cases
 
 Manual test cases use datasets the same way KaneAI test cases do.
 
-- **Default dataset**: when you save a test case with its first parameter, a default dataset is created and linked. It has one row holding each parameter's default value and is kept up to date for you.
-- **Custom dataset**: create one from the test case to cover more variations. It starts with a column for every parameter the test case uses, including parameters from modules, and a first row of default values. Add a row for each variation, save, and link it to the test case.
+- **Default dataset**: when you save a test case with its first parameter, a dataset named after the test case is created and linked. It has one row holding each parameter's default value and is kept up to date for you.
+- **More variations**: to cover more variations, create a dataset with the same parameters and add a row for each variation. When you add the test case to a test run, you can pick any dataset that contains its parameters.
 - **New parameters**: when you add a parameter to a test case, a column is added to its linked dataset, and every existing row gets the parameter's default value.
 
-To edit datasets, see [Datasets](/support/docs/kane-ai-using-datasets/).
+To create and edit datasets, see [Datasets](/support/docs/kane-ai-using-datasets/).
 
 ## Run Parameterized Manual Test Cases
 
@@ -265,7 +263,7 @@ When a tester opens a test instance, its steps show the values to use in place o
 <img loading="lazy" src={require('../assets/images/test-manager/variables/instance-step-values.png').default} alt="Manual test instance steps showing the values to use in place of references" className="doc_img"/>
 -->
 
-Values are fixed when an instance is created. Later changes to the dataset, a parameter's default value, or a global variable do not change existing instances, while the test case itself keeps showing the latest values.
+Values are fixed when an instance is created. Later changes to the dataset, a parameter's default value, or a global variable do not change existing instances.
 
 ## Limitations
 
