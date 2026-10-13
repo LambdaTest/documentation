@@ -47,29 +47,29 @@ capabilities.setCapability("blockSafariPopups", true);    // Enable Block All Po
 
 ```python
 desired_caps = {
-    "platformName": "iOS",
-    "deviceName": "iPhone 15",
-    "platformVersion": "17",
-    "isRealMobile": True,
-    "app": "YOUR_APP_URL",
+"platformName": "iOS",
+"deviceName": "iPhone 15",
+"platformVersion": "17",
+"isRealMobile": True,
+"app": "YOUR_APP_URL",
 
-    # Safari Settings
-    "crossSiteTracking": True,       # Disable Prevent Cross-Site Tracking
-    "blockSafariPopups": True,       # Enable Block All Popups
+# Safari Settings
+"crossSiteTracking": True,       # Disable Prevent Cross-Site Tracking
+"blockSafariPopups": True,       # Enable Block All Popups
 }
 ```
 
 ```javascript
 const capabilities = {
-    platformName: "iOS",
-    deviceName: "iPhone 15",
-    platformVersion: "17",
-    isRealMobile: true,
-    app: "YOUR_APP_URL",
+platformName: "iOS",
+deviceName: "iPhone 15",
+platformVersion: "17",
+isRealMobile: true,
+app: "YOUR_APP_URL",
 
-    // Safari Settings
-    crossSiteTracking: true,         // Disable Prevent Cross-Site Tracking
-    blockSafariPopups: true,         // Enable Block All Popups
+// Safari Settings
+crossSiteTracking: true,         // Disable Prevent Cross-Site Tracking
+blockSafariPopups: true,         // Enable Block All Popups
 };
 ```
 
@@ -88,15 +88,15 @@ capabilities.AddAdditionalCapability("blockSafariPopups", true);    // Enable Bl
 
 ```ruby
 capabilities = {
-    "platformName" => "iOS",
-    "deviceName" => "iPhone 15",
-    "platformVersion" => "17",
-    "isRealMobile" => true,
-    "app" => "YOUR_APP_URL",
+"platformName" => "iOS",
+"deviceName" => "iPhone 15",
+"platformVersion" => "17",
+"isRealMobile" => true,
+"app" => "YOUR_APP_URL",
 
-    # Safari Settings
-    "crossSiteTracking" => true,     # Disable Prevent Cross-Site Tracking
-    "blockSafariPopups" => true,     # Enable Block All Popups
+# Safari Settings
+"crossSiteTracking" => true,     # Disable Prevent Cross-Site Tracking
+"blockSafariPopups" => true,     # Enable Block All Popups
 }
 ```
 

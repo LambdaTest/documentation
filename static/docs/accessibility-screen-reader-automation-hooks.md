@@ -29,19 +29,19 @@ Set `accessibility: true` and the platform's screen reader capability inside `LT
 
 ```json
 {
-  "LT:Options": {
-    "platformName": "Android",
-    "deviceName": "Pixel 8",
-    "platformVersion": "14",
-    "isRealMobile": true,
-    "app": "lt://APP1234567890",
-    //highlight-start
-    "accessibility": true,
-    "accessibilityOptions": {
-      "talkBack": true
-    }
-    //highlight-end
-  }
+"LT:Options": {
+"platformName": "Android",
+"deviceName": "Pixel 8",
+"platformVersion": "14",
+"isRealMobile": true,
+"app": "lt://APP1234567890",
+//highlight-start
+"accessibility": true,
+"accessibilityOptions": {
+"talkBack": true
+}
+//highlight-end
+}
 }
 ```
 
@@ -60,35 +60,35 @@ capabilities.setCapability("LT:Options", ltOptions);
 
 ```python
 lt_options = {
-    "platformName": "iOS",
-    "deviceName": "iPhone 15",
-    "platformVersion": "17",
-    "isRealMobile": True,
-    "app": "lt://APP1234567890",
-    #highlight-start
-    "accessibility": True,
-    "accessibilityOptions": {
-        "voiceOver": True,   # iOS. Use "talkBack" on Android.
-    },
-    #highlight-end
+"platformName": "iOS",
+"deviceName": "iPhone 15",
+"platformVersion": "17",
+"isRealMobile": True,
+"app": "lt://APP1234567890",
+#highlight-start
+"accessibility": True,
+"accessibilityOptions": {
+"voiceOver": True,   # iOS. Use "talkBack" on Android.
+},
+#highlight-end
 }
 ```
 
 ```js
 const capabilities = {
-  'LT:Options': {
-    platformName: 'Android',
-    deviceName: 'Galaxy S23',
-    platformVersion: '14',
-    isRealMobile: true,
-    app: 'lt://APP1234567890',
-    //highlight-start
-    accessibility: true,
-    accessibilityOptions: {
-      talkBack: true, // Android. Use voiceOver on iOS.
-    },
-    //highlight-end
-  },
+'LT:Options': {
+platformName: 'Android',
+deviceName: 'Galaxy S23',
+platformVersion: '14',
+isRealMobile: true,
+app: 'lt://APP1234567890',
+//highlight-start
+accessibility: true,
+accessibilityOptions: {
+talkBack: true, // Android. Use voiceOver on iOS.
+},
+//highlight-end
+},
 };
 ```
 
@@ -159,7 +159,7 @@ Each gesture call moves focus the way a swipe or tap would, waits for TalkBack t
 
 ```java
 Object result = driver.executeScript(
-    "lambda_executor: {\"action\": \"screenReaderGesture\", \"arguments\": {\"gesture\": \"navigate_next\"}}");
+"lambda_executor: {\"action\": \"screenReaderGesture\", \"arguments\": {\"gesture\": \"navigate_next\"}}");
 ```
 
 ```python
@@ -176,7 +176,7 @@ Use `screenReaderSpokenDescription` to read what TalkBack says for a specific el
 
 ```java
 Object spoken = driver.executeScript(
-    "lambda_executor: {\"action\": \"screenReaderSpokenDescription\", \"arguments\": {\"resourceId\": \"com.example.app:id/sign_in\"}}");
+"lambda_executor: {\"action\": \"screenReaderSpokenDescription\", \"arguments\": {\"resourceId\": \"com.example.app:id/sign_in\"}}");
 ```
 
 ```python
@@ -191,14 +191,14 @@ The response lists the spoken output keyed both by resource ID and by the elemen
 
 ```json
 {
-  "spoken_description": {
-    "by_resource_id": {
-      "com.example.app:id/sign_in": ["Sign in, Button, Double tap to activate"]
-    },
-    "by_rect": {
-      "70 1171 1010 1297": ["Sign in, Button, Double tap to activate"]
-    }
-  }
+"spoken_description": {
+"by_resource_id": {
+"com.example.app:id/sign_in": ["Sign in, Button, Double tap to activate"]
+},
+"by_rect": {
+"70 1171 1010 1297": ["Sign in, Button, Double tap to activate"]
+}
+}
 }
 ```
 
@@ -246,7 +246,7 @@ await driver.executeScript('lambda_executor: {"action": "voiceOverToggle", "argu
 
 ```java
 Object result = driver.executeScript(
-    "lambda_executor: {\"action\": \"voiceOverGesture\", \"arguments\": {\"gesture\": \"navigate_next\"}}");
+"lambda_executor: {\"action\": \"voiceOverGesture\", \"arguments\": {\"gesture\": \"navigate_next\"}}");
 ```
 
 ```python
@@ -314,19 +314,19 @@ An illustrative response after `navigate_next` lands on a sign-in button:
 
 ```json
 {
-  "element_description": {
-    "resourceId": "com.example.app:id/sign_in",
-    "className": "android.widget.Button",
-    "text": "Sign in",
-    "contentDescription": "",
-    "bounds": "[70,1171][1010,1297]",
-    "spokenOutput": "Sign in, Button, Double tap to activate",
-    "properties": {
-      "clickable": true,
-      "enabled": true,
-      "focusable": true
-    }
-  }
+"element_description": {
+"resourceId": "com.example.app:id/sign_in",
+"className": "android.widget.Button",
+"text": "Sign in",
+"contentDescription": "",
+"bounds": "[70,1171][1010,1297]",
+"spokenOutput": "Sign in, Button, Double tap to activate",
+"properties": {
+"clickable": true,
+"enabled": true,
+"focusable": true
+}
+}
 }
 ```
 
@@ -354,7 +354,7 @@ driver.execute_script('lambda_executor: {"action": "screenReader", "arguments": 
 driver.executeScript("lambda_executor: {\"action\": \"screenReader\", \"arguments\": {\"enable\": \"true\"}}");
 
 Map<String, Object> out = (Map<String, Object>) driver.executeScript(
-    "lambda_executor: {\"action\": \"screenReaderSpokenDescription\", \"arguments\": {\"resourceId\": \"com.example.app:id/sign_in\"}}");
+"lambda_executor: {\"action\": \"screenReaderSpokenDescription\", \"arguments\": {\"resourceId\": \"com.example.app:id/sign_in\"}}");
 Map<String, Object> spoken = (Map<String, Object>) out.get("spoken_description");
 Map<String, List<String>> byId = (Map<String, List<String>>) spoken.get("by_resource_id");
 String actual = byId.get("com.example.app:id/sign_in").get(0);
@@ -373,10 +373,10 @@ expected_order = ["email_field", "password_field", "sign_in_button"]
 actual_order = []
 
 for _ in expected_order:
-    result = driver.execute_script('lambda_executor: {"action": "voiceOverGesture", "arguments": {"gesture": "navigate_next"}}')
-    element = result["element_description"]
-    actual_order.append(element["resourceId"])
-    assert element["spokenOutput"].strip(), f"{element['resourceId']} was focused but nothing was spoken"
+result = driver.execute_script('lambda_executor: {"action": "voiceOverGesture", "arguments": {"gesture": "navigate_next"}}')
+element = result["element_description"]
+actual_order.append(element["resourceId"])
+assert element["spokenOutput"].strip(), f"{element['resourceId']} was focused but nothing was spoken"
 
 assert actual_order == expected_order, f"Traversal order changed: {actual_order}"
 
@@ -390,12 +390,12 @@ List<String> expectedOrder = List.of("email_field", "password_field", "sign_in_b
 List<String> actualOrder = new ArrayList<>();
 
 for (int i = 0; i < expectedOrder.size(); i++) {
-    Map<String, Object> result = (Map<String, Object>) driver.executeScript(
-        "lambda_executor: {\"action\": \"voiceOverGesture\", \"arguments\": {\"gesture\": \"navigate_next\"}}");
-    Map<String, Object> element = (Map<String, Object>) result.get("element_description");
-    actualOrder.add((String) element.get("resourceId"));
-    Assert.assertFalse(((String) element.get("spokenOutput")).isBlank(),
-        element.get("resourceId") + " was focused but nothing was spoken");
+Map<String, Object> result = (Map<String, Object>) driver.executeScript(
+"lambda_executor: {\"action\": \"voiceOverGesture\", \"arguments\": {\"gesture\": \"navigate_next\"}}");
+Map<String, Object> element = (Map<String, Object>) result.get("element_description");
+actualOrder.add((String) element.get("resourceId"));
+Assert.assertFalse(((String) element.get("spokenOutput")).isBlank(),
+element.get("resourceId") + " was focused but nothing was spoken");
 }
 
 Assert.assertEquals(actualOrder, expectedOrder, "Traversal order changed");

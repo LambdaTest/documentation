@@ -34,23 +34,23 @@ Enable accessibility, generate the report, and use Linear mode with the default 
 
 ```json
 {
-  "LT:Options": {
-    "platformName": "Android",
-    "deviceName": "Pixel 8",
-    "platformVersion": "14",
-    "isRealMobile": true,
-    "app": "lt://APP1234567890",
-    //highlight-start
-    "accessibility": true,
-    "accessibilityOptions": {
-      "screenReader": {
-        "autoReport": true,
-        "linearNavigation": true,
-        "linearNavigationTimeout": 300000
-      }
-    }
-    //highlight-end
-  }
+"LT:Options": {
+"platformName": "Android",
+"deviceName": "Pixel 8",
+"platformVersion": "14",
+"isRealMobile": true,
+"app": "lt://APP1234567890",
+//highlight-start
+"accessibility": true,
+"accessibilityOptions": {
+"screenReader": {
+"autoReport": true,
+"linearNavigation": true,
+"linearNavigationTimeout": 300000
+}
+}
+//highlight-end
+}
 }
 ```
 
@@ -74,53 +74,53 @@ capabilities.setCapability("LT:Options", ltOptions);
 
 ```python
 lt_options = {
-    "platformName": "iOS",
-    "deviceName": "iPhone 15",
-    "platformVersion": "17",
-    "isRealMobile": True,
-    "app": "lt://APP1234567890",
-    #highlight-start
-    "accessibility": True,
-    "accessibilityOptions": {
-        "screenReader": {
-            "autoReport": True,
-            "linearNavigation": True,
-            "linearNavigationTimeout": 300000,
-        }
-    },
-    #highlight-end
+"platformName": "iOS",
+"deviceName": "iPhone 15",
+"platformVersion": "17",
+"isRealMobile": True,
+"app": "lt://APP1234567890",
+#highlight-start
+"accessibility": True,
+"accessibilityOptions": {
+"screenReader": {
+"autoReport": True,
+"linearNavigation": True,
+"linearNavigationTimeout": 300000,
+}
+},
+#highlight-end
 }
 ```
 
 ```js
 const capabilities = {
-  'LT:Options': {
-    platformName: 'Android',
-    deviceName: 'Galaxy S23',
-    platformVersion: '14',
-    isRealMobile: true,
-    app: 'lt://APP1234567890',
-    //highlight-start
-    accessibility: true,
-    accessibilityOptions: {
-      screenReader: {
-        autoReport: true,
-        linearNavigation: true,
-        linearNavigationTimeout: 300000,
-      },
-    },
-    //highlight-end
-  },
+'LT:Options': {
+platformName: 'Android',
+deviceName: 'Galaxy S23',
+platformVersion: '14',
+isRealMobile: true,
+app: 'lt://APP1234567890',
+//highlight-start
+accessibility: true,
+accessibilityOptions: {
+screenReader: {
+autoReport: true,
+linearNavigation: true,
+linearNavigationTimeout: 300000,
+},
+},
+//highlight-end
+},
 };
 ```
 
 ```yaml
 accessibility: true
 accessibilityOptions:
-  screenReader:
-    autoReport: true
-    linearNavigation: true
-    linearNavigationTimeout: 300000
+screenReader:
+autoReport: true
+linearNavigation: true
+linearNavigationTimeout: 300000
 ```
 
 The same key paths work across every TestMu AI configuration surface: W3C capabilities, YAML config, framework service config, and [HyperExecute](/support/docs/selenium-hyperexecute-accessibility-tests/) YAML.

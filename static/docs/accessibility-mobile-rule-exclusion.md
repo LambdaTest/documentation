@@ -65,10 +65,10 @@ Enable accessibility, target WCAG 2.1 AA, skip two specific rules, and skip the 
 
 ```json
 "LT:Options": {
-  "accessibility": true,
-  "accessibility.wcagVersion": "wcag21aa",
-  "accessibility.excludeRules": ["UndersizedTouchTarget", "DuplicateAccessibilityCheck"],
-  "accessibility.excludeRuleCategories": "color-contrast"
+"accessibility": true,
+"accessibility.wcagVersion": "wcag21aa",
+"accessibility.excludeRules": ["UndersizedTouchTarget", "DuplicateAccessibilityCheck"],
+"accessibility.excludeRuleCategories": "color-contrast"
 }
 ```
 
@@ -82,19 +82,19 @@ caps.setCapability("accessibility.excludeRuleCategories", "color-contrast");
 
 ```python
 caps = {
-    "accessibility": True,
-    "accessibility.wcagVersion": "wcag21aa",
-    "accessibility.excludeRules": ["UndersizedTouchTarget", "DuplicateAccessibilityCheck"],
-    "accessibility.excludeRuleCategories": "color-contrast",
+"accessibility": True,
+"accessibility.wcagVersion": "wcag21aa",
+"accessibility.excludeRules": ["UndersizedTouchTarget", "DuplicateAccessibilityCheck"],
+"accessibility.excludeRuleCategories": "color-contrast",
 }
 ```
 
 ```javascript
 const capabilities = {
-  "accessibility": true,
-  "accessibility.wcagVersion": "wcag21aa",
-  "accessibility.excludeRules": ["UndersizedTouchTarget", "DuplicateAccessibilityCheck"],
-  "accessibility.excludeRuleCategories": "color-contrast",
+"accessibility": true,
+"accessibility.wcagVersion": "wcag21aa",
+"accessibility.excludeRules": ["UndersizedTouchTarget", "DuplicateAccessibilityCheck"],
+"accessibility.excludeRuleCategories": "color-contrast",
 };
 ```
 

@@ -70,11 +70,11 @@ Enable accessibility, target WCAG 2.1 AA, skip two specific rules, and skip the 
 
 ```json
 "LT:Options": {
-  "accessibility": true,
-  "accessibility.wcagVersion": "wcag21aa",
-  "accessibility.bestPractice": true,
-  "accessibility.excludeRules": ["color-contrast", "image-alt"],
-  "accessibility.excludeRuleCategories": "aria"
+"accessibility": true,
+"accessibility.wcagVersion": "wcag21aa",
+"accessibility.bestPractice": true,
+"accessibility.excludeRules": ["color-contrast", "image-alt"],
+"accessibility.excludeRuleCategories": "aria"
 }
 ```
 
@@ -88,21 +88,21 @@ capability.setCapability("accessibility.excludeRuleCategories", "aria");
 
 ```python
 capabilities = {
-    "accessibility": True,
-    "accessibility.wcagVersion": "wcag21aa",
-    "accessibility.bestPractice": True,
-    "accessibility.excludeRules": ["color-contrast", "image-alt"],
-    "accessibility.excludeRuleCategories": "aria",
+"accessibility": True,
+"accessibility.wcagVersion": "wcag21aa",
+"accessibility.bestPractice": True,
+"accessibility.excludeRules": ["color-contrast", "image-alt"],
+"accessibility.excludeRuleCategories": "aria",
 }
 ```
 
 ```javascript
 const capabilities = {
-  "accessibility": true,
-  "accessibility.wcagVersion": "wcag21aa",
-  "accessibility.bestPractice": true,
-  "accessibility.excludeRules": ["color-contrast", "image-alt"],
-  "accessibility.excludeRuleCategories": "aria",
+"accessibility": true,
+"accessibility.wcagVersion": "wcag21aa",
+"accessibility.bestPractice": true,
+"accessibility.excludeRules": ["color-contrast", "image-alt"],
+"accessibility.excludeRuleCategories": "aria",
 };
 ```
 

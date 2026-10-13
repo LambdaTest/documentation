@@ -62,7 +62,7 @@
 
 TestMu AI offers an online Appium automation grid to perform App automation. The online Appium Grid is available on local grid, BrowserStack, Sauce Labs and TestMu AI. Therefore, you can effortlessly migrate your current Appium automation scripts (or suites) from local grid, Sauce Labs or BrowserStack to TestMu AI.
 
-In this documentation, we look at how to leverage TestMu AI cloud for App automation and migrate your test scripts (or test suites) from your local grid, Sauce Labs or BrowserStack. You can use TestMu AI's desired capabilities in your tests, authenticate your test session, and execute tests on the cloud.
+In this documentation, we look at how to leverage TestMu AI cloud for App automation and migrate your End-to-End (E2E) testing scripts (or test suites) from your local grid, Sauce Labs or BrowserStack. You can use TestMu AI's desired capabilities in your tests, authenticate your test session, and execute tests on the cloud.
 
 ## Introduction
 

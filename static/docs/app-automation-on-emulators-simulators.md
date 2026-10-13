@@ -30,7 +30,7 @@
   }) }}
 />
 
-TestMu AI enables developers and testers to automate mobile app testing using cloud-based emulators and simulators. This eliminates the need for physical devices, streamlining the process of validating app functionality across a wide range of configurations.
+TestMu AI enables developers and testers to run End-to-End (E2E) testing of mobile apps on cloud-based emulators and simulators. This eliminates the need for physical devices, streamlining the process of validating app functionality across a wide range of configurations.
 
 In this documеntation, learn how to run app automated tests on Emulators and Simulators using TestMu AI virtual testing cloud.
 

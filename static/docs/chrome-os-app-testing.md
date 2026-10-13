@@ -16,7 +16,7 @@ The Device Control feature allows you tp perform certain actions with your devic
 
 - **Home:** Use this option to navigate to the device's home screen during a manual session.
 - **Volume:** Adjust the device volume directly within your testing session, ensuring optimal audio levels for your tests.
-- **Lock Device :** Lock or unlock your device seamlessly during testing sessions without interrupting your workflow.
+- **Lock Device:** Lock or unlock your device seamlessly during testing sessions without interrupting your workflow.
 
 ## App Controls
 This provide programmatic control over the applications installed within the emulator (e.g., install new app, kill the existing app, or uninstall the app).  App Controls give you the power to do it all programmatically. This streamlines your testing process by eliminating the need for manual app manipulation within the emulator.
@@ -46,7 +46,7 @@ TestMu AI's network throttling feature empowers you to simulate real-world netwo
 The settings section offer the following features:
 - **Idle Timeout :** This feature allows you to set the idle timeout for your test session. The default Idle Timeout is 5 minutes and the maximum limit is 60 minutes.
 - **Time Zone :** With this feature, you can select the time zone of your preferred region that align with your testing needs.
-- **Keyboard Input** With this feature, you can change the language in your test session for a more localized testing experience.
+- **Keyboard Input :** With this feature, you can change the language in your test session for a more localized testing experience.
 
 ## Switch
 Switch allows you to seamlessly switch between multiple emulated devices within the same project.  This eliminates the need to tear down and rebuild individual emulators, streamlining your testing workflow and enabling you to compare app behavior across different ChromeOS device configurations.

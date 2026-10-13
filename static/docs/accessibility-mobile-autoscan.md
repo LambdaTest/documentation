@@ -42,18 +42,18 @@ Enable accessibility, turn AutoScan on, target WCAG 2.1 AA, and leave intelligen
 
 ```json
 {
-  "LT:Options": {
-    "platformName": "Android",
-    "deviceName": "Pixel 8",
-    "platformVersion": "14",
-    "isRealMobile": true,
-    "app": "lt://APP1234567890",
-    //highlight-start
-    "accessibility": true,
-    "accessibility.autoScan": true,
-    //highlight-end
-    "accessibility.wcagVersion": "wcag21aa"
-  }
+"LT:Options": {
+"platformName": "Android",
+"deviceName": "Pixel 8",
+"platformVersion": "14",
+"isRealMobile": true,
+"app": "lt://APP1234567890",
+//highlight-start
+"accessibility": true,
+"accessibility.autoScan": true,
+//highlight-end
+"accessibility.wcagVersion": "wcag21aa"
+}
 }
 ```
 
@@ -69,33 +69,33 @@ caps.setCapability("accessibility.wcagVersion", "wcag21aa");
 
 ```python
 lt_options = {
-    "platformName": "iOS",
-    "deviceName": "iPhone 15",
-    "platformVersion": "17",
-    "isRealMobile": True,
-    "app": "lt://APP1234567890",
-    #highlight-start
-    "accessibility": True,
-    "accessibility.autoScan": True,
-    #highlight-end
-    "accessibility.wcagVersion": "wcag21aa",
+"platformName": "iOS",
+"deviceName": "iPhone 15",
+"platformVersion": "17",
+"isRealMobile": True,
+"app": "lt://APP1234567890",
+#highlight-start
+"accessibility": True,
+"accessibility.autoScan": True,
+#highlight-end
+"accessibility.wcagVersion": "wcag21aa",
 }
 ```
 
 ```js
 const capabilities = {
-  'LT:Options': {
-    platformName: 'Android',
-    deviceName: 'Galaxy S23',
-    platformVersion: '14',
-    isRealMobile: true,
-    app: 'lt://APP1234567890',
-    //highlight-start
-    accessibility: true,
-    'accessibility.autoScan': true,
-    //highlight-end
-    'accessibility.wcagVersion': 'wcag21aa',
-  },
+'LT:Options': {
+platformName: 'Android',
+deviceName: 'Galaxy S23',
+platformVersion: '14',
+isRealMobile: true,
+app: 'lt://APP1234567890',
+//highlight-start
+accessibility: true,
+'accessibility.autoScan': true,
+//highlight-end
+'accessibility.wcagVersion': 'wcag21aa',
+},
 };
 ```
 
@@ -109,9 +109,9 @@ To scan after **every** triggering command, including repeated actions on the sa
 
 ```json
 {
-  "accessibility": true,
-  "accessibility.autoScan": true,
-  "accessibility.intelligentScan": false
+"accessibility": true,
+"accessibility.autoScan": true,
+"accessibility.intelligentScan": false
 }
 ```
 
@@ -123,17 +123,17 @@ caps.setCapability("accessibility.intelligentScan", false);
 
 ```python
 caps = {
-    "accessibility": True,
-    "accessibility.autoScan": True,
-    "accessibility.intelligentScan": False,
+"accessibility": True,
+"accessibility.autoScan": True,
+"accessibility.intelligentScan": False,
 }
 ```
 
 ```js
 const capabilities = {
-  accessibility: true,
-  'accessibility.autoScan': true,
-  'accessibility.intelligentScan': false,
+accessibility: true,
+'accessibility.autoScan': true,
+'accessibility.intelligentScan': false,
 };
 ```
 
