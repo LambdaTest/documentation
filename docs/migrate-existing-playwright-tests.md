@@ -129,7 +129,12 @@ In this documentation, we look at how to migrate your existing Playwright test s
 ## Sample Playwright Script Running On A Local Machine
 ***
 
-With just a few lines of code tweaks in your test script, you can migrate your Playwright tests running on a local grid to <BrandName />. A sample Playwright script below launches a browser on your local machine and runs the script.
+If you already run Playwright tests on a local grid, you can move your End-to-End (E2E) testing to TestMu AI to execute the same scripts across real browsers and operating systems in the cloud. The migration takes only a few lines of change: you point Playwright at the TestMu AI CDP endpoint and pass a `capabilities` object that selects the browser and OS combination for each run.
+
+## Sample Playwright Script Running on a Local Machine
+***
+
+Start from a working local test so you can see exactly which lines change during migration. The sample Playwright script below launches a browser on your local machine and runs the script.
 
 <VerifiedTag value="Verified" />
 
