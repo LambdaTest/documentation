@@ -144,6 +144,13 @@ All variables and parameters in KaneAI can be accessed from https://kaneai.lambd
     <p>Collections of test data used in a test, allowing for data-driven testing by running the same test with different inputs.</p>
   </div>
   </a>
+
+  <a href="/support/docs/test-manager-variables-parameters-secrets/">
+  <div className="support_inners">
+    <h2>Manual Test Cases and Modules</h2>
+    <p>Use variables, parameters, and secrets in manual test case steps and modules, and run manual test cases once per dataset row.</p>
+  </div>
+  </a>
   
 </div>
 
