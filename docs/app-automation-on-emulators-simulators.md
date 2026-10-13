@@ -188,7 +188,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
   ]) }}
 />
 
-<BrandName /> enables developers and testers to automate mobile app testing using cloud-based emulators and simulators. This eliminates the need for physical devices, streamlining the process of validating app functionality across a wide range of configurations. 
+<BrandName /> enables developers and testers to run End-to-End (E2E) testing of mobile apps on cloud-based emulators and simulators. This eliminates the need for physical devices, streamlining the process of validating app functionality across a wide range of configurations. 
 
 <div className="ytframe"> 
 <div className="youtube" data-embed="ZcgYzi60Nmo" data-loading-attribute="eager">

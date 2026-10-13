@@ -151,7 +151,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 
 
-Appium is an open-source framework that allows you to automate tests for mobile applications. It works across different platforms like Android and iOS, enabling you to write tests once and run them on various devices.  
+Appium is an open-source framework that lets you perform End-to-End (E2E) testing of mobile applications. It works across different platforms like Android and iOS, enabling you to write tests once and run them on various devices.  
 
 
 

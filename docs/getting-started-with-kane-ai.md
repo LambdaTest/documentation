@@ -101,7 +101,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     "dateModified": "2026-09-09T19:16:50+05:30"
   }) }}
 />
-Testing shouldn’t slow innovation. KaneAI makes test automation as natural as writing a To Do list with no steep learning curves, no endless script maintenance.
+Testing shouldn’t slow innovation. KaneAI is a GenAI-native testing agent that turns plain natural language into End-to-End (E2E) testing across web and mobile apps — no steep learning curves, no endless script maintenance.
 
 With KaneAI you can:
 
