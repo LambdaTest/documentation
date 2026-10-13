@@ -168,17 +168,17 @@ The new value is saved under KaneAI **Variables**, and its reference is inserted
 - On the free plan, you can pick existing parameters and secrets but cannot create new ones.
 - Smart variables, TOTP variables, and JSON variables are created from the [Variables page](https://www.testmuai.com/login/?redirectTo=https://kaneai.lambdatest.com/variables) only.
 
-## Choose an Environment for Environment Variables
+## Choose an Environment When Automating With KaneAI
 
-Environment variables can have a different value in each environment, such as Dev, Stage, or Production. So before you can add one to a module or a manual test case, choose the environment it belongs to. After you choose an environment, only that environment's variables are suggested.
+Environment variables can hold a different value in each environment, such as Dev, Stage, or Production. In a manual test case, an environment variable stays as a reference. It gets its value when KaneAI runs the test, from the environment chosen for that session.
 
-If the chosen environment is missing environment variables that the module or test case already uses, you see a warning that names the missing variables. You can create them in that environment from the same page. The same warning appears when you add a module to a test case whose environment does not have the module's environment variables.
+When you click **Automate with KaneAI** on a manual test case, choose the environment in the **Environment** field before you start testing. The environment cannot be changed once the session starts. You can also choose the environment before automating from **Create and Automate** and Bulk Automate.
 
-<!-- screenshot: warning listing environment variables missing from the chosen environment, with the option to create them
-<img loading="lazy" src={require('../assets/images/test-manager/variables/missing-environment-variables.png').default} alt="Warning listing environment variables that are missing from the selected environment" className="doc_img"/>
+<!-- screenshot: Automate with KaneAI panel with the Environment field set before starting the session
+<img loading="lazy" src={require('../assets/images/test-manager/variables/automate-with-kaneai-environment.png').default} alt="Automate with KaneAI panel with an environment selected before the session starts" className="doc_img"/>
 -->
 
-To choose an environment in a KaneAI authoring session, see [Select an Environment for an Authoring Session](/support/docs/kane-ai-using-variables/#select-an-environment-for-an-authoring-session).
+To learn how environment variables behave inside a KaneAI session, including importing modules that use them, see [Select an Environment for an Authoring Session](/support/docs/kane-ai-using-variables/#select-an-environment-for-an-authoring-session).
 
 ## Edit Module Steps That Use References
 
