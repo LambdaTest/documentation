@@ -170,8 +170,10 @@ The Test Manager offers a comprehensive Steps section with a rich text editor an
 
 To know more about how to use Modules refer the [Modules doc](/support/docs/create-modules/).
 
+**5. Use Variables, Parameters, and Secrets:** Type `{{` in a step to insert a variable or secret, or `${` to insert a parameter. To learn more, see [Variables, Parameters, and Secrets in Manual Test Cases and Modules](/support/docs/test-manager-variables-parameters-secrets/).
+
 :::note
-In the Classic experience, modules that contain KaneAI instructions, such as variable steps, If-Else blocks, or While Loops, run only in KaneAI test cases. Selecting one in the **Add Module** dialog leaves **Add in step** disabled. See [Importing Modules into Test Cases](/support/docs/create-modules/).
+In the Classic experience, modules that contain If-Else blocks or While Loops run only in KaneAI test cases. Selecting one in the **Add Module** dialog leaves **Add in step** disabled. Modules that use variables, parameters, or secrets can be added. See [Importing Modules into Test Cases](/support/docs/create-modules/).
 :::
 
 #### Add New Step:
