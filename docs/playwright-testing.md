@@ -143,7 +143,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
 # How to Run Your First Playwright Test on TestMu AI
 ***
 
-If you write end-to-end tests with Playwright, you can run those same tests on TestMu AI instead of your local machine. This gives your Playwright suite access to real browsers and operating system combinations, so you catch issues that only appear on specific platforms. You point Playwright at the TestMu AI grid through a CDP WebSocket endpoint, pass your credentials and a `capabilities` object, then view the results on the Automation Dashboard.
+If you do End-to-End (E2E) testing with Playwright, you can run those same tests on TestMu AI instead of your local machine. This gives your Playwright suite access to real browsers and operating system combinations, so you catch issues that only appear on specific platforms. You point Playwright at the TestMu AI grid through a CDP WebSocket endpoint, pass your credentials and a `capabilities` object, then view the results on the Automation Dashboard.
 
 TestMu AI supports Playwright versions v1.15.0 through the latest release, and automates Chromium, Firefox, WebKit, and Microsoft Edge.
 
