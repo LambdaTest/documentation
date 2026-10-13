@@ -129,7 +129,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     "dateModified": "2026-09-09T19:10:37+05:30"
   }) }}
 />
-Welcome to HyperExecute, **an AI-Native Test Orchestration Cloud Platform**, designed to accelerate your testing process, enabling test automation teams worldwide to achieve an accelerated time to market by providing **JIT (Just-in-time) testing infrastructure**.
+Welcome to HyperExecute, **an AI-Native Test Orchestration Cloud Platform**, designed to accelerate your End-to-End (E2E) testing, enabling test automation teams worldwide to achieve an accelerated time to market by providing **JIT (Just-in-time) testing infrastructure**.
 
 If you want to learn more about HyperExecute and how it can enable your team, then you are the right place. This guide will help you take your first steps with HyperExecute, from understanding the basics to running your first test.
 

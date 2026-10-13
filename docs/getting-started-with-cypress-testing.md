@@ -223,6 +223,7 @@ Integrating <BrandName /> with Cypress allows you to perform Cypress testing acr
 In this guide, learn how to get started with Cypress testing on the <BrandName /> platform. We will use Cypress kitchen sink sample app to execute our tests. 
 
 
+If you already write Cypress tests, running your End-to-End (E2E) testing on TestMu AI lets you execute those same tests across multiple browser versions on the cloud instead of a single local browser. You do it by cloning the sample project, setting your credentials, configuring capabilities in `lambdatest-config.json`, and running the test with the TestMu AI Cypress CLI.
 
 ## Prerequisites
 ---

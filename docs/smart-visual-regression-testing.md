@@ -107,7 +107,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     "dateModified": "2026-09-09T19:10:37+05:30"
   }) }}
 />
-SmartUI is a visual testing tool that helps in identifying visual regressions in web applications. It uses advanced image comparison techniques to detect differences between baseline images and those captured during subsequent test runs.
+SmartUI is a visual testing tool that helps in identifying visual regressions in web applications, plugging into your End-to-End (E2E) testing across Selenium, Cypress, and Playwright to catch visual changes automatically. It uses advanced image comparison techniques to detect differences between baseline images and those captured during subsequent test runs.
 
 You can perform following Visual Regression tests using SmartUI:
 

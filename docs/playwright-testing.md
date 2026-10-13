@@ -164,7 +164,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 * * *
 Playwright is a Node.js library that uses a single API to automate Chromium, Firefox, and WebKit. It is designed to enable powerful, reliable, and efficient automated browser testing. Playwright can also automate Microsoft Edge since it is built on the open-source Chromium web framework.
 
-<BrandName /> allows you to run Playwright tests across real browsers and operating system combinations. This guide will cover the basics of getting started with Playwright testing on the <BrandName /> platform.
+If you do End-to-End (E2E) testing with Playwright, you can run those same tests on TestMu AI instead of your local machine. This gives your Playwright suite access to real browsers and operating system combinations, so you catch issues that only appear on specific platforms. You point Playwright at the TestMu AI grid through a CDP WebSocket endpoint, pass your credentials and a `capabilities` object, then view the results on the Automation Dashboard.
 
 
 *You can run tests using Playwright versions **v1.15.0** to the latest.*

@@ -48,7 +48,7 @@ import RealDeviceTag from '../src/component/realDevice';
 
 <RealDeviceTag value="Real Device" />
 
-[Mobilewright](https://github.com/mobile-next/mobilewright) is an open-source mobile UI test framework with a Playwright-style API. You write tests in TypeScript or JavaScript against the `device`, `screen`, and `expect` fixtures, and Mobilewright drives your Android or iOS app with auto-waiting locators and retrying assertions.
+[Mobilewright](https://github.com/mobile-next/mobilewright) is an open-source mobile UI test framework with a Playwright-style API for End-to-End (E2E) testing of Android and iOS apps. You write tests in TypeScript or JavaScript against the `device`, `screen`, and `expect` fixtures, and Mobilewright drives your Android or iOS app with auto-waiting locators and retrying assertions.
 
 With the <BrandName /> driver for Mobilewright, you can run your existing Mobilewright suite on real Android and iOS devices in the <BrandName /> cloud by changing one line of configuration. Your tests stay the same.
 

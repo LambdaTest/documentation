@@ -80,7 +80,7 @@ canonical: https://www.testmuai.com/support/docs/agent-assurance-overview/
 
 # What is TestMu AI Agent Assurance
 
-TestMu AI Agent Assurance helps teams gather evidence about whether an AI agent they own is ready to ship. It is white-box testing for agents that *act*: they call tools, write files, hit APIs, and change external state.
+TestMu AI Agent Assurance helps teams gather evidence about whether an AI agent they own is ready to ship. It brings End-to-End (E2E) testing to agents that *act*—white-box testing that follows them as they call tools, write files, hit APIs, and change external state.
 
 Agent Assurance does not grade the agent on what it says it did. An agent's own reply is the weakest available signal, because an agent can produce a confident, well-written summary of work it never completed. Agent Assurance goes inside the system and verifies the actual effects: the recorded tool calls, the command output and exit status, the files that changed, the artifacts that were produced, and read-only checks against the target's real state. How much it can observe depends on the access and the profile you give it; where no stronger evidence is available, a criterion is reported as **Unable to Verify** rather than passed on the agent's word.
 

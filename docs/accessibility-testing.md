@@ -61,7 +61,7 @@ slug: accessibility-testing/
 
 # Getting Started with Accessibility Testing
 
-TestMu AI Accessibility Testing helps teams find, understand, and fix accessibility issues across websites, web apps, and mobile apps.
+TestMu AI Accessibility Testing helps teams find, understand, and fix accessibility issues across websites, web apps, and mobile apps, and plugs into your End-to-End (E2E) testing to catch them during automated runs.
 
 ## What Accessibility Testing covers
 
