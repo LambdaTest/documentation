@@ -18,6 +18,7 @@ canonical: https://www.testmuai.com/support/docs/rook-installation/
 ---
 import VerifiedTag from '@site/src/component/verifiedTag';
 import { BRAND_URL } from '@site/src/component/BrandName';
+import ThemedImage from '@theme/ThemedImage';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -176,7 +177,7 @@ import { BRAND_URL } from '@site/src/component/BrandName';
 
 # Install Rook
 
-<img src="/support/assets/images/rook/rook-mascot.svg" alt="Rook, the chess-piece mascot" width="96" height="122" className="no-zoom" style={{float: 'right', margin: '0 0 1rem 1.5rem'}} />
+<ThemedImage sources={{light: require('../assets/images/rook/rook-mascot-light.gif').default, dark: require('../assets/images/rook/rook-mascot-dark.gif').default}} alt="Rook, the chess-piece mascot" width="160" height="160" className="no-zoom" style={{float: 'right', margin: '0 0 1rem 1.5rem'}} />
 
 Rook is publicly available from the [LambdaTest/rook repository](https://github.com/LambdaTest/rook). Install it with Homebrew, the shell installer, or npm. Use one method per machine so an older executable from another method does not take precedence on `PATH`.
 
