@@ -209,7 +209,7 @@ rook mcp list --json
 
 Each row reports the server name, origin, transport, state, source, and connection or tool status when available.
 
-<img loading="lazy" src={require('../assets/images/rook/guides/rook-tui-mcp-list.png').default} alt="Rook interactive MCP listing reporting no configured or discovered servers for the HTTP-only triage sample" width="2200" height="520" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/rook/guides/rook-tui-mcp-list.png').default} alt="Rook interactive MCP listing reporting no configured or discovered servers for the HTTP-only triage sample" width="2200" height="572" className="doc_img"/>
 
 This actual first-use capture has no MCP servers: the triage sample is reached by HTTP, not MCP. It is an empty configuration, not a failed connection. After adding a server, repeat `/mcp list` and inspect it with `/mcp get <name>` before approving or using it. Declaring a server alone does not prove its tools work.
 

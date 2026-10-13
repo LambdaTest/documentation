@@ -96,7 +96,7 @@ import { BRAND_URL } from '@site/src/component/BrandName';
         "https://www.youtube.com/@TestMuAI"
       ]
     },
-    "dateModified": "2026-09-28"
+    "dateModified": "2026-10-13"
   }) }}
 />
 
@@ -111,7 +111,7 @@ A profile names the environment variables its hooks read, and why; it does not h
 
 Launch `rook` in your agent workspace. In the interactive TUI, start with `/env list` to inspect configured names and masked values. The following capture sets and lists a **non-secret demonstration value**, not a credential:
 
-<img loading="lazy" src={require('../assets/images/rook/guides/rook-tui-env-values.png').default} alt="Rook interactive environment commands storing the non-secret DEMO_LABEL value and listing it with its middle masked" width="2200" height="680" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/rook/guides/rook-tui-env-values.png').default} alt="Rook interactive environment commands storing the non-secret DEMO_LABEL value and listing it with its middle masked" width="2200" height="810" className="doc_img"/>
 
 For a harmless first check, enter these commands one at a time:
 
