@@ -300,7 +300,7 @@ rook whoami
 
 Authentication is global. Multiple <code>rook</code> sessions on the same machine use the credentials stored below <code>~/.testmuai/rook/</code>.
 
-<img loading="lazy" src={require('../assets/images/rook/commands/rook-command-whoami.png').default} alt="Rook whoami command help in a terminal" width="1556" height="956" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/rook/guides/rook-tui-get-started.png').default} alt="Fresh Rook 0.1.11 interactive session showing the mascot banner, the Explore, Generate, Run, and Report journey, and Get Started commands before sign-in and discovery" width="2200" height="1366" className="doc_img"/>
 
 ### Install a specific release
 

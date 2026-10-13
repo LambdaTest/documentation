@@ -169,7 +169,11 @@ See the [end-user quickstart](/support/docs/agent-assurance-quickstart/#test-you
 
 ### rook {#rook}
 
-Start the interactive terminal in the workspace whose agent materials and results you want to use. It keeps the current agent, profile, scenarios, spend, live subagent progress, permission questions, and next recommended command visible. It is the best starting point for a human-led run.
+Use <code>rook</code> to start the interactive terminal in the workspace whose agent material and testing state you want to use.
+
+<img loading="lazy" src={require('../assets/images/rook/commands/rook-reference-home.png').default} alt="Rook 0.1.11 interactive home with the mascot banner, the Returns and Refunds Assistant sample agent, its workflow checklist, and slash-command input" width="2200" height="1684" className="doc_img"/>
+
+#### Syntax {#rook-syntax}
 
 ~~~bash
 rook

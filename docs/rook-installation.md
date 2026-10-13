@@ -176,6 +176,8 @@ import { BRAND_URL } from '@site/src/component/BrandName';
 
 # Install Rook
 
+<img src="/support/assets/images/rook/rook-mascot.svg" alt="Rook, the chess-piece mascot" width="96" height="122" className="no-zoom" style={{float: 'right', margin: '0 0 1rem 1.5rem'}} />
+
 Rook is publicly available from the [LambdaTest/rook repository](https://github.com/LambdaTest/rook). Install it with Homebrew, the shell installer, or npm. Use one method per machine so an older executable from another method does not take precedence on `PATH`.
 
 Installation commands run in your normal terminal. After installation, launch `rook` (or `rook.cmd` in PowerShell) **without a subcommand** to open the interactive terminal UI (TUI). Stay in that session for sign-in, project selection, exploration, generation, and testing; you do not need CI/headless mode for the walkthrough.
@@ -388,7 +390,26 @@ cd your-project
 rook
 ```
 
-`rook doctor` checks the CLI version, workspace, production service reachability, identity, authentication, project selection, TTY mode, and local state.
+On Windows PowerShell:
+
+```powershell
+Set-Location 'C:\work\my-agent'
+$env:ROOK_ENV = 'prod'
+rook.cmd
+```
+
+You should see the Rook banner and an interactive prompt or a project chooser, not a command that prints output and exits. This capture shows a new session before sign-in and before an agent has been explored:
+
+<img loading="lazy" src={require('../assets/images/rook/guides/rook-tui-get-started.png').default} alt="Rook 0.1.11 interactive startup in color with the mascot banner, Explore, Generate, Run and Report, Get Started commands, a sign-in prompt, and no agent selected" width="2200" height="1366" className="doc_img"/>
+
+1. If prompted to sign in, enter `/login` and complete the browser flow. Return to this same terminal when Rook reports that you are signed in. Browser UI sign-in and CLI sign-in are separate.
+2. At **Projects**, use the arrow keys and Enter to list existing projects or create a new test project. Esc goes back; you can reopen the chooser with `/project`.
+3. Enter `/doctor` to check this interactive session's authentication, services, workspace, and TTY state. Enter `/plan` to check credits before paid work.
+4. Continue with the [first-agent walkthrough](/support/docs/agent-assurance-quickstart/#test-your-first-agent): explore the sample, select its agent, create a profile, generate a small suite, and run one reviewed scenario.
+
+Type `/` to see commands, use Tab for completion, and use `/exit` when finished. Do not paste `rook explore` at the TUI prompt; enter `/explore` there. Shell commands remain useful for scripts, but this first-use workflow stays interactive.
+
+If the TUI looks monochrome, check whether your terminal has `NO_COLOR` set or `FORCE_COLOR=0`. Those settings intentionally disable colors. For this session only, launch with `env -u NO_COLOR -u FORCE_COLOR rook` on macOS/Linux; in PowerShell, remove those two environment variables from the current session before starting `rook.cmd`. Rook's normal theme uses amber and muted text; not every output line is colored.
 
 ## Public Releases and Checksums
 
