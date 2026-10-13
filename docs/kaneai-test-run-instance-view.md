@@ -104,7 +104,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         "https://www.youtube.com/@TestMuAI"
       ]
     },
-    "dateModified": "2026-09-25T18:00:00+05:30"
+    "dateModified": "2026-10-13T00:00:00+05:30"
   }) }}
 />
 
@@ -236,6 +236,12 @@ Additionally, the following tabs are available for extended analysis:
 - **Accessibility** - Accessibility audit results for the tested pages
 
 You can dock the logs panel to the **right** or **bottom** of the screen depending on your preference.
+
+## Inspect Variables Used by an Instance
+
+In the new test instance view, open the right-side **Test Execution Logs** panel and select **Variables**. This tab shows the parameters, variables, and Files used by that instance, with the recorded value or File reference. For parameters, it also identifies the Dataset row and shows which steps used each parameter. Use **Search variables and files** or **View: All** to narrow the list.
+
+<img loading="lazy" src={require('../assets/images/kane-ai/features/data-driven-testing/test-instance-variables-tab.png').default} alt="Test instance Variables tab showing parameters from dataset row 1 and the steps that used them" className="doc_img"/>
 
 ## Navigate Between Tests
 
@@ -395,6 +401,7 @@ A banner at the top of the instance explains the failure. Click **View failed st
 ## Related Guides
 
 - [Execute Test Runs on HyperExecute](/support/docs/kaneai-hyperexecute-test-run-execution/) - Create and execute test runs
+- [Test Run Output](/support/docs/kaneai-test-run-output/) - Export the values and status used by each KaneAI test instance
 - [Evidence Reporting](/support/docs/kaneai-hyperexecute-test-run-execution/#evidence-reporting) - Run a test run with Evidence Reporting
 - [Sequential Test Runs](/support/docs/kaneai-sequential-test-runs/) - Run dependent test cases in order
 - [Test Run Configurations](/support/docs/test-runs-configurations/) - Manage browser and device configurations
