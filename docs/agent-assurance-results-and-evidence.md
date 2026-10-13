@@ -232,11 +232,11 @@ Launch `rook` in the workspace containing your saved run. In the interactive TUI
 
 Replace `<run-id>` with the saved run's ID. `/report` without an ID reads the latest local run. If Rook asks you to sign in, use `/login` and retry the report command. Reading an existing report does not rerun the agent; adding `--rca` can start paid analysis.
 
-This is the completed report from the Rook 0.1.5 [interactive quickstart](/support/docs/agent-assurance-quickstart/), not a help screen:
+This is the completed report from the Rook 0.1.11 [interactive quickstart](/support/docs/agent-assurance-quickstart/), not a help screen:
 
-<img loading="lazy" src={require('../assets/images/rook/guides/rook-tui-report.png').default} alt="Rook's saved first-triage-run report showing one executed and passed scenario, no unverifiable results, and four untested feature areas" width="2200" height="1520" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/rook/guides/rook-tui-report.png').default} alt="Rook's saved first-triage-run report showing one executed and passed scenario, no unverifiable results, credits, agent latency, and the evidence directory" width="2200" height="1128" className="doc_img"/>
 
-Read the run ID and name, execution counts, verdicts, and coverage warning together. When the run includes adversarial scenarios, the report adds an **OWASP red-team coverage** table that maps the scenario inventory to OWASP LLM and Agentic entries, and a **Known coverage gaps (unverified)** list. A control with no mapped scenario remains unverified. `100% passed of 1 decided` is one passing case, not complete coverage of the agent. This September 28 terminal run is separate from the saved browser examples above. Use `/help report` for additional output and RCA options.
+Read the run ID and name, execution counts, and verdicts together. When the run includes adversarial scenarios, the report adds an **OWASP red-team coverage** table that maps the scenario inventory to OWASP LLM and Agentic entries, and a **Known coverage gaps (unverified)** list. A control with no mapped scenario remains unverified. `1 of 1 executed · 100% passed` is one passing case, not complete coverage of the agent. This October 13 terminal run is separate from the saved browser examples above. Use `/help report` for additional output and RCA options.
 
 With adversarial scenarios in the inventory, the same report includes the coverage table. This excerpt is from a Rook 0.1.11 run of the triage-service sample on October 13, 2026, with rows elided:
 

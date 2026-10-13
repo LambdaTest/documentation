@@ -120,7 +120,7 @@ Review the steps and estimated credits before proceeding.
 
 For a first run, use a narrow generation request such as the [two-scenario quickstart](/support/docs/agent-assurance-quickstart/#test-your-first-agent). This actual TUI plan includes two features and explains why the other three are excluded:
 
-<img loading="lazy" src={require('../assets/images/rook/guides/rook-tui-generate-plan.png').default} alt="Interactive Rook generation plan showing two included triage cases, three excluded features, and proceed, discard, or change controls" width="2200" height="1120" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/rook/guides/rook-tui-generate-plan.png').default} alt="Interactive Rook generation plan showing two included triage cases, three excluded features, and proceed, discard, or change controls" width="2200" height="1168" className="doc_img"/>
 
 Use the arrow keys and Enter to **proceed** with writing, **discard** the plan without writing scenarios, or **change** the request. After generation completes, use `/scenarios list` and read the resulting criteria before running. A plan is not yet a saved suite or a test result.
 
@@ -138,7 +138,7 @@ A plain `generate` plans for the functional and adversarial classes, but the pla
 
 ## Red-Team Coverage and Standards {#red-team-standards}
 
-Adversarial scenarios are built from 25 attack patterns. Since 0.1.11, each generated attack records the standards it exercises in a `redteam` block: the [OWASP Top 10 for LLM Applications](https://genai.owasp.org/llm-top-10/) (2025, `LLM01`–`LLM10`), the OWASP Top 10 for Agentic Applications (2026, `ASI01`–`ASI10`), and MITRE ATLAS techniques. Scenario tags such as `owasp:llm01` carry the same mapping.
+Adversarial scenarios are built from 25 attack patterns. Since 0.1.11, each generated attack records the standards it exercises in a `redteam` block: the [OWASP Top 10 for LLM Applications](https://genai.owasp.org/llm-top-10/) (2025, `LLM01`–`LLM10`), the [OWASP Top 10 for Agentic Applications](https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/) (2026, `ASI01`–`ASI10`), and MITRE ATLAS techniques. Scenario tags such as `owasp:llm01` carry the same mapping.
 
 ```yaml
 class: adversarial
@@ -234,9 +234,9 @@ Launch `rook` in your workspace, then list scenarios inside its interactive TUI:
 /scenarios list
 ```
 
-<img loading="lazy" src={require('../assets/images/rook/guides/rook-tui-scenarios.png').default} alt="Rook interactive scenario listing with twelve CommerceCare scenarios, runnability, classes, categories, feature IDs, criteria counts, and the TUI input" width="2200" height="1520" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/rook/guides/rook-tui-scenarios.png').default} alt="Rook interactive scenario listing with the two quickstart triage scenarios, runnability against local-triage, classes, categories, feature IDs, criteria counts, and the TUI input" width="2200" height="770" className="doc_img"/>
 
-The first line summarizes runnability against the active profile. Each scenario shows its ID, class, category, feature, and criteria count. This saved demo has twelve runnable scenarios. Runnable means they can be attempted, not that they have passed.
+The first line summarizes runnability against the active profile. Each scenario shows its ID, class, category, feature, and criteria count. This quickstart project has two scenarios, both counted as runnable. Runnable means they can be attempted, not that they have passed.
 
 From a regular shell instead:
 
@@ -376,7 +376,7 @@ Deletion removes the live scenario file, but completed runs keep a snapshot of t
 
 ## Manual Editing Guidelines
 
-Scenario files are plain YAML under `.testmuai/rook/agents/<agent-id>/scenarios/`. You can review them in a pull request and edit them with normal tools.
+Scenario files are plain YAML under `.testmuai/rook/projects/<project-id>/agents/<agent-id>/scenarios/`; [Workspace Files](/support/docs/rook-workspace-files/) shows the full tree. You can review them in a pull request and edit them with normal tools.
 
 When editing manually:
 

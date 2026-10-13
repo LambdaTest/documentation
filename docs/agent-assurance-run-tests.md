@@ -207,7 +207,7 @@ Use higher concurrency only when the target isolates sessions and fixtures. Conc
 
 First review the run plan. This actual [quickstart](/support/docs/agent-assurance-quickstart/) capture selects one scenario, excludes the other, and waits for a decision:
 
-<img loading="lazy" src={require('../assets/images/rook/guides/rook-tui-run-plan.png').default} alt="Rook waiting for approval of a one-scenario run plan, with the excluded scenario and proceed, discard, and change choices" width="2200" height="920" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/rook/guides/rook-tui-run-plan.png').default} alt="Rook waiting for approval of a one-scenario run plan, with the excluded scenario and proceed, discard, and change choices" width="2200" height="969" className="doc_img"/>
 
 Use the arrow keys and Enter to choose **proceed**, **discard**, or **change**. Check the active project, agent, and profile in the footer. A selected plan does not prove that the endpoint is safe: inspect the profile and its scripts first. The plan is not a fixed credit quote.
 
@@ -226,9 +226,9 @@ Deny rules override allow rules, and more specific rules win. Permission state i
 
 ## Follow Run Progress
 
-After approval, each active scenario shows its current phase. This is an actual `SC-002` execution against the public triage fixture, captured while Rook was judging the response and recorded hook evidence:
+After approval, each active scenario shows its current phase. This is an actual `SC-001` execution against the public triage fixture, captured while Rook was judging the response and recorded hook evidence:
 
-<img loading="lazy" src={require('../assets/images/rook/guides/rook-tui-run-progress.png').default} alt="Rook's interactive run progress with SC-002 in judging, evidence reads, a completion counter, and active project and profile" width="2200" height="1160" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/rook/guides/rook-tui-run-progress.png').default} alt="Rook's interactive run progress with SC-001 in judging, the judge's notes, a completion counter, and the active project and profile" width="2200" height="731" className="doc_img"/>
 
 `0/1` means the scenario has not finished; it does not mean it failed. Wait for completion, then enter `/report` to inspect pass, fail, unverifiable, and unjudged counts. See [results and evidence](/support/docs/agent-assurance-results-and-evidence/#print-or-export-a-report) for the completed report from this demo.
 

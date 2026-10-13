@@ -228,10 +228,10 @@ test('installation and quickstart lead into the interactive TUI with actual work
   assert.match(install, /rook-tui-get-started\.png/);
   assert.match(install, /NO_COLOR/);
   assert.match(install, /arrow keys and Enter/);
-  assert.match(quickstart, /\*\*Rook 0\.1\.5\*\*/);
+  assert.match(quickstart, /\*\*Rook 0\.1\.11\*\*/);
   assert.match(quickstart, /one step at a time/);
   assert.match(quickstart, /not a fixed credit quote/);
-  assert.match(quickstart, /not complete|left four discovered feature areas untested/);
+  assert.match(quickstart, /not complete|four of the five discovered features were not tested/);
   const stages = [
     ['2. Open the TUI', ['get-started', 'explore-confirm']],
     ['3. Generate and verify the profile', ['profile-authoring', 'profile-verified']],
@@ -278,7 +278,7 @@ test('supporting workflow pages show real checkpoints with honest scope and perm
 test('CLI Reference documents the public baseline, interactive screenshots, and approved saved-run RCA', () => {
   const doc = fs.readFileSync(path.join(root, 'docs/agent-assurance-command-reference.md'), 'utf8');
   assert.match(doc, /public Rook 0\.1\.11 CLI/);
-  assert.match(doc, /Rook 0\.1\.5 interactive TUI/);
+  assert.match(doc, /Rook 0\.1\.11 interactive TUI/);
   assert.match(doc, /They show command help, not completed paid operations/);
   assert.match(doc, /\{#root-cause-analysis\}/);
   assert.match(doc, /rook report <run-id> --rca/);
@@ -313,7 +313,7 @@ test('Troubleshooting covers current Windows, scenario, RCA, and support recover
   assert.match(doc, /token_economy.*blocked if the profile does not report usage/);
   assert.match(doc, /\{#rca-troubleshooting\}/);
   assert.match(doc, /command-reference\/#root-cause-analysis/);
-  assert.match(doc, /no credentials/);
+  assert.match(doc, /identity is authenticated/);
   assert.match(doc, /rook-reference-doctor\.png/);
   assert.doesNotMatch(doc, /rook-terminal-(?:doctor|scenarios)\.png/);
   assert.match(doc, /\{#support-report\}/);
