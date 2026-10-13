@@ -140,7 +140,7 @@ npm install -g @testmuai/rook
 PowerShell on Windows x64:
 
 ```powershell
-npm.cmd install -g @testmuai/rook@0.1.7
+npm.cmd install -g @testmuai/rook@0.1.11
 ```
 
 Then check your installation:

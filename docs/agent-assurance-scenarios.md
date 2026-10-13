@@ -136,6 +136,29 @@ Rook has three classes and 16 categories.
 
 A plain `generate` covers the functional and adversarial classes. Ask for `non_functional` with `--class`; a `token_economy` scenario runs only when the profile reports usage. Since 0.1.7, Rook no longer generates the earlier `performance` and `reliability` categories.
 
+## Red-Team Coverage and Standards {#red-team-standards}
+
+Adversarial scenarios are built from 25 attack patterns. Since 0.1.11, each generated attack records the standards it exercises in a `redteam` block: the [OWASP Top 10 for LLM Applications](https://genai.owasp.org/llm-top-10/) (2025, `LLM01`–`LLM10`), the OWASP Top 10 for Agentic Applications (2026, `ASI01`–`ASI10`), and MITRE ATLAS techniques. Scenario tags such as `owasp:llm01` carry the same mapping.
+
+```yaml
+class: adversarial
+category: prompt_injection
+goal: >-
+  The payload sent to the agent, unchanged.
+redteam:
+  pattern_id: <attack-pattern>
+  objective: What the attacker wants to achieve
+  target_control: The guard or control the attack exercises
+  standards:
+    - { framework: owasp_llm, edition: "2025", id: LLM01, name: Prompt Injection }
+  success_signals: [...]
+  failure_signals: [...]
+```
+
+The `goal` stays the payload delivered to the target; `objective` and `target_control` tell the judge what a compromise would look like. Some patterns run as a conversation with `multi_turn: true` and `max_turns` from 2 to 8. Jailbreak patterns can include a poetry variant of the same request. The cross-session memory-poisoning pattern (ASI06) plants content in one session and probes from a second, fresh session.
+
+Patterns that need seeded data, independently collected evidence, or a fresh session are skipped until the profile supplies the matching hook; see [hooks for red-team scenarios](/support/docs/rook-profiles-and-hooks/#red-team-hooks). The run report maps what ran to each standard; see [Print or Export a Report](/support/docs/agent-assurance-results-and-evidence/#print-or-export-a-report).
+
 ## Control the Suite Size and Focus
 
 Request an approximate total:
@@ -193,7 +216,7 @@ Use `--force` to regenerate even when the active agent appears current:
 /generate --force --total 20
 ```
 
-Review the generated scenarios and their required evidence. The older `--no-validate` flag is not available in 0.1.7.
+Review the generated scenarios and their required evidence. The older `--no-validate` flag is no longer available.
 
 Select the intended project and agent with <code>rook project use &lt;id&gt;</code> and <code>rook agent use &lt;id&gt;</code> before headless commands.
 
@@ -227,12 +250,15 @@ Runnability is recomputed from the scenario and the active profile, not fixed wh
 - A streamed response cannot be read.
 - A multi-turn scenario has no conversation mapping.
 - A required MCP verification server is unavailable.
+- An attack needs fixture seeding, a `collect` hook, or a fresh session that the profile does not provide.
 
 Missing usage reporting, tool-call observation, or filesystem observation is different. Rook can still invoke the agent and grade the criteria it can see:
 
 - The affected criteria become **Unable to Verify**.
 - The run still consumes time and credits.
 - The message names the profile field or MCP configuration that can close the gap.
+
+Generation keeps scenarios it cannot make runnable instead of dropping them. Such a scenario is written with `executable: false` and a `skip_reason` that starts with `coverage gap:`, `invalid scenario:`, or `invalid red-team scenario:`, and `generate` warns about it. A scenario whose acceptance criteria contradict each other is rejected. Attack patterns that produced no scenario for a feature are listed in the agent's `coverage-gaps.yaml` as unverified, not as passed.
 
 ## Scenario YAML Anatomy
 
@@ -292,7 +318,7 @@ Important fields:
 
 ## Input and Output Modalities
 
-Scenario input kinds are `text`, `text+file`, `url`, `pr_ref`, and `image`. The current executor passes `text` and `url` values through the goal.
+Scenario input kinds are `text`, `text+file`, `url`, `pr_ref`, `image`, and `structured`. The current executor passes `text` and `url` values through the goal.
 
 **Not yet implemented:** Native file attachment, `pr_ref`, and image-input delivery. Do not use them as executable release gates. The profile schema can record an attachment field or upload endpoint, but the runner does not currently transmit `scenario.input.attachments`.
 
