@@ -124,6 +124,8 @@ Sync the reviewed project with <code>/sync</code> before a normal timeline run. 
 
 Rook skips scenarios that cannot be attempted and groups the reasons.
 
+Without `--only`, a run selects at most two scenarios per attack pattern. The others are skipped with the reason `pattern <id> already has 2 candidates in this run`. Name scenarios with `--only` to run more of one pattern.
+
 A partially observable scenario still runs when it can establish useful evidence. Individual criteria that cannot be checked become **Unable to Verify**.
 
 The default concurrency is `1` unless the profile or plan selects another value. An explicit `--concurrency` accepts 1–8 and overrides that choice.
@@ -239,7 +241,7 @@ After approval, each active scenario shows its current phase. This is an actual 
 
 The second command continues the same run after delayed evidence is ready. <code>--resume</code> instead creates a new run and carries compatible completed work forward. Rook owns judging; the other phases run your profile hooks.
 
-See [phases and hooks](/support/docs/rook-profiles-and-hooks/#lifecycle) for prerequisites and state. The old <code>--no-narrative</code> option is not available in 0.1.3.
+See [phases and hooks](/support/docs/rook-profiles-and-hooks/#lifecycle) for prerequisites and state. The old <code>--no-narrative</code> option is no longer available.
 
 ## Request Root-Cause Analysis
 

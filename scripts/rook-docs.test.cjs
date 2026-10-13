@@ -34,7 +34,7 @@ test('public installation examples use the current Homebrew tap and include nati
     const bash = [...doc.matchAll(/```bash\n([\s\S]*?)\n```/g)].map(m => m[1]).join('\n');
     assert.match(bash, /brew install lambdatest\/rook\/rook/);
     assert.doesNotMatch(bash, /brew tap LambdaTest\/rook https:\/\/github\.com\/LambdaTest\/rook\.git/);
-    assert.match(doc, /npm\.cmd install -g @testmuai\/rook@0\.1\.5/);
+    assert.match(doc, /npm\.cmd install -g @testmuai\/rook@0\.1\.11/);
   }
   assert.match(install, /\{#windows\}/);
   assert.match(install, /\{#windows-wsl\}/);
@@ -160,7 +160,7 @@ test('hosted review directions use Profiles and the evidence drawer, not the ret
   assert.doesNotMatch(hostedUi + hostedProfiles, /YAML.*inline|specification inline|earlier side-by-side layout/);
 });
 
-test('local UI guide covers the tabbed viewer without promising it in public CLI 0.1.5', () => {
+test('local UI guide covers the tabbed viewer and names the first public release that ships it', () => {
   const ui = fs.readFileSync(path.join(root, 'docs/rook-web-ui.md'), 'utf8');
   const local = ui.split('### If You Still Have the Earlier Local UI')[0];
   assert.match(local, /\*\*Summary\*\*, \*\*Profiles\*\*, \*\*Features\*\*, \*\*Scenarios\*\*, and \*\*Runs\*\*/);
@@ -168,7 +168,7 @@ test('local UI guide covers the tabbed viewer without promising it in public CLI
   assert.match(local, /profile YAML inline/);
   assert.match(local, /\*\*Evidence\*\* panel to open its drawer/);
   assert.match(local, /`hooks\.json`, `snapshot\.yaml`.*not listed here/);
-  assert.match(ui, /public npm release was still \*\*0\.1\.5\*\*/);
+  assert.match(ui, /ships in public releases from \*\*0\.1\.6\*\*/);
   assert.match(ui, /\{#earlier-local-ui\}/);
   assert.match(ui, /different examples, not two views of the same execution/);
   for (const name of ['agents', 'agent', 'profiles', 'features', 'feature', 'scenarios', 'scenario', 'runs', 'run', 'result', 'response', 'evidence']) {
@@ -276,7 +276,7 @@ test('supporting workflow pages show real checkpoints with honest scope and perm
 
 test('CLI Reference documents the public baseline, interactive screenshots, and approved saved-run RCA', () => {
   const doc = fs.readFileSync(path.join(root, 'docs/agent-assurance-command-reference.md'), 'utf8');
-  assert.match(doc, /public Rook 0\.1\.5 CLI/);
+  assert.match(doc, /public Rook 0\.1\.11 CLI/);
   assert.match(doc, /Rook 0\.1\.5 interactive TUI/);
   assert.match(doc, /They show command help, not completed paid operations/);
   assert.match(doc, /\{#root-cause-analysis\}/);
@@ -306,7 +306,7 @@ test('CLI Reference documents the public baseline, interactive screenshots, and 
 
 test('Troubleshooting covers current Windows, scenario, RCA, and support recovery paths', () => {
   const doc = fs.readFileSync(path.join(root, 'docs/agent-assurance-troubleshooting.md'), 'utf8');
-  assert.match(doc, /public Rook 0\.1\.5/);
+  assert.match(doc, /public Rook 0\.1\.11/);
   assert.match(doc, /rook\.cmd --version/);
   assert.match(doc, /npm\.cmd prefix -g/);
   assert.match(doc, /token_economy.*blocked if the profile does not report usage/);
