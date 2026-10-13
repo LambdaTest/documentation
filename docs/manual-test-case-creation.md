@@ -170,8 +170,10 @@ The Test Manager offers a comprehensive Steps section with a rich text editor an
 
 To know more about how to use Modules refer the [Modules doc](/support/docs/create-modules/).
 
+**5. Use Variables, Parameters, and Secrets:** Type `{{` in a step to insert a variable or secret, or `${` to insert a parameter. To learn more, see [Variables, Parameters, and Secrets in Manual Test Cases and Modules](/support/docs/test-manager-variables-parameters-secrets/).
+
 :::note
-In the Classic experience, modules that contain KaneAI instructions, such as variable steps, If-Else blocks, or While Loops, run only in KaneAI test cases. Selecting one in the **Add Module** dialog leaves **Add in step** disabled. See [Importing Modules into Test Cases](/support/docs/create-modules/).
+In the Classic experience, modules that contain If-Else blocks or While Loops run only in KaneAI test cases. Selecting one in the **Add Module** dialog leaves **Add in step** disabled. Modules that use variables, parameters, or secrets can be added. See [Importing Modules into Test Cases](/support/docs/create-modules/).
 :::
 
 #### Add New Step:
@@ -198,6 +200,8 @@ To save the changes made in the Test Case click on the `Save Changes` button OR 
 ### Automate with KaneAI
 
 A saved test case can be handed to **KaneAI** for automated authoring. Open the test case and click **Automate with KaneAI** in the **Automate** section of the test case detail. This opens a KaneAI session pre-filled with the test case's steps, where you author the automated test and then execute it.
+
+If the test case uses environment variables, choose the environment in the **Environment** field before you start testing. The environment cannot be changed once the session starts. See [Choose an Environment When Automating With KaneAI](/support/docs/test-manager-variables-parameters-secrets/#choose-an-environment-when-automating-with-kaneai).
 
 This works for both test case templates:
 

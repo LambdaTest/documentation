@@ -1935,6 +1935,7 @@ module.exports = {
         className: "menu-bold",
         items: [
           { type: "doc", id: "manual-test-case-creation", label: "Create Test Cases Manually" },
+          "test-manager-variables-parameters-secrets",
           "test-case-versioning",
           "copy-and-move-support-for-test-cases",
           "share-test-cases-across-projects",
