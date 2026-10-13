@@ -323,7 +323,7 @@ A <code>token_economy</code> scenario is blocked if the profile does not report 
 
 ### Generated scenarios are marked not executable
 
-A scenario with <code>executable: false</code> was kept so you can see what generation attempted. Its <code>skip_reason</code> starts with <code>coverage gap:</code> (no runnable check was possible), <code>invalid scenario:</code>, or <code>invalid red-team scenario:</code> and names the problem. Fix the profile capability or edit the scenario, then regenerate or rerun.
+A scenario with <code>executable: false</code> was kept so you can see what generation attempted. Its <code>skip_reason</code> names the problem. Reasons from Rook's own validation start with <code>coverage gap:</code> (no runnable check was possible), <code>invalid scenario:</code>, or <code>invalid red-team scenario:</code>; the scenario checker writes plain sentences, often a precondition the profile cannot establish, such as a ticket that must already exist. Fix the profile capability or edit the scenario, then regenerate or rerun.
 
 ### Only two scenarios of an attack pattern ran
 

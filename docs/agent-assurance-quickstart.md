@@ -228,7 +228,7 @@ rook.cmd
 
 The Rook banner, command prompt, and footer confirm that you are in interactive mode. If you are already signed in, Rook can open the project chooser automatically:
 
-<img loading="lazy" src={require('../assets/images/rook/guides/rook-tui-get-started.png').default} alt="Fresh Rook 0.1.11 interactive session showing the mascot banner, the Explore, Generate, Run, and Report journey, and Get Started commands before sign-in and discovery" width="2200" height="1366" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/rook/guides/rook-tui-get-started.png').default} alt="Fresh Rook 0.1.11 interactive session showing the mascot banner, the Explore, Generate, Run, and Report journey, Get Started commands, and the project chooser before discovery" width="2200" height="1287" className="doc_img"/>
 
 If not signed in, enter `/login`, complete the browser flow, and return to this terminal. Use `/doctor` to check readiness and `/plan` to check credits. At a chooser, use arrow keys and Enter; Esc goes back. At the prompt, Tab completes commands. The remaining commands belong **inside this TUI**, not in your shell.
 

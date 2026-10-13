@@ -334,9 +334,9 @@ $env:ROOK_ENV = 'prod'
 rook.cmd
 ```
 
-You should see the Rook banner and an interactive prompt or a project chooser, not a command that prints output and exits. This capture shows a new session before sign-in and before an agent has been explored:
+You should see the Rook banner and an interactive prompt or a project chooser, not a command that prints output and exits. This capture shows a signed-in session in a new workspace, before an agent has been explored:
 
-<img loading="lazy" src={require('../assets/images/rook/guides/rook-tui-get-started.png').default} alt="Rook 0.1.11 interactive startup in color with the mascot banner, Explore, Generate, Run and Report, Get Started commands, a sign-in prompt, and no agent selected" width="2200" height="1366" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/rook/guides/rook-tui-get-started.png').default} alt="Rook 0.1.11 interactive startup in color with the mascot banner, Explore, Generate, Run and Report, Get Started commands, the project chooser, and no agent selected" width="2200" height="1287" className="doc_img"/>
 
 1. If prompted to sign in, enter `/login` and complete the browser flow. Return to this same terminal when Rook reports that you are signed in. Browser UI sign-in and CLI sign-in are separate.
 2. At **Projects**, use the arrow keys and Enter to list existing projects or create a new test project. Esc goes back; you can reopen the chooser with `/project`.

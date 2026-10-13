@@ -114,6 +114,10 @@ Click a run to inspect its narrative, outcome counts, scenario rows, and metadat
 
 <img loading="lazy" src={require('../assets/images/rook/rook-local-run.png').default} alt="Local CommerceCare run details with narrative, mixed scenario outcomes, View plan, and profile metadata" width="1440" height="900" className="doc_img"/>
 
+When a run has coverage gaps, the run page lists them above the outcome tiles: attack patterns, scenarios, or categories with no runnable scenario, each with its reason. A gap is unverified, not passed.
+
+<img loading="lazy" src={require('../assets/images/rook/rook-local-coverage-gaps.png').default} alt="Local triage-service run on Rook 0.1.11 with a Coverage gaps panel listing ten attack patterns with no generated scenario, above Scenarios, Passed, Failed, Skipped, and Unable to Verify tiles" width="1440" height="900" className="doc_img"/>
+
 This view includes runs available on disk, including local test-mode results. **completed** describes execution state, not a passing suite. Missing graded results are not a pass: check unfinished phases and `rook report <run-id> --json` before treating a result as complete.
 
 ### Local Results and Evidence Files {#local-results}
