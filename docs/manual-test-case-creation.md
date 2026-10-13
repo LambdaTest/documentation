@@ -201,6 +201,8 @@ To save the changes made in the Test Case click on the `Save Changes` button OR 
 
 A saved test case can be handed to **KaneAI** for automated authoring. Open the test case and click **Automate with KaneAI** in the **Automate** section of the test case detail. This opens a KaneAI session pre-filled with the test case's steps, where you author the automated test and then execute it.
 
+If the test case uses environment variables, choose the environment in the **Environment** field before you start testing. The environment cannot be changed once the session starts. See [Choose an Environment When Automating With KaneAI](/support/docs/test-manager-variables-parameters-secrets/#choose-an-environment-when-automating-with-kaneai).
+
 This works for both test case templates:
 
 | Template | What KaneAI receives |
