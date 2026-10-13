@@ -98,7 +98,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         "https://www.youtube.com/@TestMuAI"
       ]
     },
-    "dateModified": "2026-09-09T20:26:38+05:30"
+    "dateModified": "2026-10-13T00:00:00+05:30"
   }) }}
 />
 
@@ -238,6 +238,8 @@ Once every test case has an assignee and at least one configuration, the run is 
 <img loading="lazy" src={require('../assets/images/kane-ai/test-manager/test-plan-execute-hyperexecute/run-with-hyperexecute-drawer.webp').default} alt="Run with HyperExecute panel showing the instance overview, build parameters, and the Run with Classic Report button" className="doc_img"/>
 
 The **Run with HyperExecute** panel summarises the run before you start it, including the number of unique tests, the unique configurations, and the concurrency. The execute button names the report you are about to generate. For a run that contains a Classic test case, or one that is not on Chrome, the button reads **Run with Classic Report** and the panel notes that Evidence reporting is not part of this run.
+
+For a Classic Report run, open **Advanced Configurations** > **Test Configuration** to enable **Generate a run output file**. Choose CSV or XLSX, optionally include each instance's final status, and optionally save the output as a reusable File. See [Test Run Output](/support/docs/kaneai-test-run-output/) for the complete workflow.
 
 ## Evidence Reporting
 
