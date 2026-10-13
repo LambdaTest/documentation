@@ -174,7 +174,8 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 ---
 
-This guide walks you through running a sample Selenium test on the TestMu AI cloud grid using Java and TestNG. Clone a sample project, set your credentials, and execute a test.
+
+This guide walks you through running sample Selenium End-to-End (E2E) testing on the TestMu AI cloud grid using Python and the pytest framework. Clone a sample project, set your credentials, and execute a test.
 
 :::tip Sample repo
 All the code used in this guide is available in the sample repository. Clone it to get started.

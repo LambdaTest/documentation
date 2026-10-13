@@ -130,7 +130,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 # Parallel Testing With Playwright
 * * *
 
-<BrandName /> allows you to perform parallel testing with Playwright across real browsers and OS to automate your several test cases simultaneously. You can run one test case across various browsers, or you can run multiple test case scenarios in the same browser with different browser versions.
+<BrandName /> allows you to perform parallel testing with Playwright across real browsers and OS to run your End-to-End (E2E) testing at scale and automate several test cases simultaneously. You can run one test case across various browsers, or you can run multiple test case scenarios in the same browser with different browser versions.
 
 
 Shown below are the steps on running parallel tests with Playwright on the <BrandName /> platform. 

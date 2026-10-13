@@ -162,7 +162,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 # Introduction to Test Manager
 ***
 
-Test Manager is <BrandName />'s AI-native test management platform for planning, creating, executing, and reporting on software tests. It gives QA teams a single workspace for manual and automated test cases, test runs, two-way sync with Jira and Azure DevOps, and release-readiness reporting, with AI that generates test cases from natural language.
+Test Manager is <BrandName />'s AI-native test management platform for planning, creating, executing, and reporting on software tests. It gives QA teams a single workspace to organize and track manual, automated, and End-to-End (E2E) testing, with test runs, two-way sync with Jira and Azure DevOps, release-readiness reporting, and AI that generates test cases from natural language.
 
 ## What you can do with Test Manager
 

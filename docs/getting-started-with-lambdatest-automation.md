@@ -131,7 +131,7 @@ import DocCard from '@site/src/component/DocCard';
 />
 ---
 
-Run your Selenium tests on TestMu AI's cloud grid of 10,000+ browser/device combinations. Point your tests at the hub URL, add capabilities, and get parallel execution, video recordings, logs, and screenshots for every session - no infrastructure to maintain.
+Run your Selenium End-to-End (E2E) testing on TestMu AI's cloud grid of 10,000+ browser/device combinations. Point your tests at the hub URL, add capabilities, and get parallel execution, video recordings, logs, and screenshots for every session - no infrastructure to maintain.
 
 
 ## Before You Begin
