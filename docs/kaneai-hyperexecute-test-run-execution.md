@@ -283,6 +283,22 @@ When both conditions are met, the saved run shows a note confirming that an Evid
 - To run the same test run with the standard report instead, select **Classic Reporting**.
 - Click **Execute** to start the run.
 
+### Runs with desktop and mobile tests
+
+A run that includes both desktop and mobile app instances produces **two Evidence Reports**: one for desktop and one for mobile. The run's **Overview** page shows both, so you can see how each platform did before opening either report.
+
+<img loading="lazy" src={require('../assets/images/kane-ai/test-manager/test-plan-execute-hyperexecute/evidence-overview-desktop-mobile.webp').default} alt="Test run Overview page showing a Desktop report that passed and a Mobile report with one broken test, the overall pass rate, duration and issue count, and a Needs your attention list" className="doc_img"/>
+
+- The header shows the combined pass rate, duration and number of issues across both reports.
+- Each report card shows the platform, the OS and resolution, the status, how many tests passed, and the time taken. Click **Open report** to view it.
+- **Needs your attention** lists the failing tests from either report. Click **View failure** to go straight to that test.
+
+Inside a report, the **Desktop** or **Mobile** selector next to the breadcrumb switches between the two reports. Each report has its own **Report**, **Test Instances**, **Issues** and **Coverage** tabs.
+
+<img loading="lazy" src={require('../assets/images/kane-ai/test-manager/test-plan-execute-hyperexecute/evidence-desktop-report.webp').default} alt="Desktop Evidence Report with a Passed status, pass rate, duration, flaky and failure summary cards, and History and Stability charts" className="doc_img"/>
+
+<img loading="lazy" src={require('../assets/images/kane-ai/test-manager/test-plan-execute-hyperexecute/evidence-mobile-report.webp').default} alt="Mobile Evidence Report with a Broken status, a Need your attention section listing the failure with a View RCA link, and History and Stability charts" className="doc_img"/>
+
 :::note
 If the run contains a Classic test case, or any instance is not on Chrome desktop or a mobile app, the saved run flags which instances are blocking Evidence Reporting and the run produces the Classic report. Adjust the test cases or the configurations, then reopen the panel.
 
