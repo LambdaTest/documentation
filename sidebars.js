@@ -889,6 +889,7 @@ module.exports = {
           { type: "doc", label: "Concepts", id: "rook-concepts" },
           { type: "doc", label: "Architecture", id: "rook-architecture" },
           { type: "doc", label: "Permissions & Safety", id: "rook-permissions-and-safety" },
+          { type: "doc", label: "Technical & Security", id: "agent-assurance-technical-security" },
           { type: "doc", label: "Environment & Secrets", id: "rook-environment-and-secrets" },
           { type: "doc", label: "MCP Servers", id: "agent-assurance-mcp" },
           { type: "doc", label: "Workspace Files", id: "rook-workspace-files" },
