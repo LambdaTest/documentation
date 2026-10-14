@@ -91,8 +91,8 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         "https://www.youtube.com/@TestMuAI"
       ]
     },
-    "dateModified": "2026-09-24T12:00:00+05:30"
-  }) }}
+    "dateModified": "2026-10-14T12:00:00+05:30"
+  })
 />
 This guide outlines the steps required to create, configure, and manage test runs within <BrandName />'s Test Manager. It provides developers and testers with a clear understanding of the process, enabling efficient test execution and organization.
 
@@ -121,10 +121,16 @@ Use descriptive names to easily identify test runs later.
 <img loading="lazy" src={require('../assets/images/test-run/3.png').default} alt="Real "  className="doc_img"/>
 
 ### Assign Test Cases
-- Select the desired test cases from the list.
+- Select the desired test cases from the list. Use search and the **Status**, **Tags**, and **More** filters to narrow it. Most filters can also exclude values: switch one to **Not Equals** to leave out test cases with the selected values, while test cases with no value for that field stay in the list. See [Include or Exclude Values](/support/docs/manual-test-case-creation/#include-or-exclude-values). The same filters are available when you add test cases to an existing test run from **Manage Test Cases**, and **Select all** adds exactly the test cases the filters show.
 - Assign Assignees to each test case.
 - Add test case configurations individually or in bulk.
 > Note: Configurations allow you to define environment settings, such as browser and device combinations.
+
+<img loading="lazy" src={require('../assets/images/test-manager/filters/manage-test-cases-status-filter.png').default} alt="Status filter set to Not Equals in Manage Test Cases" className="doc_img"/>
+
+:::tip
+Test cases shared into your project from other projects can be added to a test run too. Select them from **Shared Incoming**. See [Share Test Cases Across Projects](/support/docs/share-test-cases-across-projects/#add-shared-test-cases-to-test-runs).
+:::
 
 <img loading="lazy" src={require('../assets/images/test-run/4.png').default} alt="Real "  className="doc_img"/>
 
@@ -194,8 +200,16 @@ Filters work on both Manual and Automation test runs, apply at the **All Test In
 <img loading="lazy" src={require('../assets/images/test-run/filter-bar.png').default} alt="Filter bar in the Test Run Detail view" className="doc_img"/>
 
 :::note Supported Custom Field types
-Custom Fields can be filtered only for types: **Single Select Dropdown**, **Multi Select Dropdown**, **User**, **Boolean**, and **Date**.
+Custom Fields can be filtered only for types: **Single Select Dropdown**, **Multi Select Dropdown**, **User**, **Boolean**, and **Date**. Of these, **Single Select Dropdown**, **Multi Select Dropdown**, and **User** can also be excluded with **Not Equals**.
 :::
+
+### Exclude Values
+
+Each filter that lists values can either include or exclude the values you select. Switch a filter to **Not Equals** next to its search box to hide the test instances that have any of the selected values, for example every instance on **Windows**, or every instance assigned to one tester.
+
+**Not Equals** keeps test instances that have no value for that field. Excluding an assignee keeps the unassigned instances, and excluding an OS or browser keeps the instances with no configuration. To hide the unassigned instances as well, also select **Unassigned** in the **Assignee** filter.
+
+Filters in different fields combine, so an instance has to match all of them. When you select all instances in a filtered view, bulk updates apply only to the instances the filters show. For how exclusion works on each kind of field, see [Include or Exclude Values](/support/docs/manual-test-case-creation/#include-or-exclude-values).
 
 ## 5. Enhancing Test Runs with Test Evidences
 ### Adding Remarks and Attachments
