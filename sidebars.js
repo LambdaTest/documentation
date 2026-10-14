@@ -4197,6 +4197,7 @@ module.exports = {
         "analytics-test-insights",
         "analytics-modules-test-intelligence-flaky-test-analytics",
         "analytics-build-insights",
+        "analytics-build-insights-test-cases",
         "analytics-build-comparison",
         "analytics-unique-instances-retry-detection",
         "analytics-smart-tags-test-intelligence",
