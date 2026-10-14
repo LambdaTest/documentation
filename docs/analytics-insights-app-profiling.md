@@ -257,6 +257,8 @@ Each of the ten per-metric widgets renders a time series over the selected windo
 
 **Battery Power** is the average power the device drew during a session, in watts. Because it is a rate rather than a count of drained mAh, sessions of different lengths, devices and platforms can be compared directly — iOS does not report battery drain in mAh, so Battery Power is the battery metric available for both platforms.
 
+<img loading="lazy" src={require('../assets/images/analytics/app-profiling-battery-power.webp').default} alt="Battery Power Trends widget with the 1 W and 2 W SLA thresholds" width="768" height="605" className="doc_img"/>
+
 **Thermal State** is the worst thermal state the device reached during a session, as reported by iOS:
 
 | Value | State | Meaning |
@@ -267,6 +269,8 @@ Each of the ten per-metric widgets renders a time series over the selected windo
 | 3 | Critical | Very high; performance is significantly reduced until the device cools down |
 
 A session that stays at Nominal is a healthy reading and is plotted as 0. Android sessions report no thermal state and are not plotted on this widget.
+
+<img loading="lazy" src={require('../assets/images/analytics/app-profiling-thermal-state.webp').default} alt="Thermal State Trends widget showing states 0 to 3 against the 1 and 2 SLA thresholds" width="768" height="605" className="doc_img"/>
 
 ## Compare mode
 
