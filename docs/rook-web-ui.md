@@ -44,9 +44,9 @@ Neither viewer downloads missing records into your workspace, uploads local chan
 
 Launch `rook` from your agent workspace, then enter `/ui --local` for on-disk evidence or `/ui` for hosted review. These are alternatives: choose the viewer for the records you want to inspect. This actual TUI capture uses `/ui --local --no-open` to start the local server and print its address without opening a browser:
 
-<img loading="lazy" src={require('../assets/images/rook/guides/rook-tui-local-ui.png').default} alt="Rook's interactive local viewer command printing its loopback URL and confirming that the read-only server is serving" width="2200" height="600" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/rook/guides/rook-tui-local-ui.png').default} alt="Rook's interactive local viewer command printing its loopback URL and confirming that the read-only server is serving" width="2200" height="651" className="doc_img"/>
 
-Open the exact URL printed in your session; this capture used port `7758` because the default was already occupied. Keep the TUI session running while using its local viewer. `/help ui` lists options without starting a viewer. The `rook ui` examples below are the equivalent commands for a regular shell.
+Open the exact URL printed in your session; the port can differ when the default is already in use. Keep the TUI session running while using its local viewer. `/help ui` lists options without starting a viewer. The `rook ui` examples below are the equivalent commands for a regular shell.
 
 ## Review On-Disk Evidence in the Local UI {#local-ui}
 
@@ -69,10 +69,6 @@ The five local agent tabs are **Summary**, **Profiles**, **Features**, **Scenari
 <img loading="lazy" src={require('../assets/images/rook/rook-local-agents.png').default} alt="Redesigned local Agents page with search and a CommerceCare card showing nine features, twelve scenarios, and three runs" width="1440" height="900" className="doc_img"/>
 
 Search by agent name or ID, then click the agent card. It shows feature/scenario/run counts and available last-result context. Clear a search before concluding that the workspace has no agents. These counts describe the saved workspace, not coverage of every possible behavior.
-
-:::note Coming soon
-Searching local agents by description is coming soon. For now, use the agent's name or ID.
-:::
 
 ### Local Agent Workspace {#local-agent}
 
@@ -117,6 +113,10 @@ Open **Runs** to compare recorded executions by version, result distribution, pa
 Click a run to inspect its narrative, outcome counts, scenario rows, and metadata. **View plan** opens the recorded selection plan. In the **Profile** row, the profile name opens the run's saved configuration; the adjacent link opens the current profile under **Profiles**. These can differ.
 
 <img loading="lazy" src={require('../assets/images/rook/rook-local-run.png').default} alt="Local CommerceCare run details with narrative, mixed scenario outcomes, View plan, and profile metadata" width="1440" height="900" className="doc_img"/>
+
+When a run has coverage gaps, the run page lists them above the outcome tiles: attack patterns, scenarios, or categories with no runnable scenario, each with its reason. A gap is unverified, not passed.
+
+<img loading="lazy" src={require('../assets/images/rook/rook-local-coverage-gaps.png').default} alt="Local triage-service run on Rook 0.1.11 with a Coverage gaps panel listing ten attack patterns with no generated scenario, above Scenarios, Passed, Failed, Skipped, and Unable to Verify tiles" width="1440" height="900" className="doc_img"/>
 
 This view includes runs available on disk, including local test-mode results. **completed** describes execution state, not a passing suite. Missing graded results are not a pass: check unfinished phases and `rook report <run-id> --json` before treating a result as complete.
 

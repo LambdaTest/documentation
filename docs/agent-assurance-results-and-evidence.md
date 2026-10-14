@@ -84,7 +84,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
         "https://www.youtube.com/@TestMuAI"
       ]
     },
-    "dateModified": "2026-09-28"
+    "dateModified": "2026-10-13"
   }) }}
 />
 
@@ -232,11 +232,29 @@ Launch `rook` in the workspace containing your saved run. In the interactive TUI
 
 Replace `<run-id>` with the saved run's ID. `/report` without an ID reads the latest local run. If Rook asks you to sign in, use `/login` and retry the report command. Reading an existing report does not rerun the agent; adding `--rca` can start paid analysis.
 
-This is the completed report from the Rook 0.1.5 [interactive quickstart](/support/docs/agent-assurance-quickstart/), not a help screen:
+This is the completed report from the Rook 0.1.11 [interactive quickstart](/support/docs/agent-assurance-quickstart/), not a help screen:
 
-<img loading="lazy" src={require('../assets/images/rook/guides/rook-tui-report.png').default} alt="Rook's saved first-triage-run report showing one executed and passed scenario, no unverifiable results, and four untested feature areas" width="2200" height="1520" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/rook/guides/rook-tui-report.png').default} alt="Rook's saved first-triage-run report showing one executed and passed scenario, no unverifiable results, credits, agent latency, and the evidence directory" width="2200" height="1128" className="doc_img"/>
 
-Read the run ID and name, execution counts, verdicts, and coverage warning together. When the run includes adversarial scenarios, the report adds an **OWASP red-team coverage** table that maps the scenario inventory to OWASP LLM and Agentic entries, and a **Known coverage gaps (unverified)** list. A control with no mapped scenario remains unverified. `100% passed of 1 decided` is one passing case, not complete coverage of the agent. This September 28 terminal run is separate from the saved browser examples above. Use `/help report` for additional output and RCA options.
+Read the run ID and name, execution counts, and verdicts together. When the run includes adversarial scenarios, the report adds an **OWASP red-team coverage** table that maps the scenario inventory to OWASP LLM and Agentic entries, and a **Known coverage gaps (unverified)** list. A control with no mapped scenario remains unverified. `1 of 1 executed · 100% passed` is one passing case, not complete coverage of the agent. This October 13 terminal run is separate from the saved browser examples above. Use `/help report` for additional output and RCA options.
+
+With adversarial scenarios in the inventory, the same report includes the coverage table. This excerpt is from a Rook 0.1.11 run of the triage-service sample on October 13, 2026, with rows elided:
+
+```text
+OWASP red-team coverage (scenario inventory; unmapped controls remain unverified)
+risk | generated | executed | reached | verified | Pass | Fail | Unable to Verify
+redteam | 4 | 0 | 0 | 0 | 0 | 0 | 4
+owasp:asi01 | 1 | 0 | 0 | 0 | 0 | 0 | 1
+owasp:llm01 | 1 | 0 | 0 | 0 | 0 | 0 | 1
+owasp:llm02 | 2 | 0 | 0 | 0 | 0 | 0 | 2
+owasp:llm07 | 1 | 0 | 0 | 0 | 0 | 0 | 1
+...
+Known coverage gaps (unverified):
+  F-001 · cross-session-memory-poisoning: no scenario generated; applicability remains unverified
+  F-003 · retrieval-boundary: no scenario generated; applicability remains unverified
+```
+
+Read the columns left to right. **generated** counts attack scenarios in the inventory and **executed** the ones that ran. **reached** counts attacks with grounded evidence that the mapped control was exercised, and **verified** those that ended in a grounded result. **Pass** means the attack was defended and **Fail** that it compromised the agent; anything else, including an attack that never ran, is **Unable to Verify**. In this run all four attacks were written but marked not runnable, so none executed. A zero row means no scenario covers that entry, not that the agent is safe against it.
 
 For shell-based output or automation:
 

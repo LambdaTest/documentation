@@ -111,7 +111,7 @@ import { BRAND_URL } from '@site/src/component/BrandName';
         "text": "*.log\n.env\ncache/\nprojects/*/jobs/\nprojects/*/agents/*/state.json"
       }
     ],
-    "dateModified": "2026-09-28"
+    "dateModified": "2026-10-13"
   }) }}
 />
 
@@ -214,7 +214,7 @@ Each session keeps a transcript at `~/.testmuai/rook/sessions/<project>/<session
 
 Inside the interactive TUI, enter `/sync` after reviewing the files. This actual quickstart capture confirms that the triage agent was recorded upstream; it does not say that a test has run or passed:
 
-<img loading="lazy" src={require('../assets/images/rook/guides/rook-tui-sync.png').default} alt="Rook's interactive sync confirming that one local agent was recorded upstream" width="2200" height="600" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/rook/guides/rook-tui-sync.png').default} alt="Rook's interactive sync confirming that one local agent was recorded upstream" width="2200" height="651" className="doc_img"/>
 
 ## Review Files in Either UI
 
