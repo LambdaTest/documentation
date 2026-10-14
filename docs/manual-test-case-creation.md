@@ -136,7 +136,7 @@ Search by test case ID or title, and use the filters beside the search bar to na
 
 Filters apply to the folder you are viewing, together with any search text. The **Archived** view and the **Shared Incoming** view offer the same filters, and Shared Incoming adds a **Project** filter for the source project.
 
-### Include or Exclude Values
+#### Include or Exclude Values
 
 Each filter that lists values has two modes, which you switch next to the filter's search box:
 
@@ -153,7 +153,7 @@ To exclude values:
 
 Switching between **Equals** and **Not Equals** keeps the values you selected. Selecting **Not Equals** without choosing any value does not change the list.
 
-### Test Cases With No Value Are Kept
+#### Test Cases With No Value Are Kept
 
 **Not Equals** hides only the test cases that hold a selected value. Test cases with no value for that field stay in the list.
 
@@ -161,28 +161,28 @@ For example, say a custom field **Layer** has the values API, UI, and E2E, and o
 
 Fields that every test case has, such as **Status**, are never empty. Excluding every value of such a field leaves no test cases.
 
-### Fields With Multiple Values
+#### Fields With Multiple Values
 
 **Tags** and multi select custom fields can hold several values on one test case. Under **Not Equals**, a test case is hidden if it has **any** of the excluded values. Excluding the tag `iOS` hides a test case tagged `iOS` and `Android`, and keeps a test case tagged only `Android` as well as test cases with no tags.
 
-### Combining Filters
+#### Combining Filters
 
 - Within one filter, **Equals** matches test cases that have any of the selected values, and **Not Equals** hides test cases that have any of them.
 - Across filters, a test case has to match every filter. Each filter can be in its own mode, for example **Priority** Equals High together with **Tags** Not Equals `flaky`.
 - The folder you are viewing and the search text narrow the result further.
 
-### Fields That Support Not Equals
+#### Fields That Support Not Equals
 
 | Supports Not Equals | Does not support Not Equals |
 |---|---|
 | Status, Tags, Automation Status, Created By, Issues, Priority, Type, PR Status, Project (in Shared Incoming) | Created At, which filters by date range |
 | Custom fields of type **Dropdown (Single Select)**, **Dropdown (Multi Select)**, and **User** | Custom fields of type **String**, **Textarea**, **Number**, **URL**, **Date**, and **Boolean (Checkbox)** |
 
-### Share a Filtered View
+#### Share a Filtered View
 
 Your filters, including the **Not Equals** mode, are saved in the page URL. Reload the page, bookmark it, or share the link, and the same filtered list opens. Select **Clear current filters and sorting** to reset the list.
 
-### Act on Filtered Test Cases
+#### Act on Filtered Test Cases
 
 When you select all test cases in a filtered list, bulk actions such as updating fields, moving, exporting, archiving, and deleting apply to exactly the test cases the filters show. Test cases hidden by a **Not Equals** filter are left untouched.
 
