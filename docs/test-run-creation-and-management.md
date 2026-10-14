@@ -126,7 +126,7 @@ Use descriptive names to easily identify test runs later.
 - Add test case configurations individually or in bulk.
 > Note: Configurations allow you to define environment settings, such as browser and device combinations.
 
-<img loading="lazy" src={require('../assets/images/test-manager/filters/exclude-status-manage-test-cases.png').default} alt="Status filter set to Not Equals in Manage Test Cases" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/test-manager/filters/manage-test-cases-status-filter.png').default} alt="Status filter set to Not Equals in Manage Test Cases" className="doc_img"/>
 
 :::tip
 Test cases shared into your project from other projects can be added to a test run too. Select them from **Shared Incoming**. See [Share Test Cases Across Projects](/support/docs/share-test-cases-across-projects/#add-shared-test-cases-to-test-runs).

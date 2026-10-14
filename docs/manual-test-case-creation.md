@@ -149,7 +149,7 @@ To exclude values:
 2. Select **Not Equals** next to the filter's search box.
 3. Select the values to leave out.
 
-<img loading="lazy" src={require('../assets/images/test-manager/filters/exclude-tags-test-cases.png').default} alt="Tags filter set to Not Equals on the Test Cases list" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/test-manager/filters/tags-filter-dropdown.png').default} alt="Tags filter set to Not Equals on the Test Cases list" className="doc_img"/>
 
 Switching between **Equals** and **Not Equals** keeps the values you selected. Selecting **Not Equals** without choosing any value does not change the list.
 
