@@ -142,7 +142,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
           "@type": "HowToStep",
           "position": 5,
           "name": "Step 5: Run with HyperExecute",
-          "text": "Once every test case has an assignee and at least one configuration, the run is ready to save and execute. Review the test instances generated from your test cases and configurations. Click Show execution preview to confirm what will run. The preview shows the execution type, the total number of instances, and the unique configurations involved. Click Save test run. On the saved run, click Run on HyperExecute and choose Run Instances Now. To run it later instead, choose Schedule Test Run. Set the desired concurrency level, e.g., 5, then start the run. The Run with HyperExecute panel summarises the run before you start it, including the number of unique tests, the unique configurations, and the concurrency. The execute button names the report you are about to generate. For a run that contains a Classic test case, or one that is not on Chrome, the button reads Run with Classic Report and the panel notes that Evidence reporting is not part of this run.",
+          "text": "Once every test case has an assignee and at least one configuration, the run is ready to save and execute. Review the test instances generated from your test cases and configurations. Click Show execution preview to confirm what will run. The preview shows the execution type, the total number of instances, and the unique configurations involved. Click Save test run. On the saved run, click Run on HyperExecute and choose Run Instances Now. To run it later instead, choose Schedule Test Run. Set the desired concurrency level, e.g., 5, then start the run. The Run with HyperExecute panel summarises the run before you start it, including the number of unique tests, the unique configurations, and the concurrency. The execute button names the report you are about to generate. For a run that contains a Classic test case, or an instance that is not on Chrome desktop or a mobile app, the button reads Run with Classic Report and the panel notes that Evidence reporting is not part of this run.",
           "url": "https://www.testmuai.com/support/docs/kaneai-hyperexecute-test-run-execution/#step-5-run-with-hyperexecute"
         }
       ]
@@ -237,7 +237,7 @@ Once every test case has an assignee and at least one configuration, the run is 
 
 <img loading="lazy" src={require('../assets/images/kane-ai/test-manager/test-plan-execute-hyperexecute/run-with-hyperexecute-drawer.webp').default} alt="Run with HyperExecute panel showing the instance overview, build parameters, and the Run with Classic Report button" className="doc_img"/>
 
-The **Run with HyperExecute** panel summarises the run before you start it, including the number of unique tests, the unique configurations, and the concurrency. The execute button names the report you are about to generate. For a run that contains a Classic test case, or one that is not on Chrome, the button reads **Run with Classic Report** and the panel notes that Evidence reporting is not part of this run.
+The **Run with HyperExecute** panel summarises the run before you start it, including the number of unique tests, the unique configurations, and the concurrency. The execute button names the report you are about to generate. For a run that contains a Classic test case, or an instance that is not on Chrome desktop or a mobile app, the button reads **Run with Classic Report** and the panel notes that Evidence reporting is not part of this run.
 
 For a Classic Report run, open **Advanced Configurations** > **Test Configuration** to enable **Generate a run output file**. Choose CSV or XLSX, optionally include each instance's final status, and optionally save the output as a reusable File. See [Test Run Output](/support/docs/kaneai-test-run-output/) for the complete workflow.
 
@@ -248,9 +248,11 @@ A test run can produce an **Evidence Report** in place of the standard report. T
 Evidence Reporting is available only when both of the following are true for the run:
 
 - Every test case in the run is authored with **New Experience**.
-- The run is configured to execute on the **Chrome** browser.
+- Every test instance runs on either **Chrome desktop** or a **mobile app** on a real device.
 
-If either condition is not met, the run executes with the Classic report instead.
+If either condition is not met, the run executes with the Classic report instead. Mobile browser instances, and desktop instances on browsers other than Chrome, run with the Classic report.
+
+Evidence Reporting applies both to runs started with **Run Instances Now** and to [scheduled test runs](/support/docs/kaneai-scheduled-test-runs/).
 
 ### Select only New Experience test cases
 
@@ -262,9 +264,14 @@ Select the test cases labelled **New Experience** and click **Add Test Cases**. 
 
 <img loading="lazy" src={require('../assets/images/kane-ai/test-manager/test-plan-execute-hyperexecute/evidence-select-new-experience.webp').default} alt="Add Test Cases step for a run named Test Run Evidence with a New Experience test case selected" className="doc_img"/>
 
-### Configure the run to use Chrome
+### Configure Chrome desktop or a mobile app
 
-Give every test instance a configuration that uses Chrome, either by picking an existing Chrome configuration in the **Add a Configuration** panel or by creating one. Any instance on another browser makes the run ineligible.
+Give every test instance one of these configurations, either by picking a saved one in the **Add a Configuration** panel or by creating one:
+
+- A **Desktop** configuration that uses **Chrome**.
+- A **Real Device** configuration of type **Mobile App**, with your Android or iOS app.
+
+A run can mix both, for example a desktop test on Chrome and an Android app test on a real device. Any instance on another desktop browser, or on a mobile browser, makes the run ineligible.
 
 ### Run with Evidence Report
 
@@ -276,8 +283,24 @@ When both conditions are met, the saved run shows a note confirming that an Evid
 - To run the same test run with the standard report instead, select **Classic Reporting**.
 - Click **Execute** to start the run.
 
+### Runs with desktop and mobile tests
+
+A run that includes both desktop and mobile app instances produces **two Evidence Reports**: one for desktop and one for mobile. The run's **Overview** page shows both, so you can see how each platform did before opening either report.
+
+<img loading="lazy" src={require('../assets/images/kane-ai/test-manager/test-plan-execute-hyperexecute/evidence-overview-desktop-mobile.webp').default} alt="Test run Overview page showing a Desktop report that passed and a Mobile report with one broken test, the overall pass rate, duration and issue count, and a Needs your attention list" className="doc_img"/>
+
+- The header shows the combined pass rate, duration and number of issues across both reports.
+- Each report card shows the platform, the OS and resolution, the status, how many tests passed, and the time taken. Click **Open report** to view it.
+- **Needs your attention** lists the failing tests from either report. Click **View failure** to go straight to that test.
+
+Inside a report, the **Desktop** or **Mobile** selector next to the breadcrumb switches between the two reports. Each report has its own **Report**, **Test Instances**, **Issues** and **Coverage** tabs.
+
+<img loading="lazy" src={require('../assets/images/kane-ai/test-manager/test-plan-execute-hyperexecute/evidence-desktop-report.webp').default} alt="Desktop Evidence Report with a Passed status, pass rate, duration, flaky and failure summary cards, and History and Stability charts" className="doc_img"/>
+
+<img loading="lazy" src={require('../assets/images/kane-ai/test-manager/test-plan-execute-hyperexecute/evidence-mobile-report.webp').default} alt="Mobile Evidence Report with a Broken status, a Need your attention section listing the failure with a View RCA link, and History and Stability charts" className="doc_img"/>
+
 :::note
-If the run contains a Classic test case, or any instance is on a browser other than Chrome, the saved run flags which instances are blocking Evidence Reporting and the run produces the Classic report. Adjust the test cases or the browser configuration, then reopen the panel.
+If the run contains a Classic test case, or any instance is not on Chrome desktop or a mobile app, the saved run flags which instances are blocking Evidence Reporting and the run produces the Classic report. Adjust the test cases or the configurations, then reopen the panel.
 
 [Learn More](https://www.testmuai.com/docs/kane-cli-agent-mode#the-evidence-proof-pack)
 :::
@@ -362,7 +385,7 @@ These settings decide what the run does when a step fails, and whether the resul
 | Setting | Description |
 |---|---|
 | **Self-maintenance** | Turn on, then pick one strategy to keep the run going: **Adaptive Heal**, **Dynamic Test**, or **Retry on Failure**. Off by default. With it off, nothing is re-authored or retried, Auto-Heal still runs, and only a step Auto-Heal cannot recover ends the run. |
-| **Adaptive Heal** | Re-author the objective that fails to replay, and every objective after it, so the run continues instead of stopping at the failure. The re-authored content is saved as a new version of the test case. |
+| **Adaptive Heal** | Re-author the objective that fails to replay, and every objective after it, so the run continues instead of stopping at the failure. The re-authored content is saved as a new version of the test case. Applies to desktop browser tests only. |
 | **Dynamic Test** | Author the test from its objective instead of replaying the recorded steps. Every run consumes authoring credits. |
 | **Retry on Failure** | Run the whole test again from the start after it fails. Nothing about the test is changed. |
 | **Maximum Retries** | Appears under Retry on Failure. Sets how many further attempts to make, up to 5. |
@@ -372,7 +395,7 @@ These settings decide what the run does when a step fails, and whether the resul
 Only one of Adaptive Heal, Dynamic Test and Retry on Failure can be active at a time. Selecting one clears the others.
 
 :::info Which panel a run shows
-A run made of **Classic** test cases shows the full panel described above. A run whose test cases are all **New Experience** on **Chrome** can choose between the Classic report and Evidence Reporting, and choosing Evidence Reporting shows the Evidence panel described here.
+A run made of **Classic** test cases shows the full panel described above. A run whose test cases are all **New Experience**, on Chrome desktop or a mobile app, can choose between the Classic report and Evidence Reporting, and choosing Evidence Reporting shows the Evidence panel described here.
 :::
 
 See [Adaptive Heal and Dynamic Test](/support/docs/kaneai-healing-and-dynamic-test/) for what each strategy does, how it is set at the organization and project level, and how re-authored versions are reviewed.
