@@ -96,7 +96,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         "https://www.youtube.com/@TestMuAI"
       ]
     },
-    "dateModified": "2026-09-28T12:00:00+05:30"
+    "dateModified": "2026-10-14T12:00:00+05:30"
   }) }}
 />
 
@@ -136,6 +136,8 @@ Deleting a Status value of Test Runs, or unlinking a project from it, resets eve
 
 ### Custom Fields 
 Allow you to store additional information beyond what System Fields offer. To create a new field, enter the required details and choose the appropriate data type from the **Type** function. Available types include String, Textarea, Number, Dropdown (Single Select), Dropdown (Multi Select), Boolean (Checkbox), Date, User, and URL.
+
+The type also decides how you can filter test cases by the field. Dropdown (Single Select), Dropdown (Multi Select), and User fields can be used to include or exclude values in filters. See [Include or Exclude Values](/support/docs/test-case-repository/#include-or-exclude-values).
 
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/create-new-fields.webp').default} alt="Creating a new custom field and choosing its type"  className="doc_img" width="1366" height="629"/>
 
