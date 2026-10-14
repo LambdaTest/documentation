@@ -121,7 +121,7 @@ Use descriptive names to easily identify test runs later.
 <img loading="lazy" src={require('../assets/images/test-run/3.png').default} alt="Real "  className="doc_img"/>
 
 ### Assign Test Cases
-- Select the desired test cases from the list. Use search and the **Status**, **Tags**, and **More** filters to narrow it. Most filters can also exclude values: switch one to **Not Equals** to leave out test cases with the selected values, while test cases with no value for that field stay in the list. See [Include or Exclude Values](/support/docs/test-case-repository/#include-or-exclude-values). The same filters are available when you add test cases to an existing test run from **Manage Test Cases**, and **Select all** adds exactly the test cases the filters show.
+- Select the desired test cases from the list. Use search and the **Status**, **Tags**, and **More** filters to narrow it. Most filters can also exclude values: switch one to **Not Equals** to leave out test cases with the selected values, while test cases with no value for that field stay in the list. See [Include or Exclude Values](/support/docs/manual-test-case-creation/#include-or-exclude-values). The same filters are available when you add test cases to an existing test run from **Manage Test Cases**, and **Select all** adds exactly the test cases the filters show.
 - Assign Assignees to each test case.
 - Add test case configurations individually or in bulk.
 > Note: Configurations allow you to define environment settings, such as browser and device combinations.
@@ -296,7 +296,7 @@ Each filter that lists values can either include or exclude the values you selec
 
 **Not Equals** keeps test instances that have no value for that field. Excluding an assignee keeps the unassigned instances, and excluding an OS or browser keeps the instances with no configuration. To hide the unassigned instances as well, also select **Unassigned** in the **Assignee** filter.
 
-Filters in different fields combine, so an instance has to match all of them. When you select all instances in a filtered view, bulk updates apply only to the instances the filters show. For how exclusion works on each kind of field, see [Include or Exclude Values](/support/docs/test-case-repository/#include-or-exclude-values).
+Filters in different fields combine, so an instance has to match all of them. When you select all instances in a filtered view, bulk updates apply only to the instances the filters show. For how exclusion works on each kind of field, see [Include or Exclude Values](/support/docs/manual-test-case-creation/#include-or-exclude-values).
 
 ## 5. Enhancing Test Runs with Test Evidences
 ### Adding Remarks and Attachments
