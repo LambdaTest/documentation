@@ -252,7 +252,7 @@ Evidence Reporting is available only when both of the following are true for the
 
 If either condition is not met, the run executes with the Classic report instead. Mobile browser instances, and desktop instances on browsers other than Chrome, run with the Classic report.
 
-Evidence Reporting works the same way for runs you start now and for [scheduled runs](/support/docs/kaneai-scheduled-test-runs/).
+Evidence Reporting applies both to runs started with **Run Instances Now** and to [scheduled test runs](/support/docs/kaneai-scheduled-test-runs/).
 
 ### Select only New Experience test cases
 
