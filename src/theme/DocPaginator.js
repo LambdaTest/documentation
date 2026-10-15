@@ -26,6 +26,7 @@ const AGENT_DOC_SLUGS = new Set([
   'inbound-phone-agent',
   'outbound-phone-agent',
   'phone-agent',
+  'test-agentforce-agents',
   'test-amazon-connect-bots',
   'test-amazon-lex-bots',
   'test-bland-agents',
