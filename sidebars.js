@@ -981,6 +981,7 @@ module.exports = {
           { type: "doc", label: "Test Voiceflow Agents", id: "test-voiceflow-agents" },
           { type: "doc", label: "Test Twilio IVR", id: "test-twilio-ivr" },
           { type: "doc", label: "Test Amazon Connect Bots", id: "test-amazon-connect-bots" },
+          { type: "doc", label: "Test Agentforce Agents", id: "test-agentforce-agents" },
           { type: "doc", label: "Test LangGraph Agents", id: "test-langgraph-agents" },
           { type: "doc", label: "Test Vertex Agent Builder Agents", id: "test-vertex-agent-builder-agents" },
           { type: "doc", label: "Test Copilot Studio Agents", id: "test-copilot-studio-agents" },
