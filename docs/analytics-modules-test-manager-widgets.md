@@ -129,7 +129,7 @@ All widgets support drill-down. Click on any data point in a chart (such as a se
 
 A dashboard made up only of Test Manager widgets offers an extra **All time** option in the dashboard date range picker. It starts from the first test case created in your organization, so you can see your whole test management history in one view.
 
-{/* TODO screenshot: dashboard date range picker with the All time option */}
+<img loading="lazy" src={require('../assets/images/analytics/tms-dashboard-all-time-range.webp').default} alt="Dashboard date range picker with the All time option, on a dashboard of Test Manager widgets" width="900" height="516" className="doc_img"/>
 
 ### How it works?
 
@@ -195,13 +195,13 @@ With **View** set to **Table**, two more settings appear under **Display Options
 
 As in the chart, **Manual** counts every test case whose Automation Status is not *Automated*.
 
-Sort by any of the count columns to rank rows, and select any count to drill down into exactly the test cases behind it - for that row, and in **By period**, for that period. The table lists up to 50 rows, ordered by the number of test cases created - if there are more, the widget states how many of the total are being shown.
+Sort by the **Automated**, **Manual** or **All** column (in **By period**, the ones in the **Total** block) to rank rows, and select any count to drill down into exactly the test cases behind it - for that row, and in **By period**, for that period. The table lists up to 50 rows, ordered by the number of test cases created - if there are more, the widget states how many of the total are being shown.
 
 <img loading="lazy" src={require('../assets/images/analytics/tms-test-cases-trend-table-view.webp').default} alt="Test Cases Trend widget in Table view, broken down per project" width="898" height="626" className="doc_img"/>
 
-{/* TODO screenshot: Table view with Table rows set to Created by */}
+<img loading="lazy" src={require('../assets/images/analytics/tms-test-cases-trend-created-by-table.webp').default} alt="Test Cases Trend tables with Table rows set to Created by and to Project" width="900" height="201" className="doc_img"/>
 
-{/* TODO screenshot: Table view with Table columns set to By period (Weekly interval) */}
+<img loading="lazy" src={require('../assets/images/analytics/tms-test-cases-trend-by-period-table.webp').default} alt="Test Cases Trend table with Table columns set to By period at a Daily interval" width="900" height="200" className="doc_img"/>
 
 ### Value Proposition
 
