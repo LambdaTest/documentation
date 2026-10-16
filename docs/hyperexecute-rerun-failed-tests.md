@@ -160,7 +160,7 @@ If a failed scenario contains several test cases, all of them are rerun.
 
 ## When Rerun is unavailable
 
-The button is unavailable when the job itself rules it out, and the reason is shown:
+The **Re-Run** button appears only on jobs that can be rerun. Where a job cannot be, the button is not shown at all: each reason below is a property of the job itself, so nothing you could change in the dialog would make it rerunnable.
 
 | Reason | What to do |
 | :---- | :---- |
@@ -170,6 +170,8 @@ The button is unavailable when the job itself rules it out, and the reason is sh
 | The job's project has been deleted. | A rerun belongs to the original project, so run the suite in a current one. |
 | A `globalPre` or `globalPost` step ran with `mode: local`. | That step runs on the machine that started the job, which a rerun has no access to. Run it again from the CLI. |
 | The job ran mobile (Appium) tests. | Not supported yet. |
+
+A job that *can* be rerun may still come with something to note — one of the two scopes unavailable, or a named tunnel that has to be running before you start. The dialog shows that as a message when you open it.
 
 ## Frequently asked questions {#faq}
 
