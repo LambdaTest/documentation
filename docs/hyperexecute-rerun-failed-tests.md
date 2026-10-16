@@ -111,7 +111,8 @@ A 900-scenario suite with 20 failures can be re-verified by running those 20, on
 
 ## Prerequisites
 
-- Your test suite is on **Git** (GitHub, Azure Repos and Bitbucket are supported), reached either through a [Project](/support/docs/hyperexecute-projects) with a linked repository or through `sourcePayload` in your YAML. A rerun checks the code out again, so it needs somewhere to check it out from.
+- Your test suite is on **Git** (GitHub, Azure Repos and Bitbucket are supported). A rerun checks the code out again, so it needs somewhere to check it out from.
+- A Git token the checkout can use: the [project's PAT](/support/docs/hyperexecute-projects/), or a `git_token` saved at user or organization level if the project has none.
 - The job uses **YAML version 0.1**.
 - You can open the job's project and run jobs in it.
 
