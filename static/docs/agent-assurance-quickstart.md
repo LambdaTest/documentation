@@ -2,9 +2,9 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
-TestMu AI Agent Assurance tests autonomous agents you own. These agents *act* by calling tools, writing files, and changing external state. This guide takes you from a clean machine to your first evidence-backed run: install and authenticate the rook CLI, then test a live agent from its PRD and a staging API.
+Run one small test before connecting a business-critical agent. This walkthrough uses Rook's public support-triage sample: a local HTTP service with in-memory tickets, no model key, and no external customer actions.
 
-You install only the rook CLI. You do not need to clone the source repository, build any code, start a controller, or bring your own model API key.
+This is an **interactive TUI walkthrough**, not a CI pipeline. Use your normal shell only to install Rook and start the sample. Then launch `rook` without a subcommand and enter the slash commands below inside its prompt, one step at a time.
 
 ```text
 Install → launch Rook → sign in → select a project
@@ -12,7 +12,7 @@ Install → launch Rook → sign in → select a project
 → generate and review scenarios → sync → approve one run → inspect evidence
 ```
 
-The interactive workflow and terminal screenshots were tested with **Rook 0.1.5** on September 28, 2026. Discovery, profile generation, scenario generation, and judging use TestMu AI credits; even a small suite can involve several model calls. Review the proposed work and credit balance before approving it. The browser examples below are separately identified saved runs.
+The interactive workflow and terminal screenshots were tested with **Rook 0.1.11** on October 13, 2026. Discovery, profile generation, scenario generation, and judging use TestMu AI credits; even a small suite can involve several model calls. Review the proposed work and credit balance before approving it. The browser examples below are separately identified saved runs.
 
 Already have a live agent? Follow the same sequence with your own [source or requirements](/support/docs/agent-assurance-connect-and-explore-agents/) and [invocation profile](/support/docs/rook-profiles-and-hooks/#add-a-profile-interactively).
 
@@ -38,7 +38,7 @@ npm install -g @testmuai/rook
 PowerShell on Windows x64:
 
 ```powershell
-npm.cmd install -g @testmuai/rook@0.1.11
+npm.cmd install -g @testmuai/rook
 ```
 
 Then check your installation:
@@ -56,267 +56,266 @@ Public packages default to `ROOK_ENV=prod`, the service behind [Rook Projects](h
 **Existing credentials**
 If LT_USERNAME and LT_ACCESS_KEY are exported, they take precedence over stored browser login. Use credentials for the selected environment, or unset both in this terminal before using browser login. In PowerShell, use `Remove-Item Env:LT_USERNAME, Env:LT_ACCESS_KEY -ErrorAction SilentlyContinue` to remove them from this session only. Never paste credentials into documentation, prompts, or screenshots.
 
-## Install and authenticate the CLI
+## Test Your First Agent
 
-This section installs the packaged rook CLI. You do not clone the source repository, install its dependencies, start a controller, or build any code.
+### 1. Start the public sample
 
-### Prerequisites
+The [triage-service sample](https://github.com/LambdaTest/rook/tree/main/samples/triage-service) is the target being tested—not Rook's backend.
 
-- macOS or Linux.
-- Node.js 20 or newer.
-- A TestMu AI account with Agent Assurance access.
-- The runtime needed by your own target agent. For example, a remote HTTP agent must be reachable and a local command agent must be installed on PATH.
+In a separate terminal:
 
-Check Node.js:
+```bash
+git clone --depth 1 --filter=blob:none --sparse https://github.com/LambdaTest/rook.git rook-samples
+cd rook-samples
+git sparse-checkout set samples/triage-service
+cd samples/triage-service
+```
 
-~~~bash
-node --version
-~~~
+Start the sample in that terminal. On macOS/Linux:
 
-The major version must be 20 or newer.
+```bash
+PORT=19110 node src/server.mjs
+```
 
-### Step 1: Install the packaged CLI
+On Windows PowerShell:
 
-Run:
+```powershell
+$env:PORT = '19110'
+node src/server.mjs
+```
 
-~~~bash
-curl -fsSL https://raw.githubusercontent.com/LambdaTest/rook/main/install.sh | bash
-~~~
+Leave it running. It keeps fixture changes in memory; restarting it resets them. From another terminal, verify the target:
 
-The installer:
+```bash
+curl -fsS http://127.0.0.1:19110/healthz
+curl -fsS http://127.0.0.1:19110/v1/triage \
+-H 'content-type: application/json' \
+-d '{"input":"please look at T-1043"}'
+```
 
-1. Checks for Node.js 20 or newer.
-2. Finds the newest rook release.
-3. Downloads and verifies the release archive.
-4. Installs it below ~/.testmuai/rook/versions/&lt;version&gt;.
-5. Links the rook executable into a writable directory on PATH.
+In PowerShell, use `Invoke-RestMethod` instead of the Bash cURL example:
 
-If the final message prints a PATH command, run that exact command and open a new terminal.
+```powershell
+Invoke-RestMethod -Uri 'http://127.0.0.1:19110/healthz'
+$rookProbe = @{ input = 'please look at T-1043' } | ConvertTo-Json
+Invoke-RestMethod -Uri 'http://127.0.0.1:19110/v1/triage' -Method Post -ContentType 'application/json' -Body $rookProbe
+```
 
-### Step 2: Verify the CLI
+The response should say T-1043 triaged as S1 and assigned to platform. and include the recorded tool steps.
 
-~~~bash
-rook --version
-rook doctor
-~~~
+### 2. Open the TUI, sign in, and explore {#open-the-tui-and-explore}
 
-rook doctor checks the CLI version, Node.js, workspace, selected environment, controller reachability, authentication, and terminal support.
+Open the sample folder in your Rook terminal:
 
-### Step 3: Sign in
-
-Start browser authentication:
-
-~~~bash
-rook login
-~~~
-
-Or start the interactive terminal and enter /login:
-
-~~~bash
+```bash
+cd rook-samples/samples/triage-service
+export ROOK_ENV=prod
 rook
-~~~
+```
 
-After the browser flow, verify the account:
+Or, in PowerShell:
 
-~~~bash
-rook whoami
-~~~
+```powershell
+Set-Location 'rook-samples/samples/triage-service'
+$env:ROOK_ENV = 'prod'
+rook.cmd
+```
 
-Authentication is global. Multiple rook sessions on the same machine use the credentials stored below ~/.testmuai/rook/.
+The Rook banner, command prompt, and footer confirm that you are in interactive mode. If you are already signed in, Rook can open the project chooser automatically:
 
-### Install a specific release
+If not signed in, enter `/login`, complete the browser flow, and return to this terminal. Use `/doctor` to check readiness and `/plan` to check credits. At a chooser, use arrow keys and Enter; Esc goes back. At the prompt, Tab completes commands. The remaining commands belong **inside this TUI**, not in your shell.
 
-Release identifiers use a commit SHA. Pin a known version for CI or a controlled rollout:
+```text
+/project
+```
 
-~~~bash
-export ROOK_VERSION=""
+Select an existing test project, or create one:
 
-curl -fsSL https://raw.githubusercontent.com/LambdaTest/rook/main/install.sh | bash
-~~~
+```text
+/project create "Rook quickstart"
+```
 
-Installed versions remain side by side, so installing a new build does not overwrite the previous version directory.
+Run exploration only after the intended test project is selected:
 
-### Update the CLI
+```text
+/explore .
+```
 
-Run the same installer again, then verify the selected version:
+Rook reads the sample and shows discovery progress. When it proposes an agent, review the name, source path, and purpose before choosing **yes** to register it. This is an actual exploration of the public sample:
 
-~~~bash
-rook --version
-rook doctor
-~~~
+Wait for exploration to finish, then open the agent picker:
 
-### Troubleshooting the install
+```text
+/agent
+```
 
-| Symptom | What to do |
+Select the discovered triage agent. Generated IDs can differ: use the actual ID/name shown by your session. Confirm that the discovered features describe the ticket service, not unrelated files.
+
+### 3. Generate and verify the profile from a prompt
+
+Enter `/profile add local-triage` in the TUI. When Rook asks how to reach the agent, paste this description:
+
+```text
+Reach the running service at http://127.0.0.1:19110/v1/triage.
+For execute, POST JSON {"input": <the goal read from stdin>}.
+The response's output field is the agent's answer: return it as agent_reply.
+Map each response step's tool and args to calls[].name and calls[].arguments.
+Use "please look at T-1043" as the harmless verification goal.
+No credentials are needed. Do not start another server or install dependencies.
+This fixture is single-turn. Its echoed session_id is not conversational state.
+Do not report the fixture's zero usage values as measured model usage.
+Use concurrency 1.
+```
+
+Rook generates the hook and verifies it against the running sample. Approve only the intended local HTTP call and script work; do not approve server startup, dependency installation, or unrelated commands. Wait for the result before continuing.
+
+This checkpoint shows authoring in progress. Read the exact requested file or command, then approve once with **yes** if it matches the sample setup; the prompt is not evidence that verification has passed.
+
+To use a saved description instead, put the same text in `triage-profile.txt` in the sample folder and use `/profile add local-triage --from triage-profile.txt`. These are alternatives—do not create the same profile twice.
+
+Inspect and test the generated result inside the TUI:
+
+```text
+/profile show local-triage
+/profile test local-triage --goal "please look at T-1043"
+/profile use local-triage
+```
+
+Review the generated profiles/local-triage.yaml and scripts/ files below the active agent directory. A successful probe should return the real answer and four tool calls. Stop here if the probe fails; generation and testing will not repair a broken connection automatically.
+
+This is the successful connection checkpoint: the hook answered, the generated profile was saved, and the footer now includes `local-triage`. Profile verification is not a scenario verdict.
+
+The sample needs only an execute hook. Use [additional lifecycle hooks](/support/docs/rook-profiles-and-hooks/#lifecycle) for login, session setup, teardown, or delayed trace collection.
+
+### 4. Generate a small suite and review it
+
+```text
+/generate --total 2 --class functional --category happy_path -- Create two single-turn cases for existing tickets only: T-1043 must be S1/platform and T-1041 must be S2/billing. Check the answer and recorded calls. Do not require external verification or repeated samples.
+```
+
+Before writing scenarios, Rook shows the plan and offers **proceed**, **discard**, or **change**. Check both the included cases and the features it intentionally leaves uncovered:
+
+Choose **proceed** only if the scope matches the two requested tickets. Wait for writing to finish, then inspect the saved suite:
+
+```text
+/scenarios list
+```
+
+The count is a generation target, not a guarantee. In this capture, two scenarios were written and both are runnable against `local-triage`; neither has passed yet. Review the resulting files before running them. Check that every criterion can be evaluated from the answer or the calls your hook actually returns. For example, a JSON-path check against $.steps cannot inspect that field if your hook returned only an answer string.
+
+Also read each scenario's `calls` list. A `called_with` check needs the arguments to match; with empty `arguments: {}` there is nothing to compare, and the run reports that call as **Unable to Verify** even when the agent made it. In this capture, both generated scenarios had such checks. Add the arguments you expect, or use `called` when only the call matters, then save the file:
+
+```yaml
+calls:
+- tool: get_ticket
+expect: called_with
+arguments: { ticket_id: T-1043 }
+- tool: set_severity
+expect: called_with
+arguments: { ticket_id: T-1043, severity: S1 }
+- tool: assign_team
+expect: called_with
+arguments: { ticket_id: T-1043, team: platform }
+- tool: reply_to_customer
+expect: called
+```
+
+Choose the scenario for **T-1043**. Do not assume it will always be SC-002.
+
+### 5. Sync, then run one scenario
+
+```text
+/sync
+```
+
+Wait for the agent to be recorded upstream before starting the run:
+
+```text
+/run --only <your-T-1043-scenario-id> --profile local-triage --concurrency 1 --name first-triage-run
+```
+
+Replace the placeholder with the generated scenario ID. Review the selected scenario and active profile before proceeding. This plan selects only `SC-001` and explicitly skips `SC-002`:
+
+Choose **proceed** to execute this reviewed scope, **discard** to run nothing, or **change** to revise it. Read any additional permission prompts before approving. The plan is not a fixed credit quote; check `/plan` before starting.
+
+While Rook runs, the scenario row shows its current phase. This capture is in **judging**, with `0/1` completed; it is not a final verdict:
+
+Wait for completion before opening the report. Press Esc only if you intend to interrupt; stopping Rook does not undo actions already performed by the target.
+
+A normal run needs a synchronized agent version. --test is for an intentionally local, unsynchronized experiment; it does not add a run to the shared timeline.
+
+### 6. Open the results
+
+First read the report, then choose either UI:
+
+```text
+/report
+```
+
+The report names the saved run and its evidence directory. Check the counts, not just the percentage: this run executed one scenario, and four of the five discovered features were not tested. Reading `/report` does not rerun the target; do not add `--rca` unless you intend to request additional paid analysis.
+
+| Review on this machine | Review with your team |
 |---|---|
-| rook: command not found | Run the PATH or link command printed by the installer, then open a new terminal. |
-| Node.js version error | Install Node.js 20 or newer and rerun the installer. |
-| Release asset connection resets | Retry outside the VPN or corporate proxy; the download uses GitHub's release asset CDN. |
-| Agent Assurance account is not recognized | Run rook login, then rook whoami. |
+| Run `/ui --local`. | Run `/ui`. |
+| Open **triage-service → runs → your run → scenario**. | Open **project → triage agent → Runs → first-triage-run → scenario** in the Web UI. |
+| In the redesigned viewer, read **Acceptance criteria**, then choose **Request**, **Response**, **Verdict**, or **Artefacts** from **Evidence**. For older CLI layouts, see the note below. | Read the criteria, then open **Request**, **Response**, **Verdict**, or **Artefacts** from **Evidence**. |
+| Works with on-disk evidence, including `--test` runs; keep the TUI open while reviewing. | Requires browser sign-in and uploaded results; teammates need project access. |
 
-## Test your first agent
+Both routes inspect the recorded evidence without running the agent again. The [local and hosted UI walkthrough](/support/docs/rook-web-ui/#choose-your-ui) shows the different screens and explains missing results.
 
-This walkthrough tests a refund agent from its PRD and a staging API. It represents a common setup: you have product requirements and access to a live endpoint, but the agent source code is not in your workspace.
+In the verified smoke test, the selected scenario passed with four observed tool calls and no unverifiable criteria. That proves this one fixture path worked—not that the whole agent is reliable. Review the four other discovered features before expanding the suite.
 
-Replace the example filenames, URL, token, and JSON fields with values from your own agent.
+#### Local UI: Review a Result {#local-ui-example}
 
 The redesigned local result has **Acceptance criteria** filters and an **Evidence** drawer for request, response, verdict, and artifacts. This screenshot uses a separate saved CommerceCare demo (SC-006), not the triage execution above. It illustrates one failed requirement and two unverifiable criteria; your scenario IDs and outcomes will differ. Public 0.1.6 and later include this viewer; 0.1.5 and earlier use the earlier scrolling layout—see the [rollout and navigation note](/support/docs/rook-web-ui/#earlier-local-ui).
 
-- The rook CLI installed and authenticated (complete [Install and authenticate the CLI](#install-and-authenticate-the-cli) above).
-- A local PRD or specification for the agent.
-- A working staging cURL request.
-- Test data that the agent is allowed to read or change.
+#### Hosted Web UI: The Uploaded Result {#hosted-ui-example}
 
-Do not use a production refund endpoint for this walkthrough.
+The browser capture below shows the earlier September 11 triage smoke test, not the September 28 TUI run above. Open **Evidence → Verdict** to read a saved evaluation in the drawer, then close it to return to the criterion cards. Use **Expand all** to read passing criteria, which start collapsed. Opening either UI reviews existing evidence; it does not execute the agent again.
 
-### Step 1: Open the specification workspace
+### 7. Stop the sample when finished
 
-Open a terminal in the folder that contains your product materials:
+Enter /exit to leave Rook. Stop the sample server with Ctrl+C in its terminal. Rook results stay below:
 
-~~~text
-refund-agent-test/
-├── refund-agent-prd.md
-└── knowledge/
-    └── refund-policy.md
-~~~
+```text
+.testmuai/rook/projects/<project-id>/agents/<agent-id>/runs/<run-id>/
+```
 
-The folder does not need to contain agent code.
-
-Start rook:
-
-~~~bash
-cd refund-agent-test
-rook
-~~~
-
-### Step 2: Explore the PRD and knowledge base
-
-At the rook prompt, enter:
-
-~~~text
-/explore . -- focus on refund-agent-prd.md and knowledge/refund-policy.md
-~~~
-
-For one standalone document, use:
-
-~~~text
-/explore refund-agent-prd.md
-~~~
-
-Agent Assurance reads the selected local materials and proposes the agent it found. Confirm the agent only if the name, purpose, rules, and source files match your intended target.
-
-The discovered record describes expected behavior. It does not prove the live service implements the PRD.
-
-### Step 3: Generate focused scenarios
-
-Start with a small, reviewable set:
-
-~~~text
-/generate --total 12 -- verify eligibility, required identity checks, duplicate requests, and receipt creation
-~~~
-
-List the scenarios:
-
-~~~text
-/scenarios list
-~~~
-
-Review the exact order IDs, policy thresholds, and expected artifacts. Exclude a scenario that is unsafe for the current environment:
-
-~~~text
-/scenarios exclude SC-009
-~~~
-
-### Step 4: Add the staging profile and store its token
-
-Enter:
-
-~~~text
-/profile add
-~~~
-
-Name the profile refund-staging and paste a working request such as:
-
-~~~bash
-curl https://refund-agent.staging.example.com/v1/chat \
-  -H 'content-type: application/json' \
-  -H 'authorization: Bearer replace-with-your-token' \
-  -d '{"message":"check refund status for order ORD-1042","session_id":"quickstart"}'
-~~~
-
-During setup, map:
-
-- message to the scenario goal.
-- session_id to the per-scenario conversation handle.
-- The actual response field, such as $.reply.text, to the result.
-
-Agent Assurance lifts the Authorization credential out of the profile, replaces it with $&#123;ROOK_AGENT_TOKEN&#125;, and prompts securely for the value. Run /env list afterward to confirm the generated variable name without printing the secret.
-
-Agent Assurance then invokes the profile once with a harmless goal. Confirm the extracted answer only if it is the agent's real response, not a request ID or status field.
-
-Inspect the saved profile:
-
-~~~text
-/profile show refund-staging
-/profile curl refund-staging
-~~~
-
-### Step 5: Run one safe scenario
-
-Choose one read-only scenario from /scenarios list:
-
-~~~text
-/run --only SC-001 --concurrency 1 --no-narrative
-~~~
-
-Before confirming, check:
-
-- The selected agent and profile.
-- The staging hostname.
-- The scenario count.
-- The estimated credits.
-- Any warning about write-capable tools.
-
-Agent Assurance cannot roll back a refund, message, ticket, or other action taken by the agent.
-
-### Step 6: Run the approved set
-
-After the first scenario behaves correctly:
+## Continue After Your First Test {#continue-after-your-first-test}
 
 To repeat this workflow through your coding assistant, [choose a client-specific Rook skill guide](/support/docs/rook-coding-agents/). To automate the reviewed suite, use [GitHub Actions](/support/docs/rook-github-actions/), [Jenkins](/support/docs/rook-jenkins/), or [Argo CD](/support/docs/rook-argocd/).
 
-Use `rook status` at any point to check the selected project, active agent, and local/upstream state. In the TUI, bare `/project`, `/agent`, and `/profile` open pickers; select with the arrow keys and Enter. In a shell, their bare forms list the available records.
+Use `/status` inside the TUI to check the selected project, active agent, and local/upstream state. Bare `/project`, `/agent`, and `/profile` open pickers; select with the arrow keys and Enter. Shell equivalents are covered in the [command reference](/support/docs/agent-assurance-command-reference/); you do not need to leave the TUI to continue this walkthrough.
 
-Use concurrency 1 while scenarios share accounts, order records, or mutable state. Increase it only after the target and fixtures are isolated.
+### Ask in Plain Language
 
-Press Esc to abort the active operation. Agent Assurance preserves completed scenario results, but it cancels the in-flight target call, which may already have produced an external effect. Inspect target state before retrying a write.
+Use `/ask` in the TUI when you know the outcome but not the command:
 
-### Step 7: Review evidence
+```text
+/ask generate adversarial tests for refund-policy bypasses
+```
 
-Open the local viewer:
+Rook resolves the request to the appropriate operation. Any operation that spends credits or needs permission still shows its plan and asks first.
 
-~~~text
-/ui
-~~~
+### Local Changes and Sync
 
-Open each failure or **Unable to Verify** result. Check the request, response, criterion evidence, artifacts, and verification gaps.
+Exploration, generation, profile authoring, and curation write plain files under `.testmuai/rook/`. They do not silently publish workspace state.
 
-- **Fail** means a failed criterion was observed.
-- **Unable to Verify** means the current profile did not expose enough evidence.
-- A claim such as “refund issued” in the agent's text is not independent proof that the refund exists.
+`/sync` records the current project tree upstream. Profile files contain environment-variable references, never their secret values. Run results are saved locally as they happen and can be reconciled upstream after connectivity returns.
 
-Add read-only MCP verification or another safe observation when state changes must be proven.
+### When to Repeat a Step
 
-### Step 8: End the session
+| Change | Repeat |
+|---|---|
+| Agent source, prompt, tools, or policy changed | `explore`, then regenerate affected scenarios |
+| Test intent changed without an implementation change | `generate` with an instruction, then curate |
+| Endpoint, authentication, or response shape changed | `profile test`, then `profile fix` if needed |
+| Only the deployed target changed | `run` against the intended profile |
+| Evidence arrives asynchronously | Continue the same run with `--run  --phases collect,judge` |
+| Local project metadata needs publishing | `sync` |
 
-~~~text
-/exit
-~~~
+## Connect Your Own Agent Next
 
-Results remain below .testmuai/rook/ in your specification workspace.
+Use staging credentials and disposable data. Tell the profile author the real request, answer field, authentication, session semantics, and evidence sources. Do not claim multi-turn state, observable calls, or measured usage unless the target actually supplies them.
 
-## Next steps
-
-- [Choose a real-world setup](/support/docs/agent-assurance-overview/#real-world-use-cases)
-- [Configure more profile shapes](/support/docs/agent-assurance-profiles/)
-- [Open the full command index](/support/docs/agent-assurance-command-reference/)
+[Prompt-based profiles](/support/docs/rook-profiles-and-hooks/#add-a-profile-interactively) · [Phases and hooks](/support/docs/rook-profiles-and-hooks/#lifecycle) · [Review results](/support/docs/agent-assurance-results-and-evidence/) · [CI/CD](/support/docs/agent-assurance-ci-cd/)

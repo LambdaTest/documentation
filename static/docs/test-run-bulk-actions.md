@@ -27,7 +27,7 @@ All three actions work within a single project. Test runs cannot be moved or cop
 ## Select test runs
 
 1. Open your project in Test Manager and go to the **Test Runs** tab.
-2. In the **Folders** panel, choose the section to work in. Use search or filters to narrow the list if needed.
+2. In the **Folders** panel, choose the section to work in. Use search or the **Status**, **Tags**, and **Creator** filters to narrow the list if needed. Switch a filter to **Not Equals** to hide the test runs with the selected values.
    - **All Test Runs** lists test runs across all folders in the project.
    - A folder lists only the test runs in that folder.
 3. Select the test runs you want to act on using their checkboxes. The number of selected runs is shown above the list.

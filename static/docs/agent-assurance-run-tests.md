@@ -2,7 +2,7 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
-`/run` selects runnable scenarios, displays the target and estimated cost, asks for permission, invokes the live agent, and records evidence for every completed scenario.
+`/run` selects runnable scenarios, shows a plan for review, asks for approval, invokes the live agent, and records evidence for every completed scenario. Check your credits with `/plan` first; the run plan is not a fixed spending limit.
 
 > **Use a test target:** Rook does not undo the target agent's actions. Refunds, messages, tickets, deployments, database updates, and file writes are real.
 >
@@ -10,16 +10,21 @@
 
 ## Preflight Checklist
 
+Launch `rook` from your agent workspace and enter the slash commands below inside the interactive TUI. `/help run` lists selectors and phases without starting a test; `/run` invokes the live target after its preflight and permission checks.
+
 Before running a suite, confirm:
 
-1. The intended agent is active: `/agent`.
-2. The intended verified profile is active: `/profile list`.
-3. The target URL or command points at test or staging. Direct MCP profiles cannot currently be invoked by `/profile test` or `/run`; use an HTTP or command adapter.
-4. Required fixtures and reset behavior are ready.
-5. Required MCP verification servers are enabled and approved: `/mcp`.
-6. Scenario runnability is understood: `/scenarios list`.
-7. The budget and credit balance are sufficient: `/budget` and `/plan`.
-8. Concurrency is safe for the target's state and rate limits.
+1. The intended project is active: `/project`.
+2. The intended agent is active: `/agent`.
+3. The intended verified profile is active: `/profile`.
+4. The target URL or command points at test or staging. Review the hook scripts that implement the actual transport.
+5. Required fixtures and reset behavior are ready.
+6. Required MCP verification servers are enabled and approved: `/mcp`.
+7. Scenario runnability is understood: `/scenarios list`.
+8. The credit balance is sufficient: `/plan`.
+9. Concurrency is safe for the target's state and rate limits.
+
+Sync the reviewed project with /sync before a normal timeline run. Use --test only when you intentionally want a local experiment that will not appear in the hosted history.
 
 ## Run the Runnable Suite
 
@@ -33,7 +38,7 @@ Without `--only`, a run selects at most two scenarios per attack pattern. The ot
 
 A partially observable scenario still runs when it can establish useful evidence. Individual criteria that cannot be checked become **Unable to Verify**.
 
-The default concurrency is `3`.
+The default concurrency is `1` unless the profile or plan selects another value. An explicit `--concurrency` accepts 1–8 and overrides that choice.
 
 ## Select Scenarios Precisely
 
@@ -96,28 +101,37 @@ Use higher concurrency only when the target isolates sessions and fixtures. Conc
 
 ## Review the Permission Gate
 
-Rook shows the exact target and whether discovery found write-capable tools.
+First review the run plan. This actual [quickstart](/support/docs/agent-assurance-quickstart/) capture selects one scenario, excludes the other, and waits for a decision:
+
+Use the arrow keys and Enter to choose **proceed**, **discard**, or **change**. Check the active project, agent, and profile in the footer. A selected plan does not prove that the endpoint is safe: inspect the profile and its scripts first. The plan is not a fixed credit quote.
+
+Rook may also ask to approve individual tools or target invocations. Read the exact operation and target in each permission prompt.
 
 The answers mean:
 
 | Answer | Effect |
 |---|---|
 | `yes` | Allow this exact operation once. |
-| `always` | Store a grant for this tool and target in this project. |
+| `always` | Read its scope hint. For a model-chosen operation it lasts for this run without a disk grant; a persistent choice for a human-requested action can store a project grant. |
 | `never` | Store a denial for this tool and target in this project. |
 | `no` | Decline without storing a decision. |
 
 Deny rules override allow rules, and more specific rules win. Permission state is stored globally under a per-project section, so a repository cannot grant itself permission.
 
-## Run Without a Narrative
+## Follow Run Progress
 
-The run-level narrative summarizes patterns after all scenario verdicts are available. Skip that model call when CI needs only the structured evidence and deterministic totals:
+After approval, each active scenario shows its current phase. This is an actual `SC-001` execution against the public triage fixture, captured while Rook was judging the response and recorded hook evidence:
+
+`0/1` means the scenario has not finished; it does not mean it failed. Wait for completion, then enter `/report` to inspect pass, fail, unverifiable, and unjudged counts. See [results and evidence](/support/docs/agent-assurance-results-and-evidence/#print-or-export-a-report) for the completed report from this demo.
+
+## Run Selected Phases
 
 ```text
-/run --no-narrative
+/run --phases prepare,open,execute,close
+/run --run <run-id> --phases collect,judge
 ```
 
-The headless equivalent is:
+The second command continues the same run after delayed evidence is ready. --resume instead creates a new run and carries compatible completed work forward. Rook owns judging; the other phases run your profile hooks.
 
 See [phases and hooks](/support/docs/rook-profiles-and-hooks/#lifecycle) for prerequisites and state. The old --no-narrative option is no longer available.
 
@@ -130,7 +144,7 @@ See [phases and hooks](/support/docs/rook-profiles-and-hooks/#lifecycle) for pre
 Rook clusters related failures first, then investigates each cause using the verdicts, scenario definition, feature, and read-only access to source. It writes remedies under:
 
 ```text
-.testmuai/rook/agents/<agent-id>/runs/<run-id>/remedies/
+.testmuai/rook/projects/<project-id>/agents/<agent-id>/runs/<run-id>/remedies/
 ```
 
 RCA is off by default. It consumes additional credits, and its cost depends on the number of distinct failure clusters. A remedy is an evidence-grounded hypothesis, not a verified patch.
@@ -215,14 +229,32 @@ Otherwise, keep these cases documented but exclude them from release-gating runs
 - Disable a required server and confirm the scenario names the missing capability.
 - Attempt a write when only read behavior is expected.
 
-## Headless Run Limitations
+## Headless Runs and Hosted Results
 
-Current headless syntax is:
+The same selectors and lifecycle controls are available in a shell:
 
 ```bash
-rook run [--entity <id>] [--only <ids>] [--no-narrative] [--verbose] [--json]
+rook run --only SC-001 --profile staging --concurrency 1 --name smoke --json
 ```
 
-Interactive-only run controls currently include class, category, tag, concurrency, free-form selection, and `--rca`.
+Select the project and agent before running; there is no --entity flag. Supply reviewed permissions when running unattended. See [CI/CD](/support/docs/agent-assurance-ci-cd/) for authentication, JSON, and completion checks.
 
-For deterministic CI selection, resolve IDs before invoking `rook run --only`.
+### Review the Run Locally or Online
+
+| Local UI | Hosted Web UI |
+|---|---|
+| `rook ui --local` | `rook ui` |
+| Open agent → runs → run → scenario. | Open project → agent → Runs → run → scenario. |
+| Inspect on-disk results, including local `--test` runs and evidence awaiting upload. | Inspect uploaded normal runs and share links with authorized teammates. |
+
+Neither command completes unfinished phases or retries the target. Keep the local serving process running. For the hosted UI, check the same account and `ROOK_ENV`; use `rook runs sync` for outstanding normal-run uploads. Do not expect a `--test` run to appear there.
+
+See [both UI walkthroughs](/support/docs/rook-web-ui/#choose-your-ui) and [criterion evidence in each interface](/support/docs/agent-assurance-results-and-evidence/#inspect-criterion-evidence).
+
+#### Local UI: Check the Completed Run {#local-ui-example}
+
+Open the agent's **Runs** tab and select the execution. The saved CommerceCare demo has mixed passing, failed, and unverifiable results; **completed** does not mean every scenario passed. Read the narrative, open **View plan**, and click a scenario for criterion evidence. The profile name opens the run's saved configuration; the adjacent link opens the current profile. See the [local walkthrough and rollout note](/support/docs/rook-web-ui/#local-runs) for layout differences.
+
+#### Hosted Web UI: Review the Shared Execution {#hosted-ui-example}
+
+Open **project → agent → Runs → run**. Check completion, agent version, invocation profile, and the scenario row. **View plan** explains selection and exclusions; opening the scenario shows the evidence for this execution.

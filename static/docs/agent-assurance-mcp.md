@@ -8,7 +8,7 @@ Exploration also records MCP servers declared by the target agent. These declara
 
 ## List Servers
 
-Interactive:
+Launch `rook` in the workspace and enter these commands in its interactive TUI:
 
 ```text
 /mcp
@@ -23,6 +23,8 @@ rook mcp list --json
 ```
 
 Each row reports the server name, origin, transport, state, source, and connection or tool status when available.
+
+This actual first-use capture has no MCP servers: the triage sample is reached by HTTP, not MCP. It is an empty configuration, not a failed connection. After adding a server, repeat `/mcp list` and inspect it with `/mcp get ` before approving or using it. Declaring a server alone does not prove its tools work.
 
 ## MCP Origins and Precedence
 
@@ -183,3 +185,17 @@ Only approve a state-changing MCP call when the test explicitly requires that re
 | `malformed` | Required command data is absent or invalid | Fix the source configuration |
 
 Malformed scope files and duplicate discovered names are reported with their source rather than silently dropped.
+
+## Review MCP Evidence in Either UI
+
+Use `rook ui --local` for workspace records or `rook ui` for uploaded results. In either redesigned interface, open **run → scenario**, inspect the acceptance criteria, then choose **Response**, **Verdict**, or **Artefacts** in **Evidence** to open the drawer. Both can show MCP-related evidence only when it was actually recorded; declaring a tool or verifier does not prove it was called. See the [earlier local layout](/support/docs/rook-web-ui/#earlier-local-ui) if your CLI still has scrolling sections.
+
+Neither UI starts, approves, or edits an MCP server. Resolve missing verification access with the CLI commands above, then inspect the resulting evidence. The [local and hosted walkthrough](/support/docs/rook-web-ui/#choose-your-ui) shows both review layouts.
+
+### Local UI: Where to Inspect Verification Evidence {#local-ui-example}
+
+Open **agent → Runs → run → scenario** and read **Acceptance criteria**, then inspect **Evidence → Response** and **Verdict**. This saved CommerceCare demo locates the review controls; it does not demonstrate an MCP invocation or configuration. For an MCP-backed test, inspect that run's actual calls and verification gaps here.
+
+### Hosted Web UI: Where to Inspect Uploaded Calls {#hosted-ui-example}
+
+Open **run → scenario → Evidence → Response** for the recorded exchange and observed calls, then check **Verdict** and **Artefacts** in the drawer. This separate hosted HTTP triage sample is not MCP-specific evidence. An MCP tool declaration or connection status alone cannot establish what the tested agent actually did.

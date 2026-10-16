@@ -34,6 +34,8 @@ Start /profile add and describe how you reach the agent. You can paste or point 
 
 Rook reads the material, asks only for information it cannot determine, writes reviewable .mjs hook scripts, invokes the target, and corrects the scripts from the actual response. If an existing profile stops working, /profile fix runs it, reads the failure, and repairs it. /profile test performs the cheaper verification call without rewriting anything.
 
+This is the public triage sample being connected in the interactive TUI, not command help. Rook asks how to reach the agent, writes a hook, and pauses for approval before executing sensitive work. Follow [profile authoring and verification](/support/docs/rook-profiles-and-hooks/#add-a-profile-interactively) to inspect the result before a test run.
+
 Profiles store script paths, required environment-variable names, and observed capabilities—not credential values. The generated files remain on disk for review and editing.
 
 ## Lifecycle Phases and Hooks
@@ -103,14 +105,14 @@ Long-running commands emit structured progress. In the TUI, Rook renders active 
 
 ## Local and Hosted UIs {#hosted-web-ui}
 
-Use `rook ui --local` for the current workspace's agents, profiles, features, scenarios, runs, and evidence, including unsynchronized work and `--test` runs. Its agent page groups the lists together; it has no separate hosted Versions or Insights tabs.
+Use `rook ui --local` for the current workspace's agents, profiles, features, scenarios, runs, and evidence, including unsynchronized work and `--test` runs. The redesigned viewer has five agent tabs and refreshes when workspace records change; hosted version history remains separate. Check the [rollout note](/support/docs/rook-web-ui/#earlier-local-ui) if your public CLI still has the earlier layout.
 
-Use `rook ui` for synchronized projects, versions, profile specifications, scenario filters, shared runs, and Insights in the hosted Web UI. Browser sign-in and project access are required. Create and execute tests in the CLI in both cases; see the [local and hosted screenshot walkthrough](/support/docs/rook-web-ui/#choose-your-ui).
+Use `rook ui` for synchronized projects, versions, a dedicated Profiles tab, scenario filters, and shared runs in the hosted Web UI. Insights is not currently available. Browser sign-in and project access are required. Create and execute tests in the CLI in both cases; see the [local and hosted screenshot walkthrough](/support/docs/rook-web-ui/#choose-your-ui).
 
 ### Local UI: Inspect a Discovered Behavior {#local-ui-example}
 
-Open **agent → features → feature ID**. The local F-002 page shows the user story, expected behavior, validation rules, and edge cases extracted for outage triage. Use these requirements to decide which scenarios are still needed.
+Open **agent → Features → feature ID**. In this CommerceCare demo, the F-002 dialog describes eligible refunds, including the user story, expected behavior, validation rules, and edge cases. Use these requirements and the catalog's scenario counts to decide which tests are still needed.
 
-### Hosted Web UI: Review the Same Feature With Your Team {#hosted-ui-example}
+### Hosted Web UI: Review Features With Your Team {#hosted-ui-example}
 
-After synchronization, open **project → agent → Features** and click the feature ID. The dialog shows the recorded behavior and source materials. A feature definition describes intended behavior; it is not proof that a test has passed.
+After synchronization, open **project → agent → Features** and click the feature ID. The dialog shows the recorded behavior and source materials. This hosted capture uses the separate triage example. A feature definition describes intended behavior; it is not proof that a test has passed.

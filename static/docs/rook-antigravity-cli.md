@@ -9,7 +9,7 @@ Prefer an editor? Use the [Antigravity IDE guide](/support/docs/rook-antigravity
 ## Before You Start
 
 - Follow Google's [Antigravity CLI installation and authentication guide](https://antigravity.google/docs/cli/install/). Check `agy --version` and `agy --help` in your terminal. Your Antigravity account and model usage are separate from Rook authentication and credits.
-- [Install the public Rook CLI](/support/docs/rook-installation/), run `rook --version` and `rook doctor`, and use `rook login` if needed.
+- [Install the public Rook CLI](/support/docs/rook-installation/) in the environment where the assistant executes commands. The first prompt below checks readiness and guides you through any missing Rook sign-in.
 - Open a repository containing an AI agent you own and a safe test environment. Complete the [sample quickstart](/support/docs/agent-assurance-quickstart/) first if you have not used Rook before.
 - The copy example below requires Git and Bash. On Windows, use a compatible shell such as WSL and keep the client, repository, and Rook installation in the same execution environment. Do not put target credentials in the skill or chat.
 
@@ -28,7 +28,7 @@ exit 1
 fi
 rook_skill_checkout=$(mktemp -d)
 git clone --filter=blob:none https://github.com/LambdaTest/rook.git "$rook_skill_checkout/rook"
-git -C "$rook_skill_checkout/rook" checkout --detach f199cb99c589b565e48a3a29781475daee907533
+git -C "$rook_skill_checkout/rook" checkout --detach 439480f2ef3084fcbc0997a59a70f5f8adcd4ad8
 mkdir -p .agents/skills
 cp -R "$rook_skill_checkout/rook/skill-installer/skills" .agents/skills/rook
 )
@@ -48,52 +48,106 @@ agy
 
 Inside the interactive CLI, enter `/skills` and check for `rook`. Skills are exposed as slash commands, so use `/rook` for the first request below. These are Antigravity prompt commands, not shell commands. If the skill was added while a session was running, start a fresh session. See Google's [CLI reference](https://antigravity.google/docs/cli/reference/) and [skill locations](https://antigravity.google/docs/skills#cli-skill-locations).
 
-Start with inspection only:
+The readiness prompt below should identify `.agents/skills/rook/SKILL.md` and any missing setup. Skill discovery alone is not a successful Rook test. Keep Antigravity's command review enabled; do not use `--dangerously-skip-permissions` to complete this walkthrough.
+
+## Test Your Agent Through Prompts {#run-a-small-reviewed-test}
+
+After one-time setup, **type these requests in your coding assistant's chat, not in a terminal**. You describe the goal; the assistant uses the Rook skill to choose and execute the appropriate CLI operations. You do not need to translate each request into a Rook command.
+
+Work through the steps in the same conversation. Replace the example refund agent, policy, profile, and IDs with yours. If a step is already complete, ask the assistant to inspect and reuse it.
+
+### 1. Check Readiness
 
 ```text
-/rook Inspect this repository and explain the next safe Rook setup step.
-Confirm the skill path and its bundled references. Do not invoke the target,
-run paid Rook commands, install software, or change profiles yet.
+/rook Inspect this repository and my Rook setup.
+Confirm the loaded skill and its references, CLI version, authentication,
+selected project and agent, profiles, and available credit balance.
+Explain what is missing. Do not install or update software, change definitions,
+invoke the target, or run paid Rook operations yet.
 ```
 
-Check that the response identifies `.agents/skills/rook/SKILL.md`, missing setup, and the next proposed command. Skill discovery alone is not a successful Rook test.
+Expect a readiness summary and the next necessary step, not a claim that tests ran. Complete any required sign-in through the approved login flow; never paste credentials into chat. An unreadable credit balance means **unknown**, not unlimited.
 
-## Run a Small, Reviewed Test
-
-After reviewing the target and cost, adapt this prompt to your agent:
+### 2. Select and Understand the Agent
 
 ```text
-/rook Help test the refund agent in this repository against its refund policy.
-Use the staging profile and test fixtures only. Propose up to three scenarios.
-Before each paid operation or target invocation, show the command, profile,
-selected scenario, hooks, possible writes, and expected spending; ask me to approve.
-After approval, run one selected scenario. Report its exact run ID and the
-Pass, Fail, and Unable to Verify results with criterion-level evidence.
-Do not run paid RCA or retry automatically.
+Use the rook skill to prepare testing for the refund agent in this repository.
+Show the available projects and agents so I can choose; ask before creating one.
+Reuse existing discovery if it is current. Otherwise propose a focused discovery
+of the relevant source and wait for approval of its scope and Rook credit use.
+Explain the discovered features, tools, write-capable calls, and coverage gaps.
+Do not generate scenarios or invoke the target yet.
 ```
 
-Review the [profile and hooks](/support/docs/rook-profiles-and-hooks/) and `agent.yaml` before execution. Profile creation, repair, and testing can reach the target too; Rook cannot undo target-side changes. Use [Rook's environment store](/support/docs/rook-environment-and-secrets/) or approved environment variables for secrets.
+Check the selected project and agent IDs, source scope, and feature summary before continuing. Discovery analyzes the implementation; it is not evidence that a test passed. If no agent was registered, resolve that gap before generating scenarios.
 
-Keep Antigravity command approvals and Rook permissions in place. Do not enable `--dangerously-skip-permissions` just to complete this walkthrough. A prompt is not a spending cap: review both the client's model usage and Rook credits. See [permissions and safety](/support/docs/rook-permissions-and-safety/).
+### 3. Create or Repair a Profile from a Description
 
-## Review the Actual Result
-
-Require the current invocation's run ID, completion state, and evidence. Exit code zero does not guarantee that scenarios passed. From the same Rook workspace, run:
-
-```bash
-rook report <run-id> --json
-rook ui --local
+```text
+Use the rook skill to prepare a staging profile for this agent.
+Infer the invocation from its source and existing configuration, and ask me for
+any missing endpoint, command, or MCP details instead of guessing.
+Show the proposed profile, required environment-variable names, and hooks.
+Explain prepare, open, execute, close, and collect; Rook owns judging.
+Keep secret values out of chat, profiles, and committed files. Before creation, repair, or
+testing, explain costs and possible target writes and wait for my approval.
+After approval, validate with a reply-only goal and show the observed response.
 ```
 
-The local UI reads workspace evidence. For a normal shared run, sync the selected agent before execution with `rook sync`. Then use `rook ui` or open [Rook projects](https://rook.lambdatest.com/projects) and select project → agent → run → scenario. Deliberate `--test` runs stay local and do not appear on the shared timeline.
+A profile is how Rook reaches the agent. Only `execute` is required; add other hooks when your target needs them. Profile creation and repair can make real test calls before any scenario run. A reply-only goal reduces risk but does not sandbox the target. Check that execution returned an agent reply and that the claimed evidence capabilities were actually observed. See [profile and hook contracts](/support/docs/rook-profiles-and-hooks/) for implementation details.
+
+### 4. Generate and Review Scenarios
+
+```text
+Use the rook skill to cover this agent's refund limits and identity checks.
+Propose a small functional and adversarial suite and explain the Rook credit use.
+Wait for my approval before generation. Then list the saved scenario IDs,
+feature coverage, acceptance criteria, and any excluded or unrunnable cases.
+Recommend one safe smoke scenario. Do not execute the suite yet.
+```
+
+Review the actual saved scenarios, not just the assistant's proposed examples. Ask for the missing observation or profile capability when a scenario is unrunnable. Generating scenarios does not execute them, and generation can spend credits.
+
+### 5. Run Only the Reviewed Scope
+
+```text
+Use the rook skill to run the one smoke scenario I selected with the staging
+profile and isolated test fixtures. Confirm its exact ID, hooks, tool grants,
+possible target writes, and Rook credit use before asking for my approval.
+I want a shared result: explain and sync the reviewed definitions before running.
+After approval, run only that scenario and preserve the run ID and evidence,
+including failures or partial results. Do not retry or run paid RCA automatically.
+```
+
+For a private rehearsal, replace the entire sentence beginning “I want a shared result” with “Keep this run local-only; do not sync or publish it.” That selects a deliberate test-mode run, which will not appear on the hosted timeline. Do not silently switch to local-only execution after a sync failure.
+
+The assistant's permissions and Rook's tool grants are separate. Keep both in place and prefer narrowly scoped grants. Approval to inspect is not approval to spend credits or invoke the target. The client's model usage is separate from Rook credits, and a prompt is **not a hard spending cap**; see [permissions and safety](/support/docs/rook-permissions-and-safety/).
+
+## Review the Actual Result {#review-the-actual-result}
+
+### 6. Read Evidence and Open the Right UI
+
+```text
+Use the rook skill to review the exact run ID from the operation we just ran,
+not an older default report. Show completion state, planned/executed counts,
+Pass, Fail, Unable to Verify, incomplete work, and reported credit spend.
+For failures and verification gaps, cite criterion-level saved evidence.
+Open the local Rook UI for this workspace, or give me its local address if you
+cannot open a browser. If the run was uploaded, help me find that same run in
+the hosted UI. Do not rerun tests or start paid analysis.
+```
+
+Expect an actual run ID and evidence location. A zero process exit or `ok: true` alone is not proof of a completed, passing run; refused or halted work must be reported accurately. If no run started, there is no new result to open.
+
+The local UI reads workspace evidence. For uploaded runs, open [Rook projects](https://rook.lambdatest.com/projects), then select project → agent → Runs → run → scenario and match the run ID. A local-only run is absent from that timeline by design. Ask the assistant to inspect pending uploads before proposing synchronization; do not rerun tests just to obtain a link.
 
 ### Local UI
 
-Inspect the scenario criteria and recorded files. This existing HTTP smoke-test screenshot illustrates Rook result review; it is not an Antigravity CLI capture or proof of a live Antigravity-driven run.
+Filter **Acceptance criteria**, then open the **Evidence** drawer to inspect **Request**, **Response**, **Verdict**, or **Artefacts**. This saved CommerceCare demo illustrates Rook result review; it is not an Antigravity CLI capture or proof of a live Antigravity-driven run. See the [earlier local layout](/support/docs/rook-web-ui/#earlier-local-ui) if your CLI still has scrolling sections.
 
 ### Hosted Web UI
 
-Match the uploaded run ID to the CLI report, then review **Verdict** and **Artefacts**. The screenshot is an example result view, not client-specific test evidence.
+Match the uploaded run ID to the CLI report, then choose **Verdict** or **Artefacts** in the **Evidence** drawer. This separate hosted triage example is not client-specific test evidence.
 
 See [results and evidence](/support/docs/agent-assurance-results-and-evidence/) for incomplete or unverifiable outcomes and [both UI walkthroughs](/support/docs/rook-web-ui/) for navigation.
 

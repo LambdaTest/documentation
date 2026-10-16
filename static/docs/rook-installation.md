@@ -18,7 +18,7 @@ The latest public release checked on October 13, 2026 is [v0.1.11](https://githu
 
 | Requirement | Why |
 |---|---|
-| A supported platform above | The shell installer supports macOS/Linux; the npm package also supplies a Windows x64 runtime. No Windows ARM64 runtime package is published for 0.1.7. |
+| A supported platform above | The shell installer supports macOS/Linux; the npm package also supplies a Windows x64 runtime. No Windows ARM64 runtime package is published. |
 | TestMu AI account | Supplies authentication and credits. You can sign in after installation. |
 | Your agent's dependencies | Rook invokes the target agent as you would. A local command, service, or supporting tool must already be available. |
 
@@ -26,10 +26,9 @@ The Homebrew and shell packages carry a matching Node.js runtime. You do not nee
 
 ## Install With Homebrew
 
-The public formula is maintained in the [Rook Homebrew tap](https://github.com/LambdaTest/rook/blob/main/Formula/rook.rb).
+The public formula is maintained in [LambdaTest/homebrew-rook](https://github.com/LambdaTest/homebrew-rook/blob/main/Formula/rook.rb). Homebrew adds this tap automatically on a fresh installation:
 
 ```bash
-brew tap LambdaTest/rook https://github.com/LambdaTest/rook.git
 brew install lambdatest/rook/rook
 ```
 
@@ -41,6 +40,9 @@ To upgrade a Homebrew installation:
 brew update
 brew upgrade lambdatest/rook/rook
 ```
+
+**Previously added the old tap?**
+If you previously ran `brew tap LambdaTest/rook https://github.com/LambdaTest/rook.git`, your tap points at the repository that no longer contains the formula. Follow the public repository's [one-time tap migration](https://github.com/LambdaTest/rook#install) before upgrading. Review and preserve any local tap changes before its reset step. Do not force-untap or uninstall Rook to migrate the tap.
 
 ## Install With the Shell Installer
 
@@ -66,7 +68,7 @@ If `~/.local/bin` is not on `PATH`, the installer prints the exact export comman
 Pass installer options after `bash -s --`:
 
 ```bash
-# Install the current production release explicitly.
+# Pin a specific public release.
 curl -fsSL https://raw.githubusercontent.com/LambdaTest/rook/main/install.sh \
 | bash -s -- --version 0.1.11
 
@@ -82,7 +84,7 @@ curl -fsSL https://raw.githubusercontent.com/LambdaTest/rook/main/install.sh \
 | bash -s -- --help
 ```
 
-The public installer uses `--version` and `--dir` flags and does not require GitHub authentication.
+The public installer uses `--version` and `--dir` flags and does not require GitHub authentication. It is a Bash installer for macOS and Linux, not a PowerShell installer; on Windows use [npm or WSL](#windows).
 
 ## Install With npm
 
@@ -95,10 +97,10 @@ npm install -g @testmuai/rook
 To upgrade an npm installation:
 
 ```bash
-npm update -g @testmuai/rook
+npm install -g @testmuai/rook@latest
 ```
 
-The npm package installs the `rook` executable and publishes platform runtime packages with it. If npm reports an engine error, update the Node.js version used to run npm to Node.js 20 or newer (Rook 0.1.7; 0.1.6 and earlier need 22).
+The npm package installs the `rook` executable and publishes platform runtime packages with it. If npm reports an engine error, update the Node.js version used to run npm to Node.js 20 or newer (since Rook 0.1.7; 0.1.6 and earlier need 22).
 
 ### Repair an npm 0.1.1 or 0.1.2 installation
 
@@ -185,13 +187,17 @@ WSL is optional for the native npm setup. Windows and WSL installations have sep
 ```bash
 command -v rook
 rook --version
-rook doctor
 ```
 
-Then enter an agent repository and start the TUI:
+On Windows, use `Get-Command rook.cmd` and `rook.cmd --version` instead. These shell checks confirm that the installed executable is on your path; they do not start a test.
+
+## Start the Interactive TUI {#start-the-interactive-tui}
+
+Enter an agent repository and start Rook without a subcommand. Replace `your-project` with your actual folder:
 
 ```bash
 cd your-project
+export ROOK_ENV=prod
 rook
 ```
 
@@ -203,7 +209,7 @@ $env:ROOK_ENV = 'prod'
 rook.cmd
 ```
 
-You should see the Rook banner and an interactive prompt or a project chooser, not a command that prints output and exits. This capture shows a new session before sign-in and before an agent has been explored:
+You should see the Rook banner and an interactive prompt or a project chooser, not a command that prints output and exits. This capture shows a signed-in session in a new workspace, before an agent has been explored:
 
 1. If prompted to sign in, enter `/login` and complete the browser flow. Return to this same terminal when Rook reports that you are signed in. Browser UI sign-in and CLI sign-in are separate.
 2. At **Projects**, use the arrow keys and Enter to list existing projects or create a new test project. Esc goes back; you can reopen the chooser with `/project`.
@@ -234,15 +240,33 @@ Each archive has a matching `.sha256` file. Do not bypass a checksum mismatch; d
 |---|---|
 | `rook: command not found` | Add the installer directory to `PATH`, open a new terminal, and run `command -v rook`. |
 | Homebrew refuses to load an untrusted formula | Install the fully qualified `lambdatest/rook/rook` formula. |
-| Unsupported OS or architecture | Use macOS or Linux on arm64 or x64. On Windows, run Rook from WSL. |
+| Unsupported OS or architecture | Use macOS/Linux arm64 or x64, or [Windows x64 with npm](#windows). For a Linux-based Windows workflow, use WSL. |
+| Windows says `rook.ps1` or `npm.ps1` cannot run | Use `rook.cmd` or `npm.cmd`; do not disable execution-policy protections. |
+| `rook.cmd` is not recognized | Check `npm.cmd prefix -g`, the installed shim, and your user Path as described in [Windows setup](#windows). |
 | Release download is reset | Allow GitHub and `release-assets.githubusercontent.com` through the VPN or proxy, then retry. |
 | Checksum verification fails | Delete the archive and checksum file. Download them again; never install an unverified archive. |
 | npm reports an engine mismatch | Run npm with Node.js 20 or newer, then retry the global install. |
 
 If a public install path still fails, [open a Rook issue](https://github.com/LambdaTest/rook/issues/new/choose) with the OS, architecture, install method, and full error output.
 
+## Open the Local or Hosted UI {#select-the-web-ui-environment}
+
+The public CLI includes the local viewer: inside the TUI, enter `/ui --local`. No separate frontend installation or browser login is needed. Open the printed loopback URL and keep the TUI session running. It reads existing workspace files; follow the quickstart first if you have not created any test data. From a separate shell, the equivalent command is `rook ui --local`.
+
+For shared review, open [rook.lambdatest.com/projects](https://rook.lambdatest.com/projects), or enter `/ui` in the TUI. Public packages default to ROOK_ENV=prod. You do not need a private package or a source-repository installation. If an older CLI opens a different address, use the Projects link above and update to the current public release.
+
+See [local versus hosted review](/support/docs/rook-web-ui/#choose-your-ui) for the data, sign-in, and sharing differences.
+
+### Local UI: What You Can Open After Setup {#local-ui-example}
+
+The local viewer starts at **Agents**. This screenshot shows saved CommerceCare demo records; installing Rook alone does not create an agent or test run. If your workspace is empty, complete discovery before expecting this inventory. The screenshot uses the redesigned viewer; see the [rollout note and earlier layout](/support/docs/rook-web-ui/#earlier-local-ui) if your public CLI looks different.
+
+### Hosted Web UI: Your Recorded Projects {#hosted-ui-example}
+
+The hosted UI opens at **Projects** after browser sign-in. The example project already contains synchronized test data. An empty organization shows onboarding instead; no separate Web UI package needs to be installed.
+
 ## Next Step
 
-If you use a coding assistant, [choose its Rook skill setup guide](/support/docs/rook-coding-agents/) after installing the CLI. Claude Code, Codex, Gemini CLI, Copilot CLI, OpenCode, Cursor CLI, VS Code, and Windsurf each have their own instructions. Installing the skill does not install or authenticate the CLI.
+If you use a coding assistant, [choose its Rook skill setup guide](/support/docs/rook-coding-agents/) after installing the CLI. Claude Code, Codex, Gemini CLI, Copilot CLI, OpenCode, Cursor CLI, Antigravity CLI, VS Code, Windsurf, and Antigravity IDE each have their own instructions. Installing the skill does not install or authenticate the CLI.
 
 Continue with [How to Get Started With Agent Assurance](/support/docs/agent-assurance-quickstart/).
