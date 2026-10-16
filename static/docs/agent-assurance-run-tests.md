@@ -120,7 +120,7 @@ Deny rules override allow rules, and more specific rules win. Permission state i
 
 ## Follow Run Progress
 
-After approval, each active scenario shows its current phase. This is an actual `SC-002` execution against the public triage fixture, captured while Rook was judging the response and recorded hook evidence:
+After approval, each active scenario shows its current phase. This is an actual `SC-001` execution against the public triage fixture, captured while Rook was judging the response and recorded hook evidence:
 
 `0/1` means the scenario has not finished; it does not mean it failed. Wait for completion, then enter `/report` to inspect pass, fail, unverifiable, and unjudged counts. See [results and evidence](/support/docs/agent-assurance-results-and-evidence/#print-or-export-a-report) for the completed report from this demo.
 

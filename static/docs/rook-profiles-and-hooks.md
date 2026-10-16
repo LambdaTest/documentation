@@ -62,7 +62,7 @@ Rook writes scripts, invokes the target, and corrects mistakes found during veri
 
 In the TUI, enter `/profile` to open the picker. Type to filter, use the arrow keys, and press Enter to select a profile; Esc returns without changing the selection. The footer shows the active profile.
 
-This existing demo profile has all five user-configurable hooks. A newly generated profile may have only `execute`; Rook owns `judge`, so it is not listed as a profile hook.
+This quickstart profile has only `execute`, as a newly generated profile often does. Other profiles can add `prepare`, `open`, `close`, and `collect`; Rook owns `judge`, so it is not listed as a profile hook.
 
 Inspect your generated profile before testing it:
 

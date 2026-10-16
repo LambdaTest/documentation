@@ -160,7 +160,7 @@ Rook also refuses two paths to keep read scope tight:
 
 Launch `rook` in your workspace, then enter `/agent` in the interactive TUI. The picker lists agents in the selected project. Type to filter, use the arrow keys to move, and press Enter to select an agent or Esc to go back. Check the active agent in the footer before exploring or running tests.
 
-This saved demo has one agent. Projects containing several agents show more choices in the same picker. You can also select a known agent ID directly:
+This quickstart project has one agent. Projects containing several agents show more choices in the same picker. You can also select a known agent ID directly:
 
 ```text
 /agent

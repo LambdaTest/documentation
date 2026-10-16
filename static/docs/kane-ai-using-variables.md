@@ -126,19 +126,18 @@ You can choose the environment (for example, Dev, Stage, or Production) before a
 #### How to select an environment
 
 1. Create a new test or open an existing test in the playground.
-2. In the session configuration panel, open the **Environment** dropdown and choose the environment you want to author against. To author without an environment, choose **No environment**.
+2. In the session configuration panel, open the **Environment** dropdown and choose the environment you want to author against. Choosing an environment is optional.
 3. Start the session.
 
-Once the session starts, the environment is shown as a locked value in the session and cannot be changed until the session ends. To author against a different environment, end the session and start a new one with the other environment selected.
+Once the session starts with an environment, the environment is locked and cannot be changed until the session ends. To author against a different environment, end the session and start a new one with the other environment selected.
 
 #### What changes in a session with a selected environment
 
-| Behavior | With an environment selected | With No environment |
+| Behavior | With an environment selected | Without an environment |
 |---|---|---|
-| Variables offered in the `{{` picker | Only the selected environment's variables, plus global variables | Variables from all environments, plus global variables |
-| Which environment the session uses | The one you selected, for the whole session | Taken from the first step that uses an `{{environment.X}}` variable |
-| Changing environment mid-session | Not allowed | Changes as steps are added, edited, or rerun |
-| A step uses a variable missing from the environment | The step fails with an error naming the variable and the environment | The step fails with a generic *variable not found* error |
+| Variables offered in the `{{` picker | Only the selected environment's variables, plus global variables | Global variables only. No environment variables are offered |
+| Choosing an environment mid-session | Not allowed | Allowed once. The environment you choose is then locked for the rest of the session |
+| A step uses a variable missing from the environment | The step fails with an error naming the variable and the environment | Choose an environment before using environment variables |
 
 For example, if `web_url` is not defined in the Production environment, a step that uses `{{environment.web_url}}` fails with:
 
@@ -150,9 +149,23 @@ To fix it, add the variable to that environment from the [variables page](https:
 
 KaneAI does not check your test's variables against the environment when you select it. A missing variable is reported only when the step that uses it runs.
 
+#### Import a module that uses environment variables
+
+If you import a module that uses environment variables into a session without an environment, you're prompted to choose one. This counts as your one environment choice for the session. If the chosen environment is missing any of the module's environment variables, a warning names them and lets you create them in that environment.
+
+#### Choose an environment before automating with KaneAI
+
+You can also choose the environment before KaneAI starts authoring from:
+
+- **Create and Automate** when [generating test cases with AI](/support/docs/generate-test-cases-with-ai/).
+- **Bulk Automate**, when automating several manual test cases at once.
+- **Automate with KaneAI** on a [manual test case](/support/docs/manual-test-case-creation/).
+
+To use environment variables in manual test cases and modules, see [Variables, Parameters, and Secrets in Manual Test Cases and Modules](/support/docs/test-manager-variables-parameters-secrets/).
+
 #### Your last choice is remembered
 
-When you save or close a session, KaneAI stores the environment you used on the test case. The next time you open the test for authoring, that environment is pre-selected. If you last authored with **No environment**, that choice is pre-selected instead.
+When you save or close a session, KaneAI stores the environment you used on the test case, including an environment you chose during the session. The next time you open the test for authoring, that environment is pre-selected.
 
 The environment is also saved with the test case's [advanced settings](/support/docs/kaneai-advanced-settings/). Changes to it are shown in the test case's version history.
 

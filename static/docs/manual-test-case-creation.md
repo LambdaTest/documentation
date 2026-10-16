@@ -16,6 +16,63 @@ After test case is created you will be redirected to a screen listing all the te
 
  By default test cases having no parent folder are stored under **Untitled** folder.
 
+## Filter Test Cases
+
+Search by test case ID or title, and use the filters beside the search bar to narrow the list:
+
+- **Status** and **Tags**.
+- Under **More**: **Automation Status**, **Created At**, **Created By**, **Issues**, **Priority**, **Type**, **PR Status**, and the custom fields linked to the project.
+
+Filters apply to the folder you are viewing, together with any search text. The **Archived** view and the **Shared Incoming** view offer the same filters, and Shared Incoming adds a **Project** filter for the source project.
+
+#### Include or Exclude Values
+
+Each filter that lists values has two modes, which you switch next to the filter's search box:
+
+- **Equals** (default): shows test cases that have any of the selected values.
+- **Not Equals**: hides test cases that have any of the selected values.
+
+To exclude values:
+
+1. Open a filter, for example **Tags**.
+2. Select **Not Equals** next to the filter's search box.
+3. Select the values to leave out.
+
+Switching between **Equals** and **Not Equals** keeps the values you selected. Selecting **Not Equals** without choosing any value does not change the list.
+
+#### Test Cases With No Value Are Kept
+
+**Not Equals** hides only the test cases that hold a selected value. Test cases with no value for that field stay in the list.
+
+For example, say a custom field **Layer** has the values API, UI, and E2E, and older test cases were never given a layer. Excluding API and UI shows the E2E test cases **and** the test cases with no layer. Selecting E2E under **Equals** would show only the E2E test cases.
+
+Fields that every test case has, such as **Status**, are never empty. Excluding every value of such a field leaves no test cases.
+
+#### Fields With Multiple Values
+
+**Tags** and multi select custom fields can hold several values on one test case. Under **Not Equals**, a test case is hidden if it has **any** of the excluded values. Excluding the tag `iOS` hides a test case tagged `iOS` and `Android`, and keeps a test case tagged only `Android` as well as test cases with no tags.
+
+#### Combining Filters
+
+- Within one filter, **Equals** matches test cases that have any of the selected values, and **Not Equals** hides test cases that have any of them.
+- Across filters, a test case has to match every filter. Each filter can be in its own mode, for example **Priority** Equals High together with **Tags** Not Equals `flaky`.
+- The folder you are viewing and the search text narrow the result further.
+
+#### Fields That Support Not Equals
+
+| Supports Not Equals | Does not support Not Equals |
+|---|---|
+| Status, Tags, Automation Status, Created By, Issues, Priority, Type, PR Status, Project (in Shared Incoming) | Created At, which filters by date range |
+| Custom fields of type **Dropdown (Single Select)**, **Dropdown (Multi Select)**, and **User** | Custom fields of type **String**, **Textarea**, **Number**, **URL**, **Date**, and **Boolean (Checkbox)** |
+
+#### Share a Filtered View
+
+Your filters, including the **Not Equals** mode, are saved in the page URL. Reload the page, bookmark it, or share the link, and the same filtered list opens. Select **Clear current filters and sorting** to reset the list.
+
+#### Act on Filtered Test Cases
+
+When you select all test cases in a filtered list, bulk actions such as updating fields, moving, exporting, archiving, and deleting apply to exactly the test cases the filters show. Test cases hidden by a **Not Equals** filter are left untouched.
+
 ## Manage Test Case
 
 To retire a test case without deleting it, use **Archive** in the test case's three-dot menu. An archived test case leaves the repository and becomes read-only, but keeps its version history, past run results, and linked issues, and can be restored at any time. See [Archive and Restore Test Cases](/support/docs/test-case-archive/).
@@ -47,7 +104,9 @@ The Test Manager offers a comprehensive Steps section with a rich text editor an
 
 To know more about how to use Modules refer the [Modules doc](/support/docs/create-modules/).
 
-In the Classic experience, modules that contain KaneAI instructions, such as variable steps, If-Else blocks, or While Loops, run only in KaneAI test cases. Selecting one in the **Add Module** dialog leaves **Add in step** disabled. See [Importing Modules into Test Cases](/support/docs/create-modules/).
+**5. Use Variables, Parameters, and Secrets:** Type `{{` in a step to insert a variable or secret, or `${` to insert a parameter. To learn more, see [Variables, Parameters, and Secrets in Manual Test Cases and Modules](/support/docs/test-manager-variables-parameters-secrets/).
+
+In the Classic experience, modules that contain If-Else blocks or While Loops run only in KaneAI test cases. Selecting one in the **Add Module** dialog leaves **Add in step** disabled. Modules that use variables, parameters, or secrets can be added. See [Importing Modules into Test Cases](/support/docs/create-modules/).
 
 #### Add New Step:
 
@@ -64,6 +123,8 @@ To save the changes made in the Test Case click on the `Save Changes` button OR 
 ### Automate with KaneAI
 
 A saved test case can be handed to **KaneAI** for automated authoring. Open the test case and click **Automate with KaneAI** in the **Automate** section of the test case detail. This opens a KaneAI session pre-filled with the test case's steps, where you author the automated test and then execute it.
+
+If the test case uses environment variables, choose the environment in the **Environment** field before you start testing. The environment cannot be changed once the session starts. See [Choose an Environment When Automating With KaneAI](/support/docs/test-manager-variables-parameters-secrets/#choose-an-environment-when-automating-with-kaneai).
 
 This works for both test case templates:
 

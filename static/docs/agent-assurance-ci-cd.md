@@ -157,7 +157,7 @@ Use an explicit shell error policy, such as set -euo pipefail in Bash. Do not us
 
 ## Gate on Completion and Verdicts
 
-rook run --json produces one JSON document on stdout, not NDJSON. The document includes ok, run_id, halted, and, when available, report.totals.
+rook run --json produces one JSON document on stdout, not NDJSON; see [structured output](/support/docs/agent-assurance-command-reference/#structured-output-and-progress) for the other commands that do. The document includes ok, run_id, halted, and, when available, report.totals.
 
 A process exit code of zero is **not** an agent-quality gate. The current run/report paths do not implement the older documented 0/1/2/3/4 verdict mapping. A halted run or a run with failed verdicts can still produce an outcome document. Inspect its contents.
 

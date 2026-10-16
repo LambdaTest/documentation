@@ -155,6 +155,10 @@ You can analyze the health of your test cases by using the `Test Case Health Sna
 
 You can analyze the test cases by their group by using the `Test Case Group View` widget. The widget will display the total number of test cases in each group. The widget will be displayed in card view and you can also view the details of the test cases by clicking on the `View Details` button.
 
+### Test cases in builds
+
+Once test cases are captured, you can also analyze them build by build — with history, drilldowns, smart tags, flakiness, failure categories and anomaly notifications. See [Test Cases in Build Insights](/support/docs/analytics-build-insights-test-cases/).
+
 ## Test Case Use Cases
 
 The user can use the `Test Case Insights` module to analyze the test case level insights of their test automation execution on TestMu AI. The user can use the module to analyze the following use cases:

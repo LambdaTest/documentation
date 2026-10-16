@@ -22,7 +22,7 @@ Run this Bash example from your agent repository. It copies only the skill bundl
 set -eu
 rook_skill_checkout=$(mktemp -d)
 git clone --filter=blob:none https://github.com/LambdaTest/rook.git "$rook_skill_checkout/rook"
-git -C "$rook_skill_checkout/rook" checkout --detach f199cb99c589b565e48a3a29781475daee907533
+git -C "$rook_skill_checkout/rook" checkout --detach 439480f2ef3084fcbc0997a59a70f5f8adcd4ad8
 if test -e .windsurf/skills/rook; then
 echo "An existing rook skill needs review; nothing was overwritten." >&2
 exit 1

@@ -21,7 +21,7 @@ Explain the first blocker and the smallest proposed fix. Do not change credentia
 update Rook, invoke the agent, rerun tests, or run paid RCA without my approval.
 ```
 
-This interactive /doctor capture uses a saved demo workspace with no credentials. Both services are reachable, but authentication is missing: signing in is the next step, not changing the target profile or rerunning scenarios.
+This interactive /doctor capture is from the signed-in quickstart workspace: both services are reachable and the identity is authenticated. If identity or auth shows that you are signed out, enter /login first; that is the next step, not changing the target profile or rerunning scenarios.
 
 ## Installation Problems
 
@@ -211,7 +211,7 @@ A token_economy scenario is blocked if the profile does not report usage. Other 
 
 ### Generated scenarios are marked not executable
 
-A scenario with executable: false was kept so you can see what generation attempted. Its skip_reason starts with coverage gap: (no runnable check was possible), invalid scenario:, or invalid red-team scenario: and names the problem. Fix the profile capability or edit the scenario, then regenerate or rerun.
+A scenario with executable: false was kept so you can see what generation attempted. Its skip_reason names the problem. Reasons from Rook's own validation start with coverage gap: (no runnable check was possible), invalid scenario:, or invalid red-team scenario:; the scenario checker writes plain sentences, often a precondition the profile cannot establish, such as a ticket that must already exist. Fix the profile capability or edit the scenario, then regenerate or rerun.
 
 ### Only two scenarios of an attack pattern ran
 

@@ -36,7 +36,7 @@ rook profile add --help
 
 Inside the terminal, use `/help run`. Do not paste slash commands into a normal shell.
 
-The screenshots below were captured inside the **Rook 0.1.5 interactive TUI**, using /help &lt;command&gt; in a saved demo workspace. They show command help, not completed paid operations. Only the Rook content is captured; no desktop, window title, or browser chrome is included.
+The screenshots below were captured inside the **Rook 0.1.11 interactive TUI**, using /help &lt;command&gt; in the quickstart workspace. They show command help, not completed paid operations. Only the Rook content is captured; no desktop, window title, or browser chrome is included.
 
 ## Terminal and Help {#terminal-and-help}
 
@@ -138,7 +138,7 @@ Help, slash-command completion, and shell parsing are derived from the same comm
 
 ### /docs {#docs}
 
-Use /docs to print and open the public Rook repository.
+Use /docs to print and open the Rook documentation site.
 
 #### Syntax {#docs-syntax}
 
@@ -1121,7 +1121,7 @@ Active project and agent selections, profiles, scenarios, runs, credentials, and
 
 Only use a flag where `rook help ` lists it.
 
-The plan, status, run, and normal report commands have structured output. Commands such as explore, generate, sync, profile operations, paid report --rca, and update can emit text even when they accept --json. Check the actual stdout before parsing it, then inspect the relevant saved files or make a separate structured read.
+With --json, plan, status, run, a normal report, scenarios list, project --workspace, mcp, and ask write one JSON document to stdout. Commands such as explore, generate, sync, profile operations, paid report --rca, and update can emit text even when they accept --json. Check the actual stdout before parsing it, then inspect the relevant saved files or make a separate structured read.
 
 Keep stdout and stderr separate when saving JSON: do not use 2>&amp;1 for a machine-readable result file. Refusals and parser errors can leave stdout empty. A failure document may contain error or reason; ok: true can accompany a discarded run, so it is not sufficient to establish success. See the [public headless contract](https://github.com/LambdaTest/rook/blob/main/skill-installer/skills/references/headless-contract.md).
 

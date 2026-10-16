@@ -71,7 +71,7 @@ export LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
 
 This section builds a single Playwright script that connects to the TestMu AI grid and runs one test. Start with the connection snippet, then use the full script that searches Bing and reports its status.
 
-Prefer not to edit your test scripts? Run your existing Playwright suite on the grid with **no code changes** using the SDK — see [Run Tests With the SDK](#run-tests-with-the-sdk).
+Prefer not to edit your test scripts? Run your existing Playwright suite on the grid with **no code changes** using the SDK. See [Run Tests With the SDK](#run-tests-with-the-sdk).
 
 1. Add the code snippet below to your test script.
 
@@ -326,6 +326,112 @@ npx playwright-node-sdk playwright test
 
 When you run this, the SDK reads `lambdatest.yml`, starts the TestMu AI Tunnel if enabled, generates a temporary Playwright config that connects to the grid, runs your tests, and reports results (video, screenshots, network, and console logs) to your Dashboard.
 
+### Override Your Playwright Config
+
+The `playwrightConfigOptions` block in `lambdatest.yml` overrides your project's native Playwright configuration for the cloud run, so you can adjust test selection and global options without editing `playwright.config.js`.
+
+- **testDir** sets the folder Playwright looks in for test files:
+
+```yaml
+playwrightConfigOptions:
+testDir: './tests'
+```
+
+- **testMatch** and **testIgnore** are glob patterns that include or exclude specific test files:
+
+```yaml
+playwrightConfigOptions:
+testMatch: /.*\.e2e\.js/
+testIgnore: /.*\.spec\.js/
+```
+
+- **setup** and **teardown** are scripts that run before and after your suite:
+
+```yaml
+playwrightConfigOptions:
+setup:
+- name: 'setup1'
+testMatch: '**/*.setup.ts'
+teardown: 'teardown1'
+teardown:
+- name: 'teardown1'
+testMatch: '/teardown\.ts/'
+```
+
+- **use** sets global options applied to every test in the run, such as a shared `baseURL`:
+
+```yaml
+playwrightConfigOptions:
+use:
+baseURL: 'https://www.example.com'
+```
+
+### Run a Specific Test File
+
+Because the SDK wraps the standard `playwright test` command, you can pass any Playwright CLI option through it. For example, to run a single test file:
+
+```bash
+npx playwright-node-sdk playwright test tests/my-test.spec.js
+```
+
+## Run Playwright BDD Tests
+
+[playwright-bdd](https://github.com/vitalets/playwright-bdd) lets you run Gherkin `.feature` files on Playwright's test runner. On TestMu AI, the `@lambdatest/playwright-node-sdk` runs the generated specs across the browser and OS matrix defined in your `lambdatest.yml`.
+
+**Sample repo**
+ View on GitHub
+
+### How Playwright BDD Works
+
+Playwright BDD converts your Gherkin into runnable Playwright specs, then the SDK runs them on the cloud:
+
+1. Write `.feature` files and map each step to a Playwright action in the `steps/` folder.
+2. `npx bddgen` generates Playwright spec files into the `.features-gen` folder.
+3. The Playwright Node SDK runs those specs on TestMu AI using the configuration in `lambdatest.yml`.
+
+### Running Your BDD Tests
+
+Clone the sample repository, then install the dependencies, which include `playwright-bdd` and `@lambdatest/playwright-node-sdk`:
+
+```bash
+npm install
+```
+
+> Verified with `playwright-bdd@8.3.1`, `@playwright/test@1.53.0`, and `@lambdatest/playwright-node-sdk@1.0.2` (October 2026).
+
+Set your TestMu AI **Username** and **Access Key** as environment variables (see [Prerequisites](#prerequisites)), then generate the specs and run them on the cloud grid in a single command:
+
+```bash
+npx bddgen && npx playwright-node-sdk playwright test
+```
+
+Define your target browsers and operating systems in `lambdatest.yml`. For the full configuration, refer to the [Playwright BDD sample repository](https://github.com/LambdaTest/playwright-sample/tree/main/playwright-bdd).
+
+### Testing Locally Hosted Pages With Playwright BDD
+
+To run your Playwright BDD tests against locally hosted or firewalled pages, enable the tunnel under a `tunnelSettings` block in your `lambdatest.yml`:
+
+```yaml title="lambdatest.yml"
+tunnelSettings:
+tunnel: true
+# autostart: true
+tunnelName: "tunnel-name"
+# localdirectory: "./log"
+verbose: true
+loglevel: "debug"
+```
+
+Set `tunnel: true` to route traffic through the tunnel, and `tunnelName` to reuse an already-running tunnel by name. The `verbose` and `loglevel` keys control the tunnel's logging output. See [how to test locally hosted pages](/support/docs/testing-locally-hosted-pages/).
+
+### Viewing the BDD Results
+
+Each scenario appears on the TestMu AI Automation Dashboard with its name, status, logs, and session video.
+
+{/* TODO (screenshot): Save the Playwright BDD run from the dashboard to
+    ../assets/images/playwright-testing/playwright-bdd-execution.webp
+    Then replace this comment with:
+     */}
+
 ## View Your Playwright Test Results
 
 The TestMu AI Automation Dashboard is where you review the results of your Playwright tests after running them on the grid. Use it to confirm a run passed and to open individual sessions for debugging.
@@ -400,3 +506,4 @@ Each scenario appears on the TestMu AI Automation Dashboard with its name, statu
 - [Migrate your existing Playwright suite to the cloud](/support/docs/migrate-existing-playwright-tests/) moves tests you already run locally onto the TestMu AI grid.
 - [Set up Playwright test execution on TestMu AI](/support/docs/playwright-test-execution-setup/) configures your project to run Playwright tests on the cloud.
 - [Configure Playwright capabilities](/support/docs/capabilities-for-playwright/) customizes browser, OS, and session options for your runs.
+- [Automate WebView components with Playwright](/support/docs/playwright-webview-test/) tests WebView apps on the TestMu AI grid.

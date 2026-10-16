@@ -30,7 +30,7 @@ Neither viewer downloads missing records into your workspace, uploads local chan
 
 Launch `rook` from your agent workspace, then enter `/ui --local` for on-disk evidence or `/ui` for hosted review. These are alternatives: choose the viewer for the records you want to inspect. This actual TUI capture uses `/ui --local --no-open` to start the local server and print its address without opening a browser:
 
-Open the exact URL printed in your session; this capture used port `7758` because the default was already occupied. Keep the TUI session running while using its local viewer. `/help ui` lists options without starting a viewer. The `rook ui` examples below are the equivalent commands for a regular shell.
+Open the exact URL printed in your session; the port can differ when the default is already in use. Keep the TUI session running while using its local viewer. `/help ui` lists options without starting a viewer. The `rook ui` examples below are the equivalent commands for a regular shell.
 
 ## Review On-Disk Evidence in the Local UI {#local-ui}
 
@@ -51,9 +51,6 @@ The five local agent tabs are **Summary**, **Profiles**, **Features**, **Scenari
 ### Local Agents {#local-agents}
 
 Search by agent name or ID, then click the agent card. It shows feature/scenario/run counts and available last-result context. Clear a search before concluding that the workspace has no agents. These counts describe the saved workspace, not coverage of every possible behavior.
-
-**Coming soon**
-Searching local agents by description is coming soon. For now, use the agent's name or ID.
 
 ### Local Agent Workspace {#local-agent}
 
@@ -82,6 +79,8 @@ For the definition and evidence used by an older run, follow **Runs**, rather th
 Open **Runs** to compare recorded executions by version, result distribution, pass percentage, credits, and duration. This local list shows the latest 20 runs and reports when older runs are omitted; that is not proof that the older files were deleted.
 
 Click a run to inspect its narrative, outcome counts, scenario rows, and metadata. **View plan** opens the recorded selection plan. In the **Profile** row, the profile name opens the run's saved configuration; the adjacent link opens the current profile under **Profiles**. These can differ.
+
+When a run has coverage gaps, the run page lists them above the outcome tiles: attack patterns, scenarios, or categories with no runnable scenario, each with its reason. A gap is unverified, not passed.
 
 This view includes runs available on disk, including local test-mode results. **completed** describes execution state, not a passing suite. Missing graded results are not a pass: check unfinished phases and `rook report  --json` before treating a result as complete.
 

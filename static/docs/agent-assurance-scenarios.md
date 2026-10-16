@@ -40,11 +40,11 @@ Rook has three classes and 16 categories.
 | `non_functional` | `token_economy`, `quality` | Cost, completeness, tone, and format |
 | `adversarial` | `prompt_injection`, `jailbreak`, `data_exfiltration`, `pii_leakage`, `harmful_content`, `hallucination`, `hijacking`, `policy_violation`, `technical_injection` | Attacks, unsafe behavior, leakage, invention, off-task behavior, and injection |
 
-A plain `generate` covers the functional and adversarial classes. Ask for `non_functional` with `--class`; a `token_economy` scenario runs only when the profile reports usage. Since 0.1.7, Rook no longer generates the earlier `performance` and `reliability` categories.
+A plain `generate` plans for the functional and adversarial classes, but the planner can decide that no attack is warranted for a small agent. Ask for attacks explicitly with `--class adversarial`, and check the report's coverage gaps for attack patterns that got no scenario. Ask for `non_functional` with `--class`; a `token_economy` scenario runs only when the profile reports usage. Since 0.1.7, Rook no longer generates the earlier `performance` and `reliability` categories.
 
 ## Red-Team Coverage and Standards {#red-team-standards}
 
-Adversarial scenarios are built from 25 attack patterns. Since 0.1.11, each generated attack records the standards it exercises in a `redteam` block: the [OWASP Top 10 for LLM Applications](https://genai.owasp.org/llm-top-10/) (2025, `LLM01`–`LLM10`), the OWASP Top 10 for Agentic Applications (2026, `ASI01`–`ASI10`), and MITRE ATLAS techniques. Scenario tags such as `owasp:llm01` carry the same mapping.
+Adversarial scenarios are built from 25 attack patterns. Since 0.1.11, each generated attack records the standards it exercises in a `redteam` block: the [OWASP Top 10 for LLM Applications](https://genai.owasp.org/llm-top-10/) (2025, `LLM01`–`LLM10`), the [OWASP Top 10 for Agentic Applications](https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/) (2026, `ASI01`–`ASI10`), and MITRE ATLAS techniques. Scenario tags such as `owasp:llm01` carry the same mapping.
 
 ```yaml
 class: adversarial
@@ -64,6 +64,8 @@ failure_signals: [...]
 The `goal` stays the payload delivered to the target; `objective` and `target_control` tell the judge what a compromise would look like. Some patterns run as a conversation with `multi_turn: true` and `max_turns` from 2 to 8. Jailbreak patterns can include a poetry variant of the same request. The cross-session memory-poisoning pattern (ASI06) plants content in one session and probes from a second, fresh session.
 
 Patterns that need seeded data, independently collected evidence, or a fresh session are skipped until the profile supplies the matching hook; see [hooks for red-team scenarios](/support/docs/rook-profiles-and-hooks/#red-team-hooks). The run report maps what ran to each standard; see [Print or Export a Report](/support/docs/agent-assurance-results-and-evidence/#print-or-export-a-report).
+
+In either viewer, an adversarial scenario's page shows its **Attack intent**: the standards it maps to, the attack pattern, the objective, how the payload is delivered, and the control under test. This local view is from the Quickstart's triage-service sample on Rook 0.1.11:
 
 ## Control the Suite Size and Focus
 
@@ -122,7 +124,7 @@ Launch `rook` in your workspace, then list scenarios inside its interactive TUI:
 /scenarios list
 ```
 
-The first line summarizes runnability against the active profile. Each scenario shows its ID, class, category, feature, and criteria count. This saved demo has twelve runnable scenarios. Runnable means they can be attempted, not that they have passed.
+The first line summarizes runnability against the active profile. Each scenario shows its ID, class, category, feature, and criteria count. This quickstart project has two scenarios, both counted as runnable. Runnable means they can be attempted, not that they have passed.
 
 From a regular shell instead:
 
@@ -146,7 +148,7 @@ Missing usage reporting, tool-call observation, or filesystem observation is dif
 - The run still consumes time and credits.
 - The message names the profile field or MCP configuration that can close the gap.
 
-Generation keeps scenarios it cannot make runnable instead of dropping them. Such a scenario is written with `executable: false` and a `skip_reason` that starts with `coverage gap:`, `invalid scenario:`, or `invalid red-team scenario:`, and `generate` warns about it. A scenario whose acceptance criteria contradict each other is rejected. Attack patterns that produced no scenario for a feature are listed in the agent's `coverage-gaps.yaml` as unverified, not as passed.
+Generation keeps scenarios it cannot make runnable instead of dropping them. Such a scenario is written with `executable: false` and a `skip_reason` that says why, and `generate` warns about it. Reasons from Rook's own validation start with `coverage gap:`, `invalid scenario:`, or `invalid red-team scenario:`; reasons from the scenario checker are plain sentences, such as a precondition the profile cannot establish. A scenario whose acceptance criteria contradict each other is rejected. Attack patterns that produced no scenario for a feature are listed in the agent's `coverage-gaps.yaml` as unverified, not as passed.
 
 ## Scenario YAML Anatomy
 
@@ -250,7 +252,7 @@ Deletion removes the live scenario file, but completed runs keep a snapshot of t
 
 ## Manual Editing Guidelines
 
-Scenario files are plain YAML under `.testmuai/rook/agents//scenarios/`. You can review them in a pull request and edit them with normal tools.
+Scenario files are plain YAML under `.testmuai/rook/projects//agents//scenarios/`; [Workspace Files](/support/docs/rook-workspace-files/) shows the full tree. You can review them in a pull request and edit them with normal tools.
 
 When editing manually:
 
