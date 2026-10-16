@@ -19,6 +19,7 @@ slug: playwright-testing/
 canonical: https://www.testmu.ai/support/docs/playwright-testing/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
