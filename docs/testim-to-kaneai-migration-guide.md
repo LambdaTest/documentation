@@ -336,3 +336,4 @@ To run from CI tools such as GitHub Actions or Jenkins, copy the Test Run ID fro
 - [mabl To KaneAI Migration](/support/docs/mabl-to-kaneai-migration-guide/): move from mabl.
 - [testRigor To KaneAI Migration](/support/docs/testrigor-to-kaneai-migration-guide/): move from testRigor.
 - [UiPath Test Cloud To KaneAI Migration](/support/docs/uipath-test-cloud-to-kaneai-migration-guide/): move from UiPath Test Cloud.
+- [ACCELQ To KaneAI Migration](/support/docs/accelq-to-kaneai-migration-guide/): move from ACCELQ.
