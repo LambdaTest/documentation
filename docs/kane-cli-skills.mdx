@@ -9,6 +9,18 @@ keywords: ['kane cli skill', 'claude code skill', 'codex cli', 'gemini cli', 'ka
 import { BrandName } from "/snippets/BrandName.mdx";
 import { KaneCliCta } from "/snippets/KaneCliCta.mdx";
 
+## What Is Kane CLI?
+
+Kane CLI is the <BrandName /> command-line tool for end-to-end testing, browser automation, and native mobile-app testing.
+
+- **Run a user journey.** Describe it in plain English. Kane CLI runs it in a real browser, on an Android emulator, on an iOS simulator, or on a real Android or iOS device in the <BrandName /> cloud.
+- **Get a verdict you can trust.** Every run returns a pass or fail backed by execution evidence.
+- **Design a test suite.** The assurance commands design requirement-linked, coverage-accounted test suites from the requirements in a PRD or specification.
+
+Your coding agent can then execute, debug, and report results without writing test cases by hand.
+
+## Use Kane CLI From Your Coding Agent
+
 You can use Kane CLI by talking to your AI coding agent (Claude Code, Codex CLI, Gemini CLI, and others) instead of typing commands yourself. A Kane CLI **skill** makes this work. It is a markdown instruction file that teaches the agent how to use `kane-cli`: when to call it, how to build the command, how to read the NDJSON output (one JSON event per line), how to present the result, and what to do when a run fails.
 
 Install the skill once. From then on, whenever you ask for something that needs a browser, your agent checks that everything is ready, runs your request in a real browser, and shows you the result.

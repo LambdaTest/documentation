@@ -20,7 +20,8 @@ kane-cli testrun run --tags smoke --remote --parallel 4            # a web suite
 ```
 
 - Each desktop worker gets its **own isolated Chrome** with a fresh temporary profile. Tests running in parallel never share cookies, logins, or tabs, and never compete for your real browser profile.
-- A local suite that contains any mobile test requires `--parallel 1`, and Kane CLI refuses larger values. Isolated Chrome workers apply to desktop tests only.
+- A local suite that contains any emulator or simulator test requires `--parallel 1`, and Kane CLI refuses larger values. Isolated Chrome workers apply to desktop tests only.
+- [Real-device](/docs/kane-cli-mobile-real-device/) tests (`target: android` / `target: ios`) each open their own device session, so you can use `--parallel` locally and with `--remote`, up to the real devices your plan allows. Extra sessions queue for up to 15 minutes.
 - With `--remote`, `--parallel N` sets the job's concurrency. The tests are split automatically across N grid runners, and each runner works through its share one test at a time. Device suites run in parallel the same way, and every task has its own VM and device.
 
 See [Batch Runs (testrun)](/docs/kane-cli-testrun/) and [Remote Runs on the Cloud Grid](/docs/kane-cli-remote-execution/). The rest of this page covers independent `kane-cli run` objectives that are not saved as `_test.md` files.

@@ -44,9 +44,9 @@ By default, merge is strict:
 Merge decides whether two runs are the same test by their identity. For ordinary runs, the default identity is made of:
 
 - the test and commit: `external_id.test_id` and `external_id.commit_id`,
-- the environment: `environment.os`, `environment.os_version`, `environment.browser`, and `environment.browser_version`.
+- the environment: `environment.os`, `environment.os_version`, `environment.browser`, `environment.browser_version`, `environment.device`, and `environment.app`.
 
-Re-runs with the same identity are nested as attempts of one test. A run with a different environment becomes a separate sibling.
+Re-runs with the same identity are nested as attempts of one test. A run with a different environment becomes a separate sibling, so one test run on two devices or two builds gets two entries.
 
 An explicit collision policy can change this grouping, and a custom `--rules` file replaces the default rules instead of extending them. Check which identity rules apply before you treat two runs as retries of the same test.
 
