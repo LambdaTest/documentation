@@ -355,3 +355,4 @@ For websites hosted locally or behind a firewall, KaneAI supports [tunneling](/s
 - [Migrating from Zephyr Enterprise to Test Manager](/support/docs/migrate-from-zephyr-enterprise/): another migration through CSV import.
 - [Migration from Katalon](/support/docs/one-click-migration-from-katalon/): import Katalon Studio desktop web test cases into KaneAI.
 - [Testim To KaneAI Migration](/support/docs/testim-to-kaneai-migration-guide/): move from Testim to KaneAI.
+- [ACCELQ To KaneAI Migration](/support/docs/accelq-to-kaneai-migration-guide/): move from ACCELQ to KaneAI.

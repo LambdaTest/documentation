@@ -105,6 +105,8 @@ ACCELQ is an AI Native Codeless automation testing and management platform. It e
 
 By integrating <BrandName /> with ACCELQ, you can perform web and mobile app automation on an online device farm of 5000+ real devices and 10,000+ browser/device combinations, and accelerate your end-to-end digital testing efforts.
 
+If you plan to move off ACCELQ, the [ACCELQ to KaneAI migration guide](/support/docs/accelq-to-kaneai-migration-guide/) shows how to keep these tests running while you re-create them in KaneAI.
+
 ## Prerequisites
 ---
 

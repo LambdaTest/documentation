@@ -3834,6 +3834,11 @@ module.exports = {
       },
       {
         type: "doc",
+        label: "ACCELQ To KaneAI Migration",
+        id: "accelq-to-kaneai-migration-guide",
+      },
+      {
+        type: "doc",
         label: "Autosana To KaneAI Migration",
         id: "autosana-to-kaneai-migration-guide",
       },

@@ -349,3 +349,4 @@ In place of testRigor's localhost tunnel, KaneAI supports tunneling for websites
 - [mabl To KaneAI Migration](/support/docs/mabl-to-kaneai-migration-guide/): the matching guide for mabl tests.
 - [Momentic To KaneAI Migration](/support/docs/momentic-to-kaneai-migration-guide/): the matching guide for Momentic tests.
 - [Autosana To KaneAI Migration](/support/docs/autosana-to-kaneai-migration-guide/): the matching guide for Autosana flows.
+- [ACCELQ To KaneAI Migration](/support/docs/accelq-to-kaneai-migration-guide/): the matching guide for ACCELQ tests.
