@@ -178,6 +178,10 @@ In case, you wish to test locally or privately hosted websites, you can select t
 
  <img loading="lazy" src={require('../assets/images/testrigor-integration/results.png').default} alt="Integrating <BrandName /> With testRigor" width="1366" height="625" className="doc_img"/>
 
+:::info
+Moving your tests to KaneAI? The [testRigor to KaneAI migration guide](/support/docs/testrigor-to-kaneai-migration-guide/) shows how to collect your testRigor steps and data and re-create each test in natural language.
+:::
+
 
 ---
 

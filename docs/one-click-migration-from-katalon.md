@@ -259,6 +259,10 @@ The analysis of your uploaded file determines which cases and steps are supporte
 
 No. This flow creates a new Test Manager project.
 
+**Can I import tests from mabl or other tools?**
+
+No. This importer reads Katalon Studio projects only. For mabl, follow the [mabl to KaneAI migration guide](/support/docs/mabl-to-kaneai-migration-guide/). It shows how to export your tests as code, run them on <BrandName />, and re-create them in KaneAI.
+
 **Will the import modify my Katalon project?**
 
 No. The import reads the uploaded archive. It does not synchronize changes back to Katalon.
