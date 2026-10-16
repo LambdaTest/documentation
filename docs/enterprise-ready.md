@@ -410,7 +410,7 @@ TestMu AI supports regional data residency and tenant isolation for regulated de
 - Org-level secrets management
 - Priority support SLA
 
-**For pricing details**: [lambdatest.com/pricing](https://www.testmuai.com/pricing/)
+**For pricing details**: [testmuai.com/pricing](https://www.testmuai.com/pricing/)
 
 ---
 
