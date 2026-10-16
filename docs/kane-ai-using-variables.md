@@ -324,7 +324,7 @@ When you save or close a session, KaneAI stores the environment you used on the 
 The environment is also saved with the test case's [advanced settings](/support/docs/kaneai-advanced-settings/). Changes to it are shown in the test case's version history.
 
 :::note
-Sessions started from [Kane CLI](/support/docs/kane-cli-introduction/) do not support environment selection yet. They use the environment of the first step that references an `{{environment.X}}` variable.
+Sessions started from [Kane CLI](/docs/kane-cli-introduction) do not support environment selection yet. They use the environment of the first step that references an `{{environment.X}}` variable.
 :::
 
 ### How to Use Environments During Test Runs
