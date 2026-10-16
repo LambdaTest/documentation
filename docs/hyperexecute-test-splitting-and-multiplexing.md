@@ -111,19 +111,19 @@ You can utilise these modes to split and execute tests as per your requirements.
   
   <a href = "/support/docs/hyperexecute-auto-split-strategy/">
   <div className="support_inners mb-5">
-    <h3>Auto Split Strategy</h3>
+    <h2>Auto Split Strategy</h2>
     <p>Allows you to distribute your tests over multiple nodes by intelligently distributing them over multiple nodes to reduce the test execution time.</p>
   </div>
   </a>
   <a href = "/support/docs/hyperexecute-matrix-multiplexing-strategy/">
   <div className="support_inners">
-    <h3>Matrix Multiplexing Strategy</h3>
+    <h2>Matrix Multiplexing Strategy</h2>
     <p>Allows you to split the test cases across different combinations of browsers, OS and custom parameters like files, folders, features, scenarios, etc.</p>
   </div>
   </a>
   <a href = "/support/docs/hyperexecute-hybrid-strategy/">
   <div className="support_inners">
-    <h3>Hybrid Strategy</h3>
+    <h2>Hybrid Strategy</h2>
     <p>Combination of both Auto Split Strategy and Matrix Multiplexing Strategy to run tests in parallel on our virtual machines.</p>
   </div>
   </a>

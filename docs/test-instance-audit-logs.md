@@ -94,7 +94,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         "https://www.youtube.com/@TestMuAI"
       ]
     },
-    "dateModified": "2026-09-09T19:10:37+05:30"
+    "dateModified": "2026-09-28T12:00:00+05:30"
   }) }}
 />
 Test Manager now provides Audit Logs for test instance execution. Audit Logs bring visibility into the **who, what, and when** for every test execution. This is critical for teams working in regulated environments, or those needing high accountability in their QA processes. 
@@ -106,6 +106,9 @@ With Audit logs you can store the execution history of your tests and even run p
 - Test Instance & Steps `Status` changes. 
 - Test Instance & Steps `Remarks or attachment` changes. 
 - Test Instance Assignee changes. 
+- Test Instance `Status` changes derived from step results, recorded against the person who changed the step and naming the step that drove the change. See [How the Test Instance Status Is Derived](/support/docs/test-run-creation-and-management/#how-the-test-instance-status-is-derived).
+
+A derived change is logged only when it actually changes the stored status.
 
 You can view the Audit Logs by clicking on the `View Execution Log`. 
 

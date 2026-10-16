@@ -32,7 +32,7 @@ On TestMu AI, you can enable **network configurations** to capture and analyze t
 
 > To enable it for your organization, please contact us via **24×7 chat support** or you can also drop a mail to **support@testmuai.com**.
 
-### Use cases
+## Use cases
 
 - **Debug API calls** by viewing HTTP/S request and response data directly from real device sessions.
 - **Verify backend integration** by checking if calls are made to the correct endpoints.

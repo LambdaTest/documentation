@@ -1,8 +1,8 @@
 ---
 id: accessibility-android-rule-duplicate-accessibility-label
-title: Duplicate Accessibility Label
+title: Duplicate Accessibility Label (Android)
 sidebar_label: Duplicate Accessibility Label
-description: Rule-level Accessibility guidance for Duplicate Accessibility Label on Android.
+description: "Find interactive Android elements that share an identical accessibility label so TalkBack and Voice Access users can tell controls apart."
 slug: accessibility-android-rule-duplicate-accessibility-label/
 ---
 import { BRAND_URL } from '@site/src/component/BrandName';
@@ -43,7 +43,7 @@ import { BRAND_URL } from '@site/src/component/BrandName';
       "@id": "https://www.testmuai.com/support/docs/accessibility-android-rule-duplicate-accessibility-label/"
     },
     "headline": "Duplicate Accessibility Label",
-    "description": "Rule-level Accessibility guidance for Duplicate Accessibility Label on Android.",
+    "description": "Find interactive Android elements that share an identical accessibility label so TalkBack and Voice Access users can tell controls apart.",
     "url": "https://www.testmuai.com/support/docs/accessibility-android-rule-duplicate-accessibility-label/",
     "image": {
       "@type": "ImageObject",

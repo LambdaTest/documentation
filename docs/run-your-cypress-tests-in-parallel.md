@@ -156,9 +156,9 @@ import VerifiedTag from '@site/src/component/verifiedTag';
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
-If you want to run your tests parallelly on the <BrandName /> platform, you can do that using either of the following two ways:
+If you want to run your End-to-End (E2E) testing parallelly on the <BrandName /> platform, you can do that using either of the following two ways:
 
-### 1. Run your Cypress tests Parallelly using the CLI
+## 1. Run your Cypress tests Parallelly using the CLI
 
 ---
 
@@ -180,7 +180,7 @@ For example, if you want to run your Cypress tests on 5 parallel sessions, you c
 lambdatest-cypress run --parallels 5
 ```
 
-### 2. Run your Cypress tests Parallelly using the lambdatest-configuration.json file
+## 2. Run your Cypress tests Parallelly using the lambdatest-configuration.json file
 
 ---
 

@@ -99,7 +99,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         "https://www.youtube.com/@TestMuAI"
       ]
     },
-    "dateModified": "2026-09-09T20:20:47+05:30"
+    "dateModified": "2026-10-13T00:00:00+05:30"
   }) }}
 />
 
@@ -164,6 +164,14 @@ This guide provides a detailed walkthrough for utilizing parameters in KaneAI to
 - **Multiple Configurations :** Simplify the execution of tests with different data sets.
 - **Seamless Test Management :** Centralized management of parameters improves efficiency and reduces redundancy.
 
+### Seed Value and test case values
+
+The **Seed Value** is defined with a global parameter in **KaneAI** > **Variables** > **Parameters**. It prepopulates a new parameter column when that parameter is first used in a test case. The test case stores its own value in row 1 of its Default Dataset, so you can use the same parameter with different values in different test cases without changing the global Seed Value.
+
+<img loading="lazy" src={require('../assets/images/kane-ai/features/data-driven-testing/parameters-list.png').default} alt="KaneAI Parameters list with parameter names and Seed Value column" className="doc_img"/>
+
+If a Dataset cell is empty, KaneAI uses the empty value; it does not fall back to the Seed Value.
+
 ## Define Parameters in a Web or App Agent Test
 - Navigate to the specific web agent test URL and configure the test to accept input parameters.
 
@@ -182,6 +190,14 @@ Click **Create Parameter** to save.
 Reference any parameter using **dollar-curly braces syntax** (e.g.,`${phone_number}`). Enter the name in its designated input field.
 
 <img loading="lazy" src={require('../assets/images/kane-ai/features/parameters/4.png').default} alt="Image" className="doc_img"/>
+
+### Set or change the value while authoring
+
+When you insert a parameter into a test step, you can enter the value to use for that test case. You can also pause the authoring session, click the parameter in the step, and update it in the **Parameter Value** dialog. Enter **New value for this test case** and click **Save**. This replaces row 1 for that parameter in the test case's Default Dataset; it does not change the global Seed Value or another test case's value.
+
+<img loading="lazy" src={require('../assets/images/kane-ai/features/data-driven-testing/parameter-value-dialog.png').default} alt="Parameter Value dialog for editing the value used by one test case" className="doc_img"/>
+
+To run the same test case with further values, add rows to a Dataset and select it for the run. See [Using Datasets](/support/docs/kane-ai-using-datasets/).
 
 ## From a Manual Interaction step
 

@@ -150,7 +150,7 @@ import NewTag from '../src/component/newTag';
   ]) }}
 />
 
-Table widgets in LambdaTest Insights enable you to display structured test data in a tabular format, making it easy to view detailed information, compare values across multiple dimensions, and analyze data with multiple columns and aggregations.
+Table widgets in TestMu AI Insights enable you to display structured test data in a tabular format, making it easy to view detailed information, compare values across multiple dimensions, and analyze data with multiple columns and aggregations.
 
 ## What is a Table Widget?
 

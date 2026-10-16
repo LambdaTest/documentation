@@ -127,7 +127,7 @@ Any SCIM 2.0-compliant IDP works. Use these settings:
 | `active` | Yes | `true` = enabled, `false` = deactivated |
 | `name` | Yes | `givenName`, `familyName`, `formatted` |
 
-**Custom Attributes** (LambdaTest Extension)
+**Custom Attributes** (TestMu AI Extension)
 
 These attributes are part of the `urn:ietf:params:scim:schemas:extension:LambdaTest:2.0:User` extension schema. To send them from your IDP, add this schema URN to your IDP's custom attribute configuration.
 
@@ -315,14 +315,14 @@ Groups and members are stored **as soon as your IDP pushes them**, even before a
 
   ↓
 
-    Step 2: LambdaTest (automatic)
+    Step 2: TestMu AI (automatic)
     Group stored & roles applied to members
     Members get roles immediately, even without mapping
 
   ↓
 
     Step 3: Admin (manual) or Mapping Rules (automatic)
-    Group mapped to a LambdaTest entity
+    Group mapped to a TestMu AI entity
 
     ↙
     ↓
@@ -371,7 +371,7 @@ Once activated, you can control it from **Settings** > **Organization Settings**
 | `displayName` | Yes | Must be **unique** within your org |
 | `members` | No | Array of `{ "value": "" }` |
 
-**Custom Attributes** (LambdaTest Extension)
+**Custom Attributes** (TestMu AI Extension)
 
 These attributes are part of the `urn:ietf:params:scim:schemas:extension:LambdaTest:2.0:Group` extension schema. To send them from your IDP, add this schema URN to your IDP's custom attribute configuration.
 
@@ -382,7 +382,7 @@ These attributes are part of the `urn:ietf:params:scim:schemas:extension:LambdaT
 For PATCH operations, use the fully qualified SCIM path:
 - **LambdatestRoles:** `urn:ietf:params:scim:schemas:extension:LambdaTest:2.0:Group:LambdatestRoles`
 
-### Mapping Groups to LambdaTest Entities
+### Mapping Groups to TestMu AI Entities
 
 Once a group is pushed, it needs to be **mapped** to tell TestMu AI what to do with its members. Select your target entity type below to see the details relevant to you:
 
@@ -685,7 +685,7 @@ Filter by name: `?filter=displayName eq "eng-backend"` | Paginate: `?startIndex=
 
 Quick reference for common scenarios. Everything below is handled automatically, no action needed unless noted.
 
-| You do this in your IDP | What happens in LambdaTest | Action needed? |
+| You do this in your IDP | What happens in TestMu AI | Action needed? |
 |---|---|---|
 | **Rename a group** | Group name updated. Mapped team/concurrency group **renamed to match**. Mapping rules re-evaluated. | Only if mapping reverted to Pending |
 | **Delete a group** | Soft-deleted. Members safely unassigned. Roles recomputed. Conflicts auto-resolved. | No |
@@ -694,7 +694,7 @@ Quick reference for common scenarios. Everything below is handled automatically,
 | **Re-push a previously deleted group** | Group restored. Members must be re-pushed. Mapping rules re-evaluated. | Depends on rules |
 | **Change roles on a group** | All members' roles recomputed immediately. | No |
 
-| You do this in LambdaTest | What happens | Important |
+| You do this in TestMu AI | What happens | Important |
 |---|---|---|
 | **Rename a team / group / sub-org** | Works fine, but the next IDP group rename will overwrite it. | To control names, rename **in your IDP** |
 | **Delete a mapped entity** | Mapping flagged as `target_deleted`, reverts to Pending. Auto-create is blocked. | [Manually re-map](#target-deleted) to a new target |

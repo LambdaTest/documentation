@@ -272,7 +272,7 @@ $env:PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
 
 You can add a custom build name by adding the `--buildName` flag to your test execution command. Here are different ways to use this feature:
 
-#### Custom Build Name (Expected Usage)
+### Custom Build Name (Expected Usage)
 Specify a custom build name to group your screenshots in the following way:
 
 <VerifiedTag value="Verified" />

@@ -1,4 +1,4 @@
-# Selenium With JavaScript
+# How to Run Selenium Tests With JavaScript on TestMu AI
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
@@ -6,12 +6,14 @@ Run your JavaScript Selenium tests on the TestMu AI cloud grid across 10,000+ br
 
 ## Prerequisites
 
+Before running any framework below, you need a TestMu AI account, your credentials, Node.js and npm, and the Selenium JavaScript bindings.
+
 1. [Create a TestMu AI account](https://www.testmuai.com/register/) if you don't have one.
 2. Get your **Username** and **Access Key** from the [TestMu AI Dashboard](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/dashboard).
 3. Install [Node.js](https://nodejs.org/en/) (v6 or newer) and npm.
 4. Install the [Selenium JavaScript bindings](https://www.selenium.dev/downloads/).
 
-## Set your credentials
+## Set Your Credentials
 
 Every framework authenticates the same way: your Username and Access Key are read from environment variables. Set them once. Pick your operating system:
 
@@ -21,7 +23,7 @@ export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
   {`set LT_USERNAME=${ YOUR_LAMBDATEST_USERNAME()}
 set LT_ACCESS_KEY=${ YOUR_LAMBDATEST_ACCESS_KEY()}`}
 
-## How the sample test works
+## How the Sample Test Works
 
 Every framework below connects to the grid at `hub.lambdatest.com/wd/hub` and passes your browser and OS choices through a capabilities object. A minimal one looks like this:
 
@@ -43,7 +45,7 @@ What changes between frameworks is only how those capabilities are wired in: an 
 
 Use the [Capabilities Generator](https://www.testmuai.com/capabilities-generator/) to build a capabilities block for any browser, version, and OS combination.
 
-## Run a test in your framework
+## Run a Test in Your Framework
 
 Each tab lists the framework-specific pieces. Clone the matching repo (it contains the full, ready-to-run project), set your browser and OS in its config, then run.
 
@@ -72,11 +74,19 @@ exports.capabilities = {
 };
 ```
 
-3. Run the test:
+3. Install the project dependencies:
+
+```bash
+npm install
+```
+
+4. Run the test:
 
 ```bash
 npm run single
 ```
+
+The test then appears on the [Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build). A green status confirms it passed.
 
 Nightwatch reads its grid setup from `nightwatch.conf.js` in the cloned project.
 
@@ -88,11 +98,19 @@ cd nightwatch-selenium-sample
 ```
 
 2. Set your browser and OS in `nightwatch.conf.js`.
-3. Run the test:
+3. Install the project dependencies:
+
+```bash
+npm install
+```
+
+4. Run the test:
 
 ```bash
 npm run single
 ```
+
+The test then appears on the [Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build). A green status confirms it passed.
 
 WebdriverIO reads user, key, and capabilities from `conf/single.conf.js`.
 
@@ -125,11 +143,19 @@ exports.config = {
 }
 ```
 
-3. Run the test:
+3. Install the project dependencies:
+
+```bash
+npm install
+```
+
+4. Run the test:
 
 ```bash
 npm run single
 ```
+
+The test then appears on the [Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build). A green status confirms it passed.
 
 Jest defines capabilities inline in the test file, so there is no separate config to edit.
 
@@ -151,11 +177,19 @@ const capabilities = {
 };
 ```
 
-3. Run the test:
+3. Install the project dependencies:
+
+```bash
+npm install
+```
+
+4. Run the test:
 
 ```bash
 npm test single.test.js
 ```
+
+The test then appears on the [Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build). A green status confirms it passed.
 
 CucumberJS runs BDD feature files, with grid capabilities set in `conf/single.conf.js`.
 
@@ -178,11 +212,19 @@ capabilities: [{
 }]
 ```
 
-3. Run the test:
+3. Install the project dependencies:
+
+```bash
+npm install
+```
+
+4. Run the test:
 
 ```bash
 npm run single
 ```
+
+The test then appears on the [Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build). A green status confirms it passed.
 
 Jasmine runs through Karma, which defines cloud browsers in `customLaunchers` inside `karma.conf.js`.
 
@@ -211,11 +253,19 @@ customLaunchers: {
 }
 ```
 
-3. Run the test:
+3. Install the project dependencies:
+
+```bash
+npm install
+```
+
+4. Run the test:
 
 ```bash
 karma start karma.conf.js
 ```
+
+The test then appears on the [Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build). A green status confirms it passed.
 
 Karma with Angular CLI defines cloud browsers in `customLaunchers` inside `karma.conf.js`.
 
@@ -244,11 +294,19 @@ customLaunchers: {
 }
 ```
 
-3. Run the test:
+3. Install the project dependencies:
+
+```bash
+npm install
+```
+
+4. Run the test:
 
 ```bash
 karma start karma.conf.js
 ```
+
+The test then appears on the [Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build). A green status confirms it passed.
 
 TestCafe connects through an npm plugin rather than a sample repo, so there is nothing to clone.
 
@@ -287,11 +345,19 @@ cd Nemo-Lambdatest-sample
 }]
 ```
 
-3. Run the test:
+3. Install the project dependencies:
+
+```bash
+npm install
+```
+
+4. Run the test:
 
 ```bash
 npx nemo -P chrome
 ```
+
+The test then appears on the [Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build). A green status confirms it passed.
 
 CodeceptJS uses a WebDriver helper in `codecept.conf.js`, with an optional service to sync test names and statuses to the dashboard.
 
@@ -324,20 +390,112 @@ helpers: {
 }
 ```
 
-3. Run the test:
+3. Install the project dependencies:
+
+```bash
+npm install
+```
+
+4. Run the test:
 
 ```bash
 npm test
 ```
 
-## Legacy frameworks
+The test then appears on the [Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build). A green status confirms it passed.
 
-These frameworks are deprecated and kept only for existing suites. For new projects, use one of the frameworks above.
+**Deprecated**
+Protractor reached end-of-life in August 2023 and is no longer maintained. For new projects, use the actively maintained **WebdriverIO** framework instead (see the WebdriverIO tab).
 
-- **Protractor** (end-of-life August 2023): [sample GitHub project](https://github.com/LambdaTest/protractor-selenium-sample). Set capabilities in the config file, then run `npm run single`. Migrate to WebdriverIO or [Playwright](/support/docs/playwright-testing/).
-- **WD** (unmaintained): [sample GitHub project](https://github.com/LambdaTest/wd-selenium-sample). Set capabilities in `conf/single.conf.js`, then run `npm run single`. Migrate to WebdriverIO.
-- **AngularJS** (end-of-life December 2021): [sample GitHub project](https://github.com/LambdaTest/angular-karma-sample). Set browsers in `karma.conf.js`, then run `karma start karma.conf.js`. Migrate to Angular with Karma.
+Protractor reads its grid setup from the config file in the cloned project.
 
-## View your results
+1. Clone the [sample GitHub project](https://github.com/LambdaTest/protractor-selenium-sample):
+
+```bash
+git clone https://github.com/LambdaTest/protractor-selenium-sample
+cd protractor-selenium-sample
+```
+
+2. Set your browser and OS in the config file.
+3. Install the project dependencies:
+
+```bash
+npm install
+```
+
+4. Run the test:
+
+```bash
+npm run single
+```
+
+The test then appears on the [Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build). A green status confirms it passed.
+
+**Deprecated**
+WD is no longer maintained. For new projects, use the actively maintained **WebdriverIO** framework instead (see the WebdriverIO tab).
+
+WD reads its capabilities from `conf/single.conf.js` in the cloned project.
+
+1. Clone the [sample GitHub project](https://github.com/LambdaTest/wd-selenium-sample):
+
+```bash
+git clone https://github.com/LambdaTest/wd-selenium-sample
+cd wd-selenium-sample
+```
+
+2. Set your browser and OS in `conf/single.conf.js`.
+3. Install the project dependencies:
+
+```bash
+npm install
+```
+
+4. Run the test:
+
+```bash
+npm run single
+```
+
+The test then appears on the [Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build). A green status confirms it passed.
+
+**Deprecated**
+AngularJS reached end-of-life in December 2021 and is no longer maintained. For new projects, use the actively maintained **Karma** framework instead (see the Karma tab).
+
+AngularJS runs through Karma, which defines cloud browsers in `customLaunchers` inside `karma.conf.js`.
+
+1. Clone the [sample GitHub project](https://github.com/LambdaTest/angular-karma-sample):
+
+```bash
+git clone https://github.com/LambdaTest/angular-karma-sample
+cd angular-karma-sample
+```
+
+2. Set your browser and OS in `karma.conf.js`.
+3. Install the project dependencies:
+
+```bash
+npm install
+```
+
+4. Run the test:
+
+```bash
+karma start karma.conf.js
+```
+
+The test then appears on the [Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build). A green status confirms it passed.
+
+## View Your Results
 
 Your test results, including video, network logs, and command-by-command execution, appear on the [TestMu AI Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build).
+
+**Next steps:** If this is your first run, walk through [running your first Selenium test](/support/docs/testmu-running-your-first-selenium-test/) end to end. From there, explore the full set of [Selenium automation capabilities](/support/docs/selenium-automation-capabilities/) you can pass to the grid, learn how to [debug your Selenium tests](/support/docs/debugging-options/), and organize and [filter your Selenium tests](/support/docs/filter-your-selenium-tests/) as your suite grows.
+
+## Next Steps
+
+Continue with these related guides:
+
+- [Running Your First Selenium Test](/support/docs/testmu-running-your-first-selenium-test/)
+- [Selenium Automation Capabilities](/support/docs/selenium-automation-capabilities/)
+- [Debugging Options](/support/docs/debugging-options/)
+- [Filter Your Selenium Tests](/support/docs/filter-your-selenium-tests/)

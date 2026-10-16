@@ -110,7 +110,7 @@ To initiate the VPN setup process, please gather the following details from your
 | Field | Description | Example |
 |-------|-------------|---------|
 | **Organization Name** | Your company or organization name | Acme Corp |
-| **LambdaTest Account Email** | The email associated with your TestMu AI account | admin@acme.com |
+| **TestMu AI Account Email** | The email associated with your TestMu AI account | admin@acme.com |
 | **Network/Security Contact Email** | Email of the technical contact from your network or security team | netops@acme.com |
 
 ### Gateway Details

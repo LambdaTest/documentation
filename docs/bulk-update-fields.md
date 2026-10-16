@@ -35,87 +35,50 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
           "@type": "ListItem",
           "position": 3,
           "name": "Bulk Update Fields",
-          "item": `${BRAND_URL}/support/docs/bilk-update-fields/`
+          "item": `${BRAND_URL}/support/docs/bulk-update-fields/`
         }]
       })
     }}
 ></script>
 
-<script type="application/ld+json"
-  dangerouslySetInnerHTML={{ __html: JSON.stringify({
-    "@context": "https://schema.org",
-    "@type": [
-      "Article",
-      "TechArticle"
-    ],
-    "mainEntityOfPage": {
-      "@type": "WebPage",
-      "@id": "https://www.testmuai.com/support/docs/bulk-update-fields/"
-    },
-    "headline": "Bulk Update Fields",
-    "description": "Learn how to Bulk update system & custom fields.",
-    "url": "https://www.testmuai.com/support/docs/bulk-update-fields/",
-    "image": {
-      "@type": "ImageObject",
-      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
-      "width": 1200,
-      "height": 630
-    },
-    "inLanguage": "en",
-    "articleSection": "Test Manager",
-    "keywords": [
-      "bulk action",
-      "bulk update",
-      "bulk update fields"
-    ],
-    "author": {
-      "@type": "Organization",
-      "@id": "https://www.testmuai.com/#organization",
-      "name": "TestMu AI",
-      "url": "https://www.testmuai.com/"
-    },
-    "publisher": {
-      "@type": "Organization",
-      "@id": "https://www.testmuai.com/#organization",
-      "name": "TestMu AI",
-      "alternateName": [
-        "TestMuAI",
-        "TestMu",
-        "LambdaTest"
-      ],
-      "url": "https://www.testmuai.com/",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://www.testmuai.com/logo.png"
-      },
-      "sameAs": [
-        "https://www.linkedin.com/company/testmu-ai/",
-        "https://x.com/testmuai",
-        "https://www.youtube.com/@TestMuAI"
-      ]
-    },
-    "dateModified": "2026-09-09T19:10:37+05:30"
-  }) }}
-/>
-
 # Bulk Update System & Custom Fields
 
-Utilize bulk action feature that streamlines the process of updating system & Custom fields across multiple test cases, enhancing efficiency and organization of Test Cases. With this feature, users can seamlessly modify key system fields such as Priority, Status, Automation Status, Type and all available custom fields for numerous test cases simultaneously, eliminating the need for time consuming individual updates.
+Utilize the bulk action feature that streamlines the process of updating system & custom fields across multiple test cases, enhancing efficiency and organization of Test Cases. With this feature, users can seamlessly modify key system fields such as Priority, Status, Automation Status, Type and all available custom fields for numerous test cases simultaneously, eliminating the need for time-consuming individual updates.
 
-## Steps to Bulk update Fields:
+## Steps to Bulk Update Fields
 
-1. Bulk Select Test cases to update their Fields.
+1. Bulk select the test cases whose fields you want to update.
 
 2. Click on the `Update Fields` option.
 
-<img loading="lazy" src={require('../assets/images/mobile-app-testing/bulk_update_fields.jpeg').default} alt="Real "  className="doc_img" width="1366" height="629"/>
+<img loading="lazy" src={require('../assets/images/mobile-app-testing/bulk_update_fields.jpeg').default} alt="Update Fields option for bulk-selected test cases" className="doc_img" width="1366" height="629"/>
 
-3. Select the fields you want to update the values for. 
+3. Select the fields you want to update the values for.
 
-4. Update the values of the fields & Click on `Update Fields` to apply the updates.
+4. Update the values of the fields & click on `Update Fields` to apply the updates.
 
-<img loading="lazy" src={require('../assets/images/mobile-app-testing/edit_fields_bulk_action.jpeg').default} alt="Real "  className="doc_img" width="1366" height="629"/>
+<img loading="lazy" src={require('../assets/images/mobile-app-testing/edit_fields_bulk_action.jpeg').default} alt="Editing field values in the bulk update dialog" className="doc_img" width="1366" height="629"/>
 
-A notification will appear at the top right confirming the fields have been Updated.
+A notification will appear at the top right confirming the fields have been updated.
 
-<img loading="lazy" src={require('../assets/images/mobile-app-testing/bulk_field_update_res.jpeg').default} alt="Real "  className="doc_img" width="1366" height="629"/>
+<img loading="lazy" src={require('../assets/images/mobile-app-testing/bulk_field_update_res.jpeg').default} alt="Confirmation that the fields were updated" className="doc_img" width="1366" height="629"/>
+
+<nav aria-label="breadcrumbs">
+  <ul className="breadcrumbs">
+    <li className="breadcrumbs__item">
+      <a className="breadcrumbs__link" href={BRAND_URL}>
+        Home
+      </a>
+    </li>
+    <li className="breadcrumbs__item">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
+        Support
+      </a>
+    </li>
+    <li className="breadcrumbs__item breadcrumbs__item--active">
+      <span className="breadcrumbs__link">
+        Bulk Update Fields
+      </span>
+    </li>
+  </ul>
+</nav>

@@ -23,7 +23,7 @@ Local variables can only be defined using natural language or used as a part of 
 Global variables are accessible across multiple test cases within the entire organisation. They allow values to be reused in multiple places, enhancing consistency and reducing redundancy. Any variable which is converted from local to global has an option to persist value across sessions if the value changes within a session. More details about persist check are added below.
 
 ### Environment Variables
-Environment variables are variables that are typically set for a specific environment (e.g., staging, production). They are useful for managing values like URLs, or credentials that differ based on the environment in which the tests are being executed. Using environment variables you can execute your test on multiple environments easily. More details about environments are added below.
+Environment variables are variables that are typically set for a specific environment (e.g., staging, production). They are useful for managing values like URLs, or credentials that differ based on the environment in which the tests are being executed. Using environment variables you can execute your test on multiple environments easily, and you can [select the environment for an authoring session](#select-an-environment-for-an-authoring-session) before it starts. More details about environments are added below.
 
 ## How to create & edit variables
 Variables can be created using the following three methods:
@@ -110,6 +110,60 @@ The persist check option becomes available only when you change a variable's sco
 
 ### What are Environments?
 Environments in KaneAI refer to the different configurations under which the tests are executed. Environments typically represent different stages of deployment (e.g., development, staging, production). Each environment can have its own set of variables tailored to the respective deployment scenario.
+
+### Select an Environment for an Authoring Session
+
+You can choose the environment (for example, Dev, Stage, or Production) before an authoring session starts. The whole session is then locked to that environment, so every `{{environment.X}}` variable resolves from the environment you picked. A test you author against Stage uses Stage values throughout, and does not switch to Production values on a rerun.
+
+**Available on request.** Please reach out to Support to enable it. This feature is partially rolled out and will soon be generally available for all users.
+
+#### How to select an environment
+
+1. Create a new test or open an existing test in the playground.
+2. In the session configuration panel, open the **Environment** dropdown and choose the environment you want to author against. Choosing an environment is optional.
+3. Start the session.
+
+Once the session starts with an environment, the environment is locked and cannot be changed until the session ends. To author against a different environment, end the session and start a new one with the other environment selected.
+
+#### What changes in a session with a selected environment
+
+| Behavior | With an environment selected | Without an environment |
+|---|---|---|
+| Variables offered in the `{{` picker | Only the selected environment's variables, plus global variables | Global variables only. No environment variables are offered |
+| Choosing an environment mid-session | Not allowed | Allowed once. The environment you choose is then locked for the rest of the session |
+| A step uses a variable missing from the environment | The step fails with an error naming the variable and the environment | Choose an environment before using environment variables |
+
+For example, if `web_url` is not defined in the Production environment, a step that uses `{{environment.web_url}}` fails with:
+
+```text
+The variable "web_url" is not defined in environment "production".
+```
+
+To fix it, add the variable to that environment from the [variables page](https://www.testmuai.com/login/?redirectTo=https://kaneai.lambdatest.com/variables), or end the session and select an environment that defines it.
+
+KaneAI does not check your test's variables against the environment when you select it. A missing variable is reported only when the step that uses it runs.
+
+#### Import a module that uses environment variables
+
+If you import a module that uses environment variables into a session without an environment, you're prompted to choose one. This counts as your one environment choice for the session. If the chosen environment is missing any of the module's environment variables, a warning names them and lets you create them in that environment.
+
+#### Choose an environment before automating with KaneAI
+
+You can also choose the environment before KaneAI starts authoring from:
+
+- **Create and Automate** when [generating test cases with AI](/support/docs/generate-test-cases-with-ai/).
+- **Bulk Automate**, when automating several manual test cases at once.
+- **Automate with KaneAI** on a [manual test case](/support/docs/manual-test-case-creation/).
+
+To use environment variables in manual test cases and modules, see [Variables, Parameters, and Secrets in Manual Test Cases and Modules](/support/docs/test-manager-variables-parameters-secrets/).
+
+#### Your last choice is remembered
+
+When you save or close a session, KaneAI stores the environment you used on the test case, including an environment you chose during the session. The next time you open the test for authoring, that environment is pre-selected.
+
+The environment is also saved with the test case's [advanced settings](/support/docs/kaneai-advanced-settings/). Changes to it are shown in the test case's version history.
+
+Sessions started from [Kane CLI](/support/docs/kane-cli-introduction/) do not support environment selection yet. They use the environment of the first step that references an `{{environment.X}}` variable.
 
 ### How to Use Environments During Test Runs
 Once a test case is authored using environment variables, it can then be executed in any environment as long as the variables used in the test case, exist in the requested environment.

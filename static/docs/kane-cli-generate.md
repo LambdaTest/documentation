@@ -57,7 +57,7 @@ The request id (`23271` above) is printed at the end of each generation and is h
 | `--files ` | Comma-separated local files to attach as context (new generations and refines only). See [Attaching files for context](#attaching-files-for-context). |
 | `--project ` / `--folder ` | Test Manager project / folder. |
 | `--agent` | Emit structured NDJSON on stdout (auto-on when run non-interactively / piped). |
-| `--env`, `--username`, `--access-key` | Environment and authentication, same as [`kane-cli run`](/support/docs/kane-cli-quickstart/). See [Authentication](/support/docs/kane-cli-authentication/). |
+| `--username`, `--access-key` | Authentication, same as [`kane-cli run`](/support/docs/kane-cli-quickstart/). See [Authentication](/support/docs/kane-cli-authentication/). |
 
 ## Attaching files for context
 

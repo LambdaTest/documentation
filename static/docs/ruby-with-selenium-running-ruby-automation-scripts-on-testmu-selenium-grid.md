@@ -1,4 +1,4 @@
-# Selenium With Ruby
+# How to Run Selenium Tests With Ruby on TestMu AI
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
@@ -6,7 +6,7 @@
       },
       {
         "@type": "SoftwareSourceCode",
-        "name": "Clone the sample GitHub project",
+        "name": "Clone the Capybara sample GitHub project",
         "codeSampleType": "code snippet",
         "programmingLanguage": "Shell",
         "codeRepository": "https://github.com/LambdaTest/Capybara-Cucumber-Ruby",
@@ -14,59 +14,24 @@
       },
       {
         "@type": "SoftwareSourceCode",
-        "name": "Set your browser and OS in the capabilities hash",
+        "name": "Set your browser and OS in the Capybara capabilities hash",
         "codeSampleType": "code snippet",
         "programmingLanguage": "Ruby",
         "text": "@caps = {\n  \"browserName\" => \"chrome\",\n  \"browserVersion\" => \"latest\",\n  \"platformName\" => \"Windows 10\",\n  \"build\" => \"capybara-lambdatest\",\n  \"name\" => \"single-Test\"\n}"
       },
       {
         "@type": "SoftwareSourceCode",
-        "name": "Run a single test, or in parallel",
+        "name": "Install dependencies and run a single test, or in parallel",
         "codeSampleType": "code snippet",
         "programmingLanguage": "Shell",
-        "text": "bundle exec rake single\nbundle exec rake parallel"
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "Clone the sample GitHub project",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "Shell",
-        "codeRepository": "https://github.com/LambdaTest/RSpec-Selenium-Sample",
-        "text": "git clone https://github.com/LambdaTest/RSpec-Selenium-Sample\ncd RSpec-Selenium-Sample"
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "Run a single test, or in parallel",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "Shell",
-        "text": "bundle exec rake single\nbundle exec rake parallel"
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "Clone the sample GitHub project",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "Shell",
-        "codeRepository": "https://github.com/LambdaTest-sample-test-frameworks/Ruby-UnitTest-Selenium",
-        "text": "git clone https://github.com/LambdaTest-sample-test-frameworks/Ruby-UnitTest-Selenium\ncd Ruby-UnitTest-Selenium"
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "Set your browser and OS in the capabilities hash",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "Ruby",
-        "text": "caps = {\n  :browserName => \"chrome\",\n  :browser_version => \"latest\",\n  :platform_name => \"Windows 10\",\n  :name => \"UnitTest Sample Test\",\n  :build => \"UnitTest Selenium Build\"\n}"
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "Run the test",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "Shell",
-        "text": "ruby LambdaTest.rb"
+        "text": "bundle install\nbundle exec rake single\nbundle exec rake parallel"
       }
     ],
     "dateModified": "2026-09-09T19:13:32+05:30"
   }) }}
 />
+
+# How to Run Selenium Tests With Ruby on TestMu AI
 
 Run your Ruby Selenium tests on the TestMu AI cloud grid across 10,000+ browser/device combinations. The setup is the same for every framework: you connect to the grid and pass your capabilities. This guide covers that shared flow once, then gives you a per-framework quickstart in the tabs below.
 
@@ -77,7 +42,9 @@ Run your Ruby Selenium tests on the TestMu AI cloud grid across 10,000+ browser/
 3. Install [Ruby](https://www.ruby-lang.org/en/downloads/) and the `gem` package manager.
 4. Install the `selenium-webdriver` gem (and `parallel_tests` for parallel runs), pulled in by the sample projects via Bundler.
 
-## Set your credentials
+## Set Your Credentials
+
+Your Username and Access Key are read from environment variables, set once per operating system.
 
 Every framework authenticates the same way: your Username and Access Key are read from environment variables. Set them once. Pick your operating system:
 
@@ -87,7 +54,7 @@ export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
   {`set LT_USERNAME=${ YOUR_LAMBDATEST_USERNAME()}
 set LT_ACCESS_KEY=${ YOUR_LAMBDATEST_ACCESS_KEY()}`}
 
-## How the sample test works
+## How the Sample Test Works
 
 Every framework below connects to the grid and passes your browser and OS choices through a capabilities hash:
 
@@ -106,7 +73,7 @@ What changes between frameworks is only how the test is structured and launched.
 
 Use the [Capabilities Generator](https://www.testmuai.com/capabilities-generator/) to build a capabilities block for any browser, version, and OS combination.
 
-## Run a test in your framework
+## Run a Test in Your Framework
 
 Each tab lists the framework-specific pieces. Clone the matching repo (it contains the full, ready-to-run project), then run.
 
@@ -131,12 +98,20 @@ cd Capybara-Cucumber-Ruby
 }
 ```
 
-3. Run a single test, or in parallel:
+3. Install the project dependencies:
+
+```bash
+bundle install
+```
+
+4. Run a single test, or in parallel:
 
 ```bash
 bundle exec rake single
 bundle exec rake parallel
 ```
+
+The test then appears on the [Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build). A green status confirms it passed.
 
 RSpec loads capabilities from config YAML files and passes them to the remote WebDriver, run via Rake tasks.
 
@@ -148,12 +123,20 @@ cd RSpec-Selenium-Sample
 ```
 
 2. Set your browser and OS in the config YAML.
-3. Run a single test, or in parallel:
+3. Install the project dependencies:
+
+```bash
+bundle install
+```
+
+4. Run a single test, or in parallel:
 
 ```bash
 bundle exec rake single
 bundle exec rake parallel
 ```
+
+The test then appears on the [Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build). A green status confirms it passed.
 
 Test::Unit runs a Ruby test file directly, with capabilities inline, and no Bundler task runner.
 
@@ -176,12 +159,31 @@ caps = {
 }
 ```
 
-3. Run the test:
+3. Install the project dependencies:
+
+```bash
+bundle install
+```
+
+4. Run the test:
 
 ```bash
 ruby LambdaTest.rb
 ```
 
-## View your results
+The test then appears on the [Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build). A green status confirms it passed.
+
+## View Your Results
 
 Your test results, including video, network logs, and command-by-command execution, appear on the [TestMu AI Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build).
+
+**Next steps:** If this is your first run, walk through [running your first Selenium test](/support/docs/testmu-running-your-first-selenium-test/) end to end. From there, explore the full set of [Selenium automation capabilities](/support/docs/selenium-automation-capabilities/) you can pass to the grid, learn how to [debug your Selenium tests](/support/docs/debugging-options/), and organize and [filter your Selenium tests](/support/docs/filter-your-selenium-tests/) as your suite grows.
+
+## Next Steps
+
+Continue with these related guides:
+
+- [Running Your First Selenium Test](/support/docs/testmu-running-your-first-selenium-test/)
+- [Selenium Automation Capabilities](/support/docs/selenium-automation-capabilities/)
+- [Debugging Options](/support/docs/debugging-options/)
+- [Filter Your Selenium Tests](/support/docs/filter-your-selenium-tests/)

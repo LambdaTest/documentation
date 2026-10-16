@@ -101,42 +101,42 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 <div className="support_main">  
   <a href="/support/docs/hyperexecute-testng-use-cases/">
     <div className="support_inners">
-      <h3>TestNG</h3>
+      <h2>TestNG</h2>
     </div>
   </a>
   <a href="/support/docs/hyperexecute-python-use-cases/">
     <div className="support_inners">
-      <h3>Python + Pytest + Behave</h3>
+      <h2>Python + Pytest + Behave</h2>
     </div>
   </a>
     <a href="/support/docs/hyperexecute-csharp-use-cases/">
     <div className="support_inners">
-      <h3>C# + NUnit + SpecFlow</h3>
+      <h2>C# + NUnit + SpecFlow</h2>
     </div>
   </a>
     <a href="/support/docs/hyperexecute-yaml-creation-for-playwright/">
     <div className="support_inners">
-      <h3>YAML creation for Playwright tests</h3>
+      <h2>YAML creation for Playwright tests</h2>
     </div>
   </a>
   <a href="/support/docs/hyperexecute-how-smart-caching-boosts-tests-speed/">
     <div className="support_inners">
-      <h3>How you can turbo boost your tests execution with our Smart Caching feature?</h3>
+      <h2>How you can turbo boost your tests execution with our Smart Caching feature?</h2>
     </div>
   </a>
   <a href="/support/docs/hyperexecute-seamless-integration-with-tools/">
     <div className="support_inners">
-      <h3>How you can seamlessly integrate your tests testing tool with HyperExecute for enhanced Test Orchestration?</h3>
+      <h2>How you can seamlessly integrate your tests testing tool with HyperExecute for enhanced Test Orchestration?</h2>
     </div>
   </a>
   <a href="/support/docs/hyperexecute-build-mobile-apps-using-tools/">
     <div className="support_inners">
-      <h3>How to build your mobile applications via HyperExecute?</h3>
+      <h2>How to build your mobile applications via HyperExecute?</h2>
     </div>
   </a>
   <a href="/support/docs/hyperexecute-utilizing-custom-libraries/">
   <div className="support_inners">
-    <h3>How to leverage custom libraries in SikuliX for advanced visual verification?</h3>
+    <h2>How to leverage custom libraries in SikuliX for advanced visual verification?</h2>
   </div>
   </a>
 </div>

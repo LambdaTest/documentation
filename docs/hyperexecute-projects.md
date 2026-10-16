@@ -116,6 +116,10 @@ import VerifiedTag from '@site/src/component/verifiedTag';
 />
 Projects serve as a centralized platform for organizing and managing test executions. By grouping similar tests, controlling access, and tracking progress, Projects streamline the testing process. You can configure [custom project](/support/docs/hyperexecute-projects/#setup-your-project) and [workflow setups](/support/docs/hyperexecute-projects/#schedule-your-workflows), as well as [integrate Tosca, Tosca DEX, and JMeter tests](/support/docs/hyperexecute-projects/#setting-up-specialized-projects) for unified management. This enables efficient test script creation, automated execution scheduling, and valuable insights into test results.
 
+:::tip Org-wide health check
+Organisation admins on the enterprise plan can click **View Summary** at the top of the project list to open the [Organisation Summary Dashboard](/support/docs/hyperexecute-organisation-summary-dashboard/). It shows KPI tiles, a job status donut and a failure-reason breakdown across every project in your organisation, with a PDF export.
+:::
+
 ## Link Jobs to Projects Using YAML
 When you run jobs on HyperExecute, connecting them to projects helps you track performance trends, compare results over time, and get valuable insights from your test history. You can link jobs to projects in two ways using your YAML configuration file.
 
@@ -188,6 +192,40 @@ Once the project is created, the project header displays key details including t
 Within each HyperExecute Project, you can set up one or more workflows. These workflows allow for scheduled execution of your tests, providing you with the flexibility to automate your testing process according to your development and release cycles. 
 
 > To learn more about Workflows in HyperExecute, refer to our [detailed documentation](/support/docs/hyperexecute-workflows)
+
+## Project Summary Widgets
+
+When you open a project, the **Workflows** and **Jobs** tabs show a row of summary tiles above the table. The tiles give you the state of the project at a glance, so you don't have to scan every row.
+
+### Workflows Tab
+
+The Workflows tab shows five tiles:
+
+- **Total Workflows**: every workflow in the project.
+- **Active Workflows**: workflows that are currently active.
+- **Workflows Running Successfully**: workflows whose recent runs passed.
+- **Workflows with Issues**: workflows whose recent runs failed or need attention.
+- **Expired Workflows**: workflows past their schedule end date.
+
+<img loading="lazy" src={require('../assets/images/hyperexecute/features/project-summary/hyperexecute-project-summary-widgets-workflows.png').default} alt="Workflows tab of a HyperExecute project showing the Total, Active, Running Successfully, With Issues and Expired workflow tiles above the workflow table" className="doc_img"/>
+
+*Summary tiles on the Workflows tab.*
+
+### Jobs Tab
+
+The Jobs tab shows the total job count, the completion rate, a status bar that splits jobs by result, and a breakdown of failure categories. Use these to spot a rise in failures before you open individual jobs.
+
+<img loading="lazy" src={require('../assets/images/hyperexecute/features/project-summary/hyperexecute-project-summary-widgets-jobs.png').default} alt="Jobs tab of a HyperExecute project showing the Total Jobs, Completion, job status and Failure Categories tiles above the job list" className="doc_img"/>
+
+*Summary tiles on the Jobs tab.*
+
+### Filter the Tiles
+
+The tiles follow your filters. Search, or filter by user, branch, status, label, team, type or date, and the tiles recompute to match the rows in the table.
+
+:::note
+The Jobs tab opens with the **Date** filter set to **Last 7 Days**. To see older jobs, open **Filters** > **Date** and pick a wider range, such as **Last 30 Days** or **All Time**.
+:::
 
 ## Setting Up Specialized Projects
 In addition to custom projects, HyperExecute supports integration with specialized testing tools such as Tosca, Tosca DEX, and Performance testing with JMeter. For detailed instructions on setting up these specific projects, please refer to their dedicated documentation pages:

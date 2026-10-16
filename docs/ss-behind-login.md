@@ -159,7 +159,7 @@ Select the **locator** as per your respective fields in the Login form.
 
 For the demonstration, let us capture the details for <a href="https://www.testmuai.com/login/" onClick={CookieTrackingLogin}><BrandName /> Login</a>.
 >
-**Note:** If you are already logged in to [LambdaTest](https://www.testmuai.com), make sure to perform this drill in **incognito mode**.
+**Note:** If you are already logged in to [TestMu AI](https://www.testmuai.com), make sure to perform this drill in **incognito mode**.
 
 **Step 1:** Go to <a href="https://www.testmuai.com/login/" onClick={CookieTrackingLogin}>https://www.testmuai.com/login/</a>. Right-click and select the option to open the inspection tools. For demonstration, we are using Google Chrome’s Dev Tools.
 

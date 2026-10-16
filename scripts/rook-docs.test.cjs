@@ -12,19 +12,55 @@ const root = path.resolve(__dirname, '..');
 const examples = path.join(root, 'static/resources/rook');
 const read = (name) => fs.readFileSync(path.join(examples, name), 'utf8');
 const clients = ['claude-code', 'codex', 'gemini-cli', 'copilot-cli', 'opencode', 'cursor-cli', 'antigravity-cli', 'vscode', 'windsurf', 'antigravity-ide'];
-const pages = [...clients, 'coding-agents', 'github-actions', 'jenkins', 'argocd'].map(x => `rook-${x}`);
+const ciPages = ['agent-assurance-ci-cd', 'rook-github-actions', 'rook-jenkins', 'rook-argocd'];
+const pages = [...clients, 'coding-agents'].map(x => `rook-${x}`).concat(ciPages);
+const setupPages = ['rook-installation', 'agent-assurance-quickstart', 'rook-environment-and-secrets'];
+const referencePages = ['agent-assurance-command-reference', 'agent-assurance-troubleshooting'];
 
 test.before(() => {
   // Fresh checkouts do not contain the ignored, generated Markdown exports.
   const generated = spawnSync(process.execPath, [
     path.join(root, 'scripts/generate-static-md.js'),
-    ...pages.map(slug => path.join(root, 'docs', `${slug}.md`)),
+    ...[...pages, ...setupPages, ...referencePages].map(slug => path.join(root, 'docs', `${slug}.md`)),
   ], {cwd: root, encoding: 'utf8'});
   assert.equal(generated.status, 0, generated.stderr);
 });
 
+test('public installation examples use the current Homebrew tap and include native Windows setup', () => {
+  const install = fs.readFileSync(path.join(root, 'docs/rook-installation.md'), 'utf8');
+  const quickstart = fs.readFileSync(path.join(root, 'docs/agent-assurance-quickstart.md'), 'utf8');
+  assert.match(install, /https:\/\/github\.com\/LambdaTest\/homebrew-rook\/blob\/main\/Formula\/rook\.rb/);
+  for (const doc of [install, quickstart]) {
+    const bash = [...doc.matchAll(/```bash\n([\s\S]*?)\n```/g)].map(m => m[1]).join('\n');
+    assert.match(bash, /brew install lambdatest\/rook\/rook/);
+    assert.doesNotMatch(bash, /brew tap LambdaTest\/rook https:\/\/github\.com\/LambdaTest\/rook\.git/);
+    assert.match(doc, /npm\.cmd install -g @testmuai\/rook\b/);
+  }
+  assert.match(install, /npm\.cmd install -g @testmuai\/rook@0\.1\.11/);
+  assert.match(install, /\{#windows\}/);
+  assert.match(install, /\{#windows-wsl\}/);
+  assert.match(install, /Get-Command rook\.cmd/);
+  assert.match(install, /npm\.cmd prefix -g/);
+  assert.match(install, /rook\.cmd ui --local --no-open/);
+  assert.match(install, /There is no public `install\.ps1`/);
+  assert.match(install, /POSIX shell script, not `rook\.exe` or `rook\.cmd`/);
+});
+
+test('PowerShell setup examples survive Markdown export and avoid Bash-only commands', () => {
+  for (const slug of setupPages) {
+    const doc = fs.readFileSync(path.join(root, 'docs', `${slug}.md`), 'utf8');
+    const exported = fs.readFileSync(path.join(root, 'static/docs', `${slug}.md`), 'utf8');
+    const blocks = [...doc.matchAll(/```powershell\n([\s\S]*?)\n```/g)];
+    assert.ok(blocks.length > 0, `${slug}: PowerShell examples exist`);
+    for (const [block, code] of blocks) {
+      assert.ok(exported.includes(block), `${slug}: PowerShell code preserved`);
+      assert.doesNotMatch(code, /\bexport\s|command -v|curl -fs|\|\s*bash|Set-ExecutionPolicy|Invoke-Expression/);
+    }
+  }
+});
+
 test('all integration pages have valid frontmatter, navigation, images, and local links', () => {
-  const sidebar = JSON.stringify(require('../sidebars.js').AgentToAgentSidebar);
+  const sidebar = JSON.stringify(require('../sidebars.js').AgentAssuranceSidebar);
   for (const slug of pages) {
     const doc = fs.readFileSync(path.join(root, 'docs', `${slug}.md`), 'utf8');
     const fm = yaml.load(doc.match(/^---\n([\s\S]*?)\n---/)[1]);
@@ -37,7 +73,7 @@ test('all integration pages have valid frontmatter, navigation, images, and loca
     for (const [, resource] of doc.matchAll(/\]\((?:pathname:\/\/)?\/support\/resources\/rook\/([^)]*)\)/g)) {
       assert.ok(fs.existsSync(path.join(examples, resource)), `${slug}: ${resource}`);
     }
-    for (const [, image] of doc.matchAll(/require\('([^']+)'\)/g)) {
+    for (const [, image] of doc.matchAll(/src=\{require\('([^']+)'\)/g)) {
       assert.ok(fs.existsSync(path.resolve(root, 'docs', image)), `${slug}: ${image}`);
     }
     if (slug !== 'rook-coding-agents') {
@@ -46,6 +82,270 @@ test('all integration pages have valid frontmatter, navigation, images, and loca
       assert.match(doc, /https:\/\/rook\.lambdatest\.com\/projects/);
     }
     assert.doesNotMatch(doc, /stage-rook\.lambdatestinternal/);
+  }
+});
+
+test('every coding-client guide includes a complete prompt-first workflow and skill action coverage', () => {
+  for (const client of [...clients, 'coding-agents']) {
+    const doc = fs.readFileSync(path.join(root, 'docs', `rook-${client}.md`), 'utf8');
+    const workflow = doc.slice(doc.indexOf('## Test Your Agent Through Prompts'));
+    assert.match(workflow, /coding assistant's chat, not in a terminal/);
+    for (const step of ['1. Check Readiness', '2. Select and Understand the Agent',
+      '3. Create or Repair a Profile from a Description', '4. Generate and Review Scenarios',
+      '5. Run Only the Reviewed Scope', '6. Read Evidence and Open the Right UI']) {
+      assert.ok(workflow.includes(`### ${step}`), `${client}: ${step}`);
+    }
+    const prompts = [...workflow.matchAll(/```text\n([\s\S]*?)\n```/g)].map(m => m[1]);
+    assert.ok(prompts.length >= 6, `${client}: copyable prompts for all six steps`);
+    assert.doesNotMatch(workflow, /```(?:bash|sh|powershell)\n/, `${client}: no manual CLI sequence after setup`);
+    assert.doesNotMatch(prompts.join('\n'), /^rook (?:run|report|profile|generate|explore|ui) /m);
+    assert.match(workflow, /prepare, open, execute, close, and collect; Rook owns judging/);
+    assert.match(workflow, /reply-only goal/);
+    assert.match(workflow, /replace the entire sentence.*local-only; do not sync or publish/);
+    assert.match(workflow, /not a hard spending cap/);
+    assert.match(workflow, /Do not retry or run paid RCA automatically/);
+    assert.match(workflow, /not an older default report/);
+    assert.match(workflow, /https:\/\/rook\.lambdatest\.com\/projects/);
+    assert.match(workflow, /\{#guided-skill-actions\}/);
+    for (const action of ['Refresh changed features', 'Broaden test coverage', 'Curate the suite',
+      'Choose a filtered run', 'Manage target credentials', 'Connect MCP tools',
+      'Disconnect an MCP server', 'Repair a broken connection', 'Resume interrupted work',
+      'Wait for delayed evidence', 'Explain saved results', 'Compare two runs',
+      'Request root-cause analysis', 'Find the next step', 'Prepare a support report',
+      'Review an update', 'Add CI/CD']) {
+      assert.ok(workflow.includes(`| ${action} |`), `${client}: ${action}`);
+    }
+    assert.match(workflow, /skill-installer\/skills\/references/);
+  }
+});
+
+test('CI guides lead with assistant prompts while preserving deterministic runner execution', () => {
+  for (const slug of ciPages) {
+    const doc = fs.readFileSync(path.join(root, 'docs', `${slug}.md`), 'utf8');
+    assert.match(doc, /\{#prompt-led-setup\}/);
+    assert.match(doc, /assistant authors and reviews the pipeline; the runner executes Rook CLI commands/);
+    assert.match(doc, /synthetic/);
+    assert.match(doc, /strict (?:release|verdict) policy/);
+    const prompts = [...doc.matchAll(/```text\n([\s\S]*?)\n```/g)]
+      .filter(m => /rook skill|^(?:Review|Validate) /m.test(m[1]));
+    assert.ok(prompts.length >= (slug === 'agent-assurance-ci-cd' ? 3 : 4), `${slug}: guided setup and review prompts`);
+    assert.ok(prompts[0].index < doc.search(/```(?:bash|yaml|groovy|dockerfile)\n/), `${slug}: prompt-led entry`);
+    const promptText = prompts.map(m => m[1]).join('\n');
+    assert.match(promptText, /Do not (?:build or )?push/);
+    assert.match(promptText, /without (?:invoking the agent or CI|contacting the target or starting CI)/);
+    assert.match(doc, /Do not (?:weaken|rerun)/);
+    assert.match(doc, /https:\/\/github\.com\/LambdaTest\/rook\/blob\/main\/skill-installer\/skills\/references\/ci\.md/);
+  }
+  const hub = fs.readFileSync(path.join(root, 'docs/agent-assurance-ci-cd.md'), 'utf8');
+  assert.match(hub, /\{#guided-ci-actions\}/);
+  assert.match(hub, /Keep discovery and scenario generation outside the release gate/);
+});
+
+test('hosted review directions use Profiles and the evidence drawer, not the retired Insights route', () => {
+  const ui = fs.readFileSync(path.join(root, 'docs/rook-web-ui.md'), 'utf8');
+  const profiles = fs.readFileSync(path.join(root, 'docs/rook-profiles-and-hooks.md'), 'utf8');
+  const evidence = fs.readFileSync(path.join(root, 'docs/agent-assurance-results-and-evidence.md'), 'utf8');
+  assert.match(ui, /\*\*Summary\*\*, \*\*Versions\*\*, \*\*Profiles\*\*, \*\*Features\*\*, \*\*Scenarios\*\*, and \*\*Runs\*\*/);
+  assert.doesNotMatch(ui, /## Insights|your agent → Insights|rook-web-insights\.png/);
+  assert.match(ui, /\{#insights\}/, 'old coverage links still resolve');
+  assert.match(profiles, /agent's \*\*Profiles\*\* tab/);
+  assert.doesNotMatch(profiles, /On \*\*Summary → Profiles\*\*/);
+  assert.match(evidence, /\*\*Evidence\*\* panel to open its drawer/);
+  assert.match(ui, /rook-web-profiles\.png/);
+  assert.match(ui, /rook-web-result-criteria\.png/);
+  assert.match(ui, /\*\*Expand all\*\*/);
+  assert.match(ui, /not measured execution time/);
+  // The redesigned local viewer intentionally displays inline YAML; the hosted UI uses a dialog.
+  const hostedUi = ui.slice(ui.indexOf('## Open the Right Environment'));
+  const hostedProfiles = profiles.slice(profiles.indexOf('### Hosted Web UI:'));
+  assert.doesNotMatch(hostedUi + hostedProfiles, /YAML.*inline|specification inline|earlier side-by-side layout/);
+});
+
+test('local UI guide covers the tabbed viewer and names the first public release that ships it', () => {
+  const ui = fs.readFileSync(path.join(root, 'docs/rook-web-ui.md'), 'utf8');
+  const local = ui.split('### If You Still Have the Earlier Local UI')[0];
+  assert.match(local, /\*\*Summary\*\*, \*\*Profiles\*\*, \*\*Features\*\*, \*\*Scenarios\*\*, and \*\*Runs\*\*/);
+  assert.match(local, /no local Versions tab/);
+  assert.match(local, /profile YAML inline/);
+  assert.match(local, /\*\*Evidence\*\* panel to open its drawer/);
+  assert.match(local, /`hooks\.json`, `snapshot\.yaml`.*not listed here/);
+  assert.match(ui, /ships in public releases from \*\*0\.1\.6\*\*/);
+  assert.match(ui, /\{#earlier-local-ui\}/);
+  assert.match(ui, /different examples, not two views of the same execution/);
+  for (const name of ['agents', 'agent', 'profiles', 'features', 'feature', 'scenarios', 'scenario', 'runs', 'run', 'result', 'response', 'evidence']) {
+    assert.ok(local.includes(`rook-local-${name}.png`), `local screenshot: ${name}`);
+  }
+  assert.doesNotMatch(local, /scroll to \*\*files\*\*|no hosted filter bar|\*\*upstream\*\* panel/i);
+});
+
+test('all Rook screenshot references exist and dimensions match the PNG files', () => {
+  for (const file of fs.readdirSync(path.join(root, 'docs')).filter(name => /^(rook-|agent-assurance-).*\.md$/.test(name))) {
+    const doc = fs.readFileSync(path.join(root, 'docs', file), 'utf8');
+    assert.doesNotMatch(doc, /images\/rook\/rook-(?:terminal|browser)-[^'"\s]+/, `${file}: no retired terminal or browser captures`);
+    for (const [tag, relative] of doc.matchAll(/<img\b[^>]*src=\{require\('([^']*images\/rook\/[^']+\.png)'\)[^>]*>/g)) {
+      const png = fs.readFileSync(path.resolve(root, 'docs', relative));
+      assert.equal(png.subarray(0, 8).toString('hex'), '89504e470d0a1a0a', `${file}: valid PNG`);
+      const width = png.readUInt32BE(16);
+      const height = png.readUInt32BE(20);
+      assert.match(tag, /width="\d+" height="\d+"/, `${file}: reserve image space before lazy loading`);
+      assert.equal(Number(tag.match(/width="(\d+)"/)[1]), width, `${file}: ${relative} width`);
+      assert.equal(Number(tag.match(/height="(\d+)"/)[1]), height, `${file}: ${relative} height`);
+      if (relative.includes('/rook-local-')) assert.deepEqual([width, height], [1440, 900], `${relative}: viewport capture`);
+    }
+  }
+});
+
+test('overview and every workflow guide show inline TUI captures alongside both browser UIs', () => {
+  const captures = {
+    'agent-assurance-overview': 'guides/rook-tui-get-started.png',
+    'agent-assurance-connect-and-explore-agents': 'guides/rook-tui-agent-picker.png',
+    'rook-profiles-and-hooks': 'guides/rook-tui-profile-picker.png',
+    'agent-assurance-scenarios': 'guides/rook-tui-scenarios.png',
+    'agent-assurance-run-tests': 'guides/rook-tui-run-progress.png',
+    'agent-assurance-results-and-evidence': 'guides/rook-tui-report.png',
+    'rook-web-ui': 'guides/rook-tui-local-ui.png',
+  };
+  for (const [slug, capture] of Object.entries(captures)) {
+    const doc = fs.readFileSync(path.join(root, 'docs', `${slug}.md`), 'utf8');
+    assert.ok(doc.includes(`images/rook/${capture}`), `${slug}: current TUI capture`);
+    assert.match(doc, /Launch `rook`/, `${slug}: explains how to enter the TUI`);
+    assert.match(doc, /rook-local-/);
+    assert.match(doc, /rook-web-/);
+    assert.doesNotMatch(doc, /<details>|View (?:the )?TUI/, `${slug}: no screenshot view selector`);
+  }
+  const run = fs.readFileSync(path.join(root, 'docs/agent-assurance-run-tests.md'), 'utf8');
+  const report = fs.readFileSync(path.join(root, 'docs/agent-assurance-results-and-evidence.md'), 'utf8');
+  assert.match(run, /rook-tui-run-plan\.png/);
+  assert.match(run, /not a fixed credit quote/);
+  assert.match(report, /not a help screen/);
+  assert.match(report, /not complete coverage/);
+});
+
+test('installation and quickstart lead into the interactive TUI with actual workflow checkpoints', () => {
+  const install = fs.readFileSync(path.join(root, 'docs/rook-installation.md'), 'utf8');
+  const quickstart = fs.readFileSync(path.join(root, 'docs/agent-assurance-quickstart.md'), 'utf8');
+  assert.match(install, /\{#start-the-interactive-tui\}/);
+  assert.match(install, /rook-tui-get-started\.png/);
+  assert.match(install, /NO_COLOR/);
+  assert.match(install, /arrow keys and Enter/);
+  assert.match(quickstart, /\*\*Rook 0\.1\.11\*\*/);
+  assert.match(quickstart, /one step at a time/);
+  assert.match(quickstart, /not a fixed credit quote/);
+  assert.match(quickstart, /not complete|four of the five discovered features were not tested/);
+  const stages = [
+    ['2. Open the TUI', ['get-started', 'explore-confirm']],
+    ['3. Generate and verify the profile', ['profile-authoring', 'profile-verified']],
+    ['4. Generate a small suite', ['generate-plan', 'generated-scenarios']],
+    ['5. Sync, then run', ['sync', 'run-plan', 'run-progress']],
+    ['6. Open the results', ['report']],
+  ];
+  for (const [heading, images] of stages) {
+    const start = quickstart.indexOf(`### ${heading}`);
+    assert.ok(start >= 0, `${heading}: heading exists`);
+    const end = quickstart.indexOf('\n### ', start + 1);
+    const section = quickstart.slice(start, end < 0 ? undefined : end);
+    for (const image of images) {
+      assert.ok(section.includes(`rook-tui-${image}.png`), `${heading}: ${image} alongside the step`);
+    }
+  }
+  const setupCode = [install, quickstart].flatMap(doc => [...doc.matchAll(/```(?:bash|powershell)\n([\s\S]*?)\n```/g)].map(m => m[1])).join('\n');
+  assert.doesNotMatch(setupCode, /\brook(?:\.cmd)? (?:login|explore|generate|run|report|profile)\b/, 'first-use workflow is not a headless sequence');
+  assert.doesNotMatch(quickstart, /<details>|View (?:the )?TUI/);
+});
+
+test('supporting workflow pages show real checkpoints with honest scope and permission explanations', () => {
+  const captures = {
+    'agent-assurance-connect-and-explore-agents': 'explore-confirm',
+    'rook-profiles-and-hooks': 'profile-verified',
+    'agent-assurance-scenarios': 'generate-plan',
+    'rook-features': 'profile-authoring',
+    'agent-assurance-mcp': 'mcp-list',
+    'rook-environment-and-secrets': 'env-values',
+    'rook-permissions-and-safety': 'profile-authoring',
+    'rook-workspace-files': 'sync',
+  };
+  for (const [slug, image] of Object.entries(captures)) {
+    const doc = fs.readFileSync(path.join(root, 'docs', `${slug}.md`), 'utf8');
+    assert.ok(doc.includes(`rook-tui-${image}.png`), `${slug}: actual checkpoint`);
+  }
+  const permissions = fs.readFileSync(path.join(root, 'docs/rook-permissions-and-safety.md'), 'utf8');
+  assert.match(permissions, /for this run without writing a disk grant/);
+  const env = fs.readFileSync(path.join(root, 'docs/rook-environment-and-secrets.md'), 'utf8');
+  assert.match(env, /DEMO_LABEL/);
+  assert.match(env, /prefix and suffix/);
+});
+
+test('CLI Reference documents the public baseline, interactive screenshots, and approved saved-run RCA', () => {
+  const doc = fs.readFileSync(path.join(root, 'docs/agent-assurance-command-reference.md'), 'utf8');
+  assert.match(doc, /public Rook 0\.1\.11 CLI/);
+  assert.match(doc, /Rook 0\.1\.11 interactive TUI/);
+  assert.match(doc, /They show command help, not completed paid operations/);
+  assert.match(doc, /\{#root-cause-analysis\}/);
+  assert.match(doc, /rook report <run-id> --rca/);
+  assert.match(doc, /approve the additional Rook credit use/);
+  assert.match(doc, /not a second RCA request/);
+  assert.match(doc, /Do not edit the agent or retry/);
+  assert.match(doc, /changed or unknown version can require fresh paid analysis/);
+  assert.match(doc, /without executing that suggestion/);
+  assert.match(doc, /--workspace/);
+  assert.match(doc, /--from/);
+  assert.match(doc, /rook doctor --session/);
+  assert.match(doc, /installation-changing command, not a read-only version check/);
+  assert.match(doc, /only stdio connections execute/);
+  assert.match(doc, /can emit text even when they accept/);
+  assert.doesNotMatch(doc, /rook-terminal-home\.png|View the (?:CLI|interactive).*screenshot|<details>/, 'screenshots appear inline without a view selector');
+  for (const name of 'ask guide help docs login auth whoami logout plan project explore agent profile generate scenarios status sync run runs report ui env mcp doctor update export'.split(' ')) {
+    assert.ok(doc.includes(`rook-command-${name}.png`), `${name}: interactive help screenshot`);
+  }
+  const exported = fs.readFileSync(path.join(root, 'static/docs/agent-assurance-command-reference.md'), 'utf8');
+  for (const [, code] of doc.matchAll(/^[ \t]*```(?:bash|text|powershell)\n([\s\S]*?)\n[ \t]*```/gm)) {
+    for (const line of code.trim().split('\n').filter(line => line.trim())) {
+      assert.ok(exported.includes(line.trim()), `Reference example survives Markdown export: ${line.trim()}`);
+    }
+  }
+});
+
+test('Troubleshooting covers current Windows, scenario, RCA, and support recovery paths', () => {
+  const doc = fs.readFileSync(path.join(root, 'docs/agent-assurance-troubleshooting.md'), 'utf8');
+  assert.match(doc, /public Rook 0\.1\.11/);
+  assert.match(doc, /rook\.cmd --version/);
+  assert.match(doc, /npm\.cmd prefix -g/);
+  assert.match(doc, /token_economy.*blocked if the profile does not report usage/);
+  assert.match(doc, /\{#rca-troubleshooting\}/);
+  assert.match(doc, /command-reference\/#root-cause-analysis/);
+  assert.match(doc, /identity is authenticated/);
+  assert.match(doc, /rook-reference-doctor\.png/);
+  assert.doesNotMatch(doc, /rook-terminal-(?:doctor|scenarios)\.png/);
+  assert.match(doc, /\{#support-report\}/);
+  assert.match(doc, /Export creates a local bundle; it does not upload it/);
+  assert.match(doc, /Do not change credentials/);
+  const exported = fs.readFileSync(path.join(root, 'static/docs/agent-assurance-troubleshooting.md'), 'utf8');
+  const powershell = doc.match(/```powershell\n[\s\S]*?\n```/)[0];
+  assert.ok(exported.includes(powershell), 'Windows diagnostic snippet is preserved');
+});
+
+test('Reference pages retain sidebar entries, valid links, and dimensioned screenshots for both UIs and the TUI', () => {
+  const sidebar = JSON.stringify(require('../sidebars.js').AgentAssuranceSidebar);
+  for (const slug of referencePages) {
+    const doc = fs.readFileSync(path.join(root, 'docs', `${slug}.md`), 'utf8');
+    const fm = yaml.load(doc.match(/^---\n([\s\S]*?)\n---/)[1]);
+    assert.equal(fm.id, slug);
+    assert.ok(sidebar.includes(`"${slug}"`), `${slug}: existing sidebar entry`);
+    assert.match(doc, /rook-local-/);
+    assert.match(doc, /rook-web-/);
+    assert.doesNotMatch(doc, /stage-rook\.lambdatestinternal/);
+    const ids = [...doc.matchAll(/\{#([^}]+)\}/g)].map(m => m[1]);
+    assert.equal(new Set(ids).size, ids.length, `${slug}: unique explicit anchors`);
+    for (const [, target] of doc.matchAll(/\]\(\/support\/docs\/([^/#)]+)\/?(?:#[^)]*)?\)/g)) {
+      assert.ok(fs.existsSync(path.join(root, 'docs', `${target}.md`)), `${slug}: ${target}`);
+    }
+    for (const [tag, rel] of doc.matchAll(/<img\b[^>]*src=\{require\('([^']+\.png)'\)[^>]*>/g)) {
+      const png = fs.readFileSync(path.resolve(root, 'docs', rel));
+      assert.equal(png.subarray(0, 8).toString('hex'), '89504e470d0a1a0a', `${rel}: valid PNG`);
+      assert.match(tag, /width="\d+" height="\d+"/, `${rel}: reserve space before loading`);
+      assert.equal(Number(tag.match(/width="(\d+)"/)[1]), png.readUInt32BE(16), rel);
+      assert.equal(Number(tag.match(/height="(\d+)"/)[1]), png.readUInt32BE(20), rel);
+    }
   }
 });
 
@@ -72,7 +372,9 @@ test('Bash snippets parse and Markdown exports preserve their code fences', () =
     for (const [block, language, content] of doc.matchAll(/```([\w]+)\n([\s\S]*?)\n```/g)) {
       assert.ok(exported.includes(block), `${slug}: ${language} block preserved in Markdown export`);
       if (language === 'bash') {
-        const result = spawnSync('/bin/bash', ['-n'], {input: content, encoding: 'utf8'});
+        // The common CLI reference uses angle-bracket IDs, not literal redirections.
+        const syntaxInput = content.replace(/<(?:project|agent)-id>/g, 'REPLACE_ID');
+        const result = spawnSync('/bin/bash', ['-n'], {input: syntaxInput, encoding: 'utf8'});
         assert.equal(result.status, 0, `${slug}: ${result.stderr}`);
       }
     }
@@ -123,7 +425,7 @@ case "$1" in
   -C)
     test "$3" = checkout
     test "$4" = --detach
-    test "$5" = f199cb99c589b565e48a3a29781475daee907533
+    test "$5" = 439480f2ef3084fcbc0997a59a70f5f8adcd4ad8
     ;;
   *) exit 99 ;;
 esac

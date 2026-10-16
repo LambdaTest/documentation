@@ -115,6 +115,8 @@ Screen readers are essential for making digital environments accessible to visua
 
 These tools allow developers and testers to evaluate how well their applications or websites perform for visually impaired users, ensuring accessibility compliance and usability.
 
+To run **TalkBack** or **VoiceOver** inside your **Appium** tests on real devices, generate a Screen Reader Report automatically, and assert on spoken output from your script, see [Screen Reader Automation](/support/docs/accessibility-screen-reader-automation/).
+
 ## Onboarding: pick a screen reader path
 
 | If you test on… | Start here |
@@ -122,6 +124,7 @@ These tools allow developers and testers to evaluate how well their applications
 | Windows desktop web | [NVDA on Windows](/support/docs/accessibility-nvda-windows/) (free, common) or [JAWS on Windows](/support/docs/accessibility-jaws-windows/) (enterprise) |
 | macOS desktop web | [VoiceOver on macOS](/support/docs/accessibility-voiceover-macos/) |
 | Android app or web | [TalkBack on Android](/support/docs/accessibility-talkback-android/) (often paired with [App Scanner](/support/docs/accessibility-app-scanner/)) |
+| Android or iOS app, inside Appium tests | [Screen Reader Automation](/support/docs/accessibility-screen-reader-automation/) (TalkBack and VoiceOver on real devices, with an auto-generated Screen Reader Report and executor hooks for assertions) |
 
 **Suggested order of operations:** run an automated or DevTools scan first, export the top issues, then walk the same URLs with a screen reader to confirm real-world impact before filing engineering bugs.
 
@@ -133,3 +136,4 @@ These tools allow developers and testers to evaluate how well their applications
 
 - [Accessibility Testing (Overview)](/support/docs/accessibility-testing/)
 - [Choosing the Right Accessibility Tool](/support/docs/accessibility-choosing-the-right-tool/)
+- [Screen Reader Automation (Overview)](/support/docs/accessibility-screen-reader-automation/)

@@ -45,8 +45,10 @@ function applyThemeChoice(choice) {
 const NAV_LINKS = [
   { to: '/support/docs/', label: 'Home', icon: HomeIcon },
   { to: '/support/docs/agent-skills/', label: 'Skills', icon: SkillsIcon },
-  { to: '/support/api-doc/', label: 'API Reference', icon: ApiIcon },
-  { to: '/support/faq/', label: 'FAQ', icon: FaqIcon },
+  { to: '/support/docs/testmu-mcp-server/', label: 'MCP Server', icon: McpIcon },
+  { to: '/support/api-doc/', label: 'APIs Reference', icon: ApiIcon },
+  { to: '/support/faq/', label: 'FAQs', icon: FaqIcon },
+  { to: 'https://www.testmuai.com/pricing/', label: 'Pricing', icon: PricingIcon },
   { to: 'https://changelog.testmuai.com/', label: 'Changelog', icon: ChangelogIcon, external: true },
 ];
 
@@ -83,6 +85,26 @@ function SkillsIcon() {
     <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
       <path d="M12 2l2.09 5.26L19.5 9l-5.41 1.74L12 16l-2.09-5.26L4.5 9l5.41-1.74L12 2z" />
       <path d="M18.5 14l.95 2.55L22 17.5l-2.55.95L18.5 21l-.95-2.55L15 17.5l2.55-.95L18.5 14z" />
+    </svg>
+  );
+}
+
+function McpIcon() {
+  return (
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <rect x="2" y="2" width="20" height="8" rx="2" />
+      <rect x="2" y="14" width="20" height="8" rx="2" />
+      <line x1="6" y1="6" x2="6.01" y2="6" />
+      <line x1="6" y1="18" x2="6.01" y2="18" />
+    </svg>
+  );
+}
+
+function PricingIcon() {
+  return (
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z" />
+      <line x1="7" y1="7" x2="7.01" y2="7" />
     </svg>
   );
 }
@@ -326,7 +348,7 @@ export default function Navbar() {
         <div className={styles.row1Right}>
           <a href="https://github.com/LambdaTest" target="_blank" rel="noopener noreferrer" className={styles.iconLink}>
             <GithubIcon />
-            <span>Github</span>
+            <span>GitHub</span>
           </a>
           <a href="/login/" className={styles.loginLink} onClick={CookieTrackingLogin}>Login</a>
           <a id="signbtn" href="/register/" className={styles.getStartedBtn} onClick={CookieTrackingSignup}>
@@ -376,7 +398,7 @@ export default function Navbar() {
             {dotsOpen && (
               <div className={styles.dotsDropdown}>
                 <a href="https://github.com/LambdaTest" target="_blank" rel="noopener noreferrer" className={styles.dotsItem}>
-                  <GithubIcon /><span>Github</span>
+                  <GithubIcon /><span>GitHub</span>
                 </a>
                 <a href="/login/" className={styles.dotsItem}>Login</a>
                 <a href="/register/" className={`${styles.dotsItem} ${styles.dotsItemCta}`}>Get Started Free</a>
@@ -479,7 +501,7 @@ export default function Navbar() {
                 onClick={() => setMobileMenuOpen(false)}
               >
                 <GithubIcon />
-                <span>Github</span>
+                <span>GitHub</span>
               </a>
               <a
                 href="/login/"

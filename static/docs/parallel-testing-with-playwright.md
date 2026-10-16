@@ -18,7 +18,7 @@
 
 # Parallel Testing With Playwright
 
-TestMu AI allows you to perform parallel testing with Playwright across real browsers and OS to automate your several test cases simultaneously. You can run one test case across various browsers, or you can run multiple test case scenarios in the same browser with different browser versions.
+TestMu AI allows you to perform parallel testing with Playwright across real browsers and OS to run your End-to-End (E2E) testing at scale and automate several test cases simultaneously. You can run one test case across various browsers, or you can run multiple test case scenarios in the same browser with different browser versions.
 
 Shown below are the steps on running parallel tests with Playwright on the TestMu AI platform.
 
@@ -126,10 +126,4 @@ capabilities.forEach(async (capability) => {
 node playwright-parallel.js
 ```
 
-## View your Playwright test results
-
 The TestMu AI Automation Dashboard is where you can see the results of your Playwright tests after running them on the TestMu AI platform.
-
-The below screenshot of TestMu AI Automation Dashboard shows the Playwright build on the left and the build sessions associated with the selected build on the right.
-
-On clicking the session name of the respective test, you can view the details of Playwright test session that you just executed. For example, the below screenshot shows a test execution details of Playwright test like Test Name, Test ID, selected configurations, test logs, basic info, input config, and test session video.

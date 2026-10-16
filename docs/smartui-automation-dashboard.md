@@ -14,7 +14,7 @@ keywords:
   - Web Automation
   - App Automation
 url: https://www.testmuai.com/support/docs/smartui-automation-dashboard/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: smartui-automation-dashboard/
 canonical: https://www.testmuai.com/support/docs/smartui-automation-dashboard/
 ---

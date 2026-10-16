@@ -121,81 +121,70 @@ Click the `Generate New Code` button to go to code generation page where you can
 
 ## Supported Frameworks and Languages
 
-The table below shows the frameworks and languages KaneAI can generate code in, and the experience each is available under.
+The table below shows the frameworks and languages KaneAI can generate code in, and how each is available in Classic and New Experience.
 
-<table style={{width: '100%', borderCollapse: 'collapse', display: 'table', tableLayout: 'fixed'}}>
+<div style={{overflowX: 'auto'}}>
+<table style={{width: '100%', minWidth: '640px', borderCollapse: 'collapse', display: 'table', tableLayout: 'fixed'}}>
   <thead>
     <tr>
-      <th style={{textAlign: 'left', width: '16%'}}>Framework</th>
-      <th style={{textAlign: 'left', width: '13%'}}>Language</th>
-      <th style={{textAlign: 'left', width: '33%'}}>Availability</th>
-      <th style={{textAlign: 'center', width: '19%', backgroundColor: 'var(--ifm-color-emphasis-100)'}}>Classic</th>
-      <th style={{textAlign: 'center', width: '19%', backgroundColor: 'var(--ifm-color-emphasis-100)'}}>New Experience</th>
+      <th style={{textAlign: 'left', width: '18%'}}>Framework</th>
+      <th style={{textAlign: 'left', width: '16%'}}>Language</th>
+      <th style={{textAlign: 'center', width: '33%', backgroundColor: 'var(--ifm-color-emphasis-100)'}}>Classic</th>
+      <th style={{textAlign: 'center', width: '33%', backgroundColor: 'var(--ifm-color-emphasis-100)'}}>New Experience</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td rowSpan={2}><strong>Selenium</strong></td>
       <td>Python</td>
-      <td>Generally available (default)</td>
-      <td style={{textAlign: 'center'}}>&#10003;</td>
-      <td style={{textAlign: 'center'}}>&#10007;</td>
+      <td style={{textAlign: 'center'}}>Available (default)</td>
+      <td style={{textAlign: 'center', opacity: 0.55}}>Not available</td>
     </tr>
     <tr>
       <td>Java</td>
-      <td>Available on request <sup style={{color: 'var(--ifm-color-primary)'}}>&#42;</sup></td>
-      <td style={{textAlign: 'center'}}>&#10003;</td>
-      <td style={{textAlign: 'center'}}>&#10007;</td>
+      <td style={{textAlign: 'center'}}>Available on request <sup style={{color: 'var(--ifm-color-primary)'}}>&#42;</sup></td>
+      <td style={{textAlign: 'center', opacity: 0.55}}>Not available</td>
     </tr>
     <tr>
       <td rowSpan={3}><strong>Playwright</strong></td>
       <td>Python</td>
-      <td>Available on request <sup style={{color: 'var(--ifm-color-primary)'}}>&#42;</sup></td>
-      <td style={{textAlign: 'center'}}>&#10003;</td>
-      <td style={{textAlign: 'center'}}>&#10003;</td>
+      <td style={{textAlign: 'center'}}>Available on request <sup style={{color: 'var(--ifm-color-primary)'}}>&#42;</sup></td>
+      <td style={{textAlign: 'center'}}>Available</td>
     </tr>
     <tr>
       <td>C#</td>
-      <td>Available on request <sup style={{color: 'var(--ifm-color-primary)'}}>&#42;</sup></td>
-      <td style={{textAlign: 'center'}}>&#10003;</td>
-      <td style={{textAlign: 'center'}}>&#10007;</td>
+      <td style={{textAlign: 'center'}}>Available on request <sup style={{color: 'var(--ifm-color-primary)'}}>&#42;</sup></td>
+      <td style={{textAlign: 'center', opacity: 0.55}}>Not available</td>
     </tr>
     <tr>
       <td>JavaScript</td>
-      <td>Available on request <sup style={{color: 'var(--ifm-color-primary)'}}>&#42;</sup></td>
-      <td style={{textAlign: 'center'}}>&#10007;</td>
-      <td style={{textAlign: 'center'}}>&#10003;</td>
+      <td style={{textAlign: 'center'}}>Available on request <sup style={{color: 'var(--ifm-color-primary)'}}>&#42;</sup></td>
+      <td style={{textAlign: 'center'}}>Available</td>
     </tr>
     <tr>
       <td><strong>Cypress</strong></td>
       <td>JavaScript</td>
-      <td>Coming soon</td>
-      <td style={{textAlign: 'center'}}>&#10007;</td>
-      <td style={{textAlign: 'center'}}>&#10007;</td>
+      <td colSpan={2} style={{textAlign: 'center'}}>Coming soon</td>
     </tr>
     <tr>
       <td><strong>WebdriverIO</strong></td>
       <td>JavaScript</td>
-      <td>Coming soon</td>
-      <td style={{textAlign: 'center'}}>&#10007;</td>
-      <td style={{textAlign: 'center'}}>&#10007;</td>
+      <td colSpan={2} style={{textAlign: 'center'}}>Coming soon</td>
     </tr>
     <tr>
       <td><strong>Appium</strong></td>
       <td>Python</td>
-      <td>Generally available (default)</td>
-      <td style={{textAlign: 'center'}}>&#10003;</td>
-      <td style={{textAlign: 'center'}}>&#10007;</td>
+      <td style={{textAlign: 'center'}}>Available (default)</td>
+      <td style={{textAlign: 'center'}}>Coming soon</td>
     </tr>
   </tbody>
 </table>
+</div>
 
 <br/>
 
-**&#10003;** Supported &nbsp;&nbsp; **&#10007;** Not available. New Experience currently covers Desktop Web only. Mobile is supported in Classic.
-
 :::note
-**Available on request.** Please reach out to Support to enable it. These features are partially rolled out and will soon be generally available for all users.
+**Available on request.** Please reach out to Support to enable it.
 :::
 
 ## Understanding the Code Tab

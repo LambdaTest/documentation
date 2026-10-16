@@ -10,10 +10,13 @@ keywords:
  - Test Cases trends
  - Test Case Run Status
  - Milestone Trends
+ - Milestone drill down
+ - Test run folder hierarchy
  - Execution Progress
  - Test Execution Burndown
  - Defects by Severity
  - Tester Assignment
+ - All time date range
 
 url: https://www.testmuai.com/support/docs/analytics-modules-test-manager-widgets/
 site_name: TestMu AI
@@ -102,7 +105,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         "https://www.youtube.com/@TestMuAI"
       ]
     },
-    "dateModified": "2026-08-07T15:21:02+05:30"
+    "dateModified": "2026-10-15T12:00:00+05:30"
   }) }}
 />
 <BrandName /> Test Manager Dashboard widgets provide comprehensive insights into your test automation or manual efforts. These widgets help you optimize your testing efforts by providing detailed insights into your test execution, test case insights, and more.
@@ -120,6 +123,30 @@ Every widget supports configurable filters. Click the **three-dot menu** on any 
 
 :::tip Drill Down into Data
 All widgets support drill-down. Click on any data point in a chart (such as a segment in a pie chart, a bar in a bar chart, or a status value) to view the underlying list of associated records (e.g., test cases, test runs, or issues) that make up that data point.
+:::
+
+## Viewing All Time
+
+A dashboard made up only of Test Manager widgets offers an extra **All time** option in the dashboard date range picker. It starts from the first test case created in your organization, so you can see your whole test management history in one view.
+
+<img loading="lazy" src={require('../assets/images/analytics/tms-dashboard-all-time-range.webp').default} alt="Dashboard date range picker with the All time option, on a dashboard of Test Manager widgets" width="900" height="516" className="doc_img"/>
+
+### How it works?
+
+* **All time** is listed only when every widget on the dashboard is a Test Manager widget.
+* For ranges of a year or more, including All time, the interval can be set to **Weekly** or **Monthly** only. **Monthly** is selected by default.
+* There is no previous-period comparison on All time, because there is no earlier period to compare against.
+* Shared dashboard links and PDF exports use All time as well.
+
+### Adding other widgets later
+
+If a widget from another module is added to the dashboard, the dashboard follows the date ranges available to that module:
+
+* A saved **All time** range, or a long preset that reaches further back than your data retention period, switches to **Last 30 Days** and a notice tells you the range was changed.
+* A pinned date range that was set on a Test Manager-only dashboard and starts before your data retention period is not applied, and the dashboard falls back to a supported range. The pinned range itself is kept.
+
+:::note
+Remove the non-Test Manager widgets from the dashboard to make **All time** available again.
 :::
 
 ## Test Cases Summary
@@ -144,20 +171,41 @@ The Test Cases Trend widget tracks the number of test cases created over a perio
 ### How it works?
 
 * Test cases created in the selected period are grouped into time buckets and stacked into **Automated** and **Manual**, using the same **Automation Status** classification as the Test Cases Summary widget above.
-* Click the **three-dot menu** on the widget and select **Configure Widget**, then use the **View** group to switch between three presentations:
+* Click the **three-dot menu** on the widget, select **Configure Widget**, and use **View** under **Display Options** to switch between three presentations:
   * **Stacked Bar** (default) - one bar per interval, segmented by Automation Status.
   * **Stacked Area** - the same series drawn as areas, to emphasise the overall shape.
-  * **Table** - a per-project breakdown, with the counts sortable by column.
-* A dashed line plots the equivalent total for the preceding period of the same length, so you can compare the current window against the one before it. The legend shows the dates that period covers. The line appears only when the preceding period contains at least two complete intervals, so a short date range viewed at a coarse interval - for example a single month of data viewed monthly - may not have enough history to draw it.
+  * **Table** - a breakdown by project or by test case creator, with the counts sortable by column. See [Table view](#table-view) below.
+* Click a bar segment to drill down into the test cases behind it. Only the segment you click is listed - **Automated** or **Manual** - not the whole bar.
+* A dashed line plots the equivalent total for the preceding period of the same length, so you can compare the current window against the one before it. The legend shows the dates that period covers. The line appears only when the preceding period contains at least two complete intervals, so a short date range viewed at a coarse interval - for example a single month of data viewed monthly - may not have enough history to draw it. The line is not shown when the dashboard is set to **All time**.
 * Change the interval (Daily, Weekly, Monthly) to re-bucket the trend.
 
-In the **Table** view, each row is a project, with **Automated**, **Manual** and **All** counts. Sort by any of the count columns to rank projects, and select a count to drill down into the test cases behind it. The table lists up to 50 projects, ordered by the number of test cases created - if your organization has more, the widget states how many of the total are being shown.
+### Table view
+
+With **View** set to **Table**, two more settings appear under **Display Options**: **Table rows** chooses what each row represents, and **Table columns** chooses how the counts are split.
+
+**Table rows**
+
+* **Project** (default) - one row per project.
+* **Created by** - one row per user who created test cases, labelled with the user's display name. If two users share a display name, their username is added in brackets to tell them apart. A creator who cannot be identified is shown as `User #<id>`.
+
+**Table columns**
+
+* **Total** (default) - **Automated**, **Manual** and **All** counts for each row across the whole date range.
+* **By period** - one column per day, week or month, following the dashboard interval (Daily, Weekly or Monthly). Weekly columns are labelled with the week number and its start date, for example `W41 · Oct 05`. Each period shows **Automated** and **Manual** counts, a **Total** block sums each row across the range, and a **Total** row at the bottom sums each column.
+
+As in the chart, **Manual** counts every test case whose Automation Status is not *Automated*.
+
+Sort by the **Automated**, **Manual** or **All** column (in **By period**, the ones in the **Total** block) to rank rows, and select any count to drill down into exactly the test cases behind it - for that row, and in **By period**, for that period. The table lists up to 50 rows, ordered by the number of test cases created - if there are more, the widget states how many of the total are being shown.
 
 <img loading="lazy" src={require('../assets/images/analytics/tms-test-cases-trend-table-view.webp').default} alt="Test Cases Trend widget in Table view, broken down per project" width="898" height="626" className="doc_img"/>
 
+<img loading="lazy" src={require('../assets/images/analytics/tms-test-cases-trend-created-by-table.webp').default} alt="Test Cases Trend tables with Table rows set to Created by and to Project" width="900" height="201" className="doc_img"/>
+
+<img loading="lazy" src={require('../assets/images/analytics/tms-test-cases-trend-by-period-table.webp').default} alt="Test Cases Trend table with Table columns set to By period at a Daily interval" width="900" height="200" className="doc_img"/>
+
 ### Value Proposition
 
-This widget helps you track how your test suite evolves over time, identify periods of high or low activity, and see how much of your growth is automated versus manual. The table view turns the same data into a per-project comparison, so you can see which projects are contributing coverage and which are lagging.
+This widget helps you track how your test suite evolves over time, identify periods of high or low activity, and see how much of your growth is automated versus manual. The table view turns the same data into a per-project or per-creator comparison, so you can see which projects or team members are contributing coverage, and the By period columns show when that coverage was added.
 
 ## Test Runs Summary
 
@@ -174,17 +222,66 @@ This widget gives you a high-level view of test run health across your project, 
 
 ## Milestone Trends
 
-The Milestone Trends widget displays a stacked bar chart of milestones, with each bar broken down by test instance statuses from the associated test runs.
+The Milestone Trends widget displays a stacked bar chart of milestones, with each bar broken down by test instance statuses from the associated test runs. You can drill into a milestone to see the results of individual test instances, or step down through your test run folders to find exactly which area of your suite is failing.
+
+<img loading="lazy" src={require('../assets/images/analytics/tms-milestone-trends-bars.webp').default} alt="Milestone Trends widget showing one stacked bar per milestone" width="900" height="392" className="doc_img"/>
 
 ### How it works?
 
 * Each bar represents a milestone, with stacked segments showing the count of test instances by status.
 * Supported statuses include **Not Started**, **Passed**, **Failed**, **Skipped**, as well as any **custom statuses** created for your manual test runs.
 * Filter the data by date range to analyze milestone performance over specific time periods.
+* Click a milestone bar to drill in. What opens depends on the **Milestone Drill Down** setting described below.
+
+:::note
+A test run that belongs to more than one milestone is counted in each of those milestones, so the milestone bars are not expected to add up to a single project total.
+:::
+
+### Choosing what a milestone opens
+
+Open the **three-dot menu** on the widget, select **Configure Widget**, and use **Display Options** to set **Milestone Drill Down**. The choice is saved per widget, so two Milestone Trends widgets on the same dashboard can behave differently.
+
+<img loading="lazy" src={require('../assets/images/analytics/tms-milestone-trends-widget-menu.webp').default} alt="Opening Configure Widget from the three-dot menu on the Milestone Trends widget" width="900" height="389" className="doc_img"/>
+
+<img loading="lazy" src={require('../assets/images/analytics/tms-milestone-trends-display-options.webp').default} alt="Milestone Drill Down setting under Display Options in Configure Widget" width="900" height="265" className="doc_img"/>
+
+* **Instance List** (default) - clicking a milestone opens the list of test instances for that milestone.
+* **Test Run Folder Hierarchy** - clicking a milestone opens its top-level test run folders as bars, which you can keep drilling into.
+
+### Drilling through test run folders
+
+With **Test Run Folder Hierarchy** selected, each click takes you one level deeper into your folder structure:
+
+* Every bar is a folder, and its value counts the test instances in that folder **and in all of its subfolders**.
+* A folder that has no subfolders is the end of the trail. Clicking it opens the test instance list for that folder.
+* The breadcrumb above the chart shows where you are, for example **All milestones › Regression › Checkout**. Select any entry in the trail to jump straight back to that level.
+* The level indicator on the right of the breadcrumb shows how deep you are and how much further the deepest branch goes, for example **Level 2 of 4 · folders**.
+
+<img loading="lazy" src={require('../assets/images/analytics/tms-milestone-trends-folder-level.webp').default} alt="Milestone Trends widget drilled into a test run folder, with the breadcrumb and level indicator" width="900" height="387" className="doc_img"/>
+
+Individual test runs are not shown as bars. Drilling stops at the deepest folder, and the instance list opens from there.
+
+<img loading="lazy" src={require('../assets/images/analytics/tms-milestone-trends-instance-list.webp').default} alt="Test instance list opened from the deepest test run folder" width="900" height="232" className="doc_img"/>
+
+:::tip
+Prefer to see instance results straight away? Switch **Milestone Drill Down** back to **Instance List**. This is also how you reach test runs that sit directly inside a folder that has subfolders of its own.
+:::
+
+### Filtering by test run folder
+
+The **Test Run Folder Name** filter narrows the widget to one part of your folder structure. It is available in **Configure Widget**, and in the dashboard **Filters** drawer on any dashboard that contains a Milestone Trends widget.
+
+* Selecting a folder matches that folder **and everything beneath it**, so you can scope the whole widget to a single area of your suite.
+* If the same folder name is used in more than one place, all of them are matched. This lets you select a name such as `login` once and review every folder that uses it together.
+
+
+<img loading="lazy" src={require('../assets/images/analytics/tms-milestone-trends-folder-filter.webp').default} alt="Test Run Folder Name filter in the Configure Widget drawer" width="900" height="381" className="doc_img"/>
+
+This mirrors the **Test Case Folder Name** filter used elsewhere in Test Manager widgets.
 
 ### Value Proposition
 
-This widget helps you quickly assess milestone health, identify milestones with high failure rates, and monitor release readiness. By tracking status trends across milestones, you can spot regressions early and make data-driven decisions about testing effort.
+This widget helps you quickly assess milestone health, identify milestones with high failure rates, and monitor release readiness. By tracking status trends across milestones, you can spot regressions early and make data-driven decisions about testing effort. Drilling through your test run folders narrows a failing milestone down to the specific area of your suite responsible, without leaving the dashboard.
 
 ## Issue Summary
 

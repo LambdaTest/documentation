@@ -18,8 +18,6 @@ caps = {
 }
 ```
 
-To utilize the **networkProfile** capability, ensure that you include `network: True` in the capabilities.
-
 ### During Test Execution
 
 - **LambdaHook:** Dynamically alter the network profile within the test session using the following LambdaHook:
@@ -27,6 +25,10 @@ To utilize the **networkProfile** capability, ensure that you include `network: 
 ```python
 driver.execute_script("updateNetworkProfile=3g-umts-good")
 ```
+
+- To use the **updateNetworkProfile** hook, you must enable the **networkProfile** capability when creating the session. Without this capability, calls to **updateNetworkProfile** are not available.
+
+- If you do not want to apply network throttling at session start, set `networkProfile: default` in capabilities. You can then use **updateNetworkProfile** hook later in the session to apply or change the network profile.
 
 ### Supported Network Profiles
 

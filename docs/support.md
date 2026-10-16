@@ -245,11 +245,20 @@ import NewTag from '../src/component/newTag';
       </div>
     </div>
     <div className="home_inners_box">
-       <h2 className='homeMain_h2'><RealtimeLightIcon className="home_icons home_light_icon" role="presentation"/> <RealtimeDarkIcon className="home_icons home_dark_icon" role="presentation"/>Agent Assurance Platform &nbsp; <NewTag  value="BETA" /></h2>
+       <h2 className='homeMain_h2'><RealtimeLightIcon className="home_icons home_light_icon" role="presentation"/> <RealtimeDarkIcon className="home_icons home_dark_icon" role="presentation"/>Agent Assurance &nbsp; <NewTag  value="BETA" /></h2>
       <div className="home_inners">
-        <a href="/support/docs/getting-started-with-agent-testing-platform/" ><p className="p_home_inners">Conversational Agent Testing</p></a>
-        <a href="/support/docs/agent-assurance-overview/"><p className="p_home_inners">Autonomous Agent Testing</p></a>
+        <a href="/support/docs/agent-assurance-overview/"><p className="p_home_inners">Overview</p></a>
+        <a href="/support/docs/agent-assurance-quickstart/"><p className="p_home_inners">Quickstart</p></a>
+        <a href="/support/docs/rook-coding-agents/"><p className="p_home_inners">Coding Agents &amp; Skills</p></a>
         <a href="/support/docs/rook-architecture/"><p className="p_home_inners">Rook Architecture</p></a>
+      </div>
+    </div>
+    <div className="home_inners_box">
+       <h2 className='homeMain_h2'><RealtimeLightIcon className="home_icons home_light_icon" role="presentation"/> <RealtimeDarkIcon className="home_icons home_dark_icon" role="presentation"/>Agent Testing</h2>
+      <div className="home_inners">
+        <a href="/support/docs/getting-started-with-agent-testing-platform/" ><p className="p_home_inners">Overview</p></a>
+        <a href="/support/docs/chat-agent/"><p className="p_home_inners">Supported Agent Types</p></a>
+        <a href="/support/docs/testing-your-first-ai-agent/"><p className="p_home_inners">Test Your First Agent</p></a>
         <a href="/support/docs/agent-testing-platform-faqs/"><p className="p_home_inners">FAQs</p></a>
       </div>
     </div>

@@ -60,7 +60,17 @@ executeScript(\"lambda-status=passed\");\n\n// Mark test as failed\n$driver->exe
 
 # Changing Individual Test Details
 
-You can modify individual test details from your automation test build while running Selenium tests on TestMu AI. This guide covers marking test status and renaming tests during execution.
+You can modify individual test details on TestMu AI, either from the Automation Dashboard after a run or programmatically during execution. This guide covers editing a test from the dashboard, marking test status, and renaming tests.
+
+## Edit Test Details from the Dashboard
+
+Rename a test, change its status, or add a remark after a run, directly from the Automation Dashboard.
+
+1. Open the test's detail page, click the **…** (options) menu in the top-right of the test summary, and select **Edit Test**.
+
+2. In the **Edit Test** dialog, update the **Name**, **Status**, or **Remark**, then click **Save Changes**.
+
+To set the status or name programmatically during the run instead, use the hooks below.
 
 ## Mark Test Status as Pass or Fail
 

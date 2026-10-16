@@ -2,6 +2,7 @@
 id: credits-management
 title: Credits Usage & Management in TestMu AI
 hide_title: false
+toc_max_heading_level: 2
 sidebar_label: Credits Management
 description: Guide for usage of credits for AI features in TestMu AI
 keywords:
@@ -414,7 +415,7 @@ The **duplicate scan** in Test Manager finds test cases that already exist in yo
 
 | What draws credits | Rate |
 |--------------------|------|
-| **Step authoring / editing** (natural‑language step generated or edited) | **\~1.5–2.5 credits / step** |
+| **Step authoring / editing** (steps created or edited using natural language or manual interaction) | **\~1.5–2.5 credits / step** |
 | **KaneAI Web Cloud** (remote browser time) | **0.17 credits / min** |
 | **KaneAI Mobile Cloud** (real‑device time) | **10 / 8 / 6 / 4 credits / min**, depending on the **device category** |
 | **Vision validation during execution** | **\~1.5–2.5 credits / step** |
@@ -453,7 +454,7 @@ Users with the **Admin** role in your <BrandName /> organization.
 
 **Q: Do unused credits expire?**
 
-Each batch of credits expires on its own expiry date, shown against the batch under **Credits by Type**. Plan credits expire at the end of the period they cover and do not roll over. Purchased packs and complimentary credits are both valid for one year, measured from the date of purchase and the date of the grant. A batch issued without an expiry date never expires.
+Each batch of credits expires on its own expiry date, shown against the batch under **Credits by Type**. Subscription (plan) credits renew every month, so they expire at the end of the period they cover and do not roll over, and a fresh grant arrives for the next month. Purchased and complimentary credits both expire after one year, measured from the date of purchase and the date of the grant. A batch issued without an expiry date never expires.
 
 **Q: Why were credits refunded after generation?**
 

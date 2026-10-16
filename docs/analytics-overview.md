@@ -179,7 +179,7 @@ Insights effectively allows these managers to track and improve the tests at one
       <p>Gain detailed insights for ensuring optimal performance and resource utilization for your dedicated devices.</p>
     </div>
   </a>
-  <a href="/support/docs/insights-private-real-devices/">
+  <a href="/support/docs/insights-usage-report/">
     <div className="support_inners">
       <h3>Usage Report &nbsp; <NewTag value="BETA" bgColor="#ffec02" color="#000" /></h3>
       <p>Get detailed insights into your product usage and optimize your testing efforts.</p>

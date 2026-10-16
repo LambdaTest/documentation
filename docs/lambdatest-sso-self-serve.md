@@ -139,9 +139,9 @@ Once configured, click on continue
 * Sign In URL (Enter the sign-in URL of your Identity Provider.)
 * X509 Certificate (Upload the base64 encoded X509 certificate of your Identity Provider.)
 
-<h4>Create Connection with Metadata URL </h4>
+<h3>Create Connection with Metadata URL </h3>
 <img loading="lazy" src={require('../assets/images/sso-self-serve/finalize-sso-metadata.png').default} alt="sso-self serve" width="945" height="542" className="doc_img"/>
-<h4>Create Connection without Metadata URL </h4>
+<h3>Create Connection without Metadata URL </h3>
 <img loading="lazy" src={require('../assets/images/sso-self-serve/finalize-without-metadata.png').default} alt="sso-self serve" width="945" height="542" className="doc_img"/>
 
 7. Once the connection is created, you will be redirected to the SSO settings page. From here you can <a href="/support/docs/testmu-sso-manage-connection/">Manage SSO Connection</a>.

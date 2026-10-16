@@ -41,7 +41,7 @@ Layout testing is a specialized approach to visual testing that focuses on verif
 
 The example below demonstrates localisation testing, one of the major use cases of layout testing, where a webpage is tested across languages and locales.
 
-### Why Layout Testing Matters
+## Why Layout Testing Matters
 
 1. **Structural Consistency**: Ensures that UI elements maintain their intended positions and relationships, regardless of content changes or style updates.
 
@@ -54,7 +54,7 @@ The example below demonstrates localisation testing, one of the major use cases 
 
 3. **Design System Compliance**: Helps maintain consistency with your design system by verifying that components follow established layout patterns.
 
-# What Layout Comparison Ignores
+## What Layout Comparison Ignores
 
 When using layout comparison, the following aspects are ignored:
 
@@ -75,7 +75,7 @@ In the example below, you can see the layout differences between the baseline an
 
 SmartUI's layout comparison feature allows you to focus specifically on layout differences while ignoring content changes, giving you more precise control over your visual testing process.
 
-# Layout Comparison in SmartUI SDK
+## Layout Comparison in SmartUI SDK
 
 ## Prerequisites
 

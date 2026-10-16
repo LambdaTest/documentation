@@ -285,7 +285,7 @@ If you’re a HyperExecute version 0.2 YAML user, you can easily import your exi
 <!-- #### 1. Pop-Up on First Upload:
   When you upload a project with YAML files, a **pop-up will automatically appear listing the existing YAMLs** in your project. Select a YAML file, and the app will import its settings for run config in the GUI.
 
-#### 2. Option to Import After Project Creation: -->
+### 2. Option to Import After Project Creation: -->
 Once your project is set up and you want to import a configuration using an existing YAML file :
   - Go to the Configuration Listing page.
   - Click on **"Import Config.”**

@@ -1,23 +1,23 @@
-# ReportPortal.io Integration With TestMu AI For Cypress
+# Report Portal IO Integration for Cypress on TestMu AI
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
-This article will guide you on how to integrate the **TestMu AI** platform with **ReportPortal.io** platform for running your **Cypress** automation tests. Before you can get started, make sure you have an account on [ReportPortal.io](http://reportportal.io/).
+This article guides you on how to integrate the **TestMu AI** platform with the **ReportPortal.io** platform for running your **Cypress** automation tests. Before you get started, make sure you have an account on [ReportPortal.io](http://reportportal.io/).
 
-> By default, the TestMu AI **Cypress-Multi-Reporter** mechanism generates **mochaawesome**. To override it with some other reporting options (report portal in this case), you have to create a different file to define the reporting configuration.
+By default, the **TestMu AI** Cypress-Multi-Reporter mechanism generates **mochawesome**. To override it with another reporting option (ReportPortal in this case), create a separate file to define the reporting configuration and add the ReportPortal agent dependency.
 
 ## Steps To Integrate
 
-- Navigate to [ReportPortal.io](http://reportportal.io/) and login into your account. Then open your **Report Portal IO Profile**.
+1. Navigate to [ReportPortal.io](http://reportportal.io/) and log in to your account. Then open your **Report Portal IO Profile**.
 
-- Copy the Report Portal Credentials
+2. Copy the ReportPortal credentials shown on your profile page.
 
-- Open your Cypress project and create a new file for defining report portal configuration/credentials
+3. Open your Cypress project and create a new file for defining the ReportPortal configuration and credentials.
 
-- Define the file name in the "`reporter_config_file`" capability of `lambdatest-config.json` file as mentioned in the below screenshot
+4. Define the file name in the `reporter_config_file` capability of the `lambdatest-config.json` file, as shown in the screenshot below.
 
-- Define the **reportportal.io** dependency (`@reportportal/agent-js-cypress`) in your **lambdatest-config.json** or **package.json** file
+5. Define the **ReportPortal.io** dependency (`@reportportal/agent-js-cypress`) in your `lambdatest-config.json` or `package.json` file.
 
-- Integration is now done, open the Dashboard to see the results.
+6. The integration is now done. Open the Dashboard to see the results.
 
-> That's all! you have successfully integrated **ReportPortal.io** and **TestMu AI** for running your **Cypress** tests. In case you have any questions or need any additional information, you could reach out at our **24X7 Chat Support** or mail us directly at support@testmuai.com.
+That's all. You have successfully integrated **ReportPortal.io** and **TestMu AI** for running your **Cypress** tests. In case you have any questions or need any additional information, reach out at our **24X7 Chat Support** or mail us directly at support@testmuai.com.

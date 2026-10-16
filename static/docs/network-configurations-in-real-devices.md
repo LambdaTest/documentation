@@ -35,7 +35,7 @@ This feature is available exclusively with the **Real Device Plus Live** Plan.
 
 To unlock this feature, purchase or upgrade to the required [plan](https://www.testmuai.com/pricing/). If you need assistance, please contact your TestMu AI support representative, reach out to our **[24×7 Chat Support]**, or email us at **support@testmuai.com**.
 
-### Use cases
+## Use cases
 
 - **Debug API calls** by viewing HTTP/S request and response data directly from real device sessions.
 - **Verify backend integration** by checking if calls are made to the correct endpoints.

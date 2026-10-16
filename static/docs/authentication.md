@@ -27,7 +27,9 @@ For example -
 
 ## Using lambdatest-config.json:
 
-The auth option will help you in specifying your username and access key. You can find your username and access key in the [TestMu AI Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build). Both, the auth credentials set in environment variables and the ones mentioned in the lambdatest-config.json file will get overridden.
+The auth option will help you in specifying your username and access key. You can find your username and access key in the [TestMu AI Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build).
+
+Both, the auth credentials set in environment variables and the ones mentioned in the lambdatest-config.json file will get overridden.
 
 The options supported in the auth are as follows:
 

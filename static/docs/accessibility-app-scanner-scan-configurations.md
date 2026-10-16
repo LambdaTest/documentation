@@ -16,7 +16,7 @@ Use Scan Configurations when users want to scope a manual scan to only the relev
 2. **Open the scan configuration panel.** It loads the **rules catalog** for the selected platform, grouped by category. The first time it is opened, it shows the **system defaults**. After that, it shows the user's **last-used settings**.
 3. **Choose the WCAG version and level** (for example, WCAG 2.1 AA). The rule list automatically narrows to the rules included by that selection.
 4. **Toggle the required rule groups** Best Practice, Beta, AI Detection
-5. **Fine-tune individual rules.** Within each category, switch specific rules on or off. Anything left on is **Enabled**; anything switched off is **Disabled**.
+5. **Fine-tune individual rules.** Within each category, switch specific rules on or off. Anything left on is **Enabled**; anything switched off is **Disabled**. To switch a whole category off or on in one click, use the checkbox on the category header (see [Rule and Category Exclusion](/support/docs/accessibility-mobile-rule-exclusion/#manual-app-scanner)).
 6. **Run the scan.** Only the selected rules are evaluated on the device, and the report contains results for exactly those rules.
 
 {/* IMAGE PLACEHOLDER: App Scanner home screen with the Scan Settings summary (original screenshot, compressed to under 100 KB). Save the file at the path below, then uncomment.
@@ -67,6 +67,8 @@ The catalog is grouped into categories so that coverage can be reasoned about at
 
 Within any category, individual rules can be switched on or off. **An explicit selection always wins:** if a user disables a rule, it will not run even if the WCAG or group settings would otherwise include it.
 
+Each category header also has a **checkbox** that switches every rule in the category off or on together. It has three states, all on, partly on and all off, so a partly selected category is visible at a glance. A category with no rules in scope for the selected WCAG version and level stays disabled. Excluding a category here is equivalent to passing its slug in `accessibility.excludeRuleCategories` on automation. See [Rule and Category Exclusion for Mobile App Accessibility](/support/docs/accessibility-mobile-rule-exclusion/).
+
 ## Settings are remembered per user
 
 Each user's scan configuration is persisted on their last saved scan.
@@ -94,7 +96,7 @@ For users who have never run a configured mobile scan before (no saved settings 
 
 - **Scoped results.** The report contains violations only for the enabled rules. Rules turned off (directly, or through WCAG or group settings) do not appear and do not affect the accessibility score for that scan.
 - **Faster scans.** Because disallowed rules are skipped **before** they run on the device, narrowing the configuration generally makes scans quicker.
-- **Configuration recorded with the test.** The WCAG version, group toggles, and the enabled or disabled rule lists are stored alongside the scan, so the team can always see how a given result was produced. The exact rules applied to a scan are also visible in the report (see [Scan Configurations via Capabilities (Automation)](/support/docs/accessibility-automation-scan-configurations/#what-to-expect-in-results)).
+- **Configuration recorded with the test.** The WCAG version, group toggles, and the enabled or disabled rule lists are stored alongside the scan, so the team can always see how a given result was produced. The exact rules applied to a scan are also visible in the report (see [Scan Configurations via Capabilities (Automation)](/support/docs/accessibility-automation-scan-configurations/#what-to-expect-in-results)). The report records whether a disabled rule was switched off individually or as part of a category, and greys out a category that was excluded whole.
 
 ## FAQ
 
@@ -114,5 +116,6 @@ They are opt-in by design: AI rules invoke AI evaluation and surface items for m
 
 - [Accessibility App Scanner (Overview)](/support/docs/accessibility-app-scanner/)
 - [Scan Configurations via Capabilities (Automation)](/support/docs/accessibility-automation-scan-configurations/)
+- [Rule and Category Exclusion for Mobile App Accessibility](/support/docs/accessibility-mobile-rule-exclusion/)
 - [Tag Support for Accessibility Scans](/support/docs/accessibility-tag-support/)
 - [Navigating the Dashboard](/support/docs/accessibility-testing-navigating-dashboard/)

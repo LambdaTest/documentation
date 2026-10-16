@@ -16,7 +16,7 @@ The platform supports **5 agent types**, each designed for a specific testing sc
 
 ## Chat Agent
 
-#### 📄 Workflow-Based Test Generation
+### 📄 Workflow-Based Test Generation
 
 Connect your knowledge sources and let the platform auto-generate test scenarios, no manual scripting needed.
 
@@ -25,7 +25,7 @@ Connect your knowledge sources and let the platform auto-generate test scenarios
 - **AI Test Generation**: Automatically generates test scenarios from uploaded documents
 - **Real-time Progress**: Live streaming of test generation progress
 
-#### 🎭 Scenario Management
+### 🎭 Scenario Management
 
 Build and manage the exact conversations you want to test, manually or via AI.
 
@@ -37,7 +37,7 @@ Build and manage the exact conversations you want to test, manually or via AI.
 - **Test Profile Association**: Link test data profiles to scenarios for data-driven testing
 - **Scenario Deletion**: Remove scenarios that are no longer needed
 
-#### 🗂️ Test Suites
+### 🗂️ Test Suites
 
 Group related scenarios together and track results over time.
 
@@ -46,7 +46,7 @@ Group related scenarios together and track results over time.
 - **Run History**: View all past runs with status, score, and timestamps
 - **Status Filtering**: Filter results by Passed, Failed, In Progress
 
-#### 🔌 Endpoint Profiles
+### 🔌 Endpoint Profiles
 
 Configure how the platform connects to your agent's API, supporting everything from simple REST calls to multi-phase auth flows.
 
@@ -59,7 +59,7 @@ Configure how the platform connects to your agent's API, supporting everything f
 - **Import/Export**: Export profiles as JSON and import across projects
 - **Default Profile**: Mark one profile as the default for quick evaluation runs
 
-#### 🗃️ Test Profiles (Test Data)
+### 🗃️ Test Profiles (Test Data)
 
 Create reusable data sets to power data-driven testing across multiple scenarios.
 
@@ -68,7 +68,7 @@ Create reusable data sets to power data-driven testing across multiple scenarios
 - **Import/Export**: Share test profiles across projects via JSON export/import
 - **Data Injection**: Test data is injected at runtime for data-driven scenario execution
 
-#### 🧪 Playground
+### 🧪 Playground
 
 Interactively test your agent configuration before running a full evaluation suite.
 
@@ -77,16 +77,16 @@ Interactively test your agent configuration before running a full evaluation sui
 - **Connection Testing**: Test connectivity via cURL command verification
 - **Schema Analysis**: Automatic detection of request/response schema from your endpoint
 
-#### ⚡ Evaluation Execution
+### ⚡ Evaluation Execution
 
 Run evaluations at scale with real-time feedback on your agent's quality.
 
 - **Metric Selection**: Choose which quality metrics to evaluate (or run all)
 - **Endpoint Profile Selection**: Pick which endpoint profile to evaluate against
-- **HyperExecute Integration**: Run evaluations at scale using LambdaTest's HyperExecute infrastructure with optional tunnel configuration for testing agents behind firewalls or private networks
+- **HyperExecute Integration**: Run evaluations at scale using TestMu AI's HyperExecute infrastructure with optional tunnel configuration for testing agents behind firewalls or private networks
 - **Real-Time Streaming**: Live progress updates during evaluation via Server-Sent Events
 
-#### 🎚️ Metric Threshold Configuration
+### 🎚️ Metric Threshold Configuration
 
 Define exactly what "passing" means for your project, then enforce it automatically.
 
@@ -95,7 +95,7 @@ Define exactly what "passing" means for your project, then enforce it automatica
 - **Named Configurations**: Create named threshold configs (e.g., "Strict", "Default")
 - **Active/Inactive Toggle**: Enable or disable threshold configurations
 
-#### 🚦 Go-Live Assessment
+### 🚦 Go-Live Assessment
 
 Get a clear, defensible production-readiness verdict before you ship.
 
@@ -118,7 +118,7 @@ Get a clear, defensible production-readiness verdict before you ship.
 - **Validation Criteria Summary**: Aggregated compliance rate across all criteria
 - **AI Insights**: Actionable recommendations for improvement
 
-#### 🗓️ Scheduled Runs
+### 🗓️ Scheduled Runs
 
 Automate ongoing regression coverage without manual intervention.
 
@@ -196,7 +196,7 @@ Same **9 quality metrics** as the Chat agent:
 | **Pre-evaluation** | The platform simulates customers calling your voice agent with live test calls, then evaluates the resulting conversations |
 | **Post-evaluation** | Upload your production call recordings and transcripts from real customer interactions for evaluation on the platform |
 
-#### 📞 Phone Number Management
+### 📞 Phone Number Management
 
 Register and manage the phone numbers your voice agent answers on.
 
@@ -205,7 +205,7 @@ Register and manage the phone numbers your voice agent answers on.
 - **Phone Number Display**: Masked display for security with country flag identification
 - **Edit & Delete**: Update phone number details or remove numbers no longer in use
 
-#### 🎭 Scenario Management
+### 🎭 Scenario Management
 
 Generate realistic inbound call scenarios at scale with AI or build them manually.
 
@@ -215,7 +215,7 @@ Generate realistic inbound call scenarios at scale with AI or build them manuall
 - **Persona Selection**: Choose from available personas or create custom ones to simulate different caller types
 - **Language Support**: Generate scenarios in multiple languages (English, Spanish, etc.)
 
-#### 🎙️ Voice Configuration (Per Scenario)
+### 🎙️ Voice Configuration (Per Scenario)
 
 Control every detail of how the simulated caller sounds and behaves.
 
@@ -226,7 +226,7 @@ Control every detail of how the simulated caller sounds and behaves.
 - **Max Call Duration**: Set maximum call length (60–1800 seconds) to prevent runaway calls
 - **First Speaker**: Choose who speaks first, the simulated user or the agent
 
-#### 👤 Agent Profiles (Inbound-Specific)
+### 👤 Agent Profiles (Inbound-Specific)
 
 Create reusable caller personas to standardize how test calls are placed across suites.
 
@@ -234,7 +234,7 @@ Create reusable caller personas to standardize how test calls are placed across 
 - **Profile Library**: Organization-level reusable agent profiles
 - **Active/Inactive Toggle**: Enable or disable profiles
 
-#### 🗂️ Test Suites
+### 🗂️ Test Suites
 
 Batch your inbound scenarios into suites and run them all with a single action.
 
@@ -243,7 +243,7 @@ Batch your inbound scenarios into suites and run them all with a single action.
 - **Agent Profile Assignment**: Associate agent profiles with suites
 - **Run Suites**: Execute all scenarios in a suite with a single action
 
-#### 📡 Call Execution & Monitoring
+### 📡 Call Execution & Monitoring
 
 Trigger, track, and manage live test calls in real-time.
 
@@ -252,7 +252,7 @@ Trigger, track, and manage live test calls in real-time.
 - **Call Duration Tracking**: Live duration counter during active calls
 - **Call Termination**: End calls in progress if needed
 
-#### 📂 Voice Analytics
+### 📂 Voice Analytics
 
 Upload and analyze real production recordings, no new calls needed.
 
@@ -264,7 +264,7 @@ Upload and analyze real production recordings, no new calls needed.
 - **Tagging**: Organize recordings with custom tags
 - **Search & Filter**: Find recordings by name, status, date, or tags
 
-#### ▶️ Recording Playback
+### ▶️ Recording Playback
 
 Listen to any call and follow along with a full, speaker-identified transcript.
 
@@ -273,7 +273,7 @@ Listen to any call and follow along with a full, speaker-identified transcript.
 - **DTMF Detection**: Phone keypad inputs (0–9, *, #) captured and displayed in transcript
 - **Download**: Download recording audio and transcript files
 
-#### 🚦 Go-Live Assessment
+### 🚦 Go-Live Assessment
 
 **Production Readiness Verdicts**
 | Verdict | Score Range | Meaning |
@@ -290,7 +290,7 @@ Listen to any call and follow along with a full, speaker-identified transcript.
 - **Validation Criteria Compliance**: Aggregated pass/fail rates
 - **Prioritized Action Items**: Improvement recommendations with expected impact
 
-#### 🎚️ Metric Configuration
+### 🎚️ Metric Configuration
 
 Select exactly which metrics to run. Skip what's not relevant to reduce time and cost.
 
@@ -298,7 +298,7 @@ Select exactly which metrics to run. Skip what's not relevant to reduce time and
 - **Category Toggles**: Enable/disable entire metric categories
 - **Reduce Complexity**: Skip non-critical metrics to reduce analysis time and cost
 
-#### 🗓️ Scheduled Runs
+### 🗓️ Scheduled Runs
 
 Keep coverage running continuously without manual effort.
 
@@ -309,7 +309,7 @@ Keep coverage running continuously without manual effort.
 
 Phone Caller agents are evaluated across **8 metric categories** with **30+ individual metrics**.
 
-#### A. Conversation Flow & Interaction Dynamics
+### A. Conversation Flow & Interaction Dynamics
 
 | Metric | Unit | What It Measures |
 |--------|------|-----------------|
@@ -320,7 +320,7 @@ Phone Caller agents are evaluated across **8 metric categories** with **30+ indi
 | AI Interrupting User | % | How often the agent interrupts the user |
 | User Interrupting AI | % | How often the user interrupts the agent |
 
-#### B. Accuracy & Effectiveness
+### B. Accuracy & Effectiveness
 
 | Metric | Unit | What It Measures |
 |--------|------|-----------------|
@@ -330,7 +330,7 @@ Phone Caller agents are evaluated across **8 metric categories** with **30+ indi
 | Instruction Following | % | Adherence to configured instructions |
 | Response Consistency | % | Consistency of responses to similar inputs |
 
-#### C. User Experience & Satisfaction
+### C. User Experience & Satisfaction
 
 | Metric | Unit | What It Measures |
 |--------|------|-----------------|
@@ -339,14 +339,14 @@ Phone Caller agents are evaluated across **8 metric categories** with **30+ indi
 | User Sentiment | Text | Detected emotional sentiment from user speech |
 | Early Termination | % | Percentage of calls NOT terminated prematurely |
 
-#### D. Business Operational Metrics
+### D. Business Operational Metrics
 
 | Metric | Unit | What It Measures |
 |--------|------|-----------------|
 | Containment Rate | % | Issues resolved without human escalation |
 | AI to Human Handoff Rate | % | Frequency of escalation to human agents |
 
-#### E. Audio Voice Quality
+### E. Audio Voice Quality
 
 | Metric | Unit | What It Measures |
 |--------|------|-----------------|
@@ -354,7 +354,7 @@ Phone Caller agents are evaluated across **8 metric categories** with **30+ indi
 | Voice Quality Index | 0–5 scale | Composite voice quality score |
 | Signal-to-Noise Ratio | % | Audio clarity vs. background noise |
 
-#### F. Speech-to-Text (STT) Evaluation
+### F. Speech-to-Text (STT) Evaluation
 
 | Metric | Unit | What It Measures |
 |--------|------|-----------------|
@@ -363,14 +363,14 @@ Phone Caller agents are evaluated across **8 metric categories** with **30+ indi
 | STT Summary | Text | Detailed transcription quality notes |
 | Mismatch Examples | List | Specific instances where transcription differed from actual speech |
 
-#### G. Validation Results
+### G. Validation Results
 
 | Metric | Unit | What It Measures |
 |--------|------|-----------------|
 | Compliance | % | Compliance rate against custom validation criteria |
 | Pass/Fail/Unable to Verify | Count | Per-criterion validation breakdown |
 
-#### H. Detected Issue Tags (Automated)
+### H. Detected Issue Tags (Automated)
 
 The system automatically detects and flags the following issues in every call recording.
 
@@ -388,7 +388,7 @@ The system automatically detects and flags the following issues in every call re
 | No Response | Agent silence when a response was expected |
 | BLANK/EMPTY STT | Empty transcription segments |
 
-#### Threshold Configurations
+### Threshold Configurations
 
 | Metric | 🟢 Excellent | 🟡 Good | 🔴 Poor |
 |--------|-------------|--------|--------|
@@ -401,7 +401,7 @@ The system automatically detects and flags the following issues in every call re
 
 Phone Caller Outbound supports the **same two evaluation modes** as Inbound (Pre-evaluation and Post-evaluation) and shares all features, with a few key differences in pre-evaluation mode only.
 
-#### Outbound-Specific Pre-evaluation Features
+### Outbound-Specific Pre-evaluation Features
 
 - **Scenario Generation**: Generate up to **7** outbound test scenarios (vs. 20 for inbound)
 - **Caller Profile Selection**: Select an outbound caller profile when generating scenarios
@@ -409,7 +409,7 @@ Phone Caller Outbound supports the **same two evaluation modes** as Inbound (Pre
 - **Passive Mode**: Listen to outbound calls without interfering (for QA monitoring)
 - **First Speaker Default**: Agent speaks first (vs. simulator for inbound)
 
-#### Outbound Pool Management
+### Outbound Pool Management
 
 - **View Pool Status**: See available outbound numbers
 - **Reservations**: View and manage per-suite number reservations
@@ -421,7 +421,7 @@ Same as Phone Caller Inbound, all **8 categories** and **30+ metrics**.
 
 ## Image Analyzer Agent
 
-#### 🖼️ Image Analysis
+### 🖼️ Image Analysis
 
 Upload single images or batch-process up to 50 at once, via file upload or URL.
 
@@ -430,7 +430,7 @@ Upload single images or batch-process up to 50 at once, via file upload or URL.
 - **Drag & Drop Upload**: Drag and drop images directly into the upload area
 - **Supported Formats**: JPG, JPEG, PNG, GIF, WEBP, BMP (max 20 MB per image)
 
-#### 🎯 Custom Evaluation Criteria
+### 🎯 Custom Evaluation Criteria
 
 Define what "good" means for your images. Choose from three criteria types:
 
@@ -449,14 +449,14 @@ Define what "good" means for your images. Choose from three criteria types:
 
 All criteria support Active/Inactive toggling, create/edit/delete operations, and search by name, description, or type.
 
-#### 📋 Analysis History
+### 📋 Analysis History
 
 - **Search**: Find past analyses by image name or prompt text
 - **Status Tracking**: View analysis status (Pending, Completed, Failed)
 - **Detailed View**: Click any analysis to view full results
 - **Bookmarking**: Bookmark important analyses for quick access
 
-#### 📊 Analytics Dashboard
+### 📊 Analytics Dashboard
 
 - **Overall Statistics**: Average score, highest score, lowest score, total analyses count
 - **Quality Trends**: Daily score breakdown over the last 30 days with bar chart visualization

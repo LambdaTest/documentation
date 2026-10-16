@@ -22,6 +22,8 @@ Each test instance card displays its current version (e.g., **v1**). A **grey** 
 
 When you open a stale test instance, a banner appears at the top indicating how many versions behind the instance is. From here, you can click **View comparison** to review the changes or **Update to vN** to sync.
 
+The instance's **Test case details** tab shows the description, pre-conditions, attachments and fields of the version the instance is still on, so you can read exactly what is being executed before deciding to sync.
+
 ## Comparing Versions
 
 Before syncing, you can review exactly what changed. Click **View comparison** from the version banner to open a side-by-side diff view. This highlights all differences between the test case version currently linked to the test instance and the latest version of the same test case, including changes to descriptions, preconditions, and individual steps.
@@ -38,11 +40,11 @@ Click **Update to Version** to confirm, or **Cancel** to keep the current versio
 
 ### After Syncing
 
-Once synced, the test instance is updated with the latest master test case content, including any changes to the title, step descriptions, expected outcomes, and step structure (added, removed, or reordered steps). The instance and all step statuses are reset to **Not Started**, and a success notification confirms the update.
+Once synced, the test instance is updated with the latest master test case content, including any changes to the title, step descriptions, expected outcomes, and step structure (added, removed, or reordered steps). The **Test case details** tab is updated to the new version at the same time, so the description, pre-conditions, attachments and fields match the steps. The instance and all step statuses are reset to **Not Started**, and a success notification confirms the update. The instance is also no longer marked as derived from its step results, and is derived again from its next step status change. See [How the Test Instance Status Is Derived](/support/docs/test-run-creation-and-management/#how-the-test-instance-status-is-derived).
 
 ## Audit Log
 
-Every sync action is recorded in the test instance's [Audit Log](/support/docs/test-instance-audit-logs/). The log captures the version update (e.g., v1 → v2), the instance and step-level status resets, and any related changes, giving your team full traceability.
+Every sync action is recorded in the test instance's [Audit Log](/support/docs/test-run-creation-and-management/). The log captures the version update (e.g., v1 → v2), the instance and step-level status resets, and any related changes, giving your team full traceability.
 
 **Duplicating a Test Run**
 When you duplicate a test run, all test instances in the new run are automatically linked to the **latest version** of their master test cases, regardless of which version was used in the original run. All statuses are set to **Not Started**.

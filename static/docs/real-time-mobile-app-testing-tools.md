@@ -11,7 +11,11 @@ The Device Controls feature allows you to simulate various actions on your test 
 - **Volume Control:** Adjust the device volume directly within your test session to test audio-related features, such as media playback or notifications, ensuring they function correctly at different volume levels.
 - **Lock Device:** Seamlessly lock or unlock the device during your testing session without interrupting your workflow. This is useful for verifying app behavior upon device unlocking or handling lock-screen notifications.
 - **Shake Device:** Simulate a device shake to test functionalities that rely on shake gestures, such as undo actions or triggering specific in-app events.
+- **On-Screen Keyboard (for iOS):** Display the device's virtual keyboard to enter text into input fields during the session.
 - **Rotate Device:** Rotate the device's orientation between portrait and landscape modes to test the responsiveness and adaptability of your web application. This feature helps you ensure your application layout adjusts properly and remains user-friendly across different orientations.
+
+## Clear Cache (for iOS)
+Clear cached data from the device to test the application or website in a fresh cache state or troubleshoot cache-related issues. The Clear Cache option is available only in iOS real-time manual sessions, for both browser and app sessions.
 
 ## App Controls
 The App Controls feature provides programmatic control over the applications installed on the emulator or real device:
@@ -48,7 +52,7 @@ TestMu AI's network throttling feature empowers you to simulate real-world netwo
 The settings section offer the following features:
 - **Idle Timeout :** This feature allows you to set the idle timeout for your test session. The default Idle Timeout is 5 minutes and the maximum limit is 60 minutes.
 - **Time Zone :** With this feature, you can select the time zone of your preferred region that align with your testing needs.
-- **Keyboard Input** With this feature, you can change the language in your test session for a more localized testing experience.
+- **Dark Mode :** This feature allows you to test your app in dark mode and validate contrast and accessibility.
 
 ## Switch
 Easily switch between different devices, browsers, and OS versions without ending your current test session.

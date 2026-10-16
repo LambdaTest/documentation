@@ -63,7 +63,7 @@ import { BRAND_URL } from '@site/src/component/BrandName';
       "height": 630
     },
     "inLanguage": "en",
-    "articleSection": "Agent Assurance Platform",
+    "articleSection": "Agent Assurance",
     "keywords": [
       "rook environment variables",
       "rook secrets",
@@ -96,15 +96,34 @@ import { BRAND_URL } from '@site/src/component/BrandName';
         "https://www.youtube.com/@TestMuAI"
       ]
     },
-    "dateModified": "2026-09-11"
+    "dateModified": "2026-10-13"
   }) }}
 />
 
 # Rook Environment and Secrets
 
-Profiles contain references and operational descriptions. Secret values remain on the machine running Rook and are never included in project synchronization.
+A profile names the environment variables its hooks read, and why; it does not hold their values. Values you set with `env set` are stored under the global Rook home, outside the repository. Two paths can still carry a secret off the machine:
+
+- `rook sync` uploads profiles and hook scripts as written. A token typed into a profile, `hook_env`, or a hook script is uploaded with it.
+- `profile add` and `profile fix` show the model what you paste and what the hook prints. A pasted curl with a live token, or a hook that echoes its credentials, sends that value with the rest.
 
 ## Manage Local Values
+
+Launch `rook` in your agent workspace. In the interactive TUI, start with `/env list` to inspect configured names and masked values. The following capture sets and lists a **non-secret demonstration value**, not a credential:
+
+<img loading="lazy" src={require('../assets/images/rook/guides/rook-tui-env-values.png').default} alt="Rook interactive environment commands storing the non-secret DEMO_LABEL value and listing it with its middle masked" width="2200" height="810" className="doc_img"/>
+
+For a harmless first check, enter these commands one at a time:
+
+```text
+/env set '{"DEMO_LABEL":"documentation-only"}'
+/env list
+/env rm DEMO_LABEL
+```
+
+Keep the outer single quotes around the JSON object, including in the TUI. `env list` masks the middle of each value but can reveal a prefix and suffix; inspect the screen before sharing it. Never capture real secrets or `/env show` output.
+
+For an actual profile, use the variable names it declares. Shell equivalents are:
 
 <VerifiedTag value="Verified" />
 
@@ -144,7 +163,7 @@ Before spending a run, Rook checks that every value declared by the profile is a
 
 | Path | Contains |
 |---|---|
-| `~/.testmuai/rook/` | Credentials, environment values, terminal history, logs, installed versions, and machine-specific session state. The directory uses mode `0700`. |
+| `~/.testmuai/rook/` | Credentials, environment values, terminal history, logs, installed versions, and machine-specific session state. On POSIX systems, the directory uses mode `0700`; native Windows uses the user home's `.testmuai\rook` directory and Windows file permissions. |
 | `<repo>/.testmuai/rook/` | Projects, agents, features, scenarios, profiles, hook scripts, runs, and evidence intended to be reviewable and committable. |
 
 ## Shared Authentication
@@ -160,6 +179,32 @@ Stored OAuth authentication is shared by processes using the same Rook home, pro
 For unattended use, inject <code>LT_USERNAME</code> and <code>LT_ACCESS_KEY</code> through your secret manager. Rook uses this pair ahead of stored OAuth credentials. A different <code>ROOK_HOME</code> does not isolate credentials already exported in the shell.
 
 Public packages use <code>ROOK_ENV=prod</code> for the service behind the [hosted Web UI](https://rook.lambdatest.com/projects). Set the service environment before authentication and project operations. This does not change the endpoint your target-agent hook calls.
+
+## Windows PowerShell Variables {#powershell}
+
+Complete [Windows installation](/support/docs/rook-installation/#windows) first. PowerShell sets process environment variables with `$env:`, rather than `export`:
+
+```powershell
+$env:ROOK_ENV = 'prod'
+$env:BASE_URL = 'https://agent.staging.example.com'
+rook.cmd auth status
+```
+
+Replace the target URL with your own test environment. These settings affect the current terminal and processes it starts, not other terminals. For temporary isolated Rook state:
+
+```powershell
+$env:ROOK_HOME = Join-Path $env:TEMP 'rook-isolated'
+rook.cmd auth status
+```
+
+This selects a different Rook home; it does not remove any shell-provided credentials. If you intend to use browser login instead of an injected username/access-key pair, remove both from the current session:
+
+```powershell
+Remove-Item Env:LT_USERNAME, Env:LT_ACCESS_KEY -ErrorAction SilentlyContinue
+rook.cmd login
+```
+
+Restore the default home for subsequent commands with `Remove-Item Env:ROOK_HOME -ErrorAction SilentlyContinue`; this does not delete the isolated directory. Do not put real access keys in copied commands or PowerShell history. Use your approved secret manager, or manage Rook's JSON values inside the TUI to avoid differences in native-command argument quoting between PowerShell versions.
 
 ## Isolate Rook State
 
@@ -185,12 +230,19 @@ Variables such as `ROOK_HOOK`, `ROOK_RUN_ID`, `ROOK_SCENARIO_ID`, `ROOK_SESSION`
 
 ## Secret Handling Checklist
 
-- Keep values out of profile YAML and source control.
+- Keep values out of profile YAML, `hook_env`, hook scripts, and source control; `sync` uploads the profile and its scripts as written.
+- Paste requests into `profile add` with placeholders, not live tokens, and keep hooks from printing credentials.
 - Give profiles the least-privileged credentials needed for the scenarios.
 - Do not use `env show` in shared terminals or CI logs.
 - Keep `.testmuai/rook/.gitignore` entries intact for credentials and machine-only state.
 - Review MCP commands and headers before approval.
 - Use a dedicated `ROOK_HOME` for unattended automation.
+
+## Telemetry {#telemetry}
+
+Rook records operational events (no prompts, no code, no command arguments) and sends them to TestMu AI, attributed to your organization, to find failures. The first interactive session prints a one-time notice, and nothing is uploaded until that notice has been shown. Logged-out and local-mode sessions do not upload.
+
+Turn it off for one process with `ROOK_TELEMETRY=off`, or for every run with `"telemetry": false` in `config.json` under the Rook home (`~/.testmuai/rook/` unless `ROOK_HOME` is set).
 
 ## UI Access and Evidence Privacy
 
@@ -200,13 +252,13 @@ Requests, responses, and artifacts in either UI can contain sensitive target dat
 
 ### Local UI: Identify the Hook to Inspect {#local-ui-example}
 
-Open the agent's **profiles** panel to identify its invocation script. Use the CLI to inspect the profile's required variable names and manage their values. There is no local UI secret editor; this screenshot identifies the profile, not its stored credentials.
+Open the agent's **Profiles** tab and expand the profile. Its inline YAML identifies the hook script and required variable names; the CommerceCare demo requires `COMMERCE_BASE_URL` and `DEMO_API_TOKEN`. These declarations do not show the stored values. Manage values in the CLI—there is no local UI secret editor. See the [earlier layout](/support/docs/rook-web-ui/#earlier-local-ui) if your CLI still shows the single-page viewer.
 
-<img loading="lazy" src={require('../assets/images/rook/rook-local-agent.png').default} alt="Local profile panel identifying the local-triage execute script without displaying credential values" width="1440" height="900" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/rook/rook-local-profiles.png').default} alt="Local commerce-hooks profile declaring environment-variable names without stored credential values" width="1440" height="900" className="doc_img"/>
 
 ### Hosted Web UI: Review Environment Requirements {#hosted-ui-example}
 
-Open **Summary → Profiles → View Full Spec**. Profile YAML records environment requirements, not the secret store. This sample has <code>env: []</code> because its local test endpoint needs no token; it is not an example of configuring authenticated access.
+Open **Profiles**, expand the profile, and click **profile.yaml**. It records environment requirements, not the secret store. This sample has <code>env: []</code> because its local test endpoint needs no token; it is not an example of configuring authenticated access. The phase timeline's environment badges also name required variables without displaying their values.
 
 <img loading="lazy" src={require('../assets/images/rook/rook-web-profile-spec.png').default} alt="Hosted profile YAML with an empty environment requirement list for the unauthenticated triage sample" width="1440" height="900" className="doc_img"/>
 

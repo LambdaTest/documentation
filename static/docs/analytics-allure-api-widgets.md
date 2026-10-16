@@ -37,7 +37,7 @@ The `Allure Test Insights` widget provides the following key insights:
 
 The `Allure Test Trends` widget provides insights into the test execution results, test status, and test duration for the test cases executed using the Allure report. This widget helps you to get an overview of the test execution results and identify the bottlenecks in the test execution process.
 
-#### Use Cases of Allure Test Trends Widget
+### Use Cases of Allure Test Trends Widget
 - Get insights about the time series trends of the test execution count.
 - Identify the trends of the tests run over a period of time.
 - Monitor for any anomalies in the test execution counts.
@@ -46,7 +46,7 @@ The `Allure Test Trends` widget provides insights into the test execution result
 
 The `Allure Suite Health` widget provides insights into the health of the test suites executed using the Allure report. This widget helps you to get an overview of the test suite health and identify the test suites that require attention.
 
-#### Use Cases of Allure Suite Health Widget
+### Use Cases of Allure Suite Health Widget
 - Get insights into the health of the test suites executed using the Allure report.
 - Identify the test suites that require attention based on the test status.
 - Monitor the test suite health trends over time.
@@ -55,7 +55,7 @@ The `Allure Suite Health` widget provides insights into the health of the test s
 
 The `Allure Test Status Ratio` widget provides insights into the test status ratio for the test cases executed using the Allure report. This widget helps you to get an overview of the test status ratio and identify the test cases that require attention.
 
-#### Use Cases of Allure Test Status Ratio Widget
+### Use Cases of Allure Test Status Ratio Widget
 - Get insights into the test status ratio for the test cases executed using the Allure report.
 - Check for any anomalies in the test status ratio and identify the test cases that require attention.
 - Monitor the test status ratio trends over time and take corrective actions.
@@ -64,7 +64,7 @@ The `Allure Test Status Ratio` widget provides insights into the test status rat
 
 The `API Test Duration` widget provides insights into the average test duration for the test cases executed using the Allure report. This widget helps you to get an overview of the test duration and identify the test cases that require attention.
 
-#### Use Cases of Allure Test Duration Widget
+### Use Cases of Allure Test Duration Widget
 - Get insights into the average test duration for the test cases executed using the Allure report.
 - Identify the test cases with high test duration and optimize the test execution process.
 - Monitor the test duration trends over time and reduce the test duration for better efficiency.

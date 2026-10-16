@@ -9,7 +9,7 @@ keywords:
  - Cerberus
  - Test Automation for GUI Testing
  - test automation
- - Cerberus integration with LambdaTest
+ - Cerberus integration with TestMu AI
  - testmu ai integration with Cerberus
 url: https://www.testmuai.com/support/docs/cerberus-integration/
 site_name: TestMu AI

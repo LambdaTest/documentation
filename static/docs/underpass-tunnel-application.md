@@ -22,17 +22,17 @@ After downloading the Tunnel App, also known as the Underpass, you need to run i
 
 ## Launching Underpass and the secure Tunnel
 
-#### Launching Underpass on Linux
+### Launching Underpass on Linux
 
 Make sure you’ve given the permissions to the Underpass executable file through the command highlighted in the above note. If you have, you can run the application by either double clicking it or by running the below command in terminal:
 
 `./UnderPass.AppImage`
 
-#### Launching Underpass on Windows
+### Launching Underpass on Windows
 
 Once Underpass is downloaded and installed, simply launch Underpass through the start menu or a shortcut.
 
-#### Launching Underpass on MacOS
+### Launching Underpass on MacOS
 
 Once Underpass is downloaded and installed, simply launch Underpass through the Launchpad (Applications page).
 

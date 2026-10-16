@@ -23,7 +23,7 @@ const DocCard = ({ heading, link, description }) => {
   return (
     <div style={cardStyle}>
       <a href={link}>
-        <h3>{heading}</h3>
+        <h2>{heading}</h2>
       </a>
       {description && <p style={descStyle}>{description}</p>}
     </div>

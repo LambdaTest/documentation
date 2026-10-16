@@ -109,28 +109,28 @@ You can now integrate HyperExecute with other <BrandName /> products like Smart 
   
   <a href = "/support/docs/smart-ui-testing/">
   <div className="support_inners">
-    <h3>Smart UI - Hooks</h3>
+    <h2>Smart UI - Hooks</h2>
     <p>Execute Smart UI Tests to ensure the visual consistency of web applications using HyperExecute.</p>
   </div>
   </a>
 
   <a href = "/support/docs/smart-ui-testing/">
   <div className="support_inners">
-    <h3>Smart UI - SDK</h3>
+    <h2>Smart UI - SDK</h2>
     <p>Execute Smart UI Tests using SDK to ensure the visual consistency of web applications using HyperExecute.</p>
   </div>
   </a>
   
   <a href = "/support/docs/hyperexecute-integration-with-virtual-devices/">
   <div className="support_inners">
-    <h3>Virtual Devices</h3>
+    <h2>Virtual Devices</h2>
     <p>Run app automated tests on Emulators and Simulators using HyperExecute.</p>
   </div>
   </a>
 
   <a href = "/support/docs/real-devices-integration-with-hyperexecute/">
   <div className="support_inners">
-    <h3>Real Devices</h3>
+    <h2>Real Devices</h2>
     <p>Run app automated tests on Real Mobile Devices using HyperExecute..</p>
   </div>
   </a>

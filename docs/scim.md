@@ -392,7 +392,7 @@ Any SCIM 2.0-compliant IDP works. Use these settings:
 | `active` | Yes | `true` = enabled, `false` = deactivated |
 | `name` | Yes | `givenName`, `familyName`, `formatted` |
 
-**Custom Attributes** (LambdaTest Extension)
+**Custom Attributes** (TestMu AI Extension)
 
 These attributes are part of the `urn:ietf:params:scim:schemas:extension:LambdaTest:2.0:User` extension schema. To send them from your IDP, add this schema URN to your IDP's custom attribute configuration.
 
@@ -618,7 +618,7 @@ Groups and members are stored **as soon as your IDP pushes them**, even before a
   <div style={{fontSize: '22px', lineHeight: '1', color: '#9ca3af', userSelect: 'none'}}>↓</div>
 
   <div style={{border: '1px solid #d1d5db', borderRadius: '10px', padding: '16px 28px', textAlign: 'center', width: '100%', maxWidth: '500px', background: '#f9fafb'}}>
-    <div style={{fontSize: '11px', textTransform: 'uppercase', letterSpacing: '1px', color: '#6b7280', marginBottom: '4px'}}>Step 2: LambdaTest (automatic)</div>
+    <div style={{fontSize: '11px', textTransform: 'uppercase', letterSpacing: '1px', color: '#6b7280', marginBottom: '4px'}}>Step 2: TestMu AI (automatic)</div>
     <div style={{fontSize: '15px', fontWeight: 600, color: '#111827'}}>Group stored & roles applied to members</div>
     <div style={{fontSize: '12px', color: '#6b7280', marginTop: '4px'}}>Members get roles immediately, even without mapping</div>
   </div>
@@ -627,7 +627,7 @@ Groups and members are stored **as soon as your IDP pushes them**, even before a
 
   <div style={{border: '1px solid #d1d5db', borderRadius: '10px', padding: '16px 28px', textAlign: 'center', width: '100%', maxWidth: '500px', background: '#f9fafb'}}>
     <div style={{fontSize: '11px', textTransform: 'uppercase', letterSpacing: '1px', color: '#6b7280', marginBottom: '4px'}}>Step 3: Admin (manual) or Mapping Rules (automatic)</div>
-    <div style={{fontSize: '15px', fontWeight: 600, color: '#111827'}}>Group mapped to a LambdaTest entity</div>
+    <div style={{fontSize: '15px', fontWeight: 600, color: '#111827'}}>Group mapped to a TestMu AI entity</div>
   </div>
 
   <div style={{display: 'flex', justifyContent: 'center', gap: '8px', marginTop: '-4px'}}>
@@ -693,7 +693,7 @@ Once activated, you can control it from **Settings** > **Organization Settings**
 | `displayName` | Yes | Must be **unique** within your org |
 | `members` | No | Array of `{ "value": "<user_scim_id>" }` |
 
-**Custom Attributes** (LambdaTest Extension)
+**Custom Attributes** (TestMu AI Extension)
 
 These attributes are part of the `urn:ietf:params:scim:schemas:extension:LambdaTest:2.0:Group` extension schema. To send them from your IDP, add this schema URN to your IDP's custom attribute configuration.
 
@@ -704,7 +704,7 @@ These attributes are part of the `urn:ietf:params:scim:schemas:extension:LambdaT
 For PATCH operations, use the fully qualified SCIM path:
 - **LambdatestRoles:** `urn:ietf:params:scim:schemas:extension:LambdaTest:2.0:Group:LambdatestRoles`
 
-### Mapping Groups to LambdaTest Entities
+### Mapping Groups to TestMu AI Entities
 
 Once a group is pushed, it needs to be **mapped** to tell <BrandName /> what to do with its members. Select your target entity type below to see the details relevant to you:
 
@@ -1095,7 +1095,7 @@ Quick reference for common scenarios. Everything below is handled automatically,
 <Tabs className="docs__val" groupId="sync-source" queryString="sync">
 <TabItem value="idp-changes" label="Your IDP changes" default>
 
-| You do this in your IDP | What happens in LambdaTest | Action needed? |
+| You do this in your IDP | What happens in TestMu AI | Action needed? |
 |---|---|---|
 | **Rename a group** | Group name updated. Mapped team/concurrency group **renamed to match**. Mapping rules re-evaluated. | Only if mapping reverted to Pending |
 | **Delete a group** | Soft-deleted. Members safely unassigned. Roles recomputed. Conflicts auto-resolved. | No |
@@ -1105,9 +1105,9 @@ Quick reference for common scenarios. Everything below is handled automatically,
 | **Change roles on a group** | All members' roles recomputed immediately. | No |
 
 </TabItem>
-<TabItem value="admin-changes" label="LambdaTest Admin changes">
+<TabItem value="admin-changes" label="TestMu AI Admin changes">
 
-| You do this in LambdaTest | What happens | Important |
+| You do this in TestMu AI | What happens | Important |
 |---|---|---|
 | **Rename a team / group / sub-org** | Works fine, but the next IDP group rename will overwrite it. | To control names, rename **in your IDP** |
 | **Delete a mapped entity** | Mapping flagged as `target_deleted`, reverts to Pending. Auto-create is blocked. | [Manually re-map](#target-deleted) to a new target |

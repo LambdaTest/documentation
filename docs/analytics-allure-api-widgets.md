@@ -154,7 +154,7 @@ height="400"
 className="doc_img"
 />
 
-#### Use Cases of Allure Test Trends Widget
+### Use Cases of Allure Test Trends Widget
 - Get insights about the time series trends of the test execution count. 
 - Identify the trends of the tests run over a period of time.
 - Monitor for any anomalies in the test execution counts.
@@ -173,7 +173,7 @@ height="400"
 className="doc_img"
 />
 
-#### Use Cases of Allure Suite Health Widget
+### Use Cases of Allure Suite Health Widget
 - Get insights into the health of the test suites executed using the Allure report.
 - Identify the test suites that require attention based on the test status.
 - Monitor the test suite health trends over time.
@@ -191,7 +191,7 @@ height="400"
 className="doc_img"
 />
 
-#### Use Cases of Allure Test Status Ratio Widget
+### Use Cases of Allure Test Status Ratio Widget
 - Get insights into the test status ratio for the test cases executed using the Allure report.
 - Check for any anomalies in the test status ratio and identify the test cases that require attention.
 - Monitor the test status ratio trends over time and take corrective actions.
@@ -209,7 +209,7 @@ height="400"
 className="doc_img"
 />
 
-#### Use Cases of Allure Test Duration Widget
+### Use Cases of Allure Test Duration Widget
 - Get insights into the average test duration for the test cases executed using the Allure report.
 - Identify the test cases with high test duration and optimize the test execution process.
 - Monitor the test duration trends over time and reduce the test duration for better efficiency.

@@ -11,7 +11,7 @@ keywords:
 url: https://www.testmuai.com/support/docs/kane-cli-getting-started/
 site_name: TestMu AI
 slug: kane-cli-getting-started/
-canonical: https://www.testmuai.com/support/docs/kane-cli-quickstart/
+canonical: https://www.testmuai.com/docs/kane-cli-quickstart
 ---
 
 import { Redirect } from '@docusaurus/router';
@@ -98,4 +98,4 @@ import { BRAND_URL } from '@site/src/component/BrandName';
   }) }}
 />
 
-<Redirect to="/support/docs/kane-cli-quickstart/" />
+<Redirect to="/docs/kane-cli-quickstart" />

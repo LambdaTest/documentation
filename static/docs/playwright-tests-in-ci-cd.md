@@ -21,5 +21,3 @@ TestMu AI offers [integration with CI/CD tools](/support/docs/integrations-with-
 3. If the website under test in hosted on local server, then you will need to configure the TestMu AI tunnel by setting `tunnel` capability to `true` for running local tests via CI/CD on the TestMu AI. However, if the staging website is publicly accessible then this step is not required.
 
 4. Ensure your Playwright test scripts uses `chromium.connect` method to connect to the CDP endpoint at TestMu AI. Additional parameters for assigning a specific browser and OS combination to your TestMu AI test are contained in the `capabilities` variable.
-
-To generate Playwright tests with AI coding assistants, see [Run Tests With Agent Skills](/support/docs/playwright-agent-skills/).

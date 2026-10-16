@@ -19,6 +19,7 @@ Rook uses plain files rather than a hidden workspace database. That makes agents
         └── agents/
             └── <agent-id>/
                 ├── agent.yaml            derived agent definition
+                ├── coverage-gaps.yaml    attack patterns with no scenario
                 ├── state.json            machine-local server IDs
                 ├── features/
                 │   ├── F-001.yaml
@@ -37,11 +38,14 @@ Rook uses plain files rather than a hidden workspace database. That makes agents
                         ├── agent.yaml
                         ├── features.yaml
                         ├── profile.yaml
+                        ├── scenario-inventory.yaml
                         ├── scenarios/
                         └── report.yaml
 ```
 
 ## Why Runs Copy Their Inputs
+
+Directory names can include a readable project slug and its ID, such as `--`. Use the evidence path printed by your run or `/report`; do not construct it from the hosted URL. Local run directory names can also differ from hosted run IDs.
 
 Every run directory is self-contained. It snapshots:
 
@@ -75,7 +79,7 @@ Project YAML, agent definitions, features, scenarios, profiles containing refere
 Before committing:
 
 1. Review hook scripts for accidental literal secrets.
-2. Confirm profile YAML contains only references such as `${API_KEY}`.
+2. Confirm profile YAML names variables under `env` (for example `API_KEY`) and holds no literal secret, including in `hook_env`.
 3. Inspect run evidence for target data that should not leave the test environment.
 4. Keep machine-only `.gitignore` entries intact.
 
@@ -83,23 +87,27 @@ Before committing:
 
 Credentials, actual environment values, history, logs, and installed versions are stored under `~/.testmuai/rook/` by default. Set `ROOK_HOME` to isolate that state for CI or another account.
 
+Each session keeps a transcript at `~/.testmuai/rook/sessions///transcript.jsonl`, readable only by your user. It records every prompt Rook sent, every tool result, and every answer, so treat it like a log that can contain target data and environment values.
+
 ## Synchronization
 
 `rook sync` copies a reviewed project tree upstream as one write. Run results are stored locally first; `rook runs sync` reconciles finished runs that still owe remote records. Neither operation changes the historical input snapshots inside an existing run.
 
+Inside the interactive TUI, enter `/sync` after reviewing the files. This actual quickstart capture confirms that the triage agent was recorded upstream; it does not say that a test has run or passed:
+
 ## Review Files in Either UI
 
-Use `rook ui --local` from this workspace to browse its agents and runs, then open a run's scenario and scroll to **files**. The local UI reads the directory tree above, including unsynchronized and test-mode evidence. Keep that tree intact when moving an approved evidence bundle.
+Use `rook ui --local` from this workspace to browse its agents and runs, then open a run's scenario and choose **Request**, **Response**, **Verdict**, or **Artefacts** in the **Evidence** panel. The local UI reads saved records, including unsynchronized and test-mode evidence, but does not list every file in the directory tree above. Keep that tree intact when moving an approved evidence bundle. See the [earlier layout](/support/docs/rook-web-ui/#earlier-local-ui) if your CLI has the old files list.
 
 Use `rook ui` for the hosted Web UI's uploaded versions and run artifacts. Local edits are not visible there until synchronized, and `--test` runs stay local. Hosted IDs may differ from run-directory IDs; use the UI's links instead of constructing URLs. See the [local and hosted walkthrough](/support/docs/rook-web-ui/#choose-your-ui).
 
 ### Local UI: Browse the Scenario's Files {#local-ui-example}
 
-On a run's scenario result, scroll to **files**. The sample lists the request, response, hooks, snapshot, verdict, and additional judge evidence. Click a filename to inspect the corresponding on-disk record and use Back to return.
+On a run's scenario result, open **Evidence → Artefacts**. The CommerceCare sample lists `collect.json` and `judge-working.json`; select **View** to inspect a file and the drawer's return control to go back. Request, response, and verdict have their own drawer tabs. `hooks.json`, `snapshot.yaml`, and nested internal files remain on disk but are not listed here, so keep the original run directory for a complete investigation.
 
 ### Hosted Web UI: Browse Uploaded Artifacts {#hosted-ui-example}
 
-Open **run → scenario → Artefacts** for additional uploaded files. Main records have separate **Request**, **Response**, and **Verdict** tabs, so this tab is not a mirror of the local file list. The sample lists judge-working.json here.
+Open **run → scenario → Evidence → Artefacts** for additional uploaded files. The evidence drawer also has **Request**, **Response**, and **Verdict** tabs. Neither viewer's Artefacts list mirrors the complete run directory. This separate hosted triage sample lists judge-working.json here.
 
 ## Related Documentation
 

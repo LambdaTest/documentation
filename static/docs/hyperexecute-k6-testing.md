@@ -15,7 +15,7 @@
 
 This guide details how to execute your **k6** tests on **HyperExecute** using [YAML 0.1](/support/docs/hyperexecute-yaml-parameters/)
 
-### Prerequisites
+## Prerequisites
 
 To run the Tests on HyperExecute from your Local System, you are required:
 
@@ -24,7 +24,7 @@ To run the Tests on HyperExecute from your Local System, you are required:
 - [HyperExecute CLI](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/) in order to initiate a test execution Job .
 - Setup the [Environmental Variable](/support/docs/hyperexecute-environment-variable-setup/)
 
-### Step 1: Configure Your Test Suite
+## Step 1: Configure Your Test Suite
 
 You can use your own project to configure and test it. For demo purposes, we are using the sample repository.
 
@@ -33,11 +33,11 @@ Download or Clone the code sample for the k6 from the TestMu AI GitHub repositor
 
  View on GitHub
 
-### Step 2: Setup the CLI in your Test Suite
+## Step 2: Setup the CLI in your Test Suite
 
 After cloning / downloading the sample repo, you need to setup the CLI and the environment variables.
 
-#### Download the HyperExecute CLI
+### Download the HyperExecute CLI
 
 The CLI is used for triggering the tests on HyperExecute. It is recommend to download the CLI binary on the host system and keep it in the root directory of the suite to perform the tests on HyperExecute.
 
@@ -49,7 +49,7 @@ You can download the CLI for your desired platform from the below mentioned link
 | MacOS | https://downloads.lambdatest.com/hyperexecute/darwin/hyperexecute |
 | Linux | https://downloads.lambdatest.com/hyperexecute/linux/hyperexecute |
 
-#### Setup Environment Variable
+### Setup Environment Variable
 
 Now, you need to export your environment variables *LT_USERNAME* and *LT_ACCESS_KEY* that are available in the [TestMu AI Profile page](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/details/profile).
 
@@ -61,7 +61,7 @@ export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
   {`set LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
 set LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 
-### Step 3: Configure YAML in your Test Suite
+## Step 3: Configure YAML in your Test Suite
 
 You will have to add these flags mandatorily in your YAML file to execute the k6 tests:
 
@@ -87,7 +87,7 @@ env:
 https://github.com/LambdaTest/HYP-K6-browser-sample/blob/main/hyperexecute.yaml
 ```
 
-### Step 4: Execute your Test Suite
+## Step 4: Execute your Test Suite
 
 > **NOTE :** In case of MacOS, if you get a permission denied warning while executing CLI, simply run **`chmod u+x ./hyperexecute`** to allow permission. In case you get a security popup, allow it from your **System Preferences** → **Security & Privacy** → **General tab**.
 
@@ -101,6 +101,6 @@ OR use this command if you have not exported your username and access key in the
 
     {`./hyperexecute --user ${ YOUR_LAMBDATEST_USERNAME()} --key ${ YOUR_LAMBDATEST_ACCESS_KEY()} --config RELATIVE_PATH_OF_YOUR_YAML_FILE `}
 
-### Step 5: Monitor the Test Execution
+## Step 5: Monitor the Test Execution
 
 Visit the [HyperExecute Dashboard](https://www.testmuai.com/login/?redirectTo=https://hyperexecute.lambdatest.com/hyperexecute) and check your Job status.

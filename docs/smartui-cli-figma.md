@@ -315,7 +315,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         "text": "   echo $PROJECT_TOKEN"
       }
     ],
-    "dateModified": "2026-09-09T19:10:37+05:30"
+    "dateModified": "2026-09-29T12:00:00+05:30"
   }) }}
 />
 
@@ -443,7 +443,7 @@ Once, the `designs` file will be created, you will be seeing the sample pre-fill
 
 ```json title="/smartui-cli-figma-project/designs.json"
 {
-    "depth":2, //Figma Tree depth - (Optional), change the value according to the your file structure
+    "depth":2, //Optional. 2 renders top-level frames; leaving it out renders every layer and uses more Figma API quota
     "figma_config": [
       {
         "figma_file_token": "<Required Figma File token>",
@@ -557,7 +557,7 @@ Please read the following table for more information about the configuration fil
 | -------------- | ---------------------------------------------------------------------------------------------------------------------------------- | --------- |
 | figma_file_token       | File token for your required Figma file. You can use multiple figma files in the same configuration.| Mandatory |
 | figma_ids  | Comma separated list of nodes that you care about in the document. If specified, only a subset of the document will be returned corresponding to the nodes listed, their children, and everything between the root node and the listed nodes. | Optional |
-| depth (int)    | Positive integer (>1) representing how deep into the document tree to traverse. For example, setting it to 2 returns Pages and all top level objects on each page. Not setting this parameter returns all nodes | Optional |
+| depth (int)    | How deep into the Figma document tree to read. Every node in the tree that is read becomes a screenshot, so this decides how many images are rendered: `2` renders pages and their top-level frames, and leaving it out renders every layer in the file (or in the listed `figma_ids`). Keep it at `2` unless you need nested layers; see [Figma API usage and rate limits](#figma-api-usage-and-rate-limits). | Optional |
 
 ### **Step 5:** Uploading the Figma files on SmartUI Cloud using CLI
 
@@ -783,6 +783,22 @@ You can see the SmartUI dashboard to view the results. This will help you identi
 </TabItem>
 </Tabs>
 
+## Figma API usage and rate limits
+
+Every upload calls the Figma REST API with your `FIGMA_TOKEN`, and Figma limits how many calls a token can make. When the limit is reached, Figma answers with HTTP 429 and SmartUI cannot fetch your frames.
+
+For each entry in `figma_config`, `upload-figma` makes one `GET /v1/files/<file>` call and one `GET /v1/images/<file>` call that renders every node it read. The number of images Figma has to render depends on `depth`: leaving it out renders every layer, which makes the image call much more expensive on a large file.
+
+SmartUI does not wait and retry a rate-limited call. The command fails with Figma's reason, for example `Figma API rate limit reached for your token. Your file is on the 'starter' plan tier ... and your token's rate-limit bucket is 'low'`.
+
+How to stay under the limit:
+
+- Set `depth` to `2` and list only the frames you need in `figma_ids`.
+- Wait before retrying. Figma's limits reset over minutes, not seconds, so an immediate re-run usually fails again.
+- Avoid re-running the Figma upload in every pipeline run when the designs have not changed.
+- Use a token that belongs to an Editor seat on a paid Figma plan. Figma puts tokens of View or Collab seats, and files on the free Starter plan, in its lowest rate-limit bucket.
+- Check Figma's own [rate limit documentation](https://developers.figma.com/docs/rest-api/rate-limits/) for the current limits of your plan.
+
 ## Troubleshooting
 
 <VerifiedTag value="Verified" />
@@ -816,6 +832,14 @@ Validate Node IDs
 - Figma screenshots don't match SDK screenshots
 - Comparison shows mismatches even when designs are identical
 **Solutions**:
+
+</TabItem>
+<TabItem value='figma-rate-limit' label='Figma Rate Limit (429)' >
+
+Figma Rate Limit (429)
+
+- The command fails with `Figma API rate limit reached for your token`
+   - Figma refused a request from your token. See [Figma API usage and rate limits](#figma-api-usage-and-rate-limits) for how many requests an upload makes and how to reduce them
 
 </TabItem>
 <TabItem value='check-screenshot-names' label='Check Screenshot Names' >

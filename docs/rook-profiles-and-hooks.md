@@ -64,7 +64,7 @@ import { BRAND_URL } from '@site/src/component/BrandName';
       "height": 630
     },
     "inLanguage": "en",
-    "articleSection": "Agent Assurance Platform",
+    "articleSection": "Agent Assurance",
     "keywords": [
       "rook profiles",
       "rook hooks",
@@ -97,7 +97,7 @@ import { BRAND_URL } from '@site/src/component/BrandName';
         "https://www.youtube.com/@TestMuAI"
       ]
     },
-    "dateModified": "2026-09-11"
+    "dateModified": "2026-10-13"
   }) }}
 />
 
@@ -105,7 +105,7 @@ import { BRAND_URL } from '@site/src/component/BrandName';
 
 A profile tells Rook **how to reach your live agent and capture its evidence**. This guide takes you from a working request, through prompt-based profile generation and verification, to hook contracts, lifecycle phases, delayed evidence, and repair—all on one page.
 
-Rook 0.1.3 uses reviewable Node.js hook scripts, not a fixed HTTP or command YAML recipe. Discovery describes what the agent should do; the profile selects the endpoint, command, environment, and session behavior you actually test.
+Rook uses reviewable Node.js hook scripts, not a fixed HTTP or command YAML recipe. Discovery describes what the agent should do; the profile selects the endpoint, command, environment, and session behavior you actually test.
 
 ## Before You Start
 
@@ -123,6 +123,8 @@ Profile authoring and repair use credits and invoke the target. Those calls have
 <span id="let-rook-write-the-profile" />
 
 ## Add a Profile Interactively
+
+Launch `rook` from your agent workspace. Enter the following slash command inside its interactive TUI, not in your shell:
 
 ```text
 /profile add staging
@@ -142,6 +144,12 @@ Do not issue refunds or change the test order during verification.
 
 This is a template; replace the endpoint, fields, and fixture with a request you have verified.
 
+The screenshot below shows that interaction in the public triage sample: Rook receives a plain-language endpoint and response mapping, starts `author_profile`, and pauses before writing its hook script. The profile is called `local-triage` in this example, rather than `staging`.
+
+<img loading="lazy" src={require('../assets/images/rook/guides/rook-tui-profile-authoring.png').default} alt="Rook interactive profile authoring with the user's HTTP integration description, author_profile progress, and permission to write the local-triage hook script" width="2200" height="1366" className="doc_img"/>
+
+Read each requested action and approve only work needed for the integration. Use **yes** for that action once; **no** declines it. Wait for verification to finish before treating the profile as ready. The screenshot is a permission checkpoint, not a successful probe.
+
 ## Generate From a File or Command
 
 Put the integration material in <code>call.txt</code>, then run from a shell:
@@ -157,6 +165,22 @@ Rook writes scripts, invokes the target, and corrects mistakes found during veri
 
 ## Inspect and Test the Result
 
+In the TUI, enter `/profile` to open the picker. Type to filter, use the arrow keys, and press Enter to select a profile; Esc returns without changing the selection. The footer shows the active profile.
+
+<img loading="lazy" src={require('../assets/images/rook/guides/rook-tui-profile-picker.png').default} alt="Rook interactive profile picker showing the active local-triage profile with its execute hook, plus New profile" width="2200" height="453" className="doc_img"/>
+
+This quickstart profile has only `execute`, as a newly generated profile often does. Other profiles can add `prepare`, `open`, `close`, and `collect`; Rook owns `judge`, so it is not listed as a profile hook.
+
+Inspect your generated profile before testing it:
+
+```text
+/profile show staging
+/profile test staging --goal "show the status of test order ORD-1042"
+/profile use staging
+```
+
+The equivalent commands from a regular shell are:
+
 ```bash
 rook profile
 rook profile show staging
@@ -164,7 +188,11 @@ rook profile test staging --goal "show the status of test order ORD-1042"
 rook profile use staging
 ```
 
-The bare command lists profiles in a shell or opens a picker in the TUI. <code>profile test</code> invokes the existing hooks without asking a model to rewrite them. Check that the returned value is an agent answer, not a job ID or success status.
+The bare command lists profiles in a shell or opens a picker in the TUI. <code>profile test</code> invokes the target through the existing hooks without asking a model to rewrite them. Check that the returned value is an agent answer, not a job ID or success status.
+
+<img loading="lazy" src={require('../assets/images/rook/guides/rook-tui-profile-verified.png').default} alt="Completed Rook profile verification returning the triage answer and four tool calls, with the saved local-triage profile active in the TUI footer" width="2200" height="1207" className="doc_img"/>
+
+The sample's verified profile reports `calls` but not session state or measured usage. Check the capabilities your own target actually returned; do not infer them from a successful HTTP response alone.
 
 Generated files live below:
 
@@ -256,7 +284,7 @@ concurrency: 1
 | `hooks` | Phase-to-script mapping. Each entry can also define a timeout and delay. Relative paths resolve from the active agent directory. |
 | `env` | Required local environment references and their operational purpose. The structure has no secret-value field. |
 | `capabilities` | Observed evidence capabilities that determine scenario runnability. |
-| `hook_env` | Additional references supplied to every hook. Rook-owned `ROOK_*` values take precedence. |
+| `hook_env` | Fixed, non-secret values supplied to every hook, such as a region. They are stored and synced as written, so put credentials under `env` instead. Rook-owned `ROOK_*` values take precedence. |
 | `concurrency` | Default number of scenarios in flight. Use `1` when hooks touch shared state. |
 
 ## Hook Inputs
@@ -318,6 +346,18 @@ If the first turn of a multi-turn scenario returns no conversation handle, Rook 
 A non-zero exit is a failed hook and standard error is its diagnosis. An `execute` or `collect` failure fails the affected scenario. Failures in the other optional phases are reported while the run preserves completed work.
 
 Map the target's actual answer field (`output`, `message`, `reply`, or another name) to `agent_reply`. Do not invent calls or token counts. Return `calls: []` only when you observed that no calls occurred; omitting `calls` means they were not observable. A CLI hook must forward the goal to its child process and close the child's input stream.
+
+## Hooks for Red-Team Scenarios {#red-team-hooks}
+
+Some attack patterns cannot be judged from the reply alone. Rook skips them, with a reason that names the missing hook, until the profile provides it:
+
+| Skip reason | What to add |
+|---|---|
+| Requires fixture seeding | An `open` hook that reads `$ROOK_STATE_DIR/attack-fixture.json`, seeds the content into the target, and returns `fixture_seeded: true`, a `fixture_id` equal to the file's `id`, the same `attempt`, and the exact `established_preconditions` set. |
+| Requires independent collected evidence | A `collect` hook that reports the observed control and outcome. |
+| Requires a fresh session | `open` and `close` hooks, so the probe runs in a second conversation with a distinct handle. |
+
+Rook does not call the target when the fixture acknowledgement does not match. For patterns judged from collected evidence, a compromise counts only when `collect` returns a `compromise_observation` with `action_observed: true`, the matched success signal, a `source_kind` of `tool_trace`, `protected_state`, or `callback_receipt`, and the evidence it quotes. A defended side effect needs the target's refusal plus a `defence_observation` with `action_observed: false` and the matched failure signal.
 
 ## Capabilities Are Observed
 
@@ -384,7 +424,7 @@ rook profile test staging --goal "show the status of test order ORD-1042"
 rook sync
 ```
 
-Repair can change scripts and spend credits. Inspect the diff and test it before syncing. Rook has no <code>profile edit</code>, <code>profile curl</code>, or <code>profile rm</code> subcommands in 0.1.3; edit the plain files deliberately when needed.
+Repair can change scripts and spend credits. Inspect the diff and test it before syncing. Rook has no <code>profile edit</code>, <code>profile curl</code>, or <code>profile rm</code> subcommands; edit the plain files deliberately when needed.
 
 ## Keep Credentials Out of the Profile
 
@@ -413,20 +453,24 @@ Scripts belong to the agent. One script can switch on the phase argument, or sep
 
 Use either interface to check the profile context without invoking it:
 
-- **Local:** run `rook ui --local`, open the agent, and read its **profiles** panel. Use `rook profile show <name>` for the complete local profile and phase mapping; the local panel is not the hosted specification dialog.
-- **Hosted:** after `rook sync`, run `rook ui` and open the agent's **Summary** page. Use **View Full Spec** on a profile to inspect its recorded hook mapping. A run's profile link identifies the revision used for that run—not necessarily today's local file.
+- **Local:** run `rook ui --local`, open the agent's **Profiles** tab, and expand a profile to read its YAML inline. The execute-script link opens its source in a dialog. You can also use `rook profile show <name>` in the CLI. See the [earlier layout](/support/docs/rook-web-ui/#earlier-local-ui) if your CLI predates this viewer.
+- **Hosted:** after `rook sync`, run `rook ui` and open the agent's **Profiles** tab. Expand the intended profile to see its hook phases, then click **profile.yaml** for the saved specification. On a run, the profile name opens the revision used for that run; the adjacent link opens the current profile instead.
 
 Neither UI creates, repairs, or tests hooks. Continue authoring and phase execution in the CLI. The [combined walkthrough](/support/docs/rook-web-ui/#choose-your-ui) shows both layouts.
 
 ### Local UI: Check the Profile and Script {#local-ui-example}
 
-Open the agent and read **profiles**. The sample maps the local-triage profile's execute phase to scripts/local-triage.mjs. This panel is a summary; inspect the complete file with the CLI before changing phases or credentials.
+Open **CommerceCare → Profiles** in the saved local demo. The `commerce-hooks` profile maps **prepare**, **open**, **execute**, **close**, and **collect** to `scripts/commerce-hooks.mjs`. Read each phase's timeout, required environment-variable names, and capabilities in the YAML. Configured phases are not proof that those hooks executed. The local YAML view differs from the hosted phase timeline below.
 
-<img loading="lazy" src={require('../assets/images/rook/rook-local-agent.png').default} alt="Local agent page showing local-triage with its execute phase and scripts/local-triage.mjs hook" width="1440" height="900" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/rook/rook-local-profiles.png').default} alt="Local Profiles tab with commerce-hooks YAML configuring all five hook phases and required environment names" width="1440" height="900" className="doc_img"/>
 
 ### Hosted Web UI: Inspect the Recorded Profile {#hosted-ui-example}
 
-On **Summary → Profiles**, choose **View Full Spec**. The dialog shows the synchronized YAML, including the execute mapping and observed calls capability. The example needs only execute; other hooks are optional, not missing setup.
+Open **Profiles** and expand the intended profile. The phase timeline shows **prepare**, **open**, **execute**, **close**, and **collect**. The example needs only execute; **1 of 5 phases** counts configured hooks, not completed work. Optional phases marked **not defined** are not failures. Timeout and delay badges describe configured limits, not observed timings. Rook owns the judge phase; it is not a profile hook.
+
+<img loading="lazy" src={require('../assets/images/rook/rook-web-profiles.png').default} alt="Hosted Profiles phase timeline showing local-triage with only execute configured and a five-minute timeout" width="1440" height="900" className="doc_img"/>
+
+Click **profile.yaml** to inspect the recorded hook mappings, environment requirements, and capabilities. A **README.md** link appears when authoring instructions were saved. Linked hook-script paths open their recorded files; a plain-text path means no artifact is available. Older synchronized profiles may lack some supporting files.
 
 <img loading="lazy" src={require('../assets/images/rook/rook-web-profile-spec.png').default} alt="Hosted profile specification dialog showing the execute hook, empty environment requirements, and calls capability" width="1440" height="900" className="doc_img"/>
 
