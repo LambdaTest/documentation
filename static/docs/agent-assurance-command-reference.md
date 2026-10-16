@@ -2,7 +2,7 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
-Use `rook` to start the interactive terminal, or `rook ` from your shell. This reference was checked against the **public Rook 0.1.5 CLI** on September 25, 2026. It groups command syntax, examples, RCA, state changes, diagnostics, and output handling on one page. Commands that invoke the target or spend credits still require appropriate approval.
+Use `rook` to start the interactive terminal, or `rook ` from your shell. This reference was checked against the **public Rook 0.1.11 CLI** on October 13, 2026. It groups command syntax, examples, RCA, state changes, diagnostics, and output handling on one page. Commands that invoke the target or spend credits still require appropriate approval.
 
 Using Claude Code or another coding assistant? Describe your goal in chat with the [Rook skill](/support/docs/rook-coding-agents/#guided-skill-actions); the assistant handles these commands. This page is the explicit CLI reference, not a list of commands you must manually repeat while using a skill.
 
@@ -36,7 +36,7 @@ rook profile add --help
 
 Inside the terminal, use `/help run`. Do not paste slash commands into a normal shell.
 
-The screenshots below were captured inside the **Rook 0.1.5 interactive TUI**, using /help &lt;command&gt; in a saved demo workspace. They show command help, not completed paid operations. Only the Rook content is captured; no desktop, window title, or browser chrome is included.
+The screenshots below were captured inside the **Rook 0.1.11 interactive TUI**, using /help &lt;command&gt; in the quickstart workspace. They show command help, not completed paid operations. Only the Rook content is captured; no desktop, window title, or browser chrome is included.
 
 ## Terminal and Help {#terminal-and-help}
 
@@ -107,12 +107,12 @@ The shell form is rook guide.
 The guide covers this sequence:
 
 ~~~text
-login → project → explore → agent → generate → profile → run → sync
+login → project → explore → agent → generate → profile → sync → run
 ~~~
 
-The built-in guide presents run before sync, but a normal timeline run requires an upstream project version. In a new project, synchronize the reviewed tree before the first normal run; use run --test only when the draft run should stay local.
+A normal timeline run requires an upstream project version, so the guide puts sync before run. In a new project, synchronize the reviewed tree before the first normal run; use run --test only when the draft run should stay local.
 
-The guide also explains which operations spend credits, where local files live, why secrets never synchronize, and how to inspect status at any point. It reads command metadata and state; it does not invoke the target or spend credits.
+The guide also lists the commands that spend credits (explore, generate, profile add, profile fix, run, ask, and report --rca), where local files live, what leaves the machine, and how to inspect status at any point. It reads command metadata and state; it does not invoke the target or spend credits.
 
 ### /help {#help}
 
@@ -138,7 +138,7 @@ Help, slash-command completion, and shell parsing are derived from the same comm
 
 ### /docs {#docs}
 
-Use /docs to print and open the public Rook repository.
+Use /docs to print and open the Rook documentation site.
 
 #### Syntax {#docs-syntax}
 
@@ -600,7 +600,7 @@ The shell form is rook generate with the same options.
 
 ```text
 /generate --total 20 --class functional,adversarial
-/generate --category boundary,reliability -- emphasize retries and duplicate requests
+/generate --category boundary,integration -- emphasize retries and duplicate requests
 ```
 
 Generation reads the current feature model, plans coverage, writes scenarios, and checks runnability. It does not invoke the live target. Unchanged features reuse their scenarios without a model call; --force intentionally bypasses that optimization.
@@ -849,7 +849,7 @@ To include RCA with a new, already approved scenario run, add --rca to that run'
 
 #### Automation and Hosted Review {#rook-report-automation-and-hosted-review}
 
-Use rook report &lt;run-id&gt; --json to read the structured local report. Successful command completion means the report was read, not that the agent passed. Inspect its totals and the run’s completion using the [CI checks](/support/docs/agent-assurance-ci-cd/).
+Use rook report &lt;run-id&gt; --json to read the structured local report. Successful command completion means the report was read, not that the agent passed. Besides totals, the report can carry summary_claims (the computed headline statements), coverage_gaps, and redteam_coverage for adversarial scenarios. Inspect its totals and the run’s completion using the [CI checks](/support/docs/agent-assurance-ci-cd/).
 
 Use rook ui to open synchronized results in the [Web UI](/support/docs/rook-web-ui/) or rook ui --local for the files on this machine.
 
@@ -986,7 +986,7 @@ rook mcp disable  [--json]
 rook mcp approve  [--origin project|discovered] [--json]
 ~~~
 
-For stdio servers, pass the command after the server name, using -- to separate its arguments from Rook's options. The registry accepts declarations for stdio, http, sse, and ws; remote declarations require --url. In public 0.1.5, only stdio connections execute. The other transports remain listed as unsupported-transport; accepting a declaration is not a successful connection.
+For stdio servers, pass the command after the server name, using -- to separate its arguments from Rook's options. The registry accepts declarations for stdio, http, sse, and ws; remote declarations require --url. Currently, only stdio connections execute. The other transports remain listed as unsupported-transport; accepting a declaration is not a successful connection.
 
 #### Real-world verification example {#mcp-real-world-verification-example}
 
@@ -1051,7 +1051,7 @@ Use --session with a recorded Rook session ID to locate its diagnostic files. Th
 
 ### /update {#update}
 
-Use /update to check for a newer public Rook release. In 0.1.5 it can also perform an upgrade for a recognized global npm or recorded shell installation, so treat it as an installation-changing command, not a read-only version check.
+Use /update to check for a newer public Rook release. It can also perform an upgrade for a recognized global npm or recorded shell installation, so treat it as an installation-changing command, not a read-only version check.
 
 #### Syntax {#update-syntax}
 
@@ -1063,11 +1063,11 @@ Use /update to check for a newer public Rook release. In 0.1.5 it can also perfo
 
 The shell form is rook update with the same argument and option.
 
-Public releases use semantic versions such as 0.1.5. A recognized npm installation is updated at its recorded prefix; a recognized shell installation uses its recorded directory. Homebrew installations print the appropriate brew upgrade command instead. Project-local npm copies, older shell installs without a usable record, and ambiguous installations can require manual instructions. Review the output and verify rook --version afterward.
+Public releases use semantic versions such as 0.1.11. A recognized npm installation is updated at its recorded prefix; a recognized shell installation uses its recorded directory. Homebrew installations print the appropriate brew upgrade command instead. Project-local npm copies, older shell installs without a usable record, and ambiguous installations can require manual instructions. Review the output and verify rook --version afterward.
 
 If you previously chose “never ask again” in the TUI update notice, run /update auto to re-enable automatic notices.
 
-The latest public release checked on September 25, 2026 is [0.1.5](https://github.com/LambdaTest/rook/releases/tag/v0.1.5). Use the installed command's help for version-specific options. If an npm 0.1.1 or 0.1.2 install cannot update, follow the [public-registry repair command](/support/docs/rook-installation/#repair-an-npm-011-or-012-installation). Windows users can follow [PowerShell setup and upgrades](/support/docs/rook-installation/#windows).
+The latest public release checked on October 13, 2026 is [0.1.11](https://github.com/LambdaTest/rook/releases/tag/v0.1.11). Use the installed command's help for version-specific options. If an npm 0.1.1 or 0.1.2 install cannot update, follow the [public-registry repair command](/support/docs/rook-installation/#repair-an-npm-011-or-012-installation). Windows users can follow [PowerShell setup and upgrades](/support/docs/rook-installation/#windows).
 
 ## Export Diagnostic Logs {#export}
 
@@ -1083,11 +1083,11 @@ rook export logs --out ./rook-diagnostics.zip
 | --session &lt;id&gt; | Also include the selected session transcript. |
 | --all-sessions | Include every recorded session for this project. |
 
-Use rook doctor --session &lt;session-id&gt; to identify relevant paths first. Start with the smallest useful bundle. Export does not upload the files, but the bundle can contain paths, session text, and sensitive target data. Review and redact before sharing; do not publish home credentials or raw transcripts.
+Use rook doctor --session &lt;session-id&gt; to identify relevant paths first. Start with the smallest useful bundle. Export does not upload the files, but the bundle can contain paths, session text, and sensitive target data. A bundled session includes its transcript (transcript.jsonl): every prompt Rook sent, every tool result the conversation carried, and every answer. Tool output can quote environment values, including values stored with env set. Review and redact before sharing; do not publish home credentials or raw transcripts.
 
 ## Migration From Older Examples
 
-| Older syntax | Rook 0.1.5 |
+| Older syntax | Current Rook |
 |---|---|
 | --entity | Select with rook project use and rook agent use before the command. |
 | profile list, agent list | Use bare profile or agent. |
@@ -1100,13 +1100,13 @@ Use rook doctor --session &lt;session-id&gt; to identify relevant paths first. S
 
 ### /budget {#budget}
 
-This older command is not in 0.1.5. Use /plan for account credits and read cost/progress output for the active operation.
+This older command is no longer available. Use /plan for account credits and read cost/progress output for the active operation.
 
 The TUI status bar shows the account balance and credits spent in the current session. Model-backed phases report their spending. Rook checks credit boundaries between calls and preserves completed local work when credits are exhausted.
 
 ### /new {#new}
 
-This older command is not in 0.1.5. Exit and start rook again to begin another terminal session; project files remain on disk.
+This older command is no longer available. Exit and start rook again to begin another terminal session; project files remain on disk.
 
 Active project and agent selections, profiles, scenarios, runs, credentials, and environment variables persist across sessions. Restarting the terminal does not reset stored state; use the relevant commands when you intend to change it.
 
@@ -1121,13 +1121,13 @@ Active project and agent selections, profiles, scenarios, runs, credentials, and
 
 Only use a flag where `rook help ` lists it.
 
-In 0.1.5, plan, status, run, and a normal report have structured output. Commands such as explore, generate, sync, profile operations, paid report --rca, and update can emit text even when they accept --json. Check the actual stdout before parsing it, then inspect the relevant saved files or make a separate structured read.
+With --json, plan, status, run, a normal report, scenarios list, project --workspace, mcp, and ask write one JSON document to stdout. Commands such as explore, generate, sync, profile operations, paid report --rca, and update can emit text even when they accept --json. Check the actual stdout before parsing it, then inspect the relevant saved files or make a separate structured read.
 
 Keep stdout and stderr separate when saving JSON: do not use 2>&amp;1 for a machine-readable result file. Refusals and parser errors can leave stdout empty. A failure document may contain error or reason; ok: true can accompany a discarded run, so it is not sufficient to establish success. See the [public headless contract](https://github.com/LambdaTest/rook/blob/main/skill-installer/skills/references/headless-contract.md).
 
 ## Exit Codes
 
-In Rook 0.1.5, process success and agent quality are separate. Do not use the older 0/1/2/3/4 mapping as a release gate: the current run/report paths can return success when an outcome or report was produced, even if its verdicts require attention.
+Process success and agent quality are separate. Do not use the older 0/1/2/3/4 mapping as a release gate: the current run/report paths can return success when an outcome or report was produced, even if its verdicts require attention.
 
 Treat a non-zero exit as command failure. After a successful run --json, require ok: true, halted: false, a report, and the expected completed and passed counts. Reject missing, discarded, partial, or unverifiable results according to your release policy. A report --json success only confirms the stored report was read.
 
@@ -1138,7 +1138,7 @@ See the [tested CI gate](/support/docs/agent-assurance-ci-cd/#gate-on-completion
 | Variable | Effect |
 |---|---|
 | `ROOK_HOME` | Credentials, environment values, history, and local state. Default: `~/.testmuai/rook`. |
-| `ROOK_ENV` | Deployment selection; public packages default to `prod`. Keep the setting consistent for login, project operations, synchronization, and hosted review. |
+| `ROOK_ENV` | Deployment selection; public packages default to `prod`. An unrecognized value stops the command with an error. Keep the setting consistent for login, project operations, synchronization, and hosted review. |
 | `LT_USERNAME`, `LT_ACCESS_KEY` | Account credentials for unattended authentication. Provide both; they override stored browser-login credentials. |
 | `ROOK_API_URL` | Overrides the versioned Rook API base URL. |
 | `ROOK_CONTROLLER_URL` | Overrides the controller base URL. |

@@ -32,7 +32,7 @@
 
 # How to Migrate Your Selenium Suite to TestMu AI
 
-Already have Selenium tests running locally? You can run them on the TestMu AI cloud grid with three changes: swap the driver URL, add your credentials, and set the capabilities. Your test logic stays the same.
+Already have Selenium End-to-End (E2E) testing running locally? You can run it on the TestMu AI cloud grid with three changes: swap the driver URL, add your credentials, and set the capabilities. Your test logic stays the same.
 
 If you are moving from BrowserStack or Sauce Labs, use these dedicated migration guides with capability mapping tables.
 

@@ -2,7 +2,7 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
-If you already write Cypress tests, running them on TestMu AI lets you execute those same tests across multiple browser versions on the cloud instead of a single local browser. You do it by cloning the sample project, setting your credentials, configuring capabilities in `lambdatest-config.json`, and running the test with the TestMu AI Cypress CLI.
+If you already write Cypress tests, running your End-to-End (E2E) testing on TestMu AI lets you execute those same tests across multiple browser versions on the cloud instead of a single local browser. You do it by cloning the sample project, setting your credentials, configuring capabilities in `lambdatest-config.json`, and running the test with the TestMu AI Cypress CLI.
 
 ## Prerequisites
 

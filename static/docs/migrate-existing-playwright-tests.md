@@ -18,7 +18,7 @@
 
 # How to Migrate Existing Playwright Tests to TestMu AI
 
-If you already run Playwright tests on a local grid, you can move them to TestMu AI to execute the same scripts across real browsers and operating systems in the cloud. The migration takes only a few lines of change: you point Playwright at the TestMu AI CDP endpoint and pass a `capabilities` object that selects the browser and OS combination for each run.
+If you already run Playwright tests on a local grid, you can move your End-to-End (E2E) testing to TestMu AI to execute the same scripts across real browsers and operating systems in the cloud. The migration takes only a few lines of change: you point Playwright at the TestMu AI CDP endpoint and pass a `capabilities` object that selects the browser and OS combination for each run.
 
 ## Sample Playwright Script Running on a Local Machine
 

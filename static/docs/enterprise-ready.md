@@ -87,7 +87,7 @@ TestMu AI maintains enterprise-grade security across the platform with industry-
 - Private tenant deployment for AI features (Azure OpenAI)
 
 **Resources:**
-- [Security & Trust Page](https://www.testmuai.com/trust/security#platform-security)
+- [Security & Trust Page](https://www.testmuai.com/trust/security/#platform-security)
 - [Secrets Management](/support/docs/hyperexecute-how-to-save-and-manage-secrets/)
 
 ## Deployment Options

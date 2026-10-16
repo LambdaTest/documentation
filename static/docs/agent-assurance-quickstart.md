@@ -12,7 +12,7 @@ Install → launch Rook → sign in → select a project
   → generate and review scenarios → sync → approve one run → inspect evidence
 ```
 
-The interactive workflow and terminal screenshots were tested with **Rook 0.1.5** on September 28, 2026. Discovery, profile generation, scenario generation, and judging use TestMu AI credits; even a small suite can involve several model calls. Review the proposed work and credit balance before approving it. The browser examples below are separately identified saved runs.
+The interactive workflow and terminal screenshots were tested with **Rook 0.1.11** on October 13, 2026. Discovery, profile generation, scenario generation, and judging use TestMu AI credits; even a small suite can involve several model calls. Review the proposed work and credit balance before approving it. The browser examples below are separately identified saved runs.
 
 Already have a live agent? Follow the same sequence with your own [source or requirements](/support/docs/agent-assurance-connect-and-explore-agents/) and [invocation profile](/support/docs/rook-profiles-and-hooks/#add-a-profile-interactively).
 
@@ -31,14 +31,14 @@ curl -fsSL https://raw.githubusercontent.com/LambdaTest/rook/main/install.sh | b
 ```
 
 ```bash
-# npm (use Node.js 22 or newer)
+# npm (use Node.js 20 or newer)
 npm install -g @testmuai/rook
 ```
 
 PowerShell on Windows x64:
 
 ```powershell
-npm.cmd install -g @testmuai/rook@0.1.5
+npm.cmd install -g @testmuai/rook
 ```
 
 Then check your installation:
@@ -103,7 +103,7 @@ Invoke-RestMethod -Uri 'http://127.0.0.1:19110/v1/triage' -Method Post -ContentT
 
 The response should say T-1043 triaged as S1 and assigned to platform. and include the recorded tool steps.
 
-### 2. Open the TUI, Sign In, and Explore {#open-the-tui-and-explore}
+### 2. Open the TUI, sign in, and explore {#open-the-tui-and-explore}
 
 Open the sample folder in your Rook terminal:
 
@@ -203,6 +203,23 @@ Choose **proceed** only if the scope matches the two requested tickets. Wait for
 
 The count is a generation target, not a guarantee. In this capture, two scenarios were written and both are runnable against `local-triage`; neither has passed yet. Review the resulting files before running them. Check that every criterion can be evaluated from the answer or the calls your hook actually returns. For example, a JSON-path check against $.steps cannot inspect that field if your hook returned only an answer string.
 
+Also read each scenario's `calls` list. A `called_with` check needs the arguments to match; with empty `arguments: {}` there is nothing to compare, and the run reports that call as **Unable to Verify** even when the agent made it. In this capture, both generated scenarios had such checks. Add the arguments you expect, or use `called` when only the call matters, then save the file:
+
+```yaml
+calls:
+  - tool: get_ticket
+    expect: called_with
+    arguments: { ticket_id: T-1043 }
+  - tool: set_severity
+    expect: called_with
+    arguments: { ticket_id: T-1043, severity: S1 }
+  - tool: assign_team
+    expect: called_with
+    arguments: { ticket_id: T-1043, team: platform }
+  - tool: reply_to_customer
+    expect: called
+```
+
 Choose the scenario for **T-1043**. Do not assume it will always be SC-002.
 
 ### 5. Sync, then run one scenario
@@ -217,7 +234,7 @@ Wait for the agent to be recorded upstream before starting the run:
 /run --only <your-T-1043-scenario-id> --profile local-triage --concurrency 1 --name first-triage-run
 ```
 
-Replace the placeholder with the generated scenario ID. Review the selected scenario and active profile before proceeding. This plan selects only `SC-002` and explicitly skips `SC-001`:
+Replace the placeholder with the generated scenario ID. Review the selected scenario and active profile before proceeding. This plan selects only `SC-001` and explicitly skips `SC-002`:
 
 Choose **proceed** to execute this reviewed scope, **discard** to run nothing, or **change** to revise it. Read any additional permission prompts before approving. The plan is not a fixed credit quote; check `/plan` before starting.
 
@@ -235,7 +252,7 @@ First read the report, then choose either UI:
 /report
 ```
 
-The report names the saved run and its evidence directory. Check the counts, not just the percentage: this run executed one scenario and left four discovered feature areas untested. Reading `/report` does not rerun the target; do not add `--rca` unless you intend to request additional paid analysis.
+The report names the saved run and its evidence directory. Check the counts, not just the percentage: this run executed one scenario, and four of the five discovered features were not tested. Reading `/report` does not rerun the target; do not add `--rca` unless you intend to request additional paid analysis.
 
 | Review on this machine | Review with your team |
 |---|---|
@@ -250,7 +267,7 @@ In the verified smoke test, the selected scenario passed with four observed tool
 
 #### Local UI: Review a Result {#local-ui-example}
 
-The redesigned local result has **Acceptance criteria** filters and an **Evidence** drawer for request, response, verdict, and artifacts. This screenshot uses a separate saved CommerceCare demo (SC-006), not the triage execution above. It illustrates one failed requirement and two unverifiable criteria; your scenario IDs and outcomes will differ. Public CLI 0.1.5 still uses the earlier scrolling layout—see the [rollout and navigation note](/support/docs/rook-web-ui/#earlier-local-ui).
+The redesigned local result has **Acceptance criteria** filters and an **Evidence** drawer for request, response, verdict, and artifacts. This screenshot uses a separate saved CommerceCare demo (SC-006), not the triage execution above. It illustrates one failed requirement and two unverifiable criteria; your scenario IDs and outcomes will differ. Public 0.1.6 and later include this viewer; 0.1.5 and earlier use the earlier scrolling layout—see the [rollout and navigation note](/support/docs/rook-web-ui/#earlier-local-ui).
 
 #### Hosted Web UI: The Uploaded Result {#hosted-ui-example}
 

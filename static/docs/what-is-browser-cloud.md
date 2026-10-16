@@ -2,7 +2,7 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
-TestMu AI is a scalable browser designed for AI agents to handle scraping, testing, and automation, without the overhead of managing infrastructure.
+TestMu AI is a scalable browser designed for AI agents to handle scraping, End-to-End (E2E) testing, and automation, without the overhead of managing infrastructure.
 
 Find all the guides, resources, and examples you need to build on TestMu AI Browser Cloud.
 

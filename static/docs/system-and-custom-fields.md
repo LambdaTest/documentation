@@ -28,6 +28,8 @@ Deleting a Status value of Test Runs, or unlinking a project from it, resets eve
 ### Custom Fields
 Allow you to store additional information beyond what System Fields offer. To create a new field, enter the required details and choose the appropriate data type from the **Type** function. Available types include String, Textarea, Number, Dropdown (Single Select), Dropdown (Multi Select), Boolean (Checkbox), Date, User, and URL.
 
+The type also decides how you can filter test cases by the field. Dropdown (Single Select), Dropdown (Multi Select), and User fields can be used to include or exclude values in filters. See [Include or Exclude Values](/support/docs/manual-test-case-creation/#include-or-exclude-values).
+
 For Dropdown types (Single Select and Multi Select), you also have the option to add values.
 
 Enter the name, placeholder, mark the field, apply it to all future projects if required and click create.
