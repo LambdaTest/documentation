@@ -180,6 +180,8 @@ import { CookieTrackingSignup } from '@site/src/component/CookieTracking';
 
 <b>[Note: This guide covers the migration of tests running on the cloud grid that uses Selenium 4 and Selenium 3]</b>
 
+To run Low Code Automation tests, import Test Management test cases or re-create flows in KaneAI, see the [BrowserStack to KaneAI migration guide](/support/docs/browserstack-to-kaneai-migration-guide/).
+
 ## Authentication
 Firstly, you need to change the authentication in your configuration settings of your test suite. For running tests on <BrandName /> Selenium Grid, you need to have a valid user_name and access_key to perform tests on our Grid. In case you do not have an account on <BrandName />, visit the <a href="https://www.testmuai.com/register/" onClick={CookieTrackingSignup}><BrandName /> signup page</a> and create a new account.
 <!-- 
