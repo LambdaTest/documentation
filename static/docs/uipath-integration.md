@@ -6,6 +6,8 @@ UiPath is a leading robotic process automation (RPA) platform powered by artific
 
 By integrating UiPath with TestMu AI's real device cloud, you can enhance your mobile test automation.
 
+If you are moving your test cases off UiPath Test Cloud, see the [UiPath Test Cloud to KaneAI migration guide](/support/docs/uipath-test-cloud-to-kaneai-migration-guide/).
+
 ## Integrating UiPath With TestMu AI
 
 **Step 1:** Log in to your UiPath account. From the right side, click on **Download Studio Desktop**.

@@ -300,3 +300,4 @@ Visit TestMu AI Web Automation dashboard to view your test execution result.
 ## Related migration guides
 
 - [Migrate Appium Tests from Sauce Labs](/support/docs/migrate-appium-tests-from-sauce-labs/) — move your Appium mobile test suite from Sauce Labs to TestMu AI.
+- [Sauce Labs to KaneAI migration guide](/support/docs/saucelabs-to-kaneai-migration-guide/): bring test cases into Test Manager and re-create Sauce AI tests in KaneAI.

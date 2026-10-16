@@ -45,3 +45,5 @@ In case, you wish to test locally or privately hosted websites, you can select t
 > The below test case demonstrates TestMu AI Selenium Automation's booking a demo functionality. First, it visits the TestMu AI Selenium Automation website, clicks on the "Book A Demo" button, enters the required fields and then presses the "Schedule Demo" button.
 
 3. Now visit the TestMu AI Automation Dashboard to view your test execution results.
+
+Moving your tests to KaneAI? The [testRigor to KaneAI migration guide](/support/docs/testrigor-to-kaneai-migration-guide/) shows how to collect your testRigor steps and data and re-create each test in natural language.
