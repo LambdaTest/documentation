@@ -134,12 +134,12 @@ The dialog shows how many scenarios each scope will run, so you can see the size
 
 **Step 1:** Open the job from the **Jobs** page and click **Re-Run** in the top bar.
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/features/rerun/1.png').default} alt="HyperExecute job details page with the Re-Run button in the top bar" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/features/rerun/1.png').default} alt="HyperExecute job details page for a failed job, with the Re-Run button in the top bar" className="doc_img"/>
 <br /><br />
 
 **Step 2:** In the dialog, pick the **scope**, pick the **commit**, adjust **concurrency** if you want to, then click **Rerun**. The new job opens and you can follow it like any other.
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/features/rerun/2.png').default} alt="Rerun Job dialog showing scope options with scenario counts, the commit dropdown and the concurrency slider" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/features/rerun/2.png').default} alt="Rerun Job dialog showing Scope of Rerun with Failed and Non Executed Scenarios and All Scenarios counts, the commit dropdown and the concurrency slider" className="doc_img"/>
 
 ## How failed scenarios are picked
 
