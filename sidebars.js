@@ -1986,8 +1986,8 @@ module.exports = {
           "link-ado-issues-with-test-manager",
           "lambdatest-azure-devops-app",
           "link-linear-issues-with-test-manager",
-         
-          
+
+
         ],
       },
     ],
@@ -2288,6 +2288,7 @@ module.exports = {
         items: [
           { type: "doc", id: "playwright-testing-guide" },
           { type: "doc", id: "playwright-agent-skills" },
+          { type: "doc", id: "playwright-sdk" },
           { type: "doc", id: "migrate-playwright-tests" },
           { type: "doc", id: "playwright-test-execution-setup" },
           { type: "doc", id: "playwright-bundled-browser-support" },
@@ -3647,7 +3648,7 @@ module.exports = {
         className: "back-to-main-menu",
       },
     },
-  
+
     {
       type: "category",
       collapsed: false,
