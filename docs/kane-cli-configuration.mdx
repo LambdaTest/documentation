@@ -65,10 +65,10 @@ Every field in `tui-config.json`:
 | `folder_id` | string \| null | `null` | <BrandName /> Test Manager folder ID for upload | `kane-cli config folder [id]` |
 | `folder_name` | string \| null | `null` | Display name of the selected folder (set automatically by the picker) | Set by `kane-cli config folder` |
 | `mode` | `"action"` \| `"testing"` | `"testing"` | Agent behaviour when the run hits an authentication wall, blocked page, or error page. See [Mode](#mode). | `kane-cli config set-mode <action\|testing>` |
-| `target` | `"desktop"` \| `"emulator"` \| `"simulator"` | `"desktop"` | Default run target. `desktop` runs the Chrome browser, the default. `emulator` and `simulator` run against a virtual Android or iOS device on this machine (macOS Apple Silicon only). Other hosts use [`testrun run --remote`](/docs/kane-cli-remote-execution/). See [Mobile Target](#mobile-target). | `kane-cli config set-target <desktop\|emulator\|simulator>` |
+| `target` | `"desktop"` \| `"emulator"` \| `"simulator"` \| `"android"` \| `"ios"` | `"desktop"` | Default run target. `desktop` runs the Chrome browser, the default. `emulator` and `simulator` run against a virtual Android or iOS device on this machine (macOS Apple Silicon only). Other hosts use [`testrun run --remote`](/docs/kane-cli-remote-execution/). `android` and `ios` run on a [real device](/docs/kane-cli-mobile-real-device/) in the <BrandName /> cloud from any machine. Changing the target clears the saved device and app. See [Mobile Target](#mobile-target). | `kane-cli config set-target <desktop\|emulator\|simulator\|android\|ios>` |
 | `device_name` | string \| null | `null` | Default mobile device, by the name `kane-cli devices list --target <kind>` prints. Pairs with `os_version`. When empty, a TTY run prompts once and saves the choice. A non-interactive run needs `--device-name` or this key set. Ignored on the `desktop` target. | `kane-cli config set-device-name <name>` |
 | `os_version` | string \| null | `null` | OS version of the default mobile device (`14`, `17.5`). Required alongside `device_name`. | `kane-cli config set-os-version <version>` |
-| `app` | string \| null | `null` | Default app under test for mobile runs: a build path (`.apk` or `.zip`) or an uploaded app id. Ignored on the `desktop` target. | `kane-cli config set-app <path\|APPid>` |
+| `app` | string \| null | `null` | Default app under test for mobile runs: a build path (`.apk` or `.zip` for emulator and simulator, `.apk` or `.aab` for android, `.ipa` for ios) or an uploaded app id. Ignored on the `desktop` target. | `kane-cli config set-app <path\|APPid>` |
 | `bug_detection` | `"off"` \| `"stop"` \| `"continue"` | `"off"` | Whether the agent flags suspected product bugs while authoring. See [Bug detection](#bug-detection). | `kane-cli config set-bug-detection <mode>`, or per-run `--bug-detection` |
 | `code_export.enabled` | boolean | `true` | Whether to generate a code export after the upload pipeline completes (requires a Test Manager upload). | TUI menu, or per-run `--code-export` flag |
 | `code_export.language` | `"python"` \| `"javascript"` | `"python"` | Output language for generated code. Accepts `python` or `javascript`. | Per-run `--code-language <lang>` |
@@ -166,18 +166,23 @@ To override the saved mode for a single run, pass `--mode <action|testing>` to `
 
 ### Mobile Target
 
-On macOS Apple Silicon, Kane CLI can run against a virtual mobile device on your machine instead of the desktop browser. Four settings save the default target and the device and app to use. They are **independent of** `mode` above: `mode` controls agent behaviour, while these choose *which device* a run drives.
+Kane CLI can run against a mobile device instead of the desktop browser: a virtual device on your Mac (macOS Apple Silicon) or a real device in the <BrandName /> cloud from any machine. Four settings save the default target and the device and app to use. They are **independent of** `mode` above: `mode` controls agent behaviour, while these choose *which device* a run drives.
 
 ```bash
-kane-cli config set-target emulator                 # desktop | emulator | simulator
+kane-cli config set-target emulator                 # desktop | emulator | simulator | android | ios
 kane-cli config set-device-name "Pixel 7 API 35"    # as `kane-cli devices list --target emulator` prints it
 kane-cli config set-os-version 15
 kane-cli config set-app ./builds/app-debug.apk
 ```
 
-- **`target`**: `desktop`, the default, runs Chrome. `emulator` runs a virtual Android device and `simulator` a virtual iOS device. Web runs are not affected by the mobile settings.
-- **`device_name`** and **`os_version`**: the device a mobile run uses, named exactly as `kane-cli devices list --target <kind>` prints it. A name needs a version. A version on its own matches any device on that version. When these are unset, an interactive run asks once and saves your choice. Non-interactive runs need them set, either here or with `--device-name` and `--os-version`.
-- **`app`**: the app under test for a mobile run. Use a build path (emulator `.apk`, simulator `.zip`) or an uploaded app id, which is `APP` followed by six or more digits. Every mobile run requires an app. On the `desktop` target, the device settings and `app` are ignored.
+- **`target`**: `desktop`, the default, runs Chrome. `emulator` runs a virtual Android device and `simulator` a virtual iOS device. `android` and `ios` run on a real device in the <BrandName /> cloud. Web runs are not affected by the mobile settings.
+- **Real-device settings**: all three default to on.
+  - `kane-cli config set-device-stream on|off` turns the real-device live view on or off. The live view is a view-only picture of the device screen in its own Chrome window.
+  - `kane-cli config set-auto-grant-permissions on|off` (Android) and `kane-cli config set-auto-accept-alerts on|off` (iOS) change the setting for the saved target. Real and virtual devices keep separate values.
+
+  See [Real Devices](/docs/kane-cli-mobile-real-device/).
+- **`device_name`** and **`os_version`**: the device a mobile run uses, named exactly as `kane-cli devices list --target <kind>` prints it. On an emulator or simulator, a name needs a version, and a version on its own matches any device on that version. On a real device, either one alone is enough. With neither, the device hub (the cloud service that hands out real devices) picks one. When these are unset, an interactive run asks once and saves your choice. Non-interactive runs need them set, either here or with `--device-name` and `--os-version`.
+- **`app`**: the app under test for a mobile run. Use a build path (emulator `.apk`, simulator `.zip`, android `.apk` or `.aab`, ios `.ipa`) or an uploaded app id, which is `APP` followed by six or more digits. Every mobile run requires an app. On the `desktop` target, the device settings and `app` are ignored.
 
 A run uses these settings as its defaults. To override any of them for a single run, pass `--target`, `--device-name`, `--os-version`, or `--app`. Setup steps and the full list of accepted app formats are in [Mobile Testing](/docs/kane-cli-mobile/). These defaults describe *local* devices. A [`testrun run --remote`](/docs/kane-cli-remote-execution/) run picks its device from the grid catalog with the same two flags (`--device-name` and `--os-version`).
 

@@ -77,14 +77,16 @@ warning: 2 variables have no value
 
 ## Mobile members
 
-A `_test.md` with a mobile [`target:`](/docs/kane-cli-testmd/#mobile-target) (`emulator` / `simulator`) runs as a normal member:
+A `_test.md` with a mobile [`target:`](/docs/kane-cli-testmd/#mobile-target) (`emulator` / `simulator`, or `android` / `ios` for real devices) runs as a normal member:
 
 - **Locally**, the suite drives the emulators and simulators on your machine. The machine must be macOS on Apple Silicon, with the [mobile setup](/docs/kane-cli-mobile/#setup) complete. Choose the device with `--device-name` / `--os-version`, using the values exactly as `kane-cli devices list --target emulator|simulator` prints them, or set `device_name:` / `os_version:` in the file.
-- **On the cloud grid** (`--remote`), the suite runs on a virtual device on a HyperExecute macOS host, so you can start it **from any machine**: Linux, Windows, or a Mac without Xcode or Android Studio. Choose the device from `kane-cli devices list --target emulator|simulator --remote`. One grid job runs one platform: emulator members on one Android version, or simulator members on one HyperExecute pool. If a member uses a local app build, kane-cli uploads it from your machine before the job starts and passes it to the grid as an `APP…` id. For everything else, see [Remote Runs on the Cloud Grid](/docs/kane-cli-remote-execution/).
+- **On the cloud grid** (`--remote`), the suite runs on a virtual device on a HyperExecute macOS host, so you can start it **from any machine**: Linux, Windows, or a Mac without Xcode or Android Studio. Choose the device from `kane-cli devices list --target emulator|simulator --remote`. One grid job runs one platform: emulator members on one Android version, or simulator members on one HyperExecute pool. If a member uses a local app build, Kane CLI uploads it from your machine before the job starts and passes it to the grid as an `APP…` id. For everything else, see [Remote Runs on the Cloud Grid](/docs/kane-cli-remote-execution/).
+- **Real devices** (`target: android` / `target: ios`) run from **any machine**, locally or with `--remote`. Each member opens its own device session in the <BrandName /> cloud, so you can use `--parallel` up to the real devices your plan allows. Extra sessions queue for up to 15 minutes. Set `app:` in each member's file, because `testrun` has no `--app` flag. With `--remote`, the suite runs as a HyperExecute job on Linux runners. See [Real Devices](/docs/kane-cli-mobile-real-device/).
 
 ```bash
 kane-cli testrun run --match '^tests/app/' --device-name "Pixel 7 API 35" --os-version 15            # local emulators
 kane-cli testrun run --match '^tests/app/' --remote --device-name "Pixel 7" --os-version 14           # the grid
+kane-cli testrun run --match '^tests/devices/' --parallel 2                                            # real devices
 ```
 
 ## Running
@@ -144,7 +146,7 @@ In a terminal, kane-cli offers to open the pack in the [evidence viewer](/docs/k
 
 ## Remote runs
 
-With `--remote`, the same selection runs as one **HyperExecute** job. Web suites run in Chrome on a grid macOS runner, and mobile suites run on a grid emulator or simulator. Each member runs as its own headless `testmd run` on the grid, and `--parallel N` spreads the members across N grid runners. The job link, the recordings, and the evidence pack come back to your project. You need a <BrandName /> plan with HyperExecute (macOS runners) and the `remote-execution` plugin. Nothing else is needed on your machine, not even Chrome.
+With `--remote`, the same selection runs as one **HyperExecute** job. Web suites run in Chrome on a grid macOS runner, mobile suites run on a grid emulator or simulator, and real-device suites run from a grid Linux runner on real devices in the <BrandName /> cloud. Each member runs as its own headless `testmd run` on the grid, and `--parallel N` spreads the members across N grid runners. The job link, the recordings, and the evidence pack come back to your project. You need a <BrandName /> plan with HyperExecute (macOS runners, or Linux runners for real-device suites) and the `remote-execution` plugin. Nothing else is needed on your machine, not even Chrome.
 
 ```bash
 kane-cli plugin install remote-execution
@@ -169,7 +171,7 @@ In agent mode (or whenever stdin is not a TTY), `testrun run` writes its own typ
 
 ## Execution constraints
 
-A local suite that contains any mobile member must use `--parallel 1`; larger values are refused. Isolated Chrome workers apply to desktop members only. Remote suites can run members in parallel on the grid with `--parallel N`.
+A local suite that contains an emulator or simulator member must use `--parallel 1`; larger values are refused. Real-device members can run in parallel on your machine too, up to the real devices your plan allows. Isolated Chrome workers apply to desktop members only. Remote suites can run members in parallel on the grid with `--parallel N`.
 
 Adaptive healing is on by default. When a replay fails, the runner retries smaller and smaller replay windows (up to three), then re-authors the authorable steps. `--no-adaptive-heal` turns this off. The `--retry` and `--retry-count` flags are accepted but have no effect: they only print a notice. Adaptive healing handles failed replays. Steps marked replay-only keep their recordings even during healing.
 

@@ -81,7 +81,13 @@
                   }
                 ]
               },
-              "docs/kane-cli-mobile",
+              {
+                "group": "Mobile Testing",
+                "pages": [
+                  "docs/kane-cli-mobile",
+                  "docs/kane-cli-mobile-real-device"
+                ]
+              },
               {
                 "group": "Use Cases",
                 "pages": [

@@ -23,7 +23,9 @@ Whether you open a pack in the viewer or unzip it, you find:
 - **Run logs**: the CLI and runner logs for the execution.
 - **Failure records**: on failed runs, a per-step record with the error message, the page state at failure, and references into the console/network logs.
 
-Mobile runs add two things. The result summary records the **device** in the run environment, such as the device model and OS version. The per-step logs also include **device logs** from the emulator or simulator, next to the usual browser logs.
+Mobile runs add two things. The result summary records the **device** and the **app** in the run environment, such as the device model, OS version, and the app id or build file name. The per-step logs also include **device logs**, next to the usual browser logs.
+
+On a [real device](/docs/kane-cli-mobile-real-device/), `device` is the device the device hub (the cloud service that hands out real devices) allocated, never the name or pattern you requested, and `device_slug` is derived from it. The environment also records `target: android|ios`.
 
 <Note>
 Run artifacts live **only** in the pack. Kane CLI does not keep a separate log directory for each run on disk.

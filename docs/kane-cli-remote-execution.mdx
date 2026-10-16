@@ -1,9 +1,9 @@
 ---
 title: "Remote Runs on the Cloud Grid"
 sidebarTitle: "Remote Runs"
-description: "Dispatch a suite of _test.md files to HyperExecute with kane-cli testrun run --remote: grid browsers for web suites, grid emulators and simulators for mobile suites, from any machine."
-keywords: ['kane cli remote', 'kane cli testrun remote', 'hyperexecute', 'cloud grid', 'grid emulator', 'grid simulator', 'remote execution plugin', 'testmu ai']
-"og:description": "Dispatch a suite of _test.md files to HyperExecute with kane-cli testrun run --remote: grid browsers for web suites, grid emulators and simulators for mobile suites, from any machine."
+description: "Dispatch a suite of _test.md files to HyperExecute with kane-cli testrun run --remote: grid browsers for web suites, grid emulators and simulators, and real Android and iOS devices, from any machine."
+keywords: ['kane cli remote', 'kane cli testrun remote', 'hyperexecute', 'cloud grid', 'grid emulator', 'grid simulator', 'real device', 'remote execution plugin', 'testmu ai']
+"og:description": "Dispatch a suite of _test.md files to HyperExecute with kane-cli testrun run --remote: grid browsers for web suites, grid emulators and simulators, and real Android and iOS devices, from any machine."
 ---
 
 import { KaneCliCta } from "/snippets/KaneCliCta.mdx";
@@ -11,16 +11,18 @@ import { BrandName } from "/snippets/BrandName.mdx";
 
 `kane-cli testrun run --remote` sends a suite of `_test.md` files to <BrandName /> **HyperExecute** instead of running it on your machine. The grid sets up the runtime, runs every test in the suite (each one is a *member*), and streams the job back to your terminal. You get one job, one exit code, one sealed [evidence pack](/docs/kane-cli-evidence/), and the same recordings and evidence as a run on your own machine.
 
-Remote runs cover both kinds of test:
+Remote runs cover every kind of test:
 
 - **Web suites** run in **Chrome on a HyperExecute macOS runner**. Your machine or CI runner needs no Chrome, the run is always headless, and `--parallel N` spreads the members across N grid runners.
-- **Mobile suites** (`target: emulator` or `target: simulator`) run on a **virtual Android emulator or iOS simulator on a HyperExecute macOS host**, so you can author and run mobile tests **from any machine**: Linux, Windows, Intel Macs, or a Mac without Xcode or Android Studio. The [macOS Apple Silicon requirement](/docs/kane-cli-mobile/) applies only to mobile runs on your own machine.
+- **Mobile suites** (`target: emulator` or `target: simulator`) run on a **virtual Android emulator or iOS simulator on a HyperExecute macOS host**, so you can author and run mobile tests **from any machine**: Linux, Windows, Intel Macs, or a Mac without Xcode or Android Studio. The [macOS Apple Silicon requirement](/docs/kane-cli-mobile/) applies only to emulator and simulator runs on your own machine.
+- **Real-device suites** (`target: android` or `target: ios`) run on **real devices in the <BrandName /> cloud**, driven from a **HyperExecute Linux runner**. See [Real-Device Suites on the Grid](#real-device-suites-on-the-grid).
 
 ```bash
 kane-cli plugin install remote-execution                                          # once
 kane-cli testrun run --tags smoke --remote --parallel 4                           # a web suite on 4 grid runners
 kane-cli testrun run --match '^tests/app/' --remote --device-name "Pixel 7" --os-version 14  # an Android suite
 kane-cli testrun run --match '^tests/ios/' --remote --device-name "iPhone 15" --os-version 17.5
+kane-cli testrun run --match '^tests/devices/' --remote --parallel 2                        # real devices
 ```
 
 <Note>
@@ -31,7 +33,8 @@ kane-cli testrun run --match '^tests/ios/' --remote --device-name "iPhone 15" --
 
 | You need | Why | How to check |
 |---|---|---|
-| A <BrandName /> plan that includes **HyperExecute**, with **macOS runner concurrency** (web and mobile members both run on macOS runners) | Every remote run is a HyperExecute job | Ask your account owner, or open the HyperExecute dashboard for your organisation |
+| A <BrandName /> plan that includes **HyperExecute**, with **macOS runner concurrency** for web, emulator, and simulator suites, or **Linux runner concurrency** for real-device suites | Every remote run is a HyperExecute job | Ask your account owner, or open the HyperExecute dashboard for your organisation |
+| For real-device suites: **KaneAI Max** (one real device) or **KaneAI credits + Real Device Plus Automation Cloud** | The devices come from your real-device plan | See [Real Devices: Plan Requirements](/docs/kane-cli-mobile-real-device/#plan-requirements) |
 | The `remote-execution` plugin | It owns the HyperExecute binary kane-cli dispatches with | `kane-cli plugin install remote-execution`, then `kane-cli plugin doctor remote-execution` |
 | A <BrandName /> **username and access key** | HyperExecute authenticates with basic auth. An OAuth profile is exchanged for them automatically; otherwise pass `--username` and `--access-key` | `kane-cli whoami` |
 | A project directory that **contains the tests** | The current directory is zipped and shipped as the job payload | Run from the repository root, or any parent of the tests |
@@ -43,7 +46,7 @@ The run uploads to the project and folder configured on your profile (`kane-cli 
 
 1. **Preflight, then remote preflight.** Kane CLI builds the normal `testrun` plan (one organisation, one project, see [Preflight](/docs/kane-cli-testrun/#preflight)). It then checks that the selection fits in **one grid job** (see [What one job can hold](#what-one-job-can-hold)) and, for mobile, looks up the device in the grid catalog. If anything is wrong, the run stops here with exit `2` and nothing is dispatched.
 2. **Payload.** Kane CLI zips the current directory, respecting `.gitignore`, and uploads it with a generated job definition. Dispatching leaves `.hyperexecute/`, `hyperexecute-cli.log`, and `.updatedhyperexecute.yaml` in that directory. They are not inputs, so add them to `.gitignore`.
-3. **On the grid** (a macOS runner), a setup step installs Kane CLI and logs in with your credentials and project. For mobile, it also installs the device tooling and boots the device. Then **each member runs as its own `kane-cli testmd run`**, headless, exactly as it would on your machine. A member with recordings replays them. A member without recordings is authored on the grid.
+3. **On the grid** (a macOS runner, or a Linux runner for real-device suites), a setup step installs Kane CLI and logs in with your credentials and project. For mobile, it also installs the device tooling and boots the device. Then **each member runs as its own `kane-cli testmd run`**, headless, exactly as it would on your machine. A member with recordings replays them. A member without recordings is authored on the grid.
 4. **Back to you.** The job streams its progress and the dashboard link to your terminal. When it ends, the members' `output-<stem>/` recordings and the sealed evidence pack are downloaded into your project, and the pack is published to Test Manager. The suite summary and exit code match a local `testrun`.
 
 Allow some time beyond the tests themselves: about 15 seconds of setup for a web job, and a minute or more for a mobile job to boot the device and install the app. In CI, a wall-clock timeout of 10 minutes is a safe starting point.
@@ -85,7 +88,7 @@ You get a normal `testrun` summary, plus two extra lines for the dispatch and th
 
 Web tests and device tests cannot share a job (`mobile_remote_mixed`). Run them as two separate suites.
 
-## Choosing a grid device (mobile)
+## Choosing a grid device (emulator and simulator)
 
 Remote devices come from the **grid catalog**, not from the AVDs or simulators on your machine. To see what the grid can provide:
 
@@ -103,12 +106,64 @@ Each row shows a device **name** and the **OS versions** available for it. Selec
 | `--os-version <v>` | The OS version (`14`, `17.5`). On its own, it means any catalog device running that version |
 | `device_name:` or `os_version:` in a `_test.md` | Per-test defaults, used when the flags are absent. See [Mobile target](/docs/kane-cli-testmd/#mobile-target) |
 
-If you pass neither, Kane CLI picks a default device from the catalog for the platform and prints it on the device line. Check that line before you rely on the choice.
+Kane CLI resolves each test's device on your machine. It picks the device name and the OS version separately, each in this order:
+
+1. `--device-name` / `--os-version`
+2. The test file's `device_name:` / `os_version:`
+3. **Your saved device** (`kane-cli config set-device-name` / `set-os-version`), when it is the same kind (emulator or simulator) and the grid has it. A saved device the grid does not have is skipped with a `saved_device_unavailable` note.
+4. The default: **Pixel 8 Pro · Android 15** for emulators, **iPhone 17 Pro Max · iOS 26.0** for simulators.
+
+Before dispatch, Kane CLI prints where each test's device came from:
+
+```
+Devices:
+  tests/app/login_test.md  Emulator · Pixel 8 Pro · Android 15  (default)
+  tests/app/cart_test.md   Emulator · Pixel 7 · Android 14  (test file)
+```
 
 The two platforms assign devices differently:
 
 - **Emulator**: the job uses **one device for all its members**, so they must all ask for the same Android version. If they differ, the preflight refuses with `mobile_os_version_split`. To force one version, pass `--os-version`. If a member names an AVD from your own machine, Kane CLI ignores it and shows a `device_name_ignored` note, because a remote job's device name comes from the catalog.
 - **Simulator**: each task boots a simulator inside its own VM, so **each member uses its own `device_name:` and `os_version:`**, checked against the catalog. If you pass `--device-name` and `--os-version`, they apply to every member. Members can ask for different iOS versions as long as their major versions belong to the same HyperExecute pool. The catalog decides the pools: iOS 17 and 18 share one, and iOS 26 is in another. If members need different pools, the preflight refuses with `mobile_pool_split`.
+
+## Real-device suites on the grid
+
+`target: android` and `target: ios` tests run on real devices in the <BrandName /> cloud. The job runs on a **HyperExecute Linux runner**, and each member opens its own device session, so:
+
+- `--parallel N` runs N members at once, up to the real devices your plan allows. A session beyond that queues for up to 15 minutes (see [Plan Requirements](/docs/kane-cli-mobile-real-device/#plan-requirements)).
+- Android and iOS real-device members can share one job.
+- A job cannot mix real-device members with web, emulator, or simulator members (`mobile_remote_mixed`).
+
+Kane CLI resolves each member's device on your machine. It picks the device name and the OS version separately, each in this order:
+
+1. `--device-name` / `--os-version`
+2. The test file's `device_name:` / `os_version:`
+3. **The hub picks** any free device. The hub is the <BrandName /> service that assigns real devices to sessions.
+
+You can set the name alone or the version alone, and a name can be a pattern. To list the real devices the cloud has:
+
+```bash
+kane-cli devices list --target android --remote
+kane-cli devices list --target ios --remote
+```
+
+Kane CLI checks each name and version against that list before dispatch and prints the `Devices:` block:
+
+```
+Devices:
+  tests/devices/login_test.md  Real device · any Android device · Android 15  (test file)
+  tests/devices/cart_test.md   Real device · iPhone 15 · any iOS version  (flag)
+```
+
+If Kane CLI cannot read the device list, it dispatches the job anyway with a `real_device_list_unavailable` note, and the hub decides which device each member gets.
+
+Before you dispatch a real-device suite, check these rules:
+
+- **Every member needs an `app:`** in its file: `.apk` or `.aab` for Android, `.ipa` for iOS, or an `APP…` id. Without one, the run stops with `mobile_app_required`. `testrun` has no `--app` flag.
+- **`--device-slug` is refused** for real devices.
+- **Adaptive heal is off** on real devices, so a failed replay step fails the test.
+
+For the TUI, live view, settings, and limits on real devices, see [Real Devices](/docs/kane-cli-mobile-real-device/).
 
 ## The app under test on the grid
 
@@ -116,12 +171,12 @@ The grid machine has to *get* the app from somewhere. A build is never part of t
 
 | `app:` in the test | What happens |
 |---|---|
-| A local build, `.apk` for `emulator` or a `.zip` of the `.app` for `simulator`, anywhere on disk | **Uploaded from your machine during preflight**, once per distinct file, and passed to the grid as `--app <id>`. A cache on each machine skips builds your account already has. The build may be gitignored or outside the project. `--dry-run` uploads nothing |
+| A local build, anywhere on disk: `.apk` for `emulator`, a `.zip` of the `.app` for `simulator`, `.apk` or `.aab` for `android`, or `.ipa` for `ios` | **Uploaded from your machine during preflight**, once per distinct file, and passed to the grid as `--app <id>`. A cache on each machine skips builds your account already has. The build may be gitignored or outside the project. `--dry-run` uploads nothing |
 | An uploaded `APP…` id | Used as is, and the grid downloads it |
 
-Each member gets its own id, so members in one run can use different builds. An `.ipa` is refused up front, because it is a build for physical devices and the emulator and simulator upload does not accept it. Every upload is reported, as `app: <file> → APP… (uploaded)` in the terminal or as the `remote_app` event for agents.
+Each member gets its own id, so members in one run can use different builds. An `.ipa` is refused for emulator and simulator tests, because it is a device build. Use it with `target: ios`. Every upload is reported, as `app: <file> → APP… (uploaded)` in the terminal or as the `remote_app` event for agents.
 
-`kane-cli apps list --target emulator|simulator` shows the uploaded builds your account can use. Put a value from the **APP ID** column in `app:`. There is no separate upload command: any run with a local build, on the grid or on your machine, uploads it and prints the `APP…` id. Uploads belong to an organisation, so `apps list` for your current profile is the definitive list of ids a run can use.
+`kane-cli apps list --target emulator|simulator|android|ios` shows the uploaded builds your account can use. Put a value from the **APP ID** column in `app:`. There is no separate upload command: any run with a local build, on the grid or on your machine, uploads it and prints the `APP…` id. Uploads belong to an organisation, so `apps list` for your current profile is the definitive list of ids a run can use.
 
 ## What one job can hold
 
@@ -129,13 +184,14 @@ Each remote run is one HyperExecute job, and a job provides **one kind of runtim
 
 | Reason | Meaning | Fix |
 |---|---|---|
-| `mobile_remote_mixed` | Web and device tests in one selection | Two runs: one for the device tests, one for the rest |
+| `mobile_remote_mixed` | More than one kind of test in one selection: web, emulator or simulator, real device | One run per kind |
 | `mobile_remote_mixed_platform` | Emulator and simulator tests in one selection | Two runs, one per platform |
 | `mobile_os_version_split` | Emulator tests asking for different Android versions | One run per version, or `--os-version` to force one |
 | `mobile_pool_split` | Simulator tests whose iOS versions need different HyperExecute pools | One run per pool, or `--os-version` to force one |
 | `mobile_remote_unsupported` | A device target the grid cannot provide | Run it on your own machine, or deselect it |
+| `mobile_app_required` | A real-device test has no `app:` | Add `app: <path-to-build \| AppId>` to the file |
 | `mobile_app_missing` | A device test names a local build that is not on this machine | Fix the path, or use an `APP…` id |
-| `mobile_app_not_uploadable` | The build is not one the cloud takes (a `.ipa`, or the wrong extension for the platform) | `.apk` for emulator, a `.zip` of the `.app` for simulator, or an `APP…` id |
+| `mobile_app_not_uploadable` | The build is not one the cloud takes for that target | `.apk` for emulator, a `.zip` of the `.app` for simulator, `.apk` or `.aab` for android, `.ipa` for ios, or an `APP…` id |
 | `mobile_app_upload_failed` | Uploading the build from your machine failed | Fix the upload (network, auth), or use an `APP…` id |
 | `member_outside_payload` | A test lives outside the dispatched directory | Run from a directory that contains it |
 | `gitignored_inputs` | Required recordings are gitignored | Un-ignore them (for example `!output-*/`) or commit them |
@@ -172,6 +228,10 @@ kane-cli testrun run --match '^tests/web/' --remote --parallel 4 \
 kane-cli testrun run --match '^tests/app/' --remote \
   --device-name "Pixel 7" --os-version 14 \
   --username "$LT_USERNAME" --access-key "$LT_ACCESS_KEY"
+
+# a real-device suite
+kane-cli testrun run --match '^tests/devices/' --remote --parallel 2 \
+  --username "$LT_USERNAME" --access-key "$LT_ACCESS_KEY"
 ```
 
 Archive `.testmuai/evidence/*.evidence` as the build artifact. More pipeline shapes are in [CI/CD](/docs/kane-cli-cicd/).
@@ -183,8 +243,9 @@ In agent or non-TTY mode, a remote run wraps the normal `testrun_*` stream in ad
 | `type` | Payload | Notes |
 |---|---|---|
 | `remote_start` | `backend`, `env` | Dispatch begins |
-| `remote_device` | `platform`, `slug`, `name`, `os_version`, `avd_id?`, `pool?` | The resolved grid device, mobile only. A web run has no device line |
-| `remote_device_hint` | `reason`, `detail` | `device_name_ignored` (emulator only, a local AVD name was dropped) or `catalog_stale` |
+| `remote_device` | `platform`, `slug`, `name`, `os_version`, `avd_id?`, `pool?` | The resolved grid device, emulator and simulator only. Web and real-device runs have none |
+| `remote_member_device` | `path`, `kind`, `platform`, `name?`, `os_version?`, `name_source`, `os_version_source` | One per device member, before dispatch. `kind` is `emulator`, `simulator`, or `real-device`. Sources are `flag`, `file`, `config` (your saved device), `default`, or `hub` (left for the hub to pick, so that half has no value) |
+| `remote_device_hint` | `reason`, `detail` | `device_name_ignored` (emulator only, a local AVD name was dropped), `catalog_stale`, `saved_device_unavailable` (your saved device is not on the grid), or `real_device_list_unavailable` (devices not checked before dispatch) |
 | `remote_app` | `path`, `app_id`, `source` | One per distinct local build uploaded from your machine, mobile only. `source` is `uploaded`, `cache` (already uploaded by this machine) or `dry-run` (`app_id` empty, nothing sent) |
 | `remote_dispatched` | `job_id`, `job_url` | The HyperExecute job exists, and the link opens the dashboard |
 | `remote_error` | `code`, `detail` | Remote preflight refused the selection (codes above), followed by `testrun_done` and exit `2` |
@@ -205,6 +266,7 @@ When you parse the stream of a dispatched run, keep reading after `testrun_done`
 
 - [Batch Runs (testrun)](/docs/kane-cli-testrun/) for selection, preflight, flags and exit codes
 - [Mobile Testing](/docs/kane-cli-mobile/) for setup on your own machine, or skip it with `--remote`
+- [Real Devices](/docs/kane-cli-mobile-real-device/) for real Android and iOS devices, plans, live view and limits
 - [Writing test.md files](/docs/kane-cli-testmd/#mobile-target) for `target:`, `app:`, `device_name:` and `os_version:`
 - [Evidence Packs](/docs/kane-cli-evidence/) for what comes back and how to view it
 - [CI/CD](/docs/kane-cli-cicd/) for pipeline patterns, including runners with no Chrome

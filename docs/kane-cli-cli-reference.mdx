@@ -61,14 +61,15 @@ kane-cli run "<objective>" [options]
 
 If a `{{name}}` in the objective has no value, kane-cli prints a warning and the run continues. The name is typed literally as written, unless a step sets its value first. The warning does not change the exit code. See [Unresolved variables](/docs/kane-cli-modes/#unresolved-variables).
 
-**Mobile run flags** (macOS Apple Silicon only):
+**Mobile run flags**. The `emulator` and `simulator` targets need macOS Apple Silicon. The `android` and `ios` targets run on a [real device](/docs/kane-cli-mobile-real-device/) in the <BrandName /> cloud, from any machine. A real device comes from the **device hub**, the cloud service that hands out real devices to test sessions.
 
 | Flag | Description | Default |
 |------|-------------|---------|
-| `--target <name>` | Which target to run against: `desktop`, `emulator`, or `simulator` | Saved session target, otherwise `desktop` |
-| `--device-name <name>` | The device, named exactly as `kane-cli devices list --target emulator\|simulator` prints it. Also pass `--os-version` with a name | Config value. When unset, a TTY run opens a one-time picker and saves the choice. Non-interactive runs require a device |
+| `--target <name>` | Which target to run against: `desktop`, `emulator`, `simulator`, `android`, or `ios` | Saved session target, otherwise `desktop` |
+| `--device-name <name>` | The device, named as `kane-cli devices list` prints it. On an emulator or simulator, also pass `--os-version`. On a real device, either one alone is enough, and a name can be a pattern such as `Pixel.*`. With neither, the hub picks a device | Config value. When unset, a TTY run opens a one-time picker and saves the choice. Non-interactive runs require a device |
 | `--os-version <version>` | The device's OS version, for example `14` or `17.5`. On its own, it matches any device on that version | Config value |
-| `--app <path\|APPid>` | The app under test. A build (emulator `.apk`, simulator `.zip`) or an uploaded app id | Config value. Required for every mobile run |
+| `--app <path\|APPid>` | The app under test. A build (emulator `.apk`, simulator `.zip`, android `.apk` or `.aab`, ios `.ipa`) or an uploaded app id | Config value. Required for every mobile run |
+| `--no-stream` | On a real device, don't open the live view (a view-only picture of the device screen) for this run | At a terminal, the live view opens in its own window. It never opens for agents |
 
 On the `desktop` target, the device flags and `--app` are ignored. See [Mobile Testing](/docs/kane-cli-mobile/) for setup.
 
@@ -89,12 +90,13 @@ kane-cli doctor --target simulator --install   # install the test tooling Kane C
 
 ### `kane-cli devices list`
 
-List the emulators or simulators Kane CLI can run against. `--target` is required. To choose a device for a run, pass `--device-name` and `--os-version` exactly as the list prints them.
+List the emulators, simulators, or real devices Kane CLI can run against. `--target` is required: `emulator`, `simulator`, `android`, or `ios`. `android` and `ios` list the real devices in the <BrandName /> cloud and take `--remote`. To choose a device for a run, pass `--device-name` and `--os-version` exactly as the list prints them.
 
 ```bash
 kane-cli devices list --target emulator             # the emulators on this machine
 kane-cli devices list --target simulator --remote   # the simulators the cloud grid can provision
 kane-cli devices list --target simulator --remote --os-version 17.5   # only that OS version
+kane-cli devices list --target android --remote     # the real Android devices in the TestMu AI cloud
 ```
 
 See [Remote Runs](/docs/kane-cli-remote-execution/) for the grid catalog.
@@ -103,10 +105,11 @@ See [Remote Runs](/docs/kane-cli-remote-execution/) for the grid catalog.
 
 ### `kane-cli apps list`
 
-List the uploaded builds your account can use for a target. The **APP ID** column is what `--app` and `kane-cli config set-app` accept.
+List the uploaded builds your account can use for a target: `emulator`, `simulator`, `android`, or `ios` (`android` and `ios` list real-device builds). The **APP ID** column is what `--app` and `kane-cli config set-app` accept.
 
 ```bash
 kane-cli apps list --target emulator
+kane-cli apps list --target ios
 ```
 
 ---
@@ -166,7 +169,7 @@ Each path you pass must be a `_test.md` file. To select a directory of tests, us
 | `--os-version <version>` | OS version for the mobile members (`14`, `17.5`). On its own, it matches any device on that version | Member's `os_version:` |
 | `--username <user>` / `--access-key <key>` | Basic auth instead of OAuth | None |
 
-Adaptive healing is on by default; `--no-adaptive-heal` turns it off. The `--retry` and `--retry-count` flags are accepted but have no effect: they only print a notice. A local suite that contains any mobile member must use `--parallel 1`.
+Adaptive healing is on by default; `--no-adaptive-heal` turns it off. The `--retry` and `--retry-count` flags are accepted but have no effect: they only print a notice. A local suite that contains an emulator or simulator member must use `--parallel 1`. Real-device members can run in parallel, up to the real devices your plan allows.
 
 `testrun run` has no `--variables` flag. To supply values, fill the shared variables file or the member's own `variables:` frontmatter. A member that uses a `{{name}}` with no value still passes preflight, with a warning. See [Batch runs (testrun)](/docs/kane-cli-testrun/).
 
@@ -280,11 +283,15 @@ kane-cli config set-mode <action|testing>  # Set run mode
 kane-cli config chrome-profile [path]      # Set Chrome profile (interactive picker if no path)
 kane-cli config project [id]               # Set Test Manager project (interactive picker if no id)
 kane-cli config folder [id]                # Set Test Manager folder (interactive picker if no id)
-kane-cli config set-target <target>        # Set run target: desktop | emulator | simulator
+kane-cli config set-target <target>        # Set run target: desktop | emulator | simulator | android | ios
 kane-cli config set-device-name <name>     # Set default mobile device, as kane-cli devices list prints it
 kane-cli config set-os-version <version>   # Set the default mobile device's OS version
 kane-cli config set-app <path|APPid>       # Set default app under test for mobile runs
 kane-cli config set-url <url>              # Set the default start URL (bare domains are normalized to https://)
+kane-cli config reset-url                  # Clear the saved default start URL
+kane-cli config set-device-stream <on|off>           # Real-device live view (default on)
+kane-cli config set-auto-grant-permissions <on|off>  # Auto-grant app permissions on Android, for the saved target (default on)
+kane-cli config set-auto-accept-alerts <on|off>      # Auto-accept system alerts on iOS, for the saved target (default on)
 kane-cli config set-bug-detection <off|stop|continue>  # Set bug detection while authoring
 kane-cli config set-assertion-mode <dom|visual>        # Set assertion mode (default dom, with vision fallback)
 kane-cli config set-final-validation <on|off>          # Set the synthesized cp_final checkpoint (default off)
@@ -365,7 +372,7 @@ For `generate` and the assurance commands, see [Generate workflow](/docs/kane-cl
 | `/balance` | | Show credit balance |
 | `/profiles` | `list\|switch\|delete` | Manage profiles |
 | `/config` | `show\|set-window\|set-url\|set-mode\|chrome-profile\|project\|folder` | Manage configuration |
-| `/mobile` | | Switch the session to an emulator or simulator |
+| `/mobile` | | Switch the session to a device: an emulator, a simulator, or a real Android or iOS device |
 | `/desktop` | | Switch the session back to desktop (Chrome) |
 | `/doctor` | | Check mobile tooling and devices |
 | `/new` | | Start a fresh session (uploads the current session and seals its evidence pack first) |

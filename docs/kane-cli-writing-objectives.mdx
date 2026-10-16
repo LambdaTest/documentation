@@ -100,7 +100,7 @@ Make the closing check something the agent can see on the screen the last action
 
 ### Say the Goal, Not the Clicks
 
-Phrase actions as goals (`Log in as {{tester}}`, `Complete checkout with the saved card`) so a run absorbs a reordered form or a new popup instead of breaking on it. Keep exact values such as credentials, prices, and URLs literal or in `{{variables}}`. For a step that only sometimes appears, such as a cookie banner, write it as a condition (`if a cookie banner appears, dismiss it`) rather than assuming it away.
+Phrase actions as goals (`Log in as {{tester}}`, `Complete checkout with the saved card`) so a run absorbs a reordered form or an unexpected popup instead of breaking on it. Keep exact values such as credentials, prices, and URLs literal or in `{{variables}}`. When a test needs fresh data on every run, such as a fresh sign-up email, a unique name, or the current date, use a [smart variable](/docs/kane-cli-variables-and-context/#smart-variables) such as `{{smart.random_email}}` or `{{smart.current_date}}`. A fixed value would collide with itself on the second run. For a step that only sometimes appears, such as a cookie banner, write it as a condition (`if a cookie banner appears, dismiss it`) rather than assuming it away.
 
 ### Examples
 
@@ -111,13 +111,18 @@ one result appears with a price under $200.
 
 ```text
 Fill the registration form at example.com/signup with name "Test User",
-email "test@example.com", and a 12-character random password. Submit and
-verify the confirmation page loads.
+email {{smart.random_email}}, and password {{smart.random_string_8}}. Submit
+and verify the confirmation page loads.
 ```
 
 ```text
 Open https://app.example.com, log in with the credentials in {{tester}},
 navigate to Settings > Billing, and verify the current plan is "Pro".
+```
+
+```text
+Open https://booking.example.com, search for a room with check-in
+{{smart.next_day}}, and verify at least one room is listed for that date.
 ```
 
 ```text

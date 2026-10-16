@@ -125,8 +125,8 @@ headless: true
 | `local_context` | string or file path | root + per-step | Project-scoped guidance. Same shape as `global_context`. |
 | `variables` | object | root + per-step | Named values usable as `{{name}}` in objectives. See [Variables](#variables). |
 | `session_context` | `{ prior_runs: [...] }` | root + per-step | Context from earlier runs, loaded for the agent before the run starts. |
-| `target` | `"chrome"` \| `"cdp"` \| `"ws"` \| `"emulator"` \| `"simulator"` | root only | Where the test runs: a browser transport (`chrome`, the default, `cdp`, or `ws`) or a mobile target (`emulator` or `simulator`, a virtual Android or iOS device, locally on macOS Apple Silicon or on the cloud grid with `testrun run --remote`). See [Mobile Target](#mobile-target). |
-| `app` | string | root only | Mobile only. The app under test: a build path (emulator `.apk`, simulator `.zip`) or an uploaded `APP…` id. Required with a mobile target, rejected with a browser target. On the grid, a real run uploads simulator `.zip` builds from your machine; an existing `APP…` id also works. A dry run does not upload anything. |
+| `target` | `"chrome"` \| `"cdp"` \| `"ws"` \| `"emulator"` \| `"simulator"` \| `"android"` \| `"ios"` | root only | Where the test runs: a browser transport (`chrome`, the default, `cdp`, or `ws`), a virtual Android or iOS device (`emulator` or `simulator`, locally on macOS Apple Silicon or on the cloud grid with `testrun run --remote`), or a real Android or iOS device in the TestMu AI cloud (`android` or `ios`, from any machine). See [Mobile Target](#mobile-target). |
+| `app` | string | root only | Mobile only. The app under test: a build path (emulator `.apk`, simulator `.zip`, android `.apk` or `.aab`, ios `.ipa`) or an uploaded `APP…` id. Required with a mobile target, rejected with a browser target. On the grid, a real run uploads simulator `.zip` builds from your machine; an existing `APP…` id also works. A dry run does not upload anything. |
 | `no_reset` | boolean | root only | Mobile only. Keep the app's existing state between runs instead of resetting it. |
 | `device_name` | string | root only | Mobile only. The default device for this test, as `kane-cli devices list --target <kind>` prints it (add `--remote` for the grid catalog). Overridden by `--device-name`. |
 | `os_version` | string | root only | Mobile only. The device's OS version (`14`, `17.5`). Overridden by `--os-version`. Required alongside `device_name`. |
@@ -142,11 +142,11 @@ Keys not in this table are rejected with `unknown config key: <key>` at parse ti
 
 ### Mobile Target
 
-`target:` also accepts the two mobile values, `emulator` for a virtual Android device and `simulator` for a virtual iOS device, with the app under test as its own root key:
+`target:` also accepts four mobile values: `emulator` for a virtual Android device, `simulator` for a virtual iOS device, and `android` or `ios` for a [real device](/docs/kane-cli-mobile-real-device/) in the TestMu AI cloud. The app under test is its own root key:
 
 ```yaml
 ---
-target: emulator             # emulator (Android) | simulator (iOS)
+target: emulator             # emulator | simulator (virtual) · android | ios (real device)
 app: ./builds/app-debug.apk  # or an APP… id from `kane-cli apps list --target emulator`
 device_name: Pixel 7         # optional default device (with os_version)
 os_version: "14"             # optional; `--device-name` / `--os-version` override both
@@ -154,16 +154,16 @@ no_reset: false              # optional
 ---
 ```
 
-- **`target`**: `emulator` runs on an Android emulator, and `simulator` runs on an iOS simulator. You do not set the platform separately; the target determines it.
-- **`app`**: the app under test. It is required with a mobile target and rejected with a browser target. Use a build path (emulator `.apk`, simulator `.zip`) or an uploaded app id, which is `APP` followed by six or more digits. On-device package ids are not accepted.
-- **`no_reset`**: optional. Keeps the app's existing state between runs instead of resetting it.
-- **`device_name`** / **`os_version`**: optional default device for this test. Use the names exactly as `kane-cli devices list --target <kind>` prints them (local), or `kane-cli devices list --target <kind> --remote` (grid catalog). The run flags `--device-name` / `--os-version` override them. If you set a name, also set a version.
+- **`target`**: `emulator` runs on an Android emulator, `simulator` runs on an iOS simulator, and `android` or `ios` runs on a real device. You do not set the platform separately; the target determines it.
+- **`app`**: the app under test. It is required with a mobile target and rejected with a browser target. Use a build path (emulator `.apk`, simulator `.zip`, android `.apk` or `.aab`, ios `.ipa`) or an uploaded app id, which is `APP` followed by six or more digits. On-device package ids are not accepted.
+- **`no_reset`**: optional. Keeps the app's existing state between runs instead of resetting it. Refused with `android` or `ios`, because a real-device session always starts with a fresh install.
+- **`device_name`** / **`os_version`**: optional default device for this test. Use the names exactly as `kane-cli devices list --target <kind>` prints them (local), or `kane-cli devices list --target <kind> --remote` (grid catalog, or real devices). The run flags `--device-name` / `--os-version` override them. On an emulator or simulator, if you set a name, also set a version. On a real device, you can set either one alone, and a name can be a pattern (`Pixel.*`). If you set neither, the hub (the TestMu AI service that assigns real devices) picks any free device.
 
 <Warning>
 The nested form, `target: {platform, app}`, is not accepted. The parser rejects it and shows the flat form above in its error message.
 </Warning>
 
-Run mobile tests with `kane-cli testmd run`, or in batches with [`testrun`](/docs/kane-cli-testrun/#mobile-members). Running locally requires macOS on Apple Silicon; see [Mobile Testing](/docs/kane-cli-mobile/) for setup. With [`testrun run --remote`](/docs/kane-cli-remote-execution/), the suite runs on a grid emulator or simulator, and you can start it from any machine. Simulator members accept a local `.zip` build or an `APP…` id in `app:`.
+Run mobile tests with `kane-cli testmd run`, or in batches with [`testrun`](/docs/kane-cli-testrun/#mobile-members). Running emulator and simulator tests locally requires macOS on Apple Silicon; see [Mobile Testing](/docs/kane-cli-mobile/) for setup. With [`testrun run --remote`](/docs/kane-cli-remote-execution/), the suite runs on a grid emulator or simulator, and you can start it from any machine. Simulator members accept a local `.zip` build or an `APP…` id in `app:`. Real-device tests run from any machine with no setup beyond `kane-cli login`. See [Real Devices](/docs/kane-cli-mobile-real-device/).
 
 ### Root-only vs root-or-per-step
 
