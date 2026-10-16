@@ -101,10 +101,6 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
   }) }}
 />
 
-:::info BETA
-The feature is currently in **BETA**.
-:::
-
 When a job finishes with failures, you do not have to run the whole suite again to check a fix. From the job page you can start a **rerun**: a new job that repeats either every scenario or only the scenarios that did not pass, using the same YAML the original job ran with.
 
 A 900-scenario suite with 20 failures can be re-verified by running those 20, on the commit the failures happened on or on the latest one.
