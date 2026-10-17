@@ -209,16 +209,48 @@ This widget helps you track how your test suite evolves over time, identify peri
 
 ## Test Runs Summary
 
-The Test Runs Summary widget provides an overall summary of your test runs, with the data split by test instance statuses and their counts.
+The Test Runs Summary widget provides an overall summary of your test runs, with the data split by test instance statuses and their counts. You can view it as a pie chart or a stacked bar, or drill through your projects and test run folders to find exactly which area of your suite is failing.
 
 ### How it works?
 
 * Displays the total number of test runs and the breakdown of test instances by status (Not Started, Passed, Failed, Skipped, and custom statuses).
 * Quickly identify test runs with the highest number of failed or pending instances.
+* Choose how the widget is drawn with the graph type setting described below.
+
+### Choosing how the widget is drawn
+
+Open the **three-dot menu** on the widget, select **Configure Widget**, and use **Display Options** to pick the graph type. The choice is saved per widget, so two Test Runs Summary widgets on the same dashboard can be drawn differently.
+
+* **Pie Chart** (default) - the overall split of test instances by status.
+* **Stacked Bar** - one bar per test run, with stacked segments by status.
+* **Test Run Folder Hierarchy** - one bar per project, which you can keep drilling into through its test run folders.
+
+### Drilling through projects and test run folders
+
+With **Test Run Folder Hierarchy** selected, each click takes you one level deeper:
+
+* The first level shows one bar per project, stacked by test instance status.
+* Click a project to see its top-level test run folders. Click a folder that has subfolders to go one level deeper.
+* Every folder bar counts the test instances in that folder **and in all of its subfolders**.
+* A folder that has no subfolders is the end of the trail. Clicking it opens the test instance list for that folder. Click a status segment of that bar to open the list already filtered to that status.
+* The breadcrumb above the chart shows where you are, for example **All projects › Checkout › Regression**. Select any entry in the trail to jump straight back to that level.
+* The level indicator on the right of the breadcrumb shows how deep you are and how much further the deepest branch goes, for example **Level 2 of 4 · folders**.
+
+Individual test runs are not shown as bars. Drilling stops at the deepest folder, and the instance list opens from there.
+
+:::note
+A project bar counts every test instance in that project, including instances whose test run is not in a folder. A project's total can therefore be higher than the sum of its folder bars, and a project with no foldered test runs opens an empty folder level.
+:::
+
+:::tip
+Need the instances of a test run that sits directly inside a folder that has subfolders of its own? Switch the graph type back to **Pie Chart** or **Stacked Bar** and open the instance list from there.
+:::
+
+On shared and demo dashboards the bars are read-only: the chart is shown, but clicking a bar does not drill in or open the instance list.
 
 ### Value Proposition
 
-This widget gives you a high-level view of test run health across your project, helping you prioritize runs that need attention and track overall execution progress.
+This widget gives you a high-level view of test run health across your project, helping you prioritize runs that need attention and track overall execution progress. Drilling through your projects and test run folders narrows failures down to the specific area of your suite responsible, without leaving the dashboard.
 
 ## Milestone Trends
 
