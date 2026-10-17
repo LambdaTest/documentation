@@ -231,6 +231,8 @@ Open the **three-dot menu** on the widget, select **Configure Widget**, and use 
 
 With **Test Run Folder Hierarchy** selected, each click takes you one level deeper:
 
+<img loading="lazy" src={require('../assets/images/analytics/tms-test-runs-summary-projects.webp').default} alt="Test Runs Summary showing one stacked bar per project at the first level" width="900" height="400" className="doc_img"/>
+
 * The first level shows one bar per project, stacked by test instance status.
 * Click a project to see its top-level test run folders. Click a folder that has subfolders to go one level deeper.
 * Every folder bar counts the test instances in that folder **and in all of its subfolders**.
@@ -238,7 +240,11 @@ With **Test Run Folder Hierarchy** selected, each click takes you one level deep
 * The breadcrumb above the chart shows where you are, for example **All projects › Checkout › Regression**. Select any entry in the trail to jump straight back to that level.
 * The level indicator on the right of the breadcrumb shows how deep you are and how much further the deepest branch goes, for example **Level 2 of 4 · folders**.
 
+<img loading="lazy" src={require('../assets/images/analytics/tms-test-runs-summary-folder-level.webp').default} alt="Test Runs Summary drilled into a project's test run folders, with the breadcrumb and level indicator" width="900" height="396" className="doc_img"/>
+
 Individual test runs are not shown as bars. Drilling stops at the deepest folder, and the instance list opens from there.
+
+<img loading="lazy" src={require('../assets/images/analytics/tms-test-runs-summary-instance-list.webp').default} alt="Test instance list opened from the deepest test run folder, filtered to the clicked status" width="900" height="515" className="doc_img"/>
 
 :::note
 A project bar counts every test instance in that project, including instances whose test run is not in a folder. A project's total can therefore be higher than the sum of its folder bars, and a project with no foldered test runs opens an empty folder level.
