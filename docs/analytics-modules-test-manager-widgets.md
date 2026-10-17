@@ -221,6 +221,8 @@ The Test Runs Summary widget provides an overall summary of your test runs, with
 
 Open the **three-dot menu** on the widget, select **Configure Widget**, and use **Display Options** to pick the graph type. The choice is saved per widget, so two Test Runs Summary widgets on the same dashboard can be drawn differently.
 
+<img loading="lazy" src={require('../assets/images/analytics/tms-test-runs-summary-display-options.webp').default} alt="Select graph type under Display Options in Configure Widget, with Test Run Folder Hierarchy selected" width="900" height="514" className="doc_img"/>
+
 * **Pie Chart** (default) - the overall split of test instances by status.
 * **Stacked Bar** - one bar per test run, with stacked segments by status.
 * **Test Run Folder Hierarchy** - one bar per project, which you can keep drilling into through its test run folders.
