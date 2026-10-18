@@ -2521,8 +2521,35 @@ h6[id]::before {
 }
 
 /* ── Docs landing: product catalog cards ── */
-.prodCatalog{margin-top:24px;}
-.prodSection{margin:0 0 40px;}
+/* Catalog = sections column + sticky ToC rail. */
+.prodCatalog{margin-top:24px;display:flex;gap:40px;align-items:flex-start;}
+.prodCatalog_body{flex:1 1 auto;min-width:0;}
+
+/* Sticky "On this page" table of contents (vertical, amber active accent). */
+.prodToc{flex:0 0 212px;width:212px;position:sticky;top:110px;align-self:flex-start;max-height:calc(100vh - 140px);overflow-y:auto;}
+.prodToc_title{font-size:.72rem;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--ifm-color-emphasis-600,#8a8a93);margin:0 0 10px;padding-left:13px;}
+.prodToc_list{list-style:none;margin:0;padding:0;border-left:1px solid var(--ifm-toc-border-color,#e6e6e9);}
+.prodToc_list li{margin:0;}
+.prodToc_list a{
+  display:block;padding:5px 0 5px 13px;margin-left:-1px;
+  border-left:2px solid transparent;
+  color:var(--ifm-color-emphasis-700,#5c5c6a);
+  font-size:13.5px;line-height:1.4;text-decoration:none;
+  transition:color .15s ease,border-color .15s ease;
+}
+.prodToc_list a:hover{color:var(--brand-amber);text-decoration:none;}
+.prodToc_list a.prodToc_active{color:var(--brand-amber);border-left-color:var(--brand-amber);font-weight:600;}
+[data-theme='dark'] .prodToc_list{border-left-color:#2a2f3a;}
+[data-theme='dark'] .prodToc_list a{color:#9aa0ab;}
+[data-theme='dark'] .prodToc_list a:hover,
+[data-theme='dark'] .prodToc_list a.prodToc_active{color:#fff;border-left-color:#fff;}
+@media(max-width:996px){
+  .prodCatalog{display:block;}
+  .prodToc{display:none;}
+}
+/* scroll-margin-top keeps the section heading clear of the sticky navbar when
+   a product line is reached via its #anchor (e.g. /support/docs/#smartui). */
+.prodSection{margin:0 0 40px;scroll-margin-top:120px;}
 .prodSection_h2{display:flex;align-items:center;font-weight:600;color:var(--ifm-color-primary);font-size:20px;margin:0 0 6px;}
 .prodSection_h2 .home_icons{width:22px;height:22px;margin-right:8px;}
 .prodSection_desc{margin:0 0 16px;font-size:14.5px;line-height:1.5;color:var(--ifm-color-emphasis-700,#5c5c6a);max-width:780px;}
