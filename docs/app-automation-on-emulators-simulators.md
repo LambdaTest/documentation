@@ -43,7 +43,7 @@ import { CookieTrackingSignup } from '@site/src/component/CookieTracking';
     }}
 ></script>
 
-App automation on <BrandName /> runs mobile app tests across cloud-based emulators and simulators, eliminating physical devices while validating functionality across many configurations. It supports the Appium framework, letting you clone a sample project, upload your app, and set capabilities.
+App automation on <BrandName /> runs mobile app End-to-End (E2E) testing across cloud-based emulators and simulators, eliminating physical devices while validating functionality across many configurations. It supports the Appium framework, letting you clone a sample project, upload your app, and set capabilities.
 
 <div className="ytframe"> 
 <div className="youtube" data-embed="ZcgYzi60Nmo" data-loading-attribute="eager">
