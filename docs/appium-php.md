@@ -64,7 +64,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
       "@type": "WebPage",
       "@id": "https://www.testmuai.com/support/docs/appium-php/"
     },
-    "headline": "Appium with PHP",
+    "headline": "How to Run Appium PHP Tests on TestMu AI",
     "description": "Now you can run your automation scripts using Appium with PHP on TestMu AI online grid of 3000+ real desktop browsers and real operating systems.",
     "url": "https://www.testmuai.com/support/docs/appium-php/",
     "image": {

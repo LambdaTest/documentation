@@ -68,7 +68,7 @@ import VirtualDeviceTag from '@site/src/component/virtualDevice';
       "@type": "WebPage",
       "@id": "https://www.testmuai.com/support/docs/desired-capabilities-in-appium/"
     },
-    "headline": "Desired Capabilities",
+    "headline": "Supported Appium Desired Capabilities on TestMu AI",
     "description": "This document will teach you how to leverage TestMu AI Capability Generator to easily for declaring desired capabilities in Appium to run your App Automation leveraging Appium Desktop.",
     "url": "https://www.testmuai.com/support/docs/desired-capabilities-in-appium/",
     "image": {

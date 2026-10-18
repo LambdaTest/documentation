@@ -54,7 +54,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
       "@type": "WebPage",
       "@id": "https://www.testmuai.com/support/docs/migrate-appium-tests-from-browserstack-and-saucelabs/"
     },
-    "headline": "Migrate Appium Tests",
+    "headline": "How to Migrate Appium Tests from BrowserStack and Sauce Labs to TestMu AI",
     "description": "This documentation will guide you through the process of migrating your Appium test suites from BrowserStack and SauceLabs to TestMu AI.",
     "url": "https://www.testmuai.com/support/docs/migrate-appium-tests-from-browserstack-and-saucelabs/",
     "image": {

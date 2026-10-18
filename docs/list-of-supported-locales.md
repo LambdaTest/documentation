@@ -62,7 +62,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
       "@type": "WebPage",
       "@id": "https://www.testmuai.com/support/docs/list-of-supported-locales/"
     },
-    "headline": "Supported Locales And Languages - Appium",
+    "headline": "Supported Appium Locales & Timezones on TestMu AI",
     "description": "Checkout the list of all supported locales by TestMu AI.",
     "url": "https://www.testmuai.com/support/docs/list-of-supported-locales/",
     "image": {

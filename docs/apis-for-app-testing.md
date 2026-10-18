@@ -60,7 +60,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
       "@type": "WebPage",
       "@id": "https://www.testmuai.com/support/docs/app-testing-apis/"
     },
-    "headline": "Commonly Used APIs For Mobile App Testing",
+    "headline": "How to Use App Testing APIs on TestMu AI",
     "description": "Quick guide on commonly used APIs for Mobile App testing.",
     "url": "https://www.testmuai.com/support/docs/app-testing-apis/",
     "image": {

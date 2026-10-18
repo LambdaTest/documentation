@@ -65,7 +65,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
       "@type": "WebPage",
       "@id": "https://www.testmuai.com/support/docs/appium-nodejs/"
     },
-    "headline": "Appium with Nodejs",
+    "headline": "How to Run Appium JavaScript Tests on TestMu AI",
     "description": "Optimize your Appium automation with Node.js using TestMu AI's comprehensive support documentation.",
     "url": "https://www.testmuai.com/support/docs/appium-nodejs/",
     "image": {

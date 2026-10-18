@@ -65,7 +65,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
       "@type": "WebPage",
       "@id": "https://www.testmuai.com/support/docs/appium-androidtv/"
     },
-    "headline": "Android TV Automation",
+    "headline": "How to Automate Android TV Apps on TestMu AI",
     "description": "Learn how to automate Android TV apps using Appium with a step-by-step tutorial and sample Python code.",
     "url": "https://www.testmuai.com/support/docs/appium-androidtv/",
     "image": {

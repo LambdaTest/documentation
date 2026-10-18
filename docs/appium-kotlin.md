@@ -65,7 +65,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
       "@type": "WebPage",
       "@id": "https://www.testmuai.com/support/docs/appium-kotlin/"
     },
-    "headline": "Appium With Kotlin",
+    "headline": "How to Run Appium Kotlin Tests on TestMu AI",
     "description": "Now you can run your Appium automation scripts using Kotlin on TestMu AI Real Device Cloud Platform of 3000+ real mobile devices.",
     "url": "https://www.testmuai.com/support/docs/appium-kotlin/",
     "image": {

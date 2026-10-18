@@ -60,7 +60,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
       "@type": "WebPage",
       "@id": "https://www.testmuai.com/support/docs/appium-inspector-integration/"
     },
-    "headline": "Appium Inspector Integration on TestMu AI",
+    "headline": "How to Use Appium Inspector on TestMu AI",
     "description": "This documentation will help you integrate Appium Inspector with TestMu AI to interact with TestMu AI's Real Devices. With TestMu AI mobile testing cloud, you can test your mobile applications on wide range of real Android and iOS devices.",
     "url": "https://www.testmuai.com/support/docs/appium-inspector-integration/",
     "image": {

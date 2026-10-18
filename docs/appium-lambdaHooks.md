@@ -67,7 +67,7 @@ import VirtualDeviceTag from '@site/src/component/virtualDevice';
       "@type": "WebPage",
       "@id": "https://www.testmuai.com/support/docs/appium-testmu-hooks/"
     },
-    "headline": "Lambda Hooks For Appium Automation",
+    "headline": "How to Use Lambda Hooks for Appium on TestMu AI",
     "description": "Now you can add custom status & remark to your App Automation scripts that you run on TestMu AI.",
     "url": "https://www.testmuai.com/support/docs/appium-testmu-hooks/",
     "image": {

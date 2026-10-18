@@ -64,7 +64,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
       "@type": "WebPage",
       "@id": "https://www.testmuai.com/support/docs/application-setup-via-api/"
     },
-    "headline": "Perform Operations on your Application via API",
+    "headline": "How to Upload Apps on TestMu AI",
     "description": "This guide will explain how to perform operations with your applications via api for real and virtual devices.",
     "url": "https://www.testmuai.com/support/docs/application-setup-via-api/",
     "image": {

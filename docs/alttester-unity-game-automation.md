@@ -53,7 +53,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
       "@type": "WebPage",
       "@id": "https://www.testmuai.com/support/docs/alttester-unity-game-automation/"
     },
-    "headline": "Automate Unity Games With AltTester on TestMu AI Real Device Cloud",
+    "headline": "How to Automate Unity Games With AltTester on TestMu AI",
     "description": "Run AltTester-instrumented Unity game tests on real Android and iOS devices with TestMu AI, using AltDriver, Appium, the LT tunnel, and pytest.",
     "url": "https://www.testmuai.com/support/docs/alttester-unity-game-automation/",
     "image": {

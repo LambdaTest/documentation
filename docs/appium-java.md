@@ -66,7 +66,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
       "@type": "WebPage",
       "@id": "https://www.testmuai.com/support/docs/appium-java/"
     },
-    "headline": "Appium with Java",
+    "headline": "How to Run Appium Java Tests on TestMu AI",
     "description": "Automate Mobile Apps with ease using Java and Appium",
     "url": "https://www.testmuai.com/support/docs/appium-java/",
     "image": {

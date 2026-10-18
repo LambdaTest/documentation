@@ -69,7 +69,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
       "@type": "WebPage",
       "@id": "https://www.testmuai.com/support/docs/supported-appium-versions/"
     },
-    "headline": "Supported Appium Versions - Real Devices",
+    "headline": "Supported Appium Versions and Plugins on TestMu AI",
     "description": "This document provides information about configuring Appium versions for tests on the TestMu AI platform and also provides list of supported versions.",
     "url": "https://www.testmuai.com/support/docs/supported-appium-versions/",
     "image": {

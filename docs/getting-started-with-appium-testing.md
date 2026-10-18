@@ -60,7 +60,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
       "@type": "WebPage",
       "@id": "https://www.testmuai.com/support/docs/getting-started-with-appium-testing/"
     },
-    "headline": "Getting Started with Appium Testing",
+    "headline": "How to Run Your First Appium Test on TestMu AI",
     "description": "Getting Started with Appium Testing on TestMu AI Upload, Script, Execute, View - Run your automation scripts seamlessly on 3000+ real browsers and operating systems.",
     "url": "https://www.testmuai.com/support/docs/getting-started-with-appium-testing/",
     "image": {

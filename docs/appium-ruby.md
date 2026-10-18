@@ -67,7 +67,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
       "@type": "WebPage",
       "@id": "https://www.testmuai.com/support/docs/appium-ruby/"
     },
-    "headline": "Appium with Ruby",
+    "headline": "How to Run Appium Ruby Tests on TestMu AI",
     "description": "Complete guide to running your first Ruby Appium automated test script on TestMu AI Real Device Cloud Platform. Test on 5000+ Real Devices.",
     "url": "https://www.testmuai.com/support/docs/appium-ruby/",
     "image": {
