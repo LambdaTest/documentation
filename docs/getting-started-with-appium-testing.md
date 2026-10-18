@@ -105,7 +105,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
 # How to Run Your First Appium Test on TestMu AI
 ---
 
-Running your first Appium test on TestMu AI executes native and hybrid mobile app automation on real Android and iOS devices. Clone a sample project, set credentials, upload your app, configure desired capabilities, and view detailed results on the dashboard.
+Running your first Appium test on TestMu AI executes native and hybrid mobile app End-to-End (E2E) testing on real Android and iOS devices. Clone a sample project, set credentials, upload your app, configure desired capabilities, and view detailed results on the dashboard.
 
 
 :::tip Sample repo
