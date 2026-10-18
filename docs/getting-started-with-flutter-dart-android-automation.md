@@ -223,7 +223,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
 
 <RealDeviceTag value="Real Device" />
 
-Running your first Flutter Dart test on TestMu AI automates Flutter apps on real Android devices in the cloud. Install the Flutter SDK, set credentials, upload the sample app and test suite, then execute and review results on the dashboard.
+Running your first Flutter Dart test on TestMu AI runs End-to-End (E2E) testing of Flutter apps on real Android devices in the cloud. Install the Flutter SDK, set credentials, upload the sample app and test suite, then execute and review results on the dashboard.
 
 ## Flutter Dart Testing on Android
 

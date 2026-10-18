@@ -185,7 +185,7 @@ Running your first Flutter Dart test on TestMu AI automates Flutter apps on real
 
 ## Flutter Dart Testing on iOS
 
-In this section, we will explore how to run your first Flutter Dart test on an iOS device using the <BrandName /> Real Device Cloud. By combining the capabilities of Flutter Dart and <BrandName />, you can ensure the proper functioning of your app across different devices and make your app more reliable and robust.
+In this section, we will explore how to run Flutter Dart End-to-End (E2E) testing on an iOS device using the <BrandName /> Real Device Cloud. By combining the capabilities of Flutter Dart and <BrandName />, you can ensure the proper functioning of your app across different devices and make your app more reliable and robust.
 
 ### Prerequisites for Getting Started
 
