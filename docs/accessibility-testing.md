@@ -90,7 +90,7 @@ import Link from '@docusaurus/Link';
 
 ---
 
-TestMu AI Accessibility Testing is a suite for finding, understanding, and fixing accessibility issues across websites, web apps, and native mobile apps. It combines browser-based scanning, framework automation, real-device app testing, assistive-technology checks, scheduled scans, and a reporting dashboard so teams can work toward standards such as WCAG, ADA, EAA, and Section 508 from a single product.
+TestMu AI Accessibility Testing is a suite for finding, understanding, and fixing accessibility issues across websites, web apps, and native mobile apps. It combines browser-based scanning, framework automation, real-device app testing, assistive-technology checks, scheduled scans, and a reporting dashboard so teams can work toward standards such as WCAG, ADA, EAA, and Section 508 from a single product, and plugs into your End-to-End (E2E) testing to catch issues during automated runs.
 
 ## What each section covers
 
