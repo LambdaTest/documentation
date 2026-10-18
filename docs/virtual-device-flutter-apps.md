@@ -55,7 +55,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
       "@type": "WebPage",
       "@id": "https://www.testmuai.com/support/docs/virtual-device-flutter-apps/"
     },
-    "headline": "How to test flutter apps using Appium framework on Virtual Devices",
+    "headline": "How to Test Flutter Apps on Virtual Devices on TestMu AI",
     "description": "Learn how to test flutter apps for Appium testing across 5000+ real Android and iOS devices for virtual devices",
     "url": "https://www.testmuai.com/support/docs/virtual-device-flutter-apps/",
     "image": {
