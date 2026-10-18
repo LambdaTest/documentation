@@ -58,7 +58,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       "@type": "WebPage",
       "@id": "https://www.testmuai.com/support/docs/flutter-supported-capabilities/"
     },
-    "headline": "Flutter Supported Capabilities",
+    "headline": "Flutter Supported Capabilities on TestMu AI",
     "description": "Now you can run your Flutter framework on TestMu AI online grid of 3000+ real desktop browsers and real operating systems with its supported capabilities.",
     "url": "https://www.testmuai.com/support/docs/flutter-supported-capabilities/",
     "image": {

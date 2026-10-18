@@ -63,7 +63,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
       "@type": "WebPage",
       "@id": "https://www.testmuai.com/support/docs/appium-flutter-integration/"
     },
-    "headline": "Appium Flutter Integration Driver Testing",
+    "headline": "How to Test Flutter Apps With Appium on TestMu AI",
     "description": "Guide to testing Flutter apps using Appium Flutter Integration Driver on TestMu AI real device cloud.",
     "url": "https://www.testmuai.com/support/docs/appium-flutter-integration/",
     "image": {
