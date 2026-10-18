@@ -63,7 +63,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
       "@type": "WebPage",
       "@id": "https://www.testmuai.com/support/docs/espresso-env-variables-settings/"
     },
-    "headline": "Setting Up Espresso Environment Variables",
+    "headline": "How to Set Espresso Env Variables on TestMu AI",
     "description": "Now you can run your Espresso framework on TestMu AI and this particular feature allows users to pass and retrieve environment variables (like STAGE, PROD, or DEV) during automated Android tests.",
     "url": "https://www.testmuai.com/support/docs/espresso-env-variables-settings/",
     "image": {

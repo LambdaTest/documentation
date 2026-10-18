@@ -54,7 +54,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
       "@type": "WebPage",
       "@id": "https://www.testmuai.com/support/docs/supported-locales-espresso/"
     },
-    "headline": "Supported Locales And Languages - Espresso",
+    "headline": "Supported Espresso Locales & Languages on TestMu AI",
     "description": "Checkout the list of all supported locales for espresso.",
     "url": "https://www.testmuai.com/support/docs/supported-locales-espresso/",
     "image": {

@@ -61,7 +61,7 @@ import RealDeviceTag from '@site/src/component/realDevice';
       "@type": "WebPage",
       "@id": "https://www.testmuai.com/support/docs/espresso-supported-capabilities/"
     },
-    "headline": "Espresso Supported Capabilities",
+    "headline": "Supported Espresso Capabilities on TestMu AI",
     "description": "Now you can run your Espresso framework on TestMu AI online grid of 3000+ real desktop browsers and real operating systems with its supported capabilities.",
     "url": "https://www.testmuai.com/support/docs/espresso-supported-capabilities/",
     "image": {

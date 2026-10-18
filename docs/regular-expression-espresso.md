@@ -52,7 +52,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
       "@type": "WebPage",
       "@id": "https://www.testmuai.com/support/docs/regular-expression-espresso/"
     },
-    "headline": "Regular Expression - Espresso",
+    "headline": "How to Use REGEX for Espresso Devices on TestMu AI",
     "description": "If your chosen device for testing on TestMu AI is unavailable, use REGEX to broaden the search for alternative devices to run espresso test.",
     "url": "https://www.testmuai.com/support/docs/regular-expression-espresso/",
     "image": {
