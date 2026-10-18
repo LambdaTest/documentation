@@ -66,7 +66,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
       "@type": "WebPage",
       "@id": "https://www.testmuai.com/support/docs/sharding-rd-hyperexec/"
     },
-    "headline": "Sharding for XCUI",
+    "headline": "How to Shard XCUI Tests on TestMu AI",
     "description": "This document will cover how to execute XCUI Tests on real devices with HyperExecute. Before starting, please make sure you have App Automation and HyperExecute Cloud plans on your account.",
     "url": "https://www.testmuai.com/support/docs/sharding-rd-hyperexec/",
     "image": {

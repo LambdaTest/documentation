@@ -60,7 +60,7 @@ import VirtualDeviceTag from '@site/src/component/virtualDevice';
       "@type": "WebPage",
       "@id": "https://www.testmuai.com/support/docs/xcui-supported-capabilities/"
     },
-    "headline": "XCUI Supported Capabilities",
+    "headline": "XCUI Supported Capabilities on TestMu AI",
     "description": "Now you can run your XCUI framework on TestMu AI online grid of 3000+ real desktop browsers and real operating systems with its supported capabilities.",
     "url": "https://www.testmuai.com/support/docs/xcui-supported-capabilities/",
     "image": {

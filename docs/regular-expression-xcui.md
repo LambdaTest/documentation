@@ -54,7 +54,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
       "@type": "WebPage",
       "@id": "https://www.testmuai.com/support/docs/regular-expression-xcui/"
     },
-    "headline": "Regular Expression - XCUI",
+    "headline": "How to Use Regular Expressions for XCUI on TestMu AI",
     "description": "There may be instances when the device you chose for a test on TestMu AI is not available. In these scenarios, REGEX will help you widen the search request for devices to run the test on.",
     "url": "https://www.testmuai.com/support/docs/regular-expression-xcui/",
     "image": {

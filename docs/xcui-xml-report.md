@@ -63,7 +63,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
       "@type": "WebPage",
       "@id": "https://www.testmuai.com/support/docs/xcui-report/"
     },
-    "headline": "XCUI XML Reports",
+    "headline": "How to Get XCUI XML Reports on TestMu AI",
     "description": "XCUI XML Report",
     "url": "https://www.testmuai.com/support/docs/xcui-report/",
     "image": {

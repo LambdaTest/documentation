@@ -61,7 +61,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       "@type": "WebPage",
       "@id": "https://www.testmuai.com/support/docs/ios-ipa-files-xcui/"
     },
-    "headline": "Creating iOS Applications",
+    "headline": "How to Create iOS IPA Files on TestMu AI",
     "description": "Effortlessly test iOS IPA files with XCUi on TestMu AI. Ensure your apps run smoothly on all iOS devices with comprehensive testing support.",
     "url": "https://www.testmuai.com/support/docs/ios-ipa-files-xcui/",
     "image": {

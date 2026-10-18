@@ -62,7 +62,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
       "@type": "WebPage",
       "@id": "https://www.testmuai.com/support/docs/getting-started-with-xcuitest/"
     },
-    "headline": "XCUI Testing on TestMu AI",
+    "headline": "How to Run XCUITest on TestMu AI",
     "description": "Master XCUITest automation with TestMu AI! Learn to run scripts, utilize capabilities, and execute tests on real iOS devices effortlessly. Get started now!",
     "url": "https://www.testmuai.com/support/docs/getting-started-with-xcuitest/",
     "image": {

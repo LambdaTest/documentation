@@ -53,7 +53,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
       "@type": "WebPage",
       "@id": "https://www.testmuai.com/support/docs/supported-locales-xcui/"
     },
-    "headline": "Supported Locales And Languages - XCUI",
+    "headline": "Supported Locales and Languages for XCUI on TestMu AI",
     "description": "Checkout the list of all supported locales",
     "url": "https://www.testmuai.com/support/docs/supported-locales-xcui/",
     "image": {
