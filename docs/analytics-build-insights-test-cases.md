@@ -273,6 +273,10 @@ Go to **Organization Settings → Org Product Preferences → Insights → Smart
 
 **Update** stays disabled until you have selected at least one level, one anomaly type and one channel.
 
+:::note
+If [KPI threshold alerts](/support/docs/analytics-kpi-threshold-alerts/) are enabled for your organization, the card shows two switches under **Enable anomaly notifications**: **Build anomaly digest** for the notifications on this page, and **KPI threshold alerts**. Turn on **Build anomaly digest** to get these digests.
+:::
+
 <img loading="lazy" src={require('../assets/images/analytics/test-cases-anomaly-notifications.webp').default} alt="Smart Tags and Anomaly Notifications settings" width="768" height="348" className="doc_img"/>
 
 :::caution
@@ -299,4 +303,5 @@ Each entry names the test, or the test case and the test that contains it, along
 - [Test Case Insights](/support/docs/analytics-test-case-insights/) — how to report test cases from your tests.
 - [Build Insights](/support/docs/analytics-build-insights/) — the build list and build details.
 - [Smart Tags](/support/docs/analytics-smart-tags-test-intelligence/) — smart tags for test sessions.
+- [KPI Threshold Alerts](/support/docs/analytics-kpi-threshold-alerts/) — alerts when a test-health KPI goes above a count you set.
 - [Failure Categorization AI](/support/docs/analytics-test-failure-classification/) — failure categories for test sessions.
