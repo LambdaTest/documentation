@@ -143,6 +143,8 @@ Go to **Organization Settings → Org Product Preferences → Insights → Smart
 
 **Update** stays disabled until you have selected at least one level, one anomaly type and one channel.
 
+If [KPI threshold alerts](/support/docs/analytics-kpi-threshold-alerts/) are enabled for your organization, the card shows two switches under **Enable anomaly notifications**: **Build anomaly digest** for the notifications on this page, and **KPI threshold alerts**. Turn on **Build anomaly digest** to get these digests.
+
 Webhook payloads include test and build names and are delivered to your endpoint wherever it is hosted, so webhook delivery is outside TestMu AI's data residency guarantee.
 
 ### When a notification is sent
@@ -165,4 +167,5 @@ Each entry names the test, or the test case and the test that contains it, along
 - [Test Case Insights](/support/docs/analytics-test-case-insights/) — how to report test cases from your tests.
 - [Build Insights](/support/docs/analytics-build-insights/) — the build list and build details.
 - [Smart Tags](/support/docs/analytics-smart-tags-test-intelligence/) — smart tags for test sessions.
+- [KPI Threshold Alerts](/support/docs/analytics-kpi-threshold-alerts/) — alerts when a test-health KPI goes above a count you set.
 - [Failure Categorization AI](/support/docs/analytics-test-failure-classification/) — failure categories for test sessions.
