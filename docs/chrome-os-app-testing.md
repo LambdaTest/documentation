@@ -175,11 +175,13 @@ The settings section offer the following features:
 
 ## Switch
 Switch allows you to seamlessly switch between multiple emulated devices within the same project.  This eliminates the need to tear down and rebuild individual emulators, streamlining your testing workflow and enabling you to compare app behavior across different ChromeOS device configurations.
-  
-<img loading="lazy" src={require('../assets/videos/real-time/chromeos-app/switch.gif').default} style={{ height: '350px' }} className="doc_img"/>
+
+<img loading="lazy" src={require('../assets/videos/real-time/chromeos-app/switch-app.png').default} style={{ height: '350px' }} className="doc_img"/>
 
 ## End Session
 Terminates the current emulator instance, freeing up resources and allowing you to start a fresh session with a clean slate.
+
+<img loading="lazy" src={require('../assets/videos/real-time/chromeos-app/end-session-app.png').default} style={{ height: '350px' }} className="doc_img"/>
 
 ## Advance Tools
 
