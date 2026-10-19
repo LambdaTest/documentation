@@ -3880,6 +3880,11 @@ module.exports = {
                 label: "CI Gating and Exit Codes",
                 id: "smartui-storybook-ci-gating",
               },
+              {
+                type: "doc",
+                label: "Capture Only Changed Stories",
+                id: "smartui-storybook-only-changed",
+              },
             ],
           },
           {
