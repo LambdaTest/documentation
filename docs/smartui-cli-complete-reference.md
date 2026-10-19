@@ -956,11 +956,16 @@ smartui storybook [options] <url|directory>
 | `--env <prod\|stage>` | | Runtime environment | `prod` |
 | `--fail-on [policy]` | | Exit with code `4` when the build breaks a policy: `none`, `unreviewed`, `changes` or `rejected`. No value means `unreviewed`. Also set by `SMARTUI_FAIL_ON` or `failOn` in the config. Version `1.3.0` or later. See [CI Gating and Exit Codes](/support/docs/smartui-storybook-ci-gating/) | `none` |
 | `--fetch-results [filename]` | | Write the build results to a JSON file. Version `1.3.0` or later | `results.json` |
+| `--only-changed` | | Capture only the stories that changes since the baseline build can affect, and copy the others from the baseline build. Static builds made with `--stats-json` only. Also set by `onlyChanged` in the config. Version `1.4.0` or later. See [Capture Only Changed Stories](/support/docs/smartui-storybook-only-changed/) | `false` |
 
 **Examples:**
 ```bash
 # Fail the job on visual changes and save the results (version 1.3.0 or later)
 smartui storybook ./storybook-static --config .smartui.json --fail-on changes --fetch-results smartui-results.json
+
+# Capture only the stories your changes affect (version 1.4.0 or later)
+npx storybook build --stats-json
+smartui storybook ./storybook-static --config .smartui.json --only-changed
 
 # Local Storybook server
 smartui storybook http://localhost:6006 --config .smartui.json
