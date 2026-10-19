@@ -136,5 +136,5 @@ Performance anomalies are tests that have shown a significant change in performa
 
 ## Smart Tags for test cases and anomaly notifications
 
-Smart tags are also computed for individual test cases, and you can get an email, Slack or webhook digest whenever a build finishes with anomalies. See [Test case intelligence](/support/docs/analytics-build-insights-test-cases/#test-case-intelligence) and [Anomaly notifications](/support/docs/analytics-build-insights-test-cases/#anomaly-notifications).
+Smart tags are also computed for individual test cases, and you can get an email, Slack or webhook digest whenever a build finishes with anomalies. See [Test case intelligence](/support/docs/analytics-build-insights-test-cases/#test-case-intelligence) and [Anomaly notifications](/support/docs/analytics-build-insights-test-cases/#anomaly-notifications). To be alerted when a test-health KPI such as New Failures or Flaky goes above a count you set, see [KPI Threshold Alerts](/support/docs/analytics-kpi-threshold-alerts/).
 
