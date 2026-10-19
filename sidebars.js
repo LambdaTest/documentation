@@ -2520,6 +2520,7 @@ module.exports = {
               "contacts-on-real-devices",
               "real-device-adb-shell",
               "ui-inspector",
+              "appium-inspector-on-real-devices-app",
               {
                 type: "category",
                 collapsed: true,
