@@ -24,56 +24,68 @@ kane-cli run "Verify the checkout flow completes successfully" \
 
 When `--agent` is active:
 - The interactive TUI is fully suppressed (no boot screen, no menus)
-- Stdin is not used (no interactive prompts)
+- stdout carries only NDJSON, one JSON object per line, and the progress UI goes to stderr
+- When stdin is not a TTY, Kane CLI turns off `ask_user`, so the run never stops to wait for input (see below)
+
+Kane CLI also switches to NDJSON on its own when stdin is not a TTY, for example in CI. Pass `--agent` anyway, so the output format does not depend on how the shell is set up.
 
 <Tip>
-Always combine `--agent` with `--headless` in non-interactive environments (CI/CD, agent contexts) to avoid display server errors.
+Add `--headless` wherever there is no display, such as CI runners, containers, and SSH sessions, to avoid display server errors. On a desktop, a coding agent can leave the browser visible so you can watch the run.
 </Tip>
 
 ---
 
-## Output Format
+## NDJSON Output Format
 
-Kane CLI outputs one JSON object per line (NDJSON) to stdout:
+With `--agent`, Kane CLI writes one JSON object per line (NDJSON) to stdout. Every line carries `v`, the stream contract version (currently `1`), and `ts`, the time the line was written. Here is a shortened `kane-cli run` stream. `...` marks lines and values left out, and the `run_end` line shows only some of its fields:
 
 ```
-{"type":"run_start","objective":"Verify checkout","timestamp":"2026-04-14T10:30:45Z"}
-{"type":"step_start","index":0,"objective":"Navigate to cart page"}
-{"type":"step_event","index":0,"event":"action","detail":"Navigated to /cart","success":true}
-{"type":"step_event","index":0,"event":"screenshot","detail":"Screenshot captured"}
-{"type":"step_end","index":0,"status":"passed","duration":2.3,"summary":"Navigated to cart"}
-{"type":"step_start","index":1,"objective":"Click checkout button"}
+{"type":"stream_start","cli_version":"0.9.0","surface":"run","pid":16664,"v":1,"ts":"2026-10-15T08:47:26.889Z"}
 ...
-{"type":"run_end","status":"passed","summary":"...","duration":45.2,...}
+{"type":"bifurcation","flows":["Navigate to https://example.com then verify the page heading says Example Domain"],"count":1,"v":1,"ts":"2026-10-15T08:47:39.435Z"}
+{"step":2,"status":"running","remark":"Step 1","v":1,"ts":"2026-10-15T08:47:39.957Z"}
+{"step":2,"status":"done","remark":"navigate: Navigate to https://example.com","v":1,"ts":"2026-10-15T08:47:39.958Z"}
+...
+{"step":4,"status":"done","remark":"assert: the page heading says Example Domain","v":1,"ts":"2026-10-15T08:47:54.260Z"}
+{"type":"run_end","status":"passed","summary":"...","reason":"Objective completed","duration":20.5,"credits_consumed":11.9,"test_url":"https://test-manager.lambdatest.com/...","session_dir":"...","v":1,"ts":"2026-10-15T08:48:10.211Z"}
 ```
+
+Rules for parsing the stream:
+
+- **The first line is `stream_start`.** Its `surface` is `run`, `testmd`, or `testrun`, and `cli_version` names the Kane CLI release that wrote the stream.
+- **On a `run` stream, step lines have no `type` field.** A step prints a `running` line when it starts and a `done` or `failed` line when it ends, and the stream has no `run_start`, `step_start`, `step_event`, or `step_end` events. A `testmd run` stream is different: every line is typed, and each `test_md_step_start` and `test_md_step_end` pair wraps typed `run_start`, `step_start`, `step_event`, `step_end`, and `run_end` events for that step.
+- **Ignore fields and event types you do not recognize.** New ones can appear in any release without a change to `v`. Skip any line that is not JSON.
+- **For a `run` that started, the last line is `run_end`.** A run refused before it starts can exit with code `2` and no `run_end` line, so check the exit code first.
+
+Kane CLI also writes the same lines to `events.ndjson` in the session folder while the run is in progress.
 
 ---
 
-## Event Schema
+## NDJSON Event Schema
 
-### Step Events
+The tables below describe a `kane-cli run` stream. A `testmd run` stream is typed on every line and ends with `test_md_done`, and a `testrun run` stream uses its own `testrun_*` events. See [Command-Specific Completion](#command-specific-completion).
+
+### Step Progress Lines in a `run` Stream
+
+| Field | Type | Description |
+|-------|------|-------------|
+| `step` | number | Step index. It can run one ahead of the step a person would count, because a `bifurcation` takes the first slot. To report steps taken, count the `done` and `failed` lines |
+| `status` | string | `running` when the step starts, then `done` or `failed` when it ends |
+| `remark` | string | What the agent did, or why the step failed |
+
+### Typed Events in a `run` Stream
 
 | Type | Key Fields | Description |
 |------|-----------|-------------|
-| `step_start` | `index`, `objective`, `child_id`* | Step began |
-| `step_event` | `index`, `event`**, `detail`, `success`* | Activity within a step |
-| `step_end` | `index`, `status` (passed\|failed), `duration`, `summary` | Step completed |
-
-*optional  
-**`event` values: `screenshot`, `reasoning`, `action`, `vision`, `assertion`, `evaluation`
-
-### Flow Events
-
-| Type | Key Fields | Description |
-|------|-----------|-------------|
-| `run_start` | `objective`, `timestamp` | Run started |
-| `bifurcation` | `flows[]`, `count` | Agent branched into sub-flows |
-| `child_agent_start` | `child_id`, `objective`, `parent_step` | Child agent spawned |
-| `child_agent_end` | `child_id`, `success`, `steps_taken`, `summary` | Child agent finished |
-| `ask_user` | `question`, `step_index`, `options`* | Agent needs input (turned off automatically when stdin is not a TTY) |
-| `warning` | `code`, `message`, `suggested_file`, `variables[]` | A non-fatal warning, sent before the first progress event (for example `code: "unresolved_variables"`) |
-| `error` | `message` | Error occurred |
-| `run_end` | *(see below)* | Final event of a one-shot `run`: always the last line |
+| `stream_start` | `cli_version`, `surface`, `pid` | The first line of every stream. `session_dir` may also be present |
+| `project_folder_auto_defaulted` | The project and folder Kane CLI chose (ID and name) | No Test Manager project or folder was configured, or the saved one was no longer valid, so Kane CLI picked one. Sent before the first step line |
+| `bifurcation` | `flows[]`, `count` | The agent split the objective into sub-flows |
+| `child_agent_start` | `child_id`, `objective`, `parent_step` | A child agent started |
+| `child_agent_end` | `child_id`, `success`, `steps_taken`, `summary` | A child agent finished |
+| `ask_user` | `question`, `step_index`, `options` (optional) | The agent needs input (turned off automatically when stdin is not a TTY) |
+| `warning` | `code`, `message`, `suggested_file`, `variables[]` | A non-fatal warning, sent before the first step line (for example `code: "unresolved_variables"`) |
+| `error` | `message` | An error occurred |
+| `run_end` | *(see below)* | The final event of a `run` that started: always the last line |
 
 ### Unresolved-Variable Warning
 
@@ -89,7 +101,7 @@ Kane CLI checks every `{{name}}` in the objective before the run starts. If a na
 
 ## The `run_end` Event
 
-`run_end` is the last line of a one-shot `run`. It contains the complete test result. Always check the process exit code too: an early refusal can exit without a `run_end` event.
+`run_end` is the last line of a `kane-cli run` that started, and it carries the complete result. A run refused before it starts, for example with no start URL, no sign-in, or no Chrome, can exit with code `2` and no `run_end` line. Check the exit code first, then read `run_end`.
 
 ```json
 {
@@ -99,65 +111,93 @@ Kane CLI checks every `{{name}}` in the objective before the run starts. If a na
   "one_liner": "Searched for laptop on Amazon and added to cart",
   "reason": "Objective completed",
   "duration": 45.2,
+  "credits_consumed": 11.9,
   "final_state": {
     "price": "$29.99",
     "product_name": "Wireless Headphones"
   },
-  "context": {
-    "memory": {},
-    "variables": {},
-    "pointer": "(passed) Searched for laptop on Amazon"
-  },
-  "token_usage": {
-    "reasoning_input": 12000,
-    "reasoning_output": 800,
-    "vision_input": 5000,
-    "vision_output": 200
-  },
-  "session_dir": "~/.testmuai/kaneai/sessions/2026-04-14_10-30-45_a1b2c3",
-  "run_dir": "~/.testmuai/kaneai/sessions/2026-04-14_10-30-45_a1b2c3/runs/0",
-  "test_url": "https://test-manager.lambdatest.com/projects/123/test-cases/456"
+  "test_url": "https://test-manager.lambdatest.com/projects/123/test-cases/456",
+  "session_dir": "~/.testmuai/kaneai/sessions/a1b2c3d4-e5f6-7890-abcd-ef1234567890",
+  "v": 1,
+  "ts": "2026-10-15T10:31:30.412Z"
 }
 ```
 
-### Key Fields
+`run_end` can carry more fields than this example, such as `context` and `result_code`. Ignore the fields you do not need.
+
+### `run_end` Fields
 
 | Field | Description |
 |-------|-------------|
 | `status` | `"passed"` or `"failed"` |
-| `summary` | Full description of what the agent did |
-| `one_liner` | Short single-sentence summary |
-| `reason` | Why the run stopped (present on failure) |
-| `final_state` | Values extracted via "store as" objectives |
-| `test_url` | Link to the <BrandName /> dashboard for this run |
-| `session_dir` | Path to session-level logs |
-| `run_dir` | Path to run-level logs, step JSON, screenshots |
-| `token_usage` | Token consumption breakdown |
+| `summary` | What the agent did |
+| `one_liner` | A short, single-sentence summary for display |
+| `reason` | A short label for why the run stopped, such as `"Objective completed"` |
+| `duration` | Run time in seconds |
+| `credits_consumed` | Credits the run used, as a decimal number, when reported. Round it for display. Older releases called this field `credits` |
+| `final_state` | Values saved with "store ... as" in the objective |
+| `test_url` | Link to the test case in <BrandName /> Test Manager. Present when the upload succeeded |
+| `session_dir` | The session folder. The sealed evidence pack is in its `evidence/` subfolder |
+| `run_dir` | Legacy. The folder it names is no longer created: run logs and screenshots are in the evidence pack |
+| `result_code` | Optional machine classification of the result. See [Error Codes](/docs/kane-cli-error-codes/). With `--bug-detection`, a confirmed product bug arrives as `result_code` `740` with a `verdict` object |
 | `condition_results` | `--analyzer-only` runs only: `boolean[]`, one verdict per `--condition`, in order. See [Assertion controls and current-page analysis](/docs/kane-cli-modes/#assertion-controls-and-current-page-analysis) |
 
 ---
 
-## The .evidence proof pack
+## Exit Codes for `kane-cli run`
 
-Every Kane CLI run produces an `.evidence` pack stored natively in the results folder, so failure context travels with the run instead of living in a separate dashboard. Each pack contains the full execution proof for the run: step-by-step traces, screenshots, video, and command, network and console logs, plus the NDJSON event stream and result codes. Coding agents and humans read the same evidence to see exactly what happened, where it failed, and why.
+| Code | Meaning |
+|------|---------|
+| `0` | The run passed |
+| `1` | The run went ahead and did not pass, or the upload failed. Read the failing step's `remark` and the evidence pack to tell a product bug from a test problem |
+| `2` | The run did not start, and no credits were used: sign-in, configuration, no start URL, Chrome, network, or an unknown subcommand. There may be no `run_end` line |
+| `3` | The run was canceled or hit `--timeout` |
+
+`testmd run`, `testrun run`, `generate`, and the assurance commands have their own exit codes. See [CLI Reference: Exit Codes](/docs/kane-cli-cli-reference/#exit-codes).
 
 ---
 
-## Parsing Output
+## The Evidence Pack for Each Run
 
-Get the `run_end` event:
+Every run seals an evidence pack: one `.evidence` file, a standard zip, that holds the test definition, a result summary, per-step screenshots (plus annotated copies that highlight the element the agent acted on), per-step browser console and network logs, run logs, and, when a step fails, a failure record for that step. The pack holds no video.
+
+| Command | Where the sealed pack is |
+|---------|--------------------------|
+| `kane-cli run` | In the `evidence/` subfolder of `session_dir`. It is also copied to `.testmuai/evidence/` in your working directory when you name the run with `--name` |
+| `kane-cli testmd run` | Copied to `.testmuai/evidence/` on every run |
+| `kane-cli testrun run` | Created directly in `.testmuai/evidence/` |
+
+`run_end` has no field for the pack's path. After the run, Kane CLI prints a hint line on stderr, not on stdout:
+
+```
+evidence: view locally with `kane-cli evidence serve <path-to-pack>`
+```
+
+`kane-cli evidence serve` serves sealed packs from your machine to the hosted viewer and uploads nothing. See [Evidence Packs](/docs/kane-cli-evidence/) and [How to Debug a Failed Kane CLI Run](/docs/kane-cli-evidence-debugging/).
+
+---
+
+## Parsing the `run_end` Result in a Script
+
+Save stdout to a file, read the exit code, then pick the `run_end` line by its `type`. Selecting by `type` keeps the script working when a run never started and has no `run_end` line.
 
 ```bash
-# Get just the final result
-kane-cli run "..." --agent 2>/dev/null | tail -1 | jq .
+kane-cli run "Go to https://example.com, store the page heading as 'heading', then verify it says Example Domain" \
+  --agent --headless > run.ndjson
+code=$?
+echo "exit code: $code"   # 2: the run did not start, and there may be no run_end line
 
-# Extract status
-kane-cli run "..." --agent 2>/dev/null | tail -1 | jq -r '.status'
+# The full result
+jq -cR 'fromjson? | select(.type == "run_end")' run.ndjson
 
-# Extract a stored value
-kane-cli run "go to example.com, store the price as 'price'" --agent 2>/dev/null \
-  | tail -1 | jq -r '.final_state.price'
+# Just the status
+jq -rR 'fromjson? | select(.type == "run_end") | .status' run.ndjson
+
+# A value saved with "store ... as 'heading'"
+jq -rR 'fromjson? | select(.type == "run_end") | .final_state.heading' run.ndjson
 ```
+
+`fromjson?` skips any line that is not JSON. When the run started, `run_end` is also the last line, so `tail -n 1 run.ndjson` returns it too.
 
 ---
 
@@ -210,7 +250,7 @@ To cancel:
 |--|----------------------|------------------|
 | TUI | Suppressed | Full terminal UI |
 | Output | NDJSON to stdout | Formatted text |
-| Stderr | Logs only | Logs + progress UI |
+| Stderr | Progress UI and hint lines, such as the evidence pack path | Logs + progress UI |
 | Use case | AI agents, programmatic tools | Human development |
 
 ---
@@ -218,8 +258,10 @@ To cancel:
 ## Next Steps
 
 - [Error Codes](/docs/kane-cli-error-codes/): Complete reference of `result_code` values and recommended actions
+- [Evidence Packs](/docs/kane-cli-evidence/): What every run captures and how to view it
 - [Parallel Execution](/docs/kane-cli-parallel-execution/): Run multiple tests concurrently
 - [Skills](/docs/kane-cli-skills/): Install the Kane CLI skill for Claude, Codex, or Gemini
 - [CLI Reference](/docs/kane-cli-cli-reference/): Full flag and command reference
+- [Skill parsing reference](https://github.com/LambdaTest/kane-cli/blob/main/skill-installer/skills/references/parsing.md): The NDJSON schema the Kane CLI skill follows
 
 <KaneCliCta />

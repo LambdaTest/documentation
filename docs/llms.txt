@@ -8,7 +8,8 @@ Sitemap: https://www.testmuai.com/sitemap.xml
 
 ## Agent skill
 
-- [Kane CLI Agent Skill](https://www.testmuai.com/docs/SKILL.md): Instructions that teach an AI coding agent how to use kane-cli - when to invoke it, how to build the command, how to read the NDJSON output, and how to diagnose a failed run.
+- [Kane CLI Agent Skill](https://raw.githubusercontent.com/LambdaTest/kane-cli/main/skill-installer/skills/SKILL.md): Instructions that teach an AI coding agent how to use kane-cli - when to invoke it, how to build the command, how to read the NDJSON output, and how to diagnose a failed run.
+- [Kane CLI AGENTS.md for coding agents](https://www.testmuai.com/kane-cli-agent/AGENTS.md): The full instruction file for agents that read AGENTS.md, such as Cursor and GitHub Copilot.
 
 ## Docs
 
@@ -27,8 +28,9 @@ Sitemap: https://www.testmuai.com/sitemap.xml
 - [Composing Tests (@import)](https://www.testmuai.com/docs/kane-cli-testmd-composition.md): Split a test.md into reusable helper files with @import: syntax, path resolution, optional imports, what propagates, variables across imports, helper outputs and sharing helpers across projects.
 - [Running test.md Files](https://www.testmuai.com/docs/kane-cli-testmd-running.md): Run and replay test.md files with kane-cli testmd: the full flag reference, how a run works, replay versus author, the cascade rule, lock conflicts, output directory, exit codes and the testmd list, status, delete, export and sync commands.
 - [Batch Runs (testrun)](https://www.testmuai.com/docs/kane-cli-testrun.md): Run many authored _test.md files as one execution with kane-cli testrun run: tag and regex selection, parallel workers, preflight, dry runs, exit codes and a single sealed evidence pack.
-- [Remote Runs on the Cloud Grid](https://www.testmuai.com/docs/kane-cli-remote-execution.md): Dispatch a suite of _test.md files to HyperExecute with kane-cli testrun run --remote: grid browsers for web suites, grid emulators and simulators for mobile suites, from any machine.
+- [Remote Runs on the Cloud Grid](https://www.testmuai.com/docs/kane-cli-remote-execution.md): Dispatch a suite of _test.md files to HyperExecute with kane-cli testrun run --remote: grid browsers for web suites, grid emulators and simulators, and real Android and iOS devices, from any machine.
 - [How to Test Mobile Apps with Kane CLI](https://www.testmuai.com/docs/kane-cli-mobile.md): Run Kane CLI tests on mobile virtual devices, locally on macOS Apple Silicon or on the cloud grid from any machine. Set up the iOS Simulator or the Android Emulator and drive a native app.
+- [How to Test on Real Android and iOS Devices with Kane CLI](https://www.testmuai.com/docs/kane-cli-mobile-real-device.md): Run Kane CLI native app tests on real Android and iOS devices in the TestMu AI cloud from any machine. Pick a device, pass an .apk, .aab, or .ipa build, and run single tests or suites.
 - [Kane CLI Use Cases by Category](https://www.testmuai.com/docs/kane-cli-use-cases.md): Browse Kane CLI use cases by category, from API testing to everything you can drive with a single natural-language command.
 - [API Testing Use Cases](https://www.testmuai.com/docs/api-testing-with-kane-cli.md): API testing use cases for Kane CLI, from smoke tests and auth-token chaining to schema validation, SLA gates, and multi-step API transactions, each with the exact steps to follow.
 - [How to Use Kane CLI with AI Coding Agents](https://www.testmuai.com/docs/kane-cli-with-ai-coding-agents.md): See how Kane CLI gives AI coding agents a real browser, with walkthroughs for Claude Code, Cursor, Gemini CLI, and Kiro, plus patterns that work in any agent.

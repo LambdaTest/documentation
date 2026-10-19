@@ -31,7 +31,10 @@ const OUT_FILE = path.join(ROOT, 'docs', 'llms.txt');
 
 const SITE_ORIGIN = 'https://www.testmuai.com';
 const SITEMAP_URL = `${SITE_ORIGIN}/sitemap.xml`;
-const SKILL_URL = `${SITE_ORIGIN}/docs/SKILL.md`;
+// The skill ships in the kane-cli repository; there is no /docs/SKILL.md copy.
+const SKILL_URL =
+  'https://raw.githubusercontent.com/LambdaTest/kane-cli/main/skill-installer/skills/SKILL.md';
+const AGENTS_MD_URL = `${SITE_ORIGIN}/kane-cli-agent/AGENTS.md`;
 
 const TITLE = 'Kane CLI Documentation';
 const SUMMARY =
@@ -158,6 +161,7 @@ function main() {
     '## Agent skill',
     '',
     `- [Kane CLI Agent Skill](${SKILL_URL}): Instructions that teach an AI coding agent how to use kane-cli - when to invoke it, how to build the command, how to read the NDJSON output, and how to diagnose a failed run.`,
+    `- [Kane CLI AGENTS.md for coding agents](${AGENTS_MD_URL}): The full instruction file for agents that read AGENTS.md, such as Cursor and GitHub Copilot.`,
     '',
     '## Docs',
     '',

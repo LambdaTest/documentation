@@ -21,7 +21,7 @@ Your coding agent can then execute, debug, and report results without writing te
 
 ## Use Kane CLI From Your Coding Agent
 
-You can use Kane CLI by talking to your AI coding agent (Claude Code, Codex CLI, Gemini CLI, and others) instead of typing commands yourself. A Kane CLI **skill** makes this work. It is a markdown instruction file that teaches the agent how to use `kane-cli`: when to call it, how to build the command, how to read the NDJSON output (one JSON event per line), how to present the result, and what to do when a run fails.
+You can use Kane CLI by talking to your AI coding agent (Claude Code, Codex CLI, Gemini CLI, and others) instead of typing commands yourself. A Kane CLI **skill** makes this work. It is a folder of markdown instructions that teaches the agent how to use `kane-cli`: when to call it, how to build the command, how to read the NDJSON output (one JSON event per line), how to present the result, and what to do when a run fails.
 
 Install the skill once. From then on, whenever you ask for something that needs a browser, your agent checks that everything is ready, runs your request in a real browser, and shows you the result.
 
@@ -30,7 +30,7 @@ Skills build on [Agent Mode](/docs/kane-cli-agent-mode/) (the `--agent` flag). T
 This page also covers what to expect on your first run, what gets saved on your machine, and how to watch runs live.
 
 <Note>
-Skills are plain markdown files. Review and customize them by editing the installed file after download.
+The skill is a folder of plain markdown files plus the ready-check scripts. You can review and customize the installed copy, but running the installer again replaces the folder, and your edits with it.
 </Note>
 
 ---
@@ -43,7 +43,9 @@ The quickest way to get started is one command. It installs the skill globally f
 npx @testmuai/kane-cli-skill
 ```
 
-The installer also creates the folder that holds your agent preferences. You need Kane CLI itself installed too (see [Installation](/docs/kane-cli-installation/)).
+The installer copies the skill folder to `~/.claude/skills/kane-cli/` (Claude Code), `~/.agents/skills/kane-cli/` (Codex CLI), and `~/.gemini/skills/kane-cli/` (Gemini CLI). Running it again replaces those folders with the current version, and `npx @testmuai/kane-cli-skill uninstall` removes them. The installer also creates the folder that holds your agent preferences. You need Kane CLI itself installed too (see [Installation](/docs/kane-cli-installation/)).
+
+If Kane CLI is already installed, `kane-cli install skill` installs the skill too: it downloads the newest skill version that is compatible with your Kane CLI release into the same three folders. Restart your agent afterwards to load it.
 
 Next, open your agent in a project and ask for something that needs a browser:
 
@@ -51,7 +53,17 @@ Next, open your agent in a project and ask for something that needs a browser:
 check that the home page loads on my app
 ```
 
-To install the skill by hand for a single agent, follow the steps below.
+<Note>
+The installer writes skill folders for Claude Code, Codex CLI, and Gemini CLI only. Cursor and GitHub Copilot read `AGENTS.md`, so from your repo root, run `curl -fsSL https://www.testmuai.com/kane-cli-agent/AGENTS.md >> AGENTS.md` once. Kiro uses the Kane CLI Power. See [AI Coding Agents](/docs/kane-cli-with-ai-coding-agents/).
+</Note>
+
+To install the skill by hand for a single agent, copy the skill folder from the Kane CLI repository. Clone the repository once:
+
+```bash
+git clone --depth 1 https://github.com/LambdaTest/kane-cli.git /tmp/kane-cli
+```
+
+Then copy the whole `skill-installer/skills/` folder into the agent's skills directory, as shown for each agent below. `SKILL.md` alone is not enough: it reads the files in `references/` and runs the ready-check script in `scripts/`.
 
 ---
 
@@ -60,25 +72,23 @@ To install the skill by hand for a single agent, follow the steps below.
 <Tabs>
   <Tab title="Claude Code">
 
-The Kane CLI skill for Claude Code is a `SKILL.md` file placed in your skills directory.
+The Kane CLI skill for Claude Code is a folder in your skills directory: `SKILL.md` plus its `references/` and `scripts/` folders. The installer writes it to `~/.claude/skills/kane-cli/`.
 
 **Global install** (available in all projects):
 
 ```bash
 mkdir -p ~/.claude/skills/kane-cli
-curl -o ~/.claude/skills/kane-cli/SKILL.md \
-  https://raw.githubusercontent.com/LambdaTest/kane-cli/main/skill-installer/skills/SKILL.md
+cp -R /tmp/kane-cli/skill-installer/skills/. ~/.claude/skills/kane-cli/
 ```
 
 **Project-level install** (available only in this project):
 
 ```bash
 mkdir -p .claude/skills/kane-cli
-curl -o .claude/skills/kane-cli/SKILL.md \
-  https://raw.githubusercontent.com/LambdaTest/kane-cli/main/skill-installer/skills/SKILL.md
+cp -R /tmp/kane-cli/skill-installer/skills/. .claude/skills/kane-cli/
 ```
 
-Claude Code loads the skill automatically. You do not need to restart it.
+If Claude Code is already running, restart it to load the skill. Then ask for any browser task, or invoke the skill with `/kane-cli`.
 
 **What Claude can do with this skill:**
 
@@ -101,33 +111,34 @@ Claude Code loads the skill automatically. You do not need to restart it.
 
   <Tab title="Codex CLI">
 
-The Kane CLI skill for Codex CLI is appended to your `AGENTS.md` file. Codex reads `AGENTS.md` at the project root or from `~/.codex/AGENTS.md` globally.
+The Kane CLI skill for Codex CLI is a folder in `~/.agents/skills/`, the skills directory Codex CLI reads. Inside a repository that has its own `.agents/skills/` folder, the project copy wins. The installer writes the skill to `~/.agents/skills/kane-cli/`.
 
 **Global install** (available in all projects):
 
 ```bash
-curl -o /tmp/kane-cli-agents.md \
-  https://raw.githubusercontent.com/LambdaTest/kane-cli/main/skill-installer/skills/SKILL.md
-
-# Append to global AGENTS.md (creates the file if it doesn't exist)
-cat /tmp/kane-cli-agents.md >> ~/.codex/AGENTS.md
+mkdir -p ~/.agents/skills/kane-cli
+cp -R /tmp/kane-cli/skill-installer/skills/. ~/.agents/skills/kane-cli/
 ```
 
 **Project-level install**:
 
 ```bash
-curl -o /tmp/kane-cli-agents.md \
-  https://raw.githubusercontent.com/LambdaTest/kane-cli/main/skill-installer/skills/SKILL.md
-
-cat /tmp/kane-cli-agents.md >> AGENTS.md
+mkdir -p .agents/skills/kane-cli
+cp -R /tmp/kane-cli/skill-installer/skills/. .agents/skills/kane-cli/
 ```
+
+Restart Codex CLI to load the skill. Then ask for any browser task, or invoke the skill with `$kane-cli`.
+
+<Note>
+Codex CLI runs commands in a sandbox that blocks network access and writes outside the workspace. Kane CLI needs both, so expect to approve each `kane-cli` command, or relax the sandbox for the session.
+</Note>
 
 **What Codex can do with this skill:**
 
 - Invoke `kane-cli run --agent` for browser tasks
-- Parse NDJSON output using `jq` and `tail`
-- Run parallel browser tests using shell background processes (`&` + `wait`)
-- Inspect failure logs and show screenshot paths
+- Read the NDJSON stream and present the result
+- Run independent browser tests in parallel
+- Diagnose failures from the run's evidence pack
 
 **Example prompts:**
 
@@ -140,30 +151,30 @@ cat /tmp/kane-cli-agents.md >> AGENTS.md
 
   <Tab title="Gemini CLI">
 
-The Kane CLI skill for Gemini CLI is a `SKILL.md` file placed in your Gemini skills directory.
+The Kane CLI skill for Gemini CLI is a folder in your Gemini skills directory. The installer writes it to `~/.gemini/skills/kane-cli/`.
 
 **Global install** (available in all projects):
 
 ```bash
 mkdir -p ~/.gemini/skills/kane-cli
-curl -o ~/.gemini/skills/kane-cli/SKILL.md \
-  https://raw.githubusercontent.com/LambdaTest/kane-cli/main/skill-installer/skills/SKILL.md
+cp -R /tmp/kane-cli/skill-installer/skills/. ~/.gemini/skills/kane-cli/
 ```
 
 **Project-level install**:
 
 ```bash
 mkdir -p .gemini/skills/kane-cli
-curl -o .gemini/skills/kane-cli/SKILL.md \
-  https://raw.githubusercontent.com/LambdaTest/kane-cli/main/skill-installer/skills/SKILL.md
+cp -R /tmp/kane-cli/skill-installer/skills/. .gemini/skills/kane-cli/
 ```
+
+Restart Gemini CLI to load the skill, then run `/skills list` to confirm it is there.
 
 **What Gemini can do with this skill:**
 
-- Identify browser automation requests and invoke `kane-cli --agent`
+- Identify browser automation requests and invoke `kane-cli run --agent`
 - Parse NDJSON events and surface the final result
 - Run tests in parallel using shell subprocesses
-- Diagnose failures from log files and screenshots
+- Diagnose failures from the run's evidence pack
 
 **Example prompts:**
 
@@ -273,9 +284,9 @@ When you ask your AI agent to test something on the web, the skill:
 
 1. Runs the ready check: one short script that confirms `kane-cli` is installed and shows who is signed in, credits left, Chrome, and where results will be saved.
 2. Builds a `kane-cli run --agent` command from your request. The browser opens in a visible window unless your watch mode preference says otherwise or there is no display. In those cases the command adds `--headless`.
-3. Reads the NDJSON stream and waits for the `run_end` event, which carries the final result.
+3. Waits for the run to exit, then reads the exit code and the NDJSON stream. For a `run`, the last event, `run_end`, carries the final result.
 4. Presents a structured result: status, steps, duration, extracted values, and assertion results.
-5. If the run failed, inspects the `run_dir` logs and screenshots to find the cause.
+5. If the run failed, opens the run's evidence pack (screenshots, console and network logs, failure records) to find the cause.
 6. Rates the run, and suggests a bug report when a failure looks like a low-quality agent run.
 
 ---
@@ -296,9 +307,11 @@ In CI, or with a cloud agent that cannot ask you anything, the agent skips the t
 
 | Agent | Global | Project-level |
 |-------|--------|---------------|
-| Claude Code | `~/.claude/skills/kane-cli/SKILL.md` | `.claude/skills/kane-cli/SKILL.md` |
-| Codex CLI | `~/.codex/AGENTS.md` (appended section) | `AGENTS.md` (appended section) |
-| Gemini CLI | `~/.gemini/skills/kane-cli/SKILL.md` | `.gemini/skills/kane-cli/SKILL.md` |
+| Claude Code | `~/.claude/skills/kane-cli/` | `.claude/skills/kane-cli/` |
+| Codex CLI | `~/.agents/skills/kane-cli/` | `.agents/skills/kane-cli/` |
+| Gemini CLI | `~/.gemini/skills/kane-cli/` | `.gemini/skills/kane-cli/` |
+
+Each folder holds `SKILL.md`, `references/`, and `scripts/`, plus a `VERSION` file when the installer wrote it. The installer writes the global folders only. OpenCode loads skills from `~/.claude/skills/` and `~/.agents/skills/`, so the same install covers it.
 
 Source files: [github.com/LambdaTest/kane-cli/tree/main/skill-installer/skills](https://github.com/LambdaTest/kane-cli/tree/main/skill-installer/skills)
 

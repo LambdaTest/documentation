@@ -22,17 +22,18 @@ The setup is the same in every builder, and it has three parts.
 
 **One command does the work.** Use `kane-cli run` for a one-off objective, `kane-cli testmd run` for a committed test that replays, and `kane-cli generate` to write test cases from a description. Kane CLI manages Chrome, authentication, and its own automation agent, so the coding agent only has to write a sentence.
 
-**The result comes back in a form the agent can act on.** Every run streams NDJSON (one JSON event per line). The last event, `run_end`, carries the status, summary, duration, extracted values, and paths to the logs. The run also produces a `.evidence` pack with step traces, screenshots, video, and command, network, and console logs. When a run fails, the agent reads the same proof a person would, so it can diagnose the failure instead of only reporting it.
+**The result comes back in a form the agent can act on.** Every run streams NDJSON (one JSON event per line). The last event of a `kane-cli run`, `run_end`, carries the status, summary, duration, extracted values, the Test Manager link, and `session_dir`, the session folder that holds the run's evidence pack. The pack is one `.evidence` file with per-step screenshots, per-step console and network logs, run logs, and failure records. When a run fails, the agent reads the same proof a person would, so it can diagnose the failure instead of only reporting it.
 
 ### Supported Agents
 
 | Agent | How Kane CLI plugs in |
 |-------|----------------------|
 | Claude Code | `SKILL.md` in `~/.claude/skills/kane-cli/` or `.claude/skills/kane-cli/` |
-| Codex CLI | Appended to `~/.codex/AGENTS.md` or the project's `AGENTS.md` |
+| Codex CLI | `SKILL.md` in `~/.agents/skills/kane-cli/` or `.agents/skills/kane-cli/` |
 | Gemini CLI | `SKILL.md` in `~/.gemini/skills/kane-cli/` or `.gemini/skills/kane-cli/` |
-| Kiro | The **Kane CLI — Browser Automation & AI Test Authoring** Power |
-| Cursor, Lovable, Antigravity, GLM, and others | Point the agent at the hosted skill: `https://www.testmuai.com/kane-cli/agents.md` |
+| Kiro | The Kane CLI Power, installed from Kiro's Powers panel |
+| Cursor, GitHub Copilot | The Kane CLI `AGENTS.md`, appended once to the `AGENTS.md` at your repo root |
+| Lovable, Antigravity, GLM, and others | Point the agent at the Kane CLI instruction file: `https://www.testmuai.com/kane-cli-agent/AGENTS.md` |
 
 ### Install the Skill
 
@@ -42,9 +43,19 @@ Install globally for Claude Code, Codex CLI, and Gemini CLI in one command:
 npx @testmuai/kane-cli-skill
 ```
 
-A global install applies to every project. A project-level install lives in the repo, so teammates and CI get it automatically. For any other agent, give it the hosted skill URL and it fetches the same instructions.
+The installer writes skill folders for those three agents only. A global install applies to every project. A project-level copy lives in the repo, so teammates and CI get it automatically.
 
 The installer also creates the folder that holds your agent preferences. On your first run, the agent shows a ready check, starts the run right away, and asks three quick choices after you see the result. See [Skills](/docs/kane-cli-skills/#what-happens-on-your-first-run) for the first run, your preferences, where results are saved, and the live status strip in Claude Code.
+
+### Set Up Cursor and GitHub Copilot With AGENTS.md
+
+The skill installer does not set up Cursor or GitHub Copilot. Both read `AGENTS.md`, so from your repo root, append the Kane CLI instructions to `AGENTS.md` once (the command creates the file if it does not exist):
+
+```bash
+curl -fsSL https://www.testmuai.com/kane-cli-agent/AGENTS.md >> AGENTS.md
+```
+
+For any other agent, give it the same URL, `https://www.testmuai.com/kane-cli-agent/AGENTS.md`, and ask it to follow the file.
 
 ### Authenticate Without a Browser Window
 
@@ -108,7 +119,7 @@ Lovable builds the app and Kane CLI proves it works, without you opening the pag
 5. **Run the flow as one sentence.** Navigate to the site, store the main heading as `heading`, verify an email input and a **Join Waitlist** button are present, type a test address, click the button, assert a success message containing "on the list" is visible, and store it as `success_message`, all with `--agent --headless --timeout 240`.
 6. **Watch it adapt.** The Lovable preview URL requires a Lovable login, so the run switches to the public published URL instead and says so in the report.
 7. **Read the result.** Test passed in 11 steps and 188s, with every captured value quoted back: the heading it read, the email it typed, and the exact success text the page rendered.
-8. **Keep the test.** The run lands in Test Manager as **Join Waitlist and Verify Success Message**, with each assertion as its own replayable step alongside the recorded video.
+8. **Keep the test.** The run lands in Test Manager as **Join Waitlist and Verify Success Message**, with each assertion as its own replayable step.
 
 ---
 
@@ -158,7 +169,7 @@ The failure is what made the bug visible. A test that only passed would have tol
 
 Kane CLI ships as a first-class Kiro **Power**, so there is no skill file to place by hand.
 
-1. **Install the Power.** Find **Kane CLI — Browser Automation & AI Test Authoring** by TestMu AI in Kiro's Powers panel and install it.
+1. **Install the Power.** Find the **Kane CLI** Power by TestMu AI in Kiro's Powers panel and install it.
 2. **Let it introduce itself.** On activation the Power states its three capabilities, ad-hoc browser tasks with `kane-cli run`, committable replayable tests with `kane-cli testmd`, and AI test-case authoring with `kane-cli generate`, then runs an onboarding check covering version, sign-in status, project, and folder so you know the setup is complete before you ask for anything.
 3. **Build something to test.** In the demo, Kiro writes a small login app: `index.html`, a protected `dashboard.html`, shared styles, and an `auth.js` that tracks session state in `sessionStorage`, with two demo credentials and an inline error for wrong passwords.
 4. **Ask for verification in one line.** *"Now open the local url and verify it works with kane cli."* Kiro activates the Power, loads its run instructions, confirms Kane CLI is installed and authenticated, starts a local server for the files, and runs the verification.
@@ -174,15 +185,15 @@ Form validation, the error path, the successful auth, the redirect, and the prot
 <source src="https://assets.testmuai.com/resources/videos/kane-cli/agents/antigravity-x-kane-cli.mp4" type="video/mp4" />
 </video>
 
-The lightest possible install: hand the agent a URL and let it read the skill for itself.
+The lightest possible install: hand the agent a URL and let it read the instructions for itself.
 
 1. **Build the app.** Antigravity builds a storefront clone with a hero slider, product details, a cart drawer, a location picker, search, and a checkout receipt, then serves it locally on `127.0.0.1:8080`.
-2. **Point it at the hosted skill.** The prompt is literally *"Use Kane CLI to test the build end to end: testmuai.com/kane-cli/agents.md"*. There is no local skill file and nothing to configure. Antigravity fetches the markdown and follows it.
+2. **Point it at the hosted instructions.** The prompt in the recording is *"Use Kane CLI to test the build end to end: testmuai.com/kane-cli/agents.md"*. For your own builds, use the agent instruction file at `https://www.testmuai.com/kane-cli-agent/AGENTS.md` instead. There is no local skill file and nothing to configure. Antigravity fetches the markdown and follows it.
 3. **Let it author a suite, not a one-off.** Antigravity writes an end-to-end test file, `amazon_clone_test.md`, covering the full purchase journey rather than a single assertion.
 4. **Run it headless in the background.** `kane-cli testmd run amazon_clone_test.md --agent --headless` runs as a background task while Antigravity monitors the NDJSON stream and reports each step as it completes.
 5. **Check the finished case.** The result lands in Test Manager as **Complete Purchase Flow with Location and Search**: open the cart widget, proceed to checkout, assert the success modal shows `Order Placed Successfully!` with the mock receipt, close it, then assert the cart count has reset to `0` and the cart icon shows an empty badge.
 
-Use the hosted skill URL for any agent that has no dedicated integration. It is the same instruction set the installer writes to disk.
+For any agent with no dedicated integration, point it at `https://www.testmuai.com/kane-cli-agent/AGENTS.md`, the Kane CLI instruction file for coding agents.
 
 ---
 
@@ -243,10 +254,10 @@ Bug reports arrive as prose, which is exactly the input Kane CLI takes. Your age
 A failed run is only useful if the agent can see why it failed. Every Kane CLI run writes an `.evidence` pack next to the results, so the agent reads the same proof a human would.
 
 1. When a run fails, ask your agent to investigate, for example *"That failed. What actually happened?"*
-2. The agent reads `run_dir` and `session_dir` from the `run_end` event, which point at the run's logs, step JSON, and screenshots.
-3. It opens the evidence pack, which holds the step-by-step trace, screenshots, video, command, network and console logs, and the full NDJSON event stream.
+2. The agent reads `session_dir` from the `run_end` event. The run's evidence pack is sealed in that folder's `evidence/` subfolder, and Kane CLI also prints the pack's path on stderr when the run ends.
+3. It opens the evidence pack, which holds the actions the agent took, per-step screenshots, per-step network and console logs, run logs, and a failure record for each failed step.
 4. It identifies the failing step and inspects the screenshot taken at that moment, so it can distinguish a genuine product bug from a selector that never resolved or a page that never finished loading.
-5. It reports the `reason` field alongside the visual evidence, for example that the configured backend hostname does not resolve rather than simply that the assertion failed.
+5. It explains the failure from the failing step's `remark`, the failure record, and the screenshot, for example that the configured backend hostname does not resolve rather than simply that the assertion failed.
 6. Ask it to act on the diagnosis. Because the agent has both the failing evidence and your source code in context, it can propose the fix and re-run the same objective to confirm it.
 
 ### Run Several Flows in Parallel
@@ -256,7 +267,7 @@ Verifying one flow at a time is slow when a change touches several areas. Coding
 1. Ask for the batch in one request, for example *"Verify login, search, checkout, and admin user management on staging, all at once."*
 2. The agent spawns one sub-task per flow, each running its own self-contained `kane-cli run --agent --headless --timeout 120` command.
 3. Each sub-objective must stand alone: it navigates to its own URL, authenticates independently, and asserts its own outcome. The agent splits your request along those lines.
-4. Each sub-task parses its own `run_end` event and returns the status, step count, duration, summary, and, on failure, the failing step and screenshot path.
+4. Each sub-task parses its own `run_end` event and returns the status, step count, duration, summary, and, on failure, the failing step and its screenshot from the evidence pack.
 5. The agent merges the results into one pass-rate table so you read a single summary instead of four terminal streams.
 6. Start with about four parallel runs. Each one launches its own Chrome instance at roughly 150 to 300 MB of RAM, so scale up only as your machine allows.
 
@@ -296,12 +307,12 @@ Sometimes the agent needs a real value from a running application, not a verific
 
 An agent run that stops to ask a question hangs forever, because nothing is there to answer it. A few habits keep every agent-driven run unattended and reliable.
 
-1. Always pair `--agent` with `--headless`. Without `--headless`, non-interactive environments hit display server errors.
+1. Pass `--headless` wherever there is no display, such as CI runners, containers, and SSH sessions. Without it, those runs hit display server errors.
 2. Write objectives that never need input during the run. Kane CLI turns off the `ask_user` event (a question to you mid-run) when stdin is not a terminal (TTY). That is always the case for agents and CI, so an objective that depends on a prompt fails.
 3. Set a `--timeout` on every run so a stuck page fails fast instead of blocking the agent's task.
 4. Keep objectives under roughly fifteen steps. Longer objectives drift; ask the agent to split them into separate runs instead.
 5. Pass credentials through a variables file rather than inline in the objective, so secrets never end up in the agent's transcript or your shell history.
-6. Have the agent parse only the final line of stdout for the verdict. `run_end` is always last and carries the complete result.
+6. Have the agent check the exit code first, then read the final line of stdout for the verdict. For a `kane-cli run` that started, `run_end` is always last and carries the complete result. A run refused before it starts exits with code `2` and can have no `run_end` line.
 
 ### Maintain the Suite as the Product Changes
 
