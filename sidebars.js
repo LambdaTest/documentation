@@ -4208,6 +4208,7 @@ module.exports = {
         "analytics-build-comparison",
         "analytics-unique-instances-retry-detection",
         "analytics-smart-tags-test-intelligence",
+        "analytics-kpi-threshold-alerts",
         "analytics-test-failure-classification",
         "analytics-ai-root-cause-analysis",
         {
