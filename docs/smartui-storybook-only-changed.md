@@ -1,11 +1,11 @@
 ---
 id: smartui-storybook-only-changed
-title: Capture Only Changed Stories with SmartUI Storybook (TurboSnap)
+title: Capture Only Changed Stories with SmartUI Storybook (SmartSnap)
 sidebar_label: Capture Only Changed Stories
 description: Learn how to capture only the Storybook stories that a change affects with the SmartUI Storybook CLI --only-changed flag, how the other stories are copied from the baseline, and when SmartUI captures every story instead.
 keywords:
   - SmartUI Storybook
-  - SmartUI TurboSnap
+  - SmartUI SmartSnap
   - SmartUI only-changed
   - Storybook visual testing in CI
   - Capture changed stories
@@ -38,7 +38,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "Capture Only Changed Stories with SmartUI Storybook (TurboSnap)",
+          "name": "Capture Only Changed Stories with SmartUI Storybook (SmartSnap)",
           "item": `${BRAND_URL}/support/docs/smartui-storybook-only-changed/`
         }]
       })
@@ -56,7 +56,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       "@type": "WebPage",
       "@id": "https://www.testmuai.com/support/docs/smartui-storybook-only-changed/"
     },
-    "headline": "Capture Only Changed Stories with SmartUI Storybook (TurboSnap)",
+    "headline": "Capture Only Changed Stories with SmartUI Storybook (SmartSnap)",
     "description": "Learn how to capture only the Storybook stories that a change affects with the SmartUI Storybook CLI --only-changed flag, how the other stories are copied from the baseline, and when SmartUI captures every story instead.",
     "url": "https://www.testmuai.com/support/docs/smartui-storybook-only-changed/",
     "image": {
@@ -69,7 +69,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     "articleSection": "SmartUI",
     "keywords": [
       "SmartUI Storybook",
-      "SmartUI TurboSnap",
+      "SmartUI SmartSnap",
       "SmartUI only-changed"
     ],
     "author": {
@@ -98,15 +98,15 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         "https://www.youtube.com/@TestMuAI"
       ]
     },
-    "dateModified": "2026-10-19T12:00:00+05:30"
+    "dateModified": "2026-10-19T15:00:00+05:30"
   }) }}
 />
 
-# Capture Only Changed Stories with SmartUI Storybook (TurboSnap)
+# Capture Only Changed Stories with SmartUI Storybook (SmartSnap)
 
 A large Storybook takes a long time to capture, even when a pull request touches one component. From version `1.4.0` of `@lambdatest/smartui-storybook`, the `--only-changed` flag captures only the stories that your changes can affect. Every other story is copied from the baseline build, so each build still has a screenshot for every story.
 
-SmartUI marks these builds with a **TurboSnap** label.
+SmartUI marks these builds with a **SmartSnap** label.
 
 If you have not set up SmartUI Storybook yet, start with [Storybook Integration](/support/docs/smart-ui-storybook/).
 
@@ -212,7 +212,7 @@ To fail the job on visual changes and handle each exit code, see [CI Gating and 
 
 ## When every story is captured
 
-For some changes the CLI cannot tell which stories are affected. It then captures every story, prints the reason, and the build is a normal build without the TurboSnap label. The message has this form:
+For some changes the CLI cannot tell which stories are affected. It then captures every story, prints the reason, and the build is a normal build without the SmartSnap label. The message has this form:
 
 ```text
 [smartui] --only-changed: capturing all 43 stories: src/ds/styles/vars.css is not in the Storybook dependency graph
@@ -238,20 +238,20 @@ Some changed files never cause a full capture, even though they are not in the d
 
 The CLI can also capture a few more stories than really changed. For example, a component that imports a shared module through an index file (`export * from './money.js'`) is selected when any module behind that index file changes. Those stories are compared as usual and show no changes.
 
-## TurboSnap builds in SmartUI
+## SmartSnap builds in SmartUI
 
-A build that used `--only-changed` shows a **TurboSnap** label next to the screenshot count. Hover over it to see how many screenshots SmartUI captured and how many it copied from the baseline build.
+A build that used `--only-changed` shows a **SmartSnap** label next to the screenshot count. Hover over it to see how many screenshots SmartUI captured and how many it copied from the baseline build.
 
-<img loading="lazy" src={require('../assets/images/smart-visual-testing/smartui-storybook-turbosnap-popover.png').default} alt="SmartUI build with the TurboSnap label, showing 2 captured and 41 copied snapshots" width="1065" height="285" className='doc_img'/>
+<img loading="lazy" src={require('../assets/images/smart-visual-testing/smartui-storybook-smartsnap-popover.png').default} alt="SmartUI build with the SmartSnap label, showing 2 captured and 41 copied snapshots" width="1065" height="285" className='doc_img'/>
 
 - **Captured** screenshots are compared with the baseline as usual and can show Changes Found.
 - **Copied** screenshots come from the baseline build. They are marked Approved with a mismatch of `0.00%`. They look like any other approved screenshot when you open them.
-- A build in which every story was captured, for any of the reasons above, has no TurboSnap label.
+- A build in which every story was captured, for any of the reasons above, has no SmartSnap label.
 
 ## Baselines
 
 - The baseline for `--only-changed` is the latest approved build on your project's baseline branch. It is the same build that SmartUI compares the new build against.
-- When you approve a TurboSnap build on the baseline branch, it becomes the next baseline like any other approved build. Its copied screenshots are carried into the build after it.
+- When you approve a SmartSnap build on the baseline branch, it becomes the next baseline like any other approved build. Its copied screenshots are carried into the build after it.
 - Builds on other branches are compared with the baseline branch. Approving them does not change the baseline.
 - A build filtered with `include` or `exclude` on the baseline branch has fewer screenshots than the baseline. SmartUI marks it as a partial build and does not use it as the next baseline. See [Filtered builds and your baseline](/support/docs/smartui-storybook-include-exclude/#filtered-builds-and-your-baseline).
 
