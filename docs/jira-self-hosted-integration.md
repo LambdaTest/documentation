@@ -166,7 +166,7 @@ Save the link and copy the **Client ID** and **Client secret** that Jira shows.
 
 **Step 3**: In <BrandName />, go to **'Integrations'**, click **'Jira'**, select **'Self Hosted'**, and choose **'OAuth 2.0'** as the sign-in method. Enter your Jira URL, the **Client ID** and the **Client secret**, then click **'Install'**.
 
-<img loading="lazy" src={require('../assets/images/jira-self-hosted-integration/jira-dc-oauth-setup.webp').default} alt="Self Hosted Jira setup with the OAuth 2.0 sign-in method"  className="doc_img" width="536" height="512"/>
+<img loading="lazy" src={require('../assets/images/jira-self-hosted-integration/jira-dc-oauth-setup.webp').default} alt="Self Hosted Jira setup with the OAuth 2.0 sign-in method"  className="doc_img" width="1092" height="1093"/>
 
 :::tip
 The **'Allow untrusted certificate (self-signed or internal CA)'** option is off by default. Tick it only if your Jira uses a self-signed certificate or one issued by your internal certificate authority. Use it only for a Jira you trust, because certificate checks are skipped for this connection.
@@ -174,7 +174,7 @@ The **'Allow untrusted certificate (self-signed or internal CA)'** option is off
 
 **Step 4**: You are redirected to Jira. Sign in if asked, review the access, and click **'Allow'**.
 
-<img loading="lazy" src={require('../assets/images/jira-self-hosted-integration/jira-dc-oauth-consent.webp').default} alt="Jira Data Center consent page with the Allow button"  className="doc_img" width="907" height="460"/>
+<img loading="lazy" src={require('../assets/images/jira-self-hosted-integration/jira-dc-oauth-consent.webp').default} alt="Jira Data Center consent page with the Allow button"  className="doc_img" width="810" height="620"/>
 
 **Step 5**: Back in <BrandName />, select the Jira projects you want to use and click **'Integrate Projects & Install'**. Jira now appears under **'My Integrations'**.
 
@@ -186,13 +186,13 @@ Issues are created in Jira as the Jira user who clicked **'Allow'**, with that u
 
 On the Jira card under **'My Integrations'**, click the ellipsis (•••) and select **'Info'**. For an OAuth 2.0 connection, the drawer shows **Auth method** as **OAuth 2.0**, **Deployment** as **Jira Data Center**, the **Server certificate** setting, and the access token status with the time it was last renewed.
 
-<img loading="lazy" src={require('../assets/images/jira-self-hosted-integration/jira-dc-oauth-connection-info.webp').default} alt="Jira Data Center OAuth 2.0 connection details"  className="doc_img" width="490" height="472"/>
+<img loading="lazy" src={require('../assets/images/jira-self-hosted-integration/jira-dc-oauth-connection-info.webp').default} alt="Jira Data Center OAuth 2.0 connection details"  className="doc_img" width="1039" height="1148"/>
 
 ### Reconnect an Expired Connection
 
 The connection stops working when the access is revoked in Jira (for example, under **Authorized Applications** in the Jira user's profile), or when it has not been used for longer than the refresh token lifetime your Jira administrator set (90 days by default). The drawer then shows **Needs attention**, the access token shows **Expired**, and the connection owner receives an email.
 
-<img loading="lazy" src={require('../assets/images/jira-self-hosted-integration/jira-dc-oauth-expired.webp').default} alt="Expired Jira Data Center OAuth 2.0 connection"  className="doc_img" width="490" height="537"/>
+<img loading="lazy" src={require('../assets/images/jira-self-hosted-integration/jira-dc-oauth-expired.webp').default} alt="Expired Jira Data Center OAuth 2.0 connection"  className="doc_img" width="1039" height="1148"/>
 
 To fix it, open the drawer, click **'Reconnect'**, and click **'Allow'** in Jira. Your projects and organization sharing stay as they were. Only the person who installed the connection can reconnect it.
 
