@@ -289,6 +289,7 @@ export default function Home() {
             <Card href="/support/docs/web-scanner-accessibility-scan/" title="Accessibility Scans" desc="Scan pages for accessibility issues" />
             <Card href="/support/docs/web-scanner-adding-urls/" title="Adding URLs" desc="Add URLs to your scans" />
             <Card href="/support/docs/web-scanner-scheduling-options/" title="Scheduling Options" desc="Schedule scans to run automatically" />
+            <Card href="/support/docs/web-scanner-edit-clone-scans/" title="Edit and Clone Scans" desc="Change or copy an existing scan" />
           </Section>
 
           <Section icon={{ light: 'agentTesting-light-icon.svg', dark: 'agentTesting-dark-icon.svg' }} title="Agent Testing" blurb="Validate AI chat, voice, phone, image, and video agents end-to-end.">
