@@ -1859,6 +1859,11 @@ module.exports = {
                 label: "Advanced Features",
                 id: "web-scanner-advanced-features",
               },
+              {
+                type: "doc",
+                label: "Edit and Clone Scans",
+                id: "web-scanner-edit-clone-scans",
+              },
             ],
           },
           {
@@ -4366,6 +4371,7 @@ module.exports = {
           "web-scanner-adding-urls",
           "web-scanner-scheduling-options",
           "web-scanner-advanced-features",
+          "web-scanner-edit-clone-scans",
         ],
       },
     ],
