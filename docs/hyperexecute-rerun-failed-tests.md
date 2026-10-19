@@ -154,6 +154,8 @@ If a failed scenario contains several test cases, all of them are rerun.
 - **The labels** of the original job, with `Rerun-#<original job number>` added as the first label, so reruns are easy to spot in the Jobs list.
 - **Your policies**, applied fresh to the new job rather than carried over from the original run.
 
+<img loading="lazy" src={require('../assets/images/hyperexecute/features/rerun/3.png').default} alt="Job details page of a rerun, with the Rerun-#805329 label first in the list of labels carried over from the original job" className="doc_img"/>
+
 ## When Rerun is unavailable
 
 The **Re-Run** button appears only on jobs that can be rerun. Where a job cannot be, the button is not shown at all: each reason below is a property of the job itself, so nothing you could change in the dialog would make it rerunnable.
