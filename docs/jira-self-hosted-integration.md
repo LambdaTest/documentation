@@ -106,7 +106,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         "https://www.youtube.com/@TestMuAI"
       ]
     },
-    "dateModified": "2026-10-17T10:00:00+05:30"
+    "dateModified": "2026-10-19T12:00:00+05:30"
   }) }}
 />
 
@@ -123,13 +123,13 @@ Many organizations consistently choose to self host their application as it give
 
 You can integrate your self-hosted Jira with the <BrandName /> platform. To view and install integrations, you would need to have admin or user-level access. 
 
-**Step 1**: Login to your <BrandName /> account and select **'Integrations'** from the left menu bar. You will be taken to the integration page where you'll find third-party apps available to integrate. Click on **'Jira'** icon under the **'Bug Tracker'** category. 
+**Step 1**: Login to your <BrandName /> account and select **'Integrations'** from the left menu bar. You will be taken to the integration page where you'll find third-party apps available to integrate. Under **'Bug Tracker'**, click **'Connect'** on the **'Jira'** card.
 
-<img loading="lazy" src={require('../assets/images/jira-self-hosted-integration/self-jira-1.webp').default} alt="jira-self-hosted-integration"  className="doc_img" width="1346" height="615"/> 
+<img loading="lazy" src={require('../assets/images/jira-self-hosted-integration/jira-sh-integrations.webp').default} alt="Jira card under Bug Tracker on the Integrations page"  className="doc_img" width="1568" height="505"/>
 
-**Step 2**: You will be guided to the below screen. Click on **'Self Hosted'**. 
+**Step 2**: The **'Setup Jira'** panel opens. Under **'Instance Type'**, select **'Self Hosted'**.
 
-<img loading="lazy" src={require('../assets/images/jira-self-hosted-integration/self-jira-2.webp').default} alt="Image"  className="doc_img" width="1341" height="616"/> 
+<img loading="lazy" src={require('../assets/images/jira-self-hosted-integration/jira-sh-setup.webp').default} alt="Setup Jira panel with Self Hosted selected"  className="doc_img" width="1064" height="1143"/>
 
 **Step 3**: Under **'Sign-in method'**, choose how <BrandName /> signs in to your Jira:
 
@@ -138,7 +138,7 @@ You can integrate your self-hosted Jira with the <BrandName /> platform. To view
 
 **Step 4**: Visit the Integration page, you'll find the Jira integration under the category **'My Integrations'**. 
 
-<img loading="lazy" src={require('../assets/images/jira-self-hosted-integration/self-jira-4.webp').default} alt="jira-self-hosted-integration"  className="doc_img" width="1343" height="613"/>
+<img loading="lazy" src={require('../assets/images/jira-self-hosted-integration/jira-sh-my-integrations.webp').default} alt="Jira connected under My Integrations"  className="doc_img" width="1568" height="463"/>
 
 :::note
 <BrandName /> reaches your Jira from the IP addresses listed in the **'Instructions'** panel of the setup screen. If your Jira is behind a firewall, allow these IP addresses.
@@ -208,30 +208,29 @@ Once you have established <BrandName />-Jira integration, you can directly mark 
 
 **Step 2**: Enter the test URL of the website/web app in the URL field. Select the browser and OS combinations that you wish to perform the test on and then click on **'Start'**. 
 
-<img loading="lazy" src={require('../assets/images/jira-self-hosted-integration/self-jira-5.webp').default} alt="jira-self-hosted-integration"  className="doc_img" width="1360"  height="614"/> 
+<img loading="lazy" src={require('../assets/images/jira-integration/7.png').default} alt="Start a Real Time test"  className="doc_img" width="1365" height="624"/>
 
-**Step 3**: A <BrandName /> virtual machine will fire up where you can perform real-time testing of your websites and web-apps to find bugs/issues. If you encounter a bug, you can click on the Spider icon from the left panel for [capturing a screenshot](https://www.testmuai.com/full-page-screen-capture/) of the same. 
+**Step 3**: A <BrandName /> virtual machine will fire up where you can perform real-time testing of your websites and web-apps to find bugs/issues. If you encounter a bug, click the Bug icon from the left panel for [capturing a screenshot](https://www.testmuai.com/full-page-screen-capture/) of the same. 
 
-<img loading="lazy" src={require('../assets/images/jira-self-hosted-integration/self-jira-6.webp').default} alt="jira-self-hosted-integration"  className="doc_img" width="1344" height="626"/> 
+<img loading="lazy" src={require('../assets/images/jira-integration/8.png').default} alt="Bug icon in the test session"  className="doc_img" width="1365" height="624"/>
 
-**Step 4**: Once the screenshot is captured, you can annotate any bugs or a task with an in-built image editor. After highlighting the bug, click on **'Mark as Bug'**. 
+**Step 4**: Once the screenshot is captured, you can annotate any bugs or a task with an in-built image editor. After highlighting the bug, click the **bug icon** beside **'Jira'**. 
 
-<img loading="lazy" src={require('../assets/images/jira-self-hosted-integration/self-jira-7.webp').default} alt="jira-self-hosted-integration"  className="doc_img" width="1366" height="617"/> 
+<img loading="lazy" src={require('../assets/images/jira-integration/9.png').default} alt="Mark as Bug with Jira"  className="doc_img" width="1365" height="624"/>
 
-**Step 5**: After clicking on Mark as Bug, a Jira-specific ticket will open up. Fill in the fields as per your requirement and click on **'Create Issue'**.
+**Step 5**: A Jira-specific form opens. Fill in the fields as per your requirement:
 
-*   Select the **'Project'** to which your ticket will go under.
+*   Select the **'Project'** to which your ticket will go under, and the **'Issue Type'**.
 *   Assign the bug to a teammate by populating the field **'Assignee'**.
-*   Select the **'Issue Type'**.
 *   Fill the **'Summary'** about the bug's details.
 
-<img loading="lazy" src={require('../assets/images/jira-self-hosted-integration/Step8.webp').default} alt="jira-self-hosted-integration"  className="doc_img" width="1353" height="608"/>
+<img loading="lazy" src={require('../assets/images/jira-integration/10.png').default} alt="Jira issue form"  className="doc_img" width="1365" height="624"/>
 
-Your bugs will get marked successfully to your Jira dashboard. You'll also receive the prompt message confirming the same. 
+**Step 6**: Click **'Mark As Bug'**. In a few seconds, you'll see the message **'Your bug has been logged successfully'**.
 
-**Step 6**: Visit the Jira dashboard and you'll find your marked bugs right away. All the data such as test environment details, screenshots that you provided through <BrandName /> will be present there.
+<img loading="lazy" src={require('../assets/images/jira-integration/11.png').default} alt="Bug logged successfully"  className="doc_img" width="1365" height="624"/>
 
- <img loading="lazy" src={require('../assets/images/jira-self-hosted-integration/Step9.webp').default} alt="jira-self-hosted-integration"  className="doc_img" width="1342" height="606"/>
+**Step 7**: Visit the Jira dashboard and you'll find your marked bugs right away. All the data such as test environment details, screenshots that you provided through <BrandName /> will be present there.
 
 ## How To Remove Self-Hosted Jira Integration?
 
@@ -243,9 +242,9 @@ Your bugs will get marked successfully to your Jira dashboard. You'll also recei
 
 **Step 2:** Navigate to **'Integrations'** tab from the left menu bar.
 
-**Step 3:** Under the category **'My Integrations'**. You can find the **'Remove'** button adjacent to Jira icon.
+**Step 3:** Under **'My Integrations'**, click the ellipsis (•••) on the **'Jira'** card and select **'Remove'**.
 
-<img loading="lazy" src={require('../assets/images/jira-self-hosted-integration/self-jira-9.webp').default} alt="jira-self-hosted-integration"  className="doc_img" width="1340" height="616"/>
+<img loading="lazy" src={require('../assets/images/jira-self-hosted-integration/jira-sh-remove.webp').default} alt="Remove option in the Jira card menu"  className="doc_img" width="1568" height="463"/>
 
  You will receive the confirmation message upon the successful uninstallation of Jira Self Hosted integration.
 
