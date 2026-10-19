@@ -16,6 +16,8 @@ const AGENT_DOC_PREFIXES = ['agent-assurance-', 'rook-', 'agent-testing-'];
 // the union of AgentAssuranceSidebar and AgentTestingSidebar doc ids, minus the
 // ids already covered by AGENT_DOC_PREFIXES.
 const AGENT_DOC_SLUGS = new Set([
+  'agent-features-and-metrics',
+  'ai-agent-testing-platform-overview',
   'architecture-and-how-evaluation-works',
   'chat-agent',
   'chat-agent-api-integration',
@@ -24,6 +26,7 @@ const AGENT_DOC_SLUGS = new Set([
   'inbound-phone-agent',
   'outbound-phone-agent',
   'phone-agent',
+  'test-agentforce-agents',
   'test-amazon-connect-bots',
   'test-amazon-lex-bots',
   'test-bland-agents',
@@ -86,14 +89,14 @@ export default function DocPaginator(props) {
       </div>}
 
       {/* The CTA supplies the gap above this heading, so restore it when hidden. */}
-      <h2 className='main_heading_support' style={showKaneCta ? undefined : {marginTop:"40px"}}>Help and Support</h2>
+      <p className='main_heading_support' style={showKaneCta ? undefined : {marginTop:"40px"}}>Help and Support</p>
       
       
           <HelpFulArticle />
       
       
       
-      <h2 className='main_heading_support' style={{marginTop:"40px"}}>Related Articles</h2> </>}
+      <div className='main_heading_support' style={{marginTop:"40px"}}>Related Articles</div> </>}
       <OriginalComp {...props} />
       <footer>
         <div className="doc_footer">

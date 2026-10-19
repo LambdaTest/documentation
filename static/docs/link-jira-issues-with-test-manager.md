@@ -4,7 +4,7 @@
 
 Test Manager enhances its functionality by seamlessly linking test cases with Jira issues. This integration ensures a reliable connection between your testing activities and Jira tasks, optimizing project management and collaboration across teams.
 
-## Initial Setup and Configuration
+### Initial Setup and Configuration
 
 > **Note:** If you have already integrated Jira with your TestMu AI account, you can skip this section and proceed directly to [Linking Jira Issues](#linking-jira-issues-in-test-manager)
 
@@ -16,12 +16,12 @@ Test Manager enhances its functionality by seamlessly linking test cases with Ji
 
 4. Select your Jira instance site, click on **Select Site & Proceed**, then select your preferred project and click **Integrate Projects & Install**.
 
-## Linking Jira Issues in Test Manager
+### Linking Jira Issues in Test Manager
 
 Once the integration is complete, follow these steps to link issues with your test cases or test runs:
 
 1. Head to the issues section in Test Manager, click on **Link Issue** and go to Jira.
-> Note: Issue linking is supported at the Test Case, Test Run, Test Case instance, and step level. To link issues, go to the Issues tab within a Test Case or a Test Run. For linking at the instance and step level within a Test Run, see [Track Bugs and Issues in Test Runs](/support/docs/track-issues-in-test-runs/).
+> Note: Issue linking is supported at the Test Case, Test Run, Test Case instance, and step level. To link issues, go to the Issues tab within a Test Case or a Test Run. For linking at the instance and step level within a Test Run, see [Track Bugs and Issues in Test Runs](/support/docs/test-run-creation-and-management/).
 
 2. Enter the Jira Issue ID or URL in the input field and click on **Link Issue**.
 

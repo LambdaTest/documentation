@@ -1,8 +1,8 @@
 ---
 id: accessibility-ios-rule-minimum-text-size
-title: Minimum Text Size
+title: Minimum Text Size (iOS)
 sidebar_label: Minimum Text Size
-description: Rule-level Accessibility guidance for Minimum Text Size on iOS.
+description: "Find iOS text rendered below a readable minimum size that is hard to read for low-vision users and should scale with Dynamic Type."
 slug: accessibility-ios-rule-minimum-text-size/
 ---
 import VerifiedTag from '@site/src/component/verifiedTag';
@@ -45,7 +45,7 @@ import { BRAND_URL } from '@site/src/component/BrandName';
       "@id": "https://www.testmuai.com/support/docs/accessibility-ios-rule-minimum-text-size/"
     },
     "headline": "Minimum Text Size",
-    "description": "Rule-level Accessibility guidance for Minimum Text Size on iOS.",
+    "description": "Find iOS text rendered below a readable minimum size that is hard to read for low-vision users and should scale with Dynamic Type.",
     "url": "https://www.testmuai.com/support/docs/accessibility-ios-rule-minimum-text-size/",
     "image": {
       "@type": "ImageObject",

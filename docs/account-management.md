@@ -2,7 +2,7 @@
 id: account-management
 title: Account Management
 hide_title: true
-sidebar_label: Account Management
+sidebar_label: Overview
 description: Guide tpage to access the different components related to Account Management like Managing Subscriptions, Work on Service Accounts, Concurrency distribution in Sub-Organization, Support Access, Team Management, Multi Factor Authentication, hopw to Delete your Account, Group Management, Check Audit logs.
 keywords:
   - testmu ai automation

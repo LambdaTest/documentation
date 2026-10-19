@@ -24,7 +24,7 @@ Both interfaces were checked on September 25, 2026. The local screenshots use sa
 Browser screenshots show only the visible webpage, without browser controls or desktop content; the Projects image is limited to the sample project's entry. The TUI capture shows only terminal content. Click or tap a screenshot to enlarge it.
 
 :::note Local UI rollout
-The redesigned local UI below was verified in CLI build `f8ab6fc6` on September 25. The public npm release was still **0.1.5**, which has the earlier single-page viewer. If your screen differs, check `rook --version` and [available public updates](/support/docs/rook-installation/). Do not expect reinstalling 0.1.5 to enable the redesign. See [the earlier layout](#earlier-local-ui) below while rollout is pending.
+The redesigned local UI below ships in public releases from **0.1.6** and was checked again in **0.1.7**. Since 0.1.11 both viewers add the **Attack intent** and **Coverage gaps** panels described below. Public 0.1.5 and earlier have the single-page viewer. If your screen differs, check `rook --version` and [available public updates](/support/docs/rook-installation/), or see [the earlier layout](#earlier-local-ui) below.
 :::
 
 ## Choose Your UI {#choose-your-ui}
@@ -44,9 +44,9 @@ Neither viewer downloads missing records into your workspace, uploads local chan
 
 Launch `rook` from your agent workspace, then enter `/ui --local` for on-disk evidence or `/ui` for hosted review. These are alternatives: choose the viewer for the records you want to inspect. This actual TUI capture uses `/ui --local --no-open` to start the local server and print its address without opening a browser:
 
-<img loading="lazy" src={require('../assets/images/rook/guides/rook-tui-local-ui.png').default} alt="Rook's interactive local viewer command printing its loopback URL and confirming that the read-only server is serving" width="2200" height="600" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/rook/guides/rook-tui-local-ui.png').default} alt="Rook's interactive local viewer command printing its loopback URL and confirming that the read-only server is serving" width="2200" height="651" className="doc_img"/>
 
-Open the exact URL printed in your session; this capture used port `7758` because the default was already occupied. Keep the TUI session running while using its local viewer. `/help ui` lists options without starting a viewer. The `rook ui` examples below are the equivalent commands for a regular shell.
+Open the exact URL printed in your session; the port can differ when the default is already in use. Keep the TUI session running while using its local viewer. `/help ui` lists options without starting a viewer. The `rook ui` examples below are the equivalent commands for a regular shell.
 
 ## Review On-Disk Evidence in the Local UI {#local-ui}
 
@@ -69,10 +69,6 @@ The five local agent tabs are **Summary**, **Profiles**, **Features**, **Scenari
 <img loading="lazy" src={require('../assets/images/rook/rook-local-agents.png').default} alt="Redesigned local Agents page with search and a CommerceCare card showing nine features, twelve scenarios, and three runs" width="1440" height="900" className="doc_img"/>
 
 Search by agent name or ID, then click the agent card. It shows feature/scenario/run counts and available last-result context. Clear a search before concluding that the workspace has no agents. These counts describe the saved workspace, not coverage of every possible behavior.
-
-:::note Coming soon
-Searching local agents by description is coming soon. For now, use the agent's name or ID.
-:::
 
 ### Local Agent Workspace {#local-agent}
 
@@ -118,6 +114,10 @@ Click a run to inspect its narrative, outcome counts, scenario rows, and metadat
 
 <img loading="lazy" src={require('../assets/images/rook/rook-local-run.png').default} alt="Local CommerceCare run details with narrative, mixed scenario outcomes, View plan, and profile metadata" width="1440" height="900" className="doc_img"/>
 
+When a run has coverage gaps, the run page lists them above the outcome tiles: attack patterns, scenarios, or categories with no runnable scenario, each with its reason. A gap is unverified, not passed.
+
+<img loading="lazy" src={require('../assets/images/rook/rook-local-coverage-gaps.png').default} alt="Local triage-service run on Rook 0.1.11 with a Coverage gaps panel listing ten attack patterns with no generated scenario, above Scenarios, Passed, Failed, Skipped, and Unable to Verify tiles" width="1440" height="900" className="doc_img"/>
+
 This view includes runs available on disk, including local test-mode results. **completed** describes execution state, not a passing suite. Missing graded results are not a pass: check unfinished phases and `rook report <run-id> --json` before treating a result as complete.
 
 ### Local Results and Evidence Files {#local-results}
@@ -140,7 +140,7 @@ Large or unsupported files may offer a download instead of an inline preview. HT
 
 ### If You Still Have the Earlier Local UI {#earlier-local-ui}
 
-Public CLI 0.1.5 uses a dark, single-page agent view: scroll through profiles, features, scenarios, and runs; result pages have criteria, request/response sections, and a files list. That is an older viewer, not a missing hosted login. The redesigned viewer uses the same `rook ui --local` command; no separate frontend install is needed in a packaged release.
+Public CLI 0.1.5 and earlier use a dark, single-page agent view: scroll through profiles, features, scenarios, and runs; result pages have criteria, request/response sections, and a files list. That is an older viewer, not a missing hosted login. The redesigned viewer uses the same `rook ui --local` command; no separate frontend install is needed in a packaged release.
 
 After upgrading, open the URL printed by the command and navigate from **Agents**. Old `/agent/…` or preview `/next/…` bookmarks do not preserve the previous detail route. If the page says viewer assets are missing, reinstall the appropriate complete CLI package; signing in or syncing cannot add the missing UI files.
 
@@ -416,11 +416,11 @@ Start with **Goal sent to the agent**. In this example it is <code>please look a
 
 Each criterion shows its ID, statement, and check type, such as <code>regex</code> or <code>llm_judge</code>. These are planned checks, not passing verdicts. Confirm that the target profile will expose enough evidence to judge them, especially criteria about tool calls or external state changes.
 
-The **Definition** panel contains the feature, class, category, criterion count, repeat count, timeout when recorded, multi-turn setting, and input/output types where specified. A missing timeout display does not promise unlimited execution; check the CLI and profile configuration.
+The **Definition** panel contains the feature, class, category, criterion count, timeout when recorded, multi-turn setting, and input/output types where specified. A missing timeout display does not promise unlimited execution; check the CLI and profile configuration.
 
 #### Optional Sections {#scenario-details-optional-sections}
 
-A scenario can also record **Preconditions**, **Forbidden** behavior, **MCP expectations**, and **Exercises tools**. Excluded scenarios show their exclusion reason. These sections appear only when present in the definition; their absence in the screenshot is expected for this fixture.
+A scenario can also record **Preconditions**, **Forbidden** behavior, **MCP expectations**, and **Exercises tools**. Excluded scenarios show their exclusion reason. Adversarial scenarios show **Attack intent**: the attack, its delivery, the attacker's objective, the target control, and the OWASP and MITRE ATLAS references. These sections appear only when present in the definition; their absence in the screenshot is expected for this fixture.
 
 MCP expectations describe what should happen. If the invocation cannot observe the actual MCP calls, that expectation is not automatically verified. See [MCP Servers](/support/docs/agent-assurance-mcp/) and [Results and Evidence](/support/docs/agent-assurance-results-and-evidence/) for handling verification gaps.
 
@@ -493,7 +493,7 @@ Click **View plan** to read the recorded <code>run.yaml</code>.
 
 <img loading="lazy" src={require('../assets/images/rook/rook-web-run-plan.png').default} alt="Recorded Rook run plan with version and profile pins, SC-002 included, and SC-001 excluded by the only flag" width="1440" height="900" className="doc_img"/>
 
-Check the included scenario IDs and reasons, exclusions, concurrency, test mode, and pinned agent and profile revisions. This answers “What was selected?” before you inspect “What happened?” The plan is not a live phase-progress view.
+Check the included scenario IDs and reasons, exclusions, concurrency, test mode, and pinned agent and profile revisions. A run with coverage gaps also shows a **Coverage gaps** panel: attack patterns, scenarios, or categories that have no runnable scenario, with the reason. A gap is unverified, not passed. This answers “What was selected?” before you inspect “What happened?” The plan is not a live phase-progress view.
 
 In this smoke test, SC-002 was included and SC-001 was excluded by <code>--only</code>. A selection-time exclusion in the plan is not necessarily counted as an execution-time **Skipped** result. That is why the plan can list SC-001 under <code>skipped</code> while the run's Skipped tile is zero.
 
@@ -552,7 +552,7 @@ The **Acceptance criteria** cards are on the main result page. Close the evidenc
 
 Scroll down to review every card. In this example, all four criteria passed; a screenshot of the first cards alone is not the whole verdict. If the verdict artifact cannot be loaded, Rook reports the unavailable criteria rather than proving that zero criteria existed.
 
-Use [Verdicts and Reports](/support/docs/agent-assurance-results-and-evidence/) to interpret **Pass**, **Fail**, **Partial**, and **Unable to Verify**. An inability to verify is not a pass and may require better collection or access rather than a change to the agent's reasoning.
+Use [Verdicts and Reports](/support/docs/agent-assurance-results-and-evidence/) to interpret **Pass**, **Fail**, and **Unable to Verify**; a **Partial** verdict stored by an older run displays as **Unable to Verify**. An inability to verify is not a pass and may require better collection or access rather than a change to the agent's reasoning.
 
 #### Artefacts: What Files Support the Result? {#results-artefacts-what-files-support-the-result}
 
@@ -578,8 +578,9 @@ The former Insights tab is not currently available. Use these existing views ins
 
 1. Open [Features](#features) to find behaviors without scenarios.
 2. Use [Scenarios → Result → never run](#scenarios) to find generated tests without execution.
-3. Open a run and filter its result criteria to **Fail** or **Unable to Verify**. Read the evidence before changing the agent, hooks, or test expectations.
-4. Compare runs only after checking their scenario selection, agent version, profile revision, and target conditions. A changed pass percentage alone does not explain a regression.
+3. Open a run's **Coverage gaps** panel for attack patterns and categories with no runnable scenario.
+4. Open a run and filter its result criteria to **Fail** or **Unable to Verify**. Read the evidence before changing the agent, hooks, or test expectations.
+5. Compare runs only after checking their scenario selection, agent version, profile revision, and target conditions. A changed pass percentage alone does not explain a regression.
 
 The sample has one functional smoke test; it establishes neither a trend nor adversarial resilience. Local `--test` runs do not populate shared history.
 

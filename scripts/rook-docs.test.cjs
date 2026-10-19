@@ -34,8 +34,9 @@ test('public installation examples use the current Homebrew tap and include nati
     const bash = [...doc.matchAll(/```bash\n([\s\S]*?)\n```/g)].map(m => m[1]).join('\n');
     assert.match(bash, /brew install lambdatest\/rook\/rook/);
     assert.doesNotMatch(bash, /brew tap LambdaTest\/rook https:\/\/github\.com\/LambdaTest\/rook\.git/);
-    assert.match(doc, /npm\.cmd install -g @testmuai\/rook@0\.1\.5/);
+    assert.match(doc, /npm\.cmd install -g @testmuai\/rook\b/);
   }
+  assert.match(install, /npm\.cmd install -g @testmuai\/rook@0\.1\.11/);
   assert.match(install, /\{#windows\}/);
   assert.match(install, /\{#windows-wsl\}/);
   assert.match(install, /Get-Command rook\.cmd/);
@@ -160,7 +161,7 @@ test('hosted review directions use Profiles and the evidence drawer, not the ret
   assert.doesNotMatch(hostedUi + hostedProfiles, /YAML.*inline|specification inline|earlier side-by-side layout/);
 });
 
-test('local UI guide covers the tabbed viewer without promising it in public CLI 0.1.5', () => {
+test('local UI guide covers the tabbed viewer and names the first public release that ships it', () => {
   const ui = fs.readFileSync(path.join(root, 'docs/rook-web-ui.md'), 'utf8');
   const local = ui.split('### If You Still Have the Earlier Local UI')[0];
   assert.match(local, /\*\*Summary\*\*, \*\*Profiles\*\*, \*\*Features\*\*, \*\*Scenarios\*\*, and \*\*Runs\*\*/);
@@ -168,7 +169,7 @@ test('local UI guide covers the tabbed viewer without promising it in public CLI
   assert.match(local, /profile YAML inline/);
   assert.match(local, /\*\*Evidence\*\* panel to open its drawer/);
   assert.match(local, /`hooks\.json`, `snapshot\.yaml`.*not listed here/);
-  assert.match(ui, /public npm release was still \*\*0\.1\.5\*\*/);
+  assert.match(ui, /ships in public releases from \*\*0\.1\.6\*\*/);
   assert.match(ui, /\{#earlier-local-ui\}/);
   assert.match(ui, /different examples, not two views of the same execution/);
   for (const name of ['agents', 'agent', 'profiles', 'features', 'feature', 'scenarios', 'scenario', 'runs', 'run', 'result', 'response', 'evidence']) {
@@ -227,10 +228,10 @@ test('installation and quickstart lead into the interactive TUI with actual work
   assert.match(install, /rook-tui-get-started\.png/);
   assert.match(install, /NO_COLOR/);
   assert.match(install, /arrow keys and Enter/);
-  assert.match(quickstart, /\*\*Rook 0\.1\.5\*\*/);
+  assert.match(quickstart, /\*\*Rook 0\.1\.11\*\*/);
   assert.match(quickstart, /one step at a time/);
   assert.match(quickstart, /not a fixed credit quote/);
-  assert.match(quickstart, /not complete|left four discovered feature areas untested/);
+  assert.match(quickstart, /not complete|four of the five discovered features were not tested/);
   const stages = [
     ['2. Open the TUI', ['get-started', 'explore-confirm']],
     ['3. Generate and verify the profile', ['profile-authoring', 'profile-verified']],
@@ -276,8 +277,8 @@ test('supporting workflow pages show real checkpoints with honest scope and perm
 
 test('CLI Reference documents the public baseline, interactive screenshots, and approved saved-run RCA', () => {
   const doc = fs.readFileSync(path.join(root, 'docs/agent-assurance-command-reference.md'), 'utf8');
-  assert.match(doc, /public Rook 0\.1\.5 CLI/);
-  assert.match(doc, /Rook 0\.1\.5 interactive TUI/);
+  assert.match(doc, /public Rook 0\.1\.11 CLI/);
+  assert.match(doc, /Rook 0\.1\.11 interactive TUI/);
   assert.match(doc, /They show command help, not completed paid operations/);
   assert.match(doc, /\{#root-cause-analysis\}/);
   assert.match(doc, /rook report <run-id> --rca/);
@@ -306,13 +307,13 @@ test('CLI Reference documents the public baseline, interactive screenshots, and 
 
 test('Troubleshooting covers current Windows, scenario, RCA, and support recovery paths', () => {
   const doc = fs.readFileSync(path.join(root, 'docs/agent-assurance-troubleshooting.md'), 'utf8');
-  assert.match(doc, /public Rook 0\.1\.5/);
+  assert.match(doc, /public Rook 0\.1\.11/);
   assert.match(doc, /rook\.cmd --version/);
   assert.match(doc, /npm\.cmd prefix -g/);
   assert.match(doc, /token_economy.*blocked if the profile does not report usage/);
   assert.match(doc, /\{#rca-troubleshooting\}/);
   assert.match(doc, /command-reference\/#root-cause-analysis/);
-  assert.match(doc, /no credentials/);
+  assert.match(doc, /identity is authenticated/);
   assert.match(doc, /rook-reference-doctor\.png/);
   assert.doesNotMatch(doc, /rook-terminal-(?:doctor|scenarios)\.png/);
   assert.match(doc, /\{#support-report\}/);
@@ -424,7 +425,7 @@ case "$1" in
   -C)
     test "$3" = checkout
     test "$4" = --detach
-    test "$5" = f199cb99c589b565e48a3a29781475daee907533
+    test "$5" = 439480f2ef3084fcbc0997a59a70f5f8adcd4ad8
     ;;
   *) exit 99 ;;
 esac

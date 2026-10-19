@@ -178,7 +178,7 @@ These steps will mark the bug successfully. You can a message appearing on your 
 
 To know more about the bug marking in <BrandName />, you can refer to [this article](/docs/mark-as-bug/).
 
-You can even integrate 3rd party apps in your account from our vast <a href={`${BRAND_URL}/integrations`}>list of integrations</a> to send the bug directly on your desired workspace. You can also track your issues using our [Issue Tracker](https://issues.lambdatest.com/) directly, and much more.
+You can even integrate 3rd party apps in your account from our vast <a href={`${BRAND_URL}/integrations/`}>list of integrations</a> to send the bug directly on your desired workspace. You can also track your issues using our [Issue Tracker](https://issues.lambdatest.com/) directly, and much more.
 
 >That's all to get started for performing WebView Testing in Android on <BrandName />. We are constantly adding more features and integrations to increase your productivity through our testing environment. If you still have any doubts or questions, please don't hesitate to contact us. Our experts are available on <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 chat support**</span>. You can also drop us a mail at **[support@testmuai.com](mailto:support@testmuai.com)**.
 >

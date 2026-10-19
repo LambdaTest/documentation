@@ -22,6 +22,7 @@ canonical: https://www.testmuai.com/support/docs/agent-assurance-overview/
 ---
 import VerifiedTag from '@site/src/component/verifiedTag';
 import { BRAND_URL } from '@site/src/component/BrandName';
+import ThemedImage from '@theme/ThemedImage';
 
 
 <script type="application/ld+json"
@@ -101,13 +102,15 @@ import { BRAND_URL } from '@site/src/component/BrandName';
         "https://www.youtube.com/@TestMuAI"
       ]
     },
-    "dateModified": "2026-09-28"
+    "dateModified": "2026-10-13"
   }) }}
 />
 
 # What is TestMu AI Agent Assurance
 
-TestMu AI Agent Assurance helps teams gather evidence about whether an AI agent they own is ready to ship. It is white-box testing for agents that *act*: they call tools, write files, hit APIs, and change external state.
+<ThemedImage sources={{light: require('../assets/images/rook/rook-mascot-light.gif').default, dark: require('../assets/images/rook/rook-mascot-dark.gif').default}} alt="Rook, the chess-piece mascot" width="160" height="160" className="no-zoom" style={{float: 'right', margin: '0 0 1rem 1.5rem'}} />
+
+TestMu AI Agent Assurance helps teams gather evidence about whether an AI agent they own is ready to ship. It brings End-to-End (E2E) testing to agents that *act*—white-box testing that follows them as they call tools, write files, hit APIs, and change external state.
 
 Agent Assurance does not grade the agent on what it says it did. An agent's own reply is the weakest available signal, because an agent can produce a confident, well-written summary of work it never completed. Agent Assurance goes inside the system and verifies the actual effects: the recorded tool calls, the command output and exit status, the files that changed, the artifacts that were produced, and read-only checks against the target's real state. How much it can observe depends on the access and the profile you give it; where no stronger evidence is available, a criterion is reported as **Unable to Verify** rather than passed on the agent's word.
 
@@ -127,9 +130,9 @@ Commands and stored file formats can change. Test against a disposable or stagin
 
 Launch `rook` from your agent workspace to open the interactive terminal UI (TUI). Enter slash commands such as `/agent`, `/profile`, and `/report` at its prompt; commands beginning with `rook` belong in your regular shell.
 
-<img loading="lazy" src={require('../assets/images/rook/guides/rook-tui-get-started.png').default} alt="Rook 0.1.5 interactive startup showing Explore, Generate, Run, and Report, with a Projects chooser and keyboard controls" width="2200" height="1320" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/rook/guides/rook-tui-get-started.png').default} alt="Rook 0.1.11 interactive startup with the pixel rook mascot and ROOK banner, the Explore, Generate, Run, and Report journey, Get Started commands, and the project chooser after sign-in" width="2200" height="1287" className="doc_img"/>
 
-This TUI capture shows a signed-in session before an agent has been explored. Select a project with the arrow keys and Enter; sign in with `/login` first if prompted. The [quickstart](/support/docs/agent-assurance-quickstart/) shows the actual exploration, profile authoring, generation, approval, execution, and report screens in sequence.
+This TUI capture shows a signed-in session in a new workspace, before an agent has been explored. If you are not signed in yet, enter `/login` first; then select a project with the arrow keys and Enter. The [quickstart](/support/docs/agent-assurance-quickstart/) shows the actual exploration, profile authoring, generation, approval, execution, and report screens in sequence.
 
 ## Agent Assurance and Agent Testing {#conversation-testing-and-autonomous-testing}
 

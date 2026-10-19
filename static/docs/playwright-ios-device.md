@@ -1,89 +1,45 @@
-# How To Run Playwright Tests On TestMu AI iOS Devices
+# How to Run Playwright iOS Tests on TestMu AI
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
-\n    playwright<\/artifactId>\n    1.60.0<\/version>\n<\/dependency>"
+{\n  const capabilities = {\n    \"LT:Options\": {\n      \"platformName\": \"ios\",\n      \"deviceName\": \"iPhone 16\",\n      \"platformVersion\": \"18\",\n      \"isRealMobile\": true,\n      \"build\": \"Playwright iOS Build\",\n      \"name\": \"Playwright iOS Test\",\n      \"user\": process.env.LT_USERNAME,\n      \"accessKey\": process.env.LT_ACCESS_KEY,\n      \"network\": true,\n      \"video\": true,\n      \"console\": true,\n    },\n  };\n\n  const browser = await webkit.connect(\n    `wss://cdp.lambdatest.com/playwright?capabilities=${encodeURIComponent(\n      JSON.stringify(capabilities)\n    )}`\n  );\n\n  const context = await browser.newContext();\n  const page = await context.newPage();\n\n  await page.goto(\"https://duckduckgo.com\", { timeout: 30000 });\n  await page.locator('[name=\"q\"]').fill(\"LambdaTest\");\n  await page.locator('[name=\"q\"]').press(\"Enter\");\n  await page.waitForTimeout(3000);\n})();"
       },
       {
         "@type": "SoftwareSourceCode",
-        "name": "Add the Playwright NuGet package",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "Shell",
-        "text": "dotnet add package Microsoft.Playwright"
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "Code sample 7",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "text",
-        "text": "\nRun the test:\n\n```bash\nnode playwright-ios-test.js"
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "if __name__ == \"__main__\"",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "text",
-        "text": "\nRun the test:\n\n```bash\npython playwright_ios_test.py"
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "Code sample 9",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "text",
-        "text": "\nRun the test:\n\n```bash\nmvn compile exec:java -Dexec.mainClass=\"com.lambdatest.PlaywrightIosTest\""
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "Code sample 10",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "text",
-        "text": "\nRun the test:\n\n```bash\ndotnet run"
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "Add the Apple Pay keys to the same LT:Options object you already use to start your Playwright session (see Run Your First Test)",
+        "name": "Enable Apple Pay in LT:Options",
         "codeSampleType": "code snippet",
         "programmingLanguage": "JavaScript",
-        "text": "const capabilities = {\n  \"LT:Options\": {\n    // ...your existing iOS capabilities (platformName, deviceName, platformVersion, user, accessKey, etc.)\n    // highlight-start\n    \"applePay\": true,\n    \"applePayCardType\": [\"master\", \"visa\"], // priority order \u2014 master preferred, visa as fallback\n    // highlight-end\n  },\n};"
+        "text": "const capabilities = {\n  \"LT:Options\": {\n    // ...your existing iOS capabilities (platformName, deviceName, platformVersion, user, accessKey, etc.)\n    // highlight-start\n    \"applePay\": true,\n    \"applePayCardType\": [\"master\", \"visa\"], // priority order: master preferred, visa as fallback\n    // highlight-end\n  },\n};"
       },
       {
         "@type": "SoftwareSourceCode",
-        "name": "Adding a card to Wallet requires a device passcode",
+        "name": "Private cloud passcode capability",
         "codeSampleType": "code snippet",
         "programmingLanguage": "JavaScript",
-        "text": "// Private cloud only \u2014 set a custom passcode\n\"LT:Options\": { /* ...other caps */, \"applePay\": true, \"passcode\": \"654321\" }"
+        "text": "// Private cloud only: set a custom passcode\n\"LT:Options\": { /* ...other caps */, \"applePay\": true, \"passcode\": \"654321\" }"
       },
       {
         "@type": "SoftwareSourceCode",
-        "name": "A small reusable wrapper keeps the calls readable",
+        "name": "Reusable ltAction wrapper",
         "codeSampleType": "code snippet",
         "programmingLanguage": "JavaScript",
         "text": "async function ltAction(page, action, args = {}) {\n  return page.evaluate(\n    (_) => {},\n    `lambdatest_action: ${JSON.stringify({ action, arguments: args })}`\n  );\n}"
       },
       {
         "@type": "SoftwareSourceCode",
-        "name": "Hook 1 \u2014 lambda-applepay-details (pre-fill the sheet)",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "JavaScript",
-        "text": "await ltAction(page, \"lambda-applepay-details\", {\n  shippingDetails: {\n    firstName: \"John\", lastName: \"Doe\",\n    street: \"1 Infinite Loop\", city: \"Cupertino\",\n    state: \"California\", postalCode: \"95014\", country: \"United States\",\n  },\n  billingDetails: {\n    firstName: \"John\", lastName: \"Doe\",\n    street: \"1 Infinite Loop\", city: \"Cupertino\",\n    state: \"California\", postalCode: \"95014\", country: \"United States\",\n    email: \"john.doe@example.com\", phone: \"+14085551234\",\n  },\n  contact: {\n    firstName: \"John\", lastName: \"Doe\",\n    email: \"john.doe@example.com\", phone: \"+14085551234\",\n  },\n});"
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "Hook 2 \u2014 lambda-applepay (confirm / authorize payment)",
+        "name": "Hook 2: lambda-applepay (confirm and authorize payment)",
         "codeSampleType": "code snippet",
         "programmingLanguage": "JavaScript",
         "text": "await ltAction(page, \"lambda-applepay\", { confirm: true });"
       }
     ],
-    "dateModified": "2026-09-09T19:13:32+05:30"
+    "dateModified": "2026-09-27T00:00:00+05:30"
   }) }}
 />
 
-# Getting Started With Playwright Testing on iOS Real Devices
+# How to Run Playwright iOS Tests on TestMu AI
 
-Playwright test automation on real iOS devices is now supported on TestMu AI across **Node.js, Java, C#, and Python**. Test on latest iPhone and iPad Safari combinations to catch device-specific issues that mobile emulation may miss. Integrate with your existing CI pipeline, and access logs and debugging artifacts for each test run.
-
-This guide will cover the basics of getting started with Playwright testing on iOS devices on the TestMu AI platform.
+If you write Playwright tests and need to verify behavior on real iPhones and iPads, you can run them on physical iOS devices through TestMu AI. This catches device-specific issues that mobile emulation misses, works across Node.js, Java, C#, and Python, and gives you logs and debugging artifacts for each run. You connect to the TestMu AI CDP endpoint with your capabilities, then select the iPhone or iPad Safari combination at run time.
 
 **Currently in BETA**
 
@@ -96,7 +52,7 @@ Playwright testing on real iOS devices is currently in **Beta**. To enable this 
 
 ## Prerequisites
 
-Set your TestMu AI username and access key in the environment variables. You can get your TestMu AI username and access key from your TestMu AI Profile > Account Settings > Password & Security.
+Before you run a test, set your TestMu AI username and access key in your environment variables. Find both values under your TestMu AI **Profile > Account Settings > Password & Security**.
 
 **Windows**
 
@@ -141,6 +97,8 @@ dotnet add package Microsoft.Playwright
 ```
 
 ## Run Your First Test
+
+Use the sample below in your language of choice. It connects to the TestMu AI CDP endpoint, opens Safari on a real iPhone, runs a search, and reports the test status back to the dashboard.
 
 ```javascript title="playwright-ios-test.js"
 const { webkit } = require("playwright");
@@ -411,16 +369,18 @@ dotnet run
 
 ## Apple Pay Automation
 
-Automate the Apple Pay checkout flow on a real iOS device using Playwright over the TestMu AI CDP endpoint (`wss://cdp.lambdatest.com/playwright`). When enabled, the platform provisions Wallet, a sandbox card, and the device passcode on the real iPhone — so you never interact with Face ID / Touch ID or set up Wallet manually.
+Automate the Apple Pay checkout flow on a real iOS device using Playwright over the TestMu AI CDP endpoint (`wss://cdp.lambdatest.com/playwright`). When enabled, the platform provisions Wallet, a sandbox card, and the device passcode on the real iPhone, so you never interact with Face ID or Touch ID or set up Wallet manually.
 
 - Apple Pay runs on **WebKit/Safari** and is supported across **all languages** available for Playwright iOS testing. The hook calls use the same `lambdatest_action` server-side channel shown under [Run Your First Test](#run-your-first-test), so the same syntax applies in every language.
-- To enable Apple Pay for your organization, please contact us via **24×7 chat support** or drop a mail to **support@testmuai.com**.
+- To enable Apple Pay for your organization, contact TestMu AI via **24×7 chat support** or send a mail to **support@testmuai.com**.
 
-### Capabilities
+### Apple Pay Capabilities
+
+Set the following keys in `LT:Options` to turn on Apple Pay and control which payment network the sandbox card uses.
 
 | Capability | Type | Default | Required / Optional | Description |
 |------------|------|---------|---------------------|-------------|
-| **applePay** | Boolean | false | Mandatory | Enables Apple Pay on the session — provisions Wallet, a sandbox card, and the device passcode on supported real iOS devices. |
+| **applePay** | Boolean | false | Mandatory | Enables Apple Pay on the session and provisions Wallet, a sandbox card, and the device passcode on supported real iOS devices. |
 | **applePayCardType** | Array | None | Optional | Preferred payment network(s) in priority order. Supported values: `["master", "visa", "amex", "discover"]`. The first network is preferred; the rest act as fallbacks. If omitted, a default sandbox card is provisioned. |
 
 Add the Apple Pay keys to the **same `LT:Options` object** you already use to start your Playwright session (see [Run Your First Test](#run-your-first-test)):
@@ -431,38 +391,38 @@ const capabilities = {
     // ...your existing iOS capabilities (platformName, deviceName, platformVersion, user, accessKey, etc.)
     // highlight-start
     "applePay": true,
-    "applePayCardType": ["master", "visa"], // priority order — master preferred, visa as fallback
+    "applePayCardType": ["master", "visa"], // priority order: master preferred, visa as fallback
     // highlight-end
   },
 };
 ```
 
-#### Passcode Capabilities
+**Passcode capabilities**
 
 Adding a card to Wallet requires a device passcode:
 
-- **Public cloud** — no extra capability is needed. The confirm hook handles the passcode automatically.
-- **Private cloud** — use the `passcode` capability to set a custom passcode value directly on the device. Add it inside `LT:Options` alongside `applePay`:
+- **Public cloud**: no extra capability is needed. The confirm hook handles the passcode automatically.
+- **Private cloud**: use the `passcode` capability to set a custom passcode value directly on the device. Add it inside `LT:Options` alongside `applePay`:
 
 ```javascript
-// Private cloud only — set a custom passcode
+// Private cloud only: set a custom passcode
 "LT:Options": { /* ...other caps */, "applePay": true, "passcode": "654321" }
 ```
 
-On **iOS 26**, the `lambda-applepay` confirm hook enters the device passcode automatically — the custom `passcode` on private cloud, or the default passcode on public cloud. No separate passcode step is required.
+On **iOS 26**, the `lambda-applepay` confirm hook enters the device passcode automatically: the custom `passcode` on private cloud, or the default passcode on public cloud. No separate passcode step is required.
 
-### Validation
+### Apple Pay Validation
 
-Before either Apple Pay hook executes, the gateway validates:
+Before either Apple Pay hook executes, the gateway validates the session against the checks below. If either check fails, the hook is skipped.
 
-1. **iOS version ≥ 14** — Apple Pay hooks are rejected on older platform versions.
-2. **Apple Pay capability present** — `applePay: true` must be set in `LT:Options`.
+1. **iOS version ≥ 14**: Apple Pay hooks are rejected on older platform versions.
+2. **Apple Pay capability present**: `applePay: true` must be set in `LT:Options`.
 
 If either check fails, the hook is not executed and an error is returned to the session.
 
-### Hooks
+### Apple Pay Hooks
 
-Apple Pay hooks are invoked through the TestMu AI server-side action channel — the native Apple Pay sheet is not reachable by Playwright directly. A small reusable wrapper keeps the calls readable:
+The native Apple Pay sheet is not reachable by Playwright directly, so you drive it through the TestMu AI server-side action channel. A small reusable wrapper keeps the calls readable.
 
 ```javascript
 async function ltAction(page, action, args = {}) {
@@ -473,9 +433,9 @@ async function ltAction(page, action, args = {}) {
 }
 ```
 
-#### Hook 1 — `lambda-applepay-details` (pre-fill the sheet)
+**Hook 1: `lambda-applepay-details` (pre-fill the sheet)**
 
-Sets shipping, billing, and contact details on the Apple Pay sheet. Call it **before** launching the sheet. Optional — use it when your merchant requires shipping/contact info.
+Sets shipping, billing, and contact details on the Apple Pay sheet. Call it **before** launching the sheet. It is optional: use it when your merchant requires shipping or contact info.
 
 ```javascript
 await ltAction(page, "lambda-applepay-details", {
@@ -497,7 +457,7 @@ await ltAction(page, "lambda-applepay-details", {
 });
 ```
 
-#### Hook 2 — `lambda-applepay` (confirm / authorize payment)
+**Hook 2: `lambda-applepay` (confirm and authorize payment)**
 
 Confirms the native Apple Pay sheet to authorize the transaction.
 
@@ -505,9 +465,11 @@ Confirms the native Apple Pay sheet to authorize the transaction.
 await ltAction(page, "lambda-applepay", { confirm: true });
 ```
 
-On **iOS 26**, the confirm hook automatically enters the device passcode — one call confirms the sheet and authorizes the payment end to end. On earlier iOS versions, the passcode is entered as a separate step after confirm.
+On **iOS 26**, the confirm hook automatically enters the device passcode, so one call confirms the sheet and authorizes the payment end to end. On earlier iOS versions, the passcode is entered as a separate step after confirm.
 
-### End-to-End Example
+### End-to-End Apple Pay Example
+
+The script below starts a session with Apple Pay enabled, pre-fills the sheet, and confirms the payment on iOS 26 where the passcode is entered automatically.
 
 ```javascript title="apple-pay.spec.js"
 const { webkit } = require("playwright");
@@ -569,14 +531,20 @@ async function ltAction(page, action, args = {}) {
 })();
 ```
 
-The `ltAction` helper is generic — reuse it for `setTestStatus`, `smartui.takeScreenshot`, or any other TestMu AI action.
+The `ltAction` helper is generic, so reuse it for `setTestStatus`, `smartui.takeScreenshot`, or any other TestMu AI action.
 
-## View your Playwright test results
+## View Your Playwright Test Results
 
-The TestMu AI Automation Dashboard is where you can see the results of your Playwright iOS tests after running them on the TestMu AI platform.
-
-The below screenshot of TestMu AI Automation Dashboard shows the Playwright build on the left and the build sessions associated with the selected build on the right.
+After a run finishes, open the TestMu AI Automation Dashboard to review your Playwright iOS test results. The dashboard shows the Playwright build on the left and the build sessions associated with the selected build on the right.
 
 - Safari is the supported browser for iOS real device testing. All four languages (**Node.js, Java, C#, and Python**) are supported using stock Playwright packages.
 
 - Playwright testing on real iOS devices is currently supported on latest iOS versions (iOS 17, iOS 18, and iOS 26) across both iPhones and iPads.
+
+## Related Playwright Guides
+
+Continue with the guides below to expand your Playwright mobile and cloud test coverage on TestMu AI.
+
+- [Run Playwright tests on real Android devices](/support/docs/playwright-android/) covers the Android equivalent of this iOS setup.
+- [Set up Playwright test execution on TestMu AI](/support/docs/playwright-test-execution-setup/) walks through the base configuration for cloud runs.
+- [Configure Playwright capabilities](/support/docs/capabilities-for-playwright/) lists every capability you can set in `LT:Options`.

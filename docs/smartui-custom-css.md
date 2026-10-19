@@ -295,7 +295,7 @@ The embedded string method is useful for quick edits and single-use CSS rules. P
 
 ## Configuration Guidelines
 
-- **Placement**: The `customCSS` property must be placed at the top level of your configuration file (not inside the `web` object). Placing it inside `web` will result in a "must NOT have additional properties" error.
+- **Placement**: The `customCSS` property must be placed at the top level of your configuration file, not inside the `web` object. If you put it inside `web`, the CLI does not report an error; it ignores the CSS, and no CSS Injection Report appears in the output.
 
 - **Path Resolution**: A relative path in the configuration file is resolved from the folder that contains that configuration file, not from where you run the command. If the file is missing, the CLI stops with `customCSS file not found: <resolved path>`.
 
@@ -335,9 +335,9 @@ The embedded string method is useful for quick edits and single-use CSS rules. P
 
 Cookie banners, consent managers, chat launchers and promo pop-ups are the most common reason a screenshot differs from its baseline. `customCSS` is the supported way to remove them from the screenshot.
 
-### Why the banner appears even though your test closed it
+### Why the banner is in your screenshots
 
-With the SmartUI CLI and SDKs, SmartUI copies your page and renders the copy again in its cloud browsers. Your test's cookies and local storage are not carried over. A consent manager that decides whether to show itself when the page loads, for example with `enableJavaScript: true`, sees a new visitor and shows the banner again.
+SmartUI captures the page as it is at the moment you take the snapshot. Every test run starts a new browser with no consent cookie, so the consent manager shows its banner, and it stays in the snapshot unless your test dismisses it first. Clicking the banner's accept button in every test works, but it adds steps to each test and breaks when the banner changes. `customCSS` removes the banner without changing your tests.
 
 ### Use `customCSS`, not `ignoreDOM`, to remove an element
 

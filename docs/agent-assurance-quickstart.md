@@ -98,7 +98,7 @@ import { BRAND_URL } from '@site/src/component/BrandName';
         "https://www.youtube.com/@TestMuAI"
       ]
     },
-    "dateModified": "2026-09-28"
+    "dateModified": "2026-10-13"
   }) }}
 />
 
@@ -114,7 +114,7 @@ Install → launch Rook → sign in → select a project
   → generate and review scenarios → sync → approve one run → inspect evidence
 ```
 
-The interactive workflow and terminal screenshots were tested with **Rook 0.1.5** on September 28, 2026. Discovery, profile generation, scenario generation, and judging use TestMu AI credits; even a small suite can involve several model calls. Review the proposed work and credit balance before approving it. The browser examples below are separately identified saved runs.
+The interactive workflow and terminal screenshots were tested with **Rook 0.1.11** on October 13, 2026. Discovery, profile generation, scenario generation, and judging use TestMu AI credits; even a small suite can involve several model calls. Review the proposed work and credit balance before approving it. The browser examples below are separately identified saved runs.
 
 Already have a live agent? Follow the same sequence with your own [source or requirements](/support/docs/agent-assurance-connect-and-explore-agents/) and [invocation profile](/support/docs/rook-profiles-and-hooks/#add-a-profile-interactively).
 
@@ -133,14 +133,14 @@ curl -fsSL https://raw.githubusercontent.com/LambdaTest/rook/main/install.sh | b
 ```
 
 ```bash
-# npm (use Node.js 22 or newer)
+# npm (use Node.js 20 or newer)
 npm install -g @testmuai/rook
 ```
 
 PowerShell on Windows x64:
 
 ```powershell
-npm.cmd install -g @testmuai/rook@0.1.5
+npm.cmd install -g @testmuai/rook
 ```
 
 Then check your installation:
@@ -208,7 +208,7 @@ Invoke-RestMethod -Uri 'http://127.0.0.1:19110/v1/triage' -Method Post -ContentT
 
 The response should say <code>T-1043 triaged as S1 and assigned to platform.</code> and include the recorded tool steps.
 
-### 2. Open the TUI, Sign In, and Explore {#open-the-tui-and-explore}
+### 2. Open the TUI, sign in, and explore {#open-the-tui-and-explore}
 
 Open the sample folder in your Rook terminal:
 
@@ -228,7 +228,7 @@ rook.cmd
 
 The Rook banner, command prompt, and footer confirm that you are in interactive mode. If you are already signed in, Rook can open the project chooser automatically:
 
-<img loading="lazy" src={require('../assets/images/rook/guides/rook-tui-get-started.png').default} alt="Fresh Rook interactive session showing the Explore, Generate, Run, and Report journey and project chooser before discovery" width="2200" height="1320" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/rook/guides/rook-tui-get-started.png').default} alt="Fresh Rook 0.1.11 interactive session showing the mascot banner, the Explore, Generate, Run, and Report journey, Get Started commands, and the project chooser before discovery" width="2200" height="1287" className="doc_img"/>
 
 If not signed in, enter `/login`, complete the browser flow, and return to this terminal. Use `/doctor` to check readiness and `/plan` to check credits. At a chooser, use arrow keys and Enter; Esc goes back. At the prompt, Tab completes commands. The remaining commands belong **inside this TUI**, not in your shell.
 
@@ -250,7 +250,7 @@ Run exploration only after the intended test project is selected:
 
 Rook reads the sample and shows discovery progress. When it proposes an agent, review the name, source path, and purpose before choosing **yes** to register it. This is an actual exploration of the public sample:
 
-<img loading="lazy" src={require('../assets/images/rook/guides/rook-tui-explore-confirm.png').default} alt="Rook exploration finding the support triage agent and asking whether to register it, with yes and no choices and a live progress footer" width="2200" height="840" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/rook/guides/rook-tui-explore-confirm.png').default} alt="Rook exploration finding the support triage agent and asking whether to register it, with yes and no choices and a live progress footer" width="2200" height="850" className="doc_img"/>
 
 Wait for exploration to finish, then open the agent picker:
 
@@ -278,7 +278,7 @@ Use concurrency 1.
 
 Rook generates the hook and verifies it against the running sample. Approve only the intended local HTTP call and script work; do not approve server startup, dependency installation, or unrelated commands. Wait for the result before continuing.
 
-<img loading="lazy" src={require('../assets/images/rook/guides/rook-tui-profile-authoring.png').default} alt="Actual TUI profile-generation conversation with the triage HTTP request description and an approval prompt for the generated hook script" width="2200" height="1680" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/rook/guides/rook-tui-profile-authoring.png').default} alt="Actual TUI profile-generation conversation with the triage HTTP request description and an approval prompt for the generated hook script" width="2200" height="1366" className="doc_img"/>
 
 This checkpoint shows authoring in progress. Read the exact requested file or command, then approve once with **yes** if it matches the sample setup; the prompt is not evidence that verification has passed.
 
@@ -294,7 +294,7 @@ Inspect and test the generated result inside the TUI:
 
 Review the generated <code>profiles/local-triage.yaml</code> and <code>scripts/</code> files below the active agent directory. A successful probe should return the real answer and four tool calls. Stop here if the probe fails; generation and testing will not repair a broken connection automatically.
 
-<img loading="lazy" src={require('../assets/images/rook/guides/rook-tui-profile-verified.png').default} alt="Rook completing profile authoring after a successful triage probe, reporting four mapped tool calls and selecting local-triage as the active profile" width="2200" height="920" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/rook/guides/rook-tui-profile-verified.png').default} alt="Rook completing profile authoring after a successful triage probe, reporting four mapped tool calls and selecting local-triage as the active profile" width="2200" height="1207" className="doc_img"/>
 
 This is the successful connection checkpoint: the hook answered, the generated profile was saved, and the footer now includes `local-triage`. Profile verification is not a scenario verdict.
 
@@ -308,7 +308,7 @@ The sample needs only an <code>execute</code> hook. Use [additional lifecycle ho
 
 Before writing scenarios, Rook shows the plan and offers **proceed**, **discard**, or **change**. Check both the included cases and the features it intentionally leaves uncovered:
 
-<img loading="lazy" src={require('../assets/images/rook/guides/rook-tui-generate-plan.png').default} alt="Rook's actual generation plan for two triage scenarios, with included and excluded features and proceed, discard, or change choices" width="2200" height="1120" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/rook/guides/rook-tui-generate-plan.png').default} alt="Rook's actual generation plan for two triage scenarios, with included and excluded features and proceed, discard, or change choices" width="2200" height="1168" className="doc_img"/>
 
 Choose **proceed** only if the scope matches the two requested tickets. Wait for writing to finish, then inspect the saved suite:
 
@@ -316,9 +316,26 @@ Choose **proceed** only if the scope matches the two requested tickets. Wait for
 /scenarios list
 ```
 
-<img loading="lazy" src={require('../assets/images/rook/guides/rook-tui-generated-scenarios.png').default} alt="Rook listing the two generated triage scenarios, their functional happy-path classification, four criteria each, and runnability against local-triage" width="2200" height="720" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/rook/guides/rook-tui-generated-scenarios.png').default} alt="Rook listing the two generated triage scenarios with their functional happy-path classification, feature, criteria count, and runnability against local-triage" width="2200" height="770" className="doc_img"/>
 
 The count is a generation target, not a guarantee. In this capture, two scenarios were written and both are runnable against `local-triage`; neither has passed yet. Review the resulting files before running them. Check that every criterion can be evaluated from the answer or the calls your hook actually returns. For example, a JSON-path check against <code>$.steps</code> cannot inspect that field if your hook returned only an answer string.
+
+Also read each scenario's `calls` list. A `called_with` check needs the arguments to match; with empty `arguments: {}` there is nothing to compare, and the run reports that call as **Unable to Verify** even when the agent made it. In this capture, both generated scenarios had such checks. Add the arguments you expect, or use `called` when only the call matters, then save the file:
+
+```yaml
+calls:
+  - tool: get_ticket
+    expect: called_with
+    arguments: { ticket_id: T-1043 }
+  - tool: set_severity
+    expect: called_with
+    arguments: { ticket_id: T-1043, severity: S1 }
+  - tool: assign_team
+    expect: called_with
+    arguments: { ticket_id: T-1043, team: platform }
+  - tool: reply_to_customer
+    expect: called
+```
 
 Choose the scenario for **T-1043**. Do not assume it will always be <code>SC-002</code>.
 
@@ -330,21 +347,21 @@ Choose the scenario for **T-1043**. Do not assume it will always be <code>SC-002
 
 Wait for the agent to be recorded upstream before starting the run:
 
-<img loading="lazy" src={require('../assets/images/rook/guides/rook-tui-sync.png').default} alt="Rook synchronizing the triage agent and confirming one agent recorded upstream" width="2200" height="600" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/rook/guides/rook-tui-sync.png').default} alt="Rook synchronizing the triage agent and confirming one agent recorded upstream" width="2200" height="651" className="doc_img"/>
 
 ```text
 /run --only <your-T-1043-scenario-id> --profile local-triage --concurrency 1 --name first-triage-run
 ```
 
-Replace the placeholder with the generated scenario ID. Review the selected scenario and active profile before proceeding. This plan selects only `SC-002` and explicitly skips `SC-001`:
+Replace the placeholder with the generated scenario ID. Review the selected scenario and active profile before proceeding. This plan selects only `SC-001` and explicitly skips `SC-002`:
 
-<img loading="lazy" src={require('../assets/images/rook/guides/rook-tui-run-plan.png').default} alt="Interactive run plan selecting one triage scenario, skipping the other, and waiting for proceed, discard, or change" width="2200" height="920" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/rook/guides/rook-tui-run-plan.png').default} alt="Interactive run plan selecting one triage scenario, skipping the other, and waiting for proceed, discard, or change" width="2200" height="969" className="doc_img"/>
 
 Choose **proceed** to execute this reviewed scope, **discard** to run nothing, or **change** to revise it. Read any additional permission prompts before approving. The plan is not a fixed credit quote; check `/plan` before starting.
 
 While Rook runs, the scenario row shows its current phase. This capture is in **judging**, with `0/1` completed; it is not a final verdict:
 
-<img loading="lazy" src={require('../assets/images/rook/guides/rook-tui-run-progress.png').default} alt="Live Rook test run showing SC-002 in the judging phase with evidence reads and zero of one scenarios completed" width="2200" height="1160" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/rook/guides/rook-tui-run-progress.png').default} alt="Live Rook test run showing SC-001 in the judging phase, the judge's notes, and zero of one scenarios completed" width="2200" height="731" className="doc_img"/>
 
 Wait for completion before opening the report. Press Esc only if you intend to interrupt; stopping Rook does not undo actions already performed by the target.
 
@@ -358,9 +375,9 @@ First read the report, then choose either UI:
 /report
 ```
 
-<img loading="lazy" src={require('../assets/images/rook/guides/rook-tui-report.png').default} alt="Completed interactive report for first-triage-run showing one executed scenario, one pass, zero failures, and a warning about narrow feature coverage" width="2200" height="1520" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/rook/guides/rook-tui-report.png').default} alt="Completed interactive report for first-triage-run showing one executed scenario, one pass, zero failures, zero unable to verify, and the run's evidence directory" width="2200" height="1128" className="doc_img"/>
 
-The report names the saved run and its evidence directory. Check the counts, not just the percentage: this run executed one scenario and left four discovered feature areas untested. Reading `/report` does not rerun the target; do not add `--rca` unless you intend to request additional paid analysis.
+The report names the saved run and its evidence directory. Check the counts, not just the percentage: this run executed one scenario, and four of the five discovered features were not tested. Reading `/report` does not rerun the target; do not add `--rca` unless you intend to request additional paid analysis.
 
 | Review on this machine | Review with your team |
 |---|---|
@@ -375,7 +392,7 @@ In the verified smoke test, the selected scenario passed with four observed tool
 
 #### Local UI: Review a Result {#local-ui-example}
 
-The redesigned local result has **Acceptance criteria** filters and an **Evidence** drawer for request, response, verdict, and artifacts. This screenshot uses a separate saved CommerceCare demo (SC-006), not the triage execution above. It illustrates one failed requirement and two unverifiable criteria; your scenario IDs and outcomes will differ. Public CLI 0.1.5 still uses the earlier scrolling layout—see the [rollout and navigation note](/support/docs/rook-web-ui/#earlier-local-ui).
+The redesigned local result has **Acceptance criteria** filters and an **Evidence** drawer for request, response, verdict, and artifacts. This screenshot uses a separate saved CommerceCare demo (SC-006), not the triage execution above. It illustrates one failed requirement and two unverifiable criteria; your scenario IDs and outcomes will differ. Public 0.1.6 and later include this viewer; 0.1.5 and earlier use the earlier scrolling layout—see the [rollout and navigation note](/support/docs/rook-web-ui/#earlier-local-ui).
 
 <img loading="lazy" src={require('../assets/images/rook/rook-local-result.png').default} alt="Redesigned local result for the separate CommerceCare SC-006 demo, with failed and unverifiable criteria" width="1440" height="900" className="doc_img"/>
 
