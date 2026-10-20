@@ -149,7 +149,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
         "text": "curl --location 'https://test-manager-api.lambdatest.com/api/atm/v1/hyperexecute' \\\n--header 'Content-Type: application/json' \\\n--header 'Authorization: Basic <Base64Auth>' \\\n--data '{\n    \"test_run_id\": \"YOUR_TEST_RUN_ID\",\n    \"concurrency\": 1\n}'"
       }
     ],
-    "dateModified": "2026-10-16T08:00:00+05:30"
+    "dateModified": "2026-10-19T08:00:00+05:30"
   }) }}
 ></script>
 
@@ -194,7 +194,7 @@ You need:
 - For Kane CLI, Google Chrome, plus Node.js 18 or higher for an npm install ([Installing Kane CLI](/support/docs/kane-cli-installation/)).
 - The Momentic CLI with an existing project config, signed in with `momentic login` or `MOMENTIC_API_KEY`. <!-- Source: https://momentic.ai/docs/cli-reference/momentic/commands/import, checked 2026-10-16 --> It requires Node.js 22.12.0 or later in the 22.x line, or 24.0.0 or later. If you have no project config, the Momentic onboarding wizard (`npx @momentic/wizard@latest`) creates one. <!-- Source: https://momentic.ai/docs/get-started/cloud-deprecation, checked 2026-10-16 -->
 - For Playwright code, a Momentic Enterprise contract. Enterprise customers can ask for a one-time eject at contract termination. <!-- Source: https://momentic.ai/docs/get-started/test-portability, checked 2026-10-16 -->
-- For KaneAI app tests, your app as an APK for Android or an IPA for iOS. KaneAI test runs put native apps on Real Devices.
+- For KaneAI app tests, your app as an APK for Android or an IPA for iOS. KaneAI test runs put native apps on Real Devices. Kane CLI runs apps on the iOS Simulator or Android Emulator instead, so it takes a `.zip` simulator build or an `.apk`, not an `.ipa` ([Mobile Testing with Kane CLI](/support/docs/kane-cli-mobile/)).
 
 ## Step 1: Collect Your Momentic Test Files
 
@@ -265,9 +265,9 @@ Re-create each Momentic test as a new KaneAI test written in natural language. K
 
 ### Start a New Test
 
-Open [KaneAI](https://www.testmuai.com/login/?redirectTo=https://kaneai.lambdatest.com/objective) and click **Create a Web Test**. For a mobile app, click **Create an App Test**, select Android or iOS, and upload your app. Write each YAML step as an instruction, such as `Click the Checkout button`, then save the test to a project and folder.
+Open [KaneAI](https://www.testmuai.com/login/?redirectTo=https://kaneai.lambdatest.com/objective) and click **Author Browser Test**. For a mobile app, click **Author App Test**, select the **Android** or **iOS** tab, and add your app. Write each YAML step as an instruction, such as `Click the Checkout button`, then save the test to a project and folder.
 
-Write each `assert` step as a natural-language assertion, such as `assert "Your order has been placed" is displayed`. Momentic AI actions describe a goal rather than steps. <!-- Source: https://momentic.ai/docs/get-started/test-portability, checked 2026-10-16 --> KaneAI's guidance is that more specific instructions give more accurate tests, so break each goal into explicit steps. See the [web test](/support/docs/kane-ai-web-test/) and [app test](/support/docs/kane-ai-app-test/) guides.
+Write each `assert` step as a natural-language assertion, such as `assert "Your order has been placed" is displayed`. Momentic AI actions describe a goal rather than steps. <!-- Source: https://momentic.ai/docs/get-started/test-portability, checked 2026-10-16 --> KaneAI's guidance is that more specific instructions give more accurate tests, so break each goal into explicit steps. See [Author Your First Desktop Browser Test](/support/docs/author-your-first-desktop-browser-test/) and [Author Your First Mobile App Test](/support/docs/author-your-first-mobile-app-test/).
 
 ### Start From a Test Case
 
@@ -325,7 +325,15 @@ Verify an order confirmation is visible.
 
 </Tabs>
 
-Run it with `kane-cli testmd run checkout_test.md --agent`. The first run authors each step and saves a recording, and later runs replay from cache. Shared flows, such as a login, go in helper files pulled in with [`@import`](/support/docs/kane-cli-testmd-composition/).
+Install Kane CLI, sign in, and run the test:
+
+```bash
+npm install -g @testmuai/kane-cli
+kane-cli login --oauth
+kane-cli testmd run checkout_test.md --agent
+```
+
+The first run authors each step and saves a recording, and later runs replay from cache. Shared flows, such as a login, go in helper files pulled in with [`@import`](/support/docs/kane-cli-testmd-composition/).
 
 Kane CLI runs web tests in Chrome. It runs app tests on an Android Emulator or iOS Simulator, on macOS Apple Silicon or on the HyperExecute grid with `kane-cli testrun run --remote`. A remote run needs a <BrandName /> plan that includes HyperExecute, with macOS runner concurrency, and the `remote-execution` plugin. See [Remote runs on the cloud grid](/support/docs/kane-cli-remote-execution/).
 
@@ -357,7 +365,7 @@ Momentic runs web tests on Chromium, Google Chrome or Chrome for Testing, and mo
 3. Add test cases that have generated code, then assign people and configurations.
 4. Save the run, click **Run on HyperExecute**, and choose **Run Instances Now** or **Schedule Test Run**.
 
-With the **KaneAI** toggle on, configurations offer the **Desktop** and **Real Device** platforms. Desktop configurations cover browsers such as Chrome, Firefox, Safari and Edge. Native app testing on Real Devices is available only for KaneAI-generated test runs. Mobile browser testing on real devices, and Virtual Mobile configurations, are available for non-KaneAI test runs only. See [Configurations](/support/docs/test-runs-configurations/) and [Execute Test Runs on HyperExecute](/support/docs/kaneai-hyperexecute-test-run-execution/).
+With the **KaneAI** toggle on, configurations offer the **Desktop** and **Real Device** platforms. Desktop configurations cover browsers such as Chrome, Firefox, Safari and Edge. Native app testing on Real Devices is available only for KaneAI-generated test runs. Virtual Mobile configurations are available for non-KaneAI test runs only. See [Configurations](/support/docs/test-runs-configurations/) and [Execute Test Runs on HyperExecute](/support/docs/kaneai-hyperexecute-test-run-execution/).
 
 ### Trigger Test Runs From CI
 
@@ -410,5 +418,3 @@ The response returns links to the HyperExecute jobs. For apps on localhost or be
 - [Migration from Katalon](/support/docs/one-click-migration-from-katalon/): import Katalon Studio desktop web test cases into KaneAI New Experience.
 - [mabl To KaneAI Migration](/support/docs/mabl-to-kaneai-migration-guide/): re-create mabl tests in KaneAI.
 - [testRigor To KaneAI Migration](/support/docs/testrigor-to-kaneai-migration-guide/): re-create testRigor tests in KaneAI.
-- [Autosana To KaneAI Migration](/support/docs/autosana-to-kaneai-migration-guide/): re-create Autosana tests in KaneAI.
-- [Tester Army To KaneAI Migration](/support/docs/tester-army-to-kaneai-migration-guide/): re-create Tester Army tests in KaneAI.

@@ -258,8 +258,6 @@ If you are moving from BrowserStack or Sauce Labs, use these dedicated migration
 - [Migrate from BrowserStack to TestMu AI](/support/docs/browserstack-to-testmu-migration-guide/) - hub URL, capability mapping, and feature equivalents
 - [Migrate from Sauce Labs to TestMu AI](/support/docs/saucelabs-to-testmu-migration-guide/) - hub URL, capability mapping, and feature equivalents
 
-Running Parasoft Selenic tests? The [Parasoft to KaneAI migration guide](/support/docs/parasoft-to-kaneai-migration-guide/) shows how to run them on the grid with Selenic still attached, and how to re-create them in KaneAI.
-
 ## Prerequisites
 ---
 
