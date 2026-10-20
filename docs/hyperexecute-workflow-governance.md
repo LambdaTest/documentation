@@ -1,0 +1,201 @@
+---
+id: hyperexecute-workflow-governance
+title: "Workflow Governance in HyperExecute"
+hide_title: false
+sidebar_label: Workflow Governance
+description: "Set org-level defaults and guardrails for HyperExecute workflows: cap active workflows per project, bound how far in the future a workflow can be scheduled, and auto-disable workflows that fail repeatedly."
+keywords:
+  - TestMu AI HyperExecute
+  - TestMu AI HyperExecute help
+  - TestMu AI HyperExecute documentation
+  - HyperExecute Workflow Governance
+  - workflow guardrails
+  - workflow count cap
+  - workflow ends on
+  - auto-disable workflows
+url: https://www.testmuai.com/support/docs/hyperexecute-workflow-governance/
+site_name: TestMu AI
+slug: hyperexecute-workflow-governance/
+canonical: https://www.testmuai.com/support/docs/hyperexecute-workflow-governance/
+---
+
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
+<script type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify({
+       "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": BRAND_URL
+        },{
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Support",
+          "item": `${BRAND_URL}/support/docs/`
+        },{
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Workflow Governance in HyperExecute",
+          "item": `${BRAND_URL}/support/docs/hyperexecute-workflow-governance/`
+        }]
+      })
+    }}
+></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/hyperexecute-workflow-governance/"
+    },
+    "headline": "Workflow Governance in HyperExecute",
+    "description": "Set org-level defaults and guardrails for HyperExecute workflows: cap active workflows per project, bound how far in the future a workflow can be scheduled, and auto-disable workflows that fail repeatedly.",
+    "url": "https://www.testmuai.com/support/docs/hyperexecute-workflow-governance/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "HyperExecute",
+    "keywords": [
+      "TestMu AI HyperExecute",
+      "TestMu AI HyperExecute help",
+      "TestMu AI HyperExecute documentation"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    }
+  }) }}
+/>
+
+[Workflows](/support/docs/hyperexecute-workflows/) let a project schedule HyperExecute jobs on a cadence. Without any limits, teams can accumulate hundreds of workflows, schedule them years into the future, or leave broken schedules running unnoticed.
+
+**Workflow Governance** sets org-level defaults and guardrails for every HyperExecute workflow. The three settings cap how many workflows a project can keep active, bound how far out a workflow can be scheduled, and auto-disable workflows that fail repeatedly. Changes apply to every project in the organization and cannot be modified by individual users.
+
+:::note
+Workflow Governance is **admin-only**. The settings page is reached from **Org Settings → Org Product Preferences → HyperExecute → Workflow Governance**.
+:::
+
+{/* TODO: add screenshot of the Workflow Governance settings page once captured */}
+
+## The three guardrails
+
+Each setting has an **Enabled/Disabled** toggle and a numeric value. Leave a setting disabled to opt out of that specific guardrail; the other two remain in force.
+
+| Setting | What it bounds | Allowed range | Default |
+| :---- | :---- | :---- | :---- |
+| [Workflow count cap per project](#workflow-count-cap-per-project) | Active workflows a single project can hold at once | 1–100 | 50 |
+| [Workflow ends-on max](#workflow-ends-on-max) | Furthest end date a creator can pick from today | 1–365 days | 90 days |
+| [Auto-disable on consecutive failures](#auto-disable-on-consecutive-failures) | Consecutive failures tolerated before a workflow auto-disables | 1–20 | 5 failures |
+
+### Workflow count cap per project
+
+Caps the number of **active** workflows a project is allowed to hold at the same time. Paused or expired workflows do not count against the cap, so the limit tracks workflows that are actually scheduling jobs.
+
+- **Allowed range:** 1–100.
+- **When a creator hits the cap:** workflow creation is blocked for that project. The creator must pause, expire, or delete an existing workflow before adding a new one.
+- **Disabled:** no cap. A project can hold any number of active workflows.
+
+Use this when a few projects have accumulated workflows that nobody is tracking, or when your scheduling capacity is tight and you want to force teams to retire old workflows before adding new ones.
+
+### Workflow ends-on max
+
+Every workflow carries a **Workflow ends on** date, after which it stops triggering jobs and moves to the **Expired** state (see [Workflow states](/support/docs/hyperexecute-workflows/#workflow-states)). This guardrail bounds how far in the future that end date can be.
+
+- **Allowed range:** 1–365 days from today.
+- **When a creator picks a date past the cap:** the date picker rejects the choice and shows the cap. The creator must pick a closer date or ask an admin to extend the limit.
+- **Disabled:** creators can pick any future date.
+
+A short cap forces teams to revisit their workflows regularly. If a workflow is still useful, extending it is a one-field edit; if it isn't, letting it expire is the lightest-weight way to clean up.
+
+### Auto-disable on consecutive failures
+
+A workflow auto-disables after the configured number of **consecutive** failures. The counter resets on the first successful run, so a workflow that fails intermittently keeps running; only one that is persistently broken is caught.
+
+- **Allowed range:** 1–20 consecutive failures.
+- **What "disabled" means:** the workflow stops triggering new jobs and shows as paused in the project workflow list. Historical jobs and configuration are retained.
+- **Re-enabling:** the project owner edits the workflow from the project's **Workflows** section and resumes it after fixing the underlying issue.
+- **Disabled (the guardrail itself):** failures never auto-disable a workflow. It keeps triggering until a human intervenes.
+
+:::tip Roll out at a conservative value first
+Start with the default of 5 and tune down if too many broken workflows are slipping through, or up if normally-flaky workflows are being disabled too eagerly. Because the counter resets on success, this threshold is about **persistence**, not total failure rate.
+:::
+
+## Change the settings
+
+1. Open **Org Settings → Org Product Preferences → HyperExecute → Workflow Governance**.
+2. Toggle the setting between **Disabled** and enabled using the switch on its row.
+3. When enabled, type the value into the input next to the toggle. Values outside the allowed range are rejected inline.
+4. Save. Changes apply to every project in the org from the next workflow create or edit onward; existing workflows are not retroactively re-validated against a tightened cap.
+
+The page footer records the **last modified by** user and timestamp so you can trace who adjusted a guardrail and when:
+
+> Last modified by *onpremezztt* on *Oct 19, 2026*.
+
+## What creators see
+
+Workflow Governance is designed so creators are never silently blocked.
+
+- A **count cap** rejection names the limit and tells the creator to retire an existing workflow first.
+- An **ends-on max** rejection shows the furthest selectable date in the picker.
+- An **auto-disable** event marks the workflow as paused in the project workflow list, with the reason "disabled after N consecutive failures". The project owner re-enables it from the actions menu after the fix lands.
+
+## Related
+
+- [Workflows in HyperExecute](/support/docs/hyperexecute-workflows/) — how creators schedule and manage workflows.
+- [Global Policies in HyperExecute](/support/docs/hyperexecute-global-policies/) — org-level rules that govern the YAML inside each job.
+- [Org Product Preferences](/support/docs/hyperexecute-org-product-preferences/) — the parent settings page.
+
+<nav aria-label="breadcrumbs">
+  <ul className="breadcrumbs">
+    <li className="breadcrumbs__item">
+      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
+        Home
+      </a>
+    </li>
+    <li className="breadcrumbs__item">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
+        Support
+      </a>
+    </li>
+    <li className="breadcrumbs__item breadcrumbs__item--active">
+      <span className="breadcrumbs__link">
+        Workflow Governance
+      </span>
+    </li>
+  </ul>
+</nav>
