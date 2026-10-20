@@ -110,7 +110,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 Workflow Governance is **admin-only**. The settings page is reached from **Org Settings → Org Product Preferences → HyperExecute → Workflow Governance**.
 :::
 
-{/* TODO: add screenshot of the Workflow Governance settings page once captured */}
+<img loading="lazy" src={require('../assets/images/hyperexecute/features/workflow-governance/workflow-governance-settings.png').default} alt="Workflow Governance settings page under Org Product Preferences, listing Workflow count cap per project, Workflow ends-on max, and Auto-disable on consecutive failures with their default values 50, 90 days, and 5 failures" className="doc_img"/>
 
 ## The three guardrails
 
@@ -132,6 +132,8 @@ Caps the number of **active** workflows a project is allowed to hold at the same
 
 Use this when a few projects have accumulated workflows that nobody is tracking, or when your scheduling capacity is tight and you want to force teams to retire old workflows before adding new ones.
 
+<img loading="lazy" src={require('../assets/images/hyperexecute/features/workflow-governance/workflow-count-cap-detail.png').default} alt="Workflow count cap per project row with the toggle enabled and 50 in the input" className="doc_img"/>
+
 ### Workflow ends-on max
 
 Every workflow carries a **Workflow ends on** date, after which it stops triggering jobs and moves to the **Expired** state (see [Workflow states](/support/docs/hyperexecute-workflows/#workflow-states)). This guardrail bounds how far in the future that end date can be.
@@ -141,6 +143,8 @@ Every workflow carries a **Workflow ends on** date, after which it stops trigger
 - **Disabled:** creators can pick any future date.
 
 A short cap forces teams to revisit their workflows regularly. If a workflow is still useful, extending it is a one-field edit; if it isn't, letting it expire is the lightest-weight way to clean up.
+
+<img loading="lazy" src={require('../assets/images/hyperexecute/features/workflow-governance/workflow-ends-on-max-detail.png').default} alt="Workflow ends-on max row with the toggle enabled and 90 days in the input" className="doc_img"/>
 
 ### Auto-disable on consecutive failures
 
@@ -155,12 +159,18 @@ A workflow auto-disables after the configured number of **consecutive** failures
 Start with the default of 5 and tune down if too many broken workflows are slipping through, or up if normally-flaky workflows are being disabled too eagerly. Because the counter resets on success, this threshold is about **persistence**, not total failure rate.
 :::
 
+<img loading="lazy" src={require('../assets/images/hyperexecute/features/workflow-governance/auto-disable-failures-detail.png').default} alt="Auto-disable on consecutive failures row with the New badge, toggle enabled and 5 failures in the input" className="doc_img"/>
+
 ## Change the settings
 
 1. Open **Org Settings → Org Product Preferences → HyperExecute → Workflow Governance**.
 2. Toggle the setting between **Disabled** and enabled using the switch on its row.
 3. When enabled, type the value into the input next to the toggle. Values outside the allowed range are rejected inline.
 4. Save. Changes apply to every project in the org from the next workflow create or edit onward; existing workflows are not retroactively re-validated against a tightened cap.
+
+All three toggles can be set to **Disabled** independently, so you can opt out of a specific guardrail while keeping the others in force:
+
+<img loading="lazy" src={require('../assets/images/hyperexecute/features/workflow-governance/workflow-governance-disabled-state.png').default} alt="Workflow Governance panel with all three guardrails toggled Disabled" className="doc_img"/>
 
 The page footer records the **last modified by** user and timestamp so you can trace who adjusted a guardrail and when:
 
