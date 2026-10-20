@@ -116,7 +116,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
         "text": "Title,Description,Steps,Tags\nVerify Login to QBank,Log in and out of QBank,1. Login to QBank 2. Verify home page 3. Logout from QBank,regression"
       }
     ],
-    "dateModified": "2026-10-16T08:00:00+05:30"
+    "dateModified": "2026-10-19T08:00:00+05:30"
   }) }}
 ></script>
 
@@ -176,18 +176,18 @@ ACCELQ's docs do not list the column names of this export. Open the file and che
 
 ### Export Manual Test Runs
 
-ACCELQ's docs do not describe an export of Manual Scenarios, but they do describe a test result export. In the **Test Results** grid, select a manual run and choose **Export Results**, then **Export as PDF**. Choose **Step-level detail** to include each test case's steps with their expected results. <!-- Source: https://support.accelq.com/hc/en-us/articles/48504496031117-Exporting-Test-Results, checked 2026-10-16 -->
+ACCELQ's UI docs describe no export of Manual Scenarios. Its Fetch Scenario details API accepts the manual Scenario type and can include step details, but ACCELQ's sample response does not show the step fields. <!-- Sources: https://support.accelq.com/hc/en-us/articles/41388256350861-Fetch-Scenario-details, https://accelq-docs.github.io/external-api-doc/api/Scenario%20API/get-scenario-step-details/, checked 2026-10-19 --> The documented way to get steps with their expected results is the test result export, which covers Scenarios that have been run. In the **Test Results** grid, select a manual run and choose **Export Results**, then **Export as PDF**. Choose **Step-level detail** to include each test case's steps with their expected results, then choose **Generate**. <!-- Source: https://support.accelq.com/hc/en-us/articles/48504496031117-Exporting-Test-Results, checked 2026-10-16 -->
 
 ## Step 2: Keep Running ACCELQ Tests on <BrandName /> While You Move
 
 This step is optional. ACCELQ runs tests through the ACCELQ Agent, which can use LambdaTest (now <BrandName />) as an external provider. The browser runs remotely on <BrandName />. You continue to manage execution and results in ACCELQ. <!-- Source: https://support.accelq.com/hc/en-us/articles/6409687920525-Integration-with-LambdaTest, checked 2026-10-16 -->
 
 1. Open your ACCELQ Agent Dashboard and click **Edit Configuration** on the target agent.
-2. Select the external provider option for Web, Mobile, or both.
+2. Select **Use external provider** for Web, Mobile, or both.
 3. Enter your <BrandName /> username and access key, then save and restart the agent.
 4. In the ACCELQ **Run** modal, select the agent under **AGENT/HOST**. Then choose the browser or device.
 
-From the command line, set `web_provider_type=LAMBDATEST` with `web_provider_username` and `web_provider_password`, which takes your access key. Mobile runs use the matching `mobile_provider_` properties. <!-- Source: https://support.accelq.com/hc/en-us/articles/6409687920525-Integration-with-LambdaTest, checked 2026-10-16 -->
+From the command line, set these properties in the Agent properties file with `acc properties --agent <name> --set <property>=<value>`: `web_provider_type=LAMBDATEST`, `web_provider_username`, and `web_provider_password`, which takes your access key. Mobile runs use `mobile_provider_type`, `mobile_provider_username` and `mobile_provider_password`. You can leave out `--agent` when only one agent is installed. <!-- Source: https://support.accelq.com/hc/en-us/articles/6409687920525-Integration-with-LambdaTest, checked 2026-10-16 -->
 
 See [ACCELQ Integration](/support/docs/accelq-integration/) for the <BrandName /> side, including mobile view capture on real devices. To start an ACCELQ CI job on HyperExecute, see [ACCELQ Integration with HyperExecute](/support/docs/hyperexecute-accelq-integration/).
 
@@ -242,7 +242,7 @@ Open an imported test case and click [Automate with KaneAI](/support/docs/manual
 
 ### Start a New Test
 
-- Click **Create a Web Test**, or **Create an App Test** to upload an Android or iOS app. See [web tests](/support/docs/kane-ai-web-test/) and [app tests](/support/docs/kane-ai-app-test/).
+- Click **Author Browser Test**, or **Author App Test** to add an Android or iOS app. See [Author Your First Desktop Browser Test](/support/docs/author-your-first-desktop-browser-test/) and [Author Your First Mobile App Test](/support/docs/author-your-first-mobile-app-test/).
 - Describe each step in natural language. [Manual Interaction](/support/docs/kaneai-manual-interaction/) also records your clicks and typing as steps in desktop browsers, Android apps, and iOS apps in portrait.
 - Write each check as an instruction, because Manual Interaction does not record checks.
 
@@ -276,7 +276,7 @@ Run KaneAI tests through a [test run on HyperExecute](/support/docs/kaneai-hyper
 3. Give each test case an assignee and at least one configuration, then save the run.
 4. Click **Run on HyperExecute** and choose **Run Instances Now** or **Schedule Test Run**.
 
-When you create a [configuration](/support/docs/test-runs-configurations/) with the **KaneAI** toggle on, the available platforms are **Desktop** and **Real Device**. Native app testing on Real Devices is available only for KaneAI-generated test runs. Mobile browser testing on Real Devices and Virtual Mobile configurations are available for non-KaneAI test runs only.
+When you create a [configuration](/support/docs/test-runs-configurations/) with the **KaneAI** toggle on, the available platforms are **Desktop** and **Real Device**. Native app testing on Real Devices is available only for KaneAI-generated test runs. Virtual Mobile configurations are available for non-KaneAI test runs only.
 
 In ACCELQ, a CI tool runs a CI Job through a plugin, such as the Jenkins plugin, or through ACCELQ's trigger-job REST API. <!-- Sources: https://support.accelq.com/hc/en-us/articles/360016077871-How-do-I-create-a-job-that-I-can-invoke-from-CI-tool, https://support.accelq.com/hc/en-us/articles/360061963212-CI-Test-Execution-Jenkins, https://support.accelq.com/hc/en-us/articles/360021077312-REST-API-end-point-to-trigger-test-execution-externally, checked 2026-10-16 --> To start a KaneAI run from [CI/CD](/support/docs/kaneai-ci-cd-automation/) instead, copy the Test Run ID from the test run URL. Send it as `test_run_id` in a POST request to `https://test-manager-api.lambdatest.com/api/atm/v1/hyperexecute`. Use your <BrandName /> username and access key for Basic Authentication.
 
@@ -315,6 +315,5 @@ For websites hosted locally or behind a firewall, KaneAI supports [tunneling](/s
 - [ACCELQ Integration](/support/docs/accelq-integration/): run ACCELQ tests on <BrandName /> browsers and real devices.
 - [ACCELQ Integration with HyperExecute](/support/docs/hyperexecute-accelq-integration/): run an ACCELQ CI job on HyperExecute.
 - [Import Test Cases from CSV](/support/docs/csv-import/): every option of the CSV import.
-- [UiPath Test Cloud To KaneAI Migration](/support/docs/uipath-test-cloud-to-kaneai-migration-guide/): move from UiPath Test Cloud to KaneAI.
 - [Testim To KaneAI Migration](/support/docs/testim-to-kaneai-migration-guide/): move from Testim to KaneAI.
 - [testRigor To KaneAI Migration](/support/docs/testrigor-to-kaneai-migration-guide/): move from testRigor to KaneAI.
