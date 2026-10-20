@@ -4319,11 +4319,6 @@ module.exports = {
       },
       {
         type: "doc",
-        label: "Autosana To KaneAI Migration",
-        id: "autosana-to-kaneai-migration-guide",
-      },
-      {
-        type: "doc",
         label: "mabl To KaneAI Migration",
         id: "mabl-to-kaneai-migration-guide",
       },
@@ -4334,16 +4329,6 @@ module.exports = {
       },
       {
         type: "doc",
-        label: "Parasoft To KaneAI Migration",
-        id: "parasoft-to-kaneai-migration-guide",
-      },
-      {
-        type: "doc",
-        label: "Tester Army To KaneAI Migration",
-        id: "tester-army-to-kaneai-migration-guide",
-      },
-      {
-        type: "doc",
         label: "Testim To KaneAI Migration",
         id: "testim-to-kaneai-migration-guide",
       },
@@ -4351,11 +4336,6 @@ module.exports = {
         type: "doc",
         label: "testRigor To KaneAI Migration",
         id: "testrigor-to-kaneai-migration-guide",
-      },
-      {
-        type: "doc",
-        label: "UiPath Test Cloud To KaneAI Migration",
-        id: "uipath-test-cloud-to-kaneai-migration-guide",
       },
     ],
   ],

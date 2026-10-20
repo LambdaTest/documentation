@@ -152,7 +152,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
         "text": "https://github.com/LambdaTest/nightwatch-selenium-sample/blob/master/nightwatch.conf.js"
       }
     ],
-    "dateModified": "2026-10-16T08:00:00+05:30"
+    "dateModified": "2026-10-19T08:00:00+05:30"
   }) }}
 ></script>
 
@@ -276,7 +276,7 @@ Nightwatch.js reads its grid setup from `nightwatch.conf.js` in the cloned <Bran
 https://github.com/LambdaTest/nightwatch-selenium-sample/blob/master/nightwatch.conf.js
 ```
 
-Clone that project, run `npm i`, save your exported files in its `tests` folder, then run `npm run single`. See [Selenium With Nightwatch.js](/support/docs/nightwatch-with-selenium-running-nightwatch-automation-scripts-on-testmu-selenium-grid/) for the sample project and run commands.
+Clone that project, run `npm i`, save your exported files in its `tests` folder, then run `npm run single`. That command runs every file in `tests` on Chrome, including the sample `googleTest.js`, so delete the sample if you don't want it to run. See [Selenium With Nightwatch.js](/support/docs/nightwatch-with-selenium-running-nightwatch-automation-scripts-on-testmu-selenium-grid/) for the sample project and run commands.
 
 </TabItem>
 
@@ -288,7 +288,7 @@ Before you run a file, replace any secret names and AI prompts in it with real v
 
 Test Management exports test cases as CSV files, or as .feature files for BDD scenarios. The CSV export works for all test cases. It includes steps, preconditions, expected results and metadata. <!-- Source: https://www.browserstack.com/docs/test-management/test-cases/export-test-cases, checked 2026-10-16 -->
 
-In Test Management, open the folder, select the test cases, click the arrow next to **Export** and choose **Export as CSV**. <!-- Source: https://www.browserstack.com/docs/test-management/test-cases/export-test-cases, checked 2026-10-16 --> Choose CSV for BDD test cases too, because the Test Manager import reads `.csv` files. BrowserStack recommends .feature files for BDD test cases, so check that your CSV includes the scenarios. <!-- Source: https://www.browserstack.com/docs/test-management/test-cases/export-test-cases, checked 2026-10-16 -->
+In Test Management, open the folder, select the test cases, click the arrow next to **Export**, choose **Export as CSV**, then click **Export**. <!-- Source: https://www.browserstack.com/docs/test-management/test-cases/export-test-cases, checked 2026-10-16 --> Choose CSV for BDD test cases too, because the Test Manager import reads `.csv` files. BrowserStack recommends .feature files for BDD test cases, so check that your CSV includes the scenarios. <!-- Source: https://www.browserstack.com/docs/test-management/test-cases/export-test-cases, checked 2026-10-16 -->
 
 Then import the file:
 
@@ -351,7 +351,6 @@ See [Execute Test Runs on HyperExecute](/support/docs/kaneai-hyperexecute-test-r
 With the KaneAI toggle on, test runs offer Desktop and Real Device configurations. [Configurations in KaneAI & Test Manager](/support/docs/test-runs-configurations/) also states:
 
 - "Native app testing on Real Devices is available only for KaneAI-generated test runs."
-- "Mobile browser testing on Real Devices is available for non-KaneAI test runs only."
 - "Virtual Mobile configurations are available for non-KaneAI test runs only."
 
 To start a test run from CI, such as GitHub Actions or Jenkins, copy its Test Run ID from the test run URL. Send it in a POST request to `https://test-manager-api.lambdatest.com/api/atm/v1/hyperexecute`, with your <BrandName /> username and access key for Basic Authentication. See [Test Automation with CI/CD](/support/docs/kaneai-ci-cd-automation/).
@@ -363,8 +362,6 @@ To start a test run from CI, such as GitHub Actions or Jenkins, copy its Test Ru
 - **AI healing.** Low Code Automation's element selection with AI healing is not exported. KaneAI-generated scripts that run on HyperExecute use [Auto-Heal](/support/docs/kaneai-auto-heal/) instead. <!-- Source: https://www.browserstack.com/docs/low-code-automation/advanced-use-cases/export-tests, checked 2026-10-16 -->
 - **Visual Validation, API and Open Email steps.** BrowserStack does not currently export them. Step 4 shows how to rebuild visual checks and API calls. <!-- Source: https://www.browserstack.com/docs/low-code-automation/advanced-use-cases/export-tests, checked 2026-10-16 -->
 - **Unsupported step types.** BrowserStack's sample .side response shows one as an `echo` command reading "This step type is currently not supported". Search your files for that text. <!-- Source: https://www.browserstack.com/docs/low-code-automation/advanced-use-cases/export-tests/get-tests-api, checked 2026-10-16 -->
-- **Mobile browser tests in KaneAI test runs.** See the device scope in Step 5.
-
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
@@ -392,4 +389,3 @@ To start a test run from CI, such as GitHub Actions or Jenkins, copy its Test Ru
 - [Sauce Labs To KaneAI Migration](/support/docs/saucelabs-to-kaneai-migration-guide/): move from Sauce Labs to KaneAI.
 - [Import Test Cases from CSV](/support/docs/csv-import/): bring test cases into Test Manager.
 - [Migration from Katalon](/support/docs/one-click-migration-from-katalon/): import Katalon Studio desktop web tests into KaneAI.
-- [Parasoft To KaneAI Migration](/support/docs/parasoft-to-kaneai-migration-guide/): move from Parasoft to KaneAI.
