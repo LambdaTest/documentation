@@ -128,7 +128,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
         "text": "curl -X GET \"https://jsonplaceholder.typicode.com/users/10\" \\\n  -H \"Content-Type: application/json\" \\\n  -H \"Accept: application/json\""
       }
     ],
-    "dateModified": "2026-10-16T08:00:00+05:30"
+    "dateModified": "2026-10-19T08:00:00+05:30"
   }) }}
 ></script>
 
@@ -232,9 +232,9 @@ Open a saved test case and click **Automate with KaneAI** in its **Automate** se
 
 You can also start in KaneAI. Match each testRigor suite type to a KaneAI test:
 
-- **Desktop Web Testing:** create a [web test](/support/docs/kane-ai-web-test/).
-- **Mobile Web Testing:** create a [mobile browser test](/support/docs/author-your-first-mobile-browser-test/). KaneAI test runs do not run mobile browsers on Real Devices (see Step 5). Run the test with **Execute test case** after you save it.
-- **Native and Hybrid Mobile:** for a native Android or iOS app, create an [app test](/support/docs/kane-ai-app-test/) and upload the app.
+- **Desktop Web Testing:** create a [desktop browser test](/support/docs/author-your-first-desktop-browser-test/).
+- **Mobile Web Testing:** create a [mobile browser test](/support/docs/author-your-first-mobile-browser-test/).
+- **Native and Hybrid Mobile:** for a native Android or iOS app, create an [app test](/support/docs/author-your-first-mobile-app-test/) and add the app.
 
 <!-- Source: https://testrigor.com/how-to-articles/how-to-do-api-testing-using-testrigor/, checked 2026-10-16 -->
 
@@ -304,7 +304,6 @@ See [Execute Test Runs on HyperExecute](/support/docs/kaneai-hyperexecute-test-r
 With the **KaneAI** toggle on, test run configurations offer **Desktop** and **Real Device**. As [Configurations](/support/docs/test-runs-configurations/) states:
 
 - "Native app testing on Real Devices is available only for KaneAI-generated test runs."
-- "Mobile browser testing on Real Devices is available for non-KaneAI test runs only."
 - "Virtual Mobile configurations are available for non-KaneAI test runs only."
 
 To trigger a saved run from CI/CD tools such as GitHub Actions or Jenkins, send a POST request with its test run ID to `https://test-manager-api.lambdatest.com/api/atm/v1/hyperexecute`. Copy the ID from the test run's URL, and authenticate with your <BrandName /> username and access key. See [Test Automation with CI/CD](/support/docs/kaneai-ci-cd-automation/).
@@ -317,9 +316,7 @@ In place of testRigor's localhost tunnel, KaneAI supports tunneling for websites
 - **Run history and reports.** testRigor exports executions as `.docx` or `.pdf` files and run summaries as CSV. These stay as files. <!-- Source: https://testrigor.com/blog/release-notes-multiple-db-connections-export-executions-scroll-wheel-video-validation-auto-apply-rules-rerun-confirmation-popup/, checked 2026-10-16 --> <!-- Source: https://support.testrigor.com/support/solutions/articles/154000204617-august-23-2024-release-notes-download-test-run-summary-dynamic-hidden-variables-, checked 2026-10-16 -->
 - **Version history.** testRigor's Version History for each test case stays in testRigor. <!-- Source: https://testrigor.com/releases/release-notes-version-control-rerun-failed-team-folders/, checked 2026-10-16 -->
 - **Native Windows apps and mainframe tests.** testRigor covers native Windows applications in paid versions, and mainframe apps. <!-- Source: https://testrigor.com/, checked 2026-10-16 --> [Code Generation](/support/docs/kane-ai-automation-code-generation/) says KaneAI "is available for desktop web applications as well as native mobile applications currently". These tests have no KaneAI target.
-- **Email, SMS and phone calls.** testRigor runs these through its own commands and a Twilio integration. <!-- Source: https://testrigor.com/, checked 2026-10-16 --> This guide does not map them to KaneAI. [TOTP variables](/support/docs/kaneai-totp/) generate authenticator-app codes from a shared secret key.
-- **Mobile browser runs on real devices.** Per [Configurations](/support/docs/test-runs-configurations/), "Mobile browser testing on Real Devices is available for non-KaneAI test runs only."
-- **Labels.** testRigor labels do not transfer. <!-- Source: https://testrigor.com/test-automation-blueprint/, checked 2026-10-16 --> Add tags when you save each KaneAI test.
+- **Email, SMS and phone calls.** testRigor runs these through its own commands and a Twilio integration. <!-- Source: https://testrigor.com/, checked 2026-10-16 --> This guide does not map them to KaneAI. [TOTP variables](/support/docs/kaneai-totp/) generate authenticator-app codes from a shared secret key.- **Labels.** testRigor labels do not transfer. <!-- Source: https://testrigor.com/test-automation-blueprint/, checked 2026-10-16 --> Add tags when you save each KaneAI test.
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
@@ -348,5 +345,4 @@ In place of testRigor's localhost tunnel, KaneAI supports tunneling for websites
 - [Testim To KaneAI Migration](/support/docs/testim-to-kaneai-migration-guide/): the matching guide for Testim tests.
 - [mabl To KaneAI Migration](/support/docs/mabl-to-kaneai-migration-guide/): the matching guide for mabl tests.
 - [Momentic To KaneAI Migration](/support/docs/momentic-to-kaneai-migration-guide/): the matching guide for Momentic tests.
-- [Autosana To KaneAI Migration](/support/docs/autosana-to-kaneai-migration-guide/): the matching guide for Autosana flows.
 - [ACCELQ To KaneAI Migration](/support/docs/accelq-to-kaneai-migration-guide/): the matching guide for ACCELQ tests.

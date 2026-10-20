@@ -134,7 +134,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
         "text": "testim --label \"<YOUR LABEL>\" --token \"<YOUR ACCESS TOKEN>\" --project \"<YOUR PROJECT ID>\" --grid \"<Your grid name>\" --report-file test-results/testim-tests-report.xml"
       }
     ],
-    "dateModified": "2026-10-16T08:00:00+05:30"
+    "dateModified": "2026-10-19T08:00:00+05:30"
   }) }}
 ></script>
 
@@ -169,7 +169,7 @@ This guide covers your Testim migration to KaneAI: what Testim can export, where
 
 - **A <BrandName /> account.** Create one on the <a href="https://www.testmuai.com/register/" onClick={CookieTrackingSignup}><BrandName /> signup page</a>. Copy your Username and Access Key from Account Settings > [Password & Security](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/security/username-accesskey).
 - **KaneAI access.** **Automate with KaneAI** and **Create and Automate** both require it.
-- **A Testim professional plan.** You need it for the code export, the CSV export, third-party grids or the test management integrations. Testim marks each of these as a pro feature. <!-- Source: https://www.testim.io/pricing/ ("Professional plan users can export tests to Puppeteer, Selenium, and Playwright"), https://docs.tricentis.com/testim/content/results/export-test-list-and-test-results.htm, https://docs.tricentis.com/testim/content/integrations/grid-management/index.htm and https://docs.tricentis.com/testim/content/integrations/test-management-integrations/index.htm, checked 2026-10-16 -->
+- **A Testim professional plan.** You need it for the code export, the CSV export, third-party grids or the test management integrations. Testim's docs mark the CSV export, grids and test management integrations as pro features, and its pricing page says Professional plan users can export tests to Playwright. <!-- Source: https://www.testim.io/pricing/ ("Professional plan users can export tests to Puppeteer, Selenium, and Playwright"), https://docs.tricentis.com/testim/content/results/export-test-list-and-test-results.htm, https://docs.tricentis.com/testim/content/integrations/grid-management/index.htm and https://docs.tricentis.com/testim/content/integrations/test-management-integrations/index.htm, checked 2026-10-16 -->
 - **Node.js.** You need it only if you run the Testim CLI. <!-- Source: https://docs.tricentis.com/testim/content/running-tests/the-command-line-cli/index.htm, checked 2026-10-16 -->
 
 ## Step 1: Export Your Tests From Testim
@@ -266,7 +266,7 @@ KaneAI does not run Testim steps, so you re-create each flow in a KaneAI session
 
 - **From a test case.** Open a saved test case and click **Automate with KaneAI** in its **Automate** section. A KaneAI session opens with the test case's steps filled in, where you author and run the test. [This action](/support/docs/manual-test-case-creation/#automate-with-kaneai) works on one test case at a time, and the test case must have steps or scenarios.
 - **From the generator.** **Create and Automate** saves the generated test cases you select and sends them to KaneAI for automated authoring. It is an experimental feature, so review the steps afterwards.
-- **From scratch.** Start a [web test](/support/docs/kane-ai-web-test/) or an [app test](/support/docs/kane-ai-app-test/) and write each step in natural language. [Manual Interaction](/support/docs/kaneai-manual-interaction/) also records your clicks, typing, scrolls and navigation as steps. It cannot record hover actions or checks, and it does not capture mobile browsers. Write those as instructions.
+- **From scratch.** Start a [browser test](/support/docs/author-your-first-desktop-browser-test/) or an [app test](/support/docs/author-your-first-mobile-app-test/) and write each step in natural language. [Manual Interaction](/support/docs/kaneai-manual-interaction/) also records your clicks, typing, scrolls and navigation as steps. It cannot record hover actions or checks, and it does not capture mobile browsers. Write those as instructions.
 
 Re-create Testim features with their KaneAI counterparts:
 
@@ -294,7 +294,6 @@ See [Execute Test Runs on HyperExecute](/support/docs/kaneai-hyperexecute-test-r
 With the **KaneAI** toggle on, a configuration can use Desktop or Real Device. [Configurations](/support/docs/test-runs-configurations/) set these limits:
 
 - Native app testing on Real Devices is available only for KaneAI-generated test runs.
-- Mobile browser testing on Real Devices is available for non-KaneAI test runs only.
 - Virtual Mobile configurations are available for non-KaneAI test runs only.
 
 To run from CI tools such as GitHub Actions or Jenkins, copy the Test Run ID from the test run URL. Send it in a POST request to `https://test-manager-api.lambdatest.com/api/atm/v1/hyperexecute`, with your <BrandName /> username and access key for Basic Authentication. The call starts HyperExecute jobs. See [Test Automation with CI/CD](/support/docs/kaneai-ci-cd-automation/).
@@ -303,10 +302,10 @@ To run from CI tools such as GitHub Actions or Jenkins, copy the Test Run ID fro
 
 - **The tests themselves.** KaneAI does not import or convert Testim tests. KaneAI imports tests only from Katalon, for desktop web tests ([Migration from Katalon](/support/docs/one-click-migration-from-katalon/)).
 - **Unsupported steps.** Testim says exported Playwright code may need manual adjustments and that some steps may not be supported. <!-- Source: https://docs.tricentis.com/testim/content/administration/exporting-a-testim-test-as-code-for-playwright.htm, checked 2026-10-16 -->
-- **Run history.** Results, screenshots and logs stay in Testim. CSV import in Test Manager creates or updates test cases, not runs.
+- **Run history.** Results, screenshots and logs stay in Testim. CSV import in Test Manager creates or updates test cases, not runs. Testim keeps your tests for up to 30 days after you cancel, so export what you need first. <!-- Source: https://www.testim.io/pricing/ ("Your tests will remain in Testim for up to 30 days after you cancel."), checked 2026-10-19 -->
 - **Visual baselines.** A KaneAI Visual Comparison step captures a new baseline the first time the test runs.
 - **CLI steps.** Testim CLI actions run Node.js scripts in your CLI environment. <!-- Source: https://docs.tricentis.com/testim/content/advanced-editing/validations/add-cli-validations-and-actions.htm, checked 2026-10-16 --> KaneAI runs JavaScript in the current testing environment, so re-create those checks with API, database or JavaScript steps.
-- **Some mobile targets.** KaneAI test runs do not cover mobile browsers on real devices, or emulators and simulators.
+- **Emulators and simulators.** Virtual Mobile configurations are available for non-KaneAI test runs only, so KaneAI test runs use real devices.
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
@@ -335,5 +334,4 @@ To run from CI tools such as GitHub Actions or Jenkins, copy the Test Run ID fro
 - [One Click Migration from TestRail](/support/docs/one-click-migration-from-testrail/): import TestRail projects.
 - [mabl To KaneAI Migration](/support/docs/mabl-to-kaneai-migration-guide/): move from mabl.
 - [testRigor To KaneAI Migration](/support/docs/testrigor-to-kaneai-migration-guide/): move from testRigor.
-- [UiPath Test Cloud To KaneAI Migration](/support/docs/uipath-test-cloud-to-kaneai-migration-guide/): move from UiPath Test Cloud.
 - [ACCELQ To KaneAI Migration](/support/docs/accelq-to-kaneai-migration-guide/): move from ACCELQ.
