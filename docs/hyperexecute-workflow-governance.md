@@ -172,9 +172,7 @@ All three toggles can be set to **Disabled** independently, so you can opt out o
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/features/workflow-governance/workflow-governance-disabled-state.png').default} alt="Workflow Governance panel with all three guardrails toggled Disabled" className="doc_img"/>
 
-The page footer records the **last modified by** user and timestamp so you can trace who adjusted a guardrail and when:
-
-> Last modified by *onpremezztt* on *Oct 19, 2026*.
+The page footer records the user who last changed the settings and the timestamp, so you can trace who adjusted a guardrail and when.
 
 ## What creators see
 
