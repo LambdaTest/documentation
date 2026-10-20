@@ -277,7 +277,7 @@ TestMu AI offers multiple product tiers designed for different organizational ne
 - Org-level secrets management
 - Priority support SLA
 
-**For pricing details**: [lambdatest.com/pricing](https://www.testmuai.com/pricing/)
+**For pricing details**: [testmuai.com/pricing](https://www.testmuai.com/pricing/)
 
 ## Need More Information?
 

@@ -12,6 +12,7 @@ The advanced features are accessible from the **Advanced Configurations** sectio
 - **Dedicated Proxy**: Access network-restricted resources through a whitelisted IP
 - **Geolocation**: Simulate scans from different geographic locations
 - **Tunnel**: Scan locally hosted web pages and applications
+- **Cookies**: Set cookies, such as a consent cookie, before each page is captured (Visual UI scans)
 
 ## Authentication
 
@@ -287,6 +288,51 @@ Replace:
 - **Timeout Errors**: Check your local server is running and accessible
 - **Firewall Issues**: Ensure your firewall allows the tunnel binary to make outbound connections
 
+## Cookies
+
+Many sites show a cookie consent banner on the first visit. Without cookies, every Visual UI screenshot captures that banner instead of the page behind it. The **Cookies** option sets the cookies you give it before each page is captured, so the banner does not appear.
+
+You can also use it for any other cookie a page reads on load, such as a region or feature flag cookie.
+
+Cookies are available for **Visual UI** scans. Accessibility scans do not show this option.
+
+### Add Cookies to a Scan
+
+1. In the **Add URLs** step of a new scan, or the **Add URLs** section of the [scan editor](/support/docs/web-scanner-edit-clone-scans/), go to **Advanced Configurations**.
+2. Next to **Cookies**, click **Add Cookies**.
+
+3. In **Domain Name**, enter the domain the cookies belong to, without `www.`. For example, enter `example.com`, not `www.example.com`. If you include `www.`, the field shows "Please remove www. before entering the domain".
+4. In **Add Cookies**, enter the cookies as `name=value` pairs separated by `;`. For example:
+
+```text
+cookie_consent=accepted; analytics_opt_in=false
+```
+
+   The cookies apply to all pages in the domain.
+
+5. Optionally, check that the cookies work before you save the scan. See [Verify Cookies](#verify-cookies).
+6. Continue with the wizard, or click **Save changes** in the scan editor.
+
+**Domain Name** and **Add Cookies** are both required once the Cookies section is open. To stop using cookies, click **Remove**.
+
+### Verify Cookies
+
+**Check Cookies against URL** loads one page with your cookies applied, so you can confirm they remove the banner before the scan runs.
+
+1. Enter the URL of a page that normally shows the banner, for example `https://example.com/pricing`.
+2. Click **Verify Cookies**. The check takes about 10 to 20 seconds.
+3. When it shows "Check finished. Page captured with your cookies.", look at **Page Snapshot with cookies applied**. If the banner is gone, the cookies are working. If it is still there, check the cookie name and value your site sets when a visitor accepts the banner.
+
+The URL you enter here is used only for this check. It is not added to the scan.
+
+### Finding Your Consent Cookie
+
+To find the cookie your site sets when a visitor accepts the banner:
+
+1. Open your site in a private browser window and accept the cookie banner.
+2. Open the browser developer tools and go to **Application** > **Cookies** (Chrome or Edge) or **Storage** > **Cookies** (Firefox).
+3. Note the name and value of the cookie that appeared when you accepted the banner. Consent platforms often use names such as `OptanonAlertBoxClosed` or `CookieConsent`.
+
 ## Combining Advanced Features
 
 You can combine multiple advanced features in a single scan:
@@ -304,3 +350,4 @@ You can combine multiple advanced features in a single scan:
 - [Testing Locally Hosted Pages](/support/docs/testing-locally-hosted-pages)
 - [Dedicated Proxy Documentation](/support/docs/dedicated-proxy)
 - [HTTP Basic Authentication](/support/docs/http-basic-authentication)
+- [Edit and Clone Scans](/support/docs/web-scanner-edit-clone-scans)

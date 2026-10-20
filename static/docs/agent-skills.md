@@ -10,8 +10,6 @@ Skills work with Claude Code, GitHub Copilot, Cursor, Gemini CLI, and any assist
 
 ## How to Install a Skill
 
-Testing an AI agent with **Rook**? Its skill is distributed from the [public Rook repository](https://github.com/LambdaTest/rook/tree/main/skill-installer/skills), separately from the framework skills below. Follow the [Rook coding-agent setup guides](/support/docs/rook-coding-agents/) for Claude Code, Codex, Gemini CLI, GitHub Copilot CLI, OpenCode, Cursor CLI, Antigravity CLI, VS Code, Windsurf, or Antigravity IDE. The Rook skill installer is `npx @testmuai/rook-skill@latest` for Claude Code, Codex, and Gemini CLI; the other guides use manual project installation. Install Rook CLI separately.
-
 Use the `agentskillsforall` installer to add a skill straight from the repository. No manual cloning is required.
 
 Add skills by name. Run the installer once per skill you want:
@@ -30,7 +28,10 @@ npx agentskillsforall list https://github.com/LambdaTest/agent-skills.git
 
 Once installed, ask your assistant to write and run tests. It picks up the matching skill automatically.
 
-## Core Skills by Framework and Platform
+**Installing the Rook skill**
+Rook's skill ships from the [public Rook repository](https://github.com/LambdaTest/rook/tree/main/skill-installer/skills), separately from the framework skills above, so `agentskillsforall` does not install it. Follow the [Rook coding-agent setup guides](/support/docs/rook-coding-agents/) for Claude Code, Codex, Gemini CLI, GitHub Copilot CLI, OpenCode, Cursor CLI, Antigravity CLI, VS Code, Windsurf, or Antigravity IDE. The Rook skill installer is `npx @testmuai/rook-skill@latest` for Claude Code, Codex, and Gemini CLI; the other guides use manual project installation. Install Rook CLI separately.
+
+## Core Skills by Frameworks and Products
 
 Pick the skill for the framework you already test in. Each card opens that skill's source on GitHub. Web frameworks run on the TestMu AI browser grid, and app frameworks target real Android and iOS devices.
 
@@ -62,7 +63,7 @@ App Automation
     Flutter↗
     Widget and integration tests for Flutter apps.
 
-Cloud, Visual &amp; Platform
+Products
 
     HyperExecute↗
     Shard test suites across the HyperExecute cloud.
@@ -73,11 +74,17 @@ Cloud, Visual &amp; Platform
     Browser Cloud↗
     A real cloud browser for any AI agent.
 
+    Accessibility↗
+    Wire accessibility scans into your test framework.
+
     Kane CLI↗
     Natural-language browser automation in agent mode.
 
+    Rook↗
+    Evidence-backed assurance checks for your AI agents.
+
 ## Explore the Full Skill Catalog
 
-The 12 skills above are the most common starting points. The repository ships 70+ skills across eight testing categories.
+The skills above are the most common starting points. The framework skills repository ships 70+ skills across eight testing categories.
 
 Beyond web and mobile, it covers BDD (Cucumber, Behave, SpecFlow), unit testing (Jest, Pytest, JUnit 5, TestNG), and API testing (Postman, Newman, OpenAPI). List everything with `npx agentskillsforall list`, or browse the [full skill catalog on GitHub](https://github.com/LambdaTest/agent-skills).
