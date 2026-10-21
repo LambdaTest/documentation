@@ -112,24 +112,24 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 ***
 **Step 1:** Login to your <BrandName /> account. Go to **"Real Time Test"** from the left navigation menu.
 
-<img loading="lazy" src={require('../assets/images/developer-tools/dev-tools-real-time-1.webp').default} alt="Image" width="1365" height="654" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/developer-tools/dev-tools-real-time-1.png').default} alt="Image" width="1365" height="654" className="doc_img"/>
 
 **Step 2:** Select the test configuration of your choice. You can select from a wide variety of desktop browsers & their various versions to perform a test session. You may also choose from multiple operating system & screen resolutions for evaluating the RWD(Responsive Web Design) of the website when rendered across devices of different screen sizes.
 
 
-<img loading="lazy" src={require('../assets/images/developer-tools/dev-tools-real-time-2.webp').default} alt="Image" width="1365" height="653" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/developer-tools/dev-tools-real-time-2.png').default} alt="Image" width="1365" height="653" className="doc_img"/>
 
 **Step 3:** Provide the URL to test and hit `Start` to launch your desired VM.
 
-<img loading="lazy" src={require('../assets/images/developer-tools/dev-tools-real-time-3.webp').default} alt="Image" width="1365" height="652" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/developer-tools/dev-tools-real-time-3.png').default} alt="Image" width="1365" height="652" className="doc_img"/>
 
 **Step 4:** Once the desired VM is launched and operable, right-click on the webpage that gets loaded inside the VM and click on "**Inspect Element**".
 
-<img loading="lazy" src={require('../assets/images/developer-tools/dev-tool-real-time-4.webp').default} alt="Image" width="1365" height="614" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/developer-tools/dev-tool-real-time-4.png').default} alt="Image" width="1365" height="614" className="doc_img"/>
 
 **Step 5:** As you click on "Inspect Element", the developer tools would pop up at the bottom of the virtual machine.
 
-<img loading="lazy" src={require('../assets/images/developer-tools/dev-tools-5.webp').default} alt="Image" width="1365" height="617" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/developer-tools/dev-tools-5.png').default} alt="Image" width="1365" height="617" className="doc_img"/>
 
 ## How To Launch Developer Tools On Mobile Browsers?
 ***
@@ -137,23 +137,20 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 **Step 1:** Login to your <BrandName /> account. Go to **"Real Time Test"** from the left navigation menu.
 
-<img loading="lazy" src={require('../assets/images/developer-tools/dev-tools-real-time-5.webp').default} alt="Image" width="1365" height="657" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/developer-tools/dev-tools-real-time-5.png').default} alt="Image" width="1365" height="657" className="doc_img"/>
 
 **Step 2:** By default, you will be viewing the desktop machines and browsers. Click on the **mobile icon** to view mobile browsers and devices.
 
-<img loading="lazy" src={require('../assets/images/developer-tools/dev-tools-real-time-6.webp').default} alt="Image" width="1365" height="657" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/developer-tools/dev-tools-real-time-6.png').default} alt="Image" width="1365" height="657" className="doc_img"/>
 
 **Step 3:** Provide the URL to test and select the device and configuration you want to test upon from our collection of android and iOS devices. Hit `Start` to launch your desired VM.
 
-<img loading="lazy" src={require('../assets/images/developer-tools/dev-tools-real-time-7.webp').default} alt="Image" width="1365" height="651" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/developer-tools/dev-tools-real-time-7.png').default} alt="Image" width="1365" height="651" className="doc_img"/>
 
-**Step 4:** Once the desired VM is launched and operable, you will notice controller buttons on the left-side of the screen. Click the button with tools icon to open developer tools.
+**Step 4:** Once the desired VM is launched and operable, you will notice Chrome DevTools buttons on the right side of the screen. Click the button with the DevTools icon to open Developer Tools. As you click on the DevTools icon, the Developer Tools will be launched for the webpage you are on, inside the virtual machine.
 
-<img loading="lazy" src={require('../assets/images/developer-tools/dev-tools-real-time-8.webp').default} alt="Image" width="1359" height="651" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/developer-tools/dev-tools-real-time-8.png').default} alt="Image" width="1359" height="651" className="doc_img"/>
 
-**Step 5:** As you click on the **tools icon**, the developer tools would be launched for the webpage you are on, inside the virtual machine.
-
-<img loading="lazy" src={require('../assets/images/developer-tools/dev-tools-real-time-9.webp').default} alt="Image" width="1365" height="647" className="doc_img"/>
 
 That was all from us about our native browser developer tools. If you still have any questions for us, please feel free to let us know. Our experts are always available on <span onClick={() => window.openLTChatWidget()}> chat</span> to help you out with any roadblock regarding our product. Happy debugging!
 
