@@ -78,11 +78,11 @@ Both inspectors are available in the same panel, and you can switch between them
 
 **Step 4:** Click **Start Appium Inspector**.
 
-<img loading="lazy" src={require('../assets/images/real-device-app-testing/appium-inspector/start-appium-inspector.webp').default} alt="Appium Inspector tab with the Start Appium Inspector button in a real device app testing session" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/real-device-app-testing/appium-inspector/start-appium-inspector.png').default} alt="Appium Inspector tab with the Start Appium Inspector button in a real device app testing session" className="doc_img"/>
 
 **Step 5:** Appium Inspector loads in the same panel and shows a screenshot of the current screen with the app source tree next to it. Click any element on the screenshot or in the tree to inspect it.
 
-<img loading="lazy" src={require('../assets/images/real-device-app-testing/appium-inspector/appium-inspector-session.webp').default} alt="Appium Inspector showing the app screenshot, App Source tree, and Selected Element locators for a button" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/real-device-app-testing/appium-inspector/appium-inspector-session.png').default} alt="Appium Inspector showing the app screenshot, App Source tree, and Selected Element locators for a button" className="doc_img"/>
 
 ## Appium Inspector interface
 
