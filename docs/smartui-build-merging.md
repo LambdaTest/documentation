@@ -187,6 +187,7 @@ npx smartui merge build --source build-123 --target build-456
 ```bash
 # 1. Merge staging build to production
 npx smartui merge build --source staging-build-123 --target prod-build-456
+```
 
 ### 2. Feature Build Strategy
 
@@ -195,6 +196,7 @@ npx smartui merge build --source staging-build-123 --target prod-build-456
 ```bash
 # 1. Merge feature build into main build
 npx smartui merge build --source feature-build-789 --target main-build-101
+```
 
 ### 3. Hotfix Build Strategy
 

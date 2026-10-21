@@ -8,6 +8,7 @@
     "start": "docusaurus start",
     "prebuild": "node scripts/build-api-data.js && node scripts/generate-api-pages.js && node scripts/generate-static-md.js && node scripts/generate-llms-txt.js && node scripts/generate-skill-index.js",
     "generate-static-md": "node scripts/generate-static-md.js",
+    "check-static-md-fences": "node scripts/check-static-md-fences.js",
     "generate-llms-txt": "node scripts/generate-llms-txt.js",
     "generate-skill-index": "node scripts/generate-skill-index.js",
     "sitemap-exclusions": "node scripts/sitemap-exclusions.js",
