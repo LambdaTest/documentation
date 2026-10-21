@@ -106,11 +106,11 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 This is the deep-dive reference for how HyperExecute decides whether a job can be rerun, how much of it can be rerun, and what warnings the Rerun dialog shows. For the step-by-step walkthrough on using the Rerun button, see [Rerun Failed Tests on HyperExecute](/support/docs/hyperexecute-rerun-failed-tests/).
 :::
 
-Rerun has three independent verdicts, not one. The button hides, the scope narrows, or the dialog warns — and the same decision is made for both the preview and the trigger, so the dialog can never offer a scope that the trigger would then reject. This page documents every rule the Rerun dialog can emit.
+Rerun has three independent verdicts, not one. The button hides, the scope narrows, or the dialog warns - and the same decision is made for both the preview and the trigger, so the dialog can never offer a scope that the trigger would then reject. This page documents every rule the Rerun dialog can emit.
 
 ## The three gates
 
-One decision answers both the preview and the trigger, and it has three independent outcomes that fail differently — which is why "rerun is not supported" is never one question.
+One decision answers both the preview and the trigger, and it has three independent outcomes that fail differently - which is why "rerun is not supported" is never one question.
 
 | Gate | Outcome | What the user sees |
 | :---- | :---- | :---- |
@@ -129,17 +129,17 @@ Two conditions hide the **Re-Run** button in the browser without ever asking the
 | Rerun is not enabled for your organization | Button hidden. Rerun is opt-in per organization; contact your admin or [support](mailto:support@testmuai.com) to turn it on. |
 | The job has not ended yet | Button hidden. While the job is running, queued, initiated, in-progress or just created, Rerun is not offered. Wait for the job to finish. |
 
-## Gate 1 — when Rerun is unavailable
+## Gate 1 - when Rerun is unavailable
 
 Each row below is a property of the job itself. Any one of them is enough on its own; where several apply, the first match in this order wins.
 
 | Condition | What it means / what to do |
 | :---- | :---- |
 | Still running | Wait for the job to finish, then try again. |
-| Past retention | Jobs are retained for 60 days. Once a job is older than that, rerun is no longer available — start a fresh job from your CLI or pipeline. |
+| Past retention | Jobs are retained for 60 days. Once a job is older than that, rerun is no longer available - start a fresh job from your CLI or pipeline. |
 | Configuration no longer stored | The job's stored configuration has been removed. Start a fresh job. |
 | YAML version other than 0.1 | Rerun supports version 0.1 jobs only. |
-| Mobile job | Mobile jobs (Appium, Espresso, XCUITest) cannot be rerun from the dashboard — trigger the test again from your mobile flow. |
+| Mobile job | Mobile jobs (Appium, Espresso, XCUITest) cannot be rerun from the dashboard - trigger the test again from your mobile flow. |
 | Triggered by KaneAI | Rerun it from KaneAI. |
 | No linked project | The job has no project to resolve a Git credential against, so its code cannot be fetched. Link the project (or run from a project that is linked) and run the job again. |
 | Project deleted | A rerun belongs to the original project; if that project is gone, start the suite in a current one. |
@@ -156,11 +156,11 @@ Each row below is a property of the job itself. Any one of them is enough on its
 - **Mobile** means Appium, Espresso and XCUITest flows (test type `ios/xcui`, `android/espresso`, `appium`, `android/appium` or `ios/appium`, case-insensitive).
 - **KaneAI** covers any trigger whose source identifies as KaneAI, including scheduled KaneAI runs.
 - **Retention** is 60 days. The window is measured from the job's recorded expiry when one exists, otherwise from its creation date.
-- **No linked project** is about the credential, not the repository. A project that has no repo linked is not refused — a user- or organization-level `git_token` can still fetch the code — and the git pre-flight owns that question.
+- **No linked project** is about the credential, not the repository. A project that has no repo linked is not refused - a user- or organization-level `git_token` can still fetch the code - and the git pre-flight owns that question.
 - **Hybrid reruns off** is an org-level setting your admin can toggle. It is not a per-job property.
 - **On-prem** deployments skip the tunnel check altogether (both the refusal and the advice), because the on-prem environment handles its own networking.
 
-## Gate 2 — when only "All Scenarios" can be rerun
+## Gate 2 - when only "All Scenarios" can be rerun
 
 The job is rerunnable; only the failed subset is unavailable. The dialog disables **Failed & Non Executed Scenarios**, falls back to **All Scenarios**, and prints the reason beside the disabled option.
 
@@ -201,7 +201,7 @@ A hybrid job whose non-OS matrix keys cannot each be collapsed to a single value
 
 A single-task job with no matrix is never refused here. The failed set is the job, so both options are offered and show the same count.
 
-## Gate 3 — when the dialog shows a warning
+## Gate 3 - when the dialog shows a warning
 
 Advice travels beside an offered scope, never instead of it. Where several pieces apply, they are joined with `;` onto the one line the dialog has.
 
@@ -212,15 +212,15 @@ Advice travels beside an offered scope, never instead of it. Where several piece
 
 ## What counts as a failure
 
-A scenario is **settled** — and so excluded from the subset — only on these five statuses:
+A scenario is **settled** - and so excluded from the subset - only on these five statuses:
 
 | Settled | Everything else |
 | :---- | :---- |
-| `completed`, `passed`, `skipped`, `ignored`, `muted` | `failed`, `aborted`, `canceled`, `timed out`, `still in progress` — and **no outcome row at all** — all rerun |
+| `completed`, `passed`, `skipped`, `ignored`, `muted` | `failed`, `aborted`, `canceled`, `timed out`, `still in progress` - and **no outcome row at all** - all rerun |
 
 Note `muted` is **settled** here. That is Rerun's own answer and is deliberately not borrowed from the runner's "positive status" list, which omits it. Three cases are worth spelling out:
 
-- **Retries.** A scenario that failed and later passed on a retry is settled on the retry's row and stays out of the subset. The job itself is still admissible for rerun, however — the fact that the scenario ever failed is enough.
+- **Retries.** A scenario that failed and later passed on a retry is settled on the retry's row and stays out of the subset. The job itself is still admissible for rerun, however - the fact that the scenario ever failed is enough.
 - **Fail fast.** When the trip is recorded, the aborted scenario counts as the failure that caused it. Without that, a job that stopped on its first failed test would have no failed unit at all and could never be rerun.
 - **Dependent groups.** Selection widens to whole discovery groups: ordered and dependent scenarios rerun together. A group is scoped to the configuration it ran under, so on a hybrid job one configuration failing does not drag in its siblings from another.
 
@@ -243,7 +243,7 @@ If fail fast stopped a 10-scenario job after the first failure, nothing else rea
 
 ## Concurrency
 
-The dialog pre-fills the concurrency the job actually used — the number of work groups the job ran as, not the raw task-row count. Rescheduled rows, as well as pre, post and discovery tasks, are not counted. On every shape but auto-split the job's own YAML `concurrency` describes something else entirely: a matrix job, for example, creates a task per configuration whatever the number said.
+The dialog pre-fills the concurrency the job actually used - the number of work groups the job ran as, not the raw task-row count. Rescheduled rows, as well as pre, post and discovery tasks, are not counted. On every shape but auto-split the job's own YAML `concurrency` describes something else entirely: a matrix job, for example, creates a task per configuration whatever the number said.
 
 The ceiling is your organization's concurrency limit, when one is configured, because a job shaped above it would be refused at dispatch. Without an org limit, the dialog keeps to the ceiling your licenses allow.
 
@@ -263,7 +263,7 @@ If you hit this, run the job again from the CLI, or switch the job to a named tu
 
 ## Things that are not limits
 
-- **A project without a linked repo.** Not refused — the credential falls back to a user- or organization-level `git_token`.
+- **A project without a linked repo.** Not refused - the credential falls back to a user- or organization-level `git_token`.
 - **Reruns of reruns.** An ordinary job; the lineage label points at its own parent, so chains stay traceable.
 - **Policies.** Applied fresh to the new job rather than carried over.
 - **The 500-combination advisory.** Nothing enforces it; it is a cost warning in the dialog, not a limit.
@@ -271,9 +271,9 @@ If you hit this, run the job again from the CLI, or switch the job to a named tu
 
 ## Related
 
-- [Rerun Failed Tests on HyperExecute](/support/docs/hyperexecute-rerun-failed-tests/) — the step-by-step user walkthrough.
-- [Workflows in HyperExecute](/support/docs/hyperexecute-workflows/) — scheduling jobs on a cadence.
-- [Global Policies in HyperExecute](/support/docs/hyperexecute-global-policies/) — org-level rules applied to each job.
+- [Rerun Failed Tests on HyperExecute](/support/docs/hyperexecute-rerun-failed-tests/) - the step-by-step user walkthrough.
+- [Workflows in HyperExecute](/support/docs/hyperexecute-workflows/) - scheduling jobs on a cadence.
+- [Global Policies in HyperExecute](/support/docs/hyperexecute-global-policies/) - org-level rules applied to each job.
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
