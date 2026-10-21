@@ -193,9 +193,9 @@ There is nothing to start after that. Open Claude Code in a project and the band
 Three rows above the prompt, always there. The first row always ends with **[ Open ]**, which opens the pane. The third row is always assurance coverage.
 
 ```text
- ▄▀▄▄▀▄   running  checkout_guest 44s [ Open ]
-▀▀▀▀▀▀▀▀ ⠹ Fill the shipping address
-▀▀▀▀▀▀▀▀ assurance ━━━━━━━━──────── 47% proven · 4 use cases
+(mascot)  running  checkout_guest 44s [ Open ]
+          ⠹ Fill the shipping address
+          assurance ━━━━━━━━──────── 47% proven · 4 use cases
 ```
 
 | What is happening | Row 1 | Row 2 |
@@ -227,19 +227,19 @@ While it runs, the card is one line:
 When it ends, the card shows the result in three rows:
 
 ```text
-╭────────────────────────────────────────────────────────────────────────────╮
-│ (mascot)  kane · login_test.md                ✓ passed · 41s · 12.4 credits │
-│           7 steps                                                          │
-│           [ View evidence ]                         ⛨ Verified with KaneAI │
-╰────────────────────────────────────────────────────────────────────────────╯
+╭──────────────────────────────────────────────────────────────────────────╮
+│ (mascot)  kane · login_test.md             ✓ passed · 41s · 12.4 credits │
+│           7 steps                                                        │
+│           [ View evidence ]                       ⛨ Verified with KaneAI │
+╰──────────────────────────────────────────────────────────────────────────╯
 ```
 
 ```text
-╭─────────────────────────────────────────────────────────────────────────────╮
-│ (mascot)  kane · checkout_guest_test.md     ✗ failed · 1m 06s · 31.2 credits │
-│           on Fill the shipping address · Postcode field rejects valid input │
-│           [ View steps ] [ View evidence ]           ⛨ Verified with KaneAI │
-╰─────────────────────────────────────────────────────────────────────────────╯
+╭──────────────────────────────────────────────────────────────────────────╮
+│ (mascot)  kane · checkout_guest_test.md ✗ failed · 1m 06s · 31.2 credits │
+│           on Fill the shipping address · Postcode field rejects valid i… │
+│           [ View steps ] [ View evidence ]        ⛨ Verified with KaneAI │
+╰──────────────────────────────────────────────────────────────────────────╯
 ```
 
 - The border is green for a pass and red for a failure.
