@@ -113,15 +113,15 @@ A 900-scenario suite with 20 failures can be re-verified by running those 20, on
 - You can open the job's project and run jobs in it.
 
 :::note
-Jobs started from your local machine can be rerun as long as Git details were recorded. If the working tree had uncommitted changes when the job ran, the commit is not reproducible and the job cannot be rerun - commit or stash before you run it.
+Jobs started from your local machine can be rerun as long as Git details were recorded. If the working tree had uncommitted changes when the job ran, the commit is not reproducible and the job cannot be rerun — commit or stash before you run it.
 :::
 
 ## What you can choose
 
 | Option | Choices |
 | :---- | :---- |
-| **Scope** | **Failed scenarios** - only what did not pass. **All scenarios** - everything the job ran. |
-| **Commit** | **Same commit** - the exact commit the job ran, to reproduce a failure. **Latest commit** - the newest commit on that branch, once the fix is merged. |
+| **Scope** | **Failed scenarios** — only what did not pass. **All scenarios** — everything the job ran. |
+| **Commit** | **Same commit** — the exact commit the job ran, to reproduce a failure. **Latest commit** — the newest commit on that branch, once the fix is merged. |
 | **Concurrency** | Defaults to the original job's. Raise or lower it for the rerun; the rest of the YAML is unchanged. |
 
 The dialog shows how many scenarios each scope will run, so you can see the size of the rerun before you start it.
@@ -139,10 +139,11 @@ The dialog shows how many scenarios each scope will run, so you can see the size
 
 ## How failed scenarios are picked
 
-A scenario is included when it did not finish successfully. Two cases are worth spelling out:
+A scenario is included when it did not finish successfully. Three cases are worth spelling out:
 
 - **Retries.** A scenario that failed and then passed on a retry counts as passed and is not rerun. If the retry never finished, it is rerun.
 - **Fail fast.** The scenario that tripped the limit counts as a failure, and scenarios that never started are included as well, because they have no result yet.
+- **Dependent scenarios.** Where scenarios run as a dependent group, the whole group runs together; one member cannot be rerun on its own.
 
 If a failed scenario contains several test cases, all of them are rerun.
 
@@ -168,10 +169,10 @@ The **Re-Run** button appears only on jobs that can be rerun. Where a job cannot
 | A `globalPre` or `globalPost` step ran with `mode: local`. | That step runs on the machine that started the job, which a rerun has no access to. Run it again from the CLI. |
 | The job ran mobile (Appium) tests. | Not supported yet. |
 
-A job that *can* be rerun may still come with something to note - one of the two scopes unavailable, or a named tunnel that has to be running before you start. The dialog shows that as a message when you open it.
+A job that *can* be rerun may still come with something to note — one of the two scopes unavailable, or a named tunnel that has to be running before you start. The dialog shows that as a message when you open it.
 
 :::tip Deep dive
-For the complete reference - every rule the Rerun engine can emit, with the exact text each one produces - see [Rerun Rules in HyperExecute](/support/docs/hyperexecute-rerun-rules/).
+For the complete reference — every rule the Rerun engine can emit, with the exact text each one produces — see [Rerun Rules in HyperExecute](/support/docs/hyperexecute-rerun-rules/).
 :::
 
 ## Frequently asked questions {#faq}
