@@ -103,7 +103,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 />
 
 :::info Reference page
-Every refusal, every narrowed scope and every warning the Rerun dialog can produce — taken from the evaluator rather than from the user-facing docs, with the exact text each rule emits. For the step-by-step walkthrough on using the Rerun button, see [Rerun Failed Tests on HyperExecute](/support/docs/hyperexecute-rerun-failed-tests/).
+Every refusal, every narrowed scope and every warning the Rerun dialog can produce - taken from the evaluator rather than from the user-facing docs, with the exact text each rule emits. For the step-by-step walkthrough on using the Rerun button, see [Rerun Failed Tests on HyperExecute](/support/docs/hyperexecute-rerun-failed-tests/).
 
 Sourced from:
 - `hyperexecute-logistics` → `internal/entities/rerun/{engine,emit,model}.go`
@@ -112,13 +112,13 @@ Sourced from:
 
 ## 01 · The three gates
 
-One evaluator answers both the preview and the trigger, so the dialog can never offer a scope the trigger would reject. Its output passes three independent gates, and they fail differently — which is why "rerun is not supported" is never one question.
+One evaluator answers both the preview and the trigger, so the dialog can never offer a scope the trigger would reject. Its output passes three independent gates, and they fail differently - which is why "rerun is not supported" is never one question.
 
 | Gate | Outcome | What the user sees |
 | :---- | :---- | :---- |
-| **1 — admission** | The button disappears | No Re-Run button is rendered at all. The reason is computed but never shown: nothing the user could change in a dialog would help, so there is no dialog. |
-| **2 — scope** | Only "All Scenarios" | The job is rerunnable, but the failed subset cannot be derived. That option is disabled, the selection falls back to complete, and the reason is shown. |
-| **3 — advice** | Offered, with a caveat | Both scopes work. A message warns about cost or about a precondition only the user can satisfy, such as a named tunnel being up. |
+| **1 - admission** | The button disappears | No Re-Run button is rendered at all. The reason is computed but never shown: nothing the user could change in a dialog would help, so there is no dialog. |
+| **2 - scope** | Only "All Scenarios" | The job is rerunnable, but the failed subset cannot be derived. That option is disabled, the selection falls back to complete, and the reason is shown. |
+| **3 - advice** | Offered, with a caveat | Both scopes work. A message warns about cost or about a precondition only the user can satisfy, such as a named tunnel being up. |
 
 A refusal at gate 2 never affects gate 1: a job that cannot be narrowed is still fully rerunnable. `Evaluate` returns admission and the two `ScopeVerdict`s in one object, so both are decided from the same inputs at the same moment.
 
@@ -131,7 +131,7 @@ Two conditions hide the button in the browser without ever asking the backend. B
 | Feature flag off | Button hidden | The org lacks `hye-enable-rerun-ui`. Defaults to false, so rerun is opt-in per organization. |
 | Job has not ended | Button hidden | Status is one of `running`, `queued`, `initiated`, `in-progress`, `inProgress`, `in progress`, `created`. The preview is not even requested. |
 
-## 03 · Gate 1 — the job is refused outright
+## 03 · Gate 1 - the job is refused outright
 
 These are properties of the job itself. Each is independently sufficient; the order below is the order `admissionRefusal` and `structuralRefusal` test them, which matters only for which message wins when several apply.
 
@@ -157,12 +157,12 @@ These are properties of the job itself. Each is independently sufficient; the or
 
 - **Mobile** means `ios/xcui`, `android/espresso`, `appium`, `android/appium` or `ios/appium`, matched case-insensitively on the job's test type.
 - **KaneAI** is matched as a case-insensitive substring of the trigger source, so decorated values like `kaneai-scheduled` count.
-- **Retention** is 60 days. A job with a stamped expiry uses it; a job with no expiry falls back to its creation date. With neither field known the job is treated as live — deliberately, so an instance that does not report `created_at` does not refuse every rerun. Such a job is refused anyway for having no outcomes.
-- **No project** is about the credential, not the repo. Vault's lookups are keyed by project. A project that merely has no repo linked is not refused — the org-level `git_token` fallback covers it, and the git pre-flight owns that question.
+- **Retention** is 60 days. A job with a stamped expiry uses it; a job with no expiry falls back to its creation date. With neither field known the job is treated as live - deliberately, so an instance that does not report `created_at` does not refuse every rerun. Such a job is refused anyway for having no outcomes.
+- **No project** is about the credential, not the repo. Vault's lookups are keyed by project. A project that merely has no repo linked is not refused - the org-level `git_token` fallback covers it, and the git pre-flight owns that question.
 - **Hybrid off** is the sentinel flag `hye-rerun-hybrid-disabled`, an org kill switch, not a property of the job.
-- **On-prem** skips the tunnel check entirely — both the refusal and the advice return early when `global.IsOnPrem`.
+- **On-prem** skips the tunnel check entirely - both the refusal and the advice return early when `global.IsOnPrem`.
 
-## 04 · Gate 2 — the failed scope cannot be built
+## 04 · Gate 2 - the failed scope cannot be built
 
 The job is rerunnable; only the subset is unavailable. The UI disables **Failed & Non Executed Scenarios**, switches the selection to complete, and prints the reason in a `role="status"` line.
 
@@ -176,7 +176,7 @@ The job is rerunnable; only the subset is unavailable. The UI disables **Failed 
 | `testDiscovery.mode: dynamic` | `this job uses testDiscovery.mode: dynamic, so only All Scenarios can be rerun` | `dynamicDiscovery` |
 | Manifest read failed now | `we could not load this job's test details just now, so only All Scenarios can be rerun. Try again in a few minutes` | `ManifestErr` |
 
-Only the last of these is transient. Dynamic discovery is refused because each task discovers on its own VM and the dispatcher distributes a stored result only under static or remote discovery — a reduced set would be accepted and then silently ignored.
+Only the last of these is transient. Dynamic discovery is refused because each task discovers on its own VM and the dispatcher distributes a stored result only under static or remote discovery - a reduced set would be accepted and then silently ignored.
 
 ### Ruled out by what was recorded
 
@@ -198,30 +198,30 @@ A manifest that is absent, that does not cover the slices the job ran, or that o
 | Hybrid | Remote `globalPre` and failures on more than one OS | `this job's failures are on more than one machine and its scenarios cannot be split that way. Rerun all scenarios instead` |
 | Hybrid | Converted hull beyond 20,000 combinations | `this job has too many configurations (N) to rerun selectively. Rerun all scenarios instead` |
 | Matrix | A unit carries no combination | `we do not know which configuration each scenario ran under, so only All Scenarios can be rerun` |
-| Hybrid | A non-OS matrix key cannot be pinned to one value | (from `pinNonOSKeys` — a key left with several values would put several combinations in one dispatch call) |
+| Hybrid | A non-OS matrix key cannot be pinned to one value | (from `pinNonOSKeys` - a key left with several values would put several combinations in one dispatch call) |
 
 A single-task job with no matrix (`shape: none`) is never refused here. The failed set is the job, so both options are offered showing the same count rather than making the reader work out that they are the same thing.
 
-## 05 · Gate 3 — offered, with a message
+## 05 · Gate 3 - offered, with a message
 
 Advice travels beside an offered scope, never instead of it. Several pieces join with `;` onto the one line the dialog has.
 
 | Trigger | Message | Why it is advice, not a refusal |
 | :---- | :---- | :---- |
 | Named tunnels on the job | `tunnel "x" needs to be running for this job to execute` | The tunnels are the user's own. Reception rejects the submission if one is not up by then, so the dialog warns rather than blocks. Skipped on-prem. |
-| Subset spans > 500 combinations | `the failed scenarios spread across N combinations; a complete rerun may cost less` | A round number, deliberately — it is advice to a reader, not a limit anything enforces. The task count follows the requested concurrency, not the combination count. |
+| Subset spans > 500 combinations | `the failed scenarios spread across N combinations; a complete rerun may cost less` | A round number, deliberately - it is advice to a reader, not a limit anything enforces. The task count follows the requested concurrency, not the combination count. |
 
 ## 06 · What counts as a failure
 
-A unit is **settled** — and so excluded from the subset — only on these five statuses:
+A unit is **settled** - and so excluded from the subset - only on these five statuses:
 
 | `settledStatuses` (5) | everything else |
 | :---- | :---- |
-| `completed`, `passed`, `skipped`, `ignored`, `muted` | `failed`, `aborted`, `canceled`, `timed out`, `still in progress` — and **no outcome row at all** — all rerun |
+| `completed`, `passed`, `skipped`, `ignored`, `muted` | `failed`, `aborted`, `canceled`, `timed out`, `still in progress` - and **no outcome row at all** - all rerun |
 
 Note `muted` is **settled** here. That is the rerun's own question and is deliberately not borrowed from the runner's "positive status" list, which omits it. Three cases are worth spelling out:
 
-- **Retries.** A scenario that failed and later passed on a retry is settled on the retry's row and stays out. But the `everFailed` flag still marks it a failure for admission — so a job aborted while a retry was running has a failure to admit on, and is rerunnable.
+- **Retries.** A scenario that failed and later passed on a retry is settled on the retry's row and stays out. But the `everFailed` flag still marks it a failure for admission - so a job aborted while a retry was running has a failure to admit on, and is rerunnable.
 - **Fail fast.** When the trip is recorded, the aborted unit counts as the failure that caused it. Without that rule a job that stopped on its first failed test would have no failed unit at all and could never be rerun.
 - **Dependent groups.** Selection is widened to whole discovery groups: ordered and dependent scenarios rerun together. A group is scoped to the combination it ran under, so on a hybrid job one combination failing does not drag in its siblings from another.
 
@@ -231,8 +231,8 @@ The counts come from different places on purpose, and one of them is omitted rat
 
 | Count | Source | Omitted when |
 | :---- | :---- | :---- |
-| **All Scenarios** | `len(Manifest.Units)` — the intended set, never the outcomes, because a fail-fast trip leaves the remaining tasks' scenarios unrecorded. | The latest commit is selected (the head discovers its own set), or the job has no manifest. The field is omitted and the UI shows no number. |
-| **Failed & Non Executed** | `len(subset.Units)` — the units actually selected for re-dispatch. | Whenever the subset is refused; the option is disabled instead. |
+| **All Scenarios** | `len(Manifest.Units)` - the intended set, never the outcomes, because a fail-fast trip leaves the remaining tasks' scenarios unrecorded. | The latest commit is selected (the head discovers its own set), or the job has no manifest. The field is omitted and the UI shows no number. |
+| **Failed & Non Executed** | `len(subset.Units)` - the units actually selected for re-dispatch. | Whenever the subset is refused; the option is disabled instead. |
 
 ### Why the label changes
 
@@ -240,11 +240,11 @@ The option reads **Failed & Non Executed Scenarios** when the job's fail fast tr
 
 ### A fail-fast job legitimately shows the same number twice
 
-If fail fast stopped a 10-scenario job after the first failure, nothing else reached a verdict, so all 10 are unsettled: both scopes read 10. It looks like a bug and is not one — but it is also the least persuasive screenshot for the public docs.
+If fail fast stopped a 10-scenario job after the first failure, nothing else reached a verdict, so all 10 are unsettled: both scopes read 10. It looks like a bug and is not one - but it is also the least persuasive screenshot for the public docs.
 
 ## 08 · Concurrency
 
-The dialog pre-fills the shape the job actually ran in — `TaskCount`, which counts work groups, not task rows. A reschedule creates a second row for the same group, and pre, post and discovery tasks are not execution tasks at all. On every shape but auto-split the job's own YAML `concurrency` describes something else entirely: a matrix job creates a task per combination whatever the number said.
+The dialog pre-fills the shape the job actually ran in - `TaskCount`, which counts work groups, not task rows. A reschedule creates a second row for the same group, and pre, post and discovery tasks are not execution tasks at all. On every shape but auto-split the job's own YAML `concurrency` describes something else entirely: a matrix job creates a task per combination whatever the number said.
 
 The ceiling is the org's FUP limit (`maxConcurrency`) when one is configured, because a job shaped above it is refused at dispatch. Absent means no org limit, and the dialog keeps to the ceiling the licenses give it.
 
@@ -256,7 +256,7 @@ Enterprise orgs run with named tunnels (resolved by Reception) rather than CLI-o
 
 ### CLI `tunnel: true` jobs are offered a rerun and then fail
 
-The refusal fires on `tunnel == true` with no tunnel names. But the CLI mints a random 16-character tunnel name, starts the tunnel locally, writes that name into the submitted config and sets `tunnel: false`. So the stored config of a real CLI tunnel job is `tunnel: false` plus a generated name — the refusal never fires, the job is admitted, and the rerun fails about three minutes later with:
+The refusal fires on `tunnel == true` with no tunnel names. But the CLI mints a random 16-character tunnel name, starts the tunnel locally, writes that name into the submitted config and sets `tunnel: false`. So the stored config of a real CLI tunnel job is `tunnel: false` plus a generated name - the refusal never fires, the job is admitted, and the rerun fails about three minutes later with:
 
 ```
 Tunnel provisioning failed … giving up after 5 attempt(s)
@@ -266,7 +266,7 @@ Options raised earlier, unanswered: record a fact at dispatch (recommended), tre
 
 ## 10 · Things that are not limits
 
-- **A project without a linked repo.** Not refused — the credential falls back to a user- or org-level `git_token`.
+- **A project without a linked repo.** Not refused - the credential falls back to a user- or org-level `git_token`.
 - **Reruns of reruns.** An ordinary job; the lineage label points at its own parent, so chains stay traceable.
 - **Policies.** Applied fresh to the new job rather than carried over.
 - **The 500-combination advisory.** Nothing enforces it; only 20,000 is a hard ceiling, and it exists to bound the submitted config (one exclusion entry per settled combination), not to judge the request.
@@ -278,9 +278,9 @@ Options raised earlier, unanswered: record a fact at dispatch (recommended), tre
 
 ## Related
 
-- [Rerun Failed Tests on HyperExecute](/support/docs/hyperexecute-rerun-failed-tests/) — the step-by-step user walkthrough.
-- [Workflows in HyperExecute](/support/docs/hyperexecute-workflows/) — scheduling jobs on a cadence.
-- [Global Policies in HyperExecute](/support/docs/hyperexecute-global-policies/) — org-level rules applied to each job.
+- [Rerun Failed Tests on HyperExecute](/support/docs/hyperexecute-rerun-failed-tests/) - the step-by-step user walkthrough.
+- [Workflows in HyperExecute](/support/docs/hyperexecute-workflows/) - scheduling jobs on a cadence.
+- [Global Policies in HyperExecute](/support/docs/hyperexecute-global-policies/) - org-level rules applied to each job.
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
