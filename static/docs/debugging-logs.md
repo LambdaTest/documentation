@@ -107,12 +107,12 @@ To allow user-installed CAs on Android, add a `` entry to the trust anchors in y
 
 ```xml
 <network-security-config>
-  <base-config>
-    <trust-anchors>
-      <certificates src="system" />
-      <certificates src="user" />
-    </trust-anchors>
-  </base-config>
+<base-config>
+<trust-anchors>
+<certificates src="system" />
+<certificates src="user" />
+</trust-anchors>
+</base-config>
 </network-security-config>
 ```
 

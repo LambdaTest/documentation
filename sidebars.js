@@ -223,7 +223,12 @@ module.exports = {
             label: "Global Policies",
             id: "hyperexecute-global-policies",
           },
-          "hyperexecute-rerun-failed-jobs"
+          "hyperexecute-rerun-failed-jobs",
+          {
+            type: "doc",
+            label: "Rerun Rules",
+            id: "hyperexecute-rerun-rules",
+          },
         ],
       },
       {

@@ -93,6 +93,7 @@ build: "Real Device App Build", // Name of the build for appium (Recommended)
 "smartUI.baseline": false, // Enable if you want to update to a new baseline build (Optional)
 "smartUI.cropStatusBar" : true, // Optional (By default true)
 "smartUI.cropFooter" : true, // Optional (By default false)
+"smartUI.captureDom" : true, // Optional: save the element tree with each screenshot for Smart RCA (By default false)
 //highlight-end
 };
 
@@ -113,6 +114,9 @@ let driver = await new webdriver.Builder()
 **Important**
 
 It is important that the `visual:true` is set your capabilities configuration for capturing the screenshots to SmartUI - Visual Regression tests and add into the build for comparison. If this capability is not added then the build status will be shown as `Error`.
+
+**Smart RCA for native apps**
+Set `smartUI.captureDom` to `true` to save the app's element tree with each screenshot. SmartUI uses it to show which element moved, resized or changed text. See [Smart RCA for Native Apps on Real Devices](/support/docs/smartui-root-cause-analysis/#smart-rca-for-native-apps-on-real-devices).
 
 - Webhook for taking the screenshot - This part of the code needs to be attached below the required segment of appium script of which we would like to take the screenshot to test on.
 

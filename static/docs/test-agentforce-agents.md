@@ -6,7 +6,7 @@ Salesforce Agentforce agents are built in Agent Builder, and with Agentforce Voi
 
 To connect one, you need an Agentforce agent with an active version, an External Client App in your Salesforce org with a user it can run as, and a TestMu AI project to hold the agent under test. To place test calls and verify tool calls, you also need Agentforce Voice with a phone number routed to the agent, and Data Cloud with Agentforce session tracing turned on. See [Prerequisites](#prerequisites).
 
-The [Salesforce setup](#salesforce-setup) is usually done by your Salesforce admin. [Connecting the agent](#connect-the-agent) and [running the tests](#run-tests) are done in TestMu AI by whoever runs the tests. [Troubleshooting](#troubleshooting) and a short set of [verification queries](#verification-queries) are at the end.
+The [Salesforce setup](#salesforce-setup) is usually done by your Salesforce admin. [Connecting the agent](#connect-the-agent) and [running the tests](#run-tests) are done in TestMu AI by whoever runs the tests. Four [example calls](#what-it-catches) show what tool call validation catches. [Troubleshooting](#troubleshooting) and a short set of [verification queries](#verification-queries) are at the end.
 
 ## What does the Agentforce integration add to your tests? {#agentforce-integration}
 
@@ -112,8 +112,8 @@ In the agent's phone number field, enter the phone number routed to the Agentfor
 
 ### Connect Agentforce
 
-1. Open the agent and go to **Voice Integrations**.
-2. On the **Agentforce** tile, "Connect your Salesforce Agentforce agent for voice-call and tool-call testing", enter the [four values](#collect-the-four-values) from Salesforce:
+1. Open the agent and select **Integrations** from the agent navigation.
+2. On the **Agentforce** tile, "Connect your Salesforce Agentforce agent for voice-call and tool-call testing", select **Connect** and enter the [four values](#collect-the-four-values) from Salesforce:
    - **Your org's My Domain**
    - **Consumer Key**
    - **Consumer Secret**
@@ -132,18 +132,20 @@ A message confirms the result:
 
 TestMu AI stores the credentials encrypted. After you save, the page shows that a key and secret are saved, with the fields reading *saved — enter to replace*, but never displays them again. To change them, enter new values and select **Save**.
 
+Once connected, the **Agentforce** tile shows **Connected** and a **Re-sync** button, which pulls the agent's active version from Salesforce again.
+
 ### Check the Synced Prompt
 
 Open the agent's **Prompt** page. You should see the agent's topics, their instructions, and the agent script as plain text. Scenario generation uses this prompt to understand the agent.
 
-- **Sync from Agentforce** pulls the prompt from Salesforce again, after you confirm. Use it after you change the agent in Agent Builder.
+- **Sync from Agentforce** pulls the prompt from Salesforce again, after you confirm, and refreshes the tool catalog with it. Use it after you change the agent in Agent Builder.
 - **Save** keeps whatever is in the editor. It does not overwrite your edits with the Salesforce version.
 
 ### Check the Tool Catalog
 
-Open any scenario in the agent, or create one, and look for the **Agentforce Tools (Optional)** section in the scenario editor. It lists the agent's actions as they are named in Salesforce, each with a checkbox.
+Open any scenario in the agent, or create one, and look for the **Agentforce Tools (Optional)** section in the scenario editor. It lists the agent's actions as they are named in Salesforce, each with a checkbox, its type and API name, and its description.
 
-If the section is empty, the sync found no actions on the active agent version. Confirm that the agent has actions, then save the integration again.
+If the section is empty, the sync found no actions on the active agent version. Confirm that the agent has actions, then sync again: select **Re-sync** on the **Agentforce** tile in **Integrations**, or **Sync from Agentforce** on the **Prompt** page.
 
 ## How do you run Agentforce tests and read the results? {#run-tests}
 
@@ -156,7 +158,7 @@ Generate scenarios from the synced prompt, or write them by hand. For each scena
 
 Every selected tool is expected: the scenario's tool check passes only if the agent called all of them. Scenarios with no tools selected still run normally, but they do not get a tool call check.
 
-If the agent's actions change in Salesforce, save the integration again. Tools that you selected earlier but that no longer exist are listed in a yellow notice in this section. Clear their checkboxes.
+If the agent's actions change in Salesforce, sync again as described in [Check the Tool Catalog](#check-the-tool-catalog). Tools that you selected earlier but that no longer exist are listed in a yellow notice in this section. Clear their checkboxes.
 
 ### Run the Suite
 
@@ -173,10 +175,12 @@ Run the suite as you would for any other Phone Caller agent. See [inbound phone 
 
 | Section | What it shows |
 |---|---|
-| **Expected Tool Validation** | Each tool you selected on the scenario, with its outcome: **Called**, **Not Called**, **Pending** (still waiting for the trace), or **Unverified** (the trace never arrived, or TestMu AI could not tell with certainty which session belonged to this call). See [Tool Call Statuses](#tool-call-statuses). |
+| **Expected Tool Validation** | Each tool you selected on the scenario, with the number of times the agent invoked it and its outcome: **Called**, **Not Called**, **Pending** (still waiting for the trace), or **Unverified** (the trace never arrived, or TestMu AI could not tell with certainty which session belonged to this call). See [Tool Call Statuses](#tool-call-statuses). |
 | **AUT Correlation** | The **AUT call ID**: the Salesforce agent session that this call was matched to, in case you want to look it up in Salesforce. |
-| **Selected AUT Tool Calls** | The agent's actual calls to the tools you selected. |
+| **Selected AUT Tool Calls** | The agent's actual calls to the tools you selected. Each invocation shows the tool name, a status of **success** or **error**, its ID, timestamp, and latency in milliseconds, and its **Arguments** and **Result**. |
 | **AUT Tool Calls** | Every action the agent ran during the call, exactly as Salesforce recorded it: tool name, outcome, input arguments, output, and the time it ran. |
+
+A tool that the agent called but that returned an error still shows **Called**, so read the **Result** of each invocation. See the [example failures](#what-it-catches).
 
 A run with zero tool calls is not necessarily an error. If the scenario never gave the agent what it needed, for example the caller refused to provide the account details the agent asked for, the agent correctly did not call its lookup tools, and **Not Called** on an expected tool is the finding you wanted.
 
@@ -187,6 +191,56 @@ A run with zero tool calls is not necessarily an error. If the scenario never ga
 | *Tool calls are pending* | TestMu AI is waiting for the Salesforce trace batch. This is normal for the first 10 minutes or so after the call ends. | Wait. |
 | The tool calls are listed | The call was matched to its Salesforce session, and the trace was fetched. | Nothing. |
 | *Tool calls are unverified* | Either verification timed out because no trace appeared within 35 minutes of the call ending, or TestMu AI could not tell with certainty which session belonged to this call and chose not to guess. The transcript and grading are unaffected. | See [Troubleshooting](#troubleshooting). Rerunning the scenario is usually enough. If every run ends unverified, Data Cloud tracing or the integration user's access is the cause. |
+
+## What failures does Agentforce tool call validation catch? {#what-it-catches}
+
+The four test calls below were placed to a demo Agentforce agent, a weather assistant with two actions:
+
+- `FetchCityCoordinates` turns a city name into a latitude and longitude.
+- `FetchCurrentWeather` turns those coordinates into a temperature and wind speed.
+
+The agent should call both actions, in that order, and read the result back. Both actions were selected as expected tools in every scenario. Three calls used the same scenario, in which the caller asks for the current temperature and wind speed in a city. The loop came from a negative scenario that asks for a city that does not exist.
+
+### Healthy Call: Each Expected Agentforce Action Called Once
+
+- **What the caller heard:** "It's currently 2.3°C with a wind speed of 5.2 kilometers per hour in Denver."
+- **Tool Calls tab:** Both tools **Called**, one invocation each. `FetchCityCoordinates` received `Denver` and returned latitude 39.73915 and longitude -104.9847. `FetchCurrentWeather` received those coordinates and returned a temperature of 2.3 and a wind speed of 5.2, the figures the caller heard. This call is shown in [Read the Tool Calls Tab](#read-the-tool-calls-tab).
+- **Other results:** Passed, 100.0%. All four criteria passed in **Validation Results**, **Analytics** showed Task Completion 100%, and the **Call Summary** rated the call Pass.
+
+### Wrong Input: An Agentforce Action Called With Bad Arguments
+
+In this version of the agent, the weather action was bound to fixed coordinates instead of the coordinates that the lookup returns.
+
+- **What the caller heard:** "I am having trouble retrieving the current weather for Portland, OR right now." The caller asked again and got the same answer in other words. The transcript does not say why.
+- **Tool Calls tab:** Both tools **Called**. `FetchCityCoordinates` ran once and returned latitude 45.52345 and longitude -122.67621. `FetchCurrentWeather` ran twice, both times with latitude `999` and longitude `999`, and both invocations ended in an error. The first returned the status code `400` with the message `Bad Request` and the action execution status `failed`. **Expected Tool Validation** still shows **Called** for `FetchCurrentWeather`, because the agent did invoke it.
+- **Other results:** Failed, 48.9%. **Validation Results** read 50% as expected: the criteria for reporting the temperature and wind speed and for ending the call politely failed. **Analytics** showed Task Completion 0%, and the **Call Summary** rated the call Fail, with Accuracy Poor.
+
+### Loop: An Agentforce Lookup Action Called 33 Times
+
+The scenario asks for the weather in New Arcadia, a city that does not exist. The agent should say that it cannot find the city.
+
+- **What the caller heard:** "My apologies, I think I have some audio issues on my end. Could you please repeat your last statement?" The agent kept apologizing and asking the caller to repeat until the call reached its maximum duration and ended at 8 minutes 21 seconds, with the end reason `exceeded-max-duration`.
+- **Tool Calls tab:** `FetchCityCoordinates` **Called**, 33 invocations. All 33 lookups succeeded and returned `"results": null`. The first two searched for `New Arcadia` and `Newark, Arcadia`. `FetchCurrentWeather` **Not Called**, 0 invocations. The agent never acted on the empty result and never told the caller. The invocation count alone points to the defect.
+- **Other results:** Failed, 22.1%. **Validation Results** read 25% as expected, with 3 of 4 criteria failed, among them the criterion for the agent's standard error response. **Analytics** showed User Satisfaction Negative, Early Terminated, and Task Completion 0%. The **Call Summary** rated the call Fail.
+
+### No Tool Call: No Expected Agentforce Action Called
+
+In this version of the agent, the agent stopped calling its actions.
+
+- **What the caller heard:** "I cannot provide the current weather for Denver right now." The caller asked for Seattle and heard the same.
+- **Tool Calls tab:** Both tools **Not Called**, 0 invocations each, and **Selected AUT Tool Calls** reads *No tool calls found.* The caller named the city, so **Not Called** is the defect here: the decline was not a service outage, because the agent never requested anything.
+- **Other results:** Failed, 44.4%. **Validation Results** read 50% as expected: the criteria for reporting the temperature and wind speed and for ending the call politely failed. **Analytics** showed Task Completion 0%, and the **Call Summary** rated the call Needs Improvement.
+
+### Healthy and Failed Agentforce Test Calls Compared Side by Side
+
+| Call | Verdict | What the caller heard | Tool Calls tab | Validation Results | Analytics and Call Summary |
+|---|---|---|---|---|---|
+| Healthy | Passed, 100.0% | The temperature and wind speed, in one answer | Both tools **Called**, one invocation each. The result matches what the caller heard. | 4 of 4 criteria passed | Task Completion 100%. Call Summary Pass. |
+| Wrong input | Failed, 48.9% | "Trouble retrieving" the weather, then the same answer again | Both tools **Called**. `FetchCurrentWeather` ran twice with latitude and longitude `999`, and both invocations ended in an error. | 50% as expected | Task Completion 0%. Call Summary Fail. |
+| Loop | Failed, 22.1% | The same apology until the call reached its maximum duration | `FetchCityCoordinates` **Called** 33 times, every result empty. `FetchCurrentWeather` **Not Called**. | 25% as expected | User Satisfaction Negative. Task Completion 0%. Call Summary Fail. |
+| No tool call | Failed, 44.4% | "Cannot provide" the weather, for every city asked | Both tools **Not Called**. *No tool calls found.* | 50% as expected | Task Completion 0%. Call Summary Needs Improvement. |
+
+In the three failed calls, **Validation Results**, **Analytics**, and the **Call Summary** show that the agent did not complete the task. The **Tool Calls** tab shows which actions the agent called, how many times, with what arguments, and what each one returned, or that it called none.
 
 ## How do you troubleshoot the Agentforce integration? {#troubleshooting}
 

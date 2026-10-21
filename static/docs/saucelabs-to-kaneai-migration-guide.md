@@ -12,7 +12,7 @@ This guide covers your Sauce Labs migration to KaneAI and shows you how to move 
 |---|---|---|
 | Selenium scripts  | TestMu AI Selenium grid or HyperExecute | [Sauce Labs to TestMu AI guide](/support/docs/saucelabs-to-testmu-migration-guide/) or [Sauce Labs to HyperExecute](/support/docs/saucelabs-to-hyperexecute-migrate/) |
 | Appium scripts  | TestMu AI Appium grid | [Migrate Appium Tests From Sauce Labs](/support/docs/migrate-appium-tests-from-sauce-labs/) |
-| Cypress, Playwright, TestCafe, Espresso and XCUITest suites run with saucectl  | TestMu AI cloud | Framework guides for [Cypress](/support/docs/getting-started-with-cypress-testing/), [Playwright](/support/docs/playwright-test-runner/), [TestCafe](/support/docs/npm-plugin-for-testcafe-integration-with-testmu/), [Espresso](/support/docs/getting-started-with-espresso-testing/) and [XCUITest](/support/docs/getting-started-with-xcuitest/) |
+| Cypress, Playwright, TestCafe, Espresso and XCUITest suites run with saucectl  | TestMu AI cloud | Framework guides for [Cypress](/support/docs/getting-started-with-cypress-testing/), [Playwright](/support/docs/playwright-test-runner/), [TestCafe](/support/docs/javascript-with-selenium-running-javascript-automation-scripts-on-testmu-selenium-grid/?framework=testcafe), [Espresso](/support/docs/getting-started-with-espresso-testing/) and [XCUITest](/support/docs/getting-started-with-xcuitest/) |
 | Sauce AI for Test Authoring test cases  | TestMu AI cloud for generated code, and KaneAI | Export the code (Step 1), run it (Step 2) and re-create the test (Step 4) |
 | Sauce AI Data Variables  | KaneAI variables and secrets | Re-create them (Step 4) |
 | Chrome DevTools recordings replayed with saucectl  | KaneAI | Perform the flow again in KaneAI (Step 4) |

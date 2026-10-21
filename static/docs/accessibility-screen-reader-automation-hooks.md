@@ -24,8 +24,8 @@ Set `accessibility: true` and the platform's screen reader capability inside `LT
 | Capability | Path | Type | Platform | Description |
 |---|---|---|---|---|
 | `accessibility` | `LT:Options.accessibility` | boolean | Both | Master switch. Must be `true` for the executor hooks to be accepted. |
-| `talkBack` | `LT:Options.accessibilityOptions.talkBack` | boolean | Android | Allocates a device with TalkBack control and enables the TalkBack executor commands. |
-| `voiceOver` | `LT:Options.accessibilityOptions.voiceOver` | boolean | iOS | Allocates a device with VoiceOver control and enables the VoiceOver executor commands. |
+| `talkBack` | `LT:Options.accessibilityOptions.screenReaderAutomation.talkBack` | boolean | Android | Allocates a device with TalkBack control and enables the TalkBack executor commands. |
+| `voiceover` | `LT:Options.accessibilityOptions.screenReaderAutomation.voiceover` | boolean | iOS | Allocates a device with VoiceOver control and enables the VoiceOver executor commands. |
 
 ```json
 {
@@ -38,7 +38,9 @@ Set `accessibility: true` and the platform's screen reader capability inside `LT
 //highlight-start
 "accessibility": true,
 "accessibilityOptions": {
+"screenReaderAutomation": {
 "talkBack": true
+}
 }
 //highlight-end
 }
@@ -46,8 +48,11 @@ Set `accessibility: true` and the platform's screen reader capability inside `LT
 ```
 
 ```java
+Map<String, Object> screenReaderAutomation = new HashMap<>();
+screenReaderAutomation.put("talkBack", true);   // Android. Use "voiceover" on iOS.
+
 Map<String, Object> accessibilityOptions = new HashMap<>();
-accessibilityOptions.put("talkBack", true);   // Android. Use "voiceOver" on iOS.
+accessibilityOptions.put("screenReaderAutomation", screenReaderAutomation);
 
 ltOptions.put("isRealMobile", true);
 //highlight-start
@@ -68,7 +73,9 @@ lt_options = {
 #highlight-start
 "accessibility": True,
 "accessibilityOptions": {
-"voiceOver": True,   # iOS. Use "talkBack" on Android.
+"screenReaderAutomation": {
+"voiceover": True,   # iOS. Use "talkBack" on Android.
+},
 },
 #highlight-end
 }
@@ -85,7 +92,9 @@ app: 'lt://APP1234567890',
 //highlight-start
 accessibility: true,
 accessibilityOptions: {
-talkBack: true, // Android. Use voiceOver on iOS.
+screenReaderAutomation: {
+talkBack: true, // Android. Use voiceover on iOS.
+},
 },
 //highlight-end
 },
@@ -427,7 +436,7 @@ driver.executeScript("lambda_executor: {\"action\": \"voiceOverToggle\", \"argum
 
 ## Combining with Auto Report
 
-Executor Hooks and [Auto Report](/support/docs/accessibility-screen-reader-automation-auto-report/) can be enabled in the same session. Set both the platform capability (`talkBack` or `voiceOver`) and the `screenReader` block with `autoReport: true`. Your executor calls control the screen reader as described here, and the report is still generated for every screen the test reaches. The gestures your script performs do not add extra entries to the report.
+Executor Hooks and [Auto Report](/support/docs/accessibility-screen-reader-automation-auto-report/) can be enabled in the same session. Set both the platform capability (`screenReaderAutomation.talkBack` or `screenReaderAutomation.voiceover`) and the `screenReader` block with `autoReport: true`. Your executor calls control the screen reader as described here, and the report is still generated for every screen the test reaches. The gestures your script performs do not add extra entries to the report.
 
 ## Troubleshooting
 
@@ -437,7 +446,7 @@ Executor Hooks and [Auto Report](/support/docs/accessibility-screen-reader-autom
 | Hook returns *"Screen reader is not enabled for this session."* | Call `screenReader` or `voiceOverToggle` with `enable: "true"` before other commands, and make sure `accessibility: true` and the platform capability are in `LT:Options`. |
 | Gesture returns the same element every time | Focus is at the end of the list or inside a container that needs `scroll_down` first. Check `spokenOutput` to confirm where focus is. |
 | Spoken output is empty for an element that has a label | The element may not be focusable by the screen reader, so it is skipped. Check the `properties` in the response and the [rule repository](/support/docs/accessibility-android-rule-repository/) guidance for focusable containers. |
-| iOS session cannot be allocated | The `voiceOver` capability requires a device that supports VoiceOver control. Widen the device or OS selection, or ask support which devices in your pool support it. |
+| iOS session cannot be allocated | The `screenReaderAutomation.voiceover` capability requires a device that supports VoiceOver control. Widen the device or OS selection, or ask support which devices in your pool support it. |
 | Command fails with a platform mismatch error | The action name belongs to the other platform. Use `screenReader*` actions on Android and `voiceOver*` / `getVoiceOverElement` on iOS. |
 
 ## Related docs
