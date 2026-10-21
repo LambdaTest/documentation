@@ -660,6 +660,7 @@ module.exports = {
               "kane-ai-network-assertions",
               "kaneai-advanced-settings",
               "kaneai-custom-headers",
+              "kaneai-smartui-visual-testing",
             ],
           },
           {
@@ -669,7 +670,6 @@ module.exports = {
             items: [
               "kaneai-dynamic-url-replacement",
               "kaneai-chrome-options",
-              "kaneai-smartui-visual-testing",
             ],
           },
           {
