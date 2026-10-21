@@ -161,7 +161,8 @@
                 "group": "CI/CD & Skills",
                 "pages": [
                   "docs/kane-cli-cicd",
-                  "docs/kane-cli-skills"
+                  "docs/kane-cli-skills",
+                  "docs/kane-cli-claude-code-plugin"
                 ]
               },
               {
