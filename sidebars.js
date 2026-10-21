@@ -4858,6 +4858,11 @@ module.exports = {
             label: "Skills for AI Agents",
             id: "kane-cli-skills",
           },
+          {
+            type: "doc",
+            label: "Claude Code Plugin",
+            id: "kane-cli-claude-code-plugin",
+          },
         ],
       },
       {

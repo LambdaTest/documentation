@@ -186,6 +186,10 @@ Skills work on top of [Agent Mode](/support/docs/kane-cli-agent-mode/) (`--agent
 Skills are plain markdown files. Review and customize them by editing the installed file after download.
 :::
 
+:::tip
+In Claude Code, add the [Kane CLI plugin](/support/docs/kane-cli-claude-code-plugin/) as well: it shows each run live above the prompt and as a result card in the chat.
+:::
+
 ---
 
 ## Install
