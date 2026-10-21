@@ -125,7 +125,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 **Step 4:** Once the desired VM is launched and operable, right-click on the webpage that gets loaded inside the VM and click on "**Inspect Element**".
 
-<img loading="lazy" src={require('../assets/images/developer-tools/dev-tool-real-time-4.png').default} alt="Image" width="1365" height="614" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/developer-tools/dev-tools-real-time-4.png').default} alt="Image" width="1365" height="614" className="doc_img"/>
 
 **Step 5:** As you click on "Inspect Element", the developer tools would pop up at the bottom of the virtual machine.
 
