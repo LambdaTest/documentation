@@ -139,11 +139,10 @@ The dialog shows how many scenarios each scope will run, so you can see the size
 
 ## How failed scenarios are picked
 
-A scenario is included when it did not finish successfully. Three cases are worth spelling out:
+A scenario is included when it did not finish successfully. Two cases are worth spelling out:
 
 - **Retries.** A scenario that failed and then passed on a retry counts as passed and is not rerun. If the retry never finished, it is rerun.
 - **Fail fast.** The scenario that tripped the limit counts as a failure, and scenarios that never started are included as well, because they have no result yet.
-- **Dependent scenarios.** Where scenarios run as a dependent group, the whole group runs together; one member cannot be rerun on its own.
 
 If a failed scenario contains several test cases, all of them are rerun.
 
