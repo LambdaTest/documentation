@@ -113,7 +113,7 @@ Now, to access your organization product preferences, follow the below mentioned
 
 **Step 4:** Go to the **Org Product Preferences** section.
 
-**Step 5:** Select HyperExecute and you will be presented with two options - **Auto-mute tests** and **Test Viewing Preferences**.
+**Step 5:** Select HyperExecute and you will be presented with three options - **Auto-mute tests**, **Test Viewing Preferences**, and **[Workflow Governance](/support/docs/hyperexecute-workflow-governance/)** (org-level guardrails for Workflows: active-workflow cap per project, maximum end date, and auto-disable on consecutive failures).
 
 <div className="storylane-iframe">
   <script async src="https://js.storylane.io/js/v2/storylane.js"></script>

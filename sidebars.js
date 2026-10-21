@@ -180,6 +180,12 @@ module.exports = {
             id: "hyperexecute-global-policies",
             customProps: { beta: true },
           },
+          {
+            type: "doc",
+            label: "Workflow Governance",
+            id: "hyperexecute-workflow-governance",
+            customProps: { beta: true },
+          },
           "hyperexecute-rerun-failed-tests"
         ],
       },
