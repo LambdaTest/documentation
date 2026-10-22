@@ -409,6 +409,28 @@ driver.executeScript("mobile: alert", Map.of(
 ));
 ```
 
+For details on the settings[respectSystemAlerts] capability, see the [Appium XCUITest driver troubleshooting guide](https://appium.github.io/appium-xcuitest-driver/11.17/troubleshooting/#interact-with-dialogs-managed-by-comapplespringboard).
+
+### Using WebView commands with the `updateLanguageLocale` hook
+
+**Why it's needed:** The `lambda_executor: updateLanguageLocale` hook closes and relaunches the app, which creates a new app process with a new WebView context. Appium isn't aware of this relaunch and stays attached to the old WebView context from the closed process.
+
+**Fix:** To avoid this, use one of the following approaches.
+
+**Option A: Run the hook before switching to the WebView (recommended)**
+
+Call `updateLanguageLocale` before you call `getContexts` or switch to a WebView context. WebView commands then work as expected.
+
+**Option B: Re-select the WebView after the hook**
+
+If you need to change the language in the middle of a test, do the following after each hook call:
+
+1. Switch to the `NATIVE_APP` context.
+2. Call `getContexts` to get the updated list of contexts.
+3. Switch to the new `WEBVIEW_*` context.
+
+**Note:** Always re-select the WebView context after running the `updateLanguageLocale` hook. A WebView context selected before the hook will no longer work.
+
 ---
 
 That's all! If you are still blocked, reach out to our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24x7 Chat Support**</span> or mail us at [support@testmuai.com](mailto:support@testmuai.com).
