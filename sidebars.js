@@ -2546,6 +2546,7 @@ module.exports = {
               "list-of-supported-locales",
               //"appium-ip-geolocation",
               "supported-timezone",
+              "debugging-logs"
               "app-testing-apis",
               "appium-lambdatest-hooks",
               "appium-install-uninstall-lambdatest-hooks",
