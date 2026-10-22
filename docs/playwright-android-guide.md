@@ -727,7 +727,4 @@ dismissChromeNotificationPrompt(page);
 </TabItem> 
 </Tabs>
 
-For more details, refer to this [GitHub repository](https://github.com/harsh43580/stage-playwright-test/tree/main/src/test/java/com/lambdatest).
-
-
 
