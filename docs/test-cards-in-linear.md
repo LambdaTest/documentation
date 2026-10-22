@@ -46,7 +46,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 Test cards bring your Test Manager results into the Linear issues your team works on. When you link a test case or a test run to a Linear issue, the issue shows a card with the latest results, steps, and progress. Cards update on their own as your team tests, so everyone in Linear sees the current state of testing without switching tools.
 
-<img loading="lazy" src={require('../assets/images/test-manager/linear/test-cards/linear-issue-test-cards.png').default} alt="A Linear issue showing test case, test run, and coverage cards under Resources" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/test-manager/linear/test-cards/linear-issue-test-cards.webp').default} alt="A Linear issue showing test case, test run, and coverage cards under Resources" className="doc_img"/>
 
 ### Why use test cards
 
@@ -76,7 +76,7 @@ If Linear is already connected to your account, skip to [Step 2](#step-2-turn-on
 3. In Linear, open **Settings > API**. Under **Personal API keys**, create a key and copy it.
 4. Back in <BrandName />, paste the key into **API Token** and click **Install**.
 
-<img loading="lazy" src={require('../assets/images/test-manager/linear/test-cards/linear-app-setup.png').default} alt="Linear App setup form with the API Token field" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/test-manager/linear/test-cards/linear-app-setup.webp').default} alt="Linear App setup form with the API Token field" className="doc_img"/>
 
 When the connection is ready, the **Linear App** card shows **Connected**. For more details, see [Linear App Integration](/support/docs/linear-app-integration/).
 
@@ -88,7 +88,7 @@ Test cards are off by default. The owner of the Linear connection turns them on.
 2. In the **Test cards in Linear** section, switch the toggle on.
 3. Wait a few seconds until the section shows **Healthy**.
 
-<img loading="lazy" src={require('../assets/images/test-manager/linear/test-cards/test-cards-toggle.png').default} alt="Linear App connection details with Test cards in Linear turned on and Healthy" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/test-manager/linear/test-cards/test-cards-toggle.webp').default} alt="Linear App connection details with Test cards in Linear turned on and Healthy" className="doc_img"/>
 
 When you turn test cards on, every Linear issue that already has tests linked in Test Manager gets its cards.
 
@@ -99,7 +99,7 @@ Admins can share their Linear connection, so everyone in the organization gets t
 1. In **Integrations**, click **⋯** on the **Linear App** card.
 2. Click **Share**.
 
-<img loading="lazy" src={require('../assets/images/test-manager/linear/test-cards/linear-app-menu.png').default} alt="Linear App card menu with Info and sharing options" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/test-manager/linear/test-cards/linear-app-menu.webp').default} alt="Linear App card menu with Info and sharing options" className="doc_img"/>
 
 :::note
 Each person's links use their own Linear connection if they have one, otherwise the shared connection. If a teammate connected Linear with their own API key, they need to turn on test cards for their own connection too.
@@ -116,11 +116,11 @@ You can link a single test case, or a whole test run, to a Linear issue.
 3. Select **Linear**.
 4. Enter the issue key (for example, `QA-165`) or paste the issue link, and click **Link Issue**.
 
-<img loading="lazy" src={require('../assets/images/test-manager/linear/test-cards/link-issue-dialog.png').default} alt="Link Issues dialog with Linear selected and an issue key entered" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/test-manager/linear/test-cards/link-issue-dialog.webp').default} alt="Link Issues dialog with Linear selected and an issue key entered" className="doc_img"/>
 
 The issue appears in the test case's list of linked issues.
 
-<img loading="lazy" src={require('../assets/images/test-manager/linear/test-cards/linked-issue-list.png').default} alt="A test case with a linked Linear issue listed under Linear" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/test-manager/linear/test-cards/linked-issue-list.webp').default} alt="A test case with a linked Linear issue listed under Linear" className="doc_img"/>
 
 #### Link a test run
 
@@ -144,7 +144,7 @@ Each linked Linear issue can show three kinds of cards. Click a card in Linear t
 
 The test case card shows the latest result of a test case and everything needed to run it again.
 
-<img loading="lazy" src={require('../assets/images/test-manager/linear/test-cards/test-case-card.png').default} alt="Test case card in Linear showing the result, priority, steps, preconditions, and the latest run" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/test-manager/linear/test-cards/test-case-card.webp').default} alt="Test case card in Linear showing the result, priority, steps, preconditions, and the latest run" className="doc_img"/>
 
 - **Result, Kind, Priority, Steps**: the latest result, the type of test case, its priority, and how many steps it has.
 - **Latest result**: the result, the test run it came from, and the browser and OS it ran on.
@@ -155,7 +155,7 @@ The test case card shows the latest result of a test case and everything needed 
 
 The test run card shows how a test run is going.
 
-<img loading="lazy" src={require('../assets/images/test-manager/linear/test-cards/test-run-card.png').default} alt="Test run card in Linear showing progress, pass rate, and results grouped by browser and OS" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/test-manager/linear/test-cards/test-run-card.webp').default} alt="Test run card in Linear showing progress, pass rate, and results grouped by browser and OS" className="doc_img"/>
 
 - **Result**: the worst result in the run so far. For example, **Failed** if any test failed.
 - **Progress and Pass rate**: how many tests have a result out of the total, and the share of those that passed.
@@ -166,7 +166,7 @@ The test run card shows how a test run is going.
 
 The coverage card gives one summary of everything linked to the issue.
 
-<img loading="lazy" src={require('../assets/images/test-manager/linear/test-cards/coverage-card.png').default} alt="Coverage card in Linear with health, tests that need attention, a results chart, tests, executions, and runs" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/test-manager/linear/test-cards/coverage-card.webp').default} alt="Coverage card in Linear with health, tests that need attention, a results chart, tests, executions, and runs" className="doc_img"/>
 
 - **Health**: **Healthy** when all linked tests pass, **Failing** when any test fails, and **Incomplete** when some tests have not passed yet.
 - **Needs attention**: the tests that failed, with the run and the browser and OS where they failed.
