@@ -116,6 +116,7 @@ These settings can be updated in the OAuth consent screen.
 
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/firebase/firebase-createproject.png').default} alt="Real "  className="doc_img" width="1366" height="450"/>
 
+
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/firebase/firebase-getstarted.png').default} alt="Real "  className="doc_img" width="1366" height="450"/>
 
 3. Enter your app information, select **Internal** or **External** as per the preference, add your contact information, and click **Create**.
@@ -138,27 +139,27 @@ For more information, see [OAuth 2.0 Client IDs](https://developers.google.com/i
 
 After the OAuth client is created, click the **Download** icon to download the JSON file, and then click **OK**.
 
-7. Search for **Firebase** in the search bar and select **Firebase** from the results.
+6. Search for **Firebase** in the search bar and select **Firebase** from the results.
 
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/firebase/firebase-searchproduct.png').default} alt="Real "  className="doc_img" width="1366" height="450"/>
 
-8. Select **Firestore**, click **Get started**, and then click **Continue**.
+7. Select **Firestore**, click **Get started**, and then click **Continue**.
 
-9. Select the **Default account for Firebase**, click **Add Firebase**, and when the confirmation message appears, click **Continue** to open the Firebase console.
+8. Select the **Default account for Firebase**, click **Add Firebase**, and when the confirmation message appears, click **Continue** to open the Firebase console.
 
-10. Select your project, click **Add app**, and choose your platform (for example, **Android**).
+9. Select your project, click **Add app**, and choose your platform (for example, **Android**).
 
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/firebase/firebase-selectapp.png').default} alt="Real "  className="doc_img" width="1366" height="450"/>
 
-11. On the **Add Firebase to your Android app** page, register your app, download the `google-services.json` file, add the Firebase SDK, and then click **Continue to console**.
+10. On the **Add Firebase to your Android app** page, register your app, download the `google-services.json` file, add the Firebase SDK, and then click **Continue to console**.
 
-12. On the project page, go to **DevOps & Engagement** > **App Distribution**, and upload your `.apk` file by dragging and dropping it or clicking **Browse**.
+11. On the project page, go to **DevOps & Engagement** > **App Distribution**, and upload your `.apk` file by dragging and dropping it or clicking **Browse**.
 
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/firebase/firebase-browse.png').default} alt="Real "  className="doc_img" width="1366" height="450"/>
 
-13. After the upload completes, add the email addresses of your testers, click **Next**, and then click **Distribute to [n] testers**.
+12. After the upload completes, add the email addresses of your testers, click **Next**, and then click **Distribute to [n] testers**.
 
-14. Each tester receives an invitation email from Firebase, and once they accept it, their status appears in the **Testers** list as shown below.
+13. Each tester receives an invitation email from Firebase, and once they accept it, their status appears in the **Testers** list as shown below.
 
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/firebase/firebase-acceptinvite.png').default} alt="Real "  className="doc_img" width="1366" height="450"/>
 
@@ -174,9 +175,10 @@ After the OAuth client is created, click the **Download** icon to download the J
 
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/firebase/firebase-selectaccount.png').default} alt="Real "  className="doc_img" width="1366" height="450"/>
 
+
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/firebase/firebase-allowaccount.png').default} alt="Real "  className="doc_img" width="1366" height="450"/>
 
-4. After the integration is complete, your Firebase project appears in the projects list, and you can click **Share Now** to share it with the testers you added in Google Cloud.
+3. After the integration is complete, your Firebase project appears in the projects list, and you can click **Share Now** to share it with the testers you added in Google Cloud.
 
 :::note
 Projects can also be shared later directly from the menu.
