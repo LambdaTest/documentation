@@ -44,104 +44,194 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 # Test Cards in Linear
 
-Test cards bring your Test Manager results into Linear. Link a test case or a test run to a Linear issue, and the issue shows its latest results as cards that update automatically. Your team can see what was tested and whether it passed without leaving Linear.
+Test cards bring your Test Manager results into the Linear issues your team works on. When you link a test case or a test run to a Linear issue, the issue shows a card with the latest results, steps, and progress. Cards update on their own as your team tests, so everyone in Linear sees the current state of testing without switching tools.
 
 <img loading="lazy" src={require('../assets/images/test-manager/linear/test-cards/linear-issue-test-cards.png').default} alt="A Linear issue showing test case, test run, and coverage cards under Resources" className="doc_img"/>
 
-### Before you begin
+### Why use test cards
 
-- A Linear account and a Linear personal API key.
-- Access to Test Manager, to link tests to Linear issues.
+- **See test results where the work happens.** Developers and product managers see whether a fix or feature passed testing directly on the Linear issue.
+- **Always current.** Results, names, and steps update within seconds of a change in Test Manager. Nobody has to copy results by hand.
+- **Know what is covered.** A coverage card on each issue sums up every linked test, what failed, and which runs they belong to.
+- **One click back to the details.** Every card links to the same test case or test run in Test Manager.
+
+### How it works
+
+1. You connect Linear to <BrandName /> and turn on test cards.
+2. In Test Manager, you link a test case or a test run to a Linear issue.
+3. <BrandName /> adds cards to that issue under **Resources**, and keeps them up to date as results come in.
+
+:::info Prerequisites
+- A Linear account with access to the issues you want to link, and a Linear personal API key.
+- Access to Test Manager in <BrandName />.
 - An admin role, if you want to share the Linear connection with your whole organization.
+:::
 
 ### Step 1: Connect Linear
 
-1. Go to **Integrations** and find **Linear App**. Click **Connect**.
-2. In Linear, go to **Settings > API**, create a personal API key, and copy it.
-3. Paste the key into **API Token** and click **Install**.
+If Linear is already connected to your account, skip to [Step 2](#step-2-turn-on-test-cards).
+
+1. In <BrandName />, go to **Integrations**.
+2. Find **Linear App** under **Project Management** and click **Connect**.
+3. In Linear, open **Settings > API**. Under **Personal API keys**, create a key and copy it.
+4. Back in <BrandName />, paste the key into **API Token** and click **Install**.
 
 <img loading="lazy" src={require('../assets/images/test-manager/linear/test-cards/linear-app-setup.png').default} alt="Linear App setup form with the API Token field" className="doc_img"/>
 
-For a detailed walkthrough, see [Linear App Integration](/support/docs/linear-app-integration/).
+When the connection is ready, the **Linear App** card shows **Connected**. For more details, see [Linear App Integration](/support/docs/linear-app-integration/).
 
 ### Step 2: Turn on test cards
 
-1. On the **Linear App** card, click **⋯** and choose **Info**.
-2. Switch on **Test cards in Linear**.
+Test cards are off by default. The owner of the Linear connection turns them on.
 
-The section shows **Healthy** when your cards are up to date.
+1. In **Integrations**, click **⋯** on the **Linear App** card and choose **Info**.
+2. In the **Test cards in Linear** section, switch the toggle on.
+3. Wait a few seconds until the section shows **Healthy**.
 
-<img loading="lazy" src={require('../assets/images/test-manager/linear/test-cards/test-cards-toggle.png').default} alt="Linear App connection details with Test cards in Linear turned on" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/test-manager/linear/test-cards/test-cards-toggle.png').default} alt="Linear App connection details with Test cards in Linear turned on and Healthy" className="doc_img"/>
 
-:::tip Share with your team
-Admins can click **⋯** > **Share** on the Linear App card, so everyone in the organization gets test cards without connecting Linear themselves.
-:::
+When you turn test cards on, every Linear issue that already has tests linked in Test Manager gets its cards.
+
+#### Share the connection with your team (optional)
+
+Admins can share their Linear connection, so everyone in the organization gets test cards without connecting Linear themselves.
+
+1. In **Integrations**, click **⋯** on the **Linear App** card.
+2. Click **Share**.
 
 <img loading="lazy" src={require('../assets/images/test-manager/linear/test-cards/linear-app-menu.png').default} alt="Linear App card menu with Info and sharing options" className="doc_img"/>
 
 :::note
-If a teammate connects Linear with their own API key, they need to turn on test cards for their own connection too.
+Each person's links use their own Linear connection if they have one, otherwise the shared connection. If a teammate connected Linear with their own API key, they need to turn on test cards for their own connection too.
 :::
 
 ### Step 3: Link tests to a Linear issue
 
-1. In Test Manager, open a test case or a test run.
+You can link a single test case, or a whole test run, to a Linear issue.
+
+#### Link a test case
+
+1. In Test Manager, open the test case.
 2. Open the **Issues** tab and click **Link Issue**.
-3. Select **Linear**, enter the issue key (for example, `QA-165`) or paste the issue link, and click **Link Issue**.
+3. Select **Linear**.
+4. Enter the issue key (for example, `QA-165`) or paste the issue link, and click **Link Issue**.
 
 <img loading="lazy" src={require('../assets/images/test-manager/linear/test-cards/link-issue-dialog.png').default} alt="Link Issues dialog with Linear selected and an issue key entered" className="doc_img"/>
 
-Within a few seconds, the cards appear under **Resources** in the Linear issue. To learn more about linking, see [Link Linear Issues with Test Manager](/support/docs/link-linear-issues-with-test-manager/).
+The issue appears in the test case's list of linked issues.
 
-### What the cards show
+<img loading="lazy" src={require('../assets/images/test-manager/linear/test-cards/linked-issue-list.png').default} alt="A test case with a linked Linear issue listed under Linear" className="doc_img"/>
 
-Click any card in Linear to open it. Each card has an **Open in** link that takes you to the same item in Test Manager.
+#### Link a test run
+
+1. In Test Manager, open the test run.
+2. Open the **Issues** tab and click **Link Issue**.
+3. Select **Linear**, enter the issue key or link, and click **Link Issue**.
+
+Within a few seconds, the cards appear under **Resources** in the Linear issue. You can link several test cases and test runs to the same issue. To learn more about linking, see [Link Linear Issues with Test Manager](/support/docs/link-linear-issues-with-test-manager/).
+
+### Understand the cards
+
+Each linked Linear issue can show three kinds of cards. Click a card in Linear to open it, and click **Open in** on the card to go to the same item in Test Manager.
+
+| Card | Added when you link |
+|---|---|
+| Test case card | a test case |
+| Test run card | a test run |
+| Coverage card | anything (one per issue) |
 
 #### Test case card
 
-Shows the latest result of a test case and everything needed to run it again:
+The test case card shows the latest result of a test case and everything needed to run it again.
 
-- The latest result, the test run it came from, and the browser and OS it ran on.
-- Priority, preconditions, and each step with its expected outcome.
-- Earlier results, when the test case ran in more than one test run.
+<img loading="lazy" src={require('../assets/images/test-manager/linear/test-cards/test-case-card.png').default} alt="Test case card in Linear showing the result, priority, steps, preconditions, and the latest run" className="doc_img"/>
 
-<img loading="lazy" src={require('../assets/images/test-manager/linear/test-cards/test-case-card-side-by-side.png').default} alt="A test case in Test Manager next to its test case card in Linear" className="doc_img"/>
+- **Result, Kind, Priority, Steps**: the latest result, the type of test case, its priority, and how many steps it has.
+- **Latest result**: the result, the test run it came from, and the browser and OS it ran on.
+- **Earlier results**: when the test case ran in more than one test run, each run with its result.
+- **Preconditions and steps**: each step with its expected outcome. Click **steps** to expand them.
 
 #### Test run card
 
-Shows how a test run is going:
+The test run card shows how a test run is going.
 
-- The overall result, progress, and pass rate.
-- The result of every test in the run, grouped by browser and OS.
+<img loading="lazy" src={require('../assets/images/test-manager/linear/test-cards/test-run-card.png').default} alt="Test run card in Linear showing progress, pass rate, and results grouped by browser and OS" className="doc_img"/>
 
-<img loading="lazy" src={require('../assets/images/test-manager/linear/test-cards/test-run-card-side-by-side.png').default} alt="A test run in Test Manager next to its test run card in Linear" className="doc_img"/>
+- **Result**: the worst result in the run so far. For example, **Failed** if any test failed.
+- **Progress and Pass rate**: how many tests have a result out of the total, and the share of those that passed.
+- **Passed, Failed, Not Started**: how many tests are in each state.
+- **Results by configuration**: every test in the run with its result, grouped by browser and OS.
 
 #### Coverage card
 
-One summary of everything linked to the issue:
+The coverage card gives one summary of everything linked to the issue.
+
+<img loading="lazy" src={require('../assets/images/test-manager/linear/test-cards/coverage-card.png').default} alt="Coverage card in Linear with health, tests that need attention, a results chart, tests, executions, and runs" className="doc_img"/>
 
 - **Health**: **Healthy** when all linked tests pass, **Failing** when any test fails, and **Incomplete** when some tests have not passed yet.
-- **Needs attention**: the tests that failed, and where they failed.
-- A results chart, plus every linked test, every execution, and every run.
+- **Needs attention**: the tests that failed, with the run and the browser and OS where they failed.
+- **Results**: a chart of the linked tests by their latest result.
+- **All tests**, **Executions**, and **Runs**: every linked test with its latest result, every result in every run, and each run with its progress.
 
-<img loading="lazy" src={require('../assets/images/test-manager/linear/test-cards/coverage-card.png').default} alt="The coverage card with health, tests that need attention, a results chart, and runs" className="doc_img"/>
+#### Result colors
 
-### Keeping cards up to date
+Every result on a card has a colored marker:
 
-Cards update on their own within seconds when you record a result, rename a test or test run, edit steps, or link and unlink tests in Test Manager. When you unlink a test, its card is removed from the issue.
+- 🟢 Passed
+- 🔴 Failed
+- 🔵 Not Started or In Progress
+- 🟡 Timed Out
+- 🟣 Lambda Error
+- 🟠 Aborted
+- ⚪ Skipped, or not yet added to a test run
 
-- **To refresh all cards**, open **Info** on the Linear App card and click **Sync test cards**.
-- **To stop updates**, switch off **Test cards in Linear**. Cards already in Linear stay as they are. Turn it back on to bring them up to date.
+### Keep cards up to date
+
+Cards update on their own within seconds when you:
+
+- Record a result in a test run.
+- Rename a test case or a test run.
+- Edit a test case's steps, preconditions, or priority.
+- Link or unlink a test case or a test run.
+
+#### Refresh all cards
+
+If a card looks out of date, refresh every linked issue at once.
+
+1. In **Integrations**, click **⋯** on the **Linear App** card and choose **Info**.
+2. Click **Sync test cards**.
+
+#### Remove a card
+
+Unlink the test case or test run from the issue in Test Manager. Its card is removed from the Linear issue. When nothing is linked to an issue any more, all of its cards are removed.
+
+#### Turn off test cards
+
+Switch off **Test cards in Linear** in the Linear App connection details. Updates stop, and the cards already in Linear stay as they are. When you turn it back on, every linked issue is brought up to date.
 
 ### Troubleshooting
 
-**Cards do not appear on an issue.** Check that **Test cards in Linear** is on, and that the test is linked to the correct issue key in Test Manager. If you connected Linear with your own API key, turn on test cards for your connection.
+**Cards do not appear on an issue.**
+- Check that **Test cards in Linear** is on and shows **Healthy**.
+- Check that the test is linked to the correct issue key in Test Manager.
+- If you connected Linear with your own API key, turn on test cards for your connection.
 
-**The connection shows Needs attention.** Follow the **Next step** shown in the **Test cards in Linear** section, for example, reconnecting Linear.
+**The connection shows Needs attention.**
+Follow the **Next step** shown in the **Test cards in Linear** section, for example, reconnecting Linear with a key that can write to Linear.
 
-**A card looks out of date.** Click **Sync test cards** in the Linear App connection details.
+**A card looks out of date.**
+Click **Sync test cards** in the Linear App connection details.
 
-**Who can see the cards?** Anyone who can see the Linear issue.
+### FAQ
+
+**Who can see the cards?**
+Anyone who can see the Linear issue.
+
+**Can I edit a card in Linear?**
+Make the change in Test Manager instead. The card follows within seconds. Cards only carry information from Test Manager to Linear.
+
+**Does turning off test cards delete existing cards?**
+No. The cards stay in Linear but stop updating until you turn test cards back on.
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
