@@ -838,7 +838,6 @@ module.exports = {
           "pre-loaded-extension",
           "real-time-testing-troubleshooting",
           "http-basic-authentication",
-          "webview-testing-in-android",
           "real-time-locally-hosted-pages",
           "real-time-recents-and-favourites",
           "real-time-upload-and-download-files",
