@@ -1,6 +1,7 @@
 ---
 id: test-cards-in-linear
 title: Test Cards in Linear
+toc_max_heading_level: 2
 hide_title: true
 sidebar_label: Test Cards in Linear
 description: Show Test Manager test cases and test runs as live cards on Linear issues, with the latest results, steps, and a coverage summary that update automatically.
@@ -227,67 +228,43 @@ Switch off **Test cards in Linear** in the Linear App connection details. Update
 
 ## Troubleshooting
 
-<details>
-<summary><strong>Cards Do Not Appear on an Issue</strong></summary>
+### Cards Do Not Appear on an Issue
 
 - **Check that test cards are on**: The **Test cards in Linear** section in the Linear App connection details should show **Healthy**.
 - **Check the link**: Make sure the test is linked to the correct issue key in Test Manager.
 - **Check whose connection is used**: If you connected Linear with your own API key, turn on test cards for your connection, or remove it and use the shared connection.
 
-</details>
-
-<details>
-<summary><strong>The Connection Shows Needs Attention</strong></summary>
+### The Connection Shows Needs Attention
 
 - **Follow the next step**: The **Test cards in Linear** section shows a **Next step**, for example, reconnecting Linear with an API key that can write to Linear.
 - **Ask the connection owner**: Only the owner of the connection can reconnect it or change its settings.
 
-</details>
-
-<details>
-<summary><strong>A Card Looks Out of Date</strong></summary>
+### A Card Looks Out of Date
 
 - **Refresh the cards**: Click **Sync test cards** in the Linear App connection details.
 - **Check that test cards are on**: Cards stop updating while test cards are turned off.
 
-</details>
-
 ## FAQ
 
-<details>
-<summary><strong>Who can see the test cards?</strong></summary>
+### Who can see the test cards?
 
 Anyone who can see the Linear issue.
 
-</details>
-
-<details>
-<summary><strong>Can I edit a card in Linear?</strong></summary>
+### Can I edit a card in Linear?
 
 Make the change in Test Manager instead. The card follows within seconds. Cards only carry information from Test Manager to Linear.
 
-</details>
-
-<details>
-<summary><strong>Does turning off test cards delete existing cards?</strong></summary>
+### Does turning off test cards delete existing cards?
 
 No. The cards stay in Linear but stop updating until you turn test cards back on.
 
-</details>
-
-<details>
-<summary><strong>Do teammates need their own Linear connection?</strong></summary>
+### Do teammates need their own Linear connection?
 
 No. When an admin shares the Linear connection with the organization, everyone gets test cards from that one connection.
 
-</details>
-
-<details>
-<summary><strong>Can one Linear issue show results from several tests?</strong></summary>
+### Can one Linear issue show results from several tests?
 
 Yes. Link as many test cases and test runs as you need. Each gets its own card, and the coverage card sums them up.
-
-</details>
 
 ## Support
 
