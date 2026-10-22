@@ -825,8 +825,6 @@ dismissChromeNotificationPrompt(page);
 </TabItem> 
 </Tabs>
 
-For more details, refer to this [GitHub repository](https://github.com/harsh43580/stage-playwright-test/tree/main/src/test/java/com/lambdatest).
-
 
 
 Continue with the guides below to expand your Playwright mobile and cloud test coverage on TestMu AI.
