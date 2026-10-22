@@ -2003,6 +2003,7 @@ module.exports = {
           "link-ado-issues-with-test-manager",
           "lambdatest-azure-devops-app",
           "link-linear-issues-with-test-manager",
+          "test-cards-in-linear",
 
 
         ],
