@@ -71,7 +71,7 @@ Configure these values:
 
 The `staging` profile names **your test target**, not the Rook service. `ROOK_ENV=prod` selects the public Rook service. The script uses the LT environment credential pair and isolated `ROOK_HOME`; it does not copy a developer's browser session.
 
-Execution calls the real target and can spend Rook credits. Review the suite, tool grants, fixture isolation, and spending before enabling a job. Use a fresh checkout/output directory and avoid concurrent jobs against shared mutable fixtures.
+Execution calls the real target and can spend Rook credits. Review the suite, tool grants, fixture isolation, and spending before enabling a job. The script syncs before it runs, so your organization needs an Agent Assurance plan that includes Rook cloud. Since 0.1.13, on a plan without it, such as Starter, rook sync is refused with upgrade_plan and the job fails before running anything; the script does not fall back to a local --test run. See [plan refusals](/support/docs/agent-assurance-troubleshooting/#plan-refusals). Use a fresh checkout/output directory and avoid concurrent jobs against shared mutable fixtures.
 
 ## What Makes the Job Pass
 
@@ -128,7 +128,7 @@ export ROOK_HOME="$job_temp/home"
 export ROOK_RUN_NAME="jenkins-$BUILD_NUMBER"
 curl -fsSL https://raw.githubusercontent.com/LambdaTest/rook/main/install.sh \
 -o "$job_temp/install-rook.sh"
-bash "$job_temp/install-rook.sh" --version 0.1.11 --dir "$job_temp/bin"
+bash "$job_temp/install-rook.sh" --version 0.1.13 --dir "$job_temp/bin"
 export PATH="$job_temp/bin:$PATH"
 bash ci/rook-ci.sh
 '''
