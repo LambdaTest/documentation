@@ -102,11 +102,11 @@ callbackURL: https://your-server.example.com/hyperexecute/callback
 
 **Step 3:** Open the job on the HyperExecute dashboard and click **YAML** to confirm the callback URL:
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/job-callback/job-yaml-callback-url.png').default} alt="HyperExecute job YAML view showing the callbackURL flag" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/job-callback/job-yaml-callback-url.webp').default} alt="HyperExecute job YAML view showing the callbackURL flag" className="doc_img"/>
 
 **Step 4:** When the job finishes, your endpoint receives the callback request:
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/job-callback/callback-request-headers.png').default} alt="Callback request showing the POST method, URL, query parameters and JSON content type" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/job-callback/callback-request-headers.webp').default} alt="Callback request showing the POST method, URL, query parameters and JSON content type" className="doc_img"/>
 
 > **NOTE:** Query parameters in your callback URL are kept in the request.
 
@@ -166,7 +166,7 @@ The request body is JSON:
 }
 ```
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/job-callback/callback-request-body.png').default} alt="JSON body of a job status callback" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/job-callback/callback-request-body.webp').default} alt="JSON body of a job status callback" className="doc_img"/>
 
 ## Responding to the Callback
 
