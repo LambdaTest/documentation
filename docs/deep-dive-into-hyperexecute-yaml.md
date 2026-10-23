@@ -2829,4 +2829,16 @@ execution:
 
 > This feature is supported only in [`autosplit`](/support/docs/deep-dive-into-hyperexecute-yaml/#autosplit) and [`matrix`](/support/docs/deep-dive-into-hyperexecute-yaml/#matrix) mode and not in hybrid mode
 
+### `callbackURL`
+An HTTPS URL that HyperExecute calls once, with a `POST`, when the job finishes. The request contains the job status, test counts and a link to the job.
+
+<VerifiedTag value="Verified" />
+
+```yaml
+callbackURL: https://your-server.example.com/hyperexecute/callback
+```
+
+The URL must use `https://`, be 255 characters or fewer, contain no username or password, and point to a public address. See [Receive the Job Status via a Callback URL](/support/docs/hyperexecute-job-callback/) for the request body and how to respond.
+
+
 <!-- GENERAL ENDED-->
