@@ -2840,7 +2840,7 @@ An HTTPS URL that HyperExecute calls once, with a `POST`, when the job finishes.
 callbackURL: https://your-server.example.com/hyperexecute/callback
 ```
 
-The URL must use `https://`, be 255 characters or fewer, contain no username or password, and point to a public address. See [Receive a Callback When a Job Finishes](/support/docs/hyperexecute-job-callback/) for the request body and how to respond.
+The URL must use `https://`, be 255 characters or fewer, contain no username or password, and point to a public address. See [Job Completion Callback](/support/docs/hyperexecute-job-callback/) for the request body and how to respond.
 
 
 <!-- GENERAL ENDED-->
