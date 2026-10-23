@@ -276,7 +276,7 @@ Nightwatch.js reads its grid setup from `nightwatch.conf.js` in the cloned <Bran
 https://github.com/LambdaTest/nightwatch-selenium-sample/blob/master/nightwatch.conf.js
 ```
 
-Clone that project, run `npm i`, save your exported files in its `tests` folder, then run `npm run single`. That command runs every file in `tests` on Chrome, including the sample `googleTest.js`, so delete the sample if you don't want it to run. See [Selenium With Nightwatch.js](/support/docs/nightwatch-with-selenium-running-nightwatch-automation-scripts-on-testmu-selenium-grid/) for the sample project and run commands.
+Clone that project, run `npm i`, save your exported files in its `tests` folder, then run `npm run single`. That command runs every file in `tests` on Chrome, including the sample `googleTest.js`, so delete the sample if you don't want it to run. See [Selenium With Nightwatch.js](/support/docs/javascript-with-selenium-running-javascript-automation-scripts-on-testmu-selenium-grid/?framework=nightwatch) for the sample project and run commands.
 
 </TabItem>
 

@@ -2162,6 +2162,7 @@ module.exports = {
         items: [
           { type: "doc", id: "lambdatest-running-your-first-selenium-test" },
           { type: "doc", id: "selenium-agent-skills" },
+          { type: "doc", id: "selenium-java-sdk" },
           { type: "doc", id: "inside-lambdatest-automation-platform" },
           { type: "doc", id: "debugging-options" },
           { type: "doc", id: "filter-your-selenium-tests" },
