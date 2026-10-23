@@ -227,9 +227,11 @@ Under Device Control, you'll find multiple options to customize your device's se
 2. **Rotate**: Change the screen orientation between landscape and portrait modes.
 3. **Recent Apps** : Available on `iOS 15` and above, this feature allows you to view recent apps. Note that it is not supported on devices that rely on a physical button for accessing recent apps instead of the swipe-up gesture.
 4. **Bluetooth**: Used to enable the bluetooth functionality during the session.
-
+5. **Fold Device**: Available on Samsung Galaxy foldable devices, this option lets you switch the device between its folded and unfolded states. 
 
 <img loading="lazy" src={require('../assets/images/real-device-app-testing/devicecontrolplusbluetooth.png').default} alt="add" width="1346" height="647" className="doc_img"/>
+
+<img loading="lazy" src={require('../assets/images/real-device-app-testing/devicecontrolfolddevice.png').default} alt="add" width="1346" height="647" className="doc_img"/>
 
 ### Settings
 
