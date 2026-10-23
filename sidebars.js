@@ -111,7 +111,7 @@ module.exports = {
               },
               {
                 type: "doc",
-                label: "Receive a Job Completion Callback",
+                label: "Job Completion Callback",
                 id: "hyperexecute-job-callback",
               },
               {
