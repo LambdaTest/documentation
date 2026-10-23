@@ -97,7 +97,7 @@ import { BRAND_URL } from '@site/src/component/BrandName';
         "https://www.youtube.com/@TestMuAI"
       ]
     },
-    "dateModified": "2026-10-13"
+    "dateModified": "2026-10-23"
   }) }}
 />
 
@@ -113,7 +113,7 @@ Install → launch Rook → sign in → select a project
   → generate and review scenarios → sync → approve one run → inspect evidence
 ```
 
-The interactive workflow and terminal screenshots were tested with **Rook 0.1.11** on October 13, 2026. Discovery, profile generation, scenario generation, and judging use TestMu AI credits; even a small suite can involve several model calls. Review the proposed work and credit balance before approving it. The browser examples below are separately identified saved runs.
+The interactive workflow and terminal screenshots were tested with **Rook 0.1.11** on October 13, 2026. Discovery, profile generation, scenario generation, and judging use TestMu AI credits; even a small suite can involve several model calls. Review the proposed work and credit balance before approving it. Since 0.1.13, Rook also checks your organization's Agent Assurance plan before any model call or credit spend. On a plan without Rook cloud, such as Starter, step 5's `/sync` is refused with an upgrade link and the run continues on this machine only; see [plan refusals](/support/docs/agent-assurance-troubleshooting/#plan-refusals). The browser examples below are separately identified saved runs.
 
 Already have a live agent? Follow the same sequence with your own [source or requirements](/support/docs/agent-assurance-connect-and-explore-agents/) and [invocation profile](/support/docs/rook-profiles-and-hooks/#add-a-profile-interactively).
 
@@ -364,7 +364,7 @@ While Rook runs, the scenario row shows its current phase. This capture is in **
 
 Wait for completion before opening the report. Press Esc only if you intend to interrupt; stopping Rook does not undo actions already performed by the target.
 
-A normal run needs a synchronized agent version. <code>--test</code> is for an intentionally local, unsynchronized experiment; it does not add a run to the shared timeline.
+A normal run needs a synchronized agent version. <code>--test</code> is for an intentionally local, unsynchronized experiment; it does not add a run to the shared timeline. On a plan without Rook cloud, <code>/sync</code> is refused with <code>upgrade_plan</code> and the run goes on this machine only, as <code>--test</code> does; review it with <code>rook ui --local</code>.
 
 ### 6. Open the results
 
