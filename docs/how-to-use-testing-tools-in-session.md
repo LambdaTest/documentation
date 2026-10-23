@@ -283,9 +283,13 @@ With the **zoom in-out** slider, you can zoom in and out in your real device as 
 
 ### UI Inspector
 
-The Intelligent **UI Inspector** for real device testing streamlines mobile app testing by enabling direct interaction with devices, allowing testers to efficiently inspect app elements without the need of repeatedly opening and closing the inspector. The Intelligent UI Inspector offers the capability to crеatе custom XPaths еffortlеssly for automation test scripts.	
+The Intelligent **UI Inspector** for real device testing streamlines mobile app testing by enabling direct interaction with devices, allowing testers to efficiently inspect app elements without the need of repeatedly opening and closing the inspector. The Intelligent UI Inspector offers the capability to crеatе custom XPaths еffortlеssly for automation test scripts.
 
-<img loading="lazy" src={require('../assets/images/real-device-app-testing/ui-inspector.webp').default} alt="add" width="1346" height="647" className="doc_img"/>
+:::note
+To learn more, see the [UI Inspector](/support/docs/ui-inspector/) and [Appium Inspector](/support/docs/appium-inspector-on-real-devices-app/) documentation.
+:::
+
+<img loading="lazy" src={require('../assets/images/real-device-app-testing/ui-inspector.png').default} alt="add" width="1346" height="647" className="doc_img"/>
 
 
 
