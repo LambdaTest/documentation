@@ -91,7 +91,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         "https://www.youtube.com/@TestMuAI"
       ]
     },
-    "dateModified": "2026-10-14T12:00:00+05:30"
+    "dateModified": "2026-10-23T12:00:00+05:30"
   }) }}
 />
 This guide outlines the steps required to create, configure, and manage test runs within <BrandName />'s Test Manager. It provides developers and testers with a clear understanding of the process, enabling efficient test execution and organization.
@@ -113,18 +113,21 @@ Use descriptive names to easily identify test runs later.
 
 <img loading="lazy" src={require('../assets/images/test-run/2.png').default} alt="Real "  className="doc_img"/>
 
+Creating the test run takes you through three steps: **Enter Details**, **Add Test Cases**, and **Set Configurations and Assignee**. The steps are shown at the top of the page, so you can see which one you are on.
+
 ## 2. Adding and Configuring Test Cases
-### Access the Test Cases Tab
-- Upon successful creation, you will be redirected to the Test Cases tab.
-- Here, you can add multiple test cases to the test run.
+### Add Test Cases
+In the **Add Test Cases** step, choose the test cases to include in the test run.
 
-<img loading="lazy" src={require('../assets/images/test-run/3.png').default} alt="Real "  className="doc_img"/>
+- Use the **Folders** tree to work folder by folder. Each folder shows how many of its test cases are selected, and selecting a folder's checkbox selects every test case in it.
+- Use search and the **Status**, **Tags**, and **More** filters to narrow the list. Most filters can also exclude values: switch one to **Not Equals** to leave out test cases with the selected values, while test cases with no value for that field stay in the list. See [Include or Exclude Values](/support/docs/manual-test-case-creation/#include-or-exclude-values).
+- Select test cases one by one, or use the checkbox in the list header to select every test case the list shows. With filters applied, select all picks exactly the test cases the filters show.
+- The number of selected test cases is shown at the bottom of the page. Use **Clear All** to start over.
+- Click **Add Test Cases** to add the selection and move to the next step.
 
-### Assign Test Cases
-- Select the desired test cases from the list. Use search and the **Status**, **Tags**, and **More** filters to narrow it. Most filters can also exclude values: switch one to **Not Equals** to leave out test cases with the selected values, while test cases with no value for that field stay in the list. See [Include or Exclude Values](/support/docs/manual-test-case-creation/#include-or-exclude-values). The same filters are available when you add test cases to an existing test run from **Manage Test Cases**, and **Select all** adds exactly the test cases the filters show.
-- Assign Assignees to each test case.
-- Add test case configurations individually or in bulk.
-> Note: Configurations allow you to define environment settings, such as browser and device combinations.
+The same picker opens when you add or remove test cases later from **Manage Test Cases**.
+
+<img loading="lazy" src={require('../assets/images/test-run/create-flow/add-test-cases.png').default} alt="Add Test Cases step with the folder tree, filters, and every test case selected" className="doc_img"/>
 
 <img loading="lazy" src={require('../assets/images/test-manager/filters/manage-test-cases-status-filter.png').default} alt="Status filter set to Not Equals in Manage Test Cases" className="doc_img"/>
 
@@ -132,13 +135,49 @@ Use descriptive names to easily identify test runs later.
 Test cases shared into your project from other projects can be added to a test run too. Select them from **Shared Incoming**. See [Share Test Cases Across Projects](/support/docs/share-test-cases-across-projects/#add-shared-test-cases-to-test-runs).
 :::
 
-<img loading="lazy" src={require('../assets/images/test-run/4.png').default} alt="Real "  className="doc_img"/>
+### Set Configurations and Assignee
+In the **Set Configurations and Assignee** step, every added test case is listed along with what it still needs. A test case is flagged when it has no configuration, or when some of its test instances have no assignee. Below each test case, a summary shows how many configurations and test instances it has, and how many of those test instances are assigned. Expand a test case to see its configurations.
+
+For each test case, you can:
+- **Set Config**: choose the configurations to run it on. Each configuration creates one test instance of the test case. Once a test case has configurations, use the same action to update them.
+- **Set Assignee**: assign its test instances to a team member.
+- **Delete**: remove the test case from the test run.
+
+To change many test cases at once, select them, or select all of them from the list header, and use the same actions in the header.
+
+The summary bar at the bottom of the page shows the number of test cases added, the number of test instances, how many test cases are missing a configuration, how many test instances are missing an assignee, and the configurations in use.
+
+To add or remove test cases without leaving this step, click **Manage Test Cases**.
+
+<img loading="lazy" src={require('../assets/images/test-run/create-flow/set-configurations-and-assignee.png').default} alt="Set Configurations and Assignee step with every test case selected and configurations and assignees still missing" className="doc_img"/>
 
 ### Add Configurations
-- Choose multiple configurations from the dropdown or create new configurations as needed.
-- Apply configurations to the selected test cases.
+**Set Config** opens the **Add Configuration** panel.
+- Search configurations by name, or filter them by OS, browser, and resolution.
+- Select the configurations to apply. You can select several, or all of them.
+- Click **Create a Configuration** to add one that does not exist yet, or **Manage configurations** to open your configuration list.
+- Click **Apply**.
 
-<img loading="lazy" src={require('../assets/images/test-run/5.png').default} alt="Real "  className="doc_img"/>
+> Note: Configurations allow you to define environment settings, such as browser and device combinations.
+
+:::warning
+Applying configurations to several test cases at once replaces the configurations those test cases already have.
+:::
+
+<img loading="lazy" src={require('../assets/images/test-run/create-flow/add-configuration-panel.png').default} alt="Add Configuration panel with every configuration selected" className="doc_img"/>
+
+To run a parameterized test case once for each dataset row, set a dataset on its configuration. See [Run Parameterized Manual Test Cases](/support/docs/test-manager-variables-parameters-secrets/#run-parameterized-manual-test-cases).
+
+### Large Test Runs Are Processed in the Background
+When you add a large number of test cases, or apply configurations or assignees to a large number of them, the change is applied in the background. The page stays responsive while you set up large test runs, instead of hanging or failing.
+
+- While a change is being applied, a progress indicator is shown at the top of the step. You can wait on the page, or continue working elsewhere and come back later.
+- **Save Test Run** is unavailable until the change finishes.
+- When the change finishes, the list and the summary bar are updated. For example, applying 40 configurations to 91 test cases creates 3,640 test instances.
+
+<img loading="lazy" src={require('../assets/images/test-run/create-flow/applying-changes-in-background.png').default} alt="Configurations being applied in the background, with Save Test Run unavailable" className="doc_img"/>
+
+<img loading="lazy" src={require('../assets/images/test-run/create-flow/configurations-applied.png').default} alt="Set Configurations and Assignee step after 40 configurations were applied to 91 test cases" className="doc_img"/>
 
 ## 3. Saving and Managing Test Runs
 ### Finalize the Test Run
@@ -258,7 +297,7 @@ You can manage your test runs using the options available in the **three-dot men
 
 | Action | Description |
 |---|---|
-| **Edit** | Modify the test run by adding or removing test cases. KaneAI test runs can only be edited if they have not been executed. |
+| **Edit** | Modify the test run by adding or removing test cases from **Manage Test Cases**, or by changing configurations and assignees. Large changes are [processed in the background](#large-test-runs-are-processed-in-the-background). KaneAI test runs can only be edited if they have not been executed. |
 | **Duplicate** | Create a copy of the test run for re-execution or variation testing. |
 | **Archive** | Move completed test runs to the archive to keep your workspace clean and organized. |
 | **Delete** | Permanently remove a test run that is no longer needed. |
