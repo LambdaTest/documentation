@@ -96,13 +96,13 @@ import { BRAND_URL } from '@site/src/component/BrandName';
         "https://www.youtube.com/@TestMuAI"
       ]
     },
-    "dateModified": "2026-10-13"
+    "dateModified": "2026-10-23"
   }) }}
 />
 
 # Rook CLI Reference
 
-Use `rook` to start the interactive terminal, or `rook <command>` from your shell. This reference was checked against the **public Rook 0.1.11 CLI** on October 13, 2026. It groups command syntax, examples, RCA, state changes, diagnostics, and output handling on one page. Commands that invoke the target or spend credits still require appropriate approval.
+Use `rook` to start the interactive terminal, or `rook <command>` from your shell. This reference was checked against the **public Rook 0.1.13 CLI** on October 23, 2026. It groups command syntax, examples, RCA, state changes, diagnostics, and output handling on one page. Commands that invoke the target or spend credits still require appropriate approval.
 
 Using Claude Code or another coding assistant? Describe your goal in chat with the [Rook skill](/support/docs/rook-coding-agents/#guided-skill-actions); the assistant handles these commands. This page is the explicit CLI reference, not a list of commands you must manually repeat while using a skill.
 
@@ -514,6 +514,7 @@ Nothing in the project is changed. The command reads the authenticated account a
 - If authentication is missing or expired, run <code>/login</code> and <code>/auth status</code>.
 - If the controller cannot be reached, run <code>/doctor</code>.
 - In automation, use <code>rook plan --json</code> and inspect the response as well as the exit status. A null credit balance means unknown, not zero or unlimited. The account balance is not an enforced task-wide spending cap.
+- Since 0.1.13, Rook checks your organization's Agent Assurance plan before any model call or credit spend. With no plan, an ended free trial, or an expired subscription, work is refused with <code>plan_required</code> whatever the credit balance. On a plan without Rook cloud, such as Starter, syncing, cloud project status, and recording runs on Rook cloud are refused with <code>upgrade_plan</code>. Each refusal names the billing page that lifts it; see [plan refusals](/support/docs/agent-assurance-troubleshooting/#plan-refusals).
 
 ## Projects and Discovery {#projects-and-discovery}
 
@@ -795,7 +796,7 @@ The shell form is <code>rook status</code> with the same options.
 | <code>ahead</code> | Local content changed after the last sync. | Review and run <code>/sync</code>. |
 | <code>behind</code> | Upstream advanced while this machine stayed on an older version. | Reconcile upstream changes before syncing. |
 | <code>diverged</code> | Local and upstream histories both moved. | Reconcile the branch; Rook does not overwrite it silently. |
-| <code>unknown</code> | Local state is known, but upstream could not be checked. | Restore connectivity and rerun status. |
+| <code>unknown</code> | Local state is known, but upstream could not be checked: the service was unreachable, or a plan without Rook cloud refused the read (since 0.1.13). | Restore connectivity and rerun status, or follow the plan message status prints. |
 
 Status returns upstream run information for <code>--agent</code>, or for the active agent when the option is omitted. It identifies unfinished local runs and completed runs whose scenario results still need reconciliation.
 
@@ -829,12 +830,14 @@ An agent version pins its specification, features, and scenarios. Profile revisi
 - If local content changed, sync advances the upstream version.
 - If another machine advanced the same agent first, Rook records the local version as a branch and reports the conflict instead of overwriting upstream state.
 - An agent directory with no readable specification is skipped and reported.
+- Since 0.1.12, if Rook's service does not answer for every agent it was sent, sync exits 1 even when others were recorded. The summary adds <code>N not returned</code> or <code>N malformed</code> and suggests running <code>/sync</code> again. Rook warns for each such agent and does not save its local sync state.
+- Since 0.1.13, sync needs an Agent Assurance plan that includes Rook cloud. On a plan without it, such as Starter, sync is refused with <code>upgrade_plan</code> and the upgrade link; see [plan refusals](/support/docs/agent-assurance-troubleshooting/#plan-refusals).
 
 Use <code>/status</code> before and after synchronization to see the local/upstream relationship.
 
 #### Run Requirement {#sync-run-requirement}
 
-A timeline run requires the agent to have been synchronized at least once. When the tree changes later, an attended run can ask whether to sync or use test mode. In CI, choose explicitly between <code>rook sync</code> and <code>rook run --test</code>.
+A timeline run requires the agent to have been synchronized at least once. When the tree changes later, an attended run can ask whether to sync or use test mode. In CI, choose explicitly between <code>rook sync</code> and <code>rook run --test</code>. On a plan without Rook cloud, a normal run says so and continues on this machine only, as <code>--test</code> does.
 
 ### /run {#run}
 
@@ -1181,6 +1184,7 @@ Use <code>/doctor</code> as the first diagnostic when Rook cannot authenticate, 
 
 ~~~text
 /doctor
+/doctor --json
 /doctor --session <session-id>
 ~~~
 
@@ -1188,6 +1192,7 @@ From a shell:
 
 ~~~bash
 rook doctor
+rook doctor --json
 rook doctor --session <session-id>
 ~~~
 
@@ -1197,12 +1202,15 @@ Doctor is intentionally ungated. It remains available when identity, project, co
 
 Doctor reports:
 
-- Exact Rook and Node.js versions.
+- Exact Rook and Node.js versions, and the OS name, version, and CPU architecture (since 0.1.12).
 - Workspace path and configured environment.
 - Controller and API URLs, each with an independent reachability probe.
 - Derived identity and authentication status.
 - Active project, interaction mode, and TTY state.
 - Overall connectivity state derived from identity and the two service probes.
+- Since 0.1.12, the terminal: whether stdout is a terminal, the terminal app, the active shell and its version, privilege, color level, and size. A field Doctor cannot detect reads <code>unknown</code>.
+
+Since 0.1.12, <code>--json</code> prints the whole report as one JSON object with snake_case keys and no banner. Services appear as <code>controller</code> and <code>api</code> objects with <code>url</code> and <code>status</code>, <code>os</code> has <code>name</code>, <code>version</code>, and <code>arch</code>, <code>tty</code> is a boolean, and the terminal facts are in the <code>env</code> object. Exit codes are unchanged.
 
 A service that returns an HTTP refusal is still reachable. Doctor distinguishes “the service answered” from “the current credential or project may use it.” It does not test the agent endpoint in an invocation profile; use <code>/profile test</code> for that.
 
@@ -1212,7 +1220,7 @@ Use <code>--session</code> with a recorded Rook session ID to locate its diagnos
 
 ### /update {#update}
 
-Use <code>/update</code> to check for a newer public Rook release. It can also perform an upgrade for a recognized global npm or recorded shell installation, so treat it as an installation-changing command, not a read-only version check.
+Use <code>/update</code> to check for a newer public Rook release. It can also perform an upgrade for a recognized global npm, recorded shell, or Homebrew installation, so treat it as an installation-changing command, not a read-only version check.
 
 <img loading="lazy" src={require('../assets/images/rook/commands/rook-command-update.png').default} alt="Rook update command help showing auto and JSON forms" width="2200" height="969" className="doc_img"/>
 
@@ -1226,11 +1234,13 @@ Use <code>/update</code> to check for a newer public Rook release. It can also p
 
 The shell form is <code>rook update</code> with the same argument and option.
 
-Public releases use semantic versions such as <code>0.1.11</code>. A recognized npm installation is updated at its recorded prefix; a recognized shell installation uses its recorded directory. Homebrew installations print the appropriate <code>brew upgrade</code> command instead. Project-local npm copies, older shell installs without a usable record, and ambiguous installations can require manual instructions. Review the output and verify <code>rook --version</code> afterward.
+Public releases use semantic versions such as <code>0.1.13</code>. A recognized npm installation is updated at its recorded prefix; a recognized shell installation uses its recorded directory. Since 0.1.12, a Homebrew installation runs <code>brew upgrade</code> itself with the Homebrew that owns Rook's installation, refreshes taps first, and reports success only after the new version is installed. If Homebrew installs nothing new, for example right after a release before the tap catches up, Rook says the command changed nothing and exits 1. After a confirmed update, Rook prints “run rook again to use the new version.” The installer receives your proxy variables (<code>HTTP_PROXY</code>, <code>HTTPS_PROXY</code>, <code>ALL_PROXY</code>, <code>NO_PROXY</code>), and Ctrl-C goes to the installer while it runs. Project-local npm copies, older shell installs without a usable record, and ambiguous installations can require manual instructions. Review the output and verify <code>rook --version</code> afterward.
+
+In the TUI, choosing **update now** at the startup notice or typing <code>/update</code> closes the TUI and runs <code>rook update</code> in your terminal, then exits with the update's status (since 0.1.12). <code>/update auto</code> still runs inside the TUI.
 
 If you previously chose “never ask again” in the TUI update notice, run <code>/update auto</code> to re-enable automatic notices.
 
-The latest public release checked on October 13, 2026 is [0.1.11](https://github.com/LambdaTest/rook/releases/tag/v0.1.11). Use the installed command's help for version-specific options. If an npm 0.1.1 or 0.1.2 install cannot update, follow the [public-registry repair command](/support/docs/rook-installation/#repair-an-npm-011-or-012-installation). Windows users can follow [PowerShell setup and upgrades](/support/docs/rook-installation/#windows).
+The latest public release checked on October 23, 2026 is [0.1.13](https://github.com/LambdaTest/rook/releases/tag/v0.1.13). Use the installed command's help for version-specific options. If an npm 0.1.1 or 0.1.2 install cannot update, follow the [public-registry repair command](/support/docs/rook-installation/#repair-an-npm-011-or-012-installation). Windows users can follow [PowerShell setup and upgrades](/support/docs/rook-installation/#windows).
 
 ## Export Diagnostic Logs {#export}
 
@@ -1248,7 +1258,7 @@ rook export logs --out ./rook-diagnostics.zip
 | <code>--session &lt;id&gt;</code> | Also include the selected session transcript. |
 | <code>--all-sessions</code> | Include every recorded session for this project. |
 
-Use <code>rook doctor --session &lt;session-id&gt;</code> to identify relevant paths first. Start with the smallest useful bundle. Export does not upload the files, but the bundle can contain paths, session text, and sensitive target data. A bundled session includes its transcript (<code>transcript.jsonl</code>): every prompt Rook sent, every tool result the conversation carried, and every answer. Tool output can quote environment values, including values stored with <code>env set</code>. Review and redact before sharing; do not publish home credentials or raw transcripts.
+Use <code>rook doctor --session &lt;session-id&gt;</code> to identify relevant paths first. Start with the smallest useful bundle. Export does not upload the files, but the bundle can contain paths, session text, and sensitive target data. A bundled session includes its transcript (<code>transcript.jsonl</code>): every prompt Rook sent, every tool call and result, and every answer. Since 0.1.12 it also records each message sent to the agent under test with its reply, and how each job, sync, run phase, and scenario ended; strings of 4 KiB or more are stored in a <code>blobs/</code> folder that the bundle includes. Since 0.1.12, Rook masks credentials before writing each transcript line: values stored with <code>env set</code> that are 8 characters or longer, credential-named environment variables, your sign-in, and keys, tokens, and passwords recognizable by name or form. URL credentials and query strings are replaced too. Masking is best effort: shorter values, personal data, passwords passed as command-line arguments, secrets inside images, and transcripts recorded by earlier versions are not masked. Review and redact before sharing; do not publish home credentials or raw transcripts.
 
 ## Migration From Older Examples
 
@@ -1267,7 +1277,7 @@ Use <code>rook doctor --session &lt;session-id&gt;</code> to identify relevant p
 
 This older command is no longer available. Use <code>/plan</code> for account credits and read cost/progress output for the active operation.
 
-The TUI status bar shows the account balance and credits spent in the current session. Model-backed phases report their spending. Rook checks credit boundaries between calls and preserves completed local work when credits are exhausted.
+The TUI status bar shows the account balance and credits spent in the current session. Model-backed phases report their spending. Rook checks credit boundaries between calls and preserves completed local work when credits are exhausted. Since 0.1.13 it also checks your organization's Agent Assurance plan before any model call or credit spend.
 
 ### /new {#new}
 
@@ -1288,7 +1298,7 @@ Active project and agent selections, profiles, scenarios, runs, credentials, and
 
 Only use a flag where `rook help <command>` lists it.
 
-With <code>--json</code>, <code>plan</code>, <code>status</code>, <code>run</code>, a normal <code>report</code>, <code>scenarios list</code>, <code>project --workspace</code>, <code>mcp</code>, and <code>ask</code> write one JSON document to stdout. Commands such as <code>explore</code>, <code>generate</code>, <code>sync</code>, profile operations, paid <code>report --rca</code>, and <code>update</code> can emit text even when they accept <code>--json</code>. Check the actual stdout before parsing it, then inspect the relevant saved files or make a separate structured read.
+With <code>--json</code>, <code>plan</code>, <code>status</code>, <code>run</code>, a normal <code>report</code>, <code>scenarios list</code>, <code>project --workspace</code>, <code>mcp</code>, <code>ask</code>, and (since 0.1.12) <code>doctor</code> write one JSON document to stdout. Commands such as <code>explore</code>, <code>generate</code>, <code>sync</code>, profile operations, paid <code>report --rca</code>, and <code>update</code> can emit text even when they accept <code>--json</code>. Check the actual stdout before parsing it, then inspect the relevant saved files or make a separate structured read.
 
 Keep stdout and stderr separate when saving JSON: do not use <code>2>&amp;1</code> for a machine-readable result file. Refusals and parser errors can leave stdout empty. A failure document may contain <code>error</code> or <code>reason</code>; <code>ok: true</code> can accompany a discarded run, so it is not sufficient to establish success. See the [public headless contract](https://github.com/LambdaTest/rook/blob/main/skill-installer/skills/references/headless-contract.md).
 
