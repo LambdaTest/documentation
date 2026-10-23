@@ -1,8 +1,8 @@
 ---
 id: hyperexecute-job-callback
-title: Job Completion Callback
+title: Receive the Job Status via a Callback URL
 hide_title: true
-sidebar_label: Job Completion Callback
+sidebar_label: Receive the Job Status as a Callback
 description: Set a callback URL on a HyperExecute job or a KaneAI test run to receive an HTTPS POST with the job status and test counts when the job finishes.
 keywords:
   - TestMu AI Hyperexecute
@@ -15,6 +15,7 @@ slug: hyperexecute-job-callback/
 canonical: https://www.testmuai.com/support/docs/hyperexecute-job-callback/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -33,7 +34,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "Job Completion Callback",
+          "name": "Receive the Job Status as a Callback",
           "item": `${BRAND_URL}/support/docs/hyperexecute-job-callback/`
         }]
       })
@@ -41,64 +42,68 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 ></script>
 
 
-# Job Completion Callback
+# Receive the Job Status via a Callback URL
 
-A job completion callback sends one HTTPS `POST` request to a URL you set when a job finishes. The request contains the job status, the test counts and a link to the job.
+HyperExecute can send the result of a job to a URL you choose. When the job finishes, HyperExecute sends one HTTPS `POST` request to the callback URL with the job status, the test counts and a link to the job.
 
-## Where You Can Set It
-
-| Where | Setting |
-|-------|---------|
-| HyperExecute YAML, run with the [HyperExecute CLI](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/) | `callbackURL` |
-| KaneAI [HyperExecute API for CI/CD](/support/docs/kaneai-ci-cd-automation/) | `callback_url` |
+You can set the callback URL in the HyperExecute YAML or, for KaneAI test runs, in the HyperExecute API request.
 
 ## Callback URL Requirements
 
-- Uses `https://` and is publicly reachable.
-- Accepts a `POST` request with a JSON body.
-- Is 255 characters or fewer, with no username or password in it.
+- The URL must use `https://` and be publicly reachable.
+- The URL must be 255 characters or fewer and must not contain a username or password.
+- The endpoint must accept a `POST` request with a JSON body.
 
-## Set the Callback URL
+## YAML Configuration
 
-### HyperExecute YAML
+Add the `callbackURL` flag to your HyperExecute YAML file:
 
-Add `callbackURL` to your YAML file and run the job with the latest HyperExecute CLI:
+<VerifiedTag value="Verified" />
+
+```yaml
+callbackURL: https://your-server.example.com/hyperexecute/callback
+```
+
+## How to Receive the Job Status via a Callback URL?
+
+**Step 1:** Add the `callbackURL` flag to your YAML file. A complete example, saved as `hyperexecute.yaml`:
+
+<VerifiedTag value="Verified" />
 
 ```yaml
 version: "0.1"
 runson: linux
+autosplit: true
+concurrency: 1
+globalTimeout: 15
+testSuiteTimeout: 10
+testDiscovery:
+  type: raw
+  mode: dynamic
+  command: echo "test1"
+testRunnerCommand: echo "Running $test"
 callbackURL: https://your-server.example.com/hyperexecute/callback
-# ...the rest of your configuration
 ```
 
-The callback URL appears in the job's YAML view on the dashboard:
-
-<img loading="lazy" src={require('../assets/images/hyperexecute/job-callback/job-yaml-callback-url.png').default} alt="HyperExecute job YAML view showing the callbackURL key" className="doc_img"/>
-
-### KaneAI HyperExecute API
-
-Add `callback_url` to the request body:
+**Step 2:** Run the job with the latest [HyperExecute CLI](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/):
 
 ```bash
-curl --location 'https://test-manager-api.lambdatest.com/api/atm/v1/hyperexecute' \
---header 'Content-Type: application/json' \
---header 'Authorization: Basic <Base64Auth>' \
---data '{
-    "test_run_id": "YOUR_TEST_RUN_ID",
-    "callback_url": "https://your-server.example.com/hyperexecute/callback"
-}'
+./hyperexecute --user YOUR_USERNAME --key YOUR_ACCESS_KEY --config hyperexecute.yaml
 ```
 
-- A test run with both web and app test cases runs as two jobs and sends two callbacks, one per job. Each callback has its own `job_id`.
-- `callback_url` is not supported for sequential test runs.
+**Step 3:** Open the job on the HyperExecute dashboard and click **YAML** to confirm the callback URL:
 
-## Callback Request
+<img loading="lazy" src={require('../assets/images/hyperexecute/job-callback/job-yaml-callback-url.png').default} alt="HyperExecute job YAML view showing the callbackURL flag" className="doc_img"/>
 
-HyperExecute sends a `POST` request with a JSON body. Query parameters in your URL are kept.
+**Step 4:** When the job finishes, your endpoint receives the callback request:
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/job-callback/callback-request-headers.png').default} alt="Callback request showing the POST method, URL, query parameters and JSON content type" className="doc_img"/>
 
-Example body:
+> **NOTE:** Query parameters in your callback URL are kept in the request.
+
+## Callback Request Body
+
+The request body is JSON:
 
 ```json
 {
@@ -136,11 +141,27 @@ Example body:
 }
 ```
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/job-callback/callback-request-body.png').default} alt="JSON body of a job completion callback" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/job-callback/callback-request-body.png').default} alt="JSON body of a job status callback" className="doc_img"/>
+
+## How to Receive the Job Status for KaneAI Test Runs?
+
+When you [run a KaneAI test run on HyperExecute from your CI/CD pipeline](/support/docs/kaneai-ci-cd-automation/), add `callback_url` to the request body:
+
+```bash
+curl --location 'https://test-manager-api.lambdatest.com/api/atm/v1/hyperexecute' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: Basic <Base64Auth>' \
+--data '{
+    "test_run_id": "YOUR_TEST_RUN_ID",
+    "callback_url": "https://your-server.example.com/hyperexecute/callback"
+}'
+```
+
+> **NOTE:** A test run with both web and app test cases runs as two jobs and sends two callbacks, one for each job. `callback_url` is not supported for sequential test runs.
 
 ## Responding to the Callback
 
-- Return a `2xx` status.
+- Return a `2xx` status code.
 - The request is not signed. To confirm it, look up the job with the [HyperExecute API](https://www.testmuai.com/support/api-doc/?key=hyperexecute) using `job_id`.
 
 ## Troubleshooting
