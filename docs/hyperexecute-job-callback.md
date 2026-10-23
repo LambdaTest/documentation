@@ -1,9 +1,9 @@
 ---
 id: hyperexecute-job-callback
-title: Receive a Callback When a Job Finishes
+title: Job Completion Callback
 hide_title: true
-sidebar_label: Receive a Job Completion Callback
-description: Get an HTTPS POST with the status and test counts of your HyperExecute job as soon as it finishes, instead of polling the job API.
+sidebar_label: Job Completion Callback
+description: Set a callback URL on a HyperExecute job or a KaneAI test run to receive an HTTPS POST with the job status and test counts when the job finishes.
 keywords:
   - TestMu AI Hyperexecute
   - HyperExecute callback
@@ -33,7 +33,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "Receive a Job Completion Callback",
+          "name": "Job Completion Callback",
           "item": `${BRAND_URL}/support/docs/hyperexecute-job-callback/`
         }]
       })
@@ -41,27 +41,28 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 ></script>
 
 
-# Receive a Callback When a Job Finishes
+# Job Completion Callback
 
-Add a callback URL to your job, and HyperExecute sends one HTTPS `POST` to it when the job finishes. The request has the job's status, test counts and a link to the job, so your pipeline or tools can act on the result without polling.
+A job completion callback sends one HTTPS `POST` request to a URL you set when a job finishes. The request contains the job status, the test counts and a link to the job.
 
-## Before You Begin
+## Where You Can Set It
 
-You need an endpoint that:
+| Where | Setting |
+|-------|---------|
+| HyperExecute YAML, run with the [HyperExecute CLI](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/) | `callbackURL` |
+| KaneAI [HyperExecute API for CI/CD](/support/docs/kaneai-ci-cd-automation/) | `callback_url` |
+
+## Callback URL Requirements
 
 - Uses `https://` and is publicly reachable.
 - Accepts a `POST` request with a JSON body.
-- Has a URL of 255 characters or fewer, with no username or password in it.
+- Is 255 characters or fewer, with no username or password in it.
 
-:::tip
-To try it out first, use a free request inspector such as [webhook.site](https://webhook.site).
-:::
+## Set the Callback URL
 
-## Add the Callback URL
+### HyperExecute YAML
 
-### Option 1: In the HyperExecute YAML
-
-Add `callbackURL` to your YAML file and run the job with the latest [HyperExecute CLI](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/):
+Add `callbackURL` to your YAML file and run the job with the latest HyperExecute CLI:
 
 ```yaml
 version: "0.1"
@@ -70,13 +71,13 @@ callbackURL: https://your-server.example.com/hyperexecute/callback
 # ...the rest of your configuration
 ```
 
-You can see the callback URL in the job's YAML view on the dashboard:
+The callback URL appears in the job's YAML view on the dashboard:
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/job-callback/job-yaml-callback-url.jpg').default} alt="HyperExecute job YAML view showing the callbackURL key" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/job-callback/job-yaml-callback-url.png').default} alt="HyperExecute job YAML view showing the callbackURL key" className="doc_img"/>
 
-### Option 2: In the KaneAI HyperExecute API
+### KaneAI HyperExecute API
 
-When you [run a KaneAI test run on HyperExecute from your CI/CD pipeline](/support/docs/kaneai-ci-cd-automation/), add `callback_url` to the request body:
+Add `callback_url` to the request body:
 
 ```bash
 curl --location 'https://test-manager-api.lambdatest.com/api/atm/v1/hyperexecute' \
@@ -88,14 +89,14 @@ curl --location 'https://test-manager-api.lambdatest.com/api/atm/v1/hyperexecute
 }'
 ```
 
-- A test run with both web and app test cases runs as two jobs, so you receive two callbacks. Use `job_id` to tell them apart.
+- A test run with both web and app test cases runs as two jobs and sends two callbacks, one per job. Each callback has its own `job_id`.
 - `callback_url` is not supported for sequential test runs.
 
-## What You Receive
+## Callback Request
 
-A `POST` request with a JSON body. Query parameters in your URL are kept.
+HyperExecute sends a `POST` request with a JSON body. Query parameters in your URL are kept.
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/job-callback/callback-request-headers.jpg').default} alt="Callback request showing the POST method, URL, query parameters and JSON content type" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/job-callback/callback-request-headers.png').default} alt="Callback request showing the POST method, URL, query parameters and JSON content type" className="doc_img"/>
 
 Example body:
 
@@ -135,15 +136,12 @@ Example body:
 }
 ```
 
-The fields you will use most are `result.status`, the test counts in `result`, and `result.job_url`.
+<img loading="lazy" src={require('../assets/images/hyperexecute/job-callback/callback-request-body.png').default} alt="JSON body of a job completion callback" className="doc_img"/>
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/job-callback/callback-request-body.jpg').default} alt="JSON body of a HyperExecute job completion callback" className="doc_img"/>
+## Responding to the Callback
 
-## Respond to the Callback
-
-- Return a `2xx` status quickly, then do any longer work afterwards.
-- Use `job_id` to ignore a request you have already handled.
-- The request is not signed. To check it is genuine, look up the job with the [HyperExecute API](https://www.testmuai.com/support/api-doc/?key=hyperexecute) using `job_id`.
+- Return a `2xx` status.
+- The request is not signed. To confirm it, look up the job with the [HyperExecute API](https://www.testmuai.com/support/api-doc/?key=hyperexecute) using `job_id`.
 
 ## Troubleshooting
 
@@ -153,5 +151,5 @@ The fields you will use most are `result.status`, the test counts in `result`, a
 | `callbackURL must be 255 characters or fewer` | Shorten the URL. |
 | `callbackURL must not contain userinfo` | Remove `user:password@` from the URL. |
 | `callback_url is not supported for sequential test runs` | Remove `callback_url`, or run the test run in parallel. |
-| No callback arrives | Use the latest CLI, and a public `https://` URL that answers with `2xx` without redirecting. |
-| No callback for a job that never started | Fix the error shown when you started the job. Only jobs that run send a callback. |
+| No callback arrives | Use the latest HyperExecute CLI and a public `https://` URL that returns `2xx` without a redirect. |
+| No callback for a job that did not start | Only jobs that run send a callback. Fix the error shown when the job was started. |
