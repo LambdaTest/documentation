@@ -250,6 +250,20 @@ Unified **Test Manager** simplifies test authoring, management, triggering, and 
 
 
 
+
+### Incognito mode
+
+You can test websites in Chrome's Incognito mode on Android devices. Before opening an Incognito tab, enable the **Incognito Screenshot** flag in Chrome:
+
+1. Open Chrome and go to `chrome://flags/` in a regular tab.
+2. Search for **Incognito Screenshot** and select **Enabled** from the dropdown.
+3. Click **Relaunch** to restart Chrome.
+
+Once Chrome restarts, you can open and use Incognito tabs as usual.
+
+<img loading="lazy" src={require('../assets/images/real-device-browser-testing/incognitotab.png').default} alt="add" width="1346" height="647" className="doc_img"/>
+
+
 > **Notes:** The max duration for running manual tests on <BrandName /> Real Device Cloud is 2 hours. In order to extend the duration, you can opt for our dedicated real device cloud.
 
 
