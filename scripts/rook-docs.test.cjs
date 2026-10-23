@@ -36,7 +36,7 @@ test('public installation examples use the current Homebrew tap and include nati
     assert.doesNotMatch(bash, /brew tap LambdaTest\/rook https:\/\/github\.com\/LambdaTest\/rook\.git/);
     assert.match(doc, /npm\.cmd install -g @testmuai\/rook\b/);
   }
-  assert.match(install, /npm\.cmd install -g @testmuai\/rook@0\.1\.11/);
+  assert.match(install, /npm\.cmd install -g @testmuai\/rook@0\.1\.13/);
   assert.match(install, /\{#windows\}/);
   assert.match(install, /\{#windows-wsl\}/);
   assert.match(install, /Get-Command rook\.cmd/);
@@ -277,7 +277,7 @@ test('supporting workflow pages show real checkpoints with honest scope and perm
 
 test('CLI Reference documents the public baseline, interactive screenshots, and approved saved-run RCA', () => {
   const doc = fs.readFileSync(path.join(root, 'docs/agent-assurance-command-reference.md'), 'utf8');
-  assert.match(doc, /public Rook 0\.1\.11 CLI/);
+  assert.match(doc, /public Rook 0\.1\.13 CLI/);
   assert.match(doc, /Rook 0\.1\.11 interactive TUI/);
   assert.match(doc, /They show command help, not completed paid operations/);
   assert.match(doc, /\{#root-cause-analysis\}/);
@@ -307,7 +307,7 @@ test('CLI Reference documents the public baseline, interactive screenshots, and 
 
 test('Troubleshooting covers current Windows, scenario, RCA, and support recovery paths', () => {
   const doc = fs.readFileSync(path.join(root, 'docs/agent-assurance-troubleshooting.md'), 'utf8');
-  assert.match(doc, /public Rook 0\.1\.11/);
+  assert.match(doc, /public Rook 0\.1\.13/);
   assert.match(doc, /rook\.cmd --version/);
   assert.match(doc, /npm\.cmd prefix -g/);
   assert.match(doc, /token_economy.*blocked if the profile does not report usage/);

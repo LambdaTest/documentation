@@ -95,7 +95,7 @@ import { BRAND_URL } from '@site/src/component/BrandName';
         "https://www.youtube.com/@TestMuAI"
       ]
     },
-    "dateModified": "2026-10-13"
+    "dateModified": "2026-10-23"
   }) }}
 />
 
@@ -239,9 +239,11 @@ Variables such as `ROOK_HOOK`, `ROOK_RUN_ID`, `ROOK_SCENARIO_ID`, `ROOK_SESSION`
 
 ## Telemetry {#telemetry}
 
-Rook records operational events (no prompts, no code, no command arguments) and sends them to TestMu AI, attributed to your organization, to find failures. The first interactive session prints a one-time notice, and nothing is uploaded until that notice has been shown. Logged-out and local-mode sessions do not upload.
+Rook records operational events (no prompts, no code, no command arguments) and sends them to TestMu AI, attributed to your organization, to find failures. The first interactive session prints a one-time notice, and no events are uploaded until that notice has been shown. Logged-out and local-mode sessions do not upload events.
 
-Turn it off for one process with `ROOK_TELEMETRY=off`, or for every run with `"telemetry": false` in `config.json` under the Rook home (`~/.testmuai/rook/` unless `ROOK_HOME` is set).
+Since 0.1.12, registering a session with Rook's service also sends a small terminal report: a known terminal name, whether stdout is a terminal, its columns and rows, color level, and user or root on macOS and Linux. Raw values such as `TERM_PROGRAM`, `SHELL`, user name, and host name are never sent. This report does not wait for the one-time notice. A failed evidence upload during a run is also reported, once telemetry uploading is allowed, with only the failing stage, HTTP status, error code, evidence kind, and run ID.
+
+Turn telemetry, including the terminal report, off for one process with `ROOK_TELEMETRY=off`, or for every run with `"telemetry": false` in `config.json` under the Rook home (`~/.testmuai/rook/` unless `ROOK_HOME` is set).
 
 ## UI Access and Evidence Privacy
 
