@@ -150,6 +150,11 @@ module.exports = {
               },
               {
                 type: "doc",
+                label: "Receive the Job Status as a Callback",
+                id: "hyperexecute-job-callback",
+              },
+              {
+                type: "doc",
                 label: "Process Artifacts in Global Post",
                 id: "hyperexecute-global-post-artifacts",
               },
