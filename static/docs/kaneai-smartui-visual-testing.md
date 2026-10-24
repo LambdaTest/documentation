@@ -17,12 +17,12 @@ The **Visual Comparison** step works in both web tests and app tests. This guide
 ## Creating Your First Visual Test
 
 ### Initiate a Web Test
-To begin, navigate to the [KaneAI dashboard](https://www.testmuai.com/login/?redirectTo=https://kaneai.lambdatest.com/objective) and click **Author Browser Test**. You can configure network settings before clicking **Start Testing** to launch the test authoring environment.
+To begin, navigate to the [KaneAI dashboard](https://www.testmuai.com/login/?redirectTo=https://kaneai.lambdatest.com/objective) and click **Author Browser Test**. In the **Author browser test** panel, you can set the **Network Configuration**, **Environment**, **Timezone**, **Chrome Options** and **Custom Headers**. Click **Author Test** to launch the test authoring environment.
 
 ### Add a Visual Comparison Step
 Author your test by writing steps in plain language, such as `go to lambdatest`.
 
-To add a visual test step, type `/` in the "Write a step" editor and select **Visual Comparison** from the command menu. You may also use the **Eye Icon** on the dashboard for quick access.
+To add a visual test step, type `/` in the step editor and select **Visual Comparison** from the command menu.
 
 ### Configure Your Screenshot
 A configuration modal will appear for your screenshot.
@@ -66,17 +66,17 @@ SmartUI matches a screenshot to its baseline by name. If two steps in the same t
 ## Analyzing Baselines and Regressions
 
 ### Establish the Baseline
-The first time the test is executed, it captures an initial screenshot that becomes the **Baseline** for all future comparisons. You can view this image by clicking **Show Baseline**.
+The first time the step runs, it captures an initial screenshot that becomes the **Baseline** for all future comparisons. The step shows **Baseline** and the comparison mode, such as **Smart Ignore**. You can view this image by clicking **Show Baseline**.
 
 ### Rerun and Analyze the Comparison
-When the step is run again during authoring, a new screenshot is captured and compared against the baseline. Click **Show Comparison** to open the SmartUI view. This interface highlights any visual differences found between the two images.
+When the step is run again during authoring, for example with **Run this step** from the step's **...** menu, a new screenshot is captured and compared against the baseline. If changes are found, click **Show Comparison** to open the comparison view. It shows the **Baseline** and **Captured** screenshots side by side, highlights the differences, and shows the **Mismatch Percentage**.
 
 ### Approve or Reject Changes
-Within the comparison view, you can review the changes and decide on a verdict.
+Within the comparison view, you can review the changes and decide on a verdict with the buttons under **Verdict**.
 * **Reject Screenshot:** If the changes are unintended defects, you may reject the comparison.
 * **Approve Screenshot:** If the changes are intentional, you may accept the comparison. This will update the baseline with the new image.
 
-You can also adjust project settings like **Compare Type** and **Mis-Match Threshold** directly from this view.
+You can also click the settings icon in this view to open **Project Settings** and change the **Compare Type** (**Strict** or **Smart Ignore**) and the **Mis-Match Threshold**.
 
 ### Review the Baseline in App Tests
 
@@ -87,13 +87,15 @@ The screenshot covers the whole device screen, including the status bar with the
 ## Saving and Automating Your Visual Test
 
 ### Save Your Test Case
-Once your test flow is complete, click **Save** in the top-right header. You will be prompted to save the session, where you can define the **Project**, **Folder**, **Test Name**, and **Description**.
+Once your test flow is complete, click **Save** in the top-right header. The **Save Test Case** dialog asks whether to run a sample execution of the generated code. Click **Save & Run Execution** to save the test and run it once on HyperExecute, or select **Skip sample execution of code** and click **Save & Skip Execution** to save it without running it.
+
+KaneAI opens the saved test case, with its steps, including the **Visual Comparison** step.
 
 ### Execution and Scheduling
 
 Once your test case is saved, navigate to the **Test Runs** tab to configure and launch its execution. For a complete guide on the initial setup, refer to our documentation on [Test Run Execution](/support/docs/kaneai-hyperexecute-test-run-execution/).
 
-You can execute your test using one of two methods:
+Open the test run and click **Run on HyperExecute**. You can execute your test using one of two methods:
 
 * **Run Instance Now**
 This option triggers an immediate, one-time execution of your test. It is ideal for quick validations or debugging a specific change.
@@ -102,9 +104,9 @@ This option triggers an immediate, one-time execution of your test. It is ideal 
 This option allows you to automate your visual regression testing by setting up a recurring schedule. Learn more in our guide to [Scheduled Test Runs](/support/docs/kaneai-scheduled-test-runs/).
 
 ### Using Advanced Configurations for Visual Regression
-While running **Run Instances Now** user can access **Visual Regression** settings via **Advanced Configurations**
+When you click **Run Instances Now**, the **Run with HyperExecute** panel opens. Click **Advanced Configurations** to open the **Visual Regression** settings.
 
-Here users can enable **Visual Regression** settings to use the advanced configurations:
+Open the **Visual Regression** tab and turn on the toggle to use these settings:
 * Custom Browsers (upto 4)
 * Custom Viewports (upto 5)
 * Custom Devices (upto 2) with Orientation (Portrait and Landscape)
@@ -134,19 +136,19 @@ Open the [SmartUI Dashboard](https://www.testmuai.com/login/?redirectTo=https://
 |---|---|---|
 | Authoring session | `kane_ai_`, created with the first Visual Comparison step of the test. Each authoring session is one build. | `default` |
 | Sample execution after **Save & Run Execution** | The same `kane_ai_` project, as a new build | The device used for the sample execution, which can differ from the authoring device |
-| **Execute** and test runs | A project named after your KaneAI project ID. Each run is one build. | The device the test ran on, for example `Galaxy S25 Ultra Android` |
+| **Execute** and test runs | A project with the same name as your KaneAI project. Each run is one build. | The device the test ran on, for example `Galaxy S26 Android` |
 
-SmartUI compares an app screenshot only with a baseline of the same name taken on the same device. The first screenshot on a device has no baseline and is shown as a **New Screenshot**. Later runs on the same device are compared with it.
+SmartUI compares an app screenshot only with a baseline of the same name taken on the same device. The first screenshot on a device has no baseline and is shown as a **New Screenshot**. It stays new in later runs until you approve it. After you approve it, later runs on the same device are compared with it.
 
 In the comparison view, the **Variants** field shows the device, and **Mismatch Percentage** shows how much of the screen changed. You can approve or reject the screenshot from **Verdict**.
 
 ### Handle the Device Status Bar
 
-Because the screenshot includes the status bar, the clock and status icons differ between runs even when the app has not changed. In the comparison above, the app is unchanged and the only highlighted area is the status bar, with a mismatch of 0.0878%.
+Because the screenshot includes the status bar, the clock and status icons differ between runs even when the app has not changed. In the comparison above, the app is unchanged and the only highlighted area is the status bar, with a mismatch of 0.1321%.
 
 To keep the status bar from failing your comparisons, open the SmartUI project's **Settings** > **Comparison** and use one of these options:
 
 * **Bounding Boxes:** Click **Add New Area** to ignore the status bar region.
 * **Custom Mis-Match Acceptance:** Set an accept percentage above the change the status bar causes.
 
-Comparison settings belong to the SmartUI project. The **Mis-Match Threshold** and comparison mode you set in KaneAI apply to the `kane_ai_` project used while authoring. Runs from **Execute** and test runs use the comparison settings of the project named after your KaneAI project ID, so set these options in that project too.
+Comparison settings belong to the SmartUI project. The **Mis-Match Threshold** and comparison mode you set in KaneAI apply to the `kane_ai_` project used while authoring. Runs from **Execute** and test runs use the comparison settings of the project named after your KaneAI project, so set these options in that project too.

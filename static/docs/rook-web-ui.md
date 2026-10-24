@@ -190,7 +190,7 @@ Run these from the intended workspace. If no project exists yet, follow the [qui
 
 #### First-Use and Empty States {#projects-first-use-and-empty-states}
 
-When no projects are returned, Rook shows a **Get started** view with installation commands, a documentation link, **Schedule a Demo**, and a GitHub link. This is an onboarding state of Projects, not a separate dashboard or a browser-based test generator. Follow [Install Rook](/support/docs/rook-installation/), then the quickstart to publish your first definition.
+When no projects are returned, Rook shows the **Agent Assurance Rook** Get started view: a short description of Rook, the installation command, a documentation link, **Schedule Demo**, **Upgrade Now** (opens the billing page, when billing is available), and a GitHub link. This is an onboarding state of Projects, not a separate dashboard or a browser-based test generator. Follow [Install Rook](/support/docs/rook-installation/), then the quickstart to publish your first definition.
 
 If you expected an existing project, first check the account, organization, and CLI environment. Separate deployments do not share a project list. Also return to the first page if you followed an old paginated URL. Do not create another project just because the expected one is missing.
 
@@ -505,7 +505,8 @@ Review artifacts for secrets and customer information before downloading or shar
 | Project or agent is missing | Confirm the browser account, ROOK_ENV, selected project, and that rook sync succeeded. |
 | Run exists locally but not in the browser | Check for --test, then use rook runs sync for outstanding normal-run uploads. |
 | Local edits are absent | The Web UI shows synchronized records, not your current unsynchronized files. |
-| A file, trace, or metric is missing | Confirm the hook actually collected it, the run completed the relevant phase, and uploads finished. Missing evidence is not an observed failure or zero value. |
+| A file, trace, or metric is missing | Confirm the hook actually collected it, the run completed the relevant phase, and uploads finished. Since 0.1.12, a run whose evidence uploads failed ends with N evidence upload(s) failed — see &lt;log file&gt;. Missing evidence is not an observed failure or zero value. |
+| Sync or a hosted view is refused with an upgrade link | Since 0.1.13, Rook cloud needs an Agent Assurance plan that includes it. On a plan without it, such as Starter, results stay on your machine; open them with rook ui --local. See [plan refusals](/support/docs/agent-assurance-troubleshooting/#plan-refusals). |
 | Sign-in loops or access is denied | Match the browser account and organization to the CLI. Browser login and exported CLI credentials may belong to different accounts. |
 | You need offline or exact on-disk evidence | Run rook ui --local from the correct workspace. |
 
