@@ -14,6 +14,7 @@ url: https://www.testmuai.com/support/docs/kane-ai-api-testing/
 site_name: TestMu AI
 slug: kane-ai-api-testing/
 canonical: https://www.testmuai.com/support/docs/kane-ai-api-testing/
+toc_max_heading_level: 2
 ---
 
 import Tabs from '@theme/Tabs';
