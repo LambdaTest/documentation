@@ -51,6 +51,7 @@ module.exports = {
           "hyperexecute-performance-testing",
           "hyperexecute-run-jmeter-tests",
           "hyperexecute-gattling-testing",
+          "hyperexecute-k6-testing",
         ],
       },
       {

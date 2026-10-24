@@ -3,7 +3,7 @@ id: hyperexecute-k6-testing
 title: Execute k6 Tests on HyperExecute
 hide_title: false
 sidebar_label: k6
-description: Prevent app launch disaster! Test app performance under load with HyperExecute and JMeter. Get real-time insights, identify weaknesses & ensure smooth launch. 
+description: Prevent app launch disaster! Test app performance under load with HyperExecute and k6. Get real-time insights, identify weaknesses & ensure smooth launch. 
 keywords:
   - hyperexecute performance testing
   - hyperexecute
@@ -56,7 +56,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       "@id": "https://www.testmuai.com/support/docs/hyperexecute-k6-testing/"
     },
     "headline": "Execute k6 Tests on HyperExecute",
-    "description": "Prevent app launch disaster! Test app performance under load with HyperExecute and JMeter. Get real-time insights, identify weaknesses & ensure smooth launch.",
+    "description": "Prevent app launch disaster! Test app performance under load with HyperExecute and k6. Get real-time insights, identify weaknesses & ensure smooth launch.",
     "url": "https://www.testmuai.com/support/docs/hyperexecute-k6-testing/",
     "image": {
       "@type": "ImageObject",
@@ -132,7 +132,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       "@context": "https://schema.org",
       "@type": "HowTo",
       "name": "Execute k6 Tests on HyperExecute",
-      "description": "Prevent app launch disaster! Test app performance under load with HyperExecute and JMeter. Get real-time insights, identify weaknesses & ensure smooth launch.",
+      "description": "Prevent app launch disaster! Test app performance under load with HyperExecute and k6. Get real-time insights, identify weaknesses & ensure smooth launch.",
       "step": [
         {
           "@type": "HowToStep",
@@ -312,3 +312,93 @@ OR use this command if you have not exported your username and access key in the
 Visit the [HyperExecute Dashboard](https://www.testmuai.com/login/?redirectTo=https://hyperexecute.lambdatest.com/hyperexecute) and check your Job status. 
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/k6/output.png').default} alt="Image" className="doc_img"/>
+
+---
+
+## Run k6 Tests via HyperExecute UI
+
+In addition to CLI-based execution, HyperExecute lets you upload a k6 script, set the load from the dashboard, and run it without writing a YAML file.
+
+### Before You Begin
+
+- Your script must export a `default` function. HyperExecute runs that function for every virtual user.
+- The **Total Users**, **Duration** and **Ramp-up Time** you set in the dashboard replace the load profile in your script (`vus`, `duration`, `stages` and `scenarios` in `options`). Everything else in the script, such as thresholds, checks and tags, still applies.
+- Scripts that use the `k6/browser` module are not supported in the UI flow yet. Run browser scripts with the [CLI flow](#step-1-configure-your-test-suite) above.
+
+### Step 1: Setup your k6 Project
+
+1. Go to the [HyperExecute Project's Dashboard](https://www.testmuai.com/login/?redirectTo=https://hyperexecute.lambdatest.com/hyperexecute/projects) and click on the **New Project** button.
+2. In **Type of Project**, select **k6**, enter a **Project Name** and click on the **Continue** button.
+3. Browse and upload your k6 script (`.js` or `.ts`), along with any modules or data files it reads (for example `.json`, `.csv` or `.txt`).
+4. Click on the **Save** button.
+
+To add more files later, open the project and click on **+ Add files to Project**.
+
+<img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/performance_testing/k6-project.png').default} alt="k6 project with an uploaded script" width="1400" height="863" className="doc_img"/>
+
+### Step 2: Configure Test Load Criteria
+
+Select your script and click on the **Run** button. Configure the following parameters and click on the **Continue** button:
+
+- **Total Users:** The number of virtual users (VUs) you want to run. The maximum depends on your plan.
+- **Duration (min):** How long the test runs at full load. The maximum depends on your plan.
+- **Ramp-up Time (min):** How long it takes to go from zero to the full number of users. Set it to `0` to start all users at once.
+
+<img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/performance_testing/k6-test-load-criteria.png').default} alt="k6 Test Load Criteria step" width="1400" height="863" className="doc_img"/>
+
+### Step 3: Configure Test Load Distribution
+
+- **Region:** k6 tests run from **East US (Richmond, Virginia)**.
+- **Job Labels:** Add meaningful labels or tags for better identification and traceability.
+- **Max Users per Engine:** The maximum number of virtual users each load generator runs (up to 1500). This option appears when **Ramp-up Time** is greater than `0`. HyperExecute splits the total users across as many load generators as needed and starts them together.
+- **Global Timeout:** The maximum duration for the HyperExecute job (default: 90 minutes). **Ramp-up Time** plus **Duration** must be shorter than this value.
+
+<img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/performance_testing/k6-test-load-distribution.png').default} alt="k6 Test Load Distribution step" width="1400" height="863" className="doc_img"/>
+
+Click **Run Test** to start the execution.
+
+### Step 4: Analyze Your Test Results
+
+Toggle to the **Jobs** section and open your job. You can follow the results while the test is running:
+
+- **Summary:** Virtual users, average and 90th percentile response time, throughput, error rate, bandwidth and data sent, with the **Load** and **Response Time** graphs.
+- **Timeline Report:** Request count and response time over the course of the test.
+- **Request Stats:** Per-request statistics, grouped by request name.
+- **Errors:** Failed requests grouped by request name and by response code.
+- **Logs:** The k6 output of each load generator.
+- **Artifacts:** The k6 HTML report and the end-of-test summary (`k6-summary.json`).
+
+#### Summary Report
+
+<img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/performance_testing/k6-summary-report.png').default} alt="k6 job Summary report" width="1400" height="863" className="doc_img"/>
+
+#### Timeline Report
+
+<img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/performance_testing/k6-timeline-report.png').default} alt="k6 job Timeline report" width="1400" height="863" className="doc_img"/>
+
+#### Request Stats
+
+<img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/performance_testing/k6-request-stats.png').default} alt="k6 job Request Stats" width="1400" height="863" className="doc_img"/>
+
+#### Logs
+
+<img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/performance_testing/k6-logs.png').default} alt="k6 job logs" width="1400" height="863" className="doc_img"/>
+
+:::tip Thresholds
+If your script defines [thresholds](https://grafana.com/docs/k6/latest/using-k6/thresholds/) and one of them is crossed, the job is marked **Failed** and the job remark names the crossed threshold. The metrics and graphs collected up to that point remain available.
+:::
+
+## Frequently Asked Questions
+***
+
+### Why does my job run a different number of users than my script defines?
+
+In the UI flow, the values you enter in **Total Users**, **Duration** and **Ramp-up Time** replace the load profile in your script, so every run uses the load you set in the dashboard.
+
+### Why did my job fail a few seconds after it started?
+
+This usually means k6 could not load the script, for example because of a syntax error or a missing module. The job remark shows k6's error, and the full message is in the **Logs** tab.
+
+### Can I load test private or internal endpoints with k6?
+
+Yes. A tunnel adds its own latency to every request, which skews response-time results, so it is not recommended for load testing. Instead, contact the <BrandName /> support team for HyperExecute's static outbound IPs and allow them in your firewall or security group.
