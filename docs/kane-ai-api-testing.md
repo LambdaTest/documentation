@@ -174,7 +174,7 @@ Once all APIs are added, KaneAI enables simultaneous execution, with details ava
 
 The Console shows the exact request KaneAI sent and how the call went. It sits in the response section of the API modal, alongside Body, Cookies, and Headers, and is available after you validate an API or reopen an API step from the test steps. Use it to debug an API step that returns an unexpected response, or one that returns no response at all, because the Console still shows what was sent.
 
-{/* <img loading="lazy" src={require('../assets/images/kane-ai/features/api-console/console-request-sent.png').default} alt="KaneAI API Console showing the request sent" className="doc_img"/> */}
+<img loading="lazy" src={require('../assets/images/kane-ai/features/api-console/console-overview.png').default} alt="Console tab in the KaneAI API modal showing the request sent, response received, timing, and network sections" className="doc_img"/>
 
 ### Request Sent
 
@@ -185,15 +185,9 @@ This section shows the request after KaneAI has resolved every variable:
 - **Headers**: Every header sent with the request and its source: typed by you in the Headers tab, generated from the Authorization tab, or added by KaneAI. KaneAI adds standard headers such as `Host`, `User-Agent`, `Accept`, `Accept-Encoding`, `Connection`, and `Content-Length`.
 - **Body**: The request body that was sent, if the request had one.
 
-### Copy as cURL
+### Response Received
 
-Copy the resolved request as a cURL command to rerun it in a terminal or share it with your team outside KaneAI.
-
-{/* <img loading="lazy" src={require('../assets/images/kane-ai/features/api-console/console-copy-curl.png').default} alt="Copy the API request as a cURL command from the KaneAI Console" className="doc_img"/> */}
-
-### Redirects
-
-When the request followed one or more redirects, the Console lists every hop in order. Each hop shows its response status, method, URL, the `Location` it redirected to, and how long it took.
+This section shows the response the API returned: the status code, the response headers, and the response body along with its format and size.
 
 ### Timing
 
@@ -215,6 +209,12 @@ The Console shows how the request traveled:
 {/* <img loading="lazy" src={require('../assets/images/kane-ai/features/api-console/console-timing-network.png').default} alt="Timing and network details in the KaneAI API Console" className="doc_img"/> */}
 
 If the API only accepts requests from known IP addresses, share the sent-from address with the team that manages the API so they can add it to their allowlist.
+
+### Copy as cURL
+
+Copy the resolved request as a cURL command to rerun it in a terminal or share it with your team outside KaneAI.
+
+{/* <img loading="lazy" src={require('../assets/images/kane-ai/features/api-console/console-copy-curl.png').default} alt="Copy the API request as a cURL command from the KaneAI Console" className="doc_img"/> */}
 
 :::note
 [Secrets](/support/docs/kane-ai-secrets/) and [TOTP](/support/docs/kaneai-totp/) values are masked in the Console and in the copied cURL command. Tokens typed directly into the Authorization or Headers tab, such as a Bearer token, Basic credentials, or an API key, appear as entered, the same as they do in those tabs. Store credentials as secrets to keep them masked.
