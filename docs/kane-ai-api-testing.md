@@ -9,6 +9,7 @@ keywords:
   - testmu ai kaneai
   - kaneai scroll elements
   - kaneai sidebar scroll
+  - kaneai api console
 url: https://www.testmuai.com/support/docs/kane-ai-api-testing/
 site_name: TestMu AI
 slug: kane-ai-api-testing/
@@ -70,7 +71,8 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     "keywords": [
       "testmu ai automation",
       "testmu ai kaneai",
-      "kaneai scroll elements"
+      "kaneai scroll elements",
+      "kaneai api console"
     ],
     "author": {
       "@type": "Organization",
@@ -98,7 +100,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         "https://www.youtube.com/@TestMuAI"
       ]
     },
-    "dateModified": "2026-09-09T19:16:50+05:30"
+    "dateModified": "2026-10-24T18:00:00+05:30"
   }) }}
 />
 This document provides a detailed guide to performing API testing using KaneAI. The API testing feature allows for comprehensive backend testing, complementing existing UI testing capabilities. Follow the instructions below to execute API tests using the PetStore API as an example.
@@ -166,6 +168,56 @@ Once all APIs are added, KaneAI enables simultaneous execution, with details ava
 - **Step**: Click to execute all added APIs in one go and review the response details for insights into API performance and data returned.
 
     <img loading="lazy" src={require('../assets/images/kane-ai/knowledge-base/api-testing/image13.jpg').default} alt="kenai-jira integration" className="doc_img"/>
+
+## 8. Inspecting API Requests in the Console
+
+The Console shows the exact request KaneAI sent and how the call went. It sits in the response section of the API modal, alongside Body, Cookies, and Headers, and is available after you validate an API or reopen an API step from the test steps. Use it to debug an API step that returns an unexpected response, or one that returns no response at all, because the Console still shows what was sent.
+
+{/* <img loading="lazy" src={require('../assets/images/kane-ai/features/api-console/console-request-sent.png').default} alt="KaneAI API Console showing the request sent" className="doc_img"/> */}
+
+### Request Sent
+
+This section shows the request after KaneAI has resolved every variable:
+
+- **Method and URL**: The HTTP method and the fully resolved URL the request went to.
+- **Values used**: Each `{{variable}}` in the request, the value it resolved to, and where that value came from, such as a variable, parameter, secret, or environment. A variable that had no value is flagged as empty, which helps you spot a missing environment or an unset variable.
+- **Headers**: Every header sent with the request and its source: typed by you in the Headers tab, generated from the Authorization tab, or added by KaneAI. KaneAI adds standard headers such as `Host`, `User-Agent`, `Accept`, `Accept-Encoding`, `Connection`, and `Content-Length`.
+- **Body**: The request body that was sent, if the request had one.
+
+### Copy as cURL
+
+Copy the resolved request as a cURL command to rerun it in a terminal or share it with your team outside KaneAI.
+
+{/* <img loading="lazy" src={require('../assets/images/kane-ai/features/api-console/console-copy-curl.png').default} alt="Copy the API request as a cURL command from the KaneAI Console" className="doc_img"/> */}
+
+### Redirects
+
+When the request followed one or more redirects, the Console lists every hop in order. Each hop shows its response status, method, URL, the `Location` it redirected to, and how long it took.
+
+### Timing
+
+The Console breaks the total request time into phases: preparing the request, DNS lookup, connecting, establishing the secure (TLS) connection, waiting for the first byte, and downloading the response. The total matches the time shown on the API step.
+
+- If the request failed, the Console shows the phase where it stopped, so you can tell a DNS failure from a connection or TLS failure.
+- If KaneAI reused an existing connection, the connection phases are marked as skipped.
+
+### Network
+
+The Console shows how the request traveled:
+
+- The IP address and region the request was sent from.
+- The server address the request reached.
+- The route, such as a direct connection, a tunnel, or a proxy.
+- Whether a new connection was opened or an existing one was reused.
+- TLS and certificate details for HTTPS requests.
+
+{/* <img loading="lazy" src={require('../assets/images/kane-ai/features/api-console/console-timing-network.png').default} alt="Timing and network details in the KaneAI API Console" className="doc_img"/> */}
+
+If the API only accepts requests from known IP addresses, share the sent-from address with the team that manages the API so they can add it to their allowlist.
+
+:::note
+[Secrets](/support/docs/kane-ai-secrets/) and [TOTP](/support/docs/kaneai-totp/) values are masked in the Console and in the copied cURL command. Tokens typed directly into the Authorization or Headers tab, such as a Bearer token, Basic credentials, or an API key, appear as entered, the same as they do in those tabs. Store credentials as secrets to keep them masked.
+:::
 
 
 This structure provides logical groupings for different aspects of API testing with KaneAI, making it easier to follow each type of action required for comprehensive API testing.
