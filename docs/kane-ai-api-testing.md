@@ -210,15 +210,11 @@ The Console shows how the request traveled:
 - Whether a new connection was opened or an existing one was reused.
 - TLS and certificate details for HTTPS requests.
 
-{/* <img loading="lazy" src={require('../assets/images/kane-ai/features/api-console/console-timing-network.png').default} alt="Timing and network details in the KaneAI API Console" className="doc_img"/> */}
-
 If the API only accepts requests from known IP addresses, share the sent-from address with the team that manages the API so they can add it to their allowlist.
 
 ### Copy cURL and Download HAR
 
 - **Copy cURL**: Copy the resolved request as a cURL command to rerun it in a terminal or share it with your team outside KaneAI.
 - **Download HAR**: Download the API call as a HAR (HTTP Archive) file. Open it in your browser's developer tools or any HAR viewer, or attach it to a bug report.
-
-{/* <img loading="lazy" src={require('../assets/images/kane-ai/features/api-console/console-copy-curl.png').default} alt="Copy the API request as a cURL command from the KaneAI Console" className="doc_img"/> */}
 
 This structure provides logical groupings for different aspects of API testing with KaneAI, making it easier to follow each type of action required for comprehensive API testing.
