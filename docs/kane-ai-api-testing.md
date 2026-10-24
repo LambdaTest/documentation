@@ -221,9 +221,4 @@ If the API only accepts requests from known IP addresses, share the sent-from ad
 
 {/* <img loading="lazy" src={require('../assets/images/kane-ai/features/api-console/console-copy-curl.png').default} alt="Copy the API request as a cURL command from the KaneAI Console" className="doc_img"/> */}
 
-:::note
-[Secrets](/support/docs/kane-ai-secrets/) and [TOTP](/support/docs/kaneai-totp/) values are masked in the Console and in the copied cURL command. Tokens typed directly into the Authorization or Headers tab, such as a Bearer token, Basic credentials, or an API key, appear as entered, the same as they do in those tabs. Store credentials as secrets to keep them masked.
-:::
-
-
 This structure provides logical groupings for different aspects of API testing with KaneAI, making it easier to follow each type of action required for comprehensive API testing.
