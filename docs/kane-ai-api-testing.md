@@ -176,6 +176,10 @@ The Console shows the exact request KaneAI sent and how the call went. It sits i
 
 <img loading="lazy" src={require('../assets/images/kane-ai/features/api-console/console-overview.png').default} alt="Console tab in the KaneAI API modal showing the request sent, response received, timing, and network sections" className="doc_img"/>
 
+### Pretty and Raw Views
+
+The Console opens in the **Pretty** view, which groups the details into the collapsible sections described below. Switch to **Raw** to see the request and response as plain HTTP text, with the request line, headers, and body exactly as they went over the wire.
+
 ### Request Sent
 
 This section shows the request after KaneAI has resolved every variable:
@@ -210,9 +214,10 @@ The Console shows how the request traveled:
 
 If the API only accepts requests from known IP addresses, share the sent-from address with the team that manages the API so they can add it to their allowlist.
 
-### Copy as cURL
+### Copy cURL and Download HAR
 
-Copy the resolved request as a cURL command to rerun it in a terminal or share it with your team outside KaneAI.
+- **Copy cURL**: Copy the resolved request as a cURL command to rerun it in a terminal or share it with your team outside KaneAI.
+- **Download HAR**: Download the API call as a HAR (HTTP Archive) file. Open it in your browser's developer tools or any HAR viewer, or attach it to a bug report.
 
 {/* <img loading="lazy" src={require('../assets/images/kane-ai/features/api-console/console-copy-curl.png').default} alt="Copy the API request as a cURL command from the KaneAI Console" className="doc_img"/> */}
 
