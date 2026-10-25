@@ -17,7 +17,7 @@ keywords:
   - virtual devices
   - icon click
 url: https://www.testmuai.com/support/docs/button-text-click/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: button-text-click/
 canonical: https://www.testmuai.com/support/docs/button-text-click/
 toc_max_heading_level: 2

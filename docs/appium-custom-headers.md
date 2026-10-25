@@ -183,6 +183,10 @@ import VerifiedTag from '@site/src/component/verifiedTag';
 The customHeaders capability on TestMu AI adds custom HTTP headers to your automation requests, letting tests bypass firewall restrictions and control request or response metadata like the method, URL, and body. Configure it through the DesiredCapabilities class during automated testing.
 
 
+:::note
+Custom header injection is not provided for Real Device Manual Sessions, as custom headers must be configured before the session is launched.
+:::
+
 ## How to use CustomHeaders Capability on <BrandName />?
 
 ----
@@ -315,6 +319,10 @@ X-Session-ID: 1234567890 //custom header X-Session-ID to track user sessions.
 X-Session-ID: 1234567890 //custom header X-Session-ID to track user sessions.
 ```
 
+
+:::note
+Custom header injection is not provided for Real Device Manual Sessions, as custom headers must be configured before the session is launched.
+:::
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">

@@ -131,6 +131,10 @@ Setting IP Geolocation on TestMu AI lets you test websites and mobile apps as if
 
 You'll learn to use this feature in both manual and automation tests, plus the full list of supported IP geolocations on <BrandName />.
 
+:::note
+IP geolocation is provided by third-party geo vendors, and the availability of geolocation country code/IP may vary based on IP database updates, coverage, and other vendor-specific factors. For geolocation IP verification, you can use a trusted third-party service such as [MaxMind](https://www.maxmind.com/en/locate-my-ip-address).
+:::
+
 ## Support for Automation on Real Devices
 
 To harness the **IP Geolocation** feature in your automated tests, employ the `geoLocation` capability along with a two-letter country code from the list of supported countries provided below. This capability enables you to modify the device's geolocation to the specified location. If this capability is not added, the device will automatically update its geolocation based on its physical location.
@@ -331,6 +335,10 @@ Below is the list of supported countries along with their respective country cod
 | Washington (Herndon), Virginia    | US/WAV   |
 | Wilmington, DE                    | U4       |
 | Wilmington, Delaware (US)         | US/WILM  |
+
+:::note
+IP geolocation is provided by third-party geo vendors, and the availability of geolocation country code/IP may vary based on IP database updates, coverage, and other vendor-specific factors. For geolocation IP verification, you can use a trusted third-party service such as [MaxMind](https://www.maxmind.com/en/locate-my-ip-address).
+:::
 
 
 

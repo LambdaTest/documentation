@@ -188,10 +188,6 @@ Network throttling on TestMu AI simulates 2G, 3G, LTE, and offline conditions du
     }
     ```
 
-:::note
-To utilize the **networkProfile** capability, ensure that you include `network: True` in the capabilities.
-:::  
-
 ### During Test Execution
 
 - **LambdaHook:** Dynamically alter the network profile within the test session using the following LambdaHook:
