@@ -608,4 +608,4 @@ Executor Hooks and [Auto Report](/support/docs/accessibility-screen-reader-autom
 - [Native App Automation Appium (Overview)](/support/docs/accessibility-native-app-automation-test/)
 - [Appium TestNG](/support/docs/accessibility-native-app-automation-test/)
 - [Appium WebdriverIO](/support/docs/accessibility-native-app-automation-test/)
-- [Lambda Hooks for Appium](/support/docs/appium-lambdatest-hooks/)
+- [Lambda Hooks for Appium](/support/docs/appium-testmu-hooks/)

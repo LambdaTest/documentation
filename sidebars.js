@@ -981,6 +981,7 @@ module.exports = {
           { type: "doc", label: "Adding URLs", id: "web-scanner-adding-urls" },
           { type: "doc", label: "Scheduling Options", id: "web-scanner-scheduling-options" },
           { type: "doc", label: "Advanced Features", id: "web-scanner-advanced-features" },
+          { type: "doc", label: "Edit and Clone Scans", id: "web-scanner-edit-clone-scans" },
         ],
       },
       {
@@ -2259,6 +2260,7 @@ module.exports = {
           "web-scanner-adding-urls",
           "web-scanner-scheduling-options",
           "web-scanner-advanced-features",
+          "web-scanner-edit-clone-scans",
         ],
       },
     ],

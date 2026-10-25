@@ -109,8 +109,8 @@ import VerifiedTag from '@site/src/component/verifiedTag';
 
 Appium accessibility testing runs [Appium](https://appium.io/) with the `lambda-accessibility-scan` hook to generate accessibility results during Android or iOS test runs on the TestMu AI grid. A session capability enables scanning, and the hook is called at each stable UI state to capture a report for that screen. The shared setup below applies to every runner; the runner tabs cover only the TestNG and WebdriverIO specifics.
 
-:::warning
-Scans on real devices are **hook driven only**. The `accessibility.autoscan` capability used in web automation is **not supported on real devices**, so a full app flow cannot be scanned automatically. Call `lambda-accessibility-scan` at every screen you want covered.
+:::note
+There are two ways to trigger scans on a real device. Call `lambda-accessibility-scan` at each screen you want covered, as described below, or set `accessibility.autoScan` to `true` and have every screen your test reaches scanned automatically. See [AutoScan for Mobile App Accessibility](/support/docs/accessibility-mobile-autoscan/) and [Scan Configurations via Capabilities](/support/docs/accessibility-automation-scan-configurations/).
 :::
 
 ## When to use
@@ -135,7 +135,7 @@ Accessibility on native apps depends on two things: a **session capability** tha
 
 1. **Reuse a green Appium suite** without accessibility first: confirm install, locators, and hub connectivity.
 2. **Add the accessibility capability** on the session (exact key names align with your Appium server version; mirror the examples in the runner tabs).
-3. After each **stable screen** (post-navigation waits), call the hook:
+3. After each **stable screen** (post-navigation waits), call the hook, or enable [AutoScan](/support/docs/accessibility-mobile-autoscan/) to scan every screen the test reaches without a hook call at each one:
 
 <VerifiedTag value="Verified" />
 
@@ -151,7 +151,7 @@ driver.executeScript("lambda-accessibility-scan");
 
 ## Supported automation capabilities
 
-The critical session capability is `"accessibility": true`, which enables scanning for the session. The `accessibility.autoscan` capability is web-only and is not available on real devices, so native coverage relies on the hook. For the complete capability reference and per-scan tuning, see the [accessibility automation scan configurations](/support/docs/accessibility-automation-scan-configurations/).
+The critical session capability is `"accessibility": true`, which enables scanning for the session. On real devices you can also set `accessibility.autoScan` to `true` to scan every screen the test reaches (see [AutoScan for Mobile App Accessibility](/support/docs/accessibility-mobile-autoscan/)); otherwise native coverage relies on the hook. For the complete capability reference and per-scan tuning, see the [accessibility automation scan configurations](/support/docs/accessibility-automation-scan-configurations/).
 
 ## View reports
 
@@ -188,8 +188,8 @@ Use the **official capability set** your account documentation lists for the cur
 
 **Expected result:** the session starts with accessibility enabled and is ready for hook calls.
 
-:::warning
-`accessibility.autoscan` is a **web automation** capability and is **not supported on real devices**. On real devices, each screen you want covered has to be scanned with the `lambda-accessibility-scan` hook.
+:::note
+To scan every screen your test reaches without a hook call at each one, set `accessibility.autoScan` to `true` on the session. See [AutoScan for Mobile App Accessibility](/support/docs/accessibility-mobile-autoscan/). Keep the hook where you need a scan at an exact moment.
 :::
 
 ### 2. Call the scan hook after navigation
@@ -215,7 +215,7 @@ mvn test
 | Symptom | What to check |
 |--------|----------------|
 | Hook throws | Driver must be a session where accessibility capability was set; verify spelling `lambda-accessibility-scan`. |
-| Empty report | Hook never called, or the screen never reached a stable state. autoScan does not cover this, it is not supported on real devices. |
+| Empty report | Hook never called, or the screen never reached a stable state. To cover every screen without per-screen hooks, enable [AutoScan](/support/docs/accessibility-mobile-autoscan/). |
 
 </TabItem>
 <TabItem value="webdriverio" label="WebdriverIO">
@@ -242,8 +242,8 @@ Match keys to your Appium server version (`appium:` prefix for W3C caps).
 
 **Expected result:** the session starts with accessibility enabled and is ready for hook calls.
 
-:::warning
-`accessibility.autoscan` is a **web automation** capability and is **not supported on real devices**. On real devices, each screen you want covered has to be scanned with the `lambda-accessibility-scan` hook.
+:::note
+To scan every screen your test reaches without a hook call at each one, set `accessibility.autoScan` to `true` on the session. See [AutoScan for Mobile App Accessibility](/support/docs/accessibility-mobile-autoscan/). Keep the hook where you need a scan at an exact moment.
 :::
 
 ### 2. Call the hook after screens load

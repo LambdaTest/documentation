@@ -114,6 +114,8 @@ Screen readers are essential for making digital environments accessible to visua
 ## Screen Reader Support in TestMu AI Accessibility Testing
 TestMu AI supports the following screen readers during Accessibility Testing, so developers and testers can evaluate how well their applications or websites perform for visually impaired users and confirm accessibility compliance and usability. Pick the path that matches the platform you test on.
 
+To run **TalkBack** or **VoiceOver** inside your **Appium** tests on real devices, generate a Screen Reader Report automatically, and assert on spoken output from your script, see [Screen Reader Automation](/support/docs/accessibility-screen-reader-automation/).
+
 | If you test on… | Start here |
 |------------------|------------|
 | Windows desktop web | [NVDA on Windows](#nvda-on-windows) (free, common) or [JAWS on Windows](#jaws-on-windows) (enterprise) |

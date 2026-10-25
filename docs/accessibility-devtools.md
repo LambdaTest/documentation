@@ -432,6 +432,14 @@ To review an issue:
 
 Enable this setting to include issues that go beyond WCAG requirements but improve overall user experience. Best practice issues are reported separately from WCAG violations.
 
+### Evaluation Rules
+
+The **Evaluation Rules** panel in the **Scan Settings** tab lists every rule the scan will evaluate, grouped by category. Switch off individual rules with their On/Off toggle, or a whole category with the checkbox on its header, then click **Save**. A rule that is switched off never runs and does not count towards the score. Saved selections apply to full-page, multi-page, workflow and assisted scans, and follow you across reinstalls as your last-used configuration.
+
+Rules outside the selected WCAG version are silently dropped: they are not listed in the panel and do not appear in the report. Best Practice rules while Best Practices is off are greyed out with a tooltip explaining why. A selection that leaves no rule to run cannot be saved.
+
+See [Rule and Category Exclusion in DevTools and Scheduled Scans](/support/docs/accessibility-devtools-rule-exclusion/) for details.
+
 ### Autosave Reports
 
 This option is enabled by default. When active, scan results are automatically saved to the Accessibility dashboard. Toggle it off if you want to review results without persisting them. To work with saved results, see [Navigating the Dashboard](/support/docs/accessibility-testing-navigating-dashboard/).
@@ -481,3 +489,4 @@ Once the update process is complete, you will see a message confirming that your
 Continue from a browser session into programmatic coverage.
 
 - [Run accessibility automation tests](/support/docs/accessibility-automation-test/)
+- [Rule and Category Exclusion in DevTools and Scheduled Scans](/support/docs/accessibility-devtools-rule-exclusion/)

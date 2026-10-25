@@ -323,6 +323,7 @@ Scheduled scans are supported on **desktop only**. You can schedule scans for we
 ### Step 2: Configure the scan
 1. Enter the **Scan Name** for identification.
 2. Select the desired **WCAG version** for compliance.
+3. Optionally open **Evaluation Rules** beside the WCAG selector to switch off individual rules or whole categories for every run of this schedule. Rules outside the selected WCAG version are not shown in the panel or in the report's Applied Settings, and at least one rule must stay on. See [Rule and Category Exclusion in DevTools and Scheduled Scans](/support/docs/accessibility-devtools-rule-exclusion/).
 
 **Expected result:** the scan is named and its compliance standard is set for every run.
 

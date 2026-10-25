@@ -171,7 +171,7 @@ Configure the rule set from the scan configuration panel, then run.
 2. **Open the scan configuration panel.** It loads the **rules catalog** for the selected platform, grouped by category. The first time it is opened, it shows the **system defaults**. After that, it shows your **last-used settings**.
 3. **Choose the WCAG version and level** (for example, WCAG 2.1 AA). The rule list automatically narrows to the rules included by that selection.
 4. **Toggle the required rule groups**: Best Practice, Beta, AI Detection.
-5. **Fine-tune individual rules.** Within each category, switch specific rules on or off. Anything left on is **Enabled**; anything switched off is **Disabled**.
+5. **Fine-tune individual rules.** Within each category, switch specific rules on or off. Anything left on is **Enabled**; anything switched off is **Disabled**. To switch a whole category off or on in one click, use the checkbox on the category header (see [Rule and Category Exclusion](/support/docs/accessibility-mobile-rule-exclusion/#manual-app-scanner)).
 6. **Run the scan.** Only the selected rules are evaluated on the device, and the report contains results for exactly those rules.
 
 **Expected result:** the scan runs only the enabled rules, and the report lists violations for exactly that rule set.
@@ -220,6 +220,8 @@ The catalog is grouped into categories so that coverage can be reasoned about at
 
 Within any category, individual rules can be switched on or off. **An explicit selection always wins:** if you disable a rule, it will not run even if the WCAG or group settings would otherwise include it.
 
+Each category header also has a **checkbox** that switches every rule in the category off or on together. It has three states, all on, partly on and all off, so a partly selected category is visible at a glance. A category with no rules in scope for the selected WCAG version and level stays disabled. Excluding a category here is equivalent to passing its slug in `accessibility.excludeRuleCategories` on automation. See [Rule and Category Exclusion for Mobile App Accessibility](/support/docs/accessibility-mobile-rule-exclusion/).
+
 ### Settings are remembered per user
 
 Your scan configuration is persisted on your last saved scan, so you rarely start from scratch.
@@ -249,7 +251,7 @@ The report reflects exactly the configuration you ran, and nothing outside it.
 
 - **Scoped results.** The report contains violations only for the enabled rules. Rules turned off (directly, or through WCAG or group settings) do not appear and do not affect the accessibility score for that scan.
 - **Faster scans.** Because disabled rules are skipped **before** they run on the device, narrowing the configuration generally makes scans quicker.
-- **Configuration recorded with the test.** The WCAG version, group toggles, and the enabled or disabled rule lists are stored alongside the scan, so the team can always see how a given result was produced. The exact rules applied to a scan are also visible in the report (see [scan configurations via Appium capabilities](/support/docs/accessibility-automation-scan-configurations/#what-to-expect-in-results)).
+- **Configuration recorded with the test.** The WCAG version, group toggles, and the enabled or disabled rule lists are stored alongside the scan, so the team can always see how a given result was produced. The exact rules applied to a scan are also visible in the report (see [scan configurations via Appium capabilities](/support/docs/accessibility-automation-scan-configurations/#what-to-expect-in-results)). The report records whether a disabled rule was switched off individually or as part of a category, and greys out a category that was excluded whole.
 
 For common questions, see the [Accessibility FAQ](/support/faq/?tab=accessibility).
 
@@ -257,4 +259,5 @@ For common questions, see the [Accessibility FAQ](/support/faq/?tab=accessibilit
 
 Continue with the page most relevant after a manual scan.
 
+- [Rule and Category Exclusion for Mobile App Accessibility](/support/docs/accessibility-mobile-rule-exclusion/)
 - [Tag support for accessibility scans](/support/docs/accessibility-tag-support/)
