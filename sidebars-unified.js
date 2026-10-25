@@ -99,7 +99,6 @@ const BiDiTestingSidebar = [backToDocs, { type: 'doc', id: 'run-tests-with-webdr
 const AppiumTestingSidebar = dedicated(s.AppiumTestingSidebar);
 const EspressoTestingSidebar = dedicated(s.EspressoTestingSidebar);
 const XCUITestingSidebar = dedicated(s.XCUITestingSidebar);
-const FlutterTestingSidebar = dedicated(s.FlutterTestingSidebar);
 const VirtualDevicesSidebar = dedicated(s.EmuSimuSidebar);
 
 // Standalone products
@@ -160,17 +159,6 @@ const SettingsAndSecuritySidebar = [
   },
 ];
 
-// Dedicated sidebar for Test Manager. Because the Test Manager entry in
-// docsSidebar is now a link (above), these docs live ONLY here — so Docusaurus
-// displays this dedicated sidebar whenever a reader is inside Test Manager.
-const backToDocs = {
-  type: 'link',
-  label: '← All Docs',
-  href: '/docs/',
-  customProps: { className: 'back-to-main-menu' },
-};
-const TestManagerSidebar = [backToDocs, ...items(s.TestManagerSidebar)];
-
 // Dedicated sidebar for Flutter Testing. The Flutter Testing entry in docsSidebar is a
 // link (above), so these docs live ONLY here — Docusaurus displays this dedicated
 // sidebar whenever a reader is inside Flutter Testing.
@@ -207,5 +195,4 @@ module.exports = {
   AgentTestingSidebar,
   RealDeviceSidebar,
   TestManagerSidebar,
-  FlutterTestingSidebar,
 };

@@ -227,7 +227,7 @@ Running your first Flutter Dart test on TestMu AI runs End-to-End (E2E) testing 
 
 ## Flutter Dart Testing on Android
 
-In this section, we will run your first Flutter Dart test on an **Android** device using the <BrandName /> Real Device Cloud.
+In this section, we will run Flutter Dart End-to-End (E2E) testing on an **Android** device using the <BrandName /> Real Device Cloud.
 
 ### Prerequisites for Getting Started
 
