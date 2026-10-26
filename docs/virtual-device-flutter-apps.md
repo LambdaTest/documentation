@@ -3,7 +3,7 @@ id: virtual-device-flutter-apps
 title: How to Test Flutter Apps on Virtual Devices on TestMu AI
 hide_title: false
 sidebar_label: "Test Flutter Apps"
-description: Learn how to test flutter apps for Appium testing across 5000+ real Android and iOS devices for virtual devices
+description: Learn how to test flutter apps for Appium testing across 50,000+ real Android and iOS devices for virtual devices
 keywords:
 - how to test flutter apps
 - how to test flutter apps on android
@@ -56,7 +56,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
       "@id": "https://www.testmuai.com/support/docs/virtual-device-flutter-apps/"
     },
     "headline": "How to Test Flutter Apps on Virtual Devices on TestMu AI",
-    "description": "Learn how to test flutter apps for Appium testing across 5000+ real Android and iOS devices for virtual devices",
+    "description": "Learn how to test flutter apps for Appium testing across 50,000+ real Android and iOS devices for virtual devices",
     "url": "https://www.testmuai.com/support/docs/virtual-device-flutter-apps/",
     "image": {
       "@type": "ImageObject",
@@ -132,7 +132,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
     "dateModified": "2026-09-09T19:10:37+05:30"
   }) }}
 />
-Testing Flutter apps on TestMu AI runs Appium's Flutter driver across 5000+ real Android and iOS devices, letting you run End-to-End (E2E) testing of cross-platform apps from a single codebase. Compile your app in debug or profile mode, upload it, and execute automated tests.
+Testing Flutter apps on TestMu AI runs Appium's Flutter driver across 50,000+ real Android and iOS devices, letting you run End-to-End (E2E) testing of cross-platform apps from a single codebase. Compile your app in debug or profile mode, upload it, and execute automated tests.
 
 ## Prerequisites
 
