@@ -225,6 +225,9 @@ import VerifiedTag from '@site/src/component/verifiedTag';
 />
 
 <RealDeviceTag value="Real Device" /> <VirtualDeviceTag value="Virtual Device" />
+
+Running XCUITest on TestMu AI executes Apple's XCTest-based UI automation for your iOS apps across 50,000+ real devices and OS combinations. Upload your app and test bundle, configure capabilities, trigger the run, and review results on the TestMu AI dashboard.
+
 Developed by Apple, XCUITest is a UI testing framework for iOS applications, commonly used for End-to-End (E2E) testing of app user flows. It is built on top of XCTest, an integrated test framework in Apple's Xcode IDE. <BrandName /> lets you perform automated app testing of your iOS apps using XCUITest across 50,000+ real devices and OS combinations.
 
 ## Prerequisites
