@@ -2,7 +2,7 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
-Regular Expressions (RegEx) are powerful tools for searching and manipulating strings. When running tests on TestMu AI with a specific device, there may be times when the exact device you selected isn't available. In such cases, RegEx will help you widen your search criteria to find any available device that matches your requirements.
+Regular expressions in Appium on TestMu AI widen your device search when an exact device is unavailable, matching any suitable real device by pattern. TestMu AI supports RegEx for both deviceName and platformVersion, improving the chance of allocating a device.
 
 TestMu AI provides RegEx support for both **deviceName** and **platformVersion**, making it easier to find the right devices for your tests.
 

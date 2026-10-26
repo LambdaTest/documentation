@@ -23,7 +23,7 @@
   }) }}
 />
 
-This documentation will guide you to log in to your Google Account on an Android Device on TestMu AI so you can test features/services that are linked to your Google Account.
+Logging in to a Google account on Android real devices with TestMu AI lets you authenticate during App Automation using a credentials HashMap, so your scripts can test Play Store flows, sync, and features or services tied to that account.
 
 ## Objective
 
