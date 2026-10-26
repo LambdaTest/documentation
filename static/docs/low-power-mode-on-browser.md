@@ -1,4 +1,4 @@
-# Low Power/Battery Saver Mode on Real Devices
+# Low Power/Battery Saver Mode for Browser Testing on Real Devices
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 

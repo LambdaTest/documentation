@@ -45,8 +45,10 @@ function applyThemeChoice(choice) {
 const NAV_LINKS = [
   { to: '/support/docs/', label: 'Home', icon: HomeIcon },
   { to: '/support/docs/agent-skills/', label: 'Skills', icon: SkillsIcon },
-  { to: '/support/api-doc/', label: 'API Reference', icon: ApiIcon },
-  { to: '/support/faq/', label: 'FAQ', icon: FaqIcon },
+  { to: '/support/docs/testmu-mcp-server/', label: 'MCP Server', icon: McpIcon },
+  { to: '/support/api-doc/', label: 'APIs Reference', icon: ApiIcon },
+  { to: '/support/faq/', label: 'FAQs', icon: FaqIcon },
+  { to: 'https://www.testmuai.com/pricing/', label: 'Pricing', icon: PricingIcon, external: true },
   { to: 'https://changelog.testmuai.com/', label: 'Changelog', icon: ChangelogIcon, external: true },
 ];
 
@@ -87,12 +89,43 @@ function SkillsIcon() {
   );
 }
 
+function McpIcon() {
+  return (
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <rect x="2" y="2" width="20" height="8" rx="2" />
+      <rect x="2" y="14" width="20" height="8" rx="2" />
+      <line x1="6" y1="6" x2="6.01" y2="6" />
+      <line x1="6" y1="18" x2="6.01" y2="18" />
+    </svg>
+  );
+}
+
+function PricingIcon() {
+  return (
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z" />
+      <line x1="7" y1="7" x2="7.01" y2="7" />
+    </svg>
+  );
+}
+
 function ChangelogIcon() {
   return (
     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
       <path d="M3 3v5h5" />
       <path d="M3.05 13A9 9 0 1 0 6 5.3L3 8" />
       <path d="M12 7v5l4 2" />
+    </svg>
+  );
+}
+
+// Small outbound-link glyph shown on nav items that open in a new tab.
+function ExternalLinkIcon() {
+  return (
+    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" style={{ marginLeft: '1px', opacity: 0.75 }}>
+      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+      <polyline points="15 3 21 3 21 9" />
+      <line x1="10" y1="14" x2="21" y2="3" />
     </svg>
   );
 }
@@ -326,7 +359,7 @@ export default function Navbar() {
         <div className={styles.row1Right}>
           <a href="https://github.com/LambdaTest" target="_blank" rel="noopener noreferrer" className={styles.iconLink}>
             <GithubIcon />
-            <span>Github</span>
+            <span>GitHub</span>
           </a>
           <a href="/login/" className={styles.loginLink} onClick={CookieTrackingLogin}>Login</a>
           <a id="signbtn" href="/register/" className={styles.getStartedBtn} onClick={CookieTrackingSignup}>
@@ -376,7 +409,7 @@ export default function Navbar() {
             {dotsOpen && (
               <div className={styles.dotsDropdown}>
                 <a href="https://github.com/LambdaTest" target="_blank" rel="noopener noreferrer" className={styles.dotsItem}>
-                  <GithubIcon /><span>Github</span>
+                  <GithubIcon /><span>GitHub</span>
                 </a>
                 <a href="/login/" className={styles.dotsItem}>Login</a>
                 <a href="/register/" className={`${styles.dotsItem} ${styles.dotsItemCta}`}>Get Started Free</a>
@@ -399,6 +432,7 @@ export default function Navbar() {
             >
               <Icon />
               <span>{label}</span>
+              {external ? <ExternalLinkIcon /> : null}
             </a>
           ))}
         </div>
@@ -466,6 +500,7 @@ export default function Navbar() {
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   <span>{label}</span>
+                  {external ? <ExternalLinkIcon /> : null}
                 </a>
               ))}
 
@@ -479,7 +514,7 @@ export default function Navbar() {
                 onClick={() => setMobileMenuOpen(false)}
               >
                 <GithubIcon />
-                <span>Github</span>
+                <span>GitHub</span>
               </a>
               <a
                 href="/login/"

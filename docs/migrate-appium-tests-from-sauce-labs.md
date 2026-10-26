@@ -551,6 +551,9 @@ def run_session(desired_cap):
     driver = webdriver.Remote(command_executor="https://LT_USERNAME:LT_ACCESS_KEY@mobile-hub.lambdatest.com/wd/hub", desired_capabilities=desired_cap)
 
 ```
+
+To re-create your Appium flows as KaneAI app tests in natural language, follow the [Sauce Labs to KaneAI migration guide](/support/docs/saucelabs-to-kaneai-migration-guide/).
+
 >That’s all about Sauce Labs to <BrandName /> migration. In case you have any questions or need any additional information, you could reach out at our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24X7 Chat Support**</span> or mail us directly at support@testmuai.com.
 
 

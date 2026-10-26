@@ -3,7 +3,7 @@ id: testrigor-integration
 title: testRigor Integration
 hide_title: true
 sidebar_label: testRigor
-description: Integrate TestMu AI with testRigor to perform desktop web, mobile web and native app testing across 5000+ real devices and 10,000+ browser/device combinations.
+description: Integrate TestMu AI with testRigor to perform desktop web, mobile web and native app testing across 50,000+ real devices and 10,000+ browser/device combinations.
 keywords:
   - testmu ai integration with testrigor
   - testmu ai and testrigor integration 
@@ -53,7 +53,7 @@ import { CookieTrackingSignup } from '@site/src/component/CookieTracking';
       "@id": "https://www.testmuai.com/support/docs/testrigor-integration/"
     },
     "headline": "testRigor Integration",
-    "description": "Integrate TestMu AI with testRigor to perform desktop web, mobile web and native app testing across 5000+ real devices and 10,000+ browser/device combinations.",
+    "description": "Integrate TestMu AI with testRigor to perform desktop web, mobile web and native app testing across 50,000+ real devices and 10,000+ browser/device combinations.",
     "url": "https://www.testmuai.com/support/docs/testrigor-integration/",
     "image": {
       "@type": "ImageObject",
@@ -101,7 +101,7 @@ import { CookieTrackingSignup } from '@site/src/component/CookieTracking';
 # testRigor Integration
 testRigor is a Generative AI-based codeless test automation tool that helps companies empower manual testers to create test automation through executable specifications in plain English. This innovative system enables your team to easily build and maintain tests, while its AI Native features significantly reduce the effort required for test maintenance.
 
-<BrandName /> integration with testRigor enables you to perform desktop web, mobile web and native app testing across 5000+ real devices and 10,000+ browser/device combinations.
+<BrandName /> integration with testRigor enables you to perform desktop web, mobile web and native app testing across 50,000+ real devices and 10,000+ browser/device combinations.
 
 ## Prerequisites
 ---
@@ -170,13 +170,17 @@ In case, you wish to test locally or privately hosted websites, you can select t
 
 2. Open the dropdown menu of the test case you want to re-run, and click **Re-test**. 
 
-> The below test case demonstrates <BrandName /> Selenium Automation's booking a demo functionality. First, it visits the <BrandName /> <a href={`${BRAND_URL}/selenium-automation`}>Selenium Automation</a> website, clicks on the "Book A Demo" button, enters the required fields and then presses the "Schedule Demo" button.
+> The below test case demonstrates <BrandName /> Selenium Automation's booking a demo functionality. First, it visits the <BrandName /> <a href={`${BRAND_URL}/selenium-automation/`}>Selenium Automation</a> website, clicks on the "Book A Demo" button, enters the required fields and then presses the "Schedule Demo" button.
 
  <img loading="lazy" src={require('../assets/images/testrigor-integration/expand_dd.png').default} alt="Integrating <BrandName /> With testRigor" width="1366" height="625" className="doc_img"/>
 
 3. Now visit the <BrandName /> Automation Dashboard to view your test execution results.
 
  <img loading="lazy" src={require('../assets/images/testrigor-integration/results.png').default} alt="Integrating <BrandName /> With testRigor" width="1366" height="625" className="doc_img"/>
+
+:::info
+Moving your tests to KaneAI? The [testRigor to KaneAI migration guide](/support/docs/testrigor-to-kaneai-migration-guide/) shows how to collect your testRigor steps and data and re-create each test in natural language.
+:::
 
 
 ---

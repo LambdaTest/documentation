@@ -1,8 +1,9 @@
 ---
 id: cypress-cli-commands
-title: List of TestMu AI Cypress CLI Commands
-hide_title: false
-sidebar_label: Cypress CLI Commands
+title: Cypress CLI Commands Supported on TestMu AI
+hide_title: true
+toc_max_heading_level: 2
+sidebar_label: "CLI Reference"
 description: List of all the commands and arguments supported by TestMu AI-Cypress CLI.
 keywords:
   - cypress cli commands
@@ -16,7 +17,6 @@ canonical: https://www.testmuai.com/support/docs/cypress-cli-commands/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import VerifiedTag from '@site/src/component/verifiedTag';
-
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -53,7 +53,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
       "@type": "WebPage",
       "@id": "https://www.testmuai.com/support/docs/cypress-cli-commands/"
     },
-    "headline": "List of TestMu AI Cypress CLI Commands",
+    "headline": "Cypress CLI Commands Supported on TestMu AI",
     "description": "List of all the commands and arguments supported by TestMu AI-Cypress CLI.",
     "url": "https://www.testmuai.com/support/docs/cypress-cli-commands/",
     "image": {
@@ -99,7 +99,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
     "hasPart": [
       {
         "@type": "SoftwareSourceCode",
-        "name": "To use any command in the TestMu AI-Cypress CLI, follow this basic syntax",
+        "name": "General syntax for any TestMu AI Cypress CLI command",
         "codeSampleType": "code snippet",
         "programmingLanguage": "Shell",
         "text": "lambdatest-cypress <command> [options]"
@@ -108,7 +108,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
         "@type": "SoftwareSourceCode",
         "name": "init command",
         "codeSampleType": "code snippet",
-        "programmingLanguage": "text",
+        "programmingLanguage": "Shell",
         "text": "lambdatest-cypress init"
       },
       {
@@ -133,13 +133,19 @@ import VerifiedTag from '@site/src/component/verifiedTag';
         "text": "lambdatest-cypress build-stop"
       }
     ],
-    "dateModified": "2026-09-09T19:13:32+05:30"
+    "dateModified": "2026-09-27T00:00:00+05:30"
   }) }}
 />
-The <BrandName />-Cypress CLI provides a set of commands to streamline and enhance your testing workflows on the <BrandName /> platform. Below is a comprehensive list of supported commands and their usage.
+
+# Cypress CLI Commands Supported on TestMu AI
+***
+
+When you run Cypress tests on TestMu AI, the `lambdatest-cypress` CLI is how you initialize config, start builds, check build status, and generate reports from your terminal. This page lists every supported command and flag, with its purpose and value type, so you can look up the exact syntax while scripting a run.
 
 ## General Syntax
-To use any command in the <BrandName />-Cypress CLI, follow this basic syntax:
+***
+
+Every TestMu AI Cypress CLI command follows the same pattern: the CLI name, a command, then optional flags. Use this basic syntax as the template for the commands documented below.
 
 <VerifiedTag value="Verified" />
 
@@ -147,11 +153,13 @@ To use any command in the <BrandName />-Cypress CLI, follow this basic syntax:
 lambdatest-cypress <command> [options]
 ```
 
+The table below lists the top-level commands and Visual UI arguments available across the CLI.
+
 | Command / Arg  | Purpose                                                |
 | -------------- | ------------------------------------------------------ |
 | `--help`     | To get information of all the commands that can be run |
 | `init`       | To create an initial config file                       |
-| `run`        | To run tests on <BrandName />                             |
+| `run`        | To run tests on TestMu AI                             |
 | `build-info` | To get information about the build                     |
 | `build-stop` | To stop all the tests in the build                     |
 | `generate-report` | To generate the test session report               |
@@ -159,32 +167,37 @@ lambdatest-cypress <command> [options]
 | `--vib , --vi-build` | To set the smart ui build name. <br /> The acceptable data type is `string` |
 | `--vibase , --vi-base` | To set that build as baseline for smart ui. <br /> The acceptable data type is `boolean` |
 
-## `init` command
-The `init` command to generate a initial lambdatest configuration file.
+## `init` Command
+***
+
+Run the `init` command to generate an initial TestMu AI configuration file for your project. It scaffolds the config and reporter files the CLI needs before its first run.
 
 <VerifiedTag value="Verified" />
 
-```
+```bash
 lambdatest-cypress init
 ```
 
-<img loading="lazy" src={require('../assets/images/cypressten/1.PNG').default} alt="Image" className="doc_img"/><br/><br/>
+<img loading="lazy" src={require('../assets/images/cypressten/1.PNG').default} alt="Terminal output after running the lambdatest-cypress init command" className="doc_img"/><br/><br/>
 
-On running the above command, it will generate `base_reporter_config.json`,`custom_support_file.js` and `lambdatest-config.json` files. 
+On running the above command, the CLI generates the `base_reporter_config.json`, `custom_support_file.js`, and `lambdatest-config.json` files.
 
-- **`base_reporter_config.json`**: This is the configuration file for mochawesome reporter, that <BrandName /> uses to generate mochawesome reports which in turn is used to generate the commands section on the <BrandName /> dashboard. For Cypress 10, the absence of this file may lead to the commands section not being visible on the dashboard.
+- **`base_reporter_config.json`**: This is the configuration file for the mochawesome reporter that TestMu AI uses to generate mochawesome reports, which in turn generate the commands section on the TestMu AI dashboard. For Cypress 10, the absence of this file may lead to the commands section not being visible on the dashboard.
 
-- **`custom_support_file.js`**: By default, Cypress automatically captures screenshots when a test fails. For Cypress 10, in order to make the screenshot visible with the failed tests on our dashboard, we recommend you move and import this file as recommended.
+- **`custom_support_file.js`**: By default, Cypress automatically captures screenshots when a test fails. For Cypress 10, to make the screenshot visible with the failed tests on the TestMu AI dashboard, move and import this file as recommended.
 
-- **`lambdatest-config.json`**: This file contains configurations like <BrandName /> credentials, capabilities, run settings etc., that are required to run the test.
+- **`lambdatest-config.json`**: This file contains configurations like TestMu AI credentials, capabilities, and run settings that are required to run the test.
 
-## `run` command
+## `run` Command
+***
+
+The `run` command starts a Cypress test build on TestMu AI and accepts a large set of flags to control browsers, parallelism, tunneling, and reporting.
 
 :::info Note
-For detailed examples of each Cypress flag, please visit our guide [Configuring Cypress Test Execution](/support/docs/run-settings/).
+For detailed examples of each Cypress flag, see [how to configure Cypress run settings](/support/docs/run-settings/).
 :::
 
-To start running the test build, you can use the given-below command.
+To start running the test build, use the command below.
 
 <VerifiedTag value="Verified" />
 
@@ -192,7 +205,7 @@ To start running the test build, you can use the given-below command.
 lambdatest-cypress run
 ```
 
-Given below are the additional flags available with the `run` command.
+The table below lists the additional flags available with the `run` command, along with each flag's purpose and value type.
 
 | Flag | Purpose | Type |
 |------|---------|------|
@@ -246,8 +259,10 @@ Given below are the additional flags available with the `run` command.
 | `--reg, --region` | Set data center region (e.g., us, eu, ap) | String |
 | `--pC, --privateCloud` | Set custom private cloud | String |
 
-## `build-info` command
-You can use the `build-info` command to get information on the build.
+## `build-info` Command
+***
+
+Use the `build-info` command to fetch details about a specific build, such as its status and session breakdown, from the terminal.
 
 <VerifiedTag value="Verified" />
 
@@ -255,18 +270,20 @@ You can use the `build-info` command to get information on the build.
 lambdatest-cypress build-info
 ```
 
-Given below are the additional arguments available with the `build-info` command.
+The table below lists the additional arguments available with the `build-info` command.
 
 | Flag   | Purpose    | Type |
 | --------| -----------| -----|
 | `--id, --build-id` | Build Identifier | String, Required |
-| `--user, --username` | Your <BrandName /> username | String |
-| `--ak, --access_key` | Your <BrandName /> access key | String |
+| `--user, --username` | Your TestMu AI username | String |
+| `--ak, --access_key` | Your TestMu AI access key | String |
 
-<img loading="lazy" src={require('../assets/images/cypressten/2.png').default} alt="Image" width="710" height="224"  className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/cypressten/2.png').default} alt="Terminal output of the lambdatest-cypress build-info command showing build details" width="710" height="224"  className="doc_img"/>
 
-## `build-stop` command
-You can use the `build-stop` command to stop all the test in the build.
+## `build-stop` Command
+***
+
+Use the `build-stop` command to stop all the tests in a build, either by session id or by targeting the last test session.
 
 <VerifiedTag value="Verified" />
 
@@ -274,17 +291,26 @@ You can use the `build-stop` command to stop all the test in the build.
 lambdatest-cypress build-stop
 ```
 
-Given below are the additional arguments available with the `build-stop` command.
+The table below lists the additional arguments available with the `build-stop` command.
 
 | Flag             | Purpose   | 
 | -------------------- | --------- | 
 | `--id, --session_id` | Identifies the session | 
 | `--sls, --stop_last_session` | Stop the last test session | 
 
-- `--stop_last_session`
+Passing `--stop_last_session` stops the most recent test session.
 
-<img loading="lazy" src={require('../assets/images/cypressten/build_stop.png').default} alt="Image" width="710" height="224"  className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/cypressten/build_stop.png').default} alt="Terminal output of build-stop using the stop_last_session flag" width="710" height="224"  className="doc_img"/>
 
-- `--session_id`
+Passing `--session_id` stops the specific session you identify.
 
-<img loading="lazy" src={require('../assets/images/cypressten/id_build_stop.png').default} alt="Image" width="710" height="224"  className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/cypressten/id_build_stop.png').default} alt="Terminal output of build-stop using the session_id flag" width="710" height="224"  className="doc_img"/>
+
+## Related Cypress Guides
+***
+
+Continue with the guides below to run and scale your Cypress tests on TestMu AI.
+
+- [Run your first Cypress test on TestMu AI](/support/docs/getting-started-with-cypress-testing/) by cloning the sample project and running it on the cloud.
+- [Generate Cypress tests with AI coding assistants](/support/docs/cypress-agent-skills/) using Cypress Agent Skills.
+- [Check the supported browsers and OS](/support/docs/supported-browsers-and-os/) to see the versions and platforms you can target.

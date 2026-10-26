@@ -226,6 +226,7 @@ Replace `<TestRunID>` with the actual ID from the URL and set additional optiona
 - **report_enabled**: Set to `true` to generate an HTML report for the test run. The report can be accessed from the HyperExecute Job page after execution. See [Reports](/support/docs/kaneai-hyperexecute-test-run-execution/#reports) for details.
 - **extent_report_enabled**: Set to `true` to generate an Extent report for the test run. The report can be accessed from the HyperExecute Job page after execution. Only one report type can be enabled at a time. Use either `report_enabled` or `extent_report_enabled`, not both.
 - **report_email_to**: An array of email addresses to receive the test run report via email after execution. Maximum 10 email addresses. Only works when `report_enabled` is set to `true`.
+- **callback_url**: An HTTPS URL that receives one `POST` with the job status and test counts when each job of the test run finishes. Not supported for sequential test runs. See [Receive the Job Status via a Callback URL](/support/docs/hyperexecute-job-callback/).
 
 :::note
 Test case failure retries are supported only for code exported from **May 10, 2026 onwards**. For previously exported code, retries are triggered only on test runner command failure. To use this capability, regenerate the code export for your test cases in Test Manager.
@@ -280,7 +281,8 @@ curl --location 'https://test-manager-api.lambdatest.com/api/atm/v1/hyperexecute
     ], #Optional to be used to dynamically replace any pattern URL in test cases with the replacement URL
     "report_enabled": false, #Optional, set true to generate HTML report
     "extent_report_enabled": false, #Optional, set true to generate Extent report
-    "report_email_to": ["email1@example.com"] #Optional, array of email addresses to receive report (max 10)
+    "report_email_to": ["email1@example.com"], #Optional, array of email addresses to receive report (max 10)
+    "callback_url": "https://your-server.example.com/hyperexecute/callback" #Optional, HTTPS URL called when each job finishes
 }'
 ```
 

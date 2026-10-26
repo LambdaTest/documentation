@@ -146,7 +146,7 @@ Although, our [Selenium Grid](https://www.testmuai.com/selenium-automation/) sup
           <a className="lt_primary" href="/support/docs/php-with-selenium-running-php-automation-scripts-on-testmu-selenium-grid/">PHP</a>
         </li>
         <li>
-          <a href="/support/docs/laravel-dusk-with-selenium-running-laravel-dusk-automation-scripts-on-testmu-selenium-grid/">Laravel</a>
+          <a href="/support/docs/php-with-selenium-running-php-automation-scripts-on-testmu-selenium-grid/?framework=laravel">Laravel</a>
         </li>
         <li>
           <a href="/support/docs/codeception-integration-with-testmu/">Codeception</a>
@@ -229,7 +229,7 @@ Although, our [Selenium Grid](https://www.testmuai.com/selenium-automation/) sup
           <a href="/support/docs/webdriverio-5-6-2-with-selenium-running-automation-scripts-on-testmu-selenium-grid/">WebDriverIO 5.6.2</a>
         </li>
         <li>
-          <a href="/support/docs/nightwatch-with-selenium-running-nightwatch-automation-scripts-on-testmu-selenium-grid/">NightwatchJS</a>
+          <a href="/support/docs/javascript-with-selenium-running-javascript-automation-scripts-on-testmu-selenium-grid/?framework=nightwatch">NightwatchJS</a>
         </li>
         <li>
           <a href="/support/docs/webdriverio-with-selenium-running-webdriverio-automation-scripts-on-testmu-selenium-grid/">WebDriverIO</a>
@@ -262,7 +262,7 @@ Although, our [Selenium Grid](https://www.testmuai.com/selenium-automation/) sup
           <a href="/support/docs/selenium-tests-with-nemojs/">NemoJS</a>
         </li>
          <li>
-          <a href="/support/docs/protractor-with-selenium-running-protractor-automation-scripts-on-testmu-selenium-grid/">Protractor</a>
+          <a href="/support/docs/javascript-with-selenium-running-javascript-automation-scripts-on-testmu-selenium-grid/?framework=protractor">Protractor</a>
         </li>
         <li>
           <a href="/support/docs/siesta-integration/">Siesta</a>

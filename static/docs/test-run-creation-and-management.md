@@ -15,22 +15,55 @@ Use descriptive names to easily identify test runs later.
 - Assign relevant Tags to categorize the test run.
 - Click **Create Test Run** to proceed.
 
-## 2. Adding and Configuring Test Cases
-### Access the Test Cases Tab
-- Upon successful creation, you will be redirected to the Test Cases tab.
-- Here, you can add multiple test cases to the test run.
+Creating the test run takes you through three steps: **Enter Details**, **Add Test Cases**, and **Set Configurations and Assignee**. The steps are shown at the top of the page, so you can see which one you are on.
 
-### Assign Test Cases
-- Select the desired test cases from the list.
-- Assign Assignees to each test case.
-- Add test case configurations individually or in bulk.
-> Note: Configurations allow you to define environment settings, such as browser and device combinations.
+## 2. Adding and Configuring Test Cases
+### Add Test Cases
+In the **Add Test Cases** step, choose the test cases to include in the test run.
+
+- Use the **Folders** tree to work folder by folder. Each folder shows how many of its test cases are selected, and selecting a folder's checkbox selects every test case in it.
+- Use search and the **Status**, **Tags**, and **More** filters to narrow the list. Most filters can also exclude values: switch one to **Not Equals** to leave out test cases with the selected values, while test cases with no value for that field stay in the list. See [Include or Exclude Values](/support/docs/manual-test-case-creation/#include-or-exclude-values).
+- Select test cases one by one, or use the checkbox in the list header to select every test case the list shows. With filters applied, select all picks exactly the test cases the filters show.
+- The number of selected test cases is shown at the bottom of the page. Use **Clear All** to start over.
+- Click **Add Test Cases** to add the selection and move to the next step.
+
+The same picker opens when you add or remove test cases later from **Manage Test Cases**.
 
 Test cases shared into your project from other projects can be added to a test run too. Select them from **Shared Incoming**. See [Share Test Cases Across Projects](/support/docs/share-test-cases-across-projects/#add-shared-test-cases-to-test-runs).
 
+### Set Configurations and Assignee
+In the **Set Configurations and Assignee** step, every added test case is listed along with what it still needs. A test case is flagged when it has no configuration, or when some of its test instances have no assignee. Below each test case, a summary shows how many configurations and test instances it has, and how many of those test instances are assigned. Expand a test case to see its configurations.
+
+For each test case, you can:
+- **Set Config**: choose the configurations to run it on. Each configuration creates one test instance of the test case. Once a test case has configurations, use the same action to update them.
+- **Set Assignee**: assign its test instances to a team member.
+- **Delete**: remove the test case from the test run.
+
+To change many test cases at once, select them, or select all of them from the list header, and use the same actions in the header.
+
+The summary bar at the bottom of the page shows the number of test cases added, the number of test instances, how many test cases are missing a configuration, how many test instances are missing an assignee, and the configurations in use.
+
+To add or remove test cases without leaving this step, click **Manage Test Cases**.
+
 ### Add Configurations
-- Choose multiple configurations from the dropdown or create new configurations as needed.
-- Apply configurations to the selected test cases.
+**Set Config** opens the **Add Configuration** panel.
+- Search configurations by name, or filter them by OS, browser, and resolution.
+- Select the configurations to apply. You can select several, or all of them.
+- Click **Create a Configuration** to add one that does not exist yet, or **Manage configurations** to open your configuration list.
+- Click **Apply**.
+
+> Note: Configurations allow you to define environment settings, such as browser and device combinations.
+
+Applying configurations to several test cases at once replaces the configurations those test cases already have.
+
+To run a parameterized test case once for each dataset row, set a dataset on its configuration. See [Run Parameterized Manual Test Cases](/support/docs/test-manager-variables-parameters-secrets/#run-parameterized-manual-test-cases).
+
+### Large Test Runs Are Processed in the Background
+When you add a large number of test cases, or apply configurations or assignees to a large number of them, the change is applied in the background. The page stays responsive while you set up large test runs, instead of hanging or failing.
+
+- While a change is being applied, a progress indicator is shown at the top of the step. You can wait on the page, or continue working elsewhere and come back later.
+- **Save Test Run** is unavailable until the change finishes.
+- When the change finishes, the list and the summary bar are updated. For example, applying 40 configurations to 91 test cases creates 3,640 test instances.
 
 ## 3. Saving and Managing Test Runs
 ### Finalize the Test Run
@@ -48,9 +81,90 @@ Test instances are organized using a **Folders** sidebar on the left, reflecting
 - Select multiple test instances.
 - Use the Select Assignee and Select Status options to apply changes in bulk.
 
+Setting statuses here counts as setting them by hand, so those test instances are no longer marked as derived until their steps change again. See [Setting the Test Instance Status Yourself](#setting-the-test-instance-status-yourself).
+
 ### Update Test Step Status
 - Within any test instance, individually update the status of each test step.
 - Add remarks or actual outcomes for manual test steps.
+- Move a step back to **Not Started** if it has to be executed again.
+
+On a manual test instance, marking a step also updates the status of the test instance itself. See [How the Test Instance Status Is Derived](#how-the-test-instance-status-is-derived).
+
+### How the Test Instance Status Is Derived
+
+On a manual test instance, changing the status of a step recalculates the status of the instance from **all** of its steps, not only the one you changed. You record the verdict once, on the step, and the instance follows.
+
+The instance status is written only when the recalculated value differs from the one already stored, so nothing else about the instance changes.
+
+The rules below are checked in order, and the first one that matches decides the status.
+
+| Order | If | The test instance becomes |
+|---|---|---|
+| 1 | Any step is **Failed** | **Failed** |
+| 2 | Any step has not been executed yet — **Not Started**, or not marked at all | **Not Started** |
+| 3 | Every step is executed and at least one is on a **custom status** | That custom status, from the lowest-numbered step holding one |
+| 4 | Every step is executed and at least one is **Passed** | **Passed** |
+| 5 | Every step is executed and none of the above applies | **Skipped** |
+
+#### Examples
+
+`Blocked` and `Deferred` below are examples of custom statuses your project may have added to the Test Run **Status** field.
+
+| Step statuses, in order | Test instance status | Why |
+|---|---|---|
+| Passed, Passed, Passed | Passed | Every step was executed and passed. |
+| Passed, Failed, Passed | Failed | One failed step is enough, wherever it is. |
+| Failed, Failed, Skipped | Failed | More than one failure makes no difference. |
+| Blocked, Failed, Passed | Failed | A failure outranks a custom status. |
+| Passed, Not Started, Not Started | Not Started | Steps are still unexecuted. |
+| Passed, Blocked, Not Started | Not Started | An unexecuted step outranks the custom status. |
+| Not Started, Not Started, Not Started | Not Started | Nothing has been executed yet. |
+| Not marked, Passed, Skipped | Not Started | A step with no status counts as unexecuted. |
+| Passed, Blocked, Skipped | Blocked | Every step is executed, so the custom status decides. |
+| Blocked, Passed, Skipped | Blocked | A custom status is never resolved into Passed. |
+| Blocked, Deferred, Passed | Blocked | With two custom statuses, the lowest-numbered step wins. |
+| Skipped, Skipped, Blocked | Blocked | A custom status outranks Skipped. |
+| Passed, Skipped, Passed | Passed | A skipped step does not block a pass. |
+| Skipped, Skipped, Skipped | Skipped | Everything was executed, and nothing passed or failed. |
+
+#### Custom Statuses in a Derived Status
+
+Custom statuses are the extra values your project adds to the Test Run **Status** system field. See [System and Custom Fields](/support/docs/system-and-custom-fields/#system-fields).
+
+- A custom status is an end state. It is never resolved into **Passed** by a later rule, and the execution end time is stamped on the instance when it is derived.
+- Renaming a custom status applies the new name on the instance and on its steps, and the instance stays marked as derived.
+- Deleting a custom status, or unlinking a project from it, resets every instance holding it to **Not Started** and leaves the steps that carried it unmarked.
+
+#### Setting the Test Instance Status Yourself
+
+- You can still set the test instance status by hand at any time, and it is kept exactly as you set it.
+- A status you set by hand is no longer marked as derived. The next real step status change derives over it.
+- Re-selecting the status a step already has is not a change, so it triggers no recalculation and leaves a hand-set instance status alone.
+- Setting statuses in bulk from the test instance list counts as setting them by hand. See [Bulk Update Options](#bulk-update-options).
+- Updating several steps in one bulk action produces a single recalculation, not one per step.
+- Moving a step back to **Not Started** pulls the instance out of an end state such as **Passed**, **Failed** or a custom status, and clears its execution end time.
+
+#### Where Derivation Does Not Apply
+
+- Automation and KaneAI test instances, whose status is reported by the runner.
+- Test instances in an archived test run.
+- Test instances that have no steps. Their status stays manually settable.
+- Test instances already on **Timed Out**, **Aborted**, **Lambda Error** or **Muted**. These are never overwritten.
+
+A derived status change is recorded on the test instance audit log against the person who changed the step, naming the step that drove it. See [Test Instance Audit Logs](/support/docs/test-instance-audit-logs/). Syncing an instance to a newer test case version resets it and stops it being marked as derived, until its next step status change. See [Sync Test Instances](/support/docs/sync-test-instance/).
+
+A derived status rolls up to the test run in the same way a hand-set one does, so the test run status and its status counts stay in step with what was executed.
+
+#### Turn Status Derivation On or Off
+
+Deriving the test instance status from step results is enabled by default for every organization and applies to all of its projects.
+
+This behaviour is configured at the Organization level within the **Org Product Preferences** section of **Organization settings**, under **Test Manager** > **Manual Test Status**, [here](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/org-settings/test-manager/manual-test-status). Use the **Set test instance status from step results** toggle, then save your changes.
+
+- Turn it off and no test instance status is derived any more. Statuses that were already derived are left as they are.
+- Turn it on and it applies from each instance's next step status change. Nothing is recalculated or rewritten for executions that already happened.
+
+Only **Admins** of the Organization can change this setting.
 
 ### Read the Test Case Details During Execution
 
@@ -79,7 +193,15 @@ A filter bar above the test instance list lets you narrow down a test run by:
 Filters work on both Manual and Automation test runs, apply at the **All Test Instances** view as well as at any folder, and persist as you switch between folders. The active filter state is also reflected in the page URL, so you can bookmark or share a filtered view.
 
 **Supported Custom Field types**
-Custom Fields can be filtered only for types: **Single Select Dropdown**, **Multi Select Dropdown**, **User**, **Boolean**, and **Date**.
+Custom Fields can be filtered only for types: **Single Select Dropdown**, **Multi Select Dropdown**, **User**, **Boolean**, and **Date**. Of these, **Single Select Dropdown**, **Multi Select Dropdown**, and **User** can also be excluded with **Not Equals**.
+
+### Exclude Values
+
+Each filter that lists values can either include or exclude the values you select. Switch a filter to **Not Equals** next to its search box to hide the test instances that have any of the selected values, for example every instance on **Windows**, or every instance assigned to one tester.
+
+**Not Equals** keeps test instances that have no value for that field. Excluding an assignee keeps the unassigned instances, and excluding an OS or browser keeps the instances with no configuration. To hide the unassigned instances as well, also select **Unassigned** in the **Assignee** filter.
+
+Filters in different fields combine, so an instance has to match all of them. When you select all instances in a filtered view, bulk updates apply only to the instances the filters show. For how exclusion works on each kind of field, see [Include or Exclude Values](/support/docs/manual-test-case-creation/#include-or-exclude-values).
 
 ## 5. Enhancing Test Runs with Test Evidences
 ### Adding Remarks and Attachments
@@ -116,9 +238,9 @@ You can manage your test runs using the options available in the **three-dot men
 
 | Action | Description |
 |---|---|
-| **Edit** | Modify the test run by adding or removing test cases. KaneAI test runs can only be edited if they have not been executed. |
+| **Edit** | Modify the test run by adding or removing test cases from **Manage Test Cases**, or by changing configurations and assignees. Large changes are [processed in the background](#large-test-runs-are-processed-in-the-background). KaneAI test runs can only be edited if they have not been executed. |
 | **Duplicate** | Create a copy of the test run for re-execution or variation testing. |
-| **Archive** | Move completed test runs to the archive to keep your workspace clean and organized. |
+| **Archive** | Move completed test runs to the archive to keep your workspace clean and organized. Test instances in an archived test run do not have their status derived from step results. |
 | **Delete** | Permanently remove a test run that is no longer needed. |
 
 Archiving a test run is not the same as archiving a test case. An archived test case stays in any run it was already part of and keeps its executions as history, but it is not offered when you create a new test run and is not carried across when you duplicate one. See [Archive and Restore Test Cases](/support/docs/test-case-archive/).
