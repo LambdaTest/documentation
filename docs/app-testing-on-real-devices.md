@@ -3,7 +3,7 @@ id: app-testing-on-real-devices
 title: Getting started with Real Device App Testing
 hide_title: true
 sidebar_label: Getting Started
-description: Test mobile apps on 3000+ real devices with TestMu AI. Upload, choose devices, regions, and OS versions, and start seamless manual app testing today!!
+description: Test mobile apps on 50,000+ real devices with TestMu AI. Upload, choose devices, regions, and OS versions, and start seamless manual app testing today!!
 keywords:
 - real device app testing 
 - testmu ai real device app testing 
@@ -51,7 +51,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       "@id": "https://www.testmuai.com/support/docs/app-testing-on-real-devices/"
     },
     "headline": "Getting started with Real Device App Testing",
-    "description": "Test mobile apps on 3000+ real devices with TestMu AI. Upload, choose devices, regions, and OS versions, and start seamless manual app testing today!!",
+    "description": "Test mobile apps on 50,000+ real devices with TestMu AI. Upload, choose devices, regions, and OS versions, and start seamless manual app testing today!!",
     "url": "https://www.testmuai.com/support/docs/app-testing-on-real-devices/",
     "image": {
       "@type": "ImageObject",
