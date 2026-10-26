@@ -132,9 +132,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
     "dateModified": "2026-09-09T19:10:37+05:30"
   }) }}
 />
-Google's Flutter is an open-source tool for developing native mobile apps. It enables developers to create cross-platform apps for both Android and iOS using a single codebase and programming language.
-
-You can now run End-to-End (E2E) testing for Flutter apps on the <BrandName /> Appium testing platform across 5000+ real Android and iOS devices. <BrandName /> supports Appium's Flutter driver that lets you test Flutter apps using the Appium framework. To test Flutter apps, you will need to upload apps on <BrandName /> cloud servers and then run your automated tests. 
+Testing Flutter apps on TestMu AI runs Appium's Flutter driver across 5000+ real Android and iOS devices, letting you run End-to-End (E2E) testing of cross-platform apps from a single codebase. Compile your app in debug or profile mode, upload it, and execute automated tests.
 
 ## Prerequisites
 
