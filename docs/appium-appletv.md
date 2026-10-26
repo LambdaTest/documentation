@@ -66,7 +66,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
       "@type": "WebPage",
       "@id": "https://www.testmuai.com/support/docs/appium-appletv/"
     },
-    "headline": "Apple TV With Appium",
+    "headline": "How to Automate Apple TV Apps on TestMu AI",
     "description": "Complete guide to running your first AppleTV Appium automated test script on TestMu AI Real Device Cloud Platform. Test on 50,000+ Real Devices.",
     "url": "https://www.testmuai.com/support/docs/appium-appletv/",
     "image": {

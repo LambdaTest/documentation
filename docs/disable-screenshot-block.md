@@ -3,7 +3,7 @@ id: disable-screenshot-block
 title: Disable Screenshot Block for Android
 hide_title: true
 sidebar_label: Disable Screenshot Block
-description: Discover how to disable screenshot blocking on TestMu AI Real Device Cloud Platform. Test biometric authentication functionalities without limitations on 50,000+ real mobile devices.
+description: Disable screenshot blocking on TestMu AI Real Device Cloud and test biometric and secure-screen features without limits on real Android and iOS devices.
 keywords:
   - screenshot unblock
   - disable screenshot block

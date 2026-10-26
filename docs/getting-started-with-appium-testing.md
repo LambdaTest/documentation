@@ -61,7 +61,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
       "@id": "https://www.testmuai.com/support/docs/getting-started-with-appium-testing/"
     },
     "headline": "How to Run Your First Appium Test on TestMu AI",
-    "description": "Getting Started with Appium Testing on TestMu AI Upload, Script, Execute, View - Run your automation scripts seamlessly on 3000+ real browsers and operating systems.",
+    "description": "Getting Started with Appium Testing on TestMu AI Upload, Script, Execute, View - Run your automation scripts seamlessly on 50,000+ real browsers and operating systems.",
     "url": "https://www.testmuai.com/support/docs/getting-started-with-appium-testing/",
     "image": {
       "@type": "ImageObject",
@@ -108,15 +108,8 @@ import VerifiedTag from '@site/src/component/verifiedTag';
 Running your first Appium test on TestMu AI executes native and hybrid mobile app End-to-End (E2E) testing on real Android and iOS devices. Clone a sample project, set credentials, upload your app, configure desired capabilities, and view detailed results on the dashboard.
 
 
-Appium is an open-source framework that lets you perform End-to-End (E2E) testing of mobile applications. It works across different platforms like Android and iOS, enabling you to write tests once and run them on various devices.  
-
-
-
-<div className="ytframe"> 
-
-<div className="youtube" data-embed="7dczd7AfPFs" data-loading-attribute="eager">
-
-  <div className="play-button"></div>
+:::tip Sample repo
+All the code is in the TestMu AI sample repository. Clone it to follow along with the same files.
 
 <div style={{display: 'flex', justifyContent: 'flex-start'}}>
 <a href="https://github.com/LambdaTest/LT-appium-python" className="github__anchor" target="_blank"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Appium Python sample project on the TestMu AI GitHub repository" className="doc_img"/> View on GitHub</a>

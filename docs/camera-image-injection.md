@@ -166,7 +166,10 @@ import VerifiedTag from '@site/src/component/verifiedTag';
 />
 
 <RealDeviceTag value="Real Device" /> <VirtualDeviceTag value="Virtual Device" />
-Camera Image Injection feature allows you to test **image capturing, QR code scanning**, and **barcode scanning** functionalities in your app across **50,000+ real devices** on the <BrandName /> Real Device Cloud platform.
+
+# Camera Image Injection
+
+Camera image injection on TestMu AI feeds custom images into an app's camera during automated tests, letting you validate QR scanning, barcode reading, and document capture across real Android and iOS devices without physical hardware or any manual scanning setup.
 
 This tool is ideal for testing features such as:
 

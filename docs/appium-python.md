@@ -1,8 +1,10 @@
 ---
 id: appium-python
-title: Appium with Python
-sidebar_label: Python
-description: Complete guide to running your first Python Appium automated test script on TestMu AI Real Device Cloud Platform. Test on 50,000+ Real Devices.
+title: "How to Run Appium Python Tests on TestMu AI"
+hide_title: true
+toc_max_heading_level: 2
+sidebar_label: "Python"
+description: "Run Appium tests in Python on TestMu AI real Android and iOS devices, covering Vanilla Python, Behave, Robot, Gauge, and PyTest with full setup."
 keywords:
   - python appium
   - python appium tutorial
@@ -68,7 +70,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
       "@type": "WebPage",
       "@id": "https://www.testmuai.com/support/docs/appium-python/"
     },
-    "headline": "Appium with Python",
+    "headline": "How to Run Appium Python Tests on TestMu AI",
     "description": "Complete guide to running your first Python Appium automated test script on TestMu AI Real Device Cloud Platform. Test on 50,000+ Real Devices.",
     "url": "https://www.testmuai.com/support/docs/appium-python/",
     "image": {

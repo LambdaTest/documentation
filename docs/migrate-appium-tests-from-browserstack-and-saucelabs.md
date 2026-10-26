@@ -226,7 +226,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
 ---
 
 
-In this documentation, we look at how to leverage <BrandName /> cloud for App automation and migrate your End-to-End (E2E) testing scripts (or test suites) from your local grid, Sauce Labs or BrowserStack. You can use <BrandName />'s desired capabilities in your tests, authenticate your test session, and execute tests on the cloud.
+Migrating your current local grid, BroweseStack or Sauce Labs tests to <BrandName /> requires a few tweaks in your code. In this guide, we'll look at how to leverage <BrandName />'s desired capabilities in your tests, authenticate your test session, and execute your End-to-End (E2E) tests on our cloud browsers.
 
 
 ## Changes In The Test Script
