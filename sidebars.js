@@ -2455,6 +2455,7 @@ module.exports = {
             type: "category",
             collapsed: true,
             label: "Languages & Frameworks",
+            link: { type: "doc", id: "appium-languages-and-frameworks" },
             items: [
               "appium-java",
               "appium-nodejs",
@@ -2524,7 +2525,7 @@ module.exports = {
             type: "category",
             collapsed: true,
             label: "Smart TV Automation",
-            items: ["appium-appletv", "appium-firetv", "appium-androidtv", "appium-rokutv"],
+            items: ["appium-appletv", "appium-firetv", "appium-androidtv"],
           },
           {
             type: "category",
@@ -2536,7 +2537,7 @@ module.exports = {
             type: "category",
             collapsed: true,
             label: "References",
-            items: ["appium-languages-and-frameworks", "migrate-appium-tests-from-browserstack-and-saucelabs", "migrate-appium-test-suites-from-sauce-labs", "appium-troubleshooting"],
+            items: ["migrate-appium-tests-from-browserstack-and-saucelabs", "migrate-appium-test-suites-from-sauce-labs", "appium-troubleshooting"],
           },
     ],
   ],
