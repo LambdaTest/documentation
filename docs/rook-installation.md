@@ -123,7 +123,7 @@ The latest public release checked on October 23, 2026 is [v0.1.13](https://githu
 | Requirement | Why |
 |---|---|
 | A supported platform above | The shell installer supports macOS/Linux; the npm package also supplies a Windows x64 runtime. No Windows ARM64 runtime package is published. |
-| TestMu AI account with an Agent Assurance plan | Supplies authentication, the plan, and credits. Since 0.1.13, Rook checks the plan before any model call or credit spend. On a plan without Rook cloud, such as Starter, Rook runs locally; syncing and recording runs on Rook cloud need a plan that includes it. See [plan refusals](/support/docs/agent-assurance-troubleshooting/#plan-refusals). You can sign in after installation. |
+| TestMu AI account with an Agent Assurance plan or free trial | Supplies authentication, the plan, and credits. A new organization can start a 14-day free trial with 4,000 credits; Starter, Pro, and Enterprise plans are on the [pricing page](https://www.testmuai.com/pricing/?product=agent-assurance). Since 0.1.13, Rook checks the plan before any model call or credit spend. On a plan without Rook cloud, such as Starter, Rook runs locally; syncing and recording runs on Rook cloud need a plan that includes it. See [plan refusals](/support/docs/agent-assurance-troubleshooting/#plan-refusals). You can sign in after installation. |
 | Your agent's dependencies | Rook invokes the target agent as you would. A local command, service, or supporting tool must already be available. |
 
 The Homebrew and shell packages carry a matching Node.js runtime. You do not need Docker, a cluster, the Rook source code, or your own model API key. If you choose npm, `npm` must already be available to run the install command.
@@ -208,7 +208,7 @@ The [`@testmuai/rook` package](https://www.npmjs.com/package/@testmuai/rook) is 
 <VerifiedTag value="Verified" />
 
 ```bash
-npm install -g @testmuai/rook
+npm install -g @testmuai/rook@latest
 ```
 
 To upgrade an npm installation:
