@@ -134,4 +134,4 @@ Continue with the guides below to build out your Playwright test coverage on Tes
 
 - [Get started with Playwright testing on TestMu AI](/support/docs/playwright-testing/) covers the base setup for cloud runs.
 - [Set up Playwright test execution on TestMu AI](/support/docs/playwright-test-execution-setup/) walks through configuring a cloud run.
-- [Configure Playwright capabilities](/support/docs/capabilities-for-playwright/) lists every capability you can set for a test.
+- [Configure Playwright capabilities](/support/docs/playwright-test-execution-setup/) lists every capability you can set for a test.

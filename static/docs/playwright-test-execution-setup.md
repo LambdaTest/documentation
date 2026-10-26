@@ -286,6 +286,6 @@ This is the complete set of capabilities you can configure for Playwright tests 
 
 Continue with the guides below to configure and run your Playwright tests on TestMu AI.
 
-- [Configure Playwright capabilities](/support/docs/capabilities-for-playwright/) documents the full capability reference.
+- [Configure Playwright capabilities](/support/docs/playwright-test-execution-setup/) documents the full capability reference.
 - [Migrate existing Playwright tests to TestMu AI](/support/docs/migrate-existing-playwright-tests/) moves your local tests to the cloud grid.
 - [Get started with Playwright testing on TestMu AI](/support/docs/playwright-testing/) walks through your first cloud run.

@@ -655,5 +655,5 @@ Continue with these related guides to extend your Playwright coverage on TestMu 
 
 - [How to test WebView apps with Playwright](/support/docs/playwright-webview-test/) covers the `isPwMobileWebviewTest` capability for hybrid apps.
 - [How to run Playwright tests on real iOS devices](/support/docs/playwright-ios-device/) mirrors this setup for iOS.
-- [How to configure Playwright capabilities](/support/docs/capabilities-for-playwright/) documents every supported capability key.
+- [How to configure Playwright capabilities](/support/docs/playwright-test-execution-setup/) documents every supported capability key.
 

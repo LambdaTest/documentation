@@ -180,7 +180,7 @@ cd Cypress-Cloud
 lambdatest-cypress init
 ```
 
-Here, we have used the below configuration as default and generated it in the `lambdatest-config.json` file. You need to set up the authentication by using <BrandName /> credentials. You can check [here](/support/docs/authentication/) for more details about authentication.
+Here, we have used the below configuration as default and generated it in the `lambdatest-config.json` file. You need to set up the authentication by using <BrandName /> credentials. You can check [here](/support/docs/getting-started-with-cypress-testing/#authentication) for more details about authentication.
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';

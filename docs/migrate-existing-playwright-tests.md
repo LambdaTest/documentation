@@ -201,7 +201,7 @@ You can run your script on any supported browser and OS combination. Specify the
 Continue with the guides below to configure and expand your Playwright runs on TestMu AI.
 
 - [Set up the Playwright test execution environment](/support/docs/playwright-test-execution-setup/) covers capabilities for browsers, resolution, and debugging.
-- [Configure Playwright capabilities](/support/docs/capabilities-for-playwright/) documents the full capability reference.
+- [Configure Playwright capabilities](/support/docs/playwright-test-execution-setup/) documents the full capability reference.
 - [Use Playwright agent skills](/support/docs/playwright-agent-skills/) extends your runs with agent-based testing.
 
 <nav aria-label="breadcrumbs">
