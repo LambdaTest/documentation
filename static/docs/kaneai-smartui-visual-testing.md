@@ -4,7 +4,7 @@
 
 This guide provides a detailed walkthrough on how to leverage KaneAI to create, manage, and automate visual regression tests. By integrating with SmartUI, you can capture screenshots, compare visual changes, and maintain UI consistency throughout your development lifecycle.
 
-The **Visual Comparison** step works in both web tests and app tests. The steps below use a web test. For Android and iOS app tests, see [Visual Comparison in App Tests](#visual-comparison-in-app-tests), which covers what is different on a mobile device.
+The **Visual Comparison** step works in both web tests and app tests. This guide first shows how to create a visual test in a web test, and then in an Android or iOS app test in [Visual Comparison in App Tests](#visual-comparison-in-app-tests). The later sections on baselines, automation and SmartUI results cover web tests first, followed by what is different for app tests.
 
 | | Web tests | App tests |
 |---|---|---|
@@ -31,58 +31,6 @@ A configuration modal will appear for your screenshot.
 * **Screenshot Type (Optional):** Choose between **View Port** (default) or **Full Page**.
 
 Click **Create** to add the step to your test flow.
-
-## Analyzing Baselines and Regressions
-
-### Establish the Baseline
-The first time the step runs, it captures an initial screenshot that becomes the **Baseline** for all future comparisons. The step shows **Baseline** and the comparison mode, such as **Smart Ignore**. You can view this image by clicking **Show Baseline**.
-
-### Rerun and Analyze the Comparison
-When the step is run again during authoring, for example with **Run this step** from the step's **...** menu, a new screenshot is captured and compared against the baseline. If changes are found, click **Show Comparison** to open the comparison view. It shows the **Baseline** and **Captured** screenshots side by side, highlights the differences, and shows the **Mismatch Percentage**.
-
-### Approve or Reject Changes
-Within the comparison view, you can review the changes and decide on a verdict with the buttons under **Verdict**.
-* **Reject Screenshot:** If the changes are unintended defects, you may reject the comparison.
-* **Approve Screenshot:** If the changes are intentional, you may accept the comparison. This will update the baseline with the new image.
-
-You can also click the settings icon in this view to open **Project Settings** and change the **Compare Type** (**Strict** or **Smart Ignore**) and the **Mis-Match Threshold**.
-
-## Saving and Automating Your Visual Test
-
-### Save Your Test Case
-Once your test flow is complete, click **Save** in the top-right header. The **Save Test Case** dialog asks whether to run a sample execution of the generated code. Click **Save & Run Execution** to save the test and run it once on HyperExecute, or select **Skip sample execution of code** and click **Save & Skip Execution** to save it without running it.
-
-KaneAI opens the saved test case, with its steps, including the **Visual Comparison** step.
-
-### Execution and Scheduling
-
-Once your test case is saved, navigate to the **Test Runs** tab to configure and launch its execution. For a complete guide on the initial setup, refer to our documentation on [Test Run Execution](/support/docs/kaneai-hyperexecute-test-run-execution/).
-
-Open the test run and click **Run on HyperExecute**. You can execute your test using one of two methods:
-
-* **Run Instance Now**
-This option triggers an immediate, one-time execution of your test. It is ideal for quick validations or debugging a specific change.
-
-* **Schedule Test Run**
-This option allows you to automate your visual regression testing by setting up a recurring schedule. Learn more in our guide to [Scheduled Test Runs](/support/docs/kaneai-scheduled-test-runs/).
-
-### Using Advanced Configurations for Visual Regression
-When you click **Run Instances Now**, the **Run with HyperExecute** panel opens. Click **Advanced Configurations** to open the **Visual Regression** settings.
-
-Open the **Visual Regression** tab and turn on the toggle to use these settings:
-* Custom Browsers (upto 4)
-* Custom Viewports (upto 5)
-* Custom Devices (upto 2) with Orientation (Portrait and Landscape)
-
-For a more flexible usage you may use the **JSON** tab where you can set your own parameters and configuration.
-
-## View Your Visual Test Results on SmartUI
-
-After the Test Run job is finished, all screenshots captured using the `/Visual Comparison` command via KaneAI will be available in your SmartUI project for review.
-
-1.  Navigate to the [SmartUI Dashboard](https://www.testmuai.com/login/?redirectTo=https://smartui.lambdatest.com/).
-2.  Select your project and the most recent build.
-3.  Here, you can compare screenshots against the baseline, highlight differences, and approve or reject changes. You can use features like Smart Ignore to mask dynamic areas for more stable comparisons.
 
 ## Visual Comparison in App Tests
 
@@ -115,11 +63,55 @@ Click **Create** to add the step.
 **Use a unique name for each Visual Comparison step**
 SmartUI matches a screenshot to its baseline by name. If two steps in the same test use the same name, the later screenshot replaces the earlier one in the build, and only one screenshot is kept. Give every Visual Comparison step its own name, such as `Home_Before_Login` and `Home_After_Login`.
 
-### Review the Baseline
+## Analyzing Baselines and Regressions
+
+### Establish the Baseline
+The first time the step runs, it captures an initial screenshot that becomes the **Baseline** for all future comparisons. The step shows **Baseline** and the comparison mode, such as **Smart Ignore**. You can view this image by clicking **Show Baseline**.
+
+### Rerun and Analyze the Comparison
+When the step is run again during authoring, for example with **Run this step** from the step's **...** menu, a new screenshot is captured and compared against the baseline. If changes are found, click **Show Comparison** to open the comparison view. It shows the **Baseline** and **Captured** screenshots side by side, highlights the differences, and shows the **Mismatch Percentage**.
+
+### Approve or Reject Changes
+Within the comparison view, you can review the changes and decide on a verdict with the buttons under **Verdict**.
+* **Reject Screenshot:** If the changes are unintended defects, you may reject the comparison.
+* **Approve Screenshot:** If the changes are intentional, you may accept the comparison. This will update the baseline with the new image.
+
+You can also click the settings icon in this view to open **Project Settings** and change the **Compare Type** (**Strict** or **Smart Ignore**) and the **Mis-Match Threshold**.
+
+### Review the Baseline in App Tests
 
 The first time a Visual Comparison step runs, its screenshot becomes the **Baseline**. The step shows **Baseline** and the comparison mode, such as **Smart Ignore**. Click **Show Baseline** to open the captured image.
 
 The screenshot covers the whole device screen, including the status bar with the clock, network and battery icons. These areas change between runs. See [Handle the Device Status Bar](#handle-the-device-status-bar).
+
+## Saving and Automating Your Visual Test
+
+### Save Your Test Case
+Once your test flow is complete, click **Save** in the top-right header. The **Save Test Case** dialog asks whether to run a sample execution of the generated code. Click **Save & Run Execution** to save the test and run it once on HyperExecute, or select **Skip sample execution of code** and click **Save & Skip Execution** to save it without running it.
+
+KaneAI opens the saved test case, with its steps, including the **Visual Comparison** step.
+
+### Execution and Scheduling
+
+Once your test case is saved, navigate to the **Test Runs** tab to configure and launch its execution. For a complete guide on the initial setup, refer to our documentation on [Test Run Execution](/support/docs/kaneai-hyperexecute-test-run-execution/).
+
+Open the test run and click **Run on HyperExecute**. You can execute your test using one of two methods:
+
+* **Run Instance Now**
+This option triggers an immediate, one-time execution of your test. It is ideal for quick validations or debugging a specific change.
+
+* **Schedule Test Run**
+This option allows you to automate your visual regression testing by setting up a recurring schedule. Learn more in our guide to [Scheduled Test Runs](/support/docs/kaneai-scheduled-test-runs/).
+
+### Using Advanced Configurations for Visual Regression
+When you click **Run Instances Now**, the **Run with HyperExecute** panel opens. Click **Advanced Configurations** to open the **Visual Regression** settings.
+
+Open the **Visual Regression** tab and turn on the toggle to use these settings:
+* Custom Browsers (upto 4)
+* Custom Viewports (upto 5)
+* Custom Devices (upto 2) with Orientation (Portrait and Landscape)
+
+For a more flexible usage you may use the **JSON** tab where you can set your own parameters and configuration.
 
 ### Save and Run the App Test
 
@@ -127,6 +119,14 @@ The screenshot covers the whole device screen, including the status bar with the
 2. Click **Save & Run Execution** to save the test and run it once on HyperExecute. To save without running it, select **Skip sample execution of code** first.
 
 To run the test again, click **Execute test case** on the test case page, or create a test run as described in [Test Run Execution](/support/docs/kaneai-hyperexecute-test-run-execution/). App test runs capture screenshots on the devices you run the test on. **Execute test case** can pick a different device on each run, and baselines are kept per device, so use a test run with a device configuration when you want every run compared on the same device. The **Visual Regression** settings in **Advanced Configurations** (custom browsers, viewports and devices) apply to web tests only.
+
+## View Your Visual Test Results on SmartUI
+
+After the Test Run job is finished, all screenshots captured using the `/Visual Comparison` command via KaneAI will be available in your SmartUI project for review.
+
+1.  Navigate to the [SmartUI Dashboard](https://www.testmuai.com/login/?redirectTo=https://smartui.lambdatest.com/).
+2.  Select your project and the most recent build.
+3.  Here, you can compare screenshots against the baseline, highlight differences, and approve or reject changes. You can use features like Smart Ignore to mask dynamic areas for more stable comparisons.
 
 ### Find App Results in SmartUI
 

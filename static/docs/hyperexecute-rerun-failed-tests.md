@@ -63,6 +63,9 @@ The **Re-Run** button appears only on jobs that can be rerun. Where a job cannot
 
 A job that *can* be rerun may still come with something to note — one of the two scopes unavailable, or a named tunnel that has to be running before you start. The dialog shows that as a message when you open it.
 
+**Deep dive**
+For the complete reference — every rule the Rerun engine can emit, with the exact text each one produces — see [Rerun Rules in HyperExecute](/support/docs/hyperexecute-rerun-rules/).
+
 ## Frequently asked questions {#faq}
 
 ### Does a rerun change the original job?

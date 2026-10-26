@@ -6,7 +6,7 @@ Rook is publicly available from the [LambdaTest/rook repository](https://github.
 
 Installation commands run in your normal terminal. After installation, launch `rook` (or `rook.cmd` in PowerShell) **without a subcommand** to open the interactive terminal UI (TUI). Stay in that session for sign-in, project selection, exploration, generation, and testing; you do not need CI/headless mode for the walkthrough.
 
-The latest public release checked on October 13, 2026 is [v0.1.11](https://github.com/LambdaTest/rook/releases/tag/v0.1.11). The public npm package and Homebrew formula also publish 0.1.11. Historical walkthroughs and CI examples can name an older, tested version; do not change a pipeline pin without checking its commands and result handling.
+The latest public release checked on October 23, 2026 is [v0.1.13](https://github.com/LambdaTest/rook/releases/tag/v0.1.13). The public npm package and Homebrew formula also publish 0.1.13. Historical walkthroughs and CI examples can name an older, tested version; do not change a pipeline pin without checking its commands and result handling.
 
 | Your environment | Start here |
 |---|---|
@@ -19,7 +19,7 @@ The latest public release checked on October 13, 2026 is [v0.1.11](https://githu
 | Requirement | Why |
 |---|---|
 | A supported platform above | The shell installer supports macOS/Linux; the npm package also supplies a Windows x64 runtime. No Windows ARM64 runtime package is published. |
-| TestMu AI account | Supplies authentication and credits. You can sign in after installation. |
+| TestMu AI account with an Agent Assurance plan | Supplies authentication, the plan, and credits. Since 0.1.13, Rook checks the plan before any model call or credit spend. On a plan without Rook cloud, such as Starter, Rook runs locally; syncing and recording runs on Rook cloud need a plan that includes it. See [plan refusals](/support/docs/agent-assurance-troubleshooting/#plan-refusals). You can sign in after installation. |
 | Your agent's dependencies | Rook invokes the target agent as you would. A local command, service, or supporting tool must already be available. |
 
 The Homebrew and shell packages carry a matching Node.js runtime. You do not need Docker, a cluster, the Rook source code, or your own model API key. If you choose npm, `npm` must already be available to run the install command.
@@ -70,7 +70,7 @@ Pass installer options after `bash -s --`:
 ```bash
 # Pin a specific public release.
 curl -fsSL https://raw.githubusercontent.com/LambdaTest/rook/main/install.sh \
-  | bash -s -- --version 0.1.11
+  | bash -s -- --version 0.1.13
 
 # Link the executable into another writable directory.
 curl -fsSL https://raw.githubusercontent.com/LambdaTest/rook/main/install.sh \
@@ -107,7 +107,7 @@ The npm package installs the `rook` executable and publishes platform runtime pa
 The 0.1.3 release fixes the npm update path. If an older install cannot update normally, use the public registry explicitly:
 
 ```bash
-npm install -g @testmuai/rook@0.1.11 \
+npm install -g @testmuai/rook@0.1.13 \
   --registry=https://registry.npmjs.org \
   --@testmuai:registry=https://registry.npmjs.org
 ```
@@ -118,18 +118,20 @@ Then run command -v rook and rook --version to make sure another installation is
 
 Use **64-bit Windows and x64 Node.js 20 or newer**. Install Node.js with npm from the [official Node.js download page](https://nodejs.org/en/download), then open a new PowerShell terminal. The public Rook npm package includes a matching Windows x64 runtime; Node.js is still needed to run npm and start its command shim.
 
+Use Rook 0.1.13 or newer on Windows. It launches commands, hooks, and shims through `cmd.exe`, handles drive roots, case-insensitive folders, short names, and junctions, retries brief file-lock errors, and no longer fails `rook run` with EPERM while writing the scenario inventory.
+
 ### Install and verify
 
 ```powershell
 node --version
 node -p "process.platform + ' ' + process.arch"
 npm.cmd --version
-npm.cmd install -g @testmuai/rook@0.1.11
+npm.cmd install -g @testmuai/rook@0.1.13
 Get-Command rook.cmd
 rook.cmd --version
 ```
 
-The platform check should print `win32 x64`, and the pinned install should report `0.1.11`. Use `rook.cmd` in PowerShell throughout this guide. Calling the `.cmd` shim also avoids the “running scripts is disabled” error that can affect npm's `.ps1` shim; you do not need to weaken PowerShell's execution policy.
+The platform check should print `win32 x64`, and the pinned install should report `0.1.13`. Use `rook.cmd` in PowerShell throughout this guide. Calling the `.cmd` shim also avoids the “running scripts is disabled” error that can affect npm's `.ps1` shim; you do not need to weaken PowerShell's execution policy.
 
 ### Sign in and open your workspace
 
