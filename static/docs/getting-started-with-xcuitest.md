@@ -2,7 +2,7 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
-Developed by Apple, XCUITest is a UI testing framework for iOS applications, commonly used for End-to-End (E2E) testing of app user flows. It is built on top of XCTest, an integrated test framework in Apple's Xcode IDE. TestMu AI lets you perform automated app testing of your iOS apps using XCUITest across 5000+ real devices and OS combinations.
+Developed by Apple, XCUITest is a UI testing framework for iOS applications, commonly used for End-to-End (E2E) testing of app user flows. It is built on top of XCTest, an integrated test framework in Apple's Xcode IDE. TestMu AI lets you perform automated app testing of your iOS apps using XCUITest across 50,000+ real devices and OS combinations.
 
 ## Prerequisites
 

@@ -46,7 +46,7 @@ On its cloud-based Selenium Grid, you can view the scores of:
 *   **SEO**
 *   **Progressive Web App**
 
-metrics with TestMu AI. TestMu AI also allows you to perform cross-browser testing on 5000+ real devices and 10,000+ browser/device combinations. Once you have identified bottlenecks in the Lighthouse audit, apply these performance tips to speed up your Selenium tests and shorten overall execution time.
+metrics with TestMu AI. TestMu AI also allows you to perform cross-browser testing on 50,000+ real devices and 10,000+ browser/device combinations. Once you have identified bottlenecks in the Lighthouse audit, apply these performance tips to speed up your Selenium tests and shorten overall execution time.
 
 > **Note:** TestMu AI currently supports **Lighthouse** on Chrome browsers for all Windows OS, macOS BigSur, macOS Mojave, and macOS Catalina.
 
