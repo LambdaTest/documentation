@@ -215,10 +215,10 @@ Since 0.1.13, Rook checks your organization's Agent Assurance plan before any mo
 
 | Code | Meaning | Next step |
 |---|---|---|
-| <code>plan_required</code> | The organization has no active Agent Assurance plan: none, an ended free trial, or an expired subscription. This applies whatever the credit balance. Nothing ran and nothing was charged. | Open the billing link in the message, or ask your organization admin. |
+| <code>plan_required</code> | The organization has no active Agent Assurance plan: none, an ended free trial, or an expired subscription. This applies whatever the credit balance. Nothing ran and nothing was charged. | Open the link in the message, or ask your organization admin. Since 0.1.14, an organization that has never had a plan is sent to the onboarding page to start its free trial; an ended trial or expired subscription is sent to the billing plans page. |
 | <code>upgrade_plan</code> | The plan has no Rook cloud, such as Starter. Syncing to Rook cloud, cloud project status, and recording runs on Rook cloud are refused. | Keep working locally: a normal run continues on this machine as <code>--test</code> does, and <code>rook ui --local</code> shows the results. To share results, open the upgrade link in the message. |
 
-The CLI shows the billing page as the next step and the web app opens it. Rook uses only https links on LambdaTest or TestMu AI hosts. Do not retry the refused command until the plan changes.
+The CLI shows that page as the next step and the web app opens it; billing links open the plans page on Agent Assurance. After a trial or plan ends, the organization can still open the projects, agents, scenarios, and runs it made. Rook uses only https links on LambdaTest or TestMu AI hosts. Do not retry the refused command until the plan changes.
 
 ## Discovery Problems
 
