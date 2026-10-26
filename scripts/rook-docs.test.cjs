@@ -36,7 +36,7 @@ test('public installation examples use the current Homebrew tap and include nati
     assert.doesNotMatch(bash, /brew tap LambdaTest\/rook https:\/\/github\.com\/LambdaTest\/rook\.git/);
     assert.match(doc, /npm\.cmd install -g @testmuai\/rook\b/);
   }
-  assert.match(install, /npm\.cmd install -g @testmuai\/rook@0\.1\.13/);
+  assert.match(install, /npm\.cmd install -g @testmuai\/rook@0\.1\.14/);
   assert.match(install, /\{#windows\}/);
   assert.match(install, /\{#windows-wsl\}/);
   assert.match(install, /Get-Command rook\.cmd/);
@@ -291,7 +291,7 @@ test('CLI Reference documents the public baseline, interactive screenshots, and 
   assert.match(doc, /--from/);
   assert.match(doc, /rook doctor --session/);
   assert.match(doc, /installation-changing command, not a read-only version check/);
-  assert.match(doc, /only stdio connections execute/);
+  assert.match(doc, /only stdio and http connections execute/);
   assert.match(doc, /can emit text even when they accept/);
   assert.doesNotMatch(doc, /rook-terminal-home\.png|View the (?:CLI|interactive).*screenshot|<details>/, 'screenshots appear inline without a view selector');
   for (const name of 'ask guide help docs login auth whoami logout plan project explore agent profile generate scenarios status sync run runs report ui env mcp doctor update export'.split(' ')) {
