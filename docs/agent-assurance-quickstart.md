@@ -133,7 +133,7 @@ curl -fsSL https://raw.githubusercontent.com/LambdaTest/rook/main/install.sh | b
 
 ```bash
 # npm (use Node.js 20 or newer)
-npm install -g @testmuai/rook
+npm install -g @testmuai/rook@latest
 ```
 
 PowerShell on Windows x64:

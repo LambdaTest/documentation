@@ -149,7 +149,7 @@ You can explicitly point interactive Rook at a directory outside the current wor
 The path must be typed by a human. A model suggestion or stored record cannot grant a new external read scope.
 
 **Current external-workspace limitation**
-Rook can read and report an external directory, but the current pre-alpha release does not persist an external agent record. To keep discovery state and generate scenarios, `cd` into that checkout and start Rook there.
+Rook can read and report an external directory, but the current release does not persist an external agent record. To keep discovery state and generate scenarios, `cd` into that checkout and start Rook there.
 
 Rook also refuses two paths to keep read scope tight:
 
