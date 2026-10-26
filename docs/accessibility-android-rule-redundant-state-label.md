@@ -1,8 +1,8 @@
 ---
 id: accessibility-android-rule-redundant-state-label
-title: Redundant State Keyword in Accessibility Label
+title: Redundant State Keyword in Accessibility Label (Android)
 sidebar_label: Redundant State in Label
-description: Rule-level Accessibility guidance for Redundant State Keyword in Accessibility Label on Android.
+description: "Flag Android accessibility labels that bake in state words like 'on', 'off', or 'selected' that TalkBack already announces from the control."
 slug: accessibility-android-rule-redundant-state-label/
 ---
 import { BRAND_URL } from '@site/src/component/BrandName';
@@ -43,7 +43,7 @@ import { BRAND_URL } from '@site/src/component/BrandName';
       "@id": "https://www.testmuai.com/support/docs/accessibility-android-rule-redundant-state-label/"
     },
     "headline": "Redundant State Keyword in Accessibility Label",
-    "description": "Rule-level Accessibility guidance for Redundant State Keyword in Accessibility Label on Android.",
+    "description": "Flag Android accessibility labels that bake in state words like 'on', 'off', or 'selected' that TalkBack already announces from the control.",
     "url": "https://www.testmuai.com/support/docs/accessibility-android-rule-redundant-state-label/",
     "image": {
       "@type": "ImageObject",

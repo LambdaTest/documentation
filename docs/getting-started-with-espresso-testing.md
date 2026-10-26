@@ -222,6 +222,8 @@ import VerifiedTag from '@site/src/component/verifiedTag';
     }
   ]) }}
 />
+<RealDeviceTag value="Real Device" /> <VirtualDeviceTag value="Virtual Device" />
+Espresso is a widely-used Android UI testing framework, commonly used for End-to-End (E2E) testing of app user flows. It simplifies the process of writing reliable and efficient UI tests. It allows developers to create automated tests that simulate user interactions within an app, ensuring that the app's UI behaves as expected. With its straightforward API and synchronization capabilities, Espresso provides a robust solution for validating the functionality and performance of Android applications.
 
 <RealDeviceTag value="Real Device" /> <VirtualDeviceTag value="Virtual Device" />
 

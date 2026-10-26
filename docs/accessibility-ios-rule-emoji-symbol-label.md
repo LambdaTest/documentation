@@ -1,8 +1,8 @@
 ---
 id: accessibility-ios-rule-emoji-symbol-label
-title: Emoji or Symbol Used in Accessibility Label
+title: Emoji or Symbol Used in Accessibility Label (iOS)
 sidebar_label: Emoji or Symbol in Label
-description: Rule-level Accessibility guidance for Emoji or Symbol Used in Accessibility Label on iOS.
+description: "Flag iOS accessibility labels made up mostly of emoji or symbols, which VoiceOver announces inconsistently. Use clear descriptive text instead."
 slug: accessibility-ios-rule-emoji-symbol-label/
 ---
 import { BRAND_URL } from '@site/src/component/BrandName';
@@ -43,7 +43,7 @@ import { BRAND_URL } from '@site/src/component/BrandName';
       "@id": "https://www.testmuai.com/support/docs/accessibility-ios-rule-emoji-symbol-label/"
     },
     "headline": "Emoji or Symbol Used in Accessibility Label",
-    "description": "Rule-level Accessibility guidance for Emoji or Symbol Used in Accessibility Label on iOS.",
+    "description": "Flag iOS accessibility labels made up mostly of emoji or symbols, which VoiceOver announces inconsistently. Use clear descriptive text instead.",
     "url": "https://www.testmuai.com/support/docs/accessibility-ios-rule-emoji-symbol-label/",
     "image": {
       "@type": "ImageObject",

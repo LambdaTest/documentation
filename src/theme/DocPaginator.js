@@ -16,6 +16,8 @@ const AGENT_DOC_PREFIXES = ['agent-assurance-', 'rook-', 'agent-testing-'];
 // the union of AgentAssuranceSidebar and AgentTestingSidebar doc ids, minus the
 // ids already covered by AGENT_DOC_PREFIXES.
 const AGENT_DOC_SLUGS = new Set([
+  'agent-features-and-metrics',
+  'ai-agent-testing-platform-overview',
   'architecture-and-how-evaluation-works',
   'chat-agent',
   'chat-agent-api-integration',
@@ -24,6 +26,7 @@ const AGENT_DOC_SLUGS = new Set([
   'inbound-phone-agent',
   'outbound-phone-agent',
   'phone-agent',
+  'test-agentforce-agents',
   'test-amazon-connect-bots',
   'test-amazon-lex-bots',
   'test-bland-agents',

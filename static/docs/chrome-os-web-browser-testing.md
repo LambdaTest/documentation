@@ -4,8 +4,6 @@
 
 This document outlines how to leverage features like mark as bug, changing IP geolocation, in-depth device logs and network logs, etc for your Real Time Web Browser testing.
 
-Apart from these features, TestMu AI also offers you the
-
 ## Steps to start your ChromeOS Web Browser Testing
 
 **Step 1:** Click on the Real Time option from your TestMu AI dashboard.

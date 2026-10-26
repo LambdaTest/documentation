@@ -25,7 +25,7 @@ The central dashboard displays all your configurations with the following featur
 | Feature | Description |
 |---------|-------------|
 | **Search Bar** | Find configurations by name |
-| **Filters** | Filter by OS, Browser, or Resolution |
+| **Filters** | Filter by OS, Browser, or Resolution. Switch a filter to **Not Equals** to hide the configurations with the selected values, for example to hide every Windows configuration |
 | **Configuration Details** | View name, last updated date, OS, browser, version, and resolution |
 | **Usage Count** | See how many test runs use each configuration |
 | **Actions Menu** | Access Edit and Delete options via the ⋮ menu |

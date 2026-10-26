@@ -356,6 +356,10 @@ You can analyze the test cases by their group by using the `Test Case Group View
 
 <img loading="lazy" src={require('../assets/images/analytics/test-cases-view.webp').default} alt="cmd" width="800" height="400" className="doc_img"/>
 
+### Test cases in builds
+
+Once test cases are captured, you can also analyze them build by build — with history, drilldowns, smart tags, flakiness, failure categories and anomaly notifications. See [Test Cases in Build Insights](/support/docs/analytics-build-insights-test-cases/).
+
 ## Test Case Use Cases
 
 The user can use the `Test Case Insights` module to analyze the test case level insights of their test automation execution on <BrandName />. The user can use the module to analyze the following use cases:

@@ -34,6 +34,8 @@ Sync the reviewed project with /sync before a normal timeline run. Use --test on
 
 Rook skips scenarios that cannot be attempted and groups the reasons.
 
+Without `--only`, a run selects at most two scenarios per attack pattern. The others are skipped with the reason `pattern  already has 2 candidates in this run`. Name scenarios with `--only` to run more of one pattern.
+
 A partially observable scenario still runs when it can establish useful evidence. Individual criteria that cannot be checked become **Unable to Verify**.
 
 The default concurrency is `1` unless the profile or plan selects another value. An explicit `--concurrency` accepts 1–8 and overrides that choice.
@@ -118,7 +120,7 @@ Deny rules override allow rules, and more specific rules win. Permission state i
 
 ## Follow Run Progress
 
-After approval, each active scenario shows its current phase. This is an actual `SC-002` execution against the public triage fixture, captured while Rook was judging the response and recorded hook evidence:
+After approval, each active scenario shows its current phase. This is an actual `SC-001` execution against the public triage fixture, captured while Rook was judging the response and recorded hook evidence:
 
 `0/1` means the scenario has not finished; it does not mean it failed. Wait for completion, then enter `/report` to inspect pass, fail, unverifiable, and unjudged counts. See [results and evidence](/support/docs/agent-assurance-results-and-evidence/#print-or-export-a-report) for the completed report from this demo.
 
@@ -131,7 +133,7 @@ After approval, each active scenario shows its current phase. This is an actual 
 
 The second command continues the same run after delayed evidence is ready. --resume instead creates a new run and carries compatible completed work forward. Rook owns judging; the other phases run your profile hooks.
 
-See [phases and hooks](/support/docs/rook-profiles-and-hooks/#lifecycle) for prerequisites and state. The old --no-narrative option is not available in 0.1.3.
+See [phases and hooks](/support/docs/rook-profiles-and-hooks/#lifecycle) for prerequisites and state. The old --no-narrative option is no longer available.
 
 ## Request Root-Cause Analysis
 

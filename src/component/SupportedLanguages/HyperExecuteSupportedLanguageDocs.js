@@ -92,7 +92,7 @@ export default function HyperExecuteSupportedLanguageDocs() {
                   <img loading="lazy" src={require('../../../assets/images/getting-started/color-js.webp').default} alt="Javascript" width="200" height="200" className="language-icon"/>
                   <ul className="lt_framework_list">
                     <li><a href="/support/docs/playwright-vanillajs-on-hyperexecute/">VanillaJs</a></li>
-                    <li><a href="/support/docs/codecept-on-hyperexecute/">CodeceptJs</a></li>
+                    <li><a href="/support/docs/playwright-codeceptjs-on-hyperexecute/">CodeceptJs</a></li>
                     <li><a href="/support/docs/playwright-jest-on-hyperexecute/">Jest</a></li>
                   </ul>
                 </div>
@@ -191,6 +191,7 @@ export default function HyperExecuteSupportedLanguageDocs() {
                   <img loading="lazy" src={require('../../../assets/images/getting-started/api.png').default} alt="API" width="200" height="200" className="language-icon"/>
                   <ul className="lt_framework_list">
                     <li><a href="/support/docs/hyperexecute-api-testing/">API</a></li>
+                    <li><a href="/support/docs/hyperexecute-karate-testing/">Karate</a></li>
                   </ul>
                 </div>
               </div>

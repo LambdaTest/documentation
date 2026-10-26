@@ -17,7 +17,7 @@ In this documentation, you will learn how to create a scheduled test run using p
 **Step 5:** In the **Build Parameters** box, you can define your desired concurrency for the tests. Click on the **Advanced Configurations** button to configure additional settings such as [Self-maintenance](/support/docs/kaneai-healing-and-dynamic-test/), network throttling, URL replacement, visual regression, accessibility testing, and [report generation](/support/docs/kaneai-hyperexecute-test-run-execution/#reports). Finally, click **Schedule Test Run** to create a recurring schedule.
 
 **Which settings a schedule shows**
-A schedule made of **Classic** test cases shows the full Advanced Configurations panel. A schedule whose test cases are all **New Experience** on **Chrome** can use Evidence Reporting, which shows a shorter **Test Configurations** panel with [Self-maintenance](/support/docs/kaneai-healing-and-dynamic-test/) instead. Retry on Failure is available in both.
+A schedule made of **Classic** test cases shows the full Advanced Configurations panel. A schedule whose test cases are all **New Experience**, on Chrome desktop or a mobile app, can use Evidence Reporting, which shows a shorter **Test Configurations** panel with [Self-maintenance](/support/docs/kaneai-healing-and-dynamic-test/) instead. Retry on Failure is available in both.
 
 **Step 6:** Click on any existing schedule to view detailed information, including a summary of test outcomes, passed and failed cases, and their respective instances. This helps in easily reviewing and proceeding with the tests.
 
@@ -50,7 +50,7 @@ Click **Next** to review a summary of the schedule, including the scheduled date
 In the **Build Parameters** box, define the concurrency for the tests. Click **Advanced Configurations** to configure settings such as [Self-maintenance](/support/docs/kaneai-healing-and-dynamic-test/), network throttling, URL replacement, visual regression, accessibility testing, and [Reports](/support/docs/kaneai-hyperexecute-test-run-execution/#reports). Click **Schedule Test Run** to create the recurring schedule.
 
 **Which settings a schedule shows**
-A schedule made of **Classic** test cases shows the full Advanced Configurations panel. A schedule whose test cases are all **New Experience** on **Chrome** can use Evidence Reporting, which shows a shorter **Test Configurations** panel with [Self-maintenance](/support/docs/kaneai-healing-and-dynamic-test/) instead. Retry on Failure is available in both.
+A schedule made of **Classic** test cases shows the full Advanced Configurations panel. A schedule whose test cases are all **New Experience**, on Chrome desktop or a mobile app, can use Evidence Reporting, which shows a shorter **Test Configurations** panel with [Self-maintenance](/support/docs/kaneai-healing-and-dynamic-test/) instead. Retry on Failure is available in both.
 
 **Result:** The recurring schedule is created and runs automatically at the set times.
 

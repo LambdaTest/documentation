@@ -38,9 +38,9 @@ You're scheduling a scan for every Monday. With "Run Initial Scan" enabled, a ba
 ### Visual Scans:
 
 * Access from the **Builds Dashboard**.
-* Click the 3-dot menu and select **Edit**.
-* Modify the scan name, schedule days, time, and time zone.
-* **Options:** Edit Schedule, Stop Recurring Scan, Delete Scan.
+* Click the 3-dot menu and select **Edit scan config**.
+* In the **Schedule Scan** section, change the days, time and time zone of a recurring scan. You can also change the scan name, settings and URLs. See [Edit and Clone Scans](/support/docs/web-scanner-edit-clone-scans/).
+* **Options:** Edit scan config, Clone scan, Stop recurring scan, Delete scan.
 
 ### Accessibility Scans:
 

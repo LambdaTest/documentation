@@ -202,7 +202,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 - Private tenant deployment for AI features (Azure OpenAI)
 
 **Resources:**
-- [Security & Trust Page](https://www.testmuai.com/trust/security#platform-security)
+- [Security & Trust Page](https://www.testmuai.com/trust/security/#platform-security)
 - [Secrets Management](/support/docs/hyperexecute-how-to-save-and-manage-secrets/)
 
 ---
@@ -410,7 +410,7 @@ TestMu AI supports regional data residency and tenant isolation for regulated de
 - Org-level secrets management
 - Priority support SLA
 
-**For pricing details**: [lambdatest.com/pricing](https://www.testmuai.com/pricing/)
+**For pricing details**: [testmuai.com/pricing](https://www.testmuai.com/pricing/)
 
 ---
 
