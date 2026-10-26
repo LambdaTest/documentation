@@ -98,6 +98,8 @@
 .verifiedTagColor{color: var(--verified-tag-color); background-color: var(--verified-tag-bg-color); font-weight:600; font-size: 12px; padding: 2px 8px; border-radius: 20px; border:1px solid var(--verified-tag-border-color); display: inline-flex; align-items: center; gap: 4px; line-height: 1.5;}
 .verifiedTagColor + div[class*='codeBlockContainer'], .verifiedTagColor + div[class*='language-']{margin-top: 6px;}
 .verifiedTagIcon{flex-shrink: 0;}
+.realDeviceColor.realDeviceSolid{color:#ffffff; background-color:var(--realDevice-tag-color); border:1px solid var(--realDevice-tag-color); border-radius:20px; padding:2px 6px; width:100px; display:block; margin-right:0; margin-bottom:8px;}
+.virtualDeviceColor.virtualDeviceSolid{color:#ffffff; background-color:var(--virtualDevice-tag-color); border:1px solid var(--virtualDevice-tag-color); border-radius:20px; padding:2px 6px; width:100px; display:block; margin-right:0; margin-bottom:8px;}
 /* Device tags render side by side inline; horizontal spacing via margin-right above. */
 
 /* Inside tables (e.g. "Supported On" column) render the device tags as compact inline chips, side by side, no wrapping — overrides the stacked block style used at the top of a page. */
