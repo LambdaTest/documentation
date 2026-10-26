@@ -61,7 +61,7 @@ Homebrew and shell installations carry a matching Node.js runtime. The npm insta
 node --version
 ```
 
-Upgrade the Node.js version used by npm and rerun `npm install -g @testmuai/rook`, or use Homebrew or the shell installer.
+Upgrade the Node.js version used by npm and rerun `npm install -g @testmuai/rook@latest`, or use Homebrew or the shell installer.
 
 ### Download resets after the release lookup
 
@@ -274,7 +274,7 @@ Rook records file existence, byte size, kind, and supported image dimensions. It
 
 ### Old run changed after scenario edits
 
-Current runs snapshot scenario definitions. If an older pre-alpha run lacks a snapshot, Rook does not fall back to the live store because that would present mutable data as historical evidence.
+Current runs snapshot scenario definitions. If a run from an older release lacks a snapshot, Rook does not fall back to the live store because that would present mutable data as historical evidence.
 
 ### Where is the root-cause analysis? {#rca-troubleshooting}
 
