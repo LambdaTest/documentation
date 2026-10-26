@@ -2474,7 +2474,6 @@ module.exports = {
               "appium-uploading-retrieving-files",
               "supported-appium-versions",
               "list-of-supported-locales",
-              "appium-ip-geolocation",
               "supported-timezone",
               "debugging-logs",
               "app-testing-apis",
