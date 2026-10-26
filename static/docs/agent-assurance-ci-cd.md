@@ -4,7 +4,7 @@
 
 Use CI only after the same agent, profile, and scenarios work locally. Commit reviewed definitions and hook scripts; keep model-driven discovery and generation separate from the release gate.
 
-This recipe targets **Rook 0.1.13**. It runs an explicit suite, preserves evidence, and checks completion and verdict counts instead of interpreting a successful CLI process as a successful agent test.
+This recipe targets **Rook 0.1.14**. It runs an explicit suite, preserves evidence, and checks completion and verdict counts instead of interpreting a successful CLI process as a successful agent test.
 
 ## Set Up CI/CD Through Prompts {#prompt-led-setup}
 
@@ -100,18 +100,18 @@ Do not run untrusted pull-request hook scripts with repository secrets. Use a re
 
 ```bash
 curl -fsSL https://raw.githubusercontent.com/LambdaTest/rook/main/install.sh \
-| bash -s -- --version 0.1.13 --dir "$RUNNER_TEMP/rook-bin"
+| bash -s -- --version 0.1.14 --dir "$RUNNER_TEMP/rook-bin"
 export PATH="$RUNNER_TEMP/rook-bin:$PATH"
 rook --version
 ```
 
 RUNNER_TEMP is a GitHub Actions runner variable. On another CI platform, substitute its job-specific temporary directory. The installer uses public releases and verifies their SHA-256 checksums; no source-repository token is required.
 
-See [release notes](https://github.com/LambdaTest/rook/releases/tag/v0.1.13) before changing the pin.
+See [release notes](https://github.com/LambdaTest/rook/releases/tag/v0.1.14) before changing the pin.
 
 ## Authenticate Without a Browser
 
-Provide LT_USERNAME and LT_ACCESS_KEY from your CI secret manager. Rook 0.1.13 accepts this pair for unattended authentication; a copied personal OAuth credential directory is not required.
+Provide LT_USERNAME and LT_ACCESS_KEY from your CI secret manager. Rook 0.1.14 accepts this pair for unattended authentication; a copied personal OAuth credential directory is not required.
 
 ```bash
 export ROOK_ENV=prod

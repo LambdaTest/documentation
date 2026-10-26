@@ -266,7 +266,7 @@ rook mcp add notion \
 ```
 
 :::note Remote transport status
-HTTP, SSE, and WebSocket definitions are accepted, stored, and listed for forward compatibility. The current release connects only to stdio MCP servers, so remote entries appear as `unsupported-transport`.
+Since 0.1.14, Rook connects to HTTP servers over Streamable HTTP, after the same approval as a stdio server. Each request has a 20-second deadline and an 8 MiB limit, and redirects are refused. SSE and WebSocket definitions are still accepted, stored, and listed for forward compatibility, but appear as `unsupported-transport`.
 :::
 
 ## Inspect a Definition
@@ -278,11 +278,11 @@ rook mcp get github
 rook mcp get github --json
 ```
 
-Rook leaves `${VAR}` references unexpanded in display output so tokens do not leak to the terminal, model context, browser, or transcript.
+Rook leaves `${VAR}` references unexpanded in display output so tokens do not leak to the terminal, model context, browser, or transcript. For an HTTP server, `rook mcp get` and `rook mcp approve` also print `sends the value of VAR to <host>` for each variable the server receives, and values of 8 or more characters expanded from `${VAR}` are removed from everything the server sends back.
 
 ## Approve Repository-Controlled Servers
 
-A project or discovered stdio definition can execute a command from a cloned repository, so it stays inert until a person approves its exact fingerprint.
+A project or discovered stdio definition can execute a command from a cloned repository, and an HTTP definition can send credentials to its host, so either stays inert until a person approves its exact fingerprint. Changing an HTTP server's host asks for approval again.
 
 Interactive:
 
