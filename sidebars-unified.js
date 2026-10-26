@@ -43,12 +43,12 @@ const docsSidebar = [
   {
     type: 'category', label: 'App Automation', collapsible: true, collapsed: true,
     items: [
-      { type: 'link', label: 'Appium Testing', href: '/docs/getting-started-with-appium-testing/' },
-      { type: 'link', label: 'Espresso Testing', href: '/docs/getting-started-with-espresso-testing/' },
-      { type: 'link', label: 'XCUI Testing', href: '/docs/getting-started-with-xcuitest/' },
+      { type: 'category', label: 'Appium Testing', collapsible: true, collapsed: true, items: items(s.AppiumTestingSidebar) },
+      { type: 'category', label: 'Espresso Testing', collapsible: true, collapsed: true, items: items(s.EspressoTestingSidebar) },
+      { type: 'category', label: 'XCUI Testing', collapsible: true, collapsed: true, items: items(s.XCUITestingSidebar) },
       { type: 'link', label: 'Mobilewright Testing', href: '/docs/mobilewright-overview/' },
-      { type: 'link', label: 'Flutter Testing', href: '/docs/appium-flutter-integration/' },
-      { type: 'link', label: 'Virtual Devices', href: '/docs/app-automation-on-emulators-simulators/' },
+      { type: 'link', label: 'Flutter Testing', href: '/docs/getting-started-with-flutter-dart-android-automation/' },
+      { type: 'category', label: 'Virtual Devices', collapsible: true, collapsed: true, items: items(s.EmuSimuSidebar) },
     ],
   },
   { type: 'link', label: 'HyperExecute', href: '/docs/getting-started-with-hyperexecute/' },
@@ -100,7 +100,6 @@ const BiDiTestingSidebar = [backToDocs, { type: 'doc', id: 'run-tests-with-webdr
 const AppiumTestingSidebar = dedicated(s.AppiumTestingSidebar);
 const EspressoTestingSidebar = dedicated(s.EspressoTestingSidebar);
 const XCUITestingSidebar = dedicated(s.XCUITestingSidebar);
-const FlutterTestingSidebar = dedicated(s.FlutterTestingSidebar);
 const MobilewrightTestingSidebar = dedicated(s.MobilewrightTestingSidebar);
 const VirtualDevicesSidebar = dedicated(s.EmuSimuSidebar);
 

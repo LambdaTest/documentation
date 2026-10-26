@@ -181,7 +181,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
 
 <RealDeviceTag value="Real Device" />
 
-In this guide, we will explore how to run Flutter Dart End-to-End (E2E) testing on an iOS device using the <BrandName /> Real Device Cloud. By combining the capabilities of Flutter Dart and <BrandName />, you can ensure the proper functioning of your app across different devices and make your app more reliable and robust.
+Running your first Flutter Dart test on TestMu AI automates Flutter apps on real iOS devices in the cloud. Install the Flutter SDK, set credentials, upload the sample app and test suite, then execute and review results on the dashboard.
 
 ## Flutter Dart Testing on iOS
 
