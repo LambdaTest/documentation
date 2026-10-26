@@ -1,8 +1,8 @@
 ---
 id: accessibility-android-rule-dynamic-type-support
-title: Dynamic Type Support
+title: Dynamic Type Support (Android)
 sidebar_label: Dynamic Type Support
-description: Rule-level Accessibility guidance for Dynamic Type Support on Android.
+description: "Ensure Android text uses scale-independent pixels (sp) so it scales with the user's system font-size setting for low-vision readability."
 slug: accessibility-android-rule-dynamic-type-support/
 ---
 import { BRAND_URL } from '@site/src/component/BrandName';
@@ -43,7 +43,7 @@ import { BRAND_URL } from '@site/src/component/BrandName';
       "@id": "https://www.testmuai.com/support/docs/accessibility-android-rule-dynamic-type-support/"
     },
     "headline": "Dynamic Type Support",
-    "description": "Rule-level Accessibility guidance for Dynamic Type Support on Android.",
+    "description": "Ensure Android text uses scale-independent pixels (sp) so it scales with the user's system font-size setting for low-vision readability.",
     "url": "https://www.testmuai.com/support/docs/accessibility-android-rule-dynamic-type-support/",
     "image": {
       "@type": "ImageObject",

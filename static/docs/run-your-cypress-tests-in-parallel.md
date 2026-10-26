@@ -2,7 +2,7 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
-If you want to run your tests parallelly on the TestMu AI platform, you can do that using either of the following two ways:
+If you want to run your End-to-End (E2E) testing parallelly on the TestMu AI platform, you can do that using either of the following two ways:
 
 ## 1. Run your Cypress tests Parallelly using the CLI
 

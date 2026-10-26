@@ -108,8 +108,15 @@ import VerifiedTag from '@site/src/component/verifiedTag';
 Running your first Appium test on TestMu AI executes native and hybrid mobile app End-to-End (E2E) testing on real Android and iOS devices. Clone a sample project, set credentials, upload your app, configure desired capabilities, and view detailed results on the dashboard.
 
 
-:::tip Sample repo
-All the code is in the TestMu AI sample repository. Clone it to follow along with the same files.
+Appium is an open-source framework that lets you perform End-to-End (E2E) testing of mobile applications. It works across different platforms like Android and iOS, enabling you to write tests once and run them on various devices.  
+
+
+
+<div className="ytframe"> 
+
+<div className="youtube" data-embed="7dczd7AfPFs" data-loading-attribute="eager">
+
+  <div className="play-button"></div>
 
 <div style={{display: 'flex', justifyContent: 'flex-start'}}>
 <a href="https://github.com/LambdaTest/LT-appium-python" className="github__anchor" target="_blank"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Appium Python sample project on the TestMu AI GitHub repository" className="doc_img"/> View on GitHub</a>

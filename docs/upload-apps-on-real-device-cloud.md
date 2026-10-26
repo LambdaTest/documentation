@@ -156,6 +156,11 @@ Hover over the app, click on the settings icon for the app settings to open.
 
 You can edit the information at any time and save the changes. If an app is no longer needed, you have the option to delete it permanently from your account.
 
+:::note
+
+Only the app owner (the user who uploaded the app to <BrandName />) can change an app’s visibility. The app name can be changed by either the owner or an admin of the organization.
+:::
+
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">

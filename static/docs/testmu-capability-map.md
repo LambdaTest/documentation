@@ -80,7 +80,7 @@ ltOptions.put("w3c", true);
 browserOptions.setCapability("LT:Options", ltOptions);
 ```
 
-To migrate your test suites from BrowserStack, checkout this guide on [Migrating from BrowserStack to TestMu AI](/support/docs/browserstack-to-testmu-migration-guide/).
+To migrate your test suites from BrowserStack, checkout this guide on [Migrating from BrowserStack to TestMu AI](/support/docs/browserstack-to-testmu-migration-guide/). To move Low Code Automation tests and Test Management test cases, or re-create flows in KaneAI, see the [BrowserStack to KaneAI migration guide](/support/docs/browserstack-to-kaneai-migration-guide/).
 
 ## Migrating from Sauce Labs to TestMu AI
 
@@ -114,6 +114,6 @@ ltOptions.put("w3c", true);
 browserOptions.setCapability("LT:Options", ltOptions);
 ```
 
-To migrate your test suites from Sauce Labs, checkout this guide on [Migrating from Sauce Labs to TestMu AI](/support/docs/saucelabs-to-testmu-migration-guide/).
+To migrate your test suites from Sauce Labs, checkout this guide on [Migrating from Sauce Labs to TestMu AI](/support/docs/saucelabs-to-testmu-migration-guide/). To re-create your Sauce AI tests and test cases in KaneAI, follow the [Sauce Labs to KaneAI migration guide](/support/docs/saucelabs-to-kaneai-migration-guide/).
 
 To generate capabilities use [TestMu AI Capabilities Generator](https://www.testmuai.com/capabilities-generator/) to define key automation testing parameters, such as browser, version, operating system, and additional test settings.

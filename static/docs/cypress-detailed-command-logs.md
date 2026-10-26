@@ -1,57 +1,40 @@
-# Detailed Command Logs for Cypress
+# How to View Detailed Cypress Command Logs on TestMu AI
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
-= 10:",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "JavaScript",
-        "text": "\"cypress-terminal-report\": \"^5.3.2\""
+{\n  // `on` is used to hook into various events Cypress emits\n  // `config` is the resolved Cypress config\n\n  installLogsPrinter(on, {\n    printLogsToFile: 'always',\n    outputRoot: 'cypress/results/detailCommandLogs',\n    outputTarget: {\n      'detailCommandLogs.json': 'json',\n    },\n  })\n}"
       },
       {
         "@type": "SoftwareSourceCode",
-        "name": "For Cypress >= 10:",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "JavaScript",
-        "text": "\"run_settings\": {\n  \"detailed_command_logs\": true,\n  \"downloads\": \"./cypress/results\"\n}"
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "Step 1: Configure the Plugin",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "JavaScript",
-        "text": "const installLogsPrinter = require('cypress-terminal-report/src/installLogsPrinter')\n\nmodule.exports = (on, config) => {\n  // `on` is used to hook into various events Cypress emits\n  // `config` is the resolved Cypress config\n\n  installLogsPrinter(on, {\n    printLogsToFile: 'always',\n    outputRoot: 'cypress/results/detailCommandLogs',\n    outputTarget: {\n      'detailCommandLogs.json': 'json',\n    },\n  })\n}"
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "To display detailed logs in the terminal, update the installLogsPrinter with the printLogsToConsole: 'always' code",
+        "name": "Cypress v9 and Below: Enable Logs in the Console",
         "codeSampleType": "code snippet",
         "programmingLanguage": "JavaScript",
         "text": "module.exports = (on, config) => {\n  installLogsPrinter(on, {\n    printLogsToConsole: 'always', // Enables logs in the terminal\n    printLogsToFile: 'always',\n    outputRoot: 'cypress/results/detailCommandLogs',\n    outputTarget: {\n      'detailCommandLogs.json': 'json',\n    },\n  });\n};"
       },
       {
         "@type": "SoftwareSourceCode",
-        "name": "Step 3: Install Logs Collector",
+        "name": "Cypress v9 and Below: Install Logs Collector",
         "codeSampleType": "code snippet",
         "programmingLanguage": "JavaScript",
         "text": "const installLogsCollector = require('cypress-terminal-report/src/installLogsCollector')\n\ninstallLogsCollector()"
       },
       {
         "@type": "SoftwareSourceCode",
-        "name": "Step 1: Configure the Plugin",
+        "name": "Cypress v10 and Above: Configure the Plugin",
         "codeSampleType": "code snippet",
         "programmingLanguage": "JavaScript",
         "text": "const { defineConfig } = require(\"cypress\");\nconst  installLogsPrinter = require(\"cypress-terminal-report/src/installLogsPrinter\");\nmodule.exports = defineConfig({\n  e2e: {\n    setupNodeEvents(on, config) {\n      // implement node event listeners here\n      installLogsPrinter(on, {\n        printLogsToFile:\"always\",\n      outputRoot: 'cypress/results/detailCommandLogs',\n      outputTarget: {\n        'detailCommandLogs.json': 'json',\n      }\n      });\n    },\n  },\n});"
       },
       {
         "@type": "SoftwareSourceCode",
-        "name": "If you need logs in the terminal, update the code like this",
+        "name": "Cypress v10 and Above: Enable Logs in the Console",
         "codeSampleType": "code snippet",
         "programmingLanguage": "JavaScript",
-        "text": "const { defineConfig } = require(\"cypress\");\nconst  installLogsPrinter = require(\"cypress-terminal-report/src/installLogsPrinter\");\nmodule.exports = defineConfig({\n  e2e: {\n    setupNodeEvents(on, config) {\n      // implement node event listeners here\n      installLogsPrinter(on, {\n        printLogsToConsole: 'always', // Enables logs in the terminal\n        printLogsToFile:\"always\",\n      outputRoot: 'cypress/results/detailCommandLogs',\n      outputTarget: {\n        'detailCommandLogs.json': 'json',\n      }\n      });\n    },\n  },\n});"
+        "text": "const { defineConfig } = require(\"cypress\");\nconst  installLogsPrinter = require(\"cypress-terminal-report/src/installLogsPrinter\");\nmodule.exports = defineConfig({\n  e2e: {\n    setupNodeEvents(on, config) {\n      // implement node event listeners here\n      installLogsPrinter(on, {\n      printLogsToConsole: 'always',\n        printLogsToFile:\"always\",\n      outputRoot: 'cypress/results/detailCommandLogs',\n      outputTarget: {\n        'detailCommandLogs.json': 'json',\n      }\n      });\n    },\n  },\n});"
       },
       {
         "@type": "SoftwareSourceCode",
-        "name": "Step 3: Install Logs Collector",
+        "name": "Cypress v10 and Above: Install Logs Collector",
         "codeSampleType": "code snippet",
         "programmingLanguage": "JavaScript",
         "text": "import installLogsCollector from 'cypress-terminal-report/src/installLogsCollector'\n\ninstallLogsCollector()"
@@ -61,30 +44,27 @@
   }) }}
 />
 
-# Detailed Command Logs for Cypress
-The **Detailed Command Logs** feature provides a comprehensive record of all Cypress commands and their results, both in the console and in a file. This functionality is ideal for debugging and troubleshooting, enabling you to pinpoint specific logs quickly and effectively.
+# How to View Detailed Cypress Command Logs on TestMu AI
 
-The logs are presented in an easy-to-read, human-readable format using the [cypress-terminal-report](https://www.npmjs.com/package/cypress-terminal-report) plugin. Below are the steps to implement this feature for Cypress versions below and above 10.
+If you need to debug why a Cypress test failed on TestMu AI, detailed command logs give you a full record of every Cypress command and its result. The **Detailed Command Logs** feature captures this output in both the console and a file, so you can pinpoint the exact command that broke. You enable it with the [cypress-terminal-report](https://www.npmjs.com/package/cypress-terminal-report) plugin and the `detailed_command_logs` capability, then view the logs in a dedicated tab on the test details page.
 
-## Prerequisite: Install Cypress and Cypress Terminal Report
-Before proceeding, ensure that you have installed Cypress and the cypress-terminal-report plugin.
+## Prerequisites
 
-In your `package.json` or `lambdatest-config.json` file, add the appropriate version of [cypress-terminal-report](https://www.npmjs.com/package/cypress-terminal-report) as a dependency:
+Before you configure the plugin, install Cypress and add the cypress-terminal-report plugin as a dependency. In your `package.json` or `lambdatest-config.json` file, add the plugin version that matches your Cypress version.
 
-### For Cypress < 10:
+Use this version if your project runs Cypress below version 10.
 
 ```javascript
 "cypress-terminal-report": "4.1.3"
 ```
 
-### For Cypress >= 10:
+Use this version if your project runs Cypress version 10 or later.
 
 ```javascript
 "cypress-terminal-report": "^5.3.2"
 ```
 
-- In the `lambdatest-config.json`, enable detailed command logs by adding the following setting:
-> **NOTE:-** You will be able to see this tab only when you use this capability **detailed_command_logs** in run_settings in lambdatest-config.json
+Next, enable detailed command logs in `lambdatest-config.json` by adding the following setting.
 
 ```javascript
 "run_settings": {
@@ -93,11 +73,18 @@ In your `package.json` or `lambdatest-config.json` file, add the appropriate ver
 }
 ```
 
-## For Cypress v9 and previous versions.
+The **Detailed Command Logs** tab appears only when you set the `detailed_command_logs` capability in `run_settings` in `lambdatest-config.json`.
 
-### Step 1: Configure the Plugin
+## Configure Detailed Command Logs for Cypress v9 and Below
+
+For Cypress v9 and earlier, configure the plugin in the legacy plugins file. Follow the steps below to register the log printer and collector.
+
+### Configure the Plugin
+
+The plugin file is where you register the log printer for older Cypress versions.
+
 - Open the `cypress/plugins/index.js` file in your project.
-- Add the following code to install and configure the cypress-terminal-report plugin:
+- Add the following code to install and configure the cypress-terminal-report plugin.
 
 ```javascript
 const installLogsPrinter = require('cypress-terminal-report/src/installLogsPrinter')
@@ -116,8 +103,9 @@ module.exports = (on, config) => {
 }
 ```
 
-### Step 2: Enable Logs in the Console (Optional)
-To display detailed logs in the terminal, update the `installLogsPrinter` with the `printLogsToConsole: 'always'` code:
+### Enable Logs in the Console
+
+To also print detailed logs in the terminal, add `printLogsToConsole: 'always'` to `installLogsPrinter`. This step is optional.
 
 ```javascript
 module.exports = (on, config) => {
@@ -132,9 +120,12 @@ module.exports = (on, config) => {
 };
 ```
 
-### Step 3: Install Logs Collector
+### Install Logs Collector
+
+The collector captures command output during each test so the printer can write it out.
+
 - Navigate to `cypress/support/index.js`.
-- Add the following code to install the log collector:
+- Add the following code to install the log collector.
 
 ```javascript
 const installLogsCollector = require('cypress-terminal-report/src/installLogsCollector')
@@ -142,11 +133,16 @@ const installLogsCollector = require('cypress-terminal-report/src/installLogsCol
 installLogsCollector()
 ```
 
-## For Cypress v10 and later versions.
+## Configure Detailed Command Logs for Cypress v10 and Above
 
-### Step 1: Configure the Plugin
+For Cypress v10 and later, configure the plugin inside `cypress.config.js` using `setupNodeEvents`. Follow the steps below to register the log printer and collector.
+
+### Configure the Plugin
+
+The `setupNodeEvents` block replaces the legacy plugins file in Cypress v10 and later.
+
 - Open `cypress.config.js` in your project.
-- Add the following code to configure the plugin:
+- Add the following code to configure the plugin.
 
 ```javascript
 const { defineConfig } = require("cypress");
@@ -167,8 +163,9 @@ module.exports = defineConfig({
 });
 ```
 
-### Step 2: Enable Logs in the Console (Optional)
-If you need logs in the terminal, update the code like this:
+### Enable Logs in the Console
+
+To also print logs in the terminal, add `printLogsToConsole: 'always'` to `installLogsPrinter`. This step is optional.
 
 ```javascript
 const { defineConfig } = require("cypress");
@@ -178,7 +175,7 @@ module.exports = defineConfig({
     setupNodeEvents(on, config) {
       // implement node event listeners here
       installLogsPrinter(on, {
-        printLogsToConsole: 'always', // Enables logs in the terminal
+      printLogsToConsole: 'always',
         printLogsToFile:"always",
       outputRoot: 'cypress/results/detailCommandLogs',
       outputTarget: {
@@ -190,9 +187,12 @@ module.exports = defineConfig({
 });
 ```
 
-### Step 3: Install Logs Collector
+### Install Logs Collector
+
+The collector captures command output during each test so the printer can write it out.
+
 - Open `cypress/support/e2e.js`.
-- Add the following code to install the log collector:
+- Add the following code to install the log collector.
 
 ```javascript
 import installLogsCollector from 'cypress-terminal-report/src/installLogsCollector'
@@ -201,6 +201,15 @@ installLogsCollector()
 ```
 
 ## View Generated Logs
-Once your Cypress tests finish, open the test's detail page on the TestMu AI Automation Dashboard, click the **More** dropdown, and select **Detailed Cypress Logs** to view the captured command logs.
 
-For more on downloading run artefacts, see [Artefacts for a Cypress Project](/support/docs/download-artefacts-cypress/).
+After your Cypress tests run, open the test details page to inspect the captured command output. View the detailed command logs in the **Detailed Command Logs** tab on that page.
+
+To download these logs alongside screenshots and videos, see [how to download Cypress artefacts](/support/docs/download-artefacts-cypress/).
+
+## Related Cypress Guides
+
+Continue with the guides below to download and report on your Cypress runs on TestMu AI.
+
+- [Download Cypress reports and artefacts](/support/docs/download-artefacts-cypress/) retrieves command logs, screenshots, and other test artefacts from the dashboard.
+- [Generate Cypress Mochawesome reports](/support/docs/cypress-mochaawesome-report/) creates consolidated HTML reports for your Cypress test runs.
+- [Reference the Cypress CLI commands](/support/docs/cypress-cli-commands/) documents the CLI flags for running Cypress tests on TestMu AI.

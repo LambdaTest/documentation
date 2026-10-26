@@ -4,7 +4,7 @@
 
 A profile tells Rook **how to reach your live agent and capture its evidence**. This guide takes you from a working request, through prompt-based profile generation and verification, to hook contracts, lifecycle phases, delayed evidence, and repair—all on one page.
 
-Rook 0.1.3 uses reviewable Node.js hook scripts, not a fixed HTTP or command YAML recipe. Discovery describes what the agent should do; the profile selects the endpoint, command, environment, and session behavior you actually test.
+Rook uses reviewable Node.js hook scripts, not a fixed HTTP or command YAML recipe. Discovery describes what the agent should do; the profile selects the endpoint, command, environment, and session behavior you actually test.
 
 ## Before You Start
 
@@ -62,7 +62,7 @@ Rook writes scripts, invokes the target, and corrects mistakes found during veri
 
 In the TUI, enter `/profile` to open the picker. Type to filter, use the arrow keys, and press Enter to select a profile; Esc returns without changing the selection. The footer shows the active profile.
 
-This existing demo profile has all five user-configurable hooks. A newly generated profile may have only `execute`; Rook owns `judge`, so it is not listed as a profile hook.
+This quickstart profile has only `execute`, as a newly generated profile often does. Other profiles can add `prepare`, `open`, `close`, and `collect`; Rook owns `judge`, so it is not listed as a profile hook.
 
 Inspect your generated profile before testing it:
 
@@ -173,7 +173,7 @@ concurrency: 1
 | `hooks` | Phase-to-script mapping. Each entry can also define a timeout and delay. Relative paths resolve from the active agent directory. |
 | `env` | Required local environment references and their operational purpose. The structure has no secret-value field. |
 | `capabilities` | Observed evidence capabilities that determine scenario runnability. |
-| `hook_env` | Additional references supplied to every hook. Rook-owned `ROOK_*` values take precedence. |
+| `hook_env` | Fixed, non-secret values supplied to every hook, such as a region. They are stored and synced as written, so put credentials under `env` instead. Rook-owned `ROOK_*` values take precedence. |
 | `concurrency` | Default number of scenarios in flight. Use `1` when hooks touch shared state. |
 
 ## Hook Inputs
@@ -231,6 +231,18 @@ If the first turn of a multi-turn scenario returns no conversation handle, Rook 
 A non-zero exit is a failed hook and standard error is its diagnosis. An `execute` or `collect` failure fails the affected scenario. Failures in the other optional phases are reported while the run preserves completed work.
 
 Map the target's actual answer field (`output`, `message`, `reply`, or another name) to `agent_reply`. Do not invent calls or token counts. Return `calls: []` only when you observed that no calls occurred; omitting `calls` means they were not observable. A CLI hook must forward the goal to its child process and close the child's input stream.
+
+## Hooks for Red-Team Scenarios {#red-team-hooks}
+
+Some attack patterns cannot be judged from the reply alone. Rook skips them, with a reason that names the missing hook, until the profile provides it:
+
+| Skip reason | What to add |
+|---|---|
+| Requires fixture seeding | An `open` hook that reads `$ROOK_STATE_DIR/attack-fixture.json`, seeds the content into the target, and returns `fixture_seeded: true`, a `fixture_id` equal to the file's `id`, the same `attempt`, and the exact `established_preconditions` set. |
+| Requires independent collected evidence | A `collect` hook that reports the observed control and outcome. |
+| Requires a fresh session | `open` and `close` hooks, so the probe runs in a second conversation with a distinct handle. |
+
+Rook does not call the target when the fixture acknowledgement does not match. For patterns judged from collected evidence, a compromise counts only when `collect` returns a `compromise_observation` with `action_observed: true`, the matched success signal, a `source_kind` of `tool_trace`, `protected_state`, or `callback_receipt`, and the evidence it quotes. A defended side effect needs the target's refusal plus a `defence_observation` with `action_observed: false` and the matched failure signal.
 
 ## Capabilities Are Observed
 
@@ -292,7 +304,7 @@ rook profile test staging --goal "show the status of test order ORD-1042"
 rook sync
 ```
 
-Repair can change scripts and spend credits. Inspect the diff and test it before syncing. Rook has no profile edit, profile curl, or profile rm subcommands in 0.1.3; edit the plain files deliberately when needed.
+Repair can change scripts and spend credits. Inspect the diff and test it before syncing. Rook has no profile edit, profile curl, or profile rm subcommands; edit the plain files deliberately when needed.
 
 ## Keep Credentials Out of the Profile
 

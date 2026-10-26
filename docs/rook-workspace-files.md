@@ -112,7 +112,7 @@ import { BRAND_URL } from '@site/src/component/BrandName';
         "text": "*.log\n.env\ncache/\nprojects/*/jobs/\nprojects/*/agents/*/state.json"
       }
     ],
-    "dateModified": "2026-09-28"
+    "dateModified": "2026-10-23"
   }) }}
 />
 
@@ -137,6 +137,7 @@ Rook uses plain files rather than a hidden workspace database. That makes agents
         └── agents/
             └── <agent-id>/
                 ├── agent.yaml            derived agent definition
+                ├── coverage-gaps.yaml    attack patterns with no scenario
                 ├── state.json            machine-local server IDs
                 ├── features/
                 │   ├── F-001.yaml
@@ -155,6 +156,7 @@ Rook uses plain files rather than a hidden workspace database. That makes agents
                         ├── agent.yaml
                         ├── features.yaml
                         ├── profile.yaml
+                        ├── scenario-inventory.yaml
                         ├── scenarios/
                         └── report.yaml
 ```
@@ -197,7 +199,7 @@ Project YAML, agent definitions, features, scenarios, profiles containing refere
 Before committing:
 
 1. Review hook scripts for accidental literal secrets.
-2. Confirm profile YAML contains only references such as `${API_KEY}`.
+2. Confirm profile YAML names variables under `env` (for example `API_KEY`) and holds no literal secret, including in `hook_env`.
 3. Inspect run evidence for target data that should not leave the test environment.
 4. Keep machine-only `.gitignore` entries intact.
 
@@ -205,13 +207,15 @@ Before committing:
 
 Credentials, actual environment values, history, logs, and installed versions are stored under `~/.testmuai/rook/` by default. Set `ROOK_HOME` to isolate that state for CI or another account.
 
+Each session keeps a transcript at `~/.testmuai/rook/sessions/<project>/<session>/transcript.jsonl`, readable only by your user. It records every prompt Rook sent, every tool call and result, and every answer. Since 0.1.12 it also records each message sent to the agent under test with its reply, and how each job, sync, run phase, and scenario ended; lines use format version 2, and strings of 4 KiB or more are stored in a `blobs/` folder beside the transcript. Rook masks the credentials it holds or recognizes before writing each line, but masking is best effort and transcripts from earlier versions are not masked, so treat it like a log that can contain target data and environment values.
+
 ## Synchronization
 
 `rook sync` copies a reviewed project tree upstream as one write. Run results are stored locally first; `rook runs sync` reconciles finished runs that still owe remote records. Neither operation changes the historical input snapshots inside an existing run.
 
 Inside the interactive TUI, enter `/sync` after reviewing the files. This actual quickstart capture confirms that the triage agent was recorded upstream; it does not say that a test has run or passed:
 
-<img loading="lazy" src={require('../assets/images/rook/guides/rook-tui-sync.png').default} alt="Rook's interactive sync confirming that one local agent was recorded upstream" width="2200" height="600" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/rook/guides/rook-tui-sync.png').default} alt="Rook's interactive sync confirming that one local agent was recorded upstream" width="2200" height="651" className="doc_img"/>
 
 ## Review Files in Either UI
 

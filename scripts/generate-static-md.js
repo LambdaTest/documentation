@@ -183,7 +183,11 @@ function insertLlmsDirective(markdown) {
 }
 
 function generateForFile(absPath) {
-  const raw = fs.readFileSync(absPath, 'utf8').replace(/^\uFEFF/, '');
+  // Normalise CRLF/CR to LF so output is identical on Windows and macOS/Linux.
+  const raw = fs
+    .readFileSync(absPath, 'utf8')
+    .replace(/^\uFEFF/, '')
+    .replace(/\r\n?/g, '\n');
   const { data, body } = parseFrontmatter(raw);
 
   if (String(data.draft).toLowerCase() === 'true') return null; // skip drafts
@@ -200,8 +204,13 @@ function generateForFile(absPath) {
   markdown = insertLlmsDirective(markdown);
 
   fs.mkdirSync(OUT_DIR, { recursive: true });
-  fs.writeFileSync(path.join(OUT_DIR, `${slug}.md`), markdown, 'utf8');
-  return slug;
+  const outPath = path.join(OUT_DIR, `${slug}.md`);
+  // Only touch the file when its content actually changed, so unchanged docs
+  // keep their mtime and never show up as modified.
+  const existing = fs.existsSync(outPath) ? fs.readFileSync(outPath, 'utf8') : null;
+  const changed = existing !== markdown;
+  if (changed) fs.writeFileSync(outPath, markdown, 'utf8');
+  return { slug, changed };
 }
 
 function main() {
@@ -214,6 +223,7 @@ function main() {
         .map((f) => path.join(DOCS_DIR, f));
 
   let count = 0;
+  let updated = 0;
   const seen = new Map();
 
   for (const file of targets) {
@@ -221,8 +231,10 @@ function main() {
       console.warn(`⚠️  Skipped missing file: ${file}`);
       continue;
     }
-    const slug = generateForFile(file);
-    if (!slug) continue;
+    const result = generateForFile(file);
+    if (!result) continue;
+    const { slug, changed } = result;
+    if (changed) updated++;
     if (seen.has(slug)) {
       console.warn(
         `⚠️  Duplicate slug "${slug}" — ${path.basename(file)} overwrote ${seen.get(slug)}`
@@ -232,7 +244,9 @@ function main() {
     count++;
   }
 
-  console.log(`✅ Generated ${count} static Markdown file(s) in static/docs/.`);
+  console.log(
+    `✅ Processed ${count} doc(s); ${updated} static Markdown file(s) created/updated in static/docs/.`
+  );
 }
 
 main();

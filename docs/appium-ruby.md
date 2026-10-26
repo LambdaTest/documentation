@@ -1,10 +1,8 @@
 ---
 id: appium-ruby
-title: "How to Run Appium Ruby Tests on TestMu AI"
-hide_title: true
-toc_max_heading_level: 2
-sidebar_label: "Ruby"
-description: "Run Appium Ruby tests on real Android and iOS devices on TestMu AI. Set credentials, upload your app, and run with Vanilla Ruby, Cucumber, or RSpec."
+title:  Appium with Ruby
+sidebar_label: Ruby
+description: Complete guide to running your first Ruby Appium automated test script on TestMu AI Real Device Cloud Platform. Test on 50,000+ Real Devices.
 keywords:
   - ruby appium
   - ruby appium tutorial
@@ -67,8 +65,8 @@ import VerifiedTag from '@site/src/component/verifiedTag';
       "@type": "WebPage",
       "@id": "https://www.testmuai.com/support/docs/appium-ruby/"
     },
-    "headline": "How to Run Appium Ruby Tests on TestMu AI",
-    "description": "Complete guide to running your first Ruby Appium automated test script on TestMu AI Real Device Cloud Platform. Test on 5000+ Real Devices.",
+    "headline": "Appium with Ruby",
+    "description": "Complete guide to running your first Ruby Appium automated test script on TestMu AI Real Device Cloud Platform. Test on 50,000+ Real Devices.",
     "url": "https://www.testmuai.com/support/docs/appium-ruby/",
     "image": {
       "@type": "ImageObject",
@@ -222,7 +220,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
       "@context": "https://schema.org",
       "@type": "HowTo",
       "name": "Try our Sample Repository",
-      "description": "Complete guide to running your first Ruby Appium automated test script on TestMu AI Real Device Cloud Platform. Test on 5000+ Real Devices.",
+      "description": "Complete guide to running your first Ruby Appium automated test script on TestMu AI Real Device Cloud Platform. Test on 50,000+ Real Devices.",
       "step": [
         {
           "@type": "HowToStep",

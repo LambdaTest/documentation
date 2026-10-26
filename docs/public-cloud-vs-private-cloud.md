@@ -123,6 +123,11 @@ Here is the detailed comparison of Public Cloud and Private Cloud:
 
 To conclude, both Public Device Cloud and Private Device Cloud are useful for real device testing, but the best choice depends on an organization's needs. Private Device Cloud offers **exclusive access, longer session duration, control over device retention, advanced testing features,** and **clear device usage status** making it ideal for organizations prioritizing security, customization, and thorough testing. By using Private Device Cloud, organizations can improve their testing, work more efficiently, and provide better mobile apps to users.
 
+:::note
+
+On Samsung public and private cloud devices, opening **Secure Folder → Settings → PIN** shows a black screen. This is expected behavior. Secure Folder is a protected system component managed by Samsung's security framework, and its PIN screen cannot be displayed or accessed during a remote session.
+:::
+
 
 
 <nav aria-label="breadcrumbs">

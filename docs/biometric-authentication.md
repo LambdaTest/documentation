@@ -3,7 +3,7 @@ id: biometric-authentication
 title: Biometric Authentication
 hide_title: true
 sidebar_label: Biometric Authentication
-description: Test fingerprint and face recognition in your app on TestMu AI's Real Device Cloud, across real iOS and Android devices using supported biometric APIs.
+description: Test biometric authentication functionalities such as fingerprint or face recognition in your app on TestMu AI Real Device Cloud Platform with 50,000+ real mobile devices.
 keywords:
   - biometric authentication
   - Fingerprint authentication
@@ -70,7 +70,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
       "@id": "https://www.testmuai.com/support/docs/biometric-authentication/"
     },
     "headline": "Biometric Authentication",
-    "description": "Test biometric authentication functionalities such as fingerprint or face recognition in your app on TestMu AI Real Device Cloud Platform with 3000+ real mobile devices.",
+    "description": "Test biometric authentication functionalities such as fingerprint or face recognition in your app on TestMu AI Real Device Cloud Platform with 50,000+ real mobile devices.",
     "url": "https://www.testmuai.com/support/docs/biometric-authentication/",
     "image": {
       "@type": "ImageObject",

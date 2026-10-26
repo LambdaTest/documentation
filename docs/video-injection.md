@@ -162,12 +162,8 @@ import VerifiedTag from '@site/src/component/verifiedTag';
     }
   ]) }}
 />
-
-<RealDeviceTag value="Real Device" />
-
-# Video Injection
-
-Video Injection on TestMu AI feeds custom video into an app's camera during automated tests, letting you validate live streaming, real-time capture, identity verification, and video upload workflows across 5000+ real Android and iOS devices without any physical hardware setup.
+<RealDeviceTag value="Real Device" /> 
+Video Injection feature enables you to test video-based functionalities such as **live streaming, real-time video capture,** and **video processing** in your app across 50,000+ real devices on the <BrandName /> Real Device Cloud platform.
 
 This tool is ideal for testing features such as:
 

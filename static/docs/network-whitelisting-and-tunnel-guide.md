@@ -78,7 +78,7 @@ Whitelisting only works if your application is publicly discoverable on the inte
 
 ### Use TestMu AI Tunnel Instead
 The Tunnel binary (or Underpass app) creates a secure outbound connection from your machine/network to TestMu AI, enabling the cloud to access:
-- Localhost apps (http://localhost:3000)
+- Localhost apps (`http://localhost:3000`)
 - Internal apps behind VPN or private subnets (10.x.x.x, 192.168.x.x)
 - Apps accessible only within your corporate LAN
 

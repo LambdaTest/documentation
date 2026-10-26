@@ -3,7 +3,7 @@ id: appium-rokutv
 title: How to Automate Roku TV Apps on TestMu AI
 hide_title: true
 sidebar_label: Roku TV
-description: Configure and run your first Roku TV Appium automation script with the Roku WebDriver on the TestMu AI Real Device Cloud.
+description: Complete guide to running your first RokuTV Appium automated test script on TestMu AI Real Device Cloud Platform. Test on 50,000+ Real Devices.
 keywords:
   - python appium
   - rokutv
@@ -65,8 +65,8 @@ import VerifiedTag from '@site/src/component/verifiedTag';
       "@type": "WebPage",
       "@id": "https://www.testmuai.com/support/docs/appium-rokutv/"
     },
-    "headline": "How to Automate Roku TV Apps on TestMu AI",
-    "description": "Complete guide to running your first RokuTV Appium automated test script on TestMu AI Real Device Cloud Platform. Test on 5000+ Real Devices.",
+    "headline": "Roku TV With Appium",
+    "description": "Complete guide to running your first RokuTV Appium automated test script on TestMu AI Real Device Cloud Platform. Test on 50,000+ Real Devices.",
     "url": "https://www.testmuai.com/support/docs/appium-rokutv/",
     "image": {
       "@type": "ImageObject",

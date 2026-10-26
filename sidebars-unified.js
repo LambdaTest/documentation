@@ -31,23 +31,24 @@ const docsSidebar = [
   {
     type: 'category', label: 'Web Automation', collapsible: true, collapsed: true,
     items: [
-      { type: 'link', label: 'Selenium Testing', href: '/docs/getting-started-with-testmu-automation/' },
-      { type: 'link', label: 'Cypress Testing', href: '/docs/getting-started-with-cypress-testing/' },
-      { type: 'link', label: 'Playwright Testing', href: '/docs/playwright-testing/' },
-      { type: 'link', label: 'Puppeteer Testing', href: '/docs/puppeteer-testing/' },
+      { type: 'category', label: 'Selenium Testing', collapsible: true, collapsed: true, items: items(s.SeleniumTestingSidebar) },
+      { type: 'category', label: 'Cypress Testing', collapsible: true, collapsed: true, items: items(s.CypressTestingSidebar) },
+      { type: 'category', label: 'Playwright Testing', collapsible: true, collapsed: true, items: items(s.PlaywrightTestingSidebar) },
+      { type: 'category', label: 'Puppeteer Testing', collapsible: true, collapsed: true, items: items(s.PuppeteerTestingSidebar) },
       { type: 'link', label: 'K6 Testing', href: '/docs/k6-browser-testing/' },
-      { type: 'link', label: 'CDP Testing', href: '/docs/run-tests-with-chrome-devtools-protocol/' },
-      { type: 'link', label: 'BiDi Testing', href: '/docs/run-tests-with-webdriver-bidi/' },
+      { type: 'doc', id: 'run-tests-with-chrome-devtools-protocol', label: 'CDP Testing' },
+      { type: 'doc', id: 'run-tests-with-webdriver-bidi', label: 'BiDi Testing' },
     ],
   },
   {
     type: 'category', label: 'App Automation', collapsible: true, collapsed: true,
     items: [
       { type: 'link', label: 'Appium Testing', href: '/docs/getting-started-with-appium-testing/' },
-      { type: 'category', label: 'Espresso Testing', collapsible: true, collapsed: true, items: items(s.EspressoTestingSidebar) },
-      { type: 'category', label: 'XCUI Testing', collapsible: true, collapsed: true, items: items(s.XCUITestingSidebar) },
-      { type: 'category', label: 'Flutter Testing', collapsible: true, collapsed: true, items: items(s.FlutterTestingSidebar) },
-      { type: 'category', label: 'Virtual Devices', collapsible: true, collapsed: true, items: items(s.EmuSimuSidebar) },
+      { type: 'link', label: 'Espresso Testing', href: '/docs/getting-started-with-espresso-testing/' },
+      { type: 'link', label: 'XCUI Testing', href: '/docs/getting-started-with-xcuitest/' },
+      { type: 'link', label: 'Mobilewright Testing', href: '/docs/mobilewright-overview/' },
+      { type: 'link', label: 'Flutter Testing', href: '/docs/appium-flutter-integration/' },
+      { type: 'link', label: 'Virtual Devices', href: '/docs/app-automation-on-emulators-simulators/' },
     ],
   },
   { type: 'link', label: 'HyperExecute', href: '/docs/getting-started-with-hyperexecute/' },
@@ -99,6 +100,7 @@ const BiDiTestingSidebar = [backToDocs, { type: 'doc', id: 'run-tests-with-webdr
 const EspressoTestingSidebar = dedicated(s.EspressoTestingSidebar);
 const XCUITestingSidebar = dedicated(s.XCUITestingSidebar);
 const FlutterTestingSidebar = dedicated(s.FlutterTestingSidebar);
+const MobilewrightTestingSidebar = dedicated(s.MobilewrightTestingSidebar);
 const VirtualDevicesSidebar = dedicated(s.EmuSimuSidebar);
 
 // Standalone products
@@ -189,6 +191,7 @@ module.exports = {
   EspressoTestingSidebar,
   XCUITestingSidebar,
   FlutterTestingSidebar,
+  MobilewrightTestingSidebar,
   VirtualDevicesSidebar,
 
   // Standalone products

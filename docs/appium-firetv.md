@@ -1,9 +1,8 @@
 ---
 id: appium-firetv
-title: How to Automate Fire TV Apps on TestMu AI
-hide_title: true
-sidebar_label: Fire TV
-description: Complete guide to running your first FireTV Appium automated test script on TestMu AI Real Device Cloud Platform. Test on 5000+ Real Devices.
+title: Fire TV With Appium
+sidebar_label: Fire TV Stick
+description: Complete guide to running your first FireTV Appium automated test script on TestMu AI Real Device Cloud Platform. Test on 50,000+ Real Devices.
 keywords:
   - python appium
   - firetv
@@ -66,8 +65,8 @@ import VerifiedTag from '@site/src/component/verifiedTag';
       "@type": "WebPage",
       "@id": "https://www.testmuai.com/support/docs/appium-firetv/"
     },
-    "headline": "How to Automate Fire TV Apps on TestMu AI",
-    "description": "Complete guide to running your first FireTV Appium automated test script on TestMu AI Real Device Cloud Platform. Test on 5000+ Real Devices.",
+    "headline": "Fire TV With Appium",
+    "description": "Complete guide to running your first FireTV Appium automated test script on TestMu AI Real Device Cloud Platform. Test on 50,000+ Real Devices.",
     "url": "https://www.testmuai.com/support/docs/appium-firetv/",
     "image": {
       "@type": "ImageObject",
