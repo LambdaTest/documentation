@@ -193,6 +193,10 @@ To get started, install the SDK as a development dependency within your project'
 npm install @lambdatest/playwright-node-sdk
 ```
 
+## Sample Project
+
+To see the SDK working end to end, clone the [Playwright Node SDK sample](https://github.com/LambdaTest/playwright-sample/tree/main/playwright-node-sdk) repository. It contains a ready-to-run Playwright project with a preconfigured `lambdatest.yml` that you can adapt to your own tests.
+
 ## Configuration
 
 The SDK is configured via a `lambdatest.yml` file located in your project root. This YAML file orchestrates your test execution, defining credentials, capabilities, and other run settings.

@@ -2,7 +2,7 @@
 id: contacts-on-real-devices
 title: Access your Contacts
 sidebar_label: Contacts
-description: Now you can test your contacts in your app on TestMu AI Real Device Cloud Platform with 3000+ real mobile devices.
+description: Now you can test your contacts in your app on TestMu AI Real Device Cloud Platform with 50,000+ real mobile devices.
 keywords:
   - image injection
   - app test automation
@@ -65,7 +65,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       "@id": "https://www.testmuai.com/support/docs/contacts-on-real-devices/"
     },
     "headline": "Access your Contacts",
-    "description": "Now you can test your contacts in your app on TestMu AI Real Device Cloud Platform with 3000+ real mobile devices.",
+    "description": "Now you can test your contacts in your app on TestMu AI Real Device Cloud Platform with 50,000+ real mobile devices.",
     "url": "https://www.testmuai.com/support/docs/contacts-on-real-devices/",
     "image": {
       "@type": "ImageObject",

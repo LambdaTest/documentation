@@ -2,7 +2,7 @@
 id: appium-appletv
 title: Apple TV With Appium
 sidebar_label: Apple TV
-description: Complete guide to running your first AppleTV Appium automated test script on TestMu AI Real Device Cloud Platform. Test on 5000+ Real Devices.
+description: Complete guide to running your first AppleTV Appium automated test script on TestMu AI Real Device Cloud Platform. Test on 50,000+ Real Devices.
 keywords:
   - python appium
   - appletv
@@ -65,7 +65,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
       "@id": "https://www.testmuai.com/support/docs/appium-appletv/"
     },
     "headline": "Apple TV With Appium",
-    "description": "Complete guide to running your first AppleTV Appium automated test script on TestMu AI Real Device Cloud Platform. Test on 5000+ Real Devices.",
+    "description": "Complete guide to running your first AppleTV Appium automated test script on TestMu AI Real Device Cloud Platform. Test on 50,000+ Real Devices.",
     "url": "https://www.testmuai.com/support/docs/appium-appletv/",
     "image": {
       "@type": "ImageObject",
