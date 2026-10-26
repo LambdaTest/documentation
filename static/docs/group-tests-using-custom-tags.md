@@ -30,6 +30,6 @@ Filter the Builds list by your custom tags from the Sort & Filters panel.
 
 On the [Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build), open **Configure > Sort & Filters** and select **Test Tags**. Choose one or more of your tags to show only the tests that carry them; selecting several combines them.
 
-To filter by tags applied to the build rather than the test, use the **Build Tags** filter. See [Group and Filter Builds Using Build Tags](/support/docs/group-and-filter-your-test-builds-using-build-tags/) and [Organize Tests & Builds](/support/docs/filter-your-selenium-tests/).
+To filter by tags applied to the build rather than the test, use the **Build Tags** filter. See [Group and Filter Builds Using Build Tags](/support/docs/filter-your-selenium-tests/#group-and-filter-builds-using-build-tags) and [Organize Tests & Builds](/support/docs/filter-your-selenium-tests/).
 
 > You have successfully created a custom tag and grouped your tests based on the custom tag. If you have questions, share them with us through our **24/7 chat support** or by mailing us at [support@testmuai.com](mailto:support@testmuai.com).
