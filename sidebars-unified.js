@@ -206,4 +206,19 @@ module.exports = {
   AgentTestingSidebar,
   RealDeviceSidebar,
   TestManagerSidebar,
+  MCPServerSidebar,
+  IntegrationsSidebar,
+  AccessibilityTestingSidebar,
+  LocalhostTestingSidebar,
+  SettingsAndSecuritySidebar,
+
+  // Insights
+  InsightsSidebar,
+
+  // Other Docs
+  VisualUITestingSidebar,
+  LTBrowserSidebar,
+  MigrationGuideSidebar,
+  ConcurrencyWidgetSidebar,
+  TestLogsSidebar,
 };
