@@ -79,7 +79,7 @@ Configure these values:
 
 The `staging` profile names **your test target**, not the Rook service. `ROOK_ENV=prod` selects the public Rook service. The script uses the LT environment credential pair and isolated `ROOK_HOME`; it does not copy a developer's browser session.
 
-Execution calls the real target and can spend Rook credits. Review the suite, tool grants, fixture isolation, and spending before enabling a job. Use a fresh checkout/output directory and avoid concurrent jobs against shared mutable fixtures.
+Execution calls the real target and can spend Rook credits. Review the suite, tool grants, fixture isolation, and spending before enabling a job. The script syncs before it runs, so your organization needs an Agent Assurance plan that includes Rook cloud. Since 0.1.13, on a plan without it, such as Starter, <code>rook sync</code> is refused with <code>upgrade_plan</code> and the job fails before running anything; the script does not fall back to a local <code>--test</code> run. See [plan refusals](/support/docs/agent-assurance-troubleshooting/#plan-refusals). Use a fresh checkout/output directory and avoid concurrent jobs against shared mutable fixtures.
 
 ## What Makes the Job Pass
 
@@ -124,7 +124,7 @@ Download the [Dockerfile](pathname:///support/resources/rook/Dockerfile) and sav
 
 ```dockerfile
 FROM debian:bookworm-slim
-ARG ROOK_VERSION=0.1.3
+ARG ROOK_VERSION=0.1.13
 RUN apt-get update && apt-get install -y --no-install-recommends \
     bash ca-certificates curl jq tar gzip git \
     && curl -fsSL https://raw.githubusercontent.com/LambdaTest/rook/main/install.sh \

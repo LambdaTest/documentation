@@ -33,6 +33,8 @@ For the first failure as a user you will need to select the type of failure from
 
 Once the user selects the category for the first failure, the AI model will learn from the user's selection and will automatically categorize the subsequent failures based on the user's selection. This helps in reducing the manual effort required to categorize the failures and improves the overall efficiency of the test automation process.
 
+Failures can also be categorized for individual test cases. See [Failure categories for test cases](/support/docs/analytics-build-insights-test-cases/#failure-categories-for-test-cases).
+
 ## How will the Failure Categorization AI help you?
 
 The failure categorization AI helps you in the following ways:

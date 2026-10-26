@@ -98,7 +98,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         "https://www.youtube.com/@TestMuAI"
       ]
     },
-    "dateModified": "2026-10-05T16:23:33+05:30"
+    "dateModified": "2026-10-14T12:28:06+05:30"
   }) }}
 />
 
@@ -141,7 +141,7 @@ The integration is optional. Choose based on what you need to check.
 
 For a side-by-side comparison, see [How the ElevenLabs Integration Works](#how-the-elevenlabs-integration-works).
 
-TestMu AI offers this integration for ElevenLabs, Retell, and Vapi. For the other two, see the [Retell integration](/support/docs/test-retell-agents/#retell-integration) and the [Vapi integration](/support/docs/test-vapi-agents/#vapi-integration).
+TestMu AI offers this integration for ElevenLabs, Retell, Vapi, and Salesforce Agentforce. For the others, see the [Retell integration](/support/docs/test-retell-agents/#retell-integration), the [Vapi integration](/support/docs/test-vapi-agents/#vapi-integration), and the [Agentforce integration](/support/docs/test-agentforce-agents/#agentforce-integration).
 
 ### ElevenLabs Integration Prerequisites
 

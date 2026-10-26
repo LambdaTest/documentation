@@ -97,11 +97,11 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         "https://www.youtube.com/@TestMuAI"
       ]
     },
-    "dateModified": "2026-09-09T19:16:50+05:30"
+    "dateModified": "2026-10-13T00:00:00+05:30"
   }) }}
 />
 
-In KaneAI, one of the core principles of effective test automation is the ability to manage dynamic data efficiently. Testing often requires input that changes frequently or is context-dependent, such as URLs, credentials, or specific device configurations. KaneAI offers a set of powerful tools (variables, secrets, smart variables, parameters and datasets) to simplify the process of managing and using dynamic data in your test cases. Each of these options offers unique functionality that helps you keep your tests flexible, secure, and scalable.
+KaneAI provides variables, secrets, smart variables, parameters, Datasets, and Files for test data. Parameters supply named inputs to a test case; Datasets provide the values for one or more executions. Files provide reusable uploaded content through `{{file.alias}}` references.
 
 :::tip
 All variables and parameters in KaneAI can be accessed from https://kaneai.lambdatest.com/variables
@@ -142,6 +142,13 @@ All variables and parameters in KaneAI can be accessed from https://kaneai.lambd
   <div className="support_inners">
     <h2>Datasets</h2>
     <p>Collections of test data used in a test, allowing for data-driven testing by running the same test with different inputs.</p>
+  </div>
+  </a>
+
+  <a href="/support/docs/kaneai-upload-and-download-files/">
+  <div className="support_inners">
+    <h2>Files</h2>
+    <p>Reusable uploaded files that a test step references by alias.</p>
   </div>
   </a>
   

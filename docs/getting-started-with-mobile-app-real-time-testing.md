@@ -133,3 +133,8 @@ The Real-Time Testing dashboard provides an intuitive interface for managing you
 - **Switch to Real Devices :** If you need to perform tests on physical devices, click on the Switch to Real Devices link to access <BrandName />'s real device cloud.
 
 - **Start Button :** Located on the right side of the URL field, this button initializes the testing session once you have chosen your device and browser configuration.
+
+:::note
+
+Only the app owner (the user who uploaded the app to <BrandName />) can change an app’s visibility. The app name can be changed by either the owner or an admin of the organization.
+:::

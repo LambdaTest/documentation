@@ -448,4 +448,4 @@ The [Browser Cloud agent skills](/support/docs/browser-cloud-skills/) are ready-
 - [How to launch your first Browser Cloud session](/support/docs/launch-first-session/) to verify credentials before your first run.
 - [How to connect Puppeteer, Playwright, or Selenium to a session](/support/docs/connect-to-session/) for the full SDK adapter reference.
 - [How to install and use Browser Cloud agent skills](/support/docs/browser-cloud-skills/) to let a coding assistant write the integration.
-- [How to get started with Kane CLI](/support/docs/kane-cli-introduction/) to run browser tasks from natural language.
+- [How to get started with Kane CLI](/docs/kane-cli-introduction) to run browser tasks from natural language.

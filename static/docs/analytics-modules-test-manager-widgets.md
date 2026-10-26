@@ -12,6 +12,26 @@ Every widget supports configurable filters. Click the **three-dot menu** on any 
 **Drill Down into Data**
 All widgets support drill-down. Click on any data point in a chart (such as a segment in a pie chart, a bar in a bar chart, or a status value) to view the underlying list of associated records (e.g., test cases, test runs, or issues) that make up that data point.
 
+## Viewing All Time
+
+A dashboard made up only of Test Manager widgets offers an extra **All time** option in the dashboard date range picker. It starts from the first test case created in your organization, so you can see your whole test management history in one view.
+
+### How it works?
+
+* **All time** is listed only when every widget on the dashboard is a Test Manager widget.
+* For ranges of a year or more, including All time, the interval can be set to **Weekly** or **Monthly** only. **Monthly** is selected by default.
+* There is no previous-period comparison on All time, because there is no earlier period to compare against.
+* Shared dashboard links and PDF exports use All time as well.
+
+### Adding other widgets later
+
+If a widget from another module is added to the dashboard, the dashboard follows the date ranges available to that module:
+
+* A saved **All time** range, or a long preset that reaches further back than your data retention period, switches to **Last 30 Days** and a notice tells you the range was changed.
+* A pinned date range that was set on a Test Manager-only dashboard and starts before your data retention period is not applied, and the dashboard falls back to a supported range. The pinned range itself is kept.
+
+Remove the non-Test Manager widgets from the dashboard to make **All time** available again.
+
 ## Test Cases Summary
 
 The Test Cases Summary widget displays the total count of test cases and the split between **Automated** and **Manual** test cases. The classification is determined by the **Automation Status** field on each test case. If set to *Automated*, it is counted under Automated; all others fall into the Manual category.
@@ -32,45 +52,122 @@ The Test Cases Trend widget tracks the number of test cases created over a perio
 ### How it works?
 
 * Test cases created in the selected period are grouped into time buckets and stacked into **Automated** and **Manual**, using the same **Automation Status** classification as the Test Cases Summary widget above.
-* Click the **three-dot menu** on the widget and select **Configure Widget**, then use the **View** group to switch between three presentations:
+* Click the **three-dot menu** on the widget, select **Configure Widget**, and use **View** under **Display Options** to switch between three presentations:
   * **Stacked Bar** (default) - one bar per interval, segmented by Automation Status.
   * **Stacked Area** - the same series drawn as areas, to emphasise the overall shape.
-  * **Table** - a per-project breakdown, with the counts sortable by column.
-* A dashed line plots the equivalent total for the preceding period of the same length, so you can compare the current window against the one before it. The legend shows the dates that period covers. The line appears only when the preceding period contains at least two complete intervals, so a short date range viewed at a coarse interval - for example a single month of data viewed monthly - may not have enough history to draw it.
+  * **Table** - a breakdown by project or by test case creator, with the counts sortable by column. See [Table view](#table-view) below.
+* Click a bar segment to drill down into the test cases behind it. Only the segment you click is listed - **Automated** or **Manual** - not the whole bar.
+* A dashed line plots the equivalent total for the preceding period of the same length, so you can compare the current window against the one before it. The legend shows the dates that period covers. The line appears only when the preceding period contains at least two complete intervals, so a short date range viewed at a coarse interval - for example a single month of data viewed monthly - may not have enough history to draw it. The line is not shown when the dashboard is set to **All time**.
 * Change the interval (Daily, Weekly, Monthly) to re-bucket the trend.
 
-In the **Table** view, each row is a project, with **Automated**, **Manual** and **All** counts. Sort by any of the count columns to rank projects, and select a count to drill down into the test cases behind it. The table lists up to 50 projects, ordered by the number of test cases created - if your organization has more, the widget states how many of the total are being shown.
+### Table view
+
+With **View** set to **Table**, two more settings appear under **Display Options**: **Table rows** chooses what each row represents, and **Table columns** chooses how the counts are split.
+
+**Table rows**
+
+* **Project** (default) - one row per project.
+* **Created by** - one row per user who created test cases, labelled with the user's display name. If two users share a display name, their username is added in brackets to tell them apart. A creator who cannot be identified is shown as `User #`.
+
+**Table columns**
+
+* **Total** (default) - **Automated**, **Manual** and **All** counts for each row across the whole date range.
+* **By period** - one column per day, week or month, following the dashboard interval (Daily, Weekly or Monthly). Weekly columns are labelled with the week number and its start date, for example `W41 · Oct 05`. Each period shows **Automated** and **Manual** counts, a **Total** block sums each row across the range, and a **Total** row at the bottom sums each column.
+
+As in the chart, **Manual** counts every test case whose Automation Status is not *Automated*.
+
+Sort by the **Automated**, **Manual** or **All** column (in **By period**, the ones in the **Total** block) to rank rows, and select any count to drill down into exactly the test cases behind it - for that row, and in **By period**, for that period. The table lists up to 50 rows, ordered by the number of test cases created - if there are more, the widget states how many of the total are being shown.
 
 ### Value Proposition
 
-This widget helps you track how your test suite evolves over time, identify periods of high or low activity, and see how much of your growth is automated versus manual. The table view turns the same data into a per-project comparison, so you can see which projects are contributing coverage and which are lagging.
+This widget helps you track how your test suite evolves over time, identify periods of high or low activity, and see how much of your growth is automated versus manual. The table view turns the same data into a per-project or per-creator comparison, so you can see which projects or team members are contributing coverage, and the By period columns show when that coverage was added.
 
 ## Test Runs Summary
 
-The Test Runs Summary widget provides an overall summary of your test runs, with the data split by test instance statuses and their counts.
+The Test Runs Summary widget provides an overall summary of your test runs, with the data split by test instance statuses and their counts. You can view it as a pie chart or a stacked bar, or drill through your projects and test run folders to find exactly which area of your suite is failing.
 
 ### How it works?
 
 * Displays the total number of test runs and the breakdown of test instances by status (Not Started, Passed, Failed, Skipped, and custom statuses).
 * Quickly identify test runs with the highest number of failed or pending instances.
+* Choose how the widget is drawn with the graph type setting described below.
+
+### Choosing how the widget is drawn
+
+Open the **three-dot menu** on the widget, select **Configure Widget**, and use **Display Options** to pick the graph type. The choice is saved per widget, so two Test Runs Summary widgets on the same dashboard can be drawn differently.
+
+* **Pie Chart** (default) - the overall split of test instances by status.
+* **Stacked Bar** - one bar per test run, with stacked segments by status.
+* **Test Run Folder Hierarchy** - one bar per project, which you can keep drilling into through its test run folders.
+
+### Drilling through projects and test run folders
+
+With **Test Run Folder Hierarchy** selected, each click takes you one level deeper:
+
+* The first level shows one bar per project, stacked by test instance status.
+* Click a project to see its top-level test run folders. Click a folder that has subfolders to go one level deeper.
+* Every folder bar counts the test instances in that folder **and in all of its subfolders**.
+* A folder that has no subfolders is the end of the trail. Clicking it opens the test instance list for that folder. Click a status segment of that bar to open the list already filtered to that status.
+* The breadcrumb above the chart shows where you are, for example **All projects › Checkout › Regression**. Select any entry in the trail to jump straight back to that level.
+* The level indicator on the right of the breadcrumb shows how deep you are and how much further the deepest branch goes, for example **Level 2 of 4 · folders**.
+
+Individual test runs are not shown as bars. Drilling stops at the deepest folder, and the instance list opens from there.
+
+A project bar counts every test instance in that project, including instances whose test run is not in a folder. A project's total can therefore be higher than the sum of its folder bars, and a project with no foldered test runs opens an empty folder level.
+
+Need the instances of a test run that sits directly inside a folder that has subfolders of its own? Switch the graph type back to **Pie Chart** or **Stacked Bar** and open the instance list from there.
+
+On shared and demo dashboards the bars are read-only: the chart is shown, but clicking a bar does not drill in or open the instance list.
 
 ### Value Proposition
 
-This widget gives you a high-level view of test run health across your project, helping you prioritize runs that need attention and track overall execution progress.
+This widget gives you a high-level view of test run health across your project, helping you prioritize runs that need attention and track overall execution progress. Drilling through your projects and test run folders narrows failures down to the specific area of your suite responsible, without leaving the dashboard.
 
 ## Milestone Trends
 
-The Milestone Trends widget displays a stacked bar chart of milestones, with each bar broken down by test instance statuses from the associated test runs.
+The Milestone Trends widget displays a stacked bar chart of milestones, with each bar broken down by test instance statuses from the associated test runs. You can drill into a milestone to see the results of individual test instances, or step down through your test run folders to find exactly which area of your suite is failing.
 
 ### How it works?
 
 * Each bar represents a milestone, with stacked segments showing the count of test instances by status.
 * Supported statuses include **Not Started**, **Passed**, **Failed**, **Skipped**, as well as any **custom statuses** created for your manual test runs.
 * Filter the data by date range to analyze milestone performance over specific time periods.
+* Click a milestone bar to drill in. What opens depends on the **Milestone Drill Down** setting described below.
+
+A test run that belongs to more than one milestone is counted in each of those milestones, so the milestone bars are not expected to add up to a single project total.
+
+### Choosing what a milestone opens
+
+Open the **three-dot menu** on the widget, select **Configure Widget**, and use **Display Options** to set **Milestone Drill Down**. The choice is saved per widget, so two Milestone Trends widgets on the same dashboard can behave differently.
+
+* **Instance List** (default) - clicking a milestone opens the list of test instances for that milestone.
+* **Test Run Folder Hierarchy** - clicking a milestone opens its top-level test run folders as bars, which you can keep drilling into.
+
+### Drilling through test run folders
+
+With **Test Run Folder Hierarchy** selected, each click takes you one level deeper into your folder structure:
+
+* Every bar is a folder, and its value counts the test instances in that folder **and in all of its subfolders**.
+* A folder that has no subfolders is the end of the trail. Clicking it opens the test instance list for that folder.
+* The breadcrumb above the chart shows where you are, for example **All milestones › Regression › Checkout**. Select any entry in the trail to jump straight back to that level.
+* The level indicator on the right of the breadcrumb shows how deep you are and how much further the deepest branch goes, for example **Level 2 of 4 · folders**.
+
+Individual test runs are not shown as bars. Drilling stops at the deepest folder, and the instance list opens from there.
+
+Prefer to see instance results straight away? Switch **Milestone Drill Down** back to **Instance List**. This is also how you reach test runs that sit directly inside a folder that has subfolders of its own.
+
+### Filtering by test run folder
+
+The **Test Run Folder Name** filter narrows the widget to one part of your folder structure. It is available in **Configure Widget**, and in the dashboard **Filters** drawer on any dashboard that contains a Milestone Trends widget.
+
+* Selecting a folder matches that folder **and everything beneath it**, so you can scope the whole widget to a single area of your suite.
+* If the same folder name is used in more than one place, all of them are matched. This lets you select a name such as `login` once and review every folder that uses it together.
+
+This mirrors the **Test Case Folder Name** filter used elsewhere in Test Manager widgets.
 
 ### Value Proposition
 
-This widget helps you quickly assess milestone health, identify milestones with high failure rates, and monitor release readiness. By tracking status trends across milestones, you can spot regressions early and make data-driven decisions about testing effort.
+This widget helps you quickly assess milestone health, identify milestones with high failure rates, and monitor release readiness. By tracking status trends across milestones, you can spot regressions early and make data-driven decisions about testing effort. Drilling through your test run folders narrows a failing milestone down to the specific area of your suite responsible, without leaving the dashboard.
 
 ## Issue Summary
 

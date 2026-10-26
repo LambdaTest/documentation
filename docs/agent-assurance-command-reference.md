@@ -4,7 +4,7 @@ toc_max_heading_level: 3
 title: Rook CLI Reference
 hide_title: false
 sidebar_label: CLI Reference
-description: Use Rook 0.1.5 commands, RCA, examples, structured output, diagnostics, variables, and terminal controls in one reference.
+description: Use Rook commands, RCA, examples, structured output, diagnostics, variables, and terminal controls in one reference.
 keywords:
   - rook commands
   - rook cli reference
@@ -55,7 +55,7 @@ import { BRAND_URL } from '@site/src/component/BrandName';
       "@id": "https://www.testmuai.com/support/docs/agent-assurance-command-reference/"
     },
     "headline": "Rook CLI Reference",
-    "description": "Use Rook 0.1.5 commands, RCA, examples, structured output, diagnostics, variables, and terminal controls in one reference.",
+    "description": "Use Rook commands, RCA, examples, structured output, diagnostics, variables, and terminal controls in one reference.",
     "url": "https://www.testmuai.com/support/docs/agent-assurance-command-reference/",
     "image": {
       "@type": "ImageObject",
@@ -96,13 +96,13 @@ import { BRAND_URL } from '@site/src/component/BrandName';
         "https://www.youtube.com/@TestMuAI"
       ]
     },
-    "dateModified": "2026-09-25"
+    "dateModified": "2026-10-23"
   }) }}
 />
 
 # Rook CLI Reference
 
-Use `rook` to start the interactive terminal, or `rook <command>` from your shell. This reference was checked against the **public Rook 0.1.5 CLI** on September 25, 2026. It groups command syntax, examples, RCA, state changes, diagnostics, and output handling on one page. Commands that invoke the target or spend credits still require appropriate approval.
+Use `rook` to start the interactive terminal, or `rook <command>` from your shell. This reference was checked against the **public Rook 0.1.13 CLI** on October 23, 2026. It groups command syntax, examples, RCA, state changes, diagnostics, and output handling on one page. Commands that invoke the target or spend credits still require appropriate approval.
 
 Using Claude Code or another coding assistant? Describe your goal in chat with the [Rook skill](/support/docs/rook-coding-agents/#guided-skill-actions); the assistant handles these commands. This page is the explicit CLI reference, not a list of commands you must manually repeat while using a skill.
 
@@ -138,7 +138,7 @@ rook profile add --help
 
 Inside the terminal, use `/help run`. Do not paste slash commands into a normal shell.
 
-The screenshots below were captured inside the **Rook 0.1.5 interactive TUI**, using <code>/help &lt;command&gt;</code> in a saved demo workspace. They show command help, not completed paid operations. Only the Rook content is captured; no desktop, window title, or browser chrome is included.
+The screenshots below were captured inside the **Rook 0.1.11 interactive TUI**, using <code>/help &lt;command&gt;</code> in the quickstart workspace. They show command help, not completed paid operations. Only the Rook content is captured; no desktop, window title, or browser chrome is included.
 
 ## Terminal and Help {#terminal-and-help}
 
@@ -146,7 +146,7 @@ The screenshots below were captured inside the **Rook 0.1.5 interactive TUI**, u
 
 Use <code>rook</code> to start the interactive terminal in the workspace whose agent material and testing state you want to use.
 
-<img loading="lazy" src={require('../assets/images/rook/commands/rook-reference-home.png').default} alt="Rook 0.1.5 interactive home with the saved CommerceCare demo and slash-command input" width="2200" height="1360" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/rook/commands/rook-reference-home.png').default} alt="Rook 0.1.11 interactive home with the mascot banner, the Returns and Refunds Assistant sample agent, its workflow checklist, and slash-command input" width="2200" height="1684" className="doc_img"/>
 
 #### Syntax {#rook-syntax}
 
@@ -173,7 +173,7 @@ Run Rook from the intended workspace. The current directory selects the local <c
 
 Use <code>rook ask</code> to ask a question or describe a testing task in natural language. This is Rook's own model-backed operation and can spend Rook credits; it is different from asking a coding assistant that has loaded the Rook skill.
 
-<img loading="lazy" src={require('../assets/images/rook/commands/rook-command-ask.png').default} alt="Current Rook ask command help showing JSON and verbose options" width="2200" height="960" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/rook/commands/rook-command-ask.png').default} alt="Rook ask command help showing JSON and verbose options" width="2200" height="1009" className="doc_img"/>
 
 #### Syntax {#rook-ask-syntax}
 
@@ -202,7 +202,7 @@ For deterministic automation, prefer the explicit command and flags. Natural lan
 
 Use <code>/guide</code> when you know you want to test an agent but do not yet know which command comes next.
 
-<img loading="lazy" src={require('../assets/images/rook/commands/rook-command-guide.png').default} alt="Current Rook guide command help" width="2200" height="680" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/rook/commands/rook-command-guide.png').default} alt="Rook guide command help" width="2200" height="731" className="doc_img"/>
 
 #### Syntax {#guide-syntax}
 
@@ -215,18 +215,18 @@ The shell form is <code>rook guide</code>.
 The guide covers this sequence:
 
 ~~~text
-login → project → explore → agent → generate → profile → run → sync
+login → project → explore → agent → generate → profile → sync → run
 ~~~
 
-The built-in guide presents <code>run</code> before <code>sync</code>, but a normal timeline run requires an upstream project version. In a new project, synchronize the reviewed tree before the first normal run; use <code>run --test</code> only when the draft run should stay local.
+A normal timeline run requires an upstream project version, so the guide puts <code>sync</code> before <code>run</code>. In a new project, synchronize the reviewed tree before the first normal run; use <code>run --test</code> only when the draft run should stay local.
 
-The guide also explains which operations spend credits, where local files live, why secrets never synchronize, and how to inspect status at any point. It reads command metadata and state; it does not invoke the target or spend credits.
+The guide also lists the commands that spend credits (<code>explore</code>, <code>generate</code>, <code>profile add</code>, <code>profile fix</code>, <code>run</code>, <code>ask</code>, and <code>report --rca</code>), where local files live, what leaves the machine, and how to inspect status at any point. It reads command metadata and state; it does not invoke the target or spend credits.
 
 ### /help {#help}
 
 Use <code>/help</code> to list the current command surface or inspect one command in full.
 
-<img loading="lazy" src={require('../assets/images/rook/commands/rook-command-help.png').default} alt="Current Rook help command help" width="2200" height="920" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/rook/commands/rook-command-help.png').default} alt="Rook help command help" width="2200" height="2121" className="doc_img"/>
 
 #### Syntax {#help-syntax}
 
@@ -248,9 +248,9 @@ Help, slash-command completion, and shell parsing are derived from the same comm
 
 ### /docs {#docs}
 
-Use <code>/docs</code> to print and open the public Rook repository.
+Use <code>/docs</code> to print and open the Rook documentation site.
 
-<img loading="lazy" src={require('../assets/images/rook/commands/rook-command-docs.png').default} alt="Rook docs command help showing the no-open option" width="2200" height="760" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/rook/commands/rook-command-docs.png').default} alt="Rook docs command help showing the no-open option" width="2200" height="810" className="doc_img"/>
 
 #### Syntax {#docs-syntax}
 
@@ -296,7 +296,7 @@ There is no <code>rook exit</code> shell command.
 
 Use <code>/login</code> when Rook has no stored credential or the existing token is invalid.
 
-<img loading="lazy" src={require('../assets/images/rook/commands/rook-command-login.png').default} alt="Rook login command help" width="2200" height="840" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/rook/commands/rook-command-login.png').default} alt="Rook login command help" width="2200" height="890" className="doc_img"/>
 
 #### Syntax {#login-syntax}
 
@@ -345,7 +345,7 @@ If a browser cannot open, follow the URL or instruction printed by the command. 
 
 Use <code>/auth</code> to verify the effective credentials against the Rook controller.
 
-<img loading="lazy" src={require('../assets/images/rook/commands/rook-command-auth.png').default} alt="Rook auth command help showing the status subcommand" width="2200" height="760" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/rook/commands/rook-command-auth.png').default} alt="Rook auth command help showing the status subcommand" width="2200" height="810" className="doc_img"/>
 
 #### Syntax {#auth-syntax}
 
@@ -386,7 +386,7 @@ Stored authentication is shared by sessions using the same Rook home, profile, a
 
 Use <code>rook whoami</code> outside the interactive terminal to verify which TestMu AI account is authenticated.
 
-<img loading="lazy" src={require('../assets/images/rook/commands/rook-command-whoami.png').default} alt="Rook whoami command help" width="2200" height="680" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/rook/commands/rook-command-whoami.png').default} alt="Rook whoami command help" width="2200" height="731" className="doc_img"/>
 
 #### Syntax {#rook-whoami-syntax}
 
@@ -425,7 +425,7 @@ Check <code>ROOK_ENV</code> and the exported <code>LT_USERNAME</code>/<code>LT_A
 
 Use <code>/logout</code> to revoke the current token and remove stored Rook credentials.
 
-<img loading="lazy" src={require('../assets/images/rook/commands/rook-command-logout.png').default} alt="Rook logout command help" width="2200" height="680" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/rook/commands/rook-command-logout.png').default} alt="Rook logout command help" width="2200" height="731" className="doc_img"/>
 
 #### Syntax {#logout-syntax}
 
@@ -478,7 +478,7 @@ Exported <code>LT_USERNAME</code> and <code>LT_ACCESS_KEY</code> are separate fr
 
 Use <code>/plan</code> to check the TestMu AI account plan and credit balance before generating or executing a suite.
 
-<img loading="lazy" src={require('../assets/images/rook/commands/rook-command-plan.png').default} alt="Rook plan command help" width="2200" height="760" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/rook/commands/rook-command-plan.png').default} alt="Rook plan command help" width="2200" height="810" className="doc_img"/>
 
 #### Syntax {#plan-syntax}
 
@@ -514,6 +514,7 @@ Nothing in the project is changed. The command reads the authenticated account a
 - If authentication is missing or expired, run <code>/login</code> and <code>/auth status</code>.
 - If the controller cannot be reached, run <code>/doctor</code>.
 - In automation, use <code>rook plan --json</code> and inspect the response as well as the exit status. A null credit balance means unknown, not zero or unlimited. The account balance is not an enforced task-wide spending cap.
+- Since 0.1.13, Rook checks your organization's Agent Assurance plan before any model call or credit spend. With no plan, an ended free trial, or an expired subscription, work is refused with <code>plan_required</code> whatever the credit balance. On a plan without Rook cloud, such as Starter, syncing, cloud project status, and recording runs on Rook cloud are refused with <code>upgrade_plan</code>. Each refusal names the billing page that lifts it; see [plan refusals](/support/docs/agent-assurance-troubleshooting/#plan-refusals).
 
 ## Projects and Discovery {#projects-and-discovery}
 
@@ -521,7 +522,7 @@ Nothing in the project is changed. The command reads the authenticated account a
 
 Use <code>/project</code> to choose the TestMu AI project that owns discovered agents, versions, and runs in the current workspace.
 
-<img loading="lazy" src={require('../assets/images/rook/commands/rook-command-project.png').default} alt="Rook project command help showing use and create subcommands" width="2200" height="1000" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/rook/commands/rook-command-project.png').default} alt="Rook project command help showing use and create subcommands" width="2200" height="1048" className="doc_img"/>
 
 #### Syntax {#project-syntax}
 
@@ -563,7 +564,7 @@ If access to the active project is revoked, Rook asks you to choose another proj
 
 Use <code>/explore</code> to tell Rook what local material describes your agent. The target can be a PRD, an office document, an image, a documentation folder, an agent source directory, or a complete local repository.
 
-<img loading="lazy" src={require('../assets/images/rook/commands/rook-command-explore.png').default} alt="Rook explore command help with force and free-text guidance" width="2200" height="1160" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/rook/commands/rook-command-explore.png').default} alt="Rook explore command help with force and free-text guidance" width="2200" height="1207" className="doc_img"/>
 
 #### Syntax {#explore-syntax}
 
@@ -634,7 +635,7 @@ A PRD or knowledge base describes what should happen. It cannot prove which tool
 
 Use <code>/agent</code> when the selected project contains several discovered agents or when you need to confirm which agent later phases use.
 
-<img loading="lazy" src={require('../assets/images/rook/commands/rook-command-agent.png').default} alt="Current Rook agent command help showing the use subcommand" width="2200" height="760" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/rook/commands/rook-command-agent.png').default} alt="Rook agent command help showing the use subcommand" width="2200" height="810" className="doc_img"/>
 
 #### Syntax {#agent-syntax}
 
@@ -670,7 +671,7 @@ Agent removal is intentionally not a command. Rook's project data is stored as r
 
 A profile names the reviewable hook scripts Rook uses to invoke a live agent. Use <code>/profile</code> to generate those scripts from a prompt, repair them from a failure, verify the target, inspect lifecycle phases, or select a profile.
 
-<img loading="lazy" src={require('../assets/images/rook/commands/rook-command-profile.png').default} alt="Current Rook profile command help showing use, show, prompt-based add, fix, and test" width="2200" height="1680" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/rook/commands/rook-command-profile.png').default} alt="Rook profile command help showing use, show, prompt-based add, fix, and test" width="2200" height="1723" className="doc_img"/>
 
 #### Syntax {#profile-syntax}
 
@@ -712,7 +713,7 @@ Rook does not provide profile edit or remove commands. Profiles are plain files 
 
 Use <code>/generate</code> after exploration to write test scenarios for the active agent's discovered features.
 
-<img loading="lazy" src={require('../assets/images/rook/commands/rook-command-generate.png').default} alt="Current Rook generate command help with total, class, category, force, allow, JSON, and verbose options" width="2200" height="1400" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/rook/commands/rook-command-generate.png').default} alt="Rook generate command help with total, class, category, force, allow, JSON, and verbose options" width="2200" height="1445" className="doc_img"/>
 
 #### Syntax {#generate-syntax}
 
@@ -734,7 +735,7 @@ The shell form is <code>rook generate</code> with the same options.
 
 ```text
 /generate --total 20 --class functional,adversarial
-/generate --category boundary,reliability -- emphasize retries and duplicate requests
+/generate --category boundary,integration -- emphasize retries and duplicate requests
 ```
 
 Generation reads the current feature model, plans coverage, writes scenarios, and checks runnability. It does not invoke the live target. Unchanged features reuse their scenarios without a model call; <code>--force</code> intentionally bypasses that optimization.
@@ -745,7 +746,7 @@ Generated files remain editable. A scenario whose origin is human is not silentl
 
 Use <code>/scenarios</code> to inspect the active agent's suite and curate what runs by default.
 
-<img loading="lazy" src={require('../assets/images/rook/commands/rook-command-scenarios.png').default} alt="Current Rook scenarios command help showing list, exclude, include, and delete" width="2200" height="1040" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/rook/commands/rook-command-scenarios.png').default} alt="Rook scenarios command help showing list, exclude, include, and delete" width="2200" height="1088" className="doc_img"/>
 
 #### Syntax {#scenarios-syntax}
 
@@ -774,7 +775,7 @@ Pass IDs as separate arguments for include, exclude, and delete, for example <co
 
 Use <code>/status</code> to understand where the current machine stands before synchronizing or running tests.
 
-<img loading="lazy" src={require('../assets/images/rook/commands/rook-command-status.png').default} alt="Rook status command help showing agent and JSON options" width="2200" height="800" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/rook/commands/rook-command-status.png').default} alt="Rook status command help showing agent and JSON options" width="2200" height="850" className="doc_img"/>
 
 #### Syntax {#status-syntax}
 
@@ -795,7 +796,7 @@ The shell form is <code>rook status</code> with the same options.
 | <code>ahead</code> | Local content changed after the last sync. | Review and run <code>/sync</code>. |
 | <code>behind</code> | Upstream advanced while this machine stayed on an older version. | Reconcile upstream changes before syncing. |
 | <code>diverged</code> | Local and upstream histories both moved. | Reconcile the branch; Rook does not overwrite it silently. |
-| <code>unknown</code> | Local state is known, but upstream could not be checked. | Restore connectivity and rerun status. |
+| <code>unknown</code> | Local state is known, but upstream could not be checked: the service was unreachable, or a plan without Rook cloud refused the read (since 0.1.13). | Restore connectivity and rerun status, or follow the plan message status prints. |
 
 Status returns upstream run information for <code>--agent</code>, or for the active agent when the option is omitted. It identifies unfinished local runs and completed runs whose scenario results still need reconciliation.
 
@@ -805,7 +806,7 @@ Status exits successfully even when the tree is not clean; the state is data, no
 
 Use <code>/sync</code> after exploration, generation, profile changes, or manual edits to record the local project tree upstream.
 
-<img loading="lazy" src={require('../assets/images/rook/commands/rook-command-sync.png').default} alt="Rook sync command help showing agent and JSON options" width="2200" height="1000" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/rook/commands/rook-command-sync.png').default} alt="Rook sync command help showing agent and JSON options" width="2200" height="1048" className="doc_img"/>
 
 #### Syntax {#sync-syntax}
 
@@ -829,18 +830,20 @@ An agent version pins its specification, features, and scenarios. Profile revisi
 - If local content changed, sync advances the upstream version.
 - If another machine advanced the same agent first, Rook records the local version as a branch and reports the conflict instead of overwriting upstream state.
 - An agent directory with no readable specification is skipped and reported.
+- Since 0.1.12, if Rook's service does not answer for every agent it was sent, sync exits 1 even when others were recorded. The summary adds <code>N not returned</code> or <code>N malformed</code> and suggests running <code>/sync</code> again. Rook warns for each such agent and does not save its local sync state.
+- Since 0.1.13, sync needs an Agent Assurance plan that includes Rook cloud. On a plan without it, such as Starter, sync is refused with <code>upgrade_plan</code> and the upgrade link; see [plan refusals](/support/docs/agent-assurance-troubleshooting/#plan-refusals).
 
 Use <code>/status</code> before and after synchronization to see the local/upstream relationship.
 
 #### Run Requirement {#sync-run-requirement}
 
-A timeline run requires the agent to have been synchronized at least once. When the tree changes later, an attended run can ask whether to sync or use test mode. In CI, choose explicitly between <code>rook sync</code> and <code>rook run --test</code>.
+A timeline run requires the agent to have been synchronized at least once. When the tree changes later, an attended run can ask whether to sync or use test mode. In CI, choose explicitly between <code>rook sync</code> and <code>rook run --test</code>. On a plan without Rook cloud, a normal run says so and continues on this machine only, as <code>--test</code> does.
 
 ### /run {#run}
 
 Use <code>/run</code> to plan a selection, execute the active profile's lifecycle hooks, collect evidence, and judge each acceptance criterion.
 
-<img loading="lazy" src={require('../assets/images/rook/commands/rook-command-run.png').default} alt="Current Rook run command help with lifecycle phases, continuation, selection, profile, test, resume, and RCA options" width="2200" height="1720" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/rook/commands/rook-command-run.png').default} alt="Rook run command help with lifecycle phases, continuation, selection, profile, test, resume, and RCA options" width="2200" height="1763" className="doc_img"/>
 
 #### Syntax {#run-syntax}
 
@@ -906,7 +909,7 @@ The target's writes are real. Rook cannot roll them back. Use staging data and s
 
 Use <code>/runs sync</code> when a run completed locally but a network or service interruption prevented all verdicts from reaching upstream.
 
-<img loading="lazy" src={require('../assets/images/rook/commands/rook-command-runs.png').default} alt="Rook runs command help showing the sync subcommand" width="2200" height="800" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/rook/commands/rook-command-runs.png').default} alt="Rook runs command help showing the sync subcommand" width="2200" height="850" className="doc_img"/>
 
 #### Syntax {#runs-syntax}
 
@@ -934,7 +937,7 @@ This command repairs result synchronization. Use <code>/sync</code> for agent sp
 
 Use <code>/report</code> to read a stored run from disk. Without a run ID, Rook uses the most recent run for the active agent.
 
-<img loading="lazy" src={require('../assets/images/rook/commands/rook-command-report.png').default} alt="Current Rook report command help showing run ID, RCA, and allow options" width="2200" height="1160" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/rook/commands/rook-command-report.png').default} alt="Rook report command help showing run ID, RCA, and allow options" width="2200" height="1207" className="doc_img"/>
 
 #### Syntax {#rook-report-syntax}
 
@@ -996,7 +999,7 @@ To include RCA with a new, already approved scenario run, add <code>--rca</code>
 
 #### Automation and Hosted Review {#rook-report-automation-and-hosted-review}
 
-Use <code>rook report &lt;run-id&gt; --json</code> to read the structured local report. Successful command completion means the report was read, not that the agent passed. Inspect its totals and the run’s completion using the [CI checks](/support/docs/agent-assurance-ci-cd/).
+Use <code>rook report &lt;run-id&gt; --json</code> to read the structured local report. Successful command completion means the report was read, not that the agent passed. Besides totals, the report can carry <code>summary_claims</code> (the computed headline statements), <code>coverage_gaps</code>, and <code>redteam_coverage</code> for adversarial scenarios. Inspect its totals and the run’s completion using the [CI checks](/support/docs/agent-assurance-ci-cd/).
 
 Use <code>rook ui</code> to open synchronized results in the [Web UI](/support/docs/rook-web-ui/) or <code>rook ui --local</code> for the files on this machine.
 
@@ -1004,7 +1007,7 @@ Use <code>rook ui</code> to open synchronized results in the [Web UI](/support/d
 
 Use <code>/ui</code> to review synchronized results in the hosted TestMu AI application. Add <code>--local</code> to serve the evidence currently on disk.
 
-<img loading="lazy" src={require('../assets/images/rook/commands/rook-command-ui.png').default} alt="Current Rook UI command help showing local and no-open options" width="2200" height="800" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/rook/commands/rook-command-ui.png').default} alt="Rook UI command help showing local and no-open options" width="2200" height="850" className="doc_img"/>
 
 #### Syntax {#ui-syntax}
 
@@ -1061,7 +1064,7 @@ The hosted application starts at **Projects**. Select the project and agent to r
 
 Use <code>/env</code> to manage tokens, endpoint values, and other variables referenced by profiles without writing literal secrets into project files.
 
-<img loading="lazy" src={require('../assets/images/rook/commands/rook-command-env.png').default} alt="Rook environment command help with list set show and remove" width="2200" height="920" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/rook/commands/rook-command-env.png').default} alt="Rook environment command help with list set show and remove" width="2200" height="969" className="doc_img"/>
 
 #### Syntax {#env-syntax}
 
@@ -1119,7 +1122,7 @@ When <code>/profile add</code> finds a credential in supplied material, the gene
 
 Use <code>/mcp</code> to manage MCP servers that Rook can discover or use for read-only verification and controlled tool access.
 
-<img loading="lazy" src={require('../assets/images/rook/commands/rook-command-mcp.png').default} alt="Rook MCP command help with list enable disable and approve" width="2200" height="1560" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/rook/commands/rook-command-mcp.png').default} alt="Rook MCP command help with list, get, add, remove, enable, disable, and approve" width="2200" height="1604" className="doc_img"/>
 
 #### Interactive syntax {#mcp-interactive-syntax}
 
@@ -1145,7 +1148,7 @@ rook mcp disable <name> [--json]
 rook mcp approve <name> [--origin project|discovered] [--json]
 ~~~
 
-For stdio servers, pass the command after the server name, using <code>--</code> to separate its arguments from Rook's options. The registry accepts declarations for <code>stdio</code>, <code>http</code>, <code>sse</code>, and <code>ws</code>; remote declarations require <code>--url</code>. In public 0.1.5, only stdio connections execute. The other transports remain listed as <code>unsupported-transport</code>; accepting a declaration is not a successful connection.
+For stdio servers, pass the command after the server name, using <code>--</code> to separate its arguments from Rook's options. The registry accepts declarations for <code>stdio</code>, <code>http</code>, <code>sse</code>, and <code>ws</code>; remote declarations require <code>--url</code>. Currently, only stdio connections execute. The other transports remain listed as <code>unsupported-transport</code>; accepting a declaration is not a successful connection.
 
 #### Real-world verification example {#mcp-real-world-verification-example}
 
@@ -1175,12 +1178,13 @@ Enabled MCP servers in this command remain Rook tools for discovery or independe
 
 Use <code>/doctor</code> as the first diagnostic when Rook cannot authenticate, select a project, reach a service, or start normal work.
 
-<img loading="lazy" src={require('../assets/images/rook/commands/rook-command-doctor.png').default} alt="Current Rook doctor command help" width="2200" height="760" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/rook/commands/rook-command-doctor.png').default} alt="Rook doctor command help" width="2200" height="810" className="doc_img"/>
 
 #### Syntax {#doctor-syntax}
 
 ~~~text
 /doctor
+/doctor --json
 /doctor --session <session-id>
 ~~~
 
@@ -1188,6 +1192,7 @@ From a shell:
 
 ~~~bash
 rook doctor
+rook doctor --json
 rook doctor --session <session-id>
 ~~~
 
@@ -1197,12 +1202,15 @@ Doctor is intentionally ungated. It remains available when identity, project, co
 
 Doctor reports:
 
-- Exact Rook and Node.js versions.
+- Exact Rook and Node.js versions, and the OS name, version, and CPU architecture (since 0.1.12).
 - Workspace path and configured environment.
 - Controller and API URLs, each with an independent reachability probe.
 - Derived identity and authentication status.
 - Active project, interaction mode, and TTY state.
 - Overall connectivity state derived from identity and the two service probes.
+- Since 0.1.12, the terminal: whether stdout is a terminal, the terminal app, the active shell and its version, privilege, color level, and size. A field Doctor cannot detect reads <code>unknown</code>.
+
+Since 0.1.12, <code>--json</code> prints the whole report as one JSON object with snake_case keys and no banner. Services appear as <code>controller</code> and <code>api</code> objects with <code>url</code> and <code>status</code>, <code>os</code> has <code>name</code>, <code>version</code>, and <code>arch</code>, <code>tty</code> is a boolean, and the terminal facts are in the <code>env</code> object. Exit codes are unchanged.
 
 A service that returns an HTTP refusal is still reachable. Doctor distinguishes “the service answered” from “the current credential or project may use it.” It does not test the agent endpoint in an invocation profile; use <code>/profile test</code> for that.
 
@@ -1212,9 +1220,9 @@ Use <code>--session</code> with a recorded Rook session ID to locate its diagnos
 
 ### /update {#update}
 
-Use <code>/update</code> to check for a newer public Rook release. In 0.1.5 it can also perform an upgrade for a recognized global npm or recorded shell installation, so treat it as an installation-changing command, not a read-only version check.
+Use <code>/update</code> to check for a newer public Rook release. It can also perform an upgrade for a recognized global npm, recorded shell, or Homebrew installation, so treat it as an installation-changing command, not a read-only version check.
 
-<img loading="lazy" src={require('../assets/images/rook/commands/rook-command-update.png').default} alt="Rook update command help showing auto and JSON forms" width="2200" height="920" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/rook/commands/rook-command-update.png').default} alt="Rook update command help showing auto and JSON forms" width="2200" height="969" className="doc_img"/>
 
 #### Syntax {#update-syntax}
 
@@ -1226,19 +1234,19 @@ Use <code>/update</code> to check for a newer public Rook release. In 0.1.5 it c
 
 The shell form is <code>rook update</code> with the same argument and option.
 
-Public releases use semantic versions such as <code>0.1.5</code>. A recognized npm installation is updated at its recorded prefix; a recognized shell installation uses its recorded directory. Homebrew installations print the appropriate <code>brew upgrade</code> command instead. Project-local npm copies, older shell installs without a usable record, and ambiguous installations can require manual instructions. Review the output and verify <code>rook --version</code> afterward.
+Public releases use semantic versions such as <code>0.1.13</code>. A recognized npm installation is updated at its recorded prefix; a recognized shell installation uses its recorded directory. Since 0.1.12, a Homebrew installation runs <code>brew upgrade</code> itself with the Homebrew that owns Rook's installation, refreshes taps first, and reports success only after the new version is installed. If Homebrew installs nothing new, for example right after a release before the tap catches up, Rook says the command changed nothing and exits 1. After a confirmed update, Rook prints “run rook again to use the new version.” The installer receives your proxy variables (<code>HTTP_PROXY</code>, <code>HTTPS_PROXY</code>, <code>ALL_PROXY</code>, <code>NO_PROXY</code>), and Ctrl-C goes to the installer while it runs. Project-local npm copies, older shell installs without a usable record, and ambiguous installations can require manual instructions. Review the output and verify <code>rook --version</code> afterward.
+
+In the TUI, choosing **update now** at the startup notice or typing <code>/update</code> closes the TUI and runs <code>rook update</code> in your terminal, then exits with the update's status (since 0.1.12). <code>/update auto</code> still runs inside the TUI.
 
 If you previously chose “never ask again” in the TUI update notice, run <code>/update auto</code> to re-enable automatic notices.
 
-
-
-The latest public release checked on September 25, 2026 is [0.1.5](https://github.com/LambdaTest/rook/releases/tag/v0.1.5). Use the installed command's help for version-specific options. If an npm 0.1.1 or 0.1.2 install cannot update, follow the [public-registry repair command](/support/docs/rook-installation/#repair-an-npm-011-or-012-installation). Windows users can follow [PowerShell setup and upgrades](/support/docs/rook-installation/#windows).
+The latest public release checked on October 23, 2026 is [0.1.13](https://github.com/LambdaTest/rook/releases/tag/v0.1.13). Use the installed command's help for version-specific options. If an npm 0.1.1 or 0.1.2 install cannot update, follow the [public-registry repair command](/support/docs/rook-installation/#repair-an-npm-011-or-012-installation). Windows users can follow [PowerShell setup and upgrades](/support/docs/rook-installation/#windows).
 
 ## Export Diagnostic Logs {#export}
 
 Export a local diagnostic bundle when a support investigation needs more than the error message. The shell command is <code>rook export logs</code>; in the TUI use <code>/export logs</code>.
 
-<img loading="lazy" src={require('../assets/images/rook/commands/rook-command-export.png').default} alt="Rook 0.1.5 interactive export help with output path and session selection options" width="2200" height="1000" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/rook/commands/rook-command-export.png').default} alt="Rook 0.1.11 interactive export help with output path and session selection options" width="2200" height="1048" className="doc_img"/>
 
 ```bash
 rook export logs --out ./rook-diagnostics.zip
@@ -1250,11 +1258,11 @@ rook export logs --out ./rook-diagnostics.zip
 | <code>--session &lt;id&gt;</code> | Also include the selected session transcript. |
 | <code>--all-sessions</code> | Include every recorded session for this project. |
 
-Use <code>rook doctor --session &lt;session-id&gt;</code> to identify relevant paths first. Start with the smallest useful bundle. Export does not upload the files, but the bundle can contain paths, session text, and sensitive target data. Review and redact before sharing; do not publish home credentials or raw transcripts.
+Use <code>rook doctor --session &lt;session-id&gt;</code> to identify relevant paths first. Start with the smallest useful bundle. Export does not upload the files, but the bundle can contain paths, session text, and sensitive target data. A bundled session includes its transcript (<code>transcript.jsonl</code>): every prompt Rook sent, every tool call and result, and every answer. Since 0.1.12 it also records each message sent to the agent under test with its reply, and how each job, sync, run phase, and scenario ended; strings of 4 KiB or more are stored in a <code>blobs/</code> folder that the bundle includes. Since 0.1.12, Rook masks credentials before writing each transcript line: values stored with <code>env set</code> that are 8 characters or longer, credential-named environment variables, your sign-in, and keys, tokens, and passwords recognizable by name or form. URL credentials and query strings are replaced too. Masking is best effort: shorter values, personal data, passwords passed as command-line arguments, secrets inside images, and transcripts recorded by earlier versions are not masked. Review and redact before sharing; do not publish home credentials or raw transcripts.
 
 ## Migration From Older Examples
 
-| Older syntax | Rook 0.1.5 |
+| Older syntax | Current Rook |
 |---|---|
 | <code>--entity</code> | Select with <code>rook project use</code> and <code>rook agent use</code> before the command. |
 | <code>profile list</code>, <code>agent list</code> | Use bare <code>profile</code> or <code>agent</code>. |
@@ -1267,13 +1275,13 @@ Use <code>rook doctor --session &lt;session-id&gt;</code> to identify relevant p
 
 ### /budget {#budget}
 
-This older command is not in 0.1.5. Use <code>/plan</code> for account credits and read cost/progress output for the active operation.
+This older command is no longer available. Use <code>/plan</code> for account credits and read cost/progress output for the active operation.
 
-The TUI status bar shows the account balance and credits spent in the current session. Model-backed phases report their spending. Rook checks credit boundaries between calls and preserves completed local work when credits are exhausted.
+The TUI status bar shows the account balance and credits spent in the current session. Model-backed phases report their spending. Rook checks credit boundaries between calls and preserves completed local work when credits are exhausted. Since 0.1.13 it also checks your organization's Agent Assurance plan before any model call or credit spend.
 
 ### /new {#new}
 
-This older command is not in 0.1.5. Exit and start <code>rook</code> again to begin another terminal session; project files remain on disk.
+This older command is no longer available. Exit and start <code>rook</code> again to begin another terminal session; project files remain on disk.
 
 Active project and agent selections, profiles, scenarios, runs, credentials, and environment variables persist across sessions. Restarting the terminal does not reset stored state; use the relevant commands when you intend to change it.
 
@@ -1290,13 +1298,13 @@ Active project and agent selections, profiles, scenarios, runs, credentials, and
 
 Only use a flag where `rook help <command>` lists it.
 
-In 0.1.5, <code>plan</code>, <code>status</code>, <code>run</code>, and a normal <code>report</code> have structured output. Commands such as <code>explore</code>, <code>generate</code>, <code>sync</code>, profile operations, paid <code>report --rca</code>, and <code>update</code> can emit text even when they accept <code>--json</code>. Check the actual stdout before parsing it, then inspect the relevant saved files or make a separate structured read.
+With <code>--json</code>, <code>plan</code>, <code>status</code>, <code>run</code>, a normal <code>report</code>, <code>scenarios list</code>, <code>project --workspace</code>, <code>mcp</code>, <code>ask</code>, and (since 0.1.12) <code>doctor</code> write one JSON document to stdout. Commands such as <code>explore</code>, <code>generate</code>, <code>sync</code>, profile operations, paid <code>report --rca</code>, and <code>update</code> can emit text even when they accept <code>--json</code>. Check the actual stdout before parsing it, then inspect the relevant saved files or make a separate structured read.
 
 Keep stdout and stderr separate when saving JSON: do not use <code>2>&amp;1</code> for a machine-readable result file. Refusals and parser errors can leave stdout empty. A failure document may contain <code>error</code> or <code>reason</code>; <code>ok: true</code> can accompany a discarded run, so it is not sufficient to establish success. See the [public headless contract](https://github.com/LambdaTest/rook/blob/main/skill-installer/skills/references/headless-contract.md).
 
 ## Exit Codes
 
-In Rook 0.1.5, process success and agent quality are separate. Do not use the older 0/1/2/3/4 mapping as a release gate: the current run/report paths can return success when an outcome or report was produced, even if its verdicts require attention.
+Process success and agent quality are separate. Do not use the older 0/1/2/3/4 mapping as a release gate: the current run/report paths can return success when an outcome or report was produced, even if its verdicts require attention.
 
 Treat a non-zero exit as command failure. After a successful <code>run --json</code>, require <code>ok: true</code>, <code>halted: false</code>, a report, and the expected completed and passed counts. Reject missing, discarded, partial, or unverifiable results according to your release policy. A <code>report --json</code> success only confirms the stored report was read.
 
@@ -1307,7 +1315,7 @@ See the [tested CI gate](/support/docs/agent-assurance-ci-cd/#gate-on-completion
 | Variable | Effect |
 |---|---|
 | `ROOK_HOME` | Credentials, environment values, history, and local state. Default: `~/.testmuai/rook`. |
-| `ROOK_ENV` | Deployment selection; public packages default to `prod`. Keep the setting consistent for login, project operations, synchronization, and hosted review. |
+| `ROOK_ENV` | Deployment selection; public packages default to `prod`. An unrecognized value stops the command with an error. Keep the setting consistent for login, project operations, synchronization, and hosted review. |
 | `LT_USERNAME`, `LT_ACCESS_KEY` | Account credentials for unattended authentication. Provide both; they override stored browser-login credentials. |
 | `ROOK_API_URL` | Overrides the versioned Rook API base URL. |
 | `ROOK_CONTROLLER_URL` | Overrides the controller base URL. |

@@ -2,7 +2,7 @@
 id: appium-rokutv
 title: Roku TV With Appium
 sidebar_label: Roku TV
-description: Complete guide to running your first RokuTV Appium automated test script on TestMu AI Real Device Cloud Platform. Test on 5000+ Real Devices.
+description: Complete guide to running your first RokuTV Appium automated test script on TestMu AI Real Device Cloud Platform. Test on 50,000+ Real Devices.
 keywords:
   - python appium
   - rokutv
@@ -65,7 +65,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
       "@id": "https://www.testmuai.com/support/docs/appium-rokutv/"
     },
     "headline": "Roku TV With Appium",
-    "description": "Complete guide to running your first RokuTV Appium automated test script on TestMu AI Real Device Cloud Platform. Test on 5000+ Real Devices.",
+    "description": "Complete guide to running your first RokuTV Appium automated test script on TestMu AI Real Device Cloud Platform. Test on 50,000+ Real Devices.",
     "url": "https://www.testmuai.com/support/docs/appium-rokutv/",
     "image": {
       "@type": "ImageObject",

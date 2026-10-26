@@ -345,6 +345,92 @@ Confirm the value is a boolean, not the string `"true"`, in clients that disting
 { "command": "driver.terminateApp(\"your.bundleid or appPackage\");" }
 ```
 
+### Changing GPS location at runtime during automation
+
+**Why it's needed:** GPS coordinates set through capabilities are applied only when the session starts. Tests that simulate movement or location changes need a way to update the device location while the session is still running.
+
+**Fix:** Use the `lambda-gps-location` executor to pass new coordinates at any point during the session. The device location updates immediately, and you can call the executor as many times as needed without restarting the session.
+
+```json
+public static void main(String[] args) throws Exception {
+
+    // Start LambdaTest session
+    driver = new IOSDriver(
+        new URL("https://" + userName + ":" + accessKey +
+                "@mobile-hub.lambdatest.com/wd/hub"),
+        caps
+    );
+
+    // Set initial GPS location
+    changeLocation(40.75860, -73.98626);
+
+    // Continue test execution
+    Thread.sleep(10000);
+
+    // Change GPS location during the same session
+    changeLocation(40.75835, -73.98650);
+
+    // Continue test execution
+    Thread.sleep(10000);
+
+    // Change GPS location again
+    changeLocation(40.75890, -73.98610);
+
+    // Continue test execution
+    Thread.sleep(10000);
+
+    // End the session
+    driver.quit();
+}
+
+public static void changeLocation(double lat, double lon) {
+
+    Map<String, Object> locationParams = new HashMap<>();
+
+    locationParams.put("latitude", lat);
+    locationParams.put("longitude", lon);
+
+    driver.executeScript("lambda-gps-location", locationParams);
+}
+```
+
+### Handle location permission popups on Android and iOS
+
+**Why it's needed:** The `autoGrantPermissions` (Android) and `autoAcceptAlerts` (iOS) capabilities handle system level alerts, such as notification popups. They do not handle location permission popups or any other alert that offers multiple options (for example, *Allow While Using App*, *Allow Once*, and *Don't Allow*). The same applies to gallery or media access permission popups that show more than two options.
+
+**Fix:** Handle these popups in your test script by locating and tapping the required button. On iOS devices, set the `settings[respectSystemAlerts]` capability to `true` to ensure that system permission popups are detected and can be interacted with during the test.
+
+**Using the `mobile: alert` command (iOS only):**
+
+```java
+driver.executeScript("mobile: alert", Map.of(
+    "action", "accept",
+    "buttonLabel", "Allow While Using App"
+));
+```
+
+For details on the settings[respectSystemAlerts] capability, see the [Appium XCUITest driver troubleshooting guide](https://appium.github.io/appium-xcuitest-driver/11.17/troubleshooting/#interact-with-dialogs-managed-by-comapplespringboard).
+
+### Using WebView commands with the `updateLanguageLocale` hook
+
+**Why it's needed:** The `lambda_executor: updateLanguageLocale` hook closes and relaunches the app, which creates a new app process with a new WebView context. Appium isn't aware of this relaunch and stays attached to the old WebView context from the closed process.
+
+**Fix:** To avoid this, use one of the following approaches.
+
+**Option A: Run the hook before switching to the WebView (recommended)**
+
+Call `updateLanguageLocale` before you call `getContexts` or switch to a WebView context. WebView commands then work as expected.
+
+**Option B: Re-select the WebView after the hook**
+
+If you need to change the language in the middle of a test, do the following after each hook call:
+
+1. Switch to the `NATIVE_APP` context.
+2. Call `getContexts` to get the updated list of contexts.
+3. Switch to the new `WEBVIEW_*` context.
+
+**Note:** Always re-select the WebView context after running the `updateLanguageLocale` hook. A WebView context selected before the hook will no longer work.
+
 ---
 
 That's all! If you are still blocked, reach out to our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24x7 Chat Support**</span> or mail us at [support@testmuai.com](mailto:support@testmuai.com).
